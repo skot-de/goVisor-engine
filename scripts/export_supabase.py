@@ -24,6 +24,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 os.chdir(ROOT)
 
 import duckdb  # noqa: E402
@@ -92,8 +93,12 @@ def build_ddl(table: str, parquet: str, pk=("lead_id",)) -> str:
     ]
     have = {c[0] for c in cols}
     for c in _INDEXED:
-        if c in have:
+        # `slug` traegt bereits UNIQUE — das legt in Postgres selbst einen Index an. Ein
+        # zweiter waere reine Platzverschwendung (gemessen 4,6 MB doppelt) und wird nie
+        # benutzt, weil der Planner den Unique-Index nimmt.
+        if c in have and not (c == "slug" and " unique" in "".join(lines)):
             ddl.append(f"create index if not exists {table}_{c}_idx on {table} ({c});")
+    ddl.append(f"drop index if exists {table}_slug_idx;   -- Dublette zu {table}_slug_key")
     ddl += [
         "-- RLS: Registrierung schaltet Leads frei; Analysen liegen hinter der Paywall",
         "-- (die bekommen bewusst KEINE Policy und sind nur serverseitig lesbar).",
@@ -266,6 +271,8 @@ def main() -> int:
                     help="nach dem Upsert Zeilen loeschen, die der Export nicht mehr "
                          "enthaelt (abgelaufene Fristen). Ohne den Schalter wird nur "
                          "gezaehlt und gemeldet — Loeschen ist nie stillschweigend.")
+    ap.add_argument("--no-search-index", action="store_true",
+                    help="den tsvector-Refresh nach dem Push ueberspringen")
     ap.add_argument("--prune-only", action="store_true",
                     help="nur abgleichen/loeschen, kein Upsert (spart den vollen Push, "
                          "wenn die Daten schon oben sind). Impliziert --prune.")
@@ -324,6 +331,20 @@ def main() -> int:
         else:
             print(f"  Abgleich: {len(old):,} verwaiste lead_id (nicht mehr im Export) — "
                   f"bleiben stehen. Mit --prune entfernen.")
+
+    # Das Suchdokument zieht Text aus gov_leads UND gov_lead_lots — es kann darum keine
+    # GENERATED-Spalte sein und muss nach jedem Push neu gerechnet werden. Ohne diesen
+    # Schritt sucht das Frontend still auf dem Stand des letzten Laufs.
+    if not args.no_search_index and "gov_leads" in todo:
+        print("Suchindex aktualisieren (tsvector + GIN) …")
+        try:
+            import build_search_index as bsi
+            t = time.time()
+            bsi.psql(bsi.db_url(), bsi.REFRESH_SQL)
+            print(f"  fertig in {time.time()-t:.0f}s")
+        except SystemExit as exc:
+            print(f"  uebersprungen: {exc}\n"
+                  f"  → separat nachziehen: python3 scripts/build_search_index.py")
     return 0
 
 
