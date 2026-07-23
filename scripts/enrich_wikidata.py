@@ -60,14 +60,28 @@ def haversine(a_lat, a_lon, b_lat, b_lon):
 
 
 def query_wikidata(labels: list[str]) -> list[dict]:
+    """Kandidaten je Suchlabel — **mit Stichtag zur Einwohnerzahl**.
+
+    `wdt:P1082` liefert JEDES Einwohner-Statement, sobald kein Rang als „preferred"
+    gesetzt ist — bei deutschen Gemeinden sind das typisch 20–30 Volkszaehlungen zurueck
+    bis 1871. Neusaess hat 30 Statements, das erste ist **139 aus dem Jahr 1875**. Die
+    erste Fassung nahm die erste Zeile und schrieb damit Zensuswerte des 19. Jahrhunderts
+    in `buyer_profile.population` — 48 % der angereicherten Kaeufer landeten unter 5.000
+    Einwohnern.
+
+    Deshalb ueber `p:/ps:` das volle Statement abfragen und den Stichtag `pq:P585`
+    mitnehmen; die Auswahl des juengsten Werts passiert in `main()`.
+    """
     values = " ".join(f'"{l}"@de' for l in labels)
-    q = f"""SELECT ?label ?item ?website ?pop ?coord WHERE {{
+    q = f"""SELECT ?label ?item ?website ?pop ?popdate ?coord WHERE {{
       VALUES ?label {{ {values} }}
       ?item rdfs:label ?label . ?item wdt:P17 wd:Q183 .
       ?item wdt:P31/wdt:P279* wd:Q56061 .
       ?item wdt:P625 ?coord .
       OPTIONAL {{ ?item wdt:P856 ?website }}
-      OPTIONAL {{ ?item wdt:P1082 ?pop }}
+      OPTIONAL {{ ?item p:P1082 ?popst .
+                  ?popst ps:P1082 ?pop .
+                  OPTIONAL {{ ?popst pq:P585 ?popdate }} }}
     }}"""
     url = "https://query.wikidata.org/sparql?" + urllib.parse.urlencode({"query": q, "format": "json"})
     r = subprocess.run(["curl", "-sS", "--max-time", "60", "-H", f"User-Agent: {UA}", url],
@@ -118,19 +132,50 @@ def main() -> int:
                 "item": x["item"]["value"].rsplit("/", 1)[-1],
                 "lon": float(m.group(1)), "lat": float(m.group(2)),
                 "website": x.get("website", {}).get("value"),
-                "pop": int(float(x["pop"]["value"])) if "pop" in x else None})
+                "pop": int(float(x["pop"]["value"])) if "pop" in x else None,
+                "popdate": x.get("popdate", {}).get("value")})
+        # Je Wikidata-Item die JUENGSTE Einwohnerzahl behalten. Ohne diesen Schritt
+        # gewinnt eine beliebige der 20–30 historischen Zaehlungen.
+        for lbl, cs in cand.items():
+            best_pop: dict[str, tuple] = {}
+            for c in cs:
+                if c["pop"] is None:
+                    continue
+                key = c["popdate"] or ""     # ohne Stichtag: schwaechster Rang
+                prev = best_pop.get(c["item"])
+                if prev is None or key > prev[0]:
+                    best_pop[c["item"]] = (key, c["pop"])
+            seen: dict[str, dict] = {}
+            for c in cs:
+                if c["item"] in seen:
+                    continue
+                c["pop"] = best_pop.get(c["item"], (None, None))[1]
+                c["popdate"] = best_pop.get(c["item"], (None, None))[0] or None
+                seen[c["item"]] = c
+            cand[lbl] = list(seen.values())
         # je Käufer den nächstgelegenen Kandidaten wählen
         for lbl in chunk:
             for be, nm, _, blat, blon in by_label[lbl]:
-                best, bestkm = None, 1e9
+                # AKTUALITAET VOR ENTFERNUNG. Zu „Neusaess" liefert Wikidata zwei Items
+                # am selben Ort: Q503208 „Stadt in Deutschland" (Stand 2024-12-31) und
+                # Q135669081 „Ortsteil" (Stand 1987). Die Entfernung kann sie nicht
+                # trennen — beide sind derselbe Punkt. Die erste Fassung nahm den
+                # Ortsteil und schrieb 139 Einwohner (Zensus 1875) ins Profil.
+                # Eine Gemeinde, die Wikidata pflegt, hat frische Zahlen; ein
+                # Ortsteil-Stub hat nur die alte Zaehlung. Deshalb sortiert der
+                # Stichtag zuerst, die Entfernung entscheidet nur bei Gleichstand.
+                besten = []
                 for c in cand.get(lbl, []):
                     km = haversine(blat, blon, c["lat"], c["lon"])
-                    if km < bestkm:
-                        best, bestkm = c, km
-                if best and bestkm <= MAX_KM:
+                    if km <= MAX_KM:
+                        besten.append(((c.get("popdate") or ""), -km, c, km))
+                besten.sort(key=lambda t: (t[0], t[1]), reverse=True)
+                best, bestkm = (besten[0][2], besten[0][3]) if besten else (None, 1e9)
+                if best:
                     results.append({
                         "buyer_entity": be, "wikidata_id": best["item"],
                         "website": best["website"], "population": best["pop"],
+                        "population_date": (best.get("popdate") or "")[:10] or None,
                         "wd_lat": best["lat"], "wd_lon": best["lon"],
                         "match_km": round(bestkm, 1)})
         log(f"  Batch {i//BATCH+1}/{-(-len(labels)//BATCH)}: {len(results)} Treffer kumuliert")
@@ -138,7 +183,8 @@ def main() -> int:
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     if results:
-        cols = ["buyer_entity", "wikidata_id", "website", "population", "wd_lat", "wd_lon", "match_km"]
+        cols = ["buyer_entity", "wikidata_id", "website", "population", "population_date",
+                "wd_lat", "wd_lon", "match_km"]
         pq.write_table(pa.table({c: [r[c] for r in results] for c in cols}), OUT)
     log(f"FERTIG: {len(results)} Käufer angereichert → {OUT}")
     with_web = sum(1 for r in results if r["website"])

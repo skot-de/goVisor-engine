@@ -361,3 +361,29 @@ def test_supabase_paging_respects_the_1000_row_cap():
     steps = [int(m.replace("_", "")) for m in re.findall(r"step\s*,?[^=\n]*=\s*([\d_]+)", body)]
     assert steps, "keine Schrittweite in stale_ids gefunden — Regex kaputt?"
     assert max(steps) <= 1000, f"Schrittweite {max(steps)} > 1000 → Paging bricht ab"
+
+
+def test_wikidata_population_is_current_not_historic():
+    """Einwohnerzahlen muessen aktuell sein, nicht aus historischen Volkszaehlungen.
+
+    Wikidata haelt zu deutschen Gemeinden 20–30 Einwohner-Statements zurueck bis 1871,
+    und zum selben Ortsnamen oft ZWEI Items am selben Punkt: die Gemeinde (gepflegt,
+    aktuell) und einen Ortsteil-Stub (nur Zensus 1987). Die erste Fassung nahm den
+    naechstgelegenen und schrieb fuer Neusaess **139** statt 22.904 — 27 % aller
+    angereicherten Kaeufer landeten unter 2.000 Einwohnern.
+
+    Der Fix sortiert nach Stichtag VOR Entfernung. Dieser Test haelt das fest.
+    """
+    import duckdb
+    path = "data/reference/buyer_external.parquet"
+    if not os.path.exists(path):
+        pytest.skip("buyer_external nicht gebaut")
+    con = duckdb.connect()
+    n, alt, ohne_datum = con.execute(
+        f"SELECT count(population), "
+        f"       count(*) FILTER (WHERE population_date < '2015'), "
+        f"       count(*) FILTER (WHERE population IS NOT NULL AND population_date IS NULL) "
+        f"FROM read_parquet('{path}')").fetchone()
+    assert n > 0
+    assert alt / n < 0.05, f"{alt} von {n} Einwohnerzahlen sind aelter als 2015"
+    assert ohne_datum / n < 0.05, f"{ohne_datum} Einwohnerzahlen ohne Stichtag"
