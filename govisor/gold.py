@@ -2487,7 +2487,9 @@ def build_lead_criteria(cfg: Config, country: str = "DE"):
           WITH c AS (
             SELECT c.notice_id AS lead_id, c.lot_id, c.kind, c.name,
                    c.weight_kind, {num} AS w
-              FROM read_parquet('{AC}', hive_partitioning=1) c
+              -- union_by_name: der Reparse lief nur ab 2024, aeltere Monate haben
+              -- die Spalte `weight_kind` noch nicht. Ohne das Flag bricht der Read.
+              FROM read_parquet('{AC}', hive_partitioning=1, union_by_name=1) c
               JOIN read_parquet('{(g / "lead_export.parquet").as_posix()}') l
                 ON l.lead_id = c.notice_id
           ), norm AS (
