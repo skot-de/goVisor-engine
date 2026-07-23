@@ -574,3 +574,29 @@ keinem Rohpfad mit exakt diesem Wert. Die Zahl **4.123 ist deshalb eine Obergren
 die tatsächlich ungenutzte Menge ist kleiner, vor allem bei Datums- und Adressfragmenten.
 Für die *inhaltlichen* Funde oben spielt das keine Rolle: dort wurde jeweils geprüft, dass
 kein entsprechendes Silber-Feld existiert.
+
+
+## Nachweis der Vollständigkeit (2026-07-23)
+
+Nach einer Rückfrage habe ich die Abdeckung nachgerechnet statt behauptet. Alle Blöcke
+aus **derselben** korrigierten Datenbasis (`bronze_inventory` nach beiden Messfehler-Fixes),
+in lückenlosen, nicht überlappenden Bereichen angezeigt:
+
+| Generation | Bereiche | Summe |
+|---|---|---|
+| eforms | 1–160 · 161–330 · 331–478 | **478 / 478** |
+| legacy | 1–140 · 141–300 · 301–601 (Cluster) | **601 / 601** (= 2.452 Pfade) |
+| ojs | 1–45 · 46–180 · 181–299 (Cluster) | **299 / 299** (= 1.010 Pfade) |
+| doe | 1–55 · 56–163 | **163 / 163** |
+| text | 1–20 | **20 / 20** |
+
+Beim Nachrechnen fiel ein **methodischer Mangel im Vorgehen** auf, auch wenn er sich
+inhaltlich nicht ausgewirkt hat: Teile der eForms- und ojs-Listen hatte ich in Bereichen
+angezeigt, die über `grep`-Filter und überlappende `sed`-Bereiche liefen — dabei ist nicht
+prüfbar, ob etwas durchfällt. Die Wiederholung oben ist arithmetisch nachvollziehbar und
+hat **keine neuen inhaltlichen Funde** ergeben; einzige Ergänzung:
+`AppealRequestsStatistics.StatisticsCode` (`complainants` 94 % · `ncompl-awcrit` 6 %) —
+die *Art* des Nachprüfungsantrags neben seiner Anzahl.
+
+**Was weiterhin gilt:** die Grenze des Wert-Joins (s. voriger Abschnitt). 4.123 ist eine
+Obergrenze, weil umgeformte Felder fälschlich als ungenutzt erscheinen.
