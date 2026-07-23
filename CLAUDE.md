@@ -234,6 +234,10 @@ scheitert der Pooler, s. Auto-Memory.)
   Freitexts**. Mit ihm steigt der Anteil Leads mit ≥1.000 Zeichen Beschreibung von 14,6 % auf
   **32,9 %**. `has_detailed_description` rechnet deshalb über beide Ebenen. Messung +
   Produkt-Konsequenz: `docs/data-sources.md`, Abschnitt „Wie viel Inhalt steht wirklich drin?".
+  **Quellen nie zusammen zitieren:** TED 43,5 % reich / Ø 1,68 Lose gegen DÖE 20,8 % / Ø 1,00
+  (der `eforms-sdk-0.1`-Dialekt kennt keine Losstruktur). DÖE liefert 9,7 % aller Bau-Leads
+  (CPV 45), aber 0 % bei Finanz/Nahrung und 0,1 % bei Pharma — unterschwellig heisst kommunaler
+  Bau und Wartung, nicht „ueberall etwas mehr".
 
 ### Fallstrick, der schon zugeschlagen hat
 `build_lead_cpv` wurde einmal **über** `build_doe_buyer_profile` geschrieben. Der CLI-Aufruf

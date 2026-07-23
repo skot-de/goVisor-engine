@@ -136,6 +136,23 @@ Gemessen 2026-07-23 an **437.401 offenen Ausschreibungen** (`cn`/`pin`, eForms a
 | < 200 Zeichen (Zweizeiler) | 60,9 % | — |
 | ≥ 1.000 Zeichen („substanziell") | 14,6 % | **32,9 %** |
 
+**Diese Gesamtzahl mittelt zwei sehr verschiedene Quellen** — getrennt gemessen:
+
+| Quelle | Anzahl | Median Notice | Median + Lose | ≥ 1.000 Zeichen | Ø Lose |
+|---|---:|---:|---:|---:|---:|
+| **TED** (oberschwellig) | 232.986 | 173 | **812** | **43,5 %** | 1,68 |
+| **DÖE** (unterschwellig) | 204.415 | 102 | **204** | **20,8 %** | 1,00 |
+
+DÖE ist rund **viermal dünner** und trägt **exakt ein Los** je Notice — der schlanke
+`eforms-sdk-0.1`-Dialekt kennt keine Losstruktur. Wer die 32,9 % ohne diese Aufteilung
+zitiert, verspricht für den Unterschwellenmarkt das Doppelte dessen, was dort steht.
+
+Im Lead-Export schlägt das gedämpft durch, weil nur *offene* DÖE-Ausschreibungen Leads
+werden: 3.653 von 85.947 (4,3 %), davon 23,7 % „reich" gegen 40,4 % bei TED.
+DÖEs Beitrag ist zudem **stark gewerkeabhängig** — 9,7 % aller Bau-Leads (CPV 45), aber
+0 % bei Finanz (66) und Nahrungsmitteln (15) und 0,1 % bei Pharma (33): solche Verträge
+liegen praktisch immer über dem EU-Schwellenwert.
+
 Zwei Aussagen, die beide stimmen und leicht gegeneinander ausgespielt werden:
 
 1. **Der Regelfall ist dünn.** Die Mehrheit der Bekanntmachungen beschreibt in zwei
