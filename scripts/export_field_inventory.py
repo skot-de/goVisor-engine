@@ -245,7 +245,7 @@ KURATIERT: list[tuple[str, str, str, str]] = [
      "Rang der Angebote — 651 Notices tragen Rang >1, also einen unterlegenen Bieter. Zu wenig fuer eine Gewinnquote, aber 'wer wurde Zweiter' ist sichtbar."),
     ("AppealRequestsStatistics", "ergebnis", "mittel",
      "Nachpruefungsantraege (14 % der Verfahren) plus deren Art. 'Diese Stelle wird angegriffen' = Verfahrensrisiko."),
-    ("FieldsPrivacy", "ergebnis", "hoch",
+    ("FieldsPrivacy", "herkunft", "hoch",
      "WARUM ein Feld leer ist ('Wert zurueckgehalten, Geschaeftsgeheimnis') und ab wann es oeffentlich wird (2034/2035). Ehrlichkeit als Feature — passt exakt zu unseren Herkunfts-Flags."),
     ("NB_TENDERS_RECEIVED_EMEANS", "ergebnis", "niedrig", "Elektronisch eingereichte Angebote."),
     ("NB_TENDERS_RECEIVED_OTHER_EU", "ergebnis", "niedrig", "Auslaendische Bieter (93-97 % null)."),
@@ -342,6 +342,148 @@ KURATIERT: list[tuple[str, str, str, str]] = [
 ]
 
 
+
+# --------------------------------------------------- UI-Kategorie (Frontend v3.5)
+# Abgeleitet aus INPUT/Design/govisor-explorer-v3.5.html:
+#   Liste          Tabellenspalten + Filterleiste (Phase, Frist, Relevanz, Chance,
+#                  Volumen, Region, Amtsinhaber, Leistung, Wettbewerb, Sichtung)
+#   Uebersicht     Lead-Detail Tab 1: Eckdaten, Zuschlagskriterien, Leistungs-
+#                  beschreibung, Lose, Auftraggeber, Quelle
+#   Bewertung      Tab 2: Bewertung, Direktvergleich, Anforderungs-Check, Luecke,
+#                  Wettbewerbs-Historie, Naechster Schritt
+#   Vergabestelle  Tab 3: Ist der Kaeufer aktiv? — inkl. Kontaktdaten
+#   Markt          Tab 4: Marktgroesse, Wettbewerbshaerte, Wachstum, wen schlagen
+#   Team           Tab 5: Notizen, Verlauf, Zuweisung, Workflow-Status
+#   Chance         Potenzial-Tab „Wo koennt ihr gewinnen?"
+#   Position       Potenzial-Tab „Eure Position im Markt"
+#   Profil         Potenzial-Tab „Euer Profil" (Fussabdruck)
+#   Partner        Partner-Netzwerk — im Design erst als Abschnitt „Partner noetig?",
+#                  fachlich aber eigenstaendig genug fuer eine eigene Flaeche
+#   Herkunft       die Ehrlichkeits-Flags (val(…, src, hint)) — im Design ueberall
+#                  inline, deshalb kein Tab, aber eine eigene Kategorie
+#   Neu            passt thematisch nirgends ODER ist gross genug fuer eine eigene
+#                  Flaeche (Wettbewerbe, OEPNV) ODER braucht eine Entscheidung
+#                  (Datenschutz)
+#   Intern         Datenbasis ohne Frontend-Bezug: IDs, Layout, Formatangaben.
+#                  Ohne diese Kategorie muesste technisches Rauschen in „Neu",
+#                  und „Neu" waere als Arbeitsliste wertlos.
+CLUSTER_UI = {
+    "kaeufer_segment": "Vergabestelle", "abwicklung": "Vergabestelle",
+    "rechtsrahmen": "Liste", "ort": "Liste", "fristen": "Liste",
+    "zuschlagskriterien": "Uebersicht", "unterlagen": "Uebersicht",
+    "verweise": "Uebersicht", "nachhaltigkeit": "Uebersicht",
+    "eauktion": "Uebersicht", "wert": "Uebersicht",
+    "eignung": "Bewertung",
+    "ergebnis": "Markt", "direktvergabe": "Markt", "foerderung": "Markt",
+    "wiederkehr": "Chance",
+    "partner": "Partner",
+    "wettbewerbe": "Neu", "oepnv": "Neu", "datenschutz": "Neu",
+    "aenderungen": "Team",     # „Verlauf" ist im Design Teil des Team-Tabs
+    "herkunft": "Herkunft",
+    "datenqualitaet": "Herkunft",
+    "sonstiges": "Uebersicht",
+}
+
+# Pfadmuster fuer alles ohne kuratierten Cluster. Reihenfolge = Vorrang.
+UI_MUSTER = [
+    # Herkunft/Ehrlichkeit
+    ("FieldsPrivacy", "Herkunft"),
+    # Profil / Position — im Design aus den EIGENEN Siegen gerechnet (siege, kunden,
+    # anteil, rang, median). Die Rohfelder dazu sind die Gewinner-Seite: wer hat
+    # gewonnen, mit welchem Wert, in welcher Struktur. Ist der Nutzer selbst der
+    # Gewinner, ist das sein Fussabdruck.
+    ("RankCode", "Position"),
+    ("ADDRESS_WINNER", "Profil"), ("ADDRESS_CONTRACTOR", "Profil"),
+    ("CONTRACTOR/OWNERSHIP", "Profil"), ("PCT_SUBCONTRACTING", "Profil"),
+    ("VAL_SUBCONTRACTING", "Profil"),
+    ("AWARDED_CONTRACT/VAL", "Profil"), ("AWARDED_CONTRACT/DATE", "Profil"),
+    ("AWARDED_CONTRACT/NB_KILOMETRES", "Profil"),
+    # Team / Workflow
+    ("Changes.Change", "Team"), ("EXT/Change", "Team"), ("WHERE/", "Team"),
+    ("OLD_VALUE", "Team"), ("NEW_VALUE", "Team"), ("READ/", "Team"), ("FOR/", "Team"),
+    ("DEL/MIXED", "Team"),
+    # Vergabestelle: Kontakt, Adresse, Nachpruefungsstellen
+    ("CONTACT_DATA", "Vergabestelle"), ("ADDRESS_", "Vergabestelle"),
+    ("CA_CE_CONCESSIONAIRE_PROFILE", "Vergabestelle"), ("E_MAILS/", "Vergabestelle"),
+    ("ContractingParty", "Vergabestelle"), ("TouchPoint", "Vergabestelle"),
+    ("AppealTerms", "Vergabestelle"), ("REVIEW_PROCEDURE", "Vergabestelle"),
+    ("LODGING", "Vergabestelle"), ("MediationParty", "Vergabestelle"),
+    ("TenderRecipientParty", "Vergabestelle"), ("DocumentProviderParty", "Vergabestelle"),
+    ("TenderEvaluationParty", "Vergabestelle"), ("ORGANISATION", "Vergabestelle"),
+    ("USER/", "Vergabestelle"), ("SENDER/", "Vergabestelle"),
+    # Uebersicht: Objekt, Lose, Bedingungen, Unterlagen
+    ("LOT_", "Uebersicht"), ("/LOT", "Uebersicht"), ("ANNEX_B", "Uebersicht"),
+    ("OBJECT_", "Uebersicht"), ("SHORT_DESCR", "Uebersicht"),
+    ("DESCRIPTION", "Uebersicht"), ("TITLE", "Uebersicht"), ("TI_DOC", "Uebersicht"),
+    ("CPV", "Uebersicht"), ("CommodityClassification", "Uebersicht"),
+    ("PAYMENT", "Uebersicht"), ("FINANCING_CONDITIONS", "Uebersicht"),
+    ("PaymentTerms", "Uebersicht"), ("OPTION", "Uebersicht"),
+    ("CONDITIONS", "Uebersicht"), ("PARTICULAR", "Uebersicht"),
+    ("EXECUTION", "Uebersicht"), ("PERFORMANCE", "Uebersicht"),
+    ("LANGUAGE", "Uebersicht"), ("Note", "Uebersicht"), ("INFO_ADD", "Uebersicht"),
+    ("ADDITIONAL_INFO", "Uebersicht"), ("COMPLEMENTARY", "Uebersicht"),
+    ("PROCUREMENT_LAW", "Uebersicht"), ("REFERENCE_TO_LAW", "Uebersicht"),
+    ("LEGISLATION", "Uebersicht"), ("Legislation", "Uebersicht"),
+    ("PLACE_OPENING", "Uebersicht"), ("LOCATION", "Uebersicht"),
+    ("RealizedLocation", "Liste"), ("MAIN_SITE", "Liste"),
+    # Bewertung: Eignung, Auswahlkriterien
+    ("CAPACITY", "Bewertung"), ("SUITABILITY", "Bewertung"),
+    ("CRITERIA_SELECTION", "Bewertung"), ("CRITERIA_CANDIDATE", "Bewertung"),
+    ("CRITERIA_EVALUATION", "Bewertung"), ("SelectionCriteria", "Bewertung"),
+    ("PERSONAL_SITUATION", "Bewertung"), ("ECONOMIC_FINANCIAL", "Bewertung"),
+    ("TECHNICAL_", "Bewertung"), ("QUALIFICATION", "Bewertung"),
+    ("METHODS", "Bewertung"), ("RULES_CRITERIA", "Bewertung"),
+    # Markt: Verfahren, Ergebnis, Wettbewerb
+    ("TENDERS/", "Markt"), ("OFFERS_RECEIVED", "Markt"), ("NB_TENDERS", "Markt"),
+    ("AWARD_OF_CONTRACT", "Markt"), ("AWARDED_CONTRACT", "Markt"),
+    ("AWARD_AND_CONTRACT", "Markt"), ("AWARD_CONTRACT", "Markt"),
+    ("TenderResult", "Markt"), ("LotResult", "Markt"), ("LotTender", "Markt"),
+    ("SettledContract", "Markt"), ("TenderingParty", "Markt"),
+    ("PROCEDURE", "Markt"), ("TenderingProcess", "Markt"), ("ProcedureCode", "Markt"),
+    ("JUSTIFICATION", "Markt"), ("PR_PROC", "Markt"), ("CONTRACTOR", "Markt"),
+    ("WINNER", "Markt"), ("Winning", "Markt"),
+    # Chance
+    ("RECURRENT", "Chance"), ("Recurring", "Chance"), ("FREQUENCY", "Chance"),
+    ("ESTIMATED_TIMING", "Chance"), ("PlannedDate", "Chance"),
+    # Partner
+    ("SUB_CONTRACT", "Partner"), ("Subcontract", "Partner"), ("SUBCONTRACT", "Partner"),
+    ("LEGAL_FORM", "Partner"), ("SEVERAL_OPERATORS", "Partner"),
+    ("PARTICIPANTS", "Partner"), ("FRAMEWORK", "Partner"), ("Framework", "Partner"),
+    ("SME", "Partner"), ("CompanySize", "Partner"),
+    # Neu: eigene Flaechen
+    ("PRIZE", "Neu"), ("Prize", "Neu"), ("CONTEST", "Neu"), ("DESIGN_CONTEST", "Neu"),
+    ("MEMBERS_NAME", "Neu"), ("MEMBER_NAME", "Neu"), ("JURY", "Neu"),
+    ("MOVE", "Neu"), ("TRANSPORT", "Neu"), ("KILOMETRES", "Neu"),
+    ("PUBLIC_SERVICE", "Neu"), ("TICKETS", "Neu"), ("PUNCTUALITY", "Neu"),
+    ("CLEANLINESS", "Neu"), ("SATISFACTION", "Neu"), ("COMPLAINT", "Neu"),
+    ("StrategicProcurement", "Neu"), ("EXCLUSIVE_RIGHTS", "Neu"),
+    # Wert / Volumen
+    ("VALUE", "Uebersicht"), ("VAL_", "Uebersicht"), ("COST", "Uebersicht"),
+    ("Amount", "Uebersicht"), ("VAT", "Uebersicht"), ("CURRENCY", "Uebersicht"),
+    # Fristen / Termine
+    ("DATE", "Liste"), ("TIME_LIMIT", "Liste"), ("DEADLINE", "Liste"),
+    ("Period", "Liste"), ("LIMIT", "Liste"), ("DURATION", "Liste"),
+]
+
+
+def kategorie_ui(path: str, cluster: str, kat: str) -> str:
+    """Genau EINE UI-Kategorie je Pfad — nie leer.
+
+    Vorrang: kuratierter Cluster > Pfadmuster > Regel-Kategorie > Auffang.
+    """
+    if cluster and cluster in CLUSTER_UI:
+        return CLUSTER_UI[cluster]
+    for muster, ui in UI_MUSTER:
+        if muster in path:
+            return ui
+    if kat == "personenbezogen":
+        return "Neu"            # braucht eine Datenschutz-Entscheidung
+    if kat == "adresse_kontakt":
+        return "Vergabestelle"
+    if kat in ("technisch", "layout", "datum_fragment"):
+        return "Intern"
+    return "Neu"                # Auffang: inhaltlich, aber nirgends zuzuordnen
+
 def kuratiert(path: str) -> tuple[str, str, str]:
     for muster, cluster, bewertung, idee in KURATIERT:
         if muster in path:
@@ -372,7 +514,8 @@ def main() -> int:
         w = csv.writer(fh, delimiter=";")          # ; für Excel-DE
         w.writerow(["generation", "pfad", "abdeckung_pct", "notices", "werte",
                     "max_laenge", "beispielwert", "ist_attribut", "wird_genutzt",
-                    "silber_spalte", "kategorie", "cluster", "bewertung", "idee"])
+                    "silber_spalte", "ui_kategorie", "kategorie", "cluster",
+                    "bewertung", "idee"])
         for (gen, path, cov, nn, nv, ml, ex, is_attr, used, derived) in rows:
             kat = kategorie(path)
             cl, bew, idee = kuratiert(path)
@@ -402,8 +545,11 @@ def main() -> int:
                         "meist Formularvariante eines bereits bewerteten Feldes")
             w.writerow([gen, path, f"{cov:.2f}".replace(".", ","), nn, nv, ml,
                         (ex or "")[:200], "ja" if is_attr else "nein",
-                        "ja" if used else "nein", derived or "", kat, cl, bew, idee])
-            stats[bew or "ungeprueft"] = stats.get(bew or "ungeprueft", 0) + 1
+                        "ja" if used else "nein", derived or "",
+                        kategorie_ui(path, cl, kat), kat, cl, bew, idee])
+            ui = kategorie_ui(path, cl, kat)
+            assert ui, f"UI-Kategorie leer fuer {path}"   # Zusicherung: nie leer
+            stats[ui] = stats.get(ui, 0) + 1
 
     print(f"{len(rows):,} Zeilen → {out}")
     for k, v in sorted(stats.items(), key=lambda kv: -kv[1]):
