@@ -357,3 +357,85 @@ bei stark rotierenden. Die Kennzahl braucht eine Normierung auf die Käufergrö�
 
 F1 ist der billigste und unmittelbar spürbar: er braucht **kein einziges neues Feld**,
 nur eine Auswertung über die Merkliste des Nutzers.
+
+---
+
+# Dritte Runde: die externen Quellen (2026-07-23)
+
+Unsere externen Quellen — Destatis/Regionalstatistik, Wikidata, GeoNames, NUTS/GISCO,
+Handelsregister — sind bisher rein **deskriptiv** eingebunden. Die Frage war, ob sie
+gekreuzt mit unseren Zeitreihen **prognostisch** werden. Ergebnis: überwiegend nein, und
+das ist die wichtigste Erkenntnis dieser Runde.
+
+## G · Das Muster: Regional-Makro erklärt Vergabe-Mikro nicht
+
+Drei unabhängige Tests, dreimal derselbe Ausgang:
+
+| Test | absolut | **je Einwohner normiert** |
+|---|---:|---:|
+| Anbieterdichte → Single-Bieter-Quote (2026-07-23, dokumentiert) | — | **r = 0,099** |
+| **Baugenehmigungen → Bau-Ausschreibungen** (n=318 Regionen) | r = 0,434 | **r = −0,089** |
+| Verschuldung je Kopf → Wettbewerb (n=315) | — | **flach: 20,7 / 20,7 / 20,3 / 19,9 %** |
+
+Der Baugenehmigungs-Fall ist lehrreich: **r = 0,434 sieht nach Signal aus** — bis man
+durch die Einwohnerzahl teilt, dann bleibt −0,089. Große Kreise haben mehr Genehmigungen
+*und* mehr Ausschreibungen; das ist Bevölkerung, nicht Kausalität. Genau dieselbe Falle
+wie bei der Anbieterdichte.
+
+**Konsequenz:** Destatis-Kontextzahlen gehören ins UI als *Beschreibung* („dieser Kreis
+investiert 642 €/Kopf"), nicht als *Prognose*. Wer aus ihnen einen Chancen-Score baut,
+baut auf Bevölkerungsgröße. Ich würde nach diesen drei Tests **keine weitere Zeit** in
+regionale Makro-Prädiktoren stecken.
+
+## H · Peer-Vergleich statt Korrelation — richtige Idee, kaputte Daten
+
+Statt „sagt Einwohnerzahl die Vergabetätigkeit voraus" die bessere Frage: **welcher Käufer
+ist unter Gleichgroßen ein Ausreißer?** Statistisch trägt das:
+
+| Größenklasse | Käufer | Median Vergaben/1000 EW | p90 |
+|---|---:|---:|---:|
+| < 20k | 136 | 0,79 | 2,64 (3,3×) |
+| 20–50k | 28 | 0,27 | 0,59 (2,2×) |
+| 50–200k | 14 | 0,14 | 0,34 (2,4×) |
+| > 200k | 9 | 0,02 | 0,22 (11,0×) |
+
+Aber die Grundlage ist unbrauchbar. **`buyer_profile.population` aus Wikidata ist
+systematisch falsch:**
+
+| Käufer | Wikidata | real |
+|---|---:|---:|
+| Stadt Neusäß | **139** | ~22.000 |
+| Stadt Olching | **490** | ~28.000 |
+| Stadt Mainburg | **1.278** | ~15.000 |
+| Markt Großostheim | **2.498** | ~16.000 |
+
+**48 % der 650 angereicherten Käufer haben unter 5.000 Einwohner**, 27 % unter 2.000 — für
+Entitäten, die „Stadt …" heißen, ist das ausgeschlossen. Die Anreicherung trifft offenbar
+einen Ortsteil, eine Gemarkung oder eine andere Eigenschaft.
+
+**Kein KPI auf `buyer_profile.population` bauen, bevor das geprüft ist.** Die
+Destatis-Einwohnerzahl in `region_kpi.bevoelkerung` (322 Regionen, Median 154.468, Berlin
+3,66 Mio.) ist dagegen plausibel — mit der wurde oben normiert.
+
+## I · Nicht rechenbar mit dem, was wir haben
+
+**Firmenalter beim ersten Zuschlag** — „wie lange braucht ein neues Unternehmen bis zum
+ersten öffentlichen Auftrag" wäre ein starker Einstiegs-KPI. Der HR-Cache
+(`hr_index.parquet`, 5,5 Mio. Zeilen) trägt aber nur `norm · nr · name · plz` — **kein
+Gründungsdatum, keine Rechtsform, keinen Status**. Dafür bräuchte es den vollen
+OffeneRegister-Dump (260 MB, Stand 2019), und dessen Daten sind sieben Jahre alt.
+
+## J · Was mit externen Quellen wirklich ginge
+
+Die Quellen, die **prognostisch** wären, haben wir noch nicht. Aus der Analyse ergibt sich
+eine klare Reihenfolge — und sie deckt sich mit der Wunschliste der Profil-Skizze:
+
+| Quelle | Was der Cross-KPI wäre | Warum es die Regional-Falle vermeidet |
+|---|---|---|
+| **Ratsinformationssysteme** | Beschlussvorlage → Ausschreibung: der früheste denkbare Indikator, Monate vor jeder Vorinformation | Ereignis-basiert, nicht Bestands-basiert — kein Bevölkerungs-Confounder |
+| **Präqualifikationsverzeichnisse** | CPV-**genauer** Anbieterpool statt „alle Baubetriebe im Kreis" | Genau die Größe, an der `auftraege_je_betrieb` gescheitert ist |
+| **Förderdatenbanken** | Programmstart → Ausschreibungswelle je Gewerk mit Vorlauf | zeitlicher Impuls, kein Querschnitt |
+| **Bundesanzeiger** | Kapazität des Wettbewerbers: „zu klein für dieses Volumen" | Firmen-Ebene, keine Regional-Aggregation |
+
+Das gemeinsame Muster: **ereignis- oder firmenbezogene Quellen taugen als Prädiktor,
+regionale Bestandsstatistik nicht.** Nach drei Fehlschlägen ist das keine Vermutung mehr.
