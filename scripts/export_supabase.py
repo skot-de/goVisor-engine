@@ -40,7 +40,17 @@ TABLES = {
     # Kriterien tragen) → `criterion_no` wird im Builder als laufende Nummer vergeben.
     "gov_lead_criteria": ("data/gold/DE/lead_criteria.parquet",
                           ("lead_id", "lot_id", "criterion_no")),
+    "gov_lead_requirements": ("data/gold/DE/lead_requirement.parquet",
+                              ("lead_id", "lot_id", "requirement_no")),
+    "gov_lead_parties": ("data/gold/DE/lead_party.parquet",
+                         ("lead_id", "party_role", "party_no")),
+    # Feld-Inventar der Rohdaten — klein und rein informativ, aber die einzige Antwort
+    # auf „welche Felder stecken eigentlich im XML?". Kein lead_id → kein Prune-Abgleich.
+    "gov_bronze_inventory": ("data/gold/DE/bronze_inventory.parquet",
+                             ("schema_gen", "path")),
 }
+# Tabellen ohne lead_id: der Verwaisten-Abgleich (`--prune`) greift dort nicht.
+NO_LEAD_ID = {"gov_bronze_inventory"}
 EXPORT = TABLES["gov_leads"][0]      # Rueckwaertskompatibler Default
 
 # DDL wird AUS DEM PARQUET-SCHEMA abgeleitet — nicht hartcodiert. Vorher lief die
@@ -110,6 +120,10 @@ def build_ddl(table: str, parquet: str, pk=("lead_id",)) -> str:
         f"drop policy if exists {table}_read_authenticated on {table};",
         f"create policy {table}_read_authenticated on {table}",
         "  for select to authenticated using (true);",
+        "-- PostgREST cached das Schema. Eine NEU angelegte Tabelle ist ueber die REST-API",
+        "-- sonst nicht sichtbar (PGRST205: table not found in the schema cache),",
+        "-- obwohl sie in Postgres laengst existiert. Kostet nichts, wenn nichts neu ist.",
+        "notify pgrst, 'reload schema';",
     ]
     return "\n".join(ddl) + "\n"
 
@@ -326,6 +340,9 @@ def main() -> int:
         else:
             print(f"Abgleich {table} (kein Upsert) …")
         # Abgleich gegen den Export — Kind-Tabellen haengen per lead_id am Lead.
+        if table in NO_LEAD_ID:
+            print("  Abgleich: uebersprungen (keine lead_id).")
+            continue
         old = stale_ids(url, key, table, parquet, "lead_id")
         if not old:
             print("  Abgleich: keine verwaisten Zeilen.")

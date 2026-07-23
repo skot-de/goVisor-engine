@@ -2521,6 +2521,152 @@ def build_lead_criteria(cfg: Config, country: str = "DE"):
     return n
 
 
+def build_lead_requirement(cfg: Config, country: str = "DE"):
+    """**Eignungsanforderungen je Lead** — „darf ich hier ueberhaupt mitbieten?"
+
+    Die Bekanntmachung beschreibt selten, *was* gekauft wird (61 % der Beschreibungen
+    sind Zweizeiler), aber fast immer, *wer* bieten darf. Gemessen 2026-07-23 ab 2024:
+    3,19 Mio. Zeilen, davon **75,2 % mit echtem Text** (>=60 Zeichen) ueber **92 % aller
+    Notices** — „drei Referenzen der letzten fuenf Jahre", „Umsatz > 350 TEUR",
+    „ISO 9001". Damit kann ein Nutzer einen Lead **aussortieren, bevor** er die
+    Vergabeunterlagen laedt.
+
+    Gefiltert wird nur, was nachweislich nichts traegt: reine Ja/Nein-Marker und Zeilen,
+    die statt der Anforderung nur einen Portal-Link enthalten (1,2 %) — der Link steht
+    ohnehin schon als `portal_url` am Lead. Alles andere bleibt, auch kurze Texte:
+    „Berufshaftpflicht" ist kurz und trotzdem eine Anforderung.
+
+    Schreibt ``lead_requirement``.
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    out = (g / "lead_requirement.parquet").as_posix()
+    RQ = cfg.silver_table_glob("requirements", country)
+    con = duckdb.connect(); con.execute("SET threads=4")
+    con.execute(f"""
+        COPY (
+          SELECT r.notice_id AS lead_id,
+                 coalesce(r.lot_id, '-')              AS lot_id,
+                 row_number() OVER (PARTITION BY r.notice_id, coalesce(r.lot_id,'-')
+                                    ORDER BY r.kind, r.text) AS requirement_no,
+                 r.kind        AS requirement_kind,
+                 r.type_code   AS requirement_code,
+                 r.text        AS requirement_text,
+                 length(r.text) AS requirement_length
+            FROM read_parquet('{RQ}', hive_partitioning=1) r
+            JOIN read_parquet('{(g / "lead_export.parquet").as_posix()}') l
+              ON l.lead_id = r.notice_id
+           WHERE r.text IS NOT NULL
+             AND lower(trim(r.text)) NOT IN ('ja','nein','yes','no','true','false')
+             AND r.text NOT LIKE 'http%'
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_lead_party(cfg: Config, country: str = "DE"):
+    """**Beteiligte je Lead** — vor allem die Kontaktdaten der Vergabestelle.
+
+    Gemessen ab 2024 (678.497 buyer-Zeilen): **E-Mail 62 % · Telefon 62 % · Web 46 %**.
+    Das ist der Unterschied zwischen „hier ist ein Lead" und „hier ist ein Lead und die
+    Person, die man anruft" — und es kommt aus der Bekanntmachung selbst, ohne Zukauf.
+
+    Rollen: `buyer` (Vergabestelle), `winner` (Zuschlagsempfaenger), `review`
+    (Nachpruefungsstelle), `mediation`. Die Review-Zeile ist nebenbei die Adresse, an die
+    eine Ruege ginge — im Produkt bewusst nicht als Handlungsaufforderung darstellen.
+
+    Schreibt ``lead_party``.
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    out = (g / "lead_party.parquet").as_posix()
+    PT = cfg.silver_table_glob("notice_parties", country)
+    con = duckdb.connect(); con.execute("SET threads=4")
+    con.execute(f"""
+        COPY (
+          SELECT p.notice_id AS lead_id,
+                 p.role      AS party_role,
+                 p.seq       AS party_no,
+                 p.name      AS party_name,
+                 p.national_id, p.town, p.postal_code, p.country, p.nuts,
+                 p.email, p.phone, p.contact_person, p.url,
+                 p.is_sme, p.in_consortium
+            FROM read_parquet('{PT}', hive_partitioning=1) p
+            JOIN read_parquet('{(g / "lead_export.parquet").as_posix()}') l
+              ON l.lead_id = p.notice_id
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_bronze_inventory(cfg: Config, country: str = "DE", since_year: int = 2024):
+    """**Feld-Inventar der Rohdaten** — „welche Spalten haben wir eigentlich in Bronze?"
+
+    Bronze hat **keine Spalten**: es sind 270 tar.gz mit Original-TED-XML. Die ehrliche
+    Entsprechung ist die Auffang-Tabelle `attributes`, die jeden Blattwert unter seinem
+    XML-Pfad festhaelt (Verlust-Garantie, s. `model.ATTRIBUTES`). Dieser Builder
+    aggregiert sie zu einer lesbaren Feldliste: Pfad, Abdeckung, Beispielwert.
+
+    Gemessen 2026-07-23 fuer 2024+: **143,2 Mio. Blattwerte über 3.339 Pfade** in 678.988
+    Notices — davon nur **34 mit >=50 % Abdeckung**, 405 zwischen 5 und 50 % und 2.900
+    unter 5 %. Der lange Schwanz ist der Grund, warum ein Parser nie „fertig" ist: die
+    seltenen Pfade sind teils Formular-Exoten, teils genau die Felder, die einem Nutzer
+    im Einzelfall die Entscheidung abnehmen.
+
+    Nach `schema_gen` getrennt, weil sich die Pfade zwischen den Generationen vollstaendig
+    unterscheiden (`ContractNotice.…` vs. `TED_EXPORT.FORM_SECTION.…`) — eine gemeinsame
+    Liste waere die Summe zweier disjunkter Vokabulare und damit irrefuehrend.
+
+    Schreibt ``bronze_inventory``. Klein genug (~wenige tausend Zeilen), um sie ins
+    Frontend zu exportieren.
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    out = (g / "bronze_inventory.parquet").as_posix()
+    A = cfg.silver_table_glob("attributes", country)
+    N = cfg.silver_table_glob("notices", country)
+    con = duckdb.connect(); con.execute("SET threads=4")
+    con.execute(f"""
+        COPY (
+          WITH n AS (
+            SELECT notice_id, schema_gen FROM read_parquet('{N}', hive_partitioning=1)
+             WHERE year >= {since_year}
+          ), tot AS (
+            SELECT schema_gen, count(*) AS n_notices FROM n GROUP BY 1
+          ), agg AS (
+            SELECT n.schema_gen, a.path,
+                   count(*)                    AS n_values,
+                   count(DISTINCT a.notice_id) AS n_notices,
+                   max(length(a.value))        AS max_length,
+                   any_value(a.value)          AS example_value
+              FROM read_parquet('{A}', hive_partitioning=1) a
+              JOIN n USING (notice_id)
+             WHERE a.year >= {since_year}
+             GROUP BY 1, 2
+          )
+          SELECT agg.schema_gen, agg.path,
+                 agg.n_values, agg.n_notices,
+                 round(100.0 * agg.n_notices / tot.n_notices, 2) AS coverage_pct,
+                 agg.max_length, agg.example_value,
+                 -- Attribut (@…) vs. Element: Attribute tragen Codelisten-Namen und
+                 -- Sprachkennungen, keine Sachdaten — im UI trennbar halten.
+                 (agg.path LIKE '%@%')                           AS is_attribute
+            FROM agg JOIN tot USING (schema_gen)
+           ORDER BY agg.schema_gen, coverage_pct DESC
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
 def build_buyer_profile(cfg: Config, country: str = "DE"):
     """**Vergabestelle-Analyse** je Käufer — der konsolidierte Buyer-Intelligence-KPI.
 
