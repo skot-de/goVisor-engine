@@ -13,6 +13,7 @@ Zwei Schritte:
 Aufruf:  python scripts/export_supabase.py [--table gov_leads] [--dry-run]
 """
 import argparse
+import datetime as dt
 import html
 import json
 import os
@@ -27,74 +28,114 @@ os.chdir(ROOT)
 
 import duckdb  # noqa: E402
 
-EXPORT = "data/gold/DE/lead_export.parquet"
+# Registry der Frontend-Tabellen. Vorher war nur `gov_leads` fest verdrahtet und die
+# Begleittabellen wurden von Hand gepusht — dabei driftet zwangslaeufig etwas.
+# Wert: (Parquet, Konflikt-Schluessel fuer das Upsert = Primary Key).
+TABLES = {
+    "gov_leads":     ("data/gold/DE/lead_export.parquet", ("lead_id",)),
+    "gov_lead_cpv":  ("data/gold/DE/lead_cpv.parquet",    ("lead_id", "cpv_code")),
+    "gov_lead_lots": ("data/gold/DE/lead_lot.parquet",    ("lead_id", "lot_id")),
+}
+EXPORT = TABLES["gov_leads"][0]      # Rueckwaertskompatibler Default
 
-# Postgres-DDL (Spalten = Frontend-Feld-Vertrag). Indizes = die Explorer-Facetten.
-DDL = """-- goVisor Frontend-Tabelle: eine Zeile je Lead (aus gold.build_lead_export).
--- Einmalig im Supabase-Dashboard → SQL Editor ausführen.
-create table if not exists {table} (
-  lead_id           text primary key,
-  slug              text unique not null,   -- permanente Kurz-ID für Shareable-Links
-  titel             text,
-  buyer             text,
-  buyer_town        text,
-  cpv               text,
-  cpv_label         text,
-  nuts_full         text,
-  nuts1             text,
-  region            text,
-  art               text,
-  phase             text,          -- auslauf | f02 | f01
-  neu               boolean,
-  natur_kat         text,          -- dienst | liefer | bau
-  natur_src         text,          -- echt (TED BT-23) | geschaetzt (CPV-Fallback)
-  volumen_wert      double precision,
-  volumen_band      text,
-  volumen_src       text,          -- echt | schaetz | unbekannt
-  months_to_expiry  integer,
-  faellig_basis     text,
-  timing_warn       boolean,
-  timing_src        text,          -- echt | schaetz | unsicher | unbekannt
-  incumbent_name    text,
-  incumbent_seit    integer,
-  incumbent_conf    real,
-  incumbent_src     text,          -- echt | unsicher
-  wechsel           text,          -- hoch | mittel | niedrig | na
-  num_tenders       integer,
-  single_bidder     boolean,
-  konk_stufe        text,          -- gering | mittel | hoch | na
-  konk_src          text,
-  ted_url           text,
-  has_cmp           boolean,
-  has_contracts     boolean,
-  updated_at        timestamptz default now()
-);
-create index if not exists {table}_slug_idx   on {table} (slug);   -- Permalink-Lookup
-create index if not exists {table}_phase_idx  on {table} (phase);
-create index if not exists {table}_nuts1_idx  on {table} (nuts1);
-create index if not exists {table}_nuts_idx   on {table} (nuts_full);
-create index if not exists {table}_natur_idx  on {table} (natur_kat);
-create index if not exists {table}_band_idx   on {table} (volumen_band);
--- Row Level Security: Frontend liest nur; aktivieren + Read-Policy je nach Auth-Setup.
-alter table {table} enable row level security;
-"""
+# DDL wird AUS DEM PARQUET-SCHEMA abgeleitet — nicht hartcodiert. Vorher lief die
+# handgepflegte Liste regelmaessig aus dem Ruder (fehlende Spalten fielen erst beim
+# Import auf). Typ-Mapping DuckDB -> Postgres:
+_PG_TYPE = {
+    "VARCHAR": "text", "BIGINT": "bigint", "INTEGER": "integer", "HUGEINT": "numeric",
+    "DOUBLE": "double precision", "FLOAT": "real", "BOOLEAN": "boolean",
+    "DATE": "date", "TIMESTAMP": "timestamptz", "SMALLINT": "smallint",
+}
+
+# Spalten, die einen Index bekommen (die Explorer-Facetten + Permalink-Lookup).
+_INDEXED = ["slug", "phase", "market_nuts3", "buyer_nuts1", "contract_nature",
+            "value_band", "deadline_date", "incumbent_group_id",
+            "has_detailed_description"]
+
+
+def build_ddl(table: str, parquet: str, pk=("lead_id",)) -> str:
+    if isinstance(pk, str):
+        pk = (pk,)
+    con = duckdb.connect()
+    cols = con.execute(f"DESCRIBE SELECT * FROM read_parquet('{parquet}')").fetchall()
+    lines = []
+    for name, dtype, *_ in cols:
+        pg = _PG_TYPE.get(str(dtype).split("(")[0], "text")
+        # NOT NULL auf den PK-Spalten: sonst kippt das Upsert erst zur Laufzeit.
+        extra = " not null" if name in pk else (" unique" if name == "slug" else "")
+        lines.append(f"  {name:<24} {pg}{extra},")
+    lines.append(f"  updated_at               timestamptz default now(),")
+    lines.append(f"  primary key ({', '.join(pk)})")
+    ddl = [f"-- {table}: generiert aus {parquet} (nicht von Hand pflegen).",
+           f"create table if not exists {table} (", "\n".join(lines), ");"]
+    # MIGRATION: `create table if not exists` ist bei einer BESTEHENDEN Tabelle ein No-Op —
+    # neue Spalten kaemen nie an (und der Upsert scheitert dann mit PGRST204). Deshalb
+    # zusaetzlich je Spalte ein idempotentes ADD COLUMN. Damit ist dieselbe Datei sowohl
+    # Erst-Anlage als auch Migration; mehrfaches Ausfuehren ist gefahrlos.
+    ddl.append(f"-- Migration bestehender Tabellen (idempotent, neue Spalten nachziehen):")
+    for name, dtype, *_ in cols:
+        pg = _PG_TYPE.get(str(dtype).split("(")[0], "text")
+        ddl.append(f"alter table {table} add column if not exists {name} {pg};")
+    # …und derselbe Fall fuer den PRIMARY KEY: eine Tabelle, die frueher ad hoc (ohne PK)
+    # angelegt wurde, behaelt ihn nie — das Upsert scheitert dann mit 42P10 „no unique or
+    # exclusion constraint matching the ON CONFLICT specification". Genau so lag
+    # `gov_lead_cpv` da. Der DO-Block legt den PK nur an, wenn noch keiner existiert;
+    # einen *abweichenden* bestehenden PK fasst er bewusst nicht an (das waere ein
+    # stiller Datenumbau und gehoert von Hand entschieden).
+    ddl += [
+        "do $$ begin",
+        f"  if not exists (select 1 from pg_constraint",
+        f"                  where conrelid = '{table}'::regclass and contype = 'p') then",
+        f"    alter table {table} add primary key ({', '.join(pk)});",
+        "  end if;",
+        "end $$;",
+    ]
+    have = {c[0] for c in cols}
+    for c in _INDEXED:
+        if c in have:
+            ddl.append(f"create index if not exists {table}_{c}_idx on {table} ({c});")
+    ddl += [
+        "-- RLS: Registrierung schaltet Leads frei; Analysen liegen hinter der Paywall",
+        "-- (die bekommen bewusst KEINE Policy und sind nur serverseitig lesbar).",
+        f"alter table {table} enable row level security;",
+        f"drop policy if exists {table}_read_authenticated on {table};",
+        f"create policy {table}_read_authenticated on {table}",
+        "  for select to authenticated using (true);",
+    ]
+    return "\n".join(ddl) + "\n"
 
 
 # Textfelder mit HTML-Entities aus dem TED-XML (&amp;, &#92;n, &quot; …) → Klartext.
-_TEXT_COLS = {"titel", "buyer", "buyer_town", "cpv_label", "region", "incumbent_name"}
-_WS = re.compile(r"\s+")
+# ACHTUNG: die Namen sind die des ENGLISCHEN Export-Vertrags (frueher standen hier noch
+# die deutschen — dadurch lief `title` ungereinigt durch).
+_TEXT_COLS = {"title", "buyer_name", "buyer_town", "buyer_region_name",
+              "market_region_name", "incumbent_name"}
+_WS = re.compile(r"[ \t]*\n[ \t\n]*")     # Leerzeilen/Einrueckung um Umbrueche kappen
+_SPACE = re.compile(r"[ \t]{2,}")
 
 
 def _clean_text(s: str) -> str:
     s = html.unescape(s)
     s = s.replace("\\n", " ").replace("\\t", " ")  # literale \n aus dem Quell-Feed
-    return _WS.sub(" ", s).strip()
+    return re.sub(r"\s+", " ", s).strip()
 
 
-def rows_from_parquet():
+def _clean_longtext(s: str) -> str:
+    """Wie `_clean_text`, aber **Absaetze bleiben erhalten** — bei Beschreibungen mit
+    1.000+ Zeichen ist die Struktur (Aufzaehlungen, Absaetze) Teil der Information."""
+    s = html.unescape(s).replace("\\n", "\n").replace("\\t", " ")
+    return _SPACE.sub(" ", _WS.sub("\n", s)).strip()
+
+
+_LONGTEXT = {"description", "lot_description", "options_description",
+             "renewal_description", "lot_title"}
+
+
+def rows_from_parquet(parquet: str = None):
+    parquet = parquet or EXPORT
     con = duckdb.connect()
-    cols = [c[0] for c in con.execute(f"DESCRIBE SELECT * FROM read_parquet('{EXPORT}')").fetchall()]
-    for rec in con.execute(f"SELECT * FROM read_parquet('{EXPORT}')").fetchall():
+    cols = [c[0] for c in con.execute(f"DESCRIBE SELECT * FROM read_parquet('{parquet}')").fetchall()]
+    for rec in con.execute(f"SELECT * FROM read_parquet('{parquet}')").fetchall():
         d = dict(zip(cols, rec))
         # NaN/inf → None; numpy-Typen → Python (json-serialisierbar); Text entschärfen
         clean = {}
@@ -103,8 +144,12 @@ def rows_from_parquet():
                 clean[k] = None
             elif isinstance(v, float) and (v != v or v in (float("inf"), float("-inf"))):
                 clean[k] = None
+            elif isinstance(v, (dt.date, dt.datetime)):
+                clean[k] = v.isoformat()      # JSON kennt keine Date-Objekte
             elif hasattr(v, "item"):
                 clean[k] = v.item()
+            elif k in _LONGTEXT and isinstance(v, str):
+                clean[k] = _clean_longtext(v)
             elif k in _TEXT_COLS and isinstance(v, str):
                 clean[k] = _clean_text(v)
             else:
@@ -112,31 +157,41 @@ def rows_from_parquet():
         yield clean
 
 
-def push(url, key, table, batch=500):
-    import urllib.request
+def push(url, key, table, batch=500, parquet=None, pk=("lead_id",)):
+    """Upsert via PostgREST. **curl statt urllib** — das python.org-Python auf dieser
+    Maschine hat keine CA-Bundle-Anbindung (SSL: CERTIFICATE_VERIFY_FAILED)."""
+    import subprocess
+    import tempfile
 
-    endpoint = f"{url.rstrip('/')}/rest/v1/{table}?on_conflict=lead_id"
-    headers = {
-        "apikey": key, "Authorization": f"Bearer {key}",
-        "Content-Type": "application/json",
-        "Prefer": "resolution=merge-duplicates,return=minimal",
-    }
+    endpoint = f"{url.rstrip('/')}/rest/v1/{table}?on_conflict={','.join(pk)}"
     buf, total = [], 0
 
     def flush():
         nonlocal total
         if not buf:
             return
-        body = json.dumps(buf).encode()
-        req = urllib.request.Request(endpoint, data=body, headers=headers, method="POST")
-        with urllib.request.urlopen(req, timeout=120) as resp:
-            if resp.status not in (200, 201, 204):
-                raise RuntimeError(f"HTTP {resp.status}: {resp.read()[:300]}")
+        with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False) as fh:
+            json.dump(buf, fh)
+            tmp = fh.name
+        try:
+            out = subprocess.run(
+                ["curl", "-sS", "--max-time", "180", "-X", "POST", endpoint,
+                 "-H", f"apikey: {key}", "-H", f"Authorization: Bearer {key}",
+                 "-H", "Content-Type: application/json",
+                 "-H", "Prefer: resolution=merge-duplicates,return=minimal",
+                 "--data-binary", f"@{tmp}", "-w", "%{http_code}"],
+                capture_output=True, text=True)
+        finally:
+            os.unlink(tmp)
+        body = out.stdout.strip()
+        code = body[-3:] if body[-3:].isdigit() else "???"
+        if code not in ("200", "201", "204"):
+            raise RuntimeError(f"HTTP {code}: {body[:300]}")
         total += len(buf)
         print(f"  … {total:,} Zeilen upserted", flush=True)
         buf.clear()
 
-    for rec in rows_from_parquet():
+    for rec in rows_from_parquet(parquet):
         buf.append(rec)
         if len(buf) >= batch:
             flush()
@@ -144,38 +199,114 @@ def push(url, key, table, batch=500):
     return total
 
 
+def stale_ids(url, key, table, parquet, pk_col="lead_id"):
+    """IDs, die in Supabase stehen, im aktuellen Export aber **nicht mehr** vorkommen.
+
+    Das Upsert ist additiv — es entfernt nichts. Leads, deren Angebotsfrist abgelaufen
+    ist, fallen aus dem Export, blieben in der Tabelle aber stehen und wuerden im
+    Frontend als offene Ausschreibung weiterleben. Deshalb einmal abgleichen.
+    """
+    import subprocess
+
+    have = set()
+    step, off = 10_000, 0
+    while True:
+        out = subprocess.run(
+            ["curl", "-sS", "--max-time", "120",
+             f"{url.rstrip('/')}/rest/v1/{table}?select={pk_col}",
+             "-H", f"apikey: {key}", "-H", f"Authorization: Bearer {key}",
+             "-H", f"Range: {off}-{off+step-1}"], capture_output=True, text=True)
+        chunk = json.loads(out.stdout or "[]")
+        have.update(r[pk_col] for r in chunk)
+        if len(chunk) < step:
+            break
+        off += step
+    con = duckdb.connect()
+    live = {r[0] for r in con.execute(
+        f"SELECT DISTINCT {pk_col} FROM read_parquet('{parquet}')").fetchall()}
+    return sorted(have - live)
+
+
+def prune(url, key, table, ids, pk_col="lead_id", batch=200):
+    import subprocess
+
+    done = 0
+    for i in range(0, len(ids), batch):
+        chunk = ids[i:i + batch]
+        lst = ",".join('"%s"' % s.replace('"', '') for s in chunk)
+        out = subprocess.run(
+            ["curl", "-sS", "--max-time", "120", "-X", "DELETE",
+             f"{url.rstrip('/')}/rest/v1/{table}?{pk_col}=in.({lst})",
+             "-H", f"apikey: {key}", "-H", f"Authorization: Bearer {key}",
+             "-H", "Prefer: return=minimal", "-w", "%{http_code}"],
+            capture_output=True, text=True)
+        code = out.stdout.strip()[-3:]
+        if code not in ("200", "204"):
+            raise RuntimeError(f"DELETE HTTP {code}: {out.stdout[:300]}")
+        done += len(chunk)
+        print(f"  … {done:,}/{len(ids):,} entfernt", flush=True)
+    return done
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--table", default="gov_leads")
+    ap.add_argument("--table", default="all", choices=["all", *TABLES],
+                    help="einzelne Tabelle oder 'all' (Default)")
     ap.add_argument("--dry-run", action="store_true", help="nur DDL + NDJSON, kein Push")
+    ap.add_argument("--prune", action="store_true",
+                    help="nach dem Upsert Zeilen loeschen, die der Export nicht mehr "
+                         "enthaelt (abgelaufene Fristen). Ohne den Schalter wird nur "
+                         "gezaehlt und gemeldet — Loeschen ist nie stillschweigend.")
     args = ap.parse_args()
 
-    if not os.path.exists(EXPORT):
-        print(f"{EXPORT} fehlt — erst `python -m govisor.cli gold` (baut lead_export).")
+    todo = list(TABLES) if args.table == "all" else [args.table]
+    missing = [t for t in todo if not os.path.exists(TABLES[t][0])]
+    if missing:
+        print(f"Parquet fehlt fuer {', '.join(missing)} — erst `python3 -m govisor.cli gold`.")
         return 1
 
-    ddl_path = ROOT / "docs" / f"supabase_{args.table}.sql"
-    ddl_path.write_text(DDL.format(table=args.table))
-    print(f"DDL geschrieben: {ddl_path}  → einmalig im Supabase-Dashboard ausführen.")
-
     url, key = os.environ.get("SUPABASE_URL"), os.environ.get("SUPABASE_SERVICE_KEY")
+    ddl_all = []
+    for table in todo:
+        parquet, pk = TABLES[table]
+        ddl_all.append(build_ddl(table, parquet, pk))
+    ddl_path = ROOT / "docs" / ("supabase_schema.sql" if args.table == "all"
+                                else f"supabase_{args.table}.sql")
+    ddl_path.write_text("\n\n".join(ddl_all))
+    print(f"DDL geschrieben: {ddl_path}  → im Supabase-Dashboard ausführen "
+          f"(idempotent, legt an UND migriert).")
+
     if args.dry_run or not (url and key):
-        nd = ROOT / "data" / "export" / f"{args.table}.ndjson"
-        nd.parent.mkdir(parents=True, exist_ok=True)
-        n = 0
-        with nd.open("w") as fh:
-            for rec in rows_from_parquet():
-                fh.write(json.dumps(rec, default=str) + "\n"); n += 1
-        print(f"NDJSON-Export ({n:,} Zeilen): {nd}")
+        for table in todo:
+            parquet, _ = TABLES[table]
+            nd = ROOT / "data" / "export" / f"{table}.ndjson"
+            nd.parent.mkdir(parents=True, exist_ok=True)
+            n = 0
+            with nd.open("w") as fh:
+                for rec in rows_from_parquet(parquet):
+                    fh.write(json.dumps(rec, default=str) + "\n"); n += 1
+            print(f"NDJSON-Export {table} ({n:,} Zeilen): {nd}")
         if not (url and key):
             print("Kein SUPABASE_URL / SUPABASE_SERVICE_KEY gesetzt → kein Push.\n"
                   "Setze beide und ruf ohne --dry-run erneut auf, um zu upserten.")
         return 0
 
-    print(f"Upsert nach {url} · Tabelle {args.table} …")
-    t = time.time()
-    n = push(url, key, args.table)
-    print(f"FERTIG: {n:,} Zeilen in {time.time()-t:.0f}s upserted.")
+    for table in todo:
+        parquet, pk = TABLES[table]
+        print(f"Upsert nach {url} · Tabelle {table} (PK {'+'.join(pk)}) …")
+        t = time.time()
+        n = push(url, key, table, parquet=parquet, pk=pk)
+        print(f"  FERTIG: {n:,} Zeilen in {time.time()-t:.0f}s upserted.")
+        # Abgleich gegen den Export — Kind-Tabellen haengen per lead_id am Lead.
+        old = stale_ids(url, key, table, parquet, "lead_id")
+        if not old:
+            print("  Abgleich: keine verwaisten Zeilen.")
+        elif args.prune:
+            print(f"  Abgleich: {len(old):,} verwaiste lead_id → loesche …")
+            prune(url, key, table, old, "lead_id")
+        else:
+            print(f"  Abgleich: {len(old):,} verwaiste lead_id (nicht mehr im Export) — "
+                  f"bleiben stehen. Mit --prune entfernen.")
     return 0
 
 

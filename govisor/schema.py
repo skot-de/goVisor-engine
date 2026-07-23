@@ -371,14 +371,33 @@ def _provenance(root: ET.Element, notice: Notice) -> None:
         # Metadaten als efbc:PublicationDate (sonst cbc:IssueDate als Ersatzanker).
         # Ohne diesen Fallback fehlte ALLEN Notices ab 2024 das Datum (0 % Coverage),
         # weil TED auf eForms umgestellt hat.
-        for tag in ("PublicationDate", "IssueDate"):
-            for elem in _iter_named(root, tag):
-                text = (elem.text or "").strip()[:10]
-                if len(text) == 10 and text[4] == "-" and text[:4].isdigit():
+        # WICHTIG: eForms enthalten MEHRERE efbc:PublicationDate (auch geplante Folge-
+        # Veröffentlichungen, teils Jahre in der Zukunft — z. B. 2035 bei 508813-2026).
+        # Das erste zu nehmen ist falsch. Verlässlich ist das cbc:IssueDate als DIREKTES
+        # Kind der Wurzel; PublicationDate nur als Fallback und nur wenn plausibel.
+        import datetime as _dt
+
+        def _plausible(text: str) -> bool:
+            if not (len(text) == 10 and text[4] == "-" and text[:4].isdigit()):
+                return False
+            year = int(text[:4])
+            return 1990 <= year <= _dt.date.today().year + 1
+
+        for child in root:                       # nur direkte Kinder → kein Nested-Treffer
+            if _local(child) == "IssueDate":
+                text = (child.text or "").strip()[:10]
+                if _plausible(text):
                     notice.publication_date = text
                     break
-            if notice.publication_date:
-                break
+        if not notice.publication_date:
+            for tag in ("PublicationDate", "IssueDate"):
+                for elem in _iter_named(root, tag):
+                    text = (elem.text or "").strip()[:10]
+                    if _plausible(text):
+                        notice.publication_date = text
+                        break
+                if notice.publication_date:
+                    break
 
     if not notice.publication_number:
         notice.publication_number = publication_number_from_id(notice.notice_id)

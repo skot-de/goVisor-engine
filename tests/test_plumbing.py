@@ -110,16 +110,18 @@ def test_solo_entities_are_their_own_identity():
 
 
 # ---- lead_export: Frontend-Feld-Vertrag ---------------------------------------
+# Der Vertrag ist durchgehend ENGLISCH — Spalten UND Werte. (Diese Liste stand noch auf
+# den deutschen Namen und war seit der Umstellung rot.)
 _EXPORT_VOCAB = {
-    "phase": {"auslauf", "f02", "f01"},
-    "natur_kat": {"dienst", "liefer", "bau"},
-    "natur_src": {"echt", "geschaetzt"},
-    "volumen_src": {"echt", "schaetz", "unbekannt"},
-    "timing_src": {"echt", "schaetz", "unsicher", "unbekannt"},
-    "incumbent_src": {"echt", "unsicher", None},
-    "wechsel": {"hoch", "mittel", "niedrig", "na"},
-    "konk_stufe": {"gering", "mittel", "hoch", "na"},
-    "konk_src": {"echt", "unbekannt", "na"},
+    "phase": {"expiring", "open", "planned"},
+    "contract_nature": {"services", "supplies", "works"},
+    "contract_nature_source": {"actual", "estimated"},
+    "value_source": {"actual", "estimated", "unknown"},
+    "timing_source": {"actual", "estimated", "uncertain", "unknown"},
+    "incumbent_source": {"actual", "uncertain", None},
+    "switch_chance": {"high", "medium", "low", "na"},
+    "competition_level": {"low", "medium", "high", "na"},
+    "competition_source": {"actual", "unknown", "na"},
 }
 
 
@@ -144,11 +146,11 @@ def test_lead_export_is_1to1_with_lead_detail():
 
 @pytest.mark.skipif(not _has("lead_export"), reason="lead_export nicht gebaut")
 def test_lead_export_default_value_is_hidden():
-    """band_source='default' → volumen_wert NULL (Frontend zeigt '—', schätzt nicht)."""
+    """band_source='default' → value_eur NULL (Frontend zeigt '—', schätzt nicht)."""
     con = duckdb.connect()
     bad = con.execute(
         f"SELECT count(*) FROM read_parquet('{G}/lead_export.parquet') "
-        f"WHERE volumen_src='unbekannt' AND volumen_wert IS NOT NULL").fetchone()[0]
+        f"WHERE value_source='unknown' AND value_eur IS NOT NULL").fetchone()[0]
     assert bad == 0
 
 
@@ -194,7 +196,7 @@ def test_doe_leads_have_d_prefix_and_buyer():
         pytest.skip("keine DÖE-Leads geladen")
     no_buyer = con.execute(
         f"SELECT count(*) FROM read_parquet('{G}/lead_export.parquet') "
-        f"WHERE slug LIKE 'd%' AND buyer IS NULL").fetchone()[0]
+        f"WHERE slug LIKE 'd%' AND buyer_name IS NULL").fetchone()[0]
     assert no_buyer == 0, "jeder DÖE-Lead muss einen Käufer haben"
 
 
@@ -275,3 +277,69 @@ def test_region_kpi_grain_and_sanity():
         f"SELECT count(*) FROM read_parquet('{G}/region_kpi.parquet') "
         f"WHERE intensitaet_pct < 0 OR volumen_coverage > 100").fetchone()[0]
     assert bad == 0
+
+
+def test_cli_gold_builders_exist():
+    """Jeder `gold.build_*`, den die CLI aufruft, muss es auch geben.
+
+    Regression: `build_lead_cpv` wurde einmal versehentlich **ueber**
+    `build_doe_buyer_profile` geschrieben. Der Aufruf blieb in `cli.py` stehen, und der
+    Gold-Lauf brach danach jedes Mal mitten in der Pipeline mit `AttributeError` ab —
+    nach `lead-export`, also erst wenn schon eine Stunde Rechenzeit verbrannt war.
+    Dieser Test kostet Millisekunden und faengt genau das ab.
+    """
+    import re
+    from pathlib import Path
+
+    from govisor import gold
+
+    src = Path(__file__).resolve().parent.parent / "govisor" / "cli.py"
+    called = sorted(set(re.findall(r"\bgold\.(build_\w+)", src.read_text())))
+    assert called, "cli.py ruft keine Gold-Builder auf — Regex kaputt?"
+    missing = [n for n in called if not hasattr(gold, n)]
+    assert not missing, f"cli.py ruft nicht existierende Builder: {missing}"
+
+
+# ---- lead_lot: Inhalts-Layer --------------------------------------------------
+@pytest.mark.skipif(not _has("lead_lot"), reason="lead_lot nicht gebaut")
+def test_lead_lot_primary_key_is_complete():
+    """(lead_id, lot_id) ist der Supabase-PK — beide non-null, Paar eindeutig.
+
+    450 Lose tragen im Quell-XML keine LotID; `build_lead_lot` vergibt dort einen
+    Ordinal-Fallback. Ohne den kippt das Upsert (PK darf nicht NULL sein).
+    """
+    con = duckdb.connect()
+    tot, nulls, uni = con.execute(
+        f"SELECT count(*), count(*) FILTER (WHERE lead_id IS NULL OR lot_id IS NULL), "
+        f"count(DISTINCT concat(lead_id,'|',lot_id)) FROM read_parquet('{G}/lead_lot.parquet')"
+    ).fetchone()
+    assert nulls == 0, "PK-Spalten duerfen nie NULL sein"
+    assert tot == uni, f"{tot-uni} doppelte (lead_id, lot_id) — Upsert waere mehrdeutig"
+
+
+@pytest.mark.skipif(not (_has("lead_lot") and _has("lead_export")), reason="nicht gebaut")
+def test_lead_lot_has_no_orphans():
+    """Jedes Los muss auf einen existierenden Lead zeigen (FK ins Frontend)."""
+    con = duckdb.connect()
+    orphan = con.execute(
+        f"SELECT count(*) FROM read_parquet('{G}/lead_lot.parquet') l "
+        f"WHERE NOT EXISTS (SELECT 1 FROM read_parquet('{G}/lead_export.parquet') e "
+        f"                  WHERE e.lead_id = l.lead_id)").fetchone()[0]
+    assert orphan == 0
+
+
+@pytest.mark.skipif(not (_has("lead_lot") and _has("lead_export")), reason="nicht gebaut")
+def test_detailed_description_flag_counts_both_levels():
+    """`has_detailed_description` muss Notice- UND Los-Text zaehlen.
+
+    Gemessen: nur auf Notice-Ebene waeren 14,6 % „reich", mit Losen 32,9 %. Ein Flag,
+    das die Los-Ebene ignoriert, versteckt im UI bei jedem 5. Lead vorhandenen Inhalt.
+    """
+    con = duckdb.connect()
+    bad = con.execute(f"""
+        SELECT count(*) FROM read_parquet('{G}/lead_export.parquet') e
+        LEFT JOIN (SELECT lead_id, sum(coalesce(lot_description_length,0)) c
+                   FROM read_parquet('{G}/lead_lot.parquet') GROUP BY 1) l USING (lead_id)
+        WHERE e.has_detailed_description
+              <> (coalesce(e.description_length,0) + coalesce(l.c,0) >= 1000)""").fetchone()[0]
+    assert bad == 0, "Flag deckt sich nicht mit Notice+Los-Textlaenge"

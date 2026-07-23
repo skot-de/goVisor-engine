@@ -207,3 +207,36 @@ CLI: `python -m govisor.cli {ingest|silver|gold|verify|review}`.
   — eigenes Härtungsprojekt, Plan in `docs/db-audit-und-haertung.md`.
 - Weitere offene Punkte: `docs/entscheidungen-und-kontext.md` (ARGE-Namen zerlegen,
   Rahmenvertrags-Abrufe, LLM-Schritte, externe Quellen).
+
+## Frontend-Layer: Supabase (Stand 2026-07-23)
+
+Projekt `production` in der Org **goVisor** (`tegznbkbvbbbgzhsvoza`). Creds in `.secrets/`
+(`supabase.txt` = URL **+** Secret-Key in **zwei Zeilen**, `supabase_db.txt` = DB-Passwort).
+`psql` verbindet von dieser Maschine aus **direkt** (`db.<ref>.supabase.co:5432`) — DDL geht
+also ohne Dashboard. (Das gilt nur für dieses Projekt; beim geteilten `ouzapbkguhlrbmovydmz`
+scheitert der Pooler, s. Auto-Memory.)
+
+- **`scripts/export_supabase.py`** — eine Registry `TABLES` steuert alles: `gov_leads`
+  (PK `lead_id`), `gov_lead_cpv` (PK `lead_id,cpv_code`), `gov_lead_lots` (PK
+  `lead_id,lot_id`). DDL wird **aus dem Parquet-Schema generiert** und enthält neben
+  `create table if not exists` auch je Spalte ein `alter table … add column if not exists`
+  — dieselbe Datei legt an *und* migriert, mehrfach ausführbar. Ohne diesen Teil wäre eine
+  neue Spalte am `create if not exists` lautlos abgeprallt (Upsert → PGRST204).
+  `python3 scripts/export_supabase.py [--table all|<name>] [--dry-run]`.
+- **Vertrag ist durchgehend ENGLISCH** — Spalten *und* Werte (`phase`=expiring/open/planned,
+  `*_source`=actual/estimated/uncertain/unknown, Bänder=high/medium/low/na). Das Vokabular
+  ist in `tests/test_plumbing.py::_EXPORT_VOCAB` festgenagelt.
+- **RLS auf allen Tabellen**: nur `authenticated` liest → Registrierung schaltet Leads frei.
+  Analyse-Tabellen bekommen bewusst **keine** Policy (Paywall). Der Secret-Key umgeht RLS und
+  gehört ausschliesslich serverseitig — nie ins Frontend-Bundle.
+- **Inhalts-Layer `gov_lead_lots`** (`gold.build_lead_lot`): das Los ist die Entscheidungs-
+  Einheit (man bietet auf ein Los, nicht auf die Bekanntmachung) und trägt **zwei Drittel des
+  Freitexts**. Mit ihm steigt der Anteil Leads mit ≥1.000 Zeichen Beschreibung von 14,6 % auf
+  **32,9 %**. `has_detailed_description` rechnet deshalb über beide Ebenen. Messung +
+  Produkt-Konsequenz: `docs/data-sources.md`, Abschnitt „Wie viel Inhalt steht wirklich drin?".
+
+### Fallstrick, der schon zugeschlagen hat
+`build_lead_cpv` wurde einmal **über** `build_doe_buyer_profile` geschrieben. Der CLI-Aufruf
+blieb stehen → jeder `gold`-Lauf brach danach mit `AttributeError` ab, aber erst **nach**
+`lead-export`, also nach der teuren Hälfte; alle Tabellen dahinter blieben still veraltet.
+`tests/test_plumbing.py::test_cli_gold_builders_exist` prüft das jetzt in Millisekunden.

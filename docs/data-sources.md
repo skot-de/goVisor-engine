@@ -126,6 +126,34 @@ Ein Parser, der pro Notice ein `description`-Feld annimmt, verliert also zwei Dr
 
 > Konsequenz für das Konzept: `extracted_notices` (Abschnitt 5.2) ist pro Notice modelliert. Die Extraktion muss pro Los laufen, sonst mittelt sie Lose mit unterschiedlicher Laufzeit und Technik zu einem Datensatz zusammen.
 
+## Wie viel Inhalt steht wirklich drin?
+
+Gemessen 2026-07-23 an **437.401 offenen Ausschreibungen** (`cn`/`pin`, eForms ab 2024):
+
+| Beschreibungslänge | nur Notice-Ebene | Notice **+ Lose** |
+|---|---|---|
+| Median | 129 Zeichen | **432 Zeichen** |
+| < 200 Zeichen (Zweizeiler) | 60,9 % | — |
+| ≥ 1.000 Zeichen („substanziell") | 14,6 % | **32,9 %** |
+
+Zwei Aussagen, die beide stimmen und leicht gegeneinander ausgespielt werden:
+
+1. **Der Regelfall ist dünn.** Die Mehrheit der Bekanntmachungen beschreibt in zwei
+   Zeilen, *wer* bieten darf — nicht *was* gekauft wird. Strukturierte Spezifikation gibt
+   es nur als `ItemClassificationCode` (CPV) und `DurationMeasure`; keine Mengen, Maße
+   oder technischen Vorgaben. Das Leistungsverzeichnis liegt hinter dem Portal-Link, und
+   den trägt nur **24 %** der offenen Ausschreibungen (`portal_url`).
+2. **Der reiche Schwanz ist groß.** Ein knappes Drittel trägt ≥ 1.000 Zeichen, die
+   längste 17.672. Wer auf TED durchklickt, landet regelmäßig darin — der Median
+   beschreibt den Normalfall, nicht die Erfahrung beim Stöbern.
+
+> Konsequenz fürs Produkt: Die Beschreibung darf **nicht** das tragende Element der
+> Detailseite sein. Tragend sind CPV, Leistungsort, Wert, Frist, Wettbewerb, Eignung —
+> die entscheiden über *Passt das zu mir?*. Der Volltext ist Bonus, wo er existiert;
+> `lead_export.has_detailed_description` (rechnet über **beide** Ebenen) sagt dem UI,
+> wann sich ein ausklappbarer Volltext-Bereich lohnt. Die Los-Texte liegen in
+> `gold.lead_lot` → Supabase `gov_lead_lots`.
+
 ## Nicht erfasste Felder
 
 Bewusst offen gelassen, gemessen an DE `2023-06`:

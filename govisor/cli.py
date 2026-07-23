@@ -323,6 +323,11 @@ def main(argv: list[str] | None = None) -> int:
         print("dim-nuts    :", f"{gold.build_dim_nuts(cfg, c):,} NUTS-Codes (Regions-Autocomplete)")
         print("lead-geo    :", f"{gold.build_lead_geo(cfg, c):,} Leads geokodiert (Radius-Suche)")
         print("lead-export :", f"{gold.build_lead_export(cfg, c):,} Leads (Frontend-Vertrag, Supabase-ready)")
+        # Die beiden n:m-Begleittabellen zum Export — hingen bisher NICHT im Lauf und
+        # wurden von Hand gebaut; damit lief das Frontend Gefahr, auf veralteten
+        # Nebentabellen zu sitzen. Reihenfolge zaehlt: beide joinen auf lead_export.
+        print("lead-cpv    :", f"{gold.build_lead_cpv(cfg, c):,} CPV-Zeilen (alle CPV je Lead)")
+        print("lead-lot    :", f"{gold.build_lead_lot(cfg, c):,} Lose (Inhalts-Layer: 2/3 des Freitexts)")
         print("doe-buyer   :", f"{gold.build_doe_buyer_profile(cfg, c):,} Käufer-Profile (Unterschwellenmarkt)")
         print("doe-demand  :", f"{gold.build_doe_demand(cfg, c):,} Nachfrage-Zellen (CPV-Div × NUTS-3 × Jahr)")
         print("buyer-profile:", f"{gold.build_buyer_profile(cfg, c):,} Vergabestellen-Profile")

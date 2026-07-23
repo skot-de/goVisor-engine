@@ -695,7 +695,7 @@ def build_leads(cfg: Config, country: str = "DE", reference_date: str | None = N
           b.buyer_email, b.buyer_url, n.ted_url,
           w.incumbent_entity, w.incumbent_name, round(w.incumbent_conf,2) AS incumbent_conf,
           w.in_consortium,
-          n.title AS titel, substr(n.description, 1, 600) AS beschreibung,
+          n.title AS titel, n.description AS beschreibung,
           n.cpv_main, substr(n.cpv_main,1,4) AS cpv_class, dc.branche, dc.sector,
           n.award_date AS vergabe_datum,
           {END}::DATE AS contract_end,
@@ -2042,7 +2042,7 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
             CASE n.notice_kind WHEN 'cn' THEN 'f02' ELSE 'f01' END AS source,
             b.entity_id AS buyer_entity, b.buyer_name, b.buyer_town, b.buyer_nuts,
             b.buyer_email, b.buyer_url, n.ted_url,
-            n.title AS titel, substr(n.description, 1, 600) AS beschreibung,
+            n.title AS titel, n.description AS beschreibung,
             n.cpv_main, substr(n.cpv_main,1,4) AS cpv_class, dc.branche, dc.sector,
             n.submission_deadline::DATE AS contract_end,
             date_diff('month', DATE '{ref}', n.submission_deadline::DATE) AS months_to_expiry,
@@ -2142,26 +2142,23 @@ def _assign_slugs(cfg: Config, country: str, lead_ids: list[str],
 
 
 def build_lead_export(cfg: Config, country: str = "DE"):
-    """`lead_detail` → **Frontend-Feld-Vertrag** (flach, Supabase-ready).
+    """`lead_detail` → **Frontend-Vertrag** (flach, Supabase-ready) — durchgehend ENGLISCH.
 
-    Mappt die ehrlichen Herkunfts-Flags auf die vom UI erwarteten Werte
-    (`echt`/`schaetz`/`unsicher`/`unbekannt`/`na`), `displ_band`→`wechsel`,
-    `bidder_bucket`→`konk_stufe`, `source`→Phase, buyer_nuts→Region-Name (via dim_nuts),
-    CPV→Label. `natur_kat` (Dienst/Liefer/Bau) kommt aus der echten TED-Vertragsnatur
-    (BT-23, silver.notices.contract_nature) mit `natur_src`-Flag; nur wo TED nichts trägt
-    (Alt-Formate <2014, ~0 % der aktuellen Leads) greift die CPV-Divisions-Heuristik.
-    `relevanz` bleibt bewusst NULL (runtime, hängt am User-Profil). `slug` = permanente
-    Kurz-ID für Shareable-Links (deterministisch, quellen-geprefixt, via `_assign_slugs`).
-    Schreibt ``lead_export`` (eine Zeile je Lead, alle Spalten flach).
+    Spalten UND Werte sind englisch/sprachneutral, damit der Vertrag für weitere Länder
+    trägt; die Übersetzung gehört ins Frontend. Herkunfts-Flags bleiben das Kernprinzip:
+    ``*_source`` sagt immer, ob ein Wert belegt (``actual``) oder abgeleitet
+    (``estimated``/``uncertain``/``unknown``) ist.
+
+    Markt-Region = **Leistungsort**, nicht Käufersitz (``market_region_known`` als Gate).
+    ``slug`` = permanenter Kurz-Link. Schreibt ``lead_export`` (1 Zeile je Lead).
     """
     import duckdb
 
     g = cfg.gold_dir / country
     def q(n): return f"'{(g / n).as_posix()}'"
-    nglob = cfg.silver_table_glob("notices", country)   # echte TED-Vertragsnatur (BT-23)
+    nglob = cfg.silver_table_glob("notices", country)
     out = (g / "lead_export.parquet").as_posix()
     con = duckdb.connect(); con.execute("SET threads=4")
-    # Permanente Kurz-Slugs (Shareable-Links) vor dem Export zuweisen/laden.
     lead_ids = [r[0] for r in con.execute(
         f"SELECT lead_id FROM read_parquet({q('lead_detail.parquet')})").fetchall()]
     doe_ids = {r[0] for r in con.execute(
@@ -2170,76 +2167,179 @@ def build_lead_export(cfg: Config, country: str = "DE"):
     con.execute(f"""
         COPY (
           SELECT
-            d.lead_id, sl.slug, d.titel,
-            d.buyer_name AS buyer, d.buyer_town,
-            d.cpv_main AS cpv, coalesce(cl.label, cld.label) AS cpv_label,
-            d.buyer_nuts AS nuts_full,
-            substr(d.buyer_nuts, 1, 3) AS nuts1,
-            dn.name AS region,
-            -- MARKT-Region = Leistungsort (nicht Käufersitz!). DB Netz sitzt in Frankfurt und
-            -- baut Gleise in ganz DE — Frankfurter Marktdaten an eine bayerische Ausschreibung
-            -- zu hängen wäre selbstbewusst falsch. Nur zeigen, wenn NUTS-3-genau bekannt.
-            CASE WHEN length(lg.perf_nuts) >= 5 THEN substr(lg.perf_nuts, 1, 5) END AS market_nuts3,
-            mkt.name AS market_region_name,
-            (length(lg.perf_nuts) >= 5) AS market_region_ok,
-            d.contract_kind AS art,
-            -- Phase (= UI src): auslauf / f02 / f01
-            d.source AS phase,
-            (d.source IN ('f01','f02')) AS neu,          -- neue Ausschreibung vs. Folge
-            -- Leistungsnatur (Dienst/Liefer/Bau): echte TED-Vertragsnatur (BT-23) zuerst,
-            -- CPV-Division nur als Fallback wo TED nichts trägt (Alt-Formate <2014).
-            CASE WHEN nt.contract_nature='works' THEN 'bau'
-                 WHEN nt.contract_nature='supplies' THEN 'liefer'
-                 WHEN nt.contract_nature='services' THEN 'dienst'
-                 WHEN substr(d.cpv_main,1,2)='45' THEN 'bau'
-                 WHEN substr(d.cpv_main,1,2) BETWEEN '03' AND '44' THEN 'liefer'
-                 ELSE 'dienst' END AS natur_kat,
+            d.lead_id, sl.slug,
+            d.titel                                   AS title,
+            -- Freitext. GEMESSEN (2026-07-23, 437.401 offene Ausschreibungen ab 2024):
+            -- die Notice-Beschreibung allein ist zu 61 % ein Zweizeiler (<200 Zeichen),
+            -- Median 129. Zwei Drittel des Textes liegen auf der **Los**-Ebene
+            -- (`lead_lot`) — mit ihr steigt der Median auf 432 und der Anteil mit
+            -- >=1.000 Zeichen von 14,6 % auf 32,9 %. Das Flag rechnet deshalb ueber
+            -- BEIDE Ebenen, sonst versteckte das UI bei jedem 5. Lead vorhandenen Inhalt.
+            d.beschreibung                            AS description,
+            length(d.beschreibung)                    AS description_length,
+            coalesce(length(d.beschreibung),0) + coalesce(lt.lot_chars,0)
+                                                      AS total_description_length,
+            (coalesce(length(d.beschreibung),0) + coalesce(lt.lot_chars,0) >= 1000)
+                                                      AS has_detailed_description,
+            coalesce(lt.n_lots, 0)                    AS n_lots,
+            d.buyer_name, d.buyer_town,
+            d.buyer_nuts, substr(d.buyer_nuts,1,3)    AS buyer_nuts1,
+            dn.name                                   AS buyer_region_name,
+            -- Markt = LEISTUNGSORT. Nur zeigen, wenn NUTS-3-genau bekannt.
+            CASE WHEN length(lg.perf_nuts) >= 5 THEN substr(lg.perf_nuts,1,5) END AS market_nuts3,
+            mkt.name                                  AS market_region_name,
+            (length(lg.perf_nuts) >= 5)               AS market_region_known,
+            d.cpv_main                                AS cpv_code,
+            CASE d.contract_kind
+                 WHEN 'rahmenvertrag' THEN 'framework' WHEN 'einmal_werk' THEN 'one_off_works'
+                 WHEN 'wiederkehrend' THEN 'recurring' WHEN 'werk_sonstig' THEN 'works_other'
+                 ELSE 'other' END                     AS contract_kind,
+            CASE d.source WHEN 'auslauf' THEN 'expiring' WHEN 'f02' THEN 'open'
+                 WHEN 'f01' THEN 'planned' END        AS phase,
+            (d.source IN ('f01','f02'))               AS is_new_tender,
+            -- Leistungsart: echte TED-Vertragsnatur (BT-23), sonst CPV-Heuristik
+            CASE WHEN nt.contract_nature='works' THEN 'works'
+                 WHEN nt.contract_nature='supplies' THEN 'supplies'
+                 WHEN nt.contract_nature='services' THEN 'services'
+                 WHEN substr(d.cpv_main,1,2)='45' THEN 'works'
+                 WHEN substr(d.cpv_main,1,2) BETWEEN '03' AND '44' THEN 'supplies'
+                 ELSE 'services' END                  AS contract_nature,
             CASE WHEN nt.contract_nature IN ('works','supplies','services')
-                 THEN 'echt' ELSE 'geschaetzt' END AS natur_src,
-            -- Volumen: Wert + Herkunft (default = zu unsicher → als unbekannt zeigen)
-            CASE WHEN d.band_source='default' THEN NULL ELSE d.value_effektiv END AS volumen_wert,
-            d.band_effektiv AS volumen_band,
-            CASE d.band_source WHEN 'echt' THEN 'echt'
-                 WHEN 'geschaetzt' THEN 'schaetz' WHEN 'imputiert' THEN 'schaetz'
-                 ELSE 'unbekannt' END AS volumen_src,
-            -- Timing: Monate/Frist + Herkunft; termin_plausibel=false → unsicher+warn
-            d.months_to_expiry, d.faellig_basis,
-            (NOT coalesce(d.termin_plausibel, true)) AS timing_warn,
-            CASE WHEN NOT coalesce(d.termin_plausibel, true) THEN 'unsicher'
+                 THEN 'actual' ELSE 'estimated' END   AS contract_nature_source,
+            -- Wert: 'default'-Band ist zu unsicher → NULL, Frontend zeigt '—'
+            CASE WHEN d.band_source='default' THEN NULL ELSE d.value_effektiv END AS value_eur,
+            d.band_effektiv                           AS value_band,
+            CASE d.band_source WHEN 'echt' THEN 'actual'
+                 WHEN 'geschaetzt' THEN 'estimated' WHEN 'imputiert' THEN 'estimated'
+                 ELSE 'unknown' END                   AS value_source,
+            -- Timing: Frist-DATUM + Tage (der eigentliche Alert) und Auslauf in Monaten
+            d.deadline_date,
+            datediff('day', current_date, d.deadline_date) AS days_to_deadline,
+            d.months_to_expiry,
+            d.contract_end_eff                        AS contract_end,
+            datediff('day', current_date, d.contract_end_eff) AS days_to_expiry,
+            d.faellig_basis                           AS due_basis,
+            (NOT coalesce(d.termin_plausibel, true))  AS timing_implausible,
+            CASE WHEN NOT coalesce(d.termin_plausibel, true) THEN 'uncertain'
                  WHEN d.source IN ('f01','f02') THEN
-                      CASE WHEN d.deadline_source='echt' THEN 'echt' ELSE 'schaetz' END
-                 ELSE CASE d.duration_source WHEN 'echt' THEN 'echt'
-                          WHEN 'unbekannt' THEN 'unbekannt' ELSE 'schaetz' END END AS timing_src,
-            -- Incumbent: Name/Seit + Herkunft aus Konfidenz (hoch=echt, sonst unsicher)
-            d.incumbent_name, d.incumbent_since_year AS incumbent_seit, d.incumbent_conf,
+                      CASE WHEN d.deadline_source='echt' THEN 'actual' ELSE 'estimated' END
+                 ELSE CASE d.duration_source WHEN 'echt' THEN 'actual'
+                          WHEN 'unbekannt' THEN 'unknown' ELSE 'estimated' END END AS timing_source,
+            -- Amtsinhaber inkl. Konzern-Gruppe (entity_identity)
+            d.incumbent_name,
+            d.incumbent_since_year, d.incumbent_conf  AS incumbent_confidence,
             CASE WHEN d.incumbent_name IS NULL THEN NULL
-                 WHEN d.incumbent_conf >= 0.75 THEN 'echt' ELSE 'unsicher' END AS incumbent_src,
-            -- Wechsel-Chance (Band)
+                 WHEN d.incumbent_conf >= 0.75 THEN 'actual' ELSE 'uncertain' END AS incumbent_source,
+            ei.identity_id                            AS incumbent_group_id,
+            ei.group_size                             AS incumbent_group_size,
             CASE WHEN d.displ_band IS NULL OR d.displ_band LIKE 'n/a%' THEN 'na'
-                 ELSE d.displ_band END AS wechsel,
-            -- Konkurrenz: Bieterzahl-Bucket → gering/mittel/hoch/na
-            d.num_tenders, d.single_bidder,
-            CASE d.bidder_bucket WHEN 'einzel' THEN 'gering' WHEN 'wenig' THEN 'mittel'
-                 WHEN 'viel' THEN 'hoch' ELSE 'na' END AS konk_stufe,
+                 WHEN d.displ_band='hoch' THEN 'high' WHEN d.displ_band='mittel' THEN 'medium'
+                 WHEN d.displ_band='niedrig' THEN 'low' ELSE 'na' END AS switch_chance,
+            d.num_tenders                             AS n_bidders,
+            d.single_bidder,
+            CASE d.bidder_bucket WHEN 'einzel' THEN 'low' WHEN 'wenig' THEN 'medium'
+                 WHEN 'viel' THEN 'high' ELSE 'na' END AS competition_level,
             CASE WHEN d.source IN ('f01','f02') THEN 'na'
-                 WHEN d.num_tenders IS NOT NULL THEN 'echt' ELSE 'unbekannt' END AS konk_src,
-            -- relevanz: bewusst NULL (runtime, User-Profil)
-            d.ted_url,
-            (d.incumbent_name IS NOT NULL AND d.incumbent_conf >= 0.75) AS has_cmp,
-            (coalesce(d.tenure_years, 0) > 0) AS has_contracts
+                 WHEN d.num_tenders IS NOT NULL THEN 'actual' ELSE 'unknown' END AS competition_source,
+            d.ted_url                                 AS source_url,
+            (d.incumbent_name IS NOT NULL AND d.incumbent_conf >= 0.75) AS has_comparables,
+            (coalesce(d.tenure_years, 0) > 0)         AS has_contract_history
           FROM read_parquet({q('lead_detail.parquet')}) d
           LEFT JOIN read_parquet('{slug_path}') sl ON sl.lead_id = d.lead_id
-          LEFT JOIN read_parquet({q('dim_cpv_label.parquet')}) cl ON cl.cpv_code = d.cpv_main
-          -- Fallback für DÖE-Lean-Notices mit nur 2-stelligem CPV → Divisions-Label
-          LEFT JOIN read_parquet({q('dim_cpv_label.parquet')}) cld
-            ON cld.cpv_code = rpad(substr(d.cpv_main, 1, 2), 8, '0')
-          LEFT JOIN read_parquet({q('dim_nuts.parquet')}) dn ON dn.nuts_code = substr(d.buyer_nuts,1,3)
           LEFT JOIN read_parquet({q('lead_geo.parquet')}) lg ON lg.lead_id = d.lead_id
+          LEFT JOIN read_parquet({q('dim_nuts.parquet')}) dn ON dn.nuts_code = substr(d.buyer_nuts,1,3)
           LEFT JOIN read_parquet({q('dim_nuts.parquet')}) mkt ON mkt.nuts_code = substr(lg.perf_nuts,1,5)
+          LEFT JOIN read_parquet({q('entity_identity.parquet')}) ei ON ei.entity_id = d.incumbent_entity
           LEFT JOIN (
             SELECT notice_id, any_value(contract_nature) AS contract_nature
             FROM read_parquet('{nglob}') WHERE contract_nature IS NOT NULL GROUP BY notice_id
           ) nt ON nt.notice_id = d.lead_id
+          LEFT JOIN (
+            SELECT notice_id, count(*) AS n_lots,
+                   sum(coalesce(length(description),0)) AS lot_chars
+            FROM read_parquet('{cfg.silver_table_glob("lots", country)}', hive_partitioning=1)
+            GROUP BY notice_id
+          ) lt ON lt.notice_id = d.lead_id
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_lead_cpv(cfg: Config, country: str = "DE"):
+    """**Alle** CPV je Lead (n:m) — 41 % der Notices tragen mehr als einen.
+
+    `lead_export.cpv_code` führt nur den Haupt-CPV; diese Tabelle macht die übrigen
+    zugänglich (Silber `notice_cpv`). Schreibt ``lead_cpv`` (lead_id, cpv_code, is_main).
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    out = (g / "lead_cpv.parquet").as_posix()
+    NC = cfg.silver_table_glob("notice_cpv", country)
+    con = duckdb.connect(); con.execute("SET threads=4")
+    con.execute(f"""
+        COPY (
+          SELECT DISTINCT c.notice_id AS lead_id, c.cpv_code, c.is_main
+          FROM read_parquet('{NC}', hive_partitioning=1) c
+          JOIN read_parquet('{(g / "lead_export.parquet").as_posix()}') l ON l.lead_id = c.notice_id
+          WHERE c.cpv_code IS NOT NULL
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_lead_lot(cfg: Config, country: str = "DE"):
+    """**Lose je Lead** (n:m) — der eigentliche Inhalts-Layer fuers Frontend.
+
+    Warum eigene Tabelle: die Notice-Beschreibung ist bei **61 % ein Zweizeiler**
+    (<200 Zeichen, gemessen 2026-07-23 an 437.401 offenen Ausschreibungen ab 2024).
+    Der Inhalt steckt zu zwei Dritteln auf der **Los**-Ebene (s. `docs/data-sources.md`,
+    Abschnitt „Der Freitext ist los-basiert"). Rechnet man die Lose dazu, steigt der
+    Median von **129 auf 432 Zeichen** und der Anteil mit >=1.000 Zeichen von
+    **14,6 % auf 32,9 %** — genau das, was man beim Durchklicken auf TED sieht.
+
+    Das Los ist ausserdem die **Entscheidungs-Einheit**: eine Firma bietet auf ein Los,
+    nicht auf die Bekanntmachung. Deshalb kommen Wert, Laufzeit, Leistungsort und
+    Optionen/Verlaengerung je Los mit — auf Lead-Ebene sind sie zusammengemittelt.
+
+    Schreibt ``lead_lot`` (englischer Vertrag, 1:n zu `lead_export.lead_id`).
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    out = (g / "lead_lot.parquet").as_posix()
+    L = cfg.silver_table_glob("lots", country)
+    con = duckdb.connect(); con.execute("SET threads=4")
+    con.execute(f"""
+        COPY (
+          SELECT
+            lo.notice_id                              AS lead_id,
+            -- 450 Lose tragen keine LotID im Quell-XML. Der Supabase-PK ist
+            -- (lead_id, lot_id) → NULL waere dort nicht erlaubt und das Upsert fiele
+            -- auf die Nase. Ordinal-Fallback statt Zeile wegwerfen.
+            coalesce(lo.lot_id, 'n' || row_number() OVER (
+                PARTITION BY lo.notice_id ORDER BY lo.title NULLS LAST)::VARCHAR) AS lot_id,
+            (lo.lot_id IS NULL)                       AS lot_id_synthetic,
+            lo.title                                  AS lot_title,
+            lo.description                            AS lot_description,
+            length(lo.description)                    AS lot_description_length,
+            -- Wert nur, wenn er auch eine Waehrung traegt; Fremdwaehrung ehrlich benannt
+            CASE WHEN lo.value_currency='EUR' THEN lo.value_amount END AS lot_value_eur,
+            lo.value_currency                         AS lot_value_currency,
+            lo.start_date, lo.end_date, lo.duration_months,
+            CASE WHEN length(lo.performance_nuts) >= 5
+                 THEN substr(lo.performance_nuts,1,5) END AS lot_market_nuts3,
+            coalesce(lo.has_options, false)           AS has_options,
+            lo.options_description,
+            coalesce(lo.has_renewal, false)           AS has_renewal,
+            lo.renewal_description, lo.max_renewals
+          FROM read_parquet('{L}', hive_partitioning=1) lo
+          JOIN read_parquet('{(g / "lead_export.parquet").as_posix()}') l
+            ON l.lead_id = lo.notice_id
         ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
     """)
     n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
