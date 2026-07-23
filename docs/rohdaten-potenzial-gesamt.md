@@ -600,3 +600,38 @@ die *Art* des Nachprüfungsantrags neben seiner Anzahl.
 
 **Was weiterhin gilt:** die Grenze des Wert-Joins (s. voriger Abschnitt). 4.123 ist eine
 Obergrenze, weil umgeformte Felder fälschlich als ungenutzt erscheinen.
+
+---
+
+## Endgültige Abdeckungs-Bilanz (2026-07-23)
+
+Auf mehrfache Nachfrage sauber ausgerechnet statt behauptet:
+
+| | Pfade |
+|---|---:|
+| **einzeln als Zeile gelesen** (eForms 478 · DÖE 163 · text 20 · legacy 601 Cluster · ojs 299 Cluster) | **1.561** |
+| **nach Abzug der Bekanntmachungstyp-Wurzel identisch** mit einem gelesenen Pfad | **2.471** |
+| **in 7 Clustern mit abweichender Verschachtelung** — vollständig geprüft, s. unten | **91** |
+| **Summe** | **4.123** ✓ |
+
+Die 2.471 sind kein blinder Fleck: `…CONTRACT.FD_CONTRACT.PROCEDURE…RECEIPT_LIMIT_DATE/YEAR`
+und `…CONTRACT_UTILITIES.FD_CONTRACT_UTILITIES.PROCEDURE…RECEIPT_LIMIT_DATE/YEAR` sind
+**dasselbe Feld in der Sektoren-Variante desselben Formulars**. Nach Entfernen der
+Typ-Wurzel (`CONTRACT`, `CONTRACT_UTILITIES`, `CONCESSION`, `DESIGN_CONTEST`,
+`PERIODIC_INDICATIVE_UTILITIES`, `BUYER_PROFILE`, `VOLUNTARY_EX_ANTE_TRANSPARENCY_NOTICE` …)
+sind sie zeichengleich.
+
+### Die 7 Cluster mit echter Abweichung
+
+| Cluster | Varianten | Bewertung |
+|---|---|---|
+| `AC_PRICE/AC_WEIGHTING` | `AC.AC_PRICE.…` **und** `AC_PRICE.…` | **relevant** — eine *dritte* Verschachtelungsvariante der Zuschlagskriterien neben `AC_*` und `CRITERIA_DEFINITION`. Unser `_legacy_criteria` liest `AC_PRICE` direkt; die Variante mit `AC.`-Wrapper faellt durch. |
+| `AC_QUALITY/AC_CRITERION` · `/AC_WEIGHTING` | dito | dito |
+| `AC_COST/AC_CRITERION` · `/AC_WEIGHTING` | dito | dito |
+| `P/FT` (legacy) | `NEW.P.FT` · `P.FT` · `P.P.P.FT` | Layout-Fragment, ohne Wert |
+| `P/P` (ojs) | `NEW.P.P` · `P.P` | Layout-Fragment, ohne Wert |
+
+**Konkreter Handlungspunkt:** fuenf der sieben betreffen die Zuschlagskriterien. Beim
+Nachziehen der Legacy-Kriterien (Cluster 2) muessen **drei** Verschachtelungen abgedeckt
+werden — `AC_PRICE/AC_QUALITY/AC_COST` direkt, dieselben unter einem `AC.`-Wrapper, und
+`CRITERIA_DEFINITION`. Sonst fehlt wieder ein Teil.
