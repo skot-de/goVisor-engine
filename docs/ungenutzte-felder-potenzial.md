@@ -44,7 +44,7 @@ Der Kern der Lead-Qualifikation, den wir heute nur über CPV und Wert beantworte
 | `AdditionalInformationRequestPeriod.EndDate` | **24,9 %** | — | **Frist für Bieterfragen.** Liegt immer vor der Angebotsfrist und wird ständig verpasst. Ein eigener Alert-Typ. |
 | `OpenTenderEvent.OccurrenceDate/Time` | 34,0 % | 10:00 Uhr (15 %) | Submissionstermin (öffentliche Angebotsöffnung) — bei VOB-Verfahren darf man dabei sein und sieht die Konkurrenz. |
 | `SubmissionMethodCode` | 54,2 % | required 70 % · allowed 29 % | Elektronische Abgabe Pflicht → Portal-Registrierung nötig, dauert. |
-| `CallForTendersDocumentReference.DocumentType` | **54,2 %** | **non-restricted 97 %** · restricted 3 % | **97 % der Vergabeunterlagen sind frei zugänglich.** Das relativiert unsere frühere Aussage, der Inhalt liege unerreichbar hinter dem Portal — er liegt hinter einem *offenen* Link. |
+| `CallForTendersDocumentReference.DocumentType` | **54,2 %** | non-restricted 97 % · restricted 3 % | ⚠️ **KORREKTUR (2026-07-23):** BT-14 heisst „nicht **rechtlich** beschraenkt" (kein Verschlusssachen-Vorbehalt) — **nicht** „ohne Konto ladbar". An fuenf Plattformen geprueft: dtvp/Cosinex und Brandenburg verlangen die Bestaetigung der Verfahrensteilnahme, RIB liefert nur die eigenen AGB, subreport und evergabe.de sind JS-Anwendungen mit Formular davor. Kein Verkaufsargument. Der **Link selbst** ist eines (s. Nachtrag). |
 | `ContractExtension.MaximumNumberNumeric` | 3,7 % | 0 (59 %) · 2 (18 %) · 1 (15 %) | Zahl der Verlängerungsoptionen → echter Vertragswert über die Grundlaufzeit. |
 
 ---
