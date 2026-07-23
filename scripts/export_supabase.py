@@ -209,18 +209,27 @@ def stale_ids(url, key, table, parquet, pk_col="lead_id"):
     import subprocess
 
     have = set()
-    step, off = 10_000, 0
+    # PostgREST/Supabase deckelt eine Antwort bei **1.000 Zeilen** (`db-max-rows`), egal
+    # was der Range-Header anfordert. Mit einer groesseren Schrittweite kaeme immer eine
+    # „kurze" Seite zurueck, die Schleife braeche nach der ersten ab und der Abgleich
+    # meldete faelschlich „keine verwaisten Zeilen" — genau so ist es einmal passiert.
+    step, off, page = 1_000, 0, 0
     while True:
         out = subprocess.run(
             ["curl", "-sS", "--max-time", "120",
-             f"{url.rstrip('/')}/rest/v1/{table}?select={pk_col}",
+             f"{url.rstrip('/')}/rest/v1/{table}?select={pk_col}&order={pk_col}",
              "-H", f"apikey: {key}", "-H", f"Authorization: Bearer {key}",
              "-H", f"Range: {off}-{off+step-1}"], capture_output=True, text=True)
         chunk = json.loads(out.stdout or "[]")
+        if not chunk:
+            break
         have.update(r[pk_col] for r in chunk)
+        off += len(chunk)
+        page += 1
+        if page % 25 == 0:
+            print(f"  … {off:,} IDs gelesen", flush=True)
         if len(chunk) < step:
             break
-        off += step
     con = duckdb.connect()
     live = {r[0] for r in con.execute(
         f"SELECT DISTINCT {pk_col} FROM read_parquet('{parquet}')").fetchall()}
@@ -257,6 +266,9 @@ def main() -> int:
                     help="nach dem Upsert Zeilen loeschen, die der Export nicht mehr "
                          "enthaelt (abgelaufene Fristen). Ohne den Schalter wird nur "
                          "gezaehlt und gemeldet — Loeschen ist nie stillschweigend.")
+    ap.add_argument("--prune-only", action="store_true",
+                    help="nur abgleichen/loeschen, kein Upsert (spart den vollen Push, "
+                         "wenn die Daten schon oben sind). Impliziert --prune.")
     args = ap.parse_args()
 
     todo = list(TABLES) if args.table == "all" else [args.table]
@@ -291,12 +303,17 @@ def main() -> int:
                   "Setze beide und ruf ohne --dry-run erneut auf, um zu upserten.")
         return 0
 
+    if args.prune_only:
+        args.prune = True
     for table in todo:
         parquet, pk = TABLES[table]
-        print(f"Upsert nach {url} · Tabelle {table} (PK {'+'.join(pk)}) …")
-        t = time.time()
-        n = push(url, key, table, parquet=parquet, pk=pk)
-        print(f"  FERTIG: {n:,} Zeilen in {time.time()-t:.0f}s upserted.")
+        if not args.prune_only:
+            print(f"Upsert nach {url} · Tabelle {table} (PK {'+'.join(pk)}) …")
+            t = time.time()
+            n = push(url, key, table, parquet=parquet, pk=pk)
+            print(f"  FERTIG: {n:,} Zeilen in {time.time()-t:.0f}s upserted.")
+        else:
+            print(f"Abgleich {table} (kein Upsert) …")
         # Abgleich gegen den Export — Kind-Tabellen haengen per lead_id am Lead.
         old = stale_ids(url, key, table, parquet, "lead_id")
         if not old:

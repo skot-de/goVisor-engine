@@ -343,3 +343,21 @@ def test_detailed_description_flag_counts_both_levels():
         WHERE e.has_detailed_description
               <> (coalesce(e.description_length,0) + coalesce(l.c,0) >= 1000)""").fetchone()[0]
     assert bad == 0, "Flag deckt sich nicht mit Notice+Los-Textlaenge"
+
+
+def test_supabase_paging_respects_the_1000_row_cap():
+    """`stale_ids` darf nie mehr als 1.000 Zeilen pro Request anfordern.
+
+    Supabase/PostgREST deckelt eine Antwort bei 1.000 Zeilen (`db-max-rows`), unabhaengig
+    vom Range-Header. Mit groesserer Schrittweite kaeme *immer* eine „kurze" Seite zurueck,
+    die Paging-Schleife braeche nach der ersten ab — und der Abgleich meldete faelschlich
+    „keine verwaisten Zeilen", statt abgelaufene Leads zu finden. Genau so ist es passiert.
+    """
+    import re
+    from pathlib import Path
+
+    src = (Path(__file__).resolve().parent.parent / "scripts" / "export_supabase.py").read_text()
+    body = src.split("def stale_ids", 1)[1].split("\ndef ", 1)[0]
+    steps = [int(m.replace("_", "")) for m in re.findall(r"step\s*,?[^=\n]*=\s*([\d_]+)", body)]
+    assert steps, "keine Schrittweite in stale_ids gefunden — Regex kaputt?"
+    assert max(steps) <= 1000, f"Schrittweite {max(steps)} > 1000 → Paging bricht ab"

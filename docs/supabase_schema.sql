@@ -98,6 +98,12 @@ alter table gov_leads add column if not exists competition_source text;
 alter table gov_leads add column if not exists source_url text;
 alter table gov_leads add column if not exists has_comparables boolean;
 alter table gov_leads add column if not exists has_contract_history boolean;
+do $$ begin
+  if not exists (select 1 from pg_constraint
+                  where conrelid = 'gov_leads'::regclass and contype = 'p') then
+    alter table gov_leads add primary key (lead_id);
+  end if;
+end $$;
 create index if not exists gov_leads_slug_idx on gov_leads (slug);
 create index if not exists gov_leads_phase_idx on gov_leads (phase);
 create index if not exists gov_leads_market_nuts3_idx on gov_leads (market_nuts3);
@@ -127,6 +133,12 @@ create table if not exists gov_lead_cpv (
 alter table gov_lead_cpv add column if not exists lead_id text;
 alter table gov_lead_cpv add column if not exists cpv_code text;
 alter table gov_lead_cpv add column if not exists is_main boolean;
+do $$ begin
+  if not exists (select 1 from pg_constraint
+                  where conrelid = 'gov_lead_cpv'::regclass and contype = 'p') then
+    alter table gov_lead_cpv add primary key (lead_id, cpv_code);
+  end if;
+end $$;
 -- RLS: Registrierung schaltet Leads frei; Analysen liegen hinter der Paywall
 -- (die bekommen bewusst KEINE Policy und sind nur serverseitig lesbar).
 alter table gov_lead_cpv enable row level security;
@@ -175,6 +187,12 @@ alter table gov_lead_lots add column if not exists options_description text;
 alter table gov_lead_lots add column if not exists has_renewal boolean;
 alter table gov_lead_lots add column if not exists renewal_description text;
 alter table gov_lead_lots add column if not exists max_renewals integer;
+do $$ begin
+  if not exists (select 1 from pg_constraint
+                  where conrelid = 'gov_lead_lots'::regclass and contype = 'p') then
+    alter table gov_lead_lots add primary key (lead_id, lot_id);
+  end if;
+end $$;
 -- RLS: Registrierung schaltet Leads frei; Analysen liegen hinter der Paywall
 -- (die bekommen bewusst KEINE Policy und sind nur serverseitig lesbar).
 alter table gov_lead_lots enable row level security;
