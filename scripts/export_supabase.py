@@ -36,6 +36,10 @@ TABLES = {
     "gov_leads":     ("data/gold/DE/lead_export.parquet", ("lead_id",)),
     "gov_lead_cpv":  ("data/gold/DE/lead_cpv.parquet",    ("lead_id", "cpv_code")),
     "gov_lead_lots": ("data/gold/DE/lead_lot.parquet",    ("lead_id", "lot_id")),
+    # Zuschlagskriterien: kein natuerlicher Schluessel (ein Los kann zwei gleichnamige
+    # Kriterien tragen) → `criterion_no` wird im Builder als laufende Nummer vergeben.
+    "gov_lead_criteria": ("data/gold/DE/lead_criteria.parquet",
+                          ("lead_id", "lot_id", "criterion_no")),
 }
 EXPORT = TABLES["gov_leads"][0]      # Rueckwaertskompatibler Default
 

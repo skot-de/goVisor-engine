@@ -2241,6 +2241,17 @@ def build_lead_export(cfg: Config, country: str = "DE"):
                  WHEN 'viel' THEN 'high' ELSE 'na' END AS competition_level,
             CASE WHEN d.source IN ('f01','f02') THEN 'na'
                  WHEN d.num_tenders IS NOT NULL THEN 'actual' ELSE 'unknown' END AS competition_source,
+            -- Zuschlagskriterien: „gewinne ich ueber den Preis oder ueber das Konzept?"
+            -- Gewichte sind JE LOS normiert; bei Mehrlos-Ausschreibungen steht hier der
+            -- Median ueber die Lose, und `criteria_uniform` sagt, ob die Lose ueberhaupt
+            -- dasselbe wollen. Ohne diese Unterscheidung waere „Preis 40 %" bei einer
+            -- 20-Los-Ausschreibung eine erfundene Zahl.
+            cr.price_weight_pct, cr.quality_weight_pct, cr.cost_weight_pct,
+            cr.n_criteria, cr.criteria_uniform,
+            CASE WHEN cr.n_criteria IS NULL THEN 'unknown'
+                 WHEN cr.price_weight_pct IS NOT NULL THEN 'actual'
+                 WHEN cr.n_rank > 0 THEN 'ranked_only'   -- ord-imp: Reihenfolge, kein Gewicht
+                 ELSE 'unweighted' END                AS criteria_source,
             d.ted_url                                 AS source_url,
             (d.incumbent_name IS NOT NULL AND d.incumbent_conf >= 0.75) AS has_comparables,
             (coalesce(d.tenure_years, 0) > 0)         AS has_contract_history
@@ -2260,6 +2271,44 @@ def build_lead_export(cfg: Config, country: str = "DE"):
             FROM read_parquet('{cfg.silver_table_glob("lots", country)}', hive_partitioning=1)
             GROUP BY notice_id
           ) lt ON lt.notice_id = d.lead_id
+          LEFT JOIN (
+            -- Erst JE LOS die Gewichte je Art buendeln, DANN ueber die Lose mitteln.
+            -- Andersherum (alles in einen Topf) addierten sich die Lose zu >100 %.
+            WITH per_lot AS (
+              SELECT notice_id, lot_id,
+                     sum(CASE WHEN kind='price'   THEN w END) AS p,
+                     sum(CASE WHEN kind='quality' THEN w END) AS q,
+                     sum(CASE WHEN kind='cost'    THEN w END) AS k,
+                     count(*)                                 AS nc,
+                     count(*) FILTER (WHERE weight_kind='ord-imp') AS nr
+              FROM (
+                SELECT notice_id, lot_id, kind, weight_kind,
+                       CASE WHEN weight_kind='ord-imp' THEN NULL
+                            WHEN s > 0 THEN 100.0 * v / s END AS w
+                FROM (
+                  SELECT notice_id, lot_id, kind, weight_kind,
+                         try_cast(replace(replace(replace(weight,'%',''),',','.'),' ','')
+                                  AS DOUBLE) AS v,
+                         sum(CASE WHEN weight_kind IS NULL OR weight_kind LIKE 'per%'
+                                    OR weight_kind LIKE 'poi%' OR weight_kind LIKE 'dec%'
+                                  THEN try_cast(replace(replace(replace(weight,'%',''),
+                                       ',','.'),' ','') AS DOUBLE) END)
+                           OVER (PARTITION BY notice_id, lot_id) AS s
+                  FROM read_parquet('{cfg.silver_table_glob("award_criteria", country)}',
+                                    hive_partitioning=1)
+                )
+              ) GROUP BY notice_id, lot_id
+            )
+            SELECT notice_id,
+                   round(median(p),1) AS price_weight_pct,
+                   round(median(q),1) AS quality_weight_pct,
+                   round(median(k),1) AS cost_weight_pct,
+                   sum(nc)            AS n_criteria,
+                   sum(nr)            AS n_rank,
+                   -- Lose einig? (gerundet, damit 69,9 vs 70,0 nicht als Konflikt zaehlt)
+                   (count(DISTINCT round(coalesce(p,-1))) = 1) AS criteria_uniform
+              FROM per_lot GROUP BY notice_id
+          ) cr ON cr.notice_id = d.lead_id
         ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
     """)
     n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
@@ -2400,6 +2449,71 @@ def build_doe_buyer_profile(cfg: Config, country: str = "DE"):
           JOIN read_parquet({q('entities.parquet')}) e ON e.entity_id=j.entity_id
           LEFT JOIN topdiv td ON td.entity_id=j.entity_id
           GROUP BY j.entity_id, e.canonical_name, also_on_ted
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_lead_criteria(cfg: Config, country: str = "DE"):
+    """**Zuschlagskriterien je Lead** — „gewinne ich hier ueber den Preis oder ueber das Konzept?"
+
+    Die praktischste Einzelinformation fuer die Angebotsstrategie: „Preis 100 %" heisst
+    reiner Preiswettbewerb, „Qualitaet 70 % / Preis 30 %" heisst, dass ein durchdachtes
+    Konzept den hoeheren Preis schlagen kann.
+
+    **Normiert wird je LOS, nicht je Notice.** Gemessen (2026-07-23): je Notice summierten
+    36.824 Notices auf ueber 105 % — davon 95,5 % mehrlosig bei Ø 4,97 Losen, weil sich
+    dort die Gewichte aller Lose addieren. Je Los treffen **97,5 %** exakt 100.
+
+    Nur ``weight_kind`` aus ``number-weight`` zaehlt (s. `schema.Criterion`):
+    ``per-*`` ist bereits Prozent, ``poi-*``/``dec-*`` sind Punkte — beide werden auf die
+    Los-Summe normiert, was beide Faelle korrekt behandelt. ``ord-imp`` ist ein **Rang**
+    und wird bewusst NICHT in ein Gewicht umgedeutet.
+
+    Schreibt ``lead_criteria`` (eine Zeile je Kriterium, fuer die Detailansicht).
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    out = (g / "lead_criteria.parquet").as_posix()
+    AC = cfg.silver_table_glob("award_criteria", country)
+    con = duckdb.connect(); con.execute("SET threads=4")
+    # Rohtext -> Zahl: deutsches Dezimalkomma, Prozentzeichen, Leerzeichen.
+    num = "try_cast(replace(replace(replace(c.weight,'%',''),',','.'),' ','') AS DOUBLE)"
+    con.execute(f"""
+        COPY (
+          WITH c AS (
+            SELECT c.notice_id AS lead_id, c.lot_id, c.kind, c.name,
+                   c.weight_kind, {num} AS w
+              FROM read_parquet('{AC}', hive_partitioning=1) c
+              JOIN read_parquet('{(g / "lead_export.parquet").as_posix()}') l
+                ON l.lead_id = c.notice_id
+          ), norm AS (
+            SELECT *,
+                   -- Summe der ECHTEN Gewichte im selben Los (ord-imp bleibt draussen)
+                   sum(CASE WHEN weight_kind IS NULL
+                             OR weight_kind LIKE 'per%' OR weight_kind LIKE 'poi%'
+                             OR weight_kind LIKE 'dec%' THEN w END)
+                     OVER (PARTITION BY lead_id, lot_id) AS lot_sum
+              FROM c
+          )
+          SELECT lead_id,
+                 -- lot_id darf im Supabase-PK nicht NULL sein (Kriterien ohne Los-Bezug
+                 -- kommen in schlanken Dialekten vor); `criterion_no` macht den
+                 -- Schluessel eindeutig, denn ein Los kann zwei gleichnamige Kriterien
+                 -- tragen.
+                 coalesce(lot_id, '-')                AS lot_id,
+                 row_number() OVER (PARTITION BY lead_id, coalesce(lot_id,'-')
+                                    ORDER BY kind, name NULLS LAST) AS criterion_no,
+                 kind AS criterion_kind, name AS criterion_name, weight_kind,
+                 CASE WHEN weight_kind = 'ord-imp' THEN NULL
+                      WHEN lot_sum > 0 THEN round(100.0 * w / lot_sum, 1) END AS weight_pct,
+                 w AS weight_raw,
+                 (weight_kind = 'ord-imp')            AS is_rank,
+                 (lot_sum > 0)                        AS weight_usable
+            FROM norm
         ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
     """)
     n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]

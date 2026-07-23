@@ -118,7 +118,7 @@ def rows(notice: schema.Notice, raw: bytes, country: str, year: int, month: int)
 
     award_criteria = [{
         "notice_id": nid, "lot_id": c.lot_id, "kind": c.kind,
-        "name": c.name, "weight": c.weight,
+        "name": c.name, "weight": c.weight, "weight_kind": c.weight_kind,
     } for c in notice.criteria]
 
     return {

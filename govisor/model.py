@@ -141,6 +141,10 @@ AWARD_CRITERIA = pa.schema([
     ("kind", pa.string()),                  # 'price' | 'quality' | 'cost'
     ("name", pa.string()),
     ("weight", pa.string()),                # roh: mal Zahl, mal Text
+    # eForms-ParameterCode. Entscheidet, WIE die Zahl zu lesen ist: per-* = Prozent,
+    # poi-*/dec-* = Punkte (auf die Los-Summe zu normieren), ord-imp = Rang, kein
+    # Gewicht. NULL bei Legacy (dort ist AC_WEIGHTING durchgaengig Prozent).
+    ("weight_kind", pa.string()),
 ])
 
 # Auffang-Tabelle: JEDER Blattwert jeder Notice, adressiert über seinen Pfad.

@@ -736,3 +736,105 @@ def test_eforms_winner_fallback_via_signatory_party():
     n = schema.parse(xml, "test_eforms_1")
     assert "Gewinner Bau GmbH" in n.winner_names
     assert "Vergabekammer des Bundes" not in n.winner_names
+
+
+# ---- Zuschlagskriterien (BT-539/540/541/734/5421) ------------------------------
+def _crit_xml(lots):
+    """Minimales eForms-Geruest mit AwardingCriterion je Los."""
+    def crit(kind, name, listname, code, num):
+        par = ""
+        if listname:
+            par = (f'<ext:UBLExtensions><ext:UBLExtension><ext:ExtensionContent>'
+                   f'<efext:EformsExtension><efac:AwardCriterionParameter>'
+                   f'<efbc:ParameterCode listName="{listname}">{code}</efbc:ParameterCode>'
+                   f'<efbc:ParameterNumeric>{num}</efbc:ParameterNumeric>'
+                   f'</efac:AwardCriterionParameter></efext:EformsExtension>'
+                   f'</ext:ExtensionContent></ext:UBLExtension></ext:UBLExtensions>')
+        return (f'<cac:SubordinateAwardingCriterion>{par}'
+                f'<cbc:AwardingCriterionTypeCode listName="award-criterion-type">{kind}'
+                f'</cbc:AwardingCriterionTypeCode><cbc:Name>{name}</cbc:Name>'
+                f'</cac:SubordinateAwardingCriterion>')
+
+    body = ""
+    for lot_id, crits in lots:
+        inner = "".join(crit(*c) for c in crits)
+        body += (f'<cac:ProcurementProjectLot><cbc:ID schemeName="Lot">{lot_id}</cbc:ID>'
+                 f'<cac:TenderingTerms><cac:AwardingTerms><cac:AwardingCriterion>{inner}'
+                 f'</cac:AwardingCriterion></cac:AwardingTerms></cac:TenderingTerms>'
+                 f'</cac:ProcurementProjectLot>')
+    return ('<ContractNotice xmlns:cac="a" xmlns:cbc="b" xmlns:ext="c" '
+            'xmlns:efext="d" xmlns:efac="e" xmlns:efbc="f">' + body + '</ContractNotice>')
+
+
+def _parse_crits(xml):
+    import xml.etree.ElementTree as ET
+    from govisor.schema import _eforms_criteria
+    return _eforms_criteria(ET.fromstring(xml))
+
+
+def test_criteria_are_attached_to_their_lot():
+    """Ohne lot_id addieren sich bei Mehrlos-Notices die Gewichte aller Lose.
+
+    Gemessen an echten Daten: 36.824 Notices summierten auf >105 %, davon 95,5 %
+    mehrlosig bei Ø 4,97 Losen. Genau dieser Fall.
+    """
+    xml = _crit_xml([
+        ("LOT-0001", [("price", "Preis", "number-weight", "per-exa", "70"),
+                      ("quality", "Konzept", "number-weight", "per-exa", "30")]),
+        ("LOT-0002", [("price", "Preis", "number-weight", "per-exa", "100")]),
+    ])
+    cs = _parse_crits(xml)
+    assert len(cs) == 3
+    assert {c.lot_id for c in cs} == {"LOT-0001", "LOT-0002"}
+    for lot in ("LOT-0001", "LOT-0002"):
+        assert sum(float(c.weight) for c in cs if c.lot_id == lot) == 100
+
+
+def test_all_criteria_of_a_lot_are_captured():
+    """Unter EINEM AwardingCriterion haengen mehrere SubordinateAwardingCriterion —
+    die erste Fassung griff nur das erste und verlor den Rest."""
+    xml = _crit_xml([("LOT-0001", [
+        ("price", "Angebotspreis", "number-weight", "per-exa", "70"),
+        ("quality", "Projektleiterstunden", "number-weight", "per-exa", "20"),
+        ("quality", "Objektleiterstunden", "number-weight", "per-exa", "10"),
+    ])])
+    cs = _parse_crits(xml)
+    assert len(cs) == 3
+    assert [c.name for c in cs] == ["Angebotspreis", "Projektleiterstunden",
+                                    "Objektleiterstunden"]
+
+
+def test_thresholds_and_fixed_amounts_are_not_weights():
+    """`number-threshold` (min-score) und `number-fixed` (fix-tot) sind KEINE Gewichte.
+    Wer sie mitzaehlt, verfaelscht jede Summe."""
+    xml = _crit_xml([("LOT-0001", [
+        ("price", "Preis", "number-weight", "per-exa", "60"),
+        ("quality", "Mindestpunktzahl", "number-threshold", "min-score", "50"),
+        ("quality", "Festbetrag", "number-fixed", "fix-tot", "1000"),
+    ])])
+    cs = _parse_crits(xml)
+    assert len(cs) == 3, "die Kriterien selbst bleiben erhalten"
+    weighted = [c for c in cs if c.weight is not None]
+    assert len(weighted) == 1 and weighted[0].weight == "60"
+    assert weighted[0].weight_kind == "per-exa"
+
+
+def test_ordinal_rank_is_kept_but_marked():
+    """`ord-imp` ist ein Rang, kein Gewicht — er darf nicht als Prozent gelesen werden."""
+    xml = _crit_xml([("LOT-0001", [
+        ("price", "Preis", "number-weight", "ord-imp", "1"),
+        ("quality", "Konzept", "number-weight", "ord-imp", "2"),
+    ])])
+    cs = _parse_crits(xml)
+    assert all(c.weight_kind == "ord-imp" for c in cs)
+
+
+def test_criteria_without_a_lot_are_not_lost():
+    """Schlanke Dialekte haengen die Kriterien nicht unter ein Los — trotzdem behalten."""
+    xml = ('<ContractNotice xmlns:cac="a" xmlns:cbc="b"><cac:AwardingTerms>'
+           '<cac:AwardingCriterion><cac:SubordinateAwardingCriterion>'
+           '<cbc:AwardingCriterionTypeCode>price</cbc:AwardingCriterionTypeCode>'
+           '<cbc:Name>Preis</cbc:Name></cac:SubordinateAwardingCriterion>'
+           '</cac:AwardingCriterion></cac:AwardingTerms></ContractNotice>')
+    cs = _parse_crits(xml)
+    assert len(cs) == 1 and cs[0].lot_id is None and cs[0].kind == "price"

@@ -159,10 +159,29 @@ class Party:
 
 @dataclass
 class Criterion:
+    """Ein Zuschlagskriterium — die praktischste Einzelinformation fuer einen Bieter.
+
+    „Preis 100 %" gegen „Qualitaet 70 %, Preis 30 %" entscheidet, ob man ueber den Preis
+    oder ueber das Konzept gewinnt.
+
+    ``weight_kind`` ist der eForms-``ParameterCode`` und **entscheidet, ob die Zahl
+    ueberhaupt ein Gewicht ist** (gemessen 2026-07-23 an 3.000 eForms):
+
+      number-weight    per-exa 3.947 · poi-exa 2.138 · ord-imp 207 · dec-exa 28   ← Gewicht
+      number-fixed     fix-tot 108 · fix-unit 17                                  ← Festbetrag
+      number-threshold min-score 66 · max-pass 4                                  ← Schwelle
+
+    ``per-*`` ist bereits Prozent, ``poi-*``/``dec-*`` sind Punkte und muessen auf die
+    Summe **innerhalb desselben Loses** normiert werden, ``ord-imp`` ist ein Rang und
+    ueberhaupt kein Gewicht. Wer alle ``ParameterNumeric`` unbesehen einsammelt, mischt
+    Schwellen und Festbetraege unter die Gewichte — genau das tat die erste Fassung.
+    """
+
     lot_id: str | None
     kind: str                        # 'price' | 'quality' | 'cost'
     name: str | None
     weight: str | None
+    weight_kind: str | None = None   # per-exa | poi-exa | ord-imp | … ; None = Legacy
 
 
 @dataclass
@@ -1641,6 +1660,65 @@ def _eforms_party_country(root: ET.Element, party_name: str) -> str | None:
     return None
 
 
+def _eforms_criteria(root: ET.Element) -> list[Criterion]:
+    """Zuschlagskriterien je **Los** aus eForms (BT-539/540/541/734/5421).
+
+    Drei Dinge, die die erste Fassung falsch machte:
+
+    1. **Die Einheit ist ``SubordinateAwardingCriterion``**, nicht ``AwardingCriterion``.
+       Unter einem ``AwardingCriterion`` haengen bis zu 8+ Einzelkriterien; wer nur das
+       erste Vorkommen greift, verliert den Rest (gemessen: 1.247 Lose mit 1 Kriterium,
+       aber 714 mit 2–8).
+    2. **``lot_id`` gehoert dran.** Ohne sie addieren sich bei Mehrlos-Notices die
+       Gewichte aller Lose: gemessen summierten 36.824 Notices auf >105 %, davon
+       **95,5 % mehrlosig** bei Ø 4,97 Losen. Mit Los-Bezug loest sich das auf.
+    3. **Nur ``listName='number-weight'`` ist ein Gewicht** — ``number-threshold``
+       (min-score) und ``number-fixed`` (fix-tot) sind es nicht und wuerden jede
+       Summe verfaelschen.
+    """
+    out: list[Criterion] = []
+
+    def _collect(scope: ET.Element, lot_id: str | None) -> None:
+        for sub in _iter_named(scope, "SubordinateAwardingCriterion"):
+            kind_code = next((_text_of(e) for e in _iter_named(sub, "AwardingCriterionTypeCode")
+                              if _text_of(e)), None)
+            # Name/Description nur als DIREKTE Kinder — sonst zieht der Scan Texte aus
+            # den eingebetteten UBL-Extensions herein.
+            name = next((_text_of(e) for e in sub if _local(e) == "Name" and _text_of(e)), None)
+            desc = next((_text_of(e) for e in sub
+                         if _local(e) == "Description" and _text_of(e)), None)
+            weight = weight_kind = None
+            for par in _iter_named(sub, "AwardCriterionParameter"):
+                code_el = next((e for e in par if _local(e) == "ParameterCode"), None)
+                num = next((_text_of(e) for e in par
+                            if _local(e) == "ParameterNumeric" and _text_of(e)), None)
+                if code_el is None or num is None:
+                    continue
+                if (code_el.get("listName") or "") != "number-weight":
+                    continue                      # Schwelle/Festbetrag → kein Gewicht
+                weight, weight_kind = num, _text_of(code_el) or None
+                break
+            kind = {"price": "price", "cost": "cost", "quality": "quality"}.get(
+                (kind_code or "").lower(), "quality")
+            out.append(Criterion(lot_id=lot_id, kind=kind, name=name or desc,
+                                 weight=weight, weight_kind=weight_kind))
+
+    seen: set[int] = set()
+    for lot_elem in _iter_named(root, "ProcurementProjectLot"):
+        lot_id, _ = _first_child_text(lot_elem, ("ID",))
+        before = len(out)
+        _collect(lot_elem, lot_id)
+        seen.update(id(e) for e in _iter_named(lot_elem, "SubordinateAwardingCriterion"))
+        del before
+    # Kriterien ausserhalb jedes Loses (kommt in schlanken Dialekten vor) nicht verlieren.
+    rest = [e for e in _iter_named(root, "SubordinateAwardingCriterion") if id(e) not in seen]
+    if rest:
+        holder = ET.Element("synthetic")
+        holder.extend(rest)
+        _collect(holder, None)
+    return out
+
+
 def _parse_eforms(root: ET.Element, notice_id: str) -> Notice:
     org_countries = _eforms_org_countries(root)
     buyer_orgs = _eforms_buyer_org_ids(root)
@@ -1880,19 +1958,7 @@ def _parse_eforms(root: ET.Element, notice_id: str) -> Notice:
                 if party.name not in winners:
                     winners.append(party.name)
 
-    criteria: list[Criterion] = []
-    for awarding in _iter_named(root, "AwardingCriterion"):
-        for crit in _iter_named(awarding, "AwardingCriterionType"):
-            pass
-        kind_code = next((_text_of(e) for e in _iter_named(awarding, "AwardingCriterionTypeCode")
-                          if _text_of(e)), None)
-        name = next((_text_of(e) for e in _iter_named(awarding, "Name") if _text_of(e)), None)
-        desc = next((_text_of(e) for e in _iter_named(awarding, "Description") if _text_of(e)), None)
-        weight = next((_text_of(e) for e in _iter_named(awarding, "ParameterNumeric")
-                       if _text_of(e)), None)
-        kind = {"price": "price", "cost": "cost", "quality": "quality"}.get(
-            (kind_code or "").lower(), "quality")
-        criteria.append(Criterion(lot_id=None, kind=kind, name=name or desc, weight=weight))
+    criteria = _eforms_criteria(root)
 
     return Notice(
         notice_id=notice_id,
