@@ -222,9 +222,17 @@ Konsequenzen fürs Bauen:
   zwischen beiden vergleicht, vergleicht **Verfahren, nicht Datenstände**.
 - **Der Export-Pfad bleibt einsatzbereit**, wird aber nicht mehr routinemässig gefahren:
   `python3 scripts/export_supabase.py --prune` + `scripts/build_search_index.py`.
-- **Der Supabase-Free-Tier ist ausgereizt** (453/500 MB, s. `docs/volltextsuche.md`).
-  Vor dem nächsten Voll-Push braucht es entweder einen grösseren Plan oder eine
-  Textreduktion — nicht einfach nochmal draufschieben.
+- **⚠️ In Supabase liegt seit 2026-07-23 nur ein ENTWICKLUNGS-SAMPLE** (~2.048 Leads +
+  zugehörige Lose/CPV), **nicht** der Bestand. Wer dort zählt, zählt das Sample — jede
+  Kennzahl kommt aus dem lokalen Parquet. Neu ziehen:
+  `python3 scripts/supabase_dev_sample.py [--size N] [--dry-run]`. Das Sample ist
+  **geschichtet** (Phase × Quelle × Beschreibungstiefe × Mehrlosigkeit) plus erzwungene
+  Extremfälle (267-Lose-Ausschreibung, fehlender Wert, fehlende Region, unplausibles
+  Timing) — ein Zufallssample träfe fast nur den Regelfall und das Frontend bräche später
+  an jeder Abweichung.
+- **Der Free-Tier war mit dem Volldatensatz ausgereizt** (453/500 MB, s.
+  `docs/volltextsuche.md`). Vor einem erneuten Voll-Push braucht es einen grösseren Plan
+  oder eine Textreduktion — nicht einfach nochmal draufschieben.
 
 ## Frontend-Layer: Supabase — gebaut, ruht bis zum Deployment (Stand 2026-07-23)
 
