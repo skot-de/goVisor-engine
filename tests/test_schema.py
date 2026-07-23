@@ -838,3 +838,34 @@ def test_criteria_without_a_lot_are_not_lost():
            '</cac:AwardingCriterion></cac:AwardingTerms></ContractNotice>')
     cs = _parse_crits(xml)
     assert len(cs) == 1 and cs[0].lot_id is None and cs[0].kind == "price"
+
+
+def test_doe_inline_buyer_carries_contact_details():
+    """DÖE haengt den Kaeufer inline unter ContractingParty/Party — inklusive Kontakt.
+
+    Der Fallback las bisher nur Name/Ort/PLZ/NUTS. Gemessen waren dadurch **0 %** der
+    258.246 DÖE-Kaeuferzeilen mit E-Mail/Telefon/Web, obwohl die Werte im XML zu
+    60 / 48 / 39 % dastehen. Bei DÖE ist der Kontakt oft die einzige Spur zur
+    zustaendigen Person — ohne ihn ist der Lead halb so wert.
+    """
+    import xml.etree.ElementTree as ET
+
+    from govisor.schema import _parse_eforms
+
+    xml = ('<ContractNotice xmlns:cac="a" xmlns:cbc="b">'
+           '<cac:ContractingParty><cac:Party>'
+           '<cac:PartyName><cbc:Name>Stadt Musterstadt</cbc:Name></cac:PartyName>'
+           '<cbc:WebsiteURI>https://www.musterstadt.de</cbc:WebsiteURI>'
+           '<cac:PostalAddress><cbc:CityName>Musterstadt</cbc:CityName>'
+           '<cbc:PostalZone>12345</cbc:PostalZone></cac:PostalAddress>'
+           '<cac:Contact><cbc:Name>Frau Beispiel</cbc:Name>'
+           '<cbc:Telephone>+49 123 4567</cbc:Telephone>'
+           '<cbc:ElectronicMail>vergabe@musterstadt.de</cbc:ElectronicMail>'
+           '</cac:Contact></cac:Party></cac:ContractingParty></ContractNotice>')
+    notice = _parse_eforms(ET.fromstring(xml), "doe-test")
+    buyer = next(p for p in notice.parties if p.role == "buyer")
+    assert buyer.name == "Stadt Musterstadt"
+    assert buyer.email == "vergabe@musterstadt.de"
+    assert buyer.phone == "+49 123 4567"
+    assert buyer.contact_person == "Frau Beispiel"
+    assert buyer.url == "https://www.musterstadt.de"

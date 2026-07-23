@@ -2623,14 +2623,20 @@ def _measure_field_usage(con, cfg: Config, country: str, since_year: int,
     tables = {t: cfg.silver_table_glob(t, country) for t in
               ("notices", "lots", "awards", "notice_parties", "award_criteria",
                "requirements")}
+    # Stichprobe **je Generation aus ihrer eigenen Zeit**, nicht ab einem festen Jahr.
+    # Mit `year >= 2024` bestand die Legacy-Stichprobe aus 1.602 von 1,15 Mio. Notices
+    # (0,14 %) und `text`/`ojs` fehlten ganz — die Pfadliste war damit wertlos.
+    # Gestreut ueber die Jahre, damit Formularaenderungen innerhalb einer Generation
+    # nicht durchrutschen.
     con.execute(f"""CREATE OR REPLACE TEMP TABLE _samp AS
-        SELECT notice_id, schema_gen FROM read_parquet('{N}', hive_partitioning=1)
-         WHERE year >= {since_year}
-         QUALIFY row_number() OVER (PARTITION BY schema_gen ORDER BY notice_id) <= {sample}""")
+        SELECT notice_id, schema_gen, year FROM read_parquet('{N}', hive_partitioning=1)
+         QUALIFY row_number() OVER (PARTITION BY schema_gen, year ORDER BY notice_id)
+                 <= {max(sample // 8, 200)}""")
     con.execute(f"""CREATE OR REPLACE TEMP TABLE _raw AS
         SELECT a.notice_id, s.schema_gen, a.path, a.value
-          FROM read_parquet('{A}', hive_partitioning=1) a JOIN _samp s USING (notice_id)
-         WHERE a.year >= {since_year} AND a.value IS NOT NULL AND length(a.value) >= 3""")
+          FROM read_parquet('{A}', hive_partitioning=1) a
+          JOIN _samp s ON s.notice_id = a.notice_id AND s.year = a.year
+         WHERE a.value IS NOT NULL AND length(a.value) >= 3""")
     parts = []
     for tname, glob in tables.items():
         cols = [c[0] for c in con.execute(
@@ -2638,11 +2644,15 @@ def _measure_field_usage(con, cfg: Config, country: str, since_year: int,
         for c in cols:
             if c in ("notice_id", "year", "month"):
                 continue
+            # KEIN Jahresfilter: die Stichprobe umfasst alle Generationen ueber ihre
+            # ganze Laufzeit. Mit `year >= 2024` konnte fuer `text` (2004–2010), `ojs`
+            # (2008) und den Grossteil von `legacy` nie etwas matchen — die zeigten
+            # daraufhin faelschlich „0 genutzt".
             parts.append(
                 f"SELECT t.notice_id, '{tname}.{c}' AS col, CAST(t.{c} AS VARCHAR) AS value "
                 f"FROM read_parquet('{glob}', hive_partitioning=1) t "
                 f"JOIN _samp s USING (notice_id) "
-                f"WHERE t.year >= {since_year} AND t.{c} IS NOT NULL")
+                f"WHERE t.{c} IS NOT NULL")
     con.execute("CREATE OR REPLACE TEMP TABLE _silver AS " + " UNION ALL ".join(parts))
     con.execute("""CREATE OR REPLACE TEMP TABLE usage AS
         SELECT schema_gen, path, col AS derived_column FROM (
@@ -2700,8 +2710,12 @@ def build_bronze_inventory(cfg: Config, country: str = "DE", since_year: int = 2
     con.execute(f"""
         COPY (
           WITH n AS (
-            SELECT notice_id, schema_gen FROM read_parquet('{N}', hive_partitioning=1)
-             WHERE year >= {since_year}
+            -- Stichprobe je Generation UND Jahr: `text` lief 2004–2010, `legacy` bis
+            -- 2024, `eforms` ab 2023. Ein fester Startjahr-Filter haette drei von fuenf
+            -- Generationen fast vollstaendig ausgeblendet.
+            SELECT notice_id, schema_gen, year FROM read_parquet('{N}', hive_partitioning=1)
+             QUALIFY row_number() OVER (PARTITION BY schema_gen, year ORDER BY notice_id)
+                     <= 1500
           ), tot AS (
             SELECT schema_gen, count(*) AS n_notices FROM n GROUP BY 1
           ), agg AS (
@@ -2711,8 +2725,7 @@ def build_bronze_inventory(cfg: Config, country: str = "DE", since_year: int = 2
                    max(length(a.value))        AS max_length,
                    any_value(a.value)          AS example_value
               FROM read_parquet('{A}', hive_partitioning=1) a
-              JOIN n USING (notice_id)
-             WHERE a.year >= {since_year}
+              JOIN n ON n.notice_id = a.notice_id AND n.year = a.year
              GROUP BY 1, 2
           )
           SELECT agg.schema_gen, agg.path,

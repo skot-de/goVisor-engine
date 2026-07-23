@@ -1897,11 +1897,27 @@ def _parse_eforms(root: ET.Element, notice_id: str) -> Notice:
             buyer_name = nm
             def _pick(tag):
                 return next((_text_of(e) for e in _iter_named(party, tag) if _text_of(e)), None)
+            # Kontaktdaten NICHT vergessen: sie stehen inline unter Party/Contact und
+            # waren bisher nicht gelesen — gemessen 0 % E-Mail/Telefon/Web bei 258.246
+            # DÖE-Käuferzeilen, obwohl im XML zu 60 / 48 / 39 % vorhanden. `contact` ist
+            # bei DÖE oft die einzige Spur zur zuständigen Person.
+            contact = next(iter(_iter_named(party, "Contact")), None)
+
+            def _from_contact(tag):
+                if contact is None:
+                    return None
+                return next((_text_of(e) for e in _iter_named(contact, tag) if _text_of(e)),
+                            None)
+
             parties.append(Party(
                 role="buyer", name=nm,
                 national_id=_pick("CompanyID") or _pick("PartyIdentification"),
                 town=_pick("CityName"), postal_code=_pick("PostalZone"),
-                nuts=_pick("CountrySubentityCode"), country="DE"))
+                nuts=_pick("CountrySubentityCode"), country="DE",
+                email=_from_contact("ElectronicMail"),
+                phone=_from_contact("Telephone"),
+                contact_person=_from_contact("Name"),
+                url=_pick("WebsiteURI")))
             break
 
     # Winners: NoticeResult/TenderingParty/Tenderer references a winning org.
