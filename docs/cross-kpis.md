@@ -240,3 +240,120 @@ Programmstart X folgten im Gewerk Y innerhalb von 18 Monaten Z Ausschreibungen."
 
 Die Plätze 2, 3, 5, 6 und 7 sind **gemessen und billig** — zusammen vermutlich zwei
 Arbeitstage, und sie verändern die Liste spürbar.
+
+---
+
+# Zweite Runde (2026-07-23)
+
+Weitere Kombinationen, entlang von Achsen, die in Runde 1 nicht gekreuzt wurden: **Zeit**,
+**Konzernstruktur**, **Losvergabe-Realität** und **Herkunft der Bieter**.
+
+## D · Gemessen — tragfähig
+
+### D1 · „Lose nur auf dem Papier" ⭐⭐
+**UI: Liste + Vergabestelle** · Zutaten: Losanzahl × Anzahl distinkter Gewinner je Vergabe
+
+Losaufteilung gilt als Mittelstandsförderung. Gemessen an 33.664 Vergaben mit mindestens
+drei Losen (ab 2018):
+
+| Verteilung | Vergaben | Ø Lose | Ø Gewinner |
+|---|---:|---:|---:|
+| **alle Lose an EINEN** | **7.769** | 4,9 | 1,0 |
+| stark gebündelt | 2.932 | 18,4 | 4,2 |
+| teilweise gebündelt | 11.952 | 6,4 | 3,4 |
+| breit gestreut | 11.011 | 4,8 | 4,7 |
+
+**Bei 7.769 Vergaben war die Losaufteilung kosmetisch** — ein Bieter nahm alles. Je
+Vergabestelle aggregiert: 215 Stellen mit ≥5 Mehrlos-Vergaben, im Schnitt gehen **24,7 %**
+komplett an einen, **bei 26 Stellen ist das die Mehrheit**.
+
+Zwei Aussagen: für den Bieter *„hier bringt dir das Bieten auf ein einzelnes Los nichts"*,
+für die Vergabestellen-Analyse *„diese Stelle teilt formal auf, vergibt aber gebündelt."*
+Das ist die direkte Gegenprobe zur Einstiegsschwelle (A3) — beide zusammen ergeben erst
+ein ehrliches Bild.
+
+### D2 · Konzern-Kannibalisierung (Scheinwettbewerb)
+**UI: Markt** · Zutaten: `entity_identity` (Konzerngruppen) × `buyer_contractor_history`
+
+**4.138 Fälle**, in denen bei **einem** Käufer mehrere Firmen **derselben Konzerngruppe**
+gewinnen — betrifft **18.058 Siege**. Der beobachtete Wettbewerb ist dort teilweise
+konzernintern.
+
+Relevanz: Ein KPI „5 verschiedene Auftragnehmer, gesunder Wettbewerb" ist falsch, wenn drei
+davon zum selben Konzern gehören. Der Fund knüpft direkt an die Erkenntnis aus dem
+Nachfolge-Modell an (naiv gerechnet ergäbe Siemens AG ↔ Siemens Mobility eine Verdrängung,
+die keine ist).
+
+### D3 · Ausländischer Wettbewerb je Gewerk
+**UI: Markt** · Zutaten: `num_tenders_other_eu` × CPV-Division
+
+| CPV | Vergaben | mit EU-Bietern | Ø Bieter |
+|---|---:|---:|---:|
+| 18 Bekleidung | 389 | **32,9 %** | 4,4 |
+| 35 Sicherheit/Verteidigung | 591 | **28,3 %** | 2,1 |
+| 77 Land-/Forstwirtschaft | 1.242 | 16,1 % | 5,8 |
+| 39 Möbel | 711 | 13,4 % | 3,6 |
+| 33 Medizin | 751 | 10,8 % | 2,8 |
+| 34 Fahrzeuge | 1.822 | 10,5 % | 2,2 |
+
+Bau liegt bei nahezu null. *„In deinem Gewerk bietet in jedem dritten Verfahren ein
+ausländisches Unternehmen mit"* ist eine Aussage über das Preisniveau, die ein Anbieter
+nirgends bekommt.
+
+### D4 · Auslauf-Dichte je Gewerk, Region und Quartal
+**UI: Chance** · Zutaten: `contract_end` × CPV-Division × `market_nuts3` × Quartal
+
+19.956 Zellen in den nächsten drei Jahren, Ø 3,2 auslaufende Verträge je Zelle,
+**2.733 Zellen mit mindestens fünf**, Maximum **485 in einem Quartal**.
+
+Das ist Kapazitätsplanung: *„Q2/2027 laufen in deinem Gewerk und deiner Region 14 Verträge
+aus — bereite dich jetzt vor."* Ein einzelner auslaufender Vertrag ist ein Lead; vierzehn
+im selben Quartal sind eine Personalentscheidung.
+
+---
+
+## E · Gemessen und verworfen
+
+### E1 · Elektronik-Reifegrad der Vergabestelle ❌
+`num_tenders_electronic ÷ num_tenders` seit 2020: **93,6 % vollelektronisch**, nur 3,1 %
+gar nicht. Der Indikator war 2018 vielleicht ein Differenzierer, heute ist er es nicht mehr.
+
+### E2 · Bearbeitungsdauer × Wettbewerbslage ❌
+`avg_decision_days` je `competition_flag`: 98 · 106 · 106 · 109 Tage. **Flach.** Die
+Kreuzung bringt nichts gegenüber dem Median allein. Die Bearbeitungsdauer als solche bleibt
+nützlich (Median 87–91 Tage), aber nicht als Kombination.
+
+### E3 · Bürgschaft × Gewinnergröße ❌ (strukturell)
+`RequiredFinancialGuarantee` steht in der **Ausschreibung**, `CompanySizeCode` im
+**Zuschlag**. Beide existieren in eForms (108.585 bzw. 140.690 Notices), aber die
+Verkettung über `award_tender_link` findet **keine einzige** Überschneidung.
+
+Verallgemeinert: **manche Cross-KPIs scheitern nicht an der Idee, sondern daran, dass ihre
+Zutaten auf verschiedenen Dokumenten liegen und die Verkettung sie nicht zusammenbringt.**
+Das ist vor dem Bauen zu prüfen, nicht danach.
+
+### E4 · Käufer-Bindungsgrad ⚠️ (Messfehler meinerseits)
+Klassifiziert nach `wins_total ÷ n_contractors` — dabei misst die Kennzahl in Wahrheit die
+**Käufergröße** (die „stark gebundene" Gruppe hat Ø 168 Auftragnehmer). Verwertbar ist nur
+der Einzelbieter-Gradient: 60,5 % bei Stellen mit genau einem Auftragnehmer gegen 20,7 %
+bei stark rotierenden. Die Kennzahl braucht eine Normierung auf die Käufergröße.
+
+---
+
+## F · Weitere Vorschläge, noch ungetestet
+
+| # | Cross-KPI | Zutaten | UI |
+|---|---|---|---|
+| F1 | **Termin-Kollision** — „diese Woche kollidieren 4 Fristen in deiner Merkliste" | `deadline_date` über die eigene Liste × `TenderValidityPeriod` | Liste + Team |
+| F2 | **Kapitalbindung** — Zahlungsbedingungen × Laufzeit × Wert: „12 Monate Vorleistung bei 500 k" | `PaymentTerms` / `MAIN_FINANCING_CONDITIONS` × `duration_months` × Wert | Bewertung |
+| F3 | **Schätzwert-Treffsicherheit → Abbruchrisiko** — Stellen, die systematisch zu niedrig schätzen, heben häufiger auf | `INITIAL_ESTIMATED_VALUE` vs. Marktmedian × `retender_signal` | Vergabestelle |
+| F4 | **Marktanteils-Verschiebung** — „Firma X kam von 5 % auf 22 % in drei Jahren" | `contractor_stats` über rollende Fenster | Markt + Position |
+| F5 | **CPV-Drift des Käufers** — „diese Stelle beschafft zunehmend IT statt Bau" | CPV-Mix je Käufer über Zeit | Vergabestelle |
+| F6 | **Verfahrensart × Gewinnergröße** — „bei Verhandlungsverfahren gewinnen überwiegend Große" | `procedure_type` × `CompanySizeCode` | Markt |
+| F7 | **Frist-Verschiebungs-Rate** — „diese Stelle verschiebt jede dritte Frist" | `Changes` mit Friständerung je Käufer | Vergabestelle |
+| F8 | **Grenzüberschreitungs-Signal** — 13-sprachige Veröffentlichung als Absicht | `FORM_LG_LIST` × Wert × CPV | Markt |
+| F9 | **Komplexitäts-Index in Personentagen** — Beschreibungstiefe + Losanzahl + Anzahl Eignungskriterien + Lebenslauf-Pflicht | mehrere | Bewertung |
+| F10 | **Vergabekammer-Zuständigkeit** — welche Kammer, wie schnell entscheidet sie | `AppealReceiverParty` × `AppealRequestsStatistics` | Vergabestelle |
+
+F1 ist der billigste und unmittelbar spürbar: er braucht **kein einziges neues Feld**,
+nur eine Auswertung über die Merkliste des Nutzers.
