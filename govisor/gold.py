@@ -2605,6 +2605,56 @@ def build_lead_party(cfg: Config, country: str = "DE"):
     return n
 
 
+def _measure_field_usage(con, cfg: Config, country: str, since_year: int,
+                         sample: int = 4000) -> None:
+    """Legt die Temp-Tabelle ``usage`` an: Rohpfad → Silber-Spalte, **gemessen**.
+
+    Statt die Zuordnung aus dem Parser-Code abzulesen (fehleranfaellig und veraltet,
+    sobald jemand etwas umbaut), wird sie an den Daten nachgewiesen: fuer eine
+    Stichprobe Notices jeden Silber-Spaltenwert gegen jeden Rohwert **derselben Notice**
+    joinen. Trifft ein Wert, ist der Pfad die Quelle.
+
+    Kurze Werte (<3 Zeichen) bleiben draussen — „DE" oder „01" treffen sonst zufaellig
+    ein Dutzend Pfade und machten jede Zuordnung wertlos. Bei Mehrfachtreffern gewinnt
+    der Pfad mit den meisten Notices.
+    """
+    A = cfg.silver_table_glob("attributes", country)
+    N = cfg.silver_table_glob("notices", country)
+    tables = {t: cfg.silver_table_glob(t, country) for t in
+              ("notices", "lots", "awards", "notice_parties", "award_criteria",
+               "requirements")}
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE _samp AS
+        SELECT notice_id, schema_gen FROM read_parquet('{N}', hive_partitioning=1)
+         WHERE year >= {since_year}
+         QUALIFY row_number() OVER (PARTITION BY schema_gen ORDER BY notice_id) <= {sample}""")
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE _raw AS
+        SELECT a.notice_id, s.schema_gen, a.path, a.value
+          FROM read_parquet('{A}', hive_partitioning=1) a JOIN _samp s USING (notice_id)
+         WHERE a.year >= {since_year} AND a.value IS NOT NULL AND length(a.value) >= 3""")
+    parts = []
+    for tname, glob in tables.items():
+        cols = [c[0] for c in con.execute(
+            f"DESCRIBE SELECT * FROM read_parquet('{glob}', hive_partitioning=1)").fetchall()]
+        for c in cols:
+            if c in ("notice_id", "year", "month"):
+                continue
+            parts.append(
+                f"SELECT t.notice_id, '{tname}.{c}' AS col, CAST(t.{c} AS VARCHAR) AS value "
+                f"FROM read_parquet('{glob}', hive_partitioning=1) t "
+                f"JOIN _samp s USING (notice_id) "
+                f"WHERE t.year >= {since_year} AND t.{c} IS NOT NULL")
+    con.execute("CREATE OR REPLACE TEMP TABLE _silver AS " + " UNION ALL ".join(parts))
+    con.execute("""CREATE OR REPLACE TEMP TABLE usage AS
+        SELECT schema_gen, path, col AS derived_column FROM (
+          SELECT r.schema_gen, r.path, s.col, count(DISTINCT r.notice_id) AS n,
+                 row_number() OVER (PARTITION BY r.schema_gen, r.path
+                                    ORDER BY count(DISTINCT r.notice_id) DESC) AS rk
+            FROM _raw r JOIN _silver s
+              ON s.notice_id = r.notice_id AND s.value = r.value
+           GROUP BY 1, 2, 3
+        ) WHERE rk = 1""")
+
+
 def build_bronze_inventory(cfg: Config, country: str = "DE", since_year: int = 2024):
     """**Feld-Inventar der Rohdaten** — „welche Spalten haben wir eigentlich in Bronze?"
 
@@ -2623,6 +2673,19 @@ def build_bronze_inventory(cfg: Config, country: str = "DE", since_year: int = 2
     unterscheiden (`ContractNotice.…` vs. `TED_EXPORT.FORM_SECTION.…`) — eine gemeinsame
     Liste waere die Summe zweier disjunkter Vokabulare und damit irrefuehrend.
 
+    **Die wichtigste Spalte ist ``derived_column``** — sie sagt, in welche Silber-Spalte
+    ein Pfad fliesst, und ``is_used = false`` markiert damit, was wir heute *nicht*
+    nutzen. Diese Zuordnung wird **gemessen, nicht aus dem Code gelesen**: fuer eine
+    Stichprobe Notices wird jeder Silber-Wert gegen jeden Rohwert derselben Notice
+    gejoint. Trifft ein Wert, ist der Pfad die Quelle. Das findet auch Faelle, in denen
+    der Parser ein Feld zu lesen *scheint*, aber nichts davon ankommt.
+
+    Gemessen 2026-07-23 (eForms): **496 von 1.585 Pfaden genutzt, 1.089 nicht** — darunter
+    Felder mit >50 % Abdeckung und echtem Produktwert, z. B. ``VariantConstraintCode``
+    (Nebenangebote erlaubt? 8 % ja), ``MultipleTendersCode`` (mehrere Lose? 32 % ja),
+    ``FundingProgramCode`` (EU-Foerderung? 4 %), ``ContractingPartyType.PartyTypeCode``
+    (Art der Vergabestelle) und ``ContractingActivity.ActivityTypeCode`` (Taetigkeitsfeld).
+
     Schreibt ``bronze_inventory``. Klein genug (~wenige tausend Zeilen), um sie ins
     Frontend zu exportieren.
     """
@@ -2633,6 +2696,7 @@ def build_bronze_inventory(cfg: Config, country: str = "DE", since_year: int = 2
     A = cfg.silver_table_glob("attributes", country)
     N = cfg.silver_table_glob("notices", country)
     con = duckdb.connect(); con.execute("SET threads=4")
+    _measure_field_usage(con, cfg, country, since_year)
     con.execute(f"""
         COPY (
           WITH n AS (
@@ -2657,8 +2721,11 @@ def build_bronze_inventory(cfg: Config, country: str = "DE", since_year: int = 2
                  agg.max_length, agg.example_value,
                  -- Attribut (@…) vs. Element: Attribute tragen Codelisten-Namen und
                  -- Sprachkennungen, keine Sachdaten — im UI trennbar halten.
-                 (agg.path LIKE '%@%')                           AS is_attribute
+                 (agg.path LIKE '%@%')                           AS is_attribute,
+                 u.derived_column,
+                 (u.derived_column IS NOT NULL)                  AS is_used
             FROM agg JOIN tot USING (schema_gen)
+            LEFT JOIN usage u ON u.path = agg.path AND u.schema_gen = agg.schema_gen
            ORDER BY agg.schema_gen, coverage_pct DESC
         ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
     """)

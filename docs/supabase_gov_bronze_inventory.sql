@@ -8,6 +8,8 @@ create table if not exists gov_bronze_inventory (
   max_length               bigint,
   example_value            text,
   is_attribute             boolean,
+  derived_column           text,
+  is_used                  boolean,
   updated_at               timestamptz default now(),
   primary key (schema_gen, path)
 );
@@ -20,6 +22,8 @@ alter table gov_bronze_inventory add column if not exists coverage_pct double pr
 alter table gov_bronze_inventory add column if not exists max_length bigint;
 alter table gov_bronze_inventory add column if not exists example_value text;
 alter table gov_bronze_inventory add column if not exists is_attribute boolean;
+alter table gov_bronze_inventory add column if not exists derived_column text;
+alter table gov_bronze_inventory add column if not exists is_used boolean;
 do $$ begin
   if not exists (select 1 from pg_constraint
                   where conrelid = 'gov_bronze_inventory'::regclass and contype = 'p') then

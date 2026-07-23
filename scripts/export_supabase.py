@@ -312,6 +312,11 @@ def main() -> int:
     ddl_path.write_text("\n\n".join(ddl_all))
     print(f"DDL geschrieben: {ddl_path}  → im Supabase-Dashboard ausführen "
           f"(idempotent, legt an UND migriert).")
+    # PostgREST laedt sein Schema nach `NOTIFY pgrst` **asynchron** nach. Wer direkt
+    # danach pusht, faengt sich PGRST204 („column not found in the schema cache"),
+    # obwohl die Spalte laengst existiert. Zwei Sekunden reichen.
+    if url and key and not args.dry_run:
+        time.sleep(2)
 
     if args.dry_run or not (url and key):
         for table in todo:
