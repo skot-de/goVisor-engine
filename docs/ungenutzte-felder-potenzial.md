@@ -126,3 +126,107 @@ Platzhalter `2000-01-01`**. Unser Parser liest einen anderen Pfad — im Silber 
    und ein neues UI. Sobald das Netzwerk-Thema ansteht.
 4. **`SelectionCriteria.TendererRequirementTypeCode`** (24 %) — der Weg von der Liste zur
    Empfehlung, aber 32 Codes wollen sauber abgebildet werden.
+
+---
+
+# Nachtrag: vollständiger Durchgang (2026-07-23)
+
+Der erste Durchgang oben war **unvollständig** und beruhte auf einer fehlerhaften Messung.
+Zwei Fehler im Inventar:
+
+- Die Stichprobe lief ab 2024 → die Legacy-Auswertung beruhte auf **1.602 von 1.154.568**
+  Notices (0,14 %), `text` (246.908) und `ojs` (3.232) fehlten ganz.
+- Die Silber-Seite des Wert-Joins filterte weiterhin auf `year >= 2024`, während die
+  Stichprobe alle Jahre umfasste → `text` und `ojs` zeigten „0 genutzt" als **Artefakt**.
+
+Korrigiert sind es **4.123 ungenutzte Sachdaten-Pfade** (nicht 632), verteilt auf
+legacy 2.452 · ojs 1.010 · eforms 478 · doe 163 · text 20.
+
+## DÖE (163 Pfade, vollständig)
+
+| Feld | Abd. | Wert · Nutzung |
+|---|---:|---|
+| **`CallForTendersDocumentReference.Attachment.ExternalReference.URI`** | **96,9 %** | Direktlink zum Auftrag auf der Vergabeplattform. Unser `portal_url` ist bei DÖE zu **0 %** gefüllt — wir lesen seit jeher das schlechtere Feld. **Sofort baubar.** |
+| `RegulatoryDomain` | 84,2 % | de-vob 53 % · **de-uvgo 39 %** · de-vol 6 %. Der Filter, mit dem ein Bauunternehmer 39 % wegräumt. |
+| `TP.ProcedureCode` | 84,2 % | de-open 94 % — Verfahrensart unterschwellig. |
+| **`RequiredFinancialGuarantee.GuaranteeTypeCode`** | **59,7 %** | **provisional 53 %** · none 47 %. Bietungsbürgschaft = Kapitalhürde. Ein K.-o.-Kriterium, das man vor dem Angebot kennen will. |
+| **`TendererQualificationRequest.CompanyLegalForm`** | **43,7 %** | Bietergemeinschafts-Klausel im Klartext — **7× besser gefüllt als in eForms (5,8 %)**. Fürs Partner-Netzwerk ist der Unterschwellenmarkt die bessere Datenbasis. |
+| `VariantConstraintCode` | 59,7 % | allowed **19 %** (eForms nur 6 %) |
+| `MultipleTendersCode` | 26,2 % | true 38 % |
+| `EXT/Change.ChangeReason.ReasonCode` | 16,8 % | update-add 75 % · **cancel 25 %** — Aufhebung, amtlich. |
+| `RealizedLocation.Address.CityName` | 24,5 % | Leistungsort als Ortsname; wir haben bisher nur NUTS. |
+| `Proj.Note` | 56,2 % | Freitext Ausführungszeitraum |
+| `SecurityClearanceTerm.Code` | 26,2 % | Sicherheitsüberprüfung (1 % ja) |
+| `OpenTenderEvent.Description` | 7,7 % | „gemäß §14 VOB/A sind keine Bieter zugelassen" — Submissionsteilnahme |
+
+**Parser-Fehler dabei gefunden und behoben:** DÖE-Käuferkontakte waren zu **0 %** gefüllt
+(258.246 Zeilen), obwohl E-Mail/Telefon/Web im XML zu 60 / 48 / 39 % stehen. Nach dem Fix
+94 % E-Mail.
+
+## eForms (478 Pfade, vollständig)
+
+Zusätzlich zu den oben schon genannten Clustern:
+
+### Wert — wir haben nur 9 % `estimated_value`
+
+| Feld | Abd. | Nutzung |
+|---|---:|---|
+| **`RequestedTenderTotal.EXT/FrameworkMaximumAmount`** | 1,8 % (CN) · 1,2 % (Los) | **Höchstwert der Rahmenvereinbarung** — Werte bis 146.326.846 €. Bei Rahmenverträgen ist das der einzige belastbare Volumenanker, und wir haben ihn nicht. |
+| `OverallApproximateFrameworkContractsAmount` | 1,1 % | Gesamtvolumen aller Abrufe |
+| `FrameworkAgreementValues.ReestimatedValue` | 1,2 % | nachträglich korrigierter Wert |
+
+### Wettbewerbe — eine eigene Zielgruppe (Architektur, Planung)
+
+| Feld | Abd. | Nutzung |
+|---|---:|---|
+| **`AwardingTerms.Prize.ValueAmount`** | 0,1 % | **Preisgeld** (30.000 €, 5.250 €). Für ein Architekturbüro *die* Zahl. |
+| `AwardingTerms.Prize.RankCode` / `.Description` | 0,1 % | Preisstaffel |
+| **`AwardingTerms.TechnicalCommitteePerson.FamilyName`** | 0,1 % | **Die Preisrichter namentlich.** Wer die Jury kennt, weiß, ob sich die Teilnahme lohnt. |
+| **`EconomicOperatorShortList.PreSelectedParty.PartyName`** | 0,1 % | **Wer bereits eingeladen ist, namentlich** („Cityförster, Hannover mit TREIBHAUS…"). Direkte Wettbewerbsaufklärung. |
+| `AwardingTerms.FollowupContractIndicator` | 0,2 % | true **42 %** — Folgeauftrag in Aussicht |
+| `AwardingTerms.BindingOnBuyerIndicator` | 0,2 % | true 42 % — Jury-Entscheid bindend? |
+
+### Partner-Netzwerk — Ergänzung zu Cluster A
+
+| Feld | Abd. | Nutzung |
+|---|---:|---|
+| **`FrameworkAgreement.MaximumOperatorQuantity`** | 3,9 % | **1 (44 %)** · 114 (21 %) · 5 (8 %). Wie viele Firmen in die Rahmenvereinbarung kommen — bei „1" gewinnt einer alles, bei „114" kommt fast jeder rein. Eine echte Wahrscheinlichkeit. |
+| `SubcontractingTerm.TermPercent` / `.TermAmount` | 0,2 % | **Wie viel wurde untervergeben** — 21 %, 30 %, 6.295.445 €. Wer regelmäßig untervergibt, ist Partner-Kandidat. |
+| `TenderSubcontractingRequirements` | 0,1 % | `shar-subc` 67 % — Untervergabe-Anteil vorgeschrieben |
+| `AllowedSubcontractTerms.SubcontractingConditionsCode` | 0,1 % | Bedingungen für Nachunternehmerwechsel |
+
+### Wiederkehr — der Frühindikator
+
+| Feld | Abd. | Nutzung |
+|---|---:|---|
+| **`RecurringProcurementDescription`** | 1,0 % (Los) · 0,5 % (Notice) | **„Schülerbeförderung", „IV. Quartal 2027"** — der Käufer sagt selbst, wann es wiederkommt. Das ist die Wiederkehr-Prognose ohne Modell. |
+| `PIN.PlannedDate` | 0,7 % | Geplantes Veröffentlichungsdatum der eigentlichen Ausschreibung |
+| `Changes.Change.ProcurementDocumentsChangeDate` | 1,1 % | **Unterlagen wurden geändert** — eigener Alert |
+
+### KMU-Eignung
+
+| Feld | Abd. | Nutzung |
+|---|---:|---|
+| `PIN.Proj.SMESuitableIndicator` | 0,4 % | **true 57 %** — „für KMU geeignet", amtlich |
+| `PIN.LOT/Proj.Note` | 0,4 % | `#Besonders geeignet für:selbst#` / `#other-sme#` |
+
+### Risiko und Nachhaltigkeit
+
+| Feld | Abd. | Nutzung |
+|---|---:|---|
+| **`AppealRequestsStatistics.StatisticsNumeric`** | 0,3 % | 0 (86 %) · **1 (14 %)** — **Nachprüfungsanträge**. „Diese Stelle wird angegriffen" = Verfahrensrisiko. |
+| **`ProcurementAdditionalType.ProcurementTypeCode`** | **53,3 %** | none 83 % · **env-imp 3 %** · **soc-obj 2 %** — Umwelt- und Sozialziele als Vergabekriterium |
+| `StrategicProcurement.*` | 0,1–1 % | `veh-acq`, `vehicles-clean`, `vehicles-zero-emission`, Fahrzeugklassen m1/n1/n3, `enrg-lab`, `eed-spec`. Clean-Vehicles- und Energieeffizienz-Richtlinie — winzig, aber wer E-Busse verkauft, will genau diese Liste. |
+| `SettledContract.Funding.FundingProgramCode` | 0,1 % | **ERDF · ERDF_2021 · JTF** — die Förderprogramme namentlich |
+
+## ⚠️ Datenschutz: was NICHT ins Produkt gehört
+
+`UltimateBeneficialOwner` (22–25 % Abdeckung) löst zwar Konzernstrukturen ohne
+Handelsregister auf — trägt aber **`FirstName`, `ResidenceAddress` und
+`Contact.Telefax`** natürlicher Personen. Die **Privatanschrift eines wirtschaftlich
+Berechtigten** darf nicht ins Frontend. Verwendbar ist allenfalls die *Existenz* einer
+UBO-Verknüpfung für die Konzernauflösung, nicht die Personendaten selbst.
+
+Ebenso: `TechnicalCommitteePerson.FamilyName` (Preisrichter) ist eine berufliche
+Funktionsangabe aus einer amtlichen Bekanntmachung — vertretbar. `UltimateBeneficialOwner`
+ist es nicht.
