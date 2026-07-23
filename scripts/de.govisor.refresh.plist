@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  goVisor täglicher TED-Refresh (launchd user agent).
+  NICHT automatisch geladen — bewusst zu aktivieren (s. docs/ingest-betrieb.md):
+    cp scripts/de.govisor.refresh.plist ~/Library/LaunchAgents/
+    launchctl load ~/Library/LaunchAgents/de.govisor.refresh.plist
+  Läuft täglich 06:00; Logs in ~/Library/Logs/govisor-refresh.log.
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>de.govisor.refresh</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Library/Frameworks/Python.framework/Versions/3.14/bin/python3</string>
+        <string>/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor/scripts/refresh.py</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor</string>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>6</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/svko_macmini/Library/Logs/govisor-refresh.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/svko_macmini/Library/Logs/govisor-refresh.log</string>
+</dict>
+</plist>

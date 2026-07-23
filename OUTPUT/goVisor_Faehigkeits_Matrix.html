@@ -1,0 +1,393 @@
+<title>goVisor — Fähigkeits- & Roadmap-Matrix</title>
+<style>
+  :root{
+    --ground:#f6f8fb; --panel:#ffffff; --ink:#18212e; --muted:#586573; --faint:#8b95a3;
+    --line:#e4e9ef; --line-strong:#d3dae2;
+    --accent:#0e7c73; --accent-soft:#0e7c7314;
+    --fakt:#2b8a59; --grenze:#c04a3c; --warn:#a9791a;
+    --v1-bg:#0e7c73; --v1-fg:#ffffff;
+    --v2-bg:#e6edf1; --v2-fg:#3a4a5a;
+    --v3-bg:#f0f2f5; --v3-fg:#727d8b;
+    --eff-lo:#2b8a59; --eff-mid:#a9791a; --eff-hi:#c04a3c;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --ground:#0d131b; --panel:#141d27; --ink:#e9eef4; --muted:#9aa6b4; --faint:#6a7583;
+      --line:#243040; --line-strong:#31404f;
+      --accent:#40b9ad; --accent-soft:#40b9ad1f;
+      --fakt:#4fb681; --grenze:#e3796a; --warn:#d6a441;
+      --v1-bg:#0e7c73; --v1-fg:#eafffb;
+      --v2-bg:#20303e; --v2-fg:#b7c4d1;
+      --v3-bg:#19222c; --v3-fg:#8794a2;
+      --eff-lo:#4fb681; --eff-mid:#d6a441; --eff-hi:#e3796a;
+    }
+  }
+  :root[data-theme="light"]{
+    --ground:#f6f8fb; --panel:#ffffff; --ink:#18212e; --muted:#586573; --faint:#8b95a3;
+    --line:#e4e9ef; --line-strong:#d3dae2; --accent:#0e7c73; --accent-soft:#0e7c7314;
+    --fakt:#2b8a59; --grenze:#c04a3c; --warn:#a9791a;
+    --v2-bg:#e6edf1; --v2-fg:#3a4a5a; --v3-bg:#f0f2f5; --v3-fg:#727d8b;
+    --eff-lo:#2b8a59; --eff-mid:#a9791a; --eff-hi:#c04a3c;
+  }
+  :root[data-theme="dark"]{
+    --ground:#0d131b; --panel:#141d27; --ink:#e9eef4; --muted:#9aa6b4; --faint:#6a7583;
+    --line:#243040; --line-strong:#31404f; --accent:#40b9ad; --accent-soft:#40b9ad1f;
+    --fakt:#4fb681; --grenze:#e3796a; --warn:#d6a441;
+    --v2-bg:#20303e; --v2-fg:#b7c4d1; --v3-bg:#19222c; --v3-fg:#8794a2;
+    --eff-lo:#4fb681; --eff-mid:#d6a441; --eff-hi:#e3796a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);
+    font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1220px;margin:0 auto;padding:40px 22px 72px;}
+  header{margin-bottom:24px;}
+  .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:650;}
+  h1{font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.08;letter-spacing:-.02em;margin:.35rem 0 .5rem;
+     text-wrap:balance;font-weight:750;}
+  .lede{color:var(--muted);max-width:64ch;font-size:1.02rem;}
+  .lede b{color:var(--ink);font-weight:650;}
+  .principles{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:22px 0 8px;}
+  .principle{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;}
+  .principle .p-t{font-weight:670;font-size:.9rem;margin-bottom:2px;}
+  .principle .p-d{color:var(--muted);font-size:.85rem;}
+  .principle span{color:var(--accent);font-variant-numeric:tabular-nums;font-weight:700;margin-right:6px;}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;margin:16px 0 4px;font-size:.82rem;color:var(--muted);}
+  .legend .k{display:inline-flex;align-items:center;gap:6px;}
+  .dot{width:9px;height:9px;border-radius:50%;display:inline-block;}
+  .tablecard{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+    box-shadow:0 1px 2px rgba(20,30,45,.04);}
+  .scroll{overflow-x:auto;}
+  table{width:100%;border-collapse:collapse;min-width:1000px;}
+  thead th{text-align:left;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);
+    font-weight:650;padding:14px 16px;border-bottom:1px solid var(--line-strong);white-space:nowrap;
+    position:sticky;top:0;background:var(--panel);}
+  .band td{padding:11px 16px;background:var(--accent-soft);border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);}
+  .band .b-t{font-weight:720;font-size:.92rem;letter-spacing:-.01em;}
+  .band .b-t em{font-style:normal;color:var(--muted);font-weight:500;}
+  tbody td{padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top;font-size:.88rem;}
+  tbody tr:last-child td{border-bottom:none;}
+  .feld{font-weight:670;color:var(--ink);white-space:nowrap;}
+  .feld small{display:block;font-weight:500;color:var(--faint);font-size:.74rem;white-space:normal;margin-top:1px;}
+  .prob{color:var(--muted);font-style:italic;max-width:22ch;}
+  .sol{max-width:40ch;}
+  .sol .line{display:flex;gap:7px;align-items:flex-start;margin-bottom:5px;}
+  .sol .line:last-child{margin-bottom:0;}
+  .sol .m{color:var(--fakt);font-weight:800;flex:none;line-height:1.45;}
+  .sol .g{color:var(--grenze);font-weight:800;flex:none;line-height:1.45;}
+  .views{max-width:15ch;}
+  .view{display:inline-block;font-size:.71rem;font-weight:620;padding:2px 8px;border-radius:6px;white-space:nowrap;
+    background:var(--v3-bg);color:var(--muted);margin:0 3px 3px 0;}
+  .view.att{color:var(--accent);background:var(--accent-soft);}
+  .view.def{color:var(--eff-mid);background:color-mix(in srgb,var(--eff-mid) 13%,transparent);}
+  .chip{display:inline-block;font-size:.72rem;font-weight:650;padding:2px 9px;border-radius:999px;white-space:nowrap;
+    font-variant-numeric:tabular-nums;}
+  .eff{border:1px solid transparent;}
+  .eff.lo{color:var(--eff-lo);border-color:color-mix(in srgb,var(--eff-lo) 40%,transparent);}
+  .eff.mid{color:var(--eff-mid);border-color:color-mix(in srgb,var(--eff-mid) 40%,transparent);}
+  .eff.hi{color:var(--eff-hi);border-color:color-mix(in srgb,var(--eff-hi) 40%,transparent);}
+  .ph{font-weight:720;letter-spacing:.02em;}
+  .ph.v1{background:var(--v1-bg);color:var(--v1-fg);}
+  .ph.v2{background:var(--v2-bg);color:var(--v2-fg);}
+  .ph.v3{background:var(--v3-bg);color:var(--v3-fg);}
+  .foot{margin-top:22px;color:var(--faint);font-size:.8rem;max-width:74ch;}
+  .foot b{color:var(--muted);}
+  @media (max-width:640px){ .wrap{padding:26px 12px 48px;} }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="kicker">goVisor · Produktstrategie</div>
+    <h1>Was die Daten hergeben — und in welcher Reihenfolge</h1>
+    <p class="lede">Jedes Feld gegen die Reframe-Regel geprüft: auch „unmögliche" Fits haben oft eine <b>datenbelegte Scheibe</b>. Spalte <b>View</b> = Sicht des Nutzers auf den Lead. Was TED strukturell trägt ist hart; Erschlossenes trägt Konfidenz; der verdeckte Wettbewerb (Preise, Verlierer, Absichten) bleibt aus.</p>
+
+    <div class="principles">
+      <div class="principle"><div class="p-t"><span>P1</span>Ergebnisse, nicht Wettbewerb</div><div class="p-d">Gewinner ja — Verlierer, Gebote, Preise nein.</div></div>
+      <div class="principle"><div class="p-t"><span>P2</span>Rückblickend, nicht Vorschau</div><div class="p-d">„Zukunft" = Inferenz aus Mustern, keine Ansage.</div></div>
+      <div class="principle"><div class="p-t"><span>P3</span>Vieles erschlossen</div><div class="p-d">Identität, Nachfolge, Wert — trägt immer Konfidenz.</div></div>
+    </div>
+
+    <div class="legend">
+      <span class="k"><span class="m" style="color:var(--fakt);font-weight:800">✓</span> möglich auf den Daten</span>
+      <span class="k"><span class="g" style="color:var(--grenze);font-weight:800">⚠</span> Grenze / Vorbehalt</span>
+      <span class="k"><span class="view att">Angriff</span><span class="view def">Verteidigung</span><span class="view">weitere Views</span></span>
+      <span class="k"><span class="dot" style="background:var(--eff-lo)"></span> gering</span>
+      <span class="k"><span class="dot" style="background:var(--eff-mid)"></span> mittel</span>
+      <span class="k"><span class="dot" style="background:var(--eff-hi)"></span> hoch</span>
+    </div>
+  </header>
+
+  <div class="tablecard">
+    <div class="scroll">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:13%">Feld</th>
+            <th style="width:12%">View <span style="text-transform:none;letter-spacing:0;font-weight:500">(Sicht d. Nutzers)</span></th>
+            <th style="width:14%">Problem</th>
+            <th style="width:36%">Lösung auf den Daten — Möglichkeiten &amp; Grenzen</th>
+            <th style="width:11%">Aufwand</th>
+            <th style="width:7%">Phase</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr class="band"><td colspan="6"><span class="b-t">v1 — Pre-Tender-Intelligenz (Kern) <em>· der verteidigbare Block + fertige Nebenprodukte</em></span></td></tr>
+
+          <tr>
+            <td class="feld">Lead Scouting</td>
+            <td class="views"><span class="view att">Angriff</span><span class="view">Einstieg</span></td>
+            <td class="prob">„Welche Deals gibt es überhaupt?"</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>Auslauf-Radar: bald auslaufende Verträge <b>vor</b> der Neuausschreibung.</span></div>
+              <div class="line"><span class="g">⚠</span><span>Offenes TED-Listing ist öffentlich — Edge ist die Auslauf-Inferenz.</span></div>
+            </td>
+            <td><span class="chip eff lo">gering · gebaut</span></td>
+            <td><span class="chip ph v1">v1</span></td>
+          </tr>
+          <tr>
+            <td class="feld">Data Fit</td>
+            <td class="views"><span class="view att">Angriff</span><span class="view def">Verteidigung</span><span class="view">Wiederkehr</span></td>
+            <td class="prob">„Was weiß ich über Buyer, Incumbent, Historie?"</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>Buyer- + Incumbent-Dossier aus voller Vergabehistorie.</span></div>
+              <div class="line"><span class="g">⚠</span><span>Keine weichen Faktoren (Beziehung, Präferenz).</span></div>
+            </td>
+            <td><span class="chip eff lo">gering</span></td>
+            <td><span class="chip ph v1">v1</span></td>
+          </tr>
+          <tr>
+            <td class="feld">Potential Fit</td>
+            <td class="views"><span class="view att">Angriff</span></td>
+            <td class="prob">„Wie hoch sind meine Chancen? Lohnt sich's?"</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>Verdrängbarkeits-Score (kalibriert, AUC 0,81) + Bieterzahl.</span></div>
+              <div class="line"><span class="g">⚠</span><span>Relatives Signal, nicht „du gewinnst"; kein Preis.</span></div>
+            </td>
+            <td><span class="chip eff lo">gering · Score da</span></td>
+            <td><span class="chip ph v1">v1</span></td>
+          </tr>
+          <tr>
+            <td class="feld">Timing Fit</td>
+            <td class="views"><span class="view att">Angriff</span><span class="view def">Verteidigung</span></td>
+            <td class="prob">„Wie viel Zeit bleibt?"</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>Restmonate/Fälligkeit + Einreichfrist offener Tender.</span></div>
+              <div class="line"><span class="g">⚠</span><span>Auslaufdatum teils aus Laufzeit geschätzt.</span></div>
+            </td>
+            <td><span class="chip eff lo">gering</span></td>
+            <td><span class="chip ph v1">v1</span></td>
+          </tr>
+          <tr>
+            <td class="feld">Personal Fit <small>(Basis)</small></td>
+            <td class="views"><span class="view att">Angriff</span><span class="view">Einstieg</span></td>
+            <td class="prob">„Passt es zu Fähigkeiten, Region, Größe?"</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>Filter Branche/CPV × Region/NUTS × Wert-Band.</span></div>
+              <div class="line"><span class="g">⚠</span><span>„Fähigkeit" nur als CPV-Proxy, nicht echte Skills.</span></div>
+            </td>
+            <td><span class="chip eff lo">gering</span></td>
+            <td><span class="chip ph v1">v1</span></td>
+          </tr>
+          <tr>
+            <td class="feld">Auto-Dossier <small>(ex „Proposal Fit")</small></td>
+            <td class="views"><span class="view att">Angriff</span><span class="view">Wiederkehr</span></td>
+            <td class="prob">„Relevante Daten zur Ausschreibung automatisch zusammentragen."</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>Ein Briefing je Lead: Tender-Fakten + Buyer + Incumbent + Wettbewerb + dein Fit + Kriterien-Gewichte. <b>Der Ausgabekanal der Plattform.</b></span></div>
+              <div class="line"><span class="g">⚠</span><span>Requirements-Checkliste braucht LLM; echte Vergabeunterlagen liegen extern.</span></div>
+            </td>
+            <td><span class="chip eff mid">mittel</span></td>
+            <td><span class="chip ph v1">v1</span></td>
+          </tr>
+          <tr>
+            <td class="feld">Defensive <small>(Incumbent-Verteidigung)</small></td>
+            <td class="views"><span class="view def">Verteidigung</span></td>
+            <td class="prob">„Welche MEINER Verträge sind gefährdet?"</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>Score aus Incumbent-Sicht + Auslauf eigener Verträge — <b>verdoppelt die Zielgruppe</b>.</span></div>
+              <div class="line"><span class="g">⚠</span><span>Gleiche Grenzen wie Potential Fit.</span></div>
+            </td>
+            <td><span class="chip eff lo">gering · Sicht drehen</span></td>
+            <td><span class="chip ph v1">v1</span></td>
+          </tr>
+          <tr>
+            <td class="feld">Rahmenvertrags-Fokus</td>
+            <td class="views"><span class="view att">Angriff</span><span class="view def">Verteidigung</span></td>
+            <td class="prob">„Wo sind die Premium-Deals?"</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>Auslaufende Frameworks (wiederkehrend, am angreifbarsten ~90 %).</span></div>
+              <div class="line"><span class="g">⚠</span><span>Wert oft unbekannt.</span></div>
+            </td>
+            <td><span class="chip eff lo">gering · klassifiziert</span></td>
+            <td><span class="chip ph v1">v1</span></td>
+          </tr>
+          <tr>
+            <td class="feld">Daten-as-a-Service</td>
+            <td class="views"><span class="view">Extern (Datenkäufer)</span></td>
+            <td class="prob">„Firmenlisten aktiver Vendoren mit Kontakt."</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>Prospect-Listen je Branche + Kontakt (bereits gebaut).</span></div>
+              <div class="line"><span class="g">⚠</span><span>Kontakt = Ausschreibungs-Mailbox, gelegentlich Partner.</span></div>
+            </td>
+            <td><span class="chip eff lo">gering · gebaut</span></td>
+            <td><span class="chip ph v1">v1</span></td>
+          </tr>
+
+          <tr class="band"><td colspan="6"><span class="b-t">v2 — Ausbau <em>· Daten tragen es, aber Bau-Arbeit</em></span></td></tr>
+
+          <tr>
+            <td class="feld">Result Fit</td>
+            <td class="views"><span class="view">Nachbereitung</span></td>
+            <td class="prob">„Hab ich gewonnen? Wer, zu welchem Preis?"</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>CAN-Erkennung → Gewinner (+ Wert wo bekannt), Benachrichtigung.</span></div>
+              <div class="line"><span class="g">⚠</span><span>Erst wenn die CAN publiziert ist; Preis nur ~50 % Abdeckung.</span></div>
+            </td>
+            <td><span class="chip eff mid">mittel</span></td>
+            <td><span class="chip ph v2">v2</span></td>
+          </tr>
+          <tr>
+            <td class="feld">Tracking Fit</td>
+            <td class="views"><span class="view">Nachbereitung</span></td>
+            <td class="prob">„Wann entscheiden die?"</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>Entscheidungsdauer aus historischer Vergabedauer je Käufer/Verfahren.</span></div>
+              <div class="line"><span class="g">⚠</span><span>Schätzung aus Mustern, keine Echtzeit-Info.</span></div>
+            </td>
+            <td><span class="chip eff mid">mittel</span></td>
+            <td><span class="chip ph v2">v2</span></td>
+          </tr>
+          <tr>
+            <td class="feld">Learning Fit <small>(Profil-Delta)</small></td>
+            <td class="views"><span class="view">Nachbereitung</span><span class="view att">Angriff (prospektiv)</span></td>
+            <td class="prob">„Warum verloren? Was besser machen?"</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>Gewinner-vs-du-Profil: Track-Record beim Amt, CPV-Erfahrung, ARGE-Muster.</span></div>
+              <div class="line"><span class="g">⚠</span><span>Korrelation ≠ Kausalität; Bid-Grund/Preis bleibt aus; Zertifikate nur inferiert.</span></div>
+            </td>
+            <td><span class="chip eff mid">mittel</span></td>
+            <td><span class="chip ph v2">v2</span></td>
+          </tr>
+          <tr>
+            <td class="feld">Partner Fit</td>
+            <td class="views"><span class="view att">Angriff</span></td>
+            <td class="prob">„Brauche ich jemanden? Wen?"</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>Ko-Gewinner-/ARGE-Graph je CPV/Region.</span></div>
+              <div class="line"><span class="g">⚠</span><span>Zeigt bestehende Teams, nicht Verfügbarkeit/Bereitschaft.</span></div>
+            </td>
+            <td><span class="chip eff mid">mittel</span></td>
+            <td><span class="chip ph v2">v2</span></td>
+          </tr>
+          <tr>
+            <td class="feld">Wettbewerber-Monitoring</td>
+            <td class="views"><span class="view">Beobachtung</span></td>
+            <td class="prob">„Was macht Konkurrent X?"</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>Entity-Tracking: Gewinne, Käufer, Regionen, ARGE, Trend über Zeit.</span></div>
+              <div class="line"><span class="g">⚠</span><span>Nur öffentliche Gewinne — keine Pipeline, keine Verluste.</span></div>
+            </td>
+            <td><span class="chip eff mid">mittel</span></td>
+            <td><span class="chip ph v2">v2</span></td>
+          </tr>
+          <tr>
+            <td class="feld">Reference Fit</td>
+            <td class="views"><span class="view att">Angriff</span></td>
+            <td class="prob">„Welche meiner Referenzen passen?"</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>Deine früheren Gewinne (= Referenzen) × Käufer/CPV/Requirements.</span></div>
+              <div class="line"><span class="g">⚠</span><span>Requirement-Matching braucht LLM; nur öffentliche Projekte.</span></div>
+            </td>
+            <td><span class="chip eff hi">hoch · LLM</span></td>
+            <td><span class="chip ph v2">v2</span></td>
+          </tr>
+          <tr>
+            <td class="feld">Personal Fit <small>(tief)</small></td>
+            <td class="views"><span class="view">Einstieg</span><span class="view att">Angriff</span></td>
+            <td class="prob">„Passt es zu meinem Gewinnmuster?"</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>Bieter-Profil aus eigener Gewinnhistorie → „Firmen wie du gewinnen diese CPVs".</span></div>
+              <div class="line"><span class="g">⚠</span><span>Braucht deine Entity + belastbare Historie.</span></div>
+            </td>
+            <td><span class="chip eff mid">mittel</span></td>
+            <td><span class="chip ph v2">v2</span></td>
+          </tr>
+
+          <tr class="band"><td colspan="6"><span class="b-t">v3+ — andere Kunden · schwächere Daten · Nische</span></td></tr>
+
+          <tr>
+            <td class="feld">Whitespace / Markteintritt</td>
+            <td class="views"><span class="view">Einstieg</span><span class="view">Beobachtung</span></td>
+            <td class="prob">„Wo lohnt der Einstieg?"</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>CPV × Region mit wenig Wettbewerb (niedrige Bieterzahl).</span></div>
+              <div class="line"><span class="g">⚠</span><span>Bieterzahl-Abdeckung; Contestability als Proxy.</span></div>
+            </td>
+            <td><span class="chip eff mid">mittel</span></td>
+            <td><span class="chip ph v3">v3</span></td>
+          </tr>
+          <tr>
+            <td class="feld">Käuferseite / Benchmarking <small>(anderer Kunde)</small></td>
+            <td class="views"><span class="view">Käufer-Sicht</span></td>
+            <td class="prob">„Bekomme ich Wettbewerb? Bin ich abhängig?"</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>Bieterzahl vs. Vergleichsstellen, Lieferanten-Konzentration je Käufer.</span></div>
+              <div class="line"><span class="g">⚠</span><span>Anderer Kundentyp (öff. Hand) → eigener Vertriebskanal.</span></div>
+            </td>
+            <td><span class="chip eff mid">mittel</span></td>
+            <td><span class="chip ph v3">v3</span></td>
+          </tr>
+          <tr>
+            <td class="feld">Zertifikats-Intelligenz</td>
+            <td class="views"><span class="view">Einstieg</span></td>
+            <td class="prob">„Worauf sollte ich mich zertifizieren?"</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>Häufigste geforderte Nachweise je CPV (aus Requirements).</span></div>
+              <div class="line"><span class="g">⚠</span><span>LLM auf Freitext nötig; „habe ich" bleibt Eigenangabe.</span></div>
+            </td>
+            <td><span class="chip eff hi">hoch · LLM</span></td>
+            <td><span class="chip ph v3">v3</span></td>
+          </tr>
+          <tr>
+            <td class="feld">Markt-Report / Sizing <small>(Investor/Strategie)</small></td>
+            <td class="views"><span class="view">Beobachtung</span></td>
+            <td class="prob">„Marktgröße, Konzentration, Trend?"</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>Aggregat-Analytik: Volumen (wo bekannt), HHI-Konzentration, Trends.</span></div>
+              <div class="line"><span class="g">⚠</span><span>Wert nur ~50 %; anderer Kunde/Preis-Punkt.</span></div>
+            </td>
+            <td><span class="chip eff mid">mittel</span></td>
+            <td><span class="chip ph v3">v3</span></td>
+          </tr>
+          <tr>
+            <td class="feld">Submission Fit</td>
+            <td class="views"><span class="view att">Angriff</span></td>
+            <td class="prob">„Wo/wie einreichen? Vollständig?"</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>Portal-Link + Vollständigkeits-Checkliste aus Requirements.</span></div>
+              <div class="line"><span class="g">⚠</span><span>Einreichung selbst läuft extern (e-Vergabe).</span></div>
+            </td>
+            <td><span class="chip eff hi">hoch · LLM</span></td>
+            <td><span class="chip ph v3">v3</span></td>
+          </tr>
+          <tr>
+            <td class="feld">Price Fit</td>
+            <td class="views"><span class="view att">Angriff</span></td>
+            <td class="prob">„Was ist ein wettbewerbsfähiger Preis?"</td>
+            <td class="sol">
+              <div class="line"><span class="m">✓</span><span>Nur grobe historische Wert-Bänder je CPV/Käufer (wo bekannt).</span></div>
+              <div class="line"><span class="g">⚠</span><span>Wert ~50 % <b>und keine Verliererpreise</b> → kein belastbarer price-to-win.</span></div>
+            </td>
+            <td><span class="chip eff lo">gering, aber schwacher Nutzen</span></td>
+            <td><span class="chip ph v3">v3 · begrenzt</span></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <p class="foot"><b>View</b> = Stance des Nutzers zum Lead: <b>Angriff</b> (fremden Lead angehen) · <b>Verteidigung</b> (eigenen Vertrag schützen) · <b>Wiederkehr</b> (Lead/Käufer schon aus früheren Ausschreibungen bekannt) · <b>Einstieg</b> (neuer Markt/CPV) · <b>Beobachtung</b> (verfolgen, nicht bieten) · <b>Nachbereitung</b> (nach Abgabe) · <b>Käufer-Sicht</b> / <b>Extern</b> (andere Persona). Der v1-Block ist die Story <b>„vor der Ausschreibung: kenne Deal, Käufer, Amtsinhaber, Chance und Zeit — als fertiges Briefing"</b>.</p>
+</div>

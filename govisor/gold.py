@@ -1,0 +1,3038 @@
+"""Gold: die Ebenen, auf denen das Produkt arbeitet.
+
+Silber ist notice-genau — quelltreu, aber nicht die Granularität des Produkts.
+Zwei Ebenen liegen darüber, und beide entstehen hier:
+
+* **Vergabeverfahren** (``procedures``): eine Bekanntmachung und alle Notices,
+  die auf sie verweisen — ihre Vergabe, ihre Korrekturen, ihre Änderungen.
+  Silber hat den Rückverweis (``ref_publication_number``); Gold zieht daraus
+  die Gruppierung.
+
+* **Entitäten** (``buyers``, ``suppliers``): dieselbe Organisation über viele
+  Schreibweisen und Jahre hinweg als ein Datensatz — mit einer **Konfidenz**,
+  nicht als sauberer Fremdschlüssel. Das ist der Kern: Die Auflösung liegt bei
+  ~63 %, und ein JOIN, der Unsicherheit als Wahrheit tarnt, ist genau der
+  Fehlertyp, den wir sonst jagen. Jeder Schlüssel trägt, wie sicher er ist.
+"""
+
+from __future__ import annotations
+
+import re
+from dataclasses import dataclass
+from pathlib import Path
+
+from . import locales
+from .config import Config
+
+# eForms-ORG-Referenz (UUID) — pro Dokument vergeben, taugt nicht als Entity-Schlüssel.
+_RE_UUID_ID = re.compile(r"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-")
+
+# Freemail-/Provider-Domains sind KEIN Firmengruppen-Signal (Einzelunternehmer mit
+# gmail gehören zu keiner Gruppe). Die Second-Level-Domain einer Firmen-Domain
+# dagegen bündelt Töchter/Marken zuverlässig: alles @*.cancom.* → Gruppe CANCOM.
+# Freemail-Liste, öffentl.-rechtl. Sammeldomains und der Behörden-Namensfilter sind
+# sprach-/institutionsspezifisch und liegen im aktiven Länder-Profil (locales.active()).
+_DOMAIN_TLD2 = {"uk", "au", "br", "nz", "za", "jp"}      # zweistufige Länder-Suffixe
+_DOMAIN_SLD2 = {"co", "gov", "com", "org", "ac", "net"}  # davor: co.uk, gov.uk …
+
+
+def looks_public(name: str) -> bool:
+    """Öffentlich-rechtliche Körperschaft? Dann keine kommerzielle Auto-Gruppe."""
+    from . import entities as ent
+    return bool(locales.active().re_public_name.search(ent.strip_accents((name or "").lower())))
+
+
+def domain_group_label(domain: str | None, name_norm: str | None = None) -> str:
+    """Second-Level-Domain einer FIRMEN-Domain → Gruppenlabel ('cancom.de' → 'CANCOM').
+
+    Leerer String, wenn: Freemail/Provider, öffentlich-rechtliche Sammeldomain,
+    oder — wenn ``name_norm`` gegeben — der Domain-Kern NICHT im Namen vorkommt.
+    Letzteres killt die Portal-Kontamination (Lieferant mit @deutschebahn.com-
+    Kontakt), weil dann Domain und Name widersprechen.
+    """
+    if not domain:
+        return ""
+    parts = [p for p in domain.lower().strip().lstrip("www.").split(".") if p]
+    if len(parts) < 2:
+        return ""
+    if parts[-1] in _DOMAIN_TLD2 and len(parts) >= 3 and parts[-2] in _DOMAIN_SLD2:
+        sld = parts[-3]
+    else:
+        sld = parts[-2]
+    loc = locales.active()
+    if (sld in loc.freemail or sld in loc.public_domain_slds or len(sld) < 3
+            or sld.endswith("-stadt") or sld.endswith("-kreis")):
+        return ""
+    if name_norm is not None:
+        toks = name_norm.split()
+        if not (sld in toks or any((len(t) >= 4 and (sld in t or t in sld)) for t in toks)):
+            return ""            # Domain und Name widersprechen → nicht gruppieren
+    return sld.upper()
+
+
+def _notices_glob(cfg: Config, country: str) -> str:
+    return cfg.silver_table_glob("notices", country)
+
+
+def build_procedures(cfg: Config, country: str = "DE"):
+    """Gruppiere Notices zu Vergabeverfahren über den Rückverweis-Graphen.
+
+    Eine Notice verweist per ``ref_publication_number`` auf eine frühere (die
+    Vergabe auf ihre Bekanntmachung, die Korrektur auf das Original). Wir
+    folgen der Kette bis zur Wurzel — der frühesten Notice ohne eigenen
+    Verweis. Diese Wurzel ist die ``procedure_id``.
+
+    Wichtig: Das ist die Klammer um *ein* Verfahren (CN + CAN + Korrekturen),
+    NICHT die Kette über Verfahren hinweg (Ausschreibung 2019 → Nachfolger
+    2023). Letztere existiert in den Daten nicht und muss erschlossen werden —
+    siehe docs/concept-v3.md, Abschnitt 8.
+    """
+    import duckdb
+
+    con = duckdb.connect()
+    src = _notices_glob(cfg, country)
+    rows = con.execute(f"""
+        SELECT publication_number, ref_publication_number
+        FROM '{src}'
+        WHERE publication_number IS NOT NULL
+    """).fetchall()
+
+    ref = {pn: rp for pn, rp in rows}
+
+    def root(pn: str) -> str:
+        seen = set()
+        while True:
+            parent = ref.get(pn)
+            # Stop at a notice with no ref, a ref outside our data, or a cycle.
+            if not parent or parent not in ref or parent in seen:
+                return pn
+            seen.add(pn)
+            pn = parent
+
+    mapping = [(pn, root(pn)) for pn in ref]
+
+    out = cfg.gold_dir / country / "procedures.parquet"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    con.execute("CREATE TABLE m (publication_number VARCHAR, procedure_id VARCHAR)")
+    con.executemany("INSERT INTO m VALUES (?, ?)", mapping)
+    con.execute(f"COPY (SELECT * FROM m) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)")
+    con.close()
+    return len(mapping)
+
+
+def seed_groups(cfg: Config, country: str = "DE", reseed: bool = False) -> tuple[int, int]:
+    """Editierbare Gruppen-Zuordnung bootstrappen — REDAKTIONELL, nicht Fakt.
+
+    Eine goVisor-eigene Gruppe wie 'CANCOM', unter der alle Einheiten hängen —
+    unabhängig von der echten Konzernmutter (die oft gar nicht sauber auflösbar
+    ist). Wie die Branche über CPV: deine Setzung, versioniert, kuratierbar.
+
+    Der Seed schreibt eine CSV (``data/curated/DE_company_groups.csv``) und schlägt
+    eine Gruppe NUR vor, wenn die Firmen-**E-Mail-Domain** sie bestätigt (SLD deckt
+    sich mit dem Namen: @cancom.de + „CANCOM …" → CANCOM). Der bloße Namensstamm
+    taugt NICHT — gemessen mergt er unabhängige Firmen (144 „Müller", 1224
+    „Ingenieurbüro") und öffentliche Stellen. Firmen ohne bestätigende Domain
+    bleiben ungruppiert (Label leer) und werden bei Bedarf von Hand kuratiert.
+    **Er überschreibt nie bestehende Zeilen** — Handkorrekturen überleben den Rebuild.
+
+    Spalten: entity_id, canonical_name, national_id, group_label, source
+    (``auto_domain`` = per Domain bestätigt, ``seed`` = ungruppiert/bootstrap,
+    ``manual`` = von dir gesetzt). Zum Editieren: ``group_label`` ändern, ``source``
+    auf ``manual`` setzen.
+    """
+    import csv
+    import duckdb
+    from . import entities as ent
+
+    path = cfg.group_csv(country)
+    existing: dict[str, dict] = {}
+    if path.exists() and not reseed:
+        with path.open(newline="", encoding="utf-8") as fh:
+            for row in csv.DictReader(fh):
+                existing[row["entity_id"]] = row
+
+    con = duckdb.connect()
+    rows = con.execute(f"""
+        SELECT entity_id, canonical_name, national_id
+        FROM '{cfg.gold_dir / country / 'entities.parquet'}'
+        WHERE canonical_name IS NOT NULL
+    """).fetchall()
+    # Dominante E-Mail-Domain je Entität (aus notice_parties über party_entity).
+    # Stärkstes Gruppen-Signal, WO die Mail die Eigendomain der Firma ist —
+    # korroboriert gegen den Namen, weil sie oft ein geteilter Vergabe-Kontakt ist.
+    # Fehlen die Quellen (z. B. im Test), bleibt die Map leer → Namensstamm greift.
+    PE = cfg.gold_dir / country / "party_entity.parquet"
+    NP_glob = cfg.silver_table_glob("notice_parties", country)
+    import glob as _glob
+    domain_map: dict[str, str] = {}
+    if PE.exists() and _glob.glob(NP_glob):
+        domain_map = dict(con.execute(f"""
+            WITH em AS (
+              SELECT pe.entity_id,
+                     lower(split_part(np.email, '@', 2)) AS domain
+              FROM '{PE.as_posix()}' pe
+              JOIN '{NP_glob}' np ON np.notice_id=pe.notice_id
+                   AND np.role=pe.role AND np.seq=pe.seq
+              WHERE np.email LIKE '%@%.%'
+            ),
+            cnt AS (SELECT entity_id, domain, count(*) n FROM em GROUP BY 1,2)
+            SELECT entity_id, arg_max(domain, n) FROM cnt GROUP BY 1
+        """).fetchall())
+    con.close()
+
+    added = 0
+    for entity_id, name, national_id in rows:
+        if entity_id in existing:
+            continue                       # Handkorrektur nie anfassen.
+        kind = ent.classify(name).kind
+        # Auto-Gruppe NUR wenn die Firmen-Domain sie bestätigt — gemessen ist der
+        # bloße Namensstamm zu rauschig (generische Wörter, Nachnamen, Behörden:
+        # 144 unabhängige „Müller", 1224 „Ingenieurbüro"). Firmen ohne bestätigende
+        # Domain bleiben ungruppiert und werden bei Bedarf von Hand kuratiert.
+        label, source = "", "seed"
+        if kind is ent.Kind.COMPANY and not looks_public(name):
+            dom_label = domain_group_label(domain_map.get(entity_id),
+                                           name_norm=ent.normalize_company(name))
+            if dom_label:
+                label, source = dom_label, "auto_domain"
+        existing[entity_id] = {"entity_id": entity_id, "canonical_name": name,
+                               "national_id": national_id or "", "group_label": label,
+                               "source": source}
+        added += 1
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=["entity_id", "canonical_name", "national_id",
+                                           "group_label", "source"])
+        w.writeheader()
+        for row in existing.values():
+            w.writerow(row)
+    return len(existing), added
+
+
+def build_entity_groups(cfg: Config, country: str = "DE") -> tuple[int, int]:
+    """Kuratierte Gruppen-CSV → abfragbare Tabellen (dim_company_group, entity_group).
+
+    Liest die von Hand pflegbare CSV und materialisiert sie für Joins. Drill-down
+    (Gruppe → Einheiten) und Roll-up (Einheit → Gruppe) laufen über ``group_id``.
+    """
+    import csv
+    import duckdb
+
+    path = cfg.group_csv(country)
+    if not path.exists():
+        return 0, 0
+    groups: dict[str, str] = {}
+    links = []
+    with path.open(newline="", encoding="utf-8") as fh:
+        for row in csv.DictReader(fh):
+            label = (row.get("group_label") or "").strip()
+            if not label:
+                continue
+            gid = "grp:" + label.lower().replace(" ", "_")
+            groups[gid] = label
+            links.append((row["entity_id"], gid))
+
+    con = duckdb.connect()
+    _write(con, cfg.gold_dir / country / "dim_company_group.parquet",
+           [(gid, label) for gid, label in groups.items()],
+           "group_id VARCHAR, label VARCHAR")
+    _write(con, cfg.gold_dir / country / "entity_group.parquet", links,
+           "entity_id VARCHAR, group_id VARCHAR")
+    con.close()
+    return len(groups), len(links)
+
+
+def build_dim_cpv(cfg: Config, country: str = "DE"):
+    """Dimensionstabelle CPV-Division → Bezeichnung, Sektor, Branche.
+
+    Redaktionell und versioniert — die Branchen-Zuordnung ist deine Setzung,
+    kein Fakt. Silber bleibt unberührt (Rohcodes in notice_cpv/lot_cpv); die
+    Sektor-Sicht ist ein Join hierauf. 'Was zählt als IT' zu ändern heißt: eine
+    Zeile in govisor/cpv.py ändern und diese Tabelle neu schreiben — kein
+    Silber-Rebuild.
+    """
+    import duckdb
+    from . import cpv
+
+    rows = [(div, label, sector, branche, cpv.DIM_CPV_VERSION)
+            for div, (label, sector, branche) in cpv.DIVISIONS.items()]
+    out = cfg.gold_dir / country / "dim_cpv.parquet"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    con = duckdb.connect()
+    con.execute("CREATE TABLE d (division VARCHAR, label VARCHAR, sector VARCHAR, "
+                "branche VARCHAR, version INTEGER)")
+    con.executemany("INSERT INTO d VALUES (?, ?, ?, ?, ?)", rows)
+    con.execute(f"COPY (SELECT * FROM d) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)")
+    con.close()
+    return len(rows)
+
+
+# Verbraucherpreisindex (2020 = 100), Jahresdurchschnitt — länderspezifisch und
+# daher im aktiven Profil (locales.active().cpi). Als Dimension: der reale Wert ist
+# ein Join, keine eingebrannte Spalte — Faktoren korrigierbar, ohne Silber-Rebuild.
+
+
+def build_dim_deflator(cfg: Config, country: str = "DE"):
+    """Jahr → Faktor auf Preise 2020. final_value * factor = realer Wert.
+
+    Ohne das vergleicht 'typische Dealgröße' 2016 mit 2024 unbereinigt — bei
+    26% Preisanstieg dazwischen ein systematischer Fehler.
+    """
+    import duckdb
+    rows = [(y, cpi, round(100.0 / cpi, 4)) for y, cpi in locales.active().cpi.items()]
+    con = duckdb.connect()
+    _write(con, cfg.gold_dir / country / "dim_deflator.parquet", rows,
+           "year SMALLINT, cpi DOUBLE, factor_to_2020 DOUBLE")
+    con.close()
+    return len(rows)
+
+
+def build_quality(cfg: Config, country: str = "DE"):
+    """Plausibilitäts-Schicht — macht Datenmüll sichtbar, ohne ihn zu löschen.
+
+    Jede Notice bekommt Qualitätsmarken (wie die Parser-Flags) und einen
+    *bereinigten* Wert: ``final_value_clean`` ist der Wert, wenn er plausibel
+    ist, sonst NULL. Aggregate über die clean-Spalte sind damit von Haus aus
+    sauber; der Rohwert bleibt in Silber erhalten.
+
+    Belegt an DE: 82.002 Vergaben (~29% der bewerteten CANs) tragen einen
+    Platzhalter unter 100 € — echte öffentliche Aufträge beginnen ~1.000 €.
+    Ohne Bereinigung ist der Median-Deal um 45% zu niedrig.
+    """
+    import duckdb
+    con = duckdb.connect()
+    N = cfg.silver_table_glob("notices", country)
+    L = cfg.silver_table_glob("lots", country)
+    A = cfg.silver_table_glob("awards", country)
+    PE = str(cfg.gold_dir / country / "party_entity.parquet")
+    out = cfg.gold_dir / country / "quality.parquet"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    # Jeder ERKENNBARE Defekt wird geflaggt (nicht weggeworfen). final_value_clean
+    # ist nur dann gesetzt, wenn plausibel UND in EUR. Harte Fehler laufen von hier
+    # in die Review-Queue. Zusätzlich `verfahren_status` (kein Defekt, sondern
+    # Signal): CANs ohne Gewinner UND ohne Award-Daten = erfolglos/aufgehoben —
+    # wertvoller Lead-Hinweis (weniger Konkurrenz beim Re-Tender), kein Fehler.
+    con.execute(f"""
+        COPY (
+          WITH dur AS (SELECT notice_id, max(duration_months) dm
+                       FROM '{L}' WHERE duration_months>0 GROUP BY 1),
+          bid AS (SELECT notice_id, bool_or(
+                    num_tenders < 0 OR num_tenders > 500
+                    OR (num_tenders_sme IS NOT NULL AND num_tenders > 0
+                        AND num_tenders_sme > num_tenders)) AS bad
+                  FROM '{A}' GROUP BY 1),
+          win AS (SELECT DISTINCT notice_id FROM '{PE}' WHERE role='winner'),
+          awp AS (SELECT DISTINCT notice_id FROM '{A}'),
+          q AS (
+            SELECT n.notice_id, n.final_value, n.estimated_value, n.value_currency,
+                   n.notice_kind, n.award_date, n.end_date, n.start_date, n.title,
+                   n.publication_date, n.submission_deadline,
+                   COALESCE(n.end_date,
+                     n.award_date + (CAST(dur.dm AS VARCHAR) || ' months')::INTERVAL) AS eff_end,
+                   coalesce(bid.bad, false) AS bad_bid,
+                   (win.notice_id IS NOT NULL) AS has_winner,
+                   (awp.notice_id IS NOT NULL) AS has_award
+            FROM '{N}' n
+            LEFT JOIN dur ON dur.notice_id=n.notice_id
+            LEFT JOIN bid ON bid.notice_id=n.notice_id
+            LEFT JOIN win ON win.notice_id=n.notice_id
+            LEFT JOIN awp ON awp.notice_id=n.notice_id
+          )
+          SELECT notice_id,
+            list_filter([
+              CASE WHEN final_value IS NOT NULL AND final_value < 100
+                   THEN 'wert_unplausibel_niedrig' END,
+              CASE WHEN final_value <= 1 THEN 'wert_sentinel' END,
+              CASE WHEN final_value >= 100 AND final_value < 1000
+                   THEN 'wert_verdaechtig_niedrig' END,
+              CASE WHEN final_value > 1e9 THEN 'wert_absurd_hoch' END,
+              CASE WHEN final_value IS NOT NULL AND value_currency IS NOT NULL
+                        AND value_currency <> 'EUR' THEN 'waehrung_fremd' END,
+              CASE WHEN final_value IS NOT NULL AND value_currency IS NULL
+                   THEN 'waehrung_angenommen' END,
+              CASE WHEN estimated_value < 0 THEN 'schaetzwert_negativ' END,
+              CASE WHEN end_date IS NOT NULL AND award_date IS NOT NULL
+                        AND end_date < award_date THEN 'ende_vor_vergabe' END,
+              CASE WHEN start_date IS NOT NULL AND end_date IS NOT NULL
+                        AND start_date > end_date THEN 'datum_start_nach_ende' END,
+              CASE WHEN submission_deadline IS NOT NULL AND publication_date IS NOT NULL
+                        AND submission_deadline < publication_date THEN 'frist_vor_pub' END,
+              CASE WHEN award_date > current_date OR award_date < DATE '1990-01-01'
+                        OR end_date > DATE '2100-01-01' OR start_date < DATE '1990-01-01'
+                   THEN 'datum_absurd' END,
+              CASE WHEN eff_end IS NOT NULL AND award_date IS NOT NULL
+                        AND eff_end > award_date + INTERVAL 25 YEAR
+                   THEN 'laufzeit_unplausibel' END,
+              CASE WHEN bad_bid THEN 'bieterzahl_unplausibel' END,
+              CASE WHEN notice_kind='corrigendum' THEN 'korrektur_nicht_zaehlen' END
+            ], x -> x IS NOT NULL) AS quality_flags,
+            CASE WHEN final_value >= 100 AND final_value <= 1e9
+                      AND (value_currency = 'EUR' OR value_currency IS NULL)
+                 THEN final_value END AS final_value_clean,
+            CASE WHEN notice_kind='can' AND has_winner THEN 'vergeben'
+                 -- Open-House-Rabattverträge (§130a SGB V): strukturell ohne Gewinner
+                 -- (offener Beitritt), KEIN erfolgloses Verfahren → eigener Status, fällt
+                 -- aus dem Chancen-Radar/der Chronik.
+                 WHEN notice_kind='can' AND NOT has_winner
+                      AND (lower(title) LIKE '%rabatt%' OR lower(title) LIKE '%130a%'
+                           OR lower(title) LIKE '%open%house%') THEN 'open_house'
+                 WHEN notice_kind='can' AND NOT has_award THEN 'erfolglos'
+                 WHEN notice_kind='can' THEN 'unbekannt' END AS verfahren_status
+          FROM q
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM '{out}' WHERE len(quality_flags)>0").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_review_queue(cfg: Config, country: str = "DE"):
+    """Datenqualitäts-Worklist: jede Notice mit Quality-Flag, mit Beleg-Kontext.
+
+    Der Fehler bleibt in der DB (Silber unverändert, Notice zählt normal), wird
+    aber sichtbar zum Abarbeiten abgelegt statt weggeworfen — mit den auffälligen
+    Rohwerten (Enddatum, Laufzeit, Wert) und dem TED-Link zum Nachsehen. Wer einen
+    Fall geprüft/korrigiert hat, kann ihn in einer kuratierten Spalte abhaken
+    (später) — die Queue ist die Grundlage, kein Löschknopf.
+    """
+    import duckdb
+    con = duckdb.connect()
+    N = cfg.silver_table_glob("notices", country)
+    L = cfg.silver_table_glob("lots", country)
+    Q = str(cfg.gold_dir / country / "quality.parquet")
+    out = cfg.gold_dir / country / "review_queue.parquet"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    con.execute(f"""
+        COPY (
+          WITH dur AS (SELECT notice_id, max(duration_months) dm
+                       FROM '{L}' WHERE duration_months>0 GROUP BY 1)
+          SELECT n.notice_id, q.quality_flags, n.title AS titel,
+                 n.award_date, n.end_date, dur.dm AS duration_months,
+                 n.final_value, n.value_currency, n.ted_url
+          FROM '{Q}' q
+          JOIN '{N}' n ON n.notice_id=q.notice_id
+          LEFT JOIN dur ON dur.notice_id=n.notice_id
+          -- Nur HARTE, korrigierbare Fehler in die Worklist. Info-/systemische
+          -- Flags (korrektur_nicht_zaehlen, Platzhalter-/Verdachts-Werte,
+          -- waehrung_fremd) bleiben in quality sichtbar, verstopfen aber nicht
+          -- die Abarbeitung.
+          WHERE list_has_any(q.quality_flags,
+                ['laufzeit_unplausibel','ende_vor_vergabe','datum_start_nach_ende',
+                 'wert_absurd_hoch','schaetzwert_negativ','bieterzahl_unplausibel',
+                 'frist_vor_pub','datum_absurd'])
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM '{out}'").fetchone()[0]
+    by = con.execute(f"""SELECT flag, count(*) FROM (
+            SELECT unnest(quality_flags) flag FROM '{out}') GROUP BY 1 ORDER BY 2 DESC""").fetchall()
+    con.close()
+    return n, dict(by)
+
+
+def build_contract_chains(cfg: Config, country: str = "DE"):
+    """Verketten: ein auslaufender Vertrag → sein Nachfolger (Schwäche 4).
+
+    Über aufgelösten Käufer + CPV-Division + Zeitfenster. NICHT in den Daten
+    vorhanden — erschlossen, mit ``match_confidence``. Das ist die Grundlage für
+    'in den letzten N Ausschreibungen', und die Konfidenz läuft mit, damit eine
+    schwache Vermutung nie als sichere Kette ausgegeben wird.
+    """
+    import duckdb
+    con = duckdb.connect()
+    N = cfg.silver_table_glob("notices", country)
+    PE = str(cfg.gold_dir / country / "party_entity.parquet")
+    # Verträge (CAN) mit Käufer-Entität, CPV-Division, Enddatum.
+    # Ein Vertrag je (Käufer, CPV-Klasse, Enddatum): der Gewinner als Amtsinhaber.
+    # Feinere CPV (4-stellig statt 2) und genau EIN Nachfolger je Vertrag —
+    # sonst explodiert das kartesische Produkt (ein Großkäufer im Bausektor über
+    # 10 Jahre ergab 15 Mio Pseudo-Ketten).
+    con.execute(f"""
+        CREATE TABLE contracts AS
+        SELECT n.notice_id, n.award_date, n.end_date,
+               substr(n.cpv_main,1,4) AS cpv_class,
+               pe.entity_id AS buyer_entity,
+               w.entity_id  AS winner_entity
+        FROM '{N}' n
+        JOIN '{PE}' pe ON pe.notice_id=n.notice_id AND pe.role='buyer'
+        LEFT JOIN (SELECT notice_id, min(entity_id) entity_id FROM '{PE}'
+                   WHERE role='winner' GROUP BY 1) w ON w.notice_id=n.notice_id
+        WHERE n.notice_kind='can' AND n.cpv_main IS NOT NULL
+          AND n.end_date IS NOT NULL AND pe.entity_id IS NOT NULL
+    """)
+    # Nächster Nachfolger je Vorgänger: der zeitlich am dichtesten am Enddatum.
+    con.execute(f"""
+        CREATE TABLE chains AS
+        WITH pairs AS (
+          SELECT c1.notice_id AS predecessor, c2.notice_id AS successor,
+                 c1.buyer_entity, c1.cpv_class,
+                 c1.winner_entity AS incumbent, c2.winner_entity AS new_winner,
+                 date_diff('day', c1.end_date, c2.award_date) AS gap_days,
+                 row_number() OVER (PARTITION BY c1.notice_id
+                                    ORDER BY abs(date_diff('day', c1.end_date, c2.award_date))) AS rn
+          FROM contracts c1 JOIN contracts c2
+            ON c1.buyer_entity=c2.buyer_entity AND c1.cpv_class=c2.cpv_class
+           AND c1.notice_id != c2.notice_id
+           AND c2.award_date BETWEEN c1.end_date - INTERVAL 3 MONTH
+                                 AND c1.end_date + INTERVAL 18 MONTH
+        )
+        SELECT predecessor, successor, buyer_entity, cpv_class,
+               incumbent, new_winner,
+               CASE WHEN incumbent IS NOT NULL AND new_winner IS NOT NULL
+                    THEN incumbent = new_winner END AS incumbent_retained,
+               gap_days, 0.6 AS match_confidence
+        FROM pairs WHERE rn = 1
+    """)
+    out = cfg.gold_dir / country / "contract_chains.parquet"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    con.execute(f"COPY (SELECT * FROM chains) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)")
+    n = con.execute("SELECT count(*) FROM chains").fetchone()[0]
+    con.close()
+    return n
+
+
+# Vertragsart-Klassifikation für die Ketten-Bildung. Einmal-Werke (Hausbau) sind
+# keine Kette; Rahmenverträge/Dienstleistungen wiederholen sich und SIND die Kette.
+# Stichworte UND die Titel-Stoppwortliste (Ähnlichkeits-Blockung) sind sprach-
+# spezifisch und kommen aus dem aktiven Länder-Profil (locales.active()).
+
+
+def classify_contract(title: str, cpv_main: str, has_renewal: bool):
+    """(kind, recurring, chain_worthy) — ist das ein wiederkehrender Vertrag?"""
+    from . import entities as ent
+    loc = locales.active()
+    t = ent.strip_accents((title or "").lower())
+    is_works = (cpv_main or "").startswith("45")
+    framework = bool(re.search(loc.kind_framework_kw, t))
+    recurring_kw = bool(re.search(loc.kind_recurring_kw, t))
+    oneoff_kw = bool(re.search(loc.kind_oneoff_kw, t))
+    if framework:
+        kind = "rahmenvertrag"
+    elif recurring_kw:
+        kind = "wiederkehrend"
+    elif is_works and oneoff_kw:
+        kind = "einmal_werk"
+    elif is_works:
+        kind = "werk_sonstig"
+    else:
+        kind = "sonstiges"
+    recurring = kind in ("rahmenvertrag", "wiederkehrend") or bool(has_renewal)
+    # Einmal-Bauwerke ohne jedes Wiederkehr-Signal sind KEINE Kette (User-Vorgabe).
+    chain_worthy = not (is_works and not framework and not recurring_kw and not has_renewal)
+    return kind, recurring, chain_worthy
+
+
+def _kind_sql(title_col: str, cpv_col: str) -> str:
+    """SQL-Ausdruck für contract_kind — IDENTISCH für Leads und Score-Training,
+    damit ein Lead genauso klassifiziert wird wie die gelernten Nachfolgen.
+    Stichworte kommen aus dem aktiven Länder-Profil (locales.active())."""
+    loc = locales.active()
+    return f"""CASE
+      WHEN regexp_matches(lower({title_col}), '{loc.kind_framework_kw}') THEN 'rahmenvertrag'
+      WHEN regexp_matches(lower({title_col}), '{loc.kind_recurring_kw}') THEN 'wiederkehrend'
+      WHEN {cpv_col} LIKE '45%' AND regexp_matches(lower({title_col}),
+           '{loc.kind_oneoff_kw}') THEN 'einmal_werk'
+      WHEN {cpv_col} LIKE '45%' THEN 'werk_sonstig'
+      ELSE 'sonstiges' END"""
+
+
+def build_contract_successions(cfg: Config, country: str = "DE", min_sim: float = 0.7,
+                               min_gap_days: int = 300, max_block: int = 120):
+    """Echte Vertrag→Neuvergabe-Ketten über Titel-/Scope-Ähnlichkeit (Schwäche 4, jetzt richtig).
+
+    Die alten ``contract_chains`` (Käufer×CPV) waren ein Katalog dessen, was ein
+    Käufer in einer Kategorie vergab — keine echte Nachfolge. Hier: gleicher Käufer,
+    ähnlicher Titel (Käufername entfernt), >~1 Jahr Abstand → dieselbe wiederkehrende
+    Vergabe. Einmal-Werke (Hausbau) sind ausgeschlossen (``chain_worthy``).
+
+    Blockung nach (Käufer, 4-stellig CPV) hält das paarweise Matching bezahlbar;
+    Blöcke über ``max_block`` Verträgen werden übersprungen (gezählt zurückgegeben).
+    """
+    import duckdb
+    from . import entities as ent
+
+    con = duckdb.connect()
+    S = cfg.silver_table_glob
+    g = cfg.gold_dir / country
+    PE = str(g / "party_entity.parquet")
+    rows = con.execute(f"""
+        WITH bw AS (SELECT notice_id, min(seq) seq FROM '{PE}' WHERE role='buyer'  GROUP BY 1),
+             ww AS (SELECT notice_id, min(seq) seq FROM '{PE}' WHERE role='winner' GROUP BY 1),
+             ren AS (SELECT notice_id, bool_or(has_renewal) hr FROM '{S("lots", country)}' GROUP BY 1)
+        SELECT n.notice_id, bpe.entity_id buyer_id, be.canonical_name buyer_name,
+               substr(n.cpv_main,1,4) cpv4, n.cpv_main, n.title, n.award_date,
+               wpe.entity_id win_id, we.canonical_name win_name, coalesce(ren.hr,false) hr
+        FROM '{S("notices", country)}' n
+        JOIN bw ON bw.notice_id=n.notice_id JOIN ww ON ww.notice_id=n.notice_id
+        JOIN '{PE}' bpe ON bpe.notice_id=n.notice_id AND bpe.role='buyer'  AND bpe.seq=bw.seq
+        JOIN '{PE}' wpe ON wpe.notice_id=n.notice_id AND wpe.role='winner' AND wpe.seq=ww.seq
+        JOIN '{g / "entities.parquet"}' be ON be.entity_id=bpe.entity_id
+        JOIN '{g / "entities.parquet"}' we ON we.entity_id=wpe.entity_id
+        LEFT JOIN ren ON ren.notice_id=n.notice_id
+        WHERE n.notice_kind='can' AND n.title IS NOT NULL AND n.award_date IS NOT NULL
+          AND n.cpv_main IS NOT NULL AND we.confidence>=0.75
+    """).fetchall()
+
+    import re as _re
+    from collections import defaultdict
+    succ_stop = locales.active().succ_stopwords
+    blocks = defaultdict(list)
+    for r in rows:
+        nid, bid, bname, cpv4, cpvm, title, ad, wid, wname, hr = r
+        kind, recurring, worthy = classify_contract(title, cpvm, hr)
+        if not worthy:
+            continue                                   # Einmal-Werk → keine Kette
+        bstop = {w for w in _re.sub(r"[^a-zäöüß ]", " ", ent.strip_accents(str(bname).lower())).split()
+                 if len(w) > 3}
+        toks = {w for w in _re.sub(r"[^a-zäöüß0-9 ]", " ", ent.strip_accents(title.lower())).split()
+                if len(w) > 3 and w not in succ_stop and w not in bstop}
+        if len(toks) >= 2:
+            blocks[(bid, cpv4)].append((ad, nid, wid, wname, title, kind, recurring, toks))
+
+    edges, skipped = [], 0
+    for (bid, cpv4), items in blocks.items():
+        if len(items) > max_block:
+            skipped += 1
+            continue
+        items.sort()                                   # nach award_date
+        for i in range(len(items)):
+            for j in range(i + 1, len(items)):
+                a, b = items[i], items[j]
+                if (b[0] - a[0]).days < min_gap_days:
+                    continue
+                sim = len(a[7] & b[7]) / len(a[7] | b[7])
+                if sim < min_sim:
+                    continue
+                edges.append((a[1], b[1], bid, cpv4, b[5], b[6],
+                              a[2], b[2], (a[2] == b[2]),
+                              (b[0] - a[0]).days, round(sim, 3),
+                              a[3], b[3], b[4], a[0], b[0]))
+
+    out = g / "contract_successions.parquet"
+    _write(con, out, edges,
+           "predecessor VARCHAR, successor VARCHAR, buyer_id VARCHAR, cpv_class VARCHAR, "
+           "contract_kind VARCHAR, recurring BOOLEAN, incumbent_id VARCHAR, successor_win_id VARCHAR, "
+           "incumbent_retained BOOLEAN, gap_days INTEGER, similarity DOUBLE, "
+           "incumbent_name VARCHAR, successor_name VARCHAR, successor_title VARCHAR, "
+           "predecessor_award DATE, successor_award DATE")
+    con.close()
+    return len(edges), skipped
+
+
+def build_leads(cfg: Config, country: str = "DE", reference_date: str | None = None):
+    """Auslauf-Radar (#1): kommende Re-Vergaben aus auslaufenden Verträgen.
+
+    Der verkaufbare Liefergegenstand — der Blick nach vorn. Jeder abgeschlossene
+    Auftrag (CAN) mit bekanntem Vertragsende erzeugt eine künftige
+    Neuausschreibung. Wir listen sie *vor* der Re-Vergabe, mit Amtsinhaber (=
+    Gewinner dieses Vertrags), Käuferkontakt, Wert-Band und Angreifbarkeit.
+
+    Anders als ``contract_chains`` wird hier NICHTS gepaart: der Amtsinhaber ist
+    der Gewinner genau dieses Vertrags, das Ende sein eigenes ``end_date`` (oder
+    ``award_date`` + größte Los-Laufzeit). Deshalb hängt der Radar nicht an der
+    erschlossenen Ketten-Logik.
+
+    ``reference_date`` (ISO ``YYYY-MM-DD``) ist der Stichtag „heute"; Leads sind
+    Verträge, die an oder nach ihm auslaufen. Als Parameter, nicht ``now()`` im
+    Buildcode — reproduzierbar.
+    """
+    import duckdb
+    from datetime import date
+
+    ref = reference_date or date.today().isoformat()
+    con = duckdb.connect()
+    N = cfg.silver_table_glob("notices", country)
+    L = cfg.silver_table_glob("lots", country)
+    A = cfg.silver_table_glob("awards", country)
+    NP = cfg.silver_table_glob("notice_parties", country)
+    g = cfg.gold_dir / country
+    PE, EN, Q, DC, DD = (str(g / t) for t in
+                         ("party_entity.parquet", "entities.parquet", "quality.parquet",
+                          "dim_cpv.parquet", "dim_deflator.parquet"))
+
+    # führende Partei je Rolle (min seq), mit Entität + Kontakt
+    con.execute(f"""
+        CREATE TABLE buyer AS
+        SELECT pe.notice_id, pe.entity_id, e.canonical_name AS buyer_name, e.confidence AS buyer_conf,
+               np.town AS buyer_town, np.nuts AS buyer_nuts, np.email AS buyer_email, np.url AS buyer_url
+        FROM (SELECT notice_id, min(seq) seq FROM '{PE}' WHERE role='buyer' GROUP BY 1) b
+        JOIN '{PE}' pe ON pe.notice_id=b.notice_id AND pe.role='buyer' AND pe.seq=b.seq
+        JOIN '{EN}' e ON e.entity_id=pe.entity_id
+        LEFT JOIN '{NP}' np ON np.notice_id=pe.notice_id AND np.role='buyer' AND np.seq=pe.seq
+    """)
+    con.execute(f"""
+        CREATE TABLE winner AS
+        SELECT pe.notice_id, pe.entity_id AS incumbent_entity, e.canonical_name AS incumbent_name,
+               e.confidence AS incumbent_conf, coalesce(np.in_consortium,false) AS in_consortium
+        FROM (SELECT notice_id, min(seq) seq FROM '{PE}' WHERE role='winner' GROUP BY 1) w
+        JOIN '{PE}' pe ON pe.notice_id=w.notice_id AND pe.role='winner' AND pe.seq=w.seq
+        JOIN '{EN}' e ON e.entity_id=pe.entity_id
+        LEFT JOIN '{NP}' np ON np.notice_id=pe.notice_id AND np.role='winner' AND np.seq=pe.seq
+    """)
+    con.execute(f"CREATE TABLE dur AS SELECT notice_id, max(duration_months) dm "
+                f"FROM '{L}' WHERE duration_months>0 GROUP BY 1")
+    con.execute(f"CREATE TABLE ren AS SELECT notice_id, bool_or(has_renewal) hr, "
+                f"max(max_renewals) mr FROM '{L}' GROUP BY 1")
+    con.execute(f"CREATE TABLE tnd AS SELECT notice_id, max(num_tenders) nt "
+                f"FROM '{A}' WHERE num_tenders>0 GROUP BY 1")
+
+    out = g / "leads.parquet"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    # Vertragsende: eigenes end_date, sonst award_date + größte Los-Laufzeit.
+    END = f"COALESCE(n.end_date, n.award_date + (CAST(dur.dm AS VARCHAR) || ' months')::INTERVAL)"
+    # Wert: Endwert (hart), sonst der Schätzwert der Ausschreibung als Fallback —
+    # nur EUR/plausibel, klar als 'geschaetzt' markiert. Strukturschätzung wäre
+    # falsche Präzision (gemessen ~70% Fehler), estimated_value dagegen ~12% Fehler.
+    VU = ("COALESCE(q.final_value_clean, CASE WHEN n.estimated_value BETWEEN 1000 AND 1e9 "
+          "AND (n.value_currency='EUR' OR n.value_currency IS NULL) THEN n.estimated_value END)")
+    VUR = f"({VU} * dd.factor_to_2020)"
+    con.execute(f"""
+        CREATE TABLE leads AS
+        SELECT
+          n.notice_id AS lead_id,
+          'auslauf' AS source,
+          b.entity_id AS buyer_entity, b.buyer_name, b.buyer_town, b.buyer_nuts,
+          b.buyer_email, b.buyer_url, n.ted_url,
+          w.incumbent_entity, w.incumbent_name, round(w.incumbent_conf,2) AS incumbent_conf,
+          w.in_consortium,
+          n.title AS titel, substr(n.description, 1, 600) AS beschreibung,
+          n.cpv_main, substr(n.cpv_main,1,4) AS cpv_class, dc.branche, dc.sector,
+          n.award_date AS vergabe_datum,
+          {END}::DATE AS contract_end,
+          date_diff('month', DATE '{ref}', {END}) AS months_to_expiry,
+          CASE WHEN n.end_date IS NOT NULL THEN 'Vertragsende'
+               WHEN dur.dm IS NOT NULL THEN 'aus Laufzeit geschätzt' END AS faellig_basis,
+          coalesce(NOT list_contains(q.quality_flags, 'laufzeit_unplausibel'), true) AS termin_plausibel,
+          {_kind_sql('n.title', 'n.cpv_main')} AS contract_kind,
+          q.final_value_clean AS value_clean,
+          {VU} AS value_used,
+          CASE WHEN q.final_value_clean IS NOT NULL THEN 'final'
+               WHEN {VU} IS NOT NULL THEN 'geschaetzt' ELSE 'unbekannt' END AS value_source,
+          round({VUR}) AS value_real_2020,
+          CASE
+            WHEN {VU} IS NULL THEN 'unbekannt'
+            WHEN {VUR} < 50000 THEN '<50k'
+            WHEN {VUR} < 200000 THEN '50-200k'
+            WHEN {VUR} < 1000000 THEN '200k-1M'
+            WHEN {VUR} < 5000000 THEN '1-5M'
+            ELSE '>5M' END AS value_band,
+          tnd.nt AS num_tenders, (tnd.nt = 1) AS single_bidder,
+          coalesce(ren.hr,false) AS has_renewal, ren.mr AS max_renewals,
+          (b.buyer_email IS NOT NULL OR b.buyer_url IS NOT NULL) AS reachable,
+          round(LEAST(coalesce(w.incumbent_conf,0), coalesce(b.buyer_conf,0)),2) AS source_confidence
+        FROM '{N}' n
+        JOIN buyer b ON b.notice_id=n.notice_id
+        JOIN winner w ON w.notice_id=n.notice_id
+        LEFT JOIN dur ON dur.notice_id=n.notice_id
+        LEFT JOIN tnd ON tnd.notice_id=n.notice_id
+        LEFT JOIN ren ON ren.notice_id=n.notice_id
+        LEFT JOIN '{Q}' q ON q.notice_id=n.notice_id
+        LEFT JOIN '{DD}' dd ON dd.year=n.year
+        LEFT JOIN '{DC}' dc ON dc.division=substr(n.cpv_main,1,2)
+        WHERE n.notice_kind='can' AND n.cpv_main IS NOT NULL
+          AND {END} IS NOT NULL AND {END} >= DATE '{ref}'
+    """)
+    # Lead-Dedup (kein Verlust): Mehrfach-Lose desselben Projekts teilen Käufer +
+    # Amtsinhaber + Vertragsende + CPV-Klasse. Alle Zeilen bleiben; das wertvollste
+    # Los je Cluster wird als Hauptlos markiert (ist_hauptlos), plus Los-Zahl — der
+    # Radar zeigt per Default nur Hauptlose, die anderen sind über ein Flag da.
+    key = "buyer_entity, incumbent_entity, contract_end, cpv_class"
+    con.execute(f"""
+        CREATE TABLE leads_dd AS
+        SELECT *,
+          count(*) OVER (PARTITION BY {key}) AS lose_im_cluster,
+          row_number() OVER (PARTITION BY {key}
+                             ORDER BY value_clean DESC NULLS LAST, lead_id) AS _rang
+        FROM leads
+    """)
+    con.execute(f"""
+        COPY (SELECT * EXCLUDE (_rang), (_rang = 1) AS ist_hauptlos FROM leads_dd)
+        TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute("SELECT count(*) FROM leads").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_displaceability(cfg: Config, country: str = "DE", min_support: int = 20):
+    """Verdrängbarkeits-Score (#2), auf ECHTEN Nachfolge-Labels basiert.
+
+    Nicht mehr auf der erschlossenen (Käufer×CPV)-Paarung (Rauschen), sondern auf
+    ``contract_successions`` — echten Vertrag→Neuvergabe-Ketten über Titel-Scope.
+    Achsen: **Vertragsart × Branche × Bieterzahl** (die Vertragsart ist der stärkste
+    Treiber — Rahmenverträge ~10% Amtstreue, Dienstleistungen 30–36%). Verdrängbarkeit
+    = 1 − Amtstreue. Relatives, aber kreuzvalidiert kalibriertes Ranking.
+
+    Backoff: (Art×Branche×Bieter) → (Art×Branche) → (Art) → global. Schreibt
+    ``dim_displaceability`` (kuratierbar) + Score-Spalten auf ``leads``.
+    """
+    import duckdb
+    con = duckdb.connect()
+    N = cfg.silver_table_glob("notices", country)
+    A = cfg.silver_table_glob("awards", country)
+    g = cfg.gold_dir / country
+    DC = str(g / "dim_cpv.parquet")
+    CS = str(g / "contract_successions.parquet")
+    LD = str(g / "leads.parquet")
+    BUCKET = ("CASE WHEN num_tenders=1 THEN 'einzel' WHEN num_tenders BETWEEN 2 AND 3 THEN 'wenig' "
+              "WHEN num_tenders>=4 THEN 'viel' ELSE 'unbekannt' END")
+
+    # Trainingsdaten: echte Nachfolgen, Merkmale des VORGÄNGERS (was man beim
+    # Prognostizieren weiß) — Vertragsart identisch zu den Leads klassifiziert.
+    con.execute(f"""
+        CREATE TABLE train AS
+        WITH tnd AS (SELECT notice_id, max(num_tenders) num_tenders FROM '{A}' WHERE num_tenders>0 GROUP BY 1),
+        base AS (
+          SELECT {_kind_sql('p.title', 'p.cpv_main')} AS contract_kind,
+                 coalesce(dc.branche,'?') AS branche, tnd.num_tenders,
+                 (NOT cs.incumbent_retained)::INT AS displaced
+          FROM '{CS}' cs
+          JOIN '{N}' p ON p.notice_id=cs.predecessor
+          LEFT JOIN '{DC}' dc ON dc.division=substr(p.cpv_main,1,2)
+          LEFT JOIN tnd ON tnd.notice_id=cs.predecessor
+          WHERE cs.incumbent_retained IS NOT NULL
+        )
+        SELECT contract_kind, branche, {BUCKET} AS bucket, displaced FROM base
+    """)
+    con.execute("""
+        CREATE TABLE model AS
+        SELECT 'art_branche_bieter' lvl, contract_kind, branche, bucket, count(*) n, round(avg(displaced),3) displ
+          FROM train GROUP BY 1,2,3,4
+        UNION ALL SELECT 'art_branche', contract_kind, branche, NULL, count(*), round(avg(displaced),3) FROM train GROUP BY 1,2,3
+        UNION ALL SELECT 'art', contract_kind, NULL, NULL, count(*), round(avg(displaced),3) FROM train GROUP BY 1,2
+        UNION ALL SELECT 'global', NULL, NULL, NULL, count(*), round(avg(displaced),3) FROM train
+    """)
+    con.execute(f"COPY (SELECT * FROM model ORDER BY lvl,n DESC) TO '{g / 'dim_displaceability.parquet'}' (FORMAT PARQUET, COMPRESSION ZSTD)")
+
+    con.execute("CREATE TABLE mkbb AS SELECT contract_kind,branche,bucket,n,displ FROM model WHERE lvl='art_branche_bieter'")
+    con.execute("CREATE TABLE mkb  AS SELECT contract_kind,branche,n,displ FROM model WHERE lvl='art_branche'")
+    con.execute("CREATE TABLE mk   AS SELECT contract_kind,n,displ FROM model WHERE lvl='art'")
+    gdispl, gn = con.execute("SELECT displ,n FROM model WHERE lvl='global'").fetchone()
+    con.execute(f"""
+        CREATE TABLE scored AS
+        WITH l AS (SELECT *, {BUCKET} AS bucket, coalesce(branche,'?') AS branche_j FROM '{LD}')
+        SELECT l.* EXCLUDE (bucket, branche_j),
+          -- Einmal-Werke sind keine wiederkehrenden Verträge → kein Verdrängungs-
+          -- signal (und kein Training). Ehrlich NICHT bewerten statt Rauschen ausgeben.
+          CASE WHEN l.contract_kind IN ('einmal_werk','werk_sonstig') THEN NULL
+               WHEN kbb.n>={min_support} THEN kbb.displ
+               WHEN kb.n>={min_support} THEN kb.displ
+               WHEN mk.n>={min_support} THEN mk.displ ELSE {gdispl} END AS displaceability,
+          CASE WHEN l.contract_kind IN ('einmal_werk','werk_sonstig') THEN 'nicht_kettenrelevant'
+               WHEN kbb.n>={min_support} THEN 'art_branche_bieter'
+               WHEN kb.n>={min_support} THEN 'art_branche'
+               WHEN mk.n>={min_support} THEN 'art' ELSE 'global' END AS score_basis,
+          CASE WHEN l.contract_kind IN ('einmal_werk','werk_sonstig') THEN 0
+               WHEN kbb.n>={min_support} THEN kbb.n
+               WHEN kb.n>={min_support} THEN kb.n
+               WHEN mk.n>={min_support} THEN mk.n ELSE {gn} END AS score_support,
+          l.bucket AS bidder_bucket
+        FROM l
+        LEFT JOIN mkbb kbb ON kbb.contract_kind=l.contract_kind AND kbb.branche=l.branche_j AND kbb.bucket=l.bucket
+        LEFT JOIN mkb  kb  ON kb.contract_kind=l.contract_kind AND kb.branche=l.branche_j
+        LEFT JOIN mk   mk  ON mk.contract_kind=l.contract_kind
+    """)
+    con.execute(f"""
+        CREATE TABLE leads2 AS
+        SELECT * EXCLUDE (displaceability),
+          round(displaceability,3) AS displaceability,
+          CASE WHEN displaceability IS NULL THEN 'n/a (Einmal-Werk)'
+               WHEN displaceability>=0.80 THEN 'hoch'
+               WHEN displaceability>=0.60 THEN 'mittel' ELSE 'niedrig' END AS displ_band,
+          CASE WHEN contract_kind IN ('einmal_werk','werk_sonstig')
+                    THEN 'Einmal-Werk (kein Wechsel-Signal)'
+          ELSE concat(
+            CASE contract_kind WHEN 'rahmenvertrag' THEN 'Rahmenvertrag'
+                 WHEN 'wiederkehrend' THEN 'wiederkehrend' ELSE 'sonstiges' END,
+            ' · ',
+            CASE bidder_bucket WHEN 'einzel' THEN 'Einzelbieter' WHEN 'wenig' THEN 'wenig Bieter'
+                 WHEN 'viel' THEN 'viele Bieter' ELSE 'Bieter unbekannt' END,
+            ' · ', coalesce(branche,'?')) END AS score_driver
+        FROM scored
+    """)
+    con.execute(f"COPY (SELECT * FROM leads2) TO '{LD}' (FORMAT PARQUET, COMPRESSION ZSTD)")
+    n_model = con.execute("SELECT count(*) FROM model").fetchone()[0]
+    n_leads = con.execute("SELECT count(*) FROM leads2").fetchone()[0]
+    con.close()
+    return n_model, n_leads
+
+
+# --- Entitäten mit Konfidenz -------------------------------------------------
+
+class Method:
+    """Wie eine Entität aufgelöst wurde — Teil des Schlüssels, nicht Metadaten."""
+
+    HR_EXACT = "handelsregister_exakt"       # normalisierter Name deckungsgleich
+    HR_FUZZY_PLZ = "handelsregister_fuzzy_plz"   # ähnlich + PLZ bestätigt
+    TED_NATIONAL_ID = "ted_nationalid"       # NATIONALID/CompanyID direkt aus TED
+    NAME_ONLY = "nur_name"                    # kein Register-Treffer, Name als Schlüssel
+    UNRESOLVED = "nicht_aufgeloest"           # Person, Bietergemeinschaft, ausländisch
+
+
+# Konfidenz je Methode. Bewusst konservativ — eine 90%-Aussage darf nicht auf
+# einem 0.7-Match stehen, ohne dass die 0.7 sichtbar mitläuft.
+CONFIDENCE = {
+    Method.TED_NATIONAL_ID: 1.0,
+    Method.HR_EXACT: 0.9,
+    Method.HR_FUZZY_PLZ: 0.75,
+    Method.NAME_ONLY: 0.4,
+    Method.UNRESOLVED: 0.0,
+}
+
+# Stufe-2-Schwelle: token-Jaccard-Ähnlichkeit zweier kanonisierter Namen, ab der
+# ein PLZ-belegter Fuzzy-Match akzeptiert wird. Konservativ (0.7): bei gleicher
+# PLZ genügt hohe Namensnähe, generische Ein-Wort-Namen fallen unter die Schwelle.
+HR_FUZZY_MIN_SIM = 0.7
+
+
+def _hr_token_sim(a: str, b: str) -> float:
+    """Jaccard über signifikante Tokens (>2 Zeichen) zweier kanonisierter Namen.
+
+    Token-Menge statt Reihenfolge: 'muller bau' und 'bau muller' sind identisch.
+    Ein-Token-Namen (nur ein signifikantes Wort) geben nie 1.0 gegen einen
+    längeren Namen — so rutscht 'stadt' nicht auf 'stadtwerke ... gmbh'.
+    """
+    ta = {t for t in a.split() if len(t) > 2}
+    tb = {t for t in b.split() if len(t) > 2}
+    if not ta or not tb:
+        return 0.0
+    return len(ta & tb) / len(ta | tb)
+
+
+class _HRLookup(dict):
+    """Exakt-Match; bei Fehltreffer PLZ-belegter Fuzzy-Match (Stufe 2).
+
+    Der Fuzzy-Zweig ist bewusst eng: Kandidaten sind NUR HR-Einträge mit
+    derselben PLZ (kleiner Block, starker Beleg), und der Name muss token-
+    ähnlich genug sein (``HR_FUZZY_MIN_SIM``). Ohne PLZ kein Fuzzy — dann wäre es
+    ein Ratespiel. Gleiche PLZ + token-gleicher Name = praktisch dieselbe Firma.
+
+    Modul-Ebene (nicht Closure), damit Tests sie mit einem Mini-Index bauen und
+    die Schwelle ohne die 5,5-Mio-Datei prüfen können.
+    """
+
+    _by_plz: dict[str, list[str]]
+
+    def __init__(self, *a, **k):
+        super().__init__(*a, **k)
+        self._by_plz = {}
+
+    def get(self, norm, plz=None):
+        hit = dict.get(self, norm)
+        if hit is not None:
+            return hit, False                       # exakter Namensmatch
+        if not plz or not norm:
+            return None, False                      # ohne PLZ kein sicherer Fuzzy
+        best_rec, best_sim = None, 0.0
+        for cnorm in self._by_plz.get(plz, ()):
+            s = _hr_token_sim(norm, cnorm)
+            if s > best_sim:
+                best_rec, best_sim = dict.get(self, cnorm), s
+        if best_rec is not None and best_sim >= HR_FUZZY_MIN_SIM:
+            return best_rec, True                   # PLZ-belegter Fuzzy-Treffer
+        return None, False
+
+
+@dataclass
+class ResolvedEntity:
+    """Ein aufgelöster Käufer oder Lieferant — mit Beweislast.
+
+    ``entity_id`` ist der kanonische Schlüssel. ``confidence`` und ``method``
+    reisen mit: Wer auf dieser Entität aggregiert, sieht, wie belastbar die
+    Zusammenfassung ist. Ein Fremdschlüssel ohne Konfidenz wäre eine Lüge über
+    Daten, die zu 37 % nicht sauber auflösen.
+    """
+
+    entity_id: str
+    canonical_name: str
+    method: str
+    confidence: float
+    national_id: str | None = None
+    source_names: tuple[str, ...] = ()
+    norm: str = ""                    # kanonisierter Name — Brücke für die Konsolidierung
+
+    @property
+    def is_reliable(self) -> bool:
+        return self.confidence >= 0.75
+
+
+def build_hr_index(path: str | None = None, fuzzy: bool = False) -> dict:
+    """Firmenregister-Extrakt → {normalisierter Name: (Reg-Nr, offizieller Name, PLZ)}.
+
+    Für die Namens-Auflösung der Lieferanten ohne national_id. Ein 5,3-Mio-
+    Zeilen-Scan (~60s), einmal je Lauf. Rückgabe passt zur hr_lookup-Signatur
+    (normalized, plz) -> (record|None, is_fuzzy).
+
+    ``path`` default = Register des aktiven Länder-Profils. Hat das Profil keins
+    (register_path=None, z. B. FR-Stub), gibt es einen leeren Index — die Auflösung
+    fällt sauber auf reine Namens-Konfidenz zurück, ohne Fehler.
+
+    ``fuzzy`` schaltet den PLZ-belegten Fuzzy-Zweig frei — **Default aus**. Der
+    Trockenlauf (2026-07-19) hat gemessen: bei Schwelle 0.7 ~24 % Fehl-Merges
+    (Behörde vs. ihre GmbH, Konzern vs. Tochter, Akronym-Kollision) bei winzigem
+    Ertrag (1.428 Entitäten). Das verletzt „0 Fehl-Merges", darum bleibt der Zweig
+    aus, bis die Präzision (engere Schwelle / mehr Belege) belastbar ist. Ohne
+    ``fuzzy`` bleibt ``_by_plz`` leer → ``_HRLookup.get`` findet nie einen Fuzzy-
+    Kandidaten und liefert exakt das bisherige Exakt-Match-Verhalten.
+    """
+    import bz2, json, os, re
+    from . import entities as ent
+    if path is None:
+        path = locales.active().register_path
+    if not path:
+        return {}   # kein Register → leerer Index; build_entities fällt auf Namens-Konfidenz zurück
+
+    # Cache: die Register-Datei ist statisch, der geparste Index bei jedem Lauf identisch.
+    # normalize_company über 5,5M Zeilen kostet ~2 Min — einmal parsen, dann aus Parquet
+    # laden (mtime-invalidiert). Nur ohne fuzzy, weil der Fuzzy-Zweig ``by_plz`` braucht.
+    cache = os.path.join("data", "cache", "hr_index.parquet")
+    if not fuzzy and os.path.exists(cache) and os.path.getmtime(cache) >= os.path.getmtime(path):
+        import duckdb
+        lk = _HRLookup()
+        for norm, nr, name, plz in duckdb.connect().execute(
+                f"SELECT norm, nr, name, plz FROM read_parquet('{cache}')").fetchall():
+            lk[norm] = {"nr": nr, "name": name, "plz": plz}
+        lk._by_plz = {}
+        return lk
+
+    index: dict[str, dict] = {}
+    by_plz: dict[str, list[str]] = {}          # PLZ → normalisierte Namen (Stufe-2-Blocking)
+    with bz2.open(path, "rt", encoding="utf-8", errors="replace") as fh:
+        for line in fh:
+            try:
+                d = json.loads(line)
+            except Exception:
+                continue
+            name = d.get("name")
+            if not name:
+                continue
+            m = re.search(r"\b(\d{5})\b", d.get("registered_address") or "")
+            record = {"nr": d.get("company_number"), "name": name,
+                      "plz": m.group(1) if m else None}
+            # Aktuellen UND frühere Namen indizieren: eine umbenannte Firma
+            # bleibt so über die Umbenennung hinweg auf dieselbe HRB auflösbar.
+            candidates = [name]
+            for prev in (d.get("previous_names") or []):
+                candidates.append(prev.get("company_name") if isinstance(prev, dict) else prev)
+            for cand in candidates:
+                norm = ent.normalize_company(cand) if cand else None
+                if norm and norm not in index:
+                    index[norm] = record
+                    if fuzzy and record["plz"]:      # Blocking nur bauen, wenn Fuzzy aktiv
+                        by_plz.setdefault(record["plz"], []).append(norm)
+
+    lk = _HRLookup(); lk.update(index); lk._by_plz = by_plz
+    if not fuzzy:      # Cache für den nächsten Lauf schreiben (nur der reine Index)
+        import duckdb, pandas as pd
+        os.makedirs(os.path.dirname(cache), exist_ok=True)
+        df = pd.DataFrame(((k, v["nr"], v["name"], v["plz"]) for k, v in index.items()),
+                          columns=["norm", "nr", "name", "plz"])
+        con = duckdb.connect(); con.register("df", df)
+        con.execute(f"COPY df TO '{cache}' (FORMAT PARQUET, COMPRESSION ZSTD)")
+    return lk
+
+
+def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = None):
+    """Materialisiere Käufer und Lieferanten als aufgelöste Entitäten.
+
+    Zwei Ebenen der Verlässlichkeit, ohne dass eine geratene sich als sichere
+    tarnt: die ``national_id`` (VAT/HRB, in eForms zu 85% vorhanden) ist der
+    stabile Schlüssel; wo sie fehlt, greift die Namens-Auflösung mit Konfidenz.
+
+    Schreibt:
+      * ``entities``     — entity_id, canonical_name, national_id, method, confidence
+      * ``party_entity`` — (notice_id, role, seq) → entity_id, damit notice_parties
+                            joinbar wird
+    """
+    import duckdb
+    from . import entities as ent
+
+    con = duckdb.connect()
+    parties = con.execute(f"""
+        SELECT notice_id, role, seq, name, national_id, postal_code
+        FROM '{cfg.silver_table_glob("notice_parties", country)}'
+        WHERE name IS NOT NULL
+    """).fetchall()
+
+    entity_of: dict[str, ResolvedEntity] = {}
+    plz_of: dict[str, set[str]] = {}
+    links = []
+    # In-Run-Memoisierung: resolve_supplier ist rein in (name, national_id, plz, hr_index),
+    # und 84 % der 3,7M Parteien sind Wiederholungen (nur 592k distinkte Tupel). Reihenfolge
+    # und setdefault-First bleiben unverändert → bit-identisch. (Kein Cross-Lauf-Cache — der
+    # brachte nichts, s. Historie: der Flaschenhals war _write, nicht die Auflösung.)
+    memo: dict[tuple, ResolvedEntity] = {}
+    for notice_id, role, seq, name, national_id, plz in parties:
+        key = (name, national_id, plz)
+        resolved = memo.get(key)
+        if resolved is None:
+            resolved = resolve_supplier(name, national_id=national_id, postal_code=plz,
+                                        hr_lookup=hr_index.get if hr_index else None)
+            memo[key] = resolved
+        entity_of.setdefault(resolved.entity_id, resolved)
+        if plz and plz.strip():
+            plz_of.setdefault(resolved.entity_id, set()).add(plz.strip())
+        links.append((notice_id, role, seq, resolved.entity_id))
+
+    # Konsolidierung: eine nur-Name-Entität und eine Register-/ID-Entität mit
+    # DEMSELBEN kanonisierten Namen sind oft dieselbe Firma über die Schema-
+    # Generationsgrenze (2018 ohne, 2024 mit national_id). Verschmelzen — aber
+    # NUR mit Beleg: identische PLZ. Ohne PLZ-Beleg wäre es ein Ratespiel (zwei
+    # Firmen können Namen teilen), darum landet Unbelegtes als Kandidat in der
+    # Review-Datei statt im Bestand. Konservativ: 0 Fehl-Merges, Rest sichtbar.
+    merge_map, flagged = _consolidate_by_national_id(entity_of, plz_of)
+    # Kuratierte Aliase (belegte Umbenennungen/Fragmente, z. B. DB Netz→DB InfraGO).
+    # Identitäts-Merge, KEIN Namensstamm-Raten — nur was in der CSV steht (human-verifiziert).
+    merge_map.update(_load_entity_aliases(cfg, country, entity_of))
+    for old_id, new_id in merge_map.items():
+        src = entity_of.pop(old_id, None)
+        tgt = entity_of.get(new_id)
+        if src is not None and tgt is not None:
+            tgt.source_names = tuple(sorted(set(tgt.source_names) | set(src.source_names)))
+    links = [(nid, role, seq, merge_map.get(eid, eid)) for (nid, role, seq, eid) in links]
+
+    ent_rows = [(e.entity_id, e.canonical_name, e.national_id, e.method, e.confidence)
+                for e in entity_of.values()]
+    _write(con, cfg.gold_dir / country / "entities.parquet", ent_rows,
+           "entity_id VARCHAR, canonical_name VARCHAR, national_id VARCHAR, "
+           "method VARCHAR, confidence DOUBLE")
+    _write(con, cfg.gold_dir / country / "party_entity.parquet", links,
+           "notice_id VARCHAR, role VARCHAR, seq SMALLINT, entity_id VARCHAR")
+    _write(con, cfg.gold_dir / country / "entity_merge_candidates.parquet", flagged,
+           "norm VARCHAR, name_only_entity VARCHAR, candidate_entity VARCHAR, reason VARCHAR")
+    con.close()
+    return len(entity_of), len(links)
+
+
+def _load_entity_aliases(cfg: Config, country: str, entity_of: dict) -> dict:
+    """Kuratierte Identitäts-Aliase aus ``curated/<country>_entity_aliases.csv``.
+
+    CSV: ``alias_name, canonical_name`` (+ freie ``grund``-Spalte). Beide Namen werden
+    über ``normalize_company`` auf ihre Entität aufgelöst; der Alias wird in die
+    kanonische (bevorzugt register-/id-getragene) Entität gemerged. Nur belegte
+    Einzelfälle (Umbenennung, Fragment) — kein Namensstamm-Automatismus.
+    Gibt ``{alias_entity_id: canonical_entity_id}`` zurück.
+    """
+    import csv
+    from . import entities as ent
+
+    path = cfg.data_dir / "curated" / f"{country}_entity_aliases.csv"
+    if not path.exists():
+        return {}
+    from collections import defaultdict
+    id_methods = {Method.HR_EXACT, Method.HR_FUZZY_PLZ, Method.TED_NATIONAL_ID}
+    ids_by_norm: dict[str, list] = defaultdict(list)   # ALLE Entitäten je Norm (Varianten)
+    canon_by_norm: dict[str, str] = {}                 # kanonisches Ziel je Norm (id-getragen bevorzugt)
+    for e in entity_of.values():
+        n = ent.normalize_company(e.canonical_name or "")
+        if not n:
+            continue
+        ids_by_norm[n].append(e.entity_id)
+        if n not in canon_by_norm or e.method in id_methods:
+            canon_by_norm[n] = e.entity_id
+    out: dict[str, str] = {}
+    with path.open(newline="", encoding="utf-8") as fh:
+        for row in csv.DictReader(fh):
+            target = canon_by_norm.get(ent.normalize_company(row.get("canonical_name", "")))
+            if not target:
+                continue
+            for aid in ids_by_norm.get(ent.normalize_company(row.get("alias_name", "")), []):
+                if aid != target:
+                    out[aid] = target          # jede Alias-Variante → kanonische Entität
+    return out
+
+
+def _consolidate_by_national_id(entity_of: dict, plz_of: dict):
+    """Nur-Name-Entitäten in ihre belegte Register-/ID-Entität verschmelzen.
+
+    Gruppiert nach kanonisiertem Namen (``norm``). In einer Gruppe mit **genau
+    einer** eindeutigen ID-tragenden Entität verschmilzt eine nur-Name-Entität
+    nur, wenn sie mit dieser eine PLZ teilt (Beleg). Mehrdeutige (>1 ID) oder
+    unbelegte Fälle werden geflaggt, nicht verschmolzen.
+
+    Gibt ``(merge_map, flagged)`` zurück: ``merge_map`` alt→neu für die sicheren
+    Merges, ``flagged`` die Kandidaten für die Review-Datei.
+    """
+    from collections import defaultdict
+
+    id_methods = {Method.HR_EXACT, Method.HR_FUZZY_PLZ, Method.TED_NATIONAL_ID}
+    by_norm: dict[str, list] = defaultdict(list)
+    for e in entity_of.values():
+        if e.norm:
+            by_norm[e.norm].append(e)
+
+    merge_map: dict[str, str] = {}
+    flagged: list[tuple] = []
+    for norm, group in by_norm.items():
+        id_entities = [e for e in group if e.method in id_methods]
+        name_only = [e for e in group if e.method == Method.NAME_ONLY]
+        if not name_only or not id_entities:
+            continue
+        id_keys = {e.entity_id for e in id_entities}
+        if len(id_keys) > 1:
+            cand = ";".join(sorted(id_keys))
+            for e in name_only:
+                flagged.append((norm, e.entity_id, cand, "mehrdeutige_id"))
+            continue
+        target = id_entities[0]
+        tplz = plz_of.get(target.entity_id, set())
+        for e in name_only:
+            if tplz and (plz_of.get(e.entity_id, set()) & tplz):
+                merge_map[e.entity_id] = target.entity_id      # PLZ-Beleg → sicher mergen
+            else:
+                flagged.append((norm, e.entity_id, target.entity_id, "kein_plz_beleg"))
+    return merge_map, flagged
+
+
+def _write(con, path, rows, columns):
+    from pathlib import Path
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    con.execute(f"CREATE OR REPLACE TABLE _t ({columns})")
+    # Vektorisiert über Arrow statt row-by-row executemany: bei party_entity (3,7M
+    # Zeilen) war executemany der Flaschenhals (~336 s → ~3 s). Arrow bewahrt None→NULL
+    # exakt (kein pandas-NaN); die typisierte Tabelle castet die Spalten.
+    if rows:
+        import pyarrow as pa
+        names = [c.strip().split()[0] for c in columns.split(",")]
+        cols = list(zip(*rows))
+        tbl = pa.table({names[i]: pa.array(cols[i]) for i in range(len(names))})
+        con.register("_arrow", tbl)
+        con.execute("INSERT INTO _t SELECT * FROM _arrow")
+        con.unregister("_arrow")
+    con.execute(f"COPY (SELECT * FROM _t) TO '{path}' (FORMAT PARQUET, COMPRESSION ZSTD)")
+    con.execute("DROP TABLE _t")
+
+
+def resolve_supplier(
+    name: str,
+    national_id: str | None = None,
+    postal_code: str | None = None,
+    hr_lookup=None,
+) -> ResolvedEntity:
+    """Löse einen Lieferanten auf und sage, wie sicher.
+
+    ``hr_lookup`` ist eine Funktion ``(normalized_name, plz) -> record | None``
+    über das Handelsregister — injiziert, damit die Logik ohne die 5-Millionen-
+    Zeilen-Datei testbar bleibt. Fehlt sie, endet die Kette bei Name-oder-ID.
+
+    Reihenfolge — STABILITÄT über die Generationsgrenze zuerst:
+      1. Person / Bietergemeinschaft → gar nicht auflösbar
+      2. Handelsregister-Namensmatch → HRB-Schlüssel. STABIL: derselbe Name gibt
+         2020 (kein national_id) und 2024 (mit national_id) dieselbe HRB.
+      3. national_id (nur wenn kein HR-Treffer) → national_id-Schlüssel. Belastbar
+         pro Notice (1.0), aber existiert erst ab eForms — kann die Zeitachse
+         nicht tragen, daher nachrangig.
+      4. sonst: Name als Schlüssel → 0.4
+
+    Warum HRB VOR national_id: Der Incumbent-Test 'gleicher Gewinner über die
+    Zeit?' braucht einen Schlüssel, der 2020 und 2024 identisch ist. national_id
+    (VAT) gibt es erst ab 2024 — als Primärschlüssel spaltet er dieselbe Firma
+    in zwei IDs und drückt die Incumbent-Rate auf unmögliche 7%.
+    """
+    from . import entities
+
+    classified = entities.classify(name)
+    norm = classified.normalized
+
+    if classified.kind is not entities.Kind.COMPANY:
+        # Persons and consortia are not in any company register — saying
+        # "unresolved" is the honest answer, not a bad fuzzy guess.
+        return ResolvedEntity(
+            entity_id=f"unresolved:{norm or name}",
+            canonical_name=name,
+            method=Method.UNRESOLVED,
+            confidence=CONFIDENCE[Method.UNRESOLVED],
+            source_names=(name,),
+            norm=norm,
+        )
+
+    if hr_lookup is not None:
+        hit, fuzzy = hr_lookup(norm, postal_code)
+        if hit:
+            method = Method.HR_FUZZY_PLZ if fuzzy else Method.HR_EXACT
+            return ResolvedEntity(
+                entity_id=f"hr:{hit['nr']}",
+                canonical_name=hit.get("name", name),
+                method=method,
+                confidence=CONFIDENCE[method],
+                national_id=hit["nr"],
+                source_names=(name,),
+                norm=norm,
+            )
+
+    nid = (national_id or "").strip()
+    # UUID-artige eForms-ORG-Referenzen (z. B. „e54ed47b-138c-…") sind PRO
+    # DOKUMENT vergeben — als Schlüssel spalten sie dieselbe Firma je Notice in
+    # eine neue Entität. Nur echte Register-/VAT-artige IDs taugen als Schlüssel;
+    # UUIDs fallen auf den (kanonisierten) Namen zurück.
+    if nid and not _RE_UUID_ID.match(nid):
+        return ResolvedEntity(
+            entity_id=f"id:{nid}",
+            canonical_name=name,
+            method=Method.TED_NATIONAL_ID,
+            confidence=CONFIDENCE[Method.TED_NATIONAL_ID],
+            national_id=nid,
+            source_names=(name,),
+            norm=norm,
+        )
+
+    return ResolvedEntity(
+        entity_id=f"name:{norm}",
+        canonical_name=name,
+        method=Method.NAME_ONLY,
+        confidence=CONFIDENCE[Method.NAME_ONLY],
+        source_names=(name,),
+        norm=norm,
+    )
+
+
+# --- 🟢 Markt-Intelligenz-Views (Ticket #3, ohne Nachfolge-Modell) --------------
+
+MARKET_WINDOW_YEARS = 5           # gleitendes Fenster für Behörden-/Markt-Statistik
+
+
+def build_market_intelligence(cfg: Config, country: str = "DE", as_of_year: int | None = None):
+    """Vier materialisierte Aggregat-Views über die CAN-Award-Historie.
+
+    NUR nachfolge-freie KPIs (🟢) — Zählungen, Top-N, Rang/Anteil nach Win-Zahl,
+    Trend. Volumen trägt ``*_coverage`` (55 % der Werte fehlen), Laufzeit ebenso.
+    Verdrängungs-/Verlust-KPIs (loss_rate, head_to_head, switch_rate) fehlen hier
+    bewusst — die brauchen das Nachfolge-Modell und kommen konfidenz-gegatet dazu.
+
+    Schreibt: ``buyer_stats``, ``contractor_stats``, ``market_stats``,
+    ``buyer_contractor_history`` (je Parquet). Gibt Zeilenzahlen zurück.
+    """
+    import duckdb
+    from datetime import date
+
+    as_of = as_of_year or date.today().year
+    win = as_of - MARKET_WINDOW_YEARS
+    g = cfg.gold_dir / country
+    PE = f"'{(g / 'party_entity.parquet').as_posix()}'"
+    EN = f"'{(g / 'entities.parquet').as_posix()}'"
+    N = f"'{cfg.silver_table_glob('notices', country)}'"
+    LOTS = f"'{cfg.silver_table_glob('lots', country)}'"
+
+    con = duckdb.connect()
+    con.execute("SET threads=3")
+
+    def copy_to(sql, name):
+        out = (g / name).as_posix()
+        con.execute(f"COPY ({sql}) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)")
+        return con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+
+    # Award-Basis (CAN, Fenster), Buyer-/Gewinner-Entity aufgelöst
+    con.execute(f"""
+    CREATE TEMP TABLE aw AS
+    SELECT n.notice_id, bpe.entity_id AS buyer, be.canonical_name AS buyer_name,
+           wpe.entity_id AS winner, we.canonical_name AS winner_name,
+           substr(n.cpv_main,1,4) AS cpv_class,
+           CAST(coalesce(year(n.award_date), n.year) AS INT) AS yr,
+           coalesce(upper(substr(n.performance_nuts,1,3)), 'DE') AS nuts1,
+           n.final_value AS value
+    FROM read_parquet({N}, hive_partitioning=1) n
+    JOIN read_parquet({PE}) bpe ON bpe.notice_id=n.notice_id AND bpe.role='buyer'
+    LEFT JOIN read_parquet({EN}) be ON be.entity_id=bpe.entity_id
+    LEFT JOIN read_parquet({PE}) wpe ON wpe.notice_id=n.notice_id AND wpe.role='winner'
+    LEFT JOIN read_parquet({EN}) we ON we.entity_id=wpe.entity_id
+    WHERE n.notice_kind='can' AND n.cpv_main IS NOT NULL AND bpe.entity_id IS NOT NULL
+      AND CAST(coalesce(year(n.award_date), n.year) AS INT) >= {win}
+    """)
+
+    # Vergabedauer (cn→can via ref_publication_number, ~42 % verlinkbar) je Behörde
+    con.execute(f"""CREATE TEMP TABLE _dds AS
+      WITH dd AS (
+        SELECT a.buyer, datediff('day', cn.publication_date, can.award_date) AS d
+        FROM aw a
+        JOIN read_parquet({N}, hive_partitioning=1) can ON can.notice_id=a.notice_id
+        LEFT JOIN read_parquet({N}, hive_partitioning=1) cn
+          ON cn.publication_number=can.ref_publication_number AND cn.notice_kind='cn'
+        WHERE can.award_date IS NOT NULL)
+      SELECT buyer,
+             CASE WHEN count(*) FILTER (WHERE d BETWEEN 0 AND 730) >= 3
+                  THEN round(avg(d) FILTER (WHERE d BETWEEN 0 AND 730)) END AS avg_decision_days,
+             round(count(*) FILTER (WHERE d BETWEEN 0 AND 730)*1.0/count(*), 3) AS decision_days_coverage
+      FROM dd GROUP BY buyer""")
+
+    # 1) buyer_stats
+    con.execute("""CREATE TEMP TABLE _bt AS
+      SELECT buyer, list(struct_pack(entity_id:=winner, name:=winner_name, wins:=wins)
+                         ORDER BY wins DESC) FILTER (WHERE rn<=3) AS top_contractors
+      FROM (SELECT buyer, winner, any_value(winner_name) winner_name, count(*) wins,
+                   row_number() OVER (PARTITION BY buyer ORDER BY count(*) DESC) rn
+            FROM aw WHERE winner IS NOT NULL GROUP BY buyer, winner)
+      GROUP BY buyer""")
+    con.execute("""CREATE TEMP TABLE _bc AS
+      SELECT buyer, list(cpv_class ORDER BY c DESC) FILTER (WHERE rn<=3) AS top_cpvs
+      FROM (SELECT buyer, cpv_class, count(*) c,
+                   row_number() OVER (PARTITION BY buyer ORDER BY count(*) DESC) rn
+            FROM aw GROUP BY buyer, cpv_class)
+      GROUP BY buyer""")
+    n_buyer = copy_to(f"""
+      SELECT a.buyer AS buyer_entity_id, any_value(a.buyer_name) AS buyer_name,
+             count(DISTINCT a.notice_id) AS total_awards,
+             count(DISTINCT a.winner) AS distinct_contractors,
+             bc.top_cpvs, bt.top_contractors,
+             dds.avg_decision_days, dds.decision_days_coverage,
+             {as_of} AS window_end, {MARKET_WINDOW_YEARS} AS window_years
+      FROM aw a LEFT JOIN _bt bt ON bt.buyer=a.buyer LEFT JOIN _bc bc ON bc.buyer=a.buyer
+                LEFT JOIN _dds dds ON dds.buyer=a.buyer
+      GROUP BY a.buyer, bc.top_cpvs, bt.top_contractors, dds.avg_decision_days, dds.decision_days_coverage""",
+      "buyer_stats.parquet")
+
+    # 2) contractor_stats (entity × cpv_class)
+    n_contr = copy_to(f"""
+      WITH base AS (
+        SELECT winner AS entity_id, cpv_class, count(*) AS total_wins,
+               count(value) AS wins_with_value,
+               sum(value) FILTER (WHERE value IS NOT NULL) AS total_volume_known,
+               count(*) FILTER (WHERE yr={as_of}) AS wly, count(*) FILTER (WHERE yr={as_of}-1) AS wpy
+        FROM aw WHERE winner IS NOT NULL GROUP BY winner, cpv_class)
+      SELECT entity_id, cpv_class, total_wins, total_volume_known,
+             round(wins_with_value*1.0/total_wins,2) AS volume_coverage,
+             rank() OVER (PARTITION BY cpv_class ORDER BY total_wins DESC) AS market_rank,
+             round(total_wins*1.0/sum(total_wins) OVER (PARTITION BY cpv_class),4) AS market_share_by_wins,
+             CASE WHEN wpy>0 THEN round((wly-wpy)*1.0/wpy,2) END AS trend_yoy
+      FROM base""", "contractor_stats.parquet")
+
+    # 3) market_stats (cpv_class × nuts1) inkl. Ø-Laufzeit aus lots
+    con.execute(f"""CREATE TEMP TABLE _dur AS
+      SELECT a.cpv_class, a.nuts1, avg(l.duration_months) avg_dur,
+             count(l.duration_months) n_dur, count(*) n_tot
+      FROM aw a LEFT JOIN read_parquet({LOTS}) l ON l.notice_id=a.notice_id
+      GROUP BY a.cpv_class, a.nuts1""")
+    n_market = copy_to(f"""
+      SELECT a.cpv_class, a.nuts1, count(DISTINCT a.winner) AS active_contractors,
+             count(DISTINCT a.notice_id) AS total_awards,
+             round(d.avg_dur) AS avg_contract_duration_months,
+             round(d.n_dur*1.0/d.n_tot,2) AS duration_coverage
+      FROM aw a LEFT JOIN _dur d ON d.cpv_class=a.cpv_class AND d.nuts1=a.nuts1
+      GROUP BY a.cpv_class, a.nuts1, d.avg_dur, d.n_dur, d.n_tot""", "market_stats.parquet")
+
+    # 4) buyer_contractor_history inkl. Verlängerungen aus lots
+    con.execute(f"""CREATE TEMP TABLE _ren AS
+      SELECT a.buyer, a.winner, a.notice_id,
+             max(CASE WHEN l.has_renewal THEN 1 ELSE 0 END) AS renewed
+      FROM aw a LEFT JOIN read_parquet({LOTS}) l ON l.notice_id=a.notice_id
+      WHERE a.winner IS NOT NULL GROUP BY a.buyer, a.winner, a.notice_id""")
+    n_bch = copy_to(f"""
+      SELECT a.buyer AS buyer_entity_id, a.winner AS contractor_entity_id,
+             any_value(a.winner_name) AS contractor_name,
+             count(DISTINCT a.notice_id) AS total_wins, max(a.yr) AS last_win_year,
+             coalesce(sum(r.renewed),0) AS total_renewals
+      FROM aw a LEFT JOIN _ren r ON r.buyer=a.buyer AND r.winner=a.winner AND r.notice_id=a.notice_id
+      WHERE a.winner IS NOT NULL GROUP BY a.buyer, a.winner""", "buyer_contractor_history.parquet")
+
+    con.close()
+    return {"buyer_stats": n_buyer, "contractor_stats": n_contr,
+            "market_stats": n_market, "buyer_contractor_history": n_bch}
+
+
+# --- Nachfolge-Modell: inhaltsbasiert, konfidenz-tragend ------------------------
+
+_SUCC_STOP = set("""rahmenvertrag rahmenvereinbarung rahmen vereinbarung vertrag vertraege vergabe
+ausschreibung bekanntmachung vergabebekanntmachung aufhebung berichtigung eu euweit weit weite
+offenes offene verfahren oeffentliche lieferung lieferungen liefern leistung leistungen erbringung
+beschaffung bereitstellung durchfuehrung wartung ueber von und der die das fuer zur zum los teillos
+gemaess im in den des dem einer eines eine sowie bzw div diverse verschiedene""".split())
+
+
+def _succ_tokens(t: str) -> set:
+    t = (t or "").lower().replace("ä", "ae").replace("ö", "oe").replace("ü", "ue").replace("ß", "ss")
+    return {w for w in re.sub(r"[^a-z0-9]+", " ", t).split() if len(w) > 3 and w not in _SUCC_STOP}
+
+
+def build_content_successions(cfg: Config, country: str = "DE",
+                              conf_threshold: float = 0.45, amb_threshold: float = 0.30):
+    """Inhaltsbasiertes Nachfolge-Modell — ersetzt die proximity-Ketten für KPIs.
+
+    Trichter:
+      A) Kandidaten = gleiche Behörde + CPV-Klasse, 1..10 J früher, NUR ketten-würdige
+         Verträge (nicht-Rahmen-Bauprojekte raus — sonst Bau-Gewerke als Fehl-Nachfolge).
+      B) Unmittelbarer Vorgänger = jüngster Kandidat mit Inhalts-Score >= Schwelle.
+         Score = Titel-Token-Jaccard (+ CPV-8-Bonus + Laufzeit-Timing); Same-Verfahren
+         (gleiche oj_ref) ausgeschlossen.
+      C) mehrdeutige (Top-2 im selben Jahr dicht) → LLM-Queue (separates Parquet).
+
+    Schreibt ``contract_succession`` (konfidente Kanten, als Fakt) + ``…_llm_queue``.
+    Gibt ``(n_edges, n_llm, n_none)`` zurück.
+    """
+    import duckdb
+    from collections import defaultdict
+
+    g = cfg.gold_dir / country
+    PE = f"'{(g / 'party_entity.parquet').as_posix()}'"
+    N = f"'{cfg.silver_table_glob('notices', country)}'"
+    LOTS = f"'{cfg.silver_table_glob('lots', country)}'"
+    kind_sql = _kind_sql("n.title", "n.cpv_main")
+
+    con = duckdb.connect(); con.execute("SET threads=3")
+    rows = con.execute(f"""
+        SELECT n.notice_id, bpe.entity_id, n.cpv_main, substr(n.cpv_main,1,4),
+               CAST(coalesce(year(n.award_date), n.year) AS INT), n.title, n.oj_ref,
+               (SELECT max(l.duration_months) FROM read_parquet({LOTS}) l WHERE l.notice_id=n.notice_id)
+        FROM read_parquet({N}, hive_partitioning=1) n
+        JOIN read_parquet({PE}) bpe ON bpe.notice_id=n.notice_id AND bpe.role='buyer'
+        WHERE n.notice_kind='can' AND n.cpv_main IS NOT NULL AND bpe.entity_id IS NOT NULL
+          AND n.title IS NOT NULL AND ({kind_sql}) NOT IN ('einmal_werk','werk_sonstig')
+    """).fetchall()
+
+    groups: dict = defaultdict(list)
+    tok, meta = {}, {}
+    for nid, buyer, cpv, cpv4, yr, title, ojref, dur in rows:
+        groups[(buyer, cpv4)].append(nid)
+        tok[nid] = _succ_tokens(title)
+        meta[nid] = (buyer, cpv, cpv4, yr, ojref, dur)
+
+    edges, llm_queue = [], []
+    n_none = 0
+    for ids in groups.values():
+        ids.sort(key=lambda i: meta[i][3])
+        for anchor in ids:
+            a_buyer, a_cpv, a_cpv4, ay, a_ojref, adur = meta[anchor]
+            scored = []
+            for cand in ids:
+                cy = meta[cand][3]
+                if not (ay - 10 <= cy < ay):
+                    continue
+                if a_ojref and meta[cand][4] == a_ojref:          # R1: Same-Verfahren
+                    continue
+                s = (len(tok[anchor] & tok[cand]) / len(tok[anchor] | tok[cand])
+                     if tok[anchor] and tok[cand] else 0.0)
+                if meta[cand][1] == a_cpv:
+                    s += 0.30
+                if adur:                                          # R2: Laufzeit-Timing
+                    exp = max(1, round(adur / 12))
+                    s += 0.10 * max(0, 1 - abs((ay - cy) - exp) / 5)
+                scored.append((min(s, 1.0), cy, cand))
+            if not scored:
+                n_none += 1; continue
+            above = sorted((x for x in scored if x[0] >= conf_threshold),
+                           key=lambda x: (x[1], x[0]), reverse=True)
+            if above:
+                best = above[0]
+                rivals = [x for x in above if x[1] == best[1] and x[2] != best[2] and abs(x[0] - best[0]) < 0.12]
+                if rivals:
+                    llm_queue.append((anchor, best[2], rivals[0][2], round(best[0], 3), round(rivals[0][0], 3)))
+                    continue
+                conf = round(0.55 + 0.4 * min(1.0, (best[0] - conf_threshold) / (1 - conf_threshold)), 2)
+                edges.append((anchor, best[2], a_buyer, a_cpv4, ay - best[1], round(best[0], 3), conf, "content_unique"))
+            else:
+                top = max(scored)
+                if top[0] >= amb_threshold:
+                    llm_queue.append((anchor, top[2], None, round(top[0], 3), None))
+                else:
+                    n_none += 1
+
+    con.execute("CREATE TEMP TABLE e(successor VARCHAR, predecessor VARCHAR, buyer_entity VARCHAR, "
+                "cpv_class VARCHAR, gap_years INT, content_score DOUBLE, confidence DOUBLE, method VARCHAR)")
+    if edges:
+        con.executemany("INSERT INTO e VALUES (?,?,?,?,?,?,?,?)", edges)
+    con.execute(f"COPY (SELECT * FROM e) TO '{(g / 'contract_succession.parquet').as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)")
+    con.execute("CREATE TEMP TABLE q(successor VARCHAR, cand1 VARCHAR, cand2 VARCHAR, score1 DOUBLE, score2 DOUBLE)")
+    if llm_queue:
+        con.executemany("INSERT INTO q VALUES (?,?,?,?,?)", llm_queue)
+    con.execute(f"COPY (SELECT * FROM q) TO '{(g / 'contract_succession_llm_queue.parquet').as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)")
+    con.close()
+    return len(edges), len(llm_queue), n_none
+
+
+# --- 🔴 Nachfolge-KPIs: Verdrängung/Retention auf dem konfidenten Kern ----------
+
+def build_succession_kpis(cfg: Config, country: str = "DE"):
+    """Wettbewerbs-KPIs aus ``contract_succession`` — konfidenz-getragen.
+
+    Gewinner-Matching bewusst sorgfältig (beim Messen als entscheidend erkannt):
+      * **gruppen-bewusst** (entity_group) — sonst zählt Siemens AG ↔ Siemens Mobility als Verdrängung;
+      * **Multi-Gewinner-Set-Schnitt** — Open-house/Los-Verträge haben viele Gewinner; Retention =
+        Vorgänger-Gewinner IST unter den Nachfolger-Gewinnern (nicht „gleicher Primärgewinner");
+      * **Konsortien geflaggt** — ARGE haben projektspezifische Namen, Retention unbestimmbar → aus
+        den Raten ausgeschlossen, nicht als Verdrängung fehlgezählt.
+
+    Schreibt ``succession_events`` (+ ``head_to_head``, ``market_switch_rate``,
+    ``buyer_loyalty``, ``contractor_loss``). Gibt Zeilenzahlen + Retention zurück.
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    S = f"'{(g / 'contract_succession.parquet').as_posix()}'"
+    PE = f"'{(g / 'party_entity.parquet').as_posix()}'"
+    EG = f"'{(g / 'entity_group.parquet').as_posix()}'"
+
+    con = duckdb.connect(); con.execute("SET threads=3")
+
+    def copy_to(sql, name):
+        out = (g / name).as_posix()
+        con.execute(f"COPY ({sql}) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)")
+        return con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+
+    # Gewinner-Gruppen-Set je Notice (+ Konsortium-Flag)
+    con.execute(f"""
+    CREATE TEMP TABLE wg AS
+    SELECT pe.notice_id,
+           list(DISTINCT coalesce(g.group_id, pe.entity_id)) AS grp,
+           bool_or(pe.entity_id LIKE 'unresolved:%') AS consortium
+    FROM read_parquet({PE}) pe LEFT JOIN read_parquet({EG}) g ON g.entity_id=pe.entity_id
+    WHERE pe.role='winner' GROUP BY pe.notice_id
+    """)
+    # Nachfolge-Ereignisse
+    con.execute(f"""
+    CREATE TEMP TABLE ev AS
+    SELECT s.successor, s.predecessor, s.buyer_entity, s.cpv_class, s.gap_years, s.confidence,
+           pw.grp AS pred_winners, sw.grp AS succ_winners,
+           (pw.consortium OR sw.consortium) AS consortium,
+           len(list_intersect(pw.grp, sw.grp)) > 0 AS retained
+    FROM read_parquet({S}) s
+    JOIN wg pw ON pw.notice_id=s.predecessor JOIN wg sw ON sw.notice_id=s.successor
+    """)
+    n_ev = con.execute("SELECT count(*) FROM ev").fetchone()[0]
+    rr = con.execute("SELECT count(*) FILTER (WHERE retained), count(*) FROM ev WHERE NOT consortium").fetchone()
+    retention = round(rr[0] / rr[1], 3) if rr[1] else None
+
+    n_events = copy_to("""
+      SELECT successor, predecessor, buyer_entity, cpv_class, gap_years, confidence,
+             consortium, retained, NOT retained AS displaced,
+             len(pred_winners) AS n_pred_winners, len(succ_winners) AS n_succ_winners
+      FROM ev""", "succession_events.parquet")
+
+    # market_switch_rate (cpv_class), buyer_loyalty (Behörde) — Konsortien raus, n mitgeben
+    copy_to("""
+      SELECT cpv_class, count(*) AS n_successions,
+             round(count(*) FILTER (WHERE NOT retained)*1.0/count(*),3) AS switch_rate
+      FROM ev WHERE NOT consortium GROUP BY cpv_class""", "market_switch_rate.parquet")
+    copy_to("""
+      SELECT buyer_entity, count(*) AS n_successions,
+             round(count(*) FILTER (WHERE retained)*1.0/count(*),3) AS incumbent_loyalty
+      FROM ev WHERE NOT consortium GROUP BY buyer_entity""", "buyer_loyalty.parquet")
+
+    # contractor_loss: je Vorgänger-Gewinner-Gruppe verteidigt/verloren (Multi-Gewinner: unnest)
+    n_loss = copy_to("""
+      WITH d AS (
+        SELECT unnest(pred_winners) AS entity, succ_winners, retained
+        FROM ev WHERE NOT consortium)
+      SELECT entity AS entity_id, count(*) AS n_defended,
+             count(*) FILTER (WHERE NOT list_contains(succ_winners, entity)) AS n_lost,
+             round(count(*) FILTER (WHERE NOT list_contains(succ_winners, entity))*1.0/count(*),3) AS loss_rate
+      FROM d GROUP BY entity""", "contractor_loss.parquet")
+
+    # head_to_head: saubere 1v1-Verdrängungen (beide Seiten genau ein Gewinner, kein Konsortium)
+    n_h2h = copy_to("""
+      SELECT succ_winners[1] AS winner_entity, pred_winners[1] AS loser_entity,
+             count(*) AS displacements, round(avg(confidence),2) AS avg_conf
+      FROM ev
+      WHERE NOT consortium AND NOT retained AND len(pred_winners)=1 AND len(succ_winners)=1
+      GROUP BY succ_winners[1], pred_winners[1]""", "head_to_head.parquet")
+
+    con.close()
+    return {"succession_events": n_events, "head_to_head": n_h2h,
+            "contractor_loss": n_loss, "incumbent_retention": retention}
+
+
+def merge_llm_successions(cfg: Config, country: str = "DE", llm_confidence: float = 0.7):
+    """LLM-adjudizierte Kanten (``succession_llm_edges.parquet``) in ``contract_succession``
+    einmischen — angereichert (buyer/cpv_class/gap) + ``method='llm_adjudicated'``.
+
+    Dedup: hat ein Nachfolger schon eine ``content_unique``-Kante, gewinnt die (höhere
+    Konfidenz). Idempotent: ein Gold-Rebuild schreibt erst die Content-Kanten, dann mischt
+    dieser Schritt die (persistente) LLM-Datei wieder ein. Gibt die Gesamt-Kantenzahl zurück.
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    llm = g / "succession_llm_edges.parquet"
+    S = f"'{(g / 'contract_succession.parquet').as_posix()}'"
+    if not llm.exists():
+        return duckdb.connect().execute(f"SELECT count(*) FROM read_parquet({S})").fetchone()[0]
+
+    PE = f"'{(g / 'party_entity.parquet').as_posix()}'"
+    N = f"'{cfg.silver_table_glob('notices', country)}'"
+    con = duckdb.connect(); con.execute("SET threads=3")
+    out = (g / "contract_succession.parquet").as_posix()
+    con.execute(f"""
+    COPY (
+      SELECT * FROM read_parquet({S})
+      UNION ALL
+      SELECT e.successor, e.predecessor, bpe.entity_id AS buyer_entity,
+             substr(ns.cpv_main,1,4) AS cpv_class,
+             CAST(coalesce(year(ns.award_date),ns.year) AS INT)
+               - CAST(coalesce(year(np.award_date),np.year) AS INT) AS gap_years,
+             NULL::DOUBLE AS content_score, {llm_confidence} AS confidence, 'llm_adjudicated' AS method
+      FROM read_parquet('{llm.as_posix()}') e
+      JOIN read_parquet({N}, hive_partitioning=1) ns ON ns.notice_id=e.successor
+      JOIN read_parquet({N}, hive_partitioning=1) np ON np.notice_id=e.predecessor
+      LEFT JOIN read_parquet({PE}) bpe ON bpe.notice_id=e.successor AND bpe.role='buyer'
+      WHERE e.successor NOT IN (SELECT successor FROM read_parquet({S}))
+    ) TO '{out}.tmp' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    import os
+    os.replace(f"{out}.tmp", out)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_incumbent_tenure(cfg: Config, country: str = "DE"):
+    """Wie lange hält der Incumbent diesen Vertrag schon? — aus den Nachfolge-Ketten.
+
+    Läuft ``succession_events`` rückwärts, solange der Incumbent GEHALTEN hat (``retained``),
+    und misst seit wann + über wie viele Zyklen. Basis für „Incumbent seit 20XX" (#3/#4 D4).
+    Schreibt ``incumbent_tenure`` (notice_id, incumbent_since_year, tenure_years, chain_depth).
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    con = duckdb.connect(); con.execute("SET threads=3")
+    N = f"'{cfg.silver_table_glob('notices', country)}'"
+    ev = con.execute(f"SELECT successor, predecessor, retained "
+                     f"FROM read_parquet('{(g / 'succession_events.parquet').as_posix()}')").fetchall()
+    year = dict(con.execute(f"SELECT notice_id, CAST(coalesce(year(award_date), year) AS INT) "
+                            f"FROM read_parquet({N}, hive_partitioning=1) WHERE notice_kind='can'").fetchall())
+    pred = {s: p for s, p, ret in ev if ret}      # nur gehaltene Kanten
+    rows = []
+    for s in {x[0] for x in ev}:
+        cur, since, depth, seen = s, year.get(s), 0, {s}
+        while cur in pred and pred[cur] not in seen:
+            cur = pred[cur]; seen.add(cur); depth += 1
+            if year.get(cur) is not None:
+                since = year[cur]
+        if depth > 0:
+            rows.append((s, since, (year.get(s) or since or 0) - (since or year.get(s) or 0), depth))
+    con.execute("CREATE TEMP TABLE t(notice_id VARCHAR, incumbent_since_year INT, tenure_years INT, chain_depth INT)")
+    if rows:
+        con.executemany("INSERT INTO t VALUES (?,?,?,?)", rows)
+    out = (g / "incumbent_tenure.parquet").as_posix()
+    con.execute(f"COPY (SELECT * FROM t) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)")
+    con.close()
+    return len(rows)
+
+
+def build_award_tender_link(cfg: Config, country: str = "DE"):
+    """Verknüpft jeden Zuschlag (can) mit seiner Ausschreibung über ``ref_publication_number``.
+
+    Fundament für **Attribution** (#6: geklickte Ausschreibung → deren Zuschlag) und
+    **Award-Alerts** (#9: Zuschlag zu beobachtetem Lead). Gemessen: ~51 % der Vergaben
+    tragen einen Verweis, davon ~99,9 % in der DB auflösbar. Schreibt ``award_tender_link``
+    (award_notice_id, tender_notice_id, tender_publication_number, gap_days, method).
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    N = f"'{cfg.silver_table_glob('notices', country)}'"
+    out = (g / "award_tender_link.parquet").as_posix()
+    con = duckdb.connect(); con.execute("SET threads=4")
+    con.execute(f"""
+        COPY (
+          WITH aw AS (
+            SELECT notice_id, ref_publication_number, publication_date
+            FROM read_parquet({N}, hive_partitioning=1)
+            WHERE notice_kind='can' AND ref_publication_number IS NOT NULL),
+          tn AS (
+            SELECT publication_number, notice_id, publication_date
+            FROM read_parquet({N}, hive_partitioning=1)
+            WHERE publication_number IS NOT NULL)
+          SELECT aw.notice_id AS award_notice_id,
+                 tn.notice_id AS tender_notice_id,
+                 aw.ref_publication_number AS tender_publication_number,
+                 datediff('day', tn.publication_date, aw.publication_date) AS gap_days,
+                 'ref_publication' AS method
+          FROM aw JOIN tn ON tn.publication_number = aw.ref_publication_number
+          QUALIFY row_number() OVER (PARTITION BY aw.notice_id ORDER BY tn.publication_date DESC) = 1
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_value_anchor(cfg: Config, country: str = "DE"):
+    """Wert-Anker je Zuschlag — der **Lowball-Wächter** fürs Erfolgsgebühren-Billing (#6).
+
+    Kein Rechnungs-Orakel (Schätzung trifft nur ~42 % exakt), sondern ein Plausibilitäts-
+    Anker gegen die Kunden-Selbstauskunft (~68 % ±1 Band). **Waterfall** (bester
+    verfügbarer Schätzer): Ausschreibungssumme (via ``award_tender_link``) → Vorgänger-
+    Vertrag (``contract_succession``) → Buyer×CPV-Median → Buyer-Median → CPV-Median.
+    Werte sind **nominal** (der Kunde bestätigt den echten Auftragswert, nicht deflationiert).
+    Schreibt ``value_anchor`` (notice_id, anchor_value, anchor_band, anchor_source,
+    has_real_value).
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    N = f"'{cfg.silver_table_glob('notices', country)}'"
+    PE = f"'{(g / 'party_entity.parquet').as_posix()}'"
+    CS = f"'{(g / 'contract_succession.parquet').as_posix()}'"
+    ATL = f"'{(g / 'award_tender_link.parquet').as_posix()}'"
+    out = (g / "value_anchor.parquet").as_posix()
+    con = duckdb.connect(); con.execute("SET threads=4")
+    con.execute(f"""
+        COPY (
+          WITH win AS (SELECT notice_id, any_value(entity_id) eid FROM read_parquet({PE})
+                       WHERE role='winner' AND entity_id IS NOT NULL GROUP BY notice_id),
+          buy AS (SELECT notice_id, any_value(entity_id) eid FROM read_parquet({PE})
+                  WHERE role='buyer' AND entity_id IS NOT NULL GROUP BY notice_id),
+          can AS (
+            SELECT n.notice_id, substr(n.cpv_main,1,4) cpv4, n.final_value fv, b.eid buy_eid
+            FROM read_parquet({N}, hive_partitioning=1) n
+            LEFT JOIN buy b ON b.notice_id=n.notice_id
+            WHERE n.notice_kind='can'),
+          tender AS (
+            SELECT l.award_notice_id, t.estimated_value tev
+            FROM read_parquet({ATL}) l
+            JOIN read_parquet({N}, hive_partitioning=1) t ON t.notice_id=l.tender_notice_id
+            WHERE t.estimated_value > 0),
+          pred AS (
+            SELECT cs.successor succ, median(coalesce(p.final_value, p.estimated_value)) pv
+            FROM read_parquet({CS}) cs
+            JOIN read_parquet({N}, hive_partitioning=1) p ON p.notice_id=cs.predecessor
+            WHERE coalesce(p.final_value, p.estimated_value) > 0 GROUP BY cs.successor),
+          -- Mediane aus Zuschlägen MIT echtem Wert (fv>0). Der Anker wird per Billing-
+          -- Regel nur bei Zuschlägen OHNE echten Wert genutzt (has_real_value=false) —
+          -- die tragen kein fv, sind also nicht in diesen Medianen: **Leave-one-out
+          -- per Konstruktion** für den Wächter-Anwendungsfall (kein Self-Inclusion).
+          bc_med AS (SELECT buy_eid, cpv4, median(fv) m FROM can WHERE fv>0
+                     GROUP BY 1,2 HAVING count(*)>=6),
+          b_med AS (SELECT buy_eid, median(fv) m FROM can WHERE fv>0
+                    GROUP BY 1 HAVING count(*)>=6),
+          c_med AS (SELECT cpv4, median(fv) m FROM can WHERE fv>0
+                    GROUP BY 1 HAVING count(*)>=10)
+          SELECT can.notice_id,
+            coalesce(t.tev, pr.pv, bc.m, b.m, c.m) AS anchor_value,
+            {_band_sql('coalesce(t.tev, pr.pv, bc.m, b.m, c.m)')} AS anchor_band,
+            CASE WHEN t.tev IS NOT NULL THEN 'tender'
+                 WHEN pr.pv IS NOT NULL THEN 'predecessor'
+                 WHEN bc.m IS NOT NULL THEN 'buyer_cpv'
+                 WHEN b.m IS NOT NULL THEN 'buyer'
+                 WHEN c.m IS NOT NULL THEN 'cpv' ELSE 'none' END AS anchor_source,
+            (can.fv IS NOT NULL AND can.fv > 0) AS has_real_value
+          FROM can
+          LEFT JOIN tender t ON t.award_notice_id=can.notice_id
+          LEFT JOIN pred pr ON pr.succ=can.notice_id
+          LEFT JOIN bc_med bc ON bc.buy_eid=can.buy_eid AND bc.cpv4=can.cpv4
+          LEFT JOIN b_med b ON b.buy_eid=can.buy_eid
+          LEFT JOIN c_med c ON c.cpv4=can.cpv4
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_lead_deadline(cfg: Config, country: str = "DE"):
+    """Angebotsfrist je offener Ausschreibung — der **primäre Timing-Alert** (#9, Flip).
+
+    „Angebotsfrist naht" schlägt „Vertrag läuft aus" (nur 18 % `end_date`): `cn`-Notices
+    tragen zu ~63 % ein echtes `submission_deadline`. Wo es fehlt, ist die Schätzung
+    **belastbar**, weil Angebotsfristen gesetzlich mindestgeregelt sind (Bid-Fenster
+    Median ~31 T, stddev 12 T). Waterfall: echt → CPV-Median-Fenster → globaler Median.
+    Schreibt ``lead_deadline`` (notice_id, deadline_date, deadline_source, days_from_pub).
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    N = f"'{cfg.silver_table_glob('notices', country)}'"
+    out = (g / "lead_deadline.parquet").as_posix()
+    con = duckdb.connect(); con.execute("SET threads=4")
+    con.execute(f"""
+        COPY (
+          WITH win AS (
+            SELECT substr(cpv_main,1,4) cpv4,
+                   median(datediff('day', publication_date, submission_deadline)) m
+            FROM read_parquet({N}, hive_partitioning=1)
+            WHERE submission_deadline IS NOT NULL AND publication_date IS NOT NULL
+              AND datediff('day', publication_date, submission_deadline) BETWEEN 0 AND 365
+            GROUP BY 1 HAVING count(*) >= 10),
+          gm AS (
+            SELECT median(datediff('day', publication_date, submission_deadline)) m
+            FROM read_parquet({N}, hive_partitioning=1)
+            WHERE submission_deadline IS NOT NULL AND publication_date IS NOT NULL
+              AND datediff('day', publication_date, submission_deadline) BETWEEN 0 AND 365)
+          SELECT n.notice_id,
+            CASE WHEN n.submission_deadline IS NOT NULL THEN n.submission_deadline::DATE
+                 ELSE (n.publication_date + (CAST(coalesce(win.m, gm.m) AS INT) * INTERVAL 1 DAY))::DATE
+            END AS deadline_date,
+            CASE WHEN n.submission_deadline IS NOT NULL THEN 'echt'
+                 WHEN win.m IS NOT NULL THEN 'geschaetzt_cpv'
+                 ELSE 'geschaetzt_global' END AS deadline_source,
+            CAST(coalesce(win.m, gm.m) AS INT) AS est_window_days
+          FROM read_parquet({N}, hive_partitioning=1) n
+          LEFT JOIN win ON win.cpv4 = substr(n.cpv_main,1,4)
+          CROSS JOIN gm
+          -- Echte Frist braucht KEIN publication_date; nur die Schätzung tut es.
+          -- (Bug-Fix: sonst fielen 4.360 offene cn mit echtem Datum ohne pub raus.)
+          WHERE n.notice_kind IN ('cn','pin')
+            AND (n.submission_deadline IS NOT NULL OR n.publication_date IS NOT NULL)
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_lead_duration(cfg: Config, country: str = "DE"):
+    """Vertragslaufzeit/-ende je Lead — für „bis Auslauf" (#3 Lead-Detail) + sekundären
+    Auslauf-Alert (#9).
+
+    `end_date` fehlt oft (17,7 % bei Vergaben) → **CPV-Median-Laufzeit** als Schätzung,
+    ehrlich geflaggt (nie ein datierter Countdown auf geratenem Ende). Waterfall:
+    echtes `end_date` → `start_date` + CPV-Median-Laufzeit → unbekannt. Schreibt
+    ``lead_duration`` (notice_id, contract_end, duration_days, duration_source).
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    N = f"'{cfg.silver_table_glob('notices', country)}'"
+    out = (g / "lead_duration.parquet").as_posix()
+    con = duckdb.connect(); con.execute("SET threads=4")
+    con.execute(f"""
+        COPY (
+          WITH dur AS (   -- Vertragsdauer (start→end) je CPV
+            SELECT substr(cpv_main,1,4) cpv4,
+                   median(datediff('day', start_date, end_date)) m
+            FROM read_parquet({N}, hive_partitioning=1)
+            WHERE start_date IS NOT NULL AND end_date IS NOT NULL
+              AND datediff('day', start_date, end_date) BETWEEN 1 AND 3650
+            GROUP BY 1 HAVING count(*) >= 10),
+          durA AS (   -- award→Ende-Spanne je CPV (enthält den award→start-Versatz)
+            SELECT substr(cpv_main,1,4) cpv4,
+                   median(datediff('day', award_date, end_date)) m
+            FROM read_parquet({N}, hive_partitioning=1)
+            WHERE award_date IS NOT NULL AND end_date IS NOT NULL
+              AND datediff('day', award_date, end_date) BETWEEN 1 AND 3650
+            GROUP BY 1 HAVING count(*) >= 10)
+          SELECT n.notice_id,
+            CASE WHEN n.end_date IS NOT NULL THEN n.end_date::DATE
+                 WHEN n.start_date IS NOT NULL AND dur.m IS NOT NULL
+                   THEN (n.start_date + (CAST(dur.m AS INT) * INTERVAL 1 DAY))::DATE
+                 WHEN n.award_date IS NOT NULL AND coalesce(durA.m, dur.m) IS NOT NULL
+                   THEN (n.award_date + (CAST(coalesce(durA.m, dur.m) AS INT) * INTERVAL 1 DAY))::DATE
+                 ELSE NULL END AS contract_end,
+            CASE WHEN n.end_date IS NOT NULL THEN datediff('day', n.start_date, n.end_date)
+                 WHEN dur.m IS NOT NULL THEN CAST(dur.m AS INT)
+                 WHEN durA.m IS NOT NULL THEN CAST(durA.m AS INT) ELSE NULL END AS duration_days,
+            CASE WHEN n.end_date IS NOT NULL THEN 'echt'
+                 WHEN n.start_date IS NOT NULL AND dur.m IS NOT NULL THEN 'geschaetzt_start'
+                 WHEN n.award_date IS NOT NULL AND coalesce(durA.m, dur.m) IS NOT NULL THEN 'geschaetzt_award'
+                 ELSE 'unbekannt' END AS duration_source
+          FROM read_parquet({N}, hive_partitioning=1) n
+          LEFT JOIN dur ON dur.cpv4 = substr(n.cpv_main,1,4)
+          LEFT JOIN durA ON durA.cpv4 = substr(n.cpv_main,1,4)
+          WHERE n.notice_kind IN ('can','cn')
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_entity_identity(cfg: Config, country: str = "DE"):
+    """„Gruppe = Identität"-Auflösung (P0-3) — jede Entity → stabile `identity_id`.
+
+    Fundament für **Winner-Matching** (#6/#9: Zuschlag-Gewinner → alle Schwester-
+    Entities der Gruppe) und **Onboarding** (#7: „Das bin ich" bestätigt eine Gruppe).
+    `identity_id` = Gruppen-ID, wo die Entity in einer ``entity_group`` steckt, sonst
+    ``solo:<entity_id>`` (Einzel-Firma). So spannt jede Identität genau die zusammen-
+    gehörigen Entities. Matching-Regel: Gewinner und bestätigte User-Identität teilen
+    dieselbe `identity_id`. Schreibt ``entity_identity`` (entity_id, identity_id,
+    in_group, group_size, canonical_name).
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    def q(name): return f"'{(g / name).as_posix()}'"
+    out = (g / "entity_identity.parquet").as_posix()
+    con = duckdb.connect(); con.execute("SET threads=4")
+    con.execute(f"""
+        COPY (
+          WITH ident AS (
+            SELECT e.entity_id, e.canonical_name,
+                   coalesce(eg.group_id, 'solo:' || e.entity_id) AS identity_id,
+                   (eg.group_id IS NOT NULL) AS in_group
+            FROM read_parquet({q('entities.parquet')}) e
+            LEFT JOIN read_parquet({q('entity_group.parquet')}) eg ON eg.entity_id = e.entity_id)
+          SELECT entity_id, identity_id, in_group, canonical_name,
+                 count(*) OVER (PARTITION BY identity_id) AS group_size
+          FROM ident
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_lead_detail(cfg: Config, country: str = "DE"):
+    """UI-Sicht je Lead — führt ``leads`` mit den **ehrlichen Flags** zusammen (P0-6).
+
+    Das Frontend (Lead-Detail #3) bekommt so alle Herkunfts-Kennzeichnungen an einer
+    Stelle: Pricing-Band + `band_source`, verbessertes Vertragsende + `duration_source`,
+    Angebotsfrist + `deadline_source`, Incumbent-Tenure. 1:1 zu ``leads`` (lead_id).
+    Leitregel: was geschätzt ist, trägt seine Quelle — nie als Fakt getarnt.
+    Schreibt ``lead_detail``.
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    def q(name): return f"'{(g / name).as_posix()}'"
+    out = (g / "lead_detail.parquet").as_posix()
+    con = duckdb.connect(); con.execute("SET threads=4")
+    con.execute(f"""
+        COPY (
+          SELECT l.*,
+            vbe.band_effektiv, vbe.band_source, vbe.value_effektiv,
+            ld.contract_end   AS contract_end_eff,
+            ld.duration_days  AS duration_days_eff,
+            ld.duration_source,
+            dl.deadline_date, dl.deadline_source,
+            it.incumbent_since_year, it.tenure_years
+          FROM read_parquet({q('leads.parquet')}) l
+          LEFT JOIN read_parquet({q('value_band_effektiv.parquet')}) vbe ON vbe.lead_id = l.lead_id
+          LEFT JOIN read_parquet({q('lead_duration.parquet')}) ld ON ld.notice_id = l.lead_id
+          LEFT JOIN read_parquet({q('lead_deadline.parquet')}) dl ON dl.notice_id = l.lead_id
+          LEFT JOIN read_parquet({q('incumbent_tenure.parquet')}) it ON it.notice_id = l.lead_id
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: str | None = None):
+    """F01/F02 (pin/cn) als Lead-Zeilen — der Blick nach vorn VOR der Vergabe (#1).
+
+    Der Auslauf-Radar (``build_leads``) speist nur ``can``. Diese Funktion hängt
+    **zusätzliche Zeilen** ans bestehende ``leads``-Parquet: laufende Ausschreibungen
+    (``cn``, ``source='f02'``) und Vorinformationen (``pin``, ``source='f01'``) mit
+    zukünftiger Angebotsfrist. Gleiches Schema; awarded-only-Felder (Incumbent,
+    Wechsel-Score, num_tenders, Vertragsende) bleiben **NULL** (noch nicht vergeben) —
+    ``UNION ALL BY NAME`` füllt sie automatisch. Muss NACH ``build_displaceability``
+    laufen (dann trägt ``leads`` die Score-Spalten, die hier NULL werden).
+
+    Gibt die Zahl der angehängten prospektiven Leads zurück.
+    """
+    import duckdb
+    from datetime import date
+
+    ref = reference_date or date.today().isoformat()
+    g = cfg.gold_dir / country
+    N = cfg.silver_table_glob("notices", country)
+    NP = cfg.silver_table_glob("notice_parties", country)
+    PE, EN, Q, DC, DD, LD = (str(g / t) for t in
+                             ("party_entity.parquet", "entities.parquet", "quality.parquet",
+                              "dim_cpv.parquet", "dim_deflator.parquet", "leads.parquet"))
+    con = duckdb.connect(); con.execute("SET threads=3")
+    con.execute(f"""
+        CREATE TABLE buyer AS
+        SELECT pe.notice_id, pe.entity_id, e.canonical_name AS buyer_name, e.confidence AS buyer_conf,
+               np.town AS buyer_town, np.nuts AS buyer_nuts, np.email AS buyer_email, np.url AS buyer_url
+        FROM (SELECT notice_id, min(seq) seq FROM '{PE}' WHERE role='buyer' GROUP BY 1) b
+        JOIN '{PE}' pe ON pe.notice_id=b.notice_id AND pe.role='buyer' AND pe.seq=b.seq
+        JOIN '{EN}' e ON e.entity_id=pe.entity_id
+        LEFT JOIN '{NP}' np ON np.notice_id=pe.notice_id AND np.role='buyer' AND np.seq=pe.seq
+    """)
+    VU = ("CASE WHEN n.estimated_value BETWEEN 1000 AND 1e9 "
+          "AND (n.value_currency='EUR' OR n.value_currency IS NULL) THEN n.estimated_value END")
+    VUR = f"({VU} * dd.factor_to_2020)"
+    out = g / "leads.parquet"
+    con.execute(f"""
+        COPY (
+          SELECT * FROM '{LD}'
+          UNION ALL BY NAME
+          SELECT
+            n.notice_id AS lead_id,
+            CASE n.notice_kind WHEN 'cn' THEN 'f02' ELSE 'f01' END AS source,
+            b.entity_id AS buyer_entity, b.buyer_name, b.buyer_town, b.buyer_nuts,
+            b.buyer_email, b.buyer_url, n.ted_url,
+            n.title AS titel, substr(n.description, 1, 600) AS beschreibung,
+            n.cpv_main, substr(n.cpv_main,1,4) AS cpv_class, dc.branche, dc.sector,
+            n.submission_deadline::DATE AS contract_end,
+            date_diff('month', DATE '{ref}', n.submission_deadline::DATE) AS months_to_expiry,
+            CASE n.notice_kind WHEN 'cn' THEN 'Angebotsfrist' ELSE 'Vorinformation' END AS faellig_basis,
+            true AS termin_plausibel,
+            {_kind_sql('n.title', 'n.cpv_main')} AS contract_kind,
+            {VU} AS value_used,
+            CASE WHEN {VU} IS NOT NULL THEN 'geschaetzt' ELSE 'unbekannt' END AS value_source,
+            round({VUR}) AS value_real_2020,
+            CASE WHEN {VU} IS NULL THEN 'unbekannt' WHEN {VUR} < 50000 THEN '<50k'
+                 WHEN {VUR} < 200000 THEN '50-200k' WHEN {VUR} < 1000000 THEN '200k-1M'
+                 WHEN {VUR} < 5000000 THEN '1-5M' ELSE '>5M' END AS value_band,
+            (b.buyer_email IS NOT NULL OR b.buyer_url IS NOT NULL) AS reachable,
+            round(coalesce(b.buyer_conf,0),2) AS source_confidence,
+            true AS ist_hauptlos, 1 AS lose_im_cluster
+          FROM '{N}' n
+          JOIN buyer b ON b.notice_id=n.notice_id
+          LEFT JOIN '{DD}' dd ON dd.year=n.year
+          LEFT JOIN '{DC}' dc ON dc.division=substr(n.cpv_main,1,2)
+          WHERE n.notice_kind IN ('cn','pin') AND n.cpv_main IS NOT NULL
+            AND n.submission_deadline IS NOT NULL AND n.submission_deadline::DATE >= DATE '{ref}'
+            AND n.submission_deadline::DATE <= DATE '{ref}' + INTERVAL 5 YEAR   -- A6: absurde Fern-Fristen raus
+        ) TO '{out}.tmp' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    import os
+    os.replace(f"{out}.tmp", str(out))
+    n = con.execute(f"SELECT count(*) FROM '{out}' WHERE source<>'auslauf'").fetchone()[0]
+    con.close()
+    return n
+
+
+# --- Permanente Kurz-Slugs für Shareable-Links (govi.link/<slug>) ------------------
+# Deterministisch aus lead_id (nicht sequenziell → nicht durchzählbar/abgrasbar), mit
+# Quellen-Prefix (t=TED, d=DÖE). Basis-Länge 4 base62 (+1 Prefix = 5 Zeichen); bei
+# Kollision deterministisch auf 5+ verlängert → **wächst automatisch mit dem Bestand**
+# (je mehr Leads, desto mehr Kollisionen rutschen auf 6). Append-only Map in data/state/
+# macht die Slugs PERMANENT (einmal vergeben, nie geändert) und überlebt Gold-Rebuilds.
+# Trade-off: Länge 4 = 0,5 % ID-Raum-Belegung bei 74k Leads → nur per Rate-Limit-teurem
+# Brute-Force abgrasbar. Kürzer (3) wäre trivial durchzählbar. Bei Bedarf _SLUG_LEN erhöhen.
+_B62 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+_SLUG_LEN = 4
+
+
+def _b62(n: int, width: int) -> str:
+    s = ""
+    while n:
+        n, r = divmod(n, 62)
+        s = _B62[r] + s
+    return s.rjust(width, "0")
+
+
+def _mint_slug(lead_id: str, prefix: str, taken: set, length: int = _SLUG_LEN) -> str:
+    import hashlib
+    h = int.from_bytes(hashlib.sha256(lead_id.encode()).digest(), "big")
+    L = length
+    while True:
+        cand = prefix + _b62(h % (62 ** L), L)
+        if cand not in taken:
+            return cand
+        L += 1          # deterministische Verlängerung bei (seltener) Kollision
+
+
+def _assign_slugs(cfg: Config, country: str, lead_ids: list[str],
+                  doe_ids: set | None = None) -> str:
+    """Append-only Slug-Map (lead_id→slug) in ``data/state/`` — permanent, überlebt Rebuilds.
+
+    Neue lead_ids bekommen einen Slug in **sortierter** Reihenfolge (deterministisch),
+    bestehende behalten ihren. Quellen-Prefix: ``d`` für DÖE-Leads (in ``doe_ids``),
+    sonst ``t`` (TED). Gibt den Parquet-Pfad zurück (für den Join im Export).
+    """
+    import duckdb
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    doe_ids = doe_ids or set()
+    state = cfg.data_dir / "state"
+    state.mkdir(parents=True, exist_ok=True)
+    path = state / f"slug_map_{country}.parquet"
+    mapping: dict[str, str] = {}
+    if path.exists():
+        con = duckdb.connect()
+        for lid, slug in con.execute(
+                f"SELECT lead_id, slug FROM read_parquet('{path.as_posix()}')").fetchall():
+            mapping[lid] = slug
+        con.close()
+    taken = set(mapping.values())
+    new = sorted(set(lead_ids) - mapping.keys())
+    for lid in new:
+        slug = _mint_slug(lid, "d" if lid in doe_ids else "t", taken)
+        taken.add(slug)
+        mapping[lid] = slug
+    if new or not path.exists():                # nur schreiben, wenn sich was geändert hat
+        items = sorted(mapping.items())         # stabile Sortierung → reproduzierbares File
+        pq.write_table(pa.table({"lead_id": [k for k, _ in items],
+                                 "slug": [v for _, v in items]}), path)
+    return path.as_posix()
+
+
+def build_lead_export(cfg: Config, country: str = "DE"):
+    """`lead_detail` → **Frontend-Feld-Vertrag** (flach, Supabase-ready).
+
+    Mappt die ehrlichen Herkunfts-Flags auf die vom UI erwarteten Werte
+    (`echt`/`schaetz`/`unsicher`/`unbekannt`/`na`), `displ_band`→`wechsel`,
+    `bidder_bucket`→`konk_stufe`, `source`→Phase, buyer_nuts→Region-Name (via dim_nuts),
+    CPV→Label. `natur_kat` (Dienst/Liefer/Bau) kommt aus der echten TED-Vertragsnatur
+    (BT-23, silver.notices.contract_nature) mit `natur_src`-Flag; nur wo TED nichts trägt
+    (Alt-Formate <2014, ~0 % der aktuellen Leads) greift die CPV-Divisions-Heuristik.
+    `relevanz` bleibt bewusst NULL (runtime, hängt am User-Profil). `slug` = permanente
+    Kurz-ID für Shareable-Links (deterministisch, quellen-geprefixt, via `_assign_slugs`).
+    Schreibt ``lead_export`` (eine Zeile je Lead, alle Spalten flach).
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    def q(n): return f"'{(g / n).as_posix()}'"
+    nglob = cfg.silver_table_glob("notices", country)   # echte TED-Vertragsnatur (BT-23)
+    out = (g / "lead_export.parquet").as_posix()
+    con = duckdb.connect(); con.execute("SET threads=4")
+    # Permanente Kurz-Slugs (Shareable-Links) vor dem Export zuweisen/laden.
+    lead_ids = [r[0] for r in con.execute(
+        f"SELECT lead_id FROM read_parquet({q('lead_detail.parquet')})").fetchall()]
+    doe_ids = {r[0] for r in con.execute(
+        f"SELECT notice_id FROM read_parquet('{nglob}') WHERE schema_gen='doe'").fetchall()}
+    slug_path = _assign_slugs(cfg, country, lead_ids, doe_ids)
+    con.execute(f"""
+        COPY (
+          SELECT
+            d.lead_id, sl.slug, d.titel,
+            d.buyer_name AS buyer, d.buyer_town,
+            d.cpv_main AS cpv, coalesce(cl.label, cld.label) AS cpv_label,
+            d.buyer_nuts AS nuts_full,
+            substr(d.buyer_nuts, 1, 3) AS nuts1,
+            dn.name AS region,
+            -- MARKT-Region = Leistungsort (nicht Käufersitz!). DB Netz sitzt in Frankfurt und
+            -- baut Gleise in ganz DE — Frankfurter Marktdaten an eine bayerische Ausschreibung
+            -- zu hängen wäre selbstbewusst falsch. Nur zeigen, wenn NUTS-3-genau bekannt.
+            CASE WHEN length(lg.perf_nuts) >= 5 THEN substr(lg.perf_nuts, 1, 5) END AS market_nuts3,
+            mkt.name AS market_region_name,
+            (length(lg.perf_nuts) >= 5) AS market_region_ok,
+            d.contract_kind AS art,
+            -- Phase (= UI src): auslauf / f02 / f01
+            d.source AS phase,
+            (d.source IN ('f01','f02')) AS neu,          -- neue Ausschreibung vs. Folge
+            -- Leistungsnatur (Dienst/Liefer/Bau): echte TED-Vertragsnatur (BT-23) zuerst,
+            -- CPV-Division nur als Fallback wo TED nichts trägt (Alt-Formate <2014).
+            CASE WHEN nt.contract_nature='works' THEN 'bau'
+                 WHEN nt.contract_nature='supplies' THEN 'liefer'
+                 WHEN nt.contract_nature='services' THEN 'dienst'
+                 WHEN substr(d.cpv_main,1,2)='45' THEN 'bau'
+                 WHEN substr(d.cpv_main,1,2) BETWEEN '03' AND '44' THEN 'liefer'
+                 ELSE 'dienst' END AS natur_kat,
+            CASE WHEN nt.contract_nature IN ('works','supplies','services')
+                 THEN 'echt' ELSE 'geschaetzt' END AS natur_src,
+            -- Volumen: Wert + Herkunft (default = zu unsicher → als unbekannt zeigen)
+            CASE WHEN d.band_source='default' THEN NULL ELSE d.value_effektiv END AS volumen_wert,
+            d.band_effektiv AS volumen_band,
+            CASE d.band_source WHEN 'echt' THEN 'echt'
+                 WHEN 'geschaetzt' THEN 'schaetz' WHEN 'imputiert' THEN 'schaetz'
+                 ELSE 'unbekannt' END AS volumen_src,
+            -- Timing: Monate/Frist + Herkunft; termin_plausibel=false → unsicher+warn
+            d.months_to_expiry, d.faellig_basis,
+            (NOT coalesce(d.termin_plausibel, true)) AS timing_warn,
+            CASE WHEN NOT coalesce(d.termin_plausibel, true) THEN 'unsicher'
+                 WHEN d.source IN ('f01','f02') THEN
+                      CASE WHEN d.deadline_source='echt' THEN 'echt' ELSE 'schaetz' END
+                 ELSE CASE d.duration_source WHEN 'echt' THEN 'echt'
+                          WHEN 'unbekannt' THEN 'unbekannt' ELSE 'schaetz' END END AS timing_src,
+            -- Incumbent: Name/Seit + Herkunft aus Konfidenz (hoch=echt, sonst unsicher)
+            d.incumbent_name, d.incumbent_since_year AS incumbent_seit, d.incumbent_conf,
+            CASE WHEN d.incumbent_name IS NULL THEN NULL
+                 WHEN d.incumbent_conf >= 0.75 THEN 'echt' ELSE 'unsicher' END AS incumbent_src,
+            -- Wechsel-Chance (Band)
+            CASE WHEN d.displ_band IS NULL OR d.displ_band LIKE 'n/a%' THEN 'na'
+                 ELSE d.displ_band END AS wechsel,
+            -- Konkurrenz: Bieterzahl-Bucket → gering/mittel/hoch/na
+            d.num_tenders, d.single_bidder,
+            CASE d.bidder_bucket WHEN 'einzel' THEN 'gering' WHEN 'wenig' THEN 'mittel'
+                 WHEN 'viel' THEN 'hoch' ELSE 'na' END AS konk_stufe,
+            CASE WHEN d.source IN ('f01','f02') THEN 'na'
+                 WHEN d.num_tenders IS NOT NULL THEN 'echt' ELSE 'unbekannt' END AS konk_src,
+            -- relevanz: bewusst NULL (runtime, User-Profil)
+            d.ted_url,
+            (d.incumbent_name IS NOT NULL AND d.incumbent_conf >= 0.75) AS has_cmp,
+            (coalesce(d.tenure_years, 0) > 0) AS has_contracts
+          FROM read_parquet({q('lead_detail.parquet')}) d
+          LEFT JOIN read_parquet('{slug_path}') sl ON sl.lead_id = d.lead_id
+          LEFT JOIN read_parquet({q('dim_cpv_label.parquet')}) cl ON cl.cpv_code = d.cpv_main
+          -- Fallback für DÖE-Lean-Notices mit nur 2-stelligem CPV → Divisions-Label
+          LEFT JOIN read_parquet({q('dim_cpv_label.parquet')}) cld
+            ON cld.cpv_code = rpad(substr(d.cpv_main, 1, 2), 8, '0')
+          LEFT JOIN read_parquet({q('dim_nuts.parquet')}) dn ON dn.nuts_code = substr(d.buyer_nuts,1,3)
+          LEFT JOIN read_parquet({q('lead_geo.parquet')}) lg ON lg.lead_id = d.lead_id
+          LEFT JOIN read_parquet({q('dim_nuts.parquet')}) mkt ON mkt.nuts_code = substr(lg.perf_nuts,1,5)
+          LEFT JOIN (
+            SELECT notice_id, any_value(contract_nature) AS contract_nature
+            FROM read_parquet('{nglob}') WHERE contract_nature IS NOT NULL GROUP BY notice_id
+          ) nt ON nt.notice_id = d.lead_id
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_doe_buyer_profile(cfg: Config, country: str = "DE"):
+    """Käufer-Profil für den **Unterschwellenmarkt** (DÖE) — die neue Analyse-Ebene.
+
+    Je Käufer-Entität: Zahl der Unterschwellen-Ausschreibungen (cn) + Awards (can),
+    Kategorie-Breite + Haupt-CPV-Division (Label), Haupt-Leistungsregion, letzte Aktivität
+    und — der Alleinstellungs-Fund — ob der Käufer **auch oberschwellig (TED)** ausschreibt
+    (Cross-Threshold, 47 % Overlap). KEINE €/Gewinner-KPIs (DÖE trägt beides nicht).
+    Schreibt ``doe_buyer_profile``.
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    def q(n): return f"'{(g / n).as_posix()}'"
+    N = f"'{cfg.silver_table_glob('notices', country)}'"
+    out = (g / "doe_buyer_profile.parquet").as_posix()
+    con = duckdb.connect(); con.execute("SET threads=4")
+    con.execute(f"""
+        COPY (
+          WITH doe AS (
+            SELECT notice_id, cpv_main, notice_kind, performance_nuts,
+                   printf('%04d-%02d', year, month) AS ym
+            FROM read_parquet({N}, hive_partitioning=1) WHERE schema_gen='doe'),
+          buyer AS (
+            SELECT pe.notice_id, pe.entity_id
+            FROM (SELECT notice_id, min(seq) s FROM read_parquet({q('party_entity.parquet')})
+                  WHERE role='buyer' GROUP BY 1) b
+            JOIN read_parquet({q('party_entity.parquet')}) pe
+              ON pe.notice_id=b.notice_id AND pe.role='buyer' AND pe.seq=b.s),
+          ted_b AS (
+            SELECT DISTINCT pe.entity_id FROM read_parquet({q('party_entity.parquet')}) pe
+            JOIN read_parquet({N}, hive_partitioning=1) n ON n.notice_id=pe.notice_id
+            WHERE pe.role='buyer' AND n.schema_gen<>'doe'),
+          j AS (SELECT b.entity_id, d.* FROM doe d JOIN buyer b ON b.notice_id=d.notice_id),
+          topdiv AS (
+            SELECT t.entity_id, t.top_div, cl.label AS top_label FROM (
+              SELECT entity_id, arg_max(div, c) AS top_div FROM (
+                SELECT entity_id, substr(cpv_main,1,2) div, count(*) c FROM j
+                WHERE cpv_main IS NOT NULL GROUP BY 1,2) GROUP BY 1) t
+            LEFT JOIN read_parquet({q('dim_cpv_label.parquet')}) cl
+              ON cl.cpv_code = rpad(t.top_div, 8, '0'))
+          SELECT j.entity_id AS buyer_entity, e.canonical_name AS buyer_name,
+            count(DISTINCT j.notice_id) FILTER (WHERE notice_kind='cn')  AS n_tenders,
+            count(DISTINCT j.notice_id) FILTER (WHERE notice_kind='can') AS n_awarded,
+            count(DISTINCT substr(j.cpv_main,1,2))                        AS n_cpv_divisions,
+            any_value(td.top_div)                                        AS top_division,
+            any_value(td.top_label)                                      AS top_division_label,
+            mode(substr(j.performance_nuts,1,5))                         AS main_nuts3,
+            max(j.ym)                                                     AS last_activity,
+            (j.entity_id IN (SELECT entity_id FROM ted_b))               AS also_on_ted
+          FROM j
+          JOIN read_parquet({q('entities.parquet')}) e ON e.entity_id=j.entity_id
+          LEFT JOIN topdiv td ON td.entity_id=j.entity_id
+          GROUP BY j.entity_id, e.canonical_name, also_on_ted
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_buyer_profile(cfg: Config, country: str = "DE"):
+    """**Vergabestelle-Analyse** je Käufer — der konsolidierte Buyer-Intelligence-KPI.
+
+    Führt zusammen: Aktivität (Aufträge, Ø/Jahr), Volumen (€ real-2020 + `value_coverage`
+    als Ehrlichkeits-Flag, da Werte nur ~30 % gedeckt → Floor), Themen (Top-CPV-Division),
+    Lieferanten-Konzentration (Top-3-Anteil → captured/offen), Wettbewerb (Single-Bieter,
+    Ø Bieter), Incumbent-Retention, Entscheidungsdauer, Cross-Threshold (auch DÖE aktiv).
+    Basis: ``leads`` (source='auslauf' = vergeben) + buyer_stats/history/succession/DÖE.
+    Schreibt ``buyer_profile`` (eine Zeile je Käufer-Entität).
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    def q(n): return f"'{(g / n).as_posix()}'"
+    N = f"'{cfg.silver_table_glob('notices', country)}'"
+    out = (g / "buyer_profile.parquet").as_posix()
+    # Optionale externe Anreicherung (Wikidata, via scripts/enrich_wikidata.py). Fehlt der
+    # Cache, bleiben die Spalten NULL — Gold-Lauf braucht kein Netz.
+    ext = cfg.data_dir / "reference" / "buyer_external.parquet"
+    if ext.exists():
+        ext_cols = ("ext.website, ext.population, ext.wikidata_id, "
+                    "(ext.buyer_entity IS NOT NULL) AS is_enriched")
+        ext_join = f"LEFT JOIN read_parquet('{ext.as_posix()}') ext ON ext.buyer_entity=b.buyer_entity"
+    else:
+        ext_cols = ("NULL::VARCHAR AS website, NULL::BIGINT AS population, "
+                    "NULL::VARCHAR AS wikidata_id, false AS is_enriched")
+        ext_join = ""
+    # Optionaler Regions-KONTEXT (Destatis, via scripts/fetch_destatis.py): Investitions-
+    # budget des Kreises. Deckt ALLE Kommunen des Kreises ab → Kontext, NICHT das Budget
+    # dieser einen Vergabestelle (daraus keine Käufer-Quote bilden).
+    kfin = cfg.data_dir / "reference" / "kreis_finanzen.parquet"
+    if kfin.exists():
+        kf_cols = "kf.investitionen_eur AS kreis_investitionen_eur, kf.fin_year AS kreis_finanzen_jahr"
+        kf_join = (f"LEFT JOIN (SELECT nuts_code, any_value(investitionen_eur) investitionen_eur, "
+                   f"any_value(\"year\") AS fin_year FROM read_parquet('{kfin.as_posix()}') "
+                   f"WHERE nuts_code IS NOT NULL GROUP BY 1) kf ON kf.nuts_code = b.main_nuts3")
+    else:
+        kf_cols = ("NULL::BIGINT AS kreis_investitionen_eur, NULL::INT AS kreis_finanzen_jahr")
+        kf_join = ""
+    con = duckdb.connect(); con.execute("SET threads=4")
+    con.execute(f"""
+        COPY (
+          WITH aw AS (
+            SELECT * FROM read_parquet({q('leads.parquet')})
+            WHERE source='auslauf' AND buyer_entity IS NOT NULL),
+          base AS (
+            SELECT buyer_entity, any_value(buyer_name) AS buyer_name,
+              count(*) AS total_awards,
+              count(DISTINCT year(vergabe_datum)) AS active_years,
+              min(year(vergabe_datum)) AS first_year, max(year(vergabe_datum)) AS last_year,
+              round(count(*) FILTER (WHERE vergabe_datum >= (current_date - INTERVAL 2 YEAR))
+                    / 2.0, 1) AS awards_per_year_recent,
+              round(sum(value_real_2020)) AS volume_known_eur,
+              round(median(value_real_2020)) AS median_award_eur,
+              round(100.0*count(value_real_2020)/count(*)) AS value_coverage,
+              count(DISTINCT cpv_class) AS n_categories,
+              count(DISTINCT incumbent_entity) AS n_distinct_winners,
+              round(100.0*avg(single_bidder::int)) AS single_bidder_rate,
+              round(avg(num_tenders), 1) AS avg_bidders,
+              mode(substr(buyer_nuts, 1, 3)) AS main_nuts,
+              mode(substr(buyer_nuts, 1, 5)) AS main_nuts3
+            FROM aw GROUP BY buyer_entity),
+          topdiv AS (
+            SELECT t.buyer_entity, cl.label AS top_division_label FROM (
+              SELECT buyer_entity, arg_max(substr(cpv_main,1,2), c) AS d FROM (
+                SELECT buyer_entity, cpv_main, count(*) c FROM aw
+                WHERE cpv_main IS NOT NULL GROUP BY 1,2) GROUP BY 1) t
+            LEFT JOIN read_parquet({q('dim_cpv_label.parquet')}) cl
+              ON cl.cpv_code = rpad(t.d, 8, '0')),
+          conc AS (
+            SELECT buyer_entity_id,
+              -- WICHTIG: Gewinner-Zahlen stammen aus buyer_contractor_history (ALLE Vergaben),
+              -- NICHT aus `leads` (Auslauf-Radar = gefilterte Teilmenge). `wins_total` macht die
+              -- Basis explizit, damit im UI nicht faelschlich durch total_awards geteilt wird.
+              sum(total_wins) AS wins_total,
+              count(*) AS n_contractors,
+              round(100.0 * sum(total_wins) FILTER (WHERE rk <= 3) / sum(total_wins)) AS top3_share,
+              string_agg(contractor_name, ', ' ORDER BY total_wins DESC)
+                FILTER (WHERE rk <= 3) AS top_winners
+            FROM (SELECT *, row_number() OVER (PARTITION BY buyer_entity_id ORDER BY total_wins DESC) rk
+                  FROM read_parquet({q('buyer_contractor_history.parquet')})) GROUP BY 1),
+          ret AS (
+            SELECT buyer_entity, round(100.0*avg(retained::int)) AS retention_rate
+            FROM read_parquet({q('succession_events.parquet')})
+            WHERE retained OR displaced GROUP BY 1),
+          doe AS (
+            SELECT pe.entity_id, count(DISTINCT n.notice_id) AS n_below_threshold
+            FROM read_parquet({N}, hive_partitioning=1) n
+            JOIN read_parquet({q('party_entity.parquet')}) pe
+              ON pe.notice_id=n.notice_id AND pe.role='buyer'
+            WHERE n.schema_gen='doe' AND n.notice_kind='cn' GROUP BY 1),
+          bs AS (SELECT buyer_entity_id, avg_decision_days
+                 FROM read_parquet({q('buyer_stats.parquet')}))
+          SELECT b.*,
+            -- Wettbewerbs-Ampel (single_bidder_rate): EU-Red-Flag-Zone. Schwellen an der
+            -- Verteilung aktiver Käufer geeicht (Median 15, Q3 26, P90 43).
+            CASE WHEN b.single_bidder_rate IS NULL THEN NULL
+                 WHEN b.single_bidder_rate >= 35 THEN 'rot'
+                 WHEN b.single_bidder_rate >= 15 THEN 'gelb' ELSE 'gruen' END AS competition_flag,
+            td.top_division_label,
+            c.wins_total, c.n_contractors, c.top3_share,
+            CASE WHEN c.top3_share >= 70 THEN 'oligopol'
+                 WHEN c.top3_share >= 40 THEN 'moderat' ELSE 'fragmentiert' END AS concentration,
+            c.top_winners,
+            r.retention_rate,
+            bs.avg_decision_days,
+            coalesce(d.n_below_threshold, 0) AS n_below_threshold,
+            (d.n_below_threshold IS NOT NULL) AS also_below_threshold,
+            {kf_cols},
+            {ext_cols}
+          FROM base b
+          LEFT JOIN topdiv td ON td.buyer_entity=b.buyer_entity
+          LEFT JOIN conc c    ON c.buyer_entity_id=b.buyer_entity
+          LEFT JOIN ret r     ON r.buyer_entity=b.buyer_entity
+          LEFT JOIN doe d     ON d.entity_id=b.buyer_entity
+          LEFT JOIN bs        ON bs.buyer_entity_id=b.buyer_entity
+          {ext_join}
+          {kf_join}
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_buyer_recent_awards(cfg: Config, country: str = "DE"):
+    """„Wer gewann zuletzt" — die letzten 20 Zuschläge je Käufer als Feed fürs Dossier.
+
+    Titel, Gewinner, Wert (real-2020 + `value_known`-Flag), Thema, Datum, Wettbewerb.
+    Schreibt ``buyer_recent_awards``.
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    def q(n): return f"'{(g / n).as_posix()}'"
+    out = (g / "buyer_recent_awards.parquet").as_posix()
+    con = duckdb.connect(); con.execute("SET threads=4")
+    con.execute(f"""
+        COPY (
+          SELECT l.buyer_entity, l.buyer_name, l.lead_id, l.titel,
+            l.incumbent_name AS winner, l.value_real_2020 AS value_eur,
+            (l.value_real_2020 IS NOT NULL) AS value_known,
+            l.cpv_class, cl.label AS cpv_class_label,
+            l.vergabe_datum, l.single_bidder, l.num_tenders
+          FROM read_parquet({q('leads.parquet')}) l
+          LEFT JOIN read_parquet({q('dim_cpv_label.parquet')}) cl
+            ON cl.cpv_code = rpad(l.cpv_class, 8, '0')
+          WHERE l.source='auslauf' AND l.buyer_entity IS NOT NULL AND l.vergabe_datum IS NOT NULL
+          QUALIFY row_number() OVER (PARTITION BY l.buyer_entity ORDER BY l.vergabe_datum DESC) <= 20
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_region_kpi(cfg: Config, country: str = "DE"):
+    """**Regions-KPI je NUTS-3**: unsere Nachfrage × Destatis-Regionalkontext.
+
+    Führt erstmals Angebot und Nachfrage zusammen. Nachfrage aus ``leads`` (vergeben +
+    offen), Kontext aus ``kreis_finanzen`` (Investitionen) und ``kreis_kontext``
+    (A Baubetriebe/Umsatz, B Baugenehmigungen, C Schulden, D Bevölkerung/Beschäftigte).
+
+    Abgeleitet:
+      * ``intensitaet_pct`` — sichtbares Auftragsvolumen ÷ Investitionsbudget. **Untergrenze**,
+        weil unsere Werte nur ~30 % gedeckt sind (``volumen_coverage`` mitliefern!).
+      * ``auftraege_je_betrieb`` — Nachfrage je Baubetrieb der Region. **Deskriptiv, nicht
+        erklärend**: gemessen erklärt die Dichte die Single-Bieter-Quote NICHT (je Quartil
+        21/21/19/22 %, corr 0,099, n=322). Baufirmen sind mobil — der relevante Anbieterpool
+        ist gewerkescharf (CPV), nicht kreisscharf. Nicht als Chancen-Signal verkaufen.
+      * ``genehmigungen_gesamt`` — Vorlaufindikator (Baugenehmigungen laufen Ausschreibungen voraus).
+      * Pro-Kopf-Größen für faire Regionsvergleiche.
+    Fehlt ein Destatis-Cache, bleiben die betroffenen Spalten NULL (Gold-Lauf braucht kein Netz).
+    Schreibt ``region_kpi``.
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    def q(n): return f"'{(g / n).as_posix()}'"
+    out = (g / "region_kpi.parquet").as_posix()
+    kfin = cfg.data_dir / "reference" / "kreis_finanzen.parquet"
+    kctx = cfg.data_dir / "reference" / "kreis_kontext.parquet"
+    con = duckdb.connect(); con.execute("SET threads=4")
+
+    # Kontext-Blöcke breit ziehen (nur wenn Cache da ist).
+    if kctx.exists():
+        con.execute(f"""CREATE TEMP TABLE ctx AS
+            SELECT nuts_code,
+              max(CASE WHEN kennzahl_code='BETR01' THEN wert END)  AS baubetriebe,
+              max(CASE WHEN kennzahl_code='ERW012' THEN wert END)  AS bau_beschaeftigte,
+              max(CASE WHEN kennzahl_code='UMS041' THEN wert END)  AS bau_umsatz_eur,
+              max(CASE WHEN kennzahl_code='BAU017' THEN wert END)  AS genehm_wohngeb,
+              max(CASE WHEN kennzahl_code='BAU018' THEN wert END)  AS genehm_nichtwohngeb,
+              max(CASE WHEN kennzahl_code='SDKHGV1' THEN wert END) AS schulden_kernhaushalt_eur,
+              max(CASE WHEN kennzahl_code='BEVSTD' THEN wert END)  AS bevoelkerung,
+              max(CASE WHEN kennzahl_code='ERW032' THEN wert END)  AS sv_beschaeftigte
+            FROM read_parquet('{kctx.as_posix()}') WHERE nuts_code IS NOT NULL GROUP BY 1""")
+    else:
+        con.execute("""CREATE TEMP TABLE ctx (nuts_code VARCHAR, baubetriebe DOUBLE,
+            bau_beschaeftigte DOUBLE, bau_umsatz_eur DOUBLE, genehm_wohngeb DOUBLE,
+            genehm_nichtwohngeb DOUBLE, schulden_kernhaushalt_eur DOUBLE, bevoelkerung DOUBLE,
+            sv_beschaeftigte DOUBLE)""")
+    if kfin.exists():
+        con.execute(f"""CREATE TEMP TABLE fin AS
+            SELECT nuts_code, any_value(investitionen_eur) AS investitionen_eur
+            FROM read_parquet('{kfin.as_posix()}') WHERE nuts_code IS NOT NULL GROUP BY 1""")
+    else:
+        con.execute("CREATE TEMP TABLE fin (nuts_code VARCHAR, investitionen_eur BIGINT)")
+
+    con.execute(f"""
+        COPY (
+          WITH nachfrage AS (
+            -- Aggregation über den LEISTUNGSORT: der Käufersitz führt bei bundesweiten
+            -- Käufern (DB Netz: 17 Bundesländer) in die falsche Region. Nebeneffekt: DÖE-Leads
+            -- kommen so überhaupt erst rein (dort ist buyer_nuts zu 0 % gefüllt, perf_nuts zu 77 %).
+            SELECT substr(g.perf_nuts, 1, 5) AS nuts_code,
+              count(*) FILTER (WHERE l.source='auslauf') AS n_vergeben,
+              count(*) FILTER (WHERE l.source IN ('f02','f01')) AS n_offen,
+              round(sum(l.value_real_2020) FILTER (WHERE l.source='auslauf')) AS volumen_eur,
+              round(sum(l.value_real_2020) FILTER (WHERE l.source='auslauf'
+                    AND year(l.vergabe_datum)=2023)) AS volumen_2023_eur,
+              round(100.0*count(l.value_real_2020) FILTER (WHERE l.source='auslauf')
+                    / nullif(count(*) FILTER (WHERE l.source='auslauf'), 0)) AS volumen_coverage,
+              round(100.0*avg(l.single_bidder::int) FILTER (WHERE l.source='auslauf')) AS single_bidder_rate,
+              count(DISTINCT l.buyer_entity) AS n_vergabestellen
+            FROM read_parquet({q('leads.parquet')}) l
+            JOIN read_parquet({q('lead_geo.parquet')}) g ON g.lead_id = l.lead_id
+            WHERE g.perf_nuts IS NOT NULL AND length(g.perf_nuts) >= 5 GROUP BY 1)
+          SELECT n.nuts_code, dn.name AS region_name,
+            n.n_vergeben, n.n_offen, n.n_vergabestellen,
+            n.volumen_eur, n.volumen_coverage, n.single_bidder_rate,
+            f.investitionen_eur,
+            -- Regions-Intensität: sichtbares Volumen ÷ Investitionsbudget (UNTERGRENZE!)
+            n.volumen_2023_eur,
+            -- Zeitlich ausgerichtet: Vergaben 2023 ÷ Investitionsbudget 2023.
+            -- >100 % heisst NICHT 'ueberinvestiert', sondern: in dieser Region dominieren
+            -- Bundes-/Konzern-Kaeufer (BImA, DB, Autobahn), deren Auftraege nicht aus dem
+            -- Kommunalhaushalt stammen. Genau deshalb als SIGNAL lesen, nicht als Quote.
+            round(100.0 * n.volumen_2023_eur / nullif(f.investitionen_eur, 0), 1) AS intensitaet_pct,
+            c.baubetriebe, c.bau_beschaeftigte, c.bau_umsatz_eur,
+            -- Wettbewerbsdichte: wie viele Aufträge kommen auf einen Baubetrieb
+            round(n.n_vergeben::DOUBLE / nullif(c.baubetriebe, 0), 2) AS auftraege_je_betrieb,
+            coalesce(c.genehm_wohngeb, 0) + coalesce(c.genehm_nichtwohngeb, 0) AS genehmigungen_gesamt,
+            c.schulden_kernhaushalt_eur, c.bevoelkerung, c.sv_beschaeftigte,
+            round(f.investitionen_eur / nullif(c.bevoelkerung, 0)) AS investition_je_kopf_eur,
+            round(c.schulden_kernhaushalt_eur / nullif(c.bevoelkerung, 0)) AS schulden_je_kopf_eur,
+            round(1000.0 * n.n_vergeben / nullif(c.bevoelkerung, 0), 2) AS auftraege_je_1000_ew
+          FROM nachfrage n
+          LEFT JOIN read_parquet({q('dim_nuts.parquet')}) dn ON dn.nuts_code = n.nuts_code
+          LEFT JOIN fin f ON f.nuts_code = n.nuts_code
+          LEFT JOIN ctx c ON c.nuts_code = n.nuts_code
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_doe_demand(cfg: Config, country: str = "DE"):
+    """Unterschwellen-**Nachfrage-Dichte**: CPV-Division × NUTS-3 × Jahr → Tender-Zahl (cn).
+
+    Wo tut sich im Unterschwellenmarkt was — die Karte, die TED nicht liefert. Region aus
+    ``performance_nuts`` (Käufer-NUTS ist unterschwellig 0 %). Nur Zählungen (kein €).
+    Schreibt ``doe_demand`` (cpv_div, cpv_div_label, nuts3, year, n_tenders).
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    def q(n): return f"'{(g / n).as_posix()}'"
+    N = f"'{cfg.silver_table_glob('notices', country)}'"
+    out = (g / "doe_demand.parquet").as_posix()
+    con = duckdb.connect(); con.execute("SET threads=4")
+    con.execute(f"""
+        COPY (
+          SELECT substr(n.cpv_main,1,2) AS cpv_div, cl.label AS cpv_div_label,
+                 substr(n.performance_nuts,1,5) AS nuts3, n.year,
+                 count(DISTINCT n.notice_id) AS n_tenders
+          FROM read_parquet({N}, hive_partitioning=1) n
+          LEFT JOIN read_parquet({q('dim_cpv_label.parquet')}) cl
+            ON cl.cpv_code = rpad(substr(n.cpv_main,1,2), 8, '0')
+          WHERE n.schema_gen='doe' AND n.notice_kind='cn'
+            AND n.cpv_main IS NOT NULL AND n.performance_nuts IS NOT NULL
+          GROUP BY 1,2,3,4
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_dim_plz(cfg: Config, country: str = "DE"):
+    """PLZ → Geo-Zentroid (lat/lon) für die **Radius-Suche**.
+
+    Quelle: GeoNames-PLZ-Datensatz ``data/reference/geonames/DE.txt`` (CC-BY,
+    download.geonames.org/export/zip/DE.zip). Eine PLZ hat mehrere Zeilen (Orte/
+    Groß­kunden teilen sie) → Mittel der Koordinaten je PLZ = Zentroid. Dient doppelt:
+    Lead-Geokoder (Buyer-PLZ → Koordinate) **und** City-Such-Geokoder („München" →
+    Koordinate, per Ort-Aggregat). Schreibt ``dim_plz`` (plz, lat, lon, ort, bundesland).
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    src = (cfg.data_dir / "reference" / "geonames" / "DE.txt").as_posix()
+    out = (g / "dim_plz.parquet").as_posix()
+    con = duckdb.connect()
+    con.execute(f"""
+        COPY (
+          SELECT plz,
+                 round(avg(lat), 5) AS lat,
+                 round(avg(lon), 5) AS lon,
+                 any_value(ort) AS ort,
+                 any_value(bundesland) AS bundesland
+          FROM read_csv('{src}', delim='\t', header=false, columns={{
+                 'country':'VARCHAR','plz':'VARCHAR','ort':'VARCHAR','bundesland':'VARCHAR',
+                 'a1':'VARCHAR','rb':'VARCHAR','a2':'VARCHAR','kreis':'VARCHAR','a3':'VARCHAR',
+                 'lat':'DOUBLE','lon':'DOUBLE','acc':'VARCHAR'}})
+          WHERE lat IS NOT NULL AND lon IS NOT NULL
+          GROUP BY plz
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_lead_geo(cfg: Config, country: str = "DE"):
+    """Geo-Koordinate je Lead — Fundament der **Radius-Suche** (#Radius).
+
+    Waterfall: Buyer-PLZ (aus ``notice_parties``, 85 %) → ``dim_plz``-Zentroid; sonst
+    ``buyer_town`` → Ort-Zentroid (aus denselben Geo-Daten); sonst keine Koordinate.
+    ``geo_source`` flaggt die Herkunft ehrlich (`plz`/`ort`/`none`). Damit wird die
+    Haversine-Distanz-Query je Lead möglich. Schreibt ``lead_geo`` (lead_id, lat, lon,
+    plz, ort, geo_source).
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    NP = f"'{cfg.silver_table_glob('notice_parties', country)}'"
+    N = f"'{cfg.silver_table_glob('notices', country)}'"
+    L = f"'{(g / 'leads.parquet').as_posix()}'"
+    DP = f"'{(g / 'dim_plz.parquet').as_posix()}'"
+    out = (g / "lead_geo.parquet").as_posix()
+    con = duckdb.connect(); con.execute("SET threads=4")
+    con.execute(f"""
+        COPY (
+          WITH bplz AS (
+            -- Buyer-PLZ auf saubere 5 Ziffern normalisieren („D-80805" / „80805 " → „80805"),
+            -- sonst scheitert der Join auf dim_plz und der Lead fällt unnötig auf den Ort-Fallback.
+            SELECT notice_id, any_value(regexp_extract(postal_code, '([0-9]{{5}})', 1)) plz
+            FROM read_parquet({NP}, hive_partitioning=1)
+            WHERE role='buyer' AND regexp_extract(postal_code, '([0-9]{{5}})', 1) <> '' GROUP BY notice_id),
+          ort_geo AS (   -- Ort-Zentroid als Fallback (normalisiert klein)
+            SELECT lower(ort) ortk, avg(lat) lat, avg(lon) lon FROM read_parquet({DP})
+            WHERE ort IS NOT NULL GROUP BY 1),
+          perf AS (   -- Leistungsort-NUTS je Notice (zweite Achse)
+            SELECT notice_id, any_value(performance_nuts) pn FROM read_parquet({N}, hive_partitioning=1)
+            WHERE performance_nuts IS NOT NULL GROUP BY notice_id),
+          base AS (   -- Buyer-Achse zuerst (feine PLZ-Koordinate)
+            SELECT l.lead_id,
+              coalesce(p.lat, o.lat) AS lat, coalesce(p.lon, o.lon) AS lon,
+              bplz.plz, l.buyer_town AS ort,
+              CASE WHEN p.lat IS NOT NULL THEN 'plz'
+                   WHEN o.lat IS NOT NULL THEN 'ort' ELSE 'none' END AS geo_source,
+              -- Buyer-NUTS zuerst; wo er fehlt (DÖE-Unterschwellig = 0 %) Leistungsort-NUTS,
+              -- damit der Regions-Filter auch DÖE-Leads trifft.
+              coalesce(l.buyer_nuts, pf.pn) AS nuts, pf.pn AS perf_nuts
+            FROM read_parquet({L}) l
+            LEFT JOIN bplz ON bplz.notice_id = l.lead_id
+            LEFT JOIN read_parquet({DP}) p ON p.plz = bplz.plz
+            LEFT JOIN ort_geo o ON o.ortk = lower(l.buyer_town)
+            LEFT JOIN perf pf ON pf.notice_id = l.lead_id),
+          centroid AS (   -- NUTS-3-Zentroid = Mittel der Buyer-Koordinaten je Region (selbst-abgeleitet)
+            SELECT nuts, avg(lat) clat, avg(lon) clon FROM base WHERE lat IS NOT NULL GROUP BY nuts)
+          SELECT base.lead_id, base.lat, base.lon, base.plz, base.ort, base.geo_source,
+                 base.nuts, base.perf_nuts,
+                 c.clat AS perf_lat, c.clon AS perf_lon   -- Leistungsort-Koordinate (NUTS-3-grob)
+          FROM base LEFT JOIN centroid c ON c.nuts = base.perf_nuts
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_dim_nuts(cfg: Config, country: str = "DE"):
+    """NUTS-Code → Name/Ebene/Parent für **Regions-Autocomplete** (Radius-Kombination).
+
+    Quelle: EU-GISCO NUTS-Attributtabellen (autoritativ), ``data/reference/nuts/
+    NUTS_AT_{2021,2024}.csv`` (download.gisco-services.ec.europa.eu). Union beider
+    Versionen (2024-Name bevorzugt), damit Codes aus verschiedenen NUTS-Ständen über
+    die Jahre abgedeckt sind. Ebene = Code-Länge − 2 (DE=0, DE2=1, DE21=2, DE212=3).
+    Schreibt ``dim_nuts`` (nuts_code, name, level, parent, version).
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    ref = cfg.data_dir / "reference" / "nuts"
+    c21 = (ref / "NUTS_AT_2021.csv").as_posix()
+    c24 = (ref / "NUTS_AT_2024.csv").as_posix()
+    out = (g / "dim_nuts.parquet").as_posix()
+    con = duckdb.connect()
+    con.execute(f"""
+        COPY (
+          WITH u AS (
+            SELECT NUTS_ID, NUTS_NAME, 2024 AS v FROM read_csv('{c24}', header=true)
+              WHERE CNTR_CODE='{country}'
+            UNION ALL
+            SELECT NUTS_ID, NUTS_NAME, 2021 AS v FROM read_csv('{c21}', header=true)
+              WHERE CNTR_CODE='{country}'),
+          best AS (SELECT NUTS_ID, arg_max(NUTS_NAME, v) AS name, max(v) AS ver FROM u GROUP BY 1)
+          SELECT NUTS_ID AS nuts_code, name,
+                 length(NUTS_ID) - 2 AS level,
+                 CASE WHEN length(NUTS_ID) > 2 THEN left(NUTS_ID, length(NUTS_ID) - 1) END AS parent,
+                 ver AS version
+          FROM best
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_dim_cpv_label(cfg: Config, country: str = "DE"):
+    """CPV-Code → deutsche Bezeichnung (volles Vokabular, ~9.454 Codes).
+
+    Quelle: offizielle EU-CPV-2008-Codeliste (``data/reference/cpv_2008.xml``,
+    Download: https://ted.europa.eu/documents/d/ted/cpv_2008_xml). ``dim_cpv``
+    (45 Divisionen + Branche) bleibt; dies ist die feine Code→Label-Ebene für die
+    Anzeige. Coverage nutzungsgewichtet 97 % (100 % ab 2016; Rest = Legacy-CPV-2003
+    in Alt-Jahren). Schreibt ``dim_cpv_label`` (cpv_code 8-stellig, label).
+    """
+    import xml.etree.ElementTree as ET
+    import duckdb
+
+    src = cfg.data_dir / "reference" / "cpv_2008.xml"
+    if not src.exists():
+        return 0
+    rows = []
+    for cpv in ET.parse(src).getroot().findall("CPV"):
+        code = (cpv.get("CODE") or "").split("-")[0]
+        de = next((t.text for t in cpv.findall("TEXT") if t.get("LANG") == "DE"), None)
+        if code and de:
+            rows.append((code, de))
+    con = duckdb.connect()
+    con.execute("CREATE TABLE t(cpv_code VARCHAR, label VARCHAR)")
+    if rows:
+        con.executemany("INSERT INTO t VALUES (?,?)", rows)
+    con.execute(f"COPY (SELECT * FROM t) TO "
+                f"'{(cfg.gold_dir / country / 'dim_cpv_label.parquet').as_posix()}' "
+                f"(FORMAT PARQUET, COMPRESSION ZSTD)")
+    con.close()
+    return len(rows)
+
+
+def build_market_opportunity(cfg: Config, country: str = "DE", as_of_year: int | None = None,
+                             years: int = 3, min_awards: int = 30):
+    """⭐ Marktchancen-Landkarte (White-Space Explorer) — je CPV-Segment.
+
+    Segment-intrinsische Attraktivität (user-agnostisch; die „Nähe"-Achse kommt pro Nutzer
+    zur Laufzeit dazu): Nachfrage × Schwäche × Wert, plus **Struktur** (top3_share →
+    fragmentiert/oligopol) und die **Top-Dominatoren = Buy-/Partner-Kandidaten**.
+
+    Schwäche = `verfahren_status='erfolglos'`-Rate + Single-Bidder + Ø-Bieter (der A2-Kern).
+
+    ``years`` = **3** (Default, bewusst kurz): eine 2010 erfolglose Ausschreibung sagt nichts
+    über heute — Chance ist ein GEGENWARTS-Signal. Fenster + ``last_award_year`` stehen
+    transparent in der Ausgabe. Score als relatives Perzentil-Ranking (0–100).
+    """
+    import duckdb
+    from datetime import date
+
+    as_of = as_of_year or date.today().year
+    win = as_of - years
+    g = cfg.gold_dir / country
+    N = f"'{cfg.silver_table_glob('notices', country)}'"
+    A = f"'{cfg.silver_table_glob('awards', country)}'"
+    PE = f"'{(g / 'party_entity.parquet').as_posix()}'"
+    EN = f"'{(g / 'entities.parquet').as_posix()}'"
+    Q = f"'{(g / 'quality.parquet').as_posix()}'"
+    DL = f"'{(g / 'dim_cpv_label.parquet').as_posix()}'"
+    RS = g / "retender_signal.parquet"
+
+    con = duckdb.connect(); con.execute("SET threads=4")
+    if RS.exists():
+        con.execute(f"CREATE TEMP TABLE chr AS SELECT cpv_class cpv4, "
+                    f"count(*) FILTER (WHERE still_open) chronic_needs, max(fail_years) max_fail_years "
+                    f"FROM read_parquet('{RS.as_posix()}') GROUP BY cpv_class")
+    else:
+        con.execute("CREATE TEMP TABLE chr(cpv4 VARCHAR, chronic_needs INT, max_fail_years INT)")
+    con.execute(f"""
+    CREATE TEMP TABLE base AS
+    SELECT n.notice_id, substr(n.cpv_main,1,4) AS cpv4, q.final_value_clean AS val,
+           q.verfahren_status, a.nt AS num_tenders, w.winner, we.canonical_name AS winner_name,
+           CAST(coalesce(year(n.award_date), n.year) AS INT) AS yr
+    FROM read_parquet({N}, hive_partitioning=1) n
+    LEFT JOIN read_parquet({Q}) q ON q.notice_id=n.notice_id
+    LEFT JOIN (SELECT notice_id, max(num_tenders) nt FROM read_parquet({A}) WHERE num_tenders>0 GROUP BY 1) a
+      ON a.notice_id=n.notice_id
+    LEFT JOIN (SELECT notice_id, arg_min(entity_id,seq) winner FROM read_parquet({PE})
+               WHERE role='winner' GROUP BY 1) w ON w.notice_id=n.notice_id
+    LEFT JOIN read_parquet({EN}) we ON we.entity_id=w.winner
+    WHERE n.notice_kind='can' AND n.cpv_main IS NOT NULL AND CAST(n.year AS INT) >= {win}
+    """)
+    # Gewinner-Anteile → HHI + Top-Dominatoren
+    con.execute("""CREATE TEMP TABLE ws AS
+      SELECT cpv4, winner, any_value(winner_name) nm, count(*) wins,
+             count(*)*1.0/sum(count(*)) OVER (PARTITION BY cpv4) sh
+      FROM base WHERE winner IS NOT NULL GROUP BY cpv4, winner""")
+    con.execute("""CREATE TEMP TABLE hhi AS
+      SELECT cpv4, round(sum(sh*sh),3) hhi,
+             round(sum(sh) FILTER (WHERE rn<=3),3) top3_share
+      FROM (SELECT *, row_number() OVER (PARTITION BY cpv4 ORDER BY sh DESC) rn FROM ws)
+      GROUP BY cpv4""")
+    con.execute("""CREATE TEMP TABLE dom AS
+      SELECT cpv4, list(struct_pack(entity_id:=winner, name:=nm, wins:=wins, share:=round(sh,3))
+                        ORDER BY wins DESC) FILTER (WHERE rn<=5) AS top_dominators
+      FROM (SELECT *, row_number() OVER (PARTITION BY cpv4 ORDER BY wins DESC) rn FROM ws) GROUP BY cpv4""")
+    # Segment-Aggregate
+    con.execute(f"""CREATE TEMP TABLE seg AS
+      SELECT b.cpv4,
+        count(*) AS n_awards,
+        count(*) FILTER (WHERE verfahren_status='erfolglos') AS n_erfolglos,
+        round(100.0*count(*) FILTER (WHERE verfahren_status='erfolglos')/count(*),1) AS erfolglos_pct,
+        round(100.0*count(*) FILTER (WHERE num_tenders=1)/nullif(count(num_tenders),0),1) AS single_bidder_pct,
+        round(avg(num_tenders),1) AS avg_bidders,
+        round(median(val)) AS median_value,
+        sum(val) AS total_value_known,
+        count(DISTINCT winner) AS n_contractors,
+        max(yr) AS last_award_year
+      FROM base b GROUP BY b.cpv4 HAVING count(*) >= {min_awards}""")
+    # Score: relatives Perzentil-Ranking über Wert / Schwäche / Nachfrage
+    out = (g / "market_opportunity.parquet").as_posix()
+    con.execute(f"""
+    COPY (
+      WITH s AS (
+        SELECT seg.*, hhi.hhi, hhi.top3_share, dom.top_dominators, dl.label AS segment_label,
+          coalesce(chr.chronic_needs,0) AS chronic_needs, chr.max_fail_years,
+          coalesce(erfolglos_pct,0)+coalesce(single_bidder_pct,0) AS weakness_raw
+        FROM seg LEFT JOIN hhi ON hhi.cpv4=seg.cpv4 LEFT JOIN dom ON dom.cpv4=seg.cpv4
+        LEFT JOIN chr ON chr.cpv4=seg.cpv4
+        LEFT JOIN read_parquet({DL}) dl ON dl.cpv_code=seg.cpv4||'0000'),
+      r AS (
+        SELECT *,
+          percent_rank() OVER (ORDER BY coalesce(median_value,0)) AS value_pr,
+          percent_rank() OVER (ORDER BY weakness_raw) AS weakness_pr,
+          percent_rank() OVER (ORDER BY n_awards) AS demand_pr
+        FROM s)
+      SELECT cpv4, segment_label, n_awards, n_erfolglos, erfolglos_pct, single_bidder_pct,
+             avg_bidders, median_value, total_value_known, n_contractors, hhi, top3_share,
+             CASE WHEN top3_share>=0.6 THEN 'oligopol'
+                  WHEN top3_share<0.25 THEN 'fragmentiert' ELSE 'moderat' END AS struktur,
+             round(100*(0.35*value_pr + 0.35*weakness_pr + 0.30*demand_pr)) AS opportunity_score,
+             chronic_needs, max_fail_years,
+             top_dominators, last_award_year, {win} AS window_start, {as_of} AS window_end
+      FROM r
+    ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+def build_retender_signal(cfg: Config, country: str = "DE", as_of_year: int | None = None,
+                          min_fail_years: int = 2):
+    """⭐ Chronische Fehl-Ausschreibungen — „seit X Jahren Y-mal erfolglos gesucht".
+
+    Der stärkste Kauf-/Chancen-Hinweis: ein Bedarf, den eine Behörde wiederholt erfolglos
+    ausschreibt = verzweifelter Käufer, kaum Wettbewerb. Naiv (Behörde+CPV) überzählt bei
+    Mega-Käufern/Framework-Losen — darum **inhaltsgeclustert** (Titel-Token-Ähnlichkeit, wie
+    das Nachfolge-Modell): ein Bedarf = titelähnliche erfolglose Tender derselben Behörde+CPV.
+
+    Zählt DISTINKTE Fehl-JAHRE (Anläufe), nicht Lose. Schreibt ``retender_signal``
+    (buyer_entity, cpv_class, need_title, fail_attempts, first_fail_year, last_fail_year,
+    span_years, still_open). Gibt die Zahl chronischer Bedarfe zurück.
+    """
+    import duckdb
+    from datetime import date
+    from collections import defaultdict
+
+    as_of = as_of_year or date.today().year
+    g = cfg.gold_dir / country
+    N = f"'{cfg.silver_table_glob('notices', country)}'"
+    Q = f"'{(g / 'quality.parquet').as_posix()}'"
+    PE = f"'{(g / 'party_entity.parquet').as_posix()}'"
+
+    con = duckdb.connect(); con.execute("SET threads=4")
+    rows = con.execute(f"""
+        SELECT bpe.buyer, substr(n.cpv_main,1,4) cpv4,
+               CAST(coalesce(year(n.award_date), n.year) AS INT) yr, n.title
+        FROM read_parquet({N}, hive_partitioning=1) n
+        JOIN (SELECT notice_id, arg_min(entity_id,seq) buyer FROM read_parquet({PE})
+              WHERE role='buyer' GROUP BY 1) bpe ON bpe.notice_id=n.notice_id
+        JOIN read_parquet({Q}) q ON q.notice_id=n.notice_id
+        WHERE n.notice_kind='can' AND n.cpv_main IS NOT NULL AND n.title IS NOT NULL
+          AND q.verfahren_status='erfolglos'
+    """).fetchall()
+
+    groups: dict = defaultdict(list)
+    for buyer, cpv4, yr, title in rows:
+        groups[(buyer, cpv4)].append((yr, title, _succ_tokens(title)))
+
+    out_rows = []
+    for (buyer, cpv4), items in groups.items():
+        used = [False] * len(items)
+        for i in range(len(items)):
+            if used[i]:
+                continue
+            cl = [i]; used[i] = True
+            for j in range(i + 1, len(items)):
+                if used[j]:
+                    continue
+                a, b = items[i][2], items[j][2]
+                if a and b and len(a & b) / len(a | b) >= 0.55:
+                    cl.append(j); used[j] = True
+            yrs = {items[k][0] for k in cl}
+            if len(yrs) >= min_fail_years:
+                # still_open = letzter Fehlversuch aktuell genug, um noch relevant zu sein (3-J-Fenster)
+                out_rows.append((buyer, cpv4, items[i][1], len(cl), len(yrs),
+                                 min(yrs), max(yrs), max(yrs) - min(yrs), max(yrs) >= as_of - 3))
+
+    con.execute("CREATE TEMP TABLE t(buyer_entity VARCHAR, cpv_class VARCHAR, need_title VARCHAR, "
+                "fail_attempts INT, fail_years INT, first_fail_year INT, last_fail_year INT, "
+                "span_years INT, still_open BOOLEAN)")
+    if out_rows:
+        con.executemany("INSERT INTO t VALUES (?,?,?,?,?,?,?,?,?)", out_rows)
+    con.execute(f"COPY (SELECT * FROM t) TO '{(g / 'retender_signal.parquet').as_posix()}' "
+                f"(FORMAT PARQUET, COMPRESSION ZSTD)")
+    con.close()
+    return len(out_rows)
+
+
+def build_cpv_adjacency(cfg: Config, country: str = "DE", since_year: int = 2016,
+                        min_shared: int = 3):
+    """CPV-Segment-Nähe über Firmen-Co-Occurrence — die „Skill-Adjacency".
+
+    Zwei CPV-Klassen sind nah, wenn Firmen, die das eine gewinnen, oft auch das andere
+    gewinnen. Das ist die persönliche Achse des Marktchancen-Radars: „diese offenen
+    Märkte liegen nah an dem, was DU schon kannst". User-agnostische Referenz — die
+    „Nähe" eines Kandidaten zum Nutzer-Footprint entsteht zur Laufzeit.
+
+    ``cond_prob`` = P(Firma bedient cpv_b | bedient cpv_a) — gerichtet a→b. Schreibt
+    ``cpv_adjacency`` (cpv_a, cpv_b, shared_firms, jaccard, cond_prob).
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    N = f"'{cfg.silver_table_glob('notices', country)}'"
+    PE = f"'{(g / 'party_entity.parquet').as_posix()}'"
+    con = duckdb.connect(); con.execute("SET threads=4")
+    con.execute(f"""
+        CREATE TEMP TABLE fc AS
+        SELECT DISTINCT w.entity_id AS firm, substr(n.cpv_main,1,4) AS cpv4
+        FROM read_parquet({N}, hive_partitioning=1) n
+        JOIN (SELECT notice_id, entity_id FROM read_parquet({PE}) WHERE role='winner') w
+          ON w.notice_id=n.notice_id
+        WHERE n.notice_kind='can' AND n.cpv_main IS NOT NULL
+          AND CAST(n.year AS INT) >= {since_year} AND w.entity_id NOT LIKE 'unresolved:%'
+    """)
+    con.execute("CREATE TEMP TABLE cnt AS SELECT cpv4, count(DISTINCT firm) n FROM fc GROUP BY cpv4")
+    out = (g / "cpv_adjacency.parquet").as_posix()
+    con.execute(f"""
+        COPY (
+          WITH co AS (
+            SELECT a.cpv4 ca, b.cpv4 cb, count(*) shared
+            FROM fc a JOIN fc b ON a.firm=b.firm AND a.cpv4<>b.cpv4
+            GROUP BY 1,2 HAVING count(*) >= {min_shared})
+          SELECT co.ca AS cpv_a, co.cb AS cpv_b, co.shared AS shared_firms,
+                 round(co.shared*1.0/(na.n + nb.n - co.shared), 3) AS jaccard,
+                 round(co.shared*1.0/na.n, 3) AS cond_prob
+          FROM co JOIN cnt na ON na.cpv4=co.ca JOIN cnt nb ON nb.cpv4=co.cb
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
+# Bandgrenzen (real 2020) — identisch zu build_leads.value_band, als SQL-Ausdruck.
+def _band_sql(col: str) -> str:
+    # 7-Stufen-Pricing-Schema, Grenzen an den echten Wert-Perzentilen (p20/p40/p60/p80
+    # ~ 100k/250k/500k/1,3M) + Rahmen-Splits bei 5M/25M. NUR fuer die Gebuehren-Basis
+    # value_band_effektiv — bewusst getrennt vom KPI-value_band (5 Baender). Labels =
+    # exakt die Keys in pricing.SCHEDULE.
+    return (f"CASE WHEN {col} IS NULL THEN 'unbekannt' "
+            f"WHEN {col}<100000 THEN '<100k' WHEN {col}<250000 THEN '100-250k' "
+            f"WHEN {col}<500000 THEN '250-500k' WHEN {col}<1300000 THEN '500k-1,3M' "
+            f"WHEN {col}<5000000 THEN '1,3-5M' WHEN {col}<25000000 THEN '5-25M' "
+            f"ELSE '>25M' END")
+
+
+def build_value_band_effektiv(cfg: Config, country: str = "DE", min_samples: int = 10,
+                              default_band: str = "250-500k"):
+    """Gebühren-Basis je Lead: ein Band, das NIE „unbekannt" ist (für ein Erfolgs-
+    gebühren-Preismodell).
+
+    Echter Wert (57 %) → Band (`band_source='echt'`/`'geschaetzt'`). Sonst
+    **CPV-Klassen-Median** (≥``min_samples`` bewertete Leads) → imputiertes Band
+    (`'imputiert'`). Sonst Default-Band (`'default'`, der Median-Bereich, wo die
+    Masse liegt). Basis = ``value_real_2020`` (deflationiert, jahresvergleichbar),
+    konsistent zu ``value_band``. Schreibt ``value_band_effektiv``
+    (lead_id, value_effektiv, band_effektiv, band_source).
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    L = f"'{(g / 'leads.parquet').as_posix()}'"
+    out = (g / "value_band_effektiv.parquet").as_posix()
+    con = duckdb.connect(); con.execute("SET threads=4")
+    con.execute(f"""
+        COPY (
+          WITH med AS (
+            SELECT cpv_class, median(value_real_2020) m
+            FROM read_parquet({L}) WHERE value_source <> 'unbekannt' AND value_real_2020 IS NOT NULL
+            GROUP BY cpv_class HAVING count(*) >= {min_samples})
+          SELECT l.lead_id, l.cpv_class,
+            CASE WHEN l.value_source <> 'unbekannt' THEN l.value_real_2020 ELSE med.m END AS value_effektiv,
+            CASE WHEN l.value_source <> 'unbekannt' THEN {_band_sql('l.value_real_2020')}
+                 WHEN med.m IS NOT NULL THEN {_band_sql('med.m')}
+                 ELSE '{default_band}' END AS band_effektiv,
+            CASE WHEN l.value_source = 'final' THEN 'echt'
+                 WHEN l.value_source = 'geschaetzt' THEN 'geschaetzt'
+                 WHEN med.m IS NOT NULL THEN 'imputiert'
+                 ELSE 'default' END AS band_source
+          FROM read_parquet({L}) l LEFT JOIN med ON med.cpv_class = l.cpv_class
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n

@@ -1,0 +1,209 @@
+# goVisor — Projektkontext für Claude
+
+Analyse-Engine über TED-Vergabedaten (öffentliche EU-Ausschreibungen) als Grundlage
+für Wechsel-Prognosen und Lead-Generierung. Nutzer: Sven (sven.kotzur@gmail.com).
+
+## Wo das Wissen liegt (zuerst lesen)
+- `docs/entscheidungen-und-kontext.md` — Nicht-Code-Wissen: Architektur-Entscheidungen,
+  Firmengruppen-Logik, **Arbeitsweise**, **Preismodell**, offene Punkte.
+- `docs/concept-v3.md` — Gesamtkonzept der Engine.
+- `docs/data-sources.md` — gemessene TED-Datenrealitäten (Abdeckung, Fallstricke).
+- `docs/field-categories.md` — Feldkategorisierung.
+- `docs/mehrwert-roadmap.md` — priorisierte KPI-/Feature-/Externe-Quellen-Landkarte (mit gemessenem
+  Mehrwert, für Versionszuordnung).
+- Auto-Memory (`MEMORY.md` + `govisor-*.md`) ist zusätzlich hinterlegt.
+- **Secrets:** OpenRouter-API-Key (LLM-Nachfolge-Adjudikation) liegt in
+  `.secrets/openrouter.key` (gitignored, chmod 600). ~$25 Startguthaben; Fallback-Key
+  von Sven, wenn aufgebraucht. Nutzung: `OPENROUTER_KEY_FILE=.secrets/openrouter.key`.
+
+## Architektur (Kurzform)
+Medallion: **Bronze** (Original-TED-XML, verlustfreie Quelle, nach Land gefiltert) →
+**Silber** (normalisierte Parquet-Tabellen, kein JSON) → **Gold** (abgeleitet/kuratiert).
+Lokal DuckDB/Parquet. Quelle sind die monatlichen XML-Bulk-Pakete, NICHT der CSV-Export.
+Bestand: DE komplett, alle CPV, **2004-01–2026-06 (270 Monate, lückenlos), 1.832.998
+Notices, 0 Dubletten**, gegen TED-API verifiziert. Vier Schema-Generationen im Parser
+(`schema_gen`): `legacy` (TED_EXPORT, 1,15 Mio), `eforms` (0,43 Mio), `text` (Vor-XML-
+Textformat, 0,25 Mio, cp1252-Fallback), `ojs` (INTERNAL_OJS, OPOCE-Altformat, u. a. 2008-05).
+CLI: `python -m govisor.cli {ingest|silver|gold|verify|review}`.
+
+## Arbeitsweise (wichtig, von Sven eingefordert)
+- **Messen statt annehmen** — jede Zahl/Feldposition an echten Daten prüfen, nie aus
+  dem Gedächtnis behaupten. Auffällige Aggregat-Zahlen sind Warnsignale.
+- **Kein Datenverlust** — nichts nach eigener Relevanz filtern; Unbekanntes →
+  „sonstiges"/`attributes`, Zweifelsfälle → `review`-Queue. Erschlossenes trägt Konfidenz.
+- Details + Warum: `docs/entscheidungen-und-kontext.md`.
+
+## Aktueller Stand (2026-07-19)
+- **Backfill 2004–2015 + Qualitäts-Reparatur fertig** (`REPAIR2_DONE`, Audit-Trail
+  `data/repair.log` + `data/repair2.log`, Skripte in `scripts/`). Bestand jetzt **1.832.998
+  DE-Notices, 2004-01–2026-06 lückenlos (270 Monate)**. Drei Root-Causes des Nacht-Ingests
+  behoben: (1) **Doppel-Ingest 2004–2009** (ISO+UTF-8-Zwillinge) → Silber-Dedup neu gebaut,
+  ~112k Dubletten weg; (2) **2004 nur-ISO-Encoding** → neuer `flatten.decode_text()` mit
+  cp1252-Fallback, 11.448 Notices verlustfrei recovered, ~115k `�`-Zeilen weg; (3) **2008-05
+  fehlte** — TED liefert den Monat nur im Legacy-Format INTERNAL_OJS → dedizierter Parser
+  `schema._parse_internal_ojs` (`schema_gen='ojs'`), 3.232 DE-Notices mit 100 % Titel/CPV/
+  Käufer, Gewinner+Werte für Awards. Verifiziert: 0 Dubletten, 0 Encoding-Schäden (2 echte
+  Quell-`�` bleiben bewusst), 0 Gold-FK-Waisen. 75 Tests grün.
+- **final5-Rebuild** (Vorstufe, Silber `--force` → Gold → Verify, `FINAL5_DONE`). War 1,316,049
+  DE-Notices (nur 2016–2026), 9 Gold-Tabellen — durch den Backfill oben abgelöst.
+
+### Entity-Härtung + Analytik-Layer (2026-07-19, Fortsetzung)
+- **Entity-Resolution Stufe 1** (`gold._consolidate_by_national_id`): nur-Name-Entitäten in ihre
+  belegte Register-/ID-Entität verschmolzen — **nur bei geteilter PLZ** (0 Fehl-Merges), sonst
+  geflaggt in `entity_merge_candidates.parquet`. −6.279 Dubletten, national_id-Quote 31,9→32,5 %.
+- **Stufe 2 (Fuzzy-HR) VERWORFEN & gegated.** Gemessen: Schwelle 0.7 → ~24 % Fehl-Merges bei
+  winzigem Ertrag (1.428). `build_hr_index(fuzzy=False)` per **Default** (Blocking wird nicht
+  gebaut → Exakt-Match-Verhalten). Code bleibt für spätere Verschärfung. **Erkenntnis: Entity-
+  Resolution über Namen ist ausgereizt** — mehr ginge nur über externe Register.
+- **🟢 Markt-Intelligenz-Views** (`gold.build_market_intelligence`, 5-J-Fenster): `buyer_stats`
+  (23.998), `contractor_stats` (170.947, Rang/Anteil nach Win-Zahl), `market_stats` (10.642),
+  `buyer_contractor_history` (266.448). Nur nachfolge-freie KPIs; Volumen/Laufzeit tragen
+  `*_coverage` (Volumen 55,8 % unbekannt).
+- **Nachfolge-Modell** (`gold.build_content_successions`) — **löst die kaputte `contract_chains`
+  für KPIs ab.** Gestufter Trichter: (A) Behörde+CPV+Zeit, NUR ketten-würdig (`_kind_sql`, kein
+  nicht-Rahmen-Bau), (B) Titel-Token-Score + CPV-Bonus + Laufzeit-Timing + Same-Verfahren-Ausschluss.
+  → **63.770 konfidente Kanten** (content_unique) + **36.301 LLM-adjudiziert** = **100.071
+  verifizierte Nachfolgen** in `contract_succession.parquet`. LLM-Stufe (`scripts/succession_llm.py`,
+  OpenRouter `gemini-2.5-flash-lite`, Voll-Lauf über 105k = **$2.01**, 35 % bestätigt) via
+  `gold.merge_llm_successions`. Von **7 % Artefakt** auf ~24 % ketten-würdige Abdeckung.
+- **🔴 Nachfolge-KPIs** (`gold.build_succession_kpis`): `succession_events` (51.027), `head_to_head`
+  (20.150), `market_switch_rate`, `buyer_loyalty`, `contractor_loss`. Gewinner-Matching
+  **gruppen-bewusst + Multi-Gewinner-Set-Schnitt + Konsortien geflaggt** (beim Messen als
+  entscheidend erkannt: naiv 1-Gewinner ergäbe irreführende 78 % Verdrängung durch Siemens-
+  AG↔Mobility-Fragmentierung/ARGE). **Incumbent-Retention 28,3 %** auf den 100k verifizierten
+  Nachfolgen (belastbar, vs 7 % Artefakt). `succession_events` 80.638, `head_to_head` 31.364.
+  Alle neuen Tabellen in `verify.gold_integrity` (FK sauber). 84 Tests grün.
+
+### Weitere Grundlagen (2026-07-19, Forts.)
+- **`avg_decision_days`** in `buyer_stats` (cn→can via `ref_publication_number`, ~42 % Coverage,
+  Guard ≥3 Belege, Median ~87d) — schließt #4-D2.
+- **`incumbent_tenure`** (`gold.build_incumbent_tenure`): „seit wann Incumbent" aus den Nachfolge-
+  Ketten — 22.742 Incumbents mit Historie (längste Kette 9 Zyklen). Schließt #3/#4-D4.
+- **`build_prospective_leads`**: F01/F02 (`cn`/`pin`) mit **zukünftiger Angebotsfrist** als Lead-
+  Zeilen ins `leads`-Parquet (neue Spalte `source ∈ {auslauf,f01,f02}`). Awarded-only-Felder
+  (Incumbent, Wechsel-Score, num_tenders) NULL via `UNION ALL BY NAME`. Aktuell **4.754** prospektive
+  Leads (stichtag-abhängig). Speist #1 Master-Liste (vorher nur Auslauf-Radar).
+- **CPV-Fund:** Mehr-CPV liegt bereits typisiert in `silver/notice_cpv` (3,5 M, Ø 1,92/Notice) →
+  Anforderungs-Match (#3/#4) sofort per join `notice_id`.
+- **`dim_cpv_label`** (`gold.build_dim_cpv_label`): volles CPV-Code→DE-Label-Vokabular (9.454 Codes)
+  aus der offiziellen EU-CPV-2008-Liste (`data/reference/cpv_2008.xml`, Download-URL im Docstring).
+  Nutzungsgewichtete Coverage **97 % (100 % ab 2016**; Rest = Legacy-CPV-2003 in Alt-Jahren).
+  `dim_cpv` (45 Divisionen + Branche) bleibt als grobe Ebene.
+- **Buyer-Aliase (E, kuratiert):** `gold._load_entity_aliases` + `data/curated/DE_entity_aliases.csv`
+  — belegte Umbenennungen/Fragmente als **Identitäts**-Merge in `build_entities` (analog Stufe 1,
+  aber human-verifiziert; KEIN Namensstamm-Automatismus). Seed: **DB Netz↔DB InfraGO** (Umbenennung
+  2024, gleiche HRB50879) → DB Netz konsolidiert 15.662→**22.104** Vergaben (7 InfraGO-Fragmente).
+  **Bewusst NICHT gelöst:** öffentliche-Stellen-Fragmentierung (61 % der Vergaben, nicht im HR,
+  Vertretungs-/Abteilungs-Zusätze) — nicht sicher automatisierbar, bleibt gezielter CSV-Kuratierung.
+- **ARGE-Zerlegung (G): studiert, NICHT gebaut.** Machbarkeitsstudie (gemessen): Konsortial-Namen
+  sind regelbasiert zu 26 % in ≥2 Mitglieder zerlegbar (90 % COMPANY, 42 % Register-Match), ABER der
+  Nutzen ist winzig — nur **479 (0,6 %) aller Nachfolgen** würden von „unbestimmbar" auf „Retention"
+  kippen. **Die ARGE-Fluktuation ist überwiegend echt** (je Projekt andere Bietergemeinschaft), kein
+  Artefakt. Die 11 % Konsortial-Nachfolgen bleiben ehrlich „unbestimmbar". (Offener Winkel für später:
+  Mitglieder-Aktivität für `contractor_stats` — eigenes Feature, kein Grundlagen-Blocker.)
+- **Granularer Qualitäts-Audit + neue Signale:** neue Quality-Flags `wert_sentinel` (100k
+  0,01/1,00-Platzhalter), `frist_vor_pub` (271), `datum_absurd` (44, →Review-Queue),
+  `waehrung_angenommen` (61k, informativ). **Neu `verfahren_status`** in `quality` (kein Defekt,
+  sondern Lead-Signal): `erfolglos` **93.911** CANs ohne Gewinner+Award = „2.-Versuch"-Radar-Basis
+  (52 % re-tendered). A6-Guard in `build_prospective_leads` (Frist ≤ +5 J). Offen als Feature:
+  Re-Tender-/Contestedness-KPI (Roadmap T1.1/T1.2).
+- **A2-Parser-Lücke untersucht & aufgelöst:** die 27k „unbekannt"-CANs (Award, kein Gewinnername) sind
+  zu **>99 % KEIN Bug** — der Gewinner steht schlicht nicht im XML (legacy 0 % rückholbar; eForms 71 %
+  echt nicht-vergeben). **Real rückholbar: ~200 eForms**, die den Gewinner nur als `SettledContract.
+  SignatoryParty` (≠ Käufer, ohne Vergabekammer/eSender) tragen. Fix: SignatoryParty-Fallback in
+  `schema._parse_eforms` (verifiziert an „Bellersheim Abfallwirtschaft GmbH", Test grün). Kein
+  dedizierter Rebuild für ~200 Sätze — greift beim nächsten regulären Gold-/Silber-Rebuild. Die
+  restlichen 27k `unbekannt` sind korrekt (kein `erfolglos`) → verunreinigen keine KPI.
+- **⭐ `market_opportunity` (Flaggschiff-Datenprodukt, `gold.build_market_opportunity`):** Marktchancen-
+  Landkarte je CPV-Segment (5-J), 511 Segmente. Achsen: Nachfrage × Schwäche (erfolglos+single-bidder,
+  A2-Kern) × Wert, plus **Struktur** (top3_share → fragmentiert/moderat/oligopol) und **Top-Dominatoren
+  = Buy/Partner-Kandidaten**. `opportunity_score` (Perzentil-Ranking). Basis für den White-Space-Explorer
+  (Make/Buy/Partner). 3-J-Fenster (aktuelle Chance), `window_start/end` + `last_award_year` transparent.
+  Validiert: reale Hochwert-Segmente mit 30–90 % Single-Bidder/erfolglos.
+- **⭐ `retender_signal` (`gold.build_retender_signal`):** chronische Fehl-Ausschreibungen — „seit X Jahren
+  Y-mal erfolglos gesucht". **Inhaltsgeclustert** (Titel-Token wie Nachfolge-Modell; naiv überzählt bei
+  Framework-Losen — DAK-Arzneimittel 440× war Open-House, nicht 440 Suchen). Zählt distinkte Fehl-JAHRE,
+  282 aktuell relevante chronische Bedarfe (z.B. Trier Schulzentrum 4× über 4 J). Aggregiert als
+  `chronic_needs` in `market_opportunity`. Der stärkste Kauf-/Chancen-Hinweis. **Open-House-Rabatt-
+  verträge (§130a) als eigener `verfahren_status='open_house'`** abgetrennt (kein Wettbewerb, kein
+  Fehlsignal).
+- **⭐ `cpv_adjacency` (`gold.build_cpv_adjacency`):** CPV-Segment-Nähe über Firmen-Co-Occurrence
+  (`cond_prob` = P(Firma bedient B | bedient A)). 37.920 Kanten. Die „Nähe"-Achse des Radars → macht
+  Chancen persönlich („offene Märkte nah an deinem Skill"). Validiert: Datenbankdienste → IT/Software.
+- **`value_band_effektiv` (`gold.build_value_band_effektiv`):** Gebühren-Basis je Lead — nie „unbekannt":
+  echter Wert (37 %) / geschätzt (5 %) / CPV-Median-imputiert (52 %) / default (6 %), mit `band_source` als
+  Fairness-Regler. Basis `value_real_2020`. **7-Band-Pricing-Schema** (`_band_sql`, Grenzen 100k/250k/500k/
+  1,3M/5M/25M, an den Wert-Perzentilen) — bewusst getrennt vom KPI-`value_band` (5 Bänder). Default-Band
+  `250-500k`.
+- **`govisor/pricing.py`:** gebaute Staffel — **reines Flat-per-Band** (7 Stufen, Pauschalen verdoppeln
+  sich: `<100k`=600 / `100-250k`=1.200 / `250-500k`=2.400 / `500k-1,3M`=4.800 / `1,3-5M`=9.600 /
+  `5-25M`=15.000 / `>25M`=25.000 €). `imputiert`/`default` → ×0,8. `SCHEDULE` + `fee(band,source,value)`;
+  Keys = exakt `_band_sql`-Labels. `python -m govisor.pricing` → Verteilung an 75.014 Leads (Ø ~3.210 €/Lead;
+  Summe ~241 Mio. € = Obergrenze bei 100 % Gewinn). **Warum Flat statt %:** Wert-Schätzung trifft nur ~42 %
+  das richtige Band (gemessen) → % auf geratenen Wert nicht verteidigbar; abrechnen auf echtem Wert (65 %),
+  Rest via Kunden-Bestätigung. Mechanik: [`docs/pricing-modell.md`]; Marktvalidierung: [[govisor-pricing-research]].
+  **Offen (Business):** finale Beträge, Rabatt-Faktor, Attributions-/Rechnungs-Mechanik (s. Ticket-06-v2).
+- **`award_tender_link` (`gold.build_award_tender_link`):** Zuschlag↔Ausschreibung via `ref_publication_number`
+  (373k Links, 0 Dup je Award, gap-Median 114 T). Fundament für Attribution (#6) + Award-Alerts (#9). FK-geprüft.
+- **`value_anchor` (`gold.build_value_anchor`):** Wert-**Wächter** je Zuschlag fürs Billing (#6) — Waterfall
+  Ausschreibungssumme→Vorgänger→Buyer×CPV→Buyer→CPV, **nominal**. Kein Orakel (Schätzung ~42 % exakt), sondern
+  Lowball-Plausibilitätscheck (~68 % ±1) gegen Kunden-Selbstauskunft. 98 % Abdeckung (96 % im wertlosen Drittel).
+  `anchor_band`-Labels = `pricing.SCHEDULE`-Keys. **Billing-Regel:** echt=Fakt, sonst Kunde bestätigt + Anker-Flag
+  bei ≥2 Bänder-Abweichung → HITL. Roadmap/Reifegrad: [`docs/v1-gap-analysis.md`].
+- **`lead_deadline` (`gold.build_lead_deadline`):** Angebotsfrist je offener Ausschreibung (`cn`/`pin`) — der
+  **primäre Timing-Alert** (#9-Flip). 861k Zeilen, **0 NULL** (63 % echt `submission_deadline`, Rest geschätzt aus
+  CPV-Median-Bid-Fenster/global ~31 T, gesetzl. mindestgeregelt → belastbar). `deadline_source` flaggt Herkunft.
+  **Wichtig:** echte Frist braucht KEIN `publication_date` (nur die Schätzung) — sonst fielen die aktuellsten
+  offenen Ausschreibungen (echtes Datum, oft ohne pub) raus. Deckt jetzt 4.418/4.418 prospektive Leads.
+- **`lead_duration` (`gold.build_lead_duration`):** Vertragsende je Lead (`can`/`cn`) für „bis Auslauf" (#3) +
+  sekundären Auslauf-Alert. Waterfall echt→`start_date`+CPV-Median→`award_date`+CPV-Median→unbekannt; **66,8 %**
+  mit Ende (33 % echt), Rest ehrlich `unbekannt` (kein erfundenes Datum). `duration_source` geflaggt.
+- **`lead_detail` (`gold.build_lead_detail`):** UI-View je Lead (1:1 zu `leads`) — führt die ehrlichen Flags
+  zusammen: `band_effektiv`/`band_source`, `contract_end_eff`/`duration_source`, `deadline_date`/`deadline_source`,
+  Incumbent-Tenure. Das Frontend (#3) bekommt alle Herkunfts-Kennzeichnungen an einer Stelle. FK-geprüft.
+- **`entity_identity` (`gold.build_entity_identity`):** „Gruppe = Identität"-Auflösung (P0-3) — jede Entity →
+  stabile `identity_id` (Gruppen-ID oder `solo:<id>`). Fundament für **Winner-Matching** (#6/#9: Gewinner → alle
+  Schwester-Entities) + Onboarding (#7). 323k Entities → 302k Identitäten. **Matching-Regel:** Gewinner und
+  bestätigte User-Identität teilen dieselbe `identity_id`.
+- **`dim_plz` (`gold.build_dim_plz`) + `lead_geo` (`gold.build_lead_geo`) + `govisor/geo.py`:** **Radius-Suche**
+  (Stadt + Umkreis). `dim_plz` = PLZ→Zentroid aus GeoNames (`data/reference/geonames/DE.txt`, 10.813 PLZ);
+  `lead_geo` = Koordinate je Lead (Buyer-PLZ→dim_plz, sonst Ort-Fallback; `geo_source`-Flag; **99,8 % Abdeckung**);
+  `geo.geocode_city`/`radius_search`/`radius_count` = Haversine-Distanzfilter. Bsp. München: 5/10/25/50/100 km →
+  3.376/4.076/4.561/4.999/6.616 Leads. **`geo.search(...)` kombiniert Radius UND NUTS-Filter** (`lead_geo.nuts` =
+  buyer_nuts, 99,8 % NUTS-3; Präfix-Match, injection-validiert). **`dim_nuts`** (`gold.build_dim_nuts`, aus
+  EU-GISCO `NUTS_AT_{2021,2024}.csv`, 462 Codes) + `geo.nuts_autocomplete`/`nuts_children` = Regions-
+  Namens-Autocomplete + Drill-down mit Lead-Zahlen. **Zwei Achsen** (`geo.search(axis=...)`): `buyer`
+  (Auftraggeber, feine PLZ) vs. `performance` (Leistungsort, `perf_nuts` + NUTS-3-Zentroid, grob) —
+  1.579 Leads mit Buyer-NUTS≠Perf-NUTS. Details/Caveats: [`docs/radius-suche.md`].
+- **App:** `app/radius_suche.py` (Streamlit, `streamlit run`) — Umkreis- & Regionssuche zum Durchklicken:
+  Stadt+Radius (5–100 km), Region-**Namens-Autocomplete** (via `geo.nuts_autocomplete`), Achsen-Toggle
+  (Auftraggeber/Leistungsort), interaktive Karte + Ergebnistabelle. Verifiziert: 25 km München = 4.561,
+  ∩ Oberbayern = 4.527.
+- **App:** `app/marktchancen.py` (Streamlit) — Marktchancen-Radar zum Durchklicken + **Sidebar-Regional-Filter**
+  (Achse Leistungsort/Auftraggeber, Region-Namens-Autocomplete via `geo`, Umkreis) auf die Segment-Aufträge:
+  Segment-Chancen
+  (Score/Struktur/Buy-Longlist/konkrete Aufträge), Verzweiflungs-Chronik, **„Für dich"** (Footprint →
+  Fit = Chance × Nähe). Start: `streamlit run app/marktchancen.py`.
+- **Feature-Checks gelaufen** (`scripts/feature_checks.py`): IT-Lose & Konsortialquote sauber.
+  **Historische Erkenntnis (jetzt adressiert):** Incumbent-Rate 7 % war ein Paarungs-Artefakt der
+  `contract_chains` (paart bei Großkäufern unabhängige Verträge) — ersetzt durch das inhaltsbasierte
+  Nachfolge-Modell oben (Retention 32,5 %). Details: `docs/plan-radar-und-score.md` (Gate-Abschnitt).
+- **#1 Auslauf-Radar gebaut** → `data/gold/DE/leads.parquet` (70.246 Leads, `gold.build_leads`).
+- **#2 Verdrängbarkeits-Score gebaut** → `dim_displaceability.parquet` + Score-Spalten auf
+  `leads` (`gold.build_displaceability`). Framing: *Verdrängbarkeit* (relatives Ranking nach
+  Bieterzahl × Branche), NICHT „Amtsinhaber gewinnt wieder".
+- **#3 lokales Dashboard gebaut** → `app/dashboard.py` (Streamlit auf `leads.parquet`).
+  Start: `streamlit run app/dashboard.py`. Spalten nach goVisor-X-RAY (Status/Auftraggeber/
+  Auftragsgegenstand/Dienstleister/Volumen/Vergabe/Fällig/Fällig-Basis/TED) + Score-Spalten.
+  Filter (Branche/Auslauf/Wert/Verdrängbarkeit/Konfidenz), sortierbar (Default: nächste
+  Ausschreibung), Lead-Detail+Kontakt, Modell- + Review-Queue-Expander.
+- **Datenqualität — Fehler markieren statt wegwerfen (Prinzip, nicht droppen):** `quality`
+  flaggt jetzt umfassend (laufzeit_unplausibel, bieterzahl_unplausibel, waehrung_fremd,
+  datum_start_nach_ende, schaetzwert_negativ, wert_verdaechtig/absurd …). `final_value_clean`
+  nur bei plausibel UND EUR. `gold.build_review_queue` → `review_queue.parquet` = ~7.457 harte
+  Fehler als Worklist mit Beleg-Link. `build_leads` droppt NICHTS, trägt `termin_plausibel`
+  + Lead-Dedup (`ist_hauptlos`/`lose_im_cluster`). Voller Audit: `docs/db-audit-und-haertung.md`.
+- **Offene Kern-Schwäche: Entity-Resolution** (36 % nur-Name, Ø-Konfidenz 0,47, Fragmentierung)
+  — eigenes Härtungsprojekt, Plan in `docs/db-audit-und-haertung.md`.
+- Weitere offene Punkte: `docs/entscheidungen-und-kontext.md` (ARGE-Namen zerlegen,
+  Rahmenvertrags-Abrufe, LLM-Schritte, externe Quellen).

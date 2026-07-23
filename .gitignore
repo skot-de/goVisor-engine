@@ -1,0 +1,20 @@
+# Daten sind regenerierbar (Bronze 17 GB, Silber/Gold abgeleitet) → nicht ins Repo.
+# 'data/*' statt 'data/' — Git steigt in ein ignoriertes VERZEICHNIS nicht hinab,
+# eine Ausnahme darin bliebe sonst wirkungslos.
+data/*
+# AUSNAHME: die Slug-Map ist NICHT regenerierbar. Sie definiert die permanenten
+# Lead-Links (govi.link/<slug>) — geht sie verloren, brechen alle verschickten URLs.
+!data/state/
+!data/state/**
+
+# Zugangsdaten
+.secrets/
+*.key
+.env*
+
+# Python / OS
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.DS_Store
