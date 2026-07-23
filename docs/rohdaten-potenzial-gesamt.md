@@ -461,3 +461,116 @@ Daraus die Reihenfolge:
 Die ersten drei sind je ein bis zwei Spalten und wirken auf fast jeden Lead — zusammen
 vermutlich ein Arbeitstag. Punkt 5 ist der einzige, der einen bestehenden **Fehler**
 behebt statt etwas hinzuzufügen.
+
+---
+
+# Nachtrag: lückenloser Durchgang (2026-07-23)
+
+Der Durchgang oben arbeitete mit Cluster-Vertretern und einer „technisch"-Heuristik.
+Beides ist jetzt aufgelöst — **alle 4.123 Pfade** einzeln bzw. als vollständige
+Clusterliste angesehen: DÖE 163/163 · text 20/20 · eForms 478/478 · legacy 601/601
+Cluster (2.452 Pfade) · ojs 299/299 Cluster (1.010 Pfade).
+
+## Was der lückenlose Durchgang zusätzlich gefunden hat
+
+### Die „technisch"-Heuristik lag viermal falsch
+
+| Feld | Abd. | Warum es kein Rauschen ist |
+|---|---:|---|
+| **`NR.TenderingParty.SubContractor.ID`** + **`.MainContractor.ID`** | 0,2 % | **Die Nachunternehmer-Beziehung, explizit modelliert**: welche Organisation ist Sub von welchem Hauptauftragnehmer. Das ist der Partner-Graph in Reinform, nicht ein Dokumentzeiger. |
+| **`FieldsPrivacy.PublicationDate`** | 0,1–1,4 % | **2034-01-02 · 2035-01-01** — der Tag, an dem ein zurückgehaltener Wert öffentlich wird. „Wert wird 2035 veröffentlicht" ist ehrlicher als „unbekannt". |
+| `LotResult.PayerParty` / `.FinancingParty` | 0,9–1,2 % | **Wer zahlt, wer finanziert** — nicht immer der Käufer. Relevant, wenn ein Dritter das Projekt trägt. |
+| `AdditionalNoticeLanguage.ID` | 0,0–0,1 % | Zusätzliche Sprachen (LAV, HRV, MLT) = grenzüberschreitendes Interesse |
+
+### Ein kompletter Fachbereich: ÖPNV-Direktvergaben (legacy)
+
+Ein eigener Formulartyp nach VO (EG) 1370/2007 mit **Qualitätskennzahlen als Pflichtfeld**
+— in keiner unserer Tabellen:
+
+`PUBLIC_SERVICE_OBLIGATIONS/P` · `PUNCTUALITY_RELIABILITY/P` · `CLEANLINESS_ROLLING_STOCK/P` ·
+`CUST_SATISFACTION_SURVEY/P` · `COMPLAINT_HANDLING/P` · `CANCELLATIONS_SERVICES/P` ·
+`ASSIST_PERSONS_REDUCTED_MOB/P` · `INFORMATION_TICKETS/P` · `REWARDS_PENALITIES/P` ·
+`COST_PARAMETERS/P` · `QUANTITY_SCOPE_MOVE/KM_TRANSPORT_SERVICES` (390.000–8,1 Mio. km) ·
+`AWARDED_CONTRACT/NB_KILOMETRES` · `EXCLUSIVE_RIGHTS_GRANTED/P` · `PREDOMINANCE/P` ·
+`CONTRACTOR/OWNERSHIP` (Eigentümerstruktur des Betreibers)
+
+Winzige Abdeckung (0,01–0,03 %), aber für Verkehrsunternehmen und Aufgabenträger ist das
+der gesamte Vertragsinhalt. Und `CONTRACTOR/OWNERSHIP` ist Konzernauflösung ohne
+Handelsregister — bei einer Kundschaft, die genau daran interessiert ist.
+
+### Wer die Ausschreibung tatsächlich abwickelt
+
+| Feld | Gen. | Abd. | Nutzung |
+|---|---|---:|---|
+| **`SENDER/LOGIN`** | ojs | 28,0 % | `DE002` · **`SIMAP2_rwparch`** — der **eSender**. Kennzeichnet das Büro oder die zentrale Stelle, die das Verfahren fährt. Ein Architekturbüro als eSender heißt: dieses Büro betreut die Vergabe. |
+| `SENDER/NO_DOC_EXT` | ojs | 28,0 % | dessen interne Vorgangsnummer |
+| `USER/ORGANISATION` · `/ATTENTION` | ojs | 1,5 % | RWE Power AG, Vattenfall — die einreichende Stelle |
+| `CONTACT_DATA_OTHER_BEHALF_CONTRACTING_AUTORITHY/*` | legacy | 0,7 % | **zentrale Beschaffungsstelle handelt für andere** |
+| `ADDRESS_CONTRACTING_BODY_ADDITIONAL/OFFICIALNAME` | legacy | 0,3 % | zweiter Auftraggeber (Sammelvergabe) |
+| `ContractingRepresentationType.RepresentationTypeCode` | doe | 1,0 % | `cpb-awa` — zentrale Beschaffungsstelle vergibt im eigenen Namen |
+
+Das ist ein eigener Lead-Typ: nicht die Behörde, sondern **das Büro, das für sie
+ausschreibt** — und das laufend weitere Verfahren betreut.
+
+### Wiederkehr-Intervall, explizit in Monaten
+
+| Feld | Gen. | Abd. | Werte |
+|---|---|---:|---|
+| **`RECURRENT_CONTRACT/TIME_FRAME_SUBSEQUENT_CONTRACTS_MONTHS`** | legacy | 0,69 % | **12 (56 %)** · 24 (20 %) · 36 (7 %) |
+| `OPTIONS/TIME_FRAME_SUBSEQUENT_CONTRACTS_MONTH` | legacy/ojs | 0,06–0,87 % | 12 (50–62 %) · 24 · 48 |
+
+Kein Modell nötig: der Käufer nennt das Intervall in Monaten.
+
+### Elektronische Auktion
+
+`USE_ELECTRONIC_AUCTION/P` · `ELECTRONIC_AUCTION/P` · `INFO_ADD_EAUCTION/P` (legacy/ojs,
+0,01–0,13 %) und `AuctionTerms.AuctionURI` / `.AuctionConstraintIndicator` (eforms,
+0,1–0,4 %). Bei einer E-Auktion gewinnt man **live über den Preis** — eine völlig andere
+Angebotsvorbereitung. Wer das nicht vorher weiß, verliert.
+
+### Wettbewerbe, historisch vollständiger als in eForms
+
+| Feld | Gen. | Abd. | Inhalt |
+|---|---|---:|---|
+| `RESULT_CONTEST/PRIZE_VALUE` | legacy/ojs | 0,08–0,53 % | **66.000 € · 70.000 €** Preissumme |
+| `AWARDED_PRIZE/VAL_PRIZE` | legacy | 0,05 % | 107.000 € · 913.150 € |
+| `AWARDED_PRIZE/DATE_DECISION_JURY` | legacy | 0,08 % | Datum des Preisgerichts |
+| **`PARTICIPANTS_NAME/NAME`** | legacy/ojs | 0,03–0,40 % | **Teilnehmer namentlich**: „Ingenhoven Architekten", „Asal und Traub, Pforzheim" |
+| `MEMBERS_NAME/NAME` + `/ORDER` | legacy/ojs | 0,07–0,47 % | Preisgericht namentlich, in Reihenfolge |
+| `AWARD_PRIZES/PARTICIPANTS_NUMBER` | legacy/ojs | 0,17–0,53 % | **335 Teilnehmer** im Extremfall |
+| `AWARD_PRIZES/FOREIGN_PARTICIPANTS_NUMBER` · `NB_PARTICIPANTS_SME` | legacy | 0,01–0,06 % | Ausländer- und KMU-Anteil |
+| `RESTRICTED_CONTEST/PARTICIPANTS_NUMBER` | legacy/ojs | 0,06–0,33 % | Teilnehmerzahl bei begrenzten Wettbewerben |
+| `DETAILS_PAYMENTS_PARTICIPANTS/P` | legacy/ojs | 0,04–0,33 % | Aufwandsentschädigung |
+
+Für ein Architekturbüro ist „335 Teilnehmer, 66.000 € Preissumme, Jury bekannt" die
+komplette Entscheidungsgrundlage — und sie liegt seit 2008 in den Daten.
+
+### Weitere Einzelfunde
+
+| Feld | Gen. | Abd. | Inhalt |
+|---|---|---:|---|
+| `TECHNICAL_SECTION/FORM_LG_LIST` | legacy | **100 %** | DE 95 %, aber **13-sprachige Veröffentlichung 3 %** = bewusst grenzüberschreitend ausgeschrieben |
+| `OBJECT_CONTRACT/REFERENCE_NUMBER` · `FILE_REFERENCE_NUMBER/P` | legacy | 0,8–2,7 % | **Aktenzeichen des Käufers** („VOB GB3 23/024-36 EU") — Anknüpfung an Kundenunterlagen |
+| `AWARDED_CONTRACT/DATE_CONCLUSION_CONTRACT` | legacy | 0,01 % | Vertragsunterzeichnung ≠ Zuschlag |
+| `PROCEDURE/DATE_DISPATCH_INVITATIONS` · `DISPATCH_INVITATIONS_DATE/*` | legacy/ojs | 0,06–5,9 % | wann die Einladungen rausgehen |
+| `CLEARING_LAST_DATE/*` | legacy | 0,04 % | Klärungsfrist |
+| `SOCIAL_STANDARDS/P` · `PERFORMANCE_CONDITIONS/P` | legacy | 0,01–0,06 % | Tariftreue, Vergabemindestentgelt |
+| `LOCATION_NUTS/LOCATION` | ojs | 0,07 % | Adresse **mit** NUTS in einem Feld |
+| `DOCUMENT_METHOD_OF_PAYMENT/P` | ojs | **27,7 %** | „Das eingezahlte Entgelt wird nicht erstattet" — Unterlagen kosteten Geld |
+| `PLACE_OPENING/P` | ojs | 23,5 % | Ort der Submission |
+
+## Was auch der lückenlose Durchgang nicht leisten kann
+
+`is_used` wird über einen **Wert-Join** bestimmt: ein Rohwert gilt als genutzt, wenn er
+identisch in einer Silber-Spalte auftaucht. Felder, die der Parser **umformt**, erscheinen
+dadurch fälschlich als ungenutzt:
+
+- zusammengesetzte Datumsangaben (`/YEAR` + `/MONTH` + `/DAY` → ein `DATE`)
+- gesäuberte Texte (HTML-Entities, Whitespace)
+- übersetzte Codes (`1` → `works`)
+
+Belegt am ojs-Titel: „Personenbeförderung per Bahn" steht in `notices.title`, aber in
+keinem Rohpfad mit exakt diesem Wert. Die Zahl **4.123 ist deshalb eine Obergrenze** —
+die tatsächlich ungenutzte Menge ist kleiner, vor allem bei Datums- und Adressfragmenten.
+Für die *inhaltlichen* Funde oben spielt das keine Rolle: dort wurde jeweils geprüft, dass
+kein entsprechendes Silber-Feld existiert.
