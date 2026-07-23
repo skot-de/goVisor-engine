@@ -208,7 +208,25 @@ CLI: `python -m govisor.cli {ingest|silver|gold|verify|review}`.
 - Weitere offene Punkte: `docs/entscheidungen-und-kontext.md` (ARGE-Namen zerlegen,
   Rahmenvertrags-Abrufe, LLM-Schritte, externe Quellen).
 
-## Frontend-Layer: Supabase (Stand 2026-07-23)
+## Arbeitsweise: lokal entwickeln, Supabase ist Deploy-Ziel (Stand 2026-07-23)
+
+**Entscheidung von Sven:** kein bezahlter Plan, solange das Produkt nicht steht — der Weg
+ist noch lang. Alles wird **lokal** auf Parquet/DuckDB gebaut und geprüft; Supabase (und
+später Vercel) bekommen den fertigen Stand. GitHub läuft normal weiter.
+
+Konsequenzen fürs Bauen:
+- **Suche lokal = `govisor/search.py`** (DuckDB `ILIKE` über `title`/`description`/
+  `lot_title`/`lot_description`, ~320 ms, kein Index). Sie ist der Postgres-Volltextsuche
+  in der Trefferqualität **überlegen**: volle Teilstring-Semantik findet „Großwärmepumpe",
+  was der deutsche Stemmer in Postgres selbst mit `:*` nicht kann. Wer Trefferzahlen
+  zwischen beiden vergleicht, vergleicht **Verfahren, nicht Datenstände**.
+- **Der Export-Pfad bleibt einsatzbereit**, wird aber nicht mehr routinemässig gefahren:
+  `python3 scripts/export_supabase.py --prune` + `scripts/build_search_index.py`.
+- **Der Supabase-Free-Tier ist ausgereizt** (453/500 MB, s. `docs/volltextsuche.md`).
+  Vor dem nächsten Voll-Push braucht es entweder einen grösseren Plan oder eine
+  Textreduktion — nicht einfach nochmal draufschieben.
+
+## Frontend-Layer: Supabase — gebaut, ruht bis zum Deployment (Stand 2026-07-23)
 
 Projekt `production` in der Org **goVisor** (`tegznbkbvbbbgzhsvoza`). Creds in `.secrets/`
 (`supabase.txt` = URL **+** Secret-Key in **zwei Zeilen**, `supabase_db.txt` = DB-Passwort).

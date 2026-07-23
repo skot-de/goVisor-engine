@@ -1,5 +1,12 @@
 # Volltextsuche über Leads
 
+> **Stand 2026-07-23: die Entwicklung läuft lokal.** Supabase ist Deploy-Ziel, nicht
+> Arbeitsumgebung — solange das Produkt nicht steht, lohnt kein bezahlter Plan. Für die
+> lokale Arbeit gilt **`govisor/search.py`** (DuckDB, `ILIKE`, kein Index, ~320 ms und
+> vollständige Teilstring-Semantik). Alles unterhalb beschreibt die **Supabase-Variante**
+> für den Tag des Deployments; sie ist gebaut und funktioniert, aber der Free-Tier ist
+> mit 453/500 MB ausgereizt — s. „Platzbilanz" am Ende.
+
 ## Warum
 
 Ein Lead war bisher nur über **Titel** und **CPV** auffindbar. Das ist zu grob: CPV ist eine
