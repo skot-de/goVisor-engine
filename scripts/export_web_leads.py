@@ -38,13 +38,12 @@ G = "data/gold/DE"
 
 
 def _union(table):
-    """DE-Gold + (falls vorhanden) CH-Gold per union_by_name — CH füllt nur seine Spalten,
-    fehlende werden NULL (DACH-Mehrquellen ohne Schema-Zwang). So fließen CH-Leads in denselben
-    Export, unterschieden über die country-Spalte (→ land)."""
-    files = [f"{G}/{table}.parquet"]
-    ch = f"data/gold/CH/{table}.parquet"
-    if pathlib.Path(ch).exists():
-        files.append(ch)
+    """DE-Gold + jede weitere ``gold/<CC>/<table>.parquet`` (CH, AT, künftige) per union_by_name —
+    jede Quelle füllt nur ihre Spalten, fehlende werden NULL (DACH-Mehrquellen ohne Schema-Zwang).
+    Unterschieden über die country-Spalte (→ land). DE zuerst (Basis-Schema)."""
+    others = sorted(str(p) for p in pathlib.Path("data/gold").glob(f"*/{table}.parquet")
+                    if p.parent.name != "DE")
+    files = [f"{G}/{table}.parquet"] + others
     lst = ", ".join(f"'{f}'" for f in files)
     return f"read_parquet([{lst}], union_by_name=true)"
 
@@ -610,7 +609,10 @@ for key in ["it", "bau", "medizin", "beratung", "sicherheit", "energie"]:
 # PLZ→Koordinate für die echte Umkreissuche: {plz: [lat, lon, ort]}. Aus dim_plz (GeoNames-
 # Zentroide), kompakt gerundet. Das Frontend schlägt die getippte PLZ hier nach und filtert
 # die Leads per Haversine gegen ihre lat/lon — kein Erste-Ziffer-Bundesland-Hack mehr.
-plz_rows = con.execute(f"SELECT plz, lat, lon, ort FROM {PLZ} WHERE lat IS NOT NULL").fetchall()
+# Nur live Länder (DE 5-stellig, CH 4-stellig — disjunkt). AT (4-stellig) kollidiert mit CH
+# (1010 = Wien/Lausanne) → erst mit country-bewusster Tipp-Suche dazunehmen, wenn AT live geht.
+plz_rows = con.execute(
+    f"SELECT plz, lat, lon, ort FROM {PLZ} WHERE lat IS NOT NULL AND country IN ('DE','CH')").fetchall()
 plz_geo = {p: [round(float(la), 4), round(float(lo), 4), o or ""] for p, la, lo, o in plz_rows}
 (OUT / "plz-geo.json").write_text(json.dumps(plz_geo, ensure_ascii=False, separators=(",", ":")))
 print(f"PLZ→Koordinate: {len(plz_geo)} Einträge → plz-geo.json")

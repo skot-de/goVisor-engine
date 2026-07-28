@@ -3216,9 +3216,10 @@ def build_dim_plz(cfg: Config, country: str = "DE"):
     Lead-Geokoder (Buyer-PLZ → Koordinate) **und** City-Such-Geokoder („München" →
     Koordinate, per Ort-Aggregat). Schreibt ``dim_plz`` (plz, lat, lon, ort, bundesland).
 
-    **DACH:** DE (5-stellig) und CH (4-stellig) teilen eine Tabelle — keine Kollision, weil
-    die Stellenzahl disjunkt ist. Für CH steht im ``bundesland``-Feld der Kanton. AT käme
-    genauso dazu (Datei ergänzen). Es werden alle vorhandenen ``{CC}.txt`` gelesen.
+    **DACH — nach (Land, PLZ) verschlüsselt:** AT und CH sind BEIDE 4-stellig und kollidieren
+    (1010 = Wien AT *und* Lausanne CH). Deshalb trägt ``dim_plz`` eine ``country``-Spalte, und
+    alle Geo-Joins (``build_lead_geo`` je Quelle) filtern auf das Land des Leads. Für CH/AT steht
+    im ``bundesland``-Feld der Kanton/das Bundesland. Es werden alle vorhandenen ``{CC}.txt`` gelesen.
     """
     import duckdb
 
@@ -3230,7 +3231,7 @@ def build_dim_plz(cfg: Config, country: str = "DE"):
     con = duckdb.connect()
     con.execute(f"""
         COPY (
-          SELECT plz,
+          SELECT country, plz,
                  round(avg(lat), 5) AS lat,
                  round(avg(lon), 5) AS lon,
                  any_value(ort) AS ort,
@@ -3240,7 +3241,7 @@ def build_dim_plz(cfg: Config, country: str = "DE"):
                  'a1':'VARCHAR','rb':'VARCHAR','a2':'VARCHAR','kreis':'VARCHAR','a3':'VARCHAR',
                  'lat':'DOUBLE','lon':'DOUBLE','acc':'VARCHAR'}})
           WHERE lat IS NOT NULL AND lon IS NOT NULL
-          GROUP BY plz
+          GROUP BY country, plz
         ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
     """)
     n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
@@ -3276,9 +3277,9 @@ def build_lead_geo(cfg: Config, country: str = "DE"):
             SELECT notice_id, any_value(regexp_extract(postal_code, '([0-9]{{{_pd}}})', 1)) plz
             FROM read_parquet({NP}, hive_partitioning=1)
             WHERE role='buyer' AND regexp_extract(postal_code, '([0-9]{{{_pd}}})', 1) <> '' GROUP BY notice_id),
-          ort_geo AS (   -- Ort-Zentroid als Fallback (normalisiert klein)
+          ort_geo AS (   -- Ort-Zentroid als Fallback (normalisiert klein), nur eigenes Land
             SELECT lower(ort) ortk, avg(lat) lat, avg(lon) lon FROM read_parquet({DP})
-            WHERE ort IS NOT NULL GROUP BY 1),
+            WHERE ort IS NOT NULL AND country = '{country}' GROUP BY 1),
           perf AS (   -- Leistungsort-NUTS je Notice (zweite Achse)
             SELECT notice_id, any_value(performance_nuts) pn FROM read_parquet({N}, hive_partitioning=1)
             WHERE performance_nuts IS NOT NULL GROUP BY notice_id),
@@ -3293,7 +3294,7 @@ def build_lead_geo(cfg: Config, country: str = "DE"):
               coalesce(l.buyer_nuts, pf.pn) AS nuts, pf.pn AS perf_nuts
             FROM read_parquet({L}) l
             LEFT JOIN bplz ON bplz.notice_id = l.lead_id
-            LEFT JOIN read_parquet({DP}) p ON p.plz = bplz.plz
+            LEFT JOIN read_parquet({DP}) p ON p.plz = bplz.plz AND p.country = '{country}'
             LEFT JOIN ort_geo o ON o.ortk = lower(l.buyer_town)
             LEFT JOIN perf pf ON pf.notice_id = l.lead_id),
           centroid AS (   -- NUTS-3-Zentroid = Mittel der Buyer-Koordinaten je Region (selbst-abgeleitet)
@@ -3306,6 +3307,100 @@ def build_lead_geo(cfg: Config, country: str = "DE"):
     """)
     n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
     con.close()
+    return n
+
+
+def build_at_gold(cfg: Config, country: str = "AT"):
+    """AT (TED, oberschwellig) → schlanke ``gold/AT/{lead_export,lead_geo,lead_deadline}`` für den
+    Web-Explorer — analog ``simap.build_ch_gold``, aber aus **TED-Silber** (dieselbe Pipeline wie DE,
+    nur ``--country AT``). Reicher als CH: **echter Schätzwert** (``estimated_value``) + **echte Frist**.
+
+    Leads = offene Ausschreibungen (``notice_kind='cn'``, Frist in Zukunft). Geo über ``dim_plz``
+    mit **``country='AT'``-Filter** (AT-PLZ 4-stellig kollidiert mit CH!). Award-Verknüpfung wie CH
+    (Vor-Zuschlag desselben Käufers + volle CPV + Titel-Token → Amtsinhaber unsicher + Bieterzahl).
+    Bewusst KEINE volle DE-Gold-Pipeline (die käme später separat, wenn AT-Volumen es rechtfertigt).
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    g.mkdir(parents=True, exist_ok=True)
+    N = f"'{cfg.silver_table_glob('notices', country)}'"
+    P = f"'{cfg.silver_table_glob('notice_parties', country)}'"
+    A = f"'{cfg.silver_table_glob('awards', country)}'"
+    DP = f"'{(cfg.gold_dir / 'DE' / 'dim_plz.parquet').as_posix()}'"
+    LEAD = "n.notice_kind='cn' AND n.submission_deadline >= current_date"
+    _tok = ("list_filter(string_split(regexp_replace(lower({c}), '[^a-zäöü0-9 ]', ' ', 'g'), ' '),"
+            " w -> length(w) >= 5)")
+    con = duckdb.connect()
+
+    con.execute(f"""COPY (
+      WITH buyer AS (
+        SELECT notice_id, any_value(name) buyer_name,
+               any_value(regexp_extract(postal_code, '([0-9]{{4}})', 1)) plz,
+               any_value(nuts) canton, any_value(town) town
+        FROM read_parquet({P}, hive_partitioning=1) WHERE role='buyer' GROUP BY notice_id),
+      awn AS (
+        SELECT a.notice_id, bu.buyer_name, an.cpv_main, an.title AS atitle,
+               a.winner_name, a.num_tenders, year(an.publication_date) AS ayear
+        FROM read_parquet({A}, hive_partitioning=1) a
+        JOIN read_parquet({N}, hive_partitioning=1) an ON an.notice_id = a.notice_id
+        JOIN buyer bu ON bu.notice_id = a.notice_id
+        WHERE an.notice_kind = 'can' AND a.winner_name IS NOT NULL),
+      matched AS (
+        SELECT n.notice_id AS lead_id, awn.winner_name, awn.num_tenders, awn.ayear,
+               row_number() OVER (PARTITION BY n.notice_id ORDER BY awn.ayear DESC NULLS LAST) rn
+        FROM read_parquet({N}, hive_partitioning=1) n
+        JOIN buyer b ON b.notice_id = n.notice_id
+        JOIN awn ON awn.buyer_name = b.buyer_name AND awn.cpv_main = n.cpv_main
+        WHERE {LEAD}
+          AND list_has_any({_tok.format(c='n.title')}, {_tok.format(c='awn.atitle')}))
+      SELECT n.notice_id AS lead_id, n.title, n.description,
+             length(coalesce(n.description, '')) >= 1000 AS has_detailed_description,
+             b.buyer_name, n.performance_nuts AS buyer_nuts, b.town AS buyer_region_name,
+             n.cpv_main AS cpv_code, n.contract_nature,
+             'open' AS phase,
+             (m.winner_name IS NULL) AS is_new_tender,
+             n.submission_deadline AS deadline_date,
+             date_diff('day', current_date, n.submission_deadline) AS days_to_deadline,
+             n.estimated_value AS value_eur,                 -- AT: echter Schätzwert (TED)
+             CASE WHEN n.estimated_value IS NOT NULL THEN 'estimated' ELSE 'unknown' END AS value_source,
+             n.ted_url AS source_url, n.ted_url AS documents_url,
+             FALSE AS is_nationwide, 'AT' AS country,
+             m.winner_name AS incumbent_name, m.ayear AS incumbent_since_year,
+             CASE WHEN m.winner_name IS NOT NULL THEN 'uncertain' END AS incumbent_source,
+             CASE WHEN m.winner_name IS NOT NULL THEN 0.55 END AS incumbent_confidence,
+             m.num_tenders AS n_bidders,
+             CASE WHEN m.num_tenders IS NOT NULL THEN 'actual' END AS competition_source,
+             CASE WHEN m.num_tenders IS NULL THEN NULL
+                  WHEN m.num_tenders <= 2 THEN 'low'
+                  WHEN m.num_tenders <= 5 THEN 'medium' ELSE 'high' END AS competition_level
+      FROM read_parquet({N}, hive_partitioning=1) n
+      LEFT JOIN buyer b ON b.notice_id = n.notice_id
+      LEFT JOIN matched m ON m.lead_id = n.notice_id AND m.rn = 1
+      WHERE {LEAD}
+    ) TO '{(g / 'lead_export.parquet').as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
+
+    con.execute(f"""COPY (
+      WITH buyer AS (
+        SELECT notice_id, any_value(regexp_extract(postal_code, '([0-9]{{4}})', 1)) plz,
+               any_value(town) town
+        FROM read_parquet({P}, hive_partitioning=1) WHERE role='buyer' GROUP BY notice_id)
+      SELECT n.notice_id AS lead_id, dp.lat, dp.lon, b.plz, b.town AS ort,
+             CASE WHEN dp.lat IS NOT NULL THEN 'plz' ELSE 'none' END AS geo_source
+      FROM read_parquet({N}, hive_partitioning=1) n
+      LEFT JOIN buyer b ON b.notice_id = n.notice_id
+      LEFT JOIN read_parquet({DP}) dp ON dp.plz = b.plz AND dp.country = 'AT'
+      WHERE {LEAD}
+    ) TO '{(g / 'lead_geo.parquet').as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
+
+    con.execute(f"""COPY (
+      SELECT n.notice_id, n.submission_deadline AS deadline_date, 'echt' AS deadline_source
+      FROM read_parquet({N}, hive_partitioning=1) n WHERE {LEAD}
+    ) TO '{(g / 'lead_deadline.parquet').as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
+
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{(g / 'lead_export.parquet').as_posix()}')").fetchone()[0]
+    con.close()
+    print(f"AT Gold: {n} offene Ausschreibungen → lead_export/lead_geo/lead_deadline")
     return n
 
 

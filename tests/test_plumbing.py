@@ -502,3 +502,21 @@ def test_simap_gold_bridge_wired():
     assert hasattr(simap, "build_ch_gold")
     # notice_kind-Mapping: Ausschreibung → cn (wird Lead), Zuschlag → can (kein Lead)
     assert simap._KIND["tender"] == "cn" and simap._KIND["award"] == "can"
+
+
+def test_at_bridge_wired_and_dim_plz_country_keyed():
+    """AT-Gold-Brücke (build_at_gold) + CLI `gold --bridge` da; dim_plz nach (country, plz)
+    verschlüsselt, damit AT/CH-4-stellige PLZ nicht kollidieren (1010 = Wien AT / Lausanne CH)."""
+    import glob
+    import duckdb
+    from govisor import cli, gold
+
+    assert hasattr(gold, "build_at_gold")
+    args = cli.build_parser().parse_args(["gold", "--country", "AT", "--bridge"])
+    assert args.bridge is True and args.country == "AT"
+
+    dp = glob.glob("data/gold/DE/dim_plz.parquet")
+    if dp:   # nur wenn dim_plz gebaut ist
+        cols = [c[0] for c in duckdb.connect().execute(
+            f"describe select * from read_parquet('{dp[0]}')").fetchall()]
+        assert "country" in cols, "dim_plz braucht country-Spalte (AT/CH-PLZ-Kollision)"

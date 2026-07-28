@@ -462,7 +462,7 @@ def build_ch_gold(cfg: Config, country: str = "CH") -> int:
              CASE WHEN dp.lat IS NOT NULL THEN 'plz' ELSE 'none' END AS geo_source
       FROM read_parquet({N}, hive_partitioning=1) n
       LEFT JOIN buyer b ON b.notice_id = n.notice_id
-      LEFT JOIN read_parquet({DP}) dp ON dp.plz = b.plz
+      LEFT JOIN read_parquet({DP}) dp ON dp.plz = b.plz AND dp.country = 'CH'
       WHERE {LEAD}
     ) TO '{(g / 'lead_geo.parquet').as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
 

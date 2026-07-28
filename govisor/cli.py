@@ -75,6 +75,8 @@ def build_parser() -> argparse.ArgumentParser:
     goldp = sub.add_parser("gold", help="Verfahren aus Silber ableiten")
     goldp.add_argument("--country", default="DE")
     goldp.add_argument("--data-dir", default="data")
+    goldp.add_argument("--bridge", action="store_true",
+                       help="schlanke Quell-Gold-Brücke statt voller Pipeline (z.B. AT: build_at_gold)")
     goldp.add_argument("--as-of", dest="as_of", default=None,
                        help="Stichtag YYYY-MM-DD für den Auslauf-Radar (Default: heute)")
 
@@ -292,6 +294,12 @@ def main(argv: list[str] | None = None) -> int:
         from . import gold
         cfg = Config(countries=(args.country,), data_dir=args.data_dir)
         c = args.country
+        if args.bridge:
+            # Schlanke Brücke (nur lead_export/geo/deadline) — für Quellen, die keine volle
+            # DE-getunte Pipeline rechtfertigen. AT = TED-Silber → build_at_gold.
+            n = gold.build_at_gold(cfg, c)
+            print(f"  → {n:,} {c}-Leads in Gold. `scripts/export_web_leads.py` laufen lassen.")
+            return 0
         if c in locales.LOCALES:
             locales.use(c)               # Klassifikation/Deflator/Register aus dem Länder-Profil
         print("procedures  :", f"{gold.build_procedures(cfg, c):,}")
