@@ -1505,3 +1505,16 @@ tr.wf-verworfen .ttitel{color:var(--ink-400);text-decoration:line-through;text-d
 /* Länderspezifischer „Zusätzliche Angaben"-Block (CH/AT) — Herkunfts-Tag am Titel */
 .dbody-ov .sec h4 .land-tag{ font-size:11px; font-weight:600; color:var(--muted,#667085);
   background:var(--chip,#f2f4f7); border-radius:6px; padding:2px 7px; margin-left:8px; vertical-align:middle; }
+
+/* Ticket 22 — Empfehlung (Lead-Liste-Spalte + Detail-Kopfverdikt) */
+.c-empf{ line-height:1.2; }
+.empf{ display:inline-block; font-size:11px; font-weight:600; border-radius:6px; padding:2px 8px; white-space:nowrap; }
+.empf-go{ background:#e7f5ec; color:#177245; }          /* antreten — grün gefüllt */
+.empf-skip{ background:var(--chip,#f2f4f7); color:#98a2b3; }  /* überspringen — gedämpft */
+.empf-open{ background:transparent; color:#475467; border:1px solid var(--line,#e4e7ec); }  /* offen — neutral */
+.empf-open::before{ content:'●'; color:#98a2b3; margin-right:4px; font-size:8px; vertical-align:1px; }
+.empf-grund{ display:block; font-size:10px; color:var(--muted,#667085); margin-top:2px;
+  max-width:180px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.empf-head{ display:flex; align-items:center; gap:10px; margin-bottom:var(--s3,12px); }
+.empf-head .empf{ font-size:13px; padding:4px 12px; }
+.empf-head .empf-grund{ max-width:none; font-size:12px; margin:0; white-space:normal; }

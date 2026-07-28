@@ -299,6 +299,45 @@ function bidNoBid(l){
 }
 function dots(n){ let s=''; for(let i=0;i<4;i++) s += i<n?'●':'○'; return s; }
 
+/* Ticket 22 — Empfehlung: ein Handlungs-Urteil (antreten/überspringen/offen) als dünne
+ * Ableitung über Relevanz + Chance (Verdrängbarkeit). Kein neues Modell. Prinzip: lieber
+ * „offen" als ein falsches Urteil. Schwellen zentral, Gründe aus festem Katalog (nicht generativ).
+ * Aufwand fließt NICHT als Auslöser eines „überspringen" ein (Freitext-Aufwand = V2). */
+const EMPF_SCHWELLEN = { relHi:'hoch', relLo:'niedrig', chanceHi:'hoch', chanceLo:'niedrig' };
+const EMPF_GRUND = {
+  kein_profil:  'Ohne geschärftes Profil keine Relevanz — Urteil nicht möglich.',
+  keine_chance: 'Erstvergabe — kein Amtsinhaber, keine Vorgängerdaten für die Chance.',
+  offene_gebote:'Läuft noch — keine Gebotsgrundlage für ein Wettbewerbs-Urteil.',
+  fit_offen:    'Hohe Passung, Wettbewerb offen — hier lohnt der Einsatz.',
+  fit_angreif:  'Hohe Passung, Amtsinhaber angreifbar.',
+  rel_niedrig:  'Passt nur halb — Relevanz niedrig.',
+  incumbent:    'Amtsinhaber sitzt fest — geringe Verdrängbarkeit.',
+  grenzfall:    'Grenzfall — Relevanz und Chance mittel, kein klares Urteil.',
+};
+const EMPF = {
+  antreten:     { t:'Antreten',     cls:'empf-go'   },
+  ueberspringen:{ t:'Überspringen', cls:'empf-skip' },
+  offen:        { t:'Offen',        cls:'empf-open' },
+};
+function empfehlung(l){
+  const m = l.match;
+  const rel = m ? m.relevanz : 'na';          // Relevanz braucht ein Profil
+  const chance = l.wechsel;                    // Verdrängbarkeit: hoch/mittel/niedrig/na
+  // „offen" ist vollwertig, kein Fehler — immer, wenn ein Eingang für ein Urteil fehlt.
+  if(rel === 'na')                    return { v:'offen', code:'kein_profil' };
+  if(l.src === 'f01')                 return { v:'offen', code:'keine_chance' };   // Ankündigung
+  if(chance == null || chance === 'na')
+    return { v:'offen', code: l.neu ? 'keine_chance' : 'offene_gebote' };
+  // Antreten: hohe Relevanz UND gute Chance (beide 🟢-Eingänge)
+  if(rel === EMPF_SCHWELLEN.relHi && (chance === 'hoch' || chance === 'mittel'))
+    return { v:'antreten', code: chance === 'hoch' ? 'fit_angreif' : 'fit_offen' };
+  // Überspringen: belegtes Negativ — niedrige Relevanz ODER fester Amtsinhaber.
+  if(rel === EMPF_SCHWELLEN.relLo)    return { v:'ueberspringen', code:'rel_niedrig' };
+  if(chance === EMPF_SCHWELLEN.chanceLo) return { v:'ueberspringen', code:'incumbent' };
+  // Sonst: Graubereich → offen (ehrlicher als ein weiches Urteil).
+  return { v:'offen', code:'grenzfall' };
+}
+
 const BRANCHEN = {
   it:        'IT & Software',
   bau:       'Bau & Infrastruktur',
@@ -474,6 +513,7 @@ const COLS = [
   {key:'star',  label:'',          on:true,  lock:true,  th:'center'},
   {key:'src',   label:'Phase',     on:true},
   {key:'wf',    label:'Status',    on:true},
+  {key:'empf',  label:'Empfehlung',on:true},
   {key:'titel', label:'Ausschreibung', on:true, lock:true},
   {key:'natur', label:'Leistung',  on:true},
   {key:'rahmen',label:'Rahmen',    on:false},
@@ -645,6 +685,12 @@ function cellHTML(l, key){
     case 'aufwand': {
       const a = aufwandStufe(l);
       return `<td class="c-band">${bandMeter(a.stufe, true)}</td>`;
+    }
+    case 'empf': {
+      const e = empfehlung(l), meta = EMPF[e.v];
+      // Zustand + Grund-Kurztext untereinander. „offen" neutral, nie rot/als Fehler.
+      return `<td class="c-empf"><span class="empf ${meta.cls}" title="${EMPF_GRUND[e.code]}">${meta.t}</span>` +
+             `<span class="empf-grund">${EMPF_GRUND[e.code]}</span></td>`;
     }
     case 'region': return `<td class="c-region">${l.region}</td>`;
     case 'inc': return `<td class="c-inc">${l.incumbent ? val(l.incumbent.name, l.incumbent.src) : '<span style="color:var(--ink-300)">offen</span>'}</td>`;
@@ -1220,6 +1266,9 @@ function renderAnalyse(l){
 
     <section class="sec" id="an-bewertung" data-sec="bewertung">
       <h4>Bewertung</h4>
+      ${(()=>{ const e = empfehlung(l), m = EMPF[e.v];   // Ticket 22 — Kopf-Verdikt über den Scores
+        return `<div class="empf-head"><span class="empf ${m.cls}">${m.t}</span><span class="empf-grund">${EMPF_GRUND[e.code]}</span></div>`;
+      })()}
       ${(()=>{ const b = bidNoBid(l); if(!b) return '';
         // #19 Bid/No-Bid — Einordnung aus den vier Faktoren, K.o. vorgeschaltet.
         return `<div class="bnb bnb-${b.einordnung.cls}">
