@@ -609,13 +609,17 @@ for key in ["it", "bau", "medizin", "beratung", "sicherheit", "energie"]:
 # PLZ→Koordinate für die echte Umkreissuche: {plz: [lat, lon, ort]}. Aus dim_plz (GeoNames-
 # Zentroide), kompakt gerundet. Das Frontend schlägt die getippte PLZ hier nach und filtert
 # die Leads per Haversine gegen ihre lat/lon — kein Erste-Ziffer-Bundesland-Hack mehr.
-# Nur live Länder (DE 5-stellig, CH 4-stellig — disjunkt). AT (4-stellig) kollidiert mit CH
-# (1010 = Wien/Lausanne) → erst mit country-bewusster Tipp-Suche dazunehmen, wenn AT live geht.
+# PLZ→Koordinate country-verschachtelt: {DE:{plz:[lat,lon,ort]}, CH:{…}, AT:{…}}. Nötig, weil
+# AT und CH BEIDE 4-stellig sind und kollidieren (1010 = Wien AT / Lausanne CH) — die getippte
+# Suche wählt anhand des aktiven Länderfilters. DE (5-stellig) bleibt eindeutig.
 plz_rows = con.execute(
-    f"SELECT plz, lat, lon, ort FROM {PLZ} WHERE lat IS NOT NULL AND country IN ('DE','CH')").fetchall()
-plz_geo = {p: [round(float(la), 4), round(float(lo), 4), o or ""] for p, la, lo, o in plz_rows}
+    f"SELECT country, plz, lat, lon, ort FROM {PLZ} WHERE lat IS NOT NULL").fetchall()
+plz_geo = {}
+for cc, p, la, lo, o in plz_rows:
+    plz_geo.setdefault(cc, {})[p] = [round(float(la), 4), round(float(lo), 4), o or ""]
 (OUT / "plz-geo.json").write_text(json.dumps(plz_geo, ensure_ascii=False, separators=(",", ":")))
-print(f"PLZ→Koordinate: {len(plz_geo)} Einträge → plz-geo.json")
+print(f"PLZ→Koordinate: {sum(len(v) for v in plz_geo.values())} Einträge "
+      f"({', '.join(f'{k}:{len(v)}' for k, v in plz_geo.items())}) → plz-geo.json")
 
 print(f"\nGesamt-Bestand je Grundraum: {counts}")
 print(f"Dateien in {OUT}/")

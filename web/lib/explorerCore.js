@@ -382,10 +382,24 @@ const ORTE = {
 // Koordinate vorliegt). Nicht kreisscharf.
 const PLZ = {'0':'DED','1':'DE3','2':'DE9','3':'DE9','4':'DEA','5':'DEA','6':'DE7','7':'DE1','8':'DE2','9':'DE2'};
 
-// PLZ→[lat, lon, ort] aus dim_plz (via /api/plz-geo, einmal geladen). Basis der ECHTEN
-// Umkreissuche: getippte PLZ → Koordinate → Haversine gegen die lat/lon der Leads.
+// PLZ→[lat, lon, ort], country-verschachtelt {DE:{plz:…}, CH:{…}, AT:{…}} (via /api/plz-geo,
+// einmal geladen). Basis der ECHTEN Umkreissuche. AT und CH sind BEIDE 4-stellig und
+// kollidieren (1010 = Wien/Lausanne) → 4-stellige PLZ werden über den aktiven Länderfilter
+// (PLZ_LAND) aufgelöst, sonst CH bevorzugt (live), dann AT.
 let PLZ_GEO = {};
+let PLZ_LAND = '';   // aktiver DACH-Länderfilter (ein einzelnes Land) für die 4-stellige Auflösung
 function setPlzGeo(d){ PLZ_GEO = d || {}; }
+function setPlzLand(l){ PLZ_LAND = l || ''; }
+// PLZ → [lat, lon, ort] mit Länder-Disambiguierung. 5-stellig = DE eindeutig; 4-stellig = CH/AT.
+function plzLookup(q){
+  if(/^\d{5}$/.test(q)) return (PLZ_GEO.DE || {})[q] || null;
+  if(/^\d{4}$/.test(q)){
+    const pref = (PLZ_LAND === 'CH' || PLZ_LAND === 'AT') ? PLZ_LAND : null;
+    if(pref && (PLZ_GEO[pref] || {})[q]) return PLZ_GEO[pref][q];
+    return (PLZ_GEO.CH || {})[q] || (PLZ_GEO.AT || {})[q] || null;   // CH zuerst (live)
+  }
+  return null;
+}
 // Großkreis-Distanz in km (Haversine). Für den PLZ-Umkreisfilter.
 function haversine(la1, lo1, la2, lo2){
   const R = 6371, r = x => x * Math.PI / 180;
@@ -459,8 +473,8 @@ function toggleToken(tok){
 function classifyQuery(raw){
   const q = raw.trim().toLowerCase(); if(!q) return null;
   if(ORTE[q]) return {type:'ort',label:ORTE[q].label,value:ORTE[q].region};
-  if(/^\d{4,5}$/.test(q)){                   // volle PLZ (DE 5-, CH 4-stellig) → echte Umkreissuche
-    const g = PLZ_GEO[q];
+  if(/^\d{4,5}$/.test(q)){                   // volle PLZ (DE 5-, CH/AT 4-stellig) → echte Umkreissuche
+    const g = plzLookup(q);
     if(g) return {type:'ort', value:q, coord:[g[0], g[1]], radius:25,
                   label:'PLZ '+q+(g[2] ? ' '+g[2] : '')};
   }
@@ -726,10 +740,10 @@ function suggestList(raw){
   const out=[]; const seen=new Set();
   const push=(o)=>{const k=o.type+o.value; if(!seen.has(k)){seen.add(k); out.push(o);}};
   for(const [k,v] of Object.entries(ORTE)) if(k.startsWith(q)) push({type:'ort',value:v.region,label:v.label,cat:'Ort'});
-  if(/^\d{4,5}$/.test(q) && PLZ_GEO[q]){                  // volle PLZ (DE 5-, CH 4-stellig)
-    const g = PLZ_GEO[q];
-    push({type:'ort', value:q, coord:[g[0], g[1]], radius:25, cat:'Umkreis',
-          label:'PLZ '+q+(g[2] ? ' '+g[2] : '')});
+  const _pg = /^\d{4,5}$/.test(q) ? plzLookup(q) : null;
+  if(_pg){                                                // volle PLZ (DE 5-, CH/AT 4-stellig)
+    push({type:'ort', value:q, coord:[_pg[0], _pg[1]], radius:25, cat:'Umkreis',
+          label:'PLZ '+q+(_pg[2] ? ' '+_pg[2] : '')});
   } else if(/^\d{2,5}$/.test(q) && PLZ[q[0]]) push({type:'ort',value:PLZ[q[0]],label:'PLZ '+q+' (Region)',cat:'Ort'});
   [...new Set(LEADS.map(l=>l.buyerShort))].forEach(b=>{ if(b.toLowerCase().includes(q)) push({type:'buyer',value:b,label:b,cat:'Auftraggeber'}); });
   [...new Set(LEADS.flatMap(l=>(l.kw||[]).map(k=>k.w)))].forEach(w=>{ if(w.toLowerCase().includes(q)) push({type:'text',value:w.toLowerCase(),label:w,cat:'Stichwort'}); });
@@ -2169,7 +2183,7 @@ function applyProfile(key){
   setProfile(activeProfile ? profileFromPreset(activeProfile) : null);
 }
 
-export { applyState, getState, setLeads, setMarket, setPlzGeo, setUserContracts, applyProfile, setProfile, getProfile, PROFILES, parseWert, netzInteresse, netzFreigabe, offeneGruppen };
+export { applyState, getState, setLeads, setMarket, setPlzGeo, setPlzLand, setUserContracts, applyProfile, setProfile, getProfile, PROFILES, parseWert, netzInteresse, netzFreigabe, offeneGruppen };
 export {
   renderUebersicht, renderTeilnahme, renderAnalyse, renderMarkt, renderBuyer,
   renderTeam, renderGate, renderProfil, REGIONS,

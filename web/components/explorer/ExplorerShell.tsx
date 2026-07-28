@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   LEADS, BRANCHEN, COLS, applyState, visible, sorted, syncLocationColumn,
-  suggestList, classifyQuery, netzInteresse, netzFreigabe, offeneGruppen, angaben, setLeads, setMarket, setPlzGeo,
+  suggestList, classifyQuery, netzInteresse, netzFreigabe, offeneGruppen, angaben, setLeads, setMarket, setPlzGeo, setPlzLand,
   applyProfile, setProfile, setUserContracts, PROFILES, parseWert, aufwandStufe,
 } from "@/lib/explorerCore";
 import { loadContracts } from "@/lib/supabase/contracts";
@@ -210,6 +210,10 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   useEffect(() => {
     fetch("/api/plz-geo").then((r) => r.json()).then(setPlzGeo).catch(() => {});
   }, []);
+  // Aktiver DACH-Länderfilter → getippte 4-stellige PLZ (CH/AT kollidieren) dorthin auflösen.
+  useEffect(() => {
+    setPlzLand(adv.staaten.length === 1 ? adv.staaten[0] : "");
+  }, [adv.staaten]);
 
   // Echte Marktblöcke (Chancen-Tab) laden und bei Branchenwechsel in den Kern schieben.
   const marktRef = useRef<Record<string, unknown>>({});
