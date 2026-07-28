@@ -846,7 +846,7 @@ function renderUebersicht(l){
             ? '<span class="vm">nicht kreisgenau — kein Marktkontext</span>'
             : '<button class="inline-link" data-tab="markt">Markt ansehen</button>'}</span></div>
         <div class="kvi"><span class="k">Vertragsart</span>
-          <span class="vv">${iv(l.art,'echt')}</span></div>
+          <span class="vv">${l.art?iv(l.art,'echt'):l.istRahmen?iv('Rahmenvertrag','echt'):'<span class="v-unk">nicht angegeben</span>'}</span></div>
       <div class="kvi"><span class="k">Grundlaufzeit</span>
           <span class="vv">${l.laufzeit?iv(l.laufzeit,'echt'):'<span class="v-unk">nicht angegeben</span>'}</span></div>
         <div class="kvi"><span class="k">Geplanter Beginn</span>

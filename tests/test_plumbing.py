@@ -490,3 +490,15 @@ def test_simap_parser_maps_award_richness():
     assert {c["cpv_code"] for c in t["notice_cpv"]} == {"45000000", "45210000"}
     paths = {a["path"] for a in t["attributes"]}
     assert "simap/publicationTed" in paths and "simap/bkp" in paths and "simap/stateContractArea" in paths
+
+
+def test_simap_gold_bridge_wired():
+    """CH-Gold-Brücke: CLI --gold verdrahtet, build_ch_gold da, tender→'cn' Mapping (nur
+    offene Ausschreibungen werden Leads, nicht Zuschläge)."""
+    from govisor import cli, simap
+
+    args = cli.build_parser().parse_args(["ingest-simap", "--max-pages", "0", "--gold"])
+    assert args.gold is True and args.command == "ingest-simap"
+    assert hasattr(simap, "build_ch_gold")
+    # notice_kind-Mapping: Ausschreibung → cn (wird Lead), Zuschlag → can (kein Lead)
+    assert simap._KIND["tender"] == "cn" and simap._KIND["award"] == "can"
