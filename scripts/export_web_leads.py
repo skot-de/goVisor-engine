@@ -25,6 +25,8 @@ MO = f"read_parquet('{G}/market_opportunity.parquet')"
 CS = f"read_parquet('{G}/contractor_stats.parquet')"
 EI = f"read_parquet('{G}/entity_identity.parquet')"
 DL = f"read_parquet('{G}/lead_deadline.parquet')"   # Angebotsfrist-Herkunft (#16)
+LG = f"read_parquet('{G}/lead_geo.parquet')"        # Koordinate je Lead (echter km-Radius)
+PLZ = f"read_parquet('{G}/dim_plz.parquet')"        # PLZ→Zentroid für die PLZ-Umkreissuche
 
 
 def de_date(d):
@@ -320,11 +322,13 @@ def export_branche(key):
     rows = con.execute(f"""
         WITH mapped AS (
           SELECT e.*, cl.label AS cpv_label, {BRANCHE} AS ui_branche,
-                 dl.deadline_source AS frist_source
+                 dl.deadline_source AS frist_source,
+                 lg.lat AS geo_lat, lg.lon AS geo_lon
           FROM {E} e
           LEFT JOIN {DC} b ON b.division = substr(e.cpv_code, 1, 2)
           LEFT JOIN {CL} cl ON cl.cpv_code = e.cpv_code
           LEFT JOIN {DL} dl ON dl.notice_id = e.lead_id
+          LEFT JOIN {LG} lg ON lg.lead_id = e.lead_id
         )
         SELECT * FROM mapped WHERE ui_branche = '{key}'
           -- Nativ: Auslauf-Radar nur bis 18 Monate Vertragsende (weiter = kein handlungs-
@@ -374,6 +378,10 @@ def export_branche(key):
             "hasDetail": bool(g("has_detailed_description")),
             "cpv": g("cpv_code"), "cpvLabel": g("cpv_label") or g("buyer_activity") or "",
             "region": g("buyer_region_name") or g("region") or "", "nuts": g("buyer_nuts") or "",
+            # Koordinate (Käufersitz) für die echte PLZ-Umkreissuche (Haversine im Frontend);
+            # None, wenn kein Geo-Bezug (bundesweite/ortsungebundene Leads) — ehrlich leer.
+            "lat": round(float(r["geo_lat"]), 4) if g("geo_lat") is not None else None,
+            "lon": round(float(r["geo_lon"]), 4) if g("geo_lon") is not None else None,
             "marktRegion": g("market_nuts3"), "marktRegionOk": bool(g("market_region_known")),
             "is_nationwide": bool(g("is_nationwide")),
             "contractKind": g("contract_kind"),
@@ -492,5 +500,14 @@ for key in ["it", "bau", "medizin", "beratung", "sicherheit", "energie"]:
 (OUT / "markt.json").write_text(json.dumps(markets, ensure_ascii=False))
 
 (OUT / "branchen.json").write_text(json.dumps(counts, ensure_ascii=False))
+
+# PLZ→Koordinate für die echte Umkreissuche: {plz: [lat, lon, ort]}. Aus dim_plz (GeoNames-
+# Zentroide), kompakt gerundet. Das Frontend schlägt die getippte PLZ hier nach und filtert
+# die Leads per Haversine gegen ihre lat/lon — kein Erste-Ziffer-Bundesland-Hack mehr.
+plz_rows = con.execute(f"SELECT plz, lat, lon, ort FROM {PLZ} WHERE lat IS NOT NULL").fetchall()
+plz_geo = {p: [round(float(la), 4), round(float(lo), 4), o or ""] for p, la, lo, o in plz_rows}
+(OUT / "plz-geo.json").write_text(json.dumps(plz_geo, ensure_ascii=False, separators=(",", ":")))
+print(f"PLZ→Koordinate: {len(plz_geo)} Einträge → plz-geo.json")
+
 print(f"\nGesamt-Bestand je Grundraum: {counts}")
 print(f"Dateien in {OUT}/")

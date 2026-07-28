@@ -336,8 +336,21 @@ const ORTE = {
   'schleswig-holstein':{region:'DEF',label:'Schleswig-Holstein'},'sh':{region:'DEF',label:'Schleswig-Holstein'},
   'thüringen':{region:'DEG',label:'Thüringen'},'thueringen':{region:'DEG',label:'Thüringen'},
 };
-// PLZ-Erststelle → NUTS1 (grob; für getippte PLZ-Suche). Nicht kreisscharf, reicht als Region.
+// PLZ-Erststelle → NUTS1 (grob; NUR Fallback für 2–4-stellige Eingaben, wenn keine echte
+// Koordinate vorliegt). Nicht kreisscharf.
 const PLZ = {'0':'DED','1':'DE3','2':'DE9','3':'DE9','4':'DEA','5':'DEA','6':'DE7','7':'DE1','8':'DE2','9':'DE2'};
+
+// PLZ→[lat, lon, ort] aus dim_plz (via /api/plz-geo, einmal geladen). Basis der ECHTEN
+// Umkreissuche: getippte PLZ → Koordinate → Haversine gegen die lat/lon der Leads.
+let PLZ_GEO = {};
+function setPlzGeo(d){ PLZ_GEO = d || {}; }
+// Großkreis-Distanz in km (Haversine). Für den PLZ-Umkreisfilter.
+function haversine(la1, lo1, la2, lo2){
+  const R = 6371, r = x => x * Math.PI / 180;
+  const dLa = r(la2 - la1), dLo = r(lo2 - lo1);
+  const a = Math.sin(dLa/2)**2 + Math.cos(r(la1)) * Math.cos(r(la2)) * Math.sin(dLo/2)**2;
+  return 2 * R * Math.asin(Math.sqrt(a));
+}
 // Erreichbare Regionen je Umkreis (Demo)
 const PLACE_RADIUS = {
   'DE21':{25:['DE21'],50:['DE21','DE27'],100:['DE21','DE27','DE22','DE23','DE25']},
@@ -353,6 +366,10 @@ const leadText = l => (l.titel+' '+l.buyer+' '+l.buyerShort+' '+l.natur+' '+(l.b
 
 function matchToken(l,t){
   if(t.type==='ort'){
+    if(t.coord){                                    // volle PLZ → echter km-Radius (Haversine)
+      if(l.lat==null || l.lon==null) return false;  // ohne Koordinate kein Umkreis-Treffer
+      return haversine(t.coord[0], t.coord[1], l.lat, l.lon) <= (t.radius || 25);
+    }
     const reach = (t.radius && PLACE_RADIUS[t.value]?.[t.radius]) || [t.value];
     return reach.some(code => (l.nuts||'').startsWith(code));
   }
@@ -400,7 +417,13 @@ function toggleToken(tok){
 function classifyQuery(raw){
   const q = raw.trim().toLowerCase(); if(!q) return null;
   if(ORTE[q]) return {type:'ort',label:ORTE[q].label,value:ORTE[q].region};
-  if(/^\d{2,5}$/.test(q) && PLZ[q[0]]) return {type:'ort',label:'PLZ '+q+'…',value:PLZ[q[0]]};
+  if(/^\d{5}$/.test(q)){                     // volle PLZ → echte Umkreissuche (Haversine)
+    const g = PLZ_GEO[q];
+    if(g) return {type:'ort', value:q, coord:[g[0], g[1]], radius:25,
+                  label:'PLZ '+q+(g[2] ? ' '+g[2] : '')};
+  }
+  // 2–4-stellig (oder PLZ ohne Koordinate): grobe NUTS1-Region als ehrlicher Fallback.
+  if(/^\d{2,5}$/.test(q) && PLZ[q[0]]) return {type:'ort',label:'PLZ '+q+' (Region)',value:PLZ[q[0]]};
   return {type:'text',label:'„'+raw.trim()+'"',value:q};
 }
 let sortKey = 'frist', sortDir = 1;
@@ -654,7 +677,11 @@ function suggestList(raw){
   const out=[]; const seen=new Set();
   const push=(o)=>{const k=o.type+o.value; if(!seen.has(k)){seen.add(k); out.push(o);}};
   for(const [k,v] of Object.entries(ORTE)) if(k.startsWith(q)) push({type:'ort',value:v.region,label:v.label,cat:'Ort'});
-  if(/^\d{2,5}$/.test(q) && PLZ[q[0]]) push({type:'ort',value:PLZ[q[0]],label:'PLZ '+q+'…',cat:'Ort'});
+  if(/^\d{5}$/.test(q) && PLZ_GEO[q]){                    // volle PLZ → echte Umkreissuche
+    const g = PLZ_GEO[q];
+    push({type:'ort', value:q, coord:[g[0], g[1]], radius:25, cat:'Umkreis',
+          label:'PLZ '+q+(g[2] ? ' '+g[2] : '')});
+  } else if(/^\d{2,5}$/.test(q) && PLZ[q[0]]) push({type:'ort',value:PLZ[q[0]],label:'PLZ '+q+' (Region)',cat:'Ort'});
   [...new Set(LEADS.map(l=>l.buyerShort))].forEach(b=>{ if(b.toLowerCase().includes(q)) push({type:'buyer',value:b,label:b,cat:'Auftraggeber'}); });
   [...new Set(LEADS.flatMap(l=>(l.kw||[]).map(k=>k.w)))].forEach(w=>{ if(w.toLowerCase().includes(q)) push({type:'text',value:w.toLowerCase(),label:w,cat:'Stichwort'}); });
   [...new Set(LEADS.map(l=>l.natur))].forEach(n=>{ if(n.toLowerCase().includes(q)) push({type:'text',value:n.toLowerCase(),label:n,cat:'Leistung'}); });
@@ -2080,7 +2107,7 @@ function applyProfile(key){
   setProfile(activeProfile ? profileFromPreset(activeProfile) : null);
 }
 
-export { applyState, getState, setLeads, setMarket, setUserContracts, applyProfile, setProfile, getProfile, PROFILES, parseWert, netzInteresse, netzFreigabe, offeneGruppen };
+export { applyState, getState, setLeads, setMarket, setPlzGeo, setUserContracts, applyProfile, setProfile, getProfile, PROFILES, parseWert, netzInteresse, netzFreigabe, offeneGruppen };
 export {
   renderUebersicht, renderTeilnahme, renderAnalyse, renderMarkt, renderBuyer,
   renderTeam, renderGate, renderProfil, REGIONS,

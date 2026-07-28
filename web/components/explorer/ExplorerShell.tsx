@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   LEADS, BRANCHEN, COLS, applyState, visible, sorted, syncLocationColumn,
-  suggestList, classifyQuery, netzInteresse, netzFreigabe, offeneGruppen, angaben, setLeads, setMarket,
+  suggestList, classifyQuery, netzInteresse, netzFreigabe, offeneGruppen, angaben, setLeads, setMarket, setPlzGeo,
   applyProfile, setProfile, setUserContracts, PROFILES, parseWert, aufwandStufe,
 } from "@/lib/explorerCore";
 import { loadContracts } from "@/lib/supabase/contracts";
@@ -27,7 +27,7 @@ const PROFILE_KEY = "govisor.profile.v1";
 import { Workspace, ColumnMenu, FilterBar, Suggestions, HeaderFilterPopover } from "./parts";
 
 type Lead = { id: string; branche?: string; merk?: unknown; [k: string]: unknown };
-type Token = { type: string; value: string; label: string; radius?: number | null };
+type Token = { type: string; value: string; label: string; radius?: number | null; coord?: number[] };
 type Filters = { ungesichtet: boolean; gemerkt: boolean; kandidaten: boolean; netz: boolean; relevant: boolean };
 type View = "angriff" | "merkliste" | "netzwerk" | "potenzial";
 
@@ -195,13 +195,20 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   const textTokenKey = tokens.filter((t) => t.type === "text").map((t) => t.value).join(" ");
   useEffect(() => {
     const raw = [query.trim(), textTokenKey].filter(Boolean).join(" ").trim();
-    const q = raw.length >= 2 ? raw : "";
+    // Reine PLZ/Zahl ist eine Geo-Suche (kein Textmatch) → nicht als Textzähler werten,
+    // sonst zeigte das Menü fälschlich 0 überall. Dann bleiben die Totale stehen.
+    const q = (raw.length >= 2 && !/^\d{2,5}$/.test(raw)) ? raw : "";
     const url = q ? `/api/branchen?q=${encodeURIComponent(q)}` : "/api/branchen";
     const id = setTimeout(() => {
       fetch(url).then((r) => r.json()).then(setBranchenCounts).catch(() => {});
     }, q ? 220 : 0);
     return () => clearTimeout(id);
   }, [query, textTokenKey]);
+
+  // PLZ→Koordinate-Tabelle einmal laden (für die echte Umkreissuche). ~450 KB, cache-fähig.
+  useEffect(() => {
+    fetch("/api/plz-geo").then((r) => r.json()).then(setPlzGeo).catch(() => {});
+  }, []);
 
   // Echte Marktblöcke (Chancen-Tab) laden und bei Branchenwechsel in den Kern schieben.
   const marktRef = useRef<Record<string, unknown>>({});
@@ -494,7 +501,9 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     else if (suggIdx >= 0 && suggIdx < suggestions.length) tok = suggestions[suggIdx] as Token;
     else tok = classifyQuery(query) as Token;
     if (tok && !tokens.some((t) => t.type === tok!.type && t.value === tok!.value)) {
-      setTokens((ts) => [...ts, { type: tok!.type, value: tok!.value, label: tok!.label }]);
+      // coord/radius mitnehmen — trägt die echte PLZ-Umkreissuche (sonst Token ohne Geo).
+      setTokens((ts) => [...ts, { type: tok!.type, value: tok!.value, label: tok!.label,
+        ...(tok!.coord ? { coord: tok!.coord } : {}), ...(tok!.radius ? { radius: tok!.radius } : {}) }]);
     }
     setQuery(""); setSuggIdx(-1);
   }
