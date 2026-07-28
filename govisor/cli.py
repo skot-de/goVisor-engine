@@ -64,6 +64,8 @@ def build_parser() -> argparse.ArgumentParser:
     sm.add_argument("--force", action="store_true", help="Monatsfiles überschreiben statt mergen")
     sm.add_argument("--silver", action="store_true",
                     help="nach dem Download Bronze→Silber bauen (--max-pages 0 = nur Silber)")
+    sm.add_argument("--gold", action="store_true",
+                    help="Silber + schlanke CH-Gold-Brücke bauen (lead_export/geo/deadline)")
 
     rev = sub.add_parser("review", help="Zweifelsfälle zur Nachbearbeitung anzeigen")
     rev.add_argument("--data-dir", default="data")
@@ -113,9 +115,13 @@ def cmd_ingest_simap(args) -> int:
     n = simap.download(cfg, country=args.country, max_pages=args.max_pages,
                        delay=args.delay, force=args.force)
     print(f"  → {n:,} Publikationen in Bronze (raw_simap/{args.country}/).")
-    if args.silver:
+    if args.silver or args.gold:
         m = simap.build_silver(cfg, country=args.country, force=args.force)
-        print(f"  → {m:,} Notices in Silber (schema_gen=simap). Gold-Integration = Schritt 4.")
+        print(f"  → {m:,} Notices in Silber (schema_gen=simap).")
+    if args.gold:
+        k = simap.build_ch_gold(cfg, country=args.country)
+        print(f"  → {k:,} CH-Leads in Gold. `scripts/export_web_leads.py` laufen lassen, "
+              f"damit sie im Explorer erscheinen.")
     return 0
 
 

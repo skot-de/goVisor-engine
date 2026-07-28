@@ -35,7 +35,21 @@ CAP = 6000          # Leads je Grundraum (nach Dringlichkeit). Client-seitiges F
 OUT = pathlib.Path("web/data"); OUT.mkdir(parents=True, exist_ok=True)
 con = duckdb.connect()
 G = "data/gold/DE"
-E = f"read_parquet('{G}/lead_export.parquet')"
+
+
+def _union(table):
+    """DE-Gold + (falls vorhanden) CH-Gold per union_by_name — CH füllt nur seine Spalten,
+    fehlende werden NULL (DACH-Mehrquellen ohne Schema-Zwang). So fließen CH-Leads in denselben
+    Export, unterschieden über die country-Spalte (→ land)."""
+    files = [f"{G}/{table}.parquet"]
+    ch = f"data/gold/CH/{table}.parquet"
+    if pathlib.Path(ch).exists():
+        files.append(ch)
+    lst = ", ".join(f"'{f}'" for f in files)
+    return f"read_parquet([{lst}], union_by_name=true)"
+
+
+E = _union("lead_export")
 CL = f"read_parquet('{G}/dim_cpv_label.parquet')"
 DC = f"read_parquet('{G}/dim_cpv.parquet')"
 LOTS = f"read_parquet('{G}/lead_lot.parquet')"
@@ -44,8 +58,8 @@ ATTR = "read_parquet('data/silver/DE/attributes/*/*.parquet', hive_partitioning=
 MO = f"read_parquet('{G}/market_opportunity.parquet')"
 CS = f"read_parquet('{G}/contractor_stats.parquet')"
 EI = f"read_parquet('{G}/entity_identity.parquet')"
-DL = f"read_parquet('{G}/lead_deadline.parquet')"   # Angebotsfrist-Herkunft (#16)
-LG = f"read_parquet('{G}/lead_geo.parquet')"        # Koordinate je Lead (echter km-Radius)
+DL = _union("lead_deadline")                        # Angebotsfrist-Herkunft (#16), DE+CH
+LG = _union("lead_geo")                              # Koordinate je Lead (echter km-Radius), DE+CH
 PLZ = f"read_parquet('{G}/dim_plz.parquet')"        # PLZ→Zentroid für die PLZ-Umkreissuche
 
 
@@ -338,6 +352,46 @@ def lots_for(ids):
     return out
 
 
+# CH-Spezifika (Silber-attributes) → l.extras[]: der generische, quellengefüllte „Zusätzliche
+# Angaben"-Block (nur belegte Pfade, sprechende Labels + Reihenfolge). Universelle Felder
+# (Gewinner/Preis/Bieterzahl/Fristen) gehören NICHT hierher, sondern in ihre Standard-Slots.
+CH_ATTR = "data/silver/CH/attributes/*/*.parquet"
+EXTRA_LABEL = {  # path → (Label, Sortier-Rang)
+    "simap/stateContractArea": ("WTO/GPA-Abkommen", 1),
+    "simap/bkp": ("BKP-Bauklasse", 2),
+    "simap/cpcCode": ("CPC-Klasse", 3),
+    "simap/subContractorAllowed": ("Nachunternehmer zugelassen", 4),
+    "simap/remediesNotice": ("Rechtsmittel", 5),
+    "simap/publicationTed": ("Auch EU-weit (TED)", 6),
+}
+_EXTRA_VAL = {"true": "ja", "yes": "ja", "false": "nein", "no": "nein"}
+
+
+def ch_extras_for(ids):
+    """CH-Attributes je Lead → [{label, value}] (nach Rang sortiert). Leer für DE-Leads."""
+    if not ids or not pathlib.Path("data/silver/CH").exists():
+        return {}
+    con.execute("CREATE OR REPLACE TEMP TABLE _eids(id VARCHAR)")
+    con.executemany("INSERT INTO _eids VALUES (?)", [(i,) for i in ids])
+    rows = con.execute(f"""
+        SELECT notice_id, path, value FROM read_parquet('{CH_ATTR}', hive_partitioning=1)
+        WHERE notice_id IN (SELECT id FROM _eids)""").fetchall()
+    out = {}
+    for nid, path, val in rows:
+        meta = EXTRA_LABEL.get(path)
+        if not meta:
+            continue
+        raw = str(val).strip()
+        if raw.lower() in ("not_specified", "none", ""):
+            continue                                  # unbelegt → weglassen, nicht als Roh-Code zeigen
+        v = _EXTRA_VAL.get(raw.lower(), raw)
+        if len(v) > 160:                              # lange Texte (Rechtsmittel) kappen
+            v = v[:160].rstrip() + " …"
+        label, rank = meta
+        out.setdefault(nid, []).append((rank, {"label": label, "value": v}))
+    return {nid: [e for _, e in sorted(items, key=lambda x: x[0])] for nid, items in out.items()}
+
+
 def export_branche(key):
     rows = con.execute(f"""
         WITH mapped AS (
@@ -350,13 +404,23 @@ def export_branche(key):
           LEFT JOIN {DL} dl ON dl.notice_id = e.lead_id
           LEFT JOIN {LG} lg ON lg.lead_id = e.lead_id
         )
-        SELECT * FROM mapped WHERE ui_branche = '{key}'
-          -- Nativ: Auslauf-Radar nur bis 18 Monate Vertragsende (weiter = kein handlungs-
-          -- relevanter Lead, nur Ballast). Offene/angekündigte immer; unbekanntes Ende bleibt.
-          AND (phase != 'expiring' OR months_to_expiry IS NULL OR months_to_expiry <= 18)
+        , filtered AS (
+          SELECT * FROM mapped WHERE ui_branche = '{key}'
+            -- Nativ: Auslauf-Radar nur bis 18 Monate Vertragsende (weiter = kein handlungs-
+            -- relevanter Lead, nur Ballast). Offene/angekündigte immer; unbekanntes Ende bleibt.
+            AND (phase != 'expiring' OR months_to_expiry IS NULL OR months_to_expiry <= 18)
+        ), ranked AS (
+          SELECT *, row_number() OVER (
+            ORDER BY (phase = 'open') DESC,
+                     coalesce(days_to_deadline, days_to_expiry, 99999) ASC) AS rn
+          FROM filtered
+        )
+        -- CAP nach Dringlichkeit — aber Nicht-DE-Leads (CH/AT, der DACH-Differenzierer, wenige)
+        -- IMMER behalten, sonst verdrängt der große DE-Bestand sie aus dem Umkreis-losen Blick.
+        SELECT * EXCLUDE(rn) FROM ranked
+        WHERE rn <= {CAP} OR coalesce(country, 'DE') <> 'DE'
         ORDER BY (phase = 'open') DESC,
-                 coalesce(days_to_deadline, days_to_expiry, 99999) ASC
-        LIMIT {CAP}""").df().to_dict("records")
+                 coalesce(days_to_deadline, days_to_expiry, 99999) ASC""").df().to_dict("records")
 
     lots = lots_for([r["lead_id"] for r in rows])
     leads = []
@@ -409,9 +473,9 @@ def export_branche(key):
             "beschreibung": g("description") or "",
             "hasDetail": bool(g("has_detailed_description")),
             "cpv": g("cpv_code"), "cpvLabel": g("cpv_label") or g("buyer_activity") or "",
-            # Vergabe-Land dieses Korpus = DE (TED-DE + DÖE). AT/CH kommen aus eigenen
-            # Quell-Pipelines mit eigenem land — Fundament für den DACH-Länderfilter.
-            "land": "DE",
+            # Vergabe-Land aus der country-Spalte (DE-Gold hat keine → NULL → Default DE;
+            # CH-Gold trägt 'CH'). Speist den DACH-Länderfilter.
+            "land": g("country") or "DE",
             "region": g("buyer_region_name") or g("region") or "", "nuts": g("buyer_nuts") or "",
             # Koordinate (Käufersitz) für die echte PLZ-Umkreissuche (Haversine im Frontend);
             # None, wenn kein Geo-Bezug (bundesweite/ortsungebundene Leads) — ehrlich leer.
@@ -480,6 +544,13 @@ def export_branche(key):
     aufw = aufwand_for([l["id"] for l in leads])
     for l in leads:
         l["aufwand"] = aufw.get(l["id"])  # None → Aufwand-Achse bleibt ehrlich n/a
+
+    # Länderspezifischer „Zusätzliche Angaben"-Block (aktuell CH; generisch, quellengefüllt)
+    extras = ch_extras_for([l["id"] for l in leads])
+    for l in leads:
+        ex = extras.get(l["id"])
+        if ex:
+            l["extras"] = ex
 
     # Amtsinhaber-Vergleichszahlen (Direktvergleich) an den incumbent anhängen
     inc = incumbent_stats_for([l["id"] for l in leads if l.get("incumbent")])

@@ -864,6 +864,14 @@ function renderUebersicht(l){
       </div>
     </section>
 
+    ${(l.extras && l.extras.length) ? `<section class="sec">
+      <h4>Zusätzliche Angaben <span class="land-tag">${l.land==='CH'?'🇨🇭 nur Schweiz':l.land==='AT'?'🇦🇹 nur Österreich':(l.land||'')}</span></h4>
+      <div class="kv">
+        ${l.extras.map(e=>`<div class="kvi"><span class="k">${e.label}</span>
+          <span class="vv">${iv(e.value,'echt')}</span></div>`).join('')}
+      </div>
+    </section>` : ''}
+
     ${!l.beschreibung ? `<section class="sec">
       <h4>Leistungsbeschreibung</h4>
       <div class="kurztext leer">Die Bekanntmachung enthält keinen Beschreibungstext.</div>

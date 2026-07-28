@@ -377,3 +377,69 @@ def build_silver(cfg: Config, country: str = "CH", force: bool = False) -> int:
     n = len(by_id)
     print(f"simap {country} Silber: {n} Notices → {len(buckets)} Tabellen")
     return n
+
+
+def build_ch_gold(cfg: Config, country: str = "CH") -> int:
+    """CH-Silber → schlanke ``gold/CH/{lead_export,lead_geo,lead_deadline}.parquet`` für den
+    Web-Explorer. **Bewusst KEINE volle DE-Gold-Pipeline** (Entity-Resolution/Markt-KPIs sind
+    DE-getunt und für 40 Notices sinnlos) — nur die Felder, die ``export_web_leads.py`` liest.
+
+    Leads = **offene Ausschreibungen** (``notice_kind='cn'``) mit Frist in der Zukunft. Zuschläge
+    (``can``) sind keine Leads (tragen aber Gewinner/Preis/Bieterzahl — später als Markt-Kontext
+    über ``ref_publication_number`` verknüpfbar). Geo: Käufer-PLZ → ``dim_plz`` (enthält jetzt CH).
+    Der Exporter vereint DE+CH per ``union_by_name`` und setzt ``land`` aus der ``country``-Spalte.
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    g.mkdir(parents=True, exist_ok=True)
+    N = f"'{cfg.silver_table_glob('notices', country)}'"
+    P = f"'{cfg.silver_table_glob('notice_parties', country)}'"
+    DP = f"'{(cfg.gold_dir / 'DE' / 'dim_plz.parquet').as_posix()}'"
+    LEAD = "n.notice_kind='cn' AND n.submission_deadline >= current_date"  # offene Ausschreibungen
+    con = duckdb.connect()
+
+    con.execute(f"""COPY (
+      WITH buyer AS (
+        SELECT notice_id, any_value(name) buyer_name,
+               any_value(regexp_extract(postal_code, '([0-9]{{4}})', 1)) plz,
+               any_value(nuts) canton, any_value(town) town
+        FROM read_parquet({P}, hive_partitioning=1) WHERE role='buyer' GROUP BY notice_id)
+      SELECT n.notice_id AS lead_id, n.title, n.description,
+             length(coalesce(n.description, '')) >= 1000 AS has_detailed_description,
+             b.buyer_name, n.performance_nuts AS buyer_nuts, b.town AS buyer_region_name,
+             n.cpv_main AS cpv_code, n.contract_nature,
+             'open' AS phase, TRUE AS is_new_tender,
+             n.submission_deadline AS deadline_date,
+             date_diff('day', current_date, n.submission_deadline) AS days_to_deadline,
+             n.portal_url AS source_url, n.portal_url AS documents_url,
+             FALSE AS is_nationwide, 'CH' AS country
+      FROM read_parquet({N}, hive_partitioning=1) n
+      LEFT JOIN buyer b ON b.notice_id = n.notice_id
+      WHERE {LEAD}
+    ) TO '{(g / 'lead_export.parquet').as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
+
+    con.execute(f"""COPY (
+      WITH buyer AS (
+        SELECT notice_id, any_value(regexp_extract(postal_code, '([0-9]{{4}})', 1)) plz,
+               any_value(town) town
+        FROM read_parquet({P}, hive_partitioning=1) WHERE role='buyer' GROUP BY notice_id)
+      SELECT n.notice_id AS lead_id, dp.lat, dp.lon, b.plz, b.town AS ort,
+             CASE WHEN dp.lat IS NOT NULL THEN 'plz' ELSE 'none' END AS geo_source
+      FROM read_parquet({N}, hive_partitioning=1) n
+      LEFT JOIN buyer b ON b.notice_id = n.notice_id
+      LEFT JOIN read_parquet({DP}) dp ON dp.plz = b.plz
+      WHERE {LEAD}
+    ) TO '{(g / 'lead_geo.parquet').as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
+
+    # CH-Fristen sind ECHT (aus submission_deadline) — eigenes lead_deadline, damit der Exporter
+    # sie nicht als „geschätzt" labelt.
+    con.execute(f"""COPY (
+      SELECT n.notice_id, n.submission_deadline AS deadline_date, 'echt' AS deadline_source
+      FROM read_parquet({N}, hive_partitioning=1) n WHERE {LEAD}
+    ) TO '{(g / 'lead_deadline.parquet').as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
+
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{(g / 'lead_export.parquet').as_posix()}')").fetchone()[0]
+    con.close()
+    print(f"simap {country} Gold: {n} offene Ausschreibungen → lead_export/lead_geo/lead_deadline")
+    return n

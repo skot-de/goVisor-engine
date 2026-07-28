@@ -1501,3 +1501,7 @@ tr.wf-verworfen .ttitel{color:var(--ink-400);text-decoration:line-through;text-d
 .bnb-verdict { margin-top: 10px; padding-top: 9px; border-top: 1px solid var(--line); font-size: 13.5px; color: var(--ink-900); }
 .bnb-ko .bnb-verdict b { color: var(--risk); }
 .bnb-go .bnb-verdict b { color: var(--signal-deep, var(--signal)); }
+
+/* Länderspezifischer „Zusätzliche Angaben"-Block (CH/AT) — Herkunfts-Tag am Titel */
+.dbody-ov .sec h4 .land-tag{ font-size:11px; font-weight:600; color:var(--muted,#667085);
+  background:var(--chip,#f2f4f7); border-radius:6px; padding:2px 7px; margin-left:8px; vertical-align:middle; }
