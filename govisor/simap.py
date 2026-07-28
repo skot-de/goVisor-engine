@@ -395,27 +395,61 @@ def build_ch_gold(cfg: Config, country: str = "CH") -> int:
     g.mkdir(parents=True, exist_ok=True)
     N = f"'{cfg.silver_table_glob('notices', country)}'"
     P = f"'{cfg.silver_table_glob('notice_parties', country)}'"
+    A = f"'{cfg.silver_table_glob('awards', country)}'"
     DP = f"'{(cfg.gold_dir / 'DE' / 'dim_plz.parquet').as_posix()}'"
     LEAD = "n.notice_kind='cn' AND n.submission_deadline >= current_date"  # offene Ausschreibungen
     con = duckdb.connect()
 
+    # Titel-Token (Wörter ≥5 Zeichen, entstopwortet grob über Länge) für die Vor-Zuschlag-Ähnlichkeit.
+    _tok = ("list_filter(string_split(regexp_replace(lower({c}), '[^a-zäöü0-9 ]', ' ', 'g'), ' '),"
+            " w -> length(w) >= 5)")
     con.execute(f"""COPY (
       WITH buyer AS (
         SELECT notice_id, any_value(name) buyer_name,
                any_value(regexp_extract(postal_code, '([0-9]{{4}})', 1)) plz,
                any_value(nuts) canton, any_value(town) town
-        FROM read_parquet({P}, hive_partitioning=1) WHERE role='buyer' GROUP BY notice_id)
+        FROM read_parquet({P}, hive_partitioning=1) WHERE role='buyer' GROUP BY notice_id),
+      -- CH-Zuschläge mit Gewinner + Bieterzahl + Käufer + CPV + Titel + Jahr
+      awn AS (
+        SELECT a.notice_id, bu.buyer_name, an.cpv_main, an.title AS atitle,
+               a.winner_name, a.num_tenders, year(an.publication_date) AS ayear
+        FROM read_parquet({A}, hive_partitioning=1) a
+        JOIN read_parquet({N}, hive_partitioning=1) an ON an.notice_id = a.notice_id
+        JOIN buyer bu ON bu.notice_id = a.notice_id
+        WHERE an.notice_kind = 'can' AND a.winner_name IS NOT NULL),
+      -- Bester Vor-Zuschlag je offener Ausschreibung: gleicher Käufer + volle CPV + Titel-Token-
+      -- Überlappung (reduziert Fehl-Zuordnung bei anderem Los/Phase). Jüngster gewinnt.
+      matched AS (
+        SELECT n.notice_id AS lead_id, awn.winner_name, awn.num_tenders, awn.ayear,
+               row_number() OVER (PARTITION BY n.notice_id ORDER BY awn.ayear DESC NULLS LAST) rn
+        FROM read_parquet({N}, hive_partitioning=1) n
+        JOIN buyer b ON b.notice_id = n.notice_id
+        JOIN awn ON awn.buyer_name = b.buyer_name AND awn.cpv_main = n.cpv_main
+        WHERE {LEAD}
+          AND list_has_any({_tok.format(c='n.title')}, {_tok.format(c='awn.atitle')}))
       SELECT n.notice_id AS lead_id, n.title, n.description,
              length(coalesce(n.description, '')) >= 1000 AS has_detailed_description,
              b.buyer_name, n.performance_nuts AS buyer_nuts, b.town AS buyer_region_name,
              n.cpv_main AS cpv_code, n.contract_nature,
-             'open' AS phase, TRUE AS is_new_tender,
+             'open' AS phase,
+             (m.winner_name IS NULL) AS is_new_tender,   -- mit Vor-Zuschlag = Folgevergabe, sonst Neu
              n.submission_deadline AS deadline_date,
              date_diff('day', current_date, n.submission_deadline) AS days_to_deadline,
              n.portal_url AS source_url, n.portal_url AS documents_url,
-             FALSE AS is_nationwide, 'CH' AS country
+             FALSE AS is_nationwide, 'CH' AS country,
+             -- Vor-Zuschlag-Kontext: Amtsinhaber unsicher (evtl. anderes Los), Bieterzahl echt.
+             m.winner_name AS incumbent_name,
+             m.ayear AS incumbent_since_year,
+             CASE WHEN m.winner_name IS NOT NULL THEN 'uncertain' END AS incumbent_source,
+             CASE WHEN m.winner_name IS NOT NULL THEN 0.55 END AS incumbent_confidence,
+             m.num_tenders AS n_bidders,
+             CASE WHEN m.num_tenders IS NOT NULL THEN 'actual' END AS competition_source,
+             CASE WHEN m.num_tenders IS NULL THEN NULL
+                  WHEN m.num_tenders <= 2 THEN 'low'
+                  WHEN m.num_tenders <= 5 THEN 'medium' ELSE 'high' END AS competition_level
       FROM read_parquet({N}, hive_partitioning=1) n
       LEFT JOIN buyer b ON b.notice_id = n.notice_id
+      LEFT JOIN matched m ON m.lead_id = n.notice_id AND m.rn = 1
       WHERE {LEAD}
     ) TO '{(g / 'lead_export.parquet').as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
 
