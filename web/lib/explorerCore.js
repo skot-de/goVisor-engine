@@ -900,7 +900,7 @@ function renderUebersicht(l){
         <div class="kvi"><span class="k">Geplantes Ende</span>
           <span class="vv">${l.endeGeplant?iv(l.endeGeplant,'echt'):(l.endet?iv(l.endet,'schaetz','Aus der Laufzeit geschätzt — die Ausschreibung nennt kein Enddatum.'):'<span class="v-unk">nicht angegeben</span>')}</span></div>
         <div class="kvi"><span class="k">Verlängerung</span>
-          <span class="vv">${l.verlaengerung?iv(l.verlaengerung,'echt'):iv('keine vorgesehen','echt')}</span></div>
+          <span class="vv">${l.verlaengerung?iv(l.verlaengerung,'echt'):'<span class="v-unk">nicht angegeben</span>'}</span></div>
         <div class="kvi"><span class="k">Rechtsrahmen</span>
           <span class="vv">${l.rahmen?`${iv(RAHMEN[l.rahmen].kurz,'echt')}<span class="vm">${RAHMEN[l.rahmen].lang}</span>`:'<span class="v-unk">nicht angegeben</span>'}</span></div>
         <div class="kvi"><span class="k">Verfahren</span>
@@ -1119,7 +1119,7 @@ function renderTeilnahme(l){
         <div class="kvi"><span class="k">Nebenangebote</span>
           <span class="vv">${l.nebenangebote?iv(l.nebenangebote,'echt'):'<span class="v-unk">nicht angegeben</span>'}</span></div>
         <div class="kvi"><span class="k">Rahmenvereinbarung</span>
-          <span class="vv">${l.rahmenvertrag?iv(l.rahmenvertrag,'echt'):iv('nein','echt')}</span></div>
+          <span class="vv">${l.rahmenvertrag?iv(l.rahmenvertrag,'echt'):l.istRahmen?iv('ja','echt'):'<span class="v-unk">nicht angegeben</span>'}</span></div>
       </div>
     </section>
 
