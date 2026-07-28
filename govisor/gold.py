@@ -3210,16 +3210,22 @@ def build_doe_demand(cfg: Config, country: str = "DE"):
 def build_dim_plz(cfg: Config, country: str = "DE"):
     """PLZ → Geo-Zentroid (lat/lon) für die **Radius-Suche**.
 
-    Quelle: GeoNames-PLZ-Datensatz ``data/reference/geonames/DE.txt`` (CC-BY,
-    download.geonames.org/export/zip/DE.zip). Eine PLZ hat mehrere Zeilen (Orte/
+    Quelle: GeoNames-PLZ-Datensätze ``data/reference/geonames/{DE,CH}.txt`` (CC-BY,
+    download.geonames.org/export/zip/<CC>.zip). Eine PLZ hat mehrere Zeilen (Orte/
     Groß­kunden teilen sie) → Mittel der Koordinaten je PLZ = Zentroid. Dient doppelt:
     Lead-Geokoder (Buyer-PLZ → Koordinate) **und** City-Such-Geokoder („München" →
     Koordinate, per Ort-Aggregat). Schreibt ``dim_plz`` (plz, lat, lon, ort, bundesland).
+
+    **DACH:** DE (5-stellig) und CH (4-stellig) teilen eine Tabelle — keine Kollision, weil
+    die Stellenzahl disjunkt ist. Für CH steht im ``bundesland``-Feld der Kanton. AT käme
+    genauso dazu (Datei ergänzen). Es werden alle vorhandenen ``{CC}.txt`` gelesen.
     """
     import duckdb
 
     g = cfg.gold_dir / country
-    src = (cfg.data_dir / "reference" / "geonames" / "DE.txt").as_posix()
+    gn = cfg.data_dir / "reference" / "geonames"
+    files = [(gn / f"{cc}.txt").as_posix() for cc in ("DE", "CH", "AT") if (gn / f"{cc}.txt").exists()]
+    src = "[" + ", ".join(f"'{f}'" for f in files) + "]"
     out = (g / "dim_plz.parquet").as_posix()
     con = duckdb.connect()
     con.execute(f"""
@@ -3229,7 +3235,7 @@ def build_dim_plz(cfg: Config, country: str = "DE"):
                  round(avg(lon), 5) AS lon,
                  any_value(ort) AS ort,
                  any_value(bundesland) AS bundesland
-          FROM read_csv('{src}', delim='\t', header=false, columns={{
+          FROM read_csv({src}, delim='\t', header=false, columns={{
                  'country':'VARCHAR','plz':'VARCHAR','ort':'VARCHAR','bundesland':'VARCHAR',
                  'a1':'VARCHAR','rb':'VARCHAR','a2':'VARCHAR','kreis':'VARCHAR','a3':'VARCHAR',
                  'lat':'DOUBLE','lon':'DOUBLE','acc':'VARCHAR'}})
@@ -3259,15 +3265,17 @@ def build_lead_geo(cfg: Config, country: str = "DE"):
     L = f"'{(g / 'leads.parquet').as_posix()}'"
     DP = f"'{(g / 'dim_plz.parquet').as_posix()}'"
     out = (g / "lead_geo.parquet").as_posix()
+    # PLZ-Stellenzahl je Land: DE 5-stellig, CH/AT 4-stellig (disjunkt → dieselbe dim_plz).
+    _pd = 4 if country in ("CH", "AT") else 5
     con = duckdb.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
           WITH bplz AS (
-            -- Buyer-PLZ auf saubere 5 Ziffern normalisieren („D-80805" / „80805 " → „80805"),
+            -- Buyer-PLZ auf saubere Ziffern normalisieren („D-80805" / „80805 " → „80805"),
             -- sonst scheitert der Join auf dim_plz und der Lead fällt unnötig auf den Ort-Fallback.
-            SELECT notice_id, any_value(regexp_extract(postal_code, '([0-9]{{5}})', 1)) plz
+            SELECT notice_id, any_value(regexp_extract(postal_code, '([0-9]{{{_pd}}})', 1)) plz
             FROM read_parquet({NP}, hive_partitioning=1)
-            WHERE role='buyer' AND regexp_extract(postal_code, '([0-9]{{5}})', 1) <> '' GROUP BY notice_id),
+            WHERE role='buyer' AND regexp_extract(postal_code, '([0-9]{{{_pd}}})', 1) <> '' GROUP BY notice_id),
           ort_geo AS (   -- Ort-Zentroid als Fallback (normalisiert klein)
             SELECT lower(ort) ortk, avg(lat) lat, avg(lon) lon FROM read_parquet({DP})
             WHERE ort IS NOT NULL GROUP BY 1),

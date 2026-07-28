@@ -420,7 +420,7 @@ function toggleToken(tok){
 function classifyQuery(raw){
   const q = raw.trim().toLowerCase(); if(!q) return null;
   if(ORTE[q]) return {type:'ort',label:ORTE[q].label,value:ORTE[q].region};
-  if(/^\d{5}$/.test(q)){                     // volle PLZ → echte Umkreissuche (Haversine)
+  if(/^\d{4,5}$/.test(q)){                   // volle PLZ (DE 5-, CH 4-stellig) → echte Umkreissuche
     const g = PLZ_GEO[q];
     if(g) return {type:'ort', value:q, coord:[g[0], g[1]], radius:25,
                   label:'PLZ '+q+(g[2] ? ' '+g[2] : '')};
@@ -680,7 +680,7 @@ function suggestList(raw){
   const out=[]; const seen=new Set();
   const push=(o)=>{const k=o.type+o.value; if(!seen.has(k)){seen.add(k); out.push(o);}};
   for(const [k,v] of Object.entries(ORTE)) if(k.startsWith(q)) push({type:'ort',value:v.region,label:v.label,cat:'Ort'});
-  if(/^\d{5}$/.test(q) && PLZ_GEO[q]){                    // volle PLZ → echte Umkreissuche
+  if(/^\d{4,5}$/.test(q) && PLZ_GEO[q]){                  // volle PLZ (DE 5-, CH 4-stellig)
     const g = PLZ_GEO[q];
     push({type:'ort', value:q, coord:[g[0], g[1]], radius:25, cat:'Umkreis',
           label:'PLZ '+q+(g[2] ? ' '+g[2] : '')});

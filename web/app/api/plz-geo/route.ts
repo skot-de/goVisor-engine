@@ -9,7 +9,7 @@ export async function GET() {
   try {
     const file = path.join(process.cwd(), "data", "plz-geo.json");
     return new NextResponse(await readFile(file, "utf-8"), {
-      headers: { "content-type": "application/json", "cache-control": "public, max-age=86400" },
+      headers: { "content-type": "application/json", "cache-control": "no-store" },
     });
   } catch {
     return NextResponse.json({}, { status: 200 });
