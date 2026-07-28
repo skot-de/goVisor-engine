@@ -434,3 +434,22 @@ def test_notice_id_normalization_unifies_archive_and_live():
     assert nz(nz("450024-2026")) == nz("450024-2026")          # idempotent
     assert pub(nz("00450024_2026")) == "450024-2026"           # TED-Publikationsnummer intakt
     assert nz("nicht-eine-notice") == "nicht-eine-notice"      # Unbekanntes unverändert
+
+
+def test_simap_downloader_wired_and_cursor_encoded():
+    """simap-Downloader: CLI verdrahtet, Modul-API da, und der Paginierungs-Cursor wird
+    URL-kodiert. Regression: der lastItem-Cursor enthält ein '|' (z. B. '20260728|33405') —
+    unkodiert liefert die API leer, die Schleife bricht nach Seite 1 ab (kein Backfill)."""
+    from govisor import cli, simap
+
+    parser = cli.build_parser()
+    args = parser.parse_args(["ingest-simap", "--max-pages", "2"])
+    assert args.command == "ingest-simap" and args.country == "CH" and args.max_pages == 2
+
+    for fn in ("download", "available_months"):
+        assert hasattr(simap, fn), f"simap.{fn} fehlt"
+
+    url = simap._search_url("20260728|33405")
+    assert "%7C" in url and "|" not in url, "lastItem-Cursor nicht URL-kodiert"
+    assert simap._search_url(None).count("lastItem") == 0  # Seite 1 ohne Cursor
+    assert simap._month_of({"publicationDate": "2026-07-28"}) == "2026-07"

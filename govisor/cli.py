@@ -7,7 +7,7 @@ import collections
 import sys
 from datetime import date
 
-from . import bulk, gold, locales, review, silver, verify
+from . import bulk, gold, locales, review, silver, simap, verify
 from .config import Config
 from .ingest import ingest_month, is_done
 
@@ -55,6 +55,14 @@ def build_parser() -> argparse.ArgumentParser:
     doe.add_argument("--start", help="ab Monat YYYY-MM (Default: alle vorhandenen)")
     doe.add_argument("--force", action="store_true", help="vorhandene -doe-Parquet überschreiben")
 
+    sm = sub.add_parser("ingest-simap", help="simap.ch (CH, offene JSON-API) → Bronze")
+    sm.add_argument("--country", default="CH")
+    sm.add_argument("--data-dir", default="data")
+    sm.add_argument("--max-pages", dest="max_pages", type=int, default=None,
+                    help="Seiten begrenzen (je 20, neueste zuerst; Default: ganze Historie)")
+    sm.add_argument("--delay", type=float, default=0.15, help="Pause je Request in s (höflich)")
+    sm.add_argument("--force", action="store_true", help="Monatsfiles überschreiben statt mergen")
+
     rev = sub.add_parser("review", help="Zweifelsfälle zur Nachbearbeitung anzeigen")
     rev.add_argument("--data-dir", default="data")
     rev.add_argument("--csv", help="Queue als CSV exportieren")
@@ -95,6 +103,15 @@ def cmd_ingest_doe(args) -> int:
     dedup = silver.consolidate_doe(cfg, args.country)
     print(f"  → {total:,} Notices ins Staging, konsolidiert auf {dedup:,} (Cross-Monat-Dedup). "
           f"Jetzt `gold` rebuilden, damit die Leads einfließen.")
+    return 0
+
+
+def cmd_ingest_simap(args) -> int:
+    cfg = Config(countries=(args.country,), data_dir=args.data_dir)
+    n = simap.download(cfg, country=args.country, max_pages=args.max_pages,
+                       delay=args.delay, force=args.force)
+    print(f"  → {n:,} Publikationen in Bronze (raw_simap/{args.country}/). "
+          f"Parser (Silber) = Schritt 3.")
     return 0
 
 
@@ -255,6 +272,8 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_silver(args)
     if args.command == "ingest-doe":
         return cmd_ingest_doe(args)
+    if args.command == "ingest-simap":
+        return cmd_ingest_simap(args)
     if args.command == "verify":
         return cmd_verify(args)
     if args.command == "review":
