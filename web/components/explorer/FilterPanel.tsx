@@ -21,13 +21,14 @@ export type Adv = {
   multiLot: boolean;
   hasDetail: boolean;              // nur mit ausführlicher Beschreibung
   unterlagen: boolean;             // nur mit Vergabeunterlagen-Link
+  staaten: string[];               // DACH-Vergabeland: DE | AT | CH (Fundament, aktuell nur DE mit Daten)
 };
 
 export const emptyAdv: Adv = {
   phases: [], horizon: null, cpvFields: [], regionAxis: "perf", regions: [], nationwide: false,
   buyer: "", leistung: [], art: [], rahmen: [], valMin: null, valMax: null,
   neu: "all", wenigWettbewerb: false, aufwand: [], buergschaft: "all", chance: [], multiLot: false,
-  hasDetail: false, unterlagen: false,
+  hasDetail: false, unterlagen: false, staaten: [],
 };
 
 export function advCount(a: Adv): number {
@@ -37,7 +38,7 @@ export function advCount(a: Adv): number {
     (a.valMin != null ? 1 : 0) + (a.valMax != null ? 1 : 0) +
     (a.neu !== "all" ? 1 : 0) + (a.wenigWettbewerb ? 1 : 0) + a.aufwand.length +
     (a.buergschaft !== "all" ? 1 : 0) + a.chance.length + (a.multiLot ? 1 : 0) +
-    (a.hasDetail ? 1 : 0) + (a.unterlagen ? 1 : 0)
+    (a.hasDetail ? 1 : 0) + (a.unterlagen ? 1 : 0) + a.staaten.length
   );
 }
 
@@ -53,6 +54,9 @@ const LEISTUNG: [string, string][] = [["dienst", "Dienstleistung"], ["liefer", "
 const RAHMEN: [string, string][] = [["vgv", "VgV"], ["vob", "VOB/A"], ["uvgo", "UVgO"], ["sektvo", "SektVO"]];
 const BAND: [string, string][] = [["niedrig", "niedrig"], ["mittel", "mittel"], ["hoch", "hoch"]];
 const ART: [string, string][] = [["rahmen", "Rahmenvertrag"], ["wiederkehrend", "Wiederkehrend"], ["einzel", "Einzelauftrag"]];
+// DACH-Vergabeland. Aktuell trägt nur DE Daten; AT/CH sind vorbereitet und greifen, sobald
+// ihre Quell-Pipelines (simap.ch, ANKÖ …) andocken.
+const STAATEN: [string, string][] = [["DE", "Deutschland"], ["AT", "Österreich"], ["CH", "Schweiz"]];
 export const LAENDER: [string, string][] = [
   ["DE1", "Baden-Württemberg"], ["DE2", "Bayern"], ["DE3", "Berlin"], ["DE4", "Brandenburg"],
   ["DE5", "Bremen"], ["DE6", "Hamburg"], ["DE7", "Hessen"], ["DE8", "Mecklenburg-Vorp."],
@@ -87,6 +91,16 @@ export function FilterPanel({
         </div>
 
         <div className="fp-body">
+          <section className="fp-sec">
+            <h5>Land <span className="fp-hint">Vergabeland (DACH)</span></h5>
+            {STAATEN.map(([v, l]) => (
+              <label key={v} className="fp-check">
+                <input type="checkbox" checked={adv.staaten.includes(v)} onChange={() => set({ staaten: toggle(adv.staaten, v) })} />
+                <span>{l}{v !== "DE" ? <span className="fp-hint"> — bald</span> : null}</span>
+              </label>
+            ))}
+          </section>
+
           <section className="fp-sec">
             <h5>Phase</h5>
             {PHASEN.map(([v, l]) => (

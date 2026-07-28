@@ -377,6 +377,9 @@ def export_branche(key):
             "beschreibung": g("description") or "",
             "hasDetail": bool(g("has_detailed_description")),
             "cpv": g("cpv_code"), "cpvLabel": g("cpv_label") or g("buyer_activity") or "",
+            # Vergabe-Land dieses Korpus = DE (TED-DE + DÖE). AT/CH kommen aus eigenen
+            # Quell-Pipelines mit eigenem land — Fundament für den DACH-Länderfilter.
+            "land": "DE",
             "region": g("buyer_region_name") or g("region") or "", "nuts": g("buyer_nuts") or "",
             # Koordinate (Käufersitz) für die echte PLZ-Umkreissuche (Haversine im Frontend);
             # None, wenn kein Geo-Bezug (bundesweite/ortsungebundene Leads) — ehrlich leer.

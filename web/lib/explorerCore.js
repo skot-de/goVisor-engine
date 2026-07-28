@@ -318,6 +318,9 @@ const FACETS = {
   leistung:{ label:'Leistung', opts:[
     {v:'dienst',l:'Dienstleistung'},{v:'liefer',l:'Lieferung'},{v:'bau',l:'Bauleistung'}], match:(l,v)=>l.naturKat===v },
 };
+// Land-Codes → Anzeigename (Detail-Eckdaten + Filter-Panel). DACH-Fundament: aktuell trägt
+// nur DE Daten, AT/CH sind im Filter vorbereitet und greifen, sobald ihre Pipelines andocken.
+const LAND_LABEL = {DE:'Deutschland', AT:'Österreich', CH:'Schweiz'};
 
 // Ort→Region (Demo). Echt: NUTS-Geokodierung.
 // Region-Filter über echte NUTS1-Präfixe (Leistungsort/Käufersitz der Leads).
@@ -836,6 +839,8 @@ function renderUebersicht(l){
           <span class="vv">${iv(l.natur,'echt')}<span class="vm">CPV ${l.cpv}</span></span></div>
         <div class="kvi"><span class="k">Wettbewerbslage</span>
           <span class="vv">${l.neu?'<span class="tag-neu">Neuvergabe</span>':'<span class="tag-folge">Folgevergabe</span>'}<span class="vm">${l.neu?'kein Amtsinhaber':'Amtsinhaber vorhanden'}</span></span></div>
+        <div class="kvi"><span class="k">Land</span>
+          <span class="vv">${iv(LAND_LABEL[l.land]||l.land||'Deutschland','echt')}</span></div>
         <div class="kvi"><span class="k">Leistungsort</span>
           <span class="vv">${iv(l.region,'echt')}${l.marktOk===false
             ? '<span class="vm">nicht kreisgenau — kein Marktkontext</span>'

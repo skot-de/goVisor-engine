@@ -45,6 +45,7 @@ function postFilter(rows: Lead[], a: Adv): Lead[] {
   if (advCount(a) === 0) return rows;
   const buyer = a.buyer.trim().toLowerCase();
   return rows.filter((l) => {
+    if (a.staaten.length && !a.staaten.includes(String(l.land || "DE"))) return false;
     if (a.phases.length && !a.phases.includes(String(l.src))) return false;
     if (a.horizon != null) {
       const days = (l.endTage as number | null) ?? (l.tage as number | null);
