@@ -189,9 +189,19 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     return () => { cancelled = true; };
   }, [aktiveBranche, bump]);
 
+  // Branchen-Zähler: bei aktiver Textsuche die Treffer je Branche ziehen (nicht die
+  // Maximal-Totale) — "Hamm" zeigt im Menü dann z. B. Bau 0 / IT 6 statt 31.141 / 3.883.
+  // Suchbegriffe = Live-Eingabe + committete Stichwort-Tokens. Debounced; ohne Suche → Totale.
+  const textTokenKey = tokens.filter((t) => t.type === "text").map((t) => t.value).join(" ");
   useEffect(() => {
-    fetch("/api/branchen").then((r) => r.json()).then(setBranchenCounts).catch(() => {});
-  }, []);
+    const raw = [query.trim(), textTokenKey].filter(Boolean).join(" ").trim();
+    const q = raw.length >= 2 ? raw : "";
+    const url = q ? `/api/branchen?q=${encodeURIComponent(q)}` : "/api/branchen";
+    const id = setTimeout(() => {
+      fetch(url).then((r) => r.json()).then(setBranchenCounts).catch(() => {});
+    }, q ? 220 : 0);
+    return () => clearTimeout(id);
+  }, [query, textTokenKey]);
 
   // Echte Marktblöcke (Chancen-Tab) laden und bei Branchenwechsel in den Kern schieben.
   const marktRef = useRef<Record<string, unknown>>({});
