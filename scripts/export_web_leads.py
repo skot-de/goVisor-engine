@@ -9,6 +9,26 @@ Schreibt `web/data/leads-<branche>.json` (je Grundraum gekappt) + `web/data/bran
 Lokal-first: kein Supabase nötig. Später durch eine Live-Query ersetzbar.
 """
 import duckdb, json, pathlib
+from datetime import date
+
+TODAY = date.today()
+
+
+def days_until(d):
+    """Tage von HEUTE bis zum Datum d (date/Timestamp) — für frische, nicht build-relative
+    Fristen. None bei fehlendem/ungültigem Datum (inkl. pandas NaT)."""
+    if d is None:
+        return None
+    try:
+        if d != d:
+            return None
+    except Exception:
+        pass
+    try:
+        dd = d.date() if hasattr(d, "date") else d
+        return (dd - TODAY).days
+    except Exception:
+        return None
 
 CAP = 6000          # Leads je Grundraum (nach Dringlichkeit). Client-seitiges Filtern deckelt
                     # bei ein paar Tausend; der volle Bestand (Bau 48k) braucht die Server-Query.
@@ -349,8 +369,20 @@ def export_branche(key):
         # Rahmenvertrag (Zyklus-Doc §7.2): kein bloßes Label, sondern ein Bewertungssignal —
         # der Nennwert unterzeichnet, das reale Abrufvolumen liegt oft um ein Vielfaches höher.
         ist_rahmen = g("contract_kind") == "framework"
+        frist_source = g("frist_source")
         frist_date = de_date(g("deadline_date"))
         frist_tage = int(r["days_to_deadline"]) if g("days_to_deadline") is not None else None
+        # Bei ECHTER Frist die Tage relativ zu HEUTE aus dem Datum neu rechnen — der gold-
+        # gespeicherte days_to_deadline ist build-relativ und veraltet (sonst "-X Tage").
+        if frist_source == "echt":
+            fresh = days_until(g("deadline_date"))
+            if fresh is not None:
+                frist_tage = fresh
+        # Offene Ausschreibung mit ABGELAUFENER echter Frist = nicht mehr biet-bar → raus aus
+        # der Akquise-Liste (Gold behält sie; nur die Frontend-Sicht filtert). Geschätzte
+        # Fristen bleiben (Schätzung könnte daneben liegen).
+        if src == "f02" and frist_source == "echt" and frist_tage is not None and frist_tage < 0:
+            continue
         z = []
         if g("price_weight_pct") is not None:
             z.append({"art": "preis", "label": "Preis", "pct": int(r["price_weight_pct"])})
@@ -359,7 +391,7 @@ def export_branche(key):
         if g("cost_weight_pct") is not None:
             z.append({"art": "kosten", "label": "Kosten", "pct": int(r["cost_weight_pct"])})
 
-        tage = int(r["days_to_deadline"]) if (src == "f02" and g("days_to_deadline") is not None) else None
+        tage = frist_tage if (src == "f02" and frist_tage is not None) else None
         endTage = int(r["days_to_expiry"]) if g("days_to_expiry") is not None else None
         mte = g("months_to_expiry")
         endet = f"in {int(mte)} Mon." if mte is not None else None
