@@ -1,5 +1,6 @@
 """Radius-Suche: dim_plz + lead_geo + Haversine-Query."""
 import os
+from pathlib import Path
 
 import pytest
 
@@ -56,6 +57,16 @@ def test_combined_radius_and_nuts_is_intersection():
     assert both <= rad and both <= nut and both > 0
 
 
+def _nationwide_ids():
+    """Lead-IDs, die ortsunabhaengig erbringbar sind — sie duerfen jeden Ortsfilter passieren."""
+    lx = Path(cfg.gold_dir) / "DE" / "lead_export.parquet"
+    if not lx.exists():
+        return set()
+    con = duckdb.connect()
+    return {r[0] for r in con.execute(
+        f"SELECT lead_id FROM read_parquet('{lx.as_posix()}') WHERE is_nationwide").fetchall()}
+
+
 @pytest.mark.skipif(not _has("lead_geo"), reason="lead_geo nicht gebaut")
 def test_nuts_prefix_hierarchy_and_no_radius():
     # Elternebene (DE21) enthält ≥ Kindebene (DE212).
@@ -65,7 +76,9 @@ def test_nuts_prefix_hierarchy_and_no_radius():
     # Ohne Radius: dist_km None, und jeder Treffer beginnt mit dem NUTS-Präfix.
     rows = geo.search(cfg, "DE", nuts=["DE212"], limit=50)
     assert all(d is None for *_, d in rows)
-    assert all(str(nuts).startswith("DE212") for _, _, _, nuts, _, _ in rows)
+    nw = _nationwide_ids()
+    assert all(str(nuts).startswith("DE212") or lid in nw
+               for lid, _, _, nuts, _, _ in rows), "Treffer weder im Praefix noch bundesweit"
 
 
 @pytest.mark.skipif(not _has("lead_geo"), reason="lead_geo nicht gebaut")
@@ -105,7 +118,8 @@ def test_performance_axis_is_a_distinct_signal():
     assert buyer > 0 and perf > 0
     # performance-Suche filtert auf perf_nuts und gibt diese zurück
     rows = geo.search(cfg, "DE", nuts=["DE212"], axis="performance", limit=20)
-    assert all(str(n).startswith("DE212") for _, _, _, n, _, _ in rows)
+    nw = _nationwide_ids()
+    assert all(str(n).startswith("DE212") or lid in nw for lid, _, _, n, _, _ in rows)
     # Radius auf der performance-Achse liefert Treffer (grob, aber funktional)
     assert geo.search(cfg, "DE", city="München", radius_km=25, axis="performance")
 
@@ -119,3 +133,42 @@ def test_haversine_matches_known_distance():
     dist = geo._haversine(muc[0], muc[1], latcol=str(ham[0]), loncol=str(ham[1]))
     d = duckdb.connect().execute(f"SELECT {dist}").fetchone()[0]
     assert 560 < d < 640, f"München–Hamburg-Distanz unplausibel: {d:.0f} km"
+
+
+@pytest.mark.skipif(not _has("lead_geo"), reason="lead_geo nicht gebaut")
+def test_nationwide_leads_survive_every_location_filter():
+    """Ortsunabhaengige Leistungen (`RealizedLocation = anyw*`) duerfen an keinem
+    Ortsfilter scheitern — sie passen per Definition zu jedem Standort. Bis 2026-07 fielen
+    sie aus Umkreis UND Region heraus; das war ein Fehler, kein fehlendes Feature."""
+    lx = Path(cfg.gold_dir) / "DE" / "lead_export.parquet"
+    if not lx.exists():
+        pytest.skip("lead_export nicht gebaut")
+    con = duckdb.connect()
+    expected = con.execute(
+        f"SELECT count(*) FROM read_parquet('{lx.as_posix()}') WHERE is_nationwide").fetchone()[0]
+    assert expected > 0, "keine bundesweiten Leads — Test wertlos"
+
+    for kwargs in ({"city": "München", "radius_km": 5}, {"nuts": ["DE212"]}):
+        ids = {r[0] for r in geo.search(cfg, "DE", **kwargs)}
+        con.execute("CREATE OR REPLACE TEMP TABLE _hit(lead_id VARCHAR)")
+        con.executemany("INSERT INTO _hit VALUES (?)", [(i,) for i in ids])
+        got = con.execute(
+            f"SELECT count(*) FROM read_parquet('{lx.as_posix()}') "
+            f"WHERE is_nationwide AND lead_id IN (SELECT lead_id FROM _hit)").fetchone()[0]
+        assert got == expected, f"{kwargs}: nur {got}/{expected} bundesweite Leads durchgekommen"
+
+
+@pytest.mark.skipif(not _has("lead_geo"), reason="lead_geo nicht gebaut")
+def test_nationwide_sorts_behind_local_hits_not_out_of_the_list():
+    """Bei gesetztem Radius heisst `dist_km IS NULL` **bundesweit**, nicht „unbekannt" —
+    fuer eine ortsunabhaengige Leistung ist die Entfernung zur Vergabestelle keine Aussage.
+    Sortiert wird sie an den Rand des Umkreises: hinter alle echten Nahtreffer, aber vor
+    dem Abschneiden durch `limit`."""
+    rows = geo.search(cfg, "DE", city="München", radius_km=25)
+    dists = [d for *_, d in rows]
+    if None not in dists:
+        pytest.skip("keine bundesweiten Leads im Ergebnis")
+    first_null = dists.index(None)
+    assert all(d is not None for d in dists[:first_null]), "Nahtreffer und bundesweite gemischt"
+    assert all(d is None for d in dists[first_null:]), "bundesweite nicht am Stueck"
+    assert first_null > 0, "bundesweite verdraengen die Nahtreffer von der Spitze"

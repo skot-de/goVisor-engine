@@ -2141,6 +2141,144 @@ def _assign_slugs(cfg: Config, country: str, lead_ids: list[str],
     return path.as_posix()
 
 
+
+def _lead_context_sql(cfg: Config, country: str) -> str:
+    """Vier Kontext-Felder je Notice, direkt aus der Auffang-Tabelle `attributes`.
+
+    **Warum aus `attributes` und nicht aus `notices`:** die Felder sind bisher in keiner
+    typisierten Silber-Spalte. Sie dorthin zu ziehen braeuchte einen Voll-Reparse ueber
+    1,83 Mio. Notices (~2,5 h). `attributes` ist als verlustfreie Auffang-Tabelle genau
+    fuer diesen Zugriff gebaut (s. `model.ATTRIBUTES`) — der Umweg kostet einen Scan und
+    keinen Reparse. Wenn die Felder spaeter in den Parser wandern, ersetzt ein JOIN auf
+    `notices` diesen Block.
+
+    Vokabular durchgehend ENGLISCH wie der uebrige Export. eForms liefert Codes
+    (`la`, `gen-pub`), Legacy englische Klartexte (`Regional or local authority`) — beide
+    werden auf dieselben Werte abgebildet. Legacy kann `local` und `regional` nicht
+    trennen, deshalb gibt es dafuer den eigenen Wert `regional_or_local`; ihn mit
+    `local_authority` zu verschmelzen waere geraten.
+    """
+    A = cfg.silver_table_glob("attributes", country)
+    return f"""
+      SELECT notice_id,
+        -- 1.1 Vergaberegime. Die deutsche Vorschrift ist spezifischer als die
+        -- EU-Richtlinie, deshalb hat sie Vorrang: 32014L0024 allein sagt nur
+        -- „klassische Richtlinie", vgv/vob-a-eu sagen, welches Regelwerk wirklich gilt.
+        coalesce(
+          max(CASE WHEN path ILIKE '%ProcurementLegislationDocumentReference.ID' THEN
+            CASE lower(value) WHEN 'vgv' THEN 'vgv'
+                 WHEN 'vob-a-eu' THEN 'vob' WHEN 'vob-a' THEN 'vob'
+                 WHEN 'sektvo' THEN 'sektvo' WHEN 'vsvgv' THEN 'vsvgv'
+                 WHEN 'konzvgv' THEN 'konzvgv' END END),
+          max(CASE WHEN path ILIKE '%RegulatoryDomain' THEN
+            CASE lower(value) WHEN 'de-vob' THEN 'vob'
+                 WHEN 'de-uvgo' THEN 'uvgo' WHEN 'de-vol' THEN 'uvgo'
+                 WHEN '32014l0025' THEN 'sektvo' WHEN '32009l0081' THEN 'vsvgv'
+                 WHEN '32014l0023' THEN 'konzvgv' WHEN '32014l0024' THEN 'eu_classic' END END)
+        )                                                    AS regulatory_regime,
+        -- 1.3a Art der Vergabestelle
+        max(CASE WHEN path ILIKE '%ContractingPartyType.PartyTypeCode' THEN
+          CASE lower(value) WHEN 'la' THEN 'local_authority' WHEN 'ra' THEN 'regional_authority'
+               WHEN 'cga' THEN 'central_government'
+               WHEN 'body-pl-la' THEN 'body_public_law' WHEN 'body-pl-ra' THEN 'body_public_law'
+               WHEN 'body-pl-cga' THEN 'body_public_law' WHEN 'body-pl' THEN 'body_public_law'
+               WHEN 'pub-undert' THEN 'public_undertaking'
+               WHEN 'pub-undert-ra' THEN 'public_undertaking'
+               WHEN 'pub-undert-la' THEN 'public_undertaking'
+               WHEN 'pub-undert-cga' THEN 'public_undertaking'
+               WHEN 'cont-ent' THEN 'utility' WHEN 'org-sub' THEN 'subsidised_entity'
+               WHEN 'org-sub-la' THEN 'subsidised_entity'
+               WHEN 'org-sub-ra' THEN 'subsidised_entity'
+               WHEN 'org-sub-cga' THEN 'subsidised_entity'
+               WHEN 'eu-ins-bod-ag' THEN 'eu_institution'
+               WHEN 'int-org' THEN 'international_org' ELSE 'other' END
+          WHEN path ILIKE '%CODIF_DATA.AA_AUTHORITY_TYPE' THEN
+          CASE value WHEN 'Regional or local authority' THEN 'regional_or_local'
+               WHEN 'Regional or local Agency/Office' THEN 'regional_or_local'
+               WHEN 'Body governed by public law' THEN 'body_public_law'
+               WHEN 'Utilities entity' THEN 'utility'
+               WHEN 'Ministry or any other national or federal authority' THEN 'central_government'
+               WHEN 'National or federal Agency/Office' THEN 'central_government'
+               WHEN 'European Institution/Agency' THEN 'eu_institution' ELSE 'other' END END)
+                                                             AS buyer_type,
+        -- 1.3b Taetigkeitsfeld der Behoerde
+        max(CASE WHEN path ILIKE '%ContractingActivity.ActivityTypeCode' THEN
+          CASE lower(value) WHEN 'gen-pub' THEN 'general_public'
+               WHEN 'health' THEN 'health' WHEN 'hc-am' THEN 'health'
+               WHEN 'education' THEN 'education' WHEN 'econ-aff' THEN 'economic_affairs'
+               WHEN 'soc-pro' THEN 'social_protection' WHEN 'env-pro' THEN 'environment'
+               WHEN 'defence' THEN 'defence' WHEN 'pub-os' THEN 'public_order'
+               WHEN 'rcr' THEN 'recreation_culture' WHEN 'housing' THEN 'housing'
+               WHEN 'rail' THEN 'transport' WHEN 'urttb' THEN 'transport'
+               WHEN 'airport' THEN 'transport' WHEN 'port' THEN 'transport'
+               WHEN 'post' THEN 'transport'
+               WHEN 'water' THEN 'utilities' WHEN 'electricity' THEN 'utilities'
+               WHEN 'gas-heat' THEN 'utilities' WHEN 'gas-oil' THEN 'utilities'
+               WHEN 'solid-fuel' THEN 'utilities' ELSE 'other' END
+          WHEN path ILIKE '%CODIF_DATA.MA_MAIN_ACTIVITIES' THEN
+          CASE value WHEN 'General public services' THEN 'general_public'
+               WHEN 'Health' THEN 'health' WHEN 'Education' THEN 'education'
+               WHEN 'Economic and financial affairs' THEN 'economic_affairs'
+               WHEN 'Social protection' THEN 'social_protection'
+               WHEN 'Environment' THEN 'environment' WHEN 'Defence' THEN 'defence'
+               WHEN 'Public order and safety' THEN 'public_order'
+               WHEN 'Recreation, culture and religion' THEN 'recreation_culture'
+               WHEN 'Housing and community amenities' THEN 'housing'
+               WHEN 'Railway services' THEN 'transport'
+               WHEN 'Airport-related activities' THEN 'transport'
+               WHEN 'Port-related activities' THEN 'transport'
+               WHEN 'Urban railway, tramway, trolleybus or bus services' THEN 'transport'
+               WHEN 'Postal services' THEN 'transport'
+               WHEN 'Water' THEN 'utilities' WHEN 'Electricity' THEN 'utilities'
+               WHEN 'Production, transport and distribution of gas and heat' THEN 'utilities'
+               ELSE 'other' END END)                         AS buyer_activity,
+        -- 1.4 Direktlink zu den Vergabeunterlagen. Der Los-Link ist der spezifischere,
+        -- deshalb `max()` ueber beide Ebenen — irgendein gueltiger http-Link genuegt.
+        max(CASE WHEN path ILIKE '%CallForTendersDocumentReference%'
+                  AND value LIKE 'http%' THEN value END)     AS documents_url,
+        -- 1.2 Bundesweit erbringbar. `anyw-cou` = irgendwo im Land, `anyw` = irgendwo,
+        -- `anyw-eea` = im EWR. Alle drei heissen: an keinen Ort gebunden.
+        (max(CASE WHEN path ILIKE '%RealizedLocation.Address.Region'
+                   AND lower(value) LIKE 'anyw%' THEN 1 ELSE 0 END) = 1) AS is_nationwide,
+        -- #15 Weg A — strukturierte Anforderungen aus eForms (los-übergreifend je Notice
+        -- aggregiert; `AND NOT ILIKE '%@%'` schliesst die @listName/@unitCode-Attribute aus,
+        -- damit nur der Blattwert zaehlt). Nichts erfunden: fehlt der Beleg → NULL.
+        max(CASE WHEN path ILIKE '%RequiredFinancialGuarantee.GuaranteeTypeCode' AND path NOT ILIKE '%@%'
+                 THEN CASE lower(value) WHEN 'true' THEN 1 WHEN 'false' THEN 0 END END) AS guarantee_required,
+        max(CASE WHEN path ILIKE '%VariantConstraintCode' AND path NOT ILIKE '%@%'
+                 THEN CASE lower(value) WHEN 'allowed' THEN 1 WHEN 'not-allowed' THEN 0 END END) AS variants_allowed,
+        CASE WHEN max(CASE WHEN path ILIKE '%TenderValidityPeriod.DurationMeasure@unitCode'
+                           THEN upper(value) END) = 'MONTH'
+             THEN max(CASE WHEN path ILIKE '%TenderValidityPeriod.DurationMeasure' AND path NOT ILIKE '%@%'
+                           THEN try_cast(value AS integer) END) * 30
+             ELSE max(CASE WHEN path ILIKE '%TenderValidityPeriod.DurationMeasure' AND path NOT ILIKE '%@%'
+                           THEN try_cast(value AS integer) END) END                      AS validity_days,
+        string_agg(DISTINCT CASE WHEN path ILIKE '%SelectionCriteria.CriterionTypeCode' AND path NOT ILIKE '%@%'
+                            AND value IN ('tp-abil','sui-act','ef-stand') THEN value END, ',') AS selection_types,
+        -- #16 Verfahrenskalender-Rest: Angebotsfrist-Uhrzeit (HH:MM) + Bieterfragen-Frist.
+        max(CASE WHEN path ILIKE '%TenderSubmissionDeadlinePeriod.EndTime' AND path NOT ILIKE '%@%'
+                 THEN substr(value, 1, 5) END)                                   AS deadline_time,
+        max(CASE WHEN path ILIKE '%AdditionalInformationRequestPeriod.EndDate' AND path NOT ILIKE '%@%'
+                 THEN substr(value, 1, 10) END)                                  AS question_deadline
+      FROM read_parquet('{A}', hive_partitioning=1)
+      WHERE path ILIKE '%RegulatoryDomain'
+         OR path ILIKE '%ProcurementLegislationDocumentReference.ID'
+         OR path ILIKE '%ContractingPartyType.PartyTypeCode'
+         OR path ILIKE '%CODIF_DATA.AA_AUTHORITY_TYPE'
+         OR path ILIKE '%ContractingActivity.ActivityTypeCode'
+         OR path ILIKE '%CODIF_DATA.MA_MAIN_ACTIVITIES'
+         OR path ILIKE '%CallForTendersDocumentReference%'
+         OR path ILIKE '%RealizedLocation.Address.Region'
+         OR path ILIKE '%RequiredFinancialGuarantee.GuaranteeTypeCode'
+         OR path ILIKE '%VariantConstraintCode'
+         OR path ILIKE '%TenderValidityPeriod.DurationMeasure%'
+         OR path ILIKE '%SelectionCriteria.CriterionTypeCode'
+         OR path ILIKE '%TenderSubmissionDeadlinePeriod.EndTime'
+         OR path ILIKE '%AdditionalInformationRequestPeriod.EndDate'
+      GROUP BY notice_id
+    """
+
+
 def build_lead_export(cfg: Config, country: str = "DE"):
     """`lead_detail` → **Frontend-Vertrag** (flach, Supabase-ready) — durchgehend ENGLISCH.
 
@@ -2252,6 +2390,20 @@ def build_lead_export(cfg: Config, country: str = "DE"):
                  WHEN cr.price_weight_pct IS NOT NULL THEN 'actual'
                  WHEN cr.n_rank > 0 THEN 'ranked_only'   -- ord-imp: Reihenfolge, kein Gewicht
                  ELSE 'unweighted' END                AS criteria_source,
+            -- 1.1 Vergaberegime: der Ein-Klick-Filter (VOB / UVgO / VgV / SektVO)
+            ctx.regulatory_regime,
+            -- 1.3 Kaeufer-Segmentierung — beide Achsen ueber die gesamte Historie
+            ctx.buyer_type, ctx.buyer_activity,
+            -- 1.4 Direktlink zu den Vergabeunterlagen. `source_url` zeigt auf TED,
+            -- `portal_url` (in lead_detail) ist zu 44,5 % / bei DÖE zu 0 % gefuellt —
+            -- dieses Feld deckt 96,8 % der OFFENEN Leads.
+            ctx.documents_url,
+            -- 1.2 bundesweit erbringbar → darf in der Umkreissuche nie herausfallen
+            coalesce(ctx.is_nationwide, false)         AS is_nationwide,
+            -- #15 Weg A — strukturierte Anforderungen (Anforderungs-Check)
+            ctx.guarantee_required, ctx.variants_allowed,
+            ctx.validity_days, ctx.selection_types,
+            ctx.deadline_time, ctx.question_deadline,
             d.ted_url                                 AS source_url,
             (d.incumbent_name IS NOT NULL AND d.incumbent_conf >= 0.75) AS has_comparables,
             (coalesce(d.tenure_years, 0) > 0)         AS has_contract_history
@@ -2271,6 +2423,7 @@ def build_lead_export(cfg: Config, country: str = "DE"):
             FROM read_parquet('{cfg.silver_table_glob("lots", country)}', hive_partitioning=1)
             GROUP BY notice_id
           ) lt ON lt.notice_id = d.lead_id
+          LEFT JOIN ({_lead_context_sql(cfg, country)}) ctx ON ctx.notice_id = d.lead_id
           LEFT JOIN (
             -- Erst JE LOS die Gewichte je Art buendeln, DANN ueber die Lose mitteln.
             -- Andersherum (alles in einen Topf) addierten sich die Lose zu >100 %.
@@ -2294,8 +2447,10 @@ def build_lead_export(cfg: Config, country: str = "DE"):
                                   THEN try_cast(replace(replace(replace(weight,'%',''),
                                        ',','.'),' ','') AS DOUBLE) END)
                            OVER (PARTITION BY notice_id, lot_id) AS s
+                  -- union_by_name: der Kriterien-Reparse lief nur ab 2024, aeltere
+                  -- Monate kennen die Spalte `weight_kind` noch nicht.
                   FROM read_parquet('{cfg.silver_table_glob("award_criteria", country)}',
-                                    hive_partitioning=1)
+                                    hive_partitioning=1, union_by_name=1)
                 )
               ) GROUP BY notice_id, lot_id
             )
@@ -2362,11 +2517,22 @@ def build_lead_lot(cfg: Config, country: str = "DE"):
     g = cfg.gold_dir / country
     out = (g / "lead_lot.parquet").as_posix()
     L = cfg.silver_table_glob("lots", country)
+    LC = cfg.silver_table_glob("lot_cpv", country)
     con = duckdb.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
+          WITH lot_cpv_main AS (
+            -- Los-CPV (ProcurementProjectLot.MainCommodityClassification, ~72 % DÖE):
+            -- das eigene Fachgebiet je Los. Fundament fuer per-Los-Relevanz (#12).
+            SELECT notice_id, lot_id,
+                   coalesce(any_value(cpv_code) FILTER (WHERE is_main),
+                            any_value(cpv_code)) AS lot_cpv_code
+            FROM read_parquet('{LC}', hive_partitioning=1)
+            GROUP BY notice_id, lot_id
+          )
           SELECT
             lo.notice_id                              AS lead_id,
+            lc.lot_cpv_code                           AS lot_cpv_code,
             -- 450 Lose tragen keine LotID im Quell-XML. Der Supabase-PK ist
             -- (lead_id, lot_id) → NULL waere dort nicht erlaubt und das Upsert fiele
             -- auf die Nase. Ordinal-Fallback statt Zeile wegwerfen.
@@ -2389,6 +2555,8 @@ def build_lead_lot(cfg: Config, country: str = "DE"):
           FROM read_parquet('{L}', hive_partitioning=1) lo
           JOIN read_parquet('{(g / "lead_export.parquet").as_posix()}') l
             ON l.lead_id = lo.notice_id
+          LEFT JOIN lot_cpv_main lc
+            ON lc.notice_id = lo.notice_id AND lc.lot_id = lo.lot_id
         ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
     """)
     n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]

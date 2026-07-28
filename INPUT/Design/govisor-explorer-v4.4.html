@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>goVisor — Explorer (Tabelle)</title>
+<title>goVisor · Lead Explorer v4.4</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,75..125,400..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -97,8 +97,8 @@ body[data-view="verteidigung"] .band.risk[data-level="mittel"] .segs i:nth-child
   color:var(--signal-deep);padding:5px 0;transition:.14s}
 .sec-link:hover{gap:9px}
 .sec-link svg{width:14px;height:14px}
-.bsec{margin-bottom:var(--s5)}
-.bsec>h4{font-family:var(--mono);font-size:var(--t-meta);font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-400);margin-bottom:var(--s3)}
+.bsec{margin-bottom:var(--s4)}
+
 .bstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 var(--s5);border-top:1px solid var(--line);margin-bottom:var(--s3)}
 .bstat{display:flex;flex-direction:column;gap:2px;padding:var(--s3) 0;border-bottom:1px solid var(--line);min-width:0}
 .bstat-wide{grid-column:span 2}
@@ -248,6 +248,476 @@ body[data-view="verteidigung"] .band.risk[data-level="mittel"] .segs i:nth-child
 .upbtn{font-size:var(--t-sm);font-weight:600;color:#fff;background:var(--note-deep);padding:5px 12px;border-radius:100px;flex:none}
 .upbtn:hover{background:var(--note)}
 
+/* Trefferbeleg — zeigt, WO ein Suchwort gefunden wurde */
+.fund{display:flex;align-items:baseline;gap:7px;margin-top:3px;font-size:var(--t-meta);min-width:0}
+.fund-o{font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--signal-deep);background:var(--signal-wash);padding:1px 6px;border-radius:100px;flex:none}
+.fund-t{color:var(--ink-500);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+mark{background:#FDF0B8;color:inherit;padding:0 1px;border-radius:2px}
+
+/* Einstiegsschwelle in der Volumen-Spalte */
+.volwrap{display:flex;flex-direction:column;align-items:flex-end;gap:1px}
+.volmin{font-family:var(--mono);font-size:var(--t-meta);color:var(--signal-deep)}
+
+/* Lose */
+.einstieg{display:flex;align-items:center;gap:var(--s4);flex-wrap:wrap;padding:var(--s3) var(--s4);
+  background:var(--signal-wash);border:1px solid var(--signal);border-radius:var(--r);margin-bottom:var(--s3)}
+.ein-m{flex:none}
+.ein-k{display:block;font-size:var(--t-meta);color:var(--signal-deep)}
+.ein-v{display:block;font-family:var(--mono);font-size:22px;font-weight:700;color:var(--signal-deep);
+  line-height:1.1;letter-spacing:-.02em}
+.ein-x{flex:1;min-width:220px;font-size:var(--t-sm);color:var(--ink-700);line-height:1.5}
+.lose{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--surface)}
+.los{display:grid;grid-template-columns:34px minmax(0,1fr) 96px 88px 92px;gap:var(--s3);
+  padding:var(--s3) var(--s4);border-bottom:1px solid var(--line);font-size:var(--t-sm);align-items:baseline}
+.los:last-child{border-bottom:none}
+.los-head{font-family:var(--mono);font-size:var(--t-meta);letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-400);background:var(--surface-2)}
+.los-min{background:var(--signal-wash)}
+.los-n{font-family:var(--mono);color:var(--ink-500)}
+.los-t{min-width:0;font-weight:500;display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}
+.los-tag{font-family:var(--mono);font-size:8.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--signal-deep);background:var(--surface);border:1px solid var(--signal);padding:1px 6px;border-radius:100px}
+.los-w,.los-d{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right;color:var(--ink-700)}
+.los-r{color:var(--ink-500);text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* Zuschlagskriterien */
+.zbar{display:flex;height:10px;border-radius:100px;overflow:hidden;background:var(--surface-3);
+  margin-bottom:var(--s3);max-width:460px}
+.zseg{display:block;height:100%}
+.z-preis{background:var(--ink-500)}
+.z-qualitaet{background:var(--signal)}
+.z-kosten{background:var(--ink-300)}
+.zdot{width:9px;height:9px;border-radius:2px;display:inline-block;margin-right:7px;position:relative;top:1px}
+.zlist{display:flex;gap:var(--s5);flex-wrap:wrap;margin-bottom:var(--s3)}
+.zitem{font-size:var(--t-body);color:var(--ink-700)}
+.zitem b{font-family:var(--mono);font-weight:600;color:var(--ink-900);margin-left:7px}
+.zdeut{font-size:var(--t-sm);color:var(--ink-700);line-height:1.55;
+  padding-left:var(--s3);border-left:2px solid var(--line-strong)}
+
+/* Kurze Beschreibung — der Normalfall */
+.kurztext.leer{font-style:italic;color:var(--ink-400)}
+.kurztext{font-size:var(--t-body);line-height:1.6;color:var(--ink-900);
+  padding:var(--s3) var(--s4);background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+
+.rts-note{font-size:var(--t-meta);color:var(--ink-400);line-height:1.5;margin-top:var(--s3);
+  padding-top:var(--s3);border-top:1px solid var(--line)}
+@media (max-width:900px){.rt-layout{grid-template-columns:1fr}}
+
+/* Begriffe unter dem Text, in flachen Spalten */
+.sec-raw{max-width:820px}
+.ex{margin-top:var(--s5);padding-top:var(--s4);border-top:1px solid var(--line)}
+.ex-head{display:flex;align-items:baseline;justify-content:space-between;gap:var(--s4);margin-bottom:var(--s3);flex-wrap:wrap}
+.ex-h{font-family:var(--mono);font-size:var(--t-meta);font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-400)}
+.ex-link{display:inline-flex;align-items:center;gap:6px;font-size:var(--t-sm);font-weight:600;
+  color:var(--signal-deep);transition:.14s}
+.ex-link:hover{gap:9px}
+.ex-link i{font-style:normal;font-weight:400;color:var(--flag);font-size:var(--t-meta)}
+.ex-link svg{width:13px;height:13px}
+
+.ex-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(146px,1fr));gap:var(--s4);align-items:start}
+.ex-col{display:flex;flex-direction:column;gap:5px;min-width:0}
+.ex-gh{display:flex;align-items:baseline;gap:6px;font-size:var(--t-sm);font-weight:600;
+  color:var(--ink-900);margin-bottom:4px;padding-bottom:5px;border-bottom:1px solid var(--line)}
+.ex-gh i{font-family:var(--mono);font-style:normal;font-size:9px;font-weight:500;color:var(--ink-300)}
+.ex-ko .ex-gh{border-bottom-color:var(--line-strong)}
+
+.ex-t{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;text-align:left;
+  font-size:var(--t-sm);font-weight:500;padding:6px 10px;border-radius:var(--r);
+  background:var(--surface-3);color:var(--ink-900);border:1px solid transparent;transition:.14s}
+.ex-t:hover{border-color:var(--line-strong)}
+.ex-t.on{border-color:var(--signal);background:var(--signal-wash)}
+.ex-w{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ex-cpv{background:var(--signal-wash);color:var(--signal-deep)}
+.ex-uns .ex-w{color:var(--flag)}
+.ex-src{font-family:var(--mono);font-size:8.5px;font-style:normal;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink-400);flex:none}
+.ex-cpv .ex-src{color:var(--signal-deep);opacity:.7}
+.ex-more{align-self:flex-start;font-size:var(--t-meta);font-weight:600;color:var(--signal-deep);padding:3px 0;margin-top:2px}
+.ex-more:hover{text-decoration:underline}
+
+.ex-legend{display:flex;align-items:center;gap:var(--s4);flex-wrap:wrap;margin-top:var(--s4);
+  padding-top:var(--s3);border-top:1px solid var(--line);font-size:var(--t-meta);color:var(--ink-500)}
+.ex-legend span{display:inline-flex;align-items:center;gap:6px}
+.ex-legend b{font-family:var(--mono);font-size:8.5px;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink-400)}
+.ex-hint{margin-left:auto;color:var(--ink-400)}
+mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
+@media (max-width:640px){.ex-hint{margin-left:0}}
+
+/* Originaltext */
+.rawtext{border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+.rawtext summary{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);
+  padding:var(--s3) var(--s4);cursor:pointer;list-style:none;font-size:var(--t-sm)}
+.rawtext summary::-webkit-details-marker{display:none}
+.rt-open{font-weight:600;color:var(--signal-deep)}
+.rawtext[open] .rt-open::after{content:''}
+.rt-len{font-family:var(--mono);font-size:var(--t-meta);color:var(--ink-400)}
+.rt-body{padding:0 var(--s4) var(--s4);border-top:1px solid var(--line);padding-top:var(--s3)}
+.rt-body{max-width:none}
+.rt-body p{font-size:var(--t-body);line-height:1.65;color:var(--ink-700);margin-bottom:var(--s3)}
+.rt-body p:last-child{margin-bottom:0}
+.rt-note{font-size:var(--t-meta);color:var(--ink-400);line-height:1.5;margin-top:var(--s2)}
+@media (max-width:640px){.los{grid-template-columns:28px 1fr;gap:4px}.los-w,.los-d,.los-r{text-align:left}}
+
+/* Eigener Vertrag — direkt in der Liste, statt in einem eigenen Modus */
+.eigentag{font-family:var(--mono);font-size:8.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--flag);background:var(--flag-wash);border:1px solid var(--flag);
+  padding:1px 6px;border-radius:100px;margin-left:8px;white-space:nowrap}
+
+/* Ring und Suchende in einer Zelle */
+.netzcell{display:inline-flex;align-items:center;gap:3px;white-space:nowrap}
+.such{display:inline-grid;place-items:center;min-width:20px;height:19px;padding:0 5px;border-radius:100px;
+  font-family:var(--mono);font-size:var(--t-meta);font-weight:600;color:var(--ink-500);background:var(--surface-3)}
+.such.viel{color:var(--flag);background:var(--flag-wash)}
+.such.lock{background:transparent;cursor:help}
+
+/* Dialog */
+.dlg{position:fixed;inset:0;z-index:200;display:none;place-items:center;padding:var(--s5)}
+.dlg.on{display:grid}
+.dlg-bg{position:absolute;inset:0;background:rgba(18,33,29,.42)}
+.dlg-card{position:relative;max-width:460px;background:var(--surface);border-radius:12px;
+  padding:var(--s5);box-shadow:0 24px 60px rgba(18,33,29,.3)}
+.dlg-lock{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;
+  background:var(--signal-wash);color:var(--signal-deep);margin-bottom:var(--s3)}
+.dlg-lock svg{width:20px;height:20px}
+.dlg-card h3{font-size:var(--t-title);font-weight:700;letter-spacing:-.02em;margin-bottom:var(--s2)}
+.dlg-card p{font-size:var(--t-body);color:var(--ink-700);line-height:1.6;margin-bottom:var(--s4)}
+.dlg-plus{padding:var(--s3) var(--s4);background:var(--surface-2);border:1px solid var(--line);
+  border-radius:var(--r);margin-bottom:var(--s4)}
+.dlg-p-t{display:block;font-family:var(--mono);font-size:var(--t-meta);font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink-400);margin-bottom:6px}
+.dlg-plus ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+.dlg-plus li{font-size:var(--t-sm);color:var(--ink-700);line-height:1.5;padding-left:16px;position:relative}
+.dlg-plus li::before{content:'';position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:var(--signal)}
+.dlg-row{display:flex;align-items:center;gap:var(--s3);flex-wrap:wrap}
+.dlg-cta{font-size:var(--t-body);font-weight:600;color:#fff;background:var(--signal);padding:11px 20px;border-radius:var(--r)}
+.dlg-cta:hover{background:var(--signal-deep)}
+.dlg-alt{font-size:var(--t-sm);color:var(--ink-500)}
+.dlg-alt:hover{color:var(--ink-900);text-decoration:underline}
+
+/* Netzwerk: Vorwissen und Kontingent */
+.nz-vor{display:flex;align-items:baseline;gap:var(--s3);flex-wrap:wrap;padding:var(--s3) var(--s4);
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);margin-bottom:var(--s3)}
+.nz-vor.lock{border-style:dashed}
+.nz-v-k{font-size:var(--t-sm);color:var(--ink-500)}
+.nz-v-v{font-family:var(--mono);font-size:var(--t-lg);font-weight:700;color:var(--ink-900)}
+.nz-v-x{font-size:var(--t-sm);color:var(--ink-700);flex:1;min-width:220px;line-height:1.5}
+.nzbar-r{display:flex;align-items:center;gap:var(--s3);flex-wrap:wrap;flex:none}
+.nzbar-q{font-family:var(--mono);font-size:var(--t-meta);color:var(--ink-400);white-space:nowrap}
+.nzbar-q.out{color:var(--flag);font-weight:600}
+.nz-plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:var(--s3);margin-top:var(--s4)}
+.nz-p{padding:var(--s3) var(--s4);background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+.nz-p-t{display:block;font-family:var(--mono);font-size:var(--t-meta);font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink-400);margin-bottom:4px}
+.nz-p-x{font-size:var(--t-sm);color:var(--ink-700);line-height:1.55}
+
+/* Rechtsrahmen-Kürzel */
+.rah{font-family:var(--mono);font-size:var(--t-meta);font-weight:600;letter-spacing:.03em;
+  padding:2px 8px;border-radius:100px;background:var(--surface-3);color:var(--ink-700);cursor:help}
+.rah-vob{background:#F5F0E7;color:#6E5A34}
+.rah-vgv{background:#EDF1F6;color:#365574}
+.rah-uvgo{background:#F2EEF6;color:#614579}
+.rah-sektvo{background:#EBF3EE;color:#2C5E43}
+
+/* Aufwand: Einzelangaben und Dreisatz */
+.aufl{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0 var(--s5);margin-top:var(--s3)}
+.auf-r{display:flex;align-items:baseline;justify-content:space-between;gap:var(--s3);
+  padding:7px 0;border-bottom:1px solid var(--line);font-size:var(--t-sm)}
+.auf-k{color:var(--ink-500)}
+.auf-v{font-weight:600}
+.auf-v.unk{font-weight:400;font-style:italic;color:var(--ink-400)}
+.dreisatz{margin-top:var(--s3);padding:var(--s3) var(--s4);background:var(--surface);
+  border:1px solid var(--line);border-radius:var(--r)}
+.ds-t{display:block;font-family:var(--mono);font-size:var(--t-meta);font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink-400);margin-bottom:4px}
+.ds-x{display:block;font-size:var(--t-body);color:var(--ink-900);line-height:1.55}
+.ds-tr{display:block;font-size:var(--t-sm);color:var(--flag);margin-top:6px}
+.ds-cov{display:block;font-size:var(--t-meta);color:var(--ink-400);margin-top:4px}
+
+/* Nachweis am Rechtsrahmen */
+.req-rahmen{background:var(--surface-2)}
+.req-rahmen .code{color:var(--ink-900);font-weight:600}
+
+/* Aktualität — Änderung oder Aufhebung nach Veröffentlichung */
+.akttag{font-family:var(--mono);font-size:8.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  padding:1px 6px;border-radius:100px;margin-left:8px;white-space:nowrap;display:inline-block}
+.akt-aufgehoben{color:var(--risk);background:var(--risk-wash);border:1px solid var(--risk)}
+.akt-geaendert{color:var(--flag);background:var(--flag-wash);border:1px solid var(--flag)}
+.aktbar{display:flex;align-items:flex-start;gap:var(--s2);margin-bottom:var(--s3);
+  padding:var(--s3) var(--s4);border-radius:var(--r);font-size:var(--t-sm);line-height:1.55}
+.aktbar svg{width:16px;height:16px;flex:none;margin-top:1px}
+.aktbar.akt-aufgehoben{background:var(--risk-wash);border:1px solid var(--risk);color:var(--ink-900)}
+.aktbar.akt-geaendert{background:var(--flag-wash);border:1px solid var(--flag);color:var(--ink-900)}
+
+/* Was die Bekanntmachung nicht beantwortet */
+.offen-x{font-size:var(--t-sm);color:var(--ink-500);line-height:1.55;margin-bottom:var(--s3)}
+.offen{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--s3);margin-bottom:var(--s3)}
+.off-g{padding:var(--s3) var(--s4);background:var(--surface);border:1px dashed var(--line-strong);border-radius:var(--r)}
+.off-t{display:block;font-size:var(--t-body);font-weight:600;margin-bottom:3px}
+.off-x{display:block;font-size:var(--t-sm);color:var(--ink-500);line-height:1.5}
+.offen-btn{display:inline-flex;align-items:center;gap:7px;font-size:var(--t-sm);font-weight:600;
+  color:#fff;background:var(--signal);padding:9px 16px;border-radius:var(--r);text-decoration:none}
+.offen-btn:hover{background:var(--signal-deep)}
+.offen-btn svg{width:13px;height:13px;flex:none}
+.offen-hin{display:block;font-size:var(--t-meta);color:var(--ink-500);margin-top:var(--s2)}
+.v-na{font-style:italic;color:var(--ink-400)}
+
+/* Vergabeunterlagen — der wichtigste Absprung, deshalb ganz oben */
+.sec-unterlagen{background:var(--signal-wash);border-color:var(--signal);padding:var(--s4) var(--s5)}
+.unt{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);flex-wrap:wrap}
+.unt-m{min-width:0;flex:1}
+.unt-t{display:block;font-size:var(--t-lg);font-weight:700;letter-spacing:-.012em;color:var(--ink-900)}
+.unt-x{display:block;font-size:var(--t-sm);color:var(--ink-700);line-height:1.55;margin-top:3px}
+.unt-btn{display:inline-flex;align-items:center;gap:7px;font-size:var(--t-body);font-weight:600;
+  color:#fff;background:var(--signal-deep);padding:10px 18px;border-radius:var(--r);
+  text-decoration:none;white-space:nowrap;flex:none;transition:.14s}
+.unt-btn:hover{background:var(--ink-900)}
+.unt-btn svg{width:14px;height:14px;flex:none}
+.unt-leer{font-size:var(--t-sm);font-style:italic;color:var(--ink-500);flex:none}
+
+/* Kurze Rückmeldung */
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,12px);z-index:120;
+  background:var(--ink-900);color:#fff;font-size:var(--t-sm);font-weight:500;
+  padding:11px 18px;border-radius:100px;box-shadow:0 10px 30px rgba(18,33,29,.28);
+  opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;max-width:min(92vw,520px);text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* Netzwerk als Listen-Modus */
+.netzgate[hidden]{display:none}
+body[data-netzoff] .tablescroll{display:none}
+.netzgate .nz-in{max-width:640px;padding:var(--s5) var(--s6)}
+.nzbar{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);flex-wrap:wrap;
+  padding:var(--s3) var(--s4);background:var(--surface-2);border-bottom:1px solid var(--line)}
+.nzbar-m{min-width:0}
+.nzbar-t{display:block;font-size:var(--t-body);color:var(--ink-900)}
+.nzbar-x{display:block;font-size:var(--t-sm);color:var(--ink-500);margin-top:2px;line-height:1.5}
+.nzbar-x b{color:var(--ink-900)}
+.nzbar-ok{font-size:var(--t-sm);font-weight:600;color:var(--signal-deep);white-space:nowrap}
+.nzbar-w{font-size:var(--t-sm);font-weight:600;color:var(--ink-500);white-space:nowrap}
+td.c-netz,th.c-netz{text-align:center}
+.nzring{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:var(--r);
+  color:var(--ink-300);transition:.14s;position:relative}
+.nzring svg{width:18px;height:18px}
+.nzring:hover{color:var(--signal-deep);background:var(--signal-wash)}
+.nzring.on{color:var(--signal-deep)}
+.nzring.on svg circle{fill:var(--signal-wash)}
+.nzring.match{color:var(--signal-deep)}
+.nzring.match svg circle{fill:var(--signal);stroke:var(--signal-deep)}
+.nzring.match::after{content:'';position:absolute;top:2px;right:2px;width:7px;height:7px;
+  border-radius:50%;background:var(--flag);border:1.5px solid var(--surface)}
+.nz-rueck{display:block;margin-top:var(--s2);font-size:var(--t-meta);color:var(--ink-400)}
+.nz-rueck:hover{color:var(--risk);text-decoration:underline}
+
+/* Netzwerk */
+.nz-sig{display:flex;align-items:center;gap:var(--s5);flex-wrap:wrap;margin-bottom:var(--s2);
+  padding-bottom:var(--s2);border-bottom:1px solid var(--line)}
+.nz-sg{display:inline-flex;align-items:center;gap:8px;font-size:var(--t-sm)}
+.nz-sg i{font-style:normal;font-size:var(--t-meta);color:var(--ink-400)}
+.nz-sg b{font-family:var(--mono);font-weight:600}
+.nz-bg-i{color:var(--ink-400);font-size:var(--t-meta)}
+button.nz-c-t{display:block;font-size:var(--t-body);font-weight:600;line-height:1.35;text-align:left;color:var(--ink-900)}
+button.nz-c-t:hover{color:var(--signal-deep);text-decoration:underline}
+.ptab-n{font-family:var(--mono);font-size:9px;font-weight:600;color:var(--signal-deep);
+  background:var(--signal-wash);padding:1px 6px;border-radius:100px}
+.nz-in{max-width:640px}
+.nz-in-t{font-size:var(--t-lg);font-weight:700;letter-spacing:-.012em;margin-bottom:var(--s2)}
+.nz-in-x{font-size:var(--t-body);color:var(--ink-700);line-height:1.6;margin-bottom:var(--s4)}
+.nz-rules{display:flex;flex-direction:column;gap:7px;margin-bottom:var(--s4);
+  padding:var(--s3) var(--s4);background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+.nz-r{display:flex;align-items:flex-start;gap:9px;font-size:var(--t-sm);color:var(--ink-700);line-height:1.5}
+.nz-r i{font-style:normal;font-weight:700;flex:none;font-size:12px;line-height:1.5}
+.nz-r i.ok{color:var(--signal-deep)}
+.nz-r i.no{color:var(--ink-400)}
+.nz-btn{font-size:var(--t-body);font-weight:600;color:#fff;background:var(--signal);
+  padding:10px 20px;border-radius:var(--r)}
+.nz-btn:hover{background:var(--signal-deep)}
+.nz-fine{font-size:var(--t-meta);color:var(--ink-400);margin-top:var(--s2)}
+
+.nz-head{display:flex;align-items:center;gap:var(--s3);margin-bottom:var(--s2)}
+.nz-on{font-size:var(--t-sm);font-weight:600;color:var(--signal-deep);background:var(--signal-wash);
+  padding:3px 10px;border-radius:100px}
+.nz-off{font-size:var(--t-meta);color:var(--ink-400)}
+.nz-off:hover{color:var(--risk);text-decoration:underline}
+.nz-x{font-size:var(--t-sm);color:var(--ink-500);line-height:1.5;margin-bottom:var(--s3)}
+
+.nz-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:var(--s3) var(--s4);margin-bottom:var(--s3)}
+.nz-card.has-match{border-color:var(--signal)}
+.nz-c-h{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s3);margin-bottom:6px}
+.nz-c-m{min-width:0}
+.nz-c-t{display:block;font-size:var(--t-body);font-weight:600;line-height:1.35}
+.nz-c-s{display:block;font-size:var(--t-meta);color:var(--ink-400);margin-top:2px}
+.nz-tag{font-family:var(--mono);font-size:8.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--signal-deep);background:var(--signal-wash);padding:2px 8px;border-radius:100px;flex:none;white-space:nowrap}
+.nz-lose{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap;font-size:var(--t-sm);color:var(--ink-500);margin-bottom:var(--s3)}
+.nz-lose b{font-family:var(--mono);color:var(--ink-900)}
+.nz-lose i{color:var(--ink-300);font-style:normal}
+.nz-int{font-size:var(--t-sm);font-weight:600;color:var(--signal-deep);border:1px solid var(--signal);
+  padding:7px 14px;border-radius:var(--r)}
+.nz-int:hover{background:var(--signal-wash)}
+.nz-wait{font-size:var(--t-sm);color:var(--ink-500);line-height:1.5;padding:var(--s3);
+  background:var(--surface-2);border-radius:var(--r)}
+.nz-match{padding:var(--s3);background:var(--signal-wash);border-radius:var(--r)}
+.nz-m-h{display:flex;align-items:baseline;gap:var(--s2);font-size:var(--t-sm);margin-bottom:var(--s2)}
+.nz-m-s{font-size:var(--t-meta);color:var(--ink-500)}
+.nz-m-r{display:flex;align-items:baseline;gap:var(--s3);flex-wrap:wrap;font-size:var(--t-sm);margin-bottom:var(--s2)}
+.nz-m-n{font-weight:600}
+.nz-blur{filter:blur(4px);user-select:none;color:var(--ink-500)}
+.nz-m-f,.nz-m-g,.nz-m-d{color:var(--ink-500);font-size:var(--t-meta)}
+.nz-m-x{font-size:var(--t-sm);color:var(--ink-700);line-height:1.55;margin-bottom:var(--s2)}
+.nz-frei{font-size:var(--t-sm);font-weight:600;color:#fff;background:var(--signal-deep);padding:7px 14px;border-radius:var(--r)}
+.nz-kontakt{padding:var(--s3);background:var(--surface);border:1px solid var(--signal);border-radius:var(--r);font-size:var(--t-sm)}
+.nz-kontakt span{display:block;color:var(--ink-700);margin-top:2px}
+
+/* Partner-Abschnitt am Lead */
+.pnfacts{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3);margin-bottom:var(--s3)}
+.pnf{padding:var(--s3) var(--s4);background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+.pnf-hero{border-color:var(--flag);background:var(--flag-wash)}
+.pnf-k{display:block;font-size:var(--t-meta);color:var(--ink-500);margin-bottom:2px}
+.pnf-hero .pnf-k{color:var(--flag)}
+.pnf-v{font-family:var(--mono);font-size:22px;font-weight:700;letter-spacing:-.02em;line-height:1.1}
+.pnf-hero .pnf-v{color:var(--flag)}
+.pn-deut{font-size:var(--t-sm);color:var(--ink-700);line-height:1.55;padding-left:var(--s3);
+  border-left:2px solid var(--line-strong);margin-bottom:var(--s3)}
+.pn-bg{display:flex;align-items:baseline;gap:var(--s3);flex-wrap:wrap;padding:var(--s3) var(--s4);
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);margin-bottom:var(--s3)}
+.pn-bg-k{font-size:var(--t-sm);color:var(--ink-500)}
+.pn-bg-v{font-size:var(--t-body);font-weight:700;color:var(--signal-deep)}
+.pn-bg-x{font-size:var(--t-sm);color:var(--ink-700);flex:1;min-width:200px}
+.pn-list{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);padding:var(--s3) var(--s4) var(--s4)}
+.pn-lh{display:flex;align-items:baseline;justify-content:space-between;gap:var(--s3);flex-wrap:wrap;
+  font-size:var(--t-sm);font-weight:600;padding-bottom:var(--s2);border-bottom:1px solid var(--line);margin-bottom:var(--s2)}
+.pn-cnt{font-family:var(--mono);font-size:var(--t-meta);font-weight:500;color:var(--ink-400)}
+.pn-row{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) 74px 78px;gap:var(--s3);
+  align-items:baseline;padding:8px 0;border-bottom:1px solid var(--line);font-size:var(--t-sm)}
+.pn-row:last-of-type{border-bottom:none}
+.pn-n{font-weight:500;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pn-f{color:var(--ink-500);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pn-g{font-family:var(--mono);font-size:var(--t-meta);color:var(--ink-400)}
+.pn-s{font-family:var(--mono);font-size:var(--t-meta);color:var(--ink-500);text-align:right}
+.pn-note{font-size:var(--t-meta);color:var(--ink-500);line-height:1.55;margin-top:var(--s3);
+  padding-top:var(--s3);border-top:1px solid var(--line)}
+.pn-off{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);flex-wrap:wrap;
+  padding:var(--s3) var(--s4);background:var(--surface);border:1px dashed var(--line-strong);border-radius:var(--r)}
+.pn-off b{display:block;font-size:var(--t-body)}
+.pn-off span{font-size:var(--t-sm);color:var(--ink-500);line-height:1.5}
+.pn-btn{font-size:var(--t-sm);font-weight:600;color:var(--signal-deep);border:1px solid var(--signal);
+  padding:7px 14px;border-radius:var(--r);white-space:nowrap;flex:none}
+.pn-btn:hover{background:var(--signal-wash)}
+
+/* Opt-in-Schalter */
+.ptoggle{display:flex;align-items:flex-start;gap:var(--s3);padding:var(--s3);border-radius:var(--r);
+  background:var(--surface);border:1px solid var(--line)}
+.ptoggle.on{border-color:var(--signal);background:var(--signal-wash)}
+.pt-sw{width:38px;height:22px;border-radius:100px;background:var(--line-strong);position:relative;flex:none;transition:.16s}
+.pt-sw i{position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:.16s}
+.ptoggle.on .pt-sw{background:var(--signal)}
+.ptoggle.on .pt-sw i{left:19px}
+.pt-m{min-width:0}
+.pt-t{display:block;font-size:var(--t-body);font-weight:600}
+.pt-x{display:block;font-size:var(--t-sm);color:var(--ink-500);line-height:1.5;margin-top:2px}
+@media (max-width:640px){.pnfacts{grid-template-columns:1fr}.pn-row{grid-template-columns:1fr}}
+
+/* Steckbrief statt Schlagzeile */
+.steck{min-width:0}
+.steck-n{font-size:var(--t-title);font-weight:700;letter-spacing:-.02em;line-height:1.25}
+.steck-z{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap;margin-top:5px;
+  font-size:var(--t-sm);color:var(--ink-500)}
+.steck-z b{font-family:var(--mono);font-weight:600;color:var(--ink-900)}
+.steck-z i{color:var(--ink-300);font-style:normal}
+.steck-m{display:inline-flex;align-items:center;gap:5px;font-size:var(--t-meta);font-weight:600;
+  color:var(--signal-deep);background:var(--signal-wash);padding:2px 8px;border-radius:100px}
+
+/* Tabs im Potenzial-Bereich */
+.ptabs{display:flex;gap:2px;margin-bottom:var(--s4);border-bottom:1px solid var(--line)}
+.ptab{display:flex;align-items:center;gap:6px;padding:9px 14px;font-size:var(--t-body);font-weight:500;
+  color:var(--ink-500);border-bottom:2px solid transparent;margin-bottom:-1px;transition:.14s}
+.ptab:hover{color:var(--ink-900)}
+.ptab[aria-selected="true"]{color:var(--ink-900);font-weight:600;border-bottom-color:var(--signal)}
+.pb-lock .pen-v,.pb-lock .pr-a,.pb-lock .pen-bar,.pb-lock .pr-tag,.pb-lock .pen-n,.pb-lock .pr-n{
+  filter:blur(5px);user-select:none;pointer-events:none}
+.pb-lock .pb-n{filter:blur(5px)}
+.sec-lock .pstat-v{filter:blur(5px);user-select:none}
+
+/* Erklärtes Profil: was wir nicht messen können, sagt die Firma selbst */
+.ang{margin-top:var(--s4);border-top:1px solid var(--line);padding-top:var(--s4)}
+.ang-f{padding:var(--s3) 0;border-bottom:1px solid var(--line)}
+.ang-f:last-child{border-bottom:none}
+.ang-h{display:flex;align-items:baseline;gap:var(--s3);flex-wrap:wrap;margin-bottom:var(--s2)}
+.ang-t{font-size:var(--t-body);font-weight:600}
+.ang-x{font-size:var(--t-meta);color:var(--ink-400)}
+.ang-chips{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.ang-c{display:inline-flex;align-items:center;gap:7px;font-size:var(--t-sm);font-weight:500;
+  padding:5px 10px;border-radius:100px}
+.ang-abg{background:var(--signal-wash);color:var(--signal-deep)}
+.ang-abg i{font-family:var(--mono);font-style:normal;font-size:8px;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;opacity:.75}
+.ang-eig{background:var(--surface);border:1px solid var(--line-strong);color:var(--ink-900)}
+.ang-x-btn{font-size:14px;line-height:1;color:var(--ink-400);padding:0 1px}
+.ang-x-btn:hover{color:var(--risk)}
+.ang-add{position:relative}
+.ang-plus{font-size:var(--t-sm);font-weight:600;color:var(--signal-deep);padding:5px 8px;border-radius:100px}
+.ang-plus:hover{background:var(--signal-wash)}
+.ang-pop{position:absolute;left:0;top:calc(100% + 6px);z-index:50;min-width:210px;max-height:240px;overflow:auto;
+  background:var(--surface);border:1px solid var(--line-strong);border-radius:8px;
+  box-shadow:0 12px 30px rgba(18,33,29,.16);padding:5px;display:flex;flex-direction:column}
+.ang-opt{text-align:left;font-size:var(--t-sm);padding:7px 10px;border-radius:var(--r)}
+.ang-opt:hover{background:var(--surface-2)}
+.ang-range{display:flex;align-items:center;gap:6px;font-size:var(--t-sm);color:var(--ink-500);flex-wrap:wrap}
+.ang-in{width:104px;font-family:var(--mono);font-size:var(--t-sm);padding:6px 9px;
+  border:1px solid var(--line-strong);border-radius:var(--r);background:var(--surface);text-align:right}
+.ang-in:focus{outline:none;border-color:var(--signal);box-shadow:0 0 0 3px var(--signal-wash)}
+
+/* Potenzial — Unternehmenssicht, kein Lead-Modus */
+.railsep{width:26px;height:1px;background:var(--line);margin:6px 0}
+body[data-view="verteidigung"] .railsep{background:#2C4A3F}
+.profilview{display:none;overflow-y:auto;min-height:0;background:var(--paper)}
+body[data-area="profil"] .tablewrap,
+body[data-area="profil"] .divider,
+body[data-area="profil"] .detail{display:none}
+body[data-area="profil"] .profilview{display:block;grid-row:1/-1}
+.pwrap{padding:var(--s5) var(--s6) 64px;max-width:1120px}
+.pwrap>div:first-child{margin-bottom:var(--s5)}
+.pstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 var(--s5);border-top:1px solid var(--line)}
+.pstat{display:flex;flex-direction:column;gap:2px;padding:var(--s3) 0;border-bottom:1px solid var(--line);min-width:0}
+.pstat-wide{grid-column:span 2}
+.pstat-k{font-size:var(--t-sm);color:var(--ink-500);line-height:1.35}
+.pstat-v{font-size:var(--t-lg);font-weight:600;line-height:1.2}
+.pstat-v .v-num{font-family:var(--mono);letter-spacing:-.01em}
+.pstat-m{font-size:var(--t-meta);color:var(--ink-400)}
+.pstat-flag{font-size:var(--t-meta);color:var(--flag);line-height:1.4}
+.pleer{font-size:var(--t-sm);font-style:italic;color:var(--ink-400);font-weight:400}
+.pblock{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--s4);margin-bottom:var(--s3)}
+.pb-h{display:flex;align-items:baseline;justify-content:space-between;gap:var(--s3);margin-bottom:var(--s3);flex-wrap:wrap}
+.pb-t{font-size:var(--t-body);font-weight:700}
+.pb-n{font-family:var(--mono);font-size:var(--t-sm);color:var(--signal-deep);font-weight:600}
+.pb-x{font-size:var(--t-sm);color:var(--ink-500);line-height:1.5;margin-bottom:var(--s3)}
+.prow{display:grid;grid-template-columns:minmax(0,1fr) 92px 78px;gap:var(--s3);align-items:center;
+  padding:9px 0;border-bottom:1px solid var(--line);font-size:var(--t-sm)}
+.prow:last-of-type{border-bottom:none}
+.prow-h{font-family:var(--mono);font-size:var(--t-meta);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-400)}
+.pr-n{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:500}
+.pr-a{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right;color:var(--ink-700)}
+.pr-o{text-align:right}
+.pr-tag{font-family:var(--mono);font-size:8.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--signal-deep);background:var(--signal-wash);padding:2px 7px;border-radius:100px}
+.pr-tag.mut{color:var(--ink-400);background:var(--surface-3)}
+.pen{display:flex;align-items:center;gap:var(--s3);padding:9px 0;border-bottom:1px solid var(--line)}
+.pen:last-of-type{border-bottom:none}
+.pen-n{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:var(--t-sm);font-weight:500}
+.pen-bar{width:104px;height:7px;border-radius:100px;background:var(--surface-3);overflow:hidden;flex:none}
+.pen-bar i{display:block;height:100%;background:var(--signal);border-radius:100px}
+.pen-v{font-family:var(--mono);font-size:var(--t-sm);width:62px;text-align:right;flex:none;color:var(--ink-700)}
+.pgap{font-size:var(--t-meta);color:var(--ink-400);margin-top:var(--s3);padding-top:var(--s3);
+  border-top:1px solid var(--line);line-height:1.5}
+.pdemo{display:inline-flex;align-items:center;gap:4px;background:var(--surface-3);padding:3px;border-radius:100px}
+.pdemo-k{font-family:var(--mono);font-size:8.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-400);padding:0 7px}
+.pdemo-o{font-size:var(--t-meta);font-weight:500;color:var(--ink-500);padding:4px 10px;border-radius:100px}
+.pdemo-o.on{background:var(--surface);color:var(--ink-900);font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+@media (max-width:720px){.pstats{grid-template-columns:1fr}.pstat-wide{grid-column:auto}}
+
 /* Bestand: Zugehörigkeit bestätigen statt behaupten */
 .bestandbar{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);flex-wrap:wrap;
   padding:var(--s3) var(--s4);background:var(--surface-2);border-bottom:1px solid var(--line);flex:none}
@@ -311,9 +781,8 @@ td.c-own,th.c-own{text-align:center}
 .mhead{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s4);margin-bottom:var(--s5);flex-wrap:wrap}
 .mtitle{font-size:var(--t-title);font-weight:700;letter-spacing:-.02em;color:var(--ink-900)}
 .msub{font-size:var(--t-sm);color:var(--ink-500);margin-top:3px}
-.msec{margin-bottom:var(--s5)}
-.msec>h4{font-family:var(--mono);font-size:var(--t-meta);font-weight:600;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--ink-400);margin-bottom:var(--s3)}
+.msec{margin-bottom:var(--s4)}
+
 .rstats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 var(--s5);border-top:1px solid var(--line)}
 .rstats.dimmed{opacity:.55}
 .rstat{display:flex;flex-direction:column;gap:2px;padding:var(--s3) 0;border-bottom:1px solid var(--line);min-width:0}
@@ -358,6 +827,8 @@ body[data-view="verteidigung"] .viewbtn{color:#6E837B}
 body[data-view="verteidigung"] .viewbtn:hover{background:#1D332C;color:#C9D6D0}
 body[data-view="verteidigung"] .viewbtn[aria-current="true"]{background:#1D332C;color:#FFF}
 .railfoot{margin-top:auto;display:flex;flex-direction:column;align-items:center;padding-bottom:2px}
+.verlabel{font-family:var(--mono);font-size:8.5px;letter-spacing:.06em;color:var(--ink-300);margin-bottom:6px}
+body[data-view="verteidigung"] .verlabel{color:#5A7A6E}
 .planbadge{display:flex;flex-direction:column;align-items:center;gap:5px;padding:8px 0;width:44px;border-radius:var(--r);color:var(--ink-500);transition:.15s}
 .planbadge:hover{background:var(--surface-3)}
 .plan-ring{width:22px;height:22px;border-radius:50%;border:2px solid var(--signal);display:grid;place-items:center;position:relative}
@@ -626,9 +1097,20 @@ td.c-status{white-space:nowrap}
 .dbody{padding:var(--s5) var(--s6);max-width:1120px}
 /* Inhaltsspalte ist in jedem Tab gleich breit; Seitenspalten sitzen daneben */
 .kv,.anagrid,.gatemain,.teamgrid,
-.buyer-head,.mhead,.buyer-floor,.prov-legend,.mwarn{max-width:820px}
-.sec{margin-bottom:var(--s5)}
-.sec>h4{font-family:var(--mono);font-size:var(--t-meta);font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-400);margin-bottom:var(--s3);display:flex;gap:var(--s2);align-items:baseline}
+.buyer-head,.mhead,.buyer-floor,.prov-legend,.mwarn,.legend{max-width:820px}
+.sec{margin-bottom:var(--s4)}
+.sec>h4,.bsec>h4,.msec>h4{font-family:var(--sans);font-size:var(--t-lg);font-weight:700;
+  letter-spacing:-.012em;text-transform:none;color:var(--ink-900);
+  margin-bottom:var(--s3);display:flex;gap:var(--s2);align-items:baseline;flex-wrap:wrap}
+.sec>h4 .cov,.bsec>h4 .cov,.msec>h4 .cov{font-size:var(--t-sm);font-weight:400;color:var(--ink-400);letter-spacing:0}
+/* Jeder Abschnitt auf eigener heller Fläche — schafft Gruppen ohne harte Rahmen */
+.sec,.bsec,.msec{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;
+  padding:var(--s4) var(--s5) var(--s5);max-width:820px}
+.sec>h4,.bsec>h4,.msec>h4{margin-bottom:var(--s3)}
+/* Inhalte auf der Fläche: was weiß war, bleibt weiß und hebt sich ab */
+.sec .kv{background:transparent}
+.sec .note-box{background:var(--surface)}
+.anagrid>.sec{background:var(--surface-2)}
 .sec>h4 .cov{margin-left:auto;letter-spacing:.02em;text-transform:none;font-weight:400;color:var(--ink-400)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
 /* Übersicht: gerahmte Blöcke wie die Analyse */
@@ -680,6 +1162,7 @@ td.c-status{white-space:nowrap}
 .pdot-unbekannt{background:transparent}
 .note-box .pdot{margin-right:6px;vertical-align:middle}
 
+.prov-legend,.legend{background:transparent!important;border:none!important;padding-left:0!important;padding-right:0!important}
 .prov-legend{display:flex;align-items:center;gap:var(--s2);flex-wrap:wrap;margin-top:var(--s5);padding-top:var(--s4);
   border-top:1px solid var(--line);font-size:var(--t-meta);color:var(--ink-500)}
 .prov-legend .pdot{margin-left:6px}
@@ -797,7 +1280,9 @@ tr.wf-verworfen .ttitel{color:var(--ink-400);text-decoration:line-through;text-d
 /* Team-Tab Layout */
 .teamgrid{display:grid;grid-template-columns:1.35fr 1fr;gap:var(--s5);align-items:start}
 @media (max-width:820px){.teamgrid{grid-template-columns:1fr;gap:20px}}
-.teamcol>h4{font-family:var(--mono);font-size:var(--t-meta);font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-400);padding-bottom:var(--s2);margin-bottom:var(--s3);border-bottom:1px solid var(--line);display:flex;gap:var(--s2)}
+.teamcol>h4{font-family:var(--sans);font-size:var(--t-lg);font-weight:700;letter-spacing:-.012em;
+  color:var(--ink-900);padding-bottom:var(--s2);margin-bottom:var(--s3);
+  border-bottom:1px solid var(--line);display:flex;gap:var(--s2);align-items:baseline}
 .teamcol>h4 .cov{margin-left:auto;letter-spacing:.02em;text-transform:none;font-weight:400;color:var(--ink-400)}
 
 /* Verlauf */
@@ -898,10 +1383,13 @@ tr.wf-verworfen .ttitel{color:var(--ink-400);text-decoration:line-through;text-d
   <div class="body">
     <nav class="rail" aria-label="Ansicht">
       <button class="viewbtn" data-setview="angriff" aria-current="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg><b>Akquise</b></button>
-      <button class="viewbtn" data-setview="verteidigung"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5 12 3l9 4.5-9 4.5-9-4.5Z"/><path d="M3 12l9 4.5 9-4.5M3 16.5 12 21l9-4.5"/></svg><b>Bestand</b></button>
       <button class="viewbtn" data-merk><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m12 4 2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4-3.9-3.8 5.4-.8L12 4Z"/></svg><b>Merkliste</b><span class="railcount" id="merkN">0</span></button>
 
+      <button class="viewbtn" data-netz><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="7" r="2.6"/><circle cx="18" cy="7" r="2.6"/><circle cx="12" cy="18" r="2.6"/><path d="M7.6 9.1 10.6 15.7M16.4 9.1 13.4 15.7M8.6 7h6.8"/></svg><b>Netzwerk</b><span class="raildot" id="netzDot"></span></button>
+      <span class="railsep"></span>
+      <button class="viewbtn" data-profil><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V13M9.3 20V8M14.7 20v-4M20 20V4"/><path d="M4 20h16"/></svg><b>Potenzial</b></button>
       <div class="railfoot">
+        <span class="verlabel" title="Prototyp-Version">v4.4</span>
         <button class="planbadge" id="planbadge" title="Kontostatus (Prototyp-Umschalter)">
           <span class="plan-ring"></span>
           <span class="plan-lbl" id="planLbl">Pro</span>
@@ -912,6 +1400,7 @@ tr.wf-verworfen .ttitel{color:var(--ink-400);text-decoration:line-through;text-d
     <div class="main" id="main">
       <section class="tablewrap">
         <div class="bestandbar" id="bestandbar"></div>
+        <div class="netzgate" id="netzgate"></div>
         <div class="tablescroll">
           <table class="leads"><thead id="thead"></thead><tbody id="tbody"></tbody></table>
         </div>
@@ -920,6 +1409,7 @@ tr.wf-verworfen .ttitel{color:var(--ink-400);text-decoration:line-through;text-d
       <div class="divider" id="divider" role="separator" aria-orientation="horizontal"></div>
 
       <section class="detail" id="detail"></section>
+      <section class="profilview" id="profilview"></section>
 
     </div>
   </div>
@@ -935,7 +1425,64 @@ let firmaMatch = 'hr';
 
 const LEADS = [
   {
-    id:'auslauf-01', marktRegion:'ffm', branche:'it', regionId:'bund', konk:{wert:'8 Bieter', src:'echt', stufe:'mittel', hint:'Aus der letzten Zuschlagsbekanntmachung (2020): 8 eingegangene Angebote.'}, natur:'Managed Service', naturKat:'dienst', tage:null, endTage:120, endet:'in 4 Mon.', neu:false, userStatus:'pruefung',
+    id:'auslauf-01', unterlagen:{portal:'Vergabeplattform des Bundes', frei:true}, submission:'25.08.2026, 10:00 Uhr', beginnGeplant:'01.01.2027', endeGeplant:'31.12.2030', bgKlausel:'zugelassen · gesamtschuldnerisch haftend mit bevollmächtigtem Vertreter', aktualitaet:null, laufzeit:'48 Monate', nebenangebote:'nicht zugelassen', rahmenvertrag:null, foerderung:null, wiederholung:false, rahmen:'vgv', aufwand:{buergschaft:'ja · vorläufig', bindefrist:'60 Tage', eabgabe:'Pflicht', lebenslauf:'ja', fragefrist:'12 Tage'}, marktRegion:'ffm', branche:'it',
+    hasDetail:true,
+    beschreibung:`Gegenstand der Ausschreibung ist der Betrieb und die Weiterentwicklung der zentralen
+Rechenzentrumsinfrastruktur einschließlich der zugehörigen Managed Services.
+
+Der Auftragnehmer übernimmt den Betrieb von rund 400 virtuellen Servern, die Betreuung der
+Speichersysteme sowie das Monitoring der Netzwerkkomponenten. Ein Teil der Leistung umfasst die
+Migration bestehender Systeme in eine hybride Cloud-Umgebung.
+
+Gefordert werden eine Zertifizierung nach ISO 27001 sowie ein Nachweis über die Einhaltung des
+BSI C5-Kriterienkatalogs. Der Auftragnehmer stellt eine Rufbereitschaft rund um die Uhr sicher.
+
+Die Wärmepumpe der Kälteanlage im Serverraum ist im Rahmen der Wartung mit zu betreuen.`,
+    lose:[
+      {nr:1, titel:'Betrieb Serverinfrastruktur', wert:'820.000 €', dauer:'48 Monate', region:'Bayern'},
+      {nr:2, titel:'Speicher- und Backupsysteme',  wert:'310.000 €', dauer:'48 Monate', region:'Bayern'},
+      {nr:3, titel:'Netzwerk-Monitoring',           wert:'59.000 €',  dauer:'48 Monate', region:'Hessen'},
+      {nr:4, titel:'Cloud-Migration (Teilprojekt)', wert:'240.000 €', dauer:'18 Monate', region:'Bayern'},
+    ],
+    optionen:true, verlaengerung:'1 × 24 Monate',
+    verfahren:'Verhandlungsverfahren mit Teilnahmewettbewerb',
+    loseMaxAngebot:4, loseMaxZuschlag:2, netzDeckung:2,
+    netzPartner:{n:'Alpenland Netzwerktechnik GmbH', feld:'Netzwerktechnik', groesse:'klein', deckung:2, seit:'gestern'},
+    netzSuchend:4,
+    bgForm:'gesamtschuldnerisch haftend mit bevollmächtigtem Vertreter',
+    partnerKandidaten:[
+      {n:'Alpenland Netzwerktechnik GmbH', groesse:'klein',  feld:'Netzwerktechnik',   siege:14, region:'Bayern'},
+      {n:'Donau IT-Sicherheit AG',         groesse:'mittel', feld:'IT-Sicherheit',     siege:9,  region:'Bayern'},
+      {n:'Kessler Kälte & Klima GmbH',     groesse:'klein',  feld:'Gebäudetechnik',    siege:22, region:'Bayern'},
+    ],
+    zuschlag:[{art:'preis', label:'Preis', pct:40},{art:'qualitaet', label:'Qualität', pct:60}],
+    extrakt:[
+      {w:'Rechenzentrumsbetrieb', k:'leistung', s:'cpv'},
+      {w:'Managed Services',      k:'leistung', s:'cpv'},
+      {w:'Cloud-Migration',       k:'leistung', s:'text'},
+      {w:'Netzwerk-Monitoring',   k:'leistung', s:'text'},
+      {w:'Speichersysteme',       k:'technik',  s:'text'},
+      {w:'hybride Cloud',         k:'technik',  s:'text'},
+      {w:'Wärmepumpe',            k:'technik',  s:'text', rand:true},
+      {w:'ISO 27001',             k:'nachweis', s:'text'},
+      {w:'BSI C5',                k:'nachweis', s:'text'},
+      {w:'Rufbereitschaft',       k:'bedingung',s:'text'},
+      {w:'400 virtuelle Server',  k:'menge',    s:'text', unsicher:true},
+      {w:'Virtualisierung',       k:'technik',  s:'text'},
+      {w:'Backup & Recovery',     k:'technik',  s:'text'},
+      {w:'Firewall-Betrieb',      k:'technik',  s:'text'},
+      {w:'Lastverteilung',        k:'technik',  s:'text'},
+      {w:'Kälteanlage',           k:'technik',  s:'text', rand:true},
+      {w:'Patch-Management',      k:'leistung', s:'text'},
+      {w:'Incident-Management',   k:'leistung', s:'text'},
+      {w:'Kapazitätsplanung',     k:'leistung', s:'text'},
+      {w:'Dokumentation',         k:'leistung', s:'text'},
+      {w:'Datenschutz nach DSGVO',k:'nachweis', s:'text'},
+      {w:'Präqualifikation IT',   k:'nachweis', s:'text'},
+      {w:'Reaktionszeit 4 Stunden',k:'bedingung',s:'text'},
+      {w:'Vor-Ort-Service',       k:'bedingung',s:'text'},
+      {w:'3 Standorte',           k:'menge',    s:'text'},
+    ], regionId:'bund', konk:{wert:'8 Bieter', src:'echt', stufe:'mittel', hint:'Aus der letzten Zuschlagsbekanntmachung (2020): 8 eingegangene Angebote.'}, natur:'Managed Service', naturKat:'dienst', tage:null, endTage:120, endet:'in 4 Mon.', neu:false, userStatus:'pruefung',
     log:[
       {kind:'dossier',text:'Dossier erstellt',who:'DK',ts:'vor 1 Tag'},
       {kind:'status', text:'auf In Prüfung gesetzt',who:'TB',ts:'vor 2 Tagen'},
@@ -957,7 +1504,30 @@ const LEADS = [
     hasCmp:true, hasContracts:true
   },
   {
-    id:'f02-01', marktRegion:'bonn', branche:'it', regionId:'de25', konk:{wert:'n/a', src:'na', stufe:'na', hint:'Neuvergabe — kein Vorgänger, keine frühere Bieterzahl.'}, natur:'Softwarebetrieb', naturKat:'dienst', tage:19, endet:null, neu:true, userStatus:'fragen',
+    id:'f02-01', unterlagen:{portal:'Deutsches Vergabeportal (DTVP)', frei:true}, submission:null, beginnGeplant:'01.04.2027', endeGeplant:null, bgKlausel:'zugelassen · gesamtschuldnerisch haftend', aktualitaet:{art:'geaendert', text:'Frist verlängert und Leistungsbeschreibung ergänzt', am:'18.07.2026'}, laufzeit:'60 Monate', nebenangebote:'zugelassen', rahmenvertrag:null, foerderung:'EU-Mittel (EFRE)', wiederholung:false, rahmen:'vgv', aufwand:{buergschaft:'nein', bindefrist:'30 Tage', eabgabe:'Pflicht', lebenslauf:'nein', fragefrist:'21 Tage'}, marktRegion:'bonn', branche:'it',
+    hasDetail:true,
+    beschreibung:`Beschafft wird eine Softwarelösung zur Verwaltung von Fachverfahren einschließlich
+Einführung, Schulung und laufendem Betrieb.
+
+Die Lösung muss barrierefrei nach BITV 2.0 sein und eine Schnittstelle zum bestehenden
+Dokumentenmanagementsystem bereitstellen. Ein Rechenzentrumsbetrieb in Deutschland ist zwingend.`,
+    optionen:false, verlaengerung:null,
+    loseMaxAngebot:5, loseMaxZuschlag:2, netzDeckung:2, netzSuchend:5,
+    bgForm:'gesamtschuldnerisch haftend',
+    lose:[{nr:1,titel:'Fachverfahren Einwohnerwesen',wert:'320.000 €',dauer:'60 Monate',region:'NRW'},
+          {nr:2,titel:'Fachverfahren Gewerbe',wert:'190.000 €',dauer:'60 Monate',region:'NRW'},
+          {nr:3,titel:'Einführung und Schulung',wert:'88.000 €',dauer:'12 Monate',region:'NRW'},
+          {nr:4,titel:'Betrieb und Support',wert:'145.000 €',dauer:'60 Monate',region:'NRW'}],
+    verfahren:'Offenes Verfahren',
+    zuschlag:[{art:'preis', label:'Preis', pct:100}],
+    extrakt:[
+      {w:'Fachverfahren-Software', k:'leistung', s:'cpv'},
+      {w:'Einführung & Schulung',  k:'leistung', s:'text'},
+      {w:'laufender Betrieb',      k:'leistung', s:'text'},
+      {w:'DMS-Schnittstelle',      k:'technik',  s:'text'},
+      {w:'BITV 2.0',               k:'nachweis', s:'text'},
+      {w:'Rechenzentrum in Deutschland', k:'bedingung', s:'text'},
+    ], regionId:'de25', konk:{wert:'n/a', src:'na', stufe:'na', hint:'Neuvergabe — kein Vorgänger, keine frühere Bieterzahl.'}, natur:'Softwarebetrieb', naturKat:'dienst', tage:19, endet:null, neu:true, userStatus:'fragen',
     log:[
       {kind:'status', text:'auf Offene Fragen gesetzt',who:'ML',ts:'heute 09:14'},
       {kind:'watch',  text:'automatisch auf Merkliste · passt zu Profil',who:null,ts:'19.07.'},
@@ -976,7 +1546,17 @@ const LEADS = [
     hasCmp:false, hasContracts:false
   },
   {
-    id:'auslauf-02', marktRegion:'ffm', branche:'it', konk:{wert:'~5–10', src:'schaetz', stufe:'mittel', hint:'TED nannte nur „mehr als 4 Angebote“ — als Spanne geschätzt, nicht exakt.'}, natur:'Netz-Infrastruktur', naturKat:'liefer', tage:null, endTage:270, endet:'in ~9 Mon.', neu:false, userStatus:null, comments:[], log:[{kind:'create',text:'Lead erschienen',who:null,ts:'20.07.'}], regionId:'dea', kw:[{w:'Netzinfrastruktur',s:'cpv',m:1},{w:'WAN',s:'text',m:1},{w:'Standortanbindung',s:'text',m:0}], dauer:'Ende 04/27', status:'ungesichtet', seen:null, merk:null, src:'auslauf', srcLabel:'Vertragsende', phaseLabel:'Vertragsende',
+    id:'auslauf-02', unterlagen:{portal:'subreport ELViS', frei:true}, submission:'12.09.2026, 11:00 Uhr', beginnGeplant:null, endeGeplant:null, bgKlausel:'zugelassen · gesamtschuldnerisch haftend mit bevollmächtigtem Vertreter', aktualitaet:null, laufzeit:'48 Monate', nebenangebote:'zugelassen', rahmenvertrag:'ohne erneuten Wettbewerb', foerderung:null, wiederholung:false, rahmen:'vob', aufwand:{buergschaft:'ja · vorläufig', bindefrist:'90 Tage', eabgabe:'Pflicht', lebenslauf:null, fragefrist:null}, marktRegion:'ffm', branche:'it',
+    loseMaxAngebot:8, loseMaxZuschlag:3, netzDeckung:2, netzSuchend:2,
+    bgForm:'gesamtschuldnerisch haftend mit bevollmächtigtem Vertreter',
+    lose:[{nr:1,titel:'WAN-Anbindung Nord',wert:'180.000 €',dauer:'48 Monate',region:'NRW'},
+          {nr:2,titel:'WAN-Anbindung Süd',wert:'165.000 €',dauer:'48 Monate',region:'NRW'},
+          {nr:3,titel:'Aktive Komponenten',wert:'240.000 €',dauer:'48 Monate',region:'NRW'},
+          {nr:4,titel:'Wartung und Entstörung',wert:'72.000 €',dauer:'48 Monate',region:'NRW'}],
+    verfahren:'Offenes Verfahren',
+    zuschlag:[{art:'preis', label:'Preis', pct:null},{art:'qualitaet', label:'Qualität', pct:null}],
+    beschreibung:'Rahmenvereinbarung über die Lieferung und Anbindung von Netzwerkkomponenten an mehreren Standorten.',
+    hasDetail:false, konk:{wert:'~5–10', src:'schaetz', stufe:'mittel', hint:'TED nannte nur „mehr als 4 Angebote“ — als Spanne geschätzt, nicht exakt.'}, natur:'Netz-Infrastruktur', naturKat:'liefer', tage:null, endTage:270, endet:'in ~9 Mon.', neu:false, userStatus:null, comments:[], log:[{kind:'create',text:'Lead erschienen',who:null,ts:'20.07.'}], regionId:'dea', kw:[{w:'Netzinfrastruktur',s:'cpv',m:1},{w:'WAN',s:'text',m:1},{w:'Standortanbindung',s:'text',m:0}], dauer:'Ende 04/27', status:'ungesichtet', seen:null, merk:null, src:'auslauf', srcLabel:'Vertragsende', phaseLabel:'Vertragsende',
     titel:'Netzwerkinfrastruktur und Standortanbindung der Landesbehörden',
     buyer:'Land Nordrhein-Westfalen, IT-Dienstleistungszentrum', buyerShort:'IT.NRW',
     cpv:'32424', cpvLabel:'Netzinfrastruktur', region:'Nordrhein-Westfalen', nuts:'DEA', art:'Rahmenvertrag',
@@ -989,20 +1569,26 @@ const LEADS = [
     hasCmp:true, hasContracts:false
   },
   {
-    id:'auslauf-03', marktRegion:'muc', branche:'it', konk:{wert:'3 Bieter', src:'echt', stufe:'gering', hint:'Aus der letzten Zuschlagsbekanntmachung (2023): 3 eingegangene Angebote.'}, natur:'Hardware-Lieferung', naturKat:'liefer', tage:null, endTage:60, endet:'in 2 Mon.', neu:false, userStatus:null, comments:[], log:[{kind:'create',text:'Lead erschienen',who:null,ts:'20.07.'}], regionId:'de6', kw:[{w:'Personalcomputer',s:'cpv',m:0},{w:'Notebooks',s:'text',m:0},{w:'Rollout',s:'text',m:1},{w:'Lizenzen',s:'text',m:0}], dauer:'Ende 21.09.26', status:'gesichtet', seen:null, merk:null, src:'auslauf', srcLabel:'Vertragsende', phaseLabel:'Vertragsende',
+    id:'auslauf-03', unterlagen:{portal:'Vergabeportal Bayern', frei:true}, submission:null, beginnGeplant:'01.10.2026', endeGeplant:'30.09.2029', bgKlausel:null, aktualitaet:null, laufzeit:'36 Monate', nebenangebote:null, rahmenvertrag:null, foerderung:null, wiederholung:true, rahmen:'uvgo', aufwand:{buergschaft:'nein', bindefrist:null, eabgabe:'zugelassen', lebenslauf:'nein', fragefrist:'8 Tage'}, marktRegion:'muc', branche:'it',
+    loseMaxAngebot:12, loseMaxZuschlag:3, netzDeckung:4, netzSuchend:7,
+    bgForm:'gesamtschuldnerisch haftend mit bevollmächtigtem Vertreter',
+    lose:[{nr:1,titel:'Clients Schulen Nord',wert:'210.000 €',dauer:'36 Monate',region:'Bayern'},
+          {nr:2,titel:'Clients Schulen Süd',wert:'190.000 €',dauer:'36 Monate',region:'Bayern'},
+          {nr:3,titel:'Netzwerk Schulen',wert:'320.000 €',dauer:'36 Monate',region:'Bayern'},
+          {nr:4,titel:'Support und Vor-Ort-Service',wert:'85.000 €',dauer:'36 Monate',region:'Bayern'}], konk:{wert:'3 Bieter', src:'echt', stufe:'gering', hint:'Aus der letzten Zuschlagsbekanntmachung (2023): 3 eingegangene Angebote.'}, natur:'Hardware-Lieferung', naturKat:'liefer', tage:null, endTage:60, endet:'in 2 Mon.', neu:false, userStatus:null, comments:[], log:[{kind:'create',text:'Lead erschienen',who:null,ts:'20.07.'}], regionId:'de6', kw:[{w:'Personalcomputer',s:'cpv',m:0},{w:'Notebooks',s:'text',m:0},{w:'Rollout',s:'text',m:1},{w:'Lizenzen',s:'text',m:0}], dauer:'Ende 21.09.26', status:'gesichtet', seen:null, merk:null, src:'auslauf', srcLabel:'Vertragsende', phaseLabel:'Vertragsende',
     titel:'Beschaffung und Rollout von 8.400 Notebook-Arbeitsplätzen',
     buyer:'Freie und Hansestadt Hamburg, Dataport AöR', buyerShort:'Dataport',
     cpv:'30213', cpvLabel:'Personalcomputer', region:'Hamburg', nuts:'DE6', art:'Einmal-Werk',
     volumen:{wert:'6,9 Mio €', src:'echt', hint:'Veröffentlichter Auftragswert aus der Vergabebekanntmachung.'},
     timing:{wert:'2 Monate bis Auslauf', src:'unsicher', warn:true, hint:'Termin als unplausibel markiert (1,5 % der Leads) — Datum liegt vor dem Vergabedatum. Wir zeigen ihn trotzdem, gekennzeichnet.'},
     incumbent:{name:MEINE_FIRMA+' (Niederlassung Süd)', seit:'2023', src:'unsicher', hint:'Entity nur über Namensähnlichkeit aufgelöst · Konfidenz 0,51.'}, eigen:true, eigenBestaetigt:null,
-    relevanz:'mittel', wechsel:'na',
+    relevanz:'mittel', wechsel:'mittel',
     relWhy:'CPV <span class="no">Nachbarklasse</span> · Region <span class="ok">✓</span> · Volumen <span class="ok">✓</span>',
     wechselWhy:'Einmal-Werk — kein Nachfolgevertrag zu erwarten',
     hasCmp:true, hasContracts:false
   },
   {
-    id:'f01-01', branche:'sicherheit', marktOk:false, konk:{wert:'n/a', src:'na', stufe:'na', hint:'Ankündigung — noch keine Vergabe, keine Bieterzahl.'}, natur:'Funktechnik', naturKat:'liefer', tage:null, endTage:9999, endet:'geplant', neu:true, userStatus:null, comments:[], log:[{kind:'create',text:'Lead erschienen',who:null,ts:'20.07.'}], regionId:'de212', kw:[{w:'Funktechnik',s:'cpv',m:0},{w:'Leitstelle',s:'text',m:0},{w:'BOS-Digitalfunk',s:'text',m:0}], dauer:'Neu 30.06.26', status:'ungesichtet', seen:null, merk:null, src:'f01', srcLabel:'Ankündigung', phaseLabel:'Ankündigung',
+    id:'f01-01', unterlagen:{portal:'Vergabeplattform des Bundes', frei:true}, submission:null, beginnGeplant:null, endeGeplant:null, bgKlausel:null, aktualitaet:null, laufzeit:null, nebenangebote:null, rahmenvertrag:null, foerderung:null, wiederholung:false, rahmen:'sektvo', aufwand:{buergschaft:'nein', bindefrist:'45 Tage', eabgabe:'Pflicht', lebenslauf:'nein', fragefrist:null}, branche:'sicherheit', marktOk:false, konk:{wert:'n/a', src:'na', stufe:'na', hint:'Ankündigung — noch keine Vergabe, keine Bieterzahl.'}, natur:'Funktechnik', naturKat:'liefer', tage:null, endTage:9999, endet:'geplant', neu:true, userStatus:null, comments:[], log:[{kind:'create',text:'Lead erschienen',who:null,ts:'20.07.'}], regionId:'de212', kw:[{w:'Funktechnik',s:'cpv',m:0},{w:'Leitstelle',s:'text',m:0},{w:'BOS-Digitalfunk',s:'text',m:0}], dauer:'Neu 30.06.26', status:'ungesichtet', seen:null, merk:null, src:'f01', srcLabel:'Ankündigung', phaseLabel:'Ankündigung',
     titel:'Ankündigung: Digitalfunk-Leitstellentechnik, Neuvergabe geplant',
     buyer:'Bayerisches Staatsministerium des Innern', buyerShort:'StMI Bayern',
     cpv:'32236', cpvLabel:'Funksprechgeräte', region:'Bayern', nuts:'DE2', art:'Sonstiges',
@@ -1015,7 +1601,12 @@ const LEADS = [
     hasCmp:false, hasContracts:false
   },
   {
-    id:'auslauf-04', marktRegion:'bonn', branche:'it', konk:{wert:'unbekannt', src:'unbekannt', stufe:'na', hint:'Die Vergabestelle hat in der Zuschlagsbekanntmachung keine Bieterzahl veröffentlicht.'}, natur:'IT-Sicherheit', naturKat:'dienst', tage:null, endTage:330, endet:'in 11 Mon.', neu:false, userStatus:null, comments:[], log:[{kind:'create',text:'Lead erschienen',who:null,ts:'20.07.'}], regionId:'dea2', kw:[{w:'Systemprüfung',s:'cpv',m:0},{w:'Penetrationstest',s:'text',m:1},{w:'ISO 27001',s:'text',m:1},{w:'SAP',s:'text',m:0}], dauer:'Ende 20.06.27', status:'gesichtet', seen:null, merk:'manuell', src:'auslauf', srcLabel:'Vertragsende', phaseLabel:'Vertragsende',
+    id:'auslauf-04', unterlagen:{portal:null, frei:false}, submission:null, beginnGeplant:null, endeGeplant:null, bgKlausel:'nicht zugelassen', aktualitaet:{art:'aufgehoben', text:'Verfahren aufgehoben — kein wirtschaftliches Ergebnis', am:'21.07.2026'}, laufzeit:'24 Monate', nebenangebote:'nicht zugelassen', rahmenvertrag:'mit erneutem Wettbewerb', foerderung:null, wiederholung:false, rahmen:'vgv', aufwand:{buergschaft:null, bindefrist:null, eabgabe:null, lebenslauf:null, fragefrist:null}, marktRegion:'bonn', branche:'it',
+    loseMaxAngebot:6, loseMaxZuschlag:2, netzDeckung:1, netzSuchend:1,
+    bgForm:'gesamtschuldnerisch haftend',
+    lose:[{nr:1,titel:'Penetrationstests',wert:'140.000 €',dauer:'24 Monate',region:'NRW'},
+          {nr:2,titel:'Notfallmanagement',wert:'95.000 €',dauer:'24 Monate',region:'NRW'},
+          {nr:3,titel:'Awareness-Schulungen',wert:'60.000 €',dauer:'24 Monate',region:'NRW'}], konk:{wert:'unbekannt', src:'unbekannt', stufe:'na', hint:'Die Vergabestelle hat in der Zuschlagsbekanntmachung keine Bieterzahl veröffentlicht.'}, natur:'IT-Sicherheit', naturKat:'dienst', tage:null, endTage:330, endet:'in 11 Mon.', neu:false, userStatus:null, comments:[], log:[{kind:'create',text:'Lead erschienen',who:null,ts:'20.07.'}], regionId:'dea2', kw:[{w:'Systemprüfung',s:'cpv',m:0},{w:'Penetrationstest',s:'text',m:1},{w:'ISO 27001',s:'text',m:1},{w:'SAP',s:'text',m:0}], dauer:'Ende 20.06.27', status:'gesichtet', seen:null, merk:'manuell', src:'auslauf', srcLabel:'Vertragsende', phaseLabel:'Vertragsende',
     titel:'IT-Sicherheitsberatung und Penetrationstests für kritische Fachverfahren',
     buyer:'Bundesamt für Sicherheit in der Informationstechnik', buyerShort:'BSI',
     cpv:'72225', cpvLabel:'Bewertung und Prüfung der Systemqualität', region:'Bund', nuts:'DEA', art:'Wiederkehrend',
@@ -1030,14 +1621,83 @@ const LEADS = [
 ];
 
 const $ = s => document.querySelector(s);
+
+/* Kurze Rückmeldung nach einer Aktion — ohne den Blick von der Liste zu nehmen */
+let toastT = null;
+function netzLimitDialog(){
+  let d = document.getElementById('netzdlg');
+  if(!d){ d = document.createElement('div'); d.id='netzdlg'; d.className='dlg'; document.body.appendChild(d); }
+  d.innerHTML = `<div class="dlg-bg" data-dlgclose></div>
+    <div class="dlg-card" role="dialog" aria-modal="true">
+      <span class="dlg-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg></span>
+      <h3>Drei Meldungen laufen bereits</h3>
+      <p>Im Free-Zugang könnt ihr euch für ${NETZ_FREI_MAX} Ausschreibungen gleichzeitig als Partner melden.
+      Das Melden selbst, das Gefundenwerden und der Kontaktaustausch bleiben dabei vollständig frei —
+      begrenzt ist nur, an wie vielen ihr parallel arbeitet.</p>
+      <div class="dlg-plus">
+        <span class="dlg-p-t">Mit Pro</span>
+        <ul>
+          <li>Unbegrenzt viele Meldungen gleichzeitig</li>
+          <li>Sehen, wie viele hier schon suchen — <b>bevor</b> ihr euch meldet</li>
+          <li>Benachrichtigung, sobald eine Firma euch ergänzt</li>
+        </ul>
+      </div>
+      <div class="dlg-row">
+        <button class="dlg-cta" data-upgrade data-dlgclose>Pro freischalten · 29 € / Monat</button>
+        <button class="dlg-alt" data-dlgclose>Erst eine Meldung zurückziehen</button>
+      </div>
+    </div>`;
+  d.classList.add('on');
+}
+
+function toast(text){
+  let el = document.getElementById('toast');
+  if(!el){ el = document.createElement('div'); el.id='toast'; el.className='toast'; document.body.appendChild(el); }
+  el.textContent = text;
+  el.classList.add('on');
+  clearTimeout(toastT);
+  toastT = setTimeout(()=>el.classList.remove('on'), 3400);
+}
 let activeId = null, activeTab = 'uebersicht';
-let filters = {ungesichtet:false, gemerkt:false, kandidaten:false};
-let editBestand = false;   // Bestand kuratieren: + / − direkt in der Liste
+let filters = {ungesichtet:false, gemerkt:false, kandidaten:false, netz:false};
+let editBestand = false;
+let offeneGruppen = new Set();   // welche Begriffs-Gruppen sind ausgeklappt   // Bestand kuratieren: + / − direkt in der Liste
 let searchTokens = [];   // [{type, value, label, radius?}]
 let openFacet = null;    // 'phase' | 'leistung' | 'region' | null
 let openRadius = null;   // Index des Ort-Tokens, dessen Radius-Menü offen ist
 
 // Branche = Grundraum, im Gold Layer aus CPV-Bündeln abgeleitet. Kommt aus dem Profil.
+/* Welcher Nachweis hängt am Rechtsrahmen — der harte Ja/Nein-Filter,
+   sobald der Nutzer sein Profil gepflegt hat. */
+const RAHMEN_NACHWEIS = {
+  vob:   {n:'Präqualifikation Bau (PQ-VOB)', x:'VOB/A verlangt in der Regel den Eintrag im Präqualifikationsverzeichnis oder Einzelnachweise je Angebot.'},
+  vgv:   {n:'Eignungsnachweise nach VgV',    x:'VgV lässt die Einheitliche Europäische Eigenerklärung zu — Nachweise erst auf Verlangen.'},
+  uvgo:  {n:'Präqualifikation IT',           x:'Viele Stellen erkennen bei UVgO Präqualifikationsverzeichnisse an und verzichten dann auf Einzelnachweise.'},
+  sektvo:{n:'Eignungsnachweise nach SektVO', x:'Sektorenauftraggeber führen häufig eigene Prüfsysteme mit Voranmeldung.'},
+};
+
+const RAHMEN = {
+  vgv:   {kurz:'VgV',    lang:'Vergabeverordnung',        x:'Liefer- und Dienstleistungen oberhalb der EU-Schwelle'},
+  vob:   {kurz:'VOB/A',  lang:'Vergabe- und Vertragsordnung für Bauleistungen', x:'Bauleistungen'},
+  uvgo:  {kurz:'UVgO',   lang:'Unterschwellenvergabeordnung', x:'unterhalb der EU-Schwellenwerte'},
+  sektvo:{kurz:'SektVO', lang:'Sektorenverordnung',       x:'Verkehr, Energie, Wasser'},
+};
+
+/* Angebotsaufwand: was es kostet mitzubieten — die Achse, die neben Relevanz und Chance fehlte.
+   Bewusst grob: drei Stufen, und bei zu dünner Datenlage gar keine. */
+function aufwandStufe(l){
+  const a = l.aufwand; if(!a) return {stufe:'na', bekannt:0, treiber:[]};
+  const t = [];
+  let punkte = 0, bekannt = 0;
+  if(a.buergschaft!=null){ bekannt++; if(a.buergschaft!=='nein'){ punkte+=2; t.push('Bietungsbürgschaft'); } }
+  if(a.bindefrist!=null){ bekannt++; const d=parseInt(a.bindefrist,10);
+    if(d>=90){ punkte+=2; t.push('lange Bindefrist'); } else if(d>=60){ punkte+=1; t.push('Bindefrist '+a.bindefrist); } }
+  if(a.eabgabe!=null){ bekannt++; if(a.eabgabe==='Pflicht'){ punkte+=1; t.push('Portalregistrierung'); } }
+  if(a.lebenslauf!=null){ bekannt++; if(a.lebenslauf==='ja'){ punkte+=2; t.push('Lebensläufe gefordert'); } }
+  if(bekannt<2) return {stufe:'na', bekannt, treiber:t};
+  return {stufe: punkte>=4?'hoch' : punkte>=2?'mittel' : 'niedrig', bekannt, treiber:t};
+}
+
 const BRANCHEN = {
   it:        'IT & Software',
   bau:       'Bau & Infrastruktur',
@@ -1051,6 +1711,7 @@ let aktiveBranche = 'it';      // ggf. temporär gewechselt (Ausbruch)
 let wsOpen = false;
 
 const FACETS = {
+  rahmen:{label:'Rechtsrahmen', opts:Object.entries(RAHMEN).map(([k,v])=>({v:k, l:v.kurz+' — '+v.x}))},
   phase:   { label:'Phase', opts:[
     {v:'auslauf',l:'Vertragsende'},{v:'f02',l:'Ausschreibung offen'},{v:'f01',l:'Ankündigung'}], match:(l,v)=>l.src===v },
   leistung:{ label:'Leistung', opts:[
@@ -1082,9 +1743,36 @@ function matchToken(l,t){
   }
   if(t.type==='phase')    return l.src===t.value;
   if(t.type==='leistung') return l.naturKat===t.value;
+  if(t.type==='rahmen')   return l.rahmen===t.value;
   if(t.type==='cpv')      return String(l.cpv).startsWith(t.value);
   if(t.type==='buyer')    return l.buyerShort===t.value;
   return leadText(l).includes(t.value); // text
+}
+
+/* Wo wurde ein Suchwort gefunden? Ohne diesen Beleg wirken Volltext-Treffer wie Fehler. */
+function fundstelle(l, wort){
+  const w = wort.toLowerCase();
+  if((l.titel||'').toLowerCase().includes(w)) return {ort:'Titel', text:null};
+  if((l.natur||'').toLowerCase().includes(w) || (l.cpvLabel||'').toLowerCase().includes(w))
+    return {ort:'Leistungsart', text:null};
+  if(l.lose){
+    const los = l.lose.find(x=>(x.titel||'').toLowerCase().includes(w));
+    if(los) return {ort:`Los ${los.nr}`, text:los.titel};
+  }
+  const be = l.beschreibung||'';
+  const i = be.toLowerCase().indexOf(w);
+  if(i>=0){
+    const von = Math.max(0, be.lastIndexOf(' ', i-45));
+    const bis = Math.min(be.length, be.indexOf(' ', i+w.length+45));
+    return {ort:'Beschreibung', text:(von>0?'… ':'')+be.slice(von, bis<0?be.length:bis).trim()+' …'};
+  }
+  if((l.buyer||'').toLowerCase().includes(w)) return {ort:'Auftraggeber', text:null};
+  return null;
+}
+function hervorheben(text, wort){
+  if(!wort) return text;
+  const re = new RegExp('('+wort.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig');
+  return text.replace(re,'<mark>$1</mark>');
 }
 
 function hasToken(type,value){ return searchTokens.some(t=>t.type===type && t.value===value); }
@@ -1140,12 +1828,15 @@ const ME = {author:'Du', initials:'DK'};
 
 /* Spalten-Definition — Reihenfolge = Anzeige */
 const COLS = [
+  {key:'netz',  label:'',          on:false, lock:true,  th:'center'},
   {key:'own',   label:'Unserer',   on:false, lock:true,  th:'center'},
   {key:'star',  label:'',          on:true,  lock:true,  th:'center'},
   {key:'src',   label:'Phase',     on:true},
   {key:'wf',    label:'Status',    on:true},
   {key:'titel', label:'Ausschreibung', on:true, lock:true},
   {key:'natur', label:'Leistung',  on:true},
+  {key:'rahmen',label:'Rahmen',    on:false},
+  {key:'aufwand',label:'Aufwand',  on:true, th:'center'},
   {key:'buyer', label:'Auftraggeber', on:true},
   {key:'frist', label:'Frist',     on:true},
   {key:'neu',   label:'Wettbewerb',on:true, th:'center'},
@@ -1159,7 +1850,21 @@ const COLS = [
 ];
 const colOn = k => COLS.find(c => c.key===k).on;
 
-const chanceCap = () => document.body.dataset.view==='verteidigung' ? 'Risiko' : 'Chance';
+const chanceCap = () => 'Chance';
+const istEigen = l => !!(l && l.eigen && l.eigenBestaetigt!==false);
+
+/* Die Chance stützt sich auf die Bieterzahl. Zwei Fälle, in denen sie fehlt —
+   beide müssen sichtbar sein, sonst sieht Geraten aus wie Gemessen. */
+function bieterLuecke(l){
+  if(!l || l.wechsel==='na') return null;
+  if(l.src==='f02') return {
+    kurz:'Ausschreibung läuft noch',
+    lang:'Diese Ausschreibung läuft noch — es hat also noch niemand geboten. Die Zahl der Mitbewerber ist einer der Faktoren hinter der Chance, und sie fehlt hier.'};
+  if(l.rahmen==='uvgo') return {
+    kurz:'unterschwellig',
+    lang:'Unterschwellige Vergaben nach UVgO veröffentlichen keine Bieterzahlen. Der Faktor, der sonst am meisten zur Chance beiträgt, fehlt hier vollständig.'};
+  return null;
+}
 
 function fristCell(l){
   if(l.tage != null){                       // offene Ausschreibung: Countdown
@@ -1176,15 +1881,8 @@ function visible(){
   return LEADS.filter(l => {
     if(l.branche !== aktiveBranche) return false;   // Grundraum: Branche aus Profil/Wechsel
     // Bestand = Verträge, in denen wir drin sind. Akquise = alles andere.
-    if(editBestand){ /* alles der Branche sichtbar — Suche findet auch alte Vergaben */ }
-    else if(filters.kandidaten) return !!l.eigenKandidat && l.eigenBestaetigt!==false;
-    else {
-    const bestand = document.body.dataset.view==='verteidigung';
-    if(!filters.gemerkt){
-      if(bestand && !(l.eigen && l.eigenBestaetigt!==false)) return false;
-      if(!bestand && l.eigen && l.eigenBestaetigt!==false) return false;
-    }
-    }
+    if(filters.kandidaten) return !!l.eigenKandidat && l.eigenBestaetigt!==false;
+    if(filters.netz && !(l.lose && l.loseMaxZuschlag)) return false;
     if(filters.ungesichtet && l.status!=='ungesichtet') return false;
     if(filters.gemerkt && !l.merk) return false;
     for(const [type, toks] of Object.entries(groups)){
@@ -1211,6 +1909,7 @@ function sorted(rows){
       case 'vol': return l.volumen.src==='unbekannt' ? -1 : parseFloat(String(l.volumen.wert).replace(/[^\d,]/g,'').replace(',','.'))||0;
       case 'relevanz': return LVL[l.relevanz];
       case 'wechsel': return LVL[l.wechsel];
+      case 'aufwand': return LVL[aufwandStufe(l).stufe];
       case 'konk': { const m={gering:1,mittel:2,hoch:3}; return m[l.konk.stufe]||9; }
       case 'buyer': return l.buyerShort;
       case 'src': return l.src;
@@ -1226,10 +1925,10 @@ function sorted(rows){
 /* ── Tabelle ── */
 function renderHead(){
   // Spalten, die einen Facetten-Filter im Kopf tragen → Menüname
-  const HEADFILTER = { src:'phase', natur:'leistung', region:'region' };
+  const HEADFILTER = { src:'phase', natur:'leistung', region:'region', rahmen:'rahmen' };
   $('#thead').innerHTML = '<tr>' + COLS.filter(c=>c.on).map(c => {
     const cls = [c.th==='right'?'right':'', c.th==='center'?'center':''].filter(Boolean).join(' ');
-    const sortable = ['titel','buyer','frist','relevanz','wechsel','vol','src','konk'].includes(c.key);
+    const sortable = ['titel','buyer','frist','relevanz','wechsel','aufwand','vol','src','konk'].includes(c.key);
     const lbl = c.key==='wechsel' ? chanceCap() : c.label;
     const ar = sortKey===c.key ? (sortDir>0?'▲':'▼') : '';
     const draggable = c.key!=='star';
@@ -1301,6 +2000,25 @@ document.addEventListener('drop', e => {
 
 function cellHTML(l, key){
   switch(key){
+    case 'netz': {
+      const dabei = netzInteresse.has(l.id);
+      const match = dabei && l.netzPartner;
+      // Zwei verbundene Ringe = Bietergemeinschaft. Klick wie beim Stern, direkt in der Liste.
+      const ringe = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9">
+        <circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/></svg>`;
+      const frei = document.body.dataset.state==='limit';
+      const such = l.netzSuchend==null ? ''
+        : frei ? `<span class="such lock" title="Im Pro-Zugang seht ihr, wie viele hier schon einen Partner suchen — bevor ihr euch meldet"><span class="nz-blur">${l.netzSuchend}</span></span>`
+        : `<span class="such ${l.netzSuchend>=4?'viel':''}" title="${l.netzSuchend>=4?'Hier bildet sich bereits ein Feld':'Noch wenig Bewegung — freie Wahl bei den Losen'}">${l.netzSuchend}</span>`;
+      return `<td class="c-netz"><span class="netzcell">
+        <button class="nzring ${dabei?'on':''} ${match?'match':''}"
+          data-netzint="${l.id}"
+          title="${match ? 'Ihr sucht hier einen Partner — eine Firma ergänzt euch bereits'
+                : dabei ? 'Ihr sucht hier einen Partner — klicken zum Zurückziehen'
+                : 'Wir suchen hier einen Partner'}"
+          aria-pressed="${dabei}" aria-label="Bietergemeinschaft">${ringe}</button>${such}
+        </span></td>`;
+    }
     case 'own': {
       const drin = l.eigen && l.eigenBestaetigt!==false;
       return `<td class="c-own"><button class="owntog ${drin?'on':''}" data-own="${l.id}:${drin?'nein':'ja'}"
@@ -1308,7 +2026,20 @@ function cellHTML(l, key){
     }
     case 'star': return `<td class="c-star"><button class="tstar" data-star="${l.id}" ${l.merk?`data-merk="${l.merk}"`:''} aria-label="Merken">${STAR}</button></td>`;
     case 'src': return `<td class="c-src"><span class="srcpill src-${l.src}">${l.srcLabel}</span></td>`;
-    case 'titel': return `<td class="c-titel"><span class="ttitel" title="${l.titel}">${l.titel}</span></td>`;
+    case 'titel': {
+      const wort = (searchTokens.find(t=>t.type==='text')||{}).value;
+      const f = wort ? fundstelle(l, wort) : null;
+      const beleg = f && f.ort!=='Titel'
+        ? `<span class="fund"><span class="fund-o">${f.ort}</span>${f.text?`<span class="fund-t">${hervorheben(f.text, wort)}</span>`:''}</span>`
+        : '';
+      const akt = l.aktualitaet
+        ? `<span class="akttag akt-${l.aktualitaet.art}" title="${l.aktualitaet.text} (${l.aktualitaet.am})">${
+            l.aktualitaet.art==='aufgehoben'?'aufgehoben':'geändert'}</span>` : '';
+      const eigen = l.eigen && l.eigenBestaetigt!==false
+        ? '<span class="eigentag" title="Ihr seid hier Auftragnehmer — für euch ein Risiko, kein Neugeschäft">euer Vertrag</span>' : '';
+      return `<td class="c-titel"><span class="ttitel">${wort?hervorheben(l.titel, wort):l.titel}${akt}${eigen}</span>${beleg}</td>`;
+    }
+    case 'titel_alt': return `<td class="c-titel"><span class="ttitel" title="${l.titel}">${l.titel}</span></td>`;
     case 'buyer': return `<td class="c-buyer" title="${l.buyer}">${l.buyerShort}</td>`;
     case 'frist': return `<td class="c-frist">${fristCell(l)}</td>`;
     case 'natur': return `<td class="c-natur"><span class="nat nat-${l.naturKat}">${l.natur}</span></td>`;
@@ -1317,11 +2048,29 @@ function cellHTML(l, key){
         ? '<span class="wettb neu" title="Neuvergabe — kein Amtsinhaber, offenes Feld">Neu</span>'
         : '<span class="wettb folge" title="Folgevergabe — Amtsinhaber vorhanden">Folge</span>'}</td>`;
     case 'relevanz': return `<td class="c-band">${bandMeter(l.relevanz)}</td>`;
-    case 'wechsel': return `<td class="c-band">${bandMeter(l.wechsel, true, chanceCap())}${
-      l.src==='f02' && l.wechsel!=='na'
-        ? '<span class="pdot pdot-schaetz" title="Geschätzt — bei offenen Ausschreibungen liegt noch keine Bieterzahl vor"></span>'
-        : ''}</td>`;
-    case 'vol': return `<td class="c-vol">${l.volumen.src==='unbekannt' ? '<span style="color:var(--ink-300)">Wert offen</span>' : val(l.volumen.wert, l.volumen.src, l.volumen.hint)}</td>`;
+    case 'wechsel': { const lue = bieterLuecke(l);
+      return `<td class="c-band">${bandMeter(l.wechsel, true, chanceCap())}${
+        lue ? `<span class="pdot pdot-schaetz" title="Geschätzt — ${lue.kurz}: keine Bieterzahl verfügbar"></span>` : ''}</td>`;
+    }
+    case 'vol': {
+      if(l.lose && l.lose.length>1){
+        const werte = l.lose.map(x=>parseInt(x.wert.replace(/\D/g,''),10)).filter(n=>!isNaN(n));
+        const min = Math.min(...werte);
+        const fmt = n => n.toLocaleString('de-DE')+' €';
+        return `<td class="c-vol"><span class="volwrap">
+          <span class="v-num">${fmt(werte.reduce((a,b)=>a+b,0))}</span>
+          <span class="volmin" title="Kleinstes Los — so viel braucht ihr mindestens, um mitzubieten">ab ${fmt(min)}</span>
+        </span></td>`;
+      }
+      return `<td class="c-vol">${l.volumen.src==='unbekannt' ? '<span style="color:var(--ink-300)">Wert offen</span>' : val(l.volumen.wert, l.volumen.src, l.volumen.hint)}</td>`;
+    }
+    case 'rahmen': return `<td class="c-rahmen">${l.rahmen
+      ? `<span class="rah rah-${l.rahmen}" title="${RAHMEN[l.rahmen].lang} — ${RAHMEN[l.rahmen].x}">${RAHMEN[l.rahmen].kurz}</span>`
+      : '<span style="color:var(--ink-300)">—</span>'}</td>`;
+    case 'aufwand': {
+      const a = aufwandStufe(l);
+      return `<td class="c-band">${bandMeter(a.stufe, true)}</td>`;
+    }
     case 'region': return `<td class="c-region">${l.region}</td>`;
     case 'inc': return `<td class="c-inc">${l.incumbent ? val(l.incumbent.name, l.incumbent.src) : '<span style="color:var(--ink-300)">offen</span>'}</td>`;
     case 'status': return `<td class="c-status"><span class="stat">${l.seen || (l.status==='ungesichtet'?'neu':'gesichtet')}</span></td>`;
@@ -1350,6 +2099,7 @@ function renderTable(){
   renderFacets();
   renderWorkspace();
   renderBestandBar();
+  renderNetzGate();
   $('#merkN').textContent = LEADS.filter(l=>l.merk).length;
 
   renderHead();
@@ -1378,10 +2128,9 @@ function renderFilterBar(){
     return `<span class="ftoken ftoken-${t.type}"><span class="tok-lbl">${t.type==='ort'?t.label:tokenLabel(t)}</span>${rad}
       <button class="tok-x" data-tokrm="${i}" aria-label="Filter entfernen">×</button></span>`;
   }).join('');
-  const stateChips =
-    (filters.gemerkt?'<span class="ftoken ftoken-state">Gemerkt <button class="tok-x" data-tokrm="f-gem">×</button></span>':'');
-  const on = searchTokens.length || filters.ungesichtet || filters.gemerkt;
-  fb.innerHTML = on ? `${chips}${stateChips}<button class="fb-clear" data-fclear>zurücksetzen</button>` : '';
+  // Merkliste und Netzwerk sind Modi, keine Filter-Etiketten — die Leiste bleibt dafür leer.
+  const on = searchTokens.length > 0;
+  fb.innerHTML = on ? `${chips}<button class="fb-clear" data-fclear>zurücksetzen</button>` : '';
   fb.classList.toggle('empty', !on);
 }
 function radiusMenu(i,t){
@@ -1454,10 +2203,285 @@ function commitSearch(pick){
   }
 }
 
+/* ===== Profil: Unternehmenssicht. Wächst mit der Datenlage —
+   gemessen hat der Median genau EINEN Sieg, nur 13,4 % haben fünf oder mehr. ===== */
+const PROFIL = {
+  neu:       {siege:0,  kunden:0, seit:null,   volumen:null,      median:null,       anteil:null,     rang:null,  kundenListe:[], nachbarn:[]},
+  klein:     {siege:1,  kunden:1, seit:'2024', volumen:'184.000 €', median:'184.000 €', anteil:'0,1 %', rang:null,
+    kundenListe:[{n:'Landkreis Bad Tölz-Wolfratshausen', gewonnen:1, gesamt:7, offen:1}],
+    nachbarn:[{n:'Netzwerktechnik', naehe:'hoch', vergaben:'312'}]},
+  etabliert: {siege:23, kunden:8, seit:'2019', volumen:'4,2 Mio €', median:'168.000 €', anteil:'1,8 %', rang:'7',
+    kundenListe:[
+      {n:'Landkreis Bad Tölz-Wolfratshausen', gewonnen:4, gesamt:7,  offen:1},
+      {n:'Stadt Rosenheim',                   gewonnen:6, gesamt:9,  offen:0},
+      {n:'Bezirk Oberbayern',                 gewonnen:2, gesamt:14, offen:2},
+      {n:'Klinikum Garmisch',                 gewonnen:3, gesamt:5,  offen:0},
+      {n:'Zweckverband IT Süd',               gewonnen:1, gesamt:11, offen:1}],
+    nachbarn:[
+      {n:'Netzwerktechnik',       naehe:'hoch',   vergaben:'312'},
+      {n:'IT-Sicherheitsdienste', naehe:'hoch',   vergaben:'188'},
+      {n:'Telekommunikation',     naehe:'mittel', vergaben:'241'}]},
+};
+/* Markt hängt NUR an Branche × Region — immer gefüllt, auch ohne einen einzigen Sieg */
+const PMARKT = {
+  vergaben:'1.284', offen:'34', stellen:'96', regionen:'Bayern · Hessen',
+  topStellen:[{n:'Bezirk Oberbayern',vergaben:14,offen:2},{n:'Zweckverband IT Süd',vergaben:11,offen:1},
+    {n:'Stadt Rosenheim',vergaben:9,offen:0},{n:'Landkreis Bad Tölz-W.',vergaben:7,offen:1},
+    {n:'Klinikum Garmisch',vergaben:5,offen:1}],
+  einstieg:[{n:'Netzwerk-Monitoring (Los 3)',wert:'59.000 €',bieter:'2'},
+    {n:'Softwarepflege Fachverfahren',wert:'74.000 €',bieter:'1'},
+    {n:'Clientmanagement Schulen',wert:'96.000 €',bieter:'3'}],
+};
+let profilStufe = 'klein';
+/* Was wir NICHT messen können, sondern was die Firma selbst angibt.
+   Trennung ist wichtig: abgeleitet = gemessen, angegeben = unbestätigt. */
+let angaben = {
+  schwerpunkte:['Rechenzentrumsbetrieb'],
+  nachweise:['ISO 27001'],
+  regionen:['Bayern','Hessen'],
+  min:'50.000', max:'2.000.000',
+  partner:false,   // Partnersuche: standardmäßig AUS, beidseitig freiwillig
+};
+const VORSCHLAG = {
+  schwerpunkte:['Netzwerktechnik','IT-Sicherheit','Softwareentwicklung','Clientmanagement',
+                'Telekommunikation','Cloud & Hosting','Fachverfahren','Schulungen'],
+  nachweise:['ISO 27001','ISO 9001','BSI C5','BSI-Grundschutz','Präqualifikation IT',
+             'TISAX','ISO 14001','BITV 2.0'],
+  regionen:['Baden-Württemberg','Bayern','Berlin','Brandenburg','Hamburg','Hessen',
+            'Niedersachsen','Nordrhein-Westfalen','Rheinland-Pfalz','Sachsen','Bundesweit'],
+};
+let offenerPicker = null;
+let potTab = 'chancen';   // chancen | position | profil | netzwerk
+/* Netzwerk: beidseitig freiwillig. Interesse gilt je Ausschreibung, nicht global. */
+const NETZ_FREI_MAX = 3;   // Free: gleichzeitige Meldungen. Kern-Schleife bleibt frei.
+let netzInteresse = new Set();
+let netzFreigabe  = new Set();
+
+/* Ein Feld mit abgeleiteten (gemessen) und angegebenen (unbestätigt) Werten */
+function angFeld(key, titel, zweck, abgeleitet){
+  const eigene = angaben[key]||[];
+  return `<div class="ang-f">
+    <div class="ang-h"><span class="ang-t">${titel}</span><span class="ang-x">${zweck}</span></div>
+    <div class="ang-chips">
+      ${abgeleitet.map(w=>`<span class="ang-c ang-abg" title="Aus euren gewonnenen Vergaben abgeleitet">${w}<i>gemessen</i></span>`).join('')}
+      ${eigene.map(w=>`<span class="ang-c ang-eig" title="Von euch angegeben, nicht überprüft">${w}
+        <button class="ang-x-btn" data-angrm="${key}:${w}" aria-label="Entfernen">×</button></span>`).join('')}
+      <span class="ang-add">
+        <button class="ang-plus" data-angadd="${key}">+ ergänzen</button>
+        ${offenerPicker===key?`<span class="ang-pop">
+          ${VORSCHLAG[key].filter(v=>!eigene.includes(v)).map(v=>
+            `<button class="ang-opt" data-angset="${key}:${v}">${v}</button>`).join('')}
+        </span>`:''}
+      </span>
+    </div>
+  </div>`;
+}
+
+function renderProfil(){
+  const d = PROFIL[profilStufe];
+  const historie = d.siege>0, belastbar = d.siege>=5 && d.kunden>=3;
+  const free = document.body.dataset.state==='limit';
+  const n = v => `<span class="v-num">${v}</span>`;
+  $('#profilview').innerHTML = `<div class="pwrap">
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s4);flex-wrap:wrap">
+      <div class="steck">
+        <div class="steck-n">${MEINE_FIRMA}</div>
+        <div class="steck-z">
+          <span>${BRANCHEN[aktiveBranche]}</span><i>·</i>
+          <span>${angaben.regionen.join(' · ')||PMARKT.regionen}</span><i>·</i>
+          <span>${historie?`<b>${d.siege}</b> Vergaben gewonnen seit ${d.seit}`:'noch keine Vergabe gewonnen'}</span>
+          ${historie?`<i>·</i><span><b>${d.kunden}</b> Auftraggeber</span>`:''}
+          <i>·</i><span class="steck-m" title="Firma über Handelsregister-Nummer zugeordnet">Identität bestätigt</span>
+        </div>
+      </div>
+      <div class="pdemo" title="Prototyp: Datenlage umschalten">
+        <span class="pdemo-k">Datenlage</span>
+        ${[['neu','kein Sieg'],['klein','1 Sieg'],['etabliert','5+ Siege']].map(([k,l])=>
+          `<button class="pdemo-o ${profilStufe===k?'on':''}" data-pstufe="${k}">${l}</button>`).join('')}
+      </div>
+    </div>
+
+    <div class="ptabs" role="tablist">
+      <button class="ptab" data-ptab="chancen"  aria-selected="${potTab==='chancen'}">Chancen${
+        potTab==='chancen'?'':''}</button>
+      <button class="ptab" data-ptab="position" aria-selected="${potTab==='position'}">Position${
+        free?'<span class="probadge probadge-lock">Pro</span>':''}</button>
+      <button class="ptab" data-ptab="profil"   aria-selected="${potTab==='profil'}">Profil</button>
+    </div>
+
+    ${potTab!=='chancen'?'':`
+    <section class="sec">
+      <h4>Wo könnt ihr gewinnen?</h4>
+      ${historie?`<div class="pblock ${free?'pb-lock':''}">
+        <div class="pb-h"><span class="pb-t">Bei euren Kunden${free?'<span class="probadge probadge-lock">Pro</span>':''}</span>
+          <span class="pb-n">${d.kundenListe.reduce((a,k)=>a+(k.gesamt-k.gewonnen),0)} verpasst · ${d.kundenListe.reduce((a,k)=>a+k.offen,0)} offen</span></div>
+        <p class="pb-x">Diese Stellen kennen euch bereits. Der Balken zeigt, wie viel ihr dort abgeräumt habt — der Rest ging an andere.</p>
+        ${d.kundenListe.map(k=>{const p=Math.round(k.gewonnen/k.gesamt*100);
+          return `<div class="pen"><span class="pen-n">${k.n}${k.offen?`<span class="pr-tag" style="margin-left:8px">${k.offen} offen</span>`:''}</span>
+            <span class="pen-bar"><i style="width:${p}%"></i></span><span class="pen-v">${k.gewonnen} / ${k.gesamt}</span></div>`;}).join('')}
+      </div>`:''}
+      ${d.nachbarn.length?`<div class="pblock ${free?'pb-lock':''}">
+        <div class="pb-h"><span class="pb-t">In benachbarten Feldern${free?'<span class="probadge probadge-lock">Pro</span>':''}</span></div>
+        <p class="pb-x">Bereiche, die Firmen wie ihr häufig zusätzlich bedienen — abgeleitet daraus, welche Felder dieselben Anbieter gemeinsam abdecken.</p>
+        <div class="prow prow-h"><span>Feld</span><span>Nähe</span><span>Vergaben</span></div>
+        ${d.nachbarn.map(x=>`<div class="prow"><span class="pr-n">${x.n}</span>
+          <span class="pr-o"><span class="pr-tag ${x.naehe==='hoch'?'':'mut'}">${x.naehe}</span></span>
+          <span class="pr-a">${x.vergaben}</span></div>`).join('')}
+      </div>`:''}
+      <div class="pblock">
+        <div class="pb-h"><span class="pb-t">In eurem Markt</span><span class="pb-n">${PMARKT.offen} offen</span></div>
+        <p class="pb-x">Die aktivsten Vergabestellen in eurem Feld und euren Regionen — unabhängig davon, ob ihr dort schon geboten habt.</p>
+        <div class="prow prow-h"><span>Vergabestelle</span><span>Vergaben</span><span>offen</span></div>
+        ${PMARKT.topStellen.map(v=>`<div class="prow"><span class="pr-n">${v.n}</span><span class="pr-a">${v.vergaben}</span>
+          <span class="pr-o">${v.offen?`<span class="pr-tag">${v.offen}</span>`:'<span style="color:var(--ink-300)">—</span>'}</span></div>`).join('')}
+      </div>
+      <div class="pblock">
+        <div class="pb-h"><span class="pb-t">Einstiegsfreundlich</span></div>
+        <p class="pb-x">Offene Ausschreibungen mit kleinem Los und wenigen Bietern — dort ist der Sprung hinein am kürzesten.</p>
+        <div class="prow prow-h"><span>Ausschreibung</span><span>Kleinstes Los</span><span>Bieter</span></div>
+        ${PMARKT.einstieg.map(v=>`<div class="prow"><span class="pr-n">${v.n}</span><span class="pr-a">${v.wert}</span><span class="pr-a">${v.bieter}</span></div>`).join('')}
+        <p class="pgap">Die Bieterzahl stammt aus vergleichbaren, bereits entschiedenen Vergaben derselben Stelle —
+        bei laufenden Ausschreibungen hat noch niemand geboten.</p>
+      </div>
+    </section>`}
+    ${potTab!=='position'?'':`
+    <section class="sec ${free?'sec-lock':''}">
+      <h4>Eure Position im Markt <span class="cov">Branche × Region, nach Anzahl</span></h4>
+      ${free?`<div class="note-box" style="margin-bottom:var(--s3)"><b>Im Pro-Zugang enthalten.</b>
+        Marktanteil und Rang rechnen wir aus allen Vergaben eures Feldes gegen eure Siege —
+        die Struktur siehst du, die Zahlen sind verdeckt.</div>`:''}
+      <div class="pstats">
+        <div class="pstat"><span class="pstat-k">Vergaben in eurem Feld</span><span class="pstat-v">${n(PMARKT.vergaben)}</span><span class="pstat-m">letzte 12 Monate</span></div>
+        <div class="pstat"><span class="pstat-k">Davon von euch gewonnen</span><span class="pstat-v">${historie?n(d.siege):'<span class="pleer">keine</span>'}</span></div>
+        <div class="pstat"><span class="pstat-k">Euer Anteil</span><span class="pstat-v">${d.anteil?n(d.anteil):'<span class="pleer">—</span>'}</span></div>
+        <div class="pstat"><span class="pstat-k">Rang unter den Anbietern</span>
+          <span class="pstat-v">${d.rang?n(d.rang+'.'):'<span class="pleer">zu wenige Siege</span>'}</span>
+          ${d.rang?`<span class="pstat-m">von ${PMARKT.stellen} aktiven Anbietern</span>`:''}</div>
+        <div class="pstat pstat-wide"><span class="pstat-k">Vergabestellen in eurem Feld</span><span class="pstat-v">${n(PMARKT.stellen)}</span>
+          <span class="pstat-m">${historie?`bei ${d.kunden} davon habt ihr schon gewonnen`:'noch bei keiner davon aktiv'}</span></div>
+      </div>
+      <p class="pgap">Eine <b>Gewinnquote</b> können wir nicht ausweisen: Vergabestellen veröffentlichen den Gewinner,
+      nicht die unterlegenen Bieter. Wir wissen, wie viele geboten haben — aber nicht, ob ihr dabei wart.</p>
+    </section>`}
+
+    ${potTab!=='profil'?'':`
+    <section class="sec">
+      <h4>Euer Profil <span class="cov">Grundlage für Relevanz und Anforderungs-Check</span></h4>
+
+      <div class="pstats">
+        <div class="pstat"><span class="pstat-k">Gewonnene Vergaben</span>
+          <span class="pstat-v">${historie?n(d.siege):'<span class="pleer">noch keine</span>'}</span>
+          ${historie?`<span class="pstat-m">seit ${d.seit}</span>`:''}</div>
+        <div class="pstat"><span class="pstat-k">Auftraggeber</span>
+          <span class="pstat-v">${historie?n(d.kunden):'<span class="pleer">—</span>'}</span></div>
+        <div class="pstat"><span class="pstat-k">Typischer Auftragswert</span>
+          <span class="pstat-v">${d.median?n(d.median):'<span class="pleer">—</span>'}</span>
+          ${d.median?'<span class="pstat-m">Median</span>':''}</div>
+        <div class="pstat pstat-wide"><span class="pstat-k">Bekanntes Volumen</span>
+          <span class="pstat-v">${d.volumen?n(d.volumen):'<span class="pleer">—</span>'}</span>
+          ${d.volumen?'<span class="pstat-flag">Untergrenze — nur für rund zwei Drittel der Vergaben ist ein Wert veröffentlicht</span>':''}</div>
+      </div>
+
+      ${historie && !belastbar?`<div class="note-box" style="margin-top:var(--s3)"><b>Dünne Grundlage.</b>
+        Mit ${d.siege} ${d.siege===1?'Vergabe':'Vergaben'} bei ${d.kunden} ${d.kunden===1?'Auftraggeber':'Auftraggebern'}
+        lässt sich noch kein Muster ablesen — ergänzt unten, was wir nicht sehen können.</div>`:''}
+      ${!historie?`<div class="note-box" style="margin-top:var(--s3)">Wir finden unter eurem Namen noch keine
+        gewonnene Vergabe. <b>Dann erklärt euer Profil selbst</b> — Relevanz und Anforderungs-Check
+        funktionieren auch ohne Historie.</div>`:''}
+
+      <div class="ang">
+        ${angFeld('schwerpunkte','Schwerpunkte','Bestimmt, welche Ausschreibungen als relevant gelten.',
+                  historie?['Managed Services','Netzwerk-Monitoring']:[])}
+        ${angFeld('nachweise','Nachweise & Zertifikate','Werden im Anforderungs-Check gegen die Forderungen geprüft.',[])}
+        ${angFeld('regionen','Regionen','Filtert nach Leistungsort, nicht nach Sitz der Vergabestelle.',[])}
+        <div class="ang-f">
+          <div class="ang-h"><span class="ang-t">Partnersuche</span>
+            <span class="ang-x">Für Ausschreibungen, die man allein nicht ganz gewinnen kann.</span></div>
+          <div class="ptoggle ${angaben.partner?'on':''}">
+            <button class="pt-sw" data-partner aria-pressed="${!!angaben.partner}"><i></i></button>
+            <div class="pt-m">
+              <span class="pt-t">${angaben.partner?'Ihr seid sichtbar und seht andere':'Ausgeschaltet'}</span>
+              <span class="pt-x">${angaben.partner
+                ? 'Andere Firmen sehen euren Namen, eure Schwerpunkte, Regionen und Größenklasse. Was ihr euch anseht oder merkt, sieht niemand.'
+                : 'Eingeschaltet zeigen wir euch Firmen, die sich ebenfalls geöffnet haben — und ihr werdet für sie sichtbar. Nur zusammen, nicht einseitig.'}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ang-f">
+          <div class="ang-h"><span class="ang-t">Auftragsgröße</span>
+            <span class="ang-x">Blendet aus, was zu klein oder zu groß für euch ist.</span></div>
+          <div class="ang-range">
+            <span>von</span><input class="ang-in" data-ang="min" value="${angaben.min}"><span>€</span>
+            <span style="margin-left:8px">bis</span><input class="ang-in" data-ang="max" value="${angaben.max}"><span>€</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="pgap">Angaben von euch sind <b>nicht überprüft</b> — wir kennzeichnen sie getrennt von dem,
+      was wir aus euren Vergaben messen. Für die Erfolgsprämie zählt nur Gemessenes.</p>
+
+      <button class="sec-link" data-editbestand="an">${historie?'Eure Verträge pflegen':'Frühere Vergaben nachtragen'}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </section>`}
+  </div>`;
+}
+
+function renderNetzGate(){
+  const g = $('#netzgate'); if(!g) return;
+  if(!filters.netz){ g.innerHTML=''; g.hidden=true; document.body.removeAttribute('data-netzoff'); return; }
+  g.hidden = false;
+  if(!angaben.partner){
+    document.body.dataset.netzoff = '1';
+    g.innerHTML = `<div class="nz-in">
+      <div class="nz-in-t">Manche Ausschreibungen kann man allein nicht ganz gewinnen.</div>
+      <p class="nz-in-x">Bei zwölf Losen und höchstens drei Zuschlägen je Bieter braucht es Partner.
+      Aktiviert das Netzwerk, dann zeigen wir euch genau diese Ausschreibungen — und ihr könnt euch je
+      Ausschreibung melden. <b>Erst wenn sich eine Firma meldet, die euch fachlich ergänzt</b>, machen wir
+      euch gegenseitig sichtbar.</p>
+      <div class="nz-rules">
+        <div class="nz-r"><i class="ok">✓</i><span>Sichtbar wird: Firmenname, Schwerpunkte, Regionen, Größenklasse</span></div>
+        <div class="nz-r"><i class="ok">✓</i><span>Eure Meldung gilt <b>je Ausschreibung</b> — nicht pauschal</span></div>
+        <div class="nz-r"><i class="no">✗</i><span>Niemand sieht, was ihr euch anseht, merkt oder bewertet</span></div>
+        <div class="nz-r"><i class="no">✗</i><span>Wettbewerber mit gleichem Profil ergänzen euch nicht — kein Match, keine Offenlegung</span></div>
+      </div>
+      <button class="nz-btn" data-partner>Netzwerk aktivieren</button>
+      <p class="nz-fine">Ihr seht andere nur, wenn ihr selbst sichtbar seid. Jederzeit im Profil abschaltbar.</p>
+      <div class="nz-plans">
+        <div class="nz-p"><span class="nz-p-t">Free</span>
+          <span class="nz-p-x">Melden, gematcht werden, Kontakt austauschen — vollständig.
+          Höchstens ${NETZ_FREI_MAX} Meldungen gleichzeitig.</span></div>
+        <div class="nz-p"><span class="nz-p-t">Pro</span>
+          <span class="nz-p-x">Unbegrenzt melden, sehen wie viele hier schon suchen <b>bevor</b> ihr euch meldet,
+          und Benachrichtigung sobald jemand euch ergänzt.</span></div>
+      </div>
+    </div>`;
+    return;
+  }
+  document.body.removeAttribute('data-netzoff');
+  const rows = visible();
+  const gemeldet = rows.filter(l=>netzInteresse.has(l.id)).length;
+  const matches  = rows.filter(l=>netzInteresse.has(l.id) && l.netzPartner).length;
+  g.innerHTML = `<div class="nzbar">
+    <div class="nzbar-m">
+      <span class="nzbar-t">Ausschreibungen, die man allein nicht ganz gewinnen kann.</span>
+      <span class="nzbar-x">Bietergemeinschaft zugelassen, ein Bieter bekommt nicht alle Lose.
+      Schau dir die Lose im Detail an und setz den Ring, wenn ihr einen Partner sucht.
+      Die Zahl daneben zeigt, wie viele sich hier schon gemeldet haben.</span>
+    </div>
+    <div class="nzbar-r">
+      ${matches?`<span class="nzbar-ok">${matches} Ergänzung gefunden</span>`
+        :gemeldet?`<span class="nzbar-w">${gemeldet} gemeldet · noch keine Ergänzung</span>`:''}
+      ${document.body.dataset.state==='limit'
+        ? `<span class="nzbar-q ${netzInteresse.size>=NETZ_FREI_MAX?'out':''}">${netzInteresse.size}/${NETZ_FREI_MAX} Meldungen · Free</span>`
+        : ''}
+    </div>
+  </div>`;
+}
+
 function renderBestandBar(){
   const bar = $('#bestandbar'); if(!bar) return;
-  const bestand = document.body.dataset.view==='verteidigung';
-  if(!bestand){ bar.innerHTML=''; bar.hidden = true; return; }
+  if(!editBestand && !filters.kandidaten){ bar.innerHTML=''; bar.hidden = true; return; }
   bar.hidden = false;
   const eigene = LEADS.filter(l=>l.branche===aktiveBranche && l.eigen && l.eigenBestaetigt!==false);
   const offen  = eigene.filter(l=>l.eigenBestaetigt===null).length;
@@ -1495,7 +2519,8 @@ function renderBestandBar(){
     </div>
     ${offen?`<span class="bb-open">${offen} noch nicht bestätigt</span>`:'<span class="bb-ok">alle bestätigt</span>'}
     ${kand?`<button class="bb-btn" data-kandidaten="an">${kand} mögliche prüfen</button>`:''}
-    <button class="bb-btn" data-editbestand="an">Bestand bearbeiten</button>`;
+    <button class="bb-btn" data-editbestand="an">Bestand bearbeiten</button>
+    <button class="bb-btn" data-profil>Zum Potenzial</button>`;
   bar.classList.toggle('warn', geraten);
 }
 
@@ -1616,6 +2641,11 @@ function renderDetail(){
           </button>
         </div>
       </div>
+      ${l.aktualitaet?`<div class="aktbar akt-${l.aktualitaet.art}">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+        <span><b>${l.aktualitaet.art==='aufgehoben'?'Verfahren aufgehoben':'Nach Veröffentlichung geändert'}</b>
+        ${l.aktualitaet.text} · Stand ${l.aktualitaet.am}</span>
+      </div>`:''}
       <div class="dtitle">
         <h2>${l.titel}</h2>
         <div class="wfpick">
@@ -1624,6 +2654,7 @@ function renderDetail(){
       </div>
       <div class="tabs" role="tablist">
         <button class="tab" data-tab="uebersicht" aria-selected="${activeTab==='uebersicht'}">Übersicht</button>
+        <button class="tab" data-tab="teilnahme" aria-selected="${activeTab==='teilnahme'}">Teilnahme</button>
         <button class="tab" data-tab="analyse" aria-selected="${activeTab==='analyse'}">Bewertung${
           isFree ? `<span class="quota ${limited?'out':''}">${limited?'0':'1'}/3</span>` : ''
         }</button>
@@ -1636,7 +2667,8 @@ function renderDetail(){
         <button class="tab" data-tab="team" aria-selected="${activeTab==='team'}">Team${l.comments.length?`<span class="quota">${l.comments.length}</span>`:''}</button>
       </div>
     </div>`;
-  const tabBody = activeTab==='team' ? renderTeam(l)
+  const tabBody = activeTab==='teilnahme' ? renderTeilnahme(l)
+    : activeTab==='team' ? renderTeam(l)
     : activeTab==='buyer' ? renderBuyer(l)
     : activeTab==='markt' ? renderMarkt(l)
     : activeTab==='uebersicht' ? renderUebersicht(l)
@@ -1670,6 +2702,9 @@ function setupAnaSpy(){
   spy();
 }
 
+const pdotT = (src,hint)=> src && src!=='echt'
+  ? `<span class="pdot pdot-${src}" title="${SRC_TEXT[src]}${hint?' — '+hint:''}"></span>` : '';
+
 function renderUebersicht(l){
   const inc = l.incumbent;
   const pdot = (src,hint)=> src && src!=='echt'
@@ -1696,10 +2731,94 @@ function renderUebersicht(l){
             : '<button class="inline-link" data-tab="markt">Markt ansehen</button>'}</span></div>
         <div class="kvi"><span class="k">Vertragsart</span>
           <span class="vv">${iv(l.art,'echt')}</span></div>
+      <div class="kvi"><span class="k">Grundlaufzeit</span>
+          <span class="vv">${l.laufzeit?iv(l.laufzeit,'echt'):'<span class="v-unk">nicht angegeben</span>'}</span></div>
+        <div class="kvi"><span class="k">Geplanter Beginn</span>
+          <span class="vv">${l.beginnGeplant?iv(l.beginnGeplant,'echt'):'<span class="v-unk">nicht angegeben</span>'}</span></div>
+        <div class="kvi"><span class="k">Geplantes Ende</span>
+          <span class="vv">${l.endeGeplant?iv(l.endeGeplant,'echt'):(l.endet?iv(l.endet,'schaetz','Aus der Laufzeit geschätzt — die Ausschreibung nennt kein Enddatum.'):'<span class="v-unk">nicht angegeben</span>')}</span></div>
+        <div class="kvi"><span class="k">Verlängerung</span>
+          <span class="vv">${l.verlaengerung?iv(l.verlaengerung,'echt'):iv('keine vorgesehen','echt')}</span></div>
+        <div class="kvi"><span class="k">Rechtsrahmen</span>
+          <span class="vv">${l.rahmen?`${iv(RAHMEN[l.rahmen].kurz,'echt')}<span class="vm">${RAHMEN[l.rahmen].lang}</span>`:'<span class="v-unk">nicht angegeben</span>'}</span></div>
+        <div class="kvi"><span class="k">Verfahren</span>
+          <span class="vv">${l.verfahren?iv(l.verfahren,'echt'):'<span class="v-unk">nicht angegeben</span>'}${
+            l.verfahren&&l.verfahren.startsWith('Verhandlung')
+              ?'<span class="vm">Gespräche möglich — Beziehung zählt mehr als bei offenen Verfahren</span>':''}</span></div>
       </div>
     </section>
 
-    <section class="sec">
+    ${!l.beschreibung ? `<section class="sec">
+      <h4>Leistungsbeschreibung</h4>
+      <div class="kurztext leer">Die Bekanntmachung enthält keinen Beschreibungstext.</div>
+      <p class="rt-note">Das kommt häufig vor — rund sechs von zehn Bekanntmachungen tragen weniger als
+      200 Zeichen, viele gar nichts. Was tatsächlich beschafft wird, steht dann ausschließlich in den
+      Vergabeunterlagen.</p>
+    </section>` : ''}
+
+    ${l.beschreibung && !l.hasDetail ? `<section class="sec">
+      <h4>Leistungsbeschreibung</h4>
+      <div class="kurztext">${l.beschreibung}</div>
+      <p class="rt-note">Mehr steht in der Bekanntmachung nicht. Das ist der Normalfall —
+      bei rund sechs von zehn Ausschreibungen umfasst der Beschreibungstext weniger als 200 Zeichen.
+      Die eigentliche Leistungsbeschreibung liegt in den Vergabeunterlagen auf dem Vergabeportal.</p>
+    </section>` : ''}
+
+    ${l.hasDetail && l.beschreibung ? `<section class="sec sec-raw">
+      <h4>Leistungsbeschreibung <span class="cov">unverändert aus der Bekanntmachung</span></h4>
+      <details class="rawtext" open>
+        <summary><span class="rt-open">Originaltext</span><span class="rt-len">${
+          l.beschreibung.trim().split(/\s+/).length} Wörter</span></summary>
+        <div class="rt-body">${l.beschreibung.split(/\n\n+/).map(p=>`<p>${p.trim()}</p>`).join('')}</div>
+      </details>
+      <p class="rt-note">Wir kürzen und glätten nichts — was die Vergabestelle geschrieben hat, steht so da.</p>
+
+      ${(l.extrakt||[]).length ? `<div class="ex">
+        <div class="ex-head">
+          <span class="ex-h">Aus dem Text gelesen</span>
+          <button class="ex-link" data-tab="analyse" data-anchor="anforderungen">
+            Anforderungs-Check${document.body.dataset.state==='limit'?' <i>· nutzt eine Bewertung</i>':''}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+        <div class="ex-cols">
+          ${(()=>{
+            const G = [['nachweis','Nachweise'],['bedingung','Bedingungen'],
+                       ['leistung','Leistung'],['technik','Technik'],['menge','Mengen']];
+            const wort = (searchTokens.find(t=>t.type==='text')||{}).value;
+            const ex = l.extrakt||[]; const KAP = 5;
+            return G.map(([k,label])=>{
+              let items = ex.filter(x=>x.k===k); if(!items.length) return '';
+              if(wort) items = [...items].sort((a,b)=>
+                (b.w.toLowerCase().includes(wort)?1:0) - (a.w.toLowerCase().includes(wort)?1:0));
+              const offen = offeneGruppen.has(k);
+              const zeig = offen ? items : items.slice(0,KAP);
+              const rest = items.length - zeig.length;
+              return `<div class="ex-col ${k==='nachweis'?'ex-ko':''}">
+                <span class="ex-gh">${label}<i>${items.length}</i></span>
+                ${zeig.map(x=>{
+                  const tref = wort && x.w.toLowerCase().includes(wort);
+                  return `<button class="ex-t ex-${x.s} ${x.unsicher?'ex-uns':''} ${tref?'on':''}" data-mark="${x.w}"
+                    title="${x.s==='cpv'?'Aus der amtlichen CPV-Einordnung':'Aus dem Beschreibungstext gelesen'}${
+                    x.unsicher?' — Zahl aus dem Fließtext, ungeprüft':''}${x.rand?' — Randleistung, nicht der Kern':''}">
+                    <span class="ex-w">${x.w}</span>
+                    <i class="ex-src">${tref?'gesucht':x.s==='cpv'?'CPV':'Text'}</i>
+                  </button>`;}).join('')}
+                ${rest>0?`<button class="ex-more" data-grp="${k}">+ ${rest}</button>`:''}
+                ${offen&&items.length>KAP?`<button class="ex-more" data-grp="${k}">weniger</button>`:''}
+              </div>`;
+            }).join('');
+          })()}
+        </div>
+        <div class="ex-legend">
+          <span><b>CPV</b> aus der amtlichen Einordnung</span>
+          <span><b>Text</b> aus der Beschreibung gelesen</span>
+          <span class="ex-hint">Klick einen Begriff, um ihn im Text zu finden.</span>
+        </div>
+      </div>` : ''}
+    </section>` : ''}
+
+<section class="sec">
       <h4>Auftraggeber</h4>
       <div class="kv">
         <div class="kvi kvi-full"><span class="k">Vergabestelle</span>
@@ -1742,7 +2861,7 @@ function renderUebersicht(l){
       <a class="tedlink" href="#" target="_blank" rel="noopener">TED <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
     </section>
 
-    <div class="prov-legend">
+        <div class="prov-legend">
       <span class="pdot pdot-schaetz"></span> geschätzt
       <span class="pdot pdot-unsicher"></span> unsicher
       <span class="pl-unk">grau</span> unbekannt
@@ -1751,9 +2870,186 @@ function renderUebersicht(l){
   </div>`;
 }
 
+function renderTeilnahme(l){
+  const iv = (text,src,hint,num)=>{
+    const cls = (src==='unbekannt'?'v-unk ':src==='na'?'v-na ':'')+(num?'v-num':'');
+    return `<span class="v ${cls}">${text}</span>${pdotT(src,hint)}`;
+  };
+  return `<div class="dbody dbody-ov">
+    <section class="sec sec-unterlagen">
+      <div class="unt">
+        <div class="unt-m">
+          <span class="unt-t">Vergabeunterlagen</span>
+          <span class="unt-x">${l.unterlagen && l.unterlagen.portal
+            ? `Vollständige Leistungsbeschreibung, Vertragsbedingungen und Formulare auf <b>${l.unterlagen.portal}</b>.`
+            : 'Die Bekanntmachung nennt keinen Link zu den Unterlagen — bei rund 3 % der Ausschreibungen ist das der Fall.'}
+            ${l.aufwand&&l.aufwand.eabgabe==='Pflicht'?'<br>Abgabe nur elektronisch — die Registrierung dauert und sollte früh erledigt sein.':''}</span>
+        </div>
+        ${l.unterlagen && l.unterlagen.portal ? `<a class="unt-btn" href="#" target="_blank" rel="noopener">
+          Unterlagen öffnen
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>` : '<span class="unt-leer">kein Link</span>'}
+      </div>
+    </section>
+
+    <section class="sec">
+      <h4>Fristen</h4>
+      <div class="kv">
+        <div class="kvi"><span class="k">Frist für Rückfragen</span>
+          <span class="vv">${l.aufwand&&l.aufwand.fragefrist?iv('noch '+l.aufwand.fragefrist,'echt'):'<span class="v-unk">nicht veröffentlicht</span>'}</span></div>
+        <div class="kvi"><span class="k">Angebotsfrist</span>
+          <span class="vv">${l.tage!=null?iv('noch '+l.tage+' Tage','echt'):'<span class="v-unk">keine Frist</span>'}</span></div>
+        <div class="kvi kvi-full"><span class="k">Submissionstermin</span>
+          <span class="vv">${l.submission
+            ? `${iv(l.submission,'echt')}<span class="vm">${l.rahmen==='vob'?'öffentliche Öffnung — Teilnahme möglich, ihr seht die Mitbieter':'öffentliche Angebotsöffnung'}</span>`
+            : '<span class="v-unk">nicht veröffentlicht</span>'}</span></div>
+        <div class="kvi"><span class="k">Bindefrist</span>
+          <span class="vv">${l.aufwand&&l.aufwand.bindefrist?iv(l.aufwand.bindefrist,'echt'):'<span class="v-unk">nicht angegeben</span>'}</span></div>
+        </div>
+    </section>
+
+    <section class="sec">
+      <h4>Zuschnitt</h4>
+      <div class="kv">
+        <div class="kvi"><span class="k">Teilbar</span>
+          <span class="vv">${l.lose&&l.lose.length
+            ? `${iv('ja — '+l.lose.length+' Lose','echt')}` : iv('nein — ganz oder gar nicht','echt')}</span></div>
+        <div class="kvi"><span class="k">Angebot auf höchstens</span>
+          <span class="vv">${l.loseMaxAngebot?iv(l.loseMaxAngebot+' Lose','echt'):'<span class="v-na">nicht begrenzt</span>'}</span></div>
+        <div class="kvi"><span class="k">Zuschlag auf höchstens</span>
+          <span class="vv">${l.loseMaxZuschlag?iv(l.loseMaxZuschlag+' Lose','echt'):'<span class="v-na">nicht begrenzt</span>'}</span></div>
+        <div class="kvi kvi-full"><span class="k">Bietergemeinschaft</span>
+          <span class="vv">${l.bgKlausel?iv(l.bgKlausel,'echt'):'<span class="v-unk">nicht angegeben</span>'}</span></div>
+        <div class="kvi"><span class="k">Nebenangebote</span>
+          <span class="vv">${l.nebenangebote?iv(l.nebenangebote,'echt'):'<span class="v-unk">nicht angegeben</span>'}</span></div>
+        <div class="kvi"><span class="k">Rahmenvereinbarung</span>
+          <span class="vv">${l.rahmenvertrag?iv(l.rahmenvertrag,'echt'):iv('nein','echt')}</span></div>
+      </div>
+    </section>
+
+${l.lose && l.lose.length ? (()=>{
+      const werte = l.lose.map(x=>parseInt(x.wert.replace(/\D/g,''),10));
+      const min = Math.min(...werte), minI = werte.indexOf(min);
+      const fmt = n => n.toLocaleString('de-DE')+' €';
+      return `<section class="sec">
+        <h4>Lose <span class="cov">${l.lose.length} Teilleistungen</span></h4>
+        <div class="einstieg">
+          <div class="ein-m">
+            <span class="ein-k">Einstiegsschwelle</span>
+            <span class="ein-v">${fmt(min)}</span>
+          </div>
+          <span class="ein-x">Ihr müsst nicht auf die volle Summe von ${fmt(werte.reduce((a,b)=>a+b,0))}
+          bieten. Das kleinste Los ist einzeln vergeben — <b>${l.lose[minI].titel}</b>.</span>
+        </div>
+        <div class="lose">
+          <div class="los los-head"><span>Los</span><span>Leistung</span><span>Wert</span><span>Laufzeit</span><span>Ort</span></div>
+          ${l.lose.map((x,i)=>`<div class="los ${i===minI?'los-min':''}">
+            <span class="los-n">${x.nr}</span>
+            <span class="los-t">${x.titel}${i===minI?'<span class="los-tag">kleinstes</span>':''}</span>
+            <span class="los-w">${x.wert}</span>
+            <span class="los-d">${x.dauer}</span>
+            <span class="los-r">${x.region}</span>
+          </div>`).join('')}
+        </div>
+        ${l.optionen||l.verlaengerung?`<div class="note-box" style="margin-top:var(--s3)">
+          <b>Über die Grundlaufzeit hinaus:</b> ${[l.optionen?'Optionen vorgesehen':null,
+          l.verlaengerung?`Verlängerung möglich (${l.verlaengerung})`:null].filter(Boolean).join(' · ')}.
+          Der tatsächliche Vertragswert kann deutlich über der Summe der Lose liegen.</div>`:''}
+      </section>`;
+    })() : ''}
+
+    
+    ${l.lose && l.lose.length && l.loseMaxZuschlag ? `<section class="sec" id="an-partner">
+      <h4>Partner nötig?</h4>
+
+      <div class="pnfacts">
+        <div class="pnf">
+          <span class="pnf-k">Lose insgesamt</span>
+          <span class="pnf-v"><span class="v-num">${l.lose.length}</span></span></div>
+        <div class="pnf">
+          <span class="pnf-k">Ihr dürft anbieten auf</span>
+          <span class="pnf-v"><span class="v-num">${l.loseMaxAngebot}</span></span></div>
+        <div class="pnf pnf-hero">
+          <span class="pnf-k">Ihr könnt höchstens gewinnen</span>
+          <span class="pnf-v"><span class="v-num">${l.loseMaxZuschlag}</span></span></div>
+      </div>
+      <p class="pn-deut">Selbst wenn ihr alles anbietet, bekommt ihr höchstens
+      <b>${l.loseMaxZuschlag} von ${l.lose.length} Losen</b>. Wer den Gesamtauftrag will,
+      braucht Partner — wer allein bietet, kalkuliert ${l.lose.length-l.loseMaxZuschlag} Lose umsonst.</p>
+
+      ${(()=>{ const frei=document.body.dataset.state==='limit';
+        if(l.netzSuchend==null) return '';
+        return `<div class="nz-vor ${frei?'lock':''}">
+          <span class="nz-v-k">Firmen, die hier schon einen Partner suchen</span>
+          <span class="nz-v-v">${frei?`<span class="nz-blur">${l.netzSuchend}</span>`:`<span class="v-num">${l.netzSuchend}</span>`}</span>
+          <span class="nz-v-x">${frei
+            ? 'Im Pro-Zugang seht ihr das, <b>bevor</b> ihr euch selbst meldet.'
+            : l.netzSuchend>=4 ? 'Hier bildet sich bereits ein Feld — je früher ihr dabei seid, desto mehr Lose bleiben übrig.'
+            : 'Noch wenig Bewegung. Wer sich früh meldet, hat die freie Wahl bei den Losen.'}</span>
+        </div>`;})()}
+
+      <div class="pn-bg">
+        <span class="pn-bg-k">Bietergemeinschaft</span>
+        <span class="pn-bg-v">zugelassen</span>
+        <span class="pn-bg-x">${l.bgForm}</span>
+      </div>
+
+      ${!angaben.partner ? `<div class="pn-off">
+        <div><b>Partner finden?</b>
+        <span>Aktiviert das Netzwerk, dann könnt ihr euch für solche Ausschreibungen melden —
+        und wir prüfen, wer euch ergänzt.</span></div>
+        <button class="pn-btn" data-tonetz>Zum Netzwerk</button>
+      </div>`
+      : !netzInteresse.has(l.id) ? `<div class="pn-off">
+        <div><b>Sucht ihr hier einen Partner?</b>
+        <span>Meldet euch für diese Ausschreibung. Sichtbar werdet ihr nur für Firmen,
+        die euch fachlich ergänzen.</span></div>
+        <button class="pn-btn" data-netzint="${l.id}">Interesse bekunden</button>
+      </div>`
+      : l.netzPartner ? (()=>{ const frei = netzFreigabe.has(l.id); return `<div class="nz-match">
+        <div class="nz-m-h"><b>Eine Firma ergänzt euch</b><span class="nz-m-s">seit ${l.netzPartner.seit}</span></div>
+        <div class="nz-m-r">
+          <span class="nz-m-n">${frei?l.netzPartner.n:'<span class="nz-blur">Firmenname sichtbar nach Freigabe</span>'}</span>
+          <span class="nz-m-f">${l.netzPartner.feld}</span>
+          <span class="nz-m-g">${l.netzPartner.groesse}</span>
+          <span class="nz-m-d">deckt ${l.netzPartner.deckung} Lose</span>
+        </div>
+        <p class="nz-m-x">Zusammen kommt ihr auf <b>${(l.netzDeckung||1)+l.netzPartner.deckung} von ${l.lose.length} Losen</b>.
+        ${frei?'Beide Seiten haben freigegeben — die Kontaktdaten liegen jetzt bei euch beiden.'
+             :'Gebt den Kontakt frei, wenn ihr sprechen wollt. Die andere Seite muss ebenfalls freigeben.'}</p>
+        ${frei?`<div class="nz-kontakt"><b>${l.netzPartner.n}</b>
+          <span>M. Berger · +49 89 1234-560 · berger@alpenland-netz.de</span></div>`
+        :`<button class="nz-frei" data-netzfrei="${l.id}">Kontakt freigeben</button>`}
+      </div>`;})()
+      : `<div class="nz-wait">Ihr habt euch gemeldet. Noch keine ergänzende Firma —
+        wir melden uns, sobald jemand andere Lose abdeckt als ihr.
+        <button class="nz-rueck" data-netzint="${l.id}">Meldung zurückziehen</button></div>`}
+    </section>` : ''}
+
+    <section class="sec">
+      <h4>Was die Bekanntmachung nicht beantwortet</h4>
+      <p class="offen-x">Diese Fragen entscheiden über die Vertragsphase — beantwortet werden sie erst in den
+      Unterlagen, nicht in der Bekanntmachung. Wir zeigen sie hier, damit ihr wisst, wonach ihr suchen müsst.</p>
+      <div class="offen">
+        <div class="off-g"><span class="off-t">Zahlung</span>
+          <span class="off-x">Zahlungsziele, Abschlagszahlungen, Skonto, Sicherheitseinbehalt</span></div>
+        <div class="off-g"><span class="off-t">Leistung</span>
+          <span class="off-x">Ausführungsfristen, Zwischentermine, Abnahmen, Mitwirkungspflichten</span></div>
+        <div class="off-g"><span class="off-t">Qualität und Haftung</span>
+          <span class="off-x">Vertragsstrafen, Mängelhaftung, Gewährleistungsfristen, Service-Level</span></div>
+        <div class="off-g"><span class="off-t">Ausstieg</span>
+          <span class="off-x">Kündigungsrechte, Sonderkündigung, Folgen bei Nichterfüllung</span></div>
+      </div>
+      <span class="offen-hin">Den Link zu den Unterlagen findest du oben in diesem Tab.</span>
+    </section>
+
+  </div>`;
+}
+
 function renderAnalyse(l){
   const nav = [
     ['bewertung','Bewertung'],
+    ['zuschlag','Zuschlagskriterien'],
     ['vergleich','Direktvergleich'],
     ['anforderungen','Anforderungs-Check'],
     ['luecke','Lücke'],
@@ -1776,17 +3072,46 @@ function renderAnalyse(l){
           <span class="scoreword">${l.relevanz==='na'?'—':l.relevanz}</span>
         </div>
         <div class="score" data-level="${l.wechsel}">
-          <span class="name" id="chanceName">Wechsel-Chance</span>
+          <span class="name" id="chanceName">${istEigen(l)?'Verdrängungs-Risiko':'Wechsel-Chance'}</span>
           ${bandMeter(l.wechsel, true)}
           <span class="scoreword">${l.wechsel==='na'?'—':l.wechsel}</span>
         </div>
+        <div class="score" data-level="${aufwandStufe(l).stufe}">
+          <span class="name">Angebotsaufwand</span>
+          ${bandMeter(aufwandStufe(l).stufe, true)}
+          <span class="scoreword">${aufwandStufe(l).stufe==='na'?'—':aufwandStufe(l).stufe}</span>
+        </div>
       </div>
-      ${l.src==='f02' && l.wechsel!=='na' ? `<div class="score-caveat">
-        <span class="pdot pdot-schaetz"></span>
-        <span>Diese Ausschreibung läuft noch — es hat also noch niemand geboten. Die Zahl der Mitbewerber ist einer
-        der Faktoren hinter der Chance, und sie fehlt hier. Die Bewertung stützt sich auf Vertragsart und Branche
-        und ist entsprechend gröber als bei abgeschlossenen Vergaben.</span>
-      </div>` : ''}
+
+      ${(()=>{ const a=aufwandStufe(l);
+        const R={hoch:2,mittel:1,niedrig:0,na:-1}[l.relevanz];
+        const A={hoch:2,mittel:1,niedrig:0,na:-1}[a.stufe];
+        let satz;
+        if(A<0) satz = 'Zum Aufwand wissen wir zu wenig — die Bekanntmachung nennt weder Bürgschaft noch Bindefrist.';
+        else if(R>=2 && A<=0) satz = 'Passt gut und kostet wenig — das ist die Sorte Ausschreibung, die man mitnimmt.';
+        else if(R>=2 && A>=2) satz = 'Passt gut, kostet aber viel. Lohnt sich, wenn ihr die Kapazität habt — sonst blockiert es zwei andere Angebote.';
+        else if(R<=0 && A>=2) satz = 'Passt mäßig und kostet viel. Hier würden wir abraten, wenn ihr Alternativen habt.';
+        else satz = 'Mittlere Passung bei mittlerem Aufwand — entscheidet die Auslastung.';
+        return `<div class="dreisatz">
+          <span class="ds-t">Zusammengenommen</span>
+          <span class="ds-x">${satz}</span>
+          ${a.treiber.length?`<span class="ds-tr">Aufwandstreiber: ${a.treiber.join(' · ')}</span>`:''}
+          ${a.stufe!=='na'&&a.bekannt<4?`<span class="ds-cov">Aus ${a.bekannt} von 4 Angaben — die übrigen stehen nicht in der Bekanntmachung.</span>`:''}
+        </div>`;})()}
+
+      ${(()=>{ const a=l.aufwand; if(!a) return '';
+        const z=[['Bietungsbürgschaft',a.buergschaft],['Bindefrist',a.bindefrist],
+                 ['Angebotsabgabe',a.eabgabe],['Lebensläufe gefordert',a.lebenslauf]];
+        return `<div class="aufl">${z.map(([k,v])=>`<div class="auf-r">
+          <span class="auf-k">${k}</span>
+          <span class="auf-v ${v==null?'unk':''}">${v==null?'nicht angegeben':v}</span>
+        </div>`).join('')}</div>`;})()}
+      ${(()=>{ const lue = bieterLuecke(l); if(!lue) return '';
+        return `<div class="score-caveat">
+          <span class="pdot pdot-schaetz"></span>
+          <span>${lue.lang} Die Bewertung stützt sich auf Vertragsart, Rechtsrahmen und Branche
+          und ist entsprechend gröber als bei Vergaben mit bekannter Bieterzahl.</span>
+        </div>`;})()}
       <div class="score-note">
         <span class="sn-label">Konkurrenz zuletzt</span>
         <span class="sn-val">${l.konk.src==='na'||l.konk.src==='unbekannt'
@@ -1799,6 +3124,31 @@ function renderAnalyse(l){
     </section>
 
     ${l.hasCmp ? `
+    ${(()=>{
+      const z = l.zuschlag;
+      if(!z || !z.length) return `<section class="sec" id="an-zuschlag" data-sec="zuschlag">
+        <h4>Zuschlagskriterien</h4>
+        <div class="note-box"><b>Nicht veröffentlicht.</b> Bei knapp jeder fünften Ausschreibung
+        fehlen die Kriterien in der Bekanntmachung — sie stehen dann nur in den Vergabeunterlagen.</div>
+      </section>`;
+      const ohneGew = z.some(x=>x.pct==null);
+      const preis = (z.find(x=>x.art==='preis')||{}).pct;
+      const deutung = ohneGew
+        ? 'Wir wissen, worauf bewertet wird, aber nicht mit welchem Gewicht — das steht nur in den Vergabeunterlagen.'
+        : preis===100 ? 'Reiner Preiswettbewerb. Das günstigste zulässige Angebot gewinnt — Konzeptarbeit zahlt sich hier nicht aus.'
+        : preis!=null && preis<=50 ? `Der Preis entscheidet nur zu ${preis} %. Über die restlichen ${100-preis} % könnt ihr euch mit Konzept und Referenzen absetzen.`
+        : `Der Preis wiegt ${preis} %. Konzeptarbeit hilft, den Ausschlag gibt aber die Kalkulation.`;
+      return `<section class="sec" id="an-zuschlag" data-sec="zuschlag">
+        <h4>Zuschlagskriterien</h4>
+        ${ohneGew?'':`<div class="zbar">${z.map(x=>
+          `<i class="zseg z-${x.art}" style="width:${x.pct}%" title="${x.label}: ${x.pct} %"></i>`).join('')}</div>`}
+        <div class="zlist">${z.map(x=>`<span class="zitem">
+          <i class="zdot z-${x.art}"></i>${x.label}
+          <b>${x.pct!=null?x.pct+' %':'<span class="v-unk">ohne Angabe</span>'}</b></span>`).join('')}</div>
+        <p class="zdeut">${deutung}</p>
+      </section>`;
+    })()}
+
     <section class="sec" id="an-vergleich" data-sec="vergleich">
       <h4>Direktvergleich <span class="cov">Anteile nach Anzahl Zuschlägen, nicht nach Volumen</span></h4>
       <table class="cmp">
@@ -1825,6 +3175,18 @@ function renderAnalyse(l){
     <section class="sec" id="an-anforderungen" data-sec="anforderungen">
       <h4>Anforderungs-Check</h4>
       <div class="reqs">
+        ${(()=>{ const r = l.rahmen && RAHMEN_NACHWEIS[l.rahmen]; if(!r) return '';
+          const hab = (angaben.nachweise||[]).some(x=>
+            x.toLowerCase().includes('präqualifikation') && (l.rahmen==='vob'?x.toLowerCase().includes('bau'):true));
+          const hart = l.rahmen==='vob';
+          return `<div class="req req-rahmen">
+            <span class="mk ${hab?'y':hart?'n':'q'}">${hab?'&#10003;':hart?'&#10007;':'?'}</span>
+            <span class="code">${RAHMEN[l.rahmen].kurz}</span>
+            <span class="lbl">${r.n}</span>
+            <span class="st">${hab?'In eurem Profil hinterlegt'
+              : hart?'Fehlt in eurem Profil — ohne diesen Nachweis kein Angebot'
+              : 'Nicht hinterlegt — hier meist nachreichbar'}</span>
+          </div>`;})()}
         <div class="req"><span class="mk y">&#10003;</span><span class="code">${l.cpv}</span><span class="lbl">${l.cpvLabel}</span><span class="st">In deinem Profil</span></div>
         <div class="req"><span class="mk y">&#10003;</span><span class="code">72310</span><span class="lbl">Datenverarbeitung</span><span class="st">Über CPV-Klasse abgedeckt</span></div>
         <div class="req"><span class="mk n">&#10007;</span><span class="code">48440</span><span class="lbl">Finanz- und Rechnungswesensoftware</span><span class="st">Nicht in deinem Profil</span></div>
@@ -1878,7 +3240,10 @@ function renderAnalyse(l){
       <div class="contact">
         <div class="ct-row"><span class="ct-k">Ansprechpartner</span><span class="ct-v">${l.buyer} · Referat Z 3</span></div>
         <div class="ct-row"><span class="ct-k">E-Mail</span><span class="ct-v"><a class="tedlink" href="mailto:vergabe@${l.buyerShort.toLowerCase().replace(/[^a-z]/g,'')}.bund.de">vergabe@${l.buyerShort.toLowerCase().replace(/[^a-z]/g,'')}.bund.de</a></span></div>
-        <div class="ct-row"><span class="ct-k">Frist für Rückfragen</span><span class="ct-v">${l.tage!=null?val((l.tage-7)+' Tage','schaetz','Übliche Rückfragefrist endet meist eine Woche vor Angebotsschluss.'):'—'}</span></div>
+        <div class="ct-row"><span class="ct-k">Frist für Rückfragen</span><span class="ct-v">${
+          l.aufwand&&l.aufwand.fragefrist ? val('noch '+l.aufwand.fragefrist,'echt','Aus der Bekanntmachung — nicht geschätzt.')
+          : l.tage!=null ? val((l.tage-7)+' Tage','schaetz','Nicht veröffentlicht. Übliche Rückfragefrist endet eine Woche vor Angebotsschluss.')
+          : '—'}</span></div>
         <p class="ct-note">Wer früh Rückfragen stellt, prägt oft die Leistungsbeschreibung mit. Kontakt aufnehmen, bevor die Frist läuft.</p>
       </div>
     </section>
@@ -2098,7 +3463,7 @@ let buyerDemo = 'dbnetz';
 
 function renderBuyer(l){
   const free = document.body.dataset.state==='limit';
-  const view = document.body.dataset.view;   // angriff | verteidigung
+  const view = istEigen(l) ? 'verteidigung' : 'angriff';   // Sicht folgt dem Lead, nicht einem Modus
   const d = BUYERS[buyerDemo];
 
   const sparse = '<span class="v-sparse" title="Zu wenige Vergaben für eine belastbare Kennzahl">zu wenig Daten</span>';
@@ -2168,7 +3533,7 @@ function renderBuyer(l){
                 const cls = m.own?'own' : m.rest?'rest' : 'g'+i;
                 const el=`<circle class="dseg ${cls}" cx="70" cy="70" r="${R}" fill="none" stroke-width="17"
                   stroke-dasharray="${len.toFixed(2)} ${(C-len).toFixed(2)}" stroke-dashoffset="${(-off).toFixed(2)}"
-                  transform="rotate(-90 70 70)"><title>${m.label}: ${m.pct} %</title></circle>`;
+                  transform="rotate(-90 70 70)"><title>goVisor · Lead Explorer v4.4</title></circle>`;
                 off+=len; return el;
               }).join('');
               const own = d.mix.find(m=>m.own);
@@ -2313,6 +3678,20 @@ document.addEventListener('click', e => {
     visible().forEach(l=>{ if(l.status==='ungesichtet') l.status='gesichtet'; });
     renderTable(); return;
   }
+  if(e.target.closest('[data-dlgclose]')) document.getElementById('netzdlg')?.classList.remove('on');
+
+  const ni = e.target.closest('[data-netzint]');
+  if(ni){ e.stopPropagation(); const id=ni.dataset.netzint;
+    const raus = netzInteresse.has(id);
+    const frei = document.body.dataset.state==='limit';
+    if(!raus && frei && netzInteresse.size>=NETZ_FREI_MAX){ netzLimitDialog(); return; }
+    raus ? netzInteresse.delete(id) : netzInteresse.add(id);
+    const l = LEADS.find(x=>x.id===id);
+    toast(raus ? ((l && l.netzPartner) ? 'Meldung zurückgezogen — die gefundene Ergänzung entfällt.' : 'Meldung zurückgezogen.')
+               : (l && l.netzPartner) ? 'Interesse bekundet — eine Firma ergänzt euch bereits.'
+               : 'Interesse bekundet. Wir melden uns, sobald jemand andere Lose abdeckt als ihr.');
+    renderTable(); if(activeId===id) renderDetail(); return; }
+
   const star = e.target.closest('[data-star]');
   if(star){ e.stopPropagation(); const l=LEADS.find(x=>x.id===star.dataset.star); l.merk=l.merk?null:'manuell'; renderTable(); if(activeId)renderDetail(); return; }
 
@@ -2400,7 +3779,12 @@ document.addEventListener('click', e => {
 
   const tab = e.target.closest('[data-tab]');
   const ol = e.target.closest('[data-openlead]');
-  if(ol){ activeId = ol.dataset.openlead; activeTab='uebersicht'; document.body.dataset.mode='read'; renderTable(); renderDetail(); return; }
+  if(ol){ const anker = ol.dataset.anchor;
+    document.body.removeAttribute('data-area');
+    document.querySelectorAll('.viewbtn').forEach(b=>b.removeAttribute('aria-current'));
+    document.querySelector('[data-setview="angriff"]')?.setAttribute('aria-current','true');
+    activeId = ol.dataset.openlead; activeTab='uebersicht'; document.body.dataset.mode='read';
+    renderTable(); renderDetail(); return; }
 
   if(e.target.closest('[data-markt]')){
     document.body.dataset.area='markt';
@@ -2411,6 +3795,73 @@ document.addEventListener('click', e => {
   }
   const rg = e.target.closest('[data-region]');
   if(rg){ aktiveRegion = rg.dataset.region; $('#marktview').innerHTML = renderMarkt(); return; }
+
+  const gm = e.target.closest('[data-grp]');
+  if(gm){ const k=gm.dataset.grp;
+    offeneGruppen.has(k)?offeneGruppen.delete(k):offeneGruppen.add(k);
+    renderDetail(); return; }
+
+  const mk = e.target.closest('[data-mark]');
+  if(mk){
+    const w = mk.dataset.mark;
+    const body = document.querySelector('.rt-body'); if(!body) return;
+    document.querySelectorAll('.rts-tag').forEach(t=>t.classList.toggle('on', t===mk));
+    body.querySelectorAll('mark.hit').forEach(m=>m.replaceWith(m.textContent));
+    const kern = w.split(/[\s(]/)[0].replace(/[^\wäöüßÄÖÜ-]/g,'');
+    if(kern.length>2){
+      const re = new RegExp('('+kern.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\w*)','ig');
+      body.querySelectorAll('p').forEach(p=>{ p.innerHTML = p.textContent.replace(re,'<mark class="hit">$1</mark>'); });
+    }
+    const first = body.querySelector('mark.hit');
+    if(first) first.scrollIntoView({behavior:'smooth', block:'center'});
+    return;
+  }
+
+  if(e.target.closest('[data-profil]')){
+    document.body.dataset.area='profil'; activeId=null;
+    document.querySelectorAll('.viewbtn').forEach(b=>b.removeAttribute('aria-current'));
+    e.target.closest('[data-profil]').setAttribute('aria-current','true');
+    renderProfil(); return;
+  }
+  if(e.target.closest('[data-partner]')){
+    angaben.partner = !angaben.partner;
+    if(!angaben.partner){ netzInteresse.clear(); netzFreigabe.clear(); }
+    if(document.body.dataset.area==='profil') renderProfil();
+    renderTable(); renderDetail(); return; }
+  const nf = e.target.closest('[data-netzfrei]');
+  if(nf){ netzFreigabe.add(nf.dataset.netzfrei); renderDetail(); return; }
+  if(e.target.closest('[data-netz]') && e.target.closest('.viewbtn')){
+    document.body.removeAttribute('data-area');
+    filters.netz = !filters.netz; filters.gemerkt=false; filters.kandidaten=false; activeId=null;
+    COLS.find(c=>c.key==='netz').on = filters.netz;
+    document.querySelectorAll('.viewbtn').forEach(b=>b.removeAttribute('aria-current'));
+    if(filters.netz) e.target.closest('[data-netz]').setAttribute('aria-current','true');
+    else document.querySelector('[data-setview="angriff"]')?.setAttribute('aria-current','true');
+    renderHead(); renderTable(); renderDetail(); return; }
+  if(e.target.closest('[data-tonetz]')){
+    document.body.removeAttribute('data-area');
+    filters.netz = true; COLS.find(c=>c.key==='netz').on = true;
+    activeId=null;
+    document.querySelectorAll('.viewbtn').forEach(b=>b.removeAttribute('aria-current'));
+    document.querySelector('[data-netz]')?.setAttribute('aria-current','true');
+    renderHead(); renderTable(); renderDetail(); return; }
+
+  const aa = e.target.closest('[data-angadd]');
+  if(aa){ const k=aa.dataset.angadd; offenerPicker = offenerPicker===k?null:k; renderProfil(); return; }
+  const as = e.target.closest('[data-angset]');
+  if(as){ const [k,v]=as.dataset.angset.split(':');
+    if(!angaben[k].includes(v)) angaben[k].push(v);
+    offenerPicker=null; renderProfil(); return; }
+  const ar = e.target.closest('[data-angrm]');
+  if(ar){ const [k,v]=ar.dataset.angrm.split(':');
+    angaben[k]=angaben[k].filter(x=>x!==v); renderProfil(); return; }
+  if(!e.target.closest('.ang-add') && offenerPicker){ offenerPicker=null; renderProfil(); }
+
+  const pt = e.target.closest('[data-ptab]');
+  if(pt){ potTab = pt.dataset.ptab; renderProfil(); return; }
+
+  const ps = e.target.closest('[data-pstufe]');
+  if(ps){ profilStufe=ps.dataset.pstufe; renderProfil(); return; }
 
   const bl = e.target.closest('[data-buyerleads]');
   if(bl){
@@ -2426,8 +3877,9 @@ document.addEventListener('click', e => {
     editBestand = eb.dataset.editbestand==='an';
     filters.kandidaten = false; activeId = null;
     COLS.find(c=>c.key==='own').on = editBestand;
-    if(editBestand){ document.body.dataset.view='verteidigung';
-      document.querySelectorAll('[data-setview]').forEach(b=>b.setAttribute('aria-current', b.dataset.setview==='verteidigung')); }
+    if(editBestand){ document.body.removeAttribute('data-area');
+      document.querySelectorAll('.viewbtn').forEach(b=>b.removeAttribute('aria-current'));
+      document.querySelector('[data-setview="angriff"]')?.setAttribute('aria-current','true'); }
     renderHead(); renderTable(); renderDetail(); return;
   }
 
@@ -2440,10 +3892,7 @@ document.addEventListener('click', e => {
     const lead = LEADS.find(x=>x.id===id);
     if(lead){
       lead.eigenBestaetigt = ans==='ja';
-      if(ans==='ja'){ lead.eigen = true;
-        if(!editBestand){ document.body.dataset.view='verteidigung';
-          document.querySelectorAll('[data-setview]').forEach(b=>b.setAttribute('aria-current', b.dataset.setview==='verteidigung'));
-          filters.kandidaten = false; } }
+      if(ans==='ja'){ lead.eigen = true; if(!editBestand) filters.kandidaten = false; }
       else lead.eigen = false;
       lead.log = lead.log||[];
       lead.log.push({kind:'status', text: ans==='ja'?'als eigener Vertrag bestätigt':'als fremder Vertrag markiert', who:'DK', ts:'heute'});
@@ -2457,7 +3906,14 @@ document.addEventListener('click', e => {
 
   if(e.target.closest('[data-upgrade]')){ document.body.dataset.state='normal'; $('#planLbl').textContent='Pro'; $('#planbadge').classList.remove('free'); renderTable(); renderDetail(); return; }
 
-  if(tab){ activeTab=tab.dataset.tab; if(activeTab==='analyse'&&document.body.dataset.state!=='limit'){const l=LEADS.find(x=>x.id===activeId); l.status='analysiert'; l.seen='ANALYSIERT'; renderTable();} renderDetail(); return; }
+  if(tab){
+    const anker = tab.dataset.anchor;
+    activeTab=tab.dataset.tab; if(activeTab==='analyse'&&document.body.dataset.state!=='limit'){const l=LEADS.find(x=>x.id===activeId); l.status='analysiert'; l.seen='ANALYSIERT'; renderTable();} renderDetail();
+    if(anker){ requestAnimationFrame(()=>{
+      const sec = document.getElementById('an-'+anker);
+      if(sec) sec.scrollIntoView({behavior:'smooth', block:'start'});
+    }); }
+    return; }
 
   if(e.target.closest('[data-expand]')){
     $('#main').style.gridTemplateRows = '';
@@ -2478,7 +3934,9 @@ document.addEventListener('click', e => {
   if(chip){ const k=chip.dataset.filter; filters[k]=!filters[k]; chip.setAttribute('aria-pressed',filters[k]); renderTable(); return; }
 
   const v = e.target.closest('[data-setview]');
-  if(v){ document.body.removeAttribute('data-area'); document.body.dataset.view=v.dataset.setview; document.querySelectorAll('[data-setview]').forEach(b=>b.setAttribute('aria-current',b===v)); renderTable(); if(activeId)renderDetail(); return; }
+  if(v){ document.body.removeAttribute('data-area');
+    filters.netz=false; COLS.find(c=>c.key==='netz').on=false;
+    renderHead(); document.body.dataset.view=v.dataset.setview; document.querySelectorAll('[data-setview]').forEach(b=>b.setAttribute('aria-current',b===v)); renderTable(); if(activeId)renderDetail(); return; }
   if(e.target.closest('[data-merk]') && e.target.closest('.viewbtn')){
     document.body.removeAttribute('data-area');
     filters.gemerkt = !filters.gemerkt;
@@ -2535,6 +3993,8 @@ document.addEventListener('keydown', e => {
 })();
 
 document.addEventListener('input', e => {
+  const ai = e.target.closest('[data-ang]');
+  if(ai){ angaben[ai.dataset.ang] = ai.value; return; }
   if(e.target.id==='q'){ updateSuggest(); return; }
   if(e.target.id==='regq'){
     const q=e.target.value.toLowerCase();

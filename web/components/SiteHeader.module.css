@@ -1,0 +1,16 @@
+.bar{
+  position:sticky;top:0;z-index:40;
+  background:color-mix(in srgb, var(--surface) 88%, transparent);
+  backdrop-filter:saturate(1.2) blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.inner{display:flex;align-items:center;justify-content:space-between;height:56px;gap:var(--s4)}
+.nav{display:flex;align-items:center;gap:var(--s4)}
+.link{font-size:var(--t-body);font-weight:500;color:var(--ink-700);padding:6px 2px;transition:.14s}
+.link:hover{color:var(--ink-900)}
+.sep{width:1px;height:20px;background:var(--line);margin:0 var(--s1)}
+
+@media (max-width:640px){
+  .link:not(:last-child){display:none}
+  .sep{display:none}
+}

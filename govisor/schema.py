@@ -48,6 +48,24 @@ def publication_number_from_ojs(ojs: str | None) -> str | None:
     return f"{int(number)}-{year}"
 
 
+_NID_RE = re.compile(r"^0*(\d+)[-_](\d{4})$")
+
+
+def normalize_notice_id(notice_id: str) -> str:
+    """Kanonische ``<number>_<year>``-Form (führende Nullen weg, Trenner ``_``).
+
+    Root-Cause des notice_id-Waisen-Bugs: dieselbe TED-Notice kommt im Monats-Archiv als
+    ``00450024_2026`` (zero-padded, Unterstrich) und im Live-Feed als ``450024-2026``
+    (Bindestrich). Beim Monatswechsel ersetzt das Archiv den Live-Stand → Gold-Zeilen auf
+    der Bindestrich-ID verwaisen. Diese Funktion bildet BEIDE auf ``450024_2026`` ab, damit
+    Archiv und Live dieselbe ID schreiben (Update statt Waise). Idempotent; unbekannte Formen
+    (kein ``<zahl><trenner><jahr>``) bleiben unverändert. Kompatibel mit
+    ``publication_number_from_id`` (partitioniert auf ``_``, macht ``int(number)``).
+    """
+    m = _NID_RE.match(notice_id)
+    return f"{m.group(1)}_{m.group(2)}" if m else notice_id
+
+
 def publication_number_from_id(notice_id: str) -> str | None:
     """Bulk packages name files ``<number>_<year>.xml``, zero-padded."""
     if "_" not in notice_id:

@@ -52,7 +52,7 @@ def build_month(cfg: Config, country: str, key: str, force: bool = False) -> int
             fh = tf.extractfile(member)
             if fh is None:
                 continue
-            notice_id = Path(member.name).stem
+            notice_id = schema.normalize_notice_id(Path(member.name).stem)
             raw = fh.read()
             try:
                 raw.decode("utf-8")
@@ -125,7 +125,7 @@ def build_month_doe(cfg: Config, key: str, force: bool = False, country: str = "
             raw = zf.read(name)
             if b"RegulatoryDomain>de-" not in raw:     # nur unterschwellig (kein TED-Overlap)
                 continue
-            notice_id = re.sub(r"-\d+$", "", Path(name).stem)   # Versions-Suffix ab
+            notice_id = schema.normalize_notice_id(re.sub(r"-\d+$", "", Path(name).stem))  # Versions-Suffix ab, dann kanonisch
             vm = _DOE_VERSION.search(raw)
             version = int(vm.group(1)) if vm else 0
             prev = by_id.get(notice_id)

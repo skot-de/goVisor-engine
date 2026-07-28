@@ -1,0 +1,203 @@
+/* Vergabeblick (Vergabestellen-Seite) — eigene Sicht, Bestandsdesign-Tokens.
+   Sachlicher, ruhiger als die Anbieter-Jagd: die Stelle plant, sie jagt nicht. */
+
+.vb-wrap { max-width: 1000px; margin: 0 auto; padding: 32px 24px 80px; }
+.vb-load { padding: 60px 24px; color: var(--ink-500); font-size: 14px; text-align: center; }
+
+/* ── Onboarding ── */
+.vb-onboard { max-width: 620px; margin: 40px auto 0; }
+.vb-onboard h2 { font-size: 26px; font-weight: 750; letter-spacing: -.02em; margin: 0 0 8px; }
+.vb-lead { color: var(--ink-500); font-size: 15px; line-height: 1.55; margin: 0 0 22px; max-width: 56ch; }
+.vb-search, .vb-onboard input.vb-search {
+  width: 100%; font-size: 15px; padding: 12px 16px; border: 1px solid var(--line-strong, var(--line));
+  border-radius: var(--r); background: var(--surface); color: var(--ink-900); }
+.vb-search:focus { outline: 2px solid var(--signal); outline-offset: 1px; }
+.vb-picklist { display: flex; flex-direction: column; gap: 1px; margin-top: 10px;
+  background: var(--line); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.vb-pick { display: flex; flex-direction: column; gap: 2px; text-align: left; padding: 12px 16px;
+  background: var(--surface); transition: background .1s; }
+.vb-pick:hover { background: var(--surface-2); }
+.vb-pick-n { font-size: 14px; font-weight: 600; color: var(--ink-900); }
+.vb-pick-m { font-size: 12px; color: var(--ink-500); }
+.vb-frag { color: var(--flag); }
+.vb-empty { padding: 16px; font-size: 13px; color: var(--ink-500); background: var(--surface); }
+
+/* ── Kopf + Nav ── */
+.vb-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
+.vb-eyebrow { font-family: var(--mono, monospace); font-size: 11px; text-transform: uppercase;
+  letter-spacing: .08em; color: var(--signal); font-weight: 600; }
+.vb-head h2 { font-size: 22px; font-weight: 720; letter-spacing: -.02em; margin: 4px 0 0; }
+.vb-switch { font-size: 12.5px; font-weight: 600; color: var(--ink-500); padding: 7px 12px;
+  border: 1px solid var(--line-strong, var(--line)); border-radius: var(--r); flex: none; }
+.vb-switch:hover { color: var(--ink-900); background: var(--surface-2); }
+
+.vb-nav { display: flex; gap: 2px; border-bottom: 1px solid var(--line); margin-bottom: 22px; overflow-x: auto; }
+.vb-nav-i { font-size: 13px; font-weight: 600; color: var(--ink-500); padding: 9px 14px;
+  border-bottom: 2px solid transparent; white-space: nowrap; margin-bottom: -1px; }
+.vb-nav-i.on { color: var(--signal-deep, var(--signal)); border-bottom-color: var(--signal); }
+.vb-nav-i:not(.on):hover { color: var(--ink-900); }
+
+.vb-frage { color: var(--ink-500); font-size: 13.5px; margin: 0 0 18px; }
+
+/* ── Dashboard-Kacheln ── */
+.vb-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+.vb-tile { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r);
+  padding: 16px 18px; position: relative; }
+.vb-tile.risk { border-color: var(--risk); background: var(--risk-wash); }
+.vb-t-num { display: block; font-family: var(--mono, monospace); font-size: 27px; font-weight: 600;
+  line-height: 1; color: var(--ink-900); font-variant-numeric: tabular-nums; }
+.vb-tile.risk .vb-t-num { color: var(--risk); }
+.vb-t-num.thin { color: var(--ink-400); }
+.vb-t-lbl { display: block; font-size: 13px; font-weight: 600; color: var(--ink-700); margin-top: 9px; }
+.vb-t-sub { display: block; font-size: 11.5px; color: var(--ink-500); margin-top: 3px; }
+
+/* ── Top-Anbieter ── */
+.vb-top { margin-top: 28px; }
+.vb-top h4 { font-size: 15px; font-weight: 700; margin: 0 0 10px; }
+.vb-toplist { display: flex; flex-direction: column; gap: 1px; background: var(--line);
+  border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.vb-toprow { display: grid; grid-template-columns: 40px 1fr auto; gap: 12px; align-items: center;
+  background: var(--surface); padding: 10px 14px; }
+.vb-top-r { font-family: var(--mono, monospace); font-size: 12px; color: var(--ink-400); font-weight: 600; }
+.vb-top-n { font-size: 13px; color: var(--ink-900); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.vb-top-w { font-family: var(--mono, monospace); font-size: 12px; color: var(--ink-500); white-space: nowrap; }
+.vb-note { font-size: 11.5px; color: var(--ink-400); line-height: 1.5; margin: 10px 0 0; }
+
+/* ── Kommende Sektionen ── */
+.vb-soon { background: var(--surface-2); border: 1px dashed var(--line-strong, var(--line));
+  border-radius: var(--r); padding: 28px; text-align: center; }
+.vb-soon h4 { font-size: 16px; font-weight: 700; margin: 0 0 4px; }
+
+/* ── Bereich A — Markterkundung ── */
+.vb-h { font-size: 15px; font-weight: 700; margin: 28px 0 10px; }
+.vb-vital { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--signal);
+  border-radius: var(--r); padding: 16px 18px; margin-bottom: 8px; }
+.vb-vital.risk { border-left-color: var(--risk); background: var(--risk-wash); }
+.vb-vital-k { font-family: var(--mono, monospace); font-size: 11px; text-transform: uppercase;
+  letter-spacing: .06em; color: var(--ink-400); }
+.vb-vital p { margin: 6px 0 0; font-size: 14px; line-height: 1.5; color: var(--ink-900); }
+.vb-vital p.vb-note { font-size: 12px; color: var(--ink-500); }
+
+/* Felder-Ampel */
+.vb-felder { display: flex; flex-direction: column; gap: 1px; background: var(--line);
+  border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.vb-feld { display: grid; grid-template-columns: 14px 1fr auto auto auto; gap: 14px; align-items: center;
+  background: var(--surface); padding: 10px 14px; font-size: 13px; }
+.vb-amp { width: 10px; height: 10px; border-radius: 50%; background: var(--ink-300); flex: none; }
+.vb-amp.risk { background: var(--risk); } .vb-amp.flag { background: var(--flag); }
+.vb-amp.ok { background: var(--signal); }
+.vb-feld-l { color: var(--ink-900); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.vb-feld-b { font-family: var(--mono, monospace); font-size: 12px; color: var(--ink-700); white-space: nowrap; }
+.vb-feld-v { font-size: 12px; color: var(--ink-500); white-space: nowrap; }
+.vb-feld-t { font-family: var(--mono, monospace); font-size: 12px; color: var(--ink-400); white-space: nowrap; min-width: 42px; text-align: right; }
+
+/* Anbieter-Landschaft */
+.vb-anb { display: flex; flex-direction: column; gap: 1px; background: var(--line);
+  border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.vb-anb-h, .vb-anb-r { display: grid; grid-template-columns: 1fr 84px 70px 110px 60px; gap: 12px; align-items: center;
+  background: var(--surface); padding: 9px 14px; }
+.vb-anb-h { background: var(--surface-2); font-size: 11px; text-transform: uppercase; letter-spacing: .04em;
+  color: var(--ink-400); font-weight: 600; }
+.vb-anb-h span:not(:first-child), .vb-anb-r span:not(.vb-anb-n) { text-align: right; font-variant-numeric: tabular-nums; }
+.vb-anb-r { font-size: 13px; }
+.vb-anb-r.mine { background: var(--signal-wash); }
+.vb-anb-n { color: var(--ink-900); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: flex; align-items: center; gap: 8px; }
+.vb-mine-tag { font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
+  color: var(--signal-deep, var(--signal)); background: var(--surface); border: 1px solid var(--signal);
+  padding: 1px 5px; border-radius: 100px; flex: none; }
+.vb-anb-w, .vb-anb-s, .vb-anb-v { font-family: var(--mono, monospace); font-size: 12px; color: var(--ink-700); }
+.vb-anb-t { font-family: var(--mono, monospace); font-size: 12px; }
+.vb-feld-t.up, .vb-anb-t.up { color: var(--signal); } .vb-feld-t.down, .vb-anb-t.down { color: var(--flag); }
+@media (max-width: 640px) {
+  .vb-anb-h, .vb-anb-r { grid-template-columns: 1fr 60px 50px; }
+  .vb-anb-h span:nth-child(4), .vb-anb-r span.vb-anb-v { display: none; }
+}
+
+/* ── Benchmark-Vergleich (Controlling / Pflichten) ── */
+.vb-bench { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r);
+  padding: 14px 18px; margin-bottom: 12px; }
+.vb-bench-h { font-size: 13px; font-weight: 600; color: var(--ink-900); margin-bottom: 10px; }
+.vb-bench-row { display: grid; grid-template-columns: 92px 1fr 92px; gap: 12px; align-items: center; margin-bottom: 6px; }
+.vb-bench-k { font-size: 12px; color: var(--ink-500); }
+.vb-bar { height: 9px; background: var(--surface-2); border-radius: 100px; overflow: hidden; }
+.vb-bar i { display: block; height: 100%; border-radius: 100px; background: var(--ink-300); }
+.vb-bar i.mine { background: var(--signal); }
+.vb-bar i.med { background: var(--ink-400); }
+.vb-bar i.warn { background: var(--flag); }
+.vb-bench-v { font-family: var(--mono, monospace); font-size: 13px; font-weight: 600; color: var(--ink-900);
+  text-align: right; font-variant-numeric: tabular-nums; }
+.vb-bench-v.warn { color: var(--flag); }
+.vb-bench .vb-note { margin-top: 8px; }
+
+/* ── B.1 Ausschreibungscheck ── */
+.vb-check-form { display: flex; flex-wrap: wrap; gap: 14px 20px; align-items: flex-end;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 16px 18px; margin-bottom: 16px; }
+.vb-check-form label { display: flex; flex-direction: column; gap: 5px; font-size: 12px; font-weight: 600; color: var(--ink-700); }
+.vb-check-form select { font-size: 13px; padding: 8px 10px; border: 1px solid var(--line-strong, var(--line));
+  border-radius: var(--r); background: var(--surface); color: var(--ink-900); min-width: 200px; }
+.vb-check-form label.vb-chk { flex-direction: row; align-items: center; gap: 7px; font-weight: 500; color: var(--ink-900); }
+.vb-check-form label.vb-chk input { width: 15px; height: 15px; accent-color: var(--signal); }
+.vb-check-empty { padding: 24px; text-align: center; font-size: 13px; color: var(--ink-500);
+  background: var(--surface-2); border: 1px dashed var(--line-strong, var(--line)); border-radius: var(--r); }
+.vb-check-sum { font-size: 14px; font-weight: 700; padding: 12px 16px; border-radius: var(--r); margin-bottom: 10px; }
+.vb-check-sum.ok { background: var(--signal-wash); color: var(--signal-deep, var(--signal)); }
+.vb-check-sum.warn { background: var(--flag-wash); color: var(--flag); }
+.vb-check-sum.risk { background: var(--risk-wash); color: var(--risk); }
+.vb-hint { display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; line-height: 1.5;
+  color: var(--ink-900); padding: 11px 14px; border-bottom: 1px solid var(--line); }
+.vb-hint:last-of-type { border-bottom: none; }
+.vb-hint-i { width: 8px; height: 8px; border-radius: 50%; flex: none; margin-top: 6px; }
+.vb-hint.ok .vb-hint-i { background: var(--signal); }
+.vb-hint.warn .vb-hint-i { background: var(--flag); }
+.vb-hint.risk .vb-hint-i { background: var(--risk); }
+
+/* Rollen-Umschalter zurück zur Anbieter-Sicht */
+.vb-head-actions { display: flex; align-items: center; gap: 10px; flex: none; }
+.vb-toswitch { font-size: 12px; font-weight: 600; color: var(--signal); text-decoration: none;
+  padding: 7px 12px; border: 1px solid var(--signal); border-radius: 100px; white-space: nowrap; transition: .12s; }
+.vb-toswitch:hover { background: var(--signal); color: #fff; }
+.vb-toswitch-top { position: absolute; top: 20px; right: 24px; }
+
+/* #21 Eignungs-Angemessenheit */
+.vb-eignung { margin-top: 10px; padding: 13px 16px; border: 1px solid var(--line);
+  border-left: 3px solid var(--signal); border-radius: 0 var(--r) var(--r) 0; background: var(--surface); }
+.vb-eignung.warn { border-left-color: var(--risk); background: var(--risk-wash); }
+.vb-eig-h { font-size: 13px; font-weight: 700; color: var(--ink-900); margin-bottom: 5px; }
+.vb-eignung p { font-size: 13.5px; line-height: 1.5; color: var(--ink-900); margin: 4px 0 0; }
+.vb-eignung p.vb-note { font-size: 12px; color: var(--ink-500); }
+
+/* #20 Wert-Plausibilität */
+.vb-wert { margin-top: 10px; padding: 13px 16px; border: 1px solid var(--line);
+  border-left: 3px solid var(--signal); border-radius: 0 var(--r) var(--r) 0; background: var(--surface); }
+.vb-wert.warn { border-left-color: var(--flag); background: var(--flag-wash); }
+.vb-wert-rows { display: flex; flex-direction: column; gap: 4px; margin: 6px 0; }
+.vb-wert-rows > div { display: flex; justify-content: space-between; gap: 12px; font-size: 13.5px; }
+.vb-wert-rows span { color: var(--ink-500); }
+.vb-wert-rows b { font-family: var(--mono, monospace); color: var(--ink-900); }
+.vb-wert-rows i { font-style: normal; font-size: 11.5px; color: var(--ink-400); }
+.vb-wert p { font-size: 13px; line-height: 1.5; margin: 4px 0 0; color: var(--ink-900); }
+.vb-wert-warn { color: var(--flag); font-weight: 500; }
+.vb-wert p.vb-note { font-size: 11.5px; color: var(--ink-500); font-weight: 400; }
+
+/* B.2 Zuschnitt-Simulation — Bieterzahl-Prognose */
+.vb-proj { border: 1px solid var(--line); border-radius: var(--r); padding: 16px 18px; margin-bottom: 14px;
+  background: var(--signal-wash); }
+.vb-proj.risk { background: var(--risk-wash); }
+.vb-proj-nums { display: flex; align-items: center; gap: 20px; }
+.vb-proj-cell { display: flex; flex-direction: column; gap: 2px; }
+.vb-proj-n { font-family: var(--mono, monospace); font-size: 30px; font-weight: 600; line-height: 1;
+  color: var(--signal-deep, var(--signal)); }
+.vb-proj.risk .vb-proj-n { color: var(--risk); }
+.vb-proj-n.muted { color: var(--ink-400); font-size: 24px; }
+.vb-proj-l { font-size: 11.5px; color: var(--ink-500); }
+.vb-proj-vs { font-size: 18px; color: var(--ink-400); }
+.vb-proj .vb-note { margin-top: 8px; }
+
+/* C.4 Vergabe-Vorschau (Auslauftermine) */
+.vb-vorschau { display: flex; flex-direction: column; gap: 1px; background: var(--line);
+  border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.vb-vor-row { display: grid; grid-template-columns: 100px 1fr; gap: 12px; align-items: center;
+  background: var(--surface); padding: 10px 14px; }
+.vb-vor-m { font-family: var(--mono, monospace); font-size: 12px; font-weight: 600; color: var(--ink-500); white-space: nowrap; }
+.vb-vor-m.soon { color: var(--flag); }
+.vb-vor-t { font-size: 13px; color: var(--ink-900); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

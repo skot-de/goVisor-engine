@@ -11,6 +11,8 @@ thematischer Ordnung. Jede Stufe ist für sich auslieferbar.
 
 ## Stufe 1 · Was in der Liste sofort wirkt
 
+> **Stand 2026-07-23: 1.1–1.4 gebaut und gemessen** (s. `CLAUDE.md`). Offen: 1.5.
+
 Fünf Eingriffe, alle gemessen, alle ein bis zwei Spalten. Zusammen etwa zwei Arbeitstage.
 
 | # | Was | Abdeckung | Warum zuerst |

@@ -1,0 +1,95 @@
+# goVisor — Implementierungsstand der Plattform
+
+**Stand:** 2026-07-27
+**Perspektive:** Anbieter-Sicht (Vergabestellen-Seite = Phase 3–4)
+**Reifegrad:** Lokal-first im Prototyp gebaut und im Browser verifiziert — noch **nicht deployed** und **noch nicht an echten Nutzern getestet**.
+
+> Prinzip: „fertig" heißt gebaut + gegengeprüft, nicht „müsste funktionieren". Gemessen, nicht behauptet.
+
+**Bilanz:** 12 Features fertig & verifiziert · 2 teilweise (#15, #16) · 3 offene Blöcke bis Launch.
+
+---
+
+## Schicht 1 — Datenkern (Gold-Layer) · vollständig
+
+Medallion Bronze→Silber→Gold über **1.832.998 DE-Notices, 2004–2026 lückenlos, 0 Dubletten**, gegen die TED-API verifiziert. Rollen-agnostisch — dieselben Tabellen tragen später beide Marktseiten.
+
+| Baustein | Status | Inhalt |
+|---|---|---|
+| Lead-Master & Export | ✅ fertig | `lead_export`, `lead_detail`; Auslauf-Radar + prospektive Leads (F01/F02), Herkunfts-Flags durchgängig |
+| Los-Ebene | ✅ fertig (neu) | `lead_lot` mit `lot_cpv_code` (99,6 %) — Fundament der per-Los-Relevanz |
+| Fristen & Laufzeiten | ✅ fertig | `lead_deadline` (Angebotsfrist, echt/geschätzt), `lead_duration` (Vertragsende) |
+| Nachfolge & Incumbent | ✅ fertig | 100.071 verifizierte Nachfolgen, Retention 28,3 %, `incumbent_tenure`, `head_to_head` |
+| Entity-Auflösung & Gruppen | ✅ fertig | `entity_identity` (302k Identitäten), `dim_company_group`, gruppen-bewusstes Winner-Matching. Namens-Resolution gemessen ausgereizt |
+| Markt-Intelligenz | ✅ fertig | `contractor_stats`, `market_opportunity` (511 Segmente), `retender_signal`, `cpv_adjacency` |
+| Wert, Bänder & Pricing | ✅ fertig | `value_band_effektiv`, `value_anchor` (Billing-Wächter), `award_tender_link` (Attribution), 7-Band-Flat-Pricing |
+| Geografie & Radius | ✅ fertig | `dim_plz`, `lead_geo` (99,8 %), `dim_nuts` — Umkreis- & Regionssuche, zwei Achsen |
+| Strategie-Aggregate | ✅ fertig | `strategie.json` — vorberechnet je Branche (Pipeline, Felder, Vergabestellen, Wettbewerb, Bindung) |
+
+---
+
+## Schicht 2 — Logik (rollen-agnostisch) · ~80 % geteilt
+
+Relevanz & Analyse als `relevance(entität, ausschreibung)` — nicht an den eingeloggten Anbieter fest verdrahtet. Bereit für die zweite Marktseite.
+
+| Baustein | Status | Inhalt |
+|---|---|---|
+| Profil- & Match-Engine | ✅ fertig | `matchLead` mit erklärbarer Passung (Feld/Region/Volumen), K.-o.-Kriterien, Bund-Erkennung |
+| Per-Los-Relevanz | ✅ fertig (neu) | `scoreLeadPerLot` — Ausschreibung erbt die Relevanz ihres besten Loses |
+| Angriff / Verteidigung | ✅ fertig | `istEigen` real verdrahtet — Verdrängungs-Risiko vs. Wechsel-Chance je Lead |
+| Sprachschicht | ✅ fertig (neu) | Export sprachneutral (nur Codes); Übersetzung im Frontend-Katalog `labels.js`. Zweite Sprache = zweiter Katalog |
+
+---
+
+## Schicht 3 — Frontend & Features (v1-Tickets)
+
+| # | Feature | Status | Anmerkung |
+|---|---|---|---|
+| #1 | Lead Explorer | ✅ fertig | Liste, Filter, Herkunfts-Spalten, Suche, Merkliste |
+| #2 | Personal-Fit | ✅ fertig | Firmenprofil → Relevanz; Bund-Käufer-Regel |
+| #3 | Direktvergleich Du ↔ Incumbent | ✅ fertig | Feld-Zuschläge, Marktanteil/Rang/Trend, Verträge beim Buyer |
+| #6 | Auth & Konto | ✅ fertig | Supabase-Auth, RLS, `profile_type` (rollen-agnostischer Anker, neu) |
+| #7 | Onboarding-Flow | ✅ fertig | Vier Schritte; Kasten-Padding korrigiert (neu) |
+| #8 | Analytics | ✅ fertig | Event-Layer verdrahtet · **PostHog-Transport = Stub** |
+| #9 | Alerts | ✅ fertig | DB + UI + Trigger-Logik · **E-Mail-Transport = Stub** |
+| #10 | Strategie | ✅ fertig | 8 Sektionen, echte Aggregate (Pipeline 8,27 Mrd €, Vergabestellen-Matrix) |
+| #11 | Treffergüte | ✅ fertig | Erklärbare Match-Güte, Erhebung im Bedarfsmoment |
+| #12 | Losebene | ✅ fertig (neu) | Per-Los-Relevanz, „passt über Los N" in Liste + Detail-Hervorhebung |
+| #13 | Vergabeunterlagen-Link | ✅ fertig (neu) | Wasserfall docs→Plattform→kein Link (behob toten Link); Quelle unterschieden |
+| #14 | Entity-Härtung | ✅ fertig (neu) | Backend + Konfidenz-Ehrlichkeit: unsicherer Incumbent ehrlich, statt „kein Amtsinhaber" |
+| #15 | Anforderungs-Check | ◑ teilweise | Zuschlags-**Gewichtung** + Basis (CPV/Rechtsrahmen) fertig · Weg-A-Restfelder offen · Weg B vertagt |
+| #16 | Verfahrenskalender | ◑ teilweise | Angebotsfrist mit Datum + Dringlichkeit im Detail (neu) · Kalenderseite + iCal offen |
+| #6b | Billing / Erfolgsprämie | ✅ fertig | DB + HITL-Freigabe + UI · **Stripe-Transport = Stub** |
+| #10s | Settings | ✅ fertig | Konto, Profil, Alert-Einstellungen, Datenexport, Löschung |
+
+---
+
+## In dieser Session geliefert (8 verifizierte Ergebnisse)
+
+l.eigen real verdrahtet · profile_type-Anker · Rahmenvertrag-Bewertungssignal · Label-Smell → sprachneutraler Export · #13 Unterlagen-Link · #16 Angebotsfrist + Dringlichkeit · #12 Per-Los-Relevanz · #14 Konfidenz-Ehrlichkeit · (+ Onboarding-Padding).
+
+---
+
+## Offen bis Launch
+
+- **#15 Weg A vervollständigen** — Bürgschaft, Nebenangebote, Eignung, Bietergemeinschaft aus `attributes` (ohne Reparse) in `lead_export` + UI. Weg B (Doku-Crawl + LLM mit Pflicht-Seitenbeleg) danach.
+- **#16 Kalender-Übersicht + iCal-Feed** — chronologische Fristen der Watchlist; Uhrzeit & Bieterfragen-Frist aus dem XML.
+- **Externe Transporte anschließen** — E-Mail (Resend/SES), PostHog, Stripe. Logik steht, es fehlen nur die Provider-Keys.
+- **Deployment + Pflicht-Security-Review** — RLS, Secret-Key server-only, §9-Blur serverseitig, innerHTML-XSS; plus npm-Vulns (Next SSRF, PostCSS, sharp).
+- **notice_id-Normalisierung** — Unterstrich/Bindestrich-Doppelformat verwaist bei jedem Monatswechsel ~551 Leads (bekannt, eigener Schritt).
+
+---
+
+## Preis-relevanter Kontext (für den Preismodell-Chat)
+
+Die Bausteine, an denen ein Preismodell andockt — was die Datenlage **wirklich** hergibt:
+
+- **Pricing-Staffel gebaut** (`govisor/pricing.py`): reines **Flat-per-Band**, 7 Stufen, Pauschalen verdoppeln sich — `<100k`=600 / `100–250k`=1.200 / `250–500k`=2.400 / `500k–1,3M`=4.800 / `1,3–5M`=9.600 / `5–25M`=15.000 / `>25M`=25.000 €. `imputiert`/`default` → ×0,8.
+- **Warum Flat statt %:** Wert-Schätzung trifft nur **~42 %** das richtige Band (gemessen) → Prozent auf geratenen Wert ist nicht verteidigbar. Abgerechnet wird auf echtem Wert (**~65 %** publiziert), der Rest via Kunden-Bestätigung.
+- **Gebühren-Basis nie „unbekannt"** (`value_band_effektiv`): echter Wert 37 % / geschätzt 5 % / CPV-Median-imputiert 52 % / default 6 %, mit `band_source` als Fairness-Regler.
+- **Erfolgsprämie** — gestaffelt, **nur bei nachgewiesenem Gewinn und nur auf echten Werten**. Attribution über `award_tender_link` (Zuschlag ↔ Ausschreibung, 373k Links). `value_anchor` ist ein **Lowball-Plausibilitätscheck** (~68 % ±1 Band), kein Orakel → bei ≥2 Bänder-Abweichung HITL-Prüfung.
+- **Gate-Logik:** `entity_confidence` (confirmed/probable/none) ist das Billing-Gate; Erfolgsprämie löst **nur** der Klick auf den Bewertungs-Tab eines konkreten Leads aus (nicht Strategie-Ansichten).
+- **Free/Pro:** kostenlos = Liste + Basisdaten + Netzwerkteilnahme (Dichte/Vertrauen); bezahlt = Wettbewerbssicht, Strategie, Export, Fristen. Strategie ist rein Pro-gegated (sektionsweise), verbraucht keine Analysen.
+- **Offen (Business, nicht Technik):** finale Beträge, Rabatt-Faktor, Attributions-/Rechnungs-Mechanik. Marktvalidierung liegt in der Pricing-Research-Notiz.
+
+> Quelle der Zahlen: lokales Parquet/DuckDB (`docs/pricing-modell.md`, `docs/entscheidungen-und-kontext.md`). In Supabase liegt nur ein Entwicklungs-Sample — dort zählen heißt das Sample zählen.

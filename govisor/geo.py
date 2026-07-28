@@ -132,6 +132,23 @@ def nuts_children(cfg: Config, country: str, parent: str) -> list[tuple]:
     return rows
 
 
+def nationwide_clause(cfg: Config, country: str, lead_col: str = "lead_id") -> str:
+    """SQL-Prädikat für **ortsunabhängig erbringbare** Leistungen — oder ``"false"``.
+
+    `RealizedLocation.Address.Region = anyw / anyw-cou / anyw-eea` heisst „an keinen Ort
+    gebunden" (4.144 Leads). Solche Leads dürfen an KEINEM Ortsfilter scheitern: sie passen
+    per Definition zu jedem Standort. Bis 2026-07 fielen sie aus jeder Umkreis- und
+    Regionssuche — das war ein Fehler, kein fehlendes Feature.
+
+    Wird von `search()` **und** von `app/radius_suche.py` benutzt; beide bauen ihr SQL
+    getrennt, deshalb liegt die Regel hier und nicht zweimal dort.
+    """
+    lx = cfg.gold_dir / country / "lead_export.parquet"
+    if not lx.exists():
+        return "false"
+    return f"{lead_col} IN (SELECT lead_id FROM read_parquet('{lx.as_posix()}') WHERE is_nationwide)"
+
+
 def search(cfg: Config, country: str, *, city: str | None = None,
            lat: float | None = None, lon: float | None = None,
            radius_km: float | None = None, nuts: list[str] | None = None,
@@ -151,6 +168,7 @@ def search(cfg: Config, country: str, *, city: str | None = None,
     latcol, loncol, nutscol = _AXIS.get(axis, _AXIS["buyer"])
     g = cfg.gold_dir / country
     lg = f"'{(g / 'lead_geo.parquet').as_posix()}'"
+    nationwide = nationwide_clause(cfg, country)
     where = []
     dist_expr = "NULL"
     if city and lat is None:
@@ -164,11 +182,20 @@ def search(cfg: Config, country: str, *, city: str | None = None,
     nc = _nuts_clause(nuts, nutscol)
     if nc:
         where.append(nc)
-    clause = (" WHERE " + " AND ".join(where)) if where else ""
-    order = " ORDER BY dist_km" if dist_expr != "NULL" else " ORDER BY lead_id"
+    # Ortsfilter UND-verknuepft wie bisher — aber bundesweite Leads kommen ODER-verknuepft
+    # immer durch. Ohne Ortsfilter aendert sich nichts.
+    clause = (f" WHERE (({' AND '.join(where)}) OR {nationwide})") if where else ""
+    # `dist_km IS NULL` bei gesetztem Radius = **bundesweit**, nicht „unbekannt": fuer eine
+    # ortsunabhaengige Leistung ist die Entfernung zur Vergabestelle keine Aussage. Sortiert
+    # wird sie an den Rand des gewaehlten Umkreises — hinter alle echten Nahtreffer, aber
+    # vor dem Abschneiden durch `limit`. Vorher fiel sie ganz heraus.
+    if dist_expr != "NULL":
+        dist_sel = f"CASE WHEN {dist_expr} <= {radius_km} THEN round({dist_expr},1) END"
+        order = f" ORDER BY coalesce(dist_km, {radius_km})"
+    else:
+        dist_sel, order = "NULL", " ORDER BY lead_id"
     con = duckdb.connect()
-    q = (f"SELECT lead_id, ort, plz, {nutscol} AS nuts, geo_source, "
-         f"CASE WHEN {dist_expr} IS NULL THEN NULL ELSE round({dist_expr},1) END AS dist_km "
+    q = (f"SELECT lead_id, ort, plz, {nutscol} AS nuts, geo_source, {dist_sel} AS dist_km "
          f"FROM read_parquet({lg}){clause}{order}")
     if limit:
         q += f" LIMIT {int(limit)}"

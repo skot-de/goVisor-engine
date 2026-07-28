@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>goVisor · Onboarding v1.4</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F7F6;--surface:#FFFFFF;--surface-2:#FAFBFA;--surface-3:#F1F3F2;
+  --line:#E3E7E5;--line-strong:#CFD6D3;
+  --ink-900:#12211D;--ink-700:#33453F;--ink-500:#64766F;--ink-400:#8C9B95;--ink-300:#B7C2BC;
+  --signal:#10B981;--signal-deep:#067A55;--signal-wash:#E7F7F1;
+  --note:#6D5DA6;--note-deep:#4C3F7D;--note-wash:#F1EFF8;--note-line:#DCD6EE;
+  --flag:#B45309;--flag-wash:#FBF2E6;--risk:#B3261E;--risk-wash:#FBECEB;
+  --sans:'Archivo',system-ui,sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace;
+  --r:6px;
+  --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;
+  --t-meta:11px;--t-sm:12.5px;--t-body:13px;--t-lg:15px;--t-title:19px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:var(--sans);font-size:var(--t-body);color:var(--ink-900);background:var(--paper);-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--signal);outline-offset:2px;border-radius:3px}
+
+/* ---------- Rahmen ---------- */
+.app{min-height:100%;display:flex;flex-direction:column}
+.top{height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--s5);
+  background:var(--surface);border-bottom:1px solid var(--line);flex:none}
+.brand{font-size:16px;font-weight:700;letter-spacing:-.03em}
+.brand span{color:var(--signal)}
+.ver{font-family:var(--mono);font-size:9px;letter-spacing:.06em;color:var(--ink-300)}
+
+/* Fortschritt */
+.steps{display:flex;align-items:center;gap:var(--s2)}
+.step{display:flex;align-items:center;gap:6px;font-size:var(--t-meta);color:var(--ink-400)}
+.step i{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--line-strong);
+  display:grid;place-items:center;font-family:var(--mono);font-size:9px;font-weight:600}
+.step.on{color:var(--ink-900);font-weight:600}
+.step.on i{border-color:var(--signal);background:var(--signal-wash);color:var(--signal-deep)}
+.step.done i{background:var(--signal);border-color:var(--signal);color:#fff}
+.step-sep{width:14px;height:1px;background:var(--line-strong)}
+
+.stage{flex:1;display:grid;place-items:start center;padding:var(--s6) var(--s5) 64px;overflow-y:auto}
+.card{width:100%;max-width:560px}
+.card.wide{max-width:680px}
+
+h1{font-size:26px;font-weight:700;letter-spacing:-.025em;line-height:1.2;margin-bottom:var(--s2)}
+.lede{font-size:var(--t-lg);color:var(--ink-500);line-height:1.5;margin-bottom:var(--s5)}
+
+/* ---------- Eingaben ---------- */
+.field{margin-bottom:var(--s4)}
+.lbl{display:block;font-size:var(--t-sm);font-weight:600;margin-bottom:6px}
+.hint{font-size:var(--t-meta);color:var(--ink-400);margin-top:5px;line-height:1.45}
+.inp{width:100%;padding:11px 13px;border:1px solid var(--line-strong);border-radius:var(--r);
+  background:var(--surface);font-size:var(--t-body);transition:.14s}
+.inp:focus{outline:none;border-color:var(--signal);box-shadow:0 0 0 3px var(--signal-wash)}
+.inpwrap{position:relative}
+
+/* Autocomplete */
+.ac{position:absolute;left:0;right:0;top:calc(100% + 4px);z-index:20;background:var(--surface);
+  border:1px solid var(--line-strong);border-radius:8px;box-shadow:0 12px 30px rgba(18,33,29,.14);
+  padding:5px;display:none;max-height:280px;overflow:auto}
+.ac.open{display:block}
+.acopt{display:flex;align-items:baseline;gap:var(--s3);width:100%;padding:9px 11px;border-radius:var(--r);text-align:left}
+.acopt:hover,.acopt.cur{background:var(--surface-2)}
+.ac-n{flex:1;min-width:0;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ac-w{font-family:var(--mono);font-size:var(--t-meta);color:var(--ink-400);flex:none}
+.ac-empty{padding:11px;font-size:var(--t-sm);color:var(--ink-500)}
+
+/* ---------- Knöpfe ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s2);
+  padding:11px 20px;border-radius:var(--r);font-size:var(--t-body);font-weight:600;transition:.14s}
+.btn-p{background:var(--signal);color:#fff}
+.btn-p:hover{background:var(--signal-deep)}
+.btn-p[disabled]{opacity:.4;pointer-events:none}
+.btn-s{border:1px solid var(--line-strong);color:var(--ink-700);background:var(--surface)}
+.btn-s:hover{border-color:var(--ink-400)}
+.btn-t{color:var(--ink-500);padding:11px 4px}
+.btn-t:hover{color:var(--ink-900);text-decoration:underline}
+.btnrow{display:flex;align-items:center;gap:var(--s3);flex-wrap:wrap;margin-top:var(--s5)}
+.btnrow.split{justify-content:space-between}
+
+/* ---------- Firmen-Vorschlag ---------- */
+.suggest{border:1px solid var(--line);border-radius:8px;background:var(--surface);overflow:hidden}
+.sg-head{padding:var(--s4);border-bottom:1px solid var(--line)}
+.sg-name{font-size:var(--t-title);font-weight:700;letter-spacing:-.02em;line-height:1.25}
+.sg-meta{display:flex;align-items:center;gap:var(--s2);margin-top:6px;flex-wrap:wrap;font-size:var(--t-sm);color:var(--ink-500)}
+.sg-stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.sg-stat{padding:var(--s3) var(--s4);border-right:1px solid var(--line)}
+.sg-stat:last-child{border-right:none}
+.sg-k{display:block;font-size:var(--t-meta);color:var(--ink-400)}
+.sg-v{display:block;font-family:var(--mono);font-size:var(--t-lg);font-weight:600;margin-top:2px;letter-spacing:-.01em}
+.sg-v.unk{font-family:var(--sans);font-size:var(--t-sm);font-weight:400;font-style:italic;color:var(--ink-400)}
+
+/* Konfidenz-Marke */
+.conf{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:9px;font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:100px}
+.conf-hoch{color:var(--signal-deep);background:var(--signal-wash)}
+.conf-mittel{color:var(--flag);background:var(--flag-wash)}
+.conf-nied{color:var(--ink-500);background:var(--surface-3)}
+
+/* Kandidatenliste (schwacher Match) */
+.cands{display:flex;flex-direction:column;gap:var(--s2)}
+.cand{display:flex;align-items:center;gap:var(--s3);padding:var(--s3) var(--s4);text-align:left;
+  border:1px solid var(--line);border-radius:var(--r);background:var(--surface);transition:.14s;width:100%}
+.cand:hover{border-color:var(--signal);background:var(--signal-wash)}
+.cand-m{flex:1;min-width:0}
+.cand-n{font-weight:600;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cand-x{font-size:var(--t-meta);color:var(--ink-500);margin-top:2px;display:block}
+.cand-w{font-family:var(--mono);font-size:var(--t-sm);color:var(--ink-400);flex:none}
+
+/* Gruppen-Auswahl */
+.ents{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.ent{display:flex;align-items:center;gap:var(--s3);padding:var(--s3) var(--s4);border-bottom:1px solid var(--line)}
+.ent:last-child{border-bottom:none}
+.ent-box{width:18px;height:18px;border-radius:4px;border:1.5px solid var(--line-strong);flex:none;
+  display:grid;place-items:center;color:transparent;font-size:11px;font-weight:700;transition:.14s}
+.ent.on .ent-box{background:var(--signal);border-color:var(--signal);color:#fff}
+.ent-m{flex:1;min-width:0}
+.ent-n{font-weight:500;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ent-x{font-size:var(--t-meta);color:var(--ink-400);margin-top:1px;display:block}
+.ent-w{font-family:var(--mono);font-size:var(--t-sm);color:var(--ink-500);flex:none}
+
+/* Hinweise */
+.note{padding:var(--s3) var(--s4);border-radius:var(--r);font-size:var(--t-sm);line-height:1.55;margin-top:var(--s4)}
+.note-i{background:var(--surface-2);border:1px solid var(--line);color:var(--ink-700)}
+.note-w{background:var(--flag-wash);border:1px solid var(--flag);color:var(--ink-700)}
+.note-p{background:var(--note-wash);border:1px solid var(--note-line);color:var(--ink-700)}
+.note b{color:var(--ink-900)}
+
+/* Branche / Region */
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s3)}
+.pick{display:flex;align-items:flex-start;gap:var(--s3);padding:var(--s3) var(--s4);text-align:left;
+  border:1px solid var(--line);border-radius:var(--r);background:var(--surface);transition:.14s}
+.pick:hover{border-color:var(--signal)}
+.pick.on{border-color:var(--signal);background:var(--signal-wash)}
+.pick-m{min-width:0}
+.pick-n{font-weight:600;display:block}
+.pick-x{font-size:var(--t-meta);color:var(--ink-500);margin-top:2px;display:block;line-height:1.4}
+.pick-c{font-family:var(--mono);font-size:var(--t-meta);color:var(--ink-400);margin-left:auto;flex:none}
+
+.chips{display:flex;flex-wrap:wrap;gap:var(--s2)}
+.chip{padding:7px 13px;border-radius:100px;border:1px solid var(--line-strong);
+  font-size:var(--t-sm);font-weight:500;background:var(--surface);transition:.14s}
+.chip:hover{border-color:var(--signal)}
+.chip.on{background:var(--signal);border-color:var(--signal);color:#fff}
+
+/* Abschluss */
+.done-ring{width:52px;height:52px;border-radius:50%;background:var(--signal-wash);
+  display:grid;place-items:center;color:var(--signal-deep);margin-bottom:var(--s4)}
+.done-ring svg{width:26px;height:26px}
+.sum{border:1px solid var(--line);border-radius:8px;background:var(--surface);overflow:hidden;margin-top:var(--s4)}
+.sum-r{display:flex;align-items:baseline;gap:var(--s4);padding:var(--s3) var(--s4);border-bottom:1px solid var(--line)}
+.sum-r:last-child{border-bottom:none}
+.sum-k{font-size:var(--t-sm);color:var(--ink-500);width:150px;flex:none}
+.sum-v{font-weight:500;flex:1;min-width:0}
+
+/* Demo-Umschalter */
+.demo{position:fixed;right:var(--s5);bottom:var(--s5);z-index:60;display:flex;align-items:center;gap:5px;
+  background:var(--surface);border:1px solid var(--line-strong);border-radius:100px;padding:5px;
+  box-shadow:0 6px 20px rgba(18,33,29,.1)}
+.demo-k{font-family:var(--mono);font-size:8.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-400);padding:0 7px}
+.demo-o{font-size:var(--t-meta);font-weight:500;color:var(--ink-500);padding:5px 10px;border-radius:100px}
+.demo-o.on{background:var(--ink-900);color:#fff;font-weight:600}
+@media (max-width:640px){.grid2{grid-template-columns:1fr}.sg-stats{grid-template-columns:1fr}
+  .sg-stat{border-right:none;border-bottom:1px solid var(--line)}.demo{display:none}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div style="display:flex;align-items:baseline;gap:10px">
+      <span class="brand">go<span>V</span>isor</span><span class="ver">v1.4</span>
+    </div>
+    <nav class="steps" id="steps"></nav>
+  </header>
+  <main class="stage"><div id="view"></div></main>
+</div>
+
+<div class="demo">
+  <span class="demo-k">Domain</span>
+  <button class="demo-o on" data-demo="stark">cancom.de</button>
+  <button class="demo-o" data-demo="schwach">nordwand.de</button>
+  <button class="demo-o" data-demo="keiner">gmail.com</button>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+
+/* ============ Demo-Daten ============
+   entities-Felder real: entity_id, canonical_name, national_id, method, confidence
+   Wins werden BERECHNET (kein total_wins-Feld) — hier vorberechnet simuliert. */
+const ENTITIES = [
+  {id:'e1', name:'CANCOM SE',                       method:'handelsregister_exakt', conf:0.97, wins:312, group:'g-cancom'},
+  {id:'e2', name:'CANCOM Public GmbH',              method:'handelsregister_exakt', conf:0.95, wins:141, group:'g-cancom'},
+  {id:'e3', name:'CANCOM Managed Services GmbH',    method:'ted_nationalid',        conf:0.92, wins:47,  group:'g-cancom'},
+  {id:'e4', name:'Bechtle AG',                      method:'handelsregister_exakt', conf:0.96, wins:508, group:'g-bechtle'},
+  {id:'e5', name:'Nordwand IT-Systeme GmbH',        method:'nur_name',              conf:0.58, wins:23,  group:'g-nordwand'},
+  {id:'e6', name:'Nordwand Systemtechnik GmbH',     method:'nur_name',              conf:0.54, wins:9,   group:'g-nordwand2'},
+  {id:'e7', name:'Nordwand IT Service e.K.',        method:'nur_name',              conf:0.49, wins:4,   group:'g-nordwand3'},
+  {id:'e8', name:'Müller Elektrotechnik GmbH',      method:'nur_name',              conf:0.51, wins:31,  group:'g-mueller'},
+];
+const BRANCHEN = [
+  {k:'it',        n:'IT & Software',            x:'Software, Hardware, Rechenzentrum, Managed Services', c:'12.480'},
+  {k:'bau',       n:'Bau & Infrastruktur',      x:'Hoch- und Tiefbau, Gewerke, Sanierung',              c:'48.210'},
+  {k:'medizin',   n:'Medizin & Gesundheit',     x:'Geräte, Verbrauchsmaterial, Klinikdienste',          c:'7.930'},
+  {k:'beratung',  n:'Beratung & Dienstleistung',x:'Planung, Gutachten, Facility, Personal',             c:'15.640'},
+  {k:'sicherheit',n:'Sicherheit & Verteidigung',x:'Schutz, Funk, Wach- und Sicherheitsdienste',         c:'3.870'},
+  {k:'energie',   n:'Energie & Versorgung',     x:'Strom, Wärme, Wasser, Netze',                        c:'6.150'},
+];
+const REGIONEN = ['Bundesweit','Baden-Württemberg','Bayern','Berlin','Brandenburg','Hamburg','Hessen',
+  'Niedersachsen','Nordrhein-Westfalen','Rheinland-Pfalz','Sachsen','Schleswig-Holstein'];
+
+/* ============ Zustand ============ */
+let demo = 'stark';          // welcher Match-Fall wird simuliert
+let screen = 'mail';
+let eingabe = '';
+let email = '';
+let gewaehlt = null;         // bestätigte Entität
+let aktiveIds = [];          // aktivierte Gruppen-Entitäten (min. 1)
+let branche = null;
+let regionen = [];
+let acOpen = false, acCur = -1, acList = [];
+let hatKonto = false;
+
+const SCHRITTE = [['mail','Konto'],['firma','Firma'],['profil','Profil'],['fertig','Fertig']];
+const stufe = () => ({mail:0, vorschlag:1, kandidaten:1, firma:1, branche:1, region:1, profil:2, konto:2, fertig:3}[screen] ?? 0);
+
+/* Namens-Stamm aus der E-Mail-Domain — keine Domain→Entity-Tabelle nötig */
+const GENERIK = ['stadt','gemeinde','kreis','arge','vergabekammer','bietergemeinschaft','firma','mail','web','info'];
+const FREEMAIL = ['gmail','gmx','web','outlook','hotmail','yahoo','t-online','icloud'];
+function domainStamm(mail){
+  const dom = (mail.split('@')[1]||'').split('.')[0].toLowerCase();
+  if(!dom || FREEMAIL.includes(dom) || GENERIK.includes(dom)) return null;
+  return dom;
+}
+const norm = s => s.toLowerCase().replace(/[^a-zäöüß0-9]/g,'');
+function kandidaten(q){
+  const n = norm(q); if(n.length<2) return [];
+  return ENTITIES.filter(e=>norm(e.name).includes(n)).sort((a,b)=>b.wins-a.wins);
+}
+/* Gruppe zusammenfassen — ein Vorschlag je realer Firma, nicht je Entität */
+const gruppe = e => ENTITIES.filter(x=>x.group===e.group);
+const confStufe = c => c>=0.9?'hoch':c>=0.7?'mittel':'nied';
+const methodeText = m => ({
+  handelsregister_exakt:'über Handelsregister-Nummer belegt',
+  ted_nationalid:'über nationale Kennung belegt',
+  nur_name:'nur über den Firmennamen erkannt',
+}[m]||m);
+
+/* ============ Fortschritt ============ */
+function renderSteps(){
+  const cur = stufe();
+  $('#steps').innerHTML = SCHRITTE.map(([k,l],i)=>{
+    const cls = i<cur?'done':i===cur?'on':'';
+    return `<span class="step ${cls}"><i>${i<cur?'✓':i+1}</i>${l}</span>` +
+           (i<SCHRITTE.length-1?'<span class="step-sep"></span>':'');
+  }).join('');
+}
+
+/* ============ Bildschirme ============ */
+function view(){
+  renderSteps();
+  const v = $('#view');
+  if(screen==='mail')       v.innerHTML = scMail();
+  if(screen==='firma')      v.innerHTML = scFirma();
+  if(screen==='konto')      v.innerHTML = scKonto();
+  if(screen==='vorschlag')  v.innerHTML = scVorschlag();
+  if(screen==='kandidaten') v.innerHTML = scKandidaten();
+  if(screen==='profil')     v.innerHTML = scProfil();
+  if(screen==='branche')    v.innerHTML = scBranche();
+  if(screen==='region')     v.innerHTML = scRegion();
+  if(screen==='fertig')     v.innerHTML = scFertig();
+  const q = $('#q'); if(q){ q.value = eingabe; q.focus(); }
+  const m = $('#mail'); if(m && screen==='mail'){ m.value = email; m.focus(); }
+}
+
+/* --- 0 · E-Mail: der einzige Eingabewert, aus dem alles folgt --- */
+function scMail(){
+  return `<div class="card">
+    <h1>Alle öffentlichen Ausschreibungen.<br>Die eine, die zu euch passt.</h1>
+    <p class="lede">goVisor liest jede öffentliche Vergabe in Deutschland und filtert die heraus,
+      auf die ihr euch bewerben solltet. Kostenlos starten, ohne Zahlungsdaten.</p>
+    <div class="field">
+      <label class="lbl" for="mail">Geschäftliche E-Mail</label>
+      <input class="inp" id="mail" type="email" value="${email}" placeholder="name@firma.de" autocomplete="email">
+    </div>
+    <div class="field">
+      <label class="lbl" for="pw">Passwort</label>
+      <input class="inp" id="pw" type="password" placeholder="mindestens 8 Zeichen" autocomplete="new-password">
+    </div>
+    <div class="btnrow">
+      <button class="btn btn-p" ${email.includes('@')?'':'disabled'} data-go="erkennen">Konto anlegen</button>
+    </div>
+    <div class="note note-i">Free-Zugang: Lead-Liste und alle Eckdaten dauerhaft unbegrenzt,
+      drei ausführliche Bewertungen je 30 Tage.</div>
+  </div>`;
+}
+
+/* --- 1 · Firma --- */
+function scFirma(){
+  return `<div class="card">
+    <h1>${ausDomain?'Wie heißt eure Firma?':'Wie heißt eure Firma?'}</h1>
+    <p class="lede">${ausDomain
+      ? (domainStamm(email)
+          ? `Wir haben versucht, eure Firma an der Adresse <b>${email}</b> zu erkennen — unter
+             „${domainStamm(email)}" finden wir aber kein Unternehmen in den Vergabedaten.`
+          : `Eure Adresse ist eine Freemail-Adresse, daraus lässt sich keine Firma ableiten.`)
+      : 'Damit wir euer Profil bauen können, brauchen wir den Firmennamen.'}</p>
+    <div class="field">
+      <label class="lbl" for="q">Firmenname</label>
+      <div class="inpwrap">
+        <input class="inp" id="q" autocomplete="off" placeholder="z. B. Nordwand IT-Systeme GmbH">
+        <div class="ac" id="ac"></div>
+      </div>
+      <span class="hint">Zum Ausprobieren: „cancom", „nordwand" oder „müller" — drei verschiedene Trefferlagen.</span>
+    </div>
+    <div class="btnrow">
+      <button class="btn btn-p" id="weiter" ${eingabe.trim()?'':'disabled'} data-go="match">Suchen</button>
+      <button class="btn btn-t" data-go="branche">Wir haben noch nie öffentlich geboten</button>
+    </div>
+  </div>`;
+}
+
+/* --- 2 · Konto --- */
+function scKonto(){
+  const stamm = domainStamm(email);
+  return `<div class="card">
+    <h1>Nur noch ein Passwort.</h1>
+    <p class="lede">Kostenlos, ohne Zahlungsdaten. Die Lead-Liste und alle Eckdaten bleiben dauerhaft frei.
+      ${gewaehlt?`Wir merken uns <b>${gewaehlt.name}</b> als eure Firma.`
+        :branche?`Wir merken uns euren Bereich und eure Regionen.`:''}</p>
+    <div class="field">
+      <label class="lbl">E-Mail</label>
+      <div class="inp" style="background:var(--surface-2);color:var(--ink-500)">${email||'—'}</div>
+    </div>
+    <div class="field">
+      <label class="lbl" for="pw">Passwort</label>
+      <input class="inp" id="pw" type="password" placeholder="mindestens 8 Zeichen" autocomplete="new-password">
+    </div>
+    ${gewaehlt && stamm && !norm(gewaehlt.name).includes(stamm)
+      ? `<div class="note note-w">Deine Domain <b>${stamm}</b> passt nicht zu ${gewaehlt.name}.
+         Das kann an einer Tochtergesellschaft oder Umfirmierung liegen — wir merken es uns als Hinweis.</div>`:''}
+    <div class="btnrow split">
+      <button class="btn btn-p" data-go="konto-fertig">Konto anlegen</button>
+      <button class="btn btn-t" data-go="firma">Zurück</button>
+    </div>
+  </div>`;
+}
+
+/* --- 3a · Starker Vorschlag --- */
+function scVorschlag(){
+  const e = gewaehlt, grp = gruppe(e), wins = grp.reduce((a,x)=>a+x.wins,0);
+  return `<div class="card">
+    <h1>${ausDomain?`Moment — arbeitest du bei ${e.name}?`:'Das wissen wir über euch.'}</h1>
+    <p class="lede">${ausDomain
+      ? `Deine Adresse endet auf <b>${domainStamm(email)}</b> — und unter diesem Namen finden wir ein
+         Unternehmen in den öffentlichen Vergabedaten. Falls das ihr seid, wissen wir schon einiges:`
+      : 'Aus den öffentlichen Vergabedaten der letzten Jahre.'}</p>
+    <div class="suggest">
+      <div class="sg-head">
+        <div class="sg-name">${e.name}</div>
+        <div class="sg-meta">
+          <span class="conf conf-${confStufe(e.conf)}">${confStufe(e.conf)==='hoch'?'belegt':'unsicher'}</span>
+          <span>${methodeText(e.method)}</span>
+        </div>
+      </div>
+      <div class="sg-stats">
+        <div class="sg-stat"><span class="sg-k">Vergaben gewonnen</span><span class="sg-v">${wins}</span></div>
+        <div class="sg-stat"><span class="sg-k">Auftraggeber</span><span class="sg-v">64</span></div>
+        <div class="sg-stat"><span class="sg-k">Aktiv seit</span><span class="sg-v">2016</span></div>
+      </div>
+    </div>
+    ${grp.length>1?`<div class="note note-i">Zu dieser Firma gehören <b>${grp.length} Einheiten</b>
+      in unseren Daten. Welche zu euch zählen, legst du nach der Anmeldung fest.</div>`:''}
+    <div class="note note-p">Passend zu diesem Profil sind gerade <b>34 Ausschreibungen</b> offen.
+      Bestätige die Firma, dann bauen wir dein Profil daraus.</div>
+    <div class="btnrow split">
+      <button class="btn btn-p" data-go="profil">Ja, das sind wir</button>
+      <button class="btn btn-s" data-go="kandidaten">Nein, andere Firma</button>
+    </div>
+  </div>`;
+}
+
+/* --- 3b · Schwacher Match: Liste ohne Vorauswahl --- */
+function scKandidaten(){
+  const liste = acList.length?acList:kandidaten(eingabe);
+  return `<div class="card wide">
+    <h1>Meinst du eine dieser Firmen?</h1>
+    <p class="lede">${ausDomain
+      ? `Deine Domain führt zu mehreren möglichen Firmen — nicht eindeutig genug für eine Vermutung.`
+      : 'Der Name allein war nicht eindeutig.'}
+      Deshalb schlagen wir nichts vor, sondern lassen dich wählen. Eine falsche Zuordnung wäre
+      schlimmer als eine Rückfrage.</p>
+    <div class="cands">
+      ${liste.length?liste.map(e=>`<button class="cand" data-pick="${e.id}">
+        <div class="cand-m">
+          <span class="cand-n">${e.name}</span>
+          <span class="cand-x">${methodeText(e.method)} · Konfidenz ${e.conf.toFixed(2)}</span>
+        </div>
+        <span class="cand-w">${e.wins} Siege</span>
+      </button>`).join('')
+      :'<div class="note note-i">Kein Treffer. Das ist normal — nur Unternehmen, die schon einmal eine öffentliche Vergabe gewonnen haben, stehen in unseren Daten.</div>'}
+    </div>
+    <div class="btnrow split">
+      <button class="btn btn-s" data-go="branche">Keine davon</button>
+      <button class="btn btn-t" data-go="firma">Namen ändern</button>
+    </div>
+  </div>`;
+}
+
+/* --- 4 · Profil bestätigen (Gruppe = Identität) --- */
+function scProfil(){
+  const grp = gruppe(gewaehlt);
+  const wins = grp.filter(e=>aktiveIds.includes(e.id)).reduce((a,e)=>a+e.wins,0);
+  const unsicher = grp.some(e=>e.method==='nur_name' && aktiveIds.includes(e.id));
+  return `<div class="card wide">
+    <h1>Gehören diese Einheiten zu euch?</h1>
+    <p class="lede">Öffentliche Auftraggeber schreiben denselben Konzern unterschiedlich.
+      Wir rechnen Siege aller aktiven Einheiten zusammen — sonst übersehen wir eure eigenen Aufträge.</p>
+    <div class="ents">
+      ${grp.map(e=>`<div class="ent ${aktiveIds.includes(e.id)?'on':''}">
+        <button class="ent-box" data-tog="${e.id}">✓</button>
+        <div class="ent-m">
+          <span class="ent-n">${e.name}</span>
+          <span class="ent-x">${methodeText(e.method)}</span>
+        </div>
+        <span class="ent-w">${e.wins}</span>
+      </div>`).join('')}
+    </div>
+    ${aktiveIds.length===0?`<div class="note note-w">Mindestens eine Einheit muss aktiv bleiben.</div>`:''}
+    ${unsicher?`<div class="note note-w">Eine aktive Einheit wurde <b>nur über den Namen</b> erkannt.
+      Wir zeigen ihre Zahlen, kennzeichnen sie aber als unbestätigt — und rechnen sie nicht in die
+      Erfolgsprämie ein, solange die Zuordnung nicht belegt ist.</div>`:''}
+    <div class="note note-p">Mit der Bestätigung merken wir uns diese Einheiten als eure Identität.
+      Nur so können wir später erkennen, dass ihr eine Ausschreibung gewonnen habt.
+      <b>${wins} Siege</b> fließen in euer Profil.</div>
+    <div class="btnrow split">
+      <button class="btn btn-p" ${aktiveIds.length?'':'disabled'} data-go="fertig">Profil bestätigen</button>
+      <button class="btn btn-t" data-go="kandidaten">Doch eine andere Firma</button>
+    </div>
+  </div>`;
+}
+
+/* --- 5 · Branche (manueller Pfad) --- */
+function scBranche(){
+  return `<div class="card wide">
+    <h1>In welchem Bereich seid ihr unterwegs?</h1>
+    <p class="lede">Eure Firma taucht in unseren Daten noch nicht als Auftragnehmer auf.
+      Das ist kein Nachteil — wir starten mit eurem Feld und schärfen das Profil, je mehr ihr goVisor nutzt.</p>
+    <div class="grid2">
+      ${BRANCHEN.map(b=>`<button class="pick ${branche===b.k?'on':''}" data-branche="${b.k}">
+        <div class="pick-m"><span class="pick-n">${b.n}</span><span class="pick-x">${b.x}</span></div>
+        <span class="pick-c">${b.c}</span>
+      </button>`).join('')}
+    </div>
+    <div class="note note-i">Die Zahl rechts zeigt, wie viele Vergaben wir in diesem Bereich kennen.
+      Du kannst den Bereich später jederzeit wechseln.</div>
+    <div class="btnrow split">
+      <button class="btn btn-p" ${branche?'':'disabled'} data-go="region">Weiter</button>
+      <button class="btn btn-t" data-go="firma">Zurück zur Firmensuche</button>
+    </div>
+  </div>`;
+}
+
+/* --- 6 · Region --- */
+function scRegion(){
+  return `<div class="card wide">
+    <h1>Wo wollt ihr Aufträge gewinnen?</h1>
+    <p class="lede">Mehrfachauswahl. Wir filtern nach dem <b>Leistungsort</b>, nicht nach dem Sitz
+      der Vergabestelle — sonst zeigten wir euch Ausschreibungen in der falschen Gegend.</p>
+    <div class="chips">
+      ${REGIONEN.map(r=>`<button class="chip ${regionen.includes(r)?'on':''}" data-region="${r}">${r}</button>`).join('')}
+    </div>
+    <div class="note note-i">Bei etwa jeder zehnten Ausschreibung ist der Leistungsort nicht
+      kreisgenau bekannt. Diese zeigen wir trotzdem, aber ohne Regionsfilter — lieber einmal zu viel
+      als einen passenden Auftrag verschweigen.</div>
+    <div class="btnrow split">
+      <button class="btn btn-p" ${regionen.length?'':'disabled'} data-go="fertig">Fertig</button>
+      <button class="btn btn-t" data-go="branche">Zurück</button>
+    </div>
+  </div>`;
+}
+
+/* --- 7 · Abschluss --- */
+function scFertig(){
+  const grp = gewaehlt?gruppe(gewaehlt).filter(e=>aktiveIds.includes(e.id)):[];
+  const wins = grp.reduce((a,e)=>a+e.wins,0);
+  return `<div class="card">
+    <div class="done-ring">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+    </div>
+    <h1>Alles bereit.</h1>
+    <p class="lede">${gewaehlt
+      ? 'Wir haben euer Profil aus euren bisherigen Vergaben gebaut.'
+      : 'Wir starten mit eurem Bereich und eurer Region — das Profil wächst mit der Nutzung.'}</p>
+    <div class="sum">
+      ${gewaehlt?`
+        <div class="sum-r"><span class="sum-k">Firma</span><span class="sum-v">${gewaehlt.name}</span></div>
+        <div class="sum-r"><span class="sum-k">Einheiten</span><span class="sum-v">${grp.length} aktiv</span></div>
+        <div class="sum-r"><span class="sum-k">Siege im Profil</span><span class="sum-v">${wins}</span></div>
+        <div class="sum-r"><span class="sum-k">Identität</span><span class="sum-v">bestätigt ✓</span></div>`
+      :`
+        <div class="sum-r"><span class="sum-k">Bereich</span><span class="sum-v">${BRANCHEN.find(b=>b.k===branche)?.n||'—'}</span></div>
+        <div class="sum-r"><span class="sum-k">Regionen</span><span class="sum-v">${regionen.join(' · ')||'—'}</span></div>
+        <div class="sum-r"><span class="sum-k">Identität</span><span class="sum-v">noch offen</span></div>`}
+      <div class="sum-r"><span class="sum-k">Zugang</span><span class="sum-v">Free — Liste und Eckdaten unbegrenzt, 3 Bewertungen je 30 Tage</span></div>
+    </div>
+    ${!gewaehlt?`<div class="note note-i">Sobald ihr eine Vergabe gewinnt, erkennen wir das und fragen,
+      ob wir euer Profil ergänzen dürfen.</div>`:''}
+    <div class="btnrow">
+      <button class="btn btn-p" data-go="explorer">Leads ansehen</button>
+    </div>
+  </div>`;
+}
+
+/* ============ Autocomplete ============ */
+function renderAc(){
+  const ac = $('#ac'); if(!ac) return;
+  acList = kandidaten(eingabe);
+  if(!acOpen || eingabe.trim().length<2){ ac.classList.remove('open'); return; }
+  ac.innerHTML = acList.length
+    ? acList.map((e,i)=>`<button class="acopt ${i===acCur?'cur':''}" data-ac="${e.id}">
+        <span class="ac-n">${e.name}</span><span class="ac-w">${e.wins} Siege</span></button>`).join('')
+    : `<div class="ac-empty">Kein Treffer — vielleicht habt ihr noch keine öffentliche Vergabe gewonnen.
+       Das ist kein Problem, wir starten dann mit eurem Bereich.</div>`;
+  ac.classList.add('open');
+}
+
+/* ============ Ablauf ============ */
+let ausDomain = false;   // kam der Treffer aus der Domain oder aus getipptem Namen?
+
+function zumMatch(){
+  const treffer = kandidaten(eingabe);
+  if(!treffer.length){ screen='branche'; return; }
+  const beste = treffer[0];
+  const belegt = beste.method!=='nur_name' && beste.conf>=0.9;
+  if(belegt){ gewaehlt=beste; aktiveIds=gruppe(beste).map(e=>e.id); screen='vorschlag'; }
+  else { screen='kandidaten'; }
+}
+
+/* Aus der E-Mail-Domain den Namens-Stamm ableiten und suchen (Ticket Stufe 1) */
+function erkennen(){
+  const stamm = domainStamm(email);
+  ausDomain = true;
+  if(!stamm){ screen='firma'; return; }        // Freemail oder Generik → getippter Name
+  eingabe = stamm;
+  const treffer = kandidaten(stamm);
+  if(!treffer.length){ screen='firma'; return; }
+  const beste = treffer[0];
+  const belegt = beste.method!=='nur_name' && beste.conf>=0.9;
+  // Nur ein belegter Treffer darf behaupten „du arbeitest bei X"
+  if(belegt && treffer.length<=gruppe(beste).length){
+    gewaehlt=beste; aktiveIds=gruppe(beste).map(e=>e.id); screen='vorschlag';
+  } else { screen='kandidaten'; }
+}
+
+document.addEventListener('click', e=>{
+  const d = e.target.closest('[data-demo]');
+  if(d){ demo=d.dataset.demo;
+    document.querySelectorAll('[data-demo]').forEach(b=>b.classList.toggle('on',b===d));
+    email = demo==='stark' ? 'thomas.berg@cancom.de'
+          : demo==='schwach' ? 'info@nordwand.de'
+          : 'max.mustermann@gmail.com';
+    eingabe=''; gewaehlt=null; aktiveIds=[]; branche=null; regionen=[];
+    hatKonto=false; ausDomain=false; screen='mail'; view(); return; }
+
+  const ac = e.target.closest('[data-ac]');
+  if(ac){ const ent=ENTITIES.find(x=>x.id===ac.dataset.ac); eingabe=ent.name; acOpen=false; view(); return; }
+
+  const pick = e.target.closest('[data-pick]');
+  if(pick){ gewaehlt=ENTITIES.find(x=>x.id===pick.dataset.pick); aktiveIds=gruppe(gewaehlt).map(x=>x.id);
+    screen='profil'; view(); return; }
+
+  const tog = e.target.closest('[data-tog]');
+  if(tog){ const id=tog.dataset.tog;
+    aktiveIds = aktiveIds.includes(id)?aktiveIds.filter(x=>x!==id):[...aktiveIds,id];
+    view(); return; }
+
+  const br = e.target.closest('[data-branche]');
+  if(br){ branche=br.dataset.branche; view(); return; }
+
+  const rg = e.target.closest('[data-region]');
+  if(rg){ const r=rg.dataset.region;
+    regionen = r==='Bundesweit' ? (regionen.includes(r)?[]:[r])
+             : (regionen.includes(r)?regionen.filter(x=>x!==r):[...regionen.filter(x=>x!=='Bundesweit'),r]);
+    view(); return; }
+
+  const go = e.target.closest('[data-go]');
+  if(go){
+    const z = go.dataset.go;
+    if(z==='erkennen'){ hatKonto=true; erkennen(); }
+    else if(z==='match'){ ausDomain=false; zumMatch(); }
+    else if(z==='konto-fertig'){ hatKonto=true; screen = gewaehlt?'profil':'fertig'; }
+    else if(z==='explorer'){ alert('Weiter in den Lead Explorer (govisor-explorer-v1.0.html)'); return; }
+    else screen = z;
+    acOpen=false; view(); return;
+  }
+
+  if(!e.target.closest('.inpwrap')){ acOpen=false; renderAc(); }
+});
+
+document.addEventListener('input', e=>{
+  if(e.target.id==='q'){ eingabe=e.target.value; acOpen=true; acCur=-1; renderAc();
+    const w=$('#weiter'); if(w) w.toggleAttribute('disabled', !eingabe.trim()); }
+  if(e.target.id==='mail'){ email=e.target.value; }
+});
+
+document.addEventListener('keydown', e=>{
+  if(e.target.id==='mail' && e.key==='Enter' && screen==='mail'){
+    e.preventDefault(); if(email.includes('@')){ erkennen(); view(); } return; }
+  if(e.target.id!=='q') return;
+  if(e.key==='ArrowDown'){ e.preventDefault(); acCur=Math.min(acCur+1,acList.length-1); renderAc(); }
+  if(e.key==='ArrowUp'){ e.preventDefault(); acCur=Math.max(acCur-1,-1); renderAc(); }
+  if(e.key==='Enter'){ e.preventDefault();
+    if(acCur>=0 && acList[acCur]){ eingabe=acList[acCur].name; acOpen=false; view(); }
+    else if(eingabe.trim()){ zumMatch(); acOpen=false; view(); } }
+  if(e.key==='Escape'){ acOpen=false; renderAc(); }
+});
+
+email='thomas.berg@cancom.de';
+view();
+</script>
+</body>
+</html>

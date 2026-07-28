@@ -270,3 +270,37 @@ scheitert der Pooler, s. Auto-Memory.)
 blieb stehen → jeder `gold`-Lauf brach danach mit `AttributeError` ab, aber erst **nach**
 `lead-export`, also nach der teuren Hälfte; alle Tabellen dahinter blieben still veraltet.
 `tests/test_plumbing.py::test_cli_gold_builders_exist` prüft das jetzt in Millisekunden.
+
+## Stufe-1-KPIs 1.1–1.4 gebaut (2026-07-23)
+
+Vier Felder aus dem `attributes`-Sammelfeld in `lead_export` (`gold._lead_context_sql`) —
+**in EINEM Durchlauf** gelesen, statt ~2,5 h Voll-Reparse. Genau dafuer ist `attributes` da.
+Alle Werte auf **ein englisches Vokabular** gemappt (eForms-Codes + Legacy-Labels), in
+`tests/test_plumbing.py::_EXPORT_VOCAB` festgenagelt — waechst das Mapping, muss die
+Allow-Liste mitwachsen, sonst rutscht ein roher Code wie `cga-mun` ins Frontend.
+
+| Feld | alle Leads | offene Leads | Nutzen |
+|---|---:|---:|---|
+| `regulatory_regime` | 98,2 % | 95,1 % | VOB/VgV/UVgO/SektVO-Filter — hoechste Abdeckung im Inventar |
+| `buyer_type` | 80,0 % | 65,9 % | Vergabestelle-Tab, Grundlage fuer „Kaeufer-Zwillinge" |
+| `buyer_activity` | 85,9 % | 67,5 % | dito |
+| `documents_url` | 13,6 % | **96,6 %** | ersetzt `source_url` (32,5 % bei offenen) |
+| `is_nationwide` | 4.144 Leads | — | steuert den Ortsfilter, s. u. |
+
+**1.2 war eine Reparatur, kein Feature.** `RealizedLocation.Address.Region = anyw*` heisst
+„an keinen Ort gebunden". Diese 4.144 Leads fielen aus **jeder** Umkreis- und Regionssuche,
+obwohl sie zu jedem Standort passen. Regel liegt jetzt zentral in `geo.nationwide_clause()`
+— `geo.search()` **und** `app/radius_suche.py` bauen ihr SQL getrennt und hatten den Fehler
+deshalb doppelt. Konvention: bei gesetztem Radius heisst **`dist_km IS NULL` = bundesweit**,
+nicht „unbekannt" (fuer eine ortsunabhaengige Leistung ist die Entfernung zur Vergabestelle
+keine Aussage). Sortiert an den Rand des Umkreises: hinter alle echten Nahtreffer, aber vor
+dem Abschneiden durch `limit`. Muenchen 25 km: 4.987 → 9.071 Leads.
+
+### ⚠️ Offener Befund: zwei notice_id-Formate in Silber
+Beim Testen aufgefallen, **nicht Teil von 1.1–1.4, ungeloest**: der Monats-Archiv-Ingest
+schreibt `450024_2026` (Unterstrich), der Live-Ingest des laufenden Monats `450024-2026`
+(Bindestrich, TED-Kanon). Beim Monatswechsel wird der Live-Stand vom Archiv ersetzt und
+alle Gold-Zeilen, die auf der Bindestrich-ID stehen, werden zu Waisen. Aktuell betroffen:
+**551 Leads**, deren Lose dadurch unerreichbar wurden (`lead_lot` 140.568 → 139.631).
+Das wiederholt sich bei **jedem** Monatswechsel. Reparatur = ID-Normalisierung in Silber
+plus Gold-Rebuild; bewusst als eigener Schritt offen gelassen.

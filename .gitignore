@@ -12,6 +12,9 @@ data/*
 *.key
 .env*
 
+# Lokales Claude-Code-Tooling (launch.json etc. — maschinenspezifisch)
+.claude/
+
 # Python / OS
 __pycache__/
 *.py[cod]

@@ -122,6 +122,18 @@ _EXPORT_VOCAB = {
     "switch_chance": {"high", "medium", "low", "na"},
     "competition_level": {"low", "medium", "high", "na"},
     "competition_source": {"actual", "unknown", "na"},
+    # Kontext aus dem `attributes`-Sammelfeld (eForms-Codes + Legacy-Labels auf EIN
+    # englisches Vokabular gemappt). Waechst das Mapping, muss es hier mitwachsen —
+    # sonst rutscht ein roher eForms-Code wie `cga-mun` ins Frontend.
+    "regulatory_regime": {"vgv", "vob", "uvgo", "sektvo", "vsvgv", "konzvgv",
+                          "eu_classic", None},
+    "buyer_type": {"local_authority", "regional_authority", "regional_or_local",
+                   "central_government", "body_public_law", "public_undertaking",
+                   "subsidised_entity", "utility", "eu_institution",
+                   "international_org", "other", None},
+    "buyer_activity": {"general_public", "health", "economic_affairs", "transport",
+                       "education", "environment", "defence", "social_protection",
+                       "recreation_culture", "public_order", "utilities", "other", None},
 }
 
 
@@ -387,3 +399,38 @@ def test_wikidata_population_is_current_not_historic():
     assert n > 0
     assert alt / n < 0.05, f"{alt} von {n} Einwohnerzahlen sind aelter als 2015"
     assert ohne_datum / n < 0.05, f"{ohne_datum} Einwohnerzahlen ohne Stichtag"
+
+
+@pytest.mark.skipif(not _has("lead_export"), reason="lead_export nicht gebaut")
+def test_lead_export_documents_url_is_a_link():
+    """`documents_url` ersetzt fuer offene Leads unser schwaches `portal_url` (96,6 % vs
+    44,5 %, DÖE 0 %). Wenn dort etwas anderes als eine http-URL landet, ist das Mapping
+    auf den falschen `attributes`-Pfad gelaufen."""
+    con = duckdb.connect()
+    bad, total = con.execute(f"""
+        SELECT count(*) FILTER (WHERE documents_url NOT LIKE 'http%'),
+               count(*) FILTER (WHERE documents_url IS NOT NULL)
+        FROM read_parquet('{G}/lead_export.parquet')""").fetchone()
+    assert total > 0, "documents_url komplett leer — Pfad-Mapping gebrochen"
+    assert bad == 0, f"{bad} documents_url ohne http-Schema"
+
+
+@pytest.mark.skipif(not _has("lead_export"), reason="lead_export nicht gebaut")
+def test_is_nationwide_never_null():
+    """Das Flag steuert einen FILTER (geo.nationwide_clause). NULL wuerde dort still zu
+    „nicht bundesweit" — deshalb ist es im Export hart auf true/false normiert."""
+    con = duckdb.connect()
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{G}/lead_export.parquet') "
+                    f"WHERE is_nationwide IS NULL").fetchone()[0]
+    assert n == 0
+
+
+def test_notice_id_normalization_unifies_archive_and_live():
+    """notice_id-Waisen-Bug: Archiv (00450024_2026) und Live (450024-2026) derselben
+    TED-Notice müssen auf DIESELBE kanonische ID abbilden — sonst verwaisen Gold-Zeilen
+    am Monatswechsel. publication_number muss TED-korrekt bleiben."""
+    from govisor.schema import normalize_notice_id as nz, publication_number_from_id as pub
+    assert nz("00450024_2026") == nz("450024-2026") == "450024_2026"
+    assert nz(nz("450024-2026")) == nz("450024-2026")          # idempotent
+    assert pub(nz("00450024_2026")) == "450024-2026"           # TED-Publikationsnummer intakt
+    assert nz("nicht-eine-notice") == "nicht-eine-notice"      # Unbekanntes unverändert

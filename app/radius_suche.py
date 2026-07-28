@@ -49,13 +49,18 @@ def run_query(lat, lon, radius_km, nuts_codes, axis):
     dist_sel = "NULL"
     if lat is not None and radius_km:
         dist = geo._haversine(lat, lon, latcol, loncol)
-        dist_sel = f"round({dist}, 1)"
+        # dist_km NULL bei gesetztem Radius = bundesweit erbringbar (s. geo.nationwide_clause)
+        dist_sel = f"CASE WHEN {dist} <= {radius_km} THEN round({dist}, 1) END"
         where.append(f"g.{latcol} IS NOT NULL AND {dist} <= {radius_km}")
     nc = geo._nuts_clause(nuts_codes, f"g.{nutscol}")
     if nc:
         where.append(nc)
-    clause = (" WHERE " + " AND ".join(where)) if where else ""
-    order = " ORDER BY dist_km NULLS LAST" if dist_sel != "NULL" else " ORDER BY d.titel"
+    # Ortsunabhaengige Leistungen kommen an jedem Ortsfilter vorbei — sonst fallen 4.144
+    # Leads aus jeder Suche, obwohl sie zu jedem Standort passen.
+    nationwide = geo.nationwide_clause(cfg, "DE", "g.lead_id")
+    clause = (f" WHERE (({' AND '.join(where)}) OR {nationwide})") if where else ""
+    order = (f" ORDER BY coalesce(dist_km, {radius_km})" if dist_sel != "NULL"
+             else " ORDER BY d.titel")
     con = duckdb.connect()
     base = (f"FROM read_parquet('{LG}') g JOIN read_parquet('{LD}') d "
             f"ON d.lead_id = g.lead_id{clause}")
