@@ -95,3 +95,22 @@ verbessern** (Gewinner+Preis+Bieterzahl strukturiert). DE/AT müssen die Felder 
 ## Quellen
 - [simap.ch — Veröffentlichungen suchen](https://www.simap.ch/) (SPA, ruft den REST-Endpoint)
 - [Wikipedia: Simap.ch](https://en.wikipedia.org/wiki/Simap.ch)
+
+---
+
+## Umsetzungsstand (2026-07-28) — F1 Schritt 1–4 fertig
+- **Schritt 1** Discovery ✅ (dieser Doc)
+- **Schritt 2** Downloader ✅ — `govisor/simap.py::download`, Bronze `raw_simap/CH/YYYY-MM.jsonl`, CLI `ingest-simap`
+- **Schritt 3** Parser ✅ — `parse_publication`/`build_silver`, Silber `schema_gen='simap'`, CH-Extras→attributes
+- **CH-Geo** ✅ — `dim_plz` liest DE+CH (GeoNames CH.txt), `build_lead_geo` länder-PLZ-Stellen
+- **Schritt 4** Gold-Brücke ✅ — `build_ch_gold` (lead_export/geo/deadline), Export vereint DE+CH per
+  `union_by_name`, `land` aus country-Spalte, Nicht-DE umgeht den Branchen-CAP, `l.extras[]`-Block
+- **Verifiziert:** 25-Seiten-Backfill → **280 CH-Leads** über alle Branchen, 100 % Geo+Extras,
+  Land-Filter „Schweiz" greift, Detail zeigt „Land: Schweiz" + „Zusätzliche Angaben (🇨🇭)".
+
+**Voll-Backfill** (Produktion): `python -m govisor.cli ingest-simap --gold` (ohne `--max-pages`),
+dann `python3 scripts/export_web_leads.py`. Awards (~50–80 %) tragen Gewinner/Preis/Bieterzahl —
+noch NICHT als Markt-Kontext an die Tender geknüpft (offener Folgeschritt über `ref_publication_number`).
+
+**Offen/Folge:** Award→Tender-Verknüpfung (Incumbent/Bieterzahl-Kontext) · Angebotsfrist-Uhrzeit +
+Frage-/Bindefrist aus simap in die Standard-Slots (statt nur date) · Kontaktdaten (PII) server-gegated.
