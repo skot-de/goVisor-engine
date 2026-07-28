@@ -453,3 +453,40 @@ def test_simap_downloader_wired_and_cursor_encoded():
     assert "%7C" in url and "|" not in url, "lastItem-Cursor nicht URL-kodiert"
     assert simap._search_url(None).count("lastItem") == 0  # Seite 1 ohne Cursor
     assert simap._month_of({"publicationDate": "2026-07-28"}) == "2026-07"
+
+
+def test_simap_parser_maps_award_richness():
+    """simap-Parser: Gewinner/Preis/Bieterzahl in die Standard-Slots, CH-Spezifika nach
+    attributes (Catch-all → speist l.extras). Locks das Feld-Mapping ohne Netz."""
+    from govisor import simap
+
+    rec = {
+        "summary": {"id": "proj-1", "publicationId": "pub-1", "publicationNumber": "42-02",
+                    "pubType": "award", "publicationDate": "2026-07-10",
+                    "title": {"de": "Testbau Zürich"}},
+        "detail": {
+            "base": {"title": {"de": "Testbau Zürich"}, "publicationDate": "2026-07-10",
+                     "publicationNumber": "42-02", "projectId": "proj-1", "creationLanguage": "de",
+                     "publicationTed": True, "stateContractArea": True},
+            "procurement": {"cpvCode": {"code": "45000000"}, "orderType": "construction",
+                            "orderDescription": {"de": "<p>Neubau</p>"},
+                            "additionalCpvCodes": [{"code": "45210000"}],
+                            "bkpCodes": [{"code": "214", "label": {"de": "Holzbau"}}],
+                            "orderAddress": {"cantonId": "ZH", "postalCode": "8001"}},
+            "decision": {"numberOfSubmissions": 4, "awardDecisionDate": "2026-06-01",
+                         "vendors": [{"vendorName": "Muster AG", "vendorId": "v1",
+                                      "price": {"price": 152652.35, "currency": "chf"},
+                                      "vendorAddress": {"cantonId": "LU", "city": "Horw"}}]},
+        },
+    }
+    t = simap.parse_publication(rec)
+    n = t["notices"][0]
+    assert n["notice_id"] == "pub-1" and n["country"] == "CH" and n["schema_gen"] == "simap"
+    assert n["notice_kind"] == "can" and n["cpv_main"] == "45000000"
+    assert n["contract_nature"] == "works" and n["performance_nuts"] == "ZH"
+    assert n["final_value"] == 152652.35 and n["value_currency"] == "CHF"
+    assert t["awards"][0]["winner_name"] == "Muster AG" and t["awards"][0]["num_tenders"] == 4
+    assert any(p["role"] == "winner" and p["name"] == "Muster AG" for p in t["notice_parties"])
+    assert {c["cpv_code"] for c in t["notice_cpv"]} == {"45000000", "45210000"}
+    paths = {a["path"] for a in t["attributes"]}
+    assert "simap/publicationTed" in paths and "simap/bkp" in paths and "simap/stateContractArea" in paths

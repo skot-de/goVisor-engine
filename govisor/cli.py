@@ -62,6 +62,8 @@ def build_parser() -> argparse.ArgumentParser:
                     help="Seiten begrenzen (je 20, neueste zuerst; Default: ganze Historie)")
     sm.add_argument("--delay", type=float, default=0.15, help="Pause je Request in s (höflich)")
     sm.add_argument("--force", action="store_true", help="Monatsfiles überschreiben statt mergen")
+    sm.add_argument("--silver", action="store_true",
+                    help="nach dem Download Bronze→Silber bauen (--max-pages 0 = nur Silber)")
 
     rev = sub.add_parser("review", help="Zweifelsfälle zur Nachbearbeitung anzeigen")
     rev.add_argument("--data-dir", default="data")
@@ -110,8 +112,10 @@ def cmd_ingest_simap(args) -> int:
     cfg = Config(countries=(args.country,), data_dir=args.data_dir)
     n = simap.download(cfg, country=args.country, max_pages=args.max_pages,
                        delay=args.delay, force=args.force)
-    print(f"  → {n:,} Publikationen in Bronze (raw_simap/{args.country}/). "
-          f"Parser (Silber) = Schritt 3.")
+    print(f"  → {n:,} Publikationen in Bronze (raw_simap/{args.country}/).")
+    if args.silver:
+        m = simap.build_silver(cfg, country=args.country, force=args.force)
+        print(f"  → {m:,} Notices in Silber (schema_gen=simap). Gold-Integration = Schritt 4.")
     return 0
 
 

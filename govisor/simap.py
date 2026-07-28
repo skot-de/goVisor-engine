@@ -21,6 +21,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from collections import defaultdict
+from datetime import date
 from pathlib import Path
 
 from .config import Config
@@ -153,3 +154,226 @@ def download(cfg: Config, country: str = "CH", max_pages: int | None = None,
 def available_months(cfg: Config, country: str = "CH") -> list[str]:
     d = _raw_dir(cfg, country)
     return sorted(p.stem for p in d.glob("*.jsonl")) if d.exists() else []
+
+
+# ── Parser: Bronze-JSON → Silber-Zeilen ──────────────────────────────────────────────
+# simap ist JSON (kein eForms) → eigener Parser, mappt auf dasselbe Silber-Schema wie TED/DÖE.
+# Universelle Felder → Standard-Spalten; CH-Spezifika (BKP/WTO/Rechtsmittel …) → attributes
+# (Catch-all, „kein Datenverlust") — daraus speist der Export später l.extras[].
+
+import re as _re
+
+_TAG = _re.compile(r"<[^>]+>")
+# simap-Ordnungstyp → unser contract_nature (works/services/supplies)
+_NATURE = {"construction": "works", "service": "services", "services": "services",
+           "supply": "supplies", "delivery": "supplies", "goods": "supplies"}
+# pubType → notice_kind (analog TED: cn=Ausschreibung, can=Zuschlag, pin=Vorinfo)
+_KIND = {"tender": "cn", "award": "can", "preInformation": "pin", "revocation": "revocation",
+         "competition": "cn"}
+
+
+def _pick(node) -> str | None:
+    """Mehrsprachiges {de,fr,it,en} → ein String (de bevorzugt). Auch schon-String durchlassen."""
+    if node is None:
+        return None
+    if isinstance(node, str):
+        return node or None
+    if isinstance(node, dict):
+        for lang in ("de", "fr", "it", "en"):
+            v = node.get(lang)
+            if v:
+                return v
+    return None
+
+
+def _text(node) -> str | None:
+    """Wie _pick, aber HTML-Tags raus (orderDescription trägt <p>…)."""
+    s = _pick(node)
+    return _TAG.sub(" ", s).strip() if s else None
+
+
+def _date(s: str | None):
+    """ISO-Datum/-Zeit ('2026-09-04' / '2026-09-04T11:00:00+02:00') → date. None-tolerant."""
+    if not s or not isinstance(s, str):
+        return None
+    try:
+        return date.fromisoformat(s[:10])
+    except ValueError:
+        return None
+
+
+def _addr_party(addr: dict, role: str, seq: int, nid: str) -> dict | None:
+    if not isinstance(addr, dict) or not addr:
+        return None
+    return {
+        "notice_id": nid, "role": role, "seq": seq,
+        "name": _pick(addr.get("name")), "national_id": addr.get("id"),
+        "town": _pick(addr.get("city")), "postal_code": addr.get("postalCode"),
+        "country": addr.get("countryId") or "CH", "nuts": addr.get("cantonId"),
+        # PII bleibt in Silber (server-seitig); die Frontend-Grenze zieht der Export.
+        "email": addr.get("email"), "phone": addr.get("phone"),
+        "contact_person": _pick(addr.get("contactPerson")), "url": _pick(addr.get("url")),
+    }
+
+
+def parse_publication(rec: dict) -> dict[str, list[dict]]:
+    """Ein Bronze-Satz {summary, detail} → {tabelle: [zeilen]} im Silber-Schema."""
+    s = rec.get("summary") or {}
+    d = rec.get("detail") or {}
+    base = d.get("base") or {}
+    proc = d.get("procurement") or {}
+    pinfo = d.get("project-info") or {}
+    dates = d.get("dates") or {}
+    dec = d.get("decision") or {}
+    terms = d.get("terms") or {}
+    ref = d.get("referencingPub") or {}
+
+    nid = s.get("publicationId") or base.get("id")
+    if not nid:
+        return {}
+    pubdate = _date(base.get("publicationDate") or s.get("publicationDate"))
+    pubtype = s.get("pubType") or base.get("type")
+    cpv = (proc.get("cpvCode") or {}).get("code") or (base.get("cpvCode") or {}).get("code")
+    desc = _text(proc.get("orderDescription"))
+    title = _pick(base.get("title")) or _pick(s.get("title"))
+
+    # Gewinner + Preis + Bieterzahl (Award) — strukturiert, kein NER nötig.
+    final_value = value_ccy = award_date = None
+    vendors = dec.get("vendors") or []
+    if vendors:
+        price = (vendors[0].get("price") or {})
+        final_value = price.get("price")
+        value_ccy = (price.get("currency") or "").upper() or None
+    award_date = _date(dec.get("awardDecisionDate"))
+
+    out: dict[str, list[dict]] = {}
+    out["notices"] = [{
+        "notice_id": nid,
+        "publication_number": base.get("publicationNumber") or s.get("publicationNumber"),
+        "publication_date": pubdate,
+        "country": "CH", "buyer_countries": ["CH"],
+        "year": pubdate.year if pubdate else None,
+        "month": pubdate.month if pubdate else None,
+        "schema_gen": "simap",
+        "form_type": pubtype, "notice_kind": _KIND.get(pubtype, pubtype),
+        "language": base.get("creationLanguage"),
+        "title": title, "description": desc,
+        "cpv_main": cpv,
+        "performance_nuts": (proc.get("orderAddress") or {}).get("cantonId")
+                            or (s.get("orderAddress") or {}).get("cantonId"),
+        "contract_nature": _NATURE.get(proc.get("orderType") or s.get("projectSubType")),
+        "procedure_type": proc.get("processType") or s.get("processType"),
+        "submission_deadline": _date(dates.get("offerDeadline")),
+        "portal_url": f"{BASE}/de/project-detail/{s.get('id') or base.get('projectId')}",
+        "final_value": float(final_value) if final_value is not None else None,
+        "value_currency": value_ccy,
+        "award_date": award_date,
+        "lot_count": len(d.get("lots") or []),
+        "text_chars": len(desc) if desc else 0,
+        "ref_publication_number": ref.get("publicationNumber"),
+    }]
+
+    # Käufer (+ Empfänger, falls abweichend) und Gewinner als Parteien.
+    parties = []
+    b = _addr_party(pinfo.get("procOfficeAddress"), "buyer", 0, nid)
+    if b:
+        parties.append(b)
+    for i, v in enumerate(vendors):
+        va = dict(v.get("vendorAddress") or {})
+        va.setdefault("name", v.get("vendorName"))
+        va["id"] = v.get("vendorId")
+        w = _addr_party(va, "winner", i, nid)
+        if w:
+            w["name"] = v.get("vendorName") or w["name"]
+            parties.append(w)
+    if parties:
+        out["notice_parties"] = parties
+
+    # Award-Kennzahlen (Bieterzahl!).
+    if pubtype == "award" or dec:
+        out["awards"] = [{
+            "notice_id": nid, "lot_id": None,
+            "winner_name": vendors[0].get("vendorName") if vendors else None,
+            "winner_national_id": vendors[0].get("vendorId") if vendors else None,
+            "num_tenders": dec.get("numberOfSubmissions"),
+        }]
+
+    # CPV (Haupt + zusätzliche).
+    cpvs = []
+    if cpv:
+        cpvs.append(cpv)
+    for c in (proc.get("additionalCpvCodes") or []):
+        code = c.get("code") if isinstance(c, dict) else c
+        if code:
+            cpvs.append(code)
+    if cpvs:
+        out["notice_cpv"] = [{"notice_id": nid, "cpv_code": c, "is_main": (i == 0)}
+                             for i, c in enumerate(dict.fromkeys(cpvs))]
+
+    # CH-Spezifika → attributes (Catch-all; speist später l.extras[]).
+    attrs = []
+
+    def _attr(path, value):
+        if value not in (None, "", [], "no"):
+            attrs.append({"notice_id": nid, "path": path, "value": str(value)})
+
+    _attr("simap/stateContractArea", base.get("stateContractArea") or pinfo.get("stateContractArea"))
+    _attr("simap/publicationTed", base.get("publicationTed"))
+    _attr("simap/consortiumAllowed", terms.get("consortiumAllowed"))
+    _attr("simap/subContractorAllowed", terms.get("subContractorAllowed"))
+    _attr("simap/remediesNotice", _text(terms.get("remediesNotice") or dec.get("remediesNotice")))
+    for bkp in (proc.get("bkpCodes") or []):
+        _attr("simap/bkp", f"{bkp.get('code')} {_pick(bkp.get('label')) or ''}".strip())
+    _attr("simap/cpcCode", proc.get("cpcCode"))
+    _attr("simap/questionDeadline", (dates.get("qnas") or [{}])[0].get("date"))
+    _attr("simap/offerValidityDeadline", dates.get("offerValidityDeadlineDate"))
+    if attrs:
+        out["attributes"] = attrs
+
+    return out
+
+
+def build_silver(cfg: Config, country: str = "CH", force: bool = False) -> int:
+    """Bronze-JSONL → Silber-Parquet (hive: silver/<c>/<table>/year=YYYY/YYYY-simap.parquet).
+
+    Dedup je notice_id (letzter Satz gewinnt). Gibt die Notice-Zahl zurück. Gold-Integration
+    (CH-Leads im Explorer) = Schritt 4.
+    """
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    from . import model
+
+    by_id: dict[str, dict[str, list[dict]]] = {}
+    for month in available_months(cfg, country):
+        path = _raw_dir(cfg, country) / f"{month}.jsonl"
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            try:
+                tables = parse_publication(json.loads(line))
+            except Exception:
+                continue
+            nid = (tables.get("notices") or [{}])[0].get("notice_id")
+            if nid:
+                by_id[nid] = tables
+
+    # Zeilen je Tabelle + Jahr sammeln.
+    buckets: dict[str, dict[int, list[dict]]] = defaultdict(lambda: defaultdict(list))
+    for tables in by_id.values():
+        year = (tables["notices"][0].get("year")) or 0
+        for table, rows in tables.items():
+            buckets[table][year].extend(rows)
+
+    for table, by_year in buckets.items():
+        schema = model.TABLES[table]
+        for year, rows in by_year.items():
+            out = cfg.silver_dir / country / table / f"year={year}" / f"{year}-simap.parquet"
+            out.parent.mkdir(parents=True, exist_ok=True)
+            arrow = pa.Table.from_pylist(rows, schema=schema)
+            tmp = out.with_suffix(".part")
+            pq.write_table(arrow, tmp, compression="zstd")
+            tmp.replace(out)
+    n = len(by_id)
+    print(f"simap {country} Silber: {n} Notices → {len(buckets)} Tabellen")
+    return n
