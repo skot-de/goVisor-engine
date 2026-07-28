@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import { readFile } from "node:fs/promises";
-import path from "node:path";
+import { loadDataFile } from "@/lib/dataSource";
 
 const BRANCHEN = ["it", "bau", "medizin", "beratung", "sicherheit", "energie"] as const;
 
@@ -32,8 +31,8 @@ async function loadCorpus(): Promise<Record<string, string[]>> {
     const out: Record<string, string[]> = {};
     for (const b of BRANCHEN) {
       try {
-        const file = path.join(process.cwd(), "data", `leads-${b}.json`);
-        const arr = JSON.parse(await readFile(file, "utf-8")) as RawLead[];
+        const raw = await loadDataFile(`leads-${b}.json`);
+        const arr = raw ? (JSON.parse(raw) as RawLead[]) : [];
         out[b] = Array.isArray(arr) ? arr.map(searchText) : [];
       } catch {
         out[b] = [];
@@ -50,14 +49,10 @@ export async function GET(req: Request) {
 
   // Ohne Query: die vollen Totale (unverändertes Verhalten).
   if (!q) {
-    try {
-      const file = path.join(process.cwd(), "data", "branchen.json");
-      return new NextResponse(await readFile(file, "utf-8"), {
-        headers: { "content-type": "application/json", "cache-control": "no-store" },
-      });
-    } catch {
-      return NextResponse.json({}, { status: 200 });
-    }
+    const json = await loadDataFile("branchen.json");
+    return new NextResponse(json ?? "{}", {
+      headers: { "content-type": "application/json", "cache-control": "no-store" },
+    });
   }
 
   // Mit Query: Treffer je Branche zählen. Mehrere Wörter → UND (wie im Client, Zeile 507).

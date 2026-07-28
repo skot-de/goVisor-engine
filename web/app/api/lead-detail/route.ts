@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import { readFile } from "node:fs/promises";
-import path from "node:path";
+import { loadDataFile } from "@/lib/dataSource";
 
 // Schwere Felder eines Leads (Beschreibung + Vergabestellen-Profil), erst beim Öffnen
 // geladen. Hält die Listen-Ladung schlank. Detail-Dateien werden nach Grundraum gecacht.
@@ -9,8 +8,9 @@ const cache = new Map<string, Record<string, unknown>>();
 
 async function load(branche: string) {
   if (cache.has(branche)) return cache.get(branche)!;
-  const file = path.join(process.cwd(), "data", `detail-${branche}.json`);
-  const data = JSON.parse(await readFile(file, "utf-8")) as Record<string, unknown>;
+  const raw = await loadDataFile(`detail-${branche}.json`);
+  if (!raw) throw new Error("keine Detaildaten");
+  const data = JSON.parse(raw) as Record<string, unknown>;
   cache.set(branche, data);
   return data;
 }

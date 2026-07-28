@@ -1,17 +1,11 @@
 import { NextResponse } from "next/server";
-import { readFile } from "node:fs/promises";
-import path from "node:path";
+import { loadDataFile } from "@/lib/dataSource";
 
-// PLZ→Koordinate-Tabelle {plz: [lat, lon, ort]} für die echte Umkreissuche. Einmal vom
-// Client geladen und dort gehalten; die getippte PLZ wird nachgeschlagen, dann filtert
-// das Frontend die Leads per Haversine gegen ihre lat/lon. ~10.813 Einträge, ~450 KB.
+// PLZ→Koordinate, country-verschachtelt {DE:{plz:[lat,lon,ort]},CH:{…},AT:{…}} für die echte
+// Umkreissuche. Geladen über den konfigurierbaren Daten-Loader (lokal oder Object-Storage).
 export async function GET() {
-  try {
-    const file = path.join(process.cwd(), "data", "plz-geo.json");
-    return new NextResponse(await readFile(file, "utf-8"), {
-      headers: { "content-type": "application/json", "cache-control": "no-store" },
-    });
-  } catch {
-    return NextResponse.json({}, { status: 200 });
-  }
+  const json = await loadDataFile("plz-geo.json");
+  return new NextResponse(json ?? "{}", {
+    headers: { "content-type": "application/json", "cache-control": "no-store" },
+  });
 }

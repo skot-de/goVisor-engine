@@ -1,17 +1,11 @@
 import { NextResponse } from "next/server";
-import { readFile } from "node:fs/promises";
-import path from "node:path";
+import { loadDataFile } from "@/lib/dataSource";
 
 // Marktblöcke je Grundraum (aktivste Vergabestellen + einstiegsfreundliche offene
-// Ausschreibungen + Eckzahlen) für den Chancen-Tab. Branche-weit, ohne Firmenprofil.
+// Ausschreibungen + Eckzahlen) für den Chancen-Tab. Geladen über den konfigurierbaren Loader.
 export async function GET() {
-  try {
-    const file = path.join(process.cwd(), "data", "markt.json");
-    const json = await readFile(file, "utf-8");
-    return new NextResponse(json, {
-      headers: { "content-type": "application/json", "cache-control": "no-store" },
-    });
-  } catch {
-    return NextResponse.json({}, { status: 200 });
-  }
+  const json = await loadDataFile("markt.json");
+  return new NextResponse(json ?? "{}", {
+    headers: { "content-type": "application/json", "cache-control": "no-store" },
+  });
 }
