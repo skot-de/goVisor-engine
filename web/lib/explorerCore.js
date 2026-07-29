@@ -1044,6 +1044,7 @@ function renderUebersicht(l){
           <div class="kvi kvi-full"><span class="k">Firma</span><span class="vv"><span class="v">${esc(inc.name)}</span>${
             l.eigen&&l.eigenBestaetigt===true?'<span class="oc-tag">von euch bestätigt</span>':''}</span></div>
           <div class="kvi"><span class="k">Auftragnehmer seit</span><span class="vv">${iv(inc.seit,'echt',null,true)}</span></div>
+          ${l.kette ? `<div class="kvi"><span class="k">Nachfolge-Kette</span><span class="vv"><span class="v">${Number(l.kette.tiefe)} Verträge in Folge${l.kette.seit?` seit ${esc(l.kette.seit)}`:''}</span> <span class="oc-tag">wiederkehrender Bedarf</span></span></div>` : ''}
           <div class="kvi"><span class="k">Zuschläge in CPV ${l.cpv}</span><span class="vv">${iv('47','echt',null,true)}</span></div>
         </div>`}
     </section>

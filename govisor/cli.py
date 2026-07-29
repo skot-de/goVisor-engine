@@ -422,6 +422,7 @@ def main(argv: list[str] | None = None) -> int:
               f"contractor_loss {sk['contractor_loss']:,}")
         print("tenure      :", f"{gold.build_incumbent_tenure(cfg, c):,} Incumbents mit Historie")
         print("award-link  :", f"{gold.build_award_tender_link(cfg, c):,} Zuschlag↔Ausschreibung (Attribution)")
+        print("vorgänger   :", f"{gold.build_lead_predecessor(cfg, c):,} offene Leads → Vorgänger-Zuschlag (Incumbent+Kette)")
         print("wert-anker  :", f"{gold.build_value_anchor(cfg, c):,} Zuschläge (Billing-Wächter)")
         print("frist       :", f"{gold.build_lead_deadline(cfg, c):,} offene Ausschr. (Angebotsfrist)")
         print("laufzeit    :", f"{gold.build_lead_duration(cfg, c):,} Leads (Vertragsende, echt+geschätzt)")

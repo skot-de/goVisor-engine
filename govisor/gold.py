@@ -3422,6 +3422,72 @@ def build_at_gold(cfg: Config, country: str = "AT"):
     return n
 
 
+def build_lead_predecessor(cfg: Config, country: str = "DE"):
+    """Offene Leads (``source`` f01/f02, ohne eigenen Zuschlag) mit ihrem **Vorgänger-Zuschlag**
+    verknüpfen → Incumbent, Bieterzahl, Wettbewerb + Nachfolge-**Kette**.
+
+    Das Problem (gemessen 2026-07-29): die 12k offenen DE-Leads hatten Incumbent/Konkurrenz/Wechsel
+    zu 0 %, weil eine offene Ausschreibung noch keinen Zuschlag hat. Der Amtsinhaber ist aber
+    bekannt: wer den **auslaufenden Vorgänger-Vertrag** hält. Diese Brücke matcht den offenen Lead
+    auf den jüngsten passenden Zuschlag desselben Käufers (Entity + CPV + Titel-Token-Überlappung)
+    und erbt von dort Gewinner + Bieterzahl. Über ``incumbent_tenure`` (keyed auf die Zuschlag-
+    ``notice_id``) kommt die **Kettentiefe** (bis 10 Zyklen) und „Incumbent seit" gratis dazu.
+
+    Schreibt ``lead_predecessor.parquet`` (lead_id → incumbent_*, n_bidders, competition_level,
+    chain_depth, incumbent_since_year, confidence); der Web-Export joint es für offene Leads.
+    Konservativ: nur bei Entity+CPV-Gleichheit UND Titel-Token-Überlappung (sonst kein Link).
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    N = f"'{cfg.silver_table_glob('notices', country)}'"
+    A = f"'{cfg.silver_table_glob('awards', country)}'"
+    L = f"'{(g / 'leads.parquet').as_posix()}'"
+    PE = f"'{(g / 'party_entity.parquet').as_posix()}'"
+    IT = f"'{(g / 'incumbent_tenure.parquet').as_posix()}'"
+    _tok = ("list_filter(string_split(regexp_replace(lower({c}), '[^a-zäöü0-9 ]', ' ', 'g'), ' '),"
+            " w -> length(w) >= 5)")
+    con = duckdb.connect()
+    out = (g / "lead_predecessor.parquet").as_posix()
+    con.execute(f"""COPY (
+      WITH award_ctx AS (   -- Zuschläge mit Käufer-Entity, Gewinner, Bieterzahl, Datum, CPV, Titel
+        SELECT an.notice_id, pe.entity_id AS buyer_entity, aw.winner_name, aw.num_tenders,
+               an.award_date, an.cpv_main, an.title
+        FROM read_parquet({N}, hive_partitioning=1) an
+        JOIN read_parquet({A}, hive_partitioning=1) aw ON aw.notice_id = an.notice_id
+        JOIN read_parquet({PE}) pe ON pe.notice_id = an.notice_id AND pe.role='buyer'
+        WHERE an.notice_kind='can' AND aw.winner_name IS NOT NULL AND an.award_date IS NOT NULL),
+      open_lead AS (
+        SELECT lead_id, buyer_entity, cpv_main, titel
+        FROM read_parquet({L})
+        WHERE source IN ('f01','f02') AND buyer_entity IS NOT NULL AND cpv_main IS NOT NULL),
+      matched AS (
+        SELECT ol.lead_id, ac.notice_id AS pred_notice, ac.winner_name, ac.num_tenders,
+               ac.award_date,
+               row_number() OVER (PARTITION BY ol.lead_id ORDER BY ac.award_date DESC) AS rn
+        FROM open_lead ol
+        JOIN award_ctx ac ON ac.buyer_entity = ol.buyer_entity AND ac.cpv_main = ol.cpv_main
+          AND list_has_any({_tok.format(c='ol.titel')}, {_tok.format(c='ac.title')}))
+      SELECT m.lead_id, m.pred_notice, m.winner_name AS incumbent_name, m.num_tenders AS n_bidders,
+             m.award_date AS pred_award_date,
+             CASE WHEN m.num_tenders IS NULL THEN NULL
+                  WHEN m.num_tenders <= 2 THEN 'low'
+                  WHEN m.num_tenders <= 5 THEN 'medium' ELSE 'high' END AS competition_level,
+             it.incumbent_since_year, it.tenure_years,
+             coalesce(it.chain_depth, 1) AS chain_depth,
+             'content' AS incumbent_source, 0.6 AS incumbent_confidence
+      FROM matched m
+      LEFT JOIN read_parquet({IT}) it ON it.notice_id = m.pred_notice
+      WHERE m.rn = 1
+    ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    deep = con.execute(f"SELECT count(*) FROM read_parquet('{out}') WHERE chain_depth >= 3").fetchone()[0]
+    con.close()
+    print(f"lead_predecessor {country}: {n:,} offene Leads verknüpft "
+          f"(davon {deep:,} mit Kette ≥3 Verträge)")
+    return n
+
+
 def build_dim_nuts(cfg: Config, country: str = "DE"):
     """NUTS-Code → Name/Ebene/Parent für **Regions-Autocomplete** (Radius-Kombination).
 

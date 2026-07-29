@@ -60,6 +60,13 @@ EI = f"read_parquet('{G}/entity_identity.parquet')"
 DL = _union("lead_deadline")                        # Angebotsfrist-Herkunft (#16), DE+CH
 LG = _union("lead_geo")                              # Koordinate je Lead (echter km-Radius), DE+CH
 PLZ = f"read_parquet('{G}/dim_plz.parquet')"        # PLZ→Zentroid für die PLZ-Umkreissuche
+# Vorgänger-Link: offene Leads (ohne eigenen Zuschlag) erben Incumbent/Bieterzahl/Kette vom
+# jüngsten passenden Vorgänger-Zuschlag. Guard: fehlt die Tabelle, leerer Stub (kein Join-Fehler).
+_LP_PATH = f"{G}/lead_predecessor.parquet"
+LP = (f"read_parquet('{_LP_PATH}')" if pathlib.Path(_LP_PATH).exists() else
+      "(SELECT NULL::VARCHAR lead_id, NULL::VARCHAR incumbent_name, NULL::BIGINT n_bidders, "
+      "NULL::VARCHAR competition_level, NULL::BIGINT chain_depth, NULL::BIGINT incumbent_since_year "
+      "WHERE false)")
 
 
 def de_date(d):
@@ -396,12 +403,16 @@ def export_branche(key):
         WITH mapped AS (
           SELECT e.*, cl.label AS cpv_label, {BRANCHE} AS ui_branche,
                  dl.deadline_source AS frist_source,
-                 lg.lat AS geo_lat, lg.lon AS geo_lon
+                 lg.lat AS geo_lat, lg.lon AS geo_lon,
+                 lp.incumbent_name AS pred_incumbent, lp.n_bidders AS pred_bidders,
+                 lp.competition_level AS pred_konk, lp.chain_depth AS pred_chain,
+                 lp.incumbent_since_year AS pred_since
           FROM {E} e
           LEFT JOIN {DC} b ON b.division = substr(e.cpv_code, 1, 2)
           LEFT JOIN {CL} cl ON cl.cpv_code = e.cpv_code
           LEFT JOIN {DL} dl ON dl.notice_id = e.lead_id
           LEFT JOIN {LG} lg ON lg.lead_id = e.lead_id
+          LEFT JOIN {LP} lp ON lp.lead_id = e.lead_id
         )
         , filtered AS (
           SELECT * FROM mapped WHERE ui_branche = '{key}'
@@ -460,7 +471,35 @@ def export_branche(key):
         endet = f"in {int(mte)} Mon." if mte is not None else None
 
         nb = g("n_bidders")
+        # Vorgänger-Fallback: offene Leads (ohne eigenen Zuschlag) erben Incumbent/Bieterzahl/
+        # Wettbewerb/Kette vom jüngsten passenden Vorgänger-Zuschlag (build_lead_predecessor).
+        use_pred = (not g("incumbent_name")) and bool(g("pred_incumbent"))
+        if use_pred and not nb:
+            nb = g("pred_bidders")
         konk_wert = f"{int(nb)} Bieter" if nb else "nicht veröffentlicht"
+        konk_stufe = KONK_LVL.get(g("competition_level"), "na")
+        if konk_stufe == "na":
+            konk_stufe = KONK_LVL.get(g("pred_konk"), "na")     # Intensität aus Vorgänger
+        wechsel = LVL.get(g("switch_chance"), "na")
+        if wechsel == "na":
+            wechsel = LVL.get(g("pred_konk"), "na")             # Angreifbarkeit grob aus Vorgänger-Wettbewerb
+        pred_chain = g("pred_chain")
+        kette = ({"tiefe": int(pred_chain),
+                  "seit": str(int(g("pred_since"))) if g("pred_since") else ""}
+                 if pred_chain and int(pred_chain) >= 2 else None)
+        if use_pred:
+            inc_obj = {"name": g("pred_incumbent"),
+                       "seit": str(int(g("pred_since"))) if g("pred_since") else "",
+                       "src": "uncertain", "hint": "aus dem letzten vergleichbaren Zuschlag desselben Käufers",
+                       "groupId": None, "conf": 0.6}
+        elif g("incumbent_name"):
+            inc_obj = {"name": r["incumbent_name"],
+                       "seit": str(int(r["incumbent_since_year"])) if g("incumbent_since_year") else "",
+                       "src": INC_SRC.get(g("incumbent_source"), "echt"), "hint": "",
+                       "groupId": g("incumbent_group_id"),
+                       "conf": float(r["incumbent_confidence"]) if g("incumbent_confidence") is not None else None}
+        else:
+            inc_obj = None
 
         leads.append({
             # Sprachneutral: nur Codes (src/contractKind/naturKat/volumen.src). Die deutschen
@@ -491,17 +530,16 @@ def export_branche(key):
             "timing": {"wert": endet or (f"{tage} Tage" if tage is not None else "offen"),
                        "src": TIM_SRC.get(g("timing_source"), "unbekannt"), "warn": False,
                        "hint": ""},
-            "konk": {"wert": konk_wert, "src": KONK_SRC.get(g("competition_source"), "na"),
-                     "stufe": KONK_LVL.get(g("competition_level"), "na"),
-                     "hint": "Aus der letzten Zuschlagsbekanntmachung." if g("competition_source") == "actual" else ""},
+            "konk": {"wert": konk_wert,
+                     "src": KONK_SRC.get(g("competition_source"), "uncertain" if use_pred else "na"),
+                     "stufe": konk_stufe,
+                     "hint": ("Aus der letzten Zuschlagsbekanntmachung." if g("competition_source") == "actual"
+                              else "Aus dem letzten vergleichbaren Zuschlag desselben Käufers." if use_pred else "")},
             "relevanz": "na",  # ohne gepflegtes Profil nicht berechenbar → ehrlich n/a
-            "wechsel": LVL.get(g("switch_chance"), "na"),
-            "neu": bool(g("is_new_tender")),
-            "incumbent": ({"name": r["incumbent_name"], "seit": str(int(r["incumbent_since_year"])) if g("incumbent_since_year") else "",
-                           "src": INC_SRC.get(g("incumbent_source"), "echt"), "hint": "",
-                           "groupId": g("incumbent_group_id"),
-                           "conf": float(r["incumbent_confidence"]) if g("incumbent_confidence") is not None else None}
-                          if g("incumbent_name") else None),
+            "wechsel": wechsel,
+            "kette": kette,    # Nachfolge-Kette: {tiefe, seit} — nur wenn ≥2 Verträge belegt
+            "neu": bool(g("is_new_tender")) and not use_pred,
+            "incumbent": inc_obj,
             "tage": tage, "endTage": endTage, "endet": endet,
             # #16 Angebotsfrist (echte Daten): Datum + Resttage + Herkunft. Uhrzeit/Bieterfragen-
             # Frist sind (noch) nicht in Gold extrahiert → hier ehrlich weggelassen, nicht erfunden.

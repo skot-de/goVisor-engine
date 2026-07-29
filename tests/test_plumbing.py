@@ -603,6 +603,27 @@ def test_source_registry_is_wellformed():
     assert any(s.id == "ted-at" and s.status == "prepared" for s in sources.REGISTRY)
 
 
+def test_lead_predecessor_wired():
+    """build_lead_predecessor (offene Leads → Vorgänger-Zuschlag → Incumbent+Kette) existiert + im
+    Gold-Lauf verdrahtet. Wo gebaut: Schema + chain_depth≥1 + Konfidenz gesetzt."""
+    from govisor import gold
+    assert hasattr(gold, "build_lead_predecessor")
+    # im cmd_gold-Lauf aufgeführt
+    import inspect
+    from govisor import cli
+    assert "build_lead_predecessor" in inspect.getsource(cli)
+    lp = "data/gold/DE/lead_predecessor.parquet"
+    if os.path.exists(lp):
+        con = duckdb.connect()
+        cols = [c[0] for c in con.execute(f"DESCRIBE SELECT * FROM read_parquet('{lp}')").fetchall()]
+        for need in ("lead_id", "incumbent_name", "n_bidders", "competition_level",
+                     "chain_depth", "incumbent_since_year", "incumbent_confidence"):
+            assert need in cols, f"lead_predecessor fehlt Spalte {need}"
+        bad = con.execute(f"SELECT count(*) FROM read_parquet('{lp}') "
+                          f"WHERE chain_depth < 1 OR incumbent_name IS NULL").fetchone()[0]
+        assert bad == 0, "jede Zeile braucht Incumbent + chain_depth>=1"
+
+
 def test_clean_display_name():
     """Anzeige-Namen-Bereinigung: generische Hoheits-Präfixe → vertretene Stelle auflösen,
     spezifische Präfixe behalten, KOMPLETT-GROSS → Titel-Schreibung, idempotent, konservativ."""
