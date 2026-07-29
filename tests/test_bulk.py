@@ -95,6 +95,25 @@ def test_language_suffixed_xml_opoce_format(tmp_path):
     assert bulk._verify(path) == 4
 
 
+def test_text_era_zips_are_language_not_country_named(tmp_path):
+    """Sprach-Ära (~2004–2012): die Zips heißen nach AMTSSPRACHE (DE_/FR_/…), nicht nach Land.
+    `DE_` = alle deutschsprachigen Notices → enthält Österreichs Notices. Der Länder-Perf-Filter
+    muss AT deshalb aufs `DE_`-Zip mappen (sonst 0, weil kein `AT_`-Zip existiert — der Bug, der
+    die ganze AT-Historie 2004–2010 verschluckte). Das Inhalts-Land filtert danach ingest_month."""
+    daily = _tar_gz({
+        "DE_20040102_001_ISO_ORG.ZIP": _zip({"770_2004.xml": NOTICE}),   # deutschsprachig (DE+AT)
+        "FR_20040102_001_ISO_ORG.ZIP": _zip({"771_2004.xml": NOTICE}),   # französischsprachig
+    })
+    path = tmp_path / "lang.tar.gz"
+    path.write_bytes(_tar_gz({"01/20040102_2004001.tar.gz": daily}))
+    # AT liest das deutsche Zip (NICHT leer!) und NICHT das französische.
+    assert set(dict(bulk.iter_notices(path, country="AT"))) == {"770_2004"}
+    # DE unverändert: liest ebenfalls das deutsche Zip.
+    assert set(dict(bulk.iter_notices(path, country="DE"))) == {"770_2004"}
+    # FR liest das französische Zip.
+    assert set(dict(bulk.iter_notices(path, country="FR"))) == {"771_2004"}
+
+
 def test_truncated_archive_is_rejected(tmp_path):
     """Ein abgeschnittener Download darf nicht als vollständiger Monat durchgehen."""
     full = _tar_gz({f"{i}_2023.xml": NOTICE for i in range(50)})

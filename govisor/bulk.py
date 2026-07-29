@@ -161,6 +161,19 @@ def _split_text_notices(data: bytes) -> Iterator[tuple[str, bytes]]:
             yield m.group(1).decode("ascii", "replace").strip(), record
 
 
+# Text-/Sprach-Ära (~2004–2012): Land → Amtssprache(n), unter denen seine Notices im Paket
+# liegen (die Zips sind sprach-, nicht länderbenannt). Reicht, um das richtige Sprachzip zu
+# lesen; das Inhalts-Land filtert danach `ingest_month`. Mehrsprachige Länder (BE/LU/FI) listen
+# alle relevanten Sprachen. Länder ohne Eintrag fallen auf ihren eigenen Code zurück (moderne
+# Pakete sind ohnehin länder-, nicht sprachbenannt).
+_TEXT_ERA_LANG = {
+    "AT": ("DE",), "DE": ("DE",), "LU": ("FR", "DE"), "BE": ("FR", "NL"),
+    "FR": ("FR",), "IT": ("IT",), "ES": ("ES",), "PT": ("PT",), "NL": ("NL",),
+    "FI": ("FI", "SV"), "SE": ("SV",), "DK": ("DA",), "GR": ("EL",),
+    "IE": ("EN",), "GB": ("EN",), "UK": ("EN",),
+}
+
+
 def _walk(name: str, data: bytes, country: str | None) -> Iterator[tuple[str, bytes]]:
     """Rekursiv durch beliebig verschachtelte Archive bis zur XML-Notice.
 
@@ -185,9 +198,20 @@ def _walk(name: str, data: bytes, country: str | None) -> Iterator[tuple[str, by
         base = Path(name).name
         if "_meta" in base.lower():
             return                                   # Metadaten-Zip, keine Notice
-        if (country and len(base) > 2 and base[2] == "_"
-                and base[:2].isalpha() and base[:2].upper() != country.upper()):
-            return                                   # anderes Land → überspringen
+        if country and len(base) > 2 and base[2] == "_" and base[:2].isalpha():
+            pfx = base[:2].upper()
+            up = base.upper()
+            if "_ISO_ORG" in up or "_UTF8_ORG" in up:
+                # Sprach-Ära (~2004–2012): die Zips sind nach AMTSSPRACHE benannt
+                # (DA/DE/EL/EN/ES/FI/FR/IT/NL/PT/SV), NICHT nach Land. `DE_` = alle
+                # deutschsprachigen Notices → enthält DE UND AT (und CH). Ein Filter,
+                # der hier den Ländercode sucht, wirft für z. B. AT ALLES weg (kein
+                # `AT_`-Zip existiert). Also aufs Sprachzip des Landes mappen; das
+                # Inhalts-Land filtert danach `ingest_month` (buyer_countries).
+                if pfx not in _TEXT_ERA_LANG.get(country.upper(), (country.upper(),)):
+                    return
+            elif pfx != country.upper():
+                return                               # moderne Länder-Zips → anderes Land weg
         # TED legt in Alt-Paketen (2005–2012) 0-Byte-Platzhalter-Zips ab, z. B. eine
         # leere ``CS_…_ISO_ORG.ZIP`` neben der echten UTF8-Variante. Ein leeres/defektes
         # Zip enthält null Notices — überspringen ist verlustfrei. Ohne diese Toleranz
