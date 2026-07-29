@@ -17,6 +17,15 @@ im Frontend).
   calendar_feed/data_export) mit `enable row level security` + Policies. Analyse-Tabellen bewusst ohne
   Policy (Paywall serverseitig).
 
+## 🟠 Vorgebaut — schaltet mit Billing scharf
+**Paywall-Redaktion (`a`… Prepare).** Server-seitige, tier-abhängige Redaktions-Schicht:
+`lib/tier.ts` (`getTier()`, Env-Gate `PAYWALL_ENFORCED`) + `lib/redact.ts` (redigiert Premium-
+Felder auf Platzhalter) in `/api/lead-detail` + `/api/markt`. **Heute wirkungslos** (Gate aus →
+jeder `pro` → wie bisher). **Scharfstellen:** `PAYWALL_ENFORCED=true` + Client-`accountLimit` +
+echtes Abo-Feld (`user_profiles.tier`). Verifiziert: Gate an+Free → nAwards/singleBidder/top3/
+dominatoren/topStellen-Zahlen redigiert; Gate aus → volle Daten. **Offen bleibt** die Liste
+(`netzSuchend`, 10 MB → nicht per-Request geparst; klein, eigenes Endpoint/Export-Split später).
+
 ## 🔴 Offen — VOR Monetarisierung zwingend
 - **Paywall ist rein kosmetisch (§9-Blur).** Für Free-Nutzer werden die **echten** Premium-Werte
   (Markt-Konzentration, Retention, Gewinner-Anteile, Bieterzahlen, Käufer-Mix) ins DOM gesendet und

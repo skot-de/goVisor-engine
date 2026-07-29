@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { loadDataFile } from "@/lib/dataSource";
+import { getTier } from "@/lib/tier";
+import { redactDetail } from "@/lib/redact";
 
 // Schwere Felder eines Leads (Beschreibung + Vergabestellen-Profil), erst beim Öffnen
 // geladen. Hält die Listen-Ladung schlank. Detail-Dateien werden nach Grundraum gecacht.
@@ -24,7 +26,8 @@ export async function GET(req: Request) {
   }
   try {
     const all = await load(branche);
-    return NextResponse.json(all[id] ?? {});
+    const tier = await getTier();   // Free → Premium-Analytik im Detail redigieren (server-seitig)
+    return NextResponse.json(redactDetail(all[id] ?? {}, tier));
   } catch {
     return NextResponse.json({ error: "keine Detaildaten" }, { status: 503 });
   }
