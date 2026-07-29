@@ -1084,6 +1084,9 @@ def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = Non
     # Kuratierte Aliase (belegte Umbenennungen/Fragmente, z. B. DB Netz→DB InfraGO).
     # Identitäts-Merge, KEIN Namensstamm-Raten — nur was in der CSV steht (human-verifiziert).
     merge_map.update(_load_entity_aliases(cfg, country, entity_of))
+    # Clean-Name-Merge (PLZ-gegated): nur-Name-Fragmente öffentlicher Stellen ohne Register-Anker
+    # (Casing-/Vertretungs-Dubletten) zusammenführen. Gemessen ~8 % weniger Vergabestellen-Entities.
+    merge_map.update(_consolidate_by_shared_name_plz(entity_of, plz_of, set(merge_map)))
     for old_id, new_id in merge_map.items():
         src = entity_of.pop(old_id, None)
         tgt = entity_of.get(new_id)
@@ -1187,6 +1190,42 @@ def _consolidate_by_national_id(entity_of: dict, plz_of: dict):
             else:
                 flagged.append((norm, e.entity_id, target.entity_id, "kein_plz_beleg"))
     return merge_map, flagged
+
+
+def _consolidate_by_shared_name_plz(entity_of: dict, plz_of: dict, already: set):
+    """Nur-Name-Fragmente mit GLEICHEM Namen (``norm``) UND geteilter PLZ verschmelzen — auch OHNE
+    Register-Anker. Schließt die Lücke für **öffentliche Stellen** (nicht im HR): Casing-/Vertretungs-
+    Dubletten (``OCHTUMVERBAND`` = ``Ochtumverband``) landen im selben norm-Cluster, blieben aber
+    getrennt, weil ``_consolidate_by_national_id`` einen ID-Anker braucht. Gate = geteilte PLZ (dieselbe
+    „0 Fehl-Merges"-Regel wie Stufe 1); zwei „Stadtwerke" verschiedener Orte bleiben getrennt.
+
+    ``already`` = Entities, die schon (per National-ID/Alias) verschmelzen — die überspringen wir.
+    Konservativ: mergt je Cluster in die kleinste entity_id, nur wo eine PLZ überlappt.
+    """
+    from collections import defaultdict
+
+    by_norm: dict[str, list] = defaultdict(list)
+    for e in entity_of.values():
+        if e.norm and e.method == Method.NAME_ONLY and e.entity_id not in already:
+            by_norm[e.norm].append(e)
+
+    merge_map: dict[str, str] = {}
+    for norm, group in by_norm.items():
+        if len(group) < 2:
+            continue
+        group.sort(key=lambda e: e.entity_id)          # kleinste ID = Repräsentant, stabil
+        for i, rep in enumerate(group):
+            if rep.entity_id in merge_map:
+                continue                                # schon einem früheren Repräsentanten zugeschlagen
+            rplz = plz_of.get(rep.entity_id, set())
+            if not rplz:
+                continue                                # ohne PLZ kein Beleg → nicht mergen
+            for other in group[i + 1:]:
+                if other.entity_id in merge_map:
+                    continue
+                if plz_of.get(other.entity_id, set()) & rplz:
+                    merge_map[other.entity_id] = rep.entity_id
+    return merge_map
 
 
 def _write(con, path, rows, columns):

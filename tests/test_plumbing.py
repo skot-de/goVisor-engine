@@ -603,6 +603,31 @@ def test_source_registry_is_wellformed():
     assert any(s.id == "ted-at" and s.status == "prepared" for s in sources.REGISTRY)
 
 
+def test_consolidate_by_shared_name_plz():
+    """Clean-Name-Merge (PLZ-gegated): nur-Name-Fragmente öffentlicher Stellen mit gleichem norm UND
+    geteilter PLZ verschmelzen; verschiedene PLZ (zwei Städte) NICHT; `already`-Entities übersprungen."""
+    from govisor.gold import ResolvedEntity, Method, _consolidate_by_shared_name_plz
+
+    def E(eid, norm, method=Method.NAME_ONLY):
+        return ResolvedEntity(entity_id=eid, canonical_name=norm.upper(), method=method,
+                              confidence=0.4, national_id=None, source_names=(norm,), norm=norm)
+    ents = {e.entity_id: e for e in [
+        E("a1", "ochtumverband"), E("a2", "ochtumverband"), E("a3", "ochtumverband"),
+        E("b1", "stadtwerke"), E("b2", "stadtwerke"),
+        E("c1", "amt fuer hochbau", Method.HR_EXACT),   # Register-Anker → nicht nur_name
+    ]}
+    plz = {"a1": {"28844"}, "a2": {"28844"}, "a3": {"12345"},   # a1+a2 gleiche PLZ, a3 andere
+           "b1": {"80331"}, "b2": {"50667"}}                    # zwei Städte → getrennt
+    mm = _consolidate_by_shared_name_plz(ents, plz, already=set())
+    assert mm.get("a2") == "a1", "gleicher Name + PLZ → merge"
+    assert "a3" not in mm, "andere PLZ → kein merge"
+    assert "b2" not in mm and "b1" not in mm, "zwei Städte gleichen Namens bleiben getrennt"
+    assert "c1" not in mm, "Register-Entity ist kein nur_name-Merge-Kandidat"
+    # `already` (schon per ID verschmolzen) wird übersprungen
+    mm2 = _consolidate_by_shared_name_plz(ents, plz, already={"a1", "a2"})
+    assert "a2" not in mm2
+
+
 def test_lead_predecessor_wired():
     """build_lead_predecessor (offene Leads → Vorgänger-Zuschlag → Incumbent+Kette) existiert + im
     Gold-Lauf verdrahtet. Wo gebaut: Schema + chain_depth≥1 + Konfidenz gesetzt."""
