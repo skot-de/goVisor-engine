@@ -67,6 +67,16 @@ def build_parser() -> argparse.ArgumentParser:
     sm.add_argument("--gold", action="store_true",
                     help="Silber + schlanke CH-Gold-Brücke bauen (lead_export/geo/deadline)")
 
+    av = sub.add_parser("ingest-atverg", help="OffeneVergaben.at (AT unterschwellig, CSV-Bulk) → Bronze")
+    av.add_argument("--country", default="AT")
+    av.add_argument("--data-dir", default="data")
+    av.add_argument("--stamp", default=None, help="Datei-Stempel überschreiben (Default: heute)")
+    av.add_argument("--silver", action="store_true",
+                    help="nach dem Download Bronze→Silber bauen (--skip-download = nur Silber)")
+    av.add_argument("--skip-download", dest="skip_download", action="store_true",
+                    help="kein Download, nur aus vorhandener Bronze-ZIP Silber bauen")
+    av.add_argument("--force", action="store_true", help="vorhandene Silber-Parquet überschreiben")
+
     rev = sub.add_parser("review", help="Zweifelsfälle zur Nachbearbeitung anzeigen")
     rev.add_argument("--data-dir", default="data")
     rev.add_argument("--csv", help="Queue als CSV exportieren")
@@ -79,6 +89,11 @@ def build_parser() -> argparse.ArgumentParser:
                        help="schlanke Quell-Gold-Brücke statt voller Pipeline (z.B. AT: build_at_gold)")
     goldp.add_argument("--as-of", dest="as_of", default=None,
                        help="Stichtag YYYY-MM-DD für den Auslauf-Radar (Default: heute)")
+
+    srcp = sub.add_parser("sources", help="Quellen-Registry anzeigen (Connector × Land × Tier)")
+    srcp.add_argument("--country", default=None, metavar="CC", help="nur Quellen dieses Landes")
+    srcp.add_argument("--status", default=None, choices=("live", "prepared", "candidate", "research"),
+                      help="nur Quellen dieses Status")
 
     check = sub.add_parser("verify", help="Vollständigkeit gegen die TED-API prüfen")
     check.add_argument("--from", dest="start", type=_month, default=(2016, 1), metavar="YYYY-MM")
@@ -124,6 +139,19 @@ def cmd_ingest_simap(args) -> int:
         k = simap.build_ch_gold(cfg, country=args.country)
         print(f"  → {k:,} CH-Leads in Gold. `scripts/export_web_leads.py` laufen lassen, "
               f"damit sie im Explorer erscheinen.")
+    return 0
+
+
+def cmd_ingest_atverg(args) -> int:
+    from . import atverg
+    cfg = Config(countries=(args.country,), data_dir=args.data_dir)
+    if not args.skip_download:
+        p = atverg.download(cfg, country=args.country, stamp=args.stamp)
+        print(f"  → Bronze: {p}")
+    if args.silver or args.skip_download:
+        m = atverg.build_silver(cfg, country=args.country, force=args.force)
+        print(f"  → {m:,} Notices in Silber (schema_gen=atverg). Danach `gold --country AT` "
+              f"(build_at_gold zieht die atverg-cn-Leads automatisch mit).")
     return 0
 
 
@@ -210,6 +238,25 @@ def cmd_review(args) -> int:
     return 0
 
 
+def cmd_sources(args) -> int:
+    """Quellen-Registry (govisor/sources.py) auflisten — Connector × Land × Tier + Kennzahlen."""
+    from . import sources
+    if args.country or args.status:
+        rows = sources.REGISTRY
+        if args.country:
+            rows = [s for s in rows if s.country == args.country.upper()]
+        if args.status:
+            rows = [s for s in rows if s.status == args.status]
+        print(f"{'Quelle':<40}{'Connector':<12}{'Land':<5}{'Tier':<15}Status")
+        print("-" * 80)
+        for s in rows:
+            print(f"{s.name:<40}{s.connector:<12}{s.country:<5}{s.tier:<15}{s.status}")
+        print(f"\n{len(rows)} Quelle(n).")
+    else:
+        print(sources.format_overview())
+    return 0
+
+
 def cmd_verify(args) -> int:
     """Jeden Monat einzeln gegen TED prüfen — Archiv lesen, Zahlen vergleichen."""
     cfg = Config(countries=(args.country,), data_dir=args.data_dir)
@@ -286,6 +333,10 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_ingest_doe(args)
     if args.command == "ingest-simap":
         return cmd_ingest_simap(args)
+    if args.command == "ingest-atverg":
+        return cmd_ingest_atverg(args)
+    if args.command == "sources":
+        return cmd_sources(args)
     if args.command == "verify":
         return cmd_verify(args)
     if args.command == "review":

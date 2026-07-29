@@ -520,3 +520,135 @@ def test_at_bridge_wired_and_dim_plz_country_keyed():
         cols = [c[0] for c in duckdb.connect().execute(
             f"describe select * from read_parquet('{dp[0]}')").fetchall()]
         assert "country" in cols, "dim_plz braucht country-Spalte (AT/CH-PLZ-Kollision)"
+
+
+@pytest.mark.skipif(not os.path.exists("data/gold/DE/dim_plz.parquet"),
+                    reason="dim_plz nicht gebaut")
+def test_at_gold_osb_dedup(tmp_path):
+    """build_at_gold: atverg-OSB-Notices (oberschwellig, geflaggt via attributes 'atverg/schwelle'
+    = 'OSB') werden ausgeschlossen (TED-AT deckt oberschwellig ab → Doppel-Leads vermeiden);
+    TED-AT + atverg-USB bleiben. Ohne atverg-attributes ist der Filter ein No-op."""
+    import shutil
+    from datetime import date
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+    import duckdb
+    from govisor import model, gold
+    from govisor.config import Config
+
+    FUT = date(2099, 1, 1)
+
+    def notice(nid, gen):
+        r = {f.name: None for f in model.TABLES["notices"]}
+        r.update(notice_id=nid, title=f"x {nid}", schema_gen=gen, country="AT",
+                 buyer_countries=["AT"], notice_kind="cn", submission_deadline=FUT,
+                 cpv_main="45000000", year=2026, month=1)
+        return r
+
+    def write(table, rows):
+        out = tmp_path / "silver" / "AT" / table / "year=2026" / "2026-x.parquet"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        pq.write_table(pa.Table.from_pylist(rows, schema=model.TABLES[table]), out)
+
+    write("notices", [notice("123456_2026", "eforms"), notice("atv-1", "atverg"),
+                      notice("atv-2", "atverg")])
+    parties = []
+    for nid in ("123456_2026", "atv-1", "atv-2"):
+        p = {f.name: None for f in model.TABLES["notice_parties"]}
+        p.update(notice_id=nid, role="buyer", seq=0, name="Stadt Wien", country="AT")
+        parties.append(p)
+    write("notice_parties", parties)
+    write("awards", [])
+    write("attributes", [{"notice_id": "atv-1", "path": "atverg/schwelle", "value": "OSB"},
+                         {"notice_id": "atv-2", "path": "atverg/schwelle", "value": "USB"}])
+    (tmp_path / "gold" / "DE").mkdir(parents=True, exist_ok=True)
+    shutil.copy("data/gold/DE/dim_plz.parquet", tmp_path / "gold" / "DE" / "dim_plz.parquet")
+
+    cfg = Config(countries=("AT",), data_dir=tmp_path)
+    gold.build_at_gold(cfg, "AT")
+    con = duckdb.connect()
+    LE = (tmp_path / "gold" / "AT" / "lead_export.parquet").as_posix()
+    ids = {r[0] for r in con.execute(f"SELECT lead_id FROM read_parquet('{LE}')").fetchall()}
+    assert ids == {"123456_2026", "atv-2"}, f"OSB-Dedup falsch: {ids}"
+
+    # No-op ohne attributes → OSB bleibt
+    shutil.rmtree(tmp_path / "silver" / "AT" / "attributes")
+    gold.build_at_gold(cfg, "AT")
+    ids2 = {r[0] for r in con.execute(f"SELECT lead_id FROM read_parquet('{LE}')").fetchall()}
+    assert "atv-1" in ids2, "ohne attributes muss der Filter No-op sein"
+
+
+def test_source_registry_is_wellformed():
+    """Quellen-Registry (govisor/sources.py): eindeutige IDs, gültige Connector/Status,
+    Kennzahlen konsistent. Reiner Unit-Test — treibt CLI `sources` + Web-Quellen-Panel."""
+    from govisor import sources
+    ids = [s.id for s in sources.REGISTRY]
+    assert len(ids) == len(set(ids)), "Quellen-IDs müssen eindeutig sein"
+    for s in sources.REGISTRY:
+        assert s.connector in sources.CONNECTORS, f"{s.id}: unbekannter Connector {s.connector}"
+        assert s.status in sources.STATUSES, f"{s.id}: unbekannter Status {s.status}"
+        assert s.tier in ("oberschwellig", "unterschwellig", "beides"), f"{s.id}: Tier {s.tier}"
+    summ = sources.summary()
+    assert summ["connectors"] == len(sources.CONNECTORS)
+    assert summ["quellen_live"] == len(sources.by_status("live"))
+    # DACH-Matrix: DE + CH beide Schwellen abgedeckt, AT ist die offene Arbeit
+    dach = {(cc, tier): status for cc, tier, _, status in sources.dach_matrix()}
+    assert dach[("DE", "oberschwellig")] == "live" and dach[("DE", "unterschwellig")] == "live"
+    assert dach[("CH", "oberschwellig")] == "live" and dach[("CH", "unterschwellig")] == "live"
+    assert dach[("AT", "unterschwellig")] in ("candidate", "prepared", "live")
+    # Die drei Live-Quellen: TED-DE, DÖE-DE, simap-CH
+    live_ids = {s.id for s in sources.by_status("live")}
+    assert live_ids == {"ted-de", "doe-de", "simap-ch"}
+    # AT ist als Brücke vorbereitet (deckt sich mit build_at_gold)
+    assert any(s.id == "ted-at" and s.status == "prepared" for s in sources.REGISTRY)
+
+
+def test_atverg_connector_wired():
+    """OffeneVergaben.at-Connector (govisor/atverg.py): CLI `ingest-atverg` + notice_kind-Mapping
+    (Kerndaten-art → cn/can) + contract_nature-Vokabular. Reiner Unit-Test."""
+    from govisor import atverg, cli
+    assert hasattr(atverg, "download") and hasattr(atverg, "build_silver")
+    args = cli.build_parser().parse_args(["ingest-atverg", "--silver"])
+    assert args.command == "ingest-atverg" and args.country == "AT" and args.silver is True
+    # contract_nature-Mapping deckt die gemessenen auftragsart-Werte ab
+    assert atverg._NATURE["Bauauftrag"] == "works"
+    assert atverg._NATURE["Dienstleistungsauftrag"] == "services"
+    assert atverg._NATURE["Lieferauftrag"] == "supplies"
+    # ZIP-Link-Regex trifft das gemessene URL-Muster (Zeitstempel+Hash)
+    assert atverg._ZIP_RE.search(
+        "x https://offenevergaben.at/tmp/kerndaten_dailydump_202607282230_wnldvvr2.zip y")
+
+
+def test_normalize_notice_id_canonical_and_idempotent():
+    """Beide Ingest-Formen (Archiv zero-padded ``_``, Live/DÖE ``-``) müssen auf DIESELBE
+    kanonische Form fallen, sonst verwaisen Gold-Zeilen beim Monatswechsel. Reiner Unit-Test."""
+    from govisor.schema import normalize_notice_id as N
+    assert N("00450024_2026") == "450024_2026"     # Archiv (zero-padded, Unterstrich)
+    assert N("450024-2026") == "450024_2026"        # Live (Bindestrich)
+    assert N("450024_2026") == "450024_2026"        # schon kanonisch
+    assert N(N("00450024_2026")) == N("00450024_2026")  # idempotent
+    # DÖE-Namensraum (UUID / reine Zahl) bleibt unangetastet — sonst Kollision mit TED
+    assert N("2f383c64-f0b3-49a4-a9c3-8030a816c4fd") == "2f383c64-f0b3-49a4-a9c3-8030a816c4fd"
+    assert N("19572346") == "19572346"
+
+
+@pytest.mark.skipif(not os.path.exists("data/silver/DE/notices"),
+                    reason="Silber nicht gebaut")
+def test_silver_gold_notice_ids_are_canonical():
+    """Nach der Migration (scripts/normalize_notice_ids.py) darf KEINE TED-Format-ID
+    (``<zahl><trenner><jahr>``) in nicht-kanonischer Form (Bindestrich / führende Null) in
+    Silber-notices oder Gold-leads stehen. DÖE-UUIDs matchen das Muster nicht → ausgenommen."""
+    con = duckdb.connect()
+    canon = r"regexp_replace({c}, '^0*([0-9]+)[-_]([0-9]{{4}})$', '\1_\2')"
+    pat = "'^0*[0-9]+[-_][0-9]{4}$'"
+    bad_sil = con.execute(
+        f"SELECT count(*) FROM read_parquet('data/silver/DE/notices/*/*.parquet', hive_partitioning=1) "
+        f"WHERE regexp_matches(notice_id, {pat}) AND notice_id <> {canon.format(c='notice_id')}"
+    ).fetchone()[0]
+    assert bad_sil == 0, f"{bad_sil} nicht-kanonische TED-notice_ids in Silber (Migration erneut laufen lassen)"
+    if _has("leads"):
+        bad_g = con.execute(
+            f"SELECT count(*) FROM read_parquet('{G}/leads.parquet') "
+            f"WHERE regexp_matches(lead_id, {pat}) AND lead_id <> {canon.format(c='lead_id')}"
+        ).fetchone()[0]
+        assert bad_g == 0, f"{bad_g} nicht-kanonische lead_ids in Gold"

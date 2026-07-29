@@ -296,11 +296,25 @@ nicht „unbekannt" (fuer eine ortsunabhaengige Leistung ist die Entfernung zur 
 keine Aussage). Sortiert an den Rand des Umkreises: hinter alle echten Nahtreffer, aber vor
 dem Abschneiden durch `limit`. Muenchen 25 km: 4.987 → 9.071 Leads.
 
-### ⚠️ Offener Befund: zwei notice_id-Formate in Silber
-Beim Testen aufgefallen, **nicht Teil von 1.1–1.4, ungeloest**: der Monats-Archiv-Ingest
-schreibt `450024_2026` (Unterstrich), der Live-Ingest des laufenden Monats `450024-2026`
-(Bindestrich, TED-Kanon). Beim Monatswechsel wird der Live-Stand vom Archiv ersetzt und
-alle Gold-Zeilen, die auf der Bindestrich-ID stehen, werden zu Waisen. Aktuell betroffen:
-**551 Leads**, deren Lose dadurch unerreichbar wurden (`lead_lot` 140.568 → 139.631).
-Das wiederholt sich bei **jedem** Monatswechsel. Reparatur = ID-Normalisierung in Silber
-plus Gold-Rebuild; bewusst als eigener Schritt offen gelassen.
+### ✅ Behoben: zwei notice_id-Formate in Silber (2026-07-29)
+Der Monats-Archiv-Ingest schrieb `00450024_2026` (zero-padded, Unterstrich), der Live-/DÖE-
+Ingest `450024-2026` (Bindestrich). Beim Monatswechsel ersetzt das Archiv den Live-Stand →
+alle Gold-Zeilen auf der Alt-Form verwaisen. **Zwei Teile, beide erledigt:**
+1. **Prävention (Ingest):** `schema.normalize_notice_id` (Regex `^0*(\d+)[-_](\d{4})$` → `\1_\2`)
+   ist an **beiden** Silber-Pfaden verdrahtet (`silver.py:55` Archiv, `:128` Live/DÖE) — künftige
+   Ingests schreiben immer kanonisch, kein Drift mehr.
+2. **Bestand (Migration):** `scripts/normalize_notice_ids.py` (idempotent, datei-weise atomar,
+   0 Kollisionen gemessen) hat den Vor-Fix-Bestand kanonisiert — **217,7 Mio. ID-Werte** über
+   9 Silber-Tabellen + 25 Gold-Parquets (inkl. Nachfolge-Kanten `predecessor`/`successor` und
+   `award_notice_id`). Verifiziert: 0 nicht-kanonische TED-IDs, 0 neue FK-Waisen, 46 Tests grün.
+   **Bewusst NICHT angefasst** — der TED-öffentliche `publication_number`-Raum (Bindestrich ist
+   dort kanonisch, steckt in Award-Link-Joins `publication_number=ref_publication_number` + TED-URLs)
+   und der **DÖE-Namensraum** (UUIDs / reine Zahlen wie `2f383c64-…` / `19572346` — matchen das
+   Muster nicht, würden sonst mit TED kollidieren). Regressions-Guard: `test_plumbing.py::
+   test_normalize_notice_id_canonical_and_idempotent` + `::test_silver_gold_notice_ids_are_canonical`.
+
+**Separat offen (KEIN Formatproblem):** 551 `leads` (source=f02, laufender Monat) referenzieren
+Live-Notices, die das **Teilmonats-Archiv** von 2026-07 (noch) nicht enthält — ihre kanonische Form
+fehlt komplett in Silber (nachgemessen: durch Normalisierung nicht heilbar). Sie verschwinden beim
+nächsten Voll-Gold-Rebuild bzw. wenn das Monatsarchiv vollständig ist. Echter Fix: Live-Stand nicht
+durch ein **partielles** Monatsarchiv ersetzen lassen (eigenes Ticket).

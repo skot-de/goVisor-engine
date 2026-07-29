@@ -52,6 +52,8 @@ def test_build_month_dedupes_iso_and_utf8_editions(tmp_path):
     con = duckdb.connect()
     notices = cfg.silver_table_path("notices", "DE", "2005-01")
     rows = con.execute(f"SELECT notice_id, title FROM '{notices.as_posix()}' ORDER BY notice_id").fetchall()
-    assert [r[0] for r in rows] == ["770-2005", "771-2005"]
+    # notice_id ist KANONISCH (schema.normalize_notice_id, Trenner '_'), damit Archiv- und
+    # Live-Ingest dieselbe ID schreiben und Gold beim Monatswechsel nicht verwaist.
+    assert [r[0] for r in rows] == ["770_2005", "771_2005"]
     # Die behaltene Edition ist die saubere UTF-8-Variante (kein Mojibake im Umlaut).
     assert "München" in rows[0][1]

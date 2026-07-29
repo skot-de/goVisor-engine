@@ -3328,7 +3328,20 @@ def build_at_gold(cfg: Config, country: str = "AT"):
     P = f"'{cfg.silver_table_glob('notice_parties', country)}'"
     A = f"'{cfg.silver_table_glob('awards', country)}'"
     DP = f"'{(cfg.gold_dir / 'DE' / 'dim_plz.parquet').as_posix()}'"
-    LEAD = "n.notice_kind='cn' AND n.submission_deadline >= current_date"
+
+    # OSB-Dedup: atverg (AT-unterschwellig-Quelle) liefert AUCH oberschwellige Bekanntmachungen
+    # (~36 %, geflaggt via attributes 'atverg/schwelle'='OSB'). Die deckt TED-AT bereits ab → sonst
+    # Doppel-Leads. Regel: TED = oberschwellige Autorität, atverg trägt nur unterschwellig bei.
+    # Da TED per Definition NUR oberschwellig führt und atverg-USB NUR unterschwellig, sind beide
+    # nach dieser Filterung disjunkt (kein Content-Matching nötig). No-op, solange keine
+    # atverg-attributes existieren (z. B. reiner TED-AT-Bestand).
+    _attr = cfg.silver_table_glob("attributes", country)
+    _has_attr = bool(list((cfg.silver_dir / country / "attributes").glob("*/*.parquet")))
+    OSB_EXCLUDE = (
+        f" AND n.notice_id NOT IN (SELECT notice_id FROM read_parquet('{_attr}', hive_partitioning=1)"
+        f" WHERE path='atverg/schwelle' AND value='OSB')"
+    ) if _has_attr else ""
+    LEAD = "n.notice_kind='cn' AND n.submission_deadline >= current_date" + OSB_EXCLUDE
     _tok = ("list_filter(string_split(regexp_replace(lower({c}), '[^a-zäöü0-9 ]', ' ', 'g'), ' '),"
             " w -> length(w) >= 5)")
     con = duckdb.connect()
