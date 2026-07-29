@@ -458,9 +458,10 @@ function fundstelle(l, wort){
   return null;
 }
 function hervorheben(text, wort){
-  if(!wort) return text;
-  const re = new RegExp('('+wort.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig');
-  return text.replace(re,'<mark>$1</mark>');
+  const e = esc(text);                 // erst escapen (Datenwert), dann highlighten
+  if(!wort) return e;
+  const re = new RegExp('('+esc(wort).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig');
+  return e.replace(re,'<mark>$1</mark>');
 }
 
 function hasToken(type,value){ return searchTokens.some(t=>t.type===type && t.value===value); }
@@ -491,11 +492,18 @@ const SRC_TEXT = {
   unbekannt:'Unbekannt · nicht veröffentlicht',
   na:'Nicht anwendbar'
 };
+// XSS-Schutz: alle DATENWERTE (Titel, Käufer, Beschreibung, Extras … aus externen Quellen wie
+// TED/simap) werden über dangerouslySetInnerHTML gerendert → vor dem Einsetzen HTML-escapen.
+// Nur auf Datenwerte anwenden, NICHT auf selbst erzeugtes Markup.
+const esc = s => String(s == null ? '' : s)
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+
 const val = (text, src, hint) =>
-  `<span class="val" data-src="${src}" title="${SRC_TEXT[src]}${hint ? ' — ' + hint : ''}">${text}</span>`;
+  `<span class="val" data-src="${src}" title="${esc(SRC_TEXT[src] + (hint ? ' — ' + hint : ''))}">${esc(text)}</span>`;
 
 const bandMeter = (level, risk, cap) => {
-  const t = cap ? ` title="${cap}: ${level==='na'?'n/a':level}"` : '';
+  const t = cap ? ` title="${esc(cap)}: ${level==='na'?'n/a':level}"` : '';
   return level==='na'
     ? `<span class="band" data-level="na"${t}><span class="segs"><i></i><i></i><i></i></span><span class="lbl">n/a</span></span>`
     : `<span class="band ${risk?'risk':''}" data-level="${level}"${t}><span class="segs"><i></i><i></i><i></i></span><span class="lbl">${level}</span></span>`;
@@ -514,7 +522,7 @@ function konkCell(l){
   if(k.src==='na' || k.src==='unbekannt'){
     return `<span class="kf"><span class="kf-none">${k.wert}</span></span>`;
   }
-  return `<span class="kf kf-${k.stufe}" title="${k.hint}">
+  return `<span class="kf kf-${k.stufe}" title="${esc(k.hint)}">
       <span class="ksegs"><i></i><i></i><i></i></span>
       ${val(k.wert, k.src, k.hint)}</span>`;
 }
@@ -659,19 +667,19 @@ function cellHTML(l, key){
         ? `<span class="fund"><span class="fund-o">${f.ort}</span>${f.text?`<span class="fund-t">${hervorheben(f.text, wort)}</span>`:''}</span>`
         : '';
       const akt = l.aktualitaet
-        ? `<span class="akttag akt-${l.aktualitaet.art}" title="${l.aktualitaet.text} (${l.aktualitaet.am})">${
+        ? `<span class="akttag akt-${l.aktualitaet.art}" title="${esc(l.aktualitaet.text+' ('+l.aktualitaet.am+')')}">${
             l.aktualitaet.art==='aufgehoben'?'aufgehoben':'geändert'}</span>` : '';
       const eigen = l.eigen && l.eigenBestaetigt!==false
         ? '<span class="eigentag" title="Ihr seid hier Auftragnehmer — für euch ein Risiko, kein Neugeschäft">euer Vertrag</span>' : '';
       // #12: Bei Mehr-Los-Vergaben zeigen, über welches Los die Relevanz kommt (Best-Los).
       const lotHint = l.bestLot
         ? `<span class="ttitel-lot" title="Diese Ausschreibung ist groß, relevant ist für euch Los ${l.bestLot.nr}${l.bestLot.region?' ('+l.bestLot.region+')':''}">▸ passt über Los ${l.bestLot.nr}</span>` : '';
-      return `<td class="c-titel"><span class="ttitel">${wort?hervorheben(l.titel, wort):l.titel}${akt}${eigen}</span>${lotHint}${beleg}</td>`;
+      return `<td class="c-titel"><span class="ttitel">${wort?hervorheben(l.titel, wort):esc(l.titel)}${akt}${eigen}</span>${lotHint}${beleg}</td>`;
     }
-    case 'titel_alt': return `<td class="c-titel"><span class="ttitel" title="${l.titel}">${l.titel}</span></td>`;
-    case 'buyer': return `<td class="c-buyer" title="${l.buyer}">${l.buyerShort}</td>`;
+    case 'titel_alt': return `<td class="c-titel"><span class="ttitel" title="${esc(l.titel)}">${esc(l.titel)}</span></td>`;
+    case 'buyer': return `<td class="c-buyer" title="${esc(l.buyer)}">${esc(l.buyerShort)}</td>`;
     case 'frist': return `<td class="c-frist">${fristCell(l)}</td>`;
-    case 'natur': return `<td class="c-natur"><span class="nat nat-${l.naturKat}">${l.natur}</span></td>`;
+    case 'natur': return `<td class="c-natur"><span class="nat nat-${l.naturKat}">${esc(l.natur)}</span></td>`;
     case 'konk': return `<td class="c-konk">${konkCell(l)}</td>`;
     case 'neu': return `<td class="c-neu" style="text-align:center">${l.neu
         ? '<span class="wettb neu" title="Neuvergabe — kein Amtsinhaber, offenes Feld">Neu</span>'
@@ -706,7 +714,7 @@ function cellHTML(l, key){
       return `<td class="c-empf"><span class="empf ${meta.cls}" title="${EMPF_GRUND[e.code]}">${meta.t}</span>` +
              `<span class="empf-grund">${EMPF_GRUND[e.code]}</span></td>`;
     }
-    case 'region': return `<td class="c-region">${l.region}</td>`;
+    case 'region': return `<td class="c-region">${esc(l.region)}</td>`;
     case 'inc': return `<td class="c-inc">${l.incumbent ? val(l.incumbent.name, l.incumbent.src) : '<span style="color:var(--ink-300)">offen</span>'}</td>`;
     case 'status': return `<td class="c-status"><span class="stat">${l.seen || (l.status==='ungesichtet'?'neu':'gesichtet')}</span></td>`;
     case 'wf': return `<td class="c-wf">${l.userStatus ? wfPill(l.userStatus) : '<span class="wf-none">—</span>'}</td>`;
@@ -842,7 +850,7 @@ function renderTeam(l){
   const thread = n ? l.comments.map(c => {
     const mine = c.author==='Du';
     return `<div class="cmt ${mine?'mine':''}">
-      <div class="cmt-av ${mine?'you':''}" title="${c.author}">${c.initials}</div>
+      <div class="cmt-av ${mine?'you':''}" title="${esc(c.author)}">${esc(c.initials)}</div>
       <div class="cmt-bubble">
         <div class="cmt-meta"><b>${mine?'Du':c.author}</b><span>${c.ts}</span></div>
         <div class="cmt-body">${c.body}</div>
@@ -877,15 +885,15 @@ function renderTeam(l){
 
 /* ── Tab-Renderer: pdotT, Übersicht, Teilnahme, Bewertung(analyse), Markt, Vergabestelle(buyer), Gate ── */
 const pdotT = (src,hint)=> src && src!=='echt'
-  ? `<span class="pdot pdot-${src}" title="${SRC_TEXT[src]}${hint?' — '+hint:''}"></span>` : '';
+  ? `<span class="pdot pdot-${src}" title="${esc(SRC_TEXT[src]+(hint?' — '+hint:''))}"></span>` : '';
 
 function renderUebersicht(l){
   const inc = l.incumbent;
   const pdot = (src,hint)=> src && src!=='echt'
-    ? `<span class="pdot pdot-${src}" title="${SRC_TEXT[src]}${hint?' — '+hint:''}"></span>` : '';
+    ? `<span class="pdot pdot-${src}" title="${esc(SRC_TEXT[src]+(hint?' — '+hint:''))}"></span>` : '';
   const iv = (text,src,hint,num)=>{
     const cls = (src==='unbekannt'?'v-unk ':src==='na'?'v-na ':'')+(num?'v-num':'');
-    return `<span class="v ${cls}">${text}</span>${pdot(src,hint)}`;
+    return `<span class="v ${cls}">${esc(text)}</span>${pdot(src,hint)}`;
   };
   return `<div class="dbody dbody-ov">
     <section class="sec">
@@ -942,7 +950,7 @@ function renderUebersicht(l){
 
     ${l.beschreibung && !l.hasDetail ? `<section class="sec">
       <h4>Leistungsbeschreibung</h4>
-      <div class="kurztext">${l.beschreibung}</div>
+      <div class="kurztext">${esc(l.beschreibung)}</div>
       <p class="rt-note">Mehr steht in der Bekanntmachung nicht. Das ist der Normalfall —
       bei rund sechs von zehn Ausschreibungen umfasst der Beschreibungstext weniger als 200 Zeichen.
       Die eigentliche Leistungsbeschreibung liegt in den Vergabeunterlagen auf dem Vergabeportal.</p>
@@ -953,7 +961,7 @@ function renderUebersicht(l){
       <details class="rawtext" open>
         <summary><span class="rt-open">Originaltext</span><span class="rt-len">${
           l.beschreibung.trim().split(/\s+/).length} Wörter</span></summary>
-        <div class="rt-body">${l.beschreibung.split(/\n\n+/).map(p=>`<p>${p.trim()}</p>`).join('')}</div>
+        <div class="rt-body">${l.beschreibung.split(/\n\n+/).map(p=>`<p>${esc(p.trim())}</p>`).join('')}</div>
       </details>
       <p class="rt-note">Wir kürzen und glätten nichts — was die Vergabestelle geschrieben hat, steht so da.</p>
 
@@ -1006,7 +1014,7 @@ function renderUebersicht(l){
       <h4>Auftraggeber</h4>
       <div class="kv">
         <div class="kvi kvi-full"><span class="k">Vergabestelle</span>
-          <span class="vv"><span class="v">${l.buyer}</span></span></div>
+          <span class="vv"><span class="v">${esc(l.buyer)}</span></span></div>
       </div>
       <button class="sec-link" data-tab="buyer">
         Käufer-Dossier ansehen
@@ -1031,9 +1039,9 @@ function renderUebersicht(l){
         </div>
       </div>` : ''}
       ${!inc ? `<div class="note-box"><b>Noch nicht vergeben.</b> Diese Ausschreibung ist offen — kein Amtsinhaber, kein Wechsel-Score. Offenes Feld.</div>`
-      : inc.src==='unsicher' && !l.eigen ? `<div class="note-box"><b><span class="pdot pdot-unsicher"></span>${inc.name}</b><br>Nur über den Namen aufgelöst. Wir zeigen keine Vertragsdauer, solange die Zuordnung nicht eindeutig ist.</div>`
+      : inc.src==='unsicher' && !l.eigen ? `<div class="note-box"><b><span class="pdot pdot-unsicher"></span>${esc(inc.name)}</b><br>Nur über den Namen aufgelöst. Wir zeigen keine Vertragsdauer, solange die Zuordnung nicht eindeutig ist.</div>`
       : `<div class="kv">
-          <div class="kvi kvi-full"><span class="k">Firma</span><span class="vv"><span class="v">${inc.name}</span>${
+          <div class="kvi kvi-full"><span class="k">Firma</span><span class="vv"><span class="v">${esc(inc.name)}</span>${
             l.eigen&&l.eigenBestaetigt===true?'<span class="oc-tag">von euch bestätigt</span>':''}</span></div>
           <div class="kvi"><span class="k">Auftragnehmer seit</span><span class="vv">${iv(inc.seit,'echt',null,true)}</span></div>
           <div class="kvi"><span class="k">Zuschläge in CPV ${l.cpv}</span><span class="vv">${iv('47','echt',null,true)}</span></div>
@@ -1057,7 +1065,7 @@ function renderUebersicht(l){
 function renderTeilnahme(l){
   const iv = (text,src,hint,num)=>{
     const cls = (src==='unbekannt'?'v-unk ':src==='na'?'v-na ':'')+(num?'v-num':'');
-    return `<span class="v ${cls}">${text}</span>${pdotT(src,hint)}`;
+    return `<span class="v ${cls}">${esc(text)}</span>${pdotT(src,hint)}`;
   };
   return `<div class="dbody dbody-ov">
     <section class="sec sec-unterlagen">${(()=>{
@@ -1160,7 +1168,7 @@ ${l.lose && l.lose.length ? (()=>{
           <div class="los los-head"><span>Los</span><span>Leistung</span><span>Wert</span><span>Laufzeit</span><span>Ort</span></div>
           ${l.lose.map((x,i)=>`<div class="los ${i===minI?'los-min':''} ${x.nr===passtNr?'los-passt':''}">
             <span class="los-n">${x.nr}</span>
-            <span class="los-t">${x.titel}${x.nr===passtNr?'<span class="los-tag los-tag-passt">passt</span>':''}${i===minI?'<span class="los-tag">kleinstes</span>':''}</span>
+            <span class="los-t">${esc(x.titel)}${x.nr===passtNr?'<span class="los-tag los-tag-passt">passt</span>':''}${i===minI?'<span class="los-tag">kleinstes</span>':''}</span>
             <span class="los-w">${x.wert}</span>
             <span class="los-d">${x.dauer}</span>
             <span class="los-r">${x.region}</span>
@@ -1378,7 +1386,7 @@ function renderAnalyse(l){
       return `<section class="sec" id="an-zuschlag" data-sec="zuschlag">
         <h4>Zuschlagskriterien</h4>
         ${ohneGew?'':`<div class="zbar">${z.map(x=>
-          `<i class="zseg z-${x.art}" style="width:${x.pct}%" title="${x.label}: ${x.pct} %"></i>`).join('')}</div>`}
+          `<i class="zseg z-${x.art}" style="width:${x.pct}%" title="${esc(x.label)}: ${x.pct} %"></i>`).join('')}</div>`}
         <div class="zlist">${z.map(x=>`<span class="zitem">
           <i class="zdot z-${x.art}"></i>${x.label}
           <b>${x.pct!=null?x.pct+' %':'<span class="v-unk">ohne Angabe</span>'}</b></span>`).join('')}</div>
@@ -1417,7 +1425,7 @@ function renderAnalyse(l){
     </section>` : `
     <section class="sec" id="an-vergleich" data-sec="vergleich">
       <h4>Direktvergleich</h4>
-      ${l.incumbent ? `<div class="note-box"><b>Wahrscheinlicher Amtsinhaber: ${l.incumbent.name}.</b>
+      ${l.incumbent ? `<div class="note-box"><b>Wahrscheinlicher Amtsinhaber: ${esc(l.incumbent.name)}.</b>
       Die Firmen-Auflösung ist hier zu unsicher${l.incumbent.conf!=null?` (Konfidenz ${Math.round(l.incumbent.conf*100)} %)`:''}
       für belastbare Feld-Zahlen — wir zeigen sie deshalb nicht, statt eine erfundene Statistik zu behaupten.
       Der Name kommt aus der letzten Zuschlagsbekanntmachung, nur über die Schreibweise erkannt.</div>`
@@ -1528,9 +1536,9 @@ function renderAnalyse(l){
       const fmtE = v => v==null ? null : (v>=1e6 ? (v/1e6).toFixed(1).replace('.',',')+' Mio €' : Math.round(v).toLocaleString('de-DE')+' €');
       if(eigene.length) return `
       <section class="sec" id="an-vertraege" data-sec="vertraege">
-        <h4>Eure Verträge bei ${l.buyerShort}</h4>
+        <h4>Eure Verträge bei ${esc(l.buyerShort)}</h4>
         <div class="contracts">
-          ${eigene.map(c=>`<div class="ct"><span class="t">${c.titel||c.buyer_name||'Vertrag'}${c.is_framework?' <span class="st-tag">Rahmen</span>':''}</span>
+          ${eigene.map(c=>`<div class="ct"><span class="t">${esc(c.titel||c.buyer_name||'Vertrag')}${c.is_framework?' <span class="st-tag">Rahmen</span>':''}</span>
             <span class="v">${c.value_euro?fmtE(c.value_euro):'—'}</span>
             <span class="e">${c.end_date?'bis '+new Date(c.end_date).toLocaleDateString('de-DE',{month:'2-digit',year:'numeric'}):''}</span></div>`).join('')}
           <div class="reqsum">${eigene.length===1?'Ein laufender Vertrag':eigene.length+' laufende Verträge'} — ihr kennt diesen Auftraggeber bereits.</div>
@@ -1538,7 +1546,7 @@ function renderAnalyse(l){
       </section>`;
       return `
       <section class="sec">
-        <h4>Eure Verträge bei ${l.buyerShort}</h4>
+        <h4>Eure Verträge bei ${esc(l.buyerShort)}</h4>
         <div class="note-box">Kein hinterlegter Vertrag bei dieser Vergabestelle. Gewonnene Aufträge könnt ihr
           über „Als gewonnen markieren" erfassen — dann erscheinen sie hier und im Strategie-Tab.</div>
       </section>`;
@@ -1556,7 +1564,7 @@ function renderAnalyse(l){
     <section class="sec" id="an-kontakt" data-sec="kontakt">
       <h4>Nächster Schritt <span class="cov">Direktkontakt zur Vergabestelle</span></h4>
       <div class="contact">
-        <div class="ct-row"><span class="ct-k">Ansprechpartner</span><span class="ct-v">${l.buyer} · Referat Z 3</span></div>
+        <div class="ct-row"><span class="ct-k">Ansprechpartner</span><span class="ct-v">${esc(l.buyer)} · Referat Z 3</span></div>
         <div class="ct-row"><span class="ct-k">E-Mail</span><span class="ct-v"><a class="tedlink" href="mailto:vergabe@${l.buyerShort.toLowerCase().replace(/[^a-z]/g,'')}.bund.de">vergabe@${l.buyerShort.toLowerCase().replace(/[^a-z]/g,'')}.bund.de</a></span></div>
         <div class="ct-row"><span class="ct-k">Frist für Rückfragen</span><span class="ct-v">${
           l.aufwand&&l.aufwand.fragefrist ? val('noch '+l.aufwand.fragefrist,'echt','Aus der Bekanntmachung — nicht geschätzt.')
@@ -1725,7 +1733,7 @@ function renderBuyer(l){
       <div>
         <div class="buyer-name">${d.name}</div>
         <div class="buyer-sub">Vergabestelle · Käufer-Dossier</div>
-        <button class="sec-link" data-buyerleads="${l.buyerShort}">
+        <button class="sec-link" data-buyerleads="${esc(l.buyerShort)}">
           Alle Leads dieser Vergabestelle
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
