@@ -27,6 +27,36 @@ from .config import Config
 # eForms-ORG-Referenz (UUID) — pro Dokument vergeben, taugt nicht als Entity-Schlüssel.
 _RE_UUID_ID = re.compile(r"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-")
 
+# Leitweg-ID — die bundesweit eindeutige Kennung ÖFFENTLICHER Stellen (E-Rechnungs-Pflicht seit
+# 2020). Format <Grobadressierung>-<Feinadressierung>-<Prüfziffer>, optional mit Schema-Präfix
+# „NNNN:". Autoritativer Schlüssel genau für Vergabestellen (im Handelsregister gibt es sie nicht).
+# In eForms zu ~13 % vorhanden. Roh landete sie mit Präfix/Leerzeichen als GESPALTENER Schlüssel.
+_RE_LEITWEG = re.compile(r"^(?:\d{3,4}:)?(\d{2,3}-[0-9A-Za-z]+-\d{2})$")
+_RE_VAT_DE = re.compile(r"^DE\s?(\d{9})$", re.I)                 # USt-IdNr
+# Erkennbarer Müll: TED-interne „t:"-IDs, reine Bindestriche, 1-4-stellige Zahlen (Notiz-intern).
+_RE_ID_JUNK = re.compile(r"^(?:t:.*|-+|\d{1,4})$", re.I)
+
+
+def normalize_national_id(national_id: str | None) -> str | None:
+    """Roh-``national_id`` → stabiler Entity-Schlüssel oder None (dann Name-Fallback).
+
+    Vereinheitlicht die **Leitweg-ID** (Schema-Präfix + Leerzeichen weg → derselbe öffentliche
+    Auftraggeber unter EINEM Schlüssel), normalisiert USt-IdNr, und verwirft erkennbaren Müll
+    (UUID/TED-intern/Kurzzahlen), der sonst pro Notice eine neue Garbage-Entität erzeugt.
+    """
+    nid = re.sub(r"\s+", "", national_id or "")
+    if not nid:
+        return None
+    m = _RE_LEITWEG.match(nid)
+    if m:
+        return "leitweg:" + m.group(1)
+    m = _RE_VAT_DE.match(nid)
+    if m:
+        return "vat:DE" + m.group(1)
+    if _RE_UUID_ID.match(nid) or _RE_ID_JUNK.match(nid):
+        return None
+    return nid                                                   # sonstige Register-ID unverändert
+
 # Freemail-/Provider-Domains sind KEIN Firmengruppen-Signal (Einzelunternehmer mit
 # gmail gehören zu keiner Gruppe). Die Second-Level-Domain einer Firmen-Domain
 # dagegen bündelt Töchter/Marken zuverlässig: alles @*.cancom.* → Gruppe CANCOM.
@@ -1305,12 +1335,10 @@ def resolve_supplier(
                 norm=norm,
             )
 
-    nid = (national_id or "").strip()
-    # UUID-artige eForms-ORG-Referenzen (z. B. „e54ed47b-138c-…") sind PRO
-    # DOKUMENT vergeben — als Schlüssel spalten sie dieselbe Firma je Notice in
-    # eine neue Entität. Nur echte Register-/VAT-artige IDs taugen als Schlüssel;
-    # UUIDs fallen auf den (kanonisierten) Namen zurück.
-    if nid and not _RE_UUID_ID.match(nid):
+    # national_id normalisieren: Leitweg-ID/VAT vereinheitlichen, Müll (UUID/TED-intern/Kurzzahl)
+    # verwerfen. Roh spaltete „0204:991-…" und „991-…" dieselbe öffentliche Stelle in zwei Entitäten.
+    nid = normalize_national_id(national_id)
+    if nid:
         return ResolvedEntity(
             entity_id=f"id:{nid}",
             canonical_name=name,

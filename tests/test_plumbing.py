@@ -603,6 +603,22 @@ def test_source_registry_is_wellformed():
     assert any(s.id == "ted-at" and s.status == "prepared" for s in sources.REGISTRY)
 
 
+def test_normalize_national_id_leitweg():
+    """national_id-Normalisierung: Leitweg-ID (mit/ohne Schema-Präfix) → EIN Schlüssel;
+    USt-IdNr normalisiert; Müll (UUID/TED-intern/Kurzzahl/Bindestrich) → None (Name-Fallback)."""
+    from govisor.gold import normalize_national_id as N
+    # Leitweg-ID: Präfix-Varianten fallen auf denselben Schlüssel
+    assert N("0204:991-00199-39") == N("991-00199-39") == "leitweg:991-00199-39"
+    assert N("08-A9866-40") == "leitweg:08-A9866-40"
+    # USt-IdNr (Leerzeichen egal)
+    assert N("DE311803096") == N("DE 311803096") == "vat:DE311803096"
+    # Müll → None
+    for junk in ("t:053418393542", "-", "6850", "2f383c64-f0b3-49a4-a9c3-8030a816c4fd", "", None):
+        assert N(junk) is None, junk
+    # sonstige Register-ID bleibt (nur Whitespace weg)
+    assert N("HRB 12345") == "HRB12345"
+
+
 def test_consolidate_by_shared_name_plz():
     """Clean-Name-Merge (PLZ-gegated): nur-Name-Fragmente öffentlicher Stellen mit gleichem norm UND
     geteilter PLZ verschmelzen; verschiedene PLZ (zwei Städte) NICHT; `already`-Entities übersprungen."""
