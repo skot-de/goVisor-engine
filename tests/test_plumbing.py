@@ -603,6 +603,63 @@ def test_source_registry_is_wellformed():
     assert any(s.id == "ted-at" and s.status == "prepared" for s in sources.REGISTRY)
 
 
+def test_docpipe_extracts_and_recurses(tmp_path):
+    """Dokument-Pipeline: Text aus TXT/HTML/DOCX, Rekursion durch verschachtelte ZIPs, Status-Flags.
+    Reiner Unit-Test mit synthetischem ZIP (kein Netz, keine echten Dokumente nötig)."""
+    import io
+    import zipfile
+    from govisor import docpipe, cli
+
+    # DOCX = ZIP mit word/document.xml
+    docx = io.BytesIO()
+    with zipfile.ZipFile(docx, "w") as z:
+        z.writestr("word/document.xml", "<w:p>Leistungs<w:t>beschreibung</w:t> Bau</w:p>")
+    inner = io.BytesIO()
+    with zipfile.ZipFile(inner, "w") as z:
+        z.writestr("tief.txt", "verschachtelter Text")
+    outer = io.BytesIO()
+    with zipfile.ZipFile(outer, "w") as z:
+        z.writestr("a.txt", "Angebotsfrist 2026")
+        z.writestr("b.html", "<html><body>Eignung <b>Kriterien</b></body></html>")
+        z.writestr("c.docx", docx.getvalue())
+        z.writestr("nested.zip", inner.getvalue())
+        z.writestr("scan.pdf", b"%PDF-1.4 kein Text")   # unlesbare "PDF" → image_only/empty
+    p = tmp_path / "Vergabeunterlagen_CX1.zip"
+    p.write_bytes(outer.getvalue())
+
+    rows = {r["file"].split("::")[-1]: r for r in docpipe.process_zip(p)}
+    assert "verschachteltes Text" in rows["tief.txt"]["text"] or "verschachtelter" in rows["tief.txt"]["text"]
+    assert "Angebotsfrist" in rows["a.txt"]["text"]
+    assert "Kriterien" in rows["b.html"]["text"]
+    assert "beschreibung" in rows["c.docx"]["text"]
+    assert rows["a.txt"]["status"] == "ok"
+    # scan.pdf ohne Textebene → nicht "ok"
+    assert rows["scan.pdf"]["status"] in ("image_only", "empty")
+    args = cli.build_parser().parse_args(["index-docs", "--country", "DE"])
+    assert args.command == "index-docs"
+
+
+def test_docfetch_cosinex_url_parsing():
+    """cosinex/DTVP-Dokument-Fetcher: URL-Erkennung + Archiv-ZIP-Endpoint (reverse-engineert,
+    login-frei). Host/Base(Satellite|VMPSatellite)/CX korrekt extrahiert; Nicht-cosinex abgelehnt."""
+    from govisor import docfetch, cli
+    assert docfetch.is_cosinex("https://www.dtvp.de/Satellite/notice/CXP4Y6YMYCG/documents")
+    assert docfetch.is_cosinex("https://vergabemarktplatz.brandenburg.de/VMPSatellite/notice/CX9/documents")
+    assert not docfetch.is_cosinex("https://www.subreport.de/E13767982")
+    assert not docfetch.is_cosinex("https://www.evergabe.de/unterlagen/x")
+    m = docfetch._COSINEX_RE.match("https://www.dtvp.de/Satellite/notice/CXP4Y6YMYCG/documents")
+    assert m.group("origin") == "https://www.dtvp.de" and m.group("base") == "Satellite"
+    assert m.group("cx") == "CXP4Y6YMYCG"
+    assert docfetch._zip_url("https://www.dtvp.de", "Satellite", "CXP4Y6YMYCG") == (
+        "https://www.dtvp.de/Satellite/public/company/project/CXP4Y6YMYCG/de/"
+        "documents/archive/Vergabeunterlagen_CXP4Y6YMYCG.zip")
+    # VMPSatellite-Portale (Landes-/Kommunalportale) nutzen denselben Endpoint mit ihrem Base
+    assert "/VMPSatellite/public/company/project/CX9/" in docfetch._zip_url(
+        "https://vergabemarktplatz.brandenburg.de", "VMPSatellite", "CX9")
+    args = cli.build_parser().parse_args(["fetch-docs", "--limit", "10"])
+    assert args.command == "fetch-docs" and args.limit == 10
+
+
 def test_atverg_connector_wired():
     """OffeneVergaben.at-Connector (govisor/atverg.py): CLI `ingest-atverg` + notice_kind-Mapping
     (Kerndaten-art → cn/can) + contract_nature-Vokabular. Reiner Unit-Test."""

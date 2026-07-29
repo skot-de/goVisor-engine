@@ -34,6 +34,8 @@ CONNECTORS = {
     "doe-api":      "DÖE notice-exports API (oeffentlichevergabe.de = service.bund.de) — eForms, unterschwellig DE",
     "simap-json":   "simap.ch offene JSON-REST-API — CH Bund + Kantone + Gemeinden",
     "offeneverg-csv": "OffeneVergaben.at BULK-Kerndaten CSV (data.gv.at, BVergG2018) — unterschwellig AT >50k €",
+    "ocds-json":    "OCDS-JSON-API (Open Contracting Data Standard 1.1) — UK Find-a-Tender/Contracts-Finder",
+    "decp-bulk":    "DECP konsolidiert Parquet/CSV (data.gouv.fr) — Frankreich unterschwellig, tägl.",
 }
 
 # --- Status einer Quelle ---------------------------------------------------------------------
@@ -127,6 +129,24 @@ REGISTRY: list[Source] = [
            coverage="unter simap-Publikationspflicht; fragmentiert über Kantonsportale",
            overlap="Rest-Schwanz unter simap; niederwertig, bewusst kein 100%-Ziel",
            url=""),
+
+    # === Über DACH hinaus (technische Basis recherchiert/verifiziert, Connector noch zu bauen) ===
+    # UK ist seit Brexit NICHT in TED → echte Lücke, die unser TED-Connector nicht schließt.
+    # Find-a-Tender + Contracts-Finder publizieren OCDS-JSON über offene APIs (ober- UND unterschwellig).
+    Source("uk-fts", "UK Find a Tender (ober+unterschwellig)", "ocds-json", "GB", "beides", "candidate",
+           portals=1, coverage="OCDS 1.1.5 JSON-API, real-time ab 2021; Procurement Act 2023",
+           overlap="kein TED-Overlap (UK aus TED ausgeschieden) — kompletter Neumarkt",
+           url="https://www.find-tender.service.gov.uk/api/1.0/"),
+    Source("uk-cf", "UK Contracts Finder (unterschwellig)", "ocds-json", "GB", "unterschwellig",
+           "candidate", portals=1, coverage="OCDS-JSON, sub-threshold; ergänzt Find-a-Tender nach unten",
+           overlap="England/Wales/NI (Schottland separat); Teilüberlappung mit FTS via OCDS-ocid dedupbar",
+           url="https://www.contractsfinder.service.gov.uk/apidocumentation"),
+    # Frankreich: TED-FR liefert oberschwellig; DECP ergänzt unterschwellig (Pendant zu DÖE/atverg),
+    # offizielle Pflicht-Open-Data, konsolidiert als Parquet (nativ zu unserem Stack) + CSV.
+    Source("fr-decp", "France DECP (unterschwellig)", "decp-bulk", "FR", "unterschwellig", "candidate",
+           portals=1, coverage="Données Essentielles Commande Publique, konsolidiert Parquet/CSV, tägl.",
+           overlap="ergänzt TED-FR nach unten (données essentielles, Pflicht seit 2019)",
+           url="https://www.data.gouv.fr/datasets/donnees-essentielles-de-la-commande-publique-consolidees-format-tabulaire"),
 ]
 
 # TED-EU-Breite anhängen (candidate).

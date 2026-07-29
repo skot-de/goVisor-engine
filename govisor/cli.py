@@ -90,6 +90,16 @@ def build_parser() -> argparse.ArgumentParser:
     goldp.add_argument("--as-of", dest="as_of", default=None,
                        help="Stichtag YYYY-MM-DD für den Auslauf-Radar (Default: heute)")
 
+    fd = sub.add_parser("fetch-docs", help="Vergabeunterlagen holen (cosinex/DTVP, login-frei)")
+    fd.add_argument("--country", default="DE")
+    fd.add_argument("--data-dir", default="data")
+    fd.add_argument("--limit", type=int, default=None, help="nur die ersten N Vorgänge")
+    fd.add_argument("--delay", type=float, default=1.5, help="Pause je Download in s (höflich)")
+
+    ix = sub.add_parser("index-docs", help="Vergabeunterlagen-ZIPs → Volltext-Index (doc_text.parquet)")
+    ix.add_argument("--country", default="DE")
+    ix.add_argument("--data-dir", default="data")
+
     srcp = sub.add_parser("sources", help="Quellen-Registry anzeigen (Connector × Land × Tier)")
     srcp.add_argument("--country", default=None, metavar="CC", help="nur Quellen dieses Landes")
     srcp.add_argument("--status", default=None, choices=("live", "prepared", "candidate", "research"),
@@ -335,6 +345,16 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_ingest_simap(args)
     if args.command == "ingest-atverg":
         return cmd_ingest_atverg(args)
+    if args.command == "fetch-docs":
+        from . import docfetch
+        cfg = Config(countries=(args.country,), data_dir=args.data_dir)
+        docfetch.fetch_batch(cfg, country=args.country, limit=args.limit, delay=args.delay)
+        return 0
+    if args.command == "index-docs":
+        from . import docpipe
+        cfg = Config(countries=(args.country,), data_dir=args.data_dir)
+        docpipe.build_index(cfg, country=args.country)
+        return 0
     if args.command == "sources":
         return cmd_sources(args)
     if args.command == "verify":
