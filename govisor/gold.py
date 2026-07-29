@@ -1091,7 +1091,12 @@ def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = Non
             tgt.source_names = tuple(sorted(set(tgt.source_names) | set(src.source_names)))
     links = [(nid, role, seq, merge_map.get(eid, eid)) for (nid, role, seq, eid) in links]
 
-    ent_rows = [(e.entity_id, e.canonical_name, e.national_id, e.method, e.confidence)
+    # Anzeige-Namen bereinigen (NACH aller Resolution/Merging → Matching unberührt): generische
+    # Hoheits-Präfixe auf die vertretene Stelle auflösen (bundesweit ~15k „Bundesrepublik
+    # Deutschland, vertreten durch …"), KOMPLETT-GROSS auf Titel-Schreibung (30 % der Namen).
+    from . import names
+    ent_rows = [(e.entity_id, names.clean_display_name(e.canonical_name), e.national_id,
+                 e.method, e.confidence)
                 for e in entity_of.values()]
     _write(con, cfg.gold_dir / country / "entities.parquet", ent_rows,
            "entity_id VARCHAR, canonical_name VARCHAR, national_id VARCHAR, "

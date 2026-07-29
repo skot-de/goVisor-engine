@@ -603,6 +603,35 @@ def test_source_registry_is_wellformed():
     assert any(s.id == "ted-at" and s.status == "prepared" for s in sources.REGISTRY)
 
 
+def test_clean_display_name():
+    """Anzeige-Namen-Bereinigung: generische Hoheits-Präfixe → vertretene Stelle auflösen,
+    spezifische Präfixe behalten, KOMPLETT-GROSS → Titel-Schreibung, idempotent, konservativ."""
+    from govisor.names import clean_display_name as C
+    # Generischer Hoheits-Träger → vertretene Stelle (führender Artikel weg)
+    assert C("Bundesrepublik Deutschland, vertreten durch das Bundesministerium für Gesundheit") \
+        == "Bundesministerium für Gesundheit"
+    assert C("Land Berlin, vertreten durch die Senatsverwaltung für Stadtentwicklung") \
+        == "Senatsverwaltung für Stadtentwicklung"
+    # Vertretungskette gekappt (erste Stelle nach dem Hoheits-Träger)
+    assert C("Bundesrepublik Deutschland vertreten durch: Deutscher Bundestag vertreten durch: BBR") \
+        == "Deutscher Bundestag"
+    # Spezifischer Präfix → Präfix behalten, Vertretung droppen
+    assert C("DB Netz AG, vertreten durch die DB Netz AG Regionalbereich Südost") == "DB Netz AG"
+    # Casing: KOMPLETT GROSS → Titel; Rechtsform + Partikel korrekt
+    assert C("STADT KÖLN") == "Stadt Köln"
+    assert C("LANDESHAUPTSTADT STUTTGART, AMT FÜR HOCHBAU UND GEBÄUDEWIRTSCHAFT") \
+        == "Landeshauptstadt Stuttgart, Amt für Hochbau und Gebäudewirtschaft"
+    assert C("MUSTER BAU GMBH") == "Muster Bau GmbH"
+    # gemischte Schreibweise bleibt unangetastet
+    assert C("Max-Planck-Gesellschaft zur Förderung der Wissenschaften e.V.") \
+        == "Max-Planck-Gesellschaft zur Förderung der Wissenschaften e.V."
+    assert C("Stadt München") == "Stadt München"
+    # idempotent + robust gegen None/leer
+    assert C(C("BUNDESREPUBLIK DEUTSCHLAND, VERTRETEN DURCH DAS BMI")) \
+        == C("BUNDESREPUBLIK DEUTSCHLAND, VERTRETEN DURCH DAS BMI")
+    assert C(None) is None and C("") == ""
+
+
 def test_docpipe_extracts_and_recurses(tmp_path):
     """Dokument-Pipeline: Text aus TXT/HTML/DOCX, Rekursion durch verschachtelte ZIPs, Status-Flags.
     Reiner Unit-Test mit synthetischem ZIP (kein Netz, keine echten Dokumente nötig)."""
