@@ -1,11 +1,10 @@
-# Daten sind regenerierbar (Bronze 17 GB, Silber/Gold abgeleitet) → nicht ins Repo.
-# 'data/*' statt 'data/' — Git steigt in ein ignoriertes VERZEICHNIS nicht hinab,
-# eine Ausnahme darin bliebe sonst wirkungslos.
-data/*
-# AUSNAHME: die Slug-Map ist NICHT regenerierbar. Sie definiert die permanenten
-# Lead-Links (govi.link/<slug>) — geht sie verloren, brechen alle verschickten URLs.
-!data/state/
-!data/state/**
+# Daten liegen auf externer SSD; `data` ist ein SYMLINK dorthin (~17 GB, regenerierbar).
+# Nicht ins Repo — der Symlink selbst und der Migrations-Backup-Ordner werden ignoriert.
+/data
+/data_ALT_backup/
+# Die NICHT regenerierbare Slug-Map (data/state/slug_map_*.parquet) definiert die permanenten
+# Lead-Links (govi.link/<slug>). Hinter dem Symlink kann git sie nicht mehr tracken; sie ist
+# dreifach gesichert: git-Historie (bis 083d934), externe SSD und data_ALT_backup.
 
 # Zugangsdaten
 .secrets/
