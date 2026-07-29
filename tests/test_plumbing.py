@@ -678,6 +678,27 @@ def test_clean_display_name():
     assert C(None) is None and C("") == ""
 
 
+def test_docsignals_extraction():
+    """Dokument-Signal-Extraktion (Vergabeunterlagen-Volltext → Aufwand-Signale): Bürgschaft,
+    Bindefrist (beide Wortstellungen), Eignung+Zertifikate, Zuschlagsgewichte, Nebenangebote."""
+    from govisor.docsignals import extract_signals as X
+    s = X("Die Bieter haben eine Vertragserfüllungsbürgschaft in Höhe von 5 % vorzulegen. "
+          "Die Angebote sind für 60 Kalendertage gebunden. Vorzulegen sind Referenzen, eine "
+          "Eigenerklärung zur Zuverlässigkeit und ein Zertifikat nach DIN EN ISO 9001. "
+          "Der Preis wird mit 70 % und die Qualität mit 30 % gewichtet. Nebenangebote sind nicht "
+          "zugelassen. Es handelt sich um eine Rahmenvereinbarung.")
+    assert s["guarantee_required"] is True
+    assert s["binding_days"] == 60
+    assert s["eligibility_count"] >= 3 and "ISO 9001" in s["certificates"]
+    assert s["award_weights"] == {"preis": 70, "qualität": 30}
+    assert s["variants_allowed"] is False and s["framework"] is True
+    # Verzicht sticht: explizites Nein → False, nicht True
+    assert X("Auf eine Sicherheitsleistung wird verzichtet.")["guarantee_required"] is False
+    # leerer/nichtssagender Text → keine erfundenen Signale
+    assert X("Guten Tag, anbei die Datei.") == {}
+    assert X("") == {}
+
+
 def test_docpipe_extracts_and_recurses(tmp_path):
     """Dokument-Pipeline: Text aus TXT/HTML/DOCX, Rekursion durch verschachtelte ZIPs, Status-Flags.
     Reiner Unit-Test mit synthetischem ZIP (kein Netz, keine echten Dokumente nötig)."""

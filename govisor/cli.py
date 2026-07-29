@@ -100,6 +100,10 @@ def build_parser() -> argparse.ArgumentParser:
     ix.add_argument("--country", default="DE")
     ix.add_argument("--data-dir", default="data")
 
+    sg = sub.add_parser("signals-docs", help="Volltext → strukturierte Lead-Signale (doc_signals.parquet)")
+    sg.add_argument("--country", default="DE")
+    sg.add_argument("--data-dir", default="data")
+
     srcp = sub.add_parser("sources", help="Quellen-Registry anzeigen (Connector × Land × Tier)")
     srcp.add_argument("--country", default=None, metavar="CC", help="nur Quellen dieses Landes")
     srcp.add_argument("--status", default=None, choices=("live", "prepared", "candidate", "research"),
@@ -354,6 +358,11 @@ def main(argv: list[str] | None = None) -> int:
         from . import docpipe
         cfg = Config(countries=(args.country,), data_dir=args.data_dir)
         docpipe.build_index(cfg, country=args.country)
+        return 0
+    if args.command == "signals-docs":
+        from . import docsignals
+        cfg = Config(countries=(args.country,), data_dir=args.data_dir)
+        docsignals.build_signals(cfg, country=args.country)
         return 0
     if args.command == "sources":
         return cmd_sources(args)

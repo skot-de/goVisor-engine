@@ -67,6 +67,13 @@ LP = (f"read_parquet('{_LP_PATH}')" if pathlib.Path(_LP_PATH).exists() else
       "(SELECT NULL::VARCHAR lead_id, NULL::VARCHAR incumbent_name, NULL::BIGINT n_bidders, "
       "NULL::VARCHAR competition_level, NULL::BIGINT chain_depth, NULL::BIGINT incumbent_since_year "
       "WHERE false)")
+# Dokument-Signale (aus den Vergabeunterlagen extrahiert): überschreiben die dünnen eForms-
+# Aufwand-Felder, wo Unterlagen vorliegen. Guard: fehlt die Tabelle, leerer Stub.
+_DS_PATH = f"data/docs/{'DE'}/doc_signals.parquet"
+DS = (f"read_parquet('{_DS_PATH}')" if pathlib.Path(_DS_PATH).exists() else
+      "(SELECT NULL::VARCHAR notice_id, NULL::BOOLEAN guarantee_required, NULL::BIGINT binding_days, "
+      "NULL::BIGINT eligibility_count, NULL::VARCHAR certificates, NULL::BOOLEAN variants_allowed "
+      "WHERE false)")
 
 
 def de_date(d):
@@ -406,13 +413,17 @@ def export_branche(key):
                  lg.lat AS geo_lat, lg.lon AS geo_lon,
                  lp.incumbent_name AS pred_incumbent, lp.n_bidders AS pred_bidders,
                  lp.competition_level AS pred_konk, lp.chain_depth AS pred_chain,
-                 lp.incumbent_since_year AS pred_since
+                 lp.incumbent_since_year AS pred_since,
+                 ds.guarantee_required AS doc_guarantee, ds.binding_days AS doc_binding,
+                 ds.eligibility_count AS doc_eligibility, ds.certificates AS doc_certs,
+                 ds.variants_allowed AS doc_variants
           FROM {E} e
           LEFT JOIN {DC} b ON b.division = substr(e.cpv_code, 1, 2)
           LEFT JOIN {CL} cl ON cl.cpv_code = e.cpv_code
           LEFT JOIN {DL} dl ON dl.notice_id = e.lead_id
           LEFT JOIN {LG} lg ON lg.lead_id = e.lead_id
           LEFT JOIN {LP} lp ON lp.lead_id = e.lead_id
+          LEFT JOIN {DS} ds ON ds.notice_id = e.lead_id
         )
         , filtered AS (
           SELECT * FROM mapped WHERE ui_branche = '{key}'
@@ -559,11 +570,19 @@ def export_branche(key):
                            else None),
             # #15 Weg A — strukturierte Anforderungen aus eForms. True/False = belegt,
             # None = nicht veröffentlicht (ehrlich weglassen statt „erfüllt" zu behaupten).
+            # #15/#18: strukturierte Anforderungen. Dokument-Signale (aus den Vergabeunterlagen)
+            # überschreiben die dünnen eForms-Felder, wo Unterlagen vorliegen — sonst eForms.
             "anf": {
-                "buergschaft": (bool(g("guarantee_required")) if g("guarantee_required") is not None else None),
-                "nebenangebote": (bool(g("variants_allowed")) if g("variants_allowed") is not None else None),
-                "bindefristTage": (int(r["validity_days"]) if g("validity_days") is not None else None),
-                "eignung": (str(g("selection_types")).split(",") if g("selection_types") else []),
+                "buergschaft": (bool(g("doc_guarantee")) if g("doc_guarantee") is not None
+                                else bool(g("guarantee_required")) if g("guarantee_required") is not None else None),
+                "nebenangebote": (bool(g("doc_variants")) if g("doc_variants") is not None
+                                  else bool(g("variants_allowed")) if g("variants_allowed") is not None else None),
+                "bindefristTage": (int(g("doc_binding")) if g("doc_binding") is not None
+                                   else int(r["validity_days"]) if g("validity_days") is not None else None),
+                "eignung": (["Nachweis"] * int(g("doc_eligibility")) if g("doc_eligibility")
+                            else str(g("selection_types")).split(",") if g("selection_types") else []),
+                "zertifikate": (str(g("doc_certs")).split(",") if g("doc_certs") else []),
+                "quelle": ("unterlagen" if g("doc_eligibility") or g("doc_guarantee") is not None else "eforms"),
             },
             "status": "ungesichtet", "seen": None, "merk": None,
             "aktualitaet": None, "aufwand": None,
