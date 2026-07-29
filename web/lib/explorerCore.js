@@ -266,6 +266,8 @@ function aufwandStufe(l){
     if(anf.bindefristTage!=null){ bekannt++;
       if(anf.bindefristTage>=90){ punkte+=2; t.push('lange Bindefrist ('+anf.bindefristTage+' Tage)'); }
       else if(anf.bindefristTage>=60){ punkte+=1; t.push('Bindefrist '+anf.bindefristTage+' Tage'); } }
+    if(anf.nebenangebote!=null){ bekannt++; if(anf.nebenangebote===true){ punkte+=1; t.push('Nebenangebote zugelassen'); } }
+    if(anf.zertifikate && anf.zertifikate.length){ punkte+=1; t.push(anf.zertifikate.slice(0,2).join(', ')); }
     const nk = (l.zuschlag||[]).length; if(nk){ bekannt++; if(nk>=3){ punkte+=1; t.push(nk+' Zuschlagskriterien'); } }
     if(l.rahmen==='vob'){ bekannt++; punkte+=1; t.push('Präqualifikation (VOB)'); }
   } else return {stufe:'na', bekannt:0, treiber:[]};
@@ -278,16 +280,25 @@ function aufwandStufe(l){
    der Eignung (#15). Ordnet ein, entscheidet nicht — jeder Faktor bleibt nachvollziehbar. */
 function bidNoBid(l){
   const m = l.match;
-  if(!m || m.relevanz==='na') return null;                 // ohne Profil keine Einordnung
+  // Aufwand + Eignung + Angreifbarkeit sind INTRINSISCH (kein Profil nötig) — immer berechnen.
+  const auf = aufwandStufe(l);
+  const aufDots = {niedrig:1, mittel:2, hoch:3, na:0}[auf.stufe] || 0;
+  const aufGering = auf.stufe==='niedrig';                  // na = unbekannt, nicht „gering"
+  const hartBlock = m && m.blocker ? m.blocker.find(b=>b.art==='buergschaft') : null;
+  const eignungOk = !hartBlock;
+  if(!m || m.relevanz==='na'){
+    // Ohne Profil: Aufwand + Angreifbarkeit zeigen; nur die Passung (Chance) braucht das Profil.
+    const wDots = {hoch:3, mittel:2, niedrig:1}[l.wechsel] || 0;
+    return {noProfile:true, chanceDots:wDots,
+            chance: (l.wechsel && l.wechsel!=='na') ? 'Amtsinhaber '+l.wechsel+' angreifbar' : 'Profil einrichten',
+            aufDots, aufwand:auf.stufe, aufTreiber:auf.treiber, eignungOk, hartBlock,
+            einordnung:{t:'Profil hinterlegen für die Chance', cls:'weigh',
+                        x:'Aufwand und Angreifbarkeit des Amtsinhabers seht ihr schon jetzt — für die Passung zu eurem Betrieb euer Profil einrichten.'}};
+  }
   const relScore = {hoch:3, mittel:2, niedrig:1}[m.relevanz] || 0;
   const wScore = {hoch:1, mittel:0.6, niedrig:0.2}[l.wechsel] || 0.4;   // Angreifbarkeit
   const chanceDots = Math.max(1, Math.min(4, Math.round(relScore + wScore)));
   const chanceHoch = m.relevanz==='hoch';
-  const auf = aufwandStufe(l);
-  const aufDots = {niedrig:1, mittel:2, hoch:3, na:0}[auf.stufe] || 0;
-  const aufGering = auf.stufe==='niedrig';                  // na = unbekannt, nicht „gering"
-  const hartBlock = m.blocker.find(b=>b.art==='buergschaft');
-  const eignungOk = !hartBlock;
   let einordnung;
   if(!eignungOk)                     einordnung = {t:'K.o.', x:'ohne diese Voraussetzung chancenlos.', cls:'ko'};
   else if(chanceHoch && aufGering)   einordnung = {t:'Klarer Fall', x:'hohe Chance bei überschaubarem Aufwand — bieten.', cls:'go'};
