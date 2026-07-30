@@ -208,7 +208,42 @@ def seed_groups(cfg: Config, country: str = "DE", reseed: bool = False) -> tuple
             cnt AS (SELECT entity_id, domain, count(*) n FROM em GROUP BY 1,2)
             SELECT entity_id, arg_max(domain, n) FROM cnt GROUP BY 1
         """).fetchall())
+    # Dominante PLZ je Entität — für die kommunale Gruppierung (Gemeinde-Disambiguierung).
+    # try/except: fehlt die postal_code-Spalte (z. B. Test-Fixtures), bleibt die Map leer.
+    plz_map: dict[str, str] = {}
+    if PE.exists() and _glob.glob(NP_glob):
+        try:
+            plz_map = dict(con.execute(f"""
+                WITH pl AS (
+                  SELECT pe.entity_id, regexp_extract(np.postal_code, '([0-9]{{5}})', 1) AS plz
+                  FROM '{PE.as_posix()}' pe
+                  JOIN '{NP_glob}' np ON np.notice_id=pe.notice_id AND np.role=pe.role AND np.seq=pe.seq
+                  WHERE np.postal_code IS NOT NULL),
+                cnt AS (SELECT entity_id, plz, count(*) n FROM pl WHERE plz<>'' GROUP BY 1,2)
+                SELECT entity_id, arg_max(plz, n) FROM cnt GROUP BY 1
+            """).fetchall())
+        except Exception:
+            plz_map = {}
     con.close()
+
+    # Kommunale Gruppen: Referate/Ämter derselben Gemeinde (je EIGENE Leitweg-ID, daher NICHT
+    # gemergt) unter EIN Gruppen-Label bringen — „Landeshauptstadt München", „…, Baureferat",
+    # „…, Direktorium" → Gruppe „München". Label = kürzester Name der Gruppe (Basis-Gemeinde).
+    plz_kreis = _load_plz_kreis(cfg) if country == "DE" else {}
+    from collections import defaultdict as _dd
+    _muni_members: dict[str, list] = _dd(list)
+    for entity_id, name, national_id in rows:
+        plz = plz_map.get(entity_id)
+        k = _muni_key(name, {plz} if plz else set(), plz_kreis)
+        if k:
+            _muni_members[k].append((entity_id, name))
+    muni_group: dict[str, str] = {}          # entity_id → Gemeinde-Label (nur Gruppen mit ≥2 Stellen)
+    for k, members in _muni_members.items():
+        if len({eid for eid, _ in members}) < 2:
+            continue
+        label = min((nm for _, nm in members), key=len)     # kürzester = Basis-Gemeinde
+        for eid, _ in members:
+            muni_group[eid] = label
 
     added = 0
     for entity_id, name, national_id in rows:
@@ -225,6 +260,9 @@ def seed_groups(cfg: Config, country: str = "DE", reseed: bool = False) -> tuple
                                            name_norm=ent.normalize_company(name))
             if dom_label:
                 label, source = dom_label, "auto_domain"
+        elif entity_id in muni_group:
+            # Kommunale Stelle → unter ihre Gemeinde gruppieren (Referate bleiben eigene Entities).
+            label, source = muni_group[entity_id], "auto_muni"
         existing[entity_id] = {"entity_id": entity_id, "canonical_name": name,
                                "national_id": national_id or "", "group_label": label,
                                "source": source}
