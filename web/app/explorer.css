@@ -352,6 +352,24 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
 .zug-bar{height:8px;border-radius:99px;background:var(--surface-3);overflow:hidden}
 .zug-bar i{display:block;height:100%;border-radius:99px;background:var(--signal)}
 .zug-v{font-size:var(--t-meta);font-weight:600;color:var(--ink-700);font-variant-numeric:tabular-nums}
+/* Vergabe-Analyse (LLM aus den Unterlagen) — Ampel + Checkliste */
+.va-sec{background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--r);padding:var(--s4)}
+.va-head{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);margin-bottom:var(--s2)}
+.va-amp{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:var(--t-body);padding:4px 12px;border-radius:99px}
+.va-amp.va-go{color:#0a7d3f;background:#e7f6ec}
+.va-amp.va-weigh{color:#8a5a00;background:#fbf1dc}
+.va-amp.va-stop{color:#a5231b;background:#fbe6e4}
+.va-grund{font-size:var(--t-body);color:var(--ink-700);margin-bottom:var(--s2)}
+.va-sum{font-size:var(--t-body);line-height:1.6;color:var(--ink-900);margin-bottom:var(--s3)}
+.va-block{margin-top:var(--s3)}
+.va-block h5{font-size:var(--t-meta);font-weight:700;color:var(--ink-500);text-transform:uppercase;letter-spacing:.03em;margin-bottom:var(--s2)}
+.va-check{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.va-check li label{display:flex;align-items:flex-start;gap:8px;font-size:var(--t-body);line-height:1.45;color:var(--ink-800);cursor:pointer}
+.va-check li input{margin-top:3px;flex:none;accent-color:var(--signal)}
+.va-tag{font-size:11px;color:var(--ink-400);border:1px solid var(--line);border-radius:99px;padding:0 6px;text-transform:capitalize;white-space:nowrap}
+.va-fill{margin-top:var(--s3);padding:var(--s3);border-radius:var(--r);background:var(--surface-2,#f5f7f6);border:1px dashed var(--signal)}
+.va-fill b{display:block;font-size:var(--t-meta);color:var(--signal-deep);margin-bottom:2px}
+.va-fill span{font-size:var(--t-meta);color:var(--ink-600);line-height:1.5}
 @media (max-width:640px){.los{grid-template-columns:28px 1fr;gap:4px}.los-w,.los-d,.los-r{text-align:left}}
 
 /* Eigener Vertrag — direkt in der Liste, statt in einem eigenen Modus */

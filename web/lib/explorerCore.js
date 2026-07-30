@@ -923,6 +923,29 @@ function renderUebersicht(l){
     return `<span class="v ${cls}">${esc(text)}</span>${pdot(src,hint)}`;
   };
   return `<div class="dbody dbody-ov">
+    ${l.lbAnalyse ? (()=>{
+      const a = l.lbAnalyse;
+      const AMP = {gruen:['●','Bietbar','va-go'], gelb:['●','Abwägen','va-weigh'], rot:['●','Hohe Hürde','va-stop']};
+      const [icon,label,cls] = AMP[a.ampel] || AMP.gelb;
+      // Abhakbare Checkliste (Strings ODER {nachweis,kategorie}).
+      const check = items => (items&&items.length) ? `<ul class="va-check">${items.map(x=>{
+        const t = typeof x==='string' ? x : (x.nachweis||'');
+        const tag = (x&&x.kategorie) ? ` <span class="va-tag">${esc(x.kategorie)}</span>` : '';
+        return `<li><label><input type="checkbox"><span>${esc(t)}${tag}</span></label></li>`;}).join('')}</ul>` : '';
+      const bl = (title,body)=> body ? `<div class="va-block"><h5>${title}</h5>${body}</div>` : '';
+      return `<section class="sec va-sec">
+      <div class="va-head"><span class="va-amp ${cls}">${icon} ${label}</span><span class="cov">Vergabe-Analyse · aus den Unterlagen</span></div>
+      ${a.ampel_grund?`<p class="va-grund">${esc(a.ampel_grund)}</p>`:''}
+      ${a.zusammenfassung?`<p class="va-sum">${esc(a.zusammenfassung)}</p>`:''}
+      ${bl('Muss erfüllt sein — K.o.-Kriterien', check(a.ko_kriterien))}
+      ${bl('Einzureichen — Eignungsnachweise', check(a.eignung))}
+      ${(a.zuschlag&&a.zuschlag.length)?bl('Zuschlagskriterien', `<div class="zug">${a.zuschlag.map(z=>`<div class="zug-row"><span class="zug-k">${esc(z.kriterium)}</span><span class="zug-bar"><i style="width:${Math.max(3,Math.min(100,Number(z.gewicht)||0))}%"></i></span><span class="zug-v">${esc(String(z.gewicht))} %</span></div>`).join('')}</div>`):''}
+      ${(a.fristen&&a.fristen.length)?bl('Fristen', `<div class="kv">${a.fristen.map(f=>`<div class="kvi"><span class="k">${esc(f.typ||'')}</span><span class="vv"><span class="v">${esc(f.wert||'')}</span></span></div>`).join('')}</div>`):''}
+      ${bl('Aufwandstreiber', check(a.aufwand))}
+      ${(a.vorausfuellbar&&a.vorausfuellbar.length)?`<div class="va-fill"><b>Das füllen wir aus deinem Profil vor</b><span>${a.vorausfuellbar.map(x=>esc(typeof x==='string'?x:(x.nachweis||''))).join(' · ')}</span></div>`:''}
+      <p class="rt-note">Automatisch aus den Vergabeunterlagen erstellt — als Orientierung, nicht rechtsverbindlich.</p>
+    </section>`;
+    })() : ''}
     <section class="sec">
       <h4>Eckdaten</h4>
       <div class="kv">

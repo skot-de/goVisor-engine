@@ -43,6 +43,17 @@ async function loadDocSignals(): Promise<Record<string, DocSignals>> {
   return docSignals!;
 }
 
+// LLM-Vergabe-Analyse aus den Unterlagen (doc-analysis.json, aus analyze_docs.py): Ampel +
+// Bieter-Checkliste (K.o./Eignung/Zuschlag/Fristen/Aufwand/vorausfüllbar), je notice_id.
+type DocAnalysis = Record<string, unknown>;
+let docAnalysis: Record<string, DocAnalysis> | null = null;
+async function loadDocAnalysis(): Promise<Record<string, DocAnalysis>> {
+  if (docAnalysis) return docAnalysis;
+  try { const raw = await loadDataFile("doc-analysis.json"); docAnalysis = raw ? JSON.parse(raw) : {}; }
+  catch { docAnalysis = {}; }
+  return docAnalysis!;
+}
+
 export async function GET(req: Request) {
   const u = new URL(req.url);
   const branche = u.searchParams.get("branche") || "";
@@ -65,6 +76,9 @@ export async function GET(req: Request) {
     // Strukturierte Anforderungs-Signale aus den Unterlagen (Bürgschaft, Zertifikate, Zuschlagsgewichte …).
     const ds = (await loadDocSignals())[id];
     if (ds) detail.lbSignals = ds;
+    // LLM-Vergabe-Analyse (Ampel + Bieter-Checkliste).
+    const an = (await loadDocAnalysis())[id];
+    if (an) detail.lbAnalyse = an;
     return NextResponse.json(detail);
   } catch {
     return NextResponse.json({ error: "keine Detaildaten" }, { status: 503 });
