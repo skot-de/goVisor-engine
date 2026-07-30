@@ -983,6 +983,16 @@ function renderUebersicht(l){
       Die eigentliche Leistungsbeschreibung liegt in den Vergabeunterlagen auf dem Vergabeportal.</p>
     </section>` : ''}
 
+    ${l.lbText ? `<section class="sec sec-raw">
+      <h4>Leistungsbeschreibung <span class="cov">aus den Vergabeunterlagen · ${l.lbFiles||1} Datei${(l.lbFiles||1)===1?'':'en'}</span></h4>
+      <details class="rawtext" open>
+        <summary><span class="rt-open">Volltext aus den Unterlagen</span><span class="rt-len">${Math.round((l.lbChars||l.lbText.length)/1000)} Tsd. Zeichen${l.lbTruncated?' · gekürzt':''}</span></summary>
+        <div class="rt-body lb-doc">${l.lbText.split(/\n\n+/).slice(0,400).map(p=>`<p>${esc(p.trim())}</p>`).join('')}</div>
+      </details>
+      <p class="rt-note">Automatisch aus den heruntergeladenen Vergabeunterlagen extrahiert (PDF/DOCX/…) —
+      der eigentliche Leistungsinhalt, nicht nur der Bekanntmachungs-Zweizeiler.</p>
+    </section>` : ''}
+
     ${l.hasDetail && l.beschreibung ? `<section class="sec sec-raw">
       <h4>Leistungsbeschreibung <span class="cov">unverändert aus der Bekanntmachung</span></h4>
       <details class="rawtext" open>
