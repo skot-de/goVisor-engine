@@ -75,6 +75,7 @@ function postFilter(rows: Lead[], a: Adv): Lead[] {
     if (a.neu === "folge" && l.neu) return false;
     if (a.wenigWettbewerb && (l.konk as { stufe?: string } | undefined)?.stufe !== "gering") return false;
     if (a.chance.length && !a.chance.includes(String(l.wechsel))) return false;
+    if (a.relevanz.length && !a.relevanz.includes(String(l.relevanz))) return false;
     if (a.aufwand.length && !a.aufwand.includes(aufwandStufe(l).stufe)) return false;
     if (a.buergschaft !== "all") {
       const b = (l.aufwand as { buergschaft?: string } | undefined)?.buergschaft;
@@ -194,17 +195,27 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // Maximal-Totale) — "Hamm" zeigt im Menü dann z. B. Bau 0 / IT 6 statt 31.141 / 3.883.
   // Suchbegriffe = Live-Eingabe + committete Stichwort-Tokens. Debounced; ohne Suche → Totale.
   const textTokenKey = tokens.filter((t) => t.type === "text").map((t) => t.value).join(" ");
+  // Aktiver Umkreis-Token (Stadt/PLZ mit Koordinate) → die Branchen-Zähler im Menü auf genau
+  // diesen Ort+Radius beziehen (#27), statt globale Totale zu zeigen.
+  const ortGeo = tokens.find(
+    (t) => t.type === "ort" && Array.isArray((t as { coord?: number[] }).coord),
+  ) as { coord?: number[]; radius?: number } | undefined;
+  const geoKey = ortGeo?.coord ? `${ortGeo.coord[0]},${ortGeo.coord[1]},${ortGeo.radius || 25}` : "";
   useEffect(() => {
     const raw = [query.trim(), textTokenKey].filter(Boolean).join(" ").trim();
     // Reine PLZ/Zahl ist eine Geo-Suche (kein Textmatch) → nicht als Textzähler werten,
-    // sonst zeigte das Menü fälschlich 0 überall. Dann bleiben die Totale stehen.
+    // sonst zeigte das Menü fälschlich 0 überall. Der Umkreis kommt separat als lat/lon/r.
     const q = (raw.length >= 2 && !/^\d{2,5}$/.test(raw)) ? raw : "";
-    const url = q ? `/api/branchen?q=${encodeURIComponent(q)}` : "/api/branchen";
+    const params = new URLSearchParams();
+    if (q) params.set("q", q);
+    if (geoKey) { const [la, lo, rr] = geoKey.split(","); params.set("lat", la); params.set("lon", lo); params.set("r", rr); }
+    const qs = params.toString();
+    const url = qs ? `/api/branchen?${qs}` : "/api/branchen";
     const id = setTimeout(() => {
       fetch(url).then((r) => r.json()).then(setBranchenCounts).catch(() => {});
-    }, q ? 220 : 0);
+    }, (q || geoKey) ? 220 : 0);
     return () => clearTimeout(id);
-  }, [query, textTokenKey]);
+  }, [query, textTokenKey, geoKey]);
 
   // PLZ→Koordinate-Tabelle einmal laden (für die echte Umkreissuche). ~450 KB, cache-fähig.
   useEffect(() => {
@@ -342,9 +353,19 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     visible().forEach((l: Lead) => { if (l.status === "ungesichtet") l.status = "gesichtet"; });
     bump();
   }
+  // Verlauf-Protokoll (#30): Nutzeraktionen landen im Team-Tab „Verlauf" (l.log). Angehängt
+  // (nicht vorangestellt), damit der Erst-Eintrag oben bleibt — wie in den Seed-Logs.
+  function logEvent(l: (Lead & { log?: unknown[] }) | undefined, kind: string, text: string) {
+    if (!l) return;
+    (l.log = (l.log as unknown[]) || []).push({ kind, text, who: "Du", ts: "gerade eben" });
+  }
   function toggleStar(id: string) {
     const l = CORE.find((x) => x.id === id);
-    if (l) { l.merk = l.merk ? null : "manuell"; syncWatchlist(id, !!l.merk); }
+    if (l) {
+      l.merk = l.merk ? null : "manuell";
+      syncWatchlist(id, !!l.merk);
+      logEvent(l, "watch", l.merk ? "Zur Merkliste hinzugefügt" : "Von der Merkliste entfernt");
+    }
     bump();
   }
 
@@ -360,8 +381,10 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
 
   // ── Lead-Detail öffnen/schließen/Tabs ──────────────────────────────────────
   function openLead(id: string) {
-    const l = CORE.find((x) => x.id === id) as (Lead & { status?: string; beschreibung?: string }) | undefined;
+    const l = CORE.find((x) => x.id === id) as (Lead & { status?: string; beschreibung?: string; log?: unknown[] }) | undefined;
     if (l && l.status === "ungesichtet") l.status = "gesichtet";
+    // Verlauf nie ganz leer: beim ERSTEN Öffnen einen Auftakt-Eintrag setzen (length-Guard → einmalig).
+    if (l && (!l.log || (l.log as unknown[]).length === 0)) logEvent(l, "create", "Lead in goVisor geöffnet");
     setActiveId(id);
     setActiveTab("uebersicht");
     setMode("read");
@@ -395,6 +418,8 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     const l = CORE.find((x) => x.id === activeId) as (Lead & { userStatus?: string | null }) | undefined;
     if (!l) return;
     l.userStatus = l.userStatus === k ? null : k;
+    const WFLABEL: Record<string, string> = { interessant: "Interessant", pruefung: "In Prüfung", fragen: "Offene Fragen", verworfen: "Verworfen" };
+    logEvent(l, "status", l.userStatus ? `Status → ${WFLABEL[k] || k}` : "Status zurückgesetzt");
     bump();
   }
   function toggleExpand() { setMode((m) => (m === "full" ? "read" : "full")); }
@@ -430,6 +455,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         if (body) {
           const l = CORE.find((x) => x.id === activeId) as (Lead & { comments?: unknown[] }) | undefined;
           l?.comments?.push({ author: "Du", initials: "DK", ts: "gerade eben", body });
+          logEvent(l, "analyze", "Notiz für das Team ergänzt");
           bump();
         }
         break;

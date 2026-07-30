@@ -10,6 +10,12 @@ type Lead = any;
 const SRC = { echt: "veröffentlicht", schaetz: "geschätzt", unbekannt: "unbekannt" } as Record<string, string>;
 const band = (b?: string) => (!b || b === "na" ? "—" : b);
 const tedUrl = (id: string) => `https://ted.europa.eu/de/notice/-/detail/${String(id).replace(/_/g, "-")}`;
+// Briefing-Quelle = goVisor-Deep-Link (führt den Empfänger zurück in die App), TED bleibt als
+// Herkunftsbeleg dahinter. Origin kommt vom aktuellen Deployment (Dossier wird im Browser erzeugt).
+const govisorUrl = (id: string) => {
+  const base = (typeof window !== "undefined" && window.location) ? window.location.origin : "";
+  return `${base}/leads?lead=${encodeURIComponent(String(id))}`;
+};
 const heute = () => { const d = new Date(); return `${String(d.getDate()).padStart(2, "0")}.${String(d.getMonth() + 1).padStart(2, "0")}.${d.getFullYear()}`; };
 
 function eckdaten(l: Lead): [string, string][] {
@@ -61,7 +67,7 @@ export function dossierMarkdown(l: Lead): string {
   out.push("## Bewertung", mdTable(bewertung(l)), "");
   const anf = anforderungen(l);
   if (anf) out.push("## Anforderungs-Check", mdTable(anf), "");
-  out.push("---", `Quelle: [TED](${tedUrl(l.id)}) · Datenstand ${heute()} · erstellt mit goVisor`,
+  out.push("---", `Quelle: [In goVisor öffnen](${govisorUrl(l.id)}) · Bekanntmachung auf [TED](${tedUrl(l.id)}) · Datenstand ${heute()} · erstellt mit goVisor`,
     "*Volumen- und Timing-Angaben sind, wo gekennzeichnet, geschätzt — nicht veröffentlichte Werte werden nicht geraten.*");
   return out.join("\n");
 }
@@ -81,7 +87,7 @@ export function dossierDocHtml(l: Lead): string {
 <h2 style="font-size:13pt;color:#067a55">Eckdaten</h2>${tbl(eckdaten(l))}
 <h2 style="font-size:13pt;color:#067a55">Bewertung</h2>${tbl(bewertung(l))}
 ${anf ? `<h2 style="font-size:13pt;color:#067a55">Anforderungs-Check</h2>${tbl(anf)}` : ""}
-<hr><p style="font-size:9pt;color:#8c9b95">Quelle: TED (${tedUrl(l.id)}) · Datenstand ${heute()} · erstellt mit goVisor.<br>
+<hr><p style="font-size:9pt;color:#8c9b95">Quelle: <a href="${govisorUrl(l.id)}">In goVisor öffnen</a> · Bekanntmachung auf TED (${tedUrl(l.id)}) · Datenstand ${heute()} · erstellt mit goVisor.<br>
 Volumen- und Timing-Angaben sind, wo gekennzeichnet, geschätzt — nicht veröffentlichte Werte werden nicht geraten.</p>
 </body></html>`;
 }

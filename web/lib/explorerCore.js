@@ -485,6 +485,9 @@ function toggleToken(tok){
 function classifyQuery(raw){
   const q = raw.trim().toLowerCase(); if(!q) return null;
   if(ORTE[q]) return {type:'ort',label:ORTE[q].label,value:ORTE[q].region};
+  // Exakter Stadtname → Umkreis-Token (Enter ohne Vorschlagswahl).
+  const _c = PLZ_GEO._cities && PLZ_GEO._cities.DE && PLZ_GEO._cities.DE[q];
+  if(_c) return {type:'ort', value:'city:'+q, coord:[_c[0], _c[1]], radius:25, label:_c[2]};
   if(/^\d{4,5}$/.test(q)){                   // volle PLZ (DE 5-, CH/AT 4-stellig) → echte Umkreissuche
     const g = plzLookup(q);
     if(g) return {type:'ort', value:q, coord:[g[0], g[1]], radius:25,
@@ -759,6 +762,19 @@ function suggestList(raw){
   const out=[]; const seen=new Set();
   const push=(o)=>{const k=o.type+o.value; if(!seen.has(k)){seen.add(k); out.push(o);}};
   for(const [k,v] of Object.entries(ORTE)) if(k.startsWith(q)) push({type:'ort',value:v.region,label:v.label,cat:'Ort'});
+  // Stadtname → echter Umkreis-Token (Koordinate aus dem Stadt-Index). Die Stadt erscheint oben,
+  // die Auftraggeber-Treffer mit demselben Namen folgen darunter — beide Wege parallel.
+  const _cities = (PLZ_GEO._cities && PLZ_GEO._cities.DE) || null;
+  if(_cities && !/^\d/.test(q)){
+    const cityKeys = [];
+    if(_cities[q]) cityKeys.push(q);                       // exakter Treffer zuerst
+    const pre = [];
+    for(const key in _cities){ if(key!==q && key.startsWith(q)){ pre.push(key); if(pre.length>=60) break; } }
+    pre.sort((a,b)=> a.length-b.length || a.localeCompare(b));
+    for(const key of pre.slice(0,3)) cityKeys.push(key);
+    for(const key of cityKeys){ const c=_cities[key];
+      push({type:'ort', value:'city:'+key, coord:[c[0],c[1]], radius:25, cat:'Umkreis', label:c[2]}); }
+  }
   const _pg = /^\d{4,5}$/.test(q) ? plzLookup(q) : null;
   if(_pg){                                                // volle PLZ (DE 5-, CH/AT 4-stellig)
     push({type:'ort', value:q, coord:[_pg[0], _pg[1]], radius:25, cat:'Umkreis',
@@ -767,7 +783,7 @@ function suggestList(raw){
   [...new Set(LEADS.map(l=>l.buyerShort))].forEach(b=>{ if(b.toLowerCase().includes(q)) push({type:'buyer',value:b,label:b,cat:'Auftraggeber'}); });
   [...new Set(LEADS.flatMap(l=>(l.kw||[]).map(k=>k.w)))].forEach(w=>{ if(w.toLowerCase().includes(q)) push({type:'text',value:w.toLowerCase(),label:w,cat:'Stichwort'}); });
   [...new Set(LEADS.map(l=>l.natur))].forEach(n=>{ if(n.toLowerCase().includes(q)) push({type:'text',value:n.toLowerCase(),label:n,cat:'Leistung'}); });
-  return out.slice(0,7);
+  return out.slice(0,9);
 }
 
 /* ═══ DETAIL-SCHICHT (Prototyp verbatim) ═══════════════════════════════ */
@@ -1062,7 +1078,18 @@ function renderUebersicht(l){
 
     <section class="sec">
       <h4>Quelle</h4>
-      <a class="tedlink" href="#" target="_blank" rel="noopener">TED <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      ${(()=>{
+        // Echter Quell-Link: TED-Notices → TED-Viewer (id ist die notice_id `NNNNNN_YYYY`, TED
+        // nutzt den Bindestrich). Sonst der hinterlegte Vergabeportal-Link. Kein toter href="#".
+        const ext = /*svg*/`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>`;
+        const isTed = /^\d+_\d{4}$/.test(String(l.id||''));
+        const href = isTed ? `https://ted.europa.eu/en/notice/-/detail/${String(l.id).replace('_','-')}`
+                   : (l.unterlagen && l.unterlagen.url) ? l.unterlagen.url : null;
+        const label = isTed ? 'TED' : 'Vergabeportal';
+        return href
+          ? `<a class="tedlink" href="${esc(href)}" target="_blank" rel="noopener">${label} ${ext}</a>`
+          : `<span class="v-unk">nicht verlinkt</span>`;
+      })()}
     </section>
 
         <div class="prov-legend">
@@ -1126,8 +1153,12 @@ function renderTeilnahme(l){
                        : ` <span class="frist-t ${cls}">noch ${tage} ${tage===1?'Tag':'Tage'}</span>`;
             const datum = (f && f.date) ? f.date : null;
             const est = (f && f.src==='schaetz');
-            const kern = datum ? `${datum}${f&&f.uhrzeit?', '+f.uhrzeit+' Uhr':''}${rest}` : `noch ${tage} Tage`;
-            return iv(kern + (est?' <span class="vm">voraussichtlich</span>':''), est?'schaetz':'echt');
+            // rest/voraussichtlich sind selbst erzeugtes Markup → NICHT durch iv() (das esc()t die
+            // Datenwerte). Datum/Uhrzeit einzeln escapen, Markup roh anhängen.
+            const body = datum
+              ? `${esc(datum)}${f&&f.uhrzeit?', '+esc(f.uhrzeit)+' Uhr':''}${rest}`
+              : `noch ${esc(tage)} Tage`;
+            return `<span class="v">${body}${est?' <span class="vm">voraussichtlich</span>':''}</span>${pdotT(est?'schaetz':'echt')}`;
           })()}</span></div>
         <div class="kvi kvi-full"><span class="k">Submissionstermin</span>
           <span class="vv">${l.submission
@@ -1142,8 +1173,8 @@ function renderTeilnahme(l){
       <h4>Zuschnitt</h4>
       <div class="kv">
         <div class="kvi"><span class="k">Teilbar</span>
-          <span class="vv">${l.lose&&l.lose.length
-            ? `${iv('ja — '+l.lose.length+' Lose','echt')}` : iv('nein — ganz oder gar nicht','echt')}</span></div>
+          <span class="vv">${l.lose&&l.lose.length>1
+            ? `${iv('ja — '+l.lose.length+' Lose','echt')}` : iv('nein — ein Gesamtlos','echt')}</span></div>
         <div class="kvi"><span class="k">Angebot auf höchstens</span>
           <span class="vv">${l.loseMaxAngebot?iv(l.loseMaxAngebot+' Lose','echt'):'<span class="v-na">nicht begrenzt</span>'}</span></div>
         <div class="kvi"><span class="k">Zuschlag auf höchstens</span>
@@ -1157,7 +1188,9 @@ function renderTeilnahme(l){
       </div>
     </section>
 
-${l.lose && l.lose.length ? (()=>{
+${l.lose && l.lose.length>1 ? (()=>{
+      // Nur bei ECHTER Mehr-Los-Vergabe (>1) die Lose-Aufschlüsselung zeigen — ein Gesamtlos
+      // (length≤1) ist „ganz oder gar nicht", da wären Einstiegsschwelle/„kleinstes Los" sinnlos.
       // Echte Lose können „Wert offen" tragen (keine Ziffern) → NaN. Auf 0 normieren,
       // damit min/Index nicht kippt (l.lose[-1] wäre undefined → Crash).
       const werte = l.lose.map(x=>parseInt(String(x.wert||'').replace(/\D/g,''),10)||0);
@@ -1292,10 +1325,11 @@ function renderAnalyse(l){
     ['historie','Wettbewerbs-Historie'],
     ['kontakt','Nächster Schritt'],
   ];
+  // Sprung-Submenu (ananav) bewusst entfernt — es wanderte beim Scrollen nicht mit; der
+  // Bewertung-Tab läuft jetzt als durchgehender Fließtext (Sven, 2026-07-30). `nav` bleibt als
+  // Abschnitts-Referenz erhalten, falls später ein sticky Menü gewünscht wird.
+  void nav;
   return `<div class="dbody dbody-ana">
-    <nav class="ananav" aria-label="Analyse-Abschnitte">
-      ${nav.map((n,i)=>`<button class="anav-item ${i===0?'on':''}" data-anav="${n[0]}">${n[1]}</button>`).join('')}
-    </nav>
     <div class="anagrid">
 
     <section class="sec" id="an-bewertung" data-sec="bewertung">

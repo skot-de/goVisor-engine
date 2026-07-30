@@ -18,6 +18,7 @@ export type Adv = {
   aufwand: string[];               // niedrig | mittel | hoch
   buergschaft: "all" | "ja" | "nein";
   chance: string[];                // niedrig | mittel | hoch (Wechsel-Chance)
+  relevanz: string[];              // niedrig | mittel | hoch (Profil-Relevanz, client-berechnet — braucht Profil)
   multiLot: boolean;
   hasDetail: boolean;              // nur mit ausführlicher Beschreibung
   unterlagen: boolean;             // nur mit Vergabeunterlagen-Link
@@ -27,7 +28,7 @@ export type Adv = {
 export const emptyAdv: Adv = {
   phases: [], horizon: null, cpvFields: [], regionAxis: "perf", regions: [], nationwide: false,
   buyer: "", leistung: [], art: [], rahmen: [], valMin: null, valMax: null,
-  neu: "all", wenigWettbewerb: false, aufwand: [], buergschaft: "all", chance: [], multiLot: false,
+  neu: "all", wenigWettbewerb: false, aufwand: [], buergschaft: "all", chance: [], relevanz: [], multiLot: false,
   hasDetail: false, unterlagen: false, staaten: [],
 };
 
@@ -37,7 +38,7 @@ export function advCount(a: Adv): number {
     (a.buyer.trim() ? 1 : 0) + a.leistung.length + a.art.length + a.rahmen.length +
     (a.valMin != null ? 1 : 0) + (a.valMax != null ? 1 : 0) +
     (a.neu !== "all" ? 1 : 0) + (a.wenigWettbewerb ? 1 : 0) + a.aufwand.length +
-    (a.buergschaft !== "all" ? 1 : 0) + a.chance.length + (a.multiLot ? 1 : 0) +
+    (a.buergschaft !== "all" ? 1 : 0) + a.chance.length + a.relevanz.length + (a.multiLot ? 1 : 0) +
     (a.hasDetail ? 1 : 0) + (a.unterlagen ? 1 : 0) + a.staaten.length
   );
 }
@@ -182,6 +183,15 @@ export function FilterPanel({
               <input type="checkbox" checked={adv.wenigWettbewerb} onChange={() => set({ wenigWettbewerb: !adv.wenigWettbewerb })} />
               <span>Nur mit wenig Wettbewerb (zuletzt ≤ 3 Bieter)</span>
             </label>
+          </section>
+
+          <section className="fp-sec">
+            <h5>Relevanz <span className="fp-hint">Profil-Passung · braucht Profil</span></h5>
+            <div className="fp-chips">
+              {BAND.map(([v, l]) => (
+                <button key={v} className={`fp-chip ${adv.relevanz.includes(v) ? "on" : ""}`} onClick={() => set({ relevanz: toggle(adv.relevanz, v) })}>{l}</button>
+              ))}
+            </div>
           </section>
 
           <section className="fp-sec">

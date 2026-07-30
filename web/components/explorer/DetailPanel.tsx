@@ -91,6 +91,9 @@ export function DetailPanel({
   // Delegierte Interaktion im Tab-Körper (Anker, Kommentar, Region, Käufer-Demo, …)
   function handleBody(e: React.MouseEvent<HTMLDivElement>) {
     const t = e.target as HTMLElement;
+    // In-Body-Tabwechsel (z. B. „Käufer-Dossier ansehen" → Vergabestelle-Tab) direkt an onTab.
+    const tabEl = t.closest<HTMLElement>("[data-tab]");
+    if (tabEl) { onTab(tabEl.dataset.tab || ""); return; }
     const map = ["anav", "openlead", "cmtsend", "grp", "mark", "region", "buyerdemo",
       "tonetz", "netz", "buyerleads", "partner", "netzfrei", "ptab", "pstufe"];
     for (const a of map) {

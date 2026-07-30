@@ -939,9 +939,9 @@ body[data-mode="full"]   .main{grid-template-rows:0 6px 1fr}
 .ftoken svg{width:12px;height:12px;flex:none}
 .ftoken-ort{background:var(--signal-wash);border-color:#BCE7D7;color:var(--signal-deep)}
 .ftoken-cpv{background:#EEF2F6;border-color:#D3DDE6;color:#3A5A75}
-.ftoken button{width:16px;height:16px;display:grid;place-items:center;border-radius:50%;color:var(--ink-400);font-size:14px;line-height:1}
-.ftoken button:hover{background:var(--surface-3);color:var(--ink-900)}
-.ftoken-ort button:hover{background:#CDEEE1}
+.ftoken .tok-x{width:16px;height:16px;display:grid;place-items:center;border-radius:50%;color:var(--ink-400);font-size:14px;line-height:1}
+.ftoken .tok-x:hover{background:var(--surface-3);color:var(--ink-900)}
+.ftoken-ort .tok-x:hover{background:#CDEEE1}
 .fb-clear{font-size:11.5px;color:var(--ink-500);font-weight:500;margin-left:4px}
 .fb-clear:hover{color:var(--flag)}
 
