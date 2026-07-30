@@ -22,7 +22,7 @@ export type Adv = {
   multiLot: boolean;
   hasDetail: boolean;              // nur mit ausführlicher Beschreibung
   unterlagen: boolean;             // nur mit Vergabeunterlagen-Link
-  staaten: string[];               // DACH-Vergabeland: DE | AT | CH (Fundament, aktuell nur DE mit Daten)
+  staaten: string[];               // DACH-Vergabeland: DE | AT | CH (alle mit Daten)
 };
 
 export const emptyAdv: Adv = {
@@ -55,8 +55,8 @@ const LEISTUNG: [string, string][] = [["dienst", "Dienstleistung"], ["liefer", "
 const RAHMEN: [string, string][] = [["vgv", "VgV"], ["vob", "VOB/A"], ["uvgo", "UVgO"], ["sektvo", "SektVO"]];
 const BAND: [string, string][] = [["niedrig", "niedrig"], ["mittel", "mittel"], ["hoch", "hoch"]];
 const ART: [string, string][] = [["rahmen", "Rahmenvertrag"], ["wiederkehrend", "Wiederkehrend"], ["einzel", "Einzelauftrag"]];
-// DACH-Vergabeland. Aktuell trägt nur DE Daten; AT/CH sind vorbereitet und greifen, sobald
-// ihre Quell-Pipelines (simap.ch, ANKÖ …) andocken.
+// DACH-Vergabeland. Alle drei tragen Daten (DE ~21k, CH ~1,7k, AT ~1,1k) — der Filter greift
+// auf `l.land` (ExplorerShell). AT = offeneVergaben.at, CH = simap.ch.
 const STAATEN: [string, string][] = [["DE", "Deutschland"], ["AT", "Österreich"], ["CH", "Schweiz"]];
 export const LAENDER: [string, string][] = [
   ["DE1", "Baden-Württemberg"], ["DE2", "Bayern"], ["DE3", "Berlin"], ["DE4", "Brandenburg"],
@@ -97,7 +97,7 @@ export function FilterPanel({
             {STAATEN.map(([v, l]) => (
               <label key={v} className="fp-check">
                 <input type="checkbox" checked={adv.staaten.includes(v)} onChange={() => set({ staaten: toggle(adv.staaten, v) })} />
-                <span>{l}{v !== "DE" ? <span className="fp-hint"> — bald</span> : null}</span>
+                <span>{l}</span>
               </label>
             ))}
           </section>
