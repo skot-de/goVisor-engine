@@ -603,6 +603,22 @@ def test_source_registry_is_wellformed():
     assert any(s.id == "ted-at" and s.status == "prepared" for s in sources.REGISTRY)
 
 
+def test_muni_key_ags_matching():
+    """Municipality-Merge (AGS-artig): kommunale Behörden-Fragmente → EIN Gemeinde-Schlüssel;
+    Stadt vs. Landkreis getrennt; verschiedene Gemeinden getrennt; Firmen/PLZ-lose → None."""
+    from govisor.gold import _muni_key
+    pk = {"80331": ("Bayern", "Kreisfreie Stadt München"),
+          "85540": ("Bayern", "Landkreis München"), "01067": ("Sachsen", "Kreisfreie Stadt Dresden")}
+    k_muc = _muni_key("Stadt München", {"80331"}, pk)
+    assert k_muc and k_muc == _muni_key("Landeshauptstadt München", {"80331"}, pk) \
+        == _muni_key("STADT MÜNCHEN, Baureferat", {"80331"}, pk)   # Fragmente → ein Key
+    assert _muni_key("Landkreis München", {"85540"}, pk) != k_muc  # Kreis ≠ Stadt
+    assert _muni_key("Gemeinde Haar", {"85540"}, pk) != k_muc      # andere Gemeinde
+    assert _muni_key("Stadt Dresden", {"01067"}, pk) != k_muc      # andere Stadt
+    assert _muni_key("Müller GmbH", {"80331"}, pk) is None         # keine Behörde
+    assert _muni_key("Stadt Neustadt", set(), pk) is None          # ohne PLZ keine Disambiguierung
+
+
 def test_normalize_national_id_leitweg():
     """national_id-Normalisierung: Leitweg-ID (mit/ohne Schema-Präfix) → EIN Schlüssel;
     USt-IdNr normalisiert; Müll (UUID/TED-intern/Kurzzahl/Bindestrich) → None (Name-Fallback)."""

@@ -1117,6 +1117,12 @@ def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = Non
     # Clean-Name-Merge (PLZ-gegated): nur-Name-Fragmente öffentlicher Stellen ohne Register-Anker
     # (Casing-/Vertretungs-Dubletten) zusammenführen. Gemessen ~8 % weniger Vergabestellen-Entities.
     merge_map.update(_consolidate_by_shared_name_plz(entity_of, plz_of, set(merge_map)))
+    # Municipality-Merge (AGS-artig): kommunale Vergabestellen über kanonischen Gemeinde-Schlüssel
+    # (Behörden-Typ + Gemeinde + geonames-Kreis) — merged „Stadt X"=„Landeshauptstadt X"=„STADT X,
+    # Amt Y". Adressiert die Behörden-Fragmentierung, die Register nicht auflöst (~21 % der Buyer).
+    if country == "DE":
+        merge_map.update(_consolidate_by_municipality(
+            entity_of, plz_of, _load_plz_kreis(cfg), set(merge_map)))
     for old_id, new_id in merge_map.items():
         src = entity_of.pop(old_id, None)
         tgt = entity_of.get(new_id)
@@ -1220,6 +1226,87 @@ def _consolidate_by_national_id(entity_of: dict, plz_of: dict):
             else:
                 flagged.append((norm, e.entity_id, target.entity_id, "kein_plz_beleg"))
     return merge_map, flagged
+
+
+# Kommunale Vergabestelle: Behörden-Typ + Gemeinde/Kreis-Name aus dem Käufer-Namen.
+_RE_MUNI = re.compile(
+    r"^(?P<typ>landeshauptstadt|kreisstadt|hansestadt|stadt|gemeinde|markt|stadtgemeinde"
+    r"|landkreis|kreis|landratsamt|bezirk|zweckverband|amt|samtgemeinde|verbandsgemeinde)\s+"
+    r"(?P<name>[A-Za-zÄÖÜäöüß.\- ]+?)"
+    r"(?:\s*[,(/–-].*)?$", re.I)
+_TYP_KLASSE = {  # Typ → grobe Klasse (Stadt vs. Kreis-Ebene bleiben getrennt)
+    "landeshauptstadt": "gem", "kreisstadt": "gem", "hansestadt": "gem", "stadt": "gem",
+    "gemeinde": "gem", "markt": "gem", "stadtgemeinde": "gem", "samtgemeinde": "gem",
+    "verbandsgemeinde": "gem", "amt": "gem",
+    "landkreis": "kreis", "kreis": "kreis", "landratsamt": "kreis", "bezirk": "bezirk",
+    "zweckverband": "zv",
+}
+
+
+def _load_plz_kreis(cfg: Config) -> dict:
+    """geonames DE (PLZ → Kreis + Bundesland) für die Gemeinde-Disambiguierung."""
+    import duckdb
+    f = (cfg.data_dir / "reference" / "geonames" / "DE.txt")
+    if not f.exists():
+        return {}
+    cols = {f"c{i:02d}": "VARCHAR" for i in range(1, 13)}
+    try:
+        rows = duckdb.connect().execute(
+            f"SELECT c02, c04, c08 FROM read_csv('{f.as_posix()}', delim='\t', header=false, "
+            f"columns={cols}, ignore_errors=true)").fetchall()
+    except Exception:
+        return {}
+    return {plz: (bl or "", kreis or "") for plz, bl, kreis in rows if plz}
+
+
+def _muni_key(name: str, plz_set: set, plz_kreis: dict) -> str | None:
+    """Kanonischer Gemeinde-Schlüssel aus Behörden-Name + PLZ→Kreis. None, wenn kein Behörden-Muster."""
+    from .entities import strip_accents
+    m = _RE_MUNI.match((name or "").strip())
+    if not m:
+        return None
+    klasse = _TYP_KLASSE.get(m.group("typ").lower())
+    if not klasse:
+        return None
+    gem = re.sub(r"[^a-zäöüß]", "", strip_accents(m.group("name").lower()))
+    if len(gem) < 3:
+        return None
+    # Disambiguierung über den Kreis der (ersten belegten) PLZ; ohne PLZ → Bundesland-los, riskanter.
+    kreis = ""
+    for plz in sorted(plz_set or ()):
+        if plz in plz_kreis:
+            kreis = re.sub(r"[^a-zäöüß]", "", strip_accents(plz_kreis[plz][1].lower()))
+            break
+    if not kreis:
+        return None                       # ohne Kreis-Beleg nicht mergen (zu viele Gemeinde-Dubletten)
+    return f"muni:{klasse}:{gem}:{kreis}"
+
+
+def _consolidate_by_municipality(entity_of: dict, plz_of: dict, plz_kreis: dict, already: set):
+    """Kommunale Vergabestellen-Fragmente über den kanonischen Gemeinde-Schlüssel verschmelzen
+    (AGS-artig via geonames-Kreis). Merged „Stadt München" = „Landeshauptstadt München" =
+    „STADT MÜNCHEN, Baureferat" (alle → gem:muenchen:kreisfreiestadtmuenchen), hält aber
+    „Landkreis München" (kreis:…) und zwei „Neustadt" in verschiedenen Kreisen getrennt.
+    Nur nicht-register-belegte Entities (Register-ID sticht)."""
+    from collections import defaultdict
+
+    id_methods = {Method.HR_EXACT, Method.HR_FUZZY_PLZ, Method.TED_NATIONAL_ID}
+    groups: dict[str, list] = defaultdict(list)
+    for e in entity_of.values():
+        if e.entity_id in already or e.method in id_methods:
+            continue
+        k = _muni_key(e.canonical_name, plz_of.get(e.entity_id, set()), plz_kreis)
+        if k:
+            groups[k].append(e)
+    merge_map: dict[str, str] = {}
+    for k, group in groups.items():
+        if len(group) < 2:
+            continue
+        rep = min(group, key=lambda e: e.entity_id)
+        for e in group:
+            if e.entity_id != rep.entity_id:
+                merge_map[e.entity_id] = rep.entity_id
+    return merge_map
 
 
 def _consolidate_by_shared_name_plz(entity_of: dict, plz_of: dict, already: set):
