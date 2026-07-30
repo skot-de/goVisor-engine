@@ -28,6 +28,21 @@ async function loadDocText(): Promise<Record<string, DocText>> {
   return docText!;
 }
 
+// Strukturierte Anforderungs-Signale aus den Vergabeunterlagen (doc-signals.json, aus
+// signals-docs → export_doc_signals.py), je notice_id.
+type DocSignals = {
+  guarantee: boolean | null; bindingDays: number | null; eligibility: number | null;
+  certificates: string[]; variants: boolean | null; framework: boolean | null;
+  weights: Record<string, number> | null;
+};
+let docSignals: Record<string, DocSignals> | null = null;
+async function loadDocSignals(): Promise<Record<string, DocSignals>> {
+  if (docSignals) return docSignals;
+  try { const raw = await loadDataFile("doc-signals.json"); docSignals = raw ? JSON.parse(raw) : {}; }
+  catch { docSignals = {}; }
+  return docSignals!;
+}
+
 export async function GET(req: Request) {
   const u = new URL(req.url);
   const branche = u.searchParams.get("branche") || "";
@@ -47,6 +62,9 @@ export async function GET(req: Request) {
       detail.lbChars = dt.chars;
       detail.lbTruncated = dt.truncated;
     }
+    // Strukturierte Anforderungs-Signale aus den Unterlagen (Bürgschaft, Zertifikate, Zuschlagsgewichte …).
+    const ds = (await loadDocSignals())[id];
+    if (ds) detail.lbSignals = ds;
     return NextResponse.json(detail);
   } catch {
     return NextResponse.json({ error: "keine Detaildaten" }, { status: 503 });

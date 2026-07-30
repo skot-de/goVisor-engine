@@ -983,6 +983,24 @@ function renderUebersicht(l){
       Die eigentliche Leistungsbeschreibung liegt in den Vergabeunterlagen auf dem Vergabeportal.</p>
     </section>` : ''}
 
+    ${l.lbSignals ? (()=>{
+      const s = l.lbSignals, rows = [];
+      if(s.guarantee!=null) rows.push(['Sicherheit / Bürgschaft', s.guarantee?'gefordert':'nicht gefordert']);
+      if(s.bindingDays!=null) rows.push(['Bindefrist', s.bindingDays+' Tage']);
+      if(s.eligibility) rows.push(['Eignungsnachweise', s.eligibility+' im Text genannt']);
+      if(s.certificates && s.certificates.length) rows.push(['Geforderte Zertifikate', s.certificates.join(', ')]);
+      if(s.variants!=null) rows.push(['Nebenangebote', s.variants?'zugelassen':'nicht zugelassen']);
+      if(s.framework) rows.push(['Rahmenvereinbarung', 'ja']);
+      const w = (s.weights && Object.keys(s.weights).length) ? s.weights : null;
+      if(!rows.length && !w) return '';
+      return `<section class="sec">
+      <h4>Anforderungen <span class="cov">aus den Vergabeunterlagen extrahiert</span></h4>
+      ${rows.length ? `<div class="kv">${rows.map(([k,v])=>`<div class="kvi"><span class="k">${k}</span><span class="vv"><span class="v">${esc(v)}</span></span></div>`).join('')}</div>` : ''}
+      ${w ? `<div class="zug"><div class="zug-h">Zuschlagsgewichte</div>${Object.entries(w).map(([k,v])=>`<div class="zug-row"><span class="zug-k">${esc(k)}</span><span class="zug-bar"><i style="width:${Math.max(3,Math.min(100,Number(v)||0))}%"></i></span><span class="zug-v">${esc(String(v))} %</span></div>`).join('')}</div>` : ''}
+      <p class="rt-note">Regelbasiert aus den Vergabeunterlagen erkannt — als Hinweis, nicht rechtsverbindlich.</p>
+    </section>`;
+    })() : ''}
+
     ${l.lbText ? `<section class="sec sec-raw">
       <h4>Leistungsbeschreibung <span class="cov">aus den Vergabeunterlagen · ${l.lbFiles||1} Datei${(l.lbFiles||1)===1?'':'en'}</span></h4>
       <details class="rawtext" open>

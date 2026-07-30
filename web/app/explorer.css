@@ -344,6 +344,14 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
 .rt-body p{font-size:var(--t-body);line-height:1.65;color:var(--ink-700);margin-bottom:var(--s3)}
 .rt-body p:last-child{margin-bottom:0}
 .rt-note{font-size:var(--t-meta);color:var(--ink-400);line-height:1.5;margin-top:var(--s2)}
+/* Zuschlagsgewichte aus den Vergabeunterlagen */
+.zug{margin-top:var(--s3)}
+.zug-h{font-size:var(--t-meta);font-weight:600;color:var(--ink-500);margin-bottom:var(--s2);letter-spacing:.02em}
+.zug-row{display:grid;grid-template-columns:minmax(90px,32%) 1fr auto;align-items:center;gap:var(--s3);margin-bottom:6px}
+.zug-k{font-size:var(--t-body);color:var(--ink-700);text-transform:capitalize}
+.zug-bar{height:8px;border-radius:99px;background:var(--surface-3);overflow:hidden}
+.zug-bar i{display:block;height:100%;border-radius:99px;background:var(--signal)}
+.zug-v{font-size:var(--t-meta);font-weight:600;color:var(--ink-700);font-variant-numeric:tabular-nums}
 @media (max-width:640px){.los{grid-template-columns:28px 1fr;gap:4px}.los-w,.los-d,.los-r{text-align:left}}
 
 /* Eigener Vertrag — direkt in der Liste, statt in einem eigenen Modus */
