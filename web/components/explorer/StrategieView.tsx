@@ -586,7 +586,10 @@ function Wettbewerb({ data }: { data: Strat }) {
           Alle Anbieter
         </button>
         <div className="st-head"><div><h4>{offen.name}</h4>
-          <p className="st-frage">{offen.wins} Zuschläge bei {offen.stellen} Vergabestellen (36 Mon.)</p></div></div>
+          <p className="st-frage">{offen.wins} Zuschläge bei {offen.stellen} Vergabestellen (36 Mon.)</p></div>
+          {/* #25 Einstieg aus der Wettbewerbstabelle → volles Firmenprofil */}
+          <a className="sec-link" href={`/firma?id=${encodeURIComponent(offen.id)}`}>Firmenprofil ansehen ›</a>
+        </div>
 
         <section className="bsec">
           <h4>Zuschlagsanteil je Stelle</h4>

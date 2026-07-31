@@ -1319,6 +1319,7 @@ function renderUebersicht(l){
       : inc.src==='unsicher' && !l.eigen ? `<div class="note-box"><b><span class="pdot pdot-unsicher"></span>${esc(inc.name)}</b><br>Nur über den Namen aufgelöst. Wir zeigen keine Vertragsdauer, solange die Zuordnung nicht eindeutig ist.</div>`
       : `<div class="kv">
           <div class="kvi kvi-full"><span class="k">Firma</span><span class="vv"><span class="v">${esc(inc.name)}</span>${
+            inc.groupId?`<button class="inline-link" data-firma="${esc(inc.groupId)}">Firmenprofil ›</button>`:''}${
             l.eigen&&l.eigenBestaetigt===true?'<span class="oc-tag">von euch bestätigt</span>':''}</span></div>
           <div class="kvi"><span class="k">Auftragnehmer seit</span><span class="vv">${iv(inc.seit,'echt',null,true)}</span></div>
           ${l.kette ? `<div class="kvi"><span class="k">Nachfolge-Kette</span><span class="vv"><span class="v">${Number(l.kette.tiefe)} Verträge in Folge${l.kette.seit?` seit ${esc(l.kette.seit)}`:''}</span> <span class="oc-tag">wiederkehrender Bedarf</span></span></div>` : ''}
