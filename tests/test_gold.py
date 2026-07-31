@@ -134,7 +134,7 @@ def test_stage2_low_similarity_does_not_match_even_with_same_plz():
 
 
 def test_stage2_end_to_end_yields_fuzzy_method():
-    hr = _mini_hr([("muller bau schwerin", "HRB 7", "Müller Bau Schwerin GmbH", "19053")])
+    hr = _mini_hr([("mueller bau schwerin", "HRB 7", "Müller Bau Schwerin GmbH", "19053")])
     e = gold.resolve_supplier("Müller Bau Schwerin GmbH ", postal_code="19053", hr_lookup=hr.get)
     assert e.method == Method.HR_EXACT   # normalisiert deckungsgleich → exakt, nicht fuzzy
     e2 = gold.resolve_supplier("Schwerin Bau Müller GmbH", postal_code="19053", hr_lookup=hr.get)

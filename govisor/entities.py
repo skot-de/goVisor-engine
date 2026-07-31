@@ -45,8 +45,16 @@ class Classified:
     normalized: str
 
 
+# Deutsche Umlaut-Konvention: ü→ue etc. VOR dem NFKD-Strip. Ohne das wird „für" zu „fur",
+# aber „Fuer" bleibt „fuer" → derselbe Käufer splittet (Landeshauptstadt München/Muenchen,
+# Bundesagentur für/Fuer Arbeit — die größten Fragmentierer, ~200k Notices). Die Muster in
+# locales.py (DE-Profil) sind entsprechend in der ae/ue-Form gehalten, damit Rechtsform-/
+# Behörden-Regex weiter greifen. Muster auf ROHtext (re_person, text_skip) bleiben umlaut-tragend.
+UMLAUT_DE = str.maketrans({"ä": "ae", "ö": "oe", "ü": "ue", "Ä": "ae", "Ö": "oe", "Ü": "ue", "ß": "ss"})
+
+
 def strip_accents(text: str) -> str:
-    text = unicodedata.normalize("NFKD", text).replace("ß", "ss")
+    text = unicodedata.normalize("NFKD", text.translate(UMLAUT_DE))
     return "".join(c for c in text if not unicodedata.combining(c))
 
 

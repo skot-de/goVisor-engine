@@ -71,12 +71,12 @@ class Locale:
 # DE — Referenzprofil (verbatim aus entities.py / gold.py, Verhalten unverändert)
 # ===========================================================================
 _DE_LEGAL = (
-    r"gesellschaft mit beschrankter haftung", r"kommanditgesellschaft auf aktien",
-    r"gemeinnutzige gmbh", r"aktiengesellschaft", r"kommanditgesellschaft",
+    r"gesellschaft mit beschraenkter haftung", r"kommanditgesellschaft auf aktien",
+    r"gemeinnuetzige gmbh", r"aktiengesellschaft", r"kommanditgesellschaft",
     r"eingetragener verein", r"eingetragene genossenschaft", r"unternehmergesellschaft",
-    r"offene handelsgesellschaft", r"anstalt des offentlichen rechts",
-    r"korperschaft des offentlichen rechts", r"gesellschaft burgerlichen rechts",
-    r"societas europaea", r"haftungsbeschrankt", r"gmbh\s+und\s+co\.?\s*kga?a?",
+    r"offene handelsgesellschaft", r"anstalt des oeffentlichen rechts",
+    r"koerperschaft des oeffentlichen rechts", r"gesellschaft buergerlichen rechts",
+    r"societas europaea", r"haftungsbeschraenkt", r"gmbh\s+und\s+co\.?\s*kga?a?",
     r"gmbh", r"\bag\b", r"\bkgaa\b", r"\bkg\b", r"\bohg\b", r"\bug\b", r"\bse\b",
     r"\bmbh\b", r"\bggmbh\b", r"\be\.? ?v\b", r"\be\.? ?g\b", r"\bgbr\b", r"\baor\b",
     r"\bko?dr\b", r"\bco\b", r"\be\.? ?k\b",
@@ -87,23 +87,23 @@ DE = Locale(
     "DE", name="Deutschland",
     legal_forms=_DE_LEGAL,
     representation=r"\s*[,/;–-]?\s*vertreten durch\b.*$",
-    subdivision=(r"\s*[,/|;–-]\s*(geschaftsbereich|geschaftsstelle|referat|dezernat|"
-                 r"fachbereich|sachgebiet|der magistrat|der oberburgermeister|der landrat|"
+    subdivision=(r"\s*[,/|;–-]\s*(geschaeftsbereich|geschaeftsstelle|referat|dezernat|"
+                 r"fachbereich|sachgebiet|der magistrat|der oberbuergermeister|der landrat|"
                  r"zentrale vergabestelle|zentraler einkauf|abteilung|sachbearbeitung)\b.*$"),
     unit_numbers=r"\b(bukr|buk|vgst)\s*\d+\b",
     lead_articles=r"^(das|der|die|den|dem)\s+",
     consortium=(r"\b(arge\b|arbeitsgemeinschaft|bietergemeinschaft|konsortium|"
                 r"gemeinschaft der|multi-vendor)"),
-    association=(r"\b(e\.? ?v\b|verein\b|verband\b|gewerkschaft\b|gemeinnutzig)"
+    association=(r"\b(e\.? ?v\b|verein\b|verband\b|gewerkschaft\b|gemeinnuetzig)"
                  r"|\bstiftung\b(?!\s*(&|und)\s*co)"),
     public=(r"(bundesrepublik|bundesamt|bundesministerium|bundesanstalt|landesamt|"
             r"landesbetrieb|landkreis|zweckverband|eigenbetrieb|stadtverwaltung|"
             r"gemeindeverwaltung|kreisverwaltung)|^(stadt|gemeinde)\s"),
     trade_word=(r"(elektro|taxi|autohaus|service|technik|technolog|handel|transport|"
-                r"garten|malerfach|dachdeck|sanitar|heizung|schreinerei|tischlerei|"
+                r"garten|malerfach|dachdeck|sanitaer|heizung|schreinerei|tischlerei|"
                 r"schlosserei|druckerei|reinigung|logistik|beratung|consulting|software|"
-                r"system|solution|engineering|planung|architekt|ingenieur|buro|apotheke|"
-                r"verlag|gebaude|facility|catering|security|entsorgung|recycling|"
+                r"system|solution|engineering|planung|architekt|ingenieur|buero|apotheke|"
+                r"verlag|gebaeude|facility|catering|security|entsorgung|recycling|"
                 r"fachbetrieb|werkstatt|handwerk|installat|montage|vertrieb|zentrum)"),
     person=rf"^(?:dr\.|prof\.|dipl\.[-\w]*)?\s*{_NAME_PART}(?:\s+{_NAME_PART}){{1,2}}$",
     text_winner_marker=r"wirtschaftsteilnehmer",
@@ -122,13 +122,13 @@ DE = Locale(
     public_name=(r"landeshauptstadt|\bstadt\b|\bgemeinde\b|landkreis|landratsamt|"
                  r"bezirksamt|bezirksregierung|\bland\b|freistaat|ministerium|"
                  r"landesbetrieb|landesamt|bundesamt|bundesministerium|bundesanstalt|"
-                 r"\bregierung\b|vergabekammer|vergabestelle|beschaffungsamt|\bbehorde\b|"
-                 r"universitat|hochschule|klinik|studierendenwerk|studentenwerk|"
+                 r"\bregierung\b|vergabekammer|vergabestelle|beschaffungsamt|\bbehoerde\b|"
+                 r"universitaet|hochschule|klinik|studierendenwerk|studentenwerk|"
                  r"zweckverband|eigenbetrieb|landschaftsverband|\bpolizei\b|finanzamt|"
                  r"jobcenter|kreisverwaltung|stadtverwaltung|gemeindeverwaltung|"
                  r"\bkreis\b|senatsverwaltung|magistrat|\bregion\b|kommunal|sparkasse|"
                  r"stadtwerke|abwasser|wasserverband|verkehrsbetrieb|verkehrsgesellschaft|"
-                 r"nahverkehr|\banstalt\b|korperschaft|diakonie|caritas|\bkirche|bistum"),
+                 r"nahverkehr|\banstalt\b|koerperschaft|diakonie|caritas|\bkirche|bistum"),
     kind_framework_kw="rahmen",
     kind_recurring_kw=("wartung|pflege|lizenz|reinigung|bewirtschaft|unterhalt|betreib|"
                        "betrieb|entsorgung|catering|bewachung|winterdienst|support|hosting|"

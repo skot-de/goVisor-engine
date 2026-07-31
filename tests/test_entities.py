@@ -41,7 +41,7 @@ def test_german_compounds_defeat_word_boundaries():
 @pytest.mark.parametrize("name,expected", [
     ("Leonhard Weiss GmbH & Co. KG", "leonhard weiss"),
     ("Philips GmbH", "philips"),
-    ("Ed. Züblin Aktiengesellschaft", "ed zublin"),
+    ("Ed. Züblin Aktiengesellschaft", "ed zueblin"),
     ("Zittauer Bildungsgesellschaft gemeinnützige GmbH", "zittauer bildungsgesellschaft"),
     # Long form must collapse before the bare 'gesellschaft' rule sees it.
     ("Muster Gesellschaft mit beschränkter Haftung", "muster"),
