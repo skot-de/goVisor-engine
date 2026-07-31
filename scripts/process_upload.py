@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Eine hochgeladene Vergabeunterlage → durch die Pipeline → Ergebnis je notice_id.
+"""Eine hochgeladene Vergabeunterlage → §5-Prüfkette → Pipeline → Ergebnis je notice_id.
 
 Verarbeitet NUR den einen ``notice_id`` (kein Korpus-Rebuild): Dateien in
-``data/docs/DE/<notice_id>/`` → Volltext (docpipe) → Signale (docsignals) → LLM-Analyse
-(analyze_docs). Aktualisiert web/data/{doc-text,doc-signals,doc-analysis}.json für diesen
-Vorgang und gibt die Detail-Felder (lbText/lbSignals/lbAnalyse) als JSON auf stdout aus.
+``data/docs/DE/<notice_id>/`` → Sicherheitsprüfungen (§5, in Reihenfolge) → Volltext (docpipe)
+→ Parser-Schiene (docparse) + typisierte LLM-Extraktion (analyze_docs) → Signale (docsignals).
+Aktualisiert web/data/{doc-text,doc-signals,doc-analysis}.json und gibt die Detail-Felder
+(lbText/lbSignals/lbAnalyse) als JSON auf stdout aus.
 
 Aufruf:  python3 scripts/process_upload.py <notice_id>
 """
@@ -15,39 +16,28 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "scripts"))
-from govisor import docpipe, docsignals          # noqa: E402
-from analyze_docs import analyze as llm_analyze   # noqa: E402  (LLM + Multi-Key)
+from govisor import docpipe, docsignals, docparse, docupload   # noqa: E402
+import analyze_docs as ad                                       # noqa: E402  (analyze_notice + LLM/Multi-Key)
 
 DATA = ROOT / "web" / "data"
 CAP_TEXT = 60_000
 
 
-def extract_notice(nid: str) -> tuple[str, int]:
-    """Alle Dateien im Vorgangs-Ordner → zusammengefügter Volltext + Dateizahl."""
+def collect(nid: str) -> list[tuple[str, str, bytes]]:
+    """Alle Dateien des Vorgangs als (name, ext, bytes) — ZIPs entpackt (docpipe, nested-safe)."""
     d = ROOT / "data" / "docs" / "DE" / nid
-    parts: list[str] = []
-    n = 0
+    out = []
     if not d.exists():
-        return "", 0
+        return out
     for f in sorted(d.glob("*")):
         if not f.is_file():
             continue
         if f.suffix.lower() == ".zip":
-            for row in docpipe.process_zip(f):
-                if row["status"] == "ok" and (row["text"] or "").strip():
-                    parts.append(f"── {row['file']} ──\n{row['text']}")
-                    n += 1
+            for name, ext, data in docpipe.iter_docs(f.read_bytes()):
+                out.append((name, ext, data))
         else:
-            fn = docpipe._EXTRACT.get(f.suffix.lower())
-            if fn:
-                try:
-                    text = fn(f.read_bytes()) or ""
-                except Exception:
-                    text = ""
-                if text.strip():
-                    parts.append(f"── {f.name} ──\n{text}")
-                    n += 1
-    return "\n\n".join(parts), n
+            out.append((f.name, f.suffix.lower(), f.read_bytes()))
+    return out
 
 
 def _load(name: str) -> dict:
@@ -59,24 +49,65 @@ def _save(name: str, obj: dict) -> None:
     (DATA / name).write_text(json.dumps(obj, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
 
+def _err(msg: str) -> int:
+    print(json.dumps({"error": msg}, ensure_ascii=False))
+    return 0
+
+
 def main() -> int:
     if len(sys.argv) < 2:
         print(json.dumps({"error": "notice_id fehlt"})); return 1
     nid = sys.argv[1]
+    raw = collect(nid)
+    if not raw:
+        return _err("keine Dateien im Vorgangs-Ordner")
 
-    full, nfiles = extract_notice(nid)
-    if not full.strip():
-        print(json.dumps({"error": "kein verwertbarer Text — evtl. nur gescannte Bild-PDFs oder leere/unbekannte Dateien"}))
-        return 0
+    # ── §5 Prüfkette (Reihenfolge einhalten) ──────────────────────────────────────────────
+    # 1 Malware
+    for name, ext, data in raw:
+        if not docupload.scan_malware(name, data):
+            return _err(f"Malware erkannt ({name}) — Paket verworfen")
+    # 2 Pfadprüfung (Zip-Slip)
+    slip = [n for n, _, _ in raw if docupload.is_zip_slip(n)]
+    if slip:
+        return _err(f"unsichere Pfade im Paket ({slip[0]}) — abgebrochen")
+    # Grenzwerte (§4.2)
+    total = sum(len(d) for _, _, d in raw)
+    viol = docupload.check_limits(total, len(raw))
+    if viol:
+        return _err(f"Grenzwert überschritten: {', '.join(viol)}")
 
-    # 1) Volltext
+    # Volltext je Datei extrahieren
+    texts = {}
+    for name, ext, data in raw:
+        fn = docpipe._EXTRACT.get(ext)
+        try:
+            texts[name] = (fn(data) if fn else "") or ""
+        except Exception:
+            texts[name] = ""
+    fulltext = "\n\n".join(t for t in texts.values() if t.strip())
+    if not fulltext.strip():
+        return _err("kein verwertbarer Text — evtl. nur gescannte Bild-PDFs oder unbekannte Dateien")
+
+    # 3 Eigenes Angebot
+    if docupload.detect_own_offer(fulltext):
+        return _err("Das sieht nach einem eigenen Angebot aus. Für die Bibliothek nutze bitte den "
+                    "Import unter Profil.")
+    # 5 Doppelung: Paket-Hash (Dedup/Herkunft §5-5, §12.2)
+    package_hash = docupload.package_hash([(n, d) for n, _, d in raw])
+    # (4 Lead-Zuordnung und 6 Plausibilität brauchen Lead-Metadaten/TED-Abgleich → Aufruf-Kontext.)
+
+    # ── Pipeline ──────────────────────────────────────────────────────────────────────────
+    nfiles = sum(1 for t in texts.values() if t.strip())
     dt = _load("doc-text.json")
-    dt[nid] = {"chars": len(full), "files": nfiles, "text": full[:CAP_TEXT], "truncated": len(full) > CAP_TEXT}
+    dt[nid] = {"chars": len(fulltext), "files": nfiles, "text": fulltext[:CAP_TEXT],
+               "truncated": len(fulltext) > CAP_TEXT}
     _save("doc-text.json", dt)
-    res = {"lbText": dt[nid]["text"], "lbFiles": nfiles, "lbChars": len(full), "lbTruncated": dt[nid]["truncated"]}
+    res = {"lbText": dt[nid]["text"], "lbFiles": nfiles, "lbChars": len(fulltext),
+           "lbTruncated": dt[nid]["truncated"], "packageHash": package_hash}
 
-    # 2) Regelbasierte Signale
-    sig = docsignals.extract_signals(full)
+    # Regelbasierte Signale
+    sig = docsignals.extract_signals(fulltext)
     obj = {"guarantee": sig.get("guarantee_required"), "bindingDays": sig.get("binding_days"),
            "eligibility": sig.get("eligibility_count"), "certificates": sig.get("certificates") or [],
            "variants": sig.get("variants_allowed"), "framework": sig.get("framework"),
@@ -85,8 +116,10 @@ def main() -> int:
         ds = _load("doc-signals.json"); ds[nid] = obj; _save("doc-signals.json", ds)
         res["lbSignals"] = obj
 
-    # 3) LLM-Vergabe-Analyse (Ampel + Checkliste)
-    an = llm_analyze(full)
+    # Typisierte Analyse: Parser-Schiene + priorisierte LLM-Extraktion (§6)
+    structured = {n: r for n, e, d in raw if (r := docparse.parse(n, e, d))}
+    files = [(n, texts.get(n, "")) for n, _, _ in raw]
+    an = ad.analyze_notice(files, structured=structured)
     if an:
         da = _load("doc-analysis.json"); da[nid] = an; _save("doc-analysis.json", da)
         res["lbAnalyse"] = an
