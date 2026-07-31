@@ -460,6 +460,32 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         }
         break;
       }
+      case "uploaddocs": {
+        // Vergabeunterlagen hochladen → Pipeline (index→signals→LLM) → Felder in den Lead mergen.
+        const statusEl = el.closest(".detail")?.querySelector<HTMLElement>(`[data-upstatus="${value}"]`) || null;
+        const input = document.createElement("input");
+        input.type = "file";
+        input.accept = ".zip,.pdf,.doc,.docx,.xls,.xlsx,.txt,.html";
+        input.onchange = async () => {
+          const file = input.files?.[0];
+          if (!file) return;
+          if (statusEl) statusEl.textContent = "Lade hoch und analysiere … (kann bis ~30 s dauern)";
+          const fd = new FormData();
+          fd.append("file", file);
+          try {
+            const r = await fetch(`/api/lead-docs?id=${encodeURIComponent(value)}`, { method: "POST", body: fd });
+            const d = await r.json();
+            if (!r.ok || d.error) { if (statusEl) statusEl.textContent = "Fehler: " + (d.error || r.status); return; }
+            const l = CORE.find((x) => x.id === value) as (Lead & { log?: unknown[] }) | undefined;
+            if (l) { Object.assign(l, d); logEvent(l, "analyze", "Vergabeunterlagen hochgeladen & analysiert"); }
+            bump();
+          } catch {
+            if (statusEl) statusEl.textContent = "Upload fehlgeschlagen.";
+          }
+        };
+        input.click();
+        break;
+      }
       case "ptab": setPotTab(value); break;
       case "pstufe": setProfilStufe(value); break;
       case "partner": {

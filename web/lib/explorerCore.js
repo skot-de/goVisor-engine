@@ -945,7 +945,12 @@ function renderUebersicht(l){
       ${(a.vorausfuellbar&&a.vorausfuellbar.length)?`<div class="va-fill"><b>Das füllen wir aus deinem Profil vor</b><span>${a.vorausfuellbar.map(x=>esc(typeof x==='string'?x:(x.nachweis||''))).join(' · ')}</span></div>`:''}
       <p class="rt-note">Automatisch aus den Vergabeunterlagen erstellt — als Orientierung, nicht rechtsverbindlich.</p>
     </section>`;
-    })() : ''}
+    })() : `<section class="sec va-empty">
+      <div class="va-head"><span class="va-amp va-neutral">◇ Vergabe-Analyse</span><span class="cov">noch keine Unterlagen</span></div>
+      <p class="va-sum">Lade die Vergabeunterlagen hoch (ZIP/PDF) — wir machen daraus in Sekunden eine <b>Ampel-Einschätzung</b>, eine abhakbare <b>Bieter-Checkliste</b> (K.o.-Kriterien, Eignungsnachweise, Zuschlagsgewichte) und <b>füllen Firmenangaben vor</b>.</p>
+      <button class="va-upload-btn" data-uploaddocs="${l.id}">Unterlagen hochladen</button>
+      <div class="va-status" data-upstatus="${l.id}"></div>
+    </section>`}
     <section class="sec">
       <h4>Eckdaten</h4>
       <div class="kv">

@@ -370,6 +370,11 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
 .va-fill{margin-top:var(--s3);padding:var(--s3);border-radius:var(--r);background:var(--surface-2,#f5f7f6);border:1px dashed var(--signal)}
 .va-fill b{display:block;font-size:var(--t-meta);color:var(--signal-deep);margin-bottom:2px}
 .va-fill span{font-size:var(--t-meta);color:var(--ink-600);line-height:1.5}
+.va-empty{border-style:dashed}
+.va-amp.va-neutral{color:var(--ink-500);background:var(--surface-3)}
+.va-upload-btn{margin-top:var(--s2);display:inline-flex;align-items:center;gap:6px;font-size:var(--t-body);font-weight:600;color:#fff;background:var(--signal);border:none;border-radius:var(--r);padding:9px 16px;cursor:pointer}
+.va-upload-btn:hover{background:var(--signal-deep)}
+.va-status{margin-top:var(--s2);font-size:var(--t-meta);color:var(--ink-500);min-height:1em}
 @media (max-width:640px){.los{grid-template-columns:28px 1fr;gap:4px}.los-w,.los-d,.los-r{text-align:left}}
 
 /* Eigener Vertrag — direkt in der Liste, statt in einem eigenen Modus */
