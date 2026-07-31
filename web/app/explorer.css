@@ -366,6 +366,8 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
 .va-checklist .chead .stand{font-family:var(--mono,monospace);font-size:12px}
 .va-checklist .chead .link{color:var(--gd);text-decoration:none;font-size:12.5px;font-weight:500}
 .va-checklist .chead .disc{font-size:11.5px;color:var(--ink-400);margin-top:9px;padding-top:9px;border-top:1px solid var(--line);line-height:1.55}
+.va-checklist .cl-firstday{background:#f6f8f7;border:1px solid var(--line);border-radius:9px;padding:11px 15px;margin-bottom:12px;font-size:12.5px;color:var(--ink-700);line-height:1.55}
+.va-checklist .cl-firstday .link{color:var(--gd);text-decoration:none;font-weight:600}
 .va-checklist .stake{display:flex;align-items:center;gap:11px;border:1px solid #cfe8dc;background:var(--gt2);border-radius:9px;padding:11px 15px;margin-bottom:16px;font-size:13px;line-height:1.55}
 .va-checklist .stake svg{width:16px;height:16px;stroke:var(--gd);fill:none;stroke-width:1.9;flex-shrink:0}
 .va-checklist .toc{border:1px solid var(--line);border-radius:9px;background:var(--surface);padding:13px 16px;margin-bottom:16px}

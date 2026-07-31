@@ -189,6 +189,18 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // Profil kommt beim Zurücknavigieren über localStorage rein (Load-Effect beim Mount).
 
   // Echte Leads aus der Gold-Schicht laden — bei Mount und bei jedem Grundraum-Wechsel.
+  // Deep-Link: ?lead=<id>&branche=<br>&tab=docs öffnet einen Lead direkt (z. B. eine analysierte
+  // Unterlagen-Checkliste), ohne die Liste durchsuchen zu müssen. Einmalig beim Laden.
+  const deepRef = useRef<{ lead: string; tab: string } | null>(null);
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search);
+    const lead = p.get("lead");
+    if (!lead) return;
+    deepRef.current = { lead, tab: p.get("tab") || "docs" };
+    const br = p.get("branche");
+    if (br) setAktiveBranche(br);
+  }, []);
+
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
@@ -200,6 +212,11 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         if (Array.isArray(data)) { setLeads(data); setActiveId(null); }
         setLoading(false);
         bump();
+        const dl = deepRef.current;
+        if (dl && Array.isArray(data) && data.some((x: { id?: string }) => String(x.id) === dl.lead)) {
+          deepRef.current = null;
+          setTimeout(() => { openLead(dl.lead); setTimeout(() => setActiveTab(dl.tab), 0); }, 0);
+        }
       })
       .catch(() => { if (!cancelled) setLoading(false); });
     return () => { cancelled = true; };

@@ -931,6 +931,7 @@ const _CL_GROUPS = [
   ['form',  'Fristen & Formalien',  new Set(['frist','formalie','einzureichendes_dokument'])],
 ];
 function _clDone(leadId){ try{ return JSON.parse(localStorage.getItem('govisor.checkstate.'+leadId)||'{}'); }catch(e){ return {}; } }
+function _clHasBlocks(){ try{ return (JSON.parse(localStorage.getItem('govisor.blocks')||'[]')||[]).length>0; }catch(e){ return false; } }
 
 // §7 Checkliste im Prototyp-Design: Kopf (Stand+Haftung) · Erfolgshonorar-Zeile · TOC · funktionale
 // Gruppen mit Zitat+Fundstelle+Kennzeichnung+editierbarem Baustein+Kombi-Button+Abhaken.
@@ -980,7 +981,9 @@ function renderChecklistBlock(a, l){
   const stake = `<div class="stake"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6-5.3-2.9L6.7 19.6l1.1-6L3.4 9.4l6-.8z"/></svg><div><b>Erfolgshonorar:</b> Gewinnst du diesen Auftrag, berechnen wir eine Erfolgsgebühr — verlierst du, nichts. Kein Aufschlag fürs Bewerben.</div></div>`;
   const toc = `<div class="toc"><div class="th"><b>Deine Checkliste</b><span class="pr"><span class="cl-doneN">${dn}</span> von ${tot} erledigt</span></div><div class="chips">${chips}<button class="tchip all" data-clcollapse>Alle zuklappen</button></div><div class="tprog"><i class="cl-tprog" style="width:${tot?Math.round(dn/tot*100):0}%"></i></div></div>`;
 
-  return `<div class="va-checklist" data-clroot="${l.id}">${chead}${stake}${toc}${groupsHtml}${offen}${weitere}</div>`;
+  // a2 Erstnutzer: leere Bibliothek → die Textbausteine sind noch generische Vorlagen (§9.1).
+  const firstday = !_clHasBlocks() ? `<div class="cl-firstday">Deine Bausteinbibliothek ist noch leer — die Textvorschläge unten sind generische Vorlagen. <a href="/bausteine" class="link">Bibliothek füllen →</a> Dann setzt goVisor eure echten Referenzen und Zertifikate ein statt Platzhalter.</div>` : '';
+  return `<div class="va-checklist" data-clroot="${l.id}">${chead}${firstday}${stake}${toc}${groupsHtml}${offen}${weitere}</div>`;
 }
 
 function renderDocs(l){
