@@ -954,8 +954,7 @@ function renderChecklistBlock(a, l){
     const block = `<div class="block"><div class="lbl"><span>Dein Textbaustein</span><span class="mark m-v">aus deinem Profil</span></div>
       <textarea class="ta cl-edit" placeholder="Textbaustein aus deinem Profil einsetzen …"></textarea>
       <div class="blockfoot"><span class="cl-hist"></span><span class="acts">
-        <button class="btn btn-q btn-sm" data-clcopy="${it._i}">Nur kopieren</button>
-        <button class="btn btn-p btn-sm" data-clkombi='${esc(kombi)}'>Kopieren &amp; abhaken</button></span></div></div>`;
+        <button class="btn btn-p btn-sm" data-clkombi='${esc(kombi)}'>Kopieren &amp; speichern</button></span></div></div>`;
     return `<article class="item${isDone?' done':''}" data-clitem="${it._i}">
       <div class="ih"><button class="dchk" data-clchk="${it._i}">✓</button><b>${esc(it.label||it.req_type)}${val}</b></div>
       <div class="dsum">Abgehakt. <button class="re" data-clchk="${it._i}">wieder öffnen</button></div>
