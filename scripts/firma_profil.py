@@ -172,16 +172,17 @@ def build(identity_id: str) -> dict:
         })
 
     # ---- Wo stark: CPV-Felder + Regionen (Anteile) ----
+    # Anteil an ALLEN Aufträgen (nicht nur den Top-5) — konsistent mit export_firma_profiles.py
+    f_tot = con.execute("SELECT count(*) FROM w WHERE cpv4 IS NOT NULL AND cpv4<>''").fetchone()[0] or 1
     felder = con.execute(f"""
       WITH c AS (SELECT cpv4, count(*) n FROM w WHERE cpv4 IS NOT NULL AND cpv4<>'' GROUP BY 1)
       SELECT c.cpv4, cl.label, c.n FROM c LEFT JOIN {CL} cl ON cl.cpv_code = c.cpv4||'0000'
       ORDER BY c.n DESC LIMIT 5""").fetchall()
-    f_tot = sum(r[2] for r in felder) or 1
     felder_out = [{"label": (lbl or code), "pct": round(100 * n / f_tot)} for (code, lbl, n) in felder]
 
+    r_tot = con.execute("SELECT count(*) FROM w WHERE nuts1 LIKE 'DE_'").fetchone()[0] or 1
     regionen = con.execute("""
       SELECT nuts1, count(*) n FROM w WHERE nuts1 LIKE 'DE_' GROUP BY 1 ORDER BY 2 DESC LIMIT 5""").fetchall()
-    r_tot = sum(r[1] for r in regionen) or 1
     NUTS1 = {"DE1": "Baden-Württemberg", "DE2": "Bayern", "DE3": "Berlin", "DE4": "Brandenburg",
              "DE5": "Bremen", "DE6": "Hamburg", "DE7": "Hessen", "DE8": "Meck.-Vorpommern",
              "DE9": "Niedersachsen", "DEA": "Nordrhein-Westfalen", "DEB": "Rheinland-Pfalz",
