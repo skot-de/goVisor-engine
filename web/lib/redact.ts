@@ -26,6 +26,16 @@ export function redactDetail(one: Any, tier: Tier): Any {
   return d;
 }
 
+/** Firmenprofil (#25) redigieren: die Pro-Sektion „Was ausläuft" (expiring) verlässt den Server
+ * für Free-Nutzer nicht — sie ist in der UI Pro-badge-gated, und CSS-Blur allein ist DevTools-lesbar.
+ * „Kopf an Kopf" ist ohne eigenes Profil ohnehin leer, KPIs/Wo-festsitzt bleiben frei. */
+export function redactFirma(p: Any, tier: Tier): Any {
+  if (tier === "pro" || !p || p.error) return p;
+  const d = structuredClone(p);
+  d.expiring = [];              // Pro: auslaufende Verträge der Firma
+  return d;
+}
+
 /** Marktblöcke (Chancen-Tab) redigieren — Bieterzahlen + Vergabestellen-Aufschlüsselungen raus. */
 export function redactMarkt(m: Any, tier: Tier): Any {
   if (tier === "pro" || !m) return m;
