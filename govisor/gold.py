@@ -1127,6 +1127,7 @@ def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = Non
     entity_of: dict[str, ResolvedEntity] = {}
     plz_of: dict[str, set[str]] = {}
     leitweg_of: dict[str, set[str]] = {}     # entity_id → Leitweg-ID(s), für den Vergabestellen-Anker
+    vat_of: dict[str, set[str]] = {}         # entity_id → USt-IdNr(n), zweiter Vergabestellen-Anker
     links = []
     # In-Run-Memoisierung: resolve_supplier ist rein in (name, national_id, plz, hr_index),
     # und 84 % der 3,7M Parteien sind Wiederholungen (nur 592k distinkte Tupel). Reihenfolge
@@ -1143,11 +1144,13 @@ def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = Non
         entity_of.setdefault(resolved.entity_id, resolved)
         if plz and plz.strip():
             plz_of.setdefault(resolved.entity_id, set()).add(plz.strip())
-        # Leitweg-ID der Käufer festhalten (resolve_supplier verwirft sie für PUBLIC) — Anker s. u.
+        # Käufer-IDs festhalten (resolve_supplier verwirft sie für PUBLIC) — Anker s. u.
         if role == "buyer" and national_id:
-            lw = normalize_national_id(national_id)
-            if lw and lw.startswith("leitweg:"):
-                leitweg_of.setdefault(resolved.entity_id, set()).add(lw)
+            nk = normalize_national_id(national_id)
+            if nk and nk.startswith("leitweg:"):
+                leitweg_of.setdefault(resolved.entity_id, set()).add(nk)
+            elif nk and nk.startswith("vat:"):
+                vat_of.setdefault(resolved.entity_id, set()).add(nk)
         links.append((notice_id, role, seq, resolved.entity_id))
 
     # Konsolidierung: eine nur-Name-Entität und eine Register-/ID-Entität mit
@@ -1167,6 +1170,13 @@ def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = Non
         top = ", ".join(f"{lw.split(':',1)[1]}({n})" for lw, n in leitweg_dropped[:3])
         print(f"  leitweg     : {len(leitweg_merges)} Fragmente über Leitweg-ID gemerged; "
               f"{len(leitweg_dropped)} generische Platzhalter ausgeschlossen ({top})")
+    # USt-IdNr-Anker: zweiter autoritativer Vergabestellen-Schlüssel (dieselbe Kurzschluss-Lücke wie
+    # Leitweg). Token-Guard gegen geteilte Verwaltungsgemeinschafts-VATs (fremde Gemeinden, eine VAT).
+    vat_merges, vat_skipped = _consolidate_by_vat(entity_of, vat_of, set(merge_map))
+    merge_map.update(vat_merges)
+    if vat_merges or vat_skipped:
+        print(f"  vat         : {len(vat_merges)} Fragmente über USt-IdNr gemerged; "
+              f"{vat_skipped} geteilte VATs (kein gemeinsamer Namens-Token) übersprungen")
     # Kuratierte Aliase (belegte Umbenennungen/Fragmente, z. B. DB Netz→DB InfraGO).
     # Identitäts-Merge, KEIN Namensstamm-Raten — nur was in der CSV steht (human-verifiziert).
     merge_map.update(_load_entity_aliases(cfg, country, entity_of))
@@ -1366,6 +1376,66 @@ def _consolidate_by_leitweg(entity_of: dict, leitweg_of: dict, already: set):
                 merge_map[e.entity_id] = target.entity_id
     dropped_generic = sorted(((lw, len(norms_per_lw[lw])) for lw in generic), key=lambda x: -x[1])
     return merge_map, dropped_generic
+
+
+# Namens-Stopwörter für den USt-IdNr-Token-Guard: zu generisch, um zwei Vergabestellen als „dieselbe"
+# zu belegen. Ohne Guard verschmölze eine geteilte Verwaltungsgemeinschafts-VAT fremde Gemeinden
+# (DE309506861 = Bous/Eurasburg/Langerringen). Der geteilte SIGNIFIKANTE Token trägt den Beleg.
+_VAT_STOP = frozenset({
+    "stadt", "gemeinde", "markt", "landkreis", "kreis", "der", "die", "das", "und", "fuer",
+    "gmbh", "amt", "bundesrepublik", "deutschland", "landeshauptstadt", "vertreten", "durch",
+    "eigenbetrieb", "stadtverwaltung", "verbandsgemeinde", "samtgemeinde", "anstalt", "koerperschaft",
+})
+
+
+def _vat_tokens(norm: str) -> set:
+    """Signifikante Namens-Token (≥4 Zeichen, ohne Stopwörter) aus dem kanonisierten Namen."""
+    return {t for t in re.findall(r"[a-z0-9]{4,}", (norm or "")) if t not in _VAT_STOP}
+
+
+def _consolidate_by_vat(entity_of: dict, vat_of: dict, already: set):
+    """Öffentliche Vergabestellen über die **USt-IdNr** ankern — dieselbe Kurzschluss-Lücke wie
+    bei der Leitweg-ID (``resolve_supplier`` verwirft die VAT für PUBLIC/Person/Konsortium).
+
+    **Token-Guard statt Generik-Schwelle:** Eine USt-IdNr ist nicht immer eindeutig einer Stelle
+    zugeordnet — Verwaltungsgemeinschaften teilen sich eine (``DE309506861`` = Bous/Eurasburg/
+    Langerringen). Deshalb wird ein VAT-Cluster nur verschmolzen, wenn **alle** Mitglieder einen
+    gemeinsamen signifikanten Namens-Token teilen (Heidelberg-Varianten ja, fremde Gemeinden nein).
+    Wieder rein additiv; mehrdeutige Entitäten (>1 VAT) übersprungen; register-Ziel bevorzugt.
+
+    Gibt ``(merge_map, skipped_shared)`` zurück — Letzteres = wegen fehlendem Token nicht gemergte
+    (geteilte) VATs, für die Protokollierung.
+    """
+    from collections import defaultdict
+
+    id_methods = {Method.HR_EXACT, Method.HR_FUZZY_PLZ, Method.TED_NATIONAL_ID}
+    by_vat: dict[str, list] = defaultdict(list)
+    for eid, keys in vat_of.items():
+        if eid in already or len(keys) != 1:
+            continue
+        e = entity_of.get(eid)
+        if e is not None:
+            by_vat[next(iter(keys))].append(e)
+
+    merge_map: dict[str, str] = {}
+    skipped_shared = 0
+    for vat, members in by_vat.items():
+        if len(members) < 2:
+            continue
+        common = None
+        for e in members:
+            common = _vat_tokens(e.norm) if common is None else (common & _vat_tokens(e.norm))
+            if not common:
+                break
+        if not common:
+            skipped_shared += 1          # geteilte VG-VAT → kein Beleg, nicht mergen
+            continue
+        id_members = [e for e in members if e.method in id_methods]
+        target = min(id_members or members, key=lambda e: e.entity_id)
+        for e in members:
+            if e.entity_id != target.entity_id:
+                merge_map[e.entity_id] = target.entity_id
+    return merge_map, skipped_shared
 
 
 # Kommunale Vergabestelle: Behörden-Typ + Gemeinde/Kreis-Name aus dem Käufer-Namen.
