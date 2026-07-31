@@ -900,7 +900,7 @@ function renderLog(l){
   return l.log.map(ev =>
     `<div class="logrow" data-kind="${ev.kind}">
       <span class="logmark">${LOGMARK[ev.kind]||'·'}</span>
-      <div class="logtxt">${ev.text}${ev.who?` <b>${ev.who}</b>`:''}</div>
+      <div class="logtxt">${esc(ev.text)}${ev.who?` <b>${esc(ev.who)}</b>`:''}</div>
       <span class="logts">${ev.ts}</span>
     </div>`).join('');
 }
@@ -911,8 +911,8 @@ function renderTeam(l){
     return `<div class="cmt ${mine?'mine':''}">
       <div class="cmt-av ${mine?'you':''}" title="${esc(c.author)}">${esc(c.initials)}</div>
       <div class="cmt-bubble">
-        <div class="cmt-meta"><b>${mine?'Du':c.author}</b><span>${c.ts}</span></div>
-        <div class="cmt-body">${c.body}</div>
+        <div class="cmt-meta"><b>${mine?'Du':esc(c.author)}</b><span>${esc(c.ts)}</span></div>
+        <div class="cmt-body">${esc(c.body)}</div>
       </div></div>`; }).join('')
     : `<div class="thread-empty">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.7 8.7 0 0 1-4-.9L3 20l1.4-5.5a8.4 8.4 0 0 1-.9-4A8.5 8.5 0 0 1 12 2a8.4 8.4 0 0 1 9 9.5Z"/></svg>

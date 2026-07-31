@@ -2,16 +2,18 @@ import { NextResponse, type NextRequest } from "next/server";
 import { updateSession } from "@/lib/supabase/middleware";
 
 /**
- * Pre-Launch-Blackout.
+ * Pre-Launch-Blackout — FAIL-CLOSED.
  *
- * Auf Vercel (öffentlich, govisor.eu) liefert die App NUR eine leere schwarze Seite — niemand
- * sieht Inhalt oder erreicht /api. LOKAL (Dev, kein VERCEL-Env) läuft die volle App normal weiter.
- * So ist die Seite „vom Netz", aber lokal voll zugänglich.
+ * Jedes Production-Deployment liefert NUR eine leere schwarze Seite (auch /api), SOLANGE nicht
+ * explizit `LAUNCH_LIVE=1` gesetzt ist. Lokale Entwicklung (`next dev`, NODE_ENV≠production) läuft
+ * immer voll — dort ist der Blackout nie aktiv.
  *
- * Blackout aufheben (echter Launch): diese Datei auf die reine `updateSession`-Weiterleitung
- * zurücksetzen (Git-Historie) + neu deployen.
+ * Wichtig (Härtung): der Schutz hängt NICHT mehr an einer plattform-gesetzten Var (`VERCEL`),
+ * deren Fehlen früher die volle App öffentlich machte (fail-open auf fremdem Host/Klon/Preview).
+ * Default ist jetzt schwarz; Freischalten = aktives Setzen von `LAUNCH_LIVE=1` in der Deploy-Umgebung
+ * (kein Code-Change nötig).
  */
-const BLACKOUT = process.env.VERCEL === "1"; // auf jedem Vercel-Deployment aktiv, lokal nie
+const BLACKOUT = process.env.NODE_ENV === "production" && process.env.LAUNCH_LIVE !== "1";
 
 export async function middleware(request: NextRequest) {
   if (BLACKOUT) {

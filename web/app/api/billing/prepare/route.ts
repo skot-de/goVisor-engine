@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { feeApplies, feeForBand, bandForValue, type Band } from "@/lib/billing";
+import { requireCronSecret } from "@/lib/cronAuth";
 
 /* Success-Fee-Rechnung vorbereiten (Ticket #6) — HITL: erzeugt nur ENTWÜRFE, bucht nie ab.
  * Getriggert wenn ein TED-Zuschlag zu einem bestätigten Kunden-Entity matcht (Award-Stream =
@@ -13,9 +14,8 @@ type Award = {
 };
 
 export async function POST(req: NextRequest) {
-  const secret = process.env.CRON_SECRET;
-  if (secret && req.headers.get("x-cron-secret") !== secret && req.headers.get("authorization") !== `Bearer ${secret}`)
-    return NextResponse.json({ ok: false, error: "forbidden" }, { status: 403 });
+  const deny = requireCronSecret(req);   // fail-closed (ohne CRON_SECRET deaktiviert)
+  if (deny) return deny;
 
   const awards: Award[] = await req.json().catch(() => []);
   const list = Array.isArray(awards) ? awards : [awards];

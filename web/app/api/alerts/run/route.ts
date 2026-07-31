@@ -4,6 +4,7 @@ import path from "node:path";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { dueAlerts, sentFlagFor, alertText, type LeadTiming } from "@/lib/alerts";
 import { send } from "@/lib/email";
+import { requireCronSecret } from "@/lib/cronAuth";
 
 /* Alert-Lauf (Ticket #9) — cron-getriggert (täglich). Rechnet fällige Frist-/Auslauf-Alerts
  * aus den Watchlists und verschickt sie (E-Mail-Stub bis Provider). Idempotent über die
@@ -26,13 +27,9 @@ async function loadLeadIndex(): Promise<Map<string, LeadTiming>> {
 }
 
 async function run(req: NextRequest) {
-  // Vercel-Cron schickt `Authorization: Bearer $CRON_SECRET`; manuell via `x-cron-secret`.
-  const secret = process.env.CRON_SECRET;
-  if (secret) {
-    const ok = req.headers.get("x-cron-secret") === secret ||
-      req.headers.get("authorization") === `Bearer ${secret}`;
-    if (!ok) return NextResponse.json({ ok: false, error: "forbidden" }, { status: 403 });
-  }
+  // Fail-closed: ohne CRON_SECRET deaktiviert, sonst nur mit passendem Header (Vercel-Cron/manuell).
+  const deny = requireCronSecret(req);
+  if (deny) return deny;
 
   const admin = createAdminClient();
   const [{ data: watch }, { data: prefsRows }, { data: profiles }] = await Promise.all([
