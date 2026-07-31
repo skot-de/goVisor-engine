@@ -1,5 +1,14 @@
 # Ticket #23 — Vergabeunterlagen-Analyse & Bausteinbibliothek: Umsetzungsplan
 
+> **Status (2026-07-31): alle 6 Phasen gebaut, 207 Tests grün.** Backend/Logik lokal-first
+> vollständig + getestet; Deploy-Schicht (Supabase-Verschlüsselung Ebene B, Live-Verdrahtung von
+> Quote/Zeitkanal, Malware-Scanner, Ebene-B-UI/Import-Flow) bleibt fürs Deployment. Commits
+> `f328818` (P1) · `cbad85d` (P2) · `9bf9dd0` (P3) · `3fce1fd` (P4) · `90faa00` (P5) · `8eb9451` (P6).
+> Neue Module: `govisor/{doctypes,doctax,docextract,docparse,docupload,pii,blocks,docsafety}.py`,
+> `supabase/0006_doc_analysis.sql`, `scripts/eval_extraction.py`, umgebaute `analyze_docs.py`/
+> `process_upload.py`, Checklisten-UI in `explorerCore.js`.
+
+
 Spec: `INPUT/v1 Features/add/govisor-ticket-23-dokumentenanalyse.md`. Fundierung: Struktur-Studie
 ([dokument-struktur-studie.md](dokument-struktur-studie.md)) — **Q1b bindend: kein Standardformular-
 Layer → Verarbeitung pro Dokument, kein Template-Cache.** Der Hebel ist Auswahl + Parser + Schema.
