@@ -1,13 +1,15 @@
 # Vergabeunterlagen — Struktur-Studie (Q1–Q7)
 
-Basis: **300 Vorgänge** mit login-frei geladenen Unterlagen (241 mit brauchbarem Volltext),
-~6.000 Dateien, 105 Mio. Zeichen.
-Branchen: Bau 107 · Beratung 50 · Medizin 37 · IT 18 · Energie 13\* · Sicherheit 7\* · (?) 5.
-\* n<20 = **Indiz, keine Statistik**. Rohdaten: `data/docs/study/q1…q6.csv` + `q1b_aehnlichkeit.csv`.
+Basis: **~300 Vorgänge** login-frei geladen. **Gemischte Basis-n** (bewusst, ehrlich): Q2–Q7 auf
+**237 Vorgängen mit Inhalt** (Branchen Bau 107 · Beratung 50 · Medizin 37 · IT 18 · Energie 13\* ·
+Sicherheit 7\* · ? 5), Q1b auf **241 Vorgängen mit Volltext**. Der Lauf über die vollen 300 auf
+einheitliche Basis wurde abgebrochen — er hätte **nur die Basis vereinheitlicht, keine Aussage
+geändert** (30 Min PDF-Re-Parse, kein neuer Erkenntnisgewinn). Rohdaten: `data/docs/study/q1…q6.csv`
++ `q1b_aehnlichkeit.csv`.
+\* n<20 = **Indiz, keine Statistik**.
 
-> **Status: vollständig.** Q1–Q7 gemessen. Q1b (Inhaltsähnlichkeit) mit dem richtigen Verfahren
-> nachgemessen (Volltext-Shingles statt Deckblatt) — Ergebnis unten, es **widerlegt die
-> Standardformular-These**.
+> **Status: vollständig** (gemischte Basis, s. o.). Q1–Q7 gemessen; Q1b mit dem richtigen Verfahren
+> nachgemessen (Volltext-Shingles statt Deckblatt) — es **widerlegt die Standardformular-These**.
 
 ---
 
