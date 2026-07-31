@@ -165,6 +165,17 @@ img,svg{display:block;max-width:100%}
 .st-trend.up{color:var(--signal-deep);font-weight:600}
 .st-trend.down{color:var(--flag)}
 
+/* Härtung 4: Teaser-Paywall (Free) — Lock, Pro-Gate, Teaser-Zeile */
+.st-lock{font-family:var(--mono);letter-spacing:.12em;color:var(--ink-300);user-select:none}
+.st-teaser{background:var(--surface-2);cursor:default}
+.st-teaser .st-t{color:var(--ink-500);font-weight:600}
+.st-teaser-pro{color:var(--signal-deep);font-size:12px}
+.st-progate{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;
+  padding:40px 24px;margin-top:var(--s3);border:1px dashed var(--line-strong);border-radius:10px;background:var(--surface-2)}
+.st-progate svg{width:30px;height:30px;stroke:var(--signal-deep)}
+.st-progate-t{font-size:14px;color:var(--ink-700);max-width:46ch;line-height:1.5}
+.st-progate-s{font-size:12px;color:var(--ink-400);font-weight:600}
+
 /* Wettbewerb: Anbieter-Übersicht + Profil */
 .st-wett .st-row{grid-template-columns:minmax(0,2.2fr) 108px 84px 88px 120px}
 .st-profil .st-row{grid-template-columns:minmax(0,2.2fr) 90px 150px 110px}

@@ -36,6 +36,40 @@ export function redactFirma(p: Any, tier: Tier): Any {
   return d;
 }
 
+/**
+ * Strategie/Wettbewerb (#Härtung 4) — abgestufte Teaser-Paywall (Sven-Regeln, provider-Kontext).
+ * Für Free verlassen die Pro-Zahlen den Server NICHT (CSS-Blur wäre DevTools-lesbar). Die UI zeigt
+ * anhand `_pro:false` die Teaser-Chrome (Locks, „N weitere · Pro", Pro-Gate).
+ *  - Felder: Metrik-Zahlen verdeckt (Feld-Identität + 36M-Größe bleiben).
+ *  - Wettbewerb: nur erste 3 Anbieter (Gesamtzahl gemerkt), Matrix Pro, Anbieterprofil 3 Zeilen ohne Zahlen.
+ *  - Fähigkeiten (Anforderungen) + Bindung (gesperrtes Volumen): komplett Pro.
+ *  - Profil/Pipeline/Stellen/Nachbarn/Einstieg: unverändert frei.
+ */
+export function redactStrategie(map: Any, tier: Tier): Any {
+  if (tier === "pro" || !map) return map;
+  const out = structuredClone(map);
+  for (const br of Object.keys(out)) {
+    const s = out[br];
+    if (!s || typeof s !== "object") continue;
+    s._pro = false;
+    for (const f of (s.felder || [])) {          // Zahlen verdecken, Identität/Größe bleiben
+      f.vergabenJahr = null; f.trend = null; f.bieterMedian = null; f.kleinstesLos = null; f.buergschaft = null;
+    }
+    if (s.wettbewerb) {
+      const all = s.wettbewerb.anbieter || [];
+      s.wettbewerb._anbieterTotal = all.length;
+      s.wettbewerb.anbieter = all.slice(0, 3);   // erste 3 Zeilen
+      s.wettbewerb.matrix = null;                // Wer-holt-wo-Matrix ist Pro
+      const prof = s.wettbewerb.profile || {};   // Anbieterprofil: 3 Zeilen ohne Zahlen
+      for (const k of Object.keys(prof))
+        prof[k] = (prof[k] || []).slice(0, 3).map((z: Any) => ({ buyer: z.buyer, wins: null, anteil: null, markt: null, ueber: null }));
+    }
+    s.faehigkeiten = { gated: true };            // Anforderungen: komplett Pro
+    s.bindung = { gated: true };                 // gesperrtes Volumen: komplett Pro
+  }
+  return out;
+}
+
 /** Marktblöcke (Chancen-Tab) redigieren — Bieterzahlen + Vergabestellen-Aufschlüsselungen raus. */
 export function redactMarkt(m: Any, tier: Tier): Any {
   if (tier === "pro" || !m) return m;

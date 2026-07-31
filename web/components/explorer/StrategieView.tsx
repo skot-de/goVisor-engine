@@ -48,7 +48,7 @@ type Matrix = {
   supplier: { id: string; name: string }[];
   cells: number[][];
 };
-type Wett = { anbieter: Anbieter[]; profile: Record<string, ProfilZeile[]>; matrix: Matrix | [] };
+type Wett = { anbieter: Anbieter[]; profile: Record<string, ProfilZeile[]>; matrix: Matrix | [] | null; _anbieterTotal?: number };
 type Faehig = {
   nLeads: number;
   regime: { code: string; label: string; n: number; vol: number | null }[];
@@ -63,7 +63,26 @@ type Strat = {
     volGesperrt: number | null; volN: number; fenster: Fenster[];
   };
   summe: { nGesamt: number; volEcht: number; volSchaetz: number; nUnbekannt: number; nRahmenOhneWb: number };
+  _pro?: boolean;                 // Härtung 4: false = Free (Teaser-Redaktion aktiv)
 };
+
+// Teaser-Bausteine für die abgestufte Paywall (Härtung 4).
+const isPro = (d: { _pro?: boolean } | null | undefined) => d?._pro !== false;
+function Lock() {
+  return <span className="st-lock" title="Im Pro-Zugang sichtbar">•••</span>;
+}
+function ProGate({ titel, frage, was }: { titel: string; frage: string; was: string }) {
+  return (
+    <>
+      <div className="st-head"><div><h4>{titel}</h4><p className="st-frage">{frage}</p></div></div>
+      <div className="st-progate">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="10" width="16" height="10" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg>
+        <div className="st-progate-t">{was}</div>
+        <div className="st-progate-s">Im Pro-Zugang vollständig sichtbar.</div>
+      </div>
+    </>
+  );
+}
 
 /* Fallzahl-Schwellen (Ticket §3.1). Eine Quote aus 2 Fällen als „50 %" auszuweisen ist
    genau die Falschpräzision, die das Produkt vermeidet — deshalb entscheidet n über die
@@ -381,6 +400,7 @@ function Felder({ data }: { data: Strat }) {
     const sp = FELD_SPALTEN.find((c) => c.key === sortKey)!;
     return [...data.felder].sort((a, b) => (sp.wert(a) - sp.wert(b)) * sortDir);
   }, [data, sortKey, sortDir]);
+  const pro = isPro(data);   // Härtung 4: Free sieht Feld-Identität, aber nicht die Zahlen
 
   function sortiere(k: string) {
     if (k === sortKey) setSortDir((d) => -d);
@@ -391,7 +411,7 @@ function Felder({ data }: { data: Strat }) {
     <>
       <div className="st-head"><div>
         <h4>Felder</h4>
-        <p className="st-frage">Wo ist Platz, wo ist es eng?</p>
+        <p className="st-frage">Wo ist Platz, wo ist es eng?{pro ? "" : " — Werte im Pro-Zugang"}</p>
       </div></div>
 
       <div className="st-table st-felder">
@@ -409,17 +429,18 @@ function Felder({ data }: { data: Strat }) {
             <span className="st-t">{f.label}
               <span className="st-sub">CPV {f.cpv4} · {f.vergaben36.toLocaleString("de-DE")} Vergaben in 36 Mon.</span>
             </span>
-            <span className="st-w"><span className="v-num">{f.vergabenJahr}</span></span>
+            <span className="st-w">{pro ? <span className="v-num">{f.vergabenJahr}</span> : <Lock />}</span>
             <span className="st-w">
-              {f.trend == null
+              {!pro ? <Lock />
+                : f.trend == null
                 ? <span className="v-sparse" title="Nicht über alle drei Zeitfenster durchgehend belegt">n/a</span>
                 : <span className={`st-trend ${f.trend > 5 ? "up" : f.trend < -5 ? "down" : ""}`}>
                     {f.trend > 0 ? "+" : ""}{f.trend} %
                   </span>}
             </span>
-            <span className="st-w">{f.bieterMedian != null ? <span className="v-num">{f.bieterMedian}</span> : <span style={{ color: "var(--ink-300)" }}>—</span>}</span>
-            <span className="st-w">{f.kleinstesLos ? <span className="v-num">{eur(f.kleinstesLos)}</span> : <span style={{ color: "var(--ink-300)" }}>—</span>}</span>
-            <span className="st-w"><Q q={f.buergschaft} /></span>
+            <span className="st-w">{!pro ? <Lock /> : f.bieterMedian != null ? <span className="v-num">{f.bieterMedian}</span> : <span style={{ color: "var(--ink-300)" }}>—</span>}</span>
+            <span className="st-w">{!pro ? <Lock /> : f.kleinstesLos ? <span className="v-num">{eur(f.kleinstesLos)}</span> : <span style={{ color: "var(--ink-300)" }}>—</span>}</span>
+            <span className="st-w">{pro ? <Q q={f.buergschaft} /> : <Lock />}</span>
           </div>
         ))}
       </div>
@@ -569,6 +590,8 @@ function Wettbewerb({ data }: { data: Strat }) {
     const sp = WETT_SPALTEN.find((c) => c.key === sortKey)!;
     return [...w.anbieter].sort((a, b) => (sp.wert(a) - sp.wert(b)) * sortDir);
   }, [w, sortKey, sortDir]);
+  const pro = isPro(data);
+  const restAnbieter = (w._anbieterTotal ?? anbieter.length) - anbieter.length;   // im Pro verborgene Zeilen
 
   function sortiere(k: string) {
     if (k === sortKey) setSortDir((d) => -d);
@@ -603,14 +626,18 @@ function Wettbewerb({ data }: { data: Strat }) {
             {zeilen.length ? zeilen.map((z, i) => (
               <div key={i} className="st-row">
                 <span className="st-t">{z.buyer}</span>
-                <span className="st-w"><span className="v-num">{z.wins}</span></span>
+                <span className="st-w">{pro ? <span className="v-num">{z.wins}</span> : <Lock />}</span>
                 <span className="st-w">
-                  <span className="st-anteilbar"><i style={{ width: `${Math.min(100, z.anteil)}%` }} /></span>
-                  <span className="v-num">{z.anteil} %</span>
+                  {pro ? <>
+                    <span className="st-anteilbar"><i style={{ width: `${Math.min(100, z.anteil)}%` }} /></span>
+                    <span className="v-num">{z.anteil} %</span>
+                  </> : <Lock />}
                 </span>
                 <span className="st-w">
-                  <span className="v-num" style={{ color: "var(--ink-400)" }}>{z.markt} %</span>
-                  <span className={`st-ueber ${z.ueber > 0 ? "up" : ""}`}>{z.ueber > 0 ? "+" : ""}{z.ueber}</span>
+                  {pro ? <>
+                    <span className="v-num" style={{ color: "var(--ink-400)" }}>{z.markt} %</span>
+                    <span className={`st-ueber ${z.ueber > 0 ? "up" : ""}`}>{z.ueber > 0 ? "+" : ""}{z.ueber}</span>
+                  </> : <Lock />}
                 </span>
               </div>
             )) : <span className="v-sparse">keine Stellen-Zuordnung erfasst</span>}
@@ -648,6 +675,12 @@ function Wettbewerb({ data }: { data: Strat }) {
             <span className="st-w">{a.vol ? <span className="v-num">{eur(a.vol)}</span> : <span style={{ color: "var(--ink-300)" }}>—</span>}</span>
           </div>
         ))}
+        {!pro && restAnbieter > 0 ? (
+          <div className="st-row st-teaser">
+            <span className="st-t">+ {restAnbieter.toLocaleString("de-DE")} weitere Anbieter</span>
+            <span className="st-w st-teaser-pro" style={{ gridColumn: "2 / -1" }}>vollständige Rangliste im Pro-Zugang</span>
+          </div>
+        ) : null}
       </div>
 
       {matrix ? (
@@ -796,7 +829,7 @@ export function StrategieView({
   const [offeneStelle, setOffeneStelle] = useState<Stelle | null>(null);
 
   useEffect(() => {
-    fetch("/api/strategie").then((r) => r.json()).then(setStrat).catch(() => {});
+    fetch("/api/strategie?ctx=provider").then((r) => r.json()).then(setStrat).catch(() => {});
   }, []);
 
   // Position + Profil kommen unverändert aus dem Bestand (Ticket §5.5 / §5.8)
@@ -845,9 +878,13 @@ export function StrategieView({
           : sektion === "wettbewerb"
           ? (data ? <Wettbewerb data={data} /> : <div className="st-head"><div><h4>Wettbewerb</h4><p className="st-frage">Lade Aggregate …</p></div></div>)
           : sektion === "bindung"
-          ? (data ? <Bindung data={data} /> : <div className="st-head"><div><h4>Bindung</h4><p className="st-frage">Lade Aggregate …</p></div></div>)
+          ? (!data ? <div className="st-head"><div><h4>Bindung</h4><p className="st-frage">Lade Aggregate …</p></div></div>
+             : !isPro(data) ? <ProGate titel="Bindung" frage="Was ist euch verschlossen?" was="Gesperrtes Volumen, Gelisteten-Analyse und die nächsten Einstiegsfenster." />
+             : <Bindung data={data} />)
           : sektion === "faehigkeiten"
-          ? (data ? <Faehigkeiten data={data} /> : <div className="st-head"><div><h4>Fähigkeiten</h4><p className="st-frage">Lade Aggregate …</p></div></div>)
+          ? (!data ? <div className="st-head"><div><h4>Fähigkeiten</h4><p className="st-frage">Lade Aggregate …</p></div></div>
+             : !isPro(data) ? <ProGate titel="Fähigkeiten" frage="Was blockiert uns?" was="Geforderte Nachweise, Bürgschafts-Hürde und der formale Rahmen im Feld." />
+             : <Faehigkeiten data={data} />)
           : sektion === "position" || sektion === "profil"
           ? <div onClick={handleClick} dangerouslySetInnerHTML={{ __html: bestandHtml }} />
           : <NochNicht label={meta.label} frage={meta.frage} />}
