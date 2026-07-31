@@ -945,12 +945,23 @@ function renderUebersicht(l){
       ${(a.vorausfuellbar&&a.vorausfuellbar.length)?`<div class="va-fill"><b>Das füllen wir aus deinem Profil vor</b><span>${a.vorausfuellbar.map(x=>esc(typeof x==='string'?x:(x.nachweis||''))).join(' · ')}</span></div>`:''}
       <p class="rt-note">Automatisch aus den Vergabeunterlagen erstellt — als Orientierung, nicht rechtsverbindlich.</p>
     </section>`;
-    })() : `<section class="sec va-empty">
-      <div class="va-head"><span class="va-amp va-neutral">◇ Vergabe-Analyse</span><span class="cov">noch keine Unterlagen</span></div>
-      <p class="va-sum">Lade die Vergabeunterlagen hoch (ZIP/PDF) — wir machen daraus in Sekunden eine <b>Ampel-Einschätzung</b>, eine abhakbare <b>Bieter-Checkliste</b> (K.o.-Kriterien, Eignungsnachweise, Zuschlagsgewichte) und <b>füllen Firmenangaben vor</b>.</p>
-      <button class="va-upload-btn" data-uploaddocs="${l.id}">Unterlagen hochladen</button>
+    })() : (()=>{
+      const u = l.unterlagen || {};
+      const ext = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>`;
+      const dl = u.url
+        ? `<a class="va-dl" href="${esc(u.url)}" target="_blank" rel="noopener">Beim Vergabeportal herunterladen ${ext}</a>`
+        : `<span class="va-dl-off">Unterlagen beim Vergabeportal herunterladen</span>`;
+      return `<section class="sec va-empty">
+      <h4>Vergabe-Analyse <span class="cov">aus deinen Unterlagen</span></h4>
+      <p class="va-sum">Aus den Vergabeunterlagen machen wir in Sekunden eine <b>Ampel-Einschätzung</b>, eine abhakbare <b>Bieter-Checkliste</b> (K.o.-Kriterien, Eignungsnachweise, Zuschlagsgewichte) und <b>füllen Firmenangaben vor</b>.</p>
+      <ol class="va-steps">
+        <li><span class="va-step-n">1</span><div>${dl}</div></li>
+        <li><span class="va-step-n">2</span><div><button class="va-upload-btn" data-uploaddocs="${l.id}">Hier hochladen (ZIP/PDF)</button></div></li>
+        <li><span class="va-step-n">3</span><div class="va-step-res">Ampel + Checkliste erscheinen automatisch</div></li>
+      </ol>
       <div class="va-status" data-upstatus="${l.id}"></div>
-    </section>`}
+    </section>`;
+    })()}
     <section class="sec">
       <h4>Eckdaten</h4>
       <div class="kv">
