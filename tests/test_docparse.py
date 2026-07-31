@@ -72,3 +72,15 @@ def test_classify_content():
     assert docparse.classify_content("Nachzuweisen sind vergleichbare Referenzen und ein Mindestumsatz") == "eignung"
     assert docparse.classify_content("Angebote sind bis 15.08.2026 einzureichen") == "aufforderung"
     assert docparse.classify_content("Allgemeines Blabla ohne Merkmale") == "sonstiges"
+
+
+def test_nachweis_count():
+    """Ticket #23 §B.2 — Nachweisdichte: distinkte Nachweis-Arten + Formblätter, Wiederholung zählt 1×."""
+    from govisor import docsignals
+    t = ("Einzureichen: Eigenerklärung zur Eignung, Nachweis der Berufshaftpflicht, Referenzen der "
+         "letzten Jahre, Formblatt 124, Formblatt 234, Zertifikat ISO 9001, Erklärung Art. 5k. "
+         "Nochmals: Eigenerklärung beifügen.")  # 'Eigenerklärung' 2× → zählt 1×
+    n = docsignals.nachweis_count(t)
+    assert n >= 6, n                                   # eigenerkl+haftpflicht+referenz+iso+5k + 2 Formblätter
+    assert docsignals.nachweis_count("") == 0
+    assert docsignals.nachweis_count("Allgemeiner Text ohne Nachweise.") == 0

@@ -56,6 +56,32 @@ _CERTS = [
     ("EMAS", r"\bEMAS\b"), ("BSI C5", r"\bC5\b|BSI[- ]?C5"),
 ]
 
+# ── Nachweisdichte (Ticket #23 Vergabestelle-Brücke): wie viele DISTINKTE Nachweis-Arten +
+# Formblätter fordern die Unterlagen? Hoher Wert = hoher Bieteraufwand = schreckt KMU ab. Bewusst
+# kategorie-distinkt (jede Art zählt 1×), damit Wiederholungen nicht aufblähen. Regelbasiert →
+# konsistent über Korpus (Median) UND einen hochgeladenen Vergabestellen-Entwurf anwendbar.
+_NACHWEIS_KATEGORIEN = [
+    r"eigenerklärung", r"verpflichtungserklärung", r"referenz(?:en|projekt|liste|nachweis)",
+    r"mindest(?:jahres)?umsatz", r"berufs-?\s?haftpflicht|betriebshaftpflicht",
+    r"handelsregisterauszug", r"unbedenklichkeitsbescheinigung",
+    r"gewerbezentralregister|führungszeugnis", r"tariftreue|mindestlohn",
+    r"präqualifik|amtliches verzeichnis", r"bilanz|jahresabschluss",
+    r"versicherungsbestätigung|deckungssumme", r"fachkunde|befähigung|qualifikationsnachweis",
+    r"russland-?sanktion|art\.?\s*5k|833/2014", r"iso\s*900\d|iso\s*1400\d|iso\s*2700\d",
+    r"präsentation(?:stermin)?|teststellung|bemusterung|vor-?ort-?termin",
+]
+_FORMBLATT = re.compile(r"form(?:blatt|ular)\s*[-\s]?(\d{2,3})", _FLAGS)
+
+
+def nachweis_count(text: str) -> int:
+    """Anzahl DISTINKTER geforderter Nachweis-Arten + Formblätter im Text (Nachweisdichte, §B.2)."""
+    if not text:
+        return 0
+    n = sum(1 for pat in _NACHWEIS_KATEGORIEN if re.search(pat, text, _FLAGS))
+    n += len({m for m in _FORMBLATT.findall(text)})
+    return n
+
+
 # ── Zuschlagsgewichte ─────────────────────────────────────────────────────────────────────────
 _WEIGHT = re.compile(r"(preis|qualität|kosten|leistung|wirtschaftlichkeit)[^%\n]{0,25}?(\d{1,3})\s*%", _FLAGS)
 

@@ -90,6 +90,9 @@ export function VergabeblickView() {
   const [ckPreis, setCkPreis] = useState(false);
   const [ckUmsatz, setCkUmsatz] = useState(0); // #21 geforderter Mindestjahresumsatz in Mio €
   const [ckWert, setCkWert] = useState(""); // #20 eigener Schätzwert (€)
+  // Ticket #23 §B.2 — Entwurf mitprüfen: Nachweisdichte gegen den Korpus-Median
+  const [draftNw, setDraftNw] = useState<{ count: number; median: number | null } | null>(null);
+  const [draftBusy, setDraftBusy] = useState(false);
 
   useEffect(() => {
     fetch("/api/strategie").then((r) => r.json()).then(setStrat).catch(() => {});
@@ -404,6 +407,28 @@ export function VergabeblickView() {
             <label className="vb-chk"><input type="checkbox" checked={ckBuerg} onChange={(e) => setCkBuerg(e.target.checked)} /> Bürgschaft gefordert</label>
             <label className="vb-chk"><input type="checkbox" checked={ckPreis} onChange={(e) => setCkPreis(e.target.checked)} /> Nur der Preis entscheidet</label>
           </div>
+          <div className="vb-draft">
+            <div>
+              <span className="vb-draft-t">Entwurf mitprüfen <span className="vb-draft-opt">— optional</span></span>
+              <span className="vb-draft-note">Wir zählen die geforderten Nachweise und vergleichen sie mit ähnlichen Verfahren. Wird nur für diese Prüfung verarbeitet und danach verworfen.</span>
+            </div>
+            <button className="vb-draft-btn" disabled={draftBusy} onClick={() => {
+              const inp = document.createElement("input");
+              inp.type = "file"; inp.accept = ".zip,.pdf,.doc,.docx,.xls,.xlsx,.txt,.html";
+              inp.onchange = async () => {
+                const f = inp.files?.[0]; if (!f) return;
+                setDraftBusy(true); setDraftNw(null);
+                const fd = new FormData(); fd.append("file", f);
+                try {
+                  const r = await fetch(`/api/draft-check?branche=${encodeURIComponent(stelle.branche)}`, { method: "POST", body: fd });
+                  const d = await r.json();
+                  if (!d.error) setDraftNw({ count: d.nachweis_count, median: d.median ?? null });
+                } catch { /* ignore */ }
+                setDraftBusy(false);
+              };
+              inp.click();
+            }}>{draftBusy ? "Prüfe Entwurf …" : (draftNw ? "Andere Datei" : "Entwurfsdatei wählen")}</button>
+          </div>
           {(() => {
             const f = (markt?.felder || []).find((x) => x.cpv4 === ckFeld);
             if (!f) return <div className="vb-check-empty">Wählen Sie ein Feld — dann prüfen wir Ihren Entwurf gegen vergleichbare Verfahren.</div>;
@@ -420,6 +445,14 @@ export function VergabeblickView() {
               : { sev: "ok", t: "Aufteilung in mehrere Lose erhöht erfahrungsgemäß Bieterzahl und KMU-Beteiligung." });
             if (ckBuerg) hints.push({ sev: "warn", t: `Eine Bürgschaft schließt kleinere und regionale Anbieter aus — bei im Median ${bmT} Bietern im Feld erhöht das die Ein-Bieter-Gefahr.` });
             if (ckPreis) hints.push({ sev: "warn", t: "Reine Preisvergabe schreckt spezialisierte Anbieter ab und senkt den Qualitätswettbewerb." });
+            // Ticket #23 §B.2 — Nachweisdichte des hochgeladenen Entwurfs gegen den Korpus-Median.
+            if (draftNw && draftNw.median != null) {
+              const over = draftNw.count > draftNw.median * 1.5;
+              hints.push({ sev: over ? "warn" : "ok",
+                t: over
+                  ? `Ihr Entwurf fordert ${draftNw.count} Nachweisarten — vergleichbare Verfahren im Median ${draftNw.median}. Hohe Nachweisdichte erhöht den Bearbeitungsaufwand und schreckt kleinere Anbieter ab.`
+                  : `Ihr Entwurf fordert ${draftNw.count} Nachweisarten — im Rahmen des Üblichen (Feld-Median ${draftNw.median}).` });
+            }
             const krit = hints.filter((h) => h.sev !== "ok").length;
             // B.2 Zuschnitt-Simulation: Feld-Median als Basis, Zuschnitt als DIREKTIONALE Richtung.
             let proj: number | null = bm;
@@ -429,6 +462,7 @@ export function VergabeblickView() {
               if (ckBuerg) proj -= 0.6;
               if (ckPreis) proj -= 0.3;
               if (ckUmsatz >= 10) proj -= 1.2; else if (ckUmsatz >= 5) proj -= 0.6; else if (ckUmsatz >= 1) proj -= 0.2;
+              if (draftNw && draftNw.median != null && draftNw.count > draftNw.median * 1.5) proj -= 0.5;
               proj = Math.max(1, Math.round(proj * 10) / 10);
             }
             return (
