@@ -50,6 +50,13 @@ def strip_accents(text: str) -> str:
     return "".join(c for c in text if not unicodedata.combining(c))
 
 
+# Deutsche Umlaut-Konvention: ü→ue etc. VOR dem NFKD-Strip. Sonst wird „für" zu „fur",
+# „Fuer" bleibt „fuer" → derselbe Käufer splittet (z. B. „Bundesagentur für/Fuer Arbeit").
+# Nur im Merge-Key (normalize_company), NICHT global in strip_accents — die classify-Regex
+# arbeiten auf der alten Strip-Form und dürfen nicht kippen.
+_UMLAUT_DE = str.maketrans({"ä": "ae", "ö": "oe", "ü": "ue", "ß": "ss"})
+
+
 def normalize_company(name: str) -> str:
     """Comparable form of a company name: no accents, no legal form, no noise.
 
@@ -60,7 +67,7 @@ def normalize_company(name: str) -> str:
     false positives live.
     """
     loc = locales.active()
-    text = strip_accents((name or "").lower())
+    text = strip_accents((name or "").lower().translate(_UMLAUT_DE))
     text = re.sub(r"\([^)]*\)", " ", text)          # Klammer-Zusätze (Buying-Unit, Rang-Annotation)
     text = loc.re_representation.sub(" ", text)      # Vertretungsklausel
     text = loc.re_subdivision.sub(" ", text)         # Abteilungs-Anhängsel
