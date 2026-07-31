@@ -26,7 +26,7 @@ import duckdb
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from govisor.llm import chat, AllKeysExhausted  # noqa: E402  (Multi-Key-Fallback)
-from govisor import doctypes, docextract        # noqa: E402
+from govisor import doctypes, docextract, docparse, doctax, docpipe  # noqa: E402
 
 SRC = ROOT / "data" / "docs" / "DE" / "doc_text.parquet"
 OUT = ROOT / "web" / "data" / "doc-analysis.json"
@@ -80,45 +80,114 @@ def _derive_legacy(checklist: list) -> dict:
             "aufwand": auf, "vorausfuellbar": []}
 
 
-def analyze_notice(files: list) -> dict:
+def _parser_item(name: str, s: dict) -> dict | None:
+    """Kompaktes Checklisten-Item aus einem Parser-Ergebnis (§6.2) — ohne LLM, kein Zitat nötig
+    (deterministischer Parser, nicht LLM-Behauptung → nicht zitat-verifiziert)."""
+    p = s.get("parser")
+    if p == "gaeb":
+        rt, lbl, val, unit = ("leistung_menge", f"Leistungsverzeichnis (GAEB, {s['n_positions']} Positionen)",
+                              s["n_positions"], "Positionen")
+    elif p == "xlsx":
+        pos = sum(sh["n_positions"] for sh in s["sheets"])
+        rt, lbl, val, unit = "leistung_menge", f"Preisblatt/Tabelle ({pos} Positionen)", pos, "Positionen"
+    elif p == "pdf_fields":
+        req = sum(1 for f in s["fields"] if f["required"])
+        rt, lbl, val, unit = ("einzureichendes_dokument",
+                              f"Ausfüllbares Formular ({s['n_fields']} Felder, {req} Pflicht)",
+                              s["n_fields"], "Felder")
+    else:
+        return None
+    return {"req_type": rt, "label": lbl, "theme": doctax.theme_for(rt), "value": val, "unit": unit,
+            "quote": "", "source_file": name, "source_page": None, "marking": "Extrahiert", "parser": p}
+
+
+def analyze_notice(files: list, structured: dict | None = None) -> dict:
     """files = [(filename, text), …] eines Vorgangs → Analyse mit verifizierter Checkliste.
 
-    Priorisierte Extraktion (§6.1): je Prioritäts-Doktyp EIN Extraktions-Call über den
-    zusammengefassten Text dieses Typs, in Prioritätsreihenfolge, bis der 200k-Token-Deckel
-    erreicht ist. Abgeschnittene Typen werden ausgewiesen.
+    Zwei Schienen: **Parser** (§6.2, structured={name: parser_result}) liefert strukturierte
+    Fakten ohne LLM; die restlichen Text-Dateien gehen **priorisiert** ans LLM (§6.1), je
+    Prioritäts-Doktyp EIN Call, bis der 200k-Token-Deckel greift.
     """
-    by_type = defaultdict(list)
+    structured = structured or {}
+    by_type_text = defaultdict(list)
     by_type_file = {}
+    checklist, positions, parsed_files = [], [], []
     for name, text in files:
-        dt = doctypes.classify(name)
-        by_type[dt].append(text or "")
-        by_type_file.setdefault(dt, name)
+        s = structured.get(name)
+        if s:                                          # Parser griff → kein LLM (§6.2)
+            item = _parser_item(name, s)
+            if item:
+                checklist.append(item)
+            positions.append({"file": name, **s})
+            parsed_files.append(name)
+        else:
+            dt = doctypes.classify(name)
+            if dt == "sonstiges":                      # Dateiname unklar → Inhaltsprobe (§6.1, Schritt 2)
+                dt = docparse.classify_content(text or "")
+            by_type_text[dt].append(text or "")
+            by_type_file.setdefault(dt, name)
 
-    checklist, rejected, sent_chars, truncated = [], 0, 0, []
+    rejected, sent_chars, truncated = 0, 0, []
+    llm_started = False
     for dt in doctypes.PRIORITY:
-        if dt not in by_type:
+        if dt not in by_type_text:
             continue
-        blob = "\n\n".join(by_type[dt])
-        if sent_chars + len(blob) > TOKEN_CAP * CHARS_PER_TOKEN and checklist:
+        blob = "\n\n".join(by_type_text[dt]).strip()
+        if not blob:
+            continue
+        if sent_chars + len(blob) > TOKEN_CAP * CHARS_PER_TOKEN and llm_started:
             truncated.append(dt)                       # Deckel: nach Priorität abschneiden (§6.1)
             continue
         sent_chars += min(len(blob), 60_000)
+        llm_started = True
         res = docextract.extract(dt, blob, by_type_file[dt], model=MODEL)
         checklist.extend(res.get("items", []))
         rejected += res.get("rejected", 0)
 
+    seen = sorted(set(by_type_text) | {doctypes.classify(n) for n in parsed_files})
     summary = summarize("\n\n".join(t for _, t in files))
-    missing = [dt for dt in doctypes.PRIORITY if dt not in by_type]   # Q1a-Vollständigkeit (§4.3)
+    missing = [dt for dt in doctypes.PRIORITY if dt not in seen]      # Q1a-Vollständigkeit (§4.3)
     out = {
         **summary,
         "checklist": checklist,
+        "positions": positions,
+        "parsed_files": parsed_files,
         "rejected_items": rejected,
         "token_cost": round(sent_chars / CHARS_PER_TOKEN),
-        "doctypes_seen": sorted(by_type),
+        "doctypes_seen": seen,
         "missing_expected": missing,
         "truncated_doctypes": truncated,
     }
     out.update(_derive_legacy(checklist))
+    return out
+
+
+def structured_for_notice(notice_id: str, docs_root: Path = None) -> dict:
+    """Parser-Schiene über die Roh-ZIPs eines Vorgangs → {dateiname: parser_result} (§6.2).
+
+    Braucht die Original-Bytes (die im doc_text.parquet nicht liegen), liest daher die ZIPs
+    aus data/docs/<country>/<notice_id>/ neu. Fehlende Verzeichnisse → leeres dict.
+    """
+    import glob
+    root = docs_root or (SRC.parent)
+    ndir = root / notice_id
+    out = {}
+    if not ndir.exists():
+        return out
+    for z in glob.glob(str(ndir / "*.zip")):
+        try:
+            blob = Path(z).read_bytes()
+        except OSError:
+            continue
+        for name, ext, data in docpipe.iter_docs(blob):
+            if name in out:
+                continue
+            try:
+                r = docparse.parse(name, ext, data)
+            except Exception:
+                r = None
+            if r:
+                out[name] = r
     return out
 
 
@@ -144,13 +213,15 @@ def main() -> int:
 
     for i, (nid, files) in enumerate(todo, 1):
         try:
-            res = analyze_notice(files)
+            structured = structured_for_notice(nid)        # Parser-Schiene (§6.2) über die Roh-ZIPs
+            res = analyze_notice(files, structured=structured)
         except AllKeysExhausted as e:
             print(f"  Abbruch: {e} — bisher {len(out)} Analysen gesichert.", flush=True)
             break
         out[nid] = res
         print(f"  [{i}/{len(todo)}] {nid}  {res['ampel']}  items={len(res['checklist'])} "
-              f"verworfen={res['rejected_items']} ~{res['token_cost']}tok", flush=True)
+              f"({len(res['parsed_files'])} geparst) verworfen={res['rejected_items']} "
+              f"~{res['token_cost']}tok", flush=True)
         OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
     print(f"Vergabe-Analysen: {len(out)} Vorgänge → {OUT.name}")
