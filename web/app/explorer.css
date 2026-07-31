@@ -399,13 +399,17 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
 .va-checklist .dchk{width:19px;height:19px;border-radius:50%;border:1.5px solid #cfd6d2;background:#fff;cursor:pointer;flex-shrink:0;display:grid;place-items:center;color:transparent;font-size:11px;font-weight:800;padding:0}
 .va-checklist .dchk:hover{border-color:var(--accent)}
 .va-checklist .item.done .dchk{background:var(--accent);border-color:var(--accent);color:#fff}
-.va-checklist .mark{font-size:10px;letter-spacing:.07em;text-transform:uppercase;border-radius:4px;padding:2px 7px;font-weight:600;white-space:nowrap}
+/* WICHTIG: die App hat ein globales .mark{width/height/margin} (Icon-Kästchen) — hier voll zurücksetzen */
+.va-checklist .mark{width:auto;height:auto;margin:0;display:inline-flex;align-items:center;background:none;
+  place-items:initial;flex:none;font-size:10px;letter-spacing:.07em;text-transform:uppercase;border-radius:4px;
+  padding:2px 7px;font-weight:600;white-space:nowrap;line-height:1.4}
 .va-checklist .m-z{background:#eef4f9;color:var(--blue)}.va-checklist .m-e{background:var(--line);color:var(--ink-700)}
 .va-checklist .m-a{background:#faf3e8;color:var(--amber)}.va-checklist .m-v{background:var(--gt);color:var(--gd)}
 .va-checklist .quote{padding:13px 14px;background:#fbfcfb;border-bottom:1px solid var(--line)}
 .va-checklist .lbl{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-400);font-weight:600;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center;gap:10px}
-.va-checklist .quote q{display:block;font-size:13.5px;line-height:1.6;quotes:'„' '“'}
-.va-checklist .quote .src{font-family:var(--mono,monospace);font-size:11px;color:var(--ink-400);margin-top:7px}
+.va-checklist .quote q{display:block;font-size:13.5px;line-height:1.6;quotes:'„' '“';overflow-wrap:anywhere}
+.va-checklist .quote .src{font-family:var(--mono,monospace);font-size:11px;color:var(--ink-400);margin-top:7px;overflow-wrap:anywhere}
+.va-checklist .ih b{overflow-wrap:anywhere;min-width:0}
 .va-checklist .block{padding:13px 14px}
 .va-checklist .ta{width:100%;border:1px solid var(--line);border-radius:7px;padding:11px 13px;font:inherit;font-size:13.5px;line-height:1.6;min-height:70px;background:#fff;color:var(--ink-900)}
 .va-checklist .ta:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:var(--accent)}
