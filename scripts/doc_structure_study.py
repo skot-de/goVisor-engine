@@ -90,6 +90,34 @@ def analyze_file(name: str, ext: str, data: bytes) -> dict:
             "status": status, "pages": pages, "fillable": fillable, "doctype": classify(name)}
 
 
+# Manche PDFs bringen pypdf/pdfminer in eine Endlosschleife (malformed xref, „Multiple definitions").
+# SIGALRM-Zeitlimit pro Datei (pure-Python → am nächsten Bytecode unterbrechbar); Treffer werden
+# als status='timeout' übersprungen statt den ganzen Lauf zu blockieren.
+import signal
+
+
+class _FileTimeout(Exception):
+    pass
+
+
+def _on_alarm(signum, frame):
+    raise _FileTimeout()
+
+
+signal.signal(signal.SIGALRM, _on_alarm)
+
+
+def safe_analyze(name: str, ext: str, data: bytes, limit: int = 25) -> dict:
+    try:
+        signal.alarm(limit)
+        return analyze_file(name, ext, data)
+    except _FileTimeout:
+        return {"name": name, "ext": ext, "size": len(data), "text": "",
+                "status": "timeout", "pages": None, "fillable": False, "doctype": classify(name)}
+    finally:
+        signal.alarm(0)
+
+
 def main() -> int:
     id2br, id2lose = {}, {}
     for f in glob.glob(str(ROOT / "web/data/leads-*.json")):
@@ -113,7 +141,7 @@ def main() -> int:
             except Exception:
                 continue
             for name, ext, data in docpipe.iter_docs(blob):
-                files.append(analyze_file(name, ext, data))
+                files.append(safe_analyze(name, ext, data))
         if not files:
             continue
         notices.append({"nid": nid, "branche": id2br.get(nid, "?"),
