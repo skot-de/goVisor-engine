@@ -577,12 +577,19 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
           if (statusEl) statusEl.textContent = "Lade hoch und analysiere … (kann bis ~30 s dauern)";
           const fd = new FormData();
           fd.append("file", file);
+          const lb = (CORE.find((x) => x.id === value) as (Lead & { buyer?: string }) | undefined)?.buyer || "";
           try {
-            const r = await fetch(`/api/lead-docs?id=${encodeURIComponent(value)}`, { method: "POST", body: fd });
+            const r = await fetch(`/api/lead-docs?id=${encodeURIComponent(value)}&buyer=${encodeURIComponent(lb)}`,
+              { method: "POST", body: fd });
             const d = await r.json();
             if (!r.ok || d.error) { if (statusEl) statusEl.textContent = "Fehler: " + (d.error || r.status); return; }
             const l = CORE.find((x) => x.id === value) as (Lead & { log?: unknown[] }) | undefined;
             if (l) { Object.assign(l, d); logEvent(l, "analyze", "Vergabeunterlagen hochgeladen & analysiert"); }
+            // §5-4: Käufer nicht in den Unterlagen gefunden → Rückfrage (Analyse trotzdem gezeigt).
+            const mm = (d as { leadMismatch?: { expected_buyer?: string } }).leadMismatch;
+            if (statusEl) statusEl.innerHTML = mm
+              ? `<span style="color:#b91c1c">⚠ Diese Unterlagen erwähnen den Auftraggeber „${(mm.expected_buyer || "").replace(/[<>&]/g, "")}" nicht — gehören sie wirklich zu diesem Lead? Die Analyse ist unten trotzdem angezeigt.</span>`
+              : "";
             bump();
           } catch {
             if (statusEl) statusEl.textContent = "Upload fehlgeschlagen.";

@@ -12,9 +12,11 @@ export const maxDuration = 120;
 const ROOT = path.resolve(process.cwd(), "..");   // Server-cwd ist web/ → Repo-Wurzel eine Ebene höher
 const ALLOWED = /\.(zip|pdf|docx?|xlsx?|txt|html?)$/i;
 
-function runPipeline(id: string): Promise<Record<string, unknown>> {
+function runPipeline(id: string, buyer: string): Promise<Record<string, unknown>> {
   return new Promise((resolve, reject) => {
-    const p = spawn("python3", ["scripts/process_upload.py", id], { cwd: ROOT });
+    const args = ["scripts/process_upload.py", id];
+    if (buyer) args.push(buyer.slice(0, 200));       // §5-4 Lead-Zuordnung (Käufer-Abgleich)
+    const p = spawn("python3", args, { cwd: ROOT });
     let out = "", err = "";
     p.stdout.on("data", (d) => (out += d));
     p.stderr.on("data", (d) => (err += d));
@@ -32,7 +34,9 @@ function runPipeline(id: string): Promise<Record<string, unknown>> {
 }
 
 export async function POST(req: Request) {
-  const id = new URL(req.url).searchParams.get("id") || "";
+  const u = new URL(req.url);
+  const id = u.searchParams.get("id") || "";
+  const buyer = u.searchParams.get("buyer") || "";
   // notice_id-Muster erzwingen → kein Path-Traversal (keine / oder .).
   if (!/^[0-9A-Za-z_-]{3,40}$/.test(id)) {
     return NextResponse.json({ error: "ungültige id" }, { status: 400 });
@@ -59,7 +63,7 @@ export async function POST(req: Request) {
   await writeFile(path.join(dir, safe), Buffer.from(await file.arrayBuffer()));
 
   try {
-    return NextResponse.json(await runPipeline(id));
+    return NextResponse.json(await runPipeline(id, buyer));
   } catch (e) {
     return NextResponse.json({ error: String((e as Error).message).slice(0, 300) }, { status: 500 });
   }

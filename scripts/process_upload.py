@@ -93,9 +93,20 @@ def main() -> int:
     if docupload.detect_own_offer(fulltext):
         return _err("Das sieht nach einem eigenen Angebot aus. Für die Bibliothek nutze bitte den "
                     "Import unter Profil.")
+    # 4 Lead-Zuordnung (§5-4): kommt der Käufer des Leads in den Unterlagen vor? Heuristik →
+    # Rückfrage (kein stiller Durchlauf), kein harter Abbruch (Käufernamen weichen oft ab).
+    lead_buyer = sys.argv[2] if len(sys.argv) > 2 else ""
+    lead_mismatch = None
+    if lead_buyer:
+        import re
+        stop = {"gmbh", "stadt", "der", "die", "und", "des", "fuer", "amt", "eigenbetrieb", "aoer"}
+        toks = {t for t in re.findall(r"[a-zäöüß]{4,}", lead_buyer.lower()) if t not in stop}
+        low = fulltext.lower()
+        hit = sum(1 for t in toks if t in low)
+        if toks and hit / len(toks) < 0.34:            # weniger als ein Drittel der Käufer-Wörter im Text
+            lead_mismatch = {"expected_buyer": lead_buyer}
     # 5 Doppelung: Paket-Hash (Dedup/Herkunft §5-5, §12.2)
     package_hash = docupload.package_hash([(n, d) for n, _, d in raw])
-    # (4 Lead-Zuordnung und 6 Plausibilität brauchen Lead-Metadaten/TED-Abgleich → Aufruf-Kontext.)
 
     # ── Pipeline ──────────────────────────────────────────────────────────────────────────
     nfiles = sum(1 for t in texts.values() if t.strip())
@@ -105,6 +116,8 @@ def main() -> int:
     _save("doc-text.json", dt)
     res = {"lbText": dt[nid]["text"], "lbFiles": nfiles, "lbChars": len(fulltext),
            "lbTruncated": dt[nid]["truncated"], "packageHash": package_hash}
+    if lead_mismatch:
+        res["leadMismatch"] = lead_mismatch          # §5-4: Käufer nicht in den Unterlagen → Rückfrage
 
     # Regelbasierte Signale
     sig = docsignals.extract_signals(fulltext)
