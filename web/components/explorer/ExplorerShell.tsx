@@ -433,16 +433,26 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
       }
       case "openlead": openLead(value); break;
       case "saveblock": {
-        // §7.1 Kombi-Button: editierten Baustein (oder das Zitat) in die Zwischenablage kopieren.
-        // Das Speichern in die Bausteinbibliothek (profile_text_blocks) folgt in Phase 5.
-        let blk: { quote?: string; label?: string } = {};
+        // §7.1 Kombi-Button: editierten Baustein (oder das Zitat) in die Zwischenablage kopieren
+        // UND in die Bausteinbibliothek speichern (§9.1). Lokal (Ebene B) — die verschlüsselte
+        // Supabase-Persistenz (profile_text_blocks) ist die Deploy-Schicht.
+        let blk: { quote?: string; label?: string; theme?: string } = {};
         try { blk = JSON.parse(value); } catch { /* ignore */ }
         const ta = el.closest(".cl-item")?.querySelector<HTMLTextAreaElement>("textarea.cl-edit");
         const text = (ta?.value.trim()) || blk.quote || blk.label || "";
-        if (text) navigator.clipboard?.writeText(text).catch(() => {});
+        if (text) {
+          navigator.clipboard?.writeText(text).catch(() => {});
+          try {
+            const key = "govisor.blocks";
+            const lib = JSON.parse(localStorage.getItem(key) || "[]");
+            lib.push({ theme: blk.theme || "sonstiges", content: text, label: blk.label || "",
+              lead_id: activeId, saved_at: new Date().toISOString() });
+            localStorage.setItem(key, JSON.stringify(lib));
+          } catch { /* Speicher voll/blockiert → nur kopieren */ }
+        }
         const btn = el as HTMLButtonElement;
         const orig = btn.textContent;
-        btn.classList.add("ok"); btn.textContent = "Kopiert ✓";
+        btn.classList.add("ok"); btn.textContent = "Gespeichert ✓";
         setTimeout(() => { btn.classList.remove("ok"); btn.textContent = orig; }, 1500);
         break;
       }
