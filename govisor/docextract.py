@@ -80,7 +80,7 @@ _TASKS: dict[str, dict] = {
     },
 }
 
-_MIN_QUOTE_LEN = 12          # kürzere „Zitate" sind kein Beleg (zu leicht zufällig im Text)
+_MIN_QUOTE_LEN = 16          # alphanumerische Mindestlänge (kürzere „Zitate" sind kein Beleg)
 _MAX_ITEMS = 40              # Deckel je Dokument (Ausreißer/Prompt-Injection-Flut bändigen)
 
 
@@ -89,12 +89,16 @@ def supported(doctype: str) -> bool:
 
 
 def _normalize(s: str) -> str:
-    """Für die Zitat-Suche: Whitespace/Zeilenumbrüche kollabieren, casefold (§6a.2)."""
-    return re.sub(r"\s+", " ", (s or "")).strip().casefold()
+    """Für die Zitat-Suche: auf alphanumerisch reduzieren (§6a.2). PDFs zerhacken Wörter mit
+    Zeilenumbruch-Trennstrichen (»Leistungs-\\nbeschreibung«, gemessen: 333 Stellen in einem
+    Vorgang) und uneinheitlichem Whitespace/Interpunktion — das LLM zitiert aber semantisch.
+    Bindestriche/Whitespace/Interpunktion zu ignorieren macht die Belegprüfung artefakt-robust;
+    die Mindestlänge verhindert Zufallstreffer."""
+    return re.sub(r"[^a-z0-9äöüß]", "", (s or "").casefold())
 
 
 def verify_quote(quote: str, text: str) -> bool:
-    """Wörtliches Zitat im Quelltext auffindbar (normalisiert)? Belegpflicht §6a.2."""
+    """Wörtliches Zitat im Quelltext auffindbar (artefakt-normalisiert)? Belegpflicht §6a.2."""
     q = _normalize(quote)
     if len(q) < _MIN_QUOTE_LEN:
         return False

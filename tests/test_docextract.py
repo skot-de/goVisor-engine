@@ -31,6 +31,14 @@ def test_verify_quote_normalizes_and_rejects_fabricated():
     assert not docextract.verify_quote("ISO", DOC)                                          # zu kurz
 
 
+def test_verify_quote_survives_pdf_hyphenation():
+    # PDF-Zeilenumbruch-Trennstrich + Interpunktion dürfen den Beleg nicht scheitern lassen
+    src = "Der Auftragnehmer erbringt die Leistungs-\nbeschreibung gemäß Anlage 3 zum Vertrag."
+    assert docextract.verify_quote("Leistungsbeschreibung gemäß Anlage 3", src)
+    assert docextract.verify_quote("Auftrag-\nnehmer erbringt die Leistungsbeschreibung", src)
+    assert not docextract.verify_quote("Leistungsbeschreibung gemäß Anlage 7", src)   # 7 ≠ 3 → nicht belegt
+
+
 def test_validate_item_schema():
     ok = {"req_type": "zertifikat", "quote": "…", "marking": "Zitat"}
     assert docextract.validate_item(ok)
