@@ -2,6 +2,12 @@ import { NextResponse } from "next/server";
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { spawn } from "node:child_process";
+import { rateLimit, clientIp } from "@/lib/rateLimit";
+
+// Kosten-/Abuse-Bremse für die (teure) LLM-Analyse: pro IP und global gedeckelt.
+const WINDOW_MS = 10 * 60 * 1000;   // 10-Minuten-Fenster
+const PER_IP = 8;                    // je IP max. 8 Analysen / 10 min
+const GLOBAL = 40;                   // gesamt max. 40 Analysen / 10 min (Kosten-Obergrenze)
 
 // Vergabeunterlagen-Upload: Datei je notice_id speichern → Pipeline (index → signals →
 // LLM-Analyse) fahren → aktualisierte Detail-Felder (lbText/lbSignals/lbAnalyse) zurückgeben.
@@ -40,6 +46,16 @@ export async function POST(req: Request) {
   // notice_id-Muster erzwingen → kein Path-Traversal (keine / oder .).
   if (!/^[0-9A-Za-z_-]{3,40}$/.test(id)) {
     return NextResponse.json({ error: "ungültige id" }, { status: 400 });
+  }
+  // Rate-Limit VOR der teuren Analyse — pro IP und global (LLM-Kostenbremse).
+  const ip = clientIp(req);
+  const gl = rateLimit("leaddocs:global", GLOBAL, WINDOW_MS);
+  const perIp = rateLimit(`leaddocs:ip:${ip}`, PER_IP, WINDOW_MS);
+  if (!perIp.ok || !gl.ok) {
+    const retry = Math.max(perIp.retryAfter, gl.retryAfter);
+    return NextResponse.json(
+      { error: "Zu viele Analysen — bitte später erneut.", retryAfter: retry },
+      { status: 429, headers: { "retry-after": String(retry) } });
   }
   let file: File | null = null;
   try {

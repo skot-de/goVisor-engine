@@ -21,6 +21,7 @@ import zipfile
 from pathlib import Path
 
 from .config import Config
+from .docupload import MAX_PACKAGE_BYTES, MAX_ZIP_DEPTH, check_zip_bomb
 
 _MAX_TEXT = 2_000_000   # pro Datei kappen (Index soll durchsuchbar bleiben, nicht Bücher speichern)
 
@@ -95,10 +96,19 @@ _EXTRACT = {
 _KNOWN_NOEXTRACT = {".doc", ".xls", ".ppt", ".rtf", ".odt", ".p7s", ".zip"}
 
 
-def iter_docs(zip_bytes: bytes, prefix: str = "", depth: int = 0):
-    """(pfad, ext, bytes) je Datei — rekursiv durch verschachtelte ZIPs (max. 5 Ebenen)."""
-    if depth > 5:
+def iter_docs(zip_bytes: bytes, prefix: str = "", depth: int = 0, _budget: list | None = None):
+    """(pfad, ext, bytes) je Datei — rekursiv durch verschachtelte ZIPs.
+
+    ZIP-Bomben-Schutz (§4.2, Sicherheits-Härtung): pro Eintrag wird die DEKLARIERTE unkomprimierte
+    Größe (`ZipInfo.file_size`) GEGEN die komprimierte geprüft, BEVOR entpackt wird — ein verdächtiges
+    Verhältnis (`check_zip_bomb`, 100:1) wird übersprungen. Zusätzlich ein laufendes Gesamt-Budget
+    an unkomprimierten Bytes (`MAX_PACKAGE_BYTES`), damit auch viele mittelgroße Einträge nicht in
+    Summe den Speicher sprengen. Tiefe an `MAX_ZIP_DEPTH` gebunden.
+    """
+    if depth > MAX_ZIP_DEPTH:
         return
+    if _budget is None:
+        _budget = [MAX_PACKAGE_BYTES]        # verbleibendes unkomprimiertes Byte-Budget (mutierbar über die Rekursion)
     try:
         zf = zipfile.ZipFile(io.BytesIO(zip_bytes))
     except zipfile.BadZipFile:
@@ -107,14 +117,20 @@ def iter_docs(zip_bytes: bytes, prefix: str = "", depth: int = 0):
         for info in zf.infolist():
             if info.is_dir():
                 continue
+            # Vor dem Entpacken: Kompressionsverhältnis + Gesamt-Budget prüfen (Zip-Bombe).
+            if check_zip_bomb(info.compress_size, info.file_size):
+                continue                     # verdächtiges Verhältnis → Eintrag überspringen
+            if info.file_size > _budget[0]:
+                return                       # Budget erschöpft → Extraktion abbrechen
             name = info.filename
             ext = Path(name).suffix.lower()
             try:
                 data = zf.read(info)
             except Exception:
                 continue
+            _budget[0] -= len(data)
             if ext == ".zip":
-                yield from iter_docs(data, prefix + name + "::", depth + 1)
+                yield from iter_docs(data, prefix + name + "::", depth + 1, _budget)
             else:
                 yield prefix + name, ext, data
 
