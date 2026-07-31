@@ -1161,6 +1161,45 @@ td.c-src{width:96px}
 .src-auslauf{background:#EDF1F7;color:#33507D}.src-auslauf::before{background:#3A6099}
 .src-f02{background:#EBF3EE;color:#2C5E43}.src-f02::before{background:#2F6B4A}
 .src-f01{background:#F7F0E6;color:#835616}.src-f01::before{background:#A2691E}
+/* #24 Zuschlagsphase — eigene Farbgebung (blau), damit sich Zuschläge von offenen Ausschreibungen unterscheiden */
+.src-award{background:#EAF1F8;color:#2B5F86}.src-award::before{background:#2B5F86}
+.award-when{display:inline-flex;flex-direction:column;line-height:1.15;font-size:12px;color:var(--ink-500)}
+.award-when.hot{color:#2B5F86;font-weight:600}
+.award-when .cdsub{font-size:9.5px;color:var(--ink-400);letter-spacing:.02em;margin-top:2px;font-weight:400}
+.award-sub{display:block;font-size:11px;color:var(--ink-400);margin-top:3px}
+/* #24 Zuschlag-Detail */
+.aw-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+@media(max-width:760px){.aw-cards{grid-template-columns:1fr}}
+.aw-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
+.aw-card h4{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-400);font-weight:700;margin:0 0 11px}
+.aw-line{display:flex;justify-content:space-between;gap:14px;padding:7px 0;border-bottom:1px solid var(--line);font-size:13px}
+.aw-line:last-child{border-bottom:0}
+.aw-line .k{color:var(--ink-500)}
+.aw-line .v{font-family:var(--mono);font-size:12.5px;text-align:right}
+.aw-vm{display:block;font-size:10px;color:var(--ink-400);font-family:var(--sans)}
+.aw-bars{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.aw-brow{display:grid;grid-template-columns:1fr 44px;gap:9px;align-items:center;font-size:12.5px}
+.aw-blab{margin-bottom:3px}
+.aw-btrack{height:5px;background:var(--line);border-radius:99px;overflow:hidden}
+.aw-btrack i{display:block;height:100%;background:var(--signal);border-radius:99px}
+.aw-bv{font-family:var(--mono);font-size:11px;color:var(--ink-400);text-align:right}
+.aw-note{border-radius:8px;padding:11px 14px;font-size:13px;line-height:1.55;margin-top:10px}
+.aw-note-g{background:var(--signal-wash);color:var(--ink-700);border:1px solid #cfe8dc}
+.aw-note-n{background:var(--surface-2);color:var(--ink-500);border:1px solid var(--line)}
+.aw-mini{font-family:var(--mono);font-size:11px;color:var(--ink-400);margin-top:7px}
+.aw-actbar{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:14px;flex-wrap:wrap}
+.aw-hint{font-size:12px;color:var(--ink-400);max-width:52ch}
+.aw-acts{display:flex;gap:8px;flex-wrap:wrap}
+.aw-btn{font-size:12px;font-weight:600;border-radius:7px;padding:6px 13px;cursor:pointer;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink-900)}
+.aw-btn:hover{background:var(--surface-2)}
+.aw-btn-p{background:var(--signal);color:#fff;border-color:var(--signal)}
+.aw-btn-p:hover{background:var(--signal-deep)}
+/* #24 Alert-Band über der Liste */
+.aw-alert{display:flex;align-items:center;gap:11px;background:#EAF1F8;border-bottom:1px solid #d6e3ee;color:#2B5F86;padding:10px 16px;font-size:13px}
+.aw-alert svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.9;flex-shrink:0}
+.aw-alert b{font-weight:700}
+.aw-alert .aw-alert-x{margin-left:auto;background:none;border:0;color:#2B5F86;cursor:pointer;font-size:13px;opacity:.7}
+.aw-alert .aw-alert-x:hover{opacity:1}
 
 td.c-titel{min-width:280px;max-width:440px}
 .ttitel{font-weight:600;color:var(--ink-900);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block}

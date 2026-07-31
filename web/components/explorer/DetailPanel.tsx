@@ -98,7 +98,7 @@ export function DetailPanel({
     if (tabEl) { onTab(tabEl.dataset.tab || ""); return; }
     const map = ["anav", "openlead", "cmtsend", "grp", "mark", "region", "buyerdemo",
       "tonetz", "netz", "buyerleads", "partner", "netzfrei", "ptab", "pstufe", "uploaddocs", "saveblock",
-      "clchk", "clkombi", "clcopy", "cljump", "clcollapse"];
+      "clchk", "clkombi", "clcopy", "cljump", "clcollapse", "firma", "merk"];
     for (const a of map) {
       const el = t.closest<HTMLElement>(`[data-${a}]`);
       if (el) { onBodyAction(a, el.dataset[a] || "", el); return; }
@@ -204,7 +204,9 @@ export function DetailPanel({
         </div>
 
         <div className="tabs" role="tablist">
-          {TABS.map((tb) => (
+          {/* #24 Zuschlag: reduzierte Tab-Leiste — nur die Übersicht (Zuschlag+Gewinner+Passung),
+              die bieter-/käuferorientierten Tabs passen zur Zuschlagsphase nicht. */}
+          {(l?.src === "award" ? ([{ key: "uebersicht", label: "Übersicht" }] as typeof TABS) : TABS).map((tb) => (
             <button
               key={tb.key}
               className="tab"

@@ -12,7 +12,7 @@
 
 const CATALOG = {
   de: {
-    src:   { auslauf: 'Vertragsende', f02: 'Ausschreibung offen', f01: 'Ankündigung' },
+    src:   { auslauf: 'Vertragsende', f02: 'Ausschreibung offen', f01: 'Ankündigung', award: 'Zuschlag erteilt' },
     art:   { framework: 'Rahmenvertrag', recurring: 'Wiederkehrende Leistung',
              one_off_works: 'Bauwerk (einmalig)', works_other: 'Bauleistung',
              other: 'Einzelauftrag' },

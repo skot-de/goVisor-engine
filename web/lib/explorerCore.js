@@ -364,7 +364,8 @@ let wsOpen = false;
 const FACETS = {
   rahmen:{label:'Rechtsrahmen', opts:Object.entries(RAHMEN).map(([k,v])=>({v:k, l:v.kurz+' — '+v.x}))},
   phase:   { label:'Phase', opts:[
-    {v:'auslauf',l:'Vertragsende'},{v:'f02',l:'Ausschreibung offen'},{v:'f01',l:'Ankündigung'}], match:(l,v)=>l.src===v },
+    {v:'auslauf',l:'Vertragsende'},{v:'f02',l:'Ausschreibung offen'},{v:'f01',l:'Ankündigung'},
+    {v:'award',l:'Zuschlag erteilt'}], match:(l,v)=>l.src===v },
   leistung:{ label:'Leistung', opts:[
     {v:'dienst',l:'Dienstleistung'},{v:'liefer',l:'Lieferung'},{v:'bau',l:'Bauleistung'}], match:(l,v)=>l.naturKat===v },
 };
@@ -583,6 +584,25 @@ function bieterLuecke(l){
   return null;
 }
 
+// #24 Zuschlagsphase — Status-Zelle: „vor N Tagen" statt Countdown (kein Bieten, sondern Anrufen).
+function awardWhen(l){
+  const a = l.award ? l.award.ago : null;
+  const txt = a==null ? '—' : a===0 ? 'heute' : a===1 ? 'gestern' : `vor ${a} Tagen`;
+  return `<span class="award-when ${a!=null && a<=3?'hot':''}">${txt}<span class="cdsub">Zuschlag</span></span>`;
+}
+// #24 Empfehlungs-Zelle: Ansprechen / Prüfen / (kein Eintrag bei hoher Feldüberschneidung).
+function awardEmpfCell(l){
+  const a = l.award || {};
+  const sub = a.subcontracting==='geregelt' ? 'Unteraufträge geregelt' : 'keine Angabe zu Unteraufträgen';
+  const netz = ''; // Netzwerk-Freigabe: kein Bestand → nicht behaupten
+  if(a.empfehlung==='ansprechen')
+    return `<td class="c-empf"><span class="empf empf-go" title="Unterauftragsvergabe geregelt und geringe Feldüberschneidung — hier lohnt der Anruf">Ansprechen</span><span class="empf-grund">${sub}${netz}</span></td>`;
+  if(a.empfehlung==='pruefen')
+    return `<td class="c-empf"><span class="empf empf-open" title="Keine Angabe zu Unteraufträgen oder mittlere Feldüberschneidung — prüfen, ob der Anruf lohnt">Prüfen</span><span class="empf-grund">${sub}</span></td>`;
+  // hohe Feldüberschneidung → direkter Wettbewerb, keine Empfehlung
+  return `<td class="c-empf"><span class="empf-grund" title="Hohe Feldüberschneidung — direkter Wettbewerb, keine Kontaktempfehlung">direkter Wettbewerb</span></td>`;
+}
+
 function fristCell(l){
   if(l.tage != null){                       // offene Ausschreibung: Countdown
     const urg = l.tage <= 14;
@@ -628,7 +648,9 @@ function sorted(rows){
       // beste zuerst. Wechsel „na" (Erstausschreibung) → nur Relevanz. Negativ, damit die
       // aufsteigende Sortierung die höchsten Scores nach oben bringt.
       case 'ranking': { const R=LVL[l.relevanz], W=LVL[l.wechsel]; return -(l.wechsel==='na' ? R : (R+W)/2); }
-      case 'frist': return l.tage != null ? l.tage : (l.endTage!=null ? l.endTage : 9999);
+      // #24 Zuschlag: innerhalb der Phase nach Zuschlagsdatum absteigend (frisch zuerst) → ago aufsteigend
+      case 'frist': return l.src==='award' ? (l.award ? l.award.ago : 9999)
+                         : l.tage != null ? l.tage : (l.endTage!=null ? l.endTage : 9999);
       case 'vol': return l.volumen.src==='unbekannt' ? -1 : parseFloat(String(l.volumen.wert).replace(/[^\d,]/g,'').replace(',','.'))||0;
       case 'relevanz': return LVL[l.relevanz];
       case 'wechsel': return LVL[l.wechsel];
@@ -640,6 +662,12 @@ function sorted(rows){
     }
   };
   return [...rows].sort((a,b)=>{
+    // #24 Phasen-Gruppierung (Ticket §3.2): Zuschläge sind ein eigener, zeitkritischer Block —
+    // als zusammenhängende Gruppe oben (mit Alert-Band), innerhalb nach Zuschlagsdatum absteigend
+    // (frisch zuerst). Der Phasenfilter schaltet die Gruppe ab, wer nur bieten will.
+    const aw = a.src==='award', bw = b.src==='award';
+    if(aw !== bw) return aw ? -1 : 1;
+    if(aw && bw) return (a.award?a.award.ago:9999) - (b.award?b.award.ago:9999);
     const x=g(a), y=g(b);
     return (x<y?-1:x>y?1:0)*sortDir;
   });
@@ -688,11 +716,14 @@ function cellHTML(l, key){
       // #12: Bei Mehr-Los-Vergaben zeigen, über welches Los die Relevanz kommt (Best-Los).
       const lotHint = l.bestLot
         ? `<span class="ttitel-lot" title="Diese Ausschreibung ist groß, relevant ist für euch Los ${l.bestLot.nr}${l.bestLot.region?' ('+l.bestLot.region+')':''}">▸ passt über Los ${l.bestLot.nr}</span>` : '';
-      return `<td class="c-titel"><span class="ttitel">${wort?hervorheben(l.titel, wort):esc(l.titel)}${akt}${eigen}</span>${lotHint}${beleg}</td>`;
+      // #24 Zuschlag: Untertitel „Gewinner · Vergabestelle" (statt nur Vergabestelle)
+      const awardSub = l.src==='award' && l.award
+        ? `<span class="award-sub">${esc(l.award.winner)} · ${esc(l.buyerShort||l.buyer)}</span>` : '';
+      return `<td class="c-titel"><span class="ttitel">${wort?hervorheben(l.titel, wort):esc(l.titel)}${akt}${eigen}</span>${awardSub}${lotHint}${beleg}</td>`;
     }
     case 'titel_alt': return `<td class="c-titel"><span class="ttitel" title="${esc(l.titel)}">${esc(l.titel)}</span></td>`;
     case 'buyer': return `<td class="c-buyer" title="${esc(l.buyer)}">${esc(l.buyerShort)}</td>`;
-    case 'frist': return `<td class="c-frist">${fristCell(l)}</td>`;
+    case 'frist': return `<td class="c-frist">${l.src==='award'?awardWhen(l):fristCell(l)}</td>`;
     case 'natur': return `<td class="c-natur"><span class="nat nat-${l.naturKat}">${esc(l.natur)}</span></td>`;
     case 'konk': return `<td class="c-konk">${konkCell(l)}</td>`;
     case 'neu': return `<td class="c-neu" style="text-align:center">${l.neu
@@ -723,6 +754,7 @@ function cellHTML(l, key){
       return `<td class="c-band">${bandMeter(a.stufe, true)}</td>`;
     }
     case 'empf': {
+      if(l.src==='award') return awardEmpfCell(l);
       const e = empfehlung(l), meta = EMPF[e.v];
       // Zustand + Grund-Kurztext untereinander. „offen" neutral, nie rot/als Fehler.
       return `<td class="c-empf"><span class="empf ${meta.cls}" title="${EMPF_GRUND[e.code]}">${meta.t}</span>` +
@@ -1064,7 +1096,75 @@ function renderDocs(l){
   return `<div class="dbody dbody-ov">${head}${anforderungen}${volltext}</div>`;
 }
 
+// #24 Zuschlag-Detail (Ticket §5): gleiche Detailstruktur wie ein Lead, andere Frage —
+// nicht „soll ich bieten", sondern „lohnt sich der Anruf". Zuschlag- + Gewinner-Karte,
+// Passungshinweis (IMMER als Ableitung), Pflicht-Erläuterung, Aktionen.
+function renderAwardUebersicht(l){
+  const a = l.award || {};
+  const s = a.winnerStats || {};
+  const topField = (a.winnerFields && a.winnerFields[0]) ? a.winnerFields[0].label : null;
+  const subTxt = a.subcontracting==='geregelt' ? 'in den Unterlagen geregelt' : 'keine Angabe';
+  const bars = (a.winnerFields||[]).map(f=>`
+    <div class="aw-brow"><div><div class="aw-blab">${esc(f.label||'')}</div>
+      <div class="aw-btrack"><i style="width:${Math.max(3,f.pct||0)}%"></i></div></div>
+      <span class="aw-bv">${f.pct||0} %</span></div>`).join('');
+  // Passungshinweis — abgeleitet aus der Zuschlagshistorie
+  const passung = a.overlap==='gering'
+      ? 'Euer Schwerpunkt ergänzt, statt zu konkurrieren.'
+    : a.overlap==='mittel'
+      ? 'Teilweise Überschneidung mit eurem Feld — im Einzelfall prüfen.'
+      : 'Starke Feldüberschneidung — hier ist eher Wettbewerb als Zusammenarbeit zu erwarten.';
+  const fuehrt = a.overlap==='gering' ? 'führt es selten selbst aus'
+              : a.overlap==='mittel' ? 'führt es teils selbst aus' : 'führt es überwiegend selbst aus';
+  const passungHead = topField
+    ? `${esc(a.winner)} gewinnt überwiegend ${esc(topField)} und ${fuehrt}${
+        s.subQuote ? ` — bei ${s.subQuote} Aufträgen war Unterauftragsvergabe geregelt` : ''}. ${passung}`
+    : passung;
+  const isoDe = d => { const m=String(d).match(/^(\d{4})-(\d{2})-(\d{2})/); return m?`${m[3]}.${m[2]}.${m[1]}`:String(d); };
+  const firma = a.winnerId
+    ? `<button class="aw-btn aw-btn-p" data-firma="${esc(a.winnerId)}">Firmenprofil</button>` : '';
+  return `<div class="dbody dbody-ov">
+    <div class="aw-cards">
+      <section class="aw-card">
+        <h4>Der Zuschlag</h4>
+        <div class="aw-line"><span class="k">Gewinner</span><span class="v">${esc(a.winner)}</span></div>
+        <div class="aw-line"><span class="k">Vergabestelle</span><span class="v">${esc(l.buyer||'—')}</span></div>
+        <div class="aw-line"><span class="k">Zuschlag erteilt</span><span class="v">${a.date?isoDe(a.date):'—'}</span></div>
+        <div class="aw-line"><span class="k">Auftragswert</span><span class="v">${esc(l.volumen.wert)}<span class="aw-vm">${l.volumen.src==='echt'?'gemessen':'geschätzt'}</span></span></div>
+        <div class="aw-line"><span class="k">Laufzeit</span><span class="v">${a.laufzeit?'bis '+a.laufzeit:'nicht veröffentlicht'}</span></div>
+        <div class="aw-line"><span class="k">Unteraufträge</span><span class="v">${subTxt}</span></div>
+      </section>
+      <section class="aw-card">
+        <h4>${esc(a.winner)} — was wir wissen</h4>
+        <div class="aw-line"><span class="k">Zuschläge 36 Monate</span><span class="v">${s.wins36!=null?s.wins36:'—'}</span></div>
+        <div class="aw-line"><span class="k">Ø Auftragswert</span><span class="v">${s.avgValue||'—'}</span></div>
+        <div class="aw-line"><span class="k">mit Unterauftrags-Regelung</span><span class="v">${s.subQuote||'—'}</span></div>
+        ${bars ? `<h4 style="margin-top:14px">Leistungsfelder</h4><div class="aw-bars">${bars}</div>` : ''}
+      </section>
+    </div>
+
+    <div class="aw-note aw-note-g">
+      <div><b>Warum das zu euch passen könnte:</b> ${passungHead}
+      <div class="aw-mini">Abgeleitet aus der Zuschlagshistorie · kein Hinweis auf konkreten Bedarf</div></div>
+    </div>
+
+    <div class="aw-note aw-note-n">
+      <div>„Unteraufträge geregelt" heißt: In den Vergabeunterlagen ist Unterauftragsvergabe vorgesehen.
+      Ob und was tatsächlich vergeben wird, steht nirgends — das Feld liegt bei etwa einem Drittel der Verfahren vor.</div>
+    </div>
+
+    <div class="aw-actbar">
+      <span class="aw-hint">goVisor täuscht keine Vermittlung vor: ohne beidseitige Netzwerk-Freigabe kein Kontaktknopf — nur öffentliche Angaben.</span>
+      <span class="aw-acts">
+        <button class="aw-btn" data-merk="${l.id}">Merken</button>
+        ${firma}
+      </span>
+    </div>
+  </div>`;
+}
+
 function renderUebersicht(l){
+  if(l.src==='award') return renderAwardUebersicht(l);
   const inc = l.incumbent;
   const pdot = (src,hint)=> src && src!=='echt'
     ? `<span class="pdot pdot-${src}" title="${esc(SRC_TEXT[src]+(hint?' — '+hint:''))}"></span>` : '';

@@ -123,6 +123,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   });
   const [sortKey, setSortKey] = useState("frist");
   const [sortDir, setSortDir] = useState(1);
+  const [awAlertOff, setAwAlertOff] = useState(false);   // #24 Zuschlag-Alert-Band ausgeblendet
   const [activeId, setActiveId] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState("uebersicht");
   const [mode, setMode] = useState<"browse" | "read" | "full">("browse");
@@ -463,6 +464,9 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         break;
       }
       case "openlead": openLead(value); break;
+      // #24/#25: Firmenprofil des Zuschlags-Gewinners (eigene Seite) + Merken aus dem Zuschlag-Detail
+      case "firma": if (value) window.location.href = "/firma?id=" + encodeURIComponent(value); break;
+      case "merk": toggleStar(value); break;
       case "saveblock": {
         // §7.1 Kombi-Button: editierten Baustein (oder das Zitat) in die Zwischenablage kopieren
         // UND in die Bausteinbibliothek speichern (§9.1). Lokal (Ebene B) — die verschlüsselte
@@ -1004,6 +1008,24 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
               </div>
             ) : (
             <div className="tablescroll" onScroll={onTableScroll}>
+              {(() => {
+                // #24 Alert-Band (§4): frische Zuschläge (≤3 Tage) im aktuellen Feld — der eigentliche
+                // Auslöser. Gebündelt, nicht je Einzelzuschlag; ausblendbar.
+                if (awAlertOff) return null;
+                type Aw = { ago?: number; winner?: string };
+                const awOf = (l: Lead) => (l as { award?: Aw }).award;
+                const fresh = rows.filter((l) => l.src === "award" && (awOf(l)?.ago ?? 99) <= 3);
+                if (!fresh.length) return null;
+                const winners = [...new Set(fresh.map((l) => awOf(l)?.winner).filter(Boolean))].slice(0, 2);
+                return (
+                  <div className="aw-alert">
+                    <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 8-3 8h18s-3-1-3-8" /><path d="M13.7 21a2 2 0 01-3.4 0" /></svg>
+                    <div><b>{fresh.length} {fresh.length === 1 ? "neuer Zuschlag" : "neue Zuschläge"} in eurem Feld</b>
+                      {winners.length ? ` — ${winners.join(" und ")}. ` : " — "}Wer gerade gewonnen hat, kauft jetzt ein.</div>
+                    <button className="aw-alert-x" onClick={() => setAwAlertOff(true)} aria-label="Ausblenden">✕</button>
+                  </div>
+                );
+              })()}
               <LeadTable
                 rows={rows}
                 limit={renderCount}

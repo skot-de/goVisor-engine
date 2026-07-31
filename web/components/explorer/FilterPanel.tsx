@@ -1,7 +1,7 @@
 "use client";
 
 export type Adv = {
-  phases: string[];                 // auslauf | f02 | f01
+  phases: string[];                 // auslauf | f02 | f01 | award
   horizon: number | null;          // Monate: wann wird's relevant (Frist bzw. Vertragsende)
   cpvFields: string[];             // CPV4-Fachgebiete (Feinfilter im Grundraum)
   regionAxis: "perf" | "buyer";    // Leistungsort vs. Käufersitz
@@ -49,6 +49,7 @@ const PHASEN: [string, string][] = [
   ["auslauf", "Auslaufende Verträge"],
   ["f02", "Aktive Ausschreibungen"],
   ["f01", "Ankündigungen"],
+  ["award", "Zuschlag erteilt"],
 ];
 const HORIZONTE: [number, string][] = [[1, "1 Mon."], [3, "3 Mon."], [6, "6 Mon."], [12, "12 Mon."], [18, "18 Mon."]];
 const LEISTUNG: [string, string][] = [["dienst", "Dienstleistung"], ["liefer", "Lieferung"], ["bau", "Bauleistung"]];
