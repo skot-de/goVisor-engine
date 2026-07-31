@@ -1179,6 +1179,10 @@ def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = Non
     if country == "DE":
         merge_map.update(_consolidate_by_municipality(
             entity_of, plz_of, _load_plz_kreis(cfg), set(merge_map)))
+    # Merge-Ketten path-komprimieren: ein Ziel eines Passes kann Quelle eines späteren sein
+    # (z. B. Leitweg-Ziel → Municipality-Rep). Ohne Kompression zeigt der Link auf ein entferntes
+    # Zwischenziel → Waise. Jeder Quell-Key wird auf sein ENDgültiges Ziel gezogen (Zyklen-sicher).
+    merge_map = _compress_merge_map(merge_map)
     for old_id, new_id in merge_map.items():
         src = entity_of.pop(old_id, None)
         tgt = entity_of.get(new_id)
@@ -1240,6 +1244,22 @@ def _load_entity_aliases(cfg: Config, country: str, entity_of: dict) -> dict:
                 if aid != target:
                     out[aid] = target          # jede Alias-Variante → kanonische Entität
     return out
+
+
+def _compress_merge_map(merge_map: dict) -> dict:
+    """Merge-Ketten auflösen: jeder Quell-Key → ENDgültiges Ziel (kein Key mehr).
+
+    Mehrere Konsolidierungs-Pässe können verketten (A→B in Pass 1, B→C in Pass 2). Ein einstufiges
+    ``get`` würde Links auf das entfernte Zwischenziel B zeigen lassen → Waisen. Path-Kompression
+    macht daraus A→C, B→C. Zyklen-sicher (``seen`` bricht ab; ein Zyklus wäre ein Logikfehler,
+    darf aber nicht aufhängen)."""
+    def final(eid):
+        seen = set()
+        while eid in merge_map and eid not in seen:
+            seen.add(eid)
+            eid = merge_map[eid]
+        return eid
+    return {old: final(old) for old in merge_map}
 
 
 def _consolidate_by_national_id(entity_of: dict, plz_of: dict):

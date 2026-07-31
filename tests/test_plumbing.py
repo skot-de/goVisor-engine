@@ -707,6 +707,18 @@ def test_consolidate_by_leitweg():
     assert "d1" not in mm2
 
 
+def test_compress_merge_map_chains():
+    """Ketten-Kompression: A→B→C wird zu A→C, B→C (verhindert party_entity-Waisen, wenn ein
+    Merge-Ziel selbst später Quelle wird). Zyklus hängt nicht auf."""
+    from govisor.gold import _compress_merge_map
+    out = _compress_merge_map({"A": "B", "B": "C", "X": "Y"})
+    assert out == {"A": "C", "B": "C", "X": "Y"}
+    # kein Wert ist noch ein Key (sonst Waise beim einstufigen Apply)
+    assert not (set(out.values()) & set(out.keys()))
+    cyc = _compress_merge_map({"A": "B", "B": "A"})   # darf nur nicht aufhängen
+    assert set(cyc.keys()) == {"A", "B"}
+
+
 def test_lead_predecessor_wired():
     """build_lead_predecessor (offene Leads → Vorgänger-Zuschlag → Incumbent+Kette) existiert + im
     Gold-Lauf verdrahtet. Wo gebaut: Schema + chain_depth≥1 + Konfidenz gesetzt."""
