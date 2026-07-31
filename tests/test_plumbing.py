@@ -626,6 +626,10 @@ def test_normalize_national_id_leitweg():
     # Leitweg-ID: Präfix-Varianten fallen auf denselben Schlüssel
     assert N("0204:991-00199-39") == N("991-00199-39") == "leitweg:991-00199-39"
     assert N("08-A9866-40") == "leitweg:08-A9866-40"
+    # Grobadressierung mit vollem AGS/Regionalschlüssel (4–12 Stellen), nicht nur 2–3:
+    assert N("09162000-ZRE1000000-09") == "leitweg:09162000-ZRE1000000-09"   # AGS München
+    assert N("2660:05111-32003-71") == N("05111-32003-71") == "leitweg:05111-32003-71"  # Düsseldorf
+    assert N("161000000000-1000-50") == "leitweg:161000000000-1000-50"        # voller 12-Stellen-RS
     # USt-IdNr (Leerzeichen egal)
     assert N("DE311803096") == N("DE 311803096") == "vat:DE311803096"
     # Müll → None
@@ -658,6 +662,49 @@ def test_consolidate_by_shared_name_plz():
     # `already` (schon per ID verschmolzen) wird übersprungen
     mm2 = _consolidate_by_shared_name_plz(ents, plz, already={"a1", "a2"})
     assert "a2" not in mm2
+
+
+def test_consolidate_by_leitweg():
+    """Leitweg-Anker: Entitäten mit derselben (nicht-generischen, eindeutigen) Leitweg-ID mergen;
+    register-getragenes Ziel bevorzugt; generischer Platzhalter (>80 Namen) + mehrdeutige raus."""
+    from govisor.gold import ResolvedEntity, Method, _consolidate_by_leitweg
+
+    def E(eid, norm, method=Method.NAME_ONLY):
+        return ResolvedEntity(entity_id=eid, canonical_name=norm.upper(), method=method,
+                              confidence=0.4, national_id=None, source_names=(norm,), norm=norm)
+    L = "leitweg:05111-31001-70"       # Düsseldorf
+    M = "leitweg:14713000-SV01-88"     # Leipzig
+    GEN = "leitweg:991-1405-10"        # generischer Platzhalter
+    ents = {e.entity_id: e for e in [
+        E("d1", "landeshauptstadt duesseldorf"),
+        E("d2", "stadtkaemmerei duesseldorf"),
+        E("d3", "amt fuer umwelt duesseldorf", Method.TED_NATIONAL_ID),  # Register-Anker → Ziel
+        E("x1", "irgendwas"),          # mehrdeutig: zwei Leitwegs → überspringen
+        E("g1", "stadt a"), E("g2", "stadt b"),   # nur unter generischem Platzhalter
+        E("s1", "einzelamt leipzig"),  # allein unter M → kein Merge (Cluster <2)
+    ]}
+    leitweg_of = {
+        "d1": {L}, "d2": {L}, "d3": {L},
+        "x1": {L, M},                  # mehrdeutig
+        "g1": {GEN}, "g2": {GEN},
+        "s1": {M},
+    }
+    # GEN künstlich generisch machen: >80 distinkte Namen vortäuschen
+    for i in range(90):
+        eid = f"gen{i}"
+        ents[eid] = E(eid, f"behoerde nr {i}")
+        leitweg_of[eid] = {GEN}
+
+    mm, dropped = _consolidate_by_leitweg(ents, leitweg_of, already=set())
+    assert mm.get("d1") == "d3" and mm.get("d2") == "d3", "Register-Anker d3 ist Ziel"
+    assert "d3" not in mm, "Ziel selbst wird nicht gemappt"
+    assert "x1" not in mm, "mehrdeutige Entität (2 Leitwegs) übersprungen"
+    assert "g1" not in mm and "g2" not in mm, "generischer Platzhalter mergt nicht"
+    assert "s1" not in mm, "Einzel-Cluster (<2) mergt nicht"
+    assert any(lw == GEN for lw, _ in dropped), "generischer Platzhalter wird protokolliert"
+    # `already` schützt bereits verschmolzene Entitäten
+    mm2, _ = _consolidate_by_leitweg(ents, leitweg_of, already={"d1"})
+    assert "d1" not in mm2
 
 
 def test_lead_predecessor_wired():

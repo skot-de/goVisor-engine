@@ -31,7 +31,9 @@ _RE_UUID_ID = re.compile(r"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-")
 # 2020). Format <Grobadressierung>-<Feinadressierung>-<Prüfziffer>, optional mit Schema-Präfix
 # „NNNN:". Autoritativer Schlüssel genau für Vergabestellen (im Handelsregister gibt es sie nicht).
 # In eForms zu ~13 % vorhanden. Roh landete sie mit Präfix/Leerzeichen als GESPALTENER Schlüssel.
-_RE_LEITWEG = re.compile(r"^(?:\d{3,4}:)?(\d{2,3}-[0-9A-Za-z]+-\d{2})$")
+# Grobadressierung = 2–12 Stellen (Kfz-Kürzel bis voller Regionalschlüssel/AGS). Zu eng (2–3) ließ
+# ~64k Käufer-Instanzen mit vollem AGS liegen (09162000=München, 05111=Düsseldorf, 08421000=LK).
+_RE_LEITWEG = re.compile(r"^(?:\d{3,4}:)?(\d{2,12}-[0-9A-Za-z]+-\d{2})$")
 _RE_VAT_DE = re.compile(r"^DE\s?(\d{9})$", re.I)                 # USt-IdNr
 # Erkennbarer Müll: TED-interne „t:"-IDs, reine Bindestriche, 1-4-stellige Zahlen (Notiz-intern).
 _RE_ID_JUNK = re.compile(r"^(?:t:.*|-+|\d{1,4})$", re.I)
@@ -1124,6 +1126,7 @@ def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = Non
 
     entity_of: dict[str, ResolvedEntity] = {}
     plz_of: dict[str, set[str]] = {}
+    leitweg_of: dict[str, set[str]] = {}     # entity_id → Leitweg-ID(s), für den Vergabestellen-Anker
     links = []
     # In-Run-Memoisierung: resolve_supplier ist rein in (name, national_id, plz, hr_index),
     # und 84 % der 3,7M Parteien sind Wiederholungen (nur 592k distinkte Tupel). Reihenfolge
@@ -1140,6 +1143,11 @@ def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = Non
         entity_of.setdefault(resolved.entity_id, resolved)
         if plz and plz.strip():
             plz_of.setdefault(resolved.entity_id, set()).add(plz.strip())
+        # Leitweg-ID der Käufer festhalten (resolve_supplier verwirft sie für PUBLIC) — Anker s. u.
+        if role == "buyer" and national_id:
+            lw = normalize_national_id(national_id)
+            if lw and lw.startswith("leitweg:"):
+                leitweg_of.setdefault(resolved.entity_id, set()).add(lw)
         links.append((notice_id, role, seq, resolved.entity_id))
 
     # Konsolidierung: eine nur-Name-Entität und eine Register-/ID-Entität mit
@@ -1149,6 +1157,16 @@ def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = Non
     # Firmen können Namen teilen), darum landet Unbelegtes als Kandidat in der
     # Review-Datei statt im Bestand. Konservativ: 0 Fehl-Merges, Rest sichtbar.
     merge_map, flagged = _consolidate_by_national_id(entity_of, plz_of)
+    # Leitweg-Anker: öffentliche Vergabestellen über die bundesweit eindeutige Leitweg-ID
+    # verschmelzen — der autoritative Schlüssel, den resolve_supplier für PUBLIC verwirft.
+    # Fängt gerade die NICHT-kommunalen Stellen (Land/Bund/Zweckverbände) + Namens-Fragmente
+    # ohne Gemeinde-Token, die der Municipality-Merge unten nicht sieht.
+    leitweg_merges, leitweg_dropped = _consolidate_by_leitweg(entity_of, leitweg_of, set(merge_map))
+    merge_map.update(leitweg_merges)
+    if leitweg_dropped:
+        top = ", ".join(f"{lw.split(':',1)[1]}({n})" for lw, n in leitweg_dropped[:3])
+        print(f"  leitweg     : {len(leitweg_merges)} Fragmente über Leitweg-ID gemerged; "
+              f"{len(leitweg_dropped)} generische Platzhalter ausgeschlossen ({top})")
     # Kuratierte Aliase (belegte Umbenennungen/Fragmente, z. B. DB Netz→DB InfraGO).
     # Identitäts-Merge, KEIN Namensstamm-Raten — nur was in der CSV steht (human-verifiziert).
     merge_map.update(_load_entity_aliases(cfg, country, entity_of))
@@ -1264,6 +1282,70 @@ def _consolidate_by_national_id(entity_of: dict, plz_of: dict):
             else:
                 flagged.append((norm, e.entity_id, target.entity_id, "kein_plz_beleg"))
     return merge_map, flagged
+
+
+# Oberhalb dieser Namensvielfalt ist eine Leitweg-ID ein generischer Platzhalter, kein Anker:
+# „0204:991-1405-10" trägt 1.789 völlig verschiedene Käufer (Nationalpark, Bundeswehr, Städte …) —
+# ein Portal-Default. Danach ein klarer Abgrund (nächstgrößter legitimer Cluster ~38 Namen).
+_LEITWEG_GENERIC_MAX_NAMES = 80
+
+
+def _consolidate_by_leitweg(entity_of: dict, leitweg_of: dict, already: set):
+    """Öffentliche Vergabestellen über die bundesweit eindeutige **Leitweg-ID** zusammenführen.
+
+    Die Leitweg-ID ist der autoritative Schlüssel für öffentliche Stellen (im Handelsregister
+    stehen sie nicht). ``resolve_supplier`` verwirft sie aber für PUBLIC/Person/Konsortium, weil
+    diese vor dem ``national_id``-Zweig zurückkehren — genau die Stellen, die eine Leitweg-ID
+    tragen. Dieser Pass holt sie als ANKER zurück: Entitäten mit derselben (nicht-generischen)
+    Leitweg-ID sind dieselbe Vergabestelle und werden verschmolzen.
+
+    Rein **additiv**: der Name bleibt Fallback für Notices ohne Leitweg (Alt-Jahre vor eForms),
+    daher kein Zeitachsen-Split. Guards gegen Fehl-Merges:
+      1. **generische Platzhalter** (>``_LEITWEG_GENERIC_MAX_NAMES`` distinkte Namen) raus;
+      2. **mehrdeutige** Entitäten (mehr als eine echte Leitweg-ID) übersprungen.
+    Eine register-getragene Entität im Cluster wird bevorzugtes Ziel (behält ihre ``national_id``).
+
+    Gibt ``(merge_map, dropped_generic)`` zurück — Letzteres für die Protokollierung (kein
+    stiller Verwurf).
+    """
+    from collections import defaultdict
+
+    id_methods = {Method.HR_EXACT, Method.HR_FUZZY_PLZ, Method.TED_NATIONAL_ID}
+
+    # 1. Namensvielfalt je Leitweg über ALLE Entitäten → generische Platzhalter erkennen.
+    norms_per_lw: dict[str, set] = defaultdict(set)
+    for eid, keys in leitweg_of.items():
+        e = entity_of.get(eid)
+        if e is None or not e.norm:
+            continue
+        for lw in keys:
+            norms_per_lw[lw].add(e.norm)
+    generic = {lw for lw, ns in norms_per_lw.items() if len(ns) > _LEITWEG_GENERIC_MAX_NAMES}
+
+    # 2. Entität → GENAU EINE nicht-generische Leitweg-ID (sonst mehrdeutig → überspringen).
+    by_leitweg: dict[str, list] = defaultdict(list)
+    for eid, keys in leitweg_of.items():
+        if eid in already:
+            continue
+        real = [lw for lw in keys if lw not in generic]
+        if len(real) != 1:
+            continue
+        e = entity_of.get(eid)
+        if e is not None:
+            by_leitweg[real[0]].append(e)
+
+    # 3. Je Leitweg-Cluster mit ≥2 Entitäten verschmelzen; register-getragenes Ziel bevorzugt.
+    merge_map: dict[str, str] = {}
+    for lw, members in by_leitweg.items():
+        if len(members) < 2:
+            continue
+        id_members = [e for e in members if e.method in id_methods]
+        target = min(id_members or members, key=lambda e: e.entity_id)
+        for e in members:
+            if e.entity_id != target.entity_id:
+                merge_map[e.entity_id] = target.entity_id
+    dropped_generic = sorted(((lw, len(norms_per_lw[lw])) for lw in generic), key=lambda x: -x[1])
+    return merge_map, dropped_generic
 
 
 # Kommunale Vergabestelle: Behörden-Typ + Gemeinde/Kreis-Name aus dem Käufer-Namen.
