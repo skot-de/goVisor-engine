@@ -97,7 +97,8 @@ export function DetailPanel({
     const tabEl = t.closest<HTMLElement>("[data-tab]");
     if (tabEl) { onTab(tabEl.dataset.tab || ""); return; }
     const map = ["anav", "openlead", "cmtsend", "grp", "mark", "region", "buyerdemo",
-      "tonetz", "netz", "buyerleads", "partner", "netzfrei", "ptab", "pstufe", "uploaddocs", "saveblock"];
+      "tonetz", "netz", "buyerleads", "partner", "netzfrei", "ptab", "pstufe", "uploaddocs", "saveblock",
+      "clchk", "clkombi", "clcopy", "cljump", "clcollapse"];
     for (const a of map) {
       const el = t.closest<HTMLElement>(`[data-${a}]`);
       if (el) { onBodyAction(a, el.dataset[a] || "", el); return; }

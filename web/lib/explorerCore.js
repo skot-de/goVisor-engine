@@ -917,44 +917,70 @@ const pdotT = (src,hint)=> src && src!=='echt'
 // Eigener „Unterlagen"-Tab: alles Dokument-Getriebene (Vergabe-Analyse / Upload / Volltext).
 // Upload-Prompt NUR bei offenen Ausschreibungen (src='f02', Frist nicht vorbei) — bei
 // auslaufenden/geplanten Verfahren gibt es keine ladbaren Unterlagen.
-// §7.2 Kennzeichnungsstufen
-const _THEME_LABELS = {unternehmensdarstellung:'Unternehmen', referenzen:'Referenzen',
-  zertifikate_qm:'Zertifikate & QM', datenschutz_avv:'Datenschutz', nachhaltigkeit:'Nachhaltigkeit',
-  personal_qualifikation:'Personal & Qualifikation', technische_ausstattung:'Technik',
-  projektorganisation:'Wertung & Projekt', sonstiges:'Fristen & Formalien'};
+// §7.2 Kennzeichnungsstufen → Badge
 function _markBadge(m){
-  const M={Zitat:['Zitat','mk-cite'], Extrahiert:['Extrahiert','mk-extr'], Abgeleitet:['Abgeleitet','mk-deriv']};
-  const [t,c]=M[m]||M.Extrahiert; return `<span class="va-mark ${c}" title="Kennzeichnung">${t}</span>`;
+  const M={Zitat:['Zitat','m-z'], Extrahiert:['Extrahiert','m-e'], Abgeleitet:['Abgeleitet','m-a']};
+  const [t,c]=M[m]||M.m_e||['Extrahiert','m-e']; return `<span class="mark ${c}">${t}</span>`;
 }
-// §7.1 Checkliste: Thema · Zitat+Fundstelle · editierbares Feld · Kombi-Button
-function renderChecklistBlock(a){
-  const items = a.checklist || [];
-  if(!items.length && !(a.missing_expected||[]).includes('zuschlagskriterien') && !(a.other_documents||[]).length) return '';
-  const groups = {};
-  items.forEach(it=>{ (groups[it.theme] = groups[it.theme] || []).push(it); });
-  const order = Object.keys(_THEME_LABELS).filter(t=>groups[t]);
-  const themed = order.map(theme=>{
-    const rows = groups[theme].map(it=>{
-      const val = it.value!=null && it.value!=='' ? ` <span class="cl-val">${esc(String(it.value))}${it.unit?(' '+esc(String(it.unit))):''}</span>` : '';
-      const src = it.quote ? `<div class="cl-quote">„${esc(it.quote)}"<span class="cl-src">→ ${esc(it.source_file||'')}${it.source_page?(', S. '+esc(String(it.source_page))):''}</span></div>` : '';
-      const block = JSON.stringify({theme, req:it.req_type, quote:it.quote||'', label:it.label});
-      return `<div class="cl-item">
-        <div class="cl-head"><span class="cl-label">${esc(it.label||it.req_type)}${val}</span>${_markBadge(it.marking)}</div>
-        ${src}
-        <textarea class="cl-edit" placeholder="Dein Textbaustein aus dem Profil …"></textarea>
-        <button class="cl-save" data-saveblock='${esc(block)}'>Kopieren &amp; speichern</button>
-      </div>`;
-    }).join('');
-    return `<div class="cl-group"><h6 class="cl-theme">${_THEME_LABELS[theme]} <span class="cl-n">${groups[theme].length}</span></h6>${rows}</div>`;
+// Funktionale Checklisten-Gruppen (wie der Prototyp: K.-o. → Bewertung → … → Offen → Weitere).
+const _CL_GROUPS = [
+  ['ko',    'K.-o.-Kriterien',      new Set(['mindestumsatz','referenz_anzahl','referenz_mindestwert','zertifikat','ausschlussgrund','eignung_technisch','eignung_personal','berufshaftpflicht'])],
+  ['bew',   'Bewertung',            new Set(['zuschlagskriterium'])],
+  ['leist', 'Leistung & Technik',   new Set(['leistung_menge','technische_mindestanforderung'])],
+  ['vertr', 'Vertrag & Auflagen',   new Set(['vertragsstrafe','haftung','laufzeit','kuendigung'])],
+  ['form',  'Fristen & Formalien',  new Set(['frist','formalie','einzureichendes_dokument'])],
+];
+function _clDone(leadId){ try{ return JSON.parse(localStorage.getItem('govisor.checkstate.'+leadId)||'{}'); }catch(e){ return {}; } }
+
+// §7 Checkliste im Prototyp-Design: Kopf (Stand+Haftung) · Erfolgshonorar-Zeile · TOC · funktionale
+// Gruppen mit Zitat+Fundstelle+Kennzeichnung+editierbarem Baustein+Kombi-Button+Abhaken.
+function renderChecklistBlock(a, l){
+  const items = (a.checklist||[]).map((it,i)=>({...it, _i:i}));
+  const hasMissZ = (a.missing_expected||[]).includes('zuschlagskriterien');
+  const other = a.other_documents||[];
+  if(!items.length && !hasMissZ && !other.length) return '';
+  const done = _clDone(l.id);
+  let tot=0, dn=0;
+
+  const itemHtml = it=>{
+    const val = it.value!=null && it.value!=='' ? ` <span class="cl-val">${esc(String(it.value))}${it.unit?(' '+esc(String(it.unit))):''}</span>` : '';
+    const isDone = !!done[it._i]; if(!isDone) {} // Zählung s.u.
+    tot++; if(isDone) dn++;
+    const q = it.quote
+      ? `<div class="quote"><div class="lbl"><span>${it.parser?'Struktur ausgelesen':'Aus den Unterlagen'}</span>${_markBadge(it.marking)}</div><q>${esc(it.quote)}</q><div class="src">${esc(it.source_file||'')}${it.source_page?(' · S. '+esc(String(it.source_page))):''}${it.parser?' · Parser, kein LLM':''}</div></div>`
+      : `<div class="quote"><div class="lbl"><span>${it.parser?'Struktur ausgelesen':'Aus den Unterlagen'}</span>${_markBadge(it.marking)}</div><q>${esc(it.label||'')}${val?(' — '+esc(String(it.value))+(it.unit?' '+esc(String(it.unit)):'')):''}</q>${it.source_file?`<div class="src">${esc(it.source_file)}${it.parser?' · Parser, kein LLM':''}</div>`:''}</div>`;
+    const kombi = JSON.stringify({theme:it.theme, label:it.label, quote:it.quote||'', i:it._i});
+    const block = `<div class="block"><div class="lbl"><span>Dein Textbaustein</span><span class="mark m-v">aus deinem Profil</span></div>
+      <textarea class="ta cl-edit" placeholder="Textbaustein aus deinem Profil einsetzen …"></textarea>
+      <div class="blockfoot"><span class="cl-hist"></span><span class="acts">
+        <button class="btn btn-q btn-sm" data-clcopy="${it._i}">Nur kopieren</button>
+        <button class="btn btn-p btn-sm" data-clkombi='${esc(kombi)}'>Kopieren &amp; abhaken</button></span></div></div>`;
+    return `<article class="item${isDone?' done':''}" data-clitem="${it._i}">
+      <div class="ih"><button class="dchk" data-clchk="${it._i}">✓</button><b>${esc(it.label||it.req_type)}${val}</b></div>
+      <div class="dsum">Abgehakt. <button class="re" data-clchk="${it._i}">wieder öffnen</button></div>
+      <div class="ibody">${q}${block}</div></article>`;
+  };
+
+  const groupsHtml = _CL_GROUPS.map(([id,title,set])=>{
+    const gi = items.filter(it=>set.has(it.req_type)); if(!gi.length) return '';
+    return `<details class="grp" id="clg-${id}"${id==='ko'?' open':''}><summary><span class="caret">›</span>${title}<span class="cnt">${gi.length}</span></summary><div class="gbody">${gi.map(itemHtml).join('')}</div></details>`;
   }).join('');
-  // §7.4 Zuschlagskriterien nicht auffindbar (nie stilles Weglassen)
-  const missZ = (a.missing_expected||[]).includes('zuschlagskriterien')
-    ? `<div class="cl-miss">⚠ <b>Zuschlagskriterien</b> — in den Unterlagen nicht eindeutig auffindbar. Bitte selbst prüfen.</div>` : '';
-  // §7.5 Weitere (nicht klassifizierte) Dokumente — neutraler Eintrag, keine Fehlermeldung
-  const other = (a.other_documents||[]).length
-    ? `<div class="cl-other"><div class="cl-other-h">Weitere Dokumente <span class="cl-n">${a.other_documents.length}</span></div>
-       ${a.other_documents.slice(0,12).map(f=>`<div class="cl-other-f">· ${esc(f)}</div>`).join('')}</div>` : '';
-  return `<div class="va-checklist">${themed}${missZ}${other}</div>`;
+  // §7.4 Offen (Zuschlag nicht gefunden) + §7.5 Weitere Dokumente
+  const offen = hasMissZ ? `<details class="grp" id="clg-offen"><summary><span class="caret">›</span>Offen<span class="cnt">1</span></summary><div class="gbody"><article class="item"><div class="ih"><span style="width:19px;text-align:center;color:var(--ink-400)">—</span><b>Zuschlagskriterien</b><span class="mark m-a" style="margin-left:auto">Nicht gefunden</span></div><div class="ibody"><div class="block" style="color:var(--ink-500);font-size:13px;line-height:1.6">In den Unterlagen nicht eindeutig auffindbar. Bitte selbst prüfen.</div></div></article></div></details>` : '';
+  const weitere = other.length ? `<details class="grp" id="clg-weit"><summary><span class="caret">›</span>Weitere Dokumente<span class="cnt">${other.length}</span></summary><div class="gbody"><div class="flist" style="margin-bottom:11px">${other.slice(0,20).map(f=>`<div class="f"><span class="dot">·</span> ${esc(f)}</div>`).join('')}</div></div></details>` : '';
+
+  // TOC-Chips je nicht-leerer Gruppe
+  const chips = _CL_GROUPS.map(([id,title,set])=>{ const n=items.filter(it=>set.has(it.req_type)).length; return n?`<button class="tchip" data-cljump="clg-${id}">${esc(title)} <span class="n">${n}</span></button>`:''; }).join('')
+    + (hasMissZ?`<button class="tchip" data-cljump="clg-offen">Offen <span class="n">1</span></button>`:'')
+    + (other.length?`<button class="tchip" data-cljump="clg-weit">Weitere <span class="n">${other.length}</span></button>`:'');
+
+  const portal = (l.unterlagen&&l.unterlagen.url) ? `<a href="${esc(l.unterlagen.url)}" target="_blank" rel="noopener" class="link">Zum Vergabeportal ↗</a>` : '';
+  const chead = `<div class="chead"><div class="r1"><span class="stand">Stand der Unterlagen: ${l.lbFiles||1} Datei${(l.lbFiles||1)===1?'':'en'}</span>${portal}</div>
+    <div class="disc">Bitte regelmäßig prüfen, ob neue Unterlagen vorliegen. LLM-gestützte Analyse — kann Fehler enthalten. Jede Angabe ist mit Fundstelle im Originaldokument belegt${a.rejected_items>0?`; ${a.rejected_items} unbelegte Aussagen wurden verworfen`:''}; maßgeblich bleiben die Vergabeunterlagen.</div></div>`;
+  const stake = `<div class="stake"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6-5.3-2.9L6.7 19.6l1.1-6L3.4 9.4l6-.8z"/></svg><div><b>Erfolgshonorar:</b> Gewinnst du diesen Auftrag, berechnen wir eine Erfolgsgebühr — verlierst du, nichts. Kein Aufschlag fürs Bewerben.</div></div>`;
+  const toc = `<div class="toc"><div class="th"><b>Deine Checkliste</b><span class="pr"><span class="cl-doneN">${dn}</span> von ${tot} erledigt</span></div><div class="chips">${chips}<button class="tchip all" data-clcollapse>Alle zuklappen</button></div><div class="tprog"><i class="cl-tprog" style="width:${tot?Math.round(dn/tot*100):0}%"></i></div></div>`;
+
+  return `<div class="va-checklist" data-clroot="${l.id}">${chead}${stake}${toc}${groupsHtml}${offen}${weitere}</div>`;
 }
 
 function renderDocs(l){
@@ -969,25 +995,21 @@ function renderDocs(l){
     const a = l.lbAnalyse;
     const AMP = {gruen:['●','Bietbar','va-go'], gelb:['●','Abwägen','va-weigh'], rot:['●','Hohe Hürde','va-stop']};
     const [icon,label,cls] = AMP[a.ampel] || AMP.gelb;
-    const portal = (l.unterlagen&&l.unterlagen.url) ? ` · <a href="${esc(l.unterlagen.url)}" target="_blank" rel="noopener">Zum Vergabeportal ↗</a>` : '';
-    const docstate = `<div class="va-state">Stand der Unterlagen: ${l.lbFiles||1} Datei${(l.lbFiles||1)===1?'':'en'}. Bitte regelmäßig prüfen, ob neue Unterlagen vorliegen.${portal}</div>`;
-    const rej = (a.rejected_items>0) ? `<span class="va-rej" title="Aussagen ohne im Dokument auffindbares Zitat wurden verworfen (Belegpflicht)">${a.rejected_items} unbelegte verworfen</span>` : '';
-    // Reiche Checkliste (§7) wenn vorhanden, sonst Legacy-Blöcke (Alt-Format-Analysen)
-    const body = (a.checklist && a.checklist.length!=null && ('checklist' in a))
-      ? renderChecklistBlock(a)
-      : `${bl('Muss erfüllt sein — K.o.-Kriterien', check(a.ko_kriterien))}
+    const vahead = `<div class="va-head"><span class="va-amp ${cls}">${icon} ${label}</span><span class="cov">Vergabe-Analyse · aus den Unterlagen</span></div>
+      ${a.ampel_grund?`<p class="va-grund">${esc(a.ampel_grund)}</p>`:''}
+      ${a.zusammenfassung?`<p class="va-sum">${esc(a.zusammenfassung)}</p>`:''}`;
+    // Reiche Checkliste (§7, Prototyp-Design) wenn vorhanden — sie trägt Kopf/Haftung/Erfolgshonorar selbst.
+    if(a.checklist && ('checklist' in a)) {
+      return `<section class="sec va-sec">${vahead}${renderChecklistBlock(a, l)}</section>`;
+    }
+    // Legacy-Fallback (Alt-Format-Analysen ohne checklist)
+    const body = `${bl('Muss erfüllt sein — K.o.-Kriterien', check(a.ko_kriterien))}
          ${bl('Einzureichen — Eignungsnachweise', check(a.eignung))}
          ${(a.zuschlag&&a.zuschlag.length)?bl('Zuschlagskriterien', `<div class="zug">${a.zuschlag.map(z=>`<div class="zug-row"><span class="zug-k">${esc(z.kriterium)}</span><span class="zug-bar"><i style="width:${Math.max(3,Math.min(100,Number(z.gewicht)||0))}%"></i></span><span class="zug-v">${esc(String(z.gewicht))} %</span></div>`).join('')}</div>`):''}
          ${(a.fristen&&a.fristen.length)?bl('Fristen', `<div class="kv">${a.fristen.map(f=>`<div class="kvi"><span class="k">${esc(f.typ||'')}</span><span class="vv"><span class="v">${esc(f.wert||'')}</span></span></div>`).join('')}</div>`):''}
          ${bl('Aufwandstreiber', check(a.aufwand))}`;
-    return `<section class="sec va-sec">
-      <div class="va-head"><span class="va-amp ${cls}">${icon} ${label}</span><span class="cov">Vergabe-Analyse · aus den Unterlagen</span>${rej}</div>
-      ${docstate}
-      ${a.ampel_grund?`<p class="va-grund">${esc(a.ampel_grund)}</p>`:''}
-      ${a.zusammenfassung?`<p class="va-sum">${esc(a.zusammenfassung)}</p>`:''}
-      ${body}
-      ${(a.vorausfuellbar&&a.vorausfuellbar.length)?`<div class="va-fill"><b>Das füllen wir aus deinem Profil vor</b><span>${a.vorausfuellbar.map(x=>esc(typeof x==='string'?x:(x.nachweis||''))).join(' · ')}</span></div>`:''}
-      <p class="rt-note">LLM-gestützte Analyse — kann Fehler enthalten. Jede Angabe ist mit Fundstelle im Originaldokument belegt; maßgeblich bleiben die Vergabeunterlagen.</p>
+    return `<section class="sec va-sec">${vahead}${body}
+      <p class="rt-note">LLM-gestützte Analyse — kann Fehler enthalten; Angaben mit Fundstelle belegt, maßgeblich bleiben die Vergabeunterlagen.</p>
     </section>`;
   })() : istOffen ? (()=>{
     const u = l.unterlagen || {};

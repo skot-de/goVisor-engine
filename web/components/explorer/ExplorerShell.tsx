@@ -100,6 +100,20 @@ function slugOf(v: View, f: { gemerkt: boolean; netz: boolean }): string {
   return "leads";
 }
 
+// Ticket #23 Checkliste: Abhak-Zustand je Lead persistieren + TOC-Fortschritt aktualisieren (DOM-only).
+function clPersist(root: HTMLElement | null) {
+  if (!root) return;
+  const lead = root.dataset.clroot;
+  const items = root.querySelectorAll<HTMLElement>(".item[data-clitem]");
+  const state: Record<string, boolean> = {};
+  let dn = 0;
+  items.forEach((it) => { if (it.classList.contains("done")) { state[it.dataset.clitem || ""] = true; dn++; } });
+  if (lead) { try { localStorage.setItem("govisor.checkstate." + lead, JSON.stringify(state)); } catch { /* voll */ } }
+  const n = root.querySelector<HTMLElement>(".cl-doneN"); if (n) n.textContent = String(dn);
+  const bar = root.querySelector<HTMLElement>(".cl-tprog");
+  if (bar) bar.style.width = (items.length ? Math.round((dn / items.length) * 100) : 0) + "%";
+}
+
 export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string }) {
   const [query, setQuery] = useState("");
   const [tokens, setTokens] = useState<Token[]>([]);
@@ -454,6 +468,56 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         const orig = btn.textContent;
         btn.classList.add("ok"); btn.textContent = "Gespeichert ✓";
         setTimeout(() => { btn.classList.remove("ok"); btn.textContent = orig; }, 1500);
+        break;
+      }
+      // ── Ticket #23 Checkliste (§7): Abhaken, Kombi-Button, Kopieren, TOC ──────────────────
+      case "clchk": {
+        const it = el.closest<HTMLElement>(".item");
+        if (it) { it.classList.toggle("done"); clPersist(el.closest<HTMLElement>(".va-checklist")); }
+        break;
+      }
+      case "clkombi": {
+        let blk: { theme?: string; label?: string; quote?: string } = {};
+        try { blk = JSON.parse(value); } catch { /* ignore */ }
+        const it = el.closest<HTMLElement>(".item");
+        const ta = it?.querySelector<HTMLTextAreaElement>("textarea.ta");
+        const text = (ta?.value.trim()) || blk.quote || blk.label || "";
+        if (text) {
+          navigator.clipboard?.writeText(text).catch(() => {});
+          try {
+            const lib = JSON.parse(localStorage.getItem("govisor.blocks") || "[]");
+            lib.push({ theme: blk.theme || "sonstiges", content: text, label: blk.label || "",
+              lead_id: activeId, saved_at: new Date().toISOString() });
+            localStorage.setItem("govisor.blocks", JSON.stringify(lib));
+          } catch { /* voll/blockiert */ }
+        }
+        if (it) { it.classList.add("done"); clPersist(el.closest<HTMLElement>(".va-checklist")); }
+        break;
+      }
+      case "clcopy": {
+        const it = el.closest<HTMLElement>(".item");
+        const ta = it?.querySelector<HTMLTextAreaElement>("textarea.ta");
+        const q = it?.querySelector<HTMLElement>(".quote q");
+        const text = (ta?.value.trim()) || q?.textContent || "";
+        if (text) navigator.clipboard?.writeText(text).catch(() => {});
+        const b = el as HTMLButtonElement; const o = b.textContent;
+        b.textContent = "Kopiert"; setTimeout(() => { b.textContent = o; }, 1200);
+        break;
+      }
+      case "cljump": {
+        const g = document.getElementById(value);
+        if (g) { g.setAttribute("open", ""); g.scrollIntoView({ behavior: "smooth", block: "start" }); }
+        break;
+      }
+      case "clcollapse": {
+        const root = el.closest<HTMLElement>(".va-checklist");
+        if (root) {
+          const anyOpen = root.querySelector("details.grp[open]");
+          root.querySelectorAll<HTMLDetailsElement>("details.grp").forEach((g) => {
+            if (anyOpen) g.removeAttribute("open"); else g.setAttribute("open", "");
+          });
+          (el as HTMLElement).textContent = anyOpen ? "Alle aufklappen" : "Alle zuklappen";
+        }
         break;
       }
       case "editprofil": router.push("/onboarding"); break;   // Profil-Tab → selbe Route wie der Topbar-Button

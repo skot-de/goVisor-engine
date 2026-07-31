@@ -359,32 +359,62 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
 .va-amp.va-go{color:#0a7d3f;background:#e7f6ec}
 .va-amp.va-weigh{color:#8a5a00;background:#fbf1dc}
 .va-amp.va-stop{color:#a5231b;background:#fbe6e4}
-/* Ticket #23 §7 — Checkliste je Lead */
-.va-state{font-size:var(--t-meta);color:var(--ink-500);background:var(--surface-2,#f7f7f5);border:1px solid var(--line);border-radius:8px;padding:6px 10px;margin-bottom:var(--s3)}
-.va-state a{color:var(--accent);text-decoration:none}
-.va-rej{font-size:var(--t-meta);color:var(--ink-400)}
-.va-checklist{display:flex;flex-direction:column;gap:var(--s3);margin-top:var(--s2)}
-.cl-group{}
-.cl-theme{font-size:var(--t-meta);text-transform:uppercase;letter-spacing:.04em;color:var(--ink-500);margin:0 0 6px;font-weight:700}
-.cl-theme .cl-n,.cl-other-h .cl-n{color:var(--ink-400);font-weight:600}
-.cl-item{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:8px;background:var(--surface)}
-.cl-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.cl-label{font-weight:600;font-size:var(--t-body);color:var(--ink-900)}
-.cl-val{color:var(--accent);font-weight:700}
-.va-mark{font-size:11px;font-weight:700;padding:2px 8px;border-radius:99px;white-space:nowrap}
-.va-mark.mk-cite{color:#0a7d3f;background:#e7f6ec}
-.va-mark.mk-extr{color:#3457a6;background:#e8eefb}
-.va-mark.mk-deriv{color:#8a5a00;background:#fbf1dc}
-.cl-quote{font-size:var(--t-meta);color:var(--ink-700);line-height:1.5;margin:6px 0;border-left:2px solid var(--line-strong);padding-left:8px}
-.cl-src{display:block;color:var(--ink-400);margin-top:2px}
-.cl-edit{width:100%;min-height:38px;resize:vertical;border:1px solid var(--line);border-radius:8px;padding:6px 8px;font:inherit;font-size:var(--t-meta);margin-top:6px}
-.cl-save{margin-top:6px;font-size:var(--t-meta);font-weight:600;color:#fff;background:var(--accent);border:none;border-radius:8px;padding:6px 12px;cursor:pointer}
-.cl-save:hover{filter:brightness(.95)}
-.cl-save.ok{background:#0a7d3f}
-.cl-miss{font-size:var(--t-meta);color:#8a5a00;background:#fbf1dc;border-radius:8px;padding:8px 10px}
-.cl-other{border-top:1px solid var(--line);padding-top:8px}
-.cl-other-h{font-weight:600;font-size:var(--t-meta);color:var(--ink-700);margin-bottom:4px}
-.cl-other-f{font-size:var(--t-meta);color:var(--ink-500)}
+/* Ticket #23 §7 — Checkliste je Lead (Prototyp-Design, an App-Variablen angepasst) */
+.va-checklist{--gt:#eaf6f0;--gt2:#f4faf7;--gd:#12855a;--amber:#a16207;--blue:#2b5f86;margin-top:var(--s3);display:flex;flex-direction:column;gap:0}
+.va-checklist .chead{background:#f8faf9;border:1px solid var(--line);border-radius:9px;padding:13px 16px;margin-bottom:10px}
+.va-checklist .chead .r1{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+.va-checklist .chead .stand{font-family:var(--mono,monospace);font-size:12px}
+.va-checklist .chead .link{color:var(--gd);text-decoration:none;font-size:12.5px;font-weight:500}
+.va-checklist .chead .disc{font-size:11.5px;color:var(--ink-400);margin-top:9px;padding-top:9px;border-top:1px solid var(--line);line-height:1.55}
+.va-checklist .stake{display:flex;align-items:center;gap:11px;border:1px solid #cfe8dc;background:var(--gt2);border-radius:9px;padding:11px 15px;margin-bottom:16px;font-size:13px;line-height:1.55}
+.va-checklist .stake svg{width:16px;height:16px;stroke:var(--gd);fill:none;stroke-width:1.9;flex-shrink:0}
+.va-checklist .toc{border:1px solid var(--line);border-radius:9px;background:var(--surface);padding:13px 16px;margin-bottom:16px}
+.va-checklist .toc .th{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:11px}
+.va-checklist .toc .th b{font-size:14px}.va-checklist .toc .th .pr{font-family:var(--mono,monospace);font-size:12px;color:var(--ink-700)}
+.va-checklist .chips{display:flex;gap:7px;flex-wrap:wrap}
+.va-checklist .tchip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:5px 11px;font-size:12.5px;cursor:pointer;color:var(--ink-900)}
+.va-checklist .tchip:hover{border-color:var(--accent);background:var(--gt2)}
+.va-checklist .tchip .n{font-family:var(--mono,monospace);font-size:11px;color:var(--ink-400)}
+.va-checklist .tchip.all{background:var(--gt);border-color:#cfe8dc;color:var(--gd)}
+.va-checklist .tprog{height:3px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:12px}
+.va-checklist .tprog i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .25s}
+.va-checklist details.grp{border:1px solid var(--line);border-radius:9px;background:var(--surface);margin-bottom:11px;overflow:hidden}
+.va-checklist details.grp>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:11px;padding:12px 16px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--ink-700)}
+.va-checklist details.grp>summary::-webkit-details-marker{display:none}
+.va-checklist details.grp>summary .cnt{margin-left:auto;font-family:var(--mono,monospace);font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-400);font-weight:500}
+.va-checklist .caret{transition:transform .18s;color:var(--ink-400)}
+.va-checklist details.grp[open]>summary .caret{transform:rotate(90deg)}
+.va-checklist details.grp[open]>summary{border-bottom:1px solid var(--line)}
+.va-checklist .gbody{padding:13px 16px 6px}
+.va-checklist .item{border:1px solid var(--line);border-radius:8px;margin-bottom:11px;overflow:hidden;background:var(--surface)}
+.va-checklist .item .ih{display:flex;align-items:center;gap:11px;padding:11px 14px;border-bottom:1px solid var(--line)}
+.va-checklist .item .ih b{font-size:14px;font-weight:600}
+.va-checklist .item.done{background:var(--gt2);border-color:#d9e8e1}
+.va-checklist .item.done .ih{border-bottom:0}.va-checklist .item.done .ibody{display:none}
+.va-checklist .item .dsum{display:none;padding:8px 14px 11px;font-size:12.5px;color:var(--ink-700)}
+.va-checklist .item.done .dsum{display:block}
+.va-checklist .item .dsum .re{color:var(--gd);font-weight:500;background:none;border:0;padding:0;cursor:pointer;font-size:12.5px;text-decoration:underline;text-underline-offset:2px}
+.va-checklist .dchk{width:19px;height:19px;border-radius:50%;border:1.5px solid #cfd6d2;background:#fff;cursor:pointer;flex-shrink:0;display:grid;place-items:center;color:transparent;font-size:11px;font-weight:800;padding:0}
+.va-checklist .dchk:hover{border-color:var(--accent)}
+.va-checklist .item.done .dchk{background:var(--accent);border-color:var(--accent);color:#fff}
+.va-checklist .mark{font-size:10px;letter-spacing:.07em;text-transform:uppercase;border-radius:4px;padding:2px 7px;font-weight:600;white-space:nowrap}
+.va-checklist .m-z{background:#eef4f9;color:var(--blue)}.va-checklist .m-e{background:var(--line);color:var(--ink-700)}
+.va-checklist .m-a{background:#faf3e8;color:var(--amber)}.va-checklist .m-v{background:var(--gt);color:var(--gd)}
+.va-checklist .quote{padding:13px 14px;background:#fbfcfb;border-bottom:1px solid var(--line)}
+.va-checklist .lbl{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-400);font-weight:600;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.va-checklist .quote q{display:block;font-size:13.5px;line-height:1.6;quotes:'„' '“'}
+.va-checklist .quote .src{font-family:var(--mono,monospace);font-size:11px;color:var(--ink-400);margin-top:7px}
+.va-checklist .block{padding:13px 14px}
+.va-checklist .ta{width:100%;border:1px solid var(--line);border-radius:7px;padding:11px 13px;font:inherit;font-size:13.5px;line-height:1.6;min-height:70px;background:#fff;color:var(--ink-900)}
+.va-checklist .ta:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:var(--accent)}
+.va-checklist .blockfoot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:11px;flex-wrap:wrap}
+.va-checklist .acts{display:flex;gap:7px;align-items:center}
+.va-checklist .btn{font-size:12px;font-weight:600;border-radius:7px;padding:6px 12px;cursor:pointer;border:1px solid transparent;display:inline-flex;align-items:center;gap:6px}
+.va-checklist .btn-p{background:var(--accent);color:#fff}.va-checklist .btn-s{background:var(--surface);color:var(--ink-900);border-color:var(--line)}
+.va-checklist .btn-q{background:transparent;color:var(--ink-700);font-weight:500}
+.va-checklist .flist{border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.va-checklist .flist .f{display:flex;align-items:center;gap:10px;padding:8px 13px;border-bottom:1px solid var(--line);font-size:13px}
+.va-checklist .flist .f:last-child{border-bottom:0}.va-checklist .flist .dot{color:var(--ink-400)}
 .va-grund{font-size:var(--t-body);color:var(--ink-700);margin-bottom:var(--s2)}
 .va-sum{font-size:var(--t-body);line-height:1.6;color:var(--ink-900);margin-bottom:var(--s3)}
 .va-block{margin-top:var(--s3)}

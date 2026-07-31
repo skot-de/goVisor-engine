@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>goVisor — Unterlagen-Analyse, Bibliothek, Ausschreibungscheck</title>
+<style>
+:root{
+  --bg:#f6f7f7; --panel:#fff; --ink:#1a1d1b; --ink-2:#5c6360; --ink-3:#8a918d;
+  --line:#e4e7e5; --line-2:#eef0ef;
+  --green:#16a06b; --green-d:#12855a; --green-t:#eaf6f0; --green-t2:#f4faf7;
+  --amber:#a16207; --amber-t:#fdf8ed; --amber-b:#f0e2c2;
+  --red:#b91c1c; --red-t:#fdf2f0; --red-b:#f3d5cd;
+  --blue:#2b5f86; --r:9px;
+  --mono:'SF Mono','JetBrains Mono','IBM Plex Mono',Menlo,Consolas,monospace;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+button{font:inherit}
+
+.stepbar{position:sticky;top:0;z-index:60;background:#14181a;color:#fff;padding:9px 14px;display:flex;gap:5px;flex-wrap:wrap;align-items:center}
+.stepbar b{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9aa5a0;margin-right:4px;font-weight:600}
+.stepbar button{font-size:11.5px;background:#232a2d;color:#c9d2ce;border:1px solid #333c3f;padding:4px 9px;border-radius:99px;cursor:pointer;white-space:nowrap}
+.stepbar button:hover{background:#2d3639;color:#fff}
+.stepbar button[aria-current="true"]{background:var(--green);border-color:var(--green);color:#fff;font-weight:600}
+.stepbar button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+.app{display:flex;min-height:calc(100vh - 40px)}
+.rail{width:52px;background:var(--panel);border-right:1px solid var(--line);flex-shrink:0;padding-top:14px;display:flex;flex-direction:column;align-items:center;gap:2px}
+.rail a{display:flex;flex-direction:column;align-items:center;gap:6px;padding:11px 0;width:44px;border-radius:7px;text-decoration:none;color:var(--ink-3);position:relative}
+.rail a.on{background:var(--green-t);color:var(--green-d)}
+.rail a span.lb{font-size:8.5px;letter-spacing:.1em;writing-mode:vertical-rl;transform:rotate(180deg);text-transform:uppercase;font-weight:600}
+.rail svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+.rail .badge{position:absolute;top:5px;right:3px;background:#e8ebe9;color:var(--ink-2);font-size:8px;width:13px;height:13px;border-radius:50%;display:grid;place-items:center;font-weight:600}
+.rail hr{width:24px;border:0;border-top:1px solid var(--line);margin:9px 0}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.topbar{background:var(--panel);border-bottom:1px solid var(--line);padding:9px 16px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{font-size:17px;font-weight:700;letter-spacing:-.03em}
+.branche{font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.branche b{color:var(--ink);font-size:12px;letter-spacing:0;text-transform:none;margin-left:6px;font-weight:600}
+.search{flex:1;min-width:180px;max-width:520px;display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:99px;padding:6px 13px;background:#fbfcfb;color:var(--ink-3);font-size:13px}
+.search svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;flex-shrink:0}
+.search kbd{margin-left:auto;border:1px solid var(--line);border-radius:4px;padding:0 5px;font-size:10px;font-family:var(--mono)}
+.topacts{display:flex;gap:14px;align-items:center;font-size:12.5px;color:var(--ink-2)}
+.topacts span{display:flex;align-items:center;gap:5px;white-space:nowrap}
+.topacts svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.7}
+.plan{border:1px solid var(--line);border-radius:99px;padding:2px 9px;font-size:11px;color:var(--ink-2);background:#fbfcfb}
+
+.listhead,.listrow{display:grid;grid-template-columns:26px 158px 74px 1fr 230px;gap:14px;align-items:center;padding:9px 16px}
+.listhead{font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);font-weight:600;border-bottom:1px solid var(--line);background:var(--panel)}
+.listrow{border-bottom:1px solid var(--line-2);background:var(--panel);font-size:13px}
+.listrow.sel{background:var(--green-t2)}
+.pill{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);border-radius:99px;padding:2.5px 9px;font-size:11.5px;background:#fbfcfb;white-space:nowrap}
+.pill i{width:5px;height:5px;border-radius:50%;background:var(--green);display:block}
+.sub{font-size:11px;color:var(--ink-3);margin-top:2px}
+.star{color:#c9cfcb}.muted{color:var(--ink-3)}
+
+.detail{background:var(--panel);border-top:1px solid var(--line);padding:16px 20px 48px;flex:1}
+.eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.eyebrow .st{display:inline-flex;align-items:center;gap:5px;background:var(--green-t);color:var(--green-d);border-radius:99px;padding:3px 10px;font-weight:600}
+.eyebrow .st i{width:5px;height:5px;border-radius:50%;background:var(--green)}
+h1.lead{font-size:22px;font-weight:700;letter-spacing:-.02em;margin:9px 0 14px}
+.tabs{display:flex;gap:22px;border-bottom:1px solid var(--line);margin-bottom:22px;overflow-x:auto}
+.tabs a{font-size:13.5px;color:var(--ink-2);text-decoration:none;padding-bottom:9px;border-bottom:2px solid transparent;white-space:nowrap}
+.tabs a.on{color:var(--ink);font-weight:600;border-bottom-color:var(--ink)}
+.wrap{max-width:900px}
+.hint{font-size:12px;color:var(--ink-3);border-left:2px solid var(--line);padding-left:11px;line-height:1.55;margin-bottom:18px;max-width:900px}
+
+/* Ablaufschritte */
+.step{border:1px solid var(--line);border-radius:var(--r);background:var(--panel);margin-bottom:11px;overflow:hidden}
+.step.is-done{background:#fbfcfb}
+.step.is-wait{opacity:.45}
+.sbar{display:flex;align-items:center;gap:12px;padding:13px 16px;width:100%;text-align:left;background:none;border:0;cursor:default}
+.step.is-done .sbar{cursor:pointer}
+.snum{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:700;flex-shrink:0;background:#e3e7e5;color:var(--ink-3)}
+.step.is-open .snum{background:var(--green);color:#fff}
+.step.is-done .snum{background:var(--green-t);color:var(--green-d)}
+.stitle{font-size:14px;font-weight:600}
+.ssum{font-size:12.5px;color:var(--ink-2);font-family:var(--mono)}
+.sright{margin-left:auto;font-size:12.5px;color:var(--ink-3)}
+.sbody{padding:0 16px 18px;border-top:1px solid var(--line-2);padding-top:16px}
+.step:not(.is-open) .sbody{display:none}
+
+.drop{border:1.5px dashed #c8d2cd;border-radius:12px;background:var(--green-t2);padding:34px 24px;text-align:center}
+.drop:hover{border-color:var(--green);background:var(--green-t)}
+.drop .big{font-size:16px;font-weight:600;margin-bottom:5px}
+.drop .small{font-size:12.5px;color:var(--ink-2);max-width:420px;margin:0 auto 16px}
+.drop svg.ic{width:28px;height:28px;stroke:var(--green);fill:none;stroke-width:1.5;margin-bottom:10px}
+
+.btn{font-size:13px;font-weight:600;border-radius:7px;padding:9px 15px;cursor:pointer;border:1px solid transparent;display:inline-flex;align-items:center;gap:7px}
+.btn-p{background:var(--green);color:#fff}.btn-p:hover{background:var(--green-d)}
+.btn-s{background:var(--panel);color:var(--ink);border-color:var(--line)}.btn-s:hover{background:#f6f8f7}
+.btn-q{background:transparent;color:var(--ink-2);padding:6px 9px;font-weight:500}.btn-q:hover{color:var(--ink);background:#f2f4f3}
+.btn-sm{padding:5px 11px;font-size:12px}
+.btn:focus-visible{outline:2px solid var(--green-d);outline-offset:2px}
+.btn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.9}
+
+/* Einsicht-Zeile (der Moment) */
+.insight{background:var(--green-t2);border:1px solid #cfe8dc;border-radius:var(--r);padding:15px 17px;margin-bottom:14px;display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.insight .n{font-family:var(--mono);font-size:26px;font-weight:700;letter-spacing:-.02em;color:var(--green-d);line-height:1}
+.insight .tx{font-size:14px;flex:1;min-width:220px}
+.insight .tx small{display:block;font-size:12px;color:var(--ink-2);margin-top:3px}
+
+.flist{border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.f{display:flex;align-items:center;gap:10px;padding:8px 13px;border-bottom:1px solid var(--line-2);font-size:13px}
+.f:last-child{border-bottom:0}
+.f .tick{color:var(--green);font-weight:700;width:13px;flex-shrink:0}
+.f .dot{color:var(--ink-3);width:13px;flex-shrink:0;text-align:center}
+.f .meta{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--ink-3);white-space:nowrap}
+.f .tag{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);border:1px solid var(--line);border-radius:4px;padding:1px 6px}
+
+.note{border-radius:8px;padding:11px 14px;font-size:13px;display:flex;gap:10px;align-items:flex-start;line-height:1.55}
+.note svg{width:15px;height:15px;flex-shrink:0;margin-top:1px;stroke:currentColor;fill:none;stroke-width:1.9}
+.note-w{background:var(--amber-t);color:var(--amber);border:1px solid var(--amber-b)}
+.note-r{background:var(--red-t);color:var(--red);border:1px solid var(--red-b)}
+.note-n{background:#f6f8f7;color:var(--ink-2);border:1px solid var(--line)}
+
+.prog{display:flex;flex-direction:column;gap:12px}
+.prog .p{display:flex;align-items:center;gap:11px;font-size:13.5px;color:var(--ink-3)}
+.prog .p.done,.prog .p.now{color:var(--ink)}.prog .p.now{font-weight:600}
+.spin{width:15px;height:15px;border:2px solid var(--line);border-top-color:var(--green);border-radius:50%;animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spin{animation:none}}
+.bar{height:3px;background:var(--line-2);border-radius:99px;overflow:hidden;margin-top:16px}
+.bar i{display:block;height:100%;width:58%;background:var(--green);border-radius:99px}
+
+/* Checkliste */
+.chead{background:#f8faf9;border:1px solid var(--line);border-radius:var(--r);padding:13px 16px;margin-bottom:10px}
+.chead .r1{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+.chead .stand{font-family:var(--mono);font-size:12px}
+.chead .link{color:var(--green-d);text-decoration:none;font-size:12.5px;font-weight:500}
+.chead .disc{font-size:11.5px;color:var(--ink-3);margin-top:9px;padding-top:9px;border-top:1px solid var(--line-2);line-height:1.55}
+
+.stake{display:flex;align-items:center;gap:11px;border:1px solid #cfe8dc;background:var(--green-t2);border-radius:var(--r);padding:11px 15px;margin-bottom:16px;font-size:13px;line-height:1.55}
+.stake svg{width:16px;height:16px;stroke:var(--green-d);fill:none;stroke-width:1.9;flex-shrink:0}
+.stake b{font-weight:600}
+.stake .mono{font-family:var(--mono)}
+
+.toc{border:1px solid var(--line);border-radius:var(--r);background:var(--panel);padding:13px 16px;margin-bottom:16px}
+.toc .th{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:11px}
+.toc .th b{font-size:14px}
+.toc .th .pr{font-family:var(--mono);font-size:12px;color:var(--ink-2)}
+.toc .chips{display:flex;gap:7px;flex-wrap:wrap}
+.tchip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:#fbfcfb;border-radius:99px;padding:5px 11px;font-size:12.5px;cursor:pointer;color:var(--ink)}
+.tchip:hover{border-color:var(--green);background:var(--green-t2)}
+.tchip .n{font-family:var(--mono);font-size:11px;color:var(--ink-3)}
+.tchip.all{background:var(--green-t);border-color:#cfe8dc;color:var(--green-d)}
+.tprog{height:3px;background:var(--line-2);border-radius:99px;overflow:hidden;margin-top:12px}
+.tprog i{display:block;height:100%;background:var(--green);border-radius:99px;transition:width .25s;width:0}
+
+details.grp{border:1px solid var(--line);border-radius:var(--r);background:var(--panel);margin-bottom:11px;overflow:hidden}
+details.grp>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:11px;padding:12px 16px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--ink-2)}
+details.grp>summary::-webkit-details-marker{display:none}
+details.grp>summary .cnt{margin-left:auto;font-family:var(--mono);font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-3);font-weight:500}
+details.grp>summary .caret{transition:transform .18s;color:var(--ink-3)}
+details.grp[open]>summary .caret{transform:rotate(90deg)}
+details.grp[open]>summary{border-bottom:1px solid var(--line-2)}
+.gbody{padding:13px 16px 6px}
+
+.item{border:1px solid var(--line);border-radius:8px;margin-bottom:11px;overflow:hidden;background:var(--panel)}
+.item .ih{display:flex;align-items:center;gap:11px;padding:11px 14px;border-bottom:1px solid var(--line-2)}
+.item .ih b{font-size:14px;font-weight:600}
+.item.done{background:#fafcfb;border-color:#d9e8e1}
+.item.done .ih{border-bottom:0}
+.item.done .ibody{display:none}
+.item .dsum{display:none;padding:0 14px 12px;font-size:12.5px;color:var(--ink-2);line-height:1.55}
+.item.done .dsum{display:block}
+.item .dsum .re{color:var(--green-d);font-weight:500;background:none;border:0;padding:0;cursor:pointer;font-size:12.5px;text-decoration:underline;text-underline-offset:2px}
+.dchk{width:19px;height:19px;border-radius:50%;border:1.5px solid #cfd6d2;background:#fff;cursor:pointer;flex-shrink:0;display:grid;place-items:center;color:transparent;font-size:11px;font-weight:800;padding:0}
+.dchk:hover{border-color:var(--green)}
+.item.done .dchk{background:var(--green);border-color:var(--green);color:#fff}
+.mark{font-size:10px;letter-spacing:.07em;text-transform:uppercase;border-radius:4px;padding:2px 7px;font-weight:600;white-space:nowrap}
+.m-z{background:#eef4f9;color:var(--blue)}
+.m-e{background:#f0f2f1;color:#4a5350}
+.m-a{background:#faf3e8;color:var(--amber)}
+.m-v{background:var(--green-t);color:var(--green-d)}
+.quote{padding:13px 14px;background:#fbfcfb;border-bottom:1px solid var(--line-2)}
+.lbl{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.quote q{display:block;font-size:13.5px;line-height:1.6;quotes:'„' '“'}
+.quote .src{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-top:7px}
+.block{padding:13px 14px}
+.ta{width:100%;border:1px solid var(--line);border-radius:7px;padding:11px 13px;font-family:var(--sans);font-size:13.5px;line-height:1.6;min-height:86px;background:#fff;color:var(--ink)}
+.ta:focus{outline:2px solid var(--green);outline-offset:-1px;border-color:var(--green)}
+.blockfoot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:11px;flex-wrap:wrap}
+.acts{display:flex;gap:7px;align-items:center}
+.chip{font-size:10.5px;border:1px solid var(--line);border-radius:99px;padding:2px 8px;color:var(--ink-2);background:#fbfcfb}
+.chip.ok{border-color:#cfe8dc;background:var(--green-t);color:var(--green-d)}
+.chip.warn{border-color:var(--amber-b);background:var(--amber-t);color:var(--amber)}
+mark.phm{background:#fdf3e3;color:var(--amber);padding:0 3px;border-radius:3px;font-weight:500}
+
+/* Empty */
+.empty{border:1px dashed #cfd6d2;border-radius:var(--r);background:#fbfcfb;padding:28px 22px;text-align:center}
+.empty .eh{font-size:15px;font-weight:600;margin-bottom:5px}
+.empty p{font-size:13px;color:var(--ink-2);max-width:440px;margin:0 auto 15px;line-height:1.6}
+
+/* library */
+.libwrap{padding:20px;flex:1}
+.libgrid{display:grid;grid-template-columns:206px 1fr;gap:22px;max-width:1080px}
+.themes{display:flex;flex-direction:column;gap:1px}
+.themes a{display:flex;justify-content:space-between;padding:8px 11px;border-radius:7px;text-decoration:none;color:var(--ink-2);font-size:13px}
+.themes a.on{background:var(--green-t);color:var(--green-d);font-weight:600}
+.themes a span{font-family:var(--mono);font-size:11px;color:var(--ink-3)}
+.themes a.on span{color:var(--green-d)}
+.bcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;margin-bottom:11px}
+.bcard .bh{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:8px}
+.bcard .bt{font-size:14px;font-weight:600}
+.bcard .bm{font-size:11.5px;color:var(--ink-3);margin-top:3px;font-family:var(--mono)}
+.bcard .bx{font-size:13px;color:var(--ink-2);line-height:1.6}
+.bcard .bf{display:flex;gap:8px;align-items:center;margin-top:11px;flex-wrap:wrap}
+.sechead{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:14px;flex-wrap:wrap;max-width:1080px}
+.sechead h1{font-size:20px;font-weight:700;letter-spacing:-.02em}
+.sechead p{font-size:13px;color:var(--ink-2);margin-top:3px}
+
+/* Vergabestelle */
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:900px}
+.fld{margin-bottom:14px}
+.fld label{display:block;font-size:12px;color:var(--ink-2);margin-bottom:5px;font-weight:500}
+.fld input,.fld select{width:100%;border:1px solid var(--line);border-radius:7px;padding:9px 11px;font:inherit;font-size:13.5px;background:#fff;color:var(--ink)}
+.fld input:focus,.fld select:focus{outline:2px solid var(--green);outline-offset:-1px;border-color:var(--green)}
+.fld .u{font-family:var(--mono)}
+.cbrow{display:flex;align-items:center;gap:9px;padding:9px 0;font-size:13.5px}
+.cbrow input{width:16px;height:16px;accent-color:var(--green)}
+.res{border:1px solid var(--line);border-radius:var(--r);background:var(--panel);overflow:hidden;margin-bottom:12px}
+.res .rh{display:flex;align-items:center;gap:11px;padding:12px 15px;border-bottom:1px solid var(--line-2)}
+.res .rh b{font-size:14px}
+.lamp{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.l-r{background:var(--red)}.l-w{background:#d99b16}.l-o{background:var(--green)}
+.res .rb{padding:13px 15px;font-size:13.5px;line-height:1.6;color:var(--ink-2)}
+.res .rb .fact{font-family:var(--mono);color:var(--ink);font-size:13px}
+.res .rb .basis{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-top:8px}
+.fcast{border:1px solid #cfe8dc;background:var(--green-t2);border-radius:var(--r);padding:18px;margin-bottom:12px}
+.fcast .big{font-family:var(--mono);font-size:32px;font-weight:700;letter-spacing:-.02em;line-height:1}
+.fcast .lbl2{font-size:13px;color:var(--ink-2);margin-top:5px}
+.fcast .steps{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;font-family:var(--mono);font-size:11.5px;color:var(--ink-2)}
+.fcast .steps span{border:1px solid var(--line);background:#fff;border-radius:99px;padding:3px 9px}
+.fcast .hon{font-size:11.5px;color:var(--ink-3);margin-top:12px;padding-top:11px;border-top:1px solid #dcece4;line-height:1.55}
+
+.scr{display:none}.scr.on{display:block}
+@media(max-width:900px){
+  .listhead,.listrow{grid-template-columns:22px 1fr}
+  .listhead>*:nth-child(n+3),.listrow>*:nth-child(n+3){display:none}
+  .libgrid,.vgrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="stepbar">
+  <b>Bieter</b>
+  <button data-s="a1" aria-current="true">1 · Ablauf</button>
+  <button data-s="a2">2 · Erster Tag</button>
+  <button data-s="a3">3 · Falsches Paket</button>
+  <button data-s="a4">4 · Neue Version</button>
+  <b style="margin-left:8px">Profil</b>
+  <button data-s="b1">5 · Bibliothek</button>
+  <button data-s="b0">6 · Leer</button>
+  <button data-s="b2">7 · Import</button>
+  <button data-s="b3">8 · Wettbewerbsdaten</button>
+  <b style="margin-left:8px">Vergabestelle</b>
+  <button data-s="c1">9 · Check</button>
+  <button data-s="c2">10 · Ergebnis</button>
+</nav>
+
+<div class="app">
+  <aside class="rail" id="railB">
+    <a href="#" class="on"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg><span class="lb">Akquise</span></a>
+    <a href="#"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6-5.3-2.9L6.7 19.6l1.1-6L3.4 9.4l6-.8z"/></svg><span class="badge">0</span><span class="lb">Merkliste</span></a>
+    <a href="#"><svg viewBox="0 0 24 24"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="7" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.8 8.8l3 7M16.2 8.8l-3 7M8.5 7h7"/></svg><span class="lb">Netzwerk</span></a>
+    <hr>
+    <a href="#"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span class="lb">Strategie</span></a>
+  </aside>
+  <aside class="rail" id="railV" style="display:none">
+    <a href="#"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 20V9"/></svg><span class="lb">Übersicht</span></a>
+    <a href="#"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><span class="lb">Markt</span></a>
+    <a href="#" class="on"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7"/><circle cx="19" cy="15" r="3"/></svg><span class="lb">Zuschnitt</span></a>
+    <hr>
+    <a href="#"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span class="lb">Controlling</span></a>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="logo">govisor</div>
+      <div class="branche" id="brancheB">Branche <b>IT &amp; Software ▾</b></div>
+      <div class="branche" id="brancheV" style="display:none">Stelle <b>Stadt Hamm — Zentrale Vergabe ▾</b></div>
+      <div class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>Suchen — Ort, PLZ, Auftraggeber, Stichwort <kbd>/</kbd></div>
+      <div class="topacts">
+        <span class="plan" id="planB">Free · 2 von 3 Analysen übrig</span>
+        <span id="userB"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.5-4 12.5-4 14 0"/></svg>CANCOM SE</span>
+        <span id="userV" style="display:none"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.5-4 12.5-4 14 0"/></svg>Stadt Hamm</span>
+      </div>
+    </header>
+
+    <!-- ===== BIETER ===== -->
+    <div id="ctxLead">
+      <div class="listhead"><div></div><div>Phase</div><div>Status</div><div>Empfehlung</div><div>Ausschreibung</div></div>
+      <div class="listrow"><div class="star">☆</div><div><span class="pill"><i></i>Ausschreibung offen</span></div><div class="muted">—</div><div><span class="pill">Offen</span><div class="sub">Erstvergabe — kein Amtsinhaber</div></div><div><b>Lieferung von Druckern und Beamern</b></div></div>
+      <div class="listrow sel"><div class="star">☆</div><div><span class="pill"><i></i>Ausschreibung offen</span></div><div class="muted">—</div><div><span class="pill">Offen</span><div class="sub">Erstvergabe — kein Amtsinhaber</div></div><div><b>Website Development</b></div></div>
+
+      <div class="detail">
+        <div class="eyebrow"><span class="st"><i></i>Ausschreibung offen</span><span>· IT-Dienste · 380.000 €</span></div>
+        <h1 class="lead">Website Development</h1>
+        <nav class="tabs"><a href="#">Übersicht</a><a href="#">Teilnahme</a><a href="#" class="on">Unterlagen</a><a href="#">Bewertung</a><a href="#">Vergabestelle</a><a href="#">Markt</a><a href="#">Team</a></nav>
+
+        <!-- a1 -->
+        <section class="scr on" id="a1">
+          <p class="hint">Ein Ablauf auf einer Seite. Die Knöpfe schalten den Zustand wirklich um — erst „Dateien auswählen", dann „Analyse starten".</p>
+          <div class="wrap">
+
+            <div class="step is-open" id="st1">
+              <button class="sbar" data-toggle="st1"><span class="snum">1</span><span><span class="stitle">Unterlagen hochladen</span> <span class="ssum" data-sum1 style="display:none">20 Dateien · Stand 15.07.2026</span></span><span class="sright" data-act1 style="display:none">ändern ▾</span></button>
+              <div class="sbody">
+                <div class="drop">
+                  <svg class="ic" viewBox="0 0 24 24"><path d="M12 16V4M7.5 8.5L12 4l4.5 4.5"/><path d="M4 15v3a2 2 0 002 2h12a2 2 0 002-2v-3"/></svg>
+                  <div class="big">Vergabeunterlagen hier ablegen</div>
+                  <div class="small">am besten das komplette ZIP vom Portal — auch einzelne PDF-, Word- oder Excel-Dateien. Je vollständiger, desto besser die Analyse.</div>
+                  <button class="btn btn-s" id="doUpload">Dateien auswählen</button>
+                </div>
+                <div style="margin-top:13px;font-size:12.5px;color:var(--ink-2);display:flex;gap:8px;align-items:center"><span>Noch nicht heruntergeladen?</span><a href="#" style="color:var(--green-d);font-weight:500;text-decoration:none">Zum Vergabeportal ↗</a></div>
+              </div>
+            </div>
+
+            <div class="step is-wait" id="st2">
+              <button class="sbar" data-toggle="st2"><span class="snum">2</span><span><span class="stitle">Erkannt</span> <span class="ssum" data-sum2 style="display:none">8 von 20 Dateien ausgewertet</span></span><span class="sright" data-act2 style="display:none">zeigen ▾</span></button>
+              <div class="sbody">
+                <div class="insight">
+                  <span class="n">8</span>
+                  <span class="tx"><b>von 20 Dateien entscheiden über eure Bewerbung.</b><small>90 Seiten insgesamt. Ausgewertet werden Eignung, Bewerbungsbedingungen, Zuschlagskriterien, Leistungsbeschreibung und Vertrag — der Rest sind Anlagen.</small></span>
+                </div>
+                <div class="flist">
+                  <div class="f"><span class="tick">✓</span> Teil A — Bewerbungsbedingungen <span class="tag">Bewerbung</span><span class="meta">11 S.</span></div>
+                  <div class="f"><span class="tick">✓</span> Teil B — Leistungsbeschreibung <span class="tag">Leistung</span><span class="meta">42 S.</span></div>
+                  <div class="f"><span class="tick">✓</span> Teil C — Kriterienkatalog <span class="tag">Zuschlag</span><span class="meta">7 S.</span></div>
+                  <div class="f"><span class="tick">✓</span> Eigenerklärung §§ 123/124 GWB <span class="tag">Eignung</span><span class="meta">2 S.</span></div>
+                  <div class="f"><span class="tick">✓</span> Eigenerklärung Russland-Sanktionen <span class="tag">Eignung</span><span class="meta">1 S.</span></div>
+                  <div class="f"><span class="tick">✓</span> Servicevertrag <span class="tag">Vertrag</span><span class="meta">18 S.</span></div>
+                  <div class="f"><span class="tick">✓</span> Aufforderung zur Angebotsabgabe <span class="tag">Aufforderung</span><span class="meta">4 S.</span></div>
+                  <div class="f"><span class="tick">✓</span> Preisblatt <span class="tag">Excel · 47 Positionen</span><span class="meta">Parser</span></div>
+                  <div class="f"><span class="dot">·</span> 12 Anlagen und Formblätter <span class="meta">nicht ausgewertet</span></div>
+                </div>
+                <div class="note note-w" style="margin-top:13px"><svg viewBox="0 0 24 24"><path d="M12 8v5M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg><div>Keine Eignungsnachweise als eigenes Dokument gefunden. Falls die Vergabestelle welche bereitstellt, bitte nachladen.</div></div>
+                <div style="margin-top:16px;display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap">
+                  <div style="font-size:12.5px;color:var(--ink-2);line-height:1.6">Du bekommst eine Checkliste mit allen geforderten Nachweisen, der Zuschlagsgewichtung und passenden Textbausteinen aus eurem Profil.<br><span style="color:var(--ink-3)">Danach: 1 von 3 Analysen diesen Monat genutzt · <a href="#" style="color:var(--ink-3)">Pro: unbegrenzt</a></span></div>
+                  <button class="btn btn-p" id="doAnalyse">Analyse starten</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="step is-wait" id="st3">
+              <button class="sbar" data-toggle="st3"><span class="snum">3</span><span><span class="stitle">Checkliste</span> <span class="ssum" data-sum3 style="display:none">6 Punkte</span></span></button>
+              <div class="sbody">
+                <div id="working">
+                  <div class="prog">
+                    <div class="p done"><span style="color:var(--green);font-weight:700;width:15px">✓</span> Unterlagen gelesen — 8 von 20 Dateien ausgewählt</div>
+                    <div class="p done"><span style="color:var(--green);font-weight:700;width:15px">✓</span> Preisblatt strukturiert ausgelesen — 47 Positionen</div>
+                    <div class="p now"><span class="spin"></span> Anforderungen abgeglichen</div>
+                    <div class="p"><span style="width:15px;text-align:center;color:var(--ink-3)">·</span> Textbausteine aus eurem Profil erstellt</div>
+                  </div>
+                  <div class="bar"><i></i></div>
+                </div>
+
+                <div id="result" style="display:none">
+                  <div class="chead">
+                    <div class="r1"><span class="stand">Stand der Unterlagen: 15.07.2026 · 20 Dateien</span><a href="#" class="link">Zum Vergabeportal ↗</a></div>
+                    <div class="disc">Bitte regelmäßig prüfen, ob neue Unterlagen vorliegen. LLM-gestützte Analyse — kann Fehler enthalten. Jede Angabe ist mit Fundstelle im Originaldokument belegt; maßgeblich bleiben die Vergabeunterlagen.</div>
+                  </div>
+
+                  <div class="stake">
+                    <svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6-5.3-2.9L6.7 19.6l1.1-6L3.4 9.4l6-.8z"/></svg>
+                    <div><b>Gewinnt ihr diesen Auftrag, berechnen wir <span class="mono">2.400 €</span>.</b> Verliert ihr, nichts. Das ist der ganze Deal — kein Aufschlag auf euer Abo, keine Gebühr fürs Bewerben.</div>
+                  </div>
+
+                  <div class="toc">
+                    <div class="th"><b>Womit möchtest du anfangen?</b><span class="pr"><span id="doneN">0</span> von 6 erledigt</span></div>
+                    <div class="chips">
+                      <button class="tchip" data-jump="g1">K.-o.-Kriterien <span class="n">2</span></button>
+                      <button class="tchip" data-jump="g2">Bewertung <span class="n">1</span></button>
+                      <button class="tchip" data-jump="g3">Einzureichen <span class="n">3</span></button>
+                      <button class="tchip" data-jump="g4">Offen <span class="n">1</span></button>
+                      <button class="tchip" data-jump="g5">Weitere Dokumente <span class="n">3</span></button>
+                      <button class="tchip all" id="collapseAll">Alle zuklappen</button>
+                    </div>
+                    <div class="tprog"><i id="tprogBar"></i></div>
+                  </div>
+
+                  <details class="grp" id="g1" open>
+                    <summary><span class="caret">›</span>K.-o.-Kriterien<span class="cnt"><span class="gd">0</span>/2 erledigt</span></summary>
+                    <div class="gbody">
+                      <article class="item">
+                        <div class="ih"><button class="dchk">✓</button><b>Referenzen</b></div>
+                        <div class="dsum">Übernommen: „Die CANCOM SE hat in den vergangenen fünf Jahren…" <button class="re">wieder öffnen</button></div>
+                        <div class="ibody">
+                          <div class="quote"><div class="lbl"><span>Aus den Unterlagen</span><span class="mark m-z">Zitat</span></div><q>Mindestens drei vergleichbare Referenzen aus den letzten fünf Jahren mit einem Volumen von je mindestens 500.000 EUR.</q><div class="src">Teil A Bewerbungsbedingungen · S. 7</div></div>
+                          <div class="block">
+                            <div class="lbl"><span>Dein Textbaustein</span><span class="mark m-v">Vorschlag · aus eurem Profil</span></div>
+                            <div class="ta" contenteditable="true">Die CANCOM SE hat in den vergangenen fünf Jahren mehrere vergleichbare Vorhaben für öffentliche Auftraggeber umgesetzt. Referenz 1: Relaunch des Bürgerportals einer Landeshauptstadt, Auftragsvolumen 780.000 EUR, Laufzeit 2023–2024. Referenz 2: Barrierefreier Webauftritt eines Bundesamtes, 640.000 EUR, 2022–2023.</div>
+                            <div class="blockfoot"><span style="font-size:11.5px;color:var(--ink-3)">Zuletzt verwendet bei „Portalentwicklung LK Rosenheim" · 03/2026</span>
+                            <span class="acts"><button class="btn btn-q btn-sm copyOnly">Nur kopieren</button><button class="btn btn-p btn-sm doneBtn"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 012-2h9"/></svg>Kopieren &amp; abhaken</button></span></div>
+                          </div>
+                        </div>
+                      </article>
+
+                      <article class="item">
+                        <div class="ih"><button class="dchk">✓</button><b>Zertifikate</b></div>
+                        <div class="dsum">Übernommen: „Die CANCOM SE ist nach ISO/IEC 27001 zertifiziert…" <button class="re">wieder öffnen</button></div>
+                        <div class="ibody">
+                          <div class="quote"><div class="lbl"><span>Aus den Unterlagen</span><span class="mark m-e">Extrahiert</span></div><q>Der Bieter hat ein zertifiziertes Informationssicherheits-Managementsystem nach ISO/IEC 27001 nachzuweisen.</q><div class="src">Teil A Bewerbungsbedingungen · S. 8</div></div>
+                          <div class="block">
+                            <div class="lbl"><span>Dein Textbaustein</span><span class="mark m-v">Vorschlag · aus eurem Profil</span></div>
+                            <div class="ta" contenteditable="true">Die CANCOM SE ist nach ISO/IEC 27001 zertifiziert. Das Zertifikat (Registriernummer 12 104 51234 TMS) ist gültig bis 30.09.2027 und liegt diesem Angebot als Anlage bei.</div>
+                            <div class="blockfoot"><span style="font-size:11.5px;color:var(--ink-3)">Erfüllt — Zertifikat im Profil hinterlegt</span>
+                            <span class="acts"><button class="btn btn-q btn-sm copyOnly">Nur kopieren</button><button class="btn btn-p btn-sm doneBtn"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 012-2h9"/></svg>Kopieren &amp; abhaken</button></span></div>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </details>
+
+                  <details class="grp" id="g2">
+                    <summary><span class="caret">›</span>Bewertung<span class="cnt"><span class="gd">0</span>/1 erledigt</span></summary>
+                    <div class="gbody">
+                      <article class="item">
+                        <div class="ih"><button class="dchk">✓</button><b>Zuschlagskriterien</b></div>
+                        <div class="dsum">Zur Kenntnis genommen — 65 % Preis, 35 % Qualität <button class="re">wieder öffnen</button></div>
+                        <div class="ibody">
+                          <div class="quote"><div class="lbl"><span>Aus den Unterlagen</span><span class="mark m-z">Zitat</span></div><q>Der Zuschlag erfolgt zu 65 % über den Preis und zu 35 % über die Qualität. Die Qualitätsbewertung erfolgt über ein Leistungspunktesystem mit maximal 10.000 Punkten.</q><div class="src">Teil C Kriterienkatalog · S. 2</div></div>
+                          <div class="block"><div class="lbl"><span>Einordnung</span><span class="mark m-a">Abgeleitet</span></div>
+                          <div style="font-size:13.5px;line-height:1.6;color:var(--ink-2)">Preisgewicht 65 % — die Kalkulation entscheidet stärker als das Konzept. „Projektorganisation" trägt 2.000 der 10.000 Punkte und ist der größte Einzelposten der Qualitätswertung.</div>
+                          <div class="blockfoot"><span></span><button class="btn btn-s btn-sm doneBtn">Zur Kenntnis genommen</button></div></div>
+                        </div>
+                      </article>
+                    </div>
+                  </details>
+
+                  <details class="grp" id="g3">
+                    <summary><span class="caret">›</span>Einzureichen<span class="cnt"><span class="gd">0</span>/3 erledigt</span></summary>
+                    <div class="gbody">
+                      <article class="item">
+                        <div class="ih"><button class="dchk">✓</button><b>Preisblatt</b></div>
+                        <div class="dsum">Erledigt — 47 Positionen in 6 Gruppen <button class="re">wieder öffnen</button></div>
+                        <div class="ibody">
+                          <div class="quote"><div class="lbl"><span>Struktur ausgelesen</span><span class="mark m-e">Extrahiert</span></div><q>47 Positionen in 6 Gruppen. Pflichtfelder: Einheitspreis je Position, Gesamtsumme netto.</q><div class="src">Anlage B5 Preisblatt.xlsx · Tabellenparser, kein LLM</div></div>
+                          <div class="block"><div style="font-size:13.5px;color:var(--ink-2);line-height:1.6">goVisor füllt Preisblätter nicht aus. Die Struktur dient der Aufwandseinschätzung.</div>
+                          <div class="blockfoot"><span></span><button class="btn btn-s btn-sm doneBtn">Erledigt</button></div></div>
+                        </div>
+                      </article>
+                      <article class="item">
+                        <div class="ih"><button class="dchk">✓</button><b>Eigenerklärung Russland-Sanktionen</b></div>
+                        <div class="dsum">Übernommen — Platzhalter waren zu ersetzen <button class="re">wieder öffnen</button></div>
+                        <div class="ibody">
+                          <div class="quote"><div class="lbl"><span>Aus den Unterlagen</span><span class="mark m-z">Zitat</span></div><q>Der Bieter erklärt, dass kein Ausschlussgrund nach Art. 5k der Verordnung (EU) Nr. 833/2014 vorliegt.</q><div class="src">Eigenerklärung Russland-Sanktionen · S. 1</div></div>
+                          <div class="block"><div class="lbl"><span>Dein Textbaustein</span><span class="mark m-a">Vorschlag · generisch</span></div>
+                          <div class="ta" contenteditable="true">Die <mark class="phm">[Firmenname]</mark> erklärt, dass kein Ausschlussgrund nach Art. 5k der Verordnung (EU) Nr. 833/2014 in der jeweils geltenden Fassung vorliegt. Diese Erklärung gilt auch für alle Nachunternehmen und Eignungsleihgeber.</div>
+                          <div class="blockfoot"><span style="font-size:11.5px;color:var(--amber)">Platzhalter ersetzen, bevor du das übernimmst</span>
+                          <span class="acts"><button class="btn btn-q btn-sm copyOnly">Nur kopieren</button><button class="btn btn-p btn-sm doneBtn"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 012-2h9"/></svg>Kopieren &amp; abhaken</button></span></div></div>
+                        </div>
+                      </article>
+                      <article class="item">
+                        <div class="ih"><button class="dchk">✓</button><b>Eigenerklärung Ausschlussgründe</b></div>
+                        <div class="dsum">Übernommen: „Für die CANCOM SE liegen keine Ausschlussgründe…" <button class="re">wieder öffnen</button></div>
+                        <div class="ibody">
+                          <div class="quote"><div class="lbl"><span>Aus den Unterlagen</span><span class="mark m-z">Zitat</span></div><q>Es liegen keine Ausschlussgründe nach §§ 123, 124 GWB vor. Die Erklärung ist vom vertretungsberechtigten Personenkreis zu unterzeichnen.</q><div class="src">Eigenerklärung §§ 123/124 GWB · S. 1</div></div>
+                          <div class="block"><div class="lbl"><span>Dein Textbaustein</span><span class="mark m-v">Vorschlag · aus eurem Profil</span></div>
+                          <div class="ta" contenteditable="true">Für die CANCOM SE liegen keine Ausschlussgründe nach §§ 123, 124 GWB vor. Die Erklärung wird vom vertretungsberechtigten Vorstand unterzeichnet.</div>
+                          <div class="blockfoot"><span style="font-size:11.5px;color:var(--ink-3)">In 5 Angeboten verwendet</span>
+                          <span class="acts"><button class="btn btn-q btn-sm copyOnly">Nur kopieren</button><button class="btn btn-p btn-sm doneBtn"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 012-2h9"/></svg>Kopieren &amp; abhaken</button></span></div></div>
+                        </div>
+                      </article>
+                    </div>
+                  </details>
+
+                  <details class="grp" id="g4">
+                    <summary><span class="caret">›</span>Offen<span class="cnt">1 Punkt</span></summary>
+                    <div class="gbody">
+                      <article class="item">
+                        <div class="ih"><span style="width:19px;text-align:center;color:var(--ink-3)">—</span><b>Bindefrist</b><span class="mark m-a" style="margin-left:auto">Nicht gefunden</span></div>
+                        <div class="ibody"><div class="block"><div style="font-size:13.5px;color:var(--ink-2);line-height:1.6">In den Unterlagen nicht eindeutig auffindbar. Bitte selbst prüfen.</div></div></div>
+                      </article>
+                    </div>
+                  </details>
+
+                  <details class="grp" id="g5">
+                    <summary><span class="caret">›</span>Weitere Dokumente<span class="cnt">3 Dateien</span></summary>
+                    <div class="gbody">
+                      <div class="flist" style="margin-bottom:11px">
+                        <div class="f"><span class="dot">·</span> Anlage B1 Screenshots.pdf <span class="meta">6 S.</span></div>
+                        <div class="f"><span class="dot">·</span> Informationsblatt Datenschutz.pdf <span class="meta">2 S.</span></div>
+                        <div class="f"><span class="dot">·</span> Hinweise zur Angebotsabgabe.pdf <span class="meta">1 S.</span></div>
+                      </div>
+                      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+                        <span style="font-size:11.5px;color:var(--ink-3)">Wenn du diese Dateien einordnest, erkennt goVisor den Typ künftig automatisch.</span>
+                        <button class="btn btn-s btn-sm">Einordnen</button>
+                      </div>
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- a2 Erster Tag -->
+        <section class="scr" id="a2">
+          <p class="hint">Erstnutzer: Profil noch leer. Alle Bausteine sind generisch, die Platzhalter sind der Normalfall — und der Weg zur eigenen Bibliothek steht oben.</p>
+          <div class="wrap">
+            <div class="chead"><div class="r1"><span class="stand">Stand der Unterlagen: 15.07.2026 · 20 Dateien</span><a href="#" class="link">Zum Vergabeportal ↗</a></div><div class="disc">LLM-gestützte Analyse — kann Fehler enthalten. Jede Angabe ist mit Fundstelle belegt; maßgeblich bleiben die Vergabeunterlagen.</div></div>
+            <div class="note note-n" style="margin-bottom:16px">
+              <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7"/></svg>
+              <div><b>Die Textbausteine sind noch Vorlagen.</b> Sobald eure Bibliothek gefüllt ist, setzt goVisor eure echten Referenzen und Zertifikate ein — statt Platzhalter.
+              <div style="margin-top:10px;display:flex;gap:9px;flex-wrap:wrap"><button class="btn btn-p btn-sm" data-go="b2">Aus alten Angeboten füllen</button><button class="btn btn-s btn-sm" data-go="b0">Bibliothek ansehen</button></div></div>
+            </div>
+            <details class="grp" open><summary><span class="caret">›</span>K.-o.-Kriterien<span class="cnt">2 Punkte</span></summary>
+              <div class="gbody">
+                <article class="item">
+                  <div class="ih"><button class="dchk">✓</button><b>Referenzen</b></div>
+                  <div class="ibody">
+                    <div class="quote"><div class="lbl"><span>Aus den Unterlagen</span><span class="mark m-z">Zitat</span></div><q>Mindestens drei vergleichbare Referenzen aus den letzten fünf Jahren mit einem Volumen von je mindestens 500.000 EUR.</q><div class="src">Teil A Bewerbungsbedingungen · S. 7</div></div>
+                    <div class="block"><div class="lbl"><span>Dein Textbaustein</span><span class="mark m-a">Vorschlag · generisch</span></div>
+                    <div class="ta" contenteditable="true">Die <mark class="phm">[Firmenname]</mark> hat in den vergangenen fünf Jahren vergleichbare Vorhaben für öffentliche Auftraggeber umgesetzt. Referenz 1: <mark class="phm">[Projekt]</mark>, Auftragsvolumen <mark class="phm">[Betrag]</mark>, Laufzeit <mark class="phm">[Zeitraum]</mark>.</div>
+                    <div class="blockfoot"><span style="font-size:11.5px;color:var(--amber)">4 Platzhalter — nach dem Ausfüllen als Baustein speichern</span>
+                    <span class="acts"><button class="btn btn-q btn-sm copyOnly">Nur kopieren</button><button class="btn btn-p btn-sm doneBtn">Kopieren &amp; abhaken</button></span></div></div>
+                  </div>
+                </article>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- a3 Falsches Paket -->
+        <section class="scr" id="a3">
+          <p class="hint">§5, Prüfung 4. Kein Umgehungsknopf — ein Schutz mit „trotzdem" wäre keiner.</p>
+          <div class="wrap">
+            <div class="step is-done"><button class="sbar"><span class="snum">1</span><span><span class="stitle">Unterlagen hochladen</span> <span class="ssum">14 Dateien</span></span><span class="sright">ändern ▾</span></button></div>
+            <div class="step is-open">
+              <button class="sbar"><span class="snum">2</span><span class="stitle">Erkannt</span></button>
+              <div class="sbody">
+                <div class="note note-r" style="margin-bottom:15px"><svg viewBox="0 0 24 24"><path d="M12 8v5M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg>
+                <div><b>Diese Unterlagen gehören zu einer anderen Ausschreibung.</b><br>In den Dokumenten steht <span style="font-family:var(--mono)">Universitätsklinikum Frankfurt · 51-2026-00008</span>. Dieser Lead ist <span style="font-family:var(--mono)">Stadt Hamm · 094-26I0328</span>.</div></div>
+                <div class="flist" style="opacity:.6;margin-bottom:15px">
+                  <div class="f"><span class="dot">·</span> Aufforderung_51-2026-00008.pdf <span class="meta">6 S.</span></div>
+                  <div class="f"><span class="dot">·</span> Leistungsbeschreibung_Sicherheitsdienst.pdf <span class="meta">31 S.</span></div>
+                  <div class="f"><span class="dot">·</span> 12 weitere Dateien</div>
+                </div>
+                <div style="display:flex;gap:9px;flex-wrap:wrap;align-items:center">
+                  <button class="btn btn-p" data-go="a1">Richtige Unterlagen wählen</button>
+                  <a href="#" class="btn btn-s" style="text-decoration:none">Unterlagen zu diesem Lead herunterladen ↗</a>
+                </div>
+                <div style="font-size:11.5px;color:var(--ink-3);margin-top:12px">Deine Analysen wurden nicht belastet.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- a4 Neue Version -->
+        <section class="scr" id="a4">
+          <p class="hint">§7.6 — aktive Warnung aus der Änderungsbekanntmachung.</p>
+          <div class="wrap">
+            <div class="note note-w" style="margin-bottom:14px"><svg viewBox="0 0 24 24"><path d="M12 8v5M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg>
+            <div><b>Die Vergabestelle hat die Unterlagen am 27.07.2026 geändert.</b><br>Eure Checkliste beruht auf dem Stand vom 15.07.2026. Laut Bekanntmachung wurden Vergabeunterlagen und Angebotsfrist geändert.
+            <div style="margin-top:11px;display:flex;gap:9px;flex-wrap:wrap"><button class="btn btn-p btn-sm" data-go="a1">Neue Unterlagen laden</button><a href="#" class="btn btn-s btn-sm" style="text-decoration:none">Zum Vergabeportal ↗</a></div></div></div>
+            <div style="opacity:.5">
+              <div class="chead"><div class="r1"><span class="stand">Stand der Unterlagen: 15.07.2026 · 20 Dateien</span></div></div>
+              <details class="grp" open><summary><span class="caret">›</span>K.-o.-Kriterien<span class="cnt">2 Punkte</span></summary>
+                <div class="gbody"><article class="item"><div class="ih"><span style="width:19px"></span><b>Referenzen</b></div>
+                <div class="quote"><div class="lbl"><span>Aus den Unterlagen</span><span class="mark m-z">Zitat</span></div><q>Mindestens drei vergleichbare Referenzen…</q><div class="src">Teil A · S. 7</div></div></article></div>
+              </details>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- ===== PROFIL ===== -->
+    <div id="ctxProf" style="display:none"><div class="libwrap">
+
+      <section class="scr" id="b0">
+        <div class="sechead"><div><h1>Bausteine</h1><p>Eure Textbausteine für Angebote — gehören dem Unternehmen, nicht der einzelnen Person.</p></div></div>
+        <p class="hint">Erster Tag: leere Bibliothek. Der Einstieg ist der Import, nicht das leere Formular.</p>
+        <div style="max-width:900px">
+          <div class="empty">
+            <div class="eh">Noch keine Bausteine</div>
+            <p>goVisor setzt eure Referenzen, Zertifikate und Konzepte automatisch in die Checklisten ein — sobald sie hier liegen. Der schnellste Weg dorthin führt über eure alten Angebote.</p>
+            <div style="display:flex;gap:9px;justify-content:center;flex-wrap:wrap">
+              <button class="btn btn-p" data-go="b2">Aus alten Angeboten füllen</button>
+              <button class="btn btn-s">Ersten Baustein schreiben</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="scr" id="b1">
+        <div class="sechead"><div><h1>Bausteine</h1><p>Eure Textbausteine für Angebote. Gehören dem Unternehmen — alle im Bid-Team nutzen dieselbe Bibliothek.</p></div>
+        <div style="display:flex;gap:9px"><button class="btn btn-s" data-go="b2">Aus alten Angeboten importieren</button><button class="btn btn-p">Baustein anlegen</button></div></div>
+        <p class="hint">§9 — kein Mengenlimit. Ordnung entsteht über Thema, Verwendungshistorie und Keywords.</p>
+        <div class="libgrid">
+          <nav class="themes">
+            <a href="#" class="on">Referenzen <span>14</span></a>
+            <a href="#">Unternehmensdarstellung <span>6</span></a>
+            <a href="#">Zertifikate &amp; QM <span>9</span></a>
+            <a href="#">Datenschutz &amp; AVV <span>4</span></a>
+            <a href="#">Projektorganisation <span>7</span></a>
+            <a href="#">Personal &amp; Qualifikation <span>5</span></a>
+            <a href="#">Technische Ausstattung <span>3</span></a>
+            <a href="#">Nachhaltigkeit <span>2</span></a>
+            <a href="#" style="color:var(--ink-3)">Archiv <span>11</span></a>
+          </nav>
+          <div>
+            <div class="bcard">
+              <div class="bh"><div><div class="bt">Referenz — Bürgerportal Landeshauptstadt</div><div class="bm">zuletzt bearbeitet von M. Kessler · 12.07.2026</div></div><button class="btn btn-q">Bearbeiten</button></div>
+              <div class="bx">Relaunch des Bürgerportals einer Landeshauptstadt mit rund 180 Online-Diensten nach OZG. Auftragsvolumen 780.000 EUR, Laufzeit 2023–2024. Umgesetzt mit einem Team aus <mark class="phm">[Projektleitung]</mark>, vier Entwicklern und einer UX-Designerin.</div>
+              <div class="bf"><span class="chip ok">in 3 gewonnenen Angeboten verwendet</span><span class="chip">OZG</span><span class="chip">Portal</span><span class="chip">Barrierefreiheit</span></div>
+            </div>
+            <div class="bcard">
+              <div class="bh"><div><div class="bt">Referenz — Webauftritt Bundesamt</div><div class="bm">zuletzt bearbeitet von S. Wagner · 28.06.2026</div></div><button class="btn btn-q">Bearbeiten</button></div>
+              <div class="bx">Barrierefreier Webauftritt eines Bundesamtes nach BITV 2.0, 640.000 EUR, 2022–2023. Migration von 1.400 Bestandsseiten, Schulung der Redaktion.</div>
+              <div class="bf"><span class="chip">BITV</span><span class="chip">Migration</span><span class="chip warn">aus einem nicht erfolgreichen Angebot</span></div>
+            </div>
+            <div class="bcard" style="opacity:.72">
+              <div class="bh"><div><div class="bt">Referenz — Intranet Kreisverwaltung</div><div class="bm">zuletzt bearbeitet von M. Kessler · 04.11.2025</div></div><button class="btn btn-q">Bearbeiten</button></div>
+              <div class="bx">Ablösung eines Alt-Intranets für eine Kreisverwaltung mit 900 Beschäftigten, 310.000 EUR.</div>
+              <div class="bf"><span class="chip">Intranet</span><span class="chip" style="color:var(--ink-3)">seit 8 Monaten nicht verwendet</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="scr" id="b2">
+        <div class="sechead"><div><h1>Aus alten Angeboten importieren</h1><p>goVisor liest die wiederverwendbaren Passagen heraus und legt sie als Bausteine an.</p></div></div>
+        <div class="bcard" style="max-width:900px">
+          <div class="drop">
+            <svg class="ic" viewBox="0 0 24 24"><path d="M12 16V4M7.5 8.5L12 4l4.5 4.5"/><path d="M4 15v3a2 2 0 002 2h12a2 2 0 002-2v-3"/></svg>
+            <div class="big">Eigene Angebote hier ablegen</div>
+            <div class="small">PDF, Word oder ZIP. Ob gewonnen oder verloren spielt keine Rolle — beide enthalten brauchbare Passagen.</div>
+            <button class="btn btn-s" data-go="b3">Dateien auswählen</button>
+          </div>
+          <div style="margin-top:18px;border-top:1px solid var(--line-2);padding-top:16px">
+            <div style="font-size:15px;font-weight:600;margin-bottom:9px">Eure Angebote bleiben eure Angebote.</div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;font-size:13px;line-height:1.6;color:var(--ink-2)">
+              <div><b style="color:var(--ink);display:block;margin-bottom:3px">Nur euer Unternehmen sieht sie</b>Verschlüsselt gespeichert, kein Zugriff durch andere Nutzer, keine Speicherung beim KI-Anbieter.</div>
+              <div><b style="color:var(--ink);display:block;margin-bottom:3px">Namen werden ersetzt</b>Personenbezogene Angaben werden zu Platzhaltern wie <mark class="phm">[Projektleitung]</mark>. Lebensläufe übernehmen wir nicht.</div>
+              <div><b style="color:var(--ink);display:block;margin-bottom:3px">Die Datei wird verworfen</b>Nach der Auswertung bleibt nur der Baustein. Zum Nachschärfen braucht ihr später euer Original.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="scr" id="b3">
+        <div class="sechead"><div><h1>Import abgeschlossen</h1><p>23 Bausteine aus 9 Angeboten angelegt.</p></div></div>
+        <p class="hint">§11 — Zweckbindung. Der Upload erfolgte für die Bibliothek; die Auswertung ist ein anderer Zweck und wird gesondert erfragt.</p>
+        <div class="bcard" style="max-width:900px">
+          <div class="flist" style="margin-bottom:16px">
+            <div class="f"><span class="tick">✓</span> 14 Referenzen <span class="meta">Referenzen</span></div>
+            <div class="f"><span class="tick">✓</span> 5 Qualitätskonzepte <span class="meta">Zertifikate &amp; QM</span></div>
+            <div class="f"><span class="tick">✓</span> 4 Datenschutzerklärungen <span class="meta">Datenschutz &amp; AVV</span></div>
+            <div class="f"><span class="dot">·</span> 6 Passagen übersprungen <span class="meta">überwiegend Personendaten</span></div>
+          </div>
+          <div style="font-size:15px;font-weight:600;margin-bottom:4px">Wettbewerbsdaten ergänzen?</div>
+          <p style="font-size:13px;color:var(--ink-2);margin-bottom:13px">Aus den Angeboten geht hervor, an welchen Verfahren ihr teilgenommen habt.</p>
+          <div class="note note-n" style="margin-bottom:15px"><svg viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+          <div><b>Was wir niemandem zeigen:</b> An welchen Verfahren ihr teilgenommen habt. Zurück fließen ausschließlich Durchschnitte über mehrere Unternehmen, nie einzelne Teilnahmen. Preise aus euren Angeboten werten wir nicht aus.
+          <b style="display:block;margin-top:8px">Was ihr bekommt:</b> Ihr seht, wie viele Bieter in euren Feldern üblicherweise antreten — eine Zahl, die in keiner öffentlichen Quelle steht.</div></div>
+          <div style="display:flex;gap:9px;align-items:center;flex-wrap:wrap">
+            <button class="btn btn-p">Wettbewerbsdaten ergänzen</button>
+            <button class="btn btn-s">Nur Bausteine behalten</button>
+            <span style="font-size:11.5px;color:var(--ink-3)">Jederzeit widerrufbar unter Profil → Daten</span>
+          </div>
+        </div>
+      </section>
+    </div></div>
+
+    <!-- ===== VERGABESTELLE ===== -->
+    <div id="ctxVerg" style="display:none"><div class="libwrap">
+      <section class="scr" id="c1">
+        <div class="sechead"><div><h1>Ausschreibungscheck</h1><p>Prüft euren Entwurf gegen vergleichbare Verfahren — bevor ihr veröffentlicht.</p></div></div>
+        <p class="hint">Vergabeblick §B.1. Der Entwurf wird nur geprüft, nie gespeichert und nie an Bieter weitergegeben.</p>
+        <div class="bcard" style="max-width:900px">
+          <div class="vgrid">
+            <div class="fld"><label>Beschaffungsfeld (CPV)</label><select><option>72000000 — IT-Dienste: Beratung, Software-Entwicklung</option><option>79710000 — Sicherheitsdienste</option><option>45000000 — Bauarbeiten</option></select></div>
+            <div class="fld"><label>Leistungsort</label><select><option>Nordrhein-Westfalen</option><option>bundesweit</option></select></div>
+            <div class="fld"><label>Geschätzter Auftragswert</label><input class="u" value="380.000 €"></div>
+            <div class="fld"><label>Anzahl Lose</label><input class="u" value="1"></div>
+            <div class="fld"><label>Geforderter Mindestumsatz</label><input class="u" value="2.000.000 €"></div>
+            <div class="fld"><label>Geforderte Referenzen</label><input class="u" value="3 × mind. 500.000 €"></div>
+          </div>
+          <div style="border-top:1px solid var(--line-2);margin:4px 0 8px;padding-top:10px">
+            <div class="cbrow"><input type="checkbox" id="cb1" checked><label for="cb1">Bürgschaft gefordert</label></div>
+            <div class="cbrow"><input type="checkbox" id="cb2"><label for="cb2">Zuschlag ausschließlich über den Preis</label></div>
+          </div>
+          <div style="border-top:1px solid var(--line-2);padding-top:15px;margin-top:8px">
+            <div style="font-size:13px;font-weight:600;margin-bottom:4px">Entwurf mitprüfen lassen <span style="font-weight:400;color:var(--ink-3);font-size:12px">— optional</span></div>
+            <p style="font-size:12.5px;color:var(--ink-2);margin-bottom:11px">Mit den Entwurfsunterlagen vergleichen wir auch Umfang und Nachweisdichte gegen ähnliche Verfahren.</p>
+            <div class="drop" style="padding:22px">
+              <div class="big" style="font-size:14px">Entwurf hier ablegen</div>
+              <div class="small" style="margin-bottom:11px">Wird ausschließlich für diese Prüfung verarbeitet und danach verworfen.</div>
+              <button class="btn btn-s btn-sm">Dateien auswählen</button>
+            </div>
+          </div>
+          <div style="margin-top:16px;display:flex;justify-content:flex-end"><button class="btn btn-p" data-go="c2">Entwurf prüfen</button></div>
+        </div>
+      </section>
+
+      <section class="scr" id="c2">
+        <div class="sechead"><div><h1>Ergebnis</h1><p>IT-Dienste · Nordrhein-Westfalen · 380.000 € · 1 Los</p></div><button class="btn btn-s" data-go="c1">Angaben ändern</button></div>
+        <div style="max-width:900px">
+          <div class="fcast">
+            <div class="big">2–3</div>
+            <div class="lbl2">Bieter erwartet euer Zuschnitt</div>
+            <div class="steps"><span>Feld-Median 3,1 gemessen</span><span>1 Los statt 3</span><span>Bürgschaft</span><span>Mindestumsatz 2 Mio €</span></div>
+            <div class="hon">Richtwert, kein Versprechen. Der Feld-Median beruht auf 214 vergleichbaren Verfahren und ist gemessen; die Wirkung der einzelnen Stellschrauben ist direktional abgeleitet, nicht je Konfiguration gemessen.</div>
+          </div>
+
+          <div class="note note-r" style="margin-bottom:14px"><svg viewBox="0 0 24 24"><path d="M12 8v5M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg>
+          <div><b>4 Hinweise, die eure Bieterzahl senken können.</b> Vergleichbare Verfahren in diesem Feld erreichen im Median 3,1 Bieter.</div></div>
+
+          <div class="res"><div class="rh"><span class="lamp l-r"></span><b>Mindestumsatz schließt den Großteil aus</b></div>
+          <div class="rb"><span class="fact">2.000.000 €</span> Mindestumsatz erreichen <span class="fact">18 %</span> der aktiven Anbieter in diesem Feld und dieser Region — 11 von 62.<div class="basis">Basis: contractor_stats · 62 aktive Anbieter · gemessen</div></div></div>
+
+          <div class="res"><div class="rh"><span class="lamp l-w"></span><b>Ein Los statt mehrerer</b></div>
+          <div class="rb">Vergleichbare Verfahren wurden im Median in <span class="fact">3 Lose</span> geteilt. Aufteilung öffnet für kleinere Anbieter; das kleinste vergleichbare Los lag bei rund <span class="fact">95.000 €</span>.<div class="basis">Basis: 214 vergleichbare Verfahren · Median · gemessen</div></div></div>
+
+          <div class="res"><div class="rh"><span class="lamp l-w"></span><b>Bürgschaft gefordert</b></div>
+          <div class="rb">Eine Bürgschaft bindet Kapital und schließt kleinere und regionale Anbieter faktisch aus. In vergleichbaren Verfahren wurde sie in <span class="fact">31 %</span> der Fälle gefordert.<div class="basis">Basis: 214 vergleichbare Verfahren · gemessen</div></div></div>
+
+          <div class="res"><div class="rh"><span class="lamp l-w"></span><b>Nachweisdichte über dem Üblichen</b><span class="chip" style="margin-left:auto">aus eurem Entwurf</span></div>
+          <div class="rb">Eure Unterlagen fordern <span class="fact">11 Eigenerklärungen</span> und <span class="fact">7 Nachweise</span>. Vergleichbare Verfahren fordern im Median <span class="fact">4</span>. Hoher Bearbeitungsaufwand schreckt kleinere Anbieter ab.<div class="basis">Basis: Dokumentenkorpus · 189 vergleichbare Verfahren mit Unterlagen · gemessen</div></div></div>
+
+          <div class="res"><div class="rh"><span class="lamp l-o"></span><b>Auftragswert plausibel</b></div>
+          <div class="rb">Euer Schätzwert von <span class="fact">380.000 €</span> liegt im Band vergleichbarer Zuschläge (<span class="fact">250.000 – 500.000 €</span>). Kein erhöhtes Aufhebungsrisiko erkennbar.<div class="basis">Basis: value_band_effektiv · n = 96 mit echtem Wert · gemessen</div></div></div>
+
+          <div class="note note-n"><svg viewBox="0 0 24 24"><path d="M12 8v5M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg>
+          <div>Die Hinweise sind Marktbeobachtungen, keine vergaberechtliche Beratung. Ob und wie ihr euren Zuschnitt ändert, entscheidet ihr — die Begründung eurer Kriterien bleibt eure Aufgabe.</div></div>
+
+          <div style="display:flex;gap:9px;margin-top:16px;flex-wrap:wrap">
+            <button class="btn btn-p">Analyse als PDF</button>
+            <button class="btn btn-s" data-go="c1">Zuschnitt anpassen und neu prüfen</button>
+          </div>
+        </div>
+      </section>
+    </div></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var leadS=['a1','a2','a3','a4'], profS=['b0','b1','b2','b3'], vergS=['c1','c2'];
+  function show(id){
+    document.querySelectorAll('.scr').forEach(function(s){s.classList.toggle('on',s.id===id)});
+    document.querySelectorAll('.stepbar button').forEach(function(b){b.setAttribute('aria-current',String(b.dataset.s===id))});
+    var L=leadS.indexOf(id)>-1,P=profS.indexOf(id)>-1,V=vergS.indexOf(id)>-1;
+    document.getElementById('ctxLead').style.display=L?'':'none';
+    document.getElementById('ctxProf').style.display=P?'':'none';
+    document.getElementById('ctxVerg').style.display=V?'':'none';
+    document.getElementById('railB').style.display=V?'none':'';
+    document.getElementById('railV').style.display=V?'':'none';
+    document.getElementById('brancheB').style.display=V?'none':'';
+    document.getElementById('brancheV').style.display=V?'':'none';
+    document.getElementById('userB').style.display=V?'none':'';
+    document.getElementById('userV').style.display=V?'':'none';
+    document.getElementById('planB').style.display=V?'none':'';
+    window.scrollTo({top:0});
+  }
+  document.querySelectorAll('.stepbar button').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.s)})});
+  document.querySelectorAll('[data-go]').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();show(b.dataset.go)})});
+
+  var st1=document.getElementById('st1'),st2=document.getElementById('st2'),st3=document.getElementById('st3');
+  function collapse(step,s1,s2){step.classList.remove('is-open');step.classList.add('is-done');
+    var a=step.querySelector(s1);if(a)a.style.display='';var b=step.querySelector(s2);if(b)b.style.display=''}
+  document.getElementById('doUpload').addEventListener('click',function(){
+    collapse(st1,'[data-sum1]','[data-act1]');
+    st2.classList.remove('is-wait');st2.classList.add('is-open');
+    st2.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+  document.getElementById('doAnalyse').addEventListener('click',function(){
+    collapse(st2,'[data-sum2]','[data-act2]');
+    st3.classList.remove('is-wait');st3.classList.add('is-open');
+    st3.scrollIntoView({behavior:'smooth',block:'start'});
+    document.getElementById('planB').textContent='Free · 1 von 3 Analysen übrig';
+    setTimeout(function(){
+      document.getElementById('working').style.display='none';
+      document.getElementById('result').style.display='';
+      st3.querySelector('[data-sum3]').style.display='';
+    },1600);
+  });
+  document.querySelectorAll('[data-toggle]').forEach(function(b){b.addEventListener('click',function(){
+    var s=document.getElementById(b.dataset.toggle); if(s.classList.contains('is-done'))s.classList.toggle('is-open')})});
+
+  function refresh(){
+    var items=document.querySelectorAll('#result .item'),tot=0,dn=0;
+    items.forEach(function(i){if(i.querySelector('.dchk')){tot++;if(i.classList.contains('done'))dn++}});
+    var n=document.getElementById('doneN'); if(n)n.textContent=dn;
+    var pb=document.getElementById('tprogBar'); if(pb)pb.style.width=(tot?dn/tot*100:0)+'%';
+    document.querySelectorAll('#result details.grp').forEach(function(g){
+      var gd=0;g.querySelectorAll('.item').forEach(function(i){if(i.querySelector('.dchk')&&i.classList.contains('done'))gd++});
+      var el=g.querySelector('.gd'); if(el)el.textContent=gd;
+    });
+  }
+  document.addEventListener('click',function(e){
+    var re=e.target.closest('.re');
+    if(re){re.closest('.item').classList.remove('done');refresh();return}
+    var co=e.target.closest('.copyOnly');
+    if(co){var t=co.textContent;co.textContent='Kopiert';setTimeout(function(){co.textContent=t},1200);return}
+    var t2=e.target.closest('.dchk, .doneBtn');
+    if(!t2)return;
+    var it=t2.closest('.item'); if(!it)return;
+    it.classList.toggle('done'); refresh();
+  });
+  var ca=document.getElementById('collapseAll');
+  if(ca)ca.addEventListener('click',function(){
+    var any=document.querySelector('#result details.grp[open]');
+    document.querySelectorAll('#result details.grp').forEach(function(g){g.open=!any});
+    this.textContent=any?'Alle aufklappen':'Alle zuklappen';
+  });
+  document.querySelectorAll('[data-jump]').forEach(function(b){b.addEventListener('click',function(){
+    var g=document.getElementById(b.dataset.jump);g.open=true;g.scrollIntoView({behavior:'smooth',block:'start'})})});
+})();
+</script>
+</body>
+</html>
