@@ -382,6 +382,7 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
 .va-upload-btn{display:inline-flex;align-items:center;gap:6px;font-size:var(--t-body);font-weight:600;color:#fff;background:var(--signal);border:none;border-radius:var(--r);padding:8px 14px;cursor:pointer}
 .va-upload-btn:hover{background:var(--signal-deep)}
 .va-status{margin-top:var(--s2);font-size:var(--t-meta);color:var(--ink-500);min-height:1em}
+.va-sum.va-none{color:var(--ink-500)}
 @media (max-width:640px){.los{grid-template-columns:28px 1fr;gap:4px}.los-w,.los-d,.los-r{text-align:left}}
 
 /* Eigener Vertrag — direkt in der Liste, statt in einem eigenen Modus */

@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import {
   LEADS, WF, STAR, applyState,
   renderUebersicht, renderTeilnahme, renderAnalyse, renderMarkt, renderBuyer,
-  renderTeam, renderGate,
+  renderTeam, renderGate, renderDocs,
 } from "@/lib/explorerCore";
 import { downloadDoc, downloadMarkdown, copyMarkdown } from "@/lib/dossier";
 import { track, EV } from "@/lib/analytics";
@@ -21,6 +21,7 @@ type Lead = {
 const TABS: { key: string; label: string; pro?: boolean }[] = [
   { key: "uebersicht", label: "Übersicht" },
   { key: "teilnahme", label: "Teilnahme" },
+  { key: "docs", label: "Unterlagen" },
   { key: "analyse", label: "Bewertung" },
   { key: "buyer", label: "Vergabestelle", pro: true },
   { key: "markt", label: "Markt", pro: true },
@@ -59,6 +60,7 @@ export function DetailPanel({
     if (!l) return "";
     switch (activeTab) {
       case "teilnahme": return renderTeilnahme(l);
+      case "docs": return renderDocs(l);
       case "analyse": return accountLimit ? renderGate() : renderAnalyse(l);
       case "buyer": return renderBuyer(l);
       case "markt": return renderMarkt(l);

@@ -914,26 +914,22 @@ function renderTeam(l){
 const pdotT = (src,hint)=> src && src!=='echt'
   ? `<span class="pdot pdot-${src}" title="${esc(SRC_TEXT[src]+(hint?' — '+hint:''))}"></span>` : '';
 
-function renderUebersicht(l){
-  const inc = l.incumbent;
-  const pdot = (src,hint)=> src && src!=='echt'
-    ? `<span class="pdot pdot-${src}" title="${esc(SRC_TEXT[src]+(hint?' — '+hint:''))}"></span>` : '';
-  const iv = (text,src,hint,num)=>{
-    const cls = (src==='unbekannt'?'v-unk ':src==='na'?'v-na ':'')+(num?'v-num':'');
-    return `<span class="v ${cls}">${esc(text)}</span>${pdot(src,hint)}`;
-  };
-  return `<div class="dbody dbody-ov">
-    ${l.lbAnalyse ? (()=>{
-      const a = l.lbAnalyse;
-      const AMP = {gruen:['●','Bietbar','va-go'], gelb:['●','Abwägen','va-weigh'], rot:['●','Hohe Hürde','va-stop']};
-      const [icon,label,cls] = AMP[a.ampel] || AMP.gelb;
-      // Abhakbare Checkliste (Strings ODER {nachweis,kategorie}).
-      const check = items => (items&&items.length) ? `<ul class="va-check">${items.map(x=>{
-        const t = typeof x==='string' ? x : (x.nachweis||'');
-        const tag = (x&&x.kategorie) ? ` <span class="va-tag">${esc(x.kategorie)}</span>` : '';
-        return `<li><label><input type="checkbox"><span>${esc(t)}${tag}</span></label></li>`;}).join('')}</ul>` : '';
-      const bl = (title,body)=> body ? `<div class="va-block"><h5>${title}</h5>${body}</div>` : '';
-      return `<section class="sec va-sec">
+// Eigener „Unterlagen"-Tab: alles Dokument-Getriebene (Vergabe-Analyse / Upload / Volltext).
+// Upload-Prompt NUR bei offenen Ausschreibungen (src='f02', Frist nicht vorbei) — bei
+// auslaufenden/geplanten Verfahren gibt es keine ladbaren Unterlagen.
+function renderDocs(l){
+  const istOffen = l.src === 'f02' && (l.tage == null || l.tage >= 0);
+  const check = items => (items&&items.length) ? `<ul class="va-check">${items.map(x=>{
+    const t = typeof x==='string' ? x : (x.nachweis||'');
+    const tag = (x&&x.kategorie) ? ` <span class="va-tag">${esc(x.kategorie)}</span>` : '';
+    return `<li><label><input type="checkbox"><span>${esc(t)}${tag}</span></label></li>`;}).join('')}</ul>` : '';
+  const bl = (title,body)=> body ? `<div class="va-block"><h5>${title}</h5>${body}</div>` : '';
+
+  const head = l.lbAnalyse ? (()=>{
+    const a = l.lbAnalyse;
+    const AMP = {gruen:['●','Bietbar','va-go'], gelb:['●','Abwägen','va-weigh'], rot:['●','Hohe Hürde','va-stop']};
+    const [icon,label,cls] = AMP[a.ampel] || AMP.gelb;
+    return `<section class="sec va-sec">
       <div class="va-head"><span class="va-amp ${cls}">${icon} ${label}</span><span class="cov">Vergabe-Analyse · aus den Unterlagen</span></div>
       ${a.ampel_grund?`<p class="va-grund">${esc(a.ampel_grund)}</p>`:''}
       ${a.zusammenfassung?`<p class="va-sum">${esc(a.zusammenfassung)}</p>`:''}
@@ -945,13 +941,13 @@ function renderUebersicht(l){
       ${(a.vorausfuellbar&&a.vorausfuellbar.length)?`<div class="va-fill"><b>Das füllen wir aus deinem Profil vor</b><span>${a.vorausfuellbar.map(x=>esc(typeof x==='string'?x:(x.nachweis||''))).join(' · ')}</span></div>`:''}
       <p class="rt-note">Automatisch aus den Vergabeunterlagen erstellt — als Orientierung, nicht rechtsverbindlich.</p>
     </section>`;
-    })() : (()=>{
-      const u = l.unterlagen || {};
-      const ext = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>`;
-      const dl = u.url
-        ? `<a class="va-dl" href="${esc(u.url)}" target="_blank" rel="noopener">Beim Vergabeportal herunterladen ${ext}</a>`
-        : `<span class="va-dl-off">Unterlagen beim Vergabeportal herunterladen</span>`;
-      return `<section class="sec va-empty">
+  })() : istOffen ? (()=>{
+    const u = l.unterlagen || {};
+    const ext = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>`;
+    const dl = u.url
+      ? `<a class="va-dl" href="${esc(u.url)}" target="_blank" rel="noopener">Beim Vergabeportal herunterladen ${ext}</a>`
+      : `<span class="va-dl-off">Unterlagen beim Vergabeportal herunterladen</span>`;
+    return `<section class="sec va-empty">
       <h4>Vergabe-Analyse <span class="cov">aus deinen Unterlagen</span></h4>
       <p class="va-sum">Aus den Vergabeunterlagen machen wir in Sekunden eine <b>Ampel-Einschätzung</b>, eine abhakbare <b>Bieter-Checkliste</b> (K.o.-Kriterien, Eignungsnachweise, Zuschlagsgewichte) und <b>füllen Firmenangaben vor</b>.</p>
       <ol class="va-steps">
@@ -961,7 +957,50 @@ function renderUebersicht(l){
       </ol>
       <div class="va-status" data-upstatus="${l.id}"></div>
     </section>`;
-    })()}
+  })() : `<section class="sec va-empty">
+      <h4>Vergabe-Analyse</h4>
+      <p class="va-sum va-none">${l.src==='auslauf'
+        ? 'Diese Ausschreibung läuft aus bzw. ist abgeschlossen — die Vergabeunterlagen sind nur während der laufenden Angebotsfrist verfügbar. Sobald der Nachfolge-Auftrag ausgeschrieben ist, kannst du hier dessen Unterlagen analysieren.'
+        : 'Diese Ausschreibung ist noch nicht offen (Vorinformation) — sobald die Angebotsfrist läuft, kannst du hier die Vergabeunterlagen hochladen und analysieren.'}</p>
+    </section>`;
+
+  const anforderungen = (!l.lbAnalyse && l.lbSignals) ? (()=>{
+    const s = l.lbSignals, rows = [];
+    if(s.guarantee!=null) rows.push(['Sicherheit / Bürgschaft', s.guarantee?'gefordert':'nicht gefordert']);
+    if(s.bindingDays!=null) rows.push(['Bindefrist', s.bindingDays+' Tage']);
+    if(s.eligibility) rows.push(['Eignungsnachweise', s.eligibility+' im Text genannt']);
+    if(s.certificates && s.certificates.length) rows.push(['Geforderte Zertifikate', s.certificates.join(', ')]);
+    if(s.variants!=null) rows.push(['Nebenangebote', s.variants?'zugelassen':'nicht zugelassen']);
+    if(s.framework) rows.push(['Rahmenvereinbarung', 'ja']);
+    const w = (s.weights && Object.keys(s.weights).length) ? s.weights : null;
+    if(!rows.length && !w) return '';
+    return `<section class="sec">
+      <h4>Anforderungen <span class="cov">aus den Vergabeunterlagen extrahiert</span></h4>
+      ${rows.length ? `<div class="kv">${rows.map(([k,v])=>`<div class="kvi"><span class="k">${k}</span><span class="vv"><span class="v">${esc(v)}</span></span></div>`).join('')}</div>` : ''}
+      ${w ? `<div class="zug"><div class="zug-h">Zuschlagsgewichte</div>${Object.entries(w).map(([k,v])=>`<div class="zug-row"><span class="zug-k">${esc(k)}</span><span class="zug-bar"><i style="width:${Math.max(3,Math.min(100,Number(v)||0))}%"></i></span><span class="zug-v">${esc(String(v))} %</span></div>`).join('')}</div>` : ''}
+    </section>`;
+  })() : '';
+
+  const volltext = l.lbText ? `<section class="sec sec-raw">
+      <h4>Leistungsbeschreibung <span class="cov">aus den Vergabeunterlagen · ${l.lbFiles||1} Datei${(l.lbFiles||1)===1?'':'en'}</span></h4>
+      <details class="rawtext"${l.lbAnalyse?'':' open'}>
+        <summary><span class="rt-open">Volltext aus den Unterlagen</span><span class="rt-len">${Math.round((l.lbChars||l.lbText.length)/1000)} Tsd. Zeichen${l.lbTruncated?' · gekürzt':''}</span></summary>
+        <div class="rt-body lb-doc">${l.lbText.split(/\n\n+/).slice(0,400).map(p=>`<p>${esc(p.trim())}</p>`).join('')}</div>
+      </details>
+    </section>` : '';
+
+  return `<div class="dbody dbody-ov">${head}${anforderungen}${volltext}</div>`;
+}
+
+function renderUebersicht(l){
+  const inc = l.incumbent;
+  const pdot = (src,hint)=> src && src!=='echt'
+    ? `<span class="pdot pdot-${src}" title="${esc(SRC_TEXT[src]+(hint?' — '+hint:''))}"></span>` : '';
+  const iv = (text,src,hint,num)=>{
+    const cls = (src==='unbekannt'?'v-unk ':src==='na'?'v-na ':'')+(num?'v-num':'');
+    return `<span class="v ${cls}">${esc(text)}</span>${pdot(src,hint)}`;
+  };
+  return `<div class="dbody dbody-ov">
     <section class="sec">
       <h4>Eckdaten</h4>
       <div class="kv">
@@ -1020,34 +1059,6 @@ function renderUebersicht(l){
       <p class="rt-note">Mehr steht in der Bekanntmachung nicht. Das ist der Normalfall —
       bei rund sechs von zehn Ausschreibungen umfasst der Beschreibungstext weniger als 200 Zeichen.
       Die eigentliche Leistungsbeschreibung liegt in den Vergabeunterlagen auf dem Vergabeportal.</p>
-    </section>` : ''}
-
-    ${l.lbSignals ? (()=>{
-      const s = l.lbSignals, rows = [];
-      if(s.guarantee!=null) rows.push(['Sicherheit / Bürgschaft', s.guarantee?'gefordert':'nicht gefordert']);
-      if(s.bindingDays!=null) rows.push(['Bindefrist', s.bindingDays+' Tage']);
-      if(s.eligibility) rows.push(['Eignungsnachweise', s.eligibility+' im Text genannt']);
-      if(s.certificates && s.certificates.length) rows.push(['Geforderte Zertifikate', s.certificates.join(', ')]);
-      if(s.variants!=null) rows.push(['Nebenangebote', s.variants?'zugelassen':'nicht zugelassen']);
-      if(s.framework) rows.push(['Rahmenvereinbarung', 'ja']);
-      const w = (s.weights && Object.keys(s.weights).length) ? s.weights : null;
-      if(!rows.length && !w) return '';
-      return `<section class="sec">
-      <h4>Anforderungen <span class="cov">aus den Vergabeunterlagen extrahiert</span></h4>
-      ${rows.length ? `<div class="kv">${rows.map(([k,v])=>`<div class="kvi"><span class="k">${k}</span><span class="vv"><span class="v">${esc(v)}</span></span></div>`).join('')}</div>` : ''}
-      ${w ? `<div class="zug"><div class="zug-h">Zuschlagsgewichte</div>${Object.entries(w).map(([k,v])=>`<div class="zug-row"><span class="zug-k">${esc(k)}</span><span class="zug-bar"><i style="width:${Math.max(3,Math.min(100,Number(v)||0))}%"></i></span><span class="zug-v">${esc(String(v))} %</span></div>`).join('')}</div>` : ''}
-      <p class="rt-note">Regelbasiert aus den Vergabeunterlagen erkannt — als Hinweis, nicht rechtsverbindlich.</p>
-    </section>`;
-    })() : ''}
-
-    ${l.lbText ? `<section class="sec sec-raw">
-      <h4>Leistungsbeschreibung <span class="cov">aus den Vergabeunterlagen · ${l.lbFiles||1} Datei${(l.lbFiles||1)===1?'':'en'}</span></h4>
-      <details class="rawtext" open>
-        <summary><span class="rt-open">Volltext aus den Unterlagen</span><span class="rt-len">${Math.round((l.lbChars||l.lbText.length)/1000)} Tsd. Zeichen${l.lbTruncated?' · gekürzt':''}</span></summary>
-        <div class="rt-body lb-doc">${l.lbText.split(/\n\n+/).slice(0,400).map(p=>`<p>${esc(p.trim())}</p>`).join('')}</div>
-      </details>
-      <p class="rt-note">Automatisch aus den heruntergeladenen Vergabeunterlagen extrahiert (PDF/DOCX/…) —
-      der eigentliche Leistungsinhalt, nicht nur der Bekanntmachungs-Zweizeiler.</p>
     </section>` : ''}
 
     ${l.hasDetail && l.beschreibung ? `<section class="sec sec-raw">
@@ -2307,7 +2318,7 @@ function applyProfile(key){
 export { applyState, getState, setLeads, setMarket, setPlzGeo, setPlzLand, setUserContracts, applyProfile, setProfile, getProfile, PROFILES, parseWert, netzInteresse, netzFreigabe, offeneGruppen };
 export {
   renderUebersicht, renderTeilnahme, renderAnalyse, renderMarkt, renderBuyer,
-  renderTeam, renderGate, renderProfil, REGIONS,
+  renderTeam, renderGate, renderProfil, renderDocs, REGIONS,
 };
 export { angaben };
 export {
