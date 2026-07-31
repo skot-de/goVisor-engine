@@ -51,19 +51,24 @@ def package_hash(files: list[tuple[str, bytes]]) -> str:
     return hashlib.sha256("\n".join(parts).encode("utf-8")).hexdigest()
 
 
-# Bietersicht-Signale (§5-3): eigenes Angebot statt Vergabeunterlagen.
+# Bietersicht-Signale (§5-3): EIGENES Angebot statt Vergabeunterlagen. Nur COMMITTENDE, präsentische
+# Formulierungen — NICHT „unser Angebot"/„Angebotssumme"/„Mit freundlichen Grüßen", denn die stehen
+# im Standard-VHB (Formblatt 124: „Falls mein/unser Angebot in die engere Wahl kommt", gemessen an
+# 25578112). Reine Phrasen trennen Bieter-Sprache und VHB-Vorlage nicht sauber → konservativ.
 _OWN_OFFER = re.compile(
-    r"\b(hiermit bieten wir|wir bieten (?:ihnen )?an|unser angebot|unser preis|angebotssumme|"
-    r"gesamtangebotssumme|bieter\s*:|wir versichern|anbei (?:unser|unser?es) angebot|"
-    r"mit freundlichen grüßen)\b", re.I)
+    r"(hiermit bieten wir\b|wir bieten ihnen (?:hiermit |folgende |nachstehend )?an\b|"
+    r"anbei (?:unser|unser?es) angebot\b|unser angebot liegt (?:bei|vor)\b|"
+    r"unser(?:er)? (?:gesamt)?(?:angebots)?preis (?:beträgt|liegt bei)\b)", re.I)
 
 
 def detect_own_offer(text: str, threshold: int = 2) -> bool:
     """Heuristik: sieht der Upload nach dem EIGENEN Angebot des Nutzers aus? (§5-3, Abbruch).
 
-    Zählt Bietersicht-Signale; ab ``threshold`` gilt es als Eigen-Angebot. Konservativ (2),
-    damit zitierte Formeln in Vergabeunterlagen nicht fälschlich anschlagen."""
-    return len(_OWN_OFFER.findall(text or "")) >= threshold
+    Zählt **distinkte** committende Bieter-Phrasen (ein wiederholtes Vorlagen-Wort zählt einmal);
+    ab ``threshold`` gilt es als Eigen-Angebot. Bewusst konservativ: ein verpasstes Eigen-Angebot
+    (wird analysiert) ist harmloser als eine fälschlich blockierte Vergabeunterlage."""
+    hits = {m.group(0).lower() for m in _OWN_OFFER.finditer(text or "")}
+    return len(hits) >= threshold
 
 
 def _tok(s: str) -> set[str]:

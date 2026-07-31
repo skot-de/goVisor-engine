@@ -432,6 +432,20 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         break;
       }
       case "openlead": openLead(value); break;
+      case "saveblock": {
+        // §7.1 Kombi-Button: editierten Baustein (oder das Zitat) in die Zwischenablage kopieren.
+        // Das Speichern in die Bausteinbibliothek (profile_text_blocks) folgt in Phase 5.
+        let blk: { quote?: string; label?: string } = {};
+        try { blk = JSON.parse(value); } catch { /* ignore */ }
+        const ta = el.closest(".cl-item")?.querySelector<HTMLTextAreaElement>("textarea.cl-edit");
+        const text = (ta?.value.trim()) || blk.quote || blk.label || "";
+        if (text) navigator.clipboard?.writeText(text).catch(() => {});
+        const btn = el as HTMLButtonElement;
+        const orig = btn.textContent;
+        btn.classList.add("ok"); btn.textContent = "Kopiert ✓";
+        setTimeout(() => { btn.classList.remove("ok"); btn.textContent = orig; }, 1500);
+        break;
+      }
       case "editprofil": router.push("/onboarding"); break;   // Profil-Tab → selbe Route wie der Topbar-Button
       case "region": setAktiveRegion(value); bump(); break;
       case "buyerdemo": setBuyerDemo(value); bump(); break;

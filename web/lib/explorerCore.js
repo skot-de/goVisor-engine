@@ -917,6 +917,46 @@ const pdotT = (src,hint)=> src && src!=='echt'
 // Eigener „Unterlagen"-Tab: alles Dokument-Getriebene (Vergabe-Analyse / Upload / Volltext).
 // Upload-Prompt NUR bei offenen Ausschreibungen (src='f02', Frist nicht vorbei) — bei
 // auslaufenden/geplanten Verfahren gibt es keine ladbaren Unterlagen.
+// §7.2 Kennzeichnungsstufen
+const _THEME_LABELS = {unternehmensdarstellung:'Unternehmen', referenzen:'Referenzen',
+  zertifikate_qm:'Zertifikate & QM', datenschutz_avv:'Datenschutz', nachhaltigkeit:'Nachhaltigkeit',
+  personal_qualifikation:'Personal & Qualifikation', technische_ausstattung:'Technik',
+  projektorganisation:'Wertung & Projekt', sonstiges:'Fristen & Formalien'};
+function _markBadge(m){
+  const M={Zitat:['Zitat','mk-cite'], Extrahiert:['Extrahiert','mk-extr'], Abgeleitet:['Abgeleitet','mk-deriv']};
+  const [t,c]=M[m]||M.Extrahiert; return `<span class="va-mark ${c}" title="Kennzeichnung">${t}</span>`;
+}
+// §7.1 Checkliste: Thema · Zitat+Fundstelle · editierbares Feld · Kombi-Button
+function renderChecklistBlock(a){
+  const items = a.checklist || [];
+  if(!items.length && !(a.missing_expected||[]).includes('zuschlagskriterien') && !(a.other_documents||[]).length) return '';
+  const groups = {};
+  items.forEach(it=>{ (groups[it.theme] = groups[it.theme] || []).push(it); });
+  const order = Object.keys(_THEME_LABELS).filter(t=>groups[t]);
+  const themed = order.map(theme=>{
+    const rows = groups[theme].map(it=>{
+      const val = it.value!=null && it.value!=='' ? ` <span class="cl-val">${esc(String(it.value))}${it.unit?(' '+esc(String(it.unit))):''}</span>` : '';
+      const src = it.quote ? `<div class="cl-quote">„${esc(it.quote)}"<span class="cl-src">→ ${esc(it.source_file||'')}${it.source_page?(', S. '+esc(String(it.source_page))):''}</span></div>` : '';
+      const block = JSON.stringify({theme, req:it.req_type, quote:it.quote||'', label:it.label});
+      return `<div class="cl-item">
+        <div class="cl-head"><span class="cl-label">${esc(it.label||it.req_type)}${val}</span>${_markBadge(it.marking)}</div>
+        ${src}
+        <textarea class="cl-edit" placeholder="Dein Textbaustein aus dem Profil …"></textarea>
+        <button class="cl-save" data-saveblock='${esc(block)}'>Kopieren &amp; speichern</button>
+      </div>`;
+    }).join('');
+    return `<div class="cl-group"><h6 class="cl-theme">${_THEME_LABELS[theme]} <span class="cl-n">${groups[theme].length}</span></h6>${rows}</div>`;
+  }).join('');
+  // §7.4 Zuschlagskriterien nicht auffindbar (nie stilles Weglassen)
+  const missZ = (a.missing_expected||[]).includes('zuschlagskriterien')
+    ? `<div class="cl-miss">⚠ <b>Zuschlagskriterien</b> — in den Unterlagen nicht eindeutig auffindbar. Bitte selbst prüfen.</div>` : '';
+  // §7.5 Weitere (nicht klassifizierte) Dokumente — neutraler Eintrag, keine Fehlermeldung
+  const other = (a.other_documents||[]).length
+    ? `<div class="cl-other"><div class="cl-other-h">Weitere Dokumente <span class="cl-n">${a.other_documents.length}</span></div>
+       ${a.other_documents.slice(0,12).map(f=>`<div class="cl-other-f">· ${esc(f)}</div>`).join('')}</div>` : '';
+  return `<div class="va-checklist">${themed}${missZ}${other}</div>`;
+}
+
 function renderDocs(l){
   const istOffen = l.src === 'f02' && (l.tage == null || l.tage >= 0);
   const check = items => (items&&items.length) ? `<ul class="va-check">${items.map(x=>{
@@ -929,17 +969,25 @@ function renderDocs(l){
     const a = l.lbAnalyse;
     const AMP = {gruen:['●','Bietbar','va-go'], gelb:['●','Abwägen','va-weigh'], rot:['●','Hohe Hürde','va-stop']};
     const [icon,label,cls] = AMP[a.ampel] || AMP.gelb;
+    const portal = (l.unterlagen&&l.unterlagen.url) ? ` · <a href="${esc(l.unterlagen.url)}" target="_blank" rel="noopener">Zum Vergabeportal ↗</a>` : '';
+    const docstate = `<div class="va-state">Stand der Unterlagen: ${l.lbFiles||1} Datei${(l.lbFiles||1)===1?'':'en'}. Bitte regelmäßig prüfen, ob neue Unterlagen vorliegen.${portal}</div>`;
+    const rej = (a.rejected_items>0) ? `<span class="va-rej" title="Aussagen ohne im Dokument auffindbares Zitat wurden verworfen (Belegpflicht)">${a.rejected_items} unbelegte verworfen</span>` : '';
+    // Reiche Checkliste (§7) wenn vorhanden, sonst Legacy-Blöcke (Alt-Format-Analysen)
+    const body = (a.checklist && a.checklist.length!=null && ('checklist' in a))
+      ? renderChecklistBlock(a)
+      : `${bl('Muss erfüllt sein — K.o.-Kriterien', check(a.ko_kriterien))}
+         ${bl('Einzureichen — Eignungsnachweise', check(a.eignung))}
+         ${(a.zuschlag&&a.zuschlag.length)?bl('Zuschlagskriterien', `<div class="zug">${a.zuschlag.map(z=>`<div class="zug-row"><span class="zug-k">${esc(z.kriterium)}</span><span class="zug-bar"><i style="width:${Math.max(3,Math.min(100,Number(z.gewicht)||0))}%"></i></span><span class="zug-v">${esc(String(z.gewicht))} %</span></div>`).join('')}</div>`):''}
+         ${(a.fristen&&a.fristen.length)?bl('Fristen', `<div class="kv">${a.fristen.map(f=>`<div class="kvi"><span class="k">${esc(f.typ||'')}</span><span class="vv"><span class="v">${esc(f.wert||'')}</span></span></div>`).join('')}</div>`):''}
+         ${bl('Aufwandstreiber', check(a.aufwand))}`;
     return `<section class="sec va-sec">
-      <div class="va-head"><span class="va-amp ${cls}">${icon} ${label}</span><span class="cov">Vergabe-Analyse · aus den Unterlagen</span></div>
+      <div class="va-head"><span class="va-amp ${cls}">${icon} ${label}</span><span class="cov">Vergabe-Analyse · aus den Unterlagen</span>${rej}</div>
+      ${docstate}
       ${a.ampel_grund?`<p class="va-grund">${esc(a.ampel_grund)}</p>`:''}
       ${a.zusammenfassung?`<p class="va-sum">${esc(a.zusammenfassung)}</p>`:''}
-      ${bl('Muss erfüllt sein — K.o.-Kriterien', check(a.ko_kriterien))}
-      ${bl('Einzureichen — Eignungsnachweise', check(a.eignung))}
-      ${(a.zuschlag&&a.zuschlag.length)?bl('Zuschlagskriterien', `<div class="zug">${a.zuschlag.map(z=>`<div class="zug-row"><span class="zug-k">${esc(z.kriterium)}</span><span class="zug-bar"><i style="width:${Math.max(3,Math.min(100,Number(z.gewicht)||0))}%"></i></span><span class="zug-v">${esc(String(z.gewicht))} %</span></div>`).join('')}</div>`):''}
-      ${(a.fristen&&a.fristen.length)?bl('Fristen', `<div class="kv">${a.fristen.map(f=>`<div class="kvi"><span class="k">${esc(f.typ||'')}</span><span class="vv"><span class="v">${esc(f.wert||'')}</span></span></div>`).join('')}</div>`):''}
-      ${bl('Aufwandstreiber', check(a.aufwand))}
+      ${body}
       ${(a.vorausfuellbar&&a.vorausfuellbar.length)?`<div class="va-fill"><b>Das füllen wir aus deinem Profil vor</b><span>${a.vorausfuellbar.map(x=>esc(typeof x==='string'?x:(x.nachweis||''))).join(' · ')}</span></div>`:''}
-      <p class="rt-note">Automatisch aus den Vergabeunterlagen erstellt — als Orientierung, nicht rechtsverbindlich.</p>
+      <p class="rt-note">LLM-gestützte Analyse — kann Fehler enthalten. Jede Angabe ist mit Fundstelle im Originaldokument belegt; maßgeblich bleiben die Vergabeunterlagen.</p>
     </section>`;
   })() : istOffen ? (()=>{
     const u = l.unterlagen || {};

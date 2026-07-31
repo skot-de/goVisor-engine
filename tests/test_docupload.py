@@ -50,11 +50,14 @@ def test_package_hash_order_independent():
 
 def test_detect_own_offer():
     offer = ("Sehr geehrte Damen und Herren, hiermit bieten wir Ihnen an, die Leistung zu erbringen. "
-             "Unsere Angebotssumme beträgt 120.000 EUR. Mit freundlichen Grüßen")
-    assert du.detect_own_offer(offer)
+             "Unser Angebotspreis beträgt 120.000 EUR netto. Mit freundlichen Grüßen")
+    assert du.detect_own_offer(offer)                        # 2 distinkte committende Phrasen
     docs = ("Leistungsbeschreibung: Der Auftragnehmer erbringt die Reinigung. Die Angebotssumme ist "
-            "in das Preisblatt einzutragen.")                # ein zitiertes 'Angebotssumme' → kein Eigen-Angebot
+            "in das Preisblatt einzutragen.")                # Vorlagen-Vokabular → kein Eigen-Angebot
     assert not du.detect_own_offer(docs)
+    # Standard-VHB-Formblatt 124 (wiederholt „unser Angebot") darf NICHT anschlagen (§5-3-Falle):
+    vhb = "Falls mein/unser Angebot in die engere Wahl kommt, werde ich/werden wir … " * 3
+    assert not du.detect_own_offer(vhb)
 
 
 def test_match_lead():

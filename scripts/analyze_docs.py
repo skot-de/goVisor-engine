@@ -111,7 +111,7 @@ def analyze_notice(files: list, structured: dict | None = None) -> dict:
     structured = structured or {}
     by_type_text = defaultdict(list)
     by_type_file = {}
-    checklist, positions, parsed_files = [], [], []
+    checklist, positions, parsed_files, other_docs = [], [], [], []
     for name, text in files:
         s = structured.get(name)
         if s:                                          # Parser griff → kein LLM (§6.2)
@@ -124,6 +124,8 @@ def analyze_notice(files: list, structured: dict | None = None) -> dict:
             dt = doctypes.classify(name)
             if dt == "sonstiges":                      # Dateiname unklar → Inhaltsprobe (§6.1, Schritt 2)
                 dt = docparse.classify_content(text or "")
+            if not doctypes.is_priority(dt):           # nicht-priorisiert → „Weitere Dokumente" (§7.5)
+                other_docs.append(name)
             by_type_text[dt].append(text or "")
             by_type_file.setdefault(dt, name)
 
@@ -152,6 +154,7 @@ def analyze_notice(files: list, structured: dict | None = None) -> dict:
         "checklist": checklist,
         "positions": positions,
         "parsed_files": parsed_files,
+        "other_documents": other_docs,
         "rejected_items": rejected,
         "token_cost": round(sent_chars / CHARS_PER_TOKEN),
         "doctypes_seen": seen,
