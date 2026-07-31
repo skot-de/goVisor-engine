@@ -1432,6 +1432,13 @@ def _consolidate_by_vat(entity_of: dict, vat_of: dict, already: set):
             continue
         id_members = [e for e in members if e.method in id_methods]
         target = min(id_members or members, key=lambda e: e.entity_id)
+        # Anzeige-Label: die knappste Basis-Behördenbezeichnung im Cluster (wenigste signifikante
+        # Token) — damit ein register-getragener VERWALTER (Treuhänder wie DSK, der die VAT der
+        # Kommune administriert) nicht zum Namen der Behörde wird („Stadt Heidelberg" statt „DSK…").
+        # entity_id/national_id des Ziels bleiben unangetastet (die VAT ist ohnehin cluster-spezifisch).
+        base = min(members, key=lambda e: (len(_vat_tokens(e.norm)), len(e.canonical_name or "")))
+        if base.canonical_name and base.entity_id != target.entity_id:
+            target.canonical_name = base.canonical_name
         for e in members:
             if e.entity_id != target.entity_id:
                 merge_map[e.entity_id] = target.entity_id

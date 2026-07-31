@@ -717,24 +717,27 @@ def test_consolidate_by_vat():
                               confidence=0.4, national_id=None, source_names=(norm,), norm=norm)
     V1 = "vat:DE143296597"   # Heidelberg (gemeinsamer Token 'heidelberg')
     V2 = "vat:DE309506861"   # geteilte VG-VAT: drei verschiedene Gemeinden
-    V3 = "vat:DE129517720"   # Max-Planck (Register-Anker vorhanden)
+    V4 = "vat:DE111111111"   # Treuhänder-Fall: register-Agent + nur-Name-Basis-Behörde
     ents = {e.entity_id: e for e in [
         E("h1", "heidelberg"), E("h2", "heidelberg tiefbauamt"),
         E("v1", "bous"), E("v2", "eurasburg"), E("v3", "langerringen"),  # kein gemeinsamer Token
-        E("m1", "max planck gesellschaft foerderung"),
-        E("m2", "max planck institut", Method.TED_NATIONAL_ID),          # Register-Ziel
+        E("a1", "musterstadt"),                                          # Basis-Behörde (nur-Name)
+        E("a2", "treuhand verwaltung musterstadt", Method.TED_NATIONAL_ID),  # register-Verwalter
         E("x1", "solo"),
     ]}
     vat_of = {"h1": {V1}, "h2": {V1},
               "v1": {V2}, "v2": {V2}, "v3": {V2},
-              "m1": {V3}, "m2": {V3},
-              "x1": {V1, V3}}                       # mehrdeutig
+              "a1": {V4}, "a2": {V4},
+              "x1": {V1, V4}}                       # mehrdeutig
     mm, skipped = _consolidate_by_vat(ents, vat_of, already=set())
     assert mm.get("h2") == "h1", "gleiche VAT + Token 'heidelberg' → merge"
-    assert mm.get("m1") == "m2", "Register-Entität ist bevorzugtes Ziel"
     assert "v1" not in mm and "v2" not in mm and "v3" not in mm, "geteilte VG-VAT ohne Token → kein merge"
     assert skipped >= 1, "geteilte VAT wird gezählt"
     assert "x1" not in mm, "mehrdeutige Entität (2 VATs) übersprungen"
+    # Treuhänder-Fall: register-Agent a2 bleibt Merge-Ziel (behält national_id), aber das ANZEIGE-
+    # Label kommt aus der knappsten Basis-Behörde a1 → nicht der Verwalter ist das Gesicht.
+    assert mm.get("a1") == "a2", "Basis-Behörde merged in register-Ziel"
+    assert ents["a2"].canonical_name == ents["a1"].canonical_name, "Label = Basis-Behörde, nicht Verwalter"
     mm2, _ = _consolidate_by_vat(ents, vat_of, already={"h2"})
     assert "h2" not in mm2, "already schützt"
 
