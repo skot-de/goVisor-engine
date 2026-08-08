@@ -6,11 +6,12 @@ import { useState, useEffect, useCallback } from "react";
 
 type Sig = { n: number; vol: number | null; letzter?: string | null; naechstes?: string | null };
 type Badge = { label: string; cls: string; spark?: string };
+type Control = { k: string; label: string; def: number; step?: number; type?: string };
 type Firma = {
   id: string; name: string; plz: string | null; ort: string | null; wins36: number;
   medWert: number | null; vol36: number | null; s1: Sig; s2: Sig; dominant: string;
   email: string | null; phone: string | null;
-  badge?: Badge; line?: string; // Vertriebsziel-Segment (deutschlandweit)
+  badge?: Badge; line?: string; metric?: number; // Vertriebsziel-Segment (deutschlandweit)
 };
 
 // Vertriebsziel-Segmente A–G (govisor-vertriebsziele-spec.md), Reihenfolge = Ansprache-Priorität §8
@@ -125,16 +126,32 @@ export function InternFirmen() {
     runSearch(plz.trim(), ort.trim(), name.trim(), radius);
   }
 
-  // Vertriebsziel-Segment (deutschlandweite Kohorte, kein Suchbegriff)
+  // Vertriebsziel-Segment (deutschlandweite Kohorte, kein Suchbegriff) — mit einstellbaren Knöpfen
   const [segHint, setSegHint] = useState<string>("");
-  async function runSegment(seg: string) {
-    if (segMode === seg) { setSegMode(""); setFirmen(null); return; } // Toggle aus
+  const [segControls, setSegControls] = useState<Control[]>([]);
+  const [segParams, setSegParams] = useState<Record<string, number>>({});
+  const [sortBy, setSortBy] = useState<"metric" | "name" | "wert" | "sitz">("metric");
+
+  async function runSegment(seg: string, over?: Record<string, number>) {
+    if (segMode === seg && !over) { setSegMode(""); setFirmen(null); return; } // Toggle aus
     setSegMode(seg); setFilter(""); setLoading(true); setErr(null); setFirmen(null); setOpenId(null); setDetail(null);
-    window.history.replaceState(null, "", `/intern?segment=${seg}`);
+    const p = over
+      ? Object.entries(over).map(([k, v]) => `${k}:${v}`).join(",")
+      : "";
+    window.history.replaceState(null, "", `/intern?segment=${seg}${p ? `&p=${p}` : ""}`);
     try {
-      const r = await fetch(`/api/intern/firmen?segment=${seg}`);
+      const r = await fetch(`/api/intern/firmen?segment=${seg}${p ? `&p=${encodeURIComponent(p)}` : ""}`);
       const d = await r.json();
-      if (d.error) setErr(d.error); else { setFirmen(d.firmen || []); setSegHint(d.hint || ""); }
+      if (d.error) setErr(d.error);
+      else {
+        setFirmen(d.firmen || []); setSegHint(d.hint || "");
+        if (!over) { // frisches Segment → Knöpfe + Defaults übernehmen
+          setSegControls(d.controls || []);
+          const defs: Record<string, number> = {};
+          (d.controls || []).forEach((c: Control) => { defs[c.k] = c.def; });
+          setSegParams(defs); setSortBy("metric");
+        }
+      }
     } catch { setErr("Segment fehlgeschlagen"); }
     finally { setLoading(false); }
   }
@@ -168,6 +185,15 @@ export function InternFirmen() {
     filter === "s1" ? f.s1.n > 0 : filter === "s2" ? f.s2.n > 0 : filter === "offen" ? !contacted.has(f.id)
     : filter === "aktiv" ? f.wins36 >= AKTIV_MIN : true
   );
+
+  // Segment-Modus: clientseitig sortierbar (Backend liefert nach metric vorsortiert)
+  const shown = segMode
+    ? [...(firmen || [])].sort((a, b) =>
+        sortBy === "name" ? a.name.localeCompare(b.name)
+        : sortBy === "wert" ? (b.medWert || 0) - (a.medWert || 0)
+        : sortBy === "sitz" ? (a.plz || "~").localeCompare(b.plz || "~")
+        : (b.metric || 0) - (a.metric || 0))
+    : visible;
 
   // (2) Pitch-Zeile: kopierfertiger Einzeiler aus den Schmerz-Signalen der Firma
   function pitchFor(f: Firma, d: Detail | null): string {
@@ -229,6 +255,23 @@ export function InternFirmen() {
       </div>
       {segMode && segHint && <div className="in-seghint">{SEGS.find((s) => s.key === segMode)?.tab}: {segHint}</div>}
 
+      {segMode && segControls.length > 0 && (
+        <div className="in-knobs">
+          {segControls.map((c) => (
+            <label key={c.k} className="in-knob">
+              <span>{c.label}</span>
+              {c.type === "toggle"
+                ? <input type="checkbox" checked={(segParams[c.k] ?? c.def) >= 1}
+                    onChange={(e) => setSegParams((p) => ({ ...p, [c.k]: e.target.checked ? 1 : 0 }))} />
+                : <input type="number" value={segParams[c.k] ?? c.def} step={c.step || 1}
+                    onChange={(e) => setSegParams((p) => ({ ...p, [c.k]: Number(e.target.value) }))} />}
+            </label>
+          ))}
+          <button className="in-knob-apply" disabled={loading} onClick={() => runSegment(segMode, segParams)}>Anwenden</button>
+          <button className="in-knob-reset" onClick={() => runSegment(segMode)}>Zurücksetzen</button>
+        </div>
+      )}
+
       {err && <div className="in-err">{err}</div>}
       {firmen && firmen.length === 0 && <div className="in-empty">Keine Firmen gefunden.</div>}
 
@@ -242,6 +285,16 @@ export function InternFirmen() {
               <button className={`in-chip ${filter === "aktiv" ? "on" : ""}`} onClick={() => setFilter((f) => f === "aktiv" ? "" : "aktiv")} title="≥4 Zuschläge/Jahr">⚡ aktiv {firmen.filter((f) => f.wins36 >= AKTIV_MIN).length}</button>
               <button className={`in-chip ${filter === "offen" ? "on" : ""}`} onClick={() => setFilter((f) => f === "offen" ? "" : "offen")}>nicht angesprochen {firmen.filter((f) => !contacted.has(f.id)).length}</button>
             </>}
+            {segMode && (
+              <label className="in-sortlabel">Sortieren:
+                <select className="in-sort" value={sortBy} onChange={(e) => setSortBy(e.target.value as typeof sortBy)}>
+                  <option value="metric">Signalstärke</option>
+                  <option value="wert">Median-Wert</option>
+                  <option value="name">Name (A–Z)</option>
+                  <option value="sitz">PLZ / Sitz</option>
+                </select>
+              </label>
+            )}
           </div>
           <button className="in-csv" onClick={exportCsv}>CSV ↓</button>
         </div>
@@ -254,7 +307,7 @@ export function InternFirmen() {
         </div>
       )}
       <div className="in-list">
-        {visible.map((f) => (
+        {shown.map((f) => (
           <div key={f.id} className={`in-card ${openId === f.id ? "open" : ""}`}>
             <button className="in-row" onClick={() => toggle(f.id)}>
               <div className="in-main">

@@ -41,7 +41,14 @@ export async function GET(req: Request) {
     }
     if (seg) {
       if (!/^[A-G]$/.test(seg)) return NextResponse.json({ error: "ungültiges Segment" }, { status: 400 });
-      return NextResponse.json(await run(["--segment", seg]));
+      const p = (u.searchParams.get("p") || "").trim();
+      const args = ["--segment", seg];
+      // Knopf-Overrides: streng validiertes k:v,k:v (nur Kleinbuchstaben-Keys + Zahlen)
+      if (p) {
+        if (!/^[a-z_]+:[0-9.]+(,[a-z_]+:[0-9.]+)*$/.test(p)) return NextResponse.json({ error: "ungültige Parameter" }, { status: 400 });
+        args.push("--params", p);
+      }
+      return NextResponse.json(await run(args));
     }
     const args = ["--search"];
     for (const k of ["plz", "ort", "name"] as const) {
