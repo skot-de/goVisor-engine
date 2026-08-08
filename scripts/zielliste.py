@@ -196,6 +196,8 @@ def compute_signals(con, now):
     SE = f"read_parquet('{G}/succession_events.parquet')"
     QU = f"read_parquet('{G}/quality.parquet')"
     LE = f"read_parquet('{G}/lead_export.parquet')"
+    CS = f"read_parquet('{G}/contractor_stats.parquet')"
+    MO = f"read_parquet('{G}/market_opportunity.parquet')"
 
     # ── S1: Verluste je Identität (predecessor-Gewinner der Population, verdrängt) ──
     con.execute(f"""CREATE OR REPLACE TEMP TABLE losses AS
@@ -236,24 +238,72 @@ def compute_signals(con, now):
         AND months_to_expiry BETWEEN 6 AND 18
       GROUP BY 1""")
 
+    # ── S3: hoher Aufwand, niedrige Ausbeute (Unterperformance ggü. Segment-Durchschnitt) ──
+    # Erwartete Zuschläge je Segment = n_awards / aktive Anbieter (market_opportunity), verglichen
+    # mit den tatsächlichen Zuschlägen der Firma (contractor_stats). NÄHERUNG (Teilnahmen ohne
+    # Zuschlag sind nicht öffentlich, Spec §7) — nur Untererfüllung zählt, über Segmente summiert.
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE s3 AS
+      WITH seg AS (
+        SELECT ei.identity_id, cs.cpv_class, sum(cs.total_wins) AS wins,
+               max(mo.n_awards) AS seg_awards, max(mo.n_contractors) AS seg_contractors
+        FROM {CS} cs JOIN {EI} ei ON ei.entity_id = cs.entity_id
+        LEFT JOIN {MO} mo ON mo.cpv4 = cs.cpv_class
+        WHERE ei.identity_id IN (SELECT identity_id FROM pop)
+        GROUP BY 1,2)
+      SELECT identity_id,
+             sum(greatest(0.0, (seg_awards::DOUBLE / nullif(seg_contractors,0)) - wins)) AS s3_raw
+      FROM seg WHERE seg_contractors > 0 GROUP BY 1""")
+
+    # ── S4: Wachstum / Professionalisierung (win-gewichteter YoY-Trend, nur positiv) ──
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE s4 AS
+      SELECT ei.identity_id,
+             greatest(0.0, sum(cs.total_wins * coalesce(cs.trend_yoy,0))
+                            / nullif(sum(cs.total_wins),0)) AS s4_raw
+      FROM {CS} cs JOIN {EI} ei ON ei.entity_id = cs.entity_id
+      WHERE ei.identity_id IN (SELECT identity_id FROM pop) GROUP BY 1""")
+
+    # ── S5: Feldbreite (distinkte CPV-Bündel + NUTS1-Regionen mit ≥1 Zuschlag) — schwaches Signal ──
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE s5 AS
+      WITH cpvb AS (SELECT ei.identity_id, count(DISTINCT cs.cpv_class) nc
+                    FROM {CS} cs JOIN {EI} ei ON ei.entity_id = cs.entity_id
+                    WHERE ei.identity_id IN (SELECT identity_id FROM pop) GROUP BY 1),
+           nutsb AS (SELECT identity_id, count(DISTINCT nuts1) nr FROM w
+                     WHERE nuts1 IS NOT NULL GROUP BY 1)
+      SELECT p.identity_id, coalesce(cpvb.nc,0) + coalesce(nutsb.nr,0) AS s5_raw
+      FROM pop p LEFT JOIN cpvb USING (identity_id) LEFT JOIN nutsb USING (identity_id)""")
+
     # ── Zusammenführen + perzentil-normalisieren INNERHALB der Population (§4) ──
     con.execute(f"""CREATE OR REPLACE TEMP TABLE scored AS
       WITH j AS (
         SELECT p.*, coalesce(s1.s1_raw,0) AS s1_raw, coalesce(s1.verlorene_12m,0) AS verlorene_12m,
                coalesce(s1.verlust_vol,0) AS verlust_vol, s1.letzter_verlust,
                coalesce(s2.s2_raw,0) AS s2_raw, coalesce(s2.auslauf_n,0) AS auslauf_n,
-               coalesce(s2.auslauf_vol,0) AS auslauf_vol, s2.naechstes_auslaufdatum
+               coalesce(s2.auslauf_vol,0) AS auslauf_vol, s2.naechstes_auslaufdatum,
+               coalesce(s3.s3_raw,0) AS s3_raw, coalesce(s4.s4_raw,0) AS s4_raw,
+               coalesce(s5.s5_raw,0) AS s5_raw
         FROM pop p
         LEFT JOIN s1 ON s1.identity_id = p.identity_id
-        LEFT JOIN s2 ON s2.identity_id = p.identity_id)
+        LEFT JOIN s2 ON s2.identity_id = p.identity_id
+        LEFT JOIN s3 ON s3.identity_id = p.identity_id
+        LEFT JOIN s4 ON s4.identity_id = p.identity_id
+        LEFT JOIN s5 ON s5.identity_id = p.identity_id)
       SELECT *,
              CASE WHEN s1_raw>0 THEN percent_rank() OVER (ORDER BY s1_raw) ELSE 0 END AS s1_norm,
-             CASE WHEN s2_raw>0 THEN percent_rank() OVER (ORDER BY s2_raw) ELSE 0 END AS s2_norm
+             CASE WHEN s2_raw>0 THEN percent_rank() OVER (ORDER BY s2_raw) ELSE 0 END AS s2_norm,
+             CASE WHEN s3_raw>0 THEN percent_rank() OVER (ORDER BY s3_raw) ELSE 0 END AS s3_norm,
+             CASE WHEN s4_raw>0 THEN percent_rank() OVER (ORDER BY s4_raw) ELSE 0 END AS s4_norm,
+             CASE WHEN s5_raw>0 THEN percent_rank() OVER (ORDER BY s5_raw) ELSE 0 END AS s5_norm
       FROM j""")
-    # Score (Stufe 2: nur S1+S2; S3–S5 folgen)
+    # Gesamtscore (§4): 40·S1 + 30·S2 + 15·S3 + 9·S4 + 6·S5. Dominantes Signal = stärkster Beitrag.
     con.execute("""CREATE OR REPLACE TEMP TABLE ranked AS
-      SELECT *, round(40*s1_norm + 30*s2_norm, 1) AS score,
-             CASE WHEN 40*s1_norm >= 30*s2_norm THEN 'S1_verlust' ELSE 'S2_auslauf' END AS dominant_signal
+      SELECT *, round(40*s1_norm + 30*s2_norm + 15*s3_norm + 9*s4_norm + 6*s5_norm, 1) AS score,
+             list_extract(list_sort(
+               [struct_pack(w := 40*s1_norm, k := 'S1_verlust'),
+                struct_pack(w := 30*s2_norm, k := 'S2_auslauf'),
+                struct_pack(w := 15*s3_norm, k := 'S3_ausbeute'),
+                struct_pack(w := 9*s4_norm,  k := 'S4_wachstum'),
+                struct_pack(w := 6*s5_norm,  k := 'S5_breite')],
+               'DESC'), 1).k AS dominant_signal
       FROM scored ORDER BY score DESC""")
 
 
@@ -309,10 +359,12 @@ def main():
     measure(con, region)
     compute_signals(con, now)
 
-    n_s1 = con.execute("SELECT count(*) FROM scored WHERE s1_raw>0").fetchone()[0]
-    n_s2 = con.execute("SELECT count(*) FROM scored WHERE s2_raw>0").fetchone()[0]
-    print(f"\nSignal-Abdeckung in der Population: S1 (Verlust) {n_s1} · S2 (Auslauf) {n_s2}")
-    print("\nTop 15 nach Score (S1×40 + S2×30):")
+    cov = con.execute("""SELECT count(*) FILTER(WHERE s1_raw>0), count(*) FILTER(WHERE s2_raw>0),
+                                 count(*) FILTER(WHERE s3_raw>0), count(*) FILTER(WHERE s4_raw>0),
+                                 count(*) FILTER(WHERE s5_raw>0) FROM scored""").fetchone()
+    print(f"\nSignal-Abdeckung: S1 Verlust {cov[0]} · S2 Auslauf {cov[1]} · S3 Ausbeute {cov[2]} · "
+          f"S4 Wachstum {cov[3]} · S5 Breite {cov[4]}")
+    print("\nTop 15 nach Score (40·S1 + 30·S2 + 15·S3 + 9·S4 + 6·S5):")
     top = con.execute("""SELECT firmenname, score, dominant_signal, verlorene_12m, round(verlust_vol) verlust_vol,
                                 auslauf_n, round(auslauf_vol) auslauf_vol
                          FROM ranked LIMIT 15""").fetchall()
@@ -325,7 +377,8 @@ def main():
       SELECT identity_id, firmenname, haupt_nuts1, score, dominant_signal,
              wins36, round(avg_val) avg_wert, round(vol36) volumen_36m,
              verlorene_12m, round(verlust_vol) verlust_volumen, letzter_verlust,
-             auslauf_n, round(auslauf_vol) auslauf_volumen_6_18m, naechstes_auslaufdatum
+             auslauf_n, round(auslauf_vol) auslauf_volumen_6_18m, naechstes_auslaufdatum,
+             round(s3_raw,1) s3_unterperformance, round(s4_raw,2) s4_wachstum, s5_raw s5_feldbreite
       FROM ranked ORDER BY score DESC {f'LIMIT {args.limit}' if args.limit else ''}
     ) TO '{out}' (HEADER, DELIMITER ',')""")
     n = con.execute("SELECT count(*) FROM ranked").fetchone()[0]
