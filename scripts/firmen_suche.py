@@ -27,13 +27,22 @@ def _con():
     return con
 
 
-# Vertragsart-Marker: Rahmen/wiederkehrend = wiederkehrendes Volumen (wertvoll für Ansprache),
-# Einmalauftrag = nach Auslauf erledigt (Sven: "Heizung aufbauen — da kann man nichts draus machen").
-_ART = {"framework": "Rahmen", "recurring": "wiederkehrend", "one_off_works": "Einmalauftrag"}
+# Vertragsart-Label je contract_kind. Kategorie steuert Farbe/Bedeutung in der UI:
+#   rahmen  = wiederkehrendes Volumen (wird neu ausgeschrieben → lohnt Dranbleiben)
+#   einmal  = einmalige Leistung (nach Fertigstellung erledigt)
+#   neutral = Vergabeart unbestimmt (Klassifikator konnte sie nicht sicher zuordnen)
+_ART = {
+    "framework":     ("Rahmenvertrag", "rahmen"),
+    "recurring":     ("Wiederkehrend", "rahmen"),
+    "one_off_works": ("Einmalauftrag", "einmal"),
+    "works_other":   ("Bauleistung", "einmal"),
+    "other":         ("Einzelvergabe", "neutral"),
+}
 
 
 def art_of(kind):
-    return _ART.get(kind)
+    """(label, kategorie) je contract_kind — beide fürs Frontend."""
+    return _ART.get(kind, (None, None))
 
 
 def search(plz=None, ort=None, name=None, radius=None):
@@ -142,7 +151,7 @@ def detail(identity_id):
         wett = {"name": Z.clean_name(wname), "id": wid,
                 "expiring": [{"titel": w[0], "buyer": w[1], "vol": float(w[2]) if w[2] else None,
                               "ende": w[3].strftime("%m/%Y") if w[3] and hasattr(w[3], "strftime") else None,
-                              "art": art_of(w[4]), "url": w[5]} for w in wexp]}
+                              "art": art_of(w[4])[0], "artcat": art_of(w[4])[1], "url": w[5]} for w in wexp]}
     # Ansprache-Kontext: Segment/Feld, KMU-Flag, Website, Schlüsselkunden (Top-Vergabestellen)
     NP = "read_parquet('" + str(ROOT / "data/silver/DE/notice_parties/*/*.parquet") + "', hive_partitioning=1)"
     BCH = f"read_parquet('{G}/buyer_contractor_history.parquet')"
@@ -160,32 +169,44 @@ def detail(identity_id):
       JOIN {EN} en ON en.entity_id=b.buyer_entity_id WHERE en.canonical_name IS NOT NULL
       GROUP BY 1 ORDER BY 2 DESC LIMIT 4""", [identity_id]).fetchall()
 
-    # Top-Potenzial-Leads: OFFENE Ausschreibungen in den Kompetenz-Feldern der Firma (ihre häufigsten
-    # CPV4) — "was könnte sie jetzt bieten" (Klostermann → Bahnbau). Der Kern-Nutzen von goVisor.
-    cpv4 = con.execute(f"""SELECT substr(n.cpv_main,1,4) c FROM {PE} p JOIN {EI} ei ON ei.entity_id=p.entity_id
+    # Top-Potenzial-Leads: OFFENE Ausschreibungen in den KERN-Feldern der Firma. Gewichtet nach
+    # Kompetenz-Zentralität (wie oft die Firma in diesem CPV4 gewonnen hat) — NICHT nur nach Wert;
+    # sonst rutscht ein Millionen-Tender aus einem Randfeld nach oben. Entdoppelt je Titel.
+    cpv4 = con.execute(f"""SELECT substr(n.cpv_main,1,4) c, count(*) w FROM {PE} p
+      JOIN {EI} ei ON ei.entity_id=p.entity_id
       JOIN read_parquet('{SN}', hive_partitioning=1) n ON n.notice_id=p.notice_id
       WHERE p.role='winner' AND ei.identity_id=? AND n.cpv_main IS NOT NULL
-      GROUP BY 1 ORDER BY count(*) DESC LIMIT 4""", [identity_id]).fetchall()
-    cpv_in = "(" + ",".join("'" + r[0].replace("'", "") + "'" for r in cpv4) + ")" if cpv4 else "('')"
-    leads = con.execute(f"""SELECT slug, title, buyer_name, buyer_town, value_eur, deadline_date, days_to_deadline,
-             coalesce(documents_url, source_url) AS url
-      FROM {LE} WHERE phase='open' AND substr(cpv_code,1,4) IN {cpv_in}
-        AND (days_to_deadline IS NULL OR days_to_deadline >= 0)
-      ORDER BY value_eur DESC NULLS LAST LIMIT 5""").fetchall()
+      GROUP BY 1 HAVING count(*) >= 2 ORDER BY 2 DESC LIMIT 6""", [identity_id]).fetchall()
+    if cpv4:
+        CL2 = f"read_parquet('{G}/dim_cpv_label.parquet')"
+        fit_vals = ",".join(f"('{r[0].replace(chr(39),'')}',{int(r[1])})" for r in cpv4)
+        leads = con.execute(f"""
+          WITH fit(c4, w) AS (VALUES {fit_vals})
+          SELECT le.title, le.buyer_name, le.buyer_town, le.value_eur, le.deadline_date, le.days_to_deadline,
+                 coalesce(le.documents_url, le.source_url) AS url, le.contract_kind, cl.label AS seg
+          FROM {LE} le JOIN fit ON fit.c4 = substr(le.cpv_code,1,4)
+          LEFT JOIN {CL2} cl ON cl.cpv_code = substr(le.cpv_code,1,4) || '0000'
+          WHERE le.phase='open' AND (le.days_to_deadline IS NULL OR le.days_to_deadline >= 0)
+          QUALIFY row_number() OVER (PARTITION BY lower(trim(le.title))
+                                     ORDER BY le.value_eur DESC NULLS LAST) = 1
+          ORDER BY fit.w DESC, le.value_eur DESC NULLS LAST LIMIT 5""").fetchall()
+    else:
+        leads = []
     return {
         "id": identity_id, "name": Z.clean_name(prof[0]), "plz": prof[1], "ort": prof[2],
         "email": prof[3], "phone": prof[4], "wins36": int(prof[5] or 0),
         "website": meta[0] if meta else None, "kmu": bool(meta[1]) if meta else False,
         "segment": Z.clean_name(seg[0]) if seg and seg[0] else None,
         "topBuyers": [{"name": Z.clean_name(t[0]), "wins": int(t[1]), "letztes": int(t[2]) if t[2] else None} for t in topbuyers],
-        "leads": [{"titel": l[1], "buyer": l[2], "ort": l[3],
-                   "vol": float(l[4]) if l[4] else None,
-                   "frist": l[5].strftime("%d.%m.%Y") if l[5] and hasattr(l[5], "strftime") else None,
-                   "tage": int(l[6]) if l[6] is not None else None, "url": l[7]} for l in leads],
+        "leads": [{"titel": l[0], "buyer": l[1], "ort": l[2],
+                   "vol": float(l[3]) if l[3] else None,
+                   "frist": l[4].strftime("%d.%m.%Y") if l[4] and hasattr(l[4], "strftime") else None,
+                   "tage": int(l[5]) if l[5] is not None else None, "url": l[6],
+                   "art": art_of(l[7])[0], "artcat": art_of(l[7])[1], "seg": l[8]} for l in leads],
         "expiring": [{"titel": e[0], "buyer": e[1], "vol": float(e[2]) if e[2] else None,
                       "ende": e[3].strftime("%m/%Y") if e[3] and hasattr(e[3], "strftime") else None,
                       "mte": int(e[4]) if e[4] is not None else None,
-                      "vsrc": e[5], "art": art_of(e[6]), "url": e[7],
+                      "vsrc": e[5], "art": art_of(e[6])[0], "artcat": art_of(e[6])[1], "url": e[7],
                       "seit": int(e[8]) if e[8] else None} for e in exp],
         "losses": [{"titel": l[0], "vol": float(l[1]) if l[1] else None,
                     "datum": str(l[2]) if l[2] else None, "gewinner": Z.clean_name(l[3]) if l[3] else None}

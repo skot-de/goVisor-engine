@@ -10,23 +10,23 @@ type Firma = {
   medWert: number | null; vol36: number | null; s1: Sig; s2: Sig; dominant: string;
   email: string | null; phone: string | null;
 };
-type Exp = { titel: string; buyer: string; vol: number | null; ende: string | null; mte: number | null; vsrc?: string; art?: string | null; url?: string | null; seit?: number | null };
+type Exp = { titel: string; buyer: string; vol: number | null; ende: string | null; mte: number | null; vsrc?: string; art?: string | null; artcat?: string | null; url?: string | null; seit?: number | null };
 type Loss = { titel: string; vol: number | null; datum: string | null; gewinner: string | null };
 type Recent = { titel: string; buyer: string | null; vol: number | null; jahr: number | null; url?: string | null };
 type Wett = { name: string; id: string; expiring: Exp[] };
 type Buyer = { name: string; wins: number; letztes: number | null };
-type Lead = { titel: string; buyer: string | null; ort: string | null; vol: number | null; frist: string | null; tage: number | null; url: string | null };
+type Lead = { titel: string; buyer: string | null; ort: string | null; vol: number | null; frist: string | null; tage: number | null; url: string | null; art?: string | null; artcat?: string | null; seg?: string | null };
 type Detail = { id: string; name: string; expiring: Exp[]; losses: Loss[]; recent?: Recent[]; wettbewerber?: Wett | null;
   website?: string | null; kmu?: boolean; segment?: string | null; topBuyers?: Buyer[]; leads?: Lead[]; error?: string };
 
-// Vertragstitel als Link zur TED-Bekanntmachung (extern → neuer Tab) + Rahmen/Einmal-Marker.
-function Titel({ text, url, art }: { text: string | null; url?: string | null; art?: string | null }) {
+// Vertragstitel als Link zur TED-Bekanntmachung (extern → neuer Tab) + Vertragsart-Label.
+// artcat (rahmen/einmal/neutral) steuert die Farbe — Bedeutung erklärt die Legende unten.
+function Titel({ text, url, art, artcat }: { text: string | null; url?: string | null; art?: string | null; artcat?: string | null }) {
   const t = text || "(ohne Titel)";
-  const artCls = art === "Rahmen" || art === "wiederkehrend" ? "in-art rahmen" : art === "Einmalauftrag" ? "in-art einmal" : "";
   return (
     <>
       {url ? <a className="in-tlink" href={url} target="_blank" rel="noreferrer">{t} ↗</a> : t}
-      {art && <span className={artCls}>{art}</span>}
+      {art && <span className={`in-art ${artcat || "neutral"}`}>{art}</span>}
     </>
   );
 }
@@ -49,7 +49,7 @@ export function InternFirmen() {
   const [detailLoading, setDetailLoading] = useState(false);
   const [contacted, setContacted] = useState<Set<string>>(new Set());
   const [notes, setNotes] = useState<Record<string, string>>({});
-  const [filter, setFilter] = useState<"" | "s1" | "s2" | "offen">(""); // Schnellfilter
+  const [filter, setFilter] = useState<"" | "s1" | "s2" | "offen" | "aktiv">(""); // Schnellfilter
 
   useEffect(() => {
     try { setContacted(new Set(JSON.parse(localStorage.getItem("govisor.outreach") || "[]"))); } catch { /* ignore */ }
@@ -127,9 +127,14 @@ export function InternFirmen() {
     finally { setDetailLoading(false); }
   }
 
-  // Schnellfilter auf die Trefferliste (Signal-basiert, clientseitig)
+  // Aktiv = im Schnitt ≥4 Zuschläge/Jahr (wins36 ≥ 12) → lohnt die Ansprache auch ohne akutes Signal
+  const AKTIV_MIN = 12;
+  const perJahr = (w: number) => Math.round((w / 3) * 10) / 10;
+
+  // Schnellfilter auf die Trefferliste (clientseitig)
   const visible = (firmen || []).filter((f) =>
-    filter === "s1" ? f.s1.n > 0 : filter === "s2" ? f.s2.n > 0 : filter === "offen" ? !contacted.has(f.id) : true
+    filter === "s1" ? f.s1.n > 0 : filter === "s2" ? f.s2.n > 0 : filter === "offen" ? !contacted.has(f.id)
+    : filter === "aktiv" ? f.wins36 >= AKTIV_MIN : true
   );
 
   // (2) Pitch-Zeile: kopierfertiger Einzeiler aus den Schmerz-Signalen der Firma
@@ -193,6 +198,7 @@ export function InternFirmen() {
             <button className={`in-chip ${filter === "" ? "on" : ""}`} onClick={() => setFilter("")}>Alle {firmen.length}</button>
             <button className={`in-chip ${filter === "s2" ? "on" : ""}`} onClick={() => setFilter((f) => f === "s2" ? "" : "s2")}>◷ Auslauf {firmen.filter((f) => f.s2.n > 0).length}</button>
             <button className={`in-chip ${filter === "s1" ? "on" : ""}`} onClick={() => setFilter((f) => f === "s1" ? "" : "s1")}>▼ Verlust {firmen.filter((f) => f.s1.n > 0).length}</button>
+            <button className={`in-chip ${filter === "aktiv" ? "on" : ""}`} onClick={() => setFilter((f) => f === "aktiv" ? "" : "aktiv")} title="≥4 Zuschläge/Jahr">⚡ aktiv {firmen.filter((f) => f.wins36 >= AKTIV_MIN).length}</button>
             <button className={`in-chip ${filter === "offen" ? "on" : ""}`} onClick={() => setFilter((f) => f === "offen" ? "" : "offen")}>nicht angesprochen {firmen.filter((f) => !contacted.has(f.id)).length}</button>
           </div>
           <button className="in-csv" onClick={exportCsv}>CSV ↓</button>
@@ -207,12 +213,14 @@ export function InternFirmen() {
             <button className="in-row" onClick={() => toggle(f.id)}>
               <div className="in-main">
                 <span className="in-name">{f.name}{contacted.has(f.id) && <span className="in-done">✓ angesprochen</span>}</span>
-                <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || "Sitz unbekannt"} · {f.wins36} Zuschläge/36M · Median {eur(f.medWert)}</span>
+                <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || "Sitz unbekannt"} · ≈{perJahr(f.wins36)} Zuschläge/Jahr · Median {eur(f.medWert)}</span>
               </div>
               <div className="in-signals">
                 {f.s1.n > 0 && <span className="in-sig s1" title={`verlorene Verträge (letzter ${f.s1.letzter ?? "?"})`}>▼ {f.s1.n} verloren · {eur(f.s1.vol)}</span>}
                 {f.s2.n > 0 && <span className="in-sig s2" title={`nächstes Ende ${f.s2.naechstes ?? "?"}`}>◷ {f.s2.n} laufen aus · {eur(f.s2.vol)}</span>}
-                {f.s1.n === 0 && f.s2.n === 0 && <span className="in-sig none">kein akutes Signal</span>}
+                {f.s1.n === 0 && f.s2.n === 0 && (f.wins36 >= AKTIV_MIN
+                  ? <span className="in-sig aktiv" title="aktiv, aber kein frischer Verlust und nichts läuft in 6–18 Monaten aus">⚡ aktiv · ≈{perJahr(f.wins36)}/Jahr</span>
+                  : <span className="in-sig none" title="kein frischer Verlust, kein Vertrag läuft in 6–18 Monaten aus — die Firma kann trotzdem laufende Aufträge halten">ruhig</span>)}
               </div>
             </button>
 
@@ -258,53 +266,34 @@ export function InternFirmen() {
                       </div>
                     )}
 
-                    {detail.losses.length > 0 && <div className="in-block">
-                      <h3>Jüngst verloren ({detail.losses.length})</h3>
-                      {detail.losses.slice(0, 8).map((l, i) => (
-                        <div key={i} className="in-item">
-                          <span className="in-it">{l.titel || "(ohne Titel)"}</span>
-                          <span className="in-iv">{eur(l.vol)} · an {l.gewinner || "?"} · {l.datum?.slice(0, 7)}</span>
-                        </div>
-                      ))}
-                    </div>}
-
+                    {/* Gesprächsaufhänger: laufende Verträge, die demnächst enden (Amtsinhaber-Position) */}
                     {detail.expiring.length > 0 && <div className="in-block">
-                      <h3>Läuft aus — Gesprächsaufhänger ({detail.expiring.length})</h3>
-                      {detail.expiring.slice(0, 12).map((e, i) => (
+                      <h3>◷ Läuft aus — Gesprächsaufhänger <span className="in-h3n">{detail.expiring.length}</span></h3>
+                      {detail.expiring.slice(0, 5).map((e, i) => (
                         <div key={i} className="in-item">
-                          <span className="in-it"><Titel text={e.titel} url={e.url} art={e.art} />
+                          <span className="in-it"><Titel text={e.titel} url={e.url} art={e.art} artcat={e.artcat} />
                             <span className="in-buyer">{e.buyer}{e.seit ? ` · hält seit ${e.seit}` : ""}</span></span>
                           <span className="in-iv">{eur(e.vol)}{e.vsrc && e.vsrc !== "actual" ? " *" : ""} · Ende {e.ende ?? "?"}</span>
                         </div>
                       ))}
-                      {detail.expiring.some((e) => e.vsrc && e.vsrc !== "actual") &&
-                        <div className="in-legend">* Wert geschätzt/aus CPV-Median abgeleitet — nicht veröffentlicht.</div>}
+                      {detail.expiring.length > 5 && <div className="in-more">+{detail.expiring.length - 5} weitere</div>}
                     </div>}
 
-                    {detail.wettbewerber && detail.wettbewerber.expiring.length > 0 && <div className="in-block">
-                      <h3>Hauptwettbewerber: {detail.wettbewerber.name.split(" ").slice(0, 4).join(" ")} — was bei ihm ausläuft ({detail.wettbewerber.expiring.length})
-                        {" "}<a className="in-link" href={`/firma?id=${encodeURIComponent(detail.wettbewerber.id)}&from=intern`}>Profil →</a></h3>
-                      {detail.wettbewerber.expiring.slice(0, 8).map((e, i) => (
-                        <div key={i} className="in-item">
-                          <span className="in-it"><Titel text={e.titel} url={e.url} art={e.art} /><span className="in-buyer">{e.buyer}</span></span>
-                          <span className="in-iv">{eur(e.vol)} · Ende {e.ende ?? "?"}</span>
-                        </div>
-                      ))}
-                    </div>}
-
+                    {/* Chancen: offene Ausschreibungen in ihrem Kern-Fachgebiet */}
                     {(detail.leads?.length ?? 0) > 0 && <div className="in-block in-leads">
-                      <h3>▸ Passende offene Ausschreibungen — Top {detail.leads!.length}</h3>
+                      <h3>▸ Passende offene Ausschreibungen <span className="in-h3n">Top {detail.leads!.length}</span></h3>
                       {detail.leads!.map((l, i) => (
                         <div key={i} className="in-item">
-                          <span className="in-it"><Titel text={l.titel} url={l.url} /><span className="in-buyer">{l.buyer || ""}{l.ort ? ` · ${l.ort}` : ""}</span></span>
+                          <span className="in-it"><Titel text={l.titel} url={l.url} art={l.art} artcat={l.artcat} />
+                            <span className="in-buyer">{l.seg ? `${l.seg} · ` : ""}{l.buyer || ""}{l.ort ? ` · ${l.ort}` : ""}</span></span>
                           <span className="in-iv">{eur(l.vol)} · Frist {l.frist ?? "?"}{l.tage != null ? ` (${l.tage} T)` : ""}</span>
                         </div>
                       ))}
                     </div>}
 
                     {(detail.recent?.length ?? 0) > 0 && <div className="in-block">
-                      <h3>Zuletzt gewonnen ({detail.recent!.length})</h3>
-                      {detail.recent!.slice(0, 8).map((r, i) => (
+                      <h3>Zuletzt gewonnen <span className="in-h3n">{detail.recent!.length}</span></h3>
+                      {detail.recent!.slice(0, 5).map((r, i) => (
                         <div key={i} className="in-item">
                           <span className="in-it"><Titel text={r.titel} url={r.url} /><span className="in-buyer">{r.buyer || ""}</span></span>
                           <span className="in-iv">{eur(r.vol)}{r.jahr ? ` · ${r.jahr}` : ""}</span>
@@ -312,8 +301,37 @@ export function InternFirmen() {
                       ))}
                     </div>}
 
+                    {detail.losses.length > 0 && <div className="in-block">
+                      <h3>▼ Jüngst verloren <span className="in-h3n">{detail.losses.length}</span></h3>
+                      {detail.losses.slice(0, 5).map((l, i) => (
+                        <div key={i} className="in-item">
+                          <span className="in-it">{l.titel || "(ohne Titel)"}</span>
+                          <span className="in-iv">{eur(l.vol)} · an {l.gewinner || "?"} · {l.datum?.slice(0, 7)}</span>
+                        </div>
+                      ))}
+                    </div>}
+
+                    {detail.wettbewerber && detail.wettbewerber.expiring.length > 0 && <div className="in-block">
+                      <h3>Hauptwettbewerber: {detail.wettbewerber.name.split(" ").slice(0, 4).join(" ")} — läuft aus <span className="in-h3n">{detail.wettbewerber.expiring.length}</span>
+                        {" "}<a className="in-link" href={`/firma?id=${encodeURIComponent(detail.wettbewerber.id)}&from=intern`}>Profil →</a></h3>
+                      {detail.wettbewerber.expiring.slice(0, 5).map((e, i) => (
+                        <div key={i} className="in-item">
+                          <span className="in-it"><Titel text={e.titel} url={e.url} art={e.art} artcat={e.artcat} /><span className="in-buyer">{e.buyer}</span></span>
+                          <span className="in-iv">{eur(e.vol)} · Ende {e.ende ?? "?"}</span>
+                        </div>
+                      ))}
+                    </div>}
+
                     {detail.losses.length === 0 && detail.expiring.length === 0 && (detail.recent?.length ?? 0) === 0 && (detail.leads?.length ?? 0) === 0 &&
                       <div className="in-muted">Keine Vertragsdaten erfasst.</div>}
+
+                    {/* Legende: erklärt die Vertragsart-Labels + den Schätz-Marker einmal zentral */}
+                    <div className="in-legende">
+                      <span><span className="in-art rahmen">Rahmen</span> wird neu ausgeschrieben — lohnt Dranbleiben</span>
+                      <span><span className="in-art einmal">Einmal</span> einmalige Leistung, danach erledigt</span>
+                      <span><span className="in-art neutral">Einzel</span> Vergabeart unbestimmt</span>
+                      <span className="in-legende-star">* Wert geschätzt (CPV-Median), nicht veröffentlicht</span>
+                    </div>
                   </>
                 ))}
               </div>

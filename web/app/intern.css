@@ -53,6 +53,20 @@
 .in-art { font-size: 9.5px; padding: 1px 6px; border-radius: 99px; margin-left: 7px; white-space: nowrap; font-family: var(--sans); }
 .in-art.rahmen { color: var(--signal-deep); background: var(--signal-wash); border: 1px solid #cfe8dc; }
 .in-art.einmal { color: var(--ink-400); background: var(--surface-3); border: 1px solid var(--line); }
+.in-art.neutral { color: var(--ink-300); background: transparent; border: 1px dashed var(--line); }
+
+/* Zähler in Section-Überschriften (dezent, statt „(12)") */
+.in-h3n { color: var(--ink-300); font-weight: 600; margin-left: 4px; }
+.in-more { font-size: 11px; color: var(--ink-400); padding-top: 6px; }
+
+/* aktiv-Signal (kein Schmerz, aber viele Zuschläge → anschreibbar) */
+.in-sig.aktiv { color: var(--signal-deep); font-weight: 600; }
+
+/* Legende der Vertragsart-Labels (einmal, am Fuß des Details) */
+.in-legende { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 16px; padding-top: 12px;
+  border-top: 1px solid var(--line-2, #eef0ef); font-size: 11px; color: var(--ink-500); }
+.in-legende .in-art { margin-left: 0; margin-right: 4px; }
+.in-legende-star { color: var(--ink-400); }
 .in-done { font-size: 10px; color: var(--signal-deep); background: var(--signal-wash); border: 1px solid #cfe8dc; border-radius: 99px; padding: 1px 7px; margin-left: 8px; font-weight: 600; }
 .in-done-btn { font-size: 11.5px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink-700); border-radius: 7px; padding: 4px 10px; cursor: pointer; font: inherit; }
 .in-done-btn:hover { background: var(--surface-2); }
