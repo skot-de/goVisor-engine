@@ -33,15 +33,15 @@ export async function GET(req: Request) {
   }
   const u = new URL(req.url);
   const id = u.searchParams.get("id");
-  const nw = u.searchParams.get("nationwide");
+  const seg = u.searchParams.get("segment");
   try {
     if (id) {
       if (!ID_RE.test(id)) return NextResponse.json({ error: "ungültige ID" }, { status: 400 });
       return NextResponse.json(await run(["--detail", id]));
     }
-    if (nw) {
-      if (nw !== "top" && nw !== "absteiger") return NextResponse.json({ error: "ungültiger Modus" }, { status: 400 });
-      return NextResponse.json(await run(["--nationwide", nw]));
+    if (seg) {
+      if (!/^[A-G]$/.test(seg)) return NextResponse.json({ error: "ungültiges Segment" }, { status: 400 });
+      return NextResponse.json(await run(["--segment", seg]));
     }
     const args = ["--search"];
     for (const k of ["plz", "ort", "name"] as const) {

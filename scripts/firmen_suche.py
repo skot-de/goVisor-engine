@@ -74,71 +74,165 @@ _KONSORTIUM = ("firmenname NOT LIKE 'BG %' AND firmenname NOT LIKE '%ARGE%' "
                "AND lower(firmenname) NOT LIKE '%arbeitsgemeinschaft%' AND firmenname NOT LIKE '% / %'")
 
 
-def nationwide(mode="top", limit=100):
-    """Deutschlandweite Rangliste (kein Suchbegriff), belegte Firmen, letzte 36 Monate in 3 Jahresfenstern.
+# Vertriebsziel-Segmente A–G (govisor-vertriebsziele-spec.md) — deutschlandweite Kohorten.
+# Reihenfolge = Ansprache-Priorität §8 (F akutester Schmerz zuerst, B größte/kälteste Gruppe zuletzt).
+SEGMENTS = {
+    "F": ("Frische Verlierer", "Verlust ≤6 Monate — akut, kürzestes Zeitfenster"),
+    "E": ("Verteidiger unter Druck", "Bestand läuft in 6–18 Monaten aus (≥250k)"),
+    "C": ("Absteiger", "Zuschlagszahl fällt über 3 Jahre"),
+    "A": ("High Roller", "≥24 Zuschläge in 12 Monaten — Verdrängungsverkauf"),
+    "D": ("Aussteiger", "früher aktiv, ≥18 Monate kein Zuschlag mehr"),
+    "G": ("Aufsteiger", "Zuschlagszahl steigt ≥40 % über 3 Jahre"),
+    "B": ("Gelegenheitsbieter", "1–5 Zuschläge in 24 Monaten — größte Gruppe"),
+}
 
-    mode='top'       → meiste Zuschläge (3 J).
-    mode='absteiger' → schrumpfende Mandate: Auftraggeber-Zahl fällt über die 3 Fenster
-                       (Distinkt-Auftraggeber statt roher Zuschläge — entschärft Rahmen-/Rabatt-Wellen).
+
+def _eur(v):
+    if not v:
+        return "—"
+    v = float(v)
+    return f"{v/1e6:.1f} Mio €".replace(".", ",") if v >= 1e6 else f"{round(v):,} €".replace(",", ".")
+
+
+def segment(seg="F", limit=100):
+    """Eine Vertriebsziel-Kohorte deutschlandweit (belegte Einzelfirmen, Konsortien gefiltert).
+
+    A/B/C/D/G aus der Jahres-Zuschlags-Aggregation (60-Monats-Fenster); E aus auslaufenden
+    Verträgen (lead_export), F aus frischen Verlusten (succession_events). Jede Firma trägt ein
+    `badge` (Signal je Segment) + `line` (Kontext-Zeile) für die einheitliche Listen-Darstellung.
     """
+    seg = (seg or "F").upper()
+    if seg not in SEGMENTS:
+        return {"error": f"unbekanntes Segment {seg}"}
     con = _con()
     now = Z.con_now(con)
-    G_ = G
-    PE = f"read_parquet('{G_}/party_entity.parquet')"; EI = f"read_parquet('{G_}/entity_identity.parquet')"
-    EN = f"read_parquet('{G_}/entities.parquet')"; QU = f"read_parquet('{G_}/quality.parquet')"
-    Z.build_entity_location(con)  # eloc: Sitz-PLZ/Ort + Kontakt je Identität
+    EI = f"read_parquet('{G}/entity_identity.parquet')"; EN = f"read_parquet('{G}/entities.parquet')"
+    PE = f"read_parquet('{G}/party_entity.parquet')"; QU = f"read_parquet('{G}/quality.parquet')"
+    LE = f"read_parquet('{G}/lead_export.parquet')"; SE = f"read_parquet('{G}/succession_events.parquet')"
+    Z.build_entity_location(con)
     con.execute(f"""CREATE OR REPLACE TEMP TABLE belegt AS SELECT DISTINCT ei.identity_id
       FROM {EI} ei JOIN {EN} e ON e.entity_id=ei.entity_id WHERE e.method IN {Z.BELEGT_METHODS}""")
-    # Zuschläge (a) + distinkte Auftraggeber (b) je Identität, in drei 12-Monats-Fenstern (a1/b1 = ältestes)
-    con.execute(f"""CREATE OR REPLACE TEMP TABLE nw AS
-      WITH wb AS (
-        SELECT ei.identity_id, coalesce(n.award_date,n.publication_date) dt,
-               pw.notice_id nid, pb.entity_id buyer_eid, q.final_value_clean val
-        FROM {PE} pw JOIN {EI} ei ON ei.entity_id=pw.entity_id
-        JOIN read_parquet('{SN}',hive_partitioning=1) n ON n.notice_id=pw.notice_id
-        LEFT JOIN {PE} pb ON pb.notice_id=pw.notice_id AND pb.role='buyer'
-        LEFT JOIN {QU} q ON q.notice_id=pw.notice_id
-        WHERE pw.role='winner' AND ei.identity_id IN (SELECT identity_id FROM belegt)
-          AND coalesce(n.award_date,n.publication_date) BETWEEN DATE '{now}'-INTERVAL 36 MONTH AND DATE '{now}')
-      SELECT identity_id,
-        count(DISTINCT nid) FILTER(WHERE dt<DATE '{now}'-INTERVAL 24 MONTH) a1,
-        count(DISTINCT nid) FILTER(WHERE dt<DATE '{now}'-INTERVAL 12 MONTH AND dt>=DATE '{now}'-INTERVAL 24 MONTH) a2,
-        count(DISTINCT nid) FILTER(WHERE dt>=DATE '{now}'-INTERVAL 12 MONTH) a3,
-        count(DISTINCT nid) awards,
-        count(DISTINCT buyer_eid) FILTER(WHERE dt<DATE '{now}'-INTERVAL 24 MONTH) b1,
-        count(DISTINCT buyer_eid) FILTER(WHERE dt<DATE '{now}'-INTERVAL 12 MONTH AND dt>=DATE '{now}'-INTERVAL 24 MONTH) b2,
-        count(DISTINCT buyer_eid) FILTER(WHERE dt>=DATE '{now}'-INTERVAL 12 MONTH) b3,
-        count(DISTINCT buyer_eid) buyers, median(val) FILTER(WHERE val>0) med
-      FROM wb GROUP BY 1""")
     nm = (f"(SELECT arg_max(e.canonical_name,e.confidence) FROM {EI} ei JOIN {EN} e ON e.entity_id=ei.entity_id "
-          "WHERE ei.identity_id=nw.identity_id)")
-    if mode == "absteiger":
-        where = "b1>=4 AND b3<b1 AND buyers>=8"
-        order = "(b1-b3) DESC, b1 DESC"
-    else:
-        where = "awards>=1"
-        order = "awards DESC, buyers DESC"
-    rows = con.execute(f"""
-      WITH named AS (
-        SELECT nw.identity_id, {nm} AS firmenname, el.plz, el.ort, el.email, el.phone,
-               awards, buyers, med, a1,a2,a3, b1,b2,b3
-        FROM nw LEFT JOIN eloc el ON el.identity_id=nw.identity_id)
-      SELECT identity_id, firmenname, plz, ort, email, phone, awards, buyers, med, a1,a2,a3, b1,b2,b3
-      FROM named WHERE firmenname IS NOT NULL AND {_KONSORTIUM} AND {where}
-      ORDER BY {order} LIMIT {int(limit)}""").fetchall()
-    firmen = [{
-        "id": r[0], "name": Z.clean_name(r[1]), "plz": r[2], "ort": r[3],
-        "email": r[4], "phone": r[5],
-        "wins36": int(r[6] or 0), "medWert": float(r[8]) if r[8] else None,
-        "awards": int(r[6] or 0), "buyers": int(r[7] or 0),
-        "aTrend": [int(r[9] or 0), int(r[10] or 0), int(r[11] or 0)],
-        "bTrend": [int(r[12] or 0), int(r[13] or 0), int(r[14] or 0)],
-        "delta": int((r[12] or 0) - (r[14] or 0)),
-        # neutrale Signal-Platzhalter, damit die Listen-Zeile identisch rendert
-        "s1": {"n": 0, "vol": None, "letzter": None}, "s2": {"n": 0, "vol": None, "naechstes": None},
-        "dominant": None, "nuts": None, "vol36": None,
-    } for r in rows]
-    return {"stichtag": str(now), "mode": mode, "n": len(firmen), "firmen": firmen}
+          "WHERE ei.identity_id=x.identity_id)")
+
+    def base(id_, name):
+        return {"id": id_, "name": Z.clean_name(name), "s1": {"n": 0, "vol": None, "letzter": None},
+                "s2": {"n": 0, "vol": None, "naechstes": None}, "dominant": None, "nuts": None,
+                "vol36": None, "wins36": 0}
+
+    firmen = []
+    if seg in ("A", "B", "C", "D", "G"):
+        def w(m):
+            return f"DATE '{now}'-INTERVAL {m} MONTH"
+        con.execute(f"""CREATE OR REPLACE TEMP TABLE sa AS
+          WITH win AS (SELECT ei.identity_id, pw.notice_id nid,
+                 coalesce(n.award_date,n.publication_date) dt, q.final_value_clean val
+            FROM {PE} pw JOIN {EI} ei ON ei.entity_id=pw.entity_id
+            JOIN read_parquet('{SN}',hive_partitioning=1) n ON n.notice_id=pw.notice_id
+            LEFT JOIN {QU} q ON q.notice_id=pw.notice_id
+            WHERE pw.role='winner' AND ei.identity_id IN (SELECT identity_id FROM belegt))
+          SELECT identity_id,
+            count(DISTINCT nid) FILTER(WHERE dt>{w(12)}) v3,
+            count(DISTINCT nid) FILTER(WHERE dt<={w(12)} AND dt>{w(24)}) v2,
+            count(DISTINCT nid) FILTER(WHERE dt<={w(24)} AND dt>{w(36)}) v1,
+            count(DISTINCT nid) FILTER(WHERE dt>{w(24)}) v24,
+            count(DISTINCT nid) FILTER(WHERE dt<={w(18)} AND dt>{w(60)}) v_old,
+            count(DISTINCT nid) FILTER(WHERE dt>{w(18)}) v_last18,
+            count(DISTINCT nid) FILTER(WHERE dt>{w(36)}) awards36,
+            avg(val) FILTER(WHERE val>0 AND dt>{w(36)}) avg36,
+            median(val) FILTER(WHERE val>0 AND dt>{w(36)}) med36,
+            max(dt) last_award
+          FROM win GROUP BY 1""")
+        cond = {  # §1–§7 Kohorten-Definitionen
+            "A": ("v3>=24", "v3 DESC"),
+            "B": ("v24 BETWEEN 1 AND 5 AND NOT (v_old>=3 AND v_last18=0) AND NOT ((v1+v2+v3)>=6 AND ((v1>v2 AND v2>v3) OR v3<=0.6*v1))", "med36 DESC NULLS LAST"),
+            "C": ("(v1+v2+v3)>=6 AND ((v1>v2 AND v2>v3) OR v3<=0.6*v1)", "(v1-v3) DESC"),
+            "D": ("v_old>=3 AND v_last18=0", "v_old DESC"),
+            "G": ("(v1+v2+v3)>=6 AND v1>=1 AND v3>=1.4*v1 AND v3>v1", "(v3-v1) DESC"),
+        }[seg]
+        rows = con.execute(f"""
+          WITH named AS (SELECT x.*, {nm} firmenname, el.plz, el.ort, el.email, el.phone
+                         FROM sa x LEFT JOIN eloc el ON el.identity_id=x.identity_id)
+          SELECT identity_id, firmenname, plz, ort, email, phone,
+                 v1,v2,v3, v24, v_old, awards36, avg36, med36, last_award
+          FROM named WHERE firmenname IS NOT NULL AND {_KONSORTIUM} AND ({cond[0]})
+          ORDER BY {cond[1]} LIMIT {int(limit)}""").fetchall()
+        for r in rows:
+            v1, v2, v3, v24, v_old, aw36, avg36, med36, last = r[6], r[7], r[8], r[9], r[10], r[11], r[12], r[13], r[14]
+            f = base(r[0], r[1]); f.update({"plz": r[2], "ort": r[3], "email": r[4], "phone": r[5],
+                                            "medWert": float(med36) if med36 else None, "wins36": int(aw36 or 0)})
+            spark = f"{v1} → {v2} → {v3}"
+            if seg == "A":
+                f["badge"] = {"label": f"⚡ {v3} Zuschläge/Jahr", "cls": "aktiv", "spark": spark}
+                f["line"] = f"{v3} Zuschläge/12M · {v24} in 24M · Median {_eur(med36)}"
+            elif seg == "B":
+                band = "B1" if (med36 or 0) >= 5e5 else "B2" if (med36 or 0) >= 1e5 else "B3"
+                f["badge"] = {"label": f"{band} · Median {_eur(med36)}", "cls": "s2"}
+                f["line"] = f"{v24} Zuschläge/24M · Median {_eur(med36)}"
+            elif seg == "C":
+                f["badge"] = {"label": f"▼ −{int(v1)-int(v3)} Zuschläge", "cls": "s1", "spark": spark}
+                f["line"] = f"{aw36} Zuschläge/3J · Median {_eur(med36)}"
+            elif seg == "D":
+                mo = (con.execute(f"SELECT date_diff('month', DATE '{last}', DATE '{now}')").fetchone()[0] if last else None)
+                f["badge"] = {"label": f"⏸ seit {mo} Mon. still" if mo else "⏸ inaktiv", "cls": "none"}
+                f["line"] = f"früher {v_old} Zuschläge · zuletzt {str(last)[:7] if last else '?'}"
+            elif seg == "G":
+                f["badge"] = {"label": f"▲ +{int(v3)-int(v1)} Zuschläge", "cls": "aktiv", "spark": spark}
+                f["line"] = f"{aw36} Zuschläge/3J · Median {_eur(med36)}"
+            firmen.append(f)
+
+    elif seg == "E":  # Verteidiger unter Druck — Auslauf 6–18M, Summe ≥250k
+        rows = con.execute(f"""
+          WITH agg AS (
+            SELECT incumbent_group_id identity_id, count(*) n, sum(coalesce(value_eur,0)) vol, min(contract_end) naechstes
+            FROM {LE} WHERE incumbent_group_id IN (SELECT identity_id FROM belegt)
+              AND months_to_expiry BETWEEN 6 AND 18
+            GROUP BY 1 HAVING sum(coalesce(value_eur,0)) >= 250000),
+          named AS (SELECT x.identity_id, x.n, x.vol, x.naechstes, {nm} firmenname,
+                           el.plz, el.ort, el.email, el.phone
+                    FROM agg x LEFT JOIN eloc el ON el.identity_id=x.identity_id)
+          SELECT identity_id, firmenname, plz, ort, email, phone, n, vol, naechstes
+          FROM named WHERE firmenname IS NOT NULL AND {_KONSORTIUM}
+          ORDER BY vol DESC LIMIT {int(limit)}""").fetchall()
+        for r in rows:
+            f = base(r[0], r[1]); f.update({"plz": r[2], "ort": r[3], "email": r[4], "phone": r[5],
+                                            "medWert": None, "wins36": 0})
+            nd = r[8].strftime("%m/%Y") if r[8] and hasattr(r[8], "strftime") else "?"
+            f["badge"] = {"label": f"◷ {_eur(r[7])} Auslauf", "cls": "s2"}
+            f["line"] = f"{r[6]} Verträge laufen aus · nächstes {nd}"
+            firmen.append(f)
+
+    elif seg == "F":  # Frische Verlierer — Verlust ≤6M, ≥100k
+        rows = con.execute(f"""
+          WITH pred AS (SELECT se.predecessor, se.successor, ei.identity_id loser FROM {SE} se
+              JOIN {PE} pp ON pp.notice_id=se.predecessor AND pp.role='winner'
+              JOIN {EI} ei ON ei.entity_id=pp.entity_id
+              WHERE se.displaced=TRUE AND ei.identity_id IN (SELECT identity_id FROM belegt)),
+          loss AS (
+            SELECT pr.loser identity_id, n.award_date dt, q.final_value_clean val, n.title,
+              (SELECT arg_max(e.canonical_name,e.confidence) FROM {PE} pw JOIN {EN} e ON e.entity_id=pw.entity_id
+               WHERE pw.notice_id=pr.successor AND pw.role='winner') gewinner
+            FROM pred pr JOIN read_parquet('{SN}',hive_partitioning=1) n ON n.notice_id=pr.successor
+            LEFT JOIN {QU} q ON q.notice_id=pr.successor
+            WHERE n.award_date > DATE '{now}'-INTERVAL 6 MONTH AND coalesce(q.final_value_clean,0) >= 100000
+              AND NOT EXISTS(SELECT 1 FROM {PE} ps JOIN {EI} es ON es.entity_id=ps.entity_id
+                             WHERE ps.notice_id=pr.successor AND ps.role='winner' AND es.identity_id=pr.loser)),
+          best AS (SELECT identity_id, max(val) val, arg_max(gewinner,val) gewinner,
+                          arg_max(title,val) titel, count(*) n, max(dt) dt FROM loss GROUP BY 1),
+          named AS (SELECT x.*, {nm} firmenname, el.plz, el.ort, el.email, el.phone
+                    FROM best x LEFT JOIN eloc el ON el.identity_id=x.identity_id)
+          SELECT identity_id, firmenname, plz, ort, email, phone, val, gewinner, titel, n, dt
+          FROM named WHERE firmenname IS NOT NULL AND {_KONSORTIUM}
+          ORDER BY val DESC LIMIT {int(limit)}""").fetchall()
+        for r in rows:
+            f = base(r[0], r[1]); f.update({"plz": r[2], "ort": r[3], "email": r[4], "phone": r[5],
+                                            "medWert": None, "wins36": 0})
+            f["badge"] = {"label": f"▼ {_eur(r[6])} verloren", "cls": "s1"}
+            f["line"] = f"an {Z.clean_name(r[7]) if r[7] else '?'}" + (f" · +{int(r[9])-1} weitere" if r[9] and r[9] > 1 else "")
+            firmen.append(f)
+
+    return {"stichtag": str(now), "segment": seg, "label": SEGMENTS[seg][0],
+            "hint": SEGMENTS[seg][1], "n": len(firmen), "firmen": firmen}
 
 
 def detail(identity_id):
@@ -294,12 +388,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--search", action="store_true")
     ap.add_argument("--detail")
-    ap.add_argument("--nationwide", choices=["top", "absteiger"])
+    ap.add_argument("--segment", choices=list(SEGMENTS.keys()))
     ap.add_argument("--plz"); ap.add_argument("--ort"); ap.add_argument("--name"); ap.add_argument("--radius")
     a = ap.parse_args()
     try:
-        if a.nationwide:
-            out = nationwide(a.nationwide)
+        if a.segment:
+            out = segment(a.segment)
         else:
             out = detail(a.detail) if a.detail else search(a.plz, a.ort, a.name, a.radius)
     except Exception as e:  # noqa: BLE001

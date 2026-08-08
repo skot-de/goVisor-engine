@@ -5,12 +5,24 @@ import { useState, useEffect, useCallback } from "react";
  * Enthält Kontaktdaten; die API blockiert Production. Reine Sales-Sicht (kein Kundenprodukt). */
 
 type Sig = { n: number; vol: number | null; letzter?: string | null; naechstes?: string | null };
+type Badge = { label: string; cls: string; spark?: string };
 type Firma = {
   id: string; name: string; plz: string | null; ort: string | null; wins36: number;
   medWert: number | null; vol36: number | null; s1: Sig; s2: Sig; dominant: string;
   email: string | null; phone: string | null;
-  awards?: number; buyers?: number; aTrend?: number[]; bTrend?: number[]; delta?: number; // deutschlandweit
+  badge?: Badge; line?: string; // Vertriebsziel-Segment (deutschlandweit)
 };
+
+// Vertriebsziel-Segmente A–G (govisor-vertriebsziele-spec.md), Reihenfolge = Ansprache-Priorität §8
+const SEGS: { key: string; tab: string; title: string }[] = [
+  { key: "F", tab: "Frische Verlierer", title: "Verlust ≤6 Monate — akut, kürzestes Zeitfenster" },
+  { key: "E", tab: "Verteidiger", title: "Bestand läuft in 6–18 Monaten aus (≥250k)" },
+  { key: "C", tab: "Absteiger", title: "Zuschlagszahl fällt über 3 Jahre" },
+  { key: "A", tab: "High Roller", title: "≥24 Zuschläge in 12 Monaten — Verdrängungsverkauf" },
+  { key: "D", tab: "Aussteiger", title: "früher aktiv, ≥18 Monate kein Zuschlag mehr" },
+  { key: "G", tab: "Aufsteiger", title: "Zuschlagszahl steigt ≥40 % über 3 Jahre" },
+  { key: "B", tab: "Gelegenheitsbieter", title: "1–5 Zuschläge in 24 Monaten — größte Gruppe" },
+];
 type Exp = { titel: string; buyer: string; vol: number | null; ende: string | null; mte: number | null; vsrc?: string; art?: string | null; artcat?: string | null; url?: string | null; seit?: number | null };
 type Loss = { titel: string; vol: number | null; datum: string | null; gewinner: string | null };
 type Recent = { titel: string; buyer: string | null; vol: number | null; jahr: number | null; url?: string | null };
@@ -51,7 +63,7 @@ export function InternFirmen() {
   const [contacted, setContacted] = useState<Set<string>>(new Set());
   const [notes, setNotes] = useState<Record<string, string>>({});
   const [filter, setFilter] = useState<"" | "s1" | "s2" | "offen" | "aktiv">(""); // Schnellfilter
-  const [nwMode, setNwMode] = useState<"" | "top" | "absteiger">(""); // deutschlandweite Rangliste
+  const [segMode, setSegMode] = useState<string>(""); // aktives Vertriebsziel-Segment (A–G)
 
   useEffect(() => {
     try { setContacted(new Set(JSON.parse(localStorage.getItem("govisor.outreach") || "[]"))); } catch { /* ignore */ }
@@ -109,28 +121,29 @@ export function InternFirmen() {
 
   function search(e?: React.FormEvent) {
     e?.preventDefault();
-    setNwMode("");
+    setSegMode("");
     runSearch(plz.trim(), ort.trim(), name.trim(), radius);
   }
 
-  // Deutschlandweite Rangliste (kein Suchbegriff): Bestenliste oder Absteiger
-  async function runNationwide(m: "top" | "absteiger") {
-    if (nwMode === m) { setNwMode(""); setFirmen(null); return; } // Toggle aus
-    setNwMode(m); setFilter(""); setLoading(true); setErr(null); setFirmen(null); setOpenId(null); setDetail(null);
-    window.history.replaceState(null, "", `/intern?nationwide=${m}`);
+  // Vertriebsziel-Segment (deutschlandweite Kohorte, kein Suchbegriff)
+  const [segHint, setSegHint] = useState<string>("");
+  async function runSegment(seg: string) {
+    if (segMode === seg) { setSegMode(""); setFirmen(null); return; } // Toggle aus
+    setSegMode(seg); setFilter(""); setLoading(true); setErr(null); setFirmen(null); setOpenId(null); setDetail(null);
+    window.history.replaceState(null, "", `/intern?segment=${seg}`);
     try {
-      const r = await fetch(`/api/intern/firmen?nationwide=${m}`);
+      const r = await fetch(`/api/intern/firmen?segment=${seg}`);
       const d = await r.json();
-      if (d.error) setErr(d.error); else setFirmen(d.firmen || []);
-    } catch { setErr("Rangliste fehlgeschlagen"); }
+      if (d.error) setErr(d.error); else { setFirmen(d.firmen || []); setSegHint(d.hint || ""); }
+    } catch { setErr("Segment fehlgeschlagen"); }
     finally { setLoading(false); }
   }
 
   // Beim Laden (auch nach Zurück) Suche oder Rangliste aus der URL wiederherstellen
   useEffect(() => {
     const sp = new URLSearchParams(window.location.search);
-    const nw = sp.get("nationwide");
-    if (nw === "top" || nw === "absteiger") { runNationwide(nw); return; }
+    const seg = sp.get("segment");
+    if (seg && /^[A-G]$/.test(seg)) { runSegment(seg); return; }
     const p = sp.get("plz") || "", o = sp.get("ort") || "", n = sp.get("name") || "", rad = sp.get("radius") || "";
     if (p || o || n) { setPlz(p); setOrt(o); setName(n); setRadius(rad); runSearch(p, o, n, rad); }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -209,10 +222,12 @@ export function InternFirmen() {
       </form>
 
       <div className="in-nw">
-        <span className="in-nw-label">Deutschlandweit:</span>
-        <button className={`in-nw-btn ${nwMode === "top" ? "on" : ""}`} onClick={() => runNationwide("top")}>🏆 Bestenliste</button>
-        <button className={`in-nw-btn ${nwMode === "absteiger" ? "on" : ""}`} onClick={() => runNationwide("absteiger")} title="Firmen, deren Auftraggeber-Zahl über 3 Jahre fällt">📉 Absteiger</button>
+        <span className="in-nw-label">Vertriebsziele (deutschlandweit):</span>
+        {SEGS.map((s) => (
+          <button key={s.key} className={`in-nw-btn ${segMode === s.key ? "on" : ""}`} title={s.title} onClick={() => runSegment(s.key)}>{s.tab}</button>
+        ))}
       </div>
+      {segMode && segHint && <div className="in-seghint">{SEGS.find((s) => s.key === segMode)?.tab}: {segHint}</div>}
 
       {err && <div className="in-err">{err}</div>}
       {firmen && firmen.length === 0 && <div className="in-empty">Keine Firmen gefunden.</div>}
@@ -220,7 +235,7 @@ export function InternFirmen() {
       {firmen && firmen.length > 0 && (
         <div className="in-bar">
           <div className="in-chips">
-            {!nwMode && <>
+            {!segMode && <>
               <button className={`in-chip ${filter === "" ? "on" : ""}`} onClick={() => setFilter("")}>Alle {firmen.length}</button>
               <button className={`in-chip ${filter === "s2" ? "on" : ""}`} onClick={() => setFilter((f) => f === "s2" ? "" : "s2")}>◷ Auslauf {firmen.filter((f) => f.s2.n > 0).length}</button>
               <button className={`in-chip ${filter === "s1" ? "on" : ""}`} onClick={() => setFilter((f) => f === "s1" ? "" : "s1")}>▼ Verlust {firmen.filter((f) => f.s1.n > 0).length}</button>
@@ -233,8 +248,8 @@ export function InternFirmen() {
       )}
       {firmen && firmen.length > 0 && (
         <div className="in-count">
-          {nwMode === "top" ? `Top ${firmen.length} nach Zuschlägen (36 Monate) — deutschlandweit`
-           : nwMode === "absteiger" ? `${firmen.length} Absteiger — Auftraggeber-Zahl fällt über 3 Jahre (deutschlandweit)`
+          {segMode
+           ? `${firmen.length} Treffer — ${SEGS.find((s) => s.key === segMode)?.tab} (deutschlandweit${firmen.length >= 100 ? ", Top 100" : ""})`
            : `${visible.length} von ${firmen.length} Firmen — nach Schmerz-Volumen sortiert`}
         </div>
       )}
@@ -244,17 +259,13 @@ export function InternFirmen() {
             <button className="in-row" onClick={() => toggle(f.id)}>
               <div className="in-main">
                 <span className="in-name">{f.name}{contacted.has(f.id) && <span className="in-done">✓ angesprochen</span>}</span>
-                {f.aTrend
-                  ? <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || "Sitz unbekannt"} · {f.awards} Zuschläge · {f.buyers} Auftraggeber (3 J)</span>
+                {f.badge
+                  ? <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || "Sitz unbekannt"}{f.line ? ` · ${f.line}` : ""}</span>
                   : <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || "Sitz unbekannt"} · ≈{perJahr(f.wins36)} Zuschläge/Jahr · Median {eur(f.medWert)}</span>}
               </div>
               <div className="in-signals">
-                {f.aTrend
-                  ? <span className={`in-sig ${nwMode === "absteiger" ? "s1" : "aktiv"}`} title={nwMode === "absteiger" ? "distinkte Auftraggeber je Jahr (ältestes → letztes)" : "Zuschläge je Jahr (ältestes → letztes)"}>
-                      {nwMode === "absteiger"
-                        ? <>▼ −{f.delta} Auftraggeber <span className="in-spark">{f.bTrend!.join(" → ")}</span></>
-                        : <><span className="in-spark">{f.aTrend.join(" → ")}</span> Zuschläge/Jahr</>}
-                    </span>
+                {f.badge
+                  ? <span className={`in-sig ${f.badge.cls}`}>{f.badge.label}{f.badge.spark ? <> <span className="in-spark">{f.badge.spark}</span></> : null}</span>
                   : <>
                     {f.s1.n > 0 && <span className="in-sig s1" title={`verlorene Verträge (letzter ${f.s1.letzter ?? "?"})`}>▼ {f.s1.n} verloren · {eur(f.s1.vol)}</span>}
                     {f.s2.n > 0 && <span className="in-sig s2" title={`nächstes Ende ${f.s2.naechstes ?? "?"}`}>◷ {f.s2.n} laufen aus · {eur(f.s2.vol)}</span>}

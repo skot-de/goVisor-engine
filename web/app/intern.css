@@ -24,6 +24,7 @@
 .in-nw-btn:hover { background: var(--surface-2); }
 .in-nw-btn.on { color: var(--signal-deep); border-color: #cfe8dc; background: var(--signal-wash); font-weight: 600; }
 .in-spark { font-family: var(--mono); color: var(--ink-500); }
+.in-seghint { font-size: 12px; color: var(--ink-500); margin: -8px 0 14px; padding-left: 2px; }
 
 .in-err { background: var(--risk-wash); color: var(--risk); border: 1px solid #f3d5cd; border-radius: 8px; padding: 10px 14px; font-size: 13px; }
 .in-empty, .in-muted { color: var(--ink-500); font-size: 13px; padding: 12px 2px; }
