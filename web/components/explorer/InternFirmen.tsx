@@ -10,10 +10,23 @@ type Firma = {
   medWert: number | null; vol36: number | null; s1: Sig; s2: Sig; dominant: string;
   email: string | null; phone: string | null;
 };
-type Exp = { titel: string; buyer: string; vol: number | null; ende: string | null; mte: number | null; vsrc?: string };
+type Exp = { titel: string; buyer: string; vol: number | null; ende: string | null; mte: number | null; vsrc?: string; art?: string | null; url?: string | null; seit?: number | null };
 type Loss = { titel: string; vol: number | null; datum: string | null; gewinner: string | null };
-type Recent = { titel: string; buyer: string | null; vol: number | null; jahr: number | null };
-type Detail = { id: string; name: string; expiring: Exp[]; losses: Loss[]; recent?: Recent[]; error?: string };
+type Recent = { titel: string; buyer: string | null; vol: number | null; jahr: number | null; url?: string | null };
+type Wett = { name: string; id: string; expiring: Exp[] };
+type Detail = { id: string; name: string; expiring: Exp[]; losses: Loss[]; recent?: Recent[]; wettbewerber?: Wett | null; error?: string };
+
+// Vertragstitel als Link zur TED-Bekanntmachung (extern → neuer Tab) + Rahmen/Einmal-Marker.
+function Titel({ text, url, art }: { text: string | null; url?: string | null; art?: string | null }) {
+  const t = text || "(ohne Titel)";
+  const artCls = art === "Rahmen" || art === "wiederkehrend" ? "in-art rahmen" : art === "Einmalauftrag" ? "in-art einmal" : "";
+  return (
+    <>
+      {url ? <a className="in-tlink" href={url} target="_blank" rel="noreferrer">{t} ↗</a> : t}
+      {art && <span className={artCls}>{art}</span>}
+    </>
+  );
+}
 
 const nf = new Intl.NumberFormat("de-DE");
 const eur = (v: number | null | undefined) =>
@@ -128,9 +141,10 @@ export function InternFirmen() {
 
                     {detail.expiring.length > 0 && <div className="in-block">
                       <h3>Läuft aus — Gesprächsaufhänger ({detail.expiring.length})</h3>
-                      {detail.expiring.slice(0, 10).map((e, i) => (
+                      {detail.expiring.slice(0, 12).map((e, i) => (
                         <div key={i} className="in-item">
-                          <span className="in-it">{e.titel || "(ohne Titel)"}<span className="in-buyer">{e.buyer}</span></span>
+                          <span className="in-it"><Titel text={e.titel} url={e.url} art={e.art} />
+                            <span className="in-buyer">{e.buyer}{e.seit ? ` · hält seit ${e.seit}` : ""}</span></span>
                           <span className="in-iv">{eur(e.vol)}{e.vsrc && e.vsrc !== "actual" ? " *" : ""} · Ende {e.ende ?? "?"}</span>
                         </div>
                       ))}
@@ -138,11 +152,22 @@ export function InternFirmen() {
                         <div className="in-legend">* Wert geschätzt/aus CPV-Median abgeleitet — nicht veröffentlicht.</div>}
                     </div>}
 
+                    {detail.wettbewerber && detail.wettbewerber.expiring.length > 0 && <div className="in-block">
+                      <h3>Hauptwettbewerber: {detail.wettbewerber.name.split(" ").slice(0, 4).join(" ")} — was bei ihm ausläuft ({detail.wettbewerber.expiring.length})
+                        {" "}<a className="in-link" href={`/firma?id=${encodeURIComponent(detail.wettbewerber.id)}&from=intern`}>Profil →</a></h3>
+                      {detail.wettbewerber.expiring.slice(0, 8).map((e, i) => (
+                        <div key={i} className="in-item">
+                          <span className="in-it"><Titel text={e.titel} url={e.url} art={e.art} /><span className="in-buyer">{e.buyer}</span></span>
+                          <span className="in-iv">{eur(e.vol)} · Ende {e.ende ?? "?"}</span>
+                        </div>
+                      ))}
+                    </div>}
+
                     {(detail.recent?.length ?? 0) > 0 && <div className="in-block">
                       <h3>Zuletzt gewonnen ({detail.recent!.length})</h3>
                       {detail.recent!.slice(0, 8).map((r, i) => (
                         <div key={i} className="in-item">
-                          <span className="in-it">{r.titel || "(ohne Titel)"}<span className="in-buyer">{r.buyer || ""}</span></span>
+                          <span className="in-it"><Titel text={r.titel} url={r.url} /><span className="in-buyer">{r.buyer || ""}</span></span>
                           <span className="in-iv">{eur(r.vol)}{r.jahr ? ` · ${r.jahr}` : ""}</span>
                         </div>
                       ))}

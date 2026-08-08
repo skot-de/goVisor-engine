@@ -27,6 +27,15 @@ def _con():
     return con
 
 
+# Vertragsart-Marker: Rahmen/wiederkehrend = wiederkehrendes Volumen (wertvoll für Ansprache),
+# Einmalauftrag = nach Auslauf erledigt (Sven: "Heizung aufbauen — da kann man nichts draus machen").
+_ART = {"framework": "Rahmen", "recurring": "wiederkehrend", "one_off_works": "Einmalauftrag"}
+
+
+def art_of(kind):
+    return _ART.get(kind)
+
+
 def search(plz=None, ort=None, name=None):
     if not (plz or ort or name):
         return {"error": "Bitte PLZ, Ort oder Name angeben"}
@@ -59,11 +68,15 @@ def detail(identity_id):
     if not prof:
         return {"error": "Firma nicht gefunden (keine belegten Zuschläge)", "id": identity_id}
     LE = f"read_parquet('{G}/lead_export.parquet')"
-    # Auslaufende Verträge (Amtsinhaber) — der konkrete Gesprächsaufhänger
+    # Auslaufende Verträge (Amtsinhaber) — der konkrete Gesprächsaufhänger. Rahmen/wiederkehrend
+    # zuerst (wertvoll), + TED-Link zur offiziellen Bekanntmachung zum Nachschauen.
     exp = con.execute(f"""
-      SELECT title, buyer_name, value_eur, contract_end, months_to_expiry, value_source
-      FROM {LE} WHERE incumbent_group_id=? AND months_to_expiry BETWEEN 0 AND 24
-      ORDER BY months_to_expiry LIMIT 25""", [identity_id]).fetchall()
+      SELECT le.title, le.buyer_name, le.value_eur, le.contract_end, le.months_to_expiry,
+             le.value_source, le.contract_kind, n.ted_url, le.incumbent_since_year
+      FROM {LE} le LEFT JOIN read_parquet('{SN}', hive_partitioning=1) n ON n.notice_id = le.lead_id
+      WHERE le.incumbent_group_id=? AND le.months_to_expiry BETWEEN 0 AND 24
+      ORDER BY (le.contract_kind IN ('framework','recurring')) DESC, le.months_to_expiry LIMIT 25""",
+      [identity_id]).fetchall()
     # Jüngste Verluste (aus den in compute_signals gebauten losses — hier direkt neu, mit Käufer)
     PE = f"read_parquet('{G}/party_entity.parquet')"
     EI = f"read_parquet('{G}/entity_identity.parquet')"
@@ -89,24 +102,61 @@ def detail(identity_id):
     recent = con.execute(f"""
       SELECT n.title, q.final_value_clean, year(coalesce(n.award_date, n.publication_date)) AS jahr,
              (SELECT arg_max(e.canonical_name, e.confidence) FROM {PE} pb JOIN {EN} e ON e.entity_id=pb.entity_id
-              WHERE pb.notice_id=p.notice_id AND pb.role='buyer') AS buyer
+              WHERE pb.notice_id=p.notice_id AND pb.role='buyer') AS buyer, n.ted_url
       FROM {PE} p JOIN {EI} ei ON ei.entity_id=p.entity_id
       JOIN read_parquet('{SN}', hive_partitioning=1) n ON n.notice_id=p.notice_id
       LEFT JOIN {QU} q ON q.notice_id=p.notice_id
       WHERE p.role='winner' AND ei.identity_id=?
       ORDER BY coalesce(n.award_date, n.publication_date) DESC LIMIT 12""", [identity_id]).fetchall()
+
+    # Hauptwettbewerber (INTERN unverblurrt — "gib mir die Pro-Infos frei"): wer verdrängt die Firma
+    # am häufigsten (head_to_head), sonst Top-Anbieter im dominanten CPV-Feld. Mit seinen Auslauf-Verträgen.
+    HH = f"read_parquet('{G}/head_to_head.parquet')"
+    CS = f"read_parquet('{G}/contractor_stats.parquet')"
+    # Nur BELEGTE Identitäten als Wettbewerber (HR/nationale Kennung) — sonst landet
+    # Namens-Rauschen wie "Info@sbs-Business.com" als "Hauptwettbewerber".
+    belegt = (f"(SELECT DISTINCT ei2.identity_id FROM {EI} ei2 JOIN {EN} e2 ON e2.entity_id=ei2.entity_id "
+              "WHERE e2.method IN ('handelsregister_exakt','ted_nationalid') "
+              "AND e2.canonical_name NOT LIKE '%@%' AND length(e2.canonical_name) > 4)")
+    comp = con.execute(f"""
+      WITH mine AS (SELECT entity_id FROM {EI} WHERE identity_id=?)
+      SELECT wi.identity_id FROM {HH} h JOIN {EI} wi ON wi.entity_id=h.winner_entity
+      WHERE h.loser_entity IN (SELECT entity_id FROM mine) AND wi.identity_id<>?
+        AND wi.identity_id IN {belegt}
+      GROUP BY 1 ORDER BY sum(h.displacements) DESC LIMIT 1""", [identity_id, identity_id]).fetchone()
+    if not comp:
+        dom = con.execute(f"""SELECT cs.cpv_class FROM {CS} cs JOIN {EI} ei ON ei.entity_id=cs.entity_id
+          WHERE ei.identity_id=? GROUP BY 1 ORDER BY sum(cs.total_wins) DESC LIMIT 1""", [identity_id]).fetchone()
+        comp = con.execute(f"""SELECT ei.identity_id FROM {CS} cs JOIN {EI} ei ON ei.entity_id=cs.entity_id
+          WHERE cs.cpv_class=? AND ei.identity_id<>? AND ei.identity_id IN {belegt}
+          GROUP BY 1 ORDER BY sum(cs.total_wins) DESC LIMIT 1""",
+          [dom[0], identity_id]).fetchone() if dom else None
+    wett = None
+    if comp:
+        wid = comp[0]
+        wname = con.execute(f"SELECT arg_max(e.canonical_name, e.confidence) FROM {EI} ei JOIN {EN} e ON e.entity_id=ei.entity_id WHERE ei.identity_id=? AND e.canonical_name NOT LIKE '%@%'", [wid]).fetchone()[0]
+        wexp = con.execute(f"""SELECT le.title, le.buyer_name, le.value_eur, le.contract_end, le.contract_kind, n.ted_url
+          FROM {LE} le LEFT JOIN read_parquet('{SN}', hive_partitioning=1) n ON n.notice_id=le.lead_id
+          WHERE le.incumbent_group_id=? AND le.months_to_expiry BETWEEN 0 AND 24
+          ORDER BY (le.contract_kind IN ('framework','recurring')) DESC, le.months_to_expiry LIMIT 8""", [wid]).fetchall()
+        wett = {"name": Z.clean_name(wname), "id": wid,
+                "expiring": [{"titel": w[0], "buyer": w[1], "vol": float(w[2]) if w[2] else None,
+                              "ende": w[3].strftime("%m/%Y") if w[3] and hasattr(w[3], "strftime") else None,
+                              "art": art_of(w[4]), "url": w[5]} for w in wexp]}
     return {
         "id": identity_id, "name": Z.clean_name(prof[0]), "plz": prof[1], "ort": prof[2],
         "email": prof[3], "phone": prof[4], "wins36": int(prof[5] or 0),
         "expiring": [{"titel": e[0], "buyer": e[1], "vol": float(e[2]) if e[2] else None,
                       "ende": e[3].strftime("%m/%Y") if e[3] and hasattr(e[3], "strftime") else None,
                       "mte": int(e[4]) if e[4] is not None else None,
-                      "vsrc": e[5]} for e in exp],
+                      "vsrc": e[5], "art": art_of(e[6]), "url": e[7],
+                      "seit": int(e[8]) if e[8] else None} for e in exp],
         "losses": [{"titel": l[0], "vol": float(l[1]) if l[1] else None,
                     "datum": str(l[2]) if l[2] else None, "gewinner": Z.clean_name(l[3]) if l[3] else None}
                    for l in losses],
         "recent": [{"titel": r[0], "vol": float(r[1]) if r[1] else None,
-                    "jahr": int(r[2]) if r[2] else None, "buyer": r[3]} for r in recent],
+                    "jahr": int(r[2]) if r[2] else None, "buyer": r[3], "url": r[4]} for r in recent],
+        "wettbewerber": wett,
     }
 
 

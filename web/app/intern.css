@@ -45,3 +45,8 @@
 .in-buyer { display: block; font-size: 11px; color: var(--ink-400); font-weight: 400; margin-top: 1px; }
 .in-iv { font-family: var(--mono); font-size: 11.5px; color: var(--ink-500); text-align: right; white-space: nowrap; flex-shrink: 0; }
 .in-legend { font-size: 10.5px; color: var(--ink-400); margin-top: 6px; }
+.in-tlink { color: var(--ink-900); text-decoration: none; }
+.in-tlink:hover { color: var(--signal-deep); text-decoration: underline; }
+.in-art { font-size: 9.5px; padding: 1px 6px; border-radius: 99px; margin-left: 7px; white-space: nowrap; font-family: var(--sans); }
+.in-art.rahmen { color: var(--signal-deep); background: var(--signal-wash); border: 1px solid #cfe8dc; }
+.in-art.einmal { color: var(--ink-400); background: var(--surface-3); border: 1px solid var(--line); }
