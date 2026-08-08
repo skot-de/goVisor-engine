@@ -453,6 +453,34 @@ def detail(identity_id):
     EN = f"read_parquet('{G}/entities.parquet')"
     SE = f"read_parquet('{G}/succession_events.parquet')"
     QU = f"read_parquet('{G}/quality.parquet')"
+    DP = f"read_parquet('{G}/dim_plz.parquet')"
+    LG = f"read_parquet('{G}/lead_geo.parquet')"
+
+    # ── Regionalität: Sitz-Koordinate + Konzentration der Gewinne. Eine Firma, die fast nur in EINER
+    # Region gewinnt (z. B. Bauunternehmen), soll regionale Leads/Wettbewerber sehen — kein Stuttgart
+    # für einen Betrieb aus Hamm. Firmen mit breitem Footprint bleiben deutschlandweit.
+    seat = con.execute(f"SELECT dp.lat, dp.lon, el.nuts FROM eloc el JOIN {DP} dp ON dp.plz = el.plz "
+                       f"WHERE el.identity_id=? LIMIT 1", [identity_id]).fetchone()
+    seat_lat = float(seat[0]) if seat and seat[0] is not None else None
+    seat_lon = float(seat[1]) if seat and seat[1] is not None else None
+    regrow = con.execute(f"""SELECT substr(n.performance_nuts,1,3) n1, count(*) c
+      FROM {PE} p JOIN {EI} ei ON ei.entity_id=p.entity_id
+      JOIN read_parquet('{SN}', hive_partitioning=1) n ON n.notice_id=p.notice_id
+      WHERE p.role='winner' AND ei.identity_id=? AND n.performance_nuts LIKE 'DE%'
+      GROUP BY 1 ORDER BY 2 DESC""", [identity_id]).fetchall()
+    tot_reg = sum(r[1] for r in regrow)
+    top_nuts1 = regrow[0][0] if regrow else None
+    top_share = (regrow[0][1] / tot_reg) if tot_reg else 0.0
+    is_regional = bool(seat_lat is not None and tot_reg >= 5 and top_share >= 0.55)
+    RADIUS_KM = 150
+
+    def _hav(lat_col, lon_col):  # Haversine vom Firmensitz zur (Leistungs-)Koordinate
+        # WICHTIG: bei fehlender Koordinate NULL zurückgeben — sonst macht DuckDBs least(1.0, NULL)=1.0
+        # daraus acos(1)=0, und Leads ohne Geo würden als „0 km" fälschlich in den Umkreis rutschen.
+        inner = (f"sin(radians({seat_lat}))*sin(radians({lat_col})) + "
+                 f"cos(radians({seat_lat}))*cos(radians({lat_col}))*cos(radians({lon_col}-({seat_lon})))")
+        return f"(CASE WHEN {lat_col} IS NULL OR {lon_col} IS NULL THEN NULL ELSE 6371*acos(least(1.0, {inner})) END)"
+
     losses = con.execute(f"""
       WITH mine AS (SELECT entity_id FROM {EI} WHERE identity_id=?)
       SELECT n.title, coalesce(q.final_value_clean, n.final_value) AS val, n.award_date,
@@ -488,19 +516,32 @@ def detail(identity_id):
     belegt = (f"(SELECT DISTINCT ei2.identity_id FROM {EI} ei2 JOIN {EN} e2 ON e2.entity_id=ei2.entity_id "
               "WHERE e2.method IN ('handelsregister_exakt','ted_nationalid') "
               "AND e2.canonical_name NOT LIKE '%@%' AND length(e2.canonical_name) > 4)")
+    # 1. Echter Wettbewerber: hat die Firma real verdrängt (head_to_head) — geografieunabhängig belastbar.
     comp = con.execute(f"""
       WITH mine AS (SELECT entity_id FROM {EI} WHERE identity_id=?)
       SELECT wi.identity_id FROM {HH} h JOIN {EI} wi ON wi.entity_id=h.winner_entity
       WHERE h.loser_entity IN (SELECT entity_id FROM mine) AND wi.identity_id<>?
         AND wi.identity_id IN {belegt}
       GROUP BY 1 ORDER BY sum(h.displacements) DESC LIMIT 1""", [identity_id, identity_id]).fetchone()
+    comp_basis = "head_to_head" if comp else None
     if not comp:
+        # 2. Fallback = Top-Anbieter im Kern-CPV. Bei REGIONALEN Firmen im selben Bundesland (NUTS1),
+        # sonst landet ein nationaler Gigant (Leonhard Weiss) als „Konkurrent" eines Hammer Betriebs.
         dom = con.execute(f"""SELECT cs.cpv_class FROM {CS} cs JOIN {EI} ei ON ei.entity_id=cs.entity_id
           WHERE ei.identity_id=? GROUP BY 1 ORDER BY sum(cs.total_wins) DESC LIMIT 1""", [identity_id]).fetchone()
-        comp = con.execute(f"""SELECT ei.identity_id FROM {CS} cs JOIN {EI} ei ON ei.entity_id=cs.entity_id
-          WHERE cs.cpv_class=? AND ei.identity_id<>? AND ei.identity_id IN {belegt}
-          GROUP BY 1 ORDER BY sum(cs.total_wins) DESC LIMIT 1""",
-          [dom[0], identity_id]).fetchone() if dom else None
+        region = top_nuts1 if is_regional else None
+        if dom and region:
+            comp = con.execute(f"""SELECT ei.identity_id FROM {CS} cs JOIN {EI} ei ON ei.entity_id=cs.entity_id
+              JOIN eloc el ON el.identity_id=ei.identity_id
+              WHERE cs.cpv_class=? AND ei.identity_id<>? AND ei.identity_id IN {belegt}
+                AND substr(el.nuts,1,3)=? GROUP BY 1 ORDER BY sum(cs.total_wins) DESC LIMIT 1""",
+              [dom[0], identity_id, region]).fetchone()
+            comp_basis = "region" if comp else None
+        if not comp and dom and not is_regional:  # breit aufgestellte Firma → nationaler Top-Anbieter ok
+            comp = con.execute(f"""SELECT ei.identity_id FROM {CS} cs JOIN {EI} ei ON ei.entity_id=cs.entity_id
+              WHERE cs.cpv_class=? AND ei.identity_id<>? AND ei.identity_id IN {belegt}
+              GROUP BY 1 ORDER BY sum(cs.total_wins) DESC LIMIT 1""", [dom[0], identity_id]).fetchone()
+            comp_basis = "cpv_national" if comp else None
     wett = None
     if comp:
         wid = comp[0]
@@ -509,7 +550,7 @@ def detail(identity_id):
           FROM {LE} le LEFT JOIN read_parquet('{SN}', hive_partitioning=1) n ON n.notice_id=le.lead_id
           WHERE le.incumbent_group_id=? AND le.months_to_expiry BETWEEN 0 AND 24
           ORDER BY (le.contract_kind IN ('framework','recurring')) DESC, le.months_to_expiry LIMIT 8""", [wid]).fetchall()
-        wett = {"name": Z.clean_name(wname), "id": wid,
+        wett = {"name": Z.clean_name(wname), "id": wid, "basis": comp_basis,
                 "expiring": [{"titel": w[0], "buyer": w[1], "vol": float(w[2]) if w[2] else None,
                               "ende": w[3].strftime("%m/%Y") if w[3] and hasattr(w[3], "strftime") else None,
                               "art": art_of(w[4])[0], "artcat": art_of(w[4])[1], "url": w[5]} for w in wexp]}
@@ -538,19 +579,36 @@ def detail(identity_id):
       JOIN read_parquet('{SN}', hive_partitioning=1) n ON n.notice_id=p.notice_id
       WHERE p.role='winner' AND ei.identity_id=? AND n.cpv_main IS NOT NULL
       GROUP BY 1 HAVING count(*) >= 2 ORDER BY 2 DESC LIMIT 6""", [identity_id]).fetchall()
+    leads_scope = "deutschlandweit"
     if cpv4:
         CL2 = f"read_parquet('{G}/dim_cpv_label.parquet')"
         fit_vals = ",".join(f"('{r[0].replace(chr(39),'')}',{int(r[1])})" for r in cpv4)
-        leads = con.execute(f"""
-          WITH fit(c4, w) AS (VALUES {fit_vals})
-          SELECT le.title, le.buyer_name, le.buyer_town, le.value_eur, le.deadline_date, le.days_to_deadline,
-                 coalesce(le.documents_url, le.source_url) AS url, le.contract_kind, cl.label AS seg
-          FROM {LE} le JOIN fit ON fit.c4 = substr(le.cpv_code,1,4)
-          LEFT JOIN {CL2} cl ON cl.cpv_code = substr(le.cpv_code,1,4) || '0000'
-          WHERE le.phase='open' AND (le.days_to_deadline IS NULL OR le.days_to_deadline >= 0)
-          QUALIFY row_number() OVER (PARTITION BY lower(trim(le.title))
-                                     ORDER BY le.value_eur DESC NULLS LAST) = 1
-          ORDER BY fit.w DESC, le.value_eur DESC NULLS LAST LIMIT 5""").fetchall()
+
+        def _leads_query(regional):
+            # Distanz Sitz→Leistungsort des Leads (perf-Koordinate, sonst Käufer-Koordinate)
+            dist = _hav("coalesce(lg.perf_lat,lg.lat)", "coalesce(lg.perf_lon,lg.lon)") if seat_lat is not None else "NULL"
+            where = f"AND {dist} <= {RADIUS_KM}" if regional else ""
+            order = (f"fit.w DESC, {dist} ASC NULLS LAST, le.value_eur DESC NULLS LAST" if regional
+                     else "fit.w DESC, le.value_eur DESC NULLS LAST")
+            return con.execute(f"""
+              WITH fit(c4, w) AS (VALUES {fit_vals})
+              SELECT le.title, le.buyer_name, le.buyer_town, le.value_eur, le.deadline_date, le.days_to_deadline,
+                     coalesce(le.documents_url, le.source_url) AS url, le.contract_kind, cl.label AS seg,
+                     {dist} AS dist_km
+              FROM {LE} le JOIN fit ON fit.c4 = substr(le.cpv_code,1,4)
+              LEFT JOIN {CL2} cl ON cl.cpv_code = substr(le.cpv_code,1,4) || '0000'
+              LEFT JOIN {LG} lg ON lg.lead_id = le.lead_id
+              WHERE le.phase='open' AND (le.days_to_deadline IS NULL OR le.days_to_deadline >= 0) {where}
+              QUALIFY row_number() OVER (PARTITION BY lower(trim(le.title))
+                                         ORDER BY le.value_eur DESC NULLS LAST) = 1
+              ORDER BY {order} LIMIT 5""").fetchall()
+
+        leads = _leads_query(is_regional)
+        if is_regional:
+            leads_scope = f"Umkreis {RADIUS_KM} km um den Sitz"
+            if len(leads) < 3:  # zu wenig in der Region → deutschlandweit auffüllen (ehrlich kennzeichnen)
+                leads = _leads_query(False)
+                leads_scope = f"deutschlandweit (im Umkreis {RADIUS_KM} km zu wenige)"
     else:
         leads = []
     return {
@@ -559,11 +617,13 @@ def detail(identity_id):
         "website": meta[0] if meta else None, "kmu": bool(meta[1]) if meta else False,
         "segment": Z.clean_name(seg[0]) if seg and seg[0] else None,
         "topBuyers": [{"name": Z.clean_name(t[0]), "wins": int(t[1]), "letztes": int(t[2]) if t[2] else None} for t in topbuyers],
+        "leadsScope": leads_scope,
         "leads": [{"titel": l[0], "buyer": l[1], "ort": l[2],
                    "vol": float(l[3]) if l[3] else None,
                    "frist": l[4].strftime("%d.%m.%Y") if l[4] and hasattr(l[4], "strftime") else None,
                    "tage": int(l[5]) if l[5] is not None else None, "url": l[6],
-                   "art": art_of(l[7])[0], "artcat": art_of(l[7])[1], "seg": l[8]} for l in leads],
+                   "art": art_of(l[7])[0], "artcat": art_of(l[7])[1], "seg": l[8],
+                   "dist": round(l[9]) if l[9] is not None else None} for l in leads],
         "expiring": [{"titel": e[0], "buyer": e[1], "vol": float(e[2]) if e[2] else None,
                       "ende": e[3].strftime("%m/%Y") if e[3] and hasattr(e[3], "strftime") else None,
                       "mte": int(e[4]) if e[4] is not None else None,

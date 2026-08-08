@@ -28,11 +28,11 @@ const SEGS: { key: string; tab: string; title: string }[] = [
 type Exp = { titel: string; buyer: string; vol: number | null; ende: string | null; mte: number | null; vsrc?: string; art?: string | null; artcat?: string | null; url?: string | null; seit?: number | null };
 type Loss = { titel: string; vol: number | null; datum: string | null; gewinner: string | null };
 type Recent = { titel: string; buyer: string | null; vol: number | null; jahr: number | null; url?: string | null };
-type Wett = { name: string; id: string; expiring: Exp[] };
+type Wett = { name: string; id: string; expiring: Exp[]; basis?: string | null };
 type Buyer = { name: string; wins: number; letztes: number | null };
-type Lead = { titel: string; buyer: string | null; ort: string | null; vol: number | null; frist: string | null; tage: number | null; url: string | null; art?: string | null; artcat?: string | null; seg?: string | null };
+type Lead = { titel: string; buyer: string | null; ort: string | null; vol: number | null; frist: string | null; tage: number | null; url: string | null; art?: string | null; artcat?: string | null; seg?: string | null; dist?: number | null };
 type Detail = { id: string; name: string; expiring: Exp[]; losses: Loss[]; recent?: Recent[]; wettbewerber?: Wett | null;
-  website?: string | null; kmu?: boolean; segment?: string | null; topBuyers?: Buyer[]; leads?: Lead[]; error?: string };
+  website?: string | null; kmu?: boolean; segment?: string | null; topBuyers?: Buyer[]; leads?: Lead[]; leadsScope?: string; error?: string };
 
 // Vertragstitel als Link zur TED-Bekanntmachung (extern → neuer Tab) + Vertragsart-Label.
 // artcat (rahmen/einmal/neutral) steuert die Farbe — Bedeutung erklärt die Legende unten.
@@ -455,11 +455,12 @@ export function InternFirmen() {
 
                     {/* Chancen: offene Ausschreibungen in ihrem Kern-Fachgebiet */}
                     {(detail.leads?.length ?? 0) > 0 && <div className="in-block in-leads">
-                      <h3>▸ Passende offene Ausschreibungen <span className="in-h3n">Top {detail.leads!.length}</span></h3>
+                      <h3>▸ Passende offene Ausschreibungen <span className="in-h3n">Top {detail.leads!.length}</span>
+                        {detail.leadsScope && <span className="in-scope"> · {detail.leadsScope}</span>}</h3>
                       {detail.leads!.map((l, i) => (
                         <div key={i} className="in-item">
                           <span className="in-it"><Titel text={l.titel} url={l.url} art={l.art} artcat={l.artcat} />
-                            <span className="in-buyer">{l.seg ? `${l.seg} · ` : ""}{l.buyer || ""}{l.ort ? ` · ${l.ort}` : ""}</span></span>
+                            <span className="in-buyer">{l.seg ? `${l.seg} · ` : ""}{l.buyer || ""}{l.ort ? ` · ${l.ort}` : ""}{l.dist != null ? ` · ${l.dist} km` : ""}</span></span>
                           <span className="in-iv">{eur(l.vol)} · Frist {l.frist ?? "?"}{l.tage != null ? ` (${l.tage} T)` : ""}</span>
                         </div>
                       ))}
@@ -486,7 +487,8 @@ export function InternFirmen() {
                     </div>}
 
                     {detail.wettbewerber && detail.wettbewerber.expiring.length > 0 && <div className="in-block">
-                      <h3>Hauptwettbewerber: {detail.wettbewerber.name.split(" ").slice(0, 4).join(" ")} — läuft aus <span className="in-h3n">{detail.wettbewerber.expiring.length}</span>
+                      <h3>{detail.wettbewerber.basis === "head_to_head" ? "Hauptwettbewerber" : "Größter Anbieter im Feld"}: {detail.wettbewerber.name.split(" ").slice(0, 4).join(" ")}
+                        <span className="in-scope"> · {detail.wettbewerber.basis === "head_to_head" ? "hat die Firma verdrängt" : detail.wettbewerber.basis === "region" ? "gleiche Region, Proxy" : "bundesweit, Proxy"}</span> — läuft aus <span className="in-h3n">{detail.wettbewerber.expiring.length}</span>
                         {" "}<a className="in-link" href={`/firma?id=${encodeURIComponent(detail.wettbewerber.id)}&from=intern`}>Profil →</a></h3>
                       {detail.wettbewerber.expiring.slice(0, 5).map((e, i) => (
                         <div key={i} className="in-item">

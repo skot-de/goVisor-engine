@@ -109,6 +109,7 @@
 
 /* Zähler in Section-Überschriften (dezent, statt „(12)") */
 .in-h3n { color: var(--ink-300); font-weight: 600; margin-left: 4px; }
+.in-scope { color: var(--ink-400); font-weight: 400; text-transform: none; letter-spacing: 0; }
 .in-more { font-size: 11px; color: var(--ink-400); padding-top: 6px; }
 .in-rq { font-size: 12px; color: var(--ink-600); margin: 2px 0 8px; }
 .in-rq strong { color: var(--signal-deep); }
