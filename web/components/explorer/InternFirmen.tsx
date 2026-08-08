@@ -12,6 +12,7 @@ type Firma = {
   medWert: number | null; vol36: number | null; s1: Sig; s2: Sig; dominant: string;
   email: string | null; phone: string | null;
   badge?: Badge; line?: string; metric?: number; // Vertriebsziel-Segment (deutschlandweit)
+  weitere?: { key: string; label: string }[]; rahmenQuote?: number;
 };
 
 // Vertriebsziel-Segmente A–G (govisor-vertriebsziele-spec.md), Reihenfolge = Ansprache-Priorität §8
@@ -131,13 +132,14 @@ export function InternFirmen() {
   const [segControls, setSegControls] = useState<Control[]>([]);
   const [segParams, setSegParams] = useState<Record<string, number>>({});
   const [sortBy, setSortBy] = useState<"metric" | "name" | "wert" | "sitz">("metric");
+  const [dedup, setDedup] = useState(true); // §8 Einmalzuordnung (nur höchstprior. Segment)
 
-  async function runSegment(seg: string, over?: Record<string, number>) {
+  async function runSegment(seg: string, over?: Record<string, number>, dedupVal: boolean = dedup) {
     if (segMode === seg && !over) { setSegMode(""); setFirmen(null); return; } // Toggle aus
     setSegMode(seg); setFilter(""); setLoading(true); setErr(null); setFirmen(null); setOpenId(null); setDetail(null);
-    const p = over
-      ? Object.entries(over).map(([k, v]) => `${k}:${v}`).join(",")
-      : "";
+    const parts = over ? Object.entries(over).map(([k, v]) => `${k}:${v}`) : [];
+    if (!dedupVal) parts.push("dedup:0"); // 1 ist Default → nur bei aus mitschicken
+    const p = parts.join(",");
     window.history.replaceState(null, "", `/intern?segment=${seg}${p ? `&p=${p}` : ""}`);
     try {
       const r = await fetch(`/api/intern/firmen?segment=${seg}${p ? `&p=${encodeURIComponent(p)}` : ""}`);
@@ -267,6 +269,10 @@ export function InternFirmen() {
                     onChange={(e) => setSegParams((p) => ({ ...p, [c.k]: Number(e.target.value) }))} />}
             </label>
           ))}
+          <label className="in-knob in-knob-dedup" title="§8: jede Firma nur im höchstpriorisierten Segment; weitere Zugehörigkeiten als auch-Tags">
+            <span>§8 Einmalzuordnung</span>
+            <input type="checkbox" checked={dedup} onChange={(e) => { setDedup(e.target.checked); runSegment(segMode, segParams, e.target.checked); }} />
+          </label>
           <button className="in-knob-apply" disabled={loading} onClick={() => runSegment(segMode, segParams)}>Anwenden</button>
           <button className="in-knob-reset" onClick={() => runSegment(segMode)}>Zurücksetzen</button>
         </div>
@@ -315,6 +321,9 @@ export function InternFirmen() {
                 {f.badge
                   ? <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || "Sitz unbekannt"}{f.line ? ` · ${f.line}` : ""}</span>
                   : <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || "Sitz unbekannt"} · ≈{perJahr(f.wins36)} Zuschläge/Jahr · Median {eur(f.medWert)}</span>}
+                {(f.weitere?.length ?? 0) > 0 && (
+                  <span className="in-weitere">auch: {f.weitere!.map((wg) => <span key={wg.key} className="in-wtag">{wg.label}</span>)}</span>
+                )}
               </div>
               <div className="in-signals">
                 {f.badge

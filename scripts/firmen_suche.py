@@ -87,6 +87,11 @@ SEGMENTS = {
 }
 
 
+# §8 Ansprache-Priorität (höchste zuerst) + Kurzname je Segment für „weitere_segmente"
+_PRIORITY = ["F", "E", "C", "A", "D", "G", "B"]
+_SEG_TAB = {k: SEGMENTS[k][0] for k in SEGMENTS}
+
+
 def _eur(v):
     if not v:
         return "—"
@@ -159,44 +164,81 @@ def segment(seg="F", limit=100, params=None):
     def w(m):
         return f"DATE '{now}'-INTERVAL {int(m)} MONTH"
 
+    dedup = gp("dedup", 1) >= 1          # §8-Einmalzuordnung (Firma nur im höchstprior. Segment)
+    fetch = int(limit) * 5 if dedup else int(limit)
+    mA, mB, still = int(gp("months", 12)), int(gp("months", 24)), int(gp("still", 18))
+
+    # ── Immer bauen: Zuschlags-Aggregation + Markt-Trend + E/F-Sets + Membership (für §8-Zuordnung) ──
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE win AS
+      SELECT ei.identity_id, pw.notice_id nid, coalesce(n.award_date,n.publication_date) dt,
+             q.final_value_clean val, substr(n.cpv_main,1,4) cpv4
+      FROM {PE} pw JOIN {EI} ei ON ei.entity_id=pw.entity_id
+      JOIN read_parquet('{SN}',hive_partitioning=1) n ON n.notice_id=pw.notice_id
+      LEFT JOIN {QU} q ON q.notice_id=pw.notice_id
+      WHERE pw.role='winner' AND ei.identity_id IN (SELECT identity_id FROM belegt)
+        AND coalesce(n.award_date,n.publication_date) > {w(72)}""")
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE sa AS
+      SELECT identity_id,
+        count(DISTINCT nid) FILTER(WHERE dt>{w(12)}) v3,
+        count(DISTINCT nid) FILTER(WHERE dt<={w(12)} AND dt>{w(24)}) v2,
+        count(DISTINCT nid) FILTER(WHERE dt<={w(24)} AND dt>{w(36)}) v1,
+        count(DISTINCT nid) FILTER(WHERE dt>{w(24)}) v24d,
+        count(DISTINCT nid) FILTER(WHERE dt<={w(18)} AND dt>{w(60)}) v_old18,
+        count(DISTINCT nid) FILTER(WHERE dt>{w(18)}) v_last18,
+        count(DISTINCT nid) FILTER(WHERE dt>{w(mA)}) vA,
+        count(DISTINCT nid) FILTER(WHERE dt>{w(mB)}) vB,
+        count(DISTINCT nid) FILTER(WHERE dt<={w(still)} AND dt>{w(60)}) v_old,
+        count(DISTINCT nid) FILTER(WHERE dt>{w(still)}) v_last,
+        count(DISTINCT nid) FILTER(WHERE dt>{w(36)}) awards36,
+        median(val) FILTER(WHERE val>0 AND dt>{w(36)}) med36,
+        mode(cpv4) FILTER(WHERE cpv4 IS NOT NULL) cpv4, max(dt) last_award
+      FROM win GROUP BY 1""")
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE mkt AS
+      SELECT substr(n.cpv_main,1,4) cpv4,
+        count(DISTINCT pw.notice_id) FILTER(WHERE coalesce(n.award_date,n.publication_date)>{w(12)}) sy3,
+        count(DISTINCT pw.notice_id) FILTER(WHERE coalesce(n.award_date,n.publication_date)<={w(24)}
+                                             AND coalesce(n.award_date,n.publication_date)>{w(36)}) sy1,
+        count(DISTINCT pw.notice_id) FILTER(WHERE coalesce(n.award_date,n.publication_date)>{w(18)}) n_recent
+      FROM {PE} pw JOIN read_parquet('{SN}',hive_partitioning=1) n ON n.notice_id=pw.notice_id
+      WHERE pw.role='winner' AND n.cpv_main IS NOT NULL
+        AND coalesce(n.award_date,n.publication_date) > {w(36)}
+      GROUP BY 1""")
+    # E/F-Zugehörigkeit mit Default-Schwellen — Basis der §8-Priorisierung (unabhängig vom aktiven Tab)
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE eset AS
+      SELECT a.identity_id FROM (
+        SELECT incumbent_group_id identity_id, sum(coalesce(value_eur,0)) vol, mode(substr(cpv_code,1,4)) cpv4
+        FROM {LE} WHERE incumbent_group_id IN (SELECT identity_id FROM belegt) AND months_to_expiry BETWEEN 6 AND 18
+        GROUP BY 1 HAVING sum(coalesce(value_eur,0))>=250000) a
+      LEFT JOIN {MS} sr ON sr.cpv_class=a.cpv4 WHERE coalesce(sr.switch_rate,0)>=0.40""")
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE fset AS
+      WITH pred AS (SELECT se.successor, ei.identity_id loser FROM {SE} se
+          JOIN {PE} pp ON pp.notice_id=se.predecessor AND pp.role='winner'
+          JOIN {EI} ei ON ei.entity_id=pp.entity_id
+          WHERE se.displaced=TRUE AND ei.identity_id IN (SELECT identity_id FROM belegt))
+      SELECT DISTINCT pr.loser identity_id
+      FROM pred pr JOIN read_parquet('{SN}',hive_partitioning=1) n ON n.notice_id=pr.successor
+      LEFT JOIN {QU} q ON q.notice_id=pr.successor
+      WHERE n.award_date > {w(6)} AND coalesce(q.final_value_clean,0) >= 100000
+        AND NOT EXISTS(SELECT 1 FROM {PE} ps JOIN {EI} es ON es.entity_id=ps.entity_id
+                       WHERE ps.notice_id=pr.successor AND ps.role='winner' AND es.identity_id=pr.loser)""")
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE mem AS
+      SELECT s.identity_id,
+        (ff.identity_id IS NOT NULL) fF,
+        (ee.identity_id IS NOT NULL) fE,
+        ((s.v1+s.v2+s.v3)>=6 AND ((s.v1>s.v2 AND s.v2>s.v3) OR s.v3<=0.6*s.v1)
+           AND m.sy1>=5 AND ((m.sy3-m.sy1)::DOUBLE/m.sy1) > ((s.v3-s.v1)::DOUBLE/nullif(s.v1,0))) fC,
+        (s.v3>=24) fA,
+        (s.v_old18>=3 AND s.v_last18=0 AND coalesce(m.n_recent,0)>=10) fD,
+        ((s.v1+s.v2+s.v3)>=6 AND s.v1>=1 AND s.v3>=1.4*s.v1 AND s.v3>s.v1) fG,
+        (s.v24d BETWEEN 1 AND 5
+           AND NOT (s.v_old18>=3 AND s.v_last18=0 AND coalesce(m.n_recent,0)>=10)
+           AND NOT ((s.v1+s.v2+s.v3)>=6 AND ((s.v1>s.v2 AND s.v2>s.v3) OR s.v3<=0.6*s.v1))) fB
+      FROM sa s LEFT JOIN mkt m ON m.cpv4=s.cpv4
+        LEFT JOIN eset ee ON ee.identity_id=s.identity_id
+        LEFT JOIN fset ff ON ff.identity_id=s.identity_id""")
+
     firmen = []
     if seg in ("A", "B", "C", "D", "G"):
-        mA, mB, still = int(gp("months", 12)), int(gp("months", 24)), int(gp("still", 18))
-        # Firmen-Aggregat aus belegten Gewinner-Notices (mit CPV fürs Markt-Matching)
-        con.execute(f"""CREATE OR REPLACE TEMP TABLE win AS
-          SELECT ei.identity_id, pw.notice_id nid, coalesce(n.award_date,n.publication_date) dt,
-                 q.final_value_clean val, substr(n.cpv_main,1,4) cpv4
-          FROM {PE} pw JOIN {EI} ei ON ei.entity_id=pw.entity_id
-          JOIN read_parquet('{SN}',hive_partitioning=1) n ON n.notice_id=pw.notice_id
-          LEFT JOIN {QU} q ON q.notice_id=pw.notice_id
-          WHERE pw.role='winner' AND ei.identity_id IN (SELECT identity_id FROM belegt)
-            AND coalesce(n.award_date,n.publication_date) > {w(72)}""")
-        con.execute(f"""CREATE OR REPLACE TEMP TABLE sa AS
-          SELECT identity_id,
-            count(DISTINCT nid) FILTER(WHERE dt>{w(12)}) v3,
-            count(DISTINCT nid) FILTER(WHERE dt<={w(12)} AND dt>{w(24)}) v2,
-            count(DISTINCT nid) FILTER(WHERE dt<={w(24)} AND dt>{w(36)}) v1,
-            count(DISTINCT nid) FILTER(WHERE dt>{w(mA)}) vA,
-            count(DISTINCT nid) FILTER(WHERE dt>{w(mB)}) vB,
-            count(DISTINCT nid) FILTER(WHERE dt<={w(still)} AND dt>{w(60)}) v_old,
-            count(DISTINCT nid) FILTER(WHERE dt>{w(still)}) v_last,
-            count(DISTINCT nid) FILTER(WHERE dt>{w(36)}) awards36,
-            median(val) FILTER(WHERE val>0 AND dt>{w(36)}) med36,
-            mode(cpv4) FILTER(WHERE cpv4 IS NOT NULL) cpv4, max(dt) last_award
-          FROM win GROUP BY 1""")
-        # Markt-Trend je CPV (marktweit, für die C/D-Ehrlichkeitschecks)
-        need_mkt = seg in ("C", "D")
-        if need_mkt:
-            con.execute(f"""CREATE OR REPLACE TEMP TABLE mkt AS
-              SELECT substr(n.cpv_main,1,4) cpv4,
-                count(DISTINCT pw.notice_id) FILTER(WHERE coalesce(n.award_date,n.publication_date)>{w(12)}) sy3,
-                count(DISTINCT pw.notice_id) FILTER(WHERE coalesce(n.award_date,n.publication_date)<={w(24)}
-                                                     AND coalesce(n.award_date,n.publication_date)>{w(36)}) sy1,
-                count(DISTINCT pw.notice_id) FILTER(WHERE coalesce(n.award_date,n.publication_date)>{w(18)}) n_recent
-              FROM {PE} pw JOIN read_parquet('{SN}',hive_partitioning=1) n ON n.notice_id=pw.notice_id
-              WHERE pw.role='winner' AND n.cpv_main IS NOT NULL
-                AND coalesce(n.award_date,n.publication_date) > {w(36)}
-              GROUP BY 1""")
         dec = 1 - gp("decline", 40) / 100.0   # C: v3 <= dec*v1
         rise = 1 + gp("rise", 40) / 100.0      # G: v3 >= rise*v1
         cond = {
@@ -207,16 +249,15 @@ def segment(seg="F", limit=100, params=None):
             "D": (f"v_old>={int(gp('hist',3))} AND v_last=0", "v_old DESC"),
             "G": (f"(v1+v2+v3)>={int(gp('min_base',6))} AND v1>=1 AND v3>={rise}*v1 AND v3>v1", "(v3-v1) DESC"),
         }[seg]
-        mkt_join = "LEFT JOIN mkt m ON m.cpv4 = x.cpv4" if need_mkt else ""
-        mkt_cols = ", m.sy1, m.sy3, m.n_recent" if need_mkt else ", NULL sy1, NULL sy3, NULL n_recent"
         rows = con.execute(f"""
           WITH named AS (SELECT x.*, {nm} firmenname,
-                           el.plz, el.ort, el.email, el.phone{mkt_cols}
-                         FROM sa x LEFT JOIN eloc el ON el.identity_id=x.identity_id {mkt_join})
+                           el.plz, el.ort, el.email, el.phone, m.sy1, m.sy3, m.n_recent
+                         FROM sa x LEFT JOIN eloc el ON el.identity_id=x.identity_id
+                         LEFT JOIN mkt m ON m.cpv4 = x.cpv4)
           SELECT identity_id, firmenname, plz, ort, email, phone,
                  v1,v2,v3, vA, vB, v_old, awards36, med36, last_award, cpv4, sy1, sy3, n_recent
           FROM named WHERE firmenname IS NOT NULL AND {_KONSORTIUM} AND ({cond[0]})
-          ORDER BY {cond[1]} LIMIT {int(limit) * 3 if need_mkt else int(limit)}""").fetchall()
+          ORDER BY {cond[1]} LIMIT {fetch}""").fetchall()
         mkt_min = int(gp("market", 10)) if seg == "D" else None
         market_on = seg == "C" and gp("market", 1) >= 1
         for r in rows:
@@ -256,33 +297,36 @@ def segment(seg="F", limit=100, params=None):
                 f["badge"] = {"label": f"▲ +{v3-v1} Zuschläge", "cls": "aktiv", "spark": spark}
                 f["line"] = f"{int(aw36)} Zuschläge/3J · Median {_eur(med36)}"; f["metric"] = v3 - v1
             firmen.append(f)
-            if len(firmen) >= int(limit):
-                break
 
     elif seg == "E":  # Verteidiger unter Druck — Auslauf lo–hi Monate, Summe ≥ min_vol, Wechselquote ≥ switch
         lo, hi = int(gp("lo", 6)), int(gp("hi", 18))
         min_vol, switch = gp("min_vol", 250000), gp("switch", 40) / 100.0
+        # Rahmen-Quote = Anteil des auslaufenden VOLUMENS aus Rahmen-/wiederkehrenden Verträgen
+        # (wiederkehrend = wird neu ausgeschrieben → echte Chance; Einmalauftrag ist danach weg).
         rows = con.execute(f"""
           WITH agg AS (
             SELECT incumbent_group_id identity_id, count(*) n, sum(coalesce(value_eur,0)) vol,
-                   min(contract_end) naechstes, mode(substr(cpv_code,1,4)) cpv4
+                   min(contract_end) naechstes, mode(substr(cpv_code,1,4)) cpv4,
+                   sum(coalesce(value_eur,0)) FILTER(WHERE contract_kind IN ('framework','recurring')) rahmen_vol
             FROM {LE} WHERE incumbent_group_id IN (SELECT identity_id FROM belegt)
               AND months_to_expiry BETWEEN {lo} AND {hi}
             GROUP BY 1 HAVING sum(coalesce(value_eur,0)) >= {min_vol}),
-          named AS (SELECT x.identity_id, x.n, x.vol, x.naechstes, x.cpv4, sr.switch_rate,
+          named AS (SELECT x.identity_id, x.n, x.vol, x.naechstes, x.cpv4, x.rahmen_vol, sr.switch_rate,
                            {nm} firmenname, el.plz, el.ort, el.email, el.phone
                     FROM agg x LEFT JOIN eloc el ON el.identity_id=x.identity_id
                     LEFT JOIN {MS} sr ON sr.cpv_class = x.cpv4)
-          SELECT identity_id, firmenname, plz, ort, email, phone, n, vol, naechstes, switch_rate
+          SELECT identity_id, firmenname, plz, ort, email, phone, n, vol, naechstes, switch_rate, rahmen_vol
           FROM named WHERE firmenname IS NOT NULL AND {_KONSORTIUM} AND coalesce(switch_rate,0) >= {switch}
-          ORDER BY vol DESC LIMIT {int(limit)}""").fetchall()
+          ORDER BY vol DESC LIMIT {fetch}""").fetchall()
         for r in rows:
             f = base(r[0], r[1]); f.update({"plz": r[2], "ort": r[3], "email": r[4], "phone": r[5],
                                             "medWert": None, "wins36": 0})
             nd = r[8].strftime("%m/%Y") if r[8] and hasattr(r[8], "strftime") else "?"
             sr = f" · Wechselquote {round((r[9] or 0)*100)}%" if r[9] is not None else ""
-            f["badge"] = {"label": f"◷ {_eur(r[7])} Auslauf", "cls": "s2"}
+            rq = round((r[10] or 0) / r[7] * 100) if r[7] else 0   # Rahmen-Anteil am Volumen
+            f["badge"] = {"label": f"◷ {_eur(r[7])} Auslauf · {rq}% Rahmen", "cls": "s2"}
             f["line"] = f"{r[6]} Verträge laufen aus · nächstes {nd}{sr}"; f["metric"] = float(r[7] or 0)
+            f["rahmenQuote"] = rq
             firmen.append(f)
 
     elif seg == "F":  # Frische Verlierer — Verlust ≤ months, ≥ min_vol
@@ -307,7 +351,7 @@ def segment(seg="F", limit=100, params=None):
                     FROM best x LEFT JOIN eloc el ON el.identity_id=x.identity_id)
           SELECT identity_id, firmenname, plz, ort, email, phone, val, gewinner, titel, n, dt
           FROM named WHERE firmenname IS NOT NULL AND {_KONSORTIUM}
-          ORDER BY val DESC LIMIT {int(limit)}""").fetchall()
+          ORDER BY val DESC LIMIT {fetch}""").fetchall()
         for r in rows:
             f = base(r[0], r[1]); f.update({"plz": r[2], "ort": r[3], "email": r[4], "phone": r[5],
                                             "medWert": None, "wins36": 0})
@@ -315,6 +359,29 @@ def segment(seg="F", limit=100, params=None):
             f["line"] = f"an {Z.clean_name(r[7]) if r[7] else '?'}" + (f" · +{int(r[9])-1} weitere" if r[9] and r[9] > 1 else "")
             f["metric"] = float(r[6] or 0)
             firmen.append(f)
+
+    # ── §8 Einmalzuordnung: Firma erscheint nur im höchstprior. Segment; Rest als „weitere_segmente".
+    # Membership der ANDEREN Segmente aus `mem` (Default-Schwellen); das aktive Segment gilt als erfüllt,
+    # weil die Firma bereits Kandidat ist. Fällt sie auch in ein höherpriorisiertes Segment → dort zeigen.
+    ids = [f["id"] for f in firmen]
+    memd = {}
+    if ids:
+        mrows = con.execute(
+            "SELECT identity_id, fF,fE,fC,fA,fD,fG,fB FROM mem WHERE identity_id IN (SELECT unnest(?::VARCHAR[]))",
+            [ids]).fetchall()
+        memd = {r[0]: dict(zip(["F", "E", "C", "A", "D", "G", "B"], r[1:])) for r in mrows}
+    out = []
+    for f in firmen:
+        fl = dict(memd.get(f["id"], {}))
+        fl[seg] = True  # Kandidat des aktiven Segments
+        primary = next((k for k in _PRIORITY if fl.get(k)), seg)
+        if dedup and primary != seg:
+            continue
+        f["weitere"] = [{"key": k, "label": _SEG_TAB[k]} for k in _PRIORITY if fl.get(k) and k != seg]
+        out.append(f)
+        if len(out) >= int(limit):
+            break
+    firmen = out
 
     return {"stichtag": str(now), "segment": seg, "label": SEGMENTS[seg][0],
             "hint": SEGMENTS[seg][1], "controls": _CONTROLS[seg], "n": len(firmen), "firmen": firmen}
