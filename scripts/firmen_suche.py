@@ -159,12 +159,29 @@ def detail(identity_id):
       FROM {BCH} b JOIN {EI} m ON m.entity_id=b.contractor_entity_id AND m.identity_id=?
       JOIN {EN} en ON en.entity_id=b.buyer_entity_id WHERE en.canonical_name IS NOT NULL
       GROUP BY 1 ORDER BY 2 DESC LIMIT 4""", [identity_id]).fetchall()
+
+    # Top-Potenzial-Leads: OFFENE Ausschreibungen in den Kompetenz-Feldern der Firma (ihre häufigsten
+    # CPV4) — "was könnte sie jetzt bieten" (Klostermann → Bahnbau). Der Kern-Nutzen von goVisor.
+    cpv4 = con.execute(f"""SELECT substr(n.cpv_main,1,4) c FROM {PE} p JOIN {EI} ei ON ei.entity_id=p.entity_id
+      JOIN read_parquet('{SN}', hive_partitioning=1) n ON n.notice_id=p.notice_id
+      WHERE p.role='winner' AND ei.identity_id=? AND n.cpv_main IS NOT NULL
+      GROUP BY 1 ORDER BY count(*) DESC LIMIT 4""", [identity_id]).fetchall()
+    cpv_in = "(" + ",".join("'" + r[0].replace("'", "") + "'" for r in cpv4) + ")" if cpv4 else "('')"
+    leads = con.execute(f"""SELECT slug, title, buyer_name, buyer_town, value_eur, deadline_date, days_to_deadline,
+             coalesce(documents_url, source_url) AS url
+      FROM {LE} WHERE phase='open' AND substr(cpv_code,1,4) IN {cpv_in}
+        AND (days_to_deadline IS NULL OR days_to_deadline >= 0)
+      ORDER BY value_eur DESC NULLS LAST LIMIT 5""").fetchall()
     return {
         "id": identity_id, "name": Z.clean_name(prof[0]), "plz": prof[1], "ort": prof[2],
         "email": prof[3], "phone": prof[4], "wins36": int(prof[5] or 0),
         "website": meta[0] if meta else None, "kmu": bool(meta[1]) if meta else False,
         "segment": Z.clean_name(seg[0]) if seg and seg[0] else None,
         "topBuyers": [{"name": Z.clean_name(t[0]), "wins": int(t[1]), "letztes": int(t[2]) if t[2] else None} for t in topbuyers],
+        "leads": [{"titel": l[1], "buyer": l[2], "ort": l[3],
+                   "vol": float(l[4]) if l[4] else None,
+                   "frist": l[5].strftime("%d.%m.%Y") if l[5] and hasattr(l[5], "strftime") else None,
+                   "tage": int(l[6]) if l[6] is not None else None, "url": l[7]} for l in leads],
         "expiring": [{"titel": e[0], "buyer": e[1], "vol": float(e[2]) if e[2] else None,
                       "ende": e[3].strftime("%m/%Y") if e[3] and hasattr(e[3], "strftime") else None,
                       "mte": int(e[4]) if e[4] is not None else None,

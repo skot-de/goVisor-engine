@@ -15,8 +15,9 @@ type Loss = { titel: string; vol: number | null; datum: string | null; gewinner:
 type Recent = { titel: string; buyer: string | null; vol: number | null; jahr: number | null; url?: string | null };
 type Wett = { name: string; id: string; expiring: Exp[] };
 type Buyer = { name: string; wins: number; letztes: number | null };
+type Lead = { titel: string; buyer: string | null; ort: string | null; vol: number | null; frist: string | null; tage: number | null; url: string | null };
 type Detail = { id: string; name: string; expiring: Exp[]; losses: Loss[]; recent?: Recent[]; wettbewerber?: Wett | null;
-  website?: string | null; kmu?: boolean; segment?: string | null; topBuyers?: Buyer[]; error?: string };
+  website?: string | null; kmu?: boolean; segment?: string | null; topBuyers?: Buyer[]; leads?: Lead[]; error?: string };
 
 // Vertragstitel als Link zur TED-Bekanntmachung (extern → neuer Tab) + Rahmen/Einmal-Marker.
 function Titel({ text, url, art }: { text: string | null; url?: string | null; art?: string | null }) {
@@ -58,6 +59,21 @@ export function InternFirmen() {
       try { localStorage.setItem("govisor.outreach", JSON.stringify([...s])); } catch { /* ignore */ }
       return s;
     });
+  }
+
+  // Outreach-Landing für eine Firma erzeugen und den Link in die Zwischenablage kopieren
+  const [landing, setLanding] = useState<Record<string, { busy?: boolean; url?: string; copied?: boolean }>>({});
+  async function makeLanding(id: string) {
+    setLanding((p) => ({ ...p, [id]: { busy: true } }));
+    try {
+      const r = await fetch(`/api/intern/landing?id=${encodeURIComponent(id)}`, { method: "POST" });
+      const d = await r.json();
+      if (d.url) {
+        const full = `${window.location.origin}${d.url}`;
+        try { await navigator.clipboard.writeText(full); } catch { /* ignore */ }
+        setLanding((p) => ({ ...p, [id]: { url: d.url, copied: true } }));
+      } else setLanding((p) => ({ ...p, [id]: {} }));
+    } catch { setLanding((p) => ({ ...p, [id]: {} })); }
   }
 
   const runSearch = useCallback(async (p: string, o: string, n: string) => {
@@ -152,6 +168,11 @@ export function InternFirmen() {
                       <button className={`in-done-btn ${contacted.has(f.id) ? "on" : ""}`} onClick={() => toggleContacted(f.id)}>
                         {contacted.has(f.id) ? "✓ angesprochen" : "Als angesprochen markieren"}
                       </button>
+                      {landing[f.id]?.url
+                        ? <a className="in-link" href={landing[f.id].url} target="_blank" rel="noreferrer">{landing[f.id].copied ? "Landing-Link kopiert ✓ — öffnen ↗" : "Landing öffnen ↗"}</a>
+                        : <button className="in-done-btn" disabled={landing[f.id]?.busy} onClick={() => makeLanding(f.id)}>
+                            {landing[f.id]?.busy ? "erzeuge …" : "Landing erzeugen + Link kopieren"}
+                          </button>}
                       <span className="in-note">Kontakt aus Bekanntmachung — vor Nutzung prüfen (oft Vergabeportal statt Firma).</span>
                     </div>
 
@@ -198,6 +219,16 @@ export function InternFirmen() {
                       ))}
                     </div>}
 
+                    {(detail.leads?.length ?? 0) > 0 && <div className="in-block in-leads">
+                      <h3>▸ Passende offene Ausschreibungen — Top {detail.leads!.length}</h3>
+                      {detail.leads!.map((l, i) => (
+                        <div key={i} className="in-item">
+                          <span className="in-it"><Titel text={l.titel} url={l.url} /><span className="in-buyer">{l.buyer || ""}{l.ort ? ` · ${l.ort}` : ""}</span></span>
+                          <span className="in-iv">{eur(l.vol)} · Frist {l.frist ?? "?"}{l.tage != null ? ` (${l.tage} T)` : ""}</span>
+                        </div>
+                      ))}
+                    </div>}
+
                     {(detail.recent?.length ?? 0) > 0 && <div className="in-block">
                       <h3>Zuletzt gewonnen ({detail.recent!.length})</h3>
                       {detail.recent!.slice(0, 8).map((r, i) => (
@@ -208,7 +239,7 @@ export function InternFirmen() {
                       ))}
                     </div>}
 
-                    {detail.losses.length === 0 && detail.expiring.length === 0 && (detail.recent?.length ?? 0) === 0 &&
+                    {detail.losses.length === 0 && detail.expiring.length === 0 && (detail.recent?.length ?? 0) === 0 && (detail.leads?.length ?? 0) === 0 &&
                       <div className="in-muted">Keine Vertragsdaten erfasst.</div>}
                   </>
                 ))}
