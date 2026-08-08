@@ -434,6 +434,15 @@ export function InternFirmen() {
                     {/* Gesprächsaufhänger: laufende Verträge, die demnächst enden (Amtsinhaber-Position) */}
                     {detail.expiring.length > 0 && <div className="in-block">
                       <h3>◷ Läuft aus — Gesprächsaufhänger <span className="in-h3n">{detail.expiring.length}</span></h3>
+                      {(() => {
+                        const total = detail.expiring.reduce((s, e) => s + (e.vol || 0), 0);
+                        const rahmen = detail.expiring.filter((e) => e.artcat === "rahmen").reduce((s, e) => s + (e.vol || 0), 0);
+                        return total > 0 ? (
+                          <div className="in-rq" title="Anteil Rahmen-/wiederkehrende Verträge am auslaufenden Volumen — wiederkehrend = wird neu ausgeschrieben">
+                            Auslaufendes Volumen {eur(total)} · davon <strong>{Math.round(rahmen / total * 100)}% Rahmen/wiederkehrend</strong>
+                          </div>
+                        ) : null;
+                      })()}
                       {detail.expiring.slice(0, 5).map((e, i) => (
                         <div key={i} className="in-item">
                           <span className="in-it"><Titel text={e.titel} url={e.url} art={e.art} artcat={e.artcat} />
