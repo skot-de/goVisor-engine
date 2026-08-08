@@ -60,6 +60,14 @@
   border: 1px solid var(--line); border-radius: 99px; padding: 2px 9px; }
 .in-tq { color: var(--signal-deep); font-weight: 600; }
 
+/* Sitz-Geo-Filter im Segment-Modus */
+.in-geohint { color: var(--ink-300); }
+.in-geochip { display: inline-flex; align-items: center; gap: 4px; margin-left: 6px; font-weight: 600;
+  color: var(--signal-deep); background: var(--signal-wash); border: 1px solid #cfe8dc; border-radius: 99px; padding: 1px 4px 1px 9px; }
+.in-geoclear { border: 0; background: transparent; color: var(--signal-deep); cursor: pointer; font: inherit;
+  font-size: 14px; line-height: 1; padding: 0 4px; }
+.in-geoclear:hover { color: var(--risk); }
+
 .in-err { background: var(--risk-wash); color: var(--risk); border: 1px solid #f3d5cd; border-radius: 8px; padding: 10px 14px; font-size: 13px; }
 .in-empty, .in-muted { color: var(--ink-500); font-size: 13px; padding: 12px 2px; }
 .in-count { font-size: 12px; color: var(--ink-400); margin-bottom: 8px; }

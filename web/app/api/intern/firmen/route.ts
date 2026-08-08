@@ -48,6 +48,19 @@ export async function GET(req: Request) {
         if (!/^[a-z_]+:[0-9.]+(,[a-z_]+:[0-9.]+)*$/.test(p)) return NextResponse.json({ error: "ungültige Parameter" }, { status: 400 });
         args.push("--params", p);
       }
+      // Geo-Filter auf den Firmensitz (optional): plz/ort/nuts + radius
+      for (const k of ["plz", "ort", "nuts"] as const) {
+        const v = (u.searchParams.get(k) || "").trim();
+        if (v) {
+          if (!SAFE.test(v)) return NextResponse.json({ error: `ungültiger ${k}` }, { status: 400 });
+          args.push(`--${k}`, v);
+        }
+      }
+      const gradius = (u.searchParams.get("radius") || "").trim();
+      if (gradius) {
+        if (!/^\d{1,3}$/.test(gradius)) return NextResponse.json({ error: "ungültiger radius" }, { status: 400 });
+        args.push("--radius", gradius);
+      }
       return NextResponse.json(await run(args));
     }
     const args = ["--search"];

@@ -123,15 +123,16 @@ _CONTROLS = {
 }
 
 
-def segment(seg="F", limit=100, params=None):
-    """Eine Vertriebsziel-Kohorte deutschlandweit (belegte Einzelfirmen, Konsortien gefiltert).
+def segment(seg="F", limit=100, params=None, geo=None):
+    """Eine Vertriebsziel-Kohorte (belegte Einzelfirmen, Konsortien gefiltert).
 
     A/B/C/D/G aus einer Jahres-Zuschlags-Aggregation; E aus auslaufenden Verträgen, F aus frischen
     Verlusten. `params` überschreibt die Spec-Schwellen (s. _CONTROLS). Ehrlichkeitschecks §3:
       C — nur behalten, wenn die Firma STÄRKER fällt als ihr CPV-Markt (sonst schrumpft der Markt).
       D — nur, wenn das Feld noch aktiv ist (≥N Vergaben im CPV in 18 Monaten).
       E — nur in Segmenten mit hoher Wechselquote (market_switch_rate ≥ Schwelle).
-    Jede Firma trägt badge + line (Anzeige) + metric (Sortierwert).
+    `geo` = {plz, radius, ort, nuts} schränkt auf den FIRMENSITZ ein (deutschlandweit, wenn leer).
+    Der Markt-Trend (C/D) bleibt national — nur die Firmenauswahl wird regional. badge + line + metric.
     """
     seg = (seg or "F").upper()
     if seg not in SEGMENTS:
@@ -149,10 +150,50 @@ def segment(seg="F", limit=100, params=None):
     EI = f"read_parquet('{G}/entity_identity.parquet')"; EN = f"read_parquet('{G}/entities.parquet')"
     PE = f"read_parquet('{G}/party_entity.parquet')"; QU = f"read_parquet('{G}/quality.parquet')"
     LE = f"read_parquet('{G}/lead_export.parquet')"; SE = f"read_parquet('{G}/succession_events.parquet')"
-    MS = f"read_parquet('{G}/market_switch_rate.parquet')"
+    MS = f"read_parquet('{G}/market_switch_rate.parquet')"; DP = f"read_parquet('{G}/dim_plz.parquet')"
     Z.build_entity_location(con)
+
+    # ── Geo-Filter auf den Firmensitz (eloc) — schränkt `belegt` ein, alles Downstream folgt ──
+    geo = geo or {}
+    geo_label, belegt_geo = None, ""
+    gplz = "".join(c for c in str(geo.get("plz") or "") if c.isdigit())[:5]
+    gort = (geo.get("ort") or "").strip().replace("'", "")
+    gnuts = (geo.get("nuts") or "").strip().upper()
+    if gplz and geo.get("radius"):
+        try:
+            radius = max(1.0, min(200.0, float(geo["radius"])))
+        except (TypeError, ValueError):
+            radius = 25.0
+        center = con.execute(f"SELECT lat, lon FROM {DP} WHERE plz=? LIMIT 1", [gplz]).fetchone()
+        if center:
+            clat, clon = float(center[0]), float(center[1])
+            hav = (f"6371*acos(least(1.0, sin(radians({clat}))*sin(radians(dp.lat)) + "
+                   f"cos(radians({clat}))*cos(radians(dp.lat))*cos(radians(dp.lon-({clon})))))")
+            con.execute(f"""CREATE OR REPLACE TEMP TABLE geoids AS
+              SELECT DISTINCT el.identity_id FROM eloc el JOIN {DP} dp ON dp.plz = el.plz
+              WHERE el.plz IS NOT NULL AND {hav} <= {radius}""")
+            geo_label = f"{gplz} +{int(radius)} km"
+        else:
+            con.execute("CREATE OR REPLACE TEMP TABLE geoids AS SELECT identity_id FROM eloc WHERE FALSE")
+            geo_label = f"{gplz} (PLZ unbekannt)"
+    elif gplz:
+        con.execute(f"CREATE OR REPLACE TEMP TABLE geoids AS SELECT identity_id FROM eloc WHERE plz LIKE '{gplz}%'")
+        geo_label = f"PLZ {gplz}"
+    elif gort:
+        o = gort.lower()
+        con.execute(f"""CREATE OR REPLACE TEMP TABLE geoids AS SELECT identity_id FROM eloc
+          WHERE lower(ort)='{o}' OR lower(ort) LIKE '{o}-%' OR lower(ort) LIKE '{o} %'
+             OR lower(ort) LIKE '{o}/%' OR lower(ort) LIKE '{o}(%'""")
+        geo_label = gort
+    elif gnuts.startswith("DE"):
+        con.execute(f"CREATE OR REPLACE TEMP TABLE geoids AS SELECT identity_id FROM eloc WHERE nuts LIKE '{gnuts}%'")
+        geo_label = f"Region {gnuts}"
+    if geo_label:
+        belegt_geo = "AND ei.identity_id IN (SELECT identity_id FROM geoids)"
+
     con.execute(f"""CREATE OR REPLACE TEMP TABLE belegt AS SELECT DISTINCT ei.identity_id
-      FROM {EI} ei JOIN {EN} e ON e.entity_id=ei.entity_id WHERE e.method IN {Z.BELEGT_METHODS}""")
+      FROM {EI} ei JOIN {EN} e ON e.entity_id=ei.entity_id
+      WHERE e.method IN {Z.BELEGT_METHODS} {belegt_geo}""")
     nm = (f"(SELECT arg_max(e.canonical_name,e.confidence) FROM {EI} ei JOIN {EN} e ON e.entity_id=ei.entity_id "
           "WHERE ei.identity_id=x.identity_id)")
 
@@ -384,7 +425,8 @@ def segment(seg="F", limit=100, params=None):
     firmen = out
 
     return {"stichtag": str(now), "segment": seg, "label": SEGMENTS[seg][0],
-            "hint": SEGMENTS[seg][1], "controls": _CONTROLS[seg], "n": len(firmen), "firmen": firmen}
+            "hint": SEGMENTS[seg][1], "controls": _CONTROLS[seg], "geo": geo_label,
+            "n": len(firmen), "firmen": firmen}
 
 
 def detail(identity_id):
@@ -542,7 +584,7 @@ def main():
     ap.add_argument("--detail")
     ap.add_argument("--segment", choices=list(SEGMENTS.keys()))
     ap.add_argument("--params", help="Kohorten-Knöpfe als k:v,k:v (überschreibt _CONTROLS-Defaults)")
-    ap.add_argument("--plz"); ap.add_argument("--ort"); ap.add_argument("--name"); ap.add_argument("--radius")
+    ap.add_argument("--plz"); ap.add_argument("--ort"); ap.add_argument("--name"); ap.add_argument("--radius"); ap.add_argument("--nuts")
     a = ap.parse_args()
     try:
         if a.segment:
@@ -551,7 +593,8 @@ def main():
                 for kv in a.params.split(","):
                     if ":" in kv:
                         k, v = kv.split(":", 1); pd[k.strip()] = v.strip()
-            out = segment(a.segment, params=pd)
+            geo = {"plz": a.plz, "radius": a.radius, "ort": a.ort, "nuts": a.nuts}
+            out = segment(a.segment, params=pd, geo=geo)
         else:
             out = detail(a.detail) if a.detail else search(a.plz, a.ort, a.name, a.radius)
     except Exception as e:  # noqa: BLE001

@@ -147,19 +147,29 @@ export function InternFirmen() {
   const [sortBy, setSortBy] = useState<"metric" | "name" | "wert" | "sitz">("metric");
   const [dedup, setDedup] = useState(true); // §8 Einmalzuordnung (nur höchstprior. Segment)
 
-  async function runSegment(seg: string, over?: Record<string, number>, dedupVal: boolean = dedup) {
-    if (segMode === seg && !over) { setSegMode(""); setFirmen(null); return; } // Toggle aus
+  const [segGeo, setSegGeo] = useState<string>(""); // aktiver Sitz-Geo-Filter (Label aus Backend)
+  async function runSegment(seg: string, over?: Record<string, number>, dedupVal: boolean = dedup,
+                            noGeo = false, geoArg?: { plz?: string; radius?: string; ort?: string }) {
+    if (segMode === seg && !over && !noGeo) { setSegMode(""); setFirmen(null); return; } // Toggle aus
     setSegMode(seg); setFilter(""); setLoading(true); setErr(null); setFirmen(null); setOpenId(null); setDetail(null);
     const parts = over ? Object.entries(over).map(([k, v]) => `${k}:${v}`) : [];
     if (!dedupVal) parts.push("dedup:0"); // 1 ist Default → nur bei aus mitschicken
     const p = parts.join(",");
-    window.history.replaceState(null, "", `/intern?segment=${seg}${p ? `&p=${p}` : ""}`);
+    // Sitz-Geo-Filter aus explizitem Argument (URL-Restore) oder den oberen Suchfeldern (PLZ+Radius / Ort)
+    const gp2 = (geoArg ? geoArg.plz : plz)?.trim() || "";
+    const go2 = (geoArg ? geoArg.ort : ort)?.trim() || "";
+    const gr2 = (geoArg ? geoArg.radius : radius) || "";
+    const g = new URLSearchParams();
+    if (!noGeo && gp2) { g.set("plz", gp2); if (gr2) g.set("radius", gr2); }
+    else if (!noGeo && go2) g.set("ort", go2);
+    const gq = g.toString();
+    window.history.replaceState(null, "", `/intern?segment=${seg}${p ? `&p=${p}` : ""}${gq ? `&${gq}` : ""}`);
     try {
-      const r = await fetch(`/api/intern/firmen?segment=${seg}${p ? `&p=${encodeURIComponent(p)}` : ""}`);
+      const r = await fetch(`/api/intern/firmen?segment=${seg}${p ? `&p=${encodeURIComponent(p)}` : ""}${gq ? `&${gq}` : ""}`);
       const d = await r.json();
       if (d.error) setErr(d.error);
       else {
-        setFirmen(d.firmen || []); setSegHint(d.hint || "");
+        setFirmen(d.firmen || []); setSegHint(d.hint || ""); setSegGeo(d.geo || "");
         if (!over) { // frisches Segment → Knöpfe + Defaults übernehmen
           setSegControls(d.controls || []);
           const defs: Record<string, number> = {};
@@ -175,7 +185,12 @@ export function InternFirmen() {
   useEffect(() => {
     const sp = new URLSearchParams(window.location.search);
     const seg = sp.get("segment");
-    if (seg && /^[A-G]$/.test(seg)) { runSegment(seg); return; }
+    if (seg && /^[A-G]$/.test(seg)) {
+      const gp = sp.get("plz") || "", go = sp.get("ort") || "", gr = sp.get("radius") || "";
+      if (gp) { setPlz(gp); setRadius(gr); } else if (go) setOrt(go);
+      runSegment(seg, undefined, true, false, { plz: gp, ort: go, radius: gr });
+      return;
+    }
     const p = sp.get("plz") || "", o = sp.get("ort") || "", n = sp.get("name") || "", rad = sp.get("radius") || "";
     if (p || o || n) { setPlz(p); setOrt(o); setName(n); setRadius(rad); runSearch(p, o, n, rad); }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -279,6 +294,9 @@ export function InternFirmen() {
       </div>
       {segMode && segHint && (
         <div className="in-seghint">{SEGS.find((s) => s.key === segMode)?.tab}: {segHint}
+          {segGeo
+            ? <span className="in-geochip">📍 {segGeo} <button className="in-geoclear" title="Geo-Filter entfernen" onClick={() => { setPlz(""); setOrt(""); setRadius(""); runSegment(segMode, segParams, dedup, true); }}>×</button></span>
+            : <span className="in-geohint"> · Tipp: PLZ+Umkreis oder Ort oben eintragen → Segment filtert auf den Firmensitz</span>}
           {treffer[segMode] && <span className="in-tq"> · Trefferquote {treffer[segMode].quote}% aus {treffer[segMode].n} Ansprachen</span>}
         </div>
       )}
@@ -334,7 +352,7 @@ export function InternFirmen() {
       {firmen && firmen.length > 0 && (
         <div className="in-count">
           {segMode
-           ? `${firmen.length} Treffer — ${SEGS.find((s) => s.key === segMode)?.tab} (deutschlandweit${firmen.length >= 100 ? ", Top 100" : ""})`
+           ? `${firmen.length} Treffer — ${SEGS.find((s) => s.key === segMode)?.tab} (${segGeo ? `Sitz ${segGeo}` : "deutschlandweit"}${firmen.length >= 100 ? ", Top 100" : ""})`
            : `${visible.length} von ${firmen.length} Firmen — nach Schmerz-Volumen sortiert`}
         </div>
       )}
