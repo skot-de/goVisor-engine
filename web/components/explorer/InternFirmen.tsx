@@ -47,10 +47,22 @@ export function InternFirmen() {
   const [detail, setDetail] = useState<Detail | null>(null);
   const [detailLoading, setDetailLoading] = useState(false);
   const [contacted, setContacted] = useState<Set<string>>(new Set());
+  const [notes, setNotes] = useState<Record<string, string>>({});
+  const [filter, setFilter] = useState<"" | "s1" | "s2" | "offen">(""); // Schnellfilter
 
   useEffect(() => {
     try { setContacted(new Set(JSON.parse(localStorage.getItem("govisor.outreach") || "[]"))); } catch { /* ignore */ }
+    try { setNotes(JSON.parse(localStorage.getItem("govisor.notes") || "{}")); } catch { /* ignore */ }
   }, []);
+
+  function setNote(id: string, text: string) {
+    setNotes((prev) => {
+      const n = { ...prev, [id]: text };
+      if (!text) delete n[id];
+      try { localStorage.setItem("govisor.notes", JSON.stringify(n)); } catch { /* ignore */ }
+      return n;
+    });
+  }
 
   function toggleContacted(id: string) {
     setContacted((prev) => {
@@ -113,6 +125,41 @@ export function InternFirmen() {
     finally { setDetailLoading(false); }
   }
 
+  // Schnellfilter auf die Trefferliste (Signal-basiert, clientseitig)
+  const visible = (firmen || []).filter((f) =>
+    filter === "s1" ? f.s1.n > 0 : filter === "s2" ? f.s2.n > 0 : filter === "offen" ? !contacted.has(f.id) : true
+  );
+
+  // (2) Pitch-Zeile: kopierfertiger Einzeiler aus den Schmerz-Signalen der Firma
+  function pitchFor(f: Firma, d: Detail | null): string {
+    const parts: string[] = [];
+    if (f.s2.n > 0) parts.push(`in den nächsten Monaten laufen ${f.s2.n} Verträge (~${eur(f.s2.vol)})${f.s2.naechstes ? ` bis ${f.s2.naechstes}` : ""} aus`);
+    if (f.s1.n > 0) parts.push(`${f.s1.n} Aufträge (${eur(f.s1.vol)}) gingen zuletzt an den Wettbewerb`);
+    const buyer = d?.topBuyers?.[0]?.name;
+    if (buyer) parts.push(`Hauptkunde ${buyer.split(",")[0].split(" ").slice(0, 5).join(" ")}`);
+    const nLeads = d?.leads?.length ?? 0;
+    const kern = parts.length ? parts.join("; ") : `${f.wins36} Zuschläge in 36 Monaten, Median ${eur(f.medWert)}`;
+    const lead = nLeads > 0 ? ` Dazu ${nLeads} offene Ausschreibungen, die exakt zum Profil passen.` : "";
+    return `Hallo, kurz zu ${f.name}: ${kern}.${lead} goVisor zeigt, wo Sie angreifbar sind und welche Aufträge jetzt passen — 15 Minuten dazu?`;
+  }
+  function copyPitch(id: string, text: string) {
+    try { navigator.clipboard.writeText(text); } catch { /* ignore */ }
+    setPitchCopied(id); setTimeout(() => setPitchCopied((c) => (c === id ? null : c)), 2000);
+  }
+  const [pitchCopied, setPitchCopied] = useState<string | null>(null);
+
+  // (5) CSV-Export der aktuell sichtbaren Trefferliste (inkl. Notizen + Status)
+  function exportCsv() {
+    const head = ["Firma", "PLZ", "Ort", "Zuschläge36M", "MedianWert", "verloren_n", "verloren_vol", "auslauf_n", "auslauf_vol", "Telefon", "Email", "angesprochen", "Notiz"];
+    const q = (v: unknown) => `"${String(v ?? "").replace(/"/g, '""')}"`;
+    const rows = visible.map((f) => [f.name, f.plz, f.ort, f.wins36, f.medWert, f.s1.n, f.s1.vol, f.s2.n, f.s2.vol, f.phone, f.email, contacted.has(f.id) ? "ja" : "", notes[f.id] || ""].map(q).join(";"));
+    const csv = "﻿" + [head.map(q).join(";"), ...rows].join("\r\n");
+    const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+    const a = document.createElement("a");
+    a.href = url; a.download = "firmen-radar.csv"; a.click();
+    URL.revokeObjectURL(url);
+  }
+
   return (
     <div className="in-wrap">
       <div className="in-head">
@@ -132,10 +179,21 @@ export function InternFirmen() {
       {firmen && firmen.length === 0 && <div className="in-empty">Keine Firmen gefunden.</div>}
 
       {firmen && firmen.length > 0 && (
-        <div className="in-count">{firmen.length} Firmen — nach Schmerz-Volumen sortiert</div>
+        <div className="in-bar">
+          <div className="in-chips">
+            <button className={`in-chip ${filter === "" ? "on" : ""}`} onClick={() => setFilter("")}>Alle {firmen.length}</button>
+            <button className={`in-chip ${filter === "s2" ? "on" : ""}`} onClick={() => setFilter((f) => f === "s2" ? "" : "s2")}>◷ Auslauf {firmen.filter((f) => f.s2.n > 0).length}</button>
+            <button className={`in-chip ${filter === "s1" ? "on" : ""}`} onClick={() => setFilter((f) => f === "s1" ? "" : "s1")}>▼ Verlust {firmen.filter((f) => f.s1.n > 0).length}</button>
+            <button className={`in-chip ${filter === "offen" ? "on" : ""}`} onClick={() => setFilter((f) => f === "offen" ? "" : "offen")}>nicht angesprochen {firmen.filter((f) => !contacted.has(f.id)).length}</button>
+          </div>
+          <button className="in-csv" onClick={exportCsv}>CSV ↓</button>
+        </div>
+      )}
+      {firmen && firmen.length > 0 && (
+        <div className="in-count">{visible.length} von {firmen.length} Firmen — nach Schmerz-Volumen sortiert</div>
       )}
       <div className="in-list">
-        {(firmen || []).map((f) => (
+        {visible.map((f) => (
           <div key={f.id} className={`in-card ${openId === f.id ? "open" : ""}`}>
             <button className="in-row" onClick={() => toggle(f.id)}>
               <div className="in-main">
@@ -173,8 +231,14 @@ export function InternFirmen() {
                         : <button className="in-done-btn" disabled={landing[f.id]?.busy} onClick={() => makeLanding(f.id)}>
                             {landing[f.id]?.busy ? "erzeuge …" : "Landing erzeugen + Link kopieren"}
                           </button>}
+                      <button className={`in-done-btn ${pitchCopied === f.id ? "on" : ""}`} onClick={() => copyPitch(f.id, pitchFor(f, detail))}>
+                        {pitchCopied === f.id ? "Pitch kopiert ✓" : "Pitch kopieren"}
+                      </button>
                       <span className="in-note">Kontakt aus Bekanntmachung — vor Nutzung prüfen (oft Vergabeportal statt Firma).</span>
                     </div>
+
+                    <textarea className="in-notiz" placeholder="Notiz zu dieser Firma (nur lokal gespeichert)…"
+                      value={notes[f.id] || ""} onChange={(e) => setNote(f.id, e.target.value)} rows={2} />
 
                     {(detail.topBuyers?.length ?? 0) > 0 && (
                       <div className="in-buyers">
