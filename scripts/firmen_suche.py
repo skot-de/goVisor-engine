@@ -594,47 +594,64 @@ def detail(identity_id):
       JOIN {EN} en ON en.entity_id=b.buyer_entity_id WHERE en.canonical_name IS NOT NULL
       GROUP BY 1 ORDER BY 2 DESC LIMIT 4""", [identity_id]).fetchall()
 
-    # Top-Potenzial-Leads: OFFENE Ausschreibungen in den KERN-Feldern der Firma. Gewichtet nach
-    # Kompetenz-Zentralität (wie oft die Firma in diesem CPV4 gewonnen hat) — NICHT nur nach Wert;
-    # sonst rutscht ein Millionen-Tender aus einem Randfeld nach oben. Entdoppelt je Titel.
+    # Top-Potenzial-Leads: OFFENE Ausschreibungen in den KERN-Feldern der Firma. Match auf CPV-6-Steller
+    # (scharf), NICHT nur CPV-4 — und ohne die Divisions-Sammelcodes (XX000000, z. B. 45000000
+    # „Bauarbeiten"), sonst matcht ein Tiefbauer auf „Holztüren", nur weil beide generisch 45000000
+    # getaggt sind. Gewichtet nach Kompetenz-Zentralität; CPV-4-Fachbereich nur als Auffüll-Fallback.
+    CL2 = f"read_parquet('{G}/dim_cpv_label.parquet')"
+    NONGEN = "substr(n.cpv_main,3,4) <> '0000'"   # keine reinen Divisions-Sammelcodes
+    cpv6 = con.execute(f"""SELECT substr(n.cpv_main,1,6) c, count(*) w FROM {PE} p
+      JOIN {EI} ei ON ei.entity_id=p.entity_id
+      JOIN read_parquet('{SN}', hive_partitioning=1) n ON n.notice_id=p.notice_id
+      WHERE p.role='winner' AND ei.identity_id=? AND n.cpv_main IS NOT NULL AND {NONGEN}
+      GROUP BY 1 HAVING count(*) >= 1 ORDER BY 2 DESC LIMIT 12""", [identity_id]).fetchall()
     cpv4 = con.execute(f"""SELECT substr(n.cpv_main,1,4) c, count(*) w FROM {PE} p
       JOIN {EI} ei ON ei.entity_id=p.entity_id
       JOIN read_parquet('{SN}', hive_partitioning=1) n ON n.notice_id=p.notice_id
       WHERE p.role='winner' AND ei.identity_id=? AND n.cpv_main IS NOT NULL
       GROUP BY 1 HAVING count(*) >= 2 ORDER BY 2 DESC LIMIT 6""", [identity_id]).fetchall()
-    leads_scope = "deutschlandweit"
-    if cpv4:
-        CL2 = f"read_parquet('{G}/dim_cpv_label.parquet')"
-        fit_vals = ",".join(f"('{r[0].replace(chr(39),'')}',{int(r[1])})" for r in cpv4)
 
-        def _leads_query(regional):
-            # Distanz Sitz→Leistungsort des Leads (perf-Koordinate, sonst Käufer-Koordinate)
-            dist = _hav("coalesce(lg.perf_lat,lg.lat)", "coalesce(lg.perf_lon,lg.lon)") if seat_lat is not None else "NULL"
-            where = f"AND {dist} <= {RADIUS_KM}" if regional else ""
-            order = (f"fit.w DESC, {dist} ASC NULLS LAST, le.value_eur DESC NULLS LAST" if regional
-                     else "fit.w DESC, le.value_eur DESC NULLS LAST")
-            return con.execute(f"""
-              WITH fit(c4, w) AS (VALUES {fit_vals})
-              SELECT le.title, le.buyer_name, le.buyer_town, le.value_eur, le.deadline_date, le.days_to_deadline,
-                     coalesce(nt.ted_url, le.documents_url, le.source_url) AS url, le.contract_kind, cl.label AS seg,
-                     {dist} AS dist_km, nt.ted_url AS ted, le.documents_url AS doku
-              FROM {LE} le JOIN fit ON fit.c4 = substr(le.cpv_code,1,4)
-              LEFT JOIN {CL2} cl ON cl.cpv_code = substr(le.cpv_code,1,4) || '0000'
-              LEFT JOIN {LG} lg ON lg.lead_id = le.lead_id
-              LEFT JOIN read_parquet('{SN}', hive_partitioning=1) nt ON nt.notice_id = le.lead_id
-              WHERE le.phase='open' AND (le.days_to_deadline IS NULL OR le.days_to_deadline >= 0) {where}
-              QUALIFY row_number() OVER (PARTITION BY lower(trim(le.title))
-                                         ORDER BY le.value_eur DESC NULLS LAST) = 1
-              ORDER BY {order} LIMIT 5""").fetchall()
+    def _fit(rows):
+        return ",".join(f"('{r[0].replace(chr(39),'')}',{int(r[1])})" for r in rows) if rows else None
+    cpv6_vals, cpv4_vals = _fit(cpv6), _fit(cpv4)
 
-        leads = _leads_query(is_regional)
-        if is_regional:
-            leads_scope = f"Umkreis {RADIUS_KM} km um den Sitz"
-            if len(leads) < 3:  # zu wenig in der Region → deutschlandweit auffüllen (ehrlich kennzeichnen)
-                leads = _leads_query(False)
-                leads_scope = f"deutschlandweit (im Umkreis {RADIUS_KM} km zu wenige)"
+    def _leads_query(regional, level, fit_vals):
+        dist = _hav("coalesce(lg.perf_lat,lg.lat)", "coalesce(lg.perf_lon,lg.lon)") if seat_lat is not None else "NULL"
+        where = f"AND {dist} <= {RADIUS_KM}" if regional else ""
+        order = (f"fit.w DESC, {dist} ASC NULLS LAST, le.value_eur DESC NULLS LAST" if regional
+                 else "fit.w DESC, le.value_eur DESC NULLS LAST")
+        return con.execute(f"""
+          WITH fit(c, w) AS (VALUES {fit_vals})
+          SELECT le.title, le.buyer_name, le.buyer_town, le.value_eur, le.deadline_date, le.days_to_deadline,
+                 coalesce(nt.ted_url, le.documents_url, le.source_url) AS url, le.contract_kind, cl.label AS seg,
+                 {dist} AS dist_km, nt.ted_url AS ted, le.documents_url AS doku
+          FROM {LE} le JOIN fit ON fit.c = substr(le.cpv_code,1,{int(level)})
+          LEFT JOIN {CL2} cl ON cl.cpv_code = substr(le.cpv_code,1,4) || '0000'
+          LEFT JOIN {LG} lg ON lg.lead_id = le.lead_id
+          LEFT JOIN read_parquet('{SN}', hive_partitioning=1) nt ON nt.notice_id = le.lead_id
+          WHERE le.phase='open' AND (le.days_to_deadline IS NULL OR le.days_to_deadline >= 0) {where}
+          QUALIFY row_number() OVER (PARTITION BY lower(trim(le.title))
+                                     ORDER BY le.value_eur DESC NULLS LAST) = 1
+          ORDER BY {order} LIMIT 5""").fetchall()
+
+    # Priorität: CPV6 im Umkreis → CPV6 national → CPV4 im Umkreis → CPV4 national. Erste mit ≥3, sonst größte.
+    plan = []
+    for lvl, vals in ((6, cpv6_vals), (4, cpv4_vals)):
+        if vals:
+            plan += ([(lvl, vals, True), (lvl, vals, False)] if is_regional else [(lvl, vals, False)])
+    leads, best_meta = [], None
+    for lvl, vals, regional in plan:
+        r = _leads_query(regional, lvl, vals)
+        if len(r) >= 3:
+            leads, best_meta = r, (lvl, regional); break
+        if len(r) > len(leads):
+            leads, best_meta = r, (lvl, regional)
+    if best_meta:
+        lvl, regional = best_meta
+        geo = f"Umkreis {RADIUS_KM} km" if regional else "deutschlandweit"
+        leads_scope = f"{geo} · {'CPV-6-genau' if lvl == 6 else 'Fachbereich (CPV-4)'}"
     else:
-        leads = []
+        leads_scope = "deutschlandweit"
     return {
         "id": identity_id, "name": Z.clean_name(prof[0]), "plz": prof[1], "ort": prof[2],
         "email": prof[3], "phone": prof[4], "wins36": int(prof[5] or 0),
