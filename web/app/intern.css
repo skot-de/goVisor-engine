@@ -49,6 +49,7 @@
 /* „auch:"-Tags — weitere Segmente, in die eine Firma fällt (§8) */
 .in-weitere { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 5px; margin-top: 4px; font-size: 10.5px; color: var(--ink-400); }
 .in-wtag { color: var(--ink-600); background: var(--surface-2); border: 1px solid var(--line); border-radius: 99px; padding: 1px 7px; }
+.in-rqtag { color: var(--signal-deep); background: var(--signal-wash); border: 1px solid #cfe8dc; border-radius: 99px; padding: 1px 7px; margin-right: 6px; font-weight: 600; }
 
 /* Outreach-Log: Ausgang protokollieren + 12-Monats-Sperre + Trefferquote */
 .in-logbtns { display: inline-flex; align-items: center; gap: 5px; flex-wrap: wrap; font-family: var(--sans); }

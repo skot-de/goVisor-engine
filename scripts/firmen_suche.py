@@ -16,7 +16,12 @@ import duckdb
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
+sys.path.insert(0, str(ROOT))
 import zielliste as Z  # noqa: E402
+from govisor.gold import _kind_sql  # noqa: E402  — Vertragsart-Klassifikator (Titel+CPV), wie in lead_export
+
+# Rahmen-/wiederkehrend-Werte des Klassifikators (der Rest = Einmal/Werk/Sonstiges)
+_RAHMEN_KINDS = "('rahmenvertrag','wiederkehrend')"
 
 G = str(ROOT / "data/gold/DE")
 SN = str(ROOT / "data/silver/DE/notices/*/*.parquet")
@@ -99,6 +104,10 @@ def _eur(v):
     return f"{v/1e6:.1f} Mio €".replace(".", ",") if v >= 1e6 else f"{round(v):,} €".replace(",", ".")
 
 
+def _rq(rahmen_vol, tot):  # Rahmen-Quote in % (None ohne bewertbares Volumen)
+    return round((rahmen_vol or 0) / tot * 100) if tot else None
+
+
 # Einstellbare Knöpfe je Segment (Frontend rendert daraus die Filter-Regler; def = Spec-Vorgabe).
 _CONTROLS = {
     "A": [{"k": "min_wins", "label": "min. Zuschläge", "def": 24, "step": 1},
@@ -121,6 +130,8 @@ _CONTROLS = {
     "G": [{"k": "min_base", "label": "min. Zuschläge (3J)", "def": 6, "step": 1},
           {"k": "rise", "label": "Anstieg % ≥", "def": 40, "step": 5}],
 }
+# Universeller Regler: Mindest-Rahmen-Quote (Anteil wiederkehrenden Volumens) — gilt in JEDEM Segment.
+_RAHMEN_CTRL = {"k": "min_rahmen", "label": "min. Rahmen %", "def": 0, "step": 10}
 
 
 def segment(seg="F", limit=100, params=None, geo=None):
@@ -212,7 +223,8 @@ def segment(seg="F", limit=100, params=None, geo=None):
     # ── Immer bauen: Zuschlags-Aggregation + Markt-Trend + E/F-Sets + Membership (für §8-Zuordnung) ──
     con.execute(f"""CREATE OR REPLACE TEMP TABLE win AS
       SELECT ei.identity_id, pw.notice_id nid, coalesce(n.award_date,n.publication_date) dt,
-             q.final_value_clean val, substr(n.cpv_main,1,4) cpv4
+             q.final_value_clean val, substr(n.cpv_main,1,4) cpv4,
+             {_kind_sql('n.title','n.cpv_main')} AS kind
       FROM {PE} pw JOIN {EI} ei ON ei.entity_id=pw.entity_id
       JOIN read_parquet('{SN}',hive_partitioning=1) n ON n.notice_id=pw.notice_id
       LEFT JOIN {QU} q ON q.notice_id=pw.notice_id
@@ -232,6 +244,9 @@ def segment(seg="F", limit=100, params=None, geo=None):
         count(DISTINCT nid) FILTER(WHERE dt>{w(still)}) v_last,
         count(DISTINCT nid) FILTER(WHERE dt>{w(36)}) awards36,
         median(val) FILTER(WHERE val>0 AND dt>{w(36)}) med36,
+        -- Rahmen-Quote je Firma: Anteil wiederkehrenden Volumens an allen Gewinnen (36M)
+        sum(val) FILTER(WHERE val>0 AND dt>{w(36)} AND kind IN {_RAHMEN_KINDS}) rahmen_vol,
+        sum(val) FILTER(WHERE val>0 AND dt>{w(36)}) tot_vol36,
         mode(cpv4) FILTER(WHERE cpv4 IS NOT NULL) cpv4, max(dt) last_award
       FROM win GROUP BY 1""")
     con.execute(f"""CREATE OR REPLACE TEMP TABLE mkt AS
@@ -296,7 +311,8 @@ def segment(seg="F", limit=100, params=None, geo=None):
                          FROM sa x LEFT JOIN eloc el ON el.identity_id=x.identity_id
                          LEFT JOIN mkt m ON m.cpv4 = x.cpv4)
           SELECT identity_id, firmenname, plz, ort, email, phone,
-                 v1,v2,v3, vA, vB, v_old, awards36, med36, last_award, cpv4, sy1, sy3, n_recent
+                 v1,v2,v3, vA, vB, v_old, awards36, med36, last_award, cpv4, sy1, sy3, n_recent,
+                 rahmen_vol, tot_vol36
           FROM named WHERE firmenname IS NOT NULL AND {_KONSORTIUM} AND ({cond[0]})
           ORDER BY {cond[1]} LIMIT {fetch}""").fetchall()
         mkt_min = int(gp("market", 10)) if seg == "D" else None
@@ -305,7 +321,8 @@ def segment(seg="F", limit=100, params=None, geo=None):
             (v1, v2, v3, vA, vB, v_old, aw36, med36, last, cpv4, sy1, sy3, n_recent) = r[6:19]
             v1, v2, v3 = int(v1 or 0), int(v2 or 0), int(v3 or 0)
             f = base(r[0], r[1]); f.update({"plz": r[2], "ort": r[3], "email": r[4], "phone": r[5],
-                                            "medWert": float(med36) if med36 else None, "wins36": int(aw36 or 0)})
+                                            "medWert": float(med36) if med36 else None, "wins36": int(aw36 or 0),
+                                            "rahmenQuote": _rq(r[19], r[20])})
             spark = f"{v1} → {v2} → {v3}"
             if seg == "A":
                 f["badge"] = {"label": f"⚡ {int(vA)} Zuschläge", "cls": "aktiv", "spark": spark}
@@ -353,21 +370,22 @@ def segment(seg="F", limit=100, params=None, geo=None):
               AND months_to_expiry BETWEEN {lo} AND {hi}
             GROUP BY 1 HAVING sum(coalesce(value_eur,0)) >= {min_vol}),
           named AS (SELECT x.identity_id, x.n, x.vol, x.naechstes, x.cpv4, x.rahmen_vol, sr.switch_rate,
+                           sx.rahmen_vol AS ov_rahmen, sx.tot_vol36 AS ov_tot,
                            {nm} firmenname, el.plz, el.ort, el.email, el.phone
                     FROM agg x LEFT JOIN eloc el ON el.identity_id=x.identity_id
-                    LEFT JOIN {MS} sr ON sr.cpv_class = x.cpv4)
-          SELECT identity_id, firmenname, plz, ort, email, phone, n, vol, naechstes, switch_rate, rahmen_vol
+                    LEFT JOIN {MS} sr ON sr.cpv_class = x.cpv4
+                    LEFT JOIN sa sx ON sx.identity_id = x.identity_id)
+          SELECT identity_id, firmenname, plz, ort, email, phone, n, vol, naechstes, switch_rate, rahmen_vol, ov_rahmen, ov_tot
           FROM named WHERE firmenname IS NOT NULL AND {_KONSORTIUM} AND coalesce(switch_rate,0) >= {switch}
           ORDER BY vol DESC LIMIT {fetch}""").fetchall()
         for r in rows:
             f = base(r[0], r[1]); f.update({"plz": r[2], "ort": r[3], "email": r[4], "phone": r[5],
-                                            "medWert": None, "wins36": 0})
+                                            "medWert": None, "wins36": 0, "rahmenQuote": _rq(r[11], r[12])})
             nd = r[8].strftime("%m/%Y") if r[8] and hasattr(r[8], "strftime") else "?"
             sr = f" · Wechselquote {round((r[9] or 0)*100)}%" if r[9] is not None else ""
-            rq = round((r[10] or 0) / r[7] * 100) if r[7] else 0   # Rahmen-Anteil am Volumen
-            f["badge"] = {"label": f"◷ {_eur(r[7])} Auslauf · {rq}% Rahmen", "cls": "s2"}
+            rq_exp = round((r[10] or 0) / r[7] * 100) if r[7] else 0   # Rahmen-Anteil am AUSLAUF-Volumen
+            f["badge"] = {"label": f"◷ {_eur(r[7])} Auslauf · {rq_exp}% Rahmen", "cls": "s2"}
             f["line"] = f"{r[6]} Verträge laufen aus · nächstes {nd}{sr}"; f["metric"] = float(r[7] or 0)
-            f["rahmenQuote"] = rq
             firmen.append(f)
 
     elif seg == "F":  # Frische Verlierer — Verlust ≤ months, ≥ min_vol
@@ -388,14 +406,16 @@ def segment(seg="F", limit=100, params=None, geo=None):
                              WHERE ps.notice_id=pr.successor AND ps.role='winner' AND es.identity_id=pr.loser)),
           best AS (SELECT identity_id, max(val) val, arg_max(gewinner,val) gewinner,
                           arg_max(title,val) titel, count(*) n, max(dt) dt FROM loss GROUP BY 1),
-          named AS (SELECT x.*, {nm} firmenname, el.plz, el.ort, el.email, el.phone
-                    FROM best x LEFT JOIN eloc el ON el.identity_id=x.identity_id)
-          SELECT identity_id, firmenname, plz, ort, email, phone, val, gewinner, titel, n, dt
+          named AS (SELECT x.*, {nm} firmenname, el.plz, el.ort, el.email, el.phone,
+                           sx.rahmen_vol AS ov_rahmen, sx.tot_vol36 AS ov_tot
+                    FROM best x LEFT JOIN eloc el ON el.identity_id=x.identity_id
+                    LEFT JOIN sa sx ON sx.identity_id = x.identity_id)
+          SELECT identity_id, firmenname, plz, ort, email, phone, val, gewinner, titel, n, dt, ov_rahmen, ov_tot
           FROM named WHERE firmenname IS NOT NULL AND {_KONSORTIUM}
           ORDER BY val DESC LIMIT {fetch}""").fetchall()
         for r in rows:
             f = base(r[0], r[1]); f.update({"plz": r[2], "ort": r[3], "email": r[4], "phone": r[5],
-                                            "medWert": None, "wins36": 0})
+                                            "medWert": None, "wins36": 0, "rahmenQuote": _rq(r[11], r[12])})
             f["badge"] = {"label": f"▼ {_eur(r[6])} verloren", "cls": "s1"}
             f["line"] = f"an {Z.clean_name(r[7]) if r[7] else '?'}" + (f" · +{int(r[9])-1} weitere" if r[9] and r[9] > 1 else "")
             f["metric"] = float(r[6] or 0)
@@ -411,8 +431,11 @@ def segment(seg="F", limit=100, params=None, geo=None):
             "SELECT identity_id, fF,fE,fC,fA,fD,fG,fB FROM mem WHERE identity_id IN (SELECT unnest(?::VARCHAR[]))",
             [ids]).fetchall()
         memd = {r[0]: dict(zip(["F", "E", "C", "A", "D", "G", "B"], r[1:])) for r in mrows}
+    min_rahmen = int(gp("min_rahmen", 0))
     out = []
     for f in firmen:
+        if min_rahmen > 0 and (f.get("rahmenQuote") is None or f["rahmenQuote"] < min_rahmen):
+            continue  # universeller Rahmen-Quote-Filter (gilt in jedem Segment)
         fl = dict(memd.get(f["id"], {}))
         fl[seg] = True  # Kandidat des aktiven Segments
         primary = next((k for k in _PRIORITY if fl.get(k)), seg)
@@ -425,7 +448,7 @@ def segment(seg="F", limit=100, params=None, geo=None):
     firmen = out
 
     return {"stichtag": str(now), "segment": seg, "label": SEGMENTS[seg][0],
-            "hint": SEGMENTS[seg][1], "controls": _CONTROLS[seg], "geo": geo_label,
+            "hint": SEGMENTS[seg][1], "controls": _CONTROLS[seg] + [_RAHMEN_CTRL], "geo": geo_label,
             "n": len(firmen), "firmen": firmen}
 
 

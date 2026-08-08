@@ -144,7 +144,7 @@ export function InternFirmen() {
   const [segHint, setSegHint] = useState<string>("");
   const [segControls, setSegControls] = useState<Control[]>([]);
   const [segParams, setSegParams] = useState<Record<string, number>>({});
-  const [sortBy, setSortBy] = useState<"metric" | "name" | "wert" | "sitz">("metric");
+  const [sortBy, setSortBy] = useState<"metric" | "name" | "wert" | "sitz" | "rahmen">("metric");
   const [dedup, setDedup] = useState(true); // §8 Einmalzuordnung (nur höchstprior. Segment)
 
   const [segGeo, setSegGeo] = useState<string>(""); // aktiver Sitz-Geo-Filter (Label aus Backend)
@@ -222,6 +222,7 @@ export function InternFirmen() {
         sortBy === "name" ? a.name.localeCompare(b.name)
         : sortBy === "wert" ? (b.medWert || 0) - (a.medWert || 0)
         : sortBy === "sitz" ? (a.plz || "~").localeCompare(b.plz || "~")
+        : sortBy === "rahmen" ? (b.rahmenQuote ?? -1) - (a.rahmenQuote ?? -1)
         : (b.metric || 0) - (a.metric || 0))
     : visible;
 
@@ -341,6 +342,7 @@ export function InternFirmen() {
               <label className="in-sortlabel">Sortieren:
                 <select className="in-sort" value={sortBy} onChange={(e) => setSortBy(e.target.value as typeof sortBy)}>
                   <option value="metric">Signalstärke</option>
+                  <option value="rahmen">Rahmen-Quote</option>
                   <option value="wert">Median-Wert</option>
                   <option value="name">Name (A–Z)</option>
                   <option value="sitz">PLZ / Sitz</option>
@@ -367,8 +369,11 @@ export function InternFirmen() {
                 {f.badge
                   ? <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || "Sitz unbekannt"}{f.line ? ` · ${f.line}` : ""}</span>
                   : <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || "Sitz unbekannt"} · ≈{perJahr(f.wins36)} Zuschläge/Jahr · Median {eur(f.medWert)}</span>}
-                {(f.weitere?.length ?? 0) > 0 && (
-                  <span className="in-weitere">auch: {f.weitere!.map((wg) => <span key={wg.key} className="in-wtag">{wg.label}</span>)}</span>
+                {(segMode && (f.rahmenQuote != null || (f.weitere?.length ?? 0) > 0)) && (
+                  <span className="in-weitere">
+                    {f.rahmenQuote != null && <span className="in-rqtag" title="Anteil wiederkehrender/Rahmenverträge am Auftragsvolumen (36 Monate)">🔁 {f.rahmenQuote}% Rahmen</span>}
+                    {(f.weitere?.length ?? 0) > 0 && <>auch: {f.weitere!.map((wg) => <span key={wg.key} className="in-wtag">{wg.label}</span>)}</>}
+                  </span>
                 )}
               </div>
               <div className="in-signals">
