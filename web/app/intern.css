@@ -16,6 +16,15 @@
   background: var(--surface); color: var(--ink-900); cursor: pointer; flex: 0 0 auto; }
 .in-radius:disabled { opacity: .5; cursor: default; }
 
+/* Deutschlandweite Ranglisten (Bestenliste / Absteiger) */
+.in-nw { display: flex; align-items: center; gap: 8px; margin: -6px 0 16px; flex-wrap: wrap; }
+.in-nw-label { font-size: 12px; color: var(--ink-400); }
+.in-nw-btn { font-size: 12px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink-700);
+  border-radius: 8px; padding: 6px 12px; cursor: pointer; font: inherit; }
+.in-nw-btn:hover { background: var(--surface-2); }
+.in-nw-btn.on { color: var(--signal-deep); border-color: #cfe8dc; background: var(--signal-wash); font-weight: 600; }
+.in-spark { font-family: var(--mono); color: var(--ink-500); }
+
 .in-err { background: var(--risk-wash); color: var(--risk); border: 1px solid #f3d5cd; border-radius: 8px; padding: 10px 14px; font-size: 13px; }
 .in-empty, .in-muted { color: var(--ink-500); font-size: 13px; padding: 12px 2px; }
 .in-count { font-size: 12px; color: var(--ink-400); margin-bottom: 8px; }

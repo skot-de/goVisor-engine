@@ -68,6 +68,79 @@ def search(plz=None, ort=None, name=None, radius=None):
     return {"stichtag": str(now), "n": len(firmen), "firmen": firmen}
 
 
+# Konsortien / ARGE aus den deutschlandweiten Ranglisten fernhalten — das sind keine ansprechbaren
+# Einzelfirmen, und ihre Zusammensetzung wechselt je Projekt (verzerrt jeden Trend).
+_KONSORTIUM = ("firmenname NOT LIKE 'BG %' AND firmenname NOT LIKE '%ARGE%' "
+               "AND lower(firmenname) NOT LIKE '%arbeitsgemeinschaft%' AND firmenname NOT LIKE '% / %'")
+
+
+def nationwide(mode="top", limit=100):
+    """Deutschlandweite Rangliste (kein Suchbegriff), belegte Firmen, letzte 36 Monate in 3 Jahresfenstern.
+
+    mode='top'       → meiste Zuschläge (3 J).
+    mode='absteiger' → schrumpfende Mandate: Auftraggeber-Zahl fällt über die 3 Fenster
+                       (Distinkt-Auftraggeber statt roher Zuschläge — entschärft Rahmen-/Rabatt-Wellen).
+    """
+    con = _con()
+    now = Z.con_now(con)
+    G_ = G
+    PE = f"read_parquet('{G_}/party_entity.parquet')"; EI = f"read_parquet('{G_}/entity_identity.parquet')"
+    EN = f"read_parquet('{G_}/entities.parquet')"; QU = f"read_parquet('{G_}/quality.parquet')"
+    Z.build_entity_location(con)  # eloc: Sitz-PLZ/Ort + Kontakt je Identität
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE belegt AS SELECT DISTINCT ei.identity_id
+      FROM {EI} ei JOIN {EN} e ON e.entity_id=ei.entity_id WHERE e.method IN {Z.BELEGT_METHODS}""")
+    # Zuschläge (a) + distinkte Auftraggeber (b) je Identität, in drei 12-Monats-Fenstern (a1/b1 = ältestes)
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE nw AS
+      WITH wb AS (
+        SELECT ei.identity_id, coalesce(n.award_date,n.publication_date) dt,
+               pw.notice_id nid, pb.entity_id buyer_eid, q.final_value_clean val
+        FROM {PE} pw JOIN {EI} ei ON ei.entity_id=pw.entity_id
+        JOIN read_parquet('{SN}',hive_partitioning=1) n ON n.notice_id=pw.notice_id
+        LEFT JOIN {PE} pb ON pb.notice_id=pw.notice_id AND pb.role='buyer'
+        LEFT JOIN {QU} q ON q.notice_id=pw.notice_id
+        WHERE pw.role='winner' AND ei.identity_id IN (SELECT identity_id FROM belegt)
+          AND coalesce(n.award_date,n.publication_date) BETWEEN DATE '{now}'-INTERVAL 36 MONTH AND DATE '{now}')
+      SELECT identity_id,
+        count(DISTINCT nid) FILTER(WHERE dt<DATE '{now}'-INTERVAL 24 MONTH) a1,
+        count(DISTINCT nid) FILTER(WHERE dt<DATE '{now}'-INTERVAL 12 MONTH AND dt>=DATE '{now}'-INTERVAL 24 MONTH) a2,
+        count(DISTINCT nid) FILTER(WHERE dt>=DATE '{now}'-INTERVAL 12 MONTH) a3,
+        count(DISTINCT nid) awards,
+        count(DISTINCT buyer_eid) FILTER(WHERE dt<DATE '{now}'-INTERVAL 24 MONTH) b1,
+        count(DISTINCT buyer_eid) FILTER(WHERE dt<DATE '{now}'-INTERVAL 12 MONTH AND dt>=DATE '{now}'-INTERVAL 24 MONTH) b2,
+        count(DISTINCT buyer_eid) FILTER(WHERE dt>=DATE '{now}'-INTERVAL 12 MONTH) b3,
+        count(DISTINCT buyer_eid) buyers, median(val) FILTER(WHERE val>0) med
+      FROM wb GROUP BY 1""")
+    nm = (f"(SELECT arg_max(e.canonical_name,e.confidence) FROM {EI} ei JOIN {EN} e ON e.entity_id=ei.entity_id "
+          "WHERE ei.identity_id=nw.identity_id)")
+    if mode == "absteiger":
+        where = "b1>=4 AND b3<b1 AND buyers>=8"
+        order = "(b1-b3) DESC, b1 DESC"
+    else:
+        where = "awards>=1"
+        order = "awards DESC, buyers DESC"
+    rows = con.execute(f"""
+      WITH named AS (
+        SELECT nw.identity_id, {nm} AS firmenname, el.plz, el.ort, el.email, el.phone,
+               awards, buyers, med, a1,a2,a3, b1,b2,b3
+        FROM nw LEFT JOIN eloc el ON el.identity_id=nw.identity_id)
+      SELECT identity_id, firmenname, plz, ort, email, phone, awards, buyers, med, a1,a2,a3, b1,b2,b3
+      FROM named WHERE firmenname IS NOT NULL AND {_KONSORTIUM} AND {where}
+      ORDER BY {order} LIMIT {int(limit)}""").fetchall()
+    firmen = [{
+        "id": r[0], "name": Z.clean_name(r[1]), "plz": r[2], "ort": r[3],
+        "email": r[4], "phone": r[5],
+        "wins36": int(r[6] or 0), "medWert": float(r[8]) if r[8] else None,
+        "awards": int(r[6] or 0), "buyers": int(r[7] or 0),
+        "aTrend": [int(r[9] or 0), int(r[10] or 0), int(r[11] or 0)],
+        "bTrend": [int(r[12] or 0), int(r[13] or 0), int(r[14] or 0)],
+        "delta": int((r[12] or 0) - (r[14] or 0)),
+        # neutrale Signal-Platzhalter, damit die Listen-Zeile identisch rendert
+        "s1": {"n": 0, "vol": None, "letzter": None}, "s2": {"n": 0, "vol": None, "naechstes": None},
+        "dominant": None, "nuts": None, "vol36": None,
+    } for r in rows]
+    return {"stichtag": str(now), "mode": mode, "n": len(firmen), "firmen": firmen}
+
+
 def detail(identity_id):
     con = _con()
     now = Z.build_population(con, adhoc={"name": None, "plz": None, "ort": None})  # baut base/eloc + Signal-Quellen
@@ -221,10 +294,14 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--search", action="store_true")
     ap.add_argument("--detail")
+    ap.add_argument("--nationwide", choices=["top", "absteiger"])
     ap.add_argument("--plz"); ap.add_argument("--ort"); ap.add_argument("--name"); ap.add_argument("--radius")
     a = ap.parse_args()
     try:
-        out = detail(a.detail) if a.detail else search(a.plz, a.ort, a.name, a.radius)
+        if a.nationwide:
+            out = nationwide(a.nationwide)
+        else:
+            out = detail(a.detail) if a.detail else search(a.plz, a.ort, a.name, a.radius)
     except Exception as e:  # noqa: BLE001
         out = {"error": str(e)[:300]}
     print(json.dumps(out, ensure_ascii=False, default=str))

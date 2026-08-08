@@ -9,6 +9,7 @@ type Firma = {
   id: string; name: string; plz: string | null; ort: string | null; wins36: number;
   medWert: number | null; vol36: number | null; s1: Sig; s2: Sig; dominant: string;
   email: string | null; phone: string | null;
+  awards?: number; buyers?: number; aTrend?: number[]; bTrend?: number[]; delta?: number; // deutschlandweit
 };
 type Exp = { titel: string; buyer: string; vol: number | null; ende: string | null; mte: number | null; vsrc?: string; art?: string | null; artcat?: string | null; url?: string | null; seit?: number | null };
 type Loss = { titel: string; vol: number | null; datum: string | null; gewinner: string | null };
@@ -50,6 +51,7 @@ export function InternFirmen() {
   const [contacted, setContacted] = useState<Set<string>>(new Set());
   const [notes, setNotes] = useState<Record<string, string>>({});
   const [filter, setFilter] = useState<"" | "s1" | "s2" | "offen" | "aktiv">(""); // Schnellfilter
+  const [nwMode, setNwMode] = useState<"" | "top" | "absteiger">(""); // deutschlandweite Rangliste
 
   useEffect(() => {
     try { setContacted(new Set(JSON.parse(localStorage.getItem("govisor.outreach") || "[]"))); } catch { /* ignore */ }
@@ -107,14 +109,31 @@ export function InternFirmen() {
 
   function search(e?: React.FormEvent) {
     e?.preventDefault();
+    setNwMode("");
     runSearch(plz.trim(), ort.trim(), name.trim(), radius);
   }
 
-  // Beim Laden (auch nach Zurück) die Suche aus der URL wiederherstellen
+  // Deutschlandweite Rangliste (kein Suchbegriff): Bestenliste oder Absteiger
+  async function runNationwide(m: "top" | "absteiger") {
+    if (nwMode === m) { setNwMode(""); setFirmen(null); return; } // Toggle aus
+    setNwMode(m); setFilter(""); setLoading(true); setErr(null); setFirmen(null); setOpenId(null); setDetail(null);
+    window.history.replaceState(null, "", `/intern?nationwide=${m}`);
+    try {
+      const r = await fetch(`/api/intern/firmen?nationwide=${m}`);
+      const d = await r.json();
+      if (d.error) setErr(d.error); else setFirmen(d.firmen || []);
+    } catch { setErr("Rangliste fehlgeschlagen"); }
+    finally { setLoading(false); }
+  }
+
+  // Beim Laden (auch nach Zurück) Suche oder Rangliste aus der URL wiederherstellen
   useEffect(() => {
     const sp = new URLSearchParams(window.location.search);
+    const nw = sp.get("nationwide");
+    if (nw === "top" || nw === "absteiger") { runNationwide(nw); return; }
     const p = sp.get("plz") || "", o = sp.get("ort") || "", n = sp.get("name") || "", rad = sp.get("radius") || "";
     if (p || o || n) { setPlz(p); setOrt(o); setName(n); setRadius(rad); runSearch(p, o, n, rad); }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [runSearch]);
 
   async function toggle(id: string) {
@@ -189,23 +208,35 @@ export function InternFirmen() {
         <button type="submit" disabled={loading}>{loading ? "Suche …" : "Suchen"}</button>
       </form>
 
+      <div className="in-nw">
+        <span className="in-nw-label">Deutschlandweit:</span>
+        <button className={`in-nw-btn ${nwMode === "top" ? "on" : ""}`} onClick={() => runNationwide("top")}>🏆 Bestenliste</button>
+        <button className={`in-nw-btn ${nwMode === "absteiger" ? "on" : ""}`} onClick={() => runNationwide("absteiger")} title="Firmen, deren Auftraggeber-Zahl über 3 Jahre fällt">📉 Absteiger</button>
+      </div>
+
       {err && <div className="in-err">{err}</div>}
       {firmen && firmen.length === 0 && <div className="in-empty">Keine Firmen gefunden.</div>}
 
       {firmen && firmen.length > 0 && (
         <div className="in-bar">
           <div className="in-chips">
-            <button className={`in-chip ${filter === "" ? "on" : ""}`} onClick={() => setFilter("")}>Alle {firmen.length}</button>
-            <button className={`in-chip ${filter === "s2" ? "on" : ""}`} onClick={() => setFilter((f) => f === "s2" ? "" : "s2")}>◷ Auslauf {firmen.filter((f) => f.s2.n > 0).length}</button>
-            <button className={`in-chip ${filter === "s1" ? "on" : ""}`} onClick={() => setFilter((f) => f === "s1" ? "" : "s1")}>▼ Verlust {firmen.filter((f) => f.s1.n > 0).length}</button>
-            <button className={`in-chip ${filter === "aktiv" ? "on" : ""}`} onClick={() => setFilter((f) => f === "aktiv" ? "" : "aktiv")} title="≥4 Zuschläge/Jahr">⚡ aktiv {firmen.filter((f) => f.wins36 >= AKTIV_MIN).length}</button>
-            <button className={`in-chip ${filter === "offen" ? "on" : ""}`} onClick={() => setFilter((f) => f === "offen" ? "" : "offen")}>nicht angesprochen {firmen.filter((f) => !contacted.has(f.id)).length}</button>
+            {!nwMode && <>
+              <button className={`in-chip ${filter === "" ? "on" : ""}`} onClick={() => setFilter("")}>Alle {firmen.length}</button>
+              <button className={`in-chip ${filter === "s2" ? "on" : ""}`} onClick={() => setFilter((f) => f === "s2" ? "" : "s2")}>◷ Auslauf {firmen.filter((f) => f.s2.n > 0).length}</button>
+              <button className={`in-chip ${filter === "s1" ? "on" : ""}`} onClick={() => setFilter((f) => f === "s1" ? "" : "s1")}>▼ Verlust {firmen.filter((f) => f.s1.n > 0).length}</button>
+              <button className={`in-chip ${filter === "aktiv" ? "on" : ""}`} onClick={() => setFilter((f) => f === "aktiv" ? "" : "aktiv")} title="≥4 Zuschläge/Jahr">⚡ aktiv {firmen.filter((f) => f.wins36 >= AKTIV_MIN).length}</button>
+              <button className={`in-chip ${filter === "offen" ? "on" : ""}`} onClick={() => setFilter((f) => f === "offen" ? "" : "offen")}>nicht angesprochen {firmen.filter((f) => !contacted.has(f.id)).length}</button>
+            </>}
           </div>
           <button className="in-csv" onClick={exportCsv}>CSV ↓</button>
         </div>
       )}
       {firmen && firmen.length > 0 && (
-        <div className="in-count">{visible.length} von {firmen.length} Firmen — nach Schmerz-Volumen sortiert</div>
+        <div className="in-count">
+          {nwMode === "top" ? `Top ${firmen.length} nach Zuschlägen (36 Monate) — deutschlandweit`
+           : nwMode === "absteiger" ? `${firmen.length} Absteiger — Auftraggeber-Zahl fällt über 3 Jahre (deutschlandweit)`
+           : `${visible.length} von ${firmen.length} Firmen — nach Schmerz-Volumen sortiert`}
+        </div>
       )}
       <div className="in-list">
         {visible.map((f) => (
@@ -213,14 +244,24 @@ export function InternFirmen() {
             <button className="in-row" onClick={() => toggle(f.id)}>
               <div className="in-main">
                 <span className="in-name">{f.name}{contacted.has(f.id) && <span className="in-done">✓ angesprochen</span>}</span>
-                <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || "Sitz unbekannt"} · ≈{perJahr(f.wins36)} Zuschläge/Jahr · Median {eur(f.medWert)}</span>
+                {f.aTrend
+                  ? <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || "Sitz unbekannt"} · {f.awards} Zuschläge · {f.buyers} Auftraggeber (3 J)</span>
+                  : <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || "Sitz unbekannt"} · ≈{perJahr(f.wins36)} Zuschläge/Jahr · Median {eur(f.medWert)}</span>}
               </div>
               <div className="in-signals">
-                {f.s1.n > 0 && <span className="in-sig s1" title={`verlorene Verträge (letzter ${f.s1.letzter ?? "?"})`}>▼ {f.s1.n} verloren · {eur(f.s1.vol)}</span>}
-                {f.s2.n > 0 && <span className="in-sig s2" title={`nächstes Ende ${f.s2.naechstes ?? "?"}`}>◷ {f.s2.n} laufen aus · {eur(f.s2.vol)}</span>}
-                {f.s1.n === 0 && f.s2.n === 0 && (f.wins36 >= AKTIV_MIN
-                  ? <span className="in-sig aktiv" title="aktiv, aber kein frischer Verlust und nichts läuft in 6–18 Monaten aus">⚡ aktiv · ≈{perJahr(f.wins36)}/Jahr</span>
-                  : <span className="in-sig none" title="kein frischer Verlust, kein Vertrag läuft in 6–18 Monaten aus — die Firma kann trotzdem laufende Aufträge halten">ruhig</span>)}
+                {f.aTrend
+                  ? <span className={`in-sig ${nwMode === "absteiger" ? "s1" : "aktiv"}`} title={nwMode === "absteiger" ? "distinkte Auftraggeber je Jahr (ältestes → letztes)" : "Zuschläge je Jahr (ältestes → letztes)"}>
+                      {nwMode === "absteiger"
+                        ? <>▼ −{f.delta} Auftraggeber <span className="in-spark">{f.bTrend!.join(" → ")}</span></>
+                        : <><span className="in-spark">{f.aTrend.join(" → ")}</span> Zuschläge/Jahr</>}
+                    </span>
+                  : <>
+                    {f.s1.n > 0 && <span className="in-sig s1" title={`verlorene Verträge (letzter ${f.s1.letzter ?? "?"})`}>▼ {f.s1.n} verloren · {eur(f.s1.vol)}</span>}
+                    {f.s2.n > 0 && <span className="in-sig s2" title={`nächstes Ende ${f.s2.naechstes ?? "?"}`}>◷ {f.s2.n} laufen aus · {eur(f.s2.vol)}</span>}
+                    {f.s1.n === 0 && f.s2.n === 0 && (f.wins36 >= AKTIV_MIN
+                      ? <span className="in-sig aktiv" title="aktiv, aber kein frischer Verlust und nichts läuft in 6–18 Monaten aus">⚡ aktiv · ≈{perJahr(f.wins36)}/Jahr</span>
+                      : <span className="in-sig none" title="kein frischer Verlust, kein Vertrag läuft in 6–18 Monaten aus — die Firma kann trotzdem laufende Aufträge halten">ruhig</span>)}
+                  </>}
               </div>
             </button>
 

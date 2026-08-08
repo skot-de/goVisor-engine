@@ -33,10 +33,15 @@ export async function GET(req: Request) {
   }
   const u = new URL(req.url);
   const id = u.searchParams.get("id");
+  const nw = u.searchParams.get("nationwide");
   try {
     if (id) {
       if (!ID_RE.test(id)) return NextResponse.json({ error: "ungültige ID" }, { status: 400 });
       return NextResponse.json(await run(["--detail", id]));
+    }
+    if (nw) {
+      if (nw !== "top" && nw !== "absteiger") return NextResponse.json({ error: "ungültiger Modus" }, { status: 400 });
+      return NextResponse.json(await run(["--nationwide", nw]));
     }
     const args = ["--search"];
     for (const k of ["plz", "ort", "name"] as const) {
