@@ -38,12 +38,13 @@ export async function GET(req: Request) {
   const hit = profiles[id];
   if (hit) return NextResponse.json(redactFirma(hit, tier));
 
-  // Statische Datei vorhanden, aber Firma nicht dabei → nicht im erreichbaren Set (keine Zuschläge).
-  if (Object.keys(profiles).length > 0) {
+  // In Production (serverless, kein Python) nur der vorberechnete Kundenraum → sonst 404.
+  // Lokal fällt es auf On-Demand-Python zurück (deckt auch nicht-vorberechnete Firmen des
+  // internen Firmen-Radars, die nicht im Top-Kundenraum von firma-profiles.json liegen).
+  if (Object.keys(profiles).length > 0 && process.env.NODE_ENV === "production") {
     return NextResponse.json({ error: "kein Profil (keine belegten Zuschläge)", id }, { status: 404 });
   }
 
-  // Kein Vorberechnungs-Cache (lokale Entwicklung) → On-Demand-Python.
   try {
     return NextResponse.json(redactFirma(await profilPython(id), tier));
   } catch (e) {

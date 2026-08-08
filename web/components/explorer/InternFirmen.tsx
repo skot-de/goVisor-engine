@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 /* INTERNES Vertriebstool — Firmen nach Sitz/Name suchen → Schmerz-Signale + Ansprache-Details.
  * Enthält Kontaktdaten; die API blockiert Production. Reine Sales-Sicht (kein Kundenprodukt). */
@@ -7,12 +7,13 @@ import { useState } from "react";
 type Sig = { n: number; vol: number | null; letzter?: string | null; naechstes?: string | null };
 type Firma = {
   id: string; name: string; plz: string | null; ort: string | null; wins36: number;
-  avgWert: number | null; vol36: number | null; s1: Sig; s2: Sig; dominant: string;
+  medWert: number | null; vol36: number | null; s1: Sig; s2: Sig; dominant: string;
   email: string | null; phone: string | null;
 };
 type Exp = { titel: string; buyer: string; vol: number | null; ende: string | null; mte: number | null; vsrc?: string };
 type Loss = { titel: string; vol: number | null; datum: string | null; gewinner: string | null };
-type Detail = { id: string; name: string; expiring: Exp[]; losses: Loss[]; error?: string };
+type Recent = { titel: string; buyer: string | null; vol: number | null; jahr: number | null };
+type Detail = { id: string; name: string; expiring: Exp[]; losses: Loss[]; recent?: Recent[]; error?: string };
 
 const nf = new Intl.NumberFormat("de-DE");
 const eur = (v: number | null | undefined) =>
@@ -30,20 +31,32 @@ export function InternFirmen() {
   const [detail, setDetail] = useState<Detail | null>(null);
   const [detailLoading, setDetailLoading] = useState(false);
 
-  async function search(e?: React.FormEvent) {
-    e?.preventDefault();
+  const runSearch = useCallback(async (p: string, o: string, n: string) => {
+    if (!p && !o && !n) return;
     setLoading(true); setErr(null); setFirmen(null); setOpenId(null); setDetail(null);
     const q = new URLSearchParams();
-    if (plz.trim()) q.set("plz", plz.trim());
-    if (ort.trim()) q.set("ort", ort.trim());
-    if (name.trim()) q.set("name", name.trim());
+    if (p) q.set("plz", p); if (o) q.set("ort", o); if (n) q.set("name", n);
+    // Suche in die URL spiegeln → Zurück-Navigation (z. B. vom Firmenprofil) stellt sie wieder her.
+    window.history.replaceState(null, "", `/intern?${q}`);
     try {
       const r = await fetch(`/api/intern/firmen?${q}`);
       const d = await r.json();
       if (d.error) setErr(d.error); else setFirmen(d.firmen || []);
     } catch { setErr("Suche fehlgeschlagen"); }
     finally { setLoading(false); }
+  }, []);
+
+  function search(e?: React.FormEvent) {
+    e?.preventDefault();
+    runSearch(plz.trim(), ort.trim(), name.trim());
   }
+
+  // Beim Laden (auch nach Zurück) die Suche aus der URL wiederherstellen
+  useEffect(() => {
+    const sp = new URLSearchParams(window.location.search);
+    const p = sp.get("plz") || "", o = sp.get("ort") || "", n = sp.get("name") || "";
+    if (p || o || n) { setPlz(p); setOrt(o); setName(n); runSearch(p, o, n); }
+  }, [runSearch]);
 
   async function toggle(id: string) {
     if (openId === id) { setOpenId(null); setDetail(null); return; }
@@ -82,7 +95,7 @@ export function InternFirmen() {
             <button className="in-row" onClick={() => toggle(f.id)}>
               <div className="in-main">
                 <span className="in-name">{f.name}</span>
-                <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || "Sitz unbekannt"} · {f.wins36} Zuschläge/36M · Ø {eur(f.avgWert)}</span>
+                <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || "Sitz unbekannt"} · {f.wins36} Zuschläge/36M · Median {eur(f.medWert)}</span>
               </div>
               <div className="in-signals">
                 {f.s1.n > 0 && <span className="in-sig s1" title={`verlorene Verträge (letzter ${f.s1.letzter ?? "?"})`}>▼ {f.s1.n} verloren · {eur(f.s1.vol)}</span>}
@@ -99,7 +112,7 @@ export function InternFirmen() {
                     <div className="in-contact">
                       {f.phone && <span>☎ {f.phone}</span>}
                       {f.email && <span>✉ {f.email}</span>}
-                      <a className="in-link" href={`/firma?id=${encodeURIComponent(f.id)}`} target="_blank" rel="noreferrer">Vollständiges Firmenprofil ↗</a>
+                      <a className="in-link" href={`/firma?id=${encodeURIComponent(f.id)}&from=intern`}>Vollständiges Firmenprofil →</a>
                       <span className="in-note">Kontakt aus Bekanntmachung — vor Nutzung prüfen (oft Vergabeportal statt Firma).</span>
                     </div>
 
@@ -125,8 +138,18 @@ export function InternFirmen() {
                         <div className="in-legend">* Wert geschätzt/aus CPV-Median abgeleitet — nicht veröffentlicht.</div>}
                     </div>}
 
-                    {detail.losses.length === 0 && detail.expiring.length === 0 &&
-                      <div className="in-muted">Keine verlorenen oder auslaufenden Verträge erfasst.</div>}
+                    {(detail.recent?.length ?? 0) > 0 && <div className="in-block">
+                      <h3>Zuletzt gewonnen ({detail.recent!.length})</h3>
+                      {detail.recent!.slice(0, 8).map((r, i) => (
+                        <div key={i} className="in-item">
+                          <span className="in-it">{r.titel || "(ohne Titel)"}<span className="in-buyer">{r.buyer || ""}</span></span>
+                          <span className="in-iv">{eur(r.vol)}{r.jahr ? ` · ${r.jahr}` : ""}</span>
+                        </div>
+                      ))}
+                    </div>}
+
+                    {detail.losses.length === 0 && detail.expiring.length === 0 && (detail.recent?.length ?? 0) === 0 &&
+                      <div className="in-muted">Keine Vertragsdaten erfasst.</div>}
                   </>
                 ))}
               </div>

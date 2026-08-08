@@ -34,14 +34,14 @@ def search(plz=None, ort=None, name=None):
     now = Z.build_population(con, adhoc={"plz": plz, "ort": ort, "name": name})
     Z.compute_signals(con, now)
     rows = con.execute("""
-      SELECT identity_id, firmenname, sitz_plz, sitz_ort, sitz_nuts, wins36, avg_val, vol36,
+      SELECT identity_id, firmenname, sitz_plz, sitz_ort, sitz_nuts, wins36, med_val, vol36,
              verlorene_12m, verlust_vol, letzter_verlust, auslauf_n, auslauf_vol,
              naechstes_auslaufdatum, dominant_signal, email, phone
       FROM ranked ORDER BY (coalesce(verlust_vol,0)+coalesce(auslauf_vol,0)) DESC, wins36 DESC
       LIMIT 100""").fetchall()
     firmen = [{
         "id": r[0], "name": Z.clean_name(r[1]), "plz": r[2], "ort": r[3], "nuts": r[4],
-        "wins36": int(r[5] or 0), "avgWert": float(r[6]) if r[6] else None,
+        "wins36": int(r[5] or 0), "medWert": float(r[6]) if r[6] else None,   # Median (robust ggü. Framework-Nennwerten)
         "vol36": float(r[7]) if r[7] else None,
         "s1": {"n": int(r[8] or 0), "vol": float(r[9]) if r[9] else None, "letzter": str(r[10]) if r[10] else None},
         "s2": {"n": int(r[11] or 0), "vol": float(r[12]) if r[12] else None, "naechstes": str(r[13]) if r[13] else None},
@@ -85,6 +85,16 @@ def detail(identity_id):
                         AND ps.entity_id IN (SELECT entity_id FROM mine))
       ORDER BY n.award_date DESC LIMIT 25""",
       [identity_id]).fetchall()
+    # Jüngste Zuschläge — damit das Detail auch ohne akutes Signal nie leer ist ("was macht die Firma")
+    recent = con.execute(f"""
+      SELECT n.title, q.final_value_clean, year(coalesce(n.award_date, n.publication_date)) AS jahr,
+             (SELECT arg_max(e.canonical_name, e.confidence) FROM {PE} pb JOIN {EN} e ON e.entity_id=pb.entity_id
+              WHERE pb.notice_id=p.notice_id AND pb.role='buyer') AS buyer
+      FROM {PE} p JOIN {EI} ei ON ei.entity_id=p.entity_id
+      JOIN read_parquet('{SN}', hive_partitioning=1) n ON n.notice_id=p.notice_id
+      LEFT JOIN {QU} q ON q.notice_id=p.notice_id
+      WHERE p.role='winner' AND ei.identity_id=?
+      ORDER BY coalesce(n.award_date, n.publication_date) DESC LIMIT 12""", [identity_id]).fetchall()
     return {
         "id": identity_id, "name": Z.clean_name(prof[0]), "plz": prof[1], "ort": prof[2],
         "email": prof[3], "phone": prof[4], "wins36": int(prof[5] or 0),
@@ -95,6 +105,8 @@ def detail(identity_id):
         "losses": [{"titel": l[0], "vol": float(l[1]) if l[1] else None,
                     "datum": str(l[2]) if l[2] else None, "gewinner": Z.clean_name(l[3]) if l[3] else None}
                    for l in losses],
+        "recent": [{"titel": r[0], "vol": float(r[1]) if r[1] else None,
+                    "jahr": int(r[2]) if r[2] else None, "buyer": r[3]} for r in recent],
     }
 
 

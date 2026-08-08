@@ -90,6 +90,7 @@ def build_population(con, region=None, adhoc=None):
              count(*) FILTER (WHERE val IS NOT NULL AND val > 0) AS n_val,
              count(*) AS n_all,
              avg(val) FILTER (WHERE val IS NOT NULL AND val > 0) AS avg_val,
+             median(val) FILTER (WHERE val IS NOT NULL AND val > 0) AS med_val,
              sum(val) FILTER (WHERE val IS NOT NULL AND val > 0
                               AND dt >= (DATE '{now}' - INTERVAL 36 MONTH)) AS vol36,
              mode(nuts1) FILTER (WHERE nuts1 LIKE 'DE_') AS haupt_nuts1
@@ -115,7 +116,12 @@ def build_population(con, region=None, adhoc=None):
         if adhoc.get("plz"):
             conds.append(f"sitz_plz LIKE '{adhoc['plz']}%'")
         if adhoc.get("ort"):
-            conds.append(f"lower(sitz_ort) LIKE '%{adhoc['ort'].lower()}%'")
+            # Wortgrenze statt Substring: "Hamm" trifft Hamm / Hamm-Uentrop / "Hamm (Westf.)",
+            # aber NICHT Hammelburg / Hamminkeln (Sven: nur der 59er-Raum, nicht 97/46).
+            o = adhoc["ort"].lower().replace("'", "''")
+            conds.append("(lower(sitz_ort)='" + o + "' OR lower(sitz_ort) LIKE '" + o + "-%'"
+                         " OR lower(sitz_ort) LIKE '" + o + " %' OR lower(sitz_ort) LIKE '" + o + "/%'"
+                         " OR lower(sitz_ort) LIKE '" + o + "(%')")
         where = " AND ".join(conds) if conds else "TRUE"
         con.execute(f"CREATE OR REPLACE TEMP TABLE pop AS SELECT * FROM base WHERE {where}")
     else:       # Batch: harte Filter §2 + Region auf den Firmensitz
@@ -132,16 +138,27 @@ def build_entity_location(con):
     NP = "read_parquet('" + str(ROOT / "data/silver/DE/notice_parties/*/*.parquet") + "', hive_partitioning=1)"
     PE = f"read_parquet('{G}/party_entity.parquet')"
     EI = f"read_parquet('{G}/entity_identity.parquet')"
+    # KONSISTENTES (PLZ,Ort,NUTS)-Paar: das häufigste zusammengehörige Tripel je Identität —
+    # NICHT mode() je Spalte einzeln (das mischte PLZ aus einer, Ort aus anderer Notice → "Hamm/10…").
     con.execute(f"""CREATE OR REPLACE TEMP TABLE eloc AS
-      SELECT ei.identity_id,
-             mode(np.postal_code) AS plz, mode(np.town) AS ort, mode(np.nuts) AS nuts,
-             any_value(np.email) FILTER (WHERE np.email IS NOT NULL) AS email,
-             any_value(np.phone) FILTER (WHERE np.phone IS NOT NULL) AS phone
-      FROM {NP} np
-      JOIN {PE} pe ON pe.notice_id = np.notice_id AND pe.role = np.role AND pe.seq = np.seq
-      JOIN {EI} ei ON ei.entity_id = pe.entity_id
-      WHERE np.role = 'winner' AND np.postal_code IS NOT NULL
-      GROUP BY 1""")
+      WITH wp AS (
+        SELECT ei.identity_id, np.postal_code AS plz, np.town AS ort, np.nuts AS nuts,
+               np.email, np.phone
+        FROM {NP} np
+        JOIN {PE} pe ON pe.notice_id = np.notice_id AND pe.role = np.role AND pe.seq = np.seq
+        JOIN {EI} ei ON ei.entity_id = pe.entity_id
+        WHERE np.role = 'winner' AND np.postal_code IS NOT NULL),
+      loc AS (
+        SELECT identity_id, plz, ort, nuts, count(*) c,
+               row_number() OVER (PARTITION BY identity_id ORDER BY count(*) DESC) rn
+        FROM wp GROUP BY 1,2,3,4),
+      contact AS (
+        SELECT identity_id, any_value(email) FILTER (WHERE email IS NOT NULL) email,
+               any_value(phone) FILTER (WHERE phone IS NOT NULL) phone
+        FROM wp GROUP BY 1)
+      SELECT l.identity_id, l.plz, l.ort, l.nuts, c.email, c.phone
+      FROM loc l LEFT JOIN contact c USING (identity_id)
+      WHERE l.rn = 1""")
 
 
 def compute_signals(con, now):
