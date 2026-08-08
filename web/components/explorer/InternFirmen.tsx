@@ -297,7 +297,9 @@ export function InternFirmen() {
           {segGeo
             ? <span className="in-geochip">📍 {segGeo} <button className="in-geoclear" title="Geo-Filter entfernen" onClick={() => { setPlz(""); setOrt(""); setRadius(""); runSegment(segMode, segParams, dedup, true); }}>×</button></span>
             : <span className="in-geohint"> · Tipp: PLZ+Umkreis oder Ort oben eintragen → Segment filtert auf den Firmensitz</span>}
-          {treffer[segMode] && <span className="in-tq"> · Trefferquote {treffer[segMode].quote}% aus {treffer[segMode].n} Ansprachen</span>}
+          {treffer[segMode]
+            ? <span className="in-tq" title="Konversion = (interessiert + gewonnen) / Ansprachen"> · Trefferquote {treffer[segMode].quote}% aus {treffer[segMode].n} Ansprachen ({treffer[segMode].interessiert} interessiert, {treffer[segMode].gewonnen} gewonnen)</span>
+            : <span className="in-geohint"> · Trefferquote: noch keine Ansprache protokolliert (Detail öffnen → „protokollieren")</span>}
         </div>
       )}
 
