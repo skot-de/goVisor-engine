@@ -66,11 +66,33 @@ export function InternFirmen() {
   const [notes, setNotes] = useState<Record<string, string>>({});
   const [filter, setFilter] = useState<"" | "s1" | "s2" | "offen" | "aktiv">(""); // Schnellfilter
   const [segMode, setSegMode] = useState<string>(""); // aktives Vertriebsziel-Segment (A–G)
+  // Outreach-Log (Server): 12-Monats-Sperre + Trefferquote je Segment
+  const [cooldown, setCooldown] = useState<Record<string, string>>({});
+  const [treffer, setTreffer] = useState<Record<string, { n: number; quote: number; interessiert: number; gewonnen: number }>>({});
 
   useEffect(() => {
     try { setContacted(new Set(JSON.parse(localStorage.getItem("govisor.outreach") || "[]"))); } catch { /* ignore */ }
     try { setNotes(JSON.parse(localStorage.getItem("govisor.notes") || "{}")); } catch { /* ignore */ }
+    fetch("/api/intern/outreach").then((r) => r.json()).then((d) => {
+      if (d.cooldown) setCooldown(d.cooldown);
+      if (d.trefferquote) setTreffer(d.trefferquote);
+    }).catch(() => { /* ignore */ });
   }, []);
+
+  // Ansprache protokollieren (Server-Log + lokale Sofortanzeige) — segmentübergreifende 12-Monats-Sperre
+  async function logOutreach(f: Firma, outcome: string) {
+    setContacted((prev) => new Set(prev).add(f.id));
+    setCooldown((prev) => ({ ...prev, [f.id]: new Date().toISOString().slice(0, 10) }));
+    try { localStorage.setItem("govisor.outreach", JSON.stringify([...contacted, f.id])); } catch { /* ignore */ }
+    try {
+      await fetch("/api/intern/outreach", {
+        method: "POST", headers: { "content-type": "application/json" },
+        body: JSON.stringify({ id: f.id, name: f.name, segment: segMode || "", outcome }),
+      });
+      const d = await (await fetch("/api/intern/outreach")).json();
+      if (d.trefferquote) setTreffer(d.trefferquote);
+    } catch { /* ignore */ }
+  }
 
   function setNote(id: string, text: string) {
     setNotes((prev) => {
@@ -78,15 +100,6 @@ export function InternFirmen() {
       if (!text) delete n[id];
       try { localStorage.setItem("govisor.notes", JSON.stringify(n)); } catch { /* ignore */ }
       return n;
-    });
-  }
-
-  function toggleContacted(id: string) {
-    setContacted((prev) => {
-      const s = new Set(prev);
-      if (s.has(id)) s.delete(id); else s.add(id);
-      try { localStorage.setItem("govisor.outreach", JSON.stringify([...s])); } catch { /* ignore */ }
-      return s;
     });
   }
 
@@ -264,7 +277,11 @@ export function InternFirmen() {
           <button key={s.key} className={`in-nw-btn ${segMode === s.key ? "on" : ""}`} title={s.title} onClick={() => runSegment(s.key)}>{s.tab}</button>
         ))}
       </div>
-      {segMode && segHint && <div className="in-seghint">{SEGS.find((s) => s.key === segMode)?.tab}: {segHint}</div>}
+      {segMode && segHint && (
+        <div className="in-seghint">{SEGS.find((s) => s.key === segMode)?.tab}: {segHint}
+          {treffer[segMode] && <span className="in-tq"> · Trefferquote {treffer[segMode].quote}% aus {treffer[segMode].n} Ansprachen</span>}
+        </div>
+      )}
 
       {segMode && segControls.length > 0 && (
         <div className="in-knobs">
@@ -326,7 +343,7 @@ export function InternFirmen() {
           <div key={f.id} className={`in-card ${openId === f.id ? "open" : ""}`}>
             <button className="in-row" onClick={() => toggle(f.id)}>
               <div className="in-main">
-                <span className="in-name">{f.name}{contacted.has(f.id) && <span className="in-done">✓ angesprochen</span>}</span>
+                <span className="in-name">{f.name}{(contacted.has(f.id) || cooldown[f.id]) && <span className="in-done">{cooldown[f.id] ? `🔒 ${cooldown[f.id]}` : "✓ angesprochen"}</span>}</span>
                 {f.badge
                   ? <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || "Sitz unbekannt"}{f.line ? ` · ${f.line}` : ""}</span>
                   : <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || "Sitz unbekannt"} · ≈{perJahr(f.wins36)} Zuschläge/Jahr · Median {eur(f.medWert)}</span>}
@@ -363,9 +380,14 @@ export function InternFirmen() {
                       {f.phone && <span>☎ {f.phone}</span>}
                       {f.email && <span>✉ {f.email}</span>}
                       <a className="in-link" href={`/firma?id=${encodeURIComponent(f.id)}&from=intern`}>Vollständiges Firmenprofil →</a>
-                      <button className={`in-done-btn ${contacted.has(f.id) ? "on" : ""}`} onClick={() => toggleContacted(f.id)}>
-                        {contacted.has(f.id) ? "✓ angesprochen" : "Als angesprochen markieren"}
-                      </button>
+                      {cooldown[f.id]
+                        ? <span className="in-locked" title="12-Monats-Sperre — segmentübergreifend keine Doppelansprache">🔒 angesprochen {cooldown[f.id]}</span>
+                        : <span className="in-logbtns">
+                            <span className="in-logl">protokollieren:</span>
+                            {(["angesprochen", "interessiert", "gewonnen", "kein_interesse"] as const).map((oc) => (
+                              <button key={oc} className="in-logbtn" onClick={() => logOutreach(f, oc)}>{oc === "kein_interesse" ? "kein Interesse" : oc}</button>
+                            ))}
+                          </span>}
                       {landing[f.id]?.url
                         ? <a className="in-link" href={landing[f.id].url} target="_blank" rel="noreferrer">{landing[f.id].copied ? "Landing-Link kopiert ✓ — öffnen ↗" : "Landing öffnen ↗"}</a>
                         : <button className="in-done-btn" disabled={landing[f.id]?.busy} onClick={() => makeLanding(f.id)}>
