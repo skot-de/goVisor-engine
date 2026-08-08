@@ -217,13 +217,22 @@ export function InternFirmen() {
 
   // (5) CSV-Export der aktuell sichtbaren Trefferliste (inkl. Notizen + Status)
   function exportCsv() {
-    const head = ["Firma", "PLZ", "Ort", "Zuschläge36M", "MedianWert", "verloren_n", "verloren_vol", "auslauf_n", "auslauf_vol", "Telefon", "Email", "angesprochen", "Notiz"];
+    const segTab = segMode ? (SEGS.find((s) => s.key === segMode)?.tab || segMode) : "";
+    const head = ["Firma", "PLZ", "Ort", "Segment", "Signal", "weitere_Segmente", "Rahmen_Quote_%",
+      "Zuschläge36M", "MedianWert", "verloren_n", "verloren_vol", "auslauf_n", "auslauf_vol",
+      "Telefon", "Email", "angesprochen", "Notiz"];
     const q = (v: unknown) => `"${String(v ?? "").replace(/"/g, '""')}"`;
-    const rows = visible.map((f) => [f.name, f.plz, f.ort, f.wins36, f.medWert, f.s1.n, f.s1.vol, f.s2.n, f.s2.vol, f.phone, f.email, contacted.has(f.id) ? "ja" : "", notes[f.id] || ""].map(q).join(";"));
+    const list = segMode ? shown : visible;
+    const rows = list.map((f) => [
+      f.name, f.plz, f.ort, segTab, f.badge?.label ?? "",
+      (f.weitere || []).map((wg) => wg.label).join(" / "), f.rahmenQuote ?? "",
+      f.wins36, f.medWert, f.s1.n, f.s1.vol, f.s2.n, f.s2.vol,
+      f.phone, f.email, contacted.has(f.id) ? "ja" : "", notes[f.id] || "",
+    ].map(q).join(";"));
     const csv = "﻿" + [head.map(q).join(";"), ...rows].join("\r\n");
     const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
     const a = document.createElement("a");
-    a.href = url; a.download = "firmen-radar.csv"; a.click();
+    a.href = url; a.download = `firmen-radar${segMode ? `-${segMode}` : ""}.csv`; a.click();
     URL.revokeObjectURL(url);
   }
 
