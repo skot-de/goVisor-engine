@@ -38,6 +38,7 @@ const eur = (v: number | null | undefined) =>
 
 export function InternFirmen() {
   const [plz, setPlz] = useState("");
+  const [radius, setRadius] = useState(""); // Umkreis km (nur mit PLZ)
   const [ort, setOrt] = useState("");
   const [name, setName] = useState("");
   const [firmen, setFirmen] = useState<Firma[] | null>(null);
@@ -88,11 +89,12 @@ export function InternFirmen() {
     } catch { setLanding((p) => ({ ...p, [id]: {} })); }
   }
 
-  const runSearch = useCallback(async (p: string, o: string, n: string) => {
+  const runSearch = useCallback(async (p: string, o: string, n: string, rad: string) => {
     if (!p && !o && !n) return;
     setLoading(true); setErr(null); setFirmen(null); setOpenId(null); setDetail(null);
     const q = new URLSearchParams();
     if (p) q.set("plz", p); if (o) q.set("ort", o); if (n) q.set("name", n);
+    if (p && rad) q.set("radius", rad);
     // Suche in die URL spiegeln → Zurück-Navigation (z. B. vom Firmenprofil) stellt sie wieder her.
     window.history.replaceState(null, "", `/intern?${q}`);
     try {
@@ -105,14 +107,14 @@ export function InternFirmen() {
 
   function search(e?: React.FormEvent) {
     e?.preventDefault();
-    runSearch(plz.trim(), ort.trim(), name.trim());
+    runSearch(plz.trim(), ort.trim(), name.trim(), radius);
   }
 
   // Beim Laden (auch nach Zurück) die Suche aus der URL wiederherstellen
   useEffect(() => {
     const sp = new URLSearchParams(window.location.search);
-    const p = sp.get("plz") || "", o = sp.get("ort") || "", n = sp.get("name") || "";
-    if (p || o || n) { setPlz(p); setOrt(o); setName(n); runSearch(p, o, n); }
+    const p = sp.get("plz") || "", o = sp.get("ort") || "", n = sp.get("name") || "", rad = sp.get("radius") || "";
+    if (p || o || n) { setPlz(p); setOrt(o); setName(n); setRadius(rad); runSearch(p, o, n, rad); }
   }, [runSearch]);
 
   async function toggle(id: string) {
@@ -170,6 +172,13 @@ export function InternFirmen() {
 
       <form className="in-search" onSubmit={search}>
         <input placeholder="PLZ (z. B. 59071)" value={plz} onChange={(e) => setPlz(e.target.value)} inputMode="numeric" />
+        <select className="in-radius" value={radius} onChange={(e) => setRadius(e.target.value)} disabled={!plz} title="Umkreis um die PLZ">
+          <option value="">exakt</option>
+          <option value="5">+5 km</option>
+          <option value="10">+10 km</option>
+          <option value="25">+25 km</option>
+          <option value="50">+50 km</option>
+        </select>
         <input placeholder="Ort (z. B. Hamm)" value={ort} onChange={(e) => setOrt(e.target.value)} />
         <input placeholder="Firmenname (z. B. Klostermann)" value={name} onChange={(e) => setName(e.target.value)} />
         <button type="submit" disabled={loading}>{loading ? "Suche …" : "Suchen"}</button>

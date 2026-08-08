@@ -109,7 +109,29 @@ def build_population(con, region=None, adhoc=None):
         ON en.identity_id = a.identity_id
       LEFT JOIN eloc el ON el.identity_id = a.identity_id""")
 
-    if adhoc:   # Ad-hoc: Treffer nach Name/PLZ/Ort, OHNE die harten Batch-Filter
+    if adhoc and adhoc.get("plz") and adhoc.get("radius"):
+        # Umkreis-Suche: alle Firmen, deren Sitz-PLZ im Radius (km) um die Zentrums-PLZ liegt.
+        # Haversine über dim_plz-Zentroide (GeoNames). Name-Filter bleibt optional kombinierbar.
+        DP = f"read_parquet('{G}/dim_plz.parquet')"
+        plz = "".join(ch for ch in str(adhoc["plz"]) if ch.isdigit())[:5]
+        try:
+            radius = max(1.0, min(200.0, float(adhoc["radius"])))
+        except (TypeError, ValueError):
+            radius = 25.0
+        center = con.execute(f"SELECT lat, lon FROM {DP} WHERE plz=? LIMIT 1", [plz]).fetchone()
+        if not center:
+            con.execute("CREATE OR REPLACE TEMP TABLE pop AS SELECT * FROM base WHERE FALSE")
+            return now
+        clat, clon = float(center[0]), float(center[1])
+        hav = (f"6371*acos(least(1.0, sin(radians({clat}))*sin(radians(dp.lat)) + "
+               f"cos(radians({clat}))*cos(radians(dp.lat))*cos(radians(dp.lon-({clon})))))")
+        name_cond = ""
+        if adhoc.get("name"):
+            name_cond = f"AND lower(b.firmenname) LIKE '%{adhoc['name'].lower().replace(chr(39), '')}%'"
+        con.execute(f"""CREATE OR REPLACE TEMP TABLE pop AS
+          SELECT b.* FROM base b JOIN {DP} dp ON dp.plz = b.sitz_plz
+          WHERE b.sitz_plz IS NOT NULL AND {hav} <= {radius} {name_cond}""")
+    elif adhoc:   # Ad-hoc: Treffer nach Name/PLZ/Ort, OHNE die harten Batch-Filter
         conds = []
         if adhoc.get("name"):
             conds.append(f"lower(firmenname) LIKE '%{adhoc['name'].lower()}%'")

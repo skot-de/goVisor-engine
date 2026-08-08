@@ -36,11 +36,11 @@ def art_of(kind):
     return _ART.get(kind)
 
 
-def search(plz=None, ort=None, name=None):
+def search(plz=None, ort=None, name=None, radius=None):
     if not (plz or ort or name):
         return {"error": "Bitte PLZ, Ort oder Name angeben"}
     con = _con()
-    now = Z.build_population(con, adhoc={"plz": plz, "ort": ort, "name": name})
+    now = Z.build_population(con, adhoc={"plz": plz, "ort": ort, "name": name, "radius": radius})
     Z.compute_signals(con, now)
     rows = con.execute("""
       SELECT identity_id, firmenname, sitz_plz, sitz_ort, sitz_nuts, wins36, med_val, vol36,
@@ -200,10 +200,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--search", action="store_true")
     ap.add_argument("--detail")
-    ap.add_argument("--plz"); ap.add_argument("--ort"); ap.add_argument("--name")
+    ap.add_argument("--plz"); ap.add_argument("--ort"); ap.add_argument("--name"); ap.add_argument("--radius")
     a = ap.parse_args()
     try:
-        out = detail(a.detail) if a.detail else search(a.plz, a.ort, a.name)
+        out = detail(a.detail) if a.detail else search(a.plz, a.ort, a.name, a.radius)
     except Exception as e:  # noqa: BLE001
         out = {"error": str(e)[:300]}
     print(json.dumps(out, ensure_ascii=False, default=str))

@@ -46,6 +46,11 @@ export async function GET(req: Request) {
         args.push(`--${k}`, v);
       }
     }
+    const radius = (u.searchParams.get("radius") || "").trim();
+    if (radius) {
+      if (!/^\d{1,3}$/.test(radius)) return NextResponse.json({ error: "ungültiger radius" }, { status: 400 });
+      args.push("--radius", radius);
+    }
     if (args.length === 1) return NextResponse.json({ error: "Bitte PLZ, Ort oder Name angeben" }, { status: 400 });
     return NextResponse.json(await run(args));
   } catch (e) {
