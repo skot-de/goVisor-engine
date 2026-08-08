@@ -50,3 +50,14 @@
 .in-art { font-size: 9.5px; padding: 1px 6px; border-radius: 99px; margin-left: 7px; white-space: nowrap; font-family: var(--sans); }
 .in-art.rahmen { color: var(--signal-deep); background: var(--signal-wash); border: 1px solid #cfe8dc; }
 .in-art.einmal { color: var(--ink-400); background: var(--surface-3); border: 1px solid var(--line); }
+.in-done { font-size: 10px; color: var(--signal-deep); background: var(--signal-wash); border: 1px solid #cfe8dc; border-radius: 99px; padding: 1px 7px; margin-left: 8px; font-weight: 600; }
+.in-done-btn { font-size: 11.5px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink-700); border-radius: 7px; padding: 4px 10px; cursor: pointer; font: inherit; }
+.in-done-btn:hover { background: var(--surface-2); }
+.in-done-btn.on { color: var(--signal-deep); border-color: #cfe8dc; background: var(--signal-wash); }
+.in-ctx { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 10px; font-size: 12px; }
+.in-kmu { font-size: 10px; font-weight: 700; color: var(--ink-700); background: var(--surface-3); border: 1px solid var(--line); border-radius: 99px; padding: 1px 7px; }
+.in-seg { color: var(--ink-500); }
+.in-buyers { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; margin-top: 12px; font-size: 12px; }
+.in-bl { color: var(--ink-400); font-weight: 600; font-size: 10.5px; text-transform: uppercase; letter-spacing: .08em; }
+.in-btag { color: var(--ink-700); background: var(--surface-2); border: 1px solid var(--line); border-radius: 6px; padding: 2px 8px; }
+.in-btag em { color: var(--ink-400); font-style: normal; font-family: var(--mono); font-size: 11px; }

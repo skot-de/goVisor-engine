@@ -143,9 +143,28 @@ def detail(identity_id):
                 "expiring": [{"titel": w[0], "buyer": w[1], "vol": float(w[2]) if w[2] else None,
                               "ende": w[3].strftime("%m/%Y") if w[3] and hasattr(w[3], "strftime") else None,
                               "art": art_of(w[4]), "url": w[5]} for w in wexp]}
+    # Ansprache-Kontext: Segment/Feld, KMU-Flag, Website, Schlüsselkunden (Top-Vergabestellen)
+    NP = "read_parquet('" + str(ROOT / "data/silver/DE/notice_parties/*/*.parquet") + "', hive_partitioning=1)"
+    BCH = f"read_parquet('{G}/buyer_contractor_history.parquet')"
+    CL = f"read_parquet('{G}/dim_cpv_label.parquet')"
+    meta = con.execute(f"""
+      SELECT any_value(np.url) FILTER (WHERE np.url IS NOT NULL AND np.url NOT LIKE '%@%'),
+             bool_or(coalesce(np.is_sme, FALSE))
+      FROM {NP} np JOIN {PE} pe ON pe.notice_id=np.notice_id AND pe.role=np.role AND pe.seq=np.seq
+      JOIN {EI} ei ON ei.entity_id=pe.entity_id WHERE np.role='winner' AND ei.identity_id=?""", [identity_id]).fetchone()
+    seg = con.execute(f"""SELECT cl.label FROM {CS} cs JOIN {EI} ei ON ei.entity_id=cs.entity_id
+      LEFT JOIN {CL} cl ON cl.cpv_code = cs.cpv_class || '0000'
+      WHERE ei.identity_id=? GROUP BY 1 ORDER BY sum(cs.total_wins) DESC LIMIT 1""", [identity_id]).fetchone()
+    topbuyers = con.execute(f"""SELECT en.canonical_name, sum(b.total_wins) w, max(b.last_win_year) ly
+      FROM {BCH} b JOIN {EI} m ON m.entity_id=b.contractor_entity_id AND m.identity_id=?
+      JOIN {EN} en ON en.entity_id=b.buyer_entity_id WHERE en.canonical_name IS NOT NULL
+      GROUP BY 1 ORDER BY 2 DESC LIMIT 4""", [identity_id]).fetchall()
     return {
         "id": identity_id, "name": Z.clean_name(prof[0]), "plz": prof[1], "ort": prof[2],
         "email": prof[3], "phone": prof[4], "wins36": int(prof[5] or 0),
+        "website": meta[0] if meta else None, "kmu": bool(meta[1]) if meta else False,
+        "segment": Z.clean_name(seg[0]) if seg and seg[0] else None,
+        "topBuyers": [{"name": Z.clean_name(t[0]), "wins": int(t[1]), "letztes": int(t[2]) if t[2] else None} for t in topbuyers],
         "expiring": [{"titel": e[0], "buyer": e[1], "vol": float(e[2]) if e[2] else None,
                       "ende": e[3].strftime("%m/%Y") if e[3] and hasattr(e[3], "strftime") else None,
                       "mte": int(e[4]) if e[4] is not None else None,

@@ -14,7 +14,9 @@ type Exp = { titel: string; buyer: string; vol: number | null; ende: string | nu
 type Loss = { titel: string; vol: number | null; datum: string | null; gewinner: string | null };
 type Recent = { titel: string; buyer: string | null; vol: number | null; jahr: number | null; url?: string | null };
 type Wett = { name: string; id: string; expiring: Exp[] };
-type Detail = { id: string; name: string; expiring: Exp[]; losses: Loss[]; recent?: Recent[]; wettbewerber?: Wett | null; error?: string };
+type Buyer = { name: string; wins: number; letztes: number | null };
+type Detail = { id: string; name: string; expiring: Exp[]; losses: Loss[]; recent?: Recent[]; wettbewerber?: Wett | null;
+  website?: string | null; kmu?: boolean; segment?: string | null; topBuyers?: Buyer[]; error?: string };
 
 // Vertragstitel als Link zur TED-Bekanntmachung (extern → neuer Tab) + Rahmen/Einmal-Marker.
 function Titel({ text, url, art }: { text: string | null; url?: string | null; art?: string | null }) {
@@ -43,6 +45,20 @@ export function InternFirmen() {
   const [openId, setOpenId] = useState<string | null>(null);
   const [detail, setDetail] = useState<Detail | null>(null);
   const [detailLoading, setDetailLoading] = useState(false);
+  const [contacted, setContacted] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    try { setContacted(new Set(JSON.parse(localStorage.getItem("govisor.outreach") || "[]"))); } catch { /* ignore */ }
+  }, []);
+
+  function toggleContacted(id: string) {
+    setContacted((prev) => {
+      const s = new Set(prev);
+      if (s.has(id)) s.delete(id); else s.add(id);
+      try { localStorage.setItem("govisor.outreach", JSON.stringify([...s])); } catch { /* ignore */ }
+      return s;
+    });
+  }
 
   const runSearch = useCallback(async (p: string, o: string, n: string) => {
     if (!p && !o && !n) return;
@@ -107,7 +123,7 @@ export function InternFirmen() {
           <div key={f.id} className={`in-card ${openId === f.id ? "open" : ""}`}>
             <button className="in-row" onClick={() => toggle(f.id)}>
               <div className="in-main">
-                <span className="in-name">{f.name}</span>
+                <span className="in-name">{f.name}{contacted.has(f.id) && <span className="in-done">✓ angesprochen</span>}</span>
                 <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || "Sitz unbekannt"} · {f.wins36} Zuschläge/36M · Median {eur(f.medWert)}</span>
               </div>
               <div className="in-signals">
@@ -122,12 +138,31 @@ export function InternFirmen() {
                 {detailLoading && <div className="in-muted">Lade Ansprache-Details …</div>}
                 {detail && !detailLoading && (detail.error ? <div className="in-err">{detail.error}</div> : (
                   <>
+                    {(detail.segment || detail.kmu || detail.website) && (
+                      <div className="in-ctx">
+                        {detail.kmu && <span className="in-kmu">KMU</span>}
+                        {detail.segment && <span className="in-seg">{detail.segment.length > 60 ? detail.segment.slice(0, 59) + "…" : detail.segment}</span>}
+                        {detail.website && <a className="in-link" href={detail.website.startsWith("http") ? detail.website : `https://${detail.website}`} target="_blank" rel="noreferrer">Website ↗</a>}
+                      </div>
+                    )}
                     <div className="in-contact">
                       {f.phone && <span>☎ {f.phone}</span>}
                       {f.email && <span>✉ {f.email}</span>}
                       <a className="in-link" href={`/firma?id=${encodeURIComponent(f.id)}&from=intern`}>Vollständiges Firmenprofil →</a>
+                      <button className={`in-done-btn ${contacted.has(f.id) ? "on" : ""}`} onClick={() => toggleContacted(f.id)}>
+                        {contacted.has(f.id) ? "✓ angesprochen" : "Als angesprochen markieren"}
+                      </button>
                       <span className="in-note">Kontakt aus Bekanntmachung — vor Nutzung prüfen (oft Vergabeportal statt Firma).</span>
                     </div>
+
+                    {(detail.topBuyers?.length ?? 0) > 0 && (
+                      <div className="in-buyers">
+                        <span className="in-bl">Schlüsselkunden:</span>
+                        {detail.topBuyers!.map((b, i) => (
+                          <span key={i} className="in-btag">{b.name} <em>{b.wins}×{b.letztes ? ` · zuletzt ${b.letztes}` : ""}</em></span>
+                        ))}
+                      </div>
+                    )}
 
                     {detail.losses.length > 0 && <div className="in-block">
                       <h3>Jüngst verloren ({detail.losses.length})</h3>
