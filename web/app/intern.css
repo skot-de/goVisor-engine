@@ -1,0 +1,47 @@
+/* Internes Vertriebstool — Firmen-Radar. Namespace in-*. Tokens aus globals.css. */
+.in-wrap { max-width: 960px; margin: 0 auto; padding: 22px 20px 60px; }
+.in-head h1 { font-size: 24px; font-weight: 700; letter-spacing: -.02em; display: flex; align-items: center; gap: 10px; }
+.in-tag { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--flag);
+  background: var(--flag-wash); border: 1px solid #f0e2c2; border-radius: 99px; padding: 2px 8px; }
+.in-head p { color: var(--ink-500); font-size: 13px; margin-top: 6px; max-width: 70ch; line-height: 1.5; }
+
+.in-search { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0; }
+.in-search input { flex: 1; min-width: 130px; border: 1px solid var(--line-strong); border-radius: 8px;
+  padding: 9px 12px; font: inherit; background: var(--surface); color: var(--ink-900); }
+.in-search button { border: 0; background: var(--signal); color: #fff; font-weight: 600; border-radius: 8px;
+  padding: 9px 18px; cursor: pointer; }
+.in-search button:hover { background: var(--signal-deep); }
+.in-search button:disabled { opacity: .6; cursor: default; }
+
+.in-err { background: var(--risk-wash); color: var(--risk); border: 1px solid #f3d5cd; border-radius: 8px; padding: 10px 14px; font-size: 13px; }
+.in-empty, .in-muted { color: var(--ink-500); font-size: 13px; padding: 12px 2px; }
+.in-count { font-size: 12px; color: var(--ink-400); margin-bottom: 8px; }
+
+.in-list { display: flex; flex-direction: column; gap: 8px; }
+.in-card { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); overflow: hidden; }
+.in-card.open { border-color: var(--line-strong); }
+.in-row { display: flex; justify-content: space-between; align-items: center; gap: 14px; width: 100%;
+  text-align: left; border: 0; background: transparent; padding: 13px 16px; cursor: pointer; font: inherit; }
+.in-row:hover { background: var(--surface-2); }
+.in-name { font-weight: 600; font-size: 14px; }
+.in-sub { display: block; font-size: 11.5px; color: var(--ink-400); margin-top: 2px; }
+.in-signals { display: flex; flex-direction: column; gap: 3px; align-items: flex-end; flex-shrink: 0; }
+.in-sig { font-size: 11.5px; font-family: var(--mono); white-space: nowrap; }
+.in-sig.s1 { color: var(--risk); font-weight: 600; }
+.in-sig.s2 { color: #2b5f86; }
+.in-sig.none { color: var(--ink-300); }
+
+.in-detail { border-top: 1px solid var(--line-2, #eef0ef); padding: 14px 16px; background: var(--surface-2); }
+.in-contact { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; font-size: 12.5px; color: var(--ink-700);
+  font-family: var(--mono); margin-bottom: 12px; }
+.in-link { color: var(--signal-deep); text-decoration: none; font-family: var(--sans); font-weight: 600; }
+.in-link:hover { text-decoration: underline; }
+.in-note { color: var(--ink-400); font-family: var(--sans); font-size: 11px; }
+.in-block { margin-top: 12px; }
+.in-block h3 { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-400); font-weight: 700; margin-bottom: 6px; }
+.in-item { display: flex; justify-content: space-between; gap: 14px; padding: 6px 0; border-bottom: 1px solid var(--line-2, #eef0ef); font-size: 12.5px; }
+.in-item:last-child { border-bottom: 0; }
+.in-it { font-weight: 500; }
+.in-buyer { display: block; font-size: 11px; color: var(--ink-400); font-weight: 400; margin-top: 1px; }
+.in-iv { font-family: var(--mono); font-size: 11.5px; color: var(--ink-500); text-align: right; white-space: nowrap; flex-shrink: 0; }
+.in-legend { font-size: 10.5px; color: var(--ink-400); margin-top: 6px; }
