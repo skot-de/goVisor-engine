@@ -616,11 +616,12 @@ def detail(identity_id):
             return con.execute(f"""
               WITH fit(c4, w) AS (VALUES {fit_vals})
               SELECT le.title, le.buyer_name, le.buyer_town, le.value_eur, le.deadline_date, le.days_to_deadline,
-                     coalesce(le.documents_url, le.source_url) AS url, le.contract_kind, cl.label AS seg,
-                     {dist} AS dist_km
+                     coalesce(nt.ted_url, le.documents_url, le.source_url) AS url, le.contract_kind, cl.label AS seg,
+                     {dist} AS dist_km, nt.ted_url AS ted, le.documents_url AS doku
               FROM {LE} le JOIN fit ON fit.c4 = substr(le.cpv_code,1,4)
               LEFT JOIN {CL2} cl ON cl.cpv_code = substr(le.cpv_code,1,4) || '0000'
               LEFT JOIN {LG} lg ON lg.lead_id = le.lead_id
+              LEFT JOIN read_parquet('{SN}', hive_partitioning=1) nt ON nt.notice_id = le.lead_id
               WHERE le.phase='open' AND (le.days_to_deadline IS NULL OR le.days_to_deadline >= 0) {where}
               QUALIFY row_number() OVER (PARTITION BY lower(trim(le.title))
                                          ORDER BY le.value_eur DESC NULLS LAST) = 1
@@ -646,7 +647,8 @@ def detail(identity_id):
                    "frist": l[4].strftime("%d.%m.%Y") if l[4] and hasattr(l[4], "strftime") else None,
                    "tage": int(l[5]) if l[5] is not None else None, "url": l[6],
                    "art": art_of(l[7])[0], "artcat": art_of(l[7])[1], "seg": l[8],
-                   "dist": round(l[9]) if l[9] is not None else None} for l in leads],
+                   "dist": round(l[9]) if l[9] is not None else None,
+                   "ted": l[10], "doku": l[11]} for l in leads],
         "expiring": [{"titel": e[0], "buyer": e[1], "vol": float(e[2]) if e[2] else None,
                       "ende": e[3].strftime("%m/%Y") if e[3] and hasattr(e[3], "strftime") else None,
                       "mte": int(e[4]) if e[4] is not None else None,

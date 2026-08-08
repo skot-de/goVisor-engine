@@ -30,7 +30,7 @@ type Loss = { titel: string; vol: number | null; datum: string | null; gewinner:
 type Recent = { titel: string; buyer: string | null; vol: number | null; jahr: number | null; url?: string | null };
 type Wett = { name: string; id: string; expiring: Exp[]; basis?: string | null };
 type Buyer = { name: string; wins: number; letztes: number | null };
-type Lead = { titel: string; buyer: string | null; ort: string | null; vol: number | null; frist: string | null; tage: number | null; url: string | null; art?: string | null; artcat?: string | null; seg?: string | null; dist?: number | null };
+type Lead = { titel: string; buyer: string | null; ort: string | null; vol: number | null; frist: string | null; tage: number | null; url: string | null; art?: string | null; artcat?: string | null; seg?: string | null; dist?: number | null; ted?: string | null; doku?: string | null };
 type Detail = { id: string; name: string; expiring: Exp[]; losses: Loss[]; recent?: Recent[]; wettbewerber?: Wett | null;
   website?: string | null; kmu?: boolean; segment?: string | null; topBuyers?: Buyer[]; leads?: Lead[]; leadsScope?: string; error?: string };
 
@@ -465,6 +465,8 @@ export function InternFirmen() {
                       {detail.leads!.map((l, i) => (
                         <div key={i} className="in-item">
                           <span className="in-it"><Titel text={l.titel} url={l.url} art={l.art} artcat={l.artcat} />
+                            {l.ted && <span className="in-tedmark" title="Titel-Link führt zur TED-Bekanntmachung">TED</span>}
+                            {l.doku && l.doku !== l.url && <a className="in-srclink" href={l.doku} target="_blank" rel="noreferrer" title="Vergabeunterlagen ansehen">Doku ↗</a>}
                             <span className="in-buyer">{l.seg ? `${l.seg} · ` : ""}{l.buyer || ""}{l.ort ? ` · ${l.ort}` : ""}{l.dist != null ? ` · ${l.dist} km` : ""}</span></span>
                           <span className="in-iv">{eur(l.vol)} · Frist {l.frist ?? "?"}{l.tage != null ? ` (${l.tage} T)` : ""}</span>
                         </div>
