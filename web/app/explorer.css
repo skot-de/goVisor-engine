@@ -1009,7 +1009,7 @@ body[data-mode="full"]   .main{grid-template-rows:0 6px 1fr}
 .toolbar{display:flex;align-items:center;gap:var(--s2);height:52px;padding:0 var(--s4) 0 0;flex:none}
 .brandmk{font-size:17px;font-weight:700;letter-spacing:-.03em;margin-right:4px}
 .brandmk span{color:var(--signal)}
-.tsearch{display:flex;align-items:center;gap:8px;background:var(--surface-2);border:1px solid var(--line-strong);border-radius:8px;padding:8px 12px;width:600px;max-width:52vw;transition:border-color .15s,box-shadow .15s,background .15s}
+.tsearch{display:flex;align-items:center;gap:8px;background:var(--surface-2);border:1px solid var(--line-strong);border-radius:8px;padding:8px 12px;width:100%;max-width:600px;min-width:0;transition:border-color .15s,box-shadow .15s,background .15s}
 .tsearch:focus-within{background:var(--surface);border-color:var(--signal);box-shadow:0 0 0 3px var(--signal-wash)}
 .tsearch svg{width:15px;height:15px;color:var(--ink-400);flex:none}
 .tsearch input{border:none;background:none;outline:none;font:inherit;font-size:13.5px;width:100%}
@@ -1017,7 +1017,8 @@ body[data-mode="full"]   .main{grid-template-rows:0 6px 1fr}
 .tsearch:focus-within .tkbd{display:none}
 
 /* Suchvorschläge */
-.searchwrap{position:relative;flex:none}
+.searchwrap{position:relative;flex:1 1 180px;min-width:90px}
+.toolbar{min-width:0}
 .suggest{position:absolute;left:0;right:0;top:calc(100% + 5px);z-index:60;background:var(--surface);
   border:1px solid var(--line-strong);border-radius:8px;box-shadow:0 12px 30px rgba(18,33,29,.14);
   padding:5px;display:none;max-height:320px;overflow:auto}
@@ -1727,3 +1728,22 @@ tr.wf-verworfen .ttitel{color:var(--ink-400);text-decoration:line-through;text-d
 .c-empf .empf.rec-skip{ background:var(--surface-2); color:var(--ink-500); }
 
 .raillink{text-decoration:none}
+
+/* ── Topbar-Ecke responsive aufräumen (ans Dateiende, damit es im Cascade gewinnt) ──
+   Auf schmaleren Screens weicht das Demo-Test-Widget, der Lead-Zähler-Text und die Button-
+   Beschriftungen werden knapper — so passen Suche + Controls in die Toolbar, ohne die acctcell
+   zu überlappen. Die echten Funktionen (Filter/Spalten/Export/Profil/„als gesehen") bleiben. */
+@media (max-width:1400px){
+  .testsicht{display:none}                 /* Demo-Profil-Simulator (Klein/Mittel/Groß) */
+  .tstatus .tcount{display:none}           /* „N von M" Zähler — sekundär */
+  .tstatus{margin-left:0}
+}
+@media (max-width:1180px){
+  .markread span{display:none}             /* „als gesehen" nur noch als Haken-Icon */
+  .rolelink{font-size:12px}
+}
+@media (max-width:1080px){
+  /* Toolbar-Buttons icon-only: Text weicht, das Icon (feste px) bleibt — Tooltip trägt die Bedeutung. */
+  .toolbar .colbtn{font-size:0;gap:0;padding:8px}
+  .toolbar .colbtn svg{width:15px;height:15px}
+}
