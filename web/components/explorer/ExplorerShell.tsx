@@ -346,7 +346,8 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
 
   // React ist die Wahrheit → vor jeder Ableitung in den Kern schieben, dann dessen
   // unveränderte Filter-/Sortier-Logik nutzen.
-  const rows: Lead[] = useMemo(() => {
+  // Vollständige, gefilterte Liste INKLUSIVE Zuschläge — Basis für Zähler und das Zuschlags-Band.
+  const alleRows: Lead[] = useMemo(() => {
     applyState({ aktiveBranche, profilBranche, sortKey, sortDir, searchTokens: tokens, filters });
     // Testsicht (Klein/Mittel/Groß) überschreibt zum Ausprobieren; sonst das echte Profil.
     if (profileKey) applyProfile(profileKey);
@@ -354,6 +355,15 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     syncLocationColumn();
     return postFilter(sorted(visible()), adv);
   }, [aktiveBranche, sortKey, sortDir, tokens, filters, tick, profileKey, realProfile, adv]);
+
+  // Akquise zeigt, worauf man sich BEWERBEN kann. Erteilte Zuschläge (#24) sind Marktbeobachtung
+  // (wer hat gewonnen → wer kauft jetzt zu) und würden hier oben stehen, weil sie nach
+  // Zuschlagsdatum ganz vorn sortieren. Deshalb nur, wenn die Phase ausdrücklich gewählt ist.
+  // `alleRows` behält sie — daraus speist sich das Zuschlags-Band.
+  const rows: Lead[] = useMemo(
+    () => (adv.phases.includes("award") ? alleRows : alleRows.filter((l) => l.src !== "award")),
+    [alleRows, adv.phases],
+  );
 
   const suggestions = useMemo(() => (query.trim() ? suggestList(query) : []), [query]);
 
@@ -1072,7 +1082,9 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                 if (awAlertOff) return null;
                 type Aw = { ago?: number; winner?: string };
                 const awOf = (l: Lead) => (l as { award?: Aw }).award;
-                const fresh = rows.filter((l) => l.src === "award" && (awOf(l)?.ago ?? 99) <= 3);
+                // WICHTIG: aus `alleRows` (inkl. Zuschläge), nicht aus `rows` — dort sind die
+                // Zuschläge bewusst herausgefiltert, das Band würde sich sonst selbst abschalten.
+                const fresh = alleRows.filter((l) => l.src === "award" && (awOf(l)?.ago ?? 99) <= 3);
                 if (!fresh.length) return null;
                 const winners = [...new Set(fresh.map((l) => awOf(l)?.winner).filter(Boolean))].slice(0, 2);
                 return (
@@ -1080,6 +1092,11 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                     <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 8-3 8h18s-3-1-3-8" /><path d="M13.7 21a2 2 0 01-3.4 0" /></svg>
                     <div><b>{fresh.length} {fresh.length === 1 ? "neuer Zuschlag" : "neue Zuschläge"} in eurem Feld</b>
                       {winners.length ? ` — ${winners.join(" und ")}. ` : " — "}Wer gerade gewonnen hat, kauft jetzt ein.</div>
+                    {/* Zuschläge sind nicht mehr bewerbbar und stehen deshalb nicht in der Akquise-Liste.
+                        Hier — wo sie angekündigt werden — führt ein Klick direkt zu ihnen. */}
+                    <button className="aw-alert-go" onClick={() => setAdv((a) => ({ ...a, phases: ["award"] }))}>
+                      Zuschläge ansehen
+                    </button>
                     <button className="aw-alert-x" onClick={() => setAwAlertOff(true)} aria-label="Ausblenden">✕</button>
                   </div>
                 );

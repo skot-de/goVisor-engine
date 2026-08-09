@@ -533,8 +533,10 @@ const esc = s => String(s == null ? '' : s)
 const val = (text, src, hint) =>
   `<span class="val" data-src="${src}" title="${esc(SRC_TEXT[src] + (hint ? ' — ' + hint : ''))}">${esc(text)}</span>`;
 
-const bandMeter = (level, risk, cap) => {
-  const t = cap ? ` title="${esc(cap)}: ${level==='na'?'n/a':level}"` : '';
+const bandMeter = (level, risk, cap, naTitle) => {
+  // naTitle erklärt bei „n/a" die URSACHE (fehlende Angaben), statt den Nutzer raten zu lassen.
+  const t = (level==='na' && naTitle) ? ` title="${esc(naTitle)}"`
+          : cap ? ` title="${esc(cap)}: ${level==='na'?'n/a':level}"` : '';
   return level==='na'
     ? `<span class="band" data-level="na"${t}><span class="segs"><i></i><i></i><i></i></span><span class="lbl">n/a</span></span>`
     : `<span class="band ${risk?'risk':''}" data-level="${level}"${t}><span class="segs"><i></i><i></i><i></i></span><span class="lbl">${level}</span></span>`;
@@ -767,8 +769,15 @@ function cellHTML(l, key){
       ? `<span class="rah rah-${l.rahmen}" title="${RAHMEN[l.rahmen].lang} — ${RAHMEN[l.rahmen].x}">${RAHMEN[l.rahmen].kurz}</span>`
       : '<span style="color:var(--ink-300)">—</span>'}</td>`;
     case 'aufwand': {
+      // Zuschlag erteilt → man kann sich nicht mehr bewerben; „Angebotsaufwand" trifft nicht zu.
+      // Das ist etwas anderes als „unbekannt" und wird deshalb auch anders gezeigt.
+      if(l.src==='award')
+        return `<td class="c-band"><span class="band-na" title="Zuschlag bereits erteilt — kein Angebotsaufwand mehr">—</span></td>`;
       const a = aufwandStufe(l);
-      return `<td class="c-band">${bandMeter(a.stufe, true)}</td>`;
+      const naHint = a.bekannt === 0
+        ? 'Die Bekanntmachung nennt keine Anforderungen — wir schätzen den Aufwand nicht.'
+        : `Nur ${a.bekannt} von mindestens 2 nötigen Angaben bekannt — zu wenig für eine belastbare Einstufung.`;
+      return `<td class="c-band">${bandMeter(a.stufe, true, 'Angebotsaufwand', naHint)}</td>`;
     }
     case 'empf': {
       if(l.src==='award') return awardEmpfCell(l);
