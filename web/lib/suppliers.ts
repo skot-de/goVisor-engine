@@ -10,7 +10,10 @@ export type Supplier = {
   fields: { cpv4: string; label: string | null; wins: number }[];
   fields6?: { cpv6: string; wins: number }[];   // CPV-6-Volltreffer-Menge (nur Codes, fürs Matching)
   regions: string[]; regionTyp?: 'regional'|'teilregional'|'bundesweit';
-  volMedian: number | null; members: Member[];
+  volMedian: number | null;
+  topBuyers?: { name: string; wins: number; seit: number; bis: number }[];
+  topShare?: number | null;   // Anteil des größten Auftraggebers (Klumpenrisiko)
+  members: Member[];
 };
 
 let CACHE: Supplier[] | null = null;

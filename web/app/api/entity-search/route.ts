@@ -31,6 +31,7 @@ export async function GET(req: NextRequest) {
   const matches = scored.slice(0, 6).map(({ s, score }) => ({
     id: s.id, name: s.name, wins: s.wins, buyers: s.buyers, seit: s.seit,
     fields: s.fields, fields6: s.fields6 ?? [], regions: s.regions, regionTyp: s.regionTyp ?? null, volMedian: s.volMedian,
+    topBuyers: s.topBuyers ?? [], topShare: s.topShare ?? null,
     strong: score >= 80,          // starker Vorschlag vs. „meinst du eine dieser?"
   }));
   return NextResponse.json({ matches });

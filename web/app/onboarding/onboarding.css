@@ -126,3 +126,37 @@
 .ob-page .spin{font-size:12.5px;color:var(--ink-400);padding:12px 0}
 @media (max-width:640px){.ob-page .grid2{grid-template-columns:1fr}
   .ob-page .sg-stats{grid-template-columns:1fr}.ob-page .sg-stat{border-right:none;border-bottom:1px solid var(--line)}}
+
+/* ── Passwortstaerke ────────────────────────────────────────────────── */
+.pw-bar{height:3px;border-radius:2px;background:var(--line);margin-top:7px;overflow:hidden}
+.pw-bar i{display:block;height:100%;width:0;transition:width .2s,background .2s}
+.pw-bar i[data-stufe="1"]{width:33%;background:#c2410c}
+.pw-bar i[data-stufe="2"]{width:66%;background:#a16207}
+.pw-bar i[data-stufe="3"]{width:100%;background:#12855a}
+.pw-hint{font-size:11.5px;color:var(--ink-600);margin-top:6px;line-height:1.5}
+
+/* ── Firmen-Fakten (der Wiedererkennungs-Moment) ────────────────────── */
+.fakten{display:flex;flex-direction:column;gap:14px}
+.fk-zahlen{display:flex;gap:10px;flex-wrap:wrap}
+.fk-z{flex:1 1 96px;background:var(--surface-2,#f6f8f7);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.fk-z b{display:block;font-size:19px;font-weight:700;letter-spacing:-.02em}
+.fk-z span{font-size:11px;color:var(--ink-500);text-transform:uppercase;letter-spacing:.05em}
+.fk-block h4{font-size:12px;font-weight:600;color:var(--ink-600);text-transform:uppercase;letter-spacing:.05em;margin-bottom:7px}
+.fk-kunden{display:flex;flex-direction:column;gap:6px}
+.fk-kunden li{display:flex;justify-content:space-between;gap:14px;align-items:baseline;
+  padding:7px 10px;background:var(--surface-2,#f6f8f7);border-radius:6px}
+.fk-kn{font-size:13px;font-weight:600;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fk-kw{font-size:11.5px;color:var(--ink-500);white-space:nowrap}
+.fk-warn{border-left:3px solid #a16207;background:#fdf8ee;padding:10px 12px;border-radius:0 6px 6px 0}
+.fk-warn b{display:block;font-size:13px;margin-bottom:3px}
+.fk-warn span{font-size:12px;color:var(--ink-600);line-height:1.5}
+.fk-fuss{font-size:11.5px;color:var(--ink-500)}
+
+/* ── Kandidaten: aufklappen statt weiterspringen ────────────────────── */
+.cand-box{border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.cand-box.auf{border-color:var(--signal,#12855a)}
+.cand-box .cand{width:100%;border:0;border-radius:0;display:flex;align-items:center;gap:12px}
+.cand-car{color:var(--ink-400);font-size:11px}
+.cand-auf{padding:14px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.keine-auf{border-top:1px solid var(--line);margin-top:14px;padding-top:14px}
+.conf-unsicher{background:#fdf8ee;color:#a16207}

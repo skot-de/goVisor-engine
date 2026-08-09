@@ -129,9 +129,16 @@ con.execute("""CREATE OR REPLACE TEMP TABLE regionen AS
 
 # Typisches Volumen: Median der belegten Auftragswerte über die Leads dieser Identität
 con.execute(f"""CREATE OR REPLACE TEMP TABLE volumen AS
-  SELECT w.identity_id, median(e.value_eur) AS vol_median
-  FROM w JOIN {E} e ON e.lead_id = w.notice_id
-  WHERE e.value_source = 'actual' AND w.identity_id IN (SELECT identity_id FROM tops)
+  WITH v AS (SELECT w.identity_id, e.value_eur
+             FROM w JOIN {E} e ON e.lead_id = w.notice_id
+             WHERE e.value_source = 'actual' AND w.identity_id IN (SELECT identity_id FROM tops)),
+  haeufigster AS (SELECT identity_id, value_eur, count(*) c,
+                         row_number() OVER (PARTITION BY identity_id ORDER BY count(*) DESC) rn
+                  FROM v GROUP BY 1, 2)
+  SELECT v.identity_id, median(v.value_eur) AS vol_median,
+         count(*) AS wert_belege,                      -- wie viele Zuschläge überhaupt einen Wert tragen
+         max(h.c) * 1.0 / count(*) AS wert_klumpen     -- Anteil des häufigsten Einzelwerts
+  FROM v LEFT JOIN haeufigster h ON h.identity_id = v.identity_id AND h.rn = 1
   GROUP BY 1""")
 
 # Stat-Karte: distinkte Auftraggeber + „aktiv seit" (frühestes Zuschlagsjahr)
@@ -140,6 +147,25 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE stats AS
   FROM w LEFT JOIN {PE} pb ON pb.notice_id = w.notice_id AND pb.role = 'buyer'
   WHERE w.identity_id IN (SELECT identity_id FROM tops)
   GROUP BY 1""")
+
+# Top-Auftraggeber je Identität, namentlich, mit Zeitraum. Plus der Anteil des größten
+# am Gesamtvolumen — eine hohe Konzentration ist eine echte Erkenntnis für den Kunden
+# (Jäger: 1.148 von 1.830 Zuschlägen bei EINEM Auftraggeber), keine Randnotiz.
+con.execute(f"""CREATE OR REPLACE TEMP TABLE kunden AS
+  WITH kb AS (
+    SELECT w.identity_id, eb.canonical_name AS buyer, count(DISTINCT w.notice_id) AS n,
+           min(w.jahr) AS seit, max(w.jahr) AS bis
+    FROM w JOIN {PE} pb ON pb.notice_id = w.notice_id AND pb.role = 'buyer'
+           JOIN {EN} eb ON eb.entity_id = pb.entity_id
+    WHERE w.identity_id IN (SELECT identity_id FROM tops) AND eb.canonical_name IS NOT NULL
+    GROUP BY 1, 2),
+  rk AS (SELECT *, row_number() OVER (PARTITION BY identity_id ORDER BY n DESC) rn,
+                sum(n) OVER (PARTITION BY identity_id) tot FROM kb)
+  SELECT identity_id,
+         list({{'name': buyer, 'wins': n, 'seit': seit, 'bis': bis}} ORDER BY n DESC)
+           FILTER (WHERE rn <= 3) AS top_kunden,
+         max(CASE WHEN rn = 1 THEN n * 1.0 / nullif(tot, 0) END) AS top_anteil
+  FROM rk GROUP BY 1""")
 
 # Gruppen-Mitglieder (Schwester-Entities): je Entität eigener Name, Methode, Konfidenz, Wins.
 con.execute(f"""CREATE OR REPLACE TEMP TABLE members AS
@@ -155,8 +181,8 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE members AS
   GROUP BY 1""")
 
 rows = con.execute(f"""
-  SELECT t.identity_id, n.name, n.aliase, t.wins, f.fields, f6.fields6, r.regions, r.regionen_fuer_80, v.vol_median,
-         s.buyers, s.seit, m.members
+  SELECT t.identity_id, n.name, n.aliase, t.wins, f.fields, f6.fields6, r.regions, r.regionen_fuer_80,
+         v.vol_median, v.wert_belege, v.wert_klumpen, s.buyers, s.seit, m.members, k.top_kunden, k.top_anteil
   FROM tops t
   LEFT JOIN namen n ON n.identity_id = t.identity_id
   LEFT JOIN felder f ON f.identity_id = t.identity_id
@@ -165,6 +191,7 @@ rows = con.execute(f"""
   LEFT JOIN volumen v ON v.identity_id = t.identity_id
   LEFT JOIN stats s ON s.identity_id = t.identity_id
   LEFT JOIN members m ON m.identity_id = t.identity_id
+  LEFT JOIN kunden k ON k.identity_id = t.identity_id
   WHERE n.name IS NOT NULL AND {BLOCK_SQL}
   ORDER BY t.wins DESC""").fetchall()
 
@@ -182,7 +209,8 @@ def method_conf(m):
 
 
 out = []
-for (iid, name, aliase, wins, fields, fields6, regions, reg80, vol, buyers, seit, members) in rows:
+for (iid, name, aliase, wins, fields, fields6, regions, reg80, vol, wert_belege, wert_klumpen,
+     buyers, seit, members, top_kunden, top_anteil) in rows:
     ms = []
     for mem in (members or []):
         conf, text = method_conf(mem["method"])
@@ -201,7 +229,20 @@ for (iid, name, aliase, wins, fields, fields6, regions, reg80, vol, buyers, seit
         # aus der Historie abgeleitet: wie viele Regionen für 80 % der Aufträge nötig sind
         # (1-2 = regional, 3-5 = teilregional, ≥6 = bundesweit → regions ist dann leer)
         "regionTyp": ("regional" if (reg80 or 9) <= 2 else "teilregional" if (reg80 or 9) <= 5 else "bundesweit"),
-        "volMedian": float(vol) if vol else None,
+        # Ein „typischer Auftragswert" braucht zwei Belege, sonst ist er geraten:
+        #  · genug Datenpunkte — 11.421 von 16.794 Firmen mit Wert haben GENAU EINEN;
+        #    daraus einen Median zu bilden ist Zahlenkosmetik. Schwelle: 5.
+        #  · kein dominierender Einzelbetrag — bei Jäger Spezialtiefbau sind 1.306 von
+        #    1.344 Werten identisch (61,9 Mio €): die auf jeden Abruf wiederholte
+        #    Rahmenvertragssumme. Betrifft 66 der 1.155 Firmen mit ≥5 Werten.
+        # Ergebnis: ~1.089 Firmen bekommen einen belastbaren Wert, der Rest keinen.
+        "volMedian": float(vol) if (vol and (wert_belege or 0) >= 5 and (wert_klumpen or 0) <= 0.4) else None,
+        # Namentliche Auftraggeber — der Wiedererkennungs-Moment im Onboarding.
+        "topBuyers": [{"name": k["name"], "wins": int(k["wins"]),
+                       "seit": int(k["seit"]), "bis": int(k["bis"])} for k in (top_kunden or [])],
+        # Anteil des größten Auftraggebers: ab ~40 % ist das ein Klumpenrisiko, das der
+        # Kunde kennen sollte — und zugleich unser stärkstes Argument fürs Diversifizieren.
+        "topShare": round(float(top_anteil), 3) if top_anteil else None,
         "members": ms,
     })
 

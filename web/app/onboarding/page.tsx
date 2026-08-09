@@ -22,6 +22,8 @@ type Match = {
   id: string; name: string; wins: number; buyers: number | null; seit: number | null;
   fields: Feld[]; fields6?: Feld6[]; regions: string[];
   regionTyp?: 'regional'|'teilregional'|'bundesweit'|null; volMedian: number | null; strong: boolean;
+  topBuyers?: { name: string; wins: number; seit: number; bis: number }[];
+  topShare?: number | null;
 };
 type Member = { name: string; conf: "belegt" | "unsicher"; method: string; wins: number };
 
@@ -43,7 +45,49 @@ function domainStamm(mail: string): string | null {
   if (!dom || FREEMAIL.includes(dom) || GENERIK.includes(dom)) return null;
   return dom;
 }
+/* Wie gut ist der Anspruch auf eine Firma belegt?
+ *
+ * Bisher stand überall hart `entityConfidence: "confirmed"` — mit einer Gmail-Adresse
+ * konnte jeder „ja, wir sind CANCOM" anklicken und bekam ein als belegt markiertes
+ * Profil. Die Daten sind zwar öffentlich, aber an dieser Identität hängen später
+ * Erfolgsprämie, Team und Export; ein unbelegter Anspruch darf nicht wie ein belegter
+ * aussehen. Die Engine kennt die Abstufung längst (⚠-Guard, Ticket #11 §4.2) — sie wurde
+ * nur nie befüllt.
+ *
+ * Belegt ist der Anspruch erst, wenn die Firmen-Domain der E-Mail zum Namen passt.
+ * Freemail und fremde Domains ergeben „unsicher"; die Firma wird trotzdem gesetzt
+ * (das Produkt bleibt sofort nutzbar), aber sichtbar als unbestätigt. */
+function identitaetsBeleg(mail: string, firma: string): { conf: "belegt" | "unsicher"; grund: string } {
+  const stamm = domainStamm(mail);
+  if (!stamm) return { conf: "unsicher", grund: "Freemail-Adresse — nicht der Firma zuzuordnen" };
+  const f = norm(firma);
+  if (f.includes(norm(stamm)) || norm(stamm).includes(f.slice(0, Math.max(4, Math.min(f.length, 10)))))
+    return { conf: "belegt", grund: `über die Domain ${stamm} bestätigt` };
+  return { conf: "unsicher", grund: `Domain ${stamm} passt nicht zum Firmennamen` };
+}
+
 const norm = (s: string) => s.toLowerCase().replace(/[^a-zäöüß0-9]/g, "");
+
+/* Passwortstärke — bewusst ohne Bibliothek, aber mit den Regeln, die wirklich tragen:
+ * Länge schlägt Sonderzeichen (deshalb 12 statt 8 als Ziel), und die üblichen Muster
+ * fliegen raus. Ein 8-Zeichen-Passwort mit Sonderzeichen ist heute in Stunden geknackt,
+ * eine 12-Zeichen-Passphrase nicht. Zusätzlich: die eigene E-Mail darf nicht drinstehen. */
+const SCHWACH = ["passwort", "password", "qwertz", "qwerty", "123456", "govisor", "admin", "willkommen", "sommer", "winter"];
+function pwPruefung(pw: string, mail: string) {
+  const lokal = (mail.split("@")[0] || "").toLowerCase();
+  const klassen = [/[a-zäöüß]/, /[A-ZÄÖÜ]/, /\d/, /[^\wäöüßÄÖÜ]/].filter((r) => r.test(pw)).length;
+  const maengel: string[] = [];
+  if (pw.length < 12) maengel.push("mindestens 12 Zeichen");
+  if (klassen < 3) maengel.push("Groß- und Kleinbuchstaben plus Ziffern oder Zeichen");
+  if (SCHWACH.some((w) => pw.toLowerCase().includes(w))) maengel.push("kein gängiges Wort wie „passwort\u201c");
+  if (lokal.length >= 3 && pw.toLowerCase().includes(lokal)) maengel.push("nicht die eigene E-Mail-Adresse");
+  if (/^(.)\1+$/.test(pw)) maengel.push("nicht nur ein wiederholtes Zeichen");
+  // Stufe rein für die Anzeige — die Freigabe hängt allein an `maengel`.
+  const stufe = pw.length === 0 ? 0
+    : maengel.length ? 1
+    : pw.length >= 16 && klassen >= 3 ? 3 : 2;
+  return { ok: pw.length > 0 && maengel.length === 0, maengel, stufe };
+}
 
 type Screen = "mail" | "firma" | "vorschlag" | "kandidaten" | "profil" | "branche" | "region" | "fertig";
 const SCHRITTE: [string, string][] = [["mail", "Konto"], ["firma", "Firma"], ["profil", "Profil"], ["fertig", "Fertig"]];
@@ -56,6 +100,62 @@ async function suche(q: string): Promise<Match[]> {
     const d = await fetch(`/api/entity-search?q=${encodeURIComponent(q.trim())}`).then((r) => r.json());
     return d.matches || [];
   } catch { return []; }
+}
+
+
+/* Was wir über eine Firma wissen — die eine Stelle, an der der Wiedererkennungs-Moment
+ * entsteht. „200 Zuschläge" beeindruckt niemanden; die eigenen Auftraggeber namentlich
+ * zu lesen schon. Jede Zahl kommt aus den Vergabedaten, nichts ist geschätzt.
+ * Der typische Auftragswert fehlt bei den meisten Firmen bewusst (nur 1.033 von 30.509
+ * haben genug verschiedene belegte Werte) — lieber keine Zahl als eine erfundene. */
+function FirmaFakten({ m }: { m: Match }) {
+  const jahre = m.seit ? new Date().getFullYear() - m.seit : null;
+  const eur = (v: number) =>
+    v >= 1e6 ? `${(v / 1e6).toFixed(1).replace(".", ",")} Mio €` : `${Math.round(v / 1000)} Tsd €`;
+  const klumpen = (m.topShare ?? 0) >= 0.4 ? m.topBuyers?.[0] : null;
+
+  return (
+    <div className="fakten">
+      <div className="fk-zahlen">
+        <div className="fk-z"><b>{m.wins.toLocaleString("de-DE")}</b><span>Zuschläge</span></div>
+        <div className="fk-z"><b>{(m.buyers ?? 0).toLocaleString("de-DE")}</b><span>Auftraggeber</span></div>
+        {m.seit ? <div className="fk-z"><b>{jahre}</b><span>Jahre am Markt</span></div> : null}
+        {m.volMedian ? <div className="fk-z"><b>{eur(m.volMedian)}</b><span>typischer Auftrag</span></div> : null}
+      </div>
+
+      {m.topBuyers?.length ? (
+        <div className="fk-block">
+          <h4>Eure größten Auftraggeber</h4>
+          <ul className="fk-kunden">
+            {m.topBuyers.map((k) => (
+              <li key={k.name}>
+                <span className="fk-kn">{k.name}</span>
+                <span className="fk-kw">{k.wins} {k.wins === 1 ? "Auftrag" : "Aufträge"} · {k.seit === k.bis ? k.seit : `${k.seit}–${k.bis}`}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+
+      {/* Das ist kein Schmuck, sondern der Grund, warum jemand uns braucht: wer 98 % seiner
+          Aufträge von einer Stelle bekommt, hat ein Risiko, das er selten beziffert sieht. */}
+      {klumpen ? (
+        <div className="fk-warn">
+          <b>{Math.round((m.topShare ?? 0) * 100)} % eurer Zuschläge kommen von {klumpen.name}.</b>
+          <span>Fällt dieser Auftraggeber weg, fehlt der Großteil. Genau dafür zeigen wir euch,
+            wo es vergleichbare Ausschreibungen gibt.</span>
+        </div>
+      ) : null}
+
+      {m.regionTyp && m.regions?.length ? (
+        <p className="fk-fuss">
+          Schwerpunkt {m.regionTyp === "regional" ? "regional" : "in mehreren Regionen"} — aus euren Zuschlägen abgeleitet.
+        </p>
+      ) : m.regionTyp === "bundesweit" ? (
+        <p className="fk-fuss">Bundesweit tätig — aus euren Zuschlägen abgeleitet.</p>
+      ) : null}
+    </div>
+  );
 }
 
 export default function OnboardingPage() {
@@ -74,6 +174,10 @@ export default function OnboardingPage() {
   const [branche, setBranche] = useState<string | null>(null);
   const [regionen, setRegionen] = useState<string[]>([]);
   const [busy, setBusy] = useState(false);
+  const [offen, setOffen] = useState<string | null>(null);      // aufgeklappte Kandidaten-Karte
+  const [keineDavon, setKeineDavon] = useState(false);          // Eingabefeld inline zeigen
+  const pwStatus = pwPruefung(pw, email);
+  const pwOk = pwStatus.ok;
 
   const acRef = useRef<HTMLDivElement>(null);
 
@@ -82,9 +186,14 @@ export default function OnboardingPage() {
     currentUser().then((u) => { if (u) { setEmail(u.email ?? ""); setScreen("firma"); } }).catch(() => {});
   }, []);
 
-  // Autocomplete auf der Firma-Seite (debounced)
+  // Autocomplete auf der Firma-Seite (debounced).
+  // ACHTUNG: Der Effekt lief früher auch beim VERLASSEN des Firma-Screens und rief dort
+  // setMatches([]) auf — womit er die Kandidatenliste löschte, die zumMatch() gerade
+  // gefüllt hatte. Der Kandidaten-Screen zeigte deshalb immer „Kein Treffer".
+  // Geleert wird jetzt nur noch, solange wir wirklich auf dem Firma-Screen sind.
   useEffect(() => {
-    if (screen !== "firma" || eingabe.trim().length < 2) { setMatches([]); return; }
+    if (screen !== "firma") return;
+    if (eingabe.trim().length < 2) { setMatches([]); return; }
     const t = setTimeout(async () => setMatches(await suche(eingabe)), 220);
     return () => clearTimeout(t);
   }, [eingabe, screen]);
@@ -126,7 +235,7 @@ export default function OnboardingPage() {
     if (!treffer.length) { setEingabe(stamm); setScreen("firma"); return; }
     const beste = treffer[0];
     if (beste.strong && treffer.length <= 3) { setMatched(beste); setScreen("vorschlag"); }
-    else { setMatches(treffer); setScreen("kandidaten"); }
+    else { setMatches(treffer); setOffen(treffer[0]?.id ?? null); setKeineDavon(false); setScreen("kandidaten"); }
   }
 
   async function zumMatch() {
@@ -137,7 +246,7 @@ export default function OnboardingPage() {
     if (!treffer.length) { setScreen("branche"); return; }
     const beste = treffer[0];
     if (beste.strong) { setMatched(beste); setScreen("vorschlag"); }
-    else { setMatches(treffer); setScreen("kandidaten"); }
+    else { setMatches(treffer); setOffen(treffer[0]?.id ?? null); setKeineDavon(false); setScreen("kandidaten"); }
   }
 
   function toggleMember(key: string) {
@@ -155,7 +264,8 @@ export default function OnboardingPage() {
       const cpvFields = matched.fields.map((f) => f.cpv4);
       profile = {
         ...buildProfile({
-          firma: matched.name, entityConfidence: "confirmed",
+          firma: matched.name,
+          entityConfidence: identitaetsBeleg(email, matched.name).conf,
           cpvFields, cpvLabels: matched.fields.map((f) => f.label || f.cpv4),
           cpvWins: Object.fromEntries(matched.fields.map((f) => [f.cpv4, f.wins])),
           cpvFields6: (matched.fields6 || []).map((f) => f.cpv6),   // CPV-6-Volltreffer (gewerkscharf)
@@ -220,13 +330,22 @@ export default function OnboardingPage() {
             </div>
             <div className="field">
               <label className="lbl" htmlFor="pw">Passwort</label>
-              <input className="inp" id="pw" type="password" value={pw} placeholder="mindestens 8 Zeichen" autoComplete="new-password"
+              <input className="inp" id="pw" type="password" value={pw} placeholder="mindestens 12 Zeichen" autoComplete="new-password"
+                aria-describedby="pw-hinweis"
                 onChange={(e) => setPw(e.target.value)}
-                onKeyDown={(e) => { if (e.key === "Enter" && email.includes("@") && pw.length >= 8) kontoAnlegen(); }} />
+                onKeyDown={(e) => { if (e.key === "Enter" && email.includes("@") && pwOk) kontoAnlegen(); }} />
+              <div className="pw-bar" aria-hidden><i data-stufe={pwStatus.stufe} /></div>
+              <div className="pw-hint" id="pw-hinweis">
+                {pw.length === 0
+                  ? "Länge zählt mehr als Sonderzeichen — eine Passphrase aus vier Wörtern ist sicherer als „P@ssw0rt!“."
+                  : pwStatus.maengel.length
+                    ? <>Es fehlt noch: {pwStatus.maengel.join(" · ")}</>
+                    : pwStatus.stufe === 3 ? "Stark." : "Ausreichend — länger wäre besser."}
+              </div>
             </div>
             {authFehler && <div className="note note-w">{authFehler} {/existiert|angemeldet/.test(authFehler) ? <Link href="/login" style={{ textDecoration: "underline" }}>Zum Login</Link> : null}</div>}
             <div className="btnrow">
-              <button className="btn btn-p" disabled={!email.includes("@") || pw.length < 8 || busy} onClick={kontoAnlegen}>
+              <button className="btn btn-p" disabled={!email.includes("@") || !pwOk || busy} onClick={kontoAnlegen}>
                 {busy ? "Lege Konto an …" : "Konto anlegen"}
               </button>
               <Link className="btn btn-t" href="/login">Ich habe schon ein Konto</Link>
@@ -281,19 +400,26 @@ export default function OnboardingPage() {
             <div className="suggest">
               <div className="sg-head">
                 <div className="sg-name">{matched.name}</div>
-                <div className="sg-meta"><span className="conf conf-belegt">belegt</span><span>über die Vergabedaten erkannt</span></div>
+                <div className="sg-meta">
+                  {(() => {
+                    const b = identitaetsBeleg(email, matched.name);
+                    return <><span className={`conf conf-${b.conf}`}>{b.conf === "belegt" ? "belegt" : "unbestätigt"}</span><span>{b.grund}</span></>;
+                  })()}
+                </div>
               </div>
-              <div className="sg-stats">
-                <div className="sg-stat"><span className="sg-k">Vergaben gewonnen</span><span className="sg-v">{matched.wins}</span></div>
-                <div className="sg-stat"><span className="sg-k">Auftraggeber</span><span className="sg-v">{matched.buyers ?? "—"}</span></div>
-                <div className="sg-stat"><span className="sg-k">Aktiv seit</span><span className="sg-v">{matched.seit ?? "—"}</span></div>
-              </div>
+              <FirmaFakten m={matched} />
             </div>
+            {identitaetsBeleg(email, matched.name).conf === "unsicher" ? (
+              <div className="note note-w">Wir können nicht prüfen, ob ihr zu dieser Firma gehört —
+                eure E-Mail-Adresse gehört nicht zu ihrer Domain. Ihr könnt trotzdem loslegen; die
+                Zuordnung bleibt so lange als <b>unbestätigt</b> markiert, und alles, was nach außen
+                wirkt (Erfolgsprämie, Team, Export), bleibt gesperrt, bis sie belegt ist.</div>
+            ) : null}
             <div className="note note-p">Passend zu diesem Profil bauen wir gleich eure Lead-Liste.
               Bestätigt die Firma, dann leiten wir das Profil aus euren Vergaben ab.</div>
             <div className="btnrow split">
               <button className="btn btn-p" onClick={() => bestaetigen(matched)}>Ja, das sind wir</button>
-              <button className="btn btn-s" onClick={() => { setMatches([matched, ...matches].slice(0, 6)); setScreen("kandidaten"); }}>Nein, andere Firma</button>
+              <button className="btn btn-s" onClick={() => { const l = [matched, ...matches].slice(0, 6); setMatches(l); setOffen(l[0]?.id ?? null); setKeineDavon(false); setScreen("kandidaten"); }}>Nein, andere Firma</button>
             </div>
           </div>
         )}
@@ -301,22 +427,55 @@ export default function OnboardingPage() {
         {/* 3 · Kandidaten (schwacher Match) */}
         {screen === "kandidaten" && (
           <div className="card wide">
-            <h1>Meinst du eine dieser Firmen?</h1>
-            <p className="lede">Der Name allein war nicht eindeutig. Deshalb schlagen wir nichts vor, sondern
-              lassen euch wählen — eine falsche Zuordnung wäre schlimmer als eine Rückfrage.</p>
+            <h1>Welche davon seid ihr?</h1>
+            <p className="lede">Der Name allein war nicht eindeutig. Klickt auf eure Firma — dann zeigen wir
+              direkt hier, was in den Vergabedaten über euch steht.</p>
             <div className="cands">
               {matches.length ? matches.map((m) => (
-                <button key={m.id} className="cand" onClick={() => bestaetigen(m)}>
-                  <div className="cand-m"><span className="cand-n">{m.name}</span>
-                    <span className="cand-x">{m.buyers ?? 0} Auftraggeber · aktiv seit {m.seit ?? "—"}</span></div>
-                  <span className="cand-w">{m.wins} Siege</span>
-                </button>
+                <div key={m.id} className={`cand-box ${offen === m.id ? "auf" : ""}`}>
+                  {/* Aufklappen statt weiterspringen: der Nutzer sieht erst die Belege,
+                      dann entscheidet er. Vorher war das ein eigener Screen mit drei Zahlen. */}
+                  <button className="cand" aria-expanded={offen === m.id}
+                    onClick={() => setOffen((o) => (o === m.id ? null : m.id))}>
+                    <div className="cand-m"><span className="cand-n">{m.name}</span>
+                      <span className="cand-x">{m.buyers ?? 0} Auftraggeber · aktiv seit {m.seit ?? "—"}</span></div>
+                    <span className="cand-w">{m.wins} Zuschläge</span>
+                    <span className="cand-car">{offen === m.id ? "▴" : "▾"}</span>
+                  </button>
+                  {offen === m.id ? (
+                    <div className="cand-auf">
+                      <FirmaFakten m={m} />
+                      <button className="btn btn-p" onClick={() => bestaetigen(m)}>Ja, das sind wir</button>
+                    </div>
+                  ) : null}
+                </div>
               )) : <div className="note note-i">Kein Treffer. Das ist normal — nur Unternehmen, die schon eine öffentliche Vergabe gewonnen haben, stehen in unseren Daten.</div>}
             </div>
-            <div className="btnrow split">
-              <button className="btn btn-s" onClick={() => setScreen("branche")}>Keine davon</button>
-              <button className="btn btn-t" onClick={() => setScreen("firma")}>Namen ändern</button>
-            </div>
+
+            {/* „Keine davon" öffnet die Eingabe HIER, statt auf einen weiteren fast leeren
+                Screen zu springen. */}
+            {keineDavon ? (
+              <div className="keine-auf">
+                <div className="field">
+                  <label className="lbl" htmlFor="fname">Wie heißt euer Unternehmen?</label>
+                  <input className="inp" id="fname" value={eingabe} autoComplete="organization"
+                    placeholder="Firmenname eingeben" onChange={(e) => setEingabe(e.target.value)}
+                    onKeyDown={(e) => { if (e.key === "Enter" && eingabe.trim().length > 1) zumMatch(); }} />
+                </div>
+                <div className="btnrow">
+                  <button className="btn btn-p" disabled={eingabe.trim().length < 2 || busy} onClick={zumMatch}>
+                    {busy ? "Suche …" : "Nochmal suchen"}
+                  </button>
+                  <button className="btn btn-t" onClick={() => setScreen("branche")}>
+                    Wir sind nicht dabei — ohne Vergabehistorie starten
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className="btnrow split">
+                <button className="btn btn-s" onClick={() => setKeineDavon(true)}>Keine davon</button>
+              </div>
+            )}
           </div>
         )}
 
