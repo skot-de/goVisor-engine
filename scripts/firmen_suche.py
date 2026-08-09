@@ -548,22 +548,33 @@ def detail(identity_id):
       GROUP BY 1 ORDER BY sum(h.displacements) DESC LIMIT 1""", [identity_id, identity_id]).fetchone()
     comp_basis = "head_to_head" if comp else None
     if not comp:
-        # 2. Fallback = Top-Anbieter im Kern-CPV. Bei REGIONALEN Firmen im selben Bundesland (NUTS1),
-        # sonst landet ein nationaler Gigant (Leonhard Weiss) als „Konkurrent" eines Hammer Betriebs.
-        dom = con.execute(f"""SELECT cs.cpv_class FROM {CS} cs JOIN {EI} ei ON ei.entity_id=cs.entity_id
-          WHERE ei.identity_id=? GROUP BY 1 ORDER BY sum(cs.total_wins) DESC LIMIT 1""", [identity_id]).fetchone()
+        # 2. Fallback = Top-Anbieter im Kern-CPV. **Auf CPV-6 geschärft** (nicht CPV-4/cpv_class):
+        # sonst gilt eine Aufzugsfirma als „Konkurrent" eines Elektrikers, nur weil beide in CPV 4531
+        # liegen. Dominante CPV-6 der Firma (ohne Divisions-Sammelcodes), dann Anbieter, die genau
+        # diese CPV-6 gewonnen haben — bei REGIONALEN Firmen im selben Bundesland (NUTS1).
+        dom6 = con.execute(f"""SELECT substr(n.cpv_main,1,6) c FROM {PE} p JOIN {EI} ei ON ei.entity_id=p.entity_id
+          JOIN read_parquet('{SN}', hive_partitioning=1) n ON n.notice_id=p.notice_id
+          WHERE p.role='winner' AND ei.identity_id=? AND n.cpv_main IS NOT NULL AND substr(n.cpv_main,3,4)<>'0000'
+          GROUP BY 1 ORDER BY count(*) DESC LIMIT 1""", [identity_id]).fetchone()
         region = top_nuts1 if is_regional else None
-        if dom and region:
-            comp = con.execute(f"""SELECT ei.identity_id FROM {CS} cs JOIN {EI} ei ON ei.entity_id=cs.entity_id
-              JOIN eloc el ON el.identity_id=ei.identity_id
-              WHERE cs.cpv_class=? AND ei.identity_id<>? AND ei.identity_id IN {belegt}
-                AND substr(el.nuts,1,3)=? GROUP BY 1 ORDER BY sum(cs.total_wins) DESC LIMIT 1""",
-              [dom[0], identity_id, region]).fetchone()
+
+        def _comp6(with_region):
+            reg_clause = "AND substr(el.nuts,1,3)=?" if with_region else ""
+            reg_join = "JOIN eloc el ON el.identity_id=ei.identity_id" if with_region else ""
+            params = [dom6[0], identity_id] + ([region] if with_region else [])
+            return con.execute(f"""SELECT ei.identity_id FROM {PE} p JOIN {EI} ei ON ei.entity_id=p.entity_id
+              JOIN read_parquet('{SN}', hive_partitioning=1) n ON n.notice_id=p.notice_id {reg_join}
+              WHERE p.role='winner' AND substr(n.cpv_main,1,6)=? AND ei.identity_id<>? AND ei.identity_id IN {belegt}
+                {reg_clause}
+              GROUP BY 1 ORDER BY count(DISTINCT n.notice_id) DESC LIMIT 1""", params).fetchone()
+
+        if dom6 and region:
+            comp = _comp6(True)
             comp_basis = "region" if comp else None
-        if not comp and dom and not is_regional:  # breit aufgestellte Firma → nationaler Top-Anbieter ok
-            comp = con.execute(f"""SELECT ei.identity_id FROM {CS} cs JOIN {EI} ei ON ei.entity_id=cs.entity_id
-              WHERE cs.cpv_class=? AND ei.identity_id<>? AND ei.identity_id IN {belegt}
-              GROUP BY 1 ORDER BY sum(cs.total_wins) DESC LIMIT 1""", [dom[0], identity_id]).fetchone()
+            if not comp:                       # kein regionaler CPV-6-Wettbewerber → national, ehrlich beschriftet
+                comp = _comp6(False); comp_basis = "cpv_national" if comp else None
+        elif dom6:                             # breit aufgestellte Firma → nationaler CPV-6-Top-Anbieter
+            comp = _comp6(False)
             comp_basis = "cpv_national" if comp else None
     wett = None
     if comp:
@@ -634,11 +645,19 @@ def detail(identity_id):
                                      ORDER BY le.value_eur DESC NULLS LAST) = 1
           ORDER BY {order} LIMIT 5""").fetchall()
 
-    # Priorität: CPV6 im Umkreis → CPV6 national → CPV4 im Umkreis → CPV4 national. Erste mit ≥3, sonst größte.
+    # Priorität für REGIONALE Firmen: NÄHE vor Feldschärfe —
+    #   CPV6 im Umkreis → CPV4 im Umkreis → CPV6 national → CPV4 national.
+    # Ein Regionalbetrieb sieht lieber „etwas breiteres Feld vor der Haustür" als „exaktes Feld 400 km weg".
+    # Breit aufgestellte Firmen (kein Sitz/keine Konzentration) gehen direkt national. Erste mit ≥3, sonst größte.
     plan = []
-    for lvl, vals in ((6, cpv6_vals), (4, cpv4_vals)):
-        if vals:
-            plan += ([(lvl, vals, True), (lvl, vals, False)] if is_regional else [(lvl, vals, False)])
+    if is_regional:
+        if cpv6_vals: plan.append((6, cpv6_vals, True))
+        if cpv4_vals: plan.append((4, cpv4_vals, True))
+        if cpv6_vals: plan.append((6, cpv6_vals, False))
+        if cpv4_vals: plan.append((4, cpv4_vals, False))
+    else:
+        if cpv6_vals: plan.append((6, cpv6_vals, False))
+        if cpv4_vals: plan.append((4, cpv4_vals, False))
     leads, best_meta = [], None
     for lvl, vals, regional in plan:
         r = _leads_query(regional, lvl, vals)
