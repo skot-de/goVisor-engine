@@ -164,6 +164,9 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // Echter Zugangsstatus statt hartkodiertem „Pro"-Aufkleber (Free bis der Account etwas anderes sagt).
   const [plan, setPlan] = useState<"free" | "paid" | "cancelled">("free");
   const [planOpen, setPlanOpen] = useState(false);
+  // Vorauswahl = das Produktversprechen („wir sortieren vor, ihr arbeitet nur das Sinnvolle ab").
+  // Standard AN; ohne Profil wirkungslos, weil dann keine Relevanz berechnet werden kann.
+  const [vorauswahl, setVorauswahl] = useState(true);
 
   // Beim Start: eingeloggt? → Profil aus Supabase (autoritativ); sonst lokaler Fallback.
   useEffect(() => {
@@ -360,10 +363,27 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // (wer hat gewonnen → wer kauft jetzt zu) und würden hier oben stehen, weil sie nach
   // Zuschlagsdatum ganz vorn sortieren. Deshalb nur, wenn die Phase ausdrücklich gewählt ist.
   // `alleRows` behält sie — daraus speist sich das Zuschlags-Band.
-  const rows: Lead[] = useMemo(
-    () => (adv.phases.includes("award") ? alleRows : alleRows.filter((l) => l.src !== "award")),
-    [alleRows, adv.phases],
-  );
+  const rows: Lead[] = useMemo(() => {
+    const ohneAwards = adv.phases.includes("award") ? alleRows : alleRows.filter((l) => l.src !== "award");
+    // Vorauswahl (gemessen an ENGIE/Cancom/Rosenbauer: 5.911→72, 3.974→23, 5.979→77):
+    // Es bleibt, worauf man sich HEUTE sinnvoll bewerben kann —
+    //   · echte Ausschreibung (keine Ankündigung, kein bloßes Vertragsende)
+    //   · noch mindestens 3 Tage Zeit
+    //   · Relevanz hoch (CPV-6-genau + Region + Volumen)
+    //   · kein harter Blocker (Bürgschaft übersteigt Rahmen / bewusst ausgeschlossen)
+    //   · Aufwand nicht „hoch" — unbekannter Aufwand fliegt NICHT raus (Unbekanntes schließt nie aus)
+    // Ohne Profil ist die Relevanz für alles „na" → wir sortieren nicht vor, statt alles zu leeren.
+    if (!vorauswahl || !realProfile) return ohneAwards;
+    return ohneAwards.filter((l) => {
+      if (l.src !== "f02") return false;
+      const t = (l.frist as { tage?: number } | undefined)?.tage ?? (l.tage as number | null);
+      if (typeof t !== "number" || t < 3) return false;
+      if (l.relevanz !== "hoch") return false;
+      const m = l.match as { blocker?: { art: string }[] } | undefined;
+      if (m?.blocker?.some((b) => b.art === "buergschaft" || b.art === "ausschluss")) return false;
+      return aufwandStufe(l).stufe !== "hoch";
+    });
+  }, [alleRows, adv.phases, vorauswahl, realProfile]);
 
   const suggestions = useMemo(() => (query.trim() ? suggestList(query) : []), [query]);
 
@@ -1103,6 +1123,25 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                   </div>
                 );
               })()}
+              {/* Vorauswahl sichtbar machen: WAS wir weggelassen haben und wie man es zurückholt.
+                  Ein stilles Filtern wäre der schlimmere Fehler — der Nutzer muss die Menge kennen. */}
+              {realProfile && !adv.phases.includes("award") ? (
+                <div className={`vor-band ${vorauswahl ? "" : "off"}`}>
+                  {vorauswahl ? (
+                    <>
+                      <b>{rows.length}</b> von {alleRows.filter((l) => l.src !== "award").length.toLocaleString("de-DE")} für euch vorsortiert
+                      <span className="vor-x">offene Ausschreibung · noch ≥ 3 Tage · hohe Passung · Aufwand vertretbar</span>
+                      <button className="vor-btn" onClick={() => setVorauswahl(false)}>Alle anzeigen</button>
+                    </>
+                  ) : (
+                    <>
+                      Alle <b>{rows.length.toLocaleString("de-DE")}</b> Ausschreibungen des Grundraums
+                      <span className="vor-x">ungefiltert — auch Ankündigungen und weniger passende</span>
+                      <button className="vor-btn" onClick={() => setVorauswahl(true)}>Wieder vorsortieren</button>
+                    </>
+                  )}
+                </div>
+              ) : null}
               <LeadTable
                 rows={rows}
                 limit={renderCount}
