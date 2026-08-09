@@ -75,13 +75,15 @@ export function AppRail({
   // haben keinen — die holen ihn hier selbst, damit das Konto überall erreichbar bleibt.
   const [ownPlan, setOwnPlan] = useState<Plan>("free");
   const [ownMail, setOwnMail] = useState<string | null>(null);
+  const [identBestaetigt, setIdentBestaetigt] = useState<boolean | null>(null);
   const eigenstaendig = planProp === undefined;
 
   useEffect(() => {
     if (!eigenstaendig) return;
     import("@/lib/supabase/account")
       .then(({ loadAccount }) => loadAccount())
-      .then((a) => { if (a) { setOwnPlan(a.plan as Plan); setOwnMail(a.email ?? null); } })
+      .then((a) => { if (a) { setOwnPlan(a.plan as Plan); setOwnMail(a.email ?? null);
+        setIdentBestaetigt(a.entity_confidence === "confirmed"); } })
       .catch(() => { /* nicht angemeldet — Free-Ansicht ist die richtige Antwort */ });
   }, [eigenstaendig]);
 
@@ -130,6 +132,14 @@ export function AppRail({
                 <b>{userEmail || "Nicht angemeldet"}</b>
                 <span>{plan === "paid" ? "Pro — voller Zugang" : "Free — Lead-Liste unbegrenzt, 3 Bewertungen"}</span>
               </div>
+              {/* Die Sperre sichtbar machen, wo die Abrechnung liegt — sonst merkt man
+                  erst beim Rechnungslauf, dass etwas nicht freigeschaltet ist. */}
+              {identBestaetigt === false ? (
+                <div className="pm-warn">
+                  Firma noch <b>unbestätigt</b>
+                  <em>Erfolgsprämie und Abrechnung bleiben gesperrt, bis die Zugehörigkeit belegt ist.</em>
+                </div>
+              ) : null}
               {plan !== "paid" ? (
                 <Link className="pm-up" href="/settings?sek=zahlung" onClick={() => setPlanOpen(false)}>
                   Auf Pro upgraden

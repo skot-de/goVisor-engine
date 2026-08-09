@@ -159,3 +159,38 @@
   font: inherit; font-size: 12.5px; background: var(--surface); color: var(--ink-900); resize: vertical; box-sizing: border-box; }
 .in-notiz::placeholder { color: var(--ink-300); }
 .in-notiz:focus { outline: none; border-color: var(--signal); }
+
+/* ── Identitaets-Antraege (intern) ─────────────────────────────────────── */
+.ic-wrap{max-width:920px;margin:0 auto;padding:28px 20px 60px;display:flex;flex-direction:column;gap:14px}
+.ic-top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:6px}
+.ic-top h1{font-size:21px;font-weight:700;letter-spacing:-.02em}
+.ic-top p{font-size:12.5px;color:var(--ink-500);margin-top:3px}
+.ic-filter{font-size:12.5px;display:flex;gap:6px;align-items:center;cursor:pointer}
+.ic-leer,.ic-fehler{font-size:13px;color:var(--ink-500);padding:24px 0}
+.ic-fehler{color:#a16207}
+.ic-karte{border:1px solid var(--line);border-radius:9px;padding:14px;display:flex;flex-direction:column;gap:10px;background:var(--surface)}
+.ic-karte[data-status="geprueft"]{opacity:.62}
+.ic-karte[data-status="abgelehnt"]{opacity:.5}
+.ic-kopf{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.ic-kopf b{font-size:14.5px}
+.ic-id{font-family:var(--mono);font-size:11px;color:var(--ink-400);margin-left:8px}
+.ic-st{font-size:11px;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.ic-st-unbestaetigt{background:#fdf8ee;color:#a16207}
+.ic-st-geprueft{background:#eef8f2;color:#12855a}
+.ic-st-abgelehnt{background:#fdeeee;color:#a12727}
+.ic-st-belegt{background:#eef8f2;color:#12855a}
+.ic-gruende{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px}
+.ic-gruende div{background:var(--surface-2,#f6f8f7);border-radius:6px;padding:7px 9px}
+.ic-gruende span{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-500)}
+.ic-gruende b{font-size:12.5px;font-weight:600}
+.ic-befund{font-size:12.5px;color:#a16207;line-height:1.5}
+.ic-befund.gut{color:#12855a}
+.ic-kunden{font-size:11.5px;color:var(--ink-500);line-height:1.5}
+.ic-nachricht{font-size:12.5px;line-height:1.55;border-left:3px solid var(--line);padding-left:10px;color:var(--ink-700)}
+.ic-fuss{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:9px}
+.ic-zeit{font-size:11px;color:var(--ink-400)}
+.ic-btns{display:flex;gap:8px}
+.ic-ok,.ic-nein{font-size:12px;font-weight:600;padding:5px 12px;border-radius:6px;cursor:pointer;border:1px solid}
+.ic-ok{background:#12855a;color:#fff;border-color:#12855a}
+.ic-nein{background:transparent;color:#a12727;border-color:#e3c9c9}
+.ic-ok:disabled,.ic-nein:disabled{opacity:.5;cursor:default}

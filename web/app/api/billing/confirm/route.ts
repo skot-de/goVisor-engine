@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { feeForBand, anchorFlag, type Band } from "@/lib/billing";
+import { identitaetBestaetigt, GESPERRT } from "@/lib/identityGate";
 
 /* Kunde bestätigt das Auftragsband einer 'needs_confirmation'-Rechnung (Ticket #6). Läuft
  * serverseitig (success_fee_charges hat keine update-Policy — Schreiben nur über Admin-Client),
@@ -14,6 +15,12 @@ export async function POST(req: NextRequest) {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return NextResponse.json({ ok: false, error: "not-authenticated" }, { status: 401 });
+
+  // Sperre: hier bestätigt der Kunde ein Auftragsband und löst damit eine Rechnung aus.
+  // Das darf nur, wer die beanspruchte Firma auch belegt hat — `prepare` prüft dasselbe
+  // über feeApplies(), aber diese Route ist ein zweiter, direkt aufrufbarer Eingang.
+  const ident = await identitaetBestaetigt(user.id);
+  if (!ident.bestaetigt) return NextResponse.json(GESPERRT, { status: 403 });
 
   const admin = createAdminClient();
   const { data: charge } = await admin.from("success_fee_charges").select("*").eq("id", chargeId).single();

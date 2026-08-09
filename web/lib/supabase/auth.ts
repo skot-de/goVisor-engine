@@ -43,7 +43,7 @@ export async function saveProfile(profile: Profile): Promise<{ ok: boolean; reas
   const { error } = await supabase.from("user_profiles").update({
     company_name: profile.firma ?? null,
     identity_id: profile.identityId ?? null,
-    entity_confidence: profile.entityConfidence ?? "none",
+    entity_confidence: confidenceSpalte(profile.entityConfidence),
     confirmed_entities: profile.confirmedEntities ?? [],
     cpv_fields: profile.cpvFields ?? [],
     cpv_labels: profile.cpvLabels ?? [],
@@ -59,6 +59,18 @@ export async function saveProfile(profile: Profile): Promise<{ ok: boolean; reas
 }
 
 /* user_profiles.profile-Blob → Engine-Profil (oder null, wenn nicht eingeloggt / leer). */
+/* Die Engine spricht „belegt/unsicher" (⚠-Guard), die Spalte kennt laut CHECK nur
+ * `confirmed|probable|none` — der englische Wert-Vertrag aus CLAUDE.md. Ohne diese
+ * Abbildung scheitert das Speichern am Constraint, und zwar lautlos.
+ *   belegt   → confirmed  (Domain oder Adresse belegen die Zugehörigkeit)
+ *   unsicher → probable   (Firma zugeordnet, aber nicht nachgewiesen)
+ *   nichts   → none       (gar keine Identität) */
+export function confidenceSpalte(v: unknown): "confirmed" | "probable" | "none" {
+  if (v === "belegt" || v === "confirmed") return "confirmed";
+  if (v === "unsicher" || v === "probable") return "probable";
+  return "none";
+}
+
 export async function loadProfile(): Promise<Profile | null> {
   const supabase = createClient();
   const { data: { user } } = await supabase.auth.getUser();

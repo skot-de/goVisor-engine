@@ -452,7 +452,7 @@ export default function OnboardingPage() {
                 <div className="note note-w antrag">
                   <b>Wir können nicht automatisch prüfen, ob ihr zu dieser Firma gehört.</b>
                   <span>{beleg.grund}. Ihr könnt trotzdem sofort loslegen — die Zuordnung bleibt so lange
-                    <b> unbestätigt</b>, und was nach außen wirkt (Erfolgsprämie, Team, Export) bleibt gesperrt.</span>
+                    <b> unbestätigt</b>, und die Erfolgsprämie samt Abrechnung bleibt gesperrt.</span>
                   {/* Statt einer Sackgasse ein Weg: Kurznachricht, die jemand von Hand prüft.
                       Gemessen betrifft das 5,8 % der Zielgruppe — knapp die Hälfte davon
                       t-online-Adressen, also etablierte Betriebe ohne eigene Mail-Domain. */}
