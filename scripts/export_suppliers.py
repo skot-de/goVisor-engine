@@ -38,6 +38,7 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE belegt AS
 con.execute(f"""CREATE OR REPLACE TEMP TABLE w AS
   SELECT ei.identity_id, ei.canonical_name, p.entity_id, p.notice_id,
          substr(n.cpv_main, 1, 4) AS cpv4,
+         substr(n.cpv_main, 1, 6) AS cpv6,
          substr(n.performance_nuts, 1, 3) AS nuts1,
          year(n.publication_date) AS jahr
   FROM {PE} p
@@ -70,6 +71,20 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE felder AS
          list({{'cpv4': r.cpv4, 'label': cl.label, 'wins': r.n}} ORDER BY r.n DESC) AS fields
   FROM rk r LEFT JOIN {CL} cl ON cl.cpv_code = r.cpv4 || '0000'
   WHERE r.rn <= 6 GROUP BY 1""")
+
+# Top-CPV-6-Felder je Identität (gewerkscharf) — ohne Divisions-Sammelcodes (XX0000).
+# CPV-6 trennt die Gewerke, die CPV-4 zusammenwirft (Aufzug 453131 ≠ Elektro 453112). Speist
+# den Relevanz-Volltreffer; CPV-4 (fields) bleibt als Nachbarfeld.
+con.execute(f"""CREATE OR REPLACE TEMP TABLE felder6 AS
+  WITH c AS (SELECT identity_id, cpv6, count(*) n FROM w
+             WHERE cpv6 IS NOT NULL AND length(cpv6) = 6 AND substr(cpv6, 3, 4) <> '0000'
+               AND identity_id IN (SELECT identity_id FROM tops)
+             GROUP BY 1,2),
+  rk AS (SELECT *, row_number() OVER (PARTITION BY identity_id ORDER BY n DESC) rn FROM c)
+  SELECT r.identity_id,
+         list({{'cpv6': r.cpv6, 'label': cl.label, 'wins': r.n}} ORDER BY r.n DESC) AS fields6
+  FROM rk r LEFT JOIN {CL} cl ON cl.cpv_code = r.cpv6 || '00'
+  WHERE r.rn <= 12 GROUP BY 1""")
 
 # Top-Regionen (Leistungsort-NUTS1) je Identität
 con.execute("""CREATE OR REPLACE TEMP TABLE regionen AS
@@ -108,11 +123,12 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE members AS
   GROUP BY 1""")
 
 rows = con.execute(f"""
-  SELECT t.identity_id, n.name, n.aliase, t.wins, f.fields, r.regions, v.vol_median,
+  SELECT t.identity_id, n.name, n.aliase, t.wins, f.fields, f6.fields6, r.regions, v.vol_median,
          s.buyers, s.seit, m.members
   FROM tops t
   LEFT JOIN namen n ON n.identity_id = t.identity_id
   LEFT JOIN felder f ON f.identity_id = t.identity_id
+  LEFT JOIN felder6 f6 ON f6.identity_id = t.identity_id
   LEFT JOIN regionen r ON r.identity_id = t.identity_id
   LEFT JOIN volumen v ON v.identity_id = t.identity_id
   LEFT JOIN stats s ON s.identity_id = t.identity_id
@@ -134,7 +150,7 @@ def method_conf(m):
 
 
 out = []
-for (iid, name, aliase, wins, fields, regions, vol, buyers, seit, members) in rows:
+for (iid, name, aliase, wins, fields, fields6, regions, vol, buyers, seit, members) in rows:
     ms = []
     for mem in (members or []):
         conf, text = method_conf(mem["method"])
@@ -148,6 +164,7 @@ for (iid, name, aliase, wins, fields, regions, vol, buyers, seit, members) in ro
         "buyers": int(buyers) if buyers else None,
         "seit": int(seit) if seit else None,
         "fields": [dict(f) for f in (fields or [])],
+        "fields6": [dict(f) for f in (fields6 or [])],
         "regions": clean_nuts(regions),
         "volMedian": float(vol) if vol else None,
         "members": ms,

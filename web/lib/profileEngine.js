@@ -16,7 +16,8 @@ export function emptyProfile() {
   return {
     firma: null,
     entityConfidence: null,   // 'belegt' | 'unsicher' | null — steuert den ⚠-Guard (Ticket #11 §4.2)
-    cpvFields: [],            // CPV4-Codes: die eigenen Schwerpunkte
+    cpvFields: [],            // CPV4-Codes: die eigenen Schwerpunkte (Nachbarfeld-Ebene)
+    cpvFields6: [],           // CPV6-Codes: gewerkscharfe Volltreffer-Menge (trennt Aufzug≠Elektro)
     cpvLabels: [],           // Klartext-Labels zu cpvFields (nur Anzeige)
     cpvWins: {},             // cpv4 → eigene Zuschläge (aus dem Onboarding-Match, für Direktvergleich)
     nachbarFields: [],        // angrenzende Felder (teil-relevant, kein Volltreffer)
@@ -41,6 +42,7 @@ export function buildProfile(input) {
   p.firma = input.firma ? String(input.firma).trim() : null;
   p.entityConfidence = input.entityConfidence || null;
   p.cpvFields = input.cpvFields || [];
+  p.cpvFields6 = input.cpvFields6 || [];
   p.cpvLabels = input.cpvLabels || [];
   p.cpvWins = input.cpvWins || {};
   p.nachbarFields = input.nachbarFields || [];
@@ -80,15 +82,25 @@ export function matchLead(lead, p, leadValue) {
   let partner = false;
 
   // ── Feld (CPV) — das Kernkriterium, es begrenzt nach oben ──────────────────
+  // Gewerkscharf auf CPV-6: exakte CPV-6 = Volltreffer, gleiche CPV-4-Klasse (aber anderes Gewerk,
+  // z. B. Aufzug 453131 vs. Elektro 453112) = Nachbarfeld. Alt-Profile ohne cpvFields6 → CPV-4-Verhalten.
   const cpv4 = String(lead.cpv || '').slice(0, 4);
+  const cpv6 = String(lead.cpv || '').slice(0, 6);
+  const has6 = !!(p.cpvFields6 && p.cpvFields6.length);
   let feld;
-  if (p.cpvFields.includes(cpv4)) feld = 'ok';
-  else if (p.nachbarFields.includes(cpv4)) feld = 'nachbar';
-  else feld = 'aussen';
+  if (has6) {
+    if (p.cpvFields6.includes(cpv6)) feld = 'ok';
+    else if (p.cpvFields.includes(cpv4) || p.nachbarFields.includes(cpv4)) feld = 'nachbar';
+    else feld = 'aussen';
+  } else {
+    if (p.cpvFields.includes(cpv4)) feld = 'ok';
+    else if (p.nachbarFields.includes(cpv4)) feld = 'nachbar';
+    else feld = 'aussen';
+  }
   teile.push({
     dim: 'feld', label: 'Feld',
     status: feld === 'ok' ? 'ok' : feld === 'nachbar' ? 'teil' : 'no',
-    text: feld === 'ok' ? 'euer Schwerpunkt' : feld === 'nachbar' ? 'Nachbarfeld' : 'außerhalb eurer Felder',
+    text: feld === 'ok' ? 'euer Schwerpunkt' : feld === 'nachbar' ? 'Nachbarfeld (angrenzendes Gewerk)' : 'außerhalb eurer Felder',
   });
 
   // ── Region ────────────────────────────────────────────────────────────────
