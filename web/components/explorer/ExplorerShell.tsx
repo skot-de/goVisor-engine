@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   LEADS, BRANCHEN, COLS, applyState, visible, sorted, syncLocationColumn,
   suggestList, classifyQuery, netzInteresse, netzFreigabe, offeneGruppen, angaben, setLeads, setMarket, setPlzGeo, setPlzLand,
-  applyProfile, setProfile, setUserContracts, PROFILES, parseWert, aufwandStufe,
+  setProfile, setUserContracts, parseWert, aufwandStufe,
 } from "@/lib/explorerCore";
 import { loadContracts } from "@/lib/supabase/contracts";
 import { buildProfile, brancheFromProfile } from "@/lib/profileEngine";
@@ -24,7 +24,7 @@ import { getOrCreateCalendarFeed } from "@/lib/supabase/calendar";
 
 type Profile = ReturnType<typeof buildProfile>;
 const PROFILE_KEY = "govisor.profile.v1";
-import { Workspace, ColumnMenu, FilterBar, Suggestions, HeaderFilterPopover } from "./parts";
+import { ColumnMenu, FilterBar, Suggestions, HeaderFilterPopover } from "./parts";
 
 type Lead = { id: string; branche?: string; merk?: unknown; [k: string]: unknown };
 type Token = { type: string; value: string; label: string; radius?: number | null; coord?: number[] };
@@ -134,7 +134,6 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // bleiben leer, die Marktblöcke (Branche × Region) sind echt gefüllt.
   const [profilStufe, setProfilStufe] = useState("neu");
   const [offenerPicker, setOffenerPicker] = useState<string | null>(null);
-  const [profileKey, setProfileKey] = useState<string>("");   // "" | klein | mittel | gross (Testsicht)
   const [realProfile, setRealProfile] = useState<Profile | null>(null);   // echtes Profil aus Onboarding
   const router = useRouter();
   const [adv, setAdv] = useState<Adv>(emptyAdv);
@@ -150,7 +149,6 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   const [feedUrl, setFeedUrl] = useState<string | null>(null);
 
   // Popover-/Menü-Zustand
-  const [wsOpen, setWsOpen] = useState(false);
   const [colMenuOpen, setColMenuOpen] = useState(false);
   const [headFilter, setHeadFilter] = useState<{ facet: string; rect: DOMRect } | null>(null);
   const [openRadius, setOpenRadius] = useState<number | null>(null);
@@ -204,7 +202,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   async function abmelden() {
     await logout().catch(() => {});
     try { localStorage.removeItem(PROFILE_KEY); } catch { /* egal */ }
-    setRealProfile(null); setUserEmail(null); setProfileKey(""); brancheManual.current = false; setPlan("free");
+    setRealProfile(null); setUserEmail(null); brancheManual.current = false; setPlan("free");
     bump();
   }
 
@@ -352,12 +350,10 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // Vollständige, gefilterte Liste INKLUSIVE Zuschläge — Basis für Zähler und das Zuschlags-Band.
   const alleRows: Lead[] = useMemo(() => {
     applyState({ aktiveBranche, profilBranche, sortKey, sortDir, searchTokens: tokens, filters });
-    // Testsicht (Klein/Mittel/Groß) überschreibt zum Ausprobieren; sonst das echte Profil.
-    if (profileKey) applyProfile(profileKey);
-    else setProfile(realProfile);
+    setProfile(realProfile);
     syncLocationColumn();
     return postFilter(sorted(visible()), adv);
-  }, [aktiveBranche, sortKey, sortDir, tokens, filters, tick, profileKey, realProfile, adv]);
+  }, [aktiveBranche, sortKey, sortDir, tokens, filters, tick, realProfile, adv]);
 
   // Akquise zeigt, worauf man sich BEWERBEN kann. Erteilte Zuschläge (#24) sind Marktbeobachtung
   // (wer hat gewonnen → wer kauft jetzt zu) und würden hier oben stehen, weil sie nach
@@ -411,7 +407,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
 
   // ── Aktionen ──────────────────────────────────────────────────────────────
   const closeAllPops = useCallback(() => {
-    setWsOpen(false); setColMenuOpen(false); setHeadFilter(null); setOpenRadius(null);
+    setColMenuOpen(false); setHeadFilter(null); setOpenRadius(null);
   }, []);
 
   const autoSort = useRef(true);   // solange true: Sortierung wird automatisch verwaltet
@@ -430,12 +426,8 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     // — die Alternative „nach Frist" stellt die fast abgelaufenen nach oben, also das Gegenteil.
     setSortKey("ranking");
     setSortDir(1);
-  }, [profileKey, realProfile]);
+  }, [realProfile]);
 
-  function markRead() {
-    visible().forEach((l: Lead) => { if (l.status === "ungesichtet") l.status = "gesichtet"; });
-    bump();
-  }
   // Verlauf-Protokoll (#30): Nutzeraktionen landen im Team-Tab „Verlauf" (l.log). Angehängt
   // (nicht vorangestellt), damit der Erst-Eintrag oben bleibt — wie in den Seed-Logs.
   function logEvent(l: (Lead & { log?: unknown[] }) | undefined, kind: string, text: string) {
@@ -795,8 +787,8 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     return () => window.removeEventListener("popstate", onPop);
   }, [bump]);
 
-  function setBranche(k: string) { brancheManual.current = true; setAktiveBranche(k); setWsOpen(false); setActiveId(null); }
-  function resetBranche() { setAktiveBranche(profilBranche); setWsOpen(false); setActiveId(null); }
+  function setBranche(k: string) { brancheManual.current = true; setAktiveBranche(k); setActiveId(null); }
+  function resetBranche() { setAktiveBranche(profilBranche); setActiveId(null); }
 
   // Tastatur
   useEffect(() => {
@@ -823,7 +815,6 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   useEffect(() => {
     function onDown(e: MouseEvent) {
       const t = e.target as HTMLElement;
-      if (!t.closest(".workspace")) setWsOpen(false);
       if (!t.closest(".colcfg")) setColMenuOpen(false);
       if (!t.closest(".has-filter") && !t.closest(".headpop")) setHeadFilter(null);
       if (!t.closest(".ftoken")) setOpenRadius(null);
@@ -843,7 +834,6 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   }
 
   const branchen = BRANCHEN as Record<string, string>;
-  const unread = rows.filter((l) => l.status === "ungesichtet").length;
   const merkN = CORE.filter((l) => l.merk).length;
 
   return (
@@ -853,17 +843,18 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/govisor-wordmark.png" alt="goVisor" className="brandlogo" />
         </div>
-        <Workspace
-          aktiveBranche={aktiveBranche}
-          profilBranche={profilBranche}
-          open={wsOpen}
-          counts={branchenCounts}
-          onToggle={() => setWsOpen((o) => !o)}
-          onSet={setBranche}
-          onReset={resetBranche}
-        />
         <div className="maincol">
           <div className="toolbar">
+            <div className="colcfg">
+              <button className={`colbtn ${realProfile ? "colbtn-on" : ""}`} type="button"
+                onClick={() => router.push("/onboarding")}
+                title={realProfile ? "Profil ansehen/bearbeiten" : "Profil einrichten — schaltet echte Relevanz frei"}>
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 12a4 4 0 100-8 4 4 0 000 8ZM4 21a8 8 0 0116 0" />
+                </svg>
+                {realProfile ? (realProfile.firma || "Profil").slice(0, 22) : "Profil einrichten"}
+              </button>
+            </div>
             <div className="searchwrap">
               <label className="tsearch">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round">
@@ -901,56 +892,10 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
               <ColumnMenu open={colMenuOpen} onToggleCol={toggleCol} />
             </div>
             <ExportMenu rows={rows} view={filters.relevant ? "passend" : "alle"} />
-            <div className="colcfg">
-              <button className={`colbtn ${realProfile ? "colbtn-on" : ""}`} type="button"
-                onClick={() => router.push("/onboarding")}
-                title={realProfile ? "Profil ansehen/bearbeiten" : "Profil einrichten — schaltet echte Relevanz frei"}>
-                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 12a4 4 0 100-8 4 4 0 000 8ZM4 21a8 8 0 0116 0" />
-                </svg>
-                {realProfile ? (realProfile.firma || "Profil").slice(0, 22) : "Profil einrichten"}
-              </button>
-            </div>
-            <div className="testsicht" title="Test: Relevanz gegen ein simuliertes Firmenprofil berechnen">
-              <span className="ts-k">Testsicht</span>
-              {["", "klein", "mittel", "gross"].map((k) => (
-                <button
-                  key={k || "aus"}
-                  className={`ts-o ${profileKey === k ? "on" : ""}`}
-                  onClick={() => {
-                    setProfileKey(k);
-                    if (!k) setFilters((f) => ({ ...f, relevant: false }));
-                  }}
-                  title={k ? (PROFILES as Record<string, { sub: string }>)[k].sub : "keine Profil-Simulation"}
-                >
-                  {k ? (PROFILES as Record<string, { label: string }>)[k].label.replace("unternehmen", "").replace("betrieb", "") : "Aus"}
-                </button>
-              ))}
-              {profileKey ? (
-                <button
-                  className={`ts-only ${filters.relevant ? "on" : ""}`}
-                  onClick={() => setFilters((f) => ({ ...f, relevant: !f.relevant }))}
-                >
-                  nur passende
-                </button>
-              ) : null}
-            </div>
             <div className="tstatus">
               <span className="tcount">
-                <b>{rows.length}</b> von <span>{CORE.length}</span>
+                <b>{rows.length}</b> von <span>{alleRows.filter((l) => l.src !== "award").length}</span>
               </span>
-              <button
-                className="markread"
-                onClick={markRead}
-                disabled={unread === 0}
-                title="Alle sichtbaren Leads als gesehen markieren"
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M18 6 9.5 15 6 11.5" />
-                  <path d="M22 6l-8.5 9L13 14.5" />
-                </svg>
-                <span>{unread ? `${unread} als gesehen` : "alle gesehen"}</span>
-              </button>
             </div>
           </div>
           <FilterBar
@@ -961,17 +906,6 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
             onToggleRadius={(i) => setOpenRadius((r) => (r === i ? null : i))}
             onSetRadius={setRadius}
           />
-        </div>
-        <div className="acctcell">
-          <a className="rolelink" href="/authority" title="Zur Vergabestellen-Sicht (Vergabeblick) — in Produktion rollen-gegatet">↔ Vergabestelle</a>
-          {userEmail ? (
-            <div className="acct">
-              <Link className="acct-mail" href="/settings" title="Einstellungen">{userEmail}</Link>
-              <button className="acct-out" onClick={abmelden} title="Abmelden">Abmelden</button>
-            </div>
-          ) : (
-            <Link className="acct-in" href="/login">Anmelden</Link>
-          )}
         </div>
       </header>
 
@@ -1129,7 +1063,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                 <div className={`vor-band ${vorauswahl ? "" : "off"}`}>
                   {vorauswahl ? (
                     <>
-                      <b>{rows.length}</b> von {alleRows.filter((l) => l.src !== "award").length.toLocaleString("de-DE")} für euch vorsortiert
+                      <b>{rows.length}</b> von {alleRows.filter((l) => l.src !== "award").length.toLocaleString("de-DE")} für euch vorsortiert <span className="vor-gr">({(BRANCHEN as Record<string, string>)[aktiveBranche]})</span>
                       <span className="vor-x">
                         offene Ausschreibung · noch ≥ 3 Tage · hohe Passung · Aufwand vertretbar
                         {/* Der Regionsteil ist aus der eigenen Zuschlagshistorie abgeleitet — sagen,
@@ -1152,7 +1086,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                     </>
                   ) : (
                     <>
-                      Alle <b>{rows.length.toLocaleString("de-DE")}</b> Ausschreibungen des Grundraums
+                      Alle <b>{rows.length.toLocaleString("de-DE")}</b> Ausschreibungen in {(BRANCHEN as Record<string, string>)[aktiveBranche]}
                       <span className="vor-x">ungefiltert — auch Ankündigungen und weniger passende</span>
                       <button className="vor-btn" onClick={() => setVorauswahl(true)}>Wieder vorsortieren</button>
                     </>
@@ -1212,6 +1146,11 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         open={panelOpen}
         adv={adv}
         resultCount={rows.length}
+        branche={aktiveBranche}
+        profilBranche={profilBranche}
+        brancheCounts={branchenCounts}
+        onSetBranche={setBranche}
+        onResetBranche={resetBranche}
         segments={cpvSegments}
         onChange={setAdv}
         onClose={() => setPanelOpen(false)}

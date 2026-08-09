@@ -48,28 +48,6 @@ body[data-view="verteidigung"] .band.risk[data-level="mittel"] .segs i:nth-child
 .brandcell span{color:var(--signal)}
 
 /* Arbeitsraum: Branche als Grundraum neben der Marke */
-.workspace{position:relative;flex:none;display:flex;align-items:center;padding-right:var(--s4);margin-right:var(--s2);border-right:1px solid var(--line)}
-.ws-chip{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:var(--r);transition:.14s}
-.ws-chip:hover{background:var(--surface-3)}
-.ws-k{font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-400)}
-.ws-v{font-size:var(--t-sm);font-weight:600;color:var(--ink-900)}
-.ws-car{font-size:9px;color:var(--ink-400)}
-.ws-chip.switched .ws-v{color:var(--flag)}
-.ws-pop{position:absolute;left:0;top:calc(100% + 6px);z-index:60;min-width:280px;background:var(--surface);
-  border:1px solid var(--line-strong);border-radius:8px;box-shadow:0 12px 30px rgba(18,33,29,.16);padding:6px;display:none}
-.ws-pop.open{display:block}
-.ws-head{font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-400);padding:6px 10px 8px}
-.ws-opt{display:flex;align-items:center;gap:10px;width:100%;padding:8px 10px;border-radius:var(--r);font-size:var(--t-body);text-align:left}
-.ws-opt:hover{background:var(--surface-2)}
-.ws-radio{width:14px;height:14px;border-radius:50%;border:1.5px solid var(--line-strong);flex:none;display:grid;place-items:center}
-.ws-opt.on .ws-radio{border-color:var(--signal)}
-.ws-opt.on .ws-radio::after{content:'';width:7px;height:7px;border-radius:50%;background:var(--signal)}
-.ws-name{flex:1;min-width:0}
-.ws-opt.on .ws-name{font-weight:600}
-.ws-count{font-family:var(--mono);font-size:var(--t-meta);color:var(--ink-400)}
-.ws-note{font-size:var(--t-meta);color:var(--ink-500);line-height:1.5;padding:8px 10px 4px;margin-top:4px;border-top:1px solid var(--line)}
-.ws-reset{color:var(--signal-deep);font-weight:600;font-size:var(--t-meta)}
-.ws-reset:hover{text-decoration:underline}
 
 /* Vergabestelle-Tab */
 
@@ -1088,11 +1066,6 @@ body[data-mode="full"]   .main{grid-template-rows:0 6px 1fr}
 .tstatus{margin-left:auto;display:flex;align-items:center;gap:12px;flex:none}
 .tcount{font-family:var(--mono);font-size:12px;color:var(--ink-500);white-space:nowrap}
 .tcount b{color:var(--ink-900);font-weight:600}
-.markread{display:inline-flex;align-items:center;gap:var(--s2);font-size:var(--t-sm);font-weight:500;color:var(--ink-500);padding:var(--s2) 10px;border-radius:var(--r);border:1px solid transparent;background:transparent;white-space:nowrap;transition:.14s}
-.markread:hover{background:var(--surface-3);color:var(--signal-deep)}
-.markread svg{width:14px;height:14px}
-.markread svg,.markread span{pointer-events:none}
-.markread[disabled]{opacity:.4;pointer-events:none}
 .tchip{font-size:var(--t-sm);font-weight:500;padding:var(--s2) 10px;border-radius:var(--r);border:1px solid transparent;background:transparent;color:var(--ink-700);transition:.14s;white-space:nowrap}
 .tchip:hover{background:var(--surface-3)}
 .tchip[aria-pressed="true"]{background:var(--ink-900);color:#fff}
@@ -1604,10 +1577,6 @@ tr.wf-verworfen .ttitel{color:var(--ink-400);text-decoration:line-through;text-d
 @media (max-width:640px){.kal-row{grid-template-columns:80px 1fr auto;gap:var(--s3)}.kal-kind{display:none}}
 
 /* Rollen-Umschalter (Durchsicht-Hilfe; produktiv rollen-gegatet) */
-.rolelink { font-size: 12px; font-weight: 600; color: var(--signal, #0f766e);
-  padding: 6px 11px; border: 1px solid var(--signal, #0f766e); border-radius: 100px;
-  white-space: nowrap; margin-right: 12px; transition: .12s; text-decoration: none; }
-.rolelink:hover { background: var(--signal, #0f766e); color: #fff; }
 
 /* #17 Cockpit — Beobachtet / Aktiv / Historie */
 .ckscroll { flex: 1; overflow-y: auto; padding: 16px; }
@@ -1734,13 +1703,10 @@ tr.wf-verworfen .ttitel{color:var(--ink-400);text-decoration:line-through;text-d
    Beschriftungen werden knapper — so passen Suche + Controls in die Toolbar, ohne die acctcell
    zu überlappen. Die echten Funktionen (Filter/Spalten/Export/Profil/„als gesehen") bleiben. */
 @media (max-width:1400px){
-  .testsicht{display:none}                 /* Demo-Profil-Simulator (Klein/Mittel/Groß) */
   .tstatus .tcount{display:none}           /* „N von M" Zähler — sekundär */
   .tstatus{margin-left:0}
 }
 @media (max-width:1180px){
-  .markread span{display:none}             /* „als gesehen" nur noch als Haken-Icon */
-  .rolelink{font-size:12px}
 }
 @media (max-width:1080px){
   /* Toolbar-Buttons icon-only: Text weicht, das Icon (feste px) bleibt — Tooltip trägt die Bedeutung. */

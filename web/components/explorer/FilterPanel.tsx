@@ -1,5 +1,7 @@
 "use client";
 
+import { BRANCHEN } from "@/lib/explorerCore";
+
 export type Adv = {
   phases: string[];                 // auslauf | f02 | f01 | award
   horizon: number | null;          // Monate: wann wird's relevant (Frist bzw. Vertragsende)
@@ -74,9 +76,14 @@ const parseEur = (s: string): number | null => {
 
 export function FilterPanel({
   open, adv, resultCount, segments, onChange, onClose, onReset,
+  branche, profilBranche, brancheCounts, onSetBranche, onResetBranche,
 }: {
   open: boolean; adv: Adv; resultCount: number; segments: Segment[];
   onChange: (a: Adv) => void; onClose: () => void; onReset: () => void;
+  // Grundraum: strukturell ein Filter (welcher Datenraum), deshalb hier statt im Header —
+  // er wird aus dem Profil abgeleitet und ist kein Routine-Handgriff mehr.
+  branche: string; profilBranche: string; brancheCounts: Record<string, number>;
+  onSetBranche: (k: string) => void; onResetBranche: () => void;
 }) {
   const set = (patch: Partial<Adv>) => onChange({ ...adv, ...patch });
   const isPreset = adv.horizon != null && HORIZONTE.some(([m]) => m === adv.horizon);
@@ -93,6 +100,27 @@ export function FilterPanel({
         </div>
 
         <div className="fp-body">
+          <section className="fp-sec">
+            <h5>
+              Grundraum
+              <span className="fp-hint">
+                {branche === profilBranche ? "aus eurem Profil abgeleitet" : "temporär gewechselt"}
+              </span>
+            </h5>
+            {Object.entries(BRANCHEN as Record<string, string>).map(([k, v]) => (
+              <label key={k} className="fp-check">
+                <input type="radio" name="fp-branche" checked={branche === k} onChange={() => onSetBranche(k)} />
+                <span>{v}</span>
+                <i className="fp-n">{brancheCounts[k] || 0}</i>
+              </label>
+            ))}
+            {branche !== profilBranche ? (
+              <button className="fp-mini" onClick={onResetBranche}>
+                Zurück zu {(BRANCHEN as Record<string, string>)[profilBranche]}
+              </button>
+            ) : null}
+          </section>
+
           <section className="fp-sec">
             <h5>Land <span className="fp-hint">Vergabeland (DACH)</span></h5>
             {STAATEN.map(([v, l]) => (

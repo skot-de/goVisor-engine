@@ -8,49 +8,6 @@ type Token = { type: string; value: string; label: string; radius?: number | nul
 const has = (tokens: Token[], type: string, value: string) =>
   tokens.some((t) => t.type === type && t.value === value);
 
-/* ── Branchen-Umschalter (Grundraum) ─────────────────────────────────────── */
-export function Workspace({
-  aktiveBranche, profilBranche, open, counts, onToggle, onSet, onReset,
-}: {
-  aktiveBranche: string; profilBranche: string; open: boolean;
-  counts: Record<string, number>;
-  onToggle: () => void; onSet: (k: string) => void; onReset: () => void;
-}) {
-  const branchen = BRANCHEN as Record<string, string>;
-
-  return (
-    <div className="workspace">
-      <button className={`ws-chip ${aktiveBranche !== profilBranche ? "switched" : ""}`} onClick={onToggle} type="button">
-        <span className="ws-k">Branche</span>
-        <span className="ws-v">{branchen[aktiveBranche]}</span>
-        <span className="ws-car">▾</span>
-      </button>
-      <div className={`ws-pop ${open ? "open" : ""}`}>
-        <div className="ws-head">Grundraum wechseln</div>
-        {Object.entries(branchen).map(([k, v]) => (
-          <button key={k} className={`ws-opt ${k === aktiveBranche ? "on" : ""}`} onClick={() => onSet(k)}>
-            <span className="ws-radio" />
-            <span className="ws-name">{v}</span>
-            <span className="ws-count">{counts[k] || 0}</span>
-          </button>
-        ))}
-        <div className="ws-note">
-          {aktiveBranche === profilBranche ? (
-            "Aus eurem Profil abgeleitet. Wechsle, um andere Sektoren zu sichten."
-          ) : (
-            <>
-              Temporär gewechselt.{" "}
-              <button className="ws-reset" onClick={onReset}>
-                Zurück zu {branchen[profilBranche]}
-              </button>
-            </>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 /* ── Spalten-Menü ────────────────────────────────────────────────────────── */
 export function ColumnMenu({ open, onToggleCol }: { open: boolean; onToggleCol: (k: string) => void }) {
   const cols = COLS as { key: string; label: string; on: boolean; lock?: boolean }[];
