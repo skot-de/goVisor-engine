@@ -848,11 +848,14 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
             <div className="colcfg">
               <button className={`colbtn ${realProfile ? "colbtn-on" : ""}`} type="button"
                 onClick={() => router.push("/onboarding")}
-                title={realProfile ? "Profil ansehen/bearbeiten" : "Profil einrichten — schaltet echte Relevanz frei"}>
+                title={realProfile ? `${realProfile.firma || "Profil"} — ansehen/bearbeiten` : "Profil einrichten — schaltet echte Relevanz frei"}>
                 <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 12a4 4 0 100-8 4 4 0 000 8ZM4 21a8 8 0 0116 0" />
                 </svg>
-                {realProfile ? (realProfile.firma || "Profil").slice(0, 22) : "Profil einrichten"}
+                {/* Kein Zeichen-Limit: Namen sind median 24 Zeichen, aber der längste im
+                    Bestand hat 400 (eine ARGE-Auflistung). Die Breite begrenzt der Platz
+                    (CSS max-width + Ellipse), der volle Name steht im title. */}
+                <span className="pb-name">{realProfile ? (realProfile.firma || "Profil") : "Profil einrichten"}</span>
               </button>
             </div>
             <div className="searchwrap">
