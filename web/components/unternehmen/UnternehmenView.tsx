@@ -1,4 +1,6 @@
 "use client";
+
+import Link from "next/link";
 import { useEffect, useState, type Dispatch, type SetStateAction, type ReactNode, type ChangeEvent } from "react";
 import { uploadNachweis, signedNachweisUrl, removeNachweis } from "@/lib/supabase/storage";
 import {
@@ -32,8 +34,13 @@ export function UnternehmenView() {
   const [ctx, setCtx] = useState<ProfilContext | null>(null);
   const [flash, setFlash] = useState<string | null>(null);
   const [tab, setTab] = useState<"profil" | "bilanz" | "chancen">("profil");
+  const [lokaleFirma, setLokaleFirma] = useState<string | null>(null);
 
   useEffect(() => {
+    try {
+      const roh = localStorage.getItem("govisor.profile.v1");
+      if (roh) setLokaleFirma((JSON.parse(roh) as { firma?: string }).firma ?? null);
+    } catch { /* kaputter Eintrag ist kein Grund, die Seite zu blockieren */ }
     loadProfil().then((r) => {
       if (!r) { setNoSession(true); setLoading(false); return; }
       setProfil(r.profil); setCtx(r.ctx); setLoading(false);
@@ -45,7 +52,39 @@ export function UnternehmenView() {
   async function refresh() { const r = await loadProfil(); if (r) { setProfil(r.profil); setCtx(r.ctx); } }
 
   if (loading) return <div className="un-wrap"><p className="un-muted">Lädt …</p></div>;
-  if (noSession || !profil || !ctx) return <div className="un-wrap"><p className="un-muted">Bitte anmelden, um das Unternehmensprofil zu bearbeiten.</p></div>;
+  // „Bitte anmelden" war irreführend: der Explorer arbeitet auf dem lokalen Profil und
+  // zeigt oben die Firma an — hier hieß es dann trotzdem, man sei nicht angemeldet.
+  // Der Unterschied ist echt (dieses Profil liegt im Konto, nicht im Browser), also wird
+  // er benannt statt behauptet, und mit dem Weg dorthin verbunden.
+  if (noSession || !profil || !ctx) {
+    return (
+      <div className="un-wrap">
+        <div className="un-gate">
+          <h1>Unser Unternehmen</h1>
+          {lokaleFirma ? (
+            <p>
+              Wir kennen euch in diesem Browser bereits als <b>{lokaleFirma}</b> — die Lead-Liste
+              ist darauf eingestellt. Das Eignungsprofil (Referenzen, Zertifikate, Nachweise)
+              liegt aber in eurem <b>Konto</b>, nicht im Browser: nur so steht es auf jedem
+              Gerät und dem ganzen Team zur Verfügung.
+            </p>
+          ) : (
+            <p>
+              Hier pflegt ihr eure Eignungsangaben — Referenzen, Zertifikate, Nachweise.
+              Sie liegen in eurem Konto und werden für Anforderungsabgleich, Textbausteine
+              und Relevanz verwendet.
+            </p>
+          )}
+          <div className="un-gate-btns">
+            <Link className="btn btn-p" href="/login">Anmelden</Link>
+            <Link className="btn btn-t" href="/onboarding">Konto anlegen</Link>
+            <Link className="btn btn-t" href="/leads">Zurück zu den Leads</Link>
+          </div>
+          <p className="un-muted">Eure lokale Einstellung bleibt dabei erhalten.</p>
+        </div>
+      </div>
+    );
+  }
 
   const cpv4 = profil.branchen.cpv;
   const catalog = catalogFor(cpv4);

@@ -25,6 +25,7 @@ import { getOrCreateCalendarFeed } from "@/lib/supabase/calendar";
 type Profile = ReturnType<typeof buildProfile>;
 const PROFILE_KEY = "govisor.profile.v1";
 import { ColumnMenu, FilterBar, Suggestions, HeaderFilterPopover } from "./parts";
+import { AppRail, type RailId } from "./Rail";
 
 type Lead = { id: string; branche?: string; merk?: unknown; [k: string]: unknown };
 type Token = { type: string; value: string; label: string; radius?: number | null; coord?: number[] };
@@ -360,6 +361,15 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // Zuschlagsdatum ganz vorn sortieren. Deshalb nur, wenn die Phase ausdrücklich gewählt ist.
   // `alleRows` behält sie — daraus speist sich das Zuschlags-Band.
   // Die Vorauswahl gilt nur für die Akquise — Merkliste/Netzwerk sind eigene Linsen.
+  // Rail-Punkt ↔ interne Ansicht. Getrennt gehalten: die Rail spricht die Sprache des
+  // Nutzers ("akquise"), die Shell ihre eigene ("angriff").
+  const RAIL_VIEW: Record<string, View> = {
+    akquise: "angriff", merkliste: "merkliste", netzwerk: "netzwerk", strategie: "potenzial",
+  } as Record<string, View>;
+  const aktiverRailPunkt: RailId =
+    view === "potenzial" ? "strategie"
+    : filters.gemerkt ? "merkliste" : filters.netz ? "netzwerk" : "akquise";
+
   const istAkquise = view === "angriff" && !filters.gemerkt && !filters.netz;
 
   const rows: Lead[] = useMemo(() => {
@@ -762,6 +772,10 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     } else if (next === "netzwerk") {
       setFilters((f) => ({ ...f, netz: !f.netz, gemerkt: false }));
       if (netzCol) netzCol.on = !filters.netz;
+    } else {
+      // Strategie ist keine Linse auf die Liste — die Linsen dürfen nicht mitwandern.
+      setFilters((f) => ({ ...f, netz: false, gemerkt: false }));
+      if (netzCol) netzCol.on = false;
     }
     const nextView: View = next === "merkliste" && filters.gemerkt ? "angriff" : next;
     setView(nextView);
@@ -916,90 +930,14 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
       </header>
 
       <div className="body">
-        <nav className="rail" aria-label="Ansicht">
-          {/* Gruppiert nach Aufgabe, nicht nach Technik — drei Paare:
-                täglicher Trichter · Markt verstehen · was wir mitbringen.
-              „Netzwerk" steht bewusst NACH der Merkliste: es ist keine Station im
-              Tagesgeschäft, sondern eine Sicht auf den Markt (wo wir Verbindungen haben). */}
-          <button className="viewbtn" aria-label="Akquise" aria-current={view === "angriff" && !filters.gemerkt && !filters.netz ? "true" : undefined} onClick={() => switchView("angriff")}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="7" cy="15.6" r="3.6" /><circle cx="17" cy="15.6" r="3.6" />
-              <path d="M4.5 13.2V6.2A2.2 2.2 0 0 1 6.7 4h.9a2.2 2.2 0 0 1 2.2 2.2v7" />
-              <path d="M19.5 13.2V6.2A2.2 2.2 0 0 0 17.3 4h-.9a2.2 2.2 0 0 0-2.2 2.2v7" />
-              <path d="M9.8 9.4h4.4" />
-            </svg>
-            <span className="vb-lbl">Akquise<em>worauf ihr euch jetzt bewerben könnt</em></span>
-          </button>
-          <button className="viewbtn" aria-label="Merkliste" aria-current={filters.gemerkt ? "true" : undefined} onClick={() => switchView("merkliste")}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-              <path d="m12 4 2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4-3.9-3.8 5.4-.8L12 4Z" />
-            </svg>
-            <span className="vb-lbl">Merkliste<em>was ihr verfolgt — Termine und Stand</em></span>
-            {merkN ? <span className="railcount">{merkN}</span> : null}
-          </button>
-          <span className="railsep" />
-          <button className="viewbtn" aria-label="Netzwerk" aria-current={filters.netz ? "true" : undefined} onClick={() => switchView("netzwerk")}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="6" cy="7" r="2.6" /><circle cx="18" cy="7" r="2.6" /><circle cx="12" cy="18" r="2.6" />
-              <path d="M7.6 9.1 10.6 15.7M16.4 9.1 13.4 15.7M8.6 7h6.8" />
-            </svg>
-            <span className="vb-lbl">Netzwerk<em>wo ihr Verbindungen in den Markt habt</em></span>
-          </button>
-          <button className="viewbtn" aria-label="Strategie" aria-current={view === "potenzial" ? "true" : undefined} onClick={() => switchView("potenzial")}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M4 4v16h16" />
-              <path d="m7.5 15 3.5-3.6 3 3L20 7" />
-              <path d="M15.8 7H20v4.2" />
-            </svg>
-            <span className="vb-lbl">Strategie<em>wohin sich euer Markt bewegt</em></span>
-          </button>
-          <span className="railsep" />
-          <Link className="viewbtn raillink" href="/unternehmen" aria-label="Unternehmen">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M3 21h18M5 21V5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v16M14 21V9h4a1 1 0 0 1 1 1v11" />
-              <path d="M8 7h2M8 11h2M8 15h2" />
-            </svg>
-            <span className="vb-lbl">Unternehmen<em>euer Profil, eure Bilanz, eure Chancen</em></span>
-          </Link>
-          <Link className="viewbtn raillink" href="/bausteine" aria-label="Bausteine">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="4.5" y="3" width="15" height="18" rx="1.6" />
-              <path d="M8 8h8M8 12h8M8 16h4.5" />
-            </svg>
-            <span className="vb-lbl">Bausteine<em>eure Textbausteine fürs Angebot</em></span>
-          </Link>
-          <div className="railfoot">
-            {/* Konto-Einstieg: Plan-Status + Einstellungen/Abrechnung/Upgrade an EINER auffindbaren
-                Stelle. Vorher war das ein statischer „Pro"-Aufkleber ohne Ziel. */}
-            <div className="planwrap">
-              <button className={`planbadge ${plan === "paid" ? "is-pro" : ""}`} title="Konto & Zugang"
-                onClick={() => setPlanOpen((o) => !o)} aria-expanded={planOpen}>
-                <span className="plan-ring" />
-                <span className="plan-lbl">{plan === "paid" ? "Pro" : plan === "cancelled" ? "endet" : "Free"}</span>
-              </button>
-              {planOpen ? (
-                <div className="planmenu" role="menu">
-                  <div className="pm-head">
-                    <b>{userEmail || "Nicht angemeldet"}</b>
-                    <span>{plan === "paid" ? "Pro — voller Zugang" : "Free — Lead-Liste unbegrenzt, 3 Bewertungen"}</span>
-                  </div>
-                  {plan !== "paid" ? (
-                    <Link className="pm-up" href="/settings?sek=zahlung" onClick={() => setPlanOpen(false)}>
-                      Auf Pro upgraden
-                      <em>Bewertung, Vergabestellen-Dossier & Markt ohne Limit</em>
-                    </Link>
-                  ) : null}
-                  <Link className="pm-item" href="/settings" onClick={() => setPlanOpen(false)}>Einstellungen</Link>
-                  <Link className="pm-item" href="/settings?sek=zahlung" onClick={() => setPlanOpen(false)}>Zahlung & Rechnungen</Link>
-                  <Link className="pm-item" href="/unternehmen" onClick={() => setPlanOpen(false)}>Unser Unternehmen</Link>
-                  {userEmail
-                    ? <button className="pm-item pm-out" onClick={() => { setPlanOpen(false); abmelden(); }}>Abmelden</button>
-                    : <Link className="pm-item" href="/login" onClick={() => setPlanOpen(false)}>Anmelden</Link>}
-                </div>
-              ) : null}
-            </div>
-          </div>
-        </nav>
+        <AppRail
+          current={aktiverRailPunkt}
+          merkN={merkN}
+          onSwitch={(id) => switchView(RAIL_VIEW[id])}
+          plan={plan}
+          userEmail={userEmail}
+          onLogout={abmelden}
+        />
 
         <div className="main" ref={mainRef}>
           {view === "potenzial" ? (

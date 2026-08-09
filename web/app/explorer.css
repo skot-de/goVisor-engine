@@ -41,6 +41,12 @@ body[data-view="verteidigung"] .band.risk[data-level="mittel"] .segs i:nth-child
 
 .app{display:flex;flex-direction:column;height:100vh}
 .body{display:grid;grid-template-columns:var(--rail) 1fr;flex:1;min-height:0}
+/* Eigenständige Seiten (Unternehmen, Bausteine) im selben Gerüst: Rail links,
+   Inhalt rechts scrollbar — ohne die Spalten-/Detail-Mechanik der Lead-Ansicht. */
+.seitenmain{overflow:auto;min-width:0}
+.seitenmain.baust-page{min-height:0}   /* im Raster scrollt der Rahmen, nicht die Seite */
+.topbar-schlank{height:48px;gap:var(--s4)}
+.top-titel{font-size:13px;font-weight:600;color:var(--ink-700);letter-spacing:-.01em}
 /* Durchgehende Kopfleiste */
 .topbar{display:flex;align-items:center;border-bottom:1px solid var(--line);background:var(--surface);flex:none;position:relative;z-index:40}
 .brandcell{flex:none;display:flex;align-items:center;padding:0 var(--s5) 0 var(--s5);
