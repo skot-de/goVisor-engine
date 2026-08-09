@@ -922,7 +922,6 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
           />
         </div>
         <div className="acctcell">
-          <Link className="rolelink" href="/unternehmen" title="Euer Eignungsprofil — Stammdaten, Referenzen, Zertifikate (Ticket #27)">Unser Unternehmen</Link>
           <Link className="rolelink" href="/bausteine" title="Deine Textbausteine für Angebote (Ticket #23)">Bausteine</Link>
           <a className="rolelink" href="/authority" title="Zur Vergabestellen-Sicht (Vergabeblick) — in Produktion rollen-gegatet">↔ Vergabestelle</a>
           {userEmail ? (
@@ -966,6 +965,13 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
             </svg>
             <b>Strategie</b>
           </button>
+          <Link className="viewbtn raillink" href="/unternehmen" title="Unser Unternehmen — Eignungsprofil, Bilanz, Chancen (#27/#28)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M3 21h18M5 21V5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v16M14 21V9h4a1 1 0 0 1 1 1v11" />
+              <path d="M8 7h2M8 11h2M8 15h2" />
+            </svg>
+            <b>Unternehmen</b>
+          </Link>
           <div className="railfoot">
             <span className="verlabel" title="Prototyp-Version">v4.4</span>
             <button className="planbadge" title="Kontostatus">

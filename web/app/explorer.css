@@ -1725,3 +1725,5 @@ tr.wf-verworfen .ttitel{color:var(--ink-400);text-decoration:line-through;text-d
 .c-empf .empf.rec-def{ background:#eaf1fb; color:#2b5fa8; }
 .c-empf .empf.rec-open{ background:var(--surface-2); color:var(--ink-700); }
 .c-empf .empf.rec-skip{ background:var(--surface-2); color:var(--ink-500); }
+
+.raillink{text-decoration:none}
