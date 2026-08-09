@@ -21,14 +21,25 @@
         <string>/Library/Frameworks/Python.framework/Versions/3.14/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
     </dict>
 
-    <!-- Täglich 05:30. Verpasst der Mac den Slot (aus/schlafend), holt launchd ihn beim nächsten Wachwerden nach. -->
+    <!-- Zwei Läufe täglich: 13:00 (Vormittags-/Mittagswelle, ~60% des Tages veröffentlicht) und
+         22:00 (Tagesrest, ~100%). Gemessen an cbc:IssueTime der DÖE-eForms (Bürotag-Verteilung).
+         Verpasst der Mac einen Slot (aus/schlafend), holt launchd ihn beim nächsten Wachwerden nach.
+         Der mkdir-Lock im Script verhindert Überlappung; der Monats-Refetch fängt jede Verzögerung auf. -->
     <key>StartCalendarInterval</key>
-    <dict>
-        <key>Hour</key>
-        <integer>5</integer>
-        <key>Minute</key>
-        <integer>30</integer>
-    </dict>
+    <array>
+        <dict>
+            <key>Hour</key>
+            <integer>13</integer>
+            <key>Minute</key>
+            <integer>0</integer>
+        </dict>
+        <dict>
+            <key>Hour</key>
+            <integer>22</integer>
+            <key>Minute</key>
+            <integer>0</integer>
+        </dict>
+    </array>
 
     <key>RunAtLoad</key>
     <false/>
