@@ -912,6 +912,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
           />
         </div>
         <div className="acctcell">
+          <Link className="rolelink" href="/unternehmen" title="Euer Eignungsprofil — Stammdaten, Referenzen, Zertifikate (Ticket #27)">Unser Unternehmen</Link>
           <Link className="rolelink" href="/bausteine" title="Deine Textbausteine für Angebote (Ticket #23)">Bausteine</Link>
           <a className="rolelink" href="/authority" title="Zur Vergabestellen-Sicht (Vergabeblick) — in Produktion rollen-gegatet">↔ Vergabestelle</a>
           {userEmail ? (
