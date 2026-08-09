@@ -285,6 +285,8 @@ def main() -> int:
     ap.add_argument("--table", default="all", choices=["all", *TABLES],
                     help="einzelne Tabelle oder 'all' (Default)")
     ap.add_argument("--dry-run", action="store_true", help="nur DDL + NDJSON, kein Push")
+    ap.add_argument("--ddl-only", action="store_true",
+                    help="NUR die Migrations-DDL schreiben (für psql-Apply im Tages-Runner) — kein NDJSON, kein Push")
     ap.add_argument("--prune", action="store_true",
                     help="nach dem Upsert Zeilen loeschen, die der Export nicht mehr "
                          "enthaelt (abgelaufene Fristen). Ohne den Schalter wird nur "
@@ -312,6 +314,8 @@ def main() -> int:
     ddl_path.write_text("\n\n".join(ddl_all))
     print(f"DDL geschrieben: {ddl_path}  → im Supabase-Dashboard ausführen "
           f"(idempotent, legt an UND migriert).")
+    if args.ddl_only:
+        return 0
     # PostgREST laedt sein Schema nach `NOTIFY pgrst` **asynchron** nach. Wer direkt
     # danach pusht, faengt sich PGRST204 („column not found in the schema cache"),
     # obwohl die Spalte laengst existiert. Zwei Sekunden reichen.

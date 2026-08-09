@@ -71,9 +71,24 @@ if ! $PY -m govisor.cli gold --country DE --as-of "$TODAY"; then
 fi
 echo "  Gold ok."
 
-# 3) Lead-Ausschnitt nach Supabase (Upsert + verwaiste/abgelaufene entfernen).
-step "Supabase-Export (Upsert + Prune)"
+# 3) Schema selbstheilend migrieren (neue Parquet-Spalten → gov_*-Tabellen) via psql, dann pushen.
 if [ -n "${SUPABASE_URL:-}" ] && [ -n "${SUPABASE_SERVICE_KEY:-}" ]; then
+  step "Supabase-Schema-Migration (DDL aus aktuellem Parquet, idempotent via psql)"
+  $PY scripts/export_supabase.py --table all --ddl-only
+  REF="$(echo "$SUPABASE_URL" | sed -E 's#https?://([a-z0-9]+)\.supabase\.co.*#\1#')"
+  if [ -f "$ROOT/.secrets/supabase_db.txt" ] && command -v psql >/dev/null 2>&1; then
+    if PGPASSWORD="$(tr -d '[:space:]' < "$ROOT/.secrets/supabase_db.txt")" psql \
+         -h "db.$REF.supabase.co" -p 5432 -U postgres -d postgres \
+         -v ON_ERROR_STOP=1 -q -f docs/supabase_schema.sql >/dev/null; then
+      echo "  Schema aktuell (Drift automatisch nachgezogen)."
+    else
+      echo "  ⚠ psql-Migration fehlgeschlagen — versuche Push trotzdem."
+    fi
+  else
+    echo "  ⚠ psql/DB-Passwort fehlt — Schema-Migration übersprungen (Push kann an Drift scheitern)."
+  fi
+
+  step "Supabase-Export (Upsert + Prune)"
   if $PY scripts/export_supabase.py --table all --prune; then
     echo "  Supabase-Push ok."
   else
