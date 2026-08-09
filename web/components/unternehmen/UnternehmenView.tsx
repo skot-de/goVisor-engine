@@ -13,6 +13,7 @@ import {
 } from "@/lib/supabase/unternehmen";
 import { catalogFor, requiredKeysFor, type CatalogItem } from "@/lib/unternehmen/catalog";
 import { exportProfilJson, exportProfilPdf } from "@/lib/unternehmen/export";
+import { BilanzTab, ChancenTab } from "./BilanzChancen";
 
 /* #27 Eignungsprofil — „Unser Unternehmen". Ein Objekt, an einer Stelle gepflegt (§2).
  * Lädt das Profil einmal, hält es in State, jede Sektion speichert ihren Teil merge-sicher. */
@@ -30,6 +31,7 @@ export function UnternehmenView() {
   const [profil, setProfil] = useState<Profil | null>(null);
   const [ctx, setCtx] = useState<ProfilContext | null>(null);
   const [flash, setFlash] = useState<string | null>(null);
+  const [tab, setTab] = useState<"profil" | "bilanz" | "chancen">("profil");
 
   useEffect(() => {
     loadProfil().then((r) => {
@@ -57,18 +59,29 @@ export function UnternehmenView() {
           Textbausteine und Relevanz greifen darauf zu.</p>
       </div>
 
-      <WirkungBanner w={w} />
+      <div className="un-tabs" role="tablist">
+        {(["profil", "bilanz", "chancen"] as const).map((t) => (
+          <button key={t} role="tab" aria-selected={tab === t} className={`un-tab ${tab === t ? "on" : ""}`} onClick={() => setTab(t)}>
+            {t === "profil" ? "Eignungsprofil" : t === "bilanz" ? "Unsere Bilanz" : "Chancen"}
+          </button>
+        ))}
+      </div>
 
-      <IdentitaetSektion profil={profil} ctx={ctx} setProfil={setProfil} toast={toast} refresh={refresh} />
-      <StammdatenSektion profil={profil} setProfil={setProfil} toast={toast} refresh={refresh} />
-      <ZielrichtungSektion profil={profil} setProfil={setProfil} toast={toast} />
-      <BranchenSektion profil={profil} setProfil={setProfil} toast={toast} />
-      <KatalogSektion profil={profil} catalog={catalog} setProfil={setProfil} toast={toast} refresh={refresh} />
-      <ReferenzenSektion profil={profil} setProfil={setProfil} toast={toast} refresh={refresh} />
-      <ZertifikateSektion profil={profil} setProfil={setProfil} toast={toast} refresh={refresh} />
-      <AusschluesseSektion profil={profil} setProfil={setProfil} toast={toast} />
-      <RolleSektion profil={profil} setProfil={setProfil} toast={toast} />
-      <ExportSektion profil={profil} ctx={ctx} />
+      {tab === "profil" ? (
+        <>
+          <WirkungBanner w={w} />
+          <IdentitaetSektion profil={profil} ctx={ctx} setProfil={setProfil} toast={toast} refresh={refresh} />
+          <StammdatenSektion profil={profil} setProfil={setProfil} toast={toast} refresh={refresh} />
+          <ZielrichtungSektion profil={profil} setProfil={setProfil} toast={toast} />
+          <BranchenSektion profil={profil} setProfil={setProfil} toast={toast} />
+          <KatalogSektion profil={profil} catalog={catalog} setProfil={setProfil} toast={toast} refresh={refresh} />
+          <ReferenzenSektion profil={profil} setProfil={setProfil} toast={toast} refresh={refresh} />
+          <ZertifikateSektion profil={profil} setProfil={setProfil} toast={toast} refresh={refresh} />
+          <AusschluesseSektion profil={profil} setProfil={setProfil} toast={toast} />
+          <RolleSektion profil={profil} setProfil={setProfil} toast={toast} />
+          <ExportSektion profil={profil} ctx={ctx} />
+        </>
+      ) : tab === "bilanz" ? <BilanzTab /> : <ChancenTab profil={profil} />}
 
       {flash && <div className="un-flash">{flash}</div>}
     </div>
