@@ -1,9 +1,10 @@
-import { StammdatenForm } from "@/components/unternehmen/StammdatenForm";
+import { UnternehmenView } from "@/components/unternehmen/UnternehmenView";
 import "./unternehmen.css";
 
-// #27 Eignungsprofil — Hauptbereich „Unser Unternehmen" (Phase 1: Stammdaten + KMU).
+// #27 Eignungsprofil — Hauptbereich „Unser Unternehmen": Stammdaten, Anforderungskatalog,
+// Referenzen, Zertifikate, Ausschlüsse, Zielrichtung, Rolle, Vorbefüllung, Export.
 export const metadata = { title: "Unser Unternehmen · goVisor" };
 
 export default function UnternehmenPage() {
-  return <StammdatenForm />;
+  return <UnternehmenView />;
 }
