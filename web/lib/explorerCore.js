@@ -1326,7 +1326,7 @@ function renderUebersicht(l){
         <div class="oc-t"><b>Gehört dieser Vertrag euch?</b></div>
         <div class="oc-x">Wir haben ${MEINE_FIRMA} als Auftragnehmer erkannt, aber nur über den Firmennamen —
         das ist bei etwa jedem zwanzigsten Namen nicht eindeutig. Erst wenn du bestätigst, behandeln wir den Vertrag
-        als euren und warnen dich vor dem Auslaufen.</div>
+        als euren und warnen euch vor dem Auslaufen.</div>
         <div class="oc-btns">
           <button class="oc-yes" data-own="${l.id}:ja">Ja, gehört uns</button>
           <button class="oc-no" data-own="${l.id}:nein">Nein, nicht unserer</button>
@@ -1804,7 +1804,7 @@ function renderAnalyse(l){
           if(!m || m.relevanz==='na') return `<div class="req req-noprofile">
             <span class="mk q">?</span>
             <span class="lbl">Ohne hinterlegtes Profil können wir die Passung nicht prüfen.
-            Wählt oben eine Testsicht oder richte euer Firmenprofil ein.</span></div>`;
+            Wählt oben eine Testsicht oder richtet euer Firmenprofil ein.</span></div>`;
           const MK = {ok:['y','&#10003;'], teil:['q','~'], no:['n','&#10007;'], unbekannt:['q','?']};
           const WERT = {feld:[l.cpv, l.cpvLabel], region:['Region', l.region], vol:['Volumen', l.volumen.wert]};
           const rows = m.teile.map(t=>{ const [cls,sym]=MK[t.status]||['q','?']; const [code,lbl]=WERT[t.dim]||['',''];
@@ -1823,7 +1823,7 @@ function renderAnalyse(l){
       <h4>Lücke</h4>
       ${(()=>{ const m = l.match;
         if(!m || m.relevanz==='na') return `<div class="note-box">
-          Ohne hinterlegtes Profil gibt es nichts abzugleichen. Richte euer Firmenprofil ein,
+          Ohne hinterlegtes Profil gibt es nichts abzugleichen. Richtet euer Firmenprofil ein,
           dann zeigen wir hier, woran dieser Lead scheitert oder passt.</div>`;
         // Die härteste Lücke zuerst: harter Blocker > Feld > Region > Volumen
         const buerg = m.blocker.find(b=>b.art==='buergschaft');
@@ -2226,7 +2226,7 @@ function renderProfil(){
           <span>${userProfile?(userProfile.regions?(userProfile.regionLabels||[]).join(' · '):'bundesweit'):'bundesweit'}</span><i>·</i>
           ${userProfile
             ? `<span class="steck-ok" title="Profil aktiv — steuert Relevanz und Anforderungs-Check.">Profil aktiv</span>`
-            : `<span class="steck-m" title="Melde dich an und bestätige eure Firma, um euer Profil zu verbinden (Relevanz, Historie, Erfolgsprämie).">Profil noch nicht verbunden</span>`}
+            : `<span class="steck-m" title="Meldet euch an und bestätigt eure Firma, um euer Profil zu verbinden (Relevanz, Historie, Erfolgsprämie).">Profil noch nicht verbunden</span>`}
         </div>
       </div>
     </div>

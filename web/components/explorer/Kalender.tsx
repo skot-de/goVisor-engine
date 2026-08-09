@@ -66,7 +66,7 @@ export function Kalender({
 
       {total === 0 ? (
         <div className="kal-empty">
-          <b>Noch keine Fristen.</b> Merke dir Leads (☆), dann erscheinen ihre Angebotsfristen hier —
+          <b>Noch keine Fristen.</b> Merkt euch Leads (☆), dann erscheinen ihre Angebotsfristen hier —
           und, falls veröffentlicht, mit Datum und Restzeit.
         </div>
       ) : (

@@ -288,7 +288,7 @@ export default function OnboardingPage() {
               </div>
             </div>
             <div className="note note-p">Passend zu diesem Profil bauen wir gleich eure Lead-Liste.
-              Bestätige die Firma, dann leiten wir das Profil aus euren Vergaben ab.</div>
+              Bestätigt die Firma, dann leiten wir das Profil aus euren Vergaben ab.</div>
             <div className="btnrow split">
               <button className="btn btn-p" onClick={() => bestaetigen(matched)}>Ja, das sind wir</button>
               <button className="btn btn-s" onClick={() => { setMatches([matched, ...matches].slice(0, 6)); setScreen("kandidaten"); }}>Nein, andere Firma</button>
@@ -301,7 +301,7 @@ export default function OnboardingPage() {
           <div className="card wide">
             <h1>Meinst du eine dieser Firmen?</h1>
             <p className="lede">Der Name allein war nicht eindeutig. Deshalb schlagen wir nichts vor, sondern
-              lassen dich wählen — eine falsche Zuordnung wäre schlimmer als eine Rückfrage.</p>
+              lassen euch wählen — eine falsche Zuordnung wäre schlimmer als eine Rückfrage.</p>
             <div className="cands">
               {matches.length ? matches.map((m) => (
                 <button key={m.id} className="cand" onClick={() => bestaetigen(m)}>
