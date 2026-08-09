@@ -68,6 +68,36 @@ export function hasProfile(p) {
   return !!(p && p.cpvFields && p.cpvFields.length);
 }
 
+// CPV-Division (2-stellig) → Grundraum. Autoritativ aus dim_cpv.branche + der BRANCHE-CASE
+// in export_web_leads.py (dieselbe Zuordnung, mit der die leads-<branche>.json gebaut werden).
+// Alles Nicht-Gelistete → 'beratung' (der ELSE-Zweig).
+const DIVISION_BRANCHE = {
+  '30': 'it', '32': 'it', '48': 'it', '64': 'it', '72': 'it', '31': 'it', '38': 'it',
+  '44': 'bau', '45': 'bau', '51': 'bau', '70': 'bau', '71': 'bau', '50': 'bau',
+  '33': 'medizin', '85': 'medizin',
+  '35': 'sicherheit',
+  '09': 'energie', '76': 'energie', '65': 'energie', '41': 'energie', '90': 'energie', '24': 'energie', '14': 'energie',
+};
+
+/* Grundraum (Branche) aus dem Profil ableiten — damit ein Kunde nach dem Onboarding SEINE Leads
+ * sieht, nicht den IT-Default. Explizite p.branche gewinnt (Nicht-Match-Pfad); sonst der Grundraum,
+ * in dem die Firma die meisten Zuschläge hat (gewichtet über cpvWins, sonst gezählt). */
+export function brancheFromProfile(p) {
+  if (!p) return null;
+  if (p.branche) return p.branche;
+  const fields = p.cpvFields || [];
+  if (!fields.length) return null;
+  const wins = p.cpvWins || {};
+  const score = {};
+  for (const f of fields) {
+    const br = DIVISION_BRANCHE[String(f).slice(0, 2)] || 'beratung';
+    score[br] = (score[br] || 0) + (wins[f] || 1);
+  }
+  let best = null, bw = -1;
+  for (const br in score) if (score[br] > bw) { bw = score[br]; best = br; }
+  return best;
+}
+
 // Bürgschaften liegen typisch bei ~5 % der Auftragssumme (Bietungs-/Vertragserfüllung).
 const BUERG_QUOTE = 0.05;
 

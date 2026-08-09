@@ -7,7 +7,7 @@ import {
   applyProfile, setProfile, setUserContracts, PROFILES, parseWert, aufwandStufe,
 } from "@/lib/explorerCore";
 import { loadContracts } from "@/lib/supabase/contracts";
-import { buildProfile } from "@/lib/profileEngine";
+import { buildProfile, brancheFromProfile } from "@/lib/profileEngine";
 import { FilterPanel, emptyAdv, advCount, type Adv, type Segment } from "./FilterPanel";
 import { LeadTable } from "./LeadTable";
 import { DetailPanel } from "./DetailPanel";
@@ -141,7 +141,9 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   const [panelOpen, setPanelOpen] = useState(false);
   const accountLimit = false; // Pro; §9: kommt später aus dem echten Account-Status
   const [aktiveBranche, setAktiveBranche] = useState("it");
-  const profilBranche = "it";
+  // Grundraum aus dem Profil (CPV) — nicht mehr hart „it". Fällt auf „it" zurück, solange kein Profil da ist.
+  const profilBranche = brancheFromProfile(realProfile as unknown as Parameters<typeof brancheFromProfile>[0]) || "it";
+  const brancheManual = useRef(false);   // true, sobald der Nutzer den Grundraum selbst umschaltet
   const [view, setView] = useState<View>(SLUG_VIEW[initialSlug] ?? "angriff");
   // #16 Verfahrenskalender — „Termine"-Modus in der Merkliste + iCal-Feed-URL
   const [kalMode, setKalMode] = useState(false);
@@ -179,10 +181,18 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     })();
   }, []);
 
+  // Nach dem Profil-Laden den Grundraum auf die eigene Branche stellen — sonst sieht ein Bau-Kunde
+  // den IT-Default. Nur solange der Nutzer nicht selbst umgeschaltet hat.
+  useEffect(() => {
+    if (brancheManual.current) return;
+    const b = brancheFromProfile(realProfile as unknown as Parameters<typeof brancheFromProfile>[0]);
+    if (b) setAktiveBranche((cur) => (cur === b ? cur : b));
+  }, [realProfile]);   // eslint-disable-line react-hooks/exhaustive-deps
+
   async function abmelden() {
     await logout().catch(() => {});
     try { localStorage.removeItem(PROFILE_KEY); } catch { /* egal */ }
-    setRealProfile(null); setUserEmail(null); setProfileKey("");
+    setRealProfile(null); setUserEmail(null); setProfileKey(""); brancheManual.current = false;
     bump();
   }
 
@@ -199,7 +209,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     if (!lead) return;
     deepRef.current = { lead, tab: p.get("tab") || "docs" };
     const br = p.get("branche");
-    if (br) setAktiveBranche(br);
+    if (br) { brancheManual.current = true; setAktiveBranche(br); }   // expliziter Deep-Link gewinnt vor Profil-Ableitung
   }, []);
 
   useEffect(() => {
@@ -744,7 +754,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     return () => window.removeEventListener("popstate", onPop);
   }, [bump]);
 
-  function setBranche(k: string) { setAktiveBranche(k); setWsOpen(false); setActiveId(null); }
+  function setBranche(k: string) { brancheManual.current = true; setAktiveBranche(k); setWsOpen(false); setActiveId(null); }
   function resetBranche() { setAktiveBranche(profilBranche); setWsOpen(false); setActiveId(null); }
 
   // Tastatur

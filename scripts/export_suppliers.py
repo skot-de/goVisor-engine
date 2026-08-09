@@ -21,12 +21,25 @@ E = f"read_parquet('{G}/lead_export.parquet')"
 
 TOP_N = 6000   # Top-Lieferanten nach Zuschlägen — deckt die realistischen Nutzer ab
 
-# Generik-/Käufer-Stämme (Ticket #7 v2, Leitplanke 2): keine privaten Bieter, raus.
-BLOCK = ['stadt', 'gemeinde', 'landkreis', 'kreis ', 'bezirk', 'vergabekammer', 'arge',
-         'bietergemeinschaft', 'ministerium', 'behörde', 'körperschaft', 'anstalt des',
-         'zweckverband', 'eigenbetrieb', 'kommunal', 'land ', 'freistaat', 'bundesamt',
-         'bundesministerium', 'universität', 'hochschule', 'klinikum der']
-BLOCK_SQL = ' AND '.join(f"lower(name) NOT LIKE '%{b}%'" for b in BLOCK)
+# Generik-/Käufer-Stämme (Ticket #7 v2, Leitplanke 2): keine öffentlichen Käufer, raus.
+# WORTANFANG-Match (am Namensanfang ODER nach einem Leerzeichen) — NICHT beliebiger Substring.
+# Sonst blockt 'land ' auch „…Deutschland GmbH" (211 echte Firmen: MAN, Rosenbauer, Telekom …)
+# und 'stadt' auch „Filderstadt". Wortanfang fängt „Stadtwerke"/„Land Berlin"/„Landkreis Cham",
+# lässt aber „Deutschland/Filderstadt/Kommunaltechnik" durch.
+BLOCK_WORD = ['stadt', 'gemeinde', 'landkreis', 'kreis', 'bezirk', 'vergabekammer', 'arge',
+              'bietergemeinschaft', 'ministerium', 'behörde', 'körperschaft', 'zweckverband',
+              'eigenbetrieb', 'kommunal', 'land', 'freistaat', 'bundesamt', 'bundesministerium',
+              'universität', 'hochschule']
+BLOCK_SUB = ['anstalt des', 'klinikum der']   # spezifische Phrasen: überall im Namen ok
+def _block_sql(col):
+    cl = []
+    for b in BLOCK_WORD:
+        cl.append(f"lower({col}) NOT LIKE '{b}%'")     # Namensanfang
+        cl.append(f"lower({col}) NOT LIKE '% {b}%'")   # nach Leerzeichen (Wortanfang)
+    for b in BLOCK_SUB:
+        cl.append(f"lower({col}) NOT LIKE '%{b}%'")
+    return ' AND '.join(cl)
+BLOCK_SQL = _block_sql('name')
 
 # Gewinner-Zuschläge mit Identity, CPV4 und Leistungsort-NUTS1. Nur Identitäten, die
 # mindestens eine belegt aufgelöste Entity (HR/national-id) enthalten — sonst Namens-Rauschen.
