@@ -1719,3 +1719,9 @@ tr.wf-verworfen .ttitel{color:var(--ink-400);text-decoration:line-through;text-d
 .rec-kl{ color:var(--ink-800); width:130px; }
 .rec-kz{ color:var(--ink-900); font-weight:600; }
 .rec-kq{ color:var(--ink-400); text-align:right; }
+
+/* #26 Listen-Pille (eine Spalte, zwei Inhalte) — Farbklassen auf dem bestehenden .empf-Pill. */
+.c-empf .empf.rec-go{ background:var(--signal-wash); color:var(--signal-deep); }
+.c-empf .empf.rec-def{ background:#eaf1fb; color:#2b5fa8; }
+.c-empf .empf.rec-open{ background:var(--surface-2); color:var(--ink-700); }
+.c-empf .empf.rec-skip{ background:var(--surface-2); color:var(--ink-500); }
