@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { applyState, renderProfil } from "@/lib/explorerCore";
 import { ContractsEditor } from "./ContractsEditor";
+import { Trefferguete } from "./Trefferguete";
 
 /* Strategie (Ticket #10) — unternehmerische Sicht, nicht operative.
    Acht Sektionen in zwei Gruppen, vertikale Abschnittsnavigation (keine zweite Tab-Ebene). */
@@ -118,6 +119,7 @@ const SEKTIONEN = [
     { key: "position", label: "Position", frage: "Wo stehen wir?" },
     { key: "faehigkeiten", label: "Fähigkeiten", frage: "Was blockiert uns?" },
     { key: "bindung", label: "Bindung", frage: "Was ist uns verschlossen?" },
+    { key: "trefferguete", label: "Treffergüte", frage: "Warum passt manches nicht — und was ändert das?" },
     { key: "profil", label: "Profil", frage: "Wer sind wir?" },
   ]},
 ];
@@ -885,6 +887,8 @@ export function StrategieView({
           ? (!data ? <div className="st-head"><div><h4>Fähigkeiten</h4><p className="st-frage">Lade Aggregate …</p></div></div>
              : !isPro(data) ? <ProGate titel="Fähigkeiten" frage="Was blockiert uns?" was="Geforderte Nachweise, Bürgschafts-Hürde und der formale Rahmen im Feld." />
              : <Faehigkeiten data={data} />)
+          : sektion === "trefferguete"
+          ? <Trefferguete aktiveBranche={aktiveBranche} />
           : sektion === "position" || sektion === "profil"
           ? <div onClick={handleClick} dangerouslySetInnerHTML={{ __html: bestandHtml }} />
           : <NochNicht label={meta.label} frage={meta.frage} />}

@@ -1,0 +1,79 @@
+/* #11 Treffergüte — Namespace tg-*. Tokens aus globals.css, kein Grün für „erledigt" (§11). */
+.tg-wrap { padding: 4px 2px 40px; max-width: 760px; }
+.tg-head h4 { font-size: 18px; font-weight: 700; letter-spacing: -.01em; color: var(--ink-900); }
+.tg-head .st-frage { color: var(--ink-500); font-size: 13px; margin-top: 2px; }
+.tg-count { margin-top: 10px; font-size: 13.5px; color: var(--ink-700); font-variant-numeric: tabular-nums; }
+.tg-muted { color: var(--ink-500); font-size: 13px; line-height: 1.5; }
+
+.tg-effect { margin: 14px 0; padding: 10px 14px; border-radius: 10px; background: var(--surface-2); border: 1px solid var(--line); font-size: 13px; color: var(--ink-800); }
+
+.tg-block { margin-top: 22px; border-top: 1px solid var(--line); padding-top: 16px; }
+.tg-block h5 { font-size: 14px; font-weight: 700; color: var(--ink-900); margin-bottom: 12px; }
+
+/* Block 1 — Lücken */
+.tg-gap { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.tg-gap-h { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.tg-gap-l { font-size: 14px; font-weight: 600; color: var(--ink-900); }
+.tg-gap-n { font-size: 12.5px; color: var(--ink-500); font-family: var(--mono, ui-monospace, monospace); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tg-gap-t { font-size: 12.5px; color: var(--ink-600); line-height: 1.5; margin: 5px 0 9px; max-width: 62ch; }
+.tg-pills { display: flex; flex-wrap: wrap; gap: 7px; }
+.tg-pills button { border: 1px solid var(--line-strong); background: var(--surface); border-radius: 8px; padding: 6px 12px; font: inherit; font-size: 12.5px; cursor: pointer; color: var(--ink-700); }
+.tg-pills button:hover { border-color: var(--signal); }
+.tg-pills.sm button { padding: 4px 10px; font-size: 12px; }
+.tg-pills.sm button.on { background: var(--ink-800); color: #fff; border-color: var(--ink-800); }
+.tg-betrag { display: flex; gap: 7px; }
+.tg-betrag input, .tg-form input, .tg-form select, .tg-rank {
+  border: 1px solid var(--line-strong); border-radius: 8px; padding: 7px 10px; font: inherit; font-size: 13px; background: var(--surface); color: var(--ink-900); }
+.tg-betrag input:focus, .tg-form input:focus { outline: none; border-color: var(--signal); }
+.tg-btn { border: 0; background: var(--signal); color: #fff; font-weight: 600; border-radius: 8px; padding: 8px 15px; cursor: pointer; font: inherit; font-size: 12.5px; }
+.tg-btn:hover { background: var(--signal-deep); }
+.tg-btn:disabled { opacity: .55; cursor: default; }
+.tg-btn.ghost { background: transparent; color: var(--ink-600); border: 1px solid var(--line-strong); }
+.tg-betrag button { border: 1px solid var(--line-strong); background: var(--surface); border-radius: 8px; padding: 7px 12px; font: inherit; font-size: 12.5px; cursor: pointer; color: var(--ink-700); }
+
+/* Block 2 — gemessen vs erklärt */
+.tg-ge { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.tg-ge-t { display: block; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--ink-400); margin-bottom: 8px; }
+.tg-ge-t em { font-weight: 400; font-style: normal; text-transform: none; letter-spacing: 0; color: var(--ink-400); font-size: 11px; }
+.tg-ge-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.tg-ge-list li { font-size: 13px; color: var(--ink-800); padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+.tg-old { color: var(--flag); cursor: help; }
+.tg-confirm { margin-top: 12px; display: flex; flex-direction: column; gap: 7px; font-size: 12.5px; color: var(--ink-600); }
+.tg-confirm button { align-self: flex-start; border: 1px solid var(--line-strong); background: var(--surface); border-radius: 8px; padding: 6px 13px; font: inherit; font-size: 12.5px; cursor: pointer; color: var(--ink-800); }
+.tg-confirm button:hover { border-color: var(--signal); }
+
+/* Block 3 — privates Tracking + Reziprozität */
+.tg-track-lead { font-size: 13px; color: var(--ink-700); line-height: 1.5; margin-bottom: 12px; max-width: 64ch; }
+.tg-bilanz { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 16px; }
+.tg-bilanz > div { display: flex; flex-direction: column; gap: 2px; border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; background: var(--surface); }
+.tg-b-n { font-size: 17px; font-weight: 700; color: var(--ink-900); font-variant-numeric: tabular-nums; }
+.tg-b-l { font-size: 11px; color: var(--ink-400); }
+.tg-recip { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: var(--surface-2); }
+.tg-recip .tg-muted { margin: 6px 0; }
+.tg-note { font-size: 11.5px; color: var(--ink-500); font-style: italic; line-height: 1.45; }
+.tg-out-list { list-style: none; margin: 14px 0; display: flex; flex-direction: column; }
+.tg-out-list li { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 13px; color: var(--ink-800); }
+.tg-out-list li > span:first-child { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tg-res { font-size: 11px; font-weight: 700; border-radius: 6px; padding: 2px 8px; }
+.tg-res.won { color: var(--signal-deep); background: var(--signal-wash); }
+.tg-res.lost { color: var(--flag); background: var(--flag-wash); }
+.tg-res.cancelled, .tg-res.open, .tg-res.dismiss { color: var(--ink-500); background: var(--surface-2); }
+.tg-x { border: 0; background: none; cursor: pointer; color: var(--ink-400); font-size: 17px; line-height: 1; }
+.tg-x:hover { color: var(--flag); }
+
+.tg-form { border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-top: 10px; background: var(--surface); }
+.tg-form-grid { display: grid; grid-template-columns: 2fr 1.4fr 1fr; gap: 8px; }
+.tg-form-row { display: flex; align-items: center; gap: 12px; margin-top: 10px; flex-wrap: wrap; }
+.tg-chk { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--ink-700); }
+.tg-rank { width: 80px; }
+.tg-form-actions { display: flex; gap: 8px; margin-top: 12px; }
+
+/* Block 4 — Grenzen */
+.tg-limits .tg-limtab { width: 100%; border-collapse: collapse; margin-bottom: 8px; }
+.tg-limtab td { font-size: 13px; color: var(--ink-700); padding: 5px 0; border-bottom: 1px solid var(--line); }
+.tg-limtab td:last-child { text-align: right; color: var(--ink-500); font-variant-numeric: tabular-nums; }
+
+@media (max-width: 620px) {
+  .tg-ge, .tg-form-grid { grid-template-columns: 1fr; }
+  .tg-bilanz { grid-template-columns: repeat(2, 1fr); }
+}

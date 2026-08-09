@@ -28,6 +28,9 @@ export function emptyProfile() {
     buergschaft: null,       // Bürgschaftsrahmen (€); null = nicht hinterlegt
     rahmen: null,            // bevorzugte Rechtsrahmen (vgv/vob/…); null = alle
     capabilities: [],        // Fähigkeitsfelder (keys)
+    // #27 §6 — wirken auf die Relevanz (Deferral aufgelöst):
+    exclusions: null,        // {wert_min,wert_max,regionen_aus[],cpv_aus[],keine_bietergemeinschaft}
+    zielrichtung: 'ausgewogen', // 'bestand' | 'ausgewogen' | 'expandieren'
   };
 }
 
@@ -48,6 +51,8 @@ export function buildProfile(input) {
   p.maxAlleine = numOrNull(input.maxAlleine);
   p.buergschaft = numOrNull(input.buergschaft);
   p.capabilities = input.capabilities || [];
+  p.exclusions = input.exclusions || null;
+  p.zielrichtung = input.zielrichtung || 'ausgewogen';
   return p;
 }
 
@@ -115,9 +120,28 @@ export function matchLead(lead, p, leadValue) {
     text: vol === 'ok' ? 'in eurer Spanne' : vol === 'unbekannt' ? 'nicht veröffentlicht' : vol === 'klein' ? 'unter eurer Spanne' : 'über eurer Spanne',
   });
 
+  // ── Ausschlusskriterien (#27 §6.3) — bewusste Abwahl. Unbekanntes schließt NIE aus. ──
+  const ex = p.exclusions || {};
+  let ausgeschlossen = false;
+  const leadCpv = String(lead.cpv || '');
+  if (Array.isArray(ex.cpv_aus) && ex.cpv_aus.some((c) => c && leadCpv.startsWith(String(c)))) {
+    ausgeschlossen = true;
+    blocker.push({ art: 'ausschluss', text: 'gehört zu einer von euch abgewählten Leistungsart.' });
+  } else if (Array.isArray(ex.regionen_aus) && ex.regionen_aus.some((r) => r && nuts.startsWith(String(r)))) {
+    ausgeschlossen = true;
+    blocker.push({ art: 'ausschluss', text: 'liegt in einer von euch ausgeschlossenen Region.' });
+  } else if (leadValue != null && ex.wert_max != null && leadValue > ex.wert_max) {
+    ausgeschlossen = true;
+    blocker.push({ art: 'ausschluss', text: `über eurer Höchstgrenze (${fmtEur(ex.wert_max)}).` });
+  } else if (leadValue != null && ex.wert_min != null && leadValue < ex.wert_min) {
+    ausgeschlossen = true;
+    blocker.push({ art: 'ausschluss', text: `unter eurer Mindestgrenze (${fmtEur(ex.wert_min)}).` });
+  }
+
   // ── Harte K.-o.-Kriterien / Partner-Hinweis ────────────────────────────────
   // Alleinkapazität: großer Auftrag über der Alleingrenze → nur mit Partner (kein Ausschluss).
-  if (p.maxAlleine != null && leadValue != null && leadValue > p.maxAlleine) {
+  // „Keine Bietergemeinschaften" (#27 §6.3) unterdrückt den Partner-Zusatz.
+  if (p.maxAlleine != null && leadValue != null && leadValue > p.maxAlleine && !ex.keine_bietergemeinschaft) {
     partner = true;
     blocker.push({ art: 'partner', text: `Auftrag über eurer Alleingrenze (${fmtEur(p.maxAlleine)}) — realistisch nur mit Partner.` });
   }
@@ -132,13 +156,17 @@ export function matchLead(lead, p, leadValue) {
   // ── Relevanz-Stufe ──────────────────────────────────────────────────────────
   const hartBlock = blocker.some((b) => b.art === 'buergschaft');
   let relevanz;
-  if (feld === 'aussen') relevanz = 'niedrig';
+  if (ausgeschlossen) relevanz = 'niedrig';       // #27 §6.3: Ausschluss → aus der Relevanz
+  else if (feld === 'aussen') relevanz = 'niedrig';
   else if (hartBlock) relevanz = 'niedrig';
   else {
     let s = 2;                                  // Feldtreffer ist die Basis
     if (feld === 'ok') s++;                      // voller Feldtreffer statt Nachbar
     if (region === 'ok' || region === 'bundesweit') s++;
     if (vol === 'ok') s++; else if (vol === 'unbekannt') s += 0.5;   // unbekannt: halber Kredit
+    // Zielrichtung (#27 §6.2): Bestand gewichtet Bekanntes hoch, Expansion gibt Nachbarfeldern Kredit.
+    if (p.zielrichtung === 'bestand' && p.cpvWins && p.cpvWins[cpv4]) s += 0.5;
+    else if (p.zielrichtung === 'expandieren' && feld === 'nachbar') s += 0.5;
     relevanz = s >= 4.5 ? 'hoch' : s >= 3 ? 'mittel' : 'niedrig';
   }
 

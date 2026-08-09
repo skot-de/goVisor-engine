@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState, type Dispatch, type SetStateAction, type ReactNode } from "react";
+import { useEffect, useState, type Dispatch, type SetStateAction, type ReactNode, type ChangeEvent } from "react";
+import { uploadNachweis, signedNachweisUrl, removeNachweis } from "@/lib/supabase/storage";
 import {
   loadProfil, computeKmu, RECHTSFORMEN,
   saveStammdaten, saveZielrichtung, saveBranchen, saveExclusions, saveRole,
@@ -64,7 +65,7 @@ export function UnternehmenView() {
       <BranchenSektion profil={profil} setProfil={setProfil} toast={toast} />
       <KatalogSektion profil={profil} catalog={catalog} setProfil={setProfil} toast={toast} refresh={refresh} />
       <ReferenzenSektion profil={profil} setProfil={setProfil} toast={toast} refresh={refresh} />
-      <ZertifikateSektion profil={profil} setProfil={setProfil} toast={toast} />
+      <ZertifikateSektion profil={profil} setProfil={setProfil} toast={toast} refresh={refresh} />
       <AusschluesseSektion profil={profil} setProfil={setProfil} toast={toast} />
       <RolleSektion profil={profil} setProfil={setProfil} toast={toast} />
       <ExportSektion profil={profil} ctx={ctx} />
@@ -374,15 +375,17 @@ function ReferenzenSektion({ profil, setProfil, toast, refresh }: SecP & { refre
 
 /* ── Zertifikate (§8/§9) ── */
 const ZERT_TYPEN = ["ISO 9001", "ISO 14001", "ISO 27001", "ISO 45001", "SCC / SCP", "Präqualifikation (PQ-VOB)", "Präqualifikation (PQ-VOL)", "Berufshaftpflicht", "Sonstige"];
-function ZertifikateSektion({ profil, setProfil, toast }: SecP) {
+function ZertifikateSektion({ profil, setProfil, toast, refresh }: SecP & { refresh: () => Promise<void> }) {
   const [list, setList] = useState<Certificate[]>(profil.certificates);
   useEffect(() => setList(profil.certificates), [profil.certificates]);
   function upd(id: string, patch: Partial<Certificate>) { setList((l) => l.map((c) => (c.id === id ? { ...c, ...patch } : c))); }
   function add() { setList((l) => [{ id: nid(), zustand: "angegeben", typ: "", nummer: "", aussteller: "", gueltig_bis: null }, ...l]); }
   function remove(id: string) { setList((l) => l.filter((c) => c.id !== id)); }
-  async function save() { const r = await saveCertificates(list); toast(r.ok ? "Zertifikate gespeichert." : "Speichern fehlgeschlagen."); }
+  async function save() { const r = await saveCertificates(list); toast(r.ok ? "Zertifikate gespeichert." : "Speichern fehlgeschlagen."); if (r.ok) await refresh(); }
+  // Auto-Persist nach Upload/Entfernen, damit die Nachweis-Referenz nicht verloren geht.
+  async function persist(next: Certificate[]) { setList(next); await saveCertificates(next); }
   return (
-    <Section title="Zertifikate & Nachweise" hint="Ablaufdatum pflichtig — abgelaufene zählen nicht als erfüllt; Erinnerung 90 Tage vorher (§9).">
+    <Section title="Zertifikate & Nachweise" hint="Ablaufdatum pflichtig — abgelaufene zählen nicht als erfüllt; Erinnerung 90 Tage vorher (§9). Nachweis optional, verschlüsselt und profilgebunden.">
       <div className="un-actions"><button className="un-btn ghost" onClick={add}>+ Zertifikat</button></div>
       {list.length === 0 && <p className="un-muted">Noch keine Zertifikate erfasst.</p>}
       {list.map((c) => {
@@ -398,7 +401,10 @@ function ZertifikateSektion({ profil, setProfil, toast }: SecP) {
               <label className="un-inl"><span>gültig bis</span><input type="date" value={c.gueltig_bis || ""} onChange={(e) => upd(c.id, { gueltig_bis: e.target.value || null })} /></label>
             </div>
             <div className="un-refmeta">
-              <label className="un-beleg"><input type="checkbox" checked={c.zustand === "belegt"} onChange={(e) => upd(c.id, { zustand: e.target.checked ? "belegt" : "angegeben" })} /> Nachweis hinterlegt</label>
+              <NachweisControl cert={c}
+                onUploaded={(path) => persist(list.map((x) => (x.id === c.id ? { ...x, nachweis: path, zustand: "belegt" } : x)))}
+                onRemoved={() => persist(list.map((x) => (x.id === c.id ? { ...x, nachweis: null, zustand: "angegeben" } : x)))}
+                toast={toast} />
               {abgelaufen && <span className="un-zst expired">abgelaufen</span>}
               {bald && <span className="un-zst soon">läuft in {dd} T ab</span>}
               {!abgelaufen && !bald && dd != null && <span className="un-zst angegeben">gültig</span>}
@@ -408,8 +414,38 @@ function ZertifikateSektion({ profil, setProfil, toast }: SecP) {
         );
       })}
       <div className="un-actions"><button className="un-btn" onClick={save}>Zertifikate speichern</button></div>
-      <p className="un-note">Nachweis-Datei-Upload (verschlüsselt, profilgebunden) folgt mit der Storage-Anbindung; hier zählt „Nachweis hinterlegt" + Nummer/Gültigkeit.</p>
     </Section>
+  );
+}
+
+function NachweisControl({ cert, onUploaded, onRemoved, toast }: { cert: Certificate; onUploaded: (path: string) => void; onRemoved: () => void; toast: (m: string) => void }) {
+  const [busy, setBusy] = useState(false);
+  async function pick(e: ChangeEvent<HTMLInputElement>) {
+    const f = e.target.files?.[0]; if (!f) return;
+    setBusy(true); const r = await uploadNachweis(cert.id, f); setBusy(false);
+    e.target.value = "";
+    if (r.ok && r.path) { onUploaded(r.path); toast("Nachweis hochgeladen."); } else toast(r.error || "Upload fehlgeschlagen.");
+  }
+  async function view() {
+    if (!cert.nachweis) return;
+    const url = await signedNachweisUrl(cert.nachweis);
+    if (url) window.open(url, "_blank", "noopener"); else toast("Nachweis nicht abrufbar.");
+  }
+  async function del() { if (!cert.nachweis) return; await removeNachweis(cert.nachweis); onRemoved(); toast("Nachweis entfernt."); }
+  if (cert.nachweis) {
+    return (
+      <span className="un-nachweis">
+        <span className="un-zst belegt">Nachweis</span>
+        <button className="un-btn ghost sm" onClick={view}>ansehen</button>
+        <button className="un-btn ghost sm" onClick={del}>entfernen</button>
+      </span>
+    );
+  }
+  return (
+    <label className="un-upload">
+      {busy ? "Lädt …" : "Nachweis hochladen"}
+      <input type="file" accept="application/pdf,image/png,image/jpeg" onChange={pick} disabled={busy} hidden />
+    </label>
   );
 }
 

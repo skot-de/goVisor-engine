@@ -26,6 +26,20 @@ export async function saveProfile(profile: Profile): Promise<{ ok: boolean; reas
   const supabase = createClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return { ok: false, reason: "no-session" };
+  // Merge-sicher: der profile-Blob trägt auch die #27-Eignungsangaben (stammdaten, references,
+  // certificates, attributes, exclusions, zielrichtung, branchen, role, history). Ein Onboarding-
+  // Save würde sie sonst wegschreiben (kein Datenverlust). Leere/Default-Werte nicht drüberbügeln.
+  const { data: existing } = await supabase.from("user_profiles").select("profile").eq("id", user.id).single();
+  const prev = (existing?.profile as Record<string, unknown> | null) ?? {};
+  const blob: Record<string, unknown> = { ...(profile as unknown as Record<string, unknown>) };
+  const K27 = ["stammdaten", "references", "certificates", "attributes", "exclusions", "zielrichtung", "branchen", "role", "history"];
+  for (const k of K27) {
+    const inc = blob[k];
+    const leer = inc == null || inc === "ausgewogen"
+      || (Array.isArray(inc) && inc.length === 0)
+      || (typeof inc === "object" && !Array.isArray(inc) && Object.keys(inc as object).length === 0);
+    if (leer && prev[k] !== undefined) blob[k] = prev[k];
+  }
   const { error } = await supabase.from("user_profiles").update({
     company_name: profile.firma ?? null,
     identity_id: profile.identityId ?? null,
@@ -39,7 +53,7 @@ export async function saveProfile(profile: Profile): Promise<{ ok: boolean; reas
     vol_max: profile.volMax ?? null,
     branche: profile.branche ?? null,
     known_from_ted: profile.entityConfidence === "confirmed",
-    profile,
+    profile: blob,
   }).eq("id", user.id);
   return { ok: !error, reason: error?.message };
 }
