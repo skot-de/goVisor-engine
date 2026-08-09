@@ -438,6 +438,12 @@ export default function OnboardingPage() {
               </div>
               <FirmaFakten m={matched} />
             </div>
+            {/* Belegt ist eine gute Nachricht — die soll man auch als solche lesen,
+                nicht nur als grünes Wörtchen im Kopf. */}
+            {beleg?.conf === "belegt" ? (
+              <div className="note note-ok">Wir konnten euch zuordnen: {beleg.grund}.
+                Ihr könnt dieses Profil direkt übernehmen.</div>
+            ) : null}
             {beleg?.conf === "unbestaetigt" ? (
               antragGesendet ? (
                 <div className="note note-p">Prüfantrag ist raus. Ihr könnt sofort weiterarbeiten —

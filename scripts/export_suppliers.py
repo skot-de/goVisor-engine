@@ -193,6 +193,33 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE domains AS
   r AS (SELECT *, row_number() OVER (PARTITION BY identity_id ORDER BY n DESC) rn FROM c)
   SELECT identity_id, dom AS domain, n AS domain_belege FROM r WHERE rn = 1""")
 
+# Konkrete Kontaktadressen der Gewinner — als HASH, nie im Klartext.
+#
+# Der Domain-Abgleich hilft nur Firmen mit eigener Domain. Genau die Gruppe, die ihn
+# nicht hat (2.522 Firmen mit überwiegend privater Adresse, davon 1.239 t-online), ist
+# aber fast vollständig über die konkrete Adresse belegbar: 2.518 von ihnen haben eine
+# in den Vergabedaten. Wer sich mit genau dieser Adresse registriert, IST der Kontakt,
+# der die Zuschläge entgegengenommen hat — ein stärkerer Beleg als jede Domain.
+#
+# Gespeichert wird sha256(normalisierte Adresse), auf 16 Hex-Zeichen gekürzt. Die Datei
+# liegt ohnehin nur serverseitig; der Hash verhindert zusätzlich, dass sich aus ihr eine
+# Adressliste ERNTEN lässt. Gegen das Nachprüfen einer bereits erratenen Adresse schützt
+# er nicht — das kann er ohne geheimen Schlüssel auch nicht, und dafür ist er nicht da.
+con.execute(f"""CREATE OR REPLACE TEMP TABLE mailhashes AS
+  WITH kauf AS (
+    SELECT lead_id, lower(trim(email)) AS e FROM read_parquet('{G}/lead_party.parquet')
+    WHERE party_role = 'buyer' AND email LIKE '%@%'),
+  m AS (
+    SELECT DISTINCT w.identity_id, lower(trim(lp.email)) AS mail
+    FROM w JOIN read_parquet('{G}/lead_party.parquet') lp ON lp.lead_id = w.notice_id
+           LEFT JOIN kauf k ON k.lead_id = w.notice_id
+    WHERE lower(lp.party_role) LIKE '%win%' AND lp.email LIKE '%@%'
+      AND w.identity_id IN (SELECT identity_id FROM tops)
+      AND (k.e IS NULL OR lower(trim(lp.email)) <> k.e)      -- Käufer-Kontakt raus (14 %)
+      AND lower(split_part(lp.email, '@', 2)) NOT IN ('emailaddress.given', 'example.com'))
+  SELECT identity_id, list(substr(sha256(mail), 1, 16)) AS mail_hashes
+  FROM m GROUP BY 1""")
+
 # Gruppen-Mitglieder (Schwester-Entities): je Entität eigener Name, Methode, Konfidenz, Wins.
 con.execute(f"""CREATE OR REPLACE TEMP TABLE members AS
   WITH ew AS (
@@ -209,7 +236,7 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE members AS
 rows = con.execute(f"""
   SELECT t.identity_id, n.name, n.aliase, t.wins, f.fields, f6.fields6, r.regions, r.regionen_fuer_80,
          v.vol_median, v.wert_belege, v.wert_klumpen, s.buyers, s.seit, m.members, k.top_kunden, k.top_anteil,
-         d.domain, d.domain_belege
+         d.domain, d.domain_belege, mh.mail_hashes
   FROM tops t
   LEFT JOIN namen n ON n.identity_id = t.identity_id
   LEFT JOIN felder f ON f.identity_id = t.identity_id
@@ -220,6 +247,7 @@ rows = con.execute(f"""
   LEFT JOIN members m ON m.identity_id = t.identity_id
   LEFT JOIN kunden k ON k.identity_id = t.identity_id
   LEFT JOIN domains d ON d.identity_id = t.identity_id
+  LEFT JOIN mailhashes mh ON mh.identity_id = t.identity_id
   WHERE n.name IS NOT NULL AND {BLOCK_SQL}
   ORDER BY t.wins DESC""").fetchall()
 
@@ -238,7 +266,7 @@ def method_conf(m):
 
 out = []
 for (iid, name, aliase, wins, fields, fields6, regions, reg80, vol, wert_belege, wert_klumpen,
-     buyers, seit, members, top_kunden, top_anteil, domain, domain_belege) in rows:
+     buyers, seit, members, top_kunden, top_anteil, domain, domain_belege, mail_hashes) in rows:
     ms = []
     for mem in (members or []):
         conf, text = method_conf(mem["method"])
@@ -274,6 +302,7 @@ for (iid, name, aliase, wins, fields, fields6, regions, reg80, vol, wert_belege,
         # Nur serverseitig ausgewertet (siehe /api/entity-verify) — nie ins Suchergebnis.
         "domain": domain or None,
         "domainBelege": int(domain_belege) if domain_belege else 0,
+        "mailHashes": list(mail_hashes or []),
         "members": ms,
     })
 

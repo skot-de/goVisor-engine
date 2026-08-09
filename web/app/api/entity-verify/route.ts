@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+import { createHash } from "node:crypto";
 import { loadSuppliers } from "@/lib/suppliers";
+import { rateLimit, clientIp } from "@/lib/rateLimit";
 
 /* Belegt-Prüfung des Identitäts-Anspruchs — bewusst SERVERSEITIG.
  *
@@ -20,6 +22,15 @@ const FREEMAIL = new Set([
 
 const MIN_BELEGE = 2;
 
+// Der Endpunkt beantwortet „gehört diese Adresse zu dieser Firma?" — also ein Orakel, mit
+// dem man Adressen durchprobieren könnte. Zum Registrieren braucht man ihn ein paar Mal,
+// nicht hundertfach. 20 Anfragen je IP und Stunde reichen für jeden echten Ablauf.
+const PRO_IP = 20;
+const FENSTER_MS = 60 * 60 * 1000;
+
+/** Gleiche Normalisierung wie beim Export (lower + trim), sonst trifft der Hash nie. */
+const mailHash = (m: string) => createHash("sha256").update(m.trim().toLowerCase()).digest("hex").slice(0, 16);
+
 export type VerifyErgebnis = {
   conf: "belegt" | "unbestaetigt";
   grund: string;
@@ -28,6 +39,12 @@ export type VerifyErgebnis = {
 };
 
 export async function POST(req: NextRequest) {
+  const rl = rateLimit(`entityverify:${clientIp(req)}`, PRO_IP, FENSTER_MS);
+  if (!rl.ok) {
+    return NextResponse.json({ error: "zu viele Anfragen" },
+      { status: 429, headers: { "retry-after": String(rl.retryAfter) } });
+  }
+
   let body: { id?: string; email?: string };
   try { body = await req.json(); } catch { return NextResponse.json({ error: "ungültig" }, { status: 400 }); }
 
@@ -44,6 +61,16 @@ export async function POST(req: NextRequest) {
 
   const antwort = (r: VerifyErgebnis) => NextResponse.json(r);
 
+  // Stärkster Beleg zuerst: die Adresse selbst steht als Gewinner-Kontakt in den
+  // Vergabedaten. Wer sie hat, IST der Kontakt, der die Zuschläge entgegengenommen hat —
+  // und das trägt auch bei privaten Adressen, wo der Domain-Abgleich nichts hergibt
+  // (gemessen: 2.518 der 2.522 Freemail-Firmen haben eine Adresse hinterlegt).
+  if (s?.mailHashes?.includes(mailHash(email))) {
+    return antwort({
+      conf: "belegt", domainBekannt: !!bekannt,
+      grund: "genau diese Adresse steht in den Vergabeunterlagen dieser Firma",
+    });
+  }
   if (bekannt && belege >= MIN_BELEGE && dom === bekannt) {
     return antwort({ conf: "belegt", grund: `über eure Firmen-Domain ${dom} bestätigt`, domainBekannt: true });
   }

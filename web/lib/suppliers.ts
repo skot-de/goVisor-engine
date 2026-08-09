@@ -16,6 +16,8 @@ export type Supplier = {
   // NUR SERVERSEITIG — nie ins Suchergebnis, sonst sind die Kontaktdomains aller
   // Firmen über die Suche abgreifbar. Auswertung ausschließlich in /api/entity-verify.
   domain?: string | null; domainBelege?: number;
+  // sha256(Adresse), auf 16 Hex-Zeichen gekürzt — Klartext liegt nirgends.
+  mailHashes?: string[];
   members: Member[];
 };
 
