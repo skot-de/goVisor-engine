@@ -1696,3 +1696,26 @@ tr.wf-verworfen .ttitel{color:var(--ink-400);text-decoration:line-through;text-d
 .empf-head{ display:flex; align-items:center; gap:10px; margin-bottom:var(--s3,12px); }
 .empf-head .empf{ font-size:13px; padding:4px 12px; }
 .empf-head .empf-grund{ max-width:none; font-size:12px; margin:0; white-space:normal; }
+
+/* #26 Handlungsempfehlung — Detail-Block (ersetzt #19 bnb). Farben je Aussage, kein Rot (§4.1). */
+.rec26{ margin-bottom:var(--s4,16px); }
+.rec-verdict{ display:flex; align-items:baseline; flex-wrap:wrap; gap:10px; padding:10px 14px; border-radius:10px; border:1px solid var(--line); }
+.rec-verdict.rec-go{ background:var(--signal-wash); border-color:#cfe8dc; }
+.rec-verdict.rec-def{ background:#eaf1fb; border-color:#c9dcf5; }
+.rec-verdict.rec-open{ background:var(--surface-2); }
+.rec-verdict.rec-skip{ background:var(--surface-2); border-color:var(--line); }
+.rec-label{ font-weight:800; font-size:14px; letter-spacing:.02em; color:var(--ink-900); }
+.rec-go .rec-label{ color:var(--signal-deep); }
+.rec-def .rec-label{ color:#2b5fa8; }
+.rec-grund{ font-size:12.5px; color:var(--ink-600); }
+.rec-frage{ font-size:12.5px; color:var(--ink-800); font-style:italic; }
+.rec-step{ font-size:12px; color:var(--ink-600); margin-top:6px; }
+.rec-hint{ font-size:12px; color:var(--ink-500); margin-top:6px; font-style:italic; }
+.rec-zusaetze{ display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+.rec-z{ font-size:11px; background:var(--surface-2); border:1px solid var(--line); border-radius:99px; padding:2px 9px; color:var(--ink-700); }
+.rec-kette{ width:100%; border-collapse:collapse; margin-top:10px; }
+.rec-kette td{ font-size:11.5px; padding:4px 6px; border-bottom:1px solid var(--line); vertical-align:top; }
+.rec-e{ font-weight:700; color:var(--ink-400); width:34px; }
+.rec-kl{ color:var(--ink-800); width:130px; }
+.rec-kz{ color:var(--ink-900); font-weight:600; }
+.rec-kq{ color:var(--ink-400); text-align:right; }

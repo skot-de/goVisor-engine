@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { emptyProfile, matchLead, whyHtml, hasProfile } from './profileEngine';
+import { recommend, begruendungskette } from './recommendation';
 import { applyLabels } from './labels';
 /**
  * goVisor Explorer — Kern-Logik & Demo-Daten, VERBATIM aus dem Prototyp
@@ -1585,20 +1586,32 @@ function renderAnalyse(l){
 
     <section class="sec" id="an-bewertung" data-sec="bewertung">
       <h4>Bewertung</h4>
-      ${(()=>{ const e = empfehlung(l), m = EMPF[e.v];   // Ticket 22 — Kopf-Verdikt über den Scores
-        return `<div class="empf-head"><span class="empf ${m.cls}">${m.t}</span><span class="empf-grund">${EMPF_GRUND[e.code]}</span></div>`;
-      })()}
-      ${(()=>{ const b = bidNoBid(l); if(!b) return '';
-        // #19 Bid/No-Bid — Einordnung aus den vier Faktoren, K.o. vorgeschaltet.
-        return `<div class="bnb bnb-${b.einordnung.cls}">
-          <div class="bnb-q">Solltest du bieten?</div>
-          <div class="bnb-rows">
-            <div class="bnb-row"><span class="bnb-k">Chance</span><span class="bnb-dots">${dots(b.chanceDots)}</span><span class="bnb-v">${b.chance}</span></div>
-            <div class="bnb-row"><span class="bnb-k">Aufwand</span><span class="bnb-dots">${dots(b.aufDots)}</span><span class="bnb-v">${b.aufwand==='na'?'unbekannt':b.aufwand}${b.aufTreiber&&b.aufTreiber.length?' · '+b.aufTreiber.slice(0,2).join(', '):''}</span></div>
-            <div class="bnb-row"><span class="bnb-k">Eignung</span><span class="bnb-eig ${b.eignungOk?'ok':'no'}">${b.eignungOk?'&#10003; erfüllt':'&#10007; nicht erfüllt'}</span><span class="bnb-v">${b.hartBlock?b.hartBlock.text:'Pflichtkriterien, soweit prüfbar'}</span></div>
-          </div>
-          <div class="bnb-verdict"><b>${b.einordnung.t}</b> — ${b.einordnung.x}</div>
-        </div>`;
+      ${(()=>{
+        // #26 Handlungsempfehlung (ersetzt #19). Kaskade A/B je Datenzustand + Abdeckung, plus
+        // Begründungskette E1–E10 und Zusätze. Nie ein Verdikt ohne offengelegte Bedingungen (§7).
+        const rec = recommend(l, userProfile, { ownBuyers: userContracts.map(c=>c.buyer_name).filter(Boolean) });
+        const CLS = { gruen:'go', blau:'def', neutral:'open', gedaempft:'skip' };
+        const kette = begruendungskette(rec.evals);
+        const zTags = rec.zusaetze.map(z=>`<span class="rec-z">${z.t}</span>`).join('');
+        let head;
+        if(rec.empfehlung){
+          const b = rec.empfehlung;
+          head = `<div class="rec-verdict rec-${CLS[b.cls]}"><span class="rec-label">${b.label}</span>`
+            + (b.gruende&&b.gruende.length?`<span class="rec-grund">${b.gruende.join(' · ')}</span>`:'')
+            + (b.frage?`<span class="rec-frage">${b.frage}</span>`:'') + `</div>`
+            + (b.schritt?`<div class="rec-step">Nächster Schritt: <b>${b.schritt}</b></div>`:'');
+        } else {
+          const a = rec.einordnung;
+          const hint = rec.gesperrt==='keine_unterlagen' ? 'Für eine Empfehlung fehlen die Vergabeunterlagen.'
+            : rec.gesperrt==='kaltstart' ? 'Für eine Empfehlung fehlt die Mindestabdeckung im Eignungsprofil.'
+            : rec.gesperrt==='kein_profil' ? 'Für eine Empfehlung fehlt das Eignungsprofil.' : '';
+          head = `<div class="rec-verdict rec-${CLS[a.cls]}"><span class="rec-label">${a.label}</span>`
+            + (a.gruende&&a.gruende.length?`<span class="rec-grund">${a.gruende.join(' · ')}</span>`:'') + `</div>`
+            + (hint?`<div class="rec-hint">${hint}</div>`:'');
+        }
+        return `<div class="rec26">${head}`
+          + (zTags?`<div class="rec-zusaetze">${zTags}</div>`:'')
+          + `<table class="rec-kette"><tbody>${kette.map(k=>`<tr><td class="rec-e">${k.E}</td><td class="rec-kl">${k.label}</td><td class="rec-kz">${k.zustand}</td><td class="rec-kq">${k.quelle}</td></tr>`).join('')}</tbody></table></div>`;
       })()}
       <div class="scores">
         <div class="score" data-level="${l.relevanz}">
