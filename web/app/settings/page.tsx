@@ -11,6 +11,8 @@ import {
   type AccountRow, type AlertSettings, type Invoice,
 } from "@/lib/supabase/account";
 import { BANDS } from "@/lib/billing";
+import { AppRail, AppTop } from "@/components/explorer/Rail";
+import "../explorer.css";
 import "../onboarding/onboarding.css";
 import "./settings.css";
 
@@ -45,15 +47,15 @@ export default function SettingsPage() {
 
   if (loading || !acc) return <div className="ob-page"><div className="stage"><p className="spin">Lade …</p></div></div>;
 
-  return (
-    <div className="ob-page set-page">
-      <header className="top">
-        <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
-          <span className="brand">go<span>V</span>isor</span><span className="ver">Einstellungen</span>
-        </div>
-        <Link className="btn btn-t" href="/">Zurück zu den Leads</Link>
-      </header>
 
+  return (
+    <div className="app">
+      <AppTop titel="Einstellungen" />
+      <div className="body">
+        {/* Einstellungen sind kein Rail-Ziel (sie hängen am Konto-Menü) — deshalb ohne
+            aktiven Punkt, aber MIT Navigation: sonst wäre es wieder eine Sackgasse. */}
+        <AppRail />
+        <div className="main seitenmain ob-page set-page">
       <div className="set-wrap">
         <nav className="set-nav">
           {SEKTIONEN.map(([k, l]) => (
@@ -70,6 +72,8 @@ export default function SettingsPage() {
         </main>
       </div>
       {toast && <div className="set-toast">{toast}</div>}
+        </div>
+      </div>
     </div>
   );
 }

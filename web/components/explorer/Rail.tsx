@@ -61,7 +61,8 @@ type Plan = "free" | "paid" | "cancelled";
 export function AppRail({
   current, merkN = 0, onSwitch, plan: planProp, userEmail: mailProp, onLogout,
 }: {
-  current: RailId;
+  /** Fehlt, wenn die Seite kein Rail-Ziel ist (z. B. Einstellungen) — dann leuchtet nichts. */
+  current?: RailId;
   merkN?: number;
   /** Nur die Shell kann in-app umschalten. Fehlt der Handler, werden alle Punkte zu Links. */
   onSwitch?: (id: RailId) => void;
