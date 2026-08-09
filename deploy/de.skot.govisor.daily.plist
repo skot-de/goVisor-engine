@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>de.skot.govisor.daily</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor/scripts/daily_leads.sh</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor</string>
+
+    <!-- launchd startet mit minimalem PATH → Python-Framework + Standardpfade explizit setzen -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/Library/Frameworks/Python.framework/Versions/3.14/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+
+    <!-- Täglich 05:30. Verpasst der Mac den Slot (aus/schlafend), holt launchd ihn beim nächsten Wachwerden nach. -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>5</integer>
+        <key>Minute</key>
+        <integer>30</integer>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <!-- Frühe launchd-Fehler (vor dem Script-eigenen Log) landen hier -->
+    <key>StandardOutPath</key>
+    <string>/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor/data/logs/launchd.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor/data/logs/launchd.err.log</string>
+</dict>
+</plist>
