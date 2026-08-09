@@ -405,8 +405,10 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // ohne Profil zurück auf Frist. Manuelle Sortierung schaltet das ab.
   useEffect(() => {
     if (!autoSort.current) return;
-    const hatProfil = !!profileKey || !!realProfile;
-    setSortKey(hatProfil ? "ranking" : "frist");
+    // Erster Blick auf die Akquise = die Leads, die zuerst Arbeit verdienen: Relevanz × Chance ×
+    // wenig Aufwand × genug Frist (topScore). Auch ohne Profil sinnvoll (dann ohne Relevanz-Anteil)
+    // — die Alternative „nach Frist" stellt die fast abgelaufenen nach oben, also das Gegenteil.
+    setSortKey("ranking");
     setSortDir(1);
   }, [profileKey, realProfile]);
 

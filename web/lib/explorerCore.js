@@ -572,13 +572,15 @@ const COLS = [
   {key:'titel', label:'Ausschreibung', on:true, lock:true},
   {key:'natur', label:'Leistung',  on:true},
   {key:'rahmen',label:'Rahmen',    on:false},
-  {key:'aufwand',label:'Aufwand',  on:true, th:'center'},
   {key:'buyer', label:'Auftraggeber', on:true},
   {key:'frist', label:'Frist',     on:true},
-  {key:'neu',   label:'Wettbewerb',on:true, th:'center'},
-  {key:'konk',  label:'Konkurrenz',on:false},
+  // Die drei Entscheidungs-Achsen stehen bewusst NEBENEINANDER — man liest sie zusammen:
+  // lohnt es sich (Relevanz), kann ich gewinnen (Chance), was kostet es (Aufwand).
   {key:'relevanz', label:'Relevanz', on:true, th:'center'},
   {key:'wechsel',  label:'Chance',   on:true, th:'center'},
+  {key:'aufwand',label:'Aufwand',  on:true, th:'center'},
+  {key:'neu',   label:'Wettbewerb',on:true, th:'center'},
+  {key:'konk',  label:'Konkurrenz',on:false},
   {key:'vol',   label:'Volumen',   on:true,  th:'right'},
   {key:'region',label:'Region',    on:false},
   {key:'inc',   label:'Amtsinhaber', on:false},
@@ -659,13 +661,33 @@ function syncLocationColumn(){
   if(rc) rc.on = hasOrt ? true : (rc._userOff ? false : rc.on);
 }
 
+/* Gesamtrang für die Akquise-Startansicht. Bewusst additiv und flach gewichtet (kein Score im
+ * Sinne einer Präzisionsbehauptung) — er ordnet nur, was zuerst angesehen gehört:
+ *   Relevanz ×2  ·  Chance ×1,5  ·  wenig Aufwand ×1  ·  ausreichende Frist ×1
+ * Unbekannt = neutrale Mitte, nie eine Abwertung. */
+function topScore(l){
+  const R = LVL[l.relevanz] || 0;                 // hoch 3 · mittel 2 · niedrig 1 · na 0
+  const W = l.wechsel && l.wechsel !== 'na' ? LVL[l.wechsel] : 2;   // unbekannt → Mitte
+  const a = aufwandStufe(l).stufe;
+  const A = a === 'niedrig' ? 3 : a === 'mittel' ? 2 : a === 'hoch' ? 1 : 2;   // wenig Aufwand = besser
+  const t = (l.frist && typeof l.frist.tage === 'number') ? l.frist.tage
+          : (typeof l.tage === 'number' ? l.tage : null);
+  // Frist: genug Zeit zum Bieten ist ein Plus, akute Knappheit ein Minus, unbekannt neutral.
+  const F = t == null ? 2 : t >= 14 ? 3 : t >= 7 ? 2.5 : t >= 3 ? 1.5 : 0.5;
+  return 2 * R + 1.5 * W + 1 * A + 1 * F;
+}
+
 function sorted(rows){
   const g = l => {
     switch(sortKey){
       // Kombiniertes Ranking (Ticket #1): gewichtetes Mittel aus Relevanz & Wechsel-Chance,
       // beste zuerst. Wechsel „na" (Erstausschreibung) → nur Relevanz. Negativ, damit die
       // aufsteigende Sortierung die höchsten Scores nach oben bringt.
-      case 'ranking': { const R=LVL[l.relevanz], W=LVL[l.wechsel]; return -(l.wechsel==='na' ? R : (R+W)/2); }
+      // „Top-Leads" (Default mit Profil): die vier Achsen, die über ein Angebot entscheiden —
+      // lohnt es sich (Relevanz), kann ich gewinnen (Chance), was kostet es (Aufwand), habe ich
+      // noch Zeit (Frist). Unbekanntes wird NEUTRAL gewertet (fällt nicht nach unten) — sonst
+      // würden dünn dokumentierte Ausschreibungen systematisch verschwinden.
+      case 'ranking': return -topScore(l);
       // #24 Zuschlag: innerhalb der Phase nach Zuschlagsdatum absteigend (frisch zuerst) → ago aufsteigend
       case 'frist': return l.src==='award' ? (l.award ? l.award.ago : 9999)
                          : l.tage != null ? l.tage : (l.endTage!=null ? l.endTage : 9999);
