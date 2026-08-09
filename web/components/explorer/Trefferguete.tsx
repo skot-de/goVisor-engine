@@ -32,19 +32,20 @@ function fordertBuergschaft(l: Lead): boolean {
 type Gap = { key: string; label: string; affected: number; text: string; kind: "buerg" | "betrag"; };
 
 // §7 Wirkungsberechnung — betroffene Lead-Menge je offener Angabe. Immer „betrifft N Leads" (AC5).
-function computeGaps(leads: Lead[], p: Profile): Gap[] {
+// `pre` = nächtlich vorberechnete Werte (user_gap_effects, #11 §7) — bevorzugt, sonst On-Demand.
+function computeGaps(leads: Lead[], p: Profile, pre?: Record<string, number>): Gap[] {
   if (!p) return [];
   const gaps: Gap[] = [];
   // Bürgschaftsrahmen (§4.1 Beispiel): Leads fordern Bürgschaft, Rahmen nicht hinterlegt.
   if (p.buergschaft == null) {
-    const n = leads.filter(fordertBuergschaft).length;
+    const n = pre?.buergschaft ?? leads.filter(fordertBuergschaft).length;
     if (n >= MIN_AFFECTED) gaps.push({ key: "buergschaft", label: "Bürgschaftsrahmen", affected: n, kind: "buerg",
       text: `${n} eurer Leads fordern eine Bürgschaft. Ohne die Höhe, die eure Bank stellt, können wir nicht prüfen, welche davon für euch in Frage kommen.` });
   }
   // Größter Auftrag allein (§4.1 Beispiel): Leads über einer hohen Schwelle, Alleingrenze unbekannt.
   if (p.maxAlleine == null) {
     const SCHWELLE = 2_000_000;
-    const n = leads.filter((l) => { const v = leadValue(l); return v != null && v > SCHWELLE; }).length;
+    const n = pre?.maxAlleine ?? leads.filter((l) => { const v = leadValue(l); return v != null && v > SCHWELLE; }).length;
     if (n >= MIN_AFFECTED) gaps.push({ key: "maxAlleine", label: "Größter Auftrag, den ihr allein stemmt", affected: n, kind: "betrag",
       text: `${n} Leads liegen über 2 Mio €. Wir wissen nicht, ob das für euch allein realistisch ist oder nur mit Partner.` });
   }
@@ -63,6 +64,7 @@ export function Trefferguete({ aktiveBranche }: { aktiveBranche: string }) {
   const [leads, setLeads] = useState<Lead[]>([]);
   const [decls, setDecls] = useState<Declaration[]>([]);
   const [outcomes, setOutcomes] = useState<UserOutcome[]>([]);
+  const [preGaps, setPreGaps] = useState<Record<string, number> | undefined>(undefined);   // §7 vorberechnet
   const [effect, setEffect] = useState<string | null>(null);   // §7.3 einmalige Wirkungsmeldung
 
   async function reloadAll() {
@@ -80,13 +82,19 @@ export function Trefferguete({ aktiveBranche }: { aktiveBranche: string }) {
       }
       const [dc, oc] = await Promise.all([loadDeclarations().catch(() => []), loadOutcomes().catch(() => [])]);
       setProfile(pr); setDecls(dc); setOutcomes(oc);
+      // Nächtlich vorberechnete Lücken-Wirkung (user_gap_effects) laden — bevorzugt vor On-Demand (§7).
+      try {
+        const { createClient } = await import("@/lib/supabase/client");
+        const { data } = await createClient().from("user_gap_effects").select("gap_key, affected_leads");
+        if (Array.isArray(data) && data.length) setPreGaps(Object.fromEntries(data.map((r: { gap_key: string; affected_leads: number }) => [r.gap_key, r.affected_leads])));
+      } catch { /* Fallback: On-Demand-Rechnung */ }
       try { const r = await fetch(`/api/leads?branche=${encodeURIComponent(aktiveBranche)}`); const d = await r.json(); setLeads(Array.isArray(d?.leads) ? d.leads : Array.isArray(d) ? d : []); }
       catch { setLeads([]); }
       setLoading(false);
     })();
   }, [aktiveBranche]);
 
-  const gaps = useMemo(() => computeGaps(leads, profile), [leads, profile]);
+  const gaps = useMemo(() => computeGaps(leads, profile, preGaps), [leads, profile, preGaps]);
 
   // Inline-Erfassung (§4.1): Engine-Profilfeld setzen → Liste ändert sich sofort (AC6).
   async function fillGap(gap: Gap, value: number) {

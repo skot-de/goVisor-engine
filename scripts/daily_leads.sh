@@ -95,6 +95,10 @@ if [ -n "${SUPABASE_URL:-}" ] && [ -n "${SUPABASE_SERVICE_KEY:-}" ]; then
     echo "  ✖ Supabase-Push fehlgeschlagen — lokale Leads sind aktuell, nur der Upload nicht."
     exit 3
   fi
+
+  # 4) Lücken-Wirkung je Nutzer vorberechnen (#11 §7) — nicht fatal, Frontend hat On-Demand-Fallback.
+  step "gap_effects vorberechnen (#11 §7)"
+  $PY scripts/gap_effects.py || echo "  ⚠ gap_effects übersprungen (nicht kritisch)."
 else
   echo "  ⚠ Keine Supabase-Creds (.secrets/supabase.txt) — Export übersprungen."
 fi
