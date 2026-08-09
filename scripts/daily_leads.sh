@@ -53,10 +53,10 @@ if [ -f "$ROOT/.secrets/supabase.txt" ]; then
   export SUPABASE_SERVICE_KEY="$(sed -n '2p' "$ROOT/.secrets/supabase.txt" | tr -d '[:space:]')"
 fi
 
-# 1) DÖE-Live (unterschwellig DE) — laufenden + Vormonat (Spätzugänge). Nicht fatal.
-step "DÖE-Ingest (unterschwellig DE, live)"
-PREV="$(date -v-1m +%Y-%m 2>/dev/null || date -d 'last month' +%Y-%m)"
-if $PY -m govisor.cli ingest-doe --country DE --start "$PREV" --force; then
+# 1) DÖE-Live (unterschwellig DE): laufenden + Vormonat FRISCH LADEN (--fetch), dann parsen.
+#    Der laufende Monat wächst täglich → so kommen neue Ausschreibungen tages-frisch rein (kein 30-Tage-Lag).
+step "DÖE-Ingest (unterschwellig DE, --fetch laufend+Vormonat)"
+if $PY -m govisor.cli ingest-doe --country DE --fetch --fetch-back 1 --force; then
   echo "  DÖE ok."
 else
   echo "  ⚠ DÖE-Ingest fehlgeschlagen (API?) — fahre mit Gold/Export fort (as-of-Refresh bleibt wertvoll)."

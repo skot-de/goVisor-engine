@@ -54,6 +54,10 @@ def build_parser() -> argparse.ArgumentParser:
     doe.add_argument("--data-dir", default="data")
     doe.add_argument("--start", help="ab Monat YYYY-MM (Default: alle vorhandenen)")
     doe.add_argument("--force", action="store_true", help="vorhandene -doe-Parquet überschreiben")
+    doe.add_argument("--fetch", action="store_true",
+                     help="frische Monatspakete VORHER laden (laufender Monat wächst täglich)")
+    doe.add_argument("--fetch-back", dest="fetch_back", type=int, default=1,
+                     help="wie viele Vormonate mitladen (Default 1 = laufend + Vormonat)")
 
     sm = sub.add_parser("ingest-simap", help="simap.ch (CH, offene JSON-API) → Bronze")
     sm.add_argument("--country", default="CH")
@@ -123,6 +127,23 @@ def cmd_ingest_doe(args) -> int:
     cfg = Config(countries=(args.country,), data_dir=args.data_dir)
     if args.country in locales.LOCALES:
         locales.use(args.country)
+    # Download vor dem Parsen: der laufende Monat wächst täglich (pubMonth). Ohne diesen Schritt
+    # parst der Ingest nur alte ZIPs → keine frischen Leads. `--fetch-back N` = N Vormonate dazu.
+    if getattr(args, "fetch", False):
+        from datetime import date
+        from . import doe
+        back = max(0, int(getattr(args, "fetch_back", 1) or 0))
+        y, m = date.today().year, date.today().month
+        for _ in range(back + 1):
+            key = f"{y:04d}-{m:02d}"
+            try:
+                sz = doe.fetch_month(cfg, key, country=args.country, force=True)
+                print(f"  ⭳ {key}: {sz/1e6:.1f} MB geladen" if sz else f"  ⭳ {key}: leer/nicht verfügbar")
+            except Exception as e:  # noqa: BLE001
+                print(f"  ⚠ {key}: Download fehlgeschlagen ({str(e)[:100]})")
+            m -= 1
+            if m == 0:
+                m = 12; y -= 1
     months = silver.available_months_doe(cfg, args.country)
     if args.start:
         months = [m for m in months if m >= args.start]
