@@ -161,12 +161,21 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   const [loading, setLoading] = useState(true);
 
   const [userEmail, setUserEmail] = useState<string | null>(null);
+  // Echter Zugangsstatus statt hartkodiertem „Pro"-Aufkleber (Free bis der Account etwas anderes sagt).
+  const [plan, setPlan] = useState<"free" | "paid" | "cancelled">("free");
+  const [planOpen, setPlanOpen] = useState(false);
 
   // Beim Start: eingeloggt? → Profil aus Supabase (autoritativ); sonst lokaler Fallback.
   useEffect(() => {
     (async () => {
       const u = await currentUser().catch(() => null);
       setUserEmail(u?.email ?? null);
+      if (u) {
+        // echten Zugangsstatus laden (Free bleibt der ehrliche Default, wenn nichts hinterlegt ist)
+        import("@/lib/supabase/account").then(({ loadAccount }) => loadAccount())
+          .then((a) => { const p = a?.plan; if (p === "paid" || p === "cancelled") setPlan(p); })
+          .catch(() => {});
+      }
       if (u) { loadContracts().then((cs) => { setUserContracts(cs); bump(); }).catch(() => {}); }
       const remote = u ? await loadProfile().catch(() => null) : null;
       if (remote) {
@@ -192,7 +201,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   async function abmelden() {
     await logout().catch(() => {});
     try { localStorage.removeItem(PROFILE_KEY); } catch { /* egal */ }
-    setRealProfile(null); setUserEmail(null); setProfileKey(""); brancheManual.current = false;
+    setRealProfile(null); setUserEmail(null); setProfileKey(""); brancheManual.current = false; setPlan("free");
     bump();
   }
 
@@ -980,9 +989,35 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
           </Link>
           <div className="railfoot">
             <span className="verlabel" title="Prototyp-Version">v4.4</span>
-            <button className="planbadge" title="Kontostatus">
-              <span className="plan-ring" /><span className="plan-lbl">Pro</span>
-            </button>
+            {/* Konto-Einstieg: Plan-Status + Einstellungen/Abrechnung/Upgrade an EINER auffindbaren
+                Stelle. Vorher war das ein statischer „Pro"-Aufkleber ohne Ziel. */}
+            <div className="planwrap">
+              <button className={`planbadge ${plan === "paid" ? "is-pro" : ""}`} title="Konto & Zugang"
+                onClick={() => setPlanOpen((o) => !o)} aria-expanded={planOpen}>
+                <span className="plan-ring" />
+                <span className="plan-lbl">{plan === "paid" ? "Pro" : plan === "cancelled" ? "endet" : "Free"}</span>
+              </button>
+              {planOpen ? (
+                <div className="planmenu" role="menu">
+                  <div className="pm-head">
+                    <b>{userEmail || "Nicht angemeldet"}</b>
+                    <span>{plan === "paid" ? "Pro — voller Zugang" : "Free — Lead-Liste unbegrenzt, 3 Bewertungen"}</span>
+                  </div>
+                  {plan !== "paid" ? (
+                    <Link className="pm-up" href="/settings?sek=zahlung" onClick={() => setPlanOpen(false)}>
+                      Auf Pro upgraden
+                      <em>Bewertung, Vergabestellen-Dossier & Markt ohne Limit</em>
+                    </Link>
+                  ) : null}
+                  <Link className="pm-item" href="/settings" onClick={() => setPlanOpen(false)}>Einstellungen</Link>
+                  <Link className="pm-item" href="/settings?sek=zahlung" onClick={() => setPlanOpen(false)}>Zahlung & Rechnungen</Link>
+                  <Link className="pm-item" href="/unternehmen" onClick={() => setPlanOpen(false)}>Unser Unternehmen</Link>
+                  {userEmail
+                    ? <button className="pm-item pm-out" onClick={() => { setPlanOpen(false); abmelden(); }}>Abmelden</button>
+                    : <Link className="pm-item" href="/login" onClick={() => setPlanOpen(false)}>Anmelden</Link>}
+                </div>
+              ) : null}
+            </div>
           </div>
         </nav>
 
@@ -1083,6 +1118,8 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
               buyerDemo={buyerDemo}
               aktiveRegion={aktiveRegion}
               accountLimit={accountLimit}
+              rows={rows}
+              onPickLead={openLead}
               onTab={setTab}
               onClose={closeLead}
               onExpand={toggleExpand}

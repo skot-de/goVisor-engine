@@ -354,8 +354,8 @@ function empfehlung(l){
  * sonst Einordnung (Kaskade A). Farbklasse rec-go/def/open/skip, kurzer Grund. */
 const REC_CLS = { gruen:'go', blau:'def', neutral:'open', gedaempft:'skip' };
 // Aussagestärke für die Sortierung (§4.1): Bewerben/Hohe Passung zuerst, Nicht bewerben zuletzt.
-const REC_RANK = { 'BEWERBEN':0, 'HOHE PASSUNG':0, 'VERTEIDIGEN':1, 'BESTANDSVERTRAG':1,
-  'NOCH ZU KLÄREN':2, 'PASSUNG MITTEL':2, 'GERINGE PASSUNG':3, 'FRIST ZU KNAPP':3, 'NICHT BEWERBEN':3 };
+const REC_RANK = { 'Bewerben':0, 'Hohe Passung':0, 'Verteidigen':1, 'Bestandsvertrag':1,
+  'Noch zu klären':2, 'Passung mittel':2, 'Geringe Passung':3, 'Frist zu knapp':3, 'Nicht bewerben':3 };
 function recForList(l){
   const r = recommend(l, userProfile, { ownBuyers: userContracts.map(c=>c.buyer_name).filter(Boolean) });
   const src = r.empfehlung || r.einordnung;

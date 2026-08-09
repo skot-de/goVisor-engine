@@ -18,6 +18,9 @@ type Lead = {
   [k: string]: unknown;
 };
 
+/* Minimal-Form für das Leer-Briefing — nur die Felder, die es wirklich liest. */
+type BriefLead = { id: string; [k: string]: unknown };
+
 const TABS: { key: string; label: string; pro?: boolean }[] = [
   { key: "uebersicht", label: "Übersicht" },
   { key: "teilnahme", label: "Teilnahme" },
@@ -35,6 +38,7 @@ const ExpandIcon = (full: boolean) =>
 
 export function DetailPanel({
   activeId, activeTab, mode, tick, buyerDemo, aktiveRegion, accountLimit,
+  rows = [], onPickLead,
   onTab, onClose, onExpand, onWf, onStar, onBodyAction,
 }: {
   activeId: string | null;
@@ -44,6 +48,10 @@ export function DetailPanel({
   buyerDemo: string;
   aktiveRegion: string;
   accountLimit: boolean;
+  // aktuell gefilterte Liste — Grundlage des Leer-Briefings. Bewusst strukturell typisiert
+  // (nicht der lokale Lead-Typ), damit die Shell ihre eigene Lead-Form durchreichen kann.
+  rows?: BriefLead[];
+  onPickLead?: (id: string) => void;
   onTab: (k: string) => void;
   onClose: () => void;
   onExpand: () => void;
@@ -74,17 +82,9 @@ export function DetailPanel({
   const [copied, setCopied] = useState(false);
   const [wonState, setWonState] = useState<"idle" | "saving" | "done" | "guest">("idle");
 
-  // Leerzustand: der „Brief" oben zeigt das neue Volumen — kommt später aus echten Daten.
-  if (!activeId) {
-    return (
-      <div className="brief">
-        <div className="btxt">
-          <p className="bh">Kein Lead ausgewählt</p>
-          <p className="bl">Wähle links einen Lead, um Übersicht, Teilnahme und Bewertung zu sehen.</p>
-        </div>
-      </div>
-    );
-  }
+  // Leerzustand = Tagesbriefing statt Platzhalter: was ist neu, was drängt, was lohnt sich.
+  // Alle Zahlen aus der AKTUELL gefilterten Liste gerechnet — keine erfundenen Werte.
+  if (!activeId) return <LeerBriefing rows={rows} onPick={onPickLead} />;
 
   const l = (LEADS as Lead[]).find((x) => x.id === activeId)!;
   const analysed = l.status === "analysiert";
@@ -225,5 +225,75 @@ export function DetailPanel({
 
       <div onClick={handleBody} dangerouslySetInnerHTML={{ __html: bodyHtml }} />
     </>
+  );
+}
+
+/* Leerzustand als Tagesbriefing (statt „Kein Lead ausgewählt"): rechnet aus der AKTUELL
+ * gefilterten Liste, was drängt und was sich lohnt — jede Zahl gemessen, keine erfundenen Werte.
+ * Klick auf eine Zeile öffnet den Lead direkt. */
+function LeerBriefing({ rows, onPick }: { rows: BriefLead[]; onPick?: (id: string) => void }) {
+  const b = useMemo(() => {
+    const offen = rows.filter((l) => l.src !== "award");
+    const tageOf = (l: BriefLead) => {
+      const f = l.frist as { tage?: number } | undefined;
+      return typeof f?.tage === "number" ? f.tage : (typeof l.tage === "number" ? (l.tage as number) : null);
+    };
+    const frist7 = offen.filter((l) => { const t = tageOf(l); return t != null && t >= 0 && t <= 7; })
+      .sort((a, z) => (tageOf(a) ?? 99) - (tageOf(z) ?? 99));
+    const neu = rows.filter((l) => l.neu || l.status === "ungesichtet");
+    const passend = offen.filter((l) => l.relevanz === "hoch");
+    const zuschlaege = rows.filter((l) => l.src === "award");
+    return { offen, frist7, neu, passend, zuschlaege, tageOf };
+  }, [rows]);
+
+  const Zeile = ({ l, sub }: { l: BriefLead; sub: string }) => (
+    <button className="lb-row" onClick={() => onPick?.(l.id)} title="Lead öffnen">
+      <span className="lb-row-t">{String(l.titel || "").slice(0, 70)}</span>
+      <span className="lb-row-s">{sub}</span>
+    </button>
+  );
+
+  return (
+    <div className="lb">
+      <div className="lb-head">
+        <p className="lb-h">Ihr Überblick</p>
+        <p className="lb-l">{b.offen.length.toLocaleString("de-DE")} offene Ausschreibungen in dieser Ansicht
+          {b.zuschlaege.length ? ` · ${b.zuschlaege.length.toLocaleString("de-DE")} frische Zuschläge` : ""}</p>
+      </div>
+
+      <div className="lb-kpis">
+        <div className={`lb-kpi ${b.frist7.length ? "urgent" : ""}`}>
+          <span className="lb-n">{b.frist7.length}</span><span className="lb-k">Frist ≤ 7 Tage</span></div>
+        <div className="lb-kpi"><span className="lb-n">{b.passend.length}</span><span className="lb-k">hohe Passung</span></div>
+        <div className="lb-kpi"><span className="lb-n">{b.neu.length}</span><span className="lb-k">ungesichtet</span></div>
+      </div>
+
+      {b.frist7.length > 0 && (
+        <section className="lb-sec">
+          <h4>Zuerst ansehen — Frist läuft</h4>
+          {b.frist7.slice(0, 3).map((l) => {
+            const t = b.tageOf(l);
+            return <Zeile key={l.id} l={l}
+              sub={t === 0 ? "läuft heute ab" : t === 1 ? "läuft morgen ab" : `noch ${t} Tage`} />;
+          })}
+        </section>
+      )}
+
+      {b.passend.length > 0 && (
+        <section className="lb-sec">
+          <h4>Passt zu Ihrem Profil</h4>
+          {b.passend.slice(0, 3).map((l) => (
+            <Zeile key={l.id} l={l} sub={String((l.cpvLabel as string) || "").slice(0, 34)} />
+          ))}
+        </section>
+      )}
+
+      {!b.frist7.length && !b.passend.length && (
+        <p className="lb-empty">Wählen Sie links eine Ausschreibung — oder legen Sie unter
+          „Unternehmen" Ihr Profil an, damit wir die passenden hervorheben.</p>
+      )}
+
+      <p className="lb-foot">Zahlen beziehen sich auf die aktuell gefilterte Liste.</p>
+    </div>
   );
 }
