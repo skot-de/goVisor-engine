@@ -93,7 +93,7 @@ export function Cockpit({
             )}
             <button className="ck-btn" onClick={() => onApply(l.id)}>Ich bewerbe mich →</button>
           </Row>
-        )) : <div className="ck-empty">Noch nichts beobachtet. Merken Sie sich Ausschreibungen (☆) in der Akquise.</div>}
+        )) : <div className="ck-empty">Noch nichts beobachtet. Merkt euch Ausschreibungen (☆) in der Akquise.</div>}
       </Area>
 
       <Area k="aktiv" title="Aktiv" unter="Gegenwart — woran ich gerade dran bin" n={aktiv.length}>

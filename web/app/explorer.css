@@ -793,7 +793,7 @@ button.nz-c-t:hover{color:var(--signal-deep);text-decoration:underline}
 .ang-in:focus{outline:none;border-color:var(--signal);box-shadow:0 0 0 3px var(--signal-wash)}
 
 /* Potenzial — Unternehmenssicht, kein Lead-Modus */
-.railsep{width:26px;height:1px;background:var(--line);margin:6px 0}
+.railsep{width:34px;height:1px;background:var(--line);margin:6px 0}
 body[data-view="verteidigung"] .railsep{background:#2C4A3F}
 .profilview{display:none;overflow-y:auto;min-height:0;background:var(--paper)}
 body[data-area="profil"] .tablewrap,
@@ -940,9 +940,11 @@ td.c-own,th.c-own{text-align:center}
 body[data-view="verteidigung"] .rail{background:var(--ink-900);border-right-color:var(--ink-900)}
 .mark{width:32px;height:32px;border-radius:8px;background:var(--signal);display:grid;place-items:center;margin-bottom:18px;flex:none}
 .mark svg{width:16px;height:16px}
-.viewbtn{width:44px;padding:11px 0;border-radius:var(--r);display:flex;flex-direction:column;align-items:center;gap:7px;color:var(--ink-400);transition:.18s;position:relative}
+.viewbtn{width:64px;padding:9px 0;border-radius:var(--r);display:flex;flex-direction:column;align-items:center;gap:5px;color:var(--ink-400);transition:.18s;position:relative}
 .viewbtn svg{width:19px;height:19px;stroke-width:1.6}
-.viewbtn b{font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;writing-mode:vertical-rl;transform:rotate(180deg)}
+/* Beschriftung waagerecht statt hochkant: liest sich normal und halbiert die Höhe
+   je Eintrag (~100 px → ~46 px). Kostet 16 px Breite — die haben wir. */
+.viewbtn b{font-size:9px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;line-height:1;text-align:center}
 .viewbtn:hover{color:var(--ink-700);background:var(--surface-3)}
 .viewbtn[aria-current="true"]{background:var(--signal-wash);color:var(--signal-deep)}
 body[data-view="verteidigung"] .viewbtn{color:#6E837B}
@@ -951,7 +953,7 @@ body[data-view="verteidigung"] .viewbtn[aria-current="true"]{background:#1D332C;
 .railfoot{margin-top:auto;display:flex;flex-direction:column;align-items:center;padding-bottom:2px}
 .verlabel{font-family:var(--mono);font-size:8.5px;letter-spacing:.06em;color:var(--ink-300);margin-bottom:6px}
 body[data-view="verteidigung"] .verlabel{color:#5A7A6E}
-.planbadge{display:flex;flex-direction:column;align-items:center;gap:5px;padding:8px 0;width:44px;border-radius:var(--r);color:var(--ink-500);transition:.15s}
+.planbadge{display:flex;flex-direction:column;align-items:center;gap:5px;padding:8px 0;width:64px;border-radius:var(--r);color:var(--ink-500);transition:.15s}
 .planbadge:hover{background:var(--surface-3)}
 .plan-ring{width:22px;height:22px;border-radius:50%;border:2px solid var(--signal);display:grid;place-items:center;position:relative}
 .plan-ring::after{content:'';width:8px;height:8px;border-radius:50%;background:var(--signal)}

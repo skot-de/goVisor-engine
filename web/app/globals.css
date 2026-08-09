@@ -12,7 +12,7 @@
   --flag:#B45309;--flag-wash:#FBF2E6;--risk:#B3261E;--risk-wash:#FBECEB;
   --sans:var(--font-archivo),'Archivo',system-ui,sans-serif;
   --mono:var(--font-plex-mono),'IBM Plex Mono',ui-monospace,monospace;
-  --rail:60px;--r:6px;
+  --rail:80px;--r:6px;
   /* Abstands-Skala (4er-Raster) */
   --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;
   /* Typo-Skala */

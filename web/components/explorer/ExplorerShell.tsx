@@ -359,6 +359,9 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // (wer hat gewonnen → wer kauft jetzt zu) und würden hier oben stehen, weil sie nach
   // Zuschlagsdatum ganz vorn sortieren. Deshalb nur, wenn die Phase ausdrücklich gewählt ist.
   // `alleRows` behält sie — daraus speist sich das Zuschlags-Band.
+  // Die Vorauswahl gilt nur für die Akquise — Merkliste/Netzwerk sind eigene Linsen.
+  const istAkquise = view === "angriff" && !filters.gemerkt && !filters.netz;
+
   const rows: Lead[] = useMemo(() => {
     const ohneAwards = adv.phases.includes("award") ? alleRows : alleRows.filter((l) => l.src !== "award");
     // Vorauswahl (gemessen an ENGIE/Cancom/Rosenbauer: 5.911→72, 3.974→23, 5.979→77):
@@ -369,7 +372,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     //   · kein harter Blocker (Bürgschaft übersteigt Rahmen / bewusst ausgeschlossen)
     //   · Aufwand nicht „hoch" — unbekannter Aufwand fliegt NICHT raus (Unbekanntes schließt nie aus)
     // Ohne Profil ist die Relevanz für alles „na" → wir sortieren nicht vor, statt alles zu leeren.
-    if (!vorauswahl || !realProfile) return ohneAwards;
+    if (!vorauswahl || !realProfile || !istAkquise) return ohneAwards;
     return ohneAwards.filter((l) => {
       if (l.src !== "f02") return false;
       const t = (l.frist as { tage?: number } | undefined)?.tage ?? (l.tage as number | null);
@@ -379,7 +382,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
       if (m?.blocker?.some((b) => b.art === "buergschaft" || b.art === "ausschluss")) return false;
       return aufwandStufe(l).stufe !== "hoch";
     });
-  }, [alleRows, adv.phases, vorauswahl, realProfile]);
+  }, [alleRows, adv.phases, vorauswahl, realProfile, istAkquise]);
 
   const suggestions = useMemo(() => (query.trim() ? suggestList(query) : []), [query]);
 
@@ -926,7 +929,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
               <path d="m12 4 2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4-3.9-3.8 5.4-.8L12 4Z" />
             </svg>
             <b>Merkliste</b>
-            <span className="railcount">{merkN}</span>
+            {merkN ? <span className="railcount">{merkN}</span> : null}
           </button>
           <button className="viewbtn" aria-current={filters.netz ? "true" : undefined} onClick={() => switchView("netzwerk")}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
@@ -957,7 +960,6 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
             <b>Bausteine</b>
           </Link>
           <div className="railfoot">
-            <span className="verlabel" title="Prototyp-Version">v4.4</span>
             {/* Konto-Einstieg: Plan-Status + Einstellungen/Abrechnung/Upgrade an EINER auffindbaren
                 Stelle. Vorher war das ein statischer „Pro"-Aufkleber ohne Ziel. */}
             <div className="planwrap">
@@ -1062,7 +1064,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
               })()}
               {/* Vorauswahl sichtbar machen: WAS wir weggelassen haben und wie man es zurückholt.
                   Ein stilles Filtern wäre der schlimmere Fehler — der Nutzer muss die Menge kennen. */}
-              {realProfile && !adv.phases.includes("award") ? (
+              {realProfile && istAkquise && !adv.phases.includes("award") ? (
                 <div className={`vor-band ${vorauswahl ? "" : "off"}`}>
                   {vorauswahl ? (
                     <>
