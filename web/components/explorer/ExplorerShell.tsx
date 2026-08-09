@@ -980,7 +980,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
             </svg>
             <b>Unternehmen</b>
           </Link>
-          <Link className="viewbtn raillink" href="/bausteine" title="Bausteine — deine Textbausteine für Angebote (#23)">
+          <Link className="viewbtn raillink" href="/bausteine" title="Bausteine — eure Textbausteine für Angebote (#23)">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
               <rect x="3" y="3" width="8" height="8" rx="1" /><rect x="13" y="3" width="8" height="8" rx="1" />
               <rect x="3" y="13" width="8" height="8" rx="1" /><rect x="13" y="13" width="8" height="8" rx="1" />

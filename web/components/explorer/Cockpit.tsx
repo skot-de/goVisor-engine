@@ -122,7 +122,7 @@ export function Cockpit({
         })()}
         {abgeleitet > 0 && (
           <div className="ck-note">
-            <b>{abgeleitet} Verträge aus öffentlichen Daten vorbefüllt.</b> Das sind Ihre öffentlich sichtbaren
+            <b>{abgeleitet} Verträge aus öffentlichen Daten vorbefüllt.</b> Das sind eure öffentlich sichtbaren
             (oberschwelligen) Zuschläge — Unterschwelliges und Niederlagen fehlen. Bestätigen oder ergänzen Sie,
             um das Bild zu vervollständigen (und goVisor etwas beizubringen, das es nicht wusste).
           </div>
@@ -134,9 +134,9 @@ export function Cockpit({
                   {(l.cockpitProv ?? "abgeleitet") === "abgeleitet" && <button className="ck-btn ghost" onClick={() => onConfirm(l.id)}>Stimmt ✓</button>}</>}
             {l.incumbent?.seit && <span className="ck-since">seit {l.incumbent.seit}</span>}
             {l.endTage != null && l.endTage >= 0 && l.endTage <= 540 && l.endet &&
-              <span className="ck-since warn" title="Ihr Vertrag läuft bald aus — hier droht Verdrängung, Verteidigung nötig">läuft {l.endet} aus</span>}
+              <span className="ck-since warn" title="Euer Vertrag läuft bald aus — hier droht Verdrängung, Verteidigung nötig">läuft {l.endet} aus</span>}
           </Row>
-        )) : <div className="ck-empty">Keine Historie. Ihre öffentlichen Zuschläge erscheinen hier automatisch, sobald Ihr Firmenprofil bestätigt ist.</div>}
+        )) : <div className="ck-empty">Keine Historie. Eure öffentlichen Zuschläge erscheinen hier automatisch, sobald euer Firmenprofil bestätigt ist.</div>}
       </Area>
 
       <p className="ck-foot">goVisor verwaltet den <b>Status der Ausschreibung</b>, nicht die Vertriebsbeziehung — kein CRM.</p>

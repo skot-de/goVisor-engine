@@ -256,7 +256,7 @@ function LeerBriefing({ rows, onPick }: { rows: BriefLead[]; onPick?: (id: strin
   return (
     <div className="lb">
       <div className="lb-head">
-        <p className="lb-h">Ihr Überblick</p>
+        <p className="lb-h">Euer Überblick</p>
         <p className="lb-l">{b.offen.length.toLocaleString("de-DE")} offene Ausschreibungen in dieser Ansicht
           {b.zuschlaege.length ? ` · ${b.zuschlaege.length.toLocaleString("de-DE")} frische Zuschläge` : ""}</p>
       </div>
@@ -281,7 +281,7 @@ function LeerBriefing({ rows, onPick }: { rows: BriefLead[]; onPick?: (id: strin
 
       {b.passend.length > 0 && (
         <section className="lb-sec">
-          <h4>Passt zu Ihrem Profil</h4>
+          <h4>Passt zu eurem Profil</h4>
           {b.passend.slice(0, 3).map((l) => (
             <Zeile key={l.id} l={l} sub={String((l.cpvLabel as string) || "").slice(0, 34)} />
           ))}
@@ -289,11 +289,11 @@ function LeerBriefing({ rows, onPick }: { rows: BriefLead[]; onPick?: (id: strin
       )}
 
       {!b.frist7.length && !b.passend.length && (
-        <p className="lb-empty">Wählen Sie links eine Ausschreibung — oder legen Sie unter
-          „Unternehmen" Ihr Profil an, damit wir die passenden hervorheben.</p>
+        <p className="lb-empty">Wählt links eine Ausschreibung — oder legt unter
+          „Unternehmen" euer Profil an, damit wir die passenden hervorheben.</p>
       )}
 
-      <p className="lb-foot">Zahlen beziehen sich auf die aktuell gefilterte Liste.</p>
+      <p className="lb-foot">Zahlen beziehen sich auf eure aktuell gefilterte Liste.</p>
     </div>
   );
 }

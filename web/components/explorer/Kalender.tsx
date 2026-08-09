@@ -46,8 +46,8 @@ export function Kalender({
         <div>
           <h3 className="kal-t">Termine</h3>
           <p className="kal-sub">
-            {total ? `${total} anstehende Angebotsfrist${total === 1 ? "" : "en"} aus deiner Merkliste`
-                   : "Fristen deiner beobachteten Leads — chronologisch"}
+            {total ? `${total} anstehende Angebotsfrist${total === 1 ? "" : "en"} aus eurer Merkliste`
+                   : "Fristen eurer beobachteten Leads — chronologisch"}
           </p>
         </div>
         {onSubscribe && (

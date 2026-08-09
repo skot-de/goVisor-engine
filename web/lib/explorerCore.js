@@ -933,17 +933,17 @@ function renderTeam(l){
       </div></div>`; }).join('')
     : `<div class="thread-empty">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.7 8.7 0 0 1-4-.9L3 20l1.4-5.5a8.4 8.4 0 0 1-.9-4A8.5 8.5 0 0 1 12 2a8.4 8.4 0 0 1 9 9.5Z"/></svg>
-        <p>Noch ruhig hier. Schreib die erste Notiz — dein Team sieht sie.</p>
+        <p>Noch ruhig hier. Schreibt die erste Notiz — euer Team sieht sie.</p>
       </div>`;
   return `<div class="dbody">
     <div class="teamgrid">
       <section class="teamcol">
-        <h4>Notizen <span class="cov">${n?n+' · ':''}für dein Team sichtbar</span></h4>
+        <h4>Notizen <span class="cov">${n?n+' · ':''}für euer Team sichtbar</span></h4>
         <div class="thread">${thread}</div>
         <div class="composer">
           <div class="cmt-av you">${ME.initials}</div>
           <div class="composer-field">
-            <textarea data-cmt rows="1" placeholder="Schreib deinem Team…"></textarea>
+            <textarea data-cmt rows="1" placeholder="Schreibt eurem Team…"></textarea>
             <button class="composer-send" data-cmtsend aria-label="Senden">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
             </button>
@@ -1000,8 +1000,8 @@ function renderChecklistBlock(a, l){
       ? `<div class="quote"><div class="lbl"><span>${it.parser?'Struktur ausgelesen':'Aus den Unterlagen'}</span>${_markBadge(it.marking)}</div><q>${esc(it.quote)}</q><div class="src">${esc(it.source_file||'')}${it.source_page?(' · S. '+esc(String(it.source_page))):''}${it.parser?' · Parser, kein LLM':''}</div></div>`
       : `<div class="quote"><div class="lbl"><span>${it.parser?'Struktur ausgelesen':'Aus den Unterlagen'}</span>${_markBadge(it.marking)}</div><q>${esc(it.label||'')}${val?(' — '+esc(String(it.value))+(it.unit?' '+esc(String(it.unit)):'')):''}</q>${it.source_file?`<div class="src">${esc(it.source_file)}${it.parser?' · Parser, kein LLM':''}</div>`:''}</div>`;
     const kombi = JSON.stringify({theme:it.theme, label:it.label, quote:it.quote||'', i:it._i});
-    const block = `<div class="block"><div class="lbl"><span>Dein Textbaustein</span><span class="mark m-v">aus deinem Profil</span></div>
-      <textarea class="ta cl-edit" placeholder="Textbaustein aus deinem Profil einsetzen …"></textarea>
+    const block = `<div class="block"><div class="lbl"><span>Euer Textbaustein</span><span class="mark m-v">aus eurem Profil</span></div>
+      <textarea class="ta cl-edit" placeholder="Textbaustein aus eurem Profil einsetzen …"></textarea>
       <div class="blockfoot"><span class="cl-hist"></span><span class="acts">
         <button class="btn btn-p btn-sm" data-clkombi='${esc(kombi)}'>Kopieren &amp; speichern</button></span></div></div>`;
     return `<article class="item${isDone?' done':''}" data-clitem="${it._i}">
@@ -1027,10 +1027,10 @@ function renderChecklistBlock(a, l){
   const chead = `<div class="chead"><div class="r1"><span class="stand">Stand der Unterlagen: ${l.lbFiles||1} Datei${(l.lbFiles||1)===1?'':'en'}</span>${portal}</div>
     <div class="disc">Bitte regelmäßig prüfen, ob neue Unterlagen vorliegen. LLM-gestützte Analyse — kann Fehler enthalten. Jede Angabe ist mit Fundstelle im Originaldokument belegt${a.rejected_items>0?`; ${a.rejected_items} unbelegte Aussagen wurden verworfen`:''}; maßgeblich bleiben die Vergabeunterlagen.</div></div>`;
   const stake = `<div class="stake"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6-5.3-2.9L6.7 19.6l1.1-6L3.4 9.4l6-.8z"/></svg><div><b>Erfolgshonorar:</b> Gewinnst du diesen Auftrag, berechnen wir eine Erfolgsgebühr — verlierst du, nichts. Kein Aufschlag fürs Bewerben.</div></div>`;
-  const toc = `<div class="toc"><div class="th"><b>Deine Checkliste</b><span class="pr"><span class="cl-doneN">${dn}</span> von ${tot} erledigt</span></div><div class="chips">${chips}<button class="tchip all" data-clcollapse>Alle zuklappen</button></div><div class="tprog"><i class="cl-tprog" style="width:${tot?Math.round(dn/tot*100):0}%"></i></div></div>`;
+  const toc = `<div class="toc"><div class="th"><b>Eure Checkliste</b><span class="pr"><span class="cl-doneN">${dn}</span> von ${tot} erledigt</span></div><div class="chips">${chips}<button class="tchip all" data-clcollapse>Alle zuklappen</button></div><div class="tprog"><i class="cl-tprog" style="width:${tot?Math.round(dn/tot*100):0}%"></i></div></div>`;
 
   // a2 Erstnutzer: leere Bibliothek → die Textbausteine sind noch generische Vorlagen (§9.1).
-  const firstday = !_clHasBlocks() ? `<div class="cl-firstday">Deine Bausteinbibliothek ist noch leer — die Textvorschläge unten sind generische Vorlagen. <a href="/bausteine" class="link">Bibliothek füllen →</a> Dann setzt goVisor eure echten Referenzen und Zertifikate ein statt Platzhalter.</div>` : '';
+  const firstday = !_clHasBlocks() ? `<div class="cl-firstday">Eure Bausteinbibliothek ist noch leer — die Textvorschläge unten sind generische Vorlagen. <a href="/bausteine" class="link">Bibliothek füllen →</a> Dann setzt goVisor eure echten Referenzen und Zertifikate ein statt Platzhalter.</div>` : '';
   return `<div class="va-checklist" data-clroot="${l.id}">${chead}${firstday}${stake}${toc}${groupsHtml}${offen}${weitere}</div>`;
 }
 
@@ -1069,7 +1069,7 @@ function renderDocs(l){
       ? `<a class="va-dl" href="${esc(u.url)}" target="_blank" rel="noopener">Beim Vergabeportal herunterladen ${ext}</a>`
       : `<span class="va-dl-off">Unterlagen beim Vergabeportal herunterladen</span>`;
     return `<section class="sec va-empty">
-      <h4>Vergabe-Analyse <span class="cov">aus deinen Unterlagen</span></h4>
+      <h4>Vergabe-Analyse <span class="cov">aus euren Unterlagen</span></h4>
       <p class="va-sum">Aus den Vergabeunterlagen machen wir in Sekunden eine <b>Ampel-Einschätzung</b>, eine abhakbare <b>Bieter-Checkliste</b> (K.o.-Kriterien, Eignungsnachweise, Zuschlagsgewichte) und <b>füllen Firmenangaben vor</b>.</p>
       <ol class="va-steps">
         <li><span class="va-step-n">1</span><div>${dl}</div></li>
@@ -1589,7 +1589,7 @@ function renderAnalyse(l){
     ['vergleich','Direktvergleich'],
     ['anforderungen','Anforderungs-Check'],
     ['luecke','Lücke'],
-    ['vertraege','Deine Verträge'],
+    ['vertraege','Eure Verträge'],
     ['historie','Wettbewerbs-Historie'],
     ['kontakt','Nächster Schritt'],
   ];
@@ -1804,7 +1804,7 @@ function renderAnalyse(l){
           if(!m || m.relevanz==='na') return `<div class="req req-noprofile">
             <span class="mk q">?</span>
             <span class="lbl">Ohne hinterlegtes Profil können wir die Passung nicht prüfen.
-            Wähle oben eine Testsicht oder richte dein Firmenprofil ein.</span></div>`;
+            Wählt oben eine Testsicht oder richte euer Firmenprofil ein.</span></div>`;
           const MK = {ok:['y','&#10003;'], teil:['q','~'], no:['n','&#10007;'], unbekannt:['q','?']};
           const WERT = {feld:[l.cpv, l.cpvLabel], region:['Region', l.region], vol:['Volumen', l.volumen.wert]};
           const rows = m.teile.map(t=>{ const [cls,sym]=MK[t.status]||['q','?']; const [code,lbl]=WERT[t.dim]||['',''];
@@ -1823,7 +1823,7 @@ function renderAnalyse(l){
       <h4>Lücke</h4>
       ${(()=>{ const m = l.match;
         if(!m || m.relevanz==='na') return `<div class="note-box">
-          Ohne hinterlegtes Profil gibt es nichts abzugleichen. Richte dein Firmenprofil ein,
+          Ohne hinterlegtes Profil gibt es nichts abzugleichen. Richte euer Firmenprofil ein,
           dann zeigen wir hier, woran dieser Lead scheitert oder passt.</div>`;
         // Die härteste Lücke zuerst: harter Blocker > Feld > Region > Volumen
         const buerg = m.blocker.find(b=>b.art==='buergschaft');
@@ -2049,8 +2049,8 @@ function renderBuyer(l){
   // Retention sichtabhängig deuten: dieselbe Zahl heißt in Akquise vs. Bestand Gegenteiliges
   const treu = d.retentionLevel==='hoch';
   const retNote = d.retention==null ? '' : (view==='verteidigung'
-    ? (treu ? 'Käufer bleibt meist bei Bestandslieferanten — dein Vorsprung ist stabil.'
-            : 'Käufer wechselt häufig — dein Bestand ist angreifbar.')
+    ? (treu ? 'Käufer bleibt meist bei Bestandslieferanten — euer Vorsprung ist stabil.'
+            : 'Käufer wechselt häufig — euer Bestand ist angreifbar.')
     : (treu ? 'Käufer bleibt meist bei Bestandslieferanten — als Neuer schwer reinzukommen.'
             : 'Käufer wechselt häufig — gute Chance, als Neuer Fuß zu fassen.'));
 
@@ -2102,7 +2102,7 @@ function renderBuyer(l){
               </svg>
               <div class="bmix-center">
                 <span class="bmix-cv">${own ? (free?`<span class="blur blur-num">${own.pct} %</span>`:`${own.pct} %`) : '—'}</span>
-                <span class="bmix-ck">dein Feld</span>
+                <span class="bmix-ck">euer Feld</span>
               </div>`;
             })()}
           </div>
@@ -2220,13 +2220,13 @@ function renderProfil(){
   return `<div class="pwrap">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s4);flex-wrap:wrap">
       <div class="steck">
-        <div class="steck-n">${userProfile&&userProfile.firma?userProfile.firma:'Dein Marktumfeld'}</div>
+        <div class="steck-n">${userProfile&&userProfile.firma?userProfile.firma:'Euer Marktumfeld'}</div>
         <div class="steck-z">
           <span>${BRANCHEN[aktiveBranche]}</span><i>·</i>
           <span>${userProfile?(userProfile.regions?(userProfile.regionLabels||[]).join(' · '):'bundesweit'):'bundesweit'}</span><i>·</i>
           ${userProfile
             ? `<span class="steck-ok" title="Profil aktiv — steuert Relevanz und Anforderungs-Check.">Profil aktiv</span>`
-            : `<span class="steck-m" title="Melde dich an und bestätige deine Firma, um dein Profil zu verbinden (Relevanz, Historie, Erfolgsprämie).">Profil noch nicht verbunden</span>`}
+            : `<span class="steck-m" title="Melde dich an und bestätige eure Firma, um euer Profil zu verbinden (Relevanz, Historie, Erfolgsprämie).">Profil noch nicht verbunden</span>`}
         </div>
       </div>
     </div>
@@ -2404,7 +2404,7 @@ function setLeads(arr){
   if(userProfile && !activeProfile) scoreAll();
 }
 
-// Eigener Vertragsbestand (aus user_contracts) — von React gesetzt, für „Deine Verträge bei X".
+// Eigener Vertragsbestand (aus user_contracts) — von React gesetzt, für „Eure Verträge bei X".
 let userContracts = [];
 function setUserContracts(arr){ userContracts = Array.isArray(arr) ? arr : []; if(userProfile) scoreAll(); }
 

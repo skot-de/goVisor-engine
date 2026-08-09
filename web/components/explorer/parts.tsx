@@ -36,7 +36,7 @@ export function Workspace({
         ))}
         <div className="ws-note">
           {aktiveBranche === profilBranche ? (
-            "Aus deinem Profil abgeleitet. Wechsle, um andere Sektoren zu sichten."
+            "Aus eurem Profil abgeleitet. Wechsle, um andere Sektoren zu sichten."
           ) : (
             <>
               Temporär gewechselt.{" "}

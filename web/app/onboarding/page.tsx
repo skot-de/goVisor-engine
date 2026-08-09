@@ -274,7 +274,7 @@ export default function OnboardingPage() {
           <div className="card">
             <h1>{ausDomain ? `Moment — arbeitest du bei ${matched.name}?` : "Das wissen wir über euch."}</h1>
             <p className="lede">{ausDomain
-              ? <>Deine Adresse endet auf <b>{domainStamm(email)}</b> — und unter diesem Namen finden wir ein Unternehmen in den öffentlichen Vergabedaten. Falls das ihr seid, wissen wir schon einiges:</>
+              ? <>Eure Adresse endet auf <b>{domainStamm(email)}</b> — und unter diesem Namen finden wir ein Unternehmen in den öffentlichen Vergabedaten. Falls das ihr seid, wissen wir schon einiges:</>
               : "Aus den öffentlichen Vergabedaten der letzten Jahre."}</p>
             <div className="suggest">
               <div className="sg-head">

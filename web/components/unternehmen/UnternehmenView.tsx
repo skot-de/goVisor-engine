@@ -55,7 +55,7 @@ export function UnternehmenView() {
     <div className="un-wrap" id="un-print-root">
       <div className="un-head">
         <h1>Unser Unternehmen</h1>
-        <p>Die Eignungsangaben Ihres Betriebs — einmal erfasst, überall verwendet: Anforderungsabgleich,
+        <p>Die Eignungsangaben eures Betriebs — einmal erfasst, überall verwendet: Anforderungsabgleich,
           Textbausteine und Relevanz greifen darauf zu.</p>
       </div>
 
@@ -128,7 +128,7 @@ function IdentitaetSektion({ profil, ctx, setProfil, toast, refresh }: SecP & { 
 
   const conf = ctx.entityConfidence;
   return (
-    <Section title="Zuordnung & Vorbefüllung" hint="Ihre Firma im Vergabegraph — Grundlage für die Vorbefüllung aus eigenen Zuschlägen.">
+    <Section title="Zuordnung & Vorbefüllung" hint="Eure Firma im Vergabegraph — Grundlage für die Vorbefüllung aus eigenen Zuschlägen.">
       <div className="un-ident">
         <span className="un-firm">{ctx.companyName || "Unternehmen noch nicht zugeordnet"}</span>
         {conf && <span className={`un-conf ${conf === "belegt" ? "ok" : "warn"}`}>{conf === "belegt" ? "Zuordnung gesichert" : "Zuordnung unsicher"}</span>}
