@@ -89,6 +89,8 @@ export function VergabeblickView() {
   const [ckBuerg, setCkBuerg] = useState(false);
   const [ckPreis, setCkPreis] = useState(false);
   const [ckUmsatz, setCkUmsatz] = useState(0); // #21 geforderter Mindestjahresumsatz in Mio €
+  const [ckReferenzen, setCkReferenzen] = useState(0); // #21 geforderte Referenzanzahl
+  const [ckISO, setCkISO] = useState(false); // #21 ISO 27001 zwingend (Datenlage dünn)
   const [ckWert, setCkWert] = useState(""); // #20 eigener Schätzwert (€)
   // Ticket #23 §B.2 — Entwurf mitprüfen: Nachweisdichte gegen den Korpus-Median
   const [draftNw, setDraftNw] = useState<{ count: number; median: number | null } | null>(null);
@@ -400,6 +402,13 @@ export function VergabeblickView() {
                 <option value={5}>5 Mio €/Jahr</option><option value={10}>10 Mio €/Jahr</option>
               </select>
             </label>
+            <label>Referenzen (Eignung)
+              <select value={ckReferenzen} onChange={(e) => setCkReferenzen(+e.target.value)}>
+                <option value={0}>keine</option><option value={2}>2 vergleichbare</option>
+                <option value={3}>3 vergleichbare</option><option value={5}>5 vergleichbare</option>
+              </select>
+            </label>
+            <label className="vb-chk"><input type="checkbox" checked={ckISO} onChange={(e) => setCkISO(e.target.checked)} /> ISO 27001 zwingend</label>
             <label>Ihr Schätzwert (€)
               <input type="text" inputMode="numeric" placeholder="z. B. 300000" value={ckWert}
                 onChange={(e) => setCkWert(e.target.value.replace(/[^\d]/g, ""))} style={{ minWidth: "140px" }} />
@@ -462,6 +471,8 @@ export function VergabeblickView() {
               if (ckBuerg) proj -= 0.6;
               if (ckPreis) proj -= 0.3;
               if (ckUmsatz >= 10) proj -= 1.2; else if (ckUmsatz >= 5) proj -= 0.6; else if (ckUmsatz >= 1) proj -= 0.2;
+              if (ckReferenzen >= 5) proj -= 0.6; else if (ckReferenzen >= 3) proj -= 0.3;
+              if (ckISO) proj -= 0.4;   // benannte Zert-Pflicht verengt (grob, Datenlage dünn)
               if (draftNw && draftNw.median != null && draftNw.count > draftNw.median * 1.5) proj -= 0.5;
               proj = Math.max(1, Math.round(proj * 10) / 10);
             }
@@ -481,19 +492,42 @@ export function VergabeblickView() {
                   {krit ? `${krit} Hinweis${krit > 1 ? "e" : ""}, die Ihre Bieterzahl senken können` : "Keine kritischen Hinweise — der Zuschnitt sieht wettbewerbsoffen aus."}
                 </div>
                 {hints.map((h, i) => <div className={`vb-hint ${h.sev}`} key={i}><span className="vb-hint-i" />{h.t}</div>)}
-                {ckUmsatz > 0 && markt?.wettbewerb?.anbieter?.length ? (() => {
-                  // #21 Eignungs-Angemessenheit: wie stark schränkt der Mindestumsatz den Markt ein?
+                {(ckUmsatz > 0 || ckReferenzen > 0 || ckISO) && markt?.wettbewerb?.anbieter?.length ? (() => {
+                  // #21 Eignungs-Angemessenheit: Anteil erfüllender Anbieter je Kriterium UND kumulativ.
                   const anb = markt!.wettbewerb!.anbieter!;
-                  const erf = anb.filter((a) => a.vol >= ckUmsatz * 1e6 * 3).length; // 3-J-Volumen ≈ 3× Jahresumsatz
-                  const pct = Math.round((100 * erf) / anb.length);
-                  const eng = pct < 40;
+                  const N = anb.length;
+                  if (N < 8) return (
+                    <div className="vb-eignung"><div className="vb-eig-h">Eignungswirkung</div>
+                      <p className="vb-note">Zu wenige aufgelöste Anbieter im Marktausschnitt ({N}) für eine belastbare Eignungswirkung.</p></div>
+                  );
+                  const dots = (pct: number) => { const f2 = Math.max(0, Math.min(5, Math.round(pct / 20))); return "●".repeat(f2) + "○".repeat(5 - f2); };
+                  // Belastbare Kriterien (generisch): Umsatz (3-J-Volumen ≈ 3× Jahresumsatz), Referenzen (Zuschlagszahl).
+                  const krit: { label: string; pred: (a: Anbieter) => boolean; pct: number }[] = [];
+                  if (ckUmsatz > 0) { const pred = (a: Anbieter) => a.vol >= ckUmsatz * 1e6 * 3; krit.push({ label: `Mindestumsatz ${ckUmsatz} Mio €`, pred, pct: Math.round(100 * anb.filter(pred).length / N) }); }
+                  if (ckReferenzen > 0) { const pred = (a: Anbieter) => a.wins >= ckReferenzen; krit.push({ label: `${ckReferenzen} vergleichbare Referenzen`, pred, pct: Math.round(100 * anb.filter(pred).length / N) }); }
+                  // Kumulativ: Anbieter, die ALLE belastbaren Kriterien erfüllen (ISO bleibt draußen — dünn).
+                  const alle = krit.length ? anb.filter((a) => krit.every((k) => k.pred(a))) : anb;
+                  const kombPct = Math.round(100 * alle.length / N);
+                  const med = f.bieterMedian;
+                  const eng = (krit.length > 0 && kombPct < 40) || (med != null && alle.length <= Math.ceil(med));
                   return (
                     <div className={`vb-eignung ${eng ? "warn" : ""}`}>
-                      <div className="vb-eig-h">Eignungswirkung — Mindestumsatz {ckUmsatz} Mio €/Jahr</div>
-                      <p>Von {anb.length} aktiven Anbietern erreichen nur <b>{erf} (~{pct} %)</b> ein vergleichbares Auftragsvolumen.
-                        {eng ? " Das schränkt den Markt stark ein — die Ein-Bieter-Gefahr steigt." : " Der Markt bleibt breit genug."}</p>
-                      <p className="vb-note">Richtwert aus dem 3-Jahres-Auftragsvolumen der Anbieter (Größen-Proxy, nicht bilanzieller Umsatz).
-                        <b> Kumulativ</b> mit Bürgschaft/1-Los/Zerts bleiben deutlich weniger — jede Hürde einzeln wirkt harmlos, zusammen verengen sie den Markt. Benannte Zertifikate: Datenlage dünn, hier nicht quantifiziert.</p>
+                      <div className="vb-eig-h">Eignungswirkung — wie viele Anbieter erfüllen?</div>
+                      <table className="vb-eig-tab"><tbody>
+                        {krit.map((k) => (
+                          <tr key={k.label}><td>{k.label}</td><td className="vb-dots">{dots(k.pct)}</td>
+                            <td>~{k.pct} %{k.pct < 15 ? <b className="vb-eng"> ⚠ stark einschränkend</b> : null}</td></tr>
+                        ))}
+                        {ckISO && <tr><td>ISO 27001 zwingend</td><td className="vb-dots">—</td><td><i>Datenlage dünn — nicht belastbar quantifiziert</i></td></tr>}
+                      </tbody></table>
+                      {krit.length > 0 && (
+                        <div className="vb-eig-komb">Kombiniert erfüllen alle {krit.length > 1 ? `${krit.length} Kriterien` : "das Kriterium"}:
+                          <b> ~{alle.length} Anbieter</b> ({kombPct} %){med != null ? ` · Median-Bieterfeld: ${med}` : ""}</div>
+                      )}
+                      <p>{eng
+                        ? "Jede Hürde einzeln wirkt harmlos — zusammen bleiben wenige Anbieter. Das erhöht die Ein-Bieter-Gefahr."
+                        : "Der Markt bleibt auch kumulativ breit genug."}</p>
+                      <p className="vb-note">Umsatz-/Referenz-Anteile aus 3-Jahres-Auftragsvolumen bzw. Zuschlagszahl der {N} aktiven Anbieter (Größen-/Erfahrungs-Proxy, kein bilanzieller Umsatz). Benannte Zertifikate: Datenlage dünn (0,1–0,4 %), hier nicht quantifiziert. Faktische Marktwirkung, keine Weglass-Empfehlung.</p>
                     </div>
                   );
                 })() : null}

@@ -211,3 +211,13 @@
 .vb-vor-m { font-family: var(--mono, monospace); font-size: 12px; font-weight: 600; color: var(--ink-500); white-space: nowrap; }
 .vb-vor-m.soon { color: var(--flag); }
 .vb-vor-t { font-size: 13px; color: var(--ink-900); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* #21 Eignungs-Angemessenheit — Mehr-Kriterien-Tabelle + kumulativer Effekt. */
+.vb-eig-tab{ width:100%; border-collapse:collapse; margin:8px 0; }
+.vb-eig-tab td{ padding:4px 8px; border-bottom:1px solid var(--line); font-size:13px; vertical-align:middle; }
+.vb-eig-tab td:first-child{ color:var(--ink-800); }
+.vb-eig-tab td:last-child{ text-align:right; color:var(--ink-700); white-space:nowrap; }
+.vb-dots{ font-family:var(--mono,ui-monospace,monospace); letter-spacing:2px; color:var(--ink-700); text-align:center !important; }
+.vb-eng{ color:var(--flag); font-weight:700; }
+.vb-eig-komb{ margin:8px 0 4px; padding:8px 12px; border-radius:8px; background:var(--surface-2); font-size:13.5px; color:var(--ink-900); }
+.vb-eig-komb b{ color:var(--ink-900); }
