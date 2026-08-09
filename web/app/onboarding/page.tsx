@@ -47,23 +47,28 @@ function domainStamm(mail: string): string | null {
 }
 /* Wie gut ist der Anspruch auf eine Firma belegt?
  *
- * Bisher stand überall hart `entityConfidence: "confirmed"` — mit einer Gmail-Adresse
- * konnte jeder „ja, wir sind CANCOM" anklicken und bekam ein als belegt markiertes
- * Profil. Die Daten sind zwar öffentlich, aber an dieser Identität hängen später
- * Erfolgsprämie, Team und Export; ein unbelegter Anspruch darf nicht wie ein belegter
- * aussehen. Die Engine kennt die Abstufung längst (⚠-Guard, Ticket #11 §4.2) — sie wurde
- * nur nie befüllt.
+ * Vorher stand überall hart `entityConfidence: "confirmed"` — mit einer Gmail-Adresse
+ * konnte jeder „ja, wir sind CANCOM" anklicken und bekam ein als belegt markiertes Profil.
+ * Die Abstufung kennt die Engine längst (⚠-Guard, Ticket #11 §4.2), sie wurde nur nie befüllt.
  *
- * Belegt ist der Anspruch erst, wenn die Firmen-Domain der E-Mail zum Namen passt.
- * Freemail und fremde Domains ergeben „unsicher"; die Firma wird trotzdem gesetzt
- * (das Produkt bleibt sofort nutzbar), aber sichtbar als unbestätigt. */
-function identitaetsBeleg(mail: string, firma: string): { conf: "belegt" | "unsicher"; grund: string } {
-  const stamm = domainStamm(mail);
-  if (!stamm) return { conf: "unsicher", grund: "Freemail-Adresse — nicht der Firma zuzuordnen" };
-  const f = norm(firma);
-  if (f.includes(norm(stamm)) || norm(stamm).includes(f.slice(0, Math.max(4, Math.min(f.length, 10)))))
-    return { conf: "belegt", grund: `über die Domain ${stamm} bestätigt` };
-  return { conf: "unsicher", grund: `Domain ${stamm} passt nicht zum Firmennamen` };
+ * Geprüft wird SERVERSEITIG gegen die Firmen-Domain aus den Vergabedaten (51,5 % der Firmen
+ * haben eine). Sie darf nicht ins Frontend — sonst wären die Kontaktdomains aller Firmen
+ * über die Suche abgreifbar. Deshalb kommt hier nur das Urteil zurück.
+ */
+type Beleg = { conf: "belegt" | "unbestaetigt"; grund: string; domainBekannt: boolean };
+
+async function pruefeBeleg(id: string, email: string): Promise<Beleg> {
+  try {
+    const r = await fetch("/api/entity-verify", {
+      method: "POST", headers: { "content-type": "application/json" },
+      body: JSON.stringify({ id, email }),
+    });
+    if (!r.ok) throw new Error(String(r.status));
+    return await r.json();
+  } catch {
+    // Fällt der Abgleich aus, wird NICHT stillschweigend „belegt" angenommen.
+    return { conf: "unbestaetigt", grund: "Prüfung gerade nicht möglich", domainBekannt: false };
+  }
 }
 
 const norm = (s: string) => s.toLowerCase().replace(/[^a-zäöüß0-9]/g, "");
@@ -176,6 +181,9 @@ export default function OnboardingPage() {
   const [busy, setBusy] = useState(false);
   const [offen, setOffen] = useState<string | null>(null);      // aufgeklappte Kandidaten-Karte
   const [keineDavon, setKeineDavon] = useState(false);          // Eingabefeld inline zeigen
+  const [beleg, setBeleg] = useState<Beleg | null>(null);       // Ergebnis des Domain-Abgleichs
+  const [antragText, setAntragText] = useState("");             // Freitext für die manuelle Prüfung
+  const [antragGesendet, setAntragGesendet] = useState(false);
   const pwStatus = pwPruefung(pw, email);
   const pwOk = pwStatus.ok;
 
@@ -207,6 +215,26 @@ export default function OnboardingPage() {
       setAktiv(new Set(ms.map((_, i) => String(i))));
     } catch { setMembers([]); setAktiv(new Set()); }
   }, []);
+
+  // Der Abgleich läuft, sobald eine Firma angezeigt wird — nicht erst beim Abschluss,
+  // damit der Nutzer den Status sieht, bevor er bestätigt.
+  useEffect(() => {
+    const m = matched ?? (offen ? matches.find((x) => x.id === offen) : null);
+    if (!m || !email.includes("@")) { setBeleg(null); return; }
+    let weg = false;
+    pruefeBeleg(m.id, email).then((b) => { if (!weg) setBeleg(b); });
+    return () => { weg = true; };
+  }, [matched, offen, matches, email]);
+
+  async function antragSenden(m: Match) {
+    const { saveClaim } = await import("@/lib/supabase/claims");
+    await saveClaim({
+      identityId: m.id, companyName: m.name,
+      emailDomain: (email.split("@")[1] ?? null),
+      status: "unbestaetigt", grund: beleg?.grund ?? "", nachricht: antragText.trim() || undefined,
+    }).catch(() => ({ error: "speichern fehlgeschlagen" }));
+    setAntragGesendet(true);
+  }
 
   async function bestaetigen(m: Match) {
     setMatched(m);
@@ -265,7 +293,8 @@ export default function OnboardingPage() {
       profile = {
         ...buildProfile({
           firma: matched.name,
-          entityConfidence: identitaetsBeleg(email, matched.name).conf,
+          // „belegt" nur, wenn der serverseitige Abgleich es hergibt — nie als Vorgabe.
+          entityConfidence: beleg?.conf === "belegt" ? "belegt" : "unsicher",
           cpvFields, cpvLabels: matched.fields.map((f) => f.label || f.cpv4),
           cpvWins: Object.fromEntries(matched.fields.map((f) => [f.cpv4, f.wins])),
           cpvFields6: (matched.fields6 || []).map((f) => f.cpv6),   // CPV-6-Volltreffer (gewerkscharf)
@@ -401,19 +430,32 @@ export default function OnboardingPage() {
               <div className="sg-head">
                 <div className="sg-name">{matched.name}</div>
                 <div className="sg-meta">
-                  {(() => {
-                    const b = identitaetsBeleg(email, matched.name);
-                    return <><span className={`conf conf-${b.conf}`}>{b.conf === "belegt" ? "belegt" : "unbestätigt"}</span><span>{b.grund}</span></>;
-                  })()}
+                  <span className={`conf conf-${beleg?.conf ?? "unsicher"}`}>
+                    {beleg ? (beleg.conf === "belegt" ? "belegt" : "unbestätigt") : "wird geprüft …"}
+                  </span>
+                  <span>{beleg?.grund ?? "gleichen eure Adresse mit den Vergabedaten ab"}</span>
                 </div>
               </div>
               <FirmaFakten m={matched} />
             </div>
-            {identitaetsBeleg(email, matched.name).conf === "unsicher" ? (
-              <div className="note note-w">Wir können nicht prüfen, ob ihr zu dieser Firma gehört —
-                eure E-Mail-Adresse gehört nicht zu ihrer Domain. Ihr könnt trotzdem loslegen; die
-                Zuordnung bleibt so lange als <b>unbestätigt</b> markiert, und alles, was nach außen
-                wirkt (Erfolgsprämie, Team, Export), bleibt gesperrt, bis sie belegt ist.</div>
+            {beleg?.conf === "unbestaetigt" ? (
+              antragGesendet ? (
+                <div className="note note-p">Prüfantrag ist raus. Ihr könnt sofort weiterarbeiten —
+                  wir melden uns, sobald jemand draufgeschaut hat.</div>
+              ) : (
+                <div className="note note-w antrag">
+                  <b>Wir können nicht automatisch prüfen, ob ihr zu dieser Firma gehört.</b>
+                  <span>{beleg.grund}. Ihr könnt trotzdem sofort loslegen — die Zuordnung bleibt so lange
+                    <b> unbestätigt</b>, und was nach außen wirkt (Erfolgsprämie, Team, Export) bleibt gesperrt.</span>
+                  {/* Statt einer Sackgasse ein Weg: Kurznachricht, die jemand von Hand prüft.
+                      Gemessen betrifft das 5,8 % der Zielgruppe — knapp die Hälfte davon
+                      t-online-Adressen, also etablierte Betriebe ohne eigene Mail-Domain. */}
+                  <textarea className="inp antrag-t" rows={2} value={antragText}
+                    onChange={(e) => setAntragText(e.target.value)}
+                    placeholder="Kurz zur Prüfung: eure Rolle im Betrieb, gern Handelsregister-Nummer oder Website" />
+                  <button className="btn btn-s" onClick={() => antragSenden(matched)}>Prüfung anfragen</button>
+                </div>
+              )
             ) : null}
             <div className="note note-p">Passend zu diesem Profil bauen wir gleich eure Lead-Liste.
               Bestätigt die Firma, dann leiten wir das Profil aus euren Vergaben ab.</div>

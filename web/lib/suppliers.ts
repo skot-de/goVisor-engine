@@ -13,6 +13,9 @@ export type Supplier = {
   volMedian: number | null;
   topBuyers?: { name: string; wins: number; seit: number; bis: number }[];
   topShare?: number | null;   // Anteil des größten Auftraggebers (Klumpenrisiko)
+  // NUR SERVERSEITIG — nie ins Suchergebnis, sonst sind die Kontaktdomains aller
+  // Firmen über die Suche abgreifbar. Auswertung ausschließlich in /api/entity-verify.
+  domain?: string | null; domainBelege?: number;
   members: Member[];
 };
 

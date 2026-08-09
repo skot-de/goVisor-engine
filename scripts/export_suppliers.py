@@ -167,6 +167,32 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE kunden AS
          max(CASE WHEN rn = 1 THEN n * 1.0 / nullif(tot, 0) END) AS top_anteil
   FROM rk GROUP BY 1""")
 
+# Bekannte Firmen-Domain aus den Gewinner-Kontaktadressen der Vergabedaten.
+# Gemessen: 52,8 % der Identitäten haben eine — damit lässt sich der Identitäts-Anspruch
+# beim Onboarding ohne Rückfrage belegen, wenn die Registrierungs-Adresse dazu passt.
+# ACHTUNG: Das Feld ist SERVERSEITIG. Es darf nie im Suchergebnis ans Frontend gehen —
+# sonst wären die Kontaktdomains aller Firmen über die Suche abgreifbar.
+con.execute(f"""CREATE OR REPLACE TEMP TABLE domains AS
+  WITH kauf AS (   -- Domain des AUFTRAGGEBERS je Bekanntmachung
+    SELECT lead_id, lower(split_part(email, '@', 2)) AS dom
+    FROM read_parquet('{G}/lead_party.parquet')
+    WHERE party_role = 'buyer' AND email LIKE '%@%'),
+  m AS (
+    SELECT w.identity_id, lower(split_part(lp.email, '@', 2)) AS dom
+    FROM w JOIN read_parquet('{G}/lead_party.parquet') lp ON lp.lead_id = w.notice_id
+           LEFT JOIN kauf k ON k.lead_id = w.notice_id
+    WHERE lower(lp.party_role) LIKE '%win%' AND lp.email LIKE '%@%'
+      AND w.identity_id IN (SELECT identity_id FROM tops)
+      -- Das Gewinner-Mailfeld trägt in 14 % der Fälle die Adresse des Auftraggebers
+      -- (gemessen). Ungefiltert bekäme LEONHARD WEISS die Domain deutschebahn.com —
+      -- und jeder mit DB-Adresse könnte fremde Firmen beanspruchen.
+      AND (k.dom IS NULL OR lower(split_part(lp.email, '@', 2)) <> k.dom)
+      -- Platzhalter aus dem TED-Schema, keine echten Adressen
+      AND lower(split_part(lp.email, '@', 2)) NOT IN ('emailaddress.given', 'example.com', 'nicht.angegeben')),
+  c AS (SELECT identity_id, dom, count(*) n FROM m WHERE dom <> '' GROUP BY 1, 2),
+  r AS (SELECT *, row_number() OVER (PARTITION BY identity_id ORDER BY n DESC) rn FROM c)
+  SELECT identity_id, dom AS domain, n AS domain_belege FROM r WHERE rn = 1""")
+
 # Gruppen-Mitglieder (Schwester-Entities): je Entität eigener Name, Methode, Konfidenz, Wins.
 con.execute(f"""CREATE OR REPLACE TEMP TABLE members AS
   WITH ew AS (
@@ -182,7 +208,8 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE members AS
 
 rows = con.execute(f"""
   SELECT t.identity_id, n.name, n.aliase, t.wins, f.fields, f6.fields6, r.regions, r.regionen_fuer_80,
-         v.vol_median, v.wert_belege, v.wert_klumpen, s.buyers, s.seit, m.members, k.top_kunden, k.top_anteil
+         v.vol_median, v.wert_belege, v.wert_klumpen, s.buyers, s.seit, m.members, k.top_kunden, k.top_anteil,
+         d.domain, d.domain_belege
   FROM tops t
   LEFT JOIN namen n ON n.identity_id = t.identity_id
   LEFT JOIN felder f ON f.identity_id = t.identity_id
@@ -192,6 +219,7 @@ rows = con.execute(f"""
   LEFT JOIN stats s ON s.identity_id = t.identity_id
   LEFT JOIN members m ON m.identity_id = t.identity_id
   LEFT JOIN kunden k ON k.identity_id = t.identity_id
+  LEFT JOIN domains d ON d.identity_id = t.identity_id
   WHERE n.name IS NOT NULL AND {BLOCK_SQL}
   ORDER BY t.wins DESC""").fetchall()
 
@@ -210,7 +238,7 @@ def method_conf(m):
 
 out = []
 for (iid, name, aliase, wins, fields, fields6, regions, reg80, vol, wert_belege, wert_klumpen,
-     buyers, seit, members, top_kunden, top_anteil) in rows:
+     buyers, seit, members, top_kunden, top_anteil, domain, domain_belege) in rows:
     ms = []
     for mem in (members or []):
         conf, text = method_conf(mem["method"])
@@ -243,6 +271,9 @@ for (iid, name, aliase, wins, fields, fields6, regions, reg80, vol, wert_belege,
         # Anteil des größten Auftraggebers: ab ~40 % ist das ein Klumpenrisiko, das der
         # Kunde kennen sollte — und zugleich unser stärkstes Argument fürs Diversifizieren.
         "topShare": round(float(top_anteil), 3) if top_anteil else None,
+        # Nur serverseitig ausgewertet (siehe /api/entity-verify) — nie ins Suchergebnis.
+        "domain": domain or None,
+        "domainBelege": int(domain_belege) if domain_belege else 0,
         "members": ms,
     })
 
