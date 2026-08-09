@@ -101,14 +101,31 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE felder6 AS
   FROM rk r
   WHERE r.rn <= 12 GROUP BY 1""")   # ohne Label: nur der Code zählt fürs Matching (spart ~3 MB)
 
-# Top-Regionen (Leistungsort-NUTS1) je Identität
+# Regionaler Fußabdruck (Leistungsort-NUTS1) je Identität — AUS DER HISTORIE ABGELEITET.
+# Statt stumpf „Top 4" die KLEINSTE Regionsmenge, die 80 % der Zuschläge abdeckt:
+#   1-2 Regionen  → regional      (45 % + 22 % aller Firmen, gemessen)
+#   3-5 Regionen  → teilregional  (28 %)
+#   ab 6          → bundesweit    (5 %) → leere Liste = kein Regionsfilter, sonst würde man
+#                                   auf 6 von 16 Bundesländern „filtern", was nichts aussagt.
+# Das macht den Filter selbstjustierend: ein Hammer Elektriker bekommt NRW, Cancom nichts.
 con.execute("""CREATE OR REPLACE TEMP TABLE regionen AS
   WITH c AS (SELECT identity_id, nuts1, count(*) n FROM w
              WHERE nuts1 IS NOT NULL AND nuts1 <> '' AND identity_id IN (SELECT identity_id FROM tops)
              GROUP BY 1,2),
-  rk AS (SELECT *, row_number() OVER (PARTITION BY identity_id ORDER BY n DESC) rn FROM c)
-  SELECT identity_id, list(nuts1 ORDER BY n DESC) AS regions
-  FROM rk WHERE rn <= 4 GROUP BY 1""")
+  t AS (SELECT identity_id, sum(n) tot FROM c GROUP BY 1),
+  r AS (SELECT c.*, t.tot,
+               row_number() OVER (PARTITION BY c.identity_id ORDER BY c.n DESC) rn,
+               sum(c.n) OVER (PARTITION BY c.identity_id ORDER BY c.n DESC ROWS UNBOUNDED PRECEDING) kum
+        FROM c JOIN t ON t.identity_id = c.identity_id),
+  n80 AS (SELECT identity_id, min(rn) FILTER (WHERE kum >= 0.8 * tot) AS noetig
+          FROM r GROUP BY 1)
+  SELECT r.identity_id,
+         CASE WHEN n80.noetig >= 6 THEN []::VARCHAR[]          -- bundesweit → kein Filter
+              ELSE list(r.nuts1 ORDER BY r.n DESC) END AS regions,
+         min(n80.noetig) AS regionen_fuer_80
+  FROM r JOIN n80 ON n80.identity_id = r.identity_id
+  WHERE r.rn <= coalesce(n80.noetig, 4)
+  GROUP BY r.identity_id, n80.noetig""")
 
 # Typisches Volumen: Median der belegten Auftragswerte über die Leads dieser Identität
 con.execute(f"""CREATE OR REPLACE TEMP TABLE volumen AS
@@ -138,7 +155,7 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE members AS
   GROUP BY 1""")
 
 rows = con.execute(f"""
-  SELECT t.identity_id, n.name, n.aliase, t.wins, f.fields, f6.fields6, r.regions, v.vol_median,
+  SELECT t.identity_id, n.name, n.aliase, t.wins, f.fields, f6.fields6, r.regions, r.regionen_fuer_80, v.vol_median,
          s.buyers, s.seit, m.members
   FROM tops t
   LEFT JOIN namen n ON n.identity_id = t.identity_id
@@ -165,7 +182,7 @@ def method_conf(m):
 
 
 out = []
-for (iid, name, aliase, wins, fields, fields6, regions, vol, buyers, seit, members) in rows:
+for (iid, name, aliase, wins, fields, fields6, regions, reg80, vol, buyers, seit, members) in rows:
     ms = []
     for mem in (members or []):
         conf, text = method_conf(mem["method"])
@@ -181,6 +198,9 @@ for (iid, name, aliase, wins, fields, fields6, regions, vol, buyers, seit, membe
         "fields": [dict(f) for f in (fields or [])],
         "fields6": [dict(f) for f in (fields6 or [])],
         "regions": clean_nuts(regions),
+        # aus der Historie abgeleitet: wie viele Regionen für 80 % der Aufträge nötig sind
+        # (1-2 = regional, 3-5 = teilregional, ≥6 = bundesweit → regions ist dann leer)
+        "regionTyp": ("regional" if (reg80 or 9) <= 2 else "teilregional" if (reg80 or 9) <= 5 else "bundesweit"),
         "volMedian": float(vol) if vol else None,
         "members": ms,
     })

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>goVisor — Firmenprofil</title>
+<style>
+:root{
+  --bg:#f6f7f7;--panel:#fff;--ink:#1a1d1b;--ink-2:#5c6360;--ink-3:#8a918d;
+  --line:#e4e7e5;--line-2:#eef0ef;
+  --green:#16a06b;--green-d:#12855a;--green-t:#eaf6f0;--green-t2:#f4faf7;
+  --amber:#a16207;--amber-t:#fdf8ed;--amber-b:#f0e2c2;
+  --red:#b91c1c;--red-t:#fdf2f0;--red-b:#f3d5cd;
+  --blue:#2b5f86;--blue-t:#eef4f9;
+  --r:9px;
+  --mono:'SF Mono','JetBrains Mono','IBM Plex Mono',Menlo,Consolas,monospace;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+button{font:inherit}
+.stepbar{position:sticky;top:0;z-index:60;background:#14181a;color:#fff;padding:9px 14px;display:flex;gap:5px;flex-wrap:wrap;align-items:center}
+.stepbar b{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9aa5a0;margin-right:4px;font-weight:600}
+.stepbar button{font-size:11.5px;background:#232a2d;color:#c9d2ce;border:1px solid #333c3f;padding:4px 9px;border-radius:99px;cursor:pointer}
+.stepbar button:hover{background:#2d3639;color:#fff}
+.stepbar button[aria-current="true"]{background:var(--green);border-color:var(--green);color:#fff;font-weight:600}
+
+.app{display:flex;min-height:calc(100vh - 40px)}
+.rail{width:52px;background:var(--panel);border-right:1px solid var(--line);flex-shrink:0;padding-top:14px;display:flex;flex-direction:column;align-items:center;gap:2px}
+.rail a{display:flex;flex-direction:column;align-items:center;gap:6px;padding:11px 0;width:44px;border-radius:7px;text-decoration:none;color:var(--ink-3)}
+.rail a.on{background:var(--green-t);color:var(--green-d)}
+.rail a span.lb{font-size:8.5px;letter-spacing:.1em;writing-mode:vertical-rl;transform:rotate(180deg);text-transform:uppercase;font-weight:600}
+.rail svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+.rail hr{width:24px;border:0;border-top:1px solid var(--line);margin:9px 0}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.topbar{background:var(--panel);border-bottom:1px solid var(--line);padding:9px 16px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{font-size:17px;font-weight:700;letter-spacing:-.03em}
+.branche{font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.branche b{color:var(--ink);font-size:12px;letter-spacing:0;text-transform:none;margin-left:6px;font-weight:600}
+.search{flex:1;min-width:180px;max-width:520px;display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:99px;padding:6px 13px;background:#fbfcfb;color:var(--ink-3);font-size:13px}
+.search svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8}
+.topacts{display:flex;gap:14px;align-items:center;font-size:12.5px;color:var(--ink-2)}
+.topacts span{display:flex;align-items:center;gap:5px}
+.topacts svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.7}
+
+.crumb{background:var(--panel);border-bottom:1px solid var(--line-2);padding:9px 20px;font-size:12.5px;color:var(--ink-3)}
+.crumb a{color:var(--green-d);text-decoration:none}
+.pagepad{padding:18px 20px 48px}
+.wrap{max-width:960px}
+.hint{font-size:12px;color:var(--ink-3);border-left:2px solid var(--line);padding-left:11px;line-height:1.55;margin-bottom:16px;max-width:960px}
+
+/* Kopf */
+.phead{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-start;margin-bottom:16px}
+.phead h1{font-size:26px;font-weight:700;letter-spacing:-.025em;line-height:1.15}
+.pmeta{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
+.tag{font-size:11px;border:1px solid var(--line);border-radius:99px;padding:2px 9px;color:var(--ink-2);background:#fbfcfb;display:inline-flex;align-items:center;gap:5px}
+.tag i{width:5px;height:5px;border-radius:50%;background:currentColor}
+.tag.ok{border-color:#cfe8dc;background:var(--green-t);color:var(--green-d)}
+.tag.warn{border-color:var(--amber-b);background:var(--amber-t);color:var(--amber)}
+.tag.rel{border-color:#d6e3ee;background:var(--blue-t);color:var(--blue)}
+.pacts{display:flex;gap:8px;flex-wrap:wrap}
+
+/* KPI-Leiste */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:18px}
+.kpi{background:var(--panel);padding:14px 16px}
+.kpi .k{font-size:11.5px;color:var(--ink-2)}
+.kpi .v{font-family:var(--mono);font-size:21px;font-weight:700;letter-spacing:-.02em;margin-top:4px}
+.kpi .s{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);margin-top:2px}
+.kpi .v.warnc{color:var(--amber)}
+.kpi .v.okc{color:var(--green-d)}
+
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);margin-bottom:14px;overflow:hidden}
+.ch{display:flex;align-items:center;gap:11px;padding:13px 16px;border-bottom:1px solid var(--line-2)}
+.ch h2{font-size:14px;font-weight:600}
+.ch .sub{font-size:12px;color:var(--ink-3);margin-left:auto;font-family:var(--mono)}
+.cb{padding:14px 16px}
+.cb.tight{padding:0}
+
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);font-weight:600;padding:10px 14px;border-bottom:1px solid var(--line-2);background:#fbfcfb}
+.tbl th.r,.tbl td.r{text-align:right}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--line-2);vertical-align:top}
+.tbl tr:last-child td{border-bottom:0}
+.tbl tr:hover td{background:#fbfcfb}
+.tbl .m{font-family:var(--mono);font-size:12.5px}
+.tbl .fn{font-weight:600}
+.tbl .fs{font-size:11.5px;color:var(--ink-3);margin-top:2px}
+.soon{color:var(--green-d);font-weight:600}
+.later{color:var(--ink-2)}
+
+.bars{display:flex;flex-direction:column;gap:9px}
+.brow{display:grid;grid-template-columns:145px 1fr 54px;gap:11px;align-items:center;font-size:12.5px}
+.btrack{height:6px;background:var(--line-2);border-radius:99px;overflow:hidden}
+.btrack i{display:block;height:100%;background:var(--green);border-radius:99px}
+.btrack i.alt{background:#9fb3ab}
+.brow .bv{font-family:var(--mono);font-size:11px;color:var(--ink-3);text-align:right}
+
+/* Kopf an Kopf */
+.h2h{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-2);border-radius:8px;overflow:hidden;border:1px solid var(--line-2)}
+.h2h div{background:var(--panel);padding:14px;text-align:center}
+.h2h .n{font-family:var(--mono);font-size:24px;font-weight:700}
+.h2h .l{font-size:11.5px;color:var(--ink-2);margin-top:3px}
+.h2h .win .n{color:var(--green-d)}
+.h2h .lose .n{color:var(--red)}
+
+.note{border-radius:8px;padding:11px 14px;font-size:13px;display:flex;gap:10px;align-items:flex-start;line-height:1.55}
+.note svg{width:15px;height:15px;flex-shrink:0;margin-top:1px;stroke:currentColor;fill:none;stroke-width:1.9}
+.note-n{background:#f6f8f7;color:var(--ink-2);border:1px solid var(--line)}
+.note-w{background:var(--amber-t);color:var(--amber);border:1px solid var(--amber-b)}
+.note-g{background:var(--green-t2);color:var(--ink-2);border:1px solid #cfe8dc}
+.mini{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-top:7px}
+
+.btn{font-size:13px;font-weight:600;border-radius:7px;padding:8px 14px;cursor:pointer;border:1px solid transparent;display:inline-flex;align-items:center;gap:7px}
+.btn-p{background:var(--green);color:#fff}.btn-p:hover{background:var(--green-d)}
+.btn-s{background:var(--panel);color:var(--ink);border-color:var(--line)}.btn-s:hover{background:#f2f4f3}
+.btn-sm{padding:5px 11px;font-size:12px}
+.btn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.9}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.empty{padding:22px 16px;text-align:center;color:var(--ink-2);font-size:13px;line-height:1.6}
+.scr{display:none}.scr.on{display:block}
+@media(max-width:860px){.grid2{grid-template-columns:1fr}.h2h{grid-template-columns:1fr}.brow{grid-template-columns:110px 1fr 46px}}
+</style>
+</head>
+<body>
+
+<nav class="stepbar">
+  <b>Firmenprofil</b>
+  <button data-s="f1" aria-current="true">1 · Wettbewerber</button>
+  <button data-s="f2">2 · Dünne Datenlage</button>
+</nav>
+
+<div class="app">
+  <aside class="rail">
+    <a href="#" class="on"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg><span class="lb">Akquise</span></a>
+    <a href="#"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6-5.3-2.9L6.7 19.6l1.1-6L3.4 9.4l6-.8z"/></svg><span class="lb">Merkliste</span></a>
+    <a href="#"><svg viewBox="0 0 24 24"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="7" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.8 8.8l3 7M16.2 8.8l-3 7M8.5 7h7"/></svg><span class="lb">Netzwerk</span></a>
+    <hr>
+    <a href="#"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span class="lb">Strategie</span></a>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="logo">govisor</div>
+      <div class="branche">Branche <b>Bau &amp; Ausbau ▾</b></div>
+      <div class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>Suchen — Firma, Ort, Leistung</div>
+      <div class="topacts"><span><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.5-4 12.5-4 14 0"/></svg>Meyer Elektrotechnik</span></div>
+    </header>
+
+    <div class="crumb"><a href="#">Strategie</a> › <a href="#">Wettbewerb</a> › Spie Deutschland &amp; Zentraleuropa</div>
+
+    <div class="pagepad">
+
+      <!-- ===== f1 ===== -->
+      <section class="scr on" id="f1">
+        <div class="wrap">
+          <p class="hint">Eine Detailseite, kein Navigationspunkt. Erreichbar aus der Wettbewerbstabelle, vom Amtsinhaber im Lead und vom Gewinner eines Zuschlags.</p>
+
+          <div class="phead">
+            <div>
+              <h1>Spie Deutschland &amp; Zentraleuropa GmbH</h1>
+              <div class="pmeta">
+                <span class="tag ok"><i></i>Zuordnung gesichert</span>
+                <span class="tag">Konzern · 4 Gesellschaften zusammengefasst</span>
+                <span class="tag rel">direkter Wettbewerb</span>
+                <span class="tag">Schwerpunkt Elektro · NRW</span>
+              </div>
+            </div>
+            <div class="pacts">
+              <button class="btn btn-s btn-sm">Beobachten</button>
+              <button class="btn btn-s btn-sm">Export</button>
+            </div>
+          </div>
+
+          <div class="kpis">
+            <div class="kpi"><div class="k">Zuschläge 36 Monate</div><div class="v">34</div><div class="s">gemessen</div></div>
+            <div class="kpi"><div class="k">Volumen gesamt</div><div class="v">61 Mio €</div><div class="s">davon 78 % mit echtem Wert</div></div>
+            <div class="kpi"><div class="k">Ø Auftragswert</div><div class="v">1,8 Mio €</div><div class="s">Median 940.000 €</div></div>
+            <div class="kpi"><div class="k">Verteidigungsquote</div><div class="v warnc">81 %</div><div class="s">Markt 28 %</div></div>
+            <div class="kpi"><div class="k">Läuft aus ≤ 18 Monate</div><div class="v okc">7</div><div class="s">11,4 Mio €</div></div>
+          </div>
+
+          <div class="note note-g" style="margin-bottom:14px">
+            <svg viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+            <div><b>Spie verteidigt weit überdurchschnittlich.</b> 81 % der Verträge, die auslaufen, holt das Unternehmen zurück — marktüblich sind 28 %. Angriffe lohnen dort, wo die Bindung schwach ist: bei drei Vergabestellen unten liegt die Laufzeit unter zwei Jahren.
+            <div class="mini">Basis: 34 Zuschläge, 19 auswertbare Nachfolgen · head_to_head</div></div>
+          </div>
+
+          <!-- Wo er sitzt -->
+          <div class="card">
+            <div class="ch"><h2>Wo Spie festsitzt</h2><span class="sub">9 Vergabestellen</span></div>
+            <div class="cb tight">
+              <table class="tbl">
+                <thead><tr><th>Vergabestelle</th><th>Leistung</th><th class="r">Aufträge</th><th class="r">seit</th><th class="r">Bindung</th></tr></thead>
+                <tbody>
+                  <tr><td><div class="fn">Landschaftsverband Rheinland</div><div class="fs">Köln</div></td><td>Elektroinstandhaltung</td><td class="r m">6</td><td class="r m">2014</td><td class="r"><span class="tag warn">sehr fest</span></td></tr>
+                  <tr><td><div class="fn">Stadt Düsseldorf</div><div class="fs">Gebäudemanagement</div></td><td>Sicherheitstechnik</td><td class="r m">5</td><td class="r m">2017</td><td class="r"><span class="tag warn">fest</span></td></tr>
+                  <tr><td><div class="fn">Universitätsklinikum Essen</div><div class="fs">Essen</div></td><td>TGA-Wartung</td><td class="r m">4</td><td class="r m">2019</td><td class="r"><span class="tag">mittel</span></td></tr>
+                  <tr><td><div class="fn">Kreis Recklinghausen</div><div class="fs">Hochbauamt</div></td><td>Elektroarbeiten</td><td class="r m">2</td><td class="r m">2024</td><td class="r"><span class="tag ok">schwach</span></td></tr>
+                  <tr><td><div class="fn">Stadt Gelsenkirchen</div><div class="fs">Zentrale Vergabe</div></td><td>Beleuchtung</td><td class="r m">1</td><td class="r m">2025</td><td class="r"><span class="tag ok">schwach</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Was ausläuft -->
+          <div class="card">
+            <div class="ch"><h2>Was bei Spie ausläuft</h2><span class="sub">nächste 24 Monate</span></div>
+            <div class="cb tight">
+              <table class="tbl">
+                <thead><tr><th>Vertrag</th><th>Vergabestelle</th><th class="r">Volumen</th><th class="r">Ende</th><th class="r"></th></tr></thead>
+                <tbody>
+                  <tr><td><div class="fn">Elektroarbeiten Verwaltungsgebäude</div><div class="fs">Bindung schwach — 1. Vertrag</div></td><td>Kreis Recklinghausen</td><td class="r m">1,4 Mio €</td><td class="r m soon">03/2027</td><td class="r"><button class="btn btn-s btn-sm">Merken</button></td></tr>
+                  <tr><td><div class="fn">Beleuchtung Schulen</div><div class="fs">Bindung schwach — 1. Vertrag</div></td><td>Stadt Gelsenkirchen</td><td class="r m">890.000 €</td><td class="r m soon">06/2027</td><td class="r"><button class="btn btn-s btn-sm">Merken</button></td></tr>
+                  <tr><td><div class="fn">TGA-Wartung Klinikum</div><div class="fs">Bindung mittel — 2 Verlängerungen</div></td><td>Uniklinikum Essen</td><td class="r m">3,2 Mio €</td><td class="r m later">11/2027</td><td class="r"><button class="btn btn-s btn-sm">Merken</button></td></tr>
+                  <tr><td><div class="fn">Sicherheitstechnik Liegenschaften</div><div class="fs">Bindung fest — 3 Verlängerungen</div></td><td>Stadt Düsseldorf</td><td class="r m">4,1 Mio €</td><td class="r m later">02/2028</td><td class="r"><button class="btn btn-s btn-sm">Merken</button></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="grid2">
+            <!-- Kopf an Kopf -->
+            <div class="card">
+              <div class="ch"><h2>Kopf an Kopf</h2><span class="sub">seit 2023</span></div>
+              <div class="cb">
+                <div class="h2h">
+                  <div class="win"><div class="n">2</div><div class="l">ihr gewonnen</div></div>
+                  <div class="lose"><div class="n">5</div><div class="l">Spie gewonnen</div></div>
+                  <div><div class="n">3</div><div class="l">an Dritte</div></div>
+                </div>
+                <div class="note note-n" style="margin-top:13px">
+                  <svg viewBox="0 0 24 24"><path d="M12 8v5M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg>
+                  <div>10 gemeinsame Verfahren — davon 5 aus öffentlichen Zuschlägen belegt, 5 aus euren eigenen Meldungen. Wo ihr nichts gemeldet habt, kennt goVisor eure Teilnahme nicht.
+                  <div class="mini">Vollständiger, je mehr ihr im Cockpit pflegt</div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Märkte -->
+            <div class="card">
+              <div class="ch"><h2>Wo Spie stark ist</h2></div>
+              <div class="cb">
+                <div class="bars">
+                  <div class="brow"><span>Elektro</span><div class="btrack"><i style="width:61%"></i></div><span class="bv">61 %</span></div>
+                  <div class="brow"><span>TGA</span><div class="btrack"><i style="width:30%"></i></div><span class="bv">30 %</span></div>
+                  <div class="brow"><span>Sicherheitstechnik</span><div class="btrack"><i style="width:9%"></i></div><span class="bv">9 %</span></div>
+                </div>
+                <div style="height:1px;background:var(--line-2);margin:14px 0"></div>
+                <div class="bars">
+                  <div class="brow"><span>NRW</span><div class="btrack"><i class="alt" style="width:82%"></i></div><span class="bv">82 %</span></div>
+                  <div class="brow"><span>Rheinland-Pfalz</span><div class="btrack"><i class="alt" style="width:12%"></i></div><span class="bv">12 %</span></div>
+                  <div class="brow"><span>übrige</span><div class="btrack"><i class="alt" style="width:6%"></i></div><span class="bv">6 %</span></div>
+                </div>
+                <div class="note note-n" style="margin-top:13px"><svg viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></svg><div>Überschneidung mit eurem Profil: <b>hoch</b> — 61 % Elektro trifft euren Schwerpunkt.</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Signale -->
+          <div class="card">
+            <div class="ch"><h2>Weitere Signale</h2></div>
+            <div class="cb">
+              <div class="grid2" style="gap:20px">
+                <div>
+                  <div style="font-size:12.5px;color:var(--ink-2);line-height:1.7">
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--line-2)"><span>Unterauftragsvergabe geregelt</span><span class="m" style="font-family:var(--mono)">7 von 34</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--line-2)"><span>vorzeitige Neuausschreibungen</span><span style="font-family:var(--mono)">1</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--line-2)"><span>Bietergemeinschaften</span><span style="font-family:var(--mono)">3</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0"><span>Netzwerk</span><span style="color:var(--ink-3)">nicht beigetreten</span></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="note note-n" style="height:100%">
+                    <svg viewBox="0 0 24 24"><path d="M12 8v5M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg>
+                    <div>Spie vergibt selten weiter (7 von 34) und überschneidet sich stark mit eurem Feld — hier ist eher Wettbewerb als Zusammenarbeit zu erwarten.
+                    <div class="mini">Abgeleitet · kein Hinweis auf konkretes Verhalten</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="note note-n">
+            <svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
+            <div>Alle Angaben stammen aus öffentlichen Vergabebekanntmachungen und euren eigenen Meldungen. goVisor zeigt keine Daten anderer Nutzer, keine Preise und keine Personen.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== f2 ===== -->
+      <section class="scr" id="f2">
+        <div class="wrap">
+          <p class="hint">Der ehrliche Fall: wenig Daten, unsichere Zuordnung. Statt Kennzahlen zu zeigen, die nichts tragen, benennt goVisor die Lage.</p>
+
+          <div class="phead">
+            <div>
+              <h1>Elektro Wagner GmbH &amp; Co. KG</h1>
+              <div class="pmeta">
+                <span class="tag warn"><i></i>Zuordnung unsicher</span>
+                <span class="tag">3 ähnliche Namen im Register</span>
+                <span class="tag">Schwerpunkt unklar</span>
+              </div>
+            </div>
+            <div class="pacts"><button class="btn btn-s btn-sm">Beobachten</button></div>
+          </div>
+
+          <div class="note note-w" style="margin-bottom:16px">
+            <svg viewBox="0 0 24 24"><path d="M12 8v5M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg>
+            <div><b>Diese Firma ist nicht eindeutig zuzuordnen.</b> Im Vergaberegister gibt es drei ähnliche Namen an unterschiedlichen Orten. Die Zahlen unten beziehen sich auf die wahrscheinlichste Zuordnung und können Aufträge anderer Gesellschaften enthalten.
+            <div style="margin-top:10px"><button class="btn btn-s btn-sm">Zuordnung korrigieren</button></div></div>
+          </div>
+
+          <div class="kpis">
+            <div class="kpi"><div class="k">Zuschläge 36 Monate</div><div class="v">3</div><div class="s">gemessen</div></div>
+            <div class="kpi"><div class="k">Volumen gesamt</div><div class="v">— </div><div class="s">kein Wert veröffentlicht</div></div>
+            <div class="kpi"><div class="k">Ø Auftragswert</div><div class="v">—</div><div class="s">zu wenig Daten</div></div>
+            <div class="kpi"><div class="k">Verteidigungsquote</div><div class="v">—</div><div class="s">keine Nachfolge auswertbar</div></div>
+            <div class="kpi"><div class="k">Läuft aus ≤ 18 Monate</div><div class="v">1</div><div class="s">Laufzeit geschätzt</div></div>
+          </div>
+
+          <div class="card">
+            <div class="ch"><h2>Wo Elektro Wagner festsitzt</h2><span class="sub">2 Vergabestellen</span></div>
+            <div class="cb tight">
+              <table class="tbl">
+                <thead><tr><th>Vergabestelle</th><th>Leistung</th><th class="r">Aufträge</th><th class="r">seit</th><th class="r">Bindung</th></tr></thead>
+                <tbody>
+                  <tr><td><div class="fn">Stadt Lünen</div></td><td>Elektroarbeiten Schulen</td><td class="r m">2</td><td class="r m">2023</td><td class="r"><span class="tag">zu wenig Daten</span></td></tr>
+                  <tr><td><div class="fn">Kreis Unna</div></td><td>Wartung Beleuchtung</td><td class="r m">1</td><td class="r m">2025</td><td class="r"><span class="tag">zu wenig Daten</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="grid2">
+            <div class="card">
+              <div class="ch"><h2>Kopf an Kopf</h2></div>
+              <div class="cb"><div class="empty">Keine gemeinsamen Verfahren bekannt.<br><span style="color:var(--ink-3);font-size:12px">Meldet ihr eure Teilnahmen im Cockpit, entsteht dieser Vergleich mit der Zeit.</span></div></div>
+            </div>
+            <div class="card">
+              <div class="ch"><h2>Wo Elektro Wagner stark ist</h2></div>
+              <div class="cb"><div class="empty">Aus 3 Aufträgen lässt sich kein belastbarer Schwerpunkt ableiten.<br><span style="color:var(--ink-3);font-size:12px">Ab etwa 8 Aufträgen zeigt goVisor eine Verteilung.</span></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  function show(id){
+    document.querySelectorAll('.scr').forEach(function(s){s.classList.toggle('on',s.id===id)});
+    document.querySelectorAll('.stepbar button').forEach(function(b){b.setAttribute('aria-current',String(b.dataset.s===id))});
+    window.scrollTo({top:0});
+  }
+  document.querySelectorAll('.stepbar button').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.s)})});
+})();
+</script>
+</body>
+</html>

@@ -20,3 +20,6 @@ __pycache__/
 .pytest_cache/
 .venv/
 .DS_Store
+
+# Internes Vertriebs-CSV (enthaelt Kontaktdaten) — nie committen
+data/zielliste.csv

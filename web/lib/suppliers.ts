@@ -9,7 +9,8 @@ export type Supplier = {
   buyers: number | null; seit: number | null;
   fields: { cpv4: string; label: string | null; wins: number }[];
   fields6?: { cpv6: string; wins: number }[];   // CPV-6-Volltreffer-Menge (nur Codes, fürs Matching)
-  regions: string[]; volMedian: number | null; members: Member[];
+  regions: string[]; regionTyp?: 'regional'|'teilregional'|'bundesweit';
+  volMedian: number | null; members: Member[];
 };
 
 let CACHE: Supplier[] | null = null;

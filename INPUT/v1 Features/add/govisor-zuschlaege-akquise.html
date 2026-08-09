@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>goVisor — Zuschläge in der Akquise</title>
+<style>
+:root{
+  --bg:#f6f7f7;--panel:#fff;--ink:#1a1d1b;--ink-2:#5c6360;--ink-3:#8a918d;
+  --line:#e4e7e5;--line-2:#eef0ef;
+  --green:#16a06b;--green-d:#12855a;--green-t:#eaf6f0;--green-t2:#f4faf7;
+  --amber:#a16207;--amber-t:#fdf8ed;--amber-b:#f0e2c2;
+  --blue:#2b5f86;--blue-t:#eef4f9;
+  --r:9px;
+  --mono:'SF Mono','JetBrains Mono','IBM Plex Mono',Menlo,Consolas,monospace;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+button{font:inherit}
+.stepbar{position:sticky;top:0;z-index:60;background:#14181a;color:#fff;padding:9px 14px;display:flex;gap:5px;flex-wrap:wrap;align-items:center}
+.stepbar b{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9aa5a0;margin-right:4px;font-weight:600}
+.stepbar button{font-size:11.5px;background:#232a2d;color:#c9d2ce;border:1px solid #333c3f;padding:4px 9px;border-radius:99px;cursor:pointer}
+.stepbar button:hover{background:#2d3639;color:#fff}
+.stepbar button[aria-current="true"]{background:var(--green);border-color:var(--green);color:#fff;font-weight:600}
+
+.app{display:flex;min-height:calc(100vh - 40px)}
+.rail{width:52px;background:var(--panel);border-right:1px solid var(--line);flex-shrink:0;padding-top:14px;display:flex;flex-direction:column;align-items:center;gap:2px}
+.rail a{display:flex;flex-direction:column;align-items:center;gap:6px;padding:11px 0;width:44px;border-radius:7px;text-decoration:none;color:var(--ink-3);position:relative}
+.rail a.on{background:var(--green-t);color:var(--green-d)}
+.rail a span.lb{font-size:8.5px;letter-spacing:.1em;writing-mode:vertical-rl;transform:rotate(180deg);text-transform:uppercase;font-weight:600}
+.rail svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+.rail .badge{position:absolute;top:5px;right:3px;background:var(--green);color:#fff;font-size:8px;min-width:14px;height:14px;padding:0 3px;border-radius:99px;display:grid;place-items:center;font-weight:700}
+.rail hr{width:24px;border:0;border-top:1px solid var(--line);margin:9px 0}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.topbar{background:var(--panel);border-bottom:1px solid var(--line);padding:9px 16px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{font-size:17px;font-weight:700;letter-spacing:-.03em}
+.branche{font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.branche b{color:var(--ink);font-size:12px;letter-spacing:0;text-transform:none;margin-left:6px;font-weight:600}
+.search{flex:1;min-width:180px;max-width:520px;display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:99px;padding:6px 13px;background:#fbfcfb;color:var(--ink-3);font-size:13px}
+.search svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8}
+.search kbd{margin-left:auto;border:1px solid var(--line);border-radius:4px;padding:0 5px;font-size:10px;font-family:var(--mono)}
+.topacts{display:flex;gap:14px;align-items:center;font-size:12.5px;color:var(--ink-2)}
+.topacts span{display:flex;align-items:center;gap:5px;white-space:nowrap}
+.topacts svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.7}
+
+/* Phasen-Filterleiste */
+.phases{background:var(--panel);border-bottom:1px solid var(--line);padding:11px 16px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.ph{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:#fbfcfb;border-radius:99px;padding:5px 12px;font-size:12.5px;cursor:pointer;color:var(--ink)}
+.ph:hover{border-color:var(--green)}
+.ph.on{background:var(--green-t);border-color:#cfe8dc;color:var(--green-d);font-weight:600}
+.ph i{width:6px;height:6px;border-radius:50%;background:var(--ink-3)}
+.ph.on i{background:var(--green)}
+.ph.zu i{background:var(--blue)}
+.ph .n{font-family:var(--mono);font-size:11px;color:var(--ink-3)}
+.ph.on .n{color:var(--green-d)}
+.sep{width:1px;height:20px;background:var(--line);margin:0 4px}
+.right{margin-left:auto;display:flex;gap:9px;align-items:center;font-size:12.5px;color:var(--ink-2)}
+.right span{display:flex;align-items:center;gap:5px}
+.right svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.7}
+
+/* Alert-Band */
+.alertband{background:var(--blue-t);border-bottom:1px solid #d6e3ee;padding:10px 16px;display:flex;align-items:center;gap:11px;font-size:13px;color:var(--blue)}
+.alertband svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.9;flex-shrink:0}
+.alertband .a{margin-left:auto;display:flex;gap:8px}
+
+/* Liste */
+.lh{display:grid;grid-template-columns:26px 150px 108px 1fr 190px 118px;gap:14px;align-items:center;padding:9px 16px;font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);font-weight:600;border-bottom:1px solid var(--line);background:var(--panel);position:sticky;top:40px;z-index:5}
+.lr{display:grid;grid-template-columns:26px 150px 108px 1fr 190px 118px;gap:14px;align-items:center;padding:11px 16px;border-bottom:1px solid var(--line-2);background:var(--panel);font-size:13px;cursor:pointer}
+.lr:hover{background:#fbfcfb}
+.lr.sel{background:var(--green-t2)}
+.star{color:#c9cfcb}
+.pill{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);border-radius:99px;padding:2.5px 9px;font-size:11.5px;background:#fbfcfb;white-space:nowrap}
+.pill i{width:5px;height:5px;border-radius:50%;background:var(--green);display:block}
+.pill.zu{border-color:#d6e3ee;background:var(--blue-t);color:var(--blue)}
+.pill.zu i{background:var(--blue)}
+.emp{font-size:12.5px}
+.emp .es{font-size:11px;color:var(--ink-3);margin-top:2px}
+.ti{font-weight:600}
+.tsub{font-size:11.5px;color:var(--ink-3);margin-top:2px}
+.num{font-family:var(--mono);font-size:13px;text-align:right}
+.nsub{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);text-align:right;margin-top:1px}
+.when{font-family:var(--mono);font-size:12px;color:var(--ink-2);text-align:right}
+.when.hot{color:var(--blue);font-weight:600}
+
+/* Detail */
+.detail{background:var(--panel);border-top:1px solid var(--line);padding:16px 20px 40px}
+.eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.eyebrow .st{display:inline-flex;align-items:center;gap:5px;background:var(--blue-t);color:var(--blue);border-radius:99px;padding:3px 10px;font-weight:600}
+.eyebrow .st i{width:5px;height:5px;border-radius:50%;background:var(--blue)}
+h1.lead{font-size:22px;font-weight:700;letter-spacing:-.02em;margin:9px 0 14px}
+.tabs{display:flex;gap:22px;border-bottom:1px solid var(--line);margin-bottom:20px;overflow-x:auto}
+.tabs a{font-size:13.5px;color:var(--ink-2);text-decoration:none;padding-bottom:9px;border-bottom:2px solid transparent;white-space:nowrap}
+.tabs a.on{color:var(--ink);font-weight:600;border-bottom-color:var(--ink)}
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:900px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
+.card h3{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:11px}
+.dline{display:flex;justify-content:space-between;gap:14px;padding:7px 0;border-bottom:1px solid var(--line-2);font-size:13px}
+.dline:last-child{border-bottom:0}
+.dline .k{color:var(--ink-2)}
+.dline .v{font-family:var(--mono);font-size:12.5px;text-align:right}
+.bars{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.brow{display:grid;grid-template-columns:1fr 44px;gap:9px;align-items:center;font-size:12.5px}
+.btrack{height:5px;background:var(--line-2);border-radius:99px;overflow:hidden}
+.btrack i{display:block;height:100%;background:var(--green);border-radius:99px}
+.brow .bv{font-family:var(--mono);font-size:11px;color:var(--ink-3);text-align:right}
+.note{border-radius:8px;padding:11px 14px;font-size:13px;display:flex;gap:10px;align-items:flex-start;line-height:1.55;max-width:900px}
+.note svg{width:15px;height:15px;flex-shrink:0;margin-top:1px;stroke:currentColor;fill:none;stroke-width:1.9}
+.note-n{background:#f6f8f7;color:var(--ink-2);border:1px solid var(--line)}
+.note-g{background:var(--green-t2);color:var(--ink-2);border:1px solid #cfe8dc}
+.mini{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-top:7px}
+.actbar{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:14px;max-width:900px;flex-wrap:wrap}
+.btn{font-size:13px;font-weight:600;border-radius:7px;padding:8px 14px;cursor:pointer;border:1px solid transparent;display:inline-flex;align-items:center;gap:7px}
+.btn-p{background:var(--green);color:#fff}.btn-p:hover{background:var(--green-d)}
+.btn-s{background:var(--panel);color:var(--ink);border-color:var(--line)}.btn-s:hover{background:#f2f4f3}
+.btn-sm{padding:5px 11px;font-size:12px}
+.btn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.9}
+
+/* Strategie */
+.pagepad{padding:20px 16px 48px}
+.wrap{max-width:900px}
+h1.pt{font-size:20px;font-weight:700;letter-spacing:-.02em}
+.psub{font-size:13px;color:var(--ink-2);margin:3px 0 18px;max-width:640px}
+.stgrid{display:grid;grid-template-columns:180px 1fr;gap:24px}
+.stnav{display:flex;flex-direction:column;gap:1px}
+.stnav .gl{font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);font-weight:700;padding:9px 11px 5px}
+.stnav a{padding:7px 11px;border-radius:7px;text-decoration:none;color:var(--ink-2);font-size:13px}
+.stnav a.on{background:var(--green-t);color:var(--green-d);font-weight:600}
+.wtable{width:100%;border-collapse:collapse;font-size:13px}
+.wtable th{text-align:left;font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);font-weight:600;padding:0 12px 9px 0;border-bottom:1px solid var(--line)}
+.wtable th.r,.wtable td.r{text-align:right;padding-right:0}
+.wtable td{padding:11px 12px 11px 0;border-bottom:1px solid var(--line-2);vertical-align:top}
+.wtable td.r{font-family:var(--mono);font-size:12.5px}
+.wtable .fn{font-weight:600}
+.wtable .fs{font-size:11.5px;color:var(--ink-3);margin-top:2px}
+.tagx{font-size:10.5px;border:1px solid var(--line);border-radius:99px;padding:1px 8px;color:var(--ink-2);background:#fbfcfb;white-space:nowrap}
+.tagx.ok{border-color:#cfe8dc;background:var(--green-t);color:var(--green-d)}
+.hint{font-size:12px;color:var(--ink-3);border-left:2px solid var(--line);padding-left:11px;line-height:1.55;margin-bottom:16px;max-width:900px}
+.scr{display:none}.scr.on{display:block}
+@media(max-width:1000px){.lh,.lr{grid-template-columns:22px 1fr 120px}.lh>*:nth-child(3),.lr>*:nth-child(3),.lh>*:nth-child(5),.lr>*:nth-child(5){display:none}.dgrid,.stgrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav class="stepbar">
+  <b>Akquise</b>
+  <button data-s="k1" aria-current="true">1 · Liste mit Zuschlägen</button>
+  <button data-s="k2">2 · Zuschlag-Detail</button>
+  <b style="margin-left:8px">Strategie</b>
+  <button data-s="k3">3 · Wettbewerb</button>
+</nav>
+
+<div class="app">
+  <aside class="rail">
+    <a href="#" class="on" id="railA"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg><span class="badge">3</span><span class="lb">Akquise</span></a>
+    <a href="#"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6-5.3-2.9L6.7 19.6l1.1-6L3.4 9.4l6-.8z"/></svg><span class="lb">Merkliste</span></a>
+    <a href="#"><svg viewBox="0 0 24 24"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="7" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.8 8.8l3 7M16.2 8.8l-3 7M8.5 7h7"/></svg><span class="lb">Netzwerk</span></a>
+    <hr>
+    <a href="#" id="railS"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span class="lb">Strategie</span></a>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="logo">govisor</div>
+      <div class="branche">Branche <b>Bau &amp; Ausbau ▾</b></div>
+      <div class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>Suchen — Ort, PLZ, Auftraggeber, Stichwort <kbd>/</kbd></div>
+      <div class="topacts"><span><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.5-4 12.5-4 14 0"/></svg>Meyer Elektrotechnik</span></div>
+    </header>
+
+    <!-- ===== Akquise ===== -->
+    <div id="ctxA">
+      <div class="phases">
+        <button class="ph on"><i></i>Ausschreibung offen <span class="n">48</span></button>
+        <button class="ph zu on"><i></i>Zuschlag erteilt <span class="n">6</span></button>
+        <button class="ph"><i></i>Vertrag läuft aus <span class="n">312</span></button>
+        <span class="sep"></span>
+        <button class="ph">Feld <span class="n">Elektro · TGA</span></button>
+        <button class="ph">ab 500.000 €</button>
+        <div class="right"><span><svg viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg>Filter</span><span><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Spalten</span><span><svg viewBox="0 0 24 24"><path d="M12 3v12M7 11l5 5 5-5M4 20h16"/></svg>Export</span></div>
+      </div>
+
+      <div class="alertband">
+        <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg>
+        <div><b>2 neue Zuschläge in eurem Feld</b> — Goldbeck West und Wisag. Wer gerade gewonnen hat, kauft jetzt ein.</div>
+        <div class="a"><button class="btn btn-s btn-sm">Alle ansehen</button></div>
+      </div>
+
+      <div class="lh"><div></div><div>Phase</div><div>Status</div><div>Empfehlung</div><div>Ausschreibung</div><div class="r">Volumen</div></div>
+
+      <div class="lr sel" data-go="k2">
+        <div class="star">☆</div>
+        <div><span class="pill zu"><i></i>Zuschlag erteilt</span></div>
+        <div class="when hot">vor 2 Tagen</div>
+        <div class="emp"><b>Ansprechen</b><div class="es">Unteraufträge geregelt · im Netzwerk</div></div>
+        <div><div class="ti">Neubau Bildungscampus — Rohbau und Gebäudetechnik</div><div class="tsub">Goldbeck West GmbH · Stadt Dortmund</div></div>
+        <div><div class="num">14,2 Mio €</div><div class="nsub">gemessen</div></div>
+      </div>
+
+      <div class="lr">
+        <div class="star">☆</div>
+        <div><span class="pill zu"><i></i>Zuschlag erteilt</span></div>
+        <div class="when hot">vor 4 Tagen</div>
+        <div class="emp"><b>Prüfen</b><div class="es">keine Angabe zu Unteraufträgen</div></div>
+        <div><div class="ti">Rahmenvertrag Elektroinstandhaltung</div><div class="tsub">Wisag Gebäudetechnik West · LVR</div></div>
+        <div><div class="num">5,8 Mio €</div><div class="nsub">gemessen</div></div>
+      </div>
+
+      <div class="lr">
+        <div class="star">☆</div>
+        <div><span class="pill"><i></i>Ausschreibung offen</span></div>
+        <div class="when">noch 12 Tage</div>
+        <div class="emp"><b>Hohe Passung</b><div class="es">Amtsinhaber angreifbar</div></div>
+        <div><div class="ti">Erneuerung Sicherheitsbeleuchtung Rathaus</div><div class="tsub">Stadt Bochum</div></div>
+        <div><div class="num">420.000 €</div><div class="nsub">geschätzt</div></div>
+      </div>
+
+      <div class="lr">
+        <div class="star">☆</div>
+        <div><span class="pill zu"><i></i>Zuschlag erteilt</span></div>
+        <div class="when">vor 9 Tagen</div>
+        <div class="emp"><b>Ansprechen</b><div class="es">Unteraufträge geregelt</div></div>
+        <div><div class="ti">Sanierung Verwaltungsgebäude — Los 2 TGA</div><div class="tsub">Zech Bau SE · Kreis Unna</div></div>
+        <div><div class="num">3,1 Mio €</div><div class="nsub">gemessen</div></div>
+      </div>
+
+      <div class="lr">
+        <div class="star">☆</div>
+        <div><span class="pill"><i></i>Ausschreibung offen</span></div>
+        <div class="when">noch 3 Tage</div>
+        <div class="emp"><b>Offen</b><div class="es">Erstvergabe — kein Amtsinhaber</div></div>
+        <div><div class="ti">Elektroarbeiten Feuerwache Nord</div><div class="tsub">Stadt Hamm</div></div>
+        <div><div class="num">260.000 €</div><div class="nsub">geschätzt</div></div>
+      </div>
+
+      <!-- k1: nur Liste -->
+      <section class="scr on" id="k1">
+        <div class="pagepad"><p class="hint" style="margin:0">Zuschläge sind eine Phase neben „Ausschreibung offen" und „Vertrag läuft aus" — dieselbe Datenbasis, andere Handlung. Kein eigener Bereich, kein Suchen. Der Auslöser ist das Alert-Band oben.</p></div>
+      </section>
+
+      <!-- k2: Detail -->
+      <section class="scr" id="k2">
+        <div class="detail">
+          <div class="eyebrow"><span class="st"><i></i>Zuschlag erteilt</span><span>· 28.07.2026 · Bauinstallation, Elektro</span></div>
+          <h1 class="lead">Neubau Bildungscampus — Rohbau und Gebäudetechnik</h1>
+          <nav class="tabs"><a href="#" class="on">Übersicht</a><a href="#">Gewinner</a><a href="#">Vergabestelle</a><a href="#">Markt</a></nav>
+
+          <p class="hint">Dieselbe Detailstruktur wie bei Ausschreibungen — nur mit anderer Frage: nicht „soll ich bieten", sondern „lohnt sich der Anruf".</p>
+
+          <div class="dgrid">
+            <div class="card">
+              <h3>Der Zuschlag</h3>
+              <div class="dline"><span class="k">Gewinner</span><span class="v">Goldbeck West GmbH</span></div>
+              <div class="dline"><span class="k">Vergabestelle</span><span class="v">Stadt Dortmund</span></div>
+              <div class="dline"><span class="k">Zuschlag erteilt</span><span class="v">28.07.2026</span></div>
+              <div class="dline"><span class="k">Auftragswert</span><span class="v">14.200.000 €</span></div>
+              <div class="dline"><span class="k">Laufzeit</span><span class="v">bis 03/2028</span></div>
+              <div class="dline"><span class="k">Unteraufträge</span><span class="v">in den Unterlagen geregelt</span></div>
+            </div>
+            <div class="card">
+              <h3>Goldbeck West — was wir wissen</h3>
+              <div class="dline"><span class="k">Zuschläge 36 Monate</span><span class="v">27</span></div>
+              <div class="dline"><span class="k">Ø Auftragswert</span><span class="v">6,4 Mio €</span></div>
+              <div class="dline"><span class="k">mit Unterauftrags-Regelung</span><span class="v">19 von 27</span></div>
+              <div class="dline"><span class="k">Region</span><span class="v">NRW, Niedersachsen</span></div>
+              <h3 style="margin-top:15px">Leistungsfelder</h3>
+              <div class="bars">
+                <div class="brow"><div><div style="margin-bottom:3px">Hochbau</div><div class="btrack"><i style="width:74%"></i></div></div><span class="bv">74 %</span></div>
+                <div class="brow"><div><div style="margin-bottom:3px">Gebäudetechnik</div><div class="btrack"><i style="width:18%"></i></div></div><span class="bv">18 %</span></div>
+                <div class="brow"><div><div style="margin-bottom:3px">Elektro</div><div class="btrack"><i style="width:8%"></i></div></div><span class="bv">8 %</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="note note-g" style="margin-top:14px">
+            <svg viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+            <div><b>Warum das zu euch passen könnte:</b> Goldbeck West gewinnt überwiegend Hochbau und führt Elektro selten selbst aus — bei 19 von 27 Aufträgen war Unterauftragsvergabe geregelt. Euer Schwerpunkt ergänzt, statt zu konkurrieren.
+            <div class="mini">Abgeleitet aus der Zuschlagshistorie · kein Hinweis auf konkreten Bedarf</div></div>
+          </div>
+
+          <div class="note note-n" style="margin-top:10px">
+            <svg viewBox="0 0 24 24"><path d="M12 8v5M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg>
+            <div>„Unteraufträge geregelt" heißt: In den Vergabeunterlagen ist Unterauftragsvergabe vorgesehen. Ob und was tatsächlich vergeben wird, steht nirgends — das Feld liegt bei etwa einem Drittel der Verfahren vor.</div>
+          </div>
+
+          <div class="actbar">
+            <span style="font-size:12px;color:var(--ink-3)">Goldbeck West hat Kontaktfreigabe im Netzwerk erteilt.</span>
+            <span style="display:flex;gap:8px;flex-wrap:wrap">
+              <button class="btn btn-s btn-sm">Merken</button>
+              <button class="btn btn-s btn-sm">Firmenprofil</button>
+              <button class="btn btn-p btn-sm"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>Über Netzwerk kontaktieren</button>
+            </span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== Strategie ===== -->
+    <div id="ctxS" style="display:none">
+      <div class="pagepad">
+        <section class="scr" id="k3">
+          <div class="wrap">
+            <p class="hint">Dieselben Daten, anderer Rhythmus: nicht die Liste der frischen Zuschläge, sondern wer in eurem Feld gewinnt — und wer davon regelmäßig weitervergibt. Analytisch, nicht zeitkritisch.</p>
+            <div class="stgrid">
+              <nav class="stnav">
+                <div class="gl">Markt</div>
+                <a href="#">Pipeline</a>
+                <a href="#">Felder</a>
+                <a href="#">Vergabestellen</a>
+                <a href="#" class="on">Wettbewerb</a>
+                <div class="gl">Wir</div>
+                <a href="#">Position</a>
+                <a href="#">Fähigkeiten</a>
+                <a href="#">Bindung</a>
+                <a href="#">Profil</a>
+              </nav>
+              <div>
+                <h1 class="pt">Wettbewerb</h1>
+                <p class="psub">Wer holt in eurem Feld die Aufträge — und wer davon vergibt regelmäßig Unteraufträge. Die zweite Spalte entscheidet, ob ein Wettbewerber auch ein Kunde sein kann.</p>
+                <table class="wtable">
+                  <thead><tr><th>Unternehmen</th><th class="r">Zuschläge 36 M</th><th class="r">Volumen</th><th class="r">mit Unterauftrag</th><th></th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td><div class="fn">Goldbeck West GmbH</div><div class="fs">Hochbau 74 % · Elektro 8 %</div></td>
+                      <td class="r">27</td><td class="r">173 Mio €</td><td class="r">19 von 27</td>
+                      <td class="r"><span class="tagx ok">ergänzt euch</span></td>
+                    </tr>
+                    <tr>
+                      <td><div class="fn">Zech Bau SE</div><div class="fs">Hochbau 68 % · TGA 21 %</div></td>
+                      <td class="r">18</td><td class="r">98 Mio €</td><td class="r">12 von 18</td>
+                      <td class="r"><span class="tagx ok">ergänzt euch</span></td>
+                    </tr>
+                    <tr>
+                      <td><div class="fn">Spie Deutschland</div><div class="fs">Elektro 61 % · TGA 30 %</div></td>
+                      <td class="r">34</td><td class="r">61 Mio €</td><td class="r">7 von 34</td>
+                      <td class="r"><span class="tagx">direkter Wettbewerb</span></td>
+                    </tr>
+                    <tr>
+                      <td><div class="fn">Wisag Gebäudetechnik West</div><div class="fs">TGA 55 % · Elektro 34 %</div></td>
+                      <td class="r">22</td><td class="r">44 Mio €</td><td class="r">keine Angabe</td>
+                      <td class="r"><span class="tagx">direkter Wettbewerb</span></td>
+                    </tr>
+                    <tr>
+                      <td><div class="fn">Meyer Elektrotechnik</div><div class="fs">euer Unternehmen</div></td>
+                      <td class="r">9</td><td class="r">7,4 Mio €</td><td class="r">—</td>
+                      <td class="r"><span class="tagx">ihr</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="note note-n" style="margin-top:16px">
+                  <svg viewBox="0 0 24 24"><path d="M12 8v5M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg>
+                  <div>Zwei der vier größten Gewinner in eurem Feld führen Elektro selten selbst aus und haben bei der Mehrzahl ihrer Aufträge Unterauftragsvergabe geregelt. Frische Zuschläge dieser Unternehmen erscheinen in der Akquise unter „Zuschlag erteilt".</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  function show(id){
+    document.querySelectorAll('.scr').forEach(function(s){s.classList.toggle('on',s.id===id)});
+    document.querySelectorAll('.stepbar button').forEach(function(b){b.setAttribute('aria-current',String(b.dataset.s===id))});
+    var S=(id==='k3');
+    document.getElementById('ctxA').style.display=S?'none':'';
+    document.getElementById('ctxS').style.display=S?'':'none';
+    document.getElementById('railA').classList.toggle('on',!S);
+    document.getElementById('railS').classList.toggle('on',S);
+    window.scrollTo({top:0});
+  }
+  document.querySelectorAll('.stepbar button').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.s)})});
+  document.querySelectorAll('[data-go]').forEach(function(r){r.addEventListener('click',function(){show(r.dataset.go)})});
+  document.querySelectorAll('.ph').forEach(function(p){p.addEventListener('click',function(){p.classList.toggle('on')})});
+})();
+</script>
+</body>
+</html>

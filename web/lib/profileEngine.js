@@ -22,6 +22,7 @@ export function emptyProfile() {
     cpvWins: {},             // cpv4 → eigene Zuschläge (aus dem Onboarding-Match, für Direktvergleich)
     nachbarFields: [],        // angrenzende Felder (teil-relevant, kein Volltreffer)
     regions: null,           // Array NUTS-Präfixe; null = bundesweit tätig
+    regionTyp: null,         // 'regional'|'teilregional'|'bundesweit' — aus der Historie gemessen
     regionLabels: [],        // Klartext-Labels zu regions (nur Anzeige)
     volMin: null,
     volMax: null,
@@ -47,6 +48,7 @@ export function buildProfile(input) {
   p.cpvWins = input.cpvWins || {};
   p.nachbarFields = input.nachbarFields || [];
   p.regions = (input.regions && input.regions.length) ? input.regions : null;   // leer = bundesweit
+  p.regionTyp = input.regionTyp || null;
   p.regionLabels = input.regionLabels || [];
   p.volMin = numOrNull(input.volMin);
   p.volMax = numOrNull(input.volMax);

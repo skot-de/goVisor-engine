@@ -1130,8 +1130,25 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                   {vorauswahl ? (
                     <>
                       <b>{rows.length}</b> von {alleRows.filter((l) => l.src !== "award").length.toLocaleString("de-DE")} für euch vorsortiert
-                      <span className="vor-x">offene Ausschreibung · noch ≥ 3 Tage · hohe Passung · Aufwand vertretbar</span>
+                      <span className="vor-x">
+                        offene Ausschreibung · noch ≥ 3 Tage · hohe Passung · Aufwand vertretbar
+                        {/* Der Regionsteil ist aus der eigenen Zuschlagshistorie abgeleitet — sagen,
+                            woher er kommt, sonst wirkt die Einschränkung willkürlich. */}
+                        {(() => {
+                          const p = realProfile as unknown as { regionTyp?: string | null; regionLabels?: string[]; regions?: string[] } | null;
+                          if (!p?.regions?.length) return null;
+                          const wo = (p.regionLabels?.length ? p.regionLabels : p.regions).slice(0, 3).join(", ");
+                          return ` · ${p.regionTyp === "regional" ? "eure Region" : "eure Regionen"} ${wo} (aus euren Zuschlägen abgeleitet)`;
+                        })()}
+                      </span>
                       <button className="vor-btn" onClick={() => setVorauswahl(false)}>Alle anzeigen</button>
+                      {/* Sehr scharfe Profile (enges Gewerk × eine Region) landen zweistellig darunter.
+                          Das ist die ehrliche Zahl — aber unkommentiert sieht sie nach einem Defekt aus. */}
+                      {rows.length < 10 ? (
+                        <span className="vor-eng">
+                          Wenige Treffer — so eng ist der Markt für euer Gewerk in eurer Region gerade.
+                        </span>
+                      ) : null}
                     </>
                   ) : (
                     <>
