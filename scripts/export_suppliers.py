@@ -19,7 +19,8 @@ CL = f"read_parquet('{G}/dim_cpv_label.parquet')"
 N = "read_parquet('data/silver/DE/notices/*/*.parquet', hive_partitioning=1)"
 E = f"read_parquet('{G}/lead_export.parquet')"
 
-TOP_N = 6000   # Top-Lieferanten nach Zuschlägen — deckt die realistischen Nutzer ab
+MIN_WINS = 3      # Firmen ab 3 Zuschlägen auffindbar (Mittelstand); darunter ist das CPV-Profil zu dünn
+MAX_ROWS = 40000  # Sicherheits-Deckel gegen Ausreißer
 
 # Generik-/Käufer-Stämme (Ticket #7 v2, Leitplanke 2): keine öffentlichen Käufer, raus.
 # WORTANFANG-Match (am Namensanfang ODER nach einem Leerzeichen) — NICHT beliebiger Substring.
@@ -59,10 +60,11 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE w AS
   JOIN {N} n ON n.notice_id = p.notice_id
   WHERE p.role = 'winner' AND ei.identity_id IN (SELECT identity_id FROM belegt)""")
 
-# Top-Identitäten nach Zuschlägen
+# Identitäten ab MIN_WINS Zuschlägen
 con.execute(f"""CREATE OR REPLACE TEMP TABLE tops AS
   SELECT identity_id, count(DISTINCT notice_id) AS wins
-  FROM w GROUP BY 1 ORDER BY 2 DESC LIMIT {TOP_N}""")
+  FROM w GROUP BY 1 HAVING count(DISTINCT notice_id) >= {MIN_WINS}
+  ORDER BY 2 DESC LIMIT {MAX_ROWS}""")
 
 # Repräsentativer Name = häufigster canonical_name der Gruppe; Aliase = die übrigen
 con.execute("""CREATE OR REPLACE TEMP TABLE namen AS
@@ -95,9 +97,9 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE felder6 AS
              GROUP BY 1,2),
   rk AS (SELECT *, row_number() OVER (PARTITION BY identity_id ORDER BY n DESC) rn FROM c)
   SELECT r.identity_id,
-         list({{'cpv6': r.cpv6, 'label': cl.label, 'wins': r.n}} ORDER BY r.n DESC) AS fields6
-  FROM rk r LEFT JOIN {CL} cl ON cl.cpv_code = r.cpv6 || '00'
-  WHERE r.rn <= 12 GROUP BY 1""")
+         list({{'cpv6': r.cpv6, 'wins': r.n}} ORDER BY r.n DESC) AS fields6
+  FROM rk r
+  WHERE r.rn <= 12 GROUP BY 1""")   # ohne Label: nur der Code zählt fürs Matching (spart ~3 MB)
 
 # Top-Regionen (Leistungsort-NUTS1) je Identität
 con.execute("""CREATE OR REPLACE TEMP TABLE regionen AS

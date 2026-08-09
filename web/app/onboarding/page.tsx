@@ -17,7 +17,7 @@ import "./onboarding.css";
 const PROFILE_KEY = "govisor.profile.v1";
 
 type Feld = { cpv4: string; label: string | null; wins: number };
-type Feld6 = { cpv6: string; label: string | null; wins: number };
+type Feld6 = { cpv6: string; wins: number };
 type Match = {
   id: string; name: string; wins: number; buyers: number | null; seit: number | null;
   fields: Feld[]; fields6?: Feld6[]; regions: string[]; volMedian: number | null; strong: boolean;

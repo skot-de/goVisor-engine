@@ -8,7 +8,7 @@ export type Supplier = {
   id: string; name: string; aliases: string[]; wins: number;
   buyers: number | null; seit: number | null;
   fields: { cpv4: string; label: string | null; wins: number }[];
-  fields6?: { cpv6: string; label: string | null; wins: number }[];   // CPV-6-Volltreffer-Menge
+  fields6?: { cpv6: string; wins: number }[];   // CPV-6-Volltreffer-Menge (nur Codes, fürs Matching)
   regions: string[]; volMedian: number | null; members: Member[];
 };
 
