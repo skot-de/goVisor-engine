@@ -951,6 +951,8 @@ body[data-view="verteidigung"] .rail{background:var(--ink-900);border-right-colo
   opacity:0;pointer-events:none;transition:opacity .13s,transform .13s;z-index:60;
   box-shadow:0 6px 18px rgba(18,33,29,.22)}
 .viewbtn:hover .vb-lbl,.viewbtn:focus-visible .vb-lbl{opacity:1;transform:translateY(-50%) translateX(0)}
+/* Zweckzeile: ohne sichtbare Beschriftung ist die Sprechblase der einzige Lernpfad. */
+.vb-lbl em{display:block;font-style:normal;font-weight:400;font-size:10.5px;margin-top:2px;color:rgba(255,255,255,.72)}
 .viewbtn:hover{color:var(--ink-700);background:var(--surface-3)}
 .viewbtn[aria-current="true"]{background:var(--signal-wash);color:var(--signal-deep)}
 body[data-view="verteidigung"] .viewbtn{color:#6E837B}
