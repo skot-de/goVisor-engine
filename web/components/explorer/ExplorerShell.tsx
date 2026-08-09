@@ -371,6 +371,10 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     : filters.gemerkt ? "merkliste" : filters.netz ? "netzwerk" : "akquise";
 
   const istAkquise = view === "angriff" && !filters.gemerkt && !filters.netz;
+  // Die Vorauswahl sucht bewerbbare Ausschreibungen (src='f02'). Wer ausdrücklich die
+  // Zuschlags-Phase wählt, will genau das Gegenteil sehen — dann muss sie schweigen.
+  // Vorher filterte sie die Zuschläge restlos weg: „Zuschläge ansehen" landete auf 0 von 0.
+  const zuschlagsSicht = adv.phases.includes("award");
 
   const rows: Lead[] = useMemo(() => {
     const ohneAwards = adv.phases.includes("award") ? alleRows : alleRows.filter((l) => l.src !== "award");
@@ -382,7 +386,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     //   · kein harter Blocker (Bürgschaft übersteigt Rahmen / bewusst ausgeschlossen)
     //   · Aufwand nicht „hoch" — unbekannter Aufwand fliegt NICHT raus (Unbekanntes schließt nie aus)
     // Ohne Profil ist die Relevanz für alles „na" → wir sortieren nicht vor, statt alles zu leeren.
-    if (!vorauswahl || !realProfile || !istAkquise) return ohneAwards;
+    if (!vorauswahl || !realProfile || !istAkquise || zuschlagsSicht) return ohneAwards;
     return ohneAwards.filter((l) => {
       if (l.src !== "f02") return false;
       const t = (l.frist as { tage?: number } | undefined)?.tage ?? (l.tage as number | null);
@@ -392,7 +396,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
       if (m?.blocker?.some((b) => b.art === "buergschaft" || b.art === "ausschluss")) return false;
       return aufwandStufe(l).stufe !== "hoch";
     });
-  }, [alleRows, adv.phases, vorauswahl, realProfile, istAkquise]);
+  }, [alleRows, adv.phases, vorauswahl, realProfile, istAkquise, zuschlagsSicht]);
 
   const suggestions = useMemo(() => (query.trim() ? suggestList(query) : []), [query]);
 
@@ -914,7 +918,9 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
             <ExportMenu rows={rows} view={filters.relevant ? "passend" : "alle"} />
             <div className="tstatus">
               <span className="tcount">
-                <b>{rows.length}</b> von <span>{alleRows.filter((l) => l.src !== "award").length}</span>
+                {/* Nenner auf DERSELBEN Grundmenge wie die Anzeige — in der
+                    Zuschlags-Sicht sind das die Zuschläge, sonst die offenen. */}
+                <b>{rows.length}</b> von <span>{zuschlagsSicht ? alleRows.length : alleRows.filter((l) => l.src !== "award").length}</span>
               </span>
             </div>
           </div>
@@ -992,13 +998,18 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                 const awOf = (l: Lead) => (l as { award?: Aw }).award;
                 // WICHTIG: aus `alleRows` (inkl. Zuschläge), nicht aus `rows` — dort sind die
                 // Zuschläge bewusst herausgefiltert, das Band würde sich sonst selbst abschalten.
-                const fresh = alleRows.filter((l) => l.src === "award" && (awOf(l)?.ago ?? 99) <= 3);
+                // „in eurem Feld" war gelogen: gezählt wurde der ganze Grundraum. Mit Profil
+                // zählen wir nur, was auch zu euch passt — sonst meldet die App einem
+                // Tiefbauer aus Sachsen-Anhalt Zuschläge aus ganz Deutschland.
+                const fresh = alleRows.filter((l) =>
+                  l.src === "award" && (awOf(l)?.ago ?? 99) <= 3
+                  && (!realProfile || l.relevanz === "hoch" || l.relevanz === "mittel"));
                 if (!fresh.length) return null;
                 const winners = [...new Set(fresh.map((l) => awOf(l)?.winner).filter(Boolean))].slice(0, 2);
                 return (
                   <div className="aw-alert">
                     <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 8-3 8h18s-3-1-3-8" /><path d="M13.7 21a2 2 0 01-3.4 0" /></svg>
-                    <div><b>{fresh.length} {fresh.length === 1 ? "neuer Zuschlag" : "neue Zuschläge"} in eurem Feld</b>
+                    <div><b>{fresh.length} {fresh.length === 1 ? "neuer Zuschlag" : "neue Zuschläge"} {realProfile ? "in eurem Feld" : "im Grundraum"}</b>
                       {winners.length ? ` — ${winners.join(" und ")}. ` : " — "}Wer gerade gewonnen hat, kauft jetzt ein.</div>
                     {/* Zuschläge sind nicht mehr bewerbbar und stehen deshalb nicht in der Akquise-Liste.
                         Hier — wo sie angekündigt werden — führt ein Klick direkt zu ihnen. */}
@@ -1080,6 +1091,15 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
               aktiveRegion={aktiveRegion}
               accountLimit={accountLimit}
               rows={rows}
+              alle={alleRows}
+              onGoto={(ziel) => {
+                // Ein Klick im Überblick soll die Ansicht wirklich wechseln, nicht nur
+                // etwas einfärben — deshalb dieselben Wege wie über die Rail.
+                if (ziel === "netzwerk") return switchView("netzwerk");
+                if (ziel === "strategie") return switchView("potenzial");
+                if (ziel === "award") return setAdv((a) => ({ ...a, phases: ["award"] }));
+                if (ziel === "vorschau") return setAdv((a) => ({ ...a, phases: ["f01", "auslauf"] }));
+              }}
               onPickLead={openLead}
               onTab={setTab}
               onClose={closeLead}

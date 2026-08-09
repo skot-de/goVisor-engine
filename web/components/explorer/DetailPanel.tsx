@@ -38,7 +38,7 @@ const ExpandIcon = (full: boolean) =>
 
 export function DetailPanel({
   activeId, activeTab, mode, tick, buyerDemo, aktiveRegion, accountLimit,
-  rows = [], onPickLead,
+  rows = [], alle = [], onPickLead, onGoto,
   onTab, onClose, onExpand, onWf, onStar, onBodyAction,
 }: {
   activeId: string | null;
@@ -51,7 +51,9 @@ export function DetailPanel({
   // aktuell gefilterte Liste — Grundlage des Leer-Briefings. Bewusst strukturell typisiert
   // (nicht der lokale Lead-Typ), damit die Shell ihre eigene Lead-Form durchreichen kann.
   rows?: BriefLead[];
+  alle?: BriefLead[];
   onPickLead?: (id: string) => void;
+  onGoto?: (ziel: "netzwerk" | "strategie" | "award" | "vorschau") => void;
   onTab: (k: string) => void;
   onClose: () => void;
   onExpand: () => void;
@@ -84,7 +86,7 @@ export function DetailPanel({
 
   // Leerzustand = Tagesbriefing statt Platzhalter: was ist neu, was drängt, was lohnt sich.
   // Alle Zahlen aus der AKTUELL gefilterten Liste gerechnet — keine erfundenen Werte.
-  if (!activeId) return <LeerBriefing rows={rows} onPick={onPickLead} />;
+  if (!activeId) return <LeerBriefing rows={rows} alle={alle} onPick={onPickLead} onGoto={onGoto} />;
 
   const l = (LEADS as Lead[]).find((x) => x.id === activeId)!;
   const analysed = l.status === "analysiert";
@@ -231,67 +233,107 @@ export function DetailPanel({
 /* Leerzustand als Tagesbriefing (statt „Kein Lead ausgewählt"): rechnet aus der AKTUELL
  * gefilterten Liste, was drängt und was sich lohnt — jede Zahl gemessen, keine erfundenen Werte.
  * Klick auf eine Zeile öffnet den Lead direkt. */
-function LeerBriefing({ rows, onPick }: { rows: BriefLead[]; onPick?: (id: string) => void }) {
+function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
+  rows: BriefLead[]; alle?: BriefLead[];
+  onPick?: (id: string) => void; onGoto?: (ziel: "netzwerk" | "strategie" | "award" | "vorschau") => void;
+}) {
+  /* Drei Spalten nach Zeithorizont, nicht nach Datenherkunft:
+   *   jetzt   — worauf man sich diese Woche bewerben kann
+   *   bald    — was sich anbahnt (Ankündigungen, auslaufende Verträge)
+   *   drumrum — Markt und Netzwerk, also die Bausteine daneben
+   * `rows` ist die vorsortierte Akquise-Liste; „bald" braucht bewusst `alle`, weil die
+   * Vorauswahl nur bewerbbare Ausschreibungen (f02) durchlässt und Ankündigungen sonst
+   * unsichtbar blieben. */
   const b = useMemo(() => {
-    const offen = rows.filter((l) => l.src !== "award");
     const tageOf = (l: BriefLead) => {
       const f = l.frist as { tage?: number } | undefined;
       return typeof f?.tage === "number" ? f.tage : (typeof l.tage === "number" ? (l.tage as number) : null);
     };
-    const frist7 = offen.filter((l) => { const t = tageOf(l); return t != null && t >= 0 && t <= 7; })
+    const offen = rows.filter((l) => l.src !== "award");
+    const heiss = offen
+      .filter((l) => { const t = tageOf(l); return t != null && t >= 0 && t <= 21; })
       .sort((a, z) => (tageOf(a) ?? 99) - (tageOf(z) ?? 99));
-    const neu = rows.filter((l) => l.neu || l.status === "ungesichtet");
-    const passend = offen.filter((l) => l.relevanz === "hoch");
-    const zuschlaege = rows.filter((l) => l.src === "award");
-    return { offen, frist7, neu, passend, zuschlaege, tageOf };
-  }, [rows]);
+
+    // Vorschau: Ankündigungen + auslaufende Verträge, nach Möglichkeit profilnah.
+    const basis = alle.length ? alle : rows;
+    const mitProfil = rows.some((l) => l.relevanz === "hoch" || l.relevanz === "mittel");
+    const passend = (l: BriefLead) =>
+      !mitProfil || l.relevanz === "hoch" || l.relevanz === "mittel";
+    const kuenftig = basis
+      // Bereits ausgelaufene Verträge sind keine Vorschau — sie standen hier ganz oben,
+      // weil nach endTage aufsteigend sortiert wird und negative Werte zuerst kommen.
+      .filter((l) => (l.src === "f01" || l.src === "auslauf") && passend(l)
+        && ((l.endTage as number | null) ?? 0) >= 0)
+      .sort((a, z) => ((a.endTage as number | null) ?? 9999) - ((z.endTage as number | null) ?? 9999));
+
+    const netz = basis.filter((l) => ((l.lose as unknown[] | undefined)?.length ?? 0) > 1);
+    const zuschlaege = basis.filter((l) => l.src === "award");
+    return { offen, heiss, kuenftig, netz, zuschlaege, tageOf };
+  }, [rows, alle]);
 
   const Zeile = ({ l, sub }: { l: BriefLead; sub: string }) => (
     <button className="lb-row" onClick={() => onPick?.(l.id)} title="Lead öffnen">
-      <span className="lb-row-t">{String(l.titel || "").slice(0, 70)}</span>
+      <span className="lb-row-t">{String(l.titel || "").slice(0, 58)}</span>
       <span className="lb-row-s">{sub}</span>
     </button>
   );
+
+  const monate = (l: BriefLead) => {
+    const d = l.endTage as number | null;
+    if (d == null) return "Zeitpunkt offen";
+    if (d < 0) return "bereits ausgelaufen";
+    if (d < 31) return "im nächsten Monat";
+    return `in ~${Math.round(d / 30)} Monaten`;
+  };
 
   return (
     <div className="lb">
       <div className="lb-head">
         <p className="lb-h">Euer Überblick</p>
-        <p className="lb-l">{b.offen.length.toLocaleString("de-DE")} offene Ausschreibungen in dieser Ansicht
-          {b.zuschlaege.length ? ` · ${b.zuschlaege.length.toLocaleString("de-DE")} frische Zuschläge` : ""}</p>
+        <p className="lb-l">Wählt links eine Ausschreibung — oder steigt hier ein.</p>
       </div>
 
-      <div className="lb-kpis">
-        <div className={`lb-kpi ${b.frist7.length ? "urgent" : ""}`}>
-          <span className="lb-n">{b.frist7.length}</span><span className="lb-k">Frist ≤ 7 Tage</span></div>
-        <div className="lb-kpi"><span className="lb-n">{b.passend.length}</span><span className="lb-k">hohe Passung</span></div>
-        <div className="lb-kpi"><span className="lb-n">{b.neu.length}</span><span className="lb-k">ungesichtet</span></div>
-      </div>
-
-      {b.frist7.length > 0 && (
-        <section className="lb-sec">
-          <h4>Zuerst ansehen — Frist läuft</h4>
-          {b.frist7.slice(0, 3).map((l) => {
+      <div className="lb-drei">
+        {/* ── jetzt ─────────────────────────────────────────────── */}
+        <section className="lb-sp">
+          <h4><span className="lb-dot heiss" />Jetzt bewerben</h4>
+          <p className="lb-n2">{b.heiss.length}<em>mit Frist in den nächsten 3 Wochen</em></p>
+          {b.heiss.length ? b.heiss.slice(0, 3).map((l) => {
             const t = b.tageOf(l);
             return <Zeile key={l.id} l={l}
               sub={t === 0 ? "läuft heute ab" : t === 1 ? "läuft morgen ab" : `noch ${t} Tage`} />;
-          })}
+          }) : <p className="lb-nix">Gerade nichts Dringendes — gut so.</p>}
         </section>
-      )}
 
-      {b.passend.length > 0 && (
-        <section className="lb-sec">
-          <h4>Passt zu eurem Profil</h4>
-          {b.passend.slice(0, 3).map((l) => (
-            <Zeile key={l.id} l={l} sub={String((l.cpvLabel as string) || "").slice(0, 34)} />
-          ))}
+        {/* ── bald ──────────────────────────────────────────────── */}
+        <section className="lb-sp">
+          <h4><span className="lb-dot bald" />Bahnt sich an</h4>
+          <p className="lb-n2">{b.kuenftig.length}<em>Ankündigungen und auslaufende Verträge</em></p>
+          {b.kuenftig.length ? b.kuenftig.slice(0, 3).map((l) => (
+            <Zeile key={l.id} l={l} sub={monate(l)} />
+          )) : <p className="lb-nix">Noch keine Vorankündigungen in eurem Feld.</p>}
+          {b.kuenftig.length > 3 ? (
+            <button className="lb-mehr" onClick={() => onGoto?.("vorschau")}>Alle {b.kuenftig.length} ansehen</button>
+          ) : null}
         </section>
-      )}
 
-      {!b.frist7.length && !b.passend.length && (
-        <p className="lb-empty">Wählt links eine Ausschreibung — oder legt unter
-          „Unternehmen" euer Profil an, damit wir die passenden hervorheben.</p>
-      )}
+        {/* ── drumrum ───────────────────────────────────────────── */}
+        <section className="lb-sp">
+          <h4><span className="lb-dot markt" />Markt &amp; Netzwerk</h4>
+          <button className="lb-kachel" onClick={() => onGoto?.("netzwerk")}>
+            <b>{b.netz.length}</b>
+            <span>Vergaben mit mehreren Losen — hier lohnt ein Partner</span>
+          </button>
+          <button className="lb-kachel" onClick={() => onGoto?.("award")}>
+            <b>{b.zuschlaege.length}</b>
+            <span>frische Zuschläge — wer gewonnen hat, kauft jetzt ein</span>
+          </button>
+          <button className="lb-kachel" onClick={() => onGoto?.("strategie")}>
+            <b>→</b>
+            <span>Strategie: wohin sich euer Markt bewegt</span>
+          </button>
+        </section>
+      </div>
 
       <p className="lb-foot">Zahlen beziehen sich auf eure aktuell gefilterte Liste.</p>
     </div>
