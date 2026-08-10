@@ -167,7 +167,9 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // Standard AN; ohne Profil wirkungslos, weil dann keine Relevanz berechnet werden kann.
   const [vorauswahl, setVorauswahl] = useState(true);
   // Immer nur EINE Phase in der Liste; die nächste wird als letzte Zeile angekündigt.
-  const [phaseIdx, setPhaseIdx] = useState(0);
+  // Aufgeklappte Phasen (kumulativ): 1 = nur „Jetzt bewerben". Ersetzen war falsch —
+  // wer weiterklickte, verlor die erste Phase und fand ohne zweiten Klick nicht zurück.
+  const [phasenOffen, setPhasenOffen] = useState(1);
 
   // Beim Start: eingeloggt? → Profil aus Supabase (autoritativ); sonst lokaler Fallback.
   useEffect(() => {
@@ -405,7 +407,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     };
     const frist = (l: Lead) => (l.frist as { tage?: number } | undefined)?.tage ?? (l.tage as number | null);
     const ende = (l: Lead) => (l.endTage as number | null);
-    const echt = (l: Lead) => String((l as { endeQuelle?: string }).endeQuelle ?? "") === "actual";
+    const echt = (l: Lead) => String((l.timing as { src?: string } | undefined)?.src ?? "") === "echt";
     const basis = alleRows.filter((l) => l.src !== "award" && keinBlocker(l));
 
     const jetzt = basis.filter((l) => l.src === "f02" && l.relevanz === "hoch"
@@ -414,20 +416,22 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     // „Bald" = Ausschreibung steht in den nächsten ~6 Monaten an: angekündigt ODER
     // laufender Vertrag, der demnächst endet. Echte Enddaten zuerst — sie treffen.
     const bald = basis.filter((l) => passt(l)
-      && (l.src === "f01" || (l.src === "auslauf" && (ende(l) ?? -1) >= 0)))
+      && (l.src === "f01" || (l.src === "auslauf" && (ende(l) ?? -1) >= 0 && (ende(l) ?? 9e9) <= 183)))
       .sort((a, z) => (echt(z) ? 1 : 0) - (echt(a) ? 1 : 0) || ((ende(a) ?? 9e9) - (ende(z) ?? 9e9)));
+    // Dritte Phase hat jetzt Inhalt: der Export liefert 24 Monate statt der 26 Tage, die
+    // vorher durch den Ausliefer-Deckel übrig blieben (Bau: 953 Verträge im 1–2-Jahres-Fenster).
+    const lang = basis.filter((l) => passt(l) && l.src === "auslauf" && (ende(l) ?? -1) > 183)
+      .sort((a, z) => ((ende(a) ?? 9e9) - (ende(z) ?? 9e9)));
 
-    // BEWUSST nur zwei Phasen. Eine dritte („langfristig") hätte keinen Inhalt: gemessen
-    // liegen ALLE Auslauf-Leads zwischen 0 und 26 Tagen (Median 19) — der Auslauf-Radar
-    // schaut nur rund vier Wochen voraus. Eine leere Phase wäre ein Versprechen ohne Daten.
     return [
       { key: "jetzt", titel: "Jetzt bewerben", hinweis: "Frist läuft — hier zählt Tempo", rows: jetzt },
-      { key: "bald", titel: "Bahnt sich an", hinweis: "angekündigt oder Vertrag läuft aus", rows: bald },
+      { key: "bald", titel: "Bahnt sich an", hinweis: "angekündigt oder Vertrag endet bald", rows: bald },
+      { key: "lang", titel: "Langfristig", hinweis: "Verträge, die in ein bis zwei Jahren auslaufen", rows: lang },
     ];
   }, [alleRows, realProfile, istAkquise, eigenePhasenwahl, vorauswahl]);
 
   const rows: Lead[] = useMemo(() => {
-    if (PHASEN) return PHASEN[phaseIdx]?.rows ?? [];
+    if (PHASEN) return PHASEN.slice(0, phasenOffen).flatMap((p) => p.rows);
     const ohneAwards = adv.phases.includes("award") ? alleRows : alleRows.filter((l) => l.src !== "award");
     // Vorauswahl (gemessen an ENGIE/Cancom/Rosenbauer: 5.911→72, 3.974→23, 5.979→77):
     // Es bleibt, worauf man sich HEUTE sinnvoll bewerben kann —
@@ -447,7 +451,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
       if (m?.blocker?.some((b) => b.art === "buergschaft" || b.art === "ausschluss")) return false;
       return aufwandStufe(l).stufe !== "hoch";
     });
-  }, [alleRows, adv.phases, vorauswahl, realProfile, istAkquise, eigenePhasenwahl, PHASEN, phaseIdx]);
+  }, [alleRows, adv.phases, vorauswahl, realProfile, istAkquise, eigenePhasenwahl, PHASEN, phasenOffen]);
 
   const suggestions = useMemo(() => (query.trim() ? suggestList(query) : []), [query]);
 
@@ -1084,20 +1088,20 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                        weiter (oder zurück auf die erste). So sieht man immer nur eine
                        Handvoll Leads, weiß aber, was dahinter liegt. */
                     <div className="phasefuss">
-                      {phaseIdx + 1 < PHASEN.length ? (
-                        <button className="pf-next" onClick={() => { setPhaseIdx(phaseIdx + 1); setActiveId(null); }}>
-                          <span className="pf-k">Weiter</span>
-                          <b>{PHASEN[phaseIdx + 1].titel}</b>
-                          <span className="pf-n">{PHASEN[phaseIdx + 1].rows.length}</span>
-                          <span className="pf-h">{PHASEN[phaseIdx + 1].hinweis}</span>
-                          <span className="pf-pfeil">→</span>
+                      {phasenOffen < PHASEN.length ? (
+                        <button className="pf-next" onClick={() => setPhasenOffen(phasenOffen + 1)}>
+                          <span className="pf-pfeil">▾</span>
+                          <span className="pf-k">Auch anzeigen</span>
+                          <b>{PHASEN[phasenOffen].titel}</b>
+                          <span className="pf-n">{PHASEN[phasenOffen].rows.length}</span>
+                          <span className="pf-h">{PHASEN[phasenOffen].hinweis}</span>
                         </button>
                       ) : (
-                        <button className="pf-next" onClick={() => { setPhaseIdx(0); setActiveId(null); }}>
-                          <span className="pf-k">Zurück an den Anfang</span>
-                          <b>{PHASEN[0].titel}</b>
+                        <button className="pf-next" onClick={() => setPhasenOffen(1)}>
+                          <span className="pf-pfeil">▴</span>
+                          <span className="pf-k">Wieder einklappen</span>
+                          <b>nur {PHASEN[0].titel}</b>
                           <span className="pf-n">{PHASEN[0].rows.length}</span>
-                          <span className="pf-pfeil">↑</span>
                         </button>
                       )}
                       <button className="pf-alle" onClick={() => setVorauswahl(false)}>
@@ -1172,7 +1176,9 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                 if (ziel === "netzwerk") return switchView("netzwerk");
                 if (ziel === "strategie") return switchView("potenzial");
                 if (ziel === "award") return setAdv((a) => ({ ...a, phases: ["award"] }));
-                if (ziel === "vorschau") return setAdv((a) => ({ ...a, phases: ["f01", "auslauf"] }));
+                if (ziel === "vorschau") return setPhasenOffen(2);
+                // Zurück auf die erste Phase — der Weg, der aus dem Überblick fehlte.
+                if (ziel === "jetzt") { setPhasenOffen(1); setActiveId(null); return; }
               }}
               onPickLead={openLead}
               onTab={setTab}

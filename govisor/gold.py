@@ -2245,6 +2245,81 @@ def build_lead_deadline(cfg: Config, country: str = "DE"):
     return n
 
 
+def build_duration_calibration(cfg: Config, country: str = "DE"):
+    """Selbstlernende Korrektur des prognostizierten Vertragsendes.
+
+    Wir sagen „dieser Vertrag endet am X, dann kommt die Nachausschreibung". Ob das
+    stimmt, wussten wir bisher nicht — es wurde nirgends gemessen. Diese Tabelle misst es
+    an der eigenen Historie: für jede belegte Nachfolge-Kante (`contract_succession`) den
+    Abstand zwischen dem prognostizierten Ende des Vorgängers und dem Tag, an dem der
+    Nachfolger tatsächlich veröffentlicht wurde.
+
+    Der Versatz ist NICHT global — er hängt stark vom Gewerk ab (gemessen, Median in Tagen):
+        CPV 71 Ingenieurleistungen  −592     CPV 34 Fahrzeuge      0
+        CPV 72 IT-Dienste           −577     CPV 30 Büro         +31
+        CPV 90 Entsorgung           −458     CPV 38 Labor       +303
+    Eine einheitliche Korrektur wäre für die Hälfte der Divisionen falsch. Deshalb je
+    (Herkunft des Enddatums × CPV-Division), mit globalem Rückfall, wo die Belege dünn sind.
+
+    „Selbstlernend" heißt hier: die Tabelle wird bei JEDEM Gold-Lauf neu aus den dann
+    vorhandenen Ketten gerechnet. Je mehr Nachfolgen belegt sind, desto belastbarer die
+    Korrektur — ohne Modell, ohne Training, nur gemessen.
+
+    Ausreißer-Schutz: Paare mit über 4 Jahren Abstand sind keine Nachfolge-Beziehung mehr,
+    sondern Zufall — sie fliegen raus, sonst zieht ein einzelner Fall den Median.
+    """
+    import duckdb
+
+    G = cfg.gold_dir / country
+    N = cfg.silver_table_glob("notices", country)
+    con = duckdb.connect(); con.execute("SET threads=4")
+    SUC, DUR = G / "contract_succession.parquet", G / "lead_duration.parquet"
+    out = G / "duration_calibration.parquet"
+    if not SUC.exists() or not DUR.exists():
+        con.close()
+        return 0
+
+    MIN_BELEGE = 100          # darunter ist ein Median Rauschen, nicht Signal
+    MAX_ABSTAND = 1460        # 4 Jahre — darüber keine plausible Nachfolge mehr
+
+    con.execute(f"""
+        CREATE OR REPLACE TEMP TABLE paare AS
+        WITH p AS (
+          SELECT notice_id, max(publication_date) AS pub, substr(max(cpv_main), 1, 2) AS div
+          FROM '{N}' GROUP BY 1)
+        SELECT d.duration_source, pv.div,
+               date_diff('day', d.contract_end, ps.pub) AS versatz
+        FROM '{SUC}' s
+        JOIN '{DUR}' d  ON d.notice_id = s.predecessor
+        JOIN p pv ON pv.notice_id = s.predecessor
+        JOIN p ps ON ps.notice_id = s.successor
+        WHERE d.contract_end IS NOT NULL AND ps.pub IS NOT NULL
+          AND abs(date_diff('day', d.contract_end, ps.pub)) <= {MAX_ABSTAND}
+    """)
+    con.execute(f"""
+        COPY (
+          WITH je_div AS (
+            SELECT duration_source, div, count(*) AS belege,
+                   round(median(versatz)) AS versatz_tage,
+                   round(quantile_cont(versatz, 0.25)) AS p25,
+                   round(quantile_cont(versatz, 0.75)) AS p75
+            FROM paare GROUP BY 1, 2 HAVING count(*) >= {MIN_BELEGE}),
+          global AS (
+            SELECT duration_source, NULL AS div, count(*) AS belege,
+                   round(median(versatz)) AS versatz_tage,
+                   round(quantile_cont(versatz, 0.25)) AS p25,
+                   round(quantile_cont(versatz, 0.75)) AS p75
+            FROM paare GROUP BY 1)
+          SELECT *, (p75 - p25) AS spanne_tage FROM je_div
+          UNION ALL BY NAME
+          SELECT *, (p75 - p25) AS spanne_tage FROM global
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM '{out}'").fetchone()[0]
+    con.close()
+    return n
+
+
 def build_lead_duration(cfg: Config, country: str = "DE"):
     """Vertragslaufzeit/-ende je Lead — für „bis Auslauf" (#3 Lead-Detail) + sekundären
     Auslauf-Alert (#9).

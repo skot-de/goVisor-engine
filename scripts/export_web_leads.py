@@ -30,7 +30,10 @@ def days_until(d):
     except Exception:
         return None
 
-CAP = 6000          # Leads je Grundraum (nach Dringlichkeit). Client-seitiges Filtern deckelt
+CAP_MONAT = 120     # Auslauf-Leads je Grundraum UND Auslauf-Monat (24 Monate → ~2.900).
+CAP = 2500          # Leads je Grundraum UND Phase (Quote statt gemeinsamer Rangliste).
+                    # 3 Phasen × 2.500 ≈ derselbe Umfang wie vorher 6.000 gesamt,
+                    # aber jede Phase kommt vor. Client-seitiges Filtern deckelt
                     # bei ein paar Tausend; der volle Bestand (Bau 48k) braucht die Server-Query.
 OUT = pathlib.Path("web/data"); OUT.mkdir(parents=True, exist_ok=True)
 con = duckdb.connect()
@@ -427,19 +430,30 @@ def export_branche(key):
         )
         , filtered AS (
           SELECT * FROM mapped WHERE ui_branche = '{key}'
-            -- Nativ: Auslauf-Radar nur bis 18 Monate Vertragsende (weiter = kein handlungs-
-            -- relevanter Lead, nur Ballast). Offene/angekündigte immer; unbekanntes Ende bleibt.
-            AND (phase != 'expiring' OR months_to_expiry IS NULL OR months_to_expiry <= 18)
+            -- Auslauf-Radar bis 24 Monate. Wer eine Nachausschreibung vorbereiten will,
+            -- braucht Vorlauf — und der gemessene Versatz (duration_calibration) zeigt, dass
+            -- Nachfolger im Median deutlich VOR dem prognostizierten Ende erscheinen.
+            AND (phase != 'expiring' OR months_to_expiry IS NULL OR months_to_expiry <= 24)
         ), ranked AS (
+          -- Quote JE PHASE statt einer gemeinsamen Dringlichkeits-Rangliste. Vorher
+          -- verdrängten die nächstliegenden Leads alles Ferne: gemessen lagen ALLE
+          -- ausgelieferten Auslauf-Leads zwischen 0 und 26 Tagen, obwohl Gold 36.083
+          -- mit über 30 Tagen kennt. Der lange Horizont fiel also nicht durch eine
+          -- Entscheidung weg, sondern durch den Deckel.
+          -- Auslauf zusätzlich JE MONAT quotiert. Ohne das nimmt die Quote wieder nur
+          -- die nächstliegenden: mit reiner Phasen-Quote lag das Maximum bei 49 Tagen,
+          -- obwohl 24 Monate erlaubt sind. So ist jeder Monat des Horizonts vertreten.
           SELECT *, row_number() OVER (
-            ORDER BY (phase = 'open') DESC,
-                     coalesce(days_to_deadline, days_to_expiry, 99999) ASC) AS rn
+            PARTITION BY phase,
+              CASE WHEN phase = 'expiring' THEN least(coalesce(months_to_expiry, 0), 24) ELSE 0 END
+            ORDER BY coalesce(days_to_deadline, days_to_expiry, 99999) ASC) AS rn
           FROM filtered
         )
-        -- CAP nach Dringlichkeit — aber Nicht-DE-Leads (CH/AT, der DACH-Differenzierer, wenige)
-        -- IMMER behalten, sonst verdrängt der große DE-Bestand sie aus dem Umkreis-losen Blick.
+        -- CAP je Phase — Nicht-DE-Leads (CH/AT, der DACH-Differenzierer, wenige) IMMER
+        -- behalten, sonst verdrängt der große DE-Bestand sie aus dem Umkreis-losen Blick.
         SELECT * EXCLUDE(rn) FROM ranked
-        WHERE rn <= {CAP} OR coalesce(country, 'DE') <> 'DE'
+        WHERE rn <= (CASE WHEN phase = 'expiring' THEN {CAP_MONAT} ELSE {CAP} END)
+              OR coalesce(country, 'DE') <> 'DE'
         ORDER BY (phase = 'open') DESC,
                  coalesce(days_to_deadline, days_to_expiry, 99999) ASC""").df().to_dict("records")
 

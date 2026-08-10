@@ -53,7 +53,7 @@ export function DetailPanel({
   rows?: BriefLead[];
   alle?: BriefLead[];
   onPickLead?: (id: string) => void;
-  onGoto?: (ziel: "netzwerk" | "strategie" | "award" | "vorschau") => void;
+  onGoto?: (ziel: "netzwerk" | "strategie" | "award" | "vorschau" | "jetzt") => void;
   onTab: (k: string) => void;
   onClose: () => void;
   onExpand: () => void;
@@ -235,7 +235,8 @@ export function DetailPanel({
  * Klick auf eine Zeile öffnet den Lead direkt. */
 function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
   rows: BriefLead[]; alle?: BriefLead[];
-  onPick?: (id: string) => void; onGoto?: (ziel: "netzwerk" | "strategie" | "award" | "vorschau") => void;
+  onPick?: (id: string) => void;
+  onGoto?: (ziel: "netzwerk" | "strategie" | "award" | "vorschau" | "jetzt") => void;
 }) {
   /* Drei Spalten nach Zeithorizont, nicht nach Datenherkunft:
    *   jetzt   — worauf man sich diese Woche bewerben kann
@@ -314,16 +315,30 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
     </button>
   );
 
-  // „in 0 Monaten" ist keine Zeitangabe. Nahes rundet sich weg — also benennen statt rechnen.
+  /* Zeitangabe so grob, wie die Prognose wirklich ist.
+   *
+   * „in 0 Monaten" war doppelt falsch: es ist keine Zeitangabe, und es täuscht eine
+   * Genauigkeit vor, die wir nicht haben. Gemessen an den belegten Nachfolge-Ketten liegt
+   * die Streuung des Versatzes je nach Gewerk bei 267 bis 980 Tagen (p25–p75) — bei einem
+   * GESCHÄTZTEN Enddatum ist „in 7 Monaten" schlicht erfunden. Deshalb: steht ein echtes
+   * Datum in den Unterlagen, wird konkret formuliert; ist es geschätzt, nur die Grobstufe.
+   */
   const monate = (l: BriefLead) => {
     const d = l.endTage as number | null;
+    const echt = String((l.timing as { src?: string } | undefined)?.src ?? "") === "echt";
     if (d == null) return "Zeitpunkt offen";
     if (d < 0) return "bereits ausgelaufen";
+    if (!echt) {
+      // Geschätzt → nur Grobstufe, nie eine Monatszahl.
+      if (d <= 90) return "läuft bald aus (geschätzt)";
+      if (d <= 365) return "läuft dieses Jahr aus (geschätzt)";
+      return "läuft in ein bis zwei Jahren aus (geschätzt)";
+    }
     if (d <= 14) return "läuft jetzt aus";
-    if (d <= 60) return "läuft bald aus";
-    if (d < 365) return `in ~${Math.round(d / 30)} Monaten`;
+    if (d <= 60) return "läuft in den nächsten Wochen aus";
+    if (d < 365) return `läuft in ~${Math.round(d / 30)} Monaten aus`;
     const j = d / 365;
-    return j < 1.5 ? "in gut einem Jahr" : `in ~${Math.round(j)} Jahren`;
+    return j < 1.5 ? "läuft in gut einem Jahr aus" : `läuft in ~${Math.round(j)} Jahren aus`;
   };
 
   return (
@@ -336,7 +351,11 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
       <div className="lb-drei">
         {/* ── jetzt ─────────────────────────────────────────────── */}
         <section className="lb-sp">
-          <h4><span className="lb-dot heiss" />Jetzt bewerben</h4>
+          <h4>
+            <span className="lb-dot heiss" />
+            {/* Rückweg in die Liste: aus dem Überblick gab es bisher keinen. */}
+            <button className="lb-h4btn" onClick={() => onGoto?.("jetzt")}>Jetzt bewerben</button>
+          </h4>
           <p className="lb-n2">{b.heiss.length}<em>mit Frist in den nächsten 3 Wochen</em></p>
           {b.heiss.length ? b.heiss.slice(0, 5).map((l) => {
             const t = b.tageOf(l);
