@@ -457,6 +457,11 @@ def main(argv: list[str] | None = None) -> int:
         print("frist       :", f"{gold.build_lead_deadline(cfg, c):,} offene Ausschr. (Angebotsfrist)")
         print("laufzeit    :", f"{gold.build_lead_duration(cfg, c):,} Leads (Vertragsende, echt+geschätzt)")
         print("kalibrierung:", f"{gold.build_duration_calibration(cfg, c):,} Zeilen (Prognose-Versatz aus echten Ketten)")
+        # Zweiter Laufzeit-Durchgang: der erste rechnete noch mit der Kalibrierung des
+        # VORIGEN Laufs. Die Kalibrierung misst auf `contract_end` (roh, unkorrigiert),
+        # also gibt es keine Rückkopplung — aber ohne diesen Durchgang trüge lead_detail
+        # eine Korrektur, die einen Lauf alt ist. Kostet Sekunden, spart Erklärungen.
+        print("laufzeit ²  :", f"{gold.build_lead_duration(cfg, c):,} Leads (mit frischer Kalibrierung)")
         print("lead-detail :", f"{gold.build_lead_detail(cfg, c):,} Leads (UI-View mit ehrlichen Flags)")
         print("identity    :", f"{gold.build_entity_identity(cfg, c):,} Entities (Gruppe=Identität, Winner-Match)")
         print("dim-plz     :", f"{gold.build_dim_plz(cfg, c):,} PLZ-Zentroide (Radius-Suche)")
