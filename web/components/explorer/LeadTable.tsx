@@ -23,6 +23,7 @@ const FunnelIcon = (
 export function LeadTable({
   rows,
   limit,
+  fuss,
   sortKey,
   sortDir,
   activeId,
@@ -40,6 +41,8 @@ export function LeadTable({
   rows: Lead[];
   /** Nur die ersten `limit` Zeilen rendern (inkrementelles Nachwachsen beim Scrollen). */
   limit: number;
+  /** Abschluss-Zeile unter der letzten Ausschreibung (Vorauswahl aufheben). */
+  fuss?: React.ReactNode;
   sortKey: string;
   sortDir: number;
   activeId: string | null;
@@ -226,6 +229,9 @@ export function LeadTable({
             </td>
           </tr>
         )}
+        {rows.length && fuss ? (
+          <tr className="fussrow"><td colSpan={colspan}>{fuss}</td></tr>
+        ) : null}
       </tbody>
     </table>
   );

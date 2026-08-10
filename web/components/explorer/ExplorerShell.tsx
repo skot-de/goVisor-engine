@@ -320,6 +320,10 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // gesetzte Inline-Höhe entfernen, damit die Modus-Regel wieder greift.
   useEffect(() => {
     document.body.dataset.mode = activeId ? mode : "browse";
+    // Marker fürs Layout: ohne gewählten Lead steht unten der Überblick, nicht ein
+    // Detail — der bekommt per CSS mehr Höhe.
+    if (activeId) document.body.dataset.lead = "";
+    else delete document.body.dataset.lead;
     // Potenzial-Bereich blendet Tabelle/Detail aus und zeigt die profilview (CSS §area).
     if (view === "potenzial") document.body.dataset.area = "profil";
     else document.body.removeAttribute("data-area");
@@ -1020,45 +1024,49 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                   </div>
                 );
               })()}
-              {/* Vorauswahl sichtbar machen: WAS wir weggelassen haben und wie man es zurückholt.
-                  Ein stilles Filtern wäre der schlimmere Fehler — der Nutzer muss die Menge kennen. */}
-              {realProfile && istAkquise && !adv.phases.includes("award") ? (
-                <div className={`vor-band ${vorauswahl ? "" : "off"}`}>
-                  {vorauswahl ? (
-                    <>
-                      <b>{rows.length}</b> von {alleRows.filter((l) => l.src !== "award").length.toLocaleString("de-DE")} für euch vorsortiert <span className="vor-gr">({(BRANCHEN as Record<string, string>)[aktiveBranche]})</span>
-                      <span className="vor-x">
-                        offene Ausschreibung · noch ≥ 3 Tage · hohe Passung · Aufwand vertretbar
-                        {/* Der Regionsteil ist aus der eigenen Zuschlagshistorie abgeleitet — sagen,
-                            woher er kommt, sonst wirkt die Einschränkung willkürlich. */}
-                        {(() => {
-                          const p = realProfile as unknown as { regionTyp?: string | null; regionLabels?: string[]; regions?: string[] } | null;
-                          if (!p?.regions?.length) return null;
-                          const wo = (p.regionLabels?.length ? p.regionLabels : p.regions).slice(0, 3).join(", ");
-                          return ` · ${p.regionTyp === "regional" ? "eure Region" : "eure Regionen"} ${wo} (aus euren Zuschlägen abgeleitet)`;
-                        })()}
-                      </span>
-                      <button className="vor-btn" onClick={() => setVorauswahl(false)}>Alle anzeigen</button>
-                      {/* Sehr scharfe Profile (enges Gewerk × eine Region) landen zweistellig darunter.
-                          Das ist die ehrliche Zahl — aber unkommentiert sieht sie nach einem Defekt aus. */}
-                      {rows.length < 10 ? (
-                        <span className="vor-eng">
-                          Wenige Treffer — so eng ist der Markt für euer Gewerk in eurer Region gerade.
-                        </span>
-                      ) : null}
-                    </>
-                  ) : (
-                    <>
-                      Alle <b>{rows.length.toLocaleString("de-DE")}</b> Ausschreibungen in {(BRANCHEN as Record<string, string>)[aktiveBranche]}
-                      <span className="vor-x">ungefiltert — auch Ankündigungen und weniger passende</span>
-                      <button className="vor-btn" onClick={() => setVorauswahl(true)}>Wieder vorsortieren</button>
-                    </>
-                  )}
-                </div>
-              ) : null}
               <LeadTable
                 rows={rows}
                 limit={renderCount}
+                // Die Vorauswahl steht am ENDE der Liste: dort kommt man beim Lesen an, und
+                // dort ist die Frage „ist das alles?" tatsächlich aktuell. Als Banner darüber
+                // wurde sie weggeklickt, bevor man einen Lead gesehen hatte. Stilles Filtern
+                // bleibt ausgeschlossen — die weggelassene Menge steht weiterhin da.
+                fuss={
+                  realProfile && istAkquise && !adv.phases.includes("award") ? (
+                  <div className={`vor-band ${vorauswahl ? "" : "off"}`}>
+                    {vorauswahl ? (
+                      <>
+                        <b>{rows.length}</b> von {alleRows.filter((l) => l.src !== "award").length.toLocaleString("de-DE")} Ausschreibungen für euch vorsortiert <span className="vor-gr">({(BRANCHEN as Record<string, string>)[aktiveBranche]})</span>
+                        <span className="vor-x">
+                          offene Ausschreibung · noch ≥ 3 Tage · hohe Passung · Aufwand vertretbar
+                          {/* Der Regionsteil ist aus der eigenen Zuschlagshistorie abgeleitet — sagen,
+                                woher er kommt, sonst wirkt die Einschränkung willkürlich. */}
+                          {(() => {
+                            const p = realProfile as unknown as { regionTyp?: string | null; regionLabels?: string[]; regions?: string[] } | null;
+                            if (!p?.regions?.length) return null;
+                            const wo = (p.regionLabels?.length ? p.regionLabels : p.regions).slice(0, 3).join(", ");
+                            return ` · ${p.regionTyp === "regional" ? "eure Region" : "eure Regionen"} ${wo} (aus euren Zuschlägen abgeleitet)`;
+                          })()}
+                        </span>
+                        <button className="vor-btn" onClick={() => setVorauswahl(false)}>Alle {alleRows.filter((l) => l.src !== "award").length.toLocaleString("de-DE")} anzeigen</button>
+                        {/* Sehr scharfe Profile (enges Gewerk × eine Region) landen zweistellig darunter.
+                            Das ist die ehrliche Zahl — aber unkommentiert sieht sie nach einem Defekt aus. */}
+                        {rows.length < 10 ? (
+                          <span className="vor-eng">
+                            Wenige Treffer — so eng ist der Markt für euer Gewerk in eurer Region gerade.
+                          </span>
+                        ) : null}
+                      </>
+                    ) : (
+                      <>
+                        Alle <b>{rows.length.toLocaleString("de-DE")}</b> Ausschreibungen in {(BRANCHEN as Record<string, string>)[aktiveBranche]}
+                        <span className="vor-x">ungefiltert — auch Ankündigungen und weniger passende</span>
+                        <button className="vor-btn" onClick={() => setVorauswahl(true)}>Wieder vorsortieren</button>
+                      </>
+                    )}
+                  </div>
+                  ) : null
+                }
                 sortKey={sortKey}
                 sortDir={sortDir}
                 activeId={activeId}

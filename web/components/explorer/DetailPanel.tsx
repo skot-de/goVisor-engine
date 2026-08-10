@@ -266,9 +266,15 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
         && ((l.endTage as number | null) ?? 0) >= 0)
       .sort((a, z) => ((a.endTage as number | null) ?? 9999) - ((z.endTage as number | null) ?? 9999));
 
-    const netz = basis.filter((l) => ((l.lose as unknown[] | undefined)?.length ?? 0) > 1);
+    const netz = basis.filter((l) => ((l.lose as unknown[] | undefined)?.length ?? 0) > 1 && passend(l));
     const zuschlaege = basis.filter((l) => l.src === "award");
-    return { offen, heiss, kuenftig, netz, zuschlaege, tageOf };
+    // Namen statt nackter Zähler: „190 Vergaben" sagt nichts, „bei Stadt Halle und DB Netz"
+    // sagt, wo man morgen anruft.
+    const netzKaeufer = [...new Set(netz.map((l) => String(l.buyer || "")).filter(Boolean))].slice(0, 2);
+    const gewinner = [...new Set(zuschlaege
+      .map((l) => (l.award as { winner?: string } | undefined)?.winner)
+      .filter(Boolean) as string[])].slice(0, 2);
+    return { offen, heiss, kuenftig, netz, zuschlaege, netzKaeufer, gewinner, tageOf };
   }, [rows, alle]);
 
   const Zeile = ({ l, sub }: { l: BriefLead; sub: string }) => (
@@ -298,7 +304,7 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
         <section className="lb-sp">
           <h4><span className="lb-dot heiss" />Jetzt bewerben</h4>
           <p className="lb-n2">{b.heiss.length}<em>mit Frist in den nächsten 3 Wochen</em></p>
-          {b.heiss.length ? b.heiss.slice(0, 3).map((l) => {
+          {b.heiss.length ? b.heiss.slice(0, 5).map((l) => {
             const t = b.tageOf(l);
             return <Zeile key={l.id} l={l}
               sub={t === 0 ? "läuft heute ab" : t === 1 ? "läuft morgen ab" : `noch ${t} Tage`} />;
@@ -309,10 +315,10 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
         <section className="lb-sp">
           <h4><span className="lb-dot bald" />Bahnt sich an</h4>
           <p className="lb-n2">{b.kuenftig.length}<em>Ankündigungen und auslaufende Verträge</em></p>
-          {b.kuenftig.length ? b.kuenftig.slice(0, 3).map((l) => (
+          {b.kuenftig.length ? b.kuenftig.slice(0, 5).map((l) => (
             <Zeile key={l.id} l={l} sub={monate(l)} />
           )) : <p className="lb-nix">Noch keine Vorankündigungen in eurem Feld.</p>}
-          {b.kuenftig.length > 3 ? (
+          {b.kuenftig.length > 5 ? (
             <button className="lb-mehr" onClick={() => onGoto?.("vorschau")}>Alle {b.kuenftig.length} ansehen</button>
           ) : null}
         </section>
@@ -322,11 +328,15 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
           <h4><span className="lb-dot markt" />Markt &amp; Netzwerk</h4>
           <button className="lb-kachel" onClick={() => onGoto?.("netzwerk")}>
             <b>{b.netz.length}</b>
-            <span>Vergaben mit mehreren Losen — hier lohnt ein Partner</span>
+            <span>{b.netzKaeufer.length
+              ? <>Mehrlos-Vergaben, u.a. bei <i>{b.netzKaeufer.join(" und ")}</i> — hier lohnt ein Partner</>
+              : "Vergaben mit mehreren Losen — hier lohnt ein Partner"}</span>
           </button>
           <button className="lb-kachel" onClick={() => onGoto?.("award")}>
             <b>{b.zuschlaege.length}</b>
-            <span>frische Zuschläge — wer gewonnen hat, kauft jetzt ein</span>
+            <span>{b.gewinner.length
+              ? <>frische Zuschläge, u.a. an <i>{b.gewinner.join(" und ")}</i> — wer gewonnen hat, kauft jetzt ein</>
+              : "frische Zuschläge — wer gewonnen hat, kauft jetzt ein"}</span>
           </button>
           <button className="lb-kachel" onClick={() => onGoto?.("strategie")}>
             <b>→</b>
