@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { COLS, cellHTML, chanceCap } from "@/lib/explorerCore";
 
 type Col = { key: string; label: string; on: boolean; th?: string; lock?: boolean };
@@ -24,6 +24,7 @@ export function LeadTable({
   rows,
   limit,
   fuss,
+  abschnitte,
   sortKey,
   sortDir,
   activeId,
@@ -43,6 +44,8 @@ export function LeadTable({
   limit: number;
   /** Abschluss-Zeile unter der letzten Ausschreibung (Vorauswahl aufheben). */
   fuss?: React.ReactNode;
+  /** Abschnitte statt einer flachen Liste — Zwischenzeile vor jeder Gruppe. */
+  abschnitte?: { key: string; titel: string; hinweis: string; rows: Lead[] }[];
   sortKey: string;
   sortDir: number;
   activeId: string | null;
@@ -199,7 +202,30 @@ export function LeadTable({
         </tr>
       </thead>
       <tbody onClick={handleRowClick}>
-        {rows.length ? (
+        {/* Abschnitte bilden den Trichter ab: worauf man sich JETZT bewerben kann, was
+            sich anbahnt, was strategisch dran ist. Vorher war das eine flache Liste plus
+            ein „Alle anzeigen"-Schalter — die Struktur sagt dasselbe, ohne Klick. */}
+        {abschnitte?.length ? abschnitte.map((a) => (
+          <React.Fragment key={a.key}>
+            <tr className="sekrow" data-sek={a.key}>
+              <td colSpan={colspan}>
+                <span className="sek-t">{a.titel}</span>
+                <span className="sek-n">{a.rows.length}</span>
+                <span className="sek-h">{a.hinweis}</span>
+              </td>
+            </tr>
+            {a.rows.length ? a.rows.slice(0, limit).map((l) => (
+              <tr key={l.id} data-id={l.id}
+                className={[l.status === "ungesichtet" ? "" : "gesichtet",
+                  l.userStatus === "verworfen" ? "wf-verworfen" : ""].filter(Boolean).join(" ")}
+                data-unread={l.status === "ungesichtet" ? "" : undefined}
+                aria-selected={l.id === activeId}
+                dangerouslySetInnerHTML={{ __html: cols.map((c) => cellHTML(l, c.key)).join("") }} />
+            )) : (
+              <tr className="sek-leer"><td colSpan={colspan}>Hier ist gerade nichts.</td></tr>
+            )}
+          </React.Fragment>
+        )) : rows.length ? (
           rows.slice(0, limit).map((l) => {
             const cls = [
               l.status === "ungesichtet" ? "" : "gesichtet",

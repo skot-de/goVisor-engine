@@ -375,10 +375,41 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     : filters.gemerkt ? "merkliste" : filters.netz ? "netzwerk" : "akquise";
 
   const istAkquise = view === "angriff" && !filters.gemerkt && !filters.netz;
-  // Die Vorauswahl sucht bewerbbare Ausschreibungen (src='f02'). Wer ausdrücklich die
-  // Zuschlags-Phase wählt, will genau das Gegenteil sehen — dann muss sie schweigen.
-  // Vorher filterte sie die Zuschläge restlos weg: „Zuschläge ansehen" landete auf 0 von 0.
+  // Die Vorauswahl sucht bewerbbare Ausschreibungen (src='f02'). Wer ausdrücklich EINE
+  // Phase wählt, will etwas anderes sehen — dann muss sie schweigen, sonst filtert sie
+  // die angeforderte Menge restlos weg. Das ist zweimal passiert: „Zuschläge ansehen"
+  // und „Alle Ankündigungen ansehen" landeten beide auf einer leeren Tabelle.
+  const eigenePhasenwahl = adv.phases.length > 0;
   const zuschlagsSicht = adv.phases.includes("award");
+
+  /* Der Trichter als Struktur statt als Schalter:
+   *   1 Jetzt bewerben — offene Ausschreibung, Frist läuft, passt, machbar
+   *   2 Bahnt sich an  — Ankündigungen: dieselbe Prüfung, nur noch ohne Frist
+   *   3 Strategisch    — laufende Verträge, die auslaufen: Monate bis Jahre Vorlauf
+   * Was gar nicht zum Gewerk passt, bleibt draußen — dafür ist der Schalter unter der
+   * Liste da. Vorher steckte alles in einer flachen Liste mit „Alle anzeigen". */
+  const abschnitte = useMemo(() => {
+    if (!realProfile || !istAkquise || eigenePhasenwahl || !vorauswahl) return undefined;
+    const passt = (l: Lead) => l.relevanz === "hoch" || l.relevanz === "mittel";
+    const keinBlocker = (l: Lead) => {
+      const m = l.match as { blocker?: { art: string }[] } | undefined;
+      return !m?.blocker?.some((b) => b.art === "buergschaft" || b.art === "ausschluss");
+    };
+    const frist = (l: Lead) => (l.frist as { tage?: number } | undefined)?.tage ?? (l.tage as number | null);
+    const basis = alleRows.filter((l) => l.src !== "award" && keinBlocker(l));
+    return [
+      { key: "jetzt", titel: "Jetzt bewerben", hinweis: "Frist läuft, passt zu euch, Aufwand vertretbar",
+        rows: basis.filter((l) => l.src === "f02" && l.relevanz === "hoch"
+          && typeof frist(l) === "number" && (frist(l) as number) >= 3
+          && aufwandStufe(l).stufe !== "hoch") },
+      { key: "bald", titel: "Bahnt sich an", hinweis: "angekündigt — Frist kommt noch",
+        rows: basis.filter((l) => l.src === "f01" && passt(l)) },
+      { key: "strat", titel: "Strategisch", hinweis: "laufende Verträge mit Auslaufdatum",
+        rows: basis.filter((l) => l.src === "auslauf" && passt(l)
+          && ((l.endTage as number | null) ?? 0) >= 0)
+          .sort((a, z) => ((a.endTage as number | null) ?? 9e9) - ((z.endTage as number | null) ?? 9e9)) },
+    ];
+  }, [alleRows, realProfile, istAkquise, eigenePhasenwahl, vorauswahl]);
 
   const rows: Lead[] = useMemo(() => {
     const ohneAwards = adv.phases.includes("award") ? alleRows : alleRows.filter((l) => l.src !== "award");
@@ -390,7 +421,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     //   · kein harter Blocker (Bürgschaft übersteigt Rahmen / bewusst ausgeschlossen)
     //   · Aufwand nicht „hoch" — unbekannter Aufwand fliegt NICHT raus (Unbekanntes schließt nie aus)
     // Ohne Profil ist die Relevanz für alles „na" → wir sortieren nicht vor, statt alles zu leeren.
-    if (!vorauswahl || !realProfile || !istAkquise || zuschlagsSicht) return ohneAwards;
+    if (!vorauswahl || !realProfile || !istAkquise || eigenePhasenwahl) return ohneAwards;
     return ohneAwards.filter((l) => {
       if (l.src !== "f02") return false;
       const t = (l.frist as { tage?: number } | undefined)?.tage ?? (l.tage as number | null);
@@ -400,7 +431,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
       if (m?.blocker?.some((b) => b.art === "buergschaft" || b.art === "ausschluss")) return false;
       return aufwandStufe(l).stufe !== "hoch";
     });
-  }, [alleRows, adv.phases, vorauswahl, realProfile, istAkquise, zuschlagsSicht]);
+  }, [alleRows, adv.phases, vorauswahl, realProfile, istAkquise, eigenePhasenwahl]);
 
   const suggestions = useMemo(() => (query.trim() ? suggestList(query) : []), [query]);
 
@@ -1026,6 +1057,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
               })()}
               <LeadTable
                 rows={rows}
+                abschnitte={abschnitte}
                 limit={renderCount}
                 // Die Vorauswahl steht am ENDE der Liste: dort kommt man beim Lesen an, und
                 // dort ist die Frage „ist das alles?" tatsächlich aktuell. Als Banner darüber
@@ -1036,26 +1068,18 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                   <div className={`vor-band ${vorauswahl ? "" : "off"}`}>
                     {vorauswahl ? (
                       <>
-                        <b>{rows.length}</b> von {alleRows.filter((l) => l.src !== "award").length.toLocaleString("de-DE")} Ausschreibungen für euch vorsortiert <span className="vor-gr">({(BRANCHEN as Record<string, string>)[aktiveBranche]})</span>
+                        Das ist alles, was zu euch passt. <span className="vor-gr">{alleRows.filter((l) => l.src !== "award").length.toLocaleString("de-DE")} Ausschreibungen im Grundraum {(BRANCHEN as Record<string, string>)[aktiveBranche]}</span>
+                        {/* Die Auswahl-Kriterien stehen jetzt in den Abschnitts-Zeilen der Liste,
+                            wo sie gelten. Hier bleibt nur die Region — die sieht man sonst nirgends. */}
                         <span className="vor-x">
-                          offene Ausschreibung · noch ≥ 3 Tage · hohe Passung · Aufwand vertretbar
-                          {/* Der Regionsteil ist aus der eigenen Zuschlagshistorie abgeleitet — sagen,
-                                woher er kommt, sonst wirkt die Einschränkung willkürlich. */}
                           {(() => {
-                            const p = realProfile as unknown as { regionTyp?: string | null; regionLabels?: string[]; regions?: string[] } | null;
+                            const p = realProfile as unknown as { regionLabels?: string[]; regions?: string[] } | null;
                             if (!p?.regions?.length) return null;
                             const wo = (p.regionLabels?.length ? p.regionLabels : p.regions).slice(0, 3).join(", ");
-                            return ` · ${p.regionTyp === "regional" ? "eure Region" : "eure Regionen"} ${wo} (aus euren Zuschlägen abgeleitet)`;
+                            return `gefiltert auf ${wo} — aus euren Zuschlägen abgeleitet`;
                           })()}
                         </span>
                         <button className="vor-btn" onClick={() => setVorauswahl(false)}>Alle {alleRows.filter((l) => l.src !== "award").length.toLocaleString("de-DE")} anzeigen</button>
-                        {/* Sehr scharfe Profile (enges Gewerk × eine Region) landen zweistellig darunter.
-                            Das ist die ehrliche Zahl — aber unkommentiert sieht sie nach einem Defekt aus. */}
-                        {rows.length < 10 ? (
-                          <span className="vor-eng">
-                            Wenige Treffer — so eng ist der Markt für euer Gewerk in eurer Region gerade.
-                          </span>
-                        ) : null}
                       </>
                     ) : (
                       <>

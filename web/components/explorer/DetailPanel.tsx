@@ -274,7 +274,37 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
     const gewinner = [...new Set(zuschlaege
       .map((l) => (l.award as { winner?: string } | undefined)?.winner)
       .filter(Boolean) as string[])].slice(0, 2);
-    return { offen, heiss, kuenftig, netz, zuschlaege, netzKaeufer, gewinner, tageOf };
+    /* Vierte Spalte: was Ausschreibungen aus eurem Gewerk gerade AUFHÄLT.
+     * Bewusst NICHT aus gap_effects (das braucht eine Sitzung mit erfassten Nachweisen und
+     * wäre für die meisten leer), sondern aus den Blockern, die matchLead ohnehin je Lead
+     * rechnet — verfügbar, sobald ein Profil da ist. Gezählt wird nur, was im richtigen
+     * Gewerk liegt: eine Region-Lücke bei einem fremden Fachgebiet ist keine Lücke. */
+    const imFeld = basis.filter((l) => {
+      const t = (l.match as { teile?: { dim: string; status: string }[] } | undefined)?.teile;
+      return t?.some((x) => x.dim === "feld" && x.status !== "no");
+    });
+    const blockerArt = (l: BriefLead, art: string) =>
+      ((l.match as { blocker?: { art: string }[] } | undefined)?.blocker ?? []).some((x) => x.art === art);
+    const teilStatus = (l: BriefLead, dim: string) =>
+      ((l.match as { teile?: { dim: string; status: string }[] } | undefined)?.teile ?? [])
+        .find((x) => x.dim === dim)?.status;
+
+    const luecken = [
+      { key: "buerg", n: imFeld.filter((l) => blockerArt(l, "buergschaft_offen")).length,
+        titel: "Bürgschaftsrahmen fehlt",
+        text: "fordern eine Bürgschaft. Ohne euren Rahmen können wir nicht sagen, ob ihr sie stemmt." },
+      { key: "allein", n: imFeld.filter((l) => blockerArt(l, "partner")).length,
+        titel: "Über eurer Alleingrenze",
+        text: "sind größer, als ihr allein stemmt — mit Partner wären sie erreichbar." },
+      { key: "region", n: imFeld.filter((l) => teilStatus(l, "region") === "no").length,
+        titel: "Außerhalb eurer Regionen",
+        text: "passen fachlich, liegen aber außerhalb. Arbeitet ihr dort doch?" },
+      { key: "vol", n: imFeld.filter((l) => teilStatus(l, "vol") === "no").length,
+        titel: "Außerhalb eurer Wertspanne",
+        text: "liegen über oder unter der Spanne, die ihr angegeben habt." },
+    ].filter((x) => x.n > 0).sort((a, z) => z.n - a.n);
+
+    return { offen, heiss, kuenftig, netz, zuschlaege, netzKaeufer, gewinner, luecken, imFeld, tageOf };
   }, [rows, alle]);
 
   const Zeile = ({ l, sub }: { l: BriefLead; sub: string }) => (
@@ -321,6 +351,24 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
           {b.kuenftig.length > 5 ? (
             <button className="lb-mehr" onClick={() => onGoto?.("vorschau")}>Alle {b.kuenftig.length} ansehen</button>
           ) : null}
+        </section>
+
+        {/* ── was im Weg steht ──────────────────────────────────── */}
+        <section className="lb-sp">
+          <h4><span className="lb-dot luecke" />Was euch bremst</h4>
+          {b.luecken.length ? (<>
+            <p className="lb-n2">{b.luecken[0].n}<em>{b.luecken[0].titel.toLowerCase()}</em></p>
+            {b.luecken.slice(0, 3).map((g) => (
+              <a key={g.key} className="lb-kachel" href="/unternehmen">
+                <b>{g.n}</b>
+                <span><i>{g.titel}</i> — {g.text}</span>
+              </a>
+            ))}
+          </>) : (
+            <p className="lb-nix">{b.imFeld.length
+              ? "Nichts blockiert euch gerade — euer Profil ist vollständig genug."
+              : "Legt unter „Unternehmen“ euer Profil an, dann zeigen wir hier, was euch Aufträge kostet."}</p>
+          )}
         </section>
 
         {/* ── drumrum ───────────────────────────────────────────── */}
