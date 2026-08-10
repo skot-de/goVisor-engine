@@ -205,7 +205,66 @@ FR = Locale(
 )
 
 
-LOCALES = {loc.code: loc for loc in (DE, FR)}
+# ---------------------------------------------------------------------------
+CH = Locale(
+    "CH", name="Schweiz (erste Fassung — an TED-CHE-Daten geprüft, nicht abschließend)",
+    # Dreisprachig: eine Locale muss DE, FR und IT zugleich treffen. Deshalb sind alle
+    # Muster die Vereinigung der drei Sprachen, nicht eine Auswahl.
+    legal_forms=(r"\bag\b", r"\bgmbh\b", r"\bsa\b", r"\bsarl\b", r"\bsagl\b",
+                 r"\bspa\b", r"\bsnc\b", r"\bkg\b", r"\bgenossenschaft\b",
+                 r"\bcooperative\b", r"\bcooperativa\b", r"\bverein\b",
+                 r"\bassociation\b", r"\bassociazione\b", r"\bstiftung\b",
+                 r"\bfondation\b", r"\bfondazione\b"),
+    representation=r"\s*[,/;–-]?\s*(vertreten durch|represente(e)? par|rappresentat[oa] da)\b.*$",
+    subdivision=(r"\s*[,/|;–-]\s*(abteilung|amt für|direktion|dienststelle|fachstelle|"
+                 r"direction|service|office|ufficio|servizio|divisione)\b.*$"),
+    unit_numbers=_NEVER,
+    lead_articles=r"^(der|die|das|le|la|les|l|il|lo|gli)\s+",
+    consortium=r"\b(arbeitsgemeinschaft|arge|bietergemeinschaft|groupement|consorzio|consortium)",
+    association=r"\b(verein|association|associazione|stiftung|fondation|fondazione|verband)",
+    # Öffentliche Hand: Bund/Kanton/Gemeinde in allen drei Sprachen. „Kanton" und
+    # „commune/comune" tragen die Hauptlast — die Schweiz vergibt stark föderal.
+    public=(r"(kanton|gemeinde|stadt\b|bundesamt|eidgenoss|schweizerische eidgenossenschaft|"
+            r"canton|commune|ville de|confederation|comune|citta|cantone|"
+            r"armasuisse|sbb|cff|ffs|swisscom|die post|la poste|la posta)"),
+    trade_word=(r"(elektro|informatik|bau\b|tiefbau|hochbau|reinigung|transport|unterhalt|"
+                r"planung|ingenieur|architekt|software|sicherheit|"
+                r"electric|informatique|batiment|travaux|nettoyage|entretien|ingenierie|"
+                r"elettric|informatica|edilizia|pulizia|manutenzione)"),
+    person=rf"^(?:dr\.|prof\.|herr|frau|m\.|mme\.?)?\s*{_NAME_PART}(?:\s+{_NAME_PART}){{1,2}}$",
+    text_winner_marker=r"zuschlagsempfanger|adjudicataire|aggiudicatario|anbieter",
+    text_skip=r"^(wurde|zuschlag|los|bezeichnung|abschnitt|name und|v\.|—|-|siehe|nummer)",
+    text_not_awarded="kein zuschlag|non adjuge|non aggiudicato",
+    # Schweizer Provider zusätzlich zu den internationalen — bluewin/hispeed/sunrise sind
+    # hier verbreitet, wo in DE t-online steht.
+    freemail={"gmail", "googlemail", "bluewin", "hispeed", "sunrise", "swissonline",
+              "gmx", "hotmail", "outlook", "yahoo", "live", "icloud", "protonmail", "proton"},
+    # admin.ch ist DIE Bundesdomain; Kantone nutzen zweistellige Kürzel (zh.ch, be.ch …),
+    # die über public_name greifen, nicht über die SLD.
+    public_domain_slds={"admin", "sbb", "post", "swisstopo", "bfs", "seco", "vbs", "eda"},
+    public_name=(r"kanton|kantonale|gemeinde|\bstadt\b|bundesamt|eidgenoss|"
+                 r"canton|commune|\bville\b|confederation|comune|\bcitta\b|"
+                 r"spital|hopital|ospedale|universitat|universite|universita|"
+                 r"schule|ecole|scuola|polizei|police|polizia|armasuisse|\bsbb\b"),
+    kind_framework_kw="rahmenvertrag|rahmenvereinbarung|accord.?cadre|contratto quadro",
+    kind_recurring_kw=("unterhalt|wartung|reinigung|betrieb|lizenz|support|miete|abonnement|"
+                       "bewirtschaftung|entretien|maintenance|nettoyage|exploitation|"
+                       "manutenzione|pulizia|gestione"),
+    kind_oneoff_kw=("neubau|umbau|sanierung|ruckbau|erweiterung|instandsetzung|"
+                    "construction|renovation|demolition|amenagement|"
+                    "costruzione|ristrutturazione|demolizione"),
+    register_path=None,   # TODO: Zefix (Handelsregister CH) — Gegenstück zum deutschen HR
+    cpi={},               # TODO: LIK des BFS; ohne ihn bleibt value_real_2020 für CH nominal
+    # NUTS-ähnliche Gliederung: die Schweiz nutzt CH0x-Großregionen.
+    nuts_region={"CH01": "Genferseeregion", "CH02": "Espace Mittelland",
+                 "CH03": "Nordwestschweiz", "CH04": "Zürich",
+                 "CH05": "Ostschweiz", "CH06": "Zentralschweiz", "CH07": "Tessin"},
+    succ_stopwords=("los", "lot", "lotto", "teil", "partie", "parte", "phase", "etappe",
+                    "bkp", "ccc", "objekt", "objet", "oggetto"),
+)
+
+
+LOCALES = {loc.code: loc for loc in (DE, FR, CH)}
 _active = DE
 
 

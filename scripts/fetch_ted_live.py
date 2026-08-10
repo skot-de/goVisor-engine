@@ -67,8 +67,10 @@ def _curl_json(url, data, tries=5):
 BRONZE = Path("data/raw_live")   # Roh-XML je Notice — Verlustfreiheit + inkrementeller Cache
 
 
-def _bronze_path(pub: str, ym: str) -> Path:
-    return BRONZE / "DE" / ym / f"{pub}.xml"
+def _bronze_path(pub: str, ym: str, country: str = "DE") -> Path:
+    # Land MUSS in den Pfad: sonst landen CH-/AT-Notices im deutschen Cache und der
+    # „schon geholt"-Test würde sie fälschlich als vorhanden melden.
+    return BRONZE / country / ym / f"{pub}.xml"
 
 
 LAND3 = {"DE": "DEU", "AT": "AUT", "CH": "CHE"}   # TED nutzt ISO-alpha-3
@@ -100,8 +102,8 @@ def main(since: str, until: str, limit: int | None, workers: int, country: str =
     # kommen bis dahin über ihre eigenen Connectoren (ingest-atverg / ingest-simap),
     # die den unterschwelligen Markt ohnehin besser abdecken als TED.
     if country not in locales.LOCALES:
-        log(f"FEHLER: keine Locale für {country} — TED-Live ist bislang DE-only. "
-            f"Für {country} den eigenen Connector nutzen.")
+        log(f"FEHLER: keine Locale für {country}. Ohne sie würden fremdsprachige Namen "
+            f"nach deutschen Regeln normalisiert — lieber abbrechen als still danebenliegen.")
         return 0
     locales.use(country)
     log(f"TED-Live: suche {country}-Notices ab {since}")
@@ -122,7 +124,7 @@ def main(since: str, until: str, limit: int | None, workers: int, country: str =
         werden übersprungen.
         """
         ym_guess = since[:7]
-        cached = _bronze_path(pub, ym_guess)
+        cached = _bronze_path(pub, ym_guess, country)
         if cached.exists() and cached.stat().st_size > 500:
             return cached.read_bytes()
         for attempt in range(tries):
@@ -159,7 +161,7 @@ def main(since: str, until: str, limit: int | None, workers: int, country: str =
                 continue
             pd = notice.publication_date or since
             year, month = int(pd[:4]), int(pd[5:7])
-            rows = normalize.rows(notice, raw, "DE", year, month)
+            rows = normalize.rows(notice, raw, country, year, month)
             for table, table_rows in rows.items():
                 by_month[(year, month)][table].extend(table_rows)
             if done % 500 == 0:
@@ -169,7 +171,7 @@ def main(since: str, until: str, limit: int | None, workers: int, country: str =
     for (year, month), buckets in sorted(by_month.items()):
         key = f"{year:04d}-{month:02d}"
         for table, table_schema in model.TABLES.items():
-            base = cfg.silver_table_path(table, "DE", key)
+            base = cfg.silver_table_path(table, country, key)
             out = base.with_name(f"{key}-live.parquet")
             out.parent.mkdir(parents=True, exist_ok=True)
             arrow = pa.Table.from_pylist(buckets[table], schema=table_schema)

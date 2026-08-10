@@ -73,8 +73,15 @@ else
   echo "  ⚠ DÖE-Ingest fehlgeschlagen (API?) — fahre mit Gold/Export fort (as-of-Refresh bleibt wertvoll)."
 fi
 
-# CH und AT haben eigene Connectoren; TED-Live kann sie noch nicht (keine Locale, s.
-# fetch_ted_live.py). Beide sind nicht fatal — ein Ausfall darf den DE-Lauf nicht kippen.
+# CH bekommt BEIDE Quellen: simap (nationale Plattform, breiter) und TED-CHE (WTO-GPA-
+# Kanal). Gemessen überschneiden sie sich zu 93,5 % — der Abgleich unten trennt den echten
+# Zugewinn von der Dublette, sonst verdoppelte sich die Schweizer Liste ohne mehr Markt.
+# AT läuft weiter nur über den eigenen Connector; dort liegt die TED-Historie ohnehin
+# vollständig vor, es fehlt nur die Locale für den Live-Abruf.
+step "TED-Live CH"
+$PY scripts/fetch_ted_live.py --country CH --workers 3 \
+  && echo "  TED-CHE ok." || echo "  ⚠ TED-CHE fehlgeschlagen — CH bleibt auf simap allein."
+
 step "simap.ch (CH)"
 $PY -m govisor.cli ingest-simap --country CH --max-pages 30 --silver \
   && echo "  simap ok." || echo "  ⚠ simap.ch fehlgeschlagen — CH bleibt auf altem Stand."
@@ -82,6 +89,12 @@ $PY -m govisor.cli ingest-simap --country CH --max-pages 30 --silver \
 step "OffeneVergaben.at (AT)"
 $PY -m govisor.cli ingest-atverg --country AT --silver \
   && echo "  atverg ok." || echo "  ⚠ OffeneVergaben.at fehlgeschlagen — AT bleibt auf altem Stand."
+
+# Nach BEIDEN CH-Quellen: welche TED-Notice ist eine simap-Dublette? Muss hier laufen,
+# nicht früher — der Abgleich braucht den frischen Stand beider Seiten.
+step "CH-Quellenabgleich (TED gegen simap)"
+$PY scripts/dedupe_ch_sources.py \
+  && echo "  Abgleich ok." || echo "  ⚠ CH-Abgleich fehlgeschlagen — Dubletten möglich."
 
 # 2) Gold neu mit heutigem Stichtag — refresht Leads, Fristen, months_to_expiry. FATAL bei Fehler.
 step "Gold-Rebuild (Leads mit Stichtag $TODAY)"
