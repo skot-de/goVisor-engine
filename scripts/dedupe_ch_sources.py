@@ -33,14 +33,24 @@ from __future__ import annotations
 
 import argparse
 import re
+import subprocess
 import sys
+import time
 import unicodedata
+from datetime import date
 from pathlib import Path
 
 import duckdb
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+
+from govisor import verify  # noqa: E402  (Pfad muss zuerst stehen)
+
+# Exit-Codes, damit der Tageslauf „übersprungen" von „kaputt" unterscheiden kann.
+EXIT_OK, EXIT_FEHLER, EXIT_UEBERSPRUNGEN = 0, 1, 2
+
+MIN_VOLLSTAENDIG = 0.90   # Anteil der laut TED-API erwarteten Notices je Monat
 
 SILVER_CH = "data/silver/CH/notices/*/*.parquet"
 OUT = ROOT / "data" / "gold" / "CH" / "ted_dedup.parquet"
@@ -77,7 +87,71 @@ def ted_titel(roh: str | None) -> str:
     return roh.split("–")[-1].strip()
 
 
-def main(von: str, bis: str) -> int:
+def backfill_laeuft() -> bool:
+    """Läuft gerade ein Historien-Nachlauf? Dann ist jeder Abgleich eine Momentaufnahme."""
+    try:
+        r = subprocess.run(["pgrep", "-f", "backfill_ted_ch"], capture_output=True, text=True)
+        return r.returncode == 0 and bool(r.stdout.strip())
+    except OSError:
+        return False
+
+
+def monate(von: str, bis: str) -> list[tuple[int, int]]:
+    (vj, vm), (bj, bm) = (int(von[:4]), int(von[5:7])), (int(bis[:4]), int(bis[5:7]))
+    heute = date.today()
+    aus = []
+    j, m = vj, vm
+    while (j, m) < (bj, bm):
+        # Der laufende Monat ist naturgemäß unvollständig — er darf den Test nicht sperren.
+        if (j, m) < (heute.year, heute.month):
+            aus.append((j, m))
+        j, m = (j + 1, 1) if m == 12 else (j, m + 1)
+    return aus
+
+
+def vollstaendig(von: str, bis: str) -> tuple[bool, str]:
+    """Ist die TED-CHE-Seite im Zeitraum vollständig genug für einen Abgleich?
+
+    Ein Abgleich auf halbem Bestand ist schlimmer als keiner: er stuft Notices als „neu"
+    ein, die schlicht noch nicht geholt wurden — und wer das Ergebnis benutzt, nimmt
+    Dubletten auf. Gemessen wird gegen die TED-API, denselben Maßstab, den auch der
+    Backfill und `verify` verwenden.
+    """
+    con = duckdb.connect()
+    luecken = []
+    for j, m in monate(von, bis):
+        soll = verify.api_count(j, m, country="CHE")
+        if soll is None or soll == 0:
+            continue                      # API nicht erreichbar → kein Urteil, kein Blocker
+        try:
+            ist = con.execute(f"""
+                SELECT count(*) FROM read_parquet('{SILVER_CH}', hive_partitioning=1)
+                WHERE schema_gen <> 'simap'
+                  AND publication_date >= DATE '{j:04d}-{m:02d}-01'
+                  AND publication_date <  DATE '{j:04d}-{m:02d}-01' + INTERVAL 1 MONTH
+            """).fetchone()[0]
+        except duckdb.IOException:
+            ist = 0
+        if ist < soll * MIN_VOLLSTAENDIG:
+            luecken.append(f"{j}-{m:02d} ({ist}/{soll})")
+        time.sleep(0.2)                   # höflich zur API
+    con.close()
+    if luecken:
+        return False, f"{len(luecken)} unvollständige Monate: " + ", ".join(luecken[:6])
+    return True, "vollständig"
+
+
+def main(von: str, bis: str, ohne_pruefung: bool = False) -> int:
+    if not ohne_pruefung:
+        if backfill_laeuft():
+            print("Backfill läuft gerade — Abgleich übersprungen (wäre eine Momentaufnahme).")
+            return EXIT_UEBERSPRUNGEN
+        ok, grund = vollstaendig(von, bis)
+        if not ok:
+            print(f"TED-CHE noch unvollständig — Abgleich übersprungen.\n  {grund}")
+            print("  Ein Abgleich auf halbem Bestand meldet Dubletten als 'neu'.")
+            return EXIT_UEBERSPRUNGEN
+
     con = duckdb.connect()
     ted_glob = "data/silver/CH/notices/*/*.parquet"   # TED-CHE landet im selben Silber
     try:
@@ -89,10 +163,10 @@ def main(von: str, bis: str) -> int:
         """).fetchall()
     except duckdb.IOException:
         print("Kein CH-Silber vorhanden — erst TED-CHE ingesten.")
-        return 0
+        return EXIT_UEBERSPRUNGEN
     if not ted:
         print("Keine TED-CHE-Notices im Zeitraum — nichts abzugleichen.")
-        return 0
+        return EXIT_UEBERSPRUNGEN
 
     simap = con.execute(f"""
         SELECT notice_id, title, publication_date
@@ -146,12 +220,14 @@ def main(von: str, bis: str) -> int:
     print(f"  als Dublette erkannt: {treffer:,} ({quote:.1f} %)")
     print(f"  neu (nur bei TED):    {len(ted)-treffer:,} ({100-quote:.1f} %)")
     print(f"→ {OUT}")
-    return len(ted)
+    return EXIT_OK
 
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--von", default="2024-07", help="ab YYYY-MM (Default: simap-Beginn)")
     ap.add_argument("--bis", default="2026-09", help="bis YYYY-MM (exklusiv)")
+    ap.add_argument("--ohne-pruefung", dest="ohne_pruefung", action="store_true",
+                    help="Vollständigkeitsprüfung überspringen (nur für Tests)")
     a = ap.parse_args()
-    main(a.von, a.bis)
+    sys.exit(main(a.von, a.bis, a.ohne_pruefung))

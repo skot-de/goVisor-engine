@@ -92,9 +92,18 @@ $PY -m govisor.cli ingest-atverg --country AT --silver \
 
 # Nach BEIDEN CH-Quellen: welche TED-Notice ist eine simap-Dublette? Muss hier laufen,
 # nicht früher — der Abgleich braucht den frischen Stand beider Seiten.
+#
+# Er prüft selbst, ob die TED-Seite vollständig genug ist (≥90 % der laut TED-API
+# erwarteten Notices je Monat) und überspringt sich sonst mit Exit 2. Ein Abgleich auf
+# halbem Bestand wäre schlimmer als keiner: er stuft ungeholte Notices als „neu" ein, und
+# wer das benutzt, nimmt Dubletten auf. Deshalb drei Ausgänge statt zwei.
 step "CH-Quellenabgleich (TED gegen simap)"
-$PY scripts/dedupe_ch_sources.py \
-  && echo "  Abgleich ok." || echo "  ⚠ CH-Abgleich fehlgeschlagen — Dubletten möglich."
+$PY scripts/dedupe_ch_sources.py
+case $? in
+  0) echo "  Abgleich ok." ;;
+  2) echo "  ⏭ Abgleich übersprungen (Bestand noch unvollständig) — voriges Ergebnis bleibt gültig." ;;
+  *) echo "  ✖ CH-Abgleich fehlgeschlagen — Dubletten möglich." ;;
+esac
 
 # 2) Gold neu mit heutigem Stichtag — refresht Leads, Fristen, months_to_expiry. FATAL bei Fehler.
 step "Gold-Rebuild (Leads mit Stichtag $TODAY)"
