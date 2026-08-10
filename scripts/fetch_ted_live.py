@@ -71,9 +71,12 @@ def _bronze_path(pub: str, ym: str) -> Path:
     return BRONZE / "DE" / ym / f"{pub}.xml"
 
 
-def list_notices(since: str, until: str, limit: int | None) -> list[str]:
-    """Publikationsnummern aller DE-Notices im Zeitraum (Search API, paginiert)."""
-    q = (f"buyer-country=DEU AND publication-date>={since.replace('-', '')} "
+LAND3 = {"DE": "DEU", "AT": "AUT", "CH": "CHE"}   # TED nutzt ISO-alpha-3
+
+
+def list_notices(since: str, until: str, limit: int | None, country: str = "DE") -> list[str]:
+    """Publikationsnummern aller Notices des Landes im Zeitraum (Search API, paginiert)."""
+    q = (f"buyer-country={LAND3.get(country.upper(), 'DEU')} AND publication-date>={since.replace('-', '')} "
          f"AND publication-date<={until.replace('-', '')}")
     pubs, page = [], 1
     while True:
@@ -90,11 +93,19 @@ def list_notices(since: str, until: str, limit: int | None) -> list[str]:
     return pubs[:limit] if limit else pubs
 
 
-def main(since: str, until: str, limit: int | None, workers: int) -> int:
-    cfg = Config(countries=("DE",), data_dir="data")
-    locales.use("DE")
-    log(f"TED-Live: suche DE-Notices ab {since}")
-    pubs = list_notices(since, until, limit)
+def main(since: str, until: str, limit: int | None, workers: int, country: str = "DE") -> int:
+    cfg = Config(countries=(country,), data_dir="data")
+    # Ohne Locale würden deutsche Heuristiken (Freemail-Domains, Bundes-Käufer,
+    # Rechtsformen) auf fremde Daten angewandt — lieber ehrlich abbrechen. AT und CH
+    # kommen bis dahin über ihre eigenen Connectoren (ingest-atverg / ingest-simap),
+    # die den unterschwelligen Markt ohnehin besser abdecken als TED.
+    if country not in locales.LOCALES:
+        log(f"FEHLER: keine Locale für {country} — TED-Live ist bislang DE-only. "
+            f"Für {country} den eigenen Connector nutzen.")
+        return 0
+    locales.use(country)
+    log(f"TED-Live: suche {country}-Notices ab {since}")
+    pubs = list_notices(since, until, limit, country)
     log(f"  {len(pubs):,} Notices zu holen")
     if not pubs:
         return 0
@@ -131,7 +142,11 @@ def main(since: str, until: str, limit: int | None, workers: int) -> int:
             raw = _fetch_xml(pub)
             if raw is None:
                 return pub, None, None
-            return pub, schema.parse(raw, pub), raw
+            # KANONISCHE ID — sonst schreibt der Live-Pfad `540447-2026`, während das
+            # Monatsarchiv `540447_2026` schreibt. Genau dieser Drift ist 2026-07-29
+            # schon einmal repariert worden (s. CLAUDE.md); er entsteht hier neu, weil
+            # dieses Script Silber direkt schreibt und `silver.py` gar nicht durchläuft.
+            return pub, schema.parse(raw, schema.normalize_notice_id(pub)), raw
         except Exception:
             return pub, None, None
 
@@ -175,6 +190,8 @@ if __name__ == "__main__":
     ap.add_argument("--limit", type=int, help="nur N Notices (zum Testen)")
     ap.add_argument("--workers", type=int, default=3,
                     help="TED rate-limitet — mehr als 3 provoziert HTTP 429")
+    ap.add_argument("--country", default="DE", choices=("DE", "AT", "CH"),
+                    help="Käuferland; TED liefert AT/CH über dieselbe API")
     a = ap.parse_args()
     today = time.strftime("%Y-%m-%d")
-    main(a.since or today[:8] + "01", a.until or today, a.limit, a.workers)
+    main(a.since or today[:8] + "01", a.until or today, a.limit, a.workers, a.country)

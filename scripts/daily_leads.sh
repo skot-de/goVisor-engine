@@ -53,14 +53,35 @@ if [ -f "$ROOT/.secrets/supabase.txt" ]; then
   export SUPABASE_SERVICE_KEY="$(sed -n '2p' "$ROOT/.secrets/supabase.txt" | tr -d '[:space:]')"
 fi
 
-# 1) DÖE-Live (unterschwellig DE): laufenden + Vormonat FRISCH LADEN (--fetch), dann parsen.
-#    Der laufende Monat wächst täglich → so kommen neue Ausschreibungen tages-frisch rein (kein 30-Tage-Lag).
+# 1) ALLE Quellen tagesfrisch. Vorher lief hier NUR DÖE — und weil DÖE fast
+#    ausschließlich kommunalen Bau/Wartung abdeckt, sah nur der Bau-Grundraum gesund aus.
+#    Gemessen am 2026-08-10: DÖE bis 2026-08-07, TED nur bis 2026-07-22 (19 Tage alt),
+#    CH und AT bei 2026-07-28. Der „Vorrat" an offenen Ausschreibungen (offen ÷ Veröffent-
+#    lichungen pro Monat, sollte ~1 sein) lag entsprechend: Bau 1,53 · IT 0,42 · Ingenieur
+#    0,26. Kein Anzeigefehler — die Leads kamen schlicht zu spät herein.
+step "TED-Live DE (Search API, schließt die Monatspaket-Lücke)"
+if $PY scripts/fetch_ted_live.py --workers 3; then
+  echo "  TED-Live ok."
+else
+  echo "  ⚠ TED-Live fehlgeschlagen — Bestand bleibt auf dem Stand des Monatspakets."
+fi
+
 step "DÖE-Ingest (unterschwellig DE, --fetch laufend+Vormonat)"
 if $PY -m govisor.cli ingest-doe --country DE --fetch --fetch-back 1 --force; then
   echo "  DÖE ok."
 else
   echo "  ⚠ DÖE-Ingest fehlgeschlagen (API?) — fahre mit Gold/Export fort (as-of-Refresh bleibt wertvoll)."
 fi
+
+# CH und AT haben eigene Connectoren; TED-Live kann sie noch nicht (keine Locale, s.
+# fetch_ted_live.py). Beide sind nicht fatal — ein Ausfall darf den DE-Lauf nicht kippen.
+step "simap.ch (CH)"
+$PY -m govisor.cli ingest-simap --country CH --max-pages 30 --silver \
+  && echo "  simap ok." || echo "  ⚠ simap.ch fehlgeschlagen — CH bleibt auf altem Stand."
+
+step "OffeneVergaben.at (AT)"
+$PY -m govisor.cli ingest-atverg --country AT --silver \
+  && echo "  atverg ok." || echo "  ⚠ OffeneVergaben.at fehlgeschlagen — AT bleibt auf altem Stand."
 
 # 2) Gold neu mit heutigem Stichtag — refresht Leads, Fristen, months_to_expiry. FATAL bei Fehler.
 step "Gold-Rebuild (Leads mit Stichtag $TODAY)"
