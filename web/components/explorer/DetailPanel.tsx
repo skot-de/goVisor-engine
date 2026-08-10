@@ -314,12 +314,16 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
     </button>
   );
 
+  // „in 0 Monaten" ist keine Zeitangabe. Nahes rundet sich weg — also benennen statt rechnen.
   const monate = (l: BriefLead) => {
     const d = l.endTage as number | null;
     if (d == null) return "Zeitpunkt offen";
     if (d < 0) return "bereits ausgelaufen";
-    if (d < 31) return "im nächsten Monat";
-    return `in ~${Math.round(d / 30)} Monaten`;
+    if (d <= 14) return "läuft jetzt aus";
+    if (d <= 60) return "läuft bald aus";
+    if (d < 365) return `in ~${Math.round(d / 30)} Monaten`;
+    const j = d / 365;
+    return j < 1.5 ? "in gut einem Jahr" : `in ~${Math.round(j)} Jahren`;
   };
 
   return (

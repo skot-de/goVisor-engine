@@ -255,7 +255,8 @@ export function LeadTable({
             </td>
           </tr>
         )}
-        {rows.length && fuss ? (
+        {/* Auch bei leerer Phase anzeigen — sonst ist sie eine Sackgasse ohne Rückweg. */}
+        {fuss ? (
           <tr className="fussrow"><td colSpan={colspan}>{fuss}</td></tr>
         ) : null}
       </tbody>

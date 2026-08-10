@@ -166,6 +166,8 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // Vorauswahl = das Produktversprechen („wir sortieren vor, ihr arbeitet nur das Sinnvolle ab").
   // Standard AN; ohne Profil wirkungslos, weil dann keine Relevanz berechnet werden kann.
   const [vorauswahl, setVorauswahl] = useState(true);
+  // Immer nur EINE Phase in der Liste; die nächste wird als letzte Zeile angekündigt.
+  const [phaseIdx, setPhaseIdx] = useState(0);
 
   // Beim Start: eingeloggt? → Profil aus Supabase (autoritativ); sonst lokaler Fallback.
   useEffect(() => {
@@ -382,36 +384,50 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   const eigenePhasenwahl = adv.phases.length > 0;
   const zuschlagsSicht = adv.phases.includes("award");
 
-  /* Der Trichter als Struktur statt als Schalter:
-   *   1 Jetzt bewerben — offene Ausschreibung, Frist läuft, passt, machbar
-   *   2 Bahnt sich an  — Ankündigungen: dieselbe Prüfung, nur noch ohne Frist
-   *   3 Strategisch    — laufende Verträge, die auslaufen: Monate bis Jahre Vorlauf
-   * Was gar nicht zum Gewerk passt, bleibt draußen — dafür ist der Schalter unter der
-   * Liste da. Vorher steckte alles in einer flachen Liste mit „Alle anzeigen". */
-  const abschnitte = useMemo(() => {
-    if (!realProfile || !istAkquise || eigenePhasenwahl || !vorauswahl) return undefined;
+  /* Der Trichter als EINE Liste, die weiterreicht — nicht als Blockstapel.
+   *
+   * Sortiert nach „wann muss ich handeln", nicht nach Datenquelle. Deshalb liegen bald
+   * auslaufende Verträge und Ankündigungen in DERSELBEN Phase: beides heißt „die
+   * Ausschreibung kommt in den nächsten Monaten". Vorher standen Ankündigungen vor
+   * Verträgen, die schon diesen Monat auslaufen — nach Herkunft sortiert, nicht nach Frist.
+   *
+   * Gemessen zur Belastbarkeit der Auslauf-Leads (Nachfolger nachweisbar, Ende ≥6 Mon her):
+   *   echtes Enddatum   → Nachfolger kam im Median  +21 Tage danach  (gut zentriert)
+   *   geschätztes Ende  → Nachfolger kam im Median −174 Tage DAVOR   (systematisch zu spät)
+   * Deshalb zuerst die mit echtem Datum. 78 % der Auslauf-Leads haben eines.
+   */
+  const PHASEN = useMemo(() => {
+    if (!realProfile || !istAkquise || eigenePhasenwahl || !vorauswahl) return null;
     const passt = (l: Lead) => l.relevanz === "hoch" || l.relevanz === "mittel";
     const keinBlocker = (l: Lead) => {
       const m = l.match as { blocker?: { art: string }[] } | undefined;
       return !m?.blocker?.some((b) => b.art === "buergschaft" || b.art === "ausschluss");
     };
     const frist = (l: Lead) => (l.frist as { tage?: number } | undefined)?.tage ?? (l.tage as number | null);
+    const ende = (l: Lead) => (l.endTage as number | null);
+    const echt = (l: Lead) => String((l as { endeQuelle?: string }).endeQuelle ?? "") === "actual";
     const basis = alleRows.filter((l) => l.src !== "award" && keinBlocker(l));
+
+    const jetzt = basis.filter((l) => l.src === "f02" && l.relevanz === "hoch"
+      && typeof frist(l) === "number" && (frist(l) as number) >= 3
+      && aufwandStufe(l).stufe !== "hoch");
+    // „Bald" = Ausschreibung steht in den nächsten ~6 Monaten an: angekündigt ODER
+    // laufender Vertrag, der demnächst endet. Echte Enddaten zuerst — sie treffen.
+    const bald = basis.filter((l) => passt(l)
+      && (l.src === "f01" || (l.src === "auslauf" && (ende(l) ?? -1) >= 0)))
+      .sort((a, z) => (echt(z) ? 1 : 0) - (echt(a) ? 1 : 0) || ((ende(a) ?? 9e9) - (ende(z) ?? 9e9)));
+
+    // BEWUSST nur zwei Phasen. Eine dritte („langfristig") hätte keinen Inhalt: gemessen
+    // liegen ALLE Auslauf-Leads zwischen 0 und 26 Tagen (Median 19) — der Auslauf-Radar
+    // schaut nur rund vier Wochen voraus. Eine leere Phase wäre ein Versprechen ohne Daten.
     return [
-      { key: "jetzt", titel: "Jetzt bewerben", hinweis: "Frist läuft, passt zu euch, Aufwand vertretbar",
-        rows: basis.filter((l) => l.src === "f02" && l.relevanz === "hoch"
-          && typeof frist(l) === "number" && (frist(l) as number) >= 3
-          && aufwandStufe(l).stufe !== "hoch") },
-      { key: "bald", titel: "Bahnt sich an", hinweis: "angekündigt — Frist kommt noch",
-        rows: basis.filter((l) => l.src === "f01" && passt(l)) },
-      { key: "strat", titel: "Strategisch", hinweis: "laufende Verträge mit Auslaufdatum",
-        rows: basis.filter((l) => l.src === "auslauf" && passt(l)
-          && ((l.endTage as number | null) ?? 0) >= 0)
-          .sort((a, z) => ((a.endTage as number | null) ?? 9e9) - ((z.endTage as number | null) ?? 9e9)) },
+      { key: "jetzt", titel: "Jetzt bewerben", hinweis: "Frist läuft — hier zählt Tempo", rows: jetzt },
+      { key: "bald", titel: "Bahnt sich an", hinweis: "angekündigt oder Vertrag läuft aus", rows: bald },
     ];
   }, [alleRows, realProfile, istAkquise, eigenePhasenwahl, vorauswahl]);
 
   const rows: Lead[] = useMemo(() => {
+    if (PHASEN) return PHASEN[phaseIdx]?.rows ?? [];
     const ohneAwards = adv.phases.includes("award") ? alleRows : alleRows.filter((l) => l.src !== "award");
     // Vorauswahl (gemessen an ENGIE/Cancom/Rosenbauer: 5.911→72, 3.974→23, 5.979→77):
     // Es bleibt, worauf man sich HEUTE sinnvoll bewerben kann —
@@ -431,7 +447,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
       if (m?.blocker?.some((b) => b.art === "buergschaft" || b.art === "ausschluss")) return false;
       return aufwandStufe(l).stufe !== "hoch";
     });
-  }, [alleRows, adv.phases, vorauswahl, realProfile, istAkquise, eigenePhasenwahl]);
+  }, [alleRows, adv.phases, vorauswahl, realProfile, istAkquise, eigenePhasenwahl, PHASEN, phaseIdx]);
 
   const suggestions = useMemo(() => (query.trim() ? suggestList(query) : []), [query]);
 
@@ -1057,13 +1073,38 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
               })()}
               <LeadTable
                 rows={rows}
-                abschnitte={abschnitte}
                 limit={renderCount}
                 // Die Vorauswahl steht am ENDE der Liste: dort kommt man beim Lesen an, und
                 // dort ist die Frage „ist das alles?" tatsächlich aktuell. Als Banner darüber
                 // wurde sie weggeklickt, bevor man einen Lead gesehen hatte. Stilles Filtern
                 // bleibt ausgeschlossen — die weggelassene Menge steht weiterhin da.
                 fuss={
+                  PHASEN ? (
+                    /* Die Liste endet nie hart: die letzte Zeile reicht an die nächste Phase
+                       weiter (oder zurück auf die erste). So sieht man immer nur eine
+                       Handvoll Leads, weiß aber, was dahinter liegt. */
+                    <div className="phasefuss">
+                      {phaseIdx + 1 < PHASEN.length ? (
+                        <button className="pf-next" onClick={() => { setPhaseIdx(phaseIdx + 1); setActiveId(null); }}>
+                          <span className="pf-k">Weiter</span>
+                          <b>{PHASEN[phaseIdx + 1].titel}</b>
+                          <span className="pf-n">{PHASEN[phaseIdx + 1].rows.length}</span>
+                          <span className="pf-h">{PHASEN[phaseIdx + 1].hinweis}</span>
+                          <span className="pf-pfeil">→</span>
+                        </button>
+                      ) : (
+                        <button className="pf-next" onClick={() => { setPhaseIdx(0); setActiveId(null); }}>
+                          <span className="pf-k">Zurück an den Anfang</span>
+                          <b>{PHASEN[0].titel}</b>
+                          <span className="pf-n">{PHASEN[0].rows.length}</span>
+                          <span className="pf-pfeil">↑</span>
+                        </button>
+                      )}
+                      <button className="pf-alle" onClick={() => setVorauswahl(false)}>
+                        Alle {alleRows.filter((l) => l.src !== "award").length.toLocaleString("de-DE")} Ausschreibungen des Grundraums
+                      </button>
+                    </div>
+                  ) : (
                   realProfile && istAkquise && !adv.phases.includes("award") ? (
                   <div className={`vor-band ${vorauswahl ? "" : "off"}`}>
                     {vorauswahl ? (
@@ -1090,6 +1131,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                     )}
                   </div>
                   ) : null
+                  )
                 }
                 sortKey={sortKey}
                 sortDir={sortDir}
