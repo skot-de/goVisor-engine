@@ -92,3 +92,45 @@ def test_build_entity_groups_from_csv(tmp_path):
         "hr:3,Einzel GmbH,DE3,,seed\n")     # kein Label -> keine Gruppe
     g, links = gold.build_entity_groups(cfg, "DE")
     assert g == 1 and links == 2            # eine Gruppe CANCOM, 2 Einheiten
+
+
+def test_domain_label_strips_www_as_prefix_not_charset():
+    """`lstrip("www.")` entfernt eine ZEICHENMENGE, keinen Präfix.
+
+    Der Bug hat jede Domain verstümmelt, die mit w oder . beginnt: „wienerlinien.at"
+    wurde zu „ienerlinien.at" → Gruppe IENERLINIEN. Gemessen waren 2.986 DE-Domains
+    mit 52.748 Kontakten betroffen; „wbm.de" verlor seine Gruppe sogar ganz, weil der
+    Rest „bm" unter die 3-Zeichen-Grenze fiel. Ein Tippfehler in einer Zeile, der die
+    Firmengruppen-Bildung still verzerrt — deshalb festgenagelt.
+    """
+    from govisor import locales
+    locales.use("DE")
+    assert gold.domain_group_label("wienerlinien.at") == "WIENERLINIEN"
+    assert gold.domain_group_label("weber-bau.de") == "WEBER-BAU"
+    assert gold.domain_group_label("wbm.de") == "WBM"
+    # Der eigentliche Zweck bleibt erhalten: ein echtes www.-Präfix fällt weg.
+    assert gold.domain_group_label("www.cancom.de") == "CANCOM"
+    assert gold.domain_group_label("cancom.de") == "CANCOM"
+
+
+def test_at_locale_matches_austrian_reality():
+    """Die AT-Locale muss die drei gemessenen Österreich-Eigenheiten treffen.
+
+    Ohne sie liefe der AT-Ingest auf dem deutschen Profil: „Ges.m.b.H." wäre keine
+    erkannte Rechtsform (die Punkte brechen `\\bmbh\\b`), und ASFINAG — mit 20.293
+    Nennungen der größte Auftraggeber des Landes — gälte als privat, weil es dort
+    ausgeschrieben als „Autobahnen- und Schnellstraßen-Finanzierungs-AG" firmiert.
+    """
+    from govisor import entities as ent, locales
+    at = locales.use("AT")
+    try:
+        for name in ("Wiener Wohnen Ges.m.b.H.", "Bundesimmobiliengesellschaft m.b.H.",
+                     "Maier OG", "Gruber e.U.", "Alpha Bau KEG"):
+            assert at.re_legal.search(ent.strip_accents(name.lower())), name
+        for name in ("Autobahnen- und Schnellstraßen-Finanzierungs-Aktiengesellschaft",
+                     "ÖBB-Infrastruktur AG", "Magistrat der Stadt Wien",
+                     "Bezirkshauptmannschaft Melk", "Reinhalteverband Großraum Linz"):
+            assert gold.looks_public(name), name
+        assert not gold.looks_public("Kapsch TrafficCom AG")
+    finally:
+        locales.use("DE")

@@ -76,8 +76,6 @@ fi
 # CH bekommt BEIDE Quellen: simap (nationale Plattform, breiter) und TED-CHE (WTO-GPA-
 # Kanal). Gemessen überschneiden sie sich zu 93,5 % — der Abgleich unten trennt den echten
 # Zugewinn von der Dublette, sonst verdoppelte sich die Schweizer Liste ohne mehr Markt.
-# AT läuft weiter nur über den eigenen Connector; dort liegt die TED-Historie ohnehin
-# vollständig vor, es fehlt nur die Locale für den Live-Abruf.
 step "TED-Live CH"
 $PY scripts/fetch_ted_live.py --country CH --workers 3 \
   && echo "  TED-CHE ok." || echo "  ⚠ TED-CHE fehlgeschlagen — CH bleibt auf simap allein."
@@ -85,6 +83,15 @@ $PY scripts/fetch_ted_live.py --country CH --workers 3 \
 step "simap.ch (CH)"
 $PY -m govisor.cli ingest-simap --country CH --max-pages 30 --silver \
   && echo "  simap ok." || echo "  ⚠ simap.ch fehlgeschlagen — CH bleibt auf altem Stand."
+
+# AT bekommt wie CH beide Kanäle: OffeneVergaben.at (national, auch unterschwellig) und
+# TED-AT (EU-Schwelle). Anders als bei CH braucht es hier KEINEN Backfill — die TED-AT-
+# Historie liegt über die Monatsarchive vollständig vor (180.061 Notices ab 2004, gegen die
+# TED-API auf 99,8–100 % geprüft). Gefehlt hat allein der Tagesabruf: das Monatsarchiv
+# erscheint mit Verzug, dadurch stand TED-AT auf dem Stand vom 29. Juni.
+step "TED-Live AT"
+$PY scripts/fetch_ted_live.py --country AT --workers 3 \
+  && echo "  TED-AT ok." || echo "  ⚠ TED-AT fehlgeschlagen — AT bleibt auf OffeneVergaben allein."
 
 step "OffeneVergaben.at (AT)"
 $PY -m govisor.cli ingest-atverg --country AT --silver \

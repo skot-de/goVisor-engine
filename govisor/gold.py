@@ -84,7 +84,14 @@ def domain_group_label(domain: str | None, name_norm: str | None = None) -> str:
     """
     if not domain:
         return ""
-    parts = [p for p in domain.lower().strip().lstrip("www.").split(".") if p]
+    # `lstrip("www.")` wäre hier falsch: lstrip entfernt keinen Präfix, sondern jedes
+    # führende Zeichen aus der Menge {w, .}. „wienerlinien.at" wurde damit zu
+    # „ienerlinien.at" → Gruppe IENERLINIEN. Gemessen: 2.986 DE-Domains / 52.748 Kontakte
+    # falsch gruppiert, darunter Totalverluste (wbm.de → „bm" → zu kurz → gar keine Gruppe).
+    d = domain.lower().strip()
+    if d.startswith("www."):
+        d = d[4:]
+    parts = [p for p in d.split(".") if p]
     if len(parts) < 2:
         return ""
     if parts[-1] in _DOMAIN_TLD2 and len(parts) >= 3 and parts[-2] in _DOMAIN_SLD2:

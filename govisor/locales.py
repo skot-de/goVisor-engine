@@ -264,7 +264,114 @@ CH = Locale(
 )
 
 
-LOCALES = {loc.code: loc for loc in (DE, FR, CH)}
+# ---------------------------------------------------------------------------
+# AT — an 401.716 Käufernennungen und 80.597 Firmennamen aus dem eigenen
+# TED-AT-Bestand gemessen, nicht aus dem Gedächtnis gesetzt.
+#
+# Österreich ist deutschsprachig, aber NICHT „DE mit anderer Flagge". Drei
+# Unterschiede, die gemessen aufgefallen sind und die Muster tragen:
+#   1. Eigene Rechtsformen: GesmbH/Ges.m.b.H. (3.140), e.U. (743, Einzelunternehmer),
+#      OG (578, löste 2007 die OHG ab), KEG/OEG (94, Altbestand), GesbR, eGen.
+#      Das deutsche `\bmbh\b` greift bei „Ges.m.b.H." NICHT — die Punkte trennen.
+#   2. Behörden heißen anders: Magistrat, Bezirkshauptmannschaft, Marktgemeinde,
+#      Reinhalteverband, Landesverwaltungsgericht.
+#   3. Die großen Auftraggeber firmieren ausgeschrieben. ASFINAG steht in 20.293
+#      Nennungen als „Autobahnen- und Schnellstraßen-Finanzierungs-AG" — wer nur
+#      auf das Kürzel prüft, verliert den größten Käufer des Landes.
+# Gemessene Abdeckung von `public_name` auf Käufernamen: 72,1 %.
+# ---------------------------------------------------------------------------
+AT = Locale(
+    "AT", name="Österreich (erste Fassung — an TED-AT-Daten geprüft, nicht abschließend)",
+    legal_forms=(r"gesellschaft mit beschraenkter haftung", r"aktiengesellschaft",
+                 r"kommanditgesellschaft", r"offene gesellschaft", r"privatstiftung",
+                 r"eingetragene genossenschaft", r"genossenschaft", r"eingetragener verein",
+                 # Punkte statt Wortgrenzen: „ges.m.b.h.", „gesmbh", „m.b.h." in einem Muster.
+                 r"ges\.?\s?m\.?\s?b\.?\s?h\.?", r"\bm\.?\s?b\.?\s?h\.?\b", r"gmbh",
+                 r"\bag\b", r"\bog\b", r"\bkg\b", r"\bohg\b", r"\bkeg\b", r"\boeg\b",
+                 r"\bse\b", r"\begen\b", r"\bgesbr\b", r"\be\.? ?u\b", r"\be\.? ?v\b"),
+    representation=r"\s*[,/;–-]?\s*vertreten durch\b.*$",
+    # „Magistrat der Stadt Wien - Magistratsabteilung 34" → der Käufer ist der Magistrat.
+    subdivision=(r"\s*[,/|;–-]\s*(magistratsabteilung|abteilung|referat|fachbereich|"
+                 r"gruppe|dienststelle|geschaeftsbereich|geschaeftsstelle|"
+                 r"zentrale vergabestelle|zentraler einkauf|stabsstelle)\b.*$"),
+    unit_numbers=r"\b(ma|abt|gr)\s*\d+\b",
+    lead_articles=r"^(das|der|die|den|dem)\s+",
+    consortium=(r"\b(arge\b|arbeitsgemeinschaft|bietergemeinschaft|konsortium|"
+                r"gemeinschaft der)"),
+    association=(r"\b(e\.? ?v\b|verein\b|verband\b|gewerkschaft\b|gemeinnuetzig)"
+                 r"|\b(privat)?stiftung\b(?!\s*(&|und)\s*co)"),
+    public=(r"(republik oesterreich|bundesministerium|bundesamt|bundesanstalt|"
+            r"landesregierung|landeshauptstadt|bezirkshauptmannschaft|magistrat|"
+            r"marktgemeinde|stadtgemeinde|gemeindeverband|reinhalteverband|"
+            r"abwasserverband|wasserverband)|^(stadt|gemeinde|land)\s"),
+    # Ziviltechniker (ZT) ist die österreichische Sammelbezeichnung für Ingenieur-
+    # und Architekturbüros — in DE gibt es dafür kein Gegenstück.
+    trade_word=(r"(elektro|installat|spengler|baumeister|zimmerei|tischlerei|schlosserei|"
+                r"malerei|dachdeck|sanitaer|heizung|garten|transport|logistik|reinigung|"
+                r"entsorgung|recycling|technik|technolog|handel|vertrieb|montage|"
+                r"planung|architekt|ingenieur|ziviltechnik|\bzt\b|beratung|consulting|"
+                r"software|system|solution|engineering|buero|apotheke|verlag|gebaeude|"
+                r"facility|catering|security|bewachung|werkstatt|handwerk|zentrum)"),
+    person=rf"^(?:dr\.|prof\.|dipl\.[-\w]*|mag\.|ing\.|di)?\s*{_NAME_PART}(?:\s+{_NAME_PART}){{1,2}}$",
+    text_winner_marker=r"wirtschaftsteilnehmer|zuschlagsempfaenger|auftragnehmer",
+    text_skip=r"^(wurde|vergeben|los|bezeichnung|v\.|abschnitt|name und|ursprüng|—|-|siehe|nummer)",
+    text_not_awarded="nicht vergeben",
+    # Gemessen: nur 1,1 % der AT-Gewinnerkontakte nutzen Freemail (DE-Vergleichswert
+    # in der Zielgruppe 5,8 %). aon.at führt mit 463 — das österreichische t-online.
+    freemail={"gmail", "googlemail", "gmx", "aon", "a1", "chello", "utanet", "inode",
+              "liwest", "kabsi", "tele2", "drei", "hotmail", "outlook", "yahoo", "aol",
+              "live", "msn", "icloud", "me", "protonmail", "proton", "mail", "email"},
+    # `gv` ist die österreichische Behörden-Sammeldomain (bvwg.gv.at, bbg.gv.at,
+    # wien.gv.at — 74.445 Kontakte). Sie fiele auch über den 2-Zeichen-Guard in
+    # `gold.domain_group_label` heraus; hier steht sie, damit das Absicht ist und
+    # nicht Zufall. `ac` ebenso für die Universitäten (tuwien.ac.at).
+    public_domain_slds={"gv", "ac", "parlament", "bmlv"},
+    public_name=(r"\bstadt\b|\bgemeinde\b|marktgemeinde|stadtgemeinde|landeshauptstadt|"
+                 r"magistrat|bezirkshauptmannschaft|\bland\b|bundesland|landesregierung|"
+                 r"bundesministerium|bundesamt|bundesanstalt|republik oesterreich|\bbund\b|"
+                 r"burghauptmannschaft|nationalbank|bundesforste|"
+                 r"reinhalteverband|abwasserverband|wasserverband|gemeindeverband|\bverband\b|"
+                 r"krankenanstalt|krankenhaus|klinik|\blkh\b|spital|gesundheitskasse|"
+                 r"gebietskrankenkasse|gesundheitsagentur|gesundheitsholding|\bauva\b|\boegk\b|"
+                 r"versicherungsanstalt|sozialversicherung|"
+                 r"universitaet|fachhochschule|hochschule|\bschule\b|paedagogisch|"
+                 r"verwaltungsgericht|\bgericht\b|\bpolizei\b|staatsanwalt|"
+                 # Ausgeschriebene Firmennamen der großen öffentlichen Auftraggeber.
+                 r"asfinag|schnellstrassen-finanzierungs|\boebb\b|austro control|"
+                 r"austrian power grid|oesterreichische post|wiener linien|wiener netze|"
+                 r"wien energie|bundesbeschaffung|\bbbg\b|bundesrechenzentrum|\bbrz\b|"
+                 r"bundesimmobilien|arbeitsmarktservice|\bams\b|"
+                 r"eigenbetrieb|oeffentlichen rechts|koerperschaft|\bkammer\b"),
+    kind_framework_kw="rahmen",
+    kind_recurring_kw=("wartung|pflege|lizenz|reinigung|bewirtschaft|unterhalt|betreib|"
+                       "betrieb|entsorgung|catering|bewachung|winterdienst|support|hosting|"
+                       "miete|leasing|verpflegung|instandhalt|betreuung|dienstleistung|"
+                       "service|beratung"),
+    kind_oneoff_kw=("neubau|sanierung|umbau|abbruch|errichtung|rohbau|ausbau|modernisierung|"
+                    "fassad|dachsanierung|erweiterungsbau|zubau|anbau|generalsanierung"),
+    register_path=None,   # TODO: Firmenbuch (AT) — anders als das deutsche HR-Extrakt
+                          # nicht frei abrufbar; bis dahin bleibt national_id die einzige
+                          # belegte Kennung.
+    cpi={},               # TODO: VPI der Statistik Austria. Solange leer, bleibt
+                          # value_real_2020 für AT NOMINAL — Zeitreihen über Jahre hinweg
+                          # sind damit nicht inflationsbereinigt. Der DE-Index wäre ein
+                          # Näherungswert, aber geraten ist hier schlimmer als leer.
+    # ACHTUNG, Unterschied zu DE: in Deutschland IST NUTS-1 das Bundesland, in
+    # Österreich sind das die drei Großregionen — das Bundesland liegt auf NUTS-2.
+    # Der heutige Leser (app/dashboard.py) schneidet mit `[:3]`, greift also die
+    # Großregionen. Die 4-stelligen Einträge stehen für einen künftigen `[:4]`-Leser
+    # bereit; sie stören den 3-stelligen Zugriff nicht.
+    nuts_region={"AT1": "Ostösterreich", "AT2": "Südösterreich", "AT3": "Westösterreich",
+                 "AT11": "Burgenland", "AT12": "Niederösterreich", "AT13": "Wien",
+                 "AT21": "Kärnten", "AT22": "Steiermark", "AT31": "Oberösterreich",
+                 "AT32": "Salzburg", "AT33": "Tirol", "AT34": "Vorarlberg"},
+    succ_stopwords=("der die das und fur von zur zum den im am auf mit los bau neubau sanierung "
+                    "lieferung leistungen ausschreibung offentliche vergabe beschaffung "
+                    "stadt gemeinde marktgemeinde land magistrat bezirk amt objekt").split(),
+)
+
+
+LOCALES = {loc.code: loc for loc in (DE, FR, CH, AT)}
 _active = DE
 
 
