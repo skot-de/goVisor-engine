@@ -3875,7 +3875,38 @@ def build_at_gold(cfg: Config, country: str = "AT"):
         f" AND n.notice_id NOT IN (SELECT notice_id FROM read_parquet('{_attr}', hive_partitioning=1)"
         f" WHERE path='atverg/schwelle' AND value='OSB')"
     ) if _has_attr else ""
-    LEAD = "n.notice_kind='cn' AND n.submission_deadline >= current_date" + OSB_EXCLUDE
+
+    # Der OSB-Filter allein reicht NICHT — die Disjunktheits-Annahme darüber ist gemessen
+    # falsch. Von 7.870 atverg-Notices, die 2025 nachweislich eine TED-Entsprechung haben,
+    # tragen nur 42,8 % das OSB-Flag; 53,8 % tragen gar keinen Schwellenwert (81.626 der
+    # 236.118 atverg-Notices haben kein `atverg/schwelle`-Attribut), 3,4 % sind als
+    # unterschwellig geflaggt. Damit überlebten 57,2 % der echten Dubletten den Flag-Filter.
+    # `scripts/dedupe_at_sources.py` matcht sie inhaltlich; hier fliegen sie raus.
+    _dedup = g / "atverg_dedup.parquet"
+    DEDUP_EXCLUDE = (
+        f" AND n.notice_id NOT IN (SELECT av_id FROM read_parquet('{_dedup.as_posix()}'))"
+    ) if _dedup.exists() else ""
+    LEAD = ("n.notice_kind='cn' AND n.submission_deadline >= current_date"
+            + OSB_EXCLUDE + DEDUP_EXCLUDE)
+
+    # Beim Verwerfen der atverg-Zeile ginge ihr Schätzwert verloren — und den führt sie
+    # deutlich besser als TED-AT (69,8 % gegen 11,0 % Abdeckung). Der Wert trägt das
+    # Gebührenband, also wandert er mit: die TED-Zeile erbt ihn, wo sie selbst keinen hat.
+    # Nur EUR, damit keine Fremdwährung stillschweigend als Euro gilt.
+    # Eine TED-Zeile kann mehrere atverg-Partner haben (mehrere Lose auf eine Bekannt-
+    # machung). Gewählt wird deterministisch der sicherste Treffer — höchste Enthaltung,
+    # bei Gleichstand der geringste Zeitabstand. `any_value` wäre hier zufällig und
+    # zwischen zwei Läufen nicht reproduzierbar.
+    AV_WERT = (f"""LEFT JOIN (
+            SELECT ted_id, av_estimated_value AS av_wert FROM (
+                SELECT ted_id, av_estimated_value,
+                       row_number() OVER (PARTITION BY ted_id
+                           ORDER BY enthaltung DESC, tage_abstand ASC) rn
+                FROM read_parquet('{_dedup.as_posix()}')
+                WHERE av_estimated_value IS NOT NULL
+                  AND (av_currency = 'EUR' OR av_currency IS NULL))
+            WHERE rn = 1) dd ON dd.ted_id = n.notice_id""") if _dedup.exists() else ""
+    WERT_SQL = "coalesce(n.estimated_value, dd.av_wert)" if _dedup.exists() else "n.estimated_value"
     _tok = ("list_filter(string_split(regexp_replace(lower({c}), '[^a-zäöü0-9 ]', ' ', 'g'), ' '),"
             " w -> length(w) >= 5)")
     con = duckdb.connect()
@@ -3909,8 +3940,10 @@ def build_at_gold(cfg: Config, country: str = "AT"):
              (m.winner_name IS NULL) AS is_new_tender,
              n.submission_deadline AS deadline_date,
              date_diff('day', current_date, n.submission_deadline) AS days_to_deadline,
-             n.estimated_value AS value_eur,                 -- AT: echter Schätzwert (TED)
-             CASE WHEN n.estimated_value IS NOT NULL THEN 'estimated' ELSE 'unknown' END AS value_source,
+             {WERT_SQL} AS value_eur,       -- TED-Schätzwert, ersatzweise der von atverg
+             -- Beide sind Schätzwerte, also bleibt das Vokabular 'estimated' korrekt
+             -- (die Allow-Liste in tests/test_plumbing.py::_EXPORT_VOCAB ist fest).
+             CASE WHEN {WERT_SQL} IS NOT NULL THEN 'estimated' ELSE 'unknown' END AS value_source,
              n.ted_url AS source_url, n.ted_url AS documents_url,
              FALSE AS is_nationwide, 'AT' AS country,
              m.winner_name AS incumbent_name, m.ayear AS incumbent_since_year,
@@ -3924,6 +3957,7 @@ def build_at_gold(cfg: Config, country: str = "AT"):
       FROM read_parquet({N}, hive_partitioning=1) n
       LEFT JOIN buyer b ON b.notice_id = n.notice_id
       LEFT JOIN matched m ON m.lead_id = n.notice_id AND m.rn = 1
+      {AV_WERT}
       WHERE {LEAD}
     ) TO '{(g / 'lead_export.parquet').as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
 

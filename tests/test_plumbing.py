@@ -964,3 +964,50 @@ def test_silver_month_files_do_not_shadow_each_other():
     assert not kollisionen, (
         "Monatsdatei und -live-Datei nebeneinander → doppelte Zeilen im Silber-Glob:\n  "
         + "\n  ".join(kollisionen[:10]))
+
+
+def test_tageslauf_baut_gold_fuer_jedes_land_das_er_holt():
+    """Jede Quelle, die der Tageslauf holt, muss auch ihr Gold neu bauen.
+
+    Gefunden am 2026-08-10: der Runner holte AT (OffeneVergaben, TED-AT) und CH (simap,
+    TED-CHE) TÄGLICH ins Silber, baute aber nur DE-Gold. Die österreichischen und
+    Schweizer Leads im Frontend hingen damit an dem Zeitpunkt, an dem zuletzt jemand die
+    Brücke von Hand gestartet hatte — während das Silber darunter weiterlief. Von aussen
+    sah beides frisch aus.
+
+    Dieselbe Fehlerklasse hat am selben Tag zweimal zugeschlagen (export_strategie ohne
+    Aufruf, ted_dedup ohne Leser). Der Test nagelt die Kopplung fest: wer ingested, baut.
+    """
+    from pathlib import Path
+
+    runner = (Path(__file__).resolve().parent.parent / "scripts" / "daily_leads.sh").read_text()
+    for land, ingest, goldbau in [
+        ("AT", "ingest-atverg", "gold --country AT --bridge"),
+        ("CH", "ingest-simap", "build_ch_gold"),
+    ]:
+        if ingest not in runner:
+            continue                     # Quelle nicht (mehr) im Tageslauf → nichts zu bauen
+        assert goldbau in runner, (
+            f"{land} wird im Tageslauf geholt ({ingest}), aber sein Gold nie neu gebaut "
+            f"({goldbau} fehlt) — die {land}-Leads frieren still ein.")
+
+
+def test_at_dedup_wird_von_build_at_gold_gelesen():
+    """Der AT-Dublettenfilter muss im Gold ankommen, nicht nur eine Datei erzeugen.
+
+    `scripts/dedupe_ch_sources.py` schreibt seit Wochen `ted_dedup.parquet`, das kein
+    einziger Konsument liest — der Filter läuft, wirkt aber nicht. Für AT darf das nicht
+    wieder passieren, deshalb ist die Verdrahtung hier festgenagelt: `build_at_gold` muss
+    die Tabelle sowohl zum Ausschluss (`av_id`) als auch für die Wert-Übernahme
+    (`av_estimated_value`) lesen.
+    """
+    from pathlib import Path
+
+    quelle = (Path(__file__).resolve().parent.parent / "govisor" / "gold.py").read_text()
+    kopf = quelle[quelle.index("def build_at_gold"):]
+    kopf = kopf[:kopf.index("\ndef ", 10)]
+    assert "atverg_dedup.parquet" in kopf, "build_at_gold liest den AT-Dublettenfilter nicht"
+    assert "av_id" in kopf, "Dubletten werden nicht ausgeschlossen"
+    assert "av_estimated_value" in kopf, (
+        "der atverg-Schätzwert wird nicht übernommen — beim Verwerfen der Dublette ginge "
+        "die bessere Wertabdeckung (69,8 % gegen 11,0 %) verloren")

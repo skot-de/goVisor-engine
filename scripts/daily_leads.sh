@@ -112,6 +112,29 @@ case $? in
   *) echo "  ✖ CH-Abgleich fehlgeschlagen — Dubletten möglich." ;;
 esac
 
+# Dasselbe für AT, aus demselben Grund — TED-AT und OffeneVergaben.at überschneiden sich
+# gemessen zu 93 %. Der vorhandene OSB-Flag-Filter in build_at_gold reicht nicht: von den
+# atverg-Notices mit nachweislicher TED-Entsprechung tragen nur 42,8 % das Flag, 53,8 %
+# tragen gar keinen Schwellenwert. 57,2 % der echten Dubletten überlebten ihn.
+# Muss VOR dem Gold-Rebuild laufen — build_at_gold liest die erzeugte Tabelle.
+step "AT-Quellenabgleich (TED gegen OffeneVergaben)"
+$PY scripts/dedupe_at_sources.py \
+  && echo "  Abgleich ok." \
+  || echo "  ⚠ AT-Abgleich fehlgeschlagen — voriger Stand bleibt gültig, Dubletten möglich."
+
+# AT- und CH-Gold: der Tageslauf hat beide Quellen bisher zwar TÄGLICH geholt, ihr Gold aber
+# NIE neu gebaut — nur DE. Damit hingen die österreichischen und Schweizer Leads im Frontend
+# an dem Zeitpunkt, an dem zuletzt jemand die Brücke von Hand gestartet hat, während das
+# Silber darunter weiterlief. Nicht-fatal: beide sind Zusatzmärkte, DE trägt das Produkt.
+step "AT-Gold (Brücke)"
+$PY -m govisor.cli gold --country AT --bridge \
+  && echo "  AT-Gold ok." || echo "  ⚠ AT-Gold fehlgeschlagen — AT-Leads bleiben auf altem Stand."
+
+step "CH-Gold (Brücke)"
+$PY -c "from govisor.config import Config; from govisor import simap; \
+print('  ', simap.build_ch_gold(Config(countries=('CH',), data_dir='data'), country='CH'), 'CH-Leads')" \
+  && echo "  CH-Gold ok." || echo "  ⚠ CH-Gold fehlgeschlagen — CH-Leads bleiben auf altem Stand."
+
 # 2) Gold neu mit heutigem Stichtag — refresht Leads, Fristen, months_to_expiry. FATAL bei Fehler.
 step "Gold-Rebuild (Leads mit Stichtag $TODAY)"
 if ! $PY -m govisor.cli gold --country DE --as-of "$TODAY"; then
