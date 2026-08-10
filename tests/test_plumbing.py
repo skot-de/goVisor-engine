@@ -931,3 +931,36 @@ def test_silver_gold_notice_ids_are_canonical():
             f"WHERE regexp_matches(lead_id, {pat}) AND lead_id <> {canon.format(c='lead_id')}"
         ).fetchone()[0]
         assert bad_g == 0, f"{bad_g} nicht-kanonische lead_ids in Gold"
+
+def test_silver_month_files_do_not_shadow_each_other():
+    """Pro Monat und Tabelle darf es NICHT gleichzeitig `<monat>.parquet` und
+    `<monat>-live.parquet` geben.
+
+    Der Silber-Glob liest beide; enthalten sie dieselben Notices, stehen alle Zeilen
+    doppelt — und zwar erst in Gold sichtbar, wo der Käufer-Join fan-out erzeugt.
+    Genau so passiert am 2026-08-10: eine Testdatei `2026-08.parquet` blieb neben dem
+    echten `2026-08-live.parquet` liegen (nur die notices-Tabelle war aufgeräumt worden,
+    die anderen acht nicht). Ergebnis: 128 Notices mit doppelter Käufer-Partei, daraus
+    220.756 statt 77.746 lead_export-Zeilen. Silber selbst war dabei fehlerfrei — die
+    Dublette entstand erst durch das Nebeneinander zweier Dateien.
+
+    Dieser Test kostet Millisekunden und fängt das ab, bevor eine Stunde Gold-Rechenzeit
+    darauf verschwendet wird.
+    """
+    from pathlib import Path
+
+    root = Path("data/silver")
+    if not root.exists():
+        pytest.skip("Silber nicht gebaut")
+    kollisionen = []
+    for tabelle in sorted(root.glob("*/*")):
+        if not tabelle.is_dir():
+            continue
+        for jahr in tabelle.glob("year=*"):
+            monate = {p.stem for p in jahr.glob("*.parquet")}
+            for m in monate:
+                if m.endswith("-live") and m[:-5] in monate:
+                    kollisionen.append(f"{jahr}/{m[:-5]}(.parquet + -live.parquet)")
+    assert not kollisionen, (
+        "Monatsdatei und -live-Datei nebeneinander → doppelte Zeilen im Silber-Glob:\n  "
+        + "\n  ".join(kollisionen[:10]))
