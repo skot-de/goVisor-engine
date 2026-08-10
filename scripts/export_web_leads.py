@@ -433,7 +433,12 @@ def export_branche(key):
             -- Auslauf-Radar bis 24 Monate. Wer eine Nachausschreibung vorbereiten will,
             -- braucht Vorlauf — und der gemessene Versatz (duration_calibration) zeigt, dass
             -- Nachfolger im Median deutlich VOR dem prognostizierten Ende erscheinen.
-            AND (phase != 'expiring' OR months_to_expiry IS NULL OR months_to_expiry <= 24)
+            AND (phase != 'expiring' OR months_to_expiry IS NULL
+                 OR months_to_expiry BETWEEN -1 AND 24)
+            -- Untergrenze NEU und nötig: seit die Zeitrechnung auf dem kalibrierten Datum
+            -- läuft, rutschen Verträge ins Minus, deren Nachausschreibung erfahrungsgemäß
+            -- längst hätte kommen müssen (gemessen 2.620 allein im Bau). Das sind keine
+            -- Leads mehr, sondern verpasste Züge. Ein Monat Kulanz bleibt.
         ), ranked AS (
           -- Quote JE PHASE statt einer gemeinsamen Dringlichkeits-Rangliste. Vorher
           -- verdrängten die nächstliegenden Leads alles Ferne: gemessen lagen ALLE

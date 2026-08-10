@@ -356,7 +356,7 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
             {/* Rückweg in die Liste: aus dem Überblick gab es bisher keinen. */}
             <button className="lb-h4btn" onClick={() => onGoto?.("jetzt")}>Jetzt bewerben</button>
           </h4>
-          <p className="lb-n2">{b.heiss.length}<em>mit Frist in den nächsten 3 Wochen</em></p>
+          <p className="lb-n2">{b.heiss.length.toLocaleString("de-DE")}<em>mit Frist in den nächsten 3 Wochen</em></p>
           {b.heiss.length ? b.heiss.slice(0, 5).map((l) => {
             const t = b.tageOf(l);
             return <Zeile key={l.id} l={l}
@@ -367,7 +367,7 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
         {/* ── bald ──────────────────────────────────────────────── */}
         <section className="lb-sp">
           <h4><span className="lb-dot bald" />Bahnt sich an</h4>
-          <p className="lb-n2">{b.kuenftig.length}<em>Ankündigungen und auslaufende Verträge</em></p>
+          <p className="lb-n2">{b.kuenftig.length.toLocaleString("de-DE")}<em>Ankündigungen und auslaufende Verträge</em></p>
           {b.kuenftig.length ? b.kuenftig.slice(0, 5).map((l) => (
             <Zeile key={l.id} l={l} sub={monate(l)} />
           )) : <p className="lb-nix">Noch keine Vorankündigungen in eurem Feld.</p>}
@@ -380,10 +380,10 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
         <section className="lb-sp">
           <h4><span className="lb-dot luecke" />Was euch bremst</h4>
           {b.luecken.length ? (<>
-            <p className="lb-n2">{b.luecken[0].n}<em>{b.luecken[0].titel.toLowerCase()}</em></p>
+            <p className="lb-n2">{b.luecken[0].n.toLocaleString("de-DE")}<em>{b.luecken[0].titel.toLowerCase()}</em></p>
             {b.luecken.slice(0, 3).map((g) => (
               <a key={g.key} className="lb-kachel" href="/unternehmen">
-                <b>{g.n}</b>
+                <b>{g.n.toLocaleString("de-DE")}</b>
                 <span><i>{g.titel}</i> — {g.text}</span>
               </a>
             ))}
@@ -398,13 +398,13 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
         <section className="lb-sp">
           <h4><span className="lb-dot markt" />Markt &amp; Netzwerk</h4>
           <button className="lb-kachel" onClick={() => onGoto?.("netzwerk")}>
-            <b>{b.netz.length}</b>
+            <b>{b.netz.length.toLocaleString("de-DE")}</b>
             <span>{b.netzKaeufer.length
               ? <>Mehrlos-Vergaben, u.a. bei <i>{b.netzKaeufer.join(" und ")}</i> — hier lohnt ein Partner</>
               : "Vergaben mit mehreren Losen — hier lohnt ein Partner"}</span>
           </button>
           <button className="lb-kachel" onClick={() => onGoto?.("award")}>
-            <b>{b.zuschlaege.length}</b>
+            <b>{b.zuschlaege.length.toLocaleString("de-DE")}</b>
             <span>{b.gewinner.length
               ? <>frische Zuschläge, u.a. an <i>{b.gewinner.join(" und ")}</i> — wer gewonnen hat, kauft jetzt ein</>
               : "frische Zuschläge — wer gewonnen hat, kauft jetzt ein"}</span>

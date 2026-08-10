@@ -2326,14 +2326,25 @@ def build_lead_duration(cfg: Config, country: str = "DE"):
 
     `end_date` fehlt oft (17,7 % bei Vergaben) → **CPV-Median-Laufzeit** als Schätzung,
     ehrlich geflaggt (nie ein datierter Countdown auf geratenem Ende). Waterfall:
-    echtes `end_date` → `start_date` + CPV-Median-Laufzeit → unbekannt. Schreibt
-    ``lead_duration`` (notice_id, contract_end, duration_days, duration_source).
+    echtes `end_date` → `start_date` + CPV-Median-Laufzeit → unbekannt.
+
+    **Kalibrierung (`duration_calibration`).** Das rohe Ende sagt, wann der Vertrag endet —
+    nicht, wann die Nachausschreibung kommt. Gemessen an 84.890 belegten Nachfolge-Kanten
+    erscheint sie im Median deutlich VORHER, und wie viel früher hängt stark vom Gewerk ab
+    (CPV 71: −592 Tage, CPV 34: 0, CPV 38: +303). `contract_end_kal` trägt diese Korrektur;
+    `contract_end` bleibt unangetastet, damit das gemessene Rohdatum nachvollziehbar ist —
+    und damit der nächste Kalibrier-Lauf nicht auf einer bereits korrigierten Zahl misst.
+
+    Schreibt ``lead_duration`` (notice_id, contract_end, contract_end_kal, kal_versatz_tage,
+    kal_spanne_tage, duration_days, duration_source).
     """
     import duckdb
 
     g = cfg.gold_dir / country
     N = f"'{cfg.silver_table_glob('notices', country)}'"
     out = (g / "lead_duration.parquet").as_posix()
+    tmp = (g / "_lead_duration_roh.parquet").as_posix()
+    KAL = g / "duration_calibration.parquet"
     con = duckdb.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
@@ -2365,14 +2376,39 @@ def build_lead_duration(cfg: Config, country: str = "DE"):
                  WHEN n.start_date IS NOT NULL AND dur.m IS NOT NULL THEN 'geschaetzt_start'
                  WHEN n.award_date IS NOT NULL AND coalesce(durA.m, dur.m) IS NOT NULL THEN 'geschaetzt_award'
                  ELSE 'unbekannt' END AS duration_source
+          , substr(n.cpv_main,1,2) AS _div
           FROM read_parquet({N}, hive_partitioning=1) n
           LEFT JOIN dur ON dur.cpv4 = substr(n.cpv_main,1,4)
           LEFT JOIN durA ON durA.cpv4 = substr(n.cpv_main,1,4)
           WHERE n.notice_kind IN ('can','cn')
-        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+        ) TO '{tmp}' (FORMAT PARQUET, COMPRESSION ZSTD)
     """)
+    # Kalibrierung anhängen: je (Herkunft × CPV-Division), mit globalem Rückfall dort, wo
+    # die Division zu wenige Belege hat. Fehlt die Tabelle (erster Lauf), bleibt kal = roh.
+    if KAL.exists():
+        con.execute(f"""
+            COPY (
+              SELECT d.* EXCLUDE (_div),
+                coalesce(kd.versatz_tage, kg.versatz_tage, 0)::INT AS kal_versatz_tage,
+                coalesce(kd.spanne_tage, kg.spanne_tage)::INT      AS kal_spanne_tage,
+                CASE WHEN d.contract_end IS NULL THEN NULL
+                     ELSE (d.contract_end
+                           + (coalesce(kd.versatz_tage, kg.versatz_tage, 0)::INT * INTERVAL 1 DAY))::DATE
+                END AS contract_end_kal
+              FROM read_parquet('{tmp}') d
+              LEFT JOIN read_parquet('{KAL}') kd
+                     ON kd.duration_source = d.duration_source AND kd.div = d._div
+              LEFT JOIN read_parquet('{KAL}') kg
+                     ON kg.duration_source = d.duration_source AND kg.div IS NULL
+            ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+        """)
+    else:
+        con.execute(f"""COPY (SELECT * EXCLUDE (_div), 0 AS kal_versatz_tage,
+            NULL::INT AS kal_spanne_tage, contract_end AS contract_end_kal
+            FROM read_parquet('{tmp}')) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
     n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
     con.close()
+    Path(tmp).unlink(missing_ok=True)
     return n
 
 
@@ -2431,6 +2467,11 @@ def build_lead_detail(cfg: Config, country: str = "DE"):
           SELECT l.*,
             vbe.band_effektiv, vbe.band_source, vbe.value_effektiv,
             ld.contract_end   AS contract_end_eff,
+            -- Kalibriertes Ende NEBEN dem rohen: das rohe bleibt nachvollziehbar, das
+            -- kalibrierte sagt, wann die Nachausschreibung erfahrungsgemäß erscheint.
+            ld.contract_end_kal AS contract_end_cal,
+            ld.kal_versatz_tage AS cal_offset_days,
+            ld.kal_spanne_tage  AS cal_spread_days,
             ld.duration_days  AS duration_days_eff,
             ld.duration_source,
             dl.deadline_date, dl.deadline_source,
@@ -2804,9 +2845,16 @@ def build_lead_export(cfg: Config, country: str = "DE"):
             -- Timing: Frist-DATUM + Tage (der eigentliche Alert) und Auslauf in Monaten
             d.deadline_date,
             datediff('day', current_date, d.deadline_date) AS days_to_deadline,
-            d.months_to_expiry,
+            date_diff('month', current_date,
+                      coalesce(d.contract_end_cal, d.contract_end_eff)) AS months_to_expiry,
             d.contract_end_eff                        AS contract_end,
-            datediff('day', current_date, d.contract_end_eff) AS days_to_expiry,
+            -- Zeitrechnung auf dem KALIBRIERTEN Datum: der Nutzer will wissen, wann die
+            -- Nachausschreibung kommt, nicht wann der Vertrag formal endet. Das rohe Ende
+            -- bleibt als `contract_end` daneben stehen.
+            d.contract_end_cal                        AS contract_end_expected,
+            d.cal_offset_days, d.cal_spread_days,
+            datediff('day', current_date,
+                     coalesce(d.contract_end_cal, d.contract_end_eff)) AS days_to_expiry,
             d.faellig_basis                           AS due_basis,
             (NOT coalesce(d.termin_plausibel, true))  AS timing_implausible,
             CASE WHEN NOT coalesce(d.termin_plausibel, true) THEN 'uncertain'
