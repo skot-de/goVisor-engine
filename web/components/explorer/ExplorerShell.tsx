@@ -410,7 +410,11 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     const echt = (l: Lead) => String((l.timing as { src?: string } | undefined)?.src ?? "") === "echt";
     const basis = alleRows.filter((l) => l.src !== "award" && keinBlocker(l));
 
-    const jetzt = basis.filter((l) => l.src === "f02" && l.relevanz === "hoch"
+    // Open House gehört nicht in „Jetzt bewerben": kein Wettbewerb, keine echte Frist —
+    // ein Beitritt ist jederzeit möglich, es drängt nichts. In der Frist-Phase würde es
+    // die echten Ausschreibungen verdrängen (bei Medizin 1.816 von 2.003).
+    const offenesHaus = (l: Lead) => (l as { verfahren?: string }).verfahren === "open_house";
+    const jetzt = basis.filter((l) => l.src === "f02" && l.relevanz === "hoch" && !offenesHaus(l)
       && typeof frist(l) === "number" && (frist(l) as number) >= 3
       && aufwandStufe(l).stufe !== "hoch");
     // „Bald" = Ausschreibung steht in den nächsten ~6 Monaten an: angekündigt ODER
@@ -426,6 +430,8 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     return [
       { key: "jetzt", titel: "Jetzt bewerben", hinweis: "Frist läuft — hier zählt Tempo", rows: jetzt },
       { key: "bald", titel: "Bahnt sich an", hinweis: "angekündigt oder Vertrag endet bald", rows: bald },
+      { key: "offen", titel: "Jederzeit beitretbar", hinweis: "Open House — kein Wettbewerb, keine Frist",
+        rows: basis.filter((l) => passt(l) && offenesHaus(l)) },
       { key: "lang", titel: "Langfristig", hinweis: "Verträge, die in ein bis zwei Jahren auslaufen", rows: lang },
     ];
   }, [alleRows, realProfile, istAkquise, eigenePhasenwahl, vorauswahl]);

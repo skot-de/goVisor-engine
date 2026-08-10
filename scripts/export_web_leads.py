@@ -467,6 +467,10 @@ def export_branche(key):
     for r in rows:
         g = lambda k: (None if (k not in r or r[k] is None or (isinstance(r[k], float) and r[k] != r[k])) else r[k])
         src = SRC.get(g("phase"), "auslauf")
+        # Open House (§130a/§130c SGB V) ist kein Wettbewerb: jederzeit beitretbar, kein
+        # Gewinner, keine echte Frist. Ungetrennt standen 1.899 solcher Dauerverfahren als
+        # „offene Ausschreibung" in der Akquise — bei Medizin 1.816 von 2.003.
+        offenes_haus = g("procedure_kind") == "open_house"
         naturkat = NATURKAT.get(g("contract_nature"))
         rahmen = g("regulatory_regime")
         rahmen = rahmen if rahmen in RAHMEN_OK else None
@@ -553,6 +557,7 @@ def export_branche(key):
             "is_nationwide": bool(g("is_nationwide")),
             "contractKind": g("contract_kind"),
             "istRahmen": ist_rahmen,
+            "verfahren": "open_house" if offenes_haus else "wettbewerb",
             "naturKat": naturkat or "dienst",
             "rahmen": rahmen,
             "volumen": {"wert": eur(g("value_eur")) or "Wert offen",

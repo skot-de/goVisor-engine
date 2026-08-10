@@ -445,16 +445,38 @@ def build_quality(cfg: Config, country: str = "DE"):
                  -- (offener Beitritt), KEIN erfolgloses Verfahren → eigener Status, fällt
                  -- aus dem Chancen-Radar/der Chronik.
                  WHEN notice_kind='can' AND NOT has_winner
-                      AND (lower(title) LIKE '%rabatt%' OR lower(title) LIKE '%130a%'
-                           OR lower(title) LIKE '%open%house%') THEN 'open_house'
+                      AND {_open_house_sql()} THEN 'open_house'
                  WHEN notice_kind='can' AND NOT has_award THEN 'erfolglos'
-                 WHEN notice_kind='can' THEN 'unbekannt' END AS verfahren_status
+                 WHEN notice_kind='can' THEN 'unbekannt'
+                 -- NEU: auch die AUSSCHREIBUNGSSEITE markieren. Bisher lief der Status nur
+                 -- auf Zuschlägen, weshalb 1.816 offene Open-House-Verfahren unerkannt in
+                 -- der Akquise standen.
+                 WHEN notice_kind IN ('cn','pin') AND {_open_house_sql()} THEN 'open_house'
+                 END AS verfahren_status
           FROM q
         ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
     """)
     n = con.execute(f"SELECT count(*) FROM '{out}' WHERE len(quality_flags)>0").fetchone()[0]
     con.close()
     return n
+
+
+def _open_house_sql(title_col: str = "title") -> str:
+    """Erkennt Open-House-Verfahren (§130a/§130c SGB V) am Titel.
+
+    Open House ist kein Wettbewerb: jeder Anbieter kann jederzeit beitreten, es gibt keinen
+    Gewinner und keine echte Angebotsfrist. Die „Frist" steht deshalb oft Jahre in der
+    Zukunft — gemessen bei den offenen Medizin-Leads Median 273 Tage, Maximum 1.278.
+    Ungetrennt schwemmen 1.816 solcher Dauerverfahren die Akquise eines Medizin-Kunden zu
+    und verdrängen die ~200 echten Ausschreibungen pro Monat.
+
+    Das Muster steht hier EINMAL, weil es an zwei Stellen gebraucht wird: in `quality`
+    (Zuschlagsseite, `verfahren_status`) und in `lead_export` (Ausschreibungsseite). Zwei
+    Kopien würden auseinanderlaufen.
+    """
+    t = f"lower({title_col})"
+    return (f"({t} LIKE '%rabatt%' OR {t} LIKE '%130a%' OR {t} LIKE '%130c%' "
+            f"OR {t} LIKE '%open%house%')")
 
 
 def build_review_queue(cfg: Config, country: str = "DE"):
@@ -2855,6 +2877,12 @@ def build_lead_export(cfg: Config, country: str = "DE"):
             d.cal_offset_days, d.cal_spread_days,
             datediff('day', current_date,
                      coalesce(d.contract_end_cal, d.contract_end_eff)) AS days_to_expiry,
+            -- Verfahrensart: Open House ist kein Wettbewerb (jederzeit beitretbar, kein
+            -- Gewinner, keine echte Frist). Hier aus dem Titel bestimmt — dasselbe Muster
+            -- wie in `quality.verfahren_status`, aber auch für offene Ausschreibungen, wo
+            -- der Status bisher gar nicht gesetzt wurde.
+            CASE WHEN {_open_house_sql('d.titel')} THEN 'open_house' ELSE 'wettbewerb' END
+                                                      AS procedure_kind,
             d.faellig_basis                           AS due_basis,
             (NOT coalesce(d.termin_plausibel, true))  AS timing_implausible,
             CASE WHEN NOT coalesce(d.termin_plausibel, true) THEN 'uncertain'
