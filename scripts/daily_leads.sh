@@ -125,6 +125,11 @@ if $PY scripts/export_web_leads.py; then
   # neu gebaut werden, sonst findet die Stadtsuche im Frontend nichts mehr.
   $PY scripts/build_city_index.py || echo "  ⚠ Stadt-Index nicht gebaut — Umkreissuche über Städte fällt aus."
   $PY scripts/export_suppliers.py || echo "  ⚠ Lieferanten-Index nicht gebaut — Onboarding-Matching bleibt auf altem Stand."
+  # Strategie-Aggregate: eigener Export, weil er 36 Monate braucht (unternehmerische
+  # Planung), während die Lead-Liste auf 24 gedeckelt ist (Handlungsrelevanz). Fehlte
+  # bisher im Tageslauf — /api/strategie las deshalb einen Stand vom 28. Juli.
+  $PY scripts/export_strategie.py >/dev/null \
+    || echo "  ⚠ Strategie-Aggregate nicht gebaut — die Strategie-Ansicht bleibt auf altem Stand."
   echo "  Frontend-Daten ok."
 else
   echo "  ✖ Frontend-Export fehlgeschlagen — die App zeigt weiter den alten Stand."
