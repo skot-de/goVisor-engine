@@ -140,8 +140,8 @@ def rows(notice: schema.Notice, raw: bytes, country: str, year: int, month: int)
         # kann das nicht leisten — dort werden Text und Sprachcode zu getrennten Zeilen
         # ohne Positionsindex und sind nachträglich nicht mehr zuzuordnen.
         "notice_text": [
-            {"notice_id": nid, "lot_id": lot_id, "feld": feld,
-             "language": lang, "wert": wert}
+            {"notice_id": nid, "lot_id": lot_id, "field": feld,
+             "language": lang, "value": wert}
             for lot_id, feld, lang, wert in (getattr(notice, "texts", None) or [])
         ],
     }

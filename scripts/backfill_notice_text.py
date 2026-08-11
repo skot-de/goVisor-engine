@@ -46,8 +46,8 @@ SCHEMA = model.TABLES["notice_text"]
 
 def _zeilen(notice) -> list[dict]:
     nid = notice.notice_id
-    return [{"notice_id": nid, "lot_id": lot_id, "feld": feld,
-             "language": lang, "wert": wert}
+    return [{"notice_id": nid, "lot_id": lot_id, "field": feld,
+             "language": lang, "value": wert}
             for lot_id, feld, lang, wert in (getattr(notice, "texts", None) or [])]
 
 

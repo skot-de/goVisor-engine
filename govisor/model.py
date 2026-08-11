@@ -173,9 +173,9 @@ ATTRIBUTES = pa.schema([
 NOTICE_TEXT = pa.schema([
     ("notice_id", pa.string()),
     ("lot_id", pa.string()),        # NULL = Notice-Ebene
-    ("feld", pa.string()),          # 'title' | 'description'
+    ("field", pa.string()),         # 'title' | 'description' | 'cpv_label'
     ("language", pa.string()),      # ISO-639-3, wie im XML (FRA/NLD/DEU/ENG …)
-    ("wert", pa.string()),
+    ("value", pa.string()),
 ])
 
 # Tabellenname → Schema. Der Silber-Builder schreibt je eine Parquet-Datei.

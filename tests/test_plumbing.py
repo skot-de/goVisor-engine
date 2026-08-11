@@ -1235,7 +1235,7 @@ def test_notice_text_landet_in_der_silber_tabelle():
 
     assert "notice_text" in model.TABLES, "Tabelle nicht registriert"
     assert model.TABLES["notice_text"].names == [
-        "notice_id", "lot_id", "feld", "language", "wert"]
+        "notice_id", "lot_id", "field", "language", "value"]
 
     notice = schema.Notice(
         notice_id="x_2026", schema="eforms", form_type="cn", country="BE",
@@ -1247,7 +1247,7 @@ def test_notice_text_landet_in_der_silber_tabelle():
     assert len(r["notice_text"]) == 3
     assert {z["language"] for z in r["notice_text"]} == {"FRA", "NLD", "ENG"}
     lot = [z for z in r["notice_text"] if z["lot_id"] == "LOT-1"][0]
-    assert lot["feld"] == "description" and lot["wert"] == "Supply"
+    assert lot["field"] == "description" and lot["value"] == "Supply"
 
 
 def test_notice_text_ids_sind_kanonisch():

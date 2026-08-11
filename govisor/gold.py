@@ -3111,7 +3111,7 @@ def build_lead_text(cfg: Config, country: str = "DE"):
     2011), das Frontend zeigt aber nur die Lead-Auswahl — ungefiltert waere die Tabelle
     zwanzigmal so gross wie noetig.
 
-    Schreibt `lead_text` (lead_id, lot_id, feld, language, wert), 1:n zu
+    Schreibt `lead_text` (lead_id, lot_id, field, language, value), 1:n zu
     `lead_export.lead_id`. Sprachcodes sind ISO-639-1 klein (s. `govisor/languages.py`).
     """
     import duckdb
@@ -3126,7 +3126,7 @@ def build_lead_text(cfg: Config, country: str = "DE"):
         # Sprachfassungen bekannt".
         con = duckdb.connect()
         con.execute(f"""COPY (SELECT NULL::VARCHAR lead_id, NULL::VARCHAR lot_id,
-            NULL::VARCHAR feld, NULL::VARCHAR language, NULL::VARCHAR wert WHERE false)
+            NULL::VARCHAR field, NULL::VARCHAR language, NULL::VARCHAR value WHERE false)
             TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
         con.close()
         return 0
@@ -3134,11 +3134,11 @@ def build_lead_text(cfg: Config, country: str = "DE"):
     con = duckdb.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
-          SELECT t.notice_id AS lead_id, t.lot_id, t.feld, t.language, t.wert
+          SELECT t.notice_id AS lead_id, t.lot_id, t.field, t.language, t.value
           FROM read_parquet('{T}', hive_partitioning=1) t
           JOIN (SELECT DISTINCT lead_id FROM read_parquet('{E}')) e
             ON e.lead_id = t.notice_id
-          WHERE t.wert IS NOT NULL AND t.language IS NOT NULL
+          WHERE t.value IS NOT NULL AND t.language IS NOT NULL
         ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
     """)
     n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]

@@ -685,15 +685,15 @@ def export_branche(key):
     if LT and leads:
         ph2 = ",".join("?" for _ in leads)
         for lid, feld, lang, wert in con.execute(f'''
-                SELECT lead_id, feld, language, wert FROM {LT}
+                SELECT lead_id, field, language, value FROM {LT}
                 WHERE lead_id IN ({ph2}) AND lot_id IS NULL
                   -- NUR Titel und Beschreibung. `cpv_label` ist die uebersetzte
                   -- CPV-Kategorie, keine Fassung des Dokuments: sie steht in 24 Sprachen
                   -- auch dann da, wenn es nur EINEN Titel gibt. Ungefiltert bekaemen
                   -- gemessen 554 Leads eine Sprachwahl vorgegaukelt — mehr als die 76,
                   -- die wirklich eine haben.
-                  AND feld IN ('title', 'description')
-                ORDER BY lead_id, feld, language''',
+                  AND field IN ('title', 'description')
+                ORDER BY lead_id, field, language''',
                 [l["id"] for l in leads]).fetchall():
             sprachen.setdefault(lid, [])
             if lang not in sprachen[lid]:
