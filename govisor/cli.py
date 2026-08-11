@@ -473,6 +473,7 @@ def main(argv: list[str] | None = None) -> int:
         # Nebentabellen zu sitzen. Reihenfolge zaehlt: beide joinen auf lead_export.
         print("lead-cpv    :", f"{gold.build_lead_cpv(cfg, c):,} CPV-Zeilen (alle CPV je Lead)")
         print("lead-lot    :", f"{gold.build_lead_lot(cfg, c):,} Lose (Inhalts-Layer: 2/3 des Freitexts)")
+        print("lead-text   :", f"{gold.build_lead_text(cfg, c):,} Sprachfassungen (Dokumentsprache je Lead)")
         print("lead-krit.  :", f"{gold.build_lead_criteria(cfg, c):,} Zuschlagskriterien (Preis vs. Konzept)")
         print("lead-anford.:", f"{gold.build_lead_requirement(cfg, c):,} Eignungsanforderungen (darf ich bieten?)")
         print("lead-partei :", f"{gold.build_lead_party(cfg, c):,} Beteiligte (Kontakt der Vergabestelle)")

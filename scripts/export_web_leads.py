@@ -67,6 +67,12 @@ E = _union("lead_export", key="lead_id")
 CL = f"read_parquet('{G}/dim_cpv_label.parquet')"
 DC = f"read_parquet('{G}/dim_cpv.parquet')"
 LOTS = f"read_parquet('{G}/lead_lot.parquet')"
+# Sprachfassungen je Lead. Ohne sie kann die Oberflaeche keine Dokumentsprache
+# anbieten, obwohl die Texte im Silber liegen. Guard: fehlt die Tabelle (Gold aelter
+# als der Builder), bleibt es beim einsprachigen Verhalten statt eines Laufzeitfehlers.
+_LT = [str(x) for x in pathlib.Path("data/gold").glob("*/lead_text.parquet")]
+LT = (f"read_parquet([{', '.join(repr(x) for x in sorted(_LT))}], union_by_name=true)"
+      if _LT else None)
 BS = f"read_parquet('{G}/buyer_stats.parquet')"
 ATTR = "read_parquet('data/silver/DE/attributes/*/*.parquet', hive_partitioning=1)"
 MO = f"read_parquet('{G}/market_opportunity.parquet')"
@@ -671,6 +677,23 @@ def export_branche(key):
     seg = segments()
     for l in leads:
         l["marktSegment"] = seg.get((l.get("cpv") or "")[:4])
+    # Sprachfassungen nachladen: die Liste bekommt nur die Sprach-CODES (kompakt, fuer
+    # einen Umschalter), die Texte selbst wandern ins Detail — sonst blaeht sich die
+    # Listen-Payload um ein Vielfaches auf (563 Leads fuehren 24 Sprachen).
+    sprachen: dict[str, list[str]] = {}
+    fassungen: dict[str, dict] = {}
+    if LT and leads:
+        ph2 = ",".join("?" for _ in leads)
+        for lid, feld, lang, wert in con.execute(f'''
+                SELECT lead_id, feld, language, wert FROM {LT}
+                WHERE lead_id IN ({ph2}) AND lot_id IS NULL
+                ORDER BY lead_id, feld, language''',
+                [l["id"] for l in leads]).fetchall():
+            sprachen.setdefault(lid, [])
+            if lang not in sprachen[lid]:
+                sprachen[lid].append(lang)
+            fassungen.setdefault(lid, {}).setdefault(lang, {})[feld] = wert
+
     detail = {}
     for l in leads:
         # Beschreibung bleibt AM Lead (nicht ausgelagert): sie ist der eigentliche Inhalt und
@@ -679,8 +702,14 @@ def export_branche(key):
         # 2.000 Zeichen deckeln — der Volltext liegt ohnehin in den Vergabeunterlagen.
         if l.get("beschreibung") and len(l["beschreibung"]) > 2000:
             l["beschreibung"] = l["beschreibung"][:2000] + " …"
+        # Nur ansagen, wenn es wirklich eine Wahl gibt: eine einzige Fassung ist keine
+        # Sprachwahl, sondern nur die Sprache, in der die Vergabe veroeffentlicht wurde.
+        sp = sprachen.get(l["id"]) or []
+        if len(sp) > 1:
+            l["sprachen"] = sp
         detail[l["id"]] = {"buyerProfile": l.pop("buyerProfile", None),
-                           "marktSegment": l.pop("marktSegment", None)}
+                           "marktSegment": l.pop("marktSegment", None),
+                           "sprachfassungen": fassungen.get(l["id"]) if len(sp) > 1 else None}
     (OUT / f"leads-{key}.json").write_text(json.dumps(leads, ensure_ascii=False, sort_keys=True))
     (OUT / f"detail-{key}.json").write_text(json.dumps(detail, ensure_ascii=False, sort_keys=True))
     return len(leads)

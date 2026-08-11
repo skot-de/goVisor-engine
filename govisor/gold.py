@@ -3098,6 +3098,54 @@ def build_lead_lot(cfg: Config, country: str = "DE"):
     return n
 
 
+def build_lead_text(cfg: Config, country: str = "DE"):
+    """**Sprachfassungen je Lead** — damit die App eine Dokumentsprache anbieten kann.
+
+    `lead_export` fuehrt genau EINEN Titel und EINE Beschreibung. Solange das so bleibt,
+    kann die Oberflaeche keine Sprachwahl anbieten, auch wenn die Fassungen im Silber
+    liegen (`notice_text`, 35,3 Mio. Zeilen ueber 24 Sprachen). Diese Tabelle reicht sie
+    bis auf die Lead-Ebene durch.
+
+    Gefiltert auf das, was das Frontend wirklich braucht: nur Leads, die es auch in
+    `lead_export` gibt. `notice_text` deckt den ganzen Bestand ab (auch Zuschlaege von
+    2011), das Frontend zeigt aber nur die Lead-Auswahl — ungefiltert waere die Tabelle
+    zwanzigmal so gross wie noetig.
+
+    Schreibt `lead_text` (lead_id, lot_id, feld, language, wert), 1:n zu
+    `lead_export.lead_id`. Sprachcodes sind ISO-639-1 klein (s. `govisor/languages.py`).
+    """
+    import duckdb
+
+    g = cfg.gold_dir / country
+    out = (g / "lead_text.parquet").as_posix()
+    T = cfg.silver_table_glob("notice_text", country)
+    E = (g / "lead_export.parquet").as_posix()
+    if not list((cfg.silver_dir / country / "notice_text").glob("*/*.parquet")):
+        # Ohne Silber-Tabelle eine LEERE Datei schreiben, nicht gar keine: der Exporter
+        # joint sie, und eine fehlende Datei waere ein Laufzeitfehler statt „keine
+        # Sprachfassungen bekannt".
+        con = duckdb.connect()
+        con.execute(f"""COPY (SELECT NULL::VARCHAR lead_id, NULL::VARCHAR lot_id,
+            NULL::VARCHAR feld, NULL::VARCHAR language, NULL::VARCHAR wert WHERE false)
+            TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
+        con.close()
+        return 0
+
+    con = duckdb.connect(); con.execute("SET threads=4")
+    con.execute(f"""
+        COPY (
+          SELECT t.notice_id AS lead_id, t.lot_id, t.feld, t.language, t.wert
+          FROM read_parquet('{T}', hive_partitioning=1) t
+          JOIN (SELECT DISTINCT lead_id FROM read_parquet('{E}')) e
+            ON e.lead_id = t.notice_id
+          WHERE t.wert IS NOT NULL AND t.language IS NOT NULL
+        ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    con.close()
+    return n
+
+
 def build_doe_buyer_profile(cfg: Config, country: str = "DE"):
     """Käufer-Profil für den **Unterschwellenmarkt** (DÖE) — die neue Analyse-Ebene.
 

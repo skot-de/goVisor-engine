@@ -1335,3 +1335,33 @@ def test_sprachcodes_sind_kanonisch():
                 WHERE language IS NOT NULL""").fetchall()
             schlecht = [r[0] for r in roh if r[0] != languages.normalize(r[0])]
             assert not schlecht, f"{land}/{tabelle}: nicht kanonisch — {schlecht[:5]}"
+
+
+def test_lead_text_reicht_sprachfassungen_bis_zum_frontend():
+    """Die Kette Silber → Gold → JSON muss halten, sonst nuetzt notice_text nichts.
+
+    `lead_export` fuehrt genau EINEN Titel. Solange nur der exportiert wird, kann die
+    Oberflaeche keine Dokumentsprache anbieten, obwohl 35,3 Mio. Fassungen im Silber
+    liegen. `build_lead_text` filtert sie auf die Lead-Auswahl (ungefiltert waere die
+    Tabelle rund zwanzigmal so gross wie noetig).
+
+    Der Export sagt eine Sprachwahl nur an, wo es wirklich eine gibt: eine einzige Fassung
+    ist keine Wahl, sondern nur die Sprache der Veroeffentlichung.
+    """
+    import pathlib as _pl
+
+    from govisor import gold
+
+    assert hasattr(gold, "build_lead_text"), "Builder fehlt"
+    quelle = _pl.Path("govisor/cli.py").read_text()
+    assert "build_lead_text" in quelle, "Builder nicht in die CLI-Gold-Kette verdrahtet"
+    exporter = _pl.Path("scripts/export_web_leads.py").read_text()
+    assert "sprachfassungen" in exporter, "Sprachfassungen erreichen den Frontend-Export nicht"
+
+    import json
+    for f in sorted(_pl.Path("web/data").glob("leads-*.json")):
+        for lead in json.loads(f.read_text()):
+            sp = lead.get("sprachen")
+            if sp is not None:
+                assert len(sp) > 1, f"{lead['id']}: Sprachwahl mit nur {sp}"
+                assert all(s == s.lower() and len(s) == 2 for s in sp), sp
