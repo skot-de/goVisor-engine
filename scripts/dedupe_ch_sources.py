@@ -58,7 +58,11 @@ from govisor import verify  # noqa: E402  (Pfad muss zuerst stehen)
 # Exit-Codes, damit der Tageslauf „übersprungen" von „kaputt" unterscheiden kann.
 EXIT_OK, EXIT_FEHLER, EXIT_UEBERSPRUNGEN = 0, 1, 2
 
-MIN_VOLLSTAENDIG = 0.90   # Anteil der laut TED-API erwarteten Notices je Monat
+MIN_VOLLSTAENDIG = 0.97   # Anteil der laut TED-API erwarteten Notices je JAHR.
+# 97 statt der frueheren 90 %: auf Jahresebene ist die Streuung winzig (gemessen liegen
+# alle elf CH-Jahre zwischen 99,8 und 100,7 %), waehrend ein echtes Loch deutlich tiefer
+# faellt. 90 % waere hier zu lax — 2025 stand mit fehlendem Dezember bei 92,4 % und haette
+# die Pruefung passiert.
 
 SILVER_CH = "data/silver/CH/notices/*/*.parquet"
 OUT = ROOT / "data" / "gold" / "CH" / "ted_dedup.parquet"
@@ -122,11 +126,27 @@ def vollstaendig(von: str, bis: str) -> tuple[bool, str]:
 
     Ein Abgleich auf halbem Bestand ist schlimmer als keiner: er stuft Notices als „neu"
     ein, die schlicht noch nicht geholt wurden — und wer das Ergebnis benutzt, nimmt
-    Dubletten auf. Gemessen wird gegen die TED-API, denselben Maßstab, den auch der
-    Backfill und `verify` verwenden.
+    Dubletten auf.
+
+    **Gemessen wird je JAHR, nicht je Monat** — und das ist eine Korrektur, keine
+    Bequemlichkeit. Unser Bestand ist nach dem XML-`publication_date` einsortiert, die
+    TED-API zählt nach ihrer eigenen Publikations-Facette, und die beiden trennen den Monat
+    an unterschiedlichen Tagen. Ein Monatsvergleich meldet deshalb Löcher, die keine sind:
+    CH 2023-10 stand bei 88,1 %, CH 2024-07 bei 89,9 % — beide sind ID-geprüft **zu 100 %
+    vollständig** (774/774 bzw. 901/901). Die fehlenden Notices lagen im Vormonat, weil ihr
+    XML-Datum auf den 29./30. fiel. Sichtbar wird das am Muster: vor jedem vermeintlichen
+    Loch steht ein Überhang (2023-09 bei 113 %, 2024-06 bei 108,7 %).
+
+    Auf Jahresebene heben sich diese Randeffekte auf: nach der Reparatur liegen alle elf
+    CH-Jahre zwischen 99,8 % und 100,7 %. Ein echtes Loch bleibt trotzdem sichtbar — 2020
+    stand bei 0 %, 2025 bei 92,4 %, als der Dezember fehlte.
+
+    Bleibt ein Jahr zurück, werden zur Eingrenzung die schwächsten Monate genannt. Die sind
+    dann als **Hinweis** zu lesen, nicht als Urteil; das Urteil fällt die Jahreszahl.
     """
     con = duckdb.connect()
-    luecken = []
+    jahre: dict[int, list[int]] = {}
+    monatsstand: list[tuple[str, int, int]] = []
     for j, m in monate(von, bis):
         soll = verify.api_count(j, m, country="CHE")
         if soll is None or soll == 0:
@@ -140,13 +160,24 @@ def vollstaendig(von: str, bis: str) -> tuple[bool, str]:
             """).fetchone()[0]
         except duckdb.IOException:
             ist = 0
-        if ist < soll * MIN_VOLLSTAENDIG:
-            luecken.append(f"{j}-{m:02d} ({ist}/{soll})")
+        acc = jahre.setdefault(j, [0, 0])
+        acc[0] += ist
+        acc[1] += soll
+        monatsstand.append((f"{j}-{m:02d}", ist, soll))
         time.sleep(0.2)                   # höflich zur API
     con.close()
-    if luecken:
-        return False, f"{len(luecken)} unvollständige Monate: " + ", ".join(luecken[:6])
-    return True, "vollständig"
+
+    schwach = [(j, i, s) for j, (i, s) in sorted(jahre.items()) if i < s * MIN_VOLLSTAENDIG]
+    if not schwach:
+        return True, f"vollständig ({len(jahre)} Jahre geprüft)"
+
+    teile = []
+    for j, i, s in schwach:
+        mon = sorted((x for x in monatsstand if x[0].startswith(str(j))),
+                     key=lambda x: x[1] / max(x[2], 1))[:3]
+        hinweis = ", ".join(f"{mo} {a}/{b}" for mo, a, b in mon)
+        teile.append(f"{j}: {i:,}/{s:,} — schwächste Monate: {hinweis}")
+    return False, f"{len(schwach)} unvollständige Jahre\n  " + "\n  ".join(teile)
 
 
 def main(von: str, bis: str, ohne_pruefung: bool = False) -> int:
