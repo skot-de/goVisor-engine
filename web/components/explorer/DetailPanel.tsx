@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   LEADS, WF, STAR, applyState,
   renderUebersicht, renderTeilnahme, renderAnalyse, renderMarkt, renderBuyer,
@@ -10,6 +10,7 @@ import { downloadDoc, downloadMarkdown, copyMarkdown } from "@/lib/dossier";
 import { track, EV } from "@/lib/analytics";
 import { markWonFromLead, loadContracts } from "@/lib/supabase/contracts";
 import { setUserContracts } from "@/lib/explorerCore";
+import { sprachName, useSprache } from "@/lib/i18n";
 
 type Lead = {
   id: string; src: string; phaseLabel: string; cpvLabel: string; titel: string;
@@ -62,6 +63,11 @@ export function DetailPanel({
   onBodyAction: (action: string, value: string, el: HTMLElement) => void;
 }) {
   const wf = WF as Record<string, { label: string; cls: string }>;
+  const { t } = useSprache();
+  // Gewaehlte Dokumentsprache. `null` = Originalfassung, also das, was `titel` traegt.
+  // Beim Leadwechsel zuruecksetzen: die Wahl gilt fuer DIESE Ausschreibung, nicht global.
+  const [docLang, setDocLang] = useState<string | null>(null);
+  useEffect(() => { setDocLang(null); }, [activeId]);
 
   const bodyHtml = useMemo(() => {
     if (!activeId) return "";
@@ -89,6 +95,13 @@ export function DetailPanel({
   if (!activeId) return <LeerBriefing rows={rows} alle={alle} onPick={onPickLead} onGoto={onGoto} />;
 
   const l = (LEADS as Lead[]).find((x) => x.id === activeId)!;
+  // Sprachfassungen kommen aus dem Detail-JSON (per Object.assign an den Lead gehaengt).
+  // Fehlen sie, bleibt alles beim einsprachigen Verhalten — kein Sonderfall im Markup.
+  const sprachen: string[] = Array.isArray((l as { sprachen?: string[] }).sprachen)
+    ? (l as { sprachen?: string[] }).sprachen! : [];
+  const fassungen = (l as { sprachfassungen?: Record<string, { title?: string; description?: string }> })
+    .sprachfassungen ?? {};
+  const titelAnzeige = (docLang && fassungen[docLang]?.title) || l.titel;
   const analysed = l.status === "analysiert";
   const isFree = accountLimit;
 
@@ -194,8 +207,23 @@ export function DetailPanel({
           </div>
         ) : null}
 
+        {/* Dokumentsprache — nur wo es wirklich eine Wahl gibt. Getrennt von der
+            Oberflaechensprache: hier geht es um den INHALT der Ausschreibung. Ein
+            Schweizer Lead liegt auf de+fr vor, ein belgischer auf fr+nl. */}
+        {sprachen.length > 1 ? (
+          <div className="doclang" role="group" aria-label={t("sprache.dokument")}>
+            <span>{t("sprache.dokument")}</span>
+            {sprachen.map((code) => (
+              <button key={code} type="button"
+                onClick={() => setDocLang(code === docLang ? null : code)}
+                aria-pressed={code === docLang}
+                className={code === docLang ? "is-an" : ""}>{sprachName(code, t)}</button>
+            ))}
+          </div>
+        ) : null}
+
         <div className="dtitle">
-          <h2>{l.titel}</h2>
+          <h2>{titelAnzeige}</h2>
           <div className="wfpick">
             {Object.entries(wf).map(([k, v]) => (
               <button key={k} className={`wf ${v.cls} ${l.userStatus === k ? "on" : ""}`} onClick={() => onWf(k)}>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import { copy } from "@/lib/copy";
 import "./globals.css";
+import { SprachProvider } from "@/lib/i18n";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -33,7 +34,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de" className={`${archivo.variable} ${plexMono.variable}`}>
-      <body>{children}</body>
+      {/* `lang` bleibt hier "de": das ist die Server-Ausgabe. Der SprachProvider setzt es
+          nach dem ersten Rendern auf die gewaehlte Sprache um — so gibt es keinen
+          Hydration-Konflikt zwischen Server- und Client-Markup. */}
+      <body><SprachProvider>{children}</SprachProvider></body>
     </html>
   );
 }

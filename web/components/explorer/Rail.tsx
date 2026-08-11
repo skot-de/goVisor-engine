@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { logout } from "@/lib/supabase/auth";
+import { SPRACHEN, sprachName, useSprache } from "@/lib/i18n";
 
 /* Die Hauptnavigation — EINE Quelle für alle Seiten.
  *
@@ -44,13 +45,16 @@ const ICON: Record<RailId, React.ReactNode> = {
 
 // Gruppiert nach Aufgabe, nicht nach Technik — drei Paare: täglicher Trichter ·
 // Markt verstehen · was wir mitbringen. `sep` markiert den Schnitt NACH dem Eintrag.
-const NAV: { id: RailId; label: string; zweck: string; href: string; sep?: boolean }[] = [
-  { id: "akquise", label: "Akquise", zweck: "worauf ihr euch jetzt bewerben könnt", href: "/leads" },
-  { id: "merkliste", label: "Merkliste", zweck: "was ihr verfolgt — Termine und Stand", href: "/watchlist", sep: true },
-  { id: "netzwerk", label: "Netzwerk", zweck: "wo ihr Verbindungen in den Markt habt", href: "/network" },
-  { id: "strategie", label: "Strategie", zweck: "wohin sich euer Markt bewegt", href: "/strategy", sep: true },
-  { id: "unternehmen", label: "Unternehmen", zweck: "euer Profil, eure Bilanz, eure Chancen", href: "/unternehmen" },
-  { id: "bausteine", label: "Bausteine", zweck: "eure Textbausteine fürs Angebot", href: "/bausteine" },
+// Beschriftung und Zweck kommen aus dem Sprachkatalog (`lib/i18n/messages/*.json`),
+// nicht aus dieser Datei — sonst muesste fuer jede weitere Sprache der Code angefasst
+// werden. Hier bleibt nur, was sprachunabhaengig ist: Reihenfolge, Ziel, Trennstrich.
+const NAV: { id: RailId; href: string; sep?: boolean }[] = [
+  { id: "akquise", href: "/leads" },
+  { id: "merkliste", href: "/watchlist", sep: true },
+  { id: "netzwerk", href: "/network" },
+  { id: "strategie", href: "/strategy", sep: true },
+  { id: "unternehmen", href: "/unternehmen" },
+  { id: "bausteine", href: "/bausteine" },
 ];
 
 // In-App umschaltbar sind nur die Ansichten der Shell; die anderen zwei sind eigene Routen.
@@ -70,6 +74,7 @@ export function AppRail({
   userEmail?: string | null;
   onLogout?: () => void;
 }) {
+  const { t, lang, setLang } = useSprache();
   const [planOpen, setPlanOpen] = useState(false);
   // Die Shell reicht ihren bereits geladenen Kontostand durch; eigenständige Seiten
   // haben keinen — die holen ihn hier selbst, damit das Konto überall erreichbar bleibt.
@@ -99,19 +104,21 @@ export function AppRail({
   return (
     <nav className="rail" aria-label="Navigation">
       {NAV.map((n) => {
+        const label = t(`nav.${n.id}`);
+        const zweck = t(`nav.${n.id}Zweck`);
         const inner = (<>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
             {ICON[n.id]}
           </svg>
-          <span className="vb-lbl">{n.label}<em>{n.zweck}</em></span>
+          <span className="vb-lbl">{label}<em>{zweck}</em></span>
           {n.id === "merkliste" && merkN ? <span className="railcount">{merkN}</span> : null}
         </>);
         const aktiv = current === n.id ? "true" : undefined;
         const btn = onSwitch && IN_APP.includes(n.id) ? (
-          <button key={n.id} className="viewbtn" aria-label={n.label} aria-current={aktiv}
+          <button key={n.id} className="viewbtn" aria-label={label} aria-current={aktiv}
             onClick={() => onSwitch(n.id)}>{inner}</button>
         ) : (
-          <Link key={n.id} className="viewbtn raillink" href={n.href} aria-label={n.label} aria-current={aktiv}>
+          <Link key={n.id} className="viewbtn raillink" href={n.href} aria-label={label} aria-current={aktiv}>
             {inner}
           </Link>
         );
@@ -146,6 +153,16 @@ export function AppRail({
                   <em>Bewertung, Vergabestellen-Dossier &amp; Markt ohne Limit</em>
                 </Link>
               ) : null}
+              {/* Sprache steht im Konto-Menue, nicht in einer eigenen Ecke: es ist eine
+                  Nutzereinstellung wie der Plan, und hier sucht man sie. */}
+              <div className="pm-lang" role="group" aria-label={t("sprache.app")}>
+                <span>{t("sprache.app")}</span>
+                {SPRACHEN.map((s) => (
+                  <button key={s} type="button" onClick={() => setLang(s)}
+                    aria-pressed={s === lang} className={s === lang ? "is-an" : ""}
+                    title={sprachName(s, t)}>{s.toUpperCase()}</button>
+                ))}
+              </div>
               <Link className="pm-item" href="/settings" onClick={() => setPlanOpen(false)}>Einstellungen</Link>
               <Link className="pm-item" href="/settings?sek=zahlung" onClick={() => setPlanOpen(false)}>Zahlung &amp; Rechnungen</Link>
               <Link className="pm-item" href="/unternehmen" onClick={() => setPlanOpen(false)}>Unser Unternehmen</Link>

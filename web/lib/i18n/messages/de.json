@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "akquise": "Akquise",
+    "akquiseZweck": "worauf ihr euch jetzt bewerben könnt",
+    "merkliste": "Merkliste",
+    "merklisteZweck": "was ihr verfolgt — Termine und Stand",
+    "netzwerk": "Netzwerk",
+    "netzwerkZweck": "wo ihr Verbindungen in den Markt habt",
+    "strategie": "Strategie",
+    "strategieZweck": "wohin sich euer Markt bewegt",
+    "unternehmen": "Unternehmen",
+    "unternehmenZweck": "euer Profil, eure Bilanz, eure Chancen",
+    "bausteine": "Bausteine",
+    "bausteineZweck": "eure Textbausteine fürs Angebot"
+  },
+  "sprache": {
+    "app": "Sprache",
+    "dokument": "Dokumentsprache",
+    "dokumentHinweis": "Diese Ausschreibung liegt in {n} Sprachen vor.",
+    "original": "Originalfassung",
+    "de": "Deutsch", "en": "Englisch", "fr": "Französisch", "it": "Italienisch",
+    "nl": "Niederländisch", "es": "Spanisch", "pt": "Portugiesisch", "pl": "Polnisch",
+    "cs": "Tschechisch", "da": "Dänisch", "sv": "Schwedisch", "fi": "Finnisch",
+    "el": "Griechisch", "hu": "Ungarisch", "ro": "Rumänisch", "bg": "Bulgarisch",
+    "sk": "Slowakisch", "sl": "Slowenisch", "hr": "Kroatisch", "et": "Estnisch",
+    "lv": "Lettisch", "lt": "Litauisch", "mt": "Maltesisch", "ga": "Irisch"
+  }
+}
