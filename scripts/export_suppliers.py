@@ -64,16 +64,16 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE w AS
 con.execute(f"""CREATE OR REPLACE TEMP TABLE tops AS
   SELECT identity_id, count(DISTINCT notice_id) AS wins
   FROM w GROUP BY 1 HAVING count(DISTINCT notice_id) >= {MIN_WINS}
-  ORDER BY 2 DESC LIMIT {MAX_ROWS}""")
+  ORDER BY 2 DESC, identity_id LIMIT {MAX_ROWS}""")
 
 # Repräsentativer Name = häufigster canonical_name der Gruppe; Aliase = die übrigen
 con.execute("""CREATE OR REPLACE TEMP TABLE namen AS
   WITH cnt AS (SELECT identity_id, canonical_name, count(*) c FROM w
                WHERE canonical_name IS NOT NULL GROUP BY 1,2),
-  rk AS (SELECT *, row_number() OVER (PARTITION BY identity_id ORDER BY c DESC, length(canonical_name)) rn FROM cnt)
+  rk AS (SELECT *, row_number() OVER (PARTITION BY identity_id ORDER BY c DESC, length(canonical_name), canonical_name) rn FROM cnt)
   SELECT identity_id,
          max(canonical_name) FILTER (WHERE rn = 1) AS name,
-         list(DISTINCT canonical_name) AS aliase
+         list(DISTINCT canonical_name ORDER BY canonical_name) AS aliase
   FROM rk WHERE identity_id IN (SELECT identity_id FROM tops) GROUP BY 1""")
 
 # Top-CPV-Felder je Identität (Schwerpunkte)
@@ -81,9 +81,9 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE felder AS
   WITH c AS (SELECT identity_id, cpv4, count(*) n FROM w
              WHERE cpv4 IS NOT NULL AND cpv4 <> '' AND identity_id IN (SELECT identity_id FROM tops)
              GROUP BY 1,2),
-  rk AS (SELECT *, row_number() OVER (PARTITION BY identity_id ORDER BY n DESC) rn FROM c)
+  rk AS (SELECT *, row_number() OVER (PARTITION BY identity_id ORDER BY n DESC, cpv4) rn FROM c)
   SELECT r.identity_id,
-         list({{'cpv4': r.cpv4, 'label': cl.label, 'wins': r.n}} ORDER BY r.n DESC) AS fields
+         list({{'cpv4': r.cpv4, 'label': cl.label, 'wins': r.n}} ORDER BY r.n DESC, r.cpv4) AS fields
   FROM rk r LEFT JOIN {CL} cl ON cl.cpv_code = r.cpv4 || '0000'
   WHERE r.rn <= 6 GROUP BY 1""")
 
@@ -95,9 +95,9 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE felder6 AS
              WHERE cpv6 IS NOT NULL AND length(cpv6) = 6 AND substr(cpv6, 3, 4) <> '0000'
                AND identity_id IN (SELECT identity_id FROM tops)
              GROUP BY 1,2),
-  rk AS (SELECT *, row_number() OVER (PARTITION BY identity_id ORDER BY n DESC) rn FROM c)
+  rk AS (SELECT *, row_number() OVER (PARTITION BY identity_id ORDER BY n DESC, cpv6) rn FROM c)
   SELECT r.identity_id,
-         list({{'cpv6': r.cpv6, 'wins': r.n}} ORDER BY r.n DESC) AS fields6
+         list({{'cpv6': r.cpv6, 'wins': r.n}} ORDER BY r.n DESC, r.cpv6) AS fields6
   FROM rk r
   WHERE r.rn <= 12 GROUP BY 1""")   # ohne Label: nur der Code zählt fürs Matching (spart ~3 MB)
 
@@ -114,14 +114,14 @@ con.execute("""CREATE OR REPLACE TEMP TABLE regionen AS
              GROUP BY 1,2),
   t AS (SELECT identity_id, sum(n) tot FROM c GROUP BY 1),
   r AS (SELECT c.*, t.tot,
-               row_number() OVER (PARTITION BY c.identity_id ORDER BY c.n DESC) rn,
-               sum(c.n) OVER (PARTITION BY c.identity_id ORDER BY c.n DESC ROWS UNBOUNDED PRECEDING) kum
+               row_number() OVER (PARTITION BY c.identity_id ORDER BY c.n DESC, c.nuts1) rn,
+               sum(c.n) OVER (PARTITION BY c.identity_id ORDER BY c.n DESC, c.nuts1 ROWS UNBOUNDED PRECEDING) kum
         FROM c JOIN t ON t.identity_id = c.identity_id),
   n80 AS (SELECT identity_id, min(rn) FILTER (WHERE kum >= 0.8 * tot) AS noetig
           FROM r GROUP BY 1)
   SELECT r.identity_id,
          CASE WHEN n80.noetig >= 6 THEN []::VARCHAR[]          -- bundesweit → kein Filter
-              ELSE list(r.nuts1 ORDER BY r.n DESC) END AS regions,
+              ELSE list(r.nuts1 ORDER BY r.n DESC, r.nuts1) END AS regions,
          min(n80.noetig) AS regionen_fuer_80
   FROM r JOIN n80 ON n80.identity_id = r.identity_id
   WHERE r.rn <= coalesce(n80.noetig, 4)
@@ -133,7 +133,7 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE volumen AS
              FROM w JOIN {E} e ON e.lead_id = w.notice_id
              WHERE e.value_source = 'actual' AND w.identity_id IN (SELECT identity_id FROM tops)),
   haeufigster AS (SELECT identity_id, value_eur, count(*) c,
-                         row_number() OVER (PARTITION BY identity_id ORDER BY count(*) DESC) rn
+                         row_number() OVER (PARTITION BY identity_id ORDER BY count(*) DESC, value_eur) rn
                   FROM v GROUP BY 1, 2)
   SELECT v.identity_id, median(v.value_eur) AS vol_median,
          count(*) AS wert_belege,                      -- wie viele Zuschläge überhaupt einen Wert tragen
@@ -159,10 +159,10 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE kunden AS
            JOIN {EN} eb ON eb.entity_id = pb.entity_id
     WHERE w.identity_id IN (SELECT identity_id FROM tops) AND eb.canonical_name IS NOT NULL
     GROUP BY 1, 2),
-  rk AS (SELECT *, row_number() OVER (PARTITION BY identity_id ORDER BY n DESC) rn,
+  rk AS (SELECT *, row_number() OVER (PARTITION BY identity_id ORDER BY n DESC, buyer) rn,
                 sum(n) OVER (PARTITION BY identity_id) tot FROM kb)
   SELECT identity_id,
-         list({{'name': buyer, 'wins': n, 'seit': seit, 'bis': bis}} ORDER BY n DESC)
+         list({{'name': buyer, 'wins': n, 'seit': seit, 'bis': bis}} ORDER BY n DESC, buyer)
            FILTER (WHERE rn <= 3) AS top_kunden,
          max(CASE WHEN rn = 1 THEN n * 1.0 / nullif(tot, 0) END) AS top_anteil
   FROM rk GROUP BY 1""")
@@ -190,7 +190,7 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE domains AS
       -- Platzhalter aus dem TED-Schema, keine echten Adressen
       AND lower(split_part(lp.email, '@', 2)) NOT IN ('emailaddress.given', 'example.com', 'nicht.angegeben')),
   c AS (SELECT identity_id, dom, count(*) n FROM m WHERE dom <> '' GROUP BY 1, 2),
-  r AS (SELECT *, row_number() OVER (PARTITION BY identity_id ORDER BY n DESC) rn FROM c)
+  r AS (SELECT *, row_number() OVER (PARTITION BY identity_id ORDER BY n DESC, dom) rn FROM c)
   SELECT identity_id, dom AS domain, n AS domain_belege FROM r WHERE rn = 1""")
 
 # Konkrete Kontaktadressen der Gewinner — als HASH, nie im Klartext.
@@ -217,7 +217,10 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE mailhashes AS
       AND w.identity_id IN (SELECT identity_id FROM tops)
       AND (k.e IS NULL OR lower(trim(lp.email)) <> k.e)      -- Käufer-Kontakt raus (14 %)
       AND lower(split_part(lp.email, '@', 2)) NOT IN ('emailaddress.given', 'example.com'))
-  SELECT identity_id, list(substr(sha256(mail), 1, 16)) AS mail_hashes
+  -- ORDER BY ist Pflicht: ohne ihn liefert die Aggregation die Hashes in wechselnder
+  -- Reihenfolge, und die Datei aendert sich bei jedem Lauf ohne Datenaenderung.
+  SELECT identity_id, list(substr(sha256(mail), 1, 16) ORDER BY substr(sha256(mail), 1, 16))
+         AS mail_hashes
   FROM m GROUP BY 1""")
 
 # Gruppen-Mitglieder (Schwester-Entities): je Entität eigener Name, Methode, Konfidenz, Wins.
@@ -229,7 +232,7 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE members AS
     GROUP BY 1, 2)
   SELECT ew.identity_id,
          list({{'name': e.canonical_name, 'method': e.method, 'conf': e.confidence, 'wins': ew.wins}}
-              ORDER BY ew.wins DESC) AS members
+              ORDER BY ew.wins DESC, e.canonical_name) AS members
   FROM ew JOIN {EN} e ON e.entity_id = ew.entity_id
   GROUP BY 1""")
 
@@ -306,7 +309,10 @@ for (iid, name, aliase, wins, fields, fields6, regions, reg80, vol, wert_belege,
         "members": ms,
     })
 
-(OUT / "suppliers.json").write_text(json.dumps(out, ensure_ascii=False))
+# Reihenfolge festnageln: die Zeilen kommen aus einer Abfrage ohne eindeutigen
+# Endschluessel, und ohne diese Sortierung aendert sich die Datei bei jedem Lauf.
+out.sort(key=lambda x: (-int(x.get("wins") or 0), str(x.get("id") or "")))
+(OUT / "suppliers.json").write_text(json.dumps(out, ensure_ascii=False, sort_keys=True))
 print(f"{len(out)} Lieferanten → {OUT}/suppliers.json")
 cancom = next((s for s in out if "cancom" in s["name"].lower()), None)
 if cancom:

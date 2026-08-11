@@ -40,18 +40,30 @@ con = duckdb.connect()
 G = "data/gold/DE"
 
 
-def _union(table):
+def _union(table, key=None):
     """DE-Gold + jede weitere ``gold/<CC>/<table>.parquet`` (CH, AT, künftige) per union_by_name —
     jede Quelle füllt nur ihre Spalten, fehlende werden NULL (DACH-Mehrquellen ohne Schema-Zwang).
-    Unterschieden über die country-Spalte (→ land). DE zuerst (Basis-Schema)."""
+    Unterschieden über die country-Spalte (→ land). DE zuerst (Basis-Schema).
+
+    Mit ``key`` wird je Schlüssel genau EINE Zeile behalten, DE gewinnt. Grund: gemessen liegen
+    drei Leads in AT **und** DE (EU-Einrichtungen mit Sitz in Frankfurt, die beide Länderfilter
+    passieren). Ohne Entscheidung vervielfacht der nachgelagerte Join sie, und welche Zeile
+    gewinnt, entschied der Zufall — ein Lead trug bei einem Lauf Koordinaten und beim nächsten
+    keine. Die drei sind ein eigener Datenbefund; hier wird nur der Export eindeutig gemacht.
+    """
     others = sorted(str(p) for p in pathlib.Path("data/gold").glob(f"*/{table}.parquet")
                     if p.parent.name != "DE")
     files = [f"{G}/{table}.parquet"] + others
     lst = ", ".join(f"'{f}'" for f in files)
-    return f"read_parquet([{lst}], union_by_name=true)"
+    roh = f"read_parquet([{lst}], union_by_name=true, filename=true)"
+    if not key:
+        return roh
+    return (f"(SELECT * EXCLUDE(filename) FROM {roh} "
+            f"QUALIFY row_number() OVER (PARTITION BY {key} "
+            f"ORDER BY (filename LIKE '%/DE/%') DESC, filename) = 1)")
 
 
-E = _union("lead_export")
+E = _union("lead_export", key="lead_id")
 CL = f"read_parquet('{G}/dim_cpv_label.parquet')"
 DC = f"read_parquet('{G}/dim_cpv.parquet')"
 LOTS = f"read_parquet('{G}/lead_lot.parquet')"
@@ -60,8 +72,8 @@ ATTR = "read_parquet('data/silver/DE/attributes/*/*.parquet', hive_partitioning=
 MO = f"read_parquet('{G}/market_opportunity.parquet')"
 CS = f"read_parquet('{G}/contractor_stats.parquet')"
 EI = f"read_parquet('{G}/entity_identity.parquet')"
-DL = _union("lead_deadline")                        # Angebotsfrist-Herkunft (#16), DE+CH
-LG = _union("lead_geo")                              # Koordinate je Lead (echter km-Radius), DE+CH
+DL = _union("lead_deadline", key="notice_id")                        # Angebotsfrist-Herkunft (#16), DE+CH
+LG = _union("lead_geo", key="lead_id")                              # Koordinate je Lead (echter km-Radius), DE+CH
 PLZ = f"read_parquet('{G}/dim_plz.parquet')"        # PLZ→Zentroid für die PLZ-Umkreissuche
 # Vorgänger-Link: offene Leads (ohne eigenen Zuschlag) erben Incumbent/Bieterzahl/Kette vom
 # jüngsten passenden Vorgänger-Zuschlag. Guard: fehlt die Tabelle, leerer Stub (kein Join-Fehler).
@@ -203,7 +215,7 @@ def incumbent_stats_for(ids):
       ge AS (SELECT li.lead_id, li.cpv4, ei.entity_id
              FROM li JOIN {EI} ei ON ei.identity_id = li.incumbent_group_id),
       j AS (SELECT ge.lead_id, cs.total_wins, cs.market_share_by_wins, cs.market_rank, cs.trend_yoy,
-                   row_number() OVER (PARTITION BY ge.lead_id ORDER BY cs.total_wins DESC) rn
+                   row_number() OVER (PARTITION BY ge.lead_id ORDER BY cs.total_wins DESC, ge.entity_id) rn
             FROM ge JOIN {CS} cs ON cs.entity_id = ge.entity_id AND cs.cpv_class = ge.cpv4)
       SELECT lead_id, sum(total_wins) AS wins, sum(market_share_by_wins) AS share,
              min(market_rank) AS rang, max(trend_yoy) FILTER (WHERE rn = 1) AS trend
@@ -231,10 +243,10 @@ def market_summary(key):
         SELECT count(*), count(*) FILTER (WHERE phase='open'), count(DISTINCT buyer_name) {where}""").fetchone()
     top = con.execute(f"""
         SELECT buyer_name, count(*) n, count(*) FILTER (WHERE phase='open') offen
-        {where} AND buyer_name IS NOT NULL GROUP BY 1 ORDER BY 2 DESC LIMIT 6""").fetchall()
+        {where} AND buyer_name IS NOT NULL GROUP BY 1 ORDER BY 2 DESC, buyer_name LIMIT 6""").fetchall()
     ein = con.execute(f"""
         SELECT title, value_eur, cpv_code {where} AND phase='open' AND value_eur IS NOT NULL
-        AND value_eur > 0 ORDER BY value_eur ASC LIMIT 5""").fetchall()
+        AND value_eur > 0 ORDER BY value_eur ASC, title LIMIT 5""").fetchall()
     return {
         "vergaben": de(tot), "offen": de(offen), "stellen": de(stellen),
         "regionen": None,  # ohne Firmenprofil kein Regionsbezug
@@ -297,7 +309,12 @@ def attach_mix(prof, own_branche):
     p = {k: v for k, v in prof.items() if k != "_mix"}
     counts = prof.get("_mix", {})
     tot = sum(counts.values()) or 1
-    items = sorted(counts.items(), key=lambda kv: -kv[1])
+    # Zweiter Sortierschlüssel ist Pflicht, nicht Kosmetik: die Liste wird auf vier Einträge
+    # gekappt, und bei Gleichstand entschied vorher die zufällige Zeilenreihenfolge der
+    # SQL-Abfrage, welche Branche es hineinschafft. Bei Stadt Ahaus liegen drei Branchen mit
+    # je 2 % gleichauf — die Vergabestelle zeigte bei jedem Export ein anderes Profil, und im
+    # Git-Diff war echte Änderung nicht mehr von Rauschen zu unterscheiden.
+    items = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))
     mix, seen = [], set()
     for br, n in items[:4]:
         seen.add(br)
@@ -451,7 +468,7 @@ def export_branche(key):
           SELECT *, row_number() OVER (
             PARTITION BY phase,
               CASE WHEN phase = 'expiring' THEN least(coalesce(months_to_expiry, 0), 24) ELSE 0 END
-            ORDER BY coalesce(days_to_deadline, days_to_expiry, 99999) ASC) AS rn
+            ORDER BY coalesce(days_to_deadline, days_to_expiry, 99999) ASC, lead_id) AS rn
           FROM filtered
         )
         -- CAP je Phase — Nicht-DE-Leads (CH/AT, der DACH-Differenzierer, wenige) IMMER
@@ -460,7 +477,7 @@ def export_branche(key):
         WHERE rn <= (CASE WHEN phase = 'expiring' THEN {CAP_MONAT} ELSE {CAP} END)
               OR coalesce(country, 'DE') <> 'DE'
         ORDER BY (phase = 'open') DESC,
-                 coalesce(days_to_deadline, days_to_expiry, 99999) ASC""").df().to_dict("records")
+                 coalesce(days_to_deadline, days_to_expiry, 99999) ASC, lead_id""").df().to_dict("records")
 
     lots = lots_for([r["lead_id"] for r in rows])
     leads = []
@@ -664,8 +681,8 @@ def export_branche(key):
             l["beschreibung"] = l["beschreibung"][:2000] + " …"
         detail[l["id"]] = {"buyerProfile": l.pop("buyerProfile", None),
                            "marktSegment": l.pop("marktSegment", None)}
-    (OUT / f"leads-{key}.json").write_text(json.dumps(leads, ensure_ascii=False))
-    (OUT / f"detail-{key}.json").write_text(json.dumps(detail, ensure_ascii=False))
+    (OUT / f"leads-{key}.json").write_text(json.dumps(leads, ensure_ascii=False, sort_keys=True))
+    (OUT / f"detail-{key}.json").write_text(json.dumps(detail, ensure_ascii=False, sort_keys=True))
     return len(leads)
 
 
@@ -683,9 +700,9 @@ for key in ["it", "bau", "medizin", "beratung", "sicherheit", "energie"]:
     markets[key] = market_summary(key)
     print(f"  {key:11} {exported[key]:>5} / {counts.get(key, 0):>6} exportiert")
 
-(OUT / "markt.json").write_text(json.dumps(markets, ensure_ascii=False))
+(OUT / "markt.json").write_text(json.dumps(markets, ensure_ascii=False, sort_keys=True))
 
-(OUT / "branchen.json").write_text(json.dumps(counts, ensure_ascii=False))
+(OUT / "branchen.json").write_text(json.dumps(counts, ensure_ascii=False, sort_keys=True))
 
 # PLZ→Koordinate für die echte Umkreissuche: {plz: [lat, lon, ort]}. Aus dim_plz (GeoNames-
 # Zentroide), kompakt gerundet. Das Frontend schlägt die getippte PLZ hier nach und filtert
@@ -698,7 +715,7 @@ plz_rows = con.execute(
 plz_geo = {}
 for cc, p, la, lo, o in plz_rows:
     plz_geo.setdefault(cc, {})[p] = [round(float(la), 4), round(float(lo), 4), o or ""]
-(OUT / "plz-geo.json").write_text(json.dumps(plz_geo, ensure_ascii=False, separators=(",", ":")))
+(OUT / "plz-geo.json").write_text(json.dumps(plz_geo, ensure_ascii=False, sort_keys=True, separators=(",", ":")))
 print(f"PLZ→Koordinate: {sum(len(v) for v in plz_geo.values())} Einträge "
       f"({', '.join(f'{k}:{len(v)}' for k, v in plz_geo.items())}) → plz-geo.json")
 

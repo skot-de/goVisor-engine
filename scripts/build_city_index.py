@@ -178,7 +178,7 @@ def main() -> int:
 
     geo = json.loads(GEO.read_text(encoding="utf-8"))
     geo["_cities"] = {"DE": cities}
-    GEO.write_text(json.dumps(geo, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    GEO.write_text(json.dumps(geo, ensure_ascii=False, sort_keys=True, separators=(",", ":")), encoding="utf-8")
 
     # Stichprobe
     for probe in ("münchen", "stuttgart", "köln", "berlin", "fürstenfeldbruck"):

@@ -87,7 +87,7 @@ def top_posten(key, limit=12):
         SELECT lead_id, title, buyer_name, value_eur, value_source,
                strftime(contract_end, '%d.%m.%Y') AS ende, timing_source, rahmen_ohne_wb
         FROM basis WHERE branche = '{key}' AND value_eur IS NOT NULL
-        ORDER BY value_eur DESC LIMIT {limit}""").fetchall()
+        ORDER BY value_eur DESC, lead_id LIMIT {limit}""").fetchall()
     return [{
         "id": lid, "titel": (t[:80] + "…") if t and len(t) > 80 else (t or ""),
         "buyer": bn or "", "wert": eur(v), "wertSrc": "echt" if vs == "actual" else "schaetz",
@@ -195,12 +195,28 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE vol AS
 # Konzentration + Top-Anbieter je Stelle
 con.execute("""CREATE OR REPLACE TEMP TABLE topsupp AS
   WITH s AS (SELECT buyer, winner, any_value(winner_name) nm, count(*) n FROM z36 GROUP BY 1,2),
-  r AS (SELECT *, row_number() OVER (PARTITION BY buyer ORDER BY n DESC) rk,
+  r AS (SELECT *, row_number() OVER (PARTITION BY buyer ORDER BY n DESC, winner) rk,
                sum(n) OVER (PARTITION BY buyer) ges FROM s)
   SELECT buyer, max(CASE WHEN rk=1 THEN n END)::DOUBLE / max(ges) AS top1_anteil,
-         list({'n': nm, 'wins': n, 'pct': round(100.0*n/ges)} ORDER BY n DESC)
+         list({'n': nm, 'wins': n, 'pct': round(100.0*n/ges)} ORDER BY n DESC, nm)
            FILTER (WHERE rk <= 5) AS top
   FROM r GROUP BY 1""")
+
+
+def _modalband(baender):
+    """Häufigstes Wertband, bei Gleichstand das alphabetisch erste.
+
+    `mode()` in SQL entscheidet Gleichstände beliebig — gemessen sprang das angezeigte
+    Vergleichsband zwischen zwei Läufen derselben Daten von „250-500k" auf „500k-1,3M".
+    Für eine Plausibilitätsangabe, die der Nutzer gegen den eigenen Wert hält, ist das
+    nicht hinnehmbar: dieselbe Datenlage muss dieselbe Aussage ergeben.
+    """
+    from collections import Counter
+    c = Counter(b for b in (baender or []) if b)
+    if not c:
+        return None
+    hoechste = max(c.values())
+    return sorted(b for b, n in c.items() if n == hoechste)[0]
 
 
 def vergabestellen(key, limit=60):
@@ -233,7 +249,7 @@ def vergabestellen(key, limit=60):
         LEFT JOIN topsupp t ON t.buyer = s.buyer
         WHERE bs.buyer_name IS NOT NULL
         -- nach Relevanz FÜR DAS FELD sortiert, nicht nach Gesamtgröße der Stelle
-        ORDER BY s.vergaben_feld DESC, coalesce(v.vol_echt_24m, 0) DESC
+        ORDER BY s.vergaben_feld DESC, coalesce(v.vol_echt_24m, 0) DESC, s.buyer
         LIMIT {limit}""").fetchall()
 
     def quote(treffer, n):
@@ -276,11 +292,11 @@ def vergabestellen(key, limit=60):
         vrows = con.execute(f"""
             SELECT buyer_name, title, months_to_expiry, contract_end FROM (
               SELECT buyer_name, title, months_to_expiry, contract_end,
-                     row_number() OVER (PARTITION BY buyer_name ORDER BY months_to_expiry) rn
+                     row_number() OVER (PARTITION BY buyer_name ORDER BY months_to_expiry, title) rn
               FROM {E}
               WHERE phase='expiring' AND buyer_name IN (SELECT n FROM _vn)
                 AND months_to_expiry IS NOT NULL AND months_to_expiry BETWEEN 0 AND 24)
-            WHERE rn <= 6 ORDER BY buyer_name, months_to_expiry""").fetchall()
+            WHERE rn <= 6 ORDER BY buyer_name, months_to_expiry, title""").fetchall()
         vmap = {}
         for bn, title, mte, cend in vrows:
             vmap.setdefault(bn, []).append({
@@ -298,7 +314,7 @@ def vergabestellen(key, limit=60):
 print("\nBaue Bindungs-Aggregat …")
 
 con.execute(f"""CREATE OR REPLACE TEMP TABLE gelistet AS
-  SELECT p.notice_id, list(DISTINCT en.canonical_name) AS namen
+  SELECT p.notice_id, list(DISTINCT en.canonical_name ORDER BY en.canonical_name) AS namen
   FROM {PE} p JOIN {EN} en USING(entity_id)
   WHERE p.role = 'winner' AND en.method IN ('handelsregister_exakt','ted_nationalid')
   GROUP BY 1""")
@@ -341,7 +357,7 @@ def bindung_daten(key):
         FROM bindung
         WHERE branche = '{key}' AND gelistete IS NOT NULL
           AND tage_bis_ende BETWEEN 0 AND 1095
-        ORDER BY coalesce(value_eur, 0) DESC, tage_bis_ende ASC
+        ORDER BY coalesce(value_eur, 0) DESC, tage_bis_ende ASC, lead_id
         LIMIT 15""").fetchall()
 
     return {
@@ -414,7 +430,8 @@ def felder(key, limit=20):
                count(*) FILTER (WHERE e.value_source = 'actual')          AS vol_n,
                -- #20 Wertplausibilität: Modalband der Vergleichsverfahren (nur echte Werte —
                -- „lieber Band als falscher Punkt", Schätzwerte fließen nicht ein).
-               mode(e.value_band) FILTER (WHERE e.value_source = 'actual') AS wertband
+               (list(e.value_band ORDER BY e.value_band)
+                  FILTER (WHERE e.value_source = 'actual'))               AS _baender
         FROM feld_basis f
         LEFT JOIN bieter bi ON bi.notice_id = f.notice_id
         LEFT JOIN kleinstes_los kl ON kl.lead_id = f.notice_id
@@ -422,13 +439,14 @@ def felder(key, limit=20):
         LEFT JOIN {E} e ON e.lead_id = f.notice_id
         LEFT JOIN {CL} cl ON cl.cpv_code = f.cpv4 || '0000'
         WHERE f.branche = '{key}'
-        GROUP BY 1 ORDER BY 3 DESC LIMIT {limit}""").fetchall()
+        GROUP BY 1 ORDER BY 3 DESC, 1 LIMIT {limit}""").fetchall()
 
     def quote(t, n):
         return {"pct": round(100.0 * (t or 0) / n), "n": int(n), "treffer": int(t or 0)} if n else None
 
     out = []
-    for (cpv4, label, verg, j0, j1, j2, bmed, bn, klos, losn, bgt, bgn, vol, voln, wband) in rows:
+    for (cpv4, label, verg, j0, j1, j2, bmed, bn, klos, losn, bgt, bgn, vol, voln, _baender) in rows:
+        wband = _modalband(_baender)
         # Trend nur bei durchgehender Datenlage über alle drei Fenster (§5.2-Regel).
         # Vergleich: letzte 12 Mon gegen die 12 Mon davor.
         trend = round(100.0 * (j0 - j1) / j1) if (j0 and j1 and j2) else None
@@ -455,7 +473,7 @@ def nachbarfelder(key, limit=8):
         JOIN meine m ON m.cpv4 = a.cpv_a
         LEFT JOIN {CL} cl ON cl.cpv_code = a.cpv_b || '0000'
         WHERE a.cpv_b NOT IN (SELECT cpv4 FROM meine)
-        GROUP BY 1 ORDER BY 3 DESC LIMIT {limit}""").fetchall()
+        GROUP BY 1 ORDER BY 3 DESC, 1 LIMIT {limit}""").fetchall()
     return [{"cpv4": c, "label": l or c, "naehe": round(float(p) * 100),
              "firmen": int(f)} for (c, l, p, f) in rows]
 
@@ -481,7 +499,7 @@ def einstiegsfreundlich(key, limit=10):
         LEFT JOIN feld_bieter fb ON fb.cpv4 = substr(e.cpv_code,1,4)
         WHERE {BRANCHE} = '{key}' AND e.phase = 'open'
           AND e.value_eur > 0 AND e.days_to_deadline >= 0
-        ORDER BY e.value_eur ASC LIMIT {limit}""").fetchall()
+        ORDER BY e.value_eur ASC, e.lead_id LIMIT {limit}""").fetchall()
     return [{"id": i, "titel": (t[:64] + "…") if t and len(t) > 64 else (t or ""),
              "buyer": bn or "", "wert": eur(v), "wertSrc": "echt" if vs == "actual" else "schaetz",
              "frist": fr, "bieterFeld": round(float(bi), 1) if bi else None}
@@ -536,7 +554,7 @@ def wettbewerb(key):
         LEFT JOIN {DC} b ON b.division = bs.div
         LEFT JOIN supp_trend t ON t.winner = bs.winner
         WHERE {BRANCHE} = '{key}'
-        GROUP BY 1, 2 ORDER BY 3 DESC LIMIT 40""").fetchall()
+        GROUP BY 1, 2 ORDER BY 3 DESC, 1, 2 LIMIT 40""").fetchall()
 
     supp = []
     for (wid, name, wins, stellen, vol, w0, w1) in anbieter:
@@ -557,7 +575,7 @@ def wettbewerb(key):
             JOIN bt ON bt.buyer = bs.buyer
             LEFT JOIN {BN} bn ON bn.buyer_entity_id = bs.buyer
             WHERE bs.winner IN ({ph}) AND bn.buyer_name IS NOT NULL
-            QUALIFY row_number() OVER (PARTITION BY bs.winner ORDER BY bs.wins DESC) <= 8
+            QUALIFY row_number() OVER (PARTITION BY bs.winner ORDER BY bs.wins DESC, bs.buyer) <= 8
         """).fetchall()
         for (wid, bname, wins, total, nsupp) in rows:
             anteil = round(100.0 * wins / total) if total else 0
@@ -575,7 +593,7 @@ def wettbewerb(key):
         FROM bs LEFT JOIN {DC} b ON b.division = bs.div
         LEFT JOIN {BN} bn ON bn.buyer_entity_id = bs.buyer
         WHERE {BRANCHE} = '{key}' AND bn.buyer_name IS NOT NULL
-        GROUP BY 1 ORDER BY 3 DESC LIMIT 12""").fetchall()
+        GROUP BY 1 ORDER BY 3 DESC, 1 LIMIT 12""").fetchall()
     m_supp = supp[:8]
     matrix = []
     if stellen_ids and m_supp:
@@ -623,7 +641,7 @@ def faehigkeiten(key):
         FROM {E} e LEFT JOIN {DC} b ON b.division = substr(e.cpv_code,1,2)
         WHERE {BRANCHE} = '{key}' AND e.phase IN ('expiring','open')
           AND e.regulatory_regime IS NOT NULL
-        GROUP BY 1 ORDER BY 2 DESC LIMIT 6""").fetchall()
+        GROUP BY 1 ORDER BY 2 DESC, 1 LIMIT 6""").fetchall()
 
     # Kapitalhürde: Bürgschaft (belastbar aus dem Attribut) — als Untergrenze
     buerg = con.execute(f"""
@@ -641,7 +659,7 @@ def faehigkeiten(key):
         LEFT JOIN {DC} b ON b.division = substr(e.cpv_code,1,2)
         WHERE {BRANCHE} = '{key}'
           AND r.requirement_kind IN ('suitability','economic','technical')
-        GROUP BY 1 ORDER BY 2 DESC LIMIT 8""").fetchall()
+        GROUP BY 1 ORDER BY 2 DESC, 1 LIMIT 8""").fetchall()
 
     return {
         "nLeads": int(n),
@@ -679,5 +697,5 @@ for key in BRANCHEN:
           f"geschätzt {eur(s['volSchaetz']):>12} · ohne Wert {s['nUnbekannt']:>5} · "
           f"Rahmen o. Wettb. {s['nRahmenOhneWb']:>5}")
 
-(OUT / "strategie.json").write_text(json.dumps(out, ensure_ascii=False))
+(OUT / "strategie.json").write_text(json.dumps(out, ensure_ascii=False, sort_keys=True))
 print(f"\n→ {OUT}/strategie.json")
