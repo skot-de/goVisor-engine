@@ -38,7 +38,7 @@ import pyarrow.parquet as pq
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from govisor import bulk, model, schema  # noqa: E402  (Pfad muss zuerst stehen)
+from govisor import bulk, model, normalize, schema  # noqa: E402  (Pfad muss zuerst stehen)
 from govisor.config import Config  # noqa: E402
 
 SCHEMA = model.TABLES["notice_text"]
@@ -91,6 +91,12 @@ def aus_archiv(cfg: Config, land: str, neu: bool, limit: int | None) -> tuple[in
                 notice = schema.parse(raw, nid)
             except Exception:
                 continue                    # kaputte Notice überspringen, nicht abbrechen
+            # Dieselbe Länderregel wie der Ingest (s. normalize.gehoert_zu_land). Ohne sie
+            # schreibt der Backfill Textzeilen für Notices, die längst nach `silver/EU`
+            # gewandert sind — sie werden zu Waisen, weil ihre `notices`-Zeile dort liegt.
+            # Genau das ist beim ersten `--neu`-Lauf passiert: 254 Waisen in DE, 127 in AT.
+            if not normalize.gehoert_zu_land(notice, land):
+                continue
             n += 1
             zeilen.extend(_zeilen(notice))
         _schreibe(cfg, land, key, zeilen)
@@ -125,6 +131,8 @@ def aus_live(cfg: Config, land: str, neu: bool, limit: int | None) -> tuple[int,
         try:
             notice = schema.parse(datei.read_bytes(), nid)
         except Exception:
+            continue
+        if not normalize.gehoert_zu_land(notice, land):
             continue
         notices += 1
         pd = notice.publication_date
