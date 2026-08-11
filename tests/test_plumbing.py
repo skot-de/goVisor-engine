@@ -1246,3 +1246,38 @@ def test_notice_text_landet_in_der_silber_tabelle():
     assert {z["language"] for z in r["notice_text"]} == {"FRA", "NLD", "ENG"}
     lot = [z for z in r["notice_text"] if z["lot_id"] == "LOT-1"][0]
     assert lot["feld"] == "description" and lot["wert"] == "Supply"
+
+
+def test_notice_text_ids_sind_kanonisch():
+    """`notice_text` muss dieselben notice_ids fuehren wie `notices` — sonst ist es Ballast.
+
+    Der Backfill zieht aus zwei Quellen: den Monatspaketen (Dateiname `00370795_2024`) und
+    dem Live-Cache (Dateiname `370795-2024`). Nur der Archiv-Zweig kanonisierte; im Live-
+    Zweig fehlte der Schritt, und damit waren beim ersten Lauf ALLE 88.486 CH-Zeilen
+    Waisen - technisch fehlerfrei geschrieben, fachlich wertlos, weil kein Join greift.
+    """
+    import duckdb
+
+    from govisor import schema
+
+    assert schema.normalize_notice_id("370795-2024") == "370795_2024"
+    assert schema.normalize_notice_id("00370795_2024") == "370795_2024"
+
+    wurzel = Path("data/silver")
+    if not wurzel.exists():
+        return                      # ohne Datenplatte nur die reine Funktion pruefen
+    con = duckdb.connect()
+    for land in ("DE", "AT", "CH", "EU"):
+        d = wurzel / land / "notice_text"
+        if not any(d.glob("*/*.parquet")):
+            continue
+        waisen = con.execute(f"""
+            SELECT count(*) FROM (
+              SELECT DISTINCT notice_id FROM read_parquet(
+                '{d.as_posix()}/*/*.parquet', hive_partitioning=1)
+              EXCEPT
+              SELECT DISTINCT notice_id FROM read_parquet(
+                '{(wurzel/land/'notices').as_posix()}/*/*.parquet', hive_partitioning=1))
+        """).fetchone()[0]
+        # Eine Handvoll bleibt: Notices, die spaeter aus dem Laender-Silber gewandert sind.
+        assert waisen < 100, f"{land}: {waisen} notice_text-Waisen — ID-Format geprueft?"

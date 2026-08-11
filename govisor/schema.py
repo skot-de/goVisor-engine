@@ -838,6 +838,42 @@ def _original_form(root: ET.Element) -> tuple[ET.Element | None, str | None]:
     return None, None
 
 
+def _legacy_texts_by_language(root: ET.Element) -> list[tuple[str | None, str, str | None, str]]:
+    """Sprachfassungen aus den Legacy-Formularen (TED_EXPORT).
+
+    Anders als in eForms haengt die Sprache dort NICHT am Text, sondern am umschliessenden
+    **Formularblock**: eine Notice enthaelt je Sprache einen `<F02_2014 LG="DE">` bzw.
+    `<ML_TI_DOC LG="DE">`, und darin steht der uebersetzte Titel. Gemessen an AT 2020-06:
+    138 von 401 Notices fuehren mehrere `<TITLE>`-Elemente, keines davon mit eigenem
+    LG-Attribut — die Zuordnung laeuft ausschliesslich ueber den Vorfahren.
+
+    Ohne diesen Weg blieben alle Notices vor 2023 einsprachig: der eForms-Zweig greift dort
+    nicht, und ein LG am Titel gibt es nicht. Beispiel 302746_2020 (EU-Delegation Wien):
+    24 Sprachen, vom Daenischen bis zum Irischen.
+    """
+    aus: list[tuple[str | None, str, str | None, str]] = []
+    gesehen: set[tuple[str, str]] = set()
+    for block in root.iter():
+        lg = (block.attrib.get("LG") or "").upper()
+        if not lg:
+            continue
+        for kind in block.iter():
+            name = _local(kind)
+            if name in ("TITLE", "TITLE_CONTRACT", "TI_TEXT"):
+                feld = "title"
+            elif name in ("SHORT_DESCR", "SHORT_CONTRACT_DESCRIPTION"):
+                feld = "description"
+            else:
+                continue
+            text = _text_of(kind)
+            # Dieselbe Fassung steht oft in mehreren Bloecken (ML_TI_DOC UND F02) —
+            # einmal je Sprache und Feld genuegt.
+            if text and (lg, feld) not in gesehen:
+                gesehen.add((lg, feld))
+                aus.append((None, feld, lg, text))
+    return aus
+
+
 def _child_texts_by_language(parent: ET.Element, names: tuple[str, ...]) -> list[tuple[str, str]]:
     """ALLE direkten Kinder mit passendem Namen als (Sprache, Text).
 
@@ -1372,6 +1408,9 @@ def _parse_legacy(root: ET.Element, notice_id: str) -> Notice:
         if title:
             break
 
+    # Sprachfassungen: in Legacy haengt die Sprache am Formularblock, nicht am Titel.
+    texts = _legacy_texts_by_language(root)
+
     cpv_all: list[str] = []
     for elem in _iter_named(root, "CPV_CODE"):
         code = (elem.attrib.get("CODE") or elem.text or "").strip()
@@ -1479,6 +1518,7 @@ def _parse_legacy(root: ET.Element, notice_id: str) -> Notice:
         requirements=_legacy_requirements(scope),
         notice_kind=_LEGACY_KIND.get(form_type, "other"),
         buyer_countries=[country] if country else [],
+        texts=texts,
     )
 
 
