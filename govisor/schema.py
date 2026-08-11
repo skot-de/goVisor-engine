@@ -858,6 +858,25 @@ def _legacy_texts_by_language(root: ET.Element) -> list[tuple[str | None, str, s
         lg = (block.attrib.get("LG") or "").upper()
         if not lg:
             continue
+        # `ML_TI_DOC` ist KEIN uebersetzter Projekttitel, sondern die CPV-Ueberschrift in
+        # allen Amtssprachen. Gemessen an 287230_2016: ein einziger echter Titel
+        # ("Holzkraftwerk Basel II, GU-Leistungen BKP 34") und 24 ML_TI_DOC-Eintraege mit
+        # "Technische Planungsleistungen fuer maschinen- und elektrotechnische …" — dem
+        # Kategorietext, den JEDE Notice derselben CPV-Klasse traegt.
+        #
+        # Als Titel gespeichert vergiftet das jede titelbasierte Logik: im Nachfolge-Modell
+        # ergaben zwei voellig verschiedene Basler Bauvorhaben einen Jaccard von 1,0, weil
+        # ihre "Uebersetzungen" identisch sind. Deshalb eigenes Feld statt `title`.
+        if _local(block) == "ML_TI_DOC":
+            for kind in block.iter():
+                if _local(kind) in ("TITLE", "TITLE_CONTRACT", "TI_TEXT"):
+                    text = _text_of(kind)
+                    norm = languages.normalize(lg)
+                    if text and (norm, "cpv_label") not in gesehen:
+                        gesehen.add((norm, "cpv_label"))
+                        aus.append((None, "cpv_label", norm, text))
+                    break
+            continue
         for kind in block.iter():
             name = _local(kind)
             if name in ("TITLE", "TITLE_CONTRACT", "TI_TEXT"):
