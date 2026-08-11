@@ -33,6 +33,12 @@ if (process.env.NODE_ENV === "production") {
 
 const nextConfig = {
   reactStrictMode: true,
+  // Das Dev-Overlay legt sich unten links GENAU über den Konto-Button (gemessen: das
+  // `nextjs-portal`-Element liegt bei elementFromPoint über `.planbadge`) und schluckt
+  // jeden Klick darauf — samt Sprachumschalter im Menü dahinter. Nur eine Dev-Anzeige,
+  // in Production ohnehin nicht vorhanden; sie kostet hier aber die Bedienbarkeit einer
+  // echten Schaltfläche und damit jede Prüfung von Hand.
+  devIndicators: false,
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

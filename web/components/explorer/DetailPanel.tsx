@@ -72,8 +72,19 @@ export function DetailPanel({
   const bodyHtml = useMemo(() => {
     if (!activeId) return "";
     applyState({ activeId, activeTab, accountLimit, buyerDemo, aktiveRegion });
-    const l = (LEADS as Lead[]).find((x) => x.id === activeId);
-    if (!l) return "";
+    const echt = (LEADS as Lead[]).find((x) => x.id === activeId);
+    if (!echt) return "";
+    // Die gewaehlte Dokumentsprache muss auch den KOERPER erreichen, nicht nur die
+    // Ueberschrift: die Leistungsbeschreibung ist der eigentliche Inhalt. Die Renderer
+    // stammen aus dem Prototyp und lesen `l.beschreibung` direkt — statt sie alle
+    // sprachbewusst zu machen, bekommen sie eine Kopie mit der gewaehlten Fassung.
+    // Kopie, nicht Mutation: `LEADS` bleibt die Originalfassung, sonst waere die Wahl
+    // nach dem ersten Umschalten nicht mehr ruecknehmbar.
+    const f = docLang
+      ? (echt as { sprachfassungen?: Record<string, { title?: string; description?: string }> })
+          .sprachfassungen?.[docLang]
+      : undefined;
+    const l = f ? { ...echt, titel: f.title || echt.titel, beschreibung: f.description || echt.beschreibung } : echt;
     switch (activeTab) {
       case "teilnahme": return renderTeilnahme(l);
       case "docs": return renderDocs(l);
@@ -84,7 +95,7 @@ export function DetailPanel({
       default: return renderUebersicht(l);
     }
     // tick erzwingt Neuberechnung nach In-Place-Mutationen (Status, Kommentar, …)
-  }, [activeId, activeTab, tick, buyerDemo, aktiveRegion, accountLimit]);
+  }, [activeId, activeTab, tick, buyerDemo, aktiveRegion, accountLimit, docLang]);
 
   const [briefOpen, setBriefOpen] = useState(false);   // Hooks vor jedem Early-Return
   const [copied, setCopied] = useState(false);

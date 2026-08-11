@@ -698,6 +698,14 @@ def export_branche(key):
             sprachen.setdefault(lid, [])
             if lang not in sprachen[lid]:
                 sprachen[lid].append(lang)
+            # Gleiche Deckelung wie bei `beschreibung` unten. Nicht wegen der Payload — die
+            # Fassungen liegen ohnehin in der nachgeladenen Detail-Datei —, sondern wegen der
+            # Anzeige: der Block nennt eine Wortzahl. Gemessen sind 35 von 442 Fassungen
+            # laenger als 2.000 Zeichen; ungedeckelt zeigte dieselbe Ausschreibung auf
+            # Deutsch 238 Woerter und auf Franzoesisch 900 — das liest sich wie ein Defekt,
+            # nicht wie eine Uebersetzung.
+            if feld == "description" and wert and len(wert) > 2000:
+                wert = wert[:2000] + " …"
             fassungen.setdefault(lid, {}).setdefault(lang, {})[feld] = wert
 
     detail = {}
