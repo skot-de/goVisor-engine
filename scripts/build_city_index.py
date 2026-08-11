@@ -25,10 +25,47 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "data" / "reference" / "geonames" / "DE.txt"
 GEO = ROOT / "web" / "data" / "plz-geo.json"
 
-# Firmenzeilen (verunreinigte Ort-Spalte) verwerfen — echte Ortsnamen tragen keine Rechtsform.
+# Firmen- und Behördenzeilen (verunreinigte Ort-Spalte) verwerfen.
+#
+# Der Ursprung der Verunreinigung sind **Großempfänger-Postleitzahlen**: wer viel Post
+# bekommt, hat eine eigene PLZ, und GeoNames trägt dort den Organisationsnamen in die
+# Ort-Spalte. Erkennbar sind diese Zeilen daran, dass ihre `accuracy` (Spalte 11) leer
+# bleibt — gemessen 8.247 von 23.297 Zeilen; echte Städte tragen durchgängig 4 oder 6.
+#
+# **Warum trotzdem nicht einfach nach `accuracy` gefiltert wird:** unter diesen 8.247
+# stecken auch echte kleine Orte und Stadtteile (Kummersdorf-Alexanderdorf, Uetz,
+# Travenbrück, Stuttgart-Ost). Ein harter Schnitt verlöre rund 1.350 davon. Die
+# Fehlerkosten sind unsymmetrisch: nach „HUK-Coburg" sucht in einer Umkreissuche
+# niemand, ein fehlendes Dorf ist ein echter Funktionsverlust.
+#
+# Die Liste unten ist deshalb **aus den Daten abgeleitet**, nicht geraten: Wörter, die in
+# den Großempfänger-Zeilen häufig und in Zeilen mit gesetzter `accuracy` praktisch nie
+# vorkommen. Städtenamen wie „Stuttgart" oder „Köln" stehen bewusst NICHT drin, obwohl sie
+# in der Häufigkeitsliste auftauchen — sie stammen aus Namen wie „Stadtverwaltung
+# Stuttgart" und würden echte Orte mitreißen.
+#
+# Gemessen gegen alle 15.050 Zeilen mit gesetzter `accuracy`: **0 echte Orte verworfen**.
+# Trefferquote bei den Großempfängern 45,2 % → 64,5 %.
 _JUNK = re.compile(
-    r"\b(?:GmbH|mbH|gGmbH|AG|KG|OHG|UG|SE|eG|e\.?\s?V\.?|Co\.?|Verlag|Stiftung|Bank|"
-    r"Versicherung|Sparkasse|Holding|Group|International|Vertrieb|Management|Brand)\b"
+    r"\b(?:GmbH|mbH|gGmbH|AG|KG|OHG|UG|SE|eG|e\.?\s?V\.?|a\.?\s?G\.?|Co\.?|"
+    r"Verlag|Stiftung|Bank|Bankhaus|Sparkasse|Volksbank|Postbank|Commerzbank|"
+    r"Versicherung\w*|Bausparkasse|Krankenkasse|Gesundheitskasse|BKK|IKK|AOK|"
+    # „Brand" stand hier fuer „Daimler Brand und IP Management GmbH" — und warf dabei
+    # zwei echte Orte weg: Brand (Oberpfalz) und Neunkirchen am Brand. Die Firma faengt
+    # ohnehin das GmbH; der Marker ist ersatzlos raus.
+    r"Holding|Group|Germany|Deutschland|Deutsche|International|Vertrieb|Management|"
+    r"Marketing|Service|Services|Center|Classic|Direkt|"
+    r"Agentur|Finanzamt|Amtsgericht|Landgericht|Staatsanwaltschaft|Arbeitsgericht|"
+    r"Stadtverwaltung|Landratsamt|Landesamt|Bundesamt|Kreisverwaltung|Kreisverwaltungsreferat|"
+    r"Universit\w+|Hochschule|Berufsakademie|Klinikum|Krankenhaus|Zentrum|"
+    r"Niederlassung|Zustellst\w+|Postfach|Brief\w*|Telekom|Siemens|Amazon|"
+    r"Rentenversicherung|Sozialversicherung|Berufsgenossenschaft|Gesellschaft)\b"
+    # Als ENDUNG, nicht nur als eigenes Wort: die Marker stecken oft im Kompositum
+    # („Landesbausparkasse", „Betriebskrankenkasse", „Kreissparkasse", „Werbeagentur").
+    # Kein echter Ortsname endet auf diese Silben — gegen alle 15.050 Zeilen mit
+    # gesetzter `accuracy` geprüft, 0 Fehlalarme.
+    r"|\w*(?:sparkasse|krankenkasse|bausparkasse|versicherung|agentur|"
+    r"genossenschaft|beh\u00f6rde|verwaltung|direktion)\b"
     r"|&|\d",
     re.IGNORECASE,
 )

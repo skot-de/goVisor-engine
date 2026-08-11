@@ -1058,3 +1058,40 @@ def test_live_write_merges_instead_of_overwriting(tmp_path):
     nochmal = ftl._mit_bestand(out, neu, schema, {"c_2026", "d_2026"})
     assert len(nochmal.column("notice_id").to_pylist()) == len(set(
         nochmal.column("notice_id").to_pylist()))
+
+
+def test_city_index_filter_keeps_places_and_drops_organisations():
+    """Der Stadt-Index darf keine Firmen als Orte anbieten — und keine Orte verlieren.
+
+    GeoNames traegt bei **Grossempfaenger-Postleitzahlen** (eigene PLZ wegen hohem
+    Postaufkommen) den Organisationsnamen in die Ort-Spalte. Gemessen sind das 8.247 von
+    23.297 Zeilen; erkennbar an leerer `accuracy`, waehrend echte Staedte durchgaengig 4
+    oder 6 tragen.
+
+    Nicht hart nach `accuracy` gefiltert wird, weil dort auch echte kleine Orte und
+    Stadtteile liegen (Travenbrueck, Uetz, Kummersdorf-Alexanderdorf) — rund 1.350 gingen
+    verloren. Nach „HUK-Coburg" sucht in einer Umkreissuche niemand; ein fehlendes Dorf ist
+    dagegen ein echter Funktionsverlust.
+
+    Der Fall, der die Balance zeigt: „Brand" stand als Marker in der Liste (fuer „Daimler
+    Brand und IP Management GmbH") und warf dabei die echten Orte Brand (Oberpfalz) und
+    Neunkirchen am Brand weg.
+    """
+    import importlib.util
+    import pathlib as _pl
+
+    spec = importlib.util.spec_from_file_location(
+        "_bci", _pl.Path(__file__).resolve().parent.parent / "scripts" / "build_city_index.py")
+    bci = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(bci)
+
+    for organisation in ("Kreissparkasse Ludwigsburg", "Bosch - Betriebskrankenkasse",
+                         "LBS Süd Landesbausparkasse Süd", "RTS Rieger Team, Werbeagentur",
+                         "Agentur für Arbeit Freising", "Finanzamt Kiel-Nord",
+                         "Amtsgericht München", "Mercedes-Benz Versicherung AG"):
+        assert bci._JUNK.search(organisation), f"nicht gefiltert: {organisation}"
+
+    for ort in ("München", "Brand", "Neunkirchen am Brand", "Travenbrück", "Uetz",
+                "Gießen", "Fürstenfeldbruck", "Kummersdorf-Alexanderdorf",
+                "Bad Homburg vor der Höhe", "Sankt Augustin"):
+        assert not bci._JUNK.search(ort), f"echter Ort faelschlich gefiltert: {ort}"
