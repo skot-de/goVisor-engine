@@ -120,13 +120,33 @@ def _mit_bestand(out: Path, neu: pa.Table, table_schema, neue_ids: set[str]) -> 
     """
     if not out.exists():
         return neu
-    alt = pq.read_table(out)
+    # `pq.read_table(pfad)` baut ein Dataset und leitet aus dem Ordnernamen `year=2026`
+    # eine Partitionsspalte ab — die kollidiert mit der gleichnamigen echten Spalte in der
+    # Datei ("Field year has incompatible types: int16 vs dictionary<...>"). ParquetFile
+    # liest die Datei direkt, ohne Partitions-Interpretation.
+    alt = pq.ParquetFile(out).read()
     if alt.num_rows == 0:
         return neu
     if "notice_id" in alt.column_names and neue_ids:
         behalten = pc.invert(pc.is_in(alt["notice_id"], value_set=pa.array(sorted(neue_ids))))
         alt = alt.filter(behalten)
-    alt = alt.cast(table_schema) if alt.schema != table_schema else alt
+
+    # Die ZIELDATEI gibt das Schema vor, nicht das Live-Schema. Monatsarchive führen eine
+    # zusätzliche `year`-Spalte, die `model.TABLES` nicht kennt (die Hive-Partition liefert
+    # sie beim Lesen ohnehin, im Archiv steht sie zusätzlich drin). Würde man das Archiv auf
+    # das Live-Schema casten, verlöre es diese Spalte — und der Bestand bekäme ein anderes
+    # Schema als seine Nachbarmonate.
+    for feld in alt.schema:
+        if feld.name in neu.column_names:
+            continue
+        if feld.name == "year":
+            wert = int(out.parent.name.split("=")[-1])
+            neu = neu.append_column(feld, pa.array([wert] * neu.num_rows, type=feld.type))
+        else:
+            neu = neu.append_column(feld, pa.nulls(neu.num_rows, type=feld.type))
+    neu = neu.select(alt.column_names)
+    if neu.schema != alt.schema:
+        neu = neu.cast(alt.schema)
     return pa.concat_tables([alt, neu])
 
 
@@ -208,7 +228,17 @@ def main(since: str, until: str, limit: int | None, workers: int, country: str =
         neue_ids = {r["notice_id"] for r in buckets["notices"] if r.get("notice_id")}
         for table, table_schema in model.TABLES.items():
             base = cfg.silver_table_path(table, country, key)
-            out = base.with_name(f"{key}-live.parquet")
+            # Gibt es für den Monat schon ein Archiv, wird DORT hineingeschrieben statt
+            # eine `-live`-Datei danebenzulegen. Sonst entsteht die Konstellation, die
+            # `test_silver_month_files_do_not_shadow_each_other` verbietet: der Silber-Glob
+            # läse beide Dateien, und ob das doppelt zählt, hinge allein davon ab, ob sich
+            # die Notices überschneiden.
+            #
+            # Das ist kein Randfall, sondern die Regel: das Suchfenster folgt der TED-
+            # Facette, der Zielmonat dem XML-`publication_date`. Ein Juli-Lauf erzeugt
+            # deshalb verlässlich auch Zeilen für Mai und Juni — beides längst archiviert.
+            archiv = base.with_name(f"{key}.parquet")
+            out = archiv if archiv.exists() else base.with_name(f"{key}-live.parquet")
             out.parent.mkdir(parents=True, exist_ok=True)
             arrow = pa.Table.from_pylist(buckets[table], schema=table_schema)
             arrow = _mit_bestand(out, arrow, table_schema, neue_ids)
@@ -216,12 +246,15 @@ def main(since: str, until: str, limit: int | None, workers: int, country: str =
             pq.write_table(arrow, tmp, compression="zstd")
             tmp.replace(out)
         n = len(buckets["notices"])
-        gesamt = pq.read_metadata(cfg.silver_table_path("notices", country, key)
-                                  .with_name(f"{key}-live.parquet")).num_rows
+        _nb = cfg.silver_table_path("notices", country, key)
+        _ziel = _nb.with_name(f"{key}.parquet")
+        if not _ziel.exists():
+            _ziel = _nb.with_name(f"{key}-live.parquet")
+        gesamt = pq.read_metadata(_ziel).num_rows
         written += n
         # Beide Zahlen zeigen: was dieser Lauf brachte UND was danach in der Datei steht.
         # Liefe das Zusammenführen je kaputt, fiele es hier sofort auf.
-        log(f"  {key}-live: {n:,} geholt → {gesamt:,} in der Datei")
+        log(f"  {_ziel.name}: {n:,} geholt → {gesamt:,} in der Datei")
     log(f"FERTIG: {written:,} Notices live ergänzt ({fails} Fehlschläge). Jetzt `gold` rebuilden.")
     return written
 
