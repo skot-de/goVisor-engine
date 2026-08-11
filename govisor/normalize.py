@@ -134,6 +134,16 @@ def rows(notice: schema.Notice, raw: bytes, country: str, year: int, month: int)
             {"notice_id": nid, "path": path, "value": value}
             for path, value in flatten.leaves(raw)
         ],
+        # Sprachfassungen von Titel/Beschreibung. `notices.title` bleibt die eine
+        # Anzeigefassung; hier steht jede Sprache mit ihrem Text gepaart, so wie sie im
+        # XML zusammenhängen (`<cbc:Name languageID="FRA">`). Der `attributes`-Flattener
+        # kann das nicht leisten — dort werden Text und Sprachcode zu getrennten Zeilen
+        # ohne Positionsindex und sind nachträglich nicht mehr zuzuordnen.
+        "notice_text": [
+            {"notice_id": nid, "lot_id": lot_id, "feld": feld,
+             "language": lang, "wert": wert}
+            for lot_id, feld, lang, wert in (getattr(notice, "texts", None) or [])
+        ],
     }
 
 

@@ -1182,3 +1182,67 @@ def test_gehoert_zu_land_trennt_eu_einrichtungen():
                    language="de", title="t", description=None, description_field=None,
                    cpv_main="45000000", parties=[Party(role="buyer", name="Z")])
     assert normalize.gehoert_zu_land(blind, "DE")
+
+
+def test_notice_text_haelt_alle_sprachfassungen_gepaart():
+    """Mehrsprachige Vergaben behalten jede Fassung — mit der richtigen Sprache daneben.
+
+    `notices` fuehrt genau EINEN Titel; der Parser nahm die erste Fassung im XML und
+    verwarf den Rest. Bei der belgischen Elia-Ausschreibung 161098_2024 (EN, FR, NL)
+    landete so der FRANZOESISCHE Titel in der Zeile, waehrend `language` NLD meldete -
+    Text und Etikett widersprachen sich.
+
+    Die Sprache haengt im XML als Attribut am selben Element wie der Text
+    (`<cbc:Name languageID="FRA">`), die Zuordnung ist beim Parsen also eindeutig. Erst der
+    `attributes`-Flattener riss sie auseinander: dort werden Text und Sprachcode zu
+    getrennten Zeilen ohne Positionsindex, in wechselnder Reihenfolge - nachtraeglich nicht
+    mehr paarbar. Genau deshalb braucht es eine eigene Tabelle und nicht `attributes`.
+    """
+    import xml.etree.ElementTree as ET
+
+    from govisor import schema
+
+    xml = """<ContractNotice xmlns:cbc="urn:cbc" xmlns:cac="urn:cac">
+      <cac:ProcurementProject>
+        <cbc:Name languageID="FRA">Marche de fournitures</cbc:Name>
+        <cbc:Name languageID="NLD">Opdracht voor leveringen</cbc:Name>
+        <cbc:Name languageID="ENG">Supply contract</cbc:Name>
+        <cbc:Description languageID="FRA">Description francaise</cbc:Description>
+        <cbc:Description languageID="NLD">Nederlandse beschrijving</cbc:Description>
+      </cac:ProcurementProject>
+    </ContractNotice>"""
+    root = ET.fromstring(xml)
+
+    project = next(c for c in root if schema._local(c) == "ProcurementProject")
+    titel = schema._child_texts_by_language(project, ("Name",))
+    assert titel == [("FRA", "Marche de fournitures"),
+                     ("NLD", "Opdracht voor leveringen"),
+                     ("ENG", "Supply contract")], titel
+
+    beschr = schema._child_texts_by_language(project, ("Description",))
+    assert [s for s, _ in beschr] == ["FRA", "NLD"]
+
+    # Ohne Sprachangabe geht die Fassung NICHT verloren, sie bekommt nur kein Etikett.
+    ohne = ET.fromstring('<P xmlns:cbc="urn:cbc"><cbc:Name>Kein Etikett</cbc:Name></P>')
+    assert schema._child_texts_by_language(ohne, ("Name",)) == [(None, "Kein Etikett")]
+
+
+def test_notice_text_landet_in_der_silber_tabelle():
+    """Die Sprachfassungen muessen den Weg bis in die Zeilen finden, nicht nur ins Objekt."""
+    from govisor import model, normalize, schema
+
+    assert "notice_text" in model.TABLES, "Tabelle nicht registriert"
+    assert model.TABLES["notice_text"].names == [
+        "notice_id", "lot_id", "feld", "language", "wert"]
+
+    notice = schema.Notice(
+        notice_id="x_2026", schema="eforms", form_type="cn", country="BE",
+        language="NLD", title="Marche", description=None, description_field=None,
+        cpv_main="45000000",
+        texts=[(None, "title", "FRA", "Marche"), (None, "title", "NLD", "Opdracht"),
+               ("LOT-1", "description", "ENG", "Supply")])
+    r = normalize.rows(notice, b"<x/>", "BE", 2026, 3)
+    assert len(r["notice_text"]) == 3
+    assert {z["language"] for z in r["notice_text"]} == {"FRA", "NLD", "ENG"}
+    lot = [z for z in r["notice_text"] if z["lot_id"] == "LOT-1"][0]
+    assert lot["feld"] == "description" and lot["wert"] == "Supply"

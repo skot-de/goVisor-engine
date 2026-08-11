@@ -157,6 +157,27 @@ ATTRIBUTES = pa.schema([
     ("value", pa.string()),
 ])
 
+# Sprachfassungen von Titel und Beschreibung — je Sprache eine Zeile.
+#
+# **Warum eine eigene Tabelle.** `notices` fuehrt genau EINEN Titel und EINE Beschreibung;
+# der Parser nahm bisher die erste Fassung im XML und verwarf den Rest. Bei mehrsprachigen
+# Vergaben ist das eine Zufallsauswahl: die belgische Elia-Ausschreibung 161098_2024 traegt
+# EN, FR und NL, gespeichert wurde der franzoesische Titel — mit `language='NLD'` daneben.
+#
+# Die Sprache haengt im XML als Attribut am selben Element wie der Text
+# (`<cbc:Name languageID="FRA">`), die Zuordnung ist beim Parsen also eindeutig. Erst der
+# Flattener nach `attributes` riss sie auseinander: dort stehen Text und Sprachcode als
+# getrennte Zeilen ohne Positionsindex, in wechselnder Reihenfolge — nicht mehr paarbar.
+#
+# `lot_id` ist NULL fuer die Notice-Ebene und gesetzt fuer Lose (die tragen eigene Titel).
+NOTICE_TEXT = pa.schema([
+    ("notice_id", pa.string()),
+    ("lot_id", pa.string()),        # NULL = Notice-Ebene
+    ("feld", pa.string()),          # 'title' | 'description'
+    ("language", pa.string()),      # ISO-639-3, wie im XML (FRA/NLD/DEU/ENG …)
+    ("wert", pa.string()),
+])
+
 # Tabellenname → Schema. Der Silber-Builder schreibt je eine Parquet-Datei.
 TABLES = {
     "notices": NOTICES,
@@ -168,4 +189,5 @@ TABLES = {
     "awards": AWARDS,
     "requirements": REQUIREMENTS,
     "attributes": ATTRIBUTES,
+    "notice_text": NOTICE_TEXT,
 }

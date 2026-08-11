@@ -283,6 +283,9 @@ class Notice:
     # Every buyer's country, not just the lead's. Joint procurements have
     # several, and TED counts the notice towards each of them — so a DE run
     # must keep a Brussels-led notice that buys for an agency in Frankfurt.
+    # Sprachfassungen von Titel/Beschreibung: (lot_id|None, feld, sprache|None, text).
+    # `title`/`description` oben bleiben die EINE Anzeigefassung; hier liegen alle.
+    texts: list[tuple[str | None, str, str | None, str]] = field(default_factory=list)
     buyer_countries: list[str] = field(default_factory=list)
 
     # Alles, was nicht sauber durchlief. Leer heißt: keine Annahme nötig.
@@ -833,6 +836,35 @@ def _original_form(root: ET.Element) -> tuple[ET.Element | None, str | None]:
                 return child, child.attrib.get("LG")
         return children[0], children[0].attrib.get("LG")
     return None, None
+
+
+def _child_texts_by_language(parent: ET.Element, names: tuple[str, ...]) -> list[tuple[str, str]]:
+    """ALLE direkten Kinder mit passendem Namen als (Sprache, Text).
+
+    Gegenstueck zu `_first_child_text`, das die erste Fassung nimmt und den Rest verwirft.
+    Bei mehrsprachigen Vergaben ist das eine Zufallsauswahl: die belgische Elia-
+    Ausschreibung 161098_2024 fuehrt EN, FR und NL — gespeichert wurde der franzoesische
+    Titel, waehrend `language` NLD meldete.
+
+    Die Sprache steht als Attribut am Element selbst (`languageID` in eForms, `LG` in den
+    Legacy-Formularen), die Zuordnung ist hier also eindeutig. Genau das geht im
+    `attributes`-Flattener verloren, wo Text und Sprachcode zu getrennten Zeilen ohne
+    Positionsindex werden.
+
+    Ohne Sprachangabe wird `None` als Sprache zurueckgegeben — lieber die Fassung ohne
+    Etikett behalten als sie zu verwerfen.
+    """
+    aus: list[tuple[str, str]] = []
+    for child in parent:
+        if _local(child) not in names:
+            continue
+        text = _text_of(child)
+        if not text:
+            continue
+        lang = (child.attrib.get("languageID") or child.attrib.get("LG")
+                or child.attrib.get("lang") or None)
+        aus.append(((lang or "").upper() or None, text))
+    return aus
 
 
 def _first_child_text(parent: ET.Element, names: tuple[str, ...]) -> tuple[str | None, str | None]:
@@ -1763,9 +1795,15 @@ def _parse_eforms(root: ET.Element, notice_id: str) -> Notice:
     # Everything else named cbc:Description is boilerplate (appeal terms etc.).
     project = next((c for c in root if _local(c) == "ProcurementProject"), None)
     description = title = None
+    texts: list[tuple[str | None, str, str | None, str]] = []
     if project is not None:
         description, _ = _first_child_text(project, ("Description",))
         title, _ = _first_child_text(project, ("Name",))
+        # Alle Sprachfassungen mitnehmen — `title`/`description` bleiben die Anzeigefassung.
+        for lang, wert in _child_texts_by_language(project, ("Name",)):
+            texts.append((None, "title", lang, wert))
+        for lang, wert in _child_texts_by_language(project, ("Description",)):
+            texts.append((None, "description", lang, wert))
 
     lots: list[Lot] = []
     for lot_elem in _iter_named(root, "ProcurementProjectLot"):
@@ -1775,6 +1813,10 @@ def _parse_eforms(root: ET.Element, notice_id: str) -> Notice:
             continue
         lot_text, _ = _first_child_text(lot_project, ("Description",))
         lot_title, _ = _first_child_text(lot_project, ("Name",))
+        for lang, wert in _child_texts_by_language(lot_project, ("Name",)):
+            texts.append((lot_id, "title", lang, wert))
+        for lang, wert in _child_texts_by_language(lot_project, ("Description",)):
+            texts.append((lot_id, "description", lang, wert))
         if lot_text or lot_title:
             lot = Lot(lot_id=lot_id, title=lot_title, description=lot_text)
             _eforms_lot_terms(lot_project, lot)
@@ -2025,4 +2067,5 @@ def _parse_eforms(root: ET.Element, notice_id: str) -> Notice:
         requirements=_eforms_requirements(root),
         notice_kind=_EFORMS_KIND.get(_local(root), "other"),
         buyer_countries=list(dict.fromkeys(buyer_countries)),
+        texts=texts,
     )
