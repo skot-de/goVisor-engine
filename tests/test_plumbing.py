@@ -1215,12 +1215,14 @@ def test_notice_text_haelt_alle_sprachfassungen_gepaart():
 
     project = next(c for c in root if schema._local(c) == "ProcurementProject")
     titel = schema._child_texts_by_language(project, ("Name",))
-    assert titel == [("FRA", "Marche de fournitures"),
-                     ("NLD", "Opdracht voor leveringen"),
-                     ("ENG", "Supply contract")], titel
+    # Kleingeschriebenes ISO-639-1, nicht der Rohcode aus dem XML: die Quelle mischt
+    # `FRA` (eForms) und `FR` (Legacy) fuer dieselbe Sprache — s. govisor/languages.py.
+    assert titel == [("fr", "Marche de fournitures"),
+                     ("nl", "Opdracht voor leveringen"),
+                     ("en", "Supply contract")], titel
 
     beschr = schema._child_texts_by_language(project, ("Description",))
-    assert [s for s, _ in beschr] == ["FRA", "NLD"]
+    assert [s for s, _ in beschr] == ["fr", "nl"]
 
     # Ohne Sprachangabe geht die Fassung NICHT verloren, sie bekommt nur kein Etikett.
     ohne = ET.fromstring('<P xmlns:cbc="urn:cbc"><cbc:Name>Kein Etikett</cbc:Name></P>')
@@ -1283,3 +1285,53 @@ def test_notice_text_ids_sind_kanonisch():
         """).fetchone()[0]
         # Eine Handvoll bleibt: Notices, die spaeter aus dem Laender-Silber gewandert sind.
         assert waisen < 100, f"{land}: {waisen} notice_text-Waisen — ID-Format geprueft?"
+
+
+def test_sprachcodes_sind_kanonisch():
+    """Eine Sprache, ein Code. Gemessen waren es 56 Codes fuer 24 Sprachen.
+
+    Die Quelle mischt drei Systeme: die Legacy-Formulare fuehren ISO-639-1 im LG-Attribut
+    (`DE`, 2,25 Mio.), eForms ISO-639-2/T in languageID (`DEU`, 2,20 Mio.), einzelne Pfade
+    liefern Kleinschreibung (`de`). Fuer eine Sprachumschaltung ist das unbrauchbar - wer
+    nach `de` filtert, verliert die Haelfte.
+
+    Zielsystem ist ISO-639-1 klein, nicht aus Geschmack: das ist der Code im
+    Accept-Language-Header, im HTML-lang-Attribut und in jeder i18n-Bibliothek.
+    """
+    import duckdb
+
+    from govisor import languages
+
+    assert languages.normalize("DEU") == "de"
+    assert languages.normalize("DE") == "de"
+    assert languages.normalize("de") == "de"
+    assert languages.normalize("FRA") == "fr"
+    assert languages.normalize("SPA") == "es"       # nicht "sp"
+    assert languages.normalize("SWE") == "sv"       # nicht "sw"
+    # Zweisprachige Vergaben (Suedtirol) behalten BEIDE Sprachen — das ist eine Tatsache
+    # ueber die Vergabe, kein Formatfehler.
+    assert languages.normalize("DE;IT") == "de;it"
+    assert languages.normalize("DE IT") == "de;it"
+    assert languages.normalize("DE;DE") == "de"
+    # Fehlende Angabe bleibt fehlend, statt zu einer erfundenen Sprache zu werden.
+    assert languages.normalize(None) is None and languages.normalize("") is None
+    # Unbekanntes bleibt stehen (nur klein) — verwerfen wuerde die Luecke verstecken.
+    assert languages.normalize("XYZ") == "xyz"
+
+    import pathlib as _pl
+
+    wurzel = _pl.Path("data/silver")
+    if not wurzel.exists():
+        return
+    con = duckdb.connect()
+    for land in ("DE", "AT", "CH", "EU"):
+        for tabelle in ("notices", "notice_text"):
+            d = wurzel / land / tabelle
+            if not any(d.glob("*/*.parquet")):
+                continue
+            roh = con.execute(f"""
+                SELECT DISTINCT language FROM read_parquet(
+                  '{d.as_posix()}/*/*.parquet', hive_partitioning=1)
+                WHERE language IS NOT NULL""").fetchall()
+            schlecht = [r[0] for r in roh if r[0] != languages.normalize(r[0])]
+            assert not schlecht, f"{land}/{tabelle}: nicht kanonisch — {schlecht[:5]}"

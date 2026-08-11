@@ -261,7 +261,9 @@ def test_lot_descriptions_are_kept():
 
 def test_translated_notice_yields_original_language():
     notice = schema.parse(LEGACY_TRANSLATED, "2-2023")
-    assert notice.language == "DE"
+    # Seit der Sprachcode-Vereinheitlichung ISO-639-1 klein (vorher "DE"/"DEU"
+    # nebeneinander fuer dieselbe Sprache).
+    assert notice.language == "de"
     assert notice.description == "Originaltext."
     assert notice.title == "IT-Dienstleistungen"
 

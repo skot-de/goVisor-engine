@@ -23,6 +23,7 @@ from dataclasses import dataclass, field
 from typing import Iterator
 
 from . import countries
+from . import languages
 from . import flatten
 from . import locales
 
@@ -563,7 +564,7 @@ def _parse_text(raw: bytes, notice_id: str) -> Notice:
 
     notice = Notice(
         notice_id=nd, schema="text", form_type=(td or None), notice_kind=kind,
-        country=country, language=(fields.get("OL") or None),
+        country=country, language=languages.normalize(fields.get("OL")),
         title=(fields.get("TI") or None), description=(tx or None),
         description_field=("TX" if tx else None),
         cpv_main=cpv_main, cpv_all=cpv_all, publication_date=_text_date(fields.get("PD")),
@@ -780,7 +781,7 @@ def _parse_internal_ojs(root: ET.Element, notice_id: str) -> Notice:
         schema="ojs",
         form_type=form_type,
         country=country,
-        language=language,
+        language=languages.normalize(language),
         title=title,
         description=description,
         description_field=description_field,
@@ -868,9 +869,10 @@ def _legacy_texts_by_language(root: ET.Element) -> list[tuple[str | None, str, s
             text = _text_of(kind)
             # Dieselbe Fassung steht oft in mehreren Bloecken (ML_TI_DOC UND F02) —
             # einmal je Sprache und Feld genuegt.
-            if text and (lg, feld) not in gesehen:
-                gesehen.add((lg, feld))
-                aus.append((None, feld, lg, text))
+            norm = languages.normalize(lg)
+            if text and (norm, feld) not in gesehen:
+                gesehen.add((norm, feld))
+                aus.append((None, feld, norm, text))
     return aus
 
 
@@ -899,7 +901,10 @@ def _child_texts_by_language(parent: ET.Element, names: tuple[str, ...]) -> list
             continue
         lang = (child.attrib.get("languageID") or child.attrib.get("LG")
                 or child.attrib.get("lang") or None)
-        aus.append(((lang or "").upper() or None, text))
+        # Direkt auf ISO-639-1 vereinheitlichen: die Quelle mischt `DEU` (eForms) und
+        # `DE` (Legacy) fuer dieselbe Sprache. Wer spaeter nach `de` filtert, soll alles
+        # finden — s. govisor/languages.py.
+        aus.append((languages.normalize(lang), text))
     return aus
 
 
@@ -1491,7 +1496,7 @@ def _parse_legacy(root: ET.Element, notice_id: str) -> Notice:
         schema="legacy",
         form_type=form_type,
         country=country,
-        language=language,
+        language=languages.normalize(language),
         title=title,
         description=description,
         description_field=description_field,
@@ -2081,7 +2086,7 @@ def _parse_eforms(root: ET.Element, notice_id: str) -> Notice:
         schema="eforms",
         form_type=_local(root),
         country=country,
-        language=language,
+        language=languages.normalize(language),
         title=title,
         description=description,
         description_field="cbc:Description" if description else None,
