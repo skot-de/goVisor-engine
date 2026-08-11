@@ -860,9 +860,16 @@ function suggestList(raw){
     push({type:'ort', value:q, coord:[_pg[0], _pg[1]], radius:25, cat:'Umkreis',
           label:'PLZ '+q+(_pg[2] ? ' '+_pg[2] : '')});
   } else if(/^\d{2,5}$/.test(q) && PLZ[q[0]]) push({type:'ort',value:PLZ[q[0]],label:'PLZ '+q+' (Region)',cat:'Ort'});
-  [...new Set(LEADS.map(l=>l.buyerShort))].forEach(b=>{ if(b.toLowerCase().includes(q)) push({type:'buyer',value:b,label:b,cat:'Auftraggeber'}); });
-  [...new Set(LEADS.flatMap(l=>(l.kw||[]).map(k=>k.w)))].forEach(w=>{ if(w.toLowerCase().includes(q)) push({type:'text',value:w.toLowerCase(),label:w,cat:'Stichwort'}); });
-  [...new Set(LEADS.map(l=>l.natur))].forEach(n=>{ if(n.toLowerCase().includes(q)) push({type:'text',value:n.toLowerCase(),label:n,cat:'Leistung'}); });
+  // Leere Werte VOR dem Vergleich aussortieren, nicht erst beim Zugriff. Ein einziger Lead
+  // ohne `natur` liess hier die ganze App abstuerzen — `n.toLowerCase()` auf undefined, bei
+  // JEDEM Tastendruck in der Suche. Zeile 472 derselben Datei sichert dasselbe Feld mit
+  // `(l.natur||'')` ab; die Uneinheitlichkeit war der eigentliche Fehler.
+  const vorschlagen = (werte, bauen) => {
+    for(const v of new Set(werte)){ if(typeof v === 'string' && v && v.toLowerCase().includes(q)) push(bauen(v)); }
+  };
+  vorschlagen(LEADS.map(l=>l.buyerShort), b => ({type:'buyer',value:b,label:b,cat:'Auftraggeber'}));
+  vorschlagen(LEADS.flatMap(l=>(l.kw||[]).map(k=>k.w)), w => ({type:'text',value:w.toLowerCase(),label:w,cat:'Stichwort'}));
+  vorschlagen(LEADS.map(l=>l.natur), n => ({type:'text',value:n.toLowerCase(),label:n,cat:'Leistung'}));
   return out.slice(0,9);
 }
 
