@@ -135,3 +135,51 @@ def rows(notice: schema.Notice, raw: bytes, country: str, year: int, month: int)
             for path, value in flatten.leaves(raw)
         ],
     }
+
+
+def gehoert_zu_land(notice, country: str) -> bool:
+    """Gehört diese Notice in das Länder-Silber ``country``?
+
+    **Warum das nötig ist.** Weder die TED-Search-API noch die Monatspakete trennen sauber
+    nach Land. Gemessen liefert `buyer-country=DEU` und `buyer-country=AUT` teils **dieselbe**
+    Bekanntmachung: 121 Notices liegen in DE und AT zugleich, und 116 davon gehören zu
+    keinem von beiden — Käuferland laut XML ist Belgien (51), Niederlande (43), Italien (8),
+    Luxemburg (6). Es sind EU-Einrichtungen (Kommission, EBA, EFSA, ECDC, GÉANT), die TED
+    unter der Facette jedes Mitgliedstaats ausliefert.
+
+    **Die Regel.** Das Käuferland aus dem XML entscheidet — ersatzweise seine NUTS-Region,
+    falls das Land fehlt. Beides zusammen, weil ein Sitz im Land auch dann zählt, wenn die
+    Länderangabe fehlt.
+
+    **Ehrlich zur NUTS-Hälfte:** sie rettet am heutigen Bestand **null** Notices (DE, AT und
+    CH je 0). Der befürchtete Fall — EU-Einrichtung mit Sitz im Land, aber fremdem Länder-
+    code — existiert nicht: die EIOPA in Frankfurt trägt bereits `country='DE'`. Die Klausel
+    bleibt als Auffangnetz für fehlende Länderangaben (9 Notices im DE-Bestand), nicht weil
+    sie heute etwas bewirkt.
+
+    **Ausfallrichtung:** ist gar nichts bekannt (kein Käuferland, keine NUTS), bleibt die
+    Notice drin. Lieber ein Fremdkörper mehr als eine still verworfene Vergabe — das ist
+    dieselbe Linie wie „Kein Datenverlust" an allen anderen Stellen.
+    """
+    land = (country or "").upper()
+    if not land:
+        return True
+
+    # `notice.buyer_countries` ist hier BEWUSST nicht dabei. Der Name führt in die Irre:
+    # das Feld listet nicht das Land des Käufers, sondern alle in der Bekanntmachung
+    # genannten Länder. Bei der Möbel-Ausschreibung der EU-Kommission (518653_2026) stehen
+    # dort 14 Einträge inklusive DE und AT — die Regel hätte damit ausnahmslos zugestimmt
+    # und genau die Fälle durchgelassen, für die sie gebaut ist. Maßgeblich sind die
+    # Käuferpartei und `notice.country` (laut Schema „lead buyer, canonical alpha-2").
+    kandidaten = [p for p in (getattr(notice, "parties", None) or [])
+                  if (getattr(p, "role", "") or "").lower() == "buyer"]
+    laender = {(p.country or "").upper() for p in kandidaten if p.country}
+    if getattr(notice, "country", None):
+        laender.add(str(notice.country).upper())
+    if laender:
+        return land in laender
+
+    nuts = {(p.nuts or "").upper() for p in kandidaten if p.nuts}
+    if nuts:
+        return any(n.startswith(land) for n in nuts)
+    return True          # nichts bekannt → behalten

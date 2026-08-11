@@ -1132,3 +1132,53 @@ def test_city_index_gazetteer_gate_only_for_grossempfaenger():
     # Fehlt der Gazetteer, faellt der Filter auf den Wortfilter zurueck statt abzubrechen —
     # der Index enthaelt dann wieder Organisationen, aber keine Stadt verschwindet.
     assert bci._lade_ortsnamen.__doc__ and "leere Menge" in bci._lade_ortsnamen.__doc__
+
+
+def test_gehoert_zu_land_trennt_eu_einrichtungen():
+    """Die Laenderzuordnung folgt dem Kaeuferland, nicht der Abfrage, die die Notice fand.
+
+    Weder die TED-Search-API noch die Monatspakete trennen sauber: gemessen liefern
+    `buyer-country=DEU` und `buyer-country=AUT` teils dieselbe Bekanntmachung. 121 Notices
+    lagen in DE und AT zugleich, 116 davon gehoerten zu keinem von beiden (Kaeuferland
+    Belgien 51, Niederlande 43, Italien 8, Luxemburg 6) - EU-Einrichtungen, die TED unter
+    der Facette jedes Mitgliedstaats ausliefert.
+
+    Der Fallstrick, der beim Bauen zugeschlagen hat: `notice.buyer_countries` klingt nach
+    der Antwort, ist es aber nicht. Das Feld listet ALLE in der Bekanntmachung genannten
+    Laender - bei der Moebel-Ausschreibung der EU-Kommission 14 Stueck inklusive DE und AT.
+    Wer es mitzaehlt, baut eine Regel, die ausnahmslos zustimmt.
+    """
+    from govisor import normalize
+    from govisor.schema import Notice, Party
+
+    def notice(land, nuts=None, buyer_countries=(), nid="x_2026"):
+        return Notice(notice_id=nid, schema="eforms", form_type="cn", country=land,
+                      language="de", title="t", description=None, description_field=None,
+                      cpv_main="79635000",
+                      parties=[Party(role="buyer", name="X", country=land, nuts=nuts)],
+                      buyer_countries=list(buyer_countries))
+
+    # EIOPA Frankfurt: Kaeuferland DE -> gehoert nach DE, nicht nach AT.
+    eiopa = notice("DE", "DE712", ["DE", "AT", "BE", "NL"])
+    assert normalize.gehoert_zu_land(eiopa, "DE")
+    assert not normalize.gehoert_zu_land(eiopa, "AT")
+
+    # EU-Kommission Bruessel: gehoert in keines der DACH-Silber, trotz DE/AT in der Liste.
+    kommission = notice("BE", "BE100", ["BE", "DE", "AT", "LU"])
+    assert not normalize.gehoert_zu_land(kommission, "DE")
+    assert not normalize.gehoert_zu_land(kommission, "AT")
+
+    # NUTS faengt auf, wenn das Kaeuferland fehlt (am heutigen Bestand 0 Faelle, aber die
+    # Klausel ist der Grund, warum die Regel "Kaeuferland ODER Sitz-NUTS" heisst).
+    ohne_land = Notice(notice_id="y_2026", schema="eforms", form_type="cn", country=None,
+                       language="de", title="t", description=None, description_field=None,
+                       cpv_main="45000000",
+                       parties=[Party(role="buyer", name="Y", country=None, nuts="DE300")])
+    assert normalize.gehoert_zu_land(ohne_land, "DE")
+    assert not normalize.gehoert_zu_land(ohne_land, "AT")
+
+    # Ist gar nichts bekannt, bleibt die Notice drin - kein stiller Datenverlust.
+    blind = Notice(notice_id="z_2026", schema="eforms", form_type="cn", country=None,
+                   language="de", title="t", description=None, description_field=None,
+                   cpv_main="45000000", parties=[Party(role="buyer", name="Z")])
+    assert normalize.gehoert_zu_land(blind, "DE")

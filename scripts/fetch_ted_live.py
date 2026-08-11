@@ -169,6 +169,7 @@ def main(since: str, until: str, limit: int | None, workers: int, country: str =
 
     by_month = defaultdict(lambda: {name: [] for name in model.TABLES})
     fails = 0
+    fremd = 0
 
     def _fetch_xml(pub, tries=5):
         """Roh-XML holen — mit Bronze-Cache und Backoff (TED rate-limitet, HTTP 429).
@@ -214,6 +215,13 @@ def main(since: str, until: str, limit: int | None, workers: int, country: str =
             if notice is None:
                 fails += 1
                 continue
+            # Die Search-API trennt nicht sauber nach Land: EU-Einrichtungen erscheinen
+            # unter der Facette jedes Mitgliedstaats (gemessen 121 Notices in DE UND AT,
+            # davon 116 mit belgischem/niederländischem Käufer). Erst das geparste XML
+            # weiß es besser — s. normalize.gehoert_zu_land.
+            if not normalize.gehoert_zu_land(notice, country):
+                fremd += 1
+                continue
             pd = notice.publication_date or since
             year, month = int(pd[:4]), int(pd[5:7])
             rows = normalize.rows(notice, raw, country, year, month)
@@ -255,7 +263,10 @@ def main(since: str, until: str, limit: int | None, workers: int, country: str =
         # Beide Zahlen zeigen: was dieser Lauf brachte UND was danach in der Datei steht.
         # Liefe das Zusammenführen je kaputt, fiele es hier sofort auf.
         log(f"  {_ziel.name}: {n:,} geholt → {gesamt:,} in der Datei")
-    log(f"FERTIG: {written:,} Notices live ergänzt ({fails} Fehlschläge). Jetzt `gold` rebuilden.")
+    # Die Fremd-Zahl gehört ins Protokoll, nicht ins Schweigen: greift die Regel eines
+    # Tages zu scharf, fällt es nur hier auf.
+    zusatz = f", {fremd:,} nicht zu {country} gehörend" if fremd else ""
+    log(f"FERTIG: {written:,} Notices live ergänzt ({fails} Fehlschläge{zusatz}). Jetzt `gold` rebuilden.")
     return written
 
 

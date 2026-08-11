@@ -45,6 +45,7 @@ def build_month(cfg: Config, country: str, key: str, force: bool = False) -> int
     # die sauber als UTF-8 dekodierende Edition gewinnt (die ISO-Variante hätte Mojibake).
     # Für Jahre ohne Dubletten (2010+) erscheint jede notice_id genau einmal → unverändert.
     by_id: dict[str, tuple[int, dict]] = {}
+    fremd = 0
     with tarfile.open(src, "r:gz") as tf:
         for member in tf:
             if not member.isfile():
@@ -66,7 +67,19 @@ def build_month(cfg: Config, country: str, key: str, force: bool = False) -> int
                 notice = schema.parse(raw, notice_id)
             except Exception:
                 continue
+            # Weder die Monatspakete noch die Search-API trennen sauber nach Land: EU-
+            # Einrichtungen erscheinen unter der Facette jedes Mitgliedstaats. Erst hier,
+            # nach dem Parsen, ist das Käuferland aus dem XML bekannt — s.
+            # normalize.gehoert_zu_land.
+            if not normalize.gehoert_zu_land(notice, country):
+                fremd += 1
+                continue
             by_id[notice_id] = (clean, normalize.rows(notice, raw, country, year, month))
+
+    if fremd:
+        # Nicht stillschweigend verwerfen: die Zahl gehört ins Protokoll, sonst merkt
+        # niemand, wenn die Regel eines Tages zu scharf greift.
+        print(f"    {key}: {fremd:,} Notices gehören nicht zu {country} (Käuferland/NUTS)")
 
     count = len(by_id)
     if count == 0:
