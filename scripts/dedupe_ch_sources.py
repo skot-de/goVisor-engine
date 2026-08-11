@@ -23,9 +23,17 @@ Beide Werte sind an echten Daten korrigiert, nicht geraten. Ein Zeichen-Präfix 
 weil simap Projektnummern voranstellt und TED nicht. Das Datumsfenster von 31 Tagen ließ
 12 Paare mit voller Wortdeckung durchrutschen (34–57 Tage auseinander, Median 40).
 
+**Wer bei einer Dublette gewinnt: TED — nicht simap.** Das ist die Umkehrung dessen, was
+oben nahelag („TED ergänzt simap"), und sie ist gemessen: für 2025–2026 trägt TED-CHE
+Ø 1,19 Lose gegen **0** bei simap, längere Beschreibungen (505 gegen 447 Zeichen) und
+deutlich mehr echte Fristen (53,2 % gegen 30,5 %). Wert führt keine der beiden (0,2 % / 0 %).
+Man bietet auf ein Los, nicht auf eine Bekanntmachung — also bleibt die TED-Zeile stehen und
+die simap-Zwillingszeile fällt. simap-Notices **ohne** TED-Partner bleiben davon unberührt;
+sie sind der eigentliche Beitrag der nationalen Plattform.
+
 Ergebnis: `data/gold/CH/ted_dedup.parquet` mit je TED-Notice der Entscheidung
-(`dublette` / `neu`) und, bei Dublette, der simap-notice_id. Das Gold für CH kann darauf
-filtern, statt blind beide Quellen zu vereinigen.
+(`dublette` / `neu`) und, bei Dublette, der simap-notice_id. `simap.build_ch_gold` schließt
+die dort genannten **simap**-IDs aus.
 
 Aufruf:  python scripts/dedupe_ch_sources.py [--von 2026-01] [--bis 2026-08]
 """
@@ -184,29 +192,49 @@ def main(von: str, bis: str, ohne_pruefung: bool = False) -> int:
         for w in ws:
             inv.setdefault(w, []).append(i)
 
-    rows = []
-    treffer = 0
-    for tid, titel, datum, cpv in ted:
+    # Erst ALLE zulässigen Paare sammeln, dann gierig 1:1 zuordnen.
+    #
+    # Die erste Fassung nahm je TED-Notice die beste simap-Zeile — unabhängig davon, ob eine
+    # andere TED-Notice dieselbe Zeile schon beansprucht hatte. Gemessen am Juni-Stand
+    # beanspruchten 49 simap-Zeilen mehrere TED-Notices; 92 von 873 Dubletten-Urteilen
+    # (10,5 %) hingen daran. Das ist die gefährliche Richtung: eine zu Unrecht als Dublette
+    # markierte TED-Notice verschwindet aus der Liste, obwohl sie eine eigene Vergabe ist.
+    # Typischer Auslöser sind Geschwisterlose, deren Titel sich nur in einer ein- oder
+    # zweistelligen Zahl unterscheiden — die fällt aus der Tokenisierung heraus.
+    paare = []
+    for idx, (tid, titel, datum, cpv) in enumerate(ted):
         tw = worte(ted_titel(titel))
-        passend = None
-        if len(tw) >= MIN_WOERTER and datum:
-            # Kandidaten: alles, was mindestens ein Wort teilt — dann echte Deckung prüfen.
-            kand: dict[int, int] = {}
-            for w in tw:
-                for i in inv.get(w, ()):
-                    kand[i] = kand.get(i, 0) + 1
-            beste = 0.0
-            for i, gemeinsam in kand.items():
-                deckung = gemeinsam / len(tw)
-                if deckung < MIN_DECKUNG or deckung <= beste:
-                    continue
-                sid, _st, sd = simap[i][0], simap[i][1], simap[i][2]
-                if sd and abs((sd - datum).days) <= FENSTER_TAGE:
-                    beste, passend = deckung, sid
-        if passend:
-            treffer += 1
+        if len(tw) < MIN_WOERTER or not datum:
+            continue
+        # Kandidaten: alles, was mindestens ein Wort teilt — dann echte Deckung prüfen.
+        kand: dict[int, int] = {}
+        for w in tw:
+            for i in inv.get(w, ()):
+                kand[i] = kand.get(i, 0) + 1
+        for i, gemeinsam in kand.items():
+            deckung = gemeinsam / len(tw)
+            if deckung < MIN_DECKUNG:
+                continue
+            sd = simap[i][2]
+            if sd and abs((sd - datum).days) <= FENSTER_TAGE:
+                paare.append((deckung, -abs((sd - datum).days), idx, i))
+
+    paare.sort(reverse=True)          # sicherster Treffer zuerst
+    zuordnung: dict[int, str] = {}
+    ted_vergeben, simap_vergeben = set(), set()
+    for deckung, _negtage, idx, i in paare:
+        if idx in ted_vergeben or i in simap_vergeben:
+            continue
+        ted_vergeben.add(idx)
+        simap_vergeben.add(i)
+        zuordnung[idx] = simap[i][0]
+
+    rows = []
+    for idx, (tid, titel, datum, cpv) in enumerate(ted):
+        passend = zuordnung.get(idx)
         rows.append((tid, passend, "dublette" if passend else "neu",
-                     " ".join(sorted(tw))[:200], datum, cpv))
+                     " ".join(sorted(worte(ted_titel(titel))))[:200], datum, cpv))
+    treffer = len(zuordnung)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     con.execute("CREATE TEMP TABLE d(ted_id VARCHAR, simap_id VARCHAR, status VARCHAR, "

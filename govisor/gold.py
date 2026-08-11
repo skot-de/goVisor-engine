@@ -3981,7 +3981,10 @@ def build_at_gold(cfg: Config, country: str = "AT"):
 
     n = con.execute(f"SELECT count(*) FROM read_parquet('{(g / 'lead_export.parquet').as_posix()}')").fetchone()[0]
     con.close()
-    print(f"AT Gold: {n} offene Ausschreibungen → lead_export/lead_geo/lead_deadline")
+    # Die Funktion dient als generische TED-Silber-Brücke und wird auch mit country='CH'
+    # aufgerufen — ein festes "AT" im Log führt dann in die Irre (hat es auch: ein CH-Bau
+    # meldete "AT Gold").
+    print(f"{country} Gold: {n} offene Ausschreibungen → lead_export/lead_geo/lead_deadline")
     return n
 
 
