@@ -116,16 +116,27 @@ def verschiebe(con, land: str, ids: set[str], dry: bool, ziele: dict[str, str] |
               if dry:
                   continue
 
-              ziel = SILBER / zielordner / tabelle / quelle.parent.name / quelle.name
+              # Im Auffangtopf gibt es keine Live/Archiv-Trennung — der Suffix wuerde dort
+              # nur die Konstellation erzeugen, die test_silver_month_files_do_not_shadow_
+              # each_other verbietet (Monats- und -live-Datei desselben Monats nebeneinander).
+              name = (quelle.name.replace("-live.parquet", ".parquet")
+                      if zielordner == ZIEL else quelle.name)
+              ziel = SILBER / zielordner / tabelle / quelle.parent.name / name
               ziel.parent.mkdir(parents=True, exist_ok=True)
-              # Ziel kann schon Zeilen aus einem anderen Quellland tragen (dieselbe Notice
-              # lag in DE UND AT) — dann wird vereinigt und je notice_id einmal behalten.
+              # Dieselbe Notice kann aus MEHREREN Quelllaendern kommen (42 lagen in DE, AT
+              # und CH zugleich). Ohne Entdopplung landet sie mehrfach im Ziel — beim ersten
+              # Lauf waren das 157 Dublettenzeilen. `DISTINCT *` genuegt dabei NICHT: die
+              # Kopien unterscheiden sich in `notices.country`, das je Quelle das INGEST-Land
+              # traegt. Deshalb je notice_id eine Zeile.
               vorhanden = (f"SELECT * FROM read_parquet('{ziel.as_posix()}') "
                            f"UNION ALL BY NAME ") if ziel.exists() else ""
+              entdoppelt = ("QUALIFY row_number() OVER (PARTITION BY notice_id) = 1"
+                            if tabelle == "notices" else "")
               tmp_z = ziel.with_suffix(".part")
               con.execute(f"""COPY (
-                  SELECT * FROM ({vorhanden}
+                  SELECT DISTINCT * FROM ({vorhanden}
                       SELECT * FROM read_parquet('{q}') WHERE notice_id IN ({liste}))
+                  {entdoppelt}
               ) TO '{tmp_z.as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
 
               tmp_q = quelle.with_suffix(".part")
