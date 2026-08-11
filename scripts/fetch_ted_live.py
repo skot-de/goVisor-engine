@@ -29,6 +29,7 @@ sys.path.insert(0, str(ROOT))
 os.chdir(ROOT)
 
 import pyarrow as pa  # noqa: E402
+import pyarrow.compute as pc  # noqa: E402
 import pyarrow.parquet as pq  # noqa: E402
 
 from govisor import locales, model, normalize, schema  # noqa: E402
@@ -93,6 +94,40 @@ def list_notices(since: str, until: str, limit: int | None, country: str = "DE")
             break
         page += 1
     return pubs[:limit] if limit else pubs
+
+
+def _mit_bestand(out: Path, neu: pa.Table, table_schema, neue_ids: set[str]) -> pa.Table:
+    """Vorhandene Monatszeilen erhalten — nur die neu geholten Notices ersetzen.
+
+    **Warum das sein muss.** Vorher schrieb jeder Lauf die `<monat>-live.parquet`
+    bedingungslos neu. Der Monat einer Notice ergibt sich aus ihrem XML-`publication_date`,
+    das Suchfenster dagegen aus der TED-Facette — und die beiden laufen auseinander. Jeder
+    Lauf erzeugt deshalb ein paar Zeilen für den VORmonat und ersetzte damit dessen
+    vollständige Datei durch diese Handvoll.
+
+    Gemessen am 2026-08-11, nachdem der Tageslauf seit dem 1. August lief:
+      · DE 2026-07:  845 von 15.628 Notices übrig (5,4 %)
+      · CH 2025-12:    4 von    941 (der 2026-Jahreslauf überschrieb den 2025-Lauf)
+      · CH 2024-12 und 2023-12 ebenso — jeder Jahreslauf löschte den Grenzmonat seines
+        Vorgängers, weshalb genau die Dezember auffielen.
+
+    Der Backfill meldete trotzdem „100 % des Solls": er misst direkt nach seinem eigenen
+    Lauf, und da stimmte die Zahl noch. Zerstört hat sie erst der Folgelauf.
+
+    Regel beim Zusammenführen: Zeilen des Bestands fallen NUR, wenn ihre `notice_id` gerade
+    neu geholt wurde (dann gilt die frische Fassung). Alles andere bleibt. Damit ist der
+    Schreibvorgang idempotent und additiv statt destruktiv.
+    """
+    if not out.exists():
+        return neu
+    alt = pq.read_table(out)
+    if alt.num_rows == 0:
+        return neu
+    if "notice_id" in alt.column_names and neue_ids:
+        behalten = pc.invert(pc.is_in(alt["notice_id"], value_set=pa.array(sorted(neue_ids))))
+        alt = alt.filter(behalten)
+    alt = alt.cast(table_schema) if alt.schema != table_schema else alt
+    return pa.concat_tables([alt, neu])
 
 
 def main(since: str, until: str, limit: int | None, workers: int, country: str = "DE") -> int:
@@ -170,17 +205,23 @@ def main(since: str, until: str, limit: int | None, workers: int, country: str =
     written = 0
     for (year, month), buckets in sorted(by_month.items()):
         key = f"{year:04d}-{month:02d}"
+        neue_ids = {r["notice_id"] for r in buckets["notices"] if r.get("notice_id")}
         for table, table_schema in model.TABLES.items():
             base = cfg.silver_table_path(table, country, key)
             out = base.with_name(f"{key}-live.parquet")
             out.parent.mkdir(parents=True, exist_ok=True)
             arrow = pa.Table.from_pylist(buckets[table], schema=table_schema)
+            arrow = _mit_bestand(out, arrow, table_schema, neue_ids)
             tmp = out.with_suffix(".part")
             pq.write_table(arrow, tmp, compression="zstd")
             tmp.replace(out)
         n = len(buckets["notices"])
+        gesamt = pq.read_metadata(cfg.silver_table_path("notices", country, key)
+                                  .with_name(f"{key}-live.parquet")).num_rows
         written += n
-        log(f"  {key}-live: {n:,} Notices")
+        # Beide Zahlen zeigen: was dieser Lauf brachte UND was danach in der Datei steht.
+        # Liefe das Zusammenführen je kaputt, fiele es hier sofort auf.
+        log(f"  {key}-live: {n:,} geholt → {gesamt:,} in der Datei")
     log(f"FERTIG: {written:,} Notices live ergänzt ({fails} Fehlschläge). Jetzt `gold` rebuilden.")
     return written
 

@@ -1011,3 +1011,50 @@ def test_at_dedup_wird_von_build_at_gold_gelesen():
     assert "av_estimated_value" in kopf, (
         "der atverg-Schätzwert wird nicht übernommen — beim Verwerfen der Dublette ginge "
         "die bessere Wertabdeckung (69,8 % gegen 11,0 %) verloren")
+
+
+def test_live_write_merges_instead_of_overwriting(tmp_path):
+    """Ein zweiter Live-Lauf darf den Monatsbestand NICHT ersetzen.
+
+    Der teuerste Datenverlust dieses Projekts kam aus einer Zeile: `fetch_ted_live.py`
+    schrieb `<monat>-live.parquet` bedingungslos neu. Der Monat einer Notice folgt ihrem
+    XML-`publication_date`, das Suchfenster der TED-Facette — beide laufen auseinander, also
+    erzeugt JEDER Lauf ein paar Zeilen für den Vormonat und ersetzte damit dessen komplette
+    Datei durch diese Handvoll.
+
+    Gemessen am 2026-08-11: DE 2026-07 hatte noch 845 von 15.628 Notices (5,4 %),
+    CH 2025-12 noch 4 von 941. Der Backfill meldete trotzdem „100 % des Solls" — er misst
+    direkt nach seinem eigenen Lauf, zerstört hat es erst der nächste.
+    """
+    import importlib.util
+    import pathlib as _pl
+
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    spec = importlib.util.spec_from_file_location(
+        "_ftl", _pl.Path(__file__).resolve().parent.parent / "scripts" / "fetch_ted_live.py")
+    ftl = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ftl)
+
+    schema = pa.schema([("notice_id", pa.string()), ("title", pa.string())])
+    out = tmp_path / "2026-07-live.parquet"
+    pq.write_table(pa.table({"notice_id": ["a_2026", "b_2026", "c_2026"],
+                             "title": ["A", "B", "C"]}, schema=schema), out)
+
+    # Zweiter Lauf bringt eine NEUE Notice und eine bereits vorhandene in frischer Fassung.
+    neu = pa.table({"notice_id": ["c_2026", "d_2026"], "title": ["C-neu", "D"]}, schema=schema)
+    zusammen = ftl._mit_bestand(out, neu, schema, {"c_2026", "d_2026"})
+
+    ids = sorted(zusammen.column("notice_id").to_pylist())
+    assert ids == ["a_2026", "b_2026", "c_2026", "d_2026"], (
+        f"Bestand ging verloren: {ids}")
+    titel = dict(zip(zusammen.column("notice_id").to_pylist(),
+                     zusammen.column("title").to_pylist()))
+    assert titel["c_2026"] == "C-neu", "neu geholte Notice muss die alte Fassung ersetzen"
+    assert titel["a_2026"] == "A", "nicht geholte Notices müssen unverändert bleiben"
+
+    # Idempotenz: derselbe Lauf nochmal darf nichts verdoppeln.
+    nochmal = ftl._mit_bestand(out, neu, schema, {"c_2026", "d_2026"})
+    assert len(nochmal.column("notice_id").to_pylist()) == len(set(
+        nochmal.column("notice_id").to_pylist()))
