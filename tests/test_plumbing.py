@@ -1256,6 +1256,8 @@ def test_notice_text_ids_sind_kanonisch():
     Zweig fehlte der Schritt, und damit waren beim ersten Lauf ALLE 88.486 CH-Zeilen
     Waisen - technisch fehlerfrei geschrieben, fachlich wertlos, weil kein Join greift.
     """
+    import pathlib as _pl
+
     import duckdb
 
     from govisor import schema
@@ -1263,7 +1265,7 @@ def test_notice_text_ids_sind_kanonisch():
     assert schema.normalize_notice_id("370795-2024") == "370795_2024"
     assert schema.normalize_notice_id("00370795_2024") == "370795_2024"
 
-    wurzel = Path("data/silver")
+    wurzel = _pl.Path("data/silver")
     if not wurzel.exists():
         return                      # ohne Datenplatte nur die reine Funktion pruefen
     con = duckdb.connect()
