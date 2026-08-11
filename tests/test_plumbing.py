@@ -1095,3 +1095,40 @@ def test_city_index_filter_keeps_places_and_drops_organisations():
                 "Gießen", "Fürstenfeldbruck", "Kummersdorf-Alexanderdorf",
                 "Bad Homburg vor der Höhe", "Sankt Augustin"):
         assert not bci._JUNK.search(ort), f"echter Ort faelschlich gefiltert: {ort}"
+
+
+def test_city_index_gazetteer_gate_only_for_grossempfaenger():
+    """Die Gazetteer-Positivliste darf nur die Grossempfaenger-Zeilen pruefen.
+
+    Der Wortfilter allein kam nicht weiter: gegen Markennamen ohne sprachlichen Marker
+    (ARAG, AVM, Adecco, Alusuisse, Airbus) hilft kein Muster. Die Loesung ist eine
+    Positivliste echter Ortsnamen aus dem GeoNames-Gazetteer statt immer neuer
+    Negativmuster.
+
+    Zwei Feinheiten, beide gemessen:
+      · Nur der PRAEFIX zaehlt als Ortsbeleg, nicht das Ende. Die PLZ-Tabelle klebt
+        Gemeinde und Ortsteil zusammen ("Allendorf (Eder) Battenfeld"), der Gazetteer
+        fuehrt sie getrennt — ohne Praefix-Pruefung fielen 583 echte Orte durch. Das Ende
+        zu pruefen waere falsch: "ARGE Stadt Kaiserslautern" endet auf einen echten Ort.
+      · Zeilen MIT gesetzter accuracy werden gar nicht gegengeprueft, sie sind von der
+        Quelle als Ort belegt. Sonst fielen fuenf echte Orte heraus, die der Gazetteer
+        unter anderem Namen fuehrt (Leinefelde, Mainz-Kostheim, Neualbenreuth,
+        Elmenhorst-Lichtenhagen, Schneefernerhaus).
+    """
+    import importlib.util
+    import pathlib as _pl
+
+    spec = importlib.util.spec_from_file_location(
+        "_bci2", _pl.Path(__file__).resolve().parent.parent / "scripts" / "build_city_index.py")
+    bci = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(bci)
+
+    bekannt = {"allendorf (eder)", "kaiserslautern", "münchen"}
+    assert bci._ist_ort("Allendorf (Eder) Battenfeld", bekannt)   # Gemeinde + Ortsteil
+    assert bci._ist_ort("München", bekannt)
+    assert not bci._ist_ort("ARGE Stadt Kaiserslautern", bekannt)  # Ort NUR am Ende
+    assert not bci._ist_ort("Adecco", bekannt)
+
+    # Fehlt der Gazetteer, faellt der Filter auf den Wortfilter zurueck statt abzubrechen —
+    # der Index enthaelt dann wieder Organisationen, aber keine Stadt verschwindet.
+    assert bci._lade_ortsnamen.__doc__ and "leere Menge" in bci._lade_ortsnamen.__doc__

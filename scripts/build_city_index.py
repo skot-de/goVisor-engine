@@ -25,6 +25,15 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "data" / "reference" / "geonames" / "DE.txt"
 GEO = ROOT / "web" / "data" / "plz-geo.json"
 
+# Positivliste echter Ortsnamen — GeoNames-**Gazetteer**, ein anderer Datensatz als die
+# PLZ-Tabelle oben. Download: https://download.geonames.org/export/dump/DE.zip
+# (Achtung: enthält intern ebenfalls eine `DE.txt`, deshalb hier bewusst umbenannt —
+# ein unbedachtes Entpacken würde die PLZ-Tabelle überschreiben.)
+# Spalten: 0=id 1=name 2=asciiname 3=alternatenames 4=lat 5=lon 6=feature_class …
+# Feature-Klassen: P = bewohnter Ort, A = Verwaltungseinheit. Alles andere (Bahnhöfe,
+# Gewässer, Gebäude) bleibt draußen.
+GAZ = ROOT / "data" / "reference" / "geonames" / "DE_gazetteer.txt"
+
 # Firmen- und Behördenzeilen (verunreinigte Ort-Spalte) verwerfen.
 #
 # Der Ursprung der Verunreinigung sind **Großempfänger-Postleitzahlen**: wer viel Post
@@ -72,6 +81,48 @@ _JUNK = re.compile(
 _KREIS_PREFIX = re.compile(r"^(?:Kreisfreie Stadt|Landkreis|Stadtkreis|Kreis)\s+", re.IGNORECASE)
 
 
+def _lade_ortsnamen() -> set[str]:
+    """Bekannte Ortsnamen aus dem Gazetteer (klein), inklusive Alternativnamen.
+
+    Fehlt die Datei, kommt eine leere Menge zurück — dann greift nur der Wortfilter. Das
+    ist die richtige Ausfallrichtung: der Index enthält dann wieder Organisationen, aber
+    keine Stadt verschwindet. Ein Abbruch wäre schlechter, der Tageslauf hinge daran.
+    """
+    if not GAZ.exists():
+        print(f"  HINWEIS: {GAZ.name} fehlt → nur Wortfilter, Organisationen bleiben drin.",
+              file=sys.stderr)
+        return set()
+    namen: set[str] = set()
+    with GAZ.open(encoding="utf-8") as fh:
+        for line in fh:
+            c = line.split("\t")
+            if len(c) < 9 or c[6] not in ("P", "A"):
+                continue
+            namen.add(c[1].strip().lower())
+            namen.add(c[2].strip().lower())
+            for alt in c[3].split(","):
+                alt = alt.strip().lower()
+                if alt:
+                    namen.add(alt)
+    namen.discard("")
+    return namen
+
+
+def _ist_ort(name: str, bekannt: set[str]) -> bool:
+    """Ist das ein Ortsname? Direkt oder als „Gemeinde Ortsteil"-Kombination.
+
+    Die PLZ-Tabelle klebt Gemeinde und Ortsteil zusammen („Allendorf (Eder) Battenfeld"),
+    der Gazetteer führt beide getrennt. Ohne die Präfix-Prüfung fielen 583 echte Orte
+    durch. Geprüft wird nur der PRÄFIX, nicht das Ende: „ARGE Stadt Kaiserslautern" endet
+    auf einen echten Ort und käme sonst als Stadt durch.
+    """
+    k = name.lower()
+    if k in bekannt:
+        return True
+    w = k.split()
+    return any(" ".join(w[:i]) in bekannt for i in range(len(w) - 1, 0, -1))
+
+
 def _clean_kreis(name: str) -> str:
     # "Kreisfreie Stadt München" → "München"; "Berlin, Stadt" → "Berlin".
     name = name.split(",")[0].strip()
@@ -98,6 +149,7 @@ def main() -> int:
         a[2] += 1
         disp.setdefault(key, name)
 
+    bekannt = _lade_ortsnamen()
     for line in SRC.read_text(encoding="utf-8").splitlines():
         c = line.split("\t")
         if len(c) < 11:
@@ -107,7 +159,13 @@ def main() -> int:
         except ValueError:
             continue
         ort, kreis = c[2].strip(), c[7].strip()
-        if ort and not _JUNK.search(ort):
+        # Zwei Stufen. Der Wortfilter gilt immer. Die Gazetteer-Prüfung NUR für Zeilen
+        # ohne `accuracy` (Spalte 11) — das sind die Großempfänger-PLZ, in denen die
+        # Organisationsnamen stecken. Zeilen MIT accuracy sind von der Quelle selbst als
+        # Ort belegt und werden nicht gegengeprüft; sonst fielen fünf echte Orte heraus,
+        # die der Gazetteer unter anderem Namen führt (Leinefelde, Mainz-Kostheim …).
+        genau = len(c) > 11 and c[11].strip() != ""
+        if ort and not _JUNK.search(ort) and (genau or not bekannt or _ist_ort(ort, bekannt)):
             add(ort, lat, lon)          # Ortsname (fein), sofern nicht verunreinigt
         if kreis:
             add(_clean_kreis(kreis), lat, lon)   # Kreis-Alias (immer sauber)
