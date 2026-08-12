@@ -1365,3 +1365,64 @@ def test_lead_text_reicht_sprachfassungen_bis_zum_frontend():
             if sp is not None:
                 assert len(sp) > 1, f"{lead['id']}: Sprachwahl mit nur {sp}"
                 assert all(s == s.lower() and len(s) == 2 for s in sp), sp
+
+
+# ── Oberflächen-Sprachen ───────────────────────────────────────────────────────
+
+def _flach_kataloge():
+    import json
+    from pathlib import Path
+    m = Path(__file__).resolve().parent.parent / "web" / "lib" / "i18n" / "messages"
+    return (json.loads((m / "flat.en.json").read_text()),
+            json.loads((m / "flat.fr.json").read_text()))
+
+
+def test_flache_sprachkataloge_sind_deckungsgleich():
+    """EN und FR muessen dieselben Schluessel fuehren — sonst faellt eine Sprache
+    stillschweigend auf Deutsch zurueck und niemand merkt es.
+
+    Der Schluessel IST der deutsche Satz (s. `web/lib/i18n/index.tsx`). Deshalb gibt es
+    keinen `de`-Katalog: dort waere jeder Eintrag seine eigene Antwort.
+    """
+    en, fr = _flach_kataloge()
+    assert set(en) == set(fr), (
+        f"nur in EN: {sorted(set(en) - set(fr))[:5]} · nur in FR: {sorted(set(fr) - set(en))[:5]}")
+    assert not [k for k, v in {**en, **fr}.items() if not v.strip()], "leere Uebersetzung"
+
+
+def test_platzhalter_bleiben_in_jeder_sprache_erhalten():
+    """`{n}`/`{b}` sind Einsetzstellen. Faellt einer beim Uebersetzen weg, fehlt dem Nutzer
+    die Zahl — und zwar lautlos, weil der Satz sonst sinnvoll aussieht."""
+    import re
+    en, fr = _flach_kataloge()
+    muster = re.compile(r"\{(\w+)\}")
+    for katalog, name in ((en, "en"), (fr, "fr")):
+        for schluessel, wert in katalog.items():
+            assert set(muster.findall(schluessel)) == set(muster.findall(wert)), \
+                f"{name}: Platzhalter weichen ab bei {schluessel!r} → {wert!r}"
+
+
+def test_verdrahtete_texte_sind_uebersetzt():
+    """Jeder deutsche Literal-Schluessel, der im Code durch `t(...)` laeuft, muss im
+    Katalog stehen. Sonst ist die Stelle zwar verdrahtet, bleibt aber auf Deutsch —
+    genau die Art halbfertiger Zustand, die man am Bildschirm uebersieht.
+
+    Geprueft werden nur `t("…")`-Aufrufe mit einem deutschen Literal (Umlaut oder
+    deutsches Funktionswort); Punkt-Schluessel wie `nav.akquise` bedienen den
+    strukturierten Katalog und sind hier nicht gemeint.
+    """
+    import re
+    from pathlib import Path
+    web = Path(__file__).resolve().parent.parent / "web"
+    en, fr = _flach_kataloge()
+    deutsch = re.compile(r"[äöüÄÖÜß]|\b(der|die|das|und|oder|nicht|kein|keine|mit|von|bei|"
+                         r"für|aus|auf|ist|sind|wie|was|wo|wenn|nur|alle|eine|zum|zur|im|am)\b")
+    fehlend: list[str] = []
+    for p in sorted(web.glob("components/**/*.tsx")) + sorted(web.glob("app/**/*.tsx")):
+        for m in re.finditer(r'\bt\(\s*"((?:[^"\\]|\\.)*)"', p.read_text()):
+            k = m.group(1)
+            if "." in k and " " not in k:
+                continue                      # strukturierter Punkt-Schluessel
+            if deutsch.search(k) and k not in en:
+                fehlend.append(f"{p.relative_to(web)}: {k!r}")
+    assert not fehlend, "verdrahtet, aber nicht uebersetzt:\n  " + "\n  ".join(fehlend[:12])

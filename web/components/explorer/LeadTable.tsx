@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import { COLS, cellHTML, chanceCap } from "@/lib/explorerCore";
+import { useSprache } from "@/lib/i18n";
 
 type Col = { key: string; label: string; on: boolean; th?: string; lock?: boolean };
 type Lead = { id: string; status?: string; userStatus?: string; [k: string]: unknown };
@@ -61,6 +62,7 @@ export function LeadTable({
   colWidths: Record<string, number>;
   onResize: (key: string, width: number) => void;
 }) {
+  const { t } = useSprache();
   const cols: Col[] = (COLS as Col[]).filter((c) => c.on);
   const colspan = cols.length;
   const dragCol = useRef<string | null>(null);
@@ -122,7 +124,10 @@ export function LeadTable({
               .filter(Boolean)
               .join(" ");
             const sortable = SORTABLE.has(c.key);
-            const label = c.key === "wechsel" ? chanceCap() : c.label;
+            // `COLS` ist eine Modul-Konstante und wird beim Import ausgewertet — dort
+            // uebersetzt waere die Sprache beim ersten Laden eingefroren. Der deutsche
+            // Label IST der Schluessel, also erst hier beim Rendern nachschlagen.
+            const label = t(c.key === "wechsel" ? chanceCap() : c.label);
             const arrow = sortKey === c.key ? (sortDir > 0 ? "▲" : "▼") : "↕";
             const facet = HEADFILTER[c.key];
             const nActive = facet ? activeFacets[facet === "region" ? "ort" : facet] || 0 : 0;
@@ -175,8 +180,8 @@ export function LeadTable({
                 {facet ? (
                   <button
                     className={`thfilter ${nActive ? "on" : ""}`}
-                    title="Filtern"
-                    aria-label="Spalte filtern"
+                    title={t("Filtern")}
+                    aria-label={t("Spalte filtern")}
                     onClick={(e) => {
                       e.stopPropagation();
                       onHeadFilter(facet, (e.currentTarget as HTMLElement).getBoundingClientRect());

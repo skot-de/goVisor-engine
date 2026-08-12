@@ -1,5 +1,7 @@
 "use client";
 
+import { useSprache } from "@/lib/i18n";
+
 import { BRANCHEN } from "@/lib/explorerCore";
 
 export type Adv = {
@@ -85,16 +87,17 @@ export function FilterPanel({
   branche: string; profilBranche: string; brancheCounts: Record<string, number>;
   onSetBranche: (k: string) => void; onResetBranche: () => void;
 }) {
+  const { t, lang } = useSprache();
   const set = (patch: Partial<Adv>) => onChange({ ...adv, ...patch });
   const isPreset = adv.horizon != null && HORIZONTE.some(([m]) => m === adv.horizon);
 
   return (
     <>
       <div className={`fp-scrim ${open ? "on" : ""}`} onClick={onClose} aria-hidden />
-      <aside className={`fp ${open ? "on" : ""}`} aria-label="Filter" aria-hidden={!open}>
+      <aside className={`fp ${open ? "on" : ""}`} aria-label={t("Filter")} aria-hidden={!open}>
         <div className="fp-head">
-          <span className="fp-title">Filter</span>
-          <button className="fp-x" onClick={onClose} aria-label="Schließen">
+          <span className="fp-title">{t("Filter")}</span>
+          <button className="fp-x" onClick={onClose} aria-label={t("Schließen")}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round"><path d="M6 6l12 12M18 6 6 18" /></svg>
           </button>
         </div>
@@ -102,65 +105,65 @@ export function FilterPanel({
         <div className="fp-body">
           <section className="fp-sec">
             <h5>
-              Grundraum
+              {t("Grundraum")}
               <span className="fp-hint">
-                {branche === profilBranche ? "aus eurem Profil abgeleitet" : "temporär gewechselt"}
+                {t(branche === profilBranche ? "aus eurem Profil abgeleitet" : "temporär gewechselt")}
               </span>
             </h5>
             {Object.entries(BRANCHEN as Record<string, string>).map(([k, v]) => (
               <label key={k} className="fp-check">
                 <input type="radio" name="fp-branche" checked={branche === k} onChange={() => onSetBranche(k)} />
-                <span>{v}</span>
+                <span>{t(v)}</span>
                 <i className="fp-n">{brancheCounts[k] || 0}</i>
               </label>
             ))}
             {branche !== profilBranche ? (
               <button className="fp-mini" onClick={onResetBranche}>
-                Zurück zu {(BRANCHEN as Record<string, string>)[profilBranche]}
+                {t("Zurück zu {b}", { b: t((BRANCHEN as Record<string, string>)[profilBranche]) })}
               </button>
             ) : null}
           </section>
 
           <section className="fp-sec">
-            <h5>Land <span className="fp-hint">Vergabeland (DACH)</span></h5>
+            <h5>{t("Land")} <span className="fp-hint">{t("Vergabeland (DACH)")}</span></h5>
             {STAATEN.map(([v, l]) => (
               <label key={v} className="fp-check">
                 <input type="checkbox" checked={adv.staaten.includes(v)} onChange={() => set({ staaten: toggle(adv.staaten, v) })} />
-                <span>{l}</span>
+                <span>{t(l)}</span>
               </label>
             ))}
           </section>
 
           <section className="fp-sec">
-            <h5>Phase</h5>
+            <h5>{t("Phase")}</h5>
             {PHASEN.map(([v, l]) => (
               <label key={v} className="fp-check">
                 <input type="checkbox" checked={adv.phases.includes(v)} onChange={() => set({ phases: toggle(adv.phases, v) })} />
-                <span>{l}</span>
+                <span>{t(l)}</span>
               </label>
             ))}
           </section>
 
           <section className="fp-sec">
-            <h5>Frist / Vertragsende — in den nächsten …</h5>
+            <h5>{t("Frist / Vertragsende — in den nächsten …")}</h5>
             <div className="fp-chips">
-              <button className={`fp-chip ${adv.horizon == null ? "on" : ""}`} onClick={() => set({ horizon: null })}>egal</button>
+              <button className={`fp-chip ${adv.horizon == null ? "on" : ""}`} onClick={() => set({ horizon: null })}>{t("egal")}</button>
               {HORIZONTE.map(([m, l]) => (
-                <button key={m} className={`fp-chip ${adv.horizon === m ? "on" : ""}`} onClick={() => set({ horizon: m })}>{l}</button>
+                <button key={m} className={`fp-chip ${adv.horizon === m ? "on" : ""}`} onClick={() => set({ horizon: m })}>{t(l)}</button>
               ))}
               <span className="fp-manual">
-                oder
+                {t("oder")}
                 <input className="fp-in fp-mini" inputMode="numeric" placeholder="__"
                   defaultValue={isPreset ? "" : (adv.horizon ?? "")}
                   onChange={(e) => { const n = parseInt(e.target.value, 10); set({ horizon: isNaN(n) ? null : n }); }} />
-                Monate
+                {t("Monate")}
               </span>
             </div>
           </section>
 
           {segments.length ? (
             <section className="fp-sec">
-              <h5>Fachgebiet <span className="fp-hint">{adv.cpvFields.length ? `${adv.cpvFields.length} gewählt` : "alle im Grundraum"}</span></h5>
+              <h5>{t("Fachgebiet")} <span className="fp-hint">{adv.cpvFields.length ? t("{n} gewählt", { n: adv.cpvFields.length }) : t("alle im Grundraum")}</span></h5>
               <div className="fp-seglist">
                 {segments.map((s) => (
                   <label key={s.cpv4} className="fp-check">
@@ -174,129 +177,129 @@ export function FilterPanel({
           ) : null}
 
           <section className="fp-sec">
-            <h5>Region
+            <h5>{t("Region")}
               <span className="fp-axis">
-                <button className={adv.regionAxis === "perf" ? "on" : ""} onClick={() => set({ regionAxis: "perf" })}>Leistungsort</button>
-                <button className={adv.regionAxis === "buyer" ? "on" : ""} onClick={() => set({ regionAxis: "buyer" })}>Käufersitz</button>
+                <button className={adv.regionAxis === "perf" ? "on" : ""} onClick={() => set({ regionAxis: "perf" })}>{t("Leistungsort")}</button>
+                <button className={adv.regionAxis === "buyer" ? "on" : ""} onClick={() => set({ regionAxis: "buyer" })}>{t("Käufersitz")}</button>
               </span>
             </h5>
             <label className="fp-check">
               <input type="checkbox" checked={adv.nationwide} onChange={() => set({ nationwide: !adv.nationwide })} />
-              <span>Bundesweit erbringbare mit einschließen</span>
+              <span>{t("Bundesweit erbringbare mit einschließen")}</span>
             </label>
             <div className="fp-grid2">
               {LAENDER.map(([code, name]) => (
                 <label key={code} className="fp-check">
                   <input type="checkbox" checked={adv.regions.includes(code)} onChange={() => set({ regions: toggle(adv.regions, code) })} />
-                  <span>{name}</span>
+                  <span>{t(name)}</span>
                 </label>
               ))}
             </div>
           </section>
 
           <section className="fp-sec">
-            <h5>Vergabestelle</h5>
-            <input className="fp-in" placeholder="Name enthält …" value={adv.buyer} onChange={(e) => set({ buyer: e.target.value })} />
+            <h5>{t("Vergabestelle")}</h5>
+            <input className="fp-in" placeholder={t("Name enthält …")} value={adv.buyer} onChange={(e) => set({ buyer: e.target.value })} />
           </section>
 
           <section className="fp-sec">
-            <h5>Wettbewerb</h5>
+            <h5>{t("Wettbewerb")}</h5>
             <div className="fp-chips">
               {(["all", "neu", "folge"] as const).map((k) => (
                 <button key={k} className={`fp-chip ${adv.neu === k ? "on" : ""}`} onClick={() => set({ neu: k })}>
-                  {k === "all" ? "alle" : k === "neu" ? "Neuvergabe (kein Amtsinhaber)" : "Folgevergabe"}
+                  {t(k === "all" ? "alle" : k === "neu" ? "Neuvergabe (kein Amtsinhaber)" : "Folgevergabe")}
                 </button>
               ))}
             </div>
             <label className="fp-check" style={{ marginTop: 8 }}>
               <input type="checkbox" checked={adv.wenigWettbewerb} onChange={() => set({ wenigWettbewerb: !adv.wenigWettbewerb })} />
-              <span>Nur mit wenig Wettbewerb (zuletzt ≤ 3 Bieter)</span>
+              <span>{t("Nur mit wenig Wettbewerb (zuletzt ≤ 3 Bieter)")}</span>
             </label>
           </section>
 
           <section className="fp-sec">
-            <h5>Relevanz <span className="fp-hint">Profil-Passung · braucht Profil</span></h5>
+            <h5>{t("Relevanz")} <span className="fp-hint">{t("Profil-Passung · braucht Profil")}</span></h5>
             <div className="fp-chips">
               {BAND.map(([v, l]) => (
-                <button key={v} className={`fp-chip ${adv.relevanz.includes(v) ? "on" : ""}`} onClick={() => set({ relevanz: toggle(adv.relevanz, v) })}>{l}</button>
+                <button key={v} className={`fp-chip ${adv.relevanz.includes(v) ? "on" : ""}`} onClick={() => set({ relevanz: toggle(adv.relevanz, v) })}>{t(l)}</button>
               ))}
             </div>
           </section>
 
           <section className="fp-sec">
-            <h5>Chance <span className="fp-hint">Wechsel-Chance</span></h5>
+            <h5>{t("Chance")} <span className="fp-hint">{t("Wechsel-Chance")}</span></h5>
             <div className="fp-chips">
               {BAND.map(([v, l]) => (
-                <button key={v} className={`fp-chip ${adv.chance.includes(v) ? "on" : ""}`} onClick={() => set({ chance: toggle(adv.chance, v) })}>{l}</button>
+                <button key={v} className={`fp-chip ${adv.chance.includes(v) ? "on" : ""}`} onClick={() => set({ chance: toggle(adv.chance, v) })}>{t(l)}</button>
               ))}
             </div>
           </section>
 
           <section className="fp-sec">
-            <h5>Aufwand</h5>
+            <h5>{t("Aufwand")}</h5>
             <div className="fp-chips">
               {BAND.map(([v, l]) => (
-                <button key={v} className={`fp-chip ${adv.aufwand.includes(v) ? "on" : ""}`} onClick={() => set({ aufwand: toggle(adv.aufwand, v) })}>{l}</button>
+                <button key={v} className={`fp-chip ${adv.aufwand.includes(v) ? "on" : ""}`} onClick={() => set({ aufwand: toggle(adv.aufwand, v) })}>{t(l)}</button>
               ))}
             </div>
             <div className="fp-chips" style={{ marginTop: 8 }}>
-              <span className="fp-hint" style={{ alignSelf: "center", marginRight: 4 }}>Bürgschaft:</span>
+              <span className="fp-hint" style={{ alignSelf: "center", marginRight: 4 }}>{t("Bürgschaft:")}</span>
               {(["all", "nein", "ja"] as const).map((k) => (
                 <button key={k} className={`fp-chip ${adv.buergschaft === k ? "on" : ""}`} onClick={() => set({ buergschaft: k })}>
-                  {k === "all" ? "egal" : k === "nein" ? "keine" : "gefordert"}
+                  {t(k === "all" ? "egal" : k === "nein" ? "keine" : "gefordert")}
                 </button>
               ))}
             </div>
           </section>
 
           <section className="fp-sec">
-            <h5>Leistungsart</h5>
+            <h5>{t("Leistungsart")}</h5>
             <div className="fp-chips">
               {LEISTUNG.map(([v, l]) => (
-                <button key={v} className={`fp-chip ${adv.leistung.includes(v) ? "on" : ""}`} onClick={() => set({ leistung: toggle(adv.leistung, v) })}>{l}</button>
+                <button key={v} className={`fp-chip ${adv.leistung.includes(v) ? "on" : ""}`} onClick={() => set({ leistung: toggle(adv.leistung, v) })}>{t(l)}</button>
               ))}
             </div>
           </section>
 
           <section className="fp-sec">
-            <h5>Vertragsart</h5>
+            <h5>{t("Vertragsart")}</h5>
             <div className="fp-chips">
               {ART.map(([v, l]) => (
-                <button key={v} className={`fp-chip ${adv.art.includes(v) ? "on" : ""}`} onClick={() => set({ art: toggle(adv.art, v) })}>{l}</button>
+                <button key={v} className={`fp-chip ${adv.art.includes(v) ? "on" : ""}`} onClick={() => set({ art: toggle(adv.art, v) })}>{t(l)}</button>
               ))}
             </div>
           </section>
 
           <section className="fp-sec">
-            <h5>Rechtsrahmen</h5>
+            <h5>{t("Rechtsrahmen")}</h5>
             <div className="fp-chips">
               {RAHMEN.map(([v, l]) => (
-                <button key={v} className={`fp-chip ${adv.rahmen.includes(v) ? "on" : ""}`} onClick={() => set({ rahmen: toggle(adv.rahmen, v) })}>{l}</button>
+                <button key={v} className={`fp-chip ${adv.rahmen.includes(v) ? "on" : ""}`} onClick={() => set({ rahmen: toggle(adv.rahmen, v) })}>{t(l)}</button>
               ))}
             </div>
           </section>
 
           <section className="fp-sec">
-            <h5>Auftragswert (€)</h5>
+            <h5>{t("Auftragswert (€)")}</h5>
             <div className="fp-range">
-              <input className="fp-in" inputMode="numeric" placeholder="von" defaultValue={adv.valMin ?? ""} onBlur={(e) => set({ valMin: parseEur(e.target.value) })} />
+              <input className="fp-in" inputMode="numeric" placeholder={t("von")} defaultValue={adv.valMin ?? ""} onBlur={(e) => set({ valMin: parseEur(e.target.value) })} />
               <span>–</span>
-              <input className="fp-in" inputMode="numeric" placeholder="bis" defaultValue={adv.valMax ?? ""} onBlur={(e) => set({ valMax: parseEur(e.target.value) })} />
+              <input className="fp-in" inputMode="numeric" placeholder={t("bis")} defaultValue={adv.valMax ?? ""} onBlur={(e) => set({ valMax: parseEur(e.target.value) })} />
             </div>
           </section>
 
           <section className="fp-sec">
-            <h5>Weitere</h5>
-            <label className="fp-check"><input type="checkbox" checked={adv.multiLot} onChange={() => set({ multiLot: !adv.multiLot })} /><span>Nur mit mehreren Losen</span></label>
-            <label className="fp-check"><input type="checkbox" checked={adv.hasDetail} onChange={() => set({ hasDetail: !adv.hasDetail })} /><span>Nur mit ausführlicher Beschreibung</span></label>
-            <label className="fp-check"><input type="checkbox" checked={adv.unterlagen} onChange={() => set({ unterlagen: !adv.unterlagen })} /><span>Nur mit Link zu den Vergabeunterlagen</span></label>
+            <h5>{t("Weitere")}</h5>
+            <label className="fp-check"><input type="checkbox" checked={adv.multiLot} onChange={() => set({ multiLot: !adv.multiLot })} /><span>{t("Nur mit mehreren Losen")}</span></label>
+            <label className="fp-check"><input type="checkbox" checked={adv.hasDetail} onChange={() => set({ hasDetail: !adv.hasDetail })} /><span>{t("Nur mit ausführlicher Beschreibung")}</span></label>
+            <label className="fp-check"><input type="checkbox" checked={adv.unterlagen} onChange={() => set({ unterlagen: !adv.unterlagen })} /><span>{t("Nur mit Link zu den Vergabeunterlagen")}</span></label>
           </section>
         </div>
 
         <div className="fp-foot">
-          <button className="fp-reset" onClick={onReset}>Zurücksetzen</button>
+          <button className="fp-reset" onClick={onReset}>{t("Zurücksetzen")}</button>
           <button className="fp-apply btn btn-primary" onClick={onClose}>
-            {resultCount.toLocaleString("de-DE")} Treffer zeigen
+            {t("{n} Treffer zeigen", { n: resultCount.toLocaleString(lang === "de" ? "de-DE" : lang) })}
           </button>
         </div>
       </aside>
