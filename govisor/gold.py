@@ -495,7 +495,7 @@ def build_quality(cfg: Config, country: str = "DE"):
     return n
 
 
-def _open_house_sql(title_col: str = "title") -> str:
+def _open_house_sql(title_col: str = "title", deadline_col: str | None = None) -> str:
     """Erkennt Open-House-Verfahren (§130a/§130c SGB V) am Titel.
 
     Open House ist kein Wettbewerb: jeder Anbieter kann jederzeit beitreten, es gibt keinen
@@ -507,10 +507,30 @@ def _open_house_sql(title_col: str = "title") -> str:
     Das Muster steht hier EINMAL, weil es an zwei Stellen gebraucht wird: in `quality`
     (Zuschlagsseite, `verfahren_status`) und in `lead_export` (Ausschreibungsseite). Zwei
     Kopien würden auseinanderlaufen.
+
+    **Zweites, STRUKTURELLES Merkmal (2026-08-13):** eine Frist, die absurd weit in der Zukunft
+    liegt. Die Titel-Regel oben ist an deutschem Recht gebaut (§130a SGB V) und greift außerhalb
+    Deutschlands nicht. Gemessen in Österreich: von 684 offenen atverg-Verfahren tragen **357
+    eine Frist über fünf Jahre hinaus, davon 258 den 1. Januar 2100** — ein Platzhalter der
+    Quelle für „kein Ende gesetzt". Die Titel lauten „Achszählsysteme", „Gleis- und
+    Weichenschwellen", „Druckdienste": laufende Rahmenvereinbarungen der ÖBB, keine Verfahren,
+    auf die man morgen bieten kann. Kein einziges davon enthält ein deutsches Rechtswort.
+
+    Das strukturelle Merkmal ist sprachunabhängig und gilt damit für jedes Land — der Grund,
+    warum es hier steht und nicht als AT-Sonderfall irgendwo. Zum Vergleich: in Deutschland
+    trifft es 45 von 11.194 offenen (0,4 %), in Österreich 357 von 684 (52 %).
+
+    ``deadline_col`` ist optional, weil nicht jede Aufrufstelle eine Frist-Spalte zur Hand hat.
+    Ohne sie bleibt es bei der Titel-Regel — dasselbe Verhalten wie vorher.
     """
     t = f"lower({title_col})"
-    return (f"({t} LIKE '%rabatt%' OR {t} LIKE '%130a%' OR {t} LIKE '%130c%' "
-            f"OR {t} LIKE '%open%house%')")
+    titel = (f"({t} LIKE '%rabatt%' OR {t} LIKE '%130a%' OR {t} LIKE '%130c%' "
+             f"OR {t} LIKE '%open%house%')")
+    if not deadline_col:
+        return titel
+    # Fünf Jahre ist dieselbe Schwelle wie der A6-Guard in `build_prospective_leads` — sie
+    # steht bewusst an beiden Stellen gleich, sonst fällt ein Verfahren zwischen die Regeln.
+    return (f"({titel} OR {deadline_col}::DATE > current_date + INTERVAL 5 YEAR)")
 
 
 def build_review_queue(cfg: Config, country: str = "DE"):
@@ -2612,7 +2632,15 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
           LEFT JOIN '{DC}' dc ON dc.division=substr(n.cpv_main,1,2)
           WHERE n.notice_kind IN ('cn','pin') AND n.cpv_main IS NOT NULL
             AND n.submission_deadline IS NOT NULL AND n.submission_deadline::DATE >= DATE '{ref}'
-            AND n.submission_deadline::DATE <= DATE '{ref}' + INTERVAL 5 YEAR   -- A6: absurde Fern-Fristen raus
+            -- A6 war ein HARTER Schnitt bei 5 Jahren. Gemessen 2026-08-13: er warf in
+            -- Oesterreich 357 von 684 offenen atverg-Verfahren weg (52 %), davon 258 mit dem
+            -- Platzhalter-Datum 2100-01-01 — laufende Rahmenvereinbarungen der OeBB und
+            -- aehnlicher Grosskaeufer. In DE trifft er nur 45 von 11.194 (0,4 %), deshalb fiel
+            -- es dort nie auf. Sie sind kein Muell, sondern eine eigene Kategorie: dauerhaft
+            -- beitretbar, keine echte Frist — genau das, was `procedure_kind='open_house'`
+            -- beschreibt. Konvention "markieren statt filtern": die Obergrenze bleibt nur als
+            -- Absurditaets-Sperre gegen Parse-Muell, die Einordnung macht `_open_house_sql`.
+            AND n.submission_deadline::DATE <= DATE '2200-01-01'
         ) TO '{out}.tmp' (FORMAT PARQUET, COMPRESSION ZSTD)
     """)
     import os
@@ -2922,7 +2950,7 @@ def build_lead_export(cfg: Config, country: str = "DE"):
             -- Gewinner, keine echte Frist). Hier aus dem Titel bestimmt — dasselbe Muster
             -- wie in `quality.verfahren_status`, aber auch für offene Ausschreibungen, wo
             -- der Status bisher gar nicht gesetzt wurde.
-            CASE WHEN {_open_house_sql('d.titel')} THEN 'open_house' ELSE 'wettbewerb' END
+            CASE WHEN {_open_house_sql('d.titel', 'd.deadline_date')} THEN 'open_house' ELSE 'wettbewerb' END
                                                       AS procedure_kind,
             d.faellig_basis                           AS due_basis,
             (NOT coalesce(d.termin_plausibel, true))  AS timing_implausible,
