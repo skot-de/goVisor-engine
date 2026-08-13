@@ -156,6 +156,14 @@ echo "  Gold ok."
 #     `documents_url` nur die TED-Bekanntmachung. Siehe CLAUDE.md, EU-weit-Grundsatz.
 step "Vergabeunterlagen holen (DE/cosinex, höflich + idempotent)"
 $PY -m govisor.cli fetch-docs --country DE || echo "  ⚠ Fetch unvollständig — Auswertung läuft über den vorhandenen Bestand."
+# ⚠ DIESER SCHRITT FEHLTE (gemessen 2026-08-13: 2.114 Vorgänge heruntergeladen, 241 mit Text).
+#   `signals-docs` liest doc_text.parquet — das erzeugt AUSSCHLIESSLICH `index-docs`. Ohne
+#   diese Zeile lief der Tageslauf formal durch: Fetch grün, Signale grün, aber die Signale
+#   entstanden aus dem Textbestand des letzten Handlaufs. Genau die Falle, die wir beim
+#   Fetch schon einmal hatten — Herunterladen allein bringt nichts, Auswerten ohne
+#   Aufbereiten aber genauso wenig.
+step "Unterlagen entpacken → Volltext-Index"
+$PY -m govisor.cli index-docs --country DE || echo "  ⚠ Index unvollständig — Auswertung läuft über den vorhandenen Textbestand."
 step "Unterlagen auswerten → Anforderungs-Signale"
 if $PY -m govisor.cli signals-docs; then
   $PY scripts/export_doc_signals.py || echo "  ⚠ doc-signals.json nicht geschrieben."
