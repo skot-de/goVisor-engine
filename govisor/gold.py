@@ -296,19 +296,26 @@ def build_entity_groups(cfg: Config, country: str = "DE") -> tuple[int, int]:
     import csv
     import duckdb
 
+    # KEIN früher Rücksprung ohne Datei. Die Gruppen-CSV wird von Hand gepflegt und existiert
+    # nur für DE; für AT/CH gibt es keine — ein zulässiger Zustand, kein Fehler. Der Bauer
+    # schrieb dann aber GAR NICHTS, und jeder Nachfolger brach mit „No files found" ab
+    # (gemessen 2026-08-13: build_succession_kpis, build_entity_identity, in der Folge
+    # lead_detail und lead_export — die ganze AT/CH-Kette hing an dieser einen Zeile).
+    # Eine leere Tabelle mit korrektem Schema ist eine Aussage („keine Gruppen"), eine
+    # fehlende Datei ist keine. Dieselbe Konvention wie „markieren statt filtern",
+    # nur auf Dateiebene.
     path = cfg.group_csv(country)
-    if not path.exists():
-        return 0, 0
     groups: dict[str, str] = {}
     links = []
-    with path.open(newline="", encoding="utf-8") as fh:
-        for row in csv.DictReader(fh):
-            label = (row.get("group_label") or "").strip()
-            if not label:
-                continue
-            gid = "grp:" + label.lower().replace(" ", "_")
-            groups[gid] = label
-            links.append((row["entity_id"], gid))
+    if path.exists():
+        with path.open(newline="", encoding="utf-8") as fh:
+            for row in csv.DictReader(fh):
+                label = (row.get("group_label") or "").strip()
+                if not label:
+                    continue
+                gid = "grp:" + label.lower().replace(" ", "_")
+                groups[gid] = label
+                links.append((row["entity_id"], gid))
 
     con = duckdb.connect()
     _write(con, cfg.gold_dir / country / "dim_company_group.parquet",
@@ -355,12 +362,32 @@ def build_dim_deflator(cfg: Config, country: str = "DE"):
 
     Ohne das vergleicht 'typische Dealgröße' 2016 mit 2024 unbereinigt — bei
     26% Preisanstieg dazwischen ein systematischer Fehler.
+
+    ``locales.active()`` ist ein GLOBALER Zustand — die Funktion nahm ``country`` entgegen und
+    benutzte es nur für den Ausgabepfad. Gemessen am 2026-08-13: ``gold/AT/dim_deflator.parquet``
+    enthielt Zeichen für Zeichen die deutsche Reihe. Das fiel nie auf, weil AT/CH-Gold bis dahin
+    keine Werte real rechnete.
+
+    Jetzt wird die Reihe des LANDES genommen. AT und CH sind in ``locales`` zwar angelegt, tragen
+    aber **null CPI-Jahre** — die Daten gibt es im Projekt nicht. Statt daraus eine leere Tabelle
+    zu bauen (die jede Realwert-Rechnung stumm auf NULL setzte) fällt der Bauer auf DE zurück und
+    **kennzeichnet das in der Tabelle** (Spalte ``cpi_source``). Für Österreich ist das als
+    Eurozonen-Näherung vertretbar; **für die Schweiz nicht** — eigene Währung, eigener
+    Inflationspfad. Wer CH-Werte real vergleicht, muss vorher echte BFS-Daten einspielen.
     """
     import duckdb
-    rows = [(y, cpi, round(100.0 / cpi, 4)) for y, cpi in locales.active().cpi.items()]
+    eigen = locales.get(country)
+    cpi = getattr(eigen, "cpi", None) or {}
+    quelle = country
+    if not cpi:
+        cpi = locales.active().cpi
+        quelle = f"{getattr(locales.active(), 'code', 'DE')}-Naeherung"
+        print(f"  ⚠ dim_deflator {country}: keine eigene CPI-Reihe — {quelle} verwendet "
+              f"(als cpi_source gekennzeichnet).")
+    rows = [(y, v, round(100.0 / v, 4), quelle) for y, v in cpi.items()]
     con = duckdb.connect()
     _write(con, cfg.gold_dir / country / "dim_deflator.parquet", rows,
-           "year SMALLINT, cpi DOUBLE, factor_to_2020 DOUBLE")
+           "year SMALLINT, cpi DOUBLE, factor_to_2020 DOUBLE, cpi_source VARCHAR")
     con.close()
     return len(rows)
 
