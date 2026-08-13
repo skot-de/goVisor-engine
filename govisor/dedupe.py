@@ -30,6 +30,18 @@ keinen führt, und umgekehrt trägt TED CPV und NUTS, wo die nationale Quelle ni
 ``anreicherung()`` liefert das feldweise, damit ein späterer Merge nicht raten muss.
 Das ist der Unterschied zwischen „Dublette verwerfen" und „Dublette einschmelzen".
 
+**Warum das eine Python-Schleife bleibt.** Der Abgleich wurde 2026-08-14 vollstaendig als
+DuckDB-Abfrage nachgebaut (Kandidaten als Join, Enthaltung als Listenarithmetik) — und war
+gemessen **zwei- bis dreimal langsamer**: CH ab 2024 5 s gegen 9 s, AT ab 2024 111 s gegen
+44 s. Beide Fassungen lieferten dieselben Paare, die SQL-Variante ist also korrekt, nur
+teurer: DuckDB zahlt pro Zeile mehr fuer ``list_intersect``, als Pythons ``frozenset``-
+Schnitt kostet, und die Kandidatenmenge ist gross.
+
+Die Beschleunigung kam am Ende von woanders — aus dem **Seed-Deckel** (s. ``finde``), der
+das Problem an der Wurzel packt statt an der Ausfuehrungsschicht. Er wirkt auf jede
+Implementierung. Die SQL-Fassung wurde deshalb wieder entfernt; wer sie erneut versucht,
+sollte zuerst die Kandidatenzahl messen, nicht die Engine wechseln.
+
 **Was hier NICHT passiert.** Es wird nichts gelöscht und nichts überschrieben. Ergebnis ist
 eine Tabelle ``gold/<C>/notice_duplicates.parquet`` — wer sie benutzt, entscheidet der
 Aufrufer. Projekt-Konvention: markieren statt filtern.
@@ -56,6 +68,7 @@ FENSTER_TAGE = 90          # aus der Abstandsverteilung, s. measure_at_overlap.p
 MIN_ENTHALTUNG = 0.8       # Anteil der kleineren Wortmenge in der grösseren
 MIN_WORTE = 3              # darunter ist ein Titel kein Unterscheidungsmerkmal
 SEED_WORTE = 3             # Kandidaten über die N seltensten indizierten Wörter
+SEED_DECKEL = 5000         # zu häufige Wörter taugen nicht als Einstieg (gemessen, s. finde)
 
 # Wer gewinnt, wenn zwei Sätze dasselbe Verfahren beschreiben? Die reichere Quelle.
 # TED trägt CPV, NUTS, Lose und Werte; nationale Portale meist nur die Trefferzeile.
@@ -182,7 +195,30 @@ def finde(country: str = "DE", ab_jahr: int = 2026,
 
     paare, gesehen = [], set()
     for i, s in enumerate(saetze):
-        seeds = sorted((w for w in s["w"] if w in inv), key=lambda w: len(inv[w]))[:SEED_WORTE]
+        # SEED-DECKEL. Ein Wort, das in mehr als SEED_DECKEL Saetzen vorkommt, taugt nicht
+        # als Einstieg: es liefert Zehntausende Kandidaten, von denen so gut wie keiner die
+        # Enthaltungsschwelle nimmt. Gemessen an AT ab 2024: DREI Woerter erzeugten 40 % aller
+        # 61,4 Mio Kandidatenpaare, 44 Woerter zwei Drittel.
+        #
+        # Verlustfrei, weil ein echtes Paar per Konstruktion mindestens
+        # ceil(MIN_ENTHALTUNG * MIN_WORTE) = 3 Woerter teilt und darunter praktisch immer ein
+        # selteneres ist. Gemessen gegen den ungedeckelten Lauf: Deckel 5.000 verliert 0 von
+        # 66.024 Paaren (AT) bzw. 0 von 18.146 (CH) und halbiert die Kandidaten.
+        # Schaerfer waere billiger, aber nicht mehr umsonst: Deckel 1.000 kostet 3 Paare,
+        # Deckel 300 kostet 16 (AT) und 170 (CH). Deshalb 5.000.
+        #
+        # RUECKFALLEBENE ist Pflicht: ein Satz, dessen Woerter ALLE ueber dem Deckel liegen
+        # („Neubau Volksschule Wien"), haette sonst gar keinen Seed und faende nie einen
+        # Partner. Fuer ihn bleibt das seltenste Wort Seed, auch ueber dem Deckel.
+        # Sortierschluessel ist (Haeufigkeit, Wort) — nicht nur die Haeufigkeit. Bei
+        # Gleichstand entschied vorher die Iterationsreihenfolge des `frozenset`, also der
+        # Zufall: zwei Laeufe ueber denselben Bestand lieferten 18.144 bzw. 18.146 CH-Paare.
+        # Ein Abgleich, dessen Ergebnis zwischen zwei Laeufen schwankt, laesst sich weder
+        # pruefen noch reproduzieren.
+        _sortiert = sorted((w for w in s["w"] if w in inv),
+                           key=lambda w: (len(inv[w]), w))
+        seeds = [w for w in _sortiert[:SEED_WORTE]
+                 if len(inv[w]) <= SEED_DECKEL] or _sortiert[:1]
         kand = {j for w in seeds for j in inv[w] if j != i}
         for j in kand:
             schluessel = (min(i, j), max(i, j))
@@ -257,6 +293,7 @@ def finde(country: str = "DE", ab_jahr: int = 2026,
                                      if b[f if f != "cpv" else "cpv"] and not a[f if f != "cpv" else "cpv"]) or None,
             })
     return paare
+
 
 
 def schreibe(paare: list[dict], country: str = "DE") -> Path:
