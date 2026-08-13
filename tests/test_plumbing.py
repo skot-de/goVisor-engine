@@ -1556,3 +1556,62 @@ def test_keine_uebersetzung_in_modul_konstanten():
             if tiefe <= 0 and zeile.rstrip().endswith((";", "};", "];")):
                 in_const = False
     assert not treffer, "tk() in Modul-Konstante (Sprache eingefroren):\n  " + "\n  ".join(treffer[:8])
+
+
+# ── Dubletten-Firewall: die beiden Trennregeln, die an echten Daten gemessen wurden ──
+#
+# Beide Regeln entstanden aus Zufallsstichproben ueber die erzeugte `notice_duplicates`
+# (2026-08-13). Sie haben zusammen 22.000 Falsch-Paare entfernt — DE 6.794→6.116,
+# AT 5.715→5.421, CH 18.676→2.874. Ohne Test faellt jede von ihnen bei der naechsten
+# Umformulierung lautlos wieder heraus, und die Anreicherung traegt fremde Fristen ins
+# Produkt, ohne dass es jemand sieht.
+
+def test_dedupe_zahlen_sieht_kurze_losnummern():
+    """`worte()` verwirft Tokens unter drei Zeichen — die Losnummer darf nicht mitgehen.
+
+    Gemessen: „26.39 / 26.40 / 26.30 - Grundschulerweiterung MZH" standen als Dubletten
+    in der Tabelle, weil beide Ziffernpaare zweistellig sind und komplett aus dem
+    Wortsatz fielen. Die Los-Sperre las damals `w`, sah keine Zahl und liess durch.
+    """
+    from govisor.dedupe import worte, zahlen
+    assert not {x for x in worte("26.39 - Grundschulerweiterung") if x.isdigit()}
+    assert zahlen("26.39 - Grundschulerweiterung") == frozenset({"26", "39"})
+    assert zahlen("26.39 - Grundschulerweiterung") != zahlen("26.40 - Grundschulerweiterung")
+    # Fuehrende Nullen sind Schreibweise, keine andere Losnummer.
+    assert zahlen("Winterdienst Auftrag Nr. 06") == zahlen("Winterdienst Auftrag Nr. 6")
+    # Ohne Zahl auf einer Seite greift die Sperre nicht (sie fordert beidseitig Zahlen).
+    assert zahlen("Rahmenvertrag Reinigung") == frozenset()
+
+
+def test_dedupe_geschwister_lose_werden_getrennt_belegt():
+    """Beidseitig eigene Woerter = Geschwister-Lose, nicht dieselbe Vergabe.
+
+    Ein Bauprojekt wird gewerkeweise ausgeschrieben; der gemeinsame Projektname ist lang,
+    das trennende Gewerk kurz — die Enthaltung liegt deshalb ueber der Schwelle. Bei einer
+    echten Dublette ist hoechstens EINE Seite laenger (Zusatz/Umformulierung), bei
+    Geschwistern haben beide ein eigenes Inhaltswort.
+    """
+    from govisor.dedupe import worte
+    a = worte("Bertha-von-Suttner-Gymnasium, Erweiterung Anbau - Trockenbauarbeiten")
+    b = worte("Bertha-von-Suttner-Gymnasium, Erweiterung Anbau - Stahlbauarbeiten")
+    assert (a - b) and (b - a), "Geschwister-Lose: beide Seiten tragen ein eigenes Wort"
+
+    # Echte Dublette: die eine Seite ist Teilmenge der anderen (DOeE ergaenzt eine Abteilung).
+    m = worte("Magistrat der Stadt Bad Hersfeld")
+    d = worte("Magistrat der Stadt Bad Hersfeld - Stadt- und Kreisarchiv")
+    assert not (m - d), "Dublette: nur eine Seite hat Zusatzwoerter"
+
+
+def test_dedupe_anreicherung_haengt_an_der_belegstufe():
+    """Die Anreicherung muss auf `beleg`, nicht auf `gleicher_kaeufer` filtern.
+
+    Geschwister-Lose teilen sich per Definition den Kaeufer. Ein Filter auf
+    `gleicher_kaeufer` waere dort wahr und haette die Gewerke-Sperre lautlos unterlaufen —
+    die Frist des Nachbargewerks waere als „echt_aus_dublette" ins Produkt gewandert.
+    """
+    from pathlib import Path
+    quelle = (Path(__file__).resolve().parent.parent / "govisor" / "dedupe.py").read_text(
+        encoding="utf-8")
+    anr = quelle.split("def anreichern")[1]
+    assert "d.beleg = 'kaeufer_und_titel'" in anr
+    assert "WHERE d.gleicher_kaeufer" not in anr

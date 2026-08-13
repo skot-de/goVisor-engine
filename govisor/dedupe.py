@@ -88,6 +88,22 @@ def worte(s: str | None) -> frozenset[str]:
     return frozenset(w for w in roh if w not in _STOPP)
 
 
+def zahlen(s: str | None) -> frozenset[str]:
+    """Alle Zahlfolgen aus dem ROHTITEL — auch ein- und zweistellige.
+
+    `worte()` behaelt nur Tokens ab drei Zeichen. „26.39" zerfaellt dort in „26" und
+    „39", beide zweistellig, beide verworfen — die Losnummer verschwindet also, BEVOR
+    die Los-Sperre sie sehen kann. Gemessen an den Paaren „26.39 / 26.40 / 26.30 —
+    Grundschulerweiterung und Ersatzneubau MZH", die als Dubletten in der Tabelle
+    landeten, obwohl die Nummer sie klar trennt.
+
+    Fuehrende Nullen fallen weg, damit „Los 03" und „Los 3" dieselbe Nummer sind.
+    """
+    if not s:
+        return frozenset()
+    return frozenset(x.lstrip("0") or "0" for x in re.findall(r"\d+", s))
+
+
 def _enthaltung(a: frozenset, b: frozenset) -> float:
     if not a or not b:
         return 0.0
@@ -129,7 +145,8 @@ def finde(country: str = "DE", ab_jahr: int = 2026) -> list[dict]:
         # liess „bundesagentur fuer arbeit, regionales einkaufszentrum nrw" und dieselbe
         # Zeichenkette OHNE Komma als verschiedene Kaeufer durchgehen. Gemessen: +941 Paare
         # bekommen dadurch einen Kaeufer-Beleg, 2.918 → 3.859 von 6.794.
-        saetze.append({"id": nid, "gen": gen or "?", "titel": titel, "w": w, "d": d,
+        saetze.append({"id": nid, "gen": gen or "?", "titel": titel, "w": w,
+                       "z": zahlen(titel), "d": d,
                        "buyer": _entities.normalize_company(buyer) if buyer else "",
                        "cpv": cpv, "wert": wert,
                        "frist": frist, "nuts": nuts, "beschr": beschr})
@@ -163,10 +180,29 @@ def finde(country: str = "DE", ab_jahr: int = 2026) -> list[dict]:
             # VERSCHIEDENE Lose desselben Rahmenvertrags — zwei Vergaben, auf die man
             # getrennt bietet, kein doppelter Satz. Unterscheiden sie sich in einer Zahl
             # bei sonst gleichem Text, ist das ein Trennmerkmal, kein Rauschen.
-            zahlen_s = {x for x in s["w"] if x.isdigit()}
-            zahlen_t = {x for x in t["w"] if x.isdigit()}
-            if zahlen_s and zahlen_t and zahlen_s != zahlen_t:
+            #
+            # Die Zahlen kommen aus dem ROHTITEL (`zahlen()`), nicht aus `w` — sonst
+            # faellt jede ein- oder zweistellige Losnummer durch das 3-Zeichen-Minimum
+            # von `worte()` und die Sperre laeuft leer. Siehe Docstring dort.
+            if s["z"] and t["z"] and s["z"] != t["z"]:
                 continue
+            # GEWERKE-SPERRE. Dieselbe Trennung wie oben, nur ohne Nummern: ein Bauprojekt
+            # wird gewerkeweise ausgeschrieben, und die Gewerke stehen als WORT im Titel.
+            #   „… Bertha-von-Suttner-Gymnasium – Trockenbauarbeiten"
+            #   „… Bertha-von-Suttner-Gymnasium – Stahlbauarbeiten"
+            # Der gemeinsame Projektname ist lang, das trennende Wort kurz — die Enthaltung
+            # liegt dadurch weit ueber der Schwelle. Merkmal ist nicht die Aehnlichkeit,
+            # sondern die RICHTUNG: bei echten Dubletten hat hoechstens EINE Seite eigene
+            # Woerter (die andere ist Teilmenge oder gleich), bei Geschwister-Losen haben
+            # BEIDE eines. Sprachunabhaengig und ohne Gewerke-Vokabular — was in DE/AT/CH
+            # gilt, gilt auch in FR und PL.
+            #
+            # Gemessen an einem Zufallsschnitt: der beidseitige Eimer enthaelt neben Losen
+            # auch voellig unverwandte Vergaben desselben Kaeufers („Sanierung Freibad"
+            # gegen „Neubau Schulmensa", „Mittagessen Regelschule" gegen „Kopierpapier").
+            # Sie wird deshalb als eigene Belegstufe MARKIERT, nicht verworfen — die Paare
+            # bleiben in der Tabelle sichtbar, aber die Anreicherung fasst sie nicht an.
+            geschwister = bool((s["w"] - t["w"]) and (t["w"] - s["w"]))
             gleicher_kaeufer = bool(s["buyer"] and s["buyer"] == t["buyer"])
             # BELEGLAGE statt Schwelle. Ein kurzer Gewerke-Titel („Sanitär, Lüftung,
             # Heizung") steckt vollständig in jedem längeren Titel desselben Gewerks —
@@ -175,7 +211,8 @@ def finde(country: str = "DE", ab_jahr: int = 2026) -> list[dict]:
             # gehoben und dabei fremde Fristen uebernommen. Die Stufe steht deshalb in
             # der Tabelle, damit jeder Verbraucher selbst entscheidet.
             kurz = min(len(s["w"]), len(t["w"])) < 6
-            beleg = ("kaeufer_und_titel" if gleicher_kaeufer
+            beleg = ("geschwister" if geschwister
+                     else "kaeufer_und_titel" if gleicher_kaeufer
                      else "nur_titel_kurz" if kurz else "nur_titel")
             # Master = reichere Quelle. Bei Gleichstand der frühere Satz.
             a, b = (s, t) if QUELLEN_RANG.get(s["gen"], 9) <= QUELLEN_RANG.get(t["gen"], 9) else (t, s)
@@ -250,7 +287,11 @@ def anreichern(country: str = "DE") -> dict:
               FROM read_parquet('{dup.as_posix()}') d
               JOIN read_parquet({g!r}) m ON m.notice_id = d.master_id
               JOIN read_parquet({g!r}) x ON x.notice_id = d.duplicate_id
-              WHERE d.gleicher_kaeufer AND m.{feld} IS NULL AND x.{feld} IS NOT NULL
+              -- Auf die BELEGSTUFE filtern, nicht auf `gleicher_kaeufer`. Geschwister-Lose
+              -- teilen sich per Definition den Kaeufer — die Spalte ist dort wahr und haette
+              -- die Sperre lautlos unterlaufen. `kaeufer_und_titel` schliesst sie aus.
+              WHERE d.beleg = 'kaeufer_und_titel'
+                AND m.{feld} IS NULL AND x.{feld} IS NOT NULL
            """).fetchall()]
     ziel = ROOT / "data" / "gold" / country / "notice_enrichment.parquet"
     if zeilen:
