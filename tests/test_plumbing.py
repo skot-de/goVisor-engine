@@ -1615,3 +1615,34 @@ def test_dedupe_anreicherung_haengt_an_der_belegstufe():
     anr = quelle.split("def anreichern")[1]
     assert "d.beleg = 'kaeufer_und_titel'" in anr
     assert "WHERE d.gleicher_kaeufer" not in anr
+
+
+def test_lead_deadline_verlaengerung_schlaegt_die_eigene_frist():
+    """`echt_verlaengert` steht VOR `echt` im Wasserfall — als einzige Stufe.
+
+    Alle uebrigen Dubletten-Werte fuellen nur Luecken. Die Fristverlaengerung korrigiert
+    einen vorhandenen, aber ueberholten Wert: TED und die nationale Quelle veroeffentlichen
+    dieselbe Vergabe, die Frist wird verschoben, nur eine Quelle bekommt es mit. Steht die
+    Stufe hinter `echt`, greift sie nie und der Lead bleibt faelschlich abgelaufen.
+    """
+    from pathlib import Path
+    src = (Path(__file__).resolve().parent.parent / "govisor" / "gold.py").read_text(
+        encoding="utf-8")
+    block = src.split("def build_lead_deadline")[1].split("def ")[0]
+    i_v = block.index("'echt_verlaengert'")
+    i_e = block.index("THEN 'echt'")
+    assert i_v < i_e, "die Verlaengerung muss vor der eigenen Frist geprueft werden"
+
+
+def test_export_meldet_dubletten_fristen_nicht_als_schaetzung():
+    """`echt_aus_dublette` und `echt_verlaengert` sind veroeffentlichte Daten.
+
+    Der Export prueft `starts_with(deadline_source,'echt')`. Eine Gleichheitspruefung auf
+    `'echt'` (so stand es bis 2026-08-13) meldet beide neuen Stufen als `estimated` — eine
+    Untertreibung, die dem Kunden eine belegte Frist als Modellwert verkauft.
+    """
+    from pathlib import Path
+    src = (Path(__file__).resolve().parent.parent / "govisor" / "gold.py").read_text(
+        encoding="utf-8")
+    assert "starts_with(d.deadline_source, 'echt')" in src
+    assert "d.deadline_source='echt' THEN 'actual'" not in src

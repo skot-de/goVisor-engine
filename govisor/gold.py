@@ -2270,6 +2270,26 @@ def build_value_anchor(cfg: Config, country: str = "DE"):
     return n
 
 
+def _ANR_SQL(cfg: Config, country: str) -> str:
+    """SQL-Quelle fuer ``notice_enrichment`` — die Ausgabe der Dubletten-Firewall.
+
+    Die Anreicherung ist fuer JEDEN Verbraucher **optional**. Fehlt die Datei (frischer
+    Klon, neues Land, Firewall im Tageslauf fehlgeschlagen), liefert diese Quelle eine
+    leere Menge und der jeweilige Wasserfall verhaelt sich exakt wie vorher. Kein Bauer
+    bekommt eine harte Abhaengigkeit von einem Schritt, der schiefgehen darf.
+
+    Als Helfer herausgezogen, weil es inzwischen zwei Verbraucher gibt
+    (``build_lead_deadline`` fuer Fristen, ``build_lead_geo`` fuer den Leistungsort) und
+    die Fehlt-Datei-Behandlung an beiden Stellen dieselbe sein muss. Zwei Kopien waeren
+    genau die Art Verzweigung, die spaeter nur an einer Stelle nachgezogen wird.
+    """
+    p = cfg.gold_dir / country / "notice_enrichment.parquet"
+    if p.exists():
+        return f"read_parquet('{p.as_posix()}')"
+    return ("(SELECT NULL::VARCHAR AS notice_id, NULL::VARCHAR AS feld,"
+            " NULL::VARCHAR AS wert WHERE false)")
+
+
 def build_lead_deadline(cfg: Config, country: str = "DE"):
     """Angebotsfrist je offener Ausschreibung — der **primäre Timing-Alert** (#9, Flip).
 
@@ -2285,13 +2305,7 @@ def build_lead_deadline(cfg: Config, country: str = "DE"):
     N = f"'{cfg.silver_table_glob('notices', country)}'"
     out = (g / "lead_deadline.parquet").as_posix()
     con = duckdb.connect(); con.execute("SET threads=4")
-    # Anreicherung ist OPTIONAL. Fehlt `notice_enrichment.parquet`, liefert die Quelle
-    # eine leere Menge und der Wasserfall verhaelt sich exakt wie vorher — der Bauer
-    # bekommt keine harte Abhaengigkeit von einem Schritt, den es erst seit heute gibt.
-    _anr = cfg.gold_dir / country / "notice_enrichment.parquet"
-    ANRQ = (f"read_parquet('{_anr.as_posix()}')" if _anr.exists()
-            else "(SELECT NULL::VARCHAR AS notice_id, NULL::VARCHAR AS feld,"
-                 " NULL::VARCHAR AS wert WHERE false)")
+    ANRQ = _ANR_SQL(cfg, country)
     con.execute(f"""
         COPY (
           WITH win AS (
@@ -2313,13 +2327,19 @@ def build_lead_deadline(cfg: Config, country: str = "DE"):
             -- identische Vergabestelle UND Titel-Enthaltung >=0,8 (Stufe `kaeufer_und_titel`,
             -- die einzige, aus der angereichert wird). Ohne sie waeren diese Fristen bekannt
             -- und wuerden trotzdem geschaetzt.
-            CASE WHEN n.submission_deadline IS NOT NULL THEN n.submission_deadline::DATE
+            -- VOR der eigenen Frist steht die Verlaengerung: sie korrigiert einen
+            -- vorhandenen, aber ueberholten Wert. Das ist der einzige Fall, in dem eine
+            -- Dublette einen belegten Wert schlaegt — und er ist auf eindeutige 1:1-Paare
+            -- begrenzt (Herleitung im Docstring von `dedupe.anreichern`).
+            CASE WHEN vrl.wert IS NOT NULL THEN try_cast(vrl.wert AS DATE)
+                 WHEN n.submission_deadline IS NOT NULL THEN n.submission_deadline::DATE
                  WHEN anr.wert IS NOT NULL THEN try_cast(anr.wert AS DATE)
                  ELSE (n.publication_date + (CAST(coalesce(win.m, gm.m) AS INT) * INTERVAL 1 DAY))::DATE
             END AS deadline_date,
             -- Eigene Herkunftsstufe, nicht als 'echt' getarnt: die Frist ist belegt, stammt
             -- aber aus einem anderen Satz. Wer sie benutzt, soll das sehen koennen.
-            CASE WHEN n.submission_deadline IS NOT NULL THEN 'echt'
+            CASE WHEN vrl.wert IS NOT NULL THEN 'echt_verlaengert'
+                 WHEN n.submission_deadline IS NOT NULL THEN 'echt'
                  WHEN anr.wert IS NOT NULL THEN 'echt_aus_dublette'
                  WHEN win.m IS NOT NULL THEN 'geschaetzt_cpv'
                  ELSE 'geschaetzt_global' END AS deadline_source,
@@ -2328,6 +2348,11 @@ def build_lead_deadline(cfg: Config, country: str = "DE"):
           LEFT JOIN win ON win.cpv4 = substr(n.cpv_main,1,4)
           LEFT JOIN (SELECT notice_id, min(wert) AS wert FROM {ANRQ}
                      WHERE feld='submission_deadline' GROUP BY 1) anr USING (notice_id)
+          -- max(): bei mehreren belegten Verlaengerungen gilt die spaeteste. Die
+          -- Eindeutigkeitspruefung sitzt in `dedupe`, das hier ist nur der Gleichstand.
+          LEFT JOIN (SELECT notice_id, max(wert) AS wert FROM {ANRQ}
+                     WHERE feld='submission_deadline_verlaengert' GROUP BY 1) vrl
+                 USING (notice_id)
           CROSS JOIN gm
           -- Echte Frist braucht KEIN publication_date; nur die Schätzung tut es.
           -- (Bug-Fix: sonst fielen 4.360 offene cn mit echtem Datum ohne pub raus.)
@@ -3000,7 +3025,13 @@ def build_lead_export(cfg: Config, country: str = "DE"):
             (NOT coalesce(d.termin_plausibel, true))  AS timing_implausible,
             CASE WHEN NOT coalesce(d.termin_plausibel, true) THEN 'uncertain'
                  WHEN d.source IN ('f01','f02') THEN
-                      CASE WHEN d.deadline_source='echt' THEN 'actual' ELSE 'estimated' END
+                      -- `starts_with('echt')` statt Gleichheit: die Dubletten-Firewall hat
+                      -- zwei weitere echte Stufen erzeugt (`echt_aus_dublette`,
+                      -- `echt_verlaengert`). Beide sind VEROEFFENTLICHTE Daten, nur aus dem
+                      -- Zwillingssatz derselben Vergabe — sie als 'estimated' zu melden,
+                      -- waere eine Untertreibung. Nur die `geschaetzt_*`-Stufen sind Modell.
+                      CASE WHEN starts_with(d.deadline_source, 'echt') THEN 'actual'
+                           ELSE 'estimated' END
                  ELSE CASE d.duration_source WHEN 'echt' THEN 'actual'
                           WHEN 'unbekannt' THEN 'unknown' ELSE 'estimated' END END AS timing_source,
             -- Amtsinhaber inkl. Konzern-Gruppe (entity_identity)
@@ -3980,8 +4011,20 @@ def build_lead_geo(cfg: Config, country: str = "DE"):
             SELECT lower(ort) ortk, avg(lat) lat, avg(lon) lon FROM read_parquet({DP})
             WHERE ort IS NOT NULL AND country = '{country}' GROUP BY 1),
           perf AS (   -- Leistungsort-NUTS je Notice (zweite Achse)
+            -- Leistungsort aus dem eigenen Satz ODER aus dem Zwilling. Die zweite Quelle
+            -- ist die Dubletten-Firewall: veroeffentlicht die nationale Quelle eine Region
+            -- und TED nicht (oder umgekehrt), stand der Lead bisher ohne Leistungsort da
+            -- und war ueber die Achse `performance` nicht auffindbar. Gemessen 2026-08-13:
+            -- +229 AT, +4 CH, 0 DE. Keiner davon ist ganz ortlos — die Kaeufer-Achse trug
+            -- sie schon; es kommt die ZWEITE Achse dazu, und die ist bei zentral
+            -- beschaffenden Stellen die genauere von beiden.
+            -- `coalesce` und nicht `union`: der eigene Satz hat Vorrang, angereichert wird
+            -- nur die Luecke. Die Quelle bleibt ueber `notice_enrichment` nachvollziehbar.
             SELECT notice_id, any_value(performance_nuts) pn FROM read_parquet({N}, hive_partitioning=1)
             WHERE performance_nuts IS NOT NULL GROUP BY notice_id),
+          perf_anr AS (
+            SELECT notice_id, min(wert) pn FROM {_ANR_SQL(cfg, country)}
+            WHERE feld='performance_nuts' GROUP BY notice_id),
           base AS (   -- Buyer-Achse zuerst (feine PLZ-Koordinate)
             SELECT l.lead_id,
               coalesce(p.lat, o.lat) AS lat, coalesce(p.lon, o.lon) AS lon,
@@ -3990,12 +4033,14 @@ def build_lead_geo(cfg: Config, country: str = "DE"):
                    WHEN o.lat IS NOT NULL THEN 'ort' ELSE 'none' END AS geo_source,
               -- Buyer-NUTS zuerst; wo er fehlt (DÖE-Unterschwellig = 0 %) Leistungsort-NUTS,
               -- damit der Regions-Filter auch DÖE-Leads trifft.
-              coalesce(l.buyer_nuts, pf.pn) AS nuts, pf.pn AS perf_nuts
+              coalesce(l.buyer_nuts, pf.pn, pa.pn) AS nuts,
+              coalesce(pf.pn, pa.pn)               AS perf_nuts
             FROM read_parquet({L}) l
             LEFT JOIN bplz ON bplz.notice_id = l.lead_id
             LEFT JOIN read_parquet({DP}) p ON p.plz = bplz.plz AND p.country = '{country}'
             LEFT JOIN ort_geo o ON o.ortk = lower(l.buyer_town)
-            LEFT JOIN perf pf ON pf.notice_id = l.lead_id),
+            LEFT JOIN perf pf ON pf.notice_id = l.lead_id
+            LEFT JOIN perf_anr pa ON pa.notice_id = l.lead_id),
           centroid AS (   -- NUTS-3-Zentroid = Mittel der Buyer-Koordinaten je Region (selbst-abgeleitet)
             SELECT nuts, avg(lat) clat, avg(lon) clon FROM base WHERE lat IS NOT NULL GROUP BY nuts)
           SELECT base.lead_id, base.lat, base.lon, base.plz, base.ort, base.geo_source,

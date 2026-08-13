@@ -293,6 +293,46 @@ def anreichern(country: str = "DE") -> dict:
               WHERE d.beleg = 'kaeufer_und_titel'
                 AND m.{feld} IS NULL AND x.{feld} IS NOT NULL
            """).fetchall()]
+
+    # FRISTVERLAENGERUNG — die einzige Stelle, an der ein Wert NICHT nur eine Luecke
+    # fuellt, sondern einen vorhandenen korrigiert. Sie steht deshalb als eigene Feldart
+    # `submission_deadline_verlaengert` da und nicht unter `submission_deadline`.
+    #
+    # Der Fall: TED und die nationale Quelle veroeffentlichen dieselbe Vergabe, die Frist
+    # wird spaeter verschoben, und nur eine der beiden Quellen bekommt die Korrektur mit.
+    # Der Lead gilt bei uns dann als abgelaufen, obwohl man noch bieten kann — ein Fehler,
+    # den der Kunde direkt merkt: er filtert „offen" und die Ausschreibung fehlt.
+    #
+    # EINDEUTIGKEIT IST PFLICHT. Gemessen an den 109 Kandidaten: 69 davon sind mehrdeutig,
+    # weil Behoerden templatisierte Titel benutzen. „REZ SW 45ind JC Rhein-Neckar-Kreis"
+    # ist ein Dienststellen-Kuerzel, kein Auftragsgegenstand — drei verschiedene eForms-
+    # Bekanntmachungen (24.06./07.07./16.07.) haengen dort an EINER DOeE-Bekanntmachung vom
+    # 18.08. Hoechstens eine davon ist die Verlaengerung; welche, ist aus dem Titel nicht
+    # zu entscheiden. Uebertragen wird deshalb nur, wo die Zuordnung auf BEIDEN Seiten
+    # eindeutig ist (1:1). Bleiben 40 von 109 — der Rest bleibt lieber abgelaufen als
+    # falsch verlaengert.
+    #
+    # `current_date` bewusst zur Laufzeit: was heute verlaengert ist, ist in drei Wochen
+    # abgelaufen. Ein eingefrorener Stichtag wuerde die Tabelle still veralten lassen.
+    zeilen += [dict(notice_id=r[0], feld="submission_deadline_verlaengert", wert=r[1],
+                    quelle_notice_id=r[2], quelle_gen=r[3])
+               for r in con.execute(f"""
+          WITH k AS (
+            SELECT d.master_id, d.duplicate_id, d.duplicate_quelle,
+                   CAST(x.submission_deadline AS VARCHAR) AS wert
+            FROM read_parquet('{dup.as_posix()}') d
+            JOIN read_parquet({g!r}) m ON m.notice_id = d.master_id
+            JOIN read_parquet({g!r}) x ON x.notice_id = d.duplicate_id
+            WHERE d.beleg = 'kaeufer_und_titel'
+              AND m.submission_deadline IS NOT NULL      -- KEINE Luecke, ein falscher Wert
+              AND CAST(m.submission_deadline AS DATE) <  current_date
+              AND CAST(x.submission_deadline AS DATE) >= current_date),
+          z AS (SELECT *, count(*) OVER (PARTITION BY master_id)    AS je_master,
+                          count(*) OVER (PARTITION BY duplicate_id) AS je_dublette FROM k)
+          SELECT master_id, wert, duplicate_id, duplicate_quelle
+          FROM z WHERE je_master = 1 AND je_dublette = 1
+       """).fetchall()]
+
     ziel = ROOT / "data" / "gold" / country / "notice_enrichment.parquet"
     if zeilen:
         pq.write_table(pa.Table.from_pylist(zeilen, schema=pa.schema([
