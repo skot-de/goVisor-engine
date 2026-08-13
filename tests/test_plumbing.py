@@ -1745,7 +1745,9 @@ def test_dedupe_paart_keine_verschiedenen_verfahrensstufen():
     from pathlib import Path
     src = (Path(__file__).resolve().parent.parent / "govisor" / "dedupe.py").read_text(
         encoding="utf-8")
-    b = src.split("def finde")[1].split("\ndef ")[0]
+    # Der eigentliche Abgleich sitzt seit dem Zeitscheiben-Umbau in `_paare_finden`;
+    # `finde` laedt nur noch und verteilt. Der Test folgt der Logik, nicht dem Namen.
+    b = src.split("def _paare_finden")[1].split("\ndef ")[0]
     assert 's["art"] != t["art"]' in b, "Stufen-Sperre fehlt"
 
 
@@ -1762,3 +1764,25 @@ def test_dedupe_kennt_die_veroeffentlichungs_sicht():
     assert inspect.signature(dedupe.finde).parameters["alle_arten"].default is False
     assert "--alle-arten" in (dedupe.main.__doc__ or "") or "alle-arten" in inspect.getsource(
         dedupe.main)
+
+
+def test_dedupe_zeitscheiben_sind_zuschnitt_unabhaengig():
+    """Die Worthäufigkeit für die Seed-Wahl muss GLOBAL sein, nicht je Zeitscheibe.
+
+    Der Abgleich läuft jahrgangsweise (mit FENSTER_TAGE Rand), weil ein Paar per Definition
+    binnen dieses Fensters liegt — ohne die Aufteilung schaffte AT die volle Historie nicht
+    (>45 min Abbruch, mit Scheiben 40 s). Zählt aber jede Scheibe die Wörter selbst, ist ein
+    Wort in einem kleinen Ausschnitt seltener, die Seeds fallen anders aus und das Ergebnis
+    hängt am Zuschnitt statt an den Daten. Gemessen, als es so war: CH ab 2024 fand 18.144
+    statt 18.146 Paaren.
+    """
+    from pathlib import Path
+    src = (Path(__file__).resolve().parent.parent / "govisor" / "dedupe.py").read_text(
+        encoding="utf-8")
+    z = src.split("def _in_zeitscheiben")[1].split("\ndef ")[0]
+    assert "haeufigkeit" in z, "globale Wortstatistik fehlt"
+    assert "_paare_finden(scheibe, haeufigkeit)" in z, "Scheibe bekommt sie nicht"
+    # Rand um den Jahrgang ist Pflicht, sonst zerschneidet der Jahreswechsel echte Paare.
+    assert "FENSTER_TAGE" in z, "Rand um den Jahrgang fehlt"
+    # Sätze ohne Datum können mit allem paaren und müssen in jeder Scheibe mitlaufen.
+    assert "ohne_datum" in z

@@ -168,6 +168,12 @@ def finde(country: str = "DE", ab_jahr: int = 2026,
     """
     zeilen = _laden(country, ab_jahr, alle_arten)
     print(f"  {len(zeilen):,} Bekanntmachungen ab {ab_jahr} geladen")
+    saetze = _saetze(zeilen)
+    return _in_zeitscheiben(saetze)
+
+
+def _saetze(zeilen) -> list[dict]:
+    """Rohzeilen → vergleichsfertige Sätze (Wortmenge, Zahlen, Käufer-Normalform)."""
     saetze = []
     for nid, gen, titel, art, d, buyer, cpv, wert, frist, nuts, beschr in zeilen:
         w = worte(titel)
@@ -186,12 +192,72 @@ def finde(country: str = "DE", ab_jahr: int = 2026,
                        "cpv": cpv, "wert": wert,
                        "frist": frist, "nuts": nuts, "beschr": beschr})
 
+    return saetze
+
+
+def _in_zeitscheiben(saetze: list[dict]) -> list[dict]:
+    """Abgleich JAHRESWEISE statt über den ganzen Bestand — verlustfrei und der Hebel.
+
+    Ein Paar muss binnen ``FENSTER_TAGE`` liegen; das war bisher ein Filter NACH der
+    Kandidatenbildung. Gepaart wurde quer über 22 Jahrgänge und anschliessend fast alles
+    verworfen — der Aufwand wächst dabei quadratisch mit dem Bestand, obwohl zwei Sätze aus
+    2008 und 2019 sich per Definition nie treffen können.
+
+    Hier wird dieselbe Bedingung VOR die Kandidatenbildung gezogen: je Jahrgang bekommt der
+    Abgleich nur die Sätze dieses Jahres plus ``FENSTER_TAGE`` Rand nach beiden Seiten. Der
+    Rand ist Pflicht, sonst zerschneidet der Jahreswechsel echte Paare (TED im Dezember,
+    nationale Quelle im Januar). Sätze ohne jedes Datum können mit allem paaren und laufen
+    deshalb in JEDER Scheibe mit — in AT und CH gibt es davon 0, in DE 16.020 (0,7 %).
+
+    Paare aus überlappenden Rändern werden über (master_id, duplicate_id) entdoppelt.
+    """
+    import datetime as _dt
+    from collections import defaultdict as _dd
+
+    ohne_datum = [s for s in saetze if not s["d"]]
+    nach_jahr: dict[int, list[dict]] = _dd(list)
+    for s in saetze:
+        if s["d"]:
+            nach_jahr[s["d"].year].append(s)
+    if len(nach_jahr) <= 1:
+        return _paare_finden(saetze)
+
+    # Worthaeufigkeit EINMAL ueber den ganzen Bestand, nicht je Scheibe. Sonst waehlt jede
+    # Scheibe andere Seeds (in einem kleineren Ausschnitt ist ein Wort seltener), und das
+    # Ergebnis haengt am Zuschnitt statt an den Daten. Gemessen, als sie noch scheibenlokal
+    # war: CH ab 2024 fand 18.144 statt 18.146 Paaren — klein, aber ein Zuschnitt-Artefakt.
+    haeufigkeit: dict[str, int] = _dd(int)
+    for s in saetze:
+        for w in s["w"]:
+            haeufigkeit[w] += 1
+
+    rand = _dt.timedelta(days=FENSTER_TAGE)
+    zusammen: dict[tuple, dict] = {}
+    for jahr in sorted(nach_jahr):
+        von = _dt.date(jahr, 1, 1) - rand
+        bis = _dt.date(jahr, 12, 31) + rand
+        scheibe = [s for s in saetze if s["d"] and von <= s["d"] <= bis] + ohne_datum
+        for p in _paare_finden(scheibe, haeufigkeit):
+            zusammen.setdefault((p["master_id"], p["duplicate_id"]), p)
+    return list(zusammen.values())
+
+
+def _paare_finden(saetze: list[dict], haeufigkeit: dict | None = None) -> list[dict]:
+    """Der eigentliche Abgleich über eine (Teil-)Menge von Sätzen.
+
+    ``haeufigkeit`` ist die GLOBALE Wortstatistik; sie steuert die Seed-Auswahl, damit
+    diese vom Scheiben-Zuschnitt unabhaengig bleibt. Ohne sie (Einzellauf) wird sie aus
+    der uebergebenen Menge bestimmt.
+    """
+    from collections import defaultdict
     # Invertierter Index: Wort → Sätze. Der Kandidatenraum wird über die SELTENSTEN Wörter
     # aufgespannt, sonst vergleicht man jeden „Neubau" mit jedem.
     inv: dict[str, list[int]] = defaultdict(list)
     for i, s in enumerate(saetze):
         for w in s["w"]:
             inv[w].append(i)
+
+    _df = (lambda w: haeufigkeit.get(w, 0)) if haeufigkeit else (lambda w: len(inv[w]))
 
     paare, gesehen = [], set()
     for i, s in enumerate(saetze):
@@ -216,9 +282,9 @@ def finde(country: str = "DE", ab_jahr: int = 2026,
         # Ein Abgleich, dessen Ergebnis zwischen zwei Laeufen schwankt, laesst sich weder
         # pruefen noch reproduzieren.
         _sortiert = sorted((w for w in s["w"] if w in inv),
-                           key=lambda w: (len(inv[w]), w))
+                           key=lambda w: (_df(w), w))
         seeds = [w for w in _sortiert[:SEED_WORTE]
-                 if len(inv[w]) <= SEED_DECKEL] or _sortiert[:1]
+                 if _df(w) <= SEED_DECKEL] or _sortiert[:1]
         kand = {j for w in seeds for j in inv[w] if j != i}
         for j in kand:
             schluessel = (min(i, j), max(i, j))
