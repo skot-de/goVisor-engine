@@ -2608,6 +2608,34 @@ def build_lead_detail(cfg: Config, country: str = "DE"):
     return n
 
 
+def _frist_joins_sql(cfg: Config, country: str, auf: str = "n.notice_id") -> str:
+    """LEFT JOINs, die die angereicherten Fristen als ``anrq``/``vrlq`` bereitstellen."""
+    ANR = _ANR_SQL(cfg, country)
+    return f"""
+          LEFT JOIN (SELECT notice_id, min(wert) w FROM {ANR}
+                     WHERE feld='submission_deadline' GROUP BY 1) anrq ON anrq.notice_id = {auf}
+          LEFT JOIN (SELECT notice_id, max(wert) w FROM {ANR}
+                     WHERE feld='submission_deadline_verlaengert' GROUP BY 1) vrlq
+                 ON vrlq.notice_id = {auf}"""
+
+
+# Die effektive Angebotsfrist. EINE Definition fuer alle Verbraucher.
+#
+# Sie stand vorher zweimal im Code und lief auseinander: `build_lead_deadline` rechnete den
+# vollen Wasserfall, `build_prospective_leads` entschied die Lead-ZUGEHOERIGKEIT an der rohen
+# Silber-Frist. Folge, gemessen 2026-08-13: von 40 Bekanntmachungen mit korrigierter
+# (verlaengerter) Frist standen **0** in `leads.parquet`. Die Korrektur landete in einer
+# Tabelle, die ueber die Zugehoerigkeit nicht entscheidet — der Lead blieb draussen, nur sein
+# Datum stimmte. Dieselbe Divergenz haette den Zweitquellen-Ausschluss 180 gueltige Leads
+# kosten lassen (AT 156, CH 18, DE 6): deren Master traegt seine Frist NUR aus der
+# Anreicherung, war damit selbst nicht lead-faehig — und die Dublette waere trotzdem geflogen.
+#
+# Reihenfolge wie im Wasserfall von `build_lead_deadline`: Verlaengerung schlaegt eigene
+# Frist (sie korrigiert einen ueberholten Wert), eigene Frist schlaegt uebernommene.
+_FRIST_EFF = ("coalesce(try_cast(vrlq.w AS DATE), n.submission_deadline::DATE,"
+              " try_cast(anrq.w AS DATE))")
+
+
 def _redundante_zweitquelle_sql(cfg: Config, country: str, spalte: str = "n.notice_id") -> str:
     """SQL-Bedingung: schliesst Saetze aus, die eine Zweitquelle DOPPELT liefert.
 
@@ -2704,8 +2732,8 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
             b.buyer_email, b.buyer_url, n.ted_url,
             n.title AS titel, n.description AS beschreibung,
             n.cpv_main, substr(n.cpv_main,1,4) AS cpv_class, dc.branche, dc.sector,
-            n.submission_deadline::DATE AS contract_end,
-            date_diff('month', DATE '{ref}', n.submission_deadline::DATE) AS months_to_expiry,
+            {_FRIST_EFF} AS contract_end,
+            date_diff('month', DATE '{ref}', {_FRIST_EFF}) AS months_to_expiry,
             CASE n.notice_kind WHEN 'cn' THEN 'Angebotsfrist' ELSE 'Vorinformation' END AS faellig_basis,
             true AS termin_plausibel,
             {_kind_sql('n.title', 'n.cpv_main')} AS contract_kind,
@@ -2722,8 +2750,9 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
           JOIN buyer b ON b.notice_id=n.notice_id
           LEFT JOIN '{DD}' dd ON dd.year=n.year
           LEFT JOIN '{DC}' dc ON dc.division=substr(n.cpv_main,1,2)
+          {_frist_joins_sql(cfg, country)}
           WHERE n.notice_kind IN ('cn','pin') AND n.cpv_main IS NOT NULL
-            AND n.submission_deadline IS NOT NULL AND n.submission_deadline::DATE >= DATE '{ref}'
+            AND {_FRIST_EFF} IS NOT NULL AND {_FRIST_EFF} >= DATE '{ref}'
             -- A6 war ein HARTER Schnitt bei 5 Jahren. Gemessen 2026-08-13: er warf in
             -- Oesterreich 357 von 684 offenen atverg-Verfahren weg (52 %), davon 258 mit dem
             -- Platzhalter-Datum 2100-01-01 — laufende Rahmenvereinbarungen der OeBB und
@@ -2732,7 +2761,7 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
             -- beitretbar, keine echte Frist — genau das, was `procedure_kind='open_house'`
             -- beschreibt. Konvention "markieren statt filtern": die Obergrenze bleibt nur als
             -- Absurditaets-Sperre gegen Parse-Muell, die Einordnung macht `_open_house_sql`.
-            AND n.submission_deadline::DATE <= DATE '2200-01-01'
+            AND {_FRIST_EFF} <= DATE '2200-01-01'
             {_redundante_zweitquelle_sql(cfg, country)}
         ) TO '{out}.tmp' (FORMAT PARQUET, COMPRESSION ZSTD)
     """)

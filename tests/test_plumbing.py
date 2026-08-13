@@ -1684,3 +1684,25 @@ def test_zweitquellen_ausschluss_prueft_den_master():
     assert ">= current_date" in b
     for feld in ("submission_deadline_verlaengert", "submission_deadline"):
         assert feld in b, f"{feld} fehlt in der Master-Frist"
+
+
+def test_lead_zugehoerigkeit_und_frist_nutzen_dieselbe_definition():
+    """Eine Frist-Definition fuer Zugehoerigkeit UND Anzeige — sonst laufen sie auseinander.
+
+    Gemessen 2026-08-13, als sie es taten: `build_lead_deadline` rechnete den vollen
+    Wasserfall, `build_prospective_leads` entschied die ZUGEHOERIGKEIT an der rohen
+    Silber-Frist. Von 40 Bekanntmachungen mit korrigierter (verlaengerter) Frist standen
+    **0** in `leads.parquet` — die Korrektur landete in einer Tabelle, die ueber die
+    Zugehoerigkeit nicht entscheidet. Dieselbe Divergenz haette den Zweitquellen-Ausschluss
+    180 gueltige Leads kosten lassen (AT 156, CH 18, DE 6), deren Master seine Frist nur
+    aus der Anreicherung traegt und deshalb selbst nicht lead-faehig war.
+    """
+    from pathlib import Path
+    src = (Path(__file__).resolve().parent.parent / "govisor" / "gold.py").read_text(
+        encoding="utf-8")
+    b = src.split("def build_prospective_leads")[1].split("\ndef ")[0]
+    assert "_FRIST_EFF" in b, "Lead-Zugehoerigkeit muss die effektive Frist benutzen"
+    assert "n.submission_deadline::DATE >= DATE" not in b, "rohe Silber-Frist als Schwelle"
+    # Reihenfolge im Wasserfall: Verlaengerung schlaegt eigene Frist schlaegt uebernommene.
+    eff = src.split("_FRIST_EFF = ")[1].split("\n\n")[0]
+    assert eff.index("vrlq") < eff.index("n.submission_deadline") < eff.index("anrq")
