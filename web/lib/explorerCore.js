@@ -538,7 +538,7 @@ const esc = s => String(s == null ? '' : s)
   .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
 const val = (text, src, hint) =>
-  `<span class="val" data-src="${src}" title="${esc(SRC_TEXT[src] + (hint ? ' — ' + hint : ''))}">${esc(text)}</span>`;
+  `<span class="val" data-src="${src}" title="${esc(tk(SRC_TEXT[src]) + (hint ? ' — ' + tk(hint) : ''))}">${esc(text)}</span>`;
 
 const bandMeter = (level, risk, cap, naTitle) => {
   // naTitle erklärt bei „n/a" die URSACHE (fehlende Angaben), statt den Nutzer raten zu lassen.
@@ -556,7 +556,7 @@ const WF = {
   fragen:     {label:'Offene Fragen',cls:'wf-fra'},
   verworfen:  {label:'Verworfen',   cls:'wf-ver'},
 };
-const wfPill = k => `<span class="wf ${WF[k].cls} filled">${WF[k].label}</span>`;
+const wfPill = k => `<span class="wf ${WF[k].cls} filled">${tk(WF[k].label)}</span>`;
 function konkCell(l){
   const k = l.konk;
   if(k.src==='na' || k.src==='unbekannt'){
@@ -780,7 +780,7 @@ function cellHTML(l, key){
     case 'relevanz': return `<td class="c-band">${bandMeter(l.relevanz)}</td>`;
     case 'wechsel': { const lue = bieterLuecke(l);
       return `<td class="c-band">${bandMeter(l.wechsel, true, chanceCap())}${
-        lue ? `<span class="pdot pdot-schaetz" title="Geschätzt — ${lue.kurz}: keine Bieterzahl verfügbar"></span>` : ''}</td>`;
+        lue ? `<span class="pdot pdot-schaetz" title="${esc(tk("Geschätzt — {k}: keine Bieterzahl verfügbar", {k: tk(lue.kurz)}))}"></span>` : ''}</td>`;
     }
     case 'vol': {
       if(l.lose && l.lose.length>1){
@@ -795,7 +795,7 @@ function cellHTML(l, key){
       return `<td class="c-vol">${l.volumen.src==='unbekannt' ? '<span style="color:var(--ink-300)">Wert offen</span>' : val(l.volumen.wert, l.volumen.src, l.volumen.hint)}</td>`;
     }
     case 'rahmen': return `<td class="c-rahmen">${l.rahmen
-      ? `<span class="rah rah-${l.rahmen}" title="${RAHMEN[l.rahmen].lang} — ${RAHMEN[l.rahmen].x}">${RAHMEN[l.rahmen].kurz}</span>`
+      ? `<span class="rah rah-${l.rahmen}" title="${esc(tk(RAHMEN[l.rahmen].lang) + ' — ' + tk(RAHMEN[l.rahmen].x))}">${RAHMEN[l.rahmen].kurz}</span>`
       : '<span style="color:var(--ink-300)">—</span>'}</td>`;
     case 'aufwand': {
       // Zuschlag erteilt → man kann sich nicht mehr bewerben; „Angebotsaufwand" trifft nicht zu.
@@ -1006,7 +1006,7 @@ function renderTeam(l){
 
 /* ── Tab-Renderer: pdotT, Übersicht, Teilnahme, Bewertung(analyse), Markt, Vergabestelle(buyer), Gate ── */
 const pdotT = (src,hint)=> src && src!=='echt'
-  ? `<span class="pdot pdot-${src}" title="${esc(SRC_TEXT[src]+(hint?' — '+hint:''))}"></span>` : '';
+  ? `<span class="pdot pdot-${src}" title="${esc(tk(SRC_TEXT[src])+(hint?' — '+tk(hint):''))}"></span>` : '';
 
 // Eigener „Unterlagen"-Tab: alles Dokument-Getriebene (Vergabe-Analyse / Upload / Volltext).
 // Upload-Prompt NUR bei offenen Ausschreibungen (src='f02', Frist nicht vorbei) — bei
@@ -1228,7 +1228,7 @@ function renderUebersicht(l){
   if(l.src==='award') return renderAwardUebersicht(l);
   const inc = l.incumbent;
   const pdot = (src,hint)=> src && src!=='echt'
-    ? `<span class="pdot pdot-${src}" title="${esc(SRC_TEXT[src]+(hint?' — '+hint:''))}"></span>` : '';
+    ? `<span class="pdot pdot-${src}" title="${esc(tk(SRC_TEXT[src])+(hint?' — '+tk(hint):''))}"></span>` : '';
   const iv = (text,src,hint,num)=>{
     const cls = (src==='unbekannt'?'v-unk ':src==='na'?'v-na ':'')+(num?'v-num':'');
     return `<span class="v ${cls}">${esc(text)}</span>${pdot(src,hint)}`;
@@ -1262,7 +1262,7 @@ function renderUebersicht(l){
         <div class="kvi"><span class="k">${tk("Verlängerung")}</span>
           <span class="vv">${l.verlaengerung?iv(l.verlaengerung,'echt'):'<span class="v-unk">nicht angegeben</span>'}</span></div>
         <div class="kvi"><span class="k">${tk("Rechtsrahmen")}</span>
-          <span class="vv">${l.rahmen?`${iv(RAHMEN[l.rahmen].kurz,'echt')}<span class="vm">${RAHMEN[l.rahmen].lang}</span>`:'<span class="v-unk">nicht angegeben</span>'}</span></div>
+          <span class="vv">${l.rahmen?`${iv(RAHMEN[l.rahmen].kurz,'echt')}<span class="vm">${tk(RAHMEN[l.rahmen].lang)}</span>`:`<span class="v-unk">${tk("nicht angegeben")}</span>`}</span></div>
         <div class="kvi"><span class="k">${tk("Verfahren")}</span>
           <span class="vv">${l.verfahren?iv(l.verfahren,'echt'):'<span class="v-unk">nicht angegeben</span>'}${
             l.verfahren&&l.verfahren.startsWith('Verhandlung')
@@ -1709,8 +1709,7 @@ function renderAnalyse(l){
       ${(()=>{ const lue = bieterLuecke(l); if(!lue) return '';
         return `<div class="score-caveat">
           <span class="pdot pdot-schaetz"></span>
-          <span>${lue.lang} Die Bewertung stützt sich auf Vertragsart, Rechtsrahmen und Branche
-          und ist entsprechend gröber als bei Vergaben mit bekannter Bieterzahl.</span>
+          <span>${tk(lue.lang)} ${tk("Die Bewertung stützt sich auf Vertragsart, Rechtsrahmen und Branche und ist entsprechend gröber als bei Vergaben mit bekannter Bieterzahl.")}</span>
         </div>`;})()}
       <div class="score-note">
         <span class="sn-label">${tk("Konkurrenz zuletzt")}</span>

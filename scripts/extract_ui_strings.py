@@ -71,6 +71,12 @@ def ernte() -> tuple[dict[str, list[str]], Counter]:
         s = p.read_text()
         rel = p.relative_to(WEB).as_posix()
         gefunden: set[str] = set()
+        # Schon verdrahtete Stellen ausblenden, sonst misst das Skript seinen eigenen
+        # Fortschritt nicht: `t("Frist")` bzw. `${tk("Frist")}` sind erledigt, der deutsche
+        # Text steht aber weiterhin im Quelltext. Ohne diesen Schritt bleibt die Zahl
+        # konstant, egal wie viel uebersetzt ist.
+        s = re.sub(r'\bt[k]?\(\s*"(?:[^"\\\\]|\\\\.)*"\s*\)', 'ERLEDIGT', s)
+        s = re.sub(r"\bt[k]?\(\s*'(?:[^'\\\\]|\\\\.)*'\s*\)", 'ERLEDIGT', s)
         # 1) String-Literale ('…', "…", `…`)
         for m in re.finditer(r'"((?:[^"\\\n]|\\.)*)"|\'((?:[^\'\\\n]|\\.)*)\'', s):
             roh = m.group(1) if m.group(1) is not None else m.group(2)
