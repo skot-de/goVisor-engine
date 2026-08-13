@@ -135,6 +135,30 @@ $PY scripts/dedupe_at_sources.py \
 # Nicht-fatal: AT/CH sind Zusatzmaerkte, ein Problem dort darf den deutschen Kern nicht
 # mit herunterreissen. Laeuft VOR dem DE-Gold, weil der Frontend-Export spaeter alle drei
 # Laender in einem Durchgang liest.
+# DUBLETTEN-FIREWALL. Eine Pruefung fuer ALLE Quellen eines Landes — sie ersetzt die
+# Ueberlegung, je Quellenpaar ein Skript zu bauen (dedupe_at_sources / dedupe_ch_sources
+# bleiben vorerst, weil build_at_gold sie liest; mittelfristig entfallen sie).
+#
+# Gemessen 2026-08-13, Paare mit Kaeufer-Beleg / gesammelte Anreicherungswerte:
+#   DE   6.794 Paare · 57 % Beleg ·     32 Werte
+#   AT   5.715 Paare · 98 % Beleg ·  5.555 Werte  (4.207 NUTS, 1.348 Fristen)
+#   CH  18.676 Paare · 98 % Beleg ·  1.147 Werte
+# AT/CH liegen weit vor DE, weil TED und die nationale Quelle sich dort zu ~93 % ueberlappen.
+#
+# ⚠ REIHENFOLGE: MUSS vor dem Gold-Rebuild laufen. `build_lead_deadline` liest
+# `notice_enrichment.parquet`; laeuft die Firewall danach, sind die uebernommenen Fristen
+# erst am naechsten Tag im Produkt. Die Datei ist optional — fehlt sie, verhaelt sich der
+# Wasserfall wie vorher, es gibt also keine harte Abhaengigkeit, nur eine zeitliche.
+#
+# Es wird NICHTS geloescht. Ein Ausschluss von Dubletten wurde gemessen und verworfen: er
+# haette 64 gueltige Leads gekostet, weil bei 61 davon die Frist des MASTERS abgelaufen ist
+# und nur die Dublette laeuft. Feld-Reichtum ist nicht Aktualitaet.
+step "Dubletten-Firewall + Anreicherung (DE/AT/CH)"
+for L in DE AT CH; do
+  $PY -m govisor.dedupe --country "$L" --ab-jahr "$(date +%Y)" --anreichern \
+    || echo "  ⚠ Dublettencheck $L fehlgeschlagen — Anreicherung bleibt auf altem Stand."
+done
+
 step "AT/CH-Gold (volle Pipeline, 26 Schritte je Land)"
 $PY scripts/build_dach_gold.py --laender AT,CH --as-of "$TODAY" \
   && echo "  AT/CH-Gold ok." \
