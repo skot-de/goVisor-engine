@@ -4147,7 +4147,10 @@ def build_dim_cpv_label(cfg: Config, country: str = "DE"):
     Download: https://ted.europa.eu/documents/d/ted/cpv_2008_xml). ``dim_cpv``
     (45 Divisionen + Branche) bleibt; dies ist die feine Code→Label-Ebene für die
     Anzeige. Coverage nutzungsgewichtet 97 % (100 % ab 2016; Rest = Legacy-CPV-2003
-    in Alt-Jahren). Schreibt ``dim_cpv_label`` (cpv_code 8-stellig, label).
+    in Alt-Jahren). Schreibt ``dim_cpv_label`` (cpv_code 8-stellig, label, label_en, label_fr).
+
+    Die englischen und franzoesischen Bezeichnungen kommen aus derselben amtlichen Liste —
+    kein Uebersetzen noetig und auch nicht erlaubt: die CPV-Begriffe sind Rechtsvokabular.
     """
     import xml.etree.ElementTree as ET
     import duckdb
@@ -4158,13 +4161,18 @@ def build_dim_cpv_label(cfg: Config, country: str = "DE"):
     rows = []
     for cpv in ET.parse(src).getroot().findall("CPV"):
         code = (cpv.get("CODE") or "").split("-")[0]
-        de = next((t.text for t in cpv.findall("TEXT") if t.get("LANG") == "DE"), None)
+        txt = {t.get("LANG"): t.text for t in cpv.findall("TEXT")}
+        de = txt.get("DE")
         if code and de:
-            rows.append((code, de))
+            # Die EU liefert dieselbe Codeliste in 23 Sprachen. Diese Bezeichnungen sind
+            # amtlich — sie selbst zu uebersetzen waere schlechter UND falsch: „Bauarbeiten"
+            # heisst im Vergaberecht „Construction work", nicht „Building work". Also die
+            # Originale mitnehmen statt raten.
+            rows.append((code, de, txt.get("EN"), txt.get("FR")))
     con = duckdb.connect()
-    con.execute("CREATE TABLE t(cpv_code VARCHAR, label VARCHAR)")
+    con.execute("CREATE TABLE t(cpv_code VARCHAR, label VARCHAR, label_en VARCHAR, label_fr VARCHAR)")
     if rows:
-        con.executemany("INSERT INTO t VALUES (?,?)", rows)
+        con.executemany("INSERT INTO t VALUES (?,?,?,?)", rows)
     con.execute(f"COPY (SELECT * FROM t) TO "
                 f"'{(cfg.gold_dir / country / 'dim_cpv_label.parquet').as_posix()}' "
                 f"(FORMAT PARQUET, COMPRESSION ZSTD)")

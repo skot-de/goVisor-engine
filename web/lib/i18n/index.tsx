@@ -80,11 +80,14 @@ export function uebersetze(key: string, lang: Sprache,
  * als Modul-Zustand; der Provider schreibt sie bei jedem Wechsel hinein.
  * Bewusst kein zweiter Speicher: `localStorage` bleibt die einzige Quelle, das hier
  * ist nur die Weitergabe innerhalb eines Ladevorgangs. */
-let aktuelleSprache: Sprache = "de";
-export function setzeKernSprache(s: Sprache) { aktuelleSprache = s; }
+let _kernSprache: Sprache = "de";
+export function setzeKernSprache(s: Sprache) { _kernSprache = s; }
+/** Aktuelle Sprache fuer Nicht-React-Module (explorerCore waehlt danach die
+ *  amtliche CPV-Bezeichnung aus — die laeuft nicht ueber den Katalog). */
+export function aktuelleSprache(): Sprache { return _kernSprache; }
 /** `t()` für Nicht-React-Module (explorerCore). Gleiche Semantik, gleiche Kataloge. */
 export function tk(key: string, vars?: Record<string, string | number>): string {
-  return uebersetze(key, aktuelleSprache, vars);
+  return uebersetze(key, _kernSprache, vars);
 }
 
 type Ctx = { lang: Sprache; setLang: (s: Sprache) => void; t: (k: string, v?: Record<string, string | number>) => string };

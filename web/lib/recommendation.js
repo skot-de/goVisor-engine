@@ -7,6 +7,12 @@
  * Framework-agnostisch: `recommend(lead, profile, ctx)` liefert reine Daten; das Rendering
  * (Liste/Detail) liegt beim Aufrufer. */
 
+/* `tk` nur fuer die BEGRUENDUNGEN. Die `label`-Werte bleiben deutsch: sie dienen in
+ * `REC_RANK` als Sortierschluessel und in `REC_CLS` als Klassenzuordnung —
+ * uebersetzt waere die Rangfolge der Empfehlungsspalte still kaputt. Uebersetzt
+ * werden sie erst beim Rendern (`tk(r.label)` in explorerCore). */
+import { tk } from "./i18n";
+
 // ── Schwellen (§3.2, Ausgangswerte; kalibrierbar) ──
 const T = {
   E2_hoch: 70, E2_mittel: 45,
@@ -147,7 +153,7 @@ function evaluate(lead, profile, ctx) {
 export function einordnung(e) {
   if (e.E8 === "eigen") return { label: "Bestandsvertrag", cls: "blau", gruende: ["läuft aus — Folgeausschreibung"] };
   if (e.E2 != null && e.E2 < T.E2_mittel) return { label: "Geringe Passung", cls: "gedaempft", gruende: ["wenig Überschneidung mit euren Feldern"] };
-  if (e.E5 === "unzureichend") return { label: "Frist zu knapp", cls: "gedaempft", gruende: [`nur ${e.E5tage} Tage`] };
+  if (e.E5 === "unzureichend") return { label: "Frist zu knapp", cls: "gedaempft", gruende: [tk("nur {n} Tage", { n: e.E5tage })] };
   if (e.E2 != null && e.E2 >= T.E2_hoch && e.E3 === "guenstig") return { label: "Hohe Passung", cls: "gruen", gruende: ["hohe Passung", "Amtsinhaber angreifbar"] };
   if (e.E2 != null && e.E2 >= T.E2_hoch) return { label: "Hohe Passung", cls: "gruen", gruende: ["hohe Passung"] };
   return { label: "Passung mittel", cls: "neutral", gruende: [] };

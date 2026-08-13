@@ -3,7 +3,7 @@
  * Kontexts; der Provider schiebt die gewaehlte Sprache per `setzeKernSprache`
  * ins Modul. Der deutsche Satz IST der Schluessel — fehlt eine Uebersetzung,
  * steht schlicht wieder Deutsch da. */
-import { tk } from "./i18n";
+import { tk, aktuelleSprache } from "./i18n";
 
 /* eslint-disable */
 import { emptyProfile, matchLead, whyHtml, hasProfile } from './profileEngine';
@@ -30,202 +30,14 @@ let accountLimit = false;
 const isFreeLimit = () => accountLimit;
 
 /* ── Datenmodell — die Demo-Leads (Prototyp-Seed) ── */
-const LEADS = [
-  {
-    id:'auslauf-01', unterlagen:{portal:'Vergabeplattform des Bundes', frei:true}, submission:'25.08.2026, 10:00 Uhr', beginnGeplant:'01.01.2027', endeGeplant:'31.12.2030', bgKlausel:'zugelassen · gesamtschuldnerisch haftend mit bevollmächtigtem Vertreter', aktualitaet:null, laufzeit:'48 Monate', nebenangebote:'nicht zugelassen', rahmenvertrag:null, foerderung:null, wiederholung:false, rahmen:'vgv', aufwand:{buergschaft:'ja · vorläufig', bindefrist:'60 Tage', eabgabe:'Pflicht', lebenslauf:'ja', fragefrist:'12 Tage'}, marktRegion:'ffm', branche:'it',
-    hasDetail:true,
-    beschreibung:`Gegenstand der Ausschreibung ist der Betrieb und die Weiterentwicklung der zentralen
-Rechenzentrumsinfrastruktur einschließlich der zugehörigen Managed Services.
-
-Der Auftragnehmer übernimmt den Betrieb von rund 400 virtuellen Servern, die Betreuung der
-Speichersysteme sowie das Monitoring der Netzwerkkomponenten. Ein Teil der Leistung umfasst die
-Migration bestehender Systeme in eine hybride Cloud-Umgebung.
-
-Gefordert werden eine Zertifizierung nach ISO 27001 sowie ein Nachweis über die Einhaltung des
-BSI C5-Kriterienkatalogs. Der Auftragnehmer stellt eine Rufbereitschaft rund um die Uhr sicher.
-
-Die Wärmepumpe der Kälteanlage im Serverraum ist im Rahmen der Wartung mit zu betreuen.`,
-    lose:[
-      {nr:1, titel:'Betrieb Serverinfrastruktur', wert:'820.000 €', dauer:'48 Monate', region:'Bayern'},
-      {nr:2, titel:'Speicher- und Backupsysteme',  wert:'310.000 €', dauer:'48 Monate', region:'Bayern'},
-      {nr:3, titel:'Netzwerk-Monitoring',           wert:'59.000 €',  dauer:'48 Monate', region:'Hessen'},
-      {nr:4, titel:'Cloud-Migration (Teilprojekt)', wert:'240.000 €', dauer:'18 Monate', region:'Bayern'},
-    ],
-    optionen:true, verlaengerung:'1 × 24 Monate',
-    verfahren:'Verhandlungsverfahren mit Teilnahmewettbewerb',
-    loseMaxAngebot:4, loseMaxZuschlag:2, netzDeckung:2,
-    netzPartner:{n:'Alpenland Netzwerktechnik GmbH', feld:'Netzwerktechnik', groesse:'klein', deckung:2, seit:'gestern'},
-    netzSuchend:4,
-    bgForm:'gesamtschuldnerisch haftend mit bevollmächtigtem Vertreter',
-    partnerKandidaten:[
-      {n:'Alpenland Netzwerktechnik GmbH', groesse:'klein',  feld:'Netzwerktechnik',   siege:14, region:'Bayern'},
-      {n:'Donau IT-Sicherheit AG',         groesse:'mittel', feld:'IT-Sicherheit',     siege:9,  region:'Bayern'},
-      {n:'Kessler Kälte & Klima GmbH',     groesse:'klein',  feld:'Gebäudetechnik',    siege:22, region:'Bayern'},
-    ],
-    zuschlag:[{art:'preis', label:'Preis', pct:40},{art:'qualitaet', label:'Qualität', pct:60}],
-    extrakt:[
-      {w:'Rechenzentrumsbetrieb', k:'leistung', s:'cpv'},
-      {w:'Managed Services',      k:'leistung', s:'cpv'},
-      {w:'Cloud-Migration',       k:'leistung', s:'text'},
-      {w:'Netzwerk-Monitoring',   k:'leistung', s:'text'},
-      {w:'Speichersysteme',       k:'technik',  s:'text'},
-      {w:'hybride Cloud',         k:'technik',  s:'text'},
-      {w:'Wärmepumpe',            k:'technik',  s:'text', rand:true},
-      {w:'ISO 27001',             k:'nachweis', s:'text'},
-      {w:'BSI C5',                k:'nachweis', s:'text'},
-      {w:'Rufbereitschaft',       k:'bedingung',s:'text'},
-      {w:'400 virtuelle Server',  k:'menge',    s:'text', unsicher:true},
-      {w:'Virtualisierung',       k:'technik',  s:'text'},
-      {w:'Backup & Recovery',     k:'technik',  s:'text'},
-      {w:'Firewall-Betrieb',      k:'technik',  s:'text'},
-      {w:'Lastverteilung',        k:'technik',  s:'text'},
-      {w:'Kälteanlage',           k:'technik',  s:'text', rand:true},
-      {w:'Patch-Management',      k:'leistung', s:'text'},
-      {w:'Incident-Management',   k:'leistung', s:'text'},
-      {w:'Kapazitätsplanung',     k:'leistung', s:'text'},
-      {w:'Dokumentation',         k:'leistung', s:'text'},
-      {w:'Datenschutz nach DSGVO',k:'nachweis', s:'text'},
-      {w:'Präqualifikation IT',   k:'nachweis', s:'text'},
-      {w:'Reaktionszeit 4 Stunden',k:'bedingung',s:'text'},
-      {w:'Vor-Ort-Service',       k:'bedingung',s:'text'},
-      {w:'3 Standorte',           k:'menge',    s:'text'},
-    ], regionId:'bund', konk:{wert:'8 Bieter', src:'echt', stufe:'mittel', hint:'Aus der letzten Zuschlagsbekanntmachung (2020): 8 eingegangene Angebote.'}, natur:'Managed Service', naturKat:'dienst', tage:null, endTage:120, endet:'in 4 Mon.', neu:false, userStatus:'pruefung',
-    log:[
-      {kind:'dossier',text:'Dossier erstellt',who:'DK',ts:'vor 1 Tag'},
-      {kind:'status', text:'auf In Prüfung gesetzt',who:'TB',ts:'vor 2 Tagen'},
-      {kind:'analyze',text:'analysiert',who:'DK',ts:'12.07.'},
-      {kind:'view',   text:'gesichtet',who:'ML',ts:'11.07.'},
-      {kind:'watch',  text:'auf Merkliste gesetzt',who:'DK',ts:'11.07.'},
-      {kind:'create', text:'Lead erschienen · Vertragsende-Radar',who:null,ts:'11.07.'},
-    ], comments:[{author:'Miriam L.',initials:'ML',ts:'vor 3 Tagen',body:'Rheinland ist Amtsinhaber seit 2020 — die kennen wir aus dem Landesvergabeverfahren. Preislich waren sie damals aggressiv.'},{author:'Thomas B.',initials:'TB',ts:'vor 2 Tagen',body:'Können wir die Cloud-Zertifizierung (C5) rechtzeitig nachweisen? Das war letztes Mal der Knackpunkt.'}], kw:[{w:'Cloud & Managed Services',s:'cpv',m:1},{w:'Rechenzentrum',s:'text',m:1},{w:'Betrieb',s:'text',m:1},{w:'Migration',s:'text',m:0}], dauer:'Ende 01.11.26', status:'analysiert', seen:'ANALYSIERT', merk:'manuell', src:'auslauf', srcLabel:'Vertragsende', phaseLabel:'Vertragsende',
-    titel:'Rahmenvertrag Cloud- und Managed Services für die Bundesverwaltung',
-    buyer:'Bundesministerium des Innern und für Heimat', buyerShort:'BMI',
-    cpv:'72212', cpvLabel:'Anwendungssoftware für Cloud-Dienste',
-    region:'Bund', nuts:'DE3', art:'Rahmenvertrag',
-    volumen:{wert:'12,4 Mio €', src:'echt', hint:'Veröffentlichter Auftragswert aus der Vergabebekanntmachung. Realwert Basis 2020: 10,8 Mio €.'},
-    timing:{wert:'4 Monate bis Auslauf', src:'echt', warn:false, hint:'Explizites Vertragsende 01.11.2026 aus der Bekanntmachung.'},
-    incumbent:{name:'Systemhaus Rheinland GmbH', seit:'2020', src:'echt', hint:'Entity über Handelsregister exakt aufgelöst · Konfidenz 0,97.'},
-    relevanz:'hoch', wechsel:'hoch',
-    relWhy:'CPV <span class="ok">✓</span> · Region <span class="ok">✓</span> · Volumen <span class="ok">✓</span>',
-    wechselWhy:'Lange Laufzeit, Buyer wechselt häufig',
-    hasCmp:true, hasContracts:true
-  },
-  {
-    id:'f02-01', unterlagen:{portal:'Deutsches Vergabeportal (DTVP)', frei:true}, submission:null, beginnGeplant:'01.04.2027', endeGeplant:null, bgKlausel:'zugelassen · gesamtschuldnerisch haftend', aktualitaet:{art:'geaendert', text:'Frist verlängert und Leistungsbeschreibung ergänzt', am:'18.07.2026'}, laufzeit:'60 Monate', nebenangebote:'zugelassen', rahmenvertrag:null, foerderung:'EU-Mittel (EFRE)', wiederholung:false, rahmen:'vgv', aufwand:{buergschaft:'nein', bindefrist:'30 Tage', eabgabe:'Pflicht', lebenslauf:'nein', fragefrist:'21 Tage'}, marktRegion:'bonn', branche:'it',
-    hasDetail:true,
-    beschreibung:`Beschafft wird eine Softwarelösung zur Verwaltung von Fachverfahren einschließlich
-Einführung, Schulung und laufendem Betrieb.
-
-Die Lösung muss barrierefrei nach BITV 2.0 sein und eine Schnittstelle zum bestehenden
-Dokumentenmanagementsystem bereitstellen. Ein Rechenzentrumsbetrieb in Deutschland ist zwingend.`,
-    optionen:false, verlaengerung:null,
-    loseMaxAngebot:5, loseMaxZuschlag:2, netzDeckung:2, netzSuchend:5,
-    bgForm:'gesamtschuldnerisch haftend',
-    lose:[{nr:1,titel:'Fachverfahren Einwohnerwesen',wert:'320.000 €',dauer:'60 Monate',region:'NRW'},
-          {nr:2,titel:'Fachverfahren Gewerbe',wert:'190.000 €',dauer:'60 Monate',region:'NRW'},
-          {nr:3,titel:'Einführung und Schulung',wert:'88.000 €',dauer:'12 Monate',region:'NRW'},
-          {nr:4,titel:'Betrieb und Support',wert:'145.000 €',dauer:'60 Monate',region:'NRW'}],
-    verfahren:'Offenes Verfahren',
-    zuschlag:[{art:'preis', label:'Preis', pct:100}],
-    extrakt:[
-      {w:'Fachverfahren-Software', k:'leistung', s:'cpv'},
-      {w:'Einführung & Schulung',  k:'leistung', s:'text'},
-      {w:'laufender Betrieb',      k:'leistung', s:'text'},
-      {w:'DMS-Schnittstelle',      k:'technik',  s:'text'},
-      {w:'BITV 2.0',               k:'nachweis', s:'text'},
-      {w:'Rechenzentrum in Deutschland', k:'bedingung', s:'text'},
-    ], regionId:'de25', konk:{wert:'n/a', src:'na', stufe:'na', hint:'Neuvergabe — kein Vorgänger, keine frühere Bieterzahl.'}, natur:'Softwarebetrieb', naturKat:'dienst', tage:19, endet:null, neu:true, userStatus:'fragen',
-    log:[
-      {kind:'status', text:'auf Offene Fragen gesetzt',who:'ML',ts:'heute 09:14'},
-      {kind:'watch',  text:'automatisch auf Merkliste · passt zu Profil',who:null,ts:'19.07.'},
-      {kind:'create', text:'Lead erschienen · offene Ausschreibung',who:null,ts:'19.07.'},
-    ], comments:[{author:'Miriam L.',initials:'ML',ts:'heute 09:14',body:'Kein Auftragswert veröffentlicht — lohnt sich der Aufwand? Bräuchte eine Schätzung vom Fachbereich.'}], kw:[{w:'Softwarewartung',s:'cpv',m:1},{w:'Fachverfahren',s:'text',m:0},{w:'Weiterentwicklung',s:'text',m:1}], dauer:'Frist 09.08.26', status:'ungesichtet', seen:null, merk:'auto', src:'f02', srcLabel:'Offen', phaseLabel:'Ausschreibung offen',
-    titel:'Betrieb und Weiterentwicklung der Fachverfahren-Plattform',
-    buyer:'Bundesagentur für Arbeit', buyerShort:'BA',
-    cpv:'72267', cpvLabel:'Wartung und Reparatur von Software',
-    region:'Bayern', nuts:'DE2', art:'Wiederkehrend',
-    volumen:{wert:'—', src:'unbekannt', hint:'Kein Auftragswert veröffentlicht. 55,8 % aller Vergaben enthalten keinen Wert — wir schätzen hier nicht.'},
-    timing:{wert:'Angebotsfrist in 19 Tagen', src:'echt', warn:false, hint:'Angebotsfrist 09.08.2026 aus der Ausschreibung.'},
-    incumbent:null,
-    relevanz:'hoch', wechsel:'na',
-    relWhy:'CPV <span class="ok">✓</span> · Region <span class="ok">✓</span> · Volumen unbekannt',
-    wechselWhy:'Noch nicht vergeben — kein Incumbent, kein Wechsel-Score',
-    hasCmp:false, hasContracts:false
-  },
-  {
-    id:'auslauf-02', unterlagen:{portal:'subreport ELViS', frei:true}, submission:'12.09.2026, 11:00 Uhr', beginnGeplant:null, endeGeplant:null, bgKlausel:'zugelassen · gesamtschuldnerisch haftend mit bevollmächtigtem Vertreter', aktualitaet:null, laufzeit:'48 Monate', nebenangebote:'zugelassen', rahmenvertrag:'ohne erneuten Wettbewerb', foerderung:null, wiederholung:false, rahmen:'vob', aufwand:{buergschaft:'ja · vorläufig', bindefrist:'90 Tage', eabgabe:'Pflicht', lebenslauf:null, fragefrist:null}, marktRegion:'ffm', branche:'it',
-    loseMaxAngebot:8, loseMaxZuschlag:3, netzDeckung:2, netzSuchend:2,
-    bgForm:'gesamtschuldnerisch haftend mit bevollmächtigtem Vertreter',
-    lose:[{nr:1,titel:'WAN-Anbindung Nord',wert:'180.000 €',dauer:'48 Monate',region:'NRW'},
-          {nr:2,titel:'WAN-Anbindung Süd',wert:'165.000 €',dauer:'48 Monate',region:'NRW'},
-          {nr:3,titel:'Aktive Komponenten',wert:'240.000 €',dauer:'48 Monate',region:'NRW'},
-          {nr:4,titel:'Wartung und Entstörung',wert:'72.000 €',dauer:'48 Monate',region:'NRW'}],
-    verfahren:'Offenes Verfahren',
-    zuschlag:[{art:'preis', label:'Preis', pct:null},{art:'qualitaet', label:'Qualität', pct:null}],
-    beschreibung:'Rahmenvereinbarung über die Lieferung und Anbindung von Netzwerkkomponenten an mehreren Standorten.',
-    hasDetail:false, konk:{wert:'~5–10', src:'schaetz', stufe:'mittel', hint:'TED nannte nur „mehr als 4 Angebote“ — als Spanne geschätzt, nicht exakt.'}, natur:'Netz-Infrastruktur', naturKat:'liefer', tage:null, endTage:270, endet:'in ~9 Mon.', neu:false, userStatus:null, comments:[], log:[{kind:'create',text:'Lead erschienen',who:null,ts:'20.07.'}], regionId:'dea', kw:[{w:'Netzinfrastruktur',s:'cpv',m:1},{w:'WAN',s:'text',m:1},{w:'Standortanbindung',s:'text',m:0}], dauer:'Ende 04/27', status:'ungesichtet', seen:null, merk:null, src:'auslauf', srcLabel:'Vertragsende', phaseLabel:'Vertragsende',
-    titel:'Netzwerkinfrastruktur und Standortanbindung der Landesbehörden',
-    buyer:'Land Nordrhein-Westfalen, IT-Dienstleistungszentrum', buyerShort:'IT.NRW',
-    cpv:'32424', cpvLabel:'Netzinfrastruktur', region:'Nordrhein-Westfalen', nuts:'DEA', art:'Rahmenvertrag',
-    volumen:{wert:'~4,1 Mio €', src:'schaetz', hint:'Kein veröffentlichter Wert. Geschätzt über den CPV-Median vergleichbarer Vergaben.'},
-    timing:{wert:'~9 Monate bis Auslauf', src:'schaetz', warn:false, hint:'Kein explizites Vertragsende. Aus der Laufzeitangabe abgeleitet (23 % aller Leads).'},
-    incumbent:{name:MEINE_FIRMA, seit:'2021', src:'echt', hint:'Entity über Handelsregister exakt aufgelöst · Konfidenz 0,96.'}, eigen:true, eigenBestaetigt:true,
-    relevanz:'mittel', wechsel:'mittel',
-    relWhy:'CPV <span class="no">teilweise</span> · Region <span class="ok">✓</span> · Volumen geschätzt',
-    wechselWhy:'Mittlere Laufzeit, Buyer bindet sich lang',
-    hasCmp:true, hasContracts:false
-  },
-  {
-    id:'auslauf-03', unterlagen:{portal:'Vergabeportal Bayern', frei:true}, submission:null, beginnGeplant:'01.10.2026', endeGeplant:'30.09.2029', bgKlausel:null, aktualitaet:null, laufzeit:'36 Monate', nebenangebote:null, rahmenvertrag:null, foerderung:null, wiederholung:true, rahmen:'uvgo', aufwand:{buergschaft:'nein', bindefrist:null, eabgabe:'zugelassen', lebenslauf:'nein', fragefrist:'8 Tage'}, marktRegion:'muc', branche:'it',
-    loseMaxAngebot:12, loseMaxZuschlag:3, netzDeckung:4, netzSuchend:7,
-    bgForm:'gesamtschuldnerisch haftend mit bevollmächtigtem Vertreter',
-    lose:[{nr:1,titel:'Clients Schulen Nord',wert:'210.000 €',dauer:'36 Monate',region:'Bayern'},
-          {nr:2,titel:'Clients Schulen Süd',wert:'190.000 €',dauer:'36 Monate',region:'Bayern'},
-          {nr:3,titel:'Netzwerk Schulen',wert:'320.000 €',dauer:'36 Monate',region:'Bayern'},
-          {nr:4,titel:'Support und Vor-Ort-Service',wert:'85.000 €',dauer:'36 Monate',region:'Bayern'}], konk:{wert:'3 Bieter', src:'echt', stufe:'gering', hint:'Aus der letzten Zuschlagsbekanntmachung (2023): 3 eingegangene Angebote.'}, natur:'Hardware-Lieferung', naturKat:'liefer', tage:null, endTage:60, endet:'in 2 Mon.', neu:false, userStatus:null, comments:[], log:[{kind:'create',text:'Lead erschienen',who:null,ts:'20.07.'}], regionId:'de6', kw:[{w:'Personalcomputer',s:'cpv',m:0},{w:'Notebooks',s:'text',m:0},{w:'Rollout',s:'text',m:1},{w:'Lizenzen',s:'text',m:0}], dauer:'Ende 21.09.26', status:'gesichtet', seen:null, merk:null, src:'auslauf', srcLabel:'Vertragsende', phaseLabel:'Vertragsende',
-    titel:'Beschaffung und Rollout von 8.400 Notebook-Arbeitsplätzen',
-    buyer:'Freie und Hansestadt Hamburg, Dataport AöR', buyerShort:'Dataport',
-    cpv:'30213', cpvLabel:'Personalcomputer', region:'Hamburg', nuts:'DE6', art:'Einmal-Werk',
-    volumen:{wert:'6,9 Mio €', src:'echt', hint:'Veröffentlichter Auftragswert aus der Vergabebekanntmachung.'},
-    timing:{wert:'2 Monate bis Auslauf', src:'unsicher', warn:true, hint:'Termin als unplausibel markiert (1,5 % der Leads) — Datum liegt vor dem Vergabedatum. Wir zeigen ihn trotzdem, gekennzeichnet.'},
-    incumbent:{name:MEINE_FIRMA+' (Niederlassung Süd)', seit:'2023', src:'unsicher', hint:'Entity nur über Namensähnlichkeit aufgelöst · Konfidenz 0,51.'}, eigen:true, eigenBestaetigt:null,
-    relevanz:'mittel', wechsel:'mittel',
-    relWhy:'CPV <span class="no">Nachbarklasse</span> · Region <span class="ok">✓</span> · Volumen <span class="ok">✓</span>',
-    wechselWhy:'Einmal-Werk — kein Nachfolgevertrag zu erwarten',
-    hasCmp:true, hasContracts:false
-  },
-  {
-    id:'f01-01', unterlagen:{portal:'Vergabeplattform des Bundes', frei:true}, submission:null, beginnGeplant:null, endeGeplant:null, bgKlausel:null, aktualitaet:null, laufzeit:null, nebenangebote:null, rahmenvertrag:null, foerderung:null, wiederholung:false, rahmen:'sektvo', aufwand:{buergschaft:'nein', bindefrist:'45 Tage', eabgabe:'Pflicht', lebenslauf:'nein', fragefrist:null}, branche:'sicherheit', marktOk:false, konk:{wert:'n/a', src:'na', stufe:'na', hint:'Ankündigung — noch keine Vergabe, keine Bieterzahl.'}, natur:'Funktechnik', naturKat:'liefer', tage:null, endTage:9999, endet:'geplant', neu:true, userStatus:null, comments:[], log:[{kind:'create',text:'Lead erschienen',who:null,ts:'20.07.'}], regionId:'de212', kw:[{w:'Funktechnik',s:'cpv',m:0},{w:'Leitstelle',s:'text',m:0},{w:'BOS-Digitalfunk',s:'text',m:0}], dauer:'Neu 30.06.26', status:'ungesichtet', seen:null, merk:null, src:'f01', srcLabel:'Ankündigung', phaseLabel:'Ankündigung',
-    titel:'Ankündigung: Digitalfunk-Leitstellentechnik, Neuvergabe geplant',
-    buyer:'Bayerisches Staatsministerium des Innern', buyerShort:'StMI Bayern',
-    cpv:'32236', cpvLabel:'Funksprechgeräte', region:'Bayern', nuts:'DE2', art:'Sonstiges',
-    volumen:{wert:'—', src:'unbekannt', hint:'Ankündigungen enthalten selten Auftragswerte.'},
-    timing:{wert:'Ankündigung vor 3 Wochen', src:'echt', warn:false, hint:'Veröffentlichungsdatum der Ankündigung. Ausschreibung folgt erfahrungsgemäß in 3–12 Monaten.'},
-    incumbent:null,
-    relevanz:'mittel', wechsel:'na',
-    relWhy:'CPV <span class="no">Branche</span> · Region <span class="ok">✓</span> · Volumen unbekannt',
-    wechselWhy:'Noch nicht vergeben',
-    hasCmp:false, hasContracts:false
-  },
-  {
-    id:'auslauf-04', unterlagen:{portal:null, frei:false}, submission:null, beginnGeplant:null, endeGeplant:null, bgKlausel:'nicht zugelassen', aktualitaet:{art:'aufgehoben', text:'Verfahren aufgehoben — kein wirtschaftliches Ergebnis', am:'21.07.2026'}, laufzeit:'24 Monate', nebenangebote:'nicht zugelassen', rahmenvertrag:'mit erneutem Wettbewerb', foerderung:null, wiederholung:false, rahmen:'vgv', aufwand:{buergschaft:null, bindefrist:null, eabgabe:null, lebenslauf:null, fragefrist:null}, marktRegion:'bonn', branche:'it',
-    loseMaxAngebot:6, loseMaxZuschlag:2, netzDeckung:1, netzSuchend:1,
-    bgForm:'gesamtschuldnerisch haftend',
-    lose:[{nr:1,titel:'Penetrationstests',wert:'140.000 €',dauer:'24 Monate',region:'NRW'},
-          {nr:2,titel:'Notfallmanagement',wert:'95.000 €',dauer:'24 Monate',region:'NRW'},
-          {nr:3,titel:'Awareness-Schulungen',wert:'60.000 €',dauer:'24 Monate',region:'NRW'}], konk:{wert:'unbekannt', src:'unbekannt', stufe:'na', hint:'Die Vergabestelle hat in der Zuschlagsbekanntmachung keine Bieterzahl veröffentlicht.'}, natur:'IT-Sicherheit', naturKat:'dienst', tage:null, endTage:330, endet:'in 11 Mon.', neu:false, userStatus:null, comments:[], log:[{kind:'create',text:'Lead erschienen',who:null,ts:'20.07.'}], regionId:'dea2', kw:[{w:'Systemprüfung',s:'cpv',m:0},{w:'Penetrationstest',s:'text',m:1},{w:'ISO 27001',s:'text',m:1},{w:'SAP',s:'text',m:0}], dauer:'Ende 20.06.27', status:'gesichtet', seen:null, merk:'manuell', src:'auslauf', srcLabel:'Vertragsende', phaseLabel:'Vertragsende',
-    titel:'IT-Sicherheitsberatung und Penetrationstests für kritische Fachverfahren',
-    buyer:'Bundesamt für Sicherheit in der Informationstechnik', buyerShort:'BSI',
-    cpv:'72225', cpvLabel:'Bewertung und Prüfung der Systemqualität', region:'Bund', nuts:'DEA', art:'Wiederkehrend',
-    volumen:{wert:'1,8 Mio €', src:'echt', hint:'Veröffentlichter Auftragswert aus der Vergabebekanntmachung.'},
-    timing:{wert:'11 Monate bis Auslauf', src:'echt', warn:false, hint:'Explizites Vertragsende 20.06.2027.'},
-    incumbent:{name:'Nordwand IT Systemtechnik GmbH', seit:'2021', src:'unsicher', hint:'Entity nur über Namensähnlichkeit aufgelöst · Konfidenz 0,58.'}, eigenKandidat:true,
-    relevanz:'niedrig', wechsel:'hoch',
-    relWhy:'CPV <span class="no">außerhalb</span> · Region <span class="ok">✓</span> · Volumen <span class="ok">✓</span>',
-    wechselWhy:'Kurze Laufzeiten, häufiger Anbieterwechsel',
-    hasCmp:true, hasContracts:false
-  }
-];
+/* ── Datenmodell — Leads kommen aus `web/data/leads-<branche>.json` ── */
+// Hier stand ein Prototyp-Seed: 12 erfundene Ausschreibungen mit erfundenen Firmen
+// („Kessler Kälte & Klima GmbH"), erfundenen Kontakten und erfundenen Kennzahlen.
+// Er ist raus, weil er GENAU DAS verdeckt hat, was man sehen will: wo die echten Daten
+// Lücken haben. Ein leeres Feld ist eine Aussage, ein erfundenes Feld ist eine Lüge.
+// `setLeads()` befüllt das Array beim Laden — deshalb `const` mit Array, nicht `let`.
+/** @type {any[]} */   // ohne Annotation verliert TS beim leeren Literal den Elementtyp
+const LEADS = [];
 
 /* ── Mutabler Zustand (Defaults; React verwaltet ihn später) ── */
 let activeId = null, activeTab = 'uebersicht';
@@ -476,7 +288,7 @@ function matchToken(l,t){
 function fundstelle(l, wort){
   const w = wort.toLowerCase();
   if((l.titel||'').toLowerCase().includes(w)) return {ort:'Titel', text:null};
-  if((l.natur||'').toLowerCase().includes(w) || (l.cpvLabel||'').toLowerCase().includes(w))
+  if((l.natur||'').toLowerCase().includes(w) || (cpvLabel(l)||'').toLowerCase().includes(w))
     return {ort:'Leistungsart', text:null};
   if(l.lose){
     const los = l.lose.find(x=>(x.titel||'').toLowerCase().includes(w));
@@ -533,6 +345,17 @@ const SRC_TEXT = {
 // XSS-Schutz: alle DATENWERTE (Titel, Käufer, Beschreibung, Extras … aus externen Quellen wie
 // TED/simap) werden über dangerouslySetInnerHTML gerendert → vor dem Einsetzen HTML-escapen.
 // Nur auf Datenwerte anwenden, NICHT auf selbst erzeugtes Markup.
+/* CPV-Bezeichnung in der Oberflaechensprache. Die Uebersetzungen stammen aus derselben
+ * amtlichen EU-Codeliste wie das deutsche Label (s. `gold.build_dim_cpv_label`) — sie
+ * gehen NICHT durch den Sprachkatalog: 9.454 Rechtsbegriffe sind keine UI-Texte, und
+ * geraten waere schlechter als amtlich („Bauarbeiten" heisst „Construction work", nicht
+ * „Building work"). Fehlt die Fassung (11 % Legacy-CPV-2003), bleibt Deutsch stehen. */
+const cpvLabel = l => {
+  if (!l) return '';
+  const sp = aktuelleSprache();
+  return (sp === 'en' && l.cpvLabelEn) || (sp === 'fr' && l.cpvLabelFr) || cpvLabel(l) || '';
+};
+
 const esc = s => String(s == null ? '' : s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
   .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
@@ -633,7 +456,7 @@ function awardEmpfCell(l){
 function fristCell(l){
   if(l.tage != null){                       // offene Ausschreibung: Countdown
     const urg = l.tage <= 14;
-    return `<span class="cd ${urg?'urg':''}">${val(l.tage+' Tage', l.timing.src, l.timing.hint)}<span class="cdsub">${tk("bis Schluss")}</span></span>`;
+    return `<span class="cd ${urg?'urg':''}">${val(tk('{n} Tage', {n: l.tage}), l.timing.src, l.timing.hint)}<span class="cdsub">${tk("bis Schluss")}</span></span>`;
   }
   if(l.src==='f01') return `<span class="cd none">—<span class="cdsub">${tk("noch keine Frist")}</span></span>`;
   return `<span class="cd">${val(l.endet, l.timing.src, l.timing.hint)}<span class="cdsub">${tk("Vertragsende")}</span></span>`;
@@ -883,31 +706,21 @@ function suggestList(raw){
 /* ═══ DETAIL-SCHICHT (Prototyp verbatim) ═══════════════════════════════ */
 /* ── Detail-Zustand: Profil/Angaben/Netzwerk-Freigabe ── */
 const PROFIL = {
-  neu:       {siege:0,  kunden:0, seit:null,   volumen:null,      median:null,       anteil:null,     rang:null,  kundenListe:[], nachbarn:[]},
-  klein:     {siege:1,  kunden:1, seit:'2024', volumen:'184.000 €', median:'184.000 €', anteil:'0,1 %', rang:null,
-    kundenListe:[{n:'Landkreis Bad Tölz-Wolfratshausen', gewonnen:1, gesamt:7, offen:1}],
-    nachbarn:[{n:'Netzwerktechnik', naehe:'hoch', vergaben:'312'}]},
-  etabliert: {siege:23, kunden:8, seit:'2019', volumen:'4,2 Mio €', median:'168.000 €', anteil:'1,8 %', rang:'7',
-    kundenListe:[
-      {n:'Landkreis Bad Tölz-Wolfratshausen', gewonnen:4, gesamt:7,  offen:1},
-      {n:'Stadt Rosenheim',                   gewonnen:6, gesamt:9,  offen:0},
-      {n:'Bezirk Oberbayern',                 gewonnen:2, gesamt:14, offen:2},
-      {n:'Klinikum Garmisch',                 gewonnen:3, gesamt:5,  offen:0},
-      {n:'Zweckverband IT Süd',               gewonnen:1, gesamt:11, offen:1}],
-    nachbarn:[
-      {n:'Netzwerktechnik',       naehe:'hoch',   vergaben:'312'},
-      {n:'IT-Sicherheitsdienste', naehe:'hoch',   vergaben:'188'},
-      {n:'Telekommunikation',     naehe:'mittel', vergaben:'241'}]},
+  // Nur die ehrliche Leerstufe. Vorher standen hier zwei weitere Stufen mit ERFUNDENEN
+  // Kennzahlen und erfundenen Kundennamen („Landkreis Bad Tölz-Wolfratshausen", 23 Siege,
+  // 4,2 Mio €). Sie waren nur über einen Demo-Umschalter erreichbar und haben beim
+  // Draufschauen den Eindruck erzeugt, die Zahlen kaemen aus den Daten. Echte Werte
+  // kommen aus `user_contracts` und dem Firmenprofil — bis dahin steht hier nichts.
+  neu: {siege:0, kunden:0, seit:null, volumen:null, median:null, anteil:null, rang:null,
+        kundenListe:[], nachbarn:[]},
 };
 /* Markt hängt NUR an Branche × Region — immer gefüllt, auch ohne einen einzigen Sieg */
 const PMARKT = {
-  vergaben:'1.284', offen:'34', stellen:'96', regionen:'Bayern · Hessen',
-  topStellen:[{n:'Bezirk Oberbayern',vergaben:14,offen:2},{n:'Zweckverband IT Süd',vergaben:11,offen:1},
-    {n:'Stadt Rosenheim',vergaben:9,offen:0},{n:'Landkreis Bad Tölz-W.',vergaben:7,offen:1},
-    {n:'Klinikum Garmisch',vergaben:5,offen:1}],
-  einstieg:[{n:'Netzwerk-Monitoring (Los 3)',wert:'59.000 €',bieter:'2'},
-    {n:'Softwarepflege Fachverfahren',wert:'74.000 €',bieter:'1'},
-    {n:'Clientmanagement Schulen',wert:'96.000 €',bieter:'3'}],
+  // Leer, bis `setMarket()` echte Zahlen einsetzt. Vorher stand hier ein erfundener Markt
+  // (1.284 Vergaben, „Bezirk Oberbayern", „Zweckverband IT Süd", Einstiegs-Lose mit
+  // Wunschpreisen). Kommen die echten Daten nicht an, sah das aus wie ein Ergebnis statt
+  // wie eine Luecke — der teuerste Fehler, den eine Analyse-Oberflaeche machen kann.
+  vergaben:null, offen:null, stellen:null, regionen:null, topStellen:[], einstieg:[],
 };
 let profilStufe = 'neu';   // ohne Onboarding: aspiring bidder — keine Firmen-Historie
 /* Was wir NICHT messen können, sondern was die Firma selbst angibt.
@@ -1133,7 +946,7 @@ function renderDocs(l){
   const anforderungen = (!l.lbAnalyse && l.lbSignals) ? (()=>{
     const s = l.lbSignals, rows = [];
     if(s.guarantee!=null) rows.push(['Sicherheit / Bürgschaft', s.guarantee?'gefordert':'nicht gefordert']);
-    if(s.bindingDays!=null) rows.push(['Bindefrist', s.bindingDays+' Tage']);
+    if(s.bindingDays!=null) rows.push([tk('Bindefrist'), tk('{n} Tage', {n: s.bindingDays})]);
     if(s.eligibility) rows.push(['Eignungsnachweise', s.eligibility+' im Text genannt']);
     if(s.certificates && s.certificates.length) rows.push(['Geforderte Zertifikate', s.certificates.join(', ')]);
     if(s.variants!=null) rows.push(['Nebenangebote', s.variants?'zugelassen':'nicht zugelassen']);
@@ -1240,7 +1053,7 @@ function renderUebersicht(l){
         <div class="kvi kvi-lead"><span class="k">${tk("Auftragsvolumen")}</span>
           <span class="vv">${l.volumen.src==='unbekannt'?'<span class="v v-unk">Nicht veröffentlicht</span>':iv(l.volumen.wert,l.volumen.src,l.volumen.hint,true)}</span></div>
         <div class="kvi kvi-lead"><span class="k">${tk("Frist")}</span>
-          <span class="vv">${l.tage!=null?iv(l.tage+' Tage',l.timing.src,l.timing.hint,true)+'<span class="vm">bis Schluss</span>':iv(l.endet,l.timing.src,l.timing.hint,true)}</span></div>
+          <span class="vv">${l.tage!=null?iv(tk('{n} Tage', {n: l.tage}),l.timing.src,l.timing.hint,true)+`<span class="vm">${tk('bis Schluss')}</span>`:iv(l.endet,l.timing.src,l.timing.hint,true)}</span></div>
         <div class="kvi"><span class="k">${tk("Art der Leistung")}</span>
           <span class="vv">${iv(l.natur,'echt')}<span class="vm">CPV ${l.cpv}</span></span></div>
         <div class="kvi"><span class="k">${tk("Wettbewerbslage")}</span>
@@ -1460,7 +1273,7 @@ function renderTeilnahme(l){
             // Datenwerte). Datum/Uhrzeit einzeln escapen, Markup roh anhängen.
             const body = datum
               ? `${esc(datum)}${f&&f.uhrzeit?', '+esc(f.uhrzeit)+' Uhr':''}${rest}`
-              : `noch ${esc(tage)} Tage`;
+              : tk('noch {n} Tage', {n: tage});
             return `<span class="v">${body}${est?' <span class="vm">voraussichtlich</span>':''}</span>${pdotT(est?'schaetz':'echt')}`;
           })()}</span></div>
         <div class="kvi kvi-full"><span class="k">${tk("Submissionstermin")}</span>
@@ -1585,8 +1398,9 @@ ${l.lose && l.lose.length>1 ? (()=>{
         <p class="nz-m-x">${tk("Zusammen kommt ihr auf")}<b>${(l.netzDeckung||1)+l.netzPartner.deckung} von ${l.lose.length} Losen</b>.
         ${frei?'Beide Seiten haben freigegeben — die Kontaktdaten liegen jetzt bei euch beiden.'
              :'Gebt den Kontakt frei, wenn ihr sprechen wollt. Die andere Seite muss ebenfalls freigeben.'}</p>
-        ${frei?`<div class="nz-kontakt"><b>${l.netzPartner.n}</b>
-          <span>${tk("M. Berger · +49 89 1234-560 · berger@alpenland-netz.de")}</span></div>`
+        ${frei?`<div class="nz-kontakt"><b>${esc(l.netzPartner.n)}</b>
+          <span>${l.netzPartner.kontakt ? esc(l.netzPartner.kontakt)
+            : tk("Kontaktdaten liegen uns nicht vor — die Firma erreicht ihr über die Vergabestelle.")}</span></div>`
         :`<button class="nz-frei" data-netzfrei="${l.id}">${tk("Kontakt freigeben")}</button>`}
       </div>`;})()
       : `<div class="nz-wait">${tk("Ihr habt euch gemeldet. Noch keine ergänzende Firma — wir melden uns, sobald jemand andere Lose abdeckt als ihr.")}<button class="nz-rueck" data-netzint="${l.id}">${tk("Meldung zurückziehen")}</button></div>`}
@@ -1748,7 +1562,7 @@ function renderAnalyse(l){
     })()}
 
     <section class="sec" id="an-vergleich" data-sec="vergleich">
-      <h4>${tk("Direktvergleich")}<span class="cov">im Feld ${l.cpvLabel}, nach Anzahl Zuschlägen</span></h4>
+      <h4>${tk("Direktvergleich")}<span class="cov">im Feld ${cpvLabel(l)}, nach Anzahl Zuschlägen</span></h4>
       <table class="cmp">
         <thead><tr><th>${tk("Kennzahl")}</th><th>${tk("Ihr")}</th><th></th><th>${l.incumbent ? l.incumbent.name.split(' ')[0] : '—'}</th></tr></thead>
         <tbody>
@@ -1831,7 +1645,7 @@ function renderAnalyse(l){
             <span class="mk q">?</span>
             <span class="lbl">${tk("Ohne hinterlegtes Profil können wir die Passung nicht prüfen. Wählt oben eine Testsicht oder richtet euer Firmenprofil ein.")}</span></div>`;
           const MK = {ok:['y','&#10003;'], teil:['q','~'], no:['n','&#10007;'], unbekannt:['q','?']};
-          const WERT = {feld:[l.cpv, l.cpvLabel], region:['Region', l.region], vol:['Volumen', l.volumen.wert]};
+          const WERT = {feld:[l.cpv, cpvLabel(l)], region:['Region', l.region], vol:['Volumen', l.volumen.wert]};
           const rows = m.teile.map(t=>{ const [cls,sym]=MK[t.status]||['q','?']; const [code,lbl]=WERT[t.dim]||['',''];
             return `<div class="req"><span class="mk ${cls}">${sym}</span>
               <span class="code">${code}</span><span class="lbl">${lbl}</span><span class="st">${t.text}</span></div>`;}).join('');
@@ -1857,17 +1671,17 @@ function renderAnalyse(l){
           <div class="acts"><button>${tk("Rahmen anpassen")}</button><button>${tk("Trifft nicht zu")}</button></div></div>`;
         if(feld && feld.status==='no') return `<div class="note-box gap">
           <b>${tk("Dieses Feld liegt außerhalb eurer Schwerpunkte.")}</b><br>
-          ${l.cpvLabel} (CPV ${l.cpv}) gehört nicht zu euren hinterlegten Feldern. Wenn ihr das abdeckt,
+          ${cpvLabel(l)} (CPV ${l.cpv}) gehört nicht zu euren hinterlegten Feldern. Wenn ihr das abdeckt,
           trag es nach — dann steigt die Relevanz dieses und ähnlicher Leads.
           <div class="acts"><button>${tk("Feld ergänzen")}</button><button>${tk("Trifft nicht zu")}</button></div></div>`;
         if(feld && feld.status==='teil') return `<div class="note-box gap">
           <b>${tk("Nachbarfeld — kein voller Treffer.")}</b><br>
-          ${l.cpvLabel} grenzt an eure Schwerpunkte, ist aber keiner davon. Solche Leads zeigen wir
+          ${cpvLabel(l)} grenzt an eure Schwerpunkte, ist aber keiner davon. Solche Leads zeigen wir
           abgeschwächt. Trag das Feld als Schwerpunkt nach, wenn ihr es voll bedient.
           <div class="acts"><button>${tk("Als Schwerpunkt setzen")}</button><button>${tk("Trifft nicht zu")}</button></div></div>`;
         if(reg) return `<div class="note-box gap"><b>${tk("Außerhalb eures Gebiets.")}</b><br>${tk("Der Leistungsort liegt nicht in euren hinterlegten Regionen. Falls ihr dort tätig seid, erweitert euer Gebiet — sonst bleibt dieser Lead nachrangig.")}<div class="acts"><button>${tk("Region erweitern")}</button><button>${tk("Trifft nicht zu")}</button></div></div>`;
         if(m.partner) return `<div class="note-box">
-          <b>${tk("Passt fachlich — aber groß.")}</b> ${l.cpvLabel} liegt in eurem Feld, das Volumen übersteigt
+          <b>${tk("Passt fachlich — aber groß.")}</b> ${cpvLabel(l)} liegt in eurem Feld, das Volumen übersteigt
           aber eure Alleingrenze. Realistisch nur mit Partner; im Netzwerk-Tab findet ihr Kandidaten.</div>`;
         return `<div class="note-box"><b>${tk("Keine Lücke.")}</b>${tk("Feld, Region und Volumen passen zu eurem Profil — das ist die Sorte Lead, die oben in eurer Liste stehen soll.")}</div>`;
       })()}
@@ -2224,7 +2038,7 @@ function renderGate(){
 
 /* ── Potenzial-Bereich: renderProfil (Prototyp, innerHTML→return) ── */
 function renderProfil(){
-  const d = PROFIL[profilStufe];
+  const d = PROFIL[profilStufe] || PROFIL.neu;
   const historie = d.siege>0, belastbar = d.siege>=5 && d.kunden>=3;
   const free = isFreeLimit();
   const n = v => `<span class="v-num">${v}</span>`;
@@ -2519,7 +2333,7 @@ function applyProfile(key){
   setProfile(activeProfile ? profileFromPreset(activeProfile) : null);
 }
 
-export { applyState, getState, setLeads, setMarket, setPlzGeo, setPlzLand, setUserContracts, applyProfile, setProfile, getProfile, PROFILES, parseWert, netzInteresse, netzFreigabe, offeneGruppen };
+export { cpvLabel, applyState, getState, setLeads, setMarket, setPlzGeo, setPlzLand, setUserContracts, applyProfile, setProfile, getProfile, PROFILES, parseWert, netzInteresse, netzFreigabe, offeneGruppen };
 export {
   renderUebersicht, renderTeilnahme, renderAnalyse, renderMarkt, renderBuyer,
   renderTeam, renderGate, renderProfil, renderDocs, REGIONS,

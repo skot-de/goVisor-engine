@@ -434,7 +434,7 @@ def ch_extras_for(ids):
 def export_branche(key):
     rows = con.execute(f"""
         WITH mapped AS (
-          SELECT e.*, cl.label AS cpv_label, {BRANCHE} AS ui_branche,
+          SELECT e.*, cl.label AS cpv_label, cl.label_en AS cpv_label_en, cl.label_fr AS cpv_label_fr, {BRANCHE} AS ui_branche,
                  dl.deadline_source AS frist_source,
                  lg.lat AS geo_lat, lg.lon AS geo_lon,
                  lp.incumbent_name AS pred_incumbent, lp.n_bidders AS pred_bidders,
@@ -568,6 +568,12 @@ def export_branche(key):
             "beschreibung": g("description") or "",
             "hasDetail": bool(g("has_detailed_description")),
             "cpv": g("cpv_code"), "cpvLabel": g("cpv_label") or g("buyer_activity") or "",
+            # CPV-Bezeichnung amtlich in EN/FR (dieselbe EU-Codeliste, s. build_dim_cpv_label).
+            # Nicht ueber den Sprachkatalog: das sind 9.454 Rechtsbegriffe, keine UI-Texte —
+            # und die EU liefert sie fertig. Nur setzen, wo vorhanden; sonst bleibt es beim
+            # deutschen Label statt einer erfundenen Uebersetzung.
+            **({"cpvLabelEn": g("cpv_label_en")} if g("cpv_label_en") else {}),
+            **({"cpvLabelFr": g("cpv_label_fr")} if g("cpv_label_fr") else {}),
             # Vergabe-Land aus der country-Spalte (DE-Gold hat keine → NULL → Default DE;
             # CH-Gold trägt 'CH'). Speist den DACH-Länderfilter.
             "land": g("country") or "DE",

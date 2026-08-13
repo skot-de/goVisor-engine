@@ -5,6 +5,7 @@ import {
   LEADS, WF, STAR, applyState,
   renderUebersicht, renderTeilnahme, renderAnalyse, renderMarkt, renderBuyer,
   renderTeam, renderGate, renderDocs,
+  cpvLabel,
 } from "@/lib/explorerCore";
 import { downloadDoc, downloadMarkdown, copyMarkdown } from "@/lib/dossier";
 import { track, EV } from "@/lib/analytics";
@@ -142,7 +143,8 @@ export function DetailPanel({
           <div className="eyebrow">
             <span className={`srcpill big src-${l.src}`}>{l.phaseLabel}</span>
             <span className="eb-sep">·</span>
-            <span>{l.cpvLabel}</span>
+            {/* amtliche CPV-Bezeichnung in der Oberflaechensprache — nicht `l.cpvLabel` direkt */}
+            <span>{cpvLabel(l)}</span>
             {analysed ? <span className="seen-mark">{t("analysiert")}</span> : null}
           </div>
           <div className="dactions">

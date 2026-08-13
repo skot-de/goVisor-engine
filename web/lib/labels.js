@@ -8,7 +8,13 @@
  * `applyLabels(lead)` füllt die Anzeige-Felder aus den Codes, aber NUR wenn sie fehlen —
  * die hand-kuratierten Prototyp-Demo-Leads (die ihre Labels literal tragen) bleiben
  * unangetastet; nur die aus dem Export geladenen echten Leads werden übersetzt.
+ *
+ * Oberflächensprache: der Katalog unten bleibt DEUTSCH — er ist eine Modul-Konstante und
+ * würde die Sprache beim Import einfrieren. Übersetzt wird erst in `applyLabels`, also beim
+ * Erzeugen des Anzeige-Textes (`tk`, die React-freie Fassung von `t`, s. lib/i18n).
  */
+
+import { tk } from './i18n';
 
 const CATALOG = {
   de: {
@@ -21,7 +27,9 @@ const CATALOG = {
     volHint: { echt: 'Aus der Bekanntmachung.',
                schaetz: 'Abgeleitet — nicht veröffentlicht.',
                unbekannt: 'Abgeleitet — nicht veröffentlicht.' },
-    volHintFramework: ' Rahmenvertrag — der Nennwert ist Ober-/Schätzgrenze; real abgerufen wird oft ein Vielfaches.',
+    // Ohne führendes Leerzeichen: der Abstand entsteht beim Zusammensetzen unten. Ein Schlüssel
+    // mit Randweißraum findet seine Übersetzung sonst nicht wieder.
+    volHintFramework: 'Rahmenvertrag — der Nennwert ist Ober-/Schätzgrenze; real abgerufen wird oft ein Vielfaches.',
   },
 };
 
@@ -33,13 +41,19 @@ function cat() { return CATALOG[LANG] || CATALOG.de; }
 export function applyLabels(l) {
   if (!l) return l;
   const c = cat();
-  if (l.src && l.srcLabel == null)      l.srcLabel = c.src[l.src] || l.src;
-  if (l.src && l.phaseLabel == null)    l.phaseLabel = c.src[l.src] || l.src;
-  if (l.contractKind && l.art == null)  l.art = c.art[l.contractKind] || null;
-  if (l.naturKat && l.natur == null)    l.natur = c.natur[l.naturKat] || l.naturKat;
+  /* Code → Anzeige-Text in der Oberflächensprache. Unbekannte Codes bleiben roh stehen
+     („lieber unbekannt zeigen als falsch"), werden also NICHT durch tk geschickt. */
+  const lab = (tabelle, code, fallback) => (tabelle[code] ? tk(tabelle[code]) : fallback);
+  if (l.src && l.srcLabel == null)      l.srcLabel = lab(c.src, l.src, l.src);
+  if (l.src && l.phaseLabel == null)    l.phaseLabel = lab(c.src, l.src, l.src);
+  if (l.contractKind && l.art == null)  l.art = lab(c.art, l.contractKind, null);
+  if (l.naturKat && l.natur == null)    l.natur = lab(c.natur, l.naturKat, l.naturKat);
   if (l.volumen && l.volumen.hint == null) {
-    const base = c.volHint[l.volumen.src] || '';
-    l.volumen.hint = base + (l.istRahmen ? c.volHintFramework : '');
+    const teile = [];
+    const base = c.volHint[l.volumen.src];
+    if (base) teile.push(tk(base));
+    if (l.istRahmen) teile.push(tk(c.volHintFramework));
+    l.volumen.hint = teile.join(' ');
   }
   return l;
 }
