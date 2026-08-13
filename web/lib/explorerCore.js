@@ -71,25 +71,25 @@ function aufwandStufe(l){
   const a = l.aufwand;
   if(a){
     // Demo-Pfad: handkuriertes aufwand-Objekt der Prototyp-Leads.
-    if(a.buergschaft!=null){ bekannt++; if(a.buergschaft!=='nein'){ punkte+=2; t.push('Bietungsbürgschaft'); } }
+    if(a.buergschaft!=null){ bekannt++; if(a.buergschaft!=='nein'){ punkte+=2; t.push(tk('Bietungsbürgschaft')); } }
     if(a.bindefrist!=null){ bekannt++; const d=parseInt(a.bindefrist,10);
-      if(d>=90){ punkte+=2; t.push('lange Bindefrist'); } else if(d>=60){ punkte+=1; t.push('Bindefrist '+a.bindefrist); } }
-    if(a.eabgabe!=null){ bekannt++; if(a.eabgabe==='Pflicht'){ punkte+=1; t.push('Portalregistrierung'); } }
-    if(a.lebenslauf!=null){ bekannt++; if(a.lebenslauf==='ja'){ punkte+=2; t.push('Lebensläufe gefordert'); } }
+      if(d>=90){ punkte+=2; t.push(tk('lange Bindefrist')); } else if(d>=60){ punkte+=1; t.push(tk('Bindefrist {d}', {d: a.bindefrist})); } }
+    if(a.eabgabe!=null){ bekannt++; if(a.eabgabe==='Pflicht'){ punkte+=1; t.push(tk('Portalregistrierung')); } }
+    if(a.lebenslauf!=null){ bekannt++; if(a.lebenslauf==='ja'){ punkte+=2; t.push(tk('Lebensläufe gefordert')); } }
   } else if(l.anf){
     // #18 Aufwands-Indikator: aus echten strukturierten Anforderungen (#15) + Zuschlagskriterien.
     // Fehlende Signale zählen NICHT als „gering", sondern bleiben unbekannt (bekannt-Zähler).
     const anf = l.anf;
-    if(anf.buergschaft!=null){ bekannt++; if(anf.buergschaft===true){ punkte+=2; t.push('Sicherheit/Bürgschaft gefordert'); } }
+    if(anf.buergschaft!=null){ bekannt++; if(anf.buergschaft===true){ punkte+=2; t.push(tk('Sicherheit/Bürgschaft gefordert')); } }
     if(anf.eignung && anf.eignung.length){ bekannt++; punkte+=Math.min(3, anf.eignung.length);
-      t.push(anf.eignung.length+' Eignungsnachweis'+(anf.eignung.length>1?'e':'')); }
+      t.push(tk(anf.eignung.length>1 ? '{n} Eignungsnachweise' : '{n} Eignungsnachweis', {n: anf.eignung.length})); }
     if(anf.bindefristTage!=null){ bekannt++;
-      if(anf.bindefristTage>=90){ punkte+=2; t.push('lange Bindefrist ('+anf.bindefristTage+' Tage)'); }
+      if(anf.bindefristTage>=90){ punkte+=2; t.push(tk('lange Bindefrist ({n} Tage)', {n: anf.bindefristTage})); }
       else if(anf.bindefristTage>=60){ punkte+=1; t.push('Bindefrist '+anf.bindefristTage+' Tage'); } }
-    if(anf.nebenangebote!=null){ bekannt++; if(anf.nebenangebote===true){ punkte+=1; t.push('Nebenangebote zugelassen'); } }
+    if(anf.nebenangebote!=null){ bekannt++; if(anf.nebenangebote===true){ punkte+=1; t.push(tk('Nebenangebote zugelassen')); } }
     if(anf.zertifikate && anf.zertifikate.length){ punkte+=1; t.push(anf.zertifikate.slice(0,2).join(', ')); }
-    const nk = (l.zuschlag||[]).length; if(nk){ bekannt++; if(nk>=3){ punkte+=1; t.push(nk+' Zuschlagskriterien'); } }
-    if(l.rahmen==='vob'){ bekannt++; punkte+=1; t.push('Präqualifikation (VOB)'); }
+    const nk = (l.zuschlag||[]).length; if(nk){ bekannt++; if(nk>=3){ punkte+=1; t.push(tk('{n} Zuschlagskriterien', {n: nk})); } }
+    if(l.rahmen==='vob'){ bekannt++; punkte+=1; t.push(tk('Präqualifikation (VOB)')); }
   } else return {stufe:'na', bekannt:0, treiber:[]};
   if(bekannt<2) return {stufe:'na', bekannt, treiber:t};
   return {stufe: punkte>=4?'hoch' : punkte>=2?'mittel' : 'niedrig', bekannt, treiber:t};
@@ -446,11 +446,11 @@ function awardEmpfCell(l){
   const sub = a.subcontracting==='geregelt' ? 'Unteraufträge geregelt' : 'keine Angabe zu Unteraufträgen';
   const netz = ''; // Netzwerk-Freigabe: kein Bestand → nicht behaupten
   if(a.empfehlung==='ansprechen')
-    return `<td class="c-empf"><span class="empf empf-go" title="Unterauftragsvergabe geregelt und geringe Feldüberschneidung — hier lohnt der Anruf">${tk("Ansprechen")}</span><span class="empf-grund">${sub}${netz}</span></td>`;
+    return `<td class="c-empf"><span class="empf empf-go" title="${esc(tk("Unterauftragsvergabe geregelt und geringe Feldüberschneidung — hier lohnt der Anruf"))}">${tk("Ansprechen")}</span><span class="empf-grund">${sub}${netz}</span></td>`;
   if(a.empfehlung==='pruefen')
-    return `<td class="c-empf"><span class="empf empf-open" title="Keine Angabe zu Unteraufträgen oder mittlere Feldüberschneidung — prüfen, ob der Anruf lohnt">${tk("Prüfen")}</span><span class="empf-grund">${sub}</span></td>`;
+    return `<td class="c-empf"><span class="empf empf-open" title="${esc(tk("Keine Angabe zu Unteraufträgen oder mittlere Feldüberschneidung — prüfen, ob der Anruf lohnt"))}">${tk("Prüfen")}</span><span class="empf-grund">${sub}</span></td>`;
   // hohe Feldüberschneidung → direkter Wettbewerb, keine Empfehlung
-  return `<td class="c-empf"><span class="empf-grund" title="Hohe Feldüberschneidung — direkter Wettbewerb, keine Kontaktempfehlung">${tk("direkter Wettbewerb")}</span></td>`;
+  return `<td class="c-empf"><span class="empf-grund" title="${esc(tk("Hohe Feldüberschneidung — direkter Wettbewerb, keine Kontaktempfehlung"))}">${tk("direkter Wettbewerb")}</span></td>`;
 }
 
 function fristCell(l){
@@ -555,7 +555,7 @@ function cellHTML(l, key){
         <circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/></svg>`;
       const frei = isFreeLimit();
       const such = l.netzSuchend==null ? ''
-        : frei ? `<span class="such lock" title="Im Pro-Zugang seht ihr, wie viele hier schon einen Partner suchen — bevor ihr euch meldet"><span class="nz-blur">${l.netzSuchend}</span></span>`
+        : frei ? `<span class="such lock" title="${esc(tk("Im Pro-Zugang seht ihr, wie viele hier schon einen Partner suchen — bevor ihr euch meldet"))}"><span class="nz-blur">${l.netzSuchend}</span></span>`
         : `<span class="such ${l.netzSuchend>=4?'viel':''}" title="${l.netzSuchend>=4?'Hier bildet sich bereits ein Feld':'Noch wenig Bewegung — freie Wahl bei den Losen'}">${l.netzSuchend}</span>`;
       return `<td class="c-netz"><span class="netzcell">
         <button class="nzring ${dabei?'on':''} ${match?'match':''}"
@@ -583,7 +583,7 @@ function cellHTML(l, key){
         ? `<span class="akttag akt-${l.aktualitaet.art}" title="${esc(l.aktualitaet.text+' ('+l.aktualitaet.am+')')}">${
             l.aktualitaet.art==='aufgehoben'?'aufgehoben':'geändert'}</span>` : '';
       const eigen = l.eigen && l.eigenBestaetigt!==false
-        ? '<span class="eigentag" title="Ihr seid hier Auftragnehmer — für euch ein Risiko, kein Neugeschäft">euer Vertrag</span>' : '';
+        ? '<span class="eigentag" title="${esc(tk("Ihr seid hier Auftragnehmer — für euch ein Risiko, kein Neugeschäft"))}">euer Vertrag</span>' : '';
       // #12: Bei Mehr-Los-Vergaben zeigen, über welches Los die Relevanz kommt (Best-Los).
       const lotHint = l.bestLot
         ? `<span class="ttitel-lot" title="Diese Ausschreibung ist groß, relevant ist für euch Los ${l.bestLot.nr}${l.bestLot.region?' ('+l.bestLot.region+')':''}">▸ passt über Los ${l.bestLot.nr}</span>` : '';
@@ -598,8 +598,8 @@ function cellHTML(l, key){
     case 'natur': return `<td class="c-natur"><span class="nat nat-${l.naturKat}">${esc(l.natur)}</span></td>`;
     case 'konk': return `<td class="c-konk">${konkCell(l)}</td>`;
     case 'neu': return `<td class="c-neu" style="text-align:center">${l.neu
-        ? '<span class="wettb neu" title="Neuvergabe — kein Amtsinhaber, offenes Feld">Neu</span>'
-        : '<span class="wettb folge" title="Folgevergabe — Amtsinhaber vorhanden">Folge</span>'}</td>`;
+        ? '<span class="wettb neu" title="${esc(tk("Neuvergabe — kein Amtsinhaber, offenes Feld"))}">Neu</span>'
+        : '<span class="wettb folge" title="${esc(tk("Folgevergabe — Amtsinhaber vorhanden"))}">Folge</span>'}</td>`;
     case 'relevanz': return `<td class="c-band">${bandMeter(l.relevanz)}</td>`;
     case 'wechsel': { const lue = bieterLuecke(l);
       return `<td class="c-band">${bandMeter(l.wechsel, true, chanceCap())}${
@@ -612,7 +612,7 @@ function cellHTML(l, key){
         const fmt = n => n.toLocaleString('de-DE')+' €';
         return `<td class="c-vol"><span class="volwrap">
           <span class="v-num">${fmt(werte.reduce((a,b)=>a+b,0))}</span>
-          <span class="volmin" title="Kleinstes Los — so viel braucht ihr mindestens, um mitzubieten">ab ${fmt(min)}</span>
+          <span class="volmin" title="${esc(tk("Kleinstes Los — so viel braucht ihr mindestens, um mitzubieten"))}">ab ${fmt(min)}</span>
         </span></td>`;
       }
       return `<td class="c-vol">${l.volumen.src==='unbekannt' ? '<span style="color:var(--ink-300)">Wert offen</span>' : val(l.volumen.wert, l.volumen.src, l.volumen.hint)}</td>`;
@@ -624,7 +624,7 @@ function cellHTML(l, key){
       // Zuschlag erteilt → man kann sich nicht mehr bewerben; „Angebotsaufwand" trifft nicht zu.
       // Das ist etwas anderes als „unbekannt" und wird deshalb auch anders gezeigt.
       if(l.src==='award')
-        return `<td class="c-band"><span class="band-na" title="Zuschlag bereits erteilt — kein Angebotsaufwand mehr">—</span></td>`;
+        return `<td class="c-band"><span class="band-na" title="${esc(tk("Zuschlag bereits erteilt — kein Angebotsaufwand mehr"))}">—</span></td>`;
       const a = aufwandStufe(l);
       const naHint = a.bekannt === 0
         ? tk('Die Bekanntmachung nennt keine Anforderungen — wir schätzen den Aufwand nicht.')
@@ -752,8 +752,8 @@ function angFeld(key, titel, zweck, abgeleitet){
   return `<div class="ang-f">
     <div class="ang-h"><span class="ang-t">${titel}</span><span class="ang-x">${zweck}</span></div>
     <div class="ang-chips">
-      ${abgeleitet.map(w=>`<span class="ang-c ang-abg" title="Aus euren gewonnenen Vergaben abgeleitet">${w}<i>${tk("gemessen")}</i></span>`).join('')}
-      ${eigene.map(w=>`<span class="ang-c ang-eig" title="Von euch angegeben, nicht überprüft">${w}
+      ${abgeleitet.map(w=>`<span class="ang-c ang-abg" title="${esc(tk("Aus euren gewonnenen Vergaben abgeleitet"))}">${w}<i>${tk("gemessen")}</i></span>`).join('')}
+      ${eigene.map(w=>`<span class="ang-c ang-eig" title="${esc(tk("Von euch angegeben, nicht überprüft"))}">${w}
         <button class="ang-x-btn" data-angrm="${key}:${w}" aria-label="Entfernen">×</button></span>`).join('')}
       <span class="ang-add">
         <button class="ang-plus" data-angadd="${key}">${tk("+ ergänzen")}</button>
@@ -1575,7 +1575,7 @@ function renderAnalyse(l){
             // streuen → die Zahl ist eine UNTERGRENZE, nicht der exakte Wert.
             const floor = inc.src==='unsicher' || (inc.conf!=null && inc.conf<0.9);
             const winCell = inc.wins==null ? '—'
-              : floor ? `<span title="Untergrenze — bei unsicherer Firmen-Auflösung können Zuschläge auf Namensvarianten liegen; die echte Zahl kann höher sein">&#8805;&#8202;${inc.wins}</span>`
+              : floor ? `<span title="${esc(tk("Untergrenze — bei unsicherer Firmen-Auflösung können Zuschläge auf Namensvarianten liegen; die echte Zahl kann höher sein"))}">&#8805;&#8202;${inc.wins}</span>`
               : String(inc.wins);
             const r=[];
             r.push(`<tr><th>Zuschläge im Feld (CPV ${cpv4})</th>${me(uw)}${edge(uw,inc.wins)}<td class="them num">${winCell}</td></tr>`);
@@ -1858,9 +1858,9 @@ function renderBuyer(l){
     concentration:'fragmentiert', topWinners:[], winsAvg:null, single:null,
     avgBidders:null, retention:null, retentionLevel:null, below:null, recent:[] };
 
-  const sparse = '<span class="v-sparse" title="Zu wenige Vergaben für eine belastbare Kennzahl">zu wenig Daten</span>';
+  const sparse = '<span class="v-sparse" title="${esc(tk("Zu wenige Vergaben für eine belastbare Kennzahl"))}">zu wenig Daten</span>';
   const b = (val) => val==null ? sparse
-    : free ? `<span class="blur" aria-hidden="true">${val}</span><span class="lockmark" title="Im Pro-Zugang">🔒</span>`
+    : free ? `<span class="blur" aria-hidden="true">${val}</span><span class="lockmark" title="${esc(tk("Im Pro-Zugang"))}">🔒</span>`
     : val;
   const bnum = (val) => val==null ? sparse
     : free ? `<span class="blur blur-num" aria-hidden="true">${val}</span>`
@@ -1998,13 +1998,13 @@ function renderBuyer(l){
       <div class="bfeed">
         <div class="bfeed-row bfeed-head"><span>${tk("Zuletzt vergeben")}</span><span>${tk("Gewinner")}</span><span>${tk("Wert")}</span><span></span></div>
         ${d.recent.map(r=>{
-          const inner = `<span class="bf-t"><span class="bf-date">${r.date}</span>${b(r.title)}${r.flag?`<span class="bf-flag" title="Nur ein Bieter">${r.flag}</span>`:''}</span>
+          const inner = `<span class="bf-t"><span class="bf-date">${r.date}</span>${b(r.title)}${r.flag?`<span class="bf-flag" title="${esc(tk("Nur ein Bieter"))}">${r.flag}</span>`:''}</span>
           <span class="bf-w">${b(r.winner)}</span>
           <span class="bf-v ${r.value.includes('unbekannt')?'unk':''}">${free?`<span class="blur">${r.value}</span>`:r.value}</span>`;
           if(free) return `<div class="bfeed-row">${inner}</div>`;
           return r.lead
-            ? `<div class="bfeed-row bfeed-link" data-openlead="${r.lead}" title="Vergabe öffnen">${inner}<span class="bf-go" aria-hidden="true">›</span></div>`
-            : `<a class="bfeed-row bfeed-link" href="https://ted.europa.eu" target="_blank" rel="noopener" title="Zuschlag auf TED ansehen">${inner}<span class="bf-go bf-ext" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>`;
+            ? `<div class="bfeed-row bfeed-link" data-openlead="${r.lead}" title="${esc(tk("Vergabe öffnen"))}">${inner}<span class="bf-go" aria-hidden="true">›</span></div>`
+            : `<a class="bfeed-row bfeed-link" href="https://ted.europa.eu" target="_blank" rel="noopener" title="${esc(tk("Zuschlag auf TED ansehen"))}">${inner}<span class="bf-go bf-ext" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>`;
         }).join('')}
       </div>
       ${upsell}
@@ -2050,8 +2050,8 @@ function renderProfil(){
           <span>${BRANCHEN[aktiveBranche]}</span><i>·</i>
           <span>${userProfile?(userProfile.regions?(userProfile.regionLabels||[]).join(' · '):'bundesweit'):'bundesweit'}</span><i>·</i>
           ${userProfile
-            ? `<span class="steck-ok" title="Profil aktiv — steuert Relevanz und Anforderungs-Check.">${tk("Profil aktiv")}</span>`
-            : `<span class="steck-m" title="Meldet euch an und bestätigt eure Firma, um euer Profil zu verbinden (Relevanz, Historie, Erfolgsprämie).">${tk("Profil noch nicht verbunden")}</span>`}
+            ? `<span class="steck-ok" title="${esc(tk("Profil aktiv — steuert Relevanz und Anforderungs-Check."))}">${tk("Profil aktiv")}</span>`
+            : `<span class="steck-m" title="${esc(tk("Meldet euch an und bestätigt eure Firma, um euer Profil zu verbinden (Relevanz, Historie, Erfolgsprämie)."))}">${tk("Profil noch nicht verbunden")}</span>`}
         </div>
       </div>
     </div>
@@ -2220,6 +2220,10 @@ function setLeads(arr){
   if(userProfile && !activeProfile) scoreAll();
 }
 
+/* Alle geladenen Leads neu beschriften — Aufruf beim Sprachwechsel. Ohne das bleibt die
+ * Liste in der Altsprache stehen, weil `applyLabels` seine Ergebnisse zwischenspeichert. */
+function relabelLeads(){ for(const l of LEADS) applyLabels(l, true); }
+
 // Eigener Vertragsbestand (aus user_contracts) — von React gesetzt, für „Eure Verträge bei X".
 let userContracts = [];
 function setUserContracts(arr){ userContracts = Array.isArray(arr) ? arr : []; if(userProfile) scoreAll(); }
@@ -2333,7 +2337,7 @@ function applyProfile(key){
   setProfile(activeProfile ? profileFromPreset(activeProfile) : null);
 }
 
-export { cpvLabel, applyState, getState, setLeads, setMarket, setPlzGeo, setPlzLand, setUserContracts, applyProfile, setProfile, getProfile, PROFILES, parseWert, netzInteresse, netzFreigabe, offeneGruppen };
+export { cpvLabel, relabelLeads, applyState, getState, setLeads, setMarket, setPlzGeo, setPlzLand, setUserContracts, applyProfile, setProfile, getProfile, PROFILES, parseWert, netzInteresse, netzFreigabe, offeneGruppen };
 export {
   renderUebersicht, renderTeilnahme, renderAnalyse, renderMarkt, renderBuyer,
   renderTeam, renderGate, renderProfil, renderDocs, REGIONS,

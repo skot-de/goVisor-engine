@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
-  LEADS, BRANCHEN, COLS, applyState, visible, sorted, syncLocationColumn,
+  LEADS, BRANCHEN, COLS, applyState, relabelLeads, visible, sorted, syncLocationColumn,
   suggestList, classifyQuery, netzInteresse, netzFreigabe, offeneGruppen, angaben, setLeads, setMarket, setPlzGeo, setPlzLand,
   setProfile, setUserContracts, parseWert, aufwandStufe,
 } from "@/lib/explorerCore";
@@ -21,7 +21,7 @@ import { syncWatchlist } from "@/lib/supabase/watchlist";
 import { Kalender } from "./Kalender";
 import { Cockpit } from "./Cockpit";
 import { getOrCreateCalendarFeed } from "@/lib/supabase/calendar";
-import { useSprache } from "@/lib/i18n";
+import { SPRACHEN, sprachName, useSprache } from "@/lib/i18n";
 
 type Profile = ReturnType<typeof buildProfile>;
 const PROFILE_KEY = "govisor.profile.v1";
@@ -117,7 +117,7 @@ function clPersist(root: HTMLElement | null) {
 }
 
 export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string }) {
-  const { t } = useSprache();
+  const { t, lang, setLang } = useSprache();
   const [query, setQuery] = useState("");
   const [tokens, setTokens] = useState<Token[]>([]);
   const [filters, setFilters] = useState<Filters>({
@@ -153,6 +153,12 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
 
   // Popover-/Menü-Zustand
   const [colMenuOpen, setColMenuOpen] = useState(false);
+  const [sprMenuOpen, setSprMenuOpen] = useState(false);
+
+  // Sprachwechsel: die geladenen Leads tragen zwischengespeicherte Labels (Phase, Leistung,
+  // Wert-Herkunft). Ohne dieses Nachziehen bliebe die Liste in der Altsprache stehen —
+  // die Oberflaeche wechselte, die Tabelle nicht. Kein Neuladen noetig.
+  useEffect(() => { relabelLeads(); bump(); }, [lang]);
   const [headFilter, setHeadFilter] = useState<{ facet: string; rect: DOMRect } | null>(null);
   const [openRadius, setOpenRadius] = useState<number | null>(null);
   const [suggIdx, setSuggIdx] = useState(-1);
@@ -490,7 +496,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
 
   // ── Aktionen ──────────────────────────────────────────────────────────────
   const closeAllPops = useCallback(() => {
-    setColMenuOpen(false); setHeadFilter(null); setOpenRadius(null);
+    setColMenuOpen(false); setSprMenuOpen(false); setHeadFilter(null); setOpenRadius(null);
   }, []);
 
   const autoSort = useRef(true);   // solange true: Sortierung wird automatisch verwaltet
@@ -904,7 +910,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   useEffect(() => {
     function onDown(e: MouseEvent) {
       const ziel = e.target as HTMLElement;
-      if (!ziel.closest(".colcfg")) setColMenuOpen(false);
+      if (!ziel.closest(".colcfg")) { setColMenuOpen(false); setSprMenuOpen(false); }
       if (!ziel.closest(".has-filter") && !ziel.closest(".headpop")) setHeadFilter(null);
       if (!ziel.closest(".ftoken")) setOpenRadius(null);
     }
@@ -986,6 +992,28 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
               <ColumnMenu open={colMenuOpen} onToggleCol={toggleCol} />
             </div>
             <ExportMenu rows={rows} view={filters.relevant ? "passend" : "alle"} />
+            {/* Sprache steht bei den ANZEIGE-Einstellungen (Filter · Spalten · Export), nicht
+                im Konto-Menue: sie betrifft die Ansicht, nicht das Konto. Kompakt als Kuerzel,
+                weil man sie einmal setzt und dann nie wieder anfasst. */}
+            <div className="colcfg">
+              <button className="colbtn" type="button" aria-haspopup="menu" aria-expanded={sprMenuOpen}
+                onClick={() => setSprMenuOpen((o) => !o)} title={t("sprache.app")}>
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth={2}>
+                  <circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18" />
+                </svg>
+                {lang.toUpperCase()}
+              </button>
+              <div className="colmenu" data-open={sprMenuOpen ? "" : undefined} role="menu">
+                {SPRACHEN.map((sp) => (
+                  <div key={sp} className="ci" role="menuitemradio" aria-checked={sp === lang}
+                    data-on={sp === lang ? "" : undefined}
+                    onClick={() => { setLang(sp); setSprMenuOpen(false); }}>
+                    <span className="box" />
+                    <span>{sprachName(sp, t)}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
             <div className="tstatus">
               <span className="tcount">
                 {/* Nenner auf DERSELBEN Grundmenge wie die Anzeige — in der

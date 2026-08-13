@@ -38,17 +38,21 @@ export function setLang(code) { if (CATALOG[code]) LANG = code; }
 function cat() { return CATALOG[LANG] || CATALOG.de; }
 
 /* Anzeige-Felder eines Leads aus seinen Codes ableiten. Nur fehlende Felder werden gesetzt. */
-export function applyLabels(l) {
+export function applyLabels(l, neu = false) {
   if (!l) return l;
   const c = cat();
+  // `neu = true` beim Sprachwechsel: die Labels sind zwischengespeichert (nur setzen, wenn
+  // leer), damit ein zweiter Lauf nichts kostet. Genau dieser Cache liess die bereits
+  // geladene Liste nach dem Umschalten deutsch stehen — sichtbar in der Phase-Spalte.
+  const frisch = (wert) => neu || wert == null;
   /* Code → Anzeige-Text in der Oberflächensprache. Unbekannte Codes bleiben roh stehen
      („lieber unbekannt zeigen als falsch"), werden also NICHT durch tk geschickt. */
   const lab = (tabelle, code, fallback) => (tabelle[code] ? tk(tabelle[code]) : fallback);
-  if (l.src && l.srcLabel == null)      l.srcLabel = lab(c.src, l.src, l.src);
-  if (l.src && l.phaseLabel == null)    l.phaseLabel = lab(c.src, l.src, l.src);
-  if (l.contractKind && l.art == null)  l.art = lab(c.art, l.contractKind, null);
-  if (l.naturKat && l.natur == null)    l.natur = lab(c.natur, l.naturKat, l.naturKat);
-  if (l.volumen && l.volumen.hint == null) {
+  if (l.src && frisch(l.srcLabel))      l.srcLabel = lab(c.src, l.src, l.src);
+  if (l.src && frisch(l.phaseLabel))    l.phaseLabel = lab(c.src, l.src, l.src);
+  if (l.contractKind && frisch(l.art))  l.art = lab(c.art, l.contractKind, null);
+  if (l.naturKat && frisch(l.natur))    l.natur = lab(c.natur, l.naturKat, l.naturKat);
+  if (l.volumen && frisch(l.volumen.hint)) {
     const teile = [];
     const base = c.volHint[l.volumen.src];
     if (base) teile.push(tk(base));

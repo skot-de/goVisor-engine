@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { logout } from "@/lib/supabase/auth";
-import { SPRACHEN, sprachName, useSprache } from "@/lib/i18n";
+import { useSprache } from "@/lib/i18n";
 
 /* Die Hauptnavigation — EINE Quelle für alle Seiten.
  *
@@ -74,7 +74,7 @@ export function AppRail({
   userEmail?: string | null;
   onLogout?: () => void;
 }) {
-  const { t, lang, setLang } = useSprache();
+  const { t } = useSprache();
   const [planOpen, setPlanOpen] = useState(false);
   // Die Shell reicht ihren bereits geladenen Kontostand durch; eigenständige Seiten
   // haben keinen — die holen ihn hier selbst, damit das Konto überall erreichbar bleibt.
@@ -155,14 +155,6 @@ export function AppRail({
               ) : null}
               {/* Sprache steht im Konto-Menue, nicht in einer eigenen Ecke: es ist eine
                   Nutzereinstellung wie der Plan, und hier sucht man sie. */}
-              <div className="pm-lang" role="group" aria-label={t("sprache.app")}>
-                <span>{t("sprache.app")}</span>
-                {SPRACHEN.map((s) => (
-                  <button key={s} type="button" onClick={() => setLang(s)}
-                    aria-pressed={s === lang} className={s === lang ? "is-an" : ""}
-                    title={sprachName(s, t)}>{s.toUpperCase()}</button>
-                ))}
-              </div>
               <Link className="pm-item" href="/settings" onClick={() => setPlanOpen(false)}>Einstellungen</Link>
               <Link className="pm-item" href="/settings?sek=zahlung" onClick={() => setPlanOpen(false)}>Zahlung &amp; Rechnungen</Link>
               <Link className="pm-item" href="/unternehmen" onClick={() => setPlanOpen(false)}>Unser Unternehmen</Link>
