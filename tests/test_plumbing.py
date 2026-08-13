@@ -1418,9 +1418,13 @@ def test_verdrahtete_texte_sind_uebersetzt():
     deutsch = re.compile(r"[äöüÄÖÜß]|\b(der|die|das|und|oder|nicht|kein|keine|mit|von|bei|"
                          r"für|aus|auf|ist|sind|wie|was|wo|wenn|nur|alle|eine|zum|zur|im|am)\b")
     fehlend: list[str] = []
-    for p in sorted(web.glob("components/**/*.tsx")) + sorted(web.glob("app/**/*.tsx")):
-        for m in re.finditer(r'\bt\(\s*"((?:[^"\\]|\\.)*)"', p.read_text()):
-            k = m.group(1)
+    dateien = (sorted(web.glob("components/**/*.tsx")) + sorted(web.glob("app/**/*.tsx"))
+               + sorted(web.glob("lib/**/*.js")) + sorted(web.glob("lib/**/*.tsx")))
+    for p in dateien:
+        # `t(...)` in React, `tk(...)` in den Prototyp-Renderern — dieselben Kataloge.
+        for m in re.finditer(r'\bt[k]?\(\s*"((?:[^"\\]|\\.)*)"', p.read_text()):
+            # Quelltext-Escapes aufloesen: im Katalog steht der Satz, nicht `\\"`.
+            k = m.group(1).replace('\\"', '"').replace("\\\\", "\\")
             if "." in k and " " not in k:
                 continue                      # strukturierter Punkt-Schluessel
             if deutsch.search(k) and k not in en:

@@ -1,3 +1,10 @@
+/* Oberflaechensprache: `tk` ist die React-freie Fassung von `t` (s. lib/i18n).
+ * Die Renderer hier sind Prototyp-verbatim und laufen ausserhalb jedes React-
+ * Kontexts; der Provider schiebt die gewaehlte Sprache per `setzeKernSprache`
+ * ins Modul. Der deutsche Satz IST der Schluessel — fehlt eine Uebersetzung,
+ * steht schlicht wieder Deutsch da. */
+import { tk } from "./i18n";
+
 /* eslint-disable */
 import { emptyProfile, matchLead, whyHtml, hasProfile } from './profileEngine';
 import { recommend, begruendungskette } from './recommendation';
@@ -608,7 +615,7 @@ function bieterLuecke(l){
 function awardWhen(l){
   const a = l.award ? l.award.ago : null;
   const txt = a==null ? '—' : a===0 ? 'heute' : a===1 ? 'gestern' : `vor ${a} Tagen`;
-  return `<span class="award-when ${a!=null && a<=3?'hot':''}">${txt}<span class="cdsub">Zuschlag</span></span>`;
+  return `<span class="award-when ${a!=null && a<=3?'hot':''}">${txt}<span class="cdsub">${tk("Zuschlag")}</span></span>`;
 }
 // #24 Empfehlungs-Zelle: Ansprechen / Prüfen / (kein Eintrag bei hoher Feldüberschneidung).
 function awardEmpfCell(l){
@@ -616,20 +623,20 @@ function awardEmpfCell(l){
   const sub = a.subcontracting==='geregelt' ? 'Unteraufträge geregelt' : 'keine Angabe zu Unteraufträgen';
   const netz = ''; // Netzwerk-Freigabe: kein Bestand → nicht behaupten
   if(a.empfehlung==='ansprechen')
-    return `<td class="c-empf"><span class="empf empf-go" title="Unterauftragsvergabe geregelt und geringe Feldüberschneidung — hier lohnt der Anruf">Ansprechen</span><span class="empf-grund">${sub}${netz}</span></td>`;
+    return `<td class="c-empf"><span class="empf empf-go" title="Unterauftragsvergabe geregelt und geringe Feldüberschneidung — hier lohnt der Anruf">${tk("Ansprechen")}</span><span class="empf-grund">${sub}${netz}</span></td>`;
   if(a.empfehlung==='pruefen')
-    return `<td class="c-empf"><span class="empf empf-open" title="Keine Angabe zu Unteraufträgen oder mittlere Feldüberschneidung — prüfen, ob der Anruf lohnt">Prüfen</span><span class="empf-grund">${sub}</span></td>`;
+    return `<td class="c-empf"><span class="empf empf-open" title="Keine Angabe zu Unteraufträgen oder mittlere Feldüberschneidung — prüfen, ob der Anruf lohnt">${tk("Prüfen")}</span><span class="empf-grund">${sub}</span></td>`;
   // hohe Feldüberschneidung → direkter Wettbewerb, keine Empfehlung
-  return `<td class="c-empf"><span class="empf-grund" title="Hohe Feldüberschneidung — direkter Wettbewerb, keine Kontaktempfehlung">direkter Wettbewerb</span></td>`;
+  return `<td class="c-empf"><span class="empf-grund" title="Hohe Feldüberschneidung — direkter Wettbewerb, keine Kontaktempfehlung">${tk("direkter Wettbewerb")}</span></td>`;
 }
 
 function fristCell(l){
   if(l.tage != null){                       // offene Ausschreibung: Countdown
     const urg = l.tage <= 14;
-    return `<span class="cd ${urg?'urg':''}">${val(l.tage+' Tage', l.timing.src, l.timing.hint)}<span class="cdsub">bis Schluss</span></span>`;
+    return `<span class="cd ${urg?'urg':''}">${val(l.tage+' Tage', l.timing.src, l.timing.hint)}<span class="cdsub">${tk("bis Schluss")}</span></span>`;
   }
-  if(l.src==='f01') return `<span class="cd none">—<span class="cdsub">noch keine Frist</span></span>`;
-  return `<span class="cd">${val(l.endet, l.timing.src, l.timing.hint)}<span class="cdsub">Vertragsende</span></span>`;
+  if(l.src==='f01') return `<span class="cd none">—<span class="cdsub">${tk("noch keine Frist")}</span></span>`;
+  return `<span class="cd">${val(l.endet, l.timing.src, l.timing.hint)}<span class="cdsub">${tk("Vertragsende")}</span></span>`;
 }
 
 function visible(){
@@ -932,11 +939,11 @@ function angFeld(key, titel, zweck, abgeleitet){
   return `<div class="ang-f">
     <div class="ang-h"><span class="ang-t">${titel}</span><span class="ang-x">${zweck}</span></div>
     <div class="ang-chips">
-      ${abgeleitet.map(w=>`<span class="ang-c ang-abg" title="Aus euren gewonnenen Vergaben abgeleitet">${w}<i>gemessen</i></span>`).join('')}
+      ${abgeleitet.map(w=>`<span class="ang-c ang-abg" title="Aus euren gewonnenen Vergaben abgeleitet">${w}<i>${tk("gemessen")}</i></span>`).join('')}
       ${eigene.map(w=>`<span class="ang-c ang-eig" title="Von euch angegeben, nicht überprüft">${w}
         <button class="ang-x-btn" data-angrm="${key}:${w}" aria-label="Entfernen">×</button></span>`).join('')}
       <span class="ang-add">
-        <button class="ang-plus" data-angadd="${key}">+ ergänzen</button>
+        <button class="ang-plus" data-angadd="${key}">${tk("+ ergänzen")}</button>
         ${offenerPicker===key?`<span class="ang-pop">
           ${VORSCHLAG[key].filter(v=>!eigene.includes(v)).map(v=>
             `<button class="ang-opt" data-angset="${key}:${v}">${v}</button>`).join('')}
@@ -971,12 +978,12 @@ function renderTeam(l){
       </div></div>`; }).join('')
     : `<div class="thread-empty">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.7 8.7 0 0 1-4-.9L3 20l1.4-5.5a8.4 8.4 0 0 1-.9-4A8.5 8.5 0 0 1 12 2a8.4 8.4 0 0 1 9 9.5Z"/></svg>
-        <p>Noch ruhig hier. Schreibt die erste Notiz — euer Team sieht sie.</p>
+        <p>${tk("Noch ruhig hier. Schreibt die erste Notiz — euer Team sieht sie.")}</p>
       </div>`;
   return `<div class="dbody">
     <div class="teamgrid">
       <section class="teamcol">
-        <h4>Notizen <span class="cov">${n?n+' · ':''}für euer Team sichtbar</span></h4>
+        <h4>${tk("Notizen")}<span class="cov">${n?n+' · ':''}für euer Team sichtbar</span></h4>
         <div class="thread">${thread}</div>
         <div class="composer">
           <div class="cmt-av you">${ME.initials}</div>
@@ -989,7 +996,7 @@ function renderTeam(l){
         </div>
       </section>
       <section class="teamcol logcol">
-        <h4>Verlauf <span class="cov">automatisch protokolliert</span></h4>
+        <h4>${tk("Verlauf")}<span class="cov">${tk("automatisch protokolliert")}</span></h4>
         <div class="log">${renderLog(l)}</div>
       </section>
     </div>
@@ -1038,13 +1045,13 @@ function renderChecklistBlock(a, l){
       ? `<div class="quote"><div class="lbl"><span>${it.parser?'Struktur ausgelesen':'Aus den Unterlagen'}</span>${_markBadge(it.marking)}</div><q>${esc(it.quote)}</q><div class="src">${esc(it.source_file||'')}${it.source_page?(' · S. '+esc(String(it.source_page))):''}${it.parser?' · Parser, kein LLM':''}</div></div>`
       : `<div class="quote"><div class="lbl"><span>${it.parser?'Struktur ausgelesen':'Aus den Unterlagen'}</span>${_markBadge(it.marking)}</div><q>${esc(it.label||'')}${val?(' — '+esc(String(it.value))+(it.unit?' '+esc(String(it.unit)):'')):''}</q>${it.source_file?`<div class="src">${esc(it.source_file)}${it.parser?' · Parser, kein LLM':''}</div>`:''}</div>`;
     const kombi = JSON.stringify({theme:it.theme, label:it.label, quote:it.quote||'', i:it._i});
-    const block = `<div class="block"><div class="lbl"><span>Euer Textbaustein</span><span class="mark m-v">aus eurem Profil</span></div>
+    const block = `<div class="block"><div class="lbl"><span>${tk("Euer Textbaustein")}</span><span class="mark m-v">${tk("aus eurem Profil")}</span></div>
       <textarea class="ta cl-edit" placeholder="Textbaustein aus eurem Profil einsetzen …"></textarea>
       <div class="blockfoot"><span class="cl-hist"></span><span class="acts">
-        <button class="btn btn-p btn-sm" data-clkombi='${esc(kombi)}'>Kopieren &amp; speichern</button></span></div></div>`;
+        <button class="btn btn-p btn-sm" data-clkombi='${esc(kombi)}'>${tk("Kopieren &amp; speichern")}</button></span></div></div>`;
     return `<article class="item${isDone?' done':''}" data-clitem="${it._i}">
       <div class="ih"><button class="dchk" data-clchk="${it._i}">✓</button><b>${esc(it.label||it.req_type)}${val}</b></div>
-      <div class="dsum">Abgehakt. <button class="re" data-clchk="${it._i}">wieder öffnen</button></div>
+      <div class="dsum">${tk("Abgehakt.")}<button class="re" data-clchk="${it._i}">${tk("wieder öffnen")}</button></div>
       <div class="ibody">${q}${block}</div></article>`;
   };
 
@@ -1053,22 +1060,22 @@ function renderChecklistBlock(a, l){
     return `<details class="grp" id="clg-${id}"${id==='ko'?' open':''}><summary><span class="caret">›</span>${title}<span class="cnt">${gi.length}</span></summary><div class="gbody">${gi.map(itemHtml).join('')}</div></details>`;
   }).join('');
   // §7.4 Offen (Zuschlag nicht gefunden) + §7.5 Weitere Dokumente
-  const offen = hasMissZ ? `<details class="grp" id="clg-offen"><summary><span class="caret">›</span>Offen<span class="cnt">1</span></summary><div class="gbody"><article class="item"><div class="ih"><span style="width:19px;text-align:center;color:var(--ink-400)">—</span><b>Zuschlagskriterien</b><span class="mark m-a" style="margin-left:auto">Nicht gefunden</span></div><div class="ibody"><div class="block" style="color:var(--ink-500);font-size:13px;line-height:1.6">In den Unterlagen nicht eindeutig auffindbar. Bitte selbst prüfen.</div></div></article></div></details>` : '';
-  const weitere = other.length ? `<details class="grp" id="clg-weit"><summary><span class="caret">›</span>Weitere Dokumente<span class="cnt">${other.length}</span></summary><div class="gbody"><div class="flist" style="margin-bottom:11px">${other.slice(0,20).map(f=>`<div class="f"><span class="dot">·</span> ${esc(f)}</div>`).join('')}</div></div></details>` : '';
+  const offen = hasMissZ ? `<details class="grp" id="clg-offen"><summary><span class="caret">›</span>${tk("Offen")}<span class="cnt">1</span></summary><div class="gbody"><article class="item"><div class="ih"><span style="width:19px;text-align:center;color:var(--ink-400)">—</span><b>${tk("Zuschlagskriterien")}</b><span class="mark m-a" style="margin-left:auto">${tk("Nicht gefunden")}</span></div><div class="ibody"><div class="block" style="color:var(--ink-500);font-size:13px;line-height:1.6">${tk("In den Unterlagen nicht eindeutig auffindbar. Bitte selbst prüfen.")}</div></div></article></div></details>` : '';
+  const weitere = other.length ? `<details class="grp" id="clg-weit"><summary><span class="caret">›</span>${tk("Weitere Dokumente")}<span class="cnt">${other.length}</span></summary><div class="gbody"><div class="flist" style="margin-bottom:11px">${other.slice(0,20).map(f=>`<div class="f"><span class="dot">·</span> ${esc(f)}</div>`).join('')}</div></div></details>` : '';
 
   // TOC-Chips je nicht-leerer Gruppe
   const chips = _CL_GROUPS.map(([id,title,set])=>{ const n=items.filter(it=>set.has(it.req_type)).length; return n?`<button class="tchip" data-cljump="clg-${id}">${esc(title)} <span class="n">${n}</span></button>`:''; }).join('')
-    + (hasMissZ?`<button class="tchip" data-cljump="clg-offen">Offen <span class="n">1</span></button>`:'')
-    + (other.length?`<button class="tchip" data-cljump="clg-weit">Weitere <span class="n">${other.length}</span></button>`:'');
+    + (hasMissZ?`<button class="tchip" data-cljump="clg-offen">${tk("Offen")}<span class="n">1</span></button>`:'')
+    + (other.length?`<button class="tchip" data-cljump="clg-weit">${tk("Weitere")}<span class="n">${other.length}</span></button>`:'');
 
-  const portal = (l.unterlagen&&l.unterlagen.url) ? `<a href="${esc(l.unterlagen.url)}" target="_blank" rel="noopener" class="link">Zum Vergabeportal ↗</a>` : '';
+  const portal = (l.unterlagen&&l.unterlagen.url) ? `<a href="${esc(l.unterlagen.url)}" target="_blank" rel="noopener" class="link">${tk("Zum Vergabeportal ↗")}</a>` : '';
   const chead = `<div class="chead"><div class="r1"><span class="stand">Stand der Unterlagen: ${l.lbFiles||1} Datei${(l.lbFiles||1)===1?'':'en'}</span>${portal}</div>
     <div class="disc">Bitte regelmäßig prüfen, ob neue Unterlagen vorliegen. LLM-gestützte Analyse — kann Fehler enthalten. Jede Angabe ist mit Fundstelle im Originaldokument belegt${a.rejected_items>0?`; ${a.rejected_items} unbelegte Aussagen wurden verworfen`:''}; maßgeblich bleiben die Vergabeunterlagen.</div></div>`;
-  const stake = `<div class="stake"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6-5.3-2.9L6.7 19.6l1.1-6L3.4 9.4l6-.8z"/></svg><div><b>Erfolgshonorar:</b> Gewinnst du diesen Auftrag, berechnen wir eine Erfolgsgebühr — verlierst du, nichts. Kein Aufschlag fürs Bewerben.</div></div>`;
-  const toc = `<div class="toc"><div class="th"><b>Eure Checkliste</b><span class="pr"><span class="cl-doneN">${dn}</span> von ${tot} erledigt</span></div><div class="chips">${chips}<button class="tchip all" data-clcollapse>Alle zuklappen</button></div><div class="tprog"><i class="cl-tprog" style="width:${tot?Math.round(dn/tot*100):0}%"></i></div></div>`;
+  const stake = `<div class="stake"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6-5.3-2.9L6.7 19.6l1.1-6L3.4 9.4l6-.8z"/></svg><div><b>${tk("Erfolgshonorar:")}</b>${tk("Gewinnst du diesen Auftrag, berechnen wir eine Erfolgsgebühr — verlierst du, nichts. Kein Aufschlag fürs Bewerben.")}</div></div>`;
+  const toc = `<div class="toc"><div class="th"><b>${tk("Eure Checkliste")}</b><span class="pr"><span class="cl-doneN">${dn}</span> von ${tot} erledigt</span></div><div class="chips">${chips}<button class="tchip all" data-clcollapse>${tk("Alle zuklappen")}</button></div><div class="tprog"><i class="cl-tprog" style="width:${tot?Math.round(dn/tot*100):0}%"></i></div></div>`;
 
   // a2 Erstnutzer: leere Bibliothek → die Textbausteine sind noch generische Vorlagen (§9.1).
-  const firstday = !_clHasBlocks() ? `<div class="cl-firstday">Eure Bausteinbibliothek ist noch leer — die Textvorschläge unten sind generische Vorlagen. <a href="/bausteine" class="link">Bibliothek füllen →</a> Dann setzt goVisor eure echten Referenzen und Zertifikate ein statt Platzhalter.</div>` : '';
+  const firstday = !_clHasBlocks() ? `<div class="cl-firstday">${tk("Eure Bausteinbibliothek ist noch leer — die Textvorschläge unten sind generische Vorlagen.")}<a href="/bausteine" class="link">${tk("Bibliothek füllen →")}</a>${tk("Dann setzt goVisor eure echten Referenzen und Zertifikate ein statt Platzhalter.")}</div>` : '';
   return `<div class="va-checklist" data-clroot="${l.id}">${chead}${firstday}${stake}${toc}${groupsHtml}${offen}${weitere}</div>`;
 }
 
@@ -1084,7 +1091,7 @@ function renderDocs(l){
     const a = l.lbAnalyse;
     const AMP = {gruen:['●','Bietbar','va-go'], gelb:['●','Abwägen','va-weigh'], rot:['●','Hohe Hürde','va-stop']};
     const [icon,label,cls] = AMP[a.ampel] || AMP.gelb;
-    const vahead = `<div class="va-head"><span class="va-amp ${cls}">${icon} ${label}</span><span class="cov">Vergabe-Analyse · aus den Unterlagen</span></div>
+    const vahead = `<div class="va-head"><span class="va-amp ${cls}">${icon} ${label}</span><span class="cov">${tk("Vergabe-Analyse · aus den Unterlagen")}</span></div>
       ${a.ampel_grund?`<p class="va-grund">${esc(a.ampel_grund)}</p>`:''}
       ${a.zusammenfassung?`<p class="va-sum">${esc(a.zusammenfassung)}</p>`:''}`;
     // Reiche Checkliste (§7, Prototyp-Design) wenn vorhanden — sie trägt Kopf/Haftung/Erfolgshonorar selbst.
@@ -1098,26 +1105,26 @@ function renderDocs(l){
          ${(a.fristen&&a.fristen.length)?bl('Fristen', `<div class="kv">${a.fristen.map(f=>`<div class="kvi"><span class="k">${esc(f.typ||'')}</span><span class="vv"><span class="v">${esc(f.wert||'')}</span></span></div>`).join('')}</div>`):''}
          ${bl('Aufwandstreiber', check(a.aufwand))}`;
     return `<section class="sec va-sec">${vahead}${body}
-      <p class="rt-note">LLM-gestützte Analyse — kann Fehler enthalten; Angaben mit Fundstelle belegt, maßgeblich bleiben die Vergabeunterlagen.</p>
+      <p class="rt-note">${tk("LLM-gestützte Analyse — kann Fehler enthalten; Angaben mit Fundstelle belegt, maßgeblich bleiben die Vergabeunterlagen.")}</p>
     </section>`;
   })() : istOffen ? (()=>{
     const u = l.unterlagen || {};
     const ext = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>`;
     const dl = u.url
       ? `<a class="va-dl" href="${esc(u.url)}" target="_blank" rel="noopener">Beim Vergabeportal herunterladen ${ext}</a>`
-      : `<span class="va-dl-off">Unterlagen beim Vergabeportal herunterladen</span>`;
+      : `<span class="va-dl-off">${tk("Unterlagen beim Vergabeportal herunterladen")}</span>`;
     return `<section class="sec va-empty">
-      <h4>Vergabe-Analyse <span class="cov">aus euren Unterlagen</span></h4>
-      <p class="va-sum">Aus den Vergabeunterlagen machen wir in Sekunden eine <b>Ampel-Einschätzung</b>, eine abhakbare <b>Bieter-Checkliste</b> (K.o.-Kriterien, Eignungsnachweise, Zuschlagsgewichte) und <b>füllen Firmenangaben vor</b>.</p>
+      <h4>${tk("Vergabe-Analyse")}<span class="cov">${tk("aus euren Unterlagen")}</span></h4>
+      <p class="va-sum">${tk("Aus den Vergabeunterlagen machen wir in Sekunden eine")}<b>${tk("Ampel-Einschätzung")}</b>${tk(", eine abhakbare")}<b>${tk("Bieter-Checkliste")}</b>${tk("(K.o.-Kriterien, Eignungsnachweise, Zuschlagsgewichte) und")}<b>${tk("füllen Firmenangaben vor")}</b>.</p>
       <ol class="va-steps">
         <li><span class="va-step-n">1</span><div>${dl}</div></li>
-        <li><span class="va-step-n">2</span><div><button class="va-upload-btn" data-uploaddocs="${l.id}">Hier hochladen (ZIP/PDF)</button></div></li>
-        <li><span class="va-step-n">3</span><div class="va-step-res">Ampel + Checkliste erscheinen automatisch</div></li>
+        <li><span class="va-step-n">2</span><div><button class="va-upload-btn" data-uploaddocs="${l.id}">${tk("Hier hochladen (ZIP/PDF)")}</button></div></li>
+        <li><span class="va-step-n">3</span><div class="va-step-res">${tk("Ampel + Checkliste erscheinen automatisch")}</div></li>
       </ol>
       <div class="va-status" data-upstatus="${l.id}"></div>
     </section>`;
   })() : `<section class="sec va-empty">
-      <h4>Vergabe-Analyse</h4>
+      <h4>${tk("Vergabe-Analyse")}</h4>
       <p class="va-sum va-none">${l.src==='auslauf'
         ? 'Diese Ausschreibung läuft aus bzw. ist abgeschlossen — die Vergabeunterlagen sind nur während der laufenden Angebotsfrist verfügbar. Sobald der Nachfolge-Auftrag ausgeschrieben ist, kannst du hier dessen Unterlagen analysieren.'
         : 'Diese Ausschreibung ist noch nicht offen (Vorinformation) — sobald die Angebotsfrist läuft, kannst du hier die Vergabeunterlagen hochladen und analysieren.'}</p>
@@ -1134,16 +1141,16 @@ function renderDocs(l){
     const w = (s.weights && Object.keys(s.weights).length) ? s.weights : null;
     if(!rows.length && !w) return '';
     return `<section class="sec">
-      <h4>Anforderungen <span class="cov">aus den Vergabeunterlagen extrahiert</span></h4>
+      <h4>${tk("Anforderungen")}<span class="cov">${tk("aus den Vergabeunterlagen extrahiert")}</span></h4>
       ${rows.length ? `<div class="kv">${rows.map(([k,v])=>`<div class="kvi"><span class="k">${k}</span><span class="vv"><span class="v">${esc(v)}</span></span></div>`).join('')}</div>` : ''}
-      ${w ? `<div class="zug"><div class="zug-h">Zuschlagsgewichte</div>${Object.entries(w).map(([k,v])=>`<div class="zug-row"><span class="zug-k">${esc(k)}</span><span class="zug-bar"><i style="width:${Math.max(3,Math.min(100,Number(v)||0))}%"></i></span><span class="zug-v">${esc(String(v))} %</span></div>`).join('')}</div>` : ''}
+      ${w ? `<div class="zug"><div class="zug-h">${tk("Zuschlagsgewichte")}</div>${Object.entries(w).map(([k,v])=>`<div class="zug-row"><span class="zug-k">${esc(k)}</span><span class="zug-bar"><i style="width:${Math.max(3,Math.min(100,Number(v)||0))}%"></i></span><span class="zug-v">${esc(String(v))} %</span></div>`).join('')}</div>` : ''}
     </section>`;
   })() : '';
 
   const volltext = l.lbText ? `<section class="sec sec-raw">
-      <h4>Leistungsbeschreibung <span class="cov">aus den Vergabeunterlagen · ${l.lbFiles||1} Datei${(l.lbFiles||1)===1?'':'en'}</span></h4>
+      <h4>${tk("Leistungsbeschreibung")}<span class="cov">aus den Vergabeunterlagen · ${l.lbFiles||1} Datei${(l.lbFiles||1)===1?'':'en'}</span></h4>
       <details class="rawtext"${l.lbAnalyse?'':' open'}>
-        <summary><span class="rt-open">Volltext aus den Unterlagen</span><span class="rt-len">${Math.round((l.lbChars||l.lbText.length)/1000)} Tsd. Zeichen${l.lbTruncated?' · gekürzt':''}</span></summary>
+        <summary><span class="rt-open">${tk("Volltext aus den Unterlagen")}</span><span class="rt-len">${Math.round((l.lbChars||l.lbText.length)/1000)} Tsd. Zeichen${l.lbTruncated?' · gekürzt':''}</span></summary>
         <div class="rt-body lb-doc">${l.lbText.split(/\n\n+/).slice(0,400).map(p=>`<p>${esc(p.trim())}</p>`).join('')}</div>
       </details>
     </section>` : '';
@@ -1177,41 +1184,40 @@ function renderAwardUebersicht(l){
     : passung;
   const isoDe = d => { const m=String(d).match(/^(\d{4})-(\d{2})-(\d{2})/); return m?`${m[3]}.${m[2]}.${m[1]}`:String(d); };
   const firma = a.winnerId
-    ? `<button class="aw-btn aw-btn-p" data-firma="${esc(a.winnerId)}">Firmenprofil</button>` : '';
+    ? `<button class="aw-btn aw-btn-p" data-firma="${esc(a.winnerId)}">${tk("Firmenprofil")}</button>` : '';
   return `<div class="dbody dbody-ov">
     <div class="aw-cards">
       <section class="aw-card">
-        <h4>Der Zuschlag</h4>
-        <div class="aw-line"><span class="k">Gewinner</span><span class="v">${esc(a.winner)}</span></div>
-        <div class="aw-line"><span class="k">Vergabestelle</span><span class="v">${esc(l.buyer||'—')}</span></div>
-        <div class="aw-line"><span class="k">Zuschlag erteilt</span><span class="v">${a.date?isoDe(a.date):'—'}</span></div>
-        <div class="aw-line"><span class="k">Auftragswert</span><span class="v">${esc(l.volumen.wert)}<span class="aw-vm">${l.volumen.src==='echt'?'gemessen':'geschätzt'}</span></span></div>
-        <div class="aw-line"><span class="k">Laufzeit</span><span class="v">${a.laufzeit?'bis '+a.laufzeit:'nicht veröffentlicht'}</span></div>
-        <div class="aw-line"><span class="k">Unteraufträge</span><span class="v">${subTxt}</span></div>
+        <h4>${tk("Der Zuschlag")}</h4>
+        <div class="aw-line"><span class="k">${tk("Gewinner")}</span><span class="v">${esc(a.winner)}</span></div>
+        <div class="aw-line"><span class="k">${tk("Vergabestelle")}</span><span class="v">${esc(l.buyer||'—')}</span></div>
+        <div class="aw-line"><span class="k">${tk("Zuschlag erteilt")}</span><span class="v">${a.date?isoDe(a.date):'—'}</span></div>
+        <div class="aw-line"><span class="k">${tk("Auftragswert")}</span><span class="v">${esc(l.volumen.wert)}<span class="aw-vm">${l.volumen.src==='echt'?'gemessen':'geschätzt'}</span></span></div>
+        <div class="aw-line"><span class="k">${tk("Laufzeit")}</span><span class="v">${a.laufzeit?'bis '+a.laufzeit:'nicht veröffentlicht'}</span></div>
+        <div class="aw-line"><span class="k">${tk("Unteraufträge")}</span><span class="v">${subTxt}</span></div>
       </section>
       <section class="aw-card">
         <h4>${esc(a.winner)} — was wir wissen</h4>
-        <div class="aw-line"><span class="k">Zuschläge 36 Monate</span><span class="v">${s.wins36!=null?s.wins36:'—'}</span></div>
-        <div class="aw-line"><span class="k">Ø Auftragswert</span><span class="v">${s.avgValue||'—'}</span></div>
-        <div class="aw-line"><span class="k">mit Unterauftrags-Regelung</span><span class="v">${s.subQuote||'—'}</span></div>
-        ${bars ? `<h4 style="margin-top:14px">Leistungsfelder</h4><div class="aw-bars">${bars}</div>` : ''}
+        <div class="aw-line"><span class="k">${tk("Zuschläge 36 Monate")}</span><span class="v">${s.wins36!=null?s.wins36:'—'}</span></div>
+        <div class="aw-line"><span class="k">${tk("Ø Auftragswert")}</span><span class="v">${s.avgValue||'—'}</span></div>
+        <div class="aw-line"><span class="k">${tk("mit Unterauftrags-Regelung")}</span><span class="v">${s.subQuote||'—'}</span></div>
+        ${bars ? `<h4 style="margin-top:14px">${tk("Leistungsfelder")}</h4><div class="aw-bars">${bars}</div>` : ''}
       </section>
     </div>
 
     <div class="aw-note aw-note-g">
-      <div><b>Warum das zu euch passen könnte:</b> ${passungHead}
-      <div class="aw-mini">Abgeleitet aus der Zuschlagshistorie · kein Hinweis auf konkreten Bedarf</div></div>
+      <div><b>${tk("Warum das zu euch passen könnte:")}</b> ${passungHead}
+      <div class="aw-mini">${tk("Abgeleitet aus der Zuschlagshistorie · kein Hinweis auf konkreten Bedarf")}</div></div>
     </div>
 
     <div class="aw-note aw-note-n">
-      <div>„Unteraufträge geregelt" heißt: In den Vergabeunterlagen ist Unterauftragsvergabe vorgesehen.
-      Ob und was tatsächlich vergeben wird, steht nirgends — das Feld liegt bei etwa einem Drittel der Verfahren vor.</div>
+      <div>${tk("„Unteraufträge geregelt\" heißt: In den Vergabeunterlagen ist Unterauftragsvergabe vorgesehen. Ob und was tatsächlich vergeben wird, steht nirgends — das Feld liegt bei etwa einem Drittel der Verfahren vor.")}</div>
     </div>
 
     <div class="aw-actbar">
-      <span class="aw-hint">goVisor täuscht keine Vermittlung vor: ohne beidseitige Netzwerk-Freigabe kein Kontaktknopf — nur öffentliche Angaben.</span>
+      <span class="aw-hint">${tk("goVisor täuscht keine Vermittlung vor: ohne beidseitige Netzwerk-Freigabe kein Kontaktknopf — nur öffentliche Angaben.")}</span>
       <span class="aw-acts">
-        <button class="aw-btn" data-merk="${l.id}">Merken</button>
+        <button class="aw-btn" data-merk="${l.id}">${tk("Merken")}</button>
         ${firma}
       </span>
     </div>
@@ -1229,35 +1235,35 @@ function renderUebersicht(l){
   };
   return `<div class="dbody dbody-ov">
     <section class="sec">
-      <h4>Eckdaten</h4>
+      <h4>${tk("Eckdaten")}</h4>
       <div class="kv">
-        <div class="kvi kvi-lead"><span class="k">Auftragsvolumen</span>
+        <div class="kvi kvi-lead"><span class="k">${tk("Auftragsvolumen")}</span>
           <span class="vv">${l.volumen.src==='unbekannt'?'<span class="v v-unk">Nicht veröffentlicht</span>':iv(l.volumen.wert,l.volumen.src,l.volumen.hint,true)}</span></div>
-        <div class="kvi kvi-lead"><span class="k">Frist</span>
+        <div class="kvi kvi-lead"><span class="k">${tk("Frist")}</span>
           <span class="vv">${l.tage!=null?iv(l.tage+' Tage',l.timing.src,l.timing.hint,true)+'<span class="vm">bis Schluss</span>':iv(l.endet,l.timing.src,l.timing.hint,true)}</span></div>
-        <div class="kvi"><span class="k">Art der Leistung</span>
+        <div class="kvi"><span class="k">${tk("Art der Leistung")}</span>
           <span class="vv">${iv(l.natur,'echt')}<span class="vm">CPV ${l.cpv}</span></span></div>
-        <div class="kvi"><span class="k">Wettbewerbslage</span>
+        <div class="kvi"><span class="k">${tk("Wettbewerbslage")}</span>
           <span class="vv">${l.neu?'<span class="tag-neu">Neuvergabe</span>':'<span class="tag-folge">Folgevergabe</span>'}<span class="vm">${l.neu?'kein Amtsinhaber':'Amtsinhaber vorhanden'}</span></span></div>
-        <div class="kvi"><span class="k">Land</span>
+        <div class="kvi"><span class="k">${tk("Land")}</span>
           <span class="vv">${iv(LAND_LABEL[l.land]||l.land||'Deutschland','echt')}</span></div>
-        <div class="kvi"><span class="k">Leistungsort</span>
+        <div class="kvi"><span class="k">${tk("Leistungsort")}</span>
           <span class="vv">${iv(l.region,'echt')}${l.marktOk===false
             ? '<span class="vm">nicht kreisgenau — kein Marktkontext</span>'
             : '<button class="inline-link" data-tab="markt">Markt ansehen</button>'}</span></div>
-        <div class="kvi"><span class="k">Vertragsart</span>
+        <div class="kvi"><span class="k">${tk("Vertragsart")}</span>
           <span class="vv">${l.art?iv(l.art,'echt'):l.istRahmen?iv('Rahmenvertrag','echt'):'<span class="v-unk">nicht angegeben</span>'}</span></div>
-      <div class="kvi"><span class="k">Grundlaufzeit</span>
+      <div class="kvi"><span class="k">${tk("Grundlaufzeit")}</span>
           <span class="vv">${l.laufzeit?iv(l.laufzeit,'echt'):'<span class="v-unk">nicht angegeben</span>'}</span></div>
-        <div class="kvi"><span class="k">Geplanter Beginn</span>
+        <div class="kvi"><span class="k">${tk("Geplanter Beginn")}</span>
           <span class="vv">${l.beginnGeplant?iv(l.beginnGeplant,'echt'):'<span class="v-unk">nicht angegeben</span>'}</span></div>
-        <div class="kvi"><span class="k">Geplantes Ende</span>
+        <div class="kvi"><span class="k">${tk("Geplantes Ende")}</span>
           <span class="vv">${l.endeGeplant?iv(l.endeGeplant,'echt'):(l.endet?iv(l.endet,'schaetz','Aus der Laufzeit geschätzt — die Ausschreibung nennt kein Enddatum.'):'<span class="v-unk">nicht angegeben</span>')}</span></div>
-        <div class="kvi"><span class="k">Verlängerung</span>
+        <div class="kvi"><span class="k">${tk("Verlängerung")}</span>
           <span class="vv">${l.verlaengerung?iv(l.verlaengerung,'echt'):'<span class="v-unk">nicht angegeben</span>'}</span></div>
-        <div class="kvi"><span class="k">Rechtsrahmen</span>
+        <div class="kvi"><span class="k">${tk("Rechtsrahmen")}</span>
           <span class="vv">${l.rahmen?`${iv(RAHMEN[l.rahmen].kurz,'echt')}<span class="vm">${RAHMEN[l.rahmen].lang}</span>`:'<span class="v-unk">nicht angegeben</span>'}</span></div>
-        <div class="kvi"><span class="k">Verfahren</span>
+        <div class="kvi"><span class="k">${tk("Verfahren")}</span>
           <span class="vv">${l.verfahren?iv(l.verfahren,'echt'):'<span class="v-unk">nicht angegeben</span>'}${
             l.verfahren&&l.verfahren.startsWith('Verhandlung')
               ?'<span class="vm">Gespräche möglich — Beziehung zählt mehr als bei offenen Verfahren</span>':''}</span></div>
@@ -1265,7 +1271,7 @@ function renderUebersicht(l){
     </section>
 
     ${(l.extras && l.extras.length) ? `<section class="sec">
-      <h4>Zusätzliche Angaben <span class="land-tag">${l.land==='CH'?'🇨🇭 nur Schweiz':l.land==='AT'?'🇦🇹 nur Österreich':(l.land||'')}</span></h4>
+      <h4>${tk("Zusätzliche Angaben")}<span class="land-tag">${l.land==='CH'?'🇨🇭 nur Schweiz':l.land==='AT'?'🇦🇹 nur Österreich':(l.land||'')}</span></h4>
       <div class="kv">
         ${l.extras.map(e=>`<div class="kvi"><span class="k">${e.label}</span>
           <span class="vv">${iv(e.value,'echt')}</span></div>`).join('')}
@@ -1273,33 +1279,29 @@ function renderUebersicht(l){
     </section>` : ''}
 
     ${!l.beschreibung ? `<section class="sec">
-      <h4>Leistungsbeschreibung</h4>
-      <div class="kurztext leer">Die Bekanntmachung enthält keinen Beschreibungstext.</div>
-      <p class="rt-note">Das kommt häufig vor — rund sechs von zehn Bekanntmachungen tragen weniger als
-      200 Zeichen, viele gar nichts. Was tatsächlich beschafft wird, steht dann ausschließlich in den
-      Vergabeunterlagen.</p>
+      <h4>${tk("Leistungsbeschreibung")}</h4>
+      <div class="kurztext leer">${tk("Die Bekanntmachung enthält keinen Beschreibungstext.")}</div>
+      <p class="rt-note">${tk("Das kommt häufig vor — rund sechs von zehn Bekanntmachungen tragen weniger als 200 Zeichen, viele gar nichts. Was tatsächlich beschafft wird, steht dann ausschließlich in den Vergabeunterlagen.")}</p>
     </section>` : ''}
 
     ${l.beschreibung && !l.hasDetail ? `<section class="sec">
-      <h4>Leistungsbeschreibung</h4>
+      <h4>${tk("Leistungsbeschreibung")}</h4>
       <div class="kurztext">${esc(l.beschreibung)}</div>
-      <p class="rt-note">Mehr steht in der Bekanntmachung nicht. Das ist der Normalfall —
-      bei rund sechs von zehn Ausschreibungen umfasst der Beschreibungstext weniger als 200 Zeichen.
-      Die eigentliche Leistungsbeschreibung liegt in den Vergabeunterlagen auf dem Vergabeportal.</p>
+      <p class="rt-note">${tk("Mehr steht in der Bekanntmachung nicht. Das ist der Normalfall — bei rund sechs von zehn Ausschreibungen umfasst der Beschreibungstext weniger als 200 Zeichen. Die eigentliche Leistungsbeschreibung liegt in den Vergabeunterlagen auf dem Vergabeportal.")}</p>
     </section>` : ''}
 
     ${l.hasDetail && l.beschreibung ? `<section class="sec sec-raw">
-      <h4>Leistungsbeschreibung <span class="cov">unverändert aus der Bekanntmachung</span></h4>
+      <h4>${tk("Leistungsbeschreibung")}<span class="cov">${tk("unverändert aus der Bekanntmachung")}</span></h4>
       <details class="rawtext" open>
-        <summary><span class="rt-open">Originaltext</span><span class="rt-len">${
+        <summary><span class="rt-open">${tk("Originaltext")}</span><span class="rt-len">${
           l.beschreibung.trim().split(/\s+/).length} Wörter</span></summary>
         <div class="rt-body">${l.beschreibung.split(/\n\n+/).map(p=>`<p>${esc(p.trim())}</p>`).join('')}</div>
       </details>
-      <p class="rt-note">Wir kürzen und glätten nichts — was die Vergabestelle geschrieben hat, steht so da.</p>
+      <p class="rt-note">${tk("Wir kürzen und glätten nichts — was die Vergabestelle geschrieben hat, steht so da.")}</p>
 
       ${(l.extrakt||[]).length ? `<div class="ex">
         <div class="ex-head">
-          <span class="ex-h">Aus dem Text gelesen</span>
+          <span class="ex-h">${tk("Aus dem Text gelesen")}</span>
           <button class="ex-link" data-tab="analyse" data-anchor="anforderungen">
             Anforderungs-Check${isFreeLimit()?' <i>· nutzt eine Bewertung</i>':''}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -1329,28 +1331,26 @@ function renderUebersicht(l){
                     <i class="ex-src">${tref?'gesucht':x.s==='cpv'?'CPV':'Text'}</i>
                   </button>`;}).join('')}
                 ${rest>0?`<button class="ex-more" data-grp="${k}">+ ${rest}</button>`:''}
-                ${offen&&items.length>KAP?`<button class="ex-more" data-grp="${k}">weniger</button>`:''}
+                ${offen&&items.length>KAP?`<button class="ex-more" data-grp="${k}">${tk("weniger")}</button>`:''}
               </div>`;
             }).join('');
           })()}
         </div>
         <div class="ex-legend">
-          <span><b>CPV</b> aus der amtlichen Einordnung</span>
-          <span><b>Text</b> aus der Beschreibung gelesen</span>
-          <span class="ex-hint">Klick einen Begriff, um ihn im Text zu finden.</span>
+          <span><b>${tk("CPV")}</b>${tk("aus der amtlichen Einordnung")}</span>
+          <span><b>${tk("Text")}</b>${tk("aus der Beschreibung gelesen")}</span>
+          <span class="ex-hint">${tk("Klick einen Begriff, um ihn im Text zu finden.")}</span>
         </div>
       </div>` : ''}
     </section>` : ''}
 
 <section class="sec">
-      <h4>Auftraggeber</h4>
+      <h4>${tk("Auftraggeber")}</h4>
       <div class="kv">
-        <div class="kvi kvi-full"><span class="k">Vergabestelle</span>
+        <div class="kvi kvi-full"><span class="k">${tk("Vergabestelle")}</span>
           <span class="vv"><span class="v">${esc(l.buyer)}</span></span></div>
       </div>
-      <button class="sec-link" data-tab="buyer">
-        Käufer-Dossier ansehen
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      <button class="sec-link" data-tab="buyer">${tk("Käufer-Dossier ansehen")}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </button>
     </section>
 
@@ -1358,32 +1358,32 @@ function renderUebersicht(l){
       <h4>${l.eigen ? 'Euer Vertrag' : 'Aktueller Auftragnehmer'}</h4>
       ${!l.eigen && inc ? `<div class="ownclaim">
         <span>Ist das euer Vertrag? ${l.eigenKandidat?'Der Name ähnelt eurem, war aber nicht eindeutig genug.':''}</span>
-        <button class="oc-claim" data-own="${l.id}:ja">Als unseren übernehmen</button>
+        <button class="oc-claim" data-own="${l.id}:ja">${tk("Als unseren übernehmen")}</button>
       </div>` : ''}
       ${l.eigen && l.eigenBestaetigt===null ? `<div class="ownconfirm">
-        <div class="oc-t"><b>Gehört dieser Vertrag euch?</b></div>
+        <div class="oc-t"><b>${tk("Gehört dieser Vertrag euch?")}</b></div>
         <div class="oc-x">Wir haben ${MEINE_FIRMA} als Auftragnehmer erkannt, aber nur über den Firmennamen —
         das ist bei etwa jedem zwanzigsten Namen nicht eindeutig. Erst wenn du bestätigst, behandeln wir den Vertrag
         als euren und warnen euch vor dem Auslaufen.</div>
         <div class="oc-btns">
-          <button class="oc-yes" data-own="${l.id}:ja">Ja, gehört uns</button>
-          <button class="oc-no" data-own="${l.id}:nein">Nein, nicht unserer</button>
+          <button class="oc-yes" data-own="${l.id}:ja">${tk("Ja, gehört uns")}</button>
+          <button class="oc-no" data-own="${l.id}:nein">${tk("Nein, nicht unserer")}</button>
         </div>
       </div>` : ''}
-      ${!inc ? `<div class="note-box"><b>Noch nicht vergeben.</b> Diese Ausschreibung ist offen — kein Amtsinhaber, kein Wechsel-Score. Offenes Feld.</div>`
-      : inc.src==='unsicher' && !l.eigen ? `<div class="note-box"><b><span class="pdot pdot-unsicher"></span>${esc(inc.name)}</b><br>Nur über den Namen aufgelöst. Wir zeigen keine Vertragsdauer, solange die Zuordnung nicht eindeutig ist.</div>`
+      ${!inc ? `<div class="note-box"><b>${tk("Noch nicht vergeben.")}</b>${tk("Diese Ausschreibung ist offen — kein Amtsinhaber, kein Wechsel-Score. Offenes Feld.")}</div>`
+      : inc.src==='unsicher' && !l.eigen ? `<div class="note-box"><b><span class="pdot pdot-unsicher"></span>${esc(inc.name)}</b><br>${tk("Nur über den Namen aufgelöst. Wir zeigen keine Vertragsdauer, solange die Zuordnung nicht eindeutig ist.")}</div>`
       : `<div class="kv">
-          <div class="kvi kvi-full"><span class="k">Firma</span><span class="vv"><span class="v">${esc(inc.name)}</span>${
-            inc.groupId?`<button class="inline-link" data-firma="${esc(inc.groupId)}">Firmenprofil ›</button>`:''}${
+          <div class="kvi kvi-full"><span class="k">${tk("Firma")}</span><span class="vv"><span class="v">${esc(inc.name)}</span>${
+            inc.groupId?`<button class="inline-link" data-firma="${esc(inc.groupId)}">${tk("Firmenprofil ›")}</button>`:''}${
             l.eigen&&l.eigenBestaetigt===true?'<span class="oc-tag">von euch bestätigt</span>':''}</span></div>
-          <div class="kvi"><span class="k">Auftragnehmer seit</span><span class="vv">${iv(inc.seit,'echt',null,true)}</span></div>
-          ${l.kette ? `<div class="kvi"><span class="k">Nachfolge-Kette</span><span class="vv"><span class="v">${Number(l.kette.tiefe)} Verträge in Folge${l.kette.seit?` seit ${esc(l.kette.seit)}`:''}</span> <span class="oc-tag">wiederkehrender Bedarf</span></span></div>` : ''}
+          <div class="kvi"><span class="k">${tk("Auftragnehmer seit")}</span><span class="vv">${iv(inc.seit,'echt',null,true)}</span></div>
+          ${l.kette ? `<div class="kvi"><span class="k">${tk("Nachfolge-Kette")}</span><span class="vv"><span class="v">${Number(l.kette.tiefe)} Verträge in Folge${l.kette.seit?` seit ${esc(l.kette.seit)}`:''}</span> <span class="oc-tag">${tk("wiederkehrender Bedarf")}</span></span></div>` : ''}
           <div class="kvi"><span class="k">Zuschläge in CPV ${l.cpv}</span><span class="vv">${iv('47','echt',null,true)}</span></div>
         </div>`}
     </section>
 
     <section class="sec">
-      <h4>Quelle</h4>
+      <h4>${tk("Quelle")}</h4>
       ${(()=>{
         // Echter Quell-Link: TED-Notices → TED-Viewer (id ist die notice_id `NNNNNN_YYYY`, TED
         // nutzt den Bindestrich). Sonst der hinterlegte Vergabeportal-Link. Kein toter href="#".
@@ -1394,15 +1394,12 @@ function renderUebersicht(l){
         const label = isTed ? 'TED' : 'Vergabeportal';
         return href
           ? `<a class="tedlink" href="${esc(href)}" target="_blank" rel="noopener">${label} ${ext}</a>`
-          : `<span class="v-unk">nicht verlinkt</span>`;
+          : `<span class="v-unk">${tk("nicht verlinkt")}</span>`;
       })()}
     </section>
 
         <div class="prov-legend">
-      <span class="pdot pdot-schaetz"></span> geschätzt
-      <span class="pdot pdot-unsicher"></span> unsicher
-      <span class="pl-unk">grau</span> unbekannt
-      <span class="pl-plain">· belegte Werte ohne Markierung</span>
+      <span class="pdot pdot-schaetz"></span>${tk("geschätzt")}<span class="pdot pdot-unsicher"></span>${tk("unsicher")}<span class="pl-unk">${tk("grau")}</span>${tk("unbekannt")}<span class="pl-plain">${tk("· belegte Werte ohne Markierung")}</span>
     </div>
   </div>`;
 }
@@ -1427,14 +1424,14 @@ function renderTeilnahme(l){
           ? 'Kein direkter Unterlagen-Link veröffentlicht — nur die Vergabeplattform. Dort mit der Vergabenummer suchen.'
           : 'Die Bekanntmachung nennt keinen Link zu den Unterlagen.';
       const btn = isDocs
-        ? `<a class="unt-btn" href="${href}" target="_blank" rel="noopener">Unterlagen öffnen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>`
+        ? `<a class="unt-btn" href="${href}" target="_blank" rel="noopener">${tk("Unterlagen öffnen")}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>`
         : isPortal
-          ? `<a class="unt-btn unt-btn-portal" href="${href}" target="_blank" rel="noopener">Zur Vergabeplattform<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>`
+          ? `<a class="unt-btn unt-btn-portal" href="${href}" target="_blank" rel="noopener">${tk("Zur Vergabeplattform")}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>`
           : '<span class="unt-leer">kein Link</span>';
       return `
       <div class="unt">
         <div class="unt-m">
-          <span class="unt-t">Vergabeunterlagen</span>
+          <span class="unt-t">${tk("Vergabeunterlagen")}</span>
           <span class="unt-x">${desc}${l.aufwand&&l.aufwand.eabgabe==='Pflicht'?'<br>Abgabe nur elektronisch — die Registrierung dauert und sollte früh erledigt sein.':''}</span>
         </div>
         ${btn}
@@ -1442,12 +1439,12 @@ function renderTeilnahme(l){
     })()}</section>
 
     <section class="sec">
-      <h4>Fristen</h4>
+      <h4>${tk("Fristen")}</h4>
       <div class="kv">
-        <div class="kvi"><span class="k">Frist für Rückfragen</span>
+        <div class="kvi"><span class="k">${tk("Frist für Rückfragen")}</span>
           <span class="vv">${l.fragefrist?iv('bis '+l.fragefrist,'echt')
             :(l.aufwand&&l.aufwand.fragefrist?iv('noch '+l.aufwand.fragefrist,'echt'):'<span class="v-unk">nicht veröffentlicht</span>')}</span></div>
-        <div class="kvi"><span class="k">Angebotsfrist</span>
+        <div class="kvi"><span class="k">${tk("Angebotsfrist")}</span>
           <span class="vv">${(()=>{
             // #16: echte Angebotsfrist aus den Daten — Datum + Resttage, Dringlichkeit gefärbt.
             // frist.date (aus dem Export) hat Vorrang; demo/Alt-Leads fallen auf l.tage zurück.
@@ -1466,30 +1463,30 @@ function renderTeilnahme(l){
               : `noch ${esc(tage)} Tage`;
             return `<span class="v">${body}${est?' <span class="vm">voraussichtlich</span>':''}</span>${pdotT(est?'schaetz':'echt')}`;
           })()}</span></div>
-        <div class="kvi kvi-full"><span class="k">Submissionstermin</span>
+        <div class="kvi kvi-full"><span class="k">${tk("Submissionstermin")}</span>
           <span class="vv">${l.submission
             ? `${iv(l.submission,'echt')}<span class="vm">${l.rahmen==='vob'?'öffentliche Öffnung — Teilnahme möglich, ihr seht die Mitbieter':'öffentliche Angebotsöffnung'}</span>`
             : '<span class="v-unk">nicht veröffentlicht</span>'}</span></div>
-        <div class="kvi"><span class="k">Bindefrist</span>
+        <div class="kvi"><span class="k">${tk("Bindefrist")}</span>
           <span class="vv">${l.aufwand&&l.aufwand.bindefrist?iv(l.aufwand.bindefrist,'echt'):'<span class="v-unk">nicht angegeben</span>'}</span></div>
         </div>
     </section>
 
     <section class="sec">
-      <h4>Zuschnitt</h4>
+      <h4>${tk("Zuschnitt")}</h4>
       <div class="kv">
-        <div class="kvi"><span class="k">Teilbar</span>
+        <div class="kvi"><span class="k">${tk("Teilbar")}</span>
           <span class="vv">${l.lose&&l.lose.length>1
             ? `${iv('ja — '+l.lose.length+' Lose','echt')}` : iv('nein — ein Gesamtlos','echt')}</span></div>
-        <div class="kvi"><span class="k">Angebot auf höchstens</span>
+        <div class="kvi"><span class="k">${tk("Angebot auf höchstens")}</span>
           <span class="vv">${l.loseMaxAngebot?iv(l.loseMaxAngebot+' Lose','echt'):'<span class="v-na">nicht begrenzt</span>'}</span></div>
-        <div class="kvi"><span class="k">Zuschlag auf höchstens</span>
+        <div class="kvi"><span class="k">${tk("Zuschlag auf höchstens")}</span>
           <span class="vv">${l.loseMaxZuschlag?iv(l.loseMaxZuschlag+' Lose','echt'):'<span class="v-na">nicht begrenzt</span>'}</span></div>
-        <div class="kvi kvi-full"><span class="k">Bietergemeinschaft</span>
+        <div class="kvi kvi-full"><span class="k">${tk("Bietergemeinschaft")}</span>
           <span class="vv">${l.bgKlausel?iv(l.bgKlausel,'echt'):'<span class="v-unk">nicht angegeben</span>'}</span></div>
-        <div class="kvi"><span class="k">Nebenangebote</span>
+        <div class="kvi"><span class="k">${tk("Nebenangebote")}</span>
           <span class="vv">${l.nebenangebote?iv(l.nebenangebote,'echt'):'<span class="v-unk">nicht angegeben</span>'}</span></div>
-        <div class="kvi"><span class="k">Rahmenvereinbarung</span>
+        <div class="kvi"><span class="k">${tk("Rahmenvereinbarung")}</span>
           <span class="vv">${l.rahmenvertrag?iv(l.rahmenvertrag,'echt'):l.istRahmen?iv('ja','echt'):'<span class="v-unk">nicht angegeben</span>'}</span></div>
       </div>
     </section>
@@ -1505,18 +1502,18 @@ ${l.lose && l.lose.length>1 ? (()=>{
       // #12: das Los, über das die Ausschreibung relevant wurde (Best-Los-Vererbung).
       const passtNr = l.bestLot ? l.bestLot.nr : null;
       return `<section class="sec">
-        <h4>Lose <span class="cov">${l.lose.length} Teilleistungen</span></h4>
-        ${passtNr!=null?`<div class="los-passt-hint">Für euch relevant ist <b>Los ${passtNr}</b>${l.bestLot.titel?`: ${l.bestLot.titel}`:''}${l.bestLot.region?` · ${l.bestLot.region}`:''} — die Ausschreibung erbt dessen Relevanz, auch wenn sie insgesamt größer ist.</div>`:''}
+        <h4>${tk("Lose")}<span class="cov">${l.lose.length} Teilleistungen</span></h4>
+        ${passtNr!=null?`<div class="los-passt-hint">${tk("Für euch relevant ist")}<b>Los ${passtNr}</b>${l.bestLot.titel?`: ${l.bestLot.titel}`:''}${l.bestLot.region?` · ${l.bestLot.region}`:''} — die Ausschreibung erbt dessen Relevanz, auch wenn sie insgesamt größer ist.</div>`:''}
         <div class="einstieg">
           <div class="ein-m">
-            <span class="ein-k">Einstiegsschwelle</span>
+            <span class="ein-k">${tk("Einstiegsschwelle")}</span>
             <span class="ein-v">${fmt(min)}</span>
           </div>
           <span class="ein-x">Ihr müsst nicht auf die volle Summe von ${fmt(werte.reduce((a,b)=>a+b,0))}
           bieten. Das kleinste Los ist einzeln vergeben — <b>${l.lose[minI].titel}</b>.</span>
         </div>
         <div class="lose">
-          <div class="los los-head"><span>Los</span><span>Leistung</span><span>Wert</span><span>Laufzeit</span><span>Ort</span></div>
+          <div class="los los-head"><span>${tk("Los")}</span><span>${tk("Leistung")}</span><span>${tk("Wert")}</span><span>${tk("Laufzeit")}</span><span>${tk("Ort")}</span></div>
           ${l.lose.map((x,i)=>`<div class="los ${i===minI?'los-min':''} ${x.nr===passtNr?'los-passt':''}">
             <span class="los-n">${x.nr}</span>
             <span class="los-t">${esc(x.titel)}${x.nr===passtNr?'<span class="los-tag los-tag-passt">passt</span>':''}${i===minI?'<span class="los-tag">kleinstes</span>':''}</span>
@@ -1526,7 +1523,7 @@ ${l.lose && l.lose.length>1 ? (()=>{
           </div>`).join('')}
         </div>
         ${l.optionen||l.verlaengerung?`<div class="note-box" style="margin-top:var(--s3)">
-          <b>Über die Grundlaufzeit hinaus:</b> ${[l.optionen?'Optionen vorgesehen':null,
+          <b>${tk("Über die Grundlaufzeit hinaus:")}</b> ${[l.optionen?'Optionen vorgesehen':null,
           l.verlaengerung?`Verlängerung möglich (${l.verlaengerung})`:null].filter(Boolean).join(' · ')}.
           Der tatsächliche Vertragswert kann deutlich über der Summe der Lose liegen.</div>`:''}
       </section>`;
@@ -1534,27 +1531,26 @@ ${l.lose && l.lose.length>1 ? (()=>{
 
     
     ${l.lose && l.lose.length && l.loseMaxZuschlag ? `<section class="sec" id="an-partner">
-      <h4>Partner nötig?</h4>
+      <h4>${tk("Partner nötig?")}</h4>
 
       <div class="pnfacts">
         <div class="pnf">
-          <span class="pnf-k">Lose insgesamt</span>
+          <span class="pnf-k">${tk("Lose insgesamt")}</span>
           <span class="pnf-v"><span class="v-num">${l.lose.length}</span></span></div>
         <div class="pnf">
-          <span class="pnf-k">Ihr dürft anbieten auf</span>
+          <span class="pnf-k">${tk("Ihr dürft anbieten auf")}</span>
           <span class="pnf-v"><span class="v-num">${l.loseMaxAngebot}</span></span></div>
         <div class="pnf pnf-hero">
-          <span class="pnf-k">Ihr könnt höchstens gewinnen</span>
+          <span class="pnf-k">${tk("Ihr könnt höchstens gewinnen")}</span>
           <span class="pnf-v"><span class="v-num">${l.loseMaxZuschlag}</span></span></div>
       </div>
-      <p class="pn-deut">Selbst wenn ihr alles anbietet, bekommt ihr höchstens
-      <b>${l.loseMaxZuschlag} von ${l.lose.length} Losen</b>. Wer den Gesamtauftrag will,
+      <p class="pn-deut">${tk("Selbst wenn ihr alles anbietet, bekommt ihr höchstens")}<b>${l.loseMaxZuschlag} von ${l.lose.length} Losen</b>. Wer den Gesamtauftrag will,
       braucht Partner — wer allein bietet, kalkuliert ${l.lose.length-l.loseMaxZuschlag} Lose umsonst.</p>
 
       ${(()=>{ const frei=isFreeLimit();
         if(l.netzSuchend==null) return '';
         return `<div class="nz-vor ${frei?'lock':''}">
-          <span class="nz-v-k">Firmen, die hier schon einen Partner suchen</span>
+          <span class="nz-v-k">${tk("Firmen, die hier schon einen Partner suchen")}</span>
           <span class="nz-v-v">${frei?`<span class="nz-blur">${l.netzSuchend}</span>`:`<span class="v-num">${l.netzSuchend}</span>`}</span>
           <span class="nz-v-x">${frei
             ? 'Im Pro-Zugang seht ihr das, <b>bevor</b> ihr euch selbst meldet.'
@@ -1563,58 +1559,53 @@ ${l.lose && l.lose.length>1 ? (()=>{
         </div>`;})()}
 
       <div class="pn-bg">
-        <span class="pn-bg-k">Bietergemeinschaft</span>
-        <span class="pn-bg-v">zugelassen</span>
+        <span class="pn-bg-k">${tk("Bietergemeinschaft")}</span>
+        <span class="pn-bg-v">${tk("zugelassen")}</span>
         <span class="pn-bg-x">${l.bgForm}</span>
       </div>
 
       ${!angaben.partner ? `<div class="pn-off">
-        <div><b>Partner finden?</b>
-        <span>Aktiviert das Netzwerk, dann könnt ihr euch für solche Ausschreibungen melden —
-        und wir prüfen, wer euch ergänzt.</span></div>
-        <button class="pn-btn" data-tonetz>Zum Netzwerk</button>
+        <div><b>${tk("Partner finden?")}</b>
+        <span>${tk("Aktiviert das Netzwerk, dann könnt ihr euch für solche Ausschreibungen melden — und wir prüfen, wer euch ergänzt.")}</span></div>
+        <button class="pn-btn" data-tonetz>${tk("Zum Netzwerk")}</button>
       </div>`
       : !netzInteresse.has(l.id) ? `<div class="pn-off">
-        <div><b>Sucht ihr hier einen Partner?</b>
-        <span>Meldet euch für diese Ausschreibung. Sichtbar werdet ihr nur für Firmen,
-        die euch fachlich ergänzen.</span></div>
-        <button class="pn-btn" data-netzint="${l.id}">Interesse bekunden</button>
+        <div><b>${tk("Sucht ihr hier einen Partner?")}</b>
+        <span>${tk("Meldet euch für diese Ausschreibung. Sichtbar werdet ihr nur für Firmen, die euch fachlich ergänzen.")}</span></div>
+        <button class="pn-btn" data-netzint="${l.id}">${tk("Interesse bekunden")}</button>
       </div>`
       : l.netzPartner ? (()=>{ const frei = netzFreigabe.has(l.id); return `<div class="nz-match">
-        <div class="nz-m-h"><b>Eine Firma ergänzt euch</b><span class="nz-m-s">seit ${l.netzPartner.seit}</span></div>
+        <div class="nz-m-h"><b>${tk("Eine Firma ergänzt euch")}</b><span class="nz-m-s">seit ${l.netzPartner.seit}</span></div>
         <div class="nz-m-r">
           <span class="nz-m-n">${frei?l.netzPartner.n:'<span class="nz-blur">Firmenname sichtbar nach Freigabe</span>'}</span>
           <span class="nz-m-f">${l.netzPartner.feld}</span>
           <span class="nz-m-g">${l.netzPartner.groesse}</span>
           <span class="nz-m-d">deckt ${l.netzPartner.deckung} Lose</span>
         </div>
-        <p class="nz-m-x">Zusammen kommt ihr auf <b>${(l.netzDeckung||1)+l.netzPartner.deckung} von ${l.lose.length} Losen</b>.
+        <p class="nz-m-x">${tk("Zusammen kommt ihr auf")}<b>${(l.netzDeckung||1)+l.netzPartner.deckung} von ${l.lose.length} Losen</b>.
         ${frei?'Beide Seiten haben freigegeben — die Kontaktdaten liegen jetzt bei euch beiden.'
              :'Gebt den Kontakt frei, wenn ihr sprechen wollt. Die andere Seite muss ebenfalls freigeben.'}</p>
         ${frei?`<div class="nz-kontakt"><b>${l.netzPartner.n}</b>
-          <span>M. Berger · +49 89 1234-560 · berger@alpenland-netz.de</span></div>`
-        :`<button class="nz-frei" data-netzfrei="${l.id}">Kontakt freigeben</button>`}
+          <span>${tk("M. Berger · +49 89 1234-560 · berger@alpenland-netz.de")}</span></div>`
+        :`<button class="nz-frei" data-netzfrei="${l.id}">${tk("Kontakt freigeben")}</button>`}
       </div>`;})()
-      : `<div class="nz-wait">Ihr habt euch gemeldet. Noch keine ergänzende Firma —
-        wir melden uns, sobald jemand andere Lose abdeckt als ihr.
-        <button class="nz-rueck" data-netzint="${l.id}">Meldung zurückziehen</button></div>`}
+      : `<div class="nz-wait">${tk("Ihr habt euch gemeldet. Noch keine ergänzende Firma — wir melden uns, sobald jemand andere Lose abdeckt als ihr.")}<button class="nz-rueck" data-netzint="${l.id}">${tk("Meldung zurückziehen")}</button></div>`}
     </section>` : ''}
 
     <section class="sec">
-      <h4>Was die Bekanntmachung nicht beantwortet</h4>
-      <p class="offen-x">Diese Fragen entscheiden über die Vertragsphase — beantwortet werden sie erst in den
-      Unterlagen, nicht in der Bekanntmachung. Wir zeigen sie hier, damit ihr wisst, wonach ihr suchen müsst.</p>
+      <h4>${tk("Was die Bekanntmachung nicht beantwortet")}</h4>
+      <p class="offen-x">${tk("Diese Fragen entscheiden über die Vertragsphase — beantwortet werden sie erst in den Unterlagen, nicht in der Bekanntmachung. Wir zeigen sie hier, damit ihr wisst, wonach ihr suchen müsst.")}</p>
       <div class="offen">
-        <div class="off-g"><span class="off-t">Zahlung</span>
-          <span class="off-x">Zahlungsziele, Abschlagszahlungen, Skonto, Sicherheitseinbehalt</span></div>
-        <div class="off-g"><span class="off-t">Leistung</span>
-          <span class="off-x">Ausführungsfristen, Zwischentermine, Abnahmen, Mitwirkungspflichten</span></div>
-        <div class="off-g"><span class="off-t">Qualität und Haftung</span>
-          <span class="off-x">Vertragsstrafen, Mängelhaftung, Gewährleistungsfristen, Service-Level</span></div>
-        <div class="off-g"><span class="off-t">Ausstieg</span>
-          <span class="off-x">Kündigungsrechte, Sonderkündigung, Folgen bei Nichterfüllung</span></div>
+        <div class="off-g"><span class="off-t">${tk("Zahlung")}</span>
+          <span class="off-x">${tk("Zahlungsziele, Abschlagszahlungen, Skonto, Sicherheitseinbehalt")}</span></div>
+        <div class="off-g"><span class="off-t">${tk("Leistung")}</span>
+          <span class="off-x">${tk("Ausführungsfristen, Zwischentermine, Abnahmen, Mitwirkungspflichten")}</span></div>
+        <div class="off-g"><span class="off-t">${tk("Qualität und Haftung")}</span>
+          <span class="off-x">${tk("Vertragsstrafen, Mängelhaftung, Gewährleistungsfristen, Service-Level")}</span></div>
+        <div class="off-g"><span class="off-t">${tk("Ausstieg")}</span>
+          <span class="off-x">${tk("Kündigungsrechte, Sonderkündigung, Folgen bei Nichterfüllung")}</span></div>
       </div>
-      <span class="offen-hin">Den Link zu den Unterlagen findest du oben in diesem Tab.</span>
+      <span class="offen-hin">${tk("Den Link zu den Unterlagen findest du oben in diesem Tab.")}</span>
     </section>
 
   </div>`;
@@ -1639,7 +1630,7 @@ function renderAnalyse(l){
     <div class="anagrid">
 
     <section class="sec" id="an-bewertung" data-sec="bewertung">
-      <h4>Bewertung</h4>
+      <h4>${tk("Bewertung")}</h4>
       ${(()=>{
         // #26 Handlungsempfehlung (ersetzt #19). Kaskade A/B je Datenzustand + Abdeckung, plus
         // Begründungskette E1–E10 und Zusätze. Nie ein Verdikt ohne offengelegte Bedingungen (§7).
@@ -1653,7 +1644,7 @@ function renderAnalyse(l){
           head = `<div class="rec-verdict rec-${CLS[b.cls]}"><span class="rec-label">${b.label}</span>`
             + (b.gruende&&b.gruende.length?`<span class="rec-grund">${b.gruende.join(' · ')}</span>`:'')
             + (b.frage?`<span class="rec-frage">${b.frage}</span>`:'') + `</div>`
-            + (b.schritt?`<div class="rec-step">Nächster Schritt: <b>${b.schritt}</b></div>`:'');
+            + (b.schritt?`<div class="rec-step">${tk("Nächster Schritt:")}<b>${b.schritt}</b></div>`:'');
         } else {
           const a = rec.einordnung;
           const hint = rec.gesperrt==='keine_unterlagen' ? 'Für eine Empfehlung fehlen die Vergabeunterlagen.'
@@ -1669,7 +1660,7 @@ function renderAnalyse(l){
       })()}
       <div class="scores">
         <div class="score" data-level="${l.relevanz}">
-          <span class="name">Relevanz</span>
+          <span class="name">${tk("Relevanz")}</span>
           ${bandMeter(l.relevanz)}
           <span class="scoreword">${l.relevanz==='na'?'—':l.relevanz}</span>
         </div>
@@ -1679,7 +1670,7 @@ function renderAnalyse(l){
           <span class="scoreword">${l.wechsel==='na'?'—':l.wechsel}</span>
         </div>
         <div class="score" data-level="${aufwandStufe(l).stufe}">
-          <span class="name">Angebotsaufwand</span>
+          <span class="name">${tk("Angebotsaufwand")}</span>
           ${bandMeter(aufwandStufe(l).stufe, true)}
           <span class="scoreword">${aufwandStufe(l).stufe==='na'?'—':aufwandStufe(l).stufe}</span>
         </div>
@@ -1699,9 +1690,9 @@ function renderAnalyse(l){
         const buerg = m && m.blocker.find(b=>b.art==='buergschaft');
         let block = '';
         if(buerg) block = `<span class="ds-block"><b>K.-o.:</b> ${buerg.text}</span>`;
-        else if(m && m.partner) block = `<span class="ds-block">Nur mit Partner realistisch — der Auftrag übersteigt eure Alleingrenze.</span>`;
+        else if(m && m.partner) block = `<span class="ds-block">${tk("Nur mit Partner realistisch — der Auftrag übersteigt eure Alleingrenze.")}</span>`;
         return `<div class="dreisatz">
-          <span class="ds-t">Zusammengenommen</span>
+          <span class="ds-t">${tk("Zusammengenommen")}</span>
           <span class="ds-x">${satz}</span>
           ${block}
           ${a.treiber.length?`<span class="ds-tr">Aufwandstreiber: ${a.treiber.join(' · ')}</span>`:''}
@@ -1722,7 +1713,7 @@ function renderAnalyse(l){
           und ist entsprechend gröber als bei Vergaben mit bekannter Bieterzahl.</span>
         </div>`;})()}
       <div class="score-note">
-        <span class="sn-label">Konkurrenz zuletzt</span>
+        <span class="sn-label">${tk("Konkurrenz zuletzt")}</span>
         <span class="sn-val">${l.konk.src==='na'||l.konk.src==='unbekannt'
           ? `<span class="unk">${l.konk.wert==='n/a'?'nicht anwendbar — Neuvergabe':'von der Vergabestelle nicht angegeben'}</span>`
           : val(l.konk.wert, l.konk.src, l.konk.hint)}</span>
@@ -1736,9 +1727,8 @@ function renderAnalyse(l){
     ${(()=>{
       const z = l.zuschlag;
       if(!z || !z.length) return `<section class="sec" id="an-zuschlag" data-sec="zuschlag">
-        <h4>Zuschlagskriterien</h4>
-        <div class="note-box"><b>Nicht veröffentlicht.</b> Bei knapp jeder fünften Ausschreibung
-        fehlen die Kriterien in der Bekanntmachung — sie stehen dann nur in den Vergabeunterlagen.</div>
+        <h4>${tk("Zuschlagskriterien")}</h4>
+        <div class="note-box"><b>${tk("Nicht veröffentlicht.")}</b>${tk("Bei knapp jeder fünften Ausschreibung fehlen die Kriterien in der Bekanntmachung — sie stehen dann nur in den Vergabeunterlagen.")}</div>
       </section>`;
       const ohneGew = z.some(x=>x.pct==null);
       const preis = (z.find(x=>x.art==='preis')||{}).pct;
@@ -1748,7 +1738,7 @@ function renderAnalyse(l){
         : preis!=null && preis<=50 ? `Der Preis entscheidet nur zu ${preis} %. Über die restlichen ${100-preis} % könnt ihr euch mit Konzept und Referenzen absetzen.`
         : `Der Preis wiegt ${preis} %. Konzeptarbeit hilft, den Ausschlag gibt aber die Kalkulation.`;
       return `<section class="sec" id="an-zuschlag" data-sec="zuschlag">
-        <h4>Zuschlagskriterien</h4>
+        <h4>${tk("Zuschlagskriterien")}</h4>
         ${ohneGew?'':`<div class="zbar">${z.map(x=>
           `<i class="zseg z-${x.art}" style="width:${x.pct}%" title="${esc(x.label)}: ${x.pct} %"></i>`).join('')}</div>`}
         <div class="zlist">${z.map(x=>`<span class="zitem">
@@ -1759,9 +1749,9 @@ function renderAnalyse(l){
     })()}
 
     <section class="sec" id="an-vergleich" data-sec="vergleich">
-      <h4>Direktvergleich <span class="cov">im Feld ${l.cpvLabel}, nach Anzahl Zuschlägen</span></h4>
+      <h4>${tk("Direktvergleich")}<span class="cov">im Feld ${l.cpvLabel}, nach Anzahl Zuschlägen</span></h4>
       <table class="cmp">
-        <thead><tr><th>Kennzahl</th><th>Ihr</th><th></th><th>${l.incumbent ? l.incumbent.name.split(' ')[0] : '—'}</th></tr></thead>
+        <thead><tr><th>${tk("Kennzahl")}</th><th>${tk("Ihr")}</th><th></th><th>${l.incumbent ? l.incumbent.name.split(' ')[0] : '—'}</th></tr></thead>
         <tbody>
           ${(()=>{ const inc=l.incumbent, cpv4=String(l.cpv||'').slice(0,4);
             const uw = (userProfile && userProfile.cpvWins && userProfile.cpvWins[cpv4]);
@@ -1776,9 +1766,9 @@ function renderAnalyse(l){
               : String(inc.wins);
             const r=[];
             r.push(`<tr><th>Zuschläge im Feld (CPV ${cpv4})</th>${me(uw)}${edge(uw,inc.wins)}<td class="them num">${winCell}</td></tr>`);
-            r.push(`<tr><th>Marktanteil im Feld</th>${me(null)}<td></td><td class="them num">${inc.marktanteil!=null?(floor?'&#8805;&#8202;':'')+inc.marktanteil+' %':'—'}</td></tr>`);
-            r.push(`<tr><th>Marktrang im Feld</th>${me(null)}<td></td><td class="them num">${inc.rang!=null?'#'+inc.rang:'—'}</td></tr>`);
-            if(inc.trend!=null) r.push(`<tr><th>Trend (Vorjahr)</th>${me(null)}<td></td><td class="them num ${inc.trend>0?'up':inc.trend<0?'down':''}">${inc.trend>0?'+':''}${inc.trend} %</td></tr>`);
+            r.push(`<tr><th>${tk("Marktanteil im Feld")}</th>${me(null)}<td></td><td class="them num">${inc.marktanteil!=null?(floor?'&#8805;&#8202;':'')+inc.marktanteil+' %':'—'}</td></tr>`);
+            r.push(`<tr><th>${tk("Marktrang im Feld")}</th>${me(null)}<td></td><td class="them num">${inc.rang!=null?'#'+inc.rang:'—'}</td></tr>`);
+            if(inc.trend!=null) r.push(`<tr><th>${tk("Trend (Vorjahr)")}</th>${me(null)}<td></td><td class="them num ${inc.trend>0?'up':inc.trend<0?'down':''}">${inc.trend>0?'+':''}${inc.trend} %</td></tr>`);
             return r.join(''); })()}
         </tbody>
       </table>
@@ -1788,17 +1778,16 @@ function renderAnalyse(l){
       </div>
     </section>` : `
     <section class="sec" id="an-vergleich" data-sec="vergleich">
-      <h4>Direktvergleich</h4>
+      <h4>${tk("Direktvergleich")}</h4>
       ${l.incumbent ? `<div class="note-box"><b>Wahrscheinlicher Amtsinhaber: ${esc(l.incumbent.name)}.</b>
       Die Firmen-Auflösung ist hier zu unsicher${l.incumbent.conf!=null?` (Konfidenz ${Math.round(l.incumbent.conf*100)} %)`:''}
       für belastbare Feld-Zahlen — wir zeigen sie deshalb nicht, statt eine erfundene Statistik zu behaupten.
       Der Name kommt aus der letzten Zuschlagsbekanntmachung, nur über die Schreibweise erkannt.</div>`
-      : `<div class="note-box"><b>Offenes Feld.</b> Ohne Amtsinhaber gibt es niemanden zu vergleichen —
-      alle Bieter starten hier gleich.</div>`}
+      : `<div class="note-box"><b>${tk("Offenes Feld.")}</b>${tk("Ohne Amtsinhaber gibt es niemanden zu vergleichen — alle Bieter starten hier gleich.")}</div>`}
     </section>`}
 
     <section class="sec" id="an-anforderungen" data-sec="anforderungen">
-      <h4>Anforderungs-Check</h4>
+      <h4>${tk("Anforderungs-Check")}</h4>
       <div class="reqs">
         ${(()=>{ const r = l.rahmen && RAHMEN_NACHWEIS[l.rahmen]; if(!r) return '';
           const hab = (angaben.nachweise||[]).some(x=>
@@ -1820,29 +1809,28 @@ function renderAnalyse(l){
           if(a.buergschaft===true){
             const hat = userProfile && userProfile.buergschaft!=null;
             rows.push(`<div class="req"><span class="mk ${hat?'y':'q'}">${hat?'&#10003;':'?'}</span>
-              <span class="code">Bürgschaft</span><span class="lbl">Sicherheit gefordert</span>
+              <span class="code">${tk("Bürgschaft")}</span><span class="lbl">${tk("Sicherheit gefordert")}</span>
               <span class="st">${hat?'Euer Bürgschaftsrahmen ist hinterlegt':'Hinterlegt euren Rahmen, dann prüfen wir die Höhe'}</span></div>`);
           } else if(a.buergschaft===false){
-            rows.push(`<div class="req"><span class="mk y">&#10003;</span><span class="code">Bürgschaft</span>
-              <span class="lbl">keine gefordert</span><span class="st">Keine Sicherheit verlangt</span></div>`);
+            rows.push(`<div class="req"><span class="mk y">&#10003;</span><span class="code">${tk("Bürgschaft")}</span>
+              <span class="lbl">${tk("keine gefordert")}</span><span class="st">${tk("Keine Sicherheit verlangt")}</span></div>`);
           }
           if(a.nebenangebote!=null) rows.push(`<div class="req"><span class="mk i">i</span>
-            <span class="code">Nebenangebote</span><span class="lbl">${a.nebenangebote?'zugelassen':'nicht zugelassen'}</span>
+            <span class="code">${tk("Nebenangebote")}</span><span class="lbl">${a.nebenangebote?'zugelassen':'nicht zugelassen'}</span>
             <span class="st">${a.nebenangebote?'Alternative Lösungen möglich':'Nur das ausgeschriebene Konzept'}</span></div>`);
           if(a.bindefristTage) rows.push(`<div class="req"><span class="mk i">i</span>
-            <span class="code">Bindefrist</span><span class="lbl">${a.bindefristTage} Tage</span>
-            <span class="st">So lange bindet euer Angebot nach Abgabe</span></div>`);
+            <span class="code">${tk("Bindefrist")}</span><span class="lbl">${a.bindefristTage} Tage</span>
+            <span class="st">${tk("So lange bindet euer Angebot nach Abgabe")}</span></div>`);
           if(a.eignung && a.eignung.length) rows.push(`<div class="req"><span class="mk i">i</span>
-            <span class="code">Eignung</span><span class="lbl">${a.eignung.map(e=>EIG[e]||e).join(' · ')}</span>
-            <span class="st">Im Angebot nachzuweisen</span></div>`);
+            <span class="code">${tk("Eignung")}</span><span class="lbl">${a.eignung.map(e=>EIG[e]||e).join(' · ')}</span>
+            <span class="st">${tk("Im Angebot nachzuweisen")}</span></div>`);
           if(!rows.length) return '';
-          return `<div class="reqgroup-h">Strukturierte Anforderungen <span class="prov-echt">aus der Bekanntmachung</span></div>`+rows.join('');
+          return `<div class="reqgroup-h">${tk("Strukturierte Anforderungen")}<span class="prov-echt">${tk("aus der Bekanntmachung")}</span></div>`+rows.join('');
         })()}
         ${(()=>{ const m = l.match;
           if(!m || m.relevanz==='na') return `<div class="req req-noprofile">
             <span class="mk q">?</span>
-            <span class="lbl">Ohne hinterlegtes Profil können wir die Passung nicht prüfen.
-            Wählt oben eine Testsicht oder richtet euer Firmenprofil ein.</span></div>`;
+            <span class="lbl">${tk("Ohne hinterlegtes Profil können wir die Passung nicht prüfen. Wählt oben eine Testsicht oder richtet euer Firmenprofil ein.")}</span></div>`;
           const MK = {ok:['y','&#10003;'], teil:['q','~'], no:['n','&#10007;'], unbekannt:['q','?']};
           const WERT = {feld:[l.cpv, l.cpvLabel], region:['Region', l.region], vol:['Volumen', l.volumen.wert]};
           const rows = m.teile.map(t=>{ const [cls,sym]=MK[t.status]||['q','?']; const [code,lbl]=WERT[t.dim]||['',''];
@@ -1858,37 +1846,31 @@ function renderAnalyse(l){
     </section>
 
     <section class="sec" id="an-luecke" data-sec="luecke">
-      <h4>Lücke</h4>
+      <h4>${tk("Lücke")}</h4>
       ${(()=>{ const m = l.match;
-        if(!m || m.relevanz==='na') return `<div class="note-box">
-          Ohne hinterlegtes Profil gibt es nichts abzugleichen. Richtet euer Firmenprofil ein,
-          dann zeigen wir hier, woran dieser Lead scheitert oder passt.</div>`;
+        if(!m || m.relevanz==='na') return `<div class="note-box">${tk("Ohne hinterlegtes Profil gibt es nichts abzugleichen. Richtet euer Firmenprofil ein, dann zeigen wir hier, woran dieser Lead scheitert oder passt.")}</div>`;
         // Die härteste Lücke zuerst: harter Blocker > Feld > Region > Volumen
         const buerg = m.blocker.find(b=>b.art==='buergschaft');
         const feld  = m.teile.find(t=>t.dim==='feld' && t.status!=='ok');
         const reg   = m.teile.find(t=>t.dim==='region' && t.status==='no');
-        if(buerg) return `<div class="note-box gap"><b>Bürgschaft übersteigt euren Rahmen.</b><br>
+        if(buerg) return `<div class="note-box gap"><b>${tk("Bürgschaft übersteigt euren Rahmen.")}</b><br>
           ${buerg.text} Hinterlegt einen höheren Rahmen oder tretet mit einem Partner an.
-          <div class="acts"><button>Rahmen anpassen</button><button>Trifft nicht zu</button></div></div>`;
+          <div class="acts"><button>${tk("Rahmen anpassen")}</button><button>${tk("Trifft nicht zu")}</button></div></div>`;
         if(feld && feld.status==='no') return `<div class="note-box gap">
-          <b>Dieses Feld liegt außerhalb eurer Schwerpunkte.</b><br>
+          <b>${tk("Dieses Feld liegt außerhalb eurer Schwerpunkte.")}</b><br>
           ${l.cpvLabel} (CPV ${l.cpv}) gehört nicht zu euren hinterlegten Feldern. Wenn ihr das abdeckt,
           trag es nach — dann steigt die Relevanz dieses und ähnlicher Leads.
-          <div class="acts"><button>Feld ergänzen</button><button>Trifft nicht zu</button></div></div>`;
+          <div class="acts"><button>${tk("Feld ergänzen")}</button><button>${tk("Trifft nicht zu")}</button></div></div>`;
         if(feld && feld.status==='teil') return `<div class="note-box gap">
-          <b>Nachbarfeld — kein voller Treffer.</b><br>
+          <b>${tk("Nachbarfeld — kein voller Treffer.")}</b><br>
           ${l.cpvLabel} grenzt an eure Schwerpunkte, ist aber keiner davon. Solche Leads zeigen wir
           abgeschwächt. Trag das Feld als Schwerpunkt nach, wenn ihr es voll bedient.
-          <div class="acts"><button>Als Schwerpunkt setzen</button><button>Trifft nicht zu</button></div></div>`;
-        if(reg) return `<div class="note-box gap"><b>Außerhalb eures Gebiets.</b><br>
-          Der Leistungsort liegt nicht in euren hinterlegten Regionen. Falls ihr dort tätig seid,
-          erweitert euer Gebiet — sonst bleibt dieser Lead nachrangig.
-          <div class="acts"><button>Region erweitern</button><button>Trifft nicht zu</button></div></div>`;
+          <div class="acts"><button>${tk("Als Schwerpunkt setzen")}</button><button>${tk("Trifft nicht zu")}</button></div></div>`;
+        if(reg) return `<div class="note-box gap"><b>${tk("Außerhalb eures Gebiets.")}</b><br>${tk("Der Leistungsort liegt nicht in euren hinterlegten Regionen. Falls ihr dort tätig seid, erweitert euer Gebiet — sonst bleibt dieser Lead nachrangig.")}<div class="acts"><button>${tk("Region erweitern")}</button><button>${tk("Trifft nicht zu")}</button></div></div>`;
         if(m.partner) return `<div class="note-box">
-          <b>Passt fachlich — aber groß.</b> ${l.cpvLabel} liegt in eurem Feld, das Volumen übersteigt
+          <b>${tk("Passt fachlich — aber groß.")}</b> ${l.cpvLabel} liegt in eurem Feld, das Volumen übersteigt
           aber eure Alleingrenze. Realistisch nur mit Partner; im Netzwerk-Tab findet ihr Kandidaten.</div>`;
-        return `<div class="note-box"><b>Keine Lücke.</b> Feld, Region und Volumen passen zu eurem Profil —
-          das ist die Sorte Lead, die oben in eurer Liste stehen soll.</div>`;
+        return `<div class="note-box"><b>${tk("Keine Lücke.")}</b>${tk("Feld, Region und Volumen passen zu eurem Profil — das ist die Sorte Lead, die oben in eurer Liste stehen soll.")}</div>`;
       })()}
     </section>
 
@@ -1911,39 +1893,35 @@ function renderAnalyse(l){
       return `
       <section class="sec">
         <h4>Eure Verträge bei ${esc(l.buyerShort)}</h4>
-        <div class="note-box">Kein hinterlegter Vertrag bei dieser Vergabestelle. Gewonnene Aufträge könnt ihr
-          über „Als gewonnen markieren" erfassen — dann erscheinen sie hier und im Strategie-Tab.</div>
+        <div class="note-box">${tk("Kein hinterlegter Vertrag bei dieser Vergabestelle. Gewonnene Aufträge könnt ihr über „Als gewonnen markieren\" erfassen — dann erscheinen sie hier und im Strategie-Tab.")}</div>
       </section>`;
     })()}
 
     <section class="sec" id="an-historie" data-sec="historie">
-      <h4>Wettbewerbs-Historie</h4>
+      <h4>${tk("Wettbewerbs-Historie")}</h4>
       <div class="note-box build">
-        <b>In Aufbau.</b> Verdrängungs-Bilanz, Verlustquote und Vertragskette brauchen eine verifizierte
-        Vorgänger-Verknüpfung. Aktuell sind rund 35 % der Verträge sicher verkettbar — zu wenig, um
-        daraus für diesen Lead eine belastbare Aussage zu machen. Wir zeigen hier nichts, bevor es stimmt.
-      </div>
+        <b>${tk("In Aufbau.")}</b>${tk("Verdrängungs-Bilanz, Verlustquote und Vertragskette brauchen eine verifizierte Vorgänger-Verknüpfung. Aktuell sind rund 35 % der Verträge sicher verkettbar — zu wenig, um daraus für diesen Lead eine belastbare Aussage zu machen. Wir zeigen hier nichts, bevor es stimmt.")}</div>
     </section>
 
     <section class="sec" id="an-kontakt" data-sec="kontakt">
-      <h4>Nächster Schritt <span class="cov">Direktkontakt zur Vergabestelle</span></h4>
+      <h4>${tk("Nächster Schritt")}<span class="cov">${tk("Direktkontakt zur Vergabestelle")}</span></h4>
       <div class="contact">
-        <div class="ct-row"><span class="ct-k">Ansprechpartner</span><span class="ct-v">${esc(l.buyer)} · Referat Z 3</span></div>
-        <div class="ct-row"><span class="ct-k">E-Mail</span><span class="ct-v"><a class="tedlink" href="mailto:vergabe@${l.buyerShort.toLowerCase().replace(/[^a-z]/g,'')}.bund.de">vergabe@${l.buyerShort.toLowerCase().replace(/[^a-z]/g,'')}.bund.de</a></span></div>
-        <div class="ct-row"><span class="ct-k">Frist für Rückfragen</span><span class="ct-v">${
+        <div class="ct-row"><span class="ct-k">${tk("Ansprechpartner")}</span><span class="ct-v">${esc(l.buyer)} · Referat Z 3</span></div>
+        <div class="ct-row"><span class="ct-k">${tk("E-Mail")}</span><span class="ct-v"><a class="tedlink" href="mailto:vergabe@${l.buyerShort.toLowerCase().replace(/[^a-z]/g,'')}.bund.de">vergabe@${l.buyerShort.toLowerCase().replace(/[^a-z]/g,'')}.bund.de</a></span></div>
+        <div class="ct-row"><span class="ct-k">${tk("Frist für Rückfragen")}</span><span class="ct-v">${
           l.aufwand&&l.aufwand.fragefrist ? val('noch '+l.aufwand.fragefrist,'echt','Aus der Bekanntmachung — nicht geschätzt.')
           : l.tage!=null ? val((l.tage-7)+' Tage','schaetz','Nicht veröffentlicht. Übliche Rückfragefrist endet eine Woche vor Angebotsschluss.')
           : '—'}</span></div>
-        <p class="ct-note">Wer früh Rückfragen stellt, prägt oft die Leistungsbeschreibung mit. Kontakt aufnehmen, bevor die Frist läuft.</p>
+        <p class="ct-note">${tk("Wer früh Rückfragen stellt, prägt oft die Leistungsbeschreibung mit. Kontakt aufnehmen, bevor die Frist läuft.")}</p>
       </div>
     </section>
     </div>
 
     <div class="legend" style="margin-top:var(--s6);padding-top:var(--s4);border-top:1px solid var(--line)">
-      <span><i class="lg-echt"></i> gemessen</span>
-      <span><i class="lg-sch"></i> geschätzt</span>
-      <span><i class="lg-uns"></i> unsicher</span>
-      <span><i class="lg-unb"></i> unbekannt</span>
+      <span><i class="lg-echt"></i>${tk("gemessen")}</span>
+      <span><i class="lg-sch"></i>${tk("geschätzt")}</span>
+      <span><i class="lg-uns"></i>${tk("unsicher")}</span>
+      <span><i class="lg-unb"></i>${tk("unbekannt")}</span>
     </div>
   </div>`;
 }
@@ -1954,8 +1932,8 @@ function gateCard(titel, text){
       <span class="gc-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg></span>
       <span class="gc-t">${titel}</span>
       <span class="gc-x">${text}</span>
-      <button class="gc-btn" data-upgrade>Freischalten</button>
-      <span class="gc-p">29 € / Monat · jederzeit kündbar</span>
+      <button class="gc-btn" data-upgrade>${tk("Freischalten")}</button>
+      <span class="gc-p">${tk("29 € / Monat · jederzeit kündbar")}</span>
     </div>
   </aside>`;
 }
@@ -1998,8 +1976,7 @@ function renderMarkt(l){
   if(!s){
     return `<div class="mbody"><div class="mwarn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
-      <span><b>Für dieses CPV-Segment liegen noch keine Marktdaten vor.</b>
-      Wir zeigen hier lieber nichts als einen fremden Markt.</span></div></div>`;
+      <span><b>${tk("Für dieses CPV-Segment liegen noch keine Marktdaten vor.")}</b>${tk("Wir zeigen hier lieber nichts als einen fremden Markt.")}</span></div></div>`;
   }
   const strukCls = {fragmentiert:'ok', moderat:'mid', oligopol:'risk'}[s.struktur] || 'mid';
   const strukNote = {
@@ -2015,40 +1992,40 @@ function renderMarkt(l){
     </div></div>
 
     <section class="bsec">
-      <h4>Wie stark ist die Nachfrage?</h4>
+      <h4>${tk("Wie stark ist die Nachfrage?")}</h4>
       <div class="bstats">
-        <div class="bstat"><span class="bstat-k">Vergaben im Segment</span><span class="bstat-v">${na(s.nAwards.toLocaleString('de-DE'))}</span></div>
-        <div class="bstat"><span class="bstat-k">Chancen-Score</span><span class="bstat-v">${na(s.score!=null?s.score+' / 100':null)}</span><span class="bstat-m">Perzentil ueber alle Segmente</span></div>
-        <div class="bstat"><span class="bstat-k">Chronisch erfolglose Bedarfe</span><span class="bstat-v">${na(s.chronic||0)}</span><span class="bstat-m">seit Jahren erfolglos gesucht</span></div>
+        <div class="bstat"><span class="bstat-k">${tk("Vergaben im Segment")}</span><span class="bstat-v">${na(s.nAwards.toLocaleString('de-DE'))}</span></div>
+        <div class="bstat"><span class="bstat-k">${tk("Chancen-Score")}</span><span class="bstat-v">${na(s.score!=null?s.score+' / 100':null)}</span><span class="bstat-m">${tk("Perzentil ueber alle Segmente")}</span></div>
+        <div class="bstat"><span class="bstat-k">${tk("Chronisch erfolglose Bedarfe")}</span><span class="bstat-v">${na(s.chronic||0)}</span><span class="bstat-m">${tk("seit Jahren erfolglos gesucht")}</span></div>
       </div>
     </section>
 
     <section class="bsec">
-      <h4>Wo ist das Feld schwach? <span class="cov">= wo es sich lohnt</span></h4>
+      <h4>${tk("Wo ist das Feld schwach?")}<span class="cov">${tk("= wo es sich lohnt")}</span></h4>
       <div class="bstats bstats-2">
-        <div class="bstat"><span class="bstat-k">Erfolglose Ausschreibungen</span><span class="bstat-v">${na(s.erfolglos!=null?s.erfolglos+' %':null)}</span><span class="bstat-m">kein Gewinner &rarr; neu ausgeschrieben</span></div>
-        <div class="bstat"><span class="bstat-k">Nur ein Bieter</span><span class="bstat-v">${na(s.singleBidder!=null?s.singleBidder+' %':null)}</span><span class="bstat-m">kaum Wettbewerb</span></div>
+        <div class="bstat"><span class="bstat-k">${tk("Erfolglose Ausschreibungen")}</span><span class="bstat-v">${na(s.erfolglos!=null?s.erfolglos+' %':null)}</span><span class="bstat-m">${tk("kein Gewinner &rarr; neu ausgeschrieben")}</span></div>
+        <div class="bstat"><span class="bstat-k">${tk("Nur ein Bieter")}</span><span class="bstat-v">${na(s.singleBidder!=null?s.singleBidder+' %':null)}</span><span class="bstat-m">${tk("kaum Wettbewerb")}</span></div>
       </div>
     </section>
 
     <section class="bsec">
-      <h4>Wie ist das Feld verteilt?</h4>
+      <h4>${tk("Wie ist das Feld verteilt?")}</h4>
       <div class="bhero bhero-${strukCls}">
         <div class="bhero-val" style="font-size:19px;min-width:auto">${s.struktur||'&mdash;'}</div>
-        <div class="bhero-lbl"><span class="bhero-title">Die drei groessten Anbieter halten <b>${s.top3} %</b> der Auftraege</span>
+        <div class="bhero-lbl"><span class="bhero-title">${tk("Die drei groessten Anbieter halten")}<b>${s.top3} %</b>${tk("der Auftraege")}</span>
           <span class="bhero-note">${strukNote}</span></div>
       </div>
     </section>
 
     <section class="bsec">
-      <h4>Wer dominiert das Segment?</h4>
-      <div class="bwinners"><span class="bwin-k">Die staerksten Anbieter &mdash; potenzielle Wettbewerber oder Partner</span>
+      <h4>${tk("Wer dominiert das Segment?")}</h4>
+      <div class="bwinners"><span class="bwin-k">${tk("Die staerksten Anbieter &mdash; potenzielle Wettbewerber oder Partner")}</span>
         <div class="bwin-list">
           ${s.dominatoren.map(d=>`<div class="bwin-row">
             <span class="bwin-bar"><i style="width:${Math.min(100,d.share*4)}%"></i></span>
             <span class="bwin-name">${d.n}</span>
             <span class="bwin-p"><span class="v-num">${d.share} %</span></span>
-            <span class="bwin-c"><span class="v-num">${d.wins}</span> Siege</span>
+            <span class="bwin-c"><span class="v-num">${d.wins}</span>${tk("Siege")}</span>
           </div>`).join('') || '<span class="v-sparse">keine Gewinner erfasst</span>'}
         </div>
       </div>
@@ -2096,10 +2073,8 @@ function renderBuyer(l){
     <div class="buyer-head">
       <div>
         <div class="buyer-name">${d.name}</div>
-        <div class="buyer-sub">Vergabestelle · Käufer-Dossier</div>
-        <button class="sec-link" data-buyerleads="${esc(l.buyerShort)}">
-          Alle Leads dieser Vergabestelle
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        <div class="buyer-sub">${tk("Vergabestelle · Käufer-Dossier")}</div>
+        <button class="sec-link" data-buyerleads="${esc(l.buyerShort)}">${tk("Alle Leads dieser Vergabestelle")}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
       </div>
     </div>
@@ -2107,18 +2082,18 @@ function renderBuyer(l){
     <div class="gatelayout ${free?'':'solo'}">
     <div class="gatemain">
     <section class="bsec">
-      <h4>Ist der Käufer aktiv?</h4>
+      <h4>${tk("Ist der Käufer aktiv?")}</h4>
       <div class="bstats">
-        <div class="bstat"><span class="bstat-k">Vergaben gesamt</span><span class="bstat-v">${bnum(d.total)}</span><span class="bstat-m">${d.zeitraum}</span></div>
-        <div class="bstat"><span class="bstat-k">Vergaben pro Jahr</span><span class="bstat-v">${bnum(d.perYear)}</span></div>
-        <div class="bstat"><span class="bstat-k">Bekanntmachung bis Zuschlag</span><span class="bstat-v">${bnum(d.decision)}</span></div>
-        <div class="bstat"><span class="bstat-k">Typischer Auftragswert</span><span class="bstat-v">${bnum(d.median)}</span><span class="bstat-m">Median</span></div>
-        <div class="bstat bstat-wide"><span class="bstat-k">Bekanntes Volumen</span><span class="bstat-v">${b(d.volume)}</span>
+        <div class="bstat"><span class="bstat-k">${tk("Vergaben gesamt")}</span><span class="bstat-v">${bnum(d.total)}</span><span class="bstat-m">${d.zeitraum}</span></div>
+        <div class="bstat"><span class="bstat-k">${tk("Vergaben pro Jahr")}</span><span class="bstat-v">${bnum(d.perYear)}</span></div>
+        <div class="bstat"><span class="bstat-k">${tk("Bekanntmachung bis Zuschlag")}</span><span class="bstat-v">${bnum(d.decision)}</span></div>
+        <div class="bstat"><span class="bstat-k">${tk("Typischer Auftragswert")}</span><span class="bstat-v">${bnum(d.median)}</span><span class="bstat-m">${tk("Median")}</span></div>
+        <div class="bstat bstat-wide"><span class="bstat-k">${tk("Bekanntes Volumen")}</span><span class="bstat-v">${b(d.volume)}</span>
           ${d.coverage?`<span class="bstat-flag">Untergrenze — nur ${d.coverage} der Vergaben haben einen veröffentlichten Wert</span>`:''}</div>
       </div>
       <div class="bmix">
         <div class="bmix-head">
-          <span class="bmix-t">Vergabe-Profil</span>
+          <span class="bmix-t">${tk("Vergabe-Profil")}</span>
           <span class="bmix-basis">Anteile nach Anzahl der Vergaben${d.categories?` · ${d.categories} Themenfelder`:''}</span>
         </div>
         <div class="bmix-body">
@@ -2130,7 +2105,7 @@ function renderBuyer(l){
                 const cls = m.own?'own' : m.rest?'rest' : 'g'+i;
                 const el=`<circle class="dseg ${cls}" cx="70" cy="70" r="${R}" fill="none" stroke-width="17"
                   stroke-dasharray="${len.toFixed(2)} ${(C-len).toFixed(2)}" stroke-dashoffset="${(-off).toFixed(2)}"
-                  transform="rotate(-90 70 70)"><title>goVisor · Lead Explorer v4.4</title></circle>`;
+                  transform="rotate(-90 70 70)"><title>${tk("goVisor · Lead Explorer v4.4")}</title></circle>`;
                 off+=len; return el;
               }).join('');
               const own = d.mix.find(m=>m.own);
@@ -2140,7 +2115,7 @@ function renderBuyer(l){
               </svg>
               <div class="bmix-center">
                 <span class="bmix-cv">${own ? (free?`<span class="blur blur-num">${own.pct} %</span>`:`${own.pct} %`) : '—'}</span>
-                <span class="bmix-ck">euer Feld</span>
+                <span class="bmix-ck">${tk("euer Feld")}</span>
               </div>`;
             })()}
           </div>
@@ -2158,7 +2133,7 @@ function renderBuyer(l){
     </section>
 
     <section class="bsec">
-      <h4>Habe ich eine Chance?</h4>
+      <h4>${tk("Habe ich eine Chance?")}</h4>
       <div class="bhero bhero-${concClass}">
         <div class="bhero-val">${bnum(d.top3!=null ? d.top3+' %' : null)}</div>
         <div class="bhero-lbl">
@@ -2171,23 +2146,23 @@ function renderBuyer(l){
 
       <div class="bscale">
         <div class="bscale-track">
-          <span class="bs-zone bs-ok">offen</span>
-          <span class="bs-zone bs-mid">gemischt</span>
-          <span class="bs-zone bs-risk">konzentriert</span>
-          ${free?'':`<span class="bs-mark" style="left:${Math.min(98,Math.max(2,d.top3))}%"><i></i><span class="bs-mark-l">dieser Käufer</span></span>`}
+          <span class="bs-zone bs-ok">${tk("offen")}</span>
+          <span class="bs-zone bs-mid">${tk("gemischt")}</span>
+          <span class="bs-zone bs-risk">${tk("konzentriert")}</span>
+          ${free?'':`<span class="bs-mark" style="left:${Math.min(98,Math.max(2,d.top3))}%"><i></i><span class="bs-mark-l">${tk("dieser Käufer")}</span></span>`}
         </div>
-        <div class="bscale-ends"><span>0 % — viele teilen sich die Aufträge</span><span>100 % — drei holen alles</span></div>
+        <div class="bscale-ends"><span>${tk("0 % — viele teilen sich die Aufträge")}</span><span>${tk("100 % — drei holen alles")}</span></div>
       </div>
 
       <div class="bstats bstats-2">
-        <div class="bstat"><span class="bstat-k">Vergaben mit nur einem Bieter</span><span class="bstat-v">${bnum(d.single)}</span></div>
-        <div class="bstat"><span class="bstat-k">Bieter je Ausschreibung</span><span class="bstat-v">${bnum(d.avgBidders)}</span><span class="bstat-m">Ø</span></div>
-        <div class="bstat"><span class="bstat-k">Verschiedene Gewinner</span><span class="bstat-v">${bnum(d.winners)}</span>
+        <div class="bstat"><span class="bstat-k">${tk("Vergaben mit nur einem Bieter")}</span><span class="bstat-v">${bnum(d.single)}</span></div>
+        <div class="bstat"><span class="bstat-k">${tk("Bieter je Ausschreibung")}</span><span class="bstat-v">${bnum(d.avgBidders)}</span><span class="bstat-m">Ø</span></div>
+        <div class="bstat"><span class="bstat-k">${tk("Verschiedene Gewinner")}</span><span class="bstat-v">${bnum(d.winners)}</span>
           <span class="bstat-m">${d.winners?`bei ${d.total} Vergaben`:''}</span></div>
       </div>
 
       <div class="bret">
-        <span class="bret-k">Aufträge, die erneut an denselben Anbieter gehen</span>
+        <span class="bret-k">${tk("Aufträge, die erneut an denselben Anbieter gehen")}</span>
         <span class="bret-v">${bnum(d.retention)}</span>
         ${retNote?`<span class="bret-note">${free?'<span class="blur">'+retNote+'</span>':retNote}</span>`:''}
       </div>
@@ -2195,7 +2170,7 @@ function renderBuyer(l){
     </section>
 
     <section class="bsec">
-      <h4>Wen muss ich schlagen?</h4>
+      <h4>${tk("Wen muss ich schlagen?")}</h4>
       <div class="bwinners">
         <span class="bwin-k">Die stärksten Wettbewerber — Anteil an allen ${d.total} Vergaben</span>
         <div class="bwin-list">
@@ -2208,7 +2183,7 @@ function renderBuyer(l){
         </div>
       </div>
       <div class="bfeed">
-        <div class="bfeed-row bfeed-head"><span>Zuletzt vergeben</span><span>Gewinner</span><span>Wert</span><span></span></div>
+        <div class="bfeed-row bfeed-head"><span>${tk("Zuletzt vergeben")}</span><span>${tk("Gewinner")}</span><span>${tk("Wert")}</span><span></span></div>
         ${d.recent.map(r=>{
           const inner = `<span class="bf-t"><span class="bf-date">${r.date}</span>${b(r.title)}${r.flag?`<span class="bf-flag" title="Nur ein Bieter">${r.flag}</span>`:''}</span>
           <span class="bf-w">${b(r.winner)}</span>
@@ -2239,11 +2214,10 @@ function renderGate(){
       <svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
         <rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>
       </svg>
-      <h3>Drei Bewertungen in 30 Tagen sind aufgebraucht</h3>
-      <p>Die Übersicht bleibt offen — Volumen, Timing und Auftraggeber siehst du weiterhin zu jedem Lead.
-         Für Bewertung, Direktvergleich und Anforderungs-Check brauchst du den vollen Zugang.</p>
-      <button class="cta">Zugang freischalten · 29 € / Monat</button>
-      <span class="alt">Nächste freie Bewertung am 14. August</span>
+      <h3>${tk("Drei Bewertungen in 30 Tagen sind aufgebraucht")}</h3>
+      <p>${tk("Die Übersicht bleibt offen — Volumen, Timing und Auftraggeber siehst du weiterhin zu jedem Lead. Für Bewertung, Direktvergleich und Anforderungs-Check brauchst du den vollen Zugang.")}</p>
+      <button class="cta">${tk("Zugang freischalten · 29 € / Monat")}</button>
+      <span class="alt">${tk("Nächste freie Bewertung am 14. August")}</span>
     </div>
   </div>`;
 }
@@ -2263,8 +2237,8 @@ function renderProfil(){
           <span>${BRANCHEN[aktiveBranche]}</span><i>·</i>
           <span>${userProfile?(userProfile.regions?(userProfile.regionLabels||[]).join(' · '):'bundesweit'):'bundesweit'}</span><i>·</i>
           ${userProfile
-            ? `<span class="steck-ok" title="Profil aktiv — steuert Relevanz und Anforderungs-Check.">Profil aktiv</span>`
-            : `<span class="steck-m" title="Meldet euch an und bestätigt eure Firma, um euer Profil zu verbinden (Relevanz, Historie, Erfolgsprämie).">Profil noch nicht verbunden</span>`}
+            ? `<span class="steck-ok" title="Profil aktiv — steuert Relevanz und Anforderungs-Check.">${tk("Profil aktiv")}</span>`
+            : `<span class="steck-m" title="Meldet euch an und bestätigt eure Firma, um euer Profil zu verbinden (Relevanz, Historie, Erfolgsprämie).">${tk("Profil noch nicht verbunden")}</span>`}
         </div>
       </div>
     </div>
@@ -2274,88 +2248,82 @@ function renderProfil(){
         potTab==='chancen'?'':''}</button>
       <button class="ptab" data-ptab="position" aria-selected="${potTab==='position'}">Position${
         free?'<span class="probadge probadge-lock">Pro</span>':''}</button>
-      <button class="ptab" data-ptab="profil"   aria-selected="${potTab==='profil'}">Profil</button>
+      <button class="ptab" data-ptab="profil"   aria-selected="${potTab==='profil'}">${tk("Profil")}</button>
     </div>
 
     ${potTab!=='chancen'?'':`
     <section class="sec">
-      <h4>Wo könnt ihr gewinnen?</h4>
+      <h4>${tk("Wo könnt ihr gewinnen?")}</h4>
       ${historie?`<div class="pblock ${free?'pb-lock':''}">
         <div class="pb-h"><span class="pb-t">Bei euren Kunden${free?'<span class="probadge probadge-lock">Pro</span>':''}</span>
           <span class="pb-n">${d.kundenListe.reduce((a,k)=>a+(k.gesamt-k.gewonnen),0)} verpasst · ${d.kundenListe.reduce((a,k)=>a+k.offen,0)} offen</span></div>
-        <p class="pb-x">Diese Stellen kennen euch bereits. Der Balken zeigt, wie viel ihr dort abgeräumt habt — der Rest ging an andere.</p>
+        <p class="pb-x">${tk("Diese Stellen kennen euch bereits. Der Balken zeigt, wie viel ihr dort abgeräumt habt — der Rest ging an andere.")}</p>
         ${d.kundenListe.map(k=>{const p=Math.round(k.gewonnen/k.gesamt*100);
           return `<div class="pen"><span class="pen-n">${k.n}${k.offen?`<span class="pr-tag" style="margin-left:8px">${k.offen} offen</span>`:''}</span>
             <span class="pen-bar"><i style="width:${p}%"></i></span><span class="pen-v">${k.gewonnen} / ${k.gesamt}</span></div>`;}).join('')}
       </div>`:''}
       ${d.nachbarn.length?`<div class="pblock ${free?'pb-lock':''}">
         <div class="pb-h"><span class="pb-t">In benachbarten Feldern${free?'<span class="probadge probadge-lock">Pro</span>':''}</span></div>
-        <p class="pb-x">Bereiche, die Firmen wie ihr häufig zusätzlich bedienen — abgeleitet daraus, welche Felder dieselben Anbieter gemeinsam abdecken.</p>
-        <div class="prow prow-h"><span>Feld</span><span>Nähe</span><span>Vergaben</span></div>
+        <p class="pb-x">${tk("Bereiche, die Firmen wie ihr häufig zusätzlich bedienen — abgeleitet daraus, welche Felder dieselben Anbieter gemeinsam abdecken.")}</p>
+        <div class="prow prow-h"><span>${tk("Feld")}</span><span>${tk("Nähe")}</span><span>${tk("Vergaben")}</span></div>
         ${d.nachbarn.map(x=>`<div class="prow"><span class="pr-n">${x.n}</span>
           <span class="pr-o"><span class="pr-tag ${x.naehe==='hoch'?'':'mut'}">${x.naehe}</span></span>
           <span class="pr-a">${x.vergaben}</span></div>`).join('')}
       </div>`:''}
       <div class="pblock">
-        <div class="pb-h"><span class="pb-t">In eurem Markt</span><span class="pb-n">${PMARKT.offen} offen</span></div>
-        <p class="pb-x">Die aktivsten Vergabestellen in eurem Feld und euren Regionen — unabhängig davon, ob ihr dort schon geboten habt.</p>
-        <div class="prow prow-h"><span>Vergabestelle</span><span>Vergaben</span><span>offen</span></div>
+        <div class="pb-h"><span class="pb-t">${tk("In eurem Markt")}</span><span class="pb-n">${PMARKT.offen} offen</span></div>
+        <p class="pb-x">${tk("Die aktivsten Vergabestellen in eurem Feld und euren Regionen — unabhängig davon, ob ihr dort schon geboten habt.")}</p>
+        <div class="prow prow-h"><span>${tk("Vergabestelle")}</span><span>${tk("Vergaben")}</span><span>${tk("offen")}</span></div>
         ${PMARKT.topStellen.map(v=>`<div class="prow"><span class="pr-n">${v.n}</span><span class="pr-a">${v.vergaben}</span>
           <span class="pr-o">${v.offen?`<span class="pr-tag">${v.offen}</span>`:'<span style="color:var(--ink-300)">—</span>'}</span></div>`).join('')}
       </div>
       <div class="pblock">
-        <div class="pb-h"><span class="pb-t">Einstiegsfreundlich</span></div>
-        <p class="pb-x">Offene Ausschreibungen mit kleinem Los und wenigen Bietern — dort ist der Sprung hinein am kürzesten.</p>
-        <div class="prow prow-h"><span>Ausschreibung</span><span>Kleinstes Los</span><span>Bieter</span></div>
+        <div class="pb-h"><span class="pb-t">${tk("Einstiegsfreundlich")}</span></div>
+        <p class="pb-x">${tk("Offene Ausschreibungen mit kleinem Los und wenigen Bietern — dort ist der Sprung hinein am kürzesten.")}</p>
+        <div class="prow prow-h"><span>${tk("Ausschreibung")}</span><span>${tk("Kleinstes Los")}</span><span>${tk("Bieter")}</span></div>
         ${PMARKT.einstieg.map(v=>`<div class="prow"><span class="pr-n">${v.n}</span><span class="pr-a">${v.wert}</span><span class="pr-a">${v.bieter||'—'}</span></div>`).join('')}
-        <p class="pgap">Die Bieterzahl stammt aus vergleichbaren, bereits entschiedenen Vergaben derselben Stelle —
-        bei laufenden Ausschreibungen hat noch niemand geboten.</p>
+        <p class="pgap">${tk("Die Bieterzahl stammt aus vergleichbaren, bereits entschiedenen Vergaben derselben Stelle — bei laufenden Ausschreibungen hat noch niemand geboten.")}</p>
       </div>
     </section>`}
     ${potTab!=='position'?'':`
     <section class="sec ${free?'sec-lock':''}">
-      <h4>Eure Position im Markt <span class="cov">Branche × Region, nach Anzahl</span></h4>
-      ${free?`<div class="note-box" style="margin-bottom:var(--s3)"><b>Im Pro-Zugang enthalten.</b>
-        Marktanteil und Rang rechnen wir aus allen Vergaben eures Feldes gegen eure Siege —
-        die Struktur siehst du, die Zahlen sind verdeckt.</div>`:''}
+      <h4>${tk("Eure Position im Markt")}<span class="cov">${tk("Branche × Region, nach Anzahl")}</span></h4>
+      ${free?`<div class="note-box" style="margin-bottom:var(--s3)"><b>${tk("Im Pro-Zugang enthalten.")}</b>${tk("Marktanteil und Rang rechnen wir aus allen Vergaben eures Feldes gegen eure Siege — die Struktur siehst du, die Zahlen sind verdeckt.")}</div>`:''}
       <div class="pstats">
-        <div class="pstat"><span class="pstat-k">Vergaben in eurem Feld</span><span class="pstat-v">${n(PMARKT.vergaben)}</span><span class="pstat-m">letzte 12 Monate</span></div>
-        <div class="pstat"><span class="pstat-k">Davon von euch gewonnen</span><span class="pstat-v">${historie?n(d.siege):'<span class="pleer">keine</span>'}</span></div>
-        <div class="pstat"><span class="pstat-k">Euer Anteil</span><span class="pstat-v">${d.anteil?n(d.anteil):'<span class="pleer">—</span>'}</span></div>
-        <div class="pstat"><span class="pstat-k">Rang unter den Anbietern</span>
+        <div class="pstat"><span class="pstat-k">${tk("Vergaben in eurem Feld")}</span><span class="pstat-v">${n(PMARKT.vergaben)}</span><span class="pstat-m">${tk("letzte 12 Monate")}</span></div>
+        <div class="pstat"><span class="pstat-k">${tk("Davon von euch gewonnen")}</span><span class="pstat-v">${historie?n(d.siege):'<span class="pleer">keine</span>'}</span></div>
+        <div class="pstat"><span class="pstat-k">${tk("Euer Anteil")}</span><span class="pstat-v">${d.anteil?n(d.anteil):'<span class="pleer">—</span>'}</span></div>
+        <div class="pstat"><span class="pstat-k">${tk("Rang unter den Anbietern")}</span>
           <span class="pstat-v">${d.rang?n(d.rang+'.'):'<span class="pleer">zu wenige Siege</span>'}</span>
           ${d.rang?`<span class="pstat-m">von ${PMARKT.stellen} aktiven Anbietern</span>`:''}</div>
-        <div class="pstat pstat-wide"><span class="pstat-k">Vergabestellen in eurem Feld</span><span class="pstat-v">${n(PMARKT.stellen)}</span>
+        <div class="pstat pstat-wide"><span class="pstat-k">${tk("Vergabestellen in eurem Feld")}</span><span class="pstat-v">${n(PMARKT.stellen)}</span>
           <span class="pstat-m">${historie?`bei ${d.kunden} davon habt ihr schon gewonnen`:'noch bei keiner davon aktiv'}</span></div>
       </div>
-      <p class="pgap">Eine <b>Gewinnquote</b> können wir nicht ausweisen: Vergabestellen veröffentlichen den Gewinner,
-      nicht die unterlegenen Bieter. Wir wissen, wie viele geboten haben — aber nicht, ob ihr dabei wart.</p>
+      <p class="pgap">${tk("Eine")}<b>${tk("Gewinnquote")}</b>${tk("können wir nicht ausweisen: Vergabestellen veröffentlichen den Gewinner, nicht die unterlegenen Bieter. Wir wissen, wie viele geboten haben — aber nicht, ob ihr dabei wart.")}</p>
     </section>`}
 
     ${potTab!=='profil'?'':`
     <section class="sec">
-      <h4>Euer Profil <span class="cov">Grundlage für Relevanz und Anforderungs-Check</span></h4>
+      <h4>${tk("Euer Profil")}<span class="cov">${tk("Grundlage für Relevanz und Anforderungs-Check")}</span></h4>
 
       <div class="pstats">
-        <div class="pstat"><span class="pstat-k">Gewonnene Vergaben</span>
+        <div class="pstat"><span class="pstat-k">${tk("Gewonnene Vergaben")}</span>
           <span class="pstat-v">${historie?n(d.siege):'<span class="pleer">noch keine</span>'}</span>
           ${historie?`<span class="pstat-m">seit ${d.seit}</span>`:''}</div>
-        <div class="pstat"><span class="pstat-k">Auftraggeber</span>
+        <div class="pstat"><span class="pstat-k">${tk("Auftraggeber")}</span>
           <span class="pstat-v">${historie?n(d.kunden):'<span class="pleer">—</span>'}</span></div>
-        <div class="pstat"><span class="pstat-k">Typischer Auftragswert</span>
+        <div class="pstat"><span class="pstat-k">${tk("Typischer Auftragswert")}</span>
           <span class="pstat-v">${d.median?n(d.median):'<span class="pleer">—</span>'}</span>
           ${d.median?'<span class="pstat-m">Median</span>':''}</div>
-        <div class="pstat pstat-wide"><span class="pstat-k">Bekanntes Volumen</span>
+        <div class="pstat pstat-wide"><span class="pstat-k">${tk("Bekanntes Volumen")}</span>
           <span class="pstat-v">${d.volumen?n(d.volumen):'<span class="pleer">—</span>'}</span>
           ${d.volumen?'<span class="pstat-flag">Untergrenze — nur für rund zwei Drittel der Vergaben ist ein Wert veröffentlicht</span>':''}</div>
       </div>
 
-      ${historie && !belastbar?`<div class="note-box" style="margin-top:var(--s3)"><b>Dünne Grundlage.</b>
+      ${historie && !belastbar?`<div class="note-box" style="margin-top:var(--s3)"><b>${tk("Dünne Grundlage.")}</b>
         Mit ${d.siege} ${d.siege===1?'Vergabe':'Vergaben'} bei ${d.kunden} ${d.kunden===1?'Auftraggeber':'Auftraggebern'}
         lässt sich noch kein Muster ablesen — ergänzt unten, was wir nicht sehen können.</div>`:''}
-      ${!historie?`<div class="note-box" style="margin-top:var(--s3)">Wir finden unter eurem Namen noch keine
-        gewonnene Vergabe. <b>Dann erklärt euer Profil selbst</b> — Relevanz und Anforderungs-Check
-        funktionieren auch ohne Historie.</div>`:''}
+      ${!historie?`<div class="note-box" style="margin-top:var(--s3)">${tk("Wir finden unter eurem Namen noch keine gewonnene Vergabe.")}<b>${tk("Dann erklärt euer Profil selbst")}</b>${tk("— Relevanz und Anforderungs-Check funktionieren auch ohne Historie.")}</div>`:''}
 
       <div class="ang">
         ${(()=>{
@@ -2366,25 +2334,23 @@ function renderProfil(){
             const vmin = fmt(userProfile.volMin), vmax = fmt(userProfile.volMax);
             const vol = (vmin||vmax) ? `${vmin||'0'} – ${vmax||'beliebig'} €` : 'keine Grenze';
             return `<div class="ang-sync">
-              <div class="asy-h"><span class="asy-t">Eure Angaben <span class="asy-tag">erklärt</span></span>
-                <button class="asy-edit" data-editprofil="1">Bearbeiten</button></div>
-              <div class="asy-r"><span class="asy-k">Schwerpunkte</span>
+              <div class="asy-h"><span class="asy-t">${tk("Eure Angaben")}<span class="asy-tag">${tk("erklärt")}</span></span>
+                <button class="asy-edit" data-editprofil="1">${tk("Bearbeiten")}</button></div>
+              <div class="asy-r"><span class="asy-k">${tk("Schwerpunkte")}</span>
                 <span class="asy-v">${felder.map(f=>`<span class="asy-chip">${f}</span>`).join('')}</span></div>
-              <div class="asy-r"><span class="asy-k">Regionen</span><span class="asy-v">${regs}</span></div>
-              <div class="asy-r"><span class="asy-k">Auftragsgröße</span><span class="asy-v">${vol}</span></div>
-              <p class="asy-x">Diese Angaben steuern Relevanz und Anforderungs-Check. Bearbeiten öffnet den Profil-Dialog.</p>
+              <div class="asy-r"><span class="asy-k">${tk("Regionen")}</span><span class="asy-v">${regs}</span></div>
+              <div class="asy-r"><span class="asy-k">${tk("Auftragsgröße")}</span><span class="asy-v">${vol}</span></div>
+              <p class="asy-x">${tk("Diese Angaben steuern Relevanz und Anforderungs-Check. Bearbeiten öffnet den Profil-Dialog.")}</p>
             </div>`;
           }
-          return `<div class="note-box gap"><b>Noch kein Profil.</b> Richtet euer Firmenprofil ein —
-            es bestimmt, welche Ausschreibungen als relevant gelten, und speist den Anforderungs-Check.
-            <div class="acts"><button data-editprofil="1">Profil einrichten</button></div></div>`;
+          return `<div class="note-box gap"><b>${tk("Noch kein Profil.")}</b>${tk("Richtet euer Firmenprofil ein — es bestimmt, welche Ausschreibungen als relevant gelten, und speist den Anforderungs-Check.")}<div class="acts"><button data-editprofil="1">${tk("Profil einrichten")}</button></div></div>`;
         })()}
 
         ${angFeld('nachweise','Nachweise & Zertifikate','Werden im Anforderungs-Check gegen die Forderungen geprüft.',[])}
 
         <div class="ang-f">
-          <div class="ang-h"><span class="ang-t">Partnersuche</span>
-            <span class="ang-x">Für Ausschreibungen, die man allein nicht ganz gewinnen kann.</span></div>
+          <div class="ang-h"><span class="ang-t">${tk("Partnersuche")}</span>
+            <span class="ang-x">${tk("Für Ausschreibungen, die man allein nicht ganz gewinnen kann.")}</span></div>
           <div class="ptoggle ${angaben.partner?'on':''}">
             <button class="pt-sw" data-partner aria-pressed="${!!angaben.partner}"><i></i></button>
             <div class="pt-m">
@@ -2397,8 +2363,7 @@ function renderProfil(){
         </div>
       </div>
 
-      <p class="pgap">Angaben von euch sind <b>nicht überprüft</b> — wir kennzeichnen sie getrennt von dem,
-      was wir aus euren Vergaben messen. Für die Erfolgsprämie zählt nur Gemessenes.</p>
+      <p class="pgap">${tk("Angaben von euch sind")}<b>${tk("nicht überprüft")}</b>${tk("— wir kennzeichnen sie getrennt von dem, was wir aus euren Vergaben messen. Für die Erfolgsprämie zählt nur Gemessenes.")}</p>
 
       <button class="sec-link" data-editbestand="an">${historie?'Eure Verträge pflegen':'Frühere Vergaben nachtragen'}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>

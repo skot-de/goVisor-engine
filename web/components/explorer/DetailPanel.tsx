@@ -63,7 +63,7 @@ export function DetailPanel({
   onBodyAction: (action: string, value: string, el: HTMLElement) => void;
 }) {
   const wf = WF as Record<string, { label: string; cls: string }>;
-  const { t } = useSprache();
+  const { t, lang } = useSprache();
   // Gewaehlte Dokumentsprache. `null` = Originalfassung, also das, was `titel` traegt.
   // Beim Leadwechsel zuruecksetzen: die Wahl gilt fuer DIESE Ausschreibung, nicht global.
   const [docLang, setDocLang] = useState<string | null>(null);
@@ -94,8 +94,12 @@ export function DetailPanel({
       case "team": return renderTeam(l);
       default: return renderUebersicht(l);
     }
-    // tick erzwingt Neuberechnung nach In-Place-Mutationen (Status, Kommentar, …)
-  }, [activeId, activeTab, tick, buyerDemo, aktiveRegion, accountLimit, docLang]);
+    // tick erzwingt Neuberechnung nach In-Place-Mutationen (Status, Kommentar, …).
+    // `lang` MUSS mit in die Abhaengigkeiten: die Prototyp-Renderer holen die Sprache
+    // ueber `tk()` aus dem Modul-Zustand, davon weiss React nichts. Ohne die Zeile
+    // wechselt die Oberflaeche die Sprache und der Detail-Koerper bleibt deutsch stehen —
+    // genau so gesehen, bevor es hier stand.
+  }, [activeId, activeTab, tick, buyerDemo, aktiveRegion, accountLimit, docLang, lang]);
 
   const [briefOpen, setBriefOpen] = useState(false);   // Hooks vor jedem Early-Return
   const [copied, setCopied] = useState(false);
@@ -139,20 +143,20 @@ export function DetailPanel({
             <span className={`srcpill big src-${l.src}`}>{l.phaseLabel}</span>
             <span className="eb-sep">·</span>
             <span>{l.cpvLabel}</span>
-            {analysed ? <span className="seen-mark">analysiert</span> : null}
+            {analysed ? <span className="seen-mark">{t("analysiert")}</span> : null}
           </div>
           <div className="dactions">
             {isFree ? (
               <>
                 <span className="danalysemeter">
-                  <span className="dam-lbl">Bewertungen</span>
+                  <span className="dam-lbl">{t("Bewertungen")}</span>
                   <span className="dam-val">1/3</span>
                 </span>
                 <span className="dactsep" />
               </>
             ) : null}
             <button className={`dbtn dbtn-won ${wonState === "done" ? "on" : ""}`}
-              title={wonState === "done" ? "Als Vertrag hinterlegt — im Strategie-Tab pflegbar" : "Als gewonnen markieren (legt einen Vertrag an)"}
+              title={t(wonState === "done" ? "Als Vertrag hinterlegt — im Strategie-Tab pflegbar" : "Als gewonnen markieren (legt einen Vertrag an)")}
               onClick={async () => {
                 if (wonState === "done") return;
                 setWonState("saving");
@@ -164,41 +168,41 @@ export function DetailPanel({
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                 <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M6 4h12v5a6 6 0 0 1-12 0zM8 21h8M12 15v6" />
               </svg>
-              {wonState === "done" ? <span className="dbtn-wontxt">Vertrag angelegt</span>
-                : wonState === "guest" ? <span className="dbtn-wontxt">Bitte anmelden</span> : null}
+              {wonState === "done" ? <span className="dbtn-wontxt">{t("Vertrag angelegt")}</span>
+                : wonState === "guest" ? <span className="dbtn-wontxt">{t("Bitte anmelden")}</span> : null}
             </button>
             <div className="dbrief-wrap">
-              <button className="dbtn" title="Briefing erstellen" onClick={() => setBriefOpen((o) => !o)}>
+              <button className="dbtn" title={t("Briefing erstellen")} onClick={() => setBriefOpen((o) => !o)}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6M8 13h8M8 17h5" />
                 </svg>
               </button>
               {briefOpen ? (
                 <div className="dbrief-menu">
-                  <div className="dbrief-h">Briefing zu diesem Lead</div>
+                  <div className="dbrief-h">{t("Briefing zu diesem Lead")}</div>
                   <button className="dbrief-opt" onClick={() => { track(EV.BRIEFING, { format: "doc", lead_id: l.id }); downloadDoc(l); setBriefOpen(false); }}>
-                    <b>Word</b><span>.doc · öffnet in Word, bearbeitbar</span></button>
+                    <b>Word</b><span>{t(".doc · öffnet in Word, bearbeitbar")}</span></button>
                   <button className="dbrief-opt" onClick={() => { track(EV.BRIEFING, { format: "md", lead_id: l.id }); downloadMarkdown(l); setBriefOpen(false); }}>
-                    <b>Markdown</b><span>.md · Datei</span></button>
+                    <b>Markdown</b><span>{t(".md · Datei")}</span></button>
                   <button className="dbrief-opt" onClick={async () => { setCopied(await copyMarkdown(l)); setTimeout(() => setCopied(false), 1500); }}>
-                    <b>{copied ? "Kopiert ✓" : "Markdown kopieren"}</b><span>in die Zwischenablage</span></button>
+                    <b>{t(copied ? "Kopiert ✓" : "Markdown kopieren")}</b><span>{t("in die Zwischenablage")}</span></button>
                 </div>
               ) : null}
             </div>
             <button
               className="dbtn dbtn-star"
-              title="Merken"
-              aria-label="Merken"
+              title={t("Merken")}
+              aria-label={t("Merken")}
               data-merk={l.merk ? String(l.merk) : undefined}
               onClick={() => onStar(l.id)}
               dangerouslySetInnerHTML={{ __html: STAR }}
             />
-            <button className="dbtn" title={mode === "full" ? "Verkleinern" : "Vollbild"} onClick={onExpand}>
+            <button className="dbtn" title={t(mode === "full" ? "Verkleinern" : "Vollbild")} onClick={onExpand}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                 <path d={ExpandIcon(mode === "full")} />
               </svg>
             </button>
-            <button className="dbtn" title="Schließen" onClick={onClose}>
+            <button className="dbtn" title={t("Schließen")} onClick={onClose}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round">
                 <path d="M6 6l12 12M18 6 6 18" />
               </svg>
@@ -212,8 +216,8 @@ export function DetailPanel({
               <path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z" />
             </svg>
             <span>
-              <b>{l.aktualitaet.art === "aufgehoben" ? "Verfahren aufgehoben" : "Nach Veröffentlichung geändert"}</b>{" "}
-              {l.aktualitaet.text} · Stand {l.aktualitaet.am}
+              <b>{t(l.aktualitaet.art === "aufgehoben" ? "Verfahren aufgehoben" : "Nach Veröffentlichung geändert")}</b>{" "}
+              {l.aktualitaet.text} · {t("Stand")} {l.aktualitaet.am}
             </span>
           </div>
         ) : null}
@@ -238,7 +242,7 @@ export function DetailPanel({
           <div className="wfpick">
             {Object.entries(wf).map(([k, v]) => (
               <button key={k} className={`wf ${v.cls} ${l.userStatus === k ? "on" : ""}`} onClick={() => onWf(k)}>
-                {v.label}
+                {t(v.label)}
               </button>
             ))}
           </div>
@@ -255,10 +259,10 @@ export function DetailPanel({
               aria-selected={activeTab === tb.key}
               onClick={() => onTab(tb.key)}
             >
-              {tb.label}
+              {t(tb.label)}
               {tb.key === "analyse" && isFree ? <span className="quota">1/3</span> : null}
               {tb.key === "team" && l.comments?.length ? <span className="quota">{l.comments.length}</span> : null}
-              {tb.pro && isFree ? <span className="probadge probadge-lock" title="Im Pro-Zugang">Pro</span> : null}
+              {tb.pro && isFree ? <span className="probadge probadge-lock" title={t("Im Pro-Zugang")}>{t("Pro")}</span> : null}
             </button>
           ))}
         </div>
@@ -277,6 +281,7 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
   onPick?: (id: string) => void;
   onGoto?: (ziel: "netzwerk" | "strategie" | "award" | "vorschau" | "jetzt") => void;
 }) {
+  const { t } = useSprache();
   /* Drei Spalten nach Zeithorizont, nicht nach Datenherkunft:
    *   jetzt   — worauf man sich diese Woche bewerben kann
    *   bald    — was sich anbahnt (Ankündigungen, auslaufende Verträge)
@@ -331,24 +336,24 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
 
     const luecken = [
       { key: "buerg", n: imFeld.filter((l) => blockerArt(l, "buergschaft_offen")).length,
-        titel: "Bürgschaftsrahmen fehlt",
-        text: "fordern eine Bürgschaft. Ohne euren Rahmen können wir nicht sagen, ob ihr sie stemmt." },
+        titel: t("Bürgschaftsrahmen fehlt"),
+        text: t("fordern eine Bürgschaft. Ohne euren Rahmen können wir nicht sagen, ob ihr sie stemmt.") },
       { key: "allein", n: imFeld.filter((l) => blockerArt(l, "partner")).length,
-        titel: "Über eurer Alleingrenze",
-        text: "sind größer, als ihr allein stemmt — mit Partner wären sie erreichbar." },
+        titel: t("Über eurer Alleingrenze"),
+        text: t("sind größer, als ihr allein stemmt — mit Partner wären sie erreichbar.") },
       { key: "region", n: imFeld.filter((l) => teilStatus(l, "region") === "no").length,
-        titel: "Außerhalb eurer Regionen",
-        text: "passen fachlich, liegen aber außerhalb. Arbeitet ihr dort doch?" },
+        titel: t("Außerhalb eurer Regionen"),
+        text: t("passen fachlich, liegen aber außerhalb. Arbeitet ihr dort doch?") },
       { key: "vol", n: imFeld.filter((l) => teilStatus(l, "vol") === "no").length,
-        titel: "Außerhalb eurer Wertspanne",
-        text: "liegen über oder unter der Spanne, die ihr angegeben habt." },
+        titel: t("Außerhalb eurer Wertspanne"),
+        text: t("liegen über oder unter der Spanne, die ihr angegeben habt.") },
     ].filter((x) => x.n > 0).sort((a, z) => z.n - a.n);
 
     return { offen, heiss, kuenftig, netz, zuschlaege, netzKaeufer, gewinner, luecken, imFeld, tageOf };
   }, [rows, alle]);
 
   const Zeile = ({ l, sub }: { l: BriefLead; sub: string }) => (
-    <button className="lb-row" onClick={() => onPick?.(l.id)} title="Lead öffnen">
+    <button className="lb-row" onClick={() => onPick?.(l.id)} title={t("Lead öffnen")}>
       <span className="lb-row-t">{String(l.titel || "").slice(0, 58)}</span>
       <span className="lb-row-s">{sub}</span>
     </button>
@@ -365,26 +370,26 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
   const monate = (l: BriefLead) => {
     const d = l.endTage as number | null;
     const echt = String((l.timing as { src?: string } | undefined)?.src ?? "") === "echt";
-    if (d == null) return "Zeitpunkt offen";
-    if (d < 0) return "bereits ausgelaufen";
+    if (d == null) return t("Zeitpunkt offen");
+    if (d < 0) return t("bereits ausgelaufen");
     if (!echt) {
       // Geschätzt → nur Grobstufe, nie eine Monatszahl.
-      if (d <= 90) return "läuft bald aus (geschätzt)";
-      if (d <= 365) return "läuft dieses Jahr aus (geschätzt)";
-      return "läuft in ein bis zwei Jahren aus (geschätzt)";
+      if (d <= 90) return t("läuft bald aus (geschätzt)");
+      if (d <= 365) return t("läuft dieses Jahr aus (geschätzt)");
+      return t("läuft in ein bis zwei Jahren aus (geschätzt)");
     }
-    if (d <= 14) return "läuft jetzt aus";
-    if (d <= 60) return "läuft in den nächsten Wochen aus";
-    if (d < 365) return `läuft in ~${Math.round(d / 30)} Monaten aus`;
+    if (d <= 14) return t("läuft jetzt aus");
+    if (d <= 60) return t("läuft in den nächsten Wochen aus");
+    if (d < 365) return t("läuft in ~{n} Monaten aus", { n: Math.round(d / 30) });
     const j = d / 365;
-    return j < 1.5 ? "läuft in gut einem Jahr aus" : `läuft in ~${Math.round(j)} Jahren aus`;
+    return j < 1.5 ? t("läuft in gut einem Jahr aus") : t("läuft in ~{n} Jahren aus", { n: Math.round(j) });
   };
 
   return (
     <div className="lb">
       <div className="lb-head">
-        <p className="lb-h">Euer Überblick</p>
-        <p className="lb-l">Wählt links eine Ausschreibung — oder steigt hier ein.</p>
+        <p className="lb-h">{t("Euer Überblick")}</p>
+        <p className="lb-l">{t("Wählt links eine Ausschreibung — oder steigt hier ein.")}</p>
       </div>
 
       <div className="lb-drei">
@@ -393,31 +398,32 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
           <h4>
             <span className="lb-dot heiss" />
             {/* Rückweg in die Liste: aus dem Überblick gab es bisher keinen. */}
-            <button className="lb-h4btn" onClick={() => onGoto?.("jetzt")}>Jetzt bewerben</button>
+            <button className="lb-h4btn" onClick={() => onGoto?.("jetzt")}>{t("Jetzt bewerben")}</button>
           </h4>
-          <p className="lb-n2">{b.heiss.length.toLocaleString("de-DE")}<em>mit Frist in den nächsten 3 Wochen</em></p>
+          <p className="lb-n2">{b.heiss.length.toLocaleString("de-DE")}<em>{t("mit Frist in den nächsten 3 Wochen")}</em></p>
           {b.heiss.length ? b.heiss.slice(0, 5).map((l) => {
-            const t = b.tageOf(l);
+            const tage = b.tageOf(l);
             return <Zeile key={l.id} l={l}
-              sub={t === 0 ? "läuft heute ab" : t === 1 ? "läuft morgen ab" : `noch ${t} Tage`} />;
-          }) : <p className="lb-nix">Gerade nichts Dringendes — gut so.</p>}
+              sub={tage === 0 ? t("läuft heute ab") : tage === 1 ? t("läuft morgen ab")
+                   : t("noch {n} Tage", { n: tage ?? 0 })} />;
+          }) : <p className="lb-nix">{t("Gerade nichts Dringendes — gut so.")}</p>}
         </section>
 
         {/* ── bald ──────────────────────────────────────────────── */}
         <section className="lb-sp">
-          <h4><span className="lb-dot bald" />Bahnt sich an</h4>
-          <p className="lb-n2">{b.kuenftig.length.toLocaleString("de-DE")}<em>Ankündigungen und auslaufende Verträge</em></p>
+          <h4><span className="lb-dot bald" />{t("Bahnt sich an")}</h4>
+          <p className="lb-n2">{b.kuenftig.length.toLocaleString("de-DE")}<em>{t("Ankündigungen und auslaufende Verträge")}</em></p>
           {b.kuenftig.length ? b.kuenftig.slice(0, 5).map((l) => (
             <Zeile key={l.id} l={l} sub={monate(l)} />
-          )) : <p className="lb-nix">Noch keine Vorankündigungen in eurem Feld.</p>}
+          )) : <p className="lb-nix">{t("Noch keine Vorankündigungen in eurem Feld.")}</p>}
           {b.kuenftig.length > 5 ? (
-            <button className="lb-mehr" onClick={() => onGoto?.("vorschau")}>Alle {b.kuenftig.length} ansehen</button>
+            <button className="lb-mehr" onClick={() => onGoto?.("vorschau")}>{t("Alle {n} ansehen", { n: b.kuenftig.length })}</button>
           ) : null}
         </section>
 
         {/* ── was im Weg steht ──────────────────────────────────── */}
         <section className="lb-sp">
-          <h4><span className="lb-dot luecke" />Was euch bremst</h4>
+          <h4><span className="lb-dot luecke" />{t("Was euch bremst")}</h4>
           {b.luecken.length ? (<>
             <p className="lb-n2">{b.luecken[0].n.toLocaleString("de-DE")}<em>{b.luecken[0].titel.toLowerCase()}</em></p>
             {b.luecken.slice(0, 3).map((g) => (
@@ -428,34 +434,34 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
             ))}
           </>) : (
             <p className="lb-nix">{b.imFeld.length
-              ? "Nichts blockiert euch gerade — euer Profil ist vollständig genug."
-              : "Legt unter „Unternehmen“ euer Profil an, dann zeigen wir hier, was euch Aufträge kostet."}</p>
+              ? t("Nichts blockiert euch gerade — euer Profil ist vollständig genug.")
+              : t("Legt unter „Unternehmen“ euer Profil an, dann zeigen wir hier, was euch Aufträge kostet.")}</p>
           )}
         </section>
 
         {/* ── drumrum ───────────────────────────────────────────── */}
         <section className="lb-sp">
-          <h4><span className="lb-dot markt" />Markt &amp; Netzwerk</h4>
+          <h4><span className="lb-dot markt" />{t("Markt & Netzwerk")}</h4>
           <button className="lb-kachel" onClick={() => onGoto?.("netzwerk")}>
             <b>{b.netz.length.toLocaleString("de-DE")}</b>
             <span>{b.netzKaeufer.length
-              ? <>Mehrlos-Vergaben, u.a. bei <i>{b.netzKaeufer.join(" und ")}</i> — hier lohnt ein Partner</>
-              : "Vergaben mit mehreren Losen — hier lohnt ein Partner"}</span>
+              ? <>{t("Mehrlos-Vergaben, u.a. bei")} <i>{b.netzKaeufer.join(t(" und "))}</i> {t("— hier lohnt ein Partner")}</>
+              : t("Vergaben mit mehreren Losen — hier lohnt ein Partner")}</span>
           </button>
           <button className="lb-kachel" onClick={() => onGoto?.("award")}>
             <b>{b.zuschlaege.length.toLocaleString("de-DE")}</b>
             <span>{b.gewinner.length
-              ? <>frische Zuschläge, u.a. an <i>{b.gewinner.join(" und ")}</i> — wer gewonnen hat, kauft jetzt ein</>
-              : "frische Zuschläge — wer gewonnen hat, kauft jetzt ein"}</span>
+              ? <>{t("frische Zuschläge, u.a. an")} <i>{b.gewinner.join(t(" und "))}</i> {t("— wer gewonnen hat, kauft jetzt ein")}</>
+              : t("frische Zuschläge — wer gewonnen hat, kauft jetzt ein")}</span>
           </button>
           <button className="lb-kachel" onClick={() => onGoto?.("strategie")}>
             <b>→</b>
-            <span>Strategie: wohin sich euer Markt bewegt</span>
+            <span>{t("Strategie: wohin sich euer Markt bewegt")}</span>
           </button>
         </section>
       </div>
 
-      <p className="lb-foot">Zahlen beziehen sich auf eure aktuell gefilterte Liste.</p>
+      <p className="lb-foot">{t("Zahlen beziehen sich auf eure aktuell gefilterte Liste.")}</p>
     </div>
   );
 }

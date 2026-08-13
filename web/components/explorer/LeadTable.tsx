@@ -62,7 +62,7 @@ export function LeadTable({
   colWidths: Record<string, number>;
   onResize: (key: string, width: number) => void;
 }) {
-  const { t } = useSprache();
+  const { t } = useSprache();  // Zellen-HTML kommt aus explorerCore (tk) und rendert mit
   const cols: Col[] = (COLS as Col[]).filter((c) => c.on);
   const colspan = cols.length;
   const dragCol = useRef<string | null>(null);
