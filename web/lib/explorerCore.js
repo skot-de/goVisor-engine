@@ -804,20 +804,20 @@ function cellHTML(l, key){
         return `<td class="c-band"><span class="band-na" title="Zuschlag bereits erteilt — kein Angebotsaufwand mehr">—</span></td>`;
       const a = aufwandStufe(l);
       const naHint = a.bekannt === 0
-        ? 'Die Bekanntmachung nennt keine Anforderungen — wir schätzen den Aufwand nicht.'
-        : `Nur ${a.bekannt} von mindestens 2 nötigen Angaben bekannt — zu wenig für eine belastbare Einstufung.`;
-      return `<td class="c-band">${bandMeter(a.stufe, true, 'Angebotsaufwand', naHint)}</td>`;
+        ? tk('Die Bekanntmachung nennt keine Anforderungen — wir schätzen den Aufwand nicht.')
+        : tk('Nur {n} von mindestens 2 nötigen Angaben bekannt — zu wenig für eine belastbare Einstufung.', {n: a.bekannt});
+      return `<td class="c-band">${bandMeter(a.stufe, true, tk('Angebotsaufwand'), naHint)}</td>`;
     }
     case 'empf': {
       if(l.src==='award') return awardEmpfCell(l);
       // #26: eine Spalte, zwei Inhalte — Handlungsempfehlung wenn möglich, sonst Einordnung.
       const r = recForList(l);
-      return `<td class="c-empf"><span class="empf rec-${r.cls}" title="${esc(r.grund)}">${r.label}</span>` +
-             `<span class="empf-grund">${esc(r.grund)}</span></td>`;
+      return `<td class="c-empf"><span class="empf rec-${r.cls}" title="${esc(tk(r.grund))}">${tk(r.label)}</span>` +
+             `<span class="empf-grund">${esc(tk(r.grund))}</span></td>`;
     }
     case 'region': return `<td class="c-region">${esc(l.region)}</td>`;
-    case 'inc': return `<td class="c-inc">${l.incumbent ? val(l.incumbent.name, l.incumbent.src) : '<span style="color:var(--ink-300)">offen</span>'}</td>`;
-    case 'status': return `<td class="c-status"><span class="stat">${l.seen || (l.status==='ungesichtet'?'neu':'gesichtet')}</span></td>`;
+    case 'inc': return `<td class="c-inc">${l.incumbent ? val(l.incumbent.name, l.incumbent.src) : `<span style="color:var(--ink-300)">${tk('offen')}</span>`}</td>`;
+    case 'status': return `<td class="c-status"><span class="stat">${tk(l.seen || (l.status==='ungesichtet'?'neu':'gesichtet'))}</span></td>`;
     case 'wf': return `<td class="c-wf">${l.userStatus ? wfPill(l.userStatus) : '<span class="wf-none">—</span>'}</td>`;
   }
 }
@@ -1637,26 +1637,26 @@ function renderAnalyse(l){
         const rec = recommend(l, userProfile, { ownBuyers: userContracts.map(c=>c.buyer_name).filter(Boolean) });
         const CLS = { gruen:'go', blau:'def', neutral:'open', gedaempft:'skip' };
         const kette = begruendungskette(rec.evals);
-        const zTags = rec.zusaetze.map(z=>`<span class="rec-z">${z.t}</span>`).join('');
+        const zTags = rec.zusaetze.map(z=>`<span class="rec-z">${tk(z.t)}</span>`).join('');
         let head;
         if(rec.empfehlung){
           const b = rec.empfehlung;
-          head = `<div class="rec-verdict rec-${CLS[b.cls]}"><span class="rec-label">${b.label}</span>`
-            + (b.gruende&&b.gruende.length?`<span class="rec-grund">${b.gruende.join(' · ')}</span>`:'')
-            + (b.frage?`<span class="rec-frage">${b.frage}</span>`:'') + `</div>`
-            + (b.schritt?`<div class="rec-step">${tk("Nächster Schritt:")}<b>${b.schritt}</b></div>`:'');
+          head = `<div class="rec-verdict rec-${CLS[b.cls]}"><span class="rec-label">${tk(b.label)}</span>`
+            + (b.gruende&&b.gruende.length?`<span class="rec-grund">${b.gruende.map(tk).join(' · ')}</span>`:'')
+            + (b.frage?`<span class="rec-frage">${tk(b.frage)}</span>`:'') + `</div>`
+            + (b.schritt?`<div class="rec-step">${tk("Nächster Schritt:")}<b>${tk(b.schritt)}</b></div>`:'');
         } else {
           const a = rec.einordnung;
-          const hint = rec.gesperrt==='keine_unterlagen' ? 'Für eine Empfehlung fehlen die Vergabeunterlagen.'
-            : rec.gesperrt==='kaltstart' ? 'Für eine Empfehlung fehlt die Mindestabdeckung im Eignungsprofil.'
-            : rec.gesperrt==='kein_profil' ? 'Für eine Empfehlung fehlt das Eignungsprofil.' : '';
-          head = `<div class="rec-verdict rec-${CLS[a.cls]}"><span class="rec-label">${a.label}</span>`
-            + (a.gruende&&a.gruende.length?`<span class="rec-grund">${a.gruende.join(' · ')}</span>`:'') + `</div>`
+          const hint = rec.gesperrt==='keine_unterlagen' ? tk('Für eine Empfehlung fehlen die Vergabeunterlagen.')
+            : rec.gesperrt==='kaltstart' ? tk('Für eine Empfehlung fehlt die Mindestabdeckung im Eignungsprofil.')
+            : rec.gesperrt==='kein_profil' ? tk('Für eine Empfehlung fehlt das Eignungsprofil.') : '';
+          head = `<div class="rec-verdict rec-${CLS[a.cls]}"><span class="rec-label">${tk(a.label)}</span>`
+            + (a.gruende&&a.gruende.length?`<span class="rec-grund">${a.gruende.map(tk).join(' · ')}</span>`:'') + `</div>`
             + (hint?`<div class="rec-hint">${hint}</div>`:'');
         }
         return `<div class="rec26">${head}`
           + (zTags?`<div class="rec-zusaetze">${zTags}</div>`:'')
-          + `<table class="rec-kette"><tbody>${kette.map(k=>`<tr><td class="rec-e">${k.E}</td><td class="rec-kl">${k.label}</td><td class="rec-kz">${k.zustand}</td><td class="rec-kq">${k.quelle}</td></tr>`).join('')}</tbody></table></div>`;
+          + `<table class="rec-kette"><tbody>${kette.map(k=>`<tr><td class="rec-e">${k.E}</td><td class="rec-kl">${tk(k.label)}</td><td class="rec-kz">${tk(k.zustand)}</td><td class="rec-kq">${tk(k.quelle)}</td></tr>`).join('')}</tbody></table></div>`;
       })()}
       <div class="scores">
         <div class="score" data-level="${l.relevanz}">
