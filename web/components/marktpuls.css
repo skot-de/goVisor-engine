@@ -66,6 +66,17 @@
 .mp-bar[data-lvl="unter"] i { background: #a7ded0; }
 .mp-bar[data-lvl="hoch"] i { background: var(--mp-bar-hoch); }
 .mp-bar[data-lvl="tief"] i { background: var(--mp-bar-tief); }
+/* Grosser Ausschlag, der über die Jahre nicht hält: schraffiert statt voll. Die Höhe bleibt
+   ehrlich — der Monat WAR im Zeitraum so —, aber das Muster sagt „darauf ist kein Verlass".
+   Ohne diese Kennzeichnung widerspräche der grösste Balken dem Satz darunter, der aus gutem
+   Grund einen anderen Monat nennt (gemessen CH/Medizin: März +64 %, jährlich wechselnd). */
+.mp-bar[data-unsicher="ja"] i {
+  background-image: repeating-linear-gradient(45deg,
+    rgba(255, 255, 255, .55) 0 3px, rgba(255, 255, 255, 0) 3px 6px);
+  outline: 1px dashed var(--ink-400, #8c9b95);
+  outline-offset: -1px;
+}
+.mp-bar[data-unsicher="ja"] b { color: var(--ink-400, #8c9b95); font-weight: 500; }
 .mp-bar b {
   display: block; font-size: var(--t-meta, 11px); font-weight: 600; text-align: center;
   color: var(--ink-700, #33453f); font-variant-numeric: tabular-nums; padding-bottom: 3px;
@@ -74,6 +85,63 @@
 .mp-axis { display: grid; grid-template-columns: repeat(12, 1fr); gap: 4px; margin-top: 5px; margin-left: var(--mp-gutter); }
 .mp-axis span { font-size: var(--t-meta, 11px); color: var(--ink-500, #64766f); text-align: center; }
 .mp-axis span[data-lvl="hoch"], .mp-axis span[data-lvl="ueber"] { color: var(--ink-900, #12211d); font-weight: 600; }
+
+/* ── Jahres-Layer ─────────────────────────────────────────────────────────────
+   Eigenes SVG statt Chart-Bibliothek: das Element soll in sich geschlossen bleiben.
+   Die vier Serienfarben müssen sich auch bei Farbsehschwäche unterscheiden — deshalb
+   Grün / Tiefblau / Bernstein / Grau, nicht vier Grüntöne. Zusätzlich trägt jede Linie
+   ihren Namen in der Legende; die Farbe ist Lesehilfe, nicht der einzige Träger. */
+.mp-jahre {
+  --mp-s1: var(--signal, #10b981);
+  --mp-s2: #2563eb;
+  --mp-s3: #b45309;
+  --mp-s4: #64766f;
+}
+.mp-svg { display: block; width: 100%; height: auto; overflow: visible; }
+.mp-svg .mp-grid { stroke: var(--line, #e3e7e5); stroke-width: 1; }
+.mp-svg .mp-tick {
+  font-size: 11px; fill: var(--ink-500, #64766f); font-variant-numeric: tabular-nums;
+}
+.mp-svg .mp-linie { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.mp-svg .mp-punkt { fill: var(--surface, #fff); stroke-width: 2; }
+/* Voller Punkt = volles Jahr. Ein Teiljahr bleibt offen und gestrichelt — es steht in der
+   Kurve, trägt aber keinen Jahresvergleich (CH-TED 2016: fünf belegte Monate). */
+.mp-svg .mp-punkt[data-teil="nein"] { fill: currentColor; }
+.mp-svg .mp-punkt[data-teil="ja"] { stroke-dasharray: 2.2 1.8; }
+.mp-svg .mp-bruch { stroke: var(--ink-400, #8c9b95); stroke-width: 1; stroke-dasharray: 3 3; }
+.mp-svg .mp-bruch[data-art="kuratiert"] { stroke-dasharray: 1.5 3.5; }
+.mp-svg .mp-bruch-nr { fill: var(--surface-2, #fafbfa); stroke: var(--ink-400, #8c9b95); stroke-width: 1; }
+.mp-svg .mp-bruch-txt { font-size: 9.5px; font-weight: 700; fill: var(--ink-700, #33453f); }
+
+.mp-legende { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 7px; }
+.mp-legende li {
+  display: grid; grid-template-columns: 10px auto; align-items: baseline; gap: 3px 8px;
+  font-size: var(--t-sm, 12.5px);
+}
+.mp-legende li > i { width: 10px; height: 10px; border-radius: 3px; align-self: center; }
+.mp-legende-name { font-weight: 600; color: var(--ink-900, #12211d); }
+.mp-legende-name em { font-style: normal; font-weight: 400; color: var(--ink-500, #64766f); font-variant-numeric: tabular-nums; }
+.mp-legende-grund {
+  grid-column: 2; font-size: var(--t-meta, 11px); color: var(--ink-500, #64766f); line-height: 1.5;
+}
+.mp-legende-grund:empty { display: none; }
+
+.mp-brueche { margin-top: 14px; }
+.mp-brueche h5 { font-size: var(--t-sm, 12.5px); font-weight: 700; margin: 0 0 4px; }
+.mp-brueche ol { margin: 8px 0 0; padding: 0 0 0 18px; display: grid; gap: 6px; }
+.mp-brueche li { font-size: var(--t-sm, 12.5px); line-height: 1.5; color: var(--ink-700, #33453f); }
+.mp-brueche li > b { font-variant-numeric: tabular-nums; margin-right: 6px; }
+/* Ein Jahr, mehrere Brüche: die innere Liste hängt unter dem Jahr, ohne zweite Zählung —
+   die Nummer im Diagramm zeigt auf das JAHR, nicht auf den einzelnen Eintrag. */
+.mp-brueche ol > li > ul { list-style: none; margin: 3px 0 0; padding: 0; display: grid; gap: 4px; }
+.mp-bruch-art {
+  display: inline-block; font-size: 10px; text-transform: uppercase; letter-spacing: .05em;
+  border-radius: 4px; padding: 1px 5px; margin-right: 6px; vertical-align: 1px;
+  background: var(--surface-3, #f1f3f2); color: var(--ink-500, #64766f);
+}
+/* „belegt" = äusseres Wissen mit Quellenangabe, „gemessen" = aus unserem Bestand
+   abgeleitet. Der Unterschied muss sichtbar sein, nicht nur im JSON stehen. */
+.mp-bruch-art[data-art="kuratiert"] { background: var(--flag-wash, #fbf2e6); color: var(--flag, #b45309); }
 
 .mp-befund {
   margin-top: 14px; padding: 10px 13px; border-radius: 8px;
@@ -119,6 +187,9 @@
   .mp-bar b { display: none; }
   .mp-bars { height: 130px; }
   .mp-mean span { top: -15px; }
+  /* Die Jahrestabelle wächst mit der Achse (22 Jahre × Quellen) — sie darf scrollen,
+     die Seite darunter nicht. */
+  .mp-jahre .mp-table { overflow-x: auto; }
 }
 
 .mp-sr {
@@ -128,4 +199,11 @@
 
 @media (prefers-reduced-motion: reduce) {
   .mp-bar i { transition: none; }
+}
+
+/* Absolutzahlen unter dem Prozentwert in der Bieter-Tabelle. Ein Anteil ohne Grundmenge ist
+   nicht einzuordnen — „20 %" heisst in DE 7.047 von 35.062 Zuschlägen, in CH 166 von 1.215. */
+.mp-table .mp-abs {
+  display: block; font-size: var(--t-meta, 11px); color: var(--ink-400, #8c9b95);
+  font-variant-numeric: tabular-nums; margin-top: 1px;
 }

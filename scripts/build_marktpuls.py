@@ -125,7 +125,30 @@ GOLD = ROOT / "data" / "gold"
 FENSTER_JAHRE = 5           # Briefing §3.1: letzte 5 vollständige Jahre
 MIN_FAELLE = 200            # Briefing §3.4: Mindestfallzahl je Land×Branche-Kombination
 LAGE_TAGE = 30              # Briefing §4.1: Zuschläge/Aufhebungen der letzten 30 Tage
-AUSREISSER_PCT = 25.0       # Briefing §7: ab welcher Abweichung ein Befund benannt wird
+AUSREISSER_PCT = 25.0       # Briefing §7: ab welcher Abweichung ein Monat hervorgehoben wird
+# --- Wann ein Monat im Befundsatz BENANNT werden darf ---------------------------
+# Früher entschied allein `AUSREISSER_PCT` über einen Fenster-Durchschnitt. Das war aus zwei
+# Gründen untauglich für eine öffentliche Anzeige, beide gemessen:
+#   * **Kipppunkt.** 9 von 27 auswertbaren Kombinationen lagen weniger als 3 pp von der
+#     Schwelle entfernt, die Standardansicht `gesamt|alle` bei 0,2 pp. Der Satz wäre zwischen
+#     „gleichmässig verteilt" und „Januarloch" gesprungen, sobald sich die Daten minimal bewegen.
+#   * **Reihenfolge-Fehler.** Geprüft wurde erst das Hoch, dann das Tief — sobald irgendein
+#     Monat über der Schwelle lag, wurde er gemeldet, auch wenn das Tief doppelt so stark war
+#     (DE/Energie meldete „Juli +31 %", während der Januar bei −39 % lag).
+# Ersetzt durch eine Aussage, die nicht kippen kann: **wie oft lag der Monat über 22 Jahre
+# hinweg in derselben Richtung?** Gemessen `gesamt|alle`: Januar 22 von 22 Jahren darunter,
+# Juli 22 von 22 darüber — während Feb/Apr/Mai/Sep/Okt in 55–59 % der Jahre die Richtung
+# wechseln, also Rauschen sind. Beide Kriterien müssen erfüllt sein: Richtung UND Ausmass.
+STABIL_ANTEIL = 0.8         # in mind. 80 % der Jahre dieselbe Richtung
+STABIL_MIN_PCT = 10.0       # und im Mittel mind. so weit vom Jahresmittel entfernt
+                            # (der Dezember hält die Richtung zu 82 %, aber nur mit +3,9 % —
+                            #  verlässlich und trotzdem bedeutungslos, deshalb beide Hürden)
+# Dritte Hürde: genug Masse für eine MONATS-Aussage. `MIN_FAELLE` (200) gilt für den ganzen
+# Block über fünf Jahre — das sind 3,3 Verfahren im Monat und trägt keine Monatsaussage.
+# Gemessen CH/Medizin: Ø 7 Verfahren/Monat, „verlässlich in 8 von 10 Jahren" bei einer
+# Spanne von −70 bis +100 %. Bei Ø 30 verschiebt eine einzelne Vergabe den Index um 3 pp,
+# bei Ø 50 um 2 pp — darunter misst man Zufall, nicht Saison.
+STABIL_MIN_PRO_MONAT = 50
 GESAMT = "gesamt"           # Schlüssel des Länder-Aggregats
 ALLE = "alle"               # Schlüssel des Branchen-Aggregats
 
@@ -167,6 +190,25 @@ VOLLE_MONATE = 12
 # Nachtrag), ab 2019 sind es 6.578 mit 12 belegten Monaten. Ohne diese Schwelle stünde der
 # Serienbeginn von atverg auf 2009 und die Reihe bestünde zehn Jahre lang aus Rauschen.
 MIN_JAHR_VERFAHREN = 100
+
+# --- Single-Bid-Layer ------------------------------------------------------------
+# Verfahrensarten, bei denen ein einziger Bieter **kein Befund, sondern die Bauart** ist:
+# hier wurde kein Wettbewerb gesucht. Gemessen über 2010–2026 (Anteil Single-Bid):
+#   negotiated_no_call 79,4 % · Verhandlungsverf. ohne vorherige Bek. 72,4 % · Direktvergabe 61,2 %
+# Bewusst NICHT dabei, obwohl der Name es nahelegt: `Direktvergabe mit vorheriger
+# Bekanntmachung` liegt bei 18,6 % — dort wurde sehr wohl veröffentlicht und geboten.
+# Wer nach dem Namen filtert statt nach der gemessenen Quote, wirft diese 5.644 Vergaben
+# fälschlich weg. Der ungefilterte Wert bleibt als `quote_alle` daneben stehen.
+OHNE_WETTBEWERB = (
+    "negotiated_no_call",
+    "Verhandlungsverfahren ohne vorheriger Bekanntmachung",
+    "Direktvergabe",
+)
+# Eine Serie wird für ein Jahr nur gezeichnet, wenn sie genug Masse UND genug Abdeckung hat.
+# Gemessen 2010: 53 von 21.010 Zuschlägen trugen eine Bieterzahl (0,3 %) — die daraus
+# gerechneten „5,7 %" wären eine Zahl über 53 Fälle, gezeichnet wie ein Jahreswert.
+BIETER_MIN_JAHR = 300
+BIETER_MIN_ABDECKUNG = 40.0
 
 # Bruchstellen, die in KEINEM Datensatz stehen — äusseres Wissen, deshalb `art: kuratiert`
 # und jeder Eintrag mit `beleg`. Bewusst kurz gehalten (s. Entscheidung 6 im Modulkopf):
@@ -390,7 +432,8 @@ def quellen_im_fenster(con, country: str, jahre: list[int]) -> tuple[list[str], 
     return drin, raus
 
 
-def saison_block(con, wo: str, jahre: list[int]) -> dict:
+def saison_block(con, wo: str, jahre: list[int], stab: dict[int, dict] | None = None,
+                 naiv_mitfuehren: bool = False) -> dict:
     """Monatswerte + Befund für eine Land×Branche-Kombination.
 
     ``avg`` = Ø absolute Verfahren je Kalendermonat (Briefing §3.1).
@@ -419,30 +462,142 @@ def saison_block(con, wo: str, jahre: list[int]) -> dict:
     monate = [{"m": int(m), "avg": round(a, 1)} for m, a, _ in rows]
     total = sum(r[1] for r in rows) * len(jahre)
     jahresmittel = sum(r[1] for r in rows) / 12 if rows else 0.0
+    stab = stab or {}
     for eintrag, (_, a, idx) in zip(monate, rows):
         eintrag["pct"] = round(((idx or 1.0) - 1.0) * 100, 1)
-        eintrag["pct_naiv"] = round((a / jahresmittel - 1) * 100, 1) if jahresmittel else 0.0
+        # `pct_naiv` ist das Prüffeld zum Saisonindex (s. Docstring) und wird nirgends
+        # gerendert. In 35 Blöcken × 12 Monaten kostet es ~4 KB des 50-KB-Budgets für eine
+        # Information, die genau einmal gebraucht wird: am Gesamtwert, wo die Abweichung
+        # zwischen beiden Rechenwegen belegt ist. Deshalb nur dort.
+        if naiv_mitfuehren:
+            eintrag["pct_naiv"] = round((a / jahresmittel - 1) * 100, 1) if jahresmittel else 0.0
+        # Ein Bit je Monat: hielt dieser Monat über die ganze Achse die Richtung? Damit kann
+        # die Anzeige die verlässlichen Ausschläge von denen trennen, die jährlich wechseln —
+        # ohne dass die vollen Stabilitätsdaten ins JSON müssen (Grössenbudget). Nur gesetzt,
+        # wenn wahr: die meisten Monate sind es nicht, und `"stabil":false` zwölfmal je
+        # Kombination kostete 6 KB für eine Information, die das Fehlen schon trägt.
+        if stab.get(eintrag["m"], {}).get("stabil"):
+            eintrag["stabil"] = True
     return {
         "monate": monate,
         "jahresmittel": round(jahresmittel, 1),
         "verfahren_gesamt": int(round(total)),
-        "jahre": jahre,
-        "befund": befund(monate),
+        # `jahre` stand hier früher je Block — in allen 35 identisch, weil das Fenster für
+        # alle dasselbe ist. Es steht jetzt einmal unter `fenster`.
+        "befund": befund(monate, stab),
         "genug": int(round(total)) >= MIN_FAELLE,
     }
 
 
-def befund(monate: list[dict]) -> dict:
-    """Der Ein-Satz-Befund aus den Werten — Briefing §7. Kein vorformulierter Text:
-    hier entstehen nur CODE + Zahlen, formuliert wird im Frontend (i18n)."""
+def monats_stabilitaet(con, achse: list[int]) -> dict[tuple, dict]:
+    """Je (land, branche, monat): wie oft lag der Monat über die GANZE Achse in derselben
+    Richtung? Ein Scan über ``_saison``, in Python aggregiert.
+
+    Bewusst über die Achse (bis 2004), nicht über das 5-Jahres-Fenster: die Frage lautet
+    „war das immer so", und die beantwortet man nicht mit fünf Jahren. Die angezeigten
+    Balken bleiben davon unberührt — sie stehen weiter auf dem Fenster.
+    """
+    rows = con.execute(f"""
+        SELECT land, branche, jahr, monat, count(*) AS n FROM _saison
+        WHERE jahr BETWEEN {achse[0]} AND {achse[-1]} GROUP BY 1, 2, 3, 4
+    """).fetchall()
+
+    # ERST die Mengen addieren, DANN den Index bilden. Andersherum (Index je Land×Branche
+    # bilden und die Indizes mitteln) käme für das Aggregat Unsinn heraus: jedes Jahr läge
+    # dann vierzehnfach in der Stichprobe, gewichtet nach Kombination statt nach Menge.
+    menge: dict[tuple, int] = {}
+    for land, branche, jahr, monat, n in rows:
+        for lnd in (GESAMT, land):
+            for br in (ALLE, branche):
+                k = (lnd, br, jahr, monat)
+                menge[k] = menge.get(k, 0) + n
+
+    # Jahresmittel je (land, branche, jahr) — über ZWÖLF Monate, nicht über die belegten:
+    # ein Monat ohne Verfahren ist eine Null, kein fehlender Wert.
+    summe: dict[tuple, int] = {}
+    for (lnd, br, jahr, _m), n in menge.items():
+        summe[(lnd, br, jahr)] = summe.get((lnd, br, jahr), 0) + n
+
+    roh: dict[tuple, list[float]] = {}
+    for (lnd, br, jahr), gesamt_jahr in summe.items():
+        mittel = gesamt_jahr / 12.0
+        if mittel <= 0:
+            continue
+        for monat in range(1, 13):
+            idx = menge.get((lnd, br, jahr, monat), 0) / mittel
+            roh.setdefault((lnd, br, monat), []).append(idx)
+
+    out: dict[tuple, dict] = {}
+    for key, werte in roh.items():
+        n = len(werte)
+        ueber = sum(1 for v in werte if v > 1.0)
+        anteil = max(ueber, n - ueber) / n if n else 0.0
+        mittel = 100.0 * (sum(werte) / n - 1.0) if n else 0.0
+        hoch = ueber >= n - ueber
+        # Ø Verfahren dieses Monats über alle Jahre — die Masse-Hürde.
+        lnd, br, monat = key
+        pro_monat = sum(menge.get((lnd, br, j, monat), 0)
+                        for j in range(achse[0], achse[-1] + 1)) / max(1, n)
+        # Die Spanne NUR über die Jahre der vorherrschenden Richtung. Sonst behauptet der
+        # Satz „lag auf derselben Seite" und zeigt darunter eine Spanne, die beide Seiten
+        # umfasst (gemessen CH/Medizin: „8 von 10 Jahren" mit −70 bis +100 %). Die
+        # abweichenden Jahre verschwinden dadurch nicht — sie stehen in `jahre_gleich`.
+        gleiche = [v for v in werte if (v > 1.0) == hoch] or werte
+        out[key] = {
+            "jahre": n,
+            "gleiche_richtung": max(ueber, n - ueber),
+            "richtung": "ueber" if hoch else "unter",
+            "lo": round(100.0 * (min(gleiche) - 1.0), 1),
+            "hi": round(100.0 * (max(gleiche) - 1.0), 1),
+            "mittel": round(mittel, 1),
+            "pro_monat": round(pro_monat, 1),
+            # Drei Hürden, jede gegen einen gemessenen Fehlschluss: Richtung (sonst Rauschen),
+            # Ausmass (Dezember: 82 % treu bei +3,9 %), Masse (CH/Medizin: Ø 7 im Monat).
+            "stabil": (n >= 3 and anteil >= STABIL_ANTEIL
+                       and abs(mittel) >= STABIL_MIN_PCT
+                       and pro_monat >= STABIL_MIN_PRO_MONAT),
+        }
+    return out
+
+
+def befund(monate: list[dict], stab: dict[int, dict]) -> dict:
+    """Der Ein-Satz-Befund — Briefing §7. Kein vorformulierter Text: hier entstehen nur
+    CODE + Zahlen, formuliert wird im Frontend (i18n).
+
+    Benannt wird der **stärkste über die Jahre verlässliche** Ausschlag. Zwei Fehler der
+    ersten Fassung sind damit erledigt (beide gemessen, s. `STABIL_ANTEIL` oben):
+    die Reihenfolge Hoch-vor-Tief, die schwächere Effekte melden konnte, und die harte
+    Schwelle, an der die Aussage kippte.
+    """
     if not monate:
         return {"typ": "keine_daten"}
     hoch = max(monate, key=lambda x: x["pct"])
     tief = min(monate, key=lambda x: x["pct"])
-    if hoch["pct"] >= AUSREISSER_PCT:
-        return {"typ": "spitze", "monat": hoch["m"], "pct": hoch["pct"], "avg": hoch["avg"]}
-    if tief["pct"] <= -AUSREISSER_PCT:
-        return {"typ": "tief", "monat": tief["m"], "pct": tief["pct"], "avg": tief["avg"]}
+
+    # Die Achse entscheidet, WELCHE Monate benannt werden dürfen (Verlässlichkeit über 22
+    # Jahre). Das angezeigte Fenster entscheidet, WELCHER davon genannt wird — sonst nennt
+    # der Satz einen anderen Monat als den, dessen Balken im Bild heraussticht. Gemessen an
+    # DE/Energie: über die Achse führt der Juli, im Fenster liegt der Januar bei −39 %.
+    def taugt(m: dict) -> bool:
+        s = stab.get(m["m"])
+        if not s or not s["stabil"]:
+            return False
+        # Die Verlässlichkeit muss STÜTZEN, was das Diagramm zeigt. Ein Monat, der über die
+        # Achse überwiegend oben liegt, im gezeigten Fenster aber unten, belegt den Satz
+        # nicht — er widerspricht ihm. Gemessen CH/IT: Befund „tief", Spanne +0 bis +140 %.
+        return (m["pct"] > 0) == (s["richtung"] == "ueber")
+
+    kandidaten = [m for m in monate if taugt(m)]
+    if kandidaten:
+        stark = max(kandidaten, key=lambda m: abs(m["pct"]))
+        s = stab[stark["m"]]
+        return {
+            "typ": "tief" if stark["pct"] < 0 else "spitze",
+            "monat": stark["m"], "pct": stark["pct"], "avg": stark["avg"],
+            # Der Beleg, der den Satz trägt: „in 22 von 22 Jahren".
+            "jahre": s["jahre"], "jahre_gleich": s["gleiche_richtung"],
+            "mittel": s["mittel"], "spanne": [s["lo"], s["hi"]],
+        }
     return {"typ": "flach", "monat": hoch["m"], "pct": hoch["pct"], "avg": hoch["avg"],
             "monat_tief": tief["m"], "pct_tief": tief["pct"]}
 
@@ -638,7 +793,153 @@ def jahres_layer(con, laender: list[str], achse: list[int], heute: dt.date) -> d
     }
 
 
-# --- Teil 3: Aktuelle Lage ------------------------------------------------------
+# --- Teil 3: Single-Bid (Wettbewerbsdichte) -------------------------------------
+def bieter_layer(con, laender: list[str], achse: list[int]) -> dict:
+    """Anteil der Zuschläge mit genau **einem** Bieter, je Jahr und Quelle.
+
+    Ein eigener Datenstrang: die Bieterzahl steht in ``silver/<land>/awards`` und damit
+    ausschliesslich an **Zuschlägen**. Drei Eigenschaften, die die Anzeige tragen muss —
+    alle gemessen, keine davon offensichtlich:
+
+    **(1) Die Kennzahl ist rückblickend, nicht nutzbar für die Suche.** Von den aktuell
+    offenen Ausschreibungen trägt **keine einzige** eine Bieterzahl (gemessen: 0). Sie
+    entsteht erst mit dem Zuschlag. Wer sie als Chancen-Signal liest, liest sie falsch —
+    sie beschreibt Verfahren, auf die niemand mehr bieten kann.
+
+    **(2) Sie sieht nur einen Teil des Marktes.** DÖE meldet **nie** eine Bieterzahl (0
+    Zeilen über alle Jahre), also ist der gesamte deutsche Unterschwellenbereich für diese
+    Kennzahl unsichtbar. Ab 2023 fällt die Abdeckung deshalb von ~88 % auf ~60 % — nicht
+    weil weniger gemeldet wird, sondern weil eine Quelle dazukam, die dieses Feld nicht
+    führt. `abdeckung` steht deshalb je Jahr im JSON und gehört in die Anzeige.
+
+    **(3) Quellen-Onset schlägt hier genauso zu wie in der Zeitreihe.** Eine Mischkurve
+    über DACH springt 2018→2019 von 20 % auf 27 % — das ist der atverg-Start (konstant
+    ~50 % Single-Bid), kein Marktereignis. Deshalb auch hier: **eine Reihe je Land×Quelle,
+    nie eine Summe.** Sauber getrennt zeigt DE/TED einen Anstieg von 10,6 % (2011) auf
+    27,2 % (2022) und einen Rückgang auf 21,3 % (2025).
+    """
+    lst = ",".join("'" + p.replace("'", "''") + "'" for p in OHNE_WETTBEWERB)
+    teile = []
+    for c in laender:
+        n, a = _glob(c, "notices"), _glob(c, "awards")
+        if not _hat_tabelle(c, "awards"):
+            continue
+        quelle_case = " ".join(f"WHEN '{k}' THEN '{v}'" for k, v in QUELLE.items())
+        teile.append(f"""
+            SELECT '{c}' AS land,
+                   CASE x.schema_gen {quelle_case} ELSE 'sonstige' END AS quelle,
+                   x.year AS jahr,
+                   coalesce({BRANCHE_SQL}, 'beratung') AS branche,
+                   (aw.mx IS NOT NULL) AS hat_bieter,
+                   (aw.mx = 1) AS single,
+                   (x.procedure_type IS NULL OR x.procedure_type NOT IN ({lst})) AS mit_wettbewerb
+            FROM '{n}' x
+            LEFT JOIN (SELECT notice_id, max(num_tenders) AS mx FROM '{a}'
+                       WHERE num_tenders IS NOT NULL GROUP BY 1) aw ON aw.notice_id = x.notice_id
+            LEFT JOIN '{GOLD / "DE" / "dim_cpv.parquet"}' b ON b.division = substr(x.cpv_main, 1, 2)
+            WHERE x.notice_kind = 'can' AND x.year BETWEEN {achse[0]} AND {achse[-1]}
+        """)
+    if not teile:
+        return {"achse": achse, "reihen": {}, "abdeckung": {}}
+    con.execute("CREATE OR REPLACE TEMP TABLE _bieter AS " + " UNION ALL ".join(teile))
+
+    rows = con.execute("""
+        SELECT land, quelle, jahr, branche,
+               count(*) AS cans,
+               count(*) FILTER (WHERE hat_bieter) AS mit,
+               count(*) FILTER (WHERE single) AS sb,
+               count(*) FILTER (WHERE hat_bieter AND mit_wettbewerb) AS mit_w,
+               count(*) FILTER (WHERE single AND mit_wettbewerb) AS sb_w
+        FROM _bieter GROUP BY 1, 2, 3, 4
+    """).fetchall()
+
+    # Aufsummieren auf die Anzeige-Ebenen. Die QUELLE bleibt getrennt (Entscheidung wie im
+    # Jahres-Layer); Land und Branche werden zu `gesamt`/`alle` verdichtet.
+    agg: dict[tuple, list[int]] = {}
+    for land, quelle, jahr, branche, cans, mit, sb, mit_w, sb_w in rows:
+        for br in (ALLE, branche):
+            for lnd in ([land] if land == GESAMT else [GESAMT, land]):
+                k = (lnd, br, quelle, jahr)
+                v = agg.setdefault(k, [0, 0, 0, 0, 0])
+                v[0] += cans; v[1] += mit; v[2] += sb; v[3] += mit_w; v[4] += sb_w
+
+    reihen: dict[str, list[dict]] = {}
+    for land in [GESAMT] + laender:
+        for br in [ALLE] + list(BRANCHEN):
+            zeilen = []
+            quellen = sorted({q for (l, b, q, _j) in agg if l == land and b == br})
+            for q in quellen:
+                jahre_q = [j for j in achse
+                           if (v := agg.get((land, br, q, j)))
+                           and v[3] >= BIETER_MIN_JAHR
+                           and 100.0 * v[1] / max(1, v[0]) >= BIETER_MIN_ABDECKUNG]
+                if len(jahre_q) < 2:
+                    continue                 # eine einzelne Jahresmarke ist keine Reihe
+                von = jahre_q[0]
+                spanne = [j for j in achse if von <= j <= jahre_q[-1]]
+                hol = lambda j, i: (agg[(land, br, q, j)][i] if agg.get((land, br, q, j)) else 0)
+                # Gespeichert werden die beiden ZÄHLER, nicht der Anteil. Der Prozentwert
+                # wird in der Anzeige daraus gerechnet. Zwei Gründe: eine Quelle der
+                # Wahrheit statt Prozent und Basis nebeneinander (die auseinanderlaufen
+                # können), und — der eigentliche Anlass — ein Anteil ohne seine Grundmenge
+                # ist nicht einzuordnen. „20 %" heisst in DE 7.047 von 35.062 Zuschlägen;
+                # ohne die zweite Zahl weiss niemand, ob das viel ist.
+                zeile = {
+                    "quelle": q, "von": von,
+                    # Basis: Zuschläge mit Bieterzahl, OHNE die Verfahrensarten, die per
+                    # Bauart nur einen Bieter haben.
+                    "n": [hol(j, 3) for j in spanne],
+                    "sb": [hol(j, 4) for j in spanne],
+                }
+                if br == ALLE:
+                    # Der ungefilterte Gegenwert nur auf der Branchen-Gesamtebene — je
+                    # Branche wäre das die doppelte Datenmenge für dieselbe Aussage.
+                    zeile["n_alle"] = [hol(j, 1) for j in spanne]
+                    zeile["sb_alle"] = [hol(j, 2) for j in spanne]
+                zeilen.append(zeile)
+            if zeilen:
+                reihen[f"{land}|{br}"] = zeilen
+
+    # Abdeckung je Land und Jahr — der Anteil der Zuschläge, der überhaupt eine Bieterzahl
+    # trägt. Ohne diese Zeile liest sich „30 %" als Aussage über den ganzen Markt.
+    abdeckung: dict[str, list[dict]] = {}
+    for land in [GESAMT] + laender:
+        werte = []
+        for j in achse:
+            cans = sum(v[0] for (l, b, _q, jj), v in agg.items()
+                       if l == land and b == ALLE and jj == j)
+            mit = sum(v[1] for (l, b, _q, jj), v in agg.items()
+                      if l == land and b == ALLE and jj == j)
+            if cans:
+                werte.append({"jahr": j, "pct": round(100.0 * mit / cans, 1), "cans": cans})
+        if werte:
+            abdeckung[land] = werte
+
+    # Die zentrale Einschränkung der Kennzahl — GEMESSEN, nicht behauptet: wie viele der
+    # aktuell offenen Ausschreibungen tragen eine Bieterzahl? Erwartet 0 (sie entsteht erst
+    # mit dem Zuschlag), aber genau solche „ist doch klar"-Zahlen gehören nachgerechnet.
+    # Steht die Null hier fest verdrahtet, merkt niemand, wenn eine Quelle es doch meldet.
+    offen = 0
+    for c in laender:
+        if not _hat_tabelle(c, "awards"):
+            continue
+        offen += con.execute(f"""
+            SELECT count(DISTINCT x.notice_id)
+            FROM '{_glob(c, "notices")}' x
+            JOIN (SELECT DISTINCT notice_id FROM '{_glob(c, "awards")}'
+                  WHERE num_tenders IS NOT NULL) a ON a.notice_id = x.notice_id
+            WHERE x.notice_kind IN {TENDER_KINDS} AND x.submission_deadline >= current_date
+        """).fetchone()[0]
+
+    return {
+        "achse": achse, "von": achse[0], "bis": achse[-1],
+        "reihen": reihen, "abdeckung": abdeckung,
+        "ohne_wettbewerb": list(OHNE_WETTBEWERB),
+        "offene_mit_bieterzahl": offen,
+    }
+
+
+# --- Teil 4: Aktuelle Lage ------------------------------------------------------
 def lage_block(con, laender: list[str], heute: dt.date) -> dict:
     """Stichtags-Kennzahlen. Anders als die Zeitreihe zählt hier JEDE Quelle mit —
     ein Stichtag kennt keinen Onset-Sprung."""
@@ -796,22 +1097,32 @@ def bauen(laender: list[str], n_jahre: int, heute: dt.date, ab_jahr: int | None 
     con.execute(f"CREATE OR REPLACE TEMP TABLE _saison AS {' UNION ALL '.join(teile)}"
                 if teile else "CREATE OR REPLACE TEMP TABLE _saison AS SELECT * FROM v_%s WHERE FALSE" % laender[0])
 
+    # Richtungstreue je Monat über die GANZE Achse — ein Scan für alle Kombinationen.
+    stabilitaet = monats_stabilitaet(con, achse)
+
     saison: dict[str, dict] = {}
     for land in [GESAMT] + laender:
         wo_land = "TRUE" if land == GESAMT else f"land = '{land}'"
         for br in [ALLE] + list(BRANCHEN):
             wo = wo_land if br == ALLE else f"{wo_land} AND branche = '{br}'"
-            saison[f"{land}|{br}"] = saison_block(con, wo, jahre)
+            st = {m: stabilitaet[(land, br, m)] for m in range(1, 13)
+                  if (land, br, m) in stabilitaet}
+            saison[f"{land}|{br}"] = saison_block(
+                con, wo, jahre, st, naiv_mitfuehren=(land == GESAMT and br == ALLE))
 
     jahre_layer = jahres_layer(con, laender, achse, heute)
+    bieter = bieter_layer(con, laender, achse)
     lage = lage_block(con, laender, heute)
     con.close()
 
     return {
+        # 3 = Single-Bid-Layer (`bieter`); Befund steht jetzt auf Richtungstreue statt
+        #     auf einer Schwelle und trägt seinen Beleg; `saison.*.jahre` und die
+        #     durchgängigen `pct_naiv` sind entfallen (beide ungenutzt, 5 KB).
         # 2 = Jahres-Layer dazugekommen (`jahre`), `coverage.*.bestand_von` neu.
         # Die Anzeige muss mit einer Datei ohne `jahre` weiter zurechtkommen (Stand 1),
         # sonst bricht sie am ersten Deploy, bei dem Skript und Frontend nicht Schritt halten.
-        "schema": 2,
+        "schema": 3,
         "erzeugt": dt.datetime.now().isoformat(timespec="seconds"),
         "stand": heute.isoformat(),
         "laender": laender,
@@ -822,6 +1133,7 @@ def bauen(laender: list[str], n_jahre: int, heute: dt.date, ab_jahr: int | None 
         "coverage": coverage,
         "saison": saison,
         "jahre": jahre_layer,
+        "bieter": bieter,
         "lage": lage,
     }
 

@@ -11,6 +11,9 @@ für Wechsel-Prognosen und Lead-Generierung. Nutzer: Sven (sven.kotzur@gmail.com
 - `docs/field-categories.md` — Feldkategorisierung.
 - `docs/mehrwert-roadmap.md` — priorisierte KPI-/Feature-/Externe-Quellen-Landkarte (mit gemessenem
   Mehrwert, für Versionszuordnung).
+- `docs/marktpuls-jahres-layer.md` — Jahres-Layer/Historie 2004–2025, Serien-Regel je Quelle,
+  Bruchstellen. **Enthält den Fund, dass eine harte `publication_date`-Bedingung 93 % von DÖE
+  lautlos verwarf** — vor dem Anschluss einer Quelle mit dünnem Datumsfeld lesen.
 - Auto-Memory (`MEMORY.md` + `govisor-*.md`) ist zusätzlich hinterlegt.
 - **Secrets:** OpenRouter-API-Key (LLM-Nachfolge-Adjudikation) liegt in
   `.secrets/openrouter.key` (gitignored, chmod 600). ~$25 Startguthaben; Fallback-Key
