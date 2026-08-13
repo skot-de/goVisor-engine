@@ -188,6 +188,13 @@ fi
 #    lib/dataSource.ts). Fehlte bis 2026-08-10 im Tageslauf: Ingest und Gold liefen täglich,
 #    aber die Oberfläche zeigte den Stand des letzten Handlaufs (zuletzt 10 Tage alt).
 #    Läuft VOR dem Supabase-Push, weil das Frontend nicht davon abhängt.
+# Marktpuls (Saisonalitaet + aktuelle Lage) — laeuft VOR dem Frontend-Export, damit
+# marktpuls.json denselben Stand traegt wie der Rest von web/data. Rein lesend auf Gold,
+# ~40 s, kein Netz. Nicht fatal: ein Fehler hier darf den Tageslauf nicht abbrechen —
+# die Anzeige kennzeichnet einen veralteten Stand ab 2 Tagen selbst.
+step "Marktpuls berechnen (Saisonalitaet + Lage)"
+$PY scripts/build_marktpuls.py || echo "  ⚠ marktpuls.json bleibt auf dem letzten Stand — die Anzeige weist das aus."
+
 step "Frontend-Daten exportieren (web/data)"
 if $PY scripts/export_web_leads.py; then
   # ACHTUNG: export_web_leads.py schreibt plz-geo.json komplett neu und wirft dabei den
