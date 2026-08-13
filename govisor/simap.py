@@ -327,6 +327,31 @@ def parse_publication(rec: dict) -> dict[str, list[dict]]:
     _attr("simap/cpcCode", proc.get("cpcCode"))
     _attr("simap/questionDeadline", (dates.get("qnas") or [{}])[0].get("date"))
     _attr("simap/offerValidityDeadline", dates.get("offerValidityDeadlineDate"))
+
+    # ── Vergabeunterlagen: was Bronze schon weiss ────────────────────────────────────────
+    # Diese vier Felder liegen seit dem ersten simap-Ingest im Detail-JSON und wurden nie
+    # durchgereicht. Gemessen 2026-08-13 ueber 11.460 Publikationen aus sechs Monaten:
+    #
+    #   documents_source_simap    4.452   Unterlagen liegen BEI simap
+    #   documents_source_url        238   externer Link
+    #   documents_source_email      225   nur auf Anfrage
+    #   documents_source_address      5   postalisch
+    #   (ohne Unterlagen)         6.540
+    #
+    # Damit steht je Schweizer Lead OHNE einen einzigen Netzaufruf fest, ob es Unterlagen
+    # gibt, woher sie kommen, ob sie etwas kosten und in welcher Sprache. Das ist die
+    # Vorstufe zum Dokument-Connector — und sie widerlegt zugleich die fruehere Einstufung
+    # „simap verlangt Registrierung": die kam von der Website, die API sagt etwas anderes.
+    #
+    # `hasProjectDocuments` wird NUR bei True geschrieben. `_attr` filtert "no", aber ein
+    # boolesches False rutscht als Zeichenkette "False" durch — ein Attribut, das „nein"
+    # sagt, ist hier keine Aussage, sondern Rauschen in 6.540 Saetzen.
+    if pinfo.get("hasProjectDocuments") is True or d.get("hasProjectDocuments") is True:
+        _attr("simap/hasProjectDocuments", "yes")
+    _attr("simap/documentsSourceType", pinfo.get("documentsSourceType"))
+    _attr("simap/documentsWithCosts", pinfo.get("documentsWithCosts"))
+    for spr in (pinfo.get("documentsLanguages") or []):
+        _attr("simap/documentsLanguage", spr if isinstance(spr, str) else _pick(spr))
     if attrs:
         out["attributes"] = attrs
 
