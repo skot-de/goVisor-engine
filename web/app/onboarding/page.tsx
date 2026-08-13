@@ -6,6 +6,7 @@ import { buildProfile } from "@/lib/profileEngine";
 import { LAENDER } from "@/components/explorer/FilterPanel";
 import { register, saveProfile, currentUser } from "@/lib/supabase/auth";
 import { track, EV } from "@/lib/analytics";
+import { useSprache } from "@/lib/i18n";
 import Link from "next/link";
 import "./onboarding.css";
 
@@ -114,28 +115,30 @@ async function suche(q: string): Promise<Match[]> {
  * Der typische Auftragswert fehlt bei den meisten Firmen bewusst (nur 1.033 von 30.509
  * haben genug verschiedene belegte Werte) — lieber keine Zahl als eine erfundene. */
 function FirmaFakten({ m }: { m: Match }) {
+  const { t } = useSprache();
   const jahre = m.seit ? new Date().getFullYear() - m.seit : null;
   const eur = (v: number) =>
-    v >= 1e6 ? `${(v / 1e6).toFixed(1).replace(".", ",")} Mio €` : `${Math.round(v / 1000)} Tsd €`;
+    v >= 1e6 ? t("{n} Mio €", { n: (v / 1e6).toFixed(1).replace(".", ",") })
+             : t("{n} Tsd €", { n: Math.round(v / 1000) });
   const klumpen = (m.topShare ?? 0) >= 0.4 ? m.topBuyers?.[0] : null;
 
   return (
     <div className="fakten">
       <div className="fk-zahlen">
-        <div className="fk-z"><b>{m.wins.toLocaleString("de-DE")}</b><span>Zuschläge</span></div>
-        <div className="fk-z"><b>{(m.buyers ?? 0).toLocaleString("de-DE")}</b><span>Auftraggeber</span></div>
-        {m.seit ? <div className="fk-z"><b>{jahre}</b><span>Jahre am Markt</span></div> : null}
-        {m.volMedian ? <div className="fk-z"><b>{eur(m.volMedian)}</b><span>typischer Auftrag</span></div> : null}
+        <div className="fk-z"><b>{m.wins.toLocaleString("de-DE")}</b><span>{t("Zuschläge")}</span></div>
+        <div className="fk-z"><b>{(m.buyers ?? 0).toLocaleString("de-DE")}</b><span>{t("Auftraggeber")}</span></div>
+        {m.seit ? <div className="fk-z"><b>{jahre}</b><span>{t("Jahre am Markt")}</span></div> : null}
+        {m.volMedian ? <div className="fk-z"><b>{eur(m.volMedian)}</b><span>{t("typischer Auftrag")}</span></div> : null}
       </div>
 
       {m.topBuyers?.length ? (
         <div className="fk-block">
-          <h4>Eure größten Auftraggeber</h4>
+          <h4>{t("Eure größten Auftraggeber")}</h4>
           <ul className="fk-kunden">
             {m.topBuyers.map((k) => (
               <li key={k.name}>
                 <span className="fk-kn">{k.name}</span>
-                <span className="fk-kw">{k.wins} {k.wins === 1 ? "Auftrag" : "Aufträge"} · {k.seit === k.bis ? k.seit : `${k.seit}–${k.bis}`}</span>
+                <span className="fk-kw">{k.wins} {k.wins === 1 ? t("Auftrag") : t("Aufträge")} · {k.seit === k.bis ? k.seit : `${k.seit}–${k.bis}`}</span>
               </li>
             ))}
           </ul>
@@ -146,24 +149,25 @@ function FirmaFakten({ m }: { m: Match }) {
           Aufträge von einer Stelle bekommt, hat ein Risiko, das er selten beziffert sieht. */}
       {klumpen ? (
         <div className="fk-warn">
-          <b>{Math.round((m.topShare ?? 0) * 100)} % eurer Zuschläge kommen von {klumpen.name}.</b>
-          <span>Fällt dieser Auftraggeber weg, fehlt der Großteil. Genau dafür zeigen wir euch,
-            wo es vergleichbare Ausschreibungen gibt.</span>
+          <b>{t("{p} % eurer Zuschläge kommen von {firma}.", { p: Math.round((m.topShare ?? 0) * 100), firma: klumpen.name })}</b>
+          <span>{t("Fällt dieser Auftraggeber weg, fehlt der Großteil. Genau dafür zeigen wir euch, wo es vergleichbare Ausschreibungen gibt.")}</span>
         </div>
       ) : null}
 
       {m.regionTyp && m.regions?.length ? (
         <p className="fk-fuss">
-          Schwerpunkt {m.regionTyp === "regional" ? "regional" : "in mehreren Regionen"} — aus euren Zuschlägen abgeleitet.
+          {t("Schwerpunkt {wo} — aus euren Zuschlägen abgeleitet.",
+             { wo: m.regionTyp === "regional" ? t("regional") : t("in mehreren Regionen") })}
         </p>
       ) : m.regionTyp === "bundesweit" ? (
-        <p className="fk-fuss">Bundesweit tätig — aus euren Zuschlägen abgeleitet.</p>
+        <p className="fk-fuss">{t("Bundesweit tätig — aus euren Zuschlägen abgeleitet.")}</p>
       ) : null}
     </div>
   );
 }
 
 export default function OnboardingPage() {
+  const { t } = useSprache();
   const router = useRouter();
   const [screen, setScreen] = useState<Screen>("mail");
   const [email, setEmail] = useState("");
@@ -202,8 +206,9 @@ export default function OnboardingPage() {
   useEffect(() => {
     if (screen !== "firma") return;
     if (eingabe.trim().length < 2) { setMatches([]); return; }
-    const t = setTimeout(async () => setMatches(await suche(eingabe)), 220);
-    return () => clearTimeout(t);
+    // NICHT `t` nennen — das würde die Übersetzungsfunktion überdecken.
+    const timer = setTimeout(async () => setMatches(await suche(eingabe)), 220);
+    return () => clearTimeout(timer);
   }, [eingabe, screen]);
 
   const ladeMitglieder = useCallback(async (m: Match) => {
@@ -331,13 +336,13 @@ export default function OnboardingPage() {
     <div className="ob-page">
       <header className="top">
         <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
-          <span className="brand">go<span>V</span>isor</span><span className="ver">Onboarding</span>
+          <span className="brand">go<span>V</span>isor</span><span className="ver">{t("Onboarding")}</span>
         </div>
         <nav className="steps">
           {SCHRITTE.map(([k, l], i) => (
             <span key={k} style={{ display: "contents" }}>
               <span className={`step ${i < cur ? "done" : i === cur ? "on" : ""}`}>
-                <i>{i < cur ? "✓" : i + 1}</i>{l}
+                <i>{i < cur ? "✓" : i + 1}</i>{t(l)}
               </span>
               {i < SCHRITTE.length - 1 ? <span className="step-sep" /> : null}
             </span>
@@ -349,72 +354,70 @@ export default function OnboardingPage() {
         {/* 0 · Konto */}
         {screen === "mail" && (
           <div className="card">
-            <h1>Alle öffentlichen Ausschreibungen.<br />Die eine, die zu euch passt.</h1>
-            <p className="lede">goVisor liest jede öffentliche Vergabe in Deutschland und filtert die heraus,
-              auf die ihr euch bewerben solltet. Kostenlos starten, ohne Zahlungsdaten.</p>
+            <h1>{t("Alle öffentlichen Ausschreibungen.")}<br />{t("Die eine, die zu euch passt.")}</h1>
+            <p className="lede">{t("goVisor liest jede öffentliche Vergabe in Deutschland und filtert die heraus, auf die ihr euch bewerben solltet. Kostenlos starten, ohne Zahlungsdaten.")}</p>
             <div className="field">
-              <label className="lbl" htmlFor="mail">Geschäftliche E-Mail</label>
+              <label className="lbl" htmlFor="mail">{t("Geschäftliche E-Mail")}</label>
               <input className="inp" id="mail" type="email" value={email} autoComplete="email"
-                placeholder="name@firma.de" onChange={(e) => setEmail(e.target.value)} />
+                placeholder={t("name@firma.de")} onChange={(e) => setEmail(e.target.value)} />
             </div>
             <div className="field">
-              <label className="lbl" htmlFor="pw">Passwort</label>
-              <input className="inp" id="pw" type="password" value={pw} placeholder="mindestens 12 Zeichen" autoComplete="new-password"
+              <label className="lbl" htmlFor="pw">{t("Passwort")}</label>
+              <input className="inp" id="pw" type="password" value={pw} placeholder={t("mindestens 12 Zeichen")} autoComplete="new-password"
                 aria-describedby="pw-hinweis"
                 onChange={(e) => setPw(e.target.value)}
                 onKeyDown={(e) => { if (e.key === "Enter" && email.includes("@") && pwOk) kontoAnlegen(); }} />
               <div className="pw-bar" aria-hidden><i data-stufe={pwStatus.stufe} /></div>
               <div className="pw-hint" id="pw-hinweis">
                 {pw.length === 0
-                  ? "Länge zählt mehr als Sonderzeichen — eine Passphrase aus vier Wörtern ist sicherer als „P@ssw0rt!“."
+                  ? t("Länge zählt mehr als Sonderzeichen — eine Passphrase aus vier Wörtern ist sicherer als „P@ssw0rt!“.")
                   : pwStatus.maengel.length
-                    ? <>Es fehlt noch: {pwStatus.maengel.join(" · ")}</>
-                    : pwStatus.stufe === 3 ? "Stark." : "Ausreichend — länger wäre besser."}
+                    ? <>{t("Es fehlt noch:")} {pwStatus.maengel.map((mg) => t(mg)).join(" · ")}</>
+                    : pwStatus.stufe === 3 ? t("Stark.") : t("Ausreichend — länger wäre besser.")}
               </div>
             </div>
-            {authFehler && <div className="note note-w">{authFehler} {/existiert|angemeldet/.test(authFehler) ? <Link href="/login" style={{ textDecoration: "underline" }}>Zum Login</Link> : null}</div>}
+            {authFehler && <div className="note note-w">{t(authFehler)} {/existiert|angemeldet/.test(authFehler) ? <Link href="/login" style={{ textDecoration: "underline" }}>{t("Zum Login")}</Link> : null}</div>}
             <div className="btnrow">
               <button className="btn btn-p" disabled={!email.includes("@") || !pwOk || busy} onClick={kontoAnlegen}>
-                {busy ? "Lege Konto an …" : "Konto anlegen"}
+                {busy ? t("Lege Konto an …") : t("Konto anlegen")}
               </button>
-              <Link className="btn btn-t" href="/login">Ich habe schon ein Konto</Link>
+              <Link className="btn btn-t" href="/login">{t("Ich habe schon ein Konto")}</Link>
             </div>
-            <div className="note note-i">Free-Zugang: Lead-Liste und alle Eckdaten dauerhaft unbegrenzt,
-              drei ausführliche Bewertungen je 30 Tage.</div>
+            <div className="note note-i">{t("Free-Zugang: Lead-Liste und alle Eckdaten dauerhaft unbegrenzt, drei ausführliche Bewertungen je 30 Tage.")}</div>
           </div>
         )}
 
         {/* 1 · Firma (getippt) */}
         {screen === "firma" && (
           <div className="card">
-            <h1>Wie heißt eure Firma?</h1>
+            <h1>{t("Wie heißt eure Firma?")}</h1>
             <p className="lede">{ausDomain
               ? (domainStamm(email)
-                ? <>Wir haben versucht, eure Firma an der Adresse <b>{email}</b> zu erkennen — unter „{domainStamm(email)}" finden wir aber kein Unternehmen in den Vergabedaten.</>
-                : <>Eure Adresse ist eine Freemail-Adresse, daraus lässt sich keine Firma ableiten.</>)
-              : "Damit wir euer Profil bauen können, brauchen wir den Firmennamen."}</p>
+                ? <>{t("Wir haben versucht, eure Firma an der Adresse")} <b>{email}</b> {t("zu erkennen — unter „{stamm}“ finden wir aber kein Unternehmen in den Vergabedaten.", { stamm: domainStamm(email) ?? "" })}</>
+                : <>{t("Eure Adresse ist eine Freemail-Adresse, daraus lässt sich keine Firma ableiten.")}</>)
+              : t("Damit wir euer Profil bauen können, brauchen wir den Firmennamen.")}</p>
             <div className="field">
-              <label className="lbl" htmlFor="q">Firmenname</label>
+              <label className="lbl" htmlFor="q">{t("Firmenname")}</label>
               <div className="inpwrap">
                 <input className="inp" id="q" autoComplete="off" autoFocus value={eingabe}
-                  placeholder="z. B. CANCOM, Bechtle …"
+                  placeholder={t("z. B. CANCOM, Bechtle …")}
                   onChange={(e) => { setEingabe(e.target.value); setAcOpen(true); }}
                   onKeyDown={(e) => { if (e.key === "Enter" && eingabe.trim()) { setAcOpen(false); zumMatch(); } }} />
                 {acOpen && matches.length > 0 && (
                   <div className="ac" ref={acRef}>
                     {matches.map((m) => (
                       <button key={m.id} className="acopt" onClick={() => { setEingabe(m.name); setAcOpen(false); }}>
-                        <span className="ac-n">{m.name}</span><span className="ac-w">{m.wins} Siege</span>
+                        <span className="ac-n">{m.name}</span><span className="ac-w">{t("{n} Siege", { n: m.wins })}</span>
                       </button>
                     ))}
                   </div>
                 )}
               </div>
-              <span className="hint">Zum Ausprobieren: „cancom", „bechtle" oder „müller".</span>
+              <span className="hint">{t("Zum Ausprobieren: „cancom\", „bechtle\" oder „müller\".")}</span>
             </div>
             <div className="btnrow">
-              <button className="btn btn-p" disabled={!eingabe.trim() || busy} onClick={() => { setAcOpen(false); zumMatch(); }}>Suchen</button>
-              <button className="btn btn-t" onClick={() => setScreen("branche")}>Wir haben noch nie öffentlich geboten</button>
+              <button className="btn btn-p" disabled={!eingabe.trim() || busy} onClick={() => { setAcOpen(false); zumMatch(); }}>{t("Suchen")}</button>
+              <button className="btn btn-t" onClick={() => setScreen("branche")}>{t("Wir haben noch nie öffentlich geboten")}</button>
             </div>
           </div>
         )}
@@ -422,18 +425,18 @@ export default function OnboardingPage() {
         {/* 2 · Starker Vorschlag */}
         {screen === "vorschlag" && matched && (
           <div className="card">
-            <h1>{ausDomain ? `Moment — arbeitest du bei ${matched.name}?` : "Das wissen wir über euch."}</h1>
+            <h1>{ausDomain ? t("Moment — arbeitest du bei {firma}?", { firma: matched.name }) : t("Das wissen wir über euch.")}</h1>
             <p className="lede">{ausDomain
-              ? <>Eure Adresse endet auf <b>{domainStamm(email)}</b> — und unter diesem Namen finden wir ein Unternehmen in den öffentlichen Vergabedaten. Falls das ihr seid, wissen wir schon einiges:</>
-              : "Aus den öffentlichen Vergabedaten der letzten Jahre."}</p>
+              ? <>{t("Eure Adresse endet auf")} <b>{domainStamm(email)}</b> {t("— und unter diesem Namen finden wir ein Unternehmen in den öffentlichen Vergabedaten. Falls das ihr seid, wissen wir schon einiges:")}</>
+              : t("Aus den öffentlichen Vergabedaten der letzten Jahre.")}</p>
             <div className="suggest">
               <div className="sg-head">
                 <div className="sg-name">{matched.name}</div>
                 <div className="sg-meta">
                   <span className={`conf conf-${beleg?.conf ?? "unsicher"}`}>
-                    {beleg ? (beleg.conf === "belegt" ? "belegt" : "unbestätigt") : "wird geprüft …"}
+                    {beleg ? (beleg.conf === "belegt" ? t("belegt") : t("unbestätigt")) : t("wird geprüft …")}
                   </span>
-                  <span>{beleg?.grund ?? "gleichen eure Adresse mit den Vergabedaten ab"}</span>
+                  <span>{t(beleg?.grund ?? "gleichen eure Adresse mit den Vergabedaten ab")}</span>
                 </div>
               </div>
               <FirmaFakten m={matched} />
@@ -441,33 +444,30 @@ export default function OnboardingPage() {
             {/* Belegt ist eine gute Nachricht — die soll man auch als solche lesen,
                 nicht nur als grünes Wörtchen im Kopf. */}
             {beleg?.conf === "belegt" ? (
-              <div className="note note-ok">Wir konnten euch zuordnen: {beleg.grund}.
-                Ihr könnt dieses Profil direkt übernehmen.</div>
+              <div className="note note-ok">{t("Wir konnten euch zuordnen: {grund}.", { grund: t(beleg.grund) })} {t("Ihr könnt dieses Profil direkt übernehmen.")}</div>
             ) : null}
             {beleg?.conf === "unbestaetigt" ? (
               antragGesendet ? (
-                <div className="note note-p">Prüfantrag ist raus. Ihr könnt sofort weiterarbeiten —
-                  wir melden uns, sobald jemand draufgeschaut hat.</div>
+                <div className="note note-p">{t("Prüfantrag ist raus. Ihr könnt sofort weiterarbeiten — wir melden uns, sobald jemand draufgeschaut hat.")}</div>
               ) : (
                 <div className="note note-w antrag">
-                  <b>Wir können nicht automatisch prüfen, ob ihr zu dieser Firma gehört.</b>
-                  <span>{beleg.grund}. Ihr könnt trotzdem sofort loslegen — die Zuordnung bleibt so lange
-                    <b> unbestätigt</b>, und die Erfolgsprämie samt Abrechnung bleibt gesperrt.</span>
+                  <b>{t("Wir können nicht automatisch prüfen, ob ihr zu dieser Firma gehört.")}</b>
+                  <span>{t(beleg.grund)}. {t("Ihr könnt trotzdem sofort loslegen — die Zuordnung bleibt so lange")}
+                    <b> {t("unbestätigt")}</b>{t(", und die Erfolgsprämie samt Abrechnung bleibt gesperrt.")}</span>
                   {/* Statt einer Sackgasse ein Weg: Kurznachricht, die jemand von Hand prüft.
                       Gemessen betrifft das 5,8 % der Zielgruppe — knapp die Hälfte davon
                       t-online-Adressen, also etablierte Betriebe ohne eigene Mail-Domain. */}
                   <textarea className="inp antrag-t" rows={2} value={antragText}
                     onChange={(e) => setAntragText(e.target.value)}
-                    placeholder="Kurz zur Prüfung: eure Rolle im Betrieb, gern Handelsregister-Nummer oder Website" />
-                  <button className="btn btn-s" onClick={() => antragSenden(matched)}>Prüfung anfragen</button>
+                    placeholder={t("Kurz zur Prüfung: eure Rolle im Betrieb, gern Handelsregister-Nummer oder Website")} />
+                  <button className="btn btn-s" onClick={() => antragSenden(matched)}>{t("Prüfung anfragen")}</button>
                 </div>
               )
             ) : null}
-            <div className="note note-p">Passend zu diesem Profil bauen wir gleich eure Lead-Liste.
-              Bestätigt die Firma, dann leiten wir das Profil aus euren Vergaben ab.</div>
+            <div className="note note-p">{t("Passend zu diesem Profil bauen wir gleich eure Lead-Liste. Bestätigt die Firma, dann leiten wir das Profil aus euren Vergaben ab.")}</div>
             <div className="btnrow split">
-              <button className="btn btn-p" onClick={() => bestaetigen(matched)}>Ja, das sind wir</button>
-              <button className="btn btn-s" onClick={() => { const l = [matched, ...matches].slice(0, 6); setMatches(l); setOffen(l[0]?.id ?? null); setKeineDavon(false); setScreen("kandidaten"); }}>Nein, andere Firma</button>
+              <button className="btn btn-p" onClick={() => bestaetigen(matched)}>{t("Ja, das sind wir")}</button>
+              <button className="btn btn-s" onClick={() => { const l = [matched, ...matches].slice(0, 6); setMatches(l); setOffen(l[0]?.id ?? null); setKeineDavon(false); setScreen("kandidaten"); }}>{t("Nein, andere Firma")}</button>
             </div>
           </div>
         )}
@@ -475,9 +475,8 @@ export default function OnboardingPage() {
         {/* 3 · Kandidaten (schwacher Match) */}
         {screen === "kandidaten" && (
           <div className="card wide">
-            <h1>Welche davon seid ihr?</h1>
-            <p className="lede">Der Name allein war nicht eindeutig. Klickt auf eure Firma — dann zeigen wir
-              direkt hier, was in den Vergabedaten über euch steht.</p>
+            <h1>{t("Welche davon seid ihr?")}</h1>
+            <p className="lede">{t("Der Name allein war nicht eindeutig. Klickt auf eure Firma — dann zeigen wir direkt hier, was in den Vergabedaten über euch steht.")}</p>
             <div className="cands">
               {matches.length ? matches.map((m) => (
                 <div key={m.id} className={`cand-box ${offen === m.id ? "auf" : ""}`}>
@@ -486,18 +485,18 @@ export default function OnboardingPage() {
                   <button className="cand" aria-expanded={offen === m.id}
                     onClick={() => setOffen((o) => (o === m.id ? null : m.id))}>
                     <div className="cand-m"><span className="cand-n">{m.name}</span>
-                      <span className="cand-x">{m.buyers ?? 0} Auftraggeber · aktiv seit {m.seit ?? "—"}</span></div>
-                    <span className="cand-w">{m.wins} Zuschläge</span>
+                      <span className="cand-x">{t("{n} Auftraggeber · aktiv seit {seit}", { n: m.buyers ?? 0, seit: m.seit ?? "—" })}</span></div>
+                    <span className="cand-w">{t("{n} Zuschläge", { n: m.wins })}</span>
                     <span className="cand-car">{offen === m.id ? "▴" : "▾"}</span>
                   </button>
                   {offen === m.id ? (
                     <div className="cand-auf">
                       <FirmaFakten m={m} />
-                      <button className="btn btn-p" onClick={() => bestaetigen(m)}>Ja, das sind wir</button>
+                      <button className="btn btn-p" onClick={() => bestaetigen(m)}>{t("Ja, das sind wir")}</button>
                     </div>
                   ) : null}
                 </div>
-              )) : <div className="note note-i">Kein Treffer. Das ist normal — nur Unternehmen, die schon eine öffentliche Vergabe gewonnen haben, stehen in unseren Daten.</div>}
+              )) : <div className="note note-i">{t("Kein Treffer. Das ist normal — nur Unternehmen, die schon eine öffentliche Vergabe gewonnen haben, stehen in unseren Daten.")}</div>}
             </div>
 
             {/* „Keine davon" öffnet die Eingabe HIER, statt auf einen weiteren fast leeren
@@ -505,23 +504,23 @@ export default function OnboardingPage() {
             {keineDavon ? (
               <div className="keine-auf">
                 <div className="field">
-                  <label className="lbl" htmlFor="fname">Wie heißt euer Unternehmen?</label>
+                  <label className="lbl" htmlFor="fname">{t("Wie heißt euer Unternehmen?")}</label>
                   <input className="inp" id="fname" value={eingabe} autoComplete="organization"
-                    placeholder="Firmenname eingeben" onChange={(e) => setEingabe(e.target.value)}
+                    placeholder={t("Firmenname eingeben")} onChange={(e) => setEingabe(e.target.value)}
                     onKeyDown={(e) => { if (e.key === "Enter" && eingabe.trim().length > 1) zumMatch(); }} />
                 </div>
                 <div className="btnrow">
                   <button className="btn btn-p" disabled={eingabe.trim().length < 2 || busy} onClick={zumMatch}>
-                    {busy ? "Suche …" : "Nochmal suchen"}
+                    {busy ? t("Suche …") : t("Nochmal suchen")}
                   </button>
                   <button className="btn btn-t" onClick={() => setScreen("branche")}>
-                    Wir sind nicht dabei — ohne Vergabehistorie starten
+                    {t("Wir sind nicht dabei — ohne Vergabehistorie starten")}
                   </button>
                 </div>
               </div>
             ) : (
               <div className="btnrow split">
-                <button className="btn btn-s" onClick={() => setKeineDavon(true)}>Keine davon</button>
+                <button className="btn btn-s" onClick={() => setKeineDavon(true)}>{t("Keine davon")}</button>
               </div>
             )}
           </div>
@@ -530,28 +529,25 @@ export default function OnboardingPage() {
         {/* 4 · Gruppe = Identität */}
         {screen === "profil" && matched && (
           <div className="card wide">
-            <h1>Gehören diese Einheiten zu euch?</h1>
-            <p className="lede">Öffentliche Auftraggeber schreiben denselben Konzern unterschiedlich.
-              Wir rechnen Siege aller aktiven Einheiten zusammen — sonst übersehen wir eure eigenen Aufträge.</p>
+            <h1>{t("Gehören diese Einheiten zu euch?")}</h1>
+            <p className="lede">{t("Öffentliche Auftraggeber schreiben denselben Konzern unterschiedlich. Wir rechnen Siege aller aktiven Einheiten zusammen — sonst übersehen wir eure eigenen Aufträge.")}</p>
             {members.length ? (
               <div className="ents">
                 {members.map((m, i) => (
                   <div key={i} className={`ent ${aktiv.has(String(i)) ? "on" : ""}`}>
                     <button className="ent-box" onClick={() => toggleMember(String(i))}>✓</button>
-                    <div className="ent-m"><span className="ent-n">{m.name}</span><span className="ent-x">{m.method}</span></div>
+                    <div className="ent-m"><span className="ent-n">{m.name}</span><span className="ent-x">{t(m.method)}</span></div>
                     <span className="ent-w">{m.wins}</span>
                   </div>
                 ))}
               </div>
-            ) : <div className="spin">Lade Einheiten …</div>}
-            {aktiv.size === 0 && <div className="note note-w">Mindestens eine Einheit muss aktiv bleiben.</div>}
-            {unsicher && <div className="note note-w">Eine aktive Einheit wurde <b>nur über den Namen</b> erkannt.
-              Wir zeigen ihre Zahlen, kennzeichnen sie aber als unbestätigt — und rechnen sie nicht in die Erfolgsprämie ein, solange die Zuordnung nicht belegt ist.</div>}
-            <div className="note note-p">Mit der Bestätigung merken wir uns diese Einheiten als eure Identität.
-              Nur so erkennen wir später, dass ihr eine Ausschreibung gewonnen habt. <b>{winsAktiv} Siege</b> fließen in euer Profil.</div>
+            ) : <div className="spin">{t("Lade Einheiten …")}</div>}
+            {aktiv.size === 0 && <div className="note note-w">{t("Mindestens eine Einheit muss aktiv bleiben.")}</div>}
+            {unsicher && <div className="note note-w">{t("Eine aktive Einheit wurde")} <b>{t("nur über den Namen")}</b> {t("erkannt. Wir zeigen ihre Zahlen, kennzeichnen sie aber als unbestätigt — und rechnen sie nicht in die Erfolgsprämie ein, solange die Zuordnung nicht belegt ist.")}</div>}
+            <div className="note note-p">{t("Mit der Bestätigung merken wir uns diese Einheiten als eure Identität. Nur so erkennen wir später, dass ihr eine Ausschreibung gewonnen habt.")} <b>{t("{n} Siege", { n: winsAktiv })}</b> {t("fließen in euer Profil.")}</div>
             <div className="btnrow split">
-              <button className="btn btn-p" disabled={!aktiv.size} onClick={() => setScreen("fertig")}>Profil bestätigen</button>
-              <button className="btn btn-t" onClick={() => setScreen("kandidaten")}>Doch eine andere Firma</button>
+              <button className="btn btn-p" disabled={!aktiv.size} onClick={() => setScreen("fertig")}>{t("Profil bestätigen")}</button>
+              <button className="btn btn-t" onClick={() => setScreen("kandidaten")}>{t("Doch eine andere Firma")}</button>
             </div>
           </div>
         )}
@@ -559,19 +555,18 @@ export default function OnboardingPage() {
         {/* 5 · Branche (manueller Pfad) */}
         {screen === "branche" && (
           <div className="card wide">
-            <h1>In welchem Bereich seid ihr unterwegs?</h1>
-            <p className="lede">Eure Firma taucht in unseren Daten noch nicht als Auftragnehmer auf.
-              Das ist kein Nachteil — wir starten mit eurem Feld und schärfen das Profil, je mehr ihr goVisor nutzt.</p>
+            <h1>{t("In welchem Bereich seid ihr unterwegs?")}</h1>
+            <p className="lede">{t("Eure Firma taucht in unseren Daten noch nicht als Auftragnehmer auf. Das ist kein Nachteil — wir starten mit eurem Feld und schärfen das Profil, je mehr ihr goVisor nutzt.")}</p>
             <div className="grid2">
               {BRANCHEN.map((b) => (
                 <button key={b.k} className={`pick ${branche === b.k ? "on" : ""}`} onClick={() => setBranche(b.k)}>
-                  <div className="pick-m"><span className="pick-n">{b.n}</span><span className="pick-x">{b.x}</span></div>
+                  <div className="pick-m"><span className="pick-n">{t(b.n)}</span><span className="pick-x">{t(b.x)}</span></div>
                 </button>
               ))}
             </div>
             <div className="btnrow split">
-              <button className="btn btn-p" disabled={!branche} onClick={() => setScreen("region")}>Weiter</button>
-              <button className="btn btn-t" onClick={() => setScreen("firma")}>Zurück zur Firmensuche</button>
+              <button className="btn btn-p" disabled={!branche} onClick={() => setScreen("region")}>{t("Weiter")}</button>
+              <button className="btn btn-t" onClick={() => setScreen("firma")}>{t("Zurück zur Firmensuche")}</button>
             </div>
           </div>
         )}
@@ -579,19 +574,17 @@ export default function OnboardingPage() {
         {/* 6 · Region */}
         {screen === "region" && (
           <div className="card wide">
-            <h1>Wo wollt ihr Aufträge gewinnen?</h1>
-            <p className="lede">Mehrfachauswahl. Wir filtern nach dem <b>Leistungsort</b>, nicht nach dem Sitz
-              der Vergabestelle — sonst zeigten wir euch Ausschreibungen in der falschen Gegend.</p>
+            <h1>{t("Wo wollt ihr Aufträge gewinnen?")}</h1>
+            <p className="lede">{t("Mehrfachauswahl. Wir filtern nach dem")} <b>{t("Leistungsort")}</b>{t(", nicht nach dem Sitz der Vergabestelle — sonst zeigten wir euch Ausschreibungen in der falschen Gegend.")}</p>
             <div className="chips">
               {REGIONEN.map((r) => (
-                <button key={r} className={`chip ${regionen.includes(r) ? "on" : ""}`} onClick={() => toggleRegion(r)}>{r}</button>
+                <button key={r} className={`chip ${regionen.includes(r) ? "on" : ""}`} onClick={() => toggleRegion(r)}>{t(r)}</button>
               ))}
             </div>
-            <div className="note note-i">Bei etwa jeder zehnten Ausschreibung ist der Leistungsort nicht kreisgenau
-              bekannt. Diese zeigen wir trotzdem, aber ohne Regionsfilter — lieber einmal zu viel als einen passenden Auftrag verschweigen.</div>
+            <div className="note note-i">{t("Bei etwa jeder zehnten Ausschreibung ist der Leistungsort nicht kreisgenau bekannt. Diese zeigen wir trotzdem, aber ohne Regionsfilter — lieber einmal zu viel als einen passenden Auftrag verschweigen.")}</div>
             <div className="btnrow split">
-              <button className="btn btn-p" disabled={!regionen.length} onClick={() => setScreen("fertig")}>Fertig</button>
-              <button className="btn btn-t" onClick={() => setScreen("branche")}>Zurück</button>
+              <button className="btn btn-p" disabled={!regionen.length} onClick={() => setScreen("fertig")}>{t("Fertig")}</button>
+              <button className="btn btn-t" onClick={() => setScreen("branche")}>{t("Zurück")}</button>
             </div>
           </div>
         )}
@@ -602,28 +595,27 @@ export default function OnboardingPage() {
             <div className="done-ring">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
             </div>
-            <h1>Alles bereit.</h1>
+            <h1>{t("Alles bereit.")}</h1>
             <p className="lede">{matched
-              ? "Wir haben euer Profil aus euren bisherigen Vergaben gebaut."
-              : "Wir starten mit eurem Bereich und eurer Region — das Profil wächst mit der Nutzung."}</p>
+              ? t("Wir haben euer Profil aus euren bisherigen Vergaben gebaut.")
+              : t("Wir starten mit eurem Bereich und eurer Region — das Profil wächst mit der Nutzung.")}</p>
             <div className="sum">
               {matched ? <>
-                <div className="sum-r"><span className="sum-k">Firma</span><span className="sum-v">{matched.name}</span></div>
-                <div className="sum-r"><span className="sum-k">Einheiten</span><span className="sum-v">{aktiv.size} aktiv</span></div>
-                <div className="sum-r"><span className="sum-k">Siege im Profil</span><span className="sum-v">{winsAktiv}</span></div>
-                <div className="sum-r"><span className="sum-k">Schwerpunkte</span><span className="sum-v">{matched.fields.slice(0, 4).map((f) => f.label || f.cpv4).join(" · ")}</span></div>
-                <div className="sum-r"><span className="sum-k">Identität</span><span className="sum-v">bestätigt ✓</span></div>
+                <div className="sum-r"><span className="sum-k">{t("Firma")}</span><span className="sum-v">{matched.name}</span></div>
+                <div className="sum-r"><span className="sum-k">{t("Einheiten")}</span><span className="sum-v">{t("{n} aktiv", { n: aktiv.size })}</span></div>
+                <div className="sum-r"><span className="sum-k">{t("Siege im Profil")}</span><span className="sum-v">{winsAktiv}</span></div>
+                <div className="sum-r"><span className="sum-k">{t("Schwerpunkte")}</span><span className="sum-v">{matched.fields.slice(0, 4).map((f) => f.label || f.cpv4).join(" · ")}</span></div>
+                <div className="sum-r"><span className="sum-k">{t("Identität")}</span><span className="sum-v">{t("bestätigt ✓")}</span></div>
               </> : <>
-                <div className="sum-r"><span className="sum-k">Bereich</span><span className="sum-v">{BRANCHEN.find((b) => b.k === branche)?.n || "—"}</span></div>
-                <div className="sum-r"><span className="sum-k">Regionen</span><span className="sum-v">{regionen.join(" · ") || "—"}</span></div>
-                <div className="sum-r"><span className="sum-k">Identität</span><span className="sum-v">noch offen</span></div>
+                <div className="sum-r"><span className="sum-k">{t("Bereich")}</span><span className="sum-v">{(() => { const b = BRANCHEN.find((x) => x.k === branche); return b ? t(b.n) : "—"; })()}</span></div>
+                <div className="sum-r"><span className="sum-k">{t("Regionen")}</span><span className="sum-v">{regionen.map((r) => t(r)).join(" · ") || "—"}</span></div>
+                <div className="sum-r"><span className="sum-k">{t("Identität")}</span><span className="sum-v">{t("noch offen")}</span></div>
               </>}
-              <div className="sum-r"><span className="sum-k">Zugang</span><span className="sum-v">Free — Liste und Eckdaten unbegrenzt, 3 Bewertungen je 30 Tage</span></div>
+              <div className="sum-r"><span className="sum-k">{t("Zugang")}</span><span className="sum-v">{t("Free — Liste und Eckdaten unbegrenzt, 3 Bewertungen je 30 Tage")}</span></div>
             </div>
-            {!matched && <div className="note note-i">Sobald ihr eine Vergabe gewinnt, erkennen wir das und fragen,
-              ob wir euer Profil ergänzen dürfen.</div>}
+            {!matched && <div className="note note-i">{t("Sobald ihr eine Vergabe gewinnt, erkennen wir das und fragen, ob wir euer Profil ergänzen dürfen.")}</div>}
             <div className="btnrow">
-              <button className="btn btn-p" onClick={fertigstellen}>Leads ansehen</button>
+              <button className="btn btn-p" onClick={fertigstellen}>{t("Leads ansehen")}</button>
             </div>
           </div>
         )}

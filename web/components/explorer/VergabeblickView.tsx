@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
+import { useSprache } from "@/lib/i18n";
 
 /* Vergabeblick — die Vergabestellen-Sicht (contracting_authority).
  * Liest denselben vorberechneten Bestand wie die Anbieter-Strategie (/api/strategie),
@@ -45,30 +46,35 @@ const eur = (v: number) =>
   : v >= 1e6 ? (v / 1e6).toFixed(1).replace(".", ",") + " Mio €"
   : nf.format(Math.round(v)) + " €";
 
-/* Fallzahl-Schwelle (Ticket #10 §3.1): <3 Fälle → kein Prozentwert. */
-function quoteText(q: Quote | undefined): { val: string; thin: boolean } {
+type T = (k: string, v?: Record<string, string | number>) => string;
+
+/* Fallzahl-Schwelle (Ticket #10 §3.1): <3 Fälle → kein Prozentwert.
+   `t` wird hereingereicht — die Funktion ist kein Hook-Kontext. */
+function quoteText(q: Quote | undefined, t: T): { val: string; thin: boolean } {
   if (!q || q.n === 0) return { val: "—", thin: false };
-  if (q.n < 3) return { val: `${q.treffer} von ${q.n}`, thin: true };
+  if (q.n < 3) return { val: t("{treffer} von {n}", { treffer: q.treffer, n: q.n }), thin: true };
   return { val: `${q.pct} %`, thin: q.n < 8 };
 }
 
-/* Benchmark-Vergleich: Ihre Stelle gegen den Median vergleichbarer Stellen. */
+/* Benchmark-Vergleich: Ihre Stelle gegen den Median vergleichbarer Stellen.
+   `label`/`note` kommen bereits übersetzt von der Aufrufstelle. */
 function Bench({ label, mine, med, fmt, scale, goodHigh, note }: {
   label: string; mine: number | null; med: number | null;
   fmt: (v: number) => string; scale: number; goodHigh?: boolean; note?: string;
 }) {
+  const { t } = useSprache();
   const w = (v: number | null) => (v == null || !scale ? 0 : Math.max(2, Math.min(100, (v / scale) * 100)));
   const worse = mine != null && med != null && (goodHigh ? mine < med : mine > med);
   return (
     <div className="vb-bench">
       <div className="vb-bench-h">{label}</div>
       <div className="vb-bench-row">
-        <span className="vb-bench-k">Ihre Stelle</span>
+        <span className="vb-bench-k">{t("Ihre Stelle")}</span>
         <div className="vb-bar"><i className={worse ? "warn" : "mine"} style={{ width: w(mine) + "%" }} /></div>
         <span className={`vb-bench-v ${worse ? "warn" : ""}`}>{mine != null ? fmt(mine) : "—"}</span>
       </div>
       <div className="vb-bench-row">
-        <span className="vb-bench-k">Marktüblich</span>
+        <span className="vb-bench-k">{t("Marktüblich")}</span>
         <div className="vb-bar"><i className="med" style={{ width: w(med) + "%" }} /></div>
         <span className="vb-bench-v">{med != null ? fmt(med) : "—"}</span>
       </div>
@@ -78,6 +84,7 @@ function Bench({ label, mine, med, fmt, scale, goodHigh, note }: {
 }
 
 export function VergabeblickView() {
+  const { t } = useSprache();
   const [strat, setStrat] = useState<Record<string, Strat> | null>(null);
   const [branche, setBranche] = useState("it");
   const [stelleId, setStelleId] = useState<string | null>(null);
@@ -129,31 +136,30 @@ export function VergabeblickView() {
     return alleStellen.filter((s) => s.name.toLowerCase().includes(q)).slice(0, 8);
   }, [alleStellen, suche]);
 
-  if (!strat) return <div className="vb-load">Lade Marktdaten …</div>;
+  if (!strat) return <div className="vb-load">{t("Lade Marktdaten …")}</div>;
 
   // ── Onboarding: Stelle wählen ──────────────────────────────────────────
   if (!stelle) {
     return (
       <div className="vb-wrap">
-        <a className="vb-toswitch vb-toswitch-top" href="/leads">↔ Zur Anbieter-Sicht</a>
+        <a className="vb-toswitch vb-toswitch-top" href="/leads">↔ {t("Zur Anbieter-Sicht")}</a>
         <div className="vb-onboard">
-          <h2>Vergabeblick</h2>
+          <h2>{t("Vergabeblick")}</h2>
           <p className="vb-lead">
-            Der Blick Ihrer Vergabestelle auf den eigenen Markt — wen Sie erreichen, wie Sie mehr
-            Bieter bekommen, ob Sie marktüblich vergeben. Wählen Sie zuerst Ihre Stelle.
+            {t("Der Blick Ihrer Vergabestelle auf den eigenen Markt — wen Sie erreichen, wie Sie mehr Bieter bekommen, ob Sie marktüblich vergeben. Wählen Sie zuerst Ihre Stelle.")}
           </p>
-          <input className="vb-search" autoFocus placeholder="Ihre Vergabestelle suchen …"
+          <input className="vb-search" autoFocus placeholder={t("Ihre Vergabestelle suchen …")}
             value={suche} onChange={(e) => setSuche(e.target.value)} />
           <div className="vb-picklist">
             {treffer.map((s) => (
               <button key={s.id} className="vb-pick" onClick={() => setStelleId(s.id)}>
                 <span className="vb-pick-n">{s.name}</span>
-                <span className="vb-pick-m">{nf.format(s.vergaben36)} Vergaben · {eur(s.volEcht)}
-                  {s.id.startsWith("unresolved:") && <span className="vb-frag" title="Diese Stelle liegt in den Daten fragmentiert vor — wir zeigen den größten zusammengeführten Teil, nicht garantiert die volle Historie."> · Teilbild</span>}
+                <span className="vb-pick-m">{t("{n} Vergaben · {vol}", { n: nf.format(s.vergaben36), vol: eur(s.volEcht) })}
+                  {s.id.startsWith("unresolved:") && <span className="vb-frag" title={t("Diese Stelle liegt in den Daten fragmentiert vor — wir zeigen den größten zusammengeführten Teil, nicht garantiert die volle Historie.")}> · {t("Teilbild")}</span>}
                 </span>
               </button>
             ))}
-            {!treffer.length && <div className="vb-empty">Keine Stelle gefunden. Öffentliche Stellen liegen oft fragmentiert vor — versuchen Sie einen kürzeren Namensteil.</div>}
+            {!treffer.length && <div className="vb-empty">{t("Keine Stelle gefunden. Öffentliche Stellen liegen oft fragmentiert vor — versuchen Sie einen kürzeren Namensteil.")}</div>}
           </div>
         </div>
       </div>
@@ -162,85 +168,85 @@ export function VergabeblickView() {
 
   // ── Hauptsicht ─────────────────────────────────────────────────────────
   const bieterRot = stelle.bieterMedian != null && stelle.bieterMedian < 2.5;
-  const kmuQ = quoteText(stelle.kmu);
-  const preisQ = quoteText(stelle.preis);
-  const wechselQ = quoteText(stelle.wechsel);
+  const kmuQ = quoteText(stelle.kmu, t);
+  const preisQ = quoteText(stelle.preis, t);
+  const wechselQ = quoteText(stelle.wechsel, t);
 
   return (
     <div className="vb-wrap">
       <header className="vb-head">
         <div>
-          <span className="vb-eyebrow">Vergabeblick</span>
+          <span className="vb-eyebrow">{t("Vergabeblick")}</span>
           <h2>{stelle.name}</h2>
         </div>
         <div className="vb-head-actions">
-          <a className="vb-toswitch" href="/leads">↔ Anbieter-Sicht</a>
-          <button className="vb-switch" onClick={() => { setStelleId(null); setSuche(""); }}>Stelle wechseln</button>
+          <a className="vb-toswitch" href="/leads">↔ {t("Anbieter-Sicht")}</a>
+          <button className="vb-switch" onClick={() => { setStelleId(null); setSuche(""); }}>{t("Stelle wechseln")}</button>
         </div>
       </header>
 
       <nav className="vb-nav">
         {SEKTIONEN.map((s) => (
           <button key={s.key} className={`vb-nav-i ${sektion === s.key ? "on" : ""}`}
-            onClick={() => setSektion(s.key)}>{s.label}</button>
+            onClick={() => setSektion(s.key)}>{t(s.label)}</button>
         ))}
       </nav>
 
       {sektion === "dashboard" ? (
         <div className="vb-main">
-          <p className="vb-frage">Wie steht Ihre Stelle da? — rollierend 36 Monate, alle Werte mit Fallzahl.</p>
+          <p className="vb-frage">{t("Wie steht Ihre Stelle da? — rollierend 36 Monate, alle Werte mit Fallzahl.")}</p>
           <div className="vb-tiles">
             <div className="vb-tile">
               <span className="vb-t-num">{nf.format(stelle.vergaben36)}</span>
-              <span className="vb-t-lbl">Vergaben (36 Mon.)</span>
-              <span className="vb-t-sub">{Math.round(stelle.vergabenJahr)}/Jahr</span>
+              <span className="vb-t-lbl">{t("Vergaben (36 Mon.)")}</span>
+              <span className="vb-t-sub">{t("{n}/Jahr", { n: Math.round(stelle.vergabenJahr) })}</span>
             </div>
             <div className={`vb-tile ${bieterRot ? "risk" : ""}`}>
               <span className="vb-t-num">{stelle.bieterMedian != null ? stelle.bieterMedian.toLocaleString("de-DE") : "—"}</span>
-              <span className="vb-t-lbl">Ø Bieter je Verfahren</span>
-              <span className="vb-t-sub">{bieterRot ? "⚠ Ein-Bieter-Gefahr" : `aus ${nf.format(stelle.bieterN)} Losen`}</span>
+              <span className="vb-t-lbl">{t("Ø Bieter je Verfahren")}</span>
+              <span className="vb-t-sub">{bieterRot ? t("⚠ Ein-Bieter-Gefahr") : t("aus {n} Losen", { n: nf.format(stelle.bieterN) })}</span>
             </div>
             <div className="vb-tile">
               <span className={`vb-t-num ${kmuQ.thin ? "thin" : ""}`}>{kmuQ.val}</span>
-              <span className="vb-t-lbl">KMU-Anteil</span>
-              <span className="vb-t-sub">{kmuQ.thin ? `dünn · ${stelle.kmu?.n} Fälle` : "der Zuschläge"}</span>
+              <span className="vb-t-lbl">{t("KMU-Anteil")}</span>
+              <span className="vb-t-sub">{kmuQ.thin ? t("dünn · {n} Fälle", { n: stelle.kmu?.n ?? 0 }) : t("der Zuschläge")}</span>
             </div>
             <div className="vb-tile">
               <span className={`vb-t-num ${preisQ.thin ? "thin" : ""}`}>{preisQ.val}</span>
-              <span className="vb-t-lbl">Rein über Preis</span>
-              <span className="vb-t-sub">niedrigster Preis entscheidet</span>
+              <span className="vb-t-lbl">{t("Rein über Preis")}</span>
+              <span className="vb-t-sub">{t("niedrigster Preis entscheidet")}</span>
             </div>
             <div className="vb-tile">
               <span className={`vb-t-num ${wechselQ.thin ? "thin" : ""}`}>{wechselQ.val}</span>
-              <span className="vb-t-lbl">Wechselquote</span>
-              <span className="vb-t-sub">{wechselQ.thin ? `dünn · ${stelle.wechsel?.n} Fälle` : "anderer Gewinner bei Nachfolge"}</span>
+              <span className="vb-t-lbl">{t("Wechselquote")}</span>
+              <span className="vb-t-sub">{wechselQ.thin ? t("dünn · {n} Fälle", { n: stelle.wechsel?.n ?? 0 }) : t("anderer Gewinner bei Nachfolge")}</span>
             </div>
             <div className="vb-tile">
               <span className="vb-t-num">{Math.round(stelle.neuzugangJahr)}</span>
-              <span className="vb-t-lbl">Neuzugänge/Jahr</span>
-              <span className="vb-t-sub">Firmen mit Erstzuschlag</span>
+              <span className="vb-t-lbl">{t("Neuzugänge/Jahr")}</span>
+              <span className="vb-t-sub">{t("Firmen mit Erstzuschlag")}</span>
             </div>
           </div>
 
           {stelle.top?.length > 0 && (
             <div className="vb-top">
-              <h4>Stärkste Anbieter bei Ihnen</h4>
+              <h4>{t("Stärkste Anbieter bei Ihnen")}</h4>
               <div className="vb-toplist">
-                {stelle.top.slice(0, 5).map((t, i) => (
+                {stelle.top.slice(0, 5).map((w, i) => (
                   <div className="vb-toprow" key={i}>
                     <span className="vb-top-r">#{i + 1}</span>
-                    <span className="vb-top-n">{t.n}</span>
-                    <span className="vb-top-w">{nf.format(t.wins)} Zuschläge · {t.pct} %</span>
+                    <span className="vb-top-n">{w.n}</span>
+                    <span className="vb-top-w">{t("{n} Zuschläge · {pct} %", { n: nf.format(w.wins), pct: w.pct })}</span>
                   </div>
                 ))}
               </div>
-              <p className="vb-note">Faktische Zuschlagszahlen, keine Wertung. Anbieter mit unsicherer Auflösung sind ausgeschlossen, nicht als „Sonstige" gebündelt.</p>
+              <p className="vb-note">{t("Faktische Zuschlagszahlen, keine Wertung. Anbieter mit unsicherer Auflösung sind ausgeschlossen, nicht als „Sonstige\" gebündelt.")}</p>
             </div>
           )}
         </div>
       ) : sektion === "markt" ? (
         <div className="vb-main">
-          <p className="vb-frage">Wen erreichen Sie? — Ihr Anbieter-Umfeld und die Wettbewerbsdichte in Ihren Feldern.</p>
+          <p className="vb-frage">{t("Wen erreichen Sie? — Ihr Anbieter-Umfeld und die Wettbewerbsdichte in Ihren Feldern.")}</p>
 
           {/* A.4 Markt-Vitalität */}
           {(() => {
@@ -253,11 +259,11 @@ export function VergabeblickView() {
             const fest = retention >= 60;
             return (
               <div className={`vb-vital ${fest ? "risk" : ""}`}>
-                <span className="vb-vital-k">Markt-Vitalität</span>
-                <p><b>Bei Ihren Nachfolgevergaben gewinnt zu {retention} % wieder derselbe Anbieter.</b>
-                  {feldMed != null && <> Marktüblich in Ihrer Branche: {feldMed} %.</>}
-                  {fest ? " Das ist festgefahren — hier lohnt aktive Marktansprache." : " Ihr Markt bewegt sich."}</p>
-                {stelle.top1 != null && <p className="vb-note">Ihr stärkster Anbieter hält {stelle.top1} % aller Ihrer Vergaben (Konzentration).</p>}
+                <span className="vb-vital-k">{t("Markt-Vitalität")}</span>
+                <p><b>{t("Bei Ihren Nachfolgevergaben gewinnt zu {pct} % wieder derselbe Anbieter.", { pct: retention })}</b>
+                  {feldMed != null && <> {t("Marktüblich in Ihrer Branche: {pct} %.", { pct: feldMed })}</>}
+                  {fest ? ` ${t("Das ist festgefahren — hier lohnt aktive Marktansprache.")}` : ` ${t("Ihr Markt bewegt sich.")}`}</p>
+                {stelle.top1 != null && <p className="vb-note">{t("Ihr stärkster Anbieter hält {pct} % aller Ihrer Vergaben (Konzentration).", { pct: stelle.top1 })}</p>}
               </div>
             );
           })()}
@@ -265,37 +271,37 @@ export function VergabeblickView() {
           {/* A.2 Wettbewerbsdichte */}
           {markt?.felder?.length ? (
             <>
-              <h4 className="vb-h">Wettbewerbsdichte je Feld</h4>
+              <h4 className="vb-h">{t("Wettbewerbsdichte je Feld")}</h4>
               <div className="vb-felder">
                 {markt.felder.slice(0, 12).map((f) => {
                   const bm = f.bieterMedian;
                   const amp = bm == null ? "" : bm < 2.5 ? "risk" : bm < 4 ? "flag" : "ok";
                   return (
                     <div className="vb-feld" key={f.cpv4}>
-                      <span className={`vb-amp ${amp}`} title={amp === "risk" ? "Monopol-Gefahr" : amp === "flag" ? "dünner Wettbewerb" : "gesunder Wettbewerb"} />
+                      <span className={`vb-amp ${amp}`} title={amp === "risk" ? t("Monopol-Gefahr") : amp === "flag" ? t("dünner Wettbewerb") : t("gesunder Wettbewerb")} />
                       <span className="vb-feld-l">{f.label}</span>
-                      <span className="vb-feld-b">Ø {bm != null ? bm.toLocaleString("de-DE") : "—"} Bieter</span>
-                      <span className="vb-feld-v">{Math.round(f.vergabenJahr)}/Jahr</span>
+                      <span className="vb-feld-b">{t("Ø {n} Bieter", { n: bm != null ? bm.toLocaleString("de-DE") : "—" })}</span>
+                      <span className="vb-feld-v">{t("{n}/Jahr", { n: Math.round(f.vergabenJahr) })}</span>
                       <span className={`vb-feld-t ${f.trend > 0 ? "up" : f.trend < 0 ? "down" : ""}`}>{f.trend > 0 ? "+" : ""}{f.trend} %</span>
                     </div>
                   );
                 })}
               </div>
-              <p className="vb-note">Ampel nach Ø Bieterzahl: rot = Monopol-Gefahr (&lt; 2,5), gelb = dünn, grün = gesund. Aus entschiedenen Vergaben des Feldes.</p>
+              <p className="vb-note">{t("Ampel nach Ø Bieterzahl: rot = Monopol-Gefahr (< 2,5), gelb = dünn, grün = gesund. Aus entschiedenen Vergaben des Feldes.")}</p>
             </>
           ) : null}
 
           {/* A.1 Anbieter-Landschaft */}
           {markt?.wettbewerb?.anbieter?.length ? (
             <>
-              <h4 className="vb-h">Aktive Anbieter in Ihrem Markt</h4>
+              <h4 className="vb-h">{t("Aktive Anbieter in Ihrem Markt")}</h4>
               <div className="vb-anb">
-                <div className="vb-anb-h"><span>Anbieter</span><span>Zuschläge</span><span>Stellen</span><span>Volumen</span><span>Trend</span></div>
+                <div className="vb-anb-h"><span>{t("Anbieter")}</span><span>{t("Zuschläge")}</span><span>{t("Stellen")}</span><span>{t("Volumen")}</span><span>{t("Trend")}</span></div>
                 {markt.wettbewerb.anbieter.slice(0, 15).map((a) => {
-                  const beiMir = stelle.top?.some((t) => t.n === a.name);
+                  const beiMir = stelle.top?.some((w) => w.n === a.name);
                   return (
                     <div className={`vb-anb-r ${beiMir ? "mine" : ""}`} key={a.id}>
-                      <span className="vb-anb-n">{a.name}{beiMir && <span className="vb-mine-tag">bei Ihnen</span>}</span>
+                      <span className="vb-anb-n">{a.name}{beiMir && <span className="vb-mine-tag">{t("bei Ihnen")}</span>}</span>
                       <span className="vb-anb-w">{nf.format(a.wins)}</span>
                       <span className="vb-anb-s">{nf.format(a.stellen)}</span>
                       <span className="vb-anb-v">{eur(a.vol)}</span>
@@ -304,13 +310,13 @@ export function VergabeblickView() {
                   );
                 })}
               </div>
-              <p className="vb-note">Marktweite Zuschlagszahlen (36 Mon.), gruppen-bewusst aufgelöst. „bei Ihnen" = auch unter Ihren Top-Anbietern.</p>
+              <p className="vb-note">{t("Marktweite Zuschlagszahlen (36 Mon.), gruppen-bewusst aufgelöst. „bei Ihnen\" = auch unter Ihren Top-Anbietern.")}</p>
             </>
           ) : null}
         </div>
       ) : sektion === "controlling" ? (
         <div className="vb-main">
-          <p className="vb-frage">Haben Sie marktüblich vergeben? — Ihre Werte gegen den Median vergleichbarer Stellen Ihrer Branche.</p>
+          <p className="vb-frage">{t("Haben Sie marktüblich vergeben? — Ihre Werte gegen den Median vergleichbarer Stellen Ihrer Branche.")}</p>
           {(() => {
             const med = (pick: (s: Stelle) => number | null | undefined) => {
               const v = (markt?.stellen || []).map(pick).filter((x): x is number => x != null).sort((a, b) => a - b);
@@ -320,37 +326,37 @@ export function VergabeblickView() {
             const volMed = med((s) => (s.volN >= 3 ? s.volEcht : null));
             return (
               <>
-                <Bench label="Ø Bieter je Verfahren" mine={stelle.bieterMedian} med={bieterMed}
+                <Bench label={t("Ø Bieter je Verfahren")} mine={stelle.bieterMedian} med={bieterMed}
                   fmt={(v) => (v != null ? v.toLocaleString("de-DE") : "—")} scale={Math.max(stelle.bieterMedian || 0, bieterMed || 0, 5)}
-                  goodHigh note="Mehr Bieter = mehr Wettbewerb = bessere Angebote. Unter Median bedeutet: Sie erreichen weniger Markt als vergleichbare Stellen." />
-                <Bench label="Vergabevolumen (belegt, 36 Mon.)" mine={stelle.volEcht} med={volMed}
+                  goodHigh note={t("Mehr Bieter = mehr Wettbewerb = bessere Angebote. Unter Median bedeutet: Sie erreichen weniger Markt als vergleichbare Stellen.")} />
+                <Bench label={t("Vergabevolumen (belegt, 36 Mon.)")} mine={stelle.volEcht} med={volMed}
                   fmt={eur} scale={Math.max(stelle.volEcht, volMed || 0)}
-                  note="Nur veröffentlichte Auftragswerte — die tatsächliche Kaufkraft liegt höher. Untergrenze, kein Vollbild." />
-                <h4 className="vb-h">Vergleichbare Stellen (Comps)</h4>
+                  note={t("Nur veröffentlichte Auftragswerte — die tatsächliche Kaufkraft liegt höher. Untergrenze, kein Vollbild.")} />
+                <h4 className="vb-h">{t("Vergleichbare Stellen (Comps)")}</h4>
                 <div className="vb-anb">
-                  <div className="vb-anb-h" style={{ gridTemplateColumns: "1fr 90px 80px 90px" }}><span>Stelle</span><span>Vergaben</span><span>Ø Bieter</span><span>Volumen</span></div>
+                  <div className="vb-anb-h" style={{ gridTemplateColumns: "1fr 90px 80px 90px" }}><span>{t("Stelle")}</span><span>{t("Vergaben")}</span><span>{t("Ø Bieter")}</span><span>{t("Volumen")}</span></div>
                   {(markt?.stellen || []).slice(0, 10).map((s) => (
                     <div className={`vb-anb-r ${s.id === stelle.id ? "mine" : ""}`} key={s.id} style={{ gridTemplateColumns: "1fr 90px 80px 90px" }}>
-                      <span className="vb-anb-n">{s.name}{s.id === stelle.id && <span className="vb-mine-tag">Sie</span>}</span>
+                      <span className="vb-anb-n">{s.name}{s.id === stelle.id && <span className="vb-mine-tag">{t("Sie")}</span>}</span>
                       <span className="vb-anb-w">{nf.format(s.vergaben36)}</span>
                       <span className="vb-anb-w">{s.bieterMedian != null ? s.bieterMedian.toLocaleString("de-DE") : "—"}</span>
                       <span className="vb-anb-v">{eur(s.volEcht)}</span>
                     </div>
                   ))}
                 </div>
-                <p className="vb-note">Verteilung statt Punktschätzung — wo Ihre Stelle im Feld steht. Keine Wertung, nur Faktenvergleich.</p>
+                <p className="vb-note">{t("Verteilung statt Punktschätzung — wo Ihre Stelle im Feld steht. Keine Wertung, nur Faktenvergleich.")}</p>
                 {stelle.vorschau?.length ? (
                   <>
-                    <h4 className="vb-h">Ihre nächsten Auslauftermine</h4>
+                    <h4 className="vb-h">{t("Ihre nächsten Auslauftermine")}</h4>
                     <div className="vb-vorschau">
                       {stelle.vorschau.map((v, i) => (
                         <div className="vb-vor-row" key={i}>
-                          <span className={`vb-vor-m ${v.monate != null && v.monate <= 6 ? "soon" : ""}`}>{v.monate != null ? `in ${Math.round(v.monate)} Mon.` : "—"}</span>
-                          <span className="vb-vor-t">{v.titel || "(ohne Titel)"}</span>
+                          <span className={`vb-vor-m ${v.monate != null && v.monate <= 6 ? "soon" : ""}`}>{v.monate != null ? t("in {n} Mon.", { n: Math.round(v.monate) }) : "—"}</span>
+                          <span className="vb-vor-t">{v.titel || t("(ohne Titel)")}</span>
                         </div>
                       ))}
                     </div>
-                    <p className="vb-note">Ihre eigenen bald auslaufenden Verträge (≤ 24 Mon.) — Planungshilfe für kommende Verfahren. Nur öffentlich sichtbare, oberschwellige.</p>
+                    <p className="vb-note">{t("Ihre eigenen bald auslaufenden Verträge (≤ 24 Mon.) — Planungshilfe für kommende Verfahren. Nur öffentlich sichtbare, oberschwellige.")}</p>
                   </>
                 ) : null}
               </>
@@ -359,7 +365,7 @@ export function VergabeblickView() {
         </div>
       ) : sektion === "pflichten" ? (
         <div className="vb-main">
-          <p className="vb-frage">KMU-Förderung (§ 97 GWB) und wie stark Sie rein über den Preis vergeben — gegen vergleichbare Stellen.</p>
+          <p className="vb-frage">{t("KMU-Förderung (§ 97 GWB) und wie stark Sie rein über den Preis vergeben — gegen vergleichbare Stellen.")}</p>
           {(() => {
             const med = (pick: (s: Stelle) => number | null | undefined) => {
               const v = (markt?.stellen || []).map(pick).filter((x): x is number => x != null).sort((a, b) => a - b);
@@ -371,55 +377,55 @@ export function VergabeblickView() {
             const preisThin = !stelle.preis || stelle.preis.n < 3;
             return (
               <>
-                <Bench label="KMU-Anteil der Zuschläge" mine={kmuThin ? null : stelle.kmu.pct} med={kmuMed}
+                <Bench label={t("KMU-Anteil der Zuschläge")} mine={kmuThin ? null : stelle.kmu.pct} med={kmuMed}
                   fmt={(v) => (v != null ? v + " %" : "—")} scale={100} goodHigh
-                  note={`§ 97 GWB fordert Losaufteilung zur Mittelstandsförderung. ${kmuThin ? `Zu wenige Fälle (${stelle.kmu?.n ?? 0}) für eine Quote.` : "Unter Median = Andockpunkt für die Begründungspflicht bei Nicht-Losaufteilung."}`} />
-                <Bench label="Rein über niedrigsten Preis" mine={preisThin ? null : stelle.preis.pct} med={preisMed}
+                  note={`${t("§ 97 GWB fordert Losaufteilung zur Mittelstandsförderung.")} ${kmuThin ? t("Zu wenige Fälle ({n}) für eine Quote.", { n: stelle.kmu?.n ?? 0 }) : t("Unter Median = Andockpunkt für die Begründungspflicht bei Nicht-Losaufteilung.")}`} />
+                <Bench label={t("Rein über niedrigsten Preis")} mine={preisThin ? null : stelle.preis.pct} med={preisMed}
                   fmt={(v) => (v != null ? v + " %" : "—")} scale={100}
-                  note={`${preisThin ? `Zu wenige Fälle (${stelle.preis?.n ?? 0}) für eine Quote. ` : ""}Ehrlich als Preis-Benchmark benannt, nicht als Nachhaltigkeit — echte Nachhaltigkeitsdaten tragen in den Vergabedaten nicht (0–1,2 %).`} />
+                  note={`${preisThin ? t("Zu wenige Fälle ({n}) für eine Quote.", { n: stelle.preis?.n ?? 0 }) + " " : ""}${t("Ehrlich als Preis-Benchmark benannt, nicht als Nachhaltigkeit — echte Nachhaltigkeitsdaten tragen in den Vergabedaten nicht (0–1,2 %).")}`} />
               </>
             );
           })()}
         </div>
       ) : (
         <div className="vb-main">
-          <p className="vb-frage">Prüfen Sie einen Entwurf gegen die Marktdaten — bevor das Verfahren startet. Ein Gutachten, kein Eingriff in Ihren Prozess.</p>
+          <p className="vb-frage">{t("Prüfen Sie einen Entwurf gegen die Marktdaten — bevor das Verfahren startet. Ein Gutachten, kein Eingriff in Ihren Prozess.")}</p>
           <div className="vb-check-form">
-            <label>Feld (CPV)
+            <label>{t("Feld (CPV)")}
               <select value={ckFeld} onChange={(e) => setCkFeld(e.target.value)}>
-                <option value="">— wählen —</option>
+                <option value="">{t("— wählen —")}</option>
                 {(markt?.felder || []).map((f) => <option key={f.cpv4} value={f.cpv4}>{f.label}</option>)}
               </select>
             </label>
-            <label>Geplante Lose
+            <label>{t("Geplante Lose")}
               <select value={ckLose} onChange={(e) => setCkLose(+e.target.value)}>
-                <option value={1}>1 Los (ganz)</option><option value={2}>2 Lose</option><option value={3}>3+ Lose</option>
+                <option value={1}>{t("1 Los (ganz)")}</option><option value={2}>{t("2 Lose")}</option><option value={3}>{t("3+ Lose")}</option>
               </select>
             </label>
-            <label>Mindestumsatz (Eignung)
+            <label>{t("Mindestumsatz (Eignung)")}
               <select value={ckUmsatz} onChange={(e) => setCkUmsatz(+e.target.value)}>
-                <option value={0}>keiner</option><option value={1}>1 Mio €/Jahr</option>
-                <option value={5}>5 Mio €/Jahr</option><option value={10}>10 Mio €/Jahr</option>
+                <option value={0}>{t("keiner")}</option><option value={1}>{t("1 Mio €/Jahr")}</option>
+                <option value={5}>{t("5 Mio €/Jahr")}</option><option value={10}>{t("10 Mio €/Jahr")}</option>
               </select>
             </label>
-            <label>Referenzen (Eignung)
+            <label>{t("Referenzen (Eignung)")}
               <select value={ckReferenzen} onChange={(e) => setCkReferenzen(+e.target.value)}>
-                <option value={0}>keine</option><option value={2}>2 vergleichbare</option>
-                <option value={3}>3 vergleichbare</option><option value={5}>5 vergleichbare</option>
+                <option value={0}>{t("keine")}</option><option value={2}>{t("2 vergleichbare")}</option>
+                <option value={3}>{t("3 vergleichbare")}</option><option value={5}>{t("5 vergleichbare")}</option>
               </select>
             </label>
-            <label className="vb-chk"><input type="checkbox" checked={ckISO} onChange={(e) => setCkISO(e.target.checked)} /> ISO 27001 zwingend</label>
-            <label>Ihr Schätzwert (€)
-              <input type="text" inputMode="numeric" placeholder="z. B. 300000" value={ckWert}
+            <label className="vb-chk"><input type="checkbox" checked={ckISO} onChange={(e) => setCkISO(e.target.checked)} /> {t("ISO 27001 zwingend")}</label>
+            <label>{t("Ihr Schätzwert (€)")}
+              <input type="text" inputMode="numeric" placeholder={t("z. B. 300000")} value={ckWert}
                 onChange={(e) => setCkWert(e.target.value.replace(/[^\d]/g, ""))} style={{ minWidth: "140px" }} />
             </label>
-            <label className="vb-chk"><input type="checkbox" checked={ckBuerg} onChange={(e) => setCkBuerg(e.target.checked)} /> Bürgschaft gefordert</label>
-            <label className="vb-chk"><input type="checkbox" checked={ckPreis} onChange={(e) => setCkPreis(e.target.checked)} /> Nur der Preis entscheidet</label>
+            <label className="vb-chk"><input type="checkbox" checked={ckBuerg} onChange={(e) => setCkBuerg(e.target.checked)} /> {t("Bürgschaft gefordert")}</label>
+            <label className="vb-chk"><input type="checkbox" checked={ckPreis} onChange={(e) => setCkPreis(e.target.checked)} /> {t("Nur der Preis entscheidet")}</label>
           </div>
           <div className="vb-draft">
             <div>
-              <span className="vb-draft-t">Entwurf mitprüfen <span className="vb-draft-opt">— optional</span></span>
-              <span className="vb-draft-note">Wir zählen die geforderten Nachweise und vergleichen sie mit ähnlichen Verfahren. Wird nur für diese Prüfung verarbeitet und danach verworfen.</span>
+              <span className="vb-draft-t">{t("Entwurf mitprüfen")} <span className="vb-draft-opt">— {t("optional")}</span></span>
+              <span className="vb-draft-note">{t("Wir zählen die geforderten Nachweise und vergleichen sie mit ähnlichen Verfahren. Wird nur für diese Prüfung verarbeitet und danach verworfen.")}</span>
             </div>
             <button className="vb-draft-btn" disabled={draftBusy} onClick={() => {
               const inp = document.createElement("input");
@@ -436,31 +442,33 @@ export function VergabeblickView() {
                 setDraftBusy(false);
               };
               inp.click();
-            }}>{draftBusy ? "Prüfe Entwurf …" : (draftNw ? "Andere Datei" : "Entwurfsdatei wählen")}</button>
+            }}>{draftBusy ? t("Prüfe Entwurf …") : (draftNw ? t("Andere Datei") : t("Entwurfsdatei wählen"))}</button>
           </div>
           {(() => {
             const f = (markt?.felder || []).find((x) => x.cpv4 === ckFeld);
-            if (!f) return <div className="vb-check-empty">Wählen Sie ein Feld — dann prüfen wir Ihren Entwurf gegen vergleichbare Verfahren.</div>;
+            if (!f) return <div className="vb-check-empty">{t("Wählen Sie ein Feld — dann prüfen wir Ihren Entwurf gegen vergleichbare Verfahren.")}</div>;
             const bm = f.bieterMedian;
-            const bmT = bm != null ? bm.toLocaleString("de-DE") : "wenigen";
-            type H = { sev: "risk" | "warn" | "ok"; t: string };
+            const bmT = bm != null ? bm.toLocaleString("de-DE") : t("wenigen");
+            // `t` heißt hier bewusst NICHT `t` — das Feld des Hinweises heißt `text`,
+            // sonst kollidiert es beim Schreiben mit der Übersetzungsfunktion.
+            type H = { sev: "risk" | "warn" | "ok"; text: string };
             const hints: H[] = [];
             if (bm != null) hints.push({ sev: bm < 2.5 ? "risk" : bm < 4 ? "warn" : "ok",
-              t: bm < 2.5
-                ? `Vergleichbare Verfahren in „${f.label}" erreichen im Median nur ${bmT} Bieter — akute Ein-Bieter-Gefahr.`
-                : `Vergleichbare Verfahren erreichen im Median ${bmT} Bieter.` });
+              text: bm < 2.5
+                ? t("Vergleichbare Verfahren in „{feld}\" erreichen im Median nur {n} Bieter — akute Ein-Bieter-Gefahr.", { feld: f.label, n: bmT })
+                : t("Vergleichbare Verfahren erreichen im Median {n} Bieter.", { n: bmT }) });
             hints.push(ckLose === 1
-              ? { sev: "warn", t: `Mit nur 1 Los erreichen Sie tendenziell weniger Bieter.${f.kleinstesLos ? ` Vergleichbare Aufträge werden aufgeteilt — das kleinste Los liegt bei ~${eur(f.kleinstesLos)}.` : ""} Eine Aufteilung öffnet das Verfahren für kleinere Anbieter.` }
-              : { sev: "ok", t: "Aufteilung in mehrere Lose erhöht erfahrungsgemäß Bieterzahl und KMU-Beteiligung." });
-            if (ckBuerg) hints.push({ sev: "warn", t: `Eine Bürgschaft schließt kleinere und regionale Anbieter aus — bei im Median ${bmT} Bietern im Feld erhöht das die Ein-Bieter-Gefahr.` });
-            if (ckPreis) hints.push({ sev: "warn", t: "Reine Preisvergabe schreckt spezialisierte Anbieter ab und senkt den Qualitätswettbewerb." });
+              ? { sev: "warn", text: `${t("Mit nur 1 Los erreichen Sie tendenziell weniger Bieter.")}${f.kleinstesLos ? ` ${t("Vergleichbare Aufträge werden aufgeteilt — das kleinste Los liegt bei ~{wert}.", { wert: eur(f.kleinstesLos) })}` : ""} ${t("Eine Aufteilung öffnet das Verfahren für kleinere Anbieter.")}` }
+              : { sev: "ok", text: t("Aufteilung in mehrere Lose erhöht erfahrungsgemäß Bieterzahl und KMU-Beteiligung.") });
+            if (ckBuerg) hints.push({ sev: "warn", text: t("Eine Bürgschaft schließt kleinere und regionale Anbieter aus — bei im Median {n} Bietern im Feld erhöht das die Ein-Bieter-Gefahr.", { n: bmT }) });
+            if (ckPreis) hints.push({ sev: "warn", text: t("Reine Preisvergabe schreckt spezialisierte Anbieter ab und senkt den Qualitätswettbewerb.") });
             // Ticket #23 §B.2 — Nachweisdichte des hochgeladenen Entwurfs gegen den Korpus-Median.
             if (draftNw && draftNw.median != null) {
               const over = draftNw.count > draftNw.median * 1.5;
               hints.push({ sev: over ? "warn" : "ok",
-                t: over
-                  ? `Ihr Entwurf fordert ${draftNw.count} Nachweisarten — vergleichbare Verfahren im Median ${draftNw.median}. Hohe Nachweisdichte erhöht den Bearbeitungsaufwand und schreckt kleinere Anbieter ab.`
-                  : `Ihr Entwurf fordert ${draftNw.count} Nachweisarten — im Rahmen des Üblichen (Feld-Median ${draftNw.median}).` });
+                text: over
+                  ? t("Ihr Entwurf fordert {n} Nachweisarten — vergleichbare Verfahren im Median {median}. Hohe Nachweisdichte erhöht den Bearbeitungsaufwand und schreckt kleinere Anbieter ab.", { n: draftNw.count, median: draftNw.median })
+                  : t("Ihr Entwurf fordert {n} Nachweisarten — im Rahmen des Üblichen (Feld-Median {median}).", { n: draftNw.count, median: draftNw.median }) });
             }
             const krit = hints.filter((h) => h.sev !== "ok").length;
             // B.2 Zuschnitt-Simulation: Feld-Median als Basis, Zuschnitt als DIREKTIONALE Richtung.
@@ -481,30 +489,34 @@ export function VergabeblickView() {
                 {proj != null && bm != null && (
                   <div className={`vb-proj ${proj < 2.5 ? "risk" : ""}`}>
                     <div className="vb-proj-nums">
-                      <div className="vb-proj-cell"><span className="vb-proj-n">{proj.toLocaleString("de-DE")}</span><span className="vb-proj-l">Bieter — Prognose Ihres Zuschnitts</span></div>
+                      <div className="vb-proj-cell"><span className="vb-proj-n">{proj.toLocaleString("de-DE")}</span><span className="vb-proj-l">{t("Bieter — Prognose Ihres Zuschnitts")}</span></div>
                       <span className="vb-proj-vs">↔</span>
-                      <div className="vb-proj-cell"><span className="vb-proj-n muted">{bm.toLocaleString("de-DE")}</span><span className="vb-proj-l">Feld-Median heute</span></div>
+                      <div className="vb-proj-cell"><span className="vb-proj-n muted">{bm.toLocaleString("de-DE")}</span><span className="vb-proj-l">{t("Feld-Median heute")}</span></div>
                     </div>
-                    <p className="vb-note">Richtwert, kein Versprechen: der Feld-Median ist gemessen, die Richtung Ihres Zuschnitts erfahrungsbasiert (Aufteilung öffnet, Bürgschaft/Umsatz/reiner Preis verengen). Die Deltas sind nicht pro Konfiguration gemessen.</p>
+                    <p className="vb-note">{t("Richtwert, kein Versprechen: der Feld-Median ist gemessen, die Richtung Ihres Zuschnitts erfahrungsbasiert (Aufteilung öffnet, Bürgschaft/Umsatz/reiner Preis verengen). Die Deltas sind nicht pro Konfiguration gemessen.")}</p>
                   </div>
                 )}
                 <div className={`vb-check-sum ${krit >= 2 ? "risk" : krit ? "warn" : "ok"}`}>
-                  {krit ? `${krit} Hinweis${krit > 1 ? "e" : ""}, die Ihre Bieterzahl senken können` : "Keine kritischen Hinweise — der Zuschnitt sieht wettbewerbsoffen aus."}
+                  {krit
+                    ? (krit > 1
+                       ? t("{n} Hinweise, die Ihre Bieterzahl senken können", { n: krit })
+                       : t("{n} Hinweis, der Ihre Bieterzahl senken kann", { n: krit }))
+                    : t("Keine kritischen Hinweise — der Zuschnitt sieht wettbewerbsoffen aus.")}
                 </div>
-                {hints.map((h, i) => <div className={`vb-hint ${h.sev}`} key={i}><span className="vb-hint-i" />{h.t}</div>)}
+                {hints.map((h, i) => <div className={`vb-hint ${h.sev}`} key={i}><span className="vb-hint-i" />{h.text}</div>)}
                 {(ckUmsatz > 0 || ckReferenzen > 0 || ckISO) && markt?.wettbewerb?.anbieter?.length ? (() => {
                   // #21 Eignungs-Angemessenheit: Anteil erfüllender Anbieter je Kriterium UND kumulativ.
                   const anb = markt!.wettbewerb!.anbieter!;
                   const N = anb.length;
                   if (N < 8) return (
-                    <div className="vb-eignung"><div className="vb-eig-h">Eignungswirkung</div>
-                      <p className="vb-note">Zu wenige aufgelöste Anbieter im Marktausschnitt ({N}) für eine belastbare Eignungswirkung.</p></div>
+                    <div className="vb-eignung"><div className="vb-eig-h">{t("Eignungswirkung")}</div>
+                      <p className="vb-note">{t("Zu wenige aufgelöste Anbieter im Marktausschnitt ({n}) für eine belastbare Eignungswirkung.", { n: N })}</p></div>
                   );
                   const dots = (pct: number) => { const f2 = Math.max(0, Math.min(5, Math.round(pct / 20))); return "●".repeat(f2) + "○".repeat(5 - f2); };
                   // Belastbare Kriterien (generisch): Umsatz (3-J-Volumen ≈ 3× Jahresumsatz), Referenzen (Zuschlagszahl).
                   const krit: { label: string; pred: (a: Anbieter) => boolean; pct: number }[] = [];
-                  if (ckUmsatz > 0) { const pred = (a: Anbieter) => a.vol >= ckUmsatz * 1e6 * 3; krit.push({ label: `Mindestumsatz ${ckUmsatz} Mio €`, pred, pct: Math.round(100 * anb.filter(pred).length / N) }); }
-                  if (ckReferenzen > 0) { const pred = (a: Anbieter) => a.wins >= ckReferenzen; krit.push({ label: `${ckReferenzen} vergleichbare Referenzen`, pred, pct: Math.round(100 * anb.filter(pred).length / N) }); }
+                  if (ckUmsatz > 0) { const pred = (a: Anbieter) => a.vol >= ckUmsatz * 1e6 * 3; krit.push({ label: t("Mindestumsatz {n} Mio €", { n: ckUmsatz }), pred, pct: Math.round(100 * anb.filter(pred).length / N) }); }
+                  if (ckReferenzen > 0) { const pred = (a: Anbieter) => a.wins >= ckReferenzen; krit.push({ label: t("{n} vergleichbare Referenzen", { n: ckReferenzen }), pred, pct: Math.round(100 * anb.filter(pred).length / N) }); }
                   // Kumulativ: Anbieter, die ALLE belastbaren Kriterien erfüllen (ISO bleibt draußen — dünn).
                   const alle = krit.length ? anb.filter((a) => krit.every((k) => k.pred(a))) : anb;
                   const kombPct = Math.round(100 * alle.length / N);
@@ -512,22 +524,22 @@ export function VergabeblickView() {
                   const eng = (krit.length > 0 && kombPct < 40) || (med != null && alle.length <= Math.ceil(med));
                   return (
                     <div className={`vb-eignung ${eng ? "warn" : ""}`}>
-                      <div className="vb-eig-h">Eignungswirkung — wie viele Anbieter erfüllen?</div>
+                      <div className="vb-eig-h">{t("Eignungswirkung — wie viele Anbieter erfüllen?")}</div>
                       <table className="vb-eig-tab"><tbody>
                         {krit.map((k) => (
                           <tr key={k.label}><td>{k.label}</td><td className="vb-dots">{dots(k.pct)}</td>
-                            <td>~{k.pct} %{k.pct < 15 ? <b className="vb-eng"> ⚠ stark einschränkend</b> : null}</td></tr>
+                            <td>~{k.pct} %{k.pct < 15 ? <b className="vb-eng"> {t("⚠ stark einschränkend")}</b> : null}</td></tr>
                         ))}
-                        {ckISO && <tr><td>ISO 27001 zwingend</td><td className="vb-dots">—</td><td><i>Datenlage dünn — nicht belastbar quantifiziert</i></td></tr>}
+                        {ckISO && <tr><td>{t("ISO 27001 zwingend")}</td><td className="vb-dots">—</td><td><i>{t("Datenlage dünn — nicht belastbar quantifiziert")}</i></td></tr>}
                       </tbody></table>
                       {krit.length > 0 && (
-                        <div className="vb-eig-komb">Kombiniert erfüllen alle {krit.length > 1 ? `${krit.length} Kriterien` : "das Kriterium"}:
-                          <b> ~{alle.length} Anbieter</b> ({kombPct} %){med != null ? ` · Median-Bieterfeld: ${med}` : ""}</div>
+                        <div className="vb-eig-komb">{t("Kombiniert erfüllen alle")} {krit.length > 1 ? t("{n} Kriterien", { n: krit.length }) : t("das Kriterium")}:
+                          <b> ~{t("{n} Anbieter", { n: alle.length })}</b> ({kombPct} %){med != null ? ` · ${t("Median-Bieterfeld: {n}", { n: med })}` : ""}</div>
                       )}
                       <p>{eng
-                        ? "Jede Hürde einzeln wirkt harmlos — zusammen bleiben wenige Anbieter. Das erhöht die Ein-Bieter-Gefahr."
-                        : "Der Markt bleibt auch kumulativ breit genug."}</p>
-                      <p className="vb-note">Umsatz-/Referenz-Anteile aus 3-Jahres-Auftragsvolumen bzw. Zuschlagszahl der {N} aktiven Anbieter (Größen-/Erfahrungs-Proxy, kein bilanzieller Umsatz). Benannte Zertifikate: Datenlage dünn (0,1–0,4 %), hier nicht quantifiziert. Faktische Marktwirkung, keine Weglass-Empfehlung.</p>
+                        ? t("Jede Hürde einzeln wirkt harmlos — zusammen bleiben wenige Anbieter. Das erhöht die Ein-Bieter-Gefahr.")
+                        : t("Der Markt bleibt auch kumulativ breit genug.")}</p>
+                      <p className="vb-note">{t("Umsatz-/Referenz-Anteile aus 3-Jahres-Auftragsvolumen bzw. Zuschlagszahl der {n} aktiven Anbieter (Größen-/Erfahrungs-Proxy, kein bilanzieller Umsatz). Benannte Zertifikate: Datenlage dünn (0,1–0,4 %), hier nicht quantifiziert. Faktische Marktwirkung, keine Weglass-Empfehlung.", { n: N })}</p>
                     </div>
                   );
                 })() : null}
@@ -538,19 +550,19 @@ export function VergabeblickView() {
                   const status = fieldBand < 0 ? "im" : myBand < fieldBand ? "unter" : myBand > fieldBand ? "über" : "im";
                   return (
                     <div className={`vb-wert ${status !== "im" ? "warn" : ""}`}>
-                      <div className="vb-eig-h">Wert-Plausibilität</div>
+                      <div className="vb-eig-h">{t("Wert-Plausibilität")}</div>
                       <div className="vb-wert-rows">
-                        <div><span>Ihr Schätzwert</span><b>{eur(v)}</b></div>
-                        <div><span>Vergleichbare Verfahren</span><b>Band {f.wertband} €</b> <i>(n={f.wertN}{thin ? ", dünn" : ""})</i></div>
+                        <div><span>{t("Ihr Schätzwert")}</span><b>{eur(v)}</b></div>
+                        <div><span>{t("Vergleichbare Verfahren")}</span><b>{t("Band {band} €", { band: f.wertband! })}</b> <i>(n={f.wertN}{thin ? `, ${t("dünn")}` : ""})</i></div>
                       </div>
-                      {status === "unter" && <p className="vb-wert-warn">⚠ Ihr Schätzwert liegt <b>unter</b> dem üblichen Band — prüfen, ob er das Verfahren trägt, sonst Aufhebungsrisiko.</p>}
-                      {status === "über" && <p className="vb-wert-warn">Ihr Schätzwert liegt <b>über</b> dem üblichen Band — plausibel, ggf. Schwellenwerte/Verfahrensart prüfen.</p>}
-                      {status === "im" && <p>Ihr Schätzwert liegt im üblichen Band — plausibel.</p>}
-                      <p className="vb-note">Nur Bandorientierung, kein Punktpreis (Wertdaten sind dünn). Keine Preisorientierung.</p>
+                      {status === "unter" && <p className="vb-wert-warn">⚠ {t("Ihr Schätzwert liegt")} <b>{t("unter")}</b> {t("dem üblichen Band — prüfen, ob er das Verfahren trägt, sonst Aufhebungsrisiko.")}</p>}
+                      {status === "über" && <p className="vb-wert-warn">{t("Ihr Schätzwert liegt")} <b>{t("über")}</b> {t("dem üblichen Band — plausibel, ggf. Schwellenwerte/Verfahrensart prüfen.")}</p>}
+                      {status === "im" && <p>{t("Ihr Schätzwert liegt im üblichen Band — plausibel.")}</p>}
+                      <p className="vb-note">{t("Nur Bandorientierung, kein Punktpreis (Wertdaten sind dünn). Keine Preisorientierung.")}</p>
                     </div>
                   );
-                })() : ckWert ? <div className="vb-wert"><p className="vb-note">Zu wenige vergleichbare Verfahren mit echtem Wert in diesem Feld für eine belastbare Bandeinordnung.</p></div> : null}
-                <p className="vb-note">Grundlage: entschiedene Vergaben des Feldes (36 Mon.). Faktische Marktbeobachtung, kein Eingriff ins laufende Verfahren.</p>
+                })() : ckWert ? <div className="vb-wert"><p className="vb-note">{t("Zu wenige vergleichbare Verfahren mit echtem Wert in diesem Feld für eine belastbare Bandeinordnung.")}</p></div> : null}
+                <p className="vb-note">{t("Grundlage: entschiedene Vergaben des Feldes (36 Mon.). Faktische Marktbeobachtung, kein Eingriff ins laufende Verfahren.")}</p>
               </div>
             );
           })()}

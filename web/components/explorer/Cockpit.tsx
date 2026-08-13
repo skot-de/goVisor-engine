@@ -1,5 +1,6 @@
 "use client";
 import { useMemo, useState } from "react";
+import { useSprache } from "@/lib/i18n";
 
 /* Cockpit (Ticket #17) — Merkliste + Pipeline + Historie in einer Ansicht.
  * Drei zusammenklappbare Bereiche von Zukunft (beobachtet) über Gegenwart (aktiv)
@@ -22,6 +23,7 @@ const PIPE_LABEL: Record<string, string> = {
 const PIPE_NEXT: Record<string, string> = { beworben: "abgegeben", abgegeben: "wartet" };
 
 function Prov({ state }: { state?: string }) {
+  const { t } = useSprache();
   if (!state) return null;
   const m: Record<string, [string, string]> = {
     abgeleitet: ["ck-prov-abl", "abgeleitet"],
@@ -30,8 +32,8 @@ function Prov({ state }: { state?: string }) {
   };
   const [cls, lbl] = m[state] || ["", state];
   return <span className={`ck-prov ${cls}`} title={
-    state === "abgeleitet" ? "Aus öffentlichen Daten abgeleitet — bitte prüfen"
-    : state === "bestaetigt" ? "Von Ihnen bestätigt" : "Von Ihnen ergänzt/korrigiert"}>{lbl}</span>;
+    state === "abgeleitet" ? t("Aus öffentlichen Daten abgeleitet — bitte prüfen")
+    : state === "bestaetigt" ? t("Von Ihnen bestätigt") : t("Von Ihnen ergänzt/korrigiert")}>{t(lbl)}</span>;
 }
 
 export function Cockpit({
@@ -44,6 +46,7 @@ export function Cockpit({
   onOutcome: (id: string, o: "gewonnen" | "verloren") => void;
   onConfirm: (id: string) => void;
 }) {
+  const { t } = useSprache();
   const [open, setOpen] = useState({ beob: true, aktiv: true, hist: false });
 
   const { beob, aktiv, hist } = useMemo(() => {
@@ -75,7 +78,7 @@ export function Cockpit({
   const Row = ({ l, children }: { l: Lead; children?: React.ReactNode }) => (
     <div className="ck-row">
       <button className="ck-row-main" onClick={() => onSelect(l.id)}>
-        <span className="ck-row-t">{l.titel || "(ohne Titel)"}</span>
+        <span className="ck-row-t">{l.titel || t("(ohne Titel)")}</span>
         <span className="ck-row-b">{l.buyerShort || l.buyer || ""}</span>
       </button>
       <div className="ck-row-act">{children}</div>
@@ -84,30 +87,30 @@ export function Cockpit({
 
   return (
     <div className="ck-wrap">
-      <Area k="beob" title="Beobachtet" unter="Zukunft — was ich angehen will" n={beob.length}>
+      <Area k="beob" title={t("Beobachtet")} unter={t("Zukunft — was ich angehen will")} n={beob.length}>
         {beob.length ? beob.map((l) => (
           <Row key={l.id} l={l}>
             {l.frist?.tage != null && (
               <span className={`ck-frist ${l.frist.tage < 3 ? "risk" : l.frist.tage <= 14 ? "flag" : ""}`}>
-                {l.frist.tage < 0 ? "abgelaufen" : `noch ${l.frist.tage} T`}</span>
+                {l.frist.tage < 0 ? t("abgelaufen") : t("noch {n} T", { n: l.frist.tage })}</span>
             )}
-            <button className="ck-btn" onClick={() => onApply(l.id)}>Ich bewerbe mich →</button>
+            <button className="ck-btn" onClick={() => onApply(l.id)}>{t("Ich bewerbe mich →")}</button>
           </Row>
-        )) : <div className="ck-empty">Noch nichts beobachtet. Merkt euch Ausschreibungen (☆) in der Akquise.</div>}
+        )) : <div className="ck-empty">{t("Noch nichts beobachtet. Merkt euch Ausschreibungen (☆) in der Akquise.")}</div>}
       </Area>
 
-      <Area k="aktiv" title="Aktiv" unter="Gegenwart — woran ich gerade dran bin" n={aktiv.length}>
+      <Area k="aktiv" title={t("Aktiv")} unter={t("Gegenwart — woran ich gerade dran bin")} n={aktiv.length}>
         {aktiv.length ? aktiv.map((l) => (
           <Row key={l.id} l={l}>
-            <span className={`ck-status ${l.pipe === "wartet" ? "wait" : ""}`}>{PIPE_LABEL[l.pipe!] || l.pipe}</span>
-            {PIPE_NEXT[l.pipe!] && <button className="ck-btn ghost" onClick={() => onStatus(l.id, PIPE_NEXT[l.pipe!])} title="Status weiterschalten">{PIPE_LABEL[PIPE_NEXT[l.pipe!]]} →</button>}
-            <button className="ck-btn win" onClick={() => onOutcome(l.id, "gewonnen")}>Gewonnen</button>
-            <button className="ck-btn lose" onClick={() => onOutcome(l.id, "verloren")}>Verloren</button>
+            <span className={`ck-status ${l.pipe === "wartet" ? "wait" : ""}`}>{t(PIPE_LABEL[l.pipe!] || l.pipe!)}</span>
+            {PIPE_NEXT[l.pipe!] && <button className="ck-btn ghost" onClick={() => onStatus(l.id, PIPE_NEXT[l.pipe!])} title={t("Status weiterschalten")}>{t(PIPE_LABEL[PIPE_NEXT[l.pipe!]])} →</button>}
+            <button className="ck-btn win" onClick={() => onOutcome(l.id, "gewonnen")}>{t("Gewonnen")}</button>
+            <button className="ck-btn lose" onClick={() => onOutcome(l.id, "verloren")}>{t("Verloren")}</button>
           </Row>
-        )) : <div className="ck-empty">Keine laufenden Bewerbungen. Aus „Beobachtet" wandert ein Lead hierher, sobald Sie sich bewerben.</div>}
+        )) : <div className="ck-empty">{t("Keine laufenden Bewerbungen. Aus „Beobachtet\" wandert ein Lead hierher, sobald Sie sich bewerben.")}</div>}
       </Area>
 
-      <Area k="hist" title="Historie" unter="Vergangenheit — was war, und was daraus folgt" n={hist.length}>
+      <Area k="hist" title={t("Historie")} unter={t("Vergangenheit — was war, und was daraus folgt")} n={hist.length}>
         {(() => {
           // Ableitungen (#17 §5): Stammkunden + bald auslaufende Verträge (Verteidigungsbedarf).
           const kunden = new Set(hist.filter((l) => l.outcome !== "verloren").map((l) => l.buyerShort || l.buyer)).size;
@@ -115,31 +118,30 @@ export function Cockpit({
           if (!kunden) return null;
           return (
             <div className="ck-abl">
-              <span className="ck-abl-i"><b>{kunden}</b> Stammkunden</span>
-              {baldAus > 0 && <span className="ck-abl-i warn"><b>{baldAus}</b> {baldAus > 1 ? "Verträge laufen" : "Vertrag läuft"} bald aus — Verteidigungsbedarf</span>}
+              <span className="ck-abl-i"><b>{kunden}</b> {t("Stammkunden")}</span>
+              {baldAus > 0 && <span className="ck-abl-i warn"><b>{baldAus}</b> {baldAus > 1 ? t("Verträge laufen") : t("Vertrag läuft")} {t("bald aus — Verteidigungsbedarf")}</span>}
             </div>
           );
         })()}
         {abgeleitet > 0 && (
           <div className="ck-note">
-            <b>{abgeleitet} Verträge aus öffentlichen Daten vorbefüllt.</b> Das sind eure öffentlich sichtbaren
-            (oberschwelligen) Zuschläge — Unterschwelliges und Niederlagen fehlen. Bestätigen oder ergänzen Sie,
-            um das Bild zu vervollständigen (und goVisor etwas beizubringen, das es nicht wusste).
+            <b>{t("{n} Verträge aus öffentlichen Daten vorbefüllt.", { n: abgeleitet })}</b>{" "}
+            {t("Das sind eure öffentlich sichtbaren (oberschwelligen) Zuschläge — Unterschwelliges und Niederlagen fehlen. Bestätigen oder ergänzen Sie, um das Bild zu vervollständigen (und goVisor etwas beizubringen, das es nicht wusste).")}
           </div>
         )}
         {hist.length ? hist.map((l) => (
           <Row key={l.id} l={l}>
-            {l.outcome ? <span className={`ck-out ${l.outcome === "gewonnen" ? "win" : "lose"}`}>{l.outcome === "gewonnen" ? "gewonnen" : "verloren"}</span>
+            {l.outcome ? <span className={`ck-out ${l.outcome === "gewonnen" ? "win" : "lose"}`}>{l.outcome === "gewonnen" ? t("gewonnen") : t("verloren")}</span>
               : <><Prov state={l.cockpitProv || "abgeleitet"} />
-                  {(l.cockpitProv ?? "abgeleitet") === "abgeleitet" && <button className="ck-btn ghost" onClick={() => onConfirm(l.id)}>Stimmt ✓</button>}</>}
-            {l.incumbent?.seit && <span className="ck-since">seit {l.incumbent.seit}</span>}
+                  {(l.cockpitProv ?? "abgeleitet") === "abgeleitet" && <button className="ck-btn ghost" onClick={() => onConfirm(l.id)}>{t("Stimmt ✓")}</button>}</>}
+            {l.incumbent?.seit && <span className="ck-since">{t("seit {jahr}", { jahr: l.incumbent.seit })}</span>}
             {l.endTage != null && l.endTage >= 0 && l.endTage <= 540 && l.endet &&
-              <span className="ck-since warn" title="Euer Vertrag läuft bald aus — hier droht Verdrängung, Verteidigung nötig">läuft {l.endet} aus</span>}
+              <span className="ck-since warn" title={t("Euer Vertrag läuft bald aus — hier droht Verdrängung, Verteidigung nötig")}>{t("läuft {datum} aus", { datum: l.endet })}</span>}
           </Row>
-        )) : <div className="ck-empty">Keine Historie. Eure öffentlichen Zuschläge erscheinen hier automatisch, sobald euer Firmenprofil bestätigt ist.</div>}
+        )) : <div className="ck-empty">{t("Keine Historie. Eure öffentlichen Zuschläge erscheinen hier automatisch, sobald euer Firmenprofil bestätigt ist.")}</div>}
       </Area>
 
-      <p className="ck-foot">goVisor verwaltet den <b>Status der Ausschreibung</b>, nicht die Vertriebsbeziehung — kein CRM.</p>
+      <p className="ck-foot">{t("goVisor verwaltet den")} <b>{t("Status der Ausschreibung")}</b>{t(", nicht die Vertriebsbeziehung — kein CRM.")}</p>
     </div>
   );
 }

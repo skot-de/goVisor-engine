@@ -1,5 +1,6 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useSprache } from "@/lib/i18n";
 
 /* Feature #25 — Firmenprofil. Rollen-agnostische Firmen-Detailseite, KEIN Navigationspunkt:
  * erreichbar aus der Wettbewerbstabelle, vom Amtsinhaber im Lead und vom Gewinner eines
@@ -41,6 +42,7 @@ const I_INFO = "M12 8v5M12 17h.01";
 const I_LOCK = "M8 10V7a4 4 0 018 0v3";
 
 export function FirmaProfil() {
+  const { t } = useSprache();
   const [id, setId] = useState<string | null>(null);
   const [data, setData] = useState<Profil | null>(null);
   const [loading, setLoading] = useState(false);
@@ -62,6 +64,8 @@ export function FirmaProfil() {
     if (!id) { setData(null); return; }
     setLoading(true);
     fetch(`/api/firma?id=${encodeURIComponent(id)}`)
+      // Der deutsche Satz IST der Schlüssel — übersetzt wird unten beim Rendern (`t(data.error)`),
+      // sonst hinge dieser Effekt an der Sprache.
       .then((r) => r.json()).then(setData).catch(() => setData({ error: "Profil nicht ladbar" } as Profil))
       .finally(() => setLoading(false));
     try {
@@ -103,14 +107,13 @@ export function FirmaProfil() {
     return (
       <div className="fp-wrap">
         <div className="fp-picker">
-          <h1>Firmenprofil</h1>
-          <p>Eine Detailseite, kein Navigationspunkt. Sonst erreichbar aus der Wettbewerbstabelle,
-            vom Amtsinhaber im Lead und vom Gewinner eines Zuschlags. Hier zum Nachschlagen: Firma suchen.</p>
+          <h1>{t("Firmenprofil")}</h1>
+          <p>{t("Eine Detailseite, kein Navigationspunkt. Sonst erreichbar aus der Wettbewerbstabelle, vom Amtsinhaber im Lead und vom Gewinner eines Zuschlags. Hier zum Nachschlagen: Firma suchen.")}</p>
           <div className="fp-search">
             <svg viewBox="0 0 24 24" style={{ width: 15, height: 15, stroke: "currentColor", fill: "none", strokeWidth: 1.8, color: "var(--ink-400)" }}>
               <circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" />
             </svg>
-            <input autoFocus placeholder="Firma suchen — Name" value={q} onChange={(e) => search(e.target.value)} />
+            <input autoFocus placeholder={t("Firma suchen — Name")} value={q} onChange={(e) => search(e.target.value)} />
           </div>
           {matches.length > 0 && (
             <div className="fp-results">
@@ -118,9 +121,9 @@ export function FirmaProfil() {
                 <button key={m.id} className="fp-res" onClick={() => open(m.id)}>
                   <span>
                     <span className="fn">{m.name}</span>
-                    <span className="fs">{m.buyers ? `${m.buyers} Auftraggeber` : ""}{m.seit ? ` · seit ${m.seit}` : ""}</span>
+                    <span className="fs">{m.buyers ? t("{n} Auftraggeber", { n: m.buyers }) : ""}{m.seit ? ` · ${t("seit {jahr}", { jahr: m.seit })}` : ""}</span>
                   </span>
-                  <span className="fw">{nf.format(m.wins)} Zuschläge</span>
+                  <span className="fw">{t("{n} Zuschläge", { n: nf.format(m.wins) })}</span>
                 </button>
               ))}
             </div>
@@ -130,11 +133,11 @@ export function FirmaProfil() {
     );
   }
 
-  if (loading || !data) return <div className="fp-load">Lade Firmenprofil …</div>;
+  if (loading || !data) return <div className="fp-load">{t("Lade Firmenprofil …")}</div>;
   if (data.error) return (
     <div className="fp-wrap"><div className="fp-picker">
-      <div className="fp-note fp-note-w"><Icon d={I_INFO} /><div>{data.error}</div></div>
-      <p style={{ marginTop: 14 }}><a href="/firma" style={{ color: "var(--signal-deep)" }}>← andere Firma suchen</a></p>
+      <div className="fp-note fp-note-w"><Icon d={I_INFO} /><div>{t(data.error)}</div></div>
+      <p style={{ marginTop: 14 }}><a href="/firma" style={{ color: "var(--signal-deep)" }}>{t("← andere Firma suchen")}</a></p>
     </div></div>
   );
 
@@ -144,7 +147,7 @@ export function FirmaProfil() {
 
   return (
     <div className="fp-wrap">
-      <div className="fp-crumb"><a href="/leads">Akquise</a> › Firmenprofil › {data.name}</div>
+      <div className="fp-crumb"><a href="/leads">{t("Akquise")}</a> › {t("Firmenprofil")} › {data.name}</div>
 
       {/* Kopf */}
       <div className="fp-head">
@@ -152,14 +155,14 @@ export function FirmaProfil() {
           <h1>{data.name}</h1>
           <div className="fp-meta">
             {unsicher
-              ? <span className="fp-tag warn"><i />Zuordnung unsicher</span>
-              : <span className="fp-tag ok"><i />Zuordnung gesichert</span>}
-            {data.group_size > 1 && <span className="fp-tag">Konzern · {data.group_size} Gesellschaften zusammengefasst</span>}
-            {data.schwerpunkt && <span className="fp-tag">Schwerpunkt {data.schwerpunkt}{data.hauptregion ? ` · ${data.hauptregion}` : ""}</span>}
+              ? <span className="fp-tag warn"><i />{t("Zuordnung unsicher")}</span>
+              : <span className="fp-tag ok"><i />{t("Zuordnung gesichert")}</span>}
+            {data.group_size > 1 && <span className="fp-tag">{t("Konzern · {n} Gesellschaften zusammengefasst", { n: data.group_size })}</span>}
+            {data.schwerpunkt && <span className="fp-tag">{t("Schwerpunkt {feld}", { feld: data.schwerpunkt })}{data.hauptregion ? ` · ${data.hauptregion}` : ""}</span>}
           </div>
         </div>
         <div className="fp-acts">
-          <button className={`fp-btn fp-btn-s fp-btn-sm`} onClick={toggleWatch}>{watched ? "✓ Beobachtet" : "Beobachten"}</button>
+          <button className={`fp-btn fp-btn-s fp-btn-sm`} onClick={toggleWatch}>{watched ? t("✓ Beobachtet") : t("Beobachten")}</button>
         </div>
       </div>
 
@@ -167,42 +170,44 @@ export function FirmaProfil() {
       {unsicher && (
         <div className="fp-note fp-note-w" style={{ marginBottom: 16 }}>
           <Icon d={I_INFO} />
-          <div><b>Diese Firma ist nicht eindeutig zuzuordnen.</b> Im Vergaberegister gibt es
-            {data.aehnliche_namen && data.aehnliche_namen > 1 ? ` ${data.aehnliche_namen} ähnliche Namen` : " ähnliche Namen"} an
-            unterschiedlichen Orten. Die Zahlen unten beziehen sich auf die wahrscheinlichste
-            Zuordnung und können Aufträge anderer Gesellschaften enthalten.</div>
+          <div><b>{t("Diese Firma ist nicht eindeutig zuzuordnen.")}</b>{" "}
+            {data.aehnliche_namen && data.aehnliche_namen > 1
+              ? t("Im Vergaberegister gibt es {n} ähnliche Namen an unterschiedlichen Orten. Die Zahlen unten beziehen sich auf die wahrscheinlichste Zuordnung und können Aufträge anderer Gesellschaften enthalten.", { n: data.aehnliche_namen })
+              : t("Im Vergaberegister gibt es ähnliche Namen an unterschiedlichen Orten. Die Zahlen unten beziehen sich auf die wahrscheinlichste Zuordnung und können Aufträge anderer Gesellschaften enthalten.")}</div>
         </div>
       )}
 
       {/* KPI-Leiste */}
       <div className="fp-kpis">
-        <div className="fp-kpi"><div className="k">Zuschläge 36 Monate</div><div className="v">{nf.format(k.wins36)}</div><div className="s">gemessen</div></div>
-        <div className="fp-kpi"><div className="k">Volumen gesamt</div><div className="v">{eur(k.vol_sum)}</div><div className="s">{k.vol_sum ? `davon ${k.vol_cov} % mit echtem Wert` : "kein Wert veröffentlicht"}</div></div>
-        <div className="fp-kpi"><div className="k">Ø Auftragswert</div><div className="v">{eur(k.vol_avg)}</div><div className="s">{k.vol_median ? `Median ${eur(k.vol_median)}` : "zu wenig Daten"}</div></div>
-        <div className="fp-kpi"><div className="k">Verteidigungsquote</div>
+        <div className="fp-kpi"><div className="k">{t("Zuschläge 36 Monate")}</div><div className="v">{nf.format(k.wins36)}</div><div className="s">{t("gemessen")}</div></div>
+        <div className="fp-kpi"><div className="k">{t("Volumen gesamt")}</div><div className="v">{eur(k.vol_sum)}</div><div className="s">{k.vol_sum ? t("davon {pct} % mit echtem Wert", { pct: k.vol_cov }) : t("kein Wert veröffentlicht")}</div></div>
+        <div className="fp-kpi"><div className="k">{t("Ø Auftragswert")}</div><div className="v">{eur(k.vol_avg)}</div><div className="s">{k.vol_median ? t("Median {wert}", { wert: eur(k.vol_median) }) : t("zu wenig Daten")}</div></div>
+        <div className="fp-kpi"><div className="k">{t("Verteidigungsquote")}</div>
           <div className={`v ${k.verteidigung != null && k.verteidigung > k.markt_verteidigung ? "warnc" : ""}`}>{k.verteidigung != null ? `${k.verteidigung} %` : "—"}</div>
-          <div className="s">{k.verteidigung != null ? `Markt ${k.markt_verteidigung} %` : "keine Nachfolge auswertbar"}</div></div>
-        <div className="fp-kpi"><div className="k">Läuft aus ≤ 18 Monate</div><div className="v okc">{nf.format(k.aus18_n)}</div><div className="s">{k.aus18_vol ? eur(k.aus18_vol) : "—"}</div></div>
+          <div className="s">{k.verteidigung != null ? t("Markt {pct} %", { pct: k.markt_verteidigung }) : t("keine Nachfolge auswertbar")}</div></div>
+        <div className="fp-kpi"><div className="k">{t("Läuft aus ≤ 18 Monate")}</div><div className="v okc">{nf.format(k.aus18_n)}</div><div className="s">{k.aus18_vol ? eur(k.aus18_vol) : "—"}</div></div>
       </div>
 
       {/* Verteidigungs-Deutung (nur wenn belastbar) */}
       {k.verteidigung != null && (
         <div className="fp-note fp-note-g" style={{ marginBottom: 14 }}>
           <Icon d={I_ARROW} />
-          <div><b>{data.name} verteidigt {k.verteidigung > k.markt_verteidigung ? "überdurchschnittlich" : "unterdurchschnittlich"}.</b> {k.verteidigung} % der
-            Verträge, die auslaufen, holt das Unternehmen zurück — marktüblich sind {k.markt_verteidigung} %.
-            {k.verteidigung > k.markt_verteidigung ? " Angriffe lohnen dort, wo die Bindung schwach ist." : " Hier sind auslaufende Verträge eher angreifbar."}
-            <div className="fp-mini">Basis: {k.verteidigung_base} auswertbare Nachfolgen · head_to_head</div></div>
+          <div><b>{k.verteidigung > k.markt_verteidigung
+              ? t("{firma} verteidigt überdurchschnittlich.", { firma: data.name })
+              : t("{firma} verteidigt unterdurchschnittlich.", { firma: data.name })}</b>{" "}
+            {t("{pct} % der Verträge, die auslaufen, holt das Unternehmen zurück — marktüblich sind {markt} %.", { pct: k.verteidigung, markt: k.markt_verteidigung })}
+            {k.verteidigung > k.markt_verteidigung ? " " + t("Angriffe lohnen dort, wo die Bindung schwach ist.") : " " + t("Hier sind auslaufende Verträge eher angreifbar.")}
+            <div className="fp-mini">{t("Basis: {n} auswertbare Nachfolgen · head_to_head", { n: k.verteidigung_base })}</div></div>
         </div>
       )}
 
       {/* Wo festsitzt */}
       {data.sits.length > 0 && (
         <div className="fp-card">
-          <div className="fp-ch"><h2>Wo {data.name.split(" ")[0]} festsitzt</h2><span className="sub">{data.n_vergabestellen} Vergabestellen</span></div>
+          <div className="fp-ch"><h2>{t("Wo {firma} festsitzt", { firma: data.name.split(" ")[0] })}</h2><span className="sub">{t("{n} Vergabestellen", { n: data.n_vergabestellen })}</span></div>
           <div className="fp-cb tight">
             <table className="fp-tbl">
-              <thead><tr><th>Vergabestelle</th><th>Leistung</th><th className="r">Aufträge</th><th className="r">seit</th><th className="r">Bindung</th></tr></thead>
+              <thead><tr><th>{t("Vergabestelle")}</th><th>{t("Leistung")}</th><th className="r">{t("Aufträge")}</th><th className="r">{t("seit")}</th><th className="r">{t("Bindung")}</th></tr></thead>
               <tbody>
                 {data.sits.map((s, i) => (
                   <tr key={i}>
@@ -210,7 +215,7 @@ export function FirmaProfil() {
                     <td>{s.leistung}</td>
                     <td className="r m">{nf.format(s.auftraege)}</td>
                     <td className="r m">{s.seit ?? "—"}</td>
-                    <td className="r"><span className={`fp-tag ${bindTag(s.bindung)}`}>{s.bindung}</span></td>
+                    <td className="r"><span className={`fp-tag ${bindTag(s.bindung)}`}>{t(s.bindung)}</span></td>
                   </tr>
                 ))}
               </tbody>
@@ -221,15 +226,15 @@ export function FirmaProfil() {
 
       {/* Was ausläuft (Pro) */}
       <div className="fp-card">
-        <div className="fp-ch"><h2>Was bei {data.name.split(" ")[0]} ausläuft</h2><span className="fp-pro">Pro</span><span className="sub">nächste 24 Monate</span></div>
+        <div className="fp-ch"><h2>{t("Was bei {firma} ausläuft", { firma: data.name.split(" ")[0] })}</h2><span className="fp-pro">Pro</span><span className="sub">{t("nächste 24 Monate")}</span></div>
         <div className="fp-cb tight">
           {data.expiring.length > 0 ? (
             <table className="fp-tbl">
-              <thead><tr><th>Vertrag</th><th>Vergabestelle</th><th className="r">Volumen</th><th className="r">Ende</th></tr></thead>
+              <thead><tr><th>{t("Vertrag")}</th><th>{t("Vergabestelle")}</th><th className="r">{t("Volumen")}</th><th className="r">{t("Ende")}</th></tr></thead>
               <tbody>
                 {data.expiring.map((e, i) => (
                   <tr key={i}>
-                    <td><div className="fn">{e.titel}</div><div className="fs">{e.bindung}</div></td>
+                    <td><div className="fn">{e.titel}</div><div className="fs">{t(e.bindung)}</div></td>
                     <td>{e.buyer}</td>
                     <td className="r m">{eur(e.vol)}</td>
                     <td className={`r m ${e.soon ? "fp-soon" : "fp-later"}`}>{e.ende ?? "—"}</td>
@@ -238,8 +243,8 @@ export function FirmaProfil() {
               </tbody>
             </table>
           ) : (
-            <div className="fp-empty">Kein auslaufender Vertrag in den nächsten 24 Monaten bekannt.<br />
-              <span style={{ color: "var(--ink-400)", fontSize: 12 }}>Auslauf entsteht nur, wo ein Vertragsende in den Daten steht.</span></div>
+            <div className="fp-empty">{t("Kein auslaufender Vertrag in den nächsten 24 Monaten bekannt.")}<br />
+              <span style={{ color: "var(--ink-400)", fontSize: 12 }}>{t("Auslauf entsteht nur, wo ein Vertragsende in den Daten steht.")}</span></div>
           )}
         </div>
       </div>
@@ -247,20 +252,20 @@ export function FirmaProfil() {
       <div className="fp-grid2">
         {/* Kopf an Kopf (Pro) — ohne eigenes Profil ehrlich leer */}
         <div className="fp-card">
-          <div className="fp-ch"><h2>Kopf an Kopf</h2><span className="fp-pro">Pro</span></div>
+          <div className="fp-ch"><h2>{t("Kopf an Kopf")}</h2><span className="fp-pro">Pro</span></div>
           <div className="fp-cb">
-            <div className="fp-empty">Noch keine gemeinsamen Verfahren bekannt.<br />
-              <span style={{ color: "var(--ink-400)", fontSize: 12 }}>Meldet ihr eure Teilnahmen im Cockpit, entsteht dieser Vergleich mit der Zeit — aus euren Meldungen und den öffentlichen Zuschlägen dieser Firma.</span></div>
+            <div className="fp-empty">{t("Noch keine gemeinsamen Verfahren bekannt.")}<br />
+              <span style={{ color: "var(--ink-400)", fontSize: 12 }}>{t("Meldet ihr eure Teilnahmen im Cockpit, entsteht dieser Vergleich mit der Zeit — aus euren Meldungen und den öffentlichen Zuschlägen dieser Firma.")}</span></div>
           </div>
         </div>
 
         {/* Wo stark */}
         <div className="fp-card">
-          <div className="fp-ch"><h2>Wo {data.name.split(" ")[0]} stark ist</h2></div>
+          <div className="fp-ch"><h2>{t("Wo {firma} stark ist", { firma: data.name.split(" ")[0] })}</h2></div>
           <div className="fp-cb">
             {thin || data.felder.length === 0 ? (
-              <div className="fp-empty">Aus {nf.format(k.wins_total)} Aufträgen lässt sich kein belastbarer Schwerpunkt ableiten.<br />
-                <span style={{ color: "var(--ink-400)", fontSize: 12 }}>Ab etwa 8 Aufträgen zeigt goVisor eine Verteilung.</span></div>
+              <div className="fp-empty">{t("Aus {n} Aufträgen lässt sich kein belastbarer Schwerpunkt ableiten.", { n: nf.format(k.wins_total) })}<br />
+                <span style={{ color: "var(--ink-400)", fontSize: 12 }}>{t("Ab etwa 8 Aufträgen zeigt goVisor eine Verteilung.")}</span></div>
             ) : (
               <>
                 <div className="fp-bars">
@@ -286,21 +291,21 @@ export function FirmaProfil() {
 
       {/* Weitere Signale */}
       <div className="fp-card">
-        <div className="fp-ch"><h2>Weitere Signale</h2></div>
+        <div className="fp-ch"><h2>{t("Weitere Signale")}</h2></div>
         <div className="fp-cb">
           <div className="fp-grid2" style={{ gap: 20 }}>
             <div className="fp-siglist">
-              <div className="fp-sigrow"><span>Unterauftragsvergabe geregelt</span><span className="m">{data.signale.subcontracting} von {data.signale.subcontracting_total}</span></div>
-              <div className="fp-sigrow"><span>Bietergemeinschaften</span><span className="m">{data.signale.bietergemeinschaften}</span></div>
-              <div className="fp-sigrow"><span>Netzwerk</span><span style={{ color: "var(--ink-400)" }}>{data.signale.netzwerk}</span></div>
+              <div className="fp-sigrow"><span>{t("Unterauftragsvergabe geregelt")}</span><span className="m">{t("{n} von {gesamt}", { n: data.signale.subcontracting, gesamt: data.signale.subcontracting_total })}</span></div>
+              <div className="fp-sigrow"><span>{t("Bietergemeinschaften")}</span><span className="m">{data.signale.bietergemeinschaften}</span></div>
+              <div className="fp-sigrow"><span>{t("Netzwerk")}</span><span style={{ color: "var(--ink-400)" }}>{t(data.signale.netzwerk)}</span></div>
             </div>
             <div>
               <div className="fp-note fp-note-n" style={{ height: "100%" }}>
                 <Icon d={I_INFO} />
                 <div>{data.signale.subcontracting > data.signale.subcontracting_total / 3
-                  ? `${data.name.split(" ")[0]} vergibt bei einem Teil der Aufträge Unteraufträge geregelt — mögliche Anknüpfung für ergänzende Leistungen.`
-                  : `${data.name.split(" ")[0]} vergibt selten Unteraufträge weiter — hier ist eher Wettbewerb als Zusammenarbeit zu erwarten.`}
-                  <div className="fp-mini">Abgeleitet · „geregelt" heißt: im Verfahren vorgesehen, kein Hinweis auf konkreten Bedarf</div></div>
+                  ? t("{firma} vergibt bei einem Teil der Aufträge Unteraufträge geregelt — mögliche Anknüpfung für ergänzende Leistungen.", { firma: data.name.split(" ")[0] })
+                  : t("{firma} vergibt selten Unteraufträge weiter — hier ist eher Wettbewerb als Zusammenarbeit zu erwarten.", { firma: data.name.split(" ")[0] })}
+                  <div className="fp-mini">{t("Abgeleitet · „geregelt\" heißt: im Verfahren vorgesehen, kein Hinweis auf konkreten Bedarf")}</div></div>
               </div>
             </div>
           </div>
@@ -309,8 +314,7 @@ export function FirmaProfil() {
 
       <div className="fp-note fp-note-n">
         <svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2" /><path d={I_LOCK} /></svg>
-        <div>Alle Angaben stammen aus öffentlichen Vergabebekanntmachungen. goVisor zeigt keine Daten
-          anderer Nutzer, keine Preise und keine Personen.</div>
+        <div>{t("Alle Angaben stammen aus öffentlichen Vergabebekanntmachungen. goVisor zeigt keine Daten anderer Nutzer, keine Preise und keine Personen.")}</div>
       </div>
     </div>
   );

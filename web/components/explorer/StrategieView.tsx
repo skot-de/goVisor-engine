@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { applyState, renderProfil } from "@/lib/explorerCore";
+import { useSprache } from "@/lib/i18n";
 import { ContractsEditor } from "./ContractsEditor";
 import { Trefferguete } from "./Trefferguete";
 
@@ -70,16 +71,20 @@ type Strat = {
 // Teaser-Bausteine für die abgestufte Paywall (Härtung 4).
 const isPro = (d: { _pro?: boolean } | null | undefined) => d?._pro !== false;
 function Lock() {
-  return <span className="st-lock" title="Im Pro-Zugang sichtbar">•••</span>;
+  const { t } = useSprache();
+  return <span className="st-lock" title={t("Im Pro-Zugang sichtbar")}>•••</span>;
 }
+// `titel`/`frage`/`was` kommen als deutsche Literale von der Aufrufstelle — hier, beim
+// Rendern, übersetzt, nicht an der Definition (sonst fröre die Sprache beim Import ein).
 function ProGate({ titel, frage, was }: { titel: string; frage: string; was: string }) {
+  const { t } = useSprache();
   return (
     <>
-      <div className="st-head"><div><h4>{titel}</h4><p className="st-frage">{frage}</p></div></div>
+      <div className="st-head"><div><h4>{t(titel)}</h4><p className="st-frage">{t(frage)}</p></div></div>
       <div className="st-progate">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="10" width="16" height="10" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg>
-        <div className="st-progate-t">{was}</div>
-        <div className="st-progate-s">Im Pro-Zugang vollständig sichtbar.</div>
+        <div className="st-progate-t">{t(was)}</div>
+        <div className="st-progate-s">{t("Im Pro-Zugang vollständig sichtbar.")}</div>
       </div>
     </>
   );
@@ -89,19 +94,20 @@ function ProGate({ titel, frage, was }: { titel: string; frage: string; was: str
    genau die Falschpräzision, die das Produkt vermeidet — deshalb entscheidet n über die
    Darstellungsform, nicht nur über einen Tooltip. */
 function Q({ q, suffix = "" }: { q: Quote; suffix?: string }) {
+  const { t } = useSprache();
   if (!q || q.n === 0) return <span style={{ color: "var(--ink-300)" }}>—</span>;
   if (q.n <= 2) {
     return (
-      <span className="val" data-src="duenn" title={`Dünn · gemessen, aber nur ${q.n} Fälle — für eine Quote zu wenig`}>
-        {q.treffer} von {q.n}
+      <span className="val" data-src="duenn" title={t("Dünn · gemessen, aber nur {n} Fälle — für eine Quote zu wenig", { n: q.n })}>
+        {t("{treffer} von {n}", { treffer: q.treffer, n: q.n })}
       </span>
     );
   }
   if (q.n <= 7) {
     return (
-      <span className="val" data-src="duenn" title={`Dünn · gemessen aus ${q.n} Vergaben`}>
+      <span className="val" data-src="duenn" title={t("Dünn · gemessen aus {n} Vergaben", { n: q.n })}>
         <span className="v-num">{q.pct} %</span>
-        <span className="q-n">aus {q.n}</span>
+        <span className="q-n">{t("aus {n}", { n: q.n })}</span>
       </span>
     );
   }
@@ -138,6 +144,7 @@ function qLabel(iso: string): string {
    Drei Herkunftsklassen gestapelt — NIE addiert (Ticket §3.3). Quartale ohne
    Datenlage bleiben leer, werden nicht interpoliert. */
 function Pipeline({ data }: { data: Strat }) {
+  const { t } = useSprache();
   const [monate, setMonate] = useState(24);
   const q = useMemo(() => data.quartale.slice(0, Math.ceil(monate / 3)), [data, monate]);
   const max = Math.max(1, ...q.map((x) => x.volEcht + x.volSchaetz));
@@ -153,43 +160,43 @@ function Pipeline({ data }: { data: Strat }) {
     <>
       <div className="st-head">
         <div>
-          <h4>Pipeline</h4>
-          <p className="st-frage">Was kommt in den nächsten {monate} Monaten auf euch zu?</p>
+          <h4>{t("Pipeline")}</h4>
+          <p className="st-frage">{t("Was kommt in den nächsten {n} Monaten auf euch zu?", { n: monate })}</p>
         </div>
         <div className="fp-chips">
           {[12, 24, 36].map((m) => (
-            <button key={m} className={`fp-chip ${monate === m ? "on" : ""}`} onClick={() => setMonate(m)}>{m} Mon.</button>
+            <button key={m} className={`fp-chip ${monate === m ? "on" : ""}`} onClick={() => setMonate(m)}>{t("{n} Mon.", { n: m })}</button>
           ))}
         </div>
       </div>
 
       <div className="bstats">
         <div className="bstat">
-          <span className="bstat-k">Auslaufende Verträge</span>
+          <span className="bstat-k">{t("Auslaufende Verträge")}</span>
           <span className="bstat-v"><span className="v-num">{sum.gesamt.toLocaleString("de-DE")}</span></span>
         </div>
         <div className="bstat">
-          <span className="bstat-k">Volumen belegt</span>
+          <span className="bstat-k">{t("Volumen belegt")}</span>
           <span className="bstat-v"><span className="v-num">{eur(sum.echt)}</span></span>
-          <span className="bstat-m">veröffentlichter Auftragswert</span>
+          <span className="bstat-m">{t("veröffentlichter Auftragswert")}</span>
         </div>
         <div className="bstat">
-          <span className="bstat-k">Volumen geschätzt</span>
+          <span className="bstat-k">{t("Volumen geschätzt")}</span>
           <span className="bstat-v"><span className="val" data-src="schaetz"><span className="v-num">{eur(sum.schaetz)}</span></span></span>
-          <span className="bstat-m">abgeleitet, nicht veröffentlicht</span>
+          <span className="bstat-m">{t("abgeleitet, nicht veröffentlicht")}</span>
         </div>
         <div className="bstat bstat-wide">
-          <span className="bstat-k">Ohne Wertangabe</span>
-          <span className="bstat-v"><span className="v-num">{sum.unbekannt.toLocaleString("de-DE")}</span> Verträge</span>
-          <span className="bstat-flag">Diese drei Klassen werden nicht addiert — der Gesamtwert ist unbekannt, nicht die Summe der belegten.</span>
+          <span className="bstat-k">{t("Ohne Wertangabe")}</span>
+          <span className="bstat-v"><span className="v-num">{sum.unbekannt.toLocaleString("de-DE")}</span> {t("Verträge")}</span>
+          <span className="bstat-flag">{t("Diese drei Klassen werden nicht addiert — der Gesamtwert ist unbekannt, nicht die Summe der belegten.")}</span>
         </div>
       </div>
 
       <div className="st-chart">
         <div className="st-legend">
-          <span><i className="lg lg-echt" />belegt</span>
-          <span><i className="lg lg-schaetz" />geschätzt</span>
-          <span><i className="lg lg-unk" />ohne Wert (Anzahl)</span>
+          <span><i className="lg lg-echt" />{t("belegt")}</span>
+          <span><i className="lg lg-schaetz" />{t("geschätzt")}</span>
+          <span><i className="lg lg-unk" />{t("ohne Wert (Anzahl)")}</span>
         </div>
         <div className="st-bars">
           {q.map((x) => {
@@ -197,7 +204,7 @@ function Pipeline({ data }: { data: Strat }) {
             const hS = (x.volSchaetz / max) * 100;
             const leer = x.nGesamt === 0;
             return (
-              <div key={x.q} className="st-bar" title={`${qLabel(x.q)} · ${x.nGesamt} Verträge · belegt ${eur(x.volEcht)} · geschätzt ${eur(x.volSchaetz)} · ohne Wert ${x.nUnbekannt}`}>
+              <div key={x.q} className="st-bar" title={t("{q} · {n} Verträge · belegt {echt} · geschätzt {schaetz} · ohne Wert {unk}", { q: qLabel(x.q), n: x.nGesamt, echt: eur(x.volEcht), schaetz: eur(x.volSchaetz), unk: x.nUnbekannt })}>
                 <div className="st-stack">
                   {leer ? <span className="st-empty" /> : (
                     <>
@@ -217,25 +224,24 @@ function Pipeline({ data }: { data: Strat }) {
       <div className="bhero bhero-mid" style={{ marginTop: "var(--s4)" }}>
         <div className="bhero-val" style={{ fontSize: 26, minWidth: 64 }}>{sum.rahmen.toLocaleString("de-DE")}</div>
         <div className="bhero-lbl">
-          <span className="bhero-title">davon in <b>Rahmenvereinbarungen ohne erneuten Wettbewerb</b></span>
+          <span className="bhero-title">{t("davon in")} <b>{t("Rahmenvereinbarungen ohne erneuten Wettbewerb")}</b></span>
           <span className="bhero-note">
-            Volumen, das zwar ausläuft, aber nur für bereits Gelistete abrufbar ist. Wer nicht gelistet ist,
-            kommt hier nicht zum Zug — unabhängig vom Angebot.
+            {t("Volumen, das zwar ausläuft, aber nur für bereits Gelistete abrufbar ist. Wer nicht gelistet ist, kommt hier nicht zum Zug — unabhängig vom Angebot.")}
           </span>
         </div>
       </div>
 
       <section className="bsec" style={{ marginTop: "var(--s5)" }}>
-        <h4>Größte Einzelposten</h4>
+        <h4>{t("Größte Einzelposten")}</h4>
         <div className="st-table">
           <div className="st-row st-row-h">
-            <span>Ausschreibung</span><span>Vergabestelle</span><span>Wert</span><span>Vertragsende</span>
+            <span>{t("Ausschreibung")}</span><span>{t("Vergabestelle")}</span><span>{t("Wert")}</span><span>{t("Vertragsende")}</span>
           </div>
           {data.top.map((p) => (
             <div key={p.id} className="st-row">
               <span className="st-t">
                 {p.titel}
-                {p.rahmen ? <span className="st-tag" title="Rahmen ohne erneuten Wettbewerb">Rahmen</span> : null}
+                {p.rahmen ? <span className="st-tag" title={t("Rahmen ohne erneuten Wettbewerb")}>{t("Rahmen")}</span> : null}
               </span>
               <span className="st-b">{p.buyer}</span>
               <span className="st-w"><span className="val" data-src={p.wertSrc}><span className="v-num">{p.wert}</span></span></span>
@@ -263,6 +269,7 @@ const STELLEN_SPALTEN: { key: string; label: string; wert: (s: Stelle) => number
 ];
 
 function Vergabestellen({ data, onOpenBuyer }: { data: Strat; onOpenBuyer: (s: Stelle) => void }) {
+  const { t } = useSprache();
   const [sortKey, setSortKey] = useState("feld");
   const [sortDir, setSortDir] = useState(-1);   // -1 = absteigend
 
@@ -280,8 +287,8 @@ function Vergabestellen({ data, onOpenBuyer }: { data: Strat; onOpenBuyer: (s: S
     <>
       <div className="st-head">
         <div>
-          <h4>Vergabestellen</h4>
-          <p className="st-frage">Wo lohnt Beziehungsaufbau?</p>
+          <h4>{t("Vergabestellen")}</h4>
+          <p className="st-frage">{t("Wo lohnt Beziehungsaufbau?")}</p>
         </div>
       </div>
 
@@ -290,7 +297,7 @@ function Vergabestellen({ data, onOpenBuyer }: { data: Strat; onOpenBuyer: (s: S
           {STELLEN_SPALTEN.map((c) => (
             <span key={c.key} className="st-sortbar" onClick={() => sortiere(c.key)}
               data-sorted={sortKey === c.key ? "" : undefined}>
-              {c.label}
+              {t(c.label)}
               <i className="st-arrow">{sortKey === c.key ? (sortDir < 0 ? "▼" : "▲") : "↕"}</i>
             </span>
           ))}
@@ -299,13 +306,13 @@ function Vergabestellen({ data, onOpenBuyer }: { data: Strat; onOpenBuyer: (s: S
           <div key={s.id} className="st-row st-clickable" onClick={() => onOpenBuyer(s)}>
             <span className="st-t">
               {s.name}
-              <span className="st-sub">{s.vergabenFeld} in eurem Feld · {s.vergaben36} gesamt</span>
+              <span className="st-sub">{t("{feld} in eurem Feld · {gesamt} gesamt", { feld: s.vergabenFeld, gesamt: s.vergaben36 })}</span>
             </span>
             <span className="st-w"><span className="v-num">{s.vergabenJahr}</span></span>
             <span className="st-w">
               {s.neuAnteil
                 ? <Q q={s.neuAnteil} />
-                : <span className="v-sparse" title={'Die Stelle taucht selbst erst im Beobachtungsfenster auf — dann wären zwangsläufig alle Anbieter „neu".'}>nicht messbar</span>}
+                : <span className="v-sparse" title={t('Die Stelle taucht selbst erst im Beobachtungsfenster auf — dann wären zwangsläufig alle Anbieter „neu".')}>{t("nicht messbar")}</span>}
             </span>
             <span className="st-w">{s.bieterMedian != null ? <span className="v-num">{s.bieterMedian}</span> : <span style={{ color: "var(--ink-300)" }}>—</span>}</span>
             <span className="st-w"><Q q={s.kmu} /></span>
@@ -320,62 +327,64 @@ function Vergabestellen({ data, onOpenBuyer }: { data: Strat; onOpenBuyer: (s: S
 
 /* Detailansicht je Stelle — Lieferantenbild + Konzentration (§5.3) */
 function StelleDetail({ s, onBack }: { s: Stelle; onBack: () => void }) {
+  const { t } = useSprache();
+  // `konz` bleibt der deutsche Vergleichsschlüssel (s. `konzCls`) — übersetzt wird erst beim Rendern.
   const konz = s.top1 == null ? null : s.top1 < 25 ? "fragmentiert" : s.top1 <= 50 ? "moderat" : "oligopol";
   const konzCls = konz === "fragmentiert" ? "ok" : konz === "moderat" ? "mid" : "risk";
   return (
     <>
       <button className="sec-link" onClick={onBack} style={{ marginBottom: "var(--s3)" }}>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M11 18l-6-6 6-6" /></svg>
-        Alle Vergabestellen
+        {t("Alle Vergabestellen")}
       </button>
       <div className="st-head"><div><h4>{s.name}</h4>
-        <p className="st-frage">{s.vergaben36} Vergaben in 36 Monaten · {s.anbieterGesamt} verschiedene Anbieter</p></div></div>
+        <p className="st-frage">{t("{n} Vergaben in 36 Monaten · {anbieter} verschiedene Anbieter", { n: s.vergaben36, anbieter: s.anbieterGesamt })}</p></div></div>
 
       <div className="bstats">
-        <div className="bstat"><span className="bstat-k">Vergaben pro Jahr</span>
+        <div className="bstat"><span className="bstat-k">{t("Vergaben pro Jahr")}</span>
           <span className="bstat-v"><span className="v-num">{s.vergabenJahr}</span></span></div>
-        <div className="bstat"><span className="bstat-k">Neue Anbieter (36 Mon.)</span>
-          <span className="bstat-v">{s.neuAnteil ? <Q q={s.neuAnteil} /> : <span className="v-sparse">nicht messbar</span>}</span>
-          <span className="bstat-m">{s.neuAnteil ? `${s.neueAnbieter} von ${s.anbieterGesamt} Anbietern` : "Stelle zu kurz in den Daten"}</span></div>
-        <div className="bstat"><span className="bstat-k">Ø Bieter je Vergabe</span>
-          <span className="bstat-v">{s.bieterMedian != null ? <span className="v-num">{s.bieterMedian}</span> : <span className="v-sparse">zu wenig Daten</span>}</span>
-          <span className="bstat-m">{s.bieterN ? `aus ${s.bieterN} Vergaben` : ""}</span></div>
-        <div className="bstat"><span className="bstat-k">Zuschläge an KMU</span>
+        <div className="bstat"><span className="bstat-k">{t("Neue Anbieter (36 Mon.)")}</span>
+          <span className="bstat-v">{s.neuAnteil ? <Q q={s.neuAnteil} /> : <span className="v-sparse">{t("nicht messbar")}</span>}</span>
+          <span className="bstat-m">{s.neuAnteil ? t("{neu} von {gesamt} Anbietern", { neu: s.neueAnbieter, gesamt: s.anbieterGesamt }) : t("Stelle zu kurz in den Daten")}</span></div>
+        <div className="bstat"><span className="bstat-k">{t("Ø Bieter je Vergabe")}</span>
+          <span className="bstat-v">{s.bieterMedian != null ? <span className="v-num">{s.bieterMedian}</span> : <span className="v-sparse">{t("zu wenig Daten")}</span>}</span>
+          <span className="bstat-m">{s.bieterN ? t("aus {n} Vergaben", { n: s.bieterN }) : ""}</span></div>
+        <div className="bstat"><span className="bstat-k">{t("Zuschläge an KMU")}</span>
           <span className="bstat-v"><Q q={s.kmu} /></span></div>
-        <div className="bstat"><span className="bstat-k">Nur über den Preis entschieden</span>
+        <div className="bstat"><span className="bstat-k">{t("Nur über den Preis entschieden")}</span>
           <span className="bstat-v"><Q q={s.preis} /></span></div>
-        <div className="bstat"><span className="bstat-k">Wechsel bei Nachfolgevergaben</span>
+        <div className="bstat"><span className="bstat-k">{t("Wechsel bei Nachfolgevergaben")}</span>
           <span className="bstat-v"><Q q={s.wechsel} /></span>
-          <span className="bstat-m">braucht verkettete Vorgänger — oft dünn</span></div>
+          <span className="bstat-m">{t("braucht verkettete Vorgänger — oft dünn")}</span></div>
       </div>
 
       {konz ? (
         <div className={`bhero bhero-${konzCls}`} style={{ marginTop: "var(--s4)" }}>
           <div className="bhero-val">{s.top1} %</div>
           <div className="bhero-lbl">
-            <span className="bhero-title">Der stärkste Anbieter hält <b>{s.top1} %</b> der Zuschläge — {konz}</span>
+            <span className="bhero-title">{t("Der stärkste Anbieter hält")} <b>{s.top1} %</b> {t("der Zuschläge")} — {t(konz)}</span>
             <span className="bhero-note">
-              {konz === "fragmentiert" ? "Kein Anbieter dominiert. Als Neuer sind die Chancen strukturell offen."
-                : konz === "moderat" ? "Einige feste Größen, aber es gibt Raum."
-                : "Wenige teilen fast alles unter sich auf."}
+              {konz === "fragmentiert" ? t("Kein Anbieter dominiert. Als Neuer sind die Chancen strukturell offen.")
+                : konz === "moderat" ? t("Einige feste Größen, aber es gibt Raum.")
+                : t("Wenige teilen fast alles unter sich auf.")}
             </span>
           </div>
         </div>
       ) : null}
 
       <section className="bsec" style={{ marginTop: "var(--s5)" }}>
-        <h4>Wer gewinnt dort?</h4>
+        <h4>{t("Wer gewinnt dort?")}</h4>
         <div className="bwinners">
-          <span className="bwin-k">Zuschlagsanteil der stärksten Anbieter — keine Aussage über Beziehung, nur gezählte Zuschläge</span>
+          <span className="bwin-k">{t("Zuschlagsanteil der stärksten Anbieter — keine Aussage über Beziehung, nur gezählte Zuschläge")}</span>
           <div className="bwin-list">
             {s.top.length ? s.top.map((w, i) => (
               <div key={i} className="bwin-row">
                 <span className="bwin-bar"><i style={{ width: `${Math.min(100, w.pct * 2)}%` }} /></span>
                 <span className="bwin-name">{w.n}</span>
                 <span className="bwin-p"><span className="v-num">{w.pct} %</span></span>
-                <span className="bwin-c"><span className="v-num">{w.wins}</span> Zuschläge</span>
+                <span className="bwin-c"><span className="v-num">{w.wins}</span> {t("Zuschläge")}</span>
               </div>
-            )) : <span className="v-sparse">keine belegten Gewinner erfasst</span>}
+            )) : <span className="v-sparse">{t("keine belegten Gewinner erfasst")}</span>}
           </div>
         </div>
       </section>
@@ -396,6 +405,7 @@ const FELD_SPALTEN: { key: string; label: string; wert: (f: Feld) => number }[] 
 ];
 
 function Felder({ data }: { data: Strat }) {
+  const { t } = useSprache();
   const [sortKey, setSortKey] = useState("name");
   const [sortDir, setSortDir] = useState(-1);
   const felder = useMemo(() => {
@@ -412,8 +422,8 @@ function Felder({ data }: { data: Strat }) {
   return (
     <>
       <div className="st-head"><div>
-        <h4>Felder</h4>
-        <p className="st-frage">Wo ist Platz, wo ist es eng?{pro ? "" : " — Werte im Pro-Zugang"}</p>
+        <h4>{t("Felder")}</h4>
+        <p className="st-frage">{t("Wo ist Platz, wo ist es eng?")}{pro ? "" : ` — ${t("Werte im Pro-Zugang")}`}</p>
       </div></div>
 
       <div className="st-table st-felder">
@@ -421,7 +431,7 @@ function Felder({ data }: { data: Strat }) {
           {FELD_SPALTEN.map((c) => (
             <span key={c.key} className="st-sortbar" onClick={() => sortiere(c.key)}
               data-sorted={sortKey === c.key ? "" : undefined}>
-              {c.label}
+              {t(c.label)}
               <i className="st-arrow">{sortKey === c.key ? (sortDir < 0 ? "▼" : "▲") : "↕"}</i>
             </span>
           ))}
@@ -429,13 +439,13 @@ function Felder({ data }: { data: Strat }) {
         {felder.map((f) => (
           <div key={f.cpv4} className="st-row">
             <span className="st-t">{f.label}
-              <span className="st-sub">CPV {f.cpv4} · {f.vergaben36.toLocaleString("de-DE")} Vergaben in 36 Mon.</span>
+              <span className="st-sub">{t("CPV {cpv} · {n} Vergaben in 36 Mon.", { cpv: f.cpv4, n: f.vergaben36.toLocaleString("de-DE") })}</span>
             </span>
             <span className="st-w">{pro ? <span className="v-num">{f.vergabenJahr}</span> : <Lock />}</span>
             <span className="st-w">
               {!pro ? <Lock />
                 : f.trend == null
-                ? <span className="v-sparse" title="Nicht über alle drei Zeitfenster durchgehend belegt">n/a</span>
+                ? <span className="v-sparse" title={t("Nicht über alle drei Zeitfenster durchgehend belegt")}>n/a</span>
                 : <span className={`st-trend ${f.trend > 5 ? "up" : f.trend < -5 ? "down" : ""}`}>
                     {f.trend > 0 ? "+" : ""}{f.trend} %
                   </span>}
@@ -448,16 +458,15 @@ function Felder({ data }: { data: Strat }) {
       </div>
 
       <section className="bsec" style={{ marginTop: "var(--s5)" }}>
-        <h4>Benachbarte Felder</h4>
+        <h4>{t("Benachbarte Felder")}</h4>
         <p className="st-frage" style={{ marginBottom: "var(--s3)" }}>
-          Bereiche, die dieselben Anbieter zusätzlich bedienen — abgeleitet daraus, welche
-          Felder gemeinsam abgedeckt werden.
+          {t("Bereiche, die dieselben Anbieter zusätzlich bedienen — abgeleitet daraus, welche Felder gemeinsam abgedeckt werden.")}
         </p>
         <div className="st-table st-nachbarn">
-          <div className="st-row st-row-h"><span>Feld</span><span>Nähe</span><span>gemeinsame Anbieter</span></div>
+          <div className="st-row st-row-h"><span>{t("Feld")}</span><span>{t("Nähe")}</span><span>{t("gemeinsame Anbieter")}</span></div>
           {data.nachbarn.map((n) => (
             <div key={n.cpv4} className="st-row">
-              <span className="st-t">{n.label}<span className="st-sub">CPV {n.cpv4}</span></span>
+              <span className="st-t">{n.label}<span className="st-sub">{t("CPV {cpv}", { cpv: n.cpv4 })}</span></span>
               <span className="st-w"><span className={`pr-tag ${n.naehe >= 40 ? "" : "mut"}`}>{n.naehe} %</span></span>
               <span className="st-w"><span className="v-num">{n.firmen.toLocaleString("de-DE")}</span></span>
             </div>
@@ -466,13 +475,12 @@ function Felder({ data }: { data: Strat }) {
       </section>
 
       <section className="bsec" style={{ marginTop: "var(--s5)" }}>
-        <h4>Einstiegsfreundlich</h4>
+        <h4>{t("Einstiegsfreundlich")}</h4>
         <p className="st-frage" style={{ marginBottom: "var(--s3)" }}>
-          Offene Ausschreibungen mit kleinem Volumen. Die Bieterzahl ist der historische
-          Median des Fachgebiets — bei laufenden Verfahren hat noch niemand geboten.
+          {t("Offene Ausschreibungen mit kleinem Volumen. Die Bieterzahl ist der historische Median des Fachgebiets — bei laufenden Verfahren hat noch niemand geboten.")}
         </p>
         <div className="st-table st-einstieg">
-          <div className="st-row st-row-h"><span>Ausschreibung</span><span>Wert</span><span>Bieter (Feld)</span><span>Frist</span></div>
+          <div className="st-row st-row-h"><span>{t("Ausschreibung")}</span><span>{t("Wert")}</span><span>{t("Bieter (Feld)")}</span><span>{t("Frist")}</span></div>
           {data.einstieg.map((e) => (
             <div key={e.id} className="st-row">
               <span className="st-t">{e.titel}<span className="st-sub">{e.buyer}</span></span>
@@ -491,57 +499,56 @@ function Felder({ data }: { data: Strat }) {
    „Gesperrt" wird NUR behauptet, wo die Gelisteten-Liste vorliegt. Wo nur bekannt
    ist, dass es ein Rahmen ohne Wettbewerb ist, steht das ehrlich daneben. */
 function Bindung({ data }: { data: Strat }) {
+  const { t } = useSprache();
   const b = data.bindung;
   const anteilBelegt = b.rahmen ? Math.round((b.belegtGesperrt / b.rahmen) * 100) : 0;
 
   return (
     <>
       <div className="st-head"><div>
-        <h4>Bindung</h4>
-        <p className="st-frage">Was ist euch verschlossen?</p>
+        <h4>{t("Bindung")}</h4>
+        <p className="st-frage">{t("Was ist euch verschlossen?")}</p>
       </div></div>
 
       <div className="bhero bhero-risk">
         <div className="bhero-val">{b.volGesperrt ? eur(b.volGesperrt) : b.belegtGesperrt.toLocaleString("de-DE")}</div>
         <div className="bhero-lbl">
           <span className="bhero-title">
-            gebunden in <b>{b.belegtGesperrt.toLocaleString("de-DE")} Rahmenvereinbarungen ohne erneuten Wettbewerb</b>
+            {t("gebunden in")} <b>{b.belegtGesperrt.toLocaleString("de-DE")} {t("Rahmenvereinbarungen ohne erneuten Wettbewerb")}</b>
           </span>
           <span className="bhero-note">
-            Diese Aufträge laufen noch, werden aber nicht neu ausgeschrieben — sie werden aus dem
-            Rahmen abgerufen. Wer nicht gelistet ist, kann hier nicht anbieten, egal wie gut das Angebot wäre.
+            {t("Diese Aufträge laufen noch, werden aber nicht neu ausgeschrieben — sie werden aus dem Rahmen abgerufen. Wer nicht gelistet ist, kann hier nicht anbieten, egal wie gut das Angebot wäre.")}
           </span>
         </div>
       </div>
 
       <div className="bstats" style={{ marginTop: "var(--s4)" }}>
         <div className="bstat">
-          <span className="bstat-k">Belegt gesperrt</span>
+          <span className="bstat-k">{t("Belegt gesperrt")}</span>
           <span className="bstat-v"><span className="v-num">{b.belegtGesperrt.toLocaleString("de-DE")}</span></span>
-          <span className="bstat-m">Gelistete namentlich bekannt ({anteilBelegt} % der Rahmen)</span>
+          <span className="bstat-m">{t("Gelistete namentlich bekannt ({pct} % der Rahmen)", { pct: anteilBelegt })}</span>
         </div>
         <div className="bstat">
-          <span className="bstat-k">Gelistete unbekannt</span>
+          <span className="bstat-k">{t("Gelistete unbekannt")}</span>
           <span className="bstat-v"><span className="val" data-src="unsicher"><span className="v-num">{b.gelisteteUnbekannt.toLocaleString("de-DE")}</span></span></span>
-          <span className="bstat-flag">Rahmen ohne Wettbewerb, aber wir wissen nicht wer gelistet ist — wir nehmen nicht an, dass ihr draußen seid.</span>
+          <span className="bstat-flag">{t("Rahmen ohne Wettbewerb, aber wir wissen nicht wer gelistet ist — wir nehmen nicht an, dass ihr draußen seid.")}</span>
         </div>
         <div className="bstat">
-          <span className="bstat-k">Volumen belegt</span>
-          <span className="bstat-v">{b.volGesperrt ? <span className="v-num">{eur(b.volGesperrt)}</span> : <span className="v-sparse">kein Wert veröffentlicht</span>}</span>
-          <span className="bstat-m">{b.volN ? `aus ${b.volN} Rahmen mit Wertangabe` : ""}</span>
+          <span className="bstat-k">{t("Volumen belegt")}</span>
+          <span className="bstat-v">{b.volGesperrt ? <span className="v-num">{eur(b.volGesperrt)}</span> : <span className="v-sparse">{t("kein Wert veröffentlicht")}</span>}</span>
+          <span className="bstat-m">{b.volN ? t("aus {n} Rahmen mit Wertangabe", { n: b.volN }) : ""}</span>
         </div>
       </div>
 
       <section className="bsec" style={{ marginTop: "var(--s5)" }}>
-        <h4>Nächste Einstiegsfenster</h4>
+        <h4>{t("Nächste Einstiegsfenster")}</h4>
         <p className="st-frage" style={{ marginBottom: "var(--s3)" }}>
-          Wann ihr euch bewegen müsst, um beim Auslaufen dabei zu sein — Vertragsende minus
-          üblichem Vorlauf (Median Bekanntmachung→Zuschlag 87 Tage, plus Positionierung).
+          {t("Wann ihr euch bewegen müsst, um beim Auslaufen dabei zu sein — Vertragsende minus üblichem Vorlauf (Median Bekanntmachung→Zuschlag 87 Tage, plus Positionierung).")}
         </p>
         <div className="st-table st-fenster">
           <div className="st-row st-row-h">
-            <span>Rahmenvereinbarung</span><span>Gelistet</span><span>Wert</span>
-            <span>Läuft aus</span><span>Fenster ab</span>
+            <span>{t("Rahmenvereinbarung")}</span><span>{t("Gelistet")}</span><span>{t("Wert")}</span>
+            <span>{t("Läuft aus")}</span><span>{t("Fenster ab")}</span>
           </div>
           {b.fenster.map((f) => (
             <div key={f.id} className="st-row">
@@ -559,10 +566,9 @@ function Bindung({ data }: { data: Strat }) {
       </section>
 
       <section className="bsec" style={{ marginTop: "var(--s5)" }}>
-        <h4>Euer eigener Vertragsbestand</h4>
+        <h4>{t("Euer eigener Vertragsbestand")}</h4>
         <p className="st-frage" style={{ marginBottom: "var(--s3)" }}>
-          Eure laufenden (Rahmen-)Verträge binden beim Auslaufen wieder Kapazität und müssen verteidigt
-          werden. Pflegt sie hier — „Als gewonnen markieren" an einem Lead legt automatisch eine Zeile an.
+          {t("Eure laufenden (Rahmen-)Verträge binden beim Auslaufen wieder Kapazität und müssen verteidigt werden. Pflegt sie hier — „Als gewonnen markieren\" an einem Lead legt automatisch eine Zeile an.")}
         </p>
         <ContractsEditor />
       </section>
@@ -583,6 +589,7 @@ const WETT_SPALTEN: { key: string; label: string; wert: (a: Anbieter) => number 
 ];
 
 function Wettbewerb({ data }: { data: Strat }) {
+  const { t } = useSprache();
   const w = data.wettbewerb;
   const [sortKey, setSortKey] = useState("name");
   const [sortDir, setSortDir] = useState(-1);
@@ -608,23 +615,21 @@ function Wettbewerb({ data }: { data: Strat }) {
       <>
         <button className="sec-link" onClick={() => setOffen(null)} style={{ marginBottom: "var(--s3)" }}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M11 18l-6-6 6-6" /></svg>
-          Alle Anbieter
+          {t("Alle Anbieter")}
         </button>
         <div className="st-head"><div><h4>{offen.name}</h4>
-          <p className="st-frage">{offen.wins} Zuschläge bei {offen.stellen} Vergabestellen (36 Mon.)</p></div>
+          <p className="st-frage">{t("{wins} Zuschläge bei {stellen} Vergabestellen (36 Mon.)", { wins: offen.wins, stellen: offen.stellen })}</p></div>
           {/* #25 Einstieg aus der Wettbewerbstabelle → volles Firmenprofil */}
-          <a className="sec-link" href={`/firma?id=${encodeURIComponent(offen.id)}`}>Firmenprofil ansehen ›</a>
+          <a className="sec-link" href={`/firma?id=${encodeURIComponent(offen.id)}`}>{t("Firmenprofil ansehen ›")}</a>
         </div>
 
         <section className="bsec">
-          <h4>Zuschlagsanteil je Stelle</h4>
+          <h4>{t("Zuschlagsanteil je Stelle")}</h4>
           <p className="st-frage" style={{ marginBottom: "var(--s3)" }}>
-            Wie groß der Anteil dieses Anbieters an den Zuschlägen der Stelle ist, gegen den
-            Marktdurchschnitt (1 geteilt durch die Zahl aktiver Anbieter dort). Ein hoher Anteil
-            kann Beziehung, fachliche Passung oder einen Rahmenvertrag bedeuten — die Deutung bleibt euch.
+            {t("Wie groß der Anteil dieses Anbieters an den Zuschlägen der Stelle ist, gegen den Marktdurchschnitt (1 geteilt durch die Zahl aktiver Anbieter dort). Ein hoher Anteil kann Beziehung, fachliche Passung oder einen Rahmenvertrag bedeuten — die Deutung bleibt euch.")}
           </p>
           <div className="st-table st-profil">
-            <div className="st-row st-row-h"><span>Vergabestelle</span><span>Zuschläge</span><span>Anteil</span><span>vs. Markt</span></div>
+            <div className="st-row st-row-h"><span>{t("Vergabestelle")}</span><span>{t("Zuschläge")}</span><span>{t("Anteil")}</span><span>{t("vs. Markt")}</span></div>
             {zeilen.length ? zeilen.map((z, i) => (
               <div key={i} className="st-row">
                 <span className="st-t">{z.buyer}</span>
@@ -642,7 +647,7 @@ function Wettbewerb({ data }: { data: Strat }) {
                   </> : <Lock />}
                 </span>
               </div>
-            )) : <span className="v-sparse">keine Stellen-Zuordnung erfasst</span>}
+            )) : <span className="v-sparse">{t("keine Stellen-Zuordnung erfasst")}</span>}
           </div>
         </section>
       </>
@@ -652,8 +657,8 @@ function Wettbewerb({ data }: { data: Strat }) {
   return (
     <>
       <div className="st-head"><div>
-        <h4>Wettbewerb</h4>
-        <p className="st-frage">Wer holt was, wer hält was?</p>
+        <h4>{t("Wettbewerb")}</h4>
+        <p className="st-frage">{t("Wer holt was, wer hält was?")}</p>
       </div></div>
 
       <div className="st-table st-wett">
@@ -661,7 +666,7 @@ function Wettbewerb({ data }: { data: Strat }) {
           {WETT_SPALTEN.map((c) => (
             <span key={c.key} className="st-sortbar" onClick={() => sortiere(c.key)}
               data-sorted={sortKey === c.key ? "" : undefined}>
-              {c.label}<i className="st-arrow">{sortKey === c.key ? (sortDir < 0 ? "▼" : "▲") : "↕"}</i>
+              {t(c.label)}<i className="st-arrow">{sortKey === c.key ? (sortDir < 0 ? "▼" : "▲") : "↕"}</i>
             </span>
           ))}
         </div>
@@ -679,18 +684,17 @@ function Wettbewerb({ data }: { data: Strat }) {
         ))}
         {!pro && restAnbieter > 0 ? (
           <div className="st-row st-teaser">
-            <span className="st-t">+ {restAnbieter.toLocaleString("de-DE")} weitere Anbieter</span>
-            <span className="st-w st-teaser-pro" style={{ gridColumn: "2 / -1" }}>vollständige Rangliste im Pro-Zugang</span>
+            <span className="st-t">{t("+ {n} weitere Anbieter", { n: restAnbieter.toLocaleString("de-DE") })}</span>
+            <span className="st-w st-teaser-pro" style={{ gridColumn: "2 / -1" }}>{t("vollständige Rangliste im Pro-Zugang")}</span>
           </div>
         ) : null}
       </div>
 
       {matrix ? (
         <section className="bsec" style={{ marginTop: "var(--s5)" }}>
-          <h4>Wer holt wo</h4>
+          <h4>{t("Wer holt wo")}</h4>
           <p className="st-frage" style={{ marginBottom: "var(--s3)" }}>
-            Zuschlagsanteil je Stelle × Anbieter. Leere Zellen bei hohem Zeilenvolumen sind das
-            Signal: dort dominiert niemand.
+            {t("Zuschlagsanteil je Stelle × Anbieter. Leere Zellen bei hohem Zeilenvolumen sind das Signal: dort dominiert niemand.")}
           </p>
           <div className="st-matrixwrap">
             <table className="st-matrix">
@@ -735,6 +739,7 @@ const NACHWEIS_LABEL: Record<string, string> = {
 };
 
 function Faehigkeiten({ data }: { data: Strat }) {
+  const { t } = useSprache();
   const f = data.faehigkeiten;
   const b = f.buergschaft;
   const buergPct = b.n ? Math.round((b.treffer / b.n) * 100) : 0;
@@ -742,28 +747,26 @@ function Faehigkeiten({ data }: { data: Strat }) {
   return (
     <>
       <div className="st-head"><div>
-        <h4>Fähigkeiten</h4>
-        <p className="st-frage">Was blockiert uns?</p>
+        <h4>{t("Fähigkeiten")}</h4>
+        <p className="st-frage">{t("Was blockiert uns?")}</p>
       </div></div>
 
       <div className="mnote" style={{ marginBottom: "var(--s4)" }}>
-        Eignungsanforderungen stehen überwiegend im Freitext der Vergabeunterlagen (rund ein Drittel
-        maschinell erfasst). Jede Zahl hier ist deshalb eine <b>Untergrenze</b> — „mindestens so viele",
-        nie „genau so viele". Ob ihr die Anforderungen erfüllt, prüfen wir, sobald euer Firmenprofil steht.
+        {t("Eignungsanforderungen stehen überwiegend im Freitext der Vergabeunterlagen (rund ein Drittel maschinell erfasst). Jede Zahl hier ist deshalb eine")} <b>{t("Untergrenze")}</b> {t("— „mindestens so viele\", nie „genau so viele\". Ob ihr die Anforderungen erfüllt, prüfen wir, sobald euer Firmenprofil steht.")}
       </div>
 
       <section className="bsec">
-        <h4>Formaler Rahmen</h4>
+        <h4>{t("Formaler Rahmen")}</h4>
         <p className="st-frage" style={{ marginBottom: "var(--s3)" }}>
-          Nach welchem Vergaberecht ausgeschrieben wird — bestimmt Nachweispflichten, Fristen und
-          Präqualifikation. {f.nLeads.toLocaleString("de-DE")} Ausschreibungen im Feld.
+          {t("Nach welchem Vergaberecht ausgeschrieben wird — bestimmt Nachweispflichten, Fristen und Präqualifikation.")}{" "}
+          {t("{n} Ausschreibungen im Feld.", { n: f.nLeads.toLocaleString("de-DE") })}
         </p>
         <div className="st-table st-regime">
-          <div className="st-row st-row-h"><span>Regelwerk</span><span>Ausschreibungen</span><span>Volumen belegt</span></div>
+          <div className="st-row st-row-h"><span>{t("Regelwerk")}</span><span>{t("Ausschreibungen")}</span><span>{t("Volumen belegt")}</span></div>
           {f.regime.map((r) => (
             <div key={r.code} className="st-row">
               <span className="st-t">{r.label}</span>
-              <span className="st-w"><span className="v-num">mind. {r.n.toLocaleString("de-DE")}</span></span>
+              <span className="st-w"><span className="v-num">{t("mind. {n}", { n: r.n.toLocaleString("de-DE") })}</span></span>
               <span className="st-w">{r.vol ? <span className="v-num">{eur(r.vol)}</span> : <span style={{ color: "var(--ink-300)" }}>—</span>}</span>
             </div>
           ))}
@@ -774,46 +777,45 @@ function Faehigkeiten({ data }: { data: Strat }) {
         <div className="bhero-val" style={{ fontSize: 24 }}>{b.vol ? eur(b.vol) : `${b.treffer}`}</div>
         <div className="bhero-lbl">
           <span className="bhero-title">
-            <b>Mindestens {b.treffer}</b> Ausschreibungen fordern eine <b>Bürgschaft</b>{b.n ? ` (${buergPct} % der belegten)` : ""}
+            <b>{t("Mindestens {n}", { n: b.treffer })}</b> {t("Ausschreibungen fordern eine")} <b>{t("Bürgschaft")}</b>{b.n ? ` ${t("({pct} % der belegten)", { pct: buergPct })}` : ""}
           </span>
           <span className="bhero-note">
-            Kapitalhürde: wer keine Bürgschaft stellen kann, ist von diesem Volumen ausgeschlossen.
-            Erfasst aus dem strukturierten Feld — die Dunkelziffer im Freitext liegt darüber.
+            {t("Kapitalhürde: wer keine Bürgschaft stellen kann, ist von diesem Volumen ausgeschlossen. Erfasst aus dem strukturierten Feld — die Dunkelziffer im Freitext liegt darüber.")}
           </span>
         </div>
       </div>
 
       <section className="bsec" style={{ marginTop: "var(--s5)" }}>
-        <h4>Geforderte Nachweise</h4>
+        <h4>{t("Geforderte Nachweise")}</h4>
         <p className="st-frage" style={{ marginBottom: "var(--s3)" }}>
-          Maschinell erfasste Eignungsnachweise im Feld. Dünn — das meiste steht im Freitext.
+          {t("Maschinell erfasste Eignungsnachweise im Feld. Dünn — das meiste steht im Freitext.")}
         </p>
         {f.nachweise.length ? (
           <div className="st-table st-nachweis">
-            <div className="st-row st-row-h"><span>Nachweis</span><span>gefordert in</span></div>
+            <div className="st-row st-row-h"><span>{t("Nachweis")}</span><span>{t("gefordert in")}</span></div>
             {f.nachweise.map((nw) => (
               <div key={nw.code} className="st-row">
-                <span className="st-t">{NACHWEIS_LABEL[nw.code] || nw.code}<span className="st-sub">{nw.code}</span></span>
-                <span className="st-w"><span className="v-num">mind. {nw.n}</span></span>
+                <span className="st-t">{t(NACHWEIS_LABEL[nw.code] || nw.code)}<span className="st-sub">{nw.code}</span></span>
+                <span className="st-w"><span className="v-num">{t("mind. {n}", { n: nw.n })}</span></span>
               </div>
             ))}
           </div>
-        ) : <span className="v-sparse">keine typisierten Nachweise im Feld erfasst</span>}
+        ) : <span className="v-sparse">{t("keine typisierten Nachweise im Feld erfasst")}</span>}
       </section>
     </>
   );
 }
 
 function NochNicht({ label, frage }: { label: string; frage: string }) {
+  const { t } = useSprache();
   return (
     <>
-      <div className="st-head"><div><h4>{label}</h4><p className="st-frage">{frage}</p></div></div>
+      <div className="st-head"><div><h4>{t(label)}</h4><p className="st-frage">{t(frage)}</p></div></div>
       <div className="mwarn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z" />
         </svg>
-        <span><b>Diese Sektion ist noch nicht gebaut.</b> Sie braucht eigene Aggregate über
-        Vergabestellen und Anbieter. Wir zeigen hier nichts Vorläufiges — lieber leer als falsch.</span>
+        <span><b>{t("Diese Sektion ist noch nicht gebaut.")}</b> {t("Sie braucht eigene Aggregate über Vergabestellen und Anbieter. Wir zeigen hier nichts Vorläufiges — lieber leer als falsch.")}</span>
       </div>
     </>
   );
@@ -826,6 +828,7 @@ export function StrategieView({
   accountLimit: boolean; tick: number;
   onBodyAction: (action: string, value: string, el: HTMLElement) => void;
 }) {
+  const { t } = useSprache();
   const [sektion, setSektion] = useState("pipeline");
   const [strat, setStrat] = useState<Record<string, Strat> | null>(null);
   const [offeneStelle, setOffeneStelle] = useState<Stelle | null>(null);
@@ -842,9 +845,10 @@ export function StrategieView({
   }, [sektion, profilStufe, offenerPicker, aktiveBranche, accountLimit, tick]);
 
   function handleClick(e: React.MouseEvent<HTMLDivElement>) {
-    const t = e.target as HTMLElement;
+    // NICHT `t` nennen — das würde die Übersetzungsfunktion oben beschatten.
+    const ziel = e.target as HTMLElement;
     for (const a of ["editprofil", "partner", "angadd", "angset", "angrm", "editbestand", "pstufe", "openlead"]) {
-      const el = t.closest<HTMLElement>(`[data-${a}]`);
+      const el = ziel.closest<HTMLElement>(`[data-${a}]`);
       if (el) { onBodyAction(a, el.dataset[a] || "", el); return; }
     }
   }
@@ -854,14 +858,14 @@ export function StrategieView({
 
   return (
     <div className="stwrap">
-      <nav className="stnav" aria-label="Strategie-Abschnitte">
+      <nav className="stnav" aria-label={t("Strategie-Abschnitte")}>
         {SEKTIONEN.map((g) => (
           <div key={g.group} className="stnav-g">
-            <span className="stnav-gt">{g.group}</span>
+            <span className="stnav-gt">{t(g.group)}</span>
             {g.items.map((i) => (
               <button key={i.key} className={`stnav-i ${sektion === i.key ? "on" : ""}`}
                 onClick={() => { setSektion(i.key); setOffeneStelle(null); }}>
-                {i.label}
+                {t(i.label)}
               </button>
             ))}
           </div>
@@ -870,21 +874,21 @@ export function StrategieView({
 
       <div className="stmain">
         {sektion === "pipeline"
-          ? (data ? <Pipeline data={data} /> : <div className="st-head"><div><h4>Pipeline</h4><p className="st-frage">Lade Aggregate …</p></div></div>)
+          ? (data ? <Pipeline data={data} /> : <div className="st-head"><div><h4>{t("Pipeline")}</h4><p className="st-frage">{t("Lade Aggregate …")}</p></div></div>)
           : sektion === "stellen"
-          ? (!data ? <div className="st-head"><div><h4>Vergabestellen</h4><p className="st-frage">Lade Aggregate …</p></div></div>
+          ? (!data ? <div className="st-head"><div><h4>{t("Vergabestellen")}</h4><p className="st-frage">{t("Lade Aggregate …")}</p></div></div>
              : offeneStelle ? <StelleDetail s={offeneStelle} onBack={() => setOffeneStelle(null)} />
              : <Vergabestellen data={data} onOpenBuyer={setOffeneStelle} />)
           : sektion === "felder"
-          ? (data ? <Felder data={data} /> : <div className="st-head"><div><h4>Felder</h4><p className="st-frage">Lade Aggregate …</p></div></div>)
+          ? (data ? <Felder data={data} /> : <div className="st-head"><div><h4>{t("Felder")}</h4><p className="st-frage">{t("Lade Aggregate …")}</p></div></div>)
           : sektion === "wettbewerb"
-          ? (data ? <Wettbewerb data={data} /> : <div className="st-head"><div><h4>Wettbewerb</h4><p className="st-frage">Lade Aggregate …</p></div></div>)
+          ? (data ? <Wettbewerb data={data} /> : <div className="st-head"><div><h4>{t("Wettbewerb")}</h4><p className="st-frage">{t("Lade Aggregate …")}</p></div></div>)
           : sektion === "bindung"
-          ? (!data ? <div className="st-head"><div><h4>Bindung</h4><p className="st-frage">Lade Aggregate …</p></div></div>
+          ? (!data ? <div className="st-head"><div><h4>{t("Bindung")}</h4><p className="st-frage">{t("Lade Aggregate …")}</p></div></div>
              : !isPro(data) ? <ProGate titel="Bindung" frage="Was ist euch verschlossen?" was="Gesperrtes Volumen, Gelisteten-Analyse und die nächsten Einstiegsfenster." />
              : <Bindung data={data} />)
           : sektion === "faehigkeiten"
-          ? (!data ? <div className="st-head"><div><h4>Fähigkeiten</h4><p className="st-frage">Lade Aggregate …</p></div></div>
+          ? (!data ? <div className="st-head"><div><h4>{t("Fähigkeiten")}</h4><p className="st-frage">{t("Lade Aggregate …")}</p></div></div>
              : !isPro(data) ? <ProGate titel="Fähigkeiten" frage="Was blockiert uns?" was="Geforderte Nachweise, Bürgschafts-Hürde und der formale Rahmen im Feld." />
              : <Faehigkeiten data={data} />)
           : sektion === "trefferguete"

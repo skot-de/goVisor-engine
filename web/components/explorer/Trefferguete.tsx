@@ -4,6 +4,7 @@ import { loadProfile, saveProfile } from "@/lib/supabase/auth";
 import { parseWert } from "@/lib/explorerCore";
 import { loadDeclarations, declare, confirmDeclarations, needsConfirmation, ageMonths, type Declaration } from "@/lib/supabase/declarations";
 import { loadOutcomes, reportOutcome, removeOutcome, computeBilanz, type UserOutcome, type OutcomeResult, type LossReason } from "@/lib/supabase/outcomes";
+import { useSprache } from "@/lib/i18n";
 import "./trefferguete.css";
 
 /* Feature #11 „Treffergüte" — Sektion im Strategie-Bereich, Gruppe „Wir".
@@ -33,6 +34,8 @@ type Gap = { key: string; label: string; affected: number; text: string; kind: "
 
 // §7 Wirkungsberechnung — betroffene Lead-Menge je offener Angabe. Immer „betrifft N Leads" (AC5).
 // `pre` = nächtlich vorberechnete Werte (user_gap_effects, #11 §7) — bevorzugt, sonst On-Demand.
+// `label`/`text` bleiben hier UNübersetzt (Modul-Ebene, sonst friert die Sprache ein) — sie sind
+// die Übersetzungsschlüssel und werden erst an der Render-Stelle durch `t()` geschickt.
 function computeGaps(leads: Lead[], p: Profile, pre?: Record<string, number>): Gap[] {
   if (!p) return [];
   const gaps: Gap[] = [];
@@ -40,14 +43,14 @@ function computeGaps(leads: Lead[], p: Profile, pre?: Record<string, number>): G
   if (p.buergschaft == null) {
     const n = pre?.buergschaft ?? leads.filter(fordertBuergschaft).length;
     if (n >= MIN_AFFECTED) gaps.push({ key: "buergschaft", label: "Bürgschaftsrahmen", affected: n, kind: "buerg",
-      text: `${n} eurer Leads fordern eine Bürgschaft. Ohne die Höhe, die eure Bank stellt, können wir nicht prüfen, welche davon für euch in Frage kommen.` });
+      text: "{n} eurer Leads fordern eine Bürgschaft. Ohne die Höhe, die eure Bank stellt, können wir nicht prüfen, welche davon für euch in Frage kommen." });
   }
   // Größter Auftrag allein (§4.1 Beispiel): Leads über einer hohen Schwelle, Alleingrenze unbekannt.
   if (p.maxAlleine == null) {
     const SCHWELLE = 2_000_000;
     const n = pre?.maxAlleine ?? leads.filter((l) => { const v = leadValue(l); return v != null && v > SCHWELLE; }).length;
     if (n >= MIN_AFFECTED) gaps.push({ key: "maxAlleine", label: "Größter Auftrag, den ihr allein stemmt", affected: n, kind: "betrag",
-      text: `${n} Leads liegen über 2 Mio €. Wir wissen nicht, ob das für euch allein realistisch ist oder nur mit Partner.` });
+      text: "{n} Leads liegen über 2 Mio €. Wir wissen nicht, ob das für euch allein realistisch ist oder nur mit Partner." });
   }
   return gaps.sort((a, b) => b.affected - a.affected);   // §4.1 nach betroffener Anzahl
 }
@@ -58,6 +61,7 @@ const BUERG_BANDS: { label: string; v: number }[] = [
 ];
 
 export function Trefferguete({ aktiveBranche }: { aktiveBranche: string }) {
+  const { t } = useSprache();
   const [loading, setLoading] = useState(true);
   const [noSession, setNoSession] = useState(false);
   const [profile, setProfile] = useState<Profile>(null);
@@ -107,39 +111,41 @@ export function Trefferguete({ aktiveBranche }: { aktiveBranche: string }) {
       await declare({ kind: gap.key === "buergschaft" ? "guarantee" : "capacity", key: gap.key, value, source: "trefferguete" });
       setProfile(next);
       const after = computeGaps(leads, next).find((g) => g.key === gap.key)?.affected ?? 0;
-      setEffect(`${gap.label} hinterlegt. ${before - after} Leads ändern damit ihre Relevanzstufe.`);
+      setEffect(t("{feld} hinterlegt. {n} Leads ändern damit ihre Relevanzstufe.", { feld: t(gap.label), n: before - after }));
       await reloadAll();
     }
   }
 
-  if (loading) return <div className="tg-wrap"><p className="tg-muted">Lädt …</p></div>;
-  if (noSession) return <div className="tg-wrap"><p className="tg-muted">Bitte anmelden, um die Treffergüte zu sehen.</p></div>;
+  if (loading) return <div className="tg-wrap"><p className="tg-muted">{t("Lädt …")}</p></div>;
+  if (noSession) return <div className="tg-wrap"><p className="tg-muted">{t("Bitte anmelden, um die Treffergüte zu sehen.")}</p></div>;
 
   const zuBestaetigen = needsConfirmation(decls);
 
   return (
     <div className="tg-wrap">
       <div className="tg-head">
-        <h4>Treffergüte</h4>
-        <p className="st-frage">Warum passt manches nicht — und was ändert das?</p>
-        <p className="tg-count">{leads.length} Leads in eurer Liste · {gaps.length} offene Angabe{gaps.length === 1 ? "" : "n"} mit spürbarer Wirkung</p>
+        <h4>{t("Treffergüte")}</h4>
+        <p className="st-frage">{t("Warum passt manches nicht — und was ändert das?")}</p>
+        <p className="tg-count">{gaps.length === 1
+          ? t("{leads} Leads in eurer Liste · {n} offene Angabe mit spürbarer Wirkung", { leads: leads.length, n: gaps.length })
+          : t("{leads} Leads in eurer Liste · {n} offene Angaben mit spürbarer Wirkung", { leads: leads.length, n: gaps.length })}</p>
       </div>
 
       {effect && <div className="tg-effect">{effect}</div>}
 
       {/* Block 1 — Was eure Liste jetzt ändern würde */}
       <section className="tg-block">
-        <h5>Was eure Liste jetzt ändern würde</h5>
+        <h5>{t("Was eure Liste jetzt ändern würde")}</h5>
         {!profile ? (
-          <p className="tg-muted">Noch kein Profil hinterlegt. Legt Schwerpunkte und Regionen an — dann rechnen wir die Wirkung offener Angaben gegen eure Liste.</p>
+          <p className="tg-muted">{t("Noch kein Profil hinterlegt. Legt Schwerpunkte und Regionen an — dann rechnen wir die Wirkung offener Angaben gegen eure Liste.")}</p>
         ) : gaps.length === 0 ? (
-          <p className="tg-muted">Keine offenen Angaben mit spürbarer Wirkung. Was jetzt noch streut, liegt an der Datenlage der Vergabestellen (siehe unten).</p>
+          <p className="tg-muted">{t("Keine offenen Angaben mit spürbarer Wirkung. Was jetzt noch streut, liegt an der Datenlage der Vergabestellen (siehe unten).")}</p>
         ) : gaps.map((g) => (
           <div key={g.key} className="tg-gap">
-            <div className="tg-gap-h"><span className="tg-gap-l">{g.label}</span><span className="tg-gap-n">betrifft {g.affected} Leads</span></div>
-            <p className="tg-gap-t">{g.text}</p>
+            <div className="tg-gap-h"><span className="tg-gap-l">{t(g.label)}</span><span className="tg-gap-n">{t("betrifft {n} Leads", { n: g.affected })}</span></div>
+            <p className="tg-gap-t">{t(g.text, { n: g.affected })}</p>
             {g.kind === "buerg"
-              ? <div className="tg-pills">{BUERG_BANDS.map((b) => <button key={b.v} onClick={() => fillGap(g, b.v)}>{b.label}</button>)}</div>
+              ? <div className="tg-pills">{BUERG_BANDS.map((b) => <button key={b.v} onClick={() => fillGap(g, b.v)}>{t(b.label)}</button>)}</div>
               : <BetragInput onSet={(v) => fillGap(g, v)} />}
           </div>
         ))}
@@ -147,72 +153,76 @@ export function Trefferguete({ aktiveBranche }: { aktiveBranche: string }) {
 
       {/* Block 2 — Was wir über euch wissen */}
       <section className="tg-block">
-        <h5>Was wir über euch wissen</h5>
+        <h5>{t("Was wir über euch wissen")}</h5>
         <GemessenErklaert profile={profile} decls={decls} zuBestaetigen={zuBestaetigen} onConfirm={async () => { await confirmDeclarations(); await reloadAll(); }} />
       </section>
 
       {/* Block 3 — Was ihr freischaltet: privates Tracking + Reziprozität */}
       <section className="tg-block">
-        <h5>Was ihr freischaltet</h5>
+        <h5>{t("Was ihr freischaltet")}</h5>
         <PrivatesTracking outcomes={outcomes} onChange={reloadAll} />
       </section>
 
       {/* Block 4 — Was wir nicht verbessern können */}
       <section className="tg-block tg-limits">
-        <h5>Was wir nicht verbessern können</h5>
+        <h5>{t("Was wir nicht verbessern können")}</h5>
         <table className="tg-limtab"><tbody>
-          <tr><td>Kein Auftragswert veröffentlicht</td><td>35 % der Vergaben</td></tr>
-          <tr><td>Ausschreibung nicht mit Zuschlag verknüpfbar</td><td>49 %</td></tr>
-          <tr><td>Unterlegene Bieter nie veröffentlicht</td><td>alle</td></tr>
-          <tr><td>Eignungsanforderungen nur im Fließtext</td><td>ca. 63 %</td></tr>
+          <tr><td>{t("Kein Auftragswert veröffentlicht")}</td><td>{t("35 % der Vergaben")}</td></tr>
+          <tr><td>{t("Ausschreibung nicht mit Zuschlag verknüpfbar")}</td><td>49 %</td></tr>
+          <tr><td>{t("Unterlegene Bieter nie veröffentlicht")}</td><td>{t("alle")}</td></tr>
+          <tr><td>{t("Eignungsanforderungen nur im Fließtext")}</td><td>{t("ca. 63 %")}</td></tr>
         </tbody></table>
-        <p className="tg-muted">Daran ändert keine Angabe etwas. Wir schätzen an diesen Stellen nicht, sondern lassen sie leer.</p>
+        <p className="tg-muted">{t("Daran ändert keine Angabe etwas. Wir schätzen an diesen Stellen nicht, sondern lassen sie leer.")}</p>
       </section>
     </div>
   );
 }
 
 function BetragInput({ onSet }: { onSet: (v: number) => void }) {
+  const { t } = useSprache();
   const [v, setV] = useState("");
   function commit() { const n = parseWert(v) ?? Number(v.replace(/[^\d]/g, "")); if (n) onSet(n); }
   return (
     <div className="tg-betrag">
-      <input inputMode="numeric" placeholder="Betrag in €" value={v} onChange={(e) => setV(e.target.value)} onKeyDown={(e) => e.key === "Enter" && commit()} />
-      <button onClick={commit}>übernehmen</button>
+      <input inputMode="numeric" placeholder={t("Betrag in €")} value={v} onChange={(e) => setV(e.target.value)} onKeyDown={(e) => e.key === "Enter" && commit()} />
+      <button onClick={commit}>{t("übernehmen")}</button>
     </div>
   );
 }
 
 /* Block 2 — gemessen (aus Zuschlägen, im Profil) vs. erklärt (user_declarations) + „Stimmt so". */
 function GemessenErklaert({ profile, decls, zuBestaetigen, onConfirm }: { profile: Profile; decls: Declaration[]; zuBestaetigen: Declaration[]; onConfirm: () => void }) {
+  const { t } = useSprache();
   const felder: string[] = (profile?.cpvLabels || []).slice(0, 6);
   const regionen: string[] = (profile?.regionLabels || []);
   return (
     <div className="tg-ge">
       <div className="tg-ge-col">
-        <span className="tg-ge-t">Gemessen <em>aus euren gewonnenen Vergaben</em></span>
+        <span className="tg-ge-t">{t("Gemessen")} <em>{t("aus euren gewonnenen Vergaben")}</em></span>
         {felder.length === 0 && regionen.length === 0
-          ? <p className="tg-muted">Noch keine Historie zugeordnet — das Profil funktioniert auch ohne.</p>
+          ? <p className="tg-muted">{t("Noch keine Historie zugeordnet — das Profil funktioniert auch ohne.")}</p>
           : <ul className="tg-ge-list">
               {felder.map((f) => <li key={f}>{f}</li>)}
-              {regionen.length > 0 && <li>Regionen: {regionen.join(", ")}</li>}
-              {profile?.volMin != null && <li>Volumenspanne ab {eur(profile.volMin)}</li>}
+              {regionen.length > 0 && <li>{t("Regionen")}: {regionen.join(", ")}</li>}
+              {profile?.volMin != null && <li>{t("Volumenspanne ab {wert}", { wert: eur(profile.volMin) })}</li>}
             </ul>}
       </div>
       <div className="tg-ge-col">
-        <span className="tg-ge-t">Erklärt <em>von euch angegeben</em></span>
+        <span className="tg-ge-t">{t("Erklärt")} <em>{t("von euch angegeben")}</em></span>
         {decls.length === 0
-          ? <p className="tg-muted">Noch nichts erklärt. Offene Angaben oben füllen den Bestand.</p>
+          ? <p className="tg-muted">{t("Noch nichts erklärt. Offene Angaben oben füllen den Bestand.")}</p>
           : <ul className="tg-ge-list">
               {decls.map((d) => {
                 const m = ageMonths(d);
-                return <li key={`${d.kind}:${d.key}`}>{d.key} {typeof d.value === "number" ? `· ${eur(d.value)}` : d.value === true ? "· ja" : ""}{m != null && m >= 6 && <span className="tg-old" title={`seit ${m} Monaten unbestätigt`}> ⚠</span>}</li>;
+                return <li key={`${d.kind}:${d.key}`}>{d.key} {typeof d.value === "number" ? `· ${eur(d.value)}` : d.value === true ? `· ${t("ja")}` : ""}{m != null && m >= 6 && <span className="tg-old" title={t("seit {n} Monaten unbestätigt", { n: m })}> ⚠</span>}</li>;
               })}
             </ul>}
         {zuBestaetigen.length > 0 && (
           <div className="tg-confirm">
-            <span>Stand älter als 6 Monate — {zuBestaetigen.length} Angabe{zuBestaetigen.length === 1 ? "" : "n"}. Stimmt das noch?</span>
-            <button onClick={onConfirm}>Stimmt so — alle bestätigen</button>
+            <span>{zuBestaetigen.length === 1
+              ? t("Stand älter als 6 Monate — {n} Angabe. Stimmt das noch?", { n: zuBestaetigen.length })
+              : t("Stand älter als 6 Monate — {n} Angaben. Stimmt das noch?", { n: zuBestaetigen.length })}</span>
+            <button onClick={onConfirm}>{t("Stimmt so — alle bestätigen")}</button>
           </div>
         )}
       </div>
@@ -223,24 +233,25 @@ function GemessenErklaert({ profile, decls, zuBestaetigen, onConfirm }: { profil
 /* Block 3 §4.3.0 — der Eigenwert zuerst: privates Bewerbungs-Tracking, nützt ohne Gegenpool.
  * §4.3.1 Reziprozität als zweite Stufe (ehrlich leer, solange der Pool dünn ist). AC11. */
 function PrivatesTracking({ outcomes, onChange }: { outcomes: UserOutcome[]; onChange: () => Promise<void> }) {
+  const { t } = useSprache();
   const [form, setForm] = useState(false);
   const b = useMemo(() => computeBilanz(outcomes), [outcomes]);
   return (
     <div className="tg-track">
-      <p className="tg-track-lead">Ein privater Überblick über eure Bewerbungen — beworben, gewonnen, verloren. Nur für euch sichtbar, unabhängig von anderen.</p>
+      <p className="tg-track-lead">{t("Ein privater Überblick über eure Bewerbungen — beworben, gewonnen, verloren. Nur für euch sichtbar, unabhängig von anderen.")}</p>
 
       <div className="tg-bilanz">
-        <div><span className="tg-b-n">{b.beworben}</span><span className="tg-b-l">beworben</span></div>
-        <div><span className="tg-b-n">{b.gewonnen}</span><span className="tg-b-l">gewonnen</span></div>
-        <div><span className="tg-b-n">{b.verloren}</span><span className="tg-b-l">verloren</span></div>
-        <div><span className="tg-b-n">{b.quote == null ? "—" : b.quote + " %"}</span><span className="tg-b-l">Quote</span></div>
-        <div><span className="tg-b-n">{eur(b.volumen_gewonnen)}</span><span className="tg-b-l">Volumen gewonnen</span></div>
+        <div><span className="tg-b-n">{b.beworben}</span><span className="tg-b-l">{t("beworben")}</span></div>
+        <div><span className="tg-b-n">{b.gewonnen}</span><span className="tg-b-l">{t("gewonnen")}</span></div>
+        <div><span className="tg-b-n">{b.verloren}</span><span className="tg-b-l">{t("verloren")}</span></div>
+        <div><span className="tg-b-n">{b.quote == null ? "—" : b.quote + " %"}</span><span className="tg-b-l">{t("Quote")}</span></div>
+        <div><span className="tg-b-n">{eur(b.volumen_gewonnen)}</span><span className="tg-b-l">{t("Volumen gewonnen")}</span></div>
       </div>
 
       <div className="tg-recip">
-        <span className="tg-ge-t">Wettbewerbsdaten <em>{b.gemeldet} von 3 Meldungen</em></span>
-        <p className="tg-muted">Meldet ihr eure Ergebnisse, seht ihr ab 3 Meldungen die Wettbewerbsmenge eurer Vergabestellen, ab 10 eure Rangverteilung im Marktvergleich. Solange der Markt zu dünn meldet, bleibt dieser Teil leer — euer privates Tracking oben funktioniert trotzdem.</p>
-        <p className="tg-note">Eine Meldung löst nie eine Erfolgsprämie aus. Wer einen Verlust meldet, zahlt nichts; wer gewinnt, zahlt nicht mehr als ohne Meldung.</p>
+        <span className="tg-ge-t">{t("Wettbewerbsdaten")} <em>{t("{n} von 3 Meldungen", { n: b.gemeldet })}</em></span>
+        <p className="tg-muted">{t("Meldet ihr eure Ergebnisse, seht ihr ab 3 Meldungen die Wettbewerbsmenge eurer Vergabestellen, ab 10 eure Rangverteilung im Marktvergleich. Solange der Markt zu dünn meldet, bleibt dieser Teil leer — euer privates Tracking oben funktioniert trotzdem.")}</p>
+        <p className="tg-note">{t("Eine Meldung löst nie eine Erfolgsprämie aus. Wer einen Verlust meldet, zahlt nichts; wer gewinnt, zahlt nicht mehr als ohne Meldung.")}</p>
       </div>
 
       {outcomes.length > 0 && (
@@ -249,9 +260,11 @@ function PrivatesTracking({ outcomes, onChange }: { outcomes: UserOutcome[]; onC
             <li key={o.lead_id}>
               <span>{o.titel || o.lead_id}</span>
               <span className={`tg-res ${o.result || (o.applied ? "open" : "dismiss")}`}>
-                {o.result === "won" ? "gewonnen" : o.result === "lost" ? `verloren${o.rank ? ` · Rang ${o.rank}` : ""}` : o.result === "cancelled" ? "aufgehoben" : o.applied ? "beworben" : "verworfen"}
+                {o.result === "won" ? t("gewonnen")
+                  : o.result === "lost" ? (o.rank ? t("verloren · Rang {n}", { n: o.rank }) : t("verloren"))
+                  : o.result === "cancelled" ? t("aufgehoben") : o.applied ? t("beworben") : t("verworfen")}
               </span>
-              <button className="tg-x" onClick={async () => { await removeOutcome(o.lead_id); await onChange(); }} aria-label="entfernen">×</button>
+              <button className="tg-x" onClick={async () => { await removeOutcome(o.lead_id); await onChange(); }} aria-label={t("entfernen")}>×</button>
             </li>
           ))}
         </ul>
@@ -259,7 +272,7 @@ function PrivatesTracking({ outcomes, onChange }: { outcomes: UserOutcome[]; onC
 
       {form
         ? <OutcomeForm onDone={async () => { setForm(false); await onChange(); }} onCancel={() => setForm(false)} />
-        : <button className="tg-btn" onClick={() => setForm(true)}>+ Ergebnis erfassen</button>}
+        : <button className="tg-btn" onClick={() => setForm(true)}>{t("+ Ergebnis erfassen")}</button>}
     </div>
   );
 }
@@ -268,6 +281,7 @@ const LOSS: { k: LossReason; l: string }[] = [
   { k: "price", l: "Preis" }, { k: "quality", l: "Qualität" }, { k: "formal", l: "Formal" }, { k: "reference", l: "Referenzen" }, { k: "unknown", l: "unbekannt" },
 ];
 function OutcomeForm({ onDone, onCancel }: { onDone: () => void; onCancel: () => void }) {
+  const { t } = useSprache();
   const [titel, setTitel] = useState("");
   const [buyer, setBuyer] = useState("");
   const [wert, setWert] = useState("");
@@ -292,29 +306,29 @@ function OutcomeForm({ onDone, onCancel }: { onDone: () => void; onCancel: () =>
   return (
     <div className="tg-form">
       <div className="tg-form-grid">
-        <input placeholder="Ausschreibung / Titel" value={titel} onChange={(e) => setTitel(e.target.value)} />
-        <input placeholder="Vergabestelle" value={buyer} onChange={(e) => setBuyer(e.target.value)} />
-        <input placeholder="Auftragswert €" value={wert} onChange={(e) => setWert(e.target.value)} />
+        <input placeholder={t("Ausschreibung / Titel")} value={titel} onChange={(e) => setTitel(e.target.value)} />
+        <input placeholder={t("Vergabestelle")} value={buyer} onChange={(e) => setBuyer(e.target.value)} />
+        <input placeholder={t("Auftragswert €")} value={wert} onChange={(e) => setWert(e.target.value)} />
       </div>
       <div className="tg-form-row">
-        <label className="tg-chk"><input type="checkbox" checked={applied} onChange={(e) => setApplied(e.target.checked)} /> beworben</label>
+        <label className="tg-chk"><input type="checkbox" checked={applied} onChange={(e) => setApplied(e.target.checked)} /> {t("beworben")}</label>
         {applied && (
           <div className="tg-pills sm">
             {(["won", "lost", "cancelled"] as OutcomeResult[]).map((r) => (
-              <button key={r} className={result === r ? "on" : ""} onClick={() => setResult(r)}>{r === "won" ? "gewonnen" : r === "lost" ? "verloren" : "aufgehoben"}</button>
+              <button key={r} className={result === r ? "on" : ""} onClick={() => setResult(r)}>{r === "won" ? t("gewonnen") : r === "lost" ? t("verloren") : t("aufgehoben")}</button>
             ))}
           </div>
         )}
       </div>
       {applied && result === "lost" && (
         <div className="tg-form-row">
-          <input className="tg-rank" inputMode="numeric" placeholder="Rang" value={rank} onChange={(e) => setRank(e.target.value)} />
-          <select value={loss} onChange={(e) => setLoss(e.target.value as LossReason)}>{LOSS.map((x) => <option key={x.k} value={x.k}>{x.l}</option>)}</select>
+          <input className="tg-rank" inputMode="numeric" placeholder={t("Rang")} value={rank} onChange={(e) => setRank(e.target.value)} />
+          <select value={loss} onChange={(e) => setLoss(e.target.value as LossReason)}>{LOSS.map((x) => <option key={x.k} value={x.k}>{t(x.l)}</option>)}</select>
         </div>
       )}
       <div className="tg-form-actions">
-        <button className="tg-btn" onClick={save} disabled={saving || !titel.trim()}>{saving ? "Speichert …" : "Meldung speichern"}</button>
-        <button className="tg-btn ghost" onClick={onCancel}>Abbrechen</button>
+        <button className="tg-btn" onClick={save} disabled={saving || !titel.trim()}>{saving ? t("Speichert …") : t("Meldung speichern")}</button>
+        <button className="tg-btn ghost" onClick={onCancel}>{t("Abbrechen")}</button>
       </div>
     </div>
   );

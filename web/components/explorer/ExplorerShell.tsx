@@ -21,6 +21,7 @@ import { syncWatchlist } from "@/lib/supabase/watchlist";
 import { Kalender } from "./Kalender";
 import { Cockpit } from "./Cockpit";
 import { getOrCreateCalendarFeed } from "@/lib/supabase/calendar";
+import { useSprache } from "@/lib/i18n";
 
 type Profile = ReturnType<typeof buildProfile>;
 const PROFILE_KEY = "govisor.profile.v1";
@@ -116,6 +117,7 @@ function clPersist(root: HTMLElement | null) {
 }
 
 export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string }) {
+  const { t } = useSprache();
   const [query, setQuery] = useState("");
   const [tokens, setTokens] = useState<Token[]>([]);
   const [filters, setFilters] = useState<Filters>({
@@ -155,7 +157,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   const [openRadius, setOpenRadius] = useState<number | null>(null);
   const [suggIdx, setSuggIdx] = useState(-1);
   const [tick, setTick] = useState(0);
-  const bump = useCallback(() => setTick((t) => t + 1), []);
+  const bump = useCallback(() => setTick((n) => n + 1), []);
   const [branchenCounts, setBranchenCounts] = useState<Record<string, number>>({});
   const [loading, setLoading] = useState(true);
 
@@ -251,11 +253,11 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // Branchen-Zähler: bei aktiver Textsuche die Treffer je Branche ziehen (nicht die
   // Maximal-Totale) — "Hamm" zeigt im Menü dann z. B. Bau 0 / IT 6 statt 31.141 / 3.883.
   // Suchbegriffe = Live-Eingabe + committete Stichwort-Tokens. Debounced; ohne Suche → Totale.
-  const textTokenKey = tokens.filter((t) => t.type === "text").map((t) => t.value).join(" ");
+  const textTokenKey = tokens.filter((tk) => tk.type === "text").map((tk) => tk.value).join(" ");
   // Aktiver Umkreis-Token (Stadt/PLZ mit Koordinate) → die Branchen-Zähler im Menü auf genau
   // diesen Ort+Radius beziehen (#27), statt globale Totale zu zeigen.
   const ortGeo = tokens.find(
-    (t) => t.type === "ort" && Array.isArray((t as { coord?: number[] }).coord),
+    (tk) => tk.type === "ort" && Array.isArray((tk as { coord?: number[] }).coord),
   ) as { coord?: number[]; radius?: number } | undefined;
   const geoKey = ortGeo?.coord ? `${ortGeo.coord[0]},${ortGeo.coord[1]},${ortGeo.radius || 25}` : "";
   useEffect(() => {
@@ -427,6 +429,9 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     const lang = basis.filter((l) => passt(l) && l.src === "auslauf" && (ende(l) ?? -1) > 183)
       .sort((a, z) => ((ende(a) ?? 9e9) - (ende(z) ?? 9e9)));
 
+    // `titel`/`hinweis` bleiben hier DEUTSCH — sie sind die Übersetzungsschlüssel. Übersetzt
+    // wird an der Render-Stelle (`t(PHASEN[i].titel)`); dieses useMemo hängt nicht an der
+    // Sprache, hier übersetzt wäre sie bis zum nächsten Datenwechsel eingefroren.
     return [
       { key: "jetzt", titel: "Jetzt bewerben", hinweis: "Frist läuft — hier zählt Tempo", rows: jetzt },
       { key: "bald", titel: "Bahnt sich an", hinweis: "angekündigt oder Vertrag endet bald", rows: bald },
@@ -450,8 +455,8 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     if (!vorauswahl || !realProfile || !istAkquise || eigenePhasenwahl) return ohneAwards;
     return ohneAwards.filter((l) => {
       if (l.src !== "f02") return false;
-      const t = (l.frist as { tage?: number } | undefined)?.tage ?? (l.tage as number | null);
-      if (typeof t !== "number" || t < 3) return false;
+      const tage = (l.frist as { tage?: number } | undefined)?.tage ?? (l.tage as number | null);
+      if (typeof tage !== "number" || tage < 3) return false;
       if (l.relevanz !== "hoch") return false;
       const m = l.match as { blocker?: { art: string }[] } | undefined;
       if (m?.blocker?.some((b) => b.art === "buergschaft" || b.art === "ausschluss")) return false;
@@ -479,7 +484,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // Aktive Token je Facette → „on"-Zustand des Kopf-Trichters
   const activeFacets = useMemo(() => {
     const m: Record<string, number> = {};
-    tokens.forEach((t) => { m[t.type] = (m[t.type] || 0) + 1; });
+    tokens.forEach((tk) => { m[tk.type] = (m[tk.type] || 0) + 1; });
     return m;
   }, [tokens]);
 
@@ -510,14 +515,14 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // (nicht vorangestellt), damit der Erst-Eintrag oben bleibt — wie in den Seed-Logs.
   function logEvent(l: (Lead & { log?: unknown[] }) | undefined, kind: string, text: string) {
     if (!l) return;
-    (l.log = (l.log as unknown[]) || []).push({ kind, text, who: "Du", ts: "gerade eben" });
+    (l.log = (l.log as unknown[]) || []).push({ kind, text, who: t("Du"), ts: t("gerade eben") });
   }
   function toggleStar(id: string) {
     const l = CORE.find((x) => x.id === id);
     if (l) {
       l.merk = l.merk ? null : "manuell";
       syncWatchlist(id, !!l.merk);
-      logEvent(l, "watch", l.merk ? "Zur Merkliste hinzugefügt" : "Von der Merkliste entfernt");
+      logEvent(l, "watch", l.merk ? t("Zur Merkliste hinzugefügt") : t("Von der Merkliste entfernt"));
     }
     bump();
   }
@@ -537,7 +542,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     const l = CORE.find((x) => x.id === id) as (Lead & { status?: string; beschreibung?: string; log?: unknown[] }) | undefined;
     if (l && l.status === "ungesichtet") l.status = "gesichtet";
     // Verlauf nie ganz leer: beim ERSTEN Öffnen einen Auftakt-Eintrag setzen (length-Guard → einmalig).
-    if (l && (!l.log || (l.log as unknown[]).length === 0)) logEvent(l, "create", "Lead in goVisor geöffnet");
+    if (l && (!l.log || (l.log as unknown[]).length === 0)) logEvent(l, "create", t("Lead in goVisor geöffnet"));
     setActiveId(id);
     setActiveTab("uebersicht");
     setMode("read");
@@ -572,7 +577,9 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     if (!l) return;
     l.userStatus = l.userStatus === k ? null : k;
     const WFLABEL: Record<string, string> = { interessant: "Interessant", pruefung: "In Prüfung", fragen: "Offene Fragen", verworfen: "Verworfen" };
-    logEvent(l, "status", l.userStatus ? `Status → ${WFLABEL[k] || k}` : "Status zurückgesetzt");
+    logEvent(l, "status", l.userStatus
+      ? t("Status → {status}", { status: t(WFLABEL[k] || k) })
+      : t("Status zurückgesetzt"));
     bump();
   }
   function toggleExpand() { setMode((m) => (m === "full" ? "read" : "full")); }
@@ -608,7 +615,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         }
         const btn = el as HTMLButtonElement;
         const orig = btn.textContent;
-        btn.classList.add("ok"); btn.textContent = "Gespeichert ✓";
+        btn.classList.add("ok"); btn.textContent = t("Gespeichert ✓");
         setTimeout(() => { btn.classList.remove("ok"); btn.textContent = orig; }, 1500);
         break;
       }
@@ -643,7 +650,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         const text = (ta?.value.trim()) || q?.textContent || "";
         if (text) navigator.clipboard?.writeText(text).catch(() => {});
         const b = el as HTMLButtonElement; const o = b.textContent;
-        b.textContent = "Kopiert"; setTimeout(() => { b.textContent = o; }, 1200);
+        b.textContent = t("Kopiert"); setTimeout(() => { b.textContent = o; }, 1200);
         break;
       }
       case "cljump": {
@@ -658,7 +665,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
           root.querySelectorAll<HTMLDetailsElement>("details.grp").forEach((g) => {
             if (anyOpen) g.removeAttribute("open"); else g.setAttribute("open", "");
           });
-          (el as HTMLElement).textContent = anyOpen ? "Alle aufklappen" : "Alle zuklappen";
+          (el as HTMLElement).textContent = anyOpen ? t("Alle aufklappen") : t("Alle zuklappen");
         }
         break;
       }
@@ -669,7 +676,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
       case "buyerleads": {
         const l = CORE.find((x) => x.id === activeId) as (Lead & { buyer?: string; buyerShort?: string }) | undefined;
         const label = l?.buyer || value;
-        setTokens((ts) => [...ts.filter((t) => t.type !== "buyer"), { type: "buyer", value, label }]);
+        setTokens((ts) => [...ts.filter((tk) => tk.type !== "buyer"), { type: "buyer", value, label }]);
         setMode("browse"); setActiveId(null);
         break;
       }
@@ -684,8 +691,8 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         const body = ta?.value.trim();
         if (body) {
           const l = CORE.find((x) => x.id === activeId) as (Lead & { comments?: unknown[] }) | undefined;
-          l?.comments?.push({ author: "Du", initials: "DK", ts: "gerade eben", body });
-          logEvent(l, "analyze", "Notiz für das Team ergänzt");
+          l?.comments?.push({ author: t("Du"), initials: "DK", ts: t("gerade eben"), body });
+          logEvent(l, "analyze", t("Notiz für das Team ergänzt"));
           bump();
         }
         break;
@@ -699,7 +706,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         input.onchange = async () => {
           const file = input.files?.[0];
           if (!file) return;
-          if (statusEl) statusEl.textContent = "Lade hoch und analysiere … (kann bis ~30 s dauern)";
+          if (statusEl) statusEl.textContent = t("Lade hoch und analysiere … (kann bis ~30 s dauern)");
           const fd = new FormData();
           fd.append("file", file);
           const lb = (CORE.find((x) => x.id === value) as (Lead & { buyer?: string }) | undefined)?.buyer || "";
@@ -707,17 +714,17 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
             const r = await fetch(`/api/lead-docs?id=${encodeURIComponent(value)}&buyer=${encodeURIComponent(lb)}`,
               { method: "POST", body: fd });
             const d = await r.json();
-            if (!r.ok || d.error) { if (statusEl) statusEl.textContent = "Fehler: " + (d.error || r.status); return; }
+            if (!r.ok || d.error) { if (statusEl) statusEl.textContent = t("Fehler: {grund}", { grund: d.error || r.status }); return; }
             const l = CORE.find((x) => x.id === value) as (Lead & { log?: unknown[] }) | undefined;
-            if (l) { Object.assign(l, d); logEvent(l, "analyze", "Vergabeunterlagen hochgeladen & analysiert"); }
+            if (l) { Object.assign(l, d); logEvent(l, "analyze", t("Vergabeunterlagen hochgeladen & analysiert")); }
             // §5-4: Käufer nicht in den Unterlagen gefunden → Rückfrage (Analyse trotzdem gezeigt).
             const mm = (d as { leadMismatch?: { expected_buyer?: string } }).leadMismatch;
             if (statusEl) statusEl.innerHTML = mm
-              ? `<span style="color:#b91c1c">⚠ Diese Unterlagen erwähnen den Auftraggeber „${(mm.expected_buyer || "").replace(/[<>&]/g, "")}" nicht — gehören sie wirklich zu diesem Lead? Die Analyse ist unten trotzdem angezeigt.</span>`
+              ? `<span style="color:#b91c1c">${t("⚠ Diese Unterlagen erwähnen den Auftraggeber „{buyer}\" nicht — gehören sie wirklich zu diesem Lead? Die Analyse ist unten trotzdem angezeigt.", { buyer: (mm.expected_buyer || "").replace(/[<>&]/g, "") })}</span>`
               : "";
             bump();
           } catch {
-            if (statusEl) statusEl.textContent = "Upload fehlgeschlagen.";
+            if (statusEl) statusEl.textContent = t("Upload fehlgeschlagen.");
           }
         };
         input.click();
@@ -794,7 +801,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     else if (pick === "raw") tok = classifyQuery(query) as Token;
     else if (suggIdx >= 0 && suggIdx < suggestions.length) tok = suggestions[suggIdx] as Token;
     else tok = classifyQuery(query) as Token;
-    if (tok && !tokens.some((t) => t.type === tok!.type && t.value === tok!.value)) {
+    if (tok && !tokens.some((x) => x.type === tok!.type && x.value === tok!.value)) {
       // coord/radius mitnehmen — trägt die echte PLZ-Umkreissuche (sonst Token ohne Geo).
       setTokens((ts) => [...ts, { type: tok!.type, value: tok!.value, label: tok!.label,
         ...(tok!.coord ? { coord: tok!.coord } : {}), ...(tok!.radius ? { radius: tok!.radius } : {}) }]);
@@ -808,18 +815,18 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   }
   function toggleFacetToken(name: string, v: string, label: string) {
     setTokens((ts) => {
-      const i = ts.findIndex((t) => t.type === name && t.value === v);
+      const i = ts.findIndex((tk) => tk.type === name && tk.value === v);
       return i >= 0 ? ts.filter((_, k) => k !== i) : [...ts, { type: name, value: v, label }];
     });
   }
   function togglePlace(region: string, label: string) {
     setTokens((ts) => {
-      const i = ts.findIndex((t) => t.type === "ort" && t.value === region);
+      const i = ts.findIndex((tk) => tk.type === "ort" && tk.value === region);
       return i >= 0 ? ts.filter((_, k) => k !== i) : [...ts, { type: "ort", value: region, label }];
     });
   }
   function setRadius(i: number, km: number) {
-    setTokens((ts) => ts.map((t, k) => (k === i ? { ...t, radius: km || null } : t)));
+    setTokens((ts) => ts.map((tk, k) => (k === i ? { ...tk, radius: km || null } : tk)));
     setOpenRadius(null);
   }
 
@@ -896,10 +903,10 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // Klick außerhalb schließt Popovers
   useEffect(() => {
     function onDown(e: MouseEvent) {
-      const t = e.target as HTMLElement;
-      if (!t.closest(".colcfg")) setColMenuOpen(false);
-      if (!t.closest(".has-filter") && !t.closest(".headpop")) setHeadFilter(null);
-      if (!t.closest(".ftoken")) setOpenRadius(null);
+      const ziel = e.target as HTMLElement;
+      if (!ziel.closest(".colcfg")) setColMenuOpen(false);
+      if (!ziel.closest(".has-filter") && !ziel.closest(".headpop")) setHeadFilter(null);
+      if (!ziel.closest(".ftoken")) setOpenRadius(null);
     }
     document.addEventListener("mousedown", onDown);
     return () => document.removeEventListener("mousedown", onDown);
@@ -930,14 +937,16 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
             <div className="colcfg">
               <button className={`colbtn ${realProfile ? "colbtn-on" : ""}`} type="button"
                 onClick={() => router.push("/onboarding")}
-                title={realProfile ? `${realProfile.firma || "Profil"} — ansehen/bearbeiten` : "Profil einrichten — schaltet echte Relevanz frei"}>
+                title={realProfile
+                  ? t("{firma} — ansehen/bearbeiten", { firma: realProfile.firma || t("Profil") })
+                  : t("Profil einrichten — schaltet echte Relevanz frei")}>
                 <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 12a4 4 0 100-8 4 4 0 000 8ZM4 21a8 8 0 0116 0" />
                 </svg>
                 {/* Kein Zeichen-Limit: Namen sind median 24 Zeichen, aber der längste im
                     Bestand hat 400 (eine ARGE-Auflistung). Die Breite begrenzt der Platz
                     (CSS max-width + Ellipse), der volle Name steht im title. */}
-                <span className="pb-name">{realProfile ? (realProfile.firma || "Profil") : "Profil einrichten"}</span>
+                <span className="pb-name">{realProfile ? (realProfile.firma || t("Profil")) : t("Profil einrichten")}</span>
               </button>
             </div>
             <div className="searchwrap">
@@ -951,8 +960,8 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                   value={query}
                   onChange={(e) => { setQuery(e.target.value); setSuggIdx(-1); }}
                   onKeyDown={onSearchKey}
-                  placeholder="Suchen — Ort, PLZ, Auftraggeber, Stichwort"
-                  aria-label="Suchen"
+                  placeholder={t("Suchen — Ort, PLZ, Auftraggeber, Stichwort")}
+                  aria-label={t("Suchen")}
                   autoComplete="off"
                 />
                 <kbd className="tkbd">/</kbd>
@@ -960,11 +969,11 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
               <Suggestions query={query} list={suggestions as never} suggIdx={suggIdx} onPick={commitSearch} />
             </div>
             <div className="colcfg">
-              <button className="colbtn" type="button" onClick={() => setPanelOpen(true)} title="Detailfilter">
+              <button className="colbtn" type="button" onClick={() => setPanelOpen(true)} title={t("Detailfilter")}>
                 <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                   <path d="M3 5h18l-7 8v5l-4 2v-7L3 5Z" />
                 </svg>
-                Filter{advCount(adv) ? <span className="filt-n">{advCount(adv)}</span> : null}
+                {t("Filter")}{advCount(adv) ? <span className="filt-n">{advCount(adv)}</span> : null}
               </button>
             </div>
             <div className="colcfg">
@@ -972,7 +981,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                 <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth={2}>
                   <path d="M3 5h18M3 12h18M3 19h18" />
                 </svg>
-                Spalten
+                {t("Spalten")}
               </button>
               <ColumnMenu open={colMenuOpen} onToggleCol={toggleCol} />
             </div>
@@ -981,7 +990,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
               <span className="tcount">
                 {/* Nenner auf DERSELBEN Grundmenge wie die Anzeige — in der
                     Zuschlags-Sicht sind das die Zuschläge, sonst die offenen. */}
-                <b>{rows.length}</b> von <span>{zuschlagsSicht ? alleRows.length : alleRows.filter((l) => l.src !== "award").length}</span>
+                <b>{rows.length}</b> {t("von")} <span>{zuschlagsSicht ? alleRows.length : alleRows.filter((l) => l.src !== "award").length}</span>
               </span>
             </div>
           </div>
@@ -1023,9 +1032,9 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
           <>
           <section className="tablewrap">
             {filters.gemerkt && (
-              <div className="wl-toggle" role="tablist" aria-label="Merkliste-Ansicht">
-                <button role="tab" aria-selected={!kalMode} className={!kalMode ? "on" : ""} onClick={() => setKalMode(false)}>Cockpit</button>
-                <button role="tab" aria-selected={kalMode} className={kalMode ? "on" : ""} onClick={() => setKalMode(true)}>Termine</button>
+              <div className="wl-toggle" role="tablist" aria-label={t("Merkliste-Ansicht")}>
+                <button role="tab" aria-selected={!kalMode} className={!kalMode ? "on" : ""} onClick={() => setKalMode(false)}>{t("Cockpit")}</button>
+                <button role="tab" aria-selected={kalMode} className={kalMode ? "on" : ""} onClick={() => setKalMode(true)}>{t("Termine")}</button>
               </div>
             )}
             {filters.gemerkt && kalMode ? (
@@ -1070,14 +1079,16 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                 return (
                   <div className="aw-alert">
                     <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 8-3 8h18s-3-1-3-8" /><path d="M13.7 21a2 2 0 01-3.4 0" /></svg>
-                    <div><b>{fresh.length} {fresh.length === 1 ? "neuer Zuschlag" : "neue Zuschläge"} {realProfile ? "in eurem Feld" : "im Grundraum"}</b>
-                      {winners.length ? ` — ${winners.join(" und ")}. ` : " — "}Wer gerade gewonnen hat, kauft jetzt ein.</div>
+                    <div><b>{fresh.length === 1
+                        ? (realProfile ? t("{n} neuer Zuschlag in eurem Feld", { n: fresh.length }) : t("{n} neuer Zuschlag im Grundraum", { n: fresh.length }))
+                        : (realProfile ? t("{n} neue Zuschläge in eurem Feld", { n: fresh.length }) : t("{n} neue Zuschläge im Grundraum", { n: fresh.length }))}</b>
+                      {winners.length ? ` — ${winners.join(` ${t("und")} `)}. ` : " — "}{t("Wer gerade gewonnen hat, kauft jetzt ein.")}</div>
                     {/* Zuschläge sind nicht mehr bewerbbar und stehen deshalb nicht in der Akquise-Liste.
                         Hier — wo sie angekündigt werden — führt ein Klick direkt zu ihnen. */}
                     <button className="aw-alert-go" onClick={() => setAdv((a) => ({ ...a, phases: ["award"] }))}>
-                      Zuschläge ansehen
+                      {t("Zuschläge ansehen")}
                     </button>
-                    <button className="aw-alert-x" onClick={() => setAwAlertOff(true)} aria-label="Ausblenden">✕</button>
+                    <button className="aw-alert-x" onClick={() => setAwAlertOff(true)} aria-label={t("Ausblenden")}>✕</button>
                   </div>
                 );
               })()}
@@ -1097,21 +1108,21 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                       {phasenOffen < PHASEN.length ? (
                         <button className="pf-next" onClick={() => setPhasenOffen(phasenOffen + 1)}>
                           <span className="pf-pfeil">▾</span>
-                          <span className="pf-k">Auch anzeigen</span>
-                          <b>{PHASEN[phasenOffen].titel}</b>
+                          <span className="pf-k">{t("Auch anzeigen")}</span>
+                          <b>{t(PHASEN[phasenOffen].titel)}</b>
                           <span className="pf-n">{PHASEN[phasenOffen].rows.length}</span>
-                          <span className="pf-h">{PHASEN[phasenOffen].hinweis}</span>
+                          <span className="pf-h">{t(PHASEN[phasenOffen].hinweis)}</span>
                         </button>
                       ) : (
                         <button className="pf-next" onClick={() => setPhasenOffen(1)}>
                           <span className="pf-pfeil">▴</span>
-                          <span className="pf-k">Wieder einklappen</span>
-                          <b>nur {PHASEN[0].titel}</b>
+                          <span className="pf-k">{t("Wieder einklappen")}</span>
+                          <b>{t("nur {phase}", { phase: t(PHASEN[0].titel) })}</b>
                           <span className="pf-n">{PHASEN[0].rows.length}</span>
                         </button>
                       )}
                       <button className="pf-alle" onClick={() => setVorauswahl(false)}>
-                        Alle {alleRows.filter((l) => l.src !== "award").length.toLocaleString("de-DE")} Ausschreibungen des Grundraums
+                        {t("Alle {n} Ausschreibungen des Grundraums", { n: alleRows.filter((l) => l.src !== "award").length.toLocaleString("de-DE") })}
                       </button>
                     </div>
                   ) : (
@@ -1119,7 +1130,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                   <div className={`vor-band ${vorauswahl ? "" : "off"}`}>
                     {vorauswahl ? (
                       <>
-                        Das ist alles, was zu euch passt. <span className="vor-gr">{alleRows.filter((l) => l.src !== "award").length.toLocaleString("de-DE")} Ausschreibungen im Grundraum {(BRANCHEN as Record<string, string>)[aktiveBranche]}</span>
+                        {t("Das ist alles, was zu euch passt.")} <span className="vor-gr">{t("{n} Ausschreibungen im Grundraum {branche}", { n: alleRows.filter((l) => l.src !== "award").length.toLocaleString("de-DE"), branche: t((BRANCHEN as Record<string, string>)[aktiveBranche]) })}</span>
                         {/* Die Auswahl-Kriterien stehen jetzt in den Abschnitts-Zeilen der Liste,
                             wo sie gelten. Hier bleibt nur die Region — die sieht man sonst nirgends. */}
                         <span className="vor-x">
@@ -1127,16 +1138,16 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                             const p = realProfile as unknown as { regionLabels?: string[]; regions?: string[] } | null;
                             if (!p?.regions?.length) return null;
                             const wo = (p.regionLabels?.length ? p.regionLabels : p.regions).slice(0, 3).join(", ");
-                            return `gefiltert auf ${wo} — aus euren Zuschlägen abgeleitet`;
+                            return t("gefiltert auf {wo} — aus euren Zuschlägen abgeleitet", { wo });
                           })()}
                         </span>
-                        <button className="vor-btn" onClick={() => setVorauswahl(false)}>Alle {alleRows.filter((l) => l.src !== "award").length.toLocaleString("de-DE")} anzeigen</button>
+                        <button className="vor-btn" onClick={() => setVorauswahl(false)}>{t("Alle {n} anzeigen", { n: alleRows.filter((l) => l.src !== "award").length.toLocaleString("de-DE") })}</button>
                       </>
                     ) : (
                       <>
-                        Alle <b>{rows.length.toLocaleString("de-DE")}</b> Ausschreibungen in {(BRANCHEN as Record<string, string>)[aktiveBranche]}
-                        <span className="vor-x">ungefiltert — auch Ankündigungen und weniger passende</span>
-                        <button className="vor-btn" onClick={() => setVorauswahl(true)}>Wieder vorsortieren</button>
+                        {t("Alle")} <b>{rows.length.toLocaleString("de-DE")}</b> {t("Ausschreibungen in {branche}", { branche: t((BRANCHEN as Record<string, string>)[aktiveBranche]) })}
+                        <span className="vor-x">{t("ungefiltert — auch Ankündigungen und weniger passende")}</span>
+                        <button className="vor-btn" onClick={() => setVorauswahl(true)}>{t("Wieder vorsortieren")}</button>
                       </>
                     )}
                   </div>
