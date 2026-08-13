@@ -2855,7 +2855,14 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
         string_agg(DISTINCT CASE WHEN path = 'simap/documentsLanguage'
              THEN lower(value) END, ',')                                AS documents_languages
       FROM read_parquet('{A}', hive_partitioning=1)
-      WHERE path ILIKE '%RegulatoryDomain'
+      -- ⚠ Diese WHERE-Liste ist eine POSITIVLISTE. Wer oben eine Spalte ergaenzt, muss den
+      -- Pfad hier eintragen — sonst liest das CTE ihn gar nicht erst und die Spalte kommt
+      -- ueberall als NULL heraus, ohne Fehler und ohne roten Test. Genau das passierte am
+      -- 2026-08-13 mit den vier simap-Unterlagen-Feldern: Spalten im Parquet vorhanden,
+      -- Werte durchgehend leer.
+      WHERE path LIKE 'simap/documents%'
+         OR path = 'simap/hasProjectDocuments'
+         OR path ILIKE '%RegulatoryDomain'
          OR path ILIKE '%ProcurementLegislationDocumentReference.ID'
          OR path ILIKE '%ContractingPartyType.PartyTypeCode'
          OR path ILIKE '%CODIF_DATA.AA_AUTHORITY_TYPE'
@@ -3012,6 +3019,17 @@ def build_lead_export(cfg: Config, country: str = "DE"):
             -- `portal_url` (in lead_detail) ist zu 44,5 % / bei DÖE zu 0 % gefuellt —
             -- dieses Feld deckt 96,8 % der OFFENEN Leads.
             ctx.documents_url,
+            -- CH/simap: WIE kommt man an die Unterlagen? `documents_url` sagt nur, DASS es
+            -- einen Link gibt. Diese vier beantworten die Frage davor — gemessen ueber 11.460
+            -- simap-Publikationen: 4.452 `platform` (simap haelt sie selbst), 238
+            -- `external_url`, 225 `on_request` (nur per E-Mail), 5 `postal`.
+            -- Ausserhalb der Schweiz NULL bzw. false: die Felder stammen aus simap-Attributen,
+            -- TED und DOeE kennen sie nicht. Das ist kein Mangel, sondern die ehrliche Aussage
+            -- „unbekannt" — nicht „keine Unterlagen".
+            ctx.documents_source,
+            coalesce(ctx.has_documents, false)         AS has_documents,
+            coalesce(ctx.documents_paid, false)        AS documents_paid,
+            ctx.documents_languages,
             -- 1.2 bundesweit erbringbar → darf in der Umkreissuche nie herausfallen
             coalesce(ctx.is_nationwide, false)         AS is_nationwide,
             -- #15 Weg A — strukturierte Anforderungen (Anforderungs-Check)
