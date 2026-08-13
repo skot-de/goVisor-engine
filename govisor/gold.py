@@ -2285,6 +2285,13 @@ def build_lead_deadline(cfg: Config, country: str = "DE"):
     N = f"'{cfg.silver_table_glob('notices', country)}'"
     out = (g / "lead_deadline.parquet").as_posix()
     con = duckdb.connect(); con.execute("SET threads=4")
+    # Anreicherung ist OPTIONAL. Fehlt `notice_enrichment.parquet`, liefert die Quelle
+    # eine leere Menge und der Wasserfall verhaelt sich exakt wie vorher — der Bauer
+    # bekommt keine harte Abhaengigkeit von einem Schritt, den es erst seit heute gibt.
+    _anr = cfg.gold_dir / country / "notice_enrichment.parquet"
+    ANRQ = (f"read_parquet('{_anr.as_posix()}')" if _anr.exists()
+            else "(SELECT NULL::VARCHAR AS notice_id, NULL::VARCHAR AS feld,"
+                 " NULL::VARCHAR AS wert WHERE false)")
     con.execute(f"""
         COPY (
           WITH win AS (
@@ -2300,15 +2307,27 @@ def build_lead_deadline(cfg: Config, country: str = "DE"):
             WHERE submission_deadline IS NOT NULL AND publication_date IS NOT NULL
               AND datediff('day', publication_date, submission_deadline) BETWEEN 0 AND 365)
           SELECT n.notice_id,
+            -- WASSERFALL: eigene Frist → uebernommene aus einer Dublette → geschaetzt.
+            -- Die mittlere Stufe ist neu (2026-08-13). `notice_enrichment` traegt Fristen,
+            -- die ein anderer Satz DESSELBEN Verfahrens hat und dieser nicht — belegt ueber
+            -- identische Vergabestelle UND Titel-Enthaltung >=0,8 (Stufe `kaeufer_und_titel`,
+            -- die einzige, aus der angereichert wird). Ohne sie waeren diese Fristen bekannt
+            -- und wuerden trotzdem geschaetzt.
             CASE WHEN n.submission_deadline IS NOT NULL THEN n.submission_deadline::DATE
+                 WHEN anr.wert IS NOT NULL THEN try_cast(anr.wert AS DATE)
                  ELSE (n.publication_date + (CAST(coalesce(win.m, gm.m) AS INT) * INTERVAL 1 DAY))::DATE
             END AS deadline_date,
+            -- Eigene Herkunftsstufe, nicht als 'echt' getarnt: die Frist ist belegt, stammt
+            -- aber aus einem anderen Satz. Wer sie benutzt, soll das sehen koennen.
             CASE WHEN n.submission_deadline IS NOT NULL THEN 'echt'
+                 WHEN anr.wert IS NOT NULL THEN 'echt_aus_dublette'
                  WHEN win.m IS NOT NULL THEN 'geschaetzt_cpv'
                  ELSE 'geschaetzt_global' END AS deadline_source,
             CAST(coalesce(win.m, gm.m) AS INT) AS est_window_days
           FROM read_parquet({N}, hive_partitioning=1) n
           LEFT JOIN win ON win.cpv4 = substr(n.cpv_main,1,4)
+          LEFT JOIN (SELECT notice_id, min(wert) AS wert FROM {ANRQ}
+                     WHERE feld='submission_deadline' GROUP BY 1) anr USING (notice_id)
           CROSS JOIN gm
           -- Echte Frist braucht KEIN publication_date; nur die Schätzung tut es.
           -- (Bug-Fix: sonst fielen 4.360 offene cn mit echtem Datum ohne pub raus.)

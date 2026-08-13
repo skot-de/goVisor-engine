@@ -57,7 +57,18 @@ SEED_WORTE = 3             # Kandidaten über die N seltensten indizierten Wört
 
 # Wer gewinnt, wenn zwei Sätze dasselbe Verfahren beschreiben? Die reichere Quelle.
 # TED trägt CPV, NUTS, Lose und Werte; nationale Portale meist nur die Trefferzeile.
-# Der Master ist damit derjenige, an den angereichert wird — nicht der ältere.
+# Der Master ist damit derjenige, an den angereichert wird.
+#
+# ⚠ FELD-REICHTUM IST NICHT AKTUALITÄT. Gemessen 2026-08-13: von 70 Leads, die man beim
+# Ausschluss von Dubletten verlieren würde, haben **64 einen Master, der selbst kein Lead
+# ist** — bei 61 davon ist die Frist des Masters ABGELAUFEN. Beispiel: TED führt
+# „Universitätsklinikum Tübingen, Anbau Frauenklinik" mit Frist 30.06., die DÖE-Fassung
+# derselben Vergabe hat eine laufende. Bei wiederholt ausgeschriebenen Vergaben ist der
+# SPÄTERE Satz der gültige, und das ist oft die nationale Quelle.
+#
+# Diese Rangfolge taugt deshalb NUR für die Anreicherungsrichtung (wohin fehlende Felder
+# fliessen), NICHT als Entscheidung, welcher Satz ein Lead wird. Ein Ausschluss von
+# Dubletten auf ihrer Basis haette 6 echte Dubletten entfernt und 64 gueltige Leads mit.
 QUELLEN_RANG = {"eforms": 0, "legacy": 1, "ojs": 2, "text": 3,
                 "doe": 4, "simap": 4, "atverg": 4, "dtvp": 5}
 
