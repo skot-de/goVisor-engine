@@ -75,8 +75,13 @@ def ernte() -> tuple[dict[str, list[str]], Counter]:
         # Fortschritt nicht: `t("Frist")` bzw. `${tk("Frist")}` sind erledigt, der deutsche
         # Text steht aber weiterhin im Quelltext. Ohne diesen Schritt bleibt die Zahl
         # konstant, egal wie viel uebersetzt ist.
-        s = re.sub(r'\bt[k]?\(\s*"(?:[^"\\\\]|\\\\.)*"\s*\)', 'ERLEDIGT', s)
-        s = re.sub(r"\bt[k]?\(\s*'(?:[^'\\\\]|\\\\.)*'\s*\)", 'ERLEDIGT', s)
+        # Zwei Fehler, die die Restzahl aufgeblaeht haben (von einem Agenten gefunden):
+        #  · `[^"\\\\]` maskierte Escapes falsch — `t("Er sagte \\"ja\\"")` galt als offen.
+        #  · Das schliessende `)` direkt hinter dem String schloss die Platzhalter-Form aus —
+        #    `t("Noch {n} Tage", { n: 5 })` galt ebenfalls als offen.
+        # Beides gezaehlt hiess: erledigte Arbeit als Rueckstand melden.
+        s = re.sub(r'\bt[k]?\(\s*"(?:[^"\\]|\\.)*"\s*[,)]', 'ERLEDIGT)', s)
+        s = re.sub(r"\bt[k]?\(\s*'(?:[^'\\]|\\.)*'\s*[,)]", 'ERLEDIGT)', s)
         # 1) String-Literale ('…', "…", `…`)
         for m in re.finditer(r'"((?:[^"\\\n]|\\.)*)"|\'((?:[^\'\\\n]|\\.)*)\'', s):
             roh = m.group(1) if m.group(1) is not None else m.group(2)

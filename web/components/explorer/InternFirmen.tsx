@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
+import { useSprache } from "@/lib/i18n";
 
 /* INTERNES Vertriebstool — Firmen nach Sitz/Name suchen → Schmerz-Signale + Ansprache-Details.
  * Enthält Kontaktdaten; die API blockiert Production. Reine Sales-Sicht (kein Kundenprodukt). */
@@ -16,6 +17,9 @@ type Firma = {
 };
 
 // Vertriebsziel-Segmente A–G (govisor-vertriebsziele-spec.md), Reihenfolge = Ansprache-Priorität §8
+// `tab`/`title` bleiben hier deutsche Literale — sie sind die Übersetzungsschlüssel und gehen
+// erst an der Render-Stelle durch `t()`. Ein `t()` in der Modul-Konstante fröre die Sprache
+// beim Import ein.
 const SEGS: { key: string; tab: string; title: string }[] = [
   { key: "F", tab: "Frische Verlierer", title: "Verlust ≤6 Monate — akut, kürzestes Zeitfenster" },
   { key: "E", tab: "Verteidiger", title: "Bestand läuft in 6–18 Monaten aus (≥250k)" },
@@ -37,10 +41,12 @@ type Detail = { id: string; name: string; expiring: Exp[]; losses: Loss[]; recen
 // Vertragstitel als Link zur TED-Bekanntmachung (extern → neuer Tab) + Vertragsart-Label.
 // artcat (rahmen/einmal/neutral) steuert die Farbe — Bedeutung erklärt die Legende unten.
 function Titel({ text, url, art, artcat }: { text: string | null; url?: string | null; art?: string | null; artcat?: string | null }) {
-  const t = text || "(ohne Titel)";
+  const { t } = useSprache();
+  // NICHT `t` nennen — das würde die Übersetzungsfunktion beschatten.
+  const txt = text || t("(ohne Titel)");
   return (
     <>
-      {url ? <a className="in-tlink" href={url} target="_blank" rel="noreferrer">{t} ↗</a> : t}
+      {url ? <a className="in-tlink" href={url} target="_blank" rel="noreferrer">{txt} ↗</a> : txt}
       {art && <span className={`in-art ${artcat || "neutral"}`}>{art}</span>}
     </>
   );
@@ -52,6 +58,7 @@ const eur = (v: number | null | undefined) =>
   : nf.format(Math.round(v)) + " €";
 
 export function InternFirmen() {
+  const { t } = useSprache();
   const [plz, setPlz] = useState("");
   const [radius, setRadius] = useState(""); // Umkreis km (nur mit PLZ)
   const [ort, setOrt] = useState("");
@@ -118,6 +125,8 @@ export function InternFirmen() {
     } catch { setLanding((p) => ({ ...p, [id]: {} })); }
   }
 
+  // Fehlertexte bleiben deutsche Literale (= Schlüssel) und werden erst beim Rendern
+  // übersetzt — sonst hinge die Meldung an der Sprache zum Zeitpunkt des Fehlers fest.
   const runSearch = useCallback(async (p: string, o: string, n: string, rad: string) => {
     if (!p && !o && !n) return;
     setLoading(true); setErr(null); setFirmen(null); setOpenId(null); setDetail(null);
@@ -226,7 +235,9 @@ export function InternFirmen() {
         : (b.metric || 0) - (a.metric || 0))
     : visible;
 
-  // (2) Pitch-Zeile: kopierfertiger Einzeiler aus den Schmerz-Signalen der Firma
+  // (2) Pitch-Zeile: kopierfertiger Einzeiler aus den Schmerz-Signalen der Firma.
+  // BEWUSST deutsch: das ist kein Oberflächentext, sondern der Anschreibe-Entwurf an eine
+  // deutsche Vergabefirma — er wird kopiert und versendet, nicht angezeigt.
   function pitchFor(f: Firma, d: Detail | null): string {
     const parts: string[] = [];
     if (f.s2.n > 0) parts.push(`in den nächsten Monaten laufen ${f.s2.n} Verträge (~${eur(f.s2.vol)})${f.s2.naechstes ? ` bis ${f.s2.naechstes}` : ""} aus`);
@@ -244,7 +255,10 @@ export function InternFirmen() {
   }
   const [pitchCopied, setPitchCopied] = useState<string | null>(null);
 
-  // (5) CSV-Export der aktuell sichtbaren Trefferliste (inkl. Notizen + Status)
+  // (5) CSV-Export der aktuell sichtbaren Trefferliste (inkl. Notizen + Status).
+  // Kopfzeile + Statuswerte bleiben deutsch: das ist ein Datenformat für die interne
+  // Weiterverarbeitung, keine Oberfläche — eine mitwandernde Spaltenbenennung bräche jede
+  // Auswertung, die auf den Namen aufsetzt.
   function exportCsv() {
     const segTab = segMode ? (SEGS.find((s) => s.key === segMode)?.tab || segMode) : "";
     const head = ["Firma", "PLZ", "Ort", "Segment", "Signal", "weitere_Segmente", "Rahmen_Quote_%",
@@ -268,39 +282,38 @@ export function InternFirmen() {
   return (
     <div className="in-wrap">
       <div className="in-head">
-        <h1>Firmen-Radar <span className="in-tag">intern</span></h1>
-        <p>Zielfirmen nach Sitz oder Name — mit Schmerz-Signalen (verlorene &amp; auslaufende Verträge) für die Erstansprache.
-          Enthält Kontaktdaten aus öffentlichen Bekanntmachungen; nur intern.</p>
+        <h1>{t("Firmen-Radar")} <span className="in-tag">{t("intern")}</span></h1>
+        <p>{t("Zielfirmen nach Sitz oder Name — mit Schmerz-Signalen (verlorene & auslaufende Verträge) für die Erstansprache. Enthält Kontaktdaten aus öffentlichen Bekanntmachungen; nur intern.")}</p>
       </div>
 
       <form className="in-search" onSubmit={search}>
-        <input placeholder="PLZ (z. B. 59071)" value={plz} onChange={(e) => setPlz(e.target.value)} inputMode="numeric" />
-        <select className="in-radius" value={radius} onChange={(e) => setRadius(e.target.value)} disabled={!plz} title="Umkreis um die PLZ">
-          <option value="">exakt</option>
+        <input placeholder={t("PLZ (z. B. 59071)")} value={plz} onChange={(e) => setPlz(e.target.value)} inputMode="numeric" />
+        <select className="in-radius" value={radius} onChange={(e) => setRadius(e.target.value)} disabled={!plz} title={t("Umkreis um die PLZ")}>
+          <option value="">{t("exakt")}</option>
           <option value="5">+5 km</option>
           <option value="10">+10 km</option>
           <option value="25">+25 km</option>
           <option value="50">+50 km</option>
         </select>
-        <input placeholder="Ort (z. B. Hamm)" value={ort} onChange={(e) => setOrt(e.target.value)} />
-        <input placeholder="Firmenname (z. B. Klostermann)" value={name} onChange={(e) => setName(e.target.value)} />
-        <button type="submit" disabled={loading}>{loading ? "Suche …" : "Suchen"}</button>
+        <input placeholder={t("Ort (z. B. Hamm)")} value={ort} onChange={(e) => setOrt(e.target.value)} />
+        <input placeholder={t("Firmenname (z. B. Klostermann)")} value={name} onChange={(e) => setName(e.target.value)} />
+        <button type="submit" disabled={loading}>{loading ? t("Suche …") : t("Suchen")}</button>
       </form>
 
       <div className="in-nw">
-        <span className="in-nw-label">Vertriebsziele (deutschlandweit):</span>
+        <span className="in-nw-label">{t("Vertriebsziele (deutschlandweit):")}</span>
         {SEGS.map((s) => (
-          <button key={s.key} className={`in-nw-btn ${segMode === s.key ? "on" : ""}`} title={s.title} onClick={() => runSegment(s.key)}>{s.tab}</button>
+          <button key={s.key} className={`in-nw-btn ${segMode === s.key ? "on" : ""}`} title={t(s.title)} onClick={() => runSegment(s.key)}>{t(s.tab)}</button>
         ))}
       </div>
       {segMode && segHint && (
-        <div className="in-seghint">{SEGS.find((s) => s.key === segMode)?.tab}: {segHint}
+        <div className="in-seghint">{t(SEGS.find((s) => s.key === segMode)?.tab || segMode)}: {segHint}
           {segGeo
-            ? <span className="in-geochip">📍 {segGeo} <button className="in-geoclear" title="Geo-Filter entfernen" onClick={() => { setPlz(""); setOrt(""); setRadius(""); runSegment(segMode, segParams, dedup, true); }}>×</button></span>
-            : <span className="in-geohint"> · Tipp: PLZ+Umkreis oder Ort oben eintragen → Segment filtert auf den Firmensitz</span>}
+            ? <span className="in-geochip">📍 {segGeo} <button className="in-geoclear" title={t("Geo-Filter entfernen")} onClick={() => { setPlz(""); setOrt(""); setRadius(""); runSegment(segMode, segParams, dedup, true); }}>×</button></span>
+            : <span className="in-geohint"> · {t("Tipp: PLZ+Umkreis oder Ort oben eintragen → Segment filtert auf den Firmensitz")}</span>}
           {treffer[segMode]
-            ? <span className="in-tq" title="Konversion = (interessiert + gewonnen) / Ansprachen"> · Trefferquote {treffer[segMode].quote}% aus {treffer[segMode].n} Ansprachen ({treffer[segMode].interessiert} interessiert, {treffer[segMode].gewonnen} gewonnen)</span>
-            : <span className="in-geohint"> · Trefferquote: noch keine Ansprache protokolliert (Detail öffnen → „protokollieren")</span>}
+            ? <span className="in-tq" title={t("Konversion = (interessiert + gewonnen) / Ansprachen")}> · {t("Trefferquote {quote}% aus {n} Ansprachen ({interessiert} interessiert, {gewonnen} gewonnen)", { quote: treffer[segMode].quote, n: treffer[segMode].n, interessiert: treffer[segMode].interessiert, gewonnen: treffer[segMode].gewonnen })}</span>
+            : <span className="in-geohint"> · {t("Trefferquote: noch keine Ansprache protokolliert (Detail öffnen → „protokollieren\")")}</span>}
         </div>
       )}
 
@@ -308,7 +321,7 @@ export function InternFirmen() {
         <div className="in-knobs">
           {segControls.map((c) => (
             <label key={c.k} className="in-knob">
-              <span>{c.label}</span>
+              <span>{t(c.label)}</span>
               {c.type === "toggle"
                 ? <input type="checkbox" checked={(segParams[c.k] ?? c.def) >= 1}
                     onChange={(e) => setSegParams((p) => ({ ...p, [c.k]: e.target.checked ? 1 : 0 }))} />
@@ -316,36 +329,36 @@ export function InternFirmen() {
                     onChange={(e) => setSegParams((p) => ({ ...p, [c.k]: Number(e.target.value) }))} />}
             </label>
           ))}
-          <label className="in-knob in-knob-dedup" title="§8: jede Firma nur im höchstpriorisierten Segment; weitere Zugehörigkeiten als auch-Tags">
-            <span>§8 Einmalzuordnung</span>
+          <label className="in-knob in-knob-dedup" title={t("§8: jede Firma nur im höchstpriorisierten Segment; weitere Zugehörigkeiten als auch-Tags")}>
+            <span>{t("§8 Einmalzuordnung")}</span>
             <input type="checkbox" checked={dedup} onChange={(e) => { setDedup(e.target.checked); runSegment(segMode, segParams, e.target.checked); }} />
           </label>
-          <button className="in-knob-apply" disabled={loading} onClick={() => runSegment(segMode, segParams)}>Anwenden</button>
-          <button className="in-knob-reset" onClick={() => runSegment(segMode)}>Zurücksetzen</button>
+          <button className="in-knob-apply" disabled={loading} onClick={() => runSegment(segMode, segParams)}>{t("Anwenden")}</button>
+          <button className="in-knob-reset" onClick={() => runSegment(segMode)}>{t("Zurücksetzen")}</button>
         </div>
       )}
 
-      {err && <div className="in-err">{err}</div>}
-      {firmen && firmen.length === 0 && <div className="in-empty">Keine Firmen gefunden.</div>}
+      {err && <div className="in-err">{t(err)}</div>}
+      {firmen && firmen.length === 0 && <div className="in-empty">{t("Keine Firmen gefunden.")}</div>}
 
       {firmen && firmen.length > 0 && (
         <div className="in-bar">
           <div className="in-chips">
             {!segMode && <>
-              <button className={`in-chip ${filter === "" ? "on" : ""}`} onClick={() => setFilter("")}>Alle {firmen.length}</button>
-              <button className={`in-chip ${filter === "s2" ? "on" : ""}`} onClick={() => setFilter((f) => f === "s2" ? "" : "s2")}>◷ Auslauf {firmen.filter((f) => f.s2.n > 0).length}</button>
-              <button className={`in-chip ${filter === "s1" ? "on" : ""}`} onClick={() => setFilter((f) => f === "s1" ? "" : "s1")}>▼ Verlust {firmen.filter((f) => f.s1.n > 0).length}</button>
-              <button className={`in-chip ${filter === "aktiv" ? "on" : ""}`} onClick={() => setFilter((f) => f === "aktiv" ? "" : "aktiv")} title="≥4 Zuschläge/Jahr">⚡ aktiv {firmen.filter((f) => f.wins36 >= AKTIV_MIN).length}</button>
-              <button className={`in-chip ${filter === "offen" ? "on" : ""}`} onClick={() => setFilter((f) => f === "offen" ? "" : "offen")}>nicht angesprochen {firmen.filter((f) => !contacted.has(f.id)).length}</button>
+              <button className={`in-chip ${filter === "" ? "on" : ""}`} onClick={() => setFilter("")}>{t("Alle {n}", { n: firmen.length })}</button>
+              <button className={`in-chip ${filter === "s2" ? "on" : ""}`} onClick={() => setFilter((f) => f === "s2" ? "" : "s2")}>{t("◷ Auslauf {n}", { n: firmen.filter((f) => f.s2.n > 0).length })}</button>
+              <button className={`in-chip ${filter === "s1" ? "on" : ""}`} onClick={() => setFilter((f) => f === "s1" ? "" : "s1")}>{t("▼ Verlust {n}", { n: firmen.filter((f) => f.s1.n > 0).length })}</button>
+              <button className={`in-chip ${filter === "aktiv" ? "on" : ""}`} onClick={() => setFilter((f) => f === "aktiv" ? "" : "aktiv")} title={t("≥4 Zuschläge/Jahr")}>{t("⚡ aktiv {n}", { n: firmen.filter((f) => f.wins36 >= AKTIV_MIN).length })}</button>
+              <button className={`in-chip ${filter === "offen" ? "on" : ""}`} onClick={() => setFilter((f) => f === "offen" ? "" : "offen")}>{t("nicht angesprochen {n}", { n: firmen.filter((f) => !contacted.has(f.id)).length })}</button>
             </>}
             {segMode && (
-              <label className="in-sortlabel">Sortieren:
+              <label className="in-sortlabel">{t("Sortieren:")}
                 <select className="in-sort" value={sortBy} onChange={(e) => setSortBy(e.target.value as typeof sortBy)}>
-                  <option value="metric">Signalstärke</option>
-                  <option value="rahmen">Rahmen-Quote</option>
-                  <option value="wert">Median-Wert</option>
-                  <option value="name">Name (A–Z)</option>
-                  <option value="sitz">PLZ / Sitz</option>
+                  <option value="metric">{t("Signalstärke")}</option>
+                  <option value="rahmen">{t("Rahmen-Quote")}</option>
+                  <option value="wert">{t("Median-Wert")}</option>
+                  <option value="name">{t("Name (A–Z)")}</option>
+                  <option value="sitz">{t("PLZ / Sitz")}</option>
                 </select>
               </label>
             )}
@@ -356,8 +369,8 @@ export function InternFirmen() {
       {firmen && firmen.length > 0 && (
         <div className="in-count">
           {segMode
-           ? `${firmen.length} Treffer — ${SEGS.find((s) => s.key === segMode)?.tab} (${segGeo ? `Sitz ${segGeo}` : "deutschlandweit"}${firmen.length >= 100 ? ", Top 100" : ""})`
-           : `${visible.length} von ${firmen.length} Firmen — nach Schmerz-Volumen sortiert`}
+           ? `${firmen.length} ${t("Treffer")} — ${t(SEGS.find((s) => s.key === segMode)?.tab || segMode)} (${segGeo ? `${t("Sitz")} ${segGeo}` : t("deutschlandweit")}${firmen.length >= 100 ? ", Top 100" : ""})`
+           : t("{sichtbar} von {gesamt} Firmen — nach Schmerz-Volumen sortiert", { sichtbar: visible.length, gesamt: firmen.length })}
         </div>
       )}
       <div className="in-list">
@@ -365,116 +378,116 @@ export function InternFirmen() {
           <div key={f.id} className={`in-card ${openId === f.id ? "open" : ""}`}>
             <button className="in-row" onClick={() => toggle(f.id)}>
               <div className="in-main">
-                <span className="in-name">{f.name}{(contacted.has(f.id) || cooldown[f.id]) && <span className="in-done">{cooldown[f.id] ? `🔒 ${cooldown[f.id]}` : "✓ angesprochen"}</span>}</span>
+                <span className="in-name">{f.name}{(contacted.has(f.id) || cooldown[f.id]) && <span className="in-done">{cooldown[f.id] ? `🔒 ${cooldown[f.id]}` : t("✓ angesprochen")}</span>}</span>
                 {f.badge
-                  ? <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || "Sitz unbekannt"}{f.line ? ` · ${f.line}` : ""}</span>
-                  : <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || "Sitz unbekannt"} · ≈{perJahr(f.wins36)} Zuschläge/Jahr · Median {eur(f.medWert)}</span>}
+                  ? <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || t("Sitz unbekannt")}{f.line ? ` · ${f.line}` : ""}</span>
+                  : <span className="in-sub">{[f.plz, f.ort].filter(Boolean).join(" ") || t("Sitz unbekannt")} · {t("≈{n} Zuschläge/Jahr · Median {wert}", { n: perJahr(f.wins36), wert: eur(f.medWert) })}</span>}
                 {(segMode && (f.rahmenQuote != null || (f.weitere?.length ?? 0) > 0)) && (
                   <span className="in-weitere">
-                    {f.rahmenQuote != null && <span className="in-rqtag" title="Anteil wiederkehrender/Rahmenverträge am Auftragsvolumen (36 Monate)">🔁 {f.rahmenQuote}% Rahmen</span>}
-                    {(f.weitere?.length ?? 0) > 0 && <>auch: {f.weitere!.map((wg) => <span key={wg.key} className="in-wtag">{wg.label}</span>)}</>}
+                    {f.rahmenQuote != null && <span className="in-rqtag" title={t("Anteil wiederkehrender/Rahmenverträge am Auftragsvolumen (36 Monate)")}>🔁 {t("{pct}% Rahmen", { pct: f.rahmenQuote })}</span>}
+                    {(f.weitere?.length ?? 0) > 0 && <>{t("auch:")} {f.weitere!.map((wg) => <span key={wg.key} className="in-wtag">{t(wg.label)}</span>)}</>}
                   </span>
                 )}
               </div>
               <div className="in-signals">
                 {f.badge
-                  ? <span className={`in-sig ${f.badge.cls}`}>{f.badge.label}{f.badge.spark ? <> <span className="in-spark">{f.badge.spark}</span></> : null}</span>
+                  ? <span className={`in-sig ${f.badge.cls}`}>{t(f.badge.label)}{f.badge.spark ? <> <span className="in-spark">{f.badge.spark}</span></> : null}</span>
                   : <>
-                    {f.s1.n > 0 && <span className="in-sig s1" title={`verlorene Verträge (letzter ${f.s1.letzter ?? "?"})`}>▼ {f.s1.n} verloren · {eur(f.s1.vol)}</span>}
-                    {f.s2.n > 0 && <span className="in-sig s2" title={`nächstes Ende ${f.s2.naechstes ?? "?"}`}>◷ {f.s2.n} laufen aus · {eur(f.s2.vol)}</span>}
+                    {f.s1.n > 0 && <span className="in-sig s1" title={t("verlorene Verträge (letzter {datum})", { datum: f.s1.letzter ?? "?" })}>{t("▼ {n} verloren · {wert}", { n: f.s1.n, wert: eur(f.s1.vol) })}</span>}
+                    {f.s2.n > 0 && <span className="in-sig s2" title={t("nächstes Ende {datum}", { datum: f.s2.naechstes ?? "?" })}>{t("◷ {n} laufen aus · {wert}", { n: f.s2.n, wert: eur(f.s2.vol) })}</span>}
                     {f.s1.n === 0 && f.s2.n === 0 && (f.wins36 >= AKTIV_MIN
-                      ? <span className="in-sig aktiv" title="aktiv, aber kein frischer Verlust und nichts läuft in 6–18 Monaten aus">⚡ aktiv · ≈{perJahr(f.wins36)}/Jahr</span>
-                      : <span className="in-sig none" title="kein frischer Verlust, kein Vertrag läuft in 6–18 Monaten aus — die Firma kann trotzdem laufende Aufträge halten">ruhig</span>)}
+                      ? <span className="in-sig aktiv" title={t("aktiv, aber kein frischer Verlust und nichts läuft in 6–18 Monaten aus")}>{t("⚡ aktiv · ≈{n}/Jahr", { n: perJahr(f.wins36) })}</span>
+                      : <span className="in-sig none" title={t("kein frischer Verlust, kein Vertrag läuft in 6–18 Monaten aus — die Firma kann trotzdem laufende Aufträge halten")}>{t("ruhig")}</span>)}
                   </>}
               </div>
             </button>
 
             {openId === f.id && (
               <div className="in-detail">
-                {detailLoading && <div className="in-muted">Lade Ansprache-Details …</div>}
-                {detail && !detailLoading && (detail.error ? <div className="in-err">{detail.error}</div> : (
+                {detailLoading && <div className="in-muted">{t("Lade Ansprache-Details …")}</div>}
+                {detail && !detailLoading && (detail.error ? <div className="in-err">{t(detail.error)}</div> : (
                   <>
                     {(detail.segment || detail.kmu || detail.website) && (
                       <div className="in-ctx">
-                        {detail.kmu && <span className="in-kmu">KMU</span>}
+                        {detail.kmu && <span className="in-kmu">{t("KMU")}</span>}
                         {detail.segment && <span className="in-seg">{detail.segment.length > 60 ? detail.segment.slice(0, 59) + "…" : detail.segment}</span>}
-                        {detail.website && <a className="in-link" href={detail.website.startsWith("http") ? detail.website : `https://${detail.website}`} target="_blank" rel="noreferrer">Website ↗</a>}
+                        {detail.website && <a className="in-link" href={detail.website.startsWith("http") ? detail.website : `https://${detail.website}`} target="_blank" rel="noreferrer">{t("Website ↗")}</a>}
                       </div>
                     )}
                     <div className="in-contact">
                       {f.phone && <span>☎ {f.phone}</span>}
                       {f.email && <span>✉ {f.email}</span>}
-                      <a className="in-link" href={`/firma?id=${encodeURIComponent(f.id)}&from=intern`}>Vollständiges Firmenprofil →</a>
+                      <a className="in-link" href={`/firma?id=${encodeURIComponent(f.id)}&from=intern`}>{t("Vollständiges Firmenprofil →")}</a>
                       {cooldown[f.id]
-                        ? <span className="in-locked" title="12-Monats-Sperre — segmentübergreifend keine Doppelansprache">🔒 angesprochen {cooldown[f.id]}</span>
+                        ? <span className="in-locked" title={t("12-Monats-Sperre — segmentübergreifend keine Doppelansprache")}>🔒 {t("angesprochen {datum}", { datum: cooldown[f.id] })}</span>
                         : <span className="in-logbtns">
-                            <span className="in-logl">protokollieren:</span>
+                            <span className="in-logl">{t("protokollieren:")}</span>
                             {(["angesprochen", "interessiert", "gewonnen", "kein_interesse"] as const).map((oc) => (
-                              <button key={oc} className="in-logbtn" onClick={() => logOutreach(f, oc)}>{oc === "kein_interesse" ? "kein Interesse" : oc}</button>
+                              <button key={oc} className="in-logbtn" onClick={() => logOutreach(f, oc)}>{t(oc === "kein_interesse" ? "kein Interesse" : oc)}</button>
                             ))}
                           </span>}
                       {landing[f.id]?.url
-                        ? <a className="in-link" href={landing[f.id].url} target="_blank" rel="noreferrer">{landing[f.id].copied ? "Landing-Link kopiert ✓ — öffnen ↗" : "Landing öffnen ↗"}</a>
+                        ? <a className="in-link" href={landing[f.id].url} target="_blank" rel="noreferrer">{landing[f.id].copied ? t("Landing-Link kopiert ✓ — öffnen ↗") : t("Landing öffnen ↗")}</a>
                         : <button className="in-done-btn" disabled={landing[f.id]?.busy} onClick={() => makeLanding(f.id)}>
-                            {landing[f.id]?.busy ? "erzeuge …" : "Landing erzeugen + Link kopieren"}
+                            {landing[f.id]?.busy ? t("erzeuge …") : t("Landing erzeugen + Link kopieren")}
                           </button>}
                       <button className={`in-done-btn ${pitchCopied === f.id ? "on" : ""}`} onClick={() => copyPitch(f.id, pitchFor(f, detail))}>
-                        {pitchCopied === f.id ? "Pitch kopiert ✓" : "Pitch kopieren"}
+                        {pitchCopied === f.id ? t("Pitch kopiert ✓") : t("Pitch kopieren")}
                       </button>
-                      <span className="in-note">Kontakt aus Bekanntmachung — vor Nutzung prüfen (oft Vergabeportal statt Firma).</span>
+                      <span className="in-note">{t("Kontakt aus Bekanntmachung — vor Nutzung prüfen (oft Vergabeportal statt Firma).")}</span>
                     </div>
 
-                    <textarea className="in-notiz" placeholder="Notiz zu dieser Firma (nur lokal gespeichert)…"
+                    <textarea className="in-notiz" placeholder={t("Notiz zu dieser Firma (nur lokal gespeichert)…")}
                       value={notes[f.id] || ""} onChange={(e) => setNote(f.id, e.target.value)} rows={2} />
 
                     {(detail.topBuyers?.length ?? 0) > 0 && (
                       <div className="in-buyers">
-                        <span className="in-bl">Schlüsselkunden:</span>
+                        <span className="in-bl">{t("Schlüsselkunden:")}</span>
                         {detail.topBuyers!.map((b, i) => (
-                          <span key={i} className="in-btag">{b.name} <em>{b.wins}×{b.letztes ? ` · zuletzt ${b.letztes}` : ""}</em></span>
+                          <span key={i} className="in-btag">{b.name} <em>{b.wins}×{b.letztes ? ` · ${t("zuletzt {jahr}", { jahr: b.letztes })}` : ""}</em></span>
                         ))}
                       </div>
                     )}
 
                     {/* Gesprächsaufhänger: laufende Verträge, die demnächst enden (Amtsinhaber-Position) */}
                     {detail.expiring.length > 0 && <div className="in-block">
-                      <h3>◷ Läuft aus — Gesprächsaufhänger <span className="in-h3n">{detail.expiring.length}</span></h3>
+                      <h3>{t("◷ Läuft aus — Gesprächsaufhänger")} <span className="in-h3n">{detail.expiring.length}</span></h3>
                       {(() => {
                         const total = detail.expiring.reduce((s, e) => s + (e.vol || 0), 0);
                         const rahmen = detail.expiring.filter((e) => e.artcat === "rahmen").reduce((s, e) => s + (e.vol || 0), 0);
                         return total > 0 ? (
-                          <div className="in-rq" title="Anteil Rahmen-/wiederkehrende Verträge am auslaufenden Volumen — wiederkehrend = wird neu ausgeschrieben">
-                            Auslaufendes Volumen {eur(total)} · davon <strong>{Math.round(rahmen / total * 100)}% Rahmen/wiederkehrend</strong>
+                          <div className="in-rq" title={t("Anteil Rahmen-/wiederkehrende Verträge am auslaufenden Volumen — wiederkehrend = wird neu ausgeschrieben")}>
+                            {t("Auslaufendes Volumen {wert} · davon", { wert: eur(total) })} <strong>{t("{pct}% Rahmen/wiederkehrend", { pct: Math.round(rahmen / total * 100) })}</strong>
                           </div>
                         ) : null;
                       })()}
                       {detail.expiring.slice(0, 5).map((e, i) => (
                         <div key={i} className="in-item">
                           <span className="in-it"><Titel text={e.titel} url={e.url} art={e.art} artcat={e.artcat} />
-                            <span className="in-buyer">{e.buyer}{e.seit ? ` · hält seit ${e.seit}` : ""}</span></span>
-                          <span className="in-iv">{eur(e.vol)}{e.vsrc && e.vsrc !== "actual" ? " *" : ""} · Ende {e.ende ?? "?"}</span>
+                            <span className="in-buyer">{e.buyer}{e.seit ? ` · ${t("hält seit {jahr}", { jahr: e.seit })}` : ""}</span></span>
+                          <span className="in-iv">{eur(e.vol)}{e.vsrc && e.vsrc !== "actual" ? " *" : ""} · {t("Ende")} {e.ende ?? "?"}</span>
                         </div>
                       ))}
-                      {detail.expiring.length > 5 && <div className="in-more">+{detail.expiring.length - 5} weitere</div>}
+                      {detail.expiring.length > 5 && <div className="in-more">{t("+{n} weitere", { n: detail.expiring.length - 5 })}</div>}
                     </div>}
 
                     {/* Chancen: offene Ausschreibungen in ihrem Kern-Fachgebiet */}
                     {(detail.leads?.length ?? 0) > 0 && <div className="in-block in-leads">
-                      <h3>▸ Passende offene Ausschreibungen <span className="in-h3n">Top {detail.leads!.length}</span>
+                      <h3>{t("▸ Passende offene Ausschreibungen")} <span className="in-h3n">{t("Top {n}", { n: detail.leads!.length })}</span>
                         {detail.leadsScope && <span className="in-scope"> · {detail.leadsScope}</span>}</h3>
                       {detail.leads!.map((l, i) => (
                         <div key={i} className="in-item">
                           <span className="in-it"><Titel text={l.titel} url={l.url} art={l.art} artcat={l.artcat} />
-                            {l.ted && <span className="in-tedmark" title="Titel-Link führt zur TED-Bekanntmachung">TED</span>}
-                            {l.doku && l.doku !== l.url && <a className="in-srclink" href={l.doku} target="_blank" rel="noreferrer" title="Vergabeunterlagen ansehen">Doku ↗</a>}
+                            {l.ted && <span className="in-tedmark" title={t("Titel-Link führt zur TED-Bekanntmachung")}>TED</span>}
+                            {l.doku && l.doku !== l.url && <a className="in-srclink" href={l.doku} target="_blank" rel="noreferrer" title={t("Vergabeunterlagen ansehen")}>{t("Doku ↗")}</a>}
                             <span className="in-buyer">{l.seg ? `${l.seg} · ` : ""}{l.buyer || ""}{l.ort ? ` · ${l.ort}` : ""}{l.dist != null ? ` · ${l.dist} km` : ""}</span></span>
-                          <span className="in-iv">{eur(l.vol)} · Frist {l.frist ?? "?"}{l.tage != null ? ` (${l.tage} T)` : ""}</span>
+                          <span className="in-iv">{eur(l.vol)} · {t("Frist")} {l.frist ?? "?"}{l.tage != null ? ` (${l.tage} T)` : ""}</span>
                         </div>
                       ))}
                     </div>}
 
                     {(detail.recent?.length ?? 0) > 0 && <div className="in-block">
-                      <h3>Zuletzt gewonnen <span className="in-h3n">{detail.recent!.length}</span></h3>
+                      <h3>{t("Zuletzt gewonnen")} <span className="in-h3n">{detail.recent!.length}</span></h3>
                       {detail.recent!.slice(0, 5).map((r, i) => (
                         <div key={i} className="in-item">
                           <span className="in-it"><Titel text={r.titel} url={r.url} /><span className="in-buyer">{r.buyer || ""}</span></span>
@@ -484,36 +497,36 @@ export function InternFirmen() {
                     </div>}
 
                     {detail.losses.length > 0 && <div className="in-block">
-                      <h3>▼ Jüngst verloren <span className="in-h3n">{detail.losses.length}</span></h3>
+                      <h3>{t("▼ Jüngst verloren")} <span className="in-h3n">{detail.losses.length}</span></h3>
                       {detail.losses.slice(0, 5).map((l, i) => (
                         <div key={i} className="in-item">
-                          <span className="in-it">{l.titel || "(ohne Titel)"}</span>
-                          <span className="in-iv">{eur(l.vol)} · an {l.gewinner || "?"} · {l.datum?.slice(0, 7)}</span>
+                          <span className="in-it">{l.titel || t("(ohne Titel)")}</span>
+                          <span className="in-iv">{eur(l.vol)} · {t("an {gewinner}", { gewinner: l.gewinner || "?" })} · {l.datum?.slice(0, 7)}</span>
                         </div>
                       ))}
                     </div>}
 
                     {detail.wettbewerber && detail.wettbewerber.expiring.length > 0 && <div className="in-block">
-                      <h3>{detail.wettbewerber.basis === "head_to_head" ? "Hauptwettbewerber" : "Größter Anbieter im Feld"}: {detail.wettbewerber.name.split(" ").slice(0, 4).join(" ")}
-                        <span className="in-scope"> · {detail.wettbewerber.basis === "head_to_head" ? "hat die Firma verdrängt" : detail.wettbewerber.basis === "region" ? "gleiche Region, Proxy" : "bundesweit, Proxy"}</span> — läuft aus <span className="in-h3n">{detail.wettbewerber.expiring.length}</span>
-                        {" "}<a className="in-link" href={`/firma?id=${encodeURIComponent(detail.wettbewerber.id)}&from=intern`}>Profil →</a></h3>
+                      <h3>{detail.wettbewerber.basis === "head_to_head" ? t("Hauptwettbewerber") : t("Größter Anbieter im Feld")}: {detail.wettbewerber.name.split(" ").slice(0, 4).join(" ")}
+                        <span className="in-scope"> · {detail.wettbewerber.basis === "head_to_head" ? t("hat die Firma verdrängt") : detail.wettbewerber.basis === "region" ? t("gleiche Region, Proxy") : t("bundesweit, Proxy")}</span> — {t("läuft aus")} <span className="in-h3n">{detail.wettbewerber.expiring.length}</span>
+                        {" "}<a className="in-link" href={`/firma?id=${encodeURIComponent(detail.wettbewerber.id)}&from=intern`}>{t("Profil →")}</a></h3>
                       {detail.wettbewerber.expiring.slice(0, 5).map((e, i) => (
                         <div key={i} className="in-item">
                           <span className="in-it"><Titel text={e.titel} url={e.url} art={e.art} artcat={e.artcat} /><span className="in-buyer">{e.buyer}</span></span>
-                          <span className="in-iv">{eur(e.vol)} · Ende {e.ende ?? "?"}</span>
+                          <span className="in-iv">{eur(e.vol)} · {t("Ende")} {e.ende ?? "?"}</span>
                         </div>
                       ))}
                     </div>}
 
                     {detail.losses.length === 0 && detail.expiring.length === 0 && (detail.recent?.length ?? 0) === 0 && (detail.leads?.length ?? 0) === 0 &&
-                      <div className="in-muted">Keine Vertragsdaten erfasst.</div>}
+                      <div className="in-muted">{t("Keine Vertragsdaten erfasst.")}</div>}
 
                     {/* Legende: erklärt die Vertragsart-Labels + den Schätz-Marker einmal zentral */}
                     <div className="in-legende">
-                      <span><span className="in-art rahmen">Rahmen</span> wird neu ausgeschrieben — lohnt Dranbleiben</span>
-                      <span><span className="in-art einmal">Einmal</span> einmalige Leistung, danach erledigt</span>
-                      <span><span className="in-art neutral">Einzel</span> Vergabeart unbestimmt</span>
-                      <span className="in-legende-star">* Wert geschätzt (CPV-Median), nicht veröffentlicht</span>
+                      <span><span className="in-art rahmen">{t("Rahmen")}</span> {t("wird neu ausgeschrieben — lohnt Dranbleiben")}</span>
+                      <span><span className="in-art einmal">{t("Einmal")}</span> {t("einmalige Leistung, danach erledigt")}</span>
+                      <span><span className="in-art neutral">{t("Einzel")}</span> {t("Vergabeart unbestimmt")}</span>
+                      <span className="in-legende-star">{t("* Wert geschätzt (CPV-Median), nicht veröffentlicht")}</span>
                     </div>
                   </>
                 ))}
