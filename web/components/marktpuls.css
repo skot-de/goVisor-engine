@@ -42,21 +42,28 @@
 
 /* ── Diagramm ─────────────────────────────────────────────────────────────── */
 .mp-chart { margin-top: 14px; }
-.mp-bars { display: grid; grid-template-columns: repeat(12, 1fr); gap: 4px; align-items: end; height: 168px; position: relative; }
+/* Der linke Rand ist die Spur der Mittellinien-Beschriftung — ohne ihn läge sie über dem
+   ersten Balkenwert. Die Balken selbst bleiben ein 12-Spalten-Raster. */
+.mp-chart { --mp-gutter: 78px; }
+.mp-bars { display: grid; grid-template-columns: repeat(12, 1fr); gap: 4px; align-items: end; height: 168px; position: relative; margin-left: var(--mp-gutter); }
 .mp-mean {
-  position: absolute; left: 0; right: 0; border-top: 1px dashed var(--ink-400, #8c9b95);
-  pointer-events: none;
+  position: absolute; left: calc(-1 * var(--mp-gutter)); right: 0;
+  border-top: 1px dashed var(--ink-400, #8c9b95); pointer-events: none;
 }
 .mp-mean span {
-  position: absolute; right: 0; top: -14px; font-size: var(--t-meta, 11px);
-  color: var(--ink-500, #64766f); background: var(--surface, #fff); padding: 0 3px;
-  font-variant-numeric: tabular-nums;
+  position: absolute; left: 0; top: -7px; font-size: var(--t-meta, 11px); line-height: 14px;
+  color: var(--ink-500, #64766f); background: var(--surface, #fff); padding: 0 6px 0 0;
+  font-variant-numeric: tabular-nums; white-space: nowrap;
 }
 .mp-bar { display: flex; flex-direction: column; justify-content: flex-end; height: 100%; }
 .mp-bar i {
   display: block; background: var(--mp-bar); border-radius: 3px 3px 0 0; min-height: 2px;
   transition: height .18s ease;
 }
+/* Über dem Mittel = volle Signalfarbe, darunter gedämpft; die benannten Ausreisser (±25 %)
+   noch einmal deutlicher. Die Höhe trägt die Aussage, die Farbe nur die Lesehilfe. */
+.mp-bar[data-lvl="ueber"] i { background: var(--signal, #10b981); }
+.mp-bar[data-lvl="unter"] i { background: #a7ded0; }
 .mp-bar[data-lvl="hoch"] i { background: var(--mp-bar-hoch); }
 .mp-bar[data-lvl="tief"] i { background: var(--mp-bar-tief); }
 .mp-bar b {
@@ -64,9 +71,9 @@
   color: var(--ink-700, #33453f); font-variant-numeric: tabular-nums; padding-bottom: 3px;
   white-space: nowrap;
 }
-.mp-axis { display: grid; grid-template-columns: repeat(12, 1fr); gap: 4px; margin-top: 5px; }
+.mp-axis { display: grid; grid-template-columns: repeat(12, 1fr); gap: 4px; margin-top: 5px; margin-left: var(--mp-gutter); }
 .mp-axis span { font-size: var(--t-meta, 11px); color: var(--ink-500, #64766f); text-align: center; }
-.mp-axis span[data-lvl="hoch"] { color: var(--ink-900, #12211d); font-weight: 600; }
+.mp-axis span[data-lvl="hoch"], .mp-axis span[data-lvl="ueber"] { color: var(--ink-900, #12211d); font-weight: 600; }
 
 .mp-befund {
   margin-top: 14px; padding: 10px 13px; border-radius: 8px;
@@ -107,9 +114,11 @@
 .mp-quelle { margin-top: 12px; font-size: var(--t-meta, 11px); color: var(--ink-400, #8c9b95); line-height: 1.55; }
 
 /* Schmale Einbauorte: Werte über den Balken werden zu eng — nur die Achse bleibt. */
-@container (max-width: 520px) {
+@container (max-width: 560px) {
+  .mp-chart { --mp-gutter: 0px; }
   .mp-bar b { display: none; }
   .mp-bars { height: 130px; }
+  .mp-mean span { top: -15px; }
 }
 
 .mp-sr {

@@ -421,6 +421,53 @@ def bauen(laender: list[str], n_jahre: int, heute: dt.date) -> dict:
             "belastbar": im_fenster >= MIN_FAELLE and bool(drin),
         }
 
+    # Länder OHNE einen einzigen Fall im Fenster fliegen ganz raus — nicht als „nicht
+    # belastbar" markiert, sondern gar nicht erst ausgewiesen. Gemessen stand „EU: 0
+    # Verfahren  ⚠ nicht belastbar" in der Ausgabe; eine Kategorie mit null Fällen ist keine
+    # Aussage über einen dünnen Markt, sondern eine leere Zeile.
+    #
+    # Sie war zudem die Ursache des zweiten Fehlers: der EU-Topf brachte „ted" als
+    # AUSGESCHLOSSENE Quelle ins Aggregat ein, während TED für DE/AT/CH die tragende Quelle
+    # ist. In der Gesamtzeile stand deshalb „Quellen atverg+ted, ausgeschlossen: … ted" —
+    # dieselbe Quelle gleichzeitig drin und draußen.
+    leer = [c for c in laender if coverage[c]["verfahren_im_fenster"] == 0]
+    for c in leer:
+        print(f"  {c}: 0 Verfahren im Fenster — nicht ausgewiesen (leere Kategorie, "
+              f"keine Aussage über den Markt)")
+        laender.remove(c)
+        coverage.pop(c, None)
+        saison_quellen.pop(c, None)
+
+    # Aggregat-Zeile: dieselbe Struktur wie ein Land, damit die Anzeige nicht zwei Fälle
+    # kennen muss. Ein dünnes Land wird MITGEZÄHLT (kein Datenverlust), aber namentlich in
+    # `nicht_belastbar` ausgewiesen — genau die Forderung „nicht still mitgemittelt".
+    drin_agg = sorted({q for c in coverage.values() for q in c["quellen_zeitreihe"]})
+    # Ausgeschlossen zählt am Aggregat nur, was NIRGENDS in die Zeitreihe eingeht. Sonst
+    # stünde „TED erst ab 2023" da, nur weil der dünne EU-Topf erst 2023 anfängt — obwohl
+    # TED die tragende Quelle von DE/AT/CH über das ganze Fenster ist.
+    raus_agg: dict[str, dict] = {}
+    for c in coverage.values():
+        for q in c["quellen_ausgeschlossen"]:
+            if q["quelle"] in drin_agg:
+                continue
+            vorher = raus_agg.get(q["quelle"])
+            if vorher is None or q["von"] < vorher["von"]:
+                raus_agg[q["quelle"]] = dict(q)
+            elif vorher:
+                vorher["verfahren"] += q["verfahren"]
+    coverage[GESAMT] = {
+        "verfahren_gesamt": sum(c["verfahren_gesamt"] for c in coverage.values()),
+        "verfahren_im_fenster": sum(c["verfahren_im_fenster"] for c in coverage.values()),
+        "quellen_zeitreihe": drin_agg,
+        "quellen_ausgeschlossen": sorted(raus_agg.values(), key=lambda q: -q["verfahren"]),
+        "letzte_veroeffentlichung": max(
+            (c["letzte_veroeffentlichung"] for c in coverage.values() if c["letzte_veroeffentlichung"]),
+            default=None),
+        "belastbar": sum(c["verfahren_im_fenster"] for c in coverage.values()) >= MIN_FAELLE,
+        "nicht_belastbar": [c for c in laender if not coverage[c]["belastbar"]],
+        "mitglieder": laender,
+    }
+
     # Saison-Grundmenge: nur durchgehende Quellen, nur volle Jahre.
     teile = [f"SELECT * FROM v_{c} WHERE quelle IN ({','.join(chr(39)+q+chr(39) for q in saison_quellen[c])})"
              for c in laender if saison_quellen[c]]
