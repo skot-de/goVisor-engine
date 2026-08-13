@@ -1463,3 +1463,27 @@ def test_rec26_block_escapt_seine_labels():
     # `tk(` mit einem Bezeichner statt eines Literals = daten-abgeleitet.
     roh = re.findall(r'\$\{(?!esc\()(tk\(\s*[A-Za-z_$][^)]*\)|[ab]\.gruende[^}]*|hint)\}', block.group(0))
     assert not roh, f"ungeescapte Datenausgabe im rec26-Block: {roh}"
+
+
+def test_keine_uebersetzung_in_modul_konstanten():
+    """`tk()` in einer Modul-Konstanten wird beim IMPORT ausgewertet — die Sprache waere
+    beim ersten Laden eingefroren und wechselte danach nie mehr.
+
+    Gemessen war das kein theoretisches Risiko: ein automatischer Verdrahtungslauf hat
+    37 solcher Aufrufe hineingeschrieben (`LAND_LABEL`, `SRC_TEXT`, `EMPF_GRUND`, die
+    Orts-Map). Uebersetzt wird an der AUSGABESTELLE, nie an der Definition.
+    """
+    import re
+    from pathlib import Path
+    quelle = (Path(__file__).resolve().parent.parent / "web" / "lib" / "explorerCore.js").read_text()
+    tiefe, in_const, treffer = 0, False, []
+    for nr, zeile in enumerate(quelle.split("\n"), 1):
+        if re.match(r"^(const|let|var)\s+[A-Z_a-z]", zeile) and not re.search(r"=>|function", zeile):
+            in_const, tiefe = True, 0
+        if in_const:
+            tiefe += zeile.count("{") + zeile.count("[") - zeile.count("}") - zeile.count("]")
+            if "tk(" in zeile:
+                treffer.append(f"{nr}: {zeile.strip()[:70]}")
+            if tiefe <= 0 and zeile.rstrip().endswith((";", "};", "];")):
+                in_const = False
+    assert not treffer, "tk() in Modul-Konstante (Sprache eingefroren):\n  " + "\n  ".join(treffer[:8])

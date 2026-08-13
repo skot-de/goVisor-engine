@@ -525,7 +525,10 @@ def export_branche(key):
         tage = frist_tage if (src == "f02" and frist_tage is not None) else None
         endTage = int(r["days_to_expiry"]) if g("days_to_expiry") is not None else None
         mte = g("months_to_expiry")
+        # Deutsch vorformuliert waere nicht uebersetzbar (jede Monatszahl ein eigener
+        # Schluessel). Die Zahl wandert mit, den Satz baut das Frontend per `tk()`.
         endet = f"in {int(mte)} Mon." if mte is not None else None
+        endetMonate = int(mte) if mte is not None else None
 
         nb = g("n_bidders")
         # Vorgänger-Fallback: offene Leads (ohne eigenen Zuschlag) erben Incumbent/Bieterzahl/
@@ -604,7 +607,7 @@ def export_branche(key):
             "kette": kette,    # Nachfolge-Kette: {tiefe, seit} — nur wenn ≥2 Verträge belegt
             "neu": bool(g("is_new_tender")) and not use_pred,
             "incumbent": inc_obj,
-            "tage": tage, "endTage": endTage, "endet": endet,
+            "tage": tage, "endTage": endTage, "endet": endet, "endetMonate": endetMonate,
             # #16 Angebotsfrist (echte Daten): Datum + Resttage + Herkunft. Uhrzeit/Bieterfragen-
             # Frist sind (noch) nicht in Gold extrahiert → hier ehrlich weggelassen, nicht erfunden.
             "frist": ({"date": frist_date, "tage": frist_tage, "uhrzeit": g("deadline_time"),
