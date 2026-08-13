@@ -981,9 +981,13 @@ def test_tageslauf_baut_gold_fuer_jedes_land_das_er_holt():
     from pathlib import Path
 
     runner = (Path(__file__).resolve().parent.parent / "scripts" / "daily_leads.sh").read_text()
+    # Seit 2026-08-13 baut `build_dach_gold.py` beide Länder mit der vollen Pipeline; die
+    # schmalen Brücken (`gold --bridge` / `build_ch_gold`) sind Alt-Pfade und stehen nicht
+    # mehr im Tageslauf. Die Kopplung „wer ingested, baut" gilt unverändert — nur der Bauer
+    # heisst anders.
     for land, ingest, goldbau in [
-        ("AT", "ingest-atverg", "gold --country AT --bridge"),
-        ("CH", "ingest-simap", "build_ch_gold"),
+        ("AT", "ingest-atverg", "build_dach_gold.py"),
+        ("CH", "ingest-simap", "build_dach_gold.py"),
     ]:
         if ingest not in runner:
             continue                     # Quelle nicht (mehr) im Tageslauf → nichts zu bauen
@@ -992,26 +996,48 @@ def test_tageslauf_baut_gold_fuer_jedes_land_das_er_holt():
             f"({goldbau} fehlt) — die {land}-Leads frieren still ein.")
 
 
-def test_at_dedup_wird_von_build_at_gold_gelesen():
-    """Der AT-Dublettenfilter muss im Gold ankommen, nicht nur eine Datei erzeugen.
+def test_dubletten_filter_kommt_im_gold_an():
+    """Der Dublettenfilter muss im Gold ankommen, nicht nur eine Datei erzeugen.
 
-    `scripts/dedupe_ch_sources.py` schreibt seit Wochen `ted_dedup.parquet`, das kein
-    einziger Konsument liest — der Filter läuft, wirkt aber nicht. Für AT darf das nicht
-    wieder passieren, deshalb ist die Verdrahtung hier festgenagelt: `build_at_gold` muss
-    die Tabelle sowohl zum Ausschluss (`av_id`) als auch für die Wert-Übernahme
-    (`av_estimated_value`) lesen.
+    `dedupe_ch_sources.py` schrieb wochenlang `ted_dedup.parquet`, das kein einziger
+    Konsument las — der Filter lief, wirkte aber nicht. Beide Quellskripte sind seit
+    2026-08-13 geloescht und durch die zentrale Firewall ersetzt; die Verdrahtung ihrer
+    Nachfolger ist hier festgenagelt, damit die Fehlerklasse nicht zurueckkommt.
+
+    Der atverg-Wertetransfer ist dabei bewusst ENTFALLEN. Seine Begruendung („69,8 % gegen
+    11,0 % Wertabdeckung") ist ueber alle Bekanntmachungsarten gerechnet und wird von den
+    ZUSCHLAEGEN getragen: nachgemessen fuehrt atverg bei `can` 98,4 % Werte, bei `cn`
+    **0,0 %**. Fuer offene Ausschreibungen kann atverg also gar nichts beisteuern.
     """
     from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
 
-    quelle = (Path(__file__).resolve().parent.parent / "govisor" / "gold.py").read_text()
-    kopf = quelle[quelle.index("def build_at_gold"):]
-    kopf = kopf[:kopf.index("\ndef ", 10)]
-    assert "atverg_dedup.parquet" in kopf, "build_at_gold liest den AT-Dublettenfilter nicht"
-    assert "av_id" in kopf, "Dubletten werden nicht ausgeschlossen"
-    assert "av_estimated_value" in kopf, (
-        "der atverg-Schätzwert wird nicht übernommen — beim Verwerfen der Dublette ginge "
-        "die bessere Wertabdeckung (69,8 % gegen 11,0 %) verloren")
+    for datei, funktion in (("govisor/gold.py", "def build_at_gold"),
+                            ("govisor/simap.py", "def build_ch_gold")):
+        quelle = (root / datei).read_text(encoding="utf-8")
+        kopf = quelle[quelle.index(funktion):]
+        # `build_ch_gold` ist die letzte Funktion in simap.py — dann bis Dateiende.
+        ende = kopf.find("\ndef ", 10)
+        kopf = kopf[:ende] if ende > 0 else kopf
+        assert "notice_duplicates.parquet" in kopf, f"{funktion} liest die Firewall nicht"
+        assert "duplicate_id" in kopf, f"{funktion} schliesst keine Dubletten aus"
+        assert "kaeufer_und_titel" in kopf, f"{funktion} prueft die Belegstufe nicht"
 
+    mp = (root / "scripts" / "build_marktpuls.py").read_text(encoding="utf-8")
+    assert "notice_duplicates.parquet" in mp, "Marktpuls liest die Firewall nicht"
+    # Nur der CODE zaehlt — im Docstring bleiben die alten Namen als Herkunftsnotiz stehen,
+    # und die ist der Grund, warum jemand die Umstellung spaeter noch nachvollziehen kann.
+    import ast
+    fn = next(n for n in ast.walk(ast.parse(mp))
+              if isinstance(n, ast.FunctionDef) and n.name == "_dedup_ids")
+    rumpf = ast.unparse(ast.Module(body=[x for x in fn.body
+                                         if not (isinstance(x, ast.Expr)
+                                                 and isinstance(x.value, ast.Constant))],
+                                   type_ignores=[]))
+    for tot in ("atverg_dedup", "ted_dedup"):
+        assert tot not in rumpf, f"Marktpuls haengt noch an {tot}"
+    assert not (root / "scripts" / "dedupe_at_sources.py").exists()
+    assert not (root / "scripts" / "dedupe_ch_sources.py").exists()
 
 def test_live_write_merges_instead_of_overwriting(tmp_path):
     """Ein zweiter Live-Lauf darf den Monatsbestand NICHT ersetzen.

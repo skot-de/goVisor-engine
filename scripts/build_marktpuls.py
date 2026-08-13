@@ -44,7 +44,7 @@ Land nur die Quellenfamilie verwendet, die über das *ganze* Fenster durchgehend
 (faktisch überall TED). Welche Quellen ausgeschlossen wurden, steht im JSON
 (`coverage.<land>.quellen_ausgeschlossen`) und gehört in die Anzeige.
 Für den **Stichtags**-Teil (aktuelle Lage) gilt das nicht — dort zählt alles, was da ist,
-mit Quellen-Dedup (AT: `atverg_dedup`, CH: `ted_dedup`).
+mit Quellen-Dedup aus der zentralen Firewall (`gold/<C>/notice_duplicates`).
 
 **(3) Länder-parametrisiert, nicht DE-verdrahtet.** `--laender DE,AT,CH` (Default: was
 unter `data/silver/` liegt). Je Land wird die Abdeckung ausgewiesen; wo das Fenster nicht
@@ -274,18 +274,28 @@ def _wurzeln(con: duckdb.DuckDBPyConnection, country: str) -> list[tuple[str, st
 
 
 def _dedup_ids(country: str) -> list[str]:
-    """notice_ids, die als Quellen-Dublette fallen (AT: atverg-Zwilling, CH: simap-Zwilling)."""
+    """notice_ids, die als Quellen-Dublette fallen — aus der zentralen Dubletten-Firewall.
+
+    Bis 2026-08-13 kamen sie aus zwei quellenspezifischen Skripten (`atverg_dedup.parquet`,
+    `ted_dedup.parquet`). Die sind abgeloest: `govisor/dedupe.py` prueft ALLE Quellen eines
+    Landes in einem Durchlauf, und mit `--alle-arten` deckt es auch Zuschlaege ab — die
+    Veroeffentlichungs-Sicht, die genau hier gebraucht wird. Marktpuls zaehlt Publikationen
+    je Jahr; ohne Zuschlaege waeren AT/CH in den Jahresschichten doppelt gezaehlt.
+
+    Genommen wird nur die staerkste Belegstufe (`kaeufer_und_titel`: identische Vergabestelle
+    UND Titel-Enthaltung >= 0,8, nach Zahlen-, Geschwister- und Stufen-Sperre). Die
+    schwaecheren Stufen stehen in der Tabelle, sind aber fuer eine Zaehlung zu unsicher.
+
+    Fehlt die Datei, wird nichts ausgeschlossen — die Reihen rauschen dann sichtbar, statt
+    still falsch zu sein. Das ist die richtige Ausfallrichtung.
+    """
+    dup = GOLD / country / "notice_duplicates.parquet"
+    if not dup.exists():
+        return []
     con = duckdb.connect()
-    out: list[str] = []
-    at = GOLD / country / "atverg_dedup.parquet"
-    if at.exists():
-        out += [r[0] for r in con.execute(
-            f"SELECT av_id FROM '{at}' WHERE ted_id IS NOT NULL").fetchall()]
-    ch = GOLD / country / "ted_dedup.parquet"
-    if ch.exists():
-        out += [r[0] for r in con.execute(
-            f"SELECT simap_id FROM '{ch}' WHERE status='dublette' AND simap_id IS NOT NULL"
-        ).fetchall()]
+    out = [r[0] for r in con.execute(
+        f"SELECT DISTINCT duplicate_id FROM '{dup}' WHERE beleg = 'kaeufer_und_titel'"
+    ).fetchall()]
     con.close()
     return out
 

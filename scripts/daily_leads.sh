@@ -97,44 +97,6 @@ step "OffeneVergaben.at (AT)"
 $PY -m govisor.cli ingest-atverg --country AT --silver \
   && echo "  atverg ok." || echo "  ⚠ OffeneVergaben.at fehlgeschlagen — AT bleibt auf altem Stand."
 
-# Nach BEIDEN CH-Quellen: welche TED-Notice ist eine simap-Dublette? Muss hier laufen,
-# nicht früher — der Abgleich braucht den frischen Stand beider Seiten.
-#
-# Er prüft selbst, ob die TED-Seite vollständig genug ist (≥90 % der laut TED-API
-# erwarteten Notices je Monat) und überspringt sich sonst mit Exit 2. Ein Abgleich auf
-# halbem Bestand wäre schlimmer als keiner: er stuft ungeholte Notices als „neu" ein, und
-# wer das benutzt, nimmt Dubletten auf. Deshalb drei Ausgänge statt zwei.
-step "CH-Quellenabgleich (TED gegen simap)"
-$PY scripts/dedupe_ch_sources.py
-case $? in
-  0) echo "  Abgleich ok." ;;
-  2) echo "  ⏭ Abgleich übersprungen (Bestand noch unvollständig) — voriges Ergebnis bleibt gültig." ;;
-  *) echo "  ✖ CH-Abgleich fehlgeschlagen — Dubletten möglich." ;;
-esac
-
-# Dasselbe für AT, aus demselben Grund — TED-AT und OffeneVergaben.at überschneiden sich
-# gemessen zu 93 %. Der vorhandene OSB-Flag-Filter in build_at_gold reicht nicht: von den
-# atverg-Notices mit nachweislicher TED-Entsprechung tragen nur 42,8 % das Flag, 53,8 %
-# tragen gar keinen Schwellenwert. 57,2 % der echten Dubletten überlebten ihn.
-# Muss VOR dem Gold-Rebuild laufen — build_at_gold liest die erzeugte Tabelle.
-step "AT-Quellenabgleich (TED gegen OffeneVergaben)"
-$PY scripts/dedupe_at_sources.py \
-  && echo "  Abgleich ok." \
-  || echo "  ⚠ AT-Abgleich fehlgeschlagen — voriger Stand bleibt gültig, Dubletten möglich."
-
-# AT- und CH-Gold: bis 2026-08-13 liefen hier zwei Schmalspur-Bruecken, die laut eigenem
-# Docstring "bewusst KEINE volle DE-Gold-Pipeline" bauten. Folge: der Auslauf-Radar — in DE
-# 86 % aller Leads — existierte fuer AT und CH ueberhaupt nicht, obwohl 227.117 bzw. 51.262
-# Zuschlaege im Silber lagen (AT sogar mit BESSERER Vertragsende-Abdeckung als DE: 27,4 %
-# gegen 14,9 %). Gemessen beim Umstellen: AT 595 → 17.124 Leads, CH 1.591 → 8.608.
-#
-# ⚠ Die alten Aufrufe duerfen NICHT wieder hierher: `gold --country AT --bridge` und
-# `simap.build_ch_gold` ueberschreiben lead_export mit der 595-Zeilen-Fassung. Wer sie
-# reaktiviert, setzt beide Laender ueber Nacht zurueck, ohne dass ein Test anschlaegt.
-#
-# Nicht-fatal: AT/CH sind Zusatzmaerkte, ein Problem dort darf den deutschen Kern nicht
-# mit herunterreissen. Laeuft VOR dem DE-Gold, weil der Frontend-Export spaeter alle drei
-# Laender in einem Durchgang liest.
 # DTVP (Deutsches Vergabeportal) — WIEDER AKTIV seit 2026-08-13.
 #
 # Der Connector lag auskommentiert, weil er beim ersten Vollauf rund zwei Drittel Dubletten
@@ -160,9 +122,29 @@ step "DTVP-Bekanntmachungen (VOB, unterschwellig)"
 $PY -m govisor.dtvp --regeln VOB --typen Tender --max-seiten 40 --stop-nach-bekannten 40 --silber \
   || echo "  ⚠ DTVP-Import fehlgeschlagen — fremdes Portal, der Lauf geht ohne weiter."
 
-# DUBLETTEN-FIREWALL. Eine Pruefung fuer ALLE Quellen eines Landes — sie ersetzt die
-# Ueberlegung, je Quellenpaar ein Skript zu bauen (dedupe_at_sources / dedupe_ch_sources
-# bleiben vorerst, weil build_at_gold sie liest; mittelfristig entfallen sie).
+# DUBLETTEN-FIREWALL. Eine Pruefung fuer ALLE Quellen eines Landes. Sie hat am 2026-08-13
+# `dedupe_at_sources.py` und `dedupe_ch_sources.py` abgeloest — beide geloescht, ihre
+# Verbraucher (Marktpuls, die zwei Alt-Bruecken) lesen jetzt `notice_duplicates`.
+#
+# `--alle-arten` ist Pflicht: mit nur `cn`/`pin` fehlen die ZUSCHLAEGE, und die machten in
+# AT 3.403 von 4.345 der Treffer aus, die frueher nur das Quellskript fand. Marktpuls zaehlt
+# Publikationen je Jahr und wuerde AT/CH sonst doppelt zaehlen.
+#
+# `--ab-jahr` je Land, und zwar auf GEMESSENE Laufzeiten gesetzt, nicht auf den Wunschwert.
+# Die Kosten wachsen ueberlinear und nicht nur mit der Zeilenzahl, sondern mit der
+# Titel-Dichte — DE ist bei 166k Zeilen sechsmal teurer als AT bei 135k:
+#
+#   CH ab 2024:   60.804 Zeilen →   17 s      AT ab 2024: 135.200 Zeilen →   71 s
+#   DE ab 2026:  166.040 Zeilen →  406 s      AT ab 2019: 320.976 Zeilen → >45 min, abgebrochen
+#
+# Der WUNSCHWERT waere der Quellenstart (atverg 2019, DOeE 2023, simap 2024, DTVP ~2024) —
+# davor kann es keine Quellen-Dublette geben. CH erreicht ihn, DE und AT nicht.
+#
+# ⚠ FOLGE, offen und bewusst in Kauf genommen: in den Marktpuls-Jahresschichten bleiben
+# AT 2019–2023 und DE 2023–2025 unbereinigt, dort zaehlen Quellen-Dubletten doppelt. Der
+# echte Fix ist nicht ein groesseres Zeitfenster, sondern der Umbau des Abgleichs von der
+# Python-Schleife auf DuckDB-SQL (Kandidaten + Enthaltung als Join). Bis dahin ist die
+# Zahl hier die Grenze des Machbaren, nicht die des Gewollten.
 #
 # Gemessen 2026-08-13, Paare mit Kaeufer-Beleg / gesammelte Anreicherungswerte:
 #   DE   6.116 Paare ·   976 mit Kaeufer-Beleg ·    21 Anreicherungswerte
@@ -183,8 +165,9 @@ $PY -m govisor.dtvp --regeln VOB --typen Tender --max-seiten 40 --stop-nach-beka
 # des Masters abgelaufen ist und nur die der Dublette laeuft. Feld-Reichtum ist nicht
 # Aktualitaet.
 step "Dubletten-Firewall + Anreicherung (DE/AT/CH)"
-for L in DE AT CH; do
-  $PY -m govisor.dedupe --country "$L" --ab-jahr "$(date +%Y)" --anreichern \
+for LJ in DE:2026 AT:2024 CH:2024; do
+  L="${LJ%%:*}"; J="${LJ##*:}"
+  $PY -m govisor.dedupe --country "$L" --ab-jahr "$J" --alle-arten --anreichern \
     || echo "  ⚠ Dublettencheck $L fehlgeschlagen — Anreicherung bleibt auf altem Stand."
 done
 

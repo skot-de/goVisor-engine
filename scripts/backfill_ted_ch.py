@@ -108,7 +108,7 @@ def main(von: int, bis: int, neu_pruefen: bool) -> int:
         fertig += 1
     log(f"═══ Backfill beendet: {fertig} Jahre geholt, {uebersprungen} übersprungen ═══")
     log("Danach nötig: `gold --country CH` (bzw. CH-Brücke) und der Quellenabgleich "
-        "`scripts/dedupe_ch_sources.py --von 2016-01`.")
+        "`python3 -m govisor.dedupe --country CH --ab-jahr 2024 --alle-arten`.")
     return fertig
 
 

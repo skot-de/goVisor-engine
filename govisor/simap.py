@@ -423,7 +423,7 @@ def build_ch_gold(cfg: Config, country: str = "CH") -> int:
     A = f"'{cfg.silver_table_glob('awards', country)}'"
     DP = f"'{(cfg.gold_dir / 'DE' / 'dim_plz.parquet').as_posix()}'"
     # Quellen-Dedup: TED-CHE und simap melden dieselben Schweizer Vergaben weitgehend doppelt
-    # (gemessen 93,5 % Titelgleichheit im Testmonat). `scripts/dedupe_ch_sources.py` paart sie
+    # (gemessen 93,5 % Titelgleichheit im Testmonat). Die zentrale Firewall `govisor/dedupe.py` paart sie
     # inhaltlich; hier fällt die simap-Zwillingszeile, nicht die TED-Zeile — TED ist für CH die
     # reichere Quelle (Ø 1,19 Lose gegen 0, Beschreibung 505 gegen 447 Zeichen, echte Frist
     # 53,2 % gegen 30,5 %). simap-Notices ohne TED-Partner stehen nicht in der Tabelle und
@@ -432,10 +432,10 @@ def build_ch_gold(cfg: Config, country: str = "CH") -> int:
     # Fehlt die Datei (Abgleich noch nie gelaufen oder wegen unvollständigem TED-Bestand
     # übersprungen), bleibt es beim bisherigen Verhalten: beide Quellen ungefiltert. Das
     # rauscht sichtbar, verliert aber nichts — die richtige Ausfallrichtung.
-    _dedup = g / "ted_dedup.parquet"
+    _dedup = g / "notice_duplicates.parquet"
     DEDUP_EXCLUDE = (
-        f" AND n.notice_id NOT IN (SELECT simap_id FROM read_parquet('{_dedup.as_posix()}')"
-        f" WHERE status='dublette' AND simap_id IS NOT NULL)"
+        f" AND n.notice_id NOT IN (SELECT duplicate_id FROM read_parquet('{_dedup.as_posix()}')"
+        f" WHERE beleg = 'kaeufer_und_titel')"
     ) if _dedup.exists() else ""
     LEAD = ("n.notice_kind='cn' AND n.submission_deadline >= current_date"  # offene Ausschreibungen
             + DEDUP_EXCLUDE)
