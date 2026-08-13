@@ -229,7 +229,10 @@ def nach_silber(country: str = "DE") -> dict:
             "buyer_countries": [country],
             "year": pub.year if pub else None, "month": pub.month if pub else None,
             "schema_gen": "dtvp", "form_type": r.get("typ"),
-            "notice_kind": _KIND.get(r.get("ptyp"), "cn"), "language": "DE",
+            "notice_kind": _KIND.get(r.get("ptyp"), "cn"),
+            # KLEINGESCHRIEBEN. `test_sprachcodes_sind_kanonisch` verlangt die
+            # kanonische Form; "DE" liess den Guard sofort anschlagen.
+            "language": "de",
             "title": r.get("titel"), "description": None, "description_field": None,
             "cpv_main": cpv, "performance_nuts": None,
             "contract_nature": "works" if regel == "VOB" else None,
