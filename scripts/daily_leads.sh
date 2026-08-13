@@ -159,23 +159,20 @@ echo "  Gold ok."
 #     ⚠ NUR DE: der Fetcher deckt cosinex/DTVP ab. CH (simap.ch) verlangt für den Download
 #     eine Registrierung — dort kommen wir legitim nicht heran; AT liefert als
 #     `documents_url` nur die TED-Bekanntmachung. Siehe CLAUDE.md, EU-weit-Grundsatz.
-# DTVP-Bekanntmachungen (DE, unterschwellig). Gemessen 2026-08-13 an einer ueber
-# 05/2024–08/2026 GESTREUTEN Stichprobe: 38 % der VOB/A-Ausschreibungen fehlten uns.
+# DTVP: AUSGEBAUT bis der Dublettencheck steht. Gemessen 2026-08-13 an den ersten 60
+# geholten Vorgaengen: 44 sind ECHTE DUBLETTEN (identischer Titel UND identische
+# Vergabestelle zu einem bestehenden Lead), weitere 12 gleicher Titel bei abweichender
+# Kaeufer-Schreibweise — hoechstens 4 von 60 waren neu.
 #
-# ⚠ NUR VOB/A. Der VOL-Bereich (VgV/VOL/A/UVgO) ist mit 8.640 offenen Treffern noch
-#   groesser, liefert aber KEINEN CPV — und `build_prospective_leads` verlangt
-#   `cpv_main IS NOT NULL`. Bei VOB/A ist die Branche die Definition der Vorschrift
-#   (Vergabe- und Vertragsordnung fuer BAUleistungen → CPV 45); bei VOL gibt es keine
-#   solche Ableitung, das kann IT, Beratung oder Medizintechnik sein. Der CPV-Filter der
-#   Suche nimmt keine zweistelligen Divisionen (geprueft: Seite haengt, 0 Treffer), er
-#   erwartet vollstaendige Codes aus einem Dialog. Bis das geloest ist, waeren VOL-Leads
-#   ohne Branche und damit im Produkt unsichtbar — offener Punkt, kein stiller Verzicht.
+# Das deckt sich mit der Vormessung (62 % Ueberschneidung) — ich hatte sie gemessen und
+# den Dedup trotzdem nicht gebaut. AT und CH haben dafuer `atverg_dedup` bzw. `ted_dedup`.
+# Ohne Aequivalent haette der erste Vollauf ~6.800 Vorgaenge geholt und rund zwei Drittel
+# davon doppelt in die Lead-Liste geschrieben.
 #
-# Braucht Playwright + chromium-headless-shell (die Trefferliste entsteht clientseitig).
-# Nicht fatal: eine fremde Website darf den Tageslauf nicht abbrechen.
-step "DTVP-Bekanntmachungen (DE unterschwellig, VOB/A)"
-$PY -m govisor.dtvp --regeln VOB --typen Tender --max-seiten 40 --stop-nach-bekannten 40 --silber \
-  || echo "  ⚠ DTVP-Abruf fehlgeschlagen — Bestand bleibt auf dem letzten Stand."
+# Wieder aktivieren, sobald `dedupe_dtvp_sources.py` existiert (Muster:
+# scripts/dedupe_at_sources.py — Titel-Token + Kaeufer + Zeitfenster, Ergebnis als
+# gold/DE/dtvp_dedup.parquet, im Silber-Mapping ausgeschlossen).
+#   $PY -m govisor.dtvp --regeln VOB --typen Tender --max-seiten 40 --stop-nach-bekannten 40 --silber
 
 step "Vergabeunterlagen holen (DE/cosinex, höflich + idempotent)"
 $PY -m govisor.cli fetch-docs --country DE || echo "  ⚠ Fetch unvollständig — Auswertung läuft über den vorhandenen Bestand."
