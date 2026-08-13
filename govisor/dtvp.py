@@ -169,6 +169,112 @@ def bekannte_pids(country: str = "DE") -> set[str]:
     return aus
 
 
+# ── Bronze → Silber ───────────────────────────────────────────────────────────────────────────
+#
+# **Die CPV-Frage ist die schwierigste an dieser Quelle.** DTVP liefert in der Trefferzeile
+# keinen CPV-Code, und `gold.build_prospective_leads` verlangt `cpv_main IS NOT NULL` — ohne
+# CPV fiele jeder DTVP-Lead lautlos aus der Lead-Schicht (genau der Mechanismus, an dem in
+# Oesterreich 357 offene Verfahren haengen blieben, siehe A6-Guard).
+#
+# Geraten wird trotzdem nicht. Fuer **VOB/A** ist die Branche keine Vermutung, sondern die
+# Definition der Vorschrift: VOB ist die Vergabe- und Vertragsordnung fuer BAULEISTUNGEN.
+# Jede VOB/A-Vergabe ist eine Bauleistung, deshalb CPV-Division 45 (Bauarbeiten). Der
+# generische Code `45000000-7` traegt genau diese Aussage — Bau, ohne Gewerk-Detail — und
+# nicht mehr.
+#
+# Fuer **VOL/UVgO** (Liefer- und Dienstleistungen) gibt es keine solche Ableitung: das kann
+# IT, Beratung, Reinigung oder Medizintechnik sein. Dort bleibt `cpv_main` NULL. Diese Leads
+# erscheinen damit NICHT in der Branchen-Liste — richtig so, denn eine erfundene Branche
+# waere schlimmer als eine fehlende. Ein spaeterer Titel-Klassifizierer koennte das heben;
+# er gehoert dann in die `review`-Queue mit Konfidenz, nicht hierher.
+#
+# Die Herkunft steht in `attributes` (`dtvp/cpv_hergeleitet`), damit im Produkt nachvollziehbar
+# bleibt, dass diese 45er nicht aus der Bekanntmachung stammen, sondern aus dem Regelwerk.
+_CPV_AUS_REGELWERK = {"VOB": "45000000-7"}      # VOB/A = Bauleistungen, per Definition
+_KIND = {"Tender": "cn", "ExAnte": "pin", "ExPost": "can"}
+
+
+def nach_silber(country: str = "DE") -> dict:
+    """Bronze-JSONL → Silber-Parquet (notices, notice_parties, attributes).
+
+    `notice_id` ist ``dtvp:<pid>`` — der Praefix haelt den Namensraum von TED-IDs getrennt
+    (dieselbe Konvention wie bei DOeE, wo reine Zahlen sonst mit TED kollidiert waeren).
+    """
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    roh_dir = ROOT / "data" / "raw_dtvp" / country
+    if not roh_dir.exists():
+        print(f"kein Bronze-Bestand unter {roh_dir}")
+        return {}
+    saetze: list[dict] = []
+    for f in sorted(roh_dir.glob("*.jsonl")):
+        for zeile in f.read_text(encoding="utf-8").splitlines():
+            try:
+                saetze.append(json.loads(zeile))
+            except json.JSONDecodeError:
+                continue
+    if not saetze:
+        return {}
+
+    notices, parties, attrs = [], [], []
+    for r in saetze:
+        nid = f"dtvp:{r['pid']}"
+        pub, frist = _datum(r.get("pub", "")), _datum(r.get("frist", ""))
+        regel = r.get("regel", "")
+        cpv = _CPV_AUS_REGELWERK.get(regel)
+        notices.append({
+            "notice_id": nid, "publication_number": r["pid"], "oj_ref": None,
+            "publication_date": pub, "ted_url": None, "country": country,
+            "buyer_countries": [country],
+            "year": pub.year if pub else None, "month": pub.month if pub else None,
+            "schema_gen": "dtvp", "form_type": r.get("typ"),
+            "notice_kind": _KIND.get(r.get("ptyp"), "cn"), "language": "DE",
+            "title": r.get("titel"), "description": None, "description_field": None,
+            "cpv_main": cpv, "performance_nuts": None,
+            "contract_nature": "works" if regel == "VOB" else None,
+            "procedure_type": None, "submission_deadline": frist,
+            "portal_url": f"https://www.dtvp.de/Center/secured/company/projectForwarding.do?pid={r['pid']}",
+            "estimated_value": None, "final_value": None, "value_currency": None,
+            "award_date": None, "start_date": None, "end_date": None,
+            "lot_count": None, "text_chars": len(r.get("titel") or ""),
+            "ref_publication_number": None, "ref_ted_url": None,
+            "flags": [], "unknown_country_codes": [],
+        })
+        if r.get("stelle"):
+            parties.append({
+                "notice_id": nid, "role": "buyer", "seq": 0, "name": r["stelle"],
+                "national_id": None, "town": None, "postal_code": None, "country": country,
+                "nuts": None, "email": None, "phone": None, "contact_person": None,
+                "url": None, "is_sme": None, "in_consortium": None,
+                "year": pub.year if pub else None,
+            })
+        attrs.append({"notice_id": nid, "path": "dtvp/contractingRule", "value": regel})
+        if cpv:
+            attrs.append({"notice_id": nid, "path": "dtvp/cpv_hergeleitet",
+                          "value": f"aus Regelwerk {regel}"})
+
+    stat = {}
+    for name, zeilen in (("notices", notices), ("notice_parties", parties),
+                         ("attributes", attrs)):
+        nach_jahr: dict[int, list] = {}
+        for z in zeilen:
+            nach_jahr.setdefault(z.get("year") or 0, []).append(z)
+        n = 0
+        for jahr, gruppe in nach_jahr.items():
+            d = ROOT / "data" / "silver" / country / name / f"year={jahr}"
+            d.mkdir(parents=True, exist_ok=True)
+            pq.write_table(pa.Table.from_pylist(gruppe), d / f"{jahr}-dtvp.parquet",
+                           compression="zstd")
+            n += len(gruppe)
+        stat[name] = n
+    ohne_cpv = sum(1 for x in notices if not x["cpv_main"])
+    print(f"DTVP Silber {country}: " + " · ".join(f"{k} {v:,}" for k, v in stat.items()))
+    print(f"  cpv_main aus Regelwerk hergeleitet: {len(notices)-ohne_cpv:,} (VOB/A = Bauleistung)")
+    print(f"  ohne CPV (VOL/UVgO, bewusst NULL):  {ohne_cpv:,}")
+    return stat
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="DTVP-Bekanntmachungen → Bronze")
     ap.add_argument("--regeln", default="VOB,VOL",
@@ -177,12 +283,17 @@ def main(argv=None) -> int:
     ap.add_argument("--max-seiten", type=int, default=20, help="je Regel×Typ")
     ap.add_argument("--stop-nach-bekannten", type=int, default=40,
                     help="Abbruch, wenn so viele bereits bekannte Treffer gesehen wurden (0 = nie)")
+    ap.add_argument("--silber", action="store_true", help="nach dem Abruf Bronze→Silber bauen")
+    ap.add_argument("--nur-silber", action="store_true", help="nur Bronze→Silber, kein Abruf")
     a = ap.parse_args(argv)
     regeln = [x.strip() for x in a.regeln.split(",") if x.strip() in REGELN]
     typen = [x.strip() for x in a.typen.split(",") if x.strip() in TYPEN]
     if not regeln or not typen:
         print(f"Ungültige Auswahl. Regeln: {REGELN}, Typen: {TYPEN}")
         return 2
+    if a.nur_silber:
+        nach_silber()
+        return 0
     bekannt = bekannte_pids()
     print(f"DTVP-Abruf: Regeln {regeln}, Typen {typen}, max. {a.max_seiten} Seiten je Kombination")
     print(f"  {len(bekannt):,} pid bereits im Bestand")
@@ -196,6 +307,9 @@ def main(argv=None) -> int:
     for monat in sorted(stat)[-6:]:
         neu, total = stat[monat]
         print(f"    {monat}: +{neu:,} (jetzt {total:,})")
+    if a.silber:
+        print()
+        nach_silber()
     return 0
 
 
