@@ -561,7 +561,7 @@ function cellHTML(l, key){
       const frei = isFreeLimit();
       const such = l.netzSuchend==null ? ''
         : frei ? `<span class="such lock" title="${esc(tk("Im Pro-Zugang seht ihr, wie viele hier schon einen Partner suchen — bevor ihr euch meldet"))}"><span class="nz-blur">${l.netzSuchend}</span></span>`
-        : `<span class="such ${l.netzSuchend>=4?'viel':''}" title="${l.netzSuchend>=4?'Hier bildet sich bereits ein Feld':'Noch wenig Bewegung — freie Wahl bei den Losen'}">${l.netzSuchend}</span>`;
+        : `<span class="such ${l.netzSuchend>=4?'viel':''}" title="${esc(tk(l.netzSuchend>=4?'Hier bildet sich bereits ein Feld':'Noch wenig Bewegung — freie Wahl bei den Losen'))}">${l.netzSuchend}</span>`;
       return `<td class="c-netz"><span class="netzcell">
         <button class="nzring ${dabei?'on':''} ${match?'match':''}"
           data-netzint="${l.id}"
@@ -574,7 +574,7 @@ function cellHTML(l, key){
     case 'own': {
       const drin = l.eigen && l.eigenBestaetigt!==false;
       return `<td class="c-own"><button class="owntog ${drin?'on':''}" data-own="${l.id}:${drin?'nein':'ja'}"
-        title="${drin?'Aus dem Bestand entfernen':'Zum Bestand hinzufügen'}">${drin?'−':'+'}</button></td>`;
+        title="${esc(tk(drin?'Aus dem Bestand entfernen':'Zum Bestand hinzufügen'))}">${drin?'−':'+'}</button></td>`;
     }
     case 'star': return `<td class="c-star"><button class="tstar" data-star="${l.id}" ${l.merk?`data-merk="${l.merk}"`:''} aria-label="Merken">${STAR}</button></td>`;
     case 'src': return `<td class="c-src"><span class="srcpill src-${l.src}">${l.srcLabel}</span></td>`;
@@ -591,7 +591,7 @@ function cellHTML(l, key){
         ? `<span class="eigentag" title="${esc(tk("Ihr seid hier Auftragnehmer — für euch ein Risiko, kein Neugeschäft"))}">${tk("euer Vertrag")}</span>` : '';
       // #12: Bei Mehr-Los-Vergaben zeigen, über welches Los die Relevanz kommt (Best-Los).
       const lotHint = l.bestLot
-        ? `<span class="ttitel-lot" title="Diese Ausschreibung ist groß, relevant ist für euch Los ${l.bestLot.nr}${l.bestLot.region?' ('+l.bestLot.region+')':''}">▸ passt über Los ${l.bestLot.nr}</span>` : '';
+        ? `<span class="ttitel-lot" title="${esc(tk('Diese Ausschreibung ist groß, relevant ist für euch Los {nr}', {nr: l.bestLot.nr}) + (l.bestLot.region?' ('+l.bestLot.region+')':''))}">▸ passt über Los ${l.bestLot.nr}</span>` : '';
       // #24 Zuschlag: Untertitel „Gewinner · Vergabestelle" (statt nur Vergabestelle)
       const awardSub = l.src==='award' && l.award
         ? `<span class="award-sub">${esc(l.award.winner)} · ${esc(l.buyerShort||l.buyer)}</span>` : '';
@@ -950,7 +950,7 @@ function renderDocs(l){
 
   const anforderungen = (!l.lbAnalyse && l.lbSignals) ? (()=>{
     const s = l.lbSignals, rows = [];
-    if(s.guarantee!=null) rows.push(['Sicherheit / Bürgschaft', s.guarantee?'gefordert':tk("nicht gefordert")]);
+    if(s.guarantee!=null) rows.push([tk('Sicherheit / Bürgschaft'), s.guarantee?tk('gefordert'):tk("nicht gefordert")]);
     if(s.bindingDays!=null) rows.push([tk('Bindefrist'), tk('{n} Tage', {n: s.bindingDays})]);
     if(s.eligibility) rows.push(['Eignungsnachweise', s.eligibility+tk(" im Text genannt")]);
     if(s.certificates && s.certificates.length) rows.push(['Geforderte Zertifikate', s.certificates.join(', ')]);
@@ -1121,7 +1121,7 @@ function renderUebersicht(l){
         <div class="ex-head">
           <span class="ex-h">${tk("Aus dem Text gelesen")}</span>
           <button class="ex-link" data-tab="analyse" data-anchor="anforderungen">
-            Anforderungs-Check${isFreeLimit()?' <i>· nutzt eine Bewertung</i>':''}
+            Anforderungs-Check${isFreeLimit()?` <i>${tk('· nutzt eine Bewertung')}</i>`:''}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
         </div>
@@ -1250,7 +1250,7 @@ function renderTeilnahme(l){
       <div class="unt">
         <div class="unt-m">
           <span class="unt-t">${tk("Vergabeunterlagen")}</span>
-          <span class="unt-x">${desc}${l.aufwand&&l.aufwand.eabgabe==='Pflicht'?'<br>Abgabe nur elektronisch — die Registrierung dauert und sollte früh erledigt sein.':''}</span>
+          <span class="unt-x">${desc}${l.aufwand&&l.aufwand.eabgabe==='Pflicht'?`<br>${tk('Abgabe nur elektronisch — die Registrierung dauert und sollte früh erledigt sein.')}`:''}</span>
         </div>
         ${btn}
       </div>`;
@@ -1371,7 +1371,7 @@ ${l.lose && l.lose.length>1 ? (()=>{
           <span class="nz-v-k">${tk("Firmen, die hier schon einen Partner suchen")}</span>
           <span class="nz-v-v">${frei?`<span class="nz-blur">${l.netzSuchend}</span>`:`<span class="v-num">${l.netzSuchend}</span>`}</span>
           <span class="nz-v-x">${frei
-            ? 'Im Pro-Zugang seht ihr das, <b>bevor</b> ihr euch selbst meldet.'
+            ? `${tk('Im Pro-Zugang seht ihr das,')} <b>${tk('bevor')}</b> ${tk('ihr euch selbst meldet.')}`
             : l.netzSuchend>=4 ? tk("Hier bildet sich bereits ein Feld — je früher ihr dabei seid, desto mehr Lose bleiben übrig.")
             : tk("Noch wenig Bewegung. Wer sich früh meldet, hat die freie Wahl bei den Losen.")}</span>
         </div>`;})()}
@@ -1519,8 +1519,8 @@ function renderAnalyse(l){
         </div>`;})()}
 
       ${(()=>{ const a=l.aufwand; if(!a) return '';
-        const z=[['Bietungsbürgschaft',a.buergschaft],['Bindefrist',a.bindefrist],
-                 ['Angebotsabgabe',a.eabgabe],['Lebensläufe gefordert',a.lebenslauf]];
+        const z=[[tk('Bietungsbürgschaft'),a.buergschaft],[tk('Bindefrist'),a.bindefrist],
+                 [tk('Angebotsabgabe'),a.eabgabe],[tk('Lebensläufe gefordert'),a.lebenslauf]];
         return `<div class="aufl">${z.map(([k,v])=>`<div class="auf-r">
           <span class="auf-k">${k}</span>
           <span class="auf-v ${v==null?'unk':''}">${v==null?tk("nicht angegeben"):v}</span>
@@ -1591,7 +1591,7 @@ function renderAnalyse(l){
         </tbody>
       </table>
       <div class="cmpfoot">
-        <span>${l.incumbent.seit?`Amtsinhaber seit ${l.incumbent.seit}`:tk("Amtsinhaber im Feld")}${l.incumbent.src==='unsicher'?tk(" · nur über den Namen erkannt"):''}${(l.incumbent.src==='unsicher'||(l.incumbent.conf!=null&&l.incumbent.conf<0.9))?' · &#8805; = Untergrenze (Firmen-Fragmentierung möglich)':''}</span>
+        <span>${l.incumbent.seit?tk('Amtsinhaber seit {j}', {j: l.incumbent.seit}):tk("Amtsinhaber im Feld")}${l.incumbent.src==='unsicher'?tk(" · nur über den Namen erkannt"):''}${(l.incumbent.src==='unsicher'||(l.incumbent.conf!=null&&l.incumbent.conf<0.9))?' · &#8805; = Untergrenze (Firmen-Fragmentierung möglich)':''}</span>
         <span>${(userProfile&&userProfile.cpvWins&&userProfile.cpvWins[String(l.cpv||'').slice(0,4)]!=null)?tk("Zahlen: Zuschläge, 3-J-Fenster"):'Eure Feld-Zahlen: nach Firmen-Zuordnung'}</span>
       </div>
     </section>` : `
