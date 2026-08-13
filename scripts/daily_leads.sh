@@ -144,6 +144,25 @@ if ! $PY -m govisor.cli gold --country DE --as-of "$TODAY"; then
 fi
 echo "  Gold ok."
 
+# 2b) VERGABEUNTERLAGEN — holen UND auswerten. Beides fehlte im Tageslauf: `fetch-docs` und
+#     `signals-docs` gab es nur von Hand, entsprechend waren am 2026-08-13 gemessen 303
+#     Vorgänge heruntergeladen, aber nur 13 ausgewertet. Herunterladen allein bringt nichts.
+#     Beide Schritte sind unkritisch (|| true): die Portale sind fremde Systeme, ein Ausfall
+#     dort darf den Tageslauf nicht abbrechen. Der Fetch ist idempotent (bereits geladene
+#     Vorgänge werden übersprungen) und rate-limitiert; die Auswertung ist regelbasiert,
+#     ohne LLM und ohne Kosten, also bedenkenlos täglich.
+#     ⚠ NUR DE: der Fetcher deckt cosinex/DTVP ab. CH (simap.ch) verlangt für den Download
+#     eine Registrierung — dort kommen wir legitim nicht heran; AT liefert als
+#     `documents_url` nur die TED-Bekanntmachung. Siehe CLAUDE.md, EU-weit-Grundsatz.
+step "Vergabeunterlagen holen (DE/cosinex, höflich + idempotent)"
+$PY -m govisor.cli fetch-docs --country DE || echo "  ⚠ Fetch unvollständig — Auswertung läuft über den vorhandenen Bestand."
+step "Unterlagen auswerten → Anforderungs-Signale"
+if $PY -m govisor.cli signals-docs; then
+  $PY scripts/export_doc_signals.py || echo "  ⚠ doc-signals.json nicht geschrieben."
+else
+  echo "  ⚠ Signal-Extraktion übersprungen."
+fi
+
 # 3) FRONTEND-DATEN — das ist, was die App tatsächlich liest (web/data/*.json über
 #    lib/dataSource.ts). Fehlte bis 2026-08-10 im Tageslauf: Ingest und Gold liefen täglich,
 #    aber die Oberfläche zeigte den Stand des letzten Handlaufs (zuletzt 10 Tage alt).

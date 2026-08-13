@@ -19,6 +19,7 @@ Schreibt ``doc_signals.parquet``; der Web-Export/Aufwand kann es je Lead joinen.
 from __future__ import annotations
 
 import re
+from datetime import date as _date
 
 _FLAGS = re.IGNORECASE | re.DOTALL
 
@@ -34,12 +35,38 @@ _GUAR_YES = (r"vertragserfüllungsbürgschaft|gewährleistungsbürgschaft|bietun
              r"sicherheitsleistung|sicherheitseinbehalt|bürgschaft (?:in|von|über|i\.?H\.?v)")
 _GUAR_NO = r"(?:keine|ohne)\s+sicherheitsleistung|auf (?:eine )?sicherheit(?:sleistung)? wird verzichtet"
 
-# ── Bindefrist (Tage oder Datum) ──────────────────────────────────────────────────────────────
+# ── Bindefrist ────────────────────────────────────────────────────────────────────────────────
+# GEMESSEN am Korpus (241 Vorgänge, 592 Fundstellen): die Tageszahl ist die AUSNAHME.
+#   „endet am <Datum>" / „bis zum …"  424×   ·  „N Tage"  5×  ·  Monate/Wochen  3×
+# Die alte Regel kannte nur „N Tage" — deshalb fand sie 1 von 234 Vorgängen. Das Datum ist
+# die VOB/A-Standardform (Formblatt 211 „Aufforderung zur Abgabe eines Angebots").
 _BIND = r"(?:zuschlags?-?\s*und\s*)?binde\s*frist|zuschlagsfrist|(?:angebote?|bindung).{0,15}gebunden"
-# Bindefrist-Tage in beiden Reihenfolgen: Schlüsselwort→Zahl ODER Zahl→Schlüsselwort.
 _BIND_DAYS = re.compile(
     r"(?:binde\s*frist|zuschlagsfrist|gebunden)[^.\n]{0,40}?(\d{1,3})\s*(?:kalender-?)?tage"
     r"|(\d{1,3})\s*(?:kalender-?)?tage[^.\n]{0,25}?(?:gebunden|binde\s*frist)", _FLAGS)
+# „Bindefrist endet am 03.11.2026" / „Ende der Bindefrist: 30.10.2026" / „…bis zum 12.10.26"
+_BIND_DATE = re.compile(
+    r"(?:binde\s*frist|zuschlagsfrist)[^.\n]{0,40}?"
+    r"(?:endet|läuft|gilt|ist)?\s*(?:am|bis(?:\s+zum)?)?\s*:?\s*"
+    r"(\d{1,2})\.(\d{1,2})\.(\d{2,4})", _FLAGS)
+
+# ── Pflichttermine: Ortsbesichtigung / Präsentation ────────────────────────────────────────────
+# Beides sind harte Terminzwänge: wer den Termin verpasst, darf nicht bieten bzw. verliert
+# Punkte. Gemessen 36 % bzw. 31 % der Vorgänge — und im Gegensatz zu „Nachunternehmer" (92 %)
+# unterscheiden sie tatsächlich zwischen Ausschreibungen.
+_SITE_VISIT = r"ortsbesichtigung|ortstermin|objektbesichtigung|begehung(?:stermin)?"
+_SITE_PFLICHT = r"(?:ortsbesichtigung|ortstermin|begehung)[^.\n]{0,60}?(?:verpflichtend|zwingend|obligatorisch|pflicht)"
+_PRESENTATION = r"präsentation(?:stermin)?|bemusterung|teststellung|vor-?ort-?termin"
+
+# ── Vertragsstrafe + Skonto: Geld-Signale ─────────────────────────────────────────────────────
+# Vertragsstrafe 30 %, Skonto 25 % der Vorgänge. Beide gehen direkt in die Kalkulation.
+_PENALTY = re.compile(r"vertragsstrafe[^.\n]{0,80}?(\d{1,2}(?:[,.]\d{1,2})?)\s*(?:%|v\.?\s?h\.)", _FLAGS)
+# Skonto NUR, wo die Ausschreibung wirklich einen Satz nennt. Gemessen: von 425 Skonto-
+# Nennungen tragen 385 GAR KEINE Zahl — der Bieter bietet das Skonto an, die Vergabe
+# schreibt es nicht vor („unter Abzug des vereinbarten Skontos", „Skontofrist"). Eine
+# niedrige Trefferzahl ist hier also die richtige Antwort, kein Regel-Defekt.
+_SKONTO = re.compile(r"skonto[^.\n]{0,60}?(\d{1,2}(?:[,.]\d)?)\s*%"
+                     r"|(\d{1,2}(?:[,.]\d)?)\s*%[^.\n]{0,30}?skonto", _FLAGS)
 
 # ── Eignung: Nachweise / Zertifikate ──────────────────────────────────────────────────────────
 _ELIG_TERMS = [
@@ -105,13 +132,50 @@ def extract_signals(text: str) -> dict:
         out["guarantee_required"] = True
         out["guarantee_evidence"] = _find(t, _GUAR_YES)
 
-    # Bindefrist
+    # Bindefrist — erst die Tageszahl (selten, aber eindeutig), dann das Datum (Regelfall).
     md = _BIND_DAYS.search(t)
     if md:
         days = int(md.group(1) or md.group(2))
         if 5 <= days <= 365:                       # plausible Bindefrist
             out["binding_days"] = days
             out["binding_evidence"] = re.sub(r"\s+", " ", md.group(0)).strip()
+    else:
+        mdate = _BIND_DATE.search(t)
+        if mdate:
+            tag, monat, jahr = (int(x) for x in mdate.groups())
+            jahr += 2000 if jahr < 100 else 0
+            try:
+                d = _date(jahr, monat, tag)
+            except ValueError:
+                d = None                            # 31.02. o. Ä. — lieber nichts als Unsinn
+            if d and 2020 <= jahr <= 2035:
+                # Als ISO-Datum ablegen, NICHT in Tage umrechnen: der Bezugspunkt (Angebots-
+                # frist) steht hier nicht zuverlässig daneben. Ein Datum ist ohnehin die
+                # nützlichere Angabe — „bis wann bin ich gebunden" ist die Frage des Bieters.
+                out["binding_until"] = d.isoformat()
+                out["binding_evidence"] = re.sub(r"\s+", " ", mdate.group(0)).strip()
+
+    # Pflichttermine — Ortsbesichtigung und Präsentation/Bemusterung.
+    if re.search(_SITE_VISIT, t, _FLAGS):
+        out["site_visit"] = True
+        out["site_visit_mandatory"] = bool(re.search(_SITE_PFLICHT, t, _FLAGS))
+        out["site_visit_evidence"] = _find(t, _SITE_VISIT)
+    if re.search(_PRESENTATION, t, _FLAGS):
+        out["presentation_required"] = True
+        out["presentation_evidence"] = _find(t, _PRESENTATION)
+
+    # Vertragsstrafe und Skonto — gehen direkt in die Kalkulation.
+    mp = _PENALTY.search(t)
+    if mp:
+        pct = float(mp.group(1).replace(",", "."))
+        if 0 < pct <= 20:                          # ueber 20 % ist keine Vertragsstrafe mehr
+            out["penalty_pct"] = pct
+            out["penalty_evidence"] = re.sub(r"\s+", " ", mp.group(0)).strip()
+    ms = _SKONTO.search(t)
+    if ms:
+        pct = float((ms.group(1) or ms.group(2)).replace(",", "."))
+        if 0 < pct <= 10:
+            out["skonto_pct"] = pct
 
     # Eignung: distinkte Nachweis-Begriffe zählen (Intensität) + konkrete Zertifikate
     hits = {lab for lab in _ELIG_TERMS if re.search(lab, t, _FLAGS)}
@@ -167,19 +231,28 @@ def build_signals(cfg, country: str = "DE") -> dict:
         sig = extract_signals(full or "")
         if not sig:
             continue
-        for k in ("guarantee_required", "binding_days", "eligibility_count", "award_weights",
-                  "variants_allowed", "framework"):
+        for k in ("guarantee_required", "binding_days", "binding_until", "eligibility_count",
+                  "award_weights", "variants_allowed", "framework", "site_visit",
+                  "site_visit_mandatory", "presentation_required", "penalty_pct", "skonto_pct"):
             if sig.get(k) is not None:
                 cov[k] = cov.get(k, 0) + 1
         out_rows.append({
             "notice_id": nid,
             "guarantee_required": sig.get("guarantee_required"),
             "binding_days": sig.get("binding_days"),
+            # Regelform der Bindefrist ist ein DATUM, nicht eine Tageszahl (gemessen 424:5).
+            "binding_until": sig.get("binding_until"),
             "eligibility_count": sig.get("eligibility_count"),
             "certificates": ",".join(sig.get("certificates", [])) or None,
             "variants_allowed": sig.get("variants_allowed"),
             "framework": sig.get("framework"),
             "award_weights": json.dumps(sig.get("award_weights"), ensure_ascii=False) if sig.get("award_weights") else None,
+            # Pflichttermine und Geld-Signale — am Korpus gemessen, nicht geraten.
+            "site_visit": sig.get("site_visit"),
+            "site_visit_mandatory": sig.get("site_visit_mandatory"),
+            "presentation_required": sig.get("presentation_required"),
+            "penalty_pct": sig.get("penalty_pct"),
+            "skonto_pct": sig.get("skonto_pct"),
             "evidence": json.dumps({k: v for k, v in sig.items() if k.endswith("_evidence")}, ensure_ascii=False),
         })
     if not out_rows:
