@@ -125,7 +125,14 @@ def _laden(country: str, ab_jahr: int):
         LEFT JOIN (SELECT notice_id, min(name) AS buyer_name FROM read_parquet({p!r})
                    WHERE role='buyer' GROUP BY 1) b USING (notice_id)
         WHERE n.notice_kind IN ('cn','pin') AND n.title IS NOT NULL
-          AND coalesce(n.year, 0) >= {int(ab_jahr)}
+          -- Jahr ODER laufende Frist. `ab_jahr` allein war der falsche Schnitt: eine 2024
+          -- veroeffentlichte Rahmenvereinbarung mit Frist in 2027 ist HEUTE ein offener
+          -- Lead, faellt aber aus jedem Jahresfenster. Gemessen 2026-08-13: 1.940 offene
+          -- Bekanntmachungen blieben so unsichtbar (DE 1.516, AT 422, CH 2) — bei atverg
+          -- 367 von 1.044, also gut ein Drittel, weil OeBB & Co. mit langen Laufzeiten
+          -- ausschreiben. Genau dort sitzen die Dubletten, die uns interessieren.
+          AND (coalesce(n.year, 0) >= {int(ab_jahr)}
+               OR CAST(n.submission_deadline AS DATE) >= current_date)
     """).fetchall()
 
 
