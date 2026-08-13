@@ -1432,6 +1432,75 @@ def test_verdrahtete_texte_sind_uebersetzt():
     assert not fehlend, "verdrahtet, aber nicht uebersetzt:\n  " + "\n  ".join(fehlend[:12])
 
 
+def test_texttabellen_hinter_t_sind_uebersetzt():
+    """Wie der Guard darueber — aber fuer Saetze, die ueber eine KONSTANTE laufen.
+
+    Der Test oben sieht nur `t("deutscher Satz")` direkt im Aufruf. Es gibt aber ein zweites,
+    ebenso richtiges Muster: die Saetze stehen in einer Tabelle und gehen erst beim Rendern
+    durch `t()` — `t(TXT.titel)`, `t(LAND_LABEL[k])`, `t(MONAT_LANG[i])`. Dieses Muster ist
+    sogar noetig, wo `t()` beim Import ausgewertet wuerde und damit die Sprache einfroere
+    (siehe die 37 Modulkonstanten, die genau so schon einmal auf Deutsch stehen blieben).
+
+    Gemessen am 2026-08-13: `web/components/Marktpuls.tsx` fuehrte 53 Saetze so — und blieb
+    in EN/FR vollstaendig deutsch, ohne dass ein Test anschlug. Der Zustand war nicht falsch
+    gebaut, nur unbewacht.
+
+    Geprueft werden ausschliesslich Konstanten, die IRGENDWO als `t(NAME…)` verwendet werden.
+    Ohne diese Einschraenkung schlaegt der Test bei jeder beliebigen Zeichenketten-Tabelle an
+    (Vokabular, CSS-Klassen, SQL) — und ein Test, der bei allem anschlaegt, wird abgeschaltet.
+    """
+    import re
+    from pathlib import Path
+    web = Path(__file__).resolve().parent.parent / "web"
+    en, _fr = _flach_kataloge()
+    deutsch = re.compile(r"[äöüÄÖÜß]|\b(der|die|das|und|oder|nicht|kein|keine|mit|von|bei|"
+                         r"für|aus|auf|ist|sind|wie|was|wo|wenn|nur|alle|eine|zum|zur|im|am)\b")
+    # `t(NAME.feld)` oder `t(NAME[…])` — der Punkt bzw. die Klammer unterscheidet die
+    # Tabellen-Nutzung vom Literal-Aufruf, den der Guard darueber schon abdeckt.
+    nutzung = re.compile(r"\bt[k]?\(\s*([A-Z][A-Z0-9_]{2,})\s*[.\[]")
+    fehlend: list[str] = []
+    dateien = (sorted(web.glob("components/**/*.tsx")) + sorted(web.glob("app/**/*.tsx"))
+               + sorted(web.glob("lib/**/*.js")) + sorted(web.glob("lib/**/*.tsx")))
+    for p in dateien:
+        quelle = p.read_text()
+        namen = set(nutzung.findall(quelle))
+        for name in sorted(namen):
+            # Objekt- ODER Array-Literal (MONAT_LANG ist ein Array).
+            m = re.search(rf"\b(?:const|let|var)\s+{name}\b[^=]*=\s*([\{{\[])", quelle)
+            if not m:
+                continue                       # Import aus einer anderen Datei — dort geprueft
+            zu, auf = ("}", "{") if m.group(1) == "{" else ("]", "[")
+            start = m.end() - 1
+            tiefe, instr, esc, ende = 0, False, False, None
+            for i in range(start, len(quelle)):
+                c = quelle[i]
+                if esc:
+                    esc = False
+                elif c == "\\":
+                    esc = True
+                elif c in ('"', "'", "`"):
+                    instr = not instr
+                elif instr:
+                    pass
+                elif c == auf:
+                    tiefe += 1
+                elif c == zu:
+                    tiefe -= 1
+                    if tiefe == 0:
+                        ende = i
+                        break
+            if ende is None:
+                continue
+            for w in re.findall(r'"((?:[^"\\]|\\.)*)"', quelle[start:ende]):
+                k = w.replace('\\"', '"').replace("\\\\", "\\")
+                if len(k) < 3 or ("." in k and " " not in k):
+                    continue
+                if deutsch.search(k) and k not in en:
+                    fehlend.append(f"{p.relative_to(web)} · {name}: {k!r}")
+    assert not fehlend, ("Texttabelle laeuft durch t(), Satz fehlt im Katalog:\n  "
+                         + "\n  ".join(fehlend[:12]))
+
+
 def test_uebersetzung_faellt_nicht_auf_prototyp_eigenschaften_zurueck():
     """`tk("constructor")` darf nicht die Funktion `Object` liefern.
 
