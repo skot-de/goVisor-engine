@@ -34,16 +34,16 @@ def _localname(tag) -> str:
 
 
 def parse_gaeb(data: bytes) -> dict | None:
-    """GAEB DA XML (X8x) → Positionen (Ordnungszahl, Menge, Einheit, Kurztext).
+    """GAEB → Positionen (Ordnungszahl, Menge, Einheit, Kurztext).
 
-    Namespace-agnostisch über local-name (deckt DA83 3.2/3.3 ab). Gibt None bei nicht-XML
-    (alte D8x-Flat-Formate werden hier nicht geparst → fallen auf die LLM-/Text-Schiene zurück).
+    Zuerst DA XML (X8x), namespace-agnostisch über local-name (deckt DA83 3.2/3.3 ab). Ist es
+    kein XML, greift ``parse_gaeb_flat`` für die alten Zeilenformate D81/D83/P83.
     """
     try:
         from lxml import etree
         root = etree.fromstring(data)
     except Exception:
-        return None
+        return parse_gaeb_flat(data)
     positions = []
     for el in root.iter():
         if _localname(el.tag) != "Item":
@@ -68,6 +68,91 @@ def parse_gaeb(data: bytes) -> dict | None:
     if not positions:
         return None
     return {"parser": "gaeb", "positions": positions, "n_positions": len(positions)}
+
+
+# ── GAEB DA 90: die alten Zeilenformate D81/D83/P83 ────────────────────────────────────────
+#
+# Kein XML, sondern feste Spaltenbreiten mit zweistelligem Satztyp am Zeilenanfang. Gemessen an
+# unserem Bestand: 510 solcher Dateien, davon 144 Vorgänge, die AUSSCHLIESSLICH so vorliegen —
+# ohne diesen Leser haben sie gar kein maschinenlesbares Leistungsverzeichnis.
+#
+# Der Positionssatz, an echten Dateien abgelesen (beide Ausprägungen kommen vor):
+#
+#     2101     1 NNN         00000001000Psch
+#     2111 1     NNN         00000600000qm
+#     ^^|-- OZ --|^^^|       |-- Menge -|^^^^
+#     0 2         11 14      23         34
+#
+#   [2:11]   Ordnungszahl, 9 Zeichen, hierarchisch gruppiert
+#   [11:14]  Kennzeichen (Bedarfs-/Alternativposition o. Ä.) — hier nicht ausgewertet
+#   [23:34]  Menge, 11 Ziffern mit DREI IMPLIZITEN Nachkommastellen (00000600000 = 600,0)
+#   [34:38]  Einheit
+#
+# Der Kurztext steht im Satz 25 dahinter — aber NICHT immer unmittelbar: dazwischen können
+# Sätze 27 o. Ä. liegen. Deshalb wird bis zur nächsten Position vorwärts gesammelt statt die
+# Folgezeile zu nehmen.
+#
+# Die OZ-Maske (welche Stellen Titel, welche Position sind) steht im Kopfsatz und wird hier
+# NICHT gelesen. Die Gruppierung nach Leerraum ist eine Rekonstruktion — für die Anzeige
+# ausreichend, als Sortierschlüssel nicht belastbar.
+_FLAT_MENGE = slice(23, 34)
+_FLAT_EINHEIT = slice(34, 38)
+_FLAT_OZ = slice(2, 11)
+
+
+def _flat_text(data: bytes) -> str | None:
+    """DOS-Kodierung entschlüsseln. GAEB DA 90 stammt aus der DOS-Zeit — cp850 zuerst."""
+    for enc in ("cp850", "cp437", "cp1252"):
+        try:
+            t = data.decode(enc)
+        except (UnicodeDecodeError, LookupError):
+            continue
+        # Ein DA-90-Kopf beginnt mit Satz 00; ohne den ist es eine andere Datei.
+        if t.lstrip().startswith("00"):
+            return t
+    return None
+
+
+def parse_gaeb_flat(data: bytes) -> dict | None:
+    """GAEB DA 90 (D81/D83/P83) → dieselbe Struktur wie ``parse_gaeb``."""
+    t = _flat_text(data)
+    if t is None:
+        return None
+    positions: list[dict] = []
+    offen: dict | None = None
+
+    def schliesse():
+        if offen and (offen["rno"] or offen["qty"] or offen["text"]):
+            offen["text"] = offen["text"][:300]
+            positions.append(offen)
+
+    for zeile in t.splitlines():
+        if len(zeile) < 3:
+            continue
+        satz = zeile[:2]
+        if satz == "21":
+            schliesse()
+            roh = zeile[_FLAT_MENGE].strip()
+            # Nur Ziffern sind eine Menge. Steht dort etwas anderes, ist die Zeile kürzer als
+            # erwartet oder anders belegt — dann lieber keine Menge als eine erfundene.
+            menge = f"{int(roh) / 1000:g}" if roh.isdigit() else ""
+            offen = {
+                "rno": " ".join(zeile[_FLAT_OZ].split()).replace(" ", "."),
+                "qty": menge,
+                "unit": zeile[_FLAT_EINHEIT].strip(),
+                "text": "",
+            }
+        elif satz == "25" and offen is not None:
+            stueck = zeile[2:].rstrip()
+            if stueck.strip():
+                offen["text"] = (offen["text"] + " " + stueck.strip()).strip()
+        elif satz in ("11", "12"):        # Titel-/Gliederungszeile beendet die offene Position
+            schliesse()
+            offen = None
+    schliesse()
+    if not positions:
+        return None
+    return {"parser": "gaeb-flat", "positions": positions, "n_positions": len(positions)}
 
 
 def parse_pdf_fields(data: bytes) -> dict | None:

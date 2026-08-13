@@ -153,7 +153,10 @@ def sammle(country: str, limit: int | None) -> tuple[list[dict], list[dict]]:
                             continue          # D8x-Flatformat o. Ä. — ehrlich uebersprungen
                         for p in res["positions"]:
                             positionen.append({
-                                "notice_id": nid, "quelle": "gaeb", "datei": info.filename,
+                                # `res["parser"]` unterscheidet "gaeb" (DA XML) von "gaeb-flat"
+                                # (DA 90). Ohne diese Trennung laesst sich der Beitrag des
+                                # Flat-Lesers nicht mehr messen — beides hiesse nur "gaeb".
+                                "notice_id": nid, "quelle": res["parser"], "datei": info.filename,
                                 "rno": p.get("rno") or None,
                                 "menge": _zahl(p.get("qty")),
                                 "einheit": (p.get("unit") or None),
