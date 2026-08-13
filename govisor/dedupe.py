@@ -46,6 +46,8 @@ import glob
 import re
 import sys
 from collections import defaultdict
+
+from . import entities as _entities
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -120,8 +122,16 @@ def finde(country: str = "DE", ab_jahr: int = 2026) -> list[dict]:
         w = worte(titel)
         if len(w) < MIN_WORTE:
             continue                      # zu kurz für eine belastbare Aussage
+        # Kaeufername ueber die PROJEKTEIGENE Normalform vergleichen, nicht roh.
+        # `normalize_company` entfernt Akzente, Klammerzusaetze, Vertretungsklauseln,
+        # Abteilungs-Anhaengsel, Rechtsformen und Einkaufskreis-Nummern — an echten Daten
+        # erprobt (122.860 Kaeufernamen → 75.306 Normalformen). Der rohe Vergleich davor
+        # liess „bundesagentur fuer arbeit, regionales einkaufszentrum nrw" und dieselbe
+        # Zeichenkette OHNE Komma als verschiedene Kaeufer durchgehen. Gemessen: +941 Paare
+        # bekommen dadurch einen Kaeufer-Beleg, 2.918 → 3.859 von 6.794.
         saetze.append({"id": nid, "gen": gen or "?", "titel": titel, "w": w, "d": d,
-                       "buyer": (buyer or "").lower().strip(), "cpv": cpv, "wert": wert,
+                       "buyer": _entities.normalize_company(buyer) if buyer else "",
+                       "cpv": cpv, "wert": wert,
                        "frist": frist, "nuts": nuts, "beschr": beschr})
 
     # Invertierter Index: Wort → Sätze. Der Kandidatenraum wird über die SELTENSTEN Wörter
