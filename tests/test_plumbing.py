@@ -596,9 +596,13 @@ def test_source_registry_is_wellformed():
     assert dach[("DE", "oberschwellig")] == "live" and dach[("DE", "unterschwellig")] == "live"
     assert dach[("CH", "oberschwellig")] == "live" and dach[("CH", "unterschwellig")] == "live"
     assert dach[("AT", "unterschwellig")] in ("candidate", "prepared", "live")
-    # Die drei Live-Quellen: TED-DE, DÖE-DE, simap-CH
+    # Die Live-Quellen. ⚠ Die Registry hinkt dem Tageslauf hinterher: `govisor.dtvp` laeuft
+    # dort und schreibt Silber, steht aber in KEINEM Registry-Eintrag; `atverg` steht auf
+    # "prepared", obwohl `ingest-atverg` taeglich laeuft. Beides ist beim Eintragen von
+    # NetServer aufgefallen und bewusst nicht mit-korrigiert — der Status einer fremden
+    # Quelle ist eine Produktaussage, keine Aufraeumarbeit nebenbei.
     live_ids = {s.id for s in sources.by_status("live")}
-    assert live_ids == {"ted-de", "doe-de", "simap-ch"}
+    assert live_ids == {"ted-de", "doe-de", "simap-ch", "netserver-de"}
     # AT ist als Brücke vorbereitet (deckt sich mit build_at_gold)
     assert any(s.id == "ted-at" and s.status == "prepared" for s in sources.REGISTRY)
 
@@ -1688,10 +1692,18 @@ def test_tageslauf_reihenfolge_quellen_firewall_gold():
     from pathlib import Path
     r = (Path(__file__).resolve().parent.parent / "scripts" / "daily_leads.sh").read_text()
     i_dtvp = r.index("govisor.dtvp")
+    i_ns = r.index("govisor.netserver")
     i_fw = r.index("govisor.dedupe")
     i_gold = r.index("build_dach_gold.py")
     assert i_dtvp < i_fw, "DTVP-Import muss vor der Firewall laufen"
+    assert i_ns < i_fw, "NetServer-Import muss vor der Firewall laufen"
     assert i_fw < i_gold, "Firewall muss vor dem Gold-Rebuild laufen"
+    # `--neu-einlesen` holt ALLES neu und gehoert nicht in den taeglichen Lauf. Geprueft
+    # werden nur AUSFUEHRBARE Zeilen — im Kommentar steht der Schalter absichtlich, samt
+    # Begruendung, wann er von Hand gebraucht wird.
+    befehle = [z for z in r.splitlines() if z.strip() and not z.lstrip().startswith("#")]
+    assert not [z for z in befehle if "--neu-einlesen" in z], \
+        "Voll-Neueinlesen gehoert nicht in den Tageslauf"
 
 
 def test_zweitquellen_ausschluss_prueft_den_master():
@@ -1786,3 +1798,30 @@ def test_dedupe_zeitscheiben_sind_zuschnitt_unabhaengig():
     assert "FENSTER_TAGE" in z, "Rand um den Jahrgang fehlt"
     # Sätze ohne Datum können mit allem paaren und müssen in jeder Scheibe mitlaufen.
     assert "ohne_datum" in z
+
+
+def test_uebernommener_wert_traegt_seine_waehrung():
+    """Ein Schätzwert aus dem Zwilling darf nur MIT geprüfter Währung einfliessen.
+
+    Das abgelöste `dedupe_at_sources.py` übertrug bewusst nur EUR, „damit keine
+    Fremdwährung stillschweigend als Euro gilt". Beim Umzug in die zentrale Firewall wäre
+    diese Sperre fast verlorengegangen: `anreichern()` sammelte den Wert ohne Währung ein.
+    Sie wandert jetzt als eigene Zeile aus DEMSELBEN Quellsatz mit — die Kopplung über
+    `quelle_notice_id` ist der Kern, sonst gehörte die Währung zu einem anderen Wert.
+
+    Warum es zählt: `atverg` führt den Schätzwert zu 69,8 %, TED-AT nur zu 11,0 %.
+    Gemessen 2026-08-14 sinkt „Wert unbekannt" in AT von 2.346 auf 2.004.
+    """
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    ded = (root / "govisor" / "dedupe.py").read_text(encoding="utf-8")
+    assert "estimated_value_waehrung" in ded, "Währung wird nicht mitgesammelt"
+
+    gold = (root / "govisor" / "gold.py").read_text(encoding="utf-8")
+    j = gold.split("def _frist_joins_sql")[1].split("\ndef ")[0]
+    assert "c.quelle_notice_id = w.quelle_notice_id" in j, \
+        "Wert und Währung müssen aus demselben Quellsatz stammen"
+    # Beide Lead-Bauer prüfen die Währung des übernommenen Wertes.
+    for bauer in ("def build_leads", "def build_prospective_leads"):
+        b = gold.split(bauer)[1].split("\ndef ")[0]
+        assert "wrtq.waehrung='EUR'" in b, f"{bauer}: Währungssperre fehlt"

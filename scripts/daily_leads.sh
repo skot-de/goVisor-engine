@@ -122,6 +122,27 @@ step "DTVP-Bekanntmachungen (VOB, unterschwellig)"
 $PY -m govisor.dtvp --regeln VOB --typen Tender --max-seiten 40 --stop-nach-bekannten 40 --silber \
   || echo "  ⚠ DTVP-Import fehlgeschlagen — fremdes Portal, der Lauf geht ohne weiter."
 
+# NETSERVER (Administration Intelligence) — vier Laenderportale mit einer Software:
+# Bremen, Sachsen, Mecklenburg-Vorpommern, Baden-Wuerttemberg. Hessen/HAD ist vorgesehen,
+# aber der Suchendpunkt antwortet unter dem ueblichen Servlet-Namen mit 404 (offen).
+#
+# Was diese Quelle liefert und was nicht: die TREFFERLISTE ist oeffentlich (Titel,
+# Verfahrensart, Rechtsrahmen, Frist, bei drei von vier auch die Vergabestelle). Die
+# DETAILSEITE und damit die Vergabeunterlagen liegen hinter einer Anmeldung — der einzige
+# Klick-Handler in der Bremer Liste ist `LoginControllerServlet`. Das Modul holt deshalb
+# ausschliesslich Bekanntmachungen; Unterlagen waeren eine Vertrags-, keine Technikfrage.
+#
+# ⚠ REIHENFOLGE wie bei DTVP: VOR der Firewall. Sie liest Silber; kaeme der Import danach,
+# griffe der Dubletten-Ausschluss einen Lauf zu spaet.
+#
+# ⚠ `--neu-einlesen` gehoert NICHT in den Tageslauf. Bronze speichert die geparste Zeile,
+# nicht das rohe HTML — nach einer PARSER-Aenderung muss der Schalter einmal von Hand
+# laufen, sonst bleiben die alten Saetze unveraendert stehen (genau so meldete MV nach dem
+# Vergabestellen-Fix weiter 0 % Stellen). Im Tageslauf waere er nur unnoetige Last.
+step "NetServer-Bekanntmachungen (HB/SN/MV/BW, ober- und unterschwellig)"
+$PY -m govisor.netserver --portale hb,sn,mv,bw --kategorien tender,vorinfo,zuschlag --silber \
+  || echo "  ⚠ NetServer-Import fehlgeschlagen — fremde Portale, der Lauf geht ohne weiter."
+
 # DUBLETTEN-FIREWALL. Eine Pruefung fuer ALLE Quellen eines Landes. Sie hat am 2026-08-13
 # `dedupe_at_sources.py` und `dedupe_ch_sources.py` abgeloest — beide geloescht, ihre
 # Verbraucher (Marktpuls, die zwei Alt-Bruecken) lesen jetzt `notice_duplicates`.
@@ -130,12 +151,19 @@ $PY -m govisor.dtvp --regeln VOB --typen Tender --max-seiten 40 --stop-nach-beka
 # AT 3.403 von 4.345 der Treffer aus, die frueher nur das Quellskript fand. Marktpuls zaehlt
 # Publikationen je Jahr und wuerde AT/CH sonst doppelt zaehlen.
 #
-# `--ab-jahr` je Land, und zwar auf GEMESSENE Laufzeiten gesetzt, nicht auf den Wunschwert.
-# Die Kosten wachsen ueberlinear und nicht nur mit der Zeilenzahl, sondern mit der
-# Titel-Dichte — DE ist bei 166k Zeilen sechsmal teurer als AT bei 135k:
+# `--ab-jahr 2004` = VOLLE HISTORIE fuer alle drei Laender. Bis 2026-08-14 stand hier ein
+# Notfenster (DE:2026 AT:2024 CH:2024), weil die Historie nicht durchlief — AT ab 2019 brach
+# nach 45 Minuten ab. Das lag nicht an der Datenmenge, sondern daran, dass das
+# ±FENSTER_TAGE-Fenster erst NACH der Kandidatenbildung griff: gepaart wurde quer ueber 22
+# Jahrgaenge. Seit dem Zeitscheiben-Umbau laeuft der Abgleich jahrgangsweise:
 #
-#   CH ab 2024:   60.804 Zeilen →   17 s      AT ab 2024: 135.200 Zeilen →   71 s
-#   DE ab 2026:  166.040 Zeilen →  406 s      AT ab 2019: 320.976 Zeilen → >45 min, abgebrochen
+#   AT   413.872 Saetze   >45 min Abbruch →   40 s ·  128.216 Paare
+#   CH   120.434 Saetze                   →    8 s ·   18.465 Paare
+#   DE 2.215.840 Saetze                   →  827 s ·  115.198 Paare
+#
+# DE kostet also rund 14 Minuten je Nacht. Das ist der Preis dafuer, dass die
+# Marktpuls-Jahresschichten ueberhaupt bereinigt sind — mit dem Notfenster blieben AT
+# 2019-2023 und DE 2023-2025 unbereinigt, und zwar lautlos.
 #
 # Der WUNSCHWERT waere der Quellenstart (atverg 2019, DOeE 2023, simap 2024, DTVP ~2024) —
 # davor kann es keine Quellen-Dublette geben. CH erreicht ihn, DE und AT nicht.
@@ -165,9 +193,8 @@ $PY -m govisor.dtvp --regeln VOB --typen Tender --max-seiten 40 --stop-nach-beka
 # des Masters abgelaufen ist und nur die der Dublette laeuft. Feld-Reichtum ist nicht
 # Aktualitaet.
 step "Dubletten-Firewall + Anreicherung (DE/AT/CH)"
-for LJ in DE:2026 AT:2024 CH:2024; do
-  L="${LJ%%:*}"; J="${LJ##*:}"
-  $PY -m govisor.dedupe --country "$L" --ab-jahr "$J" --alle-arten --anreichern \
+for L in DE AT CH; do
+  $PY -m govisor.dedupe --country "$L" --ab-jahr 2004 --alle-arten --anreichern \
     || echo "  ⚠ Dublettencheck $L fehlgeschlagen — Anreicherung bleibt auf altem Stand."
 done
 

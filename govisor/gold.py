@@ -829,8 +829,18 @@ def build_leads(cfg: Config, country: str = "DE", reference_date: str | None = N
     # Wert: Endwert (hart), sonst der Schätzwert der Ausschreibung als Fallback —
     # nur EUR/plausibel, klar als 'geschaetzt' markiert. Strukturschätzung wäre
     # falsche Präzision (gemessen ~70% Fehler), estimated_value dagegen ~12% Fehler.
-    VU = ("COALESCE(q.final_value_clean, CASE WHEN n.estimated_value BETWEEN 1000 AND 1e9 "
-          "AND (n.value_currency='EUR' OR n.value_currency IS NULL) THEN n.estimated_value END)")
+    # Dritte Stufe seit 2026-08-14: der Schaetzwert aus dem Zwillingssatz. Nationale Portale
+    # fuehren ihn deutlich besser als TED (atverg 69,8 % gegen 11,0 %). Gemessen schliesst
+    # das 402 oesterreichische Auslauf-Leads, die sonst „unbekannt" blieben — klein, aber der
+    # Wert traegt das Gebuehrenband, und „unbekannt" ist dort die teuerste Antwort.
+    # Waehrungssperre wie oben: der uebernommene Wert bringt seine Waehrung mit.
+    VU = ("COALESCE(q.final_value_clean, "
+          "CASE WHEN n.estimated_value BETWEEN 1000 AND 1e9 "
+          "     AND (n.value_currency='EUR' OR n.value_currency IS NULL) "
+          "     THEN n.estimated_value END, "
+          "CASE WHEN try_cast(wrtq.w AS DOUBLE) BETWEEN 1000 AND 1e9 "
+          "     AND (wrtq.waehrung='EUR' OR wrtq.waehrung IS NULL) "
+          "     THEN try_cast(wrtq.w AS DOUBLE) END)")
     VUR = f"({VU} * dd.factor_to_2020)"
     con.execute(f"""
         CREATE TABLE leads AS
@@ -873,6 +883,7 @@ def build_leads(cfg: Config, country: str = "DE", reference_date: str | None = N
         LEFT JOIN tnd ON tnd.notice_id=n.notice_id
         LEFT JOIN ren ON ren.notice_id=n.notice_id
         LEFT JOIN '{Q}' q ON q.notice_id=n.notice_id
+         {_frist_joins_sql(cfg, country)}
         LEFT JOIN '{DD}' dd ON dd.year=n.year
         LEFT JOIN '{DC}' dc ON dc.division=substr(n.cpv_main,1,2)
         WHERE n.notice_kind='can' AND n.cpv_main IS NOT NULL
@@ -2609,9 +2620,18 @@ def build_lead_detail(cfg: Config, country: str = "DE"):
 
 
 def _frist_joins_sql(cfg: Config, country: str, auf: str = "n.notice_id") -> str:
-    """LEFT JOINs, die die angereicherten Fristen als ``anrq``/``vrlq`` bereitstellen."""
+    """LEFT JOINs für die angereicherten Felder: Fristen (``anrq``/``vrlq``) und Wert
+    samt Währung (``wrtq``). Wert und Währung kommen aus DEMSELBEN Quellsatz, sonst
+    liesse sich die Währungssperre nicht anwenden."""
     ANR = _ANR_SQL(cfg, country)
     return f"""
+          LEFT JOIN (SELECT w.notice_id, min(w.wert) AS w, min(c.wert) AS waehrung
+                     FROM {ANR} w
+                     LEFT JOIN {ANR} c ON c.notice_id = w.notice_id
+                                      AND c.quelle_notice_id = w.quelle_notice_id
+                                      AND c.feld = 'estimated_value_waehrung'
+                     WHERE w.feld = 'estimated_value' GROUP BY 1) wrtq
+                 ON wrtq.notice_id = {auf}
           LEFT JOIN (SELECT notice_id, min(wert) w FROM {ANR}
                      WHERE feld='submission_deadline' GROUP BY 1) anrq ON anrq.notice_id = {auf}
           LEFT JOIN (SELECT notice_id, max(wert) w FROM {ANR}
@@ -2717,8 +2737,27 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
         JOIN '{EN}' e ON e.entity_id=pe.entity_id
         LEFT JOIN '{NP}' np ON np.notice_id=pe.notice_id AND np.role='buyer' AND np.seq=pe.seq
     """)
-    VU = ("CASE WHEN n.estimated_value BETWEEN 1000 AND 1e9 "
-          "AND (n.value_currency='EUR' OR n.value_currency IS NULL) THEN n.estimated_value END")
+    # Wert: eigener Schaetzwert, sonst der aus dem Zwilling. Die zweite Stufe kam mit der
+    # Dubletten-Firewall (2026-08-14) und ersetzt, was vorher im geloeschten
+    # `dedupe_at_sources.py` stand — dort ging sie beim Umzug zunaechst verloren.
+    #
+    # Warum sie zaehlt: `atverg` fuehrt den Schaetzwert zu 69,8 %, TED-AT nur zu 11,0 %.
+    # Gemessen 2026-08-14: 3.922 oesterreichische Leads ohne Wert bekommen dadurch einen,
+    # und der Wert traegt das Gebuehrenband.
+    #
+    # DIE WAEHRUNGSSPERRE GILT FUER BEIDE STUFEN. Ein uebernommener Wert ohne seine
+    # Waehrung waere keine Information, sondern eine Falle — deshalb reicht `anreichern()`
+    # die Waehrung als eigene Zeile aus DEMSELBEN Quellsatz mit, und sie wird hier genauso
+    # geprueft wie die eigene. Der Kommentar des abgeloesten Skripts sagte es richtig:
+    # „damit keine Fremdwaehrung stillschweigend als Euro gilt".
+    _plaus = "BETWEEN 1000 AND 1e9"
+    VU = (f"coalesce("
+          f"CASE WHEN n.estimated_value {_plaus} "
+          f"     AND (n.value_currency='EUR' OR n.value_currency IS NULL) "
+          f"     THEN n.estimated_value END, "
+          f"CASE WHEN try_cast(wrtq.w AS DOUBLE) {_plaus} "
+          f"     AND (wrtq.waehrung='EUR' OR wrtq.waehrung IS NULL) "
+          f"     THEN try_cast(wrtq.w AS DOUBLE) END)")
     VUR = f"({VU} * dd.factor_to_2020)"
     out = g / "leads.parquet"
     con.execute(f"""

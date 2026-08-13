@@ -80,6 +80,12 @@ KATEGORIEN = {
 }
 
 _SERVLET = "PublicationSearchControllerServlet?function=SearchPublications"
+# Das Suchformular bietet 10/25/50/100 Treffer je Seite an — 100 ist die vom Portal
+# selbst angebotene Obergrenze, kein Umgehen einer Begrenzung. Spart Abrufe.
+_MAX_PRO_SEITE = 100
+# Obergrenze der Blätter je Kategorie — eine Notbremse gegen eine kaputte Endebedingung,
+# kein fachliches Limit. Wird sie erreicht, sagt der Lauf es (sonst wäre es stiller Verlust).
+_MAX_SEITEN = 20
 _HOEFLICH_S = 2.0          # Pause zwischen Abrufen — fremdes System
 
 _RECHTSRAHMEN = re.compile(r'\b(VOB|UVgO|VgV|VOL(?:/VgV)?|SektVO|KonzVgV|VSVgV)\b', re.I)
@@ -170,10 +176,20 @@ def zeilen_lesen(seite: str) -> list[dict]:
         # der Titel im <strong>, deshalb der Vorzug für dessen Inhalt, wenn vorhanden.
         stark = [_txt(m) for m in re.findall(r"<strong[^>]*>(.*?)</strong>", roh, re.S | re.I)]
         stark = [s for s in stark if len(s) > 12]
-        kandidaten = stark or [z for z in zellen if len(z) > 12 and not _DATUM.fullmatch(z)]
-        if not kandidaten:
-            continue
-        titel = max(kandidaten, key=len)
+        # Wo die Kopfzeile eine Titelspalte benennt, gilt SIE — nicht die längste Zelle.
+        # Sonst gewinnt bei einem kurzen Titel die Vergabestelle: „Neubau Feuerwache Los 3"
+        # (23 Zeichen) verlor gegen „Landesforst Mecklenburg Vorpommern" (34). In den echten
+        # MV-Daten ging das nur zufällig gut, weil die Titel dort länger sind.
+        i_titel = next((i for n, i in spalten.items()
+                        if "ausschreibung" in n or "bezeichnung" in n or "titel" in n), None)
+        aus_spalte = (zellen[i_titel] if i_titel is not None and i_titel < len(zellen) else None)
+        if aus_spalte and len(aus_spalte) > 12 and not _NUR_DATUM.fullmatch(aus_spalte):
+            titel = aus_spalte
+        else:
+            kandidaten = stark or [z for z in zellen if len(z) > 12 and not _DATUM.fullmatch(z)]
+            if not kandidaten:
+                continue
+            titel = max(kandidaten, key=len)
         # Ein Datum/Zeitstempel ist kein Titel. Die Tabellen rendern jeden Vorgang ZWEIMAL —
         # einmal vollständig, einmal als reine Fristzeile („11.09.2026 10:00"). Die
         # Längenschwelle allein liess den Zeitstempel als Titel durch und verdoppelte damit
@@ -251,13 +267,30 @@ def hole(portale: list[str], kategorien: list[str], bekannt: set[str]) -> list[d
             continue
         for kat in kategorien:
             cat, _kind = KATEGORIEN[kat]
-            url = f"{basis}{_SERVLET}&Gesetzesgrundlage=All&Category={cat}"
-            try:
-                seite = hol(url)
-            except Exception as e:                       # noqa: BLE001
-                print(f"  {kuerzel}/{kat}: nicht erreichbar ({type(e).__name__})", flush=True)
+            # Blättern über `Start`. Ohne das endet jede Kategorie stumm bei 100 Treffern:
+            # gemessen lieferte Baden-Württemberg genau 100 und trug einen Blätter-Link
+            # `Start=100` — der Rest wäre nie geholt worden, ohne dass irgendwo ein Fehler
+            # auftaucht. Die anderen drei Portale lagen darunter und hätten den Fehler
+            # verdeckt.
+            zeilen: list[dict] = []
+            for start in range(0, _MAX_SEITEN * _MAX_PRO_SEITE, _MAX_PRO_SEITE):
+                url = (f"{basis}{_SERVLET}&Gesetzesgrundlage=All&Category={cat}"
+                       f"&Max={_MAX_PRO_SEITE}&Start={start}")
+                try:
+                    seite = hol(url)
+                except Exception as e:                   # noqa: BLE001
+                    print(f"  {kuerzel}/{kat}: nicht erreichbar ({type(e).__name__})", flush=True)
+                    break
+                teil = zeilen_lesen(seite)
+                if not teil:
+                    break
+                zeilen += teil
+                # Volle Seite → es kann eine weitere geben. Kürzere Seite = Ende.
+                if len(teil) < _MAX_PRO_SEITE:
+                    break
+                time.sleep(_HOEFLICH_S)
+            if not zeilen:
                 continue
-            zeilen = zeilen_lesen(seite)
             neu = 0
             heute = dt.date.today().isoformat()
             for z in zeilen:
@@ -273,6 +306,12 @@ def hole(portale: list[str], kategorien: list[str], bekannt: set[str]) -> list[d
                 bekannt.add(z["key"])
                 saetze.append(z)
                 neu += 1
+            # `--neu-einlesen` ist kein Komfort, sondern nötig: Bronze speichert die
+            # GEPARSTE Zeile, nicht das rohe HTML. Verbessert sich der Parser, sind die
+            # alten Sätze trotzdem „bekannt" und werden übersprungen — hier passiert:
+            # nach dem Vergabestellen-Fix meldete MV weiter 0 % Stellen, weil die 18 Sätze
+            # aus dem Lauf davor unverändert liegen blieben. Anders als bei TED/DÖE heilt
+            # ein Parser-Fix hier also NICHT durch erneutes Lesen lokaler Dateien.
             unter = sum(1 for z in zeilen if z["unterschwellig"])
             print(f"  {kuerzel}/{kat}: {len(zeilen)} Zeilen, {neu} neu, "
                   f"{unter} unterschwellig", flush=True)
@@ -395,9 +434,29 @@ def nach_silber(country: str = "DE") -> dict:
             "ref_publication_number": None, "ref_ted_url": None,
             "flags": [], "unknown_country_codes": [],
         })
-        if r.get("auftraggeber"):
+        # Vergabestelle: echt, wo die Quelle sie führt — sonst eine ausdrücklich als
+        # unbekannt benannte Sammelstelle je Portal.
+        #
+        # Warum überhaupt eine Ersatz-Partei: `gold.build_prospective_leads` verbindet mit
+        # `JOIN buyer`. Ohne Partei fällt der Vorgang lautlos aus der Lead-Schicht — bei
+        # Bremen wären das ALLE 41 Ausschreibungen, weil das Portal die Stelle in der
+        # Trefferliste nicht ausweist (gemessen: 0 von 41; die Spalte existiert dort nicht).
+        #
+        # Warum dieser Name: er ist als Nicht-Stelle lesbar und kann in keiner Auswertung
+        # mit einer echten Vergabestelle verwechselt werden. Ein plausibel klingender Name
+        # wie „Freie Hansestadt Bremen" wäre die schlechtere Wahl — er sähe wie ein Fakt
+        # aus und würde `buyer_stats` still verfälschen, indem 41 verschiedene Dienststellen
+        # zu einem Grosskäufer verschmölzen.
+        stelle = r.get("auftraggeber")
+        stelle_hergeleitet = not stelle
+        if stelle_hergeleitet:
+            stelle = f"Vergabestelle nicht ausgewiesen ({PORTALE.get(r['portal'], (r['portal'], None))[0]})"
+        if stelle_hergeleitet:
+            attrs.append({"notice_id": nid, "path": "netserver/stelle_unbekannt",
+                          "value": "Portal führt die Vergabestelle nicht in der Trefferliste"})
+        if stelle:
             parties.append({
-                "notice_id": nid, "role": "buyer", "seq": 0, "name": r["auftraggeber"],
+                "notice_id": nid, "role": "buyer", "seq": 0, "name": stelle,
                 "national_id": None, "town": None, "postal_code": None, "country": country,
                 "nuts": None, "email": None, "phone": None, "contact_person": None,
                 "url": None, "is_sme": None, "in_consortium": None,
@@ -452,11 +511,19 @@ def main(argv: list[str] | None = None) -> int:
                    help="Kürzel, Komma-getrennt: " + ", ".join(PORTALE))
     p.add_argument("--kategorien", default="tender",
                    help="tender (Ausschreibung) · vorinfo · zuschlag")
-    p.add_argument("--silber", action="store_true", help="nur Bronze → Silber, kein Abruf")
+    # Gleiche Bedeutung wie bei `govisor.dtvp`: `--silber` schreibt NACH dem Abruf auch
+    # nach Silber. Eine abweichende Bedeutung waere im Tageslauf eine stille Falle.
+    p.add_argument("--silber", action="store_true",
+                   help="nach dem Abruf auch Bronze -> Silber schreiben")
+    p.add_argument("--nur-silber", action="store_true",
+                   help="kein Abruf, nur Bronze -> Silber")
+    p.add_argument("--neu-einlesen", action="store_true",
+                   help="bekannte Vorgaenge erneut holen und ueberschreiben - noetig nach "
+                        "jeder Parser-Aenderung, weil Bronze die geparste Zeile speichert")
     p.add_argument("--dry-run", action="store_true", help="abrufen, nichts schreiben")
     a = p.parse_args(argv)
 
-    if a.silber:
+    if a.nur_silber:
         nach_silber()
         return 0
 
@@ -467,7 +534,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"unbekannte Kategorie: {unbekannt} — erlaubt: {list(KATEGORIEN)}", file=sys.stderr)
         return 2
 
-    bekannt = set() if a.dry_run else bekannte_keys()
+    bekannt = set() if (a.dry_run or a.neu_einlesen) else bekannte_keys()
     print(f"NetServer-Abruf: {len(portale)} Portale, {len(bekannt):,} Vorgänge bereits bekannt")
     saetze = hole(portale, kats, bekannt)
     print(f"\n{len(saetze):,} neue Bekanntmachungen")
@@ -477,6 +544,8 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     for monat, (neu, gesamt) in sorted(schreibe_bronze(saetze).items()):
         print(f"  {monat}: +{neu} → {gesamt}")
+    if a.silber:
+        nach_silber()
     return 0
 
 

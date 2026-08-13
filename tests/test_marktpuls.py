@@ -305,3 +305,83 @@ def test_erzeugte_datei_haelt_den_vertrag():
             # noch einmal an der ausgelieferten Datei.
             assert b["art"] != "kuratiert" or b.get("beleg"), (land, b)
             assert j["von"] < b["jahr"] <= j["bis"], (land, b)
+
+
+# ── NetServer-Quelle ─────────────────────────────────────────────────────────
+# (hier statt in einer eigenen Datei, weil die Guards dieselbe Sorte Fehler treffen:
+#  stille Verluste beim Weg einer Quelle in die Lead-Schicht)
+
+def _ns():
+    spec = importlib.util.spec_from_file_location(
+        "netserver", ROOT / "govisor" / "netserver.py")
+    mod = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(mod)
+    return mod
+
+
+NS = _ns()
+
+
+def test_netserver_zeitstempel_ist_kein_titel():
+    """Die Verdopplungs-Falle: NetServer rendert jeden Vorgang ZWEIMAL — einmal vollstaendig,
+    einmal als reine Fristzeile. Nimmt der Parser den Zeitstempel als Titel, verdoppelt sich
+    der Bestand (Bremen meldete 82 statt 41 Vorgaengen) und die Phantomsaetze zaehlen bei
+    jedem Bestandsabgleich als „neu" — genau so kam eine 92-%-Neuquote zustande, die es
+    nicht gab.
+    """
+    seite = """<table><tr><th>Ausschreibung</th><th>Verfahrensart</th><th>Rechtsrahmen</th>
+      <th>Abgabefrist</th></tr>
+      <tr><td>13.08.2026</td><td>Lueftungstechnik und Gebaeudeautomation (V0471/2026)</td>
+          <td>Offenes Verfahren</td><td>VOB</td><td>11.09.2026 10:00</td></tr>
+      <tr><td>11.09.2026 10:00</td></tr></table>"""
+    z = NS.zeilen_lesen(seite)
+    assert len(z) == 1, "die reine Fristzeile darf kein Vorgang sein"
+    assert z[0]["titel"].startswith("Lueftungstechnik")
+
+
+def test_netserver_erfindet_kein_veroeffentlichungsdatum():
+    """Sachsen fuehrt in der Trefferliste NUR die Abgabefrist. Ein Rueckfall auf „irgendein
+    Datum" setzte die Frist als Veroeffentlichung — gemessen an allen 50 Saetzen — und
+    verschoebe damit Jahr/Monat der Notice und den Marktpuls."""
+    seite = """<table><tr><th>Ausschreibung</th><th>Vergabestelle</th></tr>
+      <tr><td>Reinigung Smart Mobility Lab (2A032785)</td><td>SIB Bautzen</td>
+          <td>VOL/VgV, Offenes Verfahren</td><td>15.09.2026 09:00</td></tr></table>"""
+    z = NS.zeilen_lesen(seite)
+    assert len(z) == 1
+    assert z[0]["pub"] is None, "ohne Quellenangabe kein erfundenes Veroeffentlichungsdatum"
+    assert z[0]["frist"].startswith("2026-09-15")
+
+
+def test_netserver_liest_die_vergabestelle_aus_der_spalte():
+    """MV und Baden-Wuerttemberg fuehren eine SPALTE „Vergabestelle", Sachsen ein Feld
+    „Auftraggeber:". Ein rein musterbasierter Parser fand nur Sachsen und liess 68 Stellen
+    liegen — die dann am `JOIN buyer` des Lead-Baus lautlos ausgefallen waeren."""
+    seite = """<table><tr><th>Ausschreibung</th><th>Vergabestelle</th><th>Verfahrensart</th>
+      <th>Rechtsrahmen</th><th>Abgabefrist</th></tr>
+      <tr><td>Neubau Feuerwache Los 3</td><td>Landesforst Mecklenburg Vorpommern</td>
+          <td>Offenes Verfahren</td><td>VOB</td><td>20.09.2026 10:00</td></tr></table>"""
+    z = NS.zeilen_lesen(seite)
+    assert len(z) == 1
+    assert z[0]["auftraggeber"] == "Landesforst Mecklenburg Vorpommern"
+
+
+def test_netserver_schluessel_ueberlebt_fristverlaengerung():
+    """Der Schluessel steht auf Portal + Veroeffentlichung + Titel, NICHT auf der Frist.
+    Sonst erzeugt jede Fristverlaengerung einen zweiten Satz derselben Vergabe."""
+    a = {"pub": "2026-08-13", "titel": "Neubau Feuerwache", "frist": "2026-09-11T10:00:00"}
+    b = {"pub": "2026-08-13", "titel": "Neubau Feuerwache", "frist": "2026-09-25T10:00:00"}
+    assert NS.schluessel("hb", a) == NS.schluessel("hb", b)
+    assert NS.schluessel("hb", a) != NS.schluessel("sn", a), "Portale bleiben getrennt"
+
+
+def test_netserver_ist_in_der_dubletten_firewall_bekannt():
+    """Eine Quelle, die die Firewall nicht kennt, laeuft an ihr vorbei — genau das, wogegen
+    sie gebaut wurde."""
+    import sys
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from govisor import dedupe as ded          # Paketmodul: dedupe nutzt relative Importe
+    assert "netserver" in ded.QUELLEN_RANG
+    # Aermstes Satzbild im Bestand → darf niemandem als Anreicherungsquelle vorgezogen werden.
+    assert ded.QUELLEN_RANG["netserver"] == max(ded.QUELLEN_RANG.values())

@@ -36,6 +36,7 @@ CONNECTORS = {
     "offeneverg-csv": "OffeneVergaben.at BULK-Kerndaten CSV (data.gv.at, BVergG2018) — unterschwellig AT >50k €",
     "ocds-json":    "OCDS-JSON-API (Open Contracting Data Standard 1.1) — UK Find-a-Tender/Contracts-Finder",
     "decp-bulk":    "DECP konsolidiert Parquet/CSV (data.gouv.fr) — Frankreich unterschwellig, tägl.",
+    "netserver-html": "NetServer (Administration Intelligence) öffentliche Trefferliste — 4 DE-Landesportale, nur Bekanntmachungen (Unterlagen hinter Anmeldung)",
 }
 
 # --- Status einer Quelle ---------------------------------------------------------------------
@@ -101,6 +102,15 @@ REGISTRY: list[Source] = [
     Source("simap-ch", "simap.ch Schweiz", "simap-json", "CH", "beides", "live",
            portals=27, coverage="CH Bund + 26 Kantone, offene JSON-API, 280 Demo-Leads",
            overlap="eigener Rechtsraum, keine Überschneidung mit TED/DÖE", url="https://www.simap.ch"),
+    Source("netserver-de", "NetServer-Landesportale", "netserver-html", "DE", "beides", "live",
+           portals=4,
+           coverage="Bremen, Sachsen, MV, Baden-Württemberg (LandBW) — 735 Bekanntmachungen, "
+                    "388 unterschwellig; Vergabestelle bei 3 von 4 Portalen (Bremen führt "
+                    "sie nicht), CPV nur aus VOB/A ableitbar",
+           overlap="teilweise redundant zu TED/DÖE — gemessen 18 % neu über alle vier "
+                   "Portale; Mehrwert liegt im unterschwelligen Anteil. UNTERLAGEN NICHT "
+                   "abgreifbar: Detailseite hinter Anmeldung",
+           url="https://vergabe.bremen.de/NetServer/"),
 
     # --- PREPARED (Brücke fertig, wartet auf Voll-Ingest / Speicher) ---
     Source("ted-at", "TED Österreich", "ted-bulk", "AT", "oberschwellig", "prepared",

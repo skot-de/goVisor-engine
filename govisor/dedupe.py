@@ -84,8 +84,12 @@ SEED_DECKEL = 5000         # zu häufige Wörter taugen nicht als Einstieg (geme
 # Diese Rangfolge taugt deshalb NUR für die Anreicherungsrichtung (wohin fehlende Felder
 # fliessen), NICHT als Entscheidung, welcher Satz ein Lead wird. Ein Ausschluss von
 # Dubletten auf ihrer Basis haette 6 echte Dubletten entfernt und 64 gueltige Leads mit.
+# `netserver` steht hinter dtvp, weil eine NetServer-Trefferzeile das ärmste Satzbild im
+# Bestand hat: kein CPV (ausser der Ableitung aus VOB/A), kein Wert, keine Beschreibung,
+# bei Bremen nicht einmal die Vergabestelle. Als Anreicherungs-ZIEL ist er damit richtig —
+# als Quelle fehlender Felder taugt er kaum.
 QUELLEN_RANG = {"eforms": 0, "legacy": 1, "ojs": 2, "text": 3,
-                "doe": 4, "simap": 4, "atverg": 4, "dtvp": 5}
+                "doe": 4, "simap": 4, "atverg": 4, "dtvp": 5, "netserver": 6}
 
 _STOPP = frozenset("""der die das und oder von für mit im in am an auf zu zur zum des dem den
 eines einer eine ein als bei aus über unter nach vor durch gemäss gemäß sowie inkl inklusive
@@ -426,6 +430,26 @@ def anreichern(country: str = "DE") -> dict:
               WHERE d.beleg = 'kaeufer_und_titel'
                 AND m.{feld} IS NULL AND x.{feld} IS NOT NULL
            """).fetchall()]
+
+    # WERT MIT SEINER WAEHRUNG. Ein Schaetzwert ohne Waehrung ist keine Information, sondern
+    # eine Falle: das abgeloeste `dedupe_at_sources.py` uebertrug bewusst nur EUR, „damit
+    # keine Fremdwaehrung stillschweigend als Euro gilt". Diese Sperre darf beim Umzug in die
+    # zentrale Firewall nicht verlorengehen — deshalb wandert die Waehrung als EIGENE Zeile
+    # aus DEMSELBEN Quellsatz mit, und der Verbraucher entscheidet.
+    #
+    # Warum das zaehlt: `atverg` fuehrt den Wert zu 69,8 %, TED-AT nur zu 11,0 %. Gemessen
+    # 2026-08-14 wuerden 3.922 oesterreichische Leads ohne Wert dadurch einen bekommen —
+    # und der Wert traegt das Gebuehrenband.
+    zeilen += [dict(notice_id=r[0], feld="estimated_value_waehrung", wert=r[1],
+                    quelle_notice_id=r[2], quelle_gen=r[3])
+               for r in con.execute(f"""
+          SELECT d.master_id, x.value_currency, d.duplicate_id, d.duplicate_quelle
+          FROM read_parquet('{dup.as_posix()}') d
+          JOIN read_parquet({g!r}) m ON m.notice_id = d.master_id
+          JOIN read_parquet({g!r}) x ON x.notice_id = d.duplicate_id
+          WHERE d.beleg = 'kaeufer_und_titel'
+            AND m.estimated_value IS NULL AND x.estimated_value IS NOT NULL
+       """).fetchall()]
 
     # FRISTVERLAENGERUNG — die einzige Stelle, an der ein Wert NICHT nur eine Luecke
     # fuellt, sondern einen vorhandenen korrigiert. Sie steht deshalb als eigene Feldart
