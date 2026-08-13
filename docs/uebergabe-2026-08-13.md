@@ -30,6 +30,12 @@ Vier Entscheidungen stehen bereits fest, sie sind nicht neu zu diskutieren:
    DÖE steckt in den **Stichtags-Kennzahlen bereits drin** — ausgeschlossen ist es nur aus der
    Zeitreihe. Wer „DÖE fehlt" liest, prüft zuerst, welche der beiden Zahlen gemeint ist.
 
+   > **Korrektur (2026-08-13, beim Bau des Jahres-Layers gemessen):** dieser Satz stimmte nur
+   > zu 7 %. `verfahren_tabelle()` verlangte ein `publication_date`, und das tragen nur
+   > **8.875 von 102.043** DÖE-`cn` aus 2023 — der Rest fiel lautlos aus *beiden* Teilen.
+   > Behoben über ein Ersatzdatum aus `year`/`month`. Die Stichtags-Kennzahlen sind dadurch
+   > gestiegen (laufend 9.463 → 12.420). Details: `docs/marktpuls-jahres-layer.md` §3.
+
 **Einstiegspunkt:** `verfahren_tabelle(con, land, ab_jahr)` in `scripts/build_marktpuls.py`
 (545 Z.) legt die TEMP TABLE `v_<land>` an — Spalten `land, jahr, monat, branche, quelle,
 verfahren_key, frist, hat_frist`. Heute mit `jahre[0]` (2021) aufgerufen.
@@ -69,6 +75,13 @@ Rückverweis-Kette → `publication_number`. Änderungsbekanntmachungen bleiben 
 
 **Marktpuls-Befund, gemessen: kein Sommerloch.** Juli +12,2 % (zweitstärkster Monat), August
 +1,7 %. Das Loch ist der **Januar** (−24,4 %), schwächer der November (−10,4 %). Gegengeprüft
+
+> **Nachtrag (2026-08-13):** seit der Tageslauf mit `--ab-jahr 2004` rechnet, verschieben sich
+> diese Werte um 0,1–0,4 pp — **Juli +12,3 %, August +1,9 %, Januar −24,8 %, November −10,2 %**,
+> Fenster-Verfahren 392.277 → 391.613. Nicht der Datums-Fix (TED trägt immer ein
+> `publication_date`), sondern die Verfahrens-Klammer: mit der längeren Achse werden 639 DE-
+> und 25 AT-Verfahren ihrem *tatsächlichen*, früheren Eröffnungsjahr zugeordnet statt einer
+> Folgebekanntmachung im Fenster. Der Befund selbst ist unberührt.
 an rohen CN ohne jede Dedup — gleiche Form in jedem der fünf Jahre, kein Artefakt.
 `pct` ist ein **Saisonindex** (erst je Jahr normiert, dann gemittelt), weil das Fenster eine
 Niveauverschiebung enthält (DE-TED 2021 55,8k → 2025 70,3k). Naiver Wert liegt als `pct_naiv`
@@ -78,10 +91,26 @@ daneben, Abweichung max. 0,8 pp.
 
 ## 4. Offen — nach Hebel sortiert
 
-1. **60 % der offenen Leads liegen auf ungedeckten Portalen** (7.220 von 10.797). Das ist die
-   größte Lücke im ganzen Dokument-Strang, größer als jede Parser-Verbesserung. Die
-   Vorprüfung (`scripts/probe_portals.py`) zeigt: keine Anmelde-Wand, die Dateilisten kommen
-   per JavaScript. Nächste Kandidaten: subreport (581), staatsanzeiger-eservices (203),
+1. **60 % der offenen Leads liegen auf ungedeckten Portalen** (7.220 von 10.797).
+
+   > **KORREKTUR (2026-08-13, spät): „keine Anmelde-Wand" war falsch.** Die Vorprüfung
+   > `scripts/probe_portals.py` klassifiziert die Seite, die als `documents_url` gespeichert
+   > ist — und das ist die **Bekanntmachung**, nicht die Dokumentliste. Auf der
+   > Bekanntmachung steht kein Passwortfeld, auf der Unterlagen-Seite schon. Nachgemessen an
+   > der NetServer-Familie (1.408 Leads, 8+ Hosts, u. a. sachsen-vergabe, landbw, autobahn,
+   > had): sowohl `ParticipationControllerServlet?function=ParticipList` als auch
+   > `TenderingProcedureDetails?function=_Details` liefern ein Passwortfeld und **null**
+   > Datei-Links. Dasselbe bei simap.ch (1.094 CH-Leads): die API sagt
+   > `documentsSourceType=documents_source_simap`, die Seite verlinkt `/de/provider/login`.
+   >
+   > Die Aussage muss lauten: **die Bekanntmachungen sind offen, die Vergabeunterlagen
+   > überwiegend nicht.** Wer aus der Zugänglichkeit der einen Schicht auf die andere
+   > schliesst, irrt — dieser Fehler steckt in der ursprünglichen Vorprüfung UND in meiner
+   > Korrektur an ihr.
+   >
+   > Nachweislich OHNE Anmeldung liefern bislang nur **cosinex/DTVP (3.577)** und
+   > **RIB/meinauftrag (714)** — zusammen die 40 %, die wir abdecken. `probe_portals.py`
+   > müsste den Unterlagen-Link erst aufsuchen, statt die Bekanntmachung zu bewerten. Nächste Kandidaten: subreport (581), staatsanzeiger-eservices (203),
    had.de (189), vergabe24 (173). `evergabe-online` (791) antwortete durchgehend 503 — neu
    messen. `subreport-elvis` und `aumass` haben Bot-Schutz.
    Verdrahtung über `_waehle_connector()` in `govisor/docfetch.py`: neue Plattform = ein Modul
