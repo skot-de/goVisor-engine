@@ -159,6 +159,24 @@ echo "  Gold ok."
 #     ⚠ NUR DE: der Fetcher deckt cosinex/DTVP ab. CH (simap.ch) verlangt für den Download
 #     eine Registrierung — dort kommen wir legitim nicht heran; AT liefert als
 #     `documents_url` nur die TED-Bekanntmachung. Siehe CLAUDE.md, EU-weit-Grundsatz.
+# DTVP-Bekanntmachungen (DE, unterschwellig). Gemessen 2026-08-13 an einer ueber
+# 05/2024–08/2026 GESTREUTEN Stichprobe: 38 % der VOB/A-Ausschreibungen fehlten uns.
+#
+# ⚠ NUR VOB/A. Der VOL-Bereich (VgV/VOL/A/UVgO) ist mit 8.640 offenen Treffern noch
+#   groesser, liefert aber KEINEN CPV — und `build_prospective_leads` verlangt
+#   `cpv_main IS NOT NULL`. Bei VOB/A ist die Branche die Definition der Vorschrift
+#   (Vergabe- und Vertragsordnung fuer BAUleistungen → CPV 45); bei VOL gibt es keine
+#   solche Ableitung, das kann IT, Beratung oder Medizintechnik sein. Der CPV-Filter der
+#   Suche nimmt keine zweistelligen Divisionen (geprueft: Seite haengt, 0 Treffer), er
+#   erwartet vollstaendige Codes aus einem Dialog. Bis das geloest ist, waeren VOL-Leads
+#   ohne Branche und damit im Produkt unsichtbar — offener Punkt, kein stiller Verzicht.
+#
+# Braucht Playwright + chromium-headless-shell (die Trefferliste entsteht clientseitig).
+# Nicht fatal: eine fremde Website darf den Tageslauf nicht abbrechen.
+step "DTVP-Bekanntmachungen (DE unterschwellig, VOB/A)"
+$PY -m govisor.dtvp --regeln VOB --typen Tender --max-seiten 40 --stop-nach-bekannten 40 --silber \
+  || echo "  ⚠ DTVP-Abruf fehlgeschlagen — Bestand bleibt auf dem letzten Stand."
+
 step "Vergabeunterlagen holen (DE/cosinex, höflich + idempotent)"
 $PY -m govisor.cli fetch-docs --country DE || echo "  ⚠ Fetch unvollständig — Auswertung läuft über den vorhandenen Bestand."
 # ⚠ DIESER SCHRITT FEHLTE (gemessen 2026-08-13: 2.114 Vorgänge heruntergeladen, 241 mit Text).
