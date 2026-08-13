@@ -19,7 +19,17 @@ GAEB_EXTS = frozenset({".x83", ".x81", ".x86", ".d83", ".d81", ".p83", ".gaeb"})
 XLSX_EXTS = frozenset({".xlsx", ".xlsm"})
 
 
-def _localname(tag: str) -> str:
+def _localname(tag) -> str:
+    """XML-Tag ohne Namensraum. Nimmt AUCH Nicht-Strings entgegen.
+
+    lxml liefert fuer Kommentare und Processing-Instructions als `.tag` eine FUNKTION,
+    keinen String — `root.iter()` gibt diese Knoten mit aus. Ohne diesen Guard warf der
+    GAEB-Parser dort `TypeError: argument of type 'cython_function_or_method' is not a
+    container`. Aufgefallen erst beim Lauf ueber echte Leistungsverzeichnisse; beim
+    Einzel-Upload hatte es nie jemanden getroffen.
+    """
+    if not isinstance(tag, str):
+        return ""
     return tag.rsplit("}", 1)[-1] if "}" in tag else tag
 
 
