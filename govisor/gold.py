@@ -2835,7 +2835,25 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
         max(CASE WHEN path ILIKE '%TenderSubmissionDeadlinePeriod.EndTime' AND path NOT ILIKE '%@%'
                  THEN substr(value, 1, 5) END)                                   AS deadline_time,
         max(CASE WHEN path ILIKE '%AdditionalInformationRequestPeriod.EndDate' AND path NOT ILIKE '%@%'
-                 THEN substr(value, 1, 10) END)                                  AS question_deadline
+                 THEN substr(value, 1, 10) END)                                  AS question_deadline,
+        -- CH/simap: Unterlagen-Herkunft. Die Felder liegen seit dem ersten simap-Ingest in
+        -- Bronze und seit 2026-08-13 in Silber; ohne diese vier Zeilen bleiben sie dort
+        -- liegen. Gemessen ueber 11.460 Publikationen: 4.452 mit `documents_source_simap`
+        -- (simap haelt die Unterlagen selbst), 238 externer Link, 225 nur auf Anfrage.
+        -- `documents_source` beantwortet damit im Produkt die Frage, die vor jedem
+        -- Dokument-Connector steht: kommt man ueberhaupt heran, und wie?
+        max(CASE WHEN path = 'simap/documentsSourceType' THEN
+          CASE value WHEN 'documents_source_simap'   THEN 'platform'
+                     WHEN 'documents_source_url'     THEN 'external_url'
+                     WHEN 'documents_source_email'   THEN 'on_request'
+                     WHEN 'documents_source_address' THEN 'postal' ELSE 'other' END END)
+                                                                        AS documents_source,
+        (max(CASE WHEN path = 'simap/hasProjectDocuments' THEN 1 ELSE 0 END) = 1)
+                                                                        AS has_documents,
+        (max(CASE WHEN path = 'simap/documentsWithCosts'
+             AND lower(value) = 'yes' THEN 1 ELSE 0 END) = 1)           AS documents_paid,
+        string_agg(DISTINCT CASE WHEN path = 'simap/documentsLanguage'
+             THEN lower(value) END, ',')                                AS documents_languages
       FROM read_parquet('{A}', hive_partitioning=1)
       WHERE path ILIKE '%RegulatoryDomain'
          OR path ILIKE '%ProcurementLegislationDocumentReference.ID'
