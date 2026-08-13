@@ -337,6 +337,38 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
 .zug-bar{height:8px;border-radius:99px;background:var(--surface-3);overflow:hidden}
 .zug-bar i{display:block;height:100%;border-radius:99px;background:var(--signal)}
 .zug-v{font-size:var(--t-meta);font-weight:600;color:var(--ink-700);font-variant-numeric:tabular-nums}
+/* Leistungsumfang — das LV selbst (GAEB/Preisblatt). Mengen als Chips, Positionen als Tabelle. */
+.lu-sum{font-size:var(--t-body);color:var(--ink-700);margin-bottom:var(--s3)}
+.lu-mengen{display:flex;flex-wrap:wrap;gap:var(--s2);margin-bottom:var(--s3)}
+.lu-chip{font-size:var(--t-meta);color:var(--ink-700);background:var(--surface-3);
+  border-radius:99px;padding:4px 11px;font-variant-numeric:tabular-nums}
+.lu-chip b{font-weight:700;color:var(--ink-900)}
+.lu-tab{width:100%;border-collapse:collapse;font-size:var(--t-meta);display:block;
+  max-height:420px;overflow:auto}                   /* lange LV scrollen im Block, nicht die Seite */
+.lu-tab th{text-align:left;font-weight:600;color:var(--ink-500);padding:6px 10px;
+  border-bottom:1px solid var(--line-strong);position:sticky;top:0;background:var(--surface)}
+.lu-tab td{padding:6px 10px;border-bottom:1px solid var(--line);color:var(--ink-700);
+  vertical-align:top}
+.lu-tab tr:last-child td{border-bottom:0}
+.lu-r{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.lu-no{font-family:var(--mono);color:var(--ink-400);white-space:nowrap}
+.lu-more{font-size:var(--t-meta);color:var(--ink-400);margin-top:var(--s2);line-height:1.5}
+/* Entscheidungskriterien — A (K.o.) und B (Punkte) bewusst getrennt */
+.kr-block{margin-top:var(--s3)}
+.kr-h{display:flex;align-items:center;gap:var(--s2);margin-bottom:var(--s2);flex-wrap:wrap}
+.kr-h b{font-size:var(--t-body);color:var(--ink-900)}
+.kr-n{font-size:var(--t-meta);font-weight:700;color:var(--ink-500);background:var(--surface-3);
+  border-radius:99px;padding:1px 9px;font-variant-numeric:tabular-nums}
+.kr-hint{font-size:var(--t-meta);color:var(--ink-400)}
+.kr-list{list-style:none;margin:0;padding:0;max-height:340px;overflow:auto}
+.kr-list li{display:grid;grid-template-columns:auto 1fr auto;gap:var(--s3);align-items:baseline;
+  padding:5px 0;border-bottom:1px solid var(--line)}
+.kr-list li:last-child{border-bottom:0}
+.kr-code{font-family:var(--mono);font-size:var(--t-meta);color:var(--ink-400);white-space:nowrap}
+.kr-txt{font-size:var(--t-meta);color:var(--ink-700);line-height:1.5}
+.kr-gew{font-size:var(--t-meta);font-weight:700;color:var(--ink-700);
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+.kr-ko .kr-code{color:#a13a3a}
 /* Vergabe-Analyse (LLM aus den Unterlagen) — Ampel + Checkliste */
 .va-sec{background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--r);padding:var(--s4)}
 .va-head{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);margin-bottom:var(--s2)}

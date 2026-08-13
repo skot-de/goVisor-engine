@@ -965,6 +965,57 @@ function renderDocs(l){
     </section>`;
   })() : '';
 
+  // Leistungsumfang: das Leistungsverzeichnis selbst (GAEB beim Bau, Preisblatt sonst).
+  // Die Mengen-Summen gelten fuer ALLE Positionen; die Tabelle ist ein gekennzeichneter
+  // Auszug in Dokumentreihenfolge — eine eigene Rangfolge waere bei gemischten Einheiten
+  // (150 m² gegen 3 Stueck) eine Scheinordnung.
+  const umfang = (l.lbStruktur && l.lbStruktur.nPositionen) ? (()=>{
+    const s = l.lbStruktur, pos = s.positionen || [];
+    const mengen = Object.entries(s.mengen || {}).sort((a,b)=>b[1]-a[1]).slice(0,8);
+    const zahl = n => Number(n).toLocaleString('de-DE', {maximumFractionDigits:1});
+    const herkunft = s.quelle && s.quelle.indexOf('gaeb') >= 0
+      ? tk("aus dem GAEB-Leistungsverzeichnis") : tk("aus dem Preisblatt der Unterlagen");
+    return `<section class="sec">
+      <h4>${tk("Leistungsumfang")}<span class="cov">${herkunft}</span></h4>
+      <p class="lu-sum">${tk("{n} Positionen im Leistungsverzeichnis.", {n: zahl(s.nPositionen)})}</p>
+      ${mengen.length ? `<div class="lu-mengen">${mengen.map(([e,v])=>
+        `<span class="lu-chip"><b>${esc(zahl(v))}</b> ${esc(e)}</span>`).join('')}</div>` : ''}
+      ${pos.length ? `<table class="lu-tab"><thead><tr>
+          <th>${tk("Pos.")}</th><th>${tk("Leistung")}</th><th class="lu-r">${tk("Menge")}</th><th>${tk("Einheit")}</th>
+        </tr></thead><tbody>${pos.map(p=>`<tr>
+          <td class="lu-no">${esc(p.rno||'')}</td>
+          <td>${esc(p.text||'')}</td>
+          <td class="lu-r">${p.menge==null?'':esc(zahl(p.menge))}</td>
+          <td>${esc(p.einheit||'')}</td></tr>`).join('')}</tbody></table>
+        ${s.nPositionen > pos.length
+          ? `<p class="lu-more">${tk("Auszug — erste {a} von {b} Positionen. Vollständig in den Unterlagen beim Vergabeportal.", {a: pos.length, b: zahl(s.nPositionen)})}</p>`
+          : ''}` : ''}
+    </section>`;
+  })() : '';
+
+  // Entscheidungskriterien aus der UfAB-Matrix. A und B getrennt, weil sie verschiedene
+  // Fragen beantworten: A entscheidet ueber Teilnahme (nicht erfuellt = raus), B ueber Punkte.
+  const kriterien = (l.lbStruktur && l.lbStruktur.kriterien) ? (()=>{
+    const k = l.lbStruktur.kriterien, a = k.ausschluss || [], b = k.bewertung || [];
+    if(!a.length && !b.length) return '';
+    const zeile = x => `<li><span class="kr-code">${esc(x.code||'')}</span>
+      <span class="kr-txt">${esc(x.text||'')}</span>
+      ${x.gewichtung!=null?`<span class="kr-gew">${esc(String(x.gewichtung))}</span>`:''}</li>`;
+    return `<section class="sec">
+      <h4>${tk("Entscheidungskriterien")}<span class="cov">${tk("aus der Kriterienmatrix der Unterlagen")}</span></h4>
+      ${a.length ? `<div class="kr-block kr-ko">
+        <div class="kr-h"><b>${tk("Ausschlusskriterien")}</b>
+          <span class="kr-n">${a.length}</span>
+          <span class="kr-hint">${tk("nicht erfüllt = Angebot fliegt raus")}</span></div>
+        <ul class="kr-list">${a.map(zeile).join('')}</ul></div>` : ''}
+      ${b.length ? `<div class="kr-block">
+        <div class="kr-h"><b>${tk("Bewertungskriterien")}</b>
+          <span class="kr-n">${b.length}</span>
+          <span class="kr-hint">${tk("bringen Punkte, Gewichtung rechts")}</span></div>
+        <ul class="kr-list">${b.map(zeile).join('')}</ul></div>` : ''}
+    </section>`;
+  })() : '';
+
   const volltext = l.lbText ? `<section class="sec sec-raw">
       <h4>${tk("Leistungsbeschreibung")}<span class="cov">aus den Vergabeunterlagen · ${l.lbFiles||1} Datei${(l.lbFiles||1)===1?'':'en'}</span></h4>
       <details class="rawtext"${l.lbAnalyse?'':' open'}>
@@ -973,7 +1024,7 @@ function renderDocs(l){
       </details>
     </section>` : '';
 
-  return `<div class="dbody dbody-ov">${head}${anforderungen}${volltext}</div>`;
+  return `<div class="dbody dbody-ov">${head}${anforderungen}${kriterien}${umfang}${volltext}</div>`;
 }
 
 // #24 Zuschlag-Detail (Ticket §5): gleiche Detailstruktur wie ein Lead, andere Frage —

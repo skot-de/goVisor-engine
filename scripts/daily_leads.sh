@@ -163,6 +163,19 @@ else
   echo "  ⚠ Signal-Extraktion übersprungen."
 fi
 
+# Struktur AUS den Unterlagen: Leistungsverzeichnis (GAEB + Preisblatt) und Kriterienmatrix.
+# Anders als die Signale oben ist das keine Ableitung aus Fließtext, sondern die Tabelle
+# selbst — „wie viel wovon" und „woran werde ich gemessen". Läuft über den vorhandenen
+# Archiv-Bestand, braucht kein Netz und keine LLM, also täglich unproblematisch.
+# Reihenfolge ist Pflicht: extract_criteria liest doc_lv.parquet aus extract_positions.
+step "Leistungsverzeichnisse + Kriterienmatrizen aus den Unterlagen"
+if $PY scripts/extract_positions.py --country DE; then
+  $PY scripts/extract_criteria.py --country DE || echo "  ⚠ Kriterien-Extraktion übersprungen."
+  $PY scripts/export_doc_struktur.py --country DE || echo "  ⚠ doc-struktur.json nicht geschrieben."
+else
+  echo "  ⚠ LV-Extraktion übersprungen — doc-struktur.json bleibt auf dem letzten Stand."
+fi
+
 # 3) FRONTEND-DATEN — das ist, was die App tatsächlich liest (web/data/*.json über
 #    lib/dataSource.ts). Fehlte bis 2026-08-10 im Tageslauf: Ingest und Gold liefen täglich,
 #    aber die Oberfläche zeigte den Stand des letzten Handlaufs (zuletzt 10 Tage alt).

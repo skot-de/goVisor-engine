@@ -43,6 +43,24 @@ async function loadDocSignals(): Promise<Record<string, DocSignals>> {
   return docSignals!;
 }
 
+// Leistungsumfang + Entscheidungskriterien aus den Unterlagen (doc-struktur.json, aus
+// extract_positions.py/extract_criteria.py → export_doc_struktur.py). Anders als die Signale
+// oben ist das keine Ableitung, sondern die Tabelle selbst: Positionen aus GAEB-LV und
+// Preisblättern, Kriterien aus der UfAB-Matrix.
+type DocStruktur = {
+  nPositionen?: number; quelle?: string;
+  mengen?: Record<string, number>;
+  positionen?: { rno: string | null; menge: number | null; einheit: string | null; text: string }[];
+  kriterien?: { ausschluss: Record<string, unknown>[]; bewertung: Record<string, unknown>[] };
+};
+let docStruktur: Record<string, DocStruktur> | null = null;
+async function loadDocStruktur(): Promise<Record<string, DocStruktur>> {
+  if (docStruktur) return docStruktur;
+  try { const raw = await loadDataFile("doc-struktur.json"); docStruktur = raw ? JSON.parse(raw) : {}; }
+  catch { docStruktur = {}; }
+  return docStruktur!;
+}
+
 // LLM-Vergabe-Analyse aus den Unterlagen (doc-analysis.json, aus analyze_docs.py): Ampel +
 // Bieter-Checkliste (K.o./Eignung/Zuschlag/Fristen/Aufwand/vorausfüllbar), je notice_id.
 type DocAnalysis = Record<string, unknown>;
@@ -76,6 +94,9 @@ export async function GET(req: Request) {
     // Strukturierte Anforderungs-Signale aus den Unterlagen (Bürgschaft, Zertifikate, Zuschlagsgewichte …).
     const ds = (await loadDocSignals())[id];
     if (ds) detail.lbSignals = ds;
+    // Leistungsumfang (LV-Positionen) + Entscheidungskriterien (A/B-Matrix) aus den Unterlagen.
+    const st = (await loadDocStruktur())[id];
+    if (st) detail.lbStruktur = st;
     // LLM-Vergabe-Analyse (Ampel + Bieter-Checkliste).
     const an = (await loadDocAnalysis())[id];
     if (an) detail.lbAnalyse = an;

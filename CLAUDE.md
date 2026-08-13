@@ -27,6 +27,15 @@ Textformat, 0,25 Mio, cp1252-Fallback), `ojs` (INTERNAL_OJS, OPOCE-Altformat, u.
 CLI: `python -m govisor.cli {ingest|silver|gold|verify|review}`.
 
 ## Arbeitsweise (wichtig, von Sven eingefordert)
+- **goVisor ist EU-weit geplant — jede Funktion gilt für ALLE Länder.** Deutschland ist der
+  Testfall, nicht der Zielmarkt. Wer ein Feature nur für DE baut (Connector, Parser, Label-
+  Vokabular, Regionen-Katalog, Dokument-Fetcher), hat es nicht fertig gebaut, sondern nur
+  angefangen. Bei jedem neuen Baustein gehört die Frage dazu: **was passiert damit in CH,
+  AT und den übrigen EU-Ländern?** Wenn die Antwort „noch nichts" ist, muss das ausdrücklich
+  als offener Punkt dastehen — nicht stillschweigend als „erledigt" gelten.
+  Konkrete Altlasten dieser Art: der Regionen-Katalog kennt nur deutsche Bundesländer
+  (Schweizer Leads fallen aus jeder Umkreissuche), und der Dokument-Fetcher deckt nur
+  cosinex/DTVP ab (eine deutsche Plattform-Familie).
 - **Messen statt annehmen** — jede Zahl/Feldposition an echten Daten prüfen, nie aus
   dem Gedächtnis behaupten. Auffällige Aggregat-Zahlen sind Warnsignale.
 - **Kein Datenverlust** — nichts nach eigener Relevanz filtern; Unbekanntes →

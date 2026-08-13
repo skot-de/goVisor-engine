@@ -23,6 +23,8 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+import io
+import re
 import zipfile
 from collections import Counter
 from pathlib import Path
@@ -33,6 +35,82 @@ sys.path.insert(0, str(ROOT))
 from govisor import docparse  # noqa: E402
 
 _MAX_ENTPACKT = 60 * 1024 * 1024      # je Datei — Zip-Bomben-Schutz (wie docpipe)
+
+
+# ── Preisblatt (Nicht-Bau) ────────────────────────────────────────────────────────────────────
+# Was GAEB fuer den Bau ist, ist das Preisblatt fuer IT, Beratung, Reinigung, Medizin. Es hat
+# KEIN einheitliches Schema — Zeile 0 traegt meist den Dokumenttitel, der echte Kopf steht
+# irgendwo bis Zeile ~15. Gemessen an 22 Blaettern: 11 haben eine erkennbare Kopfzeile, 11
+# nicht (Fliesstext-Formulare, „Summe der Pflegepauschalen" o. Ae.). Die halbe Ausbeute ist
+# der ehrliche Erwartungswert, kein Defekt.
+#
+# WICHTIG: die PREIS-Spalten bleiben ungelesen — sie sind leer. Das Preisblatt ist ein
+# Formular, das der Bieter ausfuellt. Uns interessiert die linke Haelfte: Position,
+# Bezeichnung, Menge, Einheit. Das ist der Leistungsumfang.
+_PB_ROLLEN = {
+    "rno":     r"^(pos\.?|position|ordnungszahl|lfd)",
+    "text":    r"bezeichnung|leistung|beschreibung|artikel|gegenstand",
+    "menge":   r"^(ca\.?\s*)?menge|anzahl|stück|stueck",
+    "einheit": r"^einheit(?!spreis)|^me$|mengeneinheit",
+}
+_PB_KOPF = re.compile(r"\b(pos|position|ordnungszahl|bezeichnung|leistung|menge|einheit|"
+                      r"einheitspreis|gesamtpreis)\b", re.I)
+
+
+def _pb_kopfzeile(ws):
+    """Kopfzeile eines Preisblatts finden: >=2 LV-typische Begriffe in einer Zeile."""
+    for i, row in enumerate(ws.iter_rows(values_only=True)):
+        if i > 15:
+            return None
+        zellen = [str(c).strip() if c is not None else "" for c in row]
+        gefuellt = [c for c in zellen if c]
+        if len(gefuellt) >= 3 and sum(1 for c in gefuellt if _PB_KOPF.search(c)) >= 2:
+            rollen: dict[str, int] = {}
+            for rolle, muster in _PB_ROLLEN.items():
+                for j, c in enumerate(zellen):
+                    if c and re.search(muster, c.replace("\n", " "), re.I):
+                        rollen.setdefault(rolle, j)
+            return i, rollen
+    return None
+
+
+def lies_preisblatt(daten: bytes, blatt: str) -> list[dict]:
+    import openpyxl
+
+    try:
+        wb = openpyxl.load_workbook(io.BytesIO(daten), data_only=True)
+    except Exception:
+        return []
+    if blatt not in wb.sheetnames:
+        wb.close()
+        return []
+    ws = wb[blatt]
+    kopf = _pb_kopfzeile(ws)
+    if not kopf or "text" not in kopf[1]:
+        wb.close()
+        return []                                  # ohne Bezeichnungsspalte kein Leistungsumfang
+    start, rollen = kopf
+    aus, leer = [], 0
+    for i, row in enumerate(ws.iter_rows(values_only=True)):
+        if i <= start:
+            continue
+        z = [str(c).strip() if c is not None else "" for c in row]
+
+        def f(rolle):
+            j = rollen.get(rolle)
+            return z[j] if j is not None and j < len(z) else ""
+
+        text = f("text")
+        if not text:
+            leer += 1
+            if leer > 8:                           # Ende der Tabelle (Summenblock o. Ae.)
+                break
+            continue
+        leer = 0
+        aus.append({"rno": f("rno") or None, "qty": f("menge"),
+                    "unit": f("einheit") or None, "text": text[:300]})
+    wb.close()
+    return aus
 
 
 def _archive(vorgang: Path):
@@ -52,6 +130,7 @@ def sammle(country: str, limit: int | None) -> tuple[list[dict], list[dict]]:
         n_pos = 0
         mengen: Counter = Counter()
         blaetter: list[dict] = []
+        gesehen: set = set()
         for z in _archive(v):
             try:
                 zf = zipfile.ZipFile(z)
@@ -90,6 +169,20 @@ def sammle(country: str, limit: int | None) -> tuple[list[dict], list[dict]]:
                         for sh in res.get("sheets", []):
                             blaetter.append({"datei": info.filename, **sh})
                             n_pos += sh.get("n_positions", 0)
+                            # Preisblatt = Leistungsumfang der Nicht-Bau-Branchen.
+                            if "preis" not in (sh.get("name") or "").lower():
+                                continue
+                            for p in lies_preisblatt(daten, sh["name"]):
+                                schluessel = (nid, p.get("rno"), p.get("text"))
+                                if schluessel in gesehen:
+                                    continue          # gleiches Blatt in zwei Archivdateien
+                                gesehen.add(schluessel)
+                                positionen.append({
+                                    "notice_id": nid, "quelle": "preisblatt",
+                                    "datei": info.filename, "rno": p.get("rno"),
+                                    "menge": _zahl(p.get("qty")), "einheit": p.get("unit"),
+                                    "text": p.get("text"),
+                                })
         if n_pos or blaetter:
             lv.append({
                 "notice_id": nid,
