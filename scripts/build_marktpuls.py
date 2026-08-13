@@ -1,12 +1,14 @@
-"""Marktpuls — Saisonalität + aktuelle Marktlage als vorberechnetes JSON.
+"""Marktpuls — Saisonalität, Jahres-Layer + aktuelle Marktlage als vorberechnetes JSON.
 
 Ein in sich geschlossenes Anzeige-Element (Briefing `INPUT/v1 Features/add/
-govisor-briefing-marktpuls.md`). Zwei Teile, beide ausschliesslich aus dem
+govisor-briefing-marktpuls.md`). Drei Teile, alle ausschliesslich aus dem
 vorhandenen Silber-/Gold-Bestand (keine neue Quelle):
 
 1. **Saisonalität** — Ø neu veröffentlichte Ausschreibungen je Kalendermonat über die
    letzten 5 *vollen* Jahre, plus Abweichung vom Jahresmittel.
-2. **Aktuelle Lage** — laufende Verfahren (Frist in der Zukunft), Zuschläge und
+2. **Jahres-Layer** — ein Wert je Kalenderjahr, **je Quelle eine eigene Reihe**, plus
+   markierte Bruchstellen. Über `--ab-jahr` bis 2004 zurück (Historie).
+3. **Aktuelle Lage** — laufende Verfahren (Frist in der Zukunft), Zuschläge und
    Aufhebungen der letzten 30 Tage, aufgeschlüsselt nach Branche.
 
 Ausgabe: ``web/data/marktpuls.json`` (aggregiert, keine Einzelverfahren, < 50 KB).
@@ -57,9 +59,52 @@ veröffentlichte Frist werden separat als `ohne_frist` gezählt, nie stillschwei
 hiesse, DE und CH/AT mit verschiedenen Massstäben zu messen).
 
 --------------------------------------------------------------------------------
+DER JAHRES-LAYER — vier weitere Entscheidungen, ebenfalls gemessen:
+
+**(5) Eine Reihe je Quelle, nie eine Summenkurve.** Die Zeitreihe des Saison-Teils wirft
+Quellen mit späterem Beginn *heraus* (Entscheidung 2 oben) — richtig für einen
+Monatsdurchschnitt, aber im Jahres-Layer wäre es Datenverlust. Hier bekommt jede Quelle
+statt dessen eine **eigene Reihe ab ihrem Beginn**. Regel, nicht Sonderfall je Land:
+
+    Eine nationale Quelle wird mit TED zusammengeführt, wenn sie über das ganze
+    Fenster durchgehend liefert. Sonst: eigene Reihe ab ihrem Beginn. Nie addieren.
+
+Gemessen ergibt das (Achse 2004–2025): DE = TED + DÖE ab 2023, CH = TED + simap ab 2024,
+AT = TED + atverg ab 2019. Über das kurze 5-Jahres-Fenster liefert atverg durchgehend und
+wird dort zusammengeführt — dieselbe Quelle, andere Achse, andere Antwort. Deshalb steht
+die Begründung je Reihe im JSON (`grund`), statt im Kopf des Lesers rekonstruiert zu werden.
+`serie` sagt, zu welcher Linie eine Quelle gehört; `quelle` bleibt immer einzeln
+ausgewiesen. Damit **ist** die Quellen-Zusammensetzung je Jahr die Datenstruktur selbst —
+es braucht keinen zweiten, ableitbaren Block daneben.
+
+**(6) Brüche markieren, nicht glätten.** Ein Knick über 22 Jahre ist häufiger eine
+Regeländerung als ein Marktereignis. Markiert wird beides, aber getrennt gekennzeichnet:
+  * `art: "gemessen"` — aus unserem eigenen Bestand abgeleitet und damit nachprüfbar:
+    `schema_wechsel` (die vorherrschende `schema_gen` wechselt), `quelle_start`,
+    `land_start` (nur am Aggregat), `teiljahr`.
+  * `art: "kuratiert"` — äusseres Wissen, das in keinen Daten steht. Kleine Tabelle
+    `REGEL_BRUECHE`, jeder Eintrag trägt einen `beleg`. Sie ist **bewusst kurz**: die
+    EU-Schwellenwerte werden alle zwei Jahre neu festgesetzt (2004, 2006, … 2026) — elf
+    Marken machen die Markierung wertlos, statt sie zu schärfen.
+
+**(7) Teiljahre bleiben stehen, sie werden nur gekennzeichnet.** Gemessen: CH-TED beginnt
+2016 mit nur **5 belegten Monaten** (Aug–Dez, 1.843 Verfahren), 2017 sind es 4.406 — wer
+das Teiljahr als Jahreswert zeichnet, liest daraus +139 % Marktwachstum. Ebenso simap 2024
+(6 Monate). Weggeworfen wird nichts (Projekt-Konvention „markieren statt filtern"), aber
+jede Reihe führt `teiljahre: [{jahr, monate}]`, und das laufende Jahr fehlt ganz —
+die Achse endet beim letzten *vollen* Jahr.
+
+**(8) Die Historie ist ein Schalter, kein Default.** `--ab-jahr 2004` verlängert die Achse;
+ohne ihn deckt der Jahres-Layer dasselbe 5-Jahres-Fenster wie die Saison ab. Grund:
+`build_marktpuls.py` läuft im Tageslauf (`scripts/daily_leads.sh`) und darf dort nicht
+minutenlang werden. Der Saison-Teil bleibt **immer** auf den 5 vollen Jahren — ein
+Saisonindex über 22 Jahre mit vier Schema-Generationen und wechselnder Meldepflicht
+mittelte Regime, die nichts miteinander zu tun haben.
+
+--------------------------------------------------------------------------------
 Aufruf::
 
-    python3 scripts/build_marktpuls.py [--laender DE,AT,CH] [--jahre 5]
+    python3 scripts/build_marktpuls.py [--laender DE,AT,CH] [--jahre 5] [--ab-jahr 2004]
                                        [--out web/data/marktpuls.json] [--dry-run]
 """
 from __future__ import annotations
@@ -107,6 +152,39 @@ BRANCHE_SQL = """CASE b.branche
     WHEN 'Umwelt/Reinigung' THEN 'energie' WHEN 'Chemie' THEN 'energie' WHEN 'Rohstoffe' THEN 'energie'
   ELSE 'beratung' END"""
 BRANCHEN = ("bau", "it", "beratung", "medizin", "sicherheit", "energie")
+
+# --- Jahres-Layer ---------------------------------------------------------------
+# Frühestes zulässiges `--ab-jahr`. Der Bestand beginnt 2004-01 (CLAUDE.md); alles davor
+# wäre eine leere Achse. Zugleich der Filter gegen kaputte Jahreswerte: AT/atverg führt
+# 127 Zeilen mit `year = 1` — die fallen über `jahr >= ab_jahr` heraus, statt die Achse
+# bis zum Jahr 1 zu ziehen.
+FRUEHESTES_JAHR = 2004
+# Ab wie vielen belegten Monaten ein Jahr als vollständig gilt. Zwölf, weil alles andere
+# eine Ermessensgrenze wäre: ein Jahr ist voll oder es ist es nicht.
+VOLLE_MONATE = 12
+# Unterhalb dieser Zahl gilt ein Jahr einer Quelle als Vorlauf, nicht als Betrieb.
+# Gemessen an AT/atverg: 2009–2018 stehen 1–20 Verfahren je Jahr (Streuzeilen aus einem
+# Nachtrag), ab 2019 sind es 6.578 mit 12 belegten Monaten. Ohne diese Schwelle stünde der
+# Serienbeginn von atverg auf 2009 und die Reihe bestünde zehn Jahre lang aus Rauschen.
+MIN_JAHR_VERFAHREN = 100
+
+# Bruchstellen, die in KEINEM Datensatz stehen — äusseres Wissen, deshalb `art: kuratiert`
+# und jeder Eintrag mit `beleg`. Bewusst kurz gehalten (s. Entscheidung 6 im Modulkopf):
+# die EU-Schwellenwerte werden alle zwei Jahre neu festgesetzt, elf Marken auf einer Achse
+# markieren nichts mehr. Wer eine Zeile ergänzt, ergänzt den Beleg mit.
+# `laender = "*"` gilt für alle, sonst eine Liste.
+REGEL_BRUECHE = (
+    {"jahr": 2006, "code": "eu_standardformulare", "laender": "*",
+     "beleg": "Verordnung (EG) Nr. 1564/2005 — erste einheitlichen EU-Standardformulare, "
+              "anwendbar ab 01.02.2006"},
+    {"jahr": 2016, "code": "eu_vergaberichtlinien_2014", "laender": "*",
+     "beleg": "Richtlinien 2014/24/EU und 2014/25/EU, Umsetzungsfrist 18.04.2016 (in DE das "
+              "Vergaberechtsmodernisierungsgesetz, GWB/VgV/SektVO/KonzVgV); neue "
+              "Standardformulare nach Durchführungsverordnung (EU) 2015/1986"},
+    {"jahr": 2024, "code": "eforms_pflicht", "laender": "*",
+     "beleg": "Verordnung (EU) 2019/1780 (eForms) i. d. F. der Verordnung (EU) 2022/2303 — "
+              "Übergang 2023, verbindliches TED-Format ab 2024"},
+)
 
 
 # --- Hilfsfunktionen ------------------------------------------------------------
@@ -190,6 +268,16 @@ def verfahren_tabelle(con: duckdb.DuckDBPyConnection, country: str, ab_jahr: int
     a = _glob(country, "attributes")
     dim_cpv = GOLD / "DE" / "dim_cpv.parquet"      # reine Dimensionstabelle (CPV-Division)
 
+    # Die beiden gesuchten Pfade sind eForms-Konstrukte und können vor der ersten
+    # eForms-Bekanntmachung des Landes gar nicht vorkommen (gemessen DE: `ContractFolderID`
+    # und `ChangedNoticeIdentifier` existieren ausschliesslich ab 2023). Der Attribut-Scan
+    # wird deshalb auf diese Jahre gepinnt statt auf `ab_jahr` — sonst würde `--ab-jahr 2004`
+    # ~20 Jahre Attribute lesen, in denen definitionsgemäss nichts zu finden ist.
+    # Abgeleitet statt eingetragen, damit es in jedem Land gilt (EU-weit-Grundsatz).
+    attr_ab = con.execute(
+        f"SELECT min(year) FROM '{n}' WHERE schema_gen = 'eforms'").fetchone()[0]
+    attr_ab = max(ab_jahr, attr_ab) if attr_ab is not None else 9999
+
     # Änderungsbekanntmachungen (eForms) — als eigene Temp-Tabelle, weil der
     # Attribut-Scan sonst je Abfrage neu läuft.
     con.execute("CREATE OR REPLACE TEMP TABLE _chg (notice_id VARCHAR)")
@@ -197,12 +285,12 @@ def verfahren_tabelle(con: duckdb.DuckDBPyConnection, country: str, ab_jahr: int
         con.execute(f"""
             CREATE OR REPLACE TEMP TABLE _chg AS
             SELECT DISTINCT notice_id FROM '{a}'
-            WHERE year >= {ab_jahr} AND path LIKE '%ChangedNoticeIdentifier'
+            WHERE year >= {attr_ab} AND path LIKE '%ChangedNoticeIdentifier'
         """)
         con.execute(f"""
             CREATE OR REPLACE TEMP TABLE _folder AS
             SELECT notice_id, min(value) AS folder FROM '{a}'
-            WHERE year >= {ab_jahr} AND path LIKE '%.ContractFolderID' AND value IS NOT NULL
+            WHERE year >= {attr_ab} AND path LIKE '%.ContractFolderID' AND value IS NOT NULL
             GROUP BY 1
         """)
     else:
@@ -219,8 +307,18 @@ def verfahren_tabelle(con: duckdb.DuckDBPyConnection, country: str, ab_jahr: int
 
     con.execute(f"""
         CREATE OR REPLACE TEMP TABLE _notices AS
-        SELECT n.notice_id, n.publication_date, n.year AS jahr, n.month AS monat,
-               n.submission_deadline AS frist,
+        SELECT n.notice_id,
+               -- Ersatzdatum aus year/month, wo `publication_date` fehlt. Gemessen DE/DÖE
+               -- 2023: nur 8.875 von 102.043 `cn` tragen ein publication_date — eine
+               -- Forderung darauf warf **93 % der Quelle weg**, lautlos. `year`/`month`
+               -- sind belastbar: sie verteilen sich natürlich über alle zwölf Monate (kein
+               -- Ingest-Klumpen), und wo beide Angaben vorliegen, stimmen sie zu 98,3 %
+               -- überein. Der Monatserste ist die gröbere, aber ehrliche Angabe — die
+               -- Alternative war kein genaueres Datum, sondern gar kein Verfahren.
+               coalesce(n.publication_date, make_date(n.year, n.month, 1)) AS publication_date,
+               (n.publication_date IS NULL) AS datum_aus_jahr_monat,
+               n.year AS jahr, n.month AS monat,
+               n.submission_deadline AS frist, n.schema_gen,
                (c.notice_id IS NOT NULL) AS ist_aenderung,
                CASE n.schema_gen {quelle_case} ELSE 'sonstige' END AS quelle,
                coalesce({BRANCHE_SQL}, 'beratung') AS branche,
@@ -233,8 +331,10 @@ def verfahren_tabelle(con: duckdb.DuckDBPyConnection, country: str, ab_jahr: int
         WHERE n.year >= {ab_jahr}
           AND n.notice_kind IN {TENDER_KINDS}
           AND (n.notice_kind <> 'pin' OR n.submission_deadline IS NOT NULL)
-          AND n.publication_date IS NOT NULL
-          AND n.publication_date <= current_date          -- Datums-Ausreisser (bis 2033) raus
+          -- Ein Verfahren braucht einen Zeitpunkt — aber `year`/`month` genügen dafür.
+          AND (n.publication_date IS NOT NULL OR (n.year IS NOT NULL AND n.month IS NOT NULL))
+          AND coalesce(n.publication_date, make_date(n.year, n.month, 1)) <= current_date
+                                                          -- Datums-Ausreisser (bis 2033) raus
           AND NOT ({_in_list("n.notice_id", dedup)})
     """)
 
@@ -253,7 +353,18 @@ def verfahren_tabelle(con: duckdb.DuckDBPyConnection, country: str, ab_jahr: int
                    min(publication_date) FILTER (WHERE NOT ist_aenderung) AS pub,
                    min_by(branche, publication_date) FILTER (WHERE NOT ist_aenderung) AS branche,
                    min_by(quelle, publication_date) FILTER (WHERE NOT ist_aenderung) AS quelle,
+                   -- Nur für die Bruch-Erkennung des Jahres-Layers: die Schema-Generation
+                   -- der eröffnenden Bekanntmachung. `quelle` fasst legacy/text/eforms/ojs
+                   -- bewusst zu „ted" zusammen (ein Formatwechsel ist kein Quellenwechsel) —
+                   -- genau dieser Wechsel ist hier aber die zu markierende Bruchstelle.
+                   min_by(schema_gen, publication_date) FILTER (WHERE NOT ist_aenderung) AS schema_gen,
                    max(frist) AS frist,
+                   -- Herkunfts-Kennzeichnung (Projekt-Konvention): steht der Zeitpunkt
+                   -- dieses Verfahrens auf einem echten Veröffentlichungsdatum oder nur auf
+                   -- year/month? Wird als Anteil in `coverage` ausgewiesen, damit die
+                   -- gröbere Angabe sichtbar bleibt statt sich unter die exakten zu mischen.
+                   bool_and(datum_aus_jahr_monat) FILTER (WHERE NOT ist_aenderung)
+                     AS datum_aus_jahr_monat,
                    count(*) FILTER (WHERE ist_aenderung) AS n_aenderungen,
                    count(*) AS n_notices
             FROM _notices GROUP BY verfahren_key
@@ -336,7 +447,198 @@ def befund(monate: list[dict]) -> dict:
             "monat_tief": tief["m"], "pct_tief": tief["pct"]}
 
 
-# --- Teil 2: Aktuelle Lage ------------------------------------------------------
+# --- Teil 2: Jahres-Layer + Historie --------------------------------------------
+def _jahres_rohdaten(con, laender: list[str], achse: list[int]) -> dict:
+    """Ein Scan über alle ``v_<land>`` — je (land, jahr, quelle, branche) Zahl und Monate.
+
+    Zwei getrennte Auswertungen aus derselben Abfrage, weil sie Verschiedenes messen:
+      * ``zahl[(land, branche, quelle, jahr)]`` — der Reihenwert.
+      * ``monate[(land, quelle, jahr)]`` — belegte Kalendermonate, aber **nur auf der Ebene
+        aller Branchen**. Auf Branchenebene wäre eine unbelegte Monatslücke oft schlicht
+        eine dünne Branche, kein unvollständiger Ingest — dieselbe Zahl, andere Bedeutung.
+    """
+    union = " UNION ALL ".join(f"SELECT * FROM v_{c}" for c in laender)
+    rows = con.execute(f"""
+        SELECT land, jahr, quelle, branche, count(*) AS n, count(DISTINCT monat) AS monate
+        FROM ({union})
+        WHERE jahr BETWEEN {achse[0]} AND {achse[-1]}
+        GROUP BY 1, 2, 3, 4
+    """).fetchall()
+
+    zahl: dict[tuple, int] = {}
+    monat_paare: dict[tuple, set] = {}
+    for land, jahr, quelle, branche, n, _m in rows:
+        for br in (ALLE, branche):
+            for lnd in (GESAMT, land):
+                zahl[(lnd, br, quelle, jahr)] = zahl.get((lnd, br, quelle, jahr), 0) + n
+
+    # Belegte Monate lassen sich nicht aus den Branchen-Teilsummen addieren (dieselben
+    # Monate kämen mehrfach) — dafür ein zweiter, kleiner Scan ohne Branchen-Achse.
+    for land, jahr, quelle, monate in con.execute(f"""
+        SELECT land, jahr, quelle, count(DISTINCT monat)
+        FROM ({union}) WHERE jahr BETWEEN {achse[0]} AND {achse[-1]} GROUP BY 1, 2, 3
+    """).fetchall():
+        monat_paare[(land, quelle, jahr)] = monate
+        vorher = monat_paare.get((GESAMT, quelle, jahr), 0)
+        monat_paare[(GESAMT, quelle, jahr)] = max(vorher, monate)
+
+    return {"zahl": zahl, "monate": monat_paare}
+
+
+def _serien_regel(zahl: dict, monate: dict, land: str, quellen: list[str],
+                  achse: list[int]) -> dict[str, dict]:
+    """Die Regel aus Entscheidung 5, in Code: welche Quelle bekommt eine eigene Linie?
+
+    TED ist immer die Basis-Reihe. Eine nationale Quelle wird ihr zugeschlagen, wenn sie
+    **von Anfang an mitliefert** — also spätestens im ersten Jahr, in dem TED in diesem
+    Land liefert, und danach lückenlos. Sonst eigene Reihe ab ihrem eigenen Beginn.
+
+    Damit ist die Antwort achsenabhängig, und das ist richtig: über 2021–2025 liefert
+    atverg durchgehend (→ zusammengeführt), über 2004–2025 beginnt es 2019 (→ eigene
+    Reihe). Dieselbe Quelle, zwei Fenster, zwei Antworten — deshalb steht der Grund
+    maschinenlesbar dabei, statt implizit zu bleiben.
+    """
+    def betriebsjahre(q: str) -> list[int]:
+        """Jahre, in denen die Quelle wirklich *läuft* — nicht Streuzeilen aus Nachträgen."""
+        return [j for j in achse if zahl.get((land, ALLE, q, j), 0) >= MIN_JAHR_VERFAHREN]
+
+    basis = betriebsjahre("ted")
+    basis_von = basis[0] if basis else achse[0]
+
+    out: dict[str, dict] = {}
+    for q in quellen:
+        jahre_q = betriebsjahre(q)
+        if not jahre_q:
+            # Nur Streuzeilen (AT/atverg 2009–2018: 1–20 Verfahren je Jahr). Keine Reihe,
+            # aber ausgewiesen — sonst verschwindet der Bestand lautlos.
+            roh = sum(zahl.get((land, ALLE, q, j), 0) for j in achse)
+            if roh:
+                out[q] = {"serie": None, "grund": "vorlauf", "von": None, "verfahren": roh}
+            continue
+        if q == "ted":
+            out[q] = {"serie": "ted", "grund": "basis", "von": jahre_q[0]}
+            continue
+        lueckenlos = jahre_q == [j for j in achse if j >= jahre_q[0]]
+        if jahre_q[0] <= basis_von and lueckenlos:
+            out[q] = {"serie": "ted", "grund": "durchgehend", "von": jahre_q[0]}
+        else:
+            out[q] = {"serie": q, "grund": "beginnt_spaeter", "von": jahre_q[0]}
+    return out
+
+
+def _brueche(con, laender: list[str], land: str, regeln: dict, achse: list[int],
+             zahl: dict, monate: dict) -> list[dict]:
+    """Bruchstellen einer Achse — gemessene und kuratierte, immer unterscheidbar.
+
+    Ein Knick über 22 Jahre ist häufiger eine Regeländerung als ein Marktereignis. Die
+    Markierung nimmt dem Leser die Fehldeutung ab, ohne die Kurve zu glätten.
+    """
+    b: list[dict] = []
+
+    # (a) gemessen: Schema-Generation wechselt. Nur innerhalb der TED-Familie — ein
+    # Formatwechsel bei TED ist ein Bruch, das Hinzukommen einer nationalen Quelle nicht
+    # (das ist `quelle_start`).
+    mitglieder = laender if land == GESAMT else [land]
+    union = " UNION ALL ".join(f"SELECT * FROM v_{c}" for c in mitglieder)
+    dominant = con.execute(f"""
+        SELECT jahr, arg_max(schema_gen, n) FROM (
+            SELECT jahr, schema_gen, count(*) AS n FROM ({union})
+            WHERE quelle = 'ted' AND jahr BETWEEN {achse[0]} AND {achse[-1]}
+              AND schema_gen IS NOT NULL
+            GROUP BY 1, 2
+        ) GROUP BY 1 ORDER BY 1
+    """).fetchall()
+    for (_vj, vs), (nj, ns) in zip(dominant, dominant[1:]):
+        if vs != ns:
+            b.append({"jahr": nj, "art": "gemessen", "typ": "schema_wechsel",
+                      "von": vs, "nach": ns})
+
+    # (b) gemessen: eine Quelle setzt ein. Nur für Quellen mit EIGENER Reihe — eine
+    # zusammengeführte Quelle hat definitionsgemäss keinen sichtbaren Einsatzpunkt.
+    for q, r in sorted(regeln.items()):
+        if r["serie"] == q and q != "ted" and r["von"] and r["von"] > achse[0]:
+            b.append({"jahr": r["von"], "art": "gemessen", "typ": "quelle_start", "quelle": q})
+
+    # (c) gemessen, nur am Aggregat: ein Land tritt hinzu. Gemessen CH — der Bestand
+    # beginnt dort 2016, nicht der Schweizer Markt. In einer Summenzeile über alle Länder
+    # sähe das wie Wachstum aus; genau die Verwechslung, die der Quellen-Onset auch macht.
+    if land == GESAMT:
+        for c in mitglieder:
+            jahre_c = [j for j in achse
+                       if sum(zahl.get((c, ALLE, q, j), 0) for q in QUELLE.values()) > 0]
+            if jahre_c and jahre_c[0] > achse[0]:
+                b.append({"jahr": jahre_c[0], "art": "gemessen", "typ": "land_start", "land": c})
+
+    # (d) kuratiert: Regeländerungen. Stehen in keinem Datensatz, tragen deshalb `beleg`.
+    for r in REGEL_BRUECHE:
+        if not (achse[0] < r["jahr"] <= achse[-1]):
+            continue
+        if r["laender"] != "*" and not set(r["laender"]) & set(mitglieder):
+            continue
+        b.append({"jahr": r["jahr"], "art": "kuratiert", "typ": "regel",
+                  "code": r["code"], "beleg": r["beleg"]})
+
+    b.sort(key=lambda x: (x["jahr"], x["typ"]))
+    return b
+
+
+def jahres_layer(con, laender: list[str], achse: list[int], heute: dt.date) -> dict:
+    """Teil 2: ein Wert je Kalenderjahr, je Quelle eine eigene Reihe, Brüche markiert."""
+    roh = _jahres_rohdaten(con, laender, achse)
+    zahl, monate = roh["zahl"], roh["monate"]
+    quellen_je_land: dict[str, list[str]] = {}
+    for (land, br, q, _j) in zahl:
+        if br == ALLE:
+            quellen_je_land.setdefault(land, [])
+            if q not in quellen_je_land[land]:
+                quellen_je_land[land].append(q)
+
+    regeln = {land: _serien_regel(zahl, monate, land, sorted(qs), achse)
+              for land, qs in quellen_je_land.items()}
+
+    reihen: dict[str, list[dict]] = {}
+    for land in [GESAMT] + laender:
+        for br in [ALLE] + list(BRANCHEN):
+            zeilen = []
+            for q, r in sorted(regeln.get(land, {}).items()):
+                if r["serie"] is None or r["von"] is None:
+                    continue
+                jahre_q = [j for j in achse if j >= r["von"]]
+                werte = [zahl.get((land, br, q, j), 0) for j in jahre_q]
+                if not any(werte):
+                    continue          # Branche, die diese Quelle nie bedient hat
+                # Teiljahre: gemessen, nicht gerundet. Die Anzeige entscheidet, ob sie den
+                # Punkt gestrichelt zeichnet oder weglässt — die Zahl bleibt hier stehen.
+                teil = [{"jahr": j, "monate": monate.get((land, q, j), 0)}
+                        for j in jahre_q
+                        if 0 < monate.get((land, q, j), 0) < VOLLE_MONATE]
+                zeile = {"quelle": q, "serie": r["serie"], "grund": r["grund"],
+                         "von": r["von"], "werte": werte}
+                if teil:
+                    zeile["teiljahre"] = teil
+                zeilen.append(zeile)
+            if zeilen:
+                reihen[f"{land}|{br}"] = zeilen
+
+    return {
+        "achse": achse,
+        "von": achse[0], "bis": achse[-1],
+        # Das laufende Jahr fehlt bewusst: es ist per Definition ein Teiljahr und liest sich
+        # als Einbruch. Ausgewiesen, damit die Anzeige das sagen kann statt es zu verschweigen.
+        "laufendes_jahr": heute.year,
+        "reihen": reihen,
+        "brueche": {land: _brueche(con, laender, land, regeln.get(land, {}), achse, zahl, monate)
+                    for land in [GESAMT] + laender},
+        # Quellen, die im Fenster nur Streuzeilen haben (`grund: vorlauf`) — kein Datenverlust,
+        # aber auch keine Reihe. Gemessen AT/atverg 2009–2018: 1–20 Verfahren je Jahr.
+        "vorlauf": {land: [{"quelle": q, "verfahren": r["verfahren"]}
+                           for q, r in sorted(rs.items()) if r["grund"] == "vorlauf"]
+                    for land, rs in regeln.items()
+                    if any(r["grund"] == "vorlauf" for r in rs.values())},
+    }
+
+
+# --- Teil 3: Aktuelle Lage ------------------------------------------------------
 def lage_block(con, laender: list[str], heute: dt.date) -> dict:
     """Stichtags-Kennzahlen. Anders als die Zeitreihe zählt hier JEDE Quelle mit —
     ein Stichtag kennt keinen Onset-Sprung."""
@@ -394,16 +696,21 @@ def lage_block(con, laender: list[str], heute: dt.date) -> dict:
 
 
 # --- Orchestrierung -------------------------------------------------------------
-def bauen(laender: list[str], n_jahre: int, heute: dt.date) -> dict:
+def bauen(laender: list[str], n_jahre: int, heute: dt.date, ab_jahr: int | None = None) -> dict:
     letztes_volles = heute.year - 1
     jahre = list(range(letztes_volles - n_jahre + 1, letztes_volles + 1))
+    # Achse des Jahres-Layers. Ohne `--ab-jahr` deckt sie dasselbe Fenster wie die Saison ab
+    # (Entscheidung 8: die Historie kostet Laufzeit und gehört nicht per Default in den
+    # Tageslauf). Der Saison-Teil bleibt in JEDEM Fall auf `jahre`.
+    achse_von = min(jahre[0], max(FRUEHESTES_JAHR, ab_jahr)) if ab_jahr else jahre[0]
+    achse = list(range(achse_von, letztes_volles + 1))
     con = duckdb.connect()
     con.execute("SET threads=4")
 
     coverage: dict[str, dict] = {}
     saison_quellen: dict[str, list[str]] = {}
     for c in laender:
-        verfahren_tabelle(con, c, jahre[0])
+        verfahren_tabelle(con, c, achse[0])
         drin, raus = quellen_im_fenster(con, c, jahre)
         saison_quellen[c] = drin
         gesamt, im_fenster = con.execute(f"""
@@ -411,9 +718,18 @@ def bauen(laender: list[str], n_jahre: int, heute: dt.date) -> dict:
                    AND quelle IN ({",".join("'" + q + "'" for q in drin) or "''"}))
             FROM v_{c}
         """).fetchone()
-        max_pub = con.execute(f"SELECT max(pub) FROM v_{c}").fetchone()[0]
+        max_pub, bestand_von, n_grob = con.execute(
+            f"SELECT max(pub), min(jahr), count(*) FILTER (WHERE datum_aus_jahr_monat) "
+            f"FROM v_{c}").fetchone()
         coverage[c] = {
+            # `verfahren_gesamt` zählt den geladenen Bereich, und der hängt jetzt an
+            # `--ab-jahr`. `bestand_von` sagt, ab wann dieses Land überhaupt im Bestand ist
+            # (gemessen CH: 2016) — ohne das läse sich die Zahl als Landesgeschichte.
             "verfahren_gesamt": gesamt,
+            "bestand_von": bestand_von,
+            # Anteil der Verfahren, deren Zeitpunkt nur auf year/month steht (kein echtes
+            # `publication_date`). Gemessen DE ~57 % — praktisch die ganze DÖE-Menge.
+            "datum_nur_monat_pct": round(100.0 * n_grob / gesamt, 1) if gesamt else 0.0,
             "verfahren_im_fenster": im_fenster,
             "quellen_zeitreihe": drin,
             "quellen_ausgeschlossen": raus,
@@ -457,6 +773,12 @@ def bauen(laender: list[str], n_jahre: int, heute: dt.date) -> dict:
                 vorher["verfahren"] += q["verfahren"]
     coverage[GESAMT] = {
         "verfahren_gesamt": sum(c["verfahren_gesamt"] for c in coverage.values()),
+        "bestand_von": min((c["bestand_von"] for c in coverage.values()
+                            if c["bestand_von"] is not None), default=None),
+        "datum_nur_monat_pct": round(
+            100.0 * sum(c["datum_nur_monat_pct"] / 100.0 * c["verfahren_gesamt"]
+                        for c in coverage.values())
+            / max(1, sum(c["verfahren_gesamt"] for c in coverage.values())), 1),
         "verfahren_im_fenster": sum(c["verfahren_im_fenster"] for c in coverage.values()),
         "quellen_zeitreihe": drin_agg,
         "quellen_ausgeschlossen": sorted(raus_agg.values(), key=lambda q: -q["verfahren"]),
@@ -481,11 +803,15 @@ def bauen(laender: list[str], n_jahre: int, heute: dt.date) -> dict:
             wo = wo_land if br == ALLE else f"{wo_land} AND branche = '{br}'"
             saison[f"{land}|{br}"] = saison_block(con, wo, jahre)
 
+    jahre_layer = jahres_layer(con, laender, achse, heute)
     lage = lage_block(con, laender, heute)
     con.close()
 
     return {
-        "schema": 1,
+        # 2 = Jahres-Layer dazugekommen (`jahre`), `coverage.*.bestand_von` neu.
+        # Die Anzeige muss mit einer Datei ohne `jahre` weiter zurechtkommen (Stand 1),
+        # sonst bricht sie am ersten Deploy, bei dem Skript und Frontend nicht Schritt halten.
+        "schema": 2,
         "erzeugt": dt.datetime.now().isoformat(timespec="seconds"),
         "stand": heute.isoformat(),
         "laender": laender,
@@ -495,6 +821,7 @@ def bauen(laender: list[str], n_jahre: int, heute: dt.date) -> dict:
         "min_faelle": MIN_FAELLE,
         "coverage": coverage,
         "saison": saison,
+        "jahre": jahre_layer,
         "lage": lage,
     }
 
@@ -504,6 +831,11 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--laender", default=None,
                    help="Komma-Liste, z. B. DE,AT,CH (Default: alles unter data/silver/)")
     p.add_argument("--jahre", type=int, default=FENSTER_JAHRE)
+    p.add_argument("--ab-jahr", type=int, default=None, dest="ab_jahr",
+                   help=f"Historie: Achse des Jahres-Layers ab diesem Jahr (frühestens "
+                        f"{FRUEHESTES_JAHR}). Ohne Angabe deckt der Jahres-Layer dasselbe "
+                        f"Fenster ab wie die Saison — die Historie kostet Laufzeit und "
+                        f"gehört nicht per Default in den Tageslauf.")
     p.add_argument("--out", default=str(ROOT / "web" / "data" / "marktpuls.json"))
     p.add_argument("--stichtag", default=None, help="ISO-Datum (Test/Reproduktion)")
     p.add_argument("--dry-run", action="store_true")
@@ -517,7 +849,7 @@ def main(argv: list[str] | None = None) -> int:
         return 1
     heute = dt.date.fromisoformat(args.stichtag) if args.stichtag else dt.date.today()
 
-    daten = bauen(laender, args.jahre, heute)
+    daten = bauen(laender, args.jahre, heute, args.ab_jahr)
     text = json.dumps(daten, ensure_ascii=False, separators=(",", ":"))
 
     print(f"Länder: {', '.join(laender)} | Fenster {daten['fenster']['von']}–{daten['fenster']['bis']}")
@@ -529,7 +861,26 @@ def main(argv: list[str] | None = None) -> int:
     g = daten["saison"][f"{GESAMT}|{ALLE}"]
     print(f"  Jahresmittel {g['jahresmittel']:,.0f}/Monat, Befund {g['befund']}")
     print("  " + "  ".join(f"{m['m']:>2}:{m['pct']:+.0f}%" for m in g["monate"]))
-    print(f"  Lage: {daten['lage']['je_land'][GESAMT]}")
+
+    j = daten["jahre"]
+    print(f"\nJahres-Layer {j['von']}–{j['bis']} ({len(j['achse'])} Jahre, "
+          f"{j['laufendes_jahr']} als laufendes Jahr ausgelassen)")
+    for land in [GESAMT] + laender:
+        for z in j["reihen"].get(f"{land}|{ALLE}", []):
+            teil = "".join(f" ⚠{t['jahr']}={t['monate']}Mon" for t in z.get("teiljahre", []))
+            print(f"  {land:>7} {z['quelle']:<7} → Serie '{z['serie']}' ({z['grund']}), "
+                  f"ab {z['von']}: {z['werte'][0]:,} … {z['werte'][-1]:,}{teil}")
+        for v in j["vorlauf"].get(land, []):
+            print(f"  {land:>7} {v['quelle']:<7} → keine Reihe (Vorlauf, "
+                  f"{v['verfahren']:,} Verfahren unter der Betriebsschwelle)")
+    for land in [GESAMT] + laender:
+        for b in j["brueche"].get(land, []):
+            rest = {k: v for k, v in b.items()
+                    if k not in ("jahr", "art", "typ", "beleg")}
+            print(f"  {land:>7} Bruch {b['jahr']} [{b['art']}] {b['typ']}"
+                  f"{' ' + str(rest) if rest else ''}")
+
+    print(f"\n  Lage: {daten['lage']['je_land'][GESAMT]}")
     print(f"  JSON {len(text)/1024:.1f} KB")
 
     if args.dry_run:
