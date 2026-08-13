@@ -313,11 +313,28 @@ def build_signals(cfg, country: str = "DE") -> dict:
     if not out_rows:
         print("docsignals: keine Signale extrahiert.")
         return {}
+    # ACHTUNG: feste Spaltenliste. Sie ist der Grund, warum neue Signale zweimal eingetragen
+    # werden muessen — einmal oben in `out_rows`, einmal hier. Wer das vergisst, baut Regeln,
+    # die messbar greifen und deren Werte trotzdem nie in der Parquet landen (heute passiert,
+    # zweimal). Ein `from_pylist` ohne Schema waere fehleranfaelliger (Typ raten bei lauter
+    # None-Spalten), deshalb bleibt die Liste — aber mit dieser Warnung.
     schema = pa.schema([
-        ("notice_id", pa.string()), ("guarantee_required", pa.bool_()), ("binding_days", pa.int64()),
-        ("eligibility_count", pa.int64()), ("certificates", pa.string()),
-        ("variants_allowed", pa.bool_()), ("framework", pa.bool_()),
-        ("award_weights", pa.string()), ("evidence", pa.string())])
+        ("notice_id", pa.string()),
+        ("guarantee_required", pa.bool_()),
+        ("binding_days", pa.int32()),
+        ("binding_until", pa.string()),          # ISO-Datum, Regelform der Bindefrist
+        ("eligibility_count", pa.int32()),
+        ("certificates", pa.string()),
+        ("variants_allowed", pa.bool_()),
+        ("framework", pa.bool_()),
+        ("award_weights", pa.string()),
+        ("site_visit", pa.bool_()),
+        ("site_visit_mandatory", pa.bool_()),
+        ("presentation_required", pa.bool_()),
+        ("penalty_pct", pa.float64()),
+        ("skonto_pct", pa.float64()),
+        ("evidence", pa.string()),
+    ])
     out = root / "doc_signals.parquet"
     pq.write_table(pa.Table.from_pylist(out_rows, schema=schema), out, compression="zstd")
     print(f"docsignals {country}: {len(out_rows):,} Vorgänge mit Signalen → {out.name}")
