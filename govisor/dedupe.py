@@ -110,21 +110,28 @@ def _enthaltung(a: frozenset, b: frozenset) -> float:
     return len(a & b) / min(len(a), len(b))
 
 
-def _laden(country: str, ab_jahr: int):
+def _laden(country: str, ab_jahr: int, alle_arten: bool = False):
     import duckdb
 
     g = glob.glob(f"{ROOT}/data/silver/{country}/notices/**/*.parquet", recursive=True)
     p = glob.glob(f"{ROOT}/data/silver/{country}/notice_parties/**/*.parquet", recursive=True)
     con = duckdb.connect()
     return con.execute(f"""
-        SELECT n.notice_id, n.schema_gen, n.title,
+        SELECT n.notice_id, n.schema_gen, n.title, n.notice_kind,
                coalesce(n.publication_date, n.submission_deadline) AS d,
                b.buyer_name AS buyer, n.cpv_main, n.estimated_value, n.submission_deadline,
                n.performance_nuts, n.description
         FROM read_parquet({g!r}) n
         LEFT JOIN (SELECT notice_id, min(name) AS buyer_name FROM read_parquet({p!r})
                    WHERE role='buyer' GROUP BY 1) b USING (notice_id)
-        WHERE n.notice_kind IN ('cn','pin') AND n.title IS NOT NULL
+        WHERE n.title IS NOT NULL
+          -- ARTEN. Standard sind Ausschreibungen (`cn`/`pin`) — das ist die Lead-Sicht und
+          -- der taegliche Lauf. `alle_arten` nimmt auch Zuschlaege (`can`), Aufhebungen,
+          -- Direktvergaben usw. dazu; das ist die VEROEFFENTLICHUNGS-Sicht, die Marktpuls
+          -- braucht, weil er Publikationen je Jahr zaehlt und sonst AT/CH doppelt zaehlt.
+          -- Gemessen 2026-08-13 gegen die abgeloesten Quellskripte: von 4.345 AT-Treffern,
+          -- die nur SIE fanden, waren 3.403 Zuschlaege; in CH 2.385 von 2.695.
+          {{ARTEN}}
           -- Jahr ODER laufende Frist. `ab_jahr` allein war der falsche Schnitt: eine 2024
           -- veroeffentlichte Rahmenvereinbarung mit Frist in 2027 ist HEUTE ein offener
           -- Lead, faellt aber aus jedem Jahresfenster. Gemessen 2026-08-13: 1.940 offene
@@ -133,15 +140,23 @@ def _laden(country: str, ab_jahr: int):
           -- ausschreiben. Genau dort sitzen die Dubletten, die uns interessieren.
           AND (coalesce(n.year, 0) >= {int(ab_jahr)}
                OR CAST(n.submission_deadline AS DATE) >= current_date)
-    """).fetchall()
+    """.replace("{ARTEN}", "" if alle_arten else
+                 "AND n.notice_kind IN ('cn','pin')")).fetchall()
 
 
-def finde(country: str = "DE", ab_jahr: int = 2026) -> list[dict]:
-    """Alle Dubletten-Paare eines Landes, quellenübergreifend."""
-    zeilen = _laden(country, ab_jahr)
+def finde(country: str = "DE", ab_jahr: int = 2026,
+          alle_arten: bool = False) -> list[dict]:
+    """Alle Dubletten-Paare eines Landes, quellenübergreifend.
+
+    ``alle_arten=False`` (Standard) prüft nur Ausschreibungen — die Lead-Sicht, täglicher
+    Lauf. ``True`` nimmt Zuschläge und alle übrigen Arten dazu: die Veröffentlichungs-Sicht
+    für Marktpuls. Beides ist DIESELBE Prüfung, nur ein anderer Ausschnitt; zwei Skripte
+    daraus zu machen wäre der Rückfall in genau das, was dieses Modul abgelöst hat.
+    """
+    zeilen = _laden(country, ab_jahr, alle_arten)
     print(f"  {len(zeilen):,} Bekanntmachungen ab {ab_jahr} geladen")
     saetze = []
-    for nid, gen, titel, d, buyer, cpv, wert, frist, nuts, beschr in zeilen:
+    for nid, gen, titel, art, d, buyer, cpv, wert, frist, nuts, beschr in zeilen:
         w = worte(titel)
         if len(w) < MIN_WORTE:
             continue                      # zu kurz für eine belastbare Aussage
@@ -153,7 +168,7 @@ def finde(country: str = "DE", ab_jahr: int = 2026) -> list[dict]:
         # Zeichenkette OHNE Komma als verschiedene Kaeufer durchgehen. Gemessen: +941 Paare
         # bekommen dadurch einen Kaeufer-Beleg, 2.918 → 3.859 von 6.794.
         saetze.append({"id": nid, "gen": gen or "?", "titel": titel, "w": w,
-                       "z": zahlen(titel), "d": d,
+                       "z": zahlen(titel), "art": art, "d": d,
                        "buyer": _entities.normalize_company(buyer) if buyer else "",
                        "cpv": cpv, "wert": wert,
                        "frist": frist, "nuts": nuts, "beschr": beschr})
@@ -177,6 +192,14 @@ def finde(country: str = "DE", ab_jahr: int = 2026) -> list[dict]:
             t = saetze[j]
             if s["gen"] == t["gen"]:
                 continue                  # dieselbe Quelle dedupliziert sich selbst schon
+            # STUFEN-SPERRE. Eine Vorinformation und die Bekanntmachung derselben Vergabe
+            # tragen denselben Titel und denselben Kaeufer — sie sind aber zwei SCHRITTE
+            # eines Verfahrens, keine Dublette. Gemessen 2026-08-13 vor dieser Sperre:
+            # 189 stufen-gemischte Paare (DE 33, AT 156). Mit geladenen Zuschlaegen
+            # (`alle_arten`) waere der Fehler gross geworden — ein `can` haette dann gegen
+            # das `cn` derselben Vergabe gepaart und beide als Dublette markiert.
+            if s["art"] != t["art"]:
+                continue
             e = _enthaltung(s["w"], t["w"])
             if e < MIN_ENTHALTUNG:
                 continue
@@ -361,9 +384,13 @@ def main(argv=None) -> int:
     ap.add_argument("--ab-jahr", type=int, default=dt.date.today().year)
     ap.add_argument("--anreichern", action="store_true",
                     help="nach der Erkennung die fehlenden Feldwerte sammeln")
+    ap.add_argument("--alle-arten", action="store_true",
+                    help="auch Zuschläge/Aufhebungen prüfen (Veröffentlichungs-Sicht "
+                         "für Marktpuls) statt nur Ausschreibungen")
     a = ap.parse_args(argv)
-    print(f"Dublettencheck {a.country}, ab {a.ab_jahr}")
-    paare = finde(a.country, a.ab_jahr)
+    print(f"Dublettencheck {a.country}, ab {a.ab_jahr}"
+          + (" (alle Bekanntmachungsarten)" if a.alle_arten else ""))
+    paare = finde(a.country, a.ab_jahr, a.alle_arten)
     if not paare:
         print("  Keine Dubletten gefunden.")
         return 0

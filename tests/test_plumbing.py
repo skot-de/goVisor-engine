@@ -1706,3 +1706,33 @@ def test_lead_zugehoerigkeit_und_frist_nutzen_dieselbe_definition():
     # Reihenfolge im Wasserfall: Verlaengerung schlaegt eigene Frist schlaegt uebernommene.
     eff = src.split("_FRIST_EFF = ")[1].split("\n\n")[0]
     assert eff.index("vrlq") < eff.index("n.submission_deadline") < eff.index("anrq")
+
+
+def test_dedupe_paart_keine_verschiedenen_verfahrensstufen():
+    """Vorinformation und Bekanntmachung sind zwei Schritte, keine Dublette.
+
+    Sie tragen denselben Titel und denselben Kaeufer und rutschten deshalb durch: gemessen
+    2026-08-13 waren 189 Paare stufen-gemischt (DE 33, AT 156). Mit geladenen Zuschlaegen
+    (`--alle-arten`, die Veroeffentlichungs-Sicht fuer Marktpuls) waere der Fehler gross
+    geworden — ein `can` haette gegen das `cn` derselben Vergabe gepaart.
+    """
+    from pathlib import Path
+    src = (Path(__file__).resolve().parent.parent / "govisor" / "dedupe.py").read_text(
+        encoding="utf-8")
+    b = src.split("def finde")[1].split("\ndef ")[0]
+    assert 's["art"] != t["art"]' in b, "Stufen-Sperre fehlt"
+
+
+def test_dedupe_kennt_die_veroeffentlichungs_sicht():
+    """`--alle-arten` existiert und ist NICHT der Standard.
+
+    Zwei Sichten, EINE Pruefung: Ausschreibungen (`cn`/`pin`) fuer die Lead-Logik,
+    alle Arten fuer Marktpuls, der Publikationen je Jahr zaehlt. Daraus zwei Skripte zu
+    machen waere der Rueckfall in genau das, was dieses Modul abgeloest hat.
+    """
+    from govisor import dedupe
+    import inspect
+    assert "alle_arten" in inspect.signature(dedupe.finde).parameters
+    assert inspect.signature(dedupe.finde).parameters["alle_arten"].default is False
+    assert "--alle-arten" in (dedupe.main.__doc__ or "") or "alle-arten" in inspect.getsource(
+        dedupe.main)
