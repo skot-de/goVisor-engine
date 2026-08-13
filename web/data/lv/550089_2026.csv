@@ -1,0 +1,43 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+001;Baustelleneinrichtung AN;1,0;psch;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+002;Technische Bearbeitung (Werk- und Montageplanung) für alle in den nachfolgenden Leistungspositionen beschriebenen Arbeiten der Vergabeeinheit gem. ZTV, VOB/C und Vortexten.;1,0;psch;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+001;Liefern, fertigen und montieren eines maßgefertigten, raumhohen Einbauschrankes in Wandnische gemäß Detailplänen Nr. 5.701-5.702.;5,0;St;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+002;wie Pos. 02.001, jedoch:;2,0;St;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+003;wie Pos. 02.001, jedoch:;4,0;St;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+001;Innenfensterbank aus Massivholz, Kanten gerundet;140,0;m;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+002;Leibungsbretter aus Massivholz, Kanten gerundet (r;540,0;m;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+003;Wie zuvor, jedoch:;25,0;m;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+004;Wie zuvor, jedoch:;52,0;m;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+005;Akustikwandbekleidung aus geschlitzten Holzfaserplatten mit Dämmstoffhinterlegung auf Holzunterkonstruktion. gemäß Detail 5.7xx;6,0;St;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+006;Zulage für zusätzlich benötigte Bohrungen für elektrische Einbauten / Unterputzdosen bis ca 80 mm Durchmesser in den Vorpositionen;20,0;St;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+007;Zulage zur Pos 03.002 (Leibungsbekleidung Fichte/Tanne) für die Ausführung einer bündigen 1-läufigen Vorhangsschiene (analog Unterputzschiene), Aluminium, mittig in der oberen Sturzbekleidung der Unterrichtsräume inkl. Befestigung in der tragenden Wand.;115,0;m;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+001;Messingschild, mit ausgefrästem Schriftzug.;1,0;St;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+001;Handlauf aus Holz, liefern und montieren;20,0;m;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+002;Wie vorherige Position, jedoch:;20,0;m;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+003;Eck- / Übergangswinkel des Handlaufs, an Ecken bzw. am Übergang von ansteigendem zu ebenem Handlauf.;16,0;St;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+004;Bogen als Übergang des Handlaufs an Ecken.;7,0;St;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+005;Zulage zum Holzhandlauf, für die Ausführung mit abgerundetem Handlaufende nach zur Wandseite, gem. Anforderung Barrierefreiheit in öffentlichen Gebäuden (DIN 18040-1, bzw. MVStättVO).;9,0;St;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+001;Stundensatz für Leistungen, welche nicht in den Positionen erfasst sind und nur auf ausdrückliche Anweisung der Objektüberwachung gegen Nachweis zur Ausführung kommen.;40,0;h;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+002;Wie vorherige Position, jedoch:;40,0;h;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+003;Dokumentations-/Revisionsunterlagen über alle vom AN tatsächlich ausgeführten Leistungen in folgendem Mindestumfang:;1,0;psch;gaeb;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01_V32.X83
+01.001;Baustelleneinrichtung;1,0;psch;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83
+01.002;Werk- & Montageplanung;1,0;psch;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83
+02.001;Einbauschrank Klassenraum;5,0;St;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83
+02.002;Einbauschrank Bibliothek;2,0;St;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83
+02.003;Einbauschrank Nebenraum;4,0;St;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83
+03.001;Innenfensterbank, Eiche, 30x180mm;140,0;m;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83
+03.002;Leibungsbekleidung, Fichte / Tanne, 125x20mm;540,0;m;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83
+03.003;Leibungsbekleidung, Eiche, 200x20mm;25,0;m;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83
+03.004;Leibungsbekleidung, Eiche, 800 x 20 mm;52,0;m;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83
+03.005;Akustikwandbekleidung, furniert, Holz-UK, H=<4,00m;6,0;St;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83
+03.006;Zulage Bohrung;20,0;St;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83
+03.007;Zulage Vorhangschiene;115,0;m;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83
+04.001;Messingschild;1,0;St;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83
+05.001;Holzhandlauf, rechteckig, Eiche, d=40 mm, Wandmontage;20,0;m;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83
+05.002;Holzhandlauf, rechteckig, Eiche, d=40 mm, Geländermontge;20,0;m;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83
+05.003;Handlauf, Ecken/Gehrungen;16,0;St;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83
+05.004;Handlauf, Bogenstück;7,0;St;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83
+05.005;Zulage Handlaufenden abgerundet;9,0;St;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83
+06.001;Stundensatz: Fachwerker;40,0;h;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83
+06.002;Stundensatz: Bauhelfer;40,0;h;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83
+06.003;Dokumentations-/Revisionsunterlagen;1,0;psch;gaeb-flat;leistungsbeschreibungen/P 1151N F370 LVZ PDF#2026 07 01.D83

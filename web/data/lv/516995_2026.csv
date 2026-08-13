@@ -1,0 +1,479 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Fernwärme-Übergabestation, indirekt, Kompaktanlage, 150 kW.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+20;Membran-Druckausdehnungsgefäß mit Abnahmebescheinigung, DIN EN 13831, für Heizungswasser, Nennvolumen 200 l, zulässiger Betriebsüberdruck 6 bar, Vordruck 1,5 bar, aus Stahl, außen fertiglackiert, mit Gewindeanschlüssen und Anschlussverschraubungen, Anschlussgewinde R 1, mit Membrane, auswechselbar, ;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+30;Füllarmatur, für geschlossene Wasserheizungsanlagen DIN EN 12828, Vordruck bis 10 bar, Hinterdruck einstellbar von 0,5 bis 3 bar, für Wasser bis 120 Grad C, Gehäuse aus Messing, mit Anschluss für Kartusche, Absperrung, Siebeinsatz, Druckminderer, einschl. Kartusche zur Entsalzung,;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+40;Befüllung der Heizanlage mit entsalztem Wasser,;4,0;m³;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+10;Gliederheizkörper, nur liefern, Wärmeleistung geprüft DIN EN 442-2, mit Registrierung, Betriebsmedium Wasser, max. Betriebstemperatur bis 120 Grad C, max. Betriebsüberdruck 1 MPa (10 bar), mit Grundbeschichtung DIN 55900-1 und Deckbeschichtung DIN 55900-2 als Pulverbeschichtung, Farbton weiß, Bauhöh;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+20;mit 11 Heizkörpergliedern je Heizkörper.;2,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+30;mit 12 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+40;mit 13 Heizkörpergliedern je Heizkörper.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+50;Bautiefe über 90 bis 105 mm, mit 7 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+60;Bautiefe über 90 bis 105 mm, mit 11 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+70;Bautiefe über 90 bis 105 mm, mit 16 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+80;Bautiefe über 90 bis 105 mm, mit 20 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+90;Bautiefe über 90 bis 105 mm, mit 24 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+100;Bauhöhe über 450 bis 500 mm, Bautiefe über 130 bis 145 mm, mit 19 Heizkörpergliedern je Heizkörper.;17,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+110;Bauhöhe über 450 bis 500 mm, Bautiefe über 130 bis 145 mm, mit 24 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+120;Bauhöhe über 450 bis 500 mm, Bautiefe über 130 bis 145 mm, mit 40 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+130;Bauhöhe über 550 bis 600 mm, Bautiefe über 130 bis 145 mm, mit 20 Heizkörpergliedern je Heizkörper.;14,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+140;Bautiefe über 130 bis 145 mm, mit 22 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+150;Bauhöhe über 550 bis 600 mm, Bautiefe über 170 bis 185 mm, mit 22 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+160;Bauhöhe über 550 bis 600 mm, Bautiefe über 170 bis 185 mm, mit 40 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+170;Bautiefe über 170 bis 185 mm, mit 13 Heizkörpergliedern je Heizkörper.;2,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+180;Bautiefe über 170 bis 185 mm, mit 14 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+190;Bautiefe über 170 bis 185 mm, mit 21 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+200;Bauhöhe über 450 bis 500 mm, Bautiefe über 200 bis 225 mm, mit 19 Heizkörpergliedern je Heizkörper.;3,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+210;Bauhöhe über 450 bis 500 mm, Bautiefe über 200 bis 225 mm, mit 25 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+220;Bauhöhe über 450 bis 500 mm, Bautiefe über 200 bis 225 mm, mit 27 Heizkörpergliedern je Heizkörper.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+230;Bauhöhe über 450 bis 500 mm, Bautiefe über 200 bis 225 mm, mit 28 Heizkörpergliedern je Heizkörper.;2,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+240;Bauhöhe über 450 bis 500 mm, Bautiefe über 200 bis 225 mm, mit 30 Heizkörpergliedern je Heizkörper.;8,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+250;Bauhöhe über 450 bis 500 mm, Bautiefe über 200 bis 225 mm, mit 31 Heizkörpergliedern je Heizkörper.;2,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+260;Bauhöhe über 450 bis 500 mm, Bautiefe über 200 bis 225 mm, mit 40 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+270;Bauhöhe über 450 bis 500 mm, Bautiefe über 200 bis 225 mm, mit 55 Heizkörperglieder je Heizkörper.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+280;Bauhöhe über 550 bis 600 mm, Bautiefe über 200 bis 225 mm, mit 20 Heizkörpergliedern je Heizkörper.;5,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+290;Bauhöhe über 550 bis 600 mm, Bautiefe über 200 bis 225 mm, mit 22 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+300;Bauhöhe über 550 bis 600 mm, Bautiefe über 200 bis 225 mm, mit 40 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+310;Bauhöhe über 700 bis 750 mm, Bautiefe über 200 bis 225 mm, mit 21 Heizkörpergliedern je Heizkörper.;2,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+320;Gliederheizkörper, montieren und anschließen, Betriebsmedium Wasser, max. Betriebstemperatur bis 120 Grad C, Bauhöhe über 1900 bis 2000 mm, Bautiefe über 200 bis 225 mm, mit 55 Heizkörperglieder je Heizkörper, Gliedlänge über 45 bis 50 mm, Befestigung nach Anforderungsklasse 3, VDI 6036.;84,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+330;Gliederheizkörper, ausbauen und wieder einbauen, Betriebsmedium Wasser, max. Betriebstemperatur bis 120 Grad C, Bauhöhe über 1900 bis 2000 mm, Bautiefe über 200 bis 225 mm, mit 55 Heizkörperglieder je Heizkörper, Gliedlänge über 45 bis 50 mm, Befestigung nach Anforderungsklasse 3, VDI 6036, innerhal;84,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+340;Thermostatisches Heizkörperventil, DIN EN 215, für 2-Rohr-Installation, Gehäuse aus Rotguss, vernickelt, Durchgangsausführung, für Wasser bis 120 Grad C, Nenndruck 1 MPa (10 bar), Spindelabdichtung wechselbar ohne Systementleerung, mit Voreinstellung, automatische Durchflussregelung, Durchflusseinst;84,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+350;Heizkörperverschraubung, Gehäuse aus Rotguss, vernickelt, für Durchgangsausführung, Gehäuseanschluss Heizkörperseite mit Außengewinde, Strangseite mit Außengewinde, für Wasser bis 120 Grad C, Nenndruck 1 MPa (10 bar), mit Absperrung und Entleerung, DN 15.;84,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+360;Thermostatkopf, DIN EN 215, mit eingebautem Messelement, mit Markierung für Sehbehinderte, Medium Dehnstoff, mit Gewindeanschluss, bis 120 Grad C, mit Frostschutzstellung, begrenzbar und blockierbar, Temperaturbereich 6 bis 28 Grad, diebstahlgesichert.;84,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+370;Heizkörperentlüftung, aus Messing, verchromt, als automatisches Ventil, bis 120 Grad C, Nenndruck 1 MPa (10 bar), mit Auslaufkopf, drehbar, R 1/2.;84,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+10;Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm, Wanddicke 1 mm, in Stangen, Verbindung durch Pressen, mit Verpresstkennzeichnung und Prüfsicherheit, Form- und Verbindungsstücke werden gesondert vergütet, Rohrbefestigungen werden gesondert vergütet, Verleg;546,0;m;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+20;Außendurchmesser 22 mm, Wanddicke 1 mm.;189,0;m;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+30;Außendurchmesser 28 mm, Wanddicke 1 mm.;81,0;m;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+40;Außendurchmesser 35 mm, Wanddicke 1,2 mm.;130,0;m;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+50;Außendurchmesser 42 mm, Wanddicke 1,2 mm.;18,0;m;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+60;Außendurchmesser 54 mm, Wanddicke 1,5 mm.;80,0;m;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+70;Muffe als Pressfitting, mit Verpresstkennzeichnung und Prüfsicherheit, aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm.;109,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+80;Außendurchmesser 22 mm.;38,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+90;Außendurchmesser 28 mm.;16,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+100;Außendurchmesser 35 mm.;26,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+110;Außendurchmesser 42 mm.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+120;Außendurchmesser 54 mm.;16,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+130;Bogen als Pressfitting, mit Verpresstkennzeichnung und Prüfsicherheit, bis 90 Grad, aus Kupfer, mit Pressmuffe/Aufsteckende, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm.;328,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+140;Außendurchmesser 22 mm.;113,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+150;Außendurchmesser 28 mm.;48,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+160;Außendurchmesser 35 mm.;78,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+170;Außendurchmesser 42 mm.;14,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+180;Außendurchmesser 54 mm.;48,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+190;Gerade Verschraubung als Pressfitting, mit Verpresstkennzeichnung und Prüfsicherheit, aus Kupfer, flach dichtend, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm.;52,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+200;Außendurchmesser 22 mm.;8,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+210;Außendurchmesser 28 mm.;16,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+220;Außendurchmesser 35 mm.;8,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+230;Außendurchmesser 42 mm.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+240;Außendurchmesser 54 mm.;14,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+250;Kappe als Pressfitting, mit Verpresstkennzeichnung und Prüfsicherheit, aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm.;8,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+260;Außendurchmesser 22 mm.;2,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+270;Außendurchmesser 28 mm.;6,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+280;Außendurchmesser 35 mm.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+290;Außendurchmesser 42 mm.;2,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+300;Außendurchmesser 54 mm.;8,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+310;Reduziermuffe als Pressfitting, mit Verpresstkennzeichnung und Prüfsicherheit, aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm, 2. Durchmesser 15 mm.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+320;Außendurchmesser 22 mm, 2. Durchmesser 18 mm.;16,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+330;Außendurchmesser 28 mm, 2. Durchmesser 18 mm.;8,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+340;Außendurchmesser 35 mm, 2. Durchmesser 18 mm.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+350;Außendurchmesser 42 mm, 2. Durchmesser 18 mm.;2,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+360;Außendurchmesser 54 mm, 2. Durchmesser 18 mm.;12,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+370;Reduzierstück als Pressfitting, mit Verpresstkennzeichnung und Prüfsicherheit, aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm, 2. Durchmesser 15 mm.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+380;Außendurchmesser 22 mm, 2. Durchmesser 18 mm.;14,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+390;Außendurchmesser 28 mm, 2. Durchmesser 18 mm.;8,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+400;Außendurchmesser 35 mm, 2. Durchmesser 18 mm.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+410;Außendurchmesser 42 mm, 2. Durchmesser 18 mm.;2,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+420;Außendurchmesser 54 mm, 2. Durchmesser 18 mm.;14,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+430;T-Stück als Pressfitting, mit Verpresstkennzeichnung und Prüfsicherheit, aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm.;82,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+440;Außendurchmesser 22 mm.;28,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+450;Außendurchmesser 28 mm.;12,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+460;Außendurchmesser 35 mm.;20,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+470;Außendurchmesser 42 mm.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+480;Außendurchmesser 54 mm.;12,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+490;T-Stück, Abgang reduziert, als Pressfitting, mit Verpresstkennzeichnung und Prüfsicherheit, aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm, 2. Durchmesser 15 mm.;8,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+500;Außendurchmesser 22 mm, 2. Durchmesser 18 mm.;14,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+510;Außendurchmesser 28 mm, 2. Durchmesser 18 mm.;16,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+520;Außendurchmesser 35 mm, 2. Durchmesser 18 mm.;16,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+530;Außendurchmesser 42 mm, 2. Durchmesser 18 mm.;12,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+540;Außendurchmesser 54 mm, 2. Durchmesser 18 mm.;18,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+550;Übergangsflansch als Pressfitting, mit Verpresstkennzeichnung und Prüfsicherheit, Nenndruck 1,6 MPa (16 bar), aus Rotguss, mit Pressmuffe, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+560;Außendurchmesser 22 mm.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+570;Außendurchmesser 28 mm.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+580;Außendurchmesser 35 mm.;14,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+590;Außendurchmesser 42 mm.;8,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+600;Außendurchmesser 54 mm.;24,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+610;Schraubensatz und Dichtung für Flanschverbindung DIN EN 1092-1 PN 16, für Wasser, DN 15.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+620;DN 20.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+630;DN 25.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+640;DN 32.;14,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+650;DN 40.;8,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+660;DN 50.;24,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+670;Übergangsstück aus Rotguss, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm.;36,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+680;Übergangsstück aus Rotguss, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 22 mm.;24,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+690;Übergangsstück aus Rotguss, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 28 mm.;18,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+700;Übergangsstück aus Rotguss, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 35 mm.;24,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+710;Übergangsstück aus Rotguss, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 42 mm.;12,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+720;Übergangsstück aus Rotguss, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 54 mm.;14,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+730;Rohrdoppelnippel, aus Rottguss, Gewindeverbindung, für Rohrleitung aus Kupfer, für Heizungswasser, Länge über 50 bis 100 mm, Außendurchmesser 21,3 mm.;10,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+740;Außendurchmesser 26,9 mm.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+750;Außendurchmesser 33,7 mm.;6,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+760;Außendurchmesser 42,4 mm.;8,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+770;Außendurchmesser 48,3 mm.;12,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+780;Außendurchmesser 60,3 mm.;12,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+790;Luftgefäß mit 2 gewölbten Böden, max. zulässige Betriebstemperatur 120 Grad C, max. Betriebsüberdruck 1 MPa (10 bar), aus Stahlrohren, beschichtet, bis DN 40, Gesamtlänge 200 mm, mit 2 Leitungsanschlüssen mit Gewinde, Anschluss DN 32, mit Entlüftungsleitung, Länge 2 m und Entlüftungshahn.;6,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+800;bis DN 50, Gesamtlänge 200 mm.;6,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+810;bis DN 65, Gesamtlänge 250 mm.;6,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+820;Zusätzliche Druck- und Dichtheitsprüfung von Rohrleitungen, aus mittelschwerem Stahlgewinderohr DIN EN 10255, geschweißt, Betriebsmedium Heizungswasser, Außendurchmesser bis 54 mm,;10,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+830;Rohraufhängung als Rohrschelle, aus verzinktem Stahl,;364,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+840;DN 20.;126,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+850;DN 25.;54,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+860;DN 32.;86,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+870;DN 40.;12,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+880;DN 50.;54,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+10;Verteiler-/Sammlerkombination, mit Prüfzeugnis, für Wasser, max. Betriebstemperatur bis 120 Grad C, max. Betriebsüberdruck 1 MPa (10 bar), max. Volumenstrom 7 m³/h, aus Stahl, mit werkseitigem Korrosionsschutz, Vor- und Rücklauf der Heizgruppen nebeneinander fluchtend, mit thermischer Trennung, mit ;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+20;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, differenztemperaturgeregelt, Kommunikationsschnittstelle BACnet MS/TP DIN EN ISO 16484-5,;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+30;Benötigter Volumenstrom Pumpe in m³/h: 3,65,;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+40;Absperrklappe, als Endarmatur, Gehäuse aus Gusseisen EN-GJL-250, beschichtet, DN 32, Nenndruck 1,6 MPa (16 bar), Baulänge DIN EN 558, für Heizungswasser, bis 120 Grad C, weich dichtend, Klappenscheibe aus nichtrostendem Stahl, Welle aus nichtrostendem Stahl, mit Rasterhebel und integriertem Thermome;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+50;DN 40.;2,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+60;DN 50.;8,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+70;Absperrventil, für Wasser bis 120 Grad C, mit Entleerung, mit Muffenanschluss, Gehäuse aus Rotguss, mit Handrad und plombierbarer Kappe, mit wartungsfreier Spindelabdichtung, Sitz weich dichtend, Nenndruck 1,6 MPa (16 bar), DN 15.;3,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+80;DN 20.;3,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+90;DN 25.;11,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+100;DN 32.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+110;DN 40.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+120;DN 50.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+130;Druckunabhängiges Regelventil, mit Stellungsanzeige, für Wasser, max. Betriebstemperatur bis 120 Grad C, mit Entleerung und Messanschluss, mit Innengewinde, Gehäuse aus Rotguss, Ventilautorität gleich 1 in allen Einstellungen lineare Kennlinie unabhängig von der Einstellung, Mindestdifferenzdruck/Wi;6,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+140;DN 20.;5,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+150;DN 25.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+160;DN 32.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+170;Rückschlagventil für Wasser bis 120 Grad C, mit Entleerung, Geradsitz-Durchgangsform, Zwischenflanscheinbau, Gehäuse aus Rotguss, Sitz metallisch dichtend, Nenndruck 1,6 MPa (16 bar), DN 32.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+180;DN 50.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+190;Schmutzfänger, DN 25, für Wasser, max. Betriebstemperatur bis 120 Grad C, Nenndruck 1,6 MPa (16 bar), in Schrägsitzform, mit Flanschanschluss, Gehäuse aus Rotguss, mit Normalsieb, Gewindebohrung und Verschlussstopfen im Reinigungsverschluss.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+200;DN 50.;2,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+210;Druckmessgerät, Messsystem Rohrfeder DIN EN 837-1, mit Dämpfungsflüssigkeit und zusätzlich verstellbarem Markenzeiger, Nenndruck 1 MPa (10 bar), Gehäuse aus nichtrostendem Stahl, ohne Rand, Gehäusenenngröße 80, Güteklasse 1, Anzeigebereich 0 bis 10 bar, Anschluss G 1/2 unten, mediumberührte Teile au;8,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+220;Absperrhahn für Druckmessgerät DIN 16263, mit Prüfzapfen, Nenndruck 1 MPa (10 bar), aus Messing, Anschluss Zapfen-Spannmuffe, Anschlussgewinde G 1/2.;8,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+230;Zeigerthermometer DIN EN 13190, Austritt des Messelements nach hinten, glattes Messelement, Einbaulänge 50 mm, einschl. Tauchhülse, aus nichtrostendem Stahl, Gehäuse aus nichtrostendem Stahl, Gehäusenenndurchmesser 80 mm, Anzeigebereich 0 bis 60 Grad C, Genauigkeitsklasse 1.;20,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+240;Entleerungsarmatur, als Kugelhahn, für Wasser bis 120 Grad C, mit Flügelgriff, mit Verschlusskappe und Kette, Gehäuse aus Messing, weich dichtend, mit Gewindeanschluss, Nenndruck 1 MPa (10 bar), DN 15.;25,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+250;Membransicherheitsventil, bauteilgeprüft, federbelastet, für geschlossene Wasserheizungsanlagen DIN EN 12828, für Wasser, max. Betriebstemperatur bis 120 Grad C,;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+260;Messwert-/Kontaktgeber und Einschweißmuffen, vom AG beigestellt, einbauen, Einbaulänge 100 mm, mit Muffenanschluss, Nenndruck 1,6 MPa (16 bar), DN 15.;20,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+270;Mischventile, vom AG beigestellt, einbauen, Einbaulänge 250 mm, mit Flanschanschluss, Nenndruck 1,6 MPa (16 bar), DN 20.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+280;DN 25.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+290;Wärmemengenzähler vom AG beigestellt, einbauen, Einbaulänge 350 mm, mit Flanschanschluss, Nenndruck 1,6 MPa (16 bar), DN 40.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+10;Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 15, Rohrverbindung als Pressverbindung, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, als Rohrschale, Dämmschichtdicke 20 mm, Brandverhaltensklasse DIN EN 13501;273,0;m;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+20;DN 20, Dämmschichtdicke 20 mm.;95,0;m;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+30;DN 25, Dämmschichtdicke 30 mm.;81,0;m;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+40;DN 32, Dämmschichtdicke 40 mm.;130,0;m;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+50;DN 40, Dämmschichtdicke 40 mm.;18,0;m;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+60;DN 50, Dämmschichtdicke 50 mm.;80,0;m;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+70;Passstück aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 15, im Gebäude, Brandverhaltensklasse DIN EN 13501-1 A1 (nichtbrennbar), Wärmeleitfähigkeit 0,035 W/(mK) bei 40 Grad C Mitte;10,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+80;DN 20, Dämmschichtdicke 20 mm.;10,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+90;DN 25, Dämmschichtdicke 30 mm.;10,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+100;DN 32, Dämmschichtdicke 40 mm.;10,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+110;DN 40, Dämmschichtdicke 40 mm.;10,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+120;DN 50, Dämmschichtdicke 50 mm.;10,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+130;Bogen aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 15, im Gebäude, Brandverhaltensklasse DIN EN 13501-1 A1 (nichtbrennbar), Wärmeleitfähigkeit 0,035 W/(mK) bei 40 Grad C Mitteltem;164,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+140;DN 20, Dämmschichtdicke 20 mm.;56,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+150;DN 25, Dämmschichtdicke 30 mm.;48,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+160;DN 32, Dämmschichtdicke 40 mm.;78,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+170;DN 40, Dämmschichtdicke 40 mm.;14,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+180;DN 50, Dämmschichtdicke 50 mm.;48,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+190;T-Stück aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 15, im Gebäude, Brandverhaltensklasse DIN EN 13501-1 A1 (nichtbrennbar), Wärmeleitfähigkeit 0,035 W/(mK) bei 40 Grad C Mittelt;47,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+200;DN 20, Dämmschichtdicke 20 mm.;21,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+210;DN 25, Dämmschichtdicke 30 mm.;36,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+220;DN 32, Dämmschichtdicke 40 mm.;36,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+230;DN 40, Dämmschichtdicke 40 mm.;16,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+240;DN 50, Dämmschichtdicke 50 mm.;30,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+250;Tragkonstruktion für Dämmung aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 15, im Gebäude, Brandverhaltensklasse DIN EN 13501-1 A1 (nichtbrennbar), Wärmeleitfähigkeit 0,035 W/(mK) ;182,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+260;DN 20, Dämmschichtdicke 20 mm.;63,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+270;DN 25,Dämmschichtdicke 30 mm.;54,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+280;DN 32, Dämmschichtdicke 40 mm.;86,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+290;DN 40, Dämmschichtdicke 40 mm.;12,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+300;DN 50, Dämmschichtdicke 50 mm.;54,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+310;Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Lufttopf, DN 40, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, als Lamellenmatte, druckfest, einlagig, Dämmschichtdicke 50 mm, Brandverhaltensklasse DIN EN 13501-1 A1 (nichtbrennbar), Wärmeleitfähigkeit 0,04;6,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+320;DN 50, Dämmschichtdicke 60 mm.;6,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+330;DN 65, Dämmschichtdicke 70 mm.;6,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+340;Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Schrägsitzarmatur, DN 15, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, als Lamellenmatte, druckfest, einlagig, Dämmschichtdicke 20 mm, Brandverhaltensklasse DIN EN 13501-1 A1 ;9,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+350;DN 20, Dämmschichtdicke 20 mm.;8,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+360;DN 25, Dämmschichtdicke 30 mm.;12,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+370;DN 32, Dämmschichtdicke 40 mm.;5,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+380;DN 40, Dämmschichtdicke 40 mm.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+390;DN 50, Dämmschichtdicke 50 mm.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+400;Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Absperrklappe, DN 32, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, als Lamellenmatte, druckfest, einlagig, Dämmschichtdicke 40 mm, Brandverhaltensklasse DIN EN 13501-1 A1 (nic;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+410;DN 40, Dämmschichtdicke 40 mm.;2,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+420;DN 50, Dämmschichtdicke 50 mm.;8,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+430;Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rückschlagventil, DN 32, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, als Lamellenmatte, druckfest, einlagig, Dämmschichtdicke 40 mm, Brandverhaltensklasse DIN EN 13501-1 A1 (;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+440;DN 50, Dämmschichtdicke 50 mm.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+450;Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Schmutzfänger, DN 32, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, als Lamellenmatte, druckfest, einlagig, Dämmschichtdicke 40 mm, Brandverhaltensklasse DIN EN 13501-1 A1 (nic;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+460;DN 50, Dämmschichtdicke 50 mm.;2,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+470;Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Dreiwege-Regelventil, DN 25, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, als Lamellenmatte, druckfest, einlagig, Dämmschichtdicke 30 mm, Brandverhaltensklasse DIN EN 13501-1 ;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+480;DN 40, Dämmschichtdicke 40 mm.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+490;Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Flanschenpaar, DN 15, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, als Lamellenmatte, druckfest, einlagig, Dämmschichtdicke 20 mm, Brandverhaltensklasse DIN EN 13501-1 A1 (nic;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+500;DN 20, Dämmschichtdicke 20 mm.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+510;DN 25, Dämmschichtdicke 30 mm.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+520;DN 32, Dämmschichtdicke 40 mm.;14,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+530;DN 40, Dämmschichtdicke 40 mm.;8,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+540;DN 50, Dämmschichtdicke 50 mm.;24,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+10;Brandschutzabschottung von Rohrleitung aus Kupfer, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN EN 13501-2,;26,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+20;Rohraußendurchmesser 22 mm.;24,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+30;Rohraußendurchmesser 28 mm.;12,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+40;Rohraußendurchmesser 35 mm.;2,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+50;Rohraußendurchmesser 42 mm.;2,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+60;Rohraußendurchmesser 54 mm.;2,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+70;Brandschutzabschottung von Rohrleitung aus Kupfer, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN EN 13501-2,;2,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+80;Rohraußendurchmesser 22 mm.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+90;Rohraußendurchmesser 28 mm.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+100;Rohraußendurchmesser 35 mm.;2,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+110;Rohraußendurchmesser 42 mm.;2,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+120;Rohraußendurchmesser 54 mm.;2,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+10;Stundenlohnarbeiten durch Obermonteur/-in;10,0;h;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+20;Stundenlohnarbeiten durch selbstständigen Monteur/-in.;10,0;h;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+30;Stundenlohnarbeiten durch Monteur/-in.;10,0;h;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+40;Stundenlohnarbeiten durch Helfer/-in.;10,0;h;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+10;Kernbohrung, Untergrundfläche senkrecht, aus unbewehrtem Beton, Normalbeton, Bohrdurchmesser über 50 bis 100 mm, Bohrtiefe bis 25 cm, einschl. Lösen des Bohrkerns aus dem Gefüge, Wichte des Abbruchstoffes DIN EN 1991-1-1 24 kN/m3, Arbeitshöhe bis 3,65 m,;80,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+20;Bohrdurchmesser über 100 bis 150 mm.;10,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+30;Bohrdurchmesser über 200 bis 250 mm.;4,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+40;Öffnung herstellen, rund,;30,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+50;Form-/Hohlprofilstahlkonstruktion, aus verzinktem Stahl, für Stütz-, Hänge-, Trag- und Sonderbefestigung, schallentkoppelt gelagert, Arbeitshöhe des Montageortes bis 5,5 m über der Standfläche des hierfür erforderlichen Gerüstes, Gerüst wird gesondert vergütet.;250,0;kg;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+60;Bezeichnungsschild DIN 825, Farbe und Beschriftung nach Angaben des AG, aus Schicht-Pressstoff mit Kunststoffabdeckung, Beschriftung 2-zeilig, gedruckt, rechteckig, Höhe 52 mm, Breite 105 mm, Befestigung mit Schildträger aus verzinktem Stahl, Halter und Spannband, Befestigungsuntergrund Rohrleitung.;30,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+70;Farbkennzeichnung DIN 2403 der Luftleitung, Kennzeichnung durch Beschilderung und Angabe der Fließrichtung durch Richtungspfeile, Schild-Maße mind. H/B 40/100 mm, Befestigung durch Kleben.;100,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+10;Für die zuvor beschriebenen Leistungen, die einen Mehr­aufwand gegenüber der VOB darstellen, Wartungs- und Revisions­unterlagen, werden berechnet.;1,0;psch;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+20;Anlagenschema zur Anbringung in der Technik-Zentrale als Übersichtsplan für die Wartung und Revision der Anlagen.;3,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+30;Wartungs- und Revisionsunterlagen als CAD- und PDF-Dateien auf Datenträger CD-ROM, USB-Stick oder Download-Link.;1,0;St;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+10;Durchführung von Wartungs- und Inspektionsarbeiten während der Verjährungsfrist für Mängelansprüche an den technischen Anlagen und Einrichtungen gemäß Leistungsverzeichnis, die zur Aufrechterhaltung und Sicherstellung der Betriebsbereitschaft und Sicherheit sowie der vereinbarten Anlagenzustände und;1,0;psch;gaeb;leistungsbeschreibungen/24810002-Stand 21.07.2026.X83
+10;Fernwärme-Übergabestation, indirekt, Kompaktanlage, 150 kW.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+20;Membran-Druckausdehnungsgefäß mit Abnahmebescheinigung, DIN EN 13831, für Heizungswasser, Nennvolumen 200 l, zulässiger Betriebsüberdruck 6 bar, Vordruck 1,5 bar, aus Stahl, außen fertiglackiert, mit Gewindeanschlüssen und Anschlussverschraubungen, Anschlussgewinde R 1, mit Membrane, auswechselbar, ;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+30;Füllarmatur, für geschlossene Wasserheizungsanlagen DIN EN 12828, Vordruck bis 10 bar, Hinterdruck einstellbar von 0,5 bis 3 bar, für Wasser bis 120 Grad C, Gehäuse aus Messing, mit Anschluss für Kartusche, Absperrung, Siebeinsatz, Druckminderer, einschl. Kartusche zur Entsalzung,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+40;Befüllung der Heizanlage mit entsalztem Wasser,;4,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+10;Gliederheizkörper, nur liefern, Wärmeleistung geprüft DIN EN 442-2, mit Registrierung, Betriebsmedium Wasser, max. Betriebstemperatur bis 120 Grad C, max. Betriebsüberdruck 1 MPa (10 bar), mit Grundbeschichtung DIN 55900-1 und Deckbeschichtung DIN 55900-2 als Pulverbeschichtung, Farbton weiß, Bauhöh;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+20;mit 11 Heizkörpergliedern je Heizkörper.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+30;mit 12 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+40;mit 13 Heizkörpergliedern je Heizkörper.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+50;Bautiefe über 90 bis 105 mm, mit 7 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+60;Bautiefe über 90 bis 105 mm, mit 11 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+70;Bautiefe über 90 bis 105 mm, mit 16 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+80;Bautiefe über 90 bis 105 mm, mit 20 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+90;Bautiefe über 90 bis 105 mm, mit 24 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+100;Bauhöhe über 450 bis 500 mm, Bautiefe über 130 bis 145 mm, mit 19 Heizkörpergliedern je Heizkörper.;17,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+110;Bauhöhe über 450 bis 500 mm, Bautiefe über 130 bis 145 mm, mit 24 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+120;Bauhöhe über 450 bis 500 mm, Bautiefe über 130 bis 145 mm, mit 40 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+130;Bauhöhe über 550 bis 600 mm, Bautiefe über 130 bis 145 mm, mit 20 Heizkörpergliedern je Heizkörper.;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+140;Bautiefe über 130 bis 145 mm, mit 22 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+150;Bauhöhe über 550 bis 600 mm, Bautiefe über 170 bis 185 mm, mit 22 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+160;Bauhöhe über 550 bis 600 mm, Bautiefe über 170 bis 185 mm, mit 40 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+170;Bautiefe über 170 bis 185 mm, mit 13 Heizkörpergliedern je Heizkörper.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+180;Bautiefe über 170 bis 185 mm, mit 14 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+190;Bautiefe über 170 bis 185 mm, mit 21 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+200;Bauhöhe über 450 bis 500 mm, Bautiefe über 200 bis 225 mm, mit 19 Heizkörpergliedern je Heizkörper.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+210;Bauhöhe über 450 bis 500 mm, Bautiefe über 200 bis 225 mm, mit 25 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+220;Bauhöhe über 450 bis 500 mm, Bautiefe über 200 bis 225 mm, mit 27 Heizkörpergliedern je Heizkörper.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+230;Bauhöhe über 450 bis 500 mm, Bautiefe über 200 bis 225 mm, mit 28 Heizkörpergliedern je Heizkörper.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+240;Bauhöhe über 450 bis 500 mm, Bautiefe über 200 bis 225 mm, mit 30 Heizkörpergliedern je Heizkörper.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+250;Bauhöhe über 450 bis 500 mm, Bautiefe über 200 bis 225 mm, mit 31 Heizkörpergliedern je Heizkörper.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+260;Bauhöhe über 450 bis 500 mm, Bautiefe über 200 bis 225 mm, mit 40 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+270;Bauhöhe über 450 bis 500 mm, Bautiefe über 200 bis 225 mm, mit 55 Heizkörperglieder je Heizkörper.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+280;Bauhöhe über 550 bis 600 mm, Bautiefe über 200 bis 225 mm, mit 20 Heizkörpergliedern je Heizkörper.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+290;Bauhöhe über 550 bis 600 mm, Bautiefe über 200 bis 225 mm, mit 22 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+300;Bauhöhe über 550 bis 600 mm, Bautiefe über 200 bis 225 mm, mit 40 Heizkörpergliedern je Heizkörper.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+310;Bauhöhe über 700 bis 750 mm, Bautiefe über 200 bis 225 mm, mit 21 Heizkörpergliedern je Heizkörper.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+320;Gliederheizkörper, montieren und anschließen, Betriebsmedium Wasser, max. Betriebstemperatur bis 120 Grad C, Bauhöhe über 1900 bis 2000 mm, Bautiefe über 200 bis 225 mm, mit 55 Heizkörperglieder je Heizkörper, Gliedlänge über 45 bis 50 mm, Befestigung nach Anforderungsklasse 3, VDI 6036.;84,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+330;Gliederheizkörper, ausbauen und wieder einbauen, Betriebsmedium Wasser, max. Betriebstemperatur bis 120 Grad C, Bauhöhe über 1900 bis 2000 mm, Bautiefe über 200 bis 225 mm, mit 55 Heizkörperglieder je Heizkörper, Gliedlänge über 45 bis 50 mm, Befestigung nach Anforderungsklasse 3, VDI 6036, innerhal;84,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+340;Thermostatisches Heizkörperventil, DIN EN 215, für 2-Rohr-Installation, Gehäuse aus Rotguss, vernickelt, Durchgangsausführung, für Wasser bis 120 Grad C, Nenndruck 1 MPa (10 bar), Spindelabdichtung wechselbar ohne Systementleerung, mit Voreinstellung, automatische Durchflussregelung, Durchflusseinst;84,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+350;Heizkörperverschraubung, Gehäuse aus Rotguss, vernickelt, für Durchgangsausführung, Gehäuseanschluss Heizkörperseite mit Außengewinde, Strangseite mit Außengewinde, für Wasser bis 120 Grad C, Nenndruck 1 MPa (10 bar), mit Absperrung und Entleerung, DN 15.;84,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+360;Thermostatkopf, DIN EN 215, mit eingebautem Messelement, mit Markierung für Sehbehinderte, Medium Dehnstoff, mit Gewindeanschluss, bis 120 Grad C, mit Frostschutzstellung, begrenzbar und blockierbar, Temperaturbereich 6 bis 28 Grad, diebstahlgesichert.;84,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+370;Heizkörperentlüftung, aus Messing, verchromt, als automatisches Ventil, bis 120 Grad C, Nenndruck 1 MPa (10 bar), mit Auslaufkopf, drehbar, R 1/2.;84,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+10;Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm, Wanddicke 1 mm, in Stangen, Verbindung durch Pressen, mit Verpresstkennzeichnung und Prüfsicherheit, Form- und Verbindungsstücke werden gesondert vergütet, Rohrbefestigungen werden gesondert vergütet, Verleg;546,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+20;Außendurchmesser 22 mm, Wanddicke 1 mm.;189,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+30;Außendurchmesser 28 mm, Wanddicke 1 mm.;81,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+40;Außendurchmesser 35 mm, Wanddicke 1,2 mm.;130,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+50;Außendurchmesser 42 mm, Wanddicke 1,2 mm.;18,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+60;Außendurchmesser 54 mm, Wanddicke 1,5 mm.;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+70;Muffe als Pressfitting, mit Verpresstkennzeichnung und Prüfsicherheit, aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm.;109,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+80;Außendurchmesser 22 mm.;38,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+90;Außendurchmesser 28 mm.;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+100;Außendurchmesser 35 mm.;26,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+110;Außendurchmesser 42 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+120;Außendurchmesser 54 mm.;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+130;Bogen als Pressfitting, mit Verpresstkennzeichnung und Prüfsicherheit, bis 90 Grad, aus Kupfer, mit Pressmuffe/Aufsteckende, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm.;328,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+140;Außendurchmesser 22 mm.;113,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+150;Außendurchmesser 28 mm.;48,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+160;Außendurchmesser 35 mm.;78,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+170;Außendurchmesser 42 mm.;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+180;Außendurchmesser 54 mm.;48,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+190;Gerade Verschraubung als Pressfitting, mit Verpresstkennzeichnung und Prüfsicherheit, aus Kupfer, flach dichtend, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm.;52,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+200;Außendurchmesser 22 mm.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+210;Außendurchmesser 28 mm.;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+220;Außendurchmesser 35 mm.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+230;Außendurchmesser 42 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+240;Außendurchmesser 54 mm.;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+250;Kappe als Pressfitting, mit Verpresstkennzeichnung und Prüfsicherheit, aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+260;Außendurchmesser 22 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+270;Außendurchmesser 28 mm.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+280;Außendurchmesser 35 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+290;Außendurchmesser 42 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+300;Außendurchmesser 54 mm.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+310;Reduziermuffe als Pressfitting, mit Verpresstkennzeichnung und Prüfsicherheit, aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm, 2. Durchmesser 15 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+320;Außendurchmesser 22 mm, 2. Durchmesser 18 mm.;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+330;Außendurchmesser 28 mm, 2. Durchmesser 18 mm.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+340;Außendurchmesser 35 mm, 2. Durchmesser 18 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+350;Außendurchmesser 42 mm, 2. Durchmesser 18 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+360;Außendurchmesser 54 mm, 2. Durchmesser 18 mm.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+370;Reduzierstück als Pressfitting, mit Verpresstkennzeichnung und Prüfsicherheit, aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm, 2. Durchmesser 15 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+380;Außendurchmesser 22 mm, 2. Durchmesser 18 mm.;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+390;Außendurchmesser 28 mm, 2. Durchmesser 18 mm.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+400;Außendurchmesser 35 mm, 2. Durchmesser 18 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+410;Außendurchmesser 42 mm, 2. Durchmesser 18 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+420;Außendurchmesser 54 mm, 2. Durchmesser 18 mm.;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+430;T-Stück als Pressfitting, mit Verpresstkennzeichnung und Prüfsicherheit, aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm.;82,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+440;Außendurchmesser 22 mm.;28,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+450;Außendurchmesser 28 mm.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+460;Außendurchmesser 35 mm.;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+470;Außendurchmesser 42 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+480;Außendurchmesser 54 mm.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+490;T-Stück, Abgang reduziert, als Pressfitting, mit Verpresstkennzeichnung und Prüfsicherheit, aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm, 2. Durchmesser 15 mm.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+500;Außendurchmesser 22 mm, 2. Durchmesser 18 mm.;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+510;Außendurchmesser 28 mm, 2. Durchmesser 18 mm.;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+520;Außendurchmesser 35 mm, 2. Durchmesser 18 mm.;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+530;Außendurchmesser 42 mm, 2. Durchmesser 18 mm.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+540;Außendurchmesser 54 mm, 2. Durchmesser 18 mm.;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+550;Übergangsflansch als Pressfitting, mit Verpresstkennzeichnung und Prüfsicherheit, Nenndruck 1,6 MPa (16 bar), aus Rotguss, mit Pressmuffe, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+560;Außendurchmesser 22 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+570;Außendurchmesser 28 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+580;Außendurchmesser 35 mm.;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+590;Außendurchmesser 42 mm.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+600;Außendurchmesser 54 mm.;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+610;Schraubensatz und Dichtung für Flanschverbindung DIN EN 1092-1 PN 16, für Wasser, DN 15.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+620;DN 20.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+630;DN 25.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+640;DN 32.;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+650;DN 40.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+660;DN 50.;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+670;Übergangsstück aus Rotguss, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 18 mm.;36,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+680;Übergangsstück aus Rotguss, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 22 mm.;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+690;Übergangsstück aus Rotguss, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 28 mm.;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+700;Übergangsstück aus Rotguss, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 35 mm.;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+710;Übergangsstück aus Rotguss, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 42 mm.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+720;Übergangsstück aus Rotguss, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Heizungswasser, Außendurchmesser 54 mm.;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+730;Rohrdoppelnippel, aus Rottguss, Gewindeverbindung, für Rohrleitung aus Kupfer, für Heizungswasser, Länge über 50 bis 100 mm, Außendurchmesser 21,3 mm.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+740;Außendurchmesser 26,9 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+750;Außendurchmesser 33,7 mm.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+760;Außendurchmesser 42,4 mm.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+770;Außendurchmesser 48,3 mm.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+780;Außendurchmesser 60,3 mm.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+790;Luftgefäß mit 2 gewölbten Böden, max. zulässige Betriebstemperatur 120 Grad C, max. Betriebsüberdruck 1 MPa (10 bar), aus Stahlrohren, beschichtet, bis DN 40, Gesamtlänge 200 mm, mit 2 Leitungsanschlüssen mit Gewinde, Anschluss DN 32, mit Entlüftungsleitung, Länge 2 m und Entlüftungshahn.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+800;bis DN 50, Gesamtlänge 200 mm.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+810;bis DN 65, Gesamtlänge 250 mm.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+820;Zusätzliche Druck- und Dichtheitsprüfung von Rohrleitungen, aus mittelschwerem Stahlgewinderohr DIN EN 10255, geschweißt, Betriebsmedium Heizungswasser, Außendurchmesser bis 54 mm,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+830;Rohraufhängung als Rohrschelle, aus verzinktem Stahl,;364,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+840;DN 20.;126,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+850;DN 25.;54,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+860;DN 32.;86,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+870;DN 40.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+880;DN 50.;54,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+10;Verteiler-/Sammlerkombination, mit Prüfzeugnis, für Wasser, max. Betriebstemperatur bis 120 Grad C, max. Betriebsüberdruck 1 MPa (10 bar), max. Volumenstrom 7 m³/h, aus Stahl, mit werkseitigem Korrosionsschutz, Vor- und Rücklauf der Heizgruppen nebeneinander fluchtend, mit thermischer Trennung, mit ;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+20;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, differenztemperaturgeregelt, Kommunikationsschnittstelle BACnet MS/TP DIN EN ISO 16484-5,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+30;Benötigter Volumenstrom Pumpe in m³/h: 3,65,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+40;Absperrklappe, als Endarmatur, Gehäuse aus Gusseisen EN-GJL-250, beschichtet, DN 32, Nenndruck 1,6 MPa (16 bar), Baulänge DIN EN 558, für Heizungswasser, bis 120 Grad C, weich dichtend, Klappenscheibe aus nichtrostendem Stahl, Welle aus nichtrostendem Stahl, mit Rasterhebel und integriertem Thermome;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+50;DN 40.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+60;DN 50.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+70;Absperrventil, für Wasser bis 120 Grad C, mit Entleerung, mit Muffenanschluss, Gehäuse aus Rotguss, mit Handrad und plombierbarer Kappe, mit wartungsfreier Spindelabdichtung, Sitz weich dichtend, Nenndruck 1,6 MPa (16 bar), DN 15.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+80;DN 20.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+90;DN 25.;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+100;DN 32.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+110;DN 40.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+120;DN 50.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+130;Druckunabhängiges Regelventil, mit Stellungsanzeige, für Wasser, max. Betriebstemperatur bis 120 Grad C, mit Entleerung und Messanschluss, mit Innengewinde, Gehäuse aus Rotguss, Ventilautorität gleich 1 in allen Einstellungen lineare Kennlinie unabhängig von der Einstellung, Mindestdifferenzdruck/Wi;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+140;DN 20.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+150;DN 25.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+160;DN 32.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+170;Rückschlagventil für Wasser bis 120 Grad C, mit Entleerung, Geradsitz-Durchgangsform, Zwischenflanscheinbau, Gehäuse aus Rotguss, Sitz metallisch dichtend, Nenndruck 1,6 MPa (16 bar), DN 32.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+180;DN 50.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+190;Schmutzfänger, DN 25, für Wasser, max. Betriebstemperatur bis 120 Grad C, Nenndruck 1,6 MPa (16 bar), in Schrägsitzform, mit Flanschanschluss, Gehäuse aus Rotguss, mit Normalsieb, Gewindebohrung und Verschlussstopfen im Reinigungsverschluss.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+200;DN 50.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+210;Druckmessgerät, Messsystem Rohrfeder DIN EN 837-1, mit Dämpfungsflüssigkeit und zusätzlich verstellbarem Markenzeiger, Nenndruck 1 MPa (10 bar), Gehäuse aus nichtrostendem Stahl, ohne Rand, Gehäusenenngröße 80, Güteklasse 1, Anzeigebereich 0 bis 10 bar, Anschluss G 1/2 unten, mediumberührte Teile au;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+220;Absperrhahn für Druckmessgerät DIN 16263, mit Prüfzapfen, Nenndruck 1 MPa (10 bar), aus Messing, Anschluss Zapfen-Spannmuffe, Anschlussgewinde G 1/2.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+230;Zeigerthermometer DIN EN 13190, Austritt des Messelements nach hinten, glattes Messelement, Einbaulänge 50 mm, einschl. Tauchhülse, aus nichtrostendem Stahl, Gehäuse aus nichtrostendem Stahl, Gehäusenenndurchmesser 80 mm, Anzeigebereich 0 bis 60 Grad C, Genauigkeitsklasse 1.;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+240;Entleerungsarmatur, als Kugelhahn, für Wasser bis 120 Grad C, mit Flügelgriff, mit Verschlusskappe und Kette, Gehäuse aus Messing, weich dichtend, mit Gewindeanschluss, Nenndruck 1 MPa (10 bar), DN 15.;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+250;Membransicherheitsventil, bauteilgeprüft, federbelastet, für geschlossene Wasserheizungsanlagen DIN EN 12828, für Wasser, max. Betriebstemperatur bis 120 Grad C,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+260;Messwert-/Kontaktgeber und Einschweißmuffen, vom AG beigestellt, einbauen, Einbaulänge 100 mm, mit Muffenanschluss, Nenndruck 1,6 MPa (16 bar), DN 15.;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+270;Mischventile, vom AG beigestellt, einbauen, Einbaulänge 250 mm, mit Flanschanschluss, Nenndruck 1,6 MPa (16 bar), DN 20.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+280;DN 25.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+290;Wärmemengenzähler vom AG beigestellt, einbauen, Einbaulänge 350 mm, mit Flanschanschluss, Nenndruck 1,6 MPa (16 bar), DN 40.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+10;Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 15, Rohrverbindung als Pressverbindung, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, als Rohrschale, Dämmschichtdicke 20 mm, Brandverhaltensklasse DIN EN 13501;273,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+20;DN 20, Dämmschichtdicke 20 mm.;95,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+30;DN 25, Dämmschichtdicke 30 mm.;81,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+40;DN 32, Dämmschichtdicke 40 mm.;130,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+50;DN 40, Dämmschichtdicke 40 mm.;18,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+60;DN 50, Dämmschichtdicke 50 mm.;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+70;Passstück aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 15, im Gebäude, Brandverhaltensklasse DIN EN 13501-1 A1 (nichtbrennbar), Wärmeleitfähigkeit 0,035 W/(mK) bei 40 Grad C Mitte;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+80;DN 20, Dämmschichtdicke 20 mm.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+90;DN 25, Dämmschichtdicke 30 mm.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+100;DN 32, Dämmschichtdicke 40 mm.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+110;DN 40, Dämmschichtdicke 40 mm.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+120;DN 50, Dämmschichtdicke 50 mm.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+130;Bogen aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 15, im Gebäude, Brandverhaltensklasse DIN EN 13501-1 A1 (nichtbrennbar), Wärmeleitfähigkeit 0,035 W/(mK) bei 40 Grad C Mitteltem;164,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+140;DN 20, Dämmschichtdicke 20 mm.;56,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+150;DN 25, Dämmschichtdicke 30 mm.;48,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+160;DN 32, Dämmschichtdicke 40 mm.;78,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+170;DN 40, Dämmschichtdicke 40 mm.;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+180;DN 50, Dämmschichtdicke 50 mm.;48,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+190;T-Stück aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 15, im Gebäude, Brandverhaltensklasse DIN EN 13501-1 A1 (nichtbrennbar), Wärmeleitfähigkeit 0,035 W/(mK) bei 40 Grad C Mittelt;47,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+200;DN 20, Dämmschichtdicke 20 mm.;21,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+210;DN 25, Dämmschichtdicke 30 mm.;36,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+220;DN 32, Dämmschichtdicke 40 mm.;36,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+230;DN 40, Dämmschichtdicke 40 mm.;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+240;DN 50, Dämmschichtdicke 50 mm.;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+250;Tragkonstruktion für Dämmung aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 15, im Gebäude, Brandverhaltensklasse DIN EN 13501-1 A1 (nichtbrennbar), Wärmeleitfähigkeit 0,035 W/(mK) ;182,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+260;DN 20, Dämmschichtdicke 20 mm.;63,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+270;DN 25,Dämmschichtdicke 30 mm.;54,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+280;DN 32, Dämmschichtdicke 40 mm.;86,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+290;DN 40, Dämmschichtdicke 40 mm.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+300;DN 50, Dämmschichtdicke 50 mm.;54,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+310;Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Lufttopf, DN 40, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, als Lamellenmatte, druckfest, einlagig, Dämmschichtdicke 50 mm, Brandverhaltensklasse DIN EN 13501-1 A1 (nichtbrennbar), Wärmeleitfähigkeit 0,04;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+320;DN 50, Dämmschichtdicke 60 mm.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+330;DN 65, Dämmschichtdicke 70 mm.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+340;Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Schrägsitzarmatur, DN 15, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, als Lamellenmatte, druckfest, einlagig, Dämmschichtdicke 20 mm, Brandverhaltensklasse DIN EN 13501-1 A1 ;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+350;DN 20, Dämmschichtdicke 20 mm.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+360;DN 25, Dämmschichtdicke 30 mm.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+370;DN 32, Dämmschichtdicke 40 mm.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+380;DN 40, Dämmschichtdicke 40 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+390;DN 50, Dämmschichtdicke 50 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+400;Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Absperrklappe, DN 32, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, als Lamellenmatte, druckfest, einlagig, Dämmschichtdicke 40 mm, Brandverhaltensklasse DIN EN 13501-1 A1 (nic;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+410;DN 40, Dämmschichtdicke 40 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+420;DN 50, Dämmschichtdicke 50 mm.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+430;Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rückschlagventil, DN 32, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, als Lamellenmatte, druckfest, einlagig, Dämmschichtdicke 40 mm, Brandverhaltensklasse DIN EN 13501-1 A1 (;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+440;DN 50, Dämmschichtdicke 50 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+450;Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Schmutzfänger, DN 32, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, als Lamellenmatte, druckfest, einlagig, Dämmschichtdicke 40 mm, Brandverhaltensklasse DIN EN 13501-1 A1 (nic;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+460;DN 50, Dämmschichtdicke 50 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+470;Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Dreiwege-Regelventil, DN 25, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, als Lamellenmatte, druckfest, einlagig, Dämmschichtdicke 30 mm, Brandverhaltensklasse DIN EN 13501-1 ;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+480;DN 40, Dämmschichtdicke 40 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+490;Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Flanschenpaar, DN 15, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, AS-Qualität und hydrophobiert, als Lamellenmatte, druckfest, einlagig, Dämmschichtdicke 20 mm, Brandverhaltensklasse DIN EN 13501-1 A1 (nic;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+500;DN 20, Dämmschichtdicke 20 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+510;DN 25, Dämmschichtdicke 30 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+520;DN 32, Dämmschichtdicke 40 mm.;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+530;DN 40, Dämmschichtdicke 40 mm.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+540;DN 50, Dämmschichtdicke 50 mm.;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+10;Brandschutzabschottung von Rohrleitung aus Kupfer, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN EN 13501-2,;26,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+20;Rohraußendurchmesser 22 mm.;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+30;Rohraußendurchmesser 28 mm.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+40;Rohraußendurchmesser 35 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+50;Rohraußendurchmesser 42 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+60;Rohraußendurchmesser 54 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+70;Brandschutzabschottung von Rohrleitung aus Kupfer, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN EN 13501-2,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+80;Rohraußendurchmesser 22 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+90;Rohraußendurchmesser 28 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+100;Rohraußendurchmesser 35 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+110;Rohraußendurchmesser 42 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+120;Rohraußendurchmesser 54 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+10;Stundenlohnarbeiten durch Obermonteur/-in;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+20;Stundenlohnarbeiten durch selbstständigen Monteur/-in.;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+30;Stundenlohnarbeiten durch Monteur/-in.;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+40;Stundenlohnarbeiten durch Helfer/-in.;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+10;Kernbohrung, Untergrundfläche senkrecht, aus unbewehrtem Beton, Normalbeton, Bohrdurchmesser über 50 bis 100 mm, Bohrtiefe bis 25 cm, einschl. Lösen des Bohrkerns aus dem Gefüge, Wichte des Abbruchstoffes DIN EN 1991-1-1 24 kN/m3, Arbeitshöhe bis 3,65 m,;80,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+20;Bohrdurchmesser über 100 bis 150 mm.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+30;Bohrdurchmesser über 200 bis 250 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+40;Öffnung herstellen, rund,;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+50;Form-/Hohlprofilstahlkonstruktion, aus verzinktem Stahl, für Stütz-, Hänge-, Trag- und Sonderbefestigung, schallentkoppelt gelagert, Arbeitshöhe des Montageortes bis 5,5 m über der Standfläche des hierfür erforderlichen Gerüstes, Gerüst wird gesondert vergütet.;250,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+60;Bezeichnungsschild DIN 825, Farbe und Beschriftung nach Angaben des AG, aus Schicht-Pressstoff mit Kunststoffabdeckung, Beschriftung 2-zeilig, gedruckt, rechteckig, Höhe 52 mm, Breite 105 mm, Befestigung mit Schildträger aus verzinktem Stahl, Halter und Spannband, Befestigungsuntergrund Rohrleitung.;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+70;Farbkennzeichnung DIN 2403 der Luftleitung, Kennzeichnung durch Beschilderung und Angabe der Fließrichtung durch Richtungspfeile, Schild-Maße mind. H/B 40/100 mm, Befestigung durch Kleben.;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+10;Für die zuvor beschriebenen Leistungen, die einen Mehr­aufwand gegenüber der VOB darstellen, Wartungs- und Revisions­unterlagen, werden berechnet.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+20;Anlagenschema zur Anbringung in der Technik-Zentrale als Übersichtsplan für die Wartung und Revision der Anlagen.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+30;Wartungs- und Revisionsunterlagen als CAD- und PDF-Dateien auf Datenträger CD-ROM, USB-Stick oder Download-Link.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83
+10;Durchführung von Wartungs- und Inspektionsarbeiten während der Verjährungsfrist für Mängelansprüche an den technischen Anlagen und Einrichtungen gemäß Leistungsverzeichnis, die zur Aufrechterhaltung und Sicherstellung der Betriebsbereitschaft und Sicherheit sowie der vereinbarten Anlagenzustände und;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/24810002-Stand 21.07.2026.X83

@@ -229,3 +229,233 @@
 14;Überwachung des Einbaus von Beton der Überwachungsklasse 2 DIN 1045-3 durch eine anerkannte Überwachungsstelle.;1,0;St;gaeb;leistungsbeschreibungen/gaeb_V33.X83
 1;Stundenlohnarbeiten durch Facharbeiter/-in;100,0;h;gaeb;leistungsbeschreibungen/gaeb_V33.X83
 2;Stundenlohnarbeiten durch Bauhelfer/-in;100,0;h;gaeb;leistungsbeschreibungen/gaeb_V33.X83
+01.1;Baustelleneinrichtung - Einrichten;1,0;psch;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.2;Baustelleneinrichtung - Vorhalten und Betreiben;70,0;Wo;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.3;Baustelleneinrichtung - Räumen;1,0;psch;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.4;Baustelleneinrichtung - Verlängerte Vorhaltung;20,0;Wo;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.5;Anbringen von Meterrissen;6,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.6;Schnurgerüst;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.7;Bauzaunanlage;240,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.8;Vorhandenen bauseitigen Bauzaun versetzen;50,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.9;2-flgl. Toranlage;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.10;Herstellen der Baustromversorgung;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.11;Baustromverteiler;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.12;Vorhaltung Baustromverteiler;80,0;Wo;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.13;Gummischlauchleitung H07 RN-F 4 G 35;120,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.14;Herstellen Bauwasseranschluss;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.15;Vorhaltung Bauwasseranschlüsse;80,0;Wo;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.16;Bautür;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.17;WC-Einzelkabine, mobil;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.18;WC-Einzelkabine, mobil, Vorhaltung;80,0;Wo;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.19;WC-Einzelkabine, mobil, Heizung;40,0;Wo;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.20;Bauschildtafel 3,20 m x 2,25 m liefern und montieren;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.21;Abbau und Abtransport des Bauschildes (gesonderte Anfahrt);1,0;psch;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.22;Vorhalten des Bauschildes über die eigene Bauzeit hinaus;80,0;Wo;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.23;Container für Mauerwerk/Beton;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.24;Bürocontainer;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.25;Vorhaltung Bürocontainer;80,0;Wo;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+01.26;Baumschutz, Brettermantel;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.1;Aufbauen längenorientiert Standgerüst Arbeitsgerüst 3kN/m2 SW09 H1;1025,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.2;Abbauen längenorientiert Standgerüst Arbeitsgerüst 3kN/m2 SW09 H1;1025,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.3;Gebrauchsüberlassung Arbeitsgerüst nach Grundeinsatzzeit;61500,0;m2Wo;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.4;Aufbauen Belagverbreiterung wandseitig B 0,33-0,66m;415,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.5;Abbauen Belagverbreiterung wandseitig B 0,33-0,66m;415,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.6;Vorhaltung Belagverbreiterung nach Grundeinsatzzeit;24900,0;mWo;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.7;Aufbauen Überbrückung Systemgitterträger L bis 5m H bis 4m;4,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.8;Abbauen Überbrückung Systemgitterträger L bis 5m H bis 4m;4,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.9;Vorhaltung Überbrückung nach Grundeinsatzzeit;120,0;StWo;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.10;Arbeitsgerüst umbauen;190,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.11;Aufbauen fahrbares Gerüst Stahlrohr 1,5kN/m2 Abst. 2m 2Lagen H 4m;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.12;Abbauen fahrbares Gerüst Stahlrohr 1,5kN/m2 Abst. 2m 2Lagen H 4m;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.13;Gebrauchsüberlassung fahrbares Gerüst Stahlrohr 1,5kN/m2 Abst. 2m 2Lagen H 4m;40,0;StWo;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.14;Aufbauen fahrbares Gerüst Stahlrohr 1,5kN/m2 Abst. 2m 2Lagen H 6m;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.15;Abbauen fahrbares Gerüst Stahlrohr 1,5kN/m2 Abst. 2m 2Lagen H 6m;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.16;Gebrauchsüberlassung fahrbares Gerüst Stahlrohr 1,5kN/m2 Abst. 2m 2Lagen H 6m;40,0;StWo;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.17;Schutznetz L 10-20m B 10-20m aufbauen Einbau-H 3m;150,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.18;Schutznetz L 10-20m B 10-20m vorhalten Einbau-H 3m;6000,0;m2Wo;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.19;Schutznetz L 10-20m B 10-20m entfernen Einbau-H 3m;150,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.20;Aufbauen Treppenturm Systemgerüst H 12m;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.21;Abbauen Treppenturm Systemgerüst H 12m;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+02.22;Gebrauchsüberlassung Treppenturm nach Grundeinsatzzeit;120,0;m2Wo;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+03.1;Boden Baugrube, höhenmäßig beiarbeiten;1065,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+03.2;Erdaushub der Streifen- und Einzelfundamente/Frostschürze;21,0;m3;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+03.3;Erdaushub der Grundleitungen für Schmutzwasser;38,0;m3;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+03.4;Leitungszone / Sandbett für Grundleitungen Schmutzwasser herstellen;64,0;t;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+03.5;Erdaushub der Grundleitungen für Regenwasser;38,0;m3;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+03.6;Leitungszone / Sandbett für Grundleitungen Regenwasser herstellen (Abrechnung nach Gewicht);52,0;t;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+03.7;Arbeitsraum verfüllen mit Natursteinschotter;100,0;m3;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+03.8;Erdaushub Handschachtung;5,0;m3;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+03.9;Abtransport und Verwertung Erdaushub (unbelastet);106,5;m3;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+03.10;Plattendruckversuche;4,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.1;Vollwandabwasserrohre Polypropylen - Rohr DN 110;190,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.2;Vollwandabwasserrohre Polypropylen - Rohr DN 125;20,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.3;Vollwandabwasserrohre Polypropylen - Rohr DN 160;26,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.4;Vollwandabwasserrohre Polypropylen - Bogen DN 110;60,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.5;Vollwandabwasserrohre Polypropylen - Bogen DN 125;4,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.6;Vollwandabwasserrohre Polypropylen - Bogen DN 160;0,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.7;Vollwandabwasserrohre Polypropylen - Einfachabzweig DN 110;20,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.8;Vollwandabwasserrohre Polypropylen - Einfachabzweig DN 125;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.9;Vollwandabwasserrohre Polypropylen - Einfachabzweig DN 160;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.10;Vollwandabwasserrohre Polypropylen - Reduktion DN 125/110;4,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.11;Vollwandabwasserrohre Polypropylen - Reduktion DN 160/110;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.12;Vollwandabwasserrohre Polypropylen - Überschiebe- oder Doppelmuffe DN 110;45,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.13;Vollwandabwasserrohre Polypropylen - Überschiebe- oder Doppelmuffe DN 125;5,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.14;Vollwandabwasserrohre Polypropylen - Überschiebe- oder Doppelmuffe DN 160;5,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.15;Vollwandabwasserrohre Polypropylen - Muffenstopfen DN 110;15,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.16;Vollwandabwasserrohre Polypropylen - Muffenstopfen DN 125;5,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.17;Vollwandabwasserrohre Polypropylen - Muffenstopfen DN 160;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.18;PVC- Warnband;190,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.19;Foto-Dokumentation Grundleitungen und Schächte;1,0;psch;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.20;Grundleitung zwischenzeitlich Abdichten;1,0;psch;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.21;Zustands und Funktionsprüfung;230,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.22;Kamerabefahrung Grundleitung;230,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.23;Durchspülen Grundleitungen;230,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0401.24;Einmessen der Rohrleitungsverläufe;1,0;psch;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0402.1;PP- Schachtbauwerk DN 400, gerader Durchgang DN 160;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0402.2;PP- Schachtbauwerk DN 400, rechts- mitte- links Durchgang DN 160;4,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0402.3;Steigrohr für PP- Schachtbauwerk DN 400 bis 1500 mm;5,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+05.1;Abdichtung in/unter Wand D 25-40cm W4-E Bitumen-Dachdichtungsbahn PV200DD MSB-Q Bürstenstreich-Gießverf;28,5;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+05.2;Sockelabdichtung (W4-E) mit überputzbarer MDS als Komplettsystem;175,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+05.3;Perimeterdämmung Fundamente/Frostschürzen (XPS, d = 160 mm);216,5;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+05.4;Perimeterdämmung Fundamente/Frostschürzen (XPS, d = 120 mm);20,5;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+05.5;Perimeterdämmung Bodenplatte (XPS, d = 200 mm);837,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.1;Mauerwerk Außenwand Hinterm. WDVS KS XL-PE SFK16 RDK1,8 D 24cm Dünnbettm. 998/240/498 EG;332,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.2;Mauerwerk Innenwand KS XL-PE SFK16 RDK2 D 24cm Dünnbettm. 998/240/498 EG;410,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.3;Mauerwerk Innenwand KS XL-PE SFK16 RDK2 D 11,5cm Dünnbettm. 998/115/498 EG;48,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.4;Öffnung b. Aufmauern herst. B 1127 mm H 1127 mm D 24cm;7,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.5;Öffnung b. Aufmauern herst. B 1127 mm H 2127 mm D 24cm;5,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.6;Öffnung b. Aufmauern herst. B 627 mm H 877 mm D 24cm;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.7;Öffnung b. Aufmauern herst. B 3250 mm H 1130 mm D 24cm;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.8;Öffnung b. Aufmauern herst. B 2130 mm H 1127 mm D 24cm;3,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.9;Öffnung b. Aufmauern herst. B 3252 mm H 1505 mm D 24cm;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.10;Öffnung b. Aufmauern herst. B 3002 mm H 2565 mm D 24cm;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.11;Öffnung b. Aufmauern herst. B 1130 mm H 2567 mm D 24cm;4,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.12;Öffnung b. Aufmauern herst. B 885 mm H 2315 mm D 11,5cm;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.13;Öffnung b. Aufmauern herst. B 885 mm H 2315 mm D 24cm;3,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.14;Öffnung b. Aufmauern herst. B 1010 mm H 2315 mm D 11,5cm;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.15;Öffnung b. Aufmauern herst. B 1010 mm H 2315 mm D 24cm;12,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.16;Öffnung b. Aufmauern herst. B 1260 mm H 2315 mm D 24cm;3,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.17;Öffnung b. Aufmauern herst. B 2010 mm H 2315 mm D 24cm;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.18;Öffnung b. Aufmauern herst. B 1377 mm H 2135 mm D 24cm;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.19;Überdeckung von Öffnungen in KS-Mauerwerk;12,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.20;Überdeckung von Öffnungen in KS-Mauerwerk;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.21;Überdeckung von Öffnungen in KS-Mauerwerk;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.22;Überdeckung von Öffnungen in KS-Mauerwerk;3,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.23;Überdeckung von Öffnungen in KS-Mauerwerk;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.24;Überdeckung von Öffnungen in KS-Mauerwerk;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.25;Überdeckung von Öffnungen in KS-Mauerwerk;4,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.26;Überdeckung von Öffnungen in KS-Mauerwerk;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.27;Überdeckung von Öffnungen in KS-Mauerwerk;3,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.28;Überdeckung von Öffnungen in KS-Mauerwerk;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.29;Überdeckung von Öffnungen in KS-Mauerwerk;12,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.30;Überdeckung von Öffnungen in KS-Mauerwerk;3,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.31;Überdeckung von Öffnungen in KS-Mauerwerk;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.32;Überdeckung von Öffnungen in KS-Mauerwerk;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.33;Abgleichen Mauerwerk Leibungsabschlüsse und freie Wandenden;450,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.34;Ausgleichs-Kimmschicht Wandfuß Mauersteine KS H 15-17,5cm D 24cm (498/240/150) SFK16;240,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.35;Ausgleichs-Kimmschicht Wandfuß Mauersteine KS H 15-17,5cm D 11,5cm (498/115/150) SFK16;14,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.36;WD im Mauerwerk herstellen und schließen, über 300 - 400 cm2;10,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.37;Wie vor, jedoch über 500 bis 600 cm2;10,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.38;Wie vor, jedoch über 800 bis 1000 cm2;5,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.39;WS im Mauerwerk herstellen und schließen;5,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0601.40;Rohrdurchführungen;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.1;Mauerwerk Außenwand Hinterm. WDVS KS XL-PE SFK16 RDK1,8 D 24cm Dünnbettm. 998/240/498 1.OG;229,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.2;Mauerwerk Innenwand KS XL-PE SFK16 RDK2 D 24cm Dünnbettm. 998/240/498 1.OG;307,5;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.3;Mauerwerk Innenwand KS XL-PE SFK16 RDK2 D 11,5cm Dünnbettm. 998/115/498 1.OG;25,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.4;Öffnung b. Aufmauern herst. B 1127 mm H 1505 mm D 24cm;5,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.5;Öffnung b. Aufmauern herst. B 3252 mm H 1505 mm D 24cm;8,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.6;Öffnung b. Aufmauern herst. B 627 mm H 880 mm D 24cm;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.7;Öffnung b. Aufmauern herst. B 3260 mm H 763 mm D 24cm;6,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.8;Öffnung b. Aufmauern herst. B 885 mm H 2315 mm D 11,5cm;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.9;Öffnung b. Aufmauern herst. B 885 mm H 2315 mm D 24cm;3,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.10;Öffnung b. Aufmauern herst. B 1010 mm H 2315 mm D 24cm;5,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.11;Öffnung b. Aufmauern herst. B 2010 mm H 2315 mm D 24cm;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.12;Überdeckung von Öffnungen in KS-Mauerwerk;5,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.13;Überdeckung von Öffnungen in KS-Mauerwerk;8,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.14;Überdeckung von Öffnungen in KS-Mauerwerk;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.15;Überdeckung von Öffnungen in KS-Mauerwerk;6,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.16;Überdeckung von Öffnungen in KS-Mauerwerk;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.17;Überdeckung von Öffnungen in KS-Mauerwerk;3,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.18;Überdeckung von Öffnungen in KS-Mauerwerk;5,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.19;Überdeckung von Öffnungen in KS-Mauerwerk;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.20;Ausgleichs-Kimmschicht Wandfuß Mauersteine KS H 10-12,5cm D 24cm (498/240/100) SFK16;41,5;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.21;Ausgleichs-Kimmschicht Wandfuß Mauersteine KS H 7,5-10cm D 24cm (498/240/70) SFK16;107,5;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.22;Ausgleichs-Kimmschicht Wandfuß Mauersteine KS H 7,5-10cm D 11,5cm (498/115/70) SFK16;7,5;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.23;WD für Lüftung im Mauerwerk herstellen und schließen, H.: 2,00m B.: 1,50m;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.24;WD im Mauerwerk herstellen und schließen, über 300 - 400 cm2;10,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.25;Wie vor, jedoch über 500 bis 600 cm2;10,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.26;Wie vor, jedoch über 800 bis 1000 cm2;5,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.27;WS im Mauerwerk herstellen und schließen;5,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.28;Rohrdurchführungen;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0602.29;Zulage Giebelbereich;55,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0701.1;Schalung der Gründungsbauteile;150,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0701.2;Ortbeton Sauberkeitsschicht Bodenplatte unbewehrt C8/10 D: 10cm;820,5;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0701.3;Sauberkeitsschicht unter Fundamenten/Frostschürze D: 10 cm;120,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0701.4;Ortbeton Streifenfundament/Frostschürze Stahlbeton C25/30 XF1 XC2 WU B 40-50cm T 30-40cm;22,0;m3;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0701.5;Ortbeton Bodenpl. Stahlbeton C25/30 XF1 XC2 WU D 35cm;920,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0701.6;Trennlage PE-Folie D: 0,2mm 2lagig Sauberkeitsschicht Beton;820,5;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0701.7;Ortbeton Bodenpl. Technikschacht Stahlbeton C25/30 XF1 XC2 WU D 20cm;2,3;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0701.8;Arbeitsfugenbänder Technikschacht;6,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0701.9;Ortbeton Schachtwand Technikschacht Stahlbeton C25/30 XF1 XC2 WU D 15-25cm;1,0;m3;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.1;Schalung Deckenpl. Randschalung H: 15-25cm;305,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.2;Schalung Deckenpl. GF-Schalungspl. H 0 m bis 3,75 m;750,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.3;Schalung Stütze innen rechteckig 500-750cm2 SB2 Trägerschalung Schalungspl.;190,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.4;Schalung Unterzug GF-Schalungspl. H 0 m bis 3,5 m;90,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.5;Schalung für Fenster- und Türöffnungen;3,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.6;Ortbeton Deckenpl. waager. Stahlbeton C20/25 XC1 Decken-D 20cm;115,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.7;Ortbeton Deckenpl. waager. Stahlbeton C20/25 XC1 Decken-D 25cm;650,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.8;Ortbeton Innenwand Stahlbeton C 20/25 D 24cm;20,0;m²;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.9;Ortbeton Stütze innen Stahlbeton C25/30 XC1 b/d = 24/24cm;13,0;m3;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.10;Ortbeton Unterzüge, Balken, Ringanker, Überzüge etc. C25/30;9,0;m3;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.11;Öffnung beim Betonieren herstellen;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.12;Aussparung herstellen, Stahlbeton 200-400 cm2, T 15-20 cm;10,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.13;Aussparung herstellen, Stahlbeton 400-800 cm2, T 15-20 cm;5,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.14;Aussparung herstellen, Stahlbeton 800-1400 cm2, T 15-20 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.15;Deckendurchbrüche bis 400 cm² schliessen;10,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.16;Deckendurchbrüche bis 800 cm² schliessen;5,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.17;Deckendurchbrüche bis 1400 cm² schliessen;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.18;Aussparung in Wand herstellen, Stahlbeton 200-400 cm2, T 20-25 cm;5,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.19;Aussparung in Wand herstellen, Stahlbeton 400-800 cm2, T 20-25 cm;5,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.20;Aussparung in Wand herstellen, Stahlbeton 800-1400 cm2, T 20-25 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.21;Wanddurchbrüche bis 400 cm² schliessen;5,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.22;Wanddurchbrüche bis 800 cm² schliessen;5,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.23;Wanddurchbrüche bis 1400 cm² schliessen;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0702.24;Zulage Mörteltaschen Kalksandstein-Planblöcke;335,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0703.1;Schalung Stütze innen rechteckig 500-750cm2 SB2 Trägerschalung GF-Schalungspl.;151,5;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0703.2;Schalung Unterzug GF-Schalungspl. H 0 m bis 4 m;385,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0703.3;Ortbeton Stütze innen Stahlbeton C25/30 XC1 b/d = 24/24cm;6,5;m3;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0703.4;Ortbeton Unterzüge, Balken, Ringanker, Überzüge etc. C25/30;40,0;m3;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0703.5;Aussparung herstellen, Stahlbeton 200-400 cm2, T 15-20 cm;10,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0703.6;Aussparung herstellen, Stahlbeton 400-800 cm2, T 15-20 cm;5,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0703.7;Deckendurchbrüche bis 400 cm² schliessen;10,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0703.8;Deckendurchbrüche bis 800 cm² schliessen;5,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0703.9;Aussparung in Wand herstellen, Stahlbeton 200-400 cm2, T 20-25 cm;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0703.10;Aussparung in Wand herstellen, Stahlbeton 400-800 cm2, T 20-25 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0703.11;Wanddurchbrüche bis 400 cm² schliessen;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0703.12;Wanddurchbrüche bis 800 cm² schliessen;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0703.13;Zulage Mörteltaschen Kalksandstein-Planblöcke;255,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0703.14;Zulage Giebelbereich;55,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0703.15;Konsolen Dach;18,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0705.1;Treppenlauf Fertigteil Platten-D 20cm Lauf-B 130cm Steigungen 19 St H 18,42 cm T 26 cm C25/30 XC1 SB2-FT;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0705.2;Treppenpodestplatte Fertigteil L 1,25 m D 250mm B 130cm C25/30 XC1 SB2-FT;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0705.3;Schutzbekl.-belag UK Steigungen 19 St T 26 cm Hartfaserpl. Vlies D 3-6mm herstellen räumen;12,0;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0705.4;Treppenlauf Fertigteil Platten-D 20cm Lauf-B 130cm Steigungen 19 St H 18,42 cm T 26 cm C25/30 XC1 SB2-FT;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0705.5;Treppenpodestplatte Fertigteil L 2,66 m D 250mm B 130cm C25/30 XC1 SB2-FT;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0705.6;Schutzbekl.-belag UK Steigungen 19 St T 26 cm Hartfaserpl. Vlies D 3-6mm herstellen räumen;14,5;m2;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0705.7;Fugen im Übergang;9,5;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0706.1;Betonstabstahl B500A alle Durchmesser;48,75;to;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0706.2;Betonstahlmatte B500A Lagermatte;32,5;to;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0706.3;Trittschalldämmelem. Bodenpl. Treppenlauf PE-Schaum 26dB;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0706.4;Trittschalldämmelem. Treppenlauf-hauswand PE-Schaum 26dB Platten-D 18cm;8,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0706.5;Trittschalldämmelem. Treppenpodest-lauf PE-Schaum 26dB Lauf-B 130cm Platten-D;8,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0706.6;Gleitlager zwischen Unterzügen und Mauerwerkswand;100,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0706.7;Wandanschlüsse an Betonbauteile (Beton an Mauerwerk);505,0;m;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0706.8;Halfen Dübelleiste Typ HDB - 14;16,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0706.9;Halfen Dübelleiste Typ HDB - 10;32,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0706.10;Halfenschienen, HTA-CE, verzinkt;8,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0706.11;Schöck - Tronsolen B;2,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0706.12;Schöck - Tronsolen F;5,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0706.13;Schöck - Tronsolen Typ Z;4,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+0706.14;Überwachung Betoneinbau Überwachungskl.2;1,0;St;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+08.1;Facharbeiter;100,0;h;gaeb-flat;leistungsbeschreibungen/gaeb.D83
+08.2;Bauhelfer/-in sämtliche Kosten/Zuschläge;100,0;h;gaeb-flat;leistungsbeschreibungen/gaeb.D83

@@ -1,4 +1,274 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1.1.10;Einrichten der Baustelleneinrichtung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+1.1.20;Vorhalten der Baustelleneinrichtung;37,0;Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+1.1.30;Miettoilette;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+1.1.40;Räumen der Baustelleneinrichtung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.1;Stationsgebäude Energiezentrale Armierungserdung Erdungsdurchführung Baustromdurchführung Doppeldichtpackungen HSI 150 Beton-Aussparung < 1m² Oberflächenbeschichtung Wandanstrich, innen Wandanstrich, außen Regenfallrohr Aluminiumtür MS-Raum Aluminiumtür Lüftungselement Druckentlastungsklappe Alumini;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.2;Erstellen des kompletten inneren und äußeren Potenzialausgleiches;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.3;Bandstahl V4A;34,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.4;Brandschottung WD 500 x 250mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.5;Systemdeckel HSI150 D1x80;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.6;Systemdeckel HSI150 D3x58;13,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.7;Systemdeckel HSI150 D7x33;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.8;Systemdeckel für gewellte Kabelschutzrohre;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.9;Systemdeckel für glatte Kabelschutzrohre;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.10;Verschlussdeckel HSI150;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.11;Gelenkstirnlochschlüssel;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.12;Installationsverteiler Energiezentrale;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.13;Installation/ Beleuchtung MS-Raum;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.14;Installation/ Beleuchtung NS-Raum;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.15;Installation Traforaum 1+2;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.16;CEE-Steckdose 5-polig 230/400VAC 16A AP-Ausführung IP44;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.17;Steckdosenkombination 16 A;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.18;Handnotleuchte;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.19;Rettungszeichenleuchte als Einzelbatterieleuchte;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.20;Schließblechkontakte (Verschlussmelder);4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+2.1.21;Passiv. Infrarotbewegungsmelder VDS;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+3.1.1;Runddraht als Ableitung (AIMgSI 8mm);40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+3.1.2;Erdleitung 10 mm V4A;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+3.1.3;Dachleitungshalter mit einfacher Leitungshalterung;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+3.1.4;Leitungshalter für Ableitungen;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+3.1.5;Auffangstange 16 mm, Länge 1000 mm;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+3.1.6;Betonsockel 20 kg;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+3.1.7;Fangstangenklemme;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+3.1.8;Oberleitungsverbinder;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+3.1.9;Blechanschlußklemmen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+3.1.10;KS-Verbinder;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+3.1.11;Anschlussklemme mit Gewindebolzen aus Edelstahl;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+3.1.12;Überbrückungsband flex Aluminium;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+3.1.13;Nummernschilder;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+3.1.14;Trennstelle;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+3.1.15;Trennklemme V4A;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+3.1.16;Hinweisschild;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+3.1.17;Anschlussfahnen 10mm V4A 3,0m;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+3.1.18;Anbindung an den Ringerder;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+3.1.19;Messung + Überpr. der Blitzschutzanlage EZ & NEA;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+3.1.20;Abnahme der erstellten Blitzschutzanlage Sachverständiger;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.1;Ringkabelfeld 1/2;2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.2;Übergabefeld EVU;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.3;Übergabemessfeld EVU;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.4;Hochführfeld;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.5;Abgangsfeld Trafo 1/2;2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.6;Multifunktionaler Überstromzeitschutz;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.7;Kabelwinkelstecker;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.8;Niederspannungsschrank Trafo od. Ringfeld;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.9;Niederspannungsschrank Messfeld;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.10;Zählerschrank;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.11;Messleitung für den Spannungspfad;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.12;Messleitung für den Strompfad;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.13;Kabel-T-Stecker;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.14;Druckberechnung nach 3D-Modell;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.15;USV Steuerspanungsversorgung DC 24 V, 40 Ah;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.16;Grund- und Ausgleichsrahmen;3,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.17;Wartungsfreies Druckabsorbersystem;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.18;Druckentlastungsklappe;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.19;Schaltanlagenzubehör;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.20;Inbetriebnahme Mittelspannung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.21;Teilentladungsprüfung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.22;Wechselspannungsprüfung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.23;EMV Messung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.24;Test Mitnahmeschaltung MS-NS;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.25;Hinweisschilder und Zubehör;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.26;Mittelspannungskabelsytem T1/T2;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.27;Durchführung einer Kabelprüfung 10kV 3x50mm²;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.28;Mittelspannungsmuffe;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.29;Mittelspannungsendverschlüsse;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.30;Verbindungsleitungen Trafo zu Mittelspannung;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+4.1.31;Service Mittelspannungsschaltanlagen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+5.1.1;Transformator in Giessharzausführung 800 kVA, 20 kV;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+5.1.2;Trafo-Anschlusskonstruktion;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+5.1.3;Verbindungsleitungen für TS;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+5.1.4;Mitnahme- und Verriegelungsschaltung;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+5.1.5;Iso-Abzweigkasten;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+5.1.6;Kabelwinkelstecker;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+5.1.7;Mittelspannungsendverschlüsse;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+5.1.8;Stahlstützen zur Montage auf Rohboden;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+5.1.9;Profileisen-Anschlagwinkel;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+5.1.10;Erdungsfestpunkt in der Trafozellen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+5.1.11;Ausbau Erdungsanlage Trafozelle;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+5.1.12;Körperschallisolator;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+5.1.13;Trafolager;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+5.1.14;Beschilderung Transformatorenzelle;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+5.1.15;Schutzkette aus Kunststoff für Trafodoppeltür;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+6.1.10;Horizontale Schiene ohne Abgang;6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+6.1.20;Vertikalverlegung;1,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+6.1.30;Verteilereinspeisung AC;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+6.1.40;Stromschienenanbindung Gießharztransformator;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+6.1.50;Richtungsänderungen 90°;3,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+6.1.60;Brandschutz EI120;2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+6.1.70;Dokumentation;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+6.2.10;Horizontale Schiene ohne Abgang;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+6.2.20;Vertikalverlegung;1,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+6.2.30;Verteilereinspeisung AC;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+6.2.40;Stromschienenanbindung Gießharztransformator;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+6.2.50;Richtungsänderungen 90°;3,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+6.2.60;Brandschutz EI120;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+6.2.70;Dokumentation;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.1;Einspeisefeld 800mm - für 3-poligen offenen Leistungsschalter - Einschub;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.2;Mehrpreis Überspannungsschutz;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.3;Offener Leistungsschalter, Einschub, 2.500 A, 55kA;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.4;Ausführung Leistungsschalter 4-polig;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.5;Mehrpreis Motorantrieb für vg.Leistungsschalter;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.6;Einschaltspule;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.7;Arbeitsstromauslöser;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.8;Unterspannungsauslöser verzögert;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.9;Ausgelöstmeldeschalter 1 W;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.10;Hilfsschalter 1 W;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.11;Hilfschalterblock 2S+2OE;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.12;Spannungs-Überwachungsrelais;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.13;Einspeisefeld 600mm - Trafo für 3-poligen offenen Leistungsschalter - Einschub;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.14;Offener Leistungsschalter, Einschub, 1600 A, 55kA;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.15;Ausführung Leistungsschalter 4-polig;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.16;Mehrpreis Motorantrieb für vg.Leistungsschalter;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.17;Einschaltspule;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.18;Arbeitsstromauslöser;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.19;Ausgelöstmeldeschalter 1 W;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.20;Hilfschalterblock 2S+2OE;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.21;Spannungs-Überwachungsrelais;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.22;Zentraler Erdungspunkt 400mm - (ZEP - 2.500 A);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.23;Abgangsfeld in Universaleinbautechnik, Festeinbau-/ Stecktechnik;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.24;Mehrpreis Überspannungsschutz;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.25;Kompaktleistungsschalter, 630 A, 55 kA;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.26;Kompaktleistungsschalter, 400 A, 55 kA;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.27;Kompaktleistungsschalter, 250 A, 55 kA;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.28;Kompaktleistungsschalter, 160 A, 55 kA;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.29;Kompaktleistungsschalter, 63 A, 55 kA;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.30;Kompaktleistungsschalter, 32 A, 55 kA;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.31;Kompaktleistungsschalter, 25 A, 55 kA;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.32;Messung für Kompaktleistungsschalter;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.33;Mehrpreis Motorantrieb für vg.Leistungsschalter;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.34;Einschaltspule;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.35;Arbeitsstromauslöser;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.36;Ausgelöstmeldeschalter 1 W;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.37;Hilfschalterblock 2S+2OE;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.38;Abgangsfeld 1200mm - für waagerechte Lasttrennschaltleisten;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.39;NH 00 Lasttrennschalter, Festeinbau mit NH-Sicherung, 160 A, 3P, Handantrieb;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.40;NH 1 Lasttrennschalter, Festeinbau mit NH-Sicherung, 250 A, 3P, Handantrieb;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.41;NH 2 Lasttrennschalter, Festeinbau mit NH-Sicherung, 400 A, 3P, Handantrieb;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.42;Messung für Sicherungs-Lasttrennleisten;13,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.43;Mehrpreis Überspannungsschutz;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.44;Abgangsfeldfeld 600mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.45;Kompaktleistungsschalter, 250 A, 55 kA;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.46;Messung für Kompaktleistungsschalter;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.47;Hub- und Transporteinheit;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.48;Kennzeichnungsschilder;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.49;Steuerspannungsverteilung Feld;1,2;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.50;Motorschutzschalter 3-phasig;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.51;Zweiphasentransformator, 2000 VA;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.52;Spannungswächter für Nennspannung;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.53;Leitungsschutzschalter, 1-pol., Steuerautomat;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.54;Steuerspannungsverteilung;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.55;Zentrale Klemmleiste 230 V;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.56;Motorschutzschalter  3-phasig;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.57;Überspannungsableiter, 24V DC, 20 A;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.58;Unterbrechungsfreie Gleichspannungsvers. 20 A;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.59;Redundanzmodul 24 V DC 20 A;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.60;Leitungsschutzschalter, 1-pol., Steuerautomat;24,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.61;Hilfsschalterblock für Leitungsschutzschalter;24,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.62;Zentrale Klemmleiste 24 VDC;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.63;Schaltschränke SPS/Erweiterung;0,6;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.64;Eingangsabsicherung S7 - 1500;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.65;Modulares Automatisierungssystem S7-1500;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.66;Modulares Automatisierungssystem S7-1500;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.67;Sicherungsautomaten Mittelspannung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.68;Sicherungsautomaten Niederspannung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.69;Verkabelung Profinet;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.70;"Kommunikation ""NSHV Energiezentrale""";1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.71;Ethernet/IP Switch;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.72;Industrial Ethernet Switch;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.73;Herstellung der notwendigen Spannungsversorgung;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.74;Mehr o. Minderpreis v. Ein-Ausgangswerte;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.75;Kommunikationsprozessor Ethernet;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.76;Pflichtenheft für Hardware / Software;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.77;Vollständige Anwender-Software;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.78;Dokumentation SPS  - Systeme Energiezentrale;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.79;Inbetriebnahme/Datenpunkttest SPS-Systeme Energiezentrale;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.80;"Inbetriebnahme ""NSHV Energiezentrale""";1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.81;Einbau-PC mit 19 Zoll-Monitor;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.82;Softwareapplikation für Betriebsdiagnose, Bedienung und Parametrierung der Anlage;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.1.83;Softwareprogrammierung - Anbindung an übergeordnete Leittechnik;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.2.1;Taster, Lampentest;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.2.2;Diodenbaustein für Lampentestfunktion;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.2.3;Schwenktaster, Quittierung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.2.4;Umschalter mit Nullstellung, 2-pol.;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.2.5;Leuchtdrucktaster, 1-pol.;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.2.6;Meldeleuchten (24 V, DC),  mit LED;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.2.7;Koppelrelais, 24V,DC, 2W;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.2.8;Koppelrelais, 24V,DC, 1W;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.2.9;Koppelrelais 5A 230 V Betätigungsspannung 230 VAC 2W;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.3.10;Stationszubehör Niederspannungsschaltanlage;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+7.3.20;Übersichtsschaltplan DIN 40719;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+8.1.1;Anschluss 4x95/50 mm²;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+8.1.2;Kunstoffkabel 0,6/1kV, NYCWY 4x240/120 mm²;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+8.1.3;Anschluss 4x240/120 mm²;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+8.1.4;Gummischlauchleitung NSSHÖU-J 5X120 verlegen;80,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+8.1.5;Anschluss NSSHÖU-O 5x150;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+8.1.6;Anschluss 4x185SM95 mm²;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+8.1.7;Anschluss 4 x 185 / 95 mm²;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+8.1.8;Anschluss 4x95/50 mm²;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+8.1.9;Anschluss 4x95/50 mm²;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+8.1.10;Anschluss 4x120/70 mm²;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+8.1.11;Anschluss 5x10 mm²;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+8.1.12;Kunstoffkabel 0,6/1kV, NYY-J 5x2,5 mm²;70,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+8.1.13;Anschluss 5x2,5 mm²;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+8.2.1;Kabelrinne V4A, H 60mm B 300mm;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+8.2.2;Trennsteg für Kabelrinne;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+8.2.3;Bogen 90Grad Stahl V4A, H 60mm B 300mm;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+8.2.4;Ausleger Stahl V4A, bis 3,5kN L 300mm an Stielen;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+8.2.5;Ausleger Stahl V4A, bis 3,5kN L 300mm Wandbefestigung;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+8.2.6;Kabelleiter Stahl V4A H 60mm B 500mm;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+9.1.10;Anschluss 5x10 mm²;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+9.2.1;Anschluss 4x120/70 mm²;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+9.3.10;Anschluss 5x16 mm²;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+9.4.10;Anschluss  4x35/16 mm²;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+9.5.1;Anschluss 4x120/70 mm²;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+9.6.10;Anschluss 4xx50/25 mm²;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.1.10;Optisch-thermischer Rauchmelder;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.1.20;Meldersockel;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.1.30;Meldersockel m.Ringkontakt Zwischenboden;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.1.40;Melderschild für automatische Melder;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.1.50;Meldernummerierungsschildhalter 10er;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.1.60;Handfeuermelder rot, IP 52;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.1.70;Melderschild für nichtautomat. Melder;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.1.80;Ersatzglasscheibe für GehäuseHFM;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.1.90;Metallschlüssel für Handfeuermelder, 5er;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.1.100;Einlegeblatt Handfeuermelder 10x9 Bogen;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.2.10;Akust. Signalgeber weiß, flach, 99 dB;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.2.20;Ext. Energieversorg. 1,6 A, 2,3 Ah MLAR;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.2.30;Aufkleber Ext. Energievers. BE-PSE01/02;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.3.1;Kunstoffkabel 0,6/1kV, NYM-J 3x2,5 mm²;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.3.2;Inst.kabel J-Y(St)Y Brand 2x2x0,8;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.3.3;Installationskabel symmetrisch J-Y(St)Y 6x2x0,8 Bd;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.3.4;Kunststoffaderltg. H07V-U 1x6;75,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.3.5;Brandmeldekabel JE-H(ST)H 2x2x0,8 E30 rot;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.3.6;Metallrohr M 32 verzinkt, E30;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.4.10;Inbetriebsetzung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.4.20;Betreiberabnahme;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.4.30;Sachverständigenabnahme;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.4.40;Betreiberschulung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+10.4.50;Feuerwehrabnahme;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+11.1.10;Werkplanung Gebäude Energiezentrale;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+11.1.20;Erdarbeiten und Fundamente Zusatzleistungen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+11.1.30;Bestandsunterlagen Gebäude;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+11.2.10;Werkplanung Mittelspannung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+11.2.20;Netzberechnung Mittelspannung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+11.2.30;Bestandsunterlagen Mittelspannung / Trafo;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+11.3.10;Werkplanung NSHV;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+11.3.20;Netzberechnung Niederspannung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+11.3.30;"Pflichtenheft für ""Software""";1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+11.3.40;Bestandsunterlagen SPS Energiezentrale;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+11.3.50;Bestandsunterlagen NSHV;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+11.4.10;Werkplanung Blitzschutz;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+11.4.20;Bestandsunterlagen Blitzschutz;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+12.1.10;Projektabwicklung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+12.1.20;Inbetriebnahme;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+12.2.10;TÜV-Abnahme Gesamtanlage Energiezentrale;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+12.3.10;Jahres-Wartungsvertrag;4,0;Jr;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+13.1.1;Ingenieur / Technikerstunden;16,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+13.1.2;Meisterstunden;8,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+13.1.3;Obermonteurstunden;8,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+13.1.4;Monteurstunden;24,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
+13.1.5;Montagewagen;1000,0;km;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.D83
 10;Baustelleneinrichtung für die Gesamtleistungen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.X83
 20;Vorhalten der gesamten Baustelleneinrichtung der vorstehenden Positionen;37,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.X83
 30;Bereitstellen und Vorhalten einer Miettoilette für die Dauer der Abwicklung des gesamten;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/C01 Leistungsverzeichnis LV20.X83

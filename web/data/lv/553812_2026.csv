@@ -1,0 +1,439 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Baugelände abräumen;180,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+2;- Abheben von 2 Teilen der Beton-Pergola (auf Dornen;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+3;Vorh. Natursteinmauer h ca. 0,50m rückbauen,;30,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+4;Vorhandene Borde aufnehmen, seitlich lagern und wieder setzen;98,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+5;Gehwegplatten in Gehwegen aufnehmen, seitlich lagern u. verlegen;100,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+6;Vorh. Kiesel als Traufkante aufnehmen, lagern u. verlegen;7,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+7;Betonrechteckpflaster aufnehmen, seitlich lagern u. verlegen;35,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+8;Bewuchs ausgraben und wieder einpflanzen;3,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+9;Oberboden abtragen, laden und abfahren;70,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+10;Oberboden, gesiebt, liefern und einbauen;70,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+11;Rasenansaat liefern und fachgerecht herstellen;230,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+12;Hinweisschild auf Metallrohr aufnehmen und wieder setzen;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+1;Frostschutzschicht als 1. Tragschicht;34,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+2;Schottertragschicht aus Naturschotter;5,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+1;Winkelstützwand herstellen H 0,80m*B 0,49m*L 0,50m;25,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+2;Bruchsteinmauerwerk aus Naturwerkstein einschl. Verfugung.;16,0;m²;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+3;Pergola-Pfeiler wieder aufmauern mit vorhandenen;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+1;SW-Betonschacht S 18, DN 1000 Tiefe bis 3,30 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+2;SW-Betonschacht S 17, DN 1000 Tiefe bis 2,50 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+3;SW-Betonschacht S 16, DN 1000 Tiefe bis 2,40 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+4;SW-Betonschacht S 14, S 15, DN 1000 Tiefe bis 2,30 m;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+5;SW-Betonschacht S 13, DN 1000 Tiefe bis 2,30 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+6;SW-Betonschacht S 12, DN 1000 Tiefe bis 2,20 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+7;SW-Betonschacht S 11, DN 1000 Tiefe bis 2,00 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+8;SW-Betonschacht S 10, DN 1000 Tiefe bis 1,70 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+9;SW-Betonschacht S 9, DN 1000 Tiefe bis 2,00 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+10;SW-Betonschacht S 8, DN 1000 Tiefe bis 1,60 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+11;SW-Betonschacht S 7, DN 1000 Tiefe bis 1,60 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+12;SW-Betonschacht S 6, DN 1000 Tiefe bis 1,80 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+13;SW-Betonschacht S 5, DN 1000 Tiefe bis 1,80 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+14;SW-Betonschacht S 4, DN 1000 Tiefe bis 1,80 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+15;SW-Betonschacht S 3, DN 1000 Tiefe bis 2,00 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+16;SW-Betonschacht S 2, DN 1000 Tiefe bis 2,20 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+17;SW-Betonschacht S 1, DN 1000 Tiefe bis 2,00 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+18;Seitenzulauf DN 100;10,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+19;Schmutzwasserumleitung;4,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+20;Vorh. Rohre bis DN 300 schneiden (Stz, PP, B, Stb), Kreisprofil;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+21;Vorh. Leitung aufnehmen und entsorgen, DN 150 bis DN 250;2,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+22;PP-MD Kanalrohr DN 100, liefern und verlegen (KG 2000);30,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+23;PP-MD Kanalrohr DN 150, liefern und verlegen (KG 2000);172,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+24;PP-MD Kanalrohr DN 200, liefern und verlegen (KG 2000);1,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+25;PP-MD Passstück DN 100, als Zulage;10,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+26;PP-MD Passstück DN 150, als Zulage;18,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+27;PP-MD Passstück DN 200, als Zulage;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+28;PP-Bögen DN 100, 15°- 45°, als Zulage;22,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+29;Äußeren Absturz DN 150, Absturzhöhe bis 1,20 m, Schacht-Nr. S 6;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+30;Äußeren Absturz DN 150, Absturzhöhe bis 0,60 m, Schacht-Nr. S 18;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+31;Äußeren Absturz DN 100, Absturzhöhe bis 1,15 m,;4,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+32;Äußeren Absturz DN 100, Absturzhöhe bis 0,80 m,;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+33;Haltung bis DN 200 verdämmen;8,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+34;Füll- und Entlüftungsrohre;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+35;Funke VPC-Rohrkupplung 200 G liefern und einbauen,;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+36;Verschlußteller DN 100;10,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+37;Vorh. Straßenablauf abbrechen, laden und abfahren;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+38;Straßenablauf 50 x 50 Pultform komplett liefern und einbauen;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+39;Dichtheitsprüfung mit Wasser.;174,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+40;Dichtheitsprüfung;20,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+41;Schachtinspektion nach Sanierung, 3D;20,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+42;Kanalinspektion, nach Sanierung, Haltungen,;174,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+43;Kanalinspektion nach der Sanierung, Leitungen, Rohre DN 100 bis DN 150, mittels Satellitenkamera;30,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+44;Leitungskataster / Kanalbestandsplan für Hauptkanal herstellen;18,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+45;Leitungskataster / Kanalbestandsplan für Anschlusskanal herstellen;10,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+46;Leitungskataster / Kanalbestandsplan für Schacht herstellen;20,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+47;Suchgraben herstellen, ErsatzbaustoffV, T bis 1,50m, Zulage;23,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+48;Querende Versorgungsanlagen bis 50 cm Breite sichern;10,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+49;Versorgungsleitung sichern, Längsrichtung, Leitung bis DN 150;30,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+50;Offene Wasserhaltung für Kanalbaugruben;225,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+51;Kanalbaugrube herstellen, Tiefe bis 2,00 m;180,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+52;Kanalbaugrube herstellen, Tiefe bis 3,00 m;158,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+53;Handschachtung, als Zulage zum Leitungsgraben;48,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+54;Stahlplattenverbau für Kanalbaugruben, Tiefe bis 2,00m;256,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+55;Stahlplattenverbau für Kanalbaugruben, Tiefe bis 3,00m;318,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+56;Bettungskies für die Leitungszone einbauen;100,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+57;Füllboden oberhalb der Leitungszone einbauen;141,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+1;Baustelleneinrichtung für Rohrvortrieb einrichten, vorhalten und räumen;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+2;Startgrube L = 5,00 m für die Durchpressung eines Stahlschutzrohres;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+3;Zielgrube L = 3,00 m für die Durchpressung eines Stahlschutzrohres;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+4;Stahlschutzrohr für die Durchpressung PP 150 vorpressen;6,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+5;Lieferung der Vortriebsrohre aus Stahl mit glattem Enden für Stumpfschweißverbindung;6,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+6;Schneidschuh in geeigneter Konstruktion am Rohranfang herstellen;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+7;Rohrvortriebshindernisse beim Auffahren des Rohrquerschnittes vom vorgetriebenen Rohr aus beseitigen;4,0;h;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+8;Produktenrohr mit den erforderlichen Gleitkufenringen höhengerecht in das Stahlrohr einziehen;6,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+9;Befüll- und Entlüftungsrohre DN 150 mm liefern und in das Stahlrohr einbauen;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+10;Ringraumverfüllung (Füma) liefern und zwischen Stahlschutzrohr und;6,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+11;Abschlußmanschette;4,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+1;Baustelleneinrichtung für die Flüssigbodenherstellung;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+2;Einsatz eines Saugbaggers;5,0;d;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+3;Flüssigboden liefern und einbauen;35,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+4;Rezepturerstellung mit Nachweis,;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+5;Eigenüberwachung Flüssigbodenverfahren nach RAL GZ 507;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+1;Wurzelvorhang T 100cm B 50cm Boden planieren;55,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+2;Kroneneinkürzung gem. ZTV Baumpflege, Punkt 0.2.3.1;13,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+3;Kronenpflege gem. ZTV Baumpflege, Punkt 0.2.2.2 Nach Angabe der Bauleitung, Baum-Art: 15xPlatane, 5xAhorn/Birke in Abstimmung mit dem AG;15,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+1;Baustelle einrichten;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+2;Baustelle räumen;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+3;Baustellensicherung/ Bauzaun;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+1;Anmelden der Arbeiten in Kampfmittelverdachtsflächen;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+2;Erstellen der Dokumentationsunterlagen;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+3;Kampfmitteltechnische Baubegleitung inkl. Mobilisation;10,0;d;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+4;Bagger bis 18,0 to mit Schutzeinrichtung gem. BGI 833;10,0;d;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+5;Zulage Leistungsminderung wg. Kampfmittelbegleitung 03.02;230,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+6;Zulage Leistungsminderung wg. Kampfmittelbegleitung 03.02;180,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+7;Zulage Leistungsminderung wg. Kampfmittelbegleitung03.08;158,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+8;Stillstandszeiten für Personal und Gerät, bei Umständen, die der Auftragnehmer nicht zu verantworten hat.;1,0;d;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+1;Bodenanalytik gem. ErsatzbaustoffV durchführen;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+2;Gelagerten Boden aufnehmen und einbauen;50,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+3;Unbelasteten Boden BM-0 aufnehmen und fachgerecht verwerten;288,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+4;Zulage: Boden BM-F1 gem. ErsatzbaustoffV fachgerecht verwerten;208,0;t;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+5;Zulage: Boden BM-F2 gem. ErsatzbaustoffV fachgerecht verwerten;52,0;t;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+6;Zulage zur Bodenentsorgung für belastetes;20,0;t;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+1;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;10,0;h;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+2;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;10,0;h;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+3;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;10,0;h;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+4;Materialien, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Anwendung kommen:;1500,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+1;Baugelände abräumen;180,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+2;Bewuchs ausgraben und wieder einpflanzen;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+3;Oberboden abtragen, laden und abfahren;12,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+4;Oberboden, gesiebt, liefern und einbauen;12,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+5;Rasenansaat liefern und fachgerecht herstellen;37,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+6;Vorhandene Borde aufnehmen, seitlich lagern und wieder setzen;65,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+7;Gehwegplatten in Gehwegen aufnehmen, seitlich lagern u. verlegen;106,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+8;Vorh. Kiesel als Traufkante aufnehmen, lagern u. verlegen;2,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+1;Frostschutzschicht als 1. Tragschicht;42,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+1;Vorh. Schacht DN 1000 abbrechen, bis 2,00 tief;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+2;RW-Betonschacht R 7, DN 1200 Tiefe bis 2,00 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+3;RW-Betonschacht R 6, DN 1200 Tiefe bis 2,00 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+4;RW-Betonschacht R 5, DN 1000 Tiefe bis 2,00 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+5;RW-Betonschacht R 4, DN 1000 Tiefe bis 1,80 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+6;RW-Betonschacht R 3,  DN 1000 Tiefe bis 1,50 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+7;RW-Betonschacht R 2,  DN 1000 Tiefe bis 1,50 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+8;RW-Betonschacht R 1, DN 1000 Tiefe bis 1,50 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+9;Vorh. Rohre bis DN 300 schneiden (Stz, PP, B, Stb), Kreisprofil;9,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+10;Vorh. Leitung aufnehmen und entsorgen, DN 100 bis DN 250;37,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+11;PP-MD Kanalrohr DN 100, liefern und verlegen (KG 2000);9,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+12;PP-MD Kanalrohr DN 150, liefern und verlegen (KG 2000);2,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+13;PP-MD Kanalrohr DN 200, liefern und verlegen (KG 2000);45,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+14;PP-MD Kanalrohr DN 250, liefern und verlegen (KG 2000);36,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+15;PP-MD Kanalrohr DN 300, liefern und verlegen (KG 2000);30,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+16;PP-Hochlast Kanalrohr DN 600, liefern und verlegen, gem. DIN EN 1852;43,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+17;PP-MD Passstück DN 100, als Zulage;9,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+18;PP-MD Passstück DN 150, als Zulage;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+19;PP-MD Passstück DN 200, als Zulage;3,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+20;PP-MD Passstück DN 250, als Zulage;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+21;PP-MD Passstück DN 300, als Zulage;3,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+22;PP-Passstück DN 600, als Zulage, gem. DIN EN 1852;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+23;PP-Bögen DN 200, 15°- 45°, als Zulage;4,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+24;PP-Abzweiger DN 200/100, 45°, als Zulage;4,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+25;PP-Abzweiger DN 250/100, 45°, als Zulage;4,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+26;Sattelstück Syst. Fabekun® DN 160 für Stahlbet./ Beton/Stzg.-Rohr;4,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+27;PP- Reduzierstück / Übergangsstück, als Zulage;4,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+28;Äußeren Absturz DN 150, Absturzhöhe bis 1,20 m, Schacht-Nr. R131070;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+29;Funke VPC-Rohrkupplung 100 liefern und einbauen;8,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+30;Funke VPC-Rohrkupplung 150 liefern und einbauen;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+31;Anschluss an vorh. Beton-Schacht herstellen, einschl. Bohrung;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+32;Schachtanschluss fachgerecht herstellen, bis DN 200 PP;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+33;Suchgraben herstellen, ErsatzbaustoffV, T bis 1,50m, Zulage;8,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+34;Querende Versorgungsanlagen bis 50 cm Breite sichern;7,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+35;Versorgungsleitung sichern, Längsrichtung, Leitung bis DN 150;15,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+36;Offene Wasserhaltung für Kanalbaugruben;162,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+37;Kanalbaugrube herstellen, Tiefe bis 2,00 m;50,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+38;Baugrube als Doppelgraben bis 2,00 m Tiefe;165,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+39;Handschachtung, als Zulage zum Leitungsgraben;20,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+40;Stahlplattenverbau für Kanalbaugruben, Tiefe bis 2,00m;283,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+41;Bettungskies für die Leitungszone einbauen;126,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+42;Füllboden oberhalb der Leitungszone einbauen;52,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+43;Dichtheitsprüfung;7,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+44;Dichtheitsprüfung mit Wasser.;154,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+45;Schachtinspektion nach Sanierung, 3D;7,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+46;Kanalinspektion, nach Sanierung, Haltungen, DN 200 bis DN 600, Drehschwenkkopfkamera;154,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+47;Kanalinspektion nach der Sanierung, Leitungen, Rohre DN 100 bis DN 150, mittels Satellitenkamera;2,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+48;Leitungskataster / Kanalbestandsplan für Hauptkanal herstellen;7,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+49;Leitungskataster / Kanalbestandsplan für Anschlusskanal herstellen;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+50;Leitungskataster / Kanalbestandsplan für Schacht herstellen;7,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+1;Baustelleneinrichtung für die Flüssigbodenherstellung;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+2;Einsatz eines Saugbaggers;5,0;d;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+3;Flüssigboden liefern und einbauen;42,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+4;Rezepturerstellung mit Nachweis,;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+5;Eigenüberwachung Flüssigbodenverfahren nach RAL GZ 507;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+1;Wurzelvorhang T 100cm B 50cm Boden planieren;35,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+2;Kroneneinkürzung gem. ZTV Baumpflege, Punkt 0.2.3.1;4,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+3;Kronenpflege gem. ZTV Baumpflege, Punkt 0.2.2.2 Nach Angabe der Bauleitung, Baum-Art: 15xPlatane, 5xAhorn/Birke in Abstimmung mit dem AG;5,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+1;Baustelle einrichten;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+2;Baustelle räumen;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+3;Baustellensicherung/ Bauzaun;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+1;Anmelden der Arbeiten in Kampfmittelverdachtsflächen;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+2;Erstellen der Dokumentationsunterlagen;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+3;Kampfmitteltechnische Baubegleitung inkl. Mobilisation;10,0;d;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+4;Bagger bis 18,0 to mit Schutzeinrichtung gem. BGI 833;10,0;d;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+5;Oberboden;180,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+6;Zulage Leistungsminderung wg. Kampfmittelbegleitung 03.02;50,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+7;Zulage Leistungsminderung wg. Kampfmittelbegleitung03.08;165,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+8;Stillstandszeiten für Personal und Gerät, bei Umständen, die der Auftragnehmer nicht zu verantworten hat.;1,0;d;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+1;Bodenanalytik gem. ErsatzbaustoffV durchführen;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+2;Gelagerten Boden aufnehmen und einbauen;50,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+3;Unbelasteten Boden BM-0 aufnehmen und fachgerecht verwerten;215,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+4;Zulage: Boden BM-F1 gem. ErsatzbaustoffV fachgerecht verwerten;155,0;t;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+5;Zulage: Boden BM-F2 gem. ErsatzbaustoffV fachgerecht verwerten;39,0;t;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+6;Zulage zur Bodenentsorgung für belastetes;10,0;t;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+10;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;10,0;h;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+20;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;10,0;h;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+30;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;10,0;h;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+40;Materialien, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Anwendung kommen:;1500,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+1;Baugrube als Graben bis 1,50 m Tiefe;86,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+2;Zulage Leistungsminderung wg. Kampfmittelbegleitung 03.02;86,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+3;Zulage zur Bodenentsorgung für belastetes;50,0;t;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+4;Aushub für Dränleitungen ab OK Baugrubensohle, einschl. Wiederverfüllung mit vorhandenem Boden.;120,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+5;Drängraben, Wände und Sohle, mit geotextilem Filter (Gewebegewicht ca. 125 g/m², Spinnfaservlies, wasserdurchlässig, witterungsbeständig, Durchschlagverhalten 36 mm, Durchdrückkraft 1,4 kN, Höchstzugkraft 8 kN/m) auslegen, Stöße 10 cm überlappend, Grabenränder 30 cm überdecken.;120,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+6;Dränleitung für Gebäudedränung, aus Kunststoff-Vollsickerrohren, ausgeführt als kreisrundes, gewelltes Rohr.;120,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+7;Filterschicht aus Geotextil für Dränleitungen. Geotextil mit geotextilem Filter (Gewebegewicht ca. 125 g/m², Spinnfaservlies, wasserdurchlässig, witterungsbeständig, Durchschlagverhalten 36 mm, Durchdrückkraft 1,4 kN, Höchstzugkraft 8 kN/m), auslegen, Stöße 10 cm überlappend.;120,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+8;Dränschicht aus mineralischen Stoffen zur Umhüllung von Dränleitungen.;120,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+9;Verbindungsleitung für Gebäude-Dränage aus ungelochten Kunststoffrohren.;10,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+10;Winkelstück aus PVC-Profil für abknickende Kunststoff-Dränleitungen.;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+11;Dränleitung aus Kunststoffrohren an vorhandenen Kanal aus Kunststoff an vorhandenen Stutzen anschließen.;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+12;Kontroll- und Spülschacht für Dränleitung aus Polyethylen, mit drei Anschlüssen und Sandfang sowie Schachtdeckel und Blindstopfen, Schachtaufsetzrohr mit Muffe.;4,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+13;Kontroll- und Spülschacht für Dränleitung aus Polyethylen, mit drei Anschlüssen und Sandfang sowie Schachtdeckel und Blindstopfen, Schachtaufsetzrohr mit Muffe.;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+14;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;10,0;h;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+15;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;10,0;h;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+16;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;10,0;h;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+17;Materialien, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Anwendung kommen:;1500,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X81
+1;Baugelände abräumen;180,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+2;- Abheben von 2 Teilen der Beton-Pergola (auf Dornen;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+3;Vorh. Natursteinmauer h ca. 0,50m rückbauen,;30,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+4;Vorhandene Borde aufnehmen, seitlich lagern und wieder setzen;98,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+5;Gehwegplatten in Gehwegen aufnehmen, seitlich lagern u. verlegen;100,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+6;Vorh. Kiesel als Traufkante aufnehmen, lagern u. verlegen;7,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+7;Betonrechteckpflaster aufnehmen, seitlich lagern u. verlegen;35,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+8;Bewuchs ausgraben und wieder einpflanzen;3,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+9;Oberboden abtragen, laden und abfahren;70,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+10;Oberboden, gesiebt, liefern und einbauen;70,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+11;Rasenansaat liefern und fachgerecht herstellen;230,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+12;Hinweisschild auf Metallrohr aufnehmen und wieder setzen;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+1;Frostschutzschicht als 1. Tragschicht;34,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+2;Schottertragschicht aus Naturschotter;5,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+1;Winkelstützwand herstellen H 0,80m*B 0,49m*L 0,50m;25,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+2;Bruchsteinmauerwerk aus Naturwerkstein einschl. Verfugung.;16,0;m²;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+3;Pergola-Pfeiler wieder aufmauern mit vorhandenen;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+1;SW-Betonschacht S 18, DN 1000 Tiefe bis 3,30 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+2;SW-Betonschacht S 17, DN 1000 Tiefe bis 2,50 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+3;SW-Betonschacht S 16, DN 1000 Tiefe bis 2,40 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+4;SW-Betonschacht S 14, S 15, DN 1000 Tiefe bis 2,30 m;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+5;SW-Betonschacht S 13, DN 1000 Tiefe bis 2,30 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+6;SW-Betonschacht S 12, DN 1000 Tiefe bis 2,20 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+7;SW-Betonschacht S 11, DN 1000 Tiefe bis 2,00 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+8;SW-Betonschacht S 10, DN 1000 Tiefe bis 1,70 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+9;SW-Betonschacht S 9, DN 1000 Tiefe bis 2,00 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+10;SW-Betonschacht S 8, DN 1000 Tiefe bis 1,60 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+11;SW-Betonschacht S 7, DN 1000 Tiefe bis 1,60 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+12;SW-Betonschacht S 6, DN 1000 Tiefe bis 1,80 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+13;SW-Betonschacht S 5, DN 1000 Tiefe bis 1,80 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+14;SW-Betonschacht S 4, DN 1000 Tiefe bis 1,80 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+15;SW-Betonschacht S 3, DN 1000 Tiefe bis 2,00 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+16;SW-Betonschacht S 2, DN 1000 Tiefe bis 2,20 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+17;SW-Betonschacht S 1, DN 1000 Tiefe bis 2,00 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+18;Seitenzulauf DN 100;10,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+19;Schmutzwasserumleitung;4,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+20;Vorh. Rohre bis DN 300 schneiden (Stz, PP, B, Stb), Kreisprofil;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+21;Vorh. Leitung aufnehmen und entsorgen, DN 150 bis DN 250;2,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+22;PP-MD Kanalrohr DN 100, liefern und verlegen (KG 2000);30,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+23;PP-MD Kanalrohr DN 150, liefern und verlegen (KG 2000);172,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+24;PP-MD Kanalrohr DN 200, liefern und verlegen (KG 2000);1,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+25;PP-MD Passstück DN 100, als Zulage;10,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+26;PP-MD Passstück DN 150, als Zulage;18,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+27;PP-MD Passstück DN 200, als Zulage;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+28;PP-Bögen DN 100, 15°- 45°, als Zulage;22,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+29;Äußeren Absturz DN 150, Absturzhöhe bis 1,20 m, Schacht-Nr. S 6;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+30;Äußeren Absturz DN 150, Absturzhöhe bis 0,60 m, Schacht-Nr. S 18;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+31;Äußeren Absturz DN 100, Absturzhöhe bis 1,15 m,;4,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+32;Äußeren Absturz DN 100, Absturzhöhe bis 0,80 m,;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+33;Haltung bis DN 200 verdämmen;8,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+34;Füll- und Entlüftungsrohre;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+35;Funke VPC-Rohrkupplung 200 G liefern und einbauen,;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+36;Verschlußteller DN 100;10,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+37;Vorh. Straßenablauf abbrechen, laden und abfahren;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+38;Straßenablauf 50 x 50 Pultform komplett liefern und einbauen;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+39;Dichtheitsprüfung mit Wasser.;174,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+40;Dichtheitsprüfung;20,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+41;Schachtinspektion nach Sanierung, 3D;20,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+42;Kanalinspektion, nach Sanierung, Haltungen,;174,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+43;Kanalinspektion nach der Sanierung, Leitungen, Rohre DN 100 bis DN 150, mittels Satellitenkamera;30,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+44;Leitungskataster / Kanalbestandsplan für Hauptkanal herstellen;18,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+45;Leitungskataster / Kanalbestandsplan für Anschlusskanal herstellen;10,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+46;Leitungskataster / Kanalbestandsplan für Schacht herstellen;20,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+47;Suchgraben herstellen, ErsatzbaustoffV, T bis 1,50m, Zulage;23,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+48;Querende Versorgungsanlagen bis 50 cm Breite sichern;10,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+49;Versorgungsleitung sichern, Längsrichtung, Leitung bis DN 150;30,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+50;Offene Wasserhaltung für Kanalbaugruben;225,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+51;Kanalbaugrube herstellen, Tiefe bis 2,00 m;180,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+52;Kanalbaugrube herstellen, Tiefe bis 3,00 m;158,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+53;Handschachtung, als Zulage zum Leitungsgraben;48,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+54;Stahlplattenverbau für Kanalbaugruben, Tiefe bis 2,00m;256,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+55;Stahlplattenverbau für Kanalbaugruben, Tiefe bis 3,00m;318,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+56;Bettungskies für die Leitungszone einbauen;100,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+57;Füllboden oberhalb der Leitungszone einbauen;141,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+1;Baustelleneinrichtung für Rohrvortrieb einrichten, vorhalten und räumen;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+2;Startgrube L = 5,00 m für die Durchpressung eines Stahlschutzrohres;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+3;Zielgrube L = 3,00 m für die Durchpressung eines Stahlschutzrohres;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+4;Stahlschutzrohr für die Durchpressung PP 150 vorpressen;6,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+5;Lieferung der Vortriebsrohre aus Stahl mit glattem Enden für Stumpfschweißverbindung;6,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+6;Schneidschuh in geeigneter Konstruktion am Rohranfang herstellen;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+7;Rohrvortriebshindernisse beim Auffahren des Rohrquerschnittes vom vorgetriebenen Rohr aus beseitigen;4,0;h;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+8;Produktenrohr mit den erforderlichen Gleitkufenringen höhengerecht in das Stahlrohr einziehen;6,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+9;Befüll- und Entlüftungsrohre DN 150 mm liefern und in das Stahlrohr einbauen;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+10;Ringraumverfüllung (Füma) liefern und zwischen Stahlschutzrohr und;6,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+11;Abschlußmanschette;4,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+1;Baustelleneinrichtung für die Flüssigbodenherstellung;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+2;Einsatz eines Saugbaggers;5,0;d;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+3;Flüssigboden liefern und einbauen;35,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+4;Rezepturerstellung mit Nachweis,;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+5;Eigenüberwachung Flüssigbodenverfahren nach RAL GZ 507;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+1;Wurzelvorhang T 100cm B 50cm Boden planieren;55,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+2;Kroneneinkürzung gem. ZTV Baumpflege, Punkt 0.2.3.1;13,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+3;Kronenpflege gem. ZTV Baumpflege, Punkt 0.2.2.2 Nach Angabe der Bauleitung, Baum-Art: 15xPlatane, 5xAhorn/Birke in Abstimmung mit dem AG;15,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+1;Baustelle einrichten;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+2;Baustelle räumen;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+3;Baustellensicherung/ Bauzaun;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+1;Anmelden der Arbeiten in Kampfmittelverdachtsflächen;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+2;Erstellen der Dokumentationsunterlagen;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+3;Kampfmitteltechnische Baubegleitung inkl. Mobilisation;10,0;d;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+4;Bagger bis 18,0 to mit Schutzeinrichtung gem. BGI 833;10,0;d;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+5;Zulage Leistungsminderung wg. Kampfmittelbegleitung 03.02;230,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+6;Zulage Leistungsminderung wg. Kampfmittelbegleitung 03.02;180,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+7;Zulage Leistungsminderung wg. Kampfmittelbegleitung03.08;158,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+8;Stillstandszeiten für Personal und Gerät, bei Umständen, die der Auftragnehmer nicht zu verantworten hat.;1,0;d;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+1;Bodenanalytik gem. ErsatzbaustoffV durchführen;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+2;Gelagerten Boden aufnehmen und einbauen;50,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+3;Unbelasteten Boden BM-0 aufnehmen und fachgerecht verwerten;288,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+4;Zulage: Boden BM-F1 gem. ErsatzbaustoffV fachgerecht verwerten;208,0;t;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+5;Zulage: Boden BM-F2 gem. ErsatzbaustoffV fachgerecht verwerten;52,0;t;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+6;Zulage zur Bodenentsorgung für belastetes;20,0;t;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+1;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;10,0;h;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+2;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;10,0;h;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+3;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;10,0;h;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+4;Materialien, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Anwendung kommen:;1500,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+1;Baugelände abräumen;180,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+2;Bewuchs ausgraben und wieder einpflanzen;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+3;Oberboden abtragen, laden und abfahren;12,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+4;Oberboden, gesiebt, liefern und einbauen;12,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+5;Rasenansaat liefern und fachgerecht herstellen;37,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+6;Vorhandene Borde aufnehmen, seitlich lagern und wieder setzen;65,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+7;Gehwegplatten in Gehwegen aufnehmen, seitlich lagern u. verlegen;106,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+8;Vorh. Kiesel als Traufkante aufnehmen, lagern u. verlegen;2,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+1;Frostschutzschicht als 1. Tragschicht;42,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+1;Vorh. Schacht DN 1000 abbrechen, bis 2,00 tief;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+2;RW-Betonschacht R 7, DN 1200 Tiefe bis 2,00 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+3;RW-Betonschacht R 6, DN 1200 Tiefe bis 2,00 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+4;RW-Betonschacht R 5, DN 1000 Tiefe bis 2,00 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+5;RW-Betonschacht R 4, DN 1000 Tiefe bis 1,80 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+6;RW-Betonschacht R 3,  DN 1000 Tiefe bis 1,50 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+7;RW-Betonschacht R 2,  DN 1000 Tiefe bis 1,50 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+8;RW-Betonschacht R 1, DN 1000 Tiefe bis 1,50 m;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+9;Vorh. Rohre bis DN 300 schneiden (Stz, PP, B, Stb), Kreisprofil;9,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+10;Vorh. Leitung aufnehmen und entsorgen, DN 100 bis DN 250;37,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+11;PP-MD Kanalrohr DN 100, liefern und verlegen (KG 2000);9,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+12;PP-MD Kanalrohr DN 150, liefern und verlegen (KG 2000);2,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+13;PP-MD Kanalrohr DN 200, liefern und verlegen (KG 2000);45,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+14;PP-MD Kanalrohr DN 250, liefern und verlegen (KG 2000);36,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+15;PP-MD Kanalrohr DN 300, liefern und verlegen (KG 2000);30,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+16;PP-Hochlast Kanalrohr DN 600, liefern und verlegen, gem. DIN EN 1852;43,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+17;PP-MD Passstück DN 100, als Zulage;9,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+18;PP-MD Passstück DN 150, als Zulage;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+19;PP-MD Passstück DN 200, als Zulage;3,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+20;PP-MD Passstück DN 250, als Zulage;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+21;PP-MD Passstück DN 300, als Zulage;3,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+22;PP-Passstück DN 600, als Zulage, gem. DIN EN 1852;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+23;PP-Bögen DN 200, 15°- 45°, als Zulage;4,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+24;PP-Abzweiger DN 200/100, 45°, als Zulage;4,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+25;PP-Abzweiger DN 250/100, 45°, als Zulage;4,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+26;Sattelstück Syst. Fabekun® DN 160 für Stahlbet./ Beton/Stzg.-Rohr;4,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+27;PP- Reduzierstück / Übergangsstück, als Zulage;4,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+28;Äußeren Absturz DN 150, Absturzhöhe bis 1,20 m, Schacht-Nr. R131070;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+29;Funke VPC-Rohrkupplung 100 liefern und einbauen;8,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+30;Funke VPC-Rohrkupplung 150 liefern und einbauen;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+31;Anschluss an vorh. Beton-Schacht herstellen, einschl. Bohrung;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+32;Schachtanschluss fachgerecht herstellen, bis DN 200 PP;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+33;Suchgraben herstellen, ErsatzbaustoffV, T bis 1,50m, Zulage;8,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+34;Querende Versorgungsanlagen bis 50 cm Breite sichern;7,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+35;Versorgungsleitung sichern, Längsrichtung, Leitung bis DN 150;15,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+36;Offene Wasserhaltung für Kanalbaugruben;162,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+37;Kanalbaugrube herstellen, Tiefe bis 2,00 m;50,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+38;Baugrube als Doppelgraben bis 2,00 m Tiefe;165,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+39;Handschachtung, als Zulage zum Leitungsgraben;20,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+40;Stahlplattenverbau für Kanalbaugruben, Tiefe bis 2,00m;283,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+41;Bettungskies für die Leitungszone einbauen;126,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+42;Füllboden oberhalb der Leitungszone einbauen;52,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+43;Dichtheitsprüfung;7,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+44;Dichtheitsprüfung mit Wasser.;154,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+45;Schachtinspektion nach Sanierung, 3D;7,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+46;Kanalinspektion, nach Sanierung, Haltungen, DN 200 bis DN 600, Drehschwenkkopfkamera;154,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+47;Kanalinspektion nach der Sanierung, Leitungen, Rohre DN 100 bis DN 150, mittels Satellitenkamera;2,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+48;Leitungskataster / Kanalbestandsplan für Hauptkanal herstellen;7,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+49;Leitungskataster / Kanalbestandsplan für Anschlusskanal herstellen;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+50;Leitungskataster / Kanalbestandsplan für Schacht herstellen;7,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+1;Baustelleneinrichtung für die Flüssigbodenherstellung;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+2;Einsatz eines Saugbaggers;5,0;d;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+3;Flüssigboden liefern und einbauen;42,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+4;Rezepturerstellung mit Nachweis,;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+5;Eigenüberwachung Flüssigbodenverfahren nach RAL GZ 507;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+1;Wurzelvorhang T 100cm B 50cm Boden planieren;35,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+2;Kroneneinkürzung gem. ZTV Baumpflege, Punkt 0.2.3.1;4,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+3;Kronenpflege gem. ZTV Baumpflege, Punkt 0.2.2.2 Nach Angabe der Bauleitung, Baum-Art: 15xPlatane, 5xAhorn/Birke in Abstimmung mit dem AG;5,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+1;Baustelle einrichten;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+2;Baustelle räumen;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+3;Baustellensicherung/ Bauzaun;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+1;Anmelden der Arbeiten in Kampfmittelverdachtsflächen;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+2;Erstellen der Dokumentationsunterlagen;1,0;psch;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+3;Kampfmitteltechnische Baubegleitung inkl. Mobilisation;10,0;d;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+4;Bagger bis 18,0 to mit Schutzeinrichtung gem. BGI 833;10,0;d;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+5;Oberboden;180,0;m2;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+6;Zulage Leistungsminderung wg. Kampfmittelbegleitung 03.02;50,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+7;Zulage Leistungsminderung wg. Kampfmittelbegleitung03.08;165,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+8;Stillstandszeiten für Personal und Gerät, bei Umständen, die der Auftragnehmer nicht zu verantworten hat.;1,0;d;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+1;Bodenanalytik gem. ErsatzbaustoffV durchführen;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+2;Gelagerten Boden aufnehmen und einbauen;50,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+3;Unbelasteten Boden BM-0 aufnehmen und fachgerecht verwerten;215,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+4;Zulage: Boden BM-F1 gem. ErsatzbaustoffV fachgerecht verwerten;155,0;t;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+5;Zulage: Boden BM-F2 gem. ErsatzbaustoffV fachgerecht verwerten;39,0;t;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+6;Zulage zur Bodenentsorgung für belastetes;10,0;t;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+10;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;10,0;h;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+20;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;10,0;h;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+30;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;10,0;h;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+40;Materialien, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Anwendung kommen:;1500,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+1;Baugrube als Graben bis 1,50 m Tiefe;86,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+2;Zulage Leistungsminderung wg. Kampfmittelbegleitung 03.02;86,0;m3;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+3;Zulage zur Bodenentsorgung für belastetes;50,0;t;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+4;Aushub für Dränleitungen ab OK Baugrubensohle, einschl. Wiederverfüllung mit vorhandenem Boden.;120,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+5;Drängraben, Wände und Sohle, mit geotextilem Filter (Gewebegewicht ca. 125 g/m², Spinnfaservlies, wasserdurchlässig, witterungsbeständig, Durchschlagverhalten 36 mm, Durchdrückkraft 1,4 kN, Höchstzugkraft 8 kN/m) auslegen, Stöße 10 cm überlappend, Grabenränder 30 cm überdecken.;120,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+6;Dränleitung für Gebäudedränung, aus Kunststoff-Vollsickerrohren, ausgeführt als kreisrundes, gewelltes Rohr.;120,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+7;Filterschicht aus Geotextil für Dränleitungen. Geotextil mit geotextilem Filter (Gewebegewicht ca. 125 g/m², Spinnfaservlies, wasserdurchlässig, witterungsbeständig, Durchschlagverhalten 36 mm, Durchdrückkraft 1,4 kN, Höchstzugkraft 8 kN/m), auslegen, Stöße 10 cm überlappend.;120,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+8;Dränschicht aus mineralischen Stoffen zur Umhüllung von Dränleitungen.;120,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+9;Verbindungsleitung für Gebäude-Dränage aus ungelochten Kunststoffrohren.;10,0;m;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+10;Winkelstück aus PVC-Profil für abknickende Kunststoff-Dränleitungen.;2,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+11;Dränleitung aus Kunststoffrohren an vorhandenen Kanal aus Kunststoff an vorhandenen Stutzen anschließen.;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+12;Kontroll- und Spülschacht für Dränleitung aus Polyethylen, mit drei Anschlüssen und Sandfang sowie Schachtdeckel und Blindstopfen, Schachtaufsetzrohr mit Muffe.;4,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+13;Kontroll- und Spülschacht für Dränleitung aus Polyethylen, mit drei Anschlüssen und Sandfang sowie Schachtdeckel und Blindstopfen, Schachtaufsetzrohr mit Muffe.;1,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+14;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;10,0;h;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+15;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;10,0;h;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+16;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;10,0;h;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83
+17;Materialien, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Anwendung kommen:;1500,0;St;gaeb;leistungsbeschreibungen/Entwässerungskanalarbeiten.X83

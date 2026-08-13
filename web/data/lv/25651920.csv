@@ -1,0 +1,85 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+00000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+00000003;Probegefäß liefern 10-l-Blecheimer*Mithilfe Kprüf.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+00000004;Bohrkern entnehmen Kern-DU 15 cm*... Freitext ... Asphaltschicht*Verfül. Asphalt;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+00000005;Zertsörungsfreie Kontrollprüfung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+00000006;Plattendruckversuch nach DIN 18134;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+00000007;Bestands- und Abrechnungsunterlagen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+00010001;Verkehrssicherung läng.Dauer durchf Arb.st.u. Uml.str*VZ-Plan des AG außer/in Kraft s.*... Freitext ...;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+00010002;Transp. LSA f. Engst. aufb. u. abb. LSA Typ B*Verbind. Wahl AN Entf.ü.100bis150m*Versorg. Wahl AN VTU erstellen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+00010003;Transport. Lichtsignalanlage vorh. wie Vorposition;30,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+00010004;Kontrolle d. Verkehrss. an Arb.st. einmal täglich*schrift.Dokument;3,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+00010005;Verkehrsrechtl. Anordnung einholen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+01000001;Suchgraben herstellen ... Freitext ...*... Freitext ... Boden einb.u.v.;20,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+01000002;Oberboden abtragen und andecken Abtr.über 10-30cm*alle Flächen Andeck. ü.15-25cm*Abrechnung Abtrag;50,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+01000003;Boden bzw. Fels lösen und verwerten ... Freitext ...*profilg. lösen Planum nicht ges.*BM-F0* Abrechnung Abtrag;75,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+01000004;Boden bzw. Fels lösen und verwerten ... Freitext ...*profilg. lösen Planum nicht ges.*BM-F1 Abrechnung Abtrag;75,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+01000005;Boden bzw. Fels aus Verbreit. lösen ... Freitext ...*Aushub Verw. AN Breite über 1-2 m*Tiefe bis 0,5 m ... Freitext ...*Abrechnung Abtrag;50,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+01000006;Boden bzw. Fels lösen und einbauen ... Freitext ...*Abrechnung Abtrag;100,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+01000007;Material liefern und einbauen;75,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+01000008;Material liefern und einbauen;100,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+01000009;Deklarationsanalyse;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+01010001;Muldenprofil wiederherstellen Mulde ausräumen;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+01010002;Mulde herstellen gewachsener Boden*Dammfuß Breite 2,00 m*Tiefe ü. 0,3-0,5m Boden einbauen;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+01010003;Mulde als Raubettmulde befestigen Breite 2,00 m*Gefälle 1:3 Steinhöhe 30 cm*in Beton einebnen;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+01010004;Bankett schälen/ausgraben;650,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+01010005;Bankett herstellen. Bankett;175,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+01010006;Rasenansaat mit RSM herstellen Menge 10 g/m2*RSM 7.1.1;500,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+01010007;Bauliche Anlage abbrechen ... Freitext ...*Mauerw.Stahlbeton Anl. freil./verd.*ges. Abbr. verw.;10,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+01010008;Unbewehrter Beton herstellen;5,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+02000001;Entwässerungsrohrleitung abbrechen Rohr DN ü.100-400*Beton-Rohr Bettung abbrechen*Tiefe ü.1,25-1,75 Ausb. verwerten;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+02000002;Kunststoffrohrltg herst.m.Erdarb. ... Freitext ...*PVC-U-Rohr Bettung Typ 1*Tiefe bis 1,25 m ... Freitext ...;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+02000003;Schachtanschluss herstellen (Zul.) Rohr DN 150*Kunststoff-Rohr Betonfertigteile*Öffnung herst. Gelenkstück;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+02000004;Formstück einbauen (Zul.) Abzweig DN 150*Kunststoff-Rohr Rohr DN 150;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+02000005;Formstück einbauen (Zul.) Bogen DN 150*Kunststoff-Rohr Rohr DN 150;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+02000006;Kunststoffrohrltg herst.m.Erdarb. ... Freitext ...*PVC-U-Rohr Bettung Typ 1*Tiefe bis 1,25 m ... Freitext ...;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+02000007;Schachtanschluss herstellen (Zul.) Rohr DN 200*Kunststoff-Rohr Betonfertigteile*Öffnung herst. Gelenkstück;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+02000008;Formstück einbauen (Zul.) Abzweig DN 200*Kunststoff-Rohr;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+02000009;Formstück einbauen (Zul.) Bogen DN 200*Kunststoff-Rohr;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+02000010;Kunststoffrohrltg herst.m.Erdarb. ... Freitext ...*PVC-U-Rohr Bettung Typ 1*Tiefe 1,25-1,75 m eing. verd. Bod.;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+02000011;Rohranschluss herstellen (Zul.) ... Freitext ...*AL Kunststoff SL Beton;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+02000012;Formstück einbauen (Zul.) ... Freitext ...*Kunststoff-Rohr Rohr DN 300;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+02010001;Schachtteil ausbauen;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+02010002;Kontrollschacht aus Ortbeton herst;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+02010003;Schachtabdeckung aufsetzen DIN 19584, C, R*GG-Trich+EimerA4 Höhe Zug um Zug*Mörtel M20;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+02010004;Schachtabdeckung aufsetzen DIN 19584, D, B*m. Schmutzfänger Höhe Zug um Zug*Mörtel M20;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+02010005;Schachtabdeckung anpassen in Asph.-Fläche*ADicke ü.10-20 cm Höher 5-10cm*Mörtel M20;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+02010006;Aufsatz für Straßenabl. anpassen in Asphalt-Fläche*ADicke ü.10-20 cm ... Freitext ...*Mörtel M20;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+02010007;Umpflasterung von Einbauten herst.;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+03000001;Asphalt fräsen ... Freitext ...*... Freitext ... ... Freitext ...*... Freitext ... Fräsasph. verw.;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+03000002;Asphalt fräsen ADS*Asphaltbeton*... Freitext ... Fahrbahn*Fräsasph. verw.;3500,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+03000003;Asphalt fräsen ADS*Asphaltbeton*... Freitext ... Fahrbahn*Fräsasph. verw.;400,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+03000004;Erschw. infolge Einbauten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+03000005;Schicht ohne Bindemittel aufnehmen STS*Dicke ü.20-30cm ... Freitext ...*... Freitext ...;350,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+03000006;Schottertragschicht herstellen Bk0,3*0/45*URA+Einbaudoku DPr min. 100 v.H.*... Freitext ...;175,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+03000007;Asphalttragsch. aus AC 22 T S herst Bk3,2*... Freitext ... Bitumen 30/45*mit Beschicker;850,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+03000008;Asphalttragsch. aus AC 22 T S herst Bk3,2*Schadstellen Bitumen 30/45*... Freitext ...;80,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+03000009;Unterlage reinigen Asphaltbefestig.*selb.aufn.Kehrm.;3500,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+03000010;Bitumenemulsion aufsprühen Bk100-Bk3,2*Asph. ausgemagert Rampenspritzgerät*C40B5-S Menge 300 g/m2*... Freitext ...;3500,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+03010001;Asphaltarmierung verlegen;500,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+03010002;Bitumenemulsion aufsprühen Bk100-Bk3,2*Asphalt frisch Rampenspritzgerät*C60BP4-S Menge 300 g/m2*vor A.deckschicht;3500,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+03010003;Asphaltdecksch. aus AC 11 D N herst ... Freitext ...*Dicke 4,0 cm ... Freitext ...*mit Beschicker;3500,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+03010004;Asphaltdecksch. aus AC 11 D N herst ... Freitext ...*... Freitext ... ... Freitext ...;10,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+03010005;Randabdichtung herstellen Abd. 25/55-55 A*... Freitext ... über 14-18 cm;400,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+03010006;Anschluss a. Fuge m. Fugenm. herst. Längs-/Querfuge*Deckschicht Tiefe 40 mm*Breite 12 mm Verf. mit Trstr.*Fugenmasse N1;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+03010007;Asphaltbefestigung trennen Einzelfl.*schneiden Dicke ü. 3-6 cm;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+03010008;Asphaltbefestigung trennen Einzelfl.*schneiden Dicke ü. 6-12 cm;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+03010009;Abstumpfungsmaßnahme durchführen LFK 1/3*Menge 1 kg/m2 maschinell;3500,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+03010010;Verkehrsfläche kehren Walzasphalt*VSM durchführen;3500,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+04000001;Bordstein aufnehmen. Hochbord Beton*Fund. bis 10 cm Verwertung AN;230,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+04000002;Fundamentgraben herstellen SoB*F-Breite ü70-90cm ... Freitext ...*ü. Aush. Verw. AN;250,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+04000003;Bordstein aus Beton setzen BSt. HB 18x30 cm*Fuge Typ B gerader Stein*bis 10 cm unt. OK F-beton 12 MPa;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+04000004;Bordstein aus Beton setzen BSt. HB 18x30 cm*Fuge Typ B Halbm. ü. 5-12 m*bis 10 cm unt. OK F-beton 12 MPa;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+04000005;Bordstein aus Beton setzen BSt. HB 18x30 cm*Fuge Typ B Überg./Absenker*bis 10 cm unt. OK F-beton 12 MPa;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+04000006;Bordsteine regulieren;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+04000007;Bordstein trennen HBSt. 18/30-15/22*BSt.nassschneiden ... Freitext ...;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+04010001;Leitpfosten abbauen;35,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+04010002;Leitpfosten des AG aufstellen;35,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+04010003;Zulage für Leitpfosten aufstellen;35,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+04010004;Verkehrsschild abbauen;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+04010005;Rohrpfosten des AG aufstellen;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+04020001;Längsmarkierung Typ II herstellen;1250,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+04020002;Längsmarkierung Typ II herstellen;650,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+04020003;Längsmarkierung Typ II herstellen;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83
+04020004;Markierungsfläche trocknen;1950,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV K3256 Belagssanierung Abzw. B298 - Zimmerbach.D83

@@ -195,3 +195,199 @@
 4;Radlader einschl. Fahrer,;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.X83
 5;Hydraulikbagger 2-5to einschl. Fahrer,;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.X83
 6;Kleingerät einschl. Bediener;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.X83
+05511.1;Pflanzl.Bodendecke abräumen D 5-10cm Gras-Kraut-Aufwuchs Wuchs-H bis 12cm;100,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05511.2;Oberboden abtragen laden fördern aufsetzen, Abtrag-H 20-30cm;50,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05511.3;Oberboden abtragen laden fördern aufsetzen, Abtrag-H 20-30cm, Handarbeit ERDARBEITEN ABTRAG;40,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05511.4;Boden lösen fördern lagern, mit Gerät B 1,5-2m L 100-125m T bis 2m;70,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05511.5;Boden lösen fördern lagern, mit Gerät, T bis 0,4m;100,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05511.6;Boden lösen fördern lagern, von Hand, T bis 0,3m ERDARBEITEN PUNKTFUNDAMENTE / STREIFENFUNDAMENTE;55,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05511.7;Boden Streifenfundament lösen fördern lagern, mit Gerät, T bis 1,5m;40,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05511.8;Boden Einzelfundament lösen fördern lagern, mit Gerät, T bis 1,5m GRABEN;10,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05511.9;Boden Graben Einfassungen lösen lagern, Sohlen-B 0,3-0,4m T bis 0,5m;251,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05511.10;Boden Graben Kabel lösen lagern verfüllen verdichten Sohlen-B 0,3-0,4m T bis 0,8m SU SE Anschlussbereich Gebäude nicht Bestandteil der Leistung ERDARBEITEN AUFTRAG;45,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05511.11;Füllboden SW Stützwinkel/Sitzstufen liefern, einbauen H 100-160cm, im Mittel 130cm;75,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05511.12;Füllboden von Lagerfläche aufnehmen, fördern, einbauen H bis 100cm;80,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05511.13;Position wie zuvor, jedoch Füllboden Einbau Handarbeit ERDARBEITEN SONSTIGES;20,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05511.14;Bearbeitungsfläche planieren D 10-20cm;1075,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05511.15;Geländeböschung modellieren;50,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05511.16;Dränschicht Filtervlies 150g/m2;230,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05511.17;Schutzlage Abdichtung Wand Noppenbahn D 8mm H 60cm;50,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05511.18;Trassenwarnband;45,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05522.1;Planum Abweichung +/-2cm EV2 45MPa;130,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05522.2;Schalung H bis 0,6m;40,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05522.3;Schalung STS Gabionen H bis 0,6m;60,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05522.4;STS EV2 80MPa 0/32 D 45cm;35,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05522.5;STS EV2 80MPa 0/32 D 20cm (RC-Baustoff) STREIFENFUNDAMENTE;120,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05522.6;Schalung Streifenfundament Stützwinkel H bis 0,5m;25,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05522.7;Schalung Streifenfundament Sitzstufen H 1-1,5m;33,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05522.8;Ortbeton Streifenfundament Stützwinkel Fußlänge/Höhe 60/105cm, unbewehrt C16/20 XF1 B 75-100cm T bis 30cm;4,2;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05522.9;Ortbeton Streifenfundament Stützwinkel Fußlänge/Höhe 85/155cm, unbewehrt C16/20 XF1 B 100-125cm T bis 30cm;8,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05522.10;Ortbeton Streifenfundament Sitz- und Blockstufen, unbewehrt C16/20 XF1 B 100-125cm T 100-125cm EINZELFUNDAMENTE;16,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05522.11;Schalung Einzelfundament H 0,5-1m;22,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05522.12;Ortbeton Fundament Stütze/Pfeiler, Stahlbeton C25/30 XF1 XC4 bis 0,25m3;3,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05522.13;Ortbeton Einzelfundament Pfostenträger Gitterroste, unbewehrt C16/20 XF1 bis 0,25m3;1,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05522.14;Ortbeton Einzelfundament Stahlbeton C20/25 XF1 0,25-0,5m3 (Aufbeton für Außenecke);0,3;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05522.15;Ortbeton Einzelfundament Ausstellungsmodule, Stahlbeton C25/30 XF1 XC4 0,5-1m3 Hinweis Einzelfundament Ausstellungsmodule;1,2;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05522.16;Werkplanung / Statik Einzelfundamente Ausstellungsmodule;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.1;Planum Weg Abweichung +/-2cm EV2 45MPa KLEINPFLASTER BASALT;430,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.2;STS Geh-Radweg DPr1 EV2 100MPa 0/32 D 21cm (RC-Baustoff);90,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.3;Pflasterdecke Natursteinpflaster Basalt schwarz L/B/H 100/100/100mm;90,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.4;Muldenrinne 5-zeilig Natursteinpflaster Basalt L/B/H 100/100/100mm Fundament C16/20 D 10cm KLEINPFLASTER BASALT MIT RASENFUGEN;4,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.5;STS Geh-Radweg DPr1 EV2 80MPa 0/32 D 21cm (Naturstein);14,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.6;Pflasterdecke Natursteinpflaster Basalt schwarz L/B/H 100/100/100mm mit Rasenfugen MOSAIKPFLASTER WIEDEREINBAU;14,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.7;STS Geh-Radweg DPr1 EV2 100MPa 0/32 D 21cm (RC-Baustoff);11,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.8;Pflasterdecke Natursteinpflaster Granit gebraucht seitl.lagernd;11,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.9;Muldenrinne 10-zeilig Natursteinpflaster Granit L/B/H 50/50/50mm gebraucht seitl.lagernd Fundament C16/20 D 10cm POLYGONALPLATTEN WIEDEREINBAU;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.10;STS Geh-Radweg DPr1 EV2 100MPa 0/32 D 21cm (RC-Baustoff);8,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.11;Plattenbelag Natursteinpl. polygonal Granit gebrauchte Platten seitl lagernd Wiedereinbau WASSERGEBUNDENE WEGEDECKE;8,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.12;STS Geh-Radweg DPr1 EV2 80MPa 0/32 D 23cm (Naturstein);213,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.13;Dynamische Schicht 0/16 D 6cm;213,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.14;Deckschicht wassergebundene Wegedecke 0/5 D 4cm Farbe hellgrau KIESDECKE HOLZBÜHNE/TERRASSEN;213,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.15;Flusskies gewaschen 8/16 D 20cm Flächenschüttung Unterlage Geotextil SPLITTDECKE BAUMSCHEIBE;90,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.16;Splitt 5/11 D 10cm Flächenschüttung Unterlage Geotextil EINFASSUNGEN;3,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.17;STS Einfassungen DPr1 EV2 80MPa 0/32 D 15cm (RC-Baustoff);208,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.18;STS Einfassungen DPr1 EV2 80MPa 0/32 D 15cm (Naturstein);18,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.19;Einfassung Stahlband H 150mm, D 6mm;138,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.20;Einfassung Stahlband H 200mm, D 6mm;4,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.21;Betonbord TB8/40;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.22;Bordsteinpassstück Bordstein Beton TB8/40;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.23;Granitbord 8/20;18,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.24;Bordsteinpassstück Bordstein Naturstein B 80mm UK HOLZTERRASSEN CAFE;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.25;Betonbord TB8/30 Baulänge 100cm;28,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.26;Position wie zuvor, jedoch TB 8/30, Baulänge 50 cm;27,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05531.27;Bordsteinpassstück Bordstein Beton TB8/30;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05539.1;Kontrollprüfung TSoB Verformungsmodul statischer Lastplattendruckversuch;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05539.2;Kontrollprüfung TSoB Verformungsmodul dynamischer Lastplattendruckversuch;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.1;Gabionenstützwand H 100 cm Maschenweite 50/100 mm Draht D 4,5 mm;50,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.2;Gabionenstützwand befüllen, Wasserbaustein Grauwacke, CP 90/250, grau, Handarbeit;18,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.3;Gabionenstützwand befüllen, Schotter, Korn bis ca. 300/400 mm, auf Lagerfläche, Handarbeit STÜTZWINKEL;7,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.4;Ausgleichsschicht Stützwinkel Fußlänge/Höhe 60/105cm Mörtel H bis 5cm;16,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.5;Ausgleichsschicht Stützwinkel Fußlänge/Höhe 85/155cm Mörtel H bis 5cm STÜTZWINKEL TERRASSE MULTIFUKTIONSRAUM;31,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.6;Winkelstützel. Stahlbeton XF1 SB 3 Fußlänge/Höhe 85/155cm L50cm D12cm;36,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.7;Position wie zuvor, jedoch Sonderbauteil Winkelstützel. Fußlänge/Höhe 85/155cm L76cm D12cm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.8;Position wie zuvor, jedoch Sonderbauteil Winkelstützel. Fußlänge/Höhe 50/155cm L50cm D12cm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.9;Position wie zuvor, jedoch einteilige Außenecke 90° Winkelstützel. Fußlänge/Höhe 50/155cm L50cm D12cm STÜTZWINKEL TERRASSE CAFE;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.10;Winkelstützel. Stahlbeton XF1 SB 3 Fußlänge/Höhe 85/155cm L50cm D12cm STÜTZWINKEL LUFTRAUM WINDFANG NORD / SÜD;33,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.11;Winkelstützel. Stahlbeton XF1 SB 3 Fußlänge/Höhe 60/105cm L50cm D12cm;42,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.12;Position wie zuvor, jedoch Sonderbauteil Winkelstützel. Fußlänge/Höhe 60/105cm L57cm D12cm STÜTZWINKEL HOLZBÜHNE / GRÜNES FORUM;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.13;Winkelstützel. Stahlbeton XF1 SB 1 Fußlänge/Höhe 60/105cm L100cm D12cm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.14;Winkelstützel. Stahlbeton XF1 SB 1 Fußlänge/Höhe 60/105cm L50cm D12cm STAHLWANGEN/ VERKLEIDUNGEN;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.15;Stahlwange Verkleidung Gabione B 1.644 x H 1.125mm, mit Konturschnitt;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.16;Stahlwange Verkleidung Stützwinkel Luftraum Windfang B 1.589 x H 630 mm mit Konturschnitt;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.17;Stahlverkleidung Stützwinkel Grünes Forum - Typ 1 - B 500 mm x H 350 mm;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.18;Position wie zuvor, jedoch B 385 mm x H 350 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.19;Stahlverkleidung Stützwinkel Grünes Forum - Typ 2 - B 500 mm x H 1.050 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.20;Position wie zuvor, jedoch B 700 mm x H 1.050 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.21;Stahlverkleidung Stützwinkel Grünes Forum - Typ 3 - B 500 mm x H 1.150 mm;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.22;Stahlverkleidung Stützwinkel Luftraum Windfang - Typ 4 - B 1.000mm x H 630mm;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.23;Stahlverkleidung Stützwinkel Luftraum Windfang - Typ 5 - B 857mm x H 630mm;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.24;Stahlverkleidung Stützwinkel Luftraum Windfang - Typ 6 - B 500mm x H 630mm SONSTIGES;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05543.25;Werkplanung Stahlbauteile;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.1;Granit-Sitzelement B1 L/B/H 150/53/70cm;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.2;Granit-Sitzelement B2 L/B/H 150/50/45cm;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.3;Granit-Sitzelement B3 L/B/H 75/53/70cm;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.4;Granit-Sitzelement B4 L/B/H 75/50/45cm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.5;Granit-Sitzelement B5 L/B/H 125/50/45cm;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.6;Granit-Sitzelement B6 Randelement Lr/Lv/B/H 69/33/53/70cm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.7;Granit-Sitzelement B7 Randelement Lr/Lv/B/H 101/154/50/45cm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.8;Granit-Sitzelement B8 Eckelement;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.9;Granit-Sitzelement B9 Eckelement;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.10;Granit-Sitzelement B10 Eckelement;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.11;Granit-Sitzelement B11 Eckelement BLOCKSTUFEN GRÜNES FORUM;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.12;Granit-Blockstufe H 22 cm Lauf-B 100 cm T 25 cm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.13;Granit-Blockstufe H 22 cm Lauf-B 100 cm T 28 cm;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.14;Position wie zuvor, jedoch Sondermaß Granit-Blockstufe H 45 cm Lauf-B 100 cm T 28 cm HOLZBÜHNE GRÜNES FORUM;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.15;Holzbühne mit Rampe, 12,90 m2;13,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.16;Umlaufende Holzverkleidung für Holzbühne HOLZTERRASSE CAFE;18,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.17;Stahlstütze HEB 100, L ca. 1050mm, Kopfplatte 150/150/10mm, Fußplatte 180/180/10mm;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.18;Holzterrasse Cafe, L-förmig, ca. 64 m2;64,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.19;Stahlblende, H 400mm, D 8mm HOLZTERRASSE MULTIFUKTIONSRAUM;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.20;Stahlstütze HEB 100, L ca. 1050mm, Kopfplatte 150/150/10mm, Fußplatte 180/180/10mm;13,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.21;Holzterrasse Multifunktionsraum, Polygon, ca. 51 m2;51,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.22;Stahlblende, H 400mm, D 8mm;24,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.23;Stahlblende als Sonderbauteil, B 895 mm x H 400 mm GITTERROSTE;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.24;Stahlstütze HEB 100, L ca. 1.130mm, Kopfplatte 150/150/10mm, Fußplatte 180/180/10mm;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.25;Freistehendes Gitterrostpodest 3.000 x 2.500mm als Hauszugang;7,5;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.26;Position wie zuvor, jedoch L 3.000 x B 1.500mm;4,5;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.27;Position wie zuvor, jedoch L 6.000 x B 580mm ABSTURZSICHERUNG / HANDLAUF;7,5;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.28;Absturzsicherung WEST, Terrasse Multifuktionsraum, Stahl, L 3.054mm, H 1.050mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.29;Position wie zuvor, jedoch Absturzsicherung NORD/ SÜD, Stahl, L 1.324mm, H 1.050mm;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.30;Absturzsicherung Gitterrostpodest, Stahl, L 1.000mm, H 900mm;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.31;Handlauf Stahl Granit-Blockstufen WERKPLANUNG;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.32;Werkplanung Holzbühne Grünes Forum;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.33;Werkplanung für Holzterrasse Cafe;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.34;Werkplanung Holzterrasse Multifunktionsraum;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05544.35;Werkplanung Gitterrostpodeste;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05551.1;Holzterrassenrinne, L 1.000mm, B 200mm, H 20mm, Abdeckung Längsstabrost 3x8mm;8,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05551.2;Position wie zuvor, jedoch B 155mm SCHÄCHTE;26,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05551.3;Schachtabdeck. B125 Durchm. 800mm rund Kunststoff auflegen sichern;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05551.4;Schacht tiefer setzen bis 20 cm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05551.5;Schacht tiefer setzen bis 50 cm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05551.6;Schacht höher setzen bis 20 cm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05551.7;Schacht höher setzen bis 50 cm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05561.1;Fahrradanlehnbügel Flachstahl 70x10mm, H 850mm, L 850mm;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05561.2;Abfallbehälter 56l;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05561.3;Durchlaufschutzeinfassung Wiedereinbau;13,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05571.1;Tiefenlockerung T 15cm;180,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05571.2;Wurzelbereichsfläche lockern Handarbeit T 10cm;360,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05571.3;Grunddüngung NPK-Dünger 50g/m2;540,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05571.4;Wurzelsperre OBERBODENEINBAU;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05571.6;Vegetationsschicht D 10cm - Rasenansaat;20,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05571.7;Vegetationsschicht D 30cm - Pflanzflächen;70,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05571.8;Position wie zuvor, jedoch Oberboden auftragen in Handarbeit;30,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.1;Tilia cordata Roelvo H 3xv mDb StU. 18-20cm liefern einpflanzen STAUDEN;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.2;Aruncus dioicus Kneiffii P 0,5 liefern einpflanzen;86,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.3;Brunnera macrophylla P 0,5 liefern einpflanzen;388,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.4;Epimedium x youngianum Niveum P 0,5 liefern einpflanzen;367,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.5;Geranium sylvaticum P 0,5 liefern einpflanzen;477,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.6;Rodgersia aesculifolia P 0,5 liefern einpflanzen GRÄSER;95,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.7;Carex morrowii P 0,5 liefern einpflanzen;311,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.8;Carex pendula P 0,5 liefern einpflanzen SONSTIGES;281,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.9;Pflanzgrube T 100 cm, Seitenlänge 200/200 cm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.10;Pflanzgrube verfüllen (200/200/100);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.11;Verdunstungs-/Stammschutzanstrich, StU 16-20 cm H bis 2,5m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.12;Pflanzenverankerung Pfahl-Dreibock Rahmen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.13;Feinplanum Pflanzfläche Abweichung 2cm BG6;290,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.14;Feinplanum Böschungen an Hügeln und Senken herstellen;50,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.15;Düngung der Mulchflächen;340,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.16;Mulchabdeck. Rindenmulch Körnung 10/40  D 5-7cm FERTIGSTELLUNGSPFLEGE BÄUME;340,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.17;Fertigstellungspflege Baumpflanzung und Verankerung 5 AG;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.18;Wässern Baum 100 l/St 24 AG;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.19;Düngung der Bäume PFLANZFLÄCHE;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.20;Fertigstellungspflege Pflanzfläche, 8 AG;340,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.21;Wässern Pflanzung Pflanzfläche 35l l/m2 12 AG;340,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05573.22;Düngung der Pflanzfläche;340,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05574.1;Feinplanum Rasenflächen RASEN;205,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05574.2;Saatgut liefern Gebrauchsrasen RSM2.3;5,5;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05574.3;Rasen ansäen Gebrauchsrasen RSM2.3 25g/m2 FERTIGSTELLUNGSPFLEGE;205,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05574.4;Wässern Rasenflächen 20l/m2, 20 AG;205,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05574.5;Mähen Rasenflächen 5 AG;205,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05574.6;Düngung Rasenflächen;205,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05579.1;Kronenpflege Kroneneinkürzung allseit.Einkürzung 2m H 2m, Baum H 10-15m StU 40-60cm Kronendurchm. 10-15m;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05579.2;Hydraulische Bodenbelüftung an Baumstandorten, bis 6 Einstiche/Baum;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05591.1;Baustelle einrichten, vorhalten und räumen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05591.2;Dokumentation;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05593.1;Wurzelsuchgrabungen;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05594.1;Rodung Strauch- und Pflanzflächen Höhe bis 4m;50,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05594.2;Wurzelstock roden T 30-40cm Durchm. 30-40cm lagern ABBRUCH BAUSTRASSE;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05594.3;Bauseits vorhandene Schottertragschicht 0/32, D 10-20cm, lösen, fördern, Zwischenlager setzen;75,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05594.4;Abbruch bitumenh. Befestigung D ca. 20cm, entsorgen ABBRUCH EINFASSUNGEN;50,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05594.5;Rückbau Bordstein Naturstein, zur Wiederverwendung lagern ABBRUCH AUSSTATTUNG;6,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05594.6;Rückbau Durchlaufschutzeinfassung, zur Wiederverwendung lagern ABBRUCH SONSTIGES;13,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05594.7;Bodenhindernis Mauerwerk/Beton abbrechen, lagern;5,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05596.1;Haufwerksbeprobung Boden EBV-BM;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05596.2;Analytische Untersuchungen nach DIN19747, Abbruchmaterialien AVV170101 Beton ENTSORGUNG;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05596.3;Oberboden laden, entsorgen;160,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05596.4;Abfall nicht gefährlich AVV170504 schadstoffbelastet EBV 2023 BM-F0*;80,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05596.5;Abfall nicht gefährlich AVV170504 schadstoffbelastet EBV 2023 BM-F1;10,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05596.6;Abfall nicht gefährlich AVV170504 schadstoffbelastet EBV 2023 BM-F2;10,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05596.7;Abfall nicht gefährlich AVV170504 schadstoffbelastet EBV 2023 BM-F3;300,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05596.8;Abfall nicht gefährlich AVV170101 Beton;10,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05596.9;Stoffe nicht gefährlich AVV170405 Stahl und Eisen;2,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05596.10;Abfall nicht gefährlich AVV200201 Astwerk, Rasensoden;15,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05599.1;LA-Gärtner;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05599.2;Gärtner Helfer;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05599.3;Lkw + Fahrer 8-12 t;3,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05599.4;Radlader 18 kW;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05599.5;Hydraulikbagger 2-5to;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83
+05599.6;Kleingerät einschl. Bediener;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/OV-170-26_VE29_LV.D83

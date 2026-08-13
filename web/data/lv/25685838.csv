@@ -1,0 +1,51 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01010010;Einrichtung u. Vorbereitung, allg. Baustelle;1,0;psch;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01010020;Vorhalten der Baustelleneinrichtung;18,0;Wo;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01010030;Büro-/ Aufenthaltscontainer aufstellen u. räumen, doppelwandig, wärmegedämmt, L 6,0 m B 2,5 m, inkl. Infrastruktur;1,0;psch;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01010040;Vorhalten d. Büro-/ Aufenthaltscontainer inkl. Infrastruktur;18,0;Wo;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01010050;Sanitärcontainer aufstellen u. räumen, doppelwandig, wärmegedämmt, L 2,5 m B 3,0 m, inkl. Infrastruktur;1,0;psch;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01010060;Vorhalten d. Sanitärcontainer inkl. Infrastruktur;18,0;Wo;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01010070;Baustellenabzäunung inkl. Elementverbinder u. Füße;350,0;lfm;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01010080;Zulage zur Pos. vor: Sichtschutz Bauzaun;120,0;lfm;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01010090;Bauzaunbanner, L 340 x 173 cm;1,0;psch;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01010100;Stahlplatten als Überfahrplatten, 1.000 x 2.000 x 20 mm;60,0;m2;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01010110;Herstellung u. Räumung, Baustellenzufahrt;1,0;psch;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01010120;Liefern, Herstellung u. Räumung, Reifenwaschanlage, LKW 5-achsig, inkl. Infrastruktur;1,0;psch;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01010130;Vorhalten d. Reifenwaschanlage inkl. Infrastruktur;18,0;Wo;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01010140;Baumschutz als Baumschutzmanschetten mit Polsterung, bis H 2,0 m;6,0;Stk;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01010150;Sträucher, Gestrüpp, Bewuchshöhe bis 2 m u. Bäume, Stammdurchmesser bis 10 cm, roden u. entsorgen;1,0;psch;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01010160;Reinigen der öffentlichen Flächen;18,0;Wo;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01010170;Einholen einer verkehrsrechtlichen Anordnung;1,0;psch;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01010180;Beweissicherung, öffentliche Flächen;1,0;psch;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01010190;Dokumentation u. Ausführung d. Arbeits-, Gesundheits- u. Immissionsschutzmaßnahmen;1,0;psch;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01020010;Liefern, Herstellung u. Räumung, Baustraße;600,0;m2;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01020020;Vorhalten u. Instandhalten, Baustraße;600,0;m2;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01020030;Erstellen v. Drainagegräben inkl. Pumpensumpf, Tagwasserhaltung;1,0;psch;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01020040;Vorhalten u. Betreiben, Wasserhaltung;18,0;Wo;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01020050;Abbruch Fundamente aus Stahlbeton, unbekannte Restfundamente;16,0;m3;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01020060;Abbruch Asphalt, teerhaltig, DK II nach DepV, Parkplatzflächen u. Umfahrung;100,0;m3;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01020070;Aushub Schlacketragschicht, DK II nach DepV, Parkplatzflächen u. Umfahrung;150,0;m3;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01020080;Abbruch Betonsteinpfalster, RC-1 nach EBV, Pausenhof;40,0;m3;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01020090;Aushub Splittbettung, RC-1 nach EBV, Pausenhof;50,0;m3;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01020100;Aushub v. Bodenmaterial, historischer Oberboden, BM-F3 nach EBV, Einbaustärke i. M. 0,4 m;1300,0;m3;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01020110;Aushub v. Bodenmaterial, Decksande, BM-0 nach EBV, Einbaustärke i. M. 0,95 m;7050,0;m3;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01020120;Aushub v. Bodenmaterial, Füllböden in Baugrube, Z 0 nach LAGA-M 20, Einbaustärke i. M. 1,95 m;2750,0;m3;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01020130;Aushub v. Bodengemisch, Deponat, DK 0 - DK I nach DepV, Einbaustärke i. M. 1,8 m;10500,0;m3;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01020140;Aussieben u. Separieren v. Fremdstoffen aus Bodengemisch, Kantenlängen > 40 cm;150,0;m3;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01020150;Quertransport v. Bodenmaterial u. -gemisch, zur temporären Lagerung auf dem Grundstück;9800,0;m3;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01020160;Verladen v. Bodenmaterial u. -gemisch, aus temporären Lagerung zur Entsorgung;15050,0;m3;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01020170;Einbau v. Bodenmaterial vor Ort vorhandener Böden, aus der Freilegung;9800,0;m3;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01030010;Abwicklung u. Dokumentation der Transport- u. Entsorgungsleistungen inkl. Baustellenlogistik;1,0;psch;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01030020;Transport u. Entsorgung v. teerhaltigen Abfällen, Asphalt;180,0;t;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01030030;Transport u. Entsorgung v. Beton, RC-1 nach EBV;400,0;t;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01030040;Transport u. Entsorgung v. Bettungsmaterial, Splitt, RC-1 nach EBV;100,0;t;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01030050;Transport u. Entsorgung v. Tragschichten, Schlacke, DK II nach DepV;270,0;t;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01030060;Transport u. Entsorgung v. Bodenmaterial, Oberboden, BM-F3 nach EBV;2400,0;t;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01030070;Transport u. Entsorgung v. Bodengemisch, Deponat, DK 0 nach DepV;5750,0;t;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01030080;Transport u. Entsorgung v. Bodengemisch, Deponat, DK I nach DepV;13050,0;t;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01040010;Stundenlohnleistungen, Polier;10,0;Std;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01040020;Stundenlohnleistungen, Facharbeiter;10,0;Std;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01040030;Stundenlohnleistungen, Hilfsarbeiter;10,0;Std;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01040040;Stundenlohnleistungen, Bagger (50 to), inkl. Maschinist;50,0;Std;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01040050;Stundenlohnleistungen, Traktor, inkl. Maschinist;20,0;Std;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81
+01040060;Stundenlohnleistungen, Radlader, inkl. Maschinist;20,0;Std;gaeb-flat;leistungsbeschreibungen/00083GA23-LV.d81

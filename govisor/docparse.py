@@ -143,9 +143,14 @@ def parse_gaeb_flat(data: bytes) -> dict | None:
                 "text": "",
             }
         elif satz == "25" and offen is not None:
-            stueck = zeile[2:].rstrip()
-            if stueck.strip():
-                offen["text"] = (offen["text"] + " " + stueck.strip()).strip()
+            # Jede DA-90-Zeile ist 80 Zeichen breit und traegt in [74:80] eine laufende
+            # Zeilennummer. Wer nur `zeile[2:]` nimmt, haengt sie an den Text: aus
+            # „Abwasserrohr DN100" wird „Abwasserrohr DN100    000138". Faellt in der
+            # Anzeige kaum auf und steht doch in jeder zweiten Position.
+            stueck = (zeile[2:74] if len(zeile) >= 80 and zeile[74:80].isdigit()
+                      else zeile[2:]).strip()
+            if stueck:
+                offen["text"] = (offen["text"] + " " + stueck).strip()
         elif satz in ("11", "12"):        # Titel-/Gliederungszeile beendet die offene Position
             schliesse()
             offen = None

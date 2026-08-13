@@ -691,3 +691,695 @@
 6;Radbagger, einschl. Gestellung eines Maschinisten.;10,0;h;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten_V33.X83
 7;LKW 7,5 t (zul. Gesamtgewicht), einschl. Gestellung des Fahrers.;10,0;h;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten_V33.X83
 8;Das Bauvorhaben wird nach DGNB zertifiziert. Hierfür hat der Auftragnehmer eine Nachweisführung (EPDs, Materiallisten, Emissionsnachweise, Herkunftsnachweise, Abfallnachweise, etc.) der eingesetzten Baustoffe zu erbringen. Der dafür erforderliche Aufwand ist mit dieser Position abgegolten.;1,0;psch;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten_V33.X83
+01.1;Aufbau der Baustelleneinrichtung für die Ausführung sämtlicher Leistungen;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.2;Vorhaltung der Baustelleneinrichtung;14,0;Mon;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.3;Rückbau und vollständige Räumung der Baustelleneinrichtung;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.4;Bauschild-Gerüst;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.5;Demontage und Entsorgung Bauschild;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.6;Stahlplatten;5,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.7;Vorhaltung Stahlplatten;272,0;St/W;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.8;Stahlplatten;50,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.9;Vorhaltung Stahlplatten;50,0;St/W;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.10;Bauseits gelieferte Bauschilder, Größe: ca. 3,00 x 1,50 m,;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.11;Bauseits gelieferte Bauschilder, Größe: ca. 0,50 x 1,50 m;4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.12;Bauseits gelieferte Bauschilder, Größe: ca. 0,15 x 1,50 m;40,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.13;Meterrisse in den Etagen;14,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.14;Absturzsicherung als Seitenschutz;522,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.15;Waagerechte Montagegerüste im Aufzugsschacht;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.16;Waagerechte Montagegerüste im Aufzugsschacht;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.17;horizonatale  Absturzsicherung vor Aufzugsschachttür;6,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.18;Behelfsmäßige Schutzvorrichtung herstellen, vorhalten und beseitigen;100,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.19;Bautür, provisorisch;5,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.20;Öffnungen mit Holzplatten schließen, bis 5 m²;5,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.21;Öffnungen mit Holzplatten schließen, größer 5 bis 10 m²;5,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.22;Öffnungen mit Holzplatten schließen, größer  10 m²;20,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.23;Öffnungen mit Folie schließen, bis 5 m²;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.24;Öffnungen mit Folie schließen, größer 5 bis 10 m²;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.25;Öffnungen mit Folie schließen, größer 10 m²;40,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.26;Fluchtwegbeleuchtung - Lichtschlauch;600,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.27;Vorhaltung Fluchtwegbeleuchtung - Lichtschlauch;97891,0;m/Wo;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.28;Feuerlöscher für Baustellenzeit;4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.29;"Baureinigung - fegen, ""besenrein""";11075,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.30;Schuttcontainer 6 - 7 m3;10,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.31;Schuttcontainer 3 m3;5,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.32;Deponiegebühren für reinen mineralischen Bauschutt;20,0;t;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.33;Deponiegebühren für gemischten Baustellenschutt (Mischmüll);20,0;t;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.34;Deponiegebühren für Folien, PVC, PE etc.;3,0;t;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+01.35;Deponiegebühren für Abfallholz, Bauholz, Palettenholz;5,0;t;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+02.1;Nachweisführung DGNB;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+02.2;Anmeldung als Baustelle der Überwachungklasse 2;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+02.3;An- und Abfahrt eines Laborwagen;20,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+02.4;Herstellung und Lagerung von Probewürfeln;60,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+02.5;Erstellung und Pflege eines Betoniertagebuches;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+02.6;Nachbehandlungsnachweis zur Betonage aller Bauteile;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+02.7;Ausführungs- und Werkplanung Fugenabdichtung;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0301.1;Bodenaushub für Gründungsarbeiten - Schotter;502,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0301.2;Bodenaushub für Gründungsarbeiten- Feinsand;815,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0301.3;Bodenaushub - Unterfahrten;345,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0301.4;Bodenaushub - Unterfahrten inkl. lagern;75,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0301.5;seitlich gelagerten Sand einbauen;201,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0301.6;Bodenaushub Feinsand entsorgen;1160,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0301.7;Humöse Bodenaushub Sandkiesmischung entsorgen;100,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0301.8;seitlich gelagerten Schotter einbauen;502,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0301.9;Planum Schottertragschicht;30,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0301.10;Wiederherstellung Planum Schotterfläche;1823,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0301.11;Prüfen auf Verformungsmodul (EV2);4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0301.12;Graben für Entwässerungsleitungen, bis 1,50 m;351,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0301.13;Graben für Entwässerungsleitungen, bis 1,75 m;35,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0301.14;Bodenaushub für Fettabscheider + Schächte;48,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0301.15;Grabenverbau bis 1,75 m;25,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0301.16;Bodenaushub Feinsand entsorgen;20,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0301.17;Humöse Bodenaushub Sandkiesmischung entsorgen;30,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0301.18;Boden für Leitungszone liefern u. einbauen;5,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0301.19;Kontrollprüfungen der Rohrgrabenverfüllung;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.1;Vollwandrohre PP DN/OD 100, SN 10;28,5;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.2;Vollwandrohre PP DN/OD 125, SN 10;23,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.3;Vollwandrohre PP DN/OD 150, SN 10;46,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.4;Vollwandrohre PP DN/OD 200, SN 10;39,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.5;Bogen für Vollwandrohr PP DN/OD 100, SN 10;11,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.6;Bogen für Vollwandrohr PP DN/OD 125, SN 10;8,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.7;Bogen für Vollwandrohr PP DN/OD 150, SN 10;13,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.8;Abzweig für Vollwandrohr PP DN/OD 150, SN 10;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.9;Abzweig für Vollwandrohr PP DN/OD 200, SN 10;4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.10;Reduzierung für Vollwandrohr PP DN/OD 150, SN 10;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.11;Reduzierung für Vollwandrohr PP DN/OD 200, SN 10;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.12;Schiebemuffe für Vollwandrohr PP DN/OD 100, SN 10;4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.13;Schiebemuffe für Vollwandrohr PP DN/OD 125, SN 10;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.14;Schiebemuffe für Vollwandrohr PP DN/OD 150, SN 10;4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.15;Schiebemuffe für Vollwandrohr PP DN/OD 200, SN 10;5,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.16;Vollwandrohre PP DN/OD 100, SN 10;341,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.17;Vollwandrohre PP DN/OD 125, SN 10;22,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.18;Vollwandrohre PP DN/OD 150, SN 10;21,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.19;Vollwandrohre PP DN/OD 200, SN 10;4,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.20;Bogen für Vollwandrohr PP DN/OD 100, SN 10;100,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.21;Bogen für Vollwandrohr PP DN/OD 125, SN 10;4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.22;Bogen für Vollwandrohr PP DN/OD 150, SN 10;4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.23;Abzweig für Vollwandrohr PP DN/OD 100, SN 10;38,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.24;Abzweig für Vollwandrohr PP DN/OD 125, SN 10;10,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.25;Abzweig für Vollwandrohr PP DN/OD 150, SN 10;10,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.26;Abzweig für Vollwandrohr PP DN/OD 200, SN 10;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.27;Schiebemuffe für Vollwandrohr PP DN/OD 100, SN 10;34,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.28;Schiebemuffe für Vollwandrohr PP DN/OD 125, SN 10;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.29;Schiebemuffe für Vollwandrohr PP DN/OD 150, SN 10;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.30;Vollwandrohre PP DN/OD 100, SN 10;25,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.31;Vollwandrohre PP DN/OD 125, SN 10;2,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.32;Vollwandrohre PP DN/OD 150, SN 10;10,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.33;Bogen für Vollwandrohr PP DN/OD 100, SN 10;11,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.34;Bogen für Vollwandrohr PP DN/OD 125, SN 10;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.35;Bogen für Vollwandrohr PP DN/OD 150, SN 10;4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.36;Abzweig für Vollwandrohr PP DN/OD 100, SN 10;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.37;Abzweig für Vollwandrohr PP DN/OD 125, SN 10;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.38;Abzweig für Vollwandrohr PP DN/OD 150, SN 10;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.39;Schiebemuffe für Vollwandrohr PP DN/OD 100, SN 10;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.40;Schiebemuffe für Vollwandrohr PP DN/OD 125, SN 10;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.41;Schiebemuffe für Vollwandrohr PP DN/OD 150, SN 10;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.42;NBR Ersatzlippendichtring DN/OD 100;34,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.43;NBR Ersatzlippendichtring DN/OD 125;6,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.44;NBR Ersatzlippendichtring DN/OD 150;13,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.45;Kontrollschacht PP DN400 mit Teleskop D400 T 1,75-2m Ablauf DN100 Zulauf DN100;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.46;Mauerkragen DN100;63,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.47;Mauerkragen DN125;4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.48;Mauerkragen DN150;4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.49;Mauerkragen DN200;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.50;Enddeckel für Vollwandrohr PP DN/OD 100, SN 10;61,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.51;Enddeckel für Vollwandrohr PP DN/OD 125, SN 10;4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.52;Enddeckel für Vollwandrohr PP DN/OD 150, SN 10;4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.53;Enddeckel für Vollwandrohr PP DN/OD 200, SN 10;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.54;Ortungsband, DIN 54841-3, Achtung Abwasserleitung, grün, 40 mm liefern und verlegen;547,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.55;Dichtheitsprüfung DN 100-250;546,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.56;Kanal reinigen, DN 100-250;546,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.57;TV-Kanalprüfung des Regen- u. Schmutzwasserkanals;546,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.58;Abwasserdruckrohren aus PE 100-RC, DN100;12,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.59;PE-100 Universalbogen, DN100;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.60;PE-100 Elektroschweißmuffe;7,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.61;Ortungsband, DIN 54841-3, Achtung Abwasserleitung, grün, 40 mm liefern und verlegen;12,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.62;Dichtheitsprüfung DN 100;12,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.63;Fettabscheider 3-in-1 Kompaktanlage NS7;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.64;Klar-/Schmutzwasser-Tauchpumpe;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.65;Zugkette;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.66;Schäkel für Zugkette;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.67;Pumpensteuerung für Doppelpumpe;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.68;Schachtaufbau;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.69;Auflagering;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.70;Schachtring;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.71;Staudruckglockenset, offen;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.72;Montage der v.g. Fettabscheideranlage;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.73;Generalinspektion Fettabscheider;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.74;Inbetriebnahme Fettabscheider;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0302.75;Lieferung Betriebstagebuch für Fettabscheider;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0303.1;Perimeterdämmung unter Sohle, d=180mm;1173,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0303.2;Perimeterdämmung im Bereich der Vouten, d = 180 mm;412,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0303.3;Perimeterdämmung senkrechte Fundamentflächen, d = 180 mm;132,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0303.4;Perimeterdämmung waagerechte Fundamentflächen, d = 180 mm;110,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0303.5;Noppenbahn mit Filtervlies;110,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0303.6;Außenwandflächen vorbereiten;208,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0303.7;Hohlkehle mit Dichtungsmörtel;207,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0303.8;Voranstrich für Dickbeschichtung;208,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0303.9;Abdichtung des EG-Sockels;208,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0303.10;Abdichtung der Bodentiefen Fensteranlagen;65,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.1;Randschalung Bodenplatte Aufzugsunterfahrt- / ELT Hauseinführung;41,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.2;Ortbeton (WU-Beton) der Bodenplatte Aufzugsunterfahrt- / ELT Hauseinführung;43,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.3;Schalung Wände Aufzugsunterfahrt- / ELT Hauseinführung;122,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.4;Ortbeton (WU-Beton) Wände Aufzugsunterfahrt- / ELT Hauseinführung;31,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.5;Sauberkeitsschicht, C12/15, 5 cm unter Fundamenten;1513,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.6;Trennlage, PE-Folie 0,5 mm, 2-lagig unter Fundamenten;1513,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.7;Schalung der Einzel-und Streifenfundamente;131,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.8;Ortbeton der Streifenfundamente;451,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.9;Ortbeton der Einzelfundamente;58,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.10;Voutenausbildung der Bodenplatte / Einzel- und Streifenfundamente;129,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.11;Sauberkeitsschicht, C12/15, 5 cm, unter der Bodenplatte;1375,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.12;Trennlage, PE-Folie 0,2 mm, 2-lagig unter Bodenplatte;1375,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.13;Randschalung der Bodenplatten;134,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.14;Randschalung der Vertiefung Sohle für Bodeneinlauf;7,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.15;Ortbeton der Bodenplatte;894,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.16;Schalung Außenwände;2210,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.17;Schalung für Fenster- / Türleibungen;270,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.18;Ortbeton Außenwände;300,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.19;Schalung Aufzug- Innenwände;4210,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.20;Schalung für Türleibungen;100,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.21;Ortbeton Aufzug- Innenwände;560,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.22;Zulage Sichtbetonqualität SB 3;860,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.23;Zulage Wandschalung, schräge Oberkante parallel zum Treppenlauf;130,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.24;Zulage Schalung Wandhöhe bis 9,50 m;80,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.25;Schalung der Stützen, EG - 2.OG;480,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.26;Ortbeton der Stützen, EG - 2.OG;40,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.27;Schalung Stützen EG, 30*30cm;10,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.28;Ortbeton Stützen EG, 30*30cm;1,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.29;Schalung Stützen EG, rund, DN 35 cm;20,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.30;Ortbeton Stützen EG, DN 35 cm;2,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.31;Schalung der Unter- / Überzüge / Brüstung / Attika;1560,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.32;Ortbeton der Unter- / Überzüge / Brüstung / Attika;186,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.33;Schalung Unterzug (Verbundträger);30,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.34;Ortbeton Unterzug (Verbundträger);10,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.35;Schalung Konsolen als Deckenauflager;180,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.36;Beton Konsolen als Deckenauflager;10,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.37;Werkplanung Stahlbeton-Halbfertigteilwände;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.38;Halbfertigteilwände als Außenwand;333,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.39;Öffnungen in Halbfertigteilwände;14,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.40;Ortbetonfüllung der Halbfertigteilwände;60,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.41;Halbfertigteilwände als Innenwand;1646,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.42;Öffnungen in Halbfertigteilwände;92,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.43;Schalung für Wandleibungen (Halbfertigteilwände);111,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.44;Ortbetonfüllung der Halbfertigteilwände;252,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.45;Werk- und Montageplanung Halbfertigteildecken;0,0;;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.46;Systemdecke aus Fertigteilen, C 35/45, d = 6 cm;5618,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.47;Zulage unterstützungsfreie Verlegung Halbfertigteildecke;132,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.48;Randschalung Deckenplatten;266,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.49;Randschalung für Deckenversprung der Decke, Höhe 5 cm;33,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.50;Ortbeton der oberen Stahlbetonvergussschicht;1073,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.51;Öffnungen in Systemdecke im Bereich der Dachfenster;4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.52;Zulage HFT-Decke, Ortbeton-Deckenstreifen bei indirekter Lagerung;120,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.53;Werkplanung Hohlkörperdecke;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.54;Montagekonzept;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.55;Spannbeton Hohlplatten (Spannbetonhohldiele), Decken, d = 265 mm;723,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.56;Verguss der vorg. Deckenplatten;723,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.57;Werk- und Montageplanung Stahlbeton-Fertigteiltreppen;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.58;Betonfertigteil - Treppenlauf, 13 Stg.;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.59;Betonfertigteil - Treppenlauf, 12 Stg.;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.60;Betonfertigteil - Treppenlauf, 12 Stg., 16,9/29 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.61;Betonfertigteil - Treppenlauf, 13 Stg., 16,8/29 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.62;Betonfertigteil - Treppenlauf, 13 Stg., 16,8/29 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.63;Betonfertigteil - Treppenlauf, 12 Stg., 16,9/29 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.64;Betonfertigteil - Treppenlauf, 12 Stg., 16,8/29 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.65;Betonfertigteil - Treppenlauf, 12 Stg., 16,9/29 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.66;Betonfertigteil - Treppenlauf, 3 Stg., 16,9/29 cm, 1 und 2 Lauf;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.67;Betonfertigteil - Treppenlauf, 18 Stg., 16,9/29 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.68;Betonfertigteil - Treppenlauf, 12 Stg. mit Podest;5,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.69;Betonfertigteil - Treppenlauf, 15 Stg.;5,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.70;Randschalung der Haupt- und Zwischenpodeste;13,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.71;Unterseitige glatte Schalung der Zwischenpodeste;48,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.72;Unterseitige glatte Schalung der Hauptpodeste;52,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.73;Ortbeton der Podeste;28,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.74;Auflagertaschen in Betonwänden für Zwischenpodeste;20,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.75;Kernbohrungen in Stahlbetonbauteilen, DN 50;250,0;cm;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.76;Kernbohrungen in Stahlbetonbauteilen, DN 100;250,0;cm;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.77;Kernbohrungen in Stahlbetonbauteilen, DN 125;200,0;cm;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.78;Kernbohrungen in Stahlbetonbauteilen, DN 160;200,0;cm;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.79;Kernbohrungen in Stahlbetonbauteilen, DN 200;200,0;cm;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.80;Wanddurchbrüche, Größe bis 250 cm², Wandstärke 25-30 cm;15,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.81;Wanddurchbrüche, größer 250 bis 500 cm², Wandstärke 25-30 cm;54,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.82;Wanddurchbrüche, größer 500 bis 1000 cm², Wandstärke 25-35 cm;118,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.83;Wanddurchbrüche, größer 1000 bis 2000 cm², Wandstärke 25-35cm;29,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.84;Wanddurchbrüche, größer 2000 bis 4000 cm², Wandstärke 25-35 cm;21,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.85;Wanddurchbrüche, größer 4000 bis 8000 cm², Wandstärke 25-35 cm;16,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.86;Wanddurchbrüche, größer 8000 bis 12000 cm², Wandstärke 25-35 cm;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.87;Deckendurchbrüche, Größe bis 250 cm², Deckenstärke 25-30 cm;23,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.88;Deckendurchbrüche, größer 250 bis 500 cm², Deckenstärke 25-30 cm;41,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.89;Deckendurchbrüche, größer 500 bis 1000 cm², Deckenstärke 25-30 cm;78,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.90;Deckendurchbrüche, größer 1000 bis 2000 cm², Deckenstärke 25-30 cm;5,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.91;Deckendurchbrüche, größer 2000 bis 6000 cm², Deckenstärke 25-30 cm;36,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.92;Deckendurchbrüche, größer 6000 bis 12000 cm², Deckenstärke 25-30 cm;25,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.93;Deckendurchbrüche, größer 12000 bis 25000 cm², Deckenstärke 25-30 cm;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.94;Wanddurchbrüche, Größe bis 250 cm², Wandstärke 25-30 cm;15,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.95;Wanddurchbrüche, größer 250 bis 500 cm², Wandstärke 25-30 cm;54,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.96;Wanddurchbrüche, größer 500 bis 1000 cm², Wandstärke 25-35 cm;118,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.97;Wanddurchbrüche, größer 1000 bis 2000 cm², Wandstärke 25-35cm;29,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.98;Wanddurchbrüche, größer 2000 bis 4000 cm², Wandstärke 25-35 cm;21,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.99;Wanddurchbrüche, größer 4000 bis 8000 cm², Wandstärke 25-35 cm;16,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.100;Wanddurchbrüche, größer 8000 bis 12000 cm², Wandstärke 25-35 cm;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.101;Deckendurchbrüche, Größe bis 250 cm², Deckenstärke 25-30 cm;23,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.102;Deckendurchbrüche, größer 250 bis 500 cm², Deckenstärke 25-30 cm;41,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.103;Deckendurchbrüche, größer 500 bis 1000 cm², Deckenstärke 25-30 cm;78,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.104;Deckendurchbrüche, größer 1000 bis 2000 cm², Deckenstärke 25-30 cm;5,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.105;Deckendurchbrüche, größer 2000 bis 6000 cm², Deckenstärke 25-30 cm;36,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.106;Deckendurchbrüche, größer 6000 bis 12000 cm², Deckenstärke 25-30 cm;25,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.107;Deckendurchbrüche, größer 12000 bis 25000 cm², Deckenstärke 25-30 cm;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.108;Schlitze in Stahlbeton, 15 x 10 cm;25,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.109;Schlitze in Stahlbeton, 20 x 10 cm;25,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.110;Schlitze in Stahlbeton, 25 x 10 cm;25,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.111;Wandöffnung -Feuerlöschschrank, 32 x 72 x 19 cm;9,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.112;Wandöffnung -Feuerlöschschrank, 35 x 75 x 5 cm;4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.113;Wandöffnung -Feuerlöschschrank, 90 x 90 x 10 cm;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.114;Wandöffnung für HKV 7UP;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.115;Wandöffnung für HKV 7UP;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.116;Wandöffnung für FIZ;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.117;Betonstabstahl, B500A / B500B;394,0;t;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.118;Baustahlmatten, B500A / B500B;36,0;t;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.119;Betonstahl für Abstandhalter und Unterstützungen;7,0;t;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.120;Betonstabstahl, B500A / B500B Fertigteiltreppen;15,0;t;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.121;Bewehrungsrückbiegeanschlüsse;165,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.122;Bewehrungsrückbiegeanschlüsse;185,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.123;Maueranschlussschienen, Profil 28/15 mm;30,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.124;Bewehrungsschraubanschlüsse, D = 10 - 16 mm;20,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.125;Bewehrungsschraubanschlüsse, D = 20 - 28 mm;20,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.126;Durchstanzbewehrung, Deckenplatten h = 25 cm;400,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.127;Durchstanzbewehrung, Deckenplatten h = 40 cm;40,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.128;Nachträgliche Bewehrungsanschlüsse, D = 8-12 mm, b = 20 cm;20,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.129;Nachträgliche Bewehrungsanschlüsse, D = 8-12 mm, 20 bis 45 cm;20,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.130;Nachträgliche Bewehrungsanschlüsse, D = 14-16 mm, bis 30 cm;10,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.131;Nachträgliche Bewehrungsanschlüsse, D = 14-16 mm, 30 bis 60 cm;10,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.132;Schallschutztronsolen / Elastomerlager;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.133;Stahlwinkel 100 x 100 x 10 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.134;Tronsole Treppenantritt, Bodenplatte;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.135;Tronsole Treppenaustritt, Podesten;14,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.136;Tronsole Treppenaustritt, Podesten;4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.137;Tronsole Treppenaustritt, Sitzstufenanlage EG;4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.138;Tronsole Treppenaustritt, Treppe 1. OG  2. OG;12,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.139;Fugenplatte Treppenlauf;50,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.140;Dauerelastische Fuge (Treppenlauf / Podest);50,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.141;Fugenblech für Arbeitsfugenabdichtung und Sollrissfugen in WU-Bauteilen;120,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.142;Abschalelement für Arbeitsfugen in Bodenplatte;80,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.143;Arbeitsfugen in Deckenplatten;124,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.144;Lasthaken, Schachtdecke Aufzug;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.145;Elementbewehrung, Gitterträger;1000,0;kg;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0305.146;Elementbewehrung, Stabstahl;1000,0;kg;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.1;Revisionsschacht - Beton;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.2;Doppel-Dichtpackung 1-fach Paket;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.3;Doppel-Dichtpackung 2-fach Paket;4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.4;Doppel-Dichtpackung 4-fach Paket;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.5;Systemdeckel zur Anbindung von Kabelschutzrohr  Ø 160 mm;18,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.6;"Kabelschutzrohr Ø 160 mm; biegsam; außen gewellt/ innen glatt, 450 N";180,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.7;Verbindungskasten ca. 128 x 128 x 80 mm, 2-teilig;40,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.8;Verbindungskasten ca. 180 x 180 x 84 mm, 2-teilig;15,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.9;Geräte-Verbindungsdose für Ortbeton;140,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.10;Groß-Geräte-Verbindungsdose für Ortbeton;50,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.11;Geräte-Einbaudose für Halbschalenwände/Elementwände;140,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.12;Groß-Geräte-Verbindungsdose für Halbschalenwände/Elementwände;50,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.13;End- und Übergangstülle bis Ø 32 mm;200,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.14;Wandauslassadapter, bis Ø 32 mm;50,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.15;Wand- und Deckenkrümmer bis 30° für Betonbauinstallation bis Ø 25 mm;75,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.16;Wand- und Deckenkrümmer bis 30° für Betonbauinstallation bis Ø 32 mm;30,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.17;Elektroinstallationsrohr PVC-U AD 20 mm Beton;50,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.18;Elektroinstallationsrohr PVC-U AD 25 mm Beton;300,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.19;Elektroinstallationsrohr PVC-U AD 32 mm Beton;700,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.20;Montage und Einbetonieren von Ankerschienen;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.21;Montage und Einbetonieren von Rüsthülsen;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0306.22;Montage und Einbetonieren von Mauerkästen;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.1;Waagerechte Abdichtung, 11,5 cm;74,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.2;Sperrfolie auf KS Mauerwerk b = 11,5 cm;74,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.3;Dämmstein als erste Schicht b = 11,5 cm;74,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.4;Mauerwerk aus KS, d = 11,5 cm;280,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.5;Schrägschnitte im Neigungsverlauf unten Treppenlauf Wandstärke 11,5 cm;5,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.6;Zulage Fugenglattstrich;35,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.7;Fenster- / Türleibungen 11,5 cm Stärke anlegen;48,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.8;Öffnungen für Türbreiten 0,76 x 2,26 m im 11,5 cm breiten Mauerwerk;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.9;Öffnungen für Türbreiten 1,01 x 2,26 m im 11,5 cm breiten Mauerwerk;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.10;Öffnungen für Türbreiten 1,135 x 2,01 m im 11,5 cm breiten Mauerwerk;7,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.11;Maueranschlussanker für Mauerwerk in Dünnbettmörtel;179,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.12;Herstellen von Schlitzen B 10-15 cm, T 5-10 cm;10,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.13;Herstellen von Schlitzen B 15-20cm T 5-10 cm;10,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.14;Herstellen von Schlitzen B 20-30 cm T 5-10 cm;10,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.15;Herstellen von Schlitzen B 40-50 cm T 5-10 cm;10,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.16;Wanddurchbrüche, Größe bis 250 cm², Wandstärke 11,5 cm;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.17;Wanddurchbrüche, größer 250 bis 500 cm², Wandstärke 11,5 cm;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.18;Wanddurchbrüche, größer 500 bis 1000 cm², Wandstärke 11,5 cm;17,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.19;Wanddurchbrüche, größer 1000 bis 2000 cm², Wandstärke 11,5 cm;5,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.20;Wanddurchbrüche, größer 2000 bis 3500 cm², Wandstärke 11,5 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.21;Wanddurchbrüche, größer 3500 bis 12000 cm², Wandstärke 11,5 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.22;Wanddurchbrüche, Größe bis 250 cm², Wandstärke 11,5 cm;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.23;Wanddurchbrüche, größer 250 bis 500 cm², Wandstärke 11,5 cm;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.24;Wanddurchbrüche, größer 500 bis 1000 cm², Wandstärke 11,5 cm;17,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.25;Wanddurchbrüche, größer 1000 bis 2000 cm², Wandstärke 11,5 cm;5,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.26;Wanddurchbrüche, größer 2000 bis 3500 cm², Wandstärke 11,5 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0307.27;Wanddurchbrüche, größer 3500 bis 12000 cm², Wandstärke 11,5 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0308.1;Montagekonzept;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0308.2;Werkplanung + Statik;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0308.3;Schwertransportgenehmigungen;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0308.4;Durchbruch DN 200 in Bindersteg;12,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0308.5;Spannbetonbinder;6,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0308.6;Betonstabstahl;4,0;to;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0308.7;Spannstahl St 1570/1770 und/oder St 1660/1860;4,0;t;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0308.8;Brandschutzschnur mit Versiegelung zwischen Beton und Betonfertigteil;16,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0401.1;Vlies als Unterlage unter Baustraße;375,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0401.2;Baustraße d=30cm;116,0;m3;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0401.3;Baustelle einrichten für das Einbringen der Träger;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0401.4;Tragwerksplanung;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0401.5;Stahlträger liefern und einbringen, Abstand 3,00 m;29,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0401.6;Daueranker / Litzenanker herstellen;27,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0401.7;Eignungs- und Abnahmeprüfung der Anker;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0401.8;Fußausbildung der Verbaupfosten;29,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0401.9;Trägerbohlwand herstellen mit Holzausfachungen;306,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0401.10;Vorhandene Stahlträgerkonstruktion ausbauen;29,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0401.11;Zulage: Durchörterung von Hindernissen;5,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0401.12;Baustillstand des Bohrgerätes;5,0;h;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.1;Bodenaushub der Baugrube - aufgefüllter Sand;6520,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.2;Entsorgung Bodenaushub aufgefüllter Sand;8955,0;to;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.3;Bodenaushub der Baugrube - Geschiebesand/Kies;3465,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.4;Entsorgung Bodenaushub Geschiebesand/Kies;6930,0;to;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.5;Bodenaushub der Baugrube - Geschiebelehm;3563,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.6;Entsorgung Bodenaushub Geschiebelehm;9038,0;to;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.7;Bodenaushub der Baugrube - Tonstein;2095,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.8;Entsorgung Bodenaushub - Tonstein;3509,0;to;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.9;Bodenaushub der Baugrube - Tonstein;596,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.10;Entsorgung Bodenaushub - Tonstein;1370,8;to;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.11;Bodenaustausch;1500,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.12;Nachverdichtung Sandböden / Auffüllung;1030,0;m2;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.13;Böschungsschutz durch Folienabdeckung;630,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.14;Flächenfilterschotter als Böschungsanfüllung;729,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.15;Seitlich gelagerter Feinsand zum Verfüllen der Arbeitsräume;1052,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.16;Bodenaushub für Gründungsarbeiten- Funbdamente+Vertiefungen;956,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.17;Filterschicht aus Natursteinschotter 0/45, d=20-30cm;1334,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.18;Handschachtung auf besondere Anordnung des AG;10,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.19;Seitlichen Boden einbauen und verdichten (Böschung Aufzugsunterfahrt);35,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.20;Prüfen auf Verformungsmodul (EV2);8,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.21;Herstellung Schotterrampe aus RC-Material;569,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.22;Graben für Entwässerungsleitungen, bis 1,50 m;314,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.23;Bodenaushub für Leitungen bis 1,75 m Tiefe;200,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.24;Verbau für Rohrgraben ab 1,75 m;60,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.25;Verbau für Schachtbauwerke;30,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.26;Boden für Leitungszone liefern u. einbauen;5,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.27;Kontrollprüfungen der Rohrgrabenverfüllung;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.28;Drainageschacht als Kunststoffschacht, DN 600 mm, außerhalb des;6,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.29;Drainageschacht als Kunststoffschacht, DN 600 mm, außerhalb des;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.30;Sickergraben, Aushub abfahren;44,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.31;Stangenrohre vliesummantelt;283,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.32;Kupplungen für Stangendrainage DN 200;62,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.33;Drainagekies liefern und einbauen;44,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.34;Elektrotauchpumpe, 10 bis 30 m3/h;4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0402.35;Vorhaltung Elektrotauchpumpe;176,0;StWo;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.1;Vollwandrohre PP DN/OD 100, SN 10;6,5;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.2;Vollwandrohre PP DN/OD 125, SN 10;22,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.3;Vollwandrohre PP DN/OD 150, SN 10;32,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.4;Vollwandrohre PP DN/OD 200, SN 10;42,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.5;Vollwandrohre PP DN/OD 250, SN 10;25,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.6;Bogen für Vollwandrohr PP DN/OD 100, SN 10;3,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.7;Bogen für Vollwandrohr PP DN/OD 125, SN 10;2,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.8;Bogen für Vollwandrohr PP DN/OD 150, SN 10;10,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.9;Bogen für Vollwandrohr PP DN/OD 200, SN 10;1,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.10;Bogen für Vollwandrohr PP DN/OD 250, SN 10;1,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.11;Abzweig für Vollwandrohr PP DN/OD 200, SN 10;2,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.12;Abzweig für Vollwandrohr PP DN/OD 250, SN 10;2,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.13;Reduzierung für Vollwandrohr PP DN/OD 125, SN 10;1,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.14;Reduzierung für Vollwandrohr PP DN/OD 150, SN 10;3,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.15;Reduzierung für Vollwandrohr PP DN/OD 200, SN 10;2,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.16;Reduzierung für Vollwandrohr PP DN/OD 250, SN 10;3,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.17;Schiebemuffe für Vollwandrohr PP DN/OD 100, SN 10;1,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.18;Schiebemuffe für Vollwandrohr PP DN/OD 125, SN 10;2,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.19;Schiebemuffe für Vollwandrohr PP DN/OD 150, SN 10;4,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.20;Schiebemuffe für Vollwandrohr PP DN/OD 200, SN 10;4,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.21;Schiebemuffe für Vollwandrohr PP DN/OD 250, SN 10;1,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.22;Vollwandrohre PP DN/OD 100, SN 10;379,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.23;Vollwandrohre PP DN/OD 125, SN 10;55,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.24;Vollwandrohre PP DN/OD 150, SN 10;22,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.25;Bogen für Vollwandrohr PP DN/OD 100, SN 10;162,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.26;Bogen für Vollwandrohr PP DN/OD 125, SN 10;7,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.27;Bogen für Vollwandrohr PP DN/OD 150, SN 10;2,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.28;Abzweig für Vollwandrohr PP DN/OD 100, SN 10;59,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.29;Abzweig für Vollwandrohr PP DN/OD 125, SN 10;18,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.30;Abzweig für Vollwandrohr PP DN/OD 150, SN 10;21,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.31;Schiebemuffe für Vollwandrohr PP DN/OD 100, SN 10;38,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.32;Schiebemuffe für Vollwandrohr PP DN/OD 125, SN 10;5,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.33;Schiebemuffe für Vollwandrohr PP DN/OD 150, SN 10;2,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.34;Reinigungsverschluss DN100;2,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.35;Mauerkragen DN100;81,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.36;Mauerkragen DN125;3,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.37;Mauerkragen DN150;3,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.38;Enddeckel für Vollwandrohr PP DN/OD 100, SN 10;81,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.39;Enddeckel für Vollwandrohr PP DN/OD 125, SN 10;3,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.40;Enddeckel für Vollwandrohr PP DN/OD 150, SN 10;3,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.41;Ortungsband, DIN 54841-3, Achtung Abwasserleitung, grün, 40 mm liefern und verlegen;610,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.42;Dichtheitsprüfung DN 100-250;610,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0403.43;Kanal reinigen, DN 100-250;610,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.1;RW-Schacht S.1.1, DN 1000, 1 Ablauf, 1 Zulauf, Höhe 3,52m;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.2;RW-Schacht S.1.2, DN 1000, 1 Ablauf, 1 Zulauf, Höhe 2,91m;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.3;RW-Schacht S.1.3, DN 1000, 1 Ablauf, 2 Zulauf, Höhe 1,37m;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.4;RW-Schacht S.1.4, DN 1000, 1 Ablauf, 2 Zulauf, Höhe 3,40m;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.5;RW-Schacht S.2.1, DN 1000, 1 Ablauf, 1 Zulauf, Höhe 5,91m;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.6;Zulage für außenliegenden Absturz;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.7;Schachtabdeckung Klasse D 400, rund;5,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.8;Bettungs- und Schutzlage aus Sand DN 160 bis DN 200;140,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.9;Bettungs- und Schutzlage aus Sand DN 250 bis DN 315;60,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.10;PP-MD-Rohre DN/OD 160 liefern und einbauen;95,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.11;PP-MD-Bögen, alle Grade, DN 160;8,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.12;PP-MD-Abzweig, DN 160;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.13;PP-MD-Rohre DN/OD 200 liefern und einbauen;45,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.14;PP-MD-Bögen, alle Grade, DN 200;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.15;PP-MD-Abzweig, DN 160 > DN 200;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.16;PP-HM-Rohre, DN/OD 250 liefern und einbauen;50,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.17;PP-MD-Rohre, DN/OD 315 liefern und einbauen;10,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.18;Herstellen des Anschlusses an Lichtschächte;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.19;Herstellen des Anschlusses der neu verlegten Abwasserleitung;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.20;Dichtheitsprüfung Wasser Abwasserkanal DN110 bis DN 315 haltungsweise Verfahren W;200,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0404.21;Kamerabefahrung Kanalrohre;200,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0405.1;Perimeterdämmung unter Sohle, d=140mm;4141,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0405.2;Perimeterdämmung im Bereich der Vouten, d = 140 mm;116,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0405.3;Perimeterdämmung senkrechte Fundamentflächen, d = 100 mm;274,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0405.4;Perimeterdämmung senkrechte Wandächen, d = 140 mm;728,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0405.5;Perimeterdämmung waagerechte Fundamentflächen, d = 140 mm;41,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0405.6;Perimeterdämmung waagerechte Deckenflächen, d = 140 mm;125,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0405.7;Noppenbahn mit Filtervlies;1043,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0405.8;Außenwandflächen vorbereiten;455,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0405.9;Hohlkehle mit Dichtungsmörtel;284,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0405.10;Voranstrich für Dickbeschichtung;455,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0405.11;Abdichtung des EG-Sockels;455,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0405.12;Abdichtung der Bodentiefen Fensteranlagen;65,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0406.1;Werk- und Montageplanung zur Verlegung FBVS;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0406.2;FBV System in horizontalen Bereichen der Bodenplatte;4158,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0406.3;FBV System in vertikalen Bereichen der Bodenplatte;196,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0406.4;Zulage für die Ausbildung von Vouten;221,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0406.5;Zulage für die unterlaufsichere Ausbildung der Fugenabschalung;273,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0406.6;Planmäßig vorinstallierte Rohrdurchführung mit FBV-Dichtmanschette/Dichtkragen DN100;81,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0406.7;Planmäßig vorinstallierte Rohrdurchführung mit FBV-Dichtmanschette / Dichtkragen DN125;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0406.8;Planmäßig vorinstallierte Rohrdurchführung mit FBV-Dichtmanschette / Dichtkragen DN150;6,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0406.9;Dichtstreifen in Arbeitsfuge Sohle-Wand mi Bodenplattenüberstand inkl. Anschluss zu bestehenden FBV System;309,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0406.10;Herstellung eines Anschlusses zwischen einer vorhandenen;155,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0406.11;FBV System im Bereich zweihäuptig geschalter Wände;679,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0406.12;Abdichtung von Spannstellen in WU-Betonkonstruktionen;722,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0406.13;Anschluss einer  Mehrspartendichtung;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0406.14;Planmäßig vorinstallierte Rohrdurchführung mit FBV-Dichtmanschette/Dichtkragen DN100;15,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0406.15;Planmäßig vorinstallierte Rohrdurchführung mit FBV-Dichtmanschette / Dichtkragen DN125;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0406.16;FBV-Dichtmanschette / Dichtkragen DN150;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0406.17;Anschluss eines Fugenbandes an Lichtschacht;16,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0406.18;liefern und fachgerechtes Verarbeiten eines streifenförmigen;18,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0406.19;Herstellen eines haftfähigen Übergangsbereiches zwischen einer;144,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.1;Montageöffnung für Betonfertigteile;1,0;Psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.2;Randschalung Bodenplatte Aufzugsunterfahrt- / Pumpensumpf;11,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.3;Ortbeton der Bodenplatte Aufzugsunterfahrt- / Pumpensumpf;9,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.4;Schalung Wände Aufzugsunterfahrt- / Pumpensumpf;62,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.5;Ortbeton Wände Aufzugsunterfahrt- / Pumpensumpf;15,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.6;Magerbetonauffüllung;50,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.7;Sauberkeitsschicht, C12/15, 5cm unter Sohle- / Streifenfundamente;2474,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.8;Trennlage, PE-Folie 0,2 mm, 2-lagig, unter Sohle- / Streifenfundamente;2474,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.9;Schalung der Streifenfundamente;23,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.10;Randschalung der Sohle, 0,50 bis 0,70 m;152,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.11;Randschalung der Sohle 0,25m;66,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.12;Randschalung der Vertiefung Sohle für Bodeneinlauf;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.13;Schalung der Bodenhülse Typ 1, Sohle 70 cm;10,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.14;Ortbeton der Streifenfundamente, h = 45 cm;69,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.15;Voutenausbildung der Bodenplatte und Streifenfundamente;25,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.16;Ortbeton der Sohle, h = 70 cm;1522,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.17;Nachträgliche Herstellung eines Sohlabschnittes in Ortbeton;500,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.18;Sauberkeitsschicht, C12/15, 5 cm, Bodenplatte;1759,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.19;Trennlage, PE-Folie 0,2 mm, 2-lagig unter Bodenplatte;1759,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.20;Randschalung der Bodenplatten;13,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.21;Randschalung für die Bodenplatte, Höhe 5 cm;160,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.22;Schalung der Bodenhülse Typ 1, 25 x 25 cm, im Bodenplatte;32,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.23;Schalung der Bodenhülse Typ 2, 35 x 35 cm, im Bodenplatte;10,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.24;Ortbeton der Bodenplatte;497,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.25;Verstärkungsring der Bodenplatte im Bereich Bodenhülse;8,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.26;Schalung Außenwände;4820,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.27;Zulage Wandhöhe bis ca. 11,70 m;2300,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.28;Schalung für Fenster- / Türleibungen;80,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.29;Ortbeton Außenwände, UG;304,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.30;Ortbeton Außenwände, EG - 1. OG;390,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.31;Zulage Wandhöhe bis 11,70 m;232,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.32;Zulage Schalung für Wandversparung an Spannbeton-Binder (H = 1,60 m);28,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.33;Zulage Sichtbetonqualität SB 3;500,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.34;Halbfertigteilwände als Außenwand;63,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.35;Zulage Öffnungsleibungen in Halbfertigteilwände;14,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.36;Ortbetonfüllung der Halbfertigteilwände;13,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.37;Konsolen in Außenwand als Klinkerauflager;43,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.38;Schalung Aufzug- Innenwände;4331,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.39;Zulage Wandschalung, schräge Oberkante parallel zum Treppenlauf;20,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.40;Zulage Schalung Wandhöhe bis 5,30 m;70,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.41;Schalung für Türleibungen;113,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.42;Ortbeton Aufzug- Innenwände;615,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.43;Zulage Wandhöhe bis 5,30 m;9,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.44;Zulage Sichtbetonqualität SB 3;1070,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.45;Halbfertigteilwände als Innenwand;1120,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.46;Zulage Öffnungsleibungen in Halbfertigteilwände;68,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.47;Ortbetonfüllung der Halbfertigteilwände;195,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.48;Schalung der Stützen;152,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.49;Ortbeton der Stützen;12,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.50;Schalung der Unter-/ Überzüge / Attika;1080,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.51;Ortbeton der Unter-/ Überzüge / Attika;133,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.52;Konsolen als Deckenauflager;98,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.53;Konsolen aus Ortbeton als unten Podest, 16 / 20 cm;15,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.54;Randschalung der Bodenplatten für der Lichtschächte;3,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.55;Ortbeton der Bodenplatte für Lichtschächte;2,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.56;Schalung Außenwände für Lichtschächte;45,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.57;Ortbeton Außenwände, Lichtschächte;5,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.58;Schalung Deckenplatte H = 25 cm über UG;372,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.59;Randschalung Deckenplatten, H = 25 cm über UG;110,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.60;Ortbeton Deckenplatte, H = 25 cm über UG;93,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.61;Schalung für Deckenversprung;194,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.62;Ortbeton für Deckenversprung;30,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.63;Werkplanung Stahlbeton-Fertigteildecke;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.64;Systemdecke aus Fertigteilen, C 35/45, d = 6 cm;2272,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.65;Randschalung Deckenplatten;147,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.66;Ortbeton der oberen Stahlbetonvergussschicht;497,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.67;Öffnungen in Systemdecke im Bereich der Dachfenster;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.68;Öffnungen in Systemdecke im Bereich der Dachfenster;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.69;Zulage HFT-Decke, Ortbeton-Deckenstreifen bei indirekter Lagerung;30,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.70;Werk- und Montageplanung Hohlkörperdecken;0,0;;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.71;Montagekonzept;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.72;Spannbeton Hohlplatten (Spannbetonhohldiele), Decken, d = 260 mm;395,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.73;Verguss der vorg. Deckenplatten;395,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.74;Werk- und Montageplanung Stahlbeton-Fertigteiltreppen;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.75;Betonfertigteil - Treppenlauf, 12 Stg. 1. Lauf;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.76;Betonfertigteil - Treppenlauf, 12 Stg. 2. Lauf;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.77;Betonfertigteil - Treppenlauf, 5 Stg. mit Podest;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.78;Betonfertigteil - Treppenlauf, 6 Stg. mit Podest;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.79;Betonfertigteil - Treppenlauf, 5 Stg. mit Podest;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.80;Betonfertigteil - Podest;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.81;Randschalung der Zwischenpodeste;3,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.82;Unterseitige glatte Schalung der Zwischenpodeste;13,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.83;Ortbeton der Podeste;4,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.84;Auflagertaschen in Betonwänden für Zwischenpodeste;10,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.85;Kernbohrungen in Stahlbetonbauteilen, DN 80;200,0;cm;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.86;Kernbohrungen in Stahlbetonbauteilen, DN 100;200,0;cm;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.87;Kernbohrungen in Stahlbetonbauteilen, DN 125;200,0;cm;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.88;Kernbohrungen in Stahlbetonbauteilen, bis DN 200;441,0;cm;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.89;Kernbohrungen in Stahlbetonbauteilen, DN 400;300,0;cm;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.90;Wanddurchbrüche, Größe bis 250 cm²;6,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.91;Wanddurchbrüche, größer 250 bis 500 cm²;60,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.92;Wanddurchbrüche, größer 500 bis 1.000 cm²;130,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.93;Wanddurchbrüche, größer 1.000 bis 2.000 cm²;53,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.94;Wanddurchbrüche, größer 2.000 bis 4.000 cm²;25,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.95;Wanddurchbrüche, größer 4.000 bis 10.000 cm²;15,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.96;Wanddurchbrüche, größer 10.000 bis 20.000 cm²;6,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.97;Deckendurchbrüche, Größe bis 250 cm²;5,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.98;Deckendurchbrüche, größer 250 bis 500 cm²;33,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.99;Deckendurchbrüche, größer 500 bis 1.000 cm²;44,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.100;Deckendurchbrüche, größer 1.000 bis 2.000 cm²;14,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.101;Deckendurchbrüche, größer 2.000 bis 4.000 cm²;5,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.102;Deckendurchbrüche, größer 4.000 bis 15.000 cm²;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.103;Wanddurchbrüche, Größe bis 250 cm²;6,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.104;Wanddurchbrüche, größer 250 bis 500 cm²;60,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.105;Wanddurchbrüche, größer 500 bis 1.000 cm²;130,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.106;Wanddurchbrüche, größer 1.000 bis 2.000 cm²;53,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.107;Wanddurchbrüche, größer 2.000 bis 4.000 cm²;25,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.108;Wanddurchbrüche, größer 4.000 bis 10.000 cm²;15,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.109;Wanddurchbrüche, größer 10.000 bis 20.000 cm²;6,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.110;Deckendurchbrüche, Größe bis 250 cm²;5,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.111;Deckendurchbrüche, größer 250 bis 500 cm²;33,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.112;Deckendurchbrüche, größer 500 bis 1.000 cm²;44,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.113;Deckendurchbrüche, größer 1.000 bis 2.000 cm²;14,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.114;Deckendurchbrüche, größer 2.000 bis 4.000 cm²;5,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.115;Deckendurchbrüche, größer 4.000 bis 15.000 cm²;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.116;Schlitze in Stahlbeton, 15 x 10 cm;30,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.117;Schlitze in Stahlbeton, 20 x 10 cm;30,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.118;Schlitze in Stahlbeton, 25 x 10 cm;30,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.119;Wandöffnung -Feuerlöschschrank, 90 x 90 x 15 cm, Außenwände;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.120;Wandöffnung -Feuerlöschschrank, 35 x 75 x 20 cm, Innenwände;15,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.121;Betonstabstahl, B500A / B500B;430,0;t;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.122;Baustahlmatten, B500A;10,0;t;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.123;Betonstahl für Abstandhalter und Unterstützungen;7,6;t;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.124;Betonstahl B500A, Fertig- und Halbfertigteile;37,0;t;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.125;Bewehrungsrückbiegeanschlüsse;309,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.126;Bewehrungsrückbiegeanschlüsse;103,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.127;Maueranschlussschienen, Profil 28/15 mm;10,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.128;Bewehrungsschraubanschlüsse, D = 10 - 16 mm;20,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.129;Bewehrungsschraubanschlüsse, D = 20 - 28 mm;20,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.130;Durchstanzbewehrung, Deckenplatten h = 25 cm;20,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.131;Durchstanzbewehrung, Deckenplatten h = 30 cm;200,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.132;Nachträgliche Bewehrungsanschlüsse, D = 8-12 mm, bis 20 cm;20,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.133;Nachträgliche Bewehrungsanschlüsse, D = 8-12 mm, 20 bis 45 cm;20,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.134;Nachträgliche Bewehrungsanschlüsse, D = 14-16 mm, bis 30 cm;10,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.135;Nachträgliche Bewehrungsanschlüsse, D = 14-16 mm, 30 bis 60 cm;10,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.136;Schallschutztronsolen / Elastomerelager;6,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.137;Stahlwinkel 100 x 100 x 10 mm;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.138;Tronsole Treppenantritt, Bodenplatte;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.139;Tronsole Treppenaustritt, Podesten;14,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.140;Tronsole Treppenaustritt;8,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.141;Fugenplatte Treppenlauf;40,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.142;Dauerelastische Fuge (Treppenlauf / Podest);20,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.143;Fugenblech Sollrissfugen in WU-Bauteilen, Boden-Wand;309,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.144;Fugenblech für Sollrissfugen in WU-Bauteilen, Boden-Boden;273,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.145;Fugenblech für Sollrissfugen in WU-Bauteilen, Wand-Wand;155,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.146;Arbeitsfugen in Deckenplatten;82,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.147;Abschalelement für Arbeitsfugen in Bodenplatte;273,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.148;Lasthaken, Schachtdecke Aufzug;8,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.149;Elementbewehrung, Gitterträger;2000,0;kg;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0407.150;Elementbewehrung, Stabstahl;2000,0;kg;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0408.1;Doppel-Dichtpackung mit Flansch 2-fach Paket;4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0408.2;Systemdeckel zur Anbindung von Kabelschutzrohr  Ø 160 mm;8,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0408.3;"Kabelschutzrohr Ø 160 mm; biegsam; außen gewellt/ innen glatt, 450 N";160,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0408.4;Verbindungskasten ca. 128 x 128 x 80 mm, 2-teilig;25,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0408.5;Verbindungskasten ca. 180 x 180 x 84 mm, 2-teilig;10,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0408.6;Geräte-Verbindungsdose für Ortbeton;80,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0408.7;Großrohr-Geräte-Verbindungsdose für Ortbeton;15,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0408.8;Geräte-Einbaudose für Halbschalenwände/Elementwände;80,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0408.9;Groß-Geräte-Verbindungsdose für Halbschalenwände/Elementwände;15,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0408.10;End- und Übergangstülle bis Ø 32 mm;150,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0408.11;Wandauslassadapter, bis Ø 32 mm;10,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0408.12;Wand- und Deckenkrümmer bis 30° für Betonbauinstallation bis Ø 25 mm;25,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0408.13;Wand- und Deckenkrümmer bis 30° für Betonbauinstallation bis Ø 32 mm;15,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0408.14;Elektroinstallationsrohr PVC-U AD 20 mm Beton;60,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0408.15;Elektroinstallationsrohr PVC-U AD 25 mm Beton;80,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0408.16;Elektroinstallationsrohr PVC-U AD 32 mm Beton;360,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0408.17;Montage und Einbetonieren von Ankerschienen;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0408.18;Montage und Einbetonieren von Rüsthülsen;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0408.19;Montage und Einbetonieren von Mauerkästen;4,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0409.1;Waagerechte Abdichtung, 17,5 cm;4,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0409.2;Sperrfolie auf KS Mauerwerk b = 17,5 cm;4,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0409.3;Dämmstein als erste Schicht b = 17,5 cm;4,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0409.4;Mauerwerk aus KS, d = 17,5 cm;13,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0409.5;Zulage Fugenglattstrich;13,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0409.6;Maueranschlussanker für Mauerwerk in Dünnbettmörtel;26,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0410.1;Werkplanung + Statik;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0410.2;Schwertransportgenehmigungen;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0410.3;Spannbetonsatteldachbinder -28,50 m-;6,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0410.4;Spannbetonsatteldachbinder -35,50m-;8,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0410.5;Durchbruch DN 200 in Bindersteg;24,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0410.6;Durchbruch DN 450 in Bindersteg;8,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0410.7;Trapezblechschiene für bauseitige Trapezblechbefestigung;475,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0410.8;Trapezblechschiene für bauseitige Abhangdecke;475,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0410.9;Trapezblechschiene für bauseitige Trennvorhänge;356,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0410.10;Trapezblechschiene in Einzelstücken;106,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0410.11;Betonstabstahl;14,0;to;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0410.12;Spannstahl;13,0;to;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0410.13;Gurtanschlüsse liefern und montieren;750,0;kg;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0410.14;Fugenbewehrung liefern und einbauen;500,0;kg;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0410.15;rostschutzgrundiertes Kleineisenzeug;100,0;kg;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0410.16;verzinktes Kleineisenzeug;100,0;kg;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+0410.17;Brandschutzschnur mit Versiegelung zwischen Beton und Betonfertigteil;49,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+05.1;Wartungs/Inspektionsvertrag Fettabscheider (5 Jahre);5,0;J;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+06.1;Facharbeiter;100,0;h;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+06.2;Bauhelfer;100,0;h;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+06.3;Baukran;10,0;h;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+06.4;Kompressor;10,0;h;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+06.5;Radlader;10,0;h;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+06.6;Radbagger;10,0;h;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+06.7;LKW 7,5 t (zul. Gesamtgewicht);10,0;h;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83
+06.8;Nachweisführung QNG/DGNB;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260723_HSI_Leistungsverzeichnis_Gewerk 06_Rohbauarbeiten.D83

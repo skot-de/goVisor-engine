@@ -1,4 +1,68 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;Baustelleneinrichtung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+01.2;Baustellenräumung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+01.3;Verkehrssicherung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+01.4;Ausführungsunterlagen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+01.5;Höhenfestpunkt herstellen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+01.6;Bautagebuch;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+01.7;Beweissicherungsverfahren;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+02.1;Grenzsteine aufsuchen u sichern;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+02.2;Straßenschilder aufnehmen, lagern;7,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+02.3;Querschläge bis 1,50m tief;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+02.4;Absperren des Kanals mit Trapezstahlblech;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+02.5;Absperren des Kanals mit Trapezstahlblech;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+02.6;Provisorische Vorflut Kanal;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+02.7;Bitu-Fahrbahn schneiden;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+02.8;Bituminöse Befestigung aufbrechen, D bis 20cm;20,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+02.9;Tiefbordanlage in Beton gesetzt aufnehmen u. lagern;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+02.10;vorh. Betonsteinpflaster aufbrechen u. aufnehmen und seitlich lagern;30,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+02.11;Schutt im Bereich der Baustelle aufnehmen;6,0;to;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+02.12;Boden ausheben und abfahren;60,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+04.1;Rohrgraben DN 1500 Kunststoff-/ GFK-Rohr bis 2,50 m tief;21,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+04.2;Hochlast-Kanalrohr DN1500 SN16 liefern und verlegen, einschl.;19,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+04.3;Kreuzungen mit Ver- u. Entsorgungsleitungen;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+04.4;Bodenaustausch in der Leitungszone;60,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+04.5;Stützwand mit Durchlassöffnung;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+04.6;Stützwand mit Durchlassöffnung mit Staustufe;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+04.7;Kürzen der GFK Leitung DN 1500;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+04.8;U-Schiene mit Lasche liefern und anbringen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+04.9;Ein-/Auslaufbereich der Gräben mit Schüttsteine andecken;15,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+05.1;Boden in Handschachtung lösen;5,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+05.2;Bauschutt lösen, laden u. abfahren;3,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+05.3;Sandboden liefern und als Zulage einbauen;650,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+05.4;Überschüssigen Boden durch Herstellung des Planums;5,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+05.5;Planum herstellen;210,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+05.6;Einbau und Vorbereitung von Mutterboden für Rollrasen, Schichtdicke 15 cm;60,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+05.7;Rollrasen liefern und verlegen;60,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+06.1;Betonhochbord A4 in Beton setzen;28,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+06.2;Betontiefbord-T 10cm in Beton setzen;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+06.3;Trennschnitt an Tiefbord/Hochbord;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+06.4;Trennschnitt am Gossenwürfel;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+06.5;1-reihige Gosse 16/24/14 in Beton setzen;28,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+06.6;2-reihige Gosse 16/24/14 in Beton setzen;35,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+06.7;"Ungebundene Tragschicht 0/32; 20cm stark liefern/einbauen";270,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+06.8;Pflasterdecke aus H-Verbundsteinen, Farbe:Anthrazit;210,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+06.9;Pflasterdecke aus Betonrechtecksteine, Farbe:Grau;60,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+06.10;Vorh. Betonsteine vom Zwischenlager aufnehmen u. neu;30,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+06.11;Kalt einbaufähiges bitumenhaltiges Mischgut liefern u. einbauen;30,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+06.12;Diagonalschnitte ausführen - Betonsteine;85,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+06.13;Seitenräume/Böschung mit Mubo andecken u. profilieren;80,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+06.14;Künzelversuch durch unabhängiges Prüfinstitut;2,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+06.15;Punktfundamente Geländer;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+06.16;Anschluß an vorh. RW-Kanal herstellen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+06.17;Rohrgraben DN 150 bis 1,50 m tief;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+06.18;Kunststoffrohr DN 160 liefern und einbauen;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+06.19;Bogen DN 160, 15°-45°, KGB;6,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+06.20;"Ablauf Längsaufsatz; 300*500; kurze Bauart; Schlitzweite 16mm";2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+07.1;Schachtmeister;8,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+07.2;Facharbeiter;24,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+07.3;Minibagger bis 0,35 m³Schaufelinhalt;8,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+07.4;Bagger ab 0,75 m³ Schaufelinhalt;8,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+07.5;Radlader;8,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+07.6;LKW bis 6 to.;3,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+07.7;LKW über 6 to;8,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+07.8;Rüttelplatte;3,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
+07.9;Explosionsstampfer;3,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB.D83
 1;Für das Einrichten und Unterhalten der Baustelle, für;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB_V32.X83
 2;Für das Räumen der Baustelle von Baubuden,;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB_V32.X83
 3;Für die Einrichtungen zur Verkehrssicherung u.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV B16 Durchlass_GAEB_V32.X83

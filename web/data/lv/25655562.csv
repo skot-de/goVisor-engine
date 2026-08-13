@@ -1,4 +1,33 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01010001;Baustelleneinrichtung;1,0;psch;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01010002;Fischsperren / Einschwimmsperren;5,0;m;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01010003;Verkehrssicherung, Absicherung;1,0;psch;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01010004;Baumschutz, Durchm. 0,30 m bis 0,50 m, h= 2,00 m;3,0;St;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01020001;Baugelände abräumen, Aufwuchs, Astwerk;100,0;m2;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01020002;Bäume fällen, roden, d= 0,1 - 0,3 m;1,0;St;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01020003;Vorh. Kanal DN 500 abbrechen;15,0;m;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01020004;Zulage Schachtabbruch Mauerwerk innerhalb;2,0;Stgm;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01030001;Feinsstoffsperre - Strohballen;1,0;St;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01030002;Bachumleitung herstellen;1,0;St;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01030003;Aushub Baugrube Stahlbetonrahmenprofil;10,0;m;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01030004;Planum herstellen, Abweichung +/- 2 cm;25,0;m2;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01030005;Geotextil GRK 3;25,0;m2;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01030006;Untergrundverbesserung, Naturstein 0/150, lief. (t);15,0;t;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01030007;Mineralgemisch 0/32 - 0/45, Auflager;20,0;t;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01030008;Stahlbetonrahmenprofil 150/100 cm herstellen;9,0;m;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01030009;Böschungsstück mit Kopfbalken, Zulage;2,0;St;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01030010;Vorabsiebung 0/56, Anfüllung;50,0;t;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01030011;Geotextil., Vliesstoff, GRK 5, min. 300 g/m², liefern, einbauen;20,0;m2;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01030012;Sohlsubstrat in Rahmendurchlass;3,0;m3;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01040001;Graben herstellen, Boden im Baubereich einbauen;15,0;m;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01040002;Graben/Mulden-Profil wiederherstellen;25,0;m;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01040003;Entwässerungsnmulde herstell., Kl. 1-5, Boden i. Baubereich einb.;15,0;m;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01040004;überschüssigen Boden beseitigen, Zulage;25,0;m3;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01040005;Pflasterstreifen als Mulde herstellen, Breite 1,00m, Naturstein;5,0;m;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01040006;Pflanzlieferung:  Salix alba;30,0;St;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01040007;Pflanzlieferung:  Alnus glutinosa;30,0;St;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01040008;Sträucher 80-100 pflanzen;60,0;St;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
+01050001;Baustoffgemisch 0/45, Wirtschaftsweg;150,0;t;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis.D83
 0001;Baustelle einrichten. Im Preis eingeschlossen sind:;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis.X83
 0002;Fischsperren vor Elektrobefischung liefern und im;5,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis.X83
 0003;Maßnahmen zum Aufstellen, Vorhalten und Betreiben von;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis.X83
@@ -28,6 +57,35 @@
 0007;Alnus glutinosa;30,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis.X83
 0008;Sträucher, ohne Ballen pflanzen,;60,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis.X83
 0001;Baustoffgemisch nach ZTV SoB-StB, TL SoB-StB und Ersatzbaustoffverordnung (EBV) für Wirtschaftswege und Nebenflächen liefern, profilgerecht lagenweise einbauen und verdichten.;150,0;t;gaeb;leistungsbeschreibungen/Leistungsverzeichnis.X83
+01010001;Baustelleneinrichtung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01010002;Fischsperren / Einschwimmsperren;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01010003;Verkehrssicherung, Absicherung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01010004;Baumschutz, Durchm. 0,30 m bis 0,50 m, h= 2,00 m;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01020001;Baugelände abräumen, Aufwuchs, Astwerk;100,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01020002;Bäume fällen, roden, d= 0,1 - 0,3 m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01020003;Vorh. Kanal DN 500 abbrechen;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01020004;Zulage Schachtabbruch Mauerwerk innerhalb;2,0;Stgm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01030001;Feinsstoffsperre - Strohballen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01030002;Bachumleitung herstellen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01030003;Aushub Baugrube Stahlbetonrahmenprofil;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01030004;Planum herstellen, Abweichung +/- 2 cm;25,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01030005;Geotextil GRK 3;25,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01030006;Untergrundverbesserung, Naturstein 0/150, lief. (t);15,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01030007;Mineralgemisch 0/32 - 0/45, Auflager;20,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01030008;Stahlbetonrahmenprofil 150/100 cm herstellen;9,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01030009;Böschungsstück mit Kopfbalken, Zulage;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01030010;Vorabsiebung 0/56, Anfüllung;50,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01030011;Geotextil., Vliesstoff, GRK 5, min. 300 g/m², liefern, einbauen;20,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01030012;Sohlsubstrat in Rahmendurchlass;3,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01040001;Graben herstellen, Boden im Baubereich einbauen;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01040002;Graben/Mulden-Profil wiederherstellen;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01040003;Entwässerungsnmulde herstell., Kl. 1-5, Boden i. Baubereich einb.;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01040004;überschüssigen Boden beseitigen, Zulage;25,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01040005;Pflasterstreifen als Mulde herstellen, Breite 1,00m, Naturstein;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01040006;Pflanzlieferung:  Salix alba;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01040007;Pflanzlieferung:  Alnus glutinosa;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01040008;Sträucher 80-100 pflanzen;60,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01050001;Baustoffgemisch 0/45, Wirtschaftsweg;150,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
 0001;Baustelle einrichten. Im Preis eingeschlossen sind:;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.X83
 0002;Fischsperren vor Elektrobefischung liefern und im;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.X83
 0003;Maßnahmen zum Aufstellen, Vorhalten und Betreiben von;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.X83

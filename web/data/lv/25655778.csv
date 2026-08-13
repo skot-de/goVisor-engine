@@ -1,0 +1,59 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00010001;Baubüro für AG auf- und abbauen Fläche 15 m2*Stahlschrank Stellplatz AN*Zuf+Platz Wahl AN;1,0;Psch;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+00010002;Baubüro für AG vorhalten;1,5;Mt;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+00020001;Vorankündigung erstellen;1,0;Psch;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+01010001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+01010002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+01010003;Aufstandfläche herstell./ beseitig.;1,0;Psch;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+01020001;Verkehrssicherung läng.Dauer durchf;1,0;Psch;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+01020002;Umleitung Gehweg;1,0;Psch;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+01020003;Kontrolle der Arbeitsstellensicher.;50,0;d;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+01020004;Transp.Lichtsignalanlage aufstellen LSA f.Engst.Typ C*Versorg. n. Wahl Steuer.verk.abh.;1,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+01020005;Transp. Lichtsignalanlage vorh.;50,0;d;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+01020006;Verkehrsschild aufb., abb., vorh. ... Freitext ...*Größe 1 Typ RA2*... Freitext ... ... Freitext ...;2,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+01020007;Verkehrsschild aufb., abb., vorh. ... Freitext ...*Größe 1 Typ RA2*... Freitext ... ... Freitext ...*... Freitext ...;2,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+01020008;Verkehrsschild aufb., abb., vorh. ... Freitext ...*Größe 1 Typ RA2*... Freitext ... ... Freitext ...*... Freitext ...;1,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+01020009;Verkehrsschild verändern ... Freitext ...*Höhe bis 2,00 m t.a./i.Kraft setz*... Freitext ...;3,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+02010001;Beräumung best. Schutznetz;1,0;Psch;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+02010002;Felsflächen beräumen;800,0;m2;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+02010003;Strauchbestand roden ... Freitext ...*... Freitext ... ... Freitext ...*S.Abr.förd./abl.;700,0;m2;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+02010004;Wurzelstöcke roden DU über 0,1-0,3 m*... Freitext ... ... Freitext ...;10,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+02010005;Wurzelstöcke roden DU über 0,3-0,5 m*... Freitext ... ... Freitext ...;10,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+02010006;Felsschuttmaterial entsorgen;200,0;t;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+02010007;Grünschnitt entsorgen;50,0;t;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+02010008;Wurzelstöcke entsorgen;20,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+02020001;Demontage/ Entsorgung Zaun (unten);90,0;m;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+02020002;Demontage/ Entsorgung Zaun (oben);80,0;m;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+02020003;Demontage und Entsorgung Netz;150,0;m2;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+02030001;Visuelle Kampfmittelräumung ... Freitext ...*... Freitext ... ... Freitext ...;700,0;m2;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+02030002;Hubarbeitsbühne;5,0;d;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+02030003;Einzelpunkt einmessen ... Freitext ...*... Freitext ... ... Freitext ...*... Freitext ...;1,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03010001;Bauvermessung durchführen;1,0;Psch;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03010002;Bestandsaufnahme/Vermessung;1,0;Psch;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03010003;Bestandsunterlagen liefern;1,0;Psch;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03020001;Felsnagel 32 mm;190,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03020002;Zulage für Mehrlängen 32 mm;50,0;m;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03020003;Zulage für Gaze-Strümpfe;40,0;m;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03020004;Zulage zur Verwend. Spiralseilanker;12,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03020005;Zulage zur Verwendung IBO 30/11 mm;60,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03020006;Steinschlagschutznetz herstellen;700,0;m2;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03020007;Stahlseil 12 mm (Randseile);220,0;m;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03020008;Flexkopf;12,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03020009;Zulage Flexkopf für IBO 30/11 mm;8,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03020010;Krallplatten;175,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03020011;Baumlöcher herstellen;5,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03020012;Schutzkappen für Nägel;25,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03020013;Ankermörtel liefern und einbauen;24800,0;kg;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03030001;Felsnagel 32 mm;10,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03030002;Ankerkopfplatten 200/200/10 mm;10,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03030003;Ankermörtel liefern und einbauen;1600,0;kg;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03040001;Spritzbeton C25/30 herst., bewehrt;5,0;m3;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03040002;Betonstahl liefern und einbauen;0,2;t;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03040003;Anker Bewehrungsbefestigung;5,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03040004;Dränage DN 80;10,0;m;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03040005;Entwässerungsöffnungen herstellen;2,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03040006;Felsnagel 32 mm, Spritzbeton;5,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03040007;Zulage für Gaze Strumpf;10,0;m;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03040008;Ankerkopfplatten 200/200/10 mm;5,0;St;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03040009;Zulage für Mehrlängen 32 mm;5,0;m;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83
+03040010;Ankermörtel liefern und einbauen;600,0;kg;gaeb-flat;leistungsbeschreibungen/15_Leistungsverzeichnis Freusburg.D83

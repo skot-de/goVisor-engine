@@ -1,0 +1,606 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Chem. Analyse gem. EBV BM-0*;35,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00000002;Chem. Analyse gem. EBV BM-F3;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00000003;Chem. Analyse gem. EBV RC1-3;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00010001;Brennwert HO;60,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00010002;AT4 - Atmungsaktivität nach 4 Tagen;80,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00010003;GBR 21 - Gasbildungsrate nach 21;80,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00010004;ROC - Elemtarer Kohlenstoff;160,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00010005;PAK - Polyzyklische aromatische;525,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00020001;Baustoffanalyse des gebundenen Oberbaus;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00030001;Georadar-Messung in Längsprofilen;10000,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00030002;Vorauswertung der Messstrecke;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00030003;Endauswertung der Messstrecke;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00040001;Chem. Analyse gem. EBV BM-0*;55,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00040002;Chem. Analyse gem. EBV BM-F3;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00040003;Chem. Analyse gem. EBV RC1-3;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00050001;Brennwert HO;120,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00050002;AT4 - Atmungsaktivität nach 4 Tagen;170,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00050003;GBR 21 - Gasbildungsrate nach 21;170,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00050004;ROC - Elemtarer Kohlenstoff;340,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00050005;PAK - Polyzyklische aromatische;1125,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00060001;Baustoffanalyse des gebundenen Oberbaus;90,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00070001;Georadar-Messung in Längsprofilen;15000,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00070002;Vorauswertung der Messstrecke;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+00070003;Endauswertung der Messstrecke;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+01000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+01000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+01000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+01000004;Umsetzen des Bohrgerätes;19,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+01000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+01010001;Bohrverfahren n. DIN EN ISO 22475-1;14,4;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+01010002;Entnahme von Bodenproben;60,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+01010003;Kernbohrungen in Asphalt ausführen;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+01010004;Bohrloch in anstehenden Böden und;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+01010005;Bohrloch in Asphaltschichten verfüllen;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+01010006;Bankettprobe als Mischprobe;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+01020001;Chemische Analyse Bankettmaterial;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+01020002;Chem. Analyse nach Deponieverord.;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+01020003;Chemische Analyse nach RuVA-StB 01/05;60,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+01030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+02000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+02000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+02000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+02000004;Umsetzen des Bohrgerätes;19,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+02000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+02010001;Bohrverfahren n. DIN EN ISO 22475-1;14,4;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+02010002;Entnahme von Bodenproben;60,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+02010003;Kernbohrungen in Asphalt ausführen;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+02010004;Bohrloch in anstehenden Böden und;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+02010005;Bohrloch in Asphaltschichten verfüllen;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+02020001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+03000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+03000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+03000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+03000004;Umsetzen des Bohrgerätes;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+03000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+03010001;Bohrverfahren n. DIN EN ISO 22475-1;5,76;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+03010002;Entnahme von Bodenproben;24,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+03010003;Kernbohrungen in Asphalt ausführen;1,6;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+03010004;Bohrloch in anstehenden Böden und;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+03010005;Bohrloch in Asphaltschichten verfüllen;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+03010006;Bankettprobe als Mischprobe;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+03020001;Chemische Analyse Bankettmaterial;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+03020002;Chem. Analyse nach Deponieverord.;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+03020003;Chemische Analyse nach RuVA-StB 01/05;24,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+03030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+04000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+04000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+04000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+04000004;Umsetzen des Bohrgerätes;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+04000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+04010001;Bohrverfahren n. DIN EN ISO 22475-1;8,64;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+04010002;Entnahme von Bodenproben;36,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+04010003;Kernbohrungen in Asphalt ausführen;2,16;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+04010004;Bohrloch in anstehenden Böden und;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+04010005;Bohrloch in Asphaltschichten verfüllen;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+04010006;Bankettprobe als Mischprobe;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+04020001;Chemische Analyse Bankettmaterial;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+04020002;Chem. Analyse nach Deponieverord.;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+04020003;Chemische Analyse nach RuVA-StB 01/05;36,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+04030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+05000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+05000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+05000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+05000004;Umsetzen des Bohrgerätes;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+05000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+05010001;Bohrverfahren n. DIN EN ISO 22475-1;2,16;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+05010002;Entnahme von Bodenproben;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+05010003;Kernbohrungen in Asphalt ausführen;0,75;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+05010004;Bohrloch in anstehenden Böden und;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+05010005;Bohrloch in Asphaltschichten verfüllen;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+05010006;Bankettprobe als Mischprobe;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+05020001;Chemische Analyse Bankettmaterial;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+05020002;Chem. Analyse nach Deponieverord.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+05020003;Chemische Analyse nach RuVA-StB 01/05;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+05030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+06000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+06000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+06000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+06000004;Umsetzen des Bohrgerätes;42,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+06000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+06010001;Bohrverfahren n. DIN EN ISO 22475-1;30,96;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+06010002;Entnahme von Bodenproben;129,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+06010003;Kernbohrungen in Asphalt ausführen;7,74;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+06010004;Bohrloch in anstehenden Böden und;43,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+06010005;Bohrloch in Asphaltschichten verfüllen;43,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+06010006;Bankettprobe als Mischprobe;24,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+06020001;Chemische Analyse Bankettmaterial;24,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+06020002;Chem. Analyse nach Deponieverord.;24,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+06020003;Chemische Analyse nach RuVA-StB 01/05;129,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+06030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+07000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+07000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+07000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+07000004;Umsetzen des Bohrgerätes;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+07000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+07010001;Bohrverfahren n. DIN EN ISO 22475-1;10,8;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+07010002;Entnahme von Bodenproben;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+07010003;Kernbohrungen in Asphalt ausführen;2,7;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+07010004;Bohrloch in anstehenden Böden und;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+07010005;Bohrloch in Asphaltschichten verfüllen;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+07010006;Bankettprobe als Mischprobe;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+07020001;Chemische Analyse Bankettmaterial;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+07020002;Chem. Analyse nach Deponieverord.;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+07020003;Chemische Analyse nach RuVA-StB 01/05;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+07030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+08000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+08000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+08000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+08000004;Umsetzen des Bohrgerätes;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+08000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+08010001;Bohrverfahren n. DIN EN ISO 22475-1;9,36;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+08010002;Entnahme von Bodenproben;39,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+08010003;Kernbohrungen in Asphalt ausführen;3,9;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+08010004;Bohrloch in anstehenden Böden und;13,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+08010005;Bohrloch in Asphaltschichten verfüllen;13,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+08010006;Bankettprobe als Mischprobe;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+08020001;Chemische Analyse Bankettmaterial;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+08020002;Chem. Analyse nach Deponieverord.;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+08020003;Chemische Analyse nach RuVA-StB 01/05;39,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+08030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+09000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+09000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+09000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+09000004;Umsetzen des Bohrgerätes;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+09000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+09010001;Bohrverfahren n. DIN EN ISO 22475-1;6,48;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+09010002;Entnahme von Bodenproben;27,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+09010003;Kernbohrungen in Asphalt ausführen;1,8;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+09010004;Bohrloch in anstehenden Böden und;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+09010005;Bohrloch in Asphaltschichten verfüllen;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+09010006;Bankettprobe als Mischprobe;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+09020001;Chemische Analyse Bankettmaterial;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+09020002;Chem. Analyse nach Deponieverord.;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+09020003;Chemische Analyse nach RuVA-StB 01/05;27,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+09030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+10000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+10000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+10000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+10000004;Umsetzen des Bohrgerätes;19,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+10000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+10010001;Bohrverfahren n. DIN EN ISO 22475-1;18,72;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+10010002;Entnahme von Bodenproben;60,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+10010003;Kernbohrungen in Asphalt ausführen;6,4;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+10010004;Bohrloch in anstehenden Böden und;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+10010005;Bohrloch in Asphaltschichten verfüllen;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+10010006;Bankettprobe als Mischprobe;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+10020001;Chemische Analyse Bankettmaterial;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+10020002;Chem. Analyse nach Deponieverord.;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+10020003;Chemische Analyse nach RuVA-StB 01/05;60,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+10030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+11000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+11000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+11000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+11000004;Umsetzen des Bohrgerätes;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+11000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+11010001;Bohrverfahren n. DIN EN ISO 22475-1;7,2;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+11010002;Entnahme von Bodenproben;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+11010003;Kernbohrungen in Asphalt ausführen;2,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+11010004;Bohrloch in anstehenden Böden und;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+11010005;Bohrloch in Asphaltschichten verfüllen;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+11010006;Bankettprobe als Mischprobe;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+11020001;Chemische Analyse Bankettmaterial;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+11020002;Chem. Analyse nach Deponieverord.;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+11020003;Chemische Analyse nach RuVA-StB 01/05;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+11030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+12000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+12000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+12000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+12000004;Umsetzen des Bohrgerätes;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+12000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+12010001;Bohrverfahren n. DIN EN ISO 22475-1;10,8;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+12010002;Entnahme von Bodenproben;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+12010003;Kernbohrungen in Asphalt ausführen;1,8;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+12010004;Bohrloch in anstehenden Böden und;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+12010005;Bohrloch in Asphaltschichten verfüllen;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+12010006;Bankettprobe als Mischprobe;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+12020001;Chemische Analyse Bankettmaterial;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+12020002;Chem. Analyse nach Deponieverord.;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+12020003;Chemische Analyse nach RuVA-StB 01/05;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+12030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+13000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+13000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+13000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+13000004;Umsetzen des Bohrgerätes;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+13000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+13010001;Bohrverfahren n. DIN EN ISO 22475-1;4,32;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+13010002;Entnahme von Bodenproben;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+13010003;Kernbohrungen in Asphalt ausführen;0,96;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+13010004;Bohrloch in anstehenden Böden und;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+13010005;Bohrloch in Asphaltschichten verfüllen;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+13010006;Bankettprobe als Mischprobe;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+13020001;Chemische Analyse Bankettmaterial;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+13020002;Chem. Analyse nach Deponieverord.;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+13020003;Chemische Analyse nach RuVA-StB 01/05;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+13030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+14000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+14000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+14000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+14000004;Umsetzen des Bohrgerätes;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+14000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+14010001;Bohrverfahren n. DIN EN ISO 22475-1;8,64;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+14010002;Entnahme von Bodenproben;36,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+14010003;Kernbohrungen in Asphalt ausführen;3,96;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+14010004;Bohrloch in anstehenden Böden und;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+14010005;Bohrloch in Asphaltschichten verfüllen;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+14010006;Bankettprobe als Mischprobe;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+14020001;Chemische Analyse Bankettmaterial;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+14020002;Chem. Analyse nach Deponieverord.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+14020003;Chemische Analyse nach RuVA-StB 01/05;36,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+14030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+15000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+15000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+15000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+15000004;Umsetzen des Bohrgerätes;19,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+15000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+15010001;Bohrverfahren n. DIN EN ISO 22475-1;14,4;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+15010002;Entnahme von Bodenproben;60,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+15010003;Kernbohrungen in Asphalt ausführen;5,2;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+15010004;Bohrloch in anstehenden Böden und;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+15010005;Bohrloch in Asphaltschichten verfüllen;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+15010006;Bankettprobe als Mischprobe;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+15020001;Chemische Analyse Bankettmaterial;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+15020002;Chem. Analyse nach Deponieverord.;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+15020003;Chemische Analyse nach RuVA-StB 01/05;60,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+15030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+16000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+16000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+16000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+16000004;Umsetzen des Bohrgerätes;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+16000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+16010001;Bohrverfahren n. DIN EN ISO 22475-1;10,8;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+16010002;Entnahme von Bodenproben;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+16010003;Kernbohrungen in Asphalt ausführen;2,7;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+16010004;Bohrloch in anstehenden Böden und;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+16010005;Bohrloch in Asphaltschichten verfüllen;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+16010006;Bankettprobe als Mischprobe;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+16020001;Chemische Analyse Bankettmaterial;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+16020002;Chem. Analyse nach Deponieverord.;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+16020003;Chemische Analyse nach RuVA-StB 01/05;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+16030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+17000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+17000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+17000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+17000004;Umsetzen des Bohrgerätes;21,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+17000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+17010001;Bohrverfahren n. DIN EN ISO 22475-1;15,84;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+17010002;Entnahme von Bodenproben;66,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+17010003;Kernbohrungen in Asphalt ausführen;5,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+17010004;Bohrloch in anstehenden Böden und;22,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+17010005;Bohrloch in Asphaltschichten verfüllen;22,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+17010006;Bankettprobe als Mischprobe;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+17020001;Chemische Analyse Bankettmaterial;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+17020002;Chem. Analyse nach Deponieverord.;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+17020003;Chemische Analyse nach RuVA-StB 01/05;66,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+17030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+18000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+18000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+18000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+18000004;Umsetzen des Bohrgerätes;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+18000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+18010001;Bohrverfahren n. DIN EN ISO 22475-1;4,32;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+18010002;Entnahme von Bodenproben;24,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+18010003;Kernbohrungen in Asphalt ausführen;1,62;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+18010004;Bohrloch in anstehenden Böden und;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+18010005;Bohrloch in Asphaltschichten verfüllen;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+18010006;Bankettprobe als Mischprobe;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+18020001;Chemische Analyse Bankettmaterial;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+18020002;Chem. Analyse nach Deponieverord.;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+18020003;Chemische Analyse nach RuVA-StB 01/05;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+18030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+19000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+19000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+19000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+19000004;Umsetzen des Bohrgerätes;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+19000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+19010001;Bohrverfahren n. DIN EN ISO 22475-1;4,32;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+19010002;Entnahme von Bodenproben;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+19010003;Kernbohrungen in Asphalt ausführen;2,16;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+19010004;Bohrloch in anstehenden Böden und;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+19010005;Bohrloch in Asphaltschichten verfüllen;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+19010006;Bankettprobe als Mischprobe;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+19020001;Chemische Analyse Bankettmaterial;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+19020002;Chem. Analyse nach Deponieverord.;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+19020003;Chemische Analyse nach RuVA-StB 01/05;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+19030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+20000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+20000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+20000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+20000004;Umsetzen des Bohrgerätes;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+20000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+20010001;Bohrverfahren n. DIN EN ISO 22475-1;10,8;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+20010002;Entnahme von Bodenproben;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+20010003;Kernbohrungen in Asphalt ausführen;1,8;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+20010004;Bohrloch in anstehenden Böden und;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+20010005;Bohrloch in Asphaltschichten verfüllen;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+20010006;Bankettprobe als Mischprobe;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+20020001;Chemische Analyse Bankettmaterial;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+20020002;Chem. Analyse nach Deponieverord.;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+20020003;Chemische Analyse nach RuVA-StB 01/05;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+20030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+21000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+21000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+21000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+21000004;Umsetzen des Bohrgerätes;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+21000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+21010001;Bohrverfahren n. DIN EN ISO 22475-1;5,76;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+21010002;Entnahme von Bodenproben;24,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+21010003;Kernbohrungen in Asphalt ausführen;1,44;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+21010004;Bohrloch in anstehenden Böden und;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+21010005;Bohrloch in Asphaltschichten verfüllen;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+21010006;Bankettprobe als Mischprobe;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+21020001;Chemische Analyse Bankettmaterial;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+21020002;Chem. Analyse nach Deponieverord.;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+21020003;Chemische Analyse nach RuVA-StB 01/05;24,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+21030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+22000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+22000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+22000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+22000004;Umsetzen des Bohrgerätes;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+22000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+22010001;Bohrverfahren n. DIN EN ISO 22475-1;12,96;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+22010002;Entnahme von Bodenproben;54,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+22010003;Kernbohrungen in Asphalt ausführen;2,52;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+22010004;Bohrloch in anstehenden Böden und;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+22010005;Bohrloch in Asphaltschichten verfüllen;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+22010006;Bankettprobe als Mischprobe;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+22020001;Chemische Analyse Bankettmaterial;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+22020002;Chem. Analyse nach Deponieverord.;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+22020003;Chemische Analyse nach RuVA-StB 01/05;54,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+22030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+23000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+23000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+23000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+23000004;Umsetzen des Bohrgerätes;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+23000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+23010001;Bohrverfahren n. DIN EN ISO 22475-1;2,88;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+23010002;Entnahme von Bodenproben;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+23010003;Kernbohrungen in Asphalt ausführen;1,24;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+23010004;Bohrloch in anstehenden Böden und;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+23010005;Bohrloch in Asphaltschichten verfüllen;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+23010006;Bankettprobe als Mischprobe;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+23020001;Chemische Analyse Bankettmaterial;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+23020002;Chem. Analyse nach Deponieverord.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+23020003;Chemische Analyse nach RuVA-StB 01/05;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+23030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+24000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+24000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+24000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+24000004;Umsetzen des Bohrgerätes;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+24000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+24010001;Bohrverfahren n. DIN EN ISO 22475-1;2,88;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+24010002;Entnahme von Bodenproben;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+24010003;Kernbohrungen in Asphalt ausführen;1,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+24010004;Bohrloch in anstehenden Böden und;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+24010005;Bohrloch in Asphaltschichten verfüllen;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+24010006;Bankettprobe als Mischprobe;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+24020001;Chemische Analyse Bankettmaterial;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+24020002;Chem. Analyse nach Deponieverord.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+24020003;Chemische Analyse nach RuVA-StB 01/05;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+24030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+25000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+25000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+25000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+25000004;Umsetzen des Bohrgerätes;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+25000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+25010001;Bohrverfahren n. DIN EN ISO 22475-1;5,04;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+25010002;Entnahme von Bodenproben;21,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+25010003;Kernbohrungen in Asphalt ausführen;1,61;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+25010004;Bohrloch in anstehenden Böden und;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+25010005;Bohrloch in Asphaltschichten verfüllen;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+25010006;Bankettprobe als Mischprobe;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+25020001;Chemische Analyse Bankettmaterial;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+25020002;Chem. Analyse nach Deponieverord.;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+25020003;Chemische Analyse nach RuVA-StB 01/05;21,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+25030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+26000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+26000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+26000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+26000004;Umsetzen des Bohrgerätes;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+26000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+26010001;Bohrverfahren n. DIN EN ISO 22475-1;2,88;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+26010002;Entnahme von Bodenproben;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+26010003;Kernbohrungen in Asphalt ausführen;1,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+26010004;Bohrloch in anstehenden Böden und;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+26010005;Bohrloch in Asphaltschichten verfüllen;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+26010006;Bankettprobe als Mischprobe;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+26020001;Chemische Analyse Bankettmaterial;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+26020002;Chem. Analyse nach Deponieverord.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+26020003;Chemische Analyse nach RuVA-StB 01/05;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+26030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+27000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+27000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+27000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+27000004;Umsetzen des Bohrgerätes;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+27000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+27010001;Bohrverfahren n. DIN EN ISO 22475-1;5,04;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+27010002;Entnahme von Bodenproben;21,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+27010003;Kernbohrungen in Asphalt ausführen;1,75;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+27010004;Bohrloch in anstehenden Böden und;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+27010005;Bohrloch in Asphaltschichten verfüllen;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+27010006;Bankettprobe als Mischprobe;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+27020001;Chemische Analyse Bankettmaterial;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+27020002;Chem. Analyse nach Deponieverord.;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+27020003;Chemische Analyse nach RuVA-StB 01/05;21,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+27030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+28000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+28000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+28000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+28000004;Umsetzen des Bohrgerätes;33,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+28000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+28010001;Bohrverfahren n. DIN EN ISO 22475-1;24,48;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+28010002;Entnahme von Bodenproben;102,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+28010003;Kernbohrungen in Asphalt ausführen;6,46;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+28010004;Bohrloch in anstehenden Böden und;34,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+28010005;Bohrloch in Asphaltschichten verfüllen;34,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+28010006;Bankettprobe als Mischprobe;22,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+28020001;Chemische Analyse Bankettmaterial;22,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+28020002;Chem. Analyse nach Deponieverord.;22,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+28020003;Chemische Analyse nach RuVA-StB 01/05;102,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+28030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+29000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+29000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+29000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+29000004;Umsetzen des Bohrgerätes;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+29000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+29010001;Bohrverfahren n. DIN EN ISO 22475-1;3,6;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+29010002;Entnahme von Bodenproben;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+29010003;Kernbohrungen in Asphalt ausführen;1,3;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+29010004;Bohrloch in anstehenden Böden und;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+29010005;Bohrloch in Asphaltschichten verfüllen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+29010006;Bankettprobe als Mischprobe;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+29020001;Chemische Analyse Bankettmaterial;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+29020002;Chem. Analyse nach Deponieverord.;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+29020003;Chemische Analyse nach RuVA-StB 01/05;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+29030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+30000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+30000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+30000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+30000004;Umsetzen des Bohrgerätes;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+30000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+30010001;Bohrverfahren n. DIN EN ISO 22475-1;11,52;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+30010002;Entnahme von Bodenproben;48,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+30010003;Kernbohrungen in Asphalt ausführen;4,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+30010004;Bohrloch in anstehenden Böden und;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+30010005;Bohrloch in Asphaltschichten verfüllen;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+30010006;Bankettprobe als Mischprobe;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+30020001;Chemische Analyse Bankettmaterial;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+30020002;Chem. Analyse nach Deponieverord.;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+30020003;Chemische Analyse nach RuVA-StB 01/05;48,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+30030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+31000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+31000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+31000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+31000004;Umsetzen des Bohrgerätes;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+31000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+31010001;Bohrverfahren n. DIN EN ISO 22475-1;8,64;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+31010002;Entnahme von Bodenproben;36,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+31010003;Kernbohrungen in Asphalt ausführen;1,92;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+31010004;Bohrloch in anstehenden Böden und;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+31010005;Bohrloch in Asphaltschichten verfüllen;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+31010006;Bankettprobe als Mischprobe;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+31020001;Chemische Analyse Bankettmaterial;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+31020002;Chem. Analyse nach Deponieverord.;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+31020003;Chemische Analyse nach RuVA-StB 01/05;36,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+31030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+32000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+32000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+32000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+32000004;Umsetzen des Bohrgerätes;35,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+32000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+32010001;Bohrverfahren n. DIN EN ISO 22475-1;25,92;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+32010002;Entnahme von Bodenproben;108,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+32010003;Kernbohrungen in Asphalt ausführen;10,8;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+32010004;Bohrloch in anstehenden Böden und;36,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+32010005;Bohrloch in Asphaltschichten verfüllen;36,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+32010006;Bankettprobe als Mischprobe;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+32020001;Chemische Analyse Bankettmaterial;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+32020002;Chem. Analyse nach Deponieverord.;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+32020003;Chemische Analyse nach RuVA-StB 01/05;108,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+32030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+33000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+33000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+33000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+33000004;Umsetzen des Bohrgerätes;19,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+33000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+33010001;Bohrverfahren n. DIN EN ISO 22475-1;14,4;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+33010002;Entnahme von Bodenproben;60,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+33010003;Kernbohrungen in Asphalt ausführen;5,4;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+33010004;Bohrloch in anstehenden Böden und;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+33010005;Bohrloch in Asphaltschichten verfüllen;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+33010006;Bankettprobe als Mischprobe;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+33020001;Chemische Analyse Bankettmaterial;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+33020002;Chem. Analyse nach Deponieverord.;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+33020003;Chemische Analyse nach RuVA-StB 01/05;60,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+33030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+34000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+34000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+34000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+34000004;Umsetzen des Bohrgerätes;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+34000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+34010001;Bohrverfahren n. DIN EN ISO 22475-1;3,6;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+34010002;Entnahme von Bodenproben;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+34010003;Kernbohrungen in Asphalt ausführen;1,4;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+34010004;Bohrloch in anstehenden Böden und;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+34010005;Bohrloch in Asphaltschichten verfüllen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+34010006;Bankettprobe als Mischprobe;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+34020001;Chemische Analyse Bankettmaterial;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+34020002;Chem. Analyse nach Deponieverord.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+34020003;Chemische Analyse nach RuVA-StB 01/05;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+34030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+35000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+35000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+35000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+35000004;Umsetzen des Bohrgerätes;24,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+35000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+35010001;Bohrverfahren n. DIN EN ISO 22475-1;18,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+35010002;Entnahme von Bodenproben;75,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+35010003;Kernbohrungen in Asphalt ausführen;5,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+35010004;Bohrloch in anstehenden Böden und;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+35010005;Bohrloch in Asphaltschichten verfüllen;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+35010006;Bankettprobe als Mischprobe;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+35020001;Chemische Analyse Bankettmaterial;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+35020002;Chem. Analyse nach Deponieverord.;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+35020003;Chemische Analyse nach RuVA-StB 01/05;75,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+35030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+36000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+36000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+36000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+36000004;Umsetzen des Bohrgerätes;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+36000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+36010001;Bohrverfahren n. DIN EN ISO 22475-1;3,6;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+36010002;Entnahme von Bodenproben;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+36010003;Kernbohrungen in Asphalt ausführen;1,25;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+36010004;Bohrloch in anstehenden Böden und;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+36010005;Bohrloch in Asphaltschichten verfüllen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+36010006;Bankettprobe als Mischprobe;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+36020001;Chemische Analyse Bankettmaterial;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+36020002;Chem. Analyse nach Deponieverord.;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+36020003;Chemische Analyse nach RuVA-StB 01/05;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+36030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+37000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+37000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+37000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+37000004;Umsetzen des Bohrgerätes;27,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+37000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+37010001;Bohrverfahren n. DIN EN ISO 22475-1;20,16;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+37010002;Entnahme von Bodenproben;84,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+37010003;Kernbohrungen in Asphalt ausführen;6,72;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+37010004;Bohrloch in anstehenden Böden und;28,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+37010005;Bohrloch in Asphaltschichten verfüllen;28,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+37010006;Bankettprobe als Mischprobe;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+37020001;Chemische Analyse Bankettmaterial;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+37020002;Chem. Analyse nach Deponieverord.;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+37020003;Chemische Analyse nach RuVA-StB 01/05;84,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+37030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+38000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+38000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+38000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+38000004;Umsetzen des Bohrgerätes;27,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+38000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+38010001;Bohrverfahren n. DIN EN ISO 22475-1;20,16;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+38010002;Entnahme von Bodenproben;84,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+38010003;Kernbohrungen in Asphalt ausführen;7,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+38010004;Bohrloch in anstehenden Böden und;28,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+38010005;Bohrloch in Asphaltschichten verfüllen;28,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+38010006;Bankettprobe als Mischprobe;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+38020001;Chemische Analyse Bankettmaterial;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+38020002;Chem. Analyse nach Deponieverord.;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+38020003;Chemische Analyse nach RuVA-StB 01/05;84,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+38030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+39000001;Erkundungen von Leitungsanlagen im;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+39000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+39000003;Geräteeinsatz und Anfahrtskosten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+39000004;Umsetzen des Bohrgerätes;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+39000005;Räumen des Bohrgerätes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+39010001;Bohrverfahren n. DIN EN ISO 22475-1;10,8;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+39010002;Entnahme von Bodenproben;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+39010003;Kernbohrungen in Asphalt ausführen;6,6;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+39010004;Bohrloch in anstehenden Böden und;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+39010005;Bohrloch in Asphaltschichten verfüllen;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+39010006;Bankettprobe als Mischprobe;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+39020001;Chemische Analyse Bankettmaterial;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+39020002;Chem. Analyse nach Deponieverord.;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+39020003;Chemische Analyse nach RuVA-StB 01/05;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83
+39030001;Erstellen eines Baugrundgutachtens;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/03-26-5028 - Leistungsverzeichnis.D83

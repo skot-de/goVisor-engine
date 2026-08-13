@@ -1,0 +1,129 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+02050005;Baustelle einrichten;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02050010;Baustelle räumen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02050015;Verkehrszeichenpläne erstellen - Kanalsanierung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02050020;Verkehrszeichenpläne erstellen - Aufbau Wasserüberleitung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02050025;Verkehrszeichenpläne erstellen - Abbau Wasserüberleitung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02050030;Schrankenzaun aufstellen - Höhe 1,00 m - Absicherung Arbeitsstelle und Notgehwege;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02050035;Gefahr-, Vorschrift-, Richtzeichen aufstellen - Baubereich und Umleitungsstrecke;60,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02050040;Zusatzzeichen nach StVO anbringen - Baubereich und Umleitungsstrecke;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02050045;Absperrbaken mit Warnleuchten aufstellen - Baubereich und Umleitungstrecke;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02050050;Absperrbaken ohne Warnleuchten aufstellen - Baubereich und Umleitungstrecke;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02050055;Absperrschranken nach StVO aufstellen - Baubereich und Umleitungstrecke;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02050060;Hinweistafel aufstellen - Umleitung;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02100005;Arbeitsschutzeinrichtungen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02150005;Reinigung von Mischwasserkanälen Ei 800/1200 - Reinigung nach Inbetriebnahme Wasserüberleitung;67,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02150010;Reinigung von Mischwasserkanälen Ei 900/1350 - Reinigung nach Inbetriebnahme Wasserüberleitung;213,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02150015;Reinigung von Mischwasserkanälen Ei 800/1200 - Reinigung vor Linereinbau;67,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02150020;Reinigung von Mischwasserkanälen Ei 900/1350 - Reinigung vor Linereinbau;213,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02150025;Reinigung von Mischwasserkanälen Ei 800/1200 - Reinigung nach Hochwasserereignis;130,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02150030;Reinigung von Mischwasserkanälen Ei 900/1350 - Reinigung nach Hochwasserereignis;400,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02150035;Schachtreinigung Bauwerke bis 2 m² - bis T = 4,00 m;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02150040;Schachtreinigung Bauwerke bis 2 m² - bis T = 5,00 m;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02150045;Schachtreinigung Bauwerke bis 10 m² - bis T = 5,00 m - Schacht 8561 3024;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02150050;Schachtreinigung DN 1000 - bis T = 3,00 m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02200005;Anschlussstutzen einmessen und kennzeichnen;115,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02200010;Anschlussleitungen reinigen - Anschlusslänge bis 10 m;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02200015;Anschlussleitungen reinigen - Anschlusslänge bis 10 m - aus Schachtbauwerk;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02200020;Anschlussleitungen reinigen - Anschlusslänge bis 15 m;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02200025;Anschlussleitungen reinigen - Mehrlängen;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02250005;TV-Kanaluntersuchung zur Bestandserfassung Mischwasserkanal Ei 800/1200;67,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02250010;TV-Kanaluntersuchung zur Bestandserfassung Mischwasserkanal Ei 900/1350;213,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02250015;Anschlussleitungen überprüfen und dokumentieren - Untersuchung mit Schiebekamera - L bis 10 m;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02250020;Anschlussleitungen überprüfen und dokumentieren - Untersuchung mit Schiebekamera - L bis 10 m - Schacht;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02250025;Anschlussleitungen überprüfen und dokumentieren - Untersuchung mit Schiebekamera - L bis 15 m;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02250030;Anschlussleitungen überprüfen und dokumentieren - Mehrlängen;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02300005;Hindernisbeseitigung durchführen;40,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02300010;Anschluss verschließen - DN 150;70,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02300015;Vorabdichtung Rohrmuffen Ei 800/1200;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02300020;Vorabdichtung Rohrmuffen Ei 900/1350;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02300025;Öffnen von Anschlüssen - DN 150 - Ei 800/1200;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02300030;Öffnen von Anschlüssen - DN 150 - Ei 900/1350;38,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02300035;Öffnen von Anschlüssen - DN 200 - Ei 900/1350;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02300040;Anschlussleitungen an Schlauchliner anbinden - Anschlussleitungen ohne Liner - DN 150 - Ei 800/1200;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02300045;Anschlussleitungen an Schlauchliner anbinden - Anschlussleitungen ohne Liner - DN 150 - Ei 900/1350;37,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02300050;Anschlussleitungen an Schlauchliner anbinden - Anschlussleitungen ohne Liner - DN 200 - Ei 900/1350;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02300055;Anschlussleitungen an Schlauchliner anbinden - Anschlussleitungen mit Liner - DN 200 - Ei 900/1350;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02350005;Fräsarbeiten mittels Kanalfräse - Anschlussleitung DN 150 - 200;10,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02400005;Injektionen für Vorabdichtung Schachtmauerwerk;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450005;Kalibrierung Bestandskanal - Ei 800/1200;67,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450010;Kalibrierung Bestandskanal - Ei 900/1350;213,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450015;Voruntersuchung im Zuge des Relinings - Ei 800/1200;67,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450020;Voruntersuchung im Zuge des Relinings - Ei 900/1350;213,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450025;Schlauchliner Ei 900/1350 - Schlauchliner Nr. 1 - L = ca. 119 m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450030;Schlauchliner Ei 900/1350 - Schlauchliner Nr. 2 - L = ca. 93 m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450035;Schlauchliner Ei 800/1200 - Schlauchliner Nr. 3 - L = ca. 66 m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450040;Einbau der Schlauchliner in Nachtarbeit - Zulage;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450045;Statische Berechnung - Ei 800/1200 - II;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450050;Statische Berechnung - Ei 900/1350 - II;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450055;Dichtheitsprüfung Schlauchliner Nr. 1 - Ei 900/1350 - L = 119 m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450060;Dichtheitsprüfung Schlauchliner Nr. 2 - Ei 900/1350 - L = 93 m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450065;Dichtheitsprüfung Schlauchliner Nr. 3 - Ei 800/1200 - L = 66 m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450070;Nachweis der Werkstoffkennwerte - Ei 800/1200;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450075;Nachweis der Werkstoffkennwerte - Ei 900/1350;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450080;Lineranbindung Kanalspiegel - Schacht 8561 3490;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450085;Auskleidung Gerinne / Berme - Schacht 8561 3490;2,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450090;Lineranbindung Kanalspiegel - Schacht 8561 3572;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450095;Lineranbindung Berme - Schacht 8561 3572;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450100;Lineranbindung Kanalspiegel - Schacht 8561 3574;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450105;Lineranbindung Berme - Schacht 8561 3574;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450110;Lineranbindung Kanalspiegel - Schacht 8561 3575;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450115;Lineranbindung Berme - Schacht 8561 3575;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450120;Lineranbindung Kanalspiegel - Schacht 8561 3576;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450125;Auskleidung Gerinne / Berme - Schacht 8561 3576;2,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450130;Lineranbindung Kanalspiegel - Schacht 8561 3578;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450135;Lineranbindung Berme - Schacht 8561 3578;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450140;Lineranbindung Kanalspiegel - Schacht 8661 3024 - Auslauf;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450145;Lineranbindung Kanalspiegel - Schacht 8661 3024 - Zulauf;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02450150;Lineranbindung Kanalspiegel - Schacht 8661 3046 - Auslauf;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02500005;Schlauchliner DN 200 - L bis 6,00 m;6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02500010;Schlauchliner DN 200 - Mehrlängen;1,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550005;Schutzaun aufstellen - Höhe 2,00 m - Baufelder Pumpenanlagen / Einleitungsstellen;190,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550010;Tor im Schutzzaun - Zulage;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550015;Schrankenzaun aufstellen - Höhe 1,00 m - Absicherung Pumpenanlagen / Einleitungsstellen;190,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550020;Schrankenzaun aufstellen - Höhe 1,00 m - Absicherung Stützenfundamente;210,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550025;Absperrbaken mit Warnleuchten aufstellen - Absicherung Stützenfundamente;100,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550030;Pumpe aufbauen / abbauen - Q = 15 l/s - Am Drawen Hof;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550035;Pumpe aufbauen / abbauen - Q = 15 l/s - Im Bruche;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550040;Pumpe aufbauen / abbauen - Q = 20 l/s - Friedrichstraße;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550045;Pumpe aufbauen / abbauen - Q = 20 l/s - Heidensche Staße;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550050;Pumpe aufbauen / abbauen - Q = 50 l/s - Bruchstraße;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550055;Pumpen aufbauen / abbauen - Q = 100 l/s - Lange Straße;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550060;Pumpe vorhalten - Q = 15 l/s - Am Drawen Hof;60,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550065;Pumpe vorhalten - Q = 15 l/s - Im Bruche;60,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550070;Pumpe vorhalten - Q = 20 l/s - Friedrichstraße;60,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550075;Pumpe vorhalten - Q = 20 l/s - Heidensche Straße;60,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550080;Pumpe vorhalten - Q = 50 l/s - Bruchstraße;60,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550085;Pumpen vorhalten - Q = 100 l/s - Lange Straße;120,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550090;Rohrleitung für die Abwasserüberleitung - Q = 15 l/s - Am Drawen Hof;80,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550095;Rohrleitung für die Abwasserüberleitung - Q = 15 l/s - Im Bruche;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550100;Rohrleitung für die Abwasserüberleitung - Q = 20 l/s - Friedrichstraße;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550105;Rohrleitung für die Abwasserüberleitung - Q = 20 l/s - Heidensche Straße;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550110;Rohrleitung für die Abwasserüberleitung - Q = 50 l/s - Bruchstraße;145,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550115;Rohrleitung für die Abwasserüberleitung - Q = 100 l/s - Lange Straße;105,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550120;Leitungsanschluss an vorh. Druckleitung herstellen - Friedrichstraße;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550125;Leitungsanschluss an vorh. Druckleitung herstellen - Heidensche Straße;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550130;Sandsackbarriere herstellen - Ei 800/1200 MA;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550135;Sandsackbarriere herstellen - Ei 900/1350 MA;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550140;Einbau Überlaufschwelle - Schacht 8561 3490;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550145;Rückschlagklappe DN 150 liefern und einbauen - Schacht 8561 3490;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550150;Einbau Überlaufschwelle - Ei 800/1200 MA - 8661 3046;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550155;"Einbau Überlaufschwelle - 8561 3575 - Zulauf ""Am Drawen Hof""";1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550160;Einbau Überlaufschwelle - 8661 3024 - Zulauf Bruchstraße;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550165;Einbau Überlaufschwelle - 8661 3024 - Zulauf Friedrichstraße;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550170;Einbau Überlaufschwelle - 8661 3024 - Zulauf Heidensche Straße;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550175;Einbau Überlaufrohr - 8561 3578 - Zulauf Im Bruche;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550180;Absperrblase setzen - DN 200 - Rohrdurchlässe Schwellen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550185;Absperrblase setzen - DN 300 - Schwelle 8661 3046;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550190;Absperrblase setzen - DN 400 - Zulauf DN 400;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550195;Wasserhaltung für Restwasser Sanierungstrecke;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550200;Wasserhaltung Einbau Schlauchliner Nr. 1 - Wasserhaltung mit Spülfahrzeug;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550205;Wasserhaltung für MW-Anschlussleitungen - Sanierung mit Schlauchliner;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02550210;Wasserhaltung für MW-Anschlussleitungen - für Einbindungen - Hauptkanal Ei 800/1200 bis 900/1350;47,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02600005;Verrechnungssatz für Facharbeiter/Sanierungsfachkraft;20,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02600010;Verrechnungssatz für Fachwerker;20,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02600015;Verrechnungssatz für Schlauchlinerkolonne;5,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02600020;Verrechnungssatz für Hochdruckspül- und Saugfahrzeug;5,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02600025;Verrechnungssatz für Inspektionsfahrzeug;5,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02600030;Verrechnungssatz für Schiebekamera;5,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83
+02600035;Verrechnungssatz für Pumpe;50,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/L01_2501_5_Kanalsanierung_Innenstadt_Lage_2.BA.D83

@@ -1,0 +1,23 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Fertigungsüberwachung Stahlbau;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00000002;Fertigungsüberwachungstermin;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00000003;Fertigungsüberwachungstermin;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00000004;Abschlussbericht;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00010001;Fertigungsüberwachung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00010002;Fertigungsüberwachungstermin;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00010003;Fertigungsüberwachungstermin;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00010004;Abschlussbericht;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00020001;Fertigungsüberwachung Stahlbau;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00020002;Fertigungsüberwachungstermin;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00020003;Fertigungsüberwachungstermin;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00020004;Abschlussbericht;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00030001;Fertigungsüberwachung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00030002;Fertigungsüberwachungstermin;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00030003;Fertigungsüberwachungstermin;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00030004;Abschlussbericht;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00040001;An- Abreise zum Werk;35,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00040002;An- Abreise zur Baustelle;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00040003;Übernachtungskosten;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00050001;Besprechungstermin (Ganztags);2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00050002;Besprechungstermin (Halbtags);2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83
+00050003;Baubegleitung und Beratung;20,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/WB02.D83

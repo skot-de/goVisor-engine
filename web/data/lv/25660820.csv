@@ -1,4 +1,159 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01010001;"Verkehrssicherungsmaßnahmen durchführen, Vollsperrung mit Anliegerverkehr ""Brunnenstraße""";1,0;psch;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+01010002;Umleitungsbeschilderung aufstellen zur Erreichbarkeit des Friedhofes;1,0;psch;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+01010003;Verkehrsschild, Ronde, Dreieck, Quadrat aufstellen;8,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+01010004;Verkehrsschild, Absperrbock aufstellen;4,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+01010005;Markierung, Dokumentation und Sicherung vorhandener Grenzpunkte;41,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+01010006;Abfallbehälter Sammelplatz fördern;1,0;psch;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+01010007;Bauzaun aufstellen, unterhalten, umbauen und entfernen;50,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+01010008;Fußgängerbrücke herstellen;10,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+01010009;Befahrbare Abdeckung verlegen, unterhalten und beseitigen;5,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+01010010;Vorhandenen Beleuchtungsmast sichern;2,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+01010011;Vorhandene KVZ sichern;1,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+01010012;Vorhandenen Strommast sichern;1,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+01010013;Rammsondierung ausführen, Sonde DPL 10, Bereich bis 2,00 m;2,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+01010014;Plattendruckversuch ausführen und auswerten;4,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+01020001;Verrechnungssatz für Arbeitskraft Poliere;5,0;h;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+01020002;Verrechnungssatz für Arbeitskraft BFA (V 1);5,0;h;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+01020003;Verrechnungssatz für Arbeitskraft Bauhelfer/Arbeiter;5,0;h;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+01020004;Verrechnungssatz für Baugerät, Frontlader, 45-75 kW;5,0;h;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+01020005;Verrechnungssatz für Baugerät, Bagger 8 bis 10 t;5,0;h;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+01020006;Verrechnungssatz für Baugerät, Kompressor mit Stemmhammer;5,0;h;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+01020007;Verrechnungssatz für LKW, Lkw-Kipper 12 t;5,0;h;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010001;Gehölz, Hecke und Buschwerk mit Wurzelstöcken roden.;27,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010002;Hecke schneiden;12,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010003;Bäume fällen ohne roden, Durchmesser über 0,10 bis 0,30 m.;2,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010004;Bäume fällen ohne roden, Durchmesser über 0,30 bis 0,50 m.;1,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010005;Wurzelstöcke roden, Durchmesser über 0,10 bis 0,30 m.;2,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010006;Wurzelstöcke roden, Durchmesser über 0,30 bis 0,50 m.;1,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010007;Baumschutz herstellen;7,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010008;Verkehrsschild gegebenenfalls mit Aufstellvorrichtung abbauen;11,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010009;Rohrpfosten des AG aufstellen, Länge bis 2,50 m;11,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010010;Verkehrsschild / Wegweiser des AG anbringen, Größe bis 1,1 m2;11,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010011;Asphaltbefestigung trennen, schneiden, Dicke 6 - 12 cm;77,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010012;Asphaltbefestigung aufnehmen, Dicke 4 - 12 cm;1748,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010013;Zulage für teerhaltige Befestigung, aufnehmen und entsorgen;295,0;t;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010014;Bordsteine aufnehmen, 8/20 - 15/30, Bord in Beton, beseitigen;447,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010015;Streifen/Rinne aus Betonst. aufn.;190,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010016;Streifen/Rinne aus Betonst. aufn.;8,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010017;Streifen/Rinne aus Betonst. aufn.;19,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010018;Plattenbelag aufnehmen und lagern;4,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010019;Rasengittersteine aufnehmen und lagern;15,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010020;Pflasterdecke aufnehmen, lagern, Dicke 8 cm bis 10 cm;68,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010021;Pflasterbelag aufnehmen, Natursteinplaster 8-10 cm, lagern;29,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010022;Pflasterbelag herstellen, Natursteinpflaster des AG;29,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010023;Entwässerungsrohrleitung abbrechen;54,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010024;Straßenablauf ausbauen;18,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02010025;Beton abbrechen und entsorgen;5,0;m3;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02020001;Oberboden abtragen und lagern, Abtrag über 10 - 30 cm, Lagerung auf Bereitstellungsfläche des AN;46,0;m3;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02020002;Gelagerten Oberboden des AG andecken, alle Flächen, Andeckung 15 - 25 cm;42,0;m3;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02020003;Oberboden auf Bereitstellungsfläche des AN laden, abfahren und zum Lagerplatz des AG transportieren;4,0;m3;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02020004;Oberboden liefern und andecken, Andeckung 15 - 20 cm;5,0;m3;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02020005;Oberbodenflächen zur Ansaat vorbereiten;209,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02020006;Rasenansaat herstellen, Grünflächen, Feinplanum herstellen, Landschaftsrasen;209,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02020007;Ungebundene Tragschichten lösen, laden und verwerten, Homogenbereich E1, E2, Auffüllungen, Schottertragschicht, BM-0*;553,0;m3;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02020008;Boden, lösen, laden und verwerten, Homogenbereich E3, Lehm, BM-0*;442,0;m3;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02020009;Ausschachtungsarbeiten entlang Mauern, Zäunen, Rinnen etc.;136,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02020010;Ausschachtungsarbeiten entlang Hecken;65,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02020011;Behinderung durch bestehende Kabel- und Leitungsanlagen;220,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02020012;Tieferschachtung des Straßenkörpers unterhalb des Erdplanums;524,0;m3;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02020013;Material bis 0/150 mm als Baugrund einbauen;1048,0;t;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02020014;Erdplanum herstellen, Abweichung +-2 cm, Verf. 45 MPa;2210,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02020015;Schotterrasengemisch profilgerecht liefern, einbauen und verdichten.;148,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02020016;Beton C 20/25 liefern und einbauen;3,0;m3;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030001;Statik für Rohrleitungen erstellen;1,0;psch;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030002;Leitungsgraben für Regeneinläufe herstellen, Homogenbereiche E1, E2 und E3, Auffüllungen, Lehm-Stein-Block-Gemische.;127,0;m3;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030003;"Zulage zur Position ""Leitungsgraben...herstellen..."", für maschinenunterstützte Handschachtung";9,0;m3;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030004;"Zulage zur Position ""Leitungsgraben...herstellen..."", für Handschachtung";9,0;m3;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030005;Querkreuzungen beim Graben- / Baugrubenaushub;25,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030006;Grabenverbau herstellen, nach Wahl des AN;299,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030007;Suchgraben herstellen, Homogenbereich  E3, Lehm-Stein-Block-Gemische, Tiefe 1,00 bis 2,50 m;5,0;m3;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030008;Leitungszone herstellen, Rohrdurchmesser DN/OD 160 aus PP;115,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030009;Boden liefern und in Leitungsgraben oberhalb Leitungszone einbauen;127,0;m3;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030010;Anschlussleitung für Regeneinläufe aus PP herstellen, Durchmesser DN/OD 160;115,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030011;Schachtanschluss herstellen (Zul.);17,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030012;Formstück für Rohrleitung aus PP einbauen, Bogen DN/OD 160;68,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030013;Formstück für Rohrleitung aus PP einbauen, Überschiebmuffe DN/OD 160;34,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030014;Formstück für Rohrleitung aus PP einbauen, Abzweig 45°, DN/OD 160/160;3,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030015;Rohrleitung aus PP trennen, DN/OD 160 mm;34,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030016;Sattelstück mit Kugelgelenk für Kanalrohre DN/OD 160 mm an Hauptrohre aus Stahlbeton;20,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030017;Leitungsgraben für Drainrohrleitung herstellen, Homogenbereich E3, Lehm-Stein-Block-Gemische;55,0;m3;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030018;Dränrohrleitung für Planumsentwässerung herstellen;220,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030019;Dränrohr an Rohrleitung anschließen;3,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030020;Filtermaterial liefern und in Leitungsgraben einbauen;55,0;m3;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030021;Querkreuzungen bei der Rohrverlegung;25,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030022;Straßenablauf einbauen mit Erdarbeiten, Straßenablauf für quadratische Aufsätze (500x500);8,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030023;Aufsatz für Straßenablauf aufsetzen 500x500, Klasse D 400, Muldenform;4,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030024;Aufsatz für Straßenablauf aufsetzen 500x500, Klasse D 400, Muldenform (erhöhter Wassereinlaufquerschnitt);4,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030025;Straßenablauf einbauen mit Erdarbarbeiten, Straßenablauf für rechteckige Aufsätze (300x500);9,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030026;Aufsatz für Straßenablauf aufsetzen (300x500), Klasse D 400, Pultform;9,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030027;Aufsatz für Straßenablauf an die neue Höhe anpassen;2,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02030028;Bestandsplan Regeneinläufe mit digitalem Aufmaß erstellen;1,0;psch;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02040001;Frostschutzschicht einbauen;2237,0;t;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02040002;Unterlage reinigen, Reinigungsverfahren nach Wahl des AN;1819,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02040003;Bitumenemulsion aufsprühen;1819,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02040004;Asphalt fräsen Fahrbahn, Material verwerten;124,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02040005;Asphalttragschicht AC 22 TN herstellen;1448,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02040006;"Zulage zur Position ""Asphalttragschicht AC 22 TN..."", für Handeinbau";73,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02040007;Asphaltbeton AC 8 DN herstellen;1529,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02040008;"Zulage zur Position ""Asphaltbeton AC 8 DN..."", für Handeinbau";77,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02040009;Abstumpfungsmaßnahmen durchführen;1819,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02040010;Asphalttragdeckschicht AC 16 TD herstellen;290,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02040011;Anschluss als Fuge mit Fugenmasse herstellen;81,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050001;Bordsteine aus Beton setzen, T 10 x 25 cm;309,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050002;"Zulage zur Position ""Bordsteine...setzen, T 10 x 25 cm"", im Radius";11,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050003;Bordsteine aus Beton setzten, RB 15 x 22 cm;121,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050004;"Zulage zur Position ""Bordsteine...setzen, RB 15 x 22 cm"", im Radius";36,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050005;Zulage Übergangsstein HB 12/15 x 30 cm auf RB 15 x 22 cm;3,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050006;Zulage Übergangsstein RB 15 x 22 auf Fase 2 cm;2,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050007;Bordsteine trennen, quer / diagonal schneiden, Bordsteine 10 x 25 cm bis 15 x 22 cm;85,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050008;Pflasterstreifen 225/150/80 mm, 1 reihig, auf Betonrückenstütze herstellen;320,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050009;Rinne aus Betonsteinen 16/16/14 cm, Breite 1 reihig;48,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050010;Rinne aus Betonsteinen 16/16/14 cm, Breite 2 reihig;196,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050011;Rinne aus Betonblocksteinen herstellen, Breite 3 reihig (ca. 50 cm);217,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050012;"Zulage zur Position ""Rinne...3 reihig..."", im Radius";39,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050013;Rinne aus Betonsteinen und Betonblocksteinen zuarbeiten, schneiden;30,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050014;Pflaster verlegen, Betonsteinpflaster, Mehrgrößen, 15/22,5/10 cm, Verband nach Wahl des AG;380,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050015;Pflastersteine zuarbeiten, schneiden, Dicke 8-10 cm;624,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050016;Umpflasterung für Haus- und Streckenschieberkappen verlegen;3,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050017;Umpflasterung Hydrantenkappen verlegen;2,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050018;Rampensteine versetzen, 300 x 330 x 125/175 mm, Quarz hell;15,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050019;Außeneckelemente für Rampensteine, 300 x 300 x 125/175 mm, Quarz hell;4,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050020;Pflasterdecke herstellen, Steine des AG;25,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02050021;Pflaster am Beleuchtungsmast angleichen;6,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060001;Betonflächen schneiden, einfache Bewehrung, Dicke 15 - 30 cm;5,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060002;Beton abbrechen Hof- und Kleinflächen;3,0;m3;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060003;Stufe aus Beton abbrechen;6,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060004;Beton abbrechen Fundament;2,0;m3;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060005;Betonmauer schneiden, Breite bis ca. 0,40 m, Höhe bis ca. 0,50 m, inkl. Fundament;2,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060006;Betonmauer abbrechen, Breite bis ca. 0,40 m, Höhe bis ca. 0,50 m inkl. Fundament;2,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060007;Metallzaun aufnehmen und entsorgen;15,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060008;Jägerzaun aufnehmen und entsorgen;10,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060009;Ungebundene Tragschichten lösen, laden und verwerten, Homogenbereich E1, E2, Auffüllungen, Schottertragschicht, BM-0*;15,0;m3;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060010;Frostschutzschicht in Hofflächen einbauen;22,0;t;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060011;Pflasterdecke aufnehmen, lagern, Dicke 8 cm;33,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060012;Pflasterdecke aufnehmen, entsorgen Dicke 8-10 cm;5,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060013;Pflasterdecke herstellen, Steine des AG;33,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060014;Asphaltbefestigung trennen, schneiden Dicke 4 - 10 cm;10,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060015;Asphaltbefestigung aufnehmen, Einfahrten, Hofflächen, Dicke 4 - 10 cm;15,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060016;Unterlage reinigen, Reinigungsverfahren nach Wahl des AN;15,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060017;Bitumenhaltiges Bindemittel aufsprühen, Unterlage Asphalt, Rampenspritzgerät, Bitumen-Haftkl. Menge 200 bis 300 g/m²;15,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060018;Asphalttragschicht AC 22 TN herstellen, 200 kg/m2, in Kleinflächen;15,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060019;Asphaltbeton AC 8 DN herstellen, 100 kg/m2, in Kleinflächen;15,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060020;Abstumpfungsmaßnahmen durchführen;15,0;m2;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060021;Anschluss als Fuge mit Fugenmasse herstellen;10,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060022;Bordsteine aufnehmen, 6/20 - 8/20, Bord in Beton, aufnehmen und lagern;4,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060023;Bordsteine aus Beton setzen, T 6 x 20 cm bis T 8 x 20 cm;4,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060024;Bordsteine trennen, quer / diagonal schneiden, Bordsteine 6 x 20 cm bis 8 x 20 cm;5,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02060025;Basaltsplitt 0/16 mm einbauen;4,0;t;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02070001;Leitungsgraben für Kabelanlagen herstellen, Homogenbereich E3, BM-0*, Tiefe 0,30 m, Breite 0,30 m;27,0;m3;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02070002;Leitungszone für Beleuchtungskabel und Leerrohr herstellen;290,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02070003;Kabelschutzrohr einbauen, PE DN 63 mm, einschl. Muffen;92,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02070004;Beleuchtungskabel liefern und verlegen, NYY-J 5 x 10 mm²;565,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02070005;Kabelabdeckfolie für Beleuchtungskabel liefern und verlegen;290,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02070006;Trassenwarnband Beleuchtungskabel liefern und verlegen;290,0;m;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02070007;Lampenfundament DN 300 PE, Länge 1,00 m;5,0;St;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
+02070008;Bestandsplan Beleuchtung mit digitalem Aufmaß erstellen;1,0;psch;gaeb-flat;leistungsbeschreibungen/0593_LV_Straßenbau.d83
 1;Errichtung einer Vollsperrung.;1,0;psch;gaeb;leistungsbeschreibungen/0593_Lv_Straßenbau.x83
 2;Notwendige Verkehrsschilder für die Umleitungsbeschilderung der Zuwegung zum Friedhof  aufstellen, umsetzen und beseitigen, für die Bauzeit vorhalten und warten. Aufstellvorrichtung nach statischen Erfordernissen. Vorübergehende Sicherungsmaßnahmen durchführen. 70 v.H. des Preises werden nach Aufste;1,0;psch;gaeb;leistungsbeschreibungen/0593_Lv_Straßenbau.x83
 3;Verkehrsschild aufstellen, umsetzen und beseitigen, für die Bauzeit vorhalten und warten. Aufstellvorrichtung nach statischen Erfordernissen. Vorübergehende Sicherungsmaßnahmen durchführen. 70 v.H. des Preises werden nach Aufstellung, der Rest nach Beseitigung vergütet.;8,0;St;gaeb;leistungsbeschreibungen/0593_Lv_Straßenbau.x83

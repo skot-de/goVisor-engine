@@ -1,0 +1,827 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Wärmepumpe für Raumheizung DIN EN 14511, Wärmequelle Wasser, Wärmequellentemperatur 21 Grad C, Speichervolumen Pufferspeicher 2000 l, max. Vorlauftemperatur 45 Grad C, Innenaufstellung, mit Hubkolbenverdichter, halbhermetisch, Nennwärmeleistung im Betriebszustand 115 kW, Leistungsregelung modulieren;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+20;Die Einbringung und Aufstellung des Turboverdichters sowie der Wärmepumpe in der Energiezentrale im Dachgeschoss erfolgt durch den Auftragnehmer. Die hierfür erforderlichen Maßnahmen sind vom Auftragnehmer zu berücksichtigen. Der größere der beiden Anlagenteile, der Turboverdichter, weist eine Länge;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+30;Fernwärme-Kompaktstation 350 kW;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+10;Die Einbringung und Aufstellung aller drei Pufferspeicher (Heizung und Kälte) in der Energiezentrale im Dachgeschoss erfolgt durch den Auftragnehmer. Die hierfür erforderlichen Maßnahmen sind vom Auftragnehmer zu berücksichtigen. Der größte Pufferspeicher weist ein Volumen von 6 m³ (1.150 kg Leergew;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+20;Energiespeicher stehend;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+30;Wärmedämmung zu Energiespeicher;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+40;Herstellung Schichtmanager für die schichtgerechte Einbringung in HZ Speicher 2000 Liter;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+50;"Vakuumbrecher 1/2""";1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+60;Maschinen-Thermometer für Energiespeicher;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+70;Schweißstutzen für Tauchfühler 160mm länge;8,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+80;Verteiler, für Wasser, max. Betriebstemperatur bis 120 GradC, max. Betriebsüberdruck 0,6 MPa (6 bar), max. Volumenstrom;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+90;Die Einbringung und Aufstellung der beiden Verteiler (Heizung und Kälte) in der Energiezentrale im Dachgeschoss erfolgt durch den Auftragnehmer. Die hierfür erforderlichen Maßnahmen sind vom Auftragnehmer zu berücksichtigen. Der größte Verteiler weist eine Länge von ca. 7.000 mm sowie eine Höhe und ;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+10;Steuereinheit Druckhaltung mit Touchdisplay;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+20;Flexible und ölbeständige Energie- und Steuerleitung;10,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+30;Grundgefäß 200 l;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+40;Anschlussset;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+50;Membran-Druckausdehnungsgefäß mit Abnahmebescheinigung, DIN EN;3,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+60;Kappenventil 3/4 x 3/4;3,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+10;Lufttopf DN40;8,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+20;Lufttopf DN65;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+30;Lufttopf DN80;6,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+40;Lufttopf DN 100;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+50;Lufttopf DN 125;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+60;Lufttopf DN 150;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+70;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 16,2;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+80;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 6,5;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+90;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 6,0;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+100;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 6,0;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+110;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, Sollwertvorgabe (0-10 V), benötigter Volumenstrom Pumpe in m3/h 3,8;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+120;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, Sollwertvorgabe (0-10 V), benötigter Volumenstrom Pumpe in m3/h 1,2;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+130;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, Sollwertvorgabe (0-10 V), benötigter Volumenstrom Pumpe in m3/h 5,0;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+140;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, Sollwertvorgabe (0-10 V), benötigter Volumenstrom Pumpe in m3/h 0,2;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+150;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 14,0;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+160;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 16,3;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+170;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 3,2;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+180;Einklemm-Rückschlagventil  DN 15;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+190;Einklemm-Rückschlagventil  DN 25;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+200;Einklemm-Rückschlagventil  DN 40;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+210;Einklemm-Rückschlagventil  DN 50;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+220;Einklemm-Rückschlagventil  DN 65;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+230;Schmutzfänger, DN 40, für Wasser, max. Betriebstemperatur bis 120 GradC, Nenndruck 0,6 MPa (6 bar), Gehäuse aus Gusseisen EN-250, mit Normalsieb.;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+240;wie oben in vollem Wortlaut;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+250;Kugelhahn mit verlängertem Knebelgriff DN 12;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+260;Kugelhahn mit verlängertem Knebelgriff DN 15;100,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+270;Kugelhahn mit verlängertem Knebelgriff DN 20;60,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+280;Kugelhahn mit verlängertem Knebelgriff DN 25;50,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+290;Kugelhahn mit verlängertem Knebelgriff DN 32;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+300;Kugelhahn mit verlängertem Knebelgriff DN 40;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+310;Kugelhahn mit verlängertem Knebelgriff DN 50;8,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+320;Kugelhahn mit verlängertem Hebelgriff DN 65;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+330;Kugelhahn mit verlängertem Hebelgriff DN 80;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+340;Absperrklappe mit Zentrieraugen mit Rastenhebel DN 40;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+350;Absperrklappe mit Zentrieraugen mit Rastenhebel DN 50;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+360;Absperrklappe mit Zentrieraugen mit Rastenhebel DN 65;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+370;Absperrklappe mit Zentrieraugen mit Rastenhebel DN 80;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+380;Absperrklappe mit Zentrieraugen mit Rastenhebel DN 80;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+390;Absperrklappe mit Zentrieraugen mit Rastenhebel DN 100;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+400;Absperrklappe mit Gewindeaugen mit Rasthebel DN 15;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+410;Absperrklappe mit Gewindeaugen mit Rasthebel DN25;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+420;Absperrklappe mit Gewindeaugen mit Rasthebel DN40;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+430;Absperrklappe mit Gewindeaugen mit Rasthebel DN50;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+440;Absperrklappe mit Gewindeaugen mit Rasthebel DN65;3,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+450;Absperrklappe mit Gewindeaugen mit Rasthebel DN 100;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+460;Absperrklappe mit Gewindeaugen mit Rasthebel DN 125;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+470;Absperrklappe mit Gewindeaugen mit Rasthebel DN 150;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+480;Absperrklappe mit Gewindeaugen mit Rasthebel DN 50;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+490;Absperrklappe mit Gewindeaugen mit Rasthebel DN 80;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+500;passend zu oben angebotenen Absperrklappen.;8,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+510;druckunabhängiges Regulierventil DN 15;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+520;druckunabhängiges Regulierventil DN 25;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+530;druckunabhängiges Regulierventil DN 40;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+540;druckunabhängiges Regulierventil DN 50;3,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+550;druckunabhängiges Regulierventil DN 65;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+560;druckunabhängiges Regulierventil DN 80;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+570;V.HZK03.1 3-Wege Hubventil DN50, kvs=25 m³/h, PN6, Flanschanschluss;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+580;V.HZK04.1 3-Wege Hubventil DN50, kvs=25 m³/h, PN6, Flanschanschluss;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+590;V.HZK05.1 3-Wege Hubventil DN65, kvs=63 m³/h, PN6, Flanschanschluss;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+600;V.HEZ01.1 3-Wege Hubventil DN50, kvs=40 m³/h, PN6, Flanschanschluss;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+610;V.HEZ01.1 3-Wege Hubventil DN50, kvs=40 m³/h, PN6, Flanschanschluss;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+620;V.HEZ02.1 3-Wege Hubventil DN32, kvs=10 m³/h, PN16, Außengewinde;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+630;Hubantrieb, stetig, 1000N;3,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+640;Hubantrieb, stetig, 1500N;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+650;Hubantrieb, stetig, 2500N;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+660;V.HEZ03.2 2-Wege Regelkugelhahn DN25, kvs=8 m³/h, PN16, Außengewinde;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+670;V.HZK02.1 2-Wege Regelkugelhahn DN15, kvs=1 m³/h, PN16, Außengewinde;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+680;Drehantrieb, stetig, 5Nm;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+690;V.HZK08.01 & V.HZK12.1;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+700;V.HZK06.01 & V.HZK10.1;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+710;2-Wege A/Z-Ventil DN15, kvs=8,6, PN16, Außengewinde;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+720;2-Wege A/Z-Ventil DN25, PN6, Flanschanschluss (Laschenaugen);6,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+730;2-Wege A/Z-Ventil DN40, PN6, Flanschanschluss (Laschenaugen);2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+740;2-Wege A/Z-Ventil DN50, PN6, Flanschanschluss (Laschenaugen);2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+750;2-Wege A/Z-Ventil DN65, PN6, Flanschanschluss (Laschenaugen);2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+760;2-Wege A/Z-Ventil DN80, PN6, Flanschanschluss (Laschenaugen);2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+770;Drehantrieb, Auf/Zu oder 3-Punkt, 24V, 5Nm;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+780;Drehantrieb, Auf/Zu oder 3-Punkt, 24V, 20Nm;12,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+790;Drehantrieb, Auf/Zu oder 3-Punkt, 24V, 40Nm;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+800;Hilfschalter zwei Schaltkontakte;16,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+810;Wärmemessung, Durchflusssensor, DN 15, Qp 1,5 m³/h;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+820;Wärmemessung, Durchflusssensor, DN 25, Qp 3,5 m³/h;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+830;Wärmemessung, Durchflusssensor, DN 32, Qp 6 m³/h;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+840;Wärmemessung, Durchflusssensor, DN 50, Qp 15 m³/h;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+850;Wärmemessung, Durchflusssensor, DN 65, Qp 25 m³/h;3,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+860;Einbau Temperaturfühler für Wärmemengenzählung;14,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+870;Schlammabscheider, Flansch, vertikal, DN100;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+880;Rohrfeder-Manometer, Anschluss rückseitig, NG80;16,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+890;Rohrfeder-Manometer, Anschluss unten, NG63;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+900;Membransicherheitsventil DN 15 3,0 bar;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+910;Membransicherheitsventil DN 20 3,0 bar;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+920;Membransicherheitsventil DN 32 2,5 bar;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+930;Einbau bauseitiger Tauchhülsen für Temperaturfühler;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+940;Einbau Druckfühler;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+950;Schweißstutzen für Tauchfühler;38,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+960;Schweißstutzen für Tauchfühler 100mm länge;76,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+970;Zeigerthermometer DIN EN 13190, Messsystem Bimetall, Austritt des Messelementes nach hinten, glattes Messelement, Einbaulänge 100 mm, Gehäuse aus nichtrostendem Stahl, Anzeigebereich 0 bis 90 GradC.;15,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+980;Zeigerthermometer Bimetall L 150 mm Stahl;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+990;Zeigerthermometer Bimetall L 200 mm Stahl;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1000;Schwimmerentlüfter;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1010;Füll- und Entleerungshahn;100,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+10;Zuschlagsposition für Befestigung bei Deckenhöhe > 3,50m bis max. 4,70m;1650,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+20;Zuschlagsposition für Befestigung bei Deckenhöhe > 4,70 m bis max. 5,70 m;220,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+30;Zuschlagsposition für Befestigung eines Heiz-/ Kühlelements bei Deckenhöhe > 5,70 m bis max. 7,50 m;220,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+40;Erdungs-Bandschelle mit Universal-Anschlussklemme, für Längs- und Querverbindungen in trockenen Innenräumen, verwendbar für Rohrleitungen aus verzinktem Stahl, Kupfer und rostfreiem Edelstahl.;14,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+50;NYM-I 1x 16 mm² grün/gelb Kabel 0,6/1kV als Kunststoffkabel DIN VDE 0271;60,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+60;Die Anschlussarbeiten für Kabel und Leitungen beinhalten Ablängen, Einführen, Abdichten, Absetzen,;14,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+70;C-Stahlrohr  DN 12;20,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+80;C-Stahlrohr  DN 15;225,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+90;C-Stahlrohr  DN 20;190,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+100;C-Stahlrohr  DN 25;310,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+110;C-Stahlrohr  DN 32;305,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+120;C-Stahlrohr  DN 40;275,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+130;C-Stahlrohr  DN 50;310,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+140;C-Stahl Rohrnippel DN 12;13,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+150;C-Stahl Rohrnippel DN 15;110,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+160;C-Stahl Rohrnippel DN 20;100,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+170;C-Stahl Rohrnippel DN 25;145,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+180;C-Stahl Rohrnippel DN 32;145,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+190;C-Stahl Rohrnippel DN 40;130,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+200;C-Stahl Rohrnippel DN 50;150,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+210;C-Stahl Bogen DN 12;60,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+220;C-Stahl Bogen DN 15;210,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+230;C-Stahl Bogen DN 20;60,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+240;C-Stahl Bogen DN 25;85,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+250;C-Stahl Bogen DN 32;90,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+260;C-Stahl Bogen DN 40;55,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+270;C-Stahl Bogen DN 50;60,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+280;C-Stahl T-Stück mit IG DN 12;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+290;C-Stahl T-Stück mit IG DN 15;6,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+300;C-Stahl T-Stück mit IG DN 25;6,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+310;C-Stahl T-Stück mit IG DN 40;8,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+320;C-Stahl T-Stück mit IG DN 50;12,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+330;C-Stahl T-Stück DN 12;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+340;C-Stahl T-Stück DN 15;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+350;C-Stahl T-Stück DN 20;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+360;C-Stahl T-Stück DN 25;22,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+370;C-Stahl T-Stück DN 32;35,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+380;C-Stahl T-Stück DN 40;22,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+390;C-Stahl T-Stück DN 50;22,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+400;C-Stahl T-Stück DN 20;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+410;C-Stahl T-Stück DN 25;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+420;C-Stahl T-Stück DN 32;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+430;C-Stahl T-Stück DN 40;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+440;C-Stahl T-Stück DN 50;35,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+450;C-Stahl Reduzierstück DN 20;35,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+460;C-Stahl Reduzierstück DN 25;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+470;C-Stahl Reduzierstück DN 32;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+480;C-Stahl Reduzierstück DN 40;50,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+490;C-Stahl Reduzierstück DN 50;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+500;C-Stahl Muffe DN 12;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+510;C-Stahl Muffe DN 15;200,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+520;C-Stahl Muffe DN 20;200,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+530;C-Stahl Muffe DN 25;70,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+540;C-Stahl Muffe DN 32;80,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+550;C-Stahl Muffe DN 32;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+560;C-Stahl Muffe DN 40;85,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+570;C-Stahl Muffe DN 40;25,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+580;C-Stahl Muffe DN 50;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+590;C-Stahl Muffe DN 50;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+600;C-Stahl Übergang DN 12 auf Gewinde;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+610;C-Stahl Übergang DN 15 auf Gewinde;40,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+620;C-Stahl Übergang DN 20 auf Gewinde;40,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+630;C-Stahl Übergang DN 25 auf Gewinde;40,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+640;C-Stahl Übergang DN 32 auf Gewinde;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+650;C-Stahl Übergang DN 40 auf Gewinde;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+660;C-Stahl Übergangsverschraubung DN 12;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+670;C-Stahl Übergangsverschraubung DN 15;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+680;C-Stahl Übergangsverschraubung DN 20;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+690;C-Stahl Übergangsverschraubung DN 25;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+700;C-Stahl Übergangsverschraubung DN 32;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+710;C-Stahl Übergangsverschraubung DN 40;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+720;C-Stahl Übergangsverschraubung DN 50;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+730;C-Stahl Übergang mit Schweißende DN 50;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+740;C-Stahl Übergang mit Schweißende DN 65;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+750;C-Stahl Flansch DN 40, PN6;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+760;C-Stahl Flansch DN 50, PN6;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+770;Stahlrohr  DN 32;80,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+780;Stahlrohr  DN 40;80,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+790;Stahlrohr  DN 50;80,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+800;Stahlrohrbogen  DN 32;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+810;Stahlrohrbogen  DN 40;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+820;Stahlrohrbogen  DN 50;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+830;Stahlrohr - T -Stück  DN 32;6,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+840;Stahlrohr - T -Stück  DN 40;6,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+850;Stahlrohr - T -Stück  DN 50;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+860;Stahlrohr-Reduzierstück DN 32;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+870;Stahlrohr-Reduzierstück DN 40;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+880;Stahlrohr-Reduzierstück DN 50;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+890;Stahlrohr Gewindemuffe DN32;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+900;Stahlrohr Gewindemuffe DN40;25,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+910;Stahlrohr Gewindemuffe DN50;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+920;Vorschweißflansch, DN 32, PN 6;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+930;Vorschweißflansch, DN 40, PN 6;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+940;Vorschweißflansch, DN 50, PN 6;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+950;Gewindeflansch, DN 32, PN 6;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+960;Gewindeflansch, DN 40, PN 6;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+970;Gewindeflansch, DN 50, PN 6;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+980;Stahlrohr, schwarz, nahtloses Rohr DN 65;120,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+990;Stahlrohr, schwarz, nahtloses Rohr DN 80;120,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1000;Stahlrohr, schwarz, nahtloses Rohr DN 100;50,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1010;Stahlrohr, schwarz, nahtloses Rohr DN 125;2,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1020;Stahlrohr, schwarz, nahtloses Rohr DN 150;2,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1030;Stahlrohr, schwarz, Bogen DN 65;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1040;Stahlrohr, schwarz, Bogen DN 80;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1050;Stahlrohr, schwarz, Bogen DN 100;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1060;Stahlrohr, schwarz, Bogen DN 125;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1070;Stahlrohr, schwarz, Bogen DN 150;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1080;Stahlrohr, schwarz, T-Stück DN 65;6,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1090;Stahlrohr, schwarz, T-Stück DN 100;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1100;Stahlrohr, schwarz, Reduzierstück DN 65;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1110;Stahlrohr, schwarz, Reduzierstück DN 80;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1120;Stahlrohr, schwarz, Reduzierstück DN 100;14,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1130;Stahlrohr, schwarz, Reduzierstück DN 125;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1140;Einschweißmuffe DN40;6,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1150;Einschweißmuffe DN50;6,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1160;Vorschweißflansch, DN 50, PN 6;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1170;Vorschweißflansch, DN 65, PN 6;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1180;Vorschweißflansch, DN 80, PN 6;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1190;Vorschweißflansch, DN 100, PN 6;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1200;Vorschweißflansch, DN 125, PN 6;6,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1210;Vorschweißflansch, DN 150, PN 6;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1220;Flanschdichtung und Verbindungsset, DN 50, PN 6;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1230;Flanschdichtung und Verbindungsset, DN 65, PN 6;8,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1240;Flanschdichtung und Verbindungsset, DN 80, PN 6;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1250;Flanschdichtung und Verbindungsset, DN 100, PN 6;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1260;Axialkompensator zur Aufnnahme von Dehnungen, für Wasser, Max. Betriebstemperatur bis 120 Grad C, mit Anschweißenden, DN50, Nenndruck 0,6 MPa (6bar), mit innerem und äußerem Schutzrohr, aus nichtrostendem Stahl.;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1270;Axialkompensator Wasser DN65 PN6 Stahl niro;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1280;Axialkompensator Wasser DN80 PN6 Stahl niro;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1290;Axialkompensator Wasser DN100 PN6 Stahl niro;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1300;Festpunkt für Heizungswasserrohrleitung aus Stahl, Außendurchmesser 26,9 mm, Festpunktkraft bis 4 kN, Befestigungsuntergrund Beton;6,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1310;Festpunkt Heizungswasser Stahl AD 33,7mm Belastung 4 kN;16,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1320;Festpunkt Heizungswasser Stahl AD 42,4mm Belastung 4 kN;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1330;Festpunkt Heizungswasser Stahl AD 48,3mm Belastung 4 kN;12,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1340;Festpunkt Heizungswasser Stahl AD 60,3mm Belastung 4 kN;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1350;Festpunkt Heizungswasser Stahl AD 76,1mm Belastung 4 kN;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1360;Festpunkt Heizungswasser Stahl AD 88,9mm Belastung 4 kN;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1370;Rollengleiter MRG 2,0 M10;210,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1380;Montageschienen, verzinkt;1000,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1390;Profilstahl zum Bau von Sonderhalterungen verzinkt;2000,0;kg;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1400;Farbkennzeichnung DIN 2404 des Heizungsleitungs-Vorlaufs, Kennzeichnung durch Beschilderung und Angabe der Fließrichtung durch Richtungspfeile, Schild-Maße mind. H/B 40/100 mm, Befestigung durch Kleben.;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1410;Farbkennzeichnung DIN 2404 des Heizungsleitungs-Rücklaufs, Kennzeichnung durch Beschilderung und Angabe der Fließrichtung durch Richtungspfeile, Schild-Maße mind. H/B 40/100 mm, Befestigung durch Kleben.;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1420;Anschluss an Heizregister Lüftung DN 25;8,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1430;Anschluss an Heizregister Lüftung DN 40;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1440;Anschluss an Heizregister Lüftung DN 50;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1450;Anschluss an Fernwärmeübergabestation DN80;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1460;Anschluss an bestehende Rohrleitung DN40;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+10;Zuschlagsposition für Befestigung bei Deckenhöhe > 3,50m bis max. 4,70m;1650,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+20;Zuschlagsposition für Befestigung bei Deckenhöhe > 4,70 m bis max. 5,70 m;220,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+30;Zuschlagsposition für Befestigung eines Heiz-/ Kühlelements bei Deckenhöhe > 5,70 m bis max. 7,50 m;220,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+40;Blechrosette bis Kantenlänge 500 mm, zweiteilig;80,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+50;Blechrosette bis Kantenlänge 1000 mm, zweiteilig;80,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+60;Dämmen von Rohrleitungen mit Rohrschalen 15/20;20,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+70;Dämmen von Rohrleitungen mit Rohrschalen 18/20;220,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+80;Dämmen von Rohrleitungen mit Rohrschalen 22/20;200,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+90;Dämmen von Rohrleitungen mit Rohrschalen 28/30;230,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+100;Wärmedämmung an Rohren;60,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+110;Wärmedämmung an Rohren;200,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+120;Wärmedämmung an Rohren;95,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+130;Wärmedämmung an Rohren;210,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+140;Wärmedämmung an Rohren;55,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+150;Wärmedämmung an Rohren;90,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+160;Wärmedämmung an Rohren;105,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+170;Wärmedämmung an Rohren;20,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+180;Wärmedämmung an Rohren;110,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+190;Wärmedämmung an Rohren;60,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+200;Wärmedämmung an Rohren;50,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+210;Wärmedämmung an Rohren;10,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+220;Wärmedämmung an Rohren;2,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+230;Wärmedämmung an Rohren;2,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+240;Dämmung von Armaturen/Flanschen DN25 mit Blechkappe;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+250;Dämmung von Armaturen/Flanschen DN32 mit Blechkappe;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+260;Dämmung von Armaturen/Flanschen DN40 mit Blechkappe;15,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+270;Dämmung von Armaturen/Flanschen DN50 mit Blechkappe;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+280;Dämmung von Armaturen/Flanschen DN65 mit Blechkappe;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+290;Dämmung von Armaturen/Flanschen DN80 mit Blechkappe;15,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+300;Dämmung von Armaturen/Flanschen DN100 mit Blechkappe;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+310;Dämmung von Armaturen/Flanschen DN125 mit Blechkappe;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+320;Dämmung von Armaturen/Flanschen DN150 mit Blechkappe;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+330;Brandschutzabschottung DN 12, brennbares Rohr;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+340;Brandschutzabschottung DN 15, brennbares Rohr;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+350;wie oben in vollem Wortlaut;12,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+360;Brandschutzabschottung DN 40, nichtbrennbares Rohr;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+370;Brandschutzabschottung DN 50, nichtbrennbares Rohr;35,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+380;Brandschutzabschottung DN 80, nichtbrennbares Rohr;16,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+390;V;40,0;lfm;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+400;Kennzeichnungsschild Rohrabschottung;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+10;Flüssigkeitskühlsatz DIN EN 378,;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+20;Flüssigkeitskühlsatz DIN EN 378,;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+30;Die Einbringung und Aufstellung des Trockenkühlers sowie des Hubkolbenverdichters auf der Stahlbühne auf dem Dach erfolgt durch den Auftragnehmer. Die hierfür erforderlichen Maßnahmen sind vom Auftragnehmer zu berücksichtigen. Der Trockenkühler als größtes Einzelaggregat weist Abmessungen von ca. 8.;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+40;Plattenwärmetauscher Freie Kühlung 350 kW aus Edelstahl;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+50;Plattenwärmetauscher Maschinenkühlung 200 kW aus Edelstahl;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+60;Plattenwärmetauscher Kälteerzeugung NT 300 kW aus Edelstahl;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+70;Kältedämmung Plattenwärmetauscher 300 kW;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+80;Kältedämmung Plattenwärmetauscher 300 kW;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+90;Kältedämmung Plattenwärmetauscher 300 kW;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+100;Adiatische Trockenkühler mit geschlossenem Kreislauf, zur Außenaufstellung (Stahlbühne 600 mm hoch), mit Umweltschutzwanne, Wanne aus korrosionsgeschützem Stahl, ölbeständig, mit Rückhaltesystem für Frostschutzmittel,;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+110;Futterrohr mit Los- und Festflansch, aus nichtrostendem Stahl, Werkstoff-Nr 1.4301, Außendurchmesser 260 mm, Länge über 400 bis 500 mm, in vorh. Aussparung einsetzen.;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+120;Futterrohr mit Los- und Festflansch, aus nichtrostendem Stahl, Werkstoff-Nr 1.4301, Außendurchmesser 290 mm, Länge über 400 bis 500 mm, in vorh. Aussparung einsetzen.;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+130;Regenkragen;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+140;Lieferung und Montage von Ständern zur Aufnahme und Führung von haustechnischen Leitungen (Kältemaschine & Rückkühler) auf Dachflächen.;7,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+10;Energiespeicher nach Mass, Kälte 6000 Liter;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+20;Herstellung Schichtmanager für die schichtgerechte Einbringung in EnergieSpeicher (HT) 6000 Liter;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+30;Maschinen-Thermometer für Energiespeicher;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+40;Kältedämmung zu Energiespeicher;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+50;Schweißstutzen für Tauchfühler 50mm länge;8,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+60;"Vakuumbrecher 1/2""";1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+70;Energiespeicher nach Mass, Kälte 4000 Liter;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+80;Herstellung Schichtmanager für die schichtgerechte Einbringung in Energiespeicher Kälte (NT) 4000 Liter;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+90;Maschinen-Thermometer für Energiespeicher;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+100;Kältedämmung zu Energiespeicher;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+110;Schweißstutzen für Tauchfühler 50mm länge;8,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+120;"Vakuumbrecher 1/2""";1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+130;Verteiler, für Kältewasser, max. Betriebstemperatur bis 120 GradC, max. Betriebsüberdruck 0,6 MPa (6 bar), max. Volumenstrom;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+10;Steuereinheit Druckhaltung mit Touchdisplay;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+20;Grundgefäß VG 200;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+30;Anschlussset;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+40;Membrandruckausdehnungsgefäß 35l, 6 bar;3,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+50;Membrandruckausdehnungsgefäß 50l, 6 bar;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+60;Membrandruckausdehnungsgefäß 80l, 6 bar;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+70;Membrandruckausdehnungsgefäß 140l, 6 bar;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+80;Membrandruckausdehnungsgefäß 250l, 6 bar;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+90;Membran-Sicherheitsventil DN 15;3,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+100;Membran-Sicherheitsventil DN 15;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+110;Sicherheitsventil DN 20;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+120;Sicherheitsventil DN 32;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+130;Absperrventil, für Wasser bis 120 Grad C, mit Muffenanschluss, Gehäuse aus nichtrostendem Stahl, Werkstoff-Nr 1.4312, in Geradsitz-Durchgangsform, mit plombierbarer Kappe ohne Handrad, mit wartungsfreier Spindelabdichtung, Sitz weich dichtend, Nenndruck 0,6 MPa (6 bar), DN 15;3,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+140;Absperrventil, für Wasser bis 120 Grad C, mit Muffenanschluss, Gehäuse aus nichtrostendem Stahl, Werkstoff-Nr 1.4312, in Geradsitz-Durchgangsform, mit plombierbarer Kappe ohne Handrad, mit wartungsfreier Spindelabdichtung, Sitz weich dichtend, Nenndruck 0,6 MPa (6 bar), DN 15;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+150;Schnellkupplung 1 x 1;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+160;Komplettsystem zur Wasseraufbereitung von;1,0;Stk;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+170;Komplettsystem zur Wasseraufbereitung von;1,0;Stk;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+10;Lufttopf DN50;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+20;Lufttopf DN65;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+30;Lufttopf DN80;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+40;Lufttopf DN 100;6,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+50;Lufttopf DN 125;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+60;Lufttopf DN200;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+70;Kreiselpumpe als Umwälz-doppelpumpe (Redundanz), als Nassläufer, stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 35,5;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+80;Kreiselpumpe als Umwälz-doppelpumpe (Redundanz), als Trockenläufer (Einstufig), stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 35,5;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+90;Kreiselpumpe als Umwälz-doppelpumpe (Redundanz), als Nassläufer, stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 31,0;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+100;Kreiselpumpe als Umwälz-doppelpumpe (Redundanz), als Trockenläufer (Einstufig), stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 31,0;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+110;Kreiselpumpe als Umwälz-doppelpumpe (Redundanz), als Nassläufer, stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 34,2;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+120;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 6,7;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+130;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 11,8;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+140;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 7,2;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+150;Kreiselpumpe als Umwälzpumpe, als Trockenläufer (Einstufig), stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 77,4;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+160;Kreiselpumpe als Umwälzpumpe, als Trockenläufer (Einstufig), stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 97,4;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+170;Kreiselpumpe als Umwälzpumpe, als Trockenläufer (Einstufig), stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 60,3;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+180;Kreiselpumpe als Umwälzpumpe, als Trockenläufer (Einstufig), stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 66,5;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+190;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 43,0;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+200;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, selbstregelend (Differenzdruck konstant), benötigter Volumenstrom Pumpe in m3/h 51,6;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+210;Einklemm-Rückschlagventil Edelstahl DN 50;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+220;Einklemm-Rückschlagventil Edelstahl DN 125;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+230;Einklemm-Rückschlagventil Edelstahl DN 150;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+240;Schmutzfänger, DN 80, für Wasser, max. Betriebstemperatur bis 120 GradC, Nenndruck 0,6 MPa (6 bar), Gehäuse aus Edelstahl, mit Normalsieb.;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+250;Schmutzfänger, DN 100, für Wasser, max. Betriebstemperatur bis 120 GradC, Nenndruck 0,6 MPa (6 bar), Gehäuse aus Edelstahl, mit Normalsieb.;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+260;Schmutzfänger, DN 125, für Wasser, max. Betriebstemperatur bis 120 GradC, Nenndruck 0,6 MPa (6 bar), Gehäuse aus Edelstahl, mit Normalsieb.;3,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+270;Schmutzfänger, DN 150, für Wasser, max. Betriebstemperatur bis 120 GradC, Nenndruck 0,6 MPa (6 bar), Gehäuse aus Edelstahl, mit Normalsieb.;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+280;Kugelhahn mit verlängertem Knebelgriff DN 12;40,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+290;Kugelhahn mit verlängertem Knebelgriff DN 15;70,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+300;Kugelhahn mit verlängertem Knebelgriff DN 20;120,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+310;Kugelhahn mit verlängertem Knebelgriff DN 25;115,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+320;Kugelhahn mit verlängertem Knebelgriff DN 32;115,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+330;Kugelhahn mit verlängertem Knebelgriff DN 40;40,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+340;Kugelhahn mit verlängertem Knebelgriff DN 50;25,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+350;Kugelhahn mit verlängertem Hebelgriff DN 65;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+360;Kugelhahn mit verlängertem Hebelgriff DN 80;15,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+370;Absperrklappe mit Zentrieraugen mit Rastenhebel DN 50;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+380;Absperrklappe mit Zentrieraugen mit Rastenhebel DN 65;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+390;Absperrklappe mit Zentrieraugen mit Rastenhebel DN 80;7,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+400;Absperrklappe mit Zentrieraugen mit Rastenhebel DN 100;11,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+410;Absperrklappe mit Zentrieraugen mit Rastenhebel DN 125;8,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+420;Absperrklappe mit Zentrierauge mit Rastenhebel DN 150;7,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+430;Absperrklappe mit Zentrierauge mit Rastenhebel DN 200;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+440;Absperrklappe mit Gewindeaugen mit Rasthebel DN 25;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+450;Absperrklappe mit Gewindeaugen mit Rasthebel DN 50;6,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+460;Absperrklappe mit Gewindeaugen mit Rasthebel DN 65;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+470;Absperrklappe mit Gewindeaugen mit Rasthebel DN 80;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+480;Absperrklappe mit Gewindeaugen mit Rasthebel DN 125;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+490;Absperrklappe mit Gewindeaugen mit Rasthebel DN 150;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+500;Absperrklappe mit Gewindeaugen mit Rasthebel DN 200;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+510;Absperrklappe mit Gewindeaugen mit Rasthebel DN 250;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+520;Absperrklappe mit Gewindeaugen mit Rasthebel DN 300;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+530;Absperrklappe mit Gewindeaugen mit Rasthebel DN 50;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+540;Absperrklappe mit Gewindeaugen mit Rasthebel und gebohrter Welle DN65;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+550;Absperrklappe mit Gewindeaugen mit Rasthebel und gebohrter Welle DN 100;6,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+560;Absperrklappe mit Gewindeaugen mit Rasthebel und gebohrter Welle DN 125;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+570;passend zu oben angebotenen Absperrklappen.;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+580;passend zu oben angebotenen Absperrklappen.;6,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+590;passend zu oben angebotenen Absperrklappen.;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+600;druckunabhängiges Regulierventil DN 50;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+610;druckunabhängiges Regulierventil DN 65;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+620;druckunabhängiges Regulierventil DN 100;3,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+630;druckunabhängiges Regulierventil DN 125;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+640;druckunabhängiges Regelventil DN 15;3,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+650;druckunabhängiges Regelventil DN 20;8,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+660;druckunabhängiges Regelventil DN 25;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+670;druckunabhängiges Regelventil DN 32;45,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+680;3-Wege Hubventil DN80, kvs=90, PN6, Flanschanschluss;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+690;V.KAK05.1 3-Wege Hubventil DN50, kvs=25 m³/h, PN6, Flanschanschluss;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+700;V.KAK06.1 3-Wege Hubventil DN50, kvs=25 m³/h, PN6, Flanschanschluss;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+710;V.KEZ02.1 3-Wege Hubventil DN125, kvs=220, PN16, Flanschanschluss;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+720;Hubantrieb, stetig, 1000N;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+730;Hubantrieb, stetig, 2500N;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+740;Hubantrieb, stetig, 4500N;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+750;V.KAK02.2, V.KAK02.3, V.KAK03.2, V.KAK03.3, 2-Wege A/Z-Ventil DN20, kvs=21, PN16, Außengewinde;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+760;2-Wege A/Z-Ventil DN50, PN6, Flanschanschluss (Laschenaugen);2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+770;2-Wege A/Z-Ventil DN65, PN6, Flanschanschluss (Laschenaugen);2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+780;2-Wege A/Z-Ventil DN80, PN6, Flanschanschluss (Laschenaugen);4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+790;2-Wege A/Z-Ventil DN125, PN6, Flanschanschluss (Laschenaugen);2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+800;Drehantrieb, Auf/Zu oder 3-Punkt, 24V, 5Nm;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+810;Drehantrieb, Auf/Zu oder 3-Punkt, 24V, 20Nm;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+820;Drehantrieb, Auf/Zu oder 3-Punkt, 24V, 40Nm;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+830;Drehantrieb, Auf/Zu oder 3-Punkt, 24V, 90Nm;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+840;2-Wege A/Z-Ventil DN100, PN6, Flanschanschluss (Laschenaugen);1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+850;Drehantrieb, stetig, 4500N;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+860;V.KAK09.1 Druckunabhängiger Regelkugelhahn 2-Wege, stetig mit;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+870;V.KAK07.1 & V.KAK10.1 Druckunabhängiger Regelkugelhahn 2-Wege, stetig mit;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+880;V.KAK02.1 & V.KAK03.1 Druckunabhängiger Regelkugelhahn 2-Wege, stetig mit;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+890;Kältemessung, Durchflusssensor, DN 40, Qp 10 m³/h;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+900;Kältemessung, Durchflusssensor, DN 50, Qp 15 m³/h;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+910;Kältemessung, Durchflusssensor, DN 80, Qp 40 m³/h;3,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+920;Kältemessung, Durchflusssensor, DN 100, Qp 60 m³/h;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+930;Kältemessung, Durchflusssensor, DN 100, Qp 120 m³/h;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+940;Kältemessung, Durchflusssensor, DN 100, Qp 120 m³/h -;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+950;Kältemessung, Durchflusssensor, DN 125, Qp 200 m³/h;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+960;Schweißstutzen für Tauchfühler;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+970;Schweißstutzen für Tauchfühler;14,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+980;Schweißstutzen für Tauchfühler;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+990;Einbau bauseitiger Tauchhülsen für Temperaturfühler;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1000;Schlammabscheider, Flansch, vertikal, DN100;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1010;Schlammabscheider, Flansch, horizontal, DN200;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1020;Rohrfeder-Manometer, Anschluss rückseitig, NG80;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1030;Rohrfeder-Manometer, Anschluss unten, NG63;35,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1040;Einbau bauseitiger Tauchhülsen für Temperaturfühler;40,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1050;Schweißstutzen für Tauchfühler;40,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1060;Schweißstutzen für Tauchfühler 100mm länge;90,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1070;Zeigerthermometer DIN EN 13190, Messsystem Bimetall, Austritt des Messelementes nach hinten, glattes Messelement, Einbaulänge 100 mm, Gehäuse aus nichtrostendem Stahl, Anzeigebereich 0 bis 90 GradC.;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1080;Zeigerthermometer Bimetall L 150 mm Stahl;45,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1090;Zeigerthermometer Bimetall L 200 mm Stahl;15,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1100;Schwimmerentlüfter;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1110;Füll- und Entleerungshahn;150,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+10;Zuschlagsposition für Befestigung bei Deckenhöhe > 3,50m bis max. 4,70m;5000,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+20;Zuschlagsposition für Befestigung bei Deckenhöhe > 4,70 m bis max. 5,70 m;550,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+30;Zuschlagsposition für Befestigung eines Heiz-/ Kühlelements bei Deckenhöhe > 5,70 m bis max. 7,50 m;500,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+40;Erdungs-Bandschelle mit Universal-Anschlussklemme, für Längs- und Querverbindungen in trockenen Innenräumen, verwendbar für Rohrleitungen aus verzinktem Stahl, Kupfer und rostfreiem Edelstahl.;14,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+50;NYM-I 1x 16 mm² grün/gelb Kabel 0,6/1kV als Kunststoffkabel DIN VDE 0271;60,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+60;Die Anschlussarbeiten für Kabel und Leitungen beinhalten Ablängen, Einführen, Abdichten, Absetzen,;14,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+70;Edelstahlrohr  DN 12;85,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+80;Edelstahlrohr  DN 15;315,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+90;Edelstahlrohr  DN 20;790,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+100;Edelstahlrohr  DN 25;1220,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+110;Edelstahlrohr  DN 32;950,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+120;Edelstahlrohr  DN 40;500,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+130;Edelstahlrohr  DN 50;720,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+140;Edelstahlrohr  DN 65;165,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+150;Edelstahlrohr  DN 80;140,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+160;Edelstahlrohr  DN 100;130,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+170;Bogen DN 12;45,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+180;Bogen DN 15;130,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+190;Bogen DN 20;550,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+200;Bogen DN 25;570,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+210;Bogen DN 32;280,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+220;Bogen DN 40;135,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+230;Bogen DN 50;80,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+240;Bogen DN 65;22,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+250;Bogen DN 80;40,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+260;Bogen DN 100;45,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+270;Edelstahlrohr-T-Stück reduziert DN 12;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+280;Edelstahlrohr-T-Stück reduziert DN 15;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+290;Edelstahlrohr-T-Stück DN 20;12,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+300;Edelstahlrohr-T-Stück DN 25;140,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+310;Edelstahlrohr-T-Stück DN 32;70,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+320;Edelstahlrohr-T-Stück DN 40;90,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+330;Edelstahlrohr-T-Stück DN 50;70,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+340;Edelstahlrohr-T-Stück DN 65;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+350;Edelstahlrohr-T-Stück DN 80;22,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+360;Edelstahlrohr-T-Stück DN 100;7,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+370;Edelstahlrohr-T-Stück reduziert DN 12;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+380;Edelstahlrohr-T-Stück reduziert DN 15;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+390;Edelstahlrohr-T-Stück DN 20;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+400;Edelstahlrohr-T-Stück DN 25;50,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+410;Edelstahlrohr-T-Stück DN 32;80,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+420;Edelstahlrohr-T-Stück DN 40;95,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+430;Edelstahlrohr-T-Stück DN 50;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+440;Edelstahlrohr-T-Stück DN 65;35,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+450;Edelstahlrohr-T-Stück DN 80;35,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+460;Edelstahl Reduzierstück DN 12;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+470;Edelstahl Reduzierstück DN 15;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+480;Edelstahl Reduzierstück DN 20;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+490;Edelstahl Reduzierstück DN 25;160,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+500;Edelstahl Reduzierstück DN 32;110,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+510;Edelstahl Reduzierstück DN 40;90,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+520;Edelstahl Reduzierstück DN 50;60,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+530;Edelstahl Reduzierstück DN 65;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+540;Edelstahl Reduzierstück DN 80;25,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+550;Edelstahl Reduzierstück DN 100;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+560;Edelstahlrohr-Muffe DN 12,;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+570;Edelstahlrohr-Muffe DN 15,;14,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+580;Edelstahlrohr-Muffe DN 20,;130,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+590;Edelstahlrohr-Muffe DN 25,;200,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+600;Edelstahlrohr-Muffe DN 32,;150,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+610;Edelstahlrohr-Muffe DN 40,;90,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+620;Edelstahlrohr-Muffe DN 50,;110,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+630;Edelstahlrohr-Muffe DN 65,;25,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+640;Edelstahlrohr-Muffe DN 80,;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+650;Übergang DN 12 auf Gewinde;25,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+660;Übergang DN 15 auf Gewinde;40,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+670;Übergang DN 20 auf Gewinde;150,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+680;Übergang DN 20 auf Gewinde;50,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+690;Übergang DN 25 auf Gewinde;150,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+700;Übergang DN 32 auf Gewinde;60,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+710;Übergang DN 40 auf Gewinde;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+720;Übergang DN 50 auf Gewinde;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+730;Übergang DN 65 auf Gewinde;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+740;Übergangsverschraubung DN 15;60,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+750;Übergangsverschraubung DN 20;60,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+760;Übergangsverschraubung DN 25;60,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+770;Übergang mit Anschweißende DN 80;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+780;Edelstahlrohr-Flansch DN 25;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+790;Edelstahlrohr-Flansch DN 32;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+800;Edelstahlrohr-Flansch DN 40;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+810;Edelstahlrohr-Flansch DN 50;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+820;Edelstahlrohr-Flansch DN 65;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+830;Edelstahlrohr-Flansch DN 80;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+840;Edelstahlrohr-Flansch DN 100;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+850;Edelstahlrohr  DN 65;330,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+860;Edelstahlrohr  DN 80;75,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+870;Edelstahlrohr  DN 100;230,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+880;Stahlrohr, schwarz  DN 125;185,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+890;Stahlrohr  DN 150;105,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+900;Stahlrohr  DN 200;15,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+910;Edelstahlrohr  DN 250;2,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+920;Edelstahlrohr  DN 350;2,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+930;Edelstahlrohr  DN 400;2,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+940;Bogen DN 65;70,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+950;Bogen DN 80;55,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+960;Bogen DN 100;15,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+970;Bogen DN 125;65,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+980;Bogen DN 150;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+990;Bogen DN 200;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1000;Bogen DN 250;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1010;Bogen DN 350;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1020;Bogen DN 400;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1030;Edelstahlrohr-T-Stück DN 65;12,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1040;Edelstahlrohr-T-Stück DN 80;12,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1050;Edelstahlrohr-T-Stück DN 100;12,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1060;Edelstahlrohr-T-Stück DN 125;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1070;Edelstahlrohr-T-Stück DN 150;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1080;Edelstahlrohr-T-Stück DN 65;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1090;Edelstahlrohr-T-Stück DN 100;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1100;Edelstahlrohr-T-Stück DN 125;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1110;Edelstahlrohr-T-Stück DN 150;3,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1120;Edelstahl Reduzierstück DN 65;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1130;Edelstahl Reduzierstück DN 80;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1140;Edelstahl Reduzierstück DN 100;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1150;Edelstahl Reduzierstück DN 125;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1160;Edelstahl Reduzierstück DN 150;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1170;Edelstahl Reduzierstück DN 200;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1180;Edelstahl Reduzierstück DN 250;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1190;Edelstahl Reduzierstück DN 300;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1200;Vorschweißflansch, DN 65, PN 6;60,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1210;Vorschweißflansch, DN 80, PN 6;80,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1220;Vorschweißflansch, DN 100, PN 6;40,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1230;Vorschweißflansch, DN 125, PN 6;40,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1240;Vorschweißflansch, DN 150, PN 6;16,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1250;Vorschweißflansch, DN 200, PN 6;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1260;Vorschweißflansch, DN 250, PN 6;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1270;Vorschweißflansch, DN 150, PN 6;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1280;Vorschweißflansch, DN 400, PN 6;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1290;Flanschdichtung und Verbindungsset, DN 65, PN 6;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1300;Flanschdichtung und Verbindungsset, DN 80, PN 6;40,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1310;Flanschdichtung und Verbindungsset, DN 100, PN 6;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1320;Flanschdichtung und Verbindungsset, DN 125, PN 6;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1330;Flanschdichtung und Verbindungsset, DN 150, PN 6;8,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1340;Korrosionsschutzanstrich für Nahtlose Stahlrohre  für Nacharbeiten bei Schweißarbeiten vor Ort;150,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1350;Montageschienen, verzinkt;2500,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1360;Profilstahl zum Bau von Sonderhalterungen verzinkt;2200,0;kg;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1370;Anschluss an Heizregister Lüftung DN 25;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1380;Anschluss an Heizregister Lüftung DN 50;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1390;Anschluss an Heizregister Lüftung DN 65;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+1400;Anschluss an Heizregister Lüftung DN 80;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+10;Zuschlagsposition für Befestigung bei Deckenhöhe > 3,50m bis max. 4,70m;5000,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+20;Zuschlagsposition für Befestigung bei Deckenhöhe > 4,70 m bis max. 5,70 m;550,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+30;Zuschlagsposition für Befestigung eines Heiz-/ Kühlelements bei Deckenhöhe > 5,70 m bis max. 7,50 m;500,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+40;Kältedämmung 15 x 11;30,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+50;Kältedämmung 18 x 11;45,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+60;Kältedämmung 22 x 12;160,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+70;Kältedämmung 28 x 12;240,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+80;Kältedämmung 35 x 13;390,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+90;Kältedämmung 42 x 13;145,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+100;Kältedämmung 54 x 13;90,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+110;Kältedämmung 76 x 14;135,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+120;Kältedämmung 89 x 14;120,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+130;Kältedämmung 108 x 14;125,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+140;Kältedämmung 15 x 17;60,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+150;Kältedämmung 18 x 17;175,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+160;Kältedämmung 22 x 18;600,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+170;Kältedämmung 28 x 19;230,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+180;Kältedämmung 35 x 19;270,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+190;Kältedämmung 42 x 20;220,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+200;Kältedämmung 54 x 21;340,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+210;Kältedämmung 76 x 22;130,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+220;Kältedämmung 89 x 22;45,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+230;Kältedämmung 108 x 23;200,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+240;Kältedämmung 140 x 24;90,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+250;Kältedämmung 140 x 36;25,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+260;Kältedämmung 168 x 25;35,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+270;Kältedämmung 168 x 36;15,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+280;Kältedämmung 220 x 25;15,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+290;Rohrträger / Kälteschellen 15/50;70,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+300;Rohrträger / Kälteschellen 15/37;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+310;Rohrträger / Kälteschellen 18/55;210,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+320;Rohrträger / Kälteschellen 18/40;50,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+330;Rohrträger / Kälteschellen 22/60;650,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+340;Rohrträger / Kälteschellen 22/46;160,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+350;Rohrträger / Kälteschellen 28/66;230,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+360;Rohrträger / Kälteschellen 28/52;240,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+370;Rohrträger / Kälteschellen 35/74;300,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+380;Rohrträger / Kälteschellen 35/61;300,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+390;Rohrträger / Kälteschellen 42/85;250,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+400;Rohrträger / Kälteschellen 42/68;150,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+410;Rohrträger / Kälteschellen 54/98;500,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+420;Rohrträger / Kälteschellen 54/80;100,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+430;Rohrträger / Kälteschellen 76/122;150,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+440;Rohrträger / Kälteschellen 76/104;150,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+450;Rohrträger / Kälteschellen 89/136;50,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+460;Rohrträger / Kälteschellen 89/117;130,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+470;Rohrträger / Kälteschellen 108/162;200,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+480;Rohrträger / Kälteschellen 108/136;140,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+490;Rohrträger / Kälteschellen 140/225;115,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+500;Rohrträger / Kälteschellen 168/257;40,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+510;Rohrträger / Kälteschellen 220/270;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+520;Kältedämmung an Rohren 15/20 alukaschiert 100% GEG nicht-brennbar;40,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+530;Kältedämmung an Rohren 18/20 alukaschiert 100% GEG nicht-brennbar;50,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+540;Kältedämmung an Rohren 22/20 alukaschiert 100% GEG nicht-brennbar;45,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+550;Kältedämmung an Rohren 28/30 alukaschiert 100% GEG nicht-brennbar;600,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+560;Kältedämmung an Rohren 35/30 alukaschiert 100% GEG nicht-brennbar;165,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+570;Kältedämmung an Rohren 42/40 alukaschiert 100% GEG nicht-brennbar;70,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+580;Kältedämmung an Rohren 54/60 alukaschiert 100% GEG nicht-brennbar;160,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+590;Kältedämmung an Rohren 76/80 alukaschiert 100% GEG nicht-brennbar;80,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+600;Kältedämmung an Rohren 89/100 alukaschiert 100% GEG nicht-brennbar;30,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+610;Rohrabhänger für Kältedämmung alukaschiert 15/20;45,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+620;Kältedämmung an Rohren 18/20 alukaschiert 100% GEG nicht-brennbar;60,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+630;Rohrabhänger für Kältedämmung alukaschiert 22/20 100% GEG nicht-brennbar;55,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+640;Rohrabhänger für Kältedämmung alukaschiert 28/30 100% GEG nicht-brennbar;650,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+650;Rohrabhänger für Kältedämmung alukaschiert 35/30 100% GEG nicht-brennbar;200,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+660;Rohrabhänger für Kältedämmung alukaschiert 42/40 100% GEG nicht-brennbar;90,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+670;Rohrabhänger für Kältedämmung alukaschiert 54/60 100% GEG nicht-brennbar;190,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+680;Rohrabhänger für Kältedämmung alukaschiert 76/80 100% GEG nicht-brennbar;100,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+690;Rohrabhänger für Kältedämmung alukaschiert 89/100 100% GEG nicht-brennbar;35,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+700;Kältedämmung Mikroblasen- und Schlammabscheider DN100;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+710;Kältedämmung Mikroblasen- und Schlammabscheider DN200;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+720;Dämmung von Armaturen/Flanschen;150,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+730;Dämmung von Armaturen/Flanschen;150,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+740;Dämmung von Armaturen/Flanschen;150,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+750;Dämmung von Armaturen/Flanschen;100,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+760;Dämmung von Armaturen/Flanschen;60,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+770;Dämmung von Armaturen/Flanschen;60,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+780;Dämmung von Armaturen/Flanschen;60,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+790;Dämmung von Armaturen/Flanschen;40,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+800;Dämmung von Armaturen/Flanschen;40,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+810;Dämmung von Armaturen/Flanschen;40,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+820;Kältedämmung Platte 25mm;7,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+830;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;35,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+840;Brandschutzabschottung Rohr Stahl R90 AD 35 mm Gebäude;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+850;Brandschutzabschottung Rohr Stahl R90 AD 42 mm Gebäude;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+860;Brandschutzabschottung Rohr Stahl R90 AD 54 mm Gebäude;16,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+870;Brandschutzabschottung Rohr Stahl R90 AD 76 mm Gebäude;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+880;Brandschutzabschottung Rohr Stahl R90 AD 76 mm Gebäude;14,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+890;Brandschutzabschottung von Rohrleitung für nichtbrennbare Rohre aus Stahl oder Edelstahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;14,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+900;Brandschutzabschottung Rohr brennbare Kältedämmung Edelstahl R90 AD 35 mm Gebäude Wand, Decke und leichte Trennwand;28,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+910;Brandschutzabschottung Rohr brennbare Kältedämmung Edelstahl R90 AD 42 mm Gebäude Wand, Decke und leichte Trennwand;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+920;Brandschutzabschottung Rohr brennbare Kältedämmung Edelstahl R90 AD 54 mm Gebäude Wand, Decke und leichte Trennwand;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+930;Brandschutzabschottung Rohr brennbare Kältedämmung Edelstahl R90 AD 76 mm Gebäude Wand, Decke und leichte Trennwand;12,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+940;Brandschutzabschottung Rohr brennbare Kältedämmung Edelstahl R90 AD 108 mm Gebäude Wand, Decke und leichte Trennwand;18,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+950;Einmörteln von Brandschutzschalen;80,0;lfm;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+960;Kennzeichnungsschild Rohrabschottung;140,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+10;Zuschlagsposition für Befestigung eines Heiz-/ Kühlelements bei Deckenhöhe > 3,50 m bis max. 4,70 m;75,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+20;Zuschlagsposition für Befestigung eines Heiz-/ Kühlelements bei Deckenhöhe > 4,70 m bis max. 5,70 m;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+30;Zuschlagsposition für Befestigung eines Heiz-/ Kühlelements bei Deckenhöhe > 5,70 m bis max. 7,50 m;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+40;Flachheizkörper, aus Stahl, Wärmeleistung geprüft DIN EN 442-2, mit Registrierung, Bauhöhe über 1750 bis 1850 mm, Baulänge über 850 bis 950;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+50;Klemmringverschraubung Metall,;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+60;Doppel-Rosette;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+70;"Absperrverschraubung 3/4""";2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+80;Umluftkonvektor Heizen/Kühlen- 2-Leiter System   - für Abhangdeckenmontage, mit Umluftbetrieb, mit Luftfilter, Rahmen aus Kunststoff,2-Seitig ausblasend, mit Gerätegehäuse, aus beschitetem Stahl, 2-Leiter Wärmetauscher aus Kupferrohren mit Aluminiumlamellen, Heiz/ -Kühlmedium Wasser, Querstromventil;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+90;wie oben unter Position Umluftkonvektor 2-Seitig in vollem Wortlaut;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+100;Kondensatpumpe passend für vorgenannten Umluftkonvektoren für Abhangdeckenmontage;14,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+110;"Differenzdruckunabhängiges Thermostatventil 2-Leiter passend für vorgenannten Umluftkonvektoren für Abhangdeckenmontage, Anschluss R1/2"" AG, 1 St. 230 V 2-Punkt Stellantrieb, Rücklaufverschraubung, Verbindung Vor- und Rücklauf aus";14,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+120;Kleinventilantrieb, elektrothermisch, NO, 230V;14,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+130;Umluftkonvektor - 2-Leiter elektromechanisch für Wand und Deckenmontage ink. demontierbare, freihängende Verkleidung.;17,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+140;Umluftkonvektor - 2-Leiter elektromechanisch für Wand und Deckenmontage;13,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+150;Umluftkonvektor - 2-Leiter elektromechanisch für Deckenmontage;28,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+160;Umluftkonvektor - 2-Leiter elektromechanisch für Wandmontage zur Vorkühlung von Präzisionsmessräume;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+170;Umluftkonvektor - 2-Leiter elektromechanisch für Deckenmontage;6,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+180;Umluftkonvektor - 2-Leiter elektromechanisch für Wand und Deckenmontage;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+190;Differenzdruckunabhängiges Ventil-Kit;14,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+200;Differenzdruckunabhängiges Ventil-Kit;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+210;Kleinventilantrieb, elektrothermisch, NO, 230V;25,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+220;6-Weg Regelkugelhahn mit Durchflussregelung DN15;9,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+230;6-Weg Regelkugelhahn mit Durchflussregelung DN20;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+240;6-Weg Regelkugelhahn mit Durchflussregelung DN25;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+250;Kondensatpumpe;70,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+260;Ventil-Kondensatwanne passend für vorgenannten Umluftkonvenktoren;70,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+270;Umluftkonvektor - 4-Leiter elektromechanisch für Wand und Deckenmontage;3,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+280;wie oben in vollem Wortlaut;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+290;wie oben in vollem Wortlaut;3,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+300;wie oben in vollem Wortlaut;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+310;Differenzdruckunabhängiges Ventil-Kit;14,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+320;Differenzdruckunabhängiges Ventil-Kit;8,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+330;Kleinventilantrieb, elektrothermisch, NO, 230V;25,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+340;Kondensatpumpe;11,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+350;Ventil-Kondensatwanne passend für vorgenannten Umluftkonvenktoren;11,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+360;Zuschlagsposition für Befestigung eines Heiz-/ Kühlelements bei Deckenhöhe > 3,50 m bis max. 7,50 m;9,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+370;Metalldecke als freihängendes Segelsystem, 3000 mm x 1200 mm Heizung/Kühlung;9,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+380;6-Weg Regelkugelhahn mit Durchflussregelung DN15;3,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+390;6-Weg Regelkugelhahn mit Durchflussregelung DN20;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+400;Kugelhahn mit Knebelgriff;9,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+410;Zuschlagsposition für Montage eines Heiz-/ Kühlelements Inkl. Unterkonstruktion bei Deckenhöhe > 3,50 m bis max. 4,70 m;100,0;m²;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+420;Zuschlagsposition für Montage eines Heiz-/ Kühlelements Inkl. Unterkonstruktion bei Deckenhöhe > 4,70 m bis max. 5,70 m;110,0;m²;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+430;Klimaregister aus flexibelem sauerstoffdiffusionsdichtem Schichtverbundrohr. Die Registereinheiten sollen vor Ort in Aluminiumstrangpressprofile eingearbeitet werden.;210,0;m²;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+440;Zulage für das Umfahren von Deckeneinbauten, (Brandmeldern, Sprinkler, Einbaulampen, etc.) bis 200 mm bei der Montage des Kühl- und Heizleitungsrohres in Höhe des Kühldeckensystems. Die Abrechnung erfolgt pro Umfahrungsstelle innerhalb der Kühl- und Heizdeckenfelder.;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+450;Zulage für das Umfahren von Deckeneinbauten, (Brandmeldern, Sprinkler, Einbaulampen, etc.) > 200 bis 400 mm bei der Montage des Kühl- und Heizleitungsrohres in Höhe des Kühldeckensystems. Die Abrechnung erfolgt pro Umfahrungsstelle innerhalb der Kühl- und Heizdeckenfelder.;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+460;Zulage für das Umfahren von Deckeneinbauten, (Brandmeldern, Sprinkler, Einbaulampen, etc.) > 400 bis 600 mm bei der Montage des Kühl- und Heizleitungsrohres in Höhe des Kühldeckensystems. Die Abrechnung erfolgt pro Umfahrungsstelle innerhalb der Kühl- und Heizdeckenfelder.;25,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+470;Dämmung durch Auflage einer rieselsicher in PE-Folie eingeschweißten Wärmedämmung auf die rückwärtige Seite der Deckenbekleidung. Die Dämmung besteht aus Mineralwolle mit einer Materialstärke von 20 mm mit einer Wärmeleitfähigkeit nach DIN 4106-4 von 0,035-0,040 W/mK. Die Baustoffklasse der Mineralw;210,0;m²;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+480;PP-Unterverteiler, 3-fach, für Vor- und Rücklaufverteilung aus Polypropyle als Direktkupplung zur Aufnahme der 10 mm Vor-/Rücklaufleitungen der Heiz-/Kühlkreisläufe. Es sind 3 Kreisläufe anzuschließen. Die Anbindung erfolgt an die Kühldeckenversorgungsleitung aus 20 mm PP-Rohr.;15,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+490;PP-Unterverteiler, 4-fach, für Vor- und Rücklaufverteilung aus Polypropyle als Direktkupplung zur Aufnahme der 10 mm Vor-/Rücklaufleitungen der Heiz-/Kühlkreisläufe. Es sind 4 Kreisläufe anzuschließen. Die Anbindung erfolgt an die Kühldeckenversorgungsleitung aus 20 mm PP-Rohr.;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+500;PP-Unterverteiler, 6-fach, für Vor- und Rücklaufverteilung aus Polypropyle als Direktkupplung zur Aufnahme der 10 mm Vor-/Rücklaufleitungen der Heiz-/Kühlkreisläufe. Es sind 6 Kreisläufe anzuschließen. Die Anbindung erfolgt an die Kühldeckenversorgungsleitung aus 20 mm PP-Rohr.;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+510;Kühldeckenversorgungsleitung in der Dimension 20 mm zur Verbindung der Haupt- mit den Unterverteiler. Kunststoffrohr, schwarz, aus Polypropylen, sauerstoffdiffusionsdicht gemäß DIN 4726, einschließlich aller Form- und Verbindungsstücke, ohne Isolierung. Bis zu 4 Formteile je 10 m.;50,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+520;Adapter aus Polypropylen in der Dimension 20 mm zum Verbinden der Versorgungsleitungen PP mit den Hauptverteilern.;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+530;Heizkreisverteiler, vormontiert, mit Durchflussmesser aus Edelstahl für 4 Kühl-/Heizkreise für obengenannte Heiz/-Kühldeckesystem. Der Vor- und Rücklaufbalken wird an das Kühl-/ Heizsystem angeschlossen.;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+540;Heizkreisverteiler, vormontiert, mit Durchflussmesser aus Edelstahl für 7 Kühl-/Heizkreise für obengenannte Heiz/-Kühldeckesystem. Der Vor- und Rücklaufbalken wird an das Kühl-/ Heizsystem angeschlossen.;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+550;Absperrventil DN 32 für Vor- und Rücklauf zum Füllen, Spülen, Entlüften / Entleeren.;8,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+560;Klett Wärme- und Trittschalldämmplatte 30-2 mm;1700,0;m²;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+570;Stahlgittermatte zur Rohrbefestigung Flächenheizung/-kühlung Bechichtung gem. AGI Q 151;540,0;m²;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+580;Kunststoff-Klebeband 66m Rolle, 50mm breit;100,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+590;Rohrleitung aus Mehrschichtverbundwerkstoff für Heizung und Kühlwasser , 16x2,0 / 4 bar bei 60 GradC,;11700,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+600;Rohrleitung aus Mehrschichtverbundwerkstoff für Heizung und Kühlwasser , 16x2,0 / 4 bar bei 60 GradC,;3950,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+610;Randdämmstreifen 150/8 mit Folieschürze;7500,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+620;Brandschutzabschottung von Rohrleitung aus Mehrschichtberbundwerkstoff, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar), mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11, passend für obengenannte Mehrschichtverbundwerksto;300,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+630;Bewegungsfugenprofil 1,3m 40x10mm mit selbstklebendem T-Fuß;1450,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+640;Schutzhülse für obengenannte Rohrsystem, l=300;1000,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+650;Messstellenmarkierung f. Feuchtemessung im Estrich;300,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+660;Zwischenfolie PE-Typ 100 0,1mm Nenndicke, 1,5m breit;2200,0;m²;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+670;Heizkreisverteiler aus Edelstahl für Fußbodenheizungen und Flächenkühlsysteme.;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+680;Edelstahlverteiler mit mit automatischer hydraulischer Abgleich, 5 Heizkreise;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+690;Edelstahlverteiler mit mit automatischer hydraulischer Abgleich, 6 Heizkreise;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+700;Edelstahlverteiler mit mit automatischer hydraulischer Abgleich, 7 Heizkreise;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+710;Edelstahlverteiler mit mit automatischer hydraulischer Abgleich, 8 Heizkreise;9,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+720;Edelstahlverteiler mit mit automatischer hydraulischer Abgleich, 9 Heizkreise;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+730;Edelstahlverteiler mit mit automatischer hydraulischer Abgleich, 10 Heizkreise;3,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+740;Kleinventilantrieb, elektrothermisch, NO, 230V;230,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+750;Rohrführungsbogen für obengenannte Mehrstoffverbundrohe, Kunststoff R: 85 mm;450,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+760;Verteilerschrank Unterputz 700x730x110mm;3,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+770;Verteilerschrank Unterputz 1000x710x110mm;26,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+780;Klemmleiste, Für die Verdrahtung von Raumthermostaten, mit Wechslerkontakt und, elektrothermischen Stellantrieben., Geeignet für Fußbodenheizung und, Fußbodenkühlung (Sommer/Winter-Betrieb)., Über ein externes Signal kann zwischen, Heizen und Kühlen umgeschaltet werden. Anschluss 230 V, Geeignet für;30,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+790;Gummi-Kompensator DN 15 mit Flanschanschluss,;6,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+800;Gummi-Kompensator DN 20 mit Flanschanschluss;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+810;Gummi-Kompensator DN 32 mit Flanschanschluss;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+10;Zuarbeit für die Gewerke Elektro und MSR,;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+20;Die beiden Maschinenkühlungsnetze sind gesondert hydraulisch einreguliert zu betreiben.;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+30;Einregulierung und Inbetriebnahme;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+40;Teilnahme an Probebetrieb TMon;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+50;Teilnahme an einer Schwarzschaltung;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+60;Der Errichter betreibt seine Anlagen auf Anforderung des Bauherrn bis zur Gesamtabnahme des Gebäudes als bauzeitlicher Betrieb.;8,0;Wo;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+70;Heizanlage befüllen Wasser enthärtet/entsalzt;10,0;m³;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+80;Kälteanlage befüllen Wasser, salzarme Betriebsweise;20,0;m³;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+90;Glykol-Kreise befüllen;1,5;m³;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+100;Durchspülen des Rohrnetzes;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+110;Sämtliche hydraulischen Anlagenteile sind mit Wasser einmalig zu spülen, bis das Wasser sauber und luftblasenfrei abläuft. Danach ist die Anlage mit Wasser zu füllen.;210,0;m²;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+120;Druckprobe Heizkreise Fußbodenheizung;230,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+130;Einmalige Druckprüfung des Kühl- und Heizdeckensystems und der Rohrleitungen während des Baufortschrittes in mehreren Teilabschnitten. Die Druckproben sind zu protokollieren und der Bauleitung auf Anweisung vorzulegen. Die Beplankung von GK-Decken darf erst nach Vorlage der Druck- und Prüfprotokolle;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+140;Druckprobe Heizungssystem für jedes Geschoss;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+150;Druckprobe Kühlungssystem für jedes Geschoss;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+160;Montageplanung für Heizungs- und Kältetechnik;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+170;Fotodokumentation;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+180;Erstellung Übersichtspläne (M 1:100) je Ebene,;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+190;Brandschutzakte;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+200;Von der vom Auftraggeber eingesetzten Bauüberwachung wird eine digitale, cloudbasierte Bauüberwachungssoftware kostenfrei zur Verfügung gestellt. Der Auftragnehmer ist verpflichtet, mindestens den Projektleiter und den Bauleiter in dieser Software anzumelden und entsprechende Endgeräte zur Bearbeitu;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+210;Bereitstellung von Revisionsunterlagen;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+220;Wiederholtes Einweisen;12,0;h;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+230;Kunststoff-Bezeichnungsschild;50,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+240;Kunststoff-Bezeichnungsschild;50,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+250;Kunststoff-Bezeichnungsschild;50,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+260;Kunststoff-Bezeichnungsschild;100,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+270;Kunststoff-Bezeichnungsschild;100,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+280;Schild zur Kennzeichnung einer Revisionsöffnung;50,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+290;Leitungsbeschriftung;300,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+300;Ausdruck des Zentralen- / Verteilschemas einlaminiert zur Aufhängung in Technikzentrale einschließlich Befestigung und Montage.;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+310;Weiterführung des bauseitigen AKS;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+10;Kernbohrung DN 50;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+20;Kernbohrung DN 60;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+30;Kernbohrung DN 80;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+40;Kernbohrung DN 100;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+50;Kernbohrung DN 125;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+60;Kernbohrung DN 150;5,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+70;Kernbohrung DN 300;4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+80;Durchbruch schließen Mörtel MGIII bis 250cm2 T 20-32cm,;90,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+90;Durchbruch schließen Mörtel MGIII über 250 bis 500 cm2 T 20-32cm;80,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+100;Durchbruch schließen Mörtel MGIII über 500 bis 1000 cm2 T 20-32cm;40,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+110;Durchbruch schließen Mörtel MGIII über 1000 bis 2000 cm2 T 20-32cm;10,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+120;Trockenbaudurchbrüche anzeichnen;250,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+130;Ausschnitt herstellen in bestehender beidseitig doppelt beplankter Gipskartonwand, mit innenliegender Akustikdämmung, Durchmesser bis 6 cm.;100,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+140;Ausschnitt herstellen in bestehender beidseitig doppelt beplankter Gipskartonwand, mit innenliegender Akustikdämmung, Durchmesser bis 10 cm.;70,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+150;Ausschnitt herstellen in bestehender beidseitig doppelt beplankter Gipskartonwand, mit innenliegender Akustikdämmung, Durchmesser bis 20 cm.;20,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+10;Stundenlohnarbeiten durch Obermonteur/-in;10,0;h;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+20;Stundenlohnarbeiten durch Monteur/in;10,0;h;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83
+30;Stundenlohnarbeiten durch Helfer/in;10,0;h;gaeb;leistungsbeschreibungen/GAEB-Datei_26 070-36 EU.X83

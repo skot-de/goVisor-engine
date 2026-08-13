@@ -50,3 +50,54 @@
 1;Stundenlohnarbeiten durch Vorarbeiter/-in;20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten_V33.X83
 2;Stundenlohnarbeiten durch Arbeiter/-in;20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten_V33.X83
 3;Stundenlohnarbeiten durch Bauhelfer/-in;20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten_V33.X83
+01.1;Alu-Fenster-Element;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.2;Alu-Fenster-Element;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.3;Alu-Fenster-Element;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.4;Alu-Fenster-Element;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.5;Alu-Fenster-Element;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.6;Alu-Fenster-Element;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.7;Alu-Fenster-Element;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.8;Alu-Fenster-Element;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.9;Alu-Fassaden-Element;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.10;Alu-Fenster-Element;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.11;Alu-Fenster-Element;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.12;Alu-Fenster-Element;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.13;Alu-Tür-Element 1.flg;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.14;Statischer Nachweis;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.15;Fensterfalzlüfter;24,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.16;Werkplanung Metallbauarbeiten;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.17;Inbetriebnahme der Türantriebe;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.18;Abnahmeprüfung der Türantriebe;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.19;Jährliche Prüfung und Wartung der Türantriebe;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.20;Wartung gem. VDMA-Arbeitsblätter;4,0;a;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.21;Fensterbänke;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+01.22;Fensterlaibung Aluminiumblech;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+02.1;Markisolette (Motor);5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+02.2;Markisolette (Motor);6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+02.3;Markisolette (Motor);3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+02.4;Markisolette (Motor);4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+02.5;Markisolette (Motor);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+02.6;Markisolette (Motor);3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+02.7;Markisolette (Motor);2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+02.8;Markisolette (Motor);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+02.9;Markisolette (Motor);4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+02.10;Markisolette (Motor);4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+02.11;Markisolette (Motor);3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+02.12;Sonnenschutzsteuerung komplett;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+03.10;Alu-Brandschutz-Element T 30 1.flg / F 30;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+03.20;Alu-Brandschutz-Element T 30 1.flg / F 30;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+03.30;Alu-Brandschutz-Element T 30 1.flg / F 30;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+03.40;Alu-Brandschutz-Element T 30 1.flg / F 30;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+03.50;Alu-Brandschutz-Element T 30 1.flg / F 30;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+03.60;Alu-Brandschutz-Element T 30 1.flg / F 30;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+03.70;Alu-Brandschutz-Element T 30 1.flg / F 30;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+03.80;Alu-Brandschutz-Element T 30 1.flg / F 30;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+03.90;Alu-Brandschutz-Element T 30 1.flg / F 30;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+03.100;Alu-Brandschutz-Element T 30 1.flg / F 30;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+03.110;Inbetriebnahme und Abnahmeprüfung der Feststellanlagen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+03.120;Jährliche Prüfung und Wartung der Feststellanlagen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+03.121;Wartung gem. VDMA-Arbeitsblätter;4,0;a;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+03.122;Werkplanung Metallbauarbeiten;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+04.1;Vorarbeiter/-in sämtliche Kosten/Zuschläge;20,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+04.2;Arbeiter/-in sämtliche Kosten/Zuschläge;20,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83
+04.3;Bauhelfer/-in sämtliche Kosten/Zuschläge;20,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260719_LV330-Metallbau-Verglasung-Sonnenschutzarbeiten.D83

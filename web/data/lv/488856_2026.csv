@@ -1,4 +1,419 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0101.1;Leisten für Bauschild 300x20;7,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.1;Baustelleneinrichtung für eigene Leistungen;1,0;psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.2;Verlängerung der Vorhaltezeit der Baustelleneinrichtung;1,0;Mt;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.3;Längervorhaltung Kran für Fremdgewerke;1,0;Mt;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.4;Beweissicherung;1,0;Psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.5;Baubüro, für Bauleitung des AG;1,0;Psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.6;Verlängerung Vorhaltung Baubüro;1,0;StMt;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.7;Besprechungscontainer, Doppelcontainer;1,0;Psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.8;Verlängerung Vorhaltung Besprechungscontainer;1,0;StMt;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.9;Sanitärcontainer (Männer);1,0;Psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.10;Verlängerung Vorhaltezeit Sanitärcontainer (Männer);1,0;Mt;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.11;Sanitärcontainer (Frauen);1,0;Psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.12;Verlängerung Vorhaltezeit Sanitärcontainer (Frauen);1,0;Mt;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.13;Tragschichtpolster - eigene BE und Fremdgewerke;100,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.14;Zulage Tragschichtpolster zeitversetzt;50,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.15;Fahrplatten für Fahrzeuge und Baumaschinen;70,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.16;Schließung Baustellenzugang;18,0;Mt;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.17;Baugrubentreppe h 1,50 m;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.18;Baumschutz liefern, unterhalten, entsorgen;10,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.19;Baustromanschluss herstellen, vorhalten, entfernen;1,0;psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.20;Verlängerung Baustrom;1,0;Mt;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.21;Baustromanschluss - Kabel;110,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.22;Kabelgraben 50 / 80;110,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.23;Beleuchtung Baustelle aufbauen betreiben umsetzen abbauen;1,0;Psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.24;Verlängerung Beleuchtung Baustelle;1,0;Mt;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.25;Bauwasseranschluss herstellen, vorhalten, entfernen;1,0;psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.26;Verlängerung Bauwasseranschluss;1,0;Mt;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.27;Bauwasseranschluss Container - Leitungen;105,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.28;Medienanschluss Bürocontainer;1,0;psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.29;Bautür 1-flüglig, in Öffnung 3,20 x 2,55 m;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.30;Verlängerung Bautür, 1-flügl. in Öffnung 3,20 / 2,55 m;1,0;StMt;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.31;Bautür 1-flüglig, Öffnung in 2,20 x 2,55 m;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.32;Verlängerung Bautür, 1-flügl. in Öffnung 2,20/ 2,55 m;1,0;StMt;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.33;Bautür 1-flüglig, Öffnung in 1,26 x 2,135 m;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.34;Verlängerung Bautür, 1-flügl. in Öffnung 1,26/ 2,135 m;1,0;StMt;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.35;Winterheizgerät;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.36;Verlängerung Vorhaltung Winterheizgerät;1,0;StMt;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.37;Verbrauch für Heizöl;20000,0;l;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.38;Tauchpumpe Aufzugsschacht;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.39;Überfahrschutz für fremde Kabel und Schläuche;10,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.40;Provisorische Fenster- und Türverschlüsse bis 6 m2;130,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.41;Verlängerung Vorhaltung prov. Schließung Fenster und Türen;130,0;m2Mt;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.42;Provisorische gedämmte Türverschlüsse;3,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.43;Verlängerung Vorhaltung prov. gedämmte Türverschlüsse;12,0;m2Mt;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.44;Fußabstreiffläche im Bauzustand 2 - 2,5 qm;3,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.45;Absturzsicherung Treppenhäuser;7,5;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.46;Verlängerung Vorhaltezeit Absturzsicherung Treppenhäuser;1,0;Wo;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.47;Absturzsicherung an Deckenrändern;25,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.48;Vermessungsarbeiten;1,0;psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.49;Meteriss-Plakette überputzbar;10,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.50;Tafel für Aushänge 250 x 125 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0102.51;Halteverbotsbereiche einrichten;1,0;psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.1;Statische Berechnung Arbeitsgerüst;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.2;Arbeits- und Schutzgerüst Lastklasse 4;278,54;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.3;verlängerte Vorhaltung Gerüste Lastklasse 4;5570,8;m²Wo;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.4;Arbeits- und Schutzgerüst Lastklasse 4;85,304;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.5;verlängerte Vorhaltung Gerüste Lastklasse 4;3412,16;m²Wo;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.6;Arbeits- und Schutzgerüst Lastklasse 4;524,51;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.7;verlängerte Vorhaltung Gerüste Lastklasse 4;15447,6;m²Wo;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.8;Arbeits- und Schutzgerüst Lastklasse 4;417,121;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.9;verlängerte Vorhaltung Gerüste Lastklasse 4;16684,8;m²Wo;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.10;Gerüststandflächen befestigen;10,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.11;Fanggerüst für Dacharbeiten;138,725;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.12;verlängerte Vorhaltung Fanggerüst;5549,0;mWo;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.13;Überbrückung in Gerüst, 6,00 m;7,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.14;Gebrauchsüberlassung der Überbrückung;720,0;StWo;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.15;Schutzdach über Überbrückung;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.16;Gebrauchsüberlassung des Schutzdaches;120,0;StWo;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.17;Schutzabdeckung Flachdach;16,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.18;Gebrauchsüberlassung des Flachdachschutzes;640,0;mWo;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.19;Konsolen b 30 cm;537,37;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.20;Verlängerte Vorhaltung Konsolen 30 cm;21494,8;mWo;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.21;Konsolen b 70 cm;537,37;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.22;verlängerte Vorhaltung Konsolen 30 cm;21494,8;mWo;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.23;Brüstung und Fußbrett auf Gebäudeseite;537,37;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.24;verlängerte Vorhaltung Brüstung und Fußbrett;21494,8;mWo;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.25;Innengeländer;50,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.26;Verlängerte Vorhaltung Innengeländer;2000,0;mWo;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.27;Gerüstbekleidung Schutznetz;1027,88;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.28;verlängerte Vorhaltung Schutznetz;20557,7;mWo;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.29;Schutzdach über Eingang;3,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.30;verlängerte Vorhaltung Schutzdach;120,0;StWo;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.31;Gerüsttreppenturm 10,50 m;2,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.32;verlängerte Vorhaltung Gerüsttreppenturm;40,0;StWo;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.33;Gerüsttreppenturm 10,50 m;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.34;verlängerte Vorhaltung Gerüsttreppenturm;40,0;StWo;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.35;Gerüsttreppenturm 5,70 m;3,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0201.36;zusätzliche Anfahrt Gerüstbaukolonne;10,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0202.1;Innengerüst, Treppenhaus 3;21,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0202.2;Verlängerung Vorhaltezeit Innengerüst Treppenhaus 1;210,0;m2Wo;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0301.1;Betonrezeptur mit Erstprüfung;1,0;psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0301.2;Überwachung Betoneinbau Überwachungsklasse 2;1,0;psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0301.3;Erschwerniszulage für Elt-Leerrorinstallation;1,0;psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.1;Überwachung Betoneinbau Überwachungskl.2, Fundamente;1,0;psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.2;Sauberkeitsschicht Magerbeton, d = 5-8 cm;932,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.3;Trennlage PE Folie 2-lagig;932,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.4;Perimeterdämmung als Sohldämmung, XPS 040, d = 10 cm;786,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.5;Zulage Vertiefung Sohldämmung, h 10 cm;42,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.6;Zulage Vertiefung Sohldämmung, h 30 cm;4,2;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.7;Ortbeton Bodenplatte EG FU100, C25/30, d=20 cm;541,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.8;Ortbeton Bodenplatte EG FU100, C25/30, d=20 cm;268,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.9;Ortbeton Streifenfundament Fu 010, C 25/30, b/h = 100/60 cm (Achse 5+8/A'-A+G-H);10,0;m³;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.10;Ortbeton Streifenfundament Fu 014, C 25/30, b/h = 60/60 cm (Achse 2-3/G-Hff);15,0;m³;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.11;Ortbeton Streifenfundament Fu 015, C 25/30, b/h = 60/60 cm (Achse 4/G-H);5,0;m³;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.12;Ortbeton Streifenfundament Fu 016, C 25/30, b/h = 160/60 cm (Achse 9-12/G);19,0;m³;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.13;Ortbeton Streifenfundament Fu 017, C 25/30, b/h = 80/60 cm (Achse 12/G-H);8,0;m³;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.14;Ortbeton Streifenfundament Fu 020, C 25/30, b/h = 30/60 cm (Tore);3,8;m³;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.15;Ortbeton Streifenfundament Fu 022, C 25/30, b/h = 120/60 cm (Achse 10/A-C);9,6;m³;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.16;Ortbeton Streifenfundament Fu 023, C 25/30, b/h = 100/60 cm (Achse 12/A-C);8,0;m³;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.17;Einbetonieren von Leitungen, Dm 80-100 mm, Sohle d=25 cm;19,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.18;Perimeterdämmung (PW), XPS 040, d = 22 cm;137,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.19;Anschnitt, schräg, Perimeterdämmung d =22 cm;121,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.20;Flankendämmung XPS 040, d=6cm, h=40-95 cm;55,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.21;Auffüllungen Magerbeton;50,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0302.22;Erschwerniszulage Blitzschutz Fundamenterder;1,0;Psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.1;Mehr- / Minderkosten für Ausführung in Teilfertigteilen (Filigranwände);1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.2;Ortbeton-Außenwand Wa 008, Normalbeton C25/30, XC3 WO d= 25 cm, Achse 9-12/A+C;122,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.3;Ortbeton-Außenwand Wa 008, Normalbeton C25/30, XC3 WO d= 25 cm, Achse 9-12/A+C;100,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.4;Ortbeton-Attika über Wa 008, Normalbeton C25/30, XC3 WO d= 25 cm, Achse 9-12/A+C;20,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.5;Ortbeton-Außenwand Wa 009, Normalbeton C25/30, XC3 WO d= 25 cm, Achse 12/A-C;51,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.6;Ortbeton-Außenwand Wa 009, Normalbeton C25/30, XC3 WO d= 25 cm, Achse 12/A-C;42,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.7;Ortbeton-Attika über Wa 009, Normalbeton C25/30, XC3 WO d= 25 cm, Achse 12/A-C;9,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.8;Ortbeton-Innenwand Wa 009, Normalbeton C25/30, XC3 WO d= 25 cm, Achse 9+10/A-C;99,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.9;Ortbeton-Innenwand Wa 009, Normalbeton C25/30, XC3 WO d= 25 cm, Achse 9+10/A-C;53,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.10;Ortbeton-Innenwand Wa 010, Normalbeton C25/30, XC3 WO d= 25 cm, Achse 9a/G-H;91,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.11;Ortbeton-Außenwand Wa 010, Normalbeton C25/30, XC3 WO d= 25 cm, Achse 9a/G-H und 5/G-H;116,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.12;Ortbeton-Attika über Wa 010, Normalbeton C25/30, XC3 WO d= 25 cm, Achse 9a/G-H und 5/G-H;24,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.13;Ortbeton-Außenwand 1.OG, Normalbeton C25/30, XC3 WO d= 25 cm, Achse-H;50,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.14;Ortbeton-Attika über Südseite, Normalbeton C25/30, XC3 WO d= 25 cm, Achse H/ 5-8;11,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.15;Ortbeton-Außenwand Wa 011, Normalbeton C25/30, XC3 WO d= 25 cm, Achse 8-12/G;115,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.16;Ortbeton-Attika über Wa 011, Normalbeton C25/30, XC3 WO d= 25 cm, Achse 8-12/G;39,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.17;Ortbeton-Außenwand Wa 012, Normalbeton C25/30, XC3 WO d= 25 cm, Achse 12/G-H;91,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.18;Ortbeton-Attika über Wa 012, Normalbeton C25/30, XC3 WO d= 25 cm, Achse 12/G-H;15,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.19;Ortbeton-Innenwände, Normalbeton C25/30, XC3 WO, d= 25 cm, neben Achse G und Achse 10/G;164,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.20;Nachträgliche STB-Bandkonsole Wa 013-1, Normalbeton C25/30, XC3 WO, Achse 9A/A-C an Bestandswand;21,5;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0303.21;Zulage Sichtbeton SB2;804,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0304.1;Besondere Leistung erhöhte Rohbautoleranzen DIN 18202 T.3 Zeile 7;1,0;Psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0304.2;Werkstattplanung Fertigteile;1,0;Psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0304.3;Fertigteilstütze mit angeformten Fundament Fu003/S006, 50/50/1085cm;2,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0304.4;Zulage STB-Konsole als Einzelkonsole 25/50/40;2,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0304.5;Zulage STB-Konsole als Einzelkonsole 25/25/25;8,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0304.6;Fertigteilstütze S006, 50/50/1085cm;2,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0304.7;Zulage STB-Konsole als Einzelkonsole 25/50/40;4,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0304.8;Zulage STB-Konsole als Einzelkonsole 25/25/25;8,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0304.9;Fertigteilstütze mit angeformten Fundament Fu004/S007 50/50/1085cm;3,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0304.10;Bewehrungsschraubanschlüsse M20;24,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0304.11;Zulage STB-Konsole als Einzelkonsole 25/50/40;6,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0304.12;Zulage STB-Konsole als Einzelkonsole 25/25/25;12,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0304.13;Zulage zu Fertigteilstützen o.g. Positionen S006 + S007;10,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0304.14;Zulage für die Verlegung von Leerrohren d 20 - 32 mm;10,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0304.15;Blitzschutz;20,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0304.16;Fugenausbildung als elastische Innenfuge;50,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.1;Unterzug als Fertigteil B008, C 30/37 XC1,W0, H/B/L 120(98)x40x1546cm, Achse 6+7/G-H;2,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.2;Unterzug als Fertigteil B009, C 30/37 XC1,W0, H/B/L 120(98)x40x1552cm, Achse 9+11/G-H;2,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.3;Unterzug als Fertigteil B010, C 30/37 XC1,W0, H/B/L 120(98)x40x1552cm, Achse 10/G-H;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.4;Überzug mit beidseitigem Auflager für Decken als Fertigteil B016, C 30/37 XC1,W0, H/B/L 120(98)x40x1552cm, Achse 10/G-H;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.5;Zulage Trägerausklinkung 25/40/41,5;7,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.6;Zulage Elastomerlager 18/35;7,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.7;Randbalken als Fertigteil B012, C 30/37 XC1,W0, H/B/L 75x25x354cm, Achse 1-5/A;2,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.8;Randbalken als Fertigteil B013, C 30/37 XC1,W0, H/B/L 100x25x450cm, Achse 5-8/H;3,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.9;Randbalken als Fertigteil B014, C 30/37 XC1,W0, H/B/L 100x25x450cm, Achse 9A-12/H;4,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.10;Zulage Trägerausklinkung 25/25/26,5;10,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.11;Zulage Elastomerlager 18/18;10,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.12;Sturz als Fertigteil B016, C 30/37 XC1,W0, H/B/L 100x25x450cm, Achse 10/B-C;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.13;Zulage Elastomerlager 18/70;2,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.14;Unterzug als Fertigteil B103, C 30/37 XC1,W0, H/B/L 120(98)x40x1550cm, Achse 6+7/G-H;2,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.15;Zulage Trägerausklinkung 25/40/31,5;4,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.16;Zulage Elastomerlager 18/34;4,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.17;Unterzug als Fertigteil, C 30/37 XC1,W0, H/B/L 30x25x250cm, Achse 10/A-B;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.18;Randbalken als Fertigteil B107, C 30/37 XC1,W0, H/B/L 91(69)x25x450cm, Achse 5-8/H;3,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.19;Trägerausklinkung 25/25/25;4,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.20;Zulage Elastomerlager 18/18;4,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0305.21;Randbalken als Fertigteil B108, C 30/37 XC1,W0, H/B/L 100(74)x25x354cm, Achse 9A,9 / A+C;2,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0306.1;Mehr- / MInderkosten für Ausführung in Teilfertigteilen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0306.2;Ortbeton Geschossdecken D006, Normalbeton C25/30, d=22 cm, Achse 5-8/G-H;240,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0306.3;Ortbeton Dachdecke 0°,  D007, Normalbeton C25/30, d=22 cm, Achse 8-12/G-H;310,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0306.4;Ortbeton Dachdecke 0°,  D103, Normalbeton C25/30, d=22 cm, Achse 5-8/G-H;240,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0306.5;Ortbeton Dachdecke 0°, über OG, Normalbeton C25/30, d= 26cm, Achse 12/A bis 9A/C;63,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0306.6;Ortbeton Dachdecke 0°, über EG, Normalbeton C25/30, d=32 cm, Achse B/9 bis 8/C;133,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0306.7;Zulage Sichtbeton SB2;986,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0306.8;Beton aufrauen, Kraftschluss herstellen;16,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0307.1;Werkstattplanung Decken;1,0;Psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0307.2;Starre Scheibe, statische Berechnung;515,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0307.3;Spannbeton-Hohlplatten D105 d=265 mm, XC3 W0, F90 Achse 9-12/A-C;212,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0307.4;Verguss der Spannbeton-Hohlplatten d=265 mm, XC3 W0 C30/37;212,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0307.5;Auflager Spannbetonhohldiele d 265 mm auf Konsole;13,5;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0307.6;Spannbeton-Hohlplatten D008 d=320 mm, XC3 W0, F90 Achse 9-12/A-C;139,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0307.7;Verguss der Spannbeton-Hohlplatten d=320 mm, XC1 W0 C30/37;139,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0307.8;Auflager Spannbetonhohldiele d 320 mm auf Konsole;13,5;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0307.9;Mehrbeton XC3 W0 C30/37;3,0;m³;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0307.10;Mehrbeton XC1 W0 C30/37;3,0;m³;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0307.11;Montage der Spannbeton-Hohlplatten d=265mm;212,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0307.12;Montage der Spannbeton-Hohlplatten d=320mm;139,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0307.13;Ringanker 150 x 275 mm für Spannbetonhohldiele 320 mm;34,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0307.14;Ringanker 150 x 275 mm für Spannbetonhohldiele 265 mm;45,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0307.15;Rechteckige Aussparung 300 bis 1000 cm2, Platte d 320 mm;2,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0307.16;Rechteckige Aussparung 300 bis 1000 cm², Platte d 260 mm;2,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0307.17;Lieferung Bohrschablone f. bauseitige Befestigungen;10,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0307.18;Lieferung Betonstahl für Decken;1328,0;kg;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0308.1;Werkstattplanung Fertigteile Treppen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0308.2;Stb.-Fertigteil Treppenlauf mit verlängertem Austritt Tr 03..., 16x18/28;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0308.3;Stb.-Fertigteil Treppenlauf Tr 00..., 6x18/28;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0308.4;Ortbeton Treppenpodest OG, Tr 003 TH3 3,3x1,6m;5,4;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0308.5;Ortbeton Zwischenpodest Tr 003 TH3 3,3x1,6m;5,4;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0308.6;Zulage Treppenauflager 16x14x135;3,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0308.7;Zulage Elastomerlager Treppenläufe;4,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.1;Randschalung Sohlplatte 20 cm;52,5;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.2;Höhenversatz der Sohlplatte nach unten, h 9cm;112,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.3;Randschalung Sohlplatte 20 cm;69,5;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.4;Schalung Streifenfundament, Fu 010 b/h = 100/60 cm;18,6;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.5;Schalung Streifenfundament, Fu 014 b/h = 60/60 cm;48,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.6;Schalung Streifenfundament, Fu 015 b/h = 60/60 cm;16,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.7;Schalung Streifenfundament, Fu 016 b/h = 160/60 cm;25,2;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.8;Schalung Streifenfundament, Fu 017 b/h = 80/60 cm;19,8;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.9;Schalung Streifenfundament, Fu 020 b/h = 30/60 cm;25,2;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.10;Schalung Streifenfundament, Fu 022 b/h = 120/60 cm;15,6;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.11;Schalung Streifenfundament, Fu 023 b/h = 100/60 cm;17,04;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.12;Besondere Leistung erhöhte Rohbautoleranzen DIN 18202 T.3 Zeile 4;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.13;Wandschalung Außenwände, d =25 cm;1518,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.14;Zulage Schalung Außenwände für SB 2;700,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.15;Wandschalung Stb- Innenwände d = 20 cm;338,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.16;Wandschalung Stb- Innenwände d = 25 cm;571,74;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.17;Schalung freies Wandende d 20 - 30 cm;6,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.18;Schalung Konsole 25 x 25 cm;21,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.19;Zulage Schalung Innenwände für SB 2;452,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.20;Deckenschalung EG, 1.OG, d=22, UK 5,93 - 9,77 m;761,266;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.21;Randschalung Decken, d=22 cm;119,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.22;Randschalung Geschosspodestplatten, d= 32 cm;3,5;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.23;Schalung Konsole Treppe 16 x 14 cm;0,53;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.24;Randschalung Zwischenpodestplatten, d= 26 cm;3,5;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.25;Zulage Schalung Decken für SB 2;410,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0309.26;Schalung Attika;240,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.1;Sohlendurchführung, Durchmesser bis 20 cm;9,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.2;Schalung Sohlendurchbrüche, L/B = 50/50 cm;10,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.3;Einbetonieren von Anschlusstrichtern, Dm bis 385 mm, Sohle d=20 cm;7,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.4;Einbetonieren von Faserzementrohren, Dm 200 mm x 245 mm, Sohle d=20 cm;2,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.5;Schalung Fundamentaussparungen, 500-1800 cm2;2,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.6;Schalung Öffnung 1,07 x 2,53m in Stb-Außenwand d 25 cm;4,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.7;Schalung Öffnung 1,31 x 2,53m in Stb-Außenwand d 25 cm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.8;Schalung Öffnung 1,07 x 2,415m in Stb-Außenwand d 25 cm;6,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.9;Schalung Öffnung 1,07 x 2,53m in Stb-Außenwand d 25 cm;6,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.10;Schalung Öffnung 1,07 x 2,415m in Stb-Außenwand d 25 cm;2,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.11;Schalung Öffnung 1,07 x 2,53 m in Stb-Außenwand d 25 cm;4,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.12;Schalung Öffnung 1,31 x 2,53 m in Stb-Außenwand d 25 cm;2,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.13;Schalung Öffnung 2,955 x 7,785m in Stb-Außenwand d 25 cm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.14;Schalung Öffnung 1,01 x 2,135m in Stb-Außenwand d 25 cm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.15;Schalung Öffnung 1,05 x 0,395m in Stb-Außenwand d 25 cm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.16;Schalung Öffnung 0,45 x 1,22m in Stb-Außenwand d 25 cm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.17;Schalung Öffnung 2,45 x 2,80m in Stb-Außenwand d 25 cm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.18;Schalung Öffnung 1,195 x 2,83m in Stb-Außenwand d 25 cm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.19;Schalung Öffnung 2,76 x 2,05m in Stb-Außenwand d 25 cm;3,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.20;Schalung Öffnung 0,35 x 0,89m in Stb-Außenwand d 25 cm;2,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.21;Schalung Öffnung 1,62 x 2,80m in Stb-Außenwand d 25 cm;2,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.22;Schalung Öffnung 2,45 x 2,80m in Stb-Außenwand d 25 cm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.23;Schalung Öffnung 0,75 x 0,64m in Stb-Außenwand d 25 cm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.24;Schalung Öffnung 1,01 x 2,135m in Stb-Innenwand d 25 cm;4,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.25;Schalung Öffnung 1,50 x 2,135m in Stb-Innenwand d 25 cm;2,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.26;Schalung Öffnung 2,50 x 2,50m in Stb-Innenwand d 25 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.27;Schalung Öffnung 4,01 x 3,0m in Stb-Innenwand d 25 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.28;Schalung Öffnung 20x20- 40x40cm rechteckig Dachplatte T 22cm;3,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.29;Schalung Öffnung 1,20x1,20m rechteckig Dachplatte T 26cm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.30;Aussparung 20 x 20 cm in Unterzug b 30 - 40 cm,;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.31;Aussparung 10 x 100 cm in Unterzug b= 40 cm,;5,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.32;Aussparung 55 x 35 cm in Unterzug b= 40 cm,;4,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.33;Kreisrunde Aussparung d 5 cm in Unterzug 30 - 40 cm;8,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.34;Kreisrunde Aussparung d 25 cm in Unterzug 40 cm;27,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.35;Kreisrunde Aussparung d 30 cm in Unterzug 40 cm;3,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.36;Aussparung 25 x 30 cm in Attika b 20 - 25 cm,;6,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.37;Kernbohrung in Stb.Wand Dm 150 - 200 mm, in d 25 cm;2,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.38;Kernbohrung in Stb.Wand Dm 200 - 250 mm, in d 25 cm;2,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.39;Kernbohrung in Stb.Wand Dm 250 - 300 mm, in d 25 cm;2,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.40;Schalung Öffnung bis 1.000cm², rechteckig Dachplatte T 22cm;18,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.41;Schalung Öffnung 1.000- 2.000cm² rechteckig Dachplatte T 22cm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.42;Schalung Öffnung 2.000- 3.000cm² rechteckig Dachplatte T 22cm;3,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.43;Schalung Öffnung 60x60cm / 62x62cm rechteckig Dachplatte T 22cm;3,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.44;Schalung Öffnung 120x120cm, rechteckig Dachplatte T 22cm;3,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.45;Kernbohrung 70-100mm in Stb.-Decke T 22cm;10,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.46;Kernbohrung 150-200mm in Stb.-Decke T 22cm;7,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.47;Schalung Öffnung bis 500cm2 in Stb-Innenwand d 25 cm;12,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.48;Schalung Öffnung 625 cm2 in Stb-Wand d 25 cm;2,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.49;Schalung Öffnung bis 2000cm2 in Stb-Wand d 25 cm;6,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.50;Schalung Öffnung bis 5000 cm2 in Stb-Innenwand d 25 cm;5,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0310.51;Schalung Öffnung 107x 238cm cm in Stb-Wand d 25 cm;5,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0311.1;Ringspalt verschließen bis 500 cm2, Wand 200 - 300 mm;10,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0311.2;Ringspalt verschließen 1000 bis 2500 cm2, Wand 200 - 300 mm;14,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0311.3;Ringspalt verschließen 2500 bis 5000 cm2, Wand 200 - 300 mm;3,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0311.4;Ringspalt verschließen 5000 bis 7500 cm2, Wand 200 - 300 mm;2,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0311.5;Ringspalt verschließen bis 1000 cm2, Deckenplatte d 200- 260mm;11,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0311.6;Ringspalt verschließen 1000- 2000 cm2, Deckenplatte d 200- 260mm;3,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0311.7;Ringspalt verschließen 2000- 3000 cm2, Deckenplatte d 220mm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0311.8;Ringspalt verschließen bis 1000 cm2, Deckenplatte d 320mm;10,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0311.9;Ringspalt verschließen 2000- 3000 cm2, Deckenplatte d 320mm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0311.10;Ringspalt verschließen 3000-6000 cm2, Deckenplatte d 260mm;2,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0311.11;Ringspalt verschließen 14.400 cm2, Deckenplatte d 260mm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0311.12;Ringspalt verschließen 300 bis 1000 cm2, Deckenplatte d 200 - 300 mm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0311.13;Ringspalt verschließen 1000 bis 2000 cm2, Deckenplatte d 200 - 300 mm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0311.14;Ringspalt verschließen 2000 bis 3000 cm2, Deckenplatte d 200 - 300 mm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0311.15;Ringspalt verschließen 3000 bis 6000 cm2, Deckenplatte d 200 - 300 mm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0311.16;Ringspalt RH d 70 mm in Betondecke mit Mörtel schliessen;2,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0311.17;Ringspalt RH d 160 mm in Betondecke mit Mörtel schliessen;3,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0312.1;Betonstahl Mattenbewehrung;58,0;t;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0312.2;Betonstahl Stabstahl;20,0;t;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0312.3;Betonstahl Fertigteile;21,0;t;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0312.4;Rückbiegeanschlüsse Typ 2 zweilagige Bewehrung d 8 bis 15 mm;57,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0312.5;Rückbiegeanschlüsse Typ 5 zweilagige Bewehrung d 8 bis 15 mm;10,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0312.6;Rückbiegeanschlüsse Typ 5 zweilagige Bewehrung d 12 bis 15 mm;3,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0312.7;Seilschlaufen-Schienensystem 5/118cm;16,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0312.8;Seilschlaufen-Verwahrkasten 22/8cm;10,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0312.9;Stud-Connector 12mm;8,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0312.10;Querkraftdorn 20mm;56,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0312.11;Einklebearmierung für Deckenanschluss mit Injektionsmörtel 8mm;16,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0312.12;Einklebearmierung für Deckenanschluss mit Injektionsmörtel 10mm;16,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0312.13;Einklebearmierung für Wanderhöhung mit Injektionsmörtel 10mm;16,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0312.14;Vorbereitung Wanderhöhung, Rückbau;16,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0312.15;Trittschalldämmelement Konsolauflager;20,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0312.16;Trittschalldämmelement Anschluss Treppen Bodenplatte;3,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0313.1;Sauberkeitsschicht Magerbeton, d = 5-8 cm;2,5;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0313.2;Perimeterdämmung als Sohldämmung (PB), XPS 040, d = 8 cm;2,5;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0313.3;Trennlage PE-Folie 2-lagig;2,5;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0313.4;Ortbeton Betonsohlplatte C25/30, d = 25 cm;6,5;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0313.5;Perimeterdämmung (PW), XPS, d = 8 cm;4,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0313.6;Anarbeiten der Dämmung an Wanddurchführungen, Dm bis 300 mm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0313.7;Lehrrohr für Technik;5,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.1;Standsicherheitsnachweis Vormauerwerk außen, einschl. Fertigteile;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.2;Horizontalverbindung, Edelstahl-Drahtanker;798,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.3;Schaumglas Kimmstein;75,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.4;Fußpunktabfangung mit Edelstahl-Konsolanker;83,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.5;Kerndämmung Mineralwolle, 0,035 W/(mK), D= 200 mm;798,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.6;Anschnitt, schräg, Mineralwolle, D 200 mm;136,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.7;Verblendmauerwerk Ziegel Dän. NF, Schalenabstand 220mm;912,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.8;Zulage für Anarbeiten an den Bestand;1,0;Psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.9;Zulage Leibungsmauerwerk Fenster- und Türleibung, B 22cm;215,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.10;Aussortierung einzelner Verblendsteine nach Farbe;200,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.11;Fertigteil-Sturz, H 24 cm B 11,5cm, L 100-1,24m;2,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.12;Fertigteil-Sturz, H 24 cm B 11,5cm, L 1,36m;28,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.13;Fertigteil-Sturz, H 24 cm B 11,5cm, L 1,485m;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.14;Fertigteil-Sturz, H 24 cm B 11,5cm, L 1,61m;2,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.15;Fertigteil-Sturz, H 24 cm B 11,5cm, L 1,70m;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.16;Fertigteil-Sturz, H 24 cm B 11,5cm, L 1,85m;2,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.17;Fertigteil-Sturz, H 24 cm B 11,5cm, L 2,80m;2,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.18;Fertigteil-Sturz, H 24 cm B 11,5cm, L 3,05m;3,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.19;Verfugen Verblendmauerwerk Zement-Fugenmörtel;821,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.20;Leibung/ Sturz verfugen Verblendmauerwerk B bis 11,5 cm;304,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.21;Dehnungsfuge der Vormauerschale herstellen;62,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.22;Schließen von Dehnungsfugen;62,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.23;Anarbeiten an Durchdringungen Regenentwässerung;12,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.24;Anarbeiten an Durchdringungen Elektro;12,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.25;Anarbeiten an Durchdringungen TGA;12,0;Stk;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.26;Perimeter-Dämmung XPS 035 200mm 225mm;113,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.27;Mauerrandstreifen XPS 035 100mm x 85;188,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.28;L-Sperre über Öffnungen;120,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.29;L-Abdichtung auf Vormauerwerkssockel;113,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.30;2-K Sockelpunktabdichtung;127,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0401.31;Noppenbahn mit stabilem Filtervlies;127,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0501.1;Untergrund reinigen (Wand innen);30,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0501.2;Haftgrund und Voranstrich (Wand innenseitig);30,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0501.3;Bitumen-Dickbeschichtung (innenseitig);30,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0502.1;Sockelabdichtung;123,2;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0502.2;Perimeterdämmung extrudiert an Streifenfundamenten;55,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0502.3;Bitumenbeschichtetes Fugenblech;10,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0503.1;Untergrund vorbereiten (OK Bodenplatte);764,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0503.2;Haftgrund und Voranstrich (OK Bodenplatte);736,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0503.3;Mörtelhohlkehle herstellen;174,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0503.4;Kaltselbstklebende Polymerbitumenbahn mit Trägereinlage;736,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0504.1;Untergrund bürsten absaugen;777,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0504.2;Voranstrich Sohle Bitumenlösung;777,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0504.3;Dämmkeil PS-Hartschaum kaschiert, 100/100mm;198,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0504.4;Dampfsperre Bitumenbahn;777,0;m²;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0505.1;Schutzlage Abdichtungsbahn;200,0;m²/W;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0505.2;Verlängern der Vorhaltezeit Schutzmaßnahme Abdichtungsbahn;100,0;m²/W;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0601.1;"Industrieverteiler 1 1/4"" - HK 8, m. DFA 1 1/4""AG/ absperrbar";1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0601.2;"Kugelhahn- Set 1 1/4""";1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0601.3;Klemmringverschraubungen 20 mm;16,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0601.4;Systemrohr 20 mm, für IFH in Betonsohle;830,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0601.5;Kennzeichnung der einzelnen Heizkreise;8,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0601.6;Rohrführungsbogen 20 mm;16,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0601.7;Fixbinder für Rohr- Trägerelement- System;2450,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0601.8;U-Schiene 20/ 2.500 x 38 x 22,5 mm;67,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0601.9;Baustelleneinrichtung IFH;1,0;psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0601.10;Baustelle räumen IFH;1,0;psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0601.11;Heizkreis der Anlage IFH Füllen und Dichtigkeitsprüfung;8,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0601.12;Erstellung der Werk- und Montageplanung für IFH;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0601.13;Revisionsunterlagen Heizung (IFH);1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0601.14;Obermonteurstunden;5,0;h;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0601.15;Monteurstunden;5,0;h;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0601.16;Helferstunden;5,0;h;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0602.1;"Industrieverteiler 1 1/4"" - HK 8, m. DFA 1 1/4""AG/ absperrbar";1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0602.2;"Kugelhahn- Set 1 1/4""";1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0602.3;Klemmringverschraubungen 20 mm;16,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0602.4;Systemrohr 20 mm, für IFH in Betonsohle;750,0;m;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0602.5;Kennzeichnung der einzelnen Heizkreise;8,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0602.6;Rohrführungsbogen 20 mm;16,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0602.7;Fixbinder für Rohr- Trägerelement- System;2250,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0602.8;U-Schiene 20/ 2.500 x 38 x 22,5 mm;60,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0602.9;Baustelleneinrichtung IFH;1,0;psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0602.10;Baustelle räumen IFH;1,0;psch;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0602.11;Heizkreis der Anlage IFH Füllen und Dichtigkeitsprüfung;8,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0602.12;Erstellung der Werk- und Montageplanung für IFH;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0602.13;Revisionsunterlagen Heizung (IFH);1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0602.14;Obermonteurstunden;5,0;h;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0602.15;Monteurstunden;5,0;h;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0602.16;Helferstunden;5,0;h;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0701.1;Revisionsunterlagen;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0801.1;Vorarbeiter;30,0;h;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0801.2;Facharbeiter/-in;100,0;h;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0801.3;Kranführer und Betriebsstunde Kran;30,0;h;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0801.4;Facharbeiter Gerüstbau;30,0;h;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0802.1;Minibagger;5,0;h;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0802.2;Hydraulikbagger;5,0;h;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0802.3;Stemmgerät mit Kompressor;1,0;h;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0802.4;Kleintransporter;5,0;h;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0802.5;Hubsteiger, h = 8 m;10,0;h;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0802.6;Radlader;5,0;h;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0802.7;LKW größer 7,5 t;1,0;h;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
+0802.8;Container 5-10m3 gemischte Bauabfälle;20,0;m3;gaeb-flat;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA.D83
 1;Schriftleisten für Bauschild im Bestand;7,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
 1;Einrichten der Baustelle mit sämtlichen Kränen, Lagerräumen, Werkstätten, Magazinen, Unterstelleinrichtungen, Maschinen und Geräten und Mannschafts-Tagesunterkünfte, für alle Leistungen des AN.;1,0;psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
 2;Verlängerung der Vorhaltezeit der Baustelleneinrichtung für eigene Leistungen aus Pos. 01.02.1.;1,0;Mt;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83

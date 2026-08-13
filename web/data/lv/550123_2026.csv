@@ -1,0 +1,129 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;Baustelle einrichten für Leistungen des AN, eingeschlossen sind die für die Durchführung der vertraglichen Leistungen erforderlichen Maschinen und Geräte, Hebewerkzeuge;1,0;psch;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0002;Gefährdete Bäume über Gelände gegen mechanische Schäden schützen, während der gesamten Bauzeit.;2,0;St;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0003;Bauzaun aufstellen, vorhalten und räumen;180,0;m;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0004;Bauzaun, wie zuvor beschrieben, über die;1080,0;mWo;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0005;Bauzaun aufstellen, vorhalten und räumen;180,0;m;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0006;Bauzaun, wie zuvor beschrieben über die;180,0;mWo;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0007;Drehtor, 2-flgl., aus Bauzaunelementen einschl. Tor Rolle, Drehgelenk und Torschluss mit 4 Schlüsseln;2,0;St;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0008;Toranlage 2-flg. zur Erstellung der Interimsschule;12,0;StWo;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0009;Drehtor, 2-flgl., aus Bauzaunelementen einschl. Tor Rolle, Drehgelenk und Torschluss mit 4 Schlüsseln;2,0;St;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0010;Toranlage 2-flg. für den Rückbau der Interimsschule;2,0;StWo;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0001;Statische Berechnungen insbesondere der Nachweis der Standfestigkeit des Schotterplanums für die Containeranlage prüffähig erstellen;1,0;psch;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0002;Verdichtungskontrollen Lastplattendruckversuch zur Verdichtungskontrolle zusätzlich zur Eigenüberwachung im Auftrage des AG gemäß DIN 18134 auf Container- Tragschicht in Anwesenheit der örtlichen Bauleitung durchführen, protokollieren, auswerten und die Ergebnisse dem AG übergeben.;2,0;St;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0003;Auswertung bzw. Protokoll des Versuchs dient als;2,0;St;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0004;Entsprechend der Anschlusspunkte von Schmutzwasser (SW) und Regenwasser (RW), der Container, ist vom AN im Vorfeld ein Grundleitungsplan zu entwickeln bzw. auszuarbeiten.;1,0;psch;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0005;Dichtheitsprüfung der Grundleitung;120,0;m;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0006;Dichtheitsprüfung des Revisionsschacht;1,0;St;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0001;Zählerschrank entsprechend ergänzen/ bestücken;1,0;St;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0002;Baustromverteiler aus Metall mit Rohrgestell abschließbar;1,0;St;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0003;Stromkabel mit Leer-/Schutzrohr liefern, verlegen, anschließen und räumen.;70,0;m;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0004;Stromanlage warten;105,0;Wo;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0005;LWL-Leitung als Verlegekabel zwischen Serverschrank in der Containeranlage und Verteilerschrank Computerraum im 1. OG des OGATA Gebäudes herstellen.;85,0;m;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0006;CAT 7 Duplex - Kabel zweifach als Verlegekabel zwischen Hausanschlussraum Bestand und Serverschrank in der Containeranlage herstellen.;70,0;m;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0007;Wasserversorgung mittels PE-Druckrohr DVGW 16 bar;70,0;m;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0001;Leitungsgraben herstellen, Aushubmaterial seitlich lagern, Rohrleitung entsprechend aktuellen Vorschriften im Sandbett herstellen, seitlich gelagertes Material lagenweise einbauen und verdichten.;70,0;m;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0002;Leitungsgraben herstellen, Aushubmaterial seitlich lagern, Rohrleitung entsprechend aktuellen Vorschriften im Sandbett erstellen, seitlich gelagertes Material lagenweise einbauen und verdichten.;70,0;m;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0003;Leitungsgraben entlang der verlegten Leitungen (Wasser, Strom, LWL) öffnen, Aushub seitlich lagern, Leitungen zurückbauen, seitlich gelagertes Aushubmaterial lagenweise einbauen und verdichten;70,0;m;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0004;Herstellen einer Kernbohrung 150-200 mm;1,0;St;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0005;Pflasterfläche für den Einbau der Leitungen aufnehmen, säubern, seitlich lagern und wieder einbauen;70,0;m²;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0006;Pflasterfläche für den Ausbau der Leitungen aufnehmen, säubern, seitlich lagern und wieder einbauen;70,0;m²;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0007;Rohrgraben- und Schachtaushub, einschl. Verbau und Verfüllung mit seitlich gelagertem Auffüllmaterial.;25,0;m³;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0008;Aushub, überschüssiges oder nicht verdichtungsfähiges Material laden, transportieren und entsorgen.;10,0;m³;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0009;KG 2000 grün DN 150 als Gelenkstück;1,0;St;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0010;Beton Schacht 1000 mit Gerinne gerade liefern und setzen;1,0;St;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0011;Schachtring DN 1000;1,0;St;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0012;Schachtring DN 1000;1,0;St;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0013;Beton Schachtkonus DN 1000;1,0;St;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0014;Beton Auflagerring / Ausgleichsring;4,0;St;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0015;BetonGus Abdeckung der Klasse D400 rund mit Lüftung;4,0;St;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0016;Füllboden liefern,;50,0;m³;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0017;Frostschutzkies liefern,;20,0;m³;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0018;Grundleitungsnetz nach Planunterlagen herstellen;100,0;m;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0019;Schottertragschicht als Höhenausgleich;520,0;m³;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0020;Bodenverfestigung des offenliegenden Randes insbesondere der Böschung durch hydrophobierten Zement.;150,0;m³;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0021;Containeraufstellfläche aus Schotter aufnehmen, transportieren und der Verwertung zuführen.;520,0;m³;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0022;Hydraulisch gebundene Schotterschicht aufnehmen, transportieren und der Verwertung zuführen.;150,0;m³;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0001;Baustelleneinrichtung für die Herstellung der temporären Parkplatzfläche.;1,0;psch;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0002;Absperrung der Baustelle während der;1,0;psch;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0003;Fläche abstecken, Bestandshöhen aufnehmen und Sollhöhen festlegen.;1,0;psch;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0004;Oberboden abtragen, laden, abfahren und ordnungsgemäß;25,0;m3;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0005;Erdplanum für temporäre Parkplatzfläche herstellen, geneigt und verdichtet.;125,0;m2;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0006;Geotextil GRK 4 als Trenn- und Filterlage unter Schottertragschicht verlegen.;125,0;m2;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0007;Schottertragschicht für temporäre Pkw-Parkfläche liefern, einbauen und verdichten.;25,0;m3;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0008;Kanten und Übergänge der temporären Schotterfläche an Bestand anarbeiten.;1,0;psch;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0009;Nicht tragfähigen Boden aufnehmen und durch tragfähiges Material ersetzen.;5,0;m³;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0010;Baustelleneinrichtung für den Rückbau der temporären Parkplatzfläche einschließlich Wiederherstellung als begrünte Erdfläche.;1,0;psch;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0011;Absperrung der Arbeitsbereiche während des Rückbaus der temporären Parkplatzfläche sowie während der Wiederherstellung der begrünten Erdfläche.;1,0;psch;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0012;Schottertragschicht der temporären Parkplatzfläche einschließlich Anrampungen, Randanschlüssen und losen Schotteranteilen vollständig aufnehmen, laden, transportieren und einer ordnungsgemäßen Verwertung oder Entsorgung zuführen.;25,0;m³;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0013;Geotextil der temporären Parkplatzfläche nach Rückbau der Schottertragschicht vollständig aufnehmen, laden, transportieren und einer ordnungsgemäßen Entsorgung bzw. Verwertung zuführen.;125,0;m²;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0014;Untergrund nach Rückbau der temporären Parkplatzfläche lockern, grob profilieren und für die Oberbodenandeckung vorbereiten.;125,0;m²;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0015;Oberboden für die ehemalige temporäre Parkplatzfläche liefern, auftragen, verteilen und profilgerecht einbauen.;25,0;m³;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0016;Feinplanum auf der mit Oberboden angedeckten Fläche herstellen und Rasenansaat ausführen.;125,0;m²;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0017;Fertigstellungspflege der angesäten Rasenfläche bis zur abnahmefähigen Begrünung.;1,0;psch;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0001;Zusätzliche Arbeiten als unvorhersehbare;15,0;h;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+0002;Stundenlohnarbeiten Bauhelfer zusätzliche Arbeiten als unvorhersehbare;15,0;h;gaeb;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB_V33.X83
+01.0001;Baustelleneinrichtung für die Leistung des AN einrichten und räumen;1,0;psch;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+01.0002;Baumschutz, Brettermantel, bis 50cm;2,0;St;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+01.0003;Bauzaun stellen, vorhalten und räumen zur Erstellung der Interimsschule;180,0;m;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+01.0004;Bauzaun vorhalten für die Erstellung der Interimsschule;1080,0;mWo;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+01.0005;Bauzaun stellen, vorhalten und räumen für Rückbau der Interimsschule;180,0;m;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+01.0006;Bauzaun vorhalten für den Rückbau der Interimsschule;180,0;mWo;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+01.0007;Tor 2-flg., B=6m, liefern montieren vorhalten zur Erstellung der Containeranlage;2,0;St;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+01.0008;Tor 2-flg. vorhalten zur Erstellung der Interimsschule;12,0;StWo;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+01.0009;Tor 2-flg., B=6m, liefern montieren vorhalten für den Rückbau der Interimsschule;2,0;St;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+01.0010;Tor 2-flg. vorhalten für den Rückbau der Interimsschule;2,0;StWo;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+02.0001;Statischer Nachweis;1,0;psch;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+02.0002;Lastplattendruckversuch;2,0;St;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+02.0003;Proctorversuch;2,0;St;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+02.0004;Erstellung einer Grundleitungsplanung für die Anschlusspunkte von Schmutzwasser (SW) und Regenwasser (RW);1,0;psch;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+02.0005;Zustands- und Funktionsprüfung Grundleitung;120,0;m;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+02.0006;Zustands- und Funktionsprüfung Revisionsschacht;1,0;St;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+03.0001;Ertüchtigung des Zählerschranks im Bestand;1,0;St;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+03.0002;Baustromverteiler, Metall mit Rohrgestell zur Errichtung im Außenbereich, abschließbar aufstellen, vorhalten und rückbauen;1,0;St;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+03.0003;Stromkabel verlegen, anschließen und räumen;70,0;m;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+03.0004;Wartung der Anlage;105,0;Wo;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+03.0005;LWL-Kabel liefern, verlegen und räumen;85,0;m;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+03.0006;CAT 7 Duplex - Kabel liefern, verlegen und räumen;70,0;m;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+03.0007;Herstellen der Wasserversorgung für die Containeranlage;70,0;m;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0001;Leitungsgraben T > 0,80 m herstellen, seitlich lagern, lagenweise einbauen und verdichten, zur Aufnahme der Wasserleitung;70,0;m;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0002;Leitungsgraben T= >0,60 herstellen, seitlich lagern, lagenweise einbauen und verdichten, zur Aufnahme der Strom;70,0;m;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0003;Leitungsrückbau;70,0;m;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0004;Kernbohrung 150- 200 mm mit Mehrspartendurchführung;1,0;St;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0005;Pflasterfläche aufnehmen, säubern, seitlich lagern und wieder einbauen;70,0;m²;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0006;Pflasterfläche aufnehmen, säubern, seitlich lagern und wieder einbauen;70,0;m²;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0007;Rohrgraben- und Schachtaushub, einschl. Verbau, Verfüllung;25,0;m³;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0008;Aushub laden, transportieren und entsorgen;10,0;m³;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0009;Kanalrohr als Gelenkstück;1,0;St;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0010;Schachtboden DN 100 mit DN 150 Anschluss gerade nach neuer DIN;1,0;St;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0011;Schachtring 1m  DN 1000 nach neuer DIN mit Steigbügel;1,0;St;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0012;Schachtring 0,75m  DN 1000 nach neuer DIN mit Steigbügel;1,0;St;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0013;Schachthals, -konus 0,65 m DN 1000 nach neuer DIN;1,0;St;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0014;Betonausgleichringe DN 625 10 cm /  8 cm / 6 cm;4,0;St;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0015;BeGu Abdeckung Klasse D 400 rund mit Lüftung;4,0;St;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0016;Füllboden liefern, lagenweise einbauen und verdichten;50,0;m³;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0017;Frostschutzkies liefern, einbauen und verdichten;20,0;m³;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0018;Grundleitungen Schmutz-/ Regenwasser herstellen, betreiben und rückbauen;100,0;m;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0019;Containeraufstellflächen STS Bk0,3 DPr1;520,0;m³;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0020;Herstellen einer hydraulischen Bodenverfestigung bzw. Bodenverbesserung;150,0;m³;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0021;Schotter laden, transportieren und verwerten;520,0;m³;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+04.0022;Hydraulisch gebundene Schotterschicht aufnehmen, transportieren und verwerten;150,0;m³;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+05.0001;Baustelleneinrichtung für Herstellung der temporären Parkfläche, pauschal;1,0;psch;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+05.0002;Absperrung der Arbeitsbereiche;1,0;psch;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+05.0003;Absteckung, Höhenaufnahme und Festlegung der Sollhöhen;1,0;psch;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+05.0004;Oberboden abtragen, laden, transportieren und entsorgen, d = ca. 20 cm;25,0;m3;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+05.0005;Erdplanum herstellen, profilieren und verdichten;125,0;m2;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+05.0006;Geotextil GRK 4 als Trennlage liefern und verlegen;125,0;m2;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+05.0007;Schottertragschicht 0/32 oder 0/45 herstellen, d = ca. 20 cm;25,0;m3;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+05.0008;Kanten, Anschlüsse und Anrampungen herstellen;1,0;psch;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+05.0009;Bodenaustausch weiche Stellen;5,0;m³;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+05.0010;Baustelleneinrichtung für Rückbau der temporären Parkfläche;1,0;psch;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+05.0011;Absperrung der Arbeitsbereiche während der Rückbauarbeiten;1,0;psch;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+05.0012;Schottertragschicht der temporären Parkfläche aufnehmen, laden, transportieren und verwerten;25,0;m³;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+05.0013;Geotextil aufnehmen, laden, transportieren und entsorgen;125,0;m²;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+05.0014;Untergrund nach Rückbau lockern, profilieren und vorbereiten;125,0;m²;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+05.0015;Oberboden liefern und andecken, d = ca. 20 cm;25,0;m³;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+05.0016;Feinplanum herstellen und Rasenansaat ausführen;125,0;m²;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+05.0017;Fertigstellungspflege Rasenfläche;1,0;psch;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+06.0001;Facharbeiter;15,0;h;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83
+06.0002;Bauhelfer;15,0;h;gaeb-flat;leistungsbeschreibungen/260629_B20_LV_VE323_GAEB.D83

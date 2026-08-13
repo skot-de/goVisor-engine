@@ -176,3 +176,180 @@
 13;Gestellung Besenwagen mit 6 m3 Fassung und Wasservor.;2,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung_V32.X83
 14;Ungebundene Tragschichtmaterial aus einem Baustoffgemisch 0/32 liefern;20,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung_V32.X83
 15;Recylingschlacke 0/32, frei von organischen u.;20,0;to;gaeb;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung_V32.X83
+01.1;Baustelleneinrichtung (für Baustellen mit einer Nettosumme bis 3.000,00 _);4,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+01.2;Baustelleneinrichtung (für Baustellen mit einer Nettosumme bis 7.000,00 _);6,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+01.3;Baustelleneinrichtung (für Baustellen mit einer Nettosumme bis 12.000,00 _);7,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+01.4;Baustelleneinrichtung (für Baustellen mit einer Nettosumme bis 18.000,00 _);5,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+01.5;Baustelleneinrichtung (für Baustellen mit einer Nettosumme ab 18.000,00 _);2,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+01.6;"Verkehrssicherung kurze Dauer; 2-4 Werktagen";7,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+01.7;"Verkehrssicherung längere Dauer; ab 5 Werktagen";4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+01.8;Verkehrssicherung umsetzen, Fahrbahn;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.1;Wurzelstöcke ausfräsen;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.2;Straßenschilder aufnehmen, lagern;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.3;Grenzsteine aufsuchen u sichern;30,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.4;Randsteine aufnehmen, lagern;160,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.5;Randsteine aufnehmen, entsorgen;48,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.6;Randsteine in Beton aufnehmen, lagern;160,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.7;Randsteine in Beton aufnehmen, entsorgen;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.8;Hochbordsteine in Beton aufnehmen, lagern;112,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.9;Hochbordsteine in Beton aufnehmen, entsorgen;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.10;vorh. 1-reigige Gosse aufbrechen u. abfahren;11,2;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.11;vorh. 2-reigige Gosse aufbrechen u. abfahren;19,2;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.12;vorh. 3-reigige Gosse aufbrechen u. abfahren;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.13;vorh. 3-reigige Gosse aus Betonrechtecksteine aufnehmen;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.14;vorh. 3-reigige Gosse aus Klinkersteine aufnehmen;4,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.15;Plattenbelag aufnehmen und lagern <10qm;200,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.16;Plattenbelag aufnehmen und lagern >10qm;200,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.17;Plattenbelag aufnehmen und abfahren zum ZBH;32,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.18;Plattenbelag aufnehmen und entsorgen;38,4;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.19;Rechteckbetonsteinpflaster;200,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.20;Verbundsteinpflaster;40,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.21;Klinkersteinen als Flachschichtpflaster;32,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.22;Klinkersteinen als Hochkantpflaster;32,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.23;Großsteinpflasterbefestigung aus Natursteinen;16,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.24;Bauliche Anlage abbrechen, Mauerwerk;1,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.25;Bauliche Anlage abbrechen, Beton;1,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.26;Schicht ohne Bindemittel aufnehmen, Schotter;15,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.27;Erschwernis durch Einbauten;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.28;Bitu-Fahrbahn bis 14cm tief schneiden -Schnittlänge bis 10m;200,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.29;Bitu-Fahrbahn bis 14cm tief schneiden -Schnittlänge größer 10m;16,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.30;Bituminöse Befestigung bis 14cm, in Teilstücken <10 m²,;60,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.31;Bituminöse Befestigung bis 14cm, in Teilstücken <50 m²;20,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.32;Pechhaltigen Straßenaufbruch mit PAK-Gehalt;5,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+02.33;Kaltasphalt zur Höhenangleichung .;50,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+03.1;Bankett abtragen;40,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+03.2;Erschwernis durch Einbauten;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+03.3;Oberboden abtragen;8,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+03.4;Boden lösen und verwerten, Klasse 3 bis 5;19,2;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+03.5;Boden in Handschachtung lösen;3,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+03.6;Boden mit Bauschutt durchsetzt ausheben u. abfahren (AN);54,4;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+03.7;Vorh. Entwässerungsleitungen bis DN 150 aufnehmen;4,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+03.8;Vorh. Entwässerungsleitungen DN 200 aufnehmen;4,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+03.9;Wurzeln schneiden;25,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+03.10;Oberboden liefern und andecken Kleinmengen bis 5m³;16,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+03.11;Planum herstellen;400,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+03.12;Überschüssigen Boden durch Herstellung des Planums;32,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+03.13;Sandboden liefern und einbauen Kleinmengen bis 5m³;54,4;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+03.14;Sandboden liefern und einbauen Kleinmengen über 5m³;28,8;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+03.15;Seitenräume andecken;80,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+03.16;Seitenräume mit MuBo andecken u. ansäen;80,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.1;Vorh. Rasenbord neu setzen;304,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.2;Vorh. 8er Tiefbord  neu setzen;51,2;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.3;Vorh. 10er Tiefbord neu setzen;86,4;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.4;Vorh. Hochbordstein neu setzen;48,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.5;Bordstein setzen, Zulage Fundament mit Bewehrung;1,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.6;Betonhochbord A4 liefern;8,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.7;Bordstein liefern, Zulage Übergangstein;1,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.8;Bordstein liefern, Zulage halber Stein;1,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.9;Bordstein liefern, Zulage Absenkstein;1,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.10;Bordstein liefern, Zulage Kurvenstein;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.11;Bordstein liefern, Zulage Eckstein;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.12;Betontiefbord-T 10cm liefern;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.13;Betontiefbord-T 8 cm liefern;64,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.14;Rasenbord liefern;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.15;Bordstein trennen, bis 8/25;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.16;Bordstein trennen, bis 15/30;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.17;1-reihige-Gosse 16/24/14 aus vorh. Steine herstellen;11,2;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.18;2-reihige-Gosse 16/24/14 aus vorh. Steine herstellen;24,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.19;3-reihige-Gosse 16/24/14 aus vorh. Steine herstellen;4,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.20;Betongossensteine 16/24/14cm liefern;80,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.21;3-reihige Entwässerungsrinne aus RE-Steine 10,5/21/8 setzen;4,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.22;Dreireihige Entwässerungsrinne aus Klinkerflastersteinen;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.23;Pflasterrinnen-Verbundstein b=30,5;2,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.24;Pflasterrinnen-Verbundstein b= 50;2,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.25;Anpassung von Rinnen herstellen, 35 cm.;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.26;Anpassung von Rinnen herstellen, 50 cm.;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.27;1-reihigen-Gossenläufer 16/24/14 in Beton gesetzt, regulieren;1,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.28;2-reihigen-Gossenläufer 16/16/14 in Beton gesetzt, regulieren;1,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.29;Schottertragschicht herstellen, bis Bk1,8 < 10 m²;120,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.30;Schottertragschicht herstellen, bis Bk1,8 > 10 m²;120,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.31;Pflasterd. aus vorh Betonst. d. AG herst., 20/10/8 <10qm;200,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.32;Pflasterd. aus Betonst. d. AG herst., 20/10/8 >10qm;200,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.33;Pflasterrechtecksteinen aus Beton liefern;112,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.34;Zulage für Farbe;40,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.35;Zulage für Betonsteine ohne Fase;40,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.36;Zulage für Betonsteine als H Verbundsteine;16,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.37;Zulage für gerumpelten Betonsteinen;16,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.38;Klinkerflachschichtpflasterdecke herstellen <10qm.;32,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.39;Klinkerflachschichtpflasterdecke herstellen >10qm.;32,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.40;Hochkantklinkerplasterdecke herstellen <10qm;32,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.41;Hochkantklinkerplasterdecke herstellen >10qm;32,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.42;Klinkerpflastersteine liefern;380,8;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.43;Zulage für Klinkersteine ohne Fase;120,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.44;Diagonalschnitte ausführen - Klinkersteine;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.45;Diagonalschnitte ausführen - Betonsteine;64,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.46;Pflasterstreifen aus vorh. Klinkersteine, wie vor;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.47;Pflasterstreifen, einzeilig aus Klinkersteine, hochkant;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.48;Pflasterstreifen, einzeilig aus Klinkersteine, hochkant in Beton;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.49;2 reihiger Mosaikpflasterstreifen;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.50;Großpflaster aus vorh. Natursteine verlegen.;5,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.51;Pflasterbordstreifen, einzeilig aus Klinkersteine, sanieren;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.52;Vorh. Pflasterbordstreifen aus Klinkerformsteine A1,;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.53;Pflasterd. mit Kleinpfl.st. herst;10,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.54;Pflasterd. m. Mosaiksteine. d. AG herst;14,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.55;Vorh. Betonsteinplatten aufnehmen u. regulieren;48,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.56;Vorh. Betonsteine aufnehmen u. regulieren;48,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.57;Pflastersteine zuarbeiten bis 10 cm.;54,4;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.58;Pflasterdecken-Anpassung herstellen, Steine;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.59;Pflasterdecken-Anpassung herstellen, Mosaik;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.60;Pflasterdecken-Anpassung herstellen, Formteil;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.61;Plattenbelag m. Pl. des AG herst. <10qm;48,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.62;Plattenbelag m. Pl. des AG herst. >10qm;80,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.63;Platten aus Beton = 30/30/5 cm liefern;16,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.64;Platten zuarbeiten;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.65;Plattenbelag-Anpassung herstellen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.66;Einbauten auf Höhe setzen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.67;Begu-Abdeckung richten;6,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.68;Verschiebesichere Auflagerringe liefern-Zulage;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.69;Betonguss-/Gusseisen-Schachtabdeckung;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.70;Zulage für Sanierungsrahmen 10cm;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.71;Aufsatz für Straßenabl. anpassen;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.72;Bankett profilgerecht herstellen;40,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.73;Erschwernis durch Einbauten.;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.74;Poller setzen;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+04.75;Schilderpfostensteine setzen;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.1;Rohrgraben DN 150 PVC-U bis 1,25 m tief;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.2;Rohrgraben DN 150 in Handschachtung herstellen;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.3;Hindernis aus Mauerwerk;1,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.4;Hindernis aus unbewehrtem Beton;1,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.5;Sandboden lief., in Leitungsgr. einb.;15,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.6;Nichttragfähigen Boden abfahren;15,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.7;Kreuzungen mit Ver- u. Entsorgungsleitungen;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.8;Kanalrohr KGEM DN 150 PVC-U liefern und verlegen;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.9;Abzweiger PVC-U, DN 150/150, 45°, KGEA;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.10;Bogen PVC-U, DN 150, 15°-45°, KGB;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.11;Überschiebmuffe PVC-U, DN 150, KGU;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.12;Anschlußstück KGUSM, DN 150, PVC;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.13;Übergangsstück von Steinzeug-L-Muffe auf ein Kunststoffrohr DN 150;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.14;Übergangsstück HS-UA Straßenablauf 1 A auf KG 150;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.15;Muffenstopfen PVC-U, DN 150, KGM;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.16;Anschluß an vorh. RW-Kanal herstellen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.17;Straßenablauf ausbauen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.18;Straßenablauf einbauen, quadratisch;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.19;Straßenablauf einbauen, rechteckig;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.20;Straßenablauf einbauen rechteckig, kurz;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.21;Zulage für ein Zwischenteil, Form 6a (295 mm hoch);1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.22;Zulage für Muffenteil 3 /150;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.23;Zulage für Boden aus Beton nach DIN 4052-1s;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.24;Aufsatz f. Straßenablauf Pult- /Rinnenform, 300x500;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.25;Straßenablauf mit Aufsatz ., Pult-/Rinnenform 500*500;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.26;Aufs. d. AG für Straßenablauf aufs.;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.27;Aufsatz für Straßenabl. anpassen, Pflaster;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.28;Aufsatz für Straßenabl. anpassen, Asphalt;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.29;Sanierungsstutzen DN150 für Betonrohre DN 300-600;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+05.30;Reparaturset für Falzrohre DN400;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+06.1;Gestellung eines Poliers.;45,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+06.2;Gestellung eines Tiefbaufacharbeiters,;63,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+06.3;Gestellung Bagger bis 0,4 m3;18,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+06.4;Gestellung Radlader;18,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+06.5;Vibrationswalze mit einem Eigengewicht bis 2,0 To;3,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+06.6;Rüttelstampfer bis 160 kg Betriebsgewicht;2,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+06.7;Gestellung Tieflader;2,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+06.8;Gestellung Bagger bis 1,0 m3;8,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+06.9;Gestellung Rüttelplatte bis 500 kg;4,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+06.10;Gestellung Kompressor bis 5 m3/min.;3,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+06.11;Gestellung LKW-Kipper mit Allradantrieb bis 12 To;1,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+06.12;Gestellung LKW mit Ladegerät und Allradantrieb bis ca. 8 To;1,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+06.13;Gestellung Besenwagen mit 6 m3 Fassung und Wasservor.;2,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+06.14;"Baustoffgemisch frei Baustelle 0/32; liefern";20,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83
+06.15;Recylingschlacke 0/32 liefern < 10 t;20,0;to;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEB Rahmenvertrag Straßenunterhaltung.D83

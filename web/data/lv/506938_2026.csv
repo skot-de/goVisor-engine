@@ -1,4 +1,87 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.0010;Einrichten, Räumen der Baustelle, Vorhalten der Baustelleneinrichtung;1,0;psch;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+01.0020;Einsatz Autokran Dachdecker;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+01.0030;prov. Abdichtarbeiten während der Bauphase;20,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0010;Bodenplatte vorbereiten;122,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0020;Untergrundvorbereitung Oberflächentrocknung;122,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0030;Voranstrich Emulsion auf geeignetem Untergrund;122,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0040;Bitumen - Dampfsperre;122,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0050;Anarbeiten Durchdringungen;5,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0060;Betondecke vorbereiten;140,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0070;Untergrundvorbereitung Oberflächentrocknung;140,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0080;Voranstrich Emulsion auf geeignetem Untergrund;170,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0090;Bitumen - Dampfsperre;170,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0100;Zulage Hochführen der Abdichtung;40,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0110;Gefälledämmung Schaumglas, d=24 cm i.M.;140,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0120;Wärmedämmung, Höhenangleich der Minderdicke;70,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0130;Zulage Keilausbildung;30,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0140;senkrecht abgestellte Dämmung Wandanschluss + Attika 80mm;27,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0150;Dämmung Attikakrone 80mm;15,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0160;Dachbahn;170,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0170;Zulage Attikaanschluss Dachbahn;22,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0180;Zulage Wandanschluss Dachbahn;45,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0190;Eckausbildung Innen- und Außenecken;21,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0200;Randbohle Attika;22,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0210;Attikaabdeckung;22,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0220;Eckformteile Attikaabdeckung;4,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0230;Wandanschlussprofil;45,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0240;Eindichten Durchdringungen;3,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0250;Kiesschicht i.M. 5 cm;140,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0260;Dampfsperre, Anarbieten an Neukonstruktion;23,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0270;Zulage Hochführen der Abdichtung;22,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0280;Gefälledämmung Schaumglas, d=24 cm i.M.;23,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0290;Wärmedämmung, Höhenangleich der Minderdicke;5,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0300;Zulage Keilausbildung;5,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0310;senkrecht abgestellte Dämmung Wandanschluss + Attika 80mm;6,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0320;Dachbahn;27,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0330;Zulage Attikaanschluss Dachbahn;15,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0340;Zulage Wandanschluss Dachbahn;16,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0350;Eckausbildung Innen- und Außenecken;4,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0360;Montagewinkel als Z-Profil für Attika;8,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0370;Attikaabdeckung;6,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0380;Eckformteile Attikaabdeckung;4,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0390;Wandanschlussprofil;8,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0400;Räumen Kiesschicht + Lagern + Wiedereinbauen;58,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0410;Öffnen und Abstellen vorhandene Flachdachabdichtung, Rückbau Dämmung;58,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0420;Gefälledämmung Schaumglas, d=20 cm i.M.;58,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0430;Dachbahn;58,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+02.0440;Zulage für das Eindichten der Übergänge zu Bestandsflächen;59,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+03.0010;Entwässerungsnachweis;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+03.0020;Dachhaube Entlüftung DN 100;4,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+03.0030;Kernbohrung für Abläufe DN 150;5,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+03.0040;Kernbohrung für Notüberläufe DN 100;2,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+03.0050;Dachablauf waagerecht;4,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+03.0060;Notüberlauf;2,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+03.0070;Dachablauf Kombi-Element;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+03.0080;Zulage Dachablauf Heizung;7,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+03.0090;Wasserfangkasten;4,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+03.0100;Wasserfangkasten inkl. Notüberlauf;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+03.0110;Regenfallrohr DN 100;48,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+03.0120;horizontale Doppelrohrverlegung inkl. Halter 2 x DN 75;15,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+03.0130;Standrohre DN 100;5,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+04.0010;Bemessung und Dokumentation;1,0;psch;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+04.0020;PSA-Set mit Verbindungsseil;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+04.0030;Anschlageinrichtung Seilsystem;18,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+04.0040;Endhalterung mit Systemstützen;2,0;St;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+04.0050;Zwischenhalterung mit Systemstützen;5,0;St;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+04.0060;Kurvenelemente mit Systemstützen;2,0;St;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+04.0070;Endspannelement;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+04.0080;Gabelkopf;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+04.0090;Kraftbegrenzer;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+04.0100;Systemschild;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+04.0110;EInzelsekurant;2,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+04.0120;Anschlageinrichtung Seilsystem;4,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+04.0130;Endhalterung mit Systemstützen;2,0;St;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+04.0140;Zwischenhalterung mit Systemstützen;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+04.0150;Endspannelement;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+04.0160;Gabelkopf;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+04.0170;Kraftbegrenzer;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+04.0180;Systemschild;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+04.0190;Einzelsekurant;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+04.0200;Freistehende Absturzsicherung;20,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+05.0010;Meisterstunden;20,0;Std;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+05.0020;Facharbeiterstunden;30,0;Std;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
+05.0030;Zuschlag für Arbeiten von 17:00 - 22:00 Uhr;10,0;Std.;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV.D83
 0010;Unternehmergebundene Baustelleneinrichtung liefern, vorhalten und nach Abschluss der Arbeiten räumen:;1,0;psch;gaeb;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV_V32.X83
 0020;A;1,0;Stk;gaeb;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV_V32.X83
 0030;Herstellen, Vorhalten, Unterhalten und Rückbauen von provisorischen Abdichtungsmaßnahmen mittels Schweißbahnen während der Bauphase zur Sicherstellung der temporären Dichtigkeit von Dach- und Anschlussbereichen.;20,0;m²;gaeb;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 04 Dachdecker LV_V32.X83

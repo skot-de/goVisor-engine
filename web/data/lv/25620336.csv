@@ -1,0 +1,277 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01010010;Baustromverteiler Anschlussverteilerschrank AnzZählerfelder 1 St I 63;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+01010020;Baustromverteiler Endverteiler AnzZählerfelder 1 St I 63 A 230/400VAC;3,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+01010030;Gebrauchsüberlassung Baustromverteiler Anschlussschrank Gehäuse Stahl;34,0;StWo;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+01010040;Gebrauchsüberlassung Baustromverteiler Anschlussschrank Gehäuse Stahl;102,0;StWo;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+01010050;Bauwasseranschluss einrichten räumen;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+01010060;Bauwasseranschluss vorhalten;34,0;StWo;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+01010070;Bauzaun Stahlrohrrahmen verz Vergitterung H 2m aufstellen räumen;118,0;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+01010080;Bauzaun Stahlrohrrahmen verz Vergitterung H 2m vorhalten;4012,0;mWo;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+01010090;Sanitärcontainer aufstellen räumen doppelwandig wärmegedämmt L 6m B 2,;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+01010100;Sanitärcontainer vorhalten doppelwandig wärmegedämmt L 6m B 2,5m;34,0;StWo;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+01010110;Bürocontainer aufstellen räumen doppelwandig wärmegedämmt L 6m B 2,5m;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+01010120;Bürocontainer vorhalten doppelwandig wärmegedämmt L 6m B 2,5m Büro;34,0;StWo;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+01010130;Container Toilettenraum betreiben 2x wöchentlich;34,0;StWo;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+01010140;Container Büro reinigen wöchentlich;34,0;StWo;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+01010150;Container Sanitätsraum Endreinigung;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+01010160;Container Büro Endreinigung;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+01010170;Begleitheizung liefern und vorhalten;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+01010180;Begleitheizung verlängerte Vorhaltung;20,0;StWo;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02010010;Elektroinstallationen abbrechen, entsorgen;241,28;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02010020;Abbruch von Gas- und Wasserrohren, entsorgen;90,0;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02010030;Abbruch von Wasser- und Abwasserinstallationen, entsorgen;6,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02010040;Demontage Warmwasserspeicher 80 l;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02010050;Abbruch und Entsorgung von Heizkesseln;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02020010;Beräumung des Gebäudes;943,34;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02020020;Nadelvliesbelag abbrechen, entsorgen;77,34;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02020030;Fußbodenfliesen abbrechen, entsorgen;120,08;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02020040;Spanplatten als Verlegplatten auf Holzdielung abbrechen, entsorgen;120,92;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02020050;Sohle Beton abbrechen nicht schadstoffbelastet 25kN/m3 D 20 cm Gerätee;100,3;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02020060;Bodenbelag Zementestrich abbrechen nicht schadstoffbelastet D 6 cm 23k;190,3;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02030010;Fliesen/Platten Wand Fliese/Pl. D bis 10mm abbrechen nicht schadstoffb;138,55;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02030020;Wand- und Deckentapeten abbrechen mind. 2-lg., entsorgen;904,66;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02030030;Zulage Tagessatz Restaurator;2,0;d;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02030040;Deckenbekleidung aus beschichteten Spanplattenpaneelen;50,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02030050;Bekleidungspl Decke Mineralpl. L/B 600/600mm abbrechen nicht schadstof;122,84;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02030060;Putz Decke Schilfrohrmatte abbrechen nicht schadstoffbelastet 13kN/m3;227,55;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02030070;Grund-Tragprofil Unterdecke Stahlprofil verz L/B 600/600mm CW50/50 D 0;151,16;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02030080;Abbruch von GK- Decken, Entsorgung;28,32;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02030090;Dämmung unter Decke PS-Hartschaum abbrechen nicht schadstoffbelastet 0;125,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02030100;Abbruch loser Innenputz Gips-/Kalk-/Kalkzementputz, entsorgen;450,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02040010;Fenster Holz abbrechen nicht schadstoffbelastet H 2000 mm B 1050 mm Ma;7,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02040020;Fenster Holz abbrechen nicht schadstoffbelastet H 1800 mm B 1050 mm Ra;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02040030;Fenster Holz abbrechen nicht schadstoffbelastet H 1950 mm B 1200 mm Ra;12,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02040040;Fenster Holz abbrechen nicht schadstoffbelastet H 2800 mm B 1250 mm Ra;7,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02040050;Fenster Holz abbrechen nicht schadstoffbelastet H 2550 mm B 1100 mm Ra;6,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02040060;Fenster Holz abbrechen nicht schadstoffbelastet H 950 mm B 1200 mm Rah;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02040070;Fenster Holz abbrechen nicht schadstoffbelastet H 1020 mm B 420 mm Rah;18,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02040080;Türblatt Holz abbrechen nicht schadstoffbelastet B 1050 mm H 2100 mm R;17,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02040090;Türblatt Holz abbrechen nicht schadstoffbelastet B 1050 mm H 2160 mm R;5,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02040100;Tür Holz abbrechen nicht schadstoffbelastet B 1420 mm H 2470 mm Maulwe;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02040110;Türblatt Holz abbrechen nicht schadstoffbelastet B 1220 mm H 2140 mm R;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02040120;Tür Holz abbrechen nicht schadstoffbelastet B 1420 mm H 2470 mm Maulwe;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02040130;Tür-Umfassungszarge Holz abbrechen nicht schadstoffbelastet B 1510 mm;20,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02040140;Tür-Umfassungszarge Holz abbrechen nicht schadstoffbelastet B 1510 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02050010;Treppe Holz/Holzwerkstoff abbrechen nicht schadstoffbelastet Stufen-L;30,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02050020;Treppenpodest Holz abbrechen nicht schadstoffbelastet D 25 cm 7,5kN/m3;8,63;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02050030;Abbruch Treppengeländer aus Holz;15,0;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02050040;Abbuch von Einbauschränken in Flurbereichen;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02050050;Kachelöfen abbrechen und entsorgen;6,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02050060;Ofensockel abbrechen;6,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02060010;Ausfachung Holzfachwerk Mauerziegel abbrechen nicht schadstoffbelastet;154,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02060020;Schornstein/Abgasanlage Klinker abbrechen nicht schadstoffbelastet 18k;12,0;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02060030;Abbruch KS- Wand d=11,5 cm, raumhoch;13,5;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02060040;Abbruch Montagewand, GK;47,25;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02060050;Abbruch von Vorsatzschalen GK;33,75;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02060060;Abbruch Lattenverschlag, Holz 1,2x06x2,0 m;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02070010;Ausbau eines Tresors und Lagerung zum Wiedereinbau;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02080010;Aufbauen flächenorientiert Standgerüst Arbeitsgerüst 3kN/m2 H1;270,6;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02080020;Gebrauchsüberlassung flächenorientiert Standgerüst Arbeitsgerüst 3kN/m;1082,4;m3Wo;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02080030;Abbauen flächenorientiert Standgerüst Arbeitsgerüst 3kN/m2 H1 L 8,2 m;270,6;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02080040;Aufbauen längenorientiert Standgerüst Arbeitsgerüst 3kN/m2 SW09 H1;49,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02080050;Gebrauchsüberlassung längenorientiert Standgerüst Arbeitsgerüst 3kN/m2;196,0;m2Wo;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+02080060;Abbauen längenorientiert Standgerüst Arbeitsgerüst 3kN/m2 SW09 H1;49,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03010010;Wanddurchbruch 44/68 cm Pos. T103;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03010020;Wanddurchbruch 29/22;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03010030;Wanddurchbruch 18/10;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03010040;Wanddurchbruch Durchmesser 11 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03010050;Wanddurchbruch Durchmesser 17 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03010060;Wanddurchbruch Durchmesser 17 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03010070;Wanddurchbruch 42/15;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03010080;Sturzausbildung Betonfertigteil Pos. T101 LW= 1,01 m;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03010090;Sturzausbildung Betonfertigteil Pos. T102 LW= 1,01 m;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03010100;Sturzträger 4x HEA 100 Pos. T100;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03010110;Deckengewölbe abbrechen, Steine entsorgen, d=12,5 cm;7,36;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03020010;Ausmauerung Öffnung Mauerziegel abbrechen nicht schadstoffbelastet 15k;4,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03020020;Nichttragende Trennwand Mauerziegel abbrechen nicht schadstoffbelastet;7,6;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03020030;Innenwand Mauerziegel abbrechen nicht schadstoffbelastet 15kN/m3 D 28;4,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03020040;Schließen vorh. Wandöffnung 2,08/ 1,78 Segmentbogen d= 54 cm;2,0;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03020050;Schließen vorh. Wandöffnung 1,00/ 1,78 Segmentbogen d= 27 cm;4,58;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03020060;Verfüllen von Schornsteinzügen 30/19,5 cm, Beton;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03020070;Mauerwerk Innenwand HLzB SFK12 RDK1,2 D 11,5cm M5 fk 12 N/mm2 2DF(240/;5,4;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03020080;Lochschiene Stahl verz Profil 28/15 andübeln Mauerwerk;2,0;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03020090;Anker Anschluss Mauerwerk einführen;5,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03020100;Ringbalkenschalung FZ Wandstärke 11,5 cm;4,5;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03020110;Ortbeton Ringanker Stahlbeton C25/30 C0 BBQ-N BK-N B 10 cm H 24 cm;4,5;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03020120;Betonstabstahl B500A Durchm. 6-10mm Ringbalken;8,0;kg;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030010;Türöffnung ausbrechen, Mauerwerk bis 80 cm;4,42;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030020;Türöffnung ausbrechen, Mauerwerk bis 60 cm;2,142;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030030;Türöffnung ausbrechen, Mauerwerk bis 38 cm;4,1;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030040;Türöffnung ausbrechen, Mauerwerk bis 25 cm;5,97;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030050;Wandöffnungen schließen Hz DF M2,5 bis 4 m2;7,4;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030060;Träger Wand Vollwandkonstr. Doppel-T-Träger IPE H 120mm S235JR besch L;1,37;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030070;Sturzausbildung Betonfertigteil Pos. T203 LW= 1,01 m;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030080;Träger Wand Vollwandkonstr. Doppel-T-Träger IPE H 140mm S235JR besch L;1,85;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030090;Sturzausbildung Betonfertigteil Pos. T203 LW= 1,42 m;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030100;Sturzausbildung Betonfertigteil Pos. T206 LW= 1,01 m;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030110;Träger Wand Vollwandkonstr. Doppel-T-Träger IPE H 140mm S235JR besch L;1,73;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030120;Sturzausbildung Betonfertigteil Pos. T208 LW= 0,885 m;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030130;Sturzausbildung Betonfertigteil Pos. T209 LW= 0,885 m;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030140;Träger Wand Vollwandkonstr. Doppel-T-Träger HEA H 100mm S235JR besch L;3,74;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030150;Sturz kraftschlüssig einbinden H 20-25cm B 70-75cm L 1,55 m;2,5;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030160;Sturz kraftschlüssig einbinden H 20-25cm B 70-75cm L 1,55 m;7,63;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030170;Sturz kraftschlüssig einbinden H 20-25cm B 30-35cm L 1,35 m;1,35;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030180;Träger kraftschlüssig einbinden H bis 10cm B 30-35cm L 1,6 m;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030190;Träger kraftschlüssig einbinden H bis 10cm B 30-35cm L 1,85 m;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030200;Träger kraftschlüssig einbinden H bis 10cm B 30-35cm L 1,6 m;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030210;Wandöffnungen schließen Hz DF M2,5 bis 2,5 m2;3,35;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030220;Träger Decke Vollwandkonstr. Doppel-T-Träger HEA H 180mm S235JR besch;4,65;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030230;Auflager abmauern B/H = 15/20 cm L = 50 cm, MZ 1,8 NF;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030240;Mauerwerk Innenwand mit Schallschutzziegel MZ 1,8 NF;54,52;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030250;Ringanker Ziegel-U-Schale B 24cm L 240mm H 240mm;4,5;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030260;Betonstabstahl B500A Durchm. 6-10mm Ringbalken;16,69;kg;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030270;Betonstahl biegen Sonderform Betonstabstahl B500A Durchm. bis 6mm Ring;3,85;kg;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030280;Zulage für Einkleben von Einzelstählen in Mauerwerk d=10 mm;8,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030290;Ortbeton Ringanker Stahlbeton C25/30 C0 BBQ-N BK-N B 10 cm H 24 cm;4,5;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03030300;Fensteröffnung schließen, AW 38 cm, 2DF HLzB 12-0,9;9,54;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03040010;Tür Holz/Holzwerkstoff abbrechen nicht schadstoffbelastet B 1140 mm H;3,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03040020;Türöffnungen schließen AW bis 60 cm;7,05;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03040030;Herstellen von Durchbrüchen für Gründungsbalken StB C25/30;4,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03040040;Ortbeton Einzelfundament Stahlbeton C25/30 XF1 XM1 XA2 XC4 XD3 XS3 F4;0,3;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03040050;Schalung Bodenpl. einhäuptig H 15-25cm;10,0;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03040060;Betonstabstahl B500A Durchm. 6-16mm Auflager;145,6;kg;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03040070;Übermauern der Lastverteilungsbalken;1,8;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03040080;Wandschlitz herstellen 60x60x284 cm;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03040090;Pfeiler 60x60,Mz RF-1,8 , M2.5 Kreuzform;5,7;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03040100;seitl. Anschläge beimauern Mz RF-1,8 , M2.5 T- Form;5,7;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03040110;Sturz 4x HEA 140, Riegelquerverbindung Pos. T200.1a und T200.2a;3,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03040120;Ausmauern Trägerstege mit MZ RF 1,8;13,7;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03040130;Unterseitige Brandschutzbekleidug Feuerschutzplatte F30, d= 15 mm;4,3;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03040140;Außenwand Mauerziegel abbrechen nicht schadstoffbelastet 18kN/m3 D 60;14,09;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03040150;Sicherung Rohbauöffnungen  Kiefer- Sperrholz, wasserfest 21 mm;3,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03050010;Absteifen der Deckenbalken über Pos. T201.3a Holz+Spindelstütze;4,0;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03050020;Stahlkonstruktion Doppel-T-Träger IPE H 200mm L 4-4,25m abbrechen nich;4,2;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03050030;Herstellen von Auflagern L= 25 cm B= 38 cm;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03050040;Unterzug Foyer Pos. T201.3a HEA 300 L= 4200 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03050050;Überzug Statik T1.03 als Wandauflager HEA 180;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03060010;Türöffnung ausbrechen, Mauerwerk bis 38 cm;7,8;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03060020;Sturzausbildung Betonfertigteil Pos. T300a LW= 1,20 m;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03060030;Sturzausbildung Betonfertigteil Pos. T301 a LW= 1,20 m;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03060040;Sturzausbildung Betonfertigteil Pos. T302a LW= 1,01 m;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03060050;Sturzausbildung Betonfertigteil Pos. T 303a  LW= 1,80 m;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03060060;Sturzausbildung Betonfertigteil Pos. T304a LW= 1,50 m;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03060070;Sturzausbildung Betonfertigteil Pos. T305 LW= 1,20 m;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03060080;Sturzausbildung Betonfertigteil Pos. T308a TW= 1,80 m;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03060090;Sturzausbildung Betonfertigteil Pos. T309 LW= 1,90 m;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03060100;Sturzausbildung Betonfertigteil Pos. T310 LW= 1,01 m;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03060110;Sturzausbildung Betonfertigteil Pos. T 312 LW= 1,36 m;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03060120;Sturz kraftschlüssig einbinden H 20-25cm B 30-35cm L 1,55 m;7,75;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03060130;Sturz kraftschlüssig einbinden H 20-25cm B 20-25cm L 2,15 m;6,75;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03070010;Pfettenverstärkung Pos. PF4b U160 einseitig;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03070020;Zulage  Pos Pf4b, Kopfplattenstoß;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03070030;Unterzug 2x HEA200 L= 5,76 m, Pos. T313;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+03070040;Unterzug 2x HEA200 L= 5,30m, Pos. T314;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+04010010;Betonpflasterdecke aufnehmen, lagern;84,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+04010020;Betonbordstein aufnehmen, lagern;14,0;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+04020010;Wiederherstellung Betonsteinpflaster Unterbau;84,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+04020020;Wiederherstellung Pflasterbelag Betonsteine;84,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+04030010;Boden Streifenunda. BK3+4 lösen laden entsorgen T bis 1,0 m;24,0;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+04030020;Arbeitsräume verfüllen, verdichten, Liefermaterial, Außentreppen;9,76;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+04040010;Sauberkeitsschicht , Beton 5 cm, CB10;9,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+04040020;Fundament, Ortbeton, konstruktiv bewehrt;4,39;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+04040030;Schalung, Fundament, verloren;29,15;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+04040040;Konstruktive Bewehrung Betonstahlmatten, Bst 500A;0,435;t;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+04040050;Zulage für Dehnfugen an aufgehenden Bauteilen;1,92;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+04050010;Außenmauerwerk, Klinker, Sichtmauerwerk 24 cm;6,3;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+04060010;Treppenpodestplatte Fertigteil L 1,4 m D 150mm B 120cm C35/45 XF4 XM2;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+04060020;Aussparung rechteckig Fertigteil Treppenpodestplatte L 50-100cm B 50-1;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+04060030;Gitterrost Fußabstreifer L 900 mm B 500 mm 30/10mm Tragstab-B 3 mm H 4;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+04060040;Gitterrost Fußabstreifer L 900 mm B 500 mm 30/10mm Tragstab-B 3 mm H 4;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+04060050;Blockstufe Betonwerkstein gerade Dünnbett zementh.Mörtel TypC 1 H 15 c;8,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05010010;Mauerwerk Schachtwand Aufzug KSR 12 DBM;71,12;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05010020;Öffnung aufmauern B 1,135-1,26m H 2,26-2,385m D 24cm;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05010030;Entrauchungsschacht B/L(H Lichte Maße B/L/H = 54/54/95 cm;3,5;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05010040;Dämmschicht PS-Hartschaum XPS 0,035W/(mK) einlagig D 100mm PW Verputzt;3,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05010050;Armierungsputz mineral.Werktrockenmörtel D 6-8mm Verputzte Außenwärmed;3,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020010;Auflagerbalken Aufzugsschacht 30/25+22=47 cm C20/25 Pos. AB100;0,948;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020020;Schalung für Auflagerbalken, 3-seitig Pos. AB100;5,6;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020030;Perimeterdämmung PS-Hartschaum XPS 0,035W/mK D 60mm PB ds;3,27;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020040;Ortbeton Bodenpl.Aufzug StB C20/25 d= 22 cm;1,02;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020050;Randschalung Aufzugssohle H 20-30cm;4,31;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020060;Beidseitig-beschichtetes Fugenblech Bodenplatte/Wand;4,13;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020070;Zulage zur Position Abdichtung Arbeitsfuge Aufzugssohle/Wand;4,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020080;Schalung Sturz rechteckig GF-Schalungspl.;2,32;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020090;Schalung Ringanker rechteckig GF-Schalungspl.;35,35;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020100;Schalung Deckenpl. GF-Schalungspl.;4,64;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020110;Randschalung Deckenpl. H 15-25cm;8,62;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020120;Holzfaserdämmplatte d= 80 mm, Unterdeckplatte TYP UDP-A;38,17;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020130;Ortbeton Sturz Stahlbeton C25/30 B 24cm H 20-25cm;0,2;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020140;Ortbeton Ringanker Stahlbeton C20/25 B 24cm H 20-25cm;3,476;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020150;Ortbeton Deckenpl. Stahlbeton C20/25 Decken-D 18cm;0,835;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020160;Aussparung Stahlbeton T bis 20cm bis 2500 cm2;0,16;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020170;Betonstabstahl BSt500S(A) alle Durchmesser;0,825;t;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020180;Ankerschiene Stahl verz Profil 40/22 L 1,55m, liefern, einbetonieren;8,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020190;Ankerschiene Stahl verz Profil 40/22 L 1,3m liefern, einbetonieren;4,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020200;Ankerschiene Stahl verz Profil 52/34 L 1,8m liefern,einbetonieren;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020210;Rüsthülse einbetonieren;20,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020220;Schachttüröffnungen sichern;3,6;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020230;Bohlenbelag  für Aufzugsmontage d= 4 cm;9,35;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05020240;Giebelanker kürzen udn in Bewehrung integrieren;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05030010;"Entrauchungselement Aufzugsschacht Ages 015 m""";1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+05030020;Anschluss Dachabdichtung 2lagig Bitumen-Dachdichtungsbahn KSK Polymerb;3,2;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06010010;Boden lösen laden LKW AN ges.Vergüt.Entsorg. T bis 0,8m SE;103,5;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06010020;Boden Einzelfundament lösen laden LKW AN ges.Vergüt.Entsorg. geböschte;3,6;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06010030;Planum Abweichung +/-2cm EV2 45MPa;103,5;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06010040;Boden lösen lagern geböschte Wände B 0,75-1m L 9-10m T bis 1,5m SE;19,2;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06010050;Schutzrohr PVC-U homogen Schutzrohr OD DN315 L 2m Bettung Typ1 Bett;25,5;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06020010;Sauberkeitsschicht Kies D 10cm von Hand;10,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06020020;Ortbeton Sauberkeitsschicht Bodenplatte unbewehrt C12/15 C0 D 10cm;10,5;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06020030;Trennlage PE-Folie D 0,5mm einlagig Sauberkeitsschicht Beton;12,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06020040;Ortbeton Bodenpl. Stahlbeton C25/30 BBQ-N BK-N AK-N XC1 C0 D 16cm;10,5;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06020050;Betonstahlmatte B500A Lagermatte Q257A Bodenplatte;98,88;kg;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06020060;Ortbeton Einzelfundament Stahlbeton C20/25 XF1 XC1 C0 BBQ-N BK-N AK-N;0,3;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06020070;Ortbeton Einzelfundament Stahlbeton C20/25 XF1 XC1 C0 BBQ-N BK-N AK-N;0,22;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06020080;Sauberkeitsschicht Kies D 10cm von Hand;94,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06020090;Trennlage PE-Folie D 0,5mm einlagig Sauberkeitsschicht Beton;94,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06020100;Ortbeton Bodenpl. Stahlbeton C20/25 BBQ-N BK-N AK-N XC1 C0 D 16cm;94,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06020110;Betonstahlmatte B500A Lagermatte Q257A Bodenplatte;140,0;kg;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06020120;Ortbeton Balken Stahlbeton C25/30 XC1 C0 BBQ-N BK-N AK-N SB1 B 60 cm H;0,352;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06020130;Schalung Balken rechteckig Abwicklung 1,7 m Schalungspl. H 0 m bis 0,5;5,53;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06020140;Betonstabstahl B500A Durchm. 10-16mm Balken;98,93;kg;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06020150;Betonstahl biegen Sonderform Betonstabstahl B500A Durchm. 10-16mm Balk;36,37;kg;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06030010;Auflagertaschen herstellen L/H/B = 15/24/30, MW;12,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06030020;Auskleiden der Auflagertaschen;12,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06030030;Schwingungsentkopplung Auflagertasche BI- Trapezlager 10 mm;12,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06030040;Ortbeton Treppenpodestpl. Stahlbeton C20/25 XM1 XC1 C0 BBQ-N BK-N AK-N;2,623;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06030050;Ortbeton Treppenlaufpl. Stufen Steigungen 36 St Stahlbeton C20/25 C0 B;6,166;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06030060;Schalung Deckenpl. GF-Schalungspl. H 4 m bis 5,2 m;10,08;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06030070;Schalung Treppenlaufplatte Schalungspl. H 4 m bis 6,3 m;14,91;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06030080;Schalung Stufe Schalungspl. Setzstufen-H 18cm Trittstufen-B 28cm Lauf-;18,35;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06030090;Betonstabstahl B500A Durchm. 6-16mm Treppenlaufplatte Stufen;413,39;kg;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06030100;Betonstabstahl B500A Durchm. 16-32mm Treppenlaufplatte Stufen;125,36;kg;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06030110;Betonstabstahl B500A Durchm. 6-16mm Treppenpodestplatte;283,33;kg;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06030120;Betonstahl biegen Sonderform Betonstabstahl B500A Durchm. 6-10mm Trepp;64,72;kg;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06030130;Betonstahl biegen Sonderform Betonstabstahl B500A Durchm. 6-16mm Trepp;380,26;kg;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06030140;Trittschalldämmelem. tragend Treppenpodest -hauswand 34dB Tragel. Stah;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06030150;Trittschalldämmelem. tragend Treppenpodest -hauswand 34dB Tragel. Stah;4,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06030160;Trittschalldämmelem. tragend Treppenpodest -hauswand 34dB Tragel. Stah;2,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06040010;Ortbeton Sauberkeitsschicht unbewehrt C8/10 D 5cm;15,36;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06040020;Lichtschacht druckwasserdicht Betonfertigteil SB1-FT Bodenpl. B 150cm;1,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06040030;Boden gelagert einbauen verdichten GU DPr0,97 D 15-20cm;9,8;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+06040040;Überschüssigen Boden entsorgen;9,4;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07010010;Aushub Schlitzgraben/ Suchgraben Außenbereich;5,0;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07010020;Sichern  von Leitungen/ Kabeln;56,0;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07010030;Baugrube ausheben GK 3-4, entsorgen, Abdichtung;56,0;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07010040;Arbeitsräume verfüllen, verdichten, Liefermaterial, Abdichtung;56,0;m3;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07010050;Überprüfen der abzudichtenden Flächen in Kellerräumen;168,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07010060;Reinigen der abzudichtenden Flächen;168,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07010070;Erneuerung einzelner Ziegel bis 5 in der Reihe;40,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07010080;Ausbesserung größerer Flächenausbrüche;10,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07020010;Schließen von Rissen, Hohlräumen mit Bohrlochsuspension;20,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07020020;Grundverkieselung mit Kiesol/ Sulfatexschlämme/ Dichtspachtel;168,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07020030;Horizontalsperre von innen  mit Kiesol C;56,0;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07020040;Schließen der Bohrlöcher mit Dichtspachtel;560,0;St;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07030010;Lunker, Poren kleinere Ausbrüche mit Dichtspachtel schließen;56,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07030020;Grundierung mit Multi- Baidicht K2;56,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07030030;Elastische Abdichtung mit Multi-Baudicht 2K 2lg, Gewebeeinlage;56,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07030040;vertik. Schutzschicht, Dränfunktion, Noppenbahn;56,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07030050;Sicherung oberer Abschluss mit Halteleiste und Abdeckprofil;56,0;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07040010;Grundverkieselung mit Kiesol/ Sulfatexschlämme und Dichtspachtel;112,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07040020;Dichtungskehle mit Kiesol/ Sulfatexschlämme und Dichtspachtel;56,0;m;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07040030;Abdichtung mit 2 Aufträgen Sulfatexschlämme;112,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07040040;Haftbrücke herstellen mit Sulfatexschlämme + Vorspritzmörtel;112,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07040050;Neuverputz auf Vorspritm./ Dichtsp./ Dichtschl., Sanierputz;112,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07040060;Aufbauen längenorientiert Standgerüst Arbeitsgerüst 2kN/m2 SW09 H1;152,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07040070;Umsetzen längenorientiert Standgerüst Arbeitsgerüst 2kN/m2 SW09 H1;152,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07040080;Gebrauchsüberlassung längenorientiert Standgerüst Arbeitsgerüst 2kN/m2;1216,0;m2Wo;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83
+07040090;Abbauen längenorientiert Standgerüst Arbeitsgerüst 2kN/m2 SW09 H1;152,0;m2;gaeb-flat;leistungsbeschreibungen/2022-08_1.1.D83

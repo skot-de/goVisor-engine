@@ -1,4 +1,58 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0101.1;Küchenmöbel Pantry 148 cm;58,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0101.2;Nischenwände Pantry 148 cm;58,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0101.3;Edelstahl-Arbeitsplatte Pantry 148 cm;58,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0101.4;Küchenmöbel Pantry 133 cm;3,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0101.5;Nischenwände Pantry 133 cm;3,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0101.6;Edelstahl-Arbeitsplatte Pantry 133 cm;3,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0101.7;Küchenmöbel Teeküche;1,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0101.8;Nischenwände Teeküche;1,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0101.9;Edelstahl-Arbeitsplatte Teeküche;1,0;;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0101.10;Mehrpreis für Integration des Elektro-Unterverteilers;66,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0102.1;Induktionskochfeld aufliegend;63,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0102.2;Dunstabzug Umluft;63,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0102.3;Fettfilter Dunstabzug;63,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0102.4;Aktivkohlefilter Dunstabzug;63,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0102.5;Tischkühlschrank unterbaufähig mit Gefrierfach;61,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0102.6;Tischkühlschrank unterbaufähig ohne Gefrierfach;1,0;;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0102.7;Einbaukühlschrank integrierbar mit Gefrierfach;2,0;;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0102.8;Nischenleuchte 12W;1,0;;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0102.9;Nischenleuchte 9W;2,0;;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0102.10;Relingstange 800 mm;61,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0102.11;Relingstange 600 mm;3,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0102.12;Möbelsteckdose;63,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0102.13;Möbeleinbau-Schalter;4,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0102.14;Ersatzteile Topfscharnier;20,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0102.15;Ersatzteile Zargenführung;5,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0103.1;Kleiderschrank WG ca. 1200 x 2350 x 655 mm;63,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0103.2;Kleiderschrank Appartment, Hausmeisterbüro u. NetzAK ca. 1200 x 2350 x 655 mm;61,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0103.3;Kleiderschrank behindertengerecht ca. 1200 x 2350 x 580 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0103.4;Garderobenleiste ca. 300 x 150 x 18 mm.;126,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0104.1;Schreibtisch ca. 1600 x 700 mm x 740 mm;128,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0104.2;Schreibtisch ca. 1600 x 700 mm x 740 mm Ersatz;3,0;;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0104.3;Rollcontainer 450 mm x 530 mm x 620 mm;128,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0105.1;"Bett ""K"" 0,90/2,00m";126,0;Stk;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0105.2;"Bett ""K"" 0,90/2,00m Ersatz";3,0;;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0105.3;Kopfteilplatte ohne Ablage;126,0;Stk;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0105.4;Kopfteilplatte ohne Anlage Ersatz;3,0;;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0105.5;Polyschaummatratze 2,00/0,90/0,12 R;126,0;Stk;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0105.6;Polyschaummatratze 2,00/0,90/0,12 R Ersatz;3,0;;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0105.7;Matratzenbezug Möbelstoff 0,90/2,00;126,0;Stk;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0105.8;Matratzenbezug Möbelstoff 0,90/2,00 Ersatz;3,0;;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0105.9;Hocker-Beistelltisch;126,0;Stk;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0105.10;Hocker-Beistelltisch Ersatz;3,0;;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0105.11;Freischwinger Zimmer;126,0;Stk;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0105.12;Freischwinger WG Küchenb und Gemeinschaftsraum;30,0;Stk;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0105.13;Freischwinger als Ersatz;14,0;Stk;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0105.14;Regal mit Fach 800mm;126,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0105.15;Regal mit Fach 800mm Hausmeisterbüro und NetzAK;2,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0106.1;Küchenmöbel Pantry barrierefrei;2,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0106.2;Nischenwände Pantry barrierefrei;2,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0106.3;Edelstahl-Arbeitsplatte Pantry barrierefrei;2,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0107.1;Minderpreis Entfall Blenden;0,0;psch;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0107.2;Stundenlohnarbeit Meister;5,0;h;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0107.3;Stundenlohnarbeit Facharbeiter;5,0;h;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
+0107.4;Stundenlohnarbeit Helfer;5,0;h;gaeb-flat;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer.D83
 1;Herstellung und Montage einer Küchenzeile gem. Systembeschreibung und Zeichnung mit;58,0;St;gaeb;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer_V32.X83
 2;Lieferung und Montage von Nischenwänden gem. Systembeschreibung und Zeichnung mit;58,0;St;gaeb;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer_V32.X83
 3;Lieferung und Montage einer Arbeitsplatte gem. Systembeschreibung und Zeichnung mit;58,0;St;gaeb;leistungsbeschreibungen/LV Möblierung Appartment und Zimmer_V32.X83

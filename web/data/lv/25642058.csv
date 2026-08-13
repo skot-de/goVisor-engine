@@ -90,3 +90,94 @@
 7;Korrosionsschutzbinde, Bandbreite 150 mm, liefern und;4,0;St;gaeb;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.X83
 8;Tiefenerder, Edelstahl V4A, zusammensetzbar mit Zapfen,;4,0;St;gaeb;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.X83
 9;Messen und Prüfen der Blitzschutz- und Erdungsanlage,;1,0;psch;gaeb;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.X83
+01.1;Baustelleneinrichtung Hauptposition;1,0;psch;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+01.2;WC-Kabine bereitstellen;1,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+01.3;WC-Kabine vorhalten;8,0;StWo;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+01.4;Sicherheits- und Gesundheitsschutzplan;1,0;psch;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+01.5;Koordinierung Sicherheits-/ Gesundheitsschutz;1,0;psch;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+01.6;Bauwasseranschluß;1,0;psch;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+01.7;Baustromanschluß;1,0;psch;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+01.8;Fußboden mit Folie/Platte abdecken;1,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+01.9;Bauzaun, Stahlrahmen (mobil), 2,00 m;1,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+01.10;Bauzaun vorhalten;1,0;mWo;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+01.11;Stundensatz Facharbeiter;1,0;h;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+01.12;Stundensatz Helfer;1,0;h;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+02.1;statischer Nachweis Gerüst;1,0;psch;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+02.2;Fassadengerüst als Metallgerüst;760,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+02.3;auskragendes Schutzdach;12,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+02.4;Zulage Gerüstturm;1,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+02.5;Fassadengerüst vorhalten;9120,0;m²Wo;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+02.6;Gerüstturm vorhalten;12,0;StWo;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+02.7;Wetterschutzdach;270,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+02.8;Vorhaltung Wetterschutzdach;3240,0;m²Wo;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+02.9;Gerüstverbreiterung innen/außen;56,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+02.10;Gerüstverbreiterung innen/außen, Verlängerung;665,0;mWo;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+02.11;Überbrückung, l=5,00 m;1,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+02.12;Überbrückung, l=5,00 m, Verlängerung;12,0;StWo;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+03.1;PAK-haltige Dachabdichtung;20,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+03.2;Dachschalung ausbauen;20,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+03.3;Abriss Dämmung (KMF-belastet);20,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+03.4;Schornsteinmauerwerk abbrechen;3,0;m³;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+03.5;Betonabdeckung, C 12/15, incl. Schalung;1,5;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+03.6;Dacheindeckung abbrechen,;250,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+03.7;Blech bis Z 400 entfernen;45,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+03.8;Schornsteinfeger-Laufrost abbauen;5,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+03.9;Schneefanggitter abbrechen, entsorgen;38,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+03.10;Dachluke/-fenster bis 400/400 mm entfernen;6,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+03.11;Dachrinnen und Fallrohre abbauen;118,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+03.12;Dachausstieg bis 550/800 entfernen;1,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+03.13;Wasserabweiser, behelfsmäßig;8,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+04.1;Sparren aufdoppeln, 100/120 mm;50,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+04.2;Aufschieblinge;48,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+04.3;Windrispenband,feuerverzinkt,60x3,0mm;145,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+04.4;Schalung (N+F,einseit.gehobelt);30,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+04.5;Mehraufwand Gefälleausbildung;20,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+04.6;OSB-Platte als Scheibe, d=30 mm;20,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+04.7;Holzbauteile, außen, lasieren;30,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.1;Dachabdichtung einsch. Grundierung;20,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.2;Kehlleisten,Wärmedämm.PS-, Hartsch,10/5cm;8,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.3;Dachhaut hochführen, bis 30cm;8,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.4;Anschluss Flachdach zum Steildach, B=5.00 m;2,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.5;Holzlattung innen, 30/50 mm, 350 mm;50,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.6;Herstellung einer luftdichten Ebene;70,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.7;Mauerkronen Brandwände;24,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.8;Wärmedämmung zw. Sparren, d= 180 mm;70,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.9;Unterdeckbahn, Klasse 4;280,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.10;Konterlattung, 30/50 mm;280,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.11;Dachlattung, 40/60 mm, 340 mm;280,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.12;Traufdielen, 25/240 mm;60,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.13;Traufausbildung;60,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.14;Flachdachziegel;280,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.15;Ortgangziegel, Zulage;12,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.16;Gratziegel, trocken verlegt;28,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.17;Gratanfangsziegel;4,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.18;Firstziegel, trocken verlegt;12,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.19;Walmkappe, Zulage;2,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.20;An- und Abschlüsse, seitlich, eindecken;40,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.21;Antennenziegel;2,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.22;Dunstrohr;4,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+05.23;Dachausstieg;1,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+06.1;Attika-Verblechung,Titan-Zinkblech,Z 500;8,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+06.2;Flachdach-Wasserfangkasten, eckig, 100 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+06.3;Rinne Titanzink;80,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+06.4;Rinnen-Winkel, Titan-Zinkblech, Z 333;4,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+06.5;Rinnen-Endstück, Titan-Zinkblech, Z 333;20,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+06.6;Rinnenscharblech, Titan-Zinkblech,;80,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+06.7;Einhängstutzen,;10,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+06.8;Dehnungsausgleich für Hängedachrinne;4,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+06.9;Laubfangkörbe aus verz. Draht;10,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+06.10;Fallrohrbögen, Titan-Zinkblech,;10,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+06.11;Wandanschluß der Dacheindeckung;36,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+06.12;Kaminverwahrung - Titan-Zinkblech;8,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+06.13;Laufroste für Kaminkehrer;5,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+06.14;Schneefanggitter, Titan-Zinkblech;38,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+06.15;Fallrohrfreiendlauf, Titan-Zinkbl.,DN100;10,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+07.1;Fangleitung 8mm AL;115,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+07.2;Ableitung 8mm AL;32,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+07.3;Fangstange 16 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+07.4;Anschlüsse;20,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+07.5;Trennklemme;4,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+07.6;Nummernschild;4,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+07.7;Korrosionsschutzbinde;4,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+07.8;Tiefenerder 20 mm;4,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83
+07.9;Meßprotokoll;1,0;psch;gaeb-flat;leistungsbeschreibungen/Z-FL-1326_Leistungsverzeichnis Dacharbeiten.D83

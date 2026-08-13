@@ -1,4 +1,50 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Beschichtung Holzschalung;125,0;m²;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 3_Maler- und Lackierarbeiten.D83
+2;Stunden eines Facharbeiters;10,0;h;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 3_Maler- und Lackierarbeiten.D83
+3;Stunden eines Bauhelfers;10,0;h;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 3_Maler- und Lackierarbeiten.D83
+1;Bautoilette;1,0;Stk;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten.D83
+2;Überstandszeit zur Vorposition;4,0;StkW;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten.D83
+3;"Arbeits- und Schutzgerüst; Dachdeckerschutz;Lastklasse 3";220,0;m²;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten.D83
+4;Zulage Abstützung für Gerüst ohne Verankerung;220,0;m²;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten.D83
+5;Gebrauchsüberlassung zur Vorposition;1320,0;m²Wo;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten.D83
+6;Absturzsicherung;16,0;m;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten.D83
+7;Gebrauchsüberlassung zur Vorposition;96,0;mWo;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten.D83
+8;Gitterträger, Spannweite: bis ca. 7,0 m;14,0;m;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten.D83
+9;Gebrauchsüberlassung zur Vorposition;84,0;mWo;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten.D83
+10;Konsolenkonstruktion;102,0;m;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten.D83
+11;Gebrauchsüberlassung zur Vorposition;612,0;mWo;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten.D83
+12;Gerüstbau-Monteur;12,0;h;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten.D83
+13;Gerüstbau-Helfer;12,0;h;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten.D83
+14;An- und Abfahrt;2,0;Stk;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten.D83
+1;Abbruch Profile/Anschlüsse;18,4;m;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+2;Abbruch Firste;15,8;m;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+3;Dachdeckung, Ziegel, entfernen;146,0;m²;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+4;Dachrinne, Fallrohre, demontieren, ents.;45,0;m;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+5;Dachlattung entfernen;146,0;m²;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+6;Demontage Unterspannbahn;146,0;m²;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+7;Sparren entnageln;146,0;m²;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+8;Unterdeckung Polyester- und Polypropylen-Spezialvlies;146,0;m²;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+9;Anschluss Unterspannbahn;66,0;m;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+10;Konterlattung, 30/50 mm S 10;146,0;m²;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+11;Decklattung, 30/50 mm (LW 300-350) S 10;146,0;m²;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+12;Verkleidung Ortkanten Zinkblech;18,4;m;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+13;Pfettenköpfe verkleiden;6,0;Stk;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+14;Hängerinne,halbr.,Titan-Zinkbl.,Z 333;32,0;m;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+15;Rinnenböden, 333rd;4,0;Stk;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+16;Rinneneinhangstutzen 333/100;3,0;Stk;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+17;Rinnen Dehnungsausgleich;2,0;Stk;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+18;Laubfangkorb, verzinkter Draht;3,0;Stk;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+19;Traufblech Titan-Zinkblech vorbewittert;32,0;m;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+20;Traufentlüftung;32,0;m;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+21;Fallrohr, rund, Titan-Zinkblech,vorbewittert DN 100;8,0;m;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+22;Fallrohrbogen,rund,Ti-Zn vorbewittert, DN100;9,0;Stk;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+23;Flächendeckung Flachdachziegel;146,0;m²;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+24;Windsogsicherung;146,0;m²;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+25;Ortkanten;18,4;m;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+26;Trockenfirst;15,8;m;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+27;Ortgangbekleidung, Rheinzink vorbewittert;18,4;m;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+28;Stundensatz Facharbeiter;8,0;h;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
+29;Stundensatz Helfer;8,0;h;gaeb-flat;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2.D83
 1;Bautoilette mit Waschbecken und Desinfektionsmittelspender anliefern, aufstellen und nach Beendigung der Bauarbeiten abtransportieren.;1,0;Stk;gaeb;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten.X83
 2;Verlängerung der Gebrauchsüberlassung für die vorgenannte Position über die 4-wöchige Grundeinsatzzeit hinaus.;4,0;StkW;gaeb;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten.X83
 3;Arbeits- und Schutzgerüst der Lastklasse 3 (2,0 kN/m²),;220,0;m²;gaeb;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten.X83
@@ -13,6 +59,23 @@
 12;Stunden eines;12,0;h;gaeb;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten.X83
 13;Stunden eines;12,0;h;gaeb;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten.X83
 14;Vergütung für zusätzliche An- und Abfahrt;2,0;Stk;gaeb;leistungsbeschreibungen/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten.X83
+1;Beschichtung Holzschalung;125,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 3_Maler- und Lackierarbeiten (1).D83
+2;Stunden eines Facharbeiters;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 3_Maler- und Lackierarbeiten (1).D83
+3;Stunden eines Bauhelfers;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 3_Maler- und Lackierarbeiten (1).D83
+1;Bautoilette;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten (1).D83
+2;Überstandszeit zur Vorposition;4,0;StkW;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten (1).D83
+3;"Arbeits- und Schutzgerüst; Dachdeckerschutz;Lastklasse 3";220,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten (1).D83
+4;Zulage Abstützung für Gerüst ohne Verankerung;220,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten (1).D83
+5;Gebrauchsüberlassung zur Vorposition;1320,0;m²Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten (1).D83
+6;Absturzsicherung;16,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten (1).D83
+7;Gebrauchsüberlassung zur Vorposition;96,0;mWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten (1).D83
+8;Gitterträger, Spannweite: bis ca. 7,0 m;14,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten (1).D83
+9;Gebrauchsüberlassung zur Vorposition;84,0;mWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten (1).D83
+10;Konsolenkonstruktion;102,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten (1).D83
+11;Gebrauchsüberlassung zur Vorposition;612,0;mWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten (1).D83
+12;Gerüstbau-Monteur;12,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten (1).D83
+13;Gerüstbau-Helfer;12,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten (1).D83
+14;An- und Abfahrt;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten (1).D83
 1;Bautoilette mit Waschbecken und Desinfektionsmittelspender anliefern, aufstellen und nach Beendigung der Bauarbeiten abtransportieren.;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten (1).X83
 2;Verlängerung der Gebrauchsüberlassung für die vorgenannte Position über die 4-wöchige Grundeinsatzzeit hinaus.;4,0;StkW;gaeb;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten (1).X83
 3;Arbeits- und Schutzgerüst der Lastklasse 3 (2,0 kN/m²),;220,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten (1).X83
@@ -27,3 +90,32 @@
 12;Stunden eines;12,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten (1).X83
 13;Stunden eines;12,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten (1).X83
 14;Vergütung für zusätzliche An- und Abfahrt;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 1_Gerüstarbeiten (1).X83
+1;Abbruch Profile/Anschlüsse;18,4;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+2;Abbruch Firste;15,8;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+3;Dachdeckung, Ziegel, entfernen;146,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+4;Dachrinne, Fallrohre, demontieren, ents.;45,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+5;Dachlattung entfernen;146,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+6;Demontage Unterspannbahn;146,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+7;Sparren entnageln;146,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+8;Unterdeckung Polyester- und Polypropylen-Spezialvlies;146,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+9;Anschluss Unterspannbahn;66,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+10;Konterlattung, 30/50 mm S 10;146,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+11;Decklattung, 30/50 mm (LW 300-350) S 10;146,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+12;Verkleidung Ortkanten Zinkblech;18,4;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+13;Pfettenköpfe verkleiden;6,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+14;Hängerinne,halbr.,Titan-Zinkbl.,Z 333;32,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+15;Rinnenböden, 333rd;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+16;Rinneneinhangstutzen 333/100;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+17;Rinnen Dehnungsausgleich;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+18;Laubfangkorb, verzinkter Draht;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+19;Traufblech Titan-Zinkblech vorbewittert;32,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+20;Traufentlüftung;32,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+21;Fallrohr, rund, Titan-Zinkblech,vorbewittert DN 100;8,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+22;Fallrohrbogen,rund,Ti-Zn vorbewittert, DN100;9,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+23;Flächendeckung Flachdachziegel;146,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+24;Windsogsicherung;146,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+25;Ortkanten;18,4;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+26;Trockenfirst;15,8;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+27;Ortgangbekleidung, Rheinzink vorbewittert;18,4;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+28;Stundensatz Facharbeiter;8,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83
+29;Stundensatz Helfer;8,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FDG Rott Nebengebäude_LV_Los 2_Dachdeckungs- und Klempnerarbeiten 2 (1).D83

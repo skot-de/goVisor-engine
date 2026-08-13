@@ -23,6 +23,30 @@
 001;MeisterIn, VorarbeiterIn, AnlageleiterIn;2,0;h;gaeb;leistungsbeschreibungen/2261086 Leistungsverzeichnis_V33 (1).X83
 002;wie vor, jedoch Geselle / Gesellin;2,0;h;gaeb;leistungsbeschreibungen/2261086 Leistungsverzeichnis_V33 (1).X83
 003;wie vor, jedoch Bauhelfer / BauhelferIn;2,0;h;gaeb;leistungsbeschreibungen/2261086 Leistungsverzeichnis_V33 (1).X83
+01.001;Mustersplatte für Sichtbetonoberfläche Fertigteile, feingestrahlt;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+01.002;Musterplatte für Sichtbetonoberfläche Fertigteile, gesäuert;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+01.003;Musterplatte für Sichtbetonoberfläche Fertigteile, feingeschliffen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+01.004;Sitzfläche Bankgröße 1 (klein), Mittelsegment herstellen;4,0;St;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+01.005;Mittelsegment (kl.) wie vor, jedoch Oberfläche gesäuert;2,0;St;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+01.006;Sitzfläche Bankgröße 1 (klein), Außensegment li., herstellen;4,0;St;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+01.007;Außensegment (kl.) li. wie vor, jedoch Oberfläche gesäuert;2,0;St;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+01.008;Sitzfläche Bankgröße 1 (klein), Außensegment re., herstellen;4,0;St;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+01.009;Außensegment (kl.) re. wie vor, jedoch Oberfläche gesäuert;2,0;St;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+01.010;Sockel für Bankgröße 1 (klein) herstellen;16,0;St;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+01.011;Sockel für Bankgröße 1 (klein) wie vor, jedoch Oberfläche gesäuert;8,0;St;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+01.012;Bank, Größe 1 (klein), einbauen / montieren;6,0;St;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+02.001;Sitzfläche Bankgröße 2 (groß), Mittelsegment herstellen;6,0;St;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+02.002;Mittelsegment (gr.) wie vor, jedoch Oberfläche gesäuert;3,0;St;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+02.003;Sitzfläche Bankgröße 2 (groß), Außensegment li., herstellen;2,0;St;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+02.004;Außensegment (gr.) li. wie vor, jedoch Oberfläche gesäuert;1,0;St;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+02.005;Sitzfläche Bankgröße 2 (groß), Außensegment re., herstellen;2,0;St;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+02.006;Außensegment (gr.) re. wie vor, jedoch Oberfläche gesäuert;1,0;St;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+02.007;Sockel für Bankgröße 2 (groß) herstellen;12,0;St;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+02.008;Sockel für Bankgröße 2 (groß) wie vor, jedoch Oberfläche gesäuert;6,0;St;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+02.009;Bank Größe 2 (groß), einbauen / montieren;3,0;St;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+03.001;Stundenlohnarbeiten, Meister / Vorarbeiter;2,0;h;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+03.002;Stundenlohnarbeiten, Geselle;2,0;h;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
+03.003;Stundenlohnarbeiten, Helfer;2,0;h;gaeb-flat;leistungsbeschreibungen/2261086 Leistungsverzeichnis (1).D83
 001;Zur Abstimmung und Festlegung von Farbton und Oberflächenstruktur;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis_V33.X83
 002;Zur Abstimmung und Festlegung von Farbton und Oberflächenstruktur;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis_V33.X83
 003;Zur Abstimmung und Festlegung von Farbton und Oberflächenstruktur;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis_V33.X83
@@ -47,3 +71,27 @@
 001;MeisterIn, VorarbeiterIn, AnlageleiterIn;2,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis_V33.X83
 002;wie vor, jedoch Geselle / Gesellin;2,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis_V33.X83
 003;wie vor, jedoch Bauhelfer / BauhelferIn;2,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis_V33.X83
+01.001;Mustersplatte für Sichtbetonoberfläche Fertigteile, feingestrahlt;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+01.002;Musterplatte für Sichtbetonoberfläche Fertigteile, gesäuert;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+01.003;Musterplatte für Sichtbetonoberfläche Fertigteile, feingeschliffen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+01.004;Sitzfläche Bankgröße 1 (klein), Mittelsegment herstellen;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+01.005;Mittelsegment (kl.) wie vor, jedoch Oberfläche gesäuert;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+01.006;Sitzfläche Bankgröße 1 (klein), Außensegment li., herstellen;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+01.007;Außensegment (kl.) li. wie vor, jedoch Oberfläche gesäuert;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+01.008;Sitzfläche Bankgröße 1 (klein), Außensegment re., herstellen;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+01.009;Außensegment (kl.) re. wie vor, jedoch Oberfläche gesäuert;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+01.010;Sockel für Bankgröße 1 (klein) herstellen;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+01.011;Sockel für Bankgröße 1 (klein) wie vor, jedoch Oberfläche gesäuert;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+01.012;Bank, Größe 1 (klein), einbauen / montieren;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+02.001;Sitzfläche Bankgröße 2 (groß), Mittelsegment herstellen;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+02.002;Mittelsegment (gr.) wie vor, jedoch Oberfläche gesäuert;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+02.003;Sitzfläche Bankgröße 2 (groß), Außensegment li., herstellen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+02.004;Außensegment (gr.) li. wie vor, jedoch Oberfläche gesäuert;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+02.005;Sitzfläche Bankgröße 2 (groß), Außensegment re., herstellen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+02.006;Außensegment (gr.) re. wie vor, jedoch Oberfläche gesäuert;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+02.007;Sockel für Bankgröße 2 (groß) herstellen;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+02.008;Sockel für Bankgröße 2 (groß) wie vor, jedoch Oberfläche gesäuert;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+02.009;Bank Größe 2 (groß), einbauen / montieren;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+03.001;Stundenlohnarbeiten, Meister / Vorarbeiter;2,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+03.002;Stundenlohnarbeiten, Geselle;2,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83
+03.003;Stundenlohnarbeiten, Helfer;2,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261086 Leistungsverzeichnis.D83

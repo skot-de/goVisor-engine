@@ -79,3 +79,83 @@
 0004;KfZ- und Gerätekosten;25,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten_V32.X83
 0005;Wassersauger;20,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten_V32.X83
 0006;Propangas;50,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten_V32.X83
+01020001;Standgerüst längenorientiert Gruppe 3;150,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+01020002;Treppenturm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+01020003;Überbrückung, z.B. Gitterträger;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+01020004;Ab- und Wiederaufbau Standgerüst längenorientiert;25,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+01020005;Gerüstabdeckung Planen Grundeinsatzzeit;20,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+01020006;Zulage Stellung auf Bestandsdächer;25,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+01020007;Zulage Stützturm;150,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+01020008;Dachrandabsturzsicherung;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+01020009;Standgerüst längenorientiert Gebrauchsüberlassung;600,0;m²Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+01020010;Gebrauchsüberlassung der Treppentürme;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+01020011;Überbrückung, Gebrauchsüberlassung;40,0;mWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+01020012;Gerüstabdeckung Planen Gebrauchsüberlassung;80,0;m²Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+01020013;Gebrauchsüberlassung Stellung auf Bestandsdächer;100,0;m²Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+01020014;Gebrauchsüberlassung Stützturm;600,0;m²Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+01020015;Gebrauchsüberlassung Dachrandabsturzsicherung;120,0;mWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+01030001;Baufacharbeiter/-in;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+01030002;Bauhelfer/-in;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02020001;Baustelleneinrichtung/ -räumung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02020002;Miete Baustelleneinrichtung ab der 13. Woche;1,0;Woch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02020003;Auf dem Dach verlaufende Blitzschutzleitungen demontiern und als Schutt;125,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02020004;Vorhandene Kiesschüttung 16/32 mm, bis zu 8 cm hoch aufnehmen, entsorgen;230,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02020005;Vorhandene Kunststoffgranulat -Schutzmatte 10 mm Stärke abbrechen, entsorgen;230,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02020006;Vorhandene Dunstrohre bis Ø 100 mm demontieren und als Schutt in Container einladen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02020007;Vorhandene Dachgullys bis Ø 150 mm demontieren und als Schutt in Container einladen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02020008;Vorhandene An- und Abschlußbleche, Zuschnitt bis 400 mm abbrechen, entsorgen;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02020009;Vorhandene Alucobond Attikaabdeckbleche kürzen;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02020010;Attikaabdeckung de- und wieder montieren;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02020011;Vorhandene Stehfalzfassade kürzen;12,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02020012;Vorhandene Verblechung um Lichtkuppeln bis 1500 x 1500 mm;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02020013;Vorhandene Dunstrohre inkl. Regenschutzhaube;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02020014;Vorhandene Waschbetonplatten als Rabatten aufnehmen, transportiern und entsorgen;100,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02020015;Vorhandene ABS-Geländerkonstruktion aufnehmen, zwischenlagern und wieder montieren;6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02020016;Abrollcontainer 37 m³ stellen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02020017;Container 10,00 m³ stellen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030001;Freigelegte Abdichtung reinigen;240,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030002;Wärmedämmung aus Flachdachdämmplatten, Dicke 100 mm;240,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030003;Mehrkosten je 10 mm Mehrdämmung;1,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030004;Zulage zur Wärmedämmung für Anpaß- und Schrägschnitte an allen An- und Abschlüssen;80,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030005;Unterlagsbahn auf bestehende Abdichtung liefern und einbauen;240,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030006;Oberlage liefern und einbauen;240,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030007;B1 Keile 50/50 liefern und einbauen;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030008;Hochführen der Abdichtung bis 500 mm;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030009;Zulage für Eckausbildungen;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030010;Aufsatzeinheit liefern und einbauen;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030011;Kernbohrungen für Notüberlauf;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030012;Attikagully liefern und einbauen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030013;Dampfsperrplatte;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030014;Dämmkörper;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030015;Liefern und fachgerecht einbauen eines neuen Dachgullys DN 100;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030016;Liefern und fachgerecht einbauen eines neuen Dachgullys DN 150;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030017;Flüssigkunststoffanschluss;70,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030018;Anschluss an Stützenfüsse;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030019;Anschluss an Einbauteile;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030020;Zulage für Eckausbildung Flüssigkunststoff;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030021;Trenn- und Schutzlage aus PES Schutzvlies 600 g/m² liefern und verlegen;240,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030022;Stilllegung und Ausdämmung bestehender Lichtkuppeln/RWA-Aufstockelemente;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030023;Kies 16/32, 8 cm aufgebracht, Dachränder+Muldenrinne;240,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030024;Lieferung und Einbau Dämmklotz zur Abgrenzung;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02030025;Liefern und fachgerecht verlegen eines begehbaren Wartungsweges aus Waschbetonplatten;100,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02040001;Wandanschlussblech demontieren, anpassen und wieder montieren;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02040002;Simsblech demontieren, lagern und wieder anbringen;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02040003;Überhangblech, 3-fach gekantet liefern und montieren;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02040004;Dämmstoffabstellwinkel, drainagefähig liefern und montieren;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02050001;ABS Lock III - BE Pro-24;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02050002;ABS LockSeal - Bitu;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02050003;SY-SEIL-6-25-GK;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02050004;ABS Spannelement;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02050005;ABS ForceLimiter;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02050006;ABS TI-Bracket;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02050007;ABS TI-FlexCurve;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02050008;ABS SP;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02050009;ABS Systemschild;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02050010;ABS ProSlide;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02050011;ABS Roofer Kit;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02060001;Dachdecker-Vorarbeiter;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02060002;Dachdecker-Facharbeiter;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02060003;Dachdecker-Helfer;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02060004;KfZ- und Gerätekosten;25,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02060005;Wassersauger;20,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83
+02060006;Propangas;50,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260727_LV Gerüst-,Dachabdichtungs- und Flaschnerarbeiten.D83

@@ -1,4 +1,36 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Zusammenhängende Gehölz- und Staudenflächen H0,5-2,0m roden;40,0;m2;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+2;Baureste, Unrat, sammeln, seitl. lagern;2,0;m³;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+3;Baureste, Unrat, entsorgen;2,0;m³;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+4;Provisorische Abschrankung;10,0;m;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+5;Vorhalten vorgenannter Abschrankung,;10,0;m;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+6;Provisorische Abschrankungen umsetzen;10,0;m;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+7;Vorhandene Betonblöcke reinigen;19,0;St;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+8;Erdarbeiten für Fundamente;15,0;m³;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+9;Gründungssohle verdichten;12,0;m²;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+10;Unterbeton C20/25, liefern und einbauen;2,6;m³;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+11;Betonblockelemente als Sitzblock ausbauen/ lagern;3,0;St;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+12;Betonblockelemente als Sitzblock einbauen;3,0;St;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+13;Reinigen von Flächen aus Betonpflastersteinen, div. Bereiche;40,0;m²;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+14;Vorh. Betonpflaster aufnehmen / lagern;19,0;m2;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+15;Frostschutzschicht nach TLSoB, ZTVSoB;6,0;m3;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+16;Schottertragschicht Naturstein, kalkfrei, nach TLSoB, ZTVSoB;3,0;m3;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+17;lagerndes Pflaster wiederverlegen;19,0;m2;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+18;Schnitt: Pflaster / Pflasterplatten Stärke bis 10 cm;5,0;m;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+19;Lineare Hockerbankauflage Binga/Runge;3,0;St;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+20;Lineare Bankauflage Binga/Runge mit Rückenlehne;4,0;St;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+21;Gekettete Reihenbank Binga/Runge mit Armlehne;2,0;;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+22;Parkbank Binga/Runge mit Armlehnen;3,0;St;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+23;Fundament C20/25, XF1/WF 60x15x40;12,0;St;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+24;Zylindrischer Abfallbehälter Frog XL/Runge 60 L;2,0;St;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+25;Fundament C20/25, XF1/WF 50x50x60;2,0;St;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+26;Polier-in / Baustellenleiter-in;5,0;Std.;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+27;Facharbeiter-in;5,0;Std.;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+28;Bau- oder Gartenhelfer-in;5,0;Std.;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+29;Kipper 15 to. zul. Gesamtgewicht;5,0;Std.;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+30;Kipper  7,5 to.zul. Gesamtgewicht;5,0;Std.;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+31;Radlader 1 m3;5,0;Std.;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
+32;Minibagger;5,0;Std.;gaeb-flat;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728.D83
 1;Zusammenhängende Gehölz- und Staudenflächen, angrenzend an zu installierenden Ausstattungen, mit Wurzelstock roden und abfahren.;40,0;m2;gaeb;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728_V33.X83
 2;Baureste und Unrat auf der Baustelle sammeln,;2,0;m³;gaeb;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728_V33.X83
 3;Baureste und Unrat der Vorposition in Behälter des AN entsorgen.;2,0;m³;gaeb;leistungsbeschreibungen/1120_FuG_LV_Parkanlage_Ausstattung_260728_V33.X83

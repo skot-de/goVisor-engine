@@ -1,4 +1,67 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+81005;technische Bearbeitung / Arbeitsvorbereitung;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+81010;Teleskopbühne, Anhänger, H=10,00m;1,0;St;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+81015;Teleskopbühne, Anhänger, Tag;15,0;d;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+82005;Ortgänge / Mauerwerkskronen (Alu / Oberteil farblich);87,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+82010;"Ortgänge (Unterteil / ""Kehlblech"")";87,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+82015;Traufblech, Zn, Z=250mm;250,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+82020;Gesimsabdeckung;110,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+82025;Dachrinne, kastenförmig, Zn, Z=333mm;110,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+82030;Fallrohranschlüsse, Zn, gelötet;13,0;St;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+82035;Regenfallleitung, rund, Zn, DN100;75,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+82040;Regenfalleitung innenliegend;75,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+82045;"Fallrohre / Rinne Regeldetail ""Alukästen""";9,0;St;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+82050;Standrohr, Stahl, verzinkt, DN100, 1,00m;10,0;St;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+82055;Verkleidung Speier Gauben Zn;10,0;St;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+82060;Stundensatz: Fachwerker;20,0;h;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+82065;Stundensatz: Bauhelfer;20,0;h;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+83005;Attikaabdeckung, Zn, Z=666mm;44,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+83010;Unterkonstruktion Stehfalz;105,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+83015;Trennlage, strukturiert, diffussionsoffen;105,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+83020;Wandbekleidung, Winkelstehfalz, Zn, 0,8mm;105,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+83025;Durchdringungen Wandbekleidung;20,0;St;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+83030;Unterkonstruktion Stehfalz;60,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+83035;Trennlage, strukturiert, diffussionsoffen;60,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+83040;Wandbekleidung, Winkelstehfalz, Zn, 0,8mm, gebogen;60,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+84005;Unterkonstruktion Stehfalz Wandverkleidung;150,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+84010;Wandbekleidung, Winkelstehfalz, Zn, 0,8mm;150,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+84015;Unterer Fassadenabschluss, Stehfalz;44,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+84020;Oberer Fassadenabschluss Stehfalz / Attika;44,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+84025;Insektenschutzgitter, Aluminium-Winkelprofil ( sichtbar );200,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+84030;Insektenschutzgitter, Kunststoff-Winkelprofil;200,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+84035;Laibungsbekleidung;20,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+84040;Durchdringung, Wandbekleidung, <200cm2;5,0;St;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+84045;Durchdringung, Wandbekleidung, <500cm2;5,0;St;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+84050;Zulage Durchdringung im Falzbereich;1,0;St;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+84055;Attikaabdeckung, Zn, Z=666mm, an Stehfalzflächen;44,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+85005;Abhangdecken Lernbereiche ca. 2,44 x 2,88 m;28,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+85010;Abhangdecke Eingangsbereich ca. 8 x 8 m;65,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+85015;Zulage Anschlüsse;80,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+85020;Ausschnitte TGA;5,0;St;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+85025;Durchdringung, Deckenbekleidung, <200cm2;5,0;St;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+86005;K1: Storenkasten zw. Fensterelementen;12,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+86010;K2: Fassadenbekleidung Haupteingang;8,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+86015;K3: Fassadenbekleidung Mensaeingang;15,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+86020;DRB3: Dachrandblech für K3;15,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+86025;Zulage Notüberlauf;1,0;St;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+86030;K4: Storenkasten Fenster OG Cluster;8,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+86035;DRB4: Dachrandblech für K4;8,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+86040;Zulage Notüberläufe;6,0;St;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+86045;K5: Storenkasten an Treppen;8,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+86050;K6: TRH-Fassade oben;12,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+86055;Innenseite K6: TRH innen;12,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+86060;DRB6: Dachrandblech für K6;8,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+86065;K7: TRH-Fassade unten;7,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+86070;K8: Storenkasten Fenster OG Westfassade;4,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+86075;DRB8: Dachrandblech für K8;4,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+86080;K9: Storenkasten zw. Fensterelementen;4,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+86085;Sockelprofil Fusspunkt lt. Fensterdetails;65,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+86090;PIR 023 Sockel;65,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+86095;Zulage Sockelhöhe 30-40 cm;30,0;m;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+87005;Blechverkleidung Haupteingang;32,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+87010;Blechverkleidung Mensa Vordereingang;50,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+87015;Mensa Anlieferung Fassade;5,0;m2;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
+87020;Durchdringungen Blechverkleidungen;5,0;St;gaeb-flat;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.d83
 5;Technische Bearbeitung (Werkstatt- und Montageplanung) für alle in den nachfolgenden Leistungspositionen beschriebenen Arbeiten der Vergabeeinheit gem. ZTV, VOB/C und Vortexten.;1,0;psch;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
 10;Teleskopbühne als Arbeits- und Montagebühne, Anhängefahrzeug, mit seitlichen Auslegern, mit externer Energieversorgung, inkl. Bedienung durch AN, Gebrauchsüberlassung nach gesonderter Position abzurechnen.;1,0;St;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
 15;Gebrauchsüberlassung für die stationäre Teleskopbühne. Abrechnung je Tag (d).;15,0;d;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83

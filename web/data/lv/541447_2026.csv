@@ -1,4 +1,72 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.010;Grenzmuster für eigene Leistung;1,0;LE;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+01.020;Baustelleneinrichtung, -vorhaltung und -räumung;1,0;LE;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+01.030;Verlängerung Vorhaltung BE;1,0;Wo;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+01.040;Bestandsdokumentation;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+01.050;Herstellen provisorischer Verschluss Öffnung Absetzbühne;3,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+01.060;Vorhalten des provisorischen Verschlusses.;18,0;St/M;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+01.070;Rückbauen des Verschlusses;3,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+01.080;Mehraufwand für das nachträgliche Schließen Bauaufzug;3,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+02.010;Alu-Fensterband, 1.1a, 5-flügelig, 7,10m / 2,18 m, 37 dB, VVF;5,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+02.020;Alu-Fensterband, 1.1b, 5-flügelig, 7,10m / 2,18 m, 37 dB, FTF;15,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+02.030;Alu-Fensterband, 1.2a, 5-flügelig, 7,10m / 2,18 m, 37 dB, VVF;6,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+02.040;Alu-Fensterband, 1.2b, 5-flügelig, 7,10m / 2,18 m, 37 dB, FTF;13,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+02.050;Alu-Fensterband, 1.1c, 5-flügelig, 7,10m / 2,18 m, 37 dB, FTF;2,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+02.060;Alu-Fensterband, 1.2c, 5-flügelig, 7,10m / 2,18 m, 37 dB, FTF;3,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+02.070;Alu-Fensterband, 1.1d, 5-flügelig, 7,10m / 2,18 m, 45 dB, FTF;5,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+02.080;Alu-Fensterband, 1.2d, 5-flügelig, 7,10m / 2,18 m, 45 dB, FTF;2,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+02.090;Alu-Fensterband, FE2, 4-flügelig, 4,93m / 2,18 m, 37 dB, VVF;3,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+02.100;Alu-Fensterband, FE3, 3-flügelig, 3,72 m / 2,18 m, 37 dB, VVF;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+02.110;Alu-Fensterband, FE4a/b, 4-flügelig, 5,70 m / 2,18 m, 37 dB, FTF;3,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+02.120;Alu-Fenstertür für Fensterband, FE4a/b-T, 1-flügelig, auswärtsöffnend, 1,40 m / 3.06 m, 37 dB, FTF;3,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+02.130;Obentürschließer FE4a/b-T;3,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+02.140;Zulage Obentürschließer Farbton analog Außentüren;3,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+02.150;Absturzsicherung, Zweistangensystem, B 1,35 m;64,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+02.160;Türfeststeller zur mechanischen Fixierung der auswärtsöffnenden Tür;3,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+03.010;Alu-PR-Konstruktion, AT1, 5,70m / 3,08 m, 37 dB, VVF;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+03.020;PR-Einsatzelement Doppel-Schiebetür AT 1, Nullschwelle, 37 dB;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+03.030;Alu-PR-Konstruktion, FE5, 7,10m / 3,06 m, 45 dB, VVF;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+03.040;PR-Einsatzelement Drehtür FE5, barierrefrei, 1,40m / 2,89 m, 45 dB;2,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+03.050;Alu-PR-Konstruktion, FE6, 5,58m / 3,06 m, 37 dB, VVF;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+03.060;Alu-PR-Konstruktion, FE7, 7,10m / 3,06 m, 37 dB, VVF;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+03.070;PR-Einsatzelement Drehtür FE7, barrierefrei, 1,40m / 2,89 m, 37 dB;2,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+03.080;Alu-PR-Konstruktion, IT10, 4,155m / 3,70 m;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+03.090;PR-Einsatzelement Doppel-Schiebetür IT 10, Nullschwelle;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+03.100;Griffmuscheln außen;4,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+04.010;Rohrrahmentür, AT2, 1-flügelig, auswärtsöffnend,1,405m / 3,08m, 37 dB, VVF;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+04.020;Rohrrahmentür, AT3, 1-flügelig, mit Seitenteil, auswärtsöffnend, 2,40m / 3,08m, 37 dB, VVF;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+04.030;Rohrrahmentür, AT4, 1-flügelig, auswärtsöffnend,1,405m / 3,08m, 37 dB, VVF;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+04.040;Rohrrahmentür, AT5, 2-flügelig, auswärtsöffnend mit Blindpanel, 1,75m / 2,25m;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+04.050;Rohrrahmentür, AT6, 1-flügelig, auswärtsöffnend Blindpanel,1,25m / 2,57m;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+04.060;Obentürschließer AT2,3, 4, 6;4,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+04.070;Zulage Obentürschließer Farbton analog Außentüren;4,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+04.080;Türfeststeller versenkbar zur mechanischen Fixierung der auswärtsöffnenden Tür;4,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+05.010;Drehkippfenster 1,03 / 0,63 m DIN L;3,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+05.020;Drehkippfenster 1,03 / 0,63 m DIN R;2,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+05.030;Drehkippfenster 0,83 / 0,63 m DIN R;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+06.010;Lamellen-Fenster, FE8, RA, 4-flügelig, 1,50 m x 1,50 m;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+07.010;Sonnenschutz Fensterband ca. 7,1 x 2,2 m;51,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+07.020;Sonnenschutz Fensterband ca. 4,9 x 2,2 m;3,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+07.030;Sonnenschutz Fensterband ca. 3,7 x 2,20 m;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+07.040;Sonnenschutz Fensterband ca. 7,1 x 2,20 m mit Blindpanel und Blindkasten;3,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+07.050;Sonnenschutz Fensterband ca. 7,1 x 3,0 m;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+07.060;Sonnenschutz Fensterband ca. 5,65 x 3,0 m;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+07.070;Sonnenschutz Fensterband ca. 6,9 x 3,0 m;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+07.080;Windwächter für Sonnenschutzanlagen;4,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+07.090;Justierung und Nachjustierung des Sonnenschutzes;1,0;LE;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+08.010;Fensterbank, eloxiert,  AT5, 1,75 m / 0,13m;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+08.020;Fensterbank, eloxiert, 3-teilig, ca. 3,72 x 0,25 m, VVF FE3;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+08.030;Fensterbank, eloxiert, 4-teilig, ca. 4,93 x 0,25 m, VVF FE2;3,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+08.040;Fensterbank, eloxiert, 4-teilig, ca. 5,7 x 0,35 m FTF FE 4a-F,FE 4b-F;3,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+08.050;Fensterbank, eloxiert, 5-teilig, ca. 7,1 x 0,25 m, VVF FE1.1a , FE1.2a;11,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+08.060;Fensterbank, eloxiert, 5-teilig, ca. 7,1 x 0,35 m, FTF FE 1.1b, FE 1.1c, FE 1.1d, FE 1.2b, FE 1.2c, FE 1.2d;40,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+08.070;Fensterbank, eloxiert,  FE8, 1,50 m / 0,33m;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+08.080;Fensterbank, eloxiert,  FE4b-T, 1,40 m / 0,30m;3,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+08.090;Fensterbank, weiß, FE9/10, 1,03 m / 0,18m;5,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+08.100;Fensterbank, weiß, FE11, 0,83 m / 0,18m;1,0;St;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+09.010;Bauwerker/-in Stundenlohnarbeiten sämtliche Kosten/Zuschläge;10,0;h;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+09.020;Baufacharbeiter/-in Stundenlohnarbeiten sämtliche Kosten/Zuschläge;10,0;h;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
+09.030;Bauvorarbeiter/-in Stundenlohnarbeiten sämtliche Kosten/Zuschläge;10,0;h;gaeb-flat;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.D83
 010;Herstellung eines Grenzmusters für die ausgeschriebenen Fenster-, Fassaden- und Sonnenschutzkonstruktionen zur Abstimmung von Profilgeometrie, Oberflächen, Verglasung, Sonnenschutz und Anschlüssen an den Baukörper.;1,0;LE;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
 020;Einrichtung, Vorhalten und Räumen der Baustelle, einschl. Bereitstellung aller für die Ausführung der gesamten Arbeiten erforderlichen Aufenthalts- und Materialräume der Baustelle für das gesamte Gebäude und für sämtliche in der nachstehend beschriebenen Leistungsbeschreibung aufgeführten Leistungen;1,0;LE;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
 030;Verlängerung der Vorhaltung der Baustelle aus vom AN nicht zu verantwortenden Gründen.;1,0;Wo;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83

@@ -111,3 +111,115 @@
 0300;Keramische Wandfliesen, DIN EN 14411, liefern und mit einem flexiblen, hydraulisch abbindenden Dünn- und Mittelbettmörtel mit Haftzugwerten >= 1,0 N/mm², geprüft nach Flexmörtelrichtlinie sowie DIN EN 12004, verlegen.;7,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten_V33.X83
 0310;Quadrat-Kantenschutzprofil aus Edelstahl, alle Kanten;18,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten_V33.X83
 0320;Elastische Verfugung von Raumeck- und Anschlussfugen sowie an Türen, Fassadenelementen, Abkofferungen, Treppenläufen, Objekten etc. mit Sanitär-Silikon-Fugendichtstoff nach DIN 18540, Fugenflanken zuvor mit einem Voranstrich, lösemittelhaltiger 1-komponentiger Universalprimer für Silikon-Fugendichts;6,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten_V33.X83
+01010010;Baustelleneinrichtung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01010020;Facharbeiterstunden;20,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01010030;Helferstunden;20,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020010;Restfeuchtemessung;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020020;Untergrund vorbereiten;230,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020030;Estrichrandstreifen abschneiden;340,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020040;Ausgleichsspachtlung;20,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020050;Scheinfugen schließen;43,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020060;Bodenabläufe Estrich ergänzen;1,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020070;Estrich anarbeiten;4,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020080;Haftbrücke auf Estrich;230,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020090;Bodenfliesen, 60/60 cm, R 9;160,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020100;Sockelfliesen, 10/60 cm;140,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020110;Übergangsschiene, Fliesenbeläge;11,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020120;Bewegungsfugenprofil, Fliesenbeläge;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020130;Anarbeitung an Tür-, Bewegungs- und Übergangsprofil;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020140;Rahmen der Sauberlaufmatten einbauen;7,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020150;Anarbeitung an Sauberlaufmattenrahmen;7,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020160;Trittstufen, 30 x 60 cm, R 10;80,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020170;Setzstufen, 17 x 60 cm;80,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020180;Bodenfliesen/-platten schützen;160,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020190;Treppenstufen schützen;80,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020200;Bodenfliesen, 60/60 cm, R10;48,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020210;Sockelfliesen, 10/60 cm;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020220;Verbundabdichtung Boden;48,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020230;Fugenabdichtung mit Dichtband;57,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020240;Fugenabdichtung Ecken;34,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020250;Schnittschutzband verlegen;57,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020260;Dichtmanschetten, 200 x 200 mm;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020270;Dichtmanschetten, 300 x 360 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020280;Anarbeiten an Bodenablauf;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020290;Anarbeiten an Bodenablauf;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020300;Übergangsschiene, Fliesenbeläge;5,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020310;Anarbeitung an Bewegungs- und Übergangsprofil;5,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020320;Bodenfliesen/-platten schützen;48,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01020330;Elastische Boden-Wandfugen;330,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030010;Haftbrücke auf Wandflächen;70,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030020;Verbundabdichtung Wand, W 2-I;67,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030030;Dichtmanschetten für Durchdringungen;60,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030040;Keramische Wandfliesen, 20/40 cm;65,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030050;Sockelfliesen, 10 x 40 cm;20,4;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030060;Fliesenspiegel Küche 10x 10 cm;3,3;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030070;Kantenschutzprofile;90,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030080;Haftbrücke auf Wandflächen;230,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030090;Wandfliesen, 30 x 60 cm;200,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030100;Zulage Verlegung in Schräge;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030110;Zulage Schräganschnitte;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030120;Sockelfliesen, 10 x 60 cm;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030130;Zulage Verlegung in Schräge;24,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030140;Stufensockel, Dreieck, 18 x 30 cm;60,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030150;Kantenschutzprofile;250,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030160;Haftbrücke auf Wandflächen;50,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030170;Verbundabdichtung Wand, W 2-I;50,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030180;Fugenabdichtung mit Dichtband;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030190;Dichtmanschetten für Durchdringungen;39,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030200;Dichtmanschetten für Durchdringungen < 600cm²;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030210;Keramische Wandfliesen, 20/40 cm;44,5;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030220;Quadratische Wandfliesen 10 x 10 cm;5,5;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030230;Kantenschutzprofile;45,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030240;Zulage für die Anarbeitung an bauseitige Stahlzargen;22,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030250;Zulage für die Verlegung in Fensternische;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030260;Spiegel, ca. 103,5 x 90 cm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030270;Spiegel, ca. 65 x 101 cm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01030280;Elastische Wandfugen;140,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01040010;Reinigen des Untergrundes;32,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01040020;Haftbrücke auf Estrich;32,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01040030;Entkopplungsmatte;11,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01040040;Betonwerksteinbelag im Dickbett;20,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01040050;Betonwerksteinbelag im Dünnbett;11,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01040060;Zulage Ausführung in Kleinflächen <5m²;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01040070;Zulage Anarbeiten an Bestand;66,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01040080;Plattenschnitte;18,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01040090;Wandsockel;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01040100;Abschlussprofil;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01040110;Elastische Verfugung;231,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01040120;Betonwerksteinbelag schützen;230,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01040130;Grundreinigung und Ersteinpflege;32,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01050010;Werkplanung Schmutzfangmatten;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01050020;Estrichfläche der Sauberlaufmatte beschichten;7,5;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01050030;Geteilte Schmutzfangmatte 7,43 m²;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060010;Estrichschlitz schließen;6,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060020;Haftbrücke auf Wandflächen;6,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060030;Verbundabdichtung Wand, W 2-I;6,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060040;Fugenabdichtung mit Dichtband;7,7;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060050;Schnittschutzband verlegen;7,7;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060060;Keramische Wandfliesen, 20/40 cm;6,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060070;Sockelfliesen, 10 x 40 cm;4,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060080;Kantenschutzprofile;7,7;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060090;Elastische Wandfugen;7,7;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060100;Reinigen des Untergrundes;3,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060110;Haftbrücke auf Estrich;3,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060120;Betonwerksteinbelag im Dickbett,  Bestand ergänzen;3,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060130;Zulage Ausführung in Kleinflächen <5m²;6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060140;Zulage Anarbeiten an Bestand;9,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060150;Plattenschnitte;9,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060160;Abschlussprofil;9,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060170;Elastische Verfugung;9,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060180;Grundreinigung und Ersteinpflege;3,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060190;Reinigen des Untergrundes;12,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060200;Haftbrücke auf Wandflächen;12,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060210;Wandfliesen, 30 x 60 cm, Bestand ergänzen;12,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060220;Zulage Schräganschnitte;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060230;Sockelfliesen, 8 x 60 cm, Bestand ergänzen;9,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060240;Kantenschutzprofile, Bestand ergänzen;9,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060250;Estrichschlitz schließen 300 mm;3,75;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060260;Estrichschlitz schließen 175 mm;3,75;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060270;Haftbrücke auf Wandflächen;7,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060280;Verbundabdichtung Wand, W 2-I;7,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060290;Fugenabdichtung mit Dichtband;1,3;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060300;Quadratische Wandfliesen 10 x 10 cm;7,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060310;Kantenschutzprofile;18,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83
+01060320;Elastische Wandfugen;6,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesen- und Plattenarbeiten.D83

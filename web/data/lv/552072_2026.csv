@@ -1,4 +1,24 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+21.1;Baustelleneinrichtung;1,0;psch;gaeb-flat;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..d83
+21.2;Autokranaufstellfläche Stahlplatten - Baggermatratzen;100,0;m2;gaeb-flat;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..d83
+21.3;Vorhalten für Stahlplatten - Baggermatratzen;2600,0;m2/d;gaeb-flat;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..d83
+21.4;Umsetzung der Stahlplatten - Baggermatratzen;1,0;St;gaeb-flat;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..d83
+21.5;Zulage - Ausgleichsschicht Stahlplatten - Baggermatratzen;100,0;m2;gaeb-flat;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..d83
+22.1;Hauptträger I-432, l=27,45 m, h = ca. 2,45 m;1,0;St;gaeb-flat;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..d83
+22.2;Hauptträger HEM 400, l=27,45 m;2,0;St;gaeb-flat;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..d83
+22.3;Zulage zu Hauptträgern mehrteilige Ausführung;3,0;St;gaeb-flat;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..d83
+22.4;Nebenträger HEM 300, l=16,50 m;2,0;St;gaeb-flat;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..d83
+22.5;Nebenträgerr HEM 300, I-400, l=16,50 m;3,0;St;gaeb-flat;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..d83
+22.6;Zugstützen als Stabilisierung St-Betonscheibe, I-300, l = ca. 8,50 m;3,0;St;gaeb-flat;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..d83
+22.7;Auflagerpunkte Hauptträger auf St-Betonstützen Achse 13;3,0;St;gaeb-flat;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..d83
+22.8;Auflager Hauptträger Auflagertaschen;3,0;St;gaeb-flat;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..d83
+22.9;Auflager Nebenträger Auflagerkonsolen;3,0;St;gaeb-flat;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..d83
+2210;Anschluss Stahlbolzen St-Träger an St-Betondecke;545,0;St;gaeb-flat;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..d83
+31.1;Werkplanung Stahlbauarbeiten;1,0;psch;gaeb-flat;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..d83
+31.2;Ausführungsstatik Stahl-Fachwerkträger-System;1,0;psch;gaeb-flat;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..d83
+32.1;Stunden Vorarbeiter;3,0;h;gaeb-flat;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..d83
+32.2;Stunden Facharbeiter;5,0;h;gaeb-flat;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..d83
+32.3;Stunden Helfer;5,0;h;gaeb-flat;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..d83
 1;Einrichten und Räumen der Baustelle, Vorhalten der Baustelleneinrichtung,;1,0;psch;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
 2;Temporäre Verstärkung des vorhandenen Wirtschaftshofes zur Erstellung;100,0;m2;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
 3;Vorhalten der in der Vorposition beschriebenen Last verteilenden Stahlplatten;2600,0;m2/d;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83

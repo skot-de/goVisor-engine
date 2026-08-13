@@ -1,4 +1,81 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0101.1;Bauzaun aufstellen und räumen;100,0;m;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0101.2;Beschaffen von Rohrnetzauskünften;1,0;psch;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0101.3;Baustelle, einrichten und vorhalten;1,0;psch;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0101.4;Baustelle räumen;1,0;psch;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0101.5;Baustraße, herstellen und räumen;60,0;m²;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0102.1;Verkehrssicherung;1,0;psch;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0102.2;Kleinbeschilderung, aufstellen, vorhalten, räumen;2,0;St;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0102.3;Schacht, sichern und markieren;1,0;St;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0102.4;Kabel, Leitungen und Rohre, sichern und markieren;650,0;m;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0102.5;Mastleuchten, sichern;2,0;St;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0102.6;Einfassungen und Wege, sichern;20,0;m;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0102.7;Baumschutz, herstellen, vorhalten und räumen;100,0;m;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0102.8;Handarbeit, Baum-/Wurzelschutz;10,0;m²;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0102.9;Handschachtung, Suchgraben;10,0;m²;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0102.10;Stammschutz, herstellen, vorhalten und räumen;2,0;St;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0102.11;Schutz des Wurzelbereichs, herstellen, vorhalten und räumen;30,0;m²;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0102.12;Gehölze, zurückschneiden;1,0;St;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0102.13;Bestandsbäume während Baumaßnahme wässern;7,0;St;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0105.1;Suchgraben, senkrecht, herstellen;8,0;m³;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0105.2;Oberboden, abtragen und lagern;86,0;m³;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0105.3;Boden, abtragen und lagern;86,0;m³;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0105.4;Graben für Wurzelsperre herstellen, Oberboden abtragen und lagern;5,0;m³;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0105.5;Graben für Wurzelsperre herstellen, Boden abtragen und lagern;15,0;m³;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0105.6;Boden, Beprobung u. Analytik, ErsatzbaustoffV Anl. 1 Tab. 3;2,0;St;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0105.7;Gelagerten Oberboden, laden, abfahren;16,0;m³;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0105.8;Gelagerten Boden der Vorpositionen, laden, abfahren;101,0;m³;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0105.9;Füllsand für Wurzelsperre liefern und einbauen;16,0;m³;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0105.10;Planum für befestigte Flächen herstellen;380,0;m²;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0105.11;Handarbeit, Leitungen;1,0;psch;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0105.12;Kontrollprüfung, dynamischer Lastplattendruckversuch;1,0;St;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0105.13;Kontrollprüfung, statischer Lastplattendruckversuch;1,0;St;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0106.1;Grünabfälle, abfahren und entsorgen;5,0;m³;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0106.2;Oberboden, BM-0, entsorgen;19,0;t;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0106.3;Boden, BM-0*, entsorgen;161,5;t;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0106.4;Boden, BM-F0*, entsorgen;9,5;t;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0106.5;Boden, BM-F1, entsorgen;9,5;t;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0106.6;Boden, BM-F2, entsorgen;5,7;t;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0106.7;Boden, BM-F3, entsorgen;3,8;t;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0201.1;Wurzelsperre, liefern und einbauen;80,0;m;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0201.2;Wurzelsperre, an Überschneidungen ausschneiden;12,0;m;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0201.3;Betonbord, TB, 8/25/100;5,0;m;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0201.4;Betonbord, TB, 8/25/100 schneiden;4,0;St;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0201.5;Betonbord, TB, 8/25/100, anarbeiten;2,0;St;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0201.6;Betonbord mit Verkrallnut, TB, 8/20/100;90,0;m;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0201.7;Betonbord mit Verkrallnut, schneiden;1,0;psch;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0201.8;Betonplatten, 50x50x4 cm, 1-reihig, gebunden grau;85,0;m;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0201.9;Betonplatten, 50x50x4 cm, 1-reihig, gebunden grau, zuschneiden und anarbeiten;1,0;psch;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0203.1;Frostschutzschicht, 0/32, verschiedene Stärken, liefern herstellen;50,0;m³;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0203.2;Schottertragschicht, 0/32, 15 cm, liefern und herstellen;55,0;m³;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0204.1;Betonsteinpflaster, 20x10x8 cm, grau, verlegen;12,0;m²;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0204.2;Betonsteinpflaster, schneiden, gerade Spiel- und Sportflächen;2,0;m;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0204.3;EPDM Spiel-/Sportflächen;340,0;m²;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0204.4;EPDM, Spielfeldmarkierungen, herstellen;1,0;psch;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0401.1;Anschluss an Regenwasserschacht, herstellen;1,0;St;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0401.2;Vollsickerrohr, DN100, liefern und einbauen;55,0;m;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0401.3;Revisionsschacht, DN400, herstellen;3,0;St;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0502.1;Fundamente für Bandensystem, liefern und setzen;11,4;m³;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0502.2;Multisport Bandensystem und Zubehör, liefern und einbauen;1,0;St;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0502.3;Zugangstür für Minispielfeld;1,0;;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0502.4;Basketballkorb mit Ballfangerhöhung;2,0;;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0502.5;Multisportnetz;1,0;;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0502.6;Funino Tor;4,0;;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0601.1;Vorhandenen, verdichteten Oberboden lockern;175,0;m²;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0601.2;Wiedereinbau Oberboden, Rasen- und Wiesenfläche;30,0;m³;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0601.3;Wiedereinbau Oberboden, Geländemodellierung;45,0;m³;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0602.1;Rasen, RSM  2.3, Nachsaat;50,0;m²;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0602.2;Rasen, RSM  2.3, Ansaat auf Geländemodellierung;50,0;m²;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0602.3;Blumenwiese, Nachsaat;130,0;m²;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0805.1;Landschaftsgärtner-Vorarbeiter/-in;1,0;h;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0805.2;Landschaftsgärtner/-in;1,0;h;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0805.3;Baufacharbeiter/-in;1,0;h;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0805.4;Helfer/-in;1,0;h;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0805.5;Radlader, 37-55kW, mit Fahrer/-in;1,0;h;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0805.6;Minibagger, mit Fahrer/-in;1,0;h;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0805.7;Hydraulikbagger, 5-10t, mit Fahrer/-in;1,0;h;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0805.8;Mobil-/ Kettenbagger, bis 18t, mit Fahrer/-in;1,0;h;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
+0806.1;Dokumentation;1,0;psch;gaeb-flat;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV.D83
 1;Bauzaun, bestehend aus Stahlgitterelementen, Sicherheitsschellen und Bauzaunfüßen, auf unbefestigtem Untergrund, aufstellen, während der Baumaßnahme vorhalten und nach Ende der Baumaßnahme räumen.;100,0;m;gaeb;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV_V33.X83
 2;Auf dem Gelände ist mit erdverlegten Versorgungs­leitungen wie Gas, Wasser, Fernwärme, Strom, Kabel Deutschland und Telekom zu rechnen. Die Rohrnetzauskünfte und Schutzanweisungen hierfür sind rechtzeitig vor Baubeginn bei den zuständigen Versorgungsträgern eigenverantwortlich einzuholen und bereitz;1,0;psch;gaeb;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV_V33.X83
 3;Einrichten und Vorhalten der Baustelle mit den erforderlichen Containern, Unterkünften, Geräten und Werkzeugen, Anschlüssen und sonstigen Anlagen, Herrichten der Bau- und Lagerplätze, Zu- und Abfahrten.;1,0;psch;gaeb;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV_V33.X83
@@ -76,6 +153,83 @@
 7;Stundenlohnarbeiten durch Hydraulikbagger, mit Fahrer/-in, nach besonderer Anordnung des AG, ausführen.;1,0;h;gaeb;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV_V33.X83
 8;Stundenlohnarbeiten durch Mobil-/ Kettenbagger, mit Fahrer/-in, nach besonderer Anordnung des AG, ausführen.;1,0;h;gaeb;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV_V33.X83
 1;Revisionsunterlagen zur Dokumentation in doppelter Ausfertigung analog als Aktenordner mit maßstäblichen Planwerken und digital auf einem Datenträger im pdf-, dwg- oder dxf-Format erstellen und vor Abnahme bei AG einreichen.;1,0;psch;gaeb;leistungsbeschreibungen/310729_BA2_Multisportanlage_LV_V33.X83
+0101.1;Bauzaun aufstellen und räumen;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0101.2;Beschaffen von Rohrnetzauskünften;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0101.3;Baustelle, einrichten und vorhalten;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0101.4;Baustelle räumen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0101.5;Baustraße, herstellen und räumen;60,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0102.1;Verkehrssicherung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0102.2;Kleinbeschilderung, aufstellen, vorhalten, räumen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0102.3;Schacht, sichern und markieren;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0102.4;Kabel, Leitungen und Rohre, sichern und markieren;650,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0102.5;Mastleuchten, sichern;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0102.6;Einfassungen und Wege, sichern;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0102.7;Baumschutz, herstellen, vorhalten und räumen;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0102.8;Handarbeit, Baum-/Wurzelschutz;10,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0102.9;Handschachtung, Suchgraben;10,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0102.10;Stammschutz, herstellen, vorhalten und räumen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0102.11;Schutz des Wurzelbereichs, herstellen, vorhalten und räumen;30,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0102.12;Gehölze, zurückschneiden;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0102.13;Bestandsbäume während Baumaßnahme wässern;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0105.1;Suchgraben, senkrecht, herstellen;8,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0105.2;Oberboden, abtragen und lagern;86,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0105.3;Boden, abtragen und lagern;86,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0105.4;Graben für Wurzelsperre herstellen, Oberboden abtragen und lagern;5,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0105.5;Graben für Wurzelsperre herstellen, Boden abtragen und lagern;15,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0105.6;Boden, Beprobung u. Analytik, ErsatzbaustoffV Anl. 1 Tab. 3;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0105.7;Gelagerten Oberboden, laden, abfahren;16,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0105.8;Gelagerten Boden der Vorpositionen, laden, abfahren;101,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0105.9;Füllsand für Wurzelsperre liefern und einbauen;16,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0105.10;Planum für befestigte Flächen herstellen;380,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0105.11;Handarbeit, Leitungen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0105.12;Kontrollprüfung, dynamischer Lastplattendruckversuch;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0105.13;Kontrollprüfung, statischer Lastplattendruckversuch;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0106.1;Grünabfälle, abfahren und entsorgen;5,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0106.2;Oberboden, BM-0, entsorgen;19,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0106.3;Boden, BM-0*, entsorgen;161,5;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0106.4;Boden, BM-F0*, entsorgen;9,5;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0106.5;Boden, BM-F1, entsorgen;9,5;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0106.6;Boden, BM-F2, entsorgen;5,7;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0106.7;Boden, BM-F3, entsorgen;3,8;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0201.1;Wurzelsperre, liefern und einbauen;80,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0201.2;Wurzelsperre, an Überschneidungen ausschneiden;12,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0201.3;Betonbord, TB, 8/25/100;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0201.4;Betonbord, TB, 8/25/100 schneiden;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0201.5;Betonbord, TB, 8/25/100, anarbeiten;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0201.6;Betonbord mit Verkrallnut, TB, 8/20/100;90,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0201.7;Betonbord mit Verkrallnut, schneiden;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0201.8;Betonplatten, 50x50x4 cm, 1-reihig, gebunden grau;85,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0201.9;Betonplatten, 50x50x4 cm, 1-reihig, gebunden grau, zuschneiden und anarbeiten;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0203.1;Frostschutzschicht, 0/32, verschiedene Stärken, liefern herstellen;50,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0203.2;Schottertragschicht, 0/32, 15 cm, liefern und herstellen;55,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0204.1;Betonsteinpflaster, 20x10x8 cm, grau, verlegen;12,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0204.2;Betonsteinpflaster, schneiden, gerade Spiel- und Sportflächen;2,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0204.3;EPDM Spiel-/Sportflächen;340,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0204.4;EPDM, Spielfeldmarkierungen, herstellen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0401.1;Anschluss an Regenwasserschacht, herstellen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0401.2;Vollsickerrohr, DN100, liefern und einbauen;55,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0401.3;Revisionsschacht, DN400, herstellen;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0502.1;Fundamente für Bandensystem, liefern und setzen;11,4;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0502.2;Multisport Bandensystem und Zubehör, liefern und einbauen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0502.3;Zugangstür für Minispielfeld;1,0;;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0502.4;Basketballkorb mit Ballfangerhöhung;2,0;;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0502.5;Multisportnetz;1,0;;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0502.6;Funino Tor;4,0;;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0601.1;Vorhandenen, verdichteten Oberboden lockern;175,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0601.2;Wiedereinbau Oberboden, Rasen- und Wiesenfläche;30,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0601.3;Wiedereinbau Oberboden, Geländemodellierung;45,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0602.1;Rasen, RSM  2.3, Nachsaat;50,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0602.2;Rasen, RSM  2.3, Ansaat auf Geländemodellierung;50,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0602.3;Blumenwiese, Nachsaat;130,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0805.1;Landschaftsgärtner-Vorarbeiter/-in;1,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0805.2;Landschaftsgärtner/-in;1,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0805.3;Baufacharbeiter/-in;1,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0805.4;Helfer/-in;1,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0805.5;Radlader, 37-55kW, mit Fahrer/-in;1,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0805.6;Minibagger, mit Fahrer/-in;1,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0805.7;Hydraulikbagger, 5-10t, mit Fahrer/-in;1,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0805.8;Mobil-/ Kettenbagger, bis 18t, mit Fahrer/-in;1,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
+0806.1;Dokumentation;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV.D83
 1;Bauzaun, bestehend aus Stahlgitterelementen, Sicherheitsschellen und Bauzaunfüßen, auf unbefestigtem Untergrund, aufstellen, während der Baumaßnahme vorhalten und nach Ende der Baumaßnahme räumen.;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV_V33.X83
 2;Auf dem Gelände ist mit erdverlegten Versorgungs­leitungen wie Gas, Wasser, Fernwärme, Strom, Kabel Deutschland und Telekom zu rechnen. Die Rohrnetzauskünfte und Schutzanweisungen hierfür sind rechtzeitig vor Baubeginn bei den zuständigen Versorgungsträgern eigenverantwortlich einzuholen und bereitz;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV_V33.X83
 3;Einrichten und Vorhalten der Baustelle mit den erforderlichen Containern, Unterkünften, Geräten und Werkzeugen, Anschlüssen und sonstigen Anlagen, Herrichten der Bau- und Lagerplätze, Zu- und Abfahrten.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/310729_BA2_Multisportanlage_LV_V33.X83

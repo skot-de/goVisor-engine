@@ -1,4 +1,67 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+11.010;Baustelleneinrichtung;1,0;Psch;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+11.020;Vorhalten Baustelleneinrichtung;12,0;Wo;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+11.030;Baustellen-WC;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+11.040;Überleihungszeit WC;24,0;Wo;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+12.010;Dachrinnen abbrechen;25,0;m;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+12.020;Steildachfläche abbrechen;45,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+12.040;Abbruch der vorhandenen Lichtbänder;1,0;Psch;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+12.050;Seitenfenster Flur;1,0;St;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+12.060;Flachdach Bitumen;62,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+12.070;Flachdach Wärmedämmung;62,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+12.080;Holzschalung;25,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+12.090;Zinkstehfalzfassade;15,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+12.100;Notabdichtung;180,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.010;Aufdachdämmung;20,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.020;Dampfbremsfolie;20,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.030;Konterlattung;20,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.040;Traglattung;20,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.050;Betondachsteine;20,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.060;Verklammerung;20,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.070;Traufentlüftungsgitter;50,0;m;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.080;Ziegelschnitte, gerade und schräg;30,0;m;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.090;Lüfterziegel;20,0;St;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.100;Schalung;25,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.110;Untersichtschalung;55,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.120;Untergrund säubern;95,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.130;Untergrundvorbehandlung Wassersaugen;95,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.140;Untergrundvorbereitung Oberflächentrocknung;95,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.150;Dampfsperr- und Abdichtungsbahn;95,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.160;Wärmedämmung;55,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.170;Gefälledämmung;55,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.180;Dachabdichtung Bitumen;95,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.190;Wandanschlussschienen;60,0;m;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.200;Attikaabschluss;10,0;m;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.210;Flachdachabschluss;10,0;m;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.220;Zulage für Pulverbeschichtung;10,0;m;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.230;Auflageprofil;10,0;m;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.240;Attika-Ablauf DN 100 horizontal;3,0;St;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.250;Notüberläufe;3,0;St;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.260;Kragengully DN 100;2,0;St;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.280;Lichtband Flur;1,0;St;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.290;Lichtband Eingangshalle;2,0;St;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.300;Unterkonstruktion Lichtband;2,0;St;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.310;Belüftungsschnecke;25,0;m;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.320;Untersichtschalung;50,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.330;Dampfbremsfolie;50,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.340;Aufdachdämmung;50,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.350;Unterdeckung;50,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.360;Konterlattung;50,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.370;Traglattung;50,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.380;Dachziegel Braas 7°;50,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.390;Ortgangziegel;3,0;m;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.400;Firstausbildung;8,0;m;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+13.410;Ortgang Holzkonstruktion;1,0;St;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+14.010;Dachrinne;25,0;m;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+14.020;Rinnenböden;8,0;St;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+14.030;Rinneneinhängstutzen NW100;2,0;St;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+14.040;Traufblech;25,0;m;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+14.050;Bleianschlüsse 7° Dach;50,0;m;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+14.060;Bekleidung Doppelstehfalz Lichtbänder;20,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+14.070;Bekleidung Doppelstehfalz Giebelwände;15,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+14.080;Unterkonstruktion Zinkstehfalzfassade Giebelwände;15,0;m²;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+15.010;Facharbeiter;12,0;h;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
+15.020;Helfer;12,0;h;gaeb-flat;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker.D83
 010;Baustelleneinrichtung in der dafür nach Baustellenplan zu Verfügung gestellten Fläche (ca. 6m x 10m), für die eigenen Arbeiten vorhalten und nach Abschluss der eigenen Arbeiten beseitigen.;1,0;Psch;gaeb;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker_V33.X83
 020;Vorhalten der Baustelleneinrichtung.;12,0;Wo;gaeb;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker_V33.X83
 030;Liefern und Aufstellen und Vorhalten eines Baustellen-WCs, einschl. Reinigung. Grundvorhaltung 4 Wochen.;1,0;Stk;gaeb;leistungsbeschreibungen/2026 07 16 HVS_LV_Dachdecker_V33.X83
@@ -125,3 +188,66 @@
 080;Unterkonstruktion für die Zinkstehfalzfassade liefern und einbauen.;15,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker_V33.X83
 010;Facharbeiterstunde auf Nachweis auf Anweisung der Bauleitung.;12,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker_V33.X83
 020;Helferstunde auf Nachweis auf Anweisung der Bauleitung.;12,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker_V33.X83
+11.010;Baustelleneinrichtung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+11.020;Vorhalten Baustelleneinrichtung;12,0;Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+11.030;Baustellen-WC;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+11.040;Überleihungszeit WC;24,0;Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+12.010;Dachrinnen abbrechen;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+12.020;Steildachfläche abbrechen;45,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+12.040;Abbruch der vorhandenen Lichtbänder;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+12.050;Seitenfenster Flur;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+12.060;Flachdach Bitumen;62,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+12.070;Flachdach Wärmedämmung;62,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+12.080;Holzschalung;25,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+12.090;Zinkstehfalzfassade;15,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+12.100;Notabdichtung;180,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.010;Aufdachdämmung;20,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.020;Dampfbremsfolie;20,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.030;Konterlattung;20,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.040;Traglattung;20,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.050;Betondachsteine;20,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.060;Verklammerung;20,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.070;Traufentlüftungsgitter;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.080;Ziegelschnitte, gerade und schräg;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.090;Lüfterziegel;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.100;Schalung;25,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.110;Untersichtschalung;55,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.120;Untergrund säubern;95,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.130;Untergrundvorbehandlung Wassersaugen;95,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.140;Untergrundvorbereitung Oberflächentrocknung;95,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.150;Dampfsperr- und Abdichtungsbahn;95,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.160;Wärmedämmung;55,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.170;Gefälledämmung;55,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.180;Dachabdichtung Bitumen;95,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.190;Wandanschlussschienen;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.200;Attikaabschluss;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.210;Flachdachabschluss;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.220;Zulage für Pulverbeschichtung;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.230;Auflageprofil;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.240;Attika-Ablauf DN 100 horizontal;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.250;Notüberläufe;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.260;Kragengully DN 100;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.280;Lichtband Flur;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.290;Lichtband Eingangshalle;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.300;Unterkonstruktion Lichtband;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.310;Belüftungsschnecke;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.320;Untersichtschalung;50,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.330;Dampfbremsfolie;50,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.340;Aufdachdämmung;50,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.350;Unterdeckung;50,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.360;Konterlattung;50,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.370;Traglattung;50,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.380;Dachziegel Braas 7°;50,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.390;Ortgangziegel;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.400;Firstausbildung;8,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+13.410;Ortgang Holzkonstruktion;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+14.010;Dachrinne;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+14.020;Rinnenböden;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+14.030;Rinneneinhängstutzen NW100;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+14.040;Traufblech;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+14.050;Bleianschlüsse 7° Dach;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+14.060;Bekleidung Doppelstehfalz Lichtbänder;20,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+14.070;Bekleidung Doppelstehfalz Giebelwände;15,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+14.080;Unterkonstruktion Zinkstehfalzfassade Giebelwände;15,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+15.010;Facharbeiter;12,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83
+15.020;Helfer;12,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026 07 16 HVS_LV_Dachdecker.D83

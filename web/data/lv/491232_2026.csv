@@ -305,3 +305,309 @@
 2;FM-Außenkabel  A2Y(FL)2Y 10x2x0,8mm;150,0;m;gaeb;leistungsbeschreibungen/OGS Wanderup Neubau Elektro_V33.X83
 3;AC-Ladeeinrichtung für Elektrofahrzeuge mit einer Typ-2-Ladesteckdose und einer Ladeleistung bis 22 kW.;1,0;St;gaeb;leistungsbeschreibungen/OGS Wanderup Neubau Elektro_V33.X83
 4;Liefern und montieren einer freistehenden Standsäule zur Aufnahme einer AC-Ladestation. Ausführung aus korrosionsbeständigem, pulverbeschichtetem Stahl oder Aluminium, geeignet für den dauerhaften Außeneinsatz. Einschließlich Montageplatte, Befestigungsmaterial, Kabeleinführung sowie aller erforderl;1,0;St;gaeb;leistungsbeschreibungen/OGS Wanderup Neubau Elektro_V33.X83
+01.1;Photovoltaikmodul mind. 460 Wp (Glas-Glas);108,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.2;UV-beständiges Solarkabel 6 mm².;360,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.3;Unterkonstruktion Photovoltaikanlage in Ost-West-Aufständerung mit 10° Neigung;108,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.4;3-Phasenwechselrichter (50 kW);1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.5;Kabeltrasse inkl. Deckel 200x60;85,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.6;Befestigungselement Kabeltrasse;7,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.7;ALU-Panzersteckrohr M32;20,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.8;UV-beständiges Schutzrohr M25 flexibel;65,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.9;Energy Meter zur Messung von Bezug- und Einspeiseleistung;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.10;AC-Kombi-Ableiter auf Funkenstreckenbasis;4,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.11;Neozedelement als Lasttrennschalter D02;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.12;Potentialausgleich an Gegenständen;20,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.13;Erdungsdraht als V4A Rundleiter 1x16mm²;35,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.14;Überspannungsschutz DC Typ I+II mit Gehäuse UV-beständig;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.15;Wetterschutzdach für 3-Phasenwechselrichter;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.16;Hinweisschilder;4,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.17;Anträge und Dokumentation;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.18;Inbetriebnahme der PV-Anlage inkl. Abnahme;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.19;Brandschutzbandage PV Außenbereich;12,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.20;Wartung und Prüfung von der Gesamtanlage jährlich;3,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.21;Wartung und Prüfung von der Gesamtanlage alle vier Jahre;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.22;Datenkabel Cat7 UC LR 10Gb 4x2x0,32mm²;95,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+01.23;RJ45-Jack, Cat.7;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+02.1;Zentralbatteriesystem 18 Stromkreise;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+02.2;Externes DLS/3PH-Bus-Modul;4,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+02.3;Fernanzeige;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+02.4;-a- Rettungszeichenleuchte für Deckenanbau;39,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+02.5;-b- Zubehörset für Pendelmontage;5,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+02.6;-c- Sicherheitsleuchte für Deckeneinbau asymmetrisch;42,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+02.7;-d- Sicherheitsleuchte für Deckeneinbau symmetrisch;15,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+02.8;-f- Überwachungsmodul LED;4,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+02.9;Abzweigdosen E30;25,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+02.10;Abzweigdosen Farbe rot;35,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+02.11;Starkstromleitung E-30 3 x 2,5 mm²;950,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+02.12;Starkstromleitung NYM-J 3 x 2,5 mm²;1450,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+02.13;Resopal-Bezeichnungsschilder;95,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0301.1;Starkstromkabel NYM-J 5x 25 mm²;190,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0301.2;Starkstromleitung NYCWY-J 4 x 95/50 mm²;5,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0302.1;Fabrikfertiger Installationsstandverteiler;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0302.2;Einbauplatz Spannungsüberwachungsrelais;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0302.3;Haupt-Sammelschienensystem 160 A, 5-polig;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0302.4;Leistungsschalter 160A;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0302.5;Messwandlerplatz gemäß TAB des EVU;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0302.6;Steuerleitungsklemmstein 4x2x0,8mm;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0302.7;Einbauplatz Linien-/ Bereichskoppler;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0302.8;Einbauplatz DALI-Gateway;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0302.9;Einbauplatz Spannungsversorgung;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0302.10;NH-Sicherungs-Lasttrennschalter NH00;8,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0302.11;Leitungsschutzschalter 3polig B16A;4,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0302.12;Leitungsschutzschalter 1polig B16A Feld PV Einspeisung;5,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0302.13;Einspeiseschrank PV Anlage bis max. 135 KVA;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0302.14;NA- Schutz für PV Anlagen unter 135 KW;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0302.15;Hauptschalter 3-polig 80 A;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0302.16;modularer Kombi-Ableiter;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0302.17;Leitungsschutzschalter 3polig C40A;4,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0303.1;Fabrikfertiger Installationsstandverteiler;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0303.2;Hauptschalter 3-polig 80 A;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0303.3;modularer Kombi-Ableiter;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0303.4;Einbauplatz Spannungsüberwachungsrelais;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0303.5;Neozedelement als Lasttrennschalter D02;15,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0303.6;Neozedelement mit Schraubsicherungen D02;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0303.7;FI-Schutzschalter 4-polig 40A;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0303.8;FI/LS-Schutzschalter 16A;12,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0303.9;Leitungsschutzschalter 3polig B16A;4,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0303.10;Leitungsschutzschalter 1polig B16A;12,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0303.11;Leitungsschutzschalter 1polig C16A;12,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0303.12;Leitungsschutzschalter 1polig C16A inkl. HK;15,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0303.13;Leitungsschutzschalter 1polig B10A inkl. HK;15,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0303.14;Leitungsschutzschalter 1polig B10A;16,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0303.15;Steuerleitungsklemmstein 4x2x0,8mm;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0303.16;Einbauplatz Spannungsversorgung;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0303.17;Einbauplatz Linien-/ Bereichskoppler;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0303.18;Einbauplatz DALI-Gateway;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0304.1;Fabrikfertiger Installationsstandverteiler;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0304.2;Hauptschalter 3-polig 80 A;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0304.3;modularer Kombi-Ableiter;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0304.4;Einbauplatz Spannungsüberwachungsrelais;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0304.5;Neozedelement als Lasttrennschalter D02;15,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0304.6;Neozedelement mit Schraubsicherungen D02;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0304.7;FI-Schutzschalter 4-polig 40A;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0304.8;FI/LS-Schutzschalter 16A;12,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0304.9;Leitungsschutzschalter 3polig B16A;4,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0304.10;Leitungsschutzschalter 1polig B16A;12,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0304.11;Leitungsschutzschalter 1polig C16A;12,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0304.12;Leitungsschutzschalter 1polig C16A inkl. HK;15,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0304.13;Leitungsschutzschalter 1polig B10A inkl. HK;15,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0304.14;Leitungsschutzschalter 1polig B10A;16,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0304.15;Steuerleitungsklemmstein 4x2x0,8mm;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0304.16;Einbauplatz Spannungsversorgung;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0304.17;Einbauplatz Linien-/ Bereichskoppler;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0304.18;Einbauplatz DALI-Gateway;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0305.1;Fabrikfertiger Installationsstandverteiler;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0305.2;Hauptschalter 3-polig 80 A;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0305.3;modularer Kombi-Ableiter;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0305.4;Einbauplatz Spannungsüberwachungsrelais;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0305.5;Neozedelement als Lasttrennschalter D02;15,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0305.6;Neozedelement mit Schraubsicherungen D02;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0305.7;FI-Schutzschalter 4-polig 40A;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0305.8;FI/LS-Schutzschalter 16A;12,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0305.9;Leitungsschutzschalter 3polig B16A;4,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0305.10;Leitungsschutzschalter 1polig B16A;12,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0305.11;Leitungsschutzschalter 1polig C16A;12,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0305.12;Leitungsschutzschalter 1polig C16A inkl. HK;15,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0305.13;Leitungsschutzschalter 1polig B10A inkl. HK;15,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0305.14;Leitungsschutzschalter 1polig B10A;16,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0305.15;Steuerleitungsklemmstein 4x2x0,8mm;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0305.16;Einbauplatz Spannungsversorgung;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0305.17;Einbauplatz Linien-/ Bereichskoppler;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0305.18;Einbauplatz DALI-Gateway;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0306.1;Fabrikfertiger Installationsstandverteiler;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0306.2;Hauptschalter 3-polig 80 A;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0306.3;modularer Kombi-Ableiter;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0306.4;Einbauplatz Spannungsüberwachungsrelais;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0306.5;Neozedelement als Lasttrennschalter D02;15,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0306.6;Neozedelement mit Schraubsicherungen D02;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0306.7;FI-Schutzschalter 4-polig 40A;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0306.8;FI/LS-Schutzschalter 16A;12,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0306.9;Leitungsschutzschalter 3polig B16A;4,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0306.10;Leitungsschutzschalter 1polig B16A;12,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0306.11;Leitungsschutzschalter 1polig C16A;12,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0306.12;Leitungsschutzschalter 1polig C16A inkl. HK;15,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0306.13;Leitungsschutzschalter 1polig B10A inkl. HK;15,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0306.14;Leitungsschutzschalter 1polig B10A;16,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0306.15;Steuerleitungsklemmstein 4x2x0,8mm;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0306.16;Einbauplatz Spannungsversorgung;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0306.17;Einbauplatz Linien-/ Bereichskoppler;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+0306.18;Einbauplatz DALI-Gateway;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.1;Starkstromleitung NYM-J 3 x 1,5 mm²;1200,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.2;Starkstromleitung NYM-J 5x1,5 mm²;5400,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.3;Starkstromleitung NYM-J 3x2,5 mm²;5000,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.4;Starkstromleitung NYM-J 5x2,5 mm²;1250,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.5;Starkstromleitung NYM-J 5x4 mm²;450,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.6;Starkstromleitung NYM-J 5x6 mm²;500,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.7;Mehraufwand für Leitungsverlegung in bauseitigem Leerrohr;1500,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.8;Unterputz-Notschalters für Entrauchung;4,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.9;Schuko, 1-fach, u.P. inkl. Beschriftungsfeld schwarz matt;22,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.10;Schukosteckdosen 1-fach u.P. Kinderschutz;79,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.11;Schukosteckdosen 2-fach u.P. Kinderschutz;148,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.12;UP-Geräteanschlussdose 5x2,5mm²;25,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.13;Blindabdeckungen;65,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.14;Abzweigdose a.P.;200,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.15;Steckdosen bis 3-fach u.P.;178,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.16;Schuko, 1-fach, u.P. IP44 Anthrazit;4,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.17;CEE Kombi-Steckdose a.P / 16A;5,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.18;Abzweigdose a.P.;450,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.19;Elektrischer Anschluss an Geräten und Motoren (3x2,5mm²);10,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.20;Elektrischer Anschluss an Geräten und Motoren (5x2,5mm²);25,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.21;Elektrischer Anschluss an Geräten und Motoren (5x6mm²);5,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.22;Anschlüsse bis 10DA;4,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.23;Elektrischer Anschluss Heizkreisverteiler bis 12 Stellventile;9,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.24;Elektrischer Anschluss Türantrieb, Eingang;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.25;Elektrischer Anschluss Freilauf-Gleitschienen-Türschliesser;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.26;FSA 1-flügelig anschliessen;6,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+04.27;Anschlüsse Fenstermotoren verlängern;60,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.1;Unterflurdose 165-220 inkl. Montagedeckel;17,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.2;Geräteeinsatz für trocken gepflegte Fußböden;17,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.3;Modulträger 45;51,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.4;Rollgerüst Arbeithöhe bis 5,00m;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.5;Schwanenhalsdurchführung;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.6;Kabelrinne 200x60 mm;6,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.7;Kabelrinne 300x60 mm;8,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.8;Kabelrinne 400x60 mm;10,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.9;Steigetrasse 300/60mm;6,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.10;C-Profilen-Schiene Breite 500mm;100,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.11;Bügelschellen 16-22mm;60,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.12;Bügelschellen 34-40mm;30,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.13;Sammelhalter 15 x 3x15 (E-30);850,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.14;Sammelhalter 30x 3x15 (E-30);1500,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.15;Kabelklammern Metall 8x 3x 15;420,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.16;Brüstungsinstallationskanal, Stahlblech zink 130;30,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.17;Brüstungsinstallationskanal, Stahlblech weiß 170;40,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.18;Endkappe;10,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.19;Geräteeinbaudosen;85,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.20;Kunststoffrohr biegsam M20, flexibel;3500,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.21;Kunststoffrohr biegsam M25, flexibel;2500,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.22;Kunststoffrohr biegsam M32, flexibel;1500,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.23;ALU-Panzersteckrohr M32;5,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.24;Kunststoffsteckrohr M 25;120,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.25;Kunststoffsteckrohr M 32;40,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.26;Kopfloch, Handschachtung;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.27;Standard-Ringraumdichtung 1 Kabel (70-112mm);4,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.28;Bohrungen in Holzbalken 20/24;65,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.29;Bohrungen in Holzbalken 30/24;90,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.30;Bohrungen in Holzbalken 60/24;20,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.31;Bohrungen in Betonwänden 16/240;35,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.32;Bohrungen in Betonwänden 30/240;45,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+05.33;Kernbohrungen Betonwänden 70/240;15,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+06.1;Brandschutz-Installationsdose für Holzbau F-Tronic 68mm;126,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+06.2;Brandschutz-Auslassdose für Holzbau F-Tronic 35mm;188,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+06.3;Brandschott F90 Wand- und Deckenöffnung bis Ø< 50mm;15,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+06.4;Brandschott F90 Wand- und Deckenöffnung bis Ø<100mm;4,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+06.5;Brandschott F90 Wand- und Deckenöffnung BxH 300x200mm (24cm Wandstärke);15,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+07.1;-A- Pendelleuchten als Linienleuchten 4,5m UGR <19;69,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+07.2;-B-  Pendelleuchten als Linienleuchten 1,7m UGR <19;19,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+07.3;-E- Anbaulinienleuchten 3,4m;30,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+07.4;-C- Einbaudownlight WC Bereiche;42,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+07.5;-D- Stehleuchte;6,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+07.6;-L- runden LED-Einbauleuchte für den Deckeneinbau mit;108,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+07.7;-F- Anbauleuchte Nebenräume 1500mm 4000 K;15,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+07.8;-G- Außenwandleuchte liniar;6,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+07.9;-H- Einbaudownlight eckig im Außenbereich;6,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+07.10;Pollerleuchtenkopf;8,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+07.11;Pollerleuchtenrohr;8,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+07.12;3-Phasen-Anbau-Stromschiene DALI;3,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+07.13;LED-Stromschienenstrahlers;7,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+07.14;LED-Pendel-Stromschienen Downlight;8,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+08.1;Baustromverteiler Endverteiler  63 A, inkl. 8 Monaten Mietdauer (Innenbereich);3,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+08.2;Umklemmen, Umstellen von Baustromverteilern;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+08.3;Tragbarer Baustrom Kleinverteiler inkl 30m Anschlussleitung;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+08.4;Feuchtraumleuchte, IP65 33 W LED / 4000K;30,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+08.5;Umhängen Feuchtraumleuchten;20,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+08.6;Gummischlauchleitung H07RN-F 5G16mm²;65,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+08.7;Gummischlauchleitung H07RN-F 5x2,5 mm²;100,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+08.8;Gummischlauchleitung H07RN-F 3x1,5 mm²;100,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+09.1;Elektromonteurs;40,0;h;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+09.2;Elektrolehrlings oder Elektrohelfer;30,0;h;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+09.3;Material, der Stundenlohnarbeiten;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+10.1;Behinderten-WC-Notrufanlage-Set mit USV-Netzteil;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+10.2;IP-Video-Außensprechstelle;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+10.3;Video-Innenstation;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+10.4;PoE-Netzwerkswitches;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+10.5;Sicherheitsmoduls;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+10.6;Progammierinterface USB;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+11.1;ELA-Zentrale;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+11.2;Tischsprechstelle 5 Zonen;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+11.3;Decken-Einbaulautsprecher 16/3/1,5 W;52,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+11.4;Anbaulautsprecher 10 / 5 / 2,5W;6,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+11.5;Aussenlautsprecher 12 / 6 / 3W;4,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+11.6;Leitung J-Y(ST)Y 4x2x0,8 mm;1350,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+11.7;Leitung J-Y(ST)Y 10x2x0,8 mm;15,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+11.8;Mobiles Lautsprecher System;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+11.9;Digitales drahtloses Handheld-Set;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.1;Brandmelde-Zentrale, 2 Ringe;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.2;Digitales Wählgerät, IP-Schnittstelle;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.3;Feuerwehrbedienfeld;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.4;Feuerwehrschlüsseldepot;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.5;Freischaltelement;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.6;E-30 Einhausung BMZ;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.7;Aufschaltung auf die Leitstelle;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.8;Feuerwehranzeigetableau;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.9;Feuerwehrlaufkarten;120,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.10;Laufkartenhalter, 100Karten;2,0;St.;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.11;Übertragungseinrichtungsmodul;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.12;Technischer Alarmbaustein  TAL;20,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.13;Optischer Rauchmelder;69,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.14;Optischer Rauchmelder mit Sirene;72,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.15;Thermodifferenzialmelder;4,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.16;Akustischer Wartongeber;4,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.17;Handmelder;27,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.18;Brandmeldekabel rot;2560,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.19;Brandmeldekabel rot E30;250,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.20;Abzweigdosen orange E30;2,0;St.;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.21;Ersatzglasscheibe für DKM;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+12.22;Schlüssel für DKM;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+13.1;Zutrittskontrollanlage, EMA/ZuKo, G2/Kl.B;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+13.2;Touchscreen-Bedienteil zur Bedienung und Visualisierung;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+13.3;Berührungsloser Karten-Leser, UP;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+13.4;Auswerteeinheit für Karten-Leser;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+13.5;"Dualmelder ""Fläche"", Klasse B";31,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+13.6;Deckenhalterung für Dualmelder Fläche;10,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+13.7;Dual-Deckenbewegungsmelder;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+13.8;Kompaktalarmierung, Innen, Klasse B;3,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+13.9;2-Relais-Modul im AP-Gehäuse;6,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+13.10;Installationskabel, JY(St)Y, 4 x 2 x 0,8mm;1250,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+14.1;"EDV-Rangierverteiler 19"" - 42HE (HxBxT:2.200x800x800mm)";2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+14.2;"19""-Verteilerfeld 24 x RJ45, Cat. 6a";18,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+14.3;"19"" LWL-Spleißbox für 24 Fasern (24 x LC duplex Buchsen) inkl. Spleißarbeiten";3,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+14.4;LWL-Kabel 1x24G50,OM4 (24-Faser);350,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+14.5;EDV-Datenkabel Cat.7;21000,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+14.6;Datenanschlußdose 2-fach u.P. ,liefern,auflegen und messen;191,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+15.1;"19""-Verteilerfeld 24 x RJ45, Cat. 6a";1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+15.2;EDV-Datenkabel Cat.7;450,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+15.3;Datenanschlußdose 2-fach u.P. ,liefern,auflegen und messen;8,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+16.1;EDV-Datenkabel Cat.7;450,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+16.2;PoE-Netzwerkswitches;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+16.3;Datenanschlußdose 1-fach u.P. ,liefern,auflegen und messen;16,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+17.1;Datenanschlußdose 1-fach u.P. ,liefern,auflegen und messen;18,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.1;"23,6"" InfoTerminal Touch KNX. inkl. Server";1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.2;KNX Wetterstation Universal;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.3;freistehenden Halterung Gründach;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.4;KNX-Spannungsversorgung REG;5,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.5;KNX-Linienkoppler REG;5,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.6;USB-Schnittstelle REG;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.7;DALI Gateway;8,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.8;KNX-Heizungsaktor 12 Stellantrieben;9,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.9;KNX- Stellantrieb 1-fach;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.10;Universalaktor 2-fach UP;110,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.11;Universal-/Tasterschnittstelle  4-fach, UP,;22,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.12;KNX-Schaltaktor UP 3-fach;12,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.13;"Touchpanel, 3,5""""";33,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.14;Taster-Busankoppler 1/2-fach;20,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.15;KNX Präsenzmelder (Büro/Klassen);85,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.16;KNX-Bewegungsmelder 360°Außen;5,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.17;Zeitsteuerung Pausengong;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.18;Verknüpfungsbaustein;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.19;Parametrierung von Visu-/Touchpanelseiten;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.20;Parametrierung von Lichtszenen;2,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.21;Inbetriebnahme , Parametrier-, Programmierungsarbeiten;1,0;Psch;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.22;Erstellung einer Bedienungsanleitung;1,0;Psch;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.23;Einweisung des Nutzers;1,0;Psch;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.24;Erstellung Dokumentation;1,0;Psch;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+18.25;KNX-BUS-Leitung, 2x2x0,8mm;2500,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+19.1;Starkstrom-Erdkabel NYY-J 5x4mm²;450,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+19.2;FM-Erdkabel  A2Y(FL)2Y 10x2x0,8mm;150,0;m;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+19.3;Ladesäule 22KW;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83
+19.4;freistehenden Standsäule Ladestation;1,0;St;gaeb-flat;leistungsbeschreibungen/OGS Wanderup Neubau Elektro.D83

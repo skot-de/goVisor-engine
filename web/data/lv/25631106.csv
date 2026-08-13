@@ -1,0 +1,98 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+00000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+00010001;SiGe-Plan erstellen;1,0;Psch;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+00010002;SiGe-Koordinator stellen.;1,0;Psch;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+00010003;Vorankündigung erstellen;1,0;Psch;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+00020001;Probegefäß liefern 10-l-Blecheimer*Mithilfe Kprüf.;6,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+00020002;Bohrkern entnehmen Kern-DU 15 cm*Tiefe 25 bis 30cm Asphalt u. hydr.S*... Freitext ...;6,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+00020003;Probegefäß liefern ... Freitext ...*Mithilfe Kprüf.;6,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+00030001;Erschwernisse durch Anlieger;1,0;Psch;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+00030002;Anwohnerinformation;1,0;Psch;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01000001;Verkehrssich. läng. Dauer aufbauen Arbeitsstelle*VZ-Plan des AG ... Freitext ...*... Freitext ... ... Freitext ...;1,0;Psch;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01000002;Verkehrssich. läng. Dauer vorhalten wie Vorposition*... Freitext ...;20,0;d;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01000003;Verkehrssich. läng. Dauer abbauen VZ-Plan des AG*... Freitext ... ... Freitext ...;1,0;Psch;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01000004;Verkehrsschild aufbauen u. abbauen Ronde,Dreie.Quad.*Größe 2 Typ RA2*Höhe 2,00 m;4,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01000006;Verkehrssch.komb. aufbauen u. abb. VSch + ZSch H2*Ronde,Dreie.Quad. Größe 2*Typ RA2*Höhe 2,00 m;8,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01000007;Kontrolle Arbeitsstellensicherung;20,0;d;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01010001;Transp. LSA Typ D aufb. u. abb. ... Freitext ...*Versorg. n. Wahl verk.abh.St.2SZP*VTU erstellen;1,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01010002;Transport. Lichtsignalanlage vorh. wie Vorposition;20,0;d;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01020000;Verkehrsschild aufstellen Vorankündigung;5,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01020001;Verkehrsschild vorhalten;100,0;d;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01020002;Verkehrsschild verändern Schild Größe 2*Höhe bis 2,00 m a./i.Kraft setzen*mob.Auskreuzvorr.;4,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01020003;Verkehrsschild umsetzen ... Freitext ...*Höhe 2,00 m;4,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01020004;Absp.g.,Warneinr. aufb. u. abb. Schr.bake doppels*Typ RA2;5,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01020005;Absp.g.,Warneinr. aufb. u. abb. Schr.bake doppels*Typ RA2 zweis.Dauerlicht*Versorg. Wahl AN;10,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01020006;Absp.g.,Warneinr. aufb. u. abb. Abspsch. 250x2000*Typ RA2 5 Strah.eins. rot*mit Tastleiste Versorg. Wahl AN;20,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01020007;Absp.g.,Warneinr. aufb. u. abb. Abspsch. 250x2000*Typ RA2 mit Tastleiste;20,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01020008;Absperrger. oder Warneinr. umsetzen ... Freitext ...;10,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01020009;Absperrger. oder Warneinr. umsetzen ... Freitext ...;5,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01020010;Zusätzliche An- und Abfahrt Monteur;2,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01020011;Zusätzliche An- und Abfahrt Kolonne;2,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01020012;Personal des AN einsetzen Verkehrssicherungsfachkraft;5,0;h;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01020013;Personal des AN einsetzen Vorarbeiter Verkehrssicherung;5,0;h;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01030001;Längsmarkierung Typ I herstellen durchg. Fb.begr.*Breite 0,12 m mind. P 5*grobstr. Decke Deckenerneuerung;60,0;m;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01030002;Längsmarkierung Typ I herstellen durchg. Fb.begr.*Breite 0,15 m Folie,Gew.o.Kunst*mind. P 5 grobstr. Decke*Markierung entf.;6,0;m;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+01030003;Quermarkierung Typ I als;12,0;m;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+02000001;Rinne aus Betonformst. aufnehmen Rinnenpl.10-12 cm*Breite 20-30 cm Fugenmörtel*Fund.bet. ü.10-20 Verwertung AN;18,0;m;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+02000002;Rinnenplatten liefern und setzen B=30 cm;18,0;m;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+02000003;Formsteine auf Passmaß trennen;16,0;m;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+02000004;Bewegungsf. in Str. u. Ri. herst. Fuge in Rinnen*... Freitext ... ... Freitext ...;9,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+02000005;Bordstein aufnehmen. Hochbord Beton*Fund.ü10-20/R-St. alles Verw. AN;18,0;m;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+02000006;Bordstein aus Beton setzen ... Freitext ...*gerader Stein ... Freitext ...*... Freitext ...;18,0;m;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+02000007;Bordstein trennen ... Freitext ...*BSt.nassschneiden BSt. trennen;4,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+02000008;Bewegungsfuge in Borden herstellen Fugenl. b. 30 cm*... Freitext ...;9,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+02000009;Unterlage profilieren SfM*EV2 mind.100*Unebenh. max.2 cm;10,0;m2;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+02010001;Aufsatz f. Straßenablauf ausbauen ... Freitext ...*Ablauf sichern alles verwerten;9,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+02010002;Fertigteil für Straßenablauf ausbauen Konus;2,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+02010003;Fertigteil für Straßenablauf ausbauen Auflagerring;9,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+02010004;Fertigteil für Straßenablauf ausbauen Schaft;2,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+02010005;Aufsatz f. Straßenablauf aufsetzen 300x500, D,34,5mm*Scharnier Sicher. dämpf.Einlage*Zinkeimer C 3 Höhe Zug um Zug*Mörtel M20;9,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+02010006;Fertigteil für Straßenablauf einbauen Konus;2,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+02010007;Fertigteil für Straßenablauf einbauen Auflagerring;2,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+02010008;Fertigteil für Straßenablauf einbauen Schaft;2,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+02010009;Schachtabdeckung ausbauen;5,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+02010010;Schachtabdeckung aufsetzen ... Freitext ...*m. Schmutzfänger Deckel/Einlage*Höhe Zug um Zug WW-Mörtel;5,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+03000001;Asphaltbefestigung trennen Einzelfl.*schneiden Dicke ü. 6-12 cm;75,0;m;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+03000002;Asphalt fräsen ADS*Tiefe ü.2,5-4,5cm Zwickel/Streifen*Breite ü.50-100cm Fräsasph. verw.*Unebenheit 6 mm;100,0;m2;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+03000003;Asphalt fräsen ADS*Asphaltbeton*... Freitext ... Fahrbahn*Breite über 200cm Fräsasph. verw.*Unebenheit 10 mm;13700,0;m2;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+03000004;Pechhaltige Befestigung aufnehmen Tragschicht*Teerbeton ... Freitext ...*Fahrbahn fräsen*Pech beseit. ges.;4000,0;m2;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+03000005;Gefährlicher Abfall;200,0;t;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+03000006;Asphalt profilgemäß nachfräsen und;2000,0;m2;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+03000007;Unterlage reinigen gefr. Asphaltsch.*lose Teile aufn. zus. Flächen*Hochdr.-Sauganl.;13700,0;m2;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+04000001;Schicht ohne Bindemittel aufnehmen ... Freitext ...*... Freitext ... Fahrbahn*... Freitext ... ... Freitext ...*Abrechng. Abtrag;3,0;m3;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+04000002;Unterlage profilieren SfM*EV2 mind.120*Unebenh. max.2 cm;10,0;m2;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+04000003;Überschüssigen Baustoff entfernen Abrechn. Abtrag;3,0;m3;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+04010001;Frostschutzschicht herstellen Bk100 b.1,0 o.F.*... Freitext ... ... Freitext ...*... Freitext ... ... Freitext ...*... Freitext ...;5,0;t;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+04010002;Grundstücksbefahrbarkeit;2,0;m3;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+04020001;Bankett regulieren 12 tief+ 6 hoch 3cm tiefer DPR 100;1730,0;m2;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+04020002;Bankett abtragen Breite 0,80 m*Dicke 10-15 cm ... Freitext ...;100,0;m3;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+04020003;Bankett abtragen Breite 0,80 m*Dicke 10-15 cm ... Freitext ...;50,0;m3;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+04020004;Bankett abtragen einschließlich;35,0;m3;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+04020005;Bankettmaterial liefern Baustoffgemisch 0/32 Ausgleich DPR 100;10,0;t;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+04020006;Bankettmaterial liefern Schotterrasengemisch Ausgleich DPR 100 RSM 5.1;120,0;t;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+04020007;Einsatz einer zusätzlichen Arbeitskraft;2,0;h;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+04020008;Stundenlohnarbeiten Baugerät;2,0;h;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+05000001;Bitumenemulsion aufsprühen ... Freitext ...*Asphalt gefräst Rampenspritzgerät*C60BP4-S ... Freitext ...*vor A.bindersch.;13700,0;m2;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+05000002;Asphaltdecksch. aus AC 11 D N herst Bk1,8-Bk0,3*Dicke 3,5 cm ... Freitext ...*... Freitext ... ... Freitext ...*mit Beschicker;13700,0;m2;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+05000003;Asphaltdecksch. aus AC 11 D N herst Bk1,8-Bk1,8*... Freitext ... ... Freitext ...*... Freitext ... ... Freitext ...*... Freitext ...;2,0;t;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+05000004;Abstumpfungsmaßnahme durchführen LFK 1/3*Menge 1 kg/m2 maschinell;13700,0;m2;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+05000005;Verkehrsfläche kehren Walzasphalt VSM durchführen;13700,0;m2;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+05000006;Verkehrsfläche kehren auf Anordnung Walzasphalt VSM durchführen;2,0;h;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+05000007;Randversiegelung des Asphaltrandes herstellen;1750,0;m;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+05010001;Naht oder Anschluss zur Fuge aufw. versch.Randanschl*... Freitext ... Tiefe 35 mm*Breite 15 mm schneiden;900,0;m;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+05010002;Fugenfüllung herstellen Längs-/Querfuge*Deckschicht ... Freitext ...*Tiefe 35 mm Breite 15 mm*Fugenmasse N2;900,0;m;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+06000001;Längsmarkierung Typ II herstellen durchg.Fstr.begr.*Breite 0,12 m mit Vormarkierung*Kaltspritzplastik P 7*nicht grob.Decke;740,0;m;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+06000002;Längsmarkierung Typ II herstellen Leitlinie 1 zu 2*Breite 0,12 m mit Vormarkierung*Heißplastikmasse grobe Nachstreum.*P 7 nicht grob.Decke;1392,0;m;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+06000003;Längsmarkierung Typ II herstellen Leitlinie 1 zu 2*Breite 0,25 m mit Vormarkierung*Heißplastikmasse grobe Nachstreum.*P 7 nicht grob.Decke;12,0;m;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+06000004;Längsmarkierung Typ II einschl.;100,0;m;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+06000005;Quermarkierung Typ II herstellen Wartelinie*mit Vormarkierung Heißplastikmasse*grobe Nachstreum. nicht grob.Decke;58,0;m;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+06000006;Quermarkierung Typ II herstellen Haltlinie*mit Vormarkierung Heißplastikmasse*grobe Nachstreum. nicht grob.Decke;12,0;m;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+06000007;Sperrflächenmarkierung Typ II herst Breite 0,50 m*mit Vormarkierung Kaltspritzplastik*grobe Nachstreum. P 7*nicht grob.Decke;50,0;m;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+06000008;Pfeilmarkierung Typ II herstellen geradeaus*mit Vormarkierung Länge 5,00 m*Heißplastikmasse grobe Nachstreum.*nicht grob.Decke;2,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+06000009;Pfeilmarkierung Typ II herstellen li.o.re. ab*mit Vormarkierung Länge 5,00 m*Heißplastikmasse grobe Nachstreum.*nicht grob.Decke;1,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+06000010;Pfeilmarkierung Typ II herstellen gerad.+li.o.re.ab*mit Vormarkierung Länge 5,00 m*Heißplastikmasse grobe Nachstreum.*nicht grob.Decke;7,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+06010001;Leitpfosten abbauen Eingrableitpfost.*erf. Erdarbeiten Abbauteil verwert;74,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+06010002;Leitpfosten des AG aufstellen Abscherleitpf.*St.einschl.sockel Pfosten abholen*HB 1;74,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+06010003;Leitpfosten abbauen Aufsatzleitpfost.*Abbauteil verwert;32,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83
+06010004;Leitpfosten des AG aufstellen Aufsatzleitpf.*Pfosten abholen ... Freitext ...;32,0;St;gaeb-flat;leistungsbeschreibungen/24-0455SB.D83

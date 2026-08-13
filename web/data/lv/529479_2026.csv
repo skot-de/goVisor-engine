@@ -73,6 +73,154 @@
 10;Stundenlohnarbeiten durch Baugeräte auf Anordnung des;10,0;h;gaeb;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.X83
 20;Stundenlohnarbeiten durch Baugeräte auf Anordnung des;5,0;h;gaeb;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.X83
 30;Stundenlohnarbeiten durch Baugeräte auf Anordnung des;10,0;h;gaeb;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.X83
+1.1.10;Baustelleneinrichtung;1,0;psch;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.1.20;Baustelleneinrichtung vorhalten;1,0;psch;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.1.30;Baustelle räumen;1,0;psch;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.1.40;Straßenreinigung;1,0;psch;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.2.10;Bauzaun, h = 2 m aufstellen, vorhalten, räumen;70,0;m;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.3.10;Oberboden abtragen, geneigt, laden;1050,0;m2;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.4.10;Probenennahme mittels Sondierungen;1,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.4.20;Probenennahme in Suchschachtungen;1,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.4.30;Analyse des Bodens nach LAGA;1,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.4.40;Erweiterte Analyse nach DepV;1,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.4.50;Erweiterte Analyse nach EBV;1,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.4.60;Stammschutz Ummantelung Bohlen Polsterung U bis 0,5m H 2m herstellen räumen;5,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.4.70;Wurzelbereichsschutz Baumaschinen -stelleneinr. Material Vlies Natursand0/2 D 25cm Bohlen D 40mm herstellen räumen;20,0;m2;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+2.1.10;Stahlbeton-Konstruktionen im Boden abbrechen, entsorgen;20,0;m3;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.10;Boden Baugrube Bodenplatten bis 1,50 m, lösen, laden;240,0;m3;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.20;Boden für Baustraße bis 0,60 m, lösen, laden;400,0;m3;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.30;Zulage Handaushub;10,0;m3;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.40;Zulage Bodenklasse 6;10,0;m3;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.50;Untergrund verdichten;250,0;m2;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.60;Dokumentation Entsorgung v. Bodenmaterialien u. Bauabfällen;1,0;psch;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.70;Boden n. schadstoffbelastet entsorgen, bis einschl. Z 1.2;615,0;m3;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.80;Boden, n. schadstoffbelastet entsorg., Z 2;30,0;m3;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.90;Bauschutt, bis einschl. Z 1.2;10,0;m3;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.100;Bauschutt, Z 2;5,0;m3;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.110;Bodenaustauschmaterial 0/45 liefern, einbauen;85,0;m3;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.120;Bodenaustauschmaterial 0/45 liefern, einbauen;80,0;m3;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.130;Auflager und Ummantelung, Sand, Rohrleitungen DN 300;10,0;m3;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.150;Baustraße, aufnehmen, seitlich lagern;30,0;m3;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.2.10;Planum herstellen;1400,0;m2;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.2.20;Baustraße, 60 cm, liefern, einbauen;630,0;m3;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.2.30;Baustraße, 60 cm, aus seitlicher Lagerung einbauen;30,0;m3;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.3.10;Rampensteine, 75/14 - 22/33;90,0;m;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.3.20;Rampensteine, Außeneckelement 75/14 - 22/33;8,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.3.30;Verfugung Umfassung der Betonplatten;90,0;m;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.3.40;2-zeilige Rinne, 24/16/14;3,5;m;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.3.50;Rampensteine schneiden;10,0;m;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.3.60;dynamische Lastplattendruckversuche;2,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.10;PP-Rohr DN 150;8,0;m;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.20;Zulage Bogen DN 150, 15 - 45°;2,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.30;Zulage Überschiebmuffe DN 150;2,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.40;Verschlussstopfen DN 150;2,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.50;Zulage Passlänge DN/DA 150;2,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.60;Auflager und Ummantelung, Sand, Rohrleitungen DN 300;5,0;m3;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.70;Auflager und Ummantelung, Sand, Kabel;15,0;m3;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.80;Verfüllen von Kabelgräben, Anlieferung;5,0;m3;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.90;Flexibles PE-HD-Verbundrohr DN 150 mm, wasserdicht;30,0;m;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.100;Doppelsteckmuffe für DN150, wasserdicht;3,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.110;Übergangsmuffe für DN 150;3,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.120;Bogen 45°/90°;6,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.130;Verschlussstopfen DN 150;3,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.140;Kabelmerkband, Trassenband;30,0;m;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.150;Entwässerungsrinne, 150 mm, D400;7,5;m;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.160;Einlaufkasten für 150 mm, D400;2,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.170;Rosthaken;2,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.180;Schalung für Betonbalken;5,0;m2;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.190;Ortbetonbalken beidseitig der Rinne, C30/37LP, XF4, XM2, einschl. Dehnungsfuge;1,0;m3;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.200;Betonstabstahl;50,0;kg;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+4.1.10;Fremdüberwachung ÜK 2;1,0;psch;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+4.1.20;Trennlage PE-Folie, D = 0,3 mm;125,0;m2;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+4.1.30;Ortbeton Sauberkeitsschicht, C8/10, D = 5 cm;150,0;m2;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+4.1.40;Ortbeton Bodenplatten Stahlbeton, C 35/45, D = 50 cm, inkl. Schalung;69,0;m3;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+4.1.50;Betonstabstahl B500, alle Durchmesser;4,5;t;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+4.1.60;Zulage Erschwernis Herstellung Betonplatten;1,0;psch;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+4.2.10;Fundamenterder, Fl 35-St, Fundament;85,0;m;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+4.2.20;Anschluss- und Überbrückungsbauteil;5,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+4.2.30;Verbinder;10,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+4.2.40;Erdungsfestpunkt;2,0;St;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+5.1.10;Verrechnungssatz Werkpolier;10,0;h;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+5.1.20;Verrechnungssatz Spezialfacharbeiter;10,0;h;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+5.1.30;Verrechnungssatz Facharbeiter;10,0;h;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+5.1.40;Verrechnungssatz Fachwerker;10,0;h;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+5.2.10;Verrechnungssatz Bagger 1,0 m³;10,0;h;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+5.2.20;LKW 7,5 t, mit Hebekran und Greifer;5,0;h;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+5.2.30;Verrechnungssatz Kleingeräte;10,0;h;gaeb-flat;leistungsbeschreibungen/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.1.10;Baustelleneinrichtung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.1.20;Baustelleneinrichtung vorhalten;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.1.30;Baustelle räumen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.1.40;Straßenreinigung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.2.10;Bauzaun, h = 2 m aufstellen, vorhalten, räumen;70,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.3.10;Oberboden abtragen, geneigt, laden;1050,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.4.10;Probenennahme mittels Sondierungen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.4.20;Probenennahme in Suchschachtungen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.4.30;Analyse des Bodens nach LAGA;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.4.40;Erweiterte Analyse nach DepV;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.4.50;Erweiterte Analyse nach EBV;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.4.60;Stammschutz Ummantelung Bohlen Polsterung U bis 0,5m H 2m herstellen räumen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+1.4.70;Wurzelbereichsschutz Baumaschinen -stelleneinr. Material Vlies Natursand0/2 D 25cm Bohlen D 40mm herstellen räumen;20,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+2.1.10;Stahlbeton-Konstruktionen im Boden abbrechen, entsorgen;20,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.10;Boden Baugrube Bodenplatten bis 1,50 m, lösen, laden;240,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.20;Boden für Baustraße bis 0,60 m, lösen, laden;400,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.30;Zulage Handaushub;10,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.40;Zulage Bodenklasse 6;10,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.50;Untergrund verdichten;250,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.60;Dokumentation Entsorgung v. Bodenmaterialien u. Bauabfällen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.70;Boden n. schadstoffbelastet entsorgen, bis einschl. Z 1.2;615,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.80;Boden, n. schadstoffbelastet entsorg., Z 2;30,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.90;Bauschutt, bis einschl. Z 1.2;10,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.100;Bauschutt, Z 2;5,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.110;Bodenaustauschmaterial 0/45 liefern, einbauen;85,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.120;Bodenaustauschmaterial 0/45 liefern, einbauen;80,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.130;Auflager und Ummantelung, Sand, Rohrleitungen DN 300;10,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.1.150;Baustraße, aufnehmen, seitlich lagern;30,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.2.10;Planum herstellen;1400,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.2.20;Baustraße, 60 cm, liefern, einbauen;630,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.2.30;Baustraße, 60 cm, aus seitlicher Lagerung einbauen;30,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.3.10;Rampensteine, 75/14 - 22/33;90,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.3.20;Rampensteine, Außeneckelement 75/14 - 22/33;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.3.30;Verfugung Umfassung der Betonplatten;90,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.3.40;2-zeilige Rinne, 24/16/14;3,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.3.50;Rampensteine schneiden;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.3.60;dynamische Lastplattendruckversuche;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.10;PP-Rohr DN 150;8,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.20;Zulage Bogen DN 150, 15 - 45°;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.30;Zulage Überschiebmuffe DN 150;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.40;Verschlussstopfen DN 150;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.50;Zulage Passlänge DN/DA 150;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.60;Auflager und Ummantelung, Sand, Rohrleitungen DN 300;5,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.70;Auflager und Ummantelung, Sand, Kabel;15,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.80;Verfüllen von Kabelgräben, Anlieferung;5,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.90;Flexibles PE-HD-Verbundrohr DN 150 mm, wasserdicht;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.100;Doppelsteckmuffe für DN150, wasserdicht;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.110;Übergangsmuffe für DN 150;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.120;Bogen 45°/90°;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.130;Verschlussstopfen DN 150;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.140;Kabelmerkband, Trassenband;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.150;Entwässerungsrinne, 150 mm, D400;7,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.160;Einlaufkasten für 150 mm, D400;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.170;Rosthaken;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.180;Schalung für Betonbalken;5,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.190;Ortbetonbalken beidseitig der Rinne, C30/37LP, XF4, XM2, einschl. Dehnungsfuge;1,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+3.4.200;Betonstabstahl;50,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+4.1.10;Fremdüberwachung ÜK 2;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+4.1.20;Trennlage PE-Folie, D = 0,3 mm;125,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+4.1.30;Ortbeton Sauberkeitsschicht, C8/10, D = 5 cm;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+4.1.40;Ortbeton Bodenplatten Stahlbeton, C 35/45, D = 50 cm, inkl. Schalung;69,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+4.1.50;Betonstabstahl B500, alle Durchmesser;4,5;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+4.1.60;Zulage Erschwernis Herstellung Betonplatten;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+4.2.10;Fundamenterder, Fl 35-St, Fundament;85,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+4.2.20;Anschluss- und Überbrückungsbauteil;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+4.2.30;Verbinder;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+4.2.40;Erdungsfestpunkt;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+5.1.10;Verrechnungssatz Werkpolier;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+5.1.20;Verrechnungssatz Spezialfacharbeiter;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+5.1.30;Verrechnungssatz Facharbeiter;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+5.1.40;Verrechnungssatz Fachwerker;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+5.2.10;Verrechnungssatz Bagger 1,0 m³;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+5.2.20;LKW 7,5 t, mit Hebekran und Greifer;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
+5.2.30;Verrechnungssatz Kleingeräte;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.D83
 10;Einrichten der Baustelle, Freimachen der erforderlichen Geländeoberflächen. Benötigte Flächen zur Lagerung von Baumaterialien oder Geräteabstellflächen sind vom AN anzumieten. Herstellen erforderlicher Baustraßen, Lager- und Arbeitsplätze sonst wie im vorgehenden Hinweis.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.X83
 20;Vorhalten der Baustelleneinrichtung, ist in dieser Position einzurechnen. Notwendiges Neuanlegen von Baustraßen, Lager- und Arbeitsplätzen ist einzurechnen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.X83
 30;Räumen der Baustelle, Geländeoberflächen, auf denen sich Baustelleneinrichtungen befunden haben, dem früheren Zustand entsprechend wiederherstellen. Baustraßen und Befestigungen der Lager- und Arbeitsplätze beseitigen. Im Baugrund befindliche Teile der Baustelleneinrichtung (z.B. Fundamente, Pfähle,;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25-278 LV2_Betonplatten Salzsilo + Baustraße_260722.X83

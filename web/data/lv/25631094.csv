@@ -1,0 +1,53 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*Bew. Arbeitsst. Über 4 bis 8 Std.*B. Tageslicht;8,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+00000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*Bew. Arbeitsst. Über 4 bis 8 Std.*B. Tageslicht;8,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+00010001;Bankettregulierung ohne Schutzpl. Räumgut wird abgefahren Frästiefe bis 15 cm Arbeitsbreite bis 1,50 m;5708,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+00010002;Bankettregulierung ohne Schutzpl. Räumgut wird abgefahren Breite  bis 1,50 m, Zulage für Mehrtiefe 0 bis 5 cm;50,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+00020001;Bankettregulierung mit Schutzpl. Pfostenabstand 4,00 m Räumgut wird abgefahren Tiefe bis 15 cm, Breite bis 2,00 m;3610,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+00020002;Bankettregulierung mit Schutzpl. Pfostenabstand 2,00 m Räumgut wird abgefahren Tiefe bis 15 cm, Breite bis 2,00 m;600,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+00020003;Bankettregulierung mit Schutzpl. Pfostenabstand 1,33 m Räumgut wird abgefahren Tiefe bis 15 cm, Breite bis 2,00 m;50,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+00020004;Bankettregulierung mit Schutzpl. Räumgut wird abgefahren Breite  bis 1,50 m, Zulage für Mehrtiefe 0 bis 5 cm;50,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+00030001;Leitpfosten aufnehmen und lagern;5,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+00030002;Leitpfosten des AG aufstellen;5,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+00030003;Erdm.bes. von Hand an Schilderpfosten, Masten etc.;80,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+00030004;Erdm.bes. von Hand an Schutzplankenpfosten;1140,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+00040001;Grabenprofil wiederherstellen Aushub -0,50 m3/m*Räumgut beseitig.;400,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01000001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*Bew. Arbeitsst. Über 4 bis 8 Std.*B. Tageslicht;10,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*Bew. Arbeitsst. Über 4 bis 8 Std.*B. Tageslicht;10,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01010001;Bankettregulierung ohne Schutzpl. Räumgut wird abgefahren Frästiefe bis 15 cm Arbeitsbreite bis 1,50 m;14216,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01010002;Bankettregulierung ohne Schutzpl. Räumgut wird abgefahren Breite > 1,50 m, Tiefe bis 15 cm Zulage für 0,50 m Mehrbreite;50,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01010003;Bankettregulierung ohne Schutzpl. Räumgut wird abgefahren Breite  bis 1,50 m, Zulage für Mehrtiefe 0 bis 5 cm;50,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01010004;Bankettregulierung ohne Schutzpl. Räumgut wird abgefahren Breite > 1,50 m, für je 0,50 m Mehrbreite Zulage für 0 bis 5 cm Mehrtiefe;50,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01020001;Bankettregulierung mit Schutzpl. Pfostenabstand 4,00 m Räumgut wird abgefahren Tiefe bis 15 cm, Breite bis 2,00 m;2090,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01020002;Bankettregulierung mit Schutzpl. Pfostenabstand 2,00 m Räumgut wird abgefahren Tiefe bis 15 cm, Breite bis 2,00 m;50,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01020003;Bankettregulierung mit Schutzpl. Unter Schutzplanken 0 < 30 cm Pfostenabstand 4,00 m Räumgut wird abgefahren Tiefe bis 15 cm, Breite bis 2,00 m;2000,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01020004;Bankettregulierung mit Schutzpl. Unter Schutzplanken 0 < 30 cm Pfostenabstand 2,00 m Räumgut wird abgefahren Tiefe bis 15 cm, Breite bis 2,00 m;50,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01020005;Bankettregulierung mit Schutzpl. Räumgut wird abgefahren Frästiefe bis 15 cm Breite > 2,00 m Zulage je 0,50 m Mehrbreite:;50,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01020006;Bankettregulierung mit Schutzpl. Pfostenabstand 4,00 m Räumgut wird abgefahren Breite  bis 2,00 m, Zulage für Mehrtiefe 0 bis 5 cm;50,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01020007;Bankettregulierung mit Schutzpl. Pfostenabstand 2,00 m Räumgut wird abgefahren Breite  bis 2,00 m, Zulage für Mehrtiefe 0 bis 5 cm;50,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01020008;Bankettregulierung mit Schutzpl. Pfostenabstand 1,33 m Räumgut wird abgefahren Breite  bis 2,00 m Zulage für Mehrtiefe 0 bis 5 cm;50,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01020009;Bankettregulierung mit Schutzpl. Räumgut wird abgefahren Breite > 2,00 m, für je 0,50 m Mehrbreite Zulage für 0 bis 5 cm Mehrtiefe;50,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01030001;Bankettregulierung im Bereich Hochborde Räumgut wird abgefahren Höhe Hochborde bis 20 cm Frästiefe bis 15 cm;50,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01040001;Leitpfosten aufnehmen und lagern;20,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01040002;Leitpfosten des AG aufstellen;20,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01040003;Erdm.bes. von Hand an Schilderpfosten, Masten etc.;100,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01040004;Erdm.bes. von Hand an Schutzplankenpfosten;2050,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01040005;Erdm.bes. von Hand an Abläufen, Längs- und Querdurchlässen;20,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01040006;Verdichtung des Seitenstreifens nach Regulierungsarbeiten;18306,0;m2;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+01050001;Grabenprofil wiederherstellen Aushub -0,50 m3/m*Räumgut beseitig.;2570,0;m;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+02000001;N.gefährl. Abfall aus Baustelle entsorgen;1000,0;t;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+02000002;Gefährl. Abfall aus Baustelle entsorgen;100,0;t;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+02010001;Untersuchung nach EBV + weitere;20,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+02010002;Untersuchung nach DepV Anhang 3;20,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+02010003;Unters. Atmungsaktivität + Brennwert;6,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+02010004;Unters. Gasbildungsrate + Brennwert;6,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+02010005;Probeentnahme;20,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+02010006;Unters. Säureneutralisationskapazität;10,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+03000001;N.gefährl. Abfall aus Baustelle entsorgen;1000,0;t;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+03000002;Gefährl. Abfall aus Baustelle entsorgen;200,0;t;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+03010001;Untersuchung nach EBV + weitere;20,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+03010002;Untersuchung nach DepV Anhang 3;20,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+03010003;Unters. Atmungsaktivität + Brennwert;6,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+03010004;Unters. Gasbildungsrate + Brennwert;6,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+03010005;Probeentnahme;20,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83
+03010006;Unters. Säureneutralisationskapazität;10,0;St;gaeb-flat;leistungsbeschreibungen/25-0361SU.D83

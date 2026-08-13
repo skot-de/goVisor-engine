@@ -1,4 +1,136 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;Bauzaun aufstellen und nach Fertigstellung beseitigen;90,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+01.2;Leistung wie vor, jedoch parallel zu den schützenden Öl- und Gasleitungen;15,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+01.3;Toranlage im Bauzaun und an der neuen Baustellenzufahrt;1,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+01.4;Bauzaun umsetzen;50,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+01.5;Überfahrten für zu schützende Leitungstrassen aus Stahlplatten;1,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+01.6;Unterbau aus Kalkstein - und Recyclingschotter 0/45 mm ausbauen und innerhalb des Baugeländes wieder einbauen;40,0;m³;gaeb-flat;leistungsbeschreibungen/LV.D83
+02.1;Wegebeläge aus Betonsteinpflaster aufnehmen;10,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+02.2;Leistung wie vor, jedoch als Randeinfassung in 20 cm Breite auf 20 cm Beton verlegt;1,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+02.3;Betonplatten aus vorhandenen Belagsflächen, auf ca. 5 cm Sandbettung verlegt, aufnehmen und abfahren;5,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+02.4;Leistung wie Vorposition, jedoch in 5 cm Mörtelmischung verlegt;50,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+02.5;Ortbeton, nicht armiert, ausbauen und abfahren;1,0;m³;gaeb-flat;leistungsbeschreibungen/LV.D83
+02.6;Ortbetonfundamente, armiert, Betonplatten, ca. 20 - 40 cm stark, abbrechen und abfahren;1,0;m³;gaeb-flat;leistungsbeschreibungen/LV.D83
+02.7;Leistung wie Vorposition, jedoch Streifenfundamente 20 - 40 cm breit und 80 cm tief;1,0;m³;gaeb-flat;leistungsbeschreibungen/LV.D83
+02.8;Betonkantensteine, 6/20/100 cm und 8/20/100 cm, aufnehmen und abfahren;20,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+02.9;Unterbau von Wegeaufbauten ausbauen und im Gelände zum Wiedereinbau zwischenlagern;15,0;m³;gaeb-flat;leistungsbeschreibungen/LV.D83
+02.10;Schilder mit Rohrpfosten ausbauen und zwischenlagern;1,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+03.1;Einzelgehölze roden, laden und entsorgen;2,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+03.2;Gras- und Unkrautsoden abtragen, laden und abfahren;400,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+03.3;Im Baustellengelände lagernde alte Holzabfälle örtlich sammeln, laden und abfahren;0,5;t;gaeb-flat;leistungsbeschreibungen/LV.D83
+03.4;Baumischabfälle, Verpackungsreste, Kunststoffabfälle etc. sammeln und abfahren;2,5;t;gaeb-flat;leistungsbeschreibungen/LV.D83
+04.1;Oberboden aufnehmen und zwischenlagern;80,0;m³;gaeb-flat;leistungsbeschreibungen/LV.D83
+04.2;Auf Mieten lagernden Oberboden im Ausbauprofil in ebenen Rasenlfächen einbauen;40,0;m³;gaeb-flat;leistungsbeschreibungen/LV.D83
+04.3;Leistung wie vor, jedoch in den Bereichen Bodenmodellierung;40,0;m³;gaeb-flat;leistungsbeschreibungen/LV.D83
+04.4;Sandigen, unkrautfreien Oberboden liefern und in Pflanz- und Rasenflächen einbauen;65,0;m³;gaeb-flat;leistungsbeschreibungen/LV.D83
+04.5;Unterboden der späteren Pflanz- und Rasenflächen säubern;820,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+04.6;Bauseits auf Mieten lagernden Füllboden laden und örtlich einbauen;110,0;m³;gaeb-flat;leistungsbeschreibungen/LV.D83
+04.7;Suchgräben zur Ortung von Versorgungsleitungen;5,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+05.1;Gebrauchsrasenflächen in ebenen Bereichen ansäen;400,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+05.2;Gebrauchsrasenflächen in Böschungsbereichen ansäen;400,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+05.3;Rasenflächen 6 x schneiden;400,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+05.4;Leistung wie vor, jedoch auf Böschungsflächen max Steigung 1:5 bis 1.3;400,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+05.5;Rasenflächen nach dem 1. Schnitt düngen;800,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+05.6;Leistung wie Vorposition, jedoch 2. Düngergang.;800,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.1;Zu befestigende Baugrundflächen im Bereich von Wegeneubauten nachplanieren und verdichten;550,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.2;Leistung wie vor, jedoch im Bereich Bestandsparkplatz;1200,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.3;Wegeflächen mit 10 - 15 cm zu lieferndem Frostschutzkies 0/32 mm befestigen und verdichten;12,0;t;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.4;Frostschutzkies nach ZTV T-StB für Straßen mit Bauklasse II;12,0;t;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.5;Bauseits auf Mieten lagernden Bestandsschotter aufnehmen und einbauen;15,0;m³;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.6;Wegeflächen mit 25 cm zu lieferndem Recyclingschotter 0/45 mm befestigen und verdichten;200,0;t;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.7;Leistung wie vor, jedoch Flächen unter Bouleanlage;80,0;t;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.8;Basaltsplittrandsteine 8/20/100 cm;180,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.9;Kantensteine 10/30/100 cm;35,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.10;Dynamische Schicht wassergebundene Wegedecke in neuen Wegelinien;165,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.11;Wegedeckschicht aus Dolomitsteinsand auf neu gebauten Wegeabschnitten;165,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.12;Leistung wie vor, jedoch im Bereich Bestandsparkplatz;1200,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.13;Wasserdurchlässiges Betonpflaster 20/10/8 cm, mit Fase, grau;50,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.14;Betonpflaster 20/10/8 cm, mit Fase, grau;350,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.15;Binderschicht 20 cm breit - Farbe grau;5,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.16;Binderschicht 40 cm breit - Farbe grau;2,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.17;Fließrinne 30 cm breit - Farbe grau;5,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.18;Kantensteine, 8 - 10 cm stark, mit Motorschneidegerät schneiden;55,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.19;Sichtbaren, scharfen Schnitt bei Pflastersteinen 8 - 10 cm stark;180,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.20;Natursteinpflaster um Einbauten;3,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.21;Rechteckpflaster aufnehmen, reinigen und wieder verlegen;5,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.22;Schotterrasenflächen für stark beanspruchte Rasenflächen und Rasenwege;40,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.23;Schnitt in Asphaltflächen - Schnitttiefe 5 - 15 cm;30,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.24;Asphaltmaterial aus vorhandener Zufahrt ausbauen und fachgerecht entsorgen;0,5;t;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.25;Asphalttragschicht, Mischgutart CS, Körnung 0/32 mm, Schichtdicke 10 cm;15,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.26;Oberfläche der bitumenhaltigen Tragschichten reinigen;15,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.27;Bitumenhaltiges Bindemittel aufsprühen;15,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.28;Asphaltbetondeckschicht, Heißeinbau, Schichtdicke 4 cm (normale Beanspruchung);15,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+06.29;Fuge anlegen - Fugenbreite 8 mm, Fugentiefe 60 mm;32,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+07.1;Planum Spielflächen;125,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+07.2;Spielflächen nach Herstellung Grundplanum verdichten;125,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+07.3;Kantensteine 8/40/100 cm;20,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+07.4;Leistung wie vor, jedoch Kantensteine 8/40/50 lang;27,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+07.5;Natursteinbrocken, Ruhrsandstein, als Sitzsteine und Spielsteine liefern, transportieren und an Wegerändern und Spielflächen verlegen;10,0;t;gaeb-flat;leistungsbeschreibungen/LV.D83
+07.6;Betonplattenband, 30 cm breit, als Pflegeplatte;50,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+07.7;Spielsand liefern und einbauen;40,0;t;gaeb-flat;leistungsbeschreibungen/LV.D83
+07.8;Drain- und Tragschicht aus Natursteinschotter 8/22 mm;83,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+07.9;Fallschutzbelag aus Holzschnitzeln in 40 - 50 cm Stärke;38,0;m³;gaeb-flat;leistungsbeschreibungen/LV.D83
+07.10;Sicherheitstechnische Abnahme;1,0;psch;gaeb-flat;leistungsbeschreibungen/LV.D83
+08.1;Rohrgraben 70 - 100 cm tief und 60 cm breit;10,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+08.2;Entwässerungsleitung NW 100 mm;10,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+08.3;Hofablauf-Kombinationen ohne Geruchsverschluss;1,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+08.4;Kernbohrung, Durchmesser DN 100;1,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+08.5;Sickerschlag 1,00 x 1,00 m und 1,20 m tief;2,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+08.6;Auflageringe DIN 4034 aus Beton;3,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+08.7;Vorhandenen Bestandsschacht um ca. 25 cm anheben, einschl. Lieferung ungelochtes Betonrohr l. W. 100 cm, Höhe 25 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+08.8;Defekte und nicht mehr benötigte Ausgleichsringe abfahren;2,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+08.9;Aushub von Hand, für Aufgrabungsarbeiten;1,0;m³;gaeb-flat;leistungsbeschreibungen/LV.D83
+08.10;Leitungsgräben für Stromleitungen 60 cm tief und 30 - 40 cm breit;20,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+08.11;Flexibles Kunststoffrohr DN 100 mit Zugdraht;20,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+08.12;Schutz- und Drainsystem Gebäudefassaden als Noppenbahn mit einseitiger Vliesauflage;13,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+09.1;Drahtgitterzaun 2,03 m;5,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+09.2;Zulage: Endpfosten für den Zaun der Vorposition;1,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+09.3;Drehflügeltür, 2-flügelig, als Zugangstor, zweiseitig zu öffnen;1,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+09.4;Leistung wie vor, jedoch Personeneingangstor;1,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.1;Baumgruben;5,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.2;Volldünger (12+12+17);15,0;kg;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.3;Organisch-mineralischer NPK-Dünger (4+2+5);25,0;kg;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.4;Wasserspeichergranulat;50,0;kg;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.5;Hochstämme pflanzen;5,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.6;Hochstämme düngen;5,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.7;Gießrand HDPE herstellen;5,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.8;Dreiböcke liefern und aufstellen;5,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.9;Hochstämme und Solitärgehölze düngen;5,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.10;Rindenschutz mittels Stammschutzfarbe;5,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.11;Spätere Pflanzflächen durcharbeiten;20,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.12;Sträucher und Heckenpflanzen pflanzen;21,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.13;Bodendecker mit Topfballen pflanzen;26,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.14;Acer campestre 'Elsrijk';1,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.15;Acer rubrum 'Armstrong';1,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.16;Quercus palustris;1,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.17;Liquidambar styraciflua;1,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.18;Prunus avium 'Plena';1,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.19;Ligustrum vulgare 'Atrovirens', Heckenpflanzen, 125 - 150 cm;20,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.20;Spirea cineria 'Grefsheim' m.B. 125 - 150 cm.;1,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.21;Salix purpurea Nana 40 - 60 cm;5,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.22;Lonicera nitida Maigrün 40 - 50 cm;20,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.23;Hedera helix Woerner 60 - 80 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.24;Pflanzflächen, intensive Flächen, pflegen - 6 Pflegegänge;20,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.25;Zusammenhängende Bodendeckerflächen und Gehölzflächen bis 100 cm Höhe 10 x wässern;20,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.26;Leistung wie vor, jedoch Heckenpflanzen Höhe bis 2,00 m;10,0;m²;gaeb-flat;leistungsbeschreibungen/LV.D83
+10.27;Hochstamm-Bäume 10 x wässern;5,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+11.1;Spielplatzschild montieren;1,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+11.2;Sitzbänke mit Rückenlehne in Stahlgitterkonstruktion;5,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+11.3;Abfallbehälter mit Abdeckung 40 l;2,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+11.4;Spielhäuschen;1,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+11.5;Schaukelkombination;1,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+11.6;Balancierstruktur;1,0;St;gaeb-flat;leistungsbeschreibungen/LV.D83
+11.7;Umrandung Bouleanlage;28,0;m;gaeb-flat;leistungsbeschreibungen/LV.D83
+12.1;Vorarbeiter;5,0;h;gaeb-flat;leistungsbeschreibungen/LV.D83
+12.2;Facharbeiter;10,0;h;gaeb-flat;leistungsbeschreibungen/LV.D83
+12.3;Hilfsarbeiter;5,0;h;gaeb-flat;leistungsbeschreibungen/LV.D83
+12.4;Hydraulikbagger mit Kettenfahrwerk, Löffelkorbinahlt 0,5 bis 1,0 m³;3,0;h;gaeb-flat;leistungsbeschreibungen/LV.D83
+12.5;Radlader;3,0;h;gaeb-flat;leistungsbeschreibungen/LV.D83
+12.6;LKW 8 - 12 to;2,0;h;gaeb-flat;leistungsbeschreibungen/LV.D83
+12.7;Walzenzug;2,0;h;gaeb-flat;leistungsbeschreibungen/LV.D83
+12.8;Flächenrüttler;5,0;h;gaeb-flat;leistungsbeschreibungen/LV.D83
+12.9;Pumpe, 2 KW Leistung;8,0;h;gaeb-flat;leistungsbeschreibungen/LV.D83
+12.10;Minibagger einschl. Fahrer;8,0;h;gaeb-flat;leistungsbeschreibungen/LV.D83
 1;Bauzaun im Bereich Vorplatz neuen Sportgebäude und entlang Spielfeldseite aufstellen, für die Dauer der vertraglichen Ausführungsfrist vorhalten und beseitigen, Ausführung als Stabgitterzaun,;90,0;m;gaeb;leistungsbeschreibungen/LV_V33.X83
 2;Leistung wie vor, jedoch parallel zu den schützenden Öl- und Gasleitungen.;15,0;m;gaeb;leistungsbeschreibungen/LV_V33.X83
 3;Toranlage im Bauzaun und an der neuen Baustellenzufahrt;1,0;St;gaeb;leistungsbeschreibungen/LV_V33.X83

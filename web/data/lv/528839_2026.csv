@@ -101,3 +101,105 @@
 001;Facharbeiter;25,0;std;gaeb;vom_unternehmen_auszufuellende_dokumente/4_2026-07-24_LV Zimmerarbeiten.X83
 002;Helfer;25,0;std;gaeb;vom_unternehmen_auszufuellende_dokumente/4_2026-07-24_LV Zimmerarbeiten.X83
 003;Auszubildender;10,0;std;gaeb;vom_unternehmen_auszufuellende_dokumente/4_2026-07-24_LV Zimmerarbeiten.X83
+01.001;Werkstattpläne;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+01.002;Statische Nachweise der Verbindung und Verlegepläne;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+02.001;Baustelleneinrichtung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+02.002;Bautür;2,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+02.003;Bautür vorhalten;70,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301001;Außenwände ca. 460 mm EG;329,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301002;Außenwände ca. 460 mm OG;461,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301003;Innenwände ca. 275 mm EG Flurwände;339,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301004;Innenwände ca. 275 mm OG Flurwände;503,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301005;Innenwände ca. 240 mm EG Klassenraum;179,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301006;Innenwände ca. 240 mm OG Klassenraum;171,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301007;Außenwände ca. 425 mm Attika;10,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301008;Trennlage Außenwände b = 30 cm;181,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301009;Trennlage Innenwände b = 30 cm;282,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301010;Wandöffnungen für Fenster 1,34 x 2,895 m inkl. Sturz Schonnenschutz;2,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301011;Wandöffnungen für Fenster 1,34 x 2,00 m inkl. Sturz Schonnenschutz;31,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301012;Wandöffnungen für Fenster 2,015 x 2,00 m inkl. Sturz Schonnenschutz;10,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301013;Wandöffnungen für Fenster 1,34 x 2,00 m;5,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301014;Wandöffnungen für Pfosten-Riegel Fassade 5,24 x 6,76 m;5,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301015;Wandöffnungen für Pfosten-Riegel Fassade 2,20 x 6,76 m;5,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301016;Türöffnungen Außenwand 6,14 x 2,895 m;1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301017;Türöffnungen Außenwand 2,50 x 2,76 m;1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301018;Türöffnungen Innenwände anlegen ca. 1,01 x 2,26 m;28,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301019;Türöffnungen Innenwände anlegen ca. 2,18 x 2,50 m;3,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301020;Türöffnungen Innenwände anlegen ca. 2,38 x 2,50 m;2,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301021;Schwellholz EG Außenwand b = 20 cm;181,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301022;Schwellholz EG Innenwand b = 16 cm;188,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301023;Schwellholz EG Innenwand b = 12 cm;94,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301024;Untermörtelung der Wandelemente bzw. Schwellholz;463,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301025;Zulage Wechsel für Wanddurchbrüche 30/30;49,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301026;Zulage Wechsel für Wanddurchbrüche 50/15;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301027;Zulage Wechsel für Wanddurchbrüche 70/15;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301028;Zulage Wechsel für Wanddurchbrüche 80/40;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301029;Zulage Wechsel für Wanddurchbrüche 130/70;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301030;Zulage Wechsel für Wanddurchbrüche 170/40;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301031;Zulage Wechsel für Wanddurchbrüche 125/85;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301032;Fassadenbahn für offene Fassaden;784,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301033;Randträger Verbindungsgang 24 / 40 cm;2,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301034;Brettsperrholzdecke Hauptgebäude d = 28cm;667,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301035;Brettsperrholzdecke Verbindungsgang d = 28cm;24,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301036;Brettsperrholzdecke Verbindungsgang d = 16cm;10,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301037;Brettsperrholzdecke Verbindungsgang im Gefälle d = 16cm;28,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301038;Anlegen von Deckendurchbrüchen 20/20 cm;12,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301039;Anlegen von Deckendurchbrüchen 60/30 cm;1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301040;Anlegen von Deckendurchbrüchen 140/80 cm;1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0301041;Anlegen von Deckendurchbrüchen 160/80 cm;1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0302001;Mittelpfette HEB 260 Mehrzweckraum;1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0302002;Mittelpfette HEM 220 Mehrzweckraum;1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0302003;Unterzug Stahlträger HEA 360 Foyer;1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0302004;Unterzug Stahlträger HEB 300;1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0302005;Unterzug Stahlträger HEA 200 KG Außenraum;1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0302006;Stahl-Pendelstütze l= 2,75 m auf Einzelfundament KG Außenraum;2,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0302007;Stahl-Pendelstütze l= 3,4 m EG;4,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0302008;Stahl-Pendelstütze l= 4,5 m 1.OG;2,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0302009;Stahl-Pendelstütze l= 3,45 m EG;2,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0302010;Stahl-Pendelstütze l= 3,55 m OG;2,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0303001;Vordach herstellen;1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0304001;Brettschichtholz BSH GL24h;67,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0304002;Brettschichtholz verzimmern;1343,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0304003;Holzschalung OSB-Platten auf Sparren;730,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0304005;Zulage Holzschutz für Brettschichtholz BSH GL24h;1236,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0304006;Holz-Pendelstütze 16/16 cm;4,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0304007;Holz-Pendelstütze 12/16 cm;4,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0304008;Holz-Pendelstütze 12/16 cm;4,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0304009;Holz-Überzug 20/44 cm;2,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+04.001;Witterungsschutzbahn Dachfläche;730,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501001;AL-Tür, ca. 2,50 x 2,76 m mit OL (AT-03);1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501002;AL-Tür, ca. 1,34 x 2,26 m (AT-02);1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501003;AL-Fenster, ca. 1,34 x  2,00 m (F01-02,F05-06, F09-11,F12-15,F18-23,F24-27, F29-30,F32-35,F36-39,F44-47,F48);36,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501004;Zulage mechatronischer Beschlag für Rauchableitungsöffnung;1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501005;Kompaktzentrale;1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501006;Druckknopf-Notauslösetaster;2,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501007;AL-Fenster, ca. 1,34 x 2,895 m mit OL (F03, F08);2,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501008;AL-Fenster, ca. 2,015 x 2,00 m (F04, F07, F16, F17, F28, F30, F40-43);10,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501009;AL-Fenster, ca. 0,90 x  2,00 m neben Aufzugschacht;1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501010;AL-Fenster, ca. 0,90 x  2,40 m neben Aufzugschacht;1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501011;Zulage RC2 Verglasung, ca. 1,34 x 2,895 mit OL (F03, F08);2,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501012;Zulage RC2 Verglasung, ca. 1,34 x  2,00 m (F01-02,F05-06,F09-11,F12-15,F18-23);17,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501013;Zulage RC2 Verglasung, ca. 2,015 x 2,00 m (F04, F07, F16, F17);4,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501014;Zulage Arretierung und Dämpfung Fensterflügel;54,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501015;Provisorischer Schutz Fenster und Türen innen;156,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501016;OTS (2) EMR;2,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501017;Automatikantrieb 2-flg. Tür, Taster;2,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501018;"Zulage selbstverriegelndes Antipanik-Schloß ""E"" (SVP-E)";2,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501019;"Zulage selbstverriegelndes Antipanik-Schloß ""B"" (SVP-B)";1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501020;Zulage Sicherheitsmarkierungen Türflügel, L= ca. 1,20m;2,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501021;Zulage Sicherheitsmarkierungen Türflügel, L= ca. 1,00m;2,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501022;Zulage Sicherheitsmarkierungen Türflügel, L= ca. 0,55 m;6,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501023;Türbeschläge;3,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0501024;Griffstange für Türbeschläge als Zulage;2,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0502001;PRA-Fassade Verbindungsgang ca. 5,24 x 6,76 m;1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0502002;PRA-Fassade Verbindungsgang ca. 2,18 x 6,76 m;1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0502003;PRA-Fassade mit Türelement, ca. 6,10 x 2,80 m mit OL (EG) VSG;1,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0502004;Provisorischer Schutz Pfosten-Riegel-Fassade innen;66,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0503001;Fenstermarkise Textil 1,34 x 2,00 m;32,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0503002;Fenstermarkise Textil 1,34 x 2,895 m;2,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0503003;Fenstermarkise Textil 2,015 x 2,00 m;10,0;stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0504001;Alu-Blechverkleidungen;10,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+0504002;Alu-Winkel;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+06.001;Facharbeiter;25,0;std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+06.002;Helfer;25,0;std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83
+06.003;Auszubildender;10,0;std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/3_2026-07-24_LV Zimmerarbeiten.D83

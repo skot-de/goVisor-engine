@@ -1,4 +1,21 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+05000001;;;;gaeb-flat;leistungsbeschreibungen/564_MeSchu_VE05_Aufzugsanlage.d83
+05000001;;;;gaeb-flat;leistungsbeschreibungen/564_MeSchu_VE05_Aufzugsanlage.d83
+05000001;;;;gaeb-flat;leistungsbeschreibungen/564_MeSchu_VE05_Aufzugsanlage.d83
+05000001;;;;gaeb-flat;leistungsbeschreibungen/564_MeSchu_VE05_Aufzugsanlage.d83
+05010001;Sicherheits- und Baustelleneinrichtung;1,0;psch;gaeb-flat;leistungsbeschreibungen/564_MeSchu_VE05_Aufzugsanlage.d83
+05010002;Baufristenplan;1,0;psch;gaeb-flat;leistungsbeschreibungen/564_MeSchu_VE05_Aufzugsanlage.d83
+05010003;Aufzug;1,0;St;gaeb-flat;leistungsbeschreibungen/564_MeSchu_VE05_Aufzugsanlage.d83
+05010004;Raumhohes, selbsttragendes Aufzugstürportal aus Stahlblech;5,0;St;gaeb-flat;leistungsbeschreibungen/564_MeSchu_VE05_Aufzugsanlage.d83
+05010005;Lüftungsgitter, Lamellen, 175/1500 mm, farbbeschichtet;1,0;St;gaeb-flat;leistungsbeschreibungen/564_MeSchu_VE05_Aufzugsanlage.d83
+05010006;provisorisches Schließen;5,0;St;gaeb-flat;leistungsbeschreibungen/564_MeSchu_VE05_Aufzugsanlage.d83
+05020001;Notrufbereitschaftsvertrag;5,0;St;gaeb-flat;leistungsbeschreibungen/564_MeSchu_VE05_Aufzugsanlage.d83
+05020002;Abnahme Prüfsachverständiger;1,0;St;gaeb-flat;leistungsbeschreibungen/564_MeSchu_VE05_Aufzugsanlage.d83
+05020003;Technische Dokumentation;1,0;St;gaeb-flat;leistungsbeschreibungen/564_MeSchu_VE05_Aufzugsanlage.d83
+05020004;Aufzugswartung während der Gewährleistung;5,0;St;gaeb-flat;leistungsbeschreibungen/564_MeSchu_VE05_Aufzugsanlage.d83
+05030000;Die Ausführung von Stundenlohnarbeiten muss vor Beginn der Arbeiten schriftlich angezeigt und vom AG genehmigt werden.;;;gaeb-flat;leistungsbeschreibungen/564_MeSchu_VE05_Aufzugsanlage.d83
+05030001;Stundenlohn für Obermonteur;2,0;h;gaeb-flat;leistungsbeschreibungen/564_MeSchu_VE05_Aufzugsanlage.d83
+05030002;Stundenlohn für Monteur;2,0;h;gaeb-flat;leistungsbeschreibungen/564_MeSchu_VE05_Aufzugsanlage.d83
 1;Einrichten, Vorhalten, Betreiben und Räumen der eigenen Baustelleneinrichtung im Zusammenhang mit der bauseitigen Baustelleneinrichtung, sowie der übrigen Gewerke und für sämtliche in der Leistungsbeschreibung aufgefuhrten Leistungen.;1,0;psch;gaeb;leistungsbeschreibungen/564_MeSchu_VE05_Aufzugsanlage.x83
 2;Der AN hat einen Baufristenplan über seine vertraglichen Leistungen zu erstellen, anhand dessen die Einhaltung der Vertragsfristen nachgewiesen und überwacht werden kann. Die Vertragsfristen ergeben sich aus den Besonderen Vertragsbedingungen. Die Festlegungen des AG, z.B. zur baufachlichen oder ter;1,0;psch;gaeb;leistungsbeschreibungen/564_MeSchu_VE05_Aufzugsanlage.x83
 3;Personenaufzug, gemäß den Hinweisen mit Schachtausrüstung, elektrischer Installation, Steuerung, Fahrkorb- und Etagentableau sowie Zubehör wie folgt:;1,0;St;gaeb;leistungsbeschreibungen/564_MeSchu_VE05_Aufzugsanlage.x83

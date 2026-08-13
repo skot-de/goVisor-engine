@@ -86,3 +86,90 @@
 0001;Für evtl. erforderliche Arbeiten, die nicht in der Leistungsbeschreibung erfasst sind und nur auf ausdrückliche Anordnung durch den AG oder durch die Bauleitung gegen Nachweis zur Ausführung kommen, werden verrechnet für:;10,0;h;gaeb;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten_V33.X83
 0002;Für evtl. erforderliche Arbeiten, die nicht in der Leistungsbeschreibung erfasst sind und nur auf ausdrückliche Anordnung durch den AG oder durch die Bauleitung gegen Nachweis zur Ausführung kommen, werden verrechnet für:;10,0;h;gaeb;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten_V33.X83
 0003;Fach und materialgerechtes Schließen von Löchern, Aussparungen und Beschädigungen im Estrich.;10,0;l;gaeb;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten_V33.X83
+01000001;Baustelleneinrichtung: Lieferung, Vorhaltung, Räumung;1,0;psch;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01000002;Einmessung & Dokumentations Rohböden;1,0;psch;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01010001;Schutzabdeckungen angrenzender Bauteile nach Angabe BL;20,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01010002;Untergrundreinigung;280,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01010003;Lieferung & Einbau Wärmedämmung auf der Bodenplatte, WLG 035, d=2x120mm;280,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01010004;Mehrkosten Schichtstärkenänderung Wärmedämmung je 10mm;31,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01010005;Lieferung & Einbau Trittschalldämmung DES sm, d=20mm;280,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01010006;Lieferung & Einbau Randdämmstreifen, d=10mm, h~150mm;125,0;m;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01010007;Lieferung & Einbau Trennlage Kraftpapier, 1-lagig;280,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01010008;Lieferung & Einbau Calciumsulfat-Heizestrich, CA-F5-S90-H70, d=90mm;280,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01010009;Mehrkosten Schichtstärkenänderung, CA-F5-S90-H70;28,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01010010;Erstellung Bewegungsfugen ohne Fugenprofil;57,0;m;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01010011;Lieferung & Einbau Leitungsraumverfüllung, Schüttung, gebunden;30,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01010012;Anarbeitung Durchdringungen, A bis zu 0,1m²;11,0;St;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01010013;Estrich abstellen, bis 90mm;6,0;m;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01020001;Untergrundreinigung;26,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01020002;Lieferung & Einbau Wärmedämmung auf der Bodenplatte, WLG 040, d=360mm;22,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01020003;Lieferung & Einbau Calciumsulfat-Estrich, CA-F5-S65, d=65mm;26,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01020004;Mehrkosten Schichtstärkenänderung, CA-F5-S65;5,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01030002;Lohnstunden  Facharbeiter;10,0;h;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01030003;Lohnstunden  Helfer;10,0;h;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+01030004;Schließen von Löchern, Aussparungen und Beschädigungen im Estrich;10,0;l;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02000001;Baustelleneinrichtung: Lieferung, Vorhaltung, Räumung;1,0;psch;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02000002;Einmessung & Dokumentations Rohböden;1,0;psch;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02010001;Untergrundreinigung;94,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02010002;Lieferung & Einbau Wärmedämmung auf der Bodenplatte, EPS, WLG 035, d=100mm;18,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02010003;Lieferung & Einbau Wärmedämmung auf der Bodenplatte, EPS, WLG 035, d=130mm;77,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02010004;Mehrkosten Schichtstärkenänderung Wärmedämmung je 10mm;10,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02010005;Lieferung & Einbau Trittschalldämmung DES sm, d=20mm;94,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02010006;Lieferung & Einbau Randdämmstreifen, d=10mm, h~150mm;110,0;m;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02010007;Lieferung & Einbau Randdämmstreifen, d=10mm, h~150mm, nicht brennbar;22,0;m;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02010008;Lieferung & Einbau Trennlage Kraftpapier, 1-lagig;94,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02010009;Lieferung & Einbau Zement-Estrich, CT-C35-F5-S60;94,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02010010;Mehrkosten Schichtstärkenänderung, CT-C35-F5-S60;10,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02010011;Anarbeitung Durchdringungen, A bis zu 0,1m²;17,0;St;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02010012;Anarbeitung Durchdringungen, A bis zu 0,2m²;1,0;St;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02010013;Erstellung Bewegungsfugen ohne Fugenprofil;10,0;m;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02020001;Schutzabdeckungen angrenzender Bauteile nach Angabe BL;70,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02020002;Untergrundreinigung;564,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02020003;Lieferung & Einbau Wärmedämmung auf der Bodenplatte, EPS, WLG 035, d=100mm;290,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02020004;Lieferung & Einbau Wärmedämmung auf der Bodenplatte, EPS, WLG 035, d=130mm;274,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02020005;Mehrkosten Schichtstärkenänderung Wärmedämmung je 10mm;28,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02020006;Lieferung & Einbau Trittschalldämmung DES, MW, d=20mm;564,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02020007;Lieferung & Einbau Randdämmstreifen, d=10mm, h~150mm;360,0;m;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02020008;Lieferung & Einbau Randdämmstreifen, d=10mm, h~150mm, nicht brennbar;60,0;m;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02020009;Lieferung & Einbau Trennlage Kraftpapier, 1-lagig;564,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02020010;Lieferung & Einbau Calciumsulfat-Heizestrich, CA-F5-S90-H70, d=90mm;498,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02020011;Mehrkosten Schichtstärkenänderung, CA-F5-S90-H70;57,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02020012;Lieferung und Einbringung Trocknungsbeschleuniger;10,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02020013;Lieferung & Einbau Zement-Estrich, CT-C35-F5-S90-H70;66,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02020014;Mehrkosten Schichtstärkenänderung;10,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02020015;Gefälleausbildung Küchenabläufe;5,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02020016;Gefälleausbildung barrierefreie Dusche;2,4;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02020017;Anarbeitung Durchdringungen, A bis zu 0,1m²;38,0;m;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02020018;Anarbeitung Durchdringungen, A bis zu 0,2m²;5,0;St;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02020019;Erstellung Bewegungsfugen ohne Fugenprofil;93,0;m;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02020020;Estrich abstellen, bis 90mm;34,0;m;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02030001;Schutzabdeckungen angrenzender Bauteile nach Angabe BL;40,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02030002;Untergrundreinigung;425,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02030003;Lieferung & Einbau Profilausgleich als Schüttung, gebunden, d=20mm;425,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02030004;Lieferung & Einbau Wärmedämmung als Auffütterung, WLG 040, d=30mm;400,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02030005;Lieferung & Einbau Trittschalldämmung DES, d=20mm;425,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02030006;Lieferung & Einbau Randdämmstreifen, d=10mm, h~150mm;220,0;m;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02030007;Lieferung & Einbau Randdämmstreifen, d=10mm, h~150mm, nicht brennbar;40,0;m;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02030008;Lieferung & Einbau Trennlage Kraftpapier, 1-lagig;425,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02030009;Lieferung & Einbau Calciumsulfat-Heizestrich, CA-F5-S85-H65, d=85mm;57,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02030010;Lieferung & Einbau Calciumsulfat-Heizestrich, CA-F5-S90-H70, d=90mm;368,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02030011;Mehrkosten Schichtstärkenänderung, CA-F5-S90-H70;43,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02030012;Anarbeitung Durchdringungen, A bis zu 0,1m²;43,0;St;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02030013;Erstellung Bewegungsfugen ohne Fugenprofil;83,0;m;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02030014;Estrich abstellen, bis 90mm;30,0;m;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02040001;Schutzabdeckungen angrenzender Bauteile nach Angabe BL;33,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02040002;Untergrundreinigung;425,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02040003;Lieferung & Einbau Trennlage Rieselschutz;425,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02040004;Lieferung & Herstellung elastisch gebundene Schüttung, d=60mm;425,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02040005;Lieferung & Einbau Trittschalldämmung DES, d=20mm;425,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02040006;Lieferung & Einbau Randdämmstreifen, d=10mm, h~185mm;220,0;m;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02040007;Lieferung & Einbau Randdämmstreifen, d=10mm, h~150mm, nicht brennbar;40,0;m;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02040008;Lieferung & Einbau Trennlage Kraftpapier, 1-lagig;425,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02040009;Lieferung & Einbau Calciumsulfat-Heizestrich, CA-F5-S90-H70, d=90mm;425,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02040010;Mehrkosten Schichtstärkenänderung, CA-F5-S90-H70;43,0;m²;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02040011;Anarbeitung Durchdringungen, A bis zu 0,1m²;36,0;St;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02040012;Erstellung Bewegungsfugen ohne Fugenprofil;83,0;m;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02040013;Estrich abstellen, bis 90mm;30,0;m;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02050001;Lohnstunden  Facharbeiter;10,0;h;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02050002;Lohnstunden  Helfer;10,0;h;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83
+02050003;Schließen von Löchern, Aussparungen und Beschädigungen im Estrich;10,0;l;gaeb-flat;leistungsbeschreibungen/HvdV_06_LV-Estricharbeiten.D83

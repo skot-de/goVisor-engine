@@ -1,4 +1,31 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.0010;Ortstermin an der Baustelle, nach Auftragsvergabe,;1,0;Psch;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+01.0020;PV-Anlage;1,0;Psch;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+01.0030;Solarkabel mit ausreichendem Querschnitt;1,0;Psch;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+01.0040;Wechselrichter;5,0;St;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+01.0050;NA-Schutz;1,0;St;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+01.0060;Datenleitung verlegen zum Datenschrank;1,0;Psch;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+01.0070;Modulerdungsleitungen;1,0;Psch;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+01.0080;Anlagenüberwachung mittels Datenmanager;1,0;Psch;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+01.0090;Feuerwehrschalter;1,0;St;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+01.0100;Einspeisemanagement;1,0;Psch;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+01.0110;Überspannungsschutzgerät Typ 1/2;5,0;St;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+01.0120;Absturzsicherung, PSA gemäß DGUV Vorschrift, ASR und BG Bau;1,0;Psch;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+01.0130;Inbetriebnahme der PV-Anlage;1,0;Psch;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+01.0140;Unterverteilung für Wechselrichter;1,0;Psch;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+02.0010;Kabel NYCWY 4x16RE/16 vorh.Graben/Kabelkanalform;125,0;m;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+02.0020;Außenkabel symmetrisch A-2Y(L)2Y 10x2x0,8 STIII BD Nachfolgend aufgeführtes starres Rohr,;125,0;m;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+02.0030;Kunststoff - Stangenrohr DN 25 Gitterrinne;50,0;m;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+02.0040;Gitterrinne, Querschnitt bis 21.000 qmm (z. B. 100 x 105 mm) Kabelsteigtrasse feuerverzinkt, mittelschwere Ausführung;8,0;m;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+02.0050;Breite bis 200 mm Die nachfolgenden Schottungen und Verkleidungen;15,0;m;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+02.0060;Universal-Brandschott, Querschnitt bis 100 qcm;6,0;St;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+02.0070;Gerüstturm;1,0;Psch;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+02.0080;Absperrband;1,0;Psch;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+03.0010;Monteurstunden;8,0;h;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+03.0020;Auszubildenden-,Helferstunden;8,0;h;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+03.0030;Revisionsunterlagen;1,0;Psch;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+03.0040;Meldung im Marktstammdatenregister;1,0;Psch;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
+04.0010;Wartung PV Anlage;5,0;St;gaeb-flat;leistungsbeschreibungen/LV30 Photovoltaikanlagen.D83
 0010;Ortstermin an der Baustelle, nach Auftragsvergabe,;1,0;Psch;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
 0020;PV-Anlage mit einer Leistung von ca. 81,9 kWp;1,0;Psch;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
 0030;Solarkabel mit ausreichendem Querschnitt;1,0;Psch;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83

@@ -1,4 +1,258 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0101.1;Aufputz- Wasserzähler als Unterzähler zur Fernauslesung Druckminderer-Filter-Kombination, mechanisch wirkender,;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0101.2;Druckminderer- Filter- Kombination DN 32;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0101.3;Rückspülautomatik für Druckminderer- Filter- Kombination;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0101.4;Probeentnahmeventil DN 8;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0101.5;T-Stück zur Aufnahme Probeentnahmeventil;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.1;Edelstahl - Rohr 15 x 1,0 mm;88,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.2;Edelstahl - Rohr 18 x 1,0 mm;17,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.3;Edelstahl - Rohr 22 x 1,2 mm Edelstahl - Bogen;6,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.4;Edelstahl - Bogen 15 mm;76,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.5;Edelstahl - Bogen 18 mm Edelstahl - Muffe;8,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.6;Edelstahl - Muffe 15 mm;16,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.7;Edelstahl - Muffe 18 mm Edelstahl - Reduziermuffe;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.8;Edelstahl - Reduziermuffe 18 mm - 15 mm;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.9;Edelstahl - Reduziermuffe 22 mm - 15 mm;5,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.10;Edelstahl - Reduziermuffe 22 mm - 18 mm Edelstahl - T-Stück;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.11;Edelstahl - T-Stück 15 mm;17,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.12;Edelstahl - T-Stück 18 mm;3,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.13;Edelstahl - T-Stück 22 mm Edelstahl - Übergang;7,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.14;"Edelstahl - Übergangsstück 22 mm x 3/4"" Absperrventil";4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.15;Absperrventil DN 20 Rohrbefestigungen;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.16;Rohrbefestigungen DN 12;60,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.17;Rohrbefestigungen DN 15;15,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.18;Rohrbefestigungen DN 20;8,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.19;Spülen der TW-Leitungen;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.20;Dichtheitsprüfung und Inbetriebnahme;1,0;psch;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.21;Probennahme TrinkwV unmittelbar vor Beginn der Umschlußarbeiten;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.22;Probennahme TrinkwV unmittelbar vor Inbetriebsetzung;5,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.23;Bezeichnungsschild;12,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.24;Aufkleber Medium - Trinkwasser - Warm / Kalt / Zirkulation;12,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0102.25;Stahlkonstruktion;60,0;kg;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.1;Installationselement Waschtisch;11,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.2;Waschtisch 600 / 480 mm;11,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.3;Geruchsverschluss Waschtisch;11,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.4;Eckventil;18,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.5;Probenahme- Eckventil;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.6;Schallschutzset Waschtisch;11,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.7;Elektronische Waschtisch- Armatur;11,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.8;Papierhandtuchspender;6,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.9;Abfallsammler;6,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.10;Seifenspender 900 ml;11,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.11;Armhebelspender Desinfektionsmittel;11,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.12;Installationselement für WC;12,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.13;Tiefspül WC - wandhängend;12,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.14;WC- Sitz und Deckel;12,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.15;Schallschutzset WC;12,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.16;Betätigungsplatte WC;12,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.17;WC- Papierrollenhalter;12,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.18;Toilettenbürsten- Garnitur;12,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.19;Urinal - Installationselement;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.20;Urinal;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.21;Urinal - Schallschutzset;2,0;St.;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.22;Urinal - Steuerung berührungslos;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.23;Waschtisch Beh.- WC;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.24;Schallschutzset Beh.-Waschtisch;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.25;Schaftventil mit Haube aus Messing, rund;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.26;Anschlussbogen verchromt;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.27;Eckventil;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.28;Elektronische Waschtisch- Armatur;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.29;Kippspiegel;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.30;Behinderten WC;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.31;Schallschutzset Beh.- WC;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.32;Betätigungsplatte Beh.-WC;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.33;WC- Steuerung Kabel/Netz für Stützklappgriff;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.34;Stützklappgriff 850 mm mit Fernauslösung;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.35;Stützklappgriff 850 mm ohne Fernauslösung;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.36;Aufrüstsatz WC- Papierhalter;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.37;Rückenstütze Behinderten- WC;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.38;Installationselement Ausgussbecken;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.39;Ausgussbecken;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.40;Geruchsverschluss Ausgussbecken;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.41;Unterputz-Armatur für Mischwasser - Ausgussbecken;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.42;Unterputz-Mischeinheit für Mischwasser;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.43;Auslaufventil;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.44;Montagewinkel für Wandarmaturen;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.45;Klein-Durchlauferhitzer 6,5 kW;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.46;Durchlauferhitzer 13,5 KW;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.47;Versiegelung Wassermanagment- Server;28,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.48;Servereinheit für Wassermanagementsystem;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.49;Inbetriebnahme Wassermanagement;1,0;psch;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.50;Elektro-Verteilerkasten für Wassermanagmentsystem;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.51;BUS-Netzteil für Wassermanagmentsystem;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.52;BUS- Extender Kabel;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.53;Temperatur-Anlegefühler;5,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.54;Installationskabel J-H(St)H 2x2x0,8mm halogenfrei;300,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.55;Kunststoff- Panzerrohr FPku- EM- F- HO halogenfrei Nenngröße: M25;100,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.56;Abzweigdose mit Deckel und Deckelschraube, halogenfrei;20,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.57;Decken- Sammelaufhängung, halogenfrei;30,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0103.58;Schnurableitung für Hohlwand Iso- Schalterklemmdose;34,0;St.;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.1;SML - Rohr DN 100 SML - Bogen;36,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.2;SML - Bogen DN 100 SML - Abzweig;6,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.3;SML - Abzweig DN 100 SML - Reduzierstück;0,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.4;SML - Reduzierstück DN 100 - DN 80 SML - Fallrohrstützen;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.5;SML - Fallrohrstütze DN 100 SML - Reinigungsöffnung;12,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.6;SML - Reinigungsöffnung DN 100 SML - Verbinder;8,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.7;SML - Verbinder DN 100 SML - Sicherungsschelle für Verbinder;24,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.8;SML - Sicherungsschelle für Verbinder DN 100 SML - Anschlussmuffe SML auf PP;24,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.9;SML - Anschlussmuffe SML auf PP DN 80;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.10;SML - Anschlussmuffe SML auf PP DN 100 Mineralstoffverstärktes PP Abwasserrohr;8,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.11;Mineralstoffverstärktes PP - Rohr DN 50;18,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.12;Mineralstoffverstärktes PP - Rohr DN 70;6,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.13;Mineralstoffverstärktes PP - Rohr DN 100 Mineralstoffverstärktes PP - Bogen;30,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.14;Mineralstoffverstärktes PP - Bogen DN 50;25,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.15;Mineralstoffverstärktes PP - Bogen DN 70;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.16;Mineralstoffverstärktes PP - Bogen DN 100 Mineralstoffverstärktes PP - Abzweig;18,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.17;Mineralstoffverstärktes PP - Abzweig DN 50;8,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.18;Mineralstoffverstärktes PP - Abzweig DN 70;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.19;Mineralstoffverstärktes PP - Abzweig DN 100 Mineralstoffverstärktes PP - Übergang;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.20;Mineralstoffverstärktes PP - Übergang DN 70 - DN 50;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.21;Mineralstoffverstärktes PP - Übergang DN 100 - DN 50;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.22;Mineralstoffverstärktes PP - Übergang DN 100 - DN 70 Mineralstoffverstärktes PP - Reinigungsstück;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.23;Mineralstoffverstärktes PP - Reinigungsstück DN 100 Rohrbefestigungen;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.24;Rohrbefestigungen - DN 50;60,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.25;Rohrbefestigungen - DN 70;8,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.26;Rohrbefestigungen - DN 80;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.27;Rohrbefestigungen - DN 100 Bodenablauf;24,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.28;Bodenablauf - Aufstockelement;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.29;Bodenablauf - Aufsatzrahmen;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.30;Bodenablauf - Rost Anschluß an Grundleitung bis DN 100;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.31;Anschluß an Grundleitung - DN 100;8,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.32;Anschluß an Grundleitung - DN 125 Anschluß an Dachentlüftung;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.33;Anschluß an Dachentlüftung - DN 100;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.34;Bezeichnungsschild;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0104.35;Stahlkonstruktion;60,0;kg;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.1;Mineralwolle alukaschiert - Rohr DN 12;90,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.2;Mineralwolle alukaschiert - Rohr DN 15;18,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.3;Mineralwolle alukaschiert - Rohr DN 20;6,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.4;Mineralwolle alukaschiert - Rohr DN 25;125,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.5;Mineralwolle alukaschiert - Rohr DN 80 - SML;2,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.6;Mineralwolle alukaschiert - Rohr DN 100 - SML Mineralwolle alukaschiert - Bogen;36,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.7;Mineralwolle alukaschiert  - Bogen DN 12;76,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.8;Mineralwolle alukaschiert - Bogen DN 15;8,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.9;Mineralwolle alukaschiert - Bogen DN 20;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.10;Mineralwolle alukaschiert - Bogen DN 100 - SML Mineralwolle alukaschiert  - Ausschnitt;6,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.11;Mineralwolle alukaschiert  - Ausschnitte DN 12;20,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.12;Mineralwolle alukaschiert  - Ausschnitte DN 15;20,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.13;Mineralwolle alukaschiert  - Ausschnitte DN 20;20,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.14;Mineralwolle alukaschiert  - Ausschnitte DN 80 - SML;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.15;Mineralwolle alukaschiert  - Ausschnitte DN 100 - SML Mineralwolle alukaschiert  - Reduzierung;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.16;Mineralwolle alukaschiert - Reduzierung/Übergangsstück DN 15;20,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.17;Mineralwolle alukaschiert - Reduzierung/Übergangsstück DN 20;6,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.18;Mineralwolle alukaschiert - Reduzierung/Übergangsstück DN 25 Mineralwolle alukaschiert  - Einbauteile;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.19;Mineralwolle alukaschiert  - Einbauteile DN 12;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.20;Mineralwolle alukaschiert  - Einbauteile DN 15;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.21;Mineralwolle alukaschiert  - Einbauteile DN 20;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.22;Mineralwolle alukaschiert  - Einbauteile DN 25;3,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.23;Mineralwolle alukaschiert  - Einbauteile DN 32 Dämmschlauch;3,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.24;Dämmschlauch DN 12;30,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0105.25;Dämmschlauch DN 15;30,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0106.1;Brandschutz für Rohrdurchführungen R 90 DN 12;2,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0106.2;Brandschutz für Rohrdurchführungen R 90 DN 15;4,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0106.3;Brandschutz für Rohrdurchführungen R 90 DN 20 Brandschutz für Rohrdurchführungen R 90;1,2;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0106.4;Brandschutz für Rohrdurchführungen R 90 DN 50;0,6;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0106.5;Brandschutz für Rohrdurchführungen R 90 DN 100 Brandschutzmanschette Mischinstallation;4,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0106.6;Brandschutzmanschette Mischinstallation DN 50;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0106.7;Brandschutzmanschette Mischinstallationen DN 80;2,0;;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0106.8;Brandschutzmanschette Mischinstallation DN 100 Außstopfen von Fugen und Restspalte;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0106.9;Außstopfen von Fugen und Restspalte - bis 5 cm;1,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0106.10;Außstopfen von Fugen und Restspalte - 5 cm bis 10 cm;2,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0106.11;Außstopfen von Fugen und Restspalte - Deckenmontage;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0106.12;Außstopfen von Fugen und Restspalte - Wandmontage;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0106.13;Verschließen von Fugen und Restspalte - bis 5 cm;1,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0106.14;Verschließen von Fugen und Restspalte - 5 cm bis 10 cm;0,6;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0106.15;Verschließen von Fugen und Restspalte - Deckenmontage;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0106.16;Verschließen von Fugen und Restspalte - Wandmontage;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0201.1;Chromstahl - Rohr 15 x 1,0 mm;54,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0201.2;Chromstahl - Rohr 18 x 1,0 mm;3,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0201.3;Chromstahl - Rohr 22 x 1,2 mm Edelstahl - Bogen;34,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0201.4;Edelstahl - Bogen 15 mm Edelstahl - Muffe;20,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0201.5;Edelstahl - Muffe 15 mm;8,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0201.6;Edelstahl - Muffe 18 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0201.7;Edelstahl - Muffe 22 mm Edelstahl - Reduziermuffe;8,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0201.8;Edelstahl - Reduziermuffe 18 mm - 15 mm;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0201.9;Edelstahl - Reduziermuffe 22 mm - 18 mm Edelstahl - T-Stück;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0201.10;Edelstahl - T-Stück 18 mm;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0201.11;Edelstahl - T-Stück 22 mm Edelstahl - Übergang;8,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0201.12;"Edelstahl - Übergangsstück 15 mm x 1/2""";2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0201.13;"Edelstahl - Übergangsstück 18 mm x 1/2"" Rohrbefestigungen";2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0201.14;Rohrbefestigungen DN 12;40,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0201.15;Rohrbefestigungen DN 15;20,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0201.16;Rohrbefestigungen DN 20;30,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0201.17;Stahlkonstruktion;50,0;kg;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0201.18;Aufkleber Medium - Heizung;12,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0201.19;Füllen / Entlüften Gesamtanlage - 1.000 l;1,0;psch;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0201.20;Druckprobe in Stufen;1,0;psch;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0202.1;Kugelhahn - DN 20;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0203.1;Heizwand, T 104 mm, H 2.000 mm, L 840 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0203.2;Heizwand, T 104 mm, H 2.000 mm, L 910 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0203.3;Heizwand, T 104 mm, H 2.000 mm, L 1120 mm;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0203.4;Hebewerkzeuge zur Heizkörpermontage;8,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0203.5;Thermostat-Ventil - Vorlauf;8,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0203.6;Heizkörperverschraubung - Rücklauf;8,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0203.7;Thermostatkopf;8,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0203.8;Thermostatkopf Behördenmodell;8,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0203.9;Kunststoffrosetten;16,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0204.1;Brandschutz für Rohrdurchführungen R 90 DN 20 Außstopfen von Fugen und Restspalte;1,2;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0204.2;Außstopfen von Fugen und Restspalte - bis 5 cm;0,6;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0204.3;Außstopfen von Fugen und Restspalte - Wandmontage;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0204.4;Verschließen von Fugen und Restspalte - bis 5 cm;0,6;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0204.5;Verschließen von Fugen und Restspalte - Wandmontage;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0205.1;Mineralwolle alukaschiert - Rohr DN 12;54,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0205.2;Mineralwolle alukaschiert - Rohr DN 15;3,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0205.3;Mineralwolle alukaschiert - Rohr DN 20 Mineralwolle alukaschiert - Bogen;34,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0205.4;Mineralwolle alukaschiert  - Bogen DN 12 Mineralwolle alukaschiert  - Ausschnitt;20,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0205.5;Mineralwolle alukaschiert  - Ausschnitte DN 12;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0205.6;Mineralwolle alukaschiert  - Ausschnitte DN 15;8,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0205.7;Mineralwolle alukaschiert  - Ausschnitte DN 20 Mineralwolle alukaschiert  - Einbauteile;8,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0205.8;Mineralwolle alukaschiert  - Einbauteile DN 20;4,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0301.1;Demontage Schmutzwasser - Guss-Rohrleitungen DN 50;5,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0301.2;Demontage Schmutzwasser - Guss-Rohrleitungen DN 80;5,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0301.3;Demontage Schmutzwasser - Guss-Rohrleitungen DN 100 Demontage Schmutzwasser - Kunststoff- Rohrleitungen;10,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0301.4;Demontage Schmutzwasser - Kunststoff- Rohrleitungen DN 40/50;10,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0301.5;Demontage Schmutzwasser - Kunststoff- Rohrleitungen DN 100 Absperren von Trinkwasserleitungen;2,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0301.6;Absperren von Trinkwasserleitungen DN 32;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0301.7;Demontage von Wasch- und Ausgussbeckenanlage;8,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0301.8;Demontage von Toiletten- und Urinalanlage Demontage von Trinkwasser Rohrleitungen;8,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0301.9;Demontage von Trinkwasser Rohrleitungen DN 12;40,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0301.10;Demontage von Trinkwasser Rohrleitungen DN 15;20,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0301.11;Demontage von Trinkwasser Rohrleitungen DN 20;10,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0301.12;Demontage von Trinkwasser Rohrleitungen DN 25;10,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0301.13;Demontage von Trinkwasser Rohrleitungen DN 32;10,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0302.1;Absperren von Heizungsleitungen DN 32 Demontage von Rohrleitungen;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0302.2;Demontage von Rohrleitungen, DN 12;40,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0302.3;Demontage von Rohrleitungen, DN 15;40,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0302.4;Demontage von Rohrleitungen, DN 20;20,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0302.5;Demontage von Rohrleitungen, DN 25 Demontage von Heizkörpern;20,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0302.6;Demontage von Heizkörpern - 600 mm;12,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0302.7;Demontage von Heizkörpern - Stückzulage;6,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0302.8;Entleerung der Heizungsanlage;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0401.1;Erstellen von Kernb. Ansetzen vom Gerät;16,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0401.2;Zuschlagsposition Kernbohrungen Kernbohrung;5,0;cm²;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0401.3;Kernbohrung bis 60 mm;0,9;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0401.4;Kernbohrung 61 bis 80 mm;0,575;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0401.5;Kernbohrung 81 bis 100 mm;2,0;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0401.6;Kernbohrung 101 bis 130 mm;0,6;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0401.7;Kernbohrung 131 bis 150 mm;1,2;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0401.8;Kernbohrung 151 bis 180 mm Herstellen von Trockenbau Öffnungen;1,2;m;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0401.9;Herstellen von Trockenbau Öffnungen bis 100 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0401.10;Herstellen von Trockenbau Öffnungen bis 150 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0501.1;Leitern und Rollgerüste;1,0;psch;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0501.2;Prüfen der bauseits angelegten Durchbrüche;1,0;psch;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0501.3;Dokumentation Bautagebuch;1,0;psch;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0501.4;Dokumentation Brandschutz;1,0;psch;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0502.1;Anlagenschemata Trinkwasseranlage;1,0;psch;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0502.2;Anlagenbuchs gemäß VDI 6023;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0502.3;Anlagenschemata Heizungsanlage;1,0;psch;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0502.4;Anlagenbuch gemäß VDI 2035;1,0;St;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0502.5;Revisionsunterlagen Sanitärinstallationsarbeiten:;1,0;psch;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0502.6;Revisionsunterlagen Heizungsinstallationsarbeiten:;1,0;psch;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0503.1;Monteurstunden (4. Berufsjahr);20,0;h;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0503.2;Montagehelfer (2. Berufsjahr);20,0;h;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0601.1;Wartung der Anlagen für das 1. Jahr;1,0;psch;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0601.2;Wartung der Anlagen für das 2. Jahr;1,0;psch;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0601.3;Wartung der Anlagen für das 3. Jahr;1,0;psch;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
+0601.4;Wartung der Anlagen für das 4. Jahr;1,0;psch;gaeb-flat;leistungsbeschreibungen/2- 260703 2768 LV Sanitär Heizung 1.BA X83.D83
 1;Aufputz- Wasserzähler als Unterzähler zur Fernauslesung vorbereitet zur Aufnahme von Kommunikationsmodulen:;1,0;St;gaeb;leistungsbeschreibungen/2 - 260703 2768 LV Sanitär Heizung 1.BA X83_V33.X83
 2;Leistung wie zuletzt in vollem Wortlaut beschrieben, jedoch;1,0;St;gaeb;leistungsbeschreibungen/2 - 260703 2768 LV Sanitär Heizung 1.BA X83_V33.X83
 3;Rückspülautomatik für zuvor beschriebene Druckminderer- Filter- Kombination, elektronische, vollautomatische Rück- spülung, mit motorbetriebener Absperrung, Stromversorgung über Schukostecker, Nachlaufautomatik bei Stromausfall mit Batterien, Einstellungen bleiben bei Stromausfall erhalten, Anschlus;1,0;St;gaeb;leistungsbeschreibungen/2 - 260703 2768 LV Sanitär Heizung 1.BA X83_V33.X83

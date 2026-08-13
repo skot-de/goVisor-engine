@@ -216,3 +216,220 @@
 2;Wartungspreis nach dem zweiten Betriebsjahr;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung_V33.X83
 3;Wartungspreis nach dem dritten Betriebsjahr;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung_V33.X83
 4;Wartungspreis nach dem vierten Betriebsjahr;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung_V33.X83
+0101.1;Lüftungsanlage Neubau, 11.000 m³/h, mit PWT (Anlage 1);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0101.2;Geräteunterlage, Dämmstreifen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0101.3;Radial Rohrventilator, 30 m³/h (UG Bestandsgebäude);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.1;Gerade Kanäle, bis 500 mm Kantenlänge;160,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.2;Formstück-Kanäle, bis 500 mm Kantenlänge;340,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.3;Gerade Kanäle, über 500 bis 1000 mm Kantenlänge;65,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.4;Formstück-Kanäle, über 500 bis 1000 mm Kantenlänge;75,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.5;Gerade Kanäle, über 1000 bis 1500 mm Kantenlänge;6,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.6;Formstück-Kanäle, über 1000 bis 1500 mm Kantenlänge Wickelfalzrohr und Formteile;50,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.7;Wickelfalzrohr Rohrdurchmesser 100 mm;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.8;Wickelfalzrohr Rohrdurchmesser 160 mm;8,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.9;Wickelfalzrohr Rohrdurchmesser 200 mm;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.10;Wickelfalzrohr Rohrdurchmesser 250 mm;18,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.11;Wickelfalzrohr Rohrdurchmesser 280 mm 15 - 90°- Bogen, wie unter Wickelfalzrohr beschrieben;2,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.12;15 - 90°- Bogen, Rohrdurchmesser 100 mm;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.13;15 - 90°- Bogen, Rohrdurchmesser 160 mm;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.14;15 - 90°- Bogen, Rohrdurchmesser 200 mm;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.15;15 - 90°- Bogen, Rohrdurchmesser 250 mm;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.16;15 - 90°- Bogen, Rohrdurchmesser 280 mm Reduzierungen, wie unter Wickelfalzrohr beschrieben;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.17;Übergänge, größter Durchmesser 200 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.18;Übergänge, größter Durchmesser 280 mm T-Stücke / Abzweigstücke 90°, wie unter Wickelfalzrohr beschrieben;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.19;Abzweigstücke 90°, größter Durchmesser 160 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.20;Abzweigstücke 90°, größter Durchmesser 200 mm Bundkragen, wie unter Wickelfalzrohr beschrieben;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.21;Bundkragen, Durchmesser 160 mm Muffe, zum Verbinden zweier Formstücke;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.22;Muffe, Ø 100 mm;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.23;Muffe, Ø 160 mm;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.24;Muffe, Ø 250 mm Flexible Lüftungsrohre, aus Alu, 2- lagig;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.25;Flexibles Rohr, Durchmesser 160 mm;2,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.26;Flexibles Rohr, Durchmesser 250 mm Inspektionsdeckel für rechteckige Kanäle;6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.27;Insp.deckel f.rechteckige Kanäle, 300/150 mm Inspektionsdeckel, für isolierte, rechteckige Kanäle;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.28;Insp.deckel f. isloierte,rechteckige Kanäle, 200/100 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.29;Insp.deckel f.isolierte,rechteckige Kanäle, 300/150 mm;21,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.30;Insp.deckel f.isolierte,rechteckige Kanäle, 400/200 mm;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.31;Insp.deckel f.isolierte,rechteckige Kanäle, 400/300 mm Inspektionsdeckel für Blechverkleidung Kanäle im Außenbereich;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.32;Insp.deckel f.rechteckige Kanäle, 500/300 mm;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.33;Insp.deckel f.rechteckige Kanäle, 500/400 mm Inspektionsdeckel für Wickelfalzrohre;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.34;Revisionsdeckel für Rohr Ø 160, 200x100 mm;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.35;Kanalstutzen, schräg, 750/755 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.36;Kanalstutzen, schräg, 1100/755 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.37;Rohrstutzen, schräg, Ø 100 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.38;Dachdurchführungen Kanal, bis 0,1 m²;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.39;Dachdurchführungen Kanal, bis 0,25 m²;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0102.40;Dachhaube, 600x500 mm, H=1000 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.1;Eckige Brandschutzklappe 300x200 mm, mit Motor;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.2;Eckige Brandschutzklappe 400x200 mm, mit Motor;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.3;Eckige Brandschutzklappe 450x200 mm, mit Motor;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.4;Eckige Brandschutzklappe 250x250 mm, mit Motor;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.5;Eckige Brandschutzklappe 300x250 mm, mit Motor;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.6;Eckige Brandschutzklappe 450x250 mm, mit Motor;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.7;Eckige Brandschutzklappe 200x300 mm, mit Motor;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.8;Eckige Brandschutzklappe 400x300 mm, mit Motor Brandschutzklappen in runder Bauform, mit Motor;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.9;Runde Brandschutzklappe, Ø 100 mm, mit Motor;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.10;Runde Brandschutzklappe Ø 125 mm, mit Motor;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.11;Runde Brandschutzklappe Ø 160 mm, mit Motor Brandschutzklappen in runder Bauform, mit Endlagenschalter;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.12;Runde Brandschutzklappe Ø 100 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.13;Flexibler Stutzen 300 x 200 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.14;Flexibler Stutzen 450 x 200 mm;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.15;Flexibler Stutzen Ø 125 mm;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.16;Flexibler Stutzen Ø 160 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.17;Potentialausgleich;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.18;VVS-Regler, 200x200 mm, mit SD, 800 m³/h;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.19;VVS-Regler, 200x200 mm, mit SD, 350 m³/h;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.20;VVS-Regler, 300x200 mm, mit SD;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.21;VVS-Regler, 400x200 mm, mit SD;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.22;VVS-Regler, Ø200 mm, ohne SD, 350 m³/h Konstantvolumenstromregler in runder Bauform;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.23;KVR Ø100;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.24;Kanalschalldämpfer, 300x300x1000 mm Rohrschalldämpfer;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.25;Rohrschalldämpfer, Ø100/200 mm, L=500 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.26;Rohrschalldämpfer, Ø125/225 mm, L=1000 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.27;Rohrschalldämpfer, Ø160/260 mm, L=500 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.28;Rohrschalldämpfer, Ø200/300 mm, L=500 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0103.29;Rohrschalldämpfer, Ø200/300 mm, L=1000 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0104.1;Verstellbarer Dralldurchlass 600x24 - Zuluft;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0104.2;Dralldurchlass 600x24 - Abluft, bis 1000 m³/h;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0104.3;Quellluftdurchlass, Wandeinbau, 600x1000 mm, 350 m³/h;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0104.4;Quellluftdurchlass, Wandeinbau, 1200x1000 mm, 800 m³/h;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0104.5;Lüftungsgitter aus verzinktem Stahlblech, schwarz, 425/125 mm, Zuluft;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0104.6;Lüftungsgitter aus verzinktem Stahlblech, schwarz, 625/125 mm, Abluft;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0104.7;Schlitzdurchlässe als Schlitzschiene, L=3.600 mm, 1.000 m³/h;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0104.8;Wetterschutzgitter, ALU, Ø 100 mm Lüftungsventile in runder Ausführung;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0104.9;Lüftungsventile in runder Ausführung, Durchmesser 100 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0104.10;Lüftungsventile in runder Ausführung, Durchmesser 160 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0105.1;Dämmung wetterfest, Kanal und Formteile, Miwo + Alu-Blech,;340,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0105.2;Dämmung für Zu- und Abluftkanäle sowie Wickelfalzrohr, în abgeh. Decken und in Technikzentralen über 2 m Höhe nach DIN 4140;420,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0105.3;Stopfwolle zum ausstopfen von Ringspalten bei Rohr und Kanaldurchführungen;1,0;Sack;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0106.1;Splitgerät 2,5 kW mit Ausseneinheit;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0106.2;Dämpfungssockel + Erhöhung + Vlies;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0106.3;Dachdurchführung aus Edelstahl, Ø 150 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0106.4;Kupferrohr 6 * 1,0 mm;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0106.5;Kupferrohr 12 * 1,0 mm;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0106.6;Kupferrohr 22 * 1,0 mm;18,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0106.7;Kupferrohr 28 * 1,0 mm;4,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0106.8;Kältedämmung Rohrleitung DN 6;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0106.9;Kältedämmung Rohrleitung DN 12;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0106.10;Kältedämmung Rohrleitung DN 6 + mit Stoßschutz;2,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0106.11;Kältedämmung Rohrleitung DN 12 + mit Stoßschutz;23,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0106.12;Kältedämmung Rohrleitung DN 22 + mit Stoßschutz;18,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0106.13;Kältedämmung Rohrleitung DN 28 + mit Stoßschutz;4,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0106.14;Lieferung von Kältemittel und Befüllen;10,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0106.15;Montagesystem zur schonenden Aufstellung von Kältegeräten;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0107.1;Erstellen einer Kabelliste & Positionsplan;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0107.2;Bestands- und Revisionsunterlagen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0107.3;Anlagenschema in Zentrale;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0107.4;Fotodokumentation Brandschutzklappen-Einbau;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0107.5;Kranstellung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0107.6;Fahrbare Gerüste für die Montage der Installationen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0107.7;Begleitung der Sachverständigenprüfung und -abnahme;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0107.8;Raumweise Messung und Dokumentation der Volumenströme und der Temperatur;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0107.9;Profilstahlkonstruktion;700,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0107.10;Verschottung von Brandschutzklappen, Fugenbreite bis 75 mm;35,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0107.11;Betonplatten 40 x 40 x 5 cm, mit Bohrung;100,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0107.12;Gummigranulatplatten 40 x 40 x 3 cm;100,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0107.13;Bezeichnungsschilder, 60x30 mm;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0107.14;Bezeichnungsschilder, 25 x 15 mm;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0107.15;Bezeichnungsschilder, Ø 50 mm;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0107.16;Luftrichtungspfeile;50,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0108.1;Montagestunde für Projektleiter;4,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0108.2;Montagestunde für Obermonteur;12,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0108.3;Montagestunde für Monteur;16,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0108.4;Montagestunde für Fachhelfer;6,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0201.1;Aussentemperaturfühler Ni 1000;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0201.2;Raumbediengerät mit Hupe;13,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0202.1;Automationsstation ( AS ) ASP01;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0202.2;I/O Modul8UI/8DI Universal/Digital;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0202.3;I/O Modul 6DO (Relais);2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0202.4;I/O Modul 8UI/4AO/3DI Univ/Anal.;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0202.5;I/O Modul 16DI Digital;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0202.6;Patchkabel CAT6A S-FTP, grau, 2 m;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0202.7;M-Bus Kommunikationsmodul;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0202.8;Raum Controller für Aufschaltung der Raumbediengeräte;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0203.1;Binäre Ausgabe Schalten/ Stellen (1.1);49,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0203.2;Analoge Ausgabe Stellen (1.2);6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0203.3;Binäre Eingabe Melden (1.3);55,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0203.4;Binäre Eingabe Zählen (1.4);4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0203.5;Analoge Eingabe Messen (1.5);3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0203.6;Binärer Ausgabewert Schalten (2.1);6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0203.7;Analoger Ausgabewert, Stellen/Sollwert (2.2);26,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0203.8;Binärer Eingabewert Melden (2.3);6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0203.9;Zählwerteingabe (2.4);8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0203.10;Analoger Eingabewert Messung (2.5);27,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0203.11;Grafik/Anlagenbild (8.1);10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0203.12;Dynamische Einblendung (8.2);199,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0203.13;Ereignisanweisungstext (8.3);15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0203.14;Nachricht an externe Stellen (8.4);13,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.1;Standschrank 2000/800/500;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.2;Schaltschrank Seitenwand Paar;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.3;Aufbau - Sichtfenster 800 / 600 / 60;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.4;Schaltschrankbeleuchtung mit Steckdose;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.5;Einspeisung 400V bis 63A mit Leistsch.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.6;Automatische Wiedereinschaltung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.7;Sammelschienensystem;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.8;Klapplade für Tastatur und Maus, 800 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.9;Universalmessgerät busfähig;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.10;Spannungsüberwachungsrelais;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.11;Baugruppe Drehstrom 4-Leiter-Zähler M-Bus;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.12;Lüfter, Filter, Thermostat;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.13;Überspannungsschutz Einspeisung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.14;Überspannungsschutz Datenleitung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.15;Überspannungsschutz Aussenfühler;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.16;Steuerspannungstrafo 400V/230VAC 500VA;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.17;Steuerspannungstrafo 400V / 24V AC 500VA;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.18;Erdschlussüberwachung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.19;Netzgerät 6A 24V DC;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.20;Fehlerstromüberwachung Steckd./Beleucht.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.21;Sicherungsabgang 1pol. 16A Automat HK;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.22;Sicherungsabgang 3pol. 16A Automat HK;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.23;Leistungsabgang 1pol. 16A schaltbar;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.24;NOT AUS Schaltung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.25;Überwachung Externe Meldung;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.26;Ansteuerung für VVR;26,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.27;Brandschutzklappensteuerung Auf/Zu;21,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.28;BMA-Abschaltung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.29;Sammelstörung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.30;Reset von DDC;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.31;Hilfsschütz;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.32;Koppelrelais steckbar;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.33;Cat. 6 Netzwerkanschlussdose 2x RJ45;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.34;Einbau und Verdrahtung modulare AS;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.35;Einbau und Verdrahtung Feldmodule;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.36;Einbau Bediengerät AS;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.37;Handbedienebene VDI 3814;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.38;Ausführungsprojektierung Schaltanlagen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.39;Lieferung und Montage Schaltanlagen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.40;Inbetriebnahme Schaltanlagen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0204.41;Erstellen der Schaltpläne;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0205.1;"17""Panel PC, 320GB,4GB RAM, Win 7";1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0205.2;Remote Manag.Connec.Univ.Gateway,2Ports;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0205.3;Remote Management Basic Connector Abonnement inkl. 5 gesicherte Verbindungen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0205.4;Zentrale Überwachungseinheit;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0206.1;Projektierung/Konfigurierung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0206.2;Konfiguration der AS-Strategien;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0206.3;Programmierung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0206.4;Datenpunktprüfung 1:1 Test;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0206.5;Inbetriebnahme der MSR-Anlage;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0206.6;Probebetrieb;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0206.7;Dokumentation;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0206.8;Revisionsunterlagen-MSR;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0206.9;Einweisung MSR Anlage;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0207.1;Feuchtraumabzweigdose;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0207.2;Anschluß beidseitig Installationsleitung 2x2x0,8;31,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0207.3;Anschluß beidseitig Installationsleitung 4x2x0,8;29,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0207.4;Anschluß beidseitig Installationsleitung 3x1,5;43,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0207.5;Anschluß beidseitig Installationsleitung 5x1,5;28,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0207.6;Anschluß beidseitig Installationsleitung 5x2,5;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0207.7;Kabelmarker;260,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0207.8;Anschluß beidseitig CAT7;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0208.1;Systemtechniker/DDC-Techniker;10,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0209.1;Revisionsunterlagen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0209.2;Anlagenschema (Revisionszeichn.);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0301.1;Wartungspreis nach dem ersten Betriebsjahr;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0301.2;Wartungspreis nach dem zweiten Betriebsjahr;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0301.3;Wartungspreis nach dem dritten Betriebsjahr;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0301.4;Wartungspreis nach dem vierten Betriebsjahr;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0302.1;Wartungspreis nach dem ersten Betriebsjahr;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0302.2;Wartungspreis nach dem zweiten Betriebsjahr;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0302.3;Wartungspreis nach dem dritten Betriebsjahr;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83
+0302.4;Wartungspreis nach dem vierten Betriebsjahr;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-16_GrS Hungen_LV RLT-MSR_1.BA_Angebotsaufforderung.D83

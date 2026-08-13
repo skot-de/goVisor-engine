@@ -2,3 +2,6 @@
 0010;Herstellen und Liefern eines Bauschildes;1,0;St;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-04.X83
 0020;Herstellen und Liefern von Gewerbestreifen;40,0;St;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-04.X83
 0030;Herstellen und Liefern einer Erinnerungstafel;1,0;Stück;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-04.X83
+01010010;Bautafel 5.000 mm x 3000 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-04.D83
+01010020;Gewerbestreifen 1.670 mm x 200 mm;40,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-04.D83
+01010030;Erinnerungstafel;1,0;Stüc;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-04.D83

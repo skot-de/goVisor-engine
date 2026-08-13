@@ -26,3 +26,30 @@
 250;Zulage für die Herstellung eines Fensterbankstoßes im Bereich der Stütze zwischen den Fenstern gem. beiliegender Detailzeichnung mit Flachschiebenaht und Abdeckkappe;66,0;St;gaeb;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade_V33.X83
 260;Stunden eines Facharbeiters zum Nachweis und auf Anordnung der Bauleitung für den Einbau von Verstärkungen der Unterkonmstruktion im Berfeich von Maontagen für Beleuchtungen, Kameras etc.;50,0;h;gaeb;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade_V33.X83
 270;500,- € Material zum Nachweis im Zusamenhang mit den vor. gen. Tagelohnarbeiten;1,0;z.N.;gaeb;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade_V33.X83
+10;Aufdoppelung lotrechte Grundlattung;710,0;m²;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+20;Traglattung waagerecht;1430,0;m²;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+30;lotrechte Fassadenbekleidung;1430,0;m²;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+40;Zulage kreisrunde Aussparung;45,0;St;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+50;Zulage Schrägschnitt Fassadenbekleidung;1080,0;m;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+60;Zulage Eckausbildung Gehrung;115,0;m;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+70;Leibungsbekleidung Fenster EG l=2,30 m;28,0;St;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+80;Leibungsbekleidung Türen EG l=2,35 m;4,0;St;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+90;Leibungsbekleidung bodentiefer Fenster /Türen EG l=3,00 m;16,0;St;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+100;Stützenverkleidung, 3-seitig Fenster EG l=2,30 m;40,0;St;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+110;Stützenverkleidung, 3-seitig Fenster/Tür EG l=3,00 m;15,0;St;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+120;Leibungsbekleidung Fenster  der Laternen l=1,550 m;20,0;St;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+130;Stützenverkleidung, 3-seitig Fenster Laternen l=1,55 m;36,0;St;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+140;Sturzbekleidung Türen im EG l=1,21;2,0;St;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+150;Sturzbekleidung bodentiefer Fenster im EG l= 1,60;8,0;St;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+160;Sturzbekleidung Fenster im EG l= 2,26;41,0;St;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+170;Sturzbekleidung Fenster im EG l= 3,61;2,0;St;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+180;Sturzbekleidung Fenster Laternen l= 2,34 bis 2,43 Beschreibung Aussenfensterbank;36,0;St;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+190;Fensterbank EG  l=2.600 mm;36,0;St;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+200;Fensterbank EG l=2.700 mm;16,0;St;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+210;Fensterbank EG l=3.610 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+220;Fensterbank  Laternen l=2.565 mm;10,0;St;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+230;Fensterbank  Laternen l=2.700 mm;16,0;St;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+240;Fensterbank  Laternen l=2.920 mm;10,0;St;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+250;Fensterbankstoß;66,0;St;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+260;Facharbeiter zum Nachweis;50,0;h;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83
+270;500,- _ Material zum Nachweis;1,0;z.N.;gaeb-flat;leistungsbeschreibungen/Fassadenarbeiten - hinterlüftete Holzfassade.D83

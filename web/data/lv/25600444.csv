@@ -1,0 +1,205 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0101.10;Baustelle einrichten räumen;1,0;psch;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0101.20;Baustelleneinr. vorhalten;25,0;Wo;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0101.30;Baustromverteiler;1,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0101.40;Baustromverteiler Gebrauchsüberlassung;40,0;St/W;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0101.50;Wasserversorgungsanlage;1,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0101.60;mobile Toilette aufstellen räumen;1,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0101.70;mobile Toilette vorhalten;40,0;StWo;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0101.80;Bauzeitentür;2,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0101.90;Bauzeitentür Gebrauchsüberlassung;80,0;S/Wo;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0101.100;Bauzeitenfenster;20,0;m2;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0101.110;provisorischer Öffnungsverschluß;15,0;m2;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0101.120;Bauzaun;70,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0101.130;Bauzaun Gebrauchsüberlassung;2800,0;m/Wo;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0101.140;Meterriss;1,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0101.150;Schnurgerüst herstellen;1,0;psch;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0101.160;provis Stammschutz;3,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0102.10;Erstellen Abbau Arbeitsgerüst;210,0;m2;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0102.20;Gebrauchsüberlassung Standgerüst;4200,0;m2/W;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0102.30;Aufbau Abbau Überbrückung;10,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0102.40;Gebrauchsüberlassung Überbrückung;110,0;m/Wo;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+02.10;Innenwand Mauerziegel abbrechen;12,0;m2;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+02.20;Abbruch Unterdecke Gipskarton;16,0;m2;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+02.30;Türöffnung herstellen/erweitern 1,80m x 2,26m,;3,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+02.40;Abbruch von Türelement;3,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+02.50;Rasenkante abbrechen;30,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+02.60;Rollkiesstreifen abbrechen;15,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+02.70;Rasengitterstein abbrechen.;70,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+02.80;Bauschutt AVV 170107 entsorgen;35,0;t;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+02.90;Baumischschutt AVV 17 09 04 entsorgen;10,0;t;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0301.10;Sondierungsschlitze;10,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0301.20;Kopfloch;4,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0301.30;Aushub Rohrgraben;25,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0301.40;Füllsand liefern und einbauen;2,0;m2;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0301.50;Wurzelstock roden;1,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0301.60;Oberboden abtragen laden H 30cm;115,0;m3;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0301.70;Boden Bodenplatte. lösen lagern;75,0;m3;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0301.80;Boden für Streifenfundament lösen lagern;25,0;m3;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0301.90;Hindernis Mauerwerk/Beton abbrechen Zulage;5,0;m3;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0301.100;Planum Abweichung +/-2cm;180,0;m2;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0301.110;Gründungssohle verdichten;180,0;m2;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0301.120;Bauwerk ver/hinterfüllen, verdichten;50,0;m3;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0301.130;Untersuchung Abfalldeklaration;2,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0301.140;Aushub AVV170504 entsorgen Klasse BM-F0,;300,0;t;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0302.10;Bandstahl,  30/3,5 mm,;60,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0302.20;Ausleitung aus Erderanlage;6,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0302.30;Bestandsplan Potentialsteuerung;1,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0302.40;Edelstahlband 30 mm Breite / 105mm² NIRO (V4A);50,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0302.50;Anschluss- und Verbindungsklemmen;15,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0302.60;Runddraht 10 mm Durchmesser V4A;6,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0302.70;Bestandsplan Ringerderanlage;1,0;psch;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0302.80;Kennzeichnung für Anschlussfahnen;8,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0302.90;Wiederstandsmessung;9,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0303.10;KG-Rohr DN 100;20,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0303.20;KG-Abzweige;5,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0303.30;KG-Bögen;10,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0303.40;Bodendurchführung;5,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0303.50;KG-Enddeckel DN 100;10,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0303.60;Dauerhafter Verschluss;3,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0303.70;SW-Leitung prüfen;20,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0303.80;Druck- und Dichtheitsprüfung Grundleitungen;20,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0303.90;Einsparten-Bauherrenpaket;3,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0303.100;Sichern Versorgungsleitungen Elt, T-Com;1,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0303.110;Sichern Versorgungsleitungen TW, Gas;1,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.10;PE-Folie D 0,2mm;125,0;m2;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.20;Ortbeton Sauberkeitsschicht;125,0;m2;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.30;Ortbeton Frostschürze. C16/20;12,0;m3;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.40;Ortbeton Streifenfundament, C25/30;7,0;m3;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.50;Ortbeton Bodenpl. Stahlbeton C25/30;125,0;m2;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.60;Stütze bis 25/30cm;15,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.70;Ringanker 24/25cm;60,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.80;Dämmstreifen Ringankers;45,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.90;Dämmstreifen Aussteifungsstützen;15,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.100;Horizontaldichtung;115,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.110;Abdichtung der Sockelflächen;30,0;m2;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.120;Mauerwerk D 36,5;160,0;m2;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.130;Mauerwerk D 24;40,0;m2;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.140;Zulage Kimmschicht;60,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.150;Porenbetonflachsturz;6,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.160;Stahlträger IPE 180;10,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.170;Stahlträger HEA 140.;5,2;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.180;Öffnung aufmauern B  bis 1,26m H bis 2,26m;8,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.190;Öffnung aufmauern B bis 2,01 H -bis 2,8;1,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.200;Türöffnungen schließen;3,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.210;Durchbruch schließen 100 bis 150 cm2,;10,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.220;Durchbruch schließen 200 bis 250 cm2,;5,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.230;Betonstabstahl B500 alle Durchmesser;5,0;t;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.240;Kernbohrung  Durchmesser 50 -100 mm;10,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+04.250;Kernbohrung  Durchmesser 100 -250 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+05.10;Frostschutzschicht 16/32 D 30cm;12,0;m3;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+05.20;Tragschicht;10,0;m3;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+05.30;Verbundpflaster Betonstein;35,0;m2;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+05.40;Mosaik-Granitpflaster 4 / 6 cm;3,0;m2;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+05.50;Hochbord HB15/25;20,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+05.60;Muldenrinne;10,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+05.70;Fußabstreiferkasten;7,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+05.80;Traufstreifen;40,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+05.90;Regensinkkasten RSK 2000;2,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+05.100;Vollwandabwasserrohre DN150;50,0;m;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+05.110;Formstücke RW;10,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+05.120;Überlauf;1,0;St;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+06.10;Stundenverrechnungssatz für einen Facharbeiter;20,0;h;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+06.20;Stundenverrechnungssatz für einen Helfer;10,0;h;gaeb-flat;leistungsbeschreibungen/FFW Prützke LV Rohbau.D83
+0101.10;Baustelle einrichten räumen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0101.20;Baustelleneinr. vorhalten;25,0;Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0101.30;Baustromverteiler;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0101.40;Baustromverteiler Gebrauchsüberlassung;40,0;St/W;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0101.50;Wasserversorgungsanlage;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0101.60;mobile Toilette aufstellen räumen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0101.70;mobile Toilette vorhalten;40,0;StWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0101.80;Bauzeitentür;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0101.90;Bauzeitentür Gebrauchsüberlassung;80,0;S/Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0101.100;Bauzeitenfenster;20,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0101.110;provisorischer Öffnungsverschluß;15,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0101.120;Bauzaun;70,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0101.130;Bauzaun Gebrauchsüberlassung;2800,0;m/Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0101.140;Meterriss;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0101.150;Schnurgerüst herstellen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0101.160;provis Stammschutz;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0102.10;Erstellen Abbau Arbeitsgerüst;210,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0102.20;Gebrauchsüberlassung Standgerüst;4200,0;m2/W;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0102.30;Aufbau Abbau Überbrückung;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0102.40;Gebrauchsüberlassung Überbrückung;110,0;m/Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+02.10;Innenwand Mauerziegel abbrechen;12,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+02.20;Abbruch Unterdecke Gipskarton;16,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+02.30;Türöffnung herstellen/erweitern 1,80m x 2,26m,;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+02.40;Abbruch von Türelement;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+02.50;Rasenkante abbrechen;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+02.60;Rollkiesstreifen abbrechen;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+02.70;Rasengitterstein abbrechen.;70,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+02.80;Bauschutt AVV 170107 entsorgen;35,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+02.90;Baumischschutt AVV 17 09 04 entsorgen;10,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0301.10;Sondierungsschlitze;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0301.20;Kopfloch;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0301.30;Aushub Rohrgraben;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0301.40;Füllsand liefern und einbauen;2,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0301.50;Wurzelstock roden;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0301.60;Oberboden abtragen laden H 30cm;115,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0301.70;Boden Bodenplatte. lösen lagern;75,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0301.80;Boden für Streifenfundament lösen lagern;25,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0301.90;Hindernis Mauerwerk/Beton abbrechen Zulage;5,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0301.100;Planum Abweichung +/-2cm;180,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0301.110;Gründungssohle verdichten;180,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0301.120;Bauwerk ver/hinterfüllen, verdichten;50,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0301.130;Untersuchung Abfalldeklaration;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0301.140;Aushub AVV170504 entsorgen Klasse BM-F0,;300,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0302.10;Bandstahl,  30/3,5 mm,;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0302.20;Ausleitung aus Erderanlage;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0302.30;Bestandsplan Potentialsteuerung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0302.40;Edelstahlband 30 mm Breite / 105mm² NIRO (V4A);50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0302.50;Anschluss- und Verbindungsklemmen;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0302.60;Runddraht 10 mm Durchmesser V4A;6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0302.70;Bestandsplan Ringerderanlage;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0302.80;Kennzeichnung für Anschlussfahnen;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0302.90;Wiederstandsmessung;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0303.10;KG-Rohr DN 100;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0303.20;KG-Abzweige;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0303.30;KG-Bögen;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0303.40;Bodendurchführung;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0303.50;KG-Enddeckel DN 100;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0303.60;Dauerhafter Verschluss;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0303.70;SW-Leitung prüfen;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0303.80;Druck- und Dichtheitsprüfung Grundleitungen;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0303.90;Einsparten-Bauherrenpaket;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0303.100;Sichern Versorgungsleitungen Elt, T-Com;1,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+0303.110;Sichern Versorgungsleitungen TW, Gas;1,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.10;PE-Folie D 0,2mm;125,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.20;Ortbeton Sauberkeitsschicht;125,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.30;Ortbeton Frostschürze. C16/20;12,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.40;Ortbeton Streifenfundament, C25/30;7,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.50;Ortbeton Bodenpl. Stahlbeton C25/30;125,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.60;Stütze bis 25/30cm;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.70;Ringanker 24/25cm;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.80;Dämmstreifen Ringankers;45,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.90;Dämmstreifen Aussteifungsstützen;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.100;Horizontaldichtung;115,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.110;Abdichtung der Sockelflächen;30,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.120;Mauerwerk D 36,5;160,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.130;Mauerwerk D 24;40,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.140;Zulage Kimmschicht;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.150;Porenbetonflachsturz;6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.160;Stahlträger IPE 180;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.170;Stahlträger HEA 140.;5,2;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.180;Öffnung aufmauern B  bis 1,26m H bis 2,26m;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.190;Öffnung aufmauern B bis 2,01 H -bis 2,8;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.200;Türöffnungen schließen;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.210;Durchbruch schließen 100 bis 150 cm2,;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.220;Durchbruch schließen 200 bis 250 cm2,;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.230;Betonstabstahl B500 alle Durchmesser;5,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.240;Kernbohrung  Durchmesser 50 -100 mm;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+04.250;Kernbohrung  Durchmesser 100 -250 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+05.10;Frostschutzschicht 16/32 D 30cm;12,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+05.20;Tragschicht;10,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+05.30;Verbundpflaster Betonstein;35,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+05.40;Mosaik-Granitpflaster 4 / 6 cm;3,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+05.50;Hochbord HB15/25;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+05.60;Muldenrinne;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+05.70;Fußabstreiferkasten;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+05.80;Traufstreifen;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+05.90;Regensinkkasten RSK 2000;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+05.100;Vollwandabwasserrohre DN150;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+05.110;Formstücke RW;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+05.120;Überlauf;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+06.10;Stundenverrechnungssatz für einen Facharbeiter;20,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83
+06.20;Stundenverrechnungssatz für einen Helfer;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW Prützke LV Rohbau.D83

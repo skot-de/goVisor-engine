@@ -1,0 +1,20 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.010;Maschinenraumlose Aufzugsanlage mit getriebelosem,;1,0;Stk.;gaeb-flat;leistungsbeschreibungen/461.01-VGU-001-LV Aufzuganlage.D83
+02.010;Liftboxen;3,0;Stk.;gaeb-flat;leistungsbeschreibungen/461.01-VGU-001-LV Aufzuganlage.D83
+0301001;Obermonteurstunden / Systemtechniker;1,0;h;gaeb-flat;leistungsbeschreibungen/461.01-VGU-001-LV Aufzuganlage.D83
+0301002;Monteurstunden;1,0;h;gaeb-flat;leistungsbeschreibungen/461.01-VGU-001-LV Aufzuganlage.D83
+0301003;Helferstunden;1,0;h;gaeb-flat;leistungsbeschreibungen/461.01-VGU-001-LV Aufzuganlage.D83
+0302010;Erstellung der Montageplanung;1,0;psch;gaeb-flat;leistungsbeschreibungen/461.01-VGU-001-LV Aufzuganlage.D83
+0302020;Erstellung von Revisionsunterlagen;1,0;psch;gaeb-flat;leistungsbeschreibungen/461.01-VGU-001-LV Aufzuganlage.D83
+0302030;Inbetriebnahme und Konfiguration;1,0;psch;gaeb-flat;leistungsbeschreibungen/461.01-VGU-001-LV Aufzuganlage.D83
+0302040;Anlageneinweisungen;1,0;psch;gaeb-flat;leistungsbeschreibungen/461.01-VGU-001-LV Aufzuganlage.D83
+0302050;TÜV-Abnahme;1,0;psch;gaeb-flat;leistungsbeschreibungen/461.01-VGU-001-LV Aufzuganlage.D83
+0302060;Klapprahmen A3;1,0;St;gaeb-flat;leistungsbeschreibungen/461.01-VGU-001-LV Aufzuganlage.D83
+04.010;Wartungsarbeiten 1. Jahr;1,0;psch;gaeb-flat;leistungsbeschreibungen/461.01-VGU-001-LV Aufzuganlage.D83
+04.020;Wartungsarbeiten 2. Jahr;1,0;psch;gaeb-flat;leistungsbeschreibungen/461.01-VGU-001-LV Aufzuganlage.D83
+04.030;Wartungsarbeiten 3. Jahr;1,0;psch;gaeb-flat;leistungsbeschreibungen/461.01-VGU-001-LV Aufzuganlage.D83
+04.040;Wartungsarbeiten 4. Jahr;1,0;psch;gaeb-flat;leistungsbeschreibungen/461.01-VGU-001-LV Aufzuganlage.D83
+04.050;Notrufsystem inkl. Wartung GSM-Modul 1. Jahr;1,0;psch;gaeb-flat;leistungsbeschreibungen/461.01-VGU-001-LV Aufzuganlage.D83
+04.060;Notrufsystem inkl. Wartung GSM-Modul 2. Jahr;1,0;psch;gaeb-flat;leistungsbeschreibungen/461.01-VGU-001-LV Aufzuganlage.D83
+04.070;Notrufsystem inkl. Wartung GSM-Modul 3. Jahr;1,0;psch;gaeb-flat;leistungsbeschreibungen/461.01-VGU-001-LV Aufzuganlage.D83
+04.080;Notrufsystem inkl. Wartung GSM-Modul 4. Jahr;1,0;psch;gaeb-flat;leistungsbeschreibungen/461.01-VGU-001-LV Aufzuganlage.D83

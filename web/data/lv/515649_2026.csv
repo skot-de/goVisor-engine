@@ -1,4 +1,99 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.101;Werkstattplanung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+01.102;Baustelleneinrichtung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+01.103;Baustelleinrichtung vorhalten;1,0;Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+01.104;Räumen der Baustelleinrichtung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+01.105;Aufmaß der Vorleistung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+01.106;Dokumentation;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.201;Stahlkonstruktion Innenstütze (IS 1);1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.202;Stahlkonstruktion Innenstütze (IS 2);1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.203;Stahlkonstruktion Innenstütze (IS 3);1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.204;Stahlkonstruktion Innenstütze (IS 4);1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.205;Stahlkonstruktion Innenstütze (IS 5);1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.206;Stahlkonstruktion Innenstütze (IS 6);1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.207;Querbohrungen mit Hülse;131,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.208;Ösen;100,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.209;Stahlkonstruktion Randstütze (RST 1-1/RST 2-2);2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.210;Stahlkonstruktion Randstütze (RST 3-1);1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.211;Stahlkonstruktion Randstütze (RST 4-1);1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.212;Rundrohr an Randstütze, Edelstahl;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.213;Fußpunkt Abspannseile RST 1S bis 9S;8,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.214;Fußpunkt Eckseile;8,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.215;Anschluss Seile an Gebäude, Detail 1;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.216;Anschluss Seile an Gebäude, Detail 2;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.217;Anschluss Seile an Gebäude, Detail 3;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.218;Anschluss Seile an Gebäude, Detail 4;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.219;Edelstahlrundrohre für Dach- und Wandnetze;440,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.220;Edelstahl-Ringmuttern, d=60 mm, t=6mm;470,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.221;Edelstahl-Ringmuttern, 100/100/10 mm;130,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.222;Edelstahl-Ringschrauben an HEB;117,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.223;Formstahl, HEB 140, Konsolen;0,336;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.224;Grundplatte, Dach-/Wandnetz;0,515;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.225;Formstahl, HEB 120, Konsolen;0,147;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.226;Formstahl, HEB 100, Konsolen;0,147;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.227;Formstahl, HEB 140, horizontal;1,985;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.228;Formstahl, HEB 100, horizontal;0,258;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.229;Formstahl, HEB 120, vertikal;1,103;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.230;Formstahl, HEB 100, vertikal;0,268;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.231;Kopfplatte, Dach-/Wandnetz;11,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.232;Fußplatte, Dach-/Wandnetz;7,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.233;Befestigungsschwerter für Edelstahlrundrohr, 77x98 bis 107x80 mm;126,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.234;Formstahl, HEB 160, Konsolen einschl. Platten;0,145;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.235;Zugstäbe;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.236;Formstahl, HEB 160, einschl. Kopfplatte und Lasche;0,11;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.237;Formstahl, HEB 160;0,19;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.238;Formstahl, HEB 160, einschl. Kopfplatten;1,313;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.239;Stahlstütze, 8.200 mm;0,273;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.240;Stahlstütze, 3.200 mm;0,101;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.241;Befestigungsschwerter für Edelstahlrundrohr, 96x134 mm;0,046;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.242;Laufblech Gehegezugänge;18,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.243;Seilverbinder A, Grundplatte mit Schwert;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.244;Seilverbinder B, Grundplatte mit Schwert;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.245;Seilverbinder C, Grundplatte mit Schwert;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.246;Bügelklemmen für Seile, d=22 mm;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.247;Bügelklemmen für Seile, d=16 mm;12,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.248;Schwert für Seile;14,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.249;Dachrandseile (RS), Edelstahl;102,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.250;Abspannseile (ABS), Edelstahl;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.251;Eckseile (ES), Edelstahl;46,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.252;Augenseile (ASE), Edelstahl;2,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.253;Anschlussseile Wand-/Dachnetz, Edelstahl;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.254;Brückenseile (BS), Edelstahl, horizontal;28,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.255;Brückenseile (BS), Edelstahl, vertikal;9,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.256;Netzmembran Dachnetz MW 60;1275,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.257;Netzmembran Dachnetz MW 60, Gehegezugänge;31,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.258;Netzmembran Dachnetz MW 60, Innenstütze;38,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.259;Netzmembran Wandnetz MW 60;1224,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.260;Netzmembran Wandnetz MW 60, Gehegezugänge;62,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.261;Mehraufwand Netzmembran Dachnetz und Füllnetz gefärbt;2630,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.262;Stahlrahmenkonstruktion Pflegerschleuse, Gehege 4;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.263;Stahlrahmenkonstruktion Pflegerschleuse, Gehege 1;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.264;Netzmembran Pflegerschleusen NW 60 mm, Schimpansen;49,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.265;Tor, 1-flügelig, Stahlkonstr. Pflegerschleuse Gehege 4;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.266;Tor, 1-flügelig, Stahlkonstr., 1,135 m, Pflegerschleuse Gehege 1;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.267;Tor, 1-flügelig, Stahlkonstr., 1,295 m, Pflegerschleuse Gehege 1;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.268;Tor, 2-flügelig, Stahlkonstruktion;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.269;Tor, 2-flügelig, Stahlkonstruktion, zzgl. 1-flügeliges Tor;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.270;Schlosstyp Riegel;11,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.271;Schlosstyp Riegel und Profilzylinder;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.272;A-Öffner / SPS-Verriegelung;13,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+02.273;Zulage A-Öffner;13,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+03.301;Zaun mit Netzmembranfüllung;84,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+03.302;Endausbildung;16,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+03.303;Höhenversatz;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+04.401;Prüffähiger statischer Nachweis Schleusen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+04.402;Farbbeschichtung Stahlbauteile;50,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+04.403;Kernbohrung, senkrecht, DN 150 bis 200;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+04.404;Kernbohrung, senkrecht, bis DN 100;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+04.405;Kernbohrung, waagerecht, DN 150 bis 200;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+04.406;Kernbohrung, waagerecht, bis DN 100;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+04.407;Kleineisenteile, Einbauteile, etc.;100,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+04.408;Hubsteiger;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+04.409;Vorhaltung Hubsteiger;1,0;Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+04.410;Schraubensicherungen, mittlere Festigkeit;3000,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+04.411;Schraubensicherungen, hohe Festigkeit;1000,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+04.412;Facharbeiter;10,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
+04.413;Helfer;10,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen.D83
 101;Erstellen einer prüffähigen Werkstattplanung und Planunterlagen (inklusive Detailstatik) auf Grundlage der zur Verfügung gestellten Ausführungsplanung sowie der Globalstatik, der Formfindung und unter Berücksichtigung der Ergebnisse des Aufmaßes der Vorleistungen für die nachfolgend beschriebene Net;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen_V32.X83
 102;Baustelleneinrichtung für die nachfolgend beschriebene Netzkonstruktion zur Erbringung aller vertraglichen Leistungen:;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen_V32.X83
 103;Vorhalten der beschriebenen Baustelleneinrichtung für die Gesamtdauer der vertraglichen Leistungen.;1,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/450 LV Stahlbauarbeiten, Netzkonstruktionen_V32.X83

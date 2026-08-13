@@ -76,15 +76,20 @@ def main(country: str) -> int:
 
     if pos_p.exists():
         # Kopfzahlen je Vorgang: über ALLE Positionen, nicht über den Auszug.
-        for nid, n, quellen, einheiten in con.execute(f"""
-            SELECT notice_id, count(*),
-                   string_agg(DISTINCT quelle, ','),
+        # Nur die Mengen je Einheit; Positionszahl und Herkunft kommen aus der nächsten
+        # Abfrage. (Sie standen hier einmal mit drin und wurden dort ohnehin überschrieben.)
+        for nid, einheiten in con.execute(f"""
+            SELECT notice_id,
                    to_json(map_from_entries(list(struct_pack(k := einheit, v := s))))
             FROM (
-              SELECT notice_id, quelle, einheit, round(sum(menge), 1) AS s
+              -- NICHT nach `quelle` gruppieren: seit der Flat-Leser dazukam, liefert derselbe
+              -- Vorgang dieselbe Einheit unter „gaeb" UND „gaeb-flat" — als Map-Schlüssel
+              -- kollidiert das ("Map keys must be unique"). Die Menge je Einheit ist ohnehin
+              -- eine Summe über den ganzen Vorgang, nicht je Parser.
+              SELECT notice_id, einheit, round(sum(menge), 1) AS s
               FROM read_parquet('{pos_p.as_posix()}')
               WHERE einheit IS NOT NULL AND menge IS NOT NULL
-              GROUP BY 1, 2, 3
+              GROUP BY 1, 2
             ) GROUP BY 1""").fetchall():
             aus.setdefault(nid, {})["mengen"] = json.loads(einheiten)
         for nid, n, quellen in con.execute(f"""

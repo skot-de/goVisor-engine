@@ -1,4 +1,91 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1001.10;Bedarfsposition Monteuerstunden Ausmessen/Dokumentieren von Kabel/Leitungen vor der Demontage;30,0;h;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1001.20;Bedrafsposition Monteurstunden für Abklemmen von Kabel / Leitungen;20,0;h;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1001.30;Demontage von Leitungen bis 5x2,5mm²;750,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1001.40;Demontage von Leitungen bis 5x25mm²;150,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1001.50;Demontage von Leitungen bis 10x2x0,8mm;200,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1001.60;Demontage von An- bzw. Einbauleuchten;30,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1001.70;Demontage von Schalter/Steckdosen/Anschlüsse;30,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1001.80;Demontage von Installationsmaterial;30,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1002.10;Übergabeverteiler AV u. SV inkl. Umschalteinrichtung;1,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1002.20;Infrarotmessung und -wärmebilderstellung von Verteilungen;1,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1002.30;Bedrafsposition Monteurstunden für Arbeiten an Verteilungen;20,0;h;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1002.40;GHV-AV und -SV Strangschema erstellen;1,0;psch;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1003.10;GHV-AV zum Übergabeverteiler, NYCWY 4x70/35mm²;120,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1003.20;GHV-SV zum Übergabeverteiler, NYCWY 4x70/35mm²;120,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1003.30;Übergabeverteiler zu Verteilungen MSR-Kältetechnik NYY-J 5x35mm²;60,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1003.40;Elektroanschluss 4x70/35mm² an GHV-AV u. -SV;2,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1003.50;Elektroanschluss 4x70/35mm² an Übergabeverteiler;2,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1003.60;Elektroanschluss 5x35mm² an Übergabeverteiler;3,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1003.70;Elektroanschluss 5x35mm² an Verteiler MSR-Kältetechnik;3,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1004.10;Kabelrinne B=300mm H=60mm;60,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1004.20;Formteile für Kabelrinne B=300mm H=60mm;10,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1004.30;Hängestiele Länge 300mm;40,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1004.40;Hängestiele Länge 600mm;20,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1004.50;Ausleger Länge 310mm;95,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1004.60;Steigetrassen B=400mm;10,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1004.70;C-Profilschiene (schwere Ausführung) inkl.Schellen;30,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1004.80;Metall-Kabelklammer für 8 Leitungen NYM 3x1,5qmm;150,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1004.90;Metall-Bündelhalter für 30 Leitungen NYM 3x1,5mm²;100,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1004.100;Metall-Bündelhalter für 70 Leitungen NYM 3x1,5mm²;70,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1005.10;Brüstungskanal 170x70 mm aus Aluminium, Abd. 80 mm;15,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1005.20;Kanal-Innen- oder -Außeneck für BK 170 mm, Aluminium;2,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1005.30;Kanal-Endstücke für Brüstungskanal 170mm, Aluminium;4,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1005.40;Gerätedose für Brüstungskanal E1;20,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1005.50;Gerätedose für Brüstungskanal E2;4,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1005.60;Leitungsführungskanal (HxB), (30x30)mm aus Aluminium;20,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1005.70;Leitungsführungskanal (HxB), (30x60)mm aus Aluminium;10,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1006.10;Gewinde-Aluminiumrohr M25;30,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1006.20;Gewinde-Aluminiumrohr M32;20,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1007.10;NYM-J 3x1,5mm² in div. baus. vorbereit. Verlegearten;400,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1007.20;NYM-J 5x1,5mm² in div. baus. vorbereit. Verlegearten;150,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1007.30;NYM-J 3x2,5mm² in div. baus. vorbereit. Verlegearten;250,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1007.40;NYM-J 5x2,5mm² in div. baus. vorbereit. Verlegearten;100,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1007.50;J-Y(St)Y 6x2x0,8 in div. baus.vorbereitt.Verlegeart.;50,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1008.10;Aus-/Wechselschalter 250 V~/10A u.P. IP44;10,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1008.20;Steckdose 250 V~/16 A u.P. IP44;15,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1008.30;Blindabdeckungen;10,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1008.40;Aus-/Wechselschalter 250 V~/10A a.P. beleuchtet;6,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1008.50;Decken-Bewegungsmelder a. P.;10,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1008.60;Steckdose 250 V~/16 a.P.;6,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1009.10;Abzweigdose a.P. IP55 (85x85x42)mm weiß inkl. Verschaltung;25,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1009.20;Abzweigkasten a.P. IP55 (95x95x45)mm bis 5x2,5 mm² inkl. Verschaltung;5,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1010.10;LED Einbauleuchte 34W, Modul 625 IP 65;30,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1010.20;LED-Feuchtraum-Anbauleuchte IP 66;18,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1010.30;LED-Flutlichtstrahler;2,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1011.10;PA-Schiene Hauptpotentialausgleich;2,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1011.20;PA-Schiene Mini mit Reihenklemmsystem;5,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1011.30;flex. Leitung 1x6mm²  in div. baus. vorbereit. Verlegeart;200,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1011.40;flex. Leitung 1x10mm²  in div. baus. vorbereit. Verlegeart;100,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1011.50;flex. Leitung 1x25mm²  in div. baus. vorbereit. Verlegeart;50,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1011.60;PA Leitung  NYY-J 1x50 mm²  in div. baus. vorbereit. Verlegeart;120,0;m;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1011.70;Anschließen von Potentialausgleichsleitung bis 6mm² an Fremdgewerke;30,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1011.80;Anschließen von Potentialausgleichsleitung bis 10mm² an Fremdgewerke;10,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1011.90;Anschließen von Potentialausgleichsleitung bis 25mm² in Fremdgewerke;10,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1011.100;Anschließen von Potentialausgleichsleitung bis 50mm² in Fremdgewerke;4,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1011.110;Messprotokoll Potentialausgleich;1,0;psch;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1012.10;Überspannungsableiter 4pol.;2,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1012.20;Einbaugehäuse für Überspannungsableiter;2,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1013.10;"Kernbohrungen D=100 mm; L=bis30cm";4,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1013.20;"Kernbohrungen D=150 mm; L=bis 30cm";6,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1013.30;"Bohrungen D=20-36 mm; L=bis 30cm";30,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1013.40;Wanddurchbruch in Mauerwerk (HxB) (150x250)mm;4,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1013.50;Futterrohr als Flanschplatte;4,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1013.60;Dichtungseinsatz für ein Kabel;2,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1013.70;Dichtungseinsatz für zwei Kabel;2,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1013.80;Brandschott F 90 bis 0,05 m² öffnen;2,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1013.90;Brandschott F 90 bis 0,05 m² Schließen;8,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1013.100;Brandschutzplatten für Vorsatzschottung F90,;3,0;m²;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1013.110;Brandschutz-PU-Schaum;3,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1013.120;Brandschutzkissen;50,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1014.10;Baustromverteiler 100A;2,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1014.20;Wartung und Inspektion der Baustromverteiler monatlich;10,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1014.30;LED-Feuchtraumwannenleuchten;20,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1014.40;Starkstromverlängerung 32A;1,0;St;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1015.10;Sachverständigen Abnahmen Starkstromtechnik;8,0;h;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1015.20;Revisionsunterlagen  Starkstromtechnik;1,0;psch;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1015.30;Bedarfsposition Monteurstunden in der Regelarbeitszeit;40,0;h;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
+1015.40;Bedarfsposition Helferstunden in der Regelarbeitszeit;20,0;h;gaeb-flat;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei.D83
 10;Für die vorhandene Elektroinstallation liegen nur teilweise;30,0;h;gaeb;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei_V33.X83
 20;Freischalten, abklemmen und herausziehen von Leitungen;20,0;h;gaeb;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei_V33.X83
 30;Demontage von Leitungen bis 5x2,5mm²;750,0;m;gaeb;leistungsbeschreibungen/26_07_13 LV Elektro Rechtsmedizin neue Kühlzellen GAEB-Datei_V33.X83

@@ -1,4 +1,37 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1.1.10;Demontage Attikablech und Entsorgung;130,0;m;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+1.1.20;Rückbau und Entsorgung Holzleisten;360,0;m²;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+1.1.30;Rückbau und Entsorgung Brettschalung;360,0;m²;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+1.1.40;Ausbau und Zwischenlagerung vorhandener XPS-Dämmung;150,0;m²;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+1.1.50;Entsorgung nicht wiederverwendbarer XPS-Dämmung;150,0;m²;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+1.1.60;Rückbau und Entsorgung geschädigter Kanthölzer bis 6/18 cm;330,0;m;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+2.1.10;Reinigen, Prüfen und Vorbereiten der Bestandsuntergründe;1,0;psch;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+2.2.10;Entrosten und Vorbereiten freigelegter Stahlteile;60,0;m²;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+2.2.20;Korrosionsschutzbeschichtung freigelegter Stahlteile, C5;60,0;m²;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+3.1.10;Untere Schwelle oberhalb der Fassade;120,0;m;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+3.1.20;Oberes Rähm unterhalb des Trapezblechs;80,0;m;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+3.1.30;Holzstiele zwischen Schwelle und Rähm;150,0;m²;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+3.1.40;Innere luftdichtende OSB/4-Beplankung, 18 mm;150,0;m²;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+3.1.50;Gefachdämmung der Holzständer-Schottkonstruktion;150,0;m²;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+3.1.60;Äußere Beplankung der Schottkonstruktion aus zementgebundenen Spanplat ten, 16 mm;150,0;m²;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+3.2.10;Äußere Holzbohle vor Fassade;120,0;m;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+3.2.20;Erneuerung der Holzunterkonstruktion im äußeren Dachhohlraum;330,0;m;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+3.2.30;Äußere OSB/3-Beplankung montieren bis Attika;360,0;m²;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+3.2.40;Hinterlüftungs- und Traglattung für äußere Holzleistenbekleidung;360,0;m²;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+3.2.50;Lüftungsabschluss- und Insektenschutzprofile;240,0;m;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+3.3.10;Holzlattenbekleidung außen, 85 x 24 mm;360,0;m²;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+4.1.10;Vollflächige Dämmung Dachbinder mit Elastomer-Dämmstoff bis 2,5 m²;21,0;St;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+4.1.20;Vollflächige Dämmung Dachbinder mit Elastomer-Dämmstoff bis 7,5 m²;6,0;St;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+4.1.30;Umlaufende luftdichte Anschlussabdichtung der inneren OSB-Ebene;250,0;m;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+4.1.40;Klebe- und Haftproben der Anschlussabdichtungen;1,0;psch;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+4.1.50;ZULAGE luftdichte Anschlussabdichtung an profiliertes Trapezblech;80,0;m;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+4.2.10;Schwarze, dauerhaft UV-beständige Fassaden- und Winddichtungsbahn für offene Fugen;360,0;m²;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+5.1.10;Wiedereinbau vorhandener XPS-Dämmung, 2 × 50 mm;150,0;m²;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+5.1.20;Mineralfaser, hydrophobiert als Dämmung der äußeren Bekleidung, 2 × 10 0 mm;360,0;m²;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+6.1.10;Attikaabdeckung aus gekantetem Aluminiumblech neu liefern und montiere n;130,0;m;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+7.1.10;Polierstunde zum Nachweis;6,0;h;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+7.1.20;Facharbeiterstunde zum Nachweis;12,0;h;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
+7.1.30;Helferstunde zum Nachweis;12,0;h;gaeb-flat;leistungsbeschreibungen/LV Zimmerarbeiten_D83.D83
 10;Vorhandene Attika- bzw. Randbleche aus Metall im Arbeitsbereich einschließlich Befestigungen, Halterungen, Klemmungen und Anschlussbereichen fachgerecht demontieren.;130,0;m;gaeb;leistungsbeschreibungen/LV Zimmerarbeiten_X83.X83
 20;Vorhandene Holzleistenbekleidung auf nachfolgend beschriebener Brettschalung genagelt, im Bereich des Dachvorstandes vollständig rückbauen, abnehmen und einschließlich sämtlicher Befestigungsmittel ausbauen. Die Holzleisten bekleiden sowohl die Traufen, als auch senkrechten Giebelflächen vollflächig;360,0;m²;gaeb;leistungsbeschreibungen/LV Zimmerarbeiten_X83.X83
 30;Vorhandene vollflächige, genagelte Brettschalungen im Arbeitsbereich vollständig rückbauen und einschließlich sämtlicher Befestigungsmittel ausbauen.;360,0;m²;gaeb;leistungsbeschreibungen/LV Zimmerarbeiten_X83.X83

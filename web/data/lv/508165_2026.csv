@@ -1,4 +1,140 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0101.10;Baustelleneinrichtung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0101.20;Facharbeiterstunden;60,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0101.30;Helferstunden;60,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0101.40;Rollgerüste für Arbeiten > 3,50 m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0101.50;Arbeitsgerüst als Innengerüst (Treppenhaus);1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0101.60;Arbeitsgerüst als Innengerüst (Lichtschächte);1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0101.70;Abdeckarbeiten + Abkleben Wandfliesen;370,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0101.80;Abdeckarbeiten + Abkleben Fenster und Türen;340,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0101.90;Abdeckarbeiten + Abkleben Bodenflächen;510,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.10;Fleckspachtelung inkl. Löcher verspachteln;30,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.20;Grundbeschichtung Silikatkonzentrat 1:1;2080,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.30;Geputzte Wandflächen Q 3 spachteln, EG;905,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.40;Wiederholung Wandflächen Q 3 spachteln, EG;905,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.50;Geputzte Wandflächen Q 3 spachteln, OG;1040,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.60;Wiederholung Wandflächen Q 3 spachteln, OG;1040,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.70;Zulage Leibungen, EG;39,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.80;Zulage Leibungen, OG;31,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.90;Zulage Nassräume, OG;40,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.100;Zulage Leibungen Nassräume, OG;6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.110;GK-Wandflächen Q 2 spachteln, KG;18,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.120;GK-Wandflächen Q 3 spachteln, OG;128,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.130;Zulage Nassräume GK, OG;128,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.140;GK-Deckenschürze Q 3 spachteln, OG;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.150;Nicht geputzte/geputzte nicht gespachtelte KS-MW-Wandflächen streichen, weiß;446,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.160;Nicht geputzte Beton-Wandflächen streichen, weiß;146,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.170;Zulage an Treppenstufen anarbeiten;70,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.180;Geputzte Wandflächen streichen, weiß;1870,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.190;"Geputzte Wandflächen streichen, ""blau""";9,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.200;"Geputzte Wandflächen streichen, ""blau"", Kleinflächen";22,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.210;"Geputzte Wandflächen streichen, ""orange""";22,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.220;"Geputzte Wandflächen streichen, ""orange"", Kleinflächen";22,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.230;Zulage Leibungen streichen;70,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.240;GK-Wandflächen ungelocht streichen, weiß;146,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.250;Zulage Nassräume;168,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.260;Anarbeiten an Kantenschutzprofile;379,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0102.270;Elastische Fugen;1400,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0103.10;Anstrich Stahlblech-Umfassungszarge, 2,01 x 2,135, RAL 7045;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0103.20;Anstrich Stahlblech-Umfassungszarge, 1,01-1,26 x 2,135 m RAL 7045;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0103.30;Anstrich Stahlblech-Eckzarge, 0,60 x 0,60 m, RAL 7045;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0103.40;Anstrich Stahlblechtür, 1,01 x 2,135 m, RAL 7035;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0103.50;Anstrich Stahlblechtür, 1,26 x 2,135 m, RAL 7035;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0103.60;Anstrich Stahlblechtür, 2,01 x 2,135 m, RAL 7035;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0103.70;Anstrich Stahlblechtür, 0,60 x 0,60 m, RAL 7035;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0103.80;Eck-Zarge anspachteln, 2-flg., 2,110 x 2,135 m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0103.90;Eck-Zarge anspachteln, 1-flg.,1,235 x 2,135 m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0103.100;Umfassungs-Zarge anspachteln, 1,385 x 2,135 m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0103.110;Umfassungs-Zarge anspachteln, 1-flg., 0,760 - 1,26 x 2,135 m;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0103.120;Umfassung-Zarge anspachteln, Feuchträume, 1-flg., 0,885 x 2,135 m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0103.130;Oberlicht-Zarge anspachteln, Feuchträume, 1-flg., 0,885 x 2,95 m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0103.140;Oberlicht-Zarge anspachteln, 1-flg., 1,01 x 2,95 m;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0103.150;Anstrich Stahlblech-Eckzarge 2-flg., 2,110 x 2,135 m, RAL 7045;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0103.160;Anstrich Stahlblech-Eckzarge 1-flg.,1,235 x 2,135 m, RAL 7045;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0103.170;Anstrich Stahlblech-Umfassungszarge, 1,385 x 2,135 m, RAL 7045;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0103.180;Anstrich Stahlblech-Umfassungszarge, 0,760 - 1,26 x 2,135 m, RAL 7045;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0103.190;Anstrich Oberlicht-Stahlblech-Umfassungszarge, 0,885 x 2,95 m, RAL 7045;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0103.200;Anstrich Oberlicht-Stahlblech-Umfassungszarge, 1,01 x 2,95 m, RAL 7045;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0104.10;GK-Schachtflächen Q 3 spachteln, EG+OG;101,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0104.20;GK-Schachtflächen ungelocht streichen, weiß;101,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0104.30;Knick Spachteln und Streichen;19,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0104.40;Oberer Abschluss spachteln und streichen;37,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0104.50;Fugenprofil anarbeiten und sauber einschneiden;51,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.10;Beton-Deckenflächen EG, Q 3 spachteln;37,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.20;Beton-Deckenflächen OG, Q 3 spachteln;21,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.30;GK-Deckenflächen Streulochung streichen, weiß;53,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.40;GK-Deckenflächen ungelocht streichen, weiß;5,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.50;GK-Deckenflächen Nassraum ungelocht streichen, weiß;15,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.60;Randfriese streichen, 15 cm;66,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.70;Randfriese streichen, 20 cm;13,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.80;Randfriese streichen, 30 cm;38,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.90;Randfriese zwischen ca. 7,0 - 57,0 cm breite streichen, weiß;218,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.100;Senkrechte Schürze streichen, H = 10 cm, weiß;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.110;Senkrechte Schürze streichen, H = 42 cm, weiß;108,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.120;Beton-Deckenflächen EG streichen, weiß;37,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.130;GK-Deckenflächen ungelocht streichen, weiß;5,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.140;Deckenneigung 8° als Zulage;2,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.150;GK-Deckenflächen Streulochung streichen, weiß;96,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.160;GK-Deckenflächen Nassraum ungelocht streichen, weiß;13,5;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.170;Randfriese zwischen ca. 51,5 -170 cm breite streichen, weiß, gerade;101,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.180;Randfriese zwischen ca. 12,5-70 cm breite streichen, weiß, gerade;57,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.190;Randfriese zwischen ca. 12,0 - 60,0 cm breite streichen, weiß, geneigt 8°-14°;47,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.200;Geneigtes Randfriese ca. 100 cm breite streichen, weiß;6,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.210;Senkrechte Schürze streichen, H = 117 cm, weiß;9,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.220;Neigung 12° als Zulage;6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.230;Randfriese streichen, 10 cm;43,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.240;Randfriese streichen, 15 cm;97,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.250;Neigung 12° als Zulage;97,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.260;Randfriese streichen, 25 cm;4,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.270;Zulage Revisionsklappe Decke, 40/40 cm;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.280;Zulage Revisionsklappe Decke, 30/30 cm;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0105.290;Beton-Deckenflächen OG streichen, weiß;21,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.10;Schutzmaßnahmen;3,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.20;Elastische Fugen;450,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.30;Risse in Wänden überarbeiten;9,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.40;Fleckspachtelung inkl. Löcher verspachteln;54,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.50;Wandflächen Q 3 Überhohlungs-Spachtelung;180,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.60;Zulage Leibungen;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.70;Geputzte Wandflächen streichen, weiß;180,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.80;Nicht geputzte Wandflächen streichen, weiß;75,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.90;Zulage Leibungen streichen;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.100;Anarbeiten an Kantenschutzprofile;8,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.110;Überholungsanstrich Türblätter;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.120;Überholungsanstrich Stahl-Umfassungszargen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.130;Überholungsanstrich Holz-Umfassungszargen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.140;Geputzte Wandflächen Q 3 spachteln;5,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.150;Wiederholung Wandflächen Q 3 spachteln;5,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.160;Zulage, Übergang Wandputz an Bestandsputz Q3 spachtel;16,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.170;Geputzte Wandflächen streichen, weiß;5,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.180;Risse in Wänden überarbeiten;12,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.190;Fleckspachtelung inkl. Löcher verspachteln;22,5;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.200;Überholungsanstrich Innenwandflächen, weiß;70,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.210;Anarbeiten an Kantenschutzprofile;52,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.220;Überholungsanstrich Türblätter;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.230;Überholungsanstrich Stahl-Umfassungszargen;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.240;Risse in Wänden überarbeiten;12,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.250;Fleckspachtelung inkl. Löcher verspachteln;96,5;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.260;Geputzte Wandflächen Q 3 spachteln;46,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.270;Wiederholung Wandflächen Q 3 spachteln;46,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.280;Zulage, Übergang Wandputz an Bestandsputz Q3 spachtel;16,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.290;Geputzte Wandflächen streichen, weiß;46,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.300;GK-Wandflächen Q 3 spachteln;31,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.310;GK-Wandflächen ungelocht streichen, weiß;31,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.320;Überholungsanstrich Innenwandflächen, weiß;275,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.330;Anarbeiten an Kantenschutzprofile;18,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.340;Zulage Leibungen streichen;65,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.350;Zulage Nassräume;53,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.360;Überholungsanstrich Türblätter;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.370;Überholungsanstrich Umfassungszargen;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.380;Vorhangschacht Q 3 spachteln;28,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.390;Vorhangschacht streichen, weiß;28,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.400;GK-Deckenflächen Streulochung streichen, weiß;76,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.410;Randfriese streichen, 20 cm;55,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.420;Abkofferungen streichen, weiß;11,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.430;GK-Deckenflächen ungelocht streichen, weiß;55,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.440;GK-Deckenflächen Nassraum ungelocht streichen, weiß;5,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.450;Deckenfries/-schürze Q 3 spachteln;36,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
+0106.460;Deckenfries/-schürze streichen, weiß;36,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten.D83
 10;Baustelle einrichten, vorhalten, betreiben, umsetzen (soweit erforderlich), auch über die Bauzeit des AN hinaus sowie Räumen der Baustelle mit folgenden in den Pauschalpreis einzurechnenden Leistungen :;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten_V33.X83
 20;Lohnstunde eines Facharbeiters zur Ausführung während normaler, tariflicher Arbeitszeit. Ausführung nur nach Anweisung der Bauleitung zum täglichen Nachweis.;60,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten_V33.X83
 30;Lohnstunde eines Helfers zur Ausführung während normaler, tariflicher Arbeitszeit. Ausführung nur nach Anweisung der Bauleitung zum täglichen Nachweis. Einheitspreis einschl. Zuschläge und Gestellung und Gebrauch von Kleingeräten.;60,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Malerarbeiten_V33.X83

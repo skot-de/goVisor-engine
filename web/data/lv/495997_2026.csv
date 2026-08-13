@@ -59,3 +59,63 @@
 2;Stundenlohnarbeiten durch Baufacharbeiter/-in;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83_V33.X83
 3;Elektrohammer, mit Bedienung,;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83_V33.X83
 4;Trennschleifer, mit Bedienung,;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83_V33.X83
+01.1;Werk- und Montageplanung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+01.2;Statischer Nachweis;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.1;Fensterelement, Typ AF-01, B 1.010 mm, H 760 mm;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.2;Mehrpreis Sonnenschutzverglasung g=0,37, Typ AF-01;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.3;Fensterelement, Typ AF-02, B 1.010 mm, H 1.010 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.4;Fensterelement, Typ AF-03, B 3.010 mm, H 1.010 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.5;Fensterelement, Typ AF-04.1, B 2.010 mm, H 1760 mm;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.6;Fensterelement, Typ AF-04.2, B 2.010 mm, H 1760 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.7;Fensterelement, Typ AF-05, B 2.010 mm, H 1760 mm;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.8;Mehrpreis Sonnenschutzverglasung g=0,37, Typ AF-04, Typ AF-05;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.9;Fensterelement, Typ AF-06, B 1.010 mm, H 2.260 mm;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.10;Mehrpreis Sonnenschutzverglasung g=0,37, Typ AF-06;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.11;Fensterelement, Typ AF-07, B 2.010 mm, H 2.885 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.12;Fensterelement, Typ AF-08, B 3.010 mm, H 2.885 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.13;Fensterelement, Typ AF-09, B 3.010 mm, H 2.885 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.14;Mehrpreis Sonnenschutzverglasung g=0,37, Typ AF-08, Typ AF-09;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.15;Fensterelement, Typ AF-10, B 4.010 mm, H 2.260 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.16;Mehrpreis Sonnenschutzverglasung g=0,37, Typ AF-10;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.17;Fensterelement, Typ AF-11, B 4.010 mm, H 2.885 mm;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.18;Mehrpreis Sonnenschutzverglasung g=0,37, Typ AF-11;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.19;Fensterelement, Typ AF-12, B 5.010 mm, H 2.885 mm;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.20;Mehrpreis Sonnenschutzverglasung g=0,37, Typ AF-12;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.21;Fensterelement, Typ AF-13.1, B 6.010 mm, H 2.885 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.22;Fensterelement, Typ AF-13.2, B 6.010 mm, H 2.885 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.23;Mehrpreis Sonnenschutzverglasung g=0,3, Typ AF-13;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.24;Zulage Türwächter;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.25;Rahmenverbreiterung 30 mm;90,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+02.26;Bodeneinstandsprofil;90,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+03.1;Türelement, Typ AT-01.1, B 1.260 mm, H 2.260 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+03.2;Türelement, Typ AT-01.2, B 1.260 mm, H 2.260 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+03.3;Türelement, Typ AT-02, B 1.510 mm, H 2.260 mm;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+03.4;Mehrpreis Sonnenschutzverglasung g=0,37, Typ AT-02;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+03.5;Türelement, Typ AT-03.1, B 2.010 mm, H 2.885 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+03.6;Türelement, Typ AT-03.2, B 2.010 mm, H 2.885 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+03.7;Mehrpreis Sonnenschutzverglasung g=0,37, Typ AT-03;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+03.8;Türelement, Typ AT-04, B 1.260 mm, H 2.885 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+03.9;Türelement, Typ AT-05, B 1.885 mm, H 2.885 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+03.10;Rahmenverbreiterung 30 mm;55,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+03.11;Bodeneinstandsprofil;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+04.1;Fensterelement, Typ IF-01, B 1.010 mm, H 2.260 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+04.2;Fensterelement, Typ IF-02, B 2.010 mm, H 2.260 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+04.4;Türelement, Typ IT-01, B 2.010 mm, H 2.260 mm, T30 RS;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+04.5;Türelement, Typ IT-02.1, B 2.010 mm, H 2.260 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+04.6;Türelement, Typ IT-02.2, B 2.010 mm, H 2.260 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+05.1;Raffstore, Typ RS-01 B 1.010 mm, H 760 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+05.2;Raffstore, Typ RS-02 B 1.010 mm, H 1.010 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+05.3;Raffstore, Typ RS-03 B 1.010 mm, H 2.260 mm;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+05.4;Raffstore, Typ RS-04 B 2.010 mm, H 1.760 mm;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+05.5;Raffstore, Typ RS-05 B 2.910 mm, H 2.260 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+05.6;Raffstore, Typ RS-06 B 4.010 mm, H 2.885 mm;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+05.7;Raffstore Typ RS-07 B 3.010 mm, H 2.885 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+05.8;Raffstore, Typ RS-08 B 5.010 mm, H 2.885 mm;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+05.9;Raffstore, Typ RS-09 B 6.010 mm, H 2.885 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+05.10;Raffstore Typ RS-08 B 2.010 mm, H 2.885 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+06.1;Aussenfensterbank, 250 mm;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+06.2;Endstück, Aussenfensterbank, 250 mm;26,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+07.1;Bauvorarbeiter/-in;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+07.2;Baufacharbeiter/-in;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+07.3;Elektrohammer, mit Bedienung, 3kW;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83
+07.4;Trennschleifer, mit Bedienung, 2,5kW;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/300_03_LV_Fenster_Tueren_260710_83.D83

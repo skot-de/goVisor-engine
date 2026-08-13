@@ -1,4 +1,89 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;T1-01 Innentürelement 1flg B 1335 mm H 2245 mm 37dB EI2 30-S200C5;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+01.2;T1-02 Innentürelement 1flg B 1230 mm H 2245 mm 1 Lichtausschnitt 32dB;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+01.3;T1-03 Innentürelement 1flg B 1105 mm H 2835 mm 1Oberlicht 27dB;3,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+01.4;T1-04 Innentürelement 1flg B 1105 mm H 2835 mm 1Oberlicht 27dB;3,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+01.5;T1-05 Innentürelement 1flg B 1105 mm H 2835 mm 1Oberlicht 37dB;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+01.6;T1-06 Innentürelement 1flg B 1105 mm H 2835 mm 1Oberlicht 27dB;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+01.7;T1-07 Innentürelement 1flg B 1105 mm H 2985 mm 1Oberlicht 27dB;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+01.8;T1-08 Innentürelement 1flg B 1135 mm H 3000 mm 1Oberlicht 37dB;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+01.9;T1-09 Innentürelement 1flg B 1605 mm H 2245 mm 1Seitenteil 1 LIchtausschnitt 32dB;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+01.10;T1-10 Innentürelement 1flg B 2070 mm H 2245 mm 1Seitenteil 37dB;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+01.11;T1-11 Innentürelement 1flg B 2230 mm H 2245 mm 1Seitenteil 32dB;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+01.12;T1-12 Innentürelement 1flg B 1520 mm H 3000 mm 1Oberlicht 1Seitenteil 32dB;3,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+01.13;T1-12-1 Innentürelement 1flg B 1520 mm H 3000 mm 1Oberlicht 1Seitenteil 32dB;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+01.14;T1-13 Innentürelement 1flg B 1740 mm H 3000 mm 1Oberlicht 1Seitenteil 1 Lichtausschnitt 32dB;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+01.15;T1-14 Innentürelement 1flg B 2545 mm H 2850 mm 1Oberlicht 1Seitenteil 32dB EI2 30-S200C5;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+01.16;T1-15 Innentürelement 1flg B 2545 mm H 2850 mm 1Oberlicht 1Seitenteil  E-Öffner 37dB EI2 30-S200C5;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+01.17;T1-16 Innentürelement 1flg B 2570 mm H 2850 mm 1Oberlicht 1Seitenteil 32dB;20,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+02.1;T2-01 Innentürelement  2flg B 2035 mm H 2485 mm 1Oberlicht 2Lichtausschnitte 27dB EI2 30-S200C5;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+02.2;T2-02-1 Innentürelement 2flg B 1740 mm H 2850 mm 1Oberlicht 2Lichtausschnitte 27dB EI2 30-S200C5;6,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+02.3;T2-02-2 Innentürelement 2flg B 1740 mm H 2850 mm 1Oberlicht 2Lichtausschnitte 27dB EI2 30-S200C5;2,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+02.4;T2-03-1 Innentürelement 2flg B 1740 mm H 2850 mm 1Oberlicht 2Lichtausschnitte 27dB EI2 90-SaC5;2,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+02.5;T2-03-2 Innentürelement 2flg B 1740 mm H 2850 mm 1Oberlicht 2Lichtausschnitte 27dB EI2 90-SaC5;2,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+02.6;T2-04 Innentürelement 2flg B 1740 mm H 3000 mm 1Oberlicht 2Lichtausschnitt 27dB  EI2 30-S200C5;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+02.7;T2-05 Innentürelelent 2flg B 1740 mm H 3000 mm 1Oberlicht 2Lichtausschnitte 27dB EI2 90-SaC5 RC1N;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+02.8;T2-06 Innentürelement 2flg B 1825 mm H 2850 mm 1Oberlicht 2Lichtausschnitte 27dB S200C5;2,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+02.9;T2-07 Innentürelement 2flg B 1825 mm H 2850 mm 1Oberlicht 2Lichtausschnitte 27dB EI2 30-S200C5;2,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+02.10;T2-08 Innentürelement 2flg B 1825 mm H 3000 mm 1Oberlicht 2Lichtausschnitte 27dB S200C5;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+02.11;T2-09 Innentürelement 2flg B 1825 mm H 3000 mm 1Oberlicht 2Lichtausschnitte 27dB EI2 30-S200C5;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+02.12;T2-10 Innentürelement 2flg B 1935 mm H 3000 mm 1Oberlicht 2Lichtausschnitte 27dB EI2 90-SaC5;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+02.13;T2-11 Innentürelement 2flg B 1955 mm H 2850 mm 1Oberlicht 2Lichtausschnitte 27dB EI2 90-SaC5;2,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+02.14;T2-12 Innentürelement 2flg B 2070 mm H 2985 mm 1Oberlicht 2Lichtausschnitte 42dB EI2 30-S200C5;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+02.15;T2-13 Innentürelement 2flg B 2550 mm H 2985 mm 1Oberlicht 2Lichtausschnitte 27dB EI2 90-SaC5;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+02.16;T2-14 Innentürelement 2flg B 2330 mm H 3350 mm 1Oberlicht 2Lichtausschnitte 1Mittelpfosten 27dB;2,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+03.1;Typ T3-01 Innentürelement 2flg B 2960 mm H 2850 mm 1Oberlicht 27dB EI2 30-S200C5;2,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+03.2;Typ T3-02 Innentürelement 2flg B 2960 mm H 2850 mm 1Oberlicht 27dB;4,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+03.3;Typ T3-03 Innentürelement 2flg B 2960 mm H 3000 mm 1Oberlicht 27dB;2,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+03.4;Typ T3-04 Innentürelement 2flg B 2960 mm H 3890 mm 1Oberlicht 27dB;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+04.1;Typ-T4-01 HGW mit Türe 1flg B 3945mm H 2850mm 1Lichtausschnitt 1Oberlicht 2Seitenteil  37dB, E-Öffner;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+04.2;Typ-T4-02 HGW mit Türe 1flg B 4910mm H 2850mm 1Lichtausschnitt 1Oberlicht 1Seitenteil 3Lichtausschnitte 32dB;2,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+04.3;Typ-T4-03 HGW mit Türe 1flg B 5570mm H 2850mm 1Lichtausschnitt 1Oberlicht 1Seitenteil 3Lichtausschnitt 32dB;4,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+04.4;Typ-T4-04 HGW mit Türe 1flg B 5570 mm H 2850 mm 1 Lichtausschnitt 1Oberlicht 1Seitenteil 3Lichtausschnitt 37dB EI2 30-S200C5;2,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+04.5;Zulage zu Pos. 004.1 Rahmenverbreiterung 37dB seitlich zu Holz-Glaswand-Elemente;2,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+04.6;Zulage zu Pos. 004.1 zusätzlicher senkrechter Rahmen Teilung 37dB zur Ausbildung Seitenteil Holz-Glaswand-Elemente;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+04.7;Zulage zu Pos. 004.2+004.3 Verstärkungspfosten 32dB zu Holz-Glaswand-Element Typ T4-02 / Typ T4-03;18,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+04.8;Zulage zu Pos. 004.1 Verstärkungspfosten 37dB zu Holz-Glaswand-Element Typ T4-01;18,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+04.9;Zulage zu Pos. 004.4 Rahmenverbreiterung 27dB seitlich;3,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+04.10;Zulage zu Pos.  004.4 Rahmenverbreiterung 37dB seitlich;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+05.1;Typ 43 Einfachfenster B 1290 mm H 1380 mm 1tlg 37dB;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+05.2;Typ 37 Einfachfenster B 1360 mm H 2835 mm 1tlg 37dB;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.1;Türstopper Boden Stahl niro Bodenmontage;50,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.2;Türstopper Stahl niro 60mm Wandmontage;15,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.3;Türstopper Stahl niro 90mm Wandmontage;50,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.4;Türstopper Stahl niro 120mm Wandmontage;50,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.5;Türstopper, Kunststoff;50,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.6;Drückergarnitur Gebrauchskl.4 TypU Drücker-Drückergarn. PZ ohne Brandschutz;31,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.7;Drückergarnitur Gebrauchskl.4 TypU Wechselgarn. Drücker Türknauf PZ ohne Brandschutz;15,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.8;Drückergarnitur Gebrauchskl.4 TypU Drücker-Drückergarn. PZ mit Brandschutz;2,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.9;Drückergarnitur Gebrauchskl.4 TypB Drücker-Drückergarn. PZ mit Brandschutz und Fluchtanforderung;19,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.10;Drückergarnitur Gebrauchskl.4 TypB Drücker-Drückergarn. BZ mit Brandschutz und Fluchtanforderung;32,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.11;Drückergarnitur Gebrauchskl.4 TypB Wechselgarn. Drücker Türknauf PZ mit Brandschutz und Fluchtanforderung;4,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.12;Drückergarnitur Gebrauchskl.4 Stoß-Stangengriff Stahl niro matt gebürstet  Windfang-Türen;4,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.13;Drückergarnitur Gebrauchskl.4 Drücker-Drückergarn. Muschelschild ohne Brandschutz;7,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.14;Drückergarnitur Gebrauchskl.4 TypB Drücker-Drückergarn. Muschelschild mit Brandschutz;2,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.15;Einsteckschloss 1-flüglig Türe gefälzte Türen Panikfunkt. Wechselfunkt. SVP-E;3,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.16;Einsteckschloss 1-flüglig Feuer-Rauchschutztüren Panikfunkt. Wechselfunkt. SVP-E;3,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.17;Einsteckschloss 1-flüglig Feuer-Rauchschutztüren Panikfunkt. Umschaltfunkt. SVP B;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.18;Einsteckschloss 2-flüglig Türen Feuer-Rauchschutztüren Panikfunkt. Umschaltfunkt. SVP B;8,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.19;Einsteckschloss 2-flüglig Feuer-Rauchschutztüren Panikfunkt. Wechselfunkt. SVP E;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.20;Obentürschließer Gr.4 barrierefrei Innentür 2-flg. Öffnungsdämpfung Schließverz. Schließfolgeregl. verdeckt Gestänge Festst. ausschaltbar Korrosionsbest.Kl.3;2,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.21;Obentürschließer Gr.6 barrierefrei Festst. Innentür 2-flg. Öffnungsdämpfung Schließverz. Schließfolgeregl. verdeckt Korrosionsbest.Kl.3;9,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.22;Netzteilmodul;2,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.23;Elektr.Türöffner;2,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.24;Magnetkontakt fremdfelds. kodierb. Überwachung Türflügel Öffnung und Verschluss L 6m;5,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.25;Schließblechkontakt Überwachung Innentür Verschluss L 6m 1-flüglige Türe;5,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.26;Zulage Trittschutzblech V2A 1-flüglige Türen;50,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.27;Zulage Trittschutzblech V2A 2-flüglige Türen;56,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.28;Deckleiste B/H 14/36mm L 300-350cm Rechteckprofil Birke;670,0;m;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+06.29;Deckleiste B/H 14/36mm L 300-350cm Rechteckprofil Eiche;75,0;m;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+07.1;Montageplanung;1,0;psch;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+07.2;Statischer Nachweis;1,0;psch;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+07.3;Konformitätsbescheinigungen;1,0;psch;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+07.4;Revisionsunterlagen;1,0;St;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+08.1;Vorarbeiter/-in;10,0;h;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+08.2;Facharbeiter/-in;20,0;h;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
+08.3;Helfer/-in;20,0;h;gaeb-flat;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren.D83
 1;Innentürelement aus Türblatt und Zarge, als Drehflügeltür, einflügelig, stumpf einschlagend, als barrierefreie Ausführung DIN 18040,;1,0;St;gaeb;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren_V32.X83
 2;Innentürelement aus Türblatt und Zarge, als Drehflügeltür, einflügelig, stumpf einschlagend, als barrierefreie Ausführung DIN 18040,;1,0;St;gaeb;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren_V32.X83
 3;Innentürelement aus Türblatt und Zarge, als Drehflügeltür, einflügelig, stumpf einschlagend, als barrierefreie Ausführung DIN 18040,;3,0;St;gaeb;leistungsbeschreibungen/60.4.917.26_FJS_LV-Tischlerarbeiten II Holz-Rahmentüren_V32.X83

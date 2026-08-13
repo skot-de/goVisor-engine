@@ -1,0 +1,9 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0101.1;Aufzüge A1 + A 2;1,0;St;gaeb-flat;leistungsbeschreibungen/RH-1-6-PVV-XX-BE-00_-.D83
+0101.2;Aufzug A 3;1,0;St;gaeb-flat;leistungsbeschreibungen/RH-1-6-PVV-XX-BE-00_-.D83
+0101.3;Abnahme Prüfsachverständiger;3,0;St;gaeb-flat;leistungsbeschreibungen/RH-1-6-PVV-XX-BE-00_-.D83
+0101.4;Aufzugswartung;4,0;St/J;gaeb-flat;leistungsbeschreibungen/RH-1-6-PVV-XX-BE-00_-.D83
+0101.5;Notruf;4,0;St/J;gaeb-flat;leistungsbeschreibungen/RH-1-6-PVV-XX-BE-00_-.D83
+0101.6;Stundenverrechnungssatz für einen Helfer;1,0;h;gaeb-flat;leistungsbeschreibungen/RH-1-6-PVV-XX-BE-00_-.D83
+0101.7;Stundenverrechnungssatz für einen Monteur;1,0;h;gaeb-flat;leistungsbeschreibungen/RH-1-6-PVV-XX-BE-00_-.D83
+0101.8;Stundenverrechnungssatz für Obermonteur;1,0;h;gaeb-flat;leistungsbeschreibungen/RH-1-6-PVV-XX-BE-00_-.D83

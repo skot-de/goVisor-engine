@@ -93,3 +93,97 @@
 0030;Demontage von vorhandenen Rinnenhaltern (Rinnenhaken) aus dem Traufbereich bzw. von Rohrschellen aus dem Mauerwerk/der Fassade.;76,0;St;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.X83
 0040;Fachgerechter Wiedereinbau und Montage der gereinigten und aufbereiteten Zink-Dachrinnen auf den vorhandenen (oder erneuerten) Rinnenhaltern.;57,0;m;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.X83
 0050;Fachgerechter Wiedereinbau und Montage der gereinigten und aufbereiteten Zink-Regenfallrohre an der Fassade.;40,0;m;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.X83
+01010010;Baustelleneinrichtung;1,0;psch;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01010020;Zusammenstellung Dokumentation;1,0;psch;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01010030;Wartung Absturzsicherung;4,0;St/J;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01020010;Dacheindeckung Alu-Stehfalz-Profiltafel, 65 mm, Materialdicke 1,0 mm;112,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01020020;Trapezblechprofil auf Stahlträgern, t = 100 mm;112,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01020030;Zementgebundene Bauplatte 18mm als Tragschicht für Mineraldämmung;112,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01020040;Mineraldämmplatte 120 mm, WLG 040 ,WLS 042,Verlegung mit Gefälle 2°;112,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01020050;Lamellenhaube 1200×1200 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01030010;Dacheindeckung Alu-Stehfalz-Profiltafel, 65 mm, Materialdicke 1,0 mm;79,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01030020;Trapezblechprofil auf Stahlträgern, t = 100 mm;79,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01040010;Kiesschüttung d = 50 mm;51,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01040020;Schutzvlies, 1 Lage, verlegen;51,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01040030;Bitumen-Dachdichtungsbahn DO/E1 ,Dicke 5 mm;51,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01040040;Bitumen-Dampfsperrbahn DU/E1 , Dicke 3 mm;51,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01040050;Gehwegplatten liefern und verlegen;25,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01050010;Dacheindeckung Alu-Stehfalz-Profiltafel, 65 mm, Materialdicke 1,0 mm;428,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01050020;Steinwolle-Dämmplatte d=180 mm, WLS 040;428,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01050030;Zementplatte 12,5 mm als Tragschicht;428,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01050040;Dampfsperre sd > 1500 m, 1-lagig auf Trapezblech;428,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01050050;Stahltrapezblechprofil 100mm inkl. Sicken-Mineralwolledämmung;428,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01060010;Dachfläche reinigen;35,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01060020;Kiesschüttung 80 mm als Auflast und UV-Schutz aufbringen;35,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01060030;Schutzvlies, 1 Lage, verlegen;35,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01060040;Bitumen-Dachdichtungsbahn DO/E1 , Dicke 5 mm;35,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01060050;Bitumen-Dampfsperrbahn DU/E1 , Dicke 3 mm;35,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01060060;Dampfsperre Attikaanschluß 500 mm;47,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01060070;Wärmedämmung Mineralwolle WLS 040, d = 8 cm;35,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01060080;Zementgebundene Bauplatte 18mm als Tragschicht für Mineraldämmung;35,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01060090;Dampfbremse mit sd-Wert > 1500 m , 1-lagig auf Trapezblech;35,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01060100;Trapezblechprofil auf Stahlträgern, t = 100 mm;35,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01070010;Bitumen-Dachdichtungsbahn DO/E1  Dicke 5 mm;12,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01070020;Bitumen-Dampfsperrbahn DU/E1 , Dicke 3 mm;12,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01070030;OSB-Platte, d = 18 mm, als Trägerplatte auf Betonhohldielen verlegen;12,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+01070040;Mineraldämmplatte 120 mm, WLG 040 ,WLS 042,Innendämmung Aufzugsschacht;12,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02020010;Attikaabdeckung aus Betonfertigteilen;29,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02020020;Einbau Keil 50x50 mm (Dämm-/Übergangskeil);10,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02020030;Einbau von PIR-Dämmkeilen 50x50 mm mit Bitumendeckschicht;10,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02020040;Keilrinne im Attikaanschlussbereich, herstellen;10,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02020050;Herstellen Attikadurchführung;2,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02020060;Attikadurchführung;2,0;Stüc;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02020070;Rinnenkasten;2,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02030010;Stützprofil für Attikaabdeckung, Höhe anpassbar;8,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02030020;Stützprofil für Attikaabdeckung, mehrfach gekantet;15,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02030030;Attikaabdeckung aus Aluminiumblech, Breite ca. 28 cm, inkl.Befestigung;23,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02030040;Ortgang-Leiste mit Verstärkungsprofil;23,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02030050;Schließblech mit Formfüller, liefern und montieren;23,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02030060;Auffaltung der Dachbahn an der Attikainnenseite;23,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02030070;Durchführung Entlüftungsrohr DN 100;4,0;Stüc;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02030080;Attikagulli  DN 100 mit Speier als Notüberlauf;2,0;Stüc;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02030090;Fensterbank B = 150 mm, Titanzink;4,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02030100;Dichtigkeitsprüfung Entwässerungsanlagen;1,0;psch;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02030110;Wasserspeier DN 100, Edelstahl;10,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02030120;Schlitzrinne Typ ino 660 SR im EG;25,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02030130;Fassadenrinne 100/50 mm 1.OG-DG;8,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02030140;Attikaablauf mit Becken , DN 70;2,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02040010;Alu-Dachrinne halbrund, NW 280, Oberfläche metallisch;43,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02040020;Rinnenhaken/-halter für Halbrundinne NW 280, Alu,nkl. Befestigung;72,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02040030;Endstück Halbrundinne NW 280, Alu;2,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02040040;Traufenwinkel mit Kompriband und Bördelfüller;43,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02040050;Auslaufstutzen NW 100 aus Aluminium, inkl. Einbindung Fallrohr;2,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02040060;Fallrohr DN 100 aus Aluminium, Oberfläche metallisch, inkl. Befestigun;28,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02040070;Rohrschelle DN 100 aus Edelstahl A2 mit Wandabstandhalter;15,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02040080;Zulage Alu-Rohrbogen, DN 100;2,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02040090;Schneefang aus Aluminium für Stehfalzdach, inkl. Halterung;43,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02040100;Winkelblech als Traufabdeckung aus Aluminium//Stahl;43,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02040110;Dehnungsausgleich  Aluminium.;2,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02040120;Laubfangkorb Aluminium.;2,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02040130;Regenwasser-Standrohr aus  Aluminium.;2,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02040140;Regenwassereinlauf / Anschluss Kanalisation DN 100 inkl. Schmutzfang;2,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02040150;Flachdachabsturzsicherung / Securanten;35,0;Stüc;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02040160;Edelstahlseilsystem;120,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02040170;Eindichtung Securant;35,0;Stüc;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02050010;Alu-Dachrinne Kastenform, NW 280, DIN EN 612;52,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02050020;Rinnenhaken/-halter für Kastenrinne, Alu, inkl. Befestigung;87,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02050030;Endstück für Kastenrinne NW 280, Alu;2,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02050040;Auslaufstutzen NW 100 aus Aluminium, inkl. Einbindung Fallrohr;4,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02050050;Fallrohr DN 100 aus Zink, inkl. Befestigung an Fassade;37,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02050060;Zulage Alu-Rohrbogen, DN 100;4,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02050070;Rohrschelle DN 100 aus Zink mit Wandabstandhalter;15,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02050080;Traufenwinkel mit Kompriband und Bördelfüller;52,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02050090;Schneefang aus Aluminium für Stehfalzdach, inkl. Halterung;52,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02050100;Mineralwolle-Dämmstreifen im Rinnenbereich, WLS = 0,035 W/(mK);52,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02050110;Holzprofil 65/65 mm zur Befestigung der Zementplatte;52,0;lfm;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02050120;Traufabschlussblech aus Aluminium, Oberfläche passend;52,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02050130;Dehnungsausgleich  Aluminium.;2,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02050140;Laubfangkorb Aluminium.;4,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02050150;Regenwasser-Standrohr aus  Aluminium.;4,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02050160;Anschluss an Grundleitung / Standrohrkappe;4,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02050170;Regenwassereinlauf / Anschluss Kanalisation DN 100 inkl. Schmutzfang;4,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02060010;Hänge- u. Aufdachrinnen aus Alu demontieren.;57,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02060020;Regenfallrohre aus Zink  demontieren.;40,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02060030;Rinnenhalter und Rohrschellen demontieren;76,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02060040;Aufbereitete Zink-Dachrinnen fachgerecht wiedereinbauen;57,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83
+02060050;Aufbereitete Zink-Regenfallrohre wiedereinbauen.;40,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS-07.D83

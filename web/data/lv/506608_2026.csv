@@ -1,4 +1,33 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;Vorbereiten der Gerüstaufstandsflächen;217,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.2;Fassadengerüst, LK 4, W09;4479,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.3;Zulage für erschwerte Gerüsterstellung im Innenhof;1172,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.4;Zulage für erschwerte Gerüsterstellung auf dem Dach;163,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.5;Gebrauchsüberlassung Fassadengerüst;263885,0;m²Wo;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.6;Gerüstkonsolen als Belagsverbreiterung 0,30 m;2261,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.7;Zulage für erschwerte Gerüsterstellung im Innenhof;584,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.8;Gebrauchsüberlassung Gerüstkonsolen 0,30 m;83160,0;mWo;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.9;Gerüstkonsolen als Belagsverbreiterung 0,60 m;2261,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.10;Zulage für erschwerte Gerüsterstellung im Innenhof;584,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.11;Gebrauchsüberlassung Gerüstkonsolen 0,60 m;81975,0;mWo;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.12;Innenliegender Seitenschutz;806,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.13;Zulage für erschwerte Gerüsterstellung im Innenhof;254,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.14;Gebrauchsüberlassung innenliegender Seitenschutz;36528,0;mWo;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.15;Überbrückung, LK 4, W09;16,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.16;Gebrauchsüberlassung Überbrückung;915,2;mWo;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.17;Schutz der Dachabdichtung - Bautenschutzmatte;149,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.18;Treppenaufgang H = ca. 4,5 m;1,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.19;Gebrauchsüberlassung Treppenaufgang H = ca. 4,5 m;32,0;StWo;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.20;Gerüststreppenturm H = ca. 13,50 m;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.21;Gebrauchsüberlassung Treppenaufgang H = ca. 13,50 m;118,0;StWo;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.22;Schutzdach über Baustellenzugang als Gerüstsonderkonstruktion;2,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+01.23;Gebrauchsüberlassung Schutzdach;118,0;StWo;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+02.1;Arbeits- und Schutzgerüst als Flächengerüst (Raumgerüst);918,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+02.2;Flächengerüst der vorg. Pos. vorhalten.;12481,0;m³Wo;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+03.1;Facharbeiter;20,0;h;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+03.2;Bauhelfer;20,0;h;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+03.3;Lehrling (3. Lehrjahr);20,0;h;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
+03.4;Liefern, Einhalten, Dokumentieren und Nachweisen sämtlicher;1,0;psch;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten.D83
 1;Gerüstaufstandsflächen durch planieren, verfestigen und auslegen von Lastverteilungselementen für nachstehend beschriebene Gerüste vorbereiten. Abrechnung erfolgt nach Gebäudelänge mit Gerüstaufstellung.;217,0;m;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
 2;liefern und nach Herstellervorschrift und DIN 4420 fachgerecht aufstellen.;4479,0;m²;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
 3;Zulage zur Pos.;1172,0;m²;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83

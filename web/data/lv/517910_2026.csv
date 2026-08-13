@@ -1,0 +1,460 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Zentralbatteriesystem mit automatischer Prüfeinrichtung;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0020;Ortsfeste Bleibatterie gemäß DIN 40737-3, 6V OGiV Block;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0030;Fernanzeige gem. DIN VDE;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0040;Phasenüberwachung mit Schaltmodul 3-pol. entsp. DIN VDE 0100-718;17,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0050;Errichterprüfung / Dokumentation;1,0;psch;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0060;Warn- und Hinweisschilder,;1,0;Satz;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0070;LED Anbauleuchte CG-S FlexiTech SU o. glw.;38,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0080;Kennzeichnungen für die Notleuchten, Größe nach DIN 1450,;37,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0090;Abzweigkasten mit Deckel, 70 x 70 mm;20,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0100;LED - Rettungszeichenleuchte, FlexiTech EW 20 m CG-S IP43 o. glw.;4,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0110;Kennzeichnungen für die Notleuchten, Größe nach DIN 1450,;4,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0120;Abzweigkasten mit Deckel, 70 x 70 mm;3,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0130;LED Sicherheitsleuchte GuideLed SL 13022.2 CG-S – Deckenaufbau o. glw.;92,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0140;LED Sicherheitsleuchte GGuideLed SL 13052.2 CG-S – Deckenaufbau mit asymmetrischer Optik für hervorzuhebende Stellen gem. EN 1838, o. glw.;21,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0150;LED Sicherheitsleuchte 3504.1 CG-S – Deckeneinbaumontage o. glw.;32,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0160;LED - Rettungszeichenleuchte, Crystal Way 19021 CG-S o. glw.;42,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0170;Kennzeichnungen für die Notleuchten, Größe nach DIN 1450,;177,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0180;Abzweigkasten mit Deckel, 70 x 70 mm;133,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0190;Kabelabzweigkasten mit Funktionserhalt E30 inkl. Deckel,;28,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0200;LED Sicherheitsleuchte GuideLed SL 13022.2 CG-S – Deckenaufbau o. glw.;29,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0210;LED Sicherheitsleuchte GGuideLed SL 13052.2 CG-S – Deckenaufbau mit asymmetrischer Optik für hervorzuhebende Stellen gem. EN 1838, o. glw.;7,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0220;LED Sicherheitsleuchte 3504.1 CG-S – Deckeneinbaumontage o. glw.;52,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0230;LED - Rettungszeichenleuchte, Crystal Way 19021 CG-S o. glw.;33,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0240;Kennzeichnungen für die Notleuchten, Größe nach DIN 1450,;121,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0250;Abzweigkasten mit Deckel, 70 x 70 mm;75,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0260;Kabelabzweigkasten mit Funktionserhalt E30 inkl. Deckel,;14,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0270;Einzelleuchtenschalt- und Überwachungsbaustein,für bauseitige Leuchten,;16,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0010;Einspeisebaugruppe;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0020;NH - Sicherungslasttrennleisten, NH 2 (250 A),;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0030;NA-Schutz nach VDE-AR-N 4105 für den Abgang PV-Anlage;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0040;Abgangsbaugruppen 630 A,;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0050;Blitzstromableiter Typ1 als Kombi-Ableiter,;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0060;NH - Sicherungslasttrennleisten, NH 2 (400 A),;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0070;NH - Sicherungslasttrennleisten, NH 1 (250 A),;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0080;NH - Sicherungslasttrennleisten, NH 00 (125 A),;15,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0090;Reiterelement D02, 3-pol., 63 A;5,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0100;Zählerwechselschrank nach TAB für die Wandler-Messung;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0010;Freiflächenheizung für ca. 9,0 m² zur Verlegung im Asphalt,;4,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0020;Freiflächenheizung für ca. 15,0 m² zur Verlegung im Asphalt im Kurvenbereich;4,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0030;Freiflächenheizung für ca. 6,3 m² zur Verlegung im Asphalt, im Kurvenbereich;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0040;Freiflächenheizung für ca. 1,5 m² zur Verlegung im Asphalt im Kurvenbereich;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0050;Verlängerung des Kaltleiters, Verlegung im Asphalt, 2,5 mm²;5,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0060;Schrumpfmuffe für Heizschlangen;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0070;Rinnenheizung als selbstregulierendes Heizband, Länge ca. 5,5  m,;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0080;Kantenschutz und Abstandshalter mit 2 Kabelbindern;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0090;Montagesteg für die Verlegung der Heizkabel;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0100;Digitaler Eis- und Schneemelder, für Hutschienenmontage geeignet, zur Steuerung der Freiflächenheizung > 50 m²,;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0110;Feuchte- und Temperaturfühler inkl. Fühlerhülse für v. g. Freiflächenheizung, geeignet für Asphalt;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0120;Verteilung für die Freiflächenheizung, ca. 25 KW, Wandschrank, 300 mm breit, SK II;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0130;Einspeisung 50 A;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0140;Lasttrennschalter 50 A;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0150;Sicherungssockel 3-pol. 63 A;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0160;Fehlerstromschutzschalter 4-pol., 40/0,3A;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0170;Schütz 4-pol., 40A,;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0180;Leitungsschutzschalter 2-pol., B 16 A;10,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0190;Leitungsschutzschalter 1-pol., B 6 A, als Steuersicherung;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0200;Umschalter mit Nullstellung;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0210;flexibles Stahlrohr M20 zum Schutz von Kabel und Leitungen im Asphalt;20,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0010;Verteilungsschrank, 1.050 mm breit, IP 44, SK I,;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0020;Verteilungsschrank, 800 mm breit, IP 44, SK I,;13,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0030;Verteilungsschrank, 550 mm breit, IP 44, SK I,;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0040;Wandschrank, 300 mm breit, SK II;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0050;Einspeisung 4x120/70mm²;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0060;Einspeisung 4x70/35mm²;11,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0070;Einspeisung 4x50/25mm²;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0080;Einspeisung 4x35/16mm²;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0090;Einspeisung 125 A;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0100;Einspeisung bis 80 A;10,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0110;Lasttrennschalter 125 A;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0120;Lasttrennschalter 63A;12,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0130;D02 Reitersicherungselement, 3-polig, 63A;155,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0140;Sicherungs-Lastschaltleiste NH00/60mm;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0150;Fehlerstromschutzschalter 4-pol., 40/0,03A;55,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0160;Fehlerstromschutzschalter 4-pol., 63/0,03A;40,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0170;Fehlerstromschutzschalter 4-pol., 40/0,3A;33,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0180;Fehlerstromschutzschalter 4-pol., 40/0,03A, allstromsensitiv;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0190;FI/LS B16A, 30 mA, 2-pol.;10,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0200;FI/LS B16A, 300 mA, 2-pol.;3,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0210;Überspannungsableiter Typ 2, 4-polig, FM Kontakt;14,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0220;Schütz 4-pol., 20 A,;5,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0230;Schütz 4-pol., 40 A,;3,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0240;Schütz 4-pol., 63A,;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0250;Leitungsschutzschalter 1-pol., B 10 - 10A;250,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0260;Leitungsschutzschalter 1-pol., B 16 A;614,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0270;Leitungsschutzschalter 2-pol., B 20 A;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0280;Leitungsschutzschalter 1-pol., C 16 A;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0290;Leitungsschutzschalter 3-pol., B 16 A;6,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0300;Leitungsschutzschalter 3-pol., B/C 25 - 32 A;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0310;Anreihbarer Hilfsschalter 1-pol. 2Schließer;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0320;Schaltrelais 230V, 16A 2S;18,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0330;Umschalter mit Nullstellung;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0010;I-Rohr, EN 20, Verlegung in stehender Schalung;50,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0020;I-Rohr EN 25, Verlegung in stehender Schalung;70,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0030;I-Rohr EN 32, Verlegung in stehender Schalung;30,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0040;I-Rohr EN 50, Verlegung innerhalb einer Sohle;10,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0050;I-Rohr, EN 20, u.P.;50,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0060;I-Rohr EN 25, u.P.;70,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0070;I-Rohr, EN 32, u.P.;30,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0080;I-Rohr, EN 50, u.P.;15,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0090;I-Rohr, EN 25, Verlegung auf Rohfußboden;500,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0100;I-Rohr, EN 40, Verlegung auf Rohfußboden;20,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0110;Wand-/Deckenübergang 90° Bogen für Ortbeton;15,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0120;Schalterdose als Beton-Fertigbaudose;50,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0130;Schalterdose mit Putzdeckel;50,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0140;Kabelschutzrohr DN 40, flexibel als Ringware, Verlegung im Erdreich;50,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0150;Kabelschutzrohr DN 25, flexibel als Ringware, Verlegung im Erdreich;100,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0160;Anfahrt für Verlegearbeiten;5,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0010;4-Kanal Sonnenschutzzentrale;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0020;Aufputzgehäuse weiß für vg. Sonnenschutzzentrale;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0030;Sonnenschutz-Wetterstation;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0040;Motorsteuereinheit Kompakt 2 AP;4,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0050;Motorsteuereinheit Kompakt 4 AP;11,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0060;Motorsteuereinheit Kompakt 6 AP;12,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0070;Beistellen Hirschmann-Stecker;130,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0080;Standrohr Stahl für die Befestigung des v.g. Messwertgeber;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0090;Monteur - Stunden;12,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0100;Helfer - Stunden;12,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0010;N2XCH 4 x 120/70 mm², Cu-Zahl 5388,;65,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0020;Mehrpreis für o.a. Kabel/Leitung;30,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0030;N2XCH 4 x 70/35 sm mm², Cu-Zahl 3082;532,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0040;Mehrpreis für o.a. Kabel/Leitung;117,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0050;N2XCH 4 x 50/25 sm mm², Cu-Zahl 2203;75,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0060;Mehrpreis für o.a. Kabel/Leitung;20,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0070;N2XH-J 5 x 35 sm mm², Cu-Zahl 1680;70,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0080;Mehrpreis für o.a. Kabel/Leitung;15,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0090;N2XH 5 x 25 sm mm², Cu-Zahl 1142;50,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0100;Mehrpreis für o.a. Kabel/Leitung;25,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0110;N2XH-J 5 x 16 sm mm², Cu-Zahl 797;50,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0120;Mehrpreis für o.a. Kabel/Leitung;20,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0130;NHXMH-J 5 x 10, Cu-Zahl 480,;50,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0140;Mehrpreis für o.a. Kabel/Leitung;5,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0150;NHXMH-J 5 x 6, Cu-Zahl 288,;250,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0160;Mehrpreis für o.a. Kabel/Leitung;65,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0170;NHXMH-J 5 x 4, Cu-Zahl 192,;300,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0180;Mehrpreis für o.a. Kabel/Leitung;30,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0190;NHXMH-J 5 x 2,5, Cu-Zahl 120,;13112,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0200;Mehrpreis für o.a. Kabel/Leitung;350,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0210;NHXMH-J 3 x 2,5, Cu-Zahl 72,;17868,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0220;Mehrpreis für o.a. Kabel/Leitung;850,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0230;NHXMH-J 5 x 1,5, Cu-Zahl 72,;7683,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0240;Mehrpreis für o.a. Kabel/Leitung;250,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0250;NHXMH-J 3 x 1,5, Cu-Zahl 43,;10512,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0260;Mehrpreis für o.a. Kabel/Leitung;350,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0270;NHXMH-J 7 x 2,5, Cu-Zahl 101,;250,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0280;NHXMH-J 12 x 1,5, Cu-Zahl 173,;35,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0290;Halogenfreie EIB KNX-Busleitung, J-H(St)H 2 x 2 x 0,8 mm², Außenfarbe grün,;50,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0300;Halogenfreies H07RN-F 5G2,5 mm², Cu-Zahl 120,;20,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0310;Halogenfreies H07RN-F 5G4 mm², Cu-Zahl 192,;20,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0320;Halogenfreies H07RN-F 3G2,5 mm², Cu-Zahl 72,;25,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0330;Halogenfreies H05VV-F 4G1 mm², Cu-Zahl 38,;863,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0340;NHXCHX 4 x 25/16 rm mm² E30, Cu-Zahl 1142;80,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0350;NHXCHX 4 x 10/10 rm mm² E30, Cu-Zahl 1142, E30;10,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0360;NHXH 5 x 6 mm² E30, Cu-Zahl 288, E30;35,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0370;NHXH 5 x 2,5 mm² E30, Cu-Zahl 120, E30;55,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0380;NHXH 3 x 4 mm² E30, Cu-Zahl 115, E30;160,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0390;NHXH 3 x 2,5 mm² E30, Cu-Zahl 72, E30;625,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0400;NHXH 3 x 1,5 mm² E30, Cu-Zahl 43, E30;570,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0410;Brandmeldekabel  JE-H(St)H 2 x 2 x 0,8;350,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0420;Halogenfreies Fernmeldekabel JE-H(ST)H 2 x 2 x 0,8 E30/E90;1890,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0430;Halogenfreies Fernmeldekabel JE-H(ST)H 4 x 2 x 0,8 E30/E90;930,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0440;Halogenfreie Datenleitung LiHCH 4 x 0,25 mm², CU Zahl 22,;150,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0450;Halogenfreie Datenleitung LiHCH 2 x 2 x 0,5 mm², CU Zahl 140,;75,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0460;Halogenfreie Datenleitung LiHCH 4 x 2 x 0,5 mm², CU Zahl 158,;60,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0470;Halogenfreies Fernmeldekabel J-H(ST)H 2 x 2 x 0,6, Cu-Zahl 13;85,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0480;Halogenfreies Fernmeldekabel J-H(ST)H 4 x 2 x 0,6, Cu-Zahl 24;70,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0490;Halogenfreies Fernmeldekabel J-H(ST)H 10 x 2 x 0,6, Cu-Zahl 58;60,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0500;Halogenfreies Fernmeldekabel J-H(ST)H 2 x 2 x 0,8, Cu-Zahl 21;850,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0510;Halogenfreies Fernmeldekabel J-H(ST)H 4 x 2 x 0,8, Cu-Zahl 41;265,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0520;NYY 5 x 16 re, Cu-Zahl 786;35,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0530;NYY 5 x 6 re, Cu-Zahl 288;150,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0540;NYY 5 x 2,5, Cu-Zahl 120;50,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0550;NYY 3 x 2,5, Cu-Zahl 72;50,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0560;Kabel - Abzweigmuffe DIN 47900 bis NYY 5 x 6 mm²;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0570;Kabel - Abzweigmuffe DIN 47900 bis NYY 5 x 16 mm²;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0580;Kabelschutzhauben Deckbreite ca. 120 mm,;100,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0590;Mittelschwere Kabelrinne, Höhe 60 mm, 200 mm,;249,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0600;Mittelschwere Kabelrinne, Höhe 60 mm, 300 mm,;82,5;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0610;Mittelschwere Kabelrinne, Höhe 60 mm, 300 mm, an Holzdecke montiert;25,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0620;Formteil (Bogen, Etagenbogen, T-Abzweig);5,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0630;Mittelschwere Kabelrinne, Höhe 60 mm, 400 mm,;284,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0640;Mittelschwere Kabelrinne, Höhe 60 mm, 400 mm, an Holzdecke montiert;45,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0650;Formteil (Bogen, Etagenbogen, T-Abzweig);57,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0660;Mittelschwere Kabelrinne, Höhe 60 mm, 500 mm,;34,5;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0670;Formteil (Bogen, Etagenbogen, T-Abzweig);1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0680;Mittelschwere Kabelrinne, Höhe 60 mm, 600 mm,;5,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0690;Formteil (Bogen, Etagenbogen, T-Abzweig);1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0700;Mittelschwere Kabelrinne, Höhe 110 mm, 400 mm,;2,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0710;Formteil (Bogen, Etagenbogen, T-Abzweig);2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0720;Mittelschwere Kabelrinne, Höhe 110 mm, 600 mm,;10,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0730;Formteil (Bogen, Etagenbogen, T-Abzweig);1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0740;Mittelschwere Kabelrinne Edelstahl, Höhe 60 mm, 300 mm,;156,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0750;Formteil (Bogen, Etagenbogen, T-Abzweig);16,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0760;Kabelrinnenbogen Edelstahl 90°, 60 mm x 300 mm,;22,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0770;Trennsteg 60 mm, zur Trennung von Kabeln und Leitungen;655,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0780;Trennsteg 110 mm, zur Trennung von Kabeln und Leitungen;12,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0790;Deckel mit Drehriegel Edelstahll, Breite 300 mm, für Kabelrinne und Kabelleiter.;156,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0800;Wandausleger, Breite 210 mm;168,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0810;Wandausleger, Breite 310 mm;56,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0820;Wandausleger, Breite 410 mm;196,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0830;Wandausleger, Breite 510 mm;24,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0840;Wandausleger, Breite 610 mm;10,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0850;Hängestiel, Länge 200 mm,;50,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0860;Hängestiel, Länge 300 mm,;344,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0870;Hängestiel, Länge 400 mm,;20,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0880;Hängestiel, Länge 500 mm,;20,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0890;Hängestiel, Länge 800 mm,;10,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0900;Hängestiel, Länge 1000 mm,;10,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0910;Pendelabhängung;5,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0920;Steigeleiter 60 mm x 300 mm,;15,5;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0930;Steigeleiter 60 mm x 400 mm,;46,5;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0940;Installationskanal mit Ober- und Unterteil 60/230 mm, halogenfrei;5,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0950;Installationskanal mit Ober- und Unterteil 60/110 mm, halogenfrei;25,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0960;Rangierkanal 190/150 mm, Länge 1.050 mm, halogenfrei,;15,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0970;Aussendurchmesser: 20 mm, sonst Text wie vor.;25,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0980;Aussendurchmesser: 25 mm, sonst Text wie vor.;25,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0990;Elektro-Installationsrohr Aussendurchmesser: 20 mm;40,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1000;Aussendurchmesser: 25 mm, sonst Text wie vor.;25,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1010;Aussendurchmesser: 32 mm, sonst Text wie vor.;10,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1020;Aussendurchmesser: 20 mm, sonst Text wie vor.;200,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1030;Aussendurchmesser: 25 mm, sonst Text wie vor.;50,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1040;Aussendurchmesser: 32 mm, sonst Text wie vor.;40,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1050;Aussendurchmesser: 40 mm, sonst Text wie vor.;20,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1060;Aussendurchmesser: 25 mm, sonst Text wie vor.;100,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1070;Aussendurchmesser: 32 mm, sonst Text wie vor.;80,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1080;Endkappen, halogenfrei für v. g. Metallrohr;190,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1090;Sammelhalterungen Metall, für 30 Leitungen;135,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1100;Sammelhalterungen Metall, 15 Leitungen;250,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1110;Kabelklammern Metall, für 16 Leitungen;250,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1120;Kabelklammern Metall, 8 Leitungen;850,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1130;Einzelschellen ohne FE;450,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1140;Unterflurkanal;5,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1150;Vertikalkrümmer;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1160;Verbindungslasche;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1170;Unterflur-Gerätedose;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1180;Aufstockhilfe für UZD350-3 mit Nennhöhe 70 bis 125 mm;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1190;Geräteeinsatz;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1200;Gerätebecher;3,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1210;Steckdose 2fach 33° schräg;3,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1220;Vollgeschirmte 2-fach Datenanschlussdose Cat.6A;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1230;Ausnivellieren des zuvor beschriebenen Unterflurkanalsystems;1,0;psch;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1240;Einzelschellen E30;205,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1250;Sammelhalterungen E30 / E90;350,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1260;Steigeleiter für Funktionserhalt 60 mm x 200 mm,;15,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1270;Steigeleiter für Funktionserhalt 60 mm x 400 mm,;40,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1280;Zugentlastung dreiseitig, für Steigeleiter 400mm;25,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1290;Fensterbank- bzw. Brüstungskanal ca. 70 x 170, halogenfrei;10,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1300;Formstück für v. g. BR Kanal;4,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1310;Kanaloberteil, ca. 80 mm,;10,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1320;Geräteeinbaudose;10,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1330;Monteur - Stunden;25,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+1340;Helfer - Stunden;10,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0010;UP-Taster 10A / 250V  mit Beschriftungsfeld;89,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0020;UP-Taster 10A / 250V beleuchtet mit Beschriftungsfeld;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0030;UP-Jalousie-Wipptaster, 2-polig;50,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0040;UP-Schukosteckdose 230V/16A;590,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0050;UP-Schukosteckdose 230V/16A mit mindestens einem USB-C Anschluss;88,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0060;UP-Schuko-Steckdosen 230V/16A, als DV-Steckdose Rot.;258,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0070;UP Herdanschlussdose;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0080;HDMI Anschlußdose;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0090;Schnurauslassdose (kombinationsfähig);78,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0100;Mehrpreis für Ausführung mit Gerätedose Schallschutz;90,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0110;Mehrpreis für Ausführung mit Gerätedose für Brandschutzwände EI30-EI90;5,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0120;Blindabdeckung mit Tragring;63,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0130;HDMI Kabel 10m 4K Stecker/Stecker;42,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0140;USB-C Kabel 10m 4K Stecker/Stecker;42,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0150;Hochfrequenz Präsenzmelder Einbau mit DALI-2 Schnittstelle;69,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0160;Hochfrequenz, Gang-Präsenzmelder für die Deckenmontage Aufputz mit DALI-2 Schnittstelle;35,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0170;Hochfrequenz Präsenzmelder für die Deckenmontage Aufputz;31,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0180;Hochfrequenz Präsenzmelder für die Deckenmontage Aufputz;15,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0190;Bewegungsmelder 300° Aufputz Wandmontage IP54;9,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0200;Energiewürfel abgehängt, 4x 230 V Schuko, 2x USB-C;8,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0210;Energiewürfel abgehängt, 6x 230 V Schuko,;12,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0220;Universal-Aus.-Wechselschalter, a.P. Ausführung schlagfest;25,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0230;Schuko-Steckdose mit Beschriftungsfeld;43,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0240;2-fach Schuko-Steckdose WGAP;10,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0250;Reparaturschalter 16 A, 4-pol.;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0260;Reparaturschalter 32 A, 4-pol.,;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0270;Schalterdose als Hohlwanddose, Mehrpreis,;650,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0280;Schalterdose als Hohlwanddose Schallschutz, Mehrpreis,;250,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0290;Schalterdose als Hohlwanddose Brandschutz, Mehrpreis,;150,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0300;Abzweigdose mit verschraubbarem Deckel,;50,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0310;Geräteanschlussdose mit Verb.-klemmen 5-pol., bis 2,5 mm²,;20,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0320;Geräteanschlussdose, Verb.-klemmen 5-pol., bis 6 mm,;15,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0330;Abzweigdose mit Deckel, 85 x 85 mm,;375,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0340;Abzweigdose mit Deckel, 100 x 100 mm;100,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0350;Abzweigdose mit Deckel, 130x85x37 mm  Sonnenschutz;25,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0360;Abzweigkasten 150 x 150 mm,;5,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0370;Wandschlitz in Mauerwerk herstellen,;30,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0380;Bohrung Beton, d = ca. 100 mm,;5,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0390;Bohrung Beton, d = ca. 80 mm,;8,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0400;Bohrung Beton, d = ca. 50 mm,;20,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0410;Bohrung Beton, d = ca. 25 mm,;30,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0420;Bohrung in Holz bis 25x300mm;40,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0430;Geräteanschluss erstellen, H05 VV-F 3G2,5;55,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0440;Geräteanschluss erstellen, H05 VV-F 5G2,5;30,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0450;Geräteanschluss erstellen, H05 VV-F 5G4;15,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0460;Geräteanschluss erstellen, H05 VV-F 5G6;15,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0470;Schrumpfmuffe bis 5x2,5;15,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0480;RWA Anlage elektrisch anschließen;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0490;Automatiktüren bzw. Rauchabschlußtüren anschliessen.;27,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0500;Beigestellte Aussenfühler;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0510;Beigestellte Raumthermostate;50,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0520;Hebeanlage elektrisch anschliessen;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0530;Anschluß Sonnenschutzmotor,;130,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0540;Wasserdichte Hauseinführung für Elektroleitungen;3,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0550;Snap In Systemdeckel mit 3 Stutzen;4,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0560;Snap In Systemdeckel mit 7 Stutzen;8,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0570;Gummistopfen für v. g. Deckel;12,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0580;System-Deckel HSI 150 zum Anschluß an gewellte Rohre;8,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0590;Dachdurchführung als Schwanenhals, D innen ca. 150 mm,;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0600;Kabelabdichtung für Schwanenhals;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0610;Ampelsteuerung für Gegenverkehrsteuerung in der TG Einfahrt,;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0620;PKW LED Ampel, 2-flammig, Rot / Grün, Standard-Design- Gehäuse, schwarz, Durchmesser pro Lichtanzeige ca. 200 mm;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0630;PKW LED Ampel, 2-flammig, Rot / Grün, Standard-Design- Gehäuse, schwarz, Durchmesser pro Lichtanzeige ca. 200 mm;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0640;Zugschalter, inkl. Befestigungswinkel, Zugseil 3 m,;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0650;Kommunikationsstele Edelstahl, 1,35m,;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0010;Monteur - Stunden;75,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0020;Helfer - Stunden;30,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0030;Auszubildender - Stunden;30,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0040;Teilnahme des Errichters an der Abnahme des Prüfsachverständigen;1,0;psch;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0050;Dokumention Wartungs- und Bestandsunterlagen nach DIN 18382;1,0;psch;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0060;Gerüstgestellung für Montagearbeiten in Räumen;12,0;Mt;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0070;Baustelleneinrichtung, An- und Abtransport;1,0;psch;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0080;Baustelleneinrichtung, Vorhaltung;1,0;psch;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0010;Kabelabschottung für Bohrung bis D = 40 mm, S90;45,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0020;Kabelabschottung 0,01m², S90;55,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0030;Kabelabschottung 0,02m², S90;45,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0040;Kabelabschottung 0,04m², S90;10,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0050;Kabelabschottung 0,05m², S90;10,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0060;Kabelabschottung 0,05m², S90, mit Brandschutzstein, sonst wie vor;3,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0070;Kabelabschottung 0,1m², S90;5,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0080;Kabelabschottung 0,2m², S90;5,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0090;Kabelabschottung 0,1m², S90, mit Brandschutzstein;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0100;Kabelabschottung 0,2m², S90, mit Brandschutzstein;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0110;Brandschutzstopfen für Bohrung D = 100 mm, S90,;25,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0120;Brandschutzstopfen für Bohrung D = 80 mm, S90,;25,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0130;Brandschutzkabelmanschette für Bohrung D = 150 mm, S90,;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0140;Aufdopplungsrahmen 3/4 seitig zum Erreichen der Mindestschottstärke pro Schott;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0150;I 30 Verkleidung, dreisseitig, für eine Kabelbühne;5,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0160;Elektro-Brandschutz-Installationskanal 70/110 mm;12,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0170;Dokumentation der Brandschutzmaßnahme;1,0;psch;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0010;Quadratische Einbauleuchte;73,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0020;Anbauleuchte, linear, ca. 1182 mm, DALI, UGR <19;34,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0030;Anbauleuchte, linear, ca. 1765 mm, DALI, UGR 19;278,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0040;Anbauleuchte, linear, ca. 2055 mm, DALI, UGR 19;12,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0050;LED Einbaudownlight rund, DALI;19,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0060;Deckenleuchte, Anbau, rund, 300mm, DALI;110,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0070;LED Einbaudownlight rund;20,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0080;Brandschutzgehäuse für v.g. Einbauleuchte;20,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0090;Deckenleuchte, Anbau, rund, 400mm, DALI;6,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0100;Deckenleuchte, Anbau, rund, 480mm, DALI;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0110;Deckenleuchte, Anbau, rund, 500mm, 16W, DALI;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0120;Deckenleuchte, Anbau, rund, 500mm, DALI;69,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0130;Deckenleuchte, Anbau, rund, 600mm, DALI;9,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0140;Deckenleuchte, Anbau, rund, 800mm, DALI;9,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0150;Pendelabhängung für v. g. Leuchte;10,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0160;LED Einbaudownlight rund;40,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0170;Feuchtraum-Leuchte,  min. IP 65, LED, ca. 28 W, ca. 4.000 lm, 4.000 K, Dali fähig;100,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0180;LED- Wandleuchte mit Notlichtfunktion, rund, ca. 350mm;9,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0190;LED- Wandeinbauleuchte mit Notlichtfunktion;7,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0200;LED- Mastaufsatz, asymmetrisch;5,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0210;Lichtmast LPH:5,00mtr.Zopf:76mm konisch;5,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0010;Potential-Ausgleichsschiene,;21,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0020;Potential-Ausgleichsschiene,;6,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0030;Anschluss 1 x 6 mm².;95,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0040;Anschluss 1 x 16 mm².;55,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0050;Anschluss 1 x 50 mm².;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0060;Anschluss 1 x 95 mm² ,;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0070;Halogenfreies Starkstromkabel N2XH 1 x 6, Cu-Zahl 58,;650,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0080;Halogenfreies Starkstromkabel N2XH 1 x 16, CU-Zahl 154,;450,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0090;Halogenfreies Starkstromkabel N2XH 1 x 50, CU Zahl 480;180,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0100;Überspannungsschutz Typ 1 für Kabel bei Änderung der Blitzschutzzone;8,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0110;Überspannungsschutz, für FM-Kabel,;7,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0120;Überspannungsschutz, für elektroakustische Anlagen,;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0130;Überspannungs-Ableiter Klasse E 250 Hz;15,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0010;Notrufset für Behinderten-WC / Sanitäter inkl. USV Versorgung nach DIN VDE 0834;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0010;SIP-Türstation, 3-fach senkrecht, LS, Mikro, 1 Tasten und Piktogramme,;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0010;Übergabefeld;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0020;Deckeneinbaulautsprecher, 6 W 100 Volt, A/B, Farbe Weiß,EN54;118,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0030;Wand-Aufbaulautsprecher, 6 W 100 Volt, A/B, Farbe Weiß, EN54;73,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0040;Druckkammerlautsprecher wetterfest 100 V / 15 W , EN 54-24;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0050;Druckkammerlautsprecher wetterfest 100 V / 30 W , EN 54-24;5,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0060;Handmelder “Hausalarm“, blau;25,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0070;Optischer Signalgeber 24V, EN 54-23;5,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0080;Inbetriebnahme der Anlage,;1,0;psch;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0090;Errichterprüfung / Dokumentation;1,0;psch;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0100;Messprotokoll für SAA-Anlage;1,0;psch;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0110;Teilnahme an der Abnahme nach PrüfVo NRW;1,0;psch;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0120;Einweisung des Bedienpersonals;1,0;psch;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0130;Betriebshandbuch zur Dokumentation des Anlagen- zustandes;1,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0010;Montage und Anschluss von bauseitig gelieferten RWA Komponenten;2,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0010;"SF/UTP-Datenleitung Category 7""A"", Duplex, mind. 1.300 MHz, AWG 22";12200,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0020;"SF/UTP-Datenleitung Category 7""A"", Simpex, mind. 1.300 MHz, AWG 22";1230,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0030;LWL-Universalkabel, Singlemode OS 2, 1 x 12 E 9/125 µm,;605,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0040;Kategorie 6;144,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0050;wie vor, aber Aufputz-Installation;42,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0060;"19""-Standverteilerschrank 42 HE, B = 800, T = 1000 mm";8,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0070;Lüftereinheit für Dacheinsatz;8,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0080;Patchpanel 1HE, 24 Premium RJ 45 Keystone KAT 6;20,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0090;"19"" LWL Spleissbox, 1 HE, ausziehbar, 12 x LC-DX, 24 x Pigtail Singlemode OS2 APC,";12,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0100;Patchkabel RJ 45 - RJ 45, CAT6, geschirmt;20,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0110;Patchkabel RJ 45 - RJ 45, CAT6, geschirmt;90,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0120;"Rangierpanel 19""";24,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0130;Messung einer Cu-Datenleitung;397,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0140;Spleißung von LWL-Singlemode OS 2, 9/125  µm, Fasern;200,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0150;Messung einer LWL-Datenleitung;200,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0160;Einführung der Datenleitungen (Duplex);186,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0170;Anschalten von geschirmten Datenleitungsenden;372,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0180;Beschriftungen zur indivduellen Kennzeichnung;372,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0190;Erstellen von Dokumentationsunterlagen;1,0;psch;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0200;"Stromversorgungsleiste für 19"" IT Schrank, vertikale Montage";16,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0010;NHXMH-J 5 x 2,5, Cu-Zahl 120, liefern und verlegen;30,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0020;NHXMH-J 3 x 2,5, Cu-Zahl 72, liefern und verlegen;30,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0030;NHXMH-J 7 x 1,5, Cu-Zahl 101,  liefern und verlegen;30,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0040;NHXMH-J 5 x 1,5, Cu-Zahl 72, liefern und verlegen;980,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0050;NHXMH-J 3 x 1,5, Cu-Zahl 43, liefern und verlegen;980,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0060;Halogenfreie Gummischlauchleitung H07ZZ-F 3G1,5 mm²,;70,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0070;Halogenfreie Gummischlauchleitung H07ZZ-F 5G1,5 mm²;60,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0080;Halogenfreie Gummischlauchleitung H07ZZ-F 7G1,5 mm²,;20,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0090;Halogenfreie Gummischlauchleitung H05RR-F 4G1,0 mm²,;20,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0100;Halogenfreie Steuerleitung H07BQ-F 3 x 1,5, Cu-Zahl 43, liefern und verlegen;980,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0110;Halogenfreie Steuerleitung H07BQ-F 4 x 1,5, Cu-Zahl 58,;30,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0120;Halogenfreie Steuerleitung H07BQ-F 5 x 1,5, Cu-Zahl 72,  liefern und verlegen;30,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0130;Halogenfreie Steuerleitung H07BQ-F 5 x 2,5, Cu-Zahl 120, liefern und verlegen;30,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0140;Halogenfreie Schlauchleitung YSLY-JZ 3 x 1,5, Cu-Zahl 43, liefern und verlegen;30,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0150;Halogenfreie Schlauchleitung YSLY-JZ 5 x 1,5, Cu-Zahl 72, liefern und verlegen;120,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0160;Halogenfreie Schlauchleitung YSLY-JZ 3 x 2,5, Cu-Zahl 72,;130,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0170;Halogenfreie Schlauchleitung YSLY-JZ 5 x 2,5, Cu-Zahl 120, liefern und verlegen;25,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0180;Halogenfreie Motoranschlussleitung 2YSLCY-J 4x1,5 mm², Cu-Zahl 95, liefern und verlegen;80,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0190;Halogenfreie Motoranschlussleitung 2YSLCY-J 4x2,5 mm², Cu-Zahl 146, liefern und verlegen;35,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0200;Halogenfreie Motoranschglussleitung 2YSLCY-J 4x6 mm², Cu-Zahl 306;20,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0210;Halogenfreie Datenleitung LiHCH 4 x 0,25 mm², CU Zahl 22,;130,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0220;Halogenfreie Datenleitung LiHCH 2 x 2 x 0,5 mm², CU Zahl 140, liefern und verlegen;30,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0230;Halogenfreie Datenleitung LiHCH 2 x 2 x 0,75 mm²;600,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0240;Halogenfreie Datenleitung LiHCH 4 x 2 x 0,5 mm², CU Zahl 158, liefern und verlegen;25,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0250;Halogenfreies Fernmeldekabel J-H(ST)H 2 x 2 x 0,6, Cu-Zahl 13;600,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0260;Halogenfreies Fernmeldekabel J-H(ST)H 4 x 2 x 0,6, Cu-Zahl 24;300,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0270;Halogenfreies Fernmeldekabel J-H(ST)H 10 x 2 x 0,6, Cu-Zahl 58;150,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0280;Halogenfreies Fernmeldekabel J-H(ST)H 2 x 2 x 0,8, Cu-Zahl 21;850,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0290;Halogenfreies Fernmeldekabel J-H(ST)H 4 x 2 x 0,8, Cu-Zahl 41;650,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0300;Halogenfreie Fernmeldeleitung LiYCY 4 x 0,25, liefern und verlegen;150,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0310;Halogenfreier Installationskanal mit Ober- und Unterteil 60/230 mm,;25,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0320;Halogenfreier Installationskanal mit Ober- und Unterteil 60/110 mm,;25,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0330;Elektroinstallationsrohr DIN EN 61386-21, Nenngröße 25,;150,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0340;Elektroinstallationsrohr DIN EN 61386-21, Nenngröße 32,;90,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0350;Elektroinstallationsrohr DIN EN 61386-21, Nenngröße 40,;50,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0360;Elektro-Metallrohr DIN EN 50086, Nenngrösse 25;110,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0370;Elektro-Metallrohr DIN EN 50086, Nenngrösse 32;80,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0380;Endkappen für v. g. Metallrohr, halogenfrei;160,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0390;Ankerschienen zur Befestigung der Kabel mit Bügelschellen,;70,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0400;Bügelschelle, 1-fach mit Kunststoffdruckwanne bis D = 28 mm;50,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0410;Bügelschelle, 1-fach mit Kunststoffdruckwanne bis D = 46 mm;30,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0420;Bügelschelle, 1-fach mit Kunststoffdruckwanne bis D = 64 mm;15,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0430;Bügelschelle, 2-fach mit Kunststoffdruckwanne bis D = 28 mm;15,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0440;Kabelbezeichungsschilder aus Kunststoff, halogenfrei;130,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0450;Spiralband, 11 bis 70 mm, halogenfrei;20,0;m;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0460;Schlauchverbindung, flexibel bis 25 mm, halogenfrei;10,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0470;Schlauchverbindung, flexibel bis 32 mm, halogenfrei;10,0;St;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83
+0480;Profilstahl als U-Stahl, zur Herstellung von Sonderkonstruktionen;10,0;kg;gaeb;leistungsbeschreibungen/VE 440 260722 Elektroinstallation.x83

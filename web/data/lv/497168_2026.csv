@@ -241,6 +241,248 @@
 2;Wartung, wie zuvor beschrieben, von;1,0;a;gaeb;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV_V33 (1).X83
 3;Wartung, wie zuvor beschrieben, von;1,0;a;gaeb;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV_V33 (1).X83
 4;Wartung, wie zuvor beschrieben, von;1,0;a;gaeb;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV_V33 (1).X83
+01.1.1;Baustelleneinrichtung Dachdecker- und Klempnerarbeiten;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.1.2;Witterungsschutz - PVC Plane;75,0;m2;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.1.3;Zulage Witterungsschutz - Reparatureinsatz;2,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.1.4;Flexrohr, Zwischenentwässerung, einrichten;50,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.1.5;Flexrohr, Zwischenentwässerung, umverlegen;30,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.1.6;Flexrohr, Zwischenentwässerung, rückbauen, entsorgen;50,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.2.1;Windsogberechnung;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.2.2;Ermittlung der Regenwassermengen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.2.3;Musterfeld Traufe;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.2.4;Handmuster;5,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.2.5;Dokumentation;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.3.1;Schiefer Dach, Rechteckdoppeldeckung, Format 33/60cm;116,0;m2;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.3.2;Integriertes Photovoltaik-Dach, Rechteckdoppeldeckung 33/60cm;220,0;m2;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.3.3;Zulage Dacheindeckung, First;30,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.3.4;Zulage Dacheindeckung, Ortgang;24,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.3.5;Zulage Dacheindeckung, Traufe;60,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.3.6;Zulage Anschluss Dachdeckung an Dachdurchführungen;2,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.3.7;Zulage Anschluss Dachdeckung an Sicherheitshaken;28,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.3.8;Konterlattung Nadelholz 40/60mm;1400,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.3.9;Grundlattung Nadelholz 40/60mm;450,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.310;Randbohle Ortgang, Nadelholz 120/35mm;22,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.311;Keilbohle Ortgang, Nadelholz 200/50-30mm;22,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.312;Keilbohle Dachtraufe, Nadelholz 200/40-45mm;60,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.313;Unterdach regensicher, einlagige Unterdachbahn, diffusionsoffen;340,0;m2;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.314;Anschluß Vordeckung an Dachdurchführungen, bis DN200;2,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.315;Anschluss Vordeckung an Dachdurchführungen, Elektro, PV-Dach;5,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.4.1;Steildachhaube / Entlüftungsschindel,;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.4.2;Sicherheitsdachhaken Edelstahl, Typ B, auf Sparren, Schieferdeckung;28,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.4.3;Leiterzugang, mit Einhängevorrichtung;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.4.4;Schneefangrohr Stahl verz. Schiefer;60,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.5.1;Hängedachrinne Titanzink D 0,8mm Gr.400 kastenförmig Rinnenhalter;60,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.5.2;Rinnenboden, Rinnenendstück Gr. 400;4,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.5.3;Rinnenstutzen, Gr. 400, DN-100;4,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.5.4;Regenfallrohr Metall kreisförmig Gr.100 Titanzink D 0,7mm;26,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.5.5;Regenfallrohr, Rohrwinkel;8,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.5.6;Regenfallrohr, Fallrohrklappe;4,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.5.7;Regenstandrohr Stahl verz D 2,5mm kreisförmig Gr.100 L 1m;4,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.5.8;Dachrandabschlussprofil Traufblech, handwerklich vorgefertigt Titanzink D 0,7mm;60,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.5.9;Dachrandabschlussprofil Ortgangblech, handwerklich vorgefertigt Titanzink D 0,7mm;24,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.6.1;Wechselrichter, nur liefern;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.6.2;Generatoranschlusskasten mit DC-Feuerwehrschalter 4 MPP, nur liefern;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.6.3;Stringleitung 6 mm², H1Z2Z2-K;300,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.6.4;PV-Steckverbinder-Paar (Stecker und Buchse);14,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.6.5;Sicherungskabel, Übertemperatursicherung;150,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.6.6;Druckknopfmelder, rot, nur liefern;1,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.6.7;Montagesatz, Mehrfach-Dichtungsmanschette, 1-6 Rohre Ø16-32 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.6.8;Verschlussstopfen für Ø 25 mm Leerrohr, grau;6,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.6.9;Verschlussstopfen für Ø 32 mm Leerrohr, grau;6,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.7.1;Stringplanung PV-Dach;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.7.2;Anmeldedokumentation der Photovoltaik;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.7.3;System zur Überwachung/ Leistungsregelung Photovoltaikanlage;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.7.4;Inbetriebnahme der Modbus-Schnittstelle mit den Lieferanten der Geräte;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.7.5;Dokumentation PV-Dach;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.7.6;Nutzereinweisung;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.8.1;Dachintgrierter Blitzschutz, Blitzschutzschindeln;26,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.8.2;Leitungshalter für Rundleiter Ø 810 mm;9,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.8.3;Aluminium-Runddraht Ø 8 mm als Ableitung;87,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.8.4;Einbau Fangstangen;3,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.8.5;Leitungshalter für Rundleiter Ø 810 mm mit Holzschraube;8,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.8.6;MehrzweckVerbindungs-Klemme St/tZn bis Rd 10mm;25,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.8.7;Leitungshalter für Regenfallrohre verstellbar;24,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.8.8;Dachrinnenklemme mit Einschraubtechnik;6,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.8.9;First Dachleitungshalter für Schieferdächer Rd 8, Edelstahl;30,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.810;UNI-Trennklemme NIRO;7,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.9.1;Messung Blitzschutz- und Erdungsanlage;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.9.2;Bestandsdokumentation anfertigen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+01.9.3;Erstellung der Revisionsunterlage;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0110.1;Stundenlohnarbeiten Facharbeiter/ Dachdecker;5,0;h;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0110.2;Stundenlohnarbeiten Helfer/ Dachdecker;5,0;h;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0110.3;Systemspezialist, Obermonteur, Elektro;5,0;h;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0110.4;Monteur, Elektro PV-Dach;5,0;h;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0110.5;Monteur, Blitzschutz;5,0;h;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0201.1;Baustelleneinrichtung Dachdecker- und Klempnerarbeiten;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0201.2;Witterungsschutz - PVC Plane;150,0;m2;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0201.3;Zulage Witterungsschutz - Reparatureinsatz;4,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0201.4;Flexrohr, Zwischenentwässerung, einrichten;120,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0201.5;Flexrohr, Zwischenentwässerung, verlegen;75,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0201.6;Flexrohr, Zwischenentwässerung, rückbauen, Entsorgen;120,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0202.1;Windsogberechnung;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0202.2;Ermittlung der Regenwassermengen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0202.3;Musterfeld Traufe;2,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0202.4;Handmuster;5,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0202.5;Dokumentation;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0203.1;Schiefer Dach, Rechteckdoppeldeckung, Format 33/60cm;305,0;m2;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0203.2;Schiefer Dach, Rechteckdoppeldeckung, Schieferschindeln Bestand;20,0;m2;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0203.3;integriertes Photovoltaik-Dach, Solarschindel Rechteckdoppeldeckung 60/33cm Satteldach;105,0;m2;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0203.4;Zulage Dacheindeckung, First;30,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0203.5;Zulage Dacheindeckung, Grate;16,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0203.6;Zulage Dacheindeckung, Ortgang;14,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0203.7;Zulage Dacheindeckung, Traufe;70,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0203.8;Zulage zur Flächendeckung, Anschluss an Gaube;50,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0203.9;Zulage Anschluss Dachdeckung an Dachdurchführungen;4,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020310;Zulage Anschluss Dachdeckung an Sicherheitshaken;28,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020311;Konterlattung Nadelholz 40/60mm;2300,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020312;Grundlattung Nadelholz 40/60mm;650,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020313;Randbohle Ortgang und Traufe, Nadelholz 120/35mm;22,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020314;Keilbohle Ortgang und Traufe, Nadelholz 300/80-30mm;85,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020315;Unterdach regensicher, einlagige Unterdachbahn, diffusionsoffen;410,0;m2;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020316;Anschluß Vordeckung an Dachdurchführungen, bis DN200;4,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020317;Anschluss Vordeckung an Dachdurchführungen, Elektro, PV-Dach;5,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0204.1;Steildachhaube / Entlüftungsschindel,;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0204.2;Sicherheitsdachhaken Edelstahl, Typ B, auf Sparren, Schiefer;15,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0204.3;Leiterzugang, mit Einhängevorrichtung;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0204.4;Schneefangrohr Stahl verz. Schiefer;67,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0204.5;Einbau Blitzschutz;36,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0204.6;Einbau Fangstangen;9,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0205.1;Pultdach Lüftungsgaube, Titanzink 0,7mm Doppelstehfalz, vorbewittert;49,0;m2;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0205.2;Walmseiten Lüftungsgaube Titanzink 0,7mm Doppelstehfalz, vorbewittert;5,0;m2;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0205.3;Zulage Randbleche;50,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0205.4;Zulage Traufkante;20,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0205.5;Vordachdeckung, Titanzink 0,7mm, Doppelstehfalz, vorbewittert, Falze gedichtet;9,0;m2;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0205.6;Attikaabdeckung, handwerklich vorgefertigt Titanzink 0,7mm;34,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0205.7;Abdeckung Mauerkrone Stützwand, AB-W, Titanzink D 0,7mm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0205.8;Strukturierte Trennlage;54,0;m2;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0206.1;Hängedachrinne Titanzink D 0,8mm Gr.333 kastenförmig Rinnenhalter;70,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0206.2;Rinnenboden, Rinnenendstück, Gr. 333;6,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0206.3;Rinnenstutzen, Gr. 333, DN-100;5,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0206.4;verdeckte Kastenrinne, Walmseite Rem;12,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0206.5;Abdichtung Sicherheitsrinne, Walmseite der Remise;12,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0206.6;Regenfallrohr Metall kreisförmig Gr.100 Titanzink D 0,7mm;16,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0206.7;Regenfallrohr, Rohrwinkel Gr. 100;8,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0206.8;Regenfallrohr, Bogenrohr Gr. 100;4,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0206.9;Regenfallrohr, Rohrabzweig Gr. 100;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020610;Regenfallrohr, Reviso-Schiebestück, Gr. 100;5,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020611;Regenstandrohr Stahl verz D 2,5mm kreisförmig Gr.100 L 1m;2,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020612;Dachrandabschlussprofil Traufblech, handwerklich vorgefertigt Titanzink D 0,7mm;70,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020613;Dachrandabschlussprofil Ortgangblech, handwerklich vorgefertigt Titanzink D 0,7mm;14,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0207.1;Wechselrichter, nur liefern;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0207.2;Generatoranschlusskasten mit DC-Feuerwehrschalter 4 MPP, nur liefern;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0207.3;Stringleitung 6 mm², H1Z2Z2-K;150,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0207.4;PV-Steckverbinder-Paar (Stecker und Buchse);14,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0207.5;Sicherungskabel, Übertemperatursicherung;75,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0207.6;Druckknopfmelder, rot, nur liefern;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0207.7;Montagesatz, Mehrfach-Dichtungsmanschette, 1-6 Rohre Ø16-32 mm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0207.8;Verschlussstopfen für Ø 25 mm Leerrohr, grau;6,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0207.9;Verschlussstopfen für Ø 32 mm Leerrohr, grau;6,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0208.1;Stringplanung PV-Dach;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0208.2;Anmeldedokumentation der Photovoltaik;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0208.3;System zur Überwachung/ Leistungsregelung Photovoltaikanlage;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0208.4;Inbetriebnahme der Modbus-Schnittstelle mit den Lieferanten der Geräte;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0208.5;Dokumentation PV-Dach;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0208.6;Nutzereinweisung;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0209.1;Dach Titanzink D 0,7mm Doppelstehfalz Standardschar-B 620mm Schar-L 6,5m Zeltdach;160,0;m2;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0209.2;Dach Titanzink D 0,7mm Doppelstehfalz Standardschar-B 620mm Schar-L 6,5m Satteldach;115,0;m2;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0209.3;Dach Titanzink D 0,7mm Doppelstehfalz Standardschar-B 620mm Schar-L 3m Satteldach;16,0;m2;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0209.4;Pultdach Titanzink 0,7mm, vorbewittert, Doppelstehfalz, Schar B 620mm/ L 3m;19,0;m2;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0209.5;First Stehfalzdeckung Holzleiste B/H 60/60mm 3xgekantet;7,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0209.6;First Stehfalzdeckung Doppelwinkelstehfalz 3xgekantet;3,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0209.7;Pultdachfirst Doppelwinkelstehfalz 3xgekantet, vorbewittert;5,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0209.8;Grat Stehfalzdeckung Doppelwinkelstehfalz Abdeckblech Zuschnitt-B 100mm 4xgekantet;51,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0209.9;Traufendeckung Stehfalzdeckung Falzanschl. stehend gerundet;95,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020910;Anschluss seitl. Stehfalzdeckung Wand;17,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020911;Anschluss allseitig Stehfalzdeckung Schornstein B 75 cm L 200 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020912;Anschluss allseitig Stehfalzdeckung Schornstein B 115 cm L 200 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020913;Anschluss allseitig Stehfalzdeckung Schornstein B 50 cm L 50 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020914;Anschluss allseitig Stehfalzdeckung Dachausstieg B 100 cm L 120 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020915;Vordeckung, Polypropylen-Unterdeckbahn, Sd = 0,02;310,0;m2;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020916;Strukturierte Trennlage;310,0;m2;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020917;Anschluß Vordeckung an aufgehende Bauteile;40,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+020918;Anschluß Vordeckung an Dachdurchführungen, bis DN150;4,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0210.1;Sicherheitsdachhaken Edelstahl, Typ B auf Sparren Dachziegel;20,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0210.2;Schneefang, Einfachrohrsystem, Aluminium;81,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0210.3;Abdeckung Schornstein, Titanzink mit Holzunterbau 160/85cm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0210.4;Abdeckung Schornstein, Titanzink mit Holzunterbau 135/80cm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0210.5;Abdeckung Schornstein, Titanzink mit Holzunterbau 60/55cm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0210.6;Entlüftungsrohr Titanzink D 0,7mm Durchm. 80mm L 1000 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0210.7;Entlüftungsrohr Titanzink D 0,7mm Durchm. 100mm L 1000 mm;6,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0210.8;Entlüftungsrohr Titanzink D 0,7mm Durchm. 120mm L 1000 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0210.9;Rohrdurchgang Stehfalzdeckung NW 80mm;2,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021010;Rohrdurchgang Stehfalzdeckung NW 100mm;6,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021011;Rohrdurchgang Stehfalzdeckung NW 120mm;2,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021012;Dunsthaube, Titanzink für DN 80;2,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021013;Dunsthaube, Titanzink für DN 100;6,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021014;Dunsthaube, Titanzink für DN 120;2,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021015;Einbau Fangstangen;8,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021016;Dachausstieg herstellen, einbauen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021017;Zulage für Schloss/ PZ Dachausstieg;1,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021018;Leiterzugang mit Leiter;1,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0211.1;Hängedachrinne Titanzink D 0,8mm Gr.400 kastenförmig Rinnenhalter;81,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0211.2;Rinnenwinkel Außenwinkel 90Grad Titanzink D 0,7mm Zuschnitt-B 400mm;6,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0211.3;Zulage Hängedachrinne, Gr.400, Überhangblech;81,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0211.4;Abdichtung Sicherheitsrinne;81,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0211.5;Abdichtung Sicherheitsrinne, Mehr/Minderpreis;81,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0211.6;Hängedachrinne Titanzink D 0,8mm Gr.250 kastenförmig Rinnenhalter;5,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0211.7;Hängedachrinne Titanzink D 0,8mm Gr.200 kastenförmig Rinnenhalter;7,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0211.8;Rinnenboden, Rinnenendstück, Gr. 400;2,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0211.9;Rinnenboden, Rinnenendstück, Gr. 250;2,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021110;Rinnenboden, Rinnenendstück, Gr. 200;4,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021111;Rinnenstutzen, Gr. 400, DN-100;7,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021112;Rinnenstutzen, Gr. 250, DN-60;2,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021113;Rinnenstutzen, Gr. 200, DN-60;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021114;Regenfallrohr Metall kreisförmig Gr.100 Titanzink D 0,7mm;80,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021115;Zulage Regenfallrohr GR. 125 Titanzink D 0,7;30,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021116;Regenfallrohr Metall kreisförmig Gr.50 Titanzink D 0,7mm;9,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021117;Regenfallrohr, Rohrwinkel Gr. 100;14,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021118;Regenfallrohr, Rohrabzweig Gr. 125;2,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021119;Regenfallrohr, Passkonus Gr. 100 / 125;2,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021120;Regenfallrohr, Sockelknie Gr. 100;6,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021121;Regenfallrohr, Auslaufbogen Gr. 100;3,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021122;Regenfallrohr, Reviso-Schiebestück, Gr. 100;5,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021123;Regenfallrohr, Reviso-Schiebestück, Gr. 60;2,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021124;Regenstandrohr Stahl verz D 2,5mm kreisförmig Gr.100 L 1m;2,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021125;Regenstandrohr Stahl verz D 2,5mm kreisförmig Gr.70 L 1m;2,0;St;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0212.1;Muster Sohlbank;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0212.2;Sohlbankabdeckung b/t 100/25cm;11,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0212.3;Sohlbankabdeckung b/t 100/35cm;12,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0212.4;Sohlbankabdeckung b/t 155/40cm;13,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0212.5;Sohlbankabdeckung Breite bis 65/30cm;24,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0212.6;Muster Gesimsabdeckung;2,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0212.7;Gesimsabdeckung, Stuckrahmung der Fenster;15,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0212.8;Gesimsabdeckung, Stuckrahmung der Bogenfenster;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0212.9;Gesimsabdeckung, Gurtprofil;35,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021210;Gesimsabdeckung, Stuckfries;69,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021211;Zulage Gesimsabdeckung, Eckausbildung;12,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021212;Zulage Gesimsabdeckung, Fallrohdurchstoß;10,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021213;Zulage Gesimsabdeckung, Endausbildung;12,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021214;Gesimsabdeckung, Ziegelfries;48,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021215;Zulage Gesimsabdeckung, Ziegelfries, Anschluss MW-Pfeiler;16,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021216;Zulage Gesimsabdeckung, Ziegelfries, Eckausbildung;12,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021217;Zulage Gesimsabdeckung, Ziegelfries, Endausbildung;4,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0213.1;Dachintegrierter Blitzschutz, Blitzschutzschindeln, Rem;41,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0213.2;Leitungshalter für Rundleiter Ø 810 mm;9,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0213.3;Aluminium-Runddraht Ø 8 mm als Ableitung;90,0;m;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0213.4;Einbau Fangstangen;5,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0213.5;Leitungshalter für Rundleiter Ø 810 mm mit Holzschraube;8,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0213.6;Mehrzweck-Verbindungs-Klemme St/tZn bis Rd 10mm;25,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0213.7;Leitungshalter für Regenfallrohre verstellbar;30,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0213.8;Dachrinnenklemme mit Einschraubtechnik;18,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0213.9;First Dachleitungshalter für Schieferdächer Rd 8, Edelstahl;40,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+021310;UNI-Trennklemme NIRO;7,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0214.1;Messung Blitzschutz- und Erdungsanlage;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0214.2;Bestandsdokumentation anfertigen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0214.3;Erstellung der Revisionsunterlage;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0215.1;Stundenlohnarbeiten Facharbeiter/ Dachdecker;5,0;h;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0215.2;Stundenlohnarbeiten Helfer/ Dachdecker;5,0;h;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0215.3;Systemspezialist, Obermonteur, Elektro;5,0;h;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0215.4;Monteur, Elektro PV-Dach;5,0;h;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0215.5;Monteur, Blitzschutz;5,0;h;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0301.1;Wartung im 1. Jahr;1,0;a;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0301.2;Wartung im 2. Jahr;1,0;a;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0301.3;Wartung im 3. Jahr;1,0;a;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
+0301.4;Wartung im 4. Jahr;1,0;a;gaeb-flat;leistungsbeschreibungen/2261085 LV Dacheindeckung und PV (1).D83
 1;Allgemeine Baustelleneinrichtung des Auftragnehmers als Zulage zu den ausgeschriebene Leistungen bzw. als besondere Leistungen entsprechend DIN 18299 und 18334, sowie Vorbemerkungen und ZTVs:;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV_V33.X83
 2;PVC-Plane als Witterungsschutz, beidseitig beschichtes Polyethylengewebe, UV-beständig, wasserdicht, ca. 900g/m2 als Witterungsschutz einbauen und mit Lattung sichern.;75,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV_V33.X83
 3;Zulage zu vorgenannten Witterungsschutz für einen Kontrollgang mit Reparatureinsatz außerhalb des Zeitraumes der Dachdeckungsarbeiten bei Sturmschäden etc..;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV_V33.X83
@@ -483,3 +725,245 @@
 2;Wartung, wie zuvor beschrieben, von;1,0;a;gaeb;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV_V33.X83
 3;Wartung, wie zuvor beschrieben, von;1,0;a;gaeb;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV_V33.X83
 4;Wartung, wie zuvor beschrieben, von;1,0;a;gaeb;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV_V33.X83
+01.1.1;Baustelleneinrichtung Dachdecker- und Klempnerarbeiten;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.1.2;Witterungsschutz - PVC Plane;75,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.1.3;Zulage Witterungsschutz - Reparatureinsatz;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.1.4;Flexrohr, Zwischenentwässerung, einrichten;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.1.5;Flexrohr, Zwischenentwässerung, umverlegen;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.1.6;Flexrohr, Zwischenentwässerung, rückbauen, entsorgen;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.2.1;Windsogberechnung;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.2.2;Ermittlung der Regenwassermengen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.2.3;Musterfeld Traufe;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.2.4;Handmuster;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.2.5;Dokumentation;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.3.1;Schiefer Dach, Rechteckdoppeldeckung, Format 33/60cm;116,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.3.2;Integriertes Photovoltaik-Dach, Rechteckdoppeldeckung 33/60cm;220,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.3.3;Zulage Dacheindeckung, First;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.3.4;Zulage Dacheindeckung, Ortgang;24,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.3.5;Zulage Dacheindeckung, Traufe;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.3.6;Zulage Anschluss Dachdeckung an Dachdurchführungen;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.3.7;Zulage Anschluss Dachdeckung an Sicherheitshaken;28,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.3.8;Konterlattung Nadelholz 40/60mm;1400,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.3.9;Grundlattung Nadelholz 40/60mm;450,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.310;Randbohle Ortgang, Nadelholz 120/35mm;22,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.311;Keilbohle Ortgang, Nadelholz 200/50-30mm;22,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.312;Keilbohle Dachtraufe, Nadelholz 200/40-45mm;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.313;Unterdach regensicher, einlagige Unterdachbahn, diffusionsoffen;340,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.314;Anschluß Vordeckung an Dachdurchführungen, bis DN200;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.315;Anschluss Vordeckung an Dachdurchführungen, Elektro, PV-Dach;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.4.1;Steildachhaube / Entlüftungsschindel,;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.4.2;Sicherheitsdachhaken Edelstahl, Typ B, auf Sparren, Schieferdeckung;28,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.4.3;Leiterzugang, mit Einhängevorrichtung;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.4.4;Schneefangrohr Stahl verz. Schiefer;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.5.1;Hängedachrinne Titanzink D 0,8mm Gr.400 kastenförmig Rinnenhalter;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.5.2;Rinnenboden, Rinnenendstück Gr. 400;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.5.3;Rinnenstutzen, Gr. 400, DN-100;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.5.4;Regenfallrohr Metall kreisförmig Gr.100 Titanzink D 0,7mm;26,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.5.5;Regenfallrohr, Rohrwinkel;8,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.5.6;Regenfallrohr, Fallrohrklappe;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.5.7;Regenstandrohr Stahl verz D 2,5mm kreisförmig Gr.100 L 1m;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.5.8;Dachrandabschlussprofil Traufblech, handwerklich vorgefertigt Titanzink D 0,7mm;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.5.9;Dachrandabschlussprofil Ortgangblech, handwerklich vorgefertigt Titanzink D 0,7mm;24,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.6.1;Wechselrichter, nur liefern;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.6.2;Generatoranschlusskasten mit DC-Feuerwehrschalter 4 MPP, nur liefern;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.6.3;Stringleitung 6 mm², H1Z2Z2-K;300,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.6.4;PV-Steckverbinder-Paar (Stecker und Buchse);14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.6.5;Sicherungskabel, Übertemperatursicherung;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.6.6;Druckknopfmelder, rot, nur liefern;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.6.7;Montagesatz, Mehrfach-Dichtungsmanschette, 1-6 Rohre Ø16-32 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.6.8;Verschlussstopfen für Ø 25 mm Leerrohr, grau;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.6.9;Verschlussstopfen für Ø 32 mm Leerrohr, grau;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.7.1;Stringplanung PV-Dach;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.7.2;Anmeldedokumentation der Photovoltaik;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.7.3;System zur Überwachung/ Leistungsregelung Photovoltaikanlage;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.7.4;Inbetriebnahme der Modbus-Schnittstelle mit den Lieferanten der Geräte;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.7.5;Dokumentation PV-Dach;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.7.6;Nutzereinweisung;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.8.1;Dachintgrierter Blitzschutz, Blitzschutzschindeln;26,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.8.2;Leitungshalter für Rundleiter Ø 810 mm;9,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.8.3;Aluminium-Runddraht Ø 8 mm als Ableitung;87,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.8.4;Einbau Fangstangen;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.8.5;Leitungshalter für Rundleiter Ø 810 mm mit Holzschraube;8,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.8.6;MehrzweckVerbindungs-Klemme St/tZn bis Rd 10mm;25,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.8.7;Leitungshalter für Regenfallrohre verstellbar;24,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.8.8;Dachrinnenklemme mit Einschraubtechnik;6,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.8.9;First Dachleitungshalter für Schieferdächer Rd 8, Edelstahl;30,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.810;UNI-Trennklemme NIRO;7,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.9.1;Messung Blitzschutz- und Erdungsanlage;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.9.2;Bestandsdokumentation anfertigen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+01.9.3;Erstellung der Revisionsunterlage;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0110.1;Stundenlohnarbeiten Facharbeiter/ Dachdecker;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0110.2;Stundenlohnarbeiten Helfer/ Dachdecker;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0110.3;Systemspezialist, Obermonteur, Elektro;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0110.4;Monteur, Elektro PV-Dach;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0110.5;Monteur, Blitzschutz;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0201.1;Baustelleneinrichtung Dachdecker- und Klempnerarbeiten;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0201.2;Witterungsschutz - PVC Plane;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0201.3;Zulage Witterungsschutz - Reparatureinsatz;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0201.4;Flexrohr, Zwischenentwässerung, einrichten;120,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0201.5;Flexrohr, Zwischenentwässerung, verlegen;75,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0201.6;Flexrohr, Zwischenentwässerung, rückbauen, Entsorgen;120,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0202.1;Windsogberechnung;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0202.2;Ermittlung der Regenwassermengen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0202.3;Musterfeld Traufe;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0202.4;Handmuster;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0202.5;Dokumentation;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0203.1;Schiefer Dach, Rechteckdoppeldeckung, Format 33/60cm;305,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0203.2;Schiefer Dach, Rechteckdoppeldeckung, Schieferschindeln Bestand;20,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0203.3;integriertes Photovoltaik-Dach, Solarschindel Rechteckdoppeldeckung 60/33cm Satteldach;105,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0203.4;Zulage Dacheindeckung, First;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0203.5;Zulage Dacheindeckung, Grate;16,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0203.6;Zulage Dacheindeckung, Ortgang;14,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0203.7;Zulage Dacheindeckung, Traufe;70,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0203.8;Zulage zur Flächendeckung, Anschluss an Gaube;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0203.9;Zulage Anschluss Dachdeckung an Dachdurchführungen;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020310;Zulage Anschluss Dachdeckung an Sicherheitshaken;28,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020311;Konterlattung Nadelholz 40/60mm;2300,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020312;Grundlattung Nadelholz 40/60mm;650,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020313;Randbohle Ortgang und Traufe, Nadelholz 120/35mm;22,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020314;Keilbohle Ortgang und Traufe, Nadelholz 300/80-30mm;85,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020315;Unterdach regensicher, einlagige Unterdachbahn, diffusionsoffen;410,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020316;Anschluß Vordeckung an Dachdurchführungen, bis DN200;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020317;Anschluss Vordeckung an Dachdurchführungen, Elektro, PV-Dach;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0204.1;Steildachhaube / Entlüftungsschindel,;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0204.2;Sicherheitsdachhaken Edelstahl, Typ B, auf Sparren, Schiefer;15,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0204.3;Leiterzugang, mit Einhängevorrichtung;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0204.4;Schneefangrohr Stahl verz. Schiefer;67,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0204.5;Einbau Blitzschutz;36,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0204.6;Einbau Fangstangen;9,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0205.1;Pultdach Lüftungsgaube, Titanzink 0,7mm Doppelstehfalz, vorbewittert;49,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0205.2;Walmseiten Lüftungsgaube Titanzink 0,7mm Doppelstehfalz, vorbewittert;5,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0205.3;Zulage Randbleche;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0205.4;Zulage Traufkante;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0205.5;Vordachdeckung, Titanzink 0,7mm, Doppelstehfalz, vorbewittert, Falze gedichtet;9,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0205.6;Attikaabdeckung, handwerklich vorgefertigt Titanzink 0,7mm;34,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0205.7;Abdeckung Mauerkrone Stützwand, AB-W, Titanzink D 0,7mm;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0205.8;Strukturierte Trennlage;54,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0206.1;Hängedachrinne Titanzink D 0,8mm Gr.333 kastenförmig Rinnenhalter;70,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0206.2;Rinnenboden, Rinnenendstück, Gr. 333;6,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0206.3;Rinnenstutzen, Gr. 333, DN-100;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0206.4;verdeckte Kastenrinne, Walmseite Rem;12,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0206.5;Abdichtung Sicherheitsrinne, Walmseite der Remise;12,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0206.6;Regenfallrohr Metall kreisförmig Gr.100 Titanzink D 0,7mm;16,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0206.7;Regenfallrohr, Rohrwinkel Gr. 100;8,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0206.8;Regenfallrohr, Bogenrohr Gr. 100;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0206.9;Regenfallrohr, Rohrabzweig Gr. 100;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020610;Regenfallrohr, Reviso-Schiebestück, Gr. 100;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020611;Regenstandrohr Stahl verz D 2,5mm kreisförmig Gr.100 L 1m;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020612;Dachrandabschlussprofil Traufblech, handwerklich vorgefertigt Titanzink D 0,7mm;70,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020613;Dachrandabschlussprofil Ortgangblech, handwerklich vorgefertigt Titanzink D 0,7mm;14,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0207.1;Wechselrichter, nur liefern;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0207.2;Generatoranschlusskasten mit DC-Feuerwehrschalter 4 MPP, nur liefern;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0207.3;Stringleitung 6 mm², H1Z2Z2-K;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0207.4;PV-Steckverbinder-Paar (Stecker und Buchse);14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0207.5;Sicherungskabel, Übertemperatursicherung;75,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0207.6;Druckknopfmelder, rot, nur liefern;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0207.7;Montagesatz, Mehrfach-Dichtungsmanschette, 1-6 Rohre Ø16-32 mm;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0207.8;Verschlussstopfen für Ø 25 mm Leerrohr, grau;6,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0207.9;Verschlussstopfen für Ø 32 mm Leerrohr, grau;6,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0208.1;Stringplanung PV-Dach;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0208.2;Anmeldedokumentation der Photovoltaik;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0208.3;System zur Überwachung/ Leistungsregelung Photovoltaikanlage;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0208.4;Inbetriebnahme der Modbus-Schnittstelle mit den Lieferanten der Geräte;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0208.5;Dokumentation PV-Dach;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0208.6;Nutzereinweisung;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0209.1;Dach Titanzink D 0,7mm Doppelstehfalz Standardschar-B 620mm Schar-L 6,5m Zeltdach;160,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0209.2;Dach Titanzink D 0,7mm Doppelstehfalz Standardschar-B 620mm Schar-L 6,5m Satteldach;115,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0209.3;Dach Titanzink D 0,7mm Doppelstehfalz Standardschar-B 620mm Schar-L 3m Satteldach;16,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0209.4;Pultdach Titanzink 0,7mm, vorbewittert, Doppelstehfalz, Schar B 620mm/ L 3m;19,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0209.5;First Stehfalzdeckung Holzleiste B/H 60/60mm 3xgekantet;7,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0209.6;First Stehfalzdeckung Doppelwinkelstehfalz 3xgekantet;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0209.7;Pultdachfirst Doppelwinkelstehfalz 3xgekantet, vorbewittert;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0209.8;Grat Stehfalzdeckung Doppelwinkelstehfalz Abdeckblech Zuschnitt-B 100mm 4xgekantet;51,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0209.9;Traufendeckung Stehfalzdeckung Falzanschl. stehend gerundet;95,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020910;Anschluss seitl. Stehfalzdeckung Wand;17,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020911;Anschluss allseitig Stehfalzdeckung Schornstein B 75 cm L 200 cm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020912;Anschluss allseitig Stehfalzdeckung Schornstein B 115 cm L 200 cm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020913;Anschluss allseitig Stehfalzdeckung Schornstein B 50 cm L 50 cm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020914;Anschluss allseitig Stehfalzdeckung Dachausstieg B 100 cm L 120 cm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020915;Vordeckung, Polypropylen-Unterdeckbahn, Sd = 0,02;310,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020916;Strukturierte Trennlage;310,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020917;Anschluß Vordeckung an aufgehende Bauteile;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+020918;Anschluß Vordeckung an Dachdurchführungen, bis DN150;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0210.1;Sicherheitsdachhaken Edelstahl, Typ B auf Sparren Dachziegel;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0210.2;Schneefang, Einfachrohrsystem, Aluminium;81,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0210.3;Abdeckung Schornstein, Titanzink mit Holzunterbau 160/85cm;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0210.4;Abdeckung Schornstein, Titanzink mit Holzunterbau 135/80cm;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0210.5;Abdeckung Schornstein, Titanzink mit Holzunterbau 60/55cm;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0210.6;Entlüftungsrohr Titanzink D 0,7mm Durchm. 80mm L 1000 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0210.7;Entlüftungsrohr Titanzink D 0,7mm Durchm. 100mm L 1000 mm;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0210.8;Entlüftungsrohr Titanzink D 0,7mm Durchm. 120mm L 1000 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0210.9;Rohrdurchgang Stehfalzdeckung NW 80mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021010;Rohrdurchgang Stehfalzdeckung NW 100mm;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021011;Rohrdurchgang Stehfalzdeckung NW 120mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021012;Dunsthaube, Titanzink für DN 80;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021013;Dunsthaube, Titanzink für DN 100;6,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021014;Dunsthaube, Titanzink für DN 120;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021015;Einbau Fangstangen;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021016;Dachausstieg herstellen, einbauen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021017;Zulage für Schloss/ PZ Dachausstieg;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021018;Leiterzugang mit Leiter;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0211.1;Hängedachrinne Titanzink D 0,8mm Gr.400 kastenförmig Rinnenhalter;81,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0211.2;Rinnenwinkel Außenwinkel 90Grad Titanzink D 0,7mm Zuschnitt-B 400mm;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0211.3;Zulage Hängedachrinne, Gr.400, Überhangblech;81,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0211.4;Abdichtung Sicherheitsrinne;81,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0211.5;Abdichtung Sicherheitsrinne, Mehr/Minderpreis;81,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0211.6;Hängedachrinne Titanzink D 0,8mm Gr.250 kastenförmig Rinnenhalter;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0211.7;Hängedachrinne Titanzink D 0,8mm Gr.200 kastenförmig Rinnenhalter;7,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0211.8;Rinnenboden, Rinnenendstück, Gr. 400;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0211.9;Rinnenboden, Rinnenendstück, Gr. 250;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021110;Rinnenboden, Rinnenendstück, Gr. 200;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021111;Rinnenstutzen, Gr. 400, DN-100;7,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021112;Rinnenstutzen, Gr. 250, DN-60;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021113;Rinnenstutzen, Gr. 200, DN-60;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021114;Regenfallrohr Metall kreisförmig Gr.100 Titanzink D 0,7mm;80,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021115;Zulage Regenfallrohr GR. 125 Titanzink D 0,7;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021116;Regenfallrohr Metall kreisförmig Gr.50 Titanzink D 0,7mm;9,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021117;Regenfallrohr, Rohrwinkel Gr. 100;14,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021118;Regenfallrohr, Rohrabzweig Gr. 125;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021119;Regenfallrohr, Passkonus Gr. 100 / 125;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021120;Regenfallrohr, Sockelknie Gr. 100;6,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021121;Regenfallrohr, Auslaufbogen Gr. 100;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021122;Regenfallrohr, Reviso-Schiebestück, Gr. 100;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021123;Regenfallrohr, Reviso-Schiebestück, Gr. 60;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021124;Regenstandrohr Stahl verz D 2,5mm kreisförmig Gr.100 L 1m;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021125;Regenstandrohr Stahl verz D 2,5mm kreisförmig Gr.70 L 1m;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0212.1;Muster Sohlbank;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0212.2;Sohlbankabdeckung b/t 100/25cm;11,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0212.3;Sohlbankabdeckung b/t 100/35cm;12,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0212.4;Sohlbankabdeckung b/t 155/40cm;13,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0212.5;Sohlbankabdeckung Breite bis 65/30cm;24,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0212.6;Muster Gesimsabdeckung;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0212.7;Gesimsabdeckung, Stuckrahmung der Fenster;15,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0212.8;Gesimsabdeckung, Stuckrahmung der Bogenfenster;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0212.9;Gesimsabdeckung, Gurtprofil;35,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021210;Gesimsabdeckung, Stuckfries;69,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021211;Zulage Gesimsabdeckung, Eckausbildung;12,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021212;Zulage Gesimsabdeckung, Fallrohdurchstoß;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021213;Zulage Gesimsabdeckung, Endausbildung;12,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021214;Gesimsabdeckung, Ziegelfries;48,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021215;Zulage Gesimsabdeckung, Ziegelfries, Anschluss MW-Pfeiler;16,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021216;Zulage Gesimsabdeckung, Ziegelfries, Eckausbildung;12,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021217;Zulage Gesimsabdeckung, Ziegelfries, Endausbildung;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0213.1;Dachintegrierter Blitzschutz, Blitzschutzschindeln, Rem;41,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0213.2;Leitungshalter für Rundleiter Ø 810 mm;9,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0213.3;Aluminium-Runddraht Ø 8 mm als Ableitung;90,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0213.4;Einbau Fangstangen;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0213.5;Leitungshalter für Rundleiter Ø 810 mm mit Holzschraube;8,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0213.6;Mehrzweck-Verbindungs-Klemme St/tZn bis Rd 10mm;25,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0213.7;Leitungshalter für Regenfallrohre verstellbar;30,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0213.8;Dachrinnenklemme mit Einschraubtechnik;18,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0213.9;First Dachleitungshalter für Schieferdächer Rd 8, Edelstahl;40,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+021310;UNI-Trennklemme NIRO;7,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0214.1;Messung Blitzschutz- und Erdungsanlage;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0214.2;Bestandsdokumentation anfertigen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0214.3;Erstellung der Revisionsunterlage;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0215.1;Stundenlohnarbeiten Facharbeiter/ Dachdecker;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0215.2;Stundenlohnarbeiten Helfer/ Dachdecker;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0215.3;Systemspezialist, Obermonteur, Elektro;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0215.4;Monteur, Elektro PV-Dach;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0215.5;Monteur, Blitzschutz;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0301.1;Wartung im 1. Jahr;1,0;a;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0301.2;Wartung im 2. Jahr;1,0;a;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0301.3;Wartung im 3. Jahr;1,0;a;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83
+0301.4;Wartung im 4. Jahr;1,0;a;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2261085 LV Dacheindeckung und PV.D83

@@ -1,0 +1,926 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Für die vom AN auszuführenden Arbeiten ist ein genauer Mehrphasen-Baustelleneinrichtungsplan / Bauablaufplan in Form einer grafischen Darstellung mit Angabe des Baufortschritts in Monaten vorzulegen, aus dem u. a. die vom AN geplanten Betonierabschnitte, die Arbeitsfugeneinteilung und die Betonierfu;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Erstellen eines Terminplan für die eigenen Leistungen,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Durch den AN sind sämtliche erforderliche statische Berechnungen für die in diesem Leistungsverzeichnis beschriebenen Leistungen vorzunehmen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Herstellen einer Ausführungsplanung für alle auszuführenden WU-Bauteile, auf Basis der Planung des AG.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Herstellen einer Schalungsplanung für Sichtbetonflächen Sichtbetonqualität SB 2, auf Basis der Planung des AG.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Herstellen einer Schalungsplanung für Sichtbetonflächen wie in Pos.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Überwachung des Einbaus von Beton der Überwachungsklasse 2 DIN 1045-3 durch eine anerkannte Überwachungsstelle.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;"Kosten für die Bemusterung der zum Einbau vorgesehenen Produkte und für die Nachweisführung zur Nachhaltigkeitszertifizierung gemäß Anlagen ""Allgemeine DGNB/QNG Vorbemerkungen zu den LVs"" und ""QNG-Anforderungskatalog"".";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Meterriss durch Vermesser, Lage nach Vorgabe durch die Objektüberwachung, an Treppenhäusern, Zugängen, Bereichstüren, etc. dauerhaft während der Bauzeit befestigt.;80,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Die Decken, Wände und Öffnungen sind nach abschnittsweiser Fertigstellung von einem unabhängigen Vermessungsbüro auf Ihre Ebenheit und Einhaltung der vorgegeben Toleranzen prüfen zu lassen. Festgestellte Abweichungen sind in einem Messprotokoll und in Planunterlagen darzustellen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Der Neubau kragt über dem 3. OG in Teilbereichen über das Bestandsgebäude aus. Für die Erstellung von Wänden und Decken ist eine Arbeitsebene zu erstellen, für die Dauer der eigenen Leistungen vorzuhalten und nach Fertigstellung der eigenen Arbeiten zurückbauen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Spritzbeton DIN EN 14487 und DIN 18551,;40,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Arbeitsraum profilgerecht verfüllen, einschl. Stoffe verdichten,;350,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Fels der Gräben für Entwässerungsleitungen, ab Baugrubensohle, profilgerecht lösen, direkt auf LKW des AN laden, die Entsorgung wird gesondert vergütet, Abfall ist nicht gefährlich, nicht schadstoffbelastet, Zuordnung LAGA Z0+,;130,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Fels der Gräben profilgerecht lösen und laden wie in Pos.;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Fels der Gräben profilgerecht lösen und laden wie in Pos.;9,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Fels für Schachtbauwerke unterhalb der Bodenplatte, ab Baugrubensohle, profilgerecht lösen, direkt auf LKW des AN laden, die Entsorgung wird gesondert vergütet, Abfall ist nicht gefährlich, nicht schadstoffbelastet, Zuordnung LAGA Z0+,;26,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Regelausführung des Senkrechten Verbaus (Senkrechter Normverbau) DIN 4124 für Graben, herstellen und wieder rückbauen,;12,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;steinfreies Sandbett, Körnung 0/2, unter Verwendung mineralischer Ersatzbaustoffe (MEB) gemäß Ersatzbaustoffverordnung (EBV), liefern, für Leitungszone von Rohrleitungen, bestehend aus Bettung, Seitenverfüllung und Abdeckung, profilgerecht einbauen und verdichten, in Graben für Entwässerungsleitung,;80,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Graben profilgerecht verfüllen, einschl. Stoffe verdichten,;61,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Fels der Gräben profilgerecht lösen und laden wie in Pos.;12,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;steinfreies Sandbett, Körnung 0/2, unter Verwendung mineralischer Ersatzbaustoffe (MEB) gemäß Ersatzbaustoffverordnung (EBV), liefern, für Leitungszone von Rohrleitungen, bestehend aus Bettung, Seitenverfüllung und Abdeckung, profilgerecht einbauen und verdichten, in Graben für Entwässerungsleitung,;6,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Graben profilgerecht verfüllen, einschl. Stoffe verdichten,;6,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Bau- und Abbruchabfälle, Boden, Steine und Baggergut, nicht gefährlich, Abfallschlüssel nach AVV (AbfallverzeichnisVerordnung) 170504 Boden/Stein, nicht schadstoffbelastet, Zuordnung LAGA Z 0+,;179,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Leistung wie vor in vollem Umfang beschrieben, jedoch:;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Leistung wie vor in vollem Umfang beschrieben, jedoch:;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Leistung wie vor in vollem Umfang beschrieben, jedoch:;148,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Leistung wie vor in vollem Umfang beschrieben, jedoch:;33,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Leistung wie vor in vollem Umfang beschrieben, jedoch:;33,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Leistung wie vor in vollem Umfang beschrieben, jedoch:;22,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Rohrbogen, DN 50 alle Winkelgrade;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Rohrbogen, DN 80 alle Winkelgrade;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Rohrbogen, DN 100 alle Winkelgrade;82,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Rohrbogen, DN 125 alle Winkelgrade;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Rohrbogen, DN 150 alle Winkelgrade;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;Rohrbogen, DN 200 alle Winkelgrade;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Rohr-Abzweig DN 100 / DN 100;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+140;Rohr-Abzweig DN 125 / DN 125;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+150;Rohr-Abzweig DN 125 / DN 100;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+160;Rohr-Abzweig DN 150 / DN 150;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+170;Rohr-Abzweig DN 150 / DN 125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+180;Rohr-Abzweig DN 150 / DN 100;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+190;Rohr-Abzweig DN 200 / DN 100;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+200;Rohr-Abzweig DN 150 / DN 125;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+210;Rohr-Abzweig DN 200 / DN 150;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+220;Rohr-Abzweig DN 200 / DN 200;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+230;Rohrreduzierung DN 125/100;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+240;Rohrreduzierung DN 150/125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+250;Rohrreduzierung DN 150/100;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+260;Rohrreduzierung DN 200/150;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+270;Rohrreduzierung DN 200/125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+280;Steckmuffe mit Lippendichtung, DN 100;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+290;Steckmuffe mit Lippendichtung, DN 125;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+300;Steckmuffe mit Lippendichtung, DN 150;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+310;Elektroschweißmuffe;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+320;Elektroschweißmuffe;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+330;Elektroschweißmuffe;143,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+340;Elektroschweißmuffe;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+350;Elektroschweißmuffe;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+360;Elektroschweißmuffe;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Leistung wie vor in vollem Umfang beschrieben, jedoch:;81,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Leistung wie vor in vollem Umfang beschrieben, jedoch:;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Leistung wie vor in vollem Umfang beschrieben, jedoch:;139,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Leistung wie vor in vollem Umfang beschrieben, jedoch:;36,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Rohrbogen, DN 100 alle Winkelgrade;41,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Rohrbogen, DN 125 alle Winkelgrade;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Rohrbogen, DN 150 alle Winkelgrade;47,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Rohrbogen, DN 200 alle Winkelgrade;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Rohr-Abzweig DN 100 / DN 100;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Rohr-Abzweig DN 125 / DN 125;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Rohr-Abzweig DN 125 / DN 100;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;Rohr-Abzweig DN 150 / DN 150;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Rohr-Abzweig DN 150 / DN 125;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+140;Rohr-Abzweig DN 150 / DN 100;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+150;Rohr-Abzweig DN 200 / DN 100;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+160;Rohr-Abzweig DN 150 / DN 125;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+170;Rohr-Abzweig DN 200 / DN 150;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+180;Rohr-Abzweig DN 200 / DN 200;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+190;Rohrreduzierung DN 125/100;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+200;Rohrreduzierung DN 150/125;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+210;Rohrreduzierung DN 150/100;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+220;Rohrreduzierung DN 200/150;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+230;Rohrreduzierung DN 200/125;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+240;Elektroschweißmuffe;72,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+250;Elektroschweißmuffe;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+260;Elektroschweißmuffe;96,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+270;Elektroschweißmuffe;28,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;nach Planvorgabe einmessen,festsetzen und gegen eindringen von Schmutz schützen.;37,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;für den Einbau in WU-Bodenplatten zum Anschließen von KG 2000 - Rohr, mit druckwasserdichter, umlaufender, thermisch verschweißter Vierstegdichtung, MPA-geprüft bis 7,0 bar, gas- und geruchsdicht im Sinne der TA Luft, einseitig angeformter Steckmuffe und Deckel als Einbauhilfe,;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;für den Einbau in WU-Bodenplatten zum Anschließen von KG 2000 - Rohr, mit druckwasserdichter, umlaufender, thermisch verschweißter Vierstegdichtung, MPA-geprüft bis 7,0 bar, gas- und geruchsdicht im Sinne der TA Luft, einseitig angeformter Steckmuffe und Deckel als Einbauhilfe,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Dichtungseinsatz mit DPS als nichtgeteilte Dichtung, mit asymmetrisch profilierten Stahlringen (DPS bis KB/DN 350) in;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Dichtungseinsatz mit DPS als nichtgeteilte Dichtung, mit asymmetrisch profilierten Stahlringen (DPS bis KB/DN 350) in;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Dichtungseinsatz mit DPS als nichtgeteilte Dichtung, mit asymmetrisch profilierten Stahlringen (DPS bis KB/DN 350) in  Edelstahl 1.4571/1.4404 (V4A), mit wasserdicht verschweißten Bolzen, mit Elastomer-Dichtung, Dichtbreite 2 x 27 mm, aus EPDM, mit 3 mm orangefarbenen Mittelring aus EPDM (bis KB/DN ;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Dichtungseinsatz mit DPS als nichtgeteilte Dichtung, mit asymmetrisch profilierten Stahlringen (DPS bis KB/DN 350) in;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Dichtungseinsatz mit DPS als nichtgeteilte Dichtung, mit asymmetrisch profilierten Stahlringen (DPS bis KB/DN 350) in;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Dichtungseinsatz mit DPS als nichtgeteilte Dichtung, mit asymmetrisch profilierten Stahlringen (DPS bis KB/DN 350) in;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Bodenablauf, DN 100, 120 x 120 mm;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Mauerkragen-Set, bestehend aus einer Elastomer-Dichtmanschette (Wassersperrflansch) und zwei Spannbändern aus Edelstahl (inkl. Spannschlössern/Verschlüssen).Material: NBR (Nitrilkautschuk);16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;Mauerkragen-Set, bestehend aus einer Elastomer-Dichtmanschette (Wassersperrflansch) und zwei Spannbändern aus Edelstahl (inkl. Spannschlössern/Verschlüssen).Material: NBR (Nitrilkautschuk);8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Mauerkragen-Set, bestehend aus einer Elastomer-Dichtmanschette (Wassersperrflansch) und zwei Spannbändern aus Edelstahl (inkl. Spannschlössern/Verschlüssen).Material: NBR (Nitrilkautschuk);3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Kompakte, vollautomatisch arbeitende Abwasser-Hebeanlage für die Unterflurinstallation innerhalb von Gebäuden.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Dichtmanschette, passend zu vorg. Abwasserhebeanlage als Unterflurinstallation.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Revisionsplanung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Einrichten der Baustelle;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Nachweis der Dichtheitsprüfung als Wasser- oder;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Mit Abschluss der Rohbauarbeiten hat der AN alle Grundleitungen durch eine Fachfirma spülen zu lassen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Kamerabefahrung für die gesamten Regen- und Schmutzwasserleitungen, inkl. TV-Bericht zur Dokumentation;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Perimeterdämmung auf Kelleraußenwand,;1180,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Perimeterdämmung auf Kelleraußenwand wie in Pos.;100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Perimeterdämmung auf Kelleraußenwand,;125,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Perimeterdämmung auf Lichtschachtwand,;100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Gebäudetrennfuge schallbrückenfrei anlegen, mit Füllung aus Mineralwolle, MW DIN EN 13162, als Platte,;550,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Schalung Sauberkeitsschicht, als Randschalung, einhäuptig,;700,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Schalung Streifenfundament, Schalungshaut für Betonflächen ohne Anforderung,;145,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Ausbildung von Innen- und Außenecken der Randschalung der Streifenfundamente im stumpfen oder spitzen Winkel.;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Schalung Bodenplatte, als Randschalung, einhäuptig, Schalungshaut für Betonflächen ohne Anforderung,;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Schalung Bodenplatte, als Randschalung, einhäuptig, Schalungshaut für Betonflächen ohne Anforderung,;95,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Schalung Bodenplatte, als Randschalung, einhäuptig, Schalungshaut für Betonflächen ohne Anforderung,;32,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Schalung Bodenplatte, als Randschalung, einhäuptig, Schalungshaut für Betonflächen ohne Anforderung,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Schalung Bodenplatte, als Randschalung, einhäuptig, Schalungshaut für Betonflächen ohne Anforderung,;24,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Schalung Bodenplatte, als Randschalung, einhäuptig, Schalungshaut für Betonflächen ohne Anforderung,;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Schalung Höhenversprung an der Unterseite der Bodenplatte, als Randschalung, einhäuptig, Schalungshaut für Betonflächen ohne Anforderung,;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Schalung Höhenversprung an der Unterseite der Bodenplatte, als Randschalung, einhäuptig, Schalungshaut für Betonflächen ohne Anforderung,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;Ausbildung von Innen- und Außenecken der Randschalung der Bodenplatte im stumpfen oder spitzen Winkel.;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Schalung für Auffüllung aus Ortbeton, einhäuptig,;45,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+140;Schalung für Auffüllung aus Ortbeton, einhäuptig,;85,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;35,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;160,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;125,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;75,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;110,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;200,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;185,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;55,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;70,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;85,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+140;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;110,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+150;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;95,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+160;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;145,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+170;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;25,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+180;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+190;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;8,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+200;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+210;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+220;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;130,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+230;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+240;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;35,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+250;Schalung Kelleraußenwand, Randschalung wird gesondert vergütet,;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+260;Schalung Außenwand, Randschalung wird gesondert vergütet,;8,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+270;Schalung Außenwand, Randschalung wird gesondert vergütet,;880,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+280;Schalung Außenwand, Randschalung wird gesondert vergütet,;1100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+290;Schalung Außenwand, Randschalung wird gesondert vergütet,;180,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+300;Schalung Außenwand, Randschalung wird gesondert vergütet,;120,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+310;Schalung Außenwand, Randschalung wird gesondert vergütet,;200,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+320;Schalung Außenwand, Randschalung wird gesondert vergütet,;250,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+330;Schalung Außenwand, Randschalung wird gesondert vergütet,;60,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+340;Schalung Außenwand, Randschalung wird gesondert vergütet,;115,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+350;Schalung Außenwand, Randschalung wird gesondert vergütet,;8,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+360;Schalung Außenwand, Randschalung wird gesondert vergütet,;430,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+370;Schalung Außenwand, Randschalung wird gesondert vergütet,;630,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+380;Schalung Außenwand, Randschalung wird gesondert vergütet,;115,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+390;Schalung Innenwand, Randschalung wird gesondert vergütet,;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+400;Schalung Innenwand, Randschalung wird gesondert vergütet,;30,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+410;Schalung Innenwand, Randschalung wird gesondert vergütet,;2000,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+420;Schalung Innenwand, Randschalung wird gesondert vergütet,;2230,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+430;Schalung Innenwand, Randschalung wird gesondert vergütet,;180,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+440;Schalung Innenwand, Randschalung wird gesondert vergütet,;150,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+450;Schalung Innenwand, Randschalung wird gesondert vergütet,;430,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+460;Schalung Innenwand, Randschalung wird gesondert vergütet,;140,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+470;Schalung Innenwand, Randschalung wird gesondert vergütet,;230,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+480;Schalung Innenwand, Randschalung wird gesondert vergütet,;1780,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+490;Schalung Innenwand, Randschalung wird gesondert vergütet,;1950,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+500;Schalung Innenwand, Randschalung wird gesondert vergütet,;210,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+510;Schalung Innenwand, Randschalung wird gesondert vergütet,;820,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+520;Schalung Innenwand, Randschalung wird gesondert vergütet,;230,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+530;Schalung Innenwand, Randschalung wird gesondert vergütet,;8,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+540;Schalung Innenwand, Randschalung wird gesondert vergütet,;1290,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+550;Schalung Innenwand, Randschalung wird gesondert vergütet,;1120,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+560;Schalung Innenwand, Randschalung wird gesondert vergütet,;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+570;Schalung Innenwand, Randschalung wird gesondert vergütet,;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+580;Schalung Innenwand, Randschalung wird gesondert vergütet,;85,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+590;Schalung Innenwand, Randschalung wird gesondert vergütet,;140,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+600;Schalung Innenwand, Randschalung wird gesondert vergütet,;350,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+610;Schalung Innenwand, im Grundriss gekrümmt,;130,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+620;Schalung Innenwand, im Grundriss gekrümmt,;85,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+630;Schalung Innenwand, im Grundriss gekrümmt,;110,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+640;Schalung Innenwand, im Grundriss gekrümmt,;270,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+650;Schalung Innenwand, im Grundriss gekrümmt,;65,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+660;Schalung Innenwand, im Grundriss gekrümmt,;85,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+670;Schalung Innenwand, im Grundriss gekrümmt,;110,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+680;Schalung Außenwand, als Stirnabschalung,;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+690;Schalung Außenwand, als Stirnabschalung,;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+700;Schalung Außenwand, als Stirnabschalung,;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+710;Schalung Außenwand, als Stirnabschalung,;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+720;Schalung Innenwand, als Stirnabschalung,;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+730;Schalung Innenwand, als Stirnabschalung,;28,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+740;Schalung Innenwand, als Stirnabschalung,;28,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+750;Schalung Innenwand, als Stirnabschalung,;22,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+760;Schalung Innenwand, als Stirnabschalung,;9,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+770;Schalung Innenwand, als Stirnabschalung,;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+780;Schalung Innenwand, als Stirnabschalung,;45,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+790;Schalung Innenwand, als Stirnabschalung,;32,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+800;Schalung Innenwand, als Stirnabschalung,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+810;Schalung Auflagerkonsole für Treppenläufe als Betonfertigteile,;32,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+820;Schalung der Enden der Auflagerkonsole für Treppenläufe als Betonfertigteile,;38,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+830;Ausbildung von Innen- und Außenecken der Schalung der Innen- und Außenwände im stumpfen oder spitzen Winkel,;550,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+840;Schalung Wand-/Pfeilervorlage, 3-seitig, an Wand,;9,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+850;Schalung Wand-/Pfeilervorlage, 3-seitig, an Wand,;12,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+860;Schalung Wand-/Pfeilervorlage, 3-seitig, an Wand,;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+870;Schalung Wand-/Pfeilervorlage, 3-seitig, an Wand,;58,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+880;Schalung Wand-/Pfeilervorlage, 3-seitig, an Wand,;25,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+890;Schalung Wand-/Pfeilervorlage, 3-seitig, an Wand,;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+900;Schalung Stütze, außen, Querschnitt rechteckig,;17,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+910;Schalung Stütze, innen, Querschnitt rechteckig,;4,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+920;Schalung Stütze, innen, Querschnitt rechteckig,;12,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+930;Schalung Stütze, innen, Querschnitt rechteckig,;3,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+940;Schalung Stütze, innen, Querschnitt rechteckig,;3,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+950;Schalung Stütze, innen, Querschnitt rechteckig,;14,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+960;Schalung Stütze, innen, Querschnitt rechteckig,;6,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+970;Schalung Stütze, innen, Querschnitt rechteckig,;35,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+980;Schalung Stütze, innen, Querschnitt rechteckig,;4,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+990;Schalung Stütze, innen, Querschnitt rechteckig,;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1000;Schalung Stütze, innen, Querschnitt rechteckig,;7,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1010;Schalung Stütze, innen, Querschnitt rechteckig,;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1020;Schalung Stütze, innen, Querschnitt rechteckig,;3,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1030;Schalung Stütze, innen, Querschnitt rechteckig,;3,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1040;Schalung Stütze, innen, Querschnitt rechteckig,;6,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1050;Schalung Stütze, innen, Querschnitt rund,;55,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1060;Mehrkosten für das Anlegen einer Erprobungsfläche an Wänden, in Sichtbetonklasse SB3 gemäß Angaben in den Technischen Vorbemerkungen,;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Schalung Deckenplatte,;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Schalung Deckenplatte,;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Schalung Deckenplatte,;100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Schalung Deckenplatte,;90,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Schalung Deckenplatte,;1100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Schalung Deckenplatte,;30,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Schalung Deckenplatte,;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Schalung Deckenplatte,;1080,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Schalung Deckenplatte,;230,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Schalung Deckenplatte,;320,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Schalung Deckenplatte,;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;Schalung Deckenplatte,;430,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Schalung Deckenplatte,;120,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+140;Schalung Deckenplatte,;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+150;Schalung Deckenplatte,;120,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+160;Schalung Deckenplatte,;420,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+170;Schalung Deckenplatte,;220,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+180;Schalung Deckenplatte,;360,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+190;Schalung Deckenplatte,;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+200;Schalung Deckenplatte,;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+210;Schalung Deckenplatte, als Randschalung,;95,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+220;Schalung Deckenplatte, als Randschalung, abgerundet,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+230;Schalung Deckenplatte, als Randschalung,;950,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+240;Schalung Deckenplatte, als Randschalung, abgerundet,;55,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+250;Schalung Deckenplatte, als Randschalung,;180,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+260;Schalung Deckenplatte, als Randschalung,;520,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+270;Schalung Deckenplatte, als Randschalung,;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+280;Schalung Deckenplatte, als Randschalung,;270,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+290;Schalung Deckenplatte, als Randschalung, abgerundet,;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+300;Schalung Deckenplatte, als Randschalung,;85,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+310;Schalung Deckenplatte, als Randschalung,;75,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+320;Schalung Höhenversprung an der Unterseite der Deckenplatte, als Randschalung, einhäuptig,;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+330;Schalung Höhenversprung an der Unterseite der Deckenplatte, als Randschalung, einhäuptig,;18,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+340;Schalung Höhenversprung an der Unterseite der Deckenplatte, als Randschalung, einhäuptig,;18,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+350;Schalung Höhenversprung an der Oberseite der Deckenplatte, als Randschalung, einhäuptig,;125,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+360;Schalung Höhenversprung an der Oberseite der Deckenplatte, als Randschalung, einhäuptig,;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+370;Schalung Kragplatte,;26,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+380;Schalung Deckenplatte als oberer Bauwerksabschluss,;400,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+390;Schalung Deckenplatte als oberer Bauwerksabschluss,;230,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+400;Schalung Deckenplatte als oberer Bauwerksabschluss,;7,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+410;Schalung Deckenplatte als oberer Bauwerksabschluss,;395,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+420;Schalung Deckenplatte als oberer Bauwerksabschluss,;35,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+430;Schalung Deckenplatte als oberer Bauwerksabschluss, als Randschalung,;380,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+440;Schalung Deckenplatte als oberer Bauwerksabschluss, als Randschalung, abgerundet,;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+450;Schalung Höhenversprung an der Unterseite der Deckenplatte als oberer Bauwerksabschluss, als Randschalung, einhäuptig,;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+460;Ausbildung von Innen- und Außenecken der Randschalung der Decken im stumpfen oder spitzen Winkel.;16,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+470;Ausbildung von Innen- und Außenecken der Randschalung der Deckenplatte als oberer Bauwerksabschluss im stumpfen oder spitzen Winkel.;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Schalung Treppenpodestplatte,;30,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Schalung Treppenpodestplatte, als Randschalung,;16,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Schalung Aussparung für Auflagerkonsole von Treppenläufen in Treppenpodestplatte aus Ortbeton, einschl. temporärer Verdrängungskörper,;16,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Schalung Treppenpodestplatte,;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Schalung Treppenpodestplatte,;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Schalung Treppenpodestplatte,;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Schalung Treppenpodestplatte,;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Schalung Treppenpodestplatte,;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Schalung Treppenpodestplatte, als Randschalung,;55,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Schalung Treppenpodestplatte, als Randschalung,;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Schalung Aussparung für Auflagerkonsole von Treppenläufen in Treppenpodestplatte aus Ortbeton, einschl. temporärer Verdrängungskörper,;55,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;Schalung Aussparung für Auflagerkonsole von Treppenläufen in Treppenpodestplatte aus Ortbeton, einschl. temporärer Verdrängungskörper,;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Schalung Treppenpodestplatte,;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+140;Schalung Treppenpodestplatte,;105,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+150;Schalung Treppenlaufplatte, als Randschalung,;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+160;Schalung Treppenlaufplatte,;6,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+170;Schalung Treppenlaufplatte,;6,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+180;Schalung Treppenlaufplatte,;55,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+190;Schalung Treppenlaufplatte, als Randschalung,;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+200;Schalung aufgesattelte Stufen, aus Schalungsplatten,;117,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+210;Schalung aufgesattelte Stufen, aus Schalungsplatten,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Schalung Balken, mit rechteckigem Querschnitt,;13,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Schalung Balken, mit rechteckigem Querschnitt,;64,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Schalung Unterzug, mit rechteckigem Querschnitt,;7,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Schalung Unterzug, mit rechteckigem Querschnitt,;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Schalung Unterzug, mit rechteckigem Querschnitt,;8,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Schalung Unterzug, mit rechteckigem Querschnitt,;22,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Schalung Unterzug, mit rechteckigem Querschnitt,;18,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Schalung Unterzug, mit rechteckigem Querschnitt,;22,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Schalung Unterzug, mit rechteckigem Querschnitt,;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Schalung Unterzug, mit rechteckigem Querschnitt,;45,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Schalung Unterzug, mit rechteckigem Querschnitt,;55,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;Schalung Unterzug (kreuzweise), mit rechteckigem Querschnitt,;490,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Schalung Attika,;270,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+140;Schalung Attika,;85,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+150;Ausbildung von Innen- und Außenecken der Schalung der Innen- und Außenwände im stumpfen oder spitzen Winkel,;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+160;Schalung Attika, als Stirnabschalung,;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Bewehrung aus Betonstabstahl B500B DIN 488-1, DIN 488-2,;975,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Bewehrung aus Betonstabstahl B500B DIN 488-1, DIN 488-2,;12,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Bewehrung aus Betonstabstahl B500B DIN 488-1, DIN 488-2 und / oder Gitterträgern,;22,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Bewehrung aus Betonstabstahl B500B DIN 488-1, DIN 488-2 und / oder Gitterträgern,;33,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Bewehrung aus Betonstabstahl B500B DIN 488-1, DIN 488-2 und / oder Gitterträgern,;1,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Spannlitzen DIN EN 523 für T-Platten als Betonfertigteil,;1,2;t;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Schalung Türöffnung, für Außenwand aus Ortbeton, rechteckig,;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Schalung Türöffnung, für Außenwand aus Ortbeton, rechteckig, mit Sichtbetonanforderung SB3,;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Schalung Türöffnung, für Außenwand aus Ortbeton, rechteckig,;4,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig,;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig,;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig, mit Sichtbetonanforderung SB2,;16,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig, mit Sichtbetonanforderung SB3,;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig, mit Sichtbetonanforderung SB2;6,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig, mit Sichtbetonanforderung SB2,;4,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig,;1,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig,;34,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig, mit Sichtbetonanforderung SB2,;30,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig, mit Sichtbetonanforderung SB3,;60,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+140;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig, mit Sichtbetonanforderung SB2,;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+150;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig, mit Sichtbetonanforderung SB3,;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+160;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig, mit Sichtbetonanforderung SB2,;12,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+170;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig, mit Sichtbetonanforderung SB2,;25,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+180;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig, mit Sichtbetonanforderung SB3,;4,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+190;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig,;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+200;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig,;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+210;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig, mit Sichtbetonanforderung SB2,;16,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+220;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig, mit Sichtanforderung SB3,;28,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+230;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig, mit Sichtbetonanforderung SB2,;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+240;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig, mit Sichtbetonanforderung SB2,;6,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+250;Schalung Türöffnung, für Innenwand aus Ortbeton, rechteckig, mit Sichtbetonanforderung SB2,;6,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Schalung Öffnung, Aussparungstiefe über 20 bis 30 cm, Einzelgröße der Aussparungen bis 500 cm2, Aussparungsform rund, für Bodenplatte aus Ortbeton.;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Schalung Öffnung, Aussparungstiefe über 20 bis 30 cm, Einzelgröße der Aussparungen über 1000 bis 2500 cm2, Aussparungsform rund, für Bodenplatte aus Ortbeton.;1,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Schalung Öffnung, Aussparungstiefe über 30 bis 50 cm, Einzelgröße der Aussparungen bis 500 cm2, Aussparungsform rechteckig, für Bodenplatte aus Ortbeton.;7,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Schalung Öffnung, Aussparungstiefe über 20 bis 30 cm, Einzelgröße der Aussparungen über 500 bis 1000 cm2, Aussparungsform rechteckig, für Bodenplatte aus Ortbeton.;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Schalung Öffnung, Aussparungstiefe über 20 bis 30 cm, Einzelgröße der Aussparungen über 1000 bis 2500 cm2, Aussparungsform rechteckig, für Bodenplatte aus Ortbeton.;1,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Schalung Öffnung, Aussparungstiefe über 20 bis 30 cm, Einzelgröße der Aussparungen über 10000 bis 25000 cm2, Aussparungsform rechteckig, für Bodenplatte aus Ortbeton.;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Schalung Öffnung, Aussparungstiefe über 20 bis 30 cm, Einzelgröße der Aussparungen über 25000 bis 50000 cm2, Aussparungsform rechteckig, für Bodenplatte aus Ortbeton.;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Schalung Öffnung, Aussparungstiefe über 30 bis 40 cm, Einzelgröße der Aussparungen über 500 bis 1000 cm2, Aussparungsform rechteckig, für Bodenplatte aus Ortbeton.;1,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Schalung Öffnung, Aussparungstiefe über 20 bis 30 cm, Einzelgröße der Aussparungen bis 500 cm2, Aussparungsform rund, für Außenwand aus Ortbeton.;4,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Schalung Öffnung, Aussparungsform rechteckig, für Außenwand aus Ortbeton,;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Schalung Öffnung, Aussparungsform rechteckig, für Außenwand aus Ortbeton,;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Schalung Öffnung, Aussparungsform rechteckig, für Außenwand aus Ortbeton,;1,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Schalung Öffnung, Aussparungsform rechteckig, für Außenwand aus Ortbeton,;1,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Schalung Öffnung, Aussparungsform rechteckig, für Außenwand aus Ortbeton,;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Schalung Öffnung, Aussparungsform rechteckig, für Außenwand aus Ortbeton,;13,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Schalung Öffnung, Aussparungsform rechteckig, für Außenwand aus Ortbeton,;6,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Schalung Öffnung, Aussparungsform rechteckig, für Außenwand aus Ortbeton, mit Sichtbetonanforderung SB2,;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Schalung Öffnung, Aussparungsform rechteckig, für Außenwand aus Ortbeton, mit Sichtbetonanforderung SB3,;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Schalung Öffnung, Aussparungsform rechteckig, für Außenwand aus Ortbeton, mit Sichtbetonanforderung SB2,;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;Schalung Öffnung, Aussparungsform rechteckig, für Außenwand aus Ortbeton, mit Sichtbetonanforderung SB3,;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Schalung Öffnung, Aussparungsform rechteckig, für Außenwand aus Ortbeton, mit Sichtbetonanforderung SB2,;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+140;Schalung Öffnung, Aussparungsform rechteckig, für Außenwand aus Ortbeton, mit Sichtbetonanforderung SB3,;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+150;Schalung Öffnung, Aussparungsform rechteckig, für Außenwand aus Ortbeton, mit Sichtbetonanforderung SB2,;6,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+160;Schalung Öffnung, Aussparungsform rechteckig, für Außenwand aus Ortbeton, mit Sichtbetonanforderung SB3,;32,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+170;Schalung Öffnung, Aussparungsform rechteckig, für Außenwand aus Ortbeton, mit Sichtbetonanforderung SB3,;7,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+180;Schalung Öffnung, Aussparungsform rechteckig, für Außenwand aus Ortbeton, mit Sichtbetonanforderung SB3,;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+190;Schalung Öffnung, Aussparungstiefe über 15 bis 20 cm, Einzelgröße der Aussparungen bis 500 cm2, Aussparungsform rund, für Innenwand aus Ortbeton.;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+200;Schalung Öffnung, Aussparungstiefe über 20 bis 30 cm, Einzelgröße der Aussparungen bis 500 cm2, Aussparungsform rund, für Innenwand aus Ortbeton.;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+210;Schalung Öffnung, Aussparungstiefe über 20 bis 30 cm, Einzelgröße der Aussparungen über 500 bis 1000 cm2., Aussparungsform rund, für Innenwand aus Ortbeton.;6,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+220;Schalung Öffnung, Aussparungstiefe über 30 bis 40 cm, Einzelgröße der Aussparungen bis 500 cm2, Aussparungsform rund, für Innenwand aus Ortbeton.;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+230;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;8,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+240;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;4,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+250;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+260;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+270;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;4,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+280;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;6,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+290;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton, mit Sichtbetonanforderung SB2,;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+300;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton, mit Sichtbetonanforderung SB3,;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+310;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;35,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+320;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;12,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+330;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;26,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+340;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;4,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+350;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;7,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+360;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;16,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+370;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;45,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+380;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+390;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;16,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+400;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton, mit Sichtbetonanforderung SB3,;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+410;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton, mit Sichtbetonanforderung SB3,;8,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+420;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;6,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+430;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;9,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+440;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;7,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+450;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;7,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+460;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+470;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+480;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton,;9,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+490;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton, mit Sichtbetonanforderung SB3,;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+500;Schalung Öffnung, Aussparungsform rechteckig, für Innenwand aus Ortbeton, mit Sichtbetonanforderung SB2,;7,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+510;Schalung Aussparung, Aussparungstiefe bis 10 cm, Einzelgröße der Aussparungen bis 500 cm2, Aussparungsform rechteckig, für Innenwand aus Ortbeton.;1,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+520;Schalung Aussparung, Aussparungstiefe bis 10 cm, Einzelgröße der Aussparungen über 10000 bis 25000 cm2, Aussparungsform rechteckig, für Innenwand aus Ortbeton.;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+530;Schalung Schlitz, einschl. temporärer Verdränungskörper, geeignet für späteres Verschließen, für Innenwand aus Ortbeton,;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+540;Schalung Schlitz, einschl. temporärer Verdränungskörper, geeignet für späteres Verschließen, für Innenwand aus Ortbeton,;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+550;Schalung Schlitz, einschl. temporärer Verdränungskörper, geeignet für späteres Verschließen, für Innenwand aus Ortbeton,;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+560;Schalung Schlitz, einschl. temporärer Verdränungskörper, geeignet für späteres Verschließen, für Innenwand aus Ortbeton,;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Schalung Öffnung, Aussparungsform rechteckig, für Deckenplatte aus Ortbeton,;6,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Schalung Öffnung, Aussparungsform rechteckig, für Deckenplatte aus Ortbeton,;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Schalung Öffnung, Aussparungsform rechteckig, für Deckenplatte aus Ortbeton,;8,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Schalung Öffnung, Aussparungsform rechteckig, für Deckenplatte aus Ortbeton,;9,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Schalung Öffnung, Aussparungsform rechteckig, für Deckenplatte aus Ortbeton,;8,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Schalung Öffnung, Aussparungsform rechteckig, für Deckenplatte aus Ortbeton,;55,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Schalung Öffnung, Aussparungsform rechteckig, für Deckenplatte aus Ortbeton,;4,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Schalung Öffnung, Aussparungsform rechteckig, für Deckenplatte aus Ortbeton,;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Schalung Öffnung, Aussparungsform rechteckig, für Deckenplatte aus Ortbeton,;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Schalung Öffnung, Aussparungsform rechteckig, für Deckenplatte aus Ortbeton,;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Schalung Öffnung, Aussparungsform rechteckig, für Deckenplatte aus Ortbeton,;1,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;Schalung Öffnung, Aussparungsform rechteckig, für Deckenplatte aus Ortbeton,;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Schalung Öffnung, Aussparungsform rechteckig, für Deckenplatte aus Ortbeton,;4,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+140;Schalung für Einbringöffnung an Deckenplatte aus WU-Beton, als Randschalung,;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+150;Schalung Aussparung für Auflagerkonsole, an Einbringöffnung in Deckenplatte aus WU-Beton, einschl. temporärer Verdrängungskörper,;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+160;Schalung Öffnung, Aussparungsform rechteckig, für Deckenplatte als oberer Bauwerksabschluss aus Ortbeton,;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+170;Schalung Öffnung, Aussparungsform rechteckig, für Deckenplatte als oberer Bauwerksabschluss aus Ortbeton,;1,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+180;Schalung Öffnung, Aussparungsform rechteckig, für Deckenplatte als oberer Bauwerksabschluss aus Ortbeton,;1,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+190;Schalung Öffnung, Aussparungsform rechteckig, für Deckenplatte als oberer Bauwerksabschluss aus Ortbeton,;1,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+200;Schalung Öffnung, Aussparungsform rechteckig, für Deckenplatte als oberer Bauwerksabschluss aus Ortbeton,;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+210;Schalung Öffnung, Aussparungsform rechteckig, für Deckenplatte als oberer Bauwerksabschluss aus Ortbeton,;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Schalung Öffnung, Aussparungsform rund, für Unterzug aus Ortbeton,;11,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Schalung Öffnung, Aussparungsform rund, für Unterzug aus Ortbeton,;12,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Schalung Öffnung, Aussparungsform rechteckig, für Attika aus Ortbeton,;8,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Verwahrkasten/Bewehrungs-Rückbiegeelement aus Stahl, verzinkt, mit bauaufsichtlicher Zulassung,;80,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Verwahrkasten/Bewehrungs-Rückbiegeelement aus Stahl, verzinkt, mit bauaufsichtlicher Zulassung,;28,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Verwahrkasten/Bewehrungs-Rückbiegeelement aus Stahl, verzinkt, mit bauaufsichtlicher Zulassung,;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Verwahrkasten aus Stahl, verzinkt,;62,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Anschlussstab aus Betonstahl B500B zur Verbindung von Bewehrungsstäben als Zug- oder Druckstoß, mit allgemeiner bauaufsichtlicher Zulassung;744,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Verwahrkasten aus Stahl, verzinkt,;36,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;gerader Anschlussstab aus Betonstahl B500B zur Verbindung von Bewehrungsstäben als Zug- oder Druckstoß, mit allgemeiner bauaufsichtlicher Zulassung;432,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;gebogener Muffenstab aus Betonstahl B500B mit einseitig geschmiedetem Nagelflansch und Schraubmuffe zur Verbindung von Bewehrungsstäben als Zug- oder Druckstoß, mit allgemeiner bauaufsichtlicher Zulassung;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;gerader Anschlussstab aus Betonstahl B500B zur Verbindung von Bewehrungsstäben als Zug- oder Druckstoß, mit allgemeiner bauaufsichtlicher Zulassung;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;gerader Muffenstab aus Betonstahl B500B mit einseitig geschmiedetem Nagelflansch und Schraubmuffe zur Verbindung von Bewehrungsstäben als Zug- oder Druckstoß, mit allgemeiner bauaufsichtlicher Zulassung;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;gerader Anschlussstab aus Betonstahl B500B zur Verbindung von Bewehrungsstäben als Zug- oder Druckstoß, mit allgemeiner bauaufsichtlicher Zulassung;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;Doppelkopfelement als Durchstanzbewehrung, Einbau in Außenwand als Ortbetonwand, Wanddicke 32 cm,;72,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Doppelkopfelement als Durchstanzbewehrung, Einbau in Außenwand als Ortbetonwand, Wanddicke 32 cm,;36,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+140;Einbauteil als Auflager passgenau auf Wand aus Stahlbeton einbauen, geeignet zur Aufnahme der Vierendeelträger;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+150;Ankerschiene TA aus Stahl feuerverzinkt, Profil 40/25,;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Kabelschutzrohr flexibel mit glatter Innenbeschichtung, Innendurchmesser ca. Øi 140 -150mm, wasserdicht, inkl. Steckmuffen, liefern und im bauseits erstellen Graben, bzw. unterhalb der Sohlplatte, in Teilängen fertig verlegen, einschl. Rohrabstandhalter und Zugdraht aus verzinktem Stahl, sowie allen;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Anschluss- Übergangsstück zum Anschluss an eine im Zugschacht einbetonierte Eingangsdichtung zur Aufnahme des Kabelschutzrohres mit Innendurchmesser ca. Øi 140 -150 mm, wasserdicht, inkl. Anschluss- und Einbauzubehör, liefern und montieren.;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Endpackung zum waagerechten oder senkrechten Einbetonieren in die Betonwandung oder Fundamentplatte und Aufnahme des Kabelschutzrohres mit Innendurchmesser ca. Øi 140 -150mm, wasserdicht, inkl. Anschluss- und Einbauzubehör, liefern und montieren.;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Provisorischer Verschluss der Rohrenden Durchmesseer 98 - 150mm, als Wasser- und Diffusionsunsdurchlässiger Abschluss mit Auslass des Zugdrahtes liefern und in fertiger Arbeit erstellen.;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Kunststoff-Panzerrohr, gewellt mit glattem Außenmantel, flexibel, Nenngröße DN 25 (nach DIN EN 61386-22 / vormals DIN 50086);2800,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Kunststoff-Panzerrohr, DN 32;700,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Kunststoff-Panzerrohr, DN 50;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Gerätedose für den Betoneinbau, Außendurchmesser ca. 71 x 71mm, Tiefe mindestens 50mm, mit einer Einbauöffnung von 60mm Durchmesser.;240,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Gerätedose für den Betoneinbau, Außendurchmesser ca. 71 x 71mm, Tiefe mindestens 50mm, mit einer Einbauöffnung von 60mm Durchmesser.;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Deckenverbindungsdose für den Betoneinbau, Außendurchmesser ca. 71 x 71mm, Tiefe mindestens 79mm, mit einer Einbauöffnung von 60mm Durchmesser.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Verschlußdeckel für vorstehende Deckenverbindungsdose, 75 mm Dm, liefern und montieren.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;Wandauslassdose für Betoneinbau, Aussenabmessungen ca. 71 x 71mm, Tiefe mindestens 45mm, mit einer vorderen Auslassöffnung von 35mm Durchmesser.;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Mehrpreis für die Erstellung einer 1-fach Kombination auf einer Gegenschalung einschl. der Lieferung aller erforderlichen Matrialien und aller Nebenarbeiten.;300,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+140;Mehrpreis für die Erstellung einer 2-fach Kombination auf einer Gegenschalung, s.w.v.;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+150;Rohrkapseln M25 für Betoneinbau zur Erstellung von Rohrauslässe in Decken und Wänden liefern und während der Bauzeit in die Schalung einbringen einschl. aller erforderlichen Nebenarbeiten.;130,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+160;Universal Betoneinbaugehäuse für Einbaudownlight bestehend aus einem formstabilen Kompax Einbau Gehäuse aus halogenfreiem Kunststoffmaterial, Feuerbeständig bis 650°C.;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+170;Universal Betoneinbaugehäuse für Rettungszeichenleuchte in LED Scheibentechnik bestehend aus einem formstabilen Kompax Einbau Gehäuse aus halogenfreiem Material, Feuerbeständig bis 650°C.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Kunststoffrohrsystem gemäß Vortext;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Kunststoffrohrsystem gemäß Vortext;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Kunststoffrohrsystem gemäß Vortext;22,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Kunststoffrohrsystem gemäß Vortext;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Kunststoffrohrsystem gemäß Vortext;32,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Rohrbogen DN 25;45,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Rohrbogen DN 32;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Rohrbogen DN40;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Rohrbogen DN50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Rohrbogen DN65;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Rohrbogen DN 25 innen/außen;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;"Übergangswinkel DN 25 auf 1/2"" mit Innengewinde";12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Rohrbogen DN 32;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+140;Rohrbogen DN 40;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+150;T-Stück DN 25 ǀ <=DN 25 ǀ <=DN 25;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+160;T-Stück DN 32 ǀ <=DN 32 ǀ <=DN 32;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+170;T-Stück DN 40 ǀ <=DN 40 ǀ <=DN 40;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+180;T-Stück DN 50 ǀ <=DN 50 ǀ <=DN 50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+190;T-Stück DN 65 ǀ <=DN 65 ǀ <=DN 65;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+200;"Übergangs-T-Stück DN25 ǀ 1"" ǀ <=DN25";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+210;"Übergangs-T-Stück DN32 ǀ 1"" ǀ <=DN32";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+220;Muffe DN 32;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+230;Muffe DN 40;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+240;Muffe DN 50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+250;Muffe DN 65;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+260;Reduzierstück DN 32 ǀ <=DN 25;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+270;Reduzierstück DN 40 ǀ <=DN 32;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+280;Kreuzstück DN 50 ǀ <=DN 32;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+290;Kreuzstück DN 65 ǀ <=DN 32;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+300;Übergangsstück DN 50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+310;Übergangsstück DN 65;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+320;Endkappe DN 32 für provisorischen Verschluss;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+330;Endkappe DN 40 für provisorischen Verschluss;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+340;Endkappe DN 50 für provisorischen Verschluss;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+350;Endkappe DN 65 für provisorischen Verschluss;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+360;"Oberteil für sichtbare Sprinkler als systemzugehöriges Zubehörteil einer Sprinkleranschlussdose, passend zum ausgeschriebenen Rohrsystem, für sichtbare Sprinkler, Anschlussgröße 1/2"", aus geeignetem Kunststoffwerkstoff";40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+370;"Oberteil für sichtbare Sprinkler als systemzugehöriges Zubehörteil einer Sprinkleranschlussdose, passend zum ausgeschriebenen Rohrsystem, für sichtbare Sprinkler, Anschlussgröße 1"", aus geeignetem Kunststoffwerkstoff";2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+380;"Unterteil für sichtbare Sprinkler, als systemzugehöriges Zubehörteil einer Sprinkleranschlussdose für Kunststoffrohrsysteme in Sprinkleranlagen, passend zum ausgeschriebenen Rohrsystem und zur Anschlussgröße 1/2"", aus geeignetem Werkstoff";40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+390;Verschlussstopfen als systemzugehöriges Zubehörteil für Sprinkleranschlussdosen des ausgeschriebenen Kunststoffrohrsystems, geeignet zum temporären oder dauerhaften Verschließen nicht belegter Anschlüsse, einschließlich aller erforderlichen Dicht- und Befestigungselemente;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+400;"Übergangsstück DN 25 auf 1/2"" mit Innengewinde";2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+410;"Übergangsstück DN 25 auf 1"" mit Innengewinde";40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+420;"Ausgleichsanschluss 1"" ǀ 1/2""";40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+430;mit Absperrventil DN 50, 200 mm Rohrleitung DN 50, mit;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+440;mit 1 Schrägsitzventil, Fest- und Blindkupplung für;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+450;Rohrabschottung DN 50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+460;Rohrabschottung DN 65;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+470;Bezeichnungsschilder;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+480;Baustelle für sämtliche aufgeführte Leistungen einrichten, herstellen der dazu erforderlichen Lager- und Arbeitsplätze sowie Pausen-/Aufenthaltscontainer ebenerdig. Flächen nach Vorgabe der Bauleitung, mit An- und Abfahrt der Monteure, Material- und Werkzeugtransport einschließlich Frachtkosten;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+490;Baustelleneinrichtung für sämtliche aufgeführte Leistungen, über die gesamte Bauzeit nach Erfordernis des AN vorhalten.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+500;Baustelle für sämtliche aufgeführte Leistungen räumen, Geländeflächen, auf denen sich Baustelleneinrichtungen befunden haben, dem früheren Zustand entsprechend herstellen, Befestigungen der Lager- und Arbeitsplätze räumen, im Baugrund befindliche Teile der Baustelleneinrichtung (z. B. Fundamente, Pf;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+510;Hydraulische Berechnungen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+520;Vorbereiten und Teilnahme bzw. Begleitung der Sachverständigenabnahme vor Ort.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+530;Bauherrnabnahme;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+540;Dichtheitsprüfung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+550;Erstellen einer vollständigen, bauteilbezogenen Fotodokumentation vor Betonage;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+560;Spülen der Rohrleitung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+570;Inbetriebnahme und Funktionsprüfung Sprinkleranlage;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+580;Zuschlag für Ausführung der Sprinkleranlage in mehreren Bauabschnitten.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+590;Erstellen der Werk- und Montageplanung gemäß VOB/ B/C:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+600;Revisionsunterlagen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+610;Monteurstunde (siehe Hinweis);10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+620;Helferstunde (siehe Hinweis);10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+630;Auszubildenderstunde (siehe Hinweis);10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;gezahnte Ankerschiene TA aus Stahl feuerverzinkt, warmgewalzt, Profil 52/34, Länge 0,5 m, mit 3 Ankern,;102,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Ortbeton Sauberkeitsschicht, für Streifenfundament, Untergrund waagerecht, obere Betonfläche waagerecht,;210,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Ortbeton Sauberkeitsschicht, für Bodenplatte, Untergrund waagerecht, obere Betonfläche waagerecht,;1230,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Ortbeton Sauberkeitsschicht, im Bereich von Absenkungen der Bodenplatte (Vouten), Untergrund geneigt, obere Betonfläche geneigt,;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Glätten der Frischbetonoberfläche der Sauberkeitsschicht,;1440,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Trennlage aus PE-Folie Dicke 0,2 mm, einlagig, auf Sauberkeitsschicht, Untergrund Beton, Oberfläche geglättet.;1440,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Ortbeton Auffüllung als unbewehrter Beton,;18,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Ortbeton Auffüllung als unbewehrter Beton,;60,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Ortbeton Auffüllung als unbewehrter Beton,;30,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Ortbeton Streifenfundament, obere Betonfläche waagerecht,;80,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Ortbeton Bodenplatte, Untergrund waagerecht, obere Betonfläche waagerecht,;820,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Ortbeton Bodenplatte wie in Pos.;140,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Ortbeton Bodenplatte wie in Pos.;75,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Ortbeton Bodenplatte wie in Pos.;70,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Ortbeton Bodenplatte wie in Pos.;33,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Ortbeton Bodenplatte wie in Pos.;260,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Ortbeton Absenkung Bodenplatte, Untergrund waagerecht und gevoutet,;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Glätten der Frischbetonoberfläche, an der Oberseite waagerechter Bauteile.;140,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Ortbeton Kelleraußenwand,;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Ortbeton Kelleraußenwand wie in Pos.;35,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Ortbeton Kelleraußenwand wie in Pos.;90,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Ortbeton Kelleraußenwand wie in Pos.;70,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Ortbeton Kelleraußenwand wie in Pos.;35,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Ortbeton Kelleraußenwand wie in Pos.;90,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Ortbeton Kelleraußenwand wie in Pos.;185,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Ortbeton Kelleraußenwand wie in Pos.;60,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Ortbeton Kelleraußenwand,;75,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Ortbeton Kelleraußenwand wie in Pos.;110,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Ortbeton Kelleraußenwand wie in Pos.;130,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;Ortbeton Kelleraußenwand wie in Pos.;45,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Ortbeton Kelleraußenwand wie in Pos.;65,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+140;Ortbeton Kelleraußenwand,;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+150;Ortbeton Kelleraußenwand wie in Pos.;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+160;Ortbeton Kelleraußenwand wie in Pos.;55,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+170;Ortbeton Kelleraußenwand wie in Pos.;70,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+180;Ortbeton Kelleraußenwand,;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+190;Ortbeton Kelleraußenwand wie in Pos.;22,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+200;Ortbeton Kelleraußenwand wie in Pos.;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+210;Ortbeton Kelleraußenwand wie in Pos.;12,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+220;Ortbeton Kelleraußenwand wie in Pos.;25,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+230;Ortbeton Kelleraußenwand wie in Pos.;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+240;Ortbeton Kelleraußenwand wie in Pos.;25,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+250;Ortbeton Kelleraußenwand wie in Pos.;12,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+260;Ortbeton Kelleraußenwand wie in Pos.;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+270;Ortbeton Kelleraußenwand,;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+280;Ortbeton Kelleraußenwand wie in Pos.;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+290;Ortbeton Kelleraußenwand wie in Pos.;8,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+300;Ortbeton Kelleraußenwand wie in Pos.;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+310;Ortbeton Kelleraußenwand wie in Pos.;130,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+320;Ortbeton Kelleraußenwand wie in Pos.;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+330;Ortbeton Kelleraußenwand wie in Pos.;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+340;Ortbeton Kelleraußenwand wie in Pos.;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+350;Ortbeton Kelleraußenwand,;35,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+360;Ortbeton Kelleraußenwand wie in Pos.;8,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+370;Ortbeton Außenwand,;75,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+380;Ortbeton Außenwand wie in Pos.;42,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+390;Ortbeton Außenwand wie in Pos.;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+400;Ortbeton Außenwand,;16,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+410;Ortbeton Außenwand wie in Pos.;12,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+420;Ortbeton Außenwand wie in Pos.;180,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+430;Ortbeton Außenwand wie in Pos.;250,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+440;Ortbeton Außenwand wie in Pos.;60,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+450;Ortbeton Außenwand wie in Pos.;105,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+460;Ortbeton Außenwand,;200,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+470;Ortbeton Außenwand wie in Pos.;360,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+480;Ortbeton Außenwand wie in Pos.;115,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+490;Ortbeton Außenwand wie in Pos.;8,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+500;Ortbeton Außenwand wie in Pos.;260,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+510;Ortbeton Außenwand wie in Pos.;280,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+520;Ortbeton Innenwand,;70,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+530;Ortbeton Innenwand wie in Pos.;160,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+540;Ortbeton Wand-/Pfeilervorlage an Wand,;1,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+550;Ortbeton Wand-/Pfeilervorlage an Wand,;7,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+560;Ortbeton Wand-/Pfeilervorlage an Wand,;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+570;Ortbeton Innenwand, obere Betonfläche waagerecht,;32,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+580;Ortbeton Innenwand wie in Pos.;22,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+590;Ortbeton Innenwand wie in Pos.;25,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+600;Ortbeton Innenwand wie in Pos.;8,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+610;Ortbeton Innenwand wie in Pos.;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+620;Ortbeton Innenwand wie in Pos.;28,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+630;Ortbeton Innenwand wie in Pos.;12,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+640;Ortbeton Innenwand wie in Pos.;18,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+650;Ortbeton Innenwand wie in Pos.;110,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+660;Ortbeton Innenwand wie in Pos.;70,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+670;Ortbeton Innenwand wie in Pos.;45,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+680;Ortbeton Innenwand wie in Pos.;160,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+690;Ortbeton Innenwand wie in Pos.;245,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+700;Ortbeton Innenwand wie in Pos.;12,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+710;Ortbeton Innenwand wie in Pos.;160,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+720;Ortbeton Innenwand, obere Betonfläche waagerecht,;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+730;Ortbeton Innenwand wie in Pos.;8,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+740;Ortbeton Innenwand wie in Pos.;8,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+750;Ortbeton Innenwand wie in Pos.;52,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+760;Ortbeton Innenwand wie in Pos.;38,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+770;Ortbeton Innenwand wie in Pos.;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+780;Ortbeton Innenwand wie in Pos.;290,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+790;Ortbeton Innenwand wie in Pos.;420,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+800;Ortbeton Innenwand wie in Pos.;30,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+810;Ortbeton Innenwand wie in Pos.;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+820;Ortbeton Innenwand wie in Pos.;75,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+830;Ortbeton Innenwand wie in Pos.;400,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+840;Ortbeton Innenwand wie in Pos.;320,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+850;Ortbeton Innenwand wie in Pos.;45,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+860;Ortbeton Innenwand wie in Pos.;160,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+870;Ortbeton Innenwand wie in Pos.;35,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+880;Ortbeton Innenwand wie in Pos.;48,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+890;Ortbeton Innenwand wie in Pos.;150,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+900;Ortbeton Innenwand wie in Pos.;280,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+910;Ortbeton Innenwand wie in Pos.;6,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+920;Ortbeton Innenwand wie in Pos.;30,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+930;Ortbeton Innenwand wie in Pos.;100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+940;Ortbeton Innenwand wie in Pos.;105,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+950;Ortbeton Innenwand wie in Pos.;130,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+960;Ortbeton Innenwand wie in Pos.;30,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+970;Ortbeton Innenwand wie in Pos.;105,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+980;Ortbeton Innenwand wie in Pos.;85,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+990;Ortbeton Innenwand wie in Pos.;7,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1000;Ortbeton Innenwand, obere Betonfläche waagerecht,;9,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1010;Ortbeton Innenwand wie in Pos.;16,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1020;Ortbeton Innenwand wie in Pos.;4,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1030;Ortbeton Innenwand wie in Pos.;30,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1040;Ortbeton Innenwand wie in Pos.;75,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1050;Ortbeton Innenwand wie in Pos.;180,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1060;Ortbeton Innenwand wie in Pos.;590,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1070;Ortbeton Innenwand wie in Pos.;530,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1080;Ortbeton Innenwand wie in Pos.;180,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1090;Ortbeton Innenwand wie in Pos.;160,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1100;Ortbeton Innenwand wie in Pos.;30,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1110;Ortbeton Innenwand wie in Pos.;250,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1120;Ortbeton Innenwand wie in Pos.;140,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1130;Ortbeton Innenwand wie in Pos.;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1140;Ortbeton Innenwand wie in Pos.;110,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1150;Ortbeton Innenwand wie in Pos.;280,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1160;Ortbeton Innenwand wie in Pos.;260,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1170;Ortbeton Innenwand wie in Pos.;130,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1180;Ortbeton Innenwand wie in Pos.;85,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1190;Ortbeton Wand-/Pfeilervorlage an Wand,;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1200;Ortbeton Wand-/Pfeilervorlage an Wand,;3,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1210;Ortbeton Wand-/Pfeilervorlage an Wand,;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1220;Ortbeton gekrümmte Innenwand, obere Betonfläche waagerecht,;170,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1230;Ortbeton gekrümmte Innenwand, obere Betonfläche waagerecht,;65,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1240;Ortbeton gekrümmte Innenwand wie in Pos.;85,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1250;Ortbeton gekrümmte Innenwand wie in Pos.;110,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1260;Ortbeton Auflagerkonsole, obere Betonfläche waagerecht,;32,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1270;Ortbeton Stütze, außen, als Stahlbeton, Normalbeton C 30/37 DIN 1045-2,;17,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1280;Ortbeton Stütze wie in Pos.;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1290;Ortbeton Stütze, innen, als Stahlbeton, Normalbeton C 30/37 DIN 1045-2,;12,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1300;Ortbeton Stütze wie in Pos.;3,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1310;Ortbeton Stütze wie in Pos.;3,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1320;Ortbeton Stütze, innen, als Stahlbeton, Normalbeton C 30/37 DIN 1045-2,;14,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1330;Ortbeton Stütze wie in Pos.;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1340;Ortbeton Stütze wie in Pos.;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1350;Ortbeton Stütze wie in Pos.;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1360;Ortbeton Stütze wie in Pos.;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1370;Ortbeton Stütze, innen, als Stahlbeton, Normalbeton C 30/37 DIN 1045-2,;7,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1380;Ortbeton Stütze wie in Pos.;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1390;Ortbeton Stütze wie in Pos.;3,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1400;Ortbeton Stütze wie in Pos.;3,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1410;Ortbeton Stütze wie in Pos.;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+1420;Ortbeton Stütze, innen, als Stahlbeton, Normalbeton C 50/60 DIN 1045-2,;55,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Ortbeton Deckenplatte, obere Betonfläche waagerecht,;2460,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Ortbeton Deckenplatte, obere Betonfläche waagerecht,;350,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Ortbeton Deckenplatte, obere Betonfläche waagerecht,;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Ortbeton Deckenplatte, obere Betonfläche waagerecht,;980,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Ortbeton Deckenplatte, obere Betonfläche geneigt, Neigung bis 10 Grad,;140,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Ortbeton Deckenplatte, obere Betonfläche waagerecht,;60,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Ortbeton Deckenplatte, obere Betonfläche waagerecht,;940,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Ortbeton Deckenplatte, obere Betonfläche waagerecht,;120,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Ortbeton Deckenplatte, obere Betonfläche waagerecht,;30,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Ortbeton Deckenplatte, obere Betonfläche waagerecht,;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Ortbeton Kragplatte, obere Betonfläche waagerecht,;26,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;Ortbeton Deckenplatte als oberer Bauwerksabschluss, obere Betonfläche waagerecht,;880,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Ortbeton Deckenplatte als oberer Bauwerksabschluss, obere Betonfläche waagerecht,;260,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+140;Ortbeton Deckenplatte als oberer Bauwerksabschluss, obere Betonfläche waagerecht,;230,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+150;Ortbeton Höhenverprung in Deckenplatten, obere Betonfläche waagerecht,;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+160;Ortbeton Höhenverprung in Deckenplatten, obere Betonfläche waagerecht,;12,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+170;Ortbeton Höhenverprung in Deckenplatten, obere Betonfläche waagerecht,;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+180;Ortbeton Höhenverprung in Deckenplatten, obere Betonfläche waagerecht,;33,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+190;Ortbeton Höhenverprung in Deckenplatten, obere Betonfläche waagerecht,;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+200;Ortbeton Höhenverprung in Deckenplatten, obere Betonfläche waagerecht, im Grundriss abgerundet,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Ortbeton Treppenpodestplatte,;30,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Ortbeton Treppenpodestplatte,;4,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Ortbeton Treppenpodestplatte,;49,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Ortbeton Treppenpodestplatte,;7,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Ortbeton Treppenpodestplatte,;117,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Ortbeton Treppenlaufplatte einschl. Stufen,;18,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Ortbeton Balken, obere Betonfläche waagerecht,;11,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Ortbeton Balken als oberer Bauwerksabschluss, obere Betonfläche waagerecht, aufgesetzt auf Stahlbetonwand,;32,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Ortbeton Unterzug, obere Betonfläche waagerecht,;11,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Ortbeton Unterzug, obere Betonfläche waagerecht,;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Ortbeton Unterzug, obere Betonfläche waagerecht,;14,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Ortbeton Unterzug, obere Betonfläche waagerecht,;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Ortbeton Unterzug, obere Betonfläche waagerecht,;18,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Ortbeton Unterzug, obere Betonfläche waagerecht,;12,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Ortbeton Unterzug, obere Betonfläche waagerecht,;13,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Ortbeton Unterzug, obere Betonfläche waagerecht,;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Ortbeton Unterzug, obere Betonfläche waagerecht,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;Ortbeton Unterzug (kreuzweise), obere Betonfläche waagerecht,;225,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Ortbeton Attika, obere Betonfläche waagerecht,;125,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+140;Ortbeton Attika, obere Betonfläche waagerecht,;42,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+150;Ortbeton Attika, obere Betonfläche waagerecht,;12,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Mehrkosten für Ortbeton der Betongüte C30/37 DIN EN 206, DIN 1045-2 mit einem Größtkorndurchmesser von 8 mm anstelle von 16 mm,;500,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Als Funktions- und Verwendbarkeitsnachweise für das Frischbetonverbundsystem sind folgende Unterlagen zu erbringen:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Frischbetonverbundsystem aus Kunststoffbahnen DIN EN 13967 wie in der Ausführungsbeschreibung beschrieben,;1450,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Frischbetonverbundsystem aus Kunststoffbahnen DIN EN 13967 wie in der Ausführungsbeschreibung beschrieben,;1850,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Beschichtetes Fugenblech zur Abdichtung von horizontalen und vertikalen Arbeitsfugen gegen drückendes und nicht drückendes Wasser, sowie gegen Bodenfeuchte liefern und unter Beachtung der Herstellerangaben, Zulassung, ETA bzw. dem AbP einbauen.;825,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Abschalelement für die Abschalung und gleichzeitige Abdichtung von wasserundurchlässigen Arbeitsfugen mit verzahnter Oberfläche gemäß EC2 in der Bodenplatte gegen drückendes und nicht drückendes Wasser, sowie gegen Bodenfeuchte,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Abschalelement wie in Pos.;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Abschalelement / Sollrissfuge für die Abschalung und gleichzeitige Abdichtung von wasserundurchlässigen Arbeitsfugen mit verzahnter Oberfläche gemäß EC2 in der Wand gegen drückendes und nicht drückendes Wasser, sowie gegen Bodenfeuchte,;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Abschalelement / Sollrissfuge wie in Pos.;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Abschalelement / Sollrissfuge wie in Pos.;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Futterrohr aus Faserzement für Kelleraußenwand aus Ortbeton, mit außenseitiger Riffelung, geeignet für WU-Betonkonstuktionen,;43,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Futterrohr aus Faserzement für Kelleraußenwand aus Ortbeton, mit außenseitiger Riffelung, geeignet für WU-Betonkonstuktionen,;41,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Dichtungseinsatz zur Abdichtung einer Öffnung, Ausführung als Blindverschluss zur Abdichtung einer Öffnung, dicht gegen drückendes Wasser und gasdicht, Einsatz in zuvor beschriebene Futterrohre mit Innendurchmesser 350 mm,;84,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Werkplanung nach vom AG beigestellter Ausführungsplanung und Tragwerksplanung, nachfolgenden Leistungsbeschreibungen sowie nach Aufmaß des AN vor Ort,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Werkplanung nach vom AG beigestellter Ausführungsplanung, Tragwerksplanung, nachfolgenden Leistungsbeschreibungen sowie nach Aufmaß des AN vor Ort,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Werkplanung nach vom AG beigestellter Ausführungsplanung und Tragwerksplanung, nachfolgenden Leistungsbeschreibungen sowie nach Aufmaß des AN vor Ort,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Werkplanung nach vom AG beigestellter Ausführungsplanung und Tragwerksplanung, nachfolgenden Leistungsbeschreibungen sowie nach Aufmaß des AN vor Ort,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Werkplanung nach vom AG beigestellter Ausführungsplanung und Tragwerksplanung, nachfolgenden Leistungsbeschreibungen sowie nach Aufmaß des AN vor Ort,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Trittschalldämmelement, tragend, mit allgemeinem bauaufsichtlichen Prüfzeugnis, zwischen Bodenplatte und Treppenlauf, gerader Lauf, in Betonfertigteilbauweise, Dämmstoff Polyethylen-Schaum, Feuerwiderstandsklasse R90, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar), Befestigung durch Kleben,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Trittschalldämmelement, tragend, mit allgemeinem bauaufsichtlichen Prüfzeugnis, zwischen Bodenplatte und Treppenlauf, gerader Lauf, in Betonfertigteilbauweise, Dämmstoff Polyethylen-Schaum, Feuerwiderstandsklasse R90, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar), Befestigung durch Kleben,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Trittschalldämmelement, tragend, mit allgemeinem bauaufsichtlichen Prüfzeugnis, zwischen Bodenplatte und Treppenlauf, gerader Lauf, in Betonfertigteilbauweise, Dämmstoff Polyethylen-Schaum, Feuerwiderstandsklasse R90, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar), Befestigung durch Kleben,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Trittschalldämmelement, tragend, mit allgemeinem bauaufsichtlichen Prüfzeugnis, zwischen Bodenplatte und Treppenlauf, gerader Lauf, in Betonfertigteilbauweise, Dämmstoff Polyethylen-Schaum, Feuerwiderstandsklasse R90, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar), Befestigung durch Kleben,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Trittschalldämmelement, tragend, mit allgemeinem bauaufsichtlichen Prüfzeugnis, zwischen Bodenplatte und Treppenlauf, gerader Lauf, in Betonfertigteilbauweise, Dämmstoff Polyethylen-Schaum, Feuerwiderstandsklasse R90, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar), Befestigung durch Kleben,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Trittschalldämmelement, tragend, mit allgemeinem bauaufsichtlichen Prüfzeugnis, zwischen Bodenplatte und Treppenlauf, gerader Lauf, in Betonfertigteilbauweise, Dämmstoff Polyethylen-Schaum, Feuerwiderstandsklasse R90, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar), Befestigung durch Kleben,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Trittschalldämmelement, tragend, mit allgemeinem bauaufsichtlichen Prüfzeugnis, zwischen Treppenpodest und Treppenlauf, gerader Lauf, in Betonfertigteilbauweise, Dämmstoff Polyethylen-Schaum, Feuerwiderstandsklasse R90, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar), Befestigung durch Kleben,;32,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Trittschalldämmelement, tragend, mit allgemeinem bauaufsichtlichen Prüfzeugnis, zwischen Treppenpodest und Treppenlauf, gerader Lauf, in Betonfertigteilbauweise, Dämmstoff Polyethylen-Schaum, Feuerwiderstandsklasse R90, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar), Befestigung durch Kleben,;155,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Trittschalldämmelement, nichttragend, zwischen Treppenlauf und -hauswand, gerader Lauf, in Betonfertigteilbauweise, Dämmstoff PE-Schaum, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar), Befestigung durch Kleben,;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Trittschalldämmelement, nichttragend, zwischen Treppenlauf und -hauswand, gerader Lauf, in Betonfertigteilbauweise, Dämmstoff PE-Schaum, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar), Befestigung durch Kleben,;140,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Trittschalldämmelement, nichttragend, zwischen Treppenlauf und -hauswand, gerader Lauf, in Betonfertigteilbauweise, Dämmstoff PE-Schaum, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar), Befestigung durch Kleben,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;Trittschalldämmelement, nichttragend, zwischen Treppenlauf und -hauswand, gerader Lauf, in Betonfertigteilbauweise, Dämmstoff Mineralwolle, Baustoffklasse DIN 4102-1 A (nichtbrennbar),;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Trittschalldämmelement, nichttragend, zwischen Treppenlauf und -hauswand, gerader Lauf, in Betonfertigteilbauweise, Dämmstoff Mineralwolle, Baustoffklasse DIN 4102-1 A (nichtbrennbar),;1,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+140;gerader Treppenlauf, mit angeformtem Fußteil und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+150;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+160;gerader Treppenlauf trapezförmig, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+170;Zwischenpodest als Fertigteil DIN EN 13369 und DIN EN 14843,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+180;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+190;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+200;gerader Treppenlauf trapezförmig, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+210;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+220;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+230;gerader Treppenlauf, trapezförmig, mit angeformtem Fußteil und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+240;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+250;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten abgewinkelten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+260;gerader Treppenlauf trapezförmig, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+270;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+280;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten abgewinkelten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+290;gerader Treppenlauf trapezförmig, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+300;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+310;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten abgewinkelten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+320;gerader Treppenlauf trapezförmig, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+330;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+340;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+350;gerader Treppenlauf trapezförmig, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+360;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+370;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+380;gerader Treppenlauf trapezförmig, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+390;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+400;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+410;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+420;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+430;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+440;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+450;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+460;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+470;gerader Treppenlauf, mit angeformtem Fußteil und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+480;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+490;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+500;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+510;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+520;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+530;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+540;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+550;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+560;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+570;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+580;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+590;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+600;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+610;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+620;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+630;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+640;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+650;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+660;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+670;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+680;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+690;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+700;gerader Treppenlauf, mit unten angeformtem Podest und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+710;gerader Treppenlauf, mit angeformtem Fußteil und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+720;gerader Treppenlauf, mit angeformtem Fußteil und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+730;gerader Treppenlauf, mit angeformtem Fußteil und mit oben angeformten Podest,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Betonfertigteilwand aus Elementwandplatten DIN EN 13369 und DIN EN 14992,;34,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Betonfertigteilwand aus Elementwandplatten wie in Pos.;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Betonfertigteilwand aus Elementwandplatten DIN EN 13369 und DIN EN 14992,;9,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Betonfertigteilwand aus Elementwandplatten wie in Pos.;150,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Betonfertigteilwand aus Elementwandplatten DIN EN 13369 und DIN EN 14992,;200,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Betonfertigteilwand aus Elementwandplatten wie in Pos.;160,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Füllbeton als Ortbeton für Elementwandplatten DIN EN 13369 und DIN EN 14992, als Außenwand,;75,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Schalung Außenwand, als Stirnabschalung,;9,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Schalung Außenwand, als Stirnabschalung,;9,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Schalung Außenwand, als Stirnabschalung,;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Elementdeckenplatte für Aufbeton, als Fertigteil DIN EN 13369 und DIN EN 13747,;6,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Ortbeton, Aufbeton,;6,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Deckenplatte als Halbfertigteil DIN EN 13369, T-Binder für Ortbetonergänzung,;127,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;T-Binder als Halbfertigteil wie in Pos.;154,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Ortbeton, Aufbeton,;281,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Deckenplatte als Fertigteil DIN EN 13369 und DIN EN 14843, als Einbringöffnung auf der Decke des Sprinklertanks,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Schalung Öffnung, Aussparungsform rechteckig, für Decke aus Halbfertigteilen aus T-Bindern und Aufbeton,;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Schalung Türöffnung, für Außenwand aus Elementwandtafeln, rechteckig,;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Schalung Türöffnung, für Außenwand aus Elementwandtafeln, rechteckig, mit Sichtbetonanforderung SB2,;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Schalung Türöffnung, für Außenwand aus Elementwandtafeln, rechteckig, mit Sichtbetonanforderung SB3,;4,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Werkplanung nach vom AG beigestellter Ausführungsplanung und Tragwerksplanung, nachfolgenden Leistungsbeschreibungen sowie nach Aufmaß des AN vor Ort,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Vierendeelträger, Einbauort Dach, Einbauhöhe über 25 bis 30 m über Oberkante Gelände, Einbauhöhe über 8 bis 12 m über OK Rohdecke über 5. OG,;33,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Kopfbolzendübel, zweireihig aufgeschweißt auf Obergurte der zuvor beschriebenen Vierendeelträger,;960,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Stahltragwerk für die Bühnentechnik, Einbau zwischen zuvor beschriebenen Vierendeelträgern, Einbauhöhe über 25 bis 30 m über Oberkante Gelände, Einbauhöhe über 8 bis 12 m über OK Rohdecke über 5. OG,;4,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Korrosionsschutzbeschichtung als Erstschutz auf zuvor bestehende Vierendeelträger und Stahltragwerk für Bühnentechnik, allseitig, für den Innenbereich,;700,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Abdichtung in oder unter Wänden DIN 18533-1 und DIN 18533-2,;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Ausgleichsschicht/Kimmschicht am Wandfuß aus Mörtel,;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Mauerwerk DIN EN 1996 der Innenwand im Grundriss gekrümmt, aus Kalksandstein, DIN EN 771-2 in Verbindung mit DIN 20000-402, KS-R P,;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Mauerwerk mit Stumpfstoß an vorh. Wand aus Beton anschließen,;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Mauerwerk an vorh. Decke aus Stahlbeton anschließen, mittig mit Brandschutzschnur und beidseitig mit Hinterfüllschnur und dauerelastischer Versiegelung,;18,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Ausgleichsschicht/Kimmschicht am Wandfuß aus Mörtel,;75,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Mauerwerk DIN EN 1996 der Innenwand, aus Kalksandstein, DIN EN 771-2 in Verbindung mit DIN 20000-402, KS-R P,;160,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Ringbalken aus Kalksandstein U-Schalen, 5DF (238/150/240), Breite 15 cm,;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Mauerwerk mit Stumpfstoß an vorh. Wand aus Beton anschließen,;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Mauerwerk an vorh. Decke aus Stahlbeton anschließen, mittig mit Brandschutzschnur und beidseitig mit Hinterfüllschnur und dauerelastischer Versiegelung,;75,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Ausgleichsschicht/Kimmschicht am Wandfuß aus Mörtel,;170,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;Mauerwerk DIN EN 1996 der Innenwand, aus Kalksandstein, DIN EN 771-2 in Verbindung mit DIN 20000-402, KS-R P,;480,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Mauerwerk DIN EN 1996 der Außenwand, aus Kalksandstein, DIN EN 771-2 in Verbindung mit DIN 20000-402, KS-R P,;30,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+140;Ringbalken aus Kalksandstein U-Schalen, 6 DF (238/175/240), Breite 17,5 cm,;12,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+150;Mauerwerk mit Stumpfstoß an vorh. Wand aus Beton anschließen,;340,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+160;Mauerwerk an vorh. Decke aus Stahlbeton anschließen,mittig mit Brandschutzschnur und beidseitig mit Hinterfüllschnur und dauerelastischer Versiegelung,;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+170;Mauerwerk an vorh. Decke aus Stahlbeton anschließen, mit Zementmörtel,;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+180;Ankerschiene TA aus Stahl feuerverzinkt, Profil 28/15, Einbau in Innenwand, andübeln auf Beton.;460,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+190;Anker für den Anschluss von Mauerwerk (Stumpfstoßanker),;1800,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+200;Bewehrung aus Betonstabstahl B500B DIN 488-1, DIN 488-2,;50,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Herstellen von Öffnungen beim Aufmauern, in Innenwänden aus Kalksandstein,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Herstellen von Öffnungen beim Aufmauern, in Innenwänden aus Kalksandstein,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Öffnung überdecken mit Kalksandsteinflachsturz nach bauaufsichtlicher Zulassung/Typenstatik, Einbau in Innenwand, Oberfläche sichtbar bleibend im Innenbereich,;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Herstellen von Öffnungen beim Aufmauern, in Innenwänden aus Kalksandstein,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Herstellen von Öffnungen beim Aufmauern, in Innenwänden aus Kalksandstein,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Herstellen von Öffnungen beim Aufmauern, in Innenwänden aus Kalksandstein,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Herstellen von Öffnungen beim Aufmauern, in Innenwänden aus Kalksandstein,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Herstellen von Öffnungen beim Aufmauern, in Innenwänden aus Kalksandstein,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Herstellen von Türöffnungen beim Aufmauern, in Innenwänden aus Kalksandstein,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Öffnung überdecken mit Kalksandsteinflachsturz nach bauaufsichtlicher Zulassung/Typenstatik, Einbau in Innenwand, Oberfläche sichtbar bleibend im Innenbereich,;17,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Türöffnung herstellen,in Wand aus Stahlbeton, Normalbeton,;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Türöffnung herstellen wie in Pos.;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Sägeschnitt, senkrecht zur Untergrundfläche, Untergrundfläche senkrecht, in Stahlbeton, Normalbeton,;7,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Sägeschnitt wie in Pos.;7,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Kernbohrung, senkrecht zur Untergrundfläche, Untergrundfläche senkrecht, in Stahlbeton, Normalbeton,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Kernbohrung, senkrecht zur Untergrundfläche, Untergrundfläche senkrecht, in Stahlbeton, Normalbeton,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Arbeitsgerüst für nachfolgend beschriebene Leistungen herstellen, für die Dauer der eigenen Leistungen vorhalten und abbauen,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;Toröffnung im Sturzbereich erweitern, in Wand aus Stahlbeton, Normalbeton,;7,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Sägeschnitt, senkrecht zur Untergrundfläche, Untergrundfläche senkrecht, in Stahlbeton, Normalbeton,;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Kernbohrung, senkrecht zur Untergrundfläche, Untergrundfläche senkrecht, in Stahlbeton, Normalbeton,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Herstellen einer rauen Fuge an zuvor beschriebener Schnittfläche zur Erzielung eines besseren Verbunds zwischen Bestand und neu herzustellendem Torsturz,;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;Bewehrungsanschluss aus Betonstabstahl B500B DIN 488-1, DIN 488-2, mit bauaufsichtlicher Zulassung, kraftschlüssig, als Klebeanker,;27,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Bewehrungsanschluss aus Betonstabstahl B500B DIN 488-1, DIN 488-2, mit bauaufsichtlicher Zulassung, kraftschlüssig, als Klebeanker,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+140;Bewehrung des Torsturzes aus Betonstabstahl B500B DIN 488-1, DIN 488-2,;60,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+150;Schalung Torsturz, mit rechteckigem Querschnitt,;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+160;Ortbeton Torsturz, über Betonageöffnungen in Wand und Schalung in Schalung füllen und verdichten, kraftschlüssig an zuvor beschriebene raue Fuge am Sturz anbetonieren,;0,6;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+170;Betonstahl durchschneiden (nomineller Stabquerschnitt) bei einer Einzelquerschnittsfläche über 2 cm2 je Schnittfläche.;1000,0;cm2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Auflagertasche in Wand aus Mauerwerk herstellen und nach Einbau des Stahlträgers schließen, für Stahlträger IPE270,;17,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Auflagertasche in Wand aus Mauerwerk herstellen und nach Einbau des Stahlträgers schließen, für Stahlträger HE160A,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Auflagertasche in Wand aus Mauerwerk herstellen und nach Einbau des Stahlträgers schließen, für ungleichschenkeligen Winkelstahl L200x150x12 mm,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Unterstützung der Bestandsdecken mit Stahlträger, Profil IPE270, in unterschiedlichen Einzellängen,;3,5;t;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+50;Unterstützung des Deckenrandes mit Stahlträger, Profil HE160A, in unterschiedlichen Einzellängen,;0,3;t;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+60;Unterstützung des Deckenrandes mit ungleichschenkeligem Winkelstahl L200x150x12 mm, in unterschiedlichen Einzellängen,;0,2;t;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+70;Korrosionsschutzbeschichtung als Erstschutz auf zuvor bestehende Stahlträger / -winkel, allseitig, für den Innenbereich,;110,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+80;kraftschlüssige Unterfütterung der Stahlträger IPE270 in Raummitte mit Zementmörtel als Quellmörtel,;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+90;Aufhängung der Decke mittels Schraube M12-10,9,;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+100;Trägerbekleidung aus Kalziumsilikatplatten in Feuerwiderstandsklasse F90 DIN 4102-2, mit allgemeinem bauaufsichtlichem Prüfzeugnis,;68,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+110;Trägerbekleidung aus Kalziumsilikatplatten in Feuerwiderstandsklasse F90 DIN 4102-2, mit allgemeinem bauaufsichtlichem Prüfzeugnis,;23,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+120;Trägerbekleidung aus Kalziumsilikatplatten in Feuerwiderstandsklasse F90 DIN 4102-2, mit allgemeinem bauaufsichtlichem Prüfzeugnis,;9,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+130;Schraubenbekleidung/-abdeckung aus Kalziumsilikatplatten in Feuerwiderstandsklasse F90 DIN 4102-2, mit allgemeinem bauaufsichtlichem Prüfzeugnis,;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+140;Bekleidung Winkelstahl aus Kalziumsilikatplatten in Feuerwiderstandsklasse F90 DIN 4102-2, mit allgemeinem bauaufsichtlichem Prüfzeugnis,;23,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Bau- und Abbruchabfälle, Beton, Ziegel, Fliesen und Keramik,;15,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Bau- und Abbruchabfälle, Metalle,;1,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Planung und Berechnung des AN für die bauzeitliche Entwässerung innerhalb des Gebäudes und entlang der Gebäudehülle bis zum endgültigen Umschluss von der bauzeitlichen zur endgültigen Entwässerung des Niederschlagswassers.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Komplette Anlage für die bauzeitliche Entwässerung innerhalb des Gebäudes und entlang der Gebäudehülle bis zum endgültigen Umschluss von der bauzeitlichen zur endgültigen Entwässerung des Niederschlagswassers - nach Planung und Berechnung des AN, inkl. aller Rohrleitungen, Form- und Verbindungsstück;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;zuvor beschriebene komplette Anlage für die bauzeitliche Entwässerung innerhalb des Gebäudes und entlang der Gebäudehülle vorhalten und instandhalten;50,0;StWo;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;zuvor beschriebene komplette Anlage für die bauzeitliche Entwässerung innerhalb des Gebäudes und entlang der Gebäudehülle rückbauen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;"Zuschlag für Betonsorten in der Zeit von jeweils ab 01. November bis 31. März jeden Jahres bei Erreichen oder Unterschreiten einer Temperatur von +5 °C, für die Änderung der Betonrezeptur in eine ""Winterrezeptur"" mit entsprechenden Zuschlägen/Maßnahmen.";2000,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;"Erwärmung der im Titel ""Beton- und Stahlbetonarbeiten"" beschriebenen Betone auf eine Verarbeitungstemperatur von mind. +15 °C, durch Erwärmen des Anmachwassers.";1500,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Erwärmen der Betone wie in Pos.;500,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Räumen von Schnee und Eis auf Verkehrswegen und Arbeitsplätzen in allen Ebenen nach Angaben der OÜ, nur nach besonderer Anweisung durch die OÜ.;50,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Für die Ausrichtung der Grundsteinlegung sind folgende Leistungen durch den AN einzukalkulieren:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Für die Ausrichtung des Richtfestes sind folgende Leistungen durch den AN einzukalkulieren:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Der AN hat für die erstellte Leistung dieses Leistungsverzeichnisses eine Dokumentation vorzulegen. Umfang und Inhalt der Unterlagen ergeben sich aus der unten aufgeführten Beschreibung. Die Dokumentationsunterlagen sind spätestens 30 Werktage vor Abnahme zur Prüfung auf Übereinstimmung mit der ausg;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+10;Stundenlohnarbeiten durch Bauvorarbeiter/-in;100,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+20;Stundenlohnarbeiten durch Baufacharbeiter/-in;200,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+30;Stundenlohnarbeiten durch Bauhelfer/-in;200,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83
+40;Kran, mit Bedienungspersonal, einsetzen,;50,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/0002_Rohbauarbeiten.X83

@@ -86,3 +86,90 @@
 0040;Zuschlag für Arbeiten von 17:00 - 22:00 Uhr;10,0;Std.;gaeb;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV_V32.X83
 0050;mit Trennscheiben ohne Bedienung;10,0;Std;gaeb;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV_V32.X83
 0060;mit Elektroden ohne Bedienung;10,0;Std;gaeb;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV_V32.X83
+01.0010;Anfertigen Ausführungszeichnung für alle folgenden Stahlbauteile;1,0;Psch;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+01.0020;Baustelleneinrichtung;1,0;psch;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+01.0030;Einsatz Autokran Stahlbauer;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+02.0010;Ausbau Fensterfelder inkl. Sonnenschutz;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+02.0020;Einschneiden und Rückbau WDVS;32,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+02.0030;Demontage Attikaabdeckung + Wandanschluss;21,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+02.0040;Abbruch Flachdachabdichtung mit Bekiesung;120,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+02.0050;Abbruch Flachdachdämmung;90,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+02.0060;Einschneiden und Rückbau WDVS;21,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+02.0070;Rückbau Abhangdecke unter Brücke;90,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0010;Randwinkel an Bestand - Pos. 3.01 a;184,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0020;Befestigung Randwinkel an Bestand - Pos. 3.01 b;24,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0030;Trägerlage (mit Stößen) - Pos. 3.01 b;4885,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0040;Randriegel - Pos. 3.11;125,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0050;Befestigung Randriegel an Bestand - Pos. 3.11 b;8,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0060;Randträger - Pos. 3.15;825,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0070;Zwischenträger - Pos. 3.16;825,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0080;Randträger - Pos. 3.17;825,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0090;Verankerung Träger am Bestand - Pos. 3.17 a;24,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0100;flankierende Stützen - Pos. 3.31;1632,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0110;Befestigung Stützen am Bestand - Pos. 3.31 a;60,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0120;Stützen - Pos. 3.45-3.49;215,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0130;Verankerung am Bestand (Fuß) - Pos. 3.49 a;6,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0140;Diagonalen - Pos. 3.61;242,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0150;Spannschloss M16 - Pos. 3.61 b;10,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0160;Konstr. Druckrohr in Feldmitte bei 60cm Trägerabstand - Pos. 3.61 c;78,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0170;Stiele - Pos. 4.71 a;515,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0180;Befestigung Stiele (unten) - Pos. 4.71 c;12,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0190;Wechsel, Riegel - Pos. 4.71 b;120,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0200;Randwinkel horizontal an Bestand - Pos. 4.71 d;484,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0210;Randwinkel vertikal an Bestand - Pos. 4.71 e;440,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0220;Befestigung Randwinkel - Pos. 4.71 f;110,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0230;Geländer Podeste und Treppenläufe;11,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0240;Gitterroststufen (zul. Q=2,0kN);9,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0250;Gitterroste (Podest) (zul. Q= 2,0kN);2,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0260;Wangen;325,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0270;Querriegel;25,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0280;Stiele;40,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0290;Befestigung am Massivbau;16,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0300;Kleineisenteile;2350,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0310;herausnehmbares Geländer vor Einbringöffnung;2,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0320;Zulage Vergussmörtel Stützenfüße;9,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0330;Stiele - Pos. 4.71 a;441,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0340;Wechsel, Riegel - Pos. 4.71 b;120,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0350;Befestigung Stiele (oben) - Pos. 4.71 c;12,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0360;Randwinkel horizontal an Bestand - Pos. 4.71 d;484,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0370;Randwinkel vertikal an Bestand - Pos. 4.71 e;440,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0380;Befestigung Randwinkel - Pos. 4.71 f;110,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0390;Kleineisenteile;300,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0400;Randwinkel an Bestand für Dachkonstruktion;124,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0410;Befestigung v.g. Randwinkel;15,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0420;Randwinkel horizontal an Bestand - Pos. 4.71 a;198,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0430;Randwinkel vertikal an Bestand - Pos. 4.71 b;120,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0440;Befestigung Randwinkel - Pos. 4.71 c;40,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0450;Stiele - Pos. T.01_N1 a;735,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0460;Riegel - Pos. T.01_N1 b;515,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0470;Diagonalen - Pos. T.01_N1 c;151,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0480;Spannschloss M16  - Pos. T.01_N1 d;12,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0490;Kleineisenteile;550,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0500;Querriegel - Pos. T.52_N1;120,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0510;Längsriegel - Pos. T.53_N1;295,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0520;Geländer Wartungssteg;26,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0530;Gitterroste (Wartungsstege) (zul. Q= 2,0kN);14,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0540;Stückverzinkung Stahlkonstruktion;18865,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0550;Vorbereiten verzinkte Oberfläche Stahlkonstruktion;18865,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0560;Brandschutzsystem Stahlkonstruktion;18865,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+03.0570;Zulage für die R 90 Beschichtung Diagonalen;500,0;kg;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+04.0010;Wärmedämmfassade;155,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+04.0020;Unterer Abschluss, Tropfprofil mit Dichtband, D 0,75mm;24,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+04.0030;Eck- und Anschlussprofil;30,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+04.0040;Anlegen Fensteröffnungen und Lüftungsgittern;4,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+04.0050;Zulage Leibungsbleche/ Einfassungen;16,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+04.0060;gekantetes Abschlussprofil mit Dichtband als Wandanschluss;32,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+04.0070;Öffnungen herstellen bis 0,05 m2;3,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+04.0080;Öffnungen herstellen über 0,05 bis 1,00 m2;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+04.0090;Wärmedämmfassade;104,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+04.0100;trapezprofilliertes Paneeldachsystem;18,0;m²;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+04.0110;Unterer Abschluss, Tropfprofil mit Dichtband, D 0,75mm;12,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+04.0120;Eck- und Anschlussprofil;19,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+04.0130;Randblech/ Einfassungen Dach;12,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+04.0140;gekantetes Wandanschlussprofil mit Dichtband;6,0;m;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+05.0010;Obermonteur;20,0;Std;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+05.0020;Monteur/Schlosser;30,0;Std;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+05.0030;Schweißer;20,0;Std;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+05.0040;Zuschlag für Arbeiten von 17:00 - 22:00 Uhr;10,0;Std.;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+05.0050;Trennschleifer;10,0;Std;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83
+05.0060;Elektroschweißgerät;10,0;Std;gaeb-flat;leistungsbeschreibungen/2026-07-16 - KMT - MRT-CT 470 - 03 Stahlbau LV.D83

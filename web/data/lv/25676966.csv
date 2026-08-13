@@ -27,3 +27,31 @@
 6;Beschichtung der Sockelleisten aus Kautschuk, analog der Vorpositionen, jedoch ohne Chipeinstreuung, Sockelhöhe ca. 10 cm;38,0;m;gaeb;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB_V32.X83
 1;Stundenlohnarbeiten durch eine Hilfskraft auf Anordnung des AG ausführen.;8,0;h;gaeb;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB_V32.X83
 2;Stundenlohnarbeiten durch eine Facharbeitskraft auf Anordnung des AG ausführen.;8,0;h;gaeb;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB_V32.X83
+01.1;Baustelleneinrichtung / Nebenarbeiten für die eigene Leistungserbringu;1,0;psch;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+01.2;Verlängerung über die Grundvorhaltezeit hinaus;4,0;Wo;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+01.3;Kleinmaterial;1,0;psch;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+02.1;Teilerneuerung Oberboden;5,0;m²;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+02.2;Entsorgung Oberboden;5,0;m²;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+02.3;Teilersatz Oberboden;5,0;m²;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+03.1;Ausführen von Spachtelarbeiten;5,0;m²;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+03.2;Liefern und Einbringen von Nivelliermasse;5,0;m²;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+03.3;Liefern und Einbringen standfester Spachtelmasse;5,0;St;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+03.4;Schließen offener Schweißnähte, passend zum Bestand;5,0;m;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+03.5;Schließen offener Fugen;3,0;m;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+03.6;Untergrundvorbereitung;638,0;m²;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+03.7;wie vor, jedoch an den vorhandenen Sockelleisten;622,0;m;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+04.1;Porenfüllende Grundierung;595,0;m²;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+04.2;wie vor, jedoch an den vorhandenen Sockelleisten;584,0;m;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+04.3;2K-PUR-Versiegelung / Permanentversiegelung;595,0;m²;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+04.4;Beschichtung mit Bona Pure o.glw. statt Bona Pure HD o.glw.;595,0;m²;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+04.5;Zulage zur Vorposition, Chip-Einstreuung;595,0;m²;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+04.6;wie Pos. [04.3], jedoch an den vorhandenen Sockelleisten.;584,0;m;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+04.7;Nachverfugen mit Silikon, einschl. Materiallieferung;50,0;m;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+05.1;Aufbringen einer leitfähigen Zwischenschicht;43,0;m²;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+05.2;Liefern und Aufbringen einer PU-Deckbeschichtung;43,0;m²;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+05.3;Zulage zur Vorposition, Chip-Einstreuung;43,0;m²;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+05.4;Verfugung mit 1K-Fugenmasse;2,0;m;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+05.5;Messen der Ableitfähigkeit einschl. Protokoll;1,0;psch;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+05.6;Beschichtung der Sockelleisten aus Kautschuk;38,0;m;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+06.1;Stunden einer Hilfskraft;8,0;h;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83
+06.2;Stunden eines Facharbeiters;8,0;h;gaeb-flat;leistungsbeschreibungen/LV Bodenbelagarbeiten_GAEB.D83

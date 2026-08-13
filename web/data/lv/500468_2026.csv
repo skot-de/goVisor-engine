@@ -1,4 +1,102 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0101010;Einmessen des Rohbaus;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0102010;Werk- und Montageplanung, Statik;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0102020;Besonderer Schutz der eigenen Leistungen;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0103010;Treppengeländer für Massivtreppe (Stahlbeton) gemäß;43,0;m;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0103020;Stabgeländer als Podestgeländer;7,0;m;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0103030;Handlauf, Edelstahl V2A, Ø 42,4 mm;135,0;m;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0103040;Zulage: taktile Markierungsschilder;14,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0103050;Zulage: Eckverbindungen Handlauf;65,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0103060;Zulage: Endkappen;12,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0103070;Zulage: Befestigung an Stabgeländer;61,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0103080;Zulage: Befestigung an Massivwand;114,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0103090;Zulage: Befestigung Fußpunkt;2,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0103100;Stahlharfe aus Rechteckrohren als Treppengeländer;51,0;m²;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0103110;Stahlharfe aus Rechteckrohren als Podestgeländer;8,0;m²;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0103120;Handlauf, Edelstahl V2A, Ø 42,4 mm;88,0;m;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0103130;Zulage: taktile Markierungsschilder;8,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0103140;Zulage: Eckverbindungen Handlauf;34,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0103150;Zulage: Endkappen;10,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0103160;Zulage: Befestigung an Stabgeländer;27,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0103170;Zulage: Befestigung an Massivwand;80,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0103180;Zulage: Befestigung Fußpunkt;2,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0104010;L-Winkel auf Rohdecke;7,25;m;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0104020;Stahlwange Deckenrand 1.OG;7,25;m;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0104030;Glasgeländersystem: Glasmodul;7,25;m;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0104040;Glasgeländer-System: Unterkonstruktion;7,25;m;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0104050;Glasgeländer-System: Handlauf;7,25;m;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0104060;Glasgeländer-System: Gummiprofil für Handlauf;7,25;m;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0105010;Pumpensumpf Abdeckung 80 x 80 cm TGA-Heizung;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0105020;Pumpensumpf Abdeckung 100 x 100 cm Fettabscheider;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0106010;Blechabdeckung Steigleitungen;6,2;m²;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0106020;Stahlwinkel verzinkt, H = 190mm;0,6;lfm;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0106030;Stahlwinkel verzinkt, H = 130mm;1,2;lfm;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0107010;Lackieren Stabgeländer Flachstahl TR 1 und 2;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0107020;Lackieren Stahlzargen Flachstahl TR 1 und 2;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0107030;Lackieren Stahlharfe Rechteckrohr TR Halle;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0107040;Lackieren Stahlzargen Flachstahl TR Halle;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0107050;Lackieren Stahlwange Glasgeländer;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0108010;Statik;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0108020;Montageplanung;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0108030;Besonderer Schutz der eigenen Leistungen;247,0;m²;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0109010;Alu-Rahmentür 1-flg. mit Glasseitenteil und -oberlicht, 1,72 x 2,94 m, T30 RS, 32 dB;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0109020;Stahlstütze 40 x 40 mm seitl. Anschlag T30 RS Tür, Verkleidung F60;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0109030;Alu-Rahmentür 1-flg. mit Glasseitenteil und -oberlicht, 1,735 x 2,94 m, 32 dB;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0109040;Alu-Rahmentür 1-flg. mit Glasseitenteil und -oberlicht, 1,75 x 2,94 m, T30 RS, 32 dB;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0109050;Alu-Rahmentür 1-flg. mit Glasseitenteil und -oberlicht, 1,75 x 2,94 m, T30 RS, 32 dB, Panikschloss;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0109060;Alu-Rahmentür 1-flg. mit Glasseitenteil und -oberlicht, 1,81 x 2,94 m, 32 dB;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0109070;Alu-Rahmentür 2-flg., 1,85 x 2,25 m, T30 RS, Panikschloss;2,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0109080;Alu-Rahmentür 2-flg., 1,85 x 2,25 m, T30 RS, 32 dB, Panikschloss;4,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0109090;Alu-Rahmentür 2-flg. mit Glasseitenteil und -oberlicht, 2,50 x 2,955 m, T30 RS, Panikschloss;2,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0109100;Alu-Rahmentür 2-flg. mit Glasseitenteil, 2,50 x 2,25 m, T30 RS, 32 dB, Panikschloss;4,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0109110;Alu-Rahmentür 2-flg. mit Glasoberlicht, 2,75 x 3,02 m, T30 RS, Panikschloss;2,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0109120;Alu-Rahmentür 2-flg. mit 2 Glasseitenteilen und -oberlicht, 4,45 x 2,94 m, Panikschloss;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0109130;Zulage OTS mit aufliegender Gleitschiene 1-flg., Bandseite, Öffnungsbegrenzung einstellbar;2,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0109140;Zulage OTS mit aufliegender Gleitschiene 2-flg., Bandseite, Öffnungsbegrenzung, Schließfolgeregelung;8,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0109150;Zulage OTS mit elektromechanischer Feststellung, integriert in Gleitschiene, 1-flg.;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0109160;Zulage OTS mit elektromechanischer Feststellung, integriert in Gleitschiene, 2-flg.;6,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0109170;Zulage OTS mit Drehflügeltür-Antrieb 2-flg. - elektromotorisch, oben;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0109180;Zulage Fingerschutzrollo;2,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0109190;Zulage Magnetkontakt;10,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0110010;Wartung Türen;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0201010;Einmessen des Rohbaus;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0202010;Verlege- und Montageplanung, Statik;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0202020;Besonderer Schutz der eigenen Leistungen;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0203010;Stahlzarge als Flachstahl;2,7;m²;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0203020;Glasgeländer mit Flachstahlrahmen;3,0;m;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0203030;Handlauf, Edelstahl V2A, Ø 42,4 mm;27,0;m;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0203040;Zulage: taktile Markierungsschilder;4,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0203050;Zulage: Eckverbindungen Handlauf;18,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0203060;Zulage: Endkappen;3,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0203070;Zulage: Befestigung an Geländer;4,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0203080;Zulage: Befestigung an Holztafelwand;21,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0203090;Zulage: Befestigung Fußpunkt;1,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0203100;Stabgeländer als Treppengeländer mit Zwischenpodest;8,0;m;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0203110;Stabgeländer als Podestgeländer;0,8;m;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0203120;Handlauf, Edelstahl V2A, Ø 42,4 mm;19,0;m;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0203130;Zulage: taktile Markierungsschilder;4,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0203140;Zulage: Eckverbindungen Handlauf;11,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0203150;Zulage: Endkappen;3,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0203160;Zulage: Befestigung an Stabgeländer;11,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0203170;Zulage: Befestigung an Holztafelwand;11,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0203180;Zulage: Befestigung Fußpunkt;1,0;St;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0204010;Einbringöffnung Abdeckung 150 x 100 cm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0205010;Lackieren Flachstahlrahmen Glasgeländer;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0205020;Lackieren Stahlzarge;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0205030;Lackieren Stabgeländer Flachstahl Fluchttreppe;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0206010;Statik;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0206020;Montageplanung;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0206030;Besonderer Schutz der eigenen Leistungen;247,0;m²;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0207010;Alu-Rahmentür 1-flg. mit 2 Glasseitenteilen und -oberlicht, 1,975 x 2,75 m, T30 RS;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0207020;Alu-Rahmentür 2-flg. mit Glasoberlicht, 2,13 x 2,77 m, Panikschloss;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0207030;Alu-Rahmentür 2-flg. mit 3 Glasseitenteilen und -oberlicht, 4,99 x 2,75 m, Panikschloss;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0207040;Zulage OTS mit aufliegender Gleitschiene 1-flg., Bandseite, Öffnungsbegrenzung einstellbar;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0207050;Zulage OTS mit aufliegender Gleitschiene 2-flg., Bandseite, Öffnungsbegrenzung, Schließfolgeregelung;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0207060;Zulage OTS mit Drehflügeltür-Antrieb 2-flg. - elektromotorisch, oben;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0207070;Zulage Fingerschutzrollo;2,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0207080;Zulage Bodentürstopper;3,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0207090;Zulage Wandtürstopper;2,0;Stk;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
+0208010;Wartung Türen;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20260713 LV Schlosserabeiten.D83
 010;Einmessen des Rohbaus, Überprüfung der Objektrealität in Bezug auf Soll-/Istabweichung, Dokumentation und Berücksichtigung der Einmessergebnisse bei der Werk- u. Montageplanung.;1,0;psch;gaeb;leistungsbeschreibungen/20260713 LV Schlosserabeiten.X83
 010;Erstellen der Werk- und Montagepläne,;1,0;psch;gaeb;leistungsbeschreibungen/20260713 LV Schlosserabeiten.X83
 020;Außenliegender Schutz der eingebauten Konstruktionen während der Bauphase vor starken Verschmutzungen.;1,0;psch;gaeb;leistungsbeschreibungen/20260713 LV Schlosserabeiten.X83

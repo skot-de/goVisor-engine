@@ -1,4 +1,262 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0101001;Standverteiler HxBxT 2325x374x425 mm SV/AV IT;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101002;Standverteiler HxBxT 2325x374x425 mm BSV/SV IT;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101003;Standverteiler HxBxT 1850x800x400 mm AV;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101004;Standverteiler HxBxT 1850x800x400 mm SV/AV;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101005;Standverteiler HxBxT 1850x550x400 mm als GHV BSV;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101006;System-Wandverteiler für Röntgengenerator, 80 kW;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101007;Lasttrennschalter, 3polig, 80A;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101008;Neozed-Reiter-Einbausicherungssockel D02 bis 63A;20,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101009;Neozed-Einbausicherungssockel D02 bis 63 A;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101010;Sicherung D01 bis 16A;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101011;LS-Schalter,6KA,B,1pol,10A,Anflanschbar;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101012;LS-Schalter,6KA,B,1pol,13A,Anflanschbar;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101013;LS-Schalter,6KA,B,1pol,16A,Anflanschbar;25,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101014;LS-Schalter,6KA,C,1pol,16A,Anflanschbar;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101015;LS-Schalter,6KA,B,3-pol,10A,Anflanschbar;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101016;LS-Schalter,10KA,B,3-pol,10A,Anflanschbar;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101017;LS-Schalter,6KA,B,3-pol,16A,Anflanschbar;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101018;LS-Schalter,6KA,C,3-pol,16A,Anflanschbar;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101019;LS-Schalter,6KA,B,3-pol,25A,Anflanschbar;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101020;LS-Schalter,6KA,B,3-pol,32A,Anflanschbar;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101021;LS-Schalter,6KA,C,3-pol,32A,Anflanschbar;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101022;LS-Schalter,6KA,B,3-pol,40A,Anflanschbar;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101023;NH00-Sicherungseinsatz;6,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101024;NH1-Sicherungseinsatz;6,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101025;Sicherungslasttrennleiste Größe NH1 250A 3-pol.;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101026;Sicherungslasttrennleiste Größe NH00 bis 160A 3-pol.;6,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101027;Erweiterung um Hilfskontakt;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101028;FI-Schutzschalter,30mA,40A,4polig;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101029;FI-Schutzschalter,30mA,63A,4polig;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101030;Umschaltmodul;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101031;Fehlerstrom-Leitungsschutzschalter 1P+N 6kA B-Charakteristik 16A 30mA Typ A QC;45,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101032;Schütz,230V,25A,3PLE,4Schließer;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101033;Schütz,230V,40A,3PLE,4Schließer;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101034;Hilfsschütz 230 V AC, 4 Schaltglieder;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101035;Hilfsrelais 24 V DC, 4 Schaltglieder;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101036;Unterspannungsrelais;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101037;Klingeltrafo;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0101038;Überspannungsableiter;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102001;C-Profilschiene als Abfangschiene;6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102002;Hängestiel 50x50x200;38,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102003;Wand-Ausleger Länge 310;21,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102004;Wand-Ausleger Länge 510;17,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102005;Kabelrinne gelocht, 300x60 mm;32,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102006;Kabelrinne gelocht, 500x60 mm;26,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102007;Trennsteg 60mm;58,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102008;Leitungsführungskanal  20 x 20 mm;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102009;Leitungsführungskanal  40 x 40 mm;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102010;Leitungsführungskanal  40 x 60 mm;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102011;Leitungsführungskanal 60x110 mm;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102012;PVC-Brüstungskanal 70x170 mm;65,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102013;Brüstungskanal Aluminium 70x110;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102014;Schallbarriere 24 cm liefern und montieren.;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102015;Endplatte für vorgenannten Brüstungskanal;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102016;Kunststoffrohr flexibel EN 20 UP;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102017;Kunststoffrohr flexibel EN 25 UP;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102018;Kunststoffrohr flexibel EN 32 UP;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102019;Elektroinstallationsrohr flexibel EN 20 auf RFB;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102020;Elektroinstallationsrohr flexibel EN 25,auf RFB;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102021;Elektroinstallationsrohr flexibel EN 32,auf RFB;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102022;Kunststoff-Panzersteckrohr  EN25;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102023;Kunststoff-Panzersteckrohr  EN32;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102024;Alu Steck-ES 25 44561 verlegen offen, auf Putz.;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102025;Alu Steck-ES 32 44561 verlegen offen, auf Putz.;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102026;Sammelhalterung bis 20 Leitungen;50,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102027;Sammelhalterung bis 10 Leitungen;50,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102028;Kabelklammer;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102029;Brandschutzkanal I30...I120, Stahlblech 100x250;4,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102030;Fußbodenkanal estrichbündig Röntgenraum;6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102031;Trennsteg Fußbodenkanal;6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102032;Montagefertige Kanalanbaueinheit estrichbündig;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0102033;Quadratischer Geräteeinsatz als Leitungsauslass;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103001;NYM-J 3x  1,5 qmm EZ;200,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103002;NYM-J 5x  1,5 qmm EZ;250,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103003;NYM-J 7x  1,5 qmm EZ;200,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103004;NYM-J 3x  2,5 qmm EZ;400,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103005;NYM-J 5x  2,5 qmm EZ;300,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103006;NYM-J 5x  4,0 qmm EZ;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103007;NYM-J 5x  6,0 qmm EZ;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103008;NYM-J 3x  1,5 qmm ID;500,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103009;NYM-J 5x  1,5 qmm ID;500,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103010;NYM-J 7x  1,5 qmm ID;200,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103011;NYM-J 3x  2,5 qmm ID;1000,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103012;NYM-J 5x  4,0 qmm ID;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103013;NYM-J 5x  6,0 qmm ID;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103014;NYM-J  3x  1,5 qmm  UP;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103015;NYM-J  5x  1,5 qmm  UP;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103016;NYM-J  3x 2,5 qmm  UP;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103017;NYM-J  5x  2,5 qmm  UP;75,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103018;N2XCH-FE 180/E90 orange 3x2,5 ID / EZ;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103019;N2XCH-FE 180/E90 orange 5x2,5 ID / EZ;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103020;N2XCH-FE 180/E90 orange 4x25/16 ID / EZ;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103021;N2XCH-FE 180/E90 orange 4x50/25 ID / EZ;230,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103022;NYCWY 4x 35/16 qmm EZ;200,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103023;H05VV5-F 3x  1,5 qmm EZ;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103024;H05VV5-F 5x  1,5 qmm EZ;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103025;J-Y(St)Y 2x2x0,8 mm ID;300,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103026;J-Y(St)Y 4x2x0,8 mm ID;200,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103027;J-Y(St)Y 6x2x0,8 mm ID;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103028;JY(ST)Y 2x2x0,8  mm EZ;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103029;J-Y(St)Y 4x2x0,8 mm EZ;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0103030;J-Y(St)Y 6x2x0,8 mm  EZ;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104001;Universalschalter Aus/Wechsel 1-polig, 10AX 250 V~,;18,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104002;Serienschalter, 1 polig,;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104003;SCHUKO-Steckdose;54,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104004;SCHUKO-Steckdose, grün, SV-Stromversorgung;74,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104005;SCHUKO-Steckdose, orange, mit Funktionsanzeige;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104006;Kanalsteckdose  2-fach mit Steck-/Klemmtechnik C-Profil;22,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104007;Kanalsteckdose 3-fach mit Steck-/Klemmtechnik C-Profil;44,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104008;Potenzialausgleich-Steckdose;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104009;Power-DALI-Taststeuergerät;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104010;Not-Aus-Taster, Unterputz, 2-kanalig;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104011;Bewegungs- und Akustikmelder;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104012;FR.AP. CEE-Steckdose 5-pol. IN= 16 A, 40O V;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104013;FR.AP. CEE-Steckdose 5-pol. IN= 32 A, 40O V;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104014;FR.AP. Universalschalter;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104015;FR.AP. Doppel-Schukosteckdose;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104016;FR.AP. Schukosteckdose;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104017;Geräteanschlußdose;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104018;Wandauslaßdose für Lampenauslässe;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104019;FR.AP.-Kunststoff-Abzweigkasten grau 84x  84 mm;40,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104020;FR.AP.-Kunststoff-Abzweigkasten grau 122x  122 mm;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104021;FR.AP.-Kunststoff-Abzweigkasten grau 130x  85 mm;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104022;Unterputzdose;20,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104023;Unterputzdose Schalter-Abzweigdose;20,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104024;Hohlwand Schalter-Abzweig-Dose DIN VDE 0606;30,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104025;Isolierstoff-Abzweigkasten 250x250mm;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104026;Gräteeinbaudose für Brüstungskanal;121,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104027;Mehrpreis Hohlwanddose für Brandwand;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0104028;Mehrpreis Strahlenschutzdose;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0106001;Potentialausgleichsschiene 250 A;8,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0106002;Erdungsanschluß herstellen an Metall-;30,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0106003;Potenzial-/Erdungsanschluss an bauseits gestellte Geräte: ableitfähiger Fußboden;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0106004;Potenzial-/Erdungsanschluss an bauseits gestellte Geräte: Geräteschiene;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0106005;Potenzial-/Erdungsanschluss an bauseits gestellte Geräte: Metallmöbel;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0106006;Potenzial-/Erdungsanschluss an bauseits gestellte Geräte: OP-Leuchte;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0106007;"Banderdungsschelle Gr. 3/8 - 1 1/2 """;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0106008;NYM-J 1x 16,0 qmm EZ;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0106009;NYM-J 1x 10,0 qmm EZ;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0106010;NYM-J 1x  6,0 qmm EZ;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0106011;Messung und Protokollierung der Messergebnisse;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0107001;"Melde-/Bedientableau 7"" (Schockraum 2 + Überwachung 1 + Überwachung 2)";3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0107002;Übergeordnete Melde/Prüfkombination Stützpunkt;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0109001;Deckeneinbauleuchte 625x625 (26W/4000K) (Nebenräume);22,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0109002;Deckeneinbauleuchte 625x625 (37W/4000K);36,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0109003;Deckeneinbauleuchte 625x625 DALI (37W/4000K);4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0109004;Reinraumleuchte 625x625 (61W/4000K) DALI (Schockraum 2);8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0109005;Reinraumleuchte 625x625 (35W/4000K) DALI (Röntgen);6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0110001;LED-Rettungszeichenleuchte als Einzelbatterieleuchte;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0110002;LED-Sicherheitsleuchte, Deckeneinbau, Einzelbatterie 3 h, Bereitschaftsschaltung;13,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0110003;Anschluss Einzelbatterie-Sicherheitsleuchte an vorhandenen Flurbeleuchtungsstromkreis;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0110004;Mehrpreis Aufputzgehäuse für LED-Sicherheitsleuchte;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0111001;Erfassung Stromkreisanschlüsse Bestandsräume, Bestandsverteiler;60,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0111002;Erfassung Netzwerk-/Telefonanschlüsse Bestandsräume, Netzwerkschrank;50,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0111003;Demontage Leuchten;75,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0111004;Demontage Installationsgeräte;320,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0111005;Demontieren NYM-Leitungen (3x1,5-7x2,5qmm);1500,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0111006;Demontage Leitungsführungssysteme;300,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0111007;Abklemmen, umverlegen und Wiederanklemmen bis 5x 1,5;45,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0111008;Abklemmen, umverlegen und Wiederanklemmen bis 7x 2,5 qmm;20,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0111009;Abklemmen, umverlegen und Wiederanklemmen bis 6x2x0,8 qmm;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0112001;Kabel-Brandabschottung bis  0,01 qm;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0112002;Kabel-Brandabschottung bis  0,1 qm;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0112003;Kabel-Brandabschottung bis  0,2 qm;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0113001;Baustromverteiler 400V 63A;1,0;Stk.;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0113002;Gummischlauchleitung leihweise H07RN-F 3x2,5mm²;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0113003;Gummischlauchleitung leihweise H07RN-F5x2,5mm²;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0113004;CEE-Kupplung 5-pol.32A;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0113005;Schuko-Stecker;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0113006;FR-Abzweigdose aP, 65x65mm;5,0;Stk.;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0113007;FR-Ausschalter aP;1,0;Stk.;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0113008;Polyesterleuchte  1x58W, IP65, freistrahlend;10,0;Stk.;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0113009;Versetzen Baustromverteiler;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0113010;Versetzen Baubeleuchtung;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0113011;Monatliche Prüfung mit Dokomentation der Baustromverteiler;6,0;Stk.;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0114001;Obermonteurstunde;15,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0114002;Monteurstunde;15,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0114003;Helferstunde;15,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0114004;Kernbohrung Durchmesser 100 mm;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0114005;Wand/Decken/Fußbodendurchbruch bis 10 × 10 cm herstellen;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0114006;Wand/Decken/Fußbodendurchbruch bis 10 × 20 cm herstellen;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0114007;Bohrung in Mauerwerk bis 20 mm Durchmesser;25,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0114008;Bohrung in Mauerwerk bis 40 mm Durchmesser;15,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0114009;Mauerschlitz herstellen bis 30 mm Breite;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0114010;Fußbodenschlitz im Estrich herstellen;6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0115001;Anschluss bis 5x 1,5 qmm;15,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0115002;Anschluss bis 7x2,5qmm;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0115003;Anschluss bis 5x 6 qmm;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0115004;Anschluss bis 5x16qmm;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0115005;Rauchschutztüre verkabeln nach Kabelzugliste Türbauer;8,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0115006;Elektrischer Verkabelung Schiebetür;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0115007;Elektrischer Anschluss an diversen Kleintrafos Fremdgewerke;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0115008;Elektrischer Anschluss Chipleser Zutrittskontrolle;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0115009;Elektrischer Anschluss an bauseits gestellte DVE/MVE;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0115010;Elektrischer Anschluss an bauseits gestellte Untersuchung / OP-Leuchte;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0115011;Elektrische Zuordnung an bauseits gestellte med. Geräte: DVE OP-Leuchte;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0115012;Wärmeschrumpfmuffe zur Kabelverbindung;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0116001;"19""-Netzwerkverteilerschrank, 42 HE";1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0116002;Steckdosenleiste mit Entstörfilter und;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0116003;19 Zoll, 1HE Kategorie 6[A] Patchfeld, 24 Port,;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0116004;"19"", 1HE Kategorie 3 Patchfeld , 25 Steckplätze, 8(4)";1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0116005;C6[A]modul 180 Grad Jack;184,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0116006;Universal-Datenanschlussdose RJ45 2 Port,;92,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0116007;Kategorie 6 Patchkabel 2x RJ45 8(8) Länge 2 Meter;25,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0116008;"19"" Kabelführungsrinnen-Panel";2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0116009;"19"" Kabeldurchführungs-Panel";2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0116010;"19"" Rangierpanel";2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0116011;Schrankerdung;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0116012;Cu Datenkabel 2x(4x2xAWG23);5140,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0116014;Auflegen der Kupfer-Datenkabel auf das;184,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0116015;Beschriften aller Anschlüsse;92,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0116016;Meßprotokoll nach endgültiger Fertigstellung;184,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0117001;Türlautsprecher-Modul für IP-Türstation;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0117002;Optisch-akustisches Zustandsanzeigemodul;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0117003;Ruftastenmodul mit Beschriftungsfeld;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0117004;Montagerahmen für drei Funktionsmodule;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0117005;Unterputzgehäuse für drei Funktionsmodule;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0117006;Abdeck- und Kombirahmen für Unterputz-Türstation;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0117007;Aufputzgehäuse zur Aufnahme einer modularen Türstation mit;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0117008;Türstationscontroller mit Netzgerät;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0117009;Server-Hardware für IP-Türkommunikationssystem;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0117010;Basislizenz für IP-Türkommunikationssystem;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0117011;Concierge-Software für zentrale Abfragestelle;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0117012;Programmierung und Inbetriebnahme des IP-Türkommunikationssystems;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0117013;Anwendungslizenz Telefonieanbindung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0118001;HDMI-Extender-Set 4K über CAT-Datenleitung, bis 80 m;2,0;;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0118002;HDMI-Anschlussleitung, Länge 2,0 m;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0118003;Cu Datenkabel 4x2xAWG23;350,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0118004;Koaxialleitung für TV-/Breitbandkabelanlage;350,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0118005;TV-Kabel-Anschlussdose, Unterputz;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0119001;IP-Domekamera, 4 MP, Innenbereich;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0119002;Anschluss- und Montagebox für Domekamera;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0119003;IP-Außenkamera, 4 MP, Weitwinkel;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0119004;Anschluss- und Montagebox für Außenkamera;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0119005;Geschirmtes RJ45-Datenanschlussmodul;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0119006;Daten-Patchkabel, 0,25 m;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0119007;19-Zoll-Wandverteiler, 6 HE;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0119008;Managed PoE+-Switch, acht Ports;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0119009;Netzwerk-Videorekorder, 8 Kanäle;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0119010;19-Zoll-Patchfeld, 1 HE;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0119011;Daten-Patchkabel, 1 m;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0119012;19-Zoll-Steckdosenleiste, achtfach;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0119013;Netzwerk-Videodecoder für Livebilddarstellung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0119014;Hinweisschild Videoüberwachung;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0119015;Programmierung und Inbetriebnahme;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0119016;Einweisung des Betreibers;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0120001;Brandmeldekabel 2×2x0,8 mm mit Funktionserhalt E30;350,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0120002;Brandmeldekabel 2×2×0,8 mm ohne Funktionserhalt;450,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0120003;Brandmeldekabel 4×2×0,8 mm mit Funktionserhalt E30;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0120004;Brandmeldekabel 4×2×0,8 mm ohne Funktionserhalt;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0120005;Kabel-Sammelhalter in Funktionserhalt 2,5 kg/m;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0120006;Kabel-Sammelhalter in Funktionserhalt 6 kg/m;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0121001;Besichtigung und Erprobung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0121002;Messung des Isolationswiderstandes;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0121003;Messung der Schleifenimpedanz oder des;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0121004;FI-Schutzschaltung:;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0121005;Revisionsunterlagen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0121006;Vorbegehung mit Sachverständigem;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
+0121007;Sachverständigenabnahme;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien.D83
 001;Medizinischer IT-Netz Systemverteiler;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien_V33.X83
 002;Medizinischer IT-Netz Systemverteiler;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien_V33.X83
 003;Technische Merkmale:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-19-gaeb-dateien_V33.X83

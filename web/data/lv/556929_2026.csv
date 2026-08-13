@@ -1,0 +1,469 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0101.1;Aussentemperaturfühler;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.2;Tauchtemperaturfühler Heizung 100mm;16,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.3;Tauchtemperaturfühler Heizung 150mm;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.4;Tauchtemperaturfühler Heizung 400mm;6,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.5;Sicherheitstemperaturbegrenzer STB Heizung;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.6;Tauchtemperaturfühler Trinkwasser 100mm;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.7;Tauchtemperaturfühler Kälte 100mm;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.8;Tauchtemperaturfühler Kälte 150mm;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.9;Kanaltemperaturfühler 200mm;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.10;Kanaltemperaturfühler 300mm;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.11;Kanaltemperaturfühler 400mm;8,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.12;Kanalfeuchte - Temperaturfühler;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.13;Differenzdruckschalter Filterüberwachung;6,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.14;Differenzdrucktransmitter;8,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.15;Frostschutz Stetig;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.16;Frostschutz Schaltend;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.17;Volumenstrommessung Ventilator;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.18;Kanalrauchmelder;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.19;Raumtemperaturfühler Technikräume;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.20;3-Wege-Flanschventil mit Antrieb, DN40, PN16;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.21;3-Wege-Flanschventil mit Antrieb, DN25, PN16;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.22;3-Wege-Flanschventil mit Antrieb, DN20, PN16;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.23;2-Wege-Flanschventil mit Antrieb, DN32, PN16;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.24;2-Wege-Flanschventil mit Antrieb, DN25, PN16;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.25;Raumbediengerät mit Sollwerststeller;30,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.26;Raumtemperaturfühler;3,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.27;Antrieb Regelventil Fußbodenheizung;55,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.28;Kanaltransmitter CO2-Messung;18,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.29;Reparaturschalter, Betriebsmittel 230 V, 2kW, 1-polig;8,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.30;Reparaturschalter, Betriebsmittel 400 V, 2kW, 3-polig;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0101.31;Reparaturschalter, Betriebsmittel 400 V, 5kW, 3-polig;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0102.1;BACnet Automationsstation ASP01 300 Datenpunkte;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0102.2;Modul Binär Ausgang;13,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0102.3;Modul Analoger Ausgang, 0-10V;12,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0102.4;Modul Binär Eingang, melden;51,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0102.5;Modul Analoger Eingang aktiv, 0-10V oder 4-20mA;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0102.6;Modul Analoger Eingang passiv, PT1000;32,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0102.7;Zubehör Modul Anschluß;1,0;Psch;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0103.1;BACnet Automationsstation ASP01 300 Datenpunkte;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0103.2;Modul Binär Ausgang;15,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0103.3;Modul Analoger Ausgang, 0-10V;37,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0103.4;Modul Binär Eingang, melden;54,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0103.5;Modul Analoger Eingang aktiv, 0-10V oder 4-20mA;34,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0103.6;Modul Analoger Eingang passiv, PT1000;55,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0103.7;Modul M-Bus M-Bus+EIA232;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0103.8;Pegelwandler M-Bus;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0103.9;Zubehör Modul Anschluß;1,0;Psch;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.1;Physikalische Ein-/Ausgabe Binär Schalten/Stellen;34,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.2;Physikalische Ein-/Ausgabe Analoge Ausgabe Stellen;81,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.3;Physikalische Ein-/Ausgabe Binäre Eingabe Melden;118,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.4;Physikalische Ein-/Ausgabe Binäre Eingabe Zählen;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.5;Physikalische Ein-/Ausgabe Analoge Eingabe Messen;121,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.6;Gemeinsame Ein-/Ausgabe Schalten;28,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.7;Gemeinsame Ein-/Ausgabe Stellen/Sollwert;32,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.8;Gemeinsame Ein-/Ausgabe Melden;56,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.9;Gemeinsame Ein-/Ausgabe Zählen;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.10;Gemeinsame Ein-/Ausgabe Messen;77,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.11;Verarbeitungsfunktion Überwachung Grenzwert fest;22,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.12;Verarbeitungsfunktion Überwachung Grenzwert gleitend;32,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.13;Verarbeitungsfunktion Überwachung Betriebsstundenerfassung;15,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.14;Verarbeitungsfunktion Überwachung Ereigniszählung;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.15;Verarbeitungsfunktion Überwachung Befehlsausführkontrolle;11,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.16;Verarbeitungsfunktion Überwachung Meldungsbearbeitung;88,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.17;Verarbeitungsfunktion Steuern Anlagensteuerung;10,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.18;Verarbeitungsfunktion Steuern Motorsteuerung;15,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.19;Verarbeitungsfunktion Steuern Umschaltung pro Antrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.20;Verarbeitungsfunktion Steuern Folgesteuerung pro Aggregat;22,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.21;Verarbeitungsfunktion Steuern Sicherheits-/Frostschutzsteuerung;15,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.22;Verarbeitungsfunktion Regeln P-Regelung;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.23;Verarbeitungsfunktion Regeln PI-/PID-Regelung;42,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.24;Verarbeitungsfunktion Regeln Sollwertführung/-kennlinie;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.25;Verarbeitungsfunktion Regeln Stellausgabe stetig;70,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.26;Verarbeitungsfunktion Regeln Stellausgabe 2 Punkt;52,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.27;Verarbeitungsfunktion Regeln Begrenzung Sollwert/Stellgröße;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.28;Verarbeitungsfunktion Regeln Parameterumschaltung;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.29;Verarbeitungsfunktion Rechnen/Optimieren Arithmetische Berechnung;14,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.30;Verarbeitungsfunktion Rechnen/Optimieren Ereignisabhängiges Schalten;6,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.31;Verarbeitungsfunktion Rechnen/Optimieren Zeitabhängiges Schalten;8,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.32;Verarbeitungsfunktion Rechnen/Optimieren Gleitendes Ein-/Ausschalten;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.33;Verarbeitungsfunktion Rechnen/Optimieren Zyklisches Schalten;8,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.34;Verarbeitungsfunktion Rechnen/Optimieren Nachtkühlbetrieb;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.35;Verarbeitungsfunktion Rechnen/Optimieren Gebäudetemperaturbegrenzung;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.36;Verarbeitungsfunktion Rechnen/Optimieren Energierückgewinnung;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.37;Verarbeitungsfunktion Rechnen/Optimieren Netzwiederkehrprogramm;12,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.38;Managementfunktion Ein-/Ausgabefunktion;550,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.39;Managementfunktion Ereignis-Langzeitspeicherung;135,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.40;Managementfunktion Historisierung in Datenbank;80,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.41;Bedienfunktion Ereignis-Anweisungstext;95,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.42;Bedienfunktion Nachricht an externer Stelle;12,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.43;Parametrierung bauseits installierter Betriebsmittel, EC-Motor Lüftung;6,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.44;Parametrierung bauseits installierter Betriebsmittel, Pumpen Frequenzumformer;6,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0104.45;1 zu 1 Test je Datenpunkt Automationsstation mit Feldgerät:;320,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0105.1;Kopplung BACnet Wärmepumpen;30,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0105.2;Kopplung BACnet Brandschutzklappensystem;28,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0105.3;Kopplung BACnet MS/TP Volumenstromregler;34,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0105.4;Kopplung M-Bus Elektrozähler;8,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0105.5;Kopplung M-Bus Wärmemengenzähler;8,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0105.6;Kopplung M-Bus Trinkwasserzähler;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.1;Standschaltschrank HxBxT 2000x800x400 mm;3,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.2;Standschaltschrank Seitenwand;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.3;Aufsatz-Sichtfenster 500/500/60;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.4;Schaltschrank - Ablagepult, klappbar;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.5;Schublade inkl. Tastatur und Trackball;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.6;Schaltschrank-Innenbeleuchtung mit Steckdose;3,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.7;Schrankbelüftung als Axiallüfter;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.8;Einspeisebaugruppe 63A Lasttrennschalter;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.9;4-pol. Überspannungsableiter Anforderungsklasse C;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.10;Steuerspannungstransformator 400/230V, 500VA;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.11;Steuerspannungstransformator 230/24V AC, 500VA;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.12;Steuerspannungstransformator 230/24V DC, 500VA;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.13;Phasenüberwachung, 3 Meldeleuchten LED;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.14;Netzwiederkehr-Schaltung;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.15;Sammelstörmeldeeinrichtung;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.16;Lampenprüfeinrichtung;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.17;Baugruppe MINIZED-Lasttrennschalter (Linocur) D02 , 63A, 3polig;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.18;Baugruppe MINIZED-Lasttrennschalter (Linocur) D02 , 63A, 3polig, mit Messung;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.19;Baugruppe Leitungsschutzschalter 10 A, Typ-B, 10kA / 1-polig;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.20;Baugruppe Leitungsschutzschalter 16 A, Typ-B, 10kA / 1-polig;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.21;Baugruppe Leistungsabgang 400V Ventilator ohne Schütz, EC 5kW;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.22;Baugruppe Leistungsabgang 230V Ventilator ohne Schütz, EC 2kW;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.23;Baugruppe Verriegelung der RLT-Anlagen über Brandschutzklappensystem;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.24;Funktionsgruppe Steuerung stetige Antriebe, Ansteuerung 0...10V;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.25;Funktionsgruppe Steuerung Reparaturschalter;6,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.26;Funktionsgruppe Steuerung Klappe AUF-ZU;8,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.27;Funktionsgruppe Steuerung Kanalrauchmelder;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.28;Funktionsgruppe Steuerung Frostschutzthermostat;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.29;Funktionsgruppe Steuerung Wächter, Schalter ohne Verriegelung;6,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.30;Funktionsgruppe Steuerung Wächter, Schalter mit Verriegelung;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.31;Funktionsgruppe Störmeldungen;20,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.32;Funktionsgruppe Betriebsmeldungen;12,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.33;Funktionsgruppe Steuerung Messwertaufnehmer, aktiv;12,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.34;Funktionsgruppe Steuerung Temperaturfühler, passiv;12,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.35;Funktionsgruppe Steuerung CO2-Messung;18,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.36;Anschluß Schaltschrank mit NHXMH-J, 5x4qmm;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.37;Anschluß Schaltschrank mit NHXMH-J, 5x2,5qmm;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.38;Anschluß Schaltschrank mit NHXMH-J, 7x1,5qmm;12,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.39;Anschluß Schaltschrank mit NHXMH-J, 5x1,5qmm;36,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.40;Anschluß Schaltschrank mit NHXMH-J, 3x2,5qmm;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.41;Anschluß Schaltschrank mit NHXMH-J, 3x1,5qmm;8,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.42;Anschluß Schaltschrank mit J-H(ST)H 2x2x0,8mm;36,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.43;Anschluß Schaltschrank mit J-H(ST)H 4x2x0,8mm;8,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.44;Koppelrelais 2-Wechsler;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.45;Koppelrelais 4-Wechsler;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.46;Hilfsschütz mit 4-Wechsler 24/230V AC/DC;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.47;Hilfsschütz mit 8-Wechsler 24/230V AC/DC;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.48;Zeitschaltrelais 2-Wechsler, 24/230V AC/DC;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.49;Schaltschrank-Transport und Montage;1,0;Psch;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0201.50;Inbetriebnahme Schaltschränke;1,0;Psch;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.1;Standschaltschrank HxBxT 2000x800x400 mm;3,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.2;Standschaltschrank Seitenwand;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.3;Aufsatz-Sichtfenster 500/500/60;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.4;Schaltschrank - Ablagepult, klappbar;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.5;Schublade inkl. Tastatur und Trackball;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.6;Schaltschrank-Innenbeleuchtung mit Steckdose;3,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.7;Schrankbelüftung als Axiallüfter;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.8;Einspeisebaugruppe 63A Lasttrennschalter;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.9;4-pol. Überspannungsableiter Anforderungsklasse C;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.10;Steuerspannungstransformator 400/230V, 500VA;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.11;Steuerspannungstransformator 230/24V AC, 500VA;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.12;Steuerspannungstransformator 230/24V DC, 500VA;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.13;Phasenüberwachung, 3 Meldeleuchten LED;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.14;Netzwiederkehr-Schaltung;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.15;Sammelstörmeldeeinrichtung;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.16;Lampenprüfeinrichtung;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.17;Baugruppe MINIZED-Lasttrennschalter (Linocur) D02 , 63A, 3polig;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.18;Baugruppe Leitungsschutzschalter 10 A, Typ-B, 10kA / 1-polig;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.19;Baugruppe Leitungsschutzschalter 16 A, Typ-B, 10kA / 1-polig;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.20;Baugruppe Leistungsabgang 400V Pumpe ohne Schütz, 3kW;3,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.21;Baugruppe Leistungsabgang 230V Pumpe ohne Schütz, 1kW;6,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.22;Funktionsgruppe Steuerung stetige Antriebe, Ansteuerung 0...10V;42,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.23;Funktionsgruppe Steuerung Reparaturschalter;8,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.24;Funktionsgruppe Steuerung Klappe AUF-ZU;6,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.25;Funktionsgruppe Steuerung Wächter, Schalter ohne Verriegelung;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.26;Funktionsgruppe Steuerung Wächter, Schalter mit Verriegelung;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.27;Funktionsgruppe Störmeldungen;38,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.28;Funktionsgruppe Betriebsmeldungen;15,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.29;Funktionsgruppe Steuerung Messwertaufnehmer, aktiv;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.30;Funktionsgruppe Steuerung Temperaturfühler, passiv;34,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.31;Anschluß Schaltschrank mit NHXMH-J, 7x1,5qmm;12,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.32;Anschluß Schaltschrank mit NHXMH-J, 5x1,5qmm;38,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.33;Anschluß Schaltschrank mit NHXMH-J, 3x2,5qmm;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.34;Anschluß Schaltschrank mit NHXMH-J, 3x1,5qmm;26,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.35;Anschluß Schaltschrank mit A-2YF(L)2Y 2x2x0,8mm;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.36;Anschluß Schaltschrank mit A-2YF(L)2Y 4x2x0,8mm;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.37;Anschluß Schaltschrank mit J-H(ST)H 2x2x0,8mm;70,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.38;Anschluß Schaltschrank mit J-H(ST)H 4x2x0,8mm;8,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.39;Koppelrelais 2-Wechsler;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.40;Koppelrelais 4-Wechsler;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.41;Hilfsschütz mit 4-Wechsler 24/230V AC/DC;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.42;Hilfsschütz mit 8-Wechsler 24/230V AC/DC;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.43;Zeitschaltrelais 2-Wechsler, 24/230V AC/DC;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.44;Schaltschrank-Transport und Montage;1,0;Psch;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0202.45;Inbetriebnahme Schaltschränke;1,0;Psch;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0301.1;Lüfterloser Hutschienen-PC und Monitor;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0302.1;Bedienfunktion Grafik/Anlagenbild Bedieneinheit Schaltschrank;30,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0302.2;Bedienfunktion Dynamische Einblendung;580,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0302.3;1 zu 1 Test je Datenpunkt Gebäudeleittechnik mit Automationsstation;355,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0401.1;Anschluß Feldgerät mit NHXMH-J, 5x4qmm;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0401.2;Anschluß Feldgerät mit NHXMH-J, 5x2,5qmm;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0401.3;Anschluß Feldgerät mit NHXMH-J, 7x1,5qmm;24,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0401.4;Anschluß Feldgerät mit NHXMH-J, 5x1,5qmm;74,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0401.5;Anschluß Feldgerät mit NHXMH-J, 3x2,5qmm;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0401.6;Anschluß Feldgerät mit NHXMH-J, 3x1,5qmm;34,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0401.7;Anschluß Feldgerät mit A-2YF(L)2Y 2x2x0,8mm;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0401.8;Anschluß Feldgerät mit A-2YF(L)2Y 4x2x0,8mm;4,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0401.9;Anschluß Feldgerät mit J-H(ST)H 2x2x0,8mm;106,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0401.10;Anschluß Feldgerät mit J-H(ST)H 4x2x0,8mm;16,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0501.1;Netzwerkswitch 8-Ports;1,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0501.2;BACnet MS/TP IP-Router;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0501.3;Datenanschlußdose 2xRJ45, Cat 7;2,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0601.1;Koordination mit Fremdgewerken;1,0;Psch;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0602.1;Werk- und Montageplanung;1,0;Psch;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0603.1;Schilder;60,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0603.2;Kabelbeschriftungsschilder Mini mit Kabelbindern;480,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0603.3;Kabelbeschriftungsschilder Maxi;60,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0604.1;Probebetrieb;1,0;Psch;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0605.1;Wiederholte Einweisung;1,0;Psch;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0606.1;Revisionsunterlagen, 2-fach;1,0;Psch;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+07.1;Obermonteurstunden;8,0;Std;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+07.2;Programmiererstunden;6,0;St;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+07.3;Monteurstunden;16,0;Std;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+07.4;Helferstunden;12,0;Std;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+07.5;Helferstunden (Stemmarbeiten);8,0;Std;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0801.1;Wartung für die Dauer der Gewährleistungszeit (im ersten Jahr);1,0;p/a;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0801.2;Wartung für die Dauer der Gewährleistungszeit (im zweiten Jahr);1,0;p/a;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0801.3;Wartung für die Dauer der Gewährleistungszeit (im dritten Jahr);1,0;p/a;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0801.4;Wartung für die Dauer der Gewährleistungszeit (im vierten Jahr);1,0;p/a;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0802.1;Betriebsoptimierung für die Dauer der Gewährleistungszeit (im ersten Jahr);1,0;p/a;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0802.2;Betriebsoptimierung für die Dauer der Gewährleistungszeit (im zweiten Jahr);1,0;p/a;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0802.3;Betriebsoptimierung für die Dauer der Gewährleistungszeit (im dritten Jahr);1,0;p/a;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0802.4;Betriebsoptimierung für die Dauer der Gewährleistungszeit (im vierten Jahr);1,0;p/a;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0803.1;Obermonteurstunden (Stördienst und Serviceleistungen);10,0;Std;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0803.2;Monteurstunden (Stördienst und Serviceleistungen);10,0;Std;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+0803.3;Helferstunden (Stördienst und Serviceleistungen);10,0;Std;gaeb-flat;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V..D83
+1;Aussentemperaturfühler;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+2;Tauchtemperaturfühler Heizungsanlage.;16,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+3;Tauchtemperaturfühler Heizungsanlage.;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+4;Tauchtemperaturfühler Heizungsanlage.;6,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+5;Sicherheitstemperaturbegrenzer Heizung.;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+6;Tauchtemperaturfühler Trinkwasser.;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+7;Tauchtemperaturfühler Kälteanlage.;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+8;Tauchtemperaturfühler Kälteanlage.;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+9;Kanlatemperaturfühler mit passivem Messelement.;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+10;Kanlatemperaturfühler mit passivem Messelement.;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+11;Kanlatemperaturfühler mit passivem Messelement.;8,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+12;Kanalfühler Feuchte und Temperaturfühler im Kunststoffge-;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+13;Differenzdruckschalter zur Filterüberwachung in Lüftungsanla-;6,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+14;Differenzdrucktransmitter zur Erfassung von Über,- Unter oder Differenzdrücken in Lüftungsanlagen.;8,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+15;Frostschutzüberwachung zur Überwachung der Lüftungsanla-;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+16;Frostschutzthermostat in Alu-Druckgußgehäuse, für Kanalmon-;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+17;Volumenstrommessung für gasförmige Medien zur vibrations-;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+18;Kanalrauchmelder 24V AC mit DIBt-Zulassung für den Einsatz in Luftkanälen zur Rauchdetektion.;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+19;Raumtemperaturfühler für die Überwachung der Technikräume.;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+20;3-Wege-Flanschventil mit Antrieb,zur Regelung von Warm-, und Kaltwasseranlagen.;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+21;3-Wege-Flanschventil mit Antrieb,zur Regelung von Warm-, und Kaltwasseranlagen.;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+22;3-Wege-Flanschventil mit Antrieb,zur Regelung von Warm-, und Kaltwasseranlagen.;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+23;2-Wege-Flanschventil mit Antrieb,zur Regelung von Warm-, und Kaltwasseranlagen.;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+24;2-Wege-Flanschventil mit Antrieb,zur Regelung von Warm-, und Kaltwasseranlagen.;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+25;Raumbediengerät mit Sollwersteller zur Anbindung an die Raum;30,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+26;Raumtemperaturfühler zur Anbindung an die Raumregelung Heizen-Kühlen. Kunststoffgehäuse für Wandeinbau.;3,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+27;Stetiger Kleinventilantrieb mit Hubanzeige zum Einbau in Heiz-;55,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+28;Kanaltransmitter CO2-Messung zur Erfassung der CO2  Kon-;18,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+29;Reparaturschalter für Betriebsmittel 230 V mit Hilfskontakten 1S+ 1Ö. Mit abschließbarer AUS-Stellung. Einbau in Haupt-;8,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+30;Reparaturschalter für Betriebsmittel 400 V mit Hilfskontakten;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+31;Reparaturschalter für Betriebsmittel 400 V mit Hilfskontakten;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+1;Modulare Automationsstation bis 300 DP BACnet/IP.;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+2;Binär Ausgang mit Handbedieneinrichtung am Modul direkt;13,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+3;Analoger Ausgang 0-10V mit Handbedieneinrichtung am Modul direkt oder als separate Handbedieneinrichtung inkl. Software in der AS.;12,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+4;Binär Eingang melden mit Zustandsanzeige am Modul direkt oder als separate Anzeige inkl. Software in der AS.;51,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+5;Analoger Eingang aktiv inkl. Software in der AS.;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+6;Analoger Eingang passiv, inkl. Software in der AS.;32,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+7;Für den Anschluß der Ein-Ausgangsmodule sind in dieser Po-;1,0;Psch;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+1;Modulare Automationsstation bis 300 DP BACnet/IP.;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+2;Binär Ausgang mit Handbedieneinrichtung am Modul direkt;15,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+3;Analoger Ausgang 0-10V mit Handbedieneinrichtung am Modul direkt oder als separate Handbedieneinrichtung inkl. Software in der AS.;37,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+4;Binär Eingang melden mit Zustandsanzeige am Modul direkt oder als separate Anzeige inkl. Software in der AS.;54,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+5;Analoger Eingang aktiv inkl. Software in der AS.;34,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+6;Analoger Eingang passiv, inkl. Software in der AS.;55,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+7;Mit dem Kommunikationsmodul wird die Automationsstation für die Systemintegration auf Automationsebene erweitert. Fremdsysteme sind somit direkt in die Station mit der Steuerung und Regelung zu integrieren.;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+8;Pegelwandler zur Anbindung der M-Bus Zähler über RS-232 Schnittstelle an die Gebäudeautomation.;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+9;Für den Anschluß der Ein-Ausgangsmodule sind in dieser Po-;1,0;Psch;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+1;Physikalische Ein-/Ausgabefunktion, Binäre Ausgabe Schalten/Stellen gemäß Funktion 1.1 GA-Funktionsliste Beiblatt 070-5.;34,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+2;Physikalische Ein-/Ausgabefunktion, Analoge Ausgabe Stellen gemäß Funktion 1.2 GA-Funktionsliste;81,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+3;Physikalische Ein-/Ausgabefunktion, Binäre Eingabe Melden gemäß Funktion 1.3 GA-Funktionsliste;118,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+4;Physikalische Ein-/Ausgabefunktion, Binäre Eingabe Zählen gemäß Funktion 1.4 GA-Funktionsliste;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+5;Physikalische Ein-/Ausgabefunktion, Analoge Eingabe Messen gemäß Funktion 1.5 GA-Funktionsliste;121,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+6;Gemeinsame Ein-/Ausgabefunktion, Ausgabe Schalten gemäß Funktion 2.1 GA-Funktionsliste Beiblatt 070-5.;28,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+7;Gemeinsame Ein-/Ausgabefunktion, Ausgabe Stellen/Sollwert gemäß Funktion 2.2 GA-Funktionsliste Beiblatt 070-5.;32,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+8;Gemeinsame Ein-/Ausgabefunktion, Eingabe Melden gemäß Funktion 2.3 GA-Funktionsliste Beiblatt 070-5.;56,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+9;Gemeinsame Ein-/Ausgabefunktion, Eingabe Zählwert gemäß Funktion 2.4 GA-Funktionsliste Beiblatt 070-5.;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+10;Gemeinsame Ein-/Ausgabefunktion, Eingabe Messwert gemäß Funktion 2.5 GA-Funktionsliste Beiblatt 070-5.;77,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+11;Verarbeitungsfunktion Überwachen, für Grenzwert fest gemäß Funktion 3.1 GA-Funktionsliste Beiblatt 070-5, pro Überprüfung eines physikalischen, kommunikativen oder berechneten Mess- oder Zählwertes, auf die Einhaltung einer vorzugebenden festen Grenze.;22,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+12;Verarbeitungsfunktion Überwachen, für Grenzwert gleitend gemäß Funktion 3.2 GA-Funktionsliste Beiblatt 070-5, pro Überprüfung eines physikalischen, kommunikativen oder berechneten Messwertes, auf die Einhaltung einer vorzugebenden gleitenden Grenze.;32,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+13;Verarbeitungsfunktion Überwachen, für Betriebsstundenerfassung gemäß Funktion 3.3 GA-Funktionsliste Beiblatt 070-5, pro Betriebszustand, einschl. parametrierbarem Anfangswert, ohne Grenzwertüberwachung.;15,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+14;Verarbeitungsfunktion Überwachen, für Ereigniszählung gemäß Funktion 3.4 GA-Funktionsliste Beiblatt 070-5, pro Zählung, ohne Grenzwertüberwachung.;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+15;Verarbeitungsfunktion Überwachen, für Befehlsausführkontrolle gemäß Funktion 3.5 GA-Funktionsliste Beiblatt 070-5, zum Zusammenfassen, Verzögern und Unterdrücken von Meldungen, pro Benutzeradresse.;11,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+16;Verarbeitungsfunktion Überwachen, für Meldungsbearbeitung gemäß Funktion 3.6 GA-Funktionsliste Beiblatt 070-5, zum Zusammenfassen, Verzögern und Unterdrücken von Meldungen, pro Benutzeradresse.;88,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+17;Verarbeitungsfunktion Steuern, für Anlagensteuerung gemäß Funktion 4.1 GA-Funktionsliste Beiblatt 070-5.;10,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+18;Verarbeitungsfunktion Steuern, für Motorsteuerung gemäß Funktion 4.2 GA-Funktionsliste Beiblatt 070-5.;15,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+19;Verarbeitungsfunktion Steuern, für Umschaltung pro Antrieb gemäß Funktion 4.3 GA-Funktionsliste Beiblatt 070-5.;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+20;Verarbeitungsfunktion Steuern, für Folgesteuerung pro Aggregat gemäß Funktion 4.4 GA-Funktionsliste Beiblatt 070-5.;22,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+21;Verarbeitungsfunktion Steuern, Sicherheits-/Frostschutzsteuerung gemäß Funktion 4.5 GA-Funktionsliste Beiblatt 070-5, pro Steuerungsablauf.;15,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+22;Verarbeitungsfunktion Regeln, für P-Regelung gemäß Funktion 5.1 GA-Funktionsliste Beiblatt 070-5.;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+23;Verarbeitungsfunktion Regeln, für PI-/PID-Regelung gemäß Funktion 5.2 GA-Funktionsliste Beiblatt 070-5.;42,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+24;Verarbeitungsfunktion Regeln, für Sollwertführung/-kennlinie gemäß Funktion 5.3 GA-Funktionsliste Beiblatt 070-5.;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+25;Verarbeitungsfunktion Regeln, für Stellausgabe stetig gemäß Funktion 5.4 GA-Funktionsliste Beiblatt 070-5.;70,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+26;Verarbeitungsfunktion Regeln, für Stellausgabe 2 Punkt gemäß Funktion 5.5 GA-Funktionsliste Beiblatt 070-5.;52,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+27;Verarbeitungsfunktion Regeln, für Begrenzung Sollwert/Stellgröße gemäß Funktion 5.7 GA-Funktionsliste Beiblatt 070-5.;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+28;Verarbeitungsfunktion Regeln, für Parameterumschaltung gemäß Funktion 5.8 GA-Funktionsliste Beiblatt 070-5.;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+29;Verarbeitungsfunktion Rechnen/Optimieren, für Arithmetische Berechnung gemäß Funktion 6.2 GA-Funktionsliste Beiblatt 070-5, pro Eingangs-Benutzeradresse.;14,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+30;Verarbeitungsfunktion Rechnen/Optimieren, für Ereignisabhängiges Schalten gemäß Funktion 6.3 GA-Funktionsliste Beiblatt 070-5, pro Ausgabe-Benutzeradresse, für einen der Programmart zugeordneten Ein-/Auszyklus.;6,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+31;Verarbeitungsfunktion Rechnen/Optimieren, für Zeitabhängiges Schalten gemäß Funktion 6.4 GA-Funktionsliste Beiblatt 070-5, pro Ausgabe-Benutzeradresse, für einen der Programmart zugeordneten Ein-/Auszyklus.;8,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+32;Verarbeitungsfunktion Rechnen/Optimieren, für Gleitendes Ein-/Ausschalten gemäß Funktion 6.5 GA-Funktionsliste Beiblatt 070-5, pro Ausgabe-Benutzeradresse, für einen der Programmart zugeordneten Ein-/Auszyklus.;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+33;Verarbeitungsfunktion Rechnen/Optimieren, für Zyklisches Schalten gemäß Funktion 6.6 GA-Funktionsliste Beiblatt 070-5, pro Ausgabe-Benutzeradresse.;8,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+34;Verarbeitungsfunktion Rechnen/Optimieren, für Nachtkühlbetrieb gemäß Funktion 6.7 GA-Funktionsliste Beiblatt 070-5, pro Ausgabe-Benutzeradresse.;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+35;Verarbeitungsfunktion Rechnen/Optimieren, für Gebäudetemperaturbegrenzung gemäß Funktion 6.8 GA-Funktionsliste Beiblatt 070-5, pro Ausgabe-Benutzeradresse.;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+36;Verarbeitungsfunktion Rechnen/Optimieren, für Energierückgewinnung gemäß Funktion 6.9 GA-Funktionsliste Beiblatt 070-5, pro Ausgabe-Benutzeradresse.;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+37;Verarbeitungsfunktion Rechnen/Optimieren, für Netzwiederkehrprogramm gemäß Funktion 6.11 GA-Funktionsliste Beiblatt 070-5, pro Ausgabe-Benutzeradresse.;12,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+38;Managementfunktion, Kommunikation Ein-/Ausgabefunktion gemäß Funktion 7.1 GA-Funktionsliste, Beiblatt 070-5.;550,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+39;Managementfunktion, Ereignis-Langzeitspeicherung gemäß Funktion 7.3 GA-Funktionsliste, Beiblatt 070-5.;135,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+40;Managementfunktion, Historisierung in Datenbank gemäß Funktion 7.4 GA-Funktionsliste, Beiblatt 070-5.;80,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+41;Bedienfunktion, Ereignis-Anweisungstext gemäß Funktion 8.3 GA-Funktionsliste, Beiblatt 070-5, bis 80 Zeichen.;95,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+42;Bedienfunktion, Nachricht an externer Stelle parametrieren gemäß Funktion 8.4 GA-Funktionsliste, Beiblatt 070-5.;12,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+43;Parametrierung bauseits installierter Betriebsmittel:;6,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+44;Parametrierung bauseits installierter Betriebsmittel:;6,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+45;1 zu 1 Test je Datenpunkt Automationsstation mit;320,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+1;Für die Anbindung der Wärmepumpen mit BACnet Schnittstelle sind die zu Verfügung stehenden BACnet Datenpunkte aus einem EDE-File zu übernehmen und in das System der Gebäudeautomation einzubinden.;30,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+2;Für die Anbindung des Brandschutzklappensystems mit BACnet Schnittstelle sind die zu Verfügung stehenden BACnet Datenpunkte aus einem EDE-File zu übernehmen;28,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+3;Die Volumenstromregler Gewerk Lüftung werden über BACnet MS/TP an die Gebäudeautomation angebunden.;34,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+4;Inbetriebnahme der kommunikativen Informationspunkte Elektrozähler über eine M-Bus-Schnittstelle.;8,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+5;Inbetriebnahme der kommunikativen Informationspunkte Wärmemengenzähler über eine M-Bus-Schnittstelle.;8,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+6;Inbetriebnahme der kommunikativen Informationspunkte Trinkwasserzähler über eine M-Bus-Schnittstelle.;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+1;Standschaltschrank HxBxT 2000x800x400 mm;3,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+2;Standschaltschrank Seitenwand passend zu vorab beschrieben Schaltschrank;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+3;Aufsatz-Sichtfenster für Türaufbau,;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+4;Aklappbares Ablagepult aus Stahlblech zur Montage an;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+5;Schublade mit Tastatur zum Einbau in 800 mm breite;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+6;Schaltschrank-Innenbeleuchtung mit Steckdose mit allem Zubehör bestehend aus je:;3,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+7;Schrankbelüftung als Axiallüfter für eine Leistung von 220 m³/h bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+8;Einspeisebaugruppe inkl. Hauptschalter (Bedienelement in der Schaltschranktür) und Sammelschiene 63A bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+9;Überspannungsableiter 4-pol. für TN-S-Systeme.;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+10;Steuerspannungstransformator für 230V AC/50Hz;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+11;Steuerspannungstransformator für 24V AC/50Hz;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+12;Steuerspannungstransformator für 24V DC/50Hz;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+13;Phasenüberwachung, 3 Meldeleuchten LED;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+14;Netzwiederkehr-Schaltung für bis zu 8 Störmeldungen;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+15;Sammelstörmeldeeinrichtung (mit Hilfsschütz pro;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+16;Lampenprüfeinrichtung (mit 1 S + 1 Ö pro Leuchtmelder);1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+17;MINIZED-Lasttrennschalter 3polig D02 63A;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+18;Für den Abgang der Ventilatoren der Anlage RLT-2 ist eine Vorsicherung und eine Messung erforderlich bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+19;Leitungsschutzschalter B10A, 1-polig;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+20;Leitungsschutzschalter B16A, 1-polig;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+21;Leistungsabgang 400V Ventilator EC Motor ohne Schütz, 5kW bestehend aus:;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+22;Leistungsabgang 230V Ventilator EC Motor ohne Schütz, 2kW bestehend aus:;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+23;Baugruppe zur Verriegelung RLT Anlagenbei Alarm aus dem Brandschutzklappensystem bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+24;Funktionsgruppe für die Steuerung Klappen und Ventilen bestehend aus:;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+25;Funktionsgruppe für die Anbindung Reparaturschalter;6,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+26;Funktionsgruppe Klappensteuerung AUF-ZU bestehend aus:;8,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+27;Funktionsgruppe Kanalrauchmelder hauptsächlich;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+28;Funktionsgruppe Frostschutz hauptsächlich;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+29;Funktionsgruppe hauptsächlich bestehend aus:;6,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+30;Funktionsgruppe hauptsächlich bestehend aus:;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+31;Funktionsgruppe Störmeldungen;20,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+32;Funktionsgruppe Betriebsmeldungen hauptsächlich;12,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+33;Funktionsgruppe für die Steuerung von einem aktiven;12,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+34;Funktionsgruppe für die Steuerung von einem;12,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+35;Funktionsgruppe für die Steuerung der CO;18,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+36;Anschluß Schaltschrank mit NHXMH-J 5x4qmm;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+37;Anschluß Schaltschrank mit NHXMH-J 5x2,5qmm;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+38;Anschluß Schaltschrank mit NHXMH-J 7x1,5qmm;12,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+39;Anschluß Schaltschrank mit NHXMH-J 5x1,5qmm;36,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+40;Anschluß Schaltschrank mit NHXMH-J 3x2,5qmm;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+41;Anschluß Schaltschrank mit NHXMH-J 3x1,5qmm;8,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+42;Anschluß Schaltschrank mit J-H(ST)H 2x2x0,8mm;36,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+43;Anschluß Schaltschrank mit J-H(ST)H 4x2x0,8mm;8,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+44;Koppelrelais bestehend aus:;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+45;Koppelrelais bestehend aus:;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+46;Hilfsschütz bestehend aus:;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+47;Hilfsschütz bestehend aus:;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+48;Zeitschaltrelais bestehend aus:;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+49;Schaltschrank-Transport und Montage;1,0;Psch;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+50;Inbetriebnahme Schaltschränke;1,0;Psch;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+1;Standschaltschrank HxBxT 2000x800x400 mm;3,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+2;Standschaltschrank Seitenwand;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+3;Aufsatz-Sichtfenster für Türaufbau,;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+4;Aklappbares Ablagepult aus Stahlblech zur Montage an;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+5;Schublade mit Tastatur zum Einbau in 800 mm breite;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+6;Schaltschrank-Innenbeleuchtung mit Steckdose mit allem Zubehör bestehend aus je:;3,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+7;Schrankbelüftung als Axiallüfter für eine Leistung von 220 m3/h bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+8;Einspeisebaugruppe inkl. Hauptschalter;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+9;Überspannungsableiter 4-pol. für TN-S-Systeme.;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+10;Steuerspannungstransformator für 230V AC/50Hz;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+11;Steuerspannungstransformator für 24V AC/50Hz;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+12;Steuerspannungstransformator für 24V DC/50Hz;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+13;Phasenüberwachung, 3 Meldeleuchten LED;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+14;Netzwiederkehr-Schaltung für bis zu 8 Störmeldungen;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+15;Sammelstörmeldeeinrichtung (mit Hilfsschütz pro;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+16;Lampenprüfeinrichtung (mit 1 S + 1 Ö pro Leuchtmelder);1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+17;MINIZED-Lasttrennschalter 3polig D02 63A;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+18;Leitungsschutzschalter B10A, 1-polig;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+19;Leitungsschutzschalter B16A, 1-polig;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+20;Leistungsabgang 400V Pumpe ohne Schütz, 3kW bestehend aus:;3,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+21;Leistungsabgang 230V Pumpe ohne Schütz, 1kW bestehend aus:;6,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+22;Funktionsgruppe für die Steuerung Klappen und Ventilen bestehend aus:;42,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+23;Funktionsgruppe für die Anbindung Reparaturschalter;8,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+24;Funktionsgruppe Klappensteuerung AUF-ZU bestehend aus:;6,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+25;Funktionsgruppe hauptsächlich bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+26;Funktionsgruppe hauptsächlich bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+27;Funktionsgruppe Störmeldungen;38,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+28;Funktionsgruppe Betriebsmeldungen hauptsächlich;15,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+29;Funktionsgruppe für die Steuerung von einem aktiven;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+30;Funktionsgruppe für die Steuerung von einem;34,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+31;Anschluß Schaltschrank mit NHXMH-J 7x1,5qmm;12,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+32;Anschluß Schaltschrank mit NHXMH-J 5x1,5qmm;38,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+33;Anschluß Schaltschrank mit NHXMH-J  3x2,5qmm;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+34;Anschluß Schaltschrank mit NHXMH-J 3x1,5qmm;26,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+35;Anschluß Schaltschrank mit A-2YF(L)2Y 2x2x0,8mm;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+36;Anschluß Schaltschrank mit A-2YF(L)2Y 4x2x0,8mm;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+37;Anschluß Schaltschrank mit J-H(ST)H 2x2x0,8mm;70,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+38;Anschluß Schaltschrank mit J-H(ST)H 4x2x0,8mm;8,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+39;Koppelrelais bestehend aus:;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+40;Koppelrelais bestehend aus:;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+41;Hilfsschütz bestehend aus:;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+42;Hilfsschütz bestehend aus:;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+43;Zeitschaltrelais bestehend aus:;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+44;Schaltschrank-Transport und Montage;1,0;Psch;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+45;Inbetriebnahme Schaltschränke;1,0;Psch;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+1;Lüfterloser Hutschienen-PC und Monitor zur Bedienung und Überwachung der Anlagen vor Ort.;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+1;Bedienfunktion, Grafik/Anlagenbild gemäß Funktion 8.1 GA-Funktionsliste, Beiblatt 070-5.;30,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+2;Bedienfunktion, Dynamische Einblendung gemäß Funktion 8.2 GA-Funktionsliste, Beiblatt 070-5.;580,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+3;1 zu 1 Test je Datenpunkt Gebäudeleittechnik mit Automationsstation:;355,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+1;Anschluß Feldgerät mit NHXMH-J 5x4qmm;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+2;Anschluß Feldgerät mit NHXMH-J 5x2,5qmm;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+3;Anschluß Feldgerät mit NHXMH-J 7x1,5qmm;24,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+4;Anschluß Feldgerät mit NHXMH-J 5x1,5qmm;74,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+5;Anschluß Feldgerät mit NHXMH-J 3x2,5qmm;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+6;Anschluß Feldgerät mit NHXMH-J 3x1,5qmm;34,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+7;Anschluß Feldgerät mit A-2YF(L)2Y 2x2x0,8mm;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+8;Anschluß Feldgerät mit A-2YF(L)2Y 4x2x0,8mm;4,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+9;Anschluß Feldgerät mit J-H(ST)H 2x2x0,8mm;106,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+10;Anschluß Feldgerät mit J-H(ST)H 4x2x0,8mm;16,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+1;8 Port Fast-Ethernet-Switch unmanaged zur Aufschaltung von Ethernet-Netzteilnehmern in industriellen Umgebungen.;1,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+2;Für die Anbindung der Volumenstromregler aus dem BACnet MS/TP Netzwerk ist ein entsprechender Router erforderlich.;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+3;Lieferung und Montage einer Datenanschlußdose;2,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+1;Die Koordinationspflicht mit Planern und Fremdgewerken ist eine grundsätzliche Leistungspflicht des Auftragnehmers.;1,0;Psch;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+1;Anfertigung der Montage- und Werkpläne / Planung einschl. der hierzu erforderlichen Koordination mit allen am Bau beteiligten haustechnischen Gewerke und Ausbaugewerken, sofern nicht in den Einheitspreisen einkalkuliert.;1,0;Psch;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+1;Feldgeräte (auch anderer Gewerke) sind mit Resopalschildern dauerhaft und unverlierbar zukennzeichen.;60,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+2;Kabelbeschriftungsschilder Mini mit Kabelbindern, inkl. Etikett und Beschriftung.;480,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+3;Kabelbeschriftungsschilder Maxi mit Kabelbindern,inkl. Etikett und Beschriftung.;60,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+1;Sämtliche Anlagen und Systeme sind nach der erfolgreichen Inbetriebnahmephase mind. 4 Wochen im Probebetrieb stö-;1,0;Psch;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+1;Wiederholte Einweisung des Bedienungs- und Wartungsperso-;1,0;Psch;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+1;Anfertigen und Zusammenstellen der Revisionsunterlagen,;1,0;Psch;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+1;einschl. Unternehmerzuschlag, Fahrkosten und Auslösung.;8,0;Std;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+2;einschl. Unternehmerzuschlag, Fahrkosten und Auslösung.;6,0;St;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+3;einschl. Unternehmerzuschlag, Fahrkosten und Auslösung.;16,0;Std;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+4;einschl. Unternehmerzuschlag, Fahrkosten und Auslösung.;12,0;Std;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+5;wie vor, jedoch nachträgliche Herstellung von Schlitzen und Durchbrüchen in Wänden und Decken.;8,0;Std;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+1;ansonsten wie vor beschrieben.;1,0;p/a;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+2;ansonsten wie vor beschrieben.;1,0;p/a;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+3;ansonsten wie vor beschrieben.;1,0;p/a;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+4;ansonsten wie vor beschrieben.;1,0;p/a;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+1;ansonsten wie vor beschrieben.;1,0;p/a;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+2;ansonsten wie vor beschrieben.;1,0;p/a;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+3;ansonsten wie vor beschrieben.;1,0;p/a;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+4;ansonsten wie vor beschrieben.;1,0;p/a;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+1;wie vor beschrieben, einschl. Unternehmerzuschlag, Fahrkosten und Auslösung.;10,0;Std;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+2;wie vor beschrieben, einschl. Unternehmerzuschlag, Fahrkosten und Auslösung.;10,0;Std;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83
+3;wie vor beschrieben, einschl. Unternehmerzuschlag, Fahrkosten und Auslösung.;10,0;Std;gaeb;leistungsbeschreibungen/2465-26_08_07-LVZ-KG 480 LV Gebäudeautomation GAEB_Dateien-UB_TM o.V._V33.X83

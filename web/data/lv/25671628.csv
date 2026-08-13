@@ -1,4 +1,51 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;BE: Baustelleneinrichtung;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+01.2;VA: Schutzabdeckung von Einbauteilen;10,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+01.3;VA: Eignung des Untergrunds prüfen;40,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+01.4;VA: Feuchtigkeit im Untergrund prüfen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+01.5;VA: Untergrund reinigen;40,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+01.6;VA: Untergrund reinigen Kleinflächen;2,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+01.7;VA: Untergrund Kugelstrahlen;40,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+01.8;VA: Mechanische Untergrundvorbereitung Kleinflächen;2,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+01.9;VA: Untergrund egalisieren / Fehlstellen schließen;2,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+01.10;VA: Risse im Untergrund schließen;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+01.11;VA: Randstreifen abschneiden;27,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+01.12;VA: Bestandsfliesen Nacharbeiten - Schnittkante herstellen;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+02.1;Randdämmstreifen PE-Schaum D 8mm H 100mm;27,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+02.2;Haftbrücke auftragen mineral.Haftbrücke;40,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+02.3;Zementestrich Verbundestrich C35 F5 D 65mm;33,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+02.4;Estrich an Bodenaussparung anpassen;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+02.5;Entwässerungskastenrinne, V2A, b=150mm, l=4500mm;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+02.6;Gitterrostsegmente aus Edelstahl für Kastenrinne;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+02.7;Bodenablauf DN 100 Rinne;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+02.8;Entwässerungskastenrinne, V2A, b=150mm, l=400mm;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+02.9;Gitterrost aus Edelstahl für Kastenrinne;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+02.10;Entwässerungsbodenwanne, V2A, b=1500mm, l=1750mm;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+02.11;Gitterrost aus Edelstahl für Bodenwanne;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+02.12;Bodenablauf, DN 100, Bodenwanne;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+02.13;Glockengeruchverschluss, DN 100;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+02.14;Einbau und Verguss von Einbauteilen in der Bodenplatte;1800,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+02.16;Randwinkel, Stahl;2,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+03.2;Abdichtung Bodenflächen, W3-I;37,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+03.3;Zulage: für das Herstellen der Abdichtung in Kleinflächen;0,5;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+03.4;Abdichtungsband Boden zu Wand;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+03.5;Schnittschutzband;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+03.6;Feinsteinzeugfliesen Boden 20/20;40,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+03.7;Baudehnungsprofil - wasserdichtes Fugenprofil;1,7;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+03.8;Baudehnungsprofil - Profilendausbildung Folienhochzug;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+03.9;Baudehnungsprofil - Folienhochzug Wand, h=1,50m;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+03.10;Baudehnungsprofil - Einbinden Dichtungsbahn in Flächenabdichtung;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+03.11;Baudehnungsprofil - seitliche Vergussfuge;4,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+03.12;Randfuge Boden - dauerelastisch;45,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+03.13;Ergänzen Bodenfliesen im Bestand;1,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+04.1;Abdichtung Wandflächen, W3-I;40,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+04.2;Feinsteinzeugfliesen Wand 20/20;80,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+04.3;Diagonalschnitt von Wandfliesen;9,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+04.4;Sockelfliesen aus Bodenbelag 100 x 200 mm;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+04.5;Feinsteinzeugfliesen Leibung;36,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+04.6;Randfuge Wand - dauerelastisch;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+04.7;Abschlussprofil PVC-U B bis 5mm;36,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
+04.8;Ergänzen Wandfliesen Bestand;2,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.D83
 1;"Herstellen, Vorhalten, Anpassen und Räumen sämtlicher für die Ausführung der Estrich- und Fliesenarbeiten erforderlichen Baustelleneinrichtungen, einschließlich aller Nebenleistungen gemäß VOB/C DIN 18353 und DIN 18352 sowie den allgemeinen Regelungen der VOB/C (Abschnitt ""Nebenleistungen/Besondere ";1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.X83
 2;Einbauten wie Maschinen, Schaltschränke, Wandflächen, Stützen, Türen o.ä. sind durch staubdichtes Abdecken und Abkleben mit PE - Folie zu schützen.;10,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.X83
 3;Untergrund der vorhandenen Bodenflächen aus Zementestrich,  Stahlbeton oder ähnlichem auf die Eignung als Untergrund, Hohlstellen sowie die Trag- und Haftfähigkeit prüfen.;40,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Estrich- & Fliesenarbeiten.X83

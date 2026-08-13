@@ -4,3 +4,8 @@
 0030;Herstellen einer Brandfallsteuerung, dynamisch;1,0;psch;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS 20.X83
 0040;Lieferung und Montage einer automatischen Schachtentrauchung;1,0;psch;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS 20.X83
 0050;jährliche Voll-Wartung der in der Position;4,0;Stk;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS 20.X83
+01010010;Personenaufzug, 1600 kg, 1,0 m/s,;1,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS 20.D83
+01010020;Automatische Notevakuierung;1,0;psch;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS 20.D83
+01010030;Brandfallsteuerung, dynamisch;1,0;psch;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS 20.D83
+01010040;Automatische Schachtentrauchung;1,0;psch;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS 20.D83
+01010050;jährliche Voll-Wartung;4,0;Stk;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS 20.D83

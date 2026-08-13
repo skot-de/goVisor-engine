@@ -1,4 +1,231 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;Baustelle einrichten herstellen Lager-Arbeitsplätze;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.2;Baustelleneinr. vorhalten;18,0;StMt;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.3;Baustelle räumen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.4;Bauzaun Stahlrohrrahmen verz Vergitterung H 2m aufstellen räumen;300,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.5;Bauzaun Stahlrohrrahmen verz Vergitterung H 2m umsetzen;300,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.6;Bauzaun Stahlrohrrahmen verz Vergitterung H 2m vorhalten;300,0;mMt;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.7;Bauzaun Kunststoff Vergitterung H 1m aufstellen räumen;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.8;Bauzaun Kunststoff Vergitterung H 1m umsetzen;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.9;Bauzaun Kunststoff Vergitterung H 1m vorhalten;25,0;mMt;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.10;Verkehrssicherung KFZ- Verkehr;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.11;Transp. Lichtsignalanlage aufbauen Kreuzungsanlage AnzSignalgeber 2 St automat.Steuerung TypD;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.12;Programmierung LSA;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.13;Verkehrssicherung Fußgängerverkehr;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.14;Baumschutz herstellen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.15;Sichern von Bäumen mit Schutzzaun;14,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.16;Sichern von Bestandsbrunnen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.17;Zusätzliche Vorhaltung der vorhandenen Baustelleneinrichtung;10,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.18;Baugerät Kettenbagger bei archäologisch bedingter Unterbrechung vorhalten;10,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.19;Baugerät Kettenbagger archäologiebedingt ab- und erneut antransportieren;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.20;Baugerät Radlader bei archäologisch bedingter Unterbrechung vorhalten;10,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.21;Baugerät Radlader archäologiebedingt ab- und erneut antransportieren;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.22;Wartezeit Polier/Vorarbeiter infolge archäologischer Funde;10,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.23;Wartezeit Facharbeiter infolge archäologischer Funde;10,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.24;Wartezeit Baugeräteführer infolge archäologischer Funde;10,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+01.25;Wartezeit Bauhelfer infolge archäologischer Funde;10,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.1;Rückbau Bitumenh.Befestigung Fahrbahn;2000,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.2;Rückbau Pflasterbelag Naturstein-Kleinpflaster D 108mm Gehweg;865,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.3;Rückbau Pflasterbelag Betonpflaster D 160mm Gehweg;420,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.4;Granitbord ausbauen, palettieren, auf Bauhof einlagern;240,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.5;Granitbord seitlich lagern zum späteren Wiedereinbau;80,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.6;Metallpoller aufnehmen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.7;Ausbau Fahrradanlehnbügel;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.8;Abfalleimer aus Metall demontieren;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.9;Abfalleimer Modell A7GAD-S90 CITYrund 90l demontieren,;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.10;Beschilderung demontieren, laden, zu Bauhof transportieren;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.11;Infotafel demontieren, seitlich lagern zum späteren Wiedereinbau;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.12;Leuchtenmast LPH 4,0m aufnehmen, laden, zu Bauhof transportieren;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.13;Leuchtenmast LPH 8,0m aufnehmen, entsorgen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.14;Leuchtenmast aufnehmen, lagern zum Wiedereinbau;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.15;Bänke aufnehmen, entsorgen;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.16;Briefkasten mit Klingelanlage aufnehmen und seitlich lagern zum späteren Wiedereinbau;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.17;Straßenablauf aufnehmen, entsorgen, Anschlüsse verschließen;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.18;Holz Abfall nicht gefährlich AVV170201;0,25;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.19;Metall Abfall nicht gefährlich AVV170407;0,7;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.20;Boden Abfall nicht gefährlich AVV170504;0,5;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.21;Abfall nicht gefährlich AVV170504 schadstoffbelastet EBV 2023 BM-F0* LKW AN transp. entsorgen Verwertungsanlage bis 10km Vergüt.Entsorg.gg.Nachweis;750,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.22;Abfall nicht gefährlich AVV170504 schadstoffbelastet EBV 2023 BM-F1 LKW AN transp. entsorgen Verwertungsanlage bis 10km Vergüt.Entsorg.gg.Nachweis;1800,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.23;Abfall nicht gefährlich AVV170504 schadstoffbelastet EBV 2023 BM-F2 LKW AN transp. entsorgen Verwertungsanlage bis 10km Vergüt.Entsorg.gg.Nachweis;1000,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.24;Abfall nicht gefährlich AVV170504 schadstoffbelastet EBV 2023 BM-F3 LKW AN transp. entsorgen Verwertungsanlage bis 10km Vergüt.Entsorg.gg.Nachweis;300,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+02.25;Sonstiger Abfall nicht gefährlich AVV170904;3,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+03.1;Rückbau Befestigung ohne Bindemittel Schotter-Splitt-Brechsand-Gemisch Fahrbahn nicht schadstoffbelastet 21kN/m3 D 60-70cm Geräteeinsatz mgl. wiederverwendb Stoffe lagern;780,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+03.2;Rückbau Befestigung ohne Bindemittel Splitt-Brechsand-Gemisch nicht schadstoffbelastet 21kN/m3 D 40-50cm Geräteeinsatz mgl. wiederverwendb Stoffe lagern laden transp. LKW AN bis 10km ges.Vergüt.Entsorg.;935,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+03.3;Untergrund verdichten Verkehrsfläche;3300,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+03.4;Planum Abweichung +/-2cm EV2 45MPa;3300,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+03.5;Pflanzloch für Baumrigolensystem ausheben;150,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+03.6;Auffüllung Streifenfundament lösen lagern B 1-1,25m L 175-200m T bis 0,8m GU;10,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+03.7;Boden verbessern einbauen verdichten Baugrube Einbau-T bis 1m;375,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+03.8;Geogitter PE gewebt D 1,2mm Überlappungs-B 20cm;1195,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+03.9;Pflanzgrube verfüllen Vegetationstragschicht/Substrat nicht überbaubar 280/825cm D 120cm;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+03.10;Baumsubstrat gemäß FLL-Empfehlungen für Baumpflanzungen;165,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+03.11;Boden austauschen Wurzelbereich absaugen T 50-70cm Substrat Sand Kompost;35,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+03.12;Oberboden liefern;10,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+03.13;Oberboden einbauen Rasenflächen;50,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+03.14;Auffüllung lösen fördern lagern von Hand 10km Abtrag-T 1m GU;25,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+03.15;Freilegung bestehender Leitungen;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+03.16;Längsleitungen sichern;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+03.17;Längskabel sichern;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+04.1;Abwasserkanal PVC-U homogen OD DN110 Graben abgeböscht;34,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+04.2;Abwasserkanal PVC-U homogen OD DN160 L 3m Graben abgeböscht;55,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+04.3;Pass-/Gelenkstück aus PVC-U -Rohr, DN/OD 110;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+04.4;Pass-/Gelenkstück aus PVC-U -Rohr, DN/OD 160;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+04.5;PVC-U-Bogen KGB OD DN110;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+04.6;PVC-U-Bogen KGB SDR34 OD DN160;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+04.7;PVC-U-Abzweig Reduzierung KGEA zentrisch SDR34 45Grad OD DN200 DN160;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+04.8;PVC-U-Übergangsstück KGR exzentrisch SDR34 OD DN160 DN110;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+04.9;PVC-U-Übergangsstück KGR exzentrisch SDR34 OD DN200 DN160;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+04.10;PVC-U-Muffenstopfen KGM OD DN110;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+04.11;PVC-U-Muffenstopfen KGM OD DN160;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+04.12;Beton Hofablauf 23 25 L Aufsatz Hofablauf B125 L/B 300/300mm setzen C12/15 D 20cm;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+04.13;Beton Hofablauf 23 25 L Aufsatz Hofablauf B125 L/B 300/300mm setzen C12/15 D 20cm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+04.14;Beton Hofablauf 23 25 L Aufsatz Hofablauf B125 L/B 300/300mm setzen C12/15 D 20cm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+04.15;Entwässerungsrinne B125 NW 100mm Beton U-Kastenrinne Abdeck. EN-GJL Arretierung;9,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+04.16;Senkr.Ablauf Entwässerungsrinne B125 NW 100mm L 1m Beton Abdeck. EN-GJL Arretierung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+04.17;Anpassungsschnitt Entwässerungsrinne;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+05.1;Köcherfundament für Mastleuchte liefern und herstellen.;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+05.2;Kabelschutzrohr PE-HD AD 63mm WD 3,6mm L 6m Einzelrohre 2Rohre Abstandhalter 1,5m;115,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+05.3;Stromkabel für Straßenbeleuchtung in Leerrohr einziehen;115,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.1;Werk- und Montageplanung für alle Bauteile aus Naturstein;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.2;Blockstufen Granit;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.3;Pass-Schnitte Blockstufen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.4;Blockstufen Granit;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.5;Pass-Schnitte Blockstufen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.6;Bestandstreppe erweitern;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.7;Sandsteinplatten 50 x 100 cm liefern, in Betonfundament versetzen;4,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.8;Ungebundene Tragschicht 0/45 H bis 0,3m;2,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.9;Statik für Ortbetonstützmauer;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.10;Ortbeton der Sauberkeitsschichten;2,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.11;Schalung Fund. Stützwand;5,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.12;Schalung Stützwand SB2;20,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.13;Schalung Stirnwand SB2;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.14;Anschluss Bestandsmauer;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.15;Profilleiste für Kantenausbildung, dreieckig;16,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.16;Ortbeton Fund. Stützwand Stahlbeton C 25/30, XC2;2,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.17;Ortbeton Stützwand Stahlbeton C30/37 SB2 D ca. 30 cm;2,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.18;Ortbeton Stützwand schräg Stahlbeton C30/37 SB2 D ca. 30 cm;1,5;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.19;Betonstabstahl BSt 500 S, alle Durchmesser;0,25;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.20;Betonstahlmatte BSt 500 M (A) Lagermatte;0,25;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.21;Zulage für Oberfläche / Sichtfläche sandstrahlen;10,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.22;Zulage für Oberfläche / Sichtfläche feinstocken;10,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.23;Probefläche Sandstrahlen anlegen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.24;Probefläche Feinstocken anlegen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.25;Voranstrich Bitumenemulsion;10,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.26;Bitu-Schwarzanstrich;10,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+06.27;Sickerltg TP A PVC-U DN100 Geotextil-ummantelt Graben Baugrubensohle T 1,25-1,75m;7,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.1;Werk- und Montageplanung für alle Naturwerksteine;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.2;FSS Bk3,2 DPr1 EV2 120MPa 0/45 D 37cm;514,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.3;FSS Bk1,8 DPr1 EV2 120MPa 0/45 D 24cm;1850,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.4;FSS Bk3,2 DPr1 EV2 120MPa 0/45 D 43cm;537,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.5;STS Bk1,8 DPr1 EV2 150MPa 0/32 D 25cm;1850,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.6;Untergrund verdichten - 120 MPa;3300,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.7;Planum Abweichung +/-2cm EV2 120MPa;3300,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.8;Untergrund verdichten - 150 MPa;1900,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.9;Planum Abweichung +/-2cm EV2 150MPa;1900,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.10;Probegefäß liefern;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.11;Bohrkern entnehmen, 9-15 cm;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.12;Bohrkern entnehmen, 26-35 cm;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.13;Belastungsfahrzeug bereitstellen;8,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.14;Tragfähigkeitsuntersuchung mit statischem Plattendruckversuch;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.15;Tragfähigkeitsuntersuchung mit dynamischen Plattendruckversuch;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.16;Liefern und Verlegen von Natursteinpflaster (10 cm), Segmentbogen, Verlegung in ungebundener Bauweise;1050,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.17;Betonsteinpflaster verschiedener Formate D = 10 cm liefern, zur Einbaustelle transportieren, einbauen;1350,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.18;Betonsteinpflaster verschiedener Formate D = 14 cm liefern, zur Einbaustelle transportieren, einbauen;30,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.19;Liefern und Verlegen von Natursteinpflaster (10 cm), Verlegung in gebundener Bauweise;98,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.20;Liefern und Verlegen von Natursteinpflaster (10 cm), Pflasterrinne, Verlegung in gebundener Bauweise;53,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.21;Liefern und Verlegen von Natursteinpflaster (10 cm), Pflasterrinne, Verlegung in ungebundener Bauweise;15,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.22;TS Asphalt wasserdurchl Fahrbahn PA22T Bindem. 70/100 D 14cm;514,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.23;Asphalttragschicht AC 32 T S, 18 cm;540,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.24;Asphaltbinderschicht AC 16 B S, 8 cm;540,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.25;Asphaltdeckschicht AC 11 D S, 4 cm;540,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.26;Bitumenemulsion BK 3,2 - 100, vor ATS (2. Lage);540,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.27;Bitumenemulsion BK 3,2 - 100, vor ABS;540,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.28;Bitumenemulsion BK 3,2 - 100, vor ADS;540,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.29;Anschluss a. Fuge N1. herst. Borde;230,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.30;Abstumpfungsmaßnahme durchführen StL-Nr. 16.113/953.10.11;540,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.31;Asphaltoberbau schneiden D 2-5cm T 40mm;90,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.32;Asphaltoberbau schichtweise schneiden D 20-25cm T 40mm;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.33;Leitstreifen Beton 30/30cm D 10cm weiß Rippenstruktur B 30cm Gehweg Bettung Kiessand 0/4 D 3-5cm einfegen;11,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.34;Auffindestreifen Beton 30/30cm D 10cm weiß Noppenstruktur B  30cm Bettung Kiessand 0/4 D 3-5cm einfegen;7,5;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.35;Pflasterdecke anpassen schneiden T 10-20cm Nassschneidegerät Gehweg;350,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.36;Formsteine behauen;560,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.37;Anschluss Pflasterdecke radial > 0,7m;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.38;Anschluss Pflasterdecke radial < 0,7m;45,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.39;Anschluss Pflasterdecke Naturstein-Großpflaster Mastleuchten/Pfosten;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.40;Anpassungsschnitte taktile Platten;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.41;Bordstein gerade;192,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.42;Bordstein Radius;88,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.43;Bordstein Ablängen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.44;Stahlblech Anschlag;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.45;Liefern und Versetzen von Granit-Bordsteinen nach DIN 483 und DIN EN1343 sowie DIN 18318 Profil 135 x 10 x 18 cm (0,08 m3 C 20/25/lfm);70,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.46;Liefern und Versetzen von Granit-Bordsteinen nach DIN 483 und DIN EN1343 sowie DIN 18318 Profil 105 x 10 x 18 cm (0,08 m3 C 20/25/lfm),;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.47;Liefern und Versetzen von Granit-Bordsteinen nach DIN 483 und DIN EN1343 sowie DIN 18318 mit Abwinkelung;28,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.48;Schutzlage Abdichtung Wand Noppenbahn D 8mm lose verlegen;170,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.49;Liefern und Versetzen von Rinnenplatte Granit;85,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+07.50;Liefern und Versetzen von Rinnenplatte Beton;65,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.1;Werk- und Montageplanung für Sonder- Ausstattungselemente;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.2;Fahrradbügel liefern und montieren;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.3;Abfallbehälter liefern und einbauen;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.4;Abfallbehälter wiedereinbauen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.5;Bodenhülsen für Verkehrsschilder im Bauhof abholen, liefern und einbauen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.6;Sitzbank;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.7;Sitzpodest;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.8;Auspflasterbarer Baumrost aus feuerverzinktem Stahl 180 x 180 cm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.9;Baumrigolensystem für Grünflächen;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.10;Baumrigolensystem für Grünflächen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.11;Baumrigolensystem überbaubar;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.12;Modulares Wurzelschutzsystem mit integrierten Rippen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.13;Wurzelbewässerungs- und Wurzelbelüftungssystem;13,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.14;Einbau Infotafel;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.15;Einbau Schaukasten;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.16;Natursteinpoller Granit, D = 50 cm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.17;Fundament herstellen für Geschwindigkeitskontrolle;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.18;Einbau Geschwindigkeitskontrolle;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.19;Überflurhydrant auf Bauhof laden, liefern und einbauen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.20;Bodenhülse einbauen;80,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.21;Bodenhülse für Sonnenschirme;21,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+08.22;Ortbeton Einzelfundament Stahlbeton C20/25 XF4 bis 0,25m3;15,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+10.1;Reinigung freigelegter Stufen;21,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+10.2;Anpassung Fallrohre;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+10.3;Anpassung Bestandsgeländer;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.1;Fraxinus pennisilvatica 'Summit';12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.2;Quercus palustris;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.3;Acer rubrum;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.4;Stipa tenuissima - Dünnblättriges Federgras;98,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.5;Sporobolus hererolepsis - Verschiedenschuppiges Tropfengras;49,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.6;Luzula nivea - Schnee-Marbel;70,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.7;Achillea millefolium 'Lilac Beauty' - Schafgarbe 'Lilac Beauty';77,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.8;Salvia 'Blue Spire' - Blauraute 'Blue Spire';28,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.9;Stachys grandiflora 'Superba' - Großblütiger Ziest 'Superba';77,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.10;Verbena bonariensis - Argentinisches Eisenkraut;77,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.11;Aster amellus 'Rosa Erfüllung' - Berg-Aster 'Rosa Erfüllung';63,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.12;Limonium latifolium - Breitblättriger Strandflieder;56,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.13;Agastache 'Black Adder' - Duftnessel 'Black Adder';14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.14;Geranium sanguineum 'Album' - Schnee-Storchschnabel 'Album';147,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.15;Brunnera macrophylla - Kaukasus-Vergissmeinnicht;112,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.16;Nepeta x faassenii 'Superba' - Katzenminze;147,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.17;Allium aflatunense 'Purple Sensation' - Kugel-Lauch 'Purple Sensation';98,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.18;Anemone blanda 'White Splendour' - Weiße Balkan-Anemone;735,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.19;Anemone blanda 'Blue Shades' - Strahlen-Windröschen 'Blue Shades';735,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.20;Chionodoxa luciliae - Schneeglanz;1029,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+11.21;Puschkinia scilloides var. libanotica - Puschkinie;1029,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+12.1;Baugrund auflockern kreuzweise Aufreißen T 20cm;30,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+12.2;Feinplanum für Pflanzflächen;152,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+12.3;Feinplanum für Rasenflächen;31,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+12.4;Oberboden, liefern, profilgerecht auftragen, Rasenfläche;5,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+12.5;NPK-Volldünger auf Pflanzflächen aufbringen;152,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+12.6;NPK-Langzeitrasendünger mit Magnesium auf Rasenflächen;31,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+12.7;Pflanzgrube verfüllen Vegetationstragschicht/Substrat nicht überbaubar D 120cm;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+12.8;Pflanzgrube verfüllen Vegetationstragschicht und Rigolensubstrat Einzelbaum;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+12.9;Schutzanstrich an Stamm;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+12.10;Hornspäne für Pflanzflächen;152,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+12.11;Wurzelschutz;170,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+12.12;Unterirdisches Wurzelballenverankerungssystem für Bäume;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+13.1;Bäume verschiedener Arten setzen StU 20-25;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+13.2;Bäume verschiedener Arten setzen StU 25-30;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+13.3;Staudenpflanzung in vorbereitete Pflanzflächen;392,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+13.4;Bodendeckerpflanzung in vorbereitete Pflanzflächen;406,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
+13.5;Blumenzwiebeln verschiedener Arten, setzen;3626,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb.D83
 1;Baustelle für sämtliche aufgeführte Leistungen, einrichten, herstellen der dazu erforderlichen Lager- und Arbeitsplätze, Flächen sind im Lageplan ausgewiesen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb_V33.X83
 2;Baustelleneinrichtung für sämtliche aufgeführte Leistungen, vorhalten, Flächen und deren Nutzungsdauer sind im Lageplan ausgewiesen,;18,0;StMt;gaeb;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb_V33.X83
 3;Baustelle für sämtliche, in der Leistungsbeschreibung aufgeführten Leistungen räumen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/26-07-24_LV Friedrichsplatz Gaeb_V33.X83

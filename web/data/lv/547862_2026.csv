@@ -1,4 +1,45 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01010010;Technische Bearbeitung Außentüren und Fenster;1,0;psch;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+02010010;Vorwand-Montagesystem, Zarge, 80x85 mm;275,0;m;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+02010020;Vorwand-Montagesystem, bodentiefer Abschluss;8,5;m;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03010010;Alu-Fenster-Element, 1 tlg., 1135x3265 mm;4,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03010020;Alu-Fenster-Element, 2 tlg.,  5340x2695 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03010030;Alu-Fenster-Schiebetür-Element, ca. 4090 x 2695 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03020010;Alu-Tür-Element. 3tlg., OL, 1.flg, NA, 2250 mm x 3265 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03020020;Alu-Tür-Element, 1tlg., OL, 1.flg, NA, 1250 mm x 3265 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03020030;Alu-Tür-Element. 1tlg., OL, 1.flg, 1135 mm x 3265 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03020040;Alu-Tür-Element, 1tlg., 1.flg, NA, 1135 mm x 2135 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03020050;Alu-Tür-Element, 1tlg., 1.flg, 1135 mm x 2135 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03030010;Alu-Tür-Element, 1tlg., 1.flg, 1200 mm x 2260 mm, T30/RS;2,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03030020;Alu-Tür-Element, 1tlg., 1.flg, 1200 mm x 2260 mm, T30/RS, FSA;2,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03030030;Alu-Tür-Element, 1tlg., 1.flg, 1200 mm x 2260 mm, DDS;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03030040;Alu-Tür-Element, 1tlg., 1.flg, 1200 mm x 2260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03030050;Visuelle Markierung Glasrahmentür, 1-flg.;6,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03040010;Zulage Motorschloss, 3-Punktverriegelung;6,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03040020;Zulage OTS mit Fastfeststellung;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03040030;Türstopper VA, Wand-/Boden;12,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+04010010;PVC-Fenster, 1tlg., 1flg, 1135 x 925 mm;7,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+04010020;PVC-Fenster, 1tlg., 1-flg, 1135 x 2695 mm, mit Kämpfer;14,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+04010030;PVC-Fenster, 1tlg., 1flg, 1135 x 1695 mm;6,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+05010010;Raffstoreanlagen 1135 x 2695 mm;12,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+05010020;Raffstoreanlagen 1135 x 2695 mm, Verdunklung;7,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+05010030;Raffstoreanlagen 1135 x 3265 mm;4,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+05010040;Raffstoreanlagen 1250 x 2695 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+05010050;Raffstoreanlagen 5340 x 2695 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+05010060;Raffstoreanlagen 4090 x 2695 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+05010070;Parametrierung, Inbetriebnahme und Einweisung;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+06010010;Fassadenverkleidung Metall, ca. 1135 x 400 mm;20,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+06010020;Fassadenverkleidung Metall, ca. 1135 x 2340 mm;7,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+06010030;Fassadenverkleidung Metall, ca. 5340 x 415 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+06010040;Fassadenverkleidung Metall, ca. 4090 x 415 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+06010050;Fassadenverkleidung Metall, als Laibungsblech, Eingangstür;2,0;St;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+07010010;Laibungsblech aus Aluminium, 2-fach gekantet, d = 2 mm;13,5;m;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+07010020;Laibungsblech aus Aluminium, 2-fach gekantet, d = 2 mm, Sektionaltore;105,0;m;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+07010030;Fensterbänke aus Aluminium, Ausladung 320mm;42,5;m;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+08010010;Stundensatz: Vorarbeiter;5,0;h;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+08010020;Stundensatz: Facharbeiter;10,0;h;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+08010030;Stundensatz: Bauhelfer;5,0;h;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+09010010;Dokumentation;1,0;psch;gaeb-flat;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
 0010;Technische Bearbeitung (Werkstatt- und Montageplanung) für alle in den nachfolgenden Leistungspositionen beschriebenen Bauelemente der Vergabeeinheit gem. ZTV, VOB/C und Vortexten.;1,0;psch;gaeb;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung_V33.X83
 0010;Vorwand-Montagesystem, Zarge inkl. Zargenbefestigung und kompletter Abdichtungen in Dämmebene, gem. Systembeschreibung 1.0 und gem. Herstellervorschrift und aktueller GEG liefern und fachgerecht montieren, inkl. luftdichter Anschluss an Fensterprofil (raumseitig) mit feuchtevariablem Vlies-Folienver;275,0;m;gaeb;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung_V33.X83
 0020;Bodentiefer Abschluss des Vorwand-Montagesystems, Herstellervorschrift und aktueller GEG liefern und fachgerecht montieren, inkl. luftdichter Anschluss an Fensterprofil mit feuchtevariablem Vlies-Folienverbund.;8,5;m;gaeb;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung_V33.X83
@@ -40,6 +81,47 @@
 0020;Stundensatz für Leistungen, welche nicht in den Positionen erfasst sind und nur auf ausdrückliche Anweisung der Bauleitung gegen Nachweis zur Ausführung kommen.;10,0;h;gaeb;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung_V33.X83
 0030;Stundensatz für Leistungen, welche nicht in den Positionen erfasst sind und nur auf ausdrückliche Anweisung der Bauleitung gegen Nachweis zur Ausführung kommen.;5,0;h;gaeb;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung_V33.X83
 0010;Bestand und Revisionspläne sind nach VOB eine;1,0;psch;gaeb;leistungsbeschreibungen/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung_V33.X83
+01010010;Technische Bearbeitung Außentüren und Fenster;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+02010010;Vorwand-Montagesystem, Zarge, 80x85 mm;275,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+02010020;Vorwand-Montagesystem, bodentiefer Abschluss;8,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03010010;Alu-Fenster-Element, 1 tlg., 1135x3265 mm;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03010020;Alu-Fenster-Element, 2 tlg.,  5340x2695 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03010030;Alu-Fenster-Schiebetür-Element, ca. 4090 x 2695 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03020010;Alu-Tür-Element. 3tlg., OL, 1.flg, NA, 2250 mm x 3265 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03020020;Alu-Tür-Element, 1tlg., OL, 1.flg, NA, 1250 mm x 3265 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03020030;Alu-Tür-Element. 1tlg., OL, 1.flg, 1135 mm x 3265 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03020040;Alu-Tür-Element, 1tlg., 1.flg, NA, 1135 mm x 2135 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03020050;Alu-Tür-Element, 1tlg., 1.flg, 1135 mm x 2135 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03030010;Alu-Tür-Element, 1tlg., 1.flg, 1200 mm x 2260 mm, T30/RS;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03030020;Alu-Tür-Element, 1tlg., 1.flg, 1200 mm x 2260 mm, T30/RS, FSA;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03030030;Alu-Tür-Element, 1tlg., 1.flg, 1200 mm x 2260 mm, DDS;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03030040;Alu-Tür-Element, 1tlg., 1.flg, 1200 mm x 2260 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03030050;Visuelle Markierung Glasrahmentür, 1-flg.;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03040010;Zulage Motorschloss, 3-Punktverriegelung;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03040020;Zulage OTS mit Fastfeststellung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+03040030;Türstopper VA, Wand-/Boden;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+04010010;PVC-Fenster, 1tlg., 1flg, 1135 x 925 mm;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+04010020;PVC-Fenster, 1tlg., 1-flg, 1135 x 2695 mm, mit Kämpfer;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+04010030;PVC-Fenster, 1tlg., 1flg, 1135 x 1695 mm;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+05010010;Raffstoreanlagen 1135 x 2695 mm;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+05010020;Raffstoreanlagen 1135 x 2695 mm, Verdunklung;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+05010030;Raffstoreanlagen 1135 x 3265 mm;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+05010040;Raffstoreanlagen 1250 x 2695 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+05010050;Raffstoreanlagen 5340 x 2695 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+05010060;Raffstoreanlagen 4090 x 2695 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+05010070;Parametrierung, Inbetriebnahme und Einweisung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+06010010;Fassadenverkleidung Metall, ca. 1135 x 400 mm;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+06010020;Fassadenverkleidung Metall, ca. 1135 x 2340 mm;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+06010030;Fassadenverkleidung Metall, ca. 5340 x 415 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+06010040;Fassadenverkleidung Metall, ca. 4090 x 415 mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+06010050;Fassadenverkleidung Metall, als Laibungsblech, Eingangstür;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+07010010;Laibungsblech aus Aluminium, 2-fach gekantet, d = 2 mm;13,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+07010020;Laibungsblech aus Aluminium, 2-fach gekantet, d = 2 mm, Sektionaltore;105,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+07010030;Fensterbänke aus Aluminium, Ausladung 320mm;42,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+08010010;Stundensatz: Vorarbeiter;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+08010020;Stundensatz: Facharbeiter;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+08010030;Stundensatz: Bauhelfer;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
+09010010;Dokumentation;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung.D83
 0010;Technische Bearbeitung (Werkstatt- und Montageplanung) für alle in den nachfolgenden Leistungspositionen beschriebenen Bauelemente der Vergabeeinheit gem. ZTV, VOB/C und Vortexten.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung_V33.X83
 0010;Vorwand-Montagesystem, Zarge inkl. Zargenbefestigung und kompletter Abdichtungen in Dämmebene, gem. Systembeschreibung 1.0 und gem. Herstellervorschrift und aktueller GEG liefern und fachgerecht montieren, inkl. luftdichter Anschluss an Fensterprofil (raumseitig) mit feuchtevariablem Vlies-Folienver;275,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung_V33.X83
 0020;Bodentiefer Abschluss des Vorwand-Montagesystems, Herstellervorschrift und aktueller GEG liefern und fachgerecht montieren, inkl. luftdichter Anschluss an Fensterprofil mit feuchtevariablem Vlies-Folienverbund.;8,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-3-005_20260625_23-10_LV-Fenster-Türen_Angebotsaufforderung_V33.X83

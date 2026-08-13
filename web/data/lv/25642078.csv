@@ -1,0 +1,29 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+010010;Aufbauen längenorientiert Standgerüst Arbeitsgerüst 2kN/m2 SW06 H1;1100,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+010020;Gebrauchsüberlassung längenorientiert Standgerüst Arbeitsgerüst 2kN/m2 SW06 H1;8800,0;m2Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+010025;Aufbauen Belagverbreiterung wandseitig B 0,25-0,33m;110,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+010027;Gebrauchsüberlassung Belagverbreiterung wandseitig B 0,25-0,33m;880,0;mWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+010030;Aufbauen Dachfanggerüst Netz B bis 0,3m;110,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+010040;Gebrauchsüberlassung Dachfanggerüst Netz B bis 0,3m;880,0;mWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+010050;Aufbauen Überbrückung Systemgitterträger L 5-6m H bis 4m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+010060;Gebrauchsüberlassung Überbrückung Systemgitterträger L 5-6m H bis 4m;8,0;StWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+010070;Aufbauen Fußgängertunnel Gerüstbelag Folie beidseitig Planen Tunnel-B 1,2-1,5m Tunnel-H 2,2m L 2 m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+010080;Gebrauchsüberlassung Fußgängertunnel Gerüstbelag Folie beidseitig Planen Tunnel-B 1,2-1,5m Tunnel-H 2,2m L 2 m;8,0;StWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+010110;Aufbauen Treppenaufgang einläufig H 9-10m Lauf-B 0,5-0,75m;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+010120;Gebrauchsüberlassung Treppenaufgang einläufig H 9-10m Lauf-B 0,5-0,75m;16,0;StWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+010130;Bauzaun Stahlrohrrahmen verz Vergitterung H 2m aufstellen räumen;70,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+010140;Schutzzaun Stahlrohrrahmen verz Vergitterung H 2m vorhalten;560,0;mWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+010150;Tür abschließbar Maschendraht B bis 1m H 1,75-2m einbauen ausbauen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+010160;Tür abschließbar Maschendraht B bis 1m H 1,75-2m vorhalten;8,0;StWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+020010;Aufbauen längenorientiert Standgerüst Arbeitsgerüst 2kN/m2 SW06 H1;128,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+020011;Gebrauchsüberlassung längenorientiert Standgerüst Arbeitsgerüst 2kN/m2 SW06 H1;1024,0;m2Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+020013;Aufbauen Belagverbreiterung wandseitig B 0,25-0,33m;32,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+020015;Gebrauchsüberlassung Belagverbreiterung wandseitig B 0,25-0,33m;256,0;mWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+020030;Aufbauen Dachfanggerüst Netz B bis 0,3m;32,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+020040;Gebrauchsüberlassung Dachfanggerüst Netz B bis 0,3m;256,0;mWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+020050;Aufbauen Treppenaufgang einläufig H 4-5m Lauf-B 0,5-0,75m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+020060;Gebrauchsüberlassung Treppenaufgang einläufig H 4-5m Lauf-B 0,5-0,75m;8,0;StWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+030010;Aufbauen längenorientiert Standgerüst Arbeitsgerüst 2kN/m2 SW06 H1;120,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+030020;Gebrauchsüberlassung längenorientiert Standgerüst Arbeitsgerüst 2kN/m2 SW06 H1;960,0;m2Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+030030;Aufbauen Dachfanggerüst Netz B bis 0,3m;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83
+030040;Gebrauchsüberlassung Dachfanggerüst Netz B bis 0,3m;240,0;mWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 30024247.D83

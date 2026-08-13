@@ -1,4 +1,72 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;Akustikdecke 625 x 625 mm;330,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.2;Flächengerüst;330,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.3;Akustikdecke 625 x 625 mm;950,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.4;Flächengerüst;10,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.5;Akustikdecke 625 x 625 mm;360,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.6;Akustikdecke 625 x 1.250 mm;25,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.7;Akustikdecke 625 x 1.250 mm;295,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.8;Akustikdecke 625 x 1.250 mm;55,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.9;Randwinkel;2100,0;m;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.10;Randfries liefern und einbauen;100,0;m;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.11;Randfries liefern und einbauen;200,0;m;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.12;Randfries liefern und einbauen;1400,0;m;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.13;Randfries liefern und einbauen;400,0;m;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.14;Löcher herstellen;75,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.15;Verstärkungen für Elektro;85,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.16;Verstärkungen für Elektro;50,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.17;Verstärkungen für Lüftung;15,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.18;Verstärkungen für Lüftung;5,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.19;Öffnungen herstellen;85,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.20;Öffnungen herstellen;50,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.21;Öffnungen herstellen;15,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.22;Öffnungen herstellen;5,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.23;Ausschnitte für Rohrleitungen;15,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.24;Anschluß-, Eckfugen herstellen;250,0;m;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.25;Auskofferung mit Brandschutzeigenschaften;1,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.26;Auskofferung mit Brandschutzeigenschaften;4,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.27;Abkofferung liefern und montieren;150,0;m;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.28;Abkofferung liefern und montieren;100,0;m;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.29;Einfassprofil, Gipsplattenanschluss;35,0;m;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.30;Metallständerwand;340,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.31;Schiebetür-Unterkonstruktion für Metallständerwand;3,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.32;Türöffnung;11,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.33;Türöffnung;3,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.34;Fensteröffnung;2,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.35;Wandabschluss / freies Wandende an;2,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.36;Metallständerwand;30,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.37;Metallständerwand;10,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.38;Vorsatzschale freistehend;22,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.39;Vorsatzschale freistehend;20,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.40;Metallständerwand;990,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.41;Türöffnung;50,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.42;Türöffnung;9,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.43;Wandabschluss / freies Wandende an;6,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.44;Metallständerwand;20,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.45;Metallständerwand;20,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.46;Vorsatzschale freistehend;90,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.47;Vorsatzschale direkt befestigt;8,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.48;Vorsatzschale direkt befestigt;5,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.49;Zulage zu den v. g. Positionen;40,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.50;Metallständerwand;300,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.51;Türöffnung;15,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.52;Türöffnung;3,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.53;Wandabschluss / freies Wandende an;2,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.54;Metallständerwand;10,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.55;Metallständerwand;10,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.56;Vorsatzschale freistehend;30,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.57;Zulage zu den v. g. Positionen;16,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.58;Runde Wandausschnitte;15,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.59;Runde Wandausschnitte;12,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.60;Runde Wandausschnitte;12,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.61;eckige Durchführungen;50,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.62;eckige Durchführungen;3,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.63;eckiger Wandausschnitte;22,0;St;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.64;Eckschutzschienen;125,0;m;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+01.65;Schachtwände;170,0;m²;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+02.1;Meister;8,0;h;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+02.2;Facharbeiter;25,0;h;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
+02.3;Hilfsarbeiter bzw. Auszubildener;25,0;h;gaeb-flat;leistungsbeschreibungen/LV - Trockenbauarbeiten.D83
 1;OWAconstruct System S 3 mit OWAcoustic Mineralplatte Brillianto A;330,0;m²;gaeb;leistungsbeschreibungen/LV - Trockenbauarbeiten_V33.X83
 2;Arbeitsgerüst/ Innenraumgerüst für Montage der vor genannten Akustikdecken einschl. Auf-, Um- und Abbauen sowie vorhalten für die Dauer der eigenen Leistung, nach Erfordernis. Nach den aktuellen Bestimmungen der Berufsgenossenschaft sowie den jeweiligen Herstellervorschriften.;330,0;m²;gaeb;leistungsbeschreibungen/LV - Trockenbauarbeiten_V33.X83
 3;Akustikdecke, einschl. der erforderlichen Unterkonstruktion, als sichtbares System mit herausnehmbaren Platten, wie in Position 07.01.1 beschrieben liefern und montieren.;950,0;m²;gaeb;leistungsbeschreibungen/LV - Trockenbauarbeiten_V33.X83

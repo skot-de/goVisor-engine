@@ -1,0 +1,181 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Systemverteiler zur Aufnahme und Auswertung von Wettersensorik;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+2;Die Applikation Wetterstation ist eine;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+3;Die Funktion Verschattungskorrektur;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+4;"Die Funktion ""Dynamische Windüber-";1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+1;Controller;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+2;Application Einzellizenz für Software;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+3;Bus-Endmodul;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+4;Der DALI-Master ist;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+5;Der DALI-Master-DC/DC-;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+6;Besonders flacher DALI-Multisensor;2,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+7;16-Kanal-Digitaleingangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+8;8-Kanal-Digitalausgangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+9;Relaismodul, 1 Schließer;7,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+10;8-Kanal-Analogeingang RTD;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+11;Das Modul fungiert als Master;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+12;Serielle-Schnittstelle RS-232/-485;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+13;Ausgangsspannung DC 24 V,;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+14;Dezentraler Modbus TCP Schaltaktor / Motorsteuereinheit für die Ansteuerung von bis zu 4 konventionellen 230V AC Jalousie- oder Behangantrieben. Die Motorsteuereinheit muss weiterhin über 8 digitale Eingänge, Betriebsspannung 24V DC (intern bereitgestellt), verfügen, welche für das übergeordnete Ste;5,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+15;Controller;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+16;Application Einzellizenz für Software;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+17;Bus-Endmodul;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+18;Der DALI-Master ist;2,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+19;Stromversorgung COMPACT;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+20;Besonders flacher DALI-Multisensor;5,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+21;8-Kanal-Digitaleingangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+22;8-Kanal-Digitalausgangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+23;Relaismodul, 1 Schließer;4,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+24;8-Kanal-Analogeingang RTD;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+25;8-Kanal-Analogeingang 0-10 V/ ±10 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+26;Das Modul fungiert als Master;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+27;Serielle-Schnittstelle RS-232/-485;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+28;Ausgangsspannung DC 24 V,;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+29;Dezentraler Modbus TCP Schaltaktor / Motorsteuereinheit für die Ansteuerung von bis zu 4 konventionellen 230V AC Jalousie- oder Behangantrieben. Die Motorsteuereinheit muss weiterhin über 8 digitale Eingänge, Betriebsspannung 24V DC (intern bereitgestellt), verfügen, welche für das übergeordnete Ste;5,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+30;Controller;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+31;Application Einzellizenz für Software;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+32;Busendmodul;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+33;Der DALI-Master ist;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+34;Der DALI-Master-DC/DC-;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+35;Besonders flacher DALI-Multisensor;4,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+36;16-Kanal-Digitaleingangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+37;8-Kanal-Digitalausgangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+38;Relaismodul, 1 Schließer;8,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+39;4-Kanal-Analogeingang RTD;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+40;Das Modul fungiert als Master;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+41;Ausgangsspannung DC 24 V,;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+42;Dezentraler Modbus TCP Schaltaktor / Motorsteuereinheit für die Ansteuerung von bis zu 4 konventionellen 230V AC Jalousie- oder Behangantrieben. Die Motorsteuereinheit muss weiterhin über 8 digitale Eingänge, Betriebsspannung 24V DC (intern bereitgestellt), verfügen, welche für das übergeordnete Ste;6,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+43;Controller;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+44;Application Einzellizenz für Software;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+45;Bus-Endmodul;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+46;Der DALI-Master ist;2,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+47;Stromversorgung COMPACT;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+48;Besonders flacher DALI-Multisensor;3,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+49;8-Kanal-Digitaleingangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+50;8-Kanal-Digitalausgangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+51;Relaismodul, 1 Schließer;4,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+52;4-Kanal-Analogeingang RTD;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+53;4-Kanal-Analogeingang 0-10 V SE;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+54;Das Modul fungiert als Master;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+55;Ausgangsspannung DC 24 V,;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+56;Dezentraler Modbus TCP Schaltaktor / Motorsteuereinheit für die Ansteuerung von bis zu 4 konventionellen 230V AC Jalousie- oder Behangantrieben. Die Motorsteuereinheit muss weiterhin über 8 digitale Eingänge, Betriebsspannung 24V DC (intern bereitgestellt), verfügen, welche für das übergeordnete Ste;8,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+57;Controller;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+58;Application Einzellizenz für Software;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+59;Bus-Endmodul;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+60;Der DALI-Master ist;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+61;Der DALI-Master-DC/DC-;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+62;Besonders flacher DALI-Multisensor;4,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+63;16-Kanal-Digitaleingangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+64;16-Kanal-Digitalausgangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+65;Relaismodul, 1 Schließer;9,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+66;4-Kanal-Analogeingang RTD;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+67;Das Modul fungiert als Master;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+68;Ausgangsspannung DC 24 V,;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+69;Dezentraler Modbus TCP Schaltaktor / Motorsteuereinheit für die Ansteuerung von bis zu 4 konventionellen 230V AC Jalousie- oder Behangantrieben. Die Motorsteuereinheit muss weiterhin über 8 digitale Eingänge, Betriebsspannung 24V DC (intern bereitgestellt), verfügen, welche für das übergeordnete Ste;7,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+70;Controller;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+71;Application Einzellizenz für Software;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+72;Bus-Endmodul;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+73;Der DALI-Master ist;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+74;Der DALI-Master-DC/DC-;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+75;Besonders flacher DALI-Multisensor;3,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+76;8-Kanal-Digitaleingangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+77;8-Kanal-Digitalausgangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+78;Relaismodul, 1 Schließer;4,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+79;4-Kanal-Analogeingang RTD;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+80;4-Kanal-Analogeingang 0-10 V SE;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+81;Das Modul fungiert als Master;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+82;Serielle-Schnittstelle RS-232/-485;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+83;Ausgangsspannung DC 24 V,;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+84;Dezentraler Modbus TCP Schaltaktor / Motorsteuereinheit für die Ansteuerung von bis zu 4 konventionellen 230V AC Jalousie- oder Behangantrieben. Die Motorsteuereinheit muss weiterhin über 8 digitale Eingänge, Betriebsspannung 24V DC (intern bereitgestellt), verfügen, welche für das übergeordnete Ste;9,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+85;Controller;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+86;Application Einzellizenz für Software;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+87;Bus-Endmodul;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+88;Der DALI-Master ist;2,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+89;Stromversorgung COMPACT;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+90;Besonders flacher DALI-Multisensor;4,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+91;16-Kanal-Digitaleingangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+92;8-Kanal-Digitalausgangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+93;Relaismodul, 1 Schließer;8,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+94;4-Kanal-Analogeingang RTD;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+95;4-Kanal-Analogeingang 0-10 V SE;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+96;Das Modul fungiert als Master;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+97;Ausgangsspannung DC 24 V,;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+98;Dezentraler Modbus TCP Schaltaktor / Motorsteuereinheit für die Ansteuerung von bis zu 4 konventionellen 230V AC Jalousie- oder Behangantrieben. Die Motorsteuereinheit muss weiterhin über 8 digitale Eingänge, Betriebsspannung 24V DC (intern bereitgestellt), verfügen, welche für das übergeordnete Ste;7,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+99;Controller;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+100;Application Einzellizenz für Software;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+101;Bus-Endmodul;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+102;Der DALI-Master ist;2,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+103;Stromversorgung COMPACT;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+104;Besonders flacher DALI-Multisensor;3,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+105;8-Kanal-Digitaleingangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+106;8-Kanal-Digitalausgangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+107;Relaismodul, 1 Schließer;4,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+108;4-Kanal-Analogeingang RTD;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+109;4-Kanal-Analogeingang 0-10 V SE;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+110;Das Modul fungiert als Master;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+111;Serielle-Schnittstelle RS-232/-485;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+112;Ausgangsspannung DC 24 V,;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+113;Dezentraler Modbus TCP Schaltaktor / Motorsteuereinheit für die Ansteuerung von bis zu 4 konventionellen 230V AC Jalousie- oder Behangantrieben. Die Motorsteuereinheit muss weiterhin über 8 digitale Eingänge, Betriebsspannung 24V DC (intern bereitgestellt), verfügen, welche für das übergeordnete Ste;10,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+114;Controller;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+115;Application Einzellizenz für Software;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+116;Bus-Endmodul;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+117;Der DALI-Master ist;4,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+118;Stromversorgung COMPACT;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+119;Besonders flacher DALI-Multisensor;35,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+120;16-Kanal-Digitaleingangsmodul DC 24 V;2,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+121;8-Kanal-Digitalausgangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+122;16-Kanal-Digitalausgangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+123;8-Kanal-Digitalausgangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+124;Relaismodul, 1 Schließer;17,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+125;8-Kanal-Analogeingang RTD;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+126;Das Modul fungiert als Master;2,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+127;Ausgangsspannung DC 24 V,;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+1;Controller;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+2;Bus-Endmodul;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+3;8-Kanal-Digitalausgangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+4;Relaismodul, 1 Wechsler;7,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+5;16-Kanal-Digitaleingangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+6;8-Kanal-Digitaleingangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+7;8-Kanal-Analogeingang 0-10 V/ ±10 V;3,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+8;8-Kanal-Analogeingang RTD;4,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+9;4-Kanal-Analogeingang RTD;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+10;8-Kanal-Analogausgang;2,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+11;4-Kanal-Analogeingang 0-10 V SE;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+12;M-Bus-Master;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+13;Ausgangsspannung DC 24 V,;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+14;Touch-Panel;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+15;Industrial-Managed-Switch, 8 Ports, 100Base-TX, 2 Slots 100 Base-FX/1000Base-SX/LX;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+16;Controller;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+17;Bus-Endmodul;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+18;16-Kanal-Digitalausgangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+19;Relaismodul, 1 Wechsler;16,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+20;16-Kanal-Digitaleingangsmodul DC 24 V;2,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+21;8-Kanal-Digitaleingangsmodul DC 24 V;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+22;8-Kanal-Analogeingang 0-10 V/ ±10 V;2,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+23;8-Kanal-Analogeingang RTD;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+24;8-Kanal-Analogausgang;2,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+25;4-Kanal-Analogeingang 0-10 V SE;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+26;Ausgangsspannung DC 24 V,;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+27;Touch-Panel;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+28;Industrial-Managed-Switch, 8 Ports, 100Base-TX, 2 Slots 100 Base-FX/1000Base-SX/LX;1,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+1;Installationskleinverteiler Aufputz aus Kunststoff, geprüft nach DIN VDE 61439-3. Bemessungsspannung max. 400 V / 50 Hz, Schutzart IP30.;9,0;Stk;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+2;Schaltschrankgehäuse Standfeld 800x2000x400;2,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+3;Elektrische Anschlüsse beidseitig bis 2,5mm2 und max. 7 Adern;480,0;St;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+4;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) NHXMH-J 3 x 1,5 RE, Cu-Zahl 43, Brandklasse B2ca DIN EN 50575 (VDE 0482-575), in Mischverlegung.;2950,0;m;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+5;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) NHXMH-J 5 x 1,5 RE, Cu-Zahl 72, Brandklasse B2ca DIN EN 50575 (VDE 0482-575), Mischverlegung.;2150,0;m;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+6;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) NHXMH-J 7 x 1,5 RE, Cu-Zahl 101, Brandklasse B2ca DIN EN 50575 (VDE 0482-575), Mischverlegung;500,0;m;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+7;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) NHXMH-J 3 x 2,5 RE, Cu-Zahl 72, Brandklasse B2ca DIN EN 50575 (VDE 0482-575), Mischverlegung.;750,0;m;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+8;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) NHXMH-J 5 x 2,5 RE, Cu-Zahl 120, Brandklasse B2ca DIN EN 50575 (VDE 0482-575), Mischverlegung.;850,0;m;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+9;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 2 x 2 x 0,8 Bd, Mischverlegung;1650,0;m;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+10;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 4 x 2 x 0,8 Bd, Mischverlegung;1480,0;m;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+11;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 6 x 2 x 0,8 Bd, Mischverlegung;900,0;m;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+12;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 8 x 2 x 0,8 Bd, Mischverlegung;540,0;m;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+13;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 10 x 2 x 0,8 Bd, Mischverlegung;450,0;m;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+14;Datenkabel ekuMaxx 1200 Pro;2130,0;m;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+1;Inbetriebnahme der gesamten Anlage;1,0;psch;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+2;Probebetrieb der gesamten Anlage;1,0;psch;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+3;Revisionsunterlagen / Dokumentation;1,0;psch;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+4;Einweisung des Betreiberpersonals;1,0;psch;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+5;Stundenlohnarbeiten durch Obermonteur/-in;10,0;h;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+6;Stundenlohnarbeiten durch Monteur/-in;15,0;h;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83
+7;Stundenlohnarbeiten durch Helfer/-in;10,0;h;gaeb;leistungsbeschreibungen/VE4-4810 Gebäudeautomation.X83

@@ -1,0 +1,74 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Baustelle einrichten Dies.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;sonstiges/511-2026.D83
+00000002;Baustelle räumen Dies. LV-Abschn.;1,0;Psch;gaeb-flat;sonstiges/511-2026.D83
+00010001;Verkehrssich. läng. Dauer aufbauen Arb.st.u. Uml.str*Verk.konzept AG Anordnung Unt. AG*... Freitext ...;1,0;Psch;gaeb-flat;sonstiges/511-2026.D83
+00010002;Verkehrssich. läng. Dauer vorhalten wie Vorposition;20,0;d;gaeb-flat;sonstiges/511-2026.D83
+00010003;Verkehrssich. läng. Dauer abbauen Verk.konzept AG;1,0;Psch;gaeb-flat;sonstiges/511-2026.D83
+00010004;Absp.g.,Warneinr. aufb.,abb.u.vorh. Abspsch. 250x2000*5 Strah.eins. rot;15,0;St;gaeb-flat;sonstiges/511-2026.D83
+00010005;Absp.g.,Warneinr. aufb.,abb.u.vorh. Pfeilbake doppels*Typ RA2;15,0;St;gaeb-flat;sonstiges/511-2026.D83
+00010006;Verkehrsschild aufb., abb., vorh. ... Freitext ...*Größe 2 Typ RA1*... Freitext ... ... Freitext ...;10,0;St;gaeb-flat;sonstiges/511-2026.D83
+00010007;Verkehrsschild aufb., abb., vorh. Ronde,Dreie.Quad.*Größe 2 Typ RA2*... Freitext ... ... Freitext ...*... Freitext ...;10,0;St;gaeb-flat;sonstiges/511-2026.D83
+00010008;Kontrolle d. Verkehrss. zwei bzw. einmal*... Freitext ...;20,0;d;gaeb-flat;sonstiges/511-2026.D83
+00010009;Verkehrstafel ändern Tafel über 2-6 m2*Höhe über 2,00 m a./i.Kraft setzen*mob.Auskreuzvorr.;8,0;St;gaeb-flat;sonstiges/511-2026.D83
+00010010;Transp. LSA f. Engst. aufb. u. abb. LSA Typ C*Verbind. Wahl AN Entf. ü.50bis100m*Versorg. Wahl AN VTU erstellen;1,0;St;gaeb-flat;sonstiges/511-2026.D83
+00010011;Transport. Lichtsignalanlage vorh. wie Vorposition;20,0;d;gaeb-flat;sonstiges/511-2026.D83
+00020001;Bankett schälen Breite bis 1,00 m*... Freitext ... 12 tief+ 6 hoch*... Freitext ... SG entsorgen;800,0;m;gaeb-flat;sonstiges/511-2026.D83
+00020002;Gefährl. Abfall aus Baustelle ents. Bankettschälgut*Gebühr einrechn.;70,0;t;gaeb-flat;sonstiges/511-2026.D83
+00020003;Bankett schälen - Leitpfosten Breite 1,00 m*Dicke 5-10cm 12 tief+ 6 hoch*Bankett, Leitpf. SG entsorgen;800,0;m;gaeb-flat;sonstiges/511-2026.D83
+00020004;N.gefährl. Abfall aus Baustelle ent Bankettschälgut*Entsorgung AN Gebühr einrechn.*Nachweis Ulg. AG;200,0;t;gaeb-flat;sonstiges/511-2026.D83
+00020005;Leitpfosten abbauen Eingrableitpfost.*Abbauteil lagern;35,0;St;gaeb-flat;sonstiges/511-2026.D83
+00020006;Leitpfosten des AG aufstellen Eingrableitpf.*... Freitext ... HB 1;35,0;St;gaeb-flat;sonstiges/511-2026.D83
+00020007;Verkehrsschild umsetzen;10,0;St;gaeb-flat;sonstiges/511-2026.D83
+00020008;Leitpfosten abbauen ... Freitext ...*erf. Erdarbeiten ... Freitext ...;10,0;St;gaeb-flat;sonstiges/511-2026.D83
+00020009;Leitpfosten des AG aufstellen ... Freitext ...*Pfosten lagern HB 1;10,0;St;gaeb-flat;sonstiges/511-2026.D83
+00020010;Oberboden liefern und andecken ... Freitext ...*... Freitext ... Andeck. ü. 5-15cm*Abrechng.Auftrag;150,0;m3;gaeb-flat;sonstiges/511-2026.D83
+00020011;Rasenansaat mit RSM herstellen ... Freitext ...*Menge 20 g/m2 RSM 7.1.1;800,0;m2;gaeb-flat;sonstiges/511-2026.D83
+00030001;Asphalt fräsen ADS*Tiefe ü.2,5-4,5cm Fahrbahn*Fräsasph. verw.;8200,0;m2;gaeb-flat;sonstiges/511-2026.D83
+00030002;Unterlage reinigen gefr. Asphaltsch.;8200,0;m2;gaeb-flat;sonstiges/511-2026.D83
+00030003;Bitumenemulsion aufsprühen Bk100-Bk3,2*Asphalt gefräst C60BP4-S*Menge 300 g/m2 vor A.deckschicht;8200,0;m2;gaeb-flat;sonstiges/511-2026.D83
+00030004;Asphaltdecksch. aus AC 11 D S herst Bk10*... Freitext ... ... Freitext ...;820,0;t;gaeb-flat;sonstiges/511-2026.D83
+00030005;Abstumpfungsmaßnahme durchführen LFK 1/3*Menge 1 kg/m2 maschinell;8200,0;m2;gaeb-flat;sonstiges/511-2026.D83
+00030006;Naht oder Anschluss zur Fuge aufw. ... Freitext ...*über 20-100 m ... Freitext ...*Breite 10 mm schneiden;860,0;m;gaeb-flat;sonstiges/511-2026.D83
+00030007;Fugenfüllung herstellen ... Freitext ...*Deckschicht über 20-100 m*... Freitext ... Breite 10 mm*Fugenmasse N2;860,0;m;gaeb-flat;sonstiges/511-2026.D83
+00030008;Erschwernis infolge Einfassungen Erschwer. gesamt*A.deckschicht;830,0;m;gaeb-flat;sonstiges/511-2026.D83
+00030009;Naht in Asphaltschicht herst. ... Freitext ...*Längs-/Quernaht PmB heiß*Dicke ü.2,5-4,5cm;255,0;m;gaeb-flat;sonstiges/511-2026.D83
+00030010;Asphaltbefestigung trennen ... Freitext ...*schneiden Dicke ü. 3-6 cm;400,0;m;gaeb-flat;sonstiges/511-2026.D83
+00030011;Asphaltbefestigung aufnehmen Zwickel/Streif.*... Freitext ... Dicke ü. 3-6 cm*... Freitext ... Aufbr. Verw. AN;200,0;m2;gaeb-flat;sonstiges/511-2026.D83
+00030012;Asphalttragsch. aus AC 22 T S herst Bk10*Schadstellen*... Freitext ...;30,0;t;gaeb-flat;sonstiges/511-2026.D83
+00030013;Asphalt fräsen ATS*Asphaltbeton*... Freitext ... Fahrbahn*Fräsasph. verw.;5550,0;m2;gaeb-flat;sonstiges/511-2026.D83
+00030014;Unterlage reinigen gefr. Asphaltsch.;5550,0;m2;gaeb-flat;sonstiges/511-2026.D83
+00030015;Bitumenemulsion aufsprühen Bk100-Bk3,2*Asphalt gefräst C60BP4-S*Menge 300 g/m2 vor A.bindersch.;5550,0;m2;gaeb-flat;sonstiges/511-2026.D83
+00030016;Asphaltbindersch.a. AC 16 B S herst Bk10*... Freitext ... ... Freitext ...*Gestein SZ 18;835,0;t;gaeb-flat;sonstiges/511-2026.D83
+00030017;Erschwernis infolge Einbauten Erschwer. gesamt*A.deckschicht ... Freitext ...;1,0;St;gaeb-flat;sonstiges/511-2026.D83
+00030018;Schachtabdeckung anpassen in Asph.-Fläche*... Freitext ... Höher bis 5 cm;1,0;St;gaeb-flat;sonstiges/511-2026.D83
+00040001;Streifen/Rinne aus Betonst. aufn. ü. 12-15 cm dick*... Freitext ... Fugenmörtel*... Freitext ... Verwertung AN;30,0;m;gaeb-flat;sonstiges/511-2026.D83
+00040002;Rinne mit Pflast. aus Beton herst. ... Freitext ...*... Freitext ... o.F., m. Vorsatz.*3-zeilig ... Freitext ...*... Freitext ... ... Freitext ...;30,0;m;gaeb-flat;sonstiges/511-2026.D83
+00040003;Einbauteile in Asphaltbef. anpassen in Fahrbahn*... Freitext ... höher bis 5 cm*Beton+Asph.beton;2,0;St;gaeb-flat;sonstiges/511-2026.D83
+00040004;Asphaltbefestigung trennen Anbauber. längs*schneiden ... Freitext ...;30,0;m;gaeb-flat;sonstiges/511-2026.D83
+00040005;Asphalt fräsen ADS*Asphaltbeton*Tiefe ü.2,5-4,5cm Zwickel/Streifen*Breite ü100-150cm Fräsasph. verw.;45,0;m2;gaeb-flat;sonstiges/511-2026.D83
+00040006;Unterlage reinigen gefr. Asphaltsch.;45,0;m2;gaeb-flat;sonstiges/511-2026.D83
+00040007;Bitumenemulsion aufsprühen Bk100-Bk3,2*Asphalt gefräst C60BP4-S*Menge 300 g/m2 vor A.deckschicht;45,0;m2;gaeb-flat;sonstiges/511-2026.D83
+00040008;Asphaltdecksch. aus AC 11 D S herst Bk10*Menge 100 kg/m2 ... Freitext ...*... Freitext ...;45,0;m2;gaeb-flat;sonstiges/511-2026.D83
+00050001;Natursteinpflasterdecke aufnehmen Kantenl. ü.6-12cm*... Freitext ... ungeb. Fugenmat.*ungeb. Bettung Verwertung AN;15,0;m2;gaeb-flat;sonstiges/511-2026.D83
+00050002;Dehnungsfugenband anbringen;25,0;m;gaeb-flat;sonstiges/511-2026.D83
+00050003;Verkehrsinsel betonieren;15,0;m2;gaeb-flat;sonstiges/511-2026.D83
+00050004;Schicht ohne Bindemittel aufnehmen ... Freitext ...*Dicke ü.5-10cm ... Freitext ...*Bstoff. Verw.AN.;8,0;m2;gaeb-flat;sonstiges/511-2026.D83
+00050005;Dehnungsfugenband anbringen;15,0;m;gaeb-flat;sonstiges/511-2026.D83
+00050006;Dreicksinselin betonieren;8,0;m2;gaeb-flat;sonstiges/511-2026.D83
+00060001;Probegefäß liefern 10-l-Blecheimer*Mithilfe Kprüf.;5,0;St;gaeb-flat;sonstiges/511-2026.D83
+00060002;Bohrkern entnehmen Kern-DU 15 cm*... Freitext ... Asphaltschicht*Verfül. Asphalt;10,0;St;gaeb-flat;sonstiges/511-2026.D83
+01000001;Längsmarkierung entfernen Blockmark. 1 zu 1*Breite 0,25 m Plastik*a.Asphaltdecksch. Deckenerneuerung*feinstfräsen Abf.d. Verw.zuf.;240,0;m;gaeb-flat;sonstiges/511-2026.D83
+01000002;Markierungszeichen entfernen Plastikmasse*a.Asphaltdecksch. Deckenerneuerung*feinstfräsen Abf.d. Verw.zuf.;6,0;m2;gaeb-flat;sonstiges/511-2026.D83
+01000003;Sonstige Markierung entfernen Quermarkierung*Breite 0,50 m Plastik*a.Asphaltdecksch. Deckenerneuerung*feinstfräsen Abf.d. Verw.zuf.;15,0;m;gaeb-flat;sonstiges/511-2026.D83
+01000004;Markierungszeichen entfernen Farbe*a.Asphaltdecksch. Deckenerneuerung*feinstfräsen Abf.d. Verw.zuf.;140,0;m2;gaeb-flat;sonstiges/511-2026.D83
+01010001;Markierungsfläche trocknen;50,0;m2;gaeb-flat;sonstiges/511-2026.D83
+01010002;Markierungsfläche reinigen von Hand;50,0;m2;gaeb-flat;sonstiges/511-2026.D83
+01020001;Längsmarkierung Typ II herstellen durchg.Fb.begr.*Breite 0,12 m mit Vormarkierung*Heißplastikmasse grobe Nachstreum.*P 7 grobstr. Decke;1700,0;m;gaeb-flat;sonstiges/511-2026.D83
+01020002;Längsmarkierung Typ II herstellen Leitlinie 1 zu 2*Breite 0,12 m mit Vormarkierung*Heißplastikmasse grobe Nachstreum.*P 7 grobstr. Decke;1100,0;m;gaeb-flat;sonstiges/511-2026.D83
+01020003;Längsmarkierung Typ II herstellen Leitlinie 2 zu 1*Breite 0,12 m mit Vormarkierung*Heißplastikmasse grobe Nachstreum.*P 7 grobstr. Decke;30,0;m;gaeb-flat;sonstiges/511-2026.D83
+01020004;Längsmarkierung Typ II herstellen Blockmark. 1 zu 1*Breite 0,25 m mit Vormarkierung*Heißplastikmasse grobe Nachstreum.*P 7 grobstr. Decke;160,0;m;gaeb-flat;sonstiges/511-2026.D83
+01020005;Quermarkierung Typ II herstellen Haltlinie*mit Vormarkierung Heißplastikmasse*grobe Nachstreum. grobstr. Decke;10,0;m;gaeb-flat;sonstiges/511-2026.D83
+01020006;Quermarkierung Typ II herstellen Fußgängerfurt*mit Vormarkierung Heißplastikmasse*grobe Nachstreum. grobstr. Decke;15,0;m;gaeb-flat;sonstiges/511-2026.D83
+01020007;Quermarkierung Typ II herstellen Radfahrerfurt*mit Vormarkierung Heißplastikmasse*grobe Nachstreum. grobstr. Decke;130,0;m;gaeb-flat;sonstiges/511-2026.D83
+01020008;Pfeilmarkierung Typ II herstellen geradeaus*mit Vormarkierung Länge 5,00 m*Heißplastikmasse grobe Nachstreum.*grobstr. Decke;1,0;St;gaeb-flat;sonstiges/511-2026.D83
+01020009;Pfeilmarkierung Typ II herstellen li.o.re. ab*mit Vormarkierung Länge 5,00 m*Heißplastikmasse grobe Nachstreum.*grobstr. Decke;2,0;St;gaeb-flat;sonstiges/511-2026.D83

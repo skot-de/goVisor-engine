@@ -1,0 +1,10 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000010;Baustelleneinrichtung;1,0;St;gaeb-flat;leistungsbeschreibungen/26-0158HB.D83
+00000020;Ausführungszeichnung;1,0;St;gaeb-flat;leistungsbeschreibungen/26-0158HB.D83
+00010010;Demontage der Altanlage;1,0;St;gaeb-flat;leistungsbeschreibungen/26-0158HB.D83
+00030010;Personenaufzug als Seilaufzug;1,0;St;gaeb-flat;leistungsbeschreibungen/26-0158HB.D83
+00040010;Funktionswartung - Gewährleistungszeit;5,0;St;gaeb-flat;leistungsbeschreibungen/26-0158HB.D83
+00040020;Notrufsystem;1,0;St;gaeb-flat;leistungsbeschreibungen/26-0158HB.D83
+00050001;Stundensatz Hilfsarbeiter;5,0;Std;gaeb-flat;leistungsbeschreibungen/26-0158HB.D83
+00050002;Stundensatz Bauwerker Gr. VII/1;5,0;Std;gaeb-flat;leistungsbeschreibungen/26-0158HB.D83
+00050003;Stundensatz Bauvorarbeiter Gr. II;5,0;Std;gaeb-flat;leistungsbeschreibungen/26-0158HB.D83

@@ -1,0 +1,125 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+11010;Baustelle einrichten;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+12010;MAßNAHMEN ZUR SICHERUNG UND AUFRECHTERHALTUNG DES VERKEHRS;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+12020;BAUZAUN AUS RAHMENELEMENT AUFSTELLEN;120,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+13010;STRAßENABLÄUFE AUFNEHMEN UND ABFAHREN;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+13020;BODEN  KL. BM-1 VON 0,0-1,50 M FÜR ANSCHLUSSLEITUNGEN AUSHEBEN;5,0;cbm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+13030;AWADUKT - ROHR DN 160 LIEFERN UND VERLEGEN;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+13040;AWADUKT - BÖGEN  DN 160 LIEFERN UND EINBAUEN;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+13050;AWADUKT - PASSROHR DN 160, SN 16, LIEFERN UND VERLEGEN;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+13060;STRAßENABLÄUFE KENNMAß 500 / 500 LIEFERN UND EINBAUEN;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14003;ABSPERRBÜGEL AUFNEHMEN UND ZUM BAUHOF DER STADT SCHWERTE;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14013;SCHILD AUFNEHMEN UND NEU VERSETZEN;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14030;BODEN UND AUFFÜLLMATERIAL BIS KL. BM-1/BM-F1 GEM. EBV IM STRASSENBEREICH ABTRAGEN UND ABFAHREN.;95,0;cbm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14040;SCHWER LÖSB. FELS UND BAGGERSCHLACKE ALS ZULAGE;5,0;cbm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14045;KREUZUNGEN BIS 300 MM KLEINER ALS 45 GRAD;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14047;LÄNGSBEHINDERUNG 60 CM BREIT;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14048;AUFLAGER UND UMHÜLLUNG VON VERSORGUNGSLEITUNGEN MIT SAND HERSTELLEN;5,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14050;BETONBORDSTEINE AUFNEHMEN UND ABFAHREN, ZULAGE;120,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14060;EINZEILIGE RINNENBAHN AUFNEHMEN UND ABFAHREN, ZULAGE;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14070;ZWEIZEILIGE RINNE AUFNEHMEN UND ABFAHREN, ZULAGE;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14080;BIT. BEFESTIGUNG BIS 15 CM IM STRAßEN-UND GEHWEGBEREICH AUFBRECHEN, ZULAGE;60,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14090;PLATTEN, PFLASTER AUFNEHMEN UND ABFAHREN, ZULAGE;110,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14092;PLATTEN UND PFLASTER AUFNEHMEN UND IM BAUFELD LAGERN, ZULAGE;10,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14095;GEHWEGPLATTEN BZW. BETONSTEINPFLASTER VERLEGEN;10,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14100;ABBRUCHKANTE BIS 15 CM TIEF SCHNEIDEN;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14120;Plattendruckversuch nach DIN 18134 durchführen.;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14130;Frostschutzschicht / Mineralgemisch, Dicke 34 cm, liefern und im Straßenbereich einbauen;55,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14135;Frostschutzschicht / Mineralgemisch, Dicke 28 cm, liefern und in Gehwegen einbauen;70,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14140;Schottertragschicht / Mineralgemisch, Dicke 15 cm liefern und im Straßenbereich einbauen;26,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14150;10 cm Asphalttragschicht AC 22 T N liefern und einbauen;15,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14152;FLÄCHEN AC 22 - HAFTKLEBER AUFSPRÜHEN,  0,3 KG/M2;130,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14156;ASPHALTBETON AC 8 DN LIEFERN UND EINBAUEN;3,5;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14166;Asphaltbeton in Gehwegen liefern und einbauen, d = 4 cm;0,5;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14170;ABSTREUMATERIAL AUF DECKSCHICHT AUFBRINGEN;35,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14172;BITUMINÖSE DECKSCHICHTEN BIS 4 CM AUSFRÄSEN;135,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14175;ASPHALTDECKSCHICHT AUS GUSSASPHALT LIEFERN UND EINBAUEN;135,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14177;ABSTREUMATERIAL AUF GUSSASPHALT AUFBRINGEN;135,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14180;Asphalt - Mischgut liefern und einbauen;1,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14185;FUGEN MIT DICHTUNGSBAND HERSTELLEN;145,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14190;Vorh. Asphaltdecke schneiden, max. (beids.) 10 cm abbrechen;145,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14198;BETONSTEINPFLASTER 20 X10 X 8 CM, GRAU, LIEFERN UND IN GEHWEGEN UND ÜBERFAHRTEN VERLEGEN;55,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14202;UMPFLASTERUNG VON SCHIEBERKAPPEN, SCHACHTABDECKUNGEN, PFOSTEN;2,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14205;SCHNITT AN  PFLASTER / PLATTEN;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14210;Hydranten und Schieberkappen anpassen;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14240;EINZEILIGE RINNENBAHN 16/16/14 BZW. 16/24/14 LIEFERN UND SETZEN;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14250;ZWEIZEILIGE RINNENBAHN 16/16/14 BZW. 16/24/14 LIEFERN UND SETZEN;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14300;HOCHBORDSTEINE H 15 X 30 NACH DIN EN 1340, DIN 483 HB LIEFERN UND VERSETZEN;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14320;ÜBERGANGSSTEINE H 15 X 30 AUF R 15 X 22 LIEFERN UND VERSETZEN, ZULAGE;8,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14330;RUNDBORDSTEINE R 15 X 22, r = 2 CM , NACH DIN EN 1340, DIN 483 RB LIEFERN UND VERSETZEN;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14340;TIEFBORDSTEINE 8/20 CM LIEFERN UND VERSETZEN;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14350;FUGENAUSBILDUNG DER BORDSTEINE;130,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14360;TAKTILE NOPPENPLATTEN LIEFERN UND VERLEGEN;5,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14370;TAKTILE RIPPENPLATTEN LIEFERN UND VERLEGEN;12,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14380;QUERUNGSSTEINSYSTEM L = 4,4 M LIEFERN UND VERSETZEN;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+14400;BEGLEITPLATTEN LIEFERN UND VERLEGEN;37,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+15010;ZUM NACHWEIS FÜR EINEN POLIER, SCHACHTMEISTER O. DGL.;1,0;StD;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+15020;ZUM NACHWEIS FÜR EINEN SPEZIALBAUFACHARBEITER (GRUPPE III);1,0;StD;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+15030;ZUM NACHWEIS FÜR EINEN BAUFACHARBEITER (GRUPPE V);1,0;StD;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+15040;ZUM NACHWEIS FÜR EINEN BAUFACHWERKER (GRUPPE VI);1,0;StD;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+15050;Z. NACHWEIS F. E. HYDRAULIKBAGGER VON 36 BIS 150 KW AUF RÄDERN;1,0;StD;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+15060;ZUM NACHWEIS FÜR EINEN RADLADER BIS 75 KW;1,0;StD;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+15070;ZUM NACHWEIS FÜR EINEN FLÄCHENRÜTTLER;1,0;StD;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+15080;ZUM NACHWEIS FÜR EINEN LKW VON 10,1 BIS 15 T NUTZLAST;1,0;StD;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Langtext - 13.07.2026.D83
+11010;Baustelle einrichten;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+12010;MAßNAHMEN ZUR SICHERUNG UND AUFRECHTERHALTUNG DES VERKEHRS;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+12020;BAUZAUN AUS RAHMENELEMENT AUFSTELLEN;120,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+13010;STRAßENABLÄUFE AUFNEHMEN UND ABFAHREN;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+13020;BODEN  KL. BM-1 VON 0,0-1,50 M FÜR ANSCHLUSSLEITUNGEN AUSHEBEN;5,0;cbm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+13030;AWADUKT - ROHR DN 160 LIEFERN UND VERLEGEN;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+13040;AWADUKT - BÖGEN  DN 160 LIEFERN UND EINBAUEN;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+13050;AWADUKT - PASSROHR DN 160, SN 16, LIEFERN UND VERLEGEN;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+13060;STRAßENABLÄUFE KENNMAß 500 / 500 LIEFERN UND EINBAUEN;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14003;ABSPERRBÜGEL AUFNEHMEN UND ZUM BAUHOF DER STADT SCHWERTE;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14013;SCHILD AUFNEHMEN UND NEU VERSETZEN;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14030;BODEN UND AUFFÜLLMATERIAL BIS KL. BM-1/BM-F1 GEM. EBV IM STRASSENBEREICH ABTRAGEN UND ABFAHREN.;95,0;cbm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14040;SCHWER LÖSB. FELS UND BAGGERSCHLACKE ALS ZULAGE;5,0;cbm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14045;KREUZUNGEN BIS 300 MM KLEINER ALS 45 GRAD;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14047;LÄNGSBEHINDERUNG 60 CM BREIT;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14048;AUFLAGER UND UMHÜLLUNG VON VERSORGUNGSLEITUNGEN MIT SAND HERSTELLEN;5,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14050;BETONBORDSTEINE AUFNEHMEN UND ABFAHREN, ZULAGE;120,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14060;EINZEILIGE RINNENBAHN AUFNEHMEN UND ABFAHREN, ZULAGE;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14070;ZWEIZEILIGE RINNE AUFNEHMEN UND ABFAHREN, ZULAGE;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14080;BIT. BEFESTIGUNG BIS 15 CM IM STRAßEN-UND GEHWEGBEREICH AUFBRECHEN, ZULAGE;60,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14090;PLATTEN, PFLASTER AUFNEHMEN UND ABFAHREN, ZULAGE;110,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14092;PLATTEN UND PFLASTER AUFNEHMEN UND IM BAUFELD LAGERN, ZULAGE;10,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14095;GEHWEGPLATTEN BZW. BETONSTEINPFLASTER VERLEGEN;10,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14100;ABBRUCHKANTE BIS 15 CM TIEF SCHNEIDEN;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14120;Plattendruckversuch nach DIN 18134 durchführen.;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14130;Frostschutzschicht / Mineralgemisch, Dicke 34 cm, liefern und im Straßenbereich einbauen;55,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14135;Frostschutzschicht / Mineralgemisch, Dicke 28 cm, liefern und in Gehwegen einbauen;70,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14140;Schottertragschicht / Mineralgemisch, Dicke 15 cm liefern und im Straßenbereich einbauen;26,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14150;10 cm Asphalttragschicht AC 22 T N liefern und einbauen;15,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14152;FLÄCHEN AC 22 - HAFTKLEBER AUFSPRÜHEN,  0,3 KG/M2;130,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14156;ASPHALTBETON AC 8 DN LIEFERN UND EINBAUEN;3,5;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14166;Asphaltbeton in Gehwegen liefern und einbauen, d = 4 cm;0,5;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14170;ABSTREUMATERIAL AUF DECKSCHICHT AUFBRINGEN;35,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14172;BITUMINÖSE DECKSCHICHTEN BIS 4 CM AUSFRÄSEN;135,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14175;ASPHALTDECKSCHICHT AUS GUSSASPHALT LIEFERN UND EINBAUEN;135,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14177;ABSTREUMATERIAL AUF GUSSASPHALT AUFBRINGEN;135,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14180;Asphalt - Mischgut liefern und einbauen;1,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14185;FUGEN MIT DICHTUNGSBAND HERSTELLEN;145,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14190;Vorh. Asphaltdecke schneiden, max. (beids.) 10 cm abbrechen;145,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14198;BETONSTEINPFLASTER 20 X10 X 8 CM, GRAU, LIEFERN UND IN GEHWEGEN UND ÜBERFAHRTEN VERLEGEN;55,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14202;UMPFLASTERUNG VON SCHIEBERKAPPEN, SCHACHTABDECKUNGEN, PFOSTEN;2,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14205;SCHNITT AN  PFLASTER / PLATTEN;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14210;Hydranten und Schieberkappen anpassen;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14240;EINZEILIGE RINNENBAHN 16/16/14 BZW. 16/24/14 LIEFERN UND SETZEN;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14250;ZWEIZEILIGE RINNENBAHN 16/16/14 BZW. 16/24/14 LIEFERN UND SETZEN;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14300;HOCHBORDSTEINE H 15 X 30 NACH DIN EN 1340, DIN 483 HB LIEFERN UND VERSETZEN;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14320;ÜBERGANGSSTEINE H 15 X 30 AUF R 15 X 22 LIEFERN UND VERSETZEN, ZULAGE;8,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14330;RUNDBORDSTEINE R 15 X 22, r = 2 CM , NACH DIN EN 1340, DIN 483 RB LIEFERN UND VERSETZEN;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14340;TIEFBORDSTEINE 8/20 CM LIEFERN UND VERSETZEN;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14350;FUGENAUSBILDUNG DER BORDSTEINE;130,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14360;TAKTILE NOPPENPLATTEN LIEFERN UND VERLEGEN;5,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14370;TAKTILE RIPPENPLATTEN LIEFERN UND VERLEGEN;12,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14380;QUERUNGSSTEINSYSTEM L = 4,4 M LIEFERN UND VERSETZEN;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+14400;BEGLEITPLATTEN LIEFERN UND VERLEGEN;37,0;qm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+15010;ZUM NACHWEIS FÜR EINEN POLIER, SCHACHTMEISTER O. DGL.;1,0;StD;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+15020;ZUM NACHWEIS FÜR EINEN SPEZIALBAUFACHARBEITER (GRUPPE III);1,0;StD;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+15030;ZUM NACHWEIS FÜR EINEN BAUFACHARBEITER (GRUPPE V);1,0;StD;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+15040;ZUM NACHWEIS FÜR EINEN BAUFACHWERKER (GRUPPE VI);1,0;StD;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+15050;Z. NACHWEIS F. E. HYDRAULIKBAGGER VON 36 BIS 150 KW AUF RÄDERN;1,0;StD;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+15060;ZUM NACHWEIS FÜR EINEN RADLADER BIS 75 KW;1,0;StD;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+15070;ZUM NACHWEIS FÜR EINEN FLÄCHENRÜTTLER;1,0;StD;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83
+15080;ZUM NACHWEIS FÜR EINEN LKW VON 10,1 BIS 15 T NUTZLAST;1,0;StD;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Kurztext - 13.07.2026.D83

@@ -1,4 +1,54 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;Baustelleneinrichtung  Herstellen, Vorhalten und Räumen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+03.1;Bekleidung Stahlstütze F90 320/152 L=2,50m;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+03.2;Bekleidung Stahlträger F90 200/96 L=1,25m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+03.3;Bekleidung Stahlträger F90 300/96 L=1,70m;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+03.4;Bekleidung Stahlträger F90 280/133 L=3,00m;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+03.5;Bekleidung Stahlträger F90 320/330 L=3,50m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+03.6;Abkofferung Elektroleitungen F90 400/400 L=7,00m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+03.7;Abkofferung Rohrleitungen F30 350/200/350 L=2,50m;19,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+04.1;Montagewand, Metall-UK, 125mm, Gipsplatten zweilagig, MW 60mm, EI 30;31,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+04.2;Montagewand, Metall-UK, 200mm, Feuchträume, Gipsplatten zweilagig, MW 120mm, EI 30;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+04.3;Zulage Türöffnung;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+04.4;Büro-Innentür Metallzarge, 1-flg, 885/2.010 mm DIN links;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+04.5;Büro-Innentür Metallzarge, 1-flg, 885/2.010 mm DIN rechts;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+04.6;Zulage freistehendes Wandende;6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+04.7;Zulage OSB 12,5 mm - erste Lage;31,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+04.8;Herstellung eckiger Wanddurchführungen;12,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+05.1;Vorsatzschale 150 mm Feuchträume (Fläche >5m²);57,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+05.2;Vorsatzschale 225 mm Feuchträume (Fläche >5m²);25,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+05.3;Vorsatzschale 250 mm Feuchträume (Fläche >5m²);76,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+05.4;Vorsatzschale 150 mm Feuchträume Waschtisch (120/126,5);2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+05.5;Zulage: Ablage/Seitenflächen;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+05.6;Schachtwand 75 mm, zweilagig, El 30;24,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+05.7;Zulage GKI-Platten;12,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+05.8;Zulage Verstärkungen aus UA-Profile;35,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+05.9;Zulage Nische für Wickeltisch;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+05.10;Klappbarer Wandwickeltisch;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+05.11;Bekleidung Rohrleitungen 250/250;12,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+05.12;Bekleidung Rohrleitungen 250/650;85,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+05.13;Bekleidung Rohrleitungen 350/1.000/350;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+05.14;Zulage: Ausschnitte Rund bis 100 mm;158,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+05.15;Zulage: Ausschnitte Rund bis 250 mm;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+05.16;Zulage: Aussparung Wanddurchbrüche bis 450 cm²;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+05.17;Zulage: Aussparung Wanddurchbrüche bis 1.600 cm²;21,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+05.18;Revisionsklappe 30x30 cm;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+05.19;Revisionsklappe 40x40cm;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+06.1;Unterdecke, abgehängt, MW 19mm;2520,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+06.2;Randanschluss, Decke, MW;2650,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+06.3;Randausbildung, Anschnittplatte, MW;2650,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+06.4;Zulage Randfries;13,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+06.5;Schürze Gipskarton glatt, Übergangprofil Rasterdecke;305,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+06.6;Verstärkungsplatte Rasterdecke;155,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+06.7;Ausschnitte rund, bis Ø 100 mm;80,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+06.8;Ausschnitte rund, bis Ø 200 mm;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+06.9;Ausschnitte rund, bis Ø 300 mm;60,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+06.10;Decke, abgehängt, Gipsplatte, einlagig,;20,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+06.11;Deckenverstärkung zur Aufnahme einer Pendelleuchte Quadratisch 1,20/1,20m;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+06.12;Deckenverstärkung zur Aufnahme einer Pendelleuchte Quadratisch 60/60cm;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+06.13;Revisionsklappe 40x40cm;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+07.1;Stundensatz Facharbeiter;20,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
+07.2;Stundenlohnarbeiten Werker, Helfer;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten.D83
 1;Leistungsumfang:;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten_V33.X83
 1;Bekleidung von Stahlstütze mit nicht brennbarer, faserverstärkter Gipsplatte ohne Unterkonstruktion. Inkl. notwendigen Eck- / Kantenprofile, V-Fräsungen und Spachtelung.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten_V33.X83
 2;Bekleidung von Stahlträger mit nicht brennbarer, faserverstärkter Gipsplatte ohne Unterkonstruktion. Inkl. notwendigen Eck- / Kantenprofile, V-Fräsungen und Spachtelung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-29 LV 11 Trockenbauarbeiten_V33.X83

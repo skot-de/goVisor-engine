@@ -61,3 +61,34 @@
 5;Für evtl. erforderliche Arbeiten, die nicht in der Leistungsbeschreibung erfasst sind und nur auf ausdrückliche Anweisung und gegen Nachweis zurAusführung kommen, werden verrechnet für:;10,0;h;gaeb;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster_V33.X83
 10;Für evtl. erforderliche Arbeiten, die nicht in der Leistungsbeschreibung erfasst sind und nur auf ausdrückliche Anweisung und gegen Nachweis zur Ausführung kommen, werden verrechnet für:;10,0;h;gaeb;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster_V33.X83
 15;Für eventuell erforderliche Arbeiten, die nicht im Leistungsverzeichnis erfaßt sind und nach vorheriger Bestätigung durch des AG/Bauleitung gegen Nachweis zur Ausführung kommen.;40,0;h;gaeb;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster_V33.X83
+01.5;Baustelleneinrichtung;1,0;psch;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.10;Fensterabdeckung, Folie, Innenwandseite;331,0;m²;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.15;Reinigung der Fenster vor den Anstricharbeiten;660,0;m²;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.20;Fensterbänke innen, außen abdecken;379,0;m;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.25;Folienbeklebung auf Glasscheiben entfernen;10,0;m²;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.30;Demontage Fensterflügel;110,0;St;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.35;Demontage elektrischer Oberlichtöffner;14,0;St;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.40;Demontage und Entsorgung mechanischer Oberlichtöffner;16,0;St;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.45;Demontage der Fensterolive;65,0;St;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.50;De- /Montage der Fensterolive;14,0;St;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.55;Sicherung Öffnung im Zuge der Anstricharbeiten;331,0;m²;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.60;Montage Fenster / fensterflügel;110,0;St;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.65;Dreh-Kipp Beschlagg, abschliessbar;190,0;St;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.70;Montage E-Oberlichtöffner;14,0;St;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.75;Oberlichtöffner mit 1 Schere;8,0;St;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.80;Oberlichtöffner mit 2 Scheren;8,0;St;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.85;Abdichtung innen winddicht;50,0;m;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.90;Fensterbank Kunststein;2,0;St;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.95;Verglasung erneuern, 1.980x2.500m, F-3.115-4;1,0;St;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.100;Verglasung erneuern, bís ca. 500 x 800mm;10,0;St;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.105;Erneuerung Versiegelung Innen / Außen;2430,0;m;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.110;Erneuerung Fensterglasabdichtung keinteilig;50,0;m;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.115;Haftvermittler Siliconfuge;660,0;m²;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.120;Reparaturspachtelung Holz;1,0;psch;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.125;Anstrich prüfen, lose/beschädigte Teile entfernen, anschleifen;660,0;m²;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.130;Bläueschutz, Grundierung auf rohe Holzteile;198,0;m²;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.135;Anstrich Fenster Zementgrau;660,0;m²;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+01.140;Zulage Zusatzanstrich verwitterte Rahmenteile;110,0;St;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+02.5;Stundenlohn Helfer;10,0;h;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+02.10;Stundenlohn Facharbeiter;10,0;h;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83
+02.15;eventuell erforderliche Arbeiten;40,0;h;gaeb-flat;sonstiges/2026-06-26 169 Los 226 LV Maler- und Lackierabeiten Fenster.D83

@@ -99,3 +99,103 @@
 4;Zulage: Boden BM-F1 gem. ErsatzbaustoffV fachgerecht verwerten;200,0;t;gaeb;leistungsbeschreibungen/60.6.906.26 Außenanlagen_V32.X83
 5;Zulage: Boden BM-F2 gem. ErsatzbaustoffV fachgerecht verwerten;200,0;t;gaeb;leistungsbeschreibungen/60.6.906.26 Außenanlagen_V32.X83
 6;Zulage: Boden BM-F3 gem. ErsatzbaustoffV fachgerecht verwerten;30,0;t;gaeb;leistungsbeschreibungen/60.6.906.26 Außenanlagen_V32.X83
+111.1;Boden aus Abtragsbereichen lösen, zwischenlagern;1100,0;m3;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+111.2;An- und Abfahrt für die Bereitstellung eines Saugbaggers;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+111.3;Saugbagger einsetzen und Sauggut aufladen und abfahren;8,0;h;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+111.4;Senkrechter Wurzelschutz für Baumgrube.;15,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+111.5;Baumgrubensubstrat liefern und einbauen.;15,0;m3;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+111.6;Füllsand liefern und einbauen;50,0;m3;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+111.7;Schottertragschicht aus Recyclingmaterial, prov. Befestigung;25,0;m3;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+121.1;Boden für Baugrube Fundamente, ab Geländeoberfläche,;35,0;m3;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+121.2;Schalung für Betonbauteile herstellen, vorhalten und beseitigen.;35,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+121.3;Bewehrten Beton herstellen.;6,0;m3;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+121.4;Zulage für Beton C35/40;6,0;m3;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+121.5;Betonstahl einbauen;0,12;t;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+121.6;unbewehrten Beton herstellen.;8,0;m3;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+131.1;Sohlplanum für Pflasterflächen herstellen;300,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+131.2;Frostschutzschicht als 1. Tragschicht;50,0;m3;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+131.3;Schottertragschicht aus Naturschotter;45,0;m3;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+131.4;Plattendruckversuche;2,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+131.5;Bordstein Rasenbord liefern und setzen, Beton;190,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+131.6;Bordstein Tiefbord liefern und setzen;20,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+131.7;Bordsteine auf Passmaß trennen;25,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+131.8;Pflasterdecke aus Pflastersteinen aus Beton, DIN 18501, herstellen. Gehweg grau;240,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+131.9;Pflaster schneiden;100,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+13110;Mosaikpflaster an Einbauten;50,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+13111;Mosaikpflaster an Schachtdeckel in Pflasterfläche;6,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+132.1;Sohlplanum für Pflasterflächen herstellen;900,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+132.2;Frostschutzschicht als 1. Tragschicht, Fahrflächen;400,0;m3;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+132.3;Frostschutzschicht als 1. Tragschicht, Waschplatz;45,0;m3;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+132.4;Schottertragschicht aus Naturschotter, Fahrflächen;200,0;m3;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+132.5;Schottertragschicht aus Naturschotter, LKW-Waschplatz;25,0;m3;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+132.6;Plattendruckversuche;6,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+132.7;Bordstein Tiefbord liefern und setzen;35,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+132.8;Bordsteine auf Passmaß trennen;4,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+132.9;Pflasterdecke aus Pflastersteinen aus Beton, DIN 18501, herstellen. Hoffläche, grau;710,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+13210;Betonverbundpflaster, gelagert, aufnehmen, u. verlegen;250,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+13211;Pflaster schneiden,;1880,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+13212;Mosaikpflaster an Schachtdeckel in Pflasterfläche;10,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+13213;Signaturplatte ''Rollstuhlfahrer'' liefern und setzen;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+13214;Pflaster als Läuferstein aus Beton als Parkplatzmarkierung, Zulageposition DIN 18501,herstellen, anthrazit;45,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+133.1;Gleitschicht aus 2-Lagen PE-Folie liefern und verlegen.;120,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+133.2;Betondecke herstellen in Einzelfeldern aus Beton D=24 cm;120,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+133.3;Dübel gemäß ZTV Beton- StB 07;100,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+133.4;Schraubanker gemäß ZTV Beton-StB 07 in vorh. Betonplatten einsetzen;100,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+133.5;Raumfugen nach ZTV Beton-StB 07 herstellen;60,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+133.6;Raumfugenspalt verfüllen;60,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+133.7;Scheinfugen herstellen;30,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+133.8;Scheinfugenspalt verfüllen;30,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+133.9;Flächenabgrenzung für Waschplatz, füssigkeitsdicht, Absenkrinne;60,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+13310;Flächenabgrenzung für Waschplatz, füssigkeitsdicht, Eckelemente;4,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+13311;Flächenabgrenzung für Waschplatz, füssigkeitsdicht, Übergangselement;4,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+13312;Ablaufelement (Mitte), flüssigkeitsdicht, liefern und setzen;2,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+141.1;Stabgitterzaun liefern und setzen;2,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+141.2;Stabgitterzaun liefern und setzen, Passelement;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+141.3;Pfosten liefern und setzen;2,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+142.1;Winkelstützwand herstellen, 15 cm, Bauhöhe bis 1,50 m;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+142.2;Winkelstützwand herstellen, 10 cm, Bauhöhe bis 1,00 m;4,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+142.3;Winkelstützwand Eckstück, Innenecke, 15 cm, Höhe bis 1,50 m;2,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+142.4;Winkelstützwand Passstück, 15 cm, Länge bis 0,50 m, Höhe bis 1,50 m;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+142.5;Geländer mit Handlauf als Absturzsicherung liefern und montieren;10,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+151.1;SA-Anschluss PP DN 150 herstellen,;4,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+151.2;Zulage: PP-Passrohre DN 150 bis 75 cm Länge herstellen.;8,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+151.3;Zulage: PP-Überschiebmuffe DN 150 liefern und einbauen.;8,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+151.4;Zulage: PP-Bögen DN 150, 15°- 45°;8,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+151.5;Straßenablauf komplett liefern und setzen;4,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+151.6;Entwässerungsrinne, DN 100, Länge 100 cm;4,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+151.7;Entwässerungsrinne, DN 100, Länge 50 cm;1,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+151.8;Einlaufkasten Entwässerungsrinne, DN 100;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+151.9;Kombi-Stirnwand 100;2,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+15110;Entwässerungsrinne, als Fassadenrinne, DN 100, Länge 100 cm;6,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+15111;Kombi-Stirnwand 100;12,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+15112;Graben für Kofferbettdrainage;90,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+15113;Drän-Sammelleitung aus Kunststoff -Teilsickerrohr,;90,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+15114;Einbinden Sickerleitung DN 100;3,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+15115;Kanalinspektion, SA-Leitungen DN 150,;25,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+15116;SA-Leitungskataster / Kanalbestandsplan herstellen,;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+152.1;Erdgraben für Versorgungsleitungen, 1 bis 8 Kabel oder Leerohre DN 50 Tiefe bis 0,80m ab OK zukünftiger Fahrbahn bzw. Oberboden,;50,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+152.2;Erdgraben für Versorgungsleitungen, 9 bis 17 Kabel oder Leerohre DN 50 Tiefe bis 0,80m ab OK zukünftiger Fahrbahn bzw. Oberboden,;50,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+152.3;Leerrohrverlegung DN 50;50,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+161.1;Fahrradanlehnbügel liefern und setzen;20,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+161.2;Rammschutzpoller, Stahl;9,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+161.3;Klapppfosten in Beton setzen;2,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+161.4;Führungs- und Zentrierschieneneinheit  für 1 Stück Abrollcontainer;1,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+171.1;Oberboden-Sand-Schicht liefern und einbauen,;200,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+171.2;Kräuterrasen liefern und ansähen;200,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+181.1;Baustelle einrichten;1,0;psch;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+181.2;Baustelle räumen;1,0;psch;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+181.3;Baugrubenüberbrückungen mit Stahlplatten herstellen.;10,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+181.4;Absperrschranken aus Kunststoff aufstellen.;55,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+181.5;Leitbake einseitig aufstellen.;6,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+181.6;Leitbake einseitig mit Dauerlicht aufstellen.;10,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+181.7;Absperrschranke, Dauerlicht gelb, aufstellen.;10,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+182.1;Borde aufnehmen, TB, RB und HB und abfahren;200,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+182.2;Borde aufnehmen, Rasenkante, und abfahren;20,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+182.3;Betonmuldenstein abbrechen und abfahren;12,0;m;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+182.4;Klapppfosten abbrechen;2,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+183.1;Bodenanalytik gem. ErsatzbaustoffV durchführen.;3,0;St;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+183.2;Unbelasteten Boden BM-0 aufnehmen und fachgerecht verwerten;1100,0;m3;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+183.3;PVC-Folie d=0,6 mm als Trennlage.;300,0;m2;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+183.4;Zulage: Boden BM-F1 gem. ErsatzbaustoffV fachgerecht verwerten;200,0;t;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+183.5;Zulage: Boden BM-F2 gem. ErsatzbaustoffV fachgerecht verwerten;200,0;t;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83
+183.6;Zulage: Boden BM-F3 gem. ErsatzbaustoffV fachgerecht verwerten;30,0;t;gaeb-flat;leistungsbeschreibungen/60.6.906.26 Außenanlagen.D83

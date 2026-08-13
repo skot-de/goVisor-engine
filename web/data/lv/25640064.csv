@@ -172,3 +172,176 @@
 0002;Wartungsvertrag 2. Jahr:;1,0;psch;gaeb;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML_V33.X83
 0003;Wartungsvertrag 3. Jahr:;1,0;psch;gaeb;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML_V33.X83
 0004;Wartungsvertrag 4. Jahr:;1,0;psch;gaeb;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML_V33.X83
+01010001;Bodenablauf, DN 100;25,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01010002;Stutzenverlängerung;25,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01010003;Glockengeruchverschluss DN 100,;25,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01010004;Brandschutz- Glockengeruchverschluss;6,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01010005;Aufsatzstück m. Rost;23,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01010006;Entwässerungsrinnen nach DIN 18534 - EG;4,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01010007;Entwässerungsrinnen nach DIN 18534- OG;2,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01010008;verstärkte Roste zu vorst. Rinnen;6,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01010009;Bodenwanne Edelstahl 800 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01010010;Bodenablauf DN 100 VA, 90Crad;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01010011;Anschluss DN100, Entlüftung;8,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01020001;Rohr DN50;18,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01020002;Rohr DN70;10,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01020003;Rohr DN90;3,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01020004;Rohr DN100;60,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01020005;Rohr - Bogen DN 50;40,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01020006;Rohr - Bogen DN 70;15,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01020007;Rohr - Bogen DN 90;5,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01020008;Rohr - Bogen DN 100;36,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01020009;Siphonbogen DN50/DN40 mit Dichtnippel;12,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01020010;Rohr - Abzweig DN 50;2,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01020011;Rohr - Abzweig DN 70;6,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01020012;Rohr - Abzweig DN 90;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01020013;Rohr - Abzweig DN 100;7,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01020014;Rohr - Doppelabzweig DN 100;2,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01020015;Rohr - Reduzierung DN 70x50;5,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01020016;Rohr - Reduzierung DN 100x70;5,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01020017;Rohr - Reduzierung DN 100x50;2,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01020018;Reinigungsrohr DN100 mit rechteckiger Öffnung;6,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01020019;Anschluss DN100, Entlüftung;8,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01020020;Anschluss DN100, Kanalrohr;23,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01030001;Rohrabschottung DN50;2,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01030002;Rohrabschottung DN70/80;7,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01030003;Rohrabschottung DN100;7,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01030004;Brandmanschette DN 50;10,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01030005;Brandmanschette DN 70;10,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01030006;Brandmanschette DN 100;2,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01030007;Rohr DN 50;3,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01030008;Rohr DN 70;5,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+01030009;Rohr DN 100;2,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010001;Edelstahlrohr DN 12;181,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010002;Edelstahlrohr DN 15;98,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010003;Edelstahlrohr DN 20;90,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010004;Edelstahlrohr DN 25;5,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010005;Edelstahlrohr DN 32;55,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010006;Edelstahlrohr DN 40;75,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010007;Bogen DN 12;178,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010008;Bogen DN 15;90,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010009;Bogen DN 20;110,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010010;Bogen DN 25;5,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010011;Bogen DN 32;18,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010012;Bogen DN 40;28,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010013;T - Stück DN 12;30,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010014;T - Stück DN 15;35,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010015;T - Stück DN 20;30,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010016;T - Stück DN 25;5,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010017;T - Stück DN 32;8,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010018;T - Stück DN 40;15,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010019;Muffe DN 12;15,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010020;Muffe DN 15;10,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010021;Muffe DN 20;5,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010022;Muffe DN 25;12,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010023;Muffe DN 32;15,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010024;Muffe DN 40;8,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010025;Reduzierstück DN 15x12;25,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010026;Reduzierstück DN 20x15;25,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010027;Reduzierstück DN 25x20;20,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010028;Reduzierstück DN 32x20/15;20,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010029;Wandscheibe 15/12 mm;20,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02010030;Doppelwandscheibe 15 mm;30,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02020001;Dämmung wie vor beschr., 20 mm, 15x1,0 mm (DN12);10,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02020002;Dämmung wie vor beschr., 20 mm, 18x1,0 mm (DN15);12,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02020003;Dämmung wie vor beschr., 20 mm, 22x1,2 mm (DN20);5,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02020004;Dämmung wie vor beschr., 20 mm, 28x1,5 mm (DN25);5,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02020005;Dämmung wie vor beschr., 35 mm, 35x1,5 mm (DN25);55,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02020006;Dämmschlauch DN 12;180,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02020007;Dämmschlauch DN 16;90,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02020008;Dämmschlauch DN 20;90,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02020009;Dämmschlauch DN 25;5,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02020010;Dämmschlauch DN 32;5,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02030001;Absperrventil DN15, Freistrom, Entleerung;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02030002;Absperrventil DN20, Freistrom, Entleerung;5,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02030003;Absperrventil DN 25, Freistrom, Entleerung;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02030004;Absperrventil DN 32, Freistrom, Entleerung;0,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02030005;Absperrventil DN 40, Freistrom, Entleerung;3,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02030006;autom. Regulierventil, DN 15;10,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02030007;Probenahmeventil;5,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02030008;Hauswasserstation DN 40 rückspülbar;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02030009;Versorgungschrank Unterputz;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02040001;Rohrabschottung R 90 / DN12;5,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02040002;Rohrabschottung R 90 / DN15;5,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02040003;Rohrabschottung R 90 / DN20;3,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02040004;Rohrabschottung R 90 / DN25;3,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02040005;Rohrabschottung R 90 / DN32;1,0;m;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02050001;Frischwasserstation L Einzelgerät, Volledelstahl;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02050002;Temperaturfühlerset für Frischwasserstationen;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02050003;3-Wege-Umschaltventil IG DN32, für KTS Frischwasserstation;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02050004;Pufferspeicher T1000 S, 1000 l für Heizstäbe, PN6 Durchmesser 790 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02050005;Anschluss-Set für Pufferspeicher 850l u. 1000l;2,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02050006;Einbringung;1,0;psch;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02050007;Montage;1,0;psch;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02050008;Probenahmeventil aus Rotguss AG G1/4 DN8;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02050009;Inbetriebnahme Pufferpseicher-System;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060001;Waschtisch 55 cm  (WC Schüler, Lehrer);8,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060002;Elektronik-Standbatterie;8,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060003;Element f. WT, 112 cm Standarmatur;8,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060004;WT-Zubehör Set. Röhrensiphon,Befestigung,Ventile;8,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060005;Ablaufventil mit Sieb;8,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060006;"Probenahme-Ventil für Eckventile, 3/8"", chrom";10,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060007;Urinal, Wasserlos inkl.Befes.Satz spülrandlos weiss;2,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060008;Urinal-Element f. Trockenbau m. Wandhalter, BH: 1120mm;2,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060009;Montageset f. Urinal m. geringem Schallschutz;2,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060010;Duschwandpanel;26,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060011;Duschkopf;26,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060012;Netzteil;4,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060013;Fernbedienung;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060014;Waschtisch 650x550 mm, barrierefrei;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060015;Element f. WT, 112 cm Standarmatur, mit UP Siphon;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060016;Befestigungsplatte für Stützgriffe o.ä.;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060017;Elektronik-Standbatterie;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060018;Ablaufventil mit Sieb;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060019;Schallschutzset WT;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060020;UP-Geruchsverschluss für Waschbecken;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060021;Hygieneabfallbehälter Kniebetätigung;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060022;Schallschutzset WT;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060023;WC spülrandlos;7,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060024;Element f. WWC, 112 cm mit UP-SPK 12 cm;7,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060025;BetPl., für 2-Mengen-Spülung, weiß;7,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060026;WC-Bürstengarnitur Chrome;7,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060027;Wand-WC Tiefspüler ohne Spülrand, verlängerte Ausladung;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060028;Element f. WWC, 112cm m. UP-SPK 12 cm, barrierefrei, S-H Griffe;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060029;WC Fernauslösung Funk f. Stützklappgriff;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060030;Verlängerungskabel 3,00m;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060031;Betätigungsplatte VA für 2-Mengen-Spültechnik;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060032;WC-Sitzring;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060033;Befestigungsplatte für Stützgriffe o.ä.;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060034;Stützklappgriff, drehbar, L 900 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060035;Aufrüstsatz WC-Papierhalter;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060036;Reservepapierhalter;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060037;WC-Bürstengarnitur Chrome;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060038;Schallschutzset WC;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060039;Einhebel-Brausemischer UP;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060040;Grundkörper mit Vorabsperrung;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060041;Wandanschluss mit RV;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060042;Handbrause, Brausehalter, Brauseschlauch;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060043;Duschhandlauf m.Brausestange;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060044;Klappsitz B:378 mm, H:259 mm, T:408 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060045;Befestigungsplatte für Stützgriffe o.ä.;2,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060046;Stützklappgriff, drehbar, L 600 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060047;Spülenanschluss herstellen;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060048;Ausgußbecken Set;2,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060049;Standrohrventil G1 1/2 x 70 x 140, Ms Art.;3,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060050;Abgangsbogen PVC 90°, mit Rohrbelüfter;3,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060051;"Auslaufventil RV, RB, 1/2"", chrom";1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+02060052;Schlauchhalter mit Füllschlauch;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+03010001;Formstahl;10,0;kg;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+03010002;Profilstahlkonstruktion für Sonderbefestigungen;50,0;kg;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+03010003;Spülung der Trinkwasseranlage;1,0;psch;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+03010004;Druckprüfung der Trinkwasserrohre;1,0;psch;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+03010005;Nachweis der mikrobiologischen Untersuchung;1,0;St;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+03020001;Kernbohrungen bis D=80 mm;2000,0;cm;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+03020002;Kernbohrungen bis D=130 mm;2500,0;cm;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+03020003;Kernbohrungen bis D=180 mm;160,0;cm;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+03030001;Inbetriebnahme Sanitäre Anlage;1,0;psch;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+03030002;Revisionsunterlagen Abwasser/Wasser;1,0;psch;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+03040001;St. z. N. Obermonteurstunden;2,0;;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+03040002;St. z. N. Monteurstunden;5,0;h;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+03040003;St. z. N. Helferstunden;8,0;h;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+03040004;St. z. N. Auszubildendenstunden;3,0;h;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+04010001;Wartungsvertrag 1. Jahr;1,0;psch;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+04010002;Wartungsvertrag 2. Jahr;1,0;psch;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+04010003;Wartungsvertrag 3. Jahr;1,0;psch;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83
+04010004;Wartungsvertrag 4. Jahr;1,0;psch;gaeb-flat;leistungsbeschreibungen/260714_LV Sporthalle Werne_SAN_Versand LV_GAEB90+XML.D83

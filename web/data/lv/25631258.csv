@@ -479,3 +479,483 @@
 02;Befestigung des Einspeiseschrankes an Bestand L-Steinen mittels Schienenkonstruktion aus Edelstahl. Inkl. Unterkonstruktion für die Abdichtung der Leitungsführung durch die Bestandsdecke über UG;1,0;St;gaeb;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.x83
 01;Liefern und fachgerechtes Montieren eines ma;1,0;St;gaeb;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.x83
 02;Befestigung des Einspeiseschrankes an Bestand L-Steinen mittels Schienenkonstruktion aus Edelstahl. Inkl. Unterkonstruktion für die Abdichtung der Leitungsführung durch die Bestandsdecke über UG. Für oberhalb beschriebenen Mehrfachschrank. Mit Frostwächter.;1,0;St;gaeb;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.x83
+01.01;Anschluss an Bestand herstellen;1,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+01.02;Bypassleitung herstellen;1,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+01.03;Flanschabsperrventil DN100;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+01.04;Übergangsflansch Stahl niro PN10/16 TW Pressverbindung AD 108mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+01.05;Schraubensatz und Dichtung für Flanschverbindung, DN100;3,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020101;Feuerlöschtrennstation;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020102;Steinfänger DN 100;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020103;Steinfänger DN 80;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020104;Kompensator DN80 PN16;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020105;Alarmschaltgerät;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020106;Schilderpaket;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020107;Kontrollbuch mit Stammblättern;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020108;Transport und Montage;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020109;Sachkundige Werksinbetriebnahme;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020110;Anreisepauschale;1,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020111;Elektrischer Anschluß;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020112;Abnahme Druckerhöhungsanlage Sachverständigen.;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020201;Löschwasser Einspeiseschrank mit Einspeisearmatur nach DIN14461-4 steh end;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020202;Befestigung Betonmauer & Eindichten des Einspeiseschrankes an Bestands abdichtung;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020203;Einspeisearmaturengruppe Edelstahl 1.4401 Pressfitting-System für Löschwasserleitung Trocken;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020204;Löschwasserltg Stahl niro geschweißt AD 88,9mm WD 2mm;14,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020205;Löschwasserltg Stahl niro geschweißt AD 54mm WD 1,5mm;1,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020206;Be- und Entlüftungsventil DN50 nach DIN 14463-3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020207;Bogen 90Grad Stahl niro AD 88,9mm;8,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020208;T-Stück reduziert Stahl niro AD 88,9mm x 54mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020209;Muffe Stahl niro AD 88,9mm;3,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020210;Übergangsstück Stahl niro AD 88,9mm R3;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020211;Übergangsstück Stahl niro AD 54mm Rp2;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020212;Rotguss Gewindemuffe Rp3 x Rp3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020213;Be- und Entlüftungsventil DN50 nach DIN 14463-3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020214;Rohrschelle Stahl verz L bis 0,5m AD 88,9mm;10,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020215;C-Profilschiene Stahl verz;8,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020216;Form-Hohlprofilstahlkonstruktion Stahl verz;8,0;kg;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020301;Kernbohrungen bis Ø 150 mm, Betondecken;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020302;Dichtungseinsatz mit DPS zur Abdichtung von Durchdringungen mit Rohren;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+020303;Begleitheizung / Frostschutzwäschter;1,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+03.01;Füll- und Entleerstation;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+03.02;Steinfänger DN 80;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+03.03;Handmelder Auslösung;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+03.04;Auslöseeinheit für Überflurhydranten mit Fallmantel;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+03.05;Inbetriebnahme und Einregulierung;1,0;psch;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+04.01;Trockene Dichtheitsprüfung;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+04.02;Befüllung Rohrleitungssystem kurz vor Bezug/Übergabe;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+04.03;Spülen der Leitungen;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+04.04;Betreibereinweisung nach Kategorie C, VDI 6023;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+04.05;Wasseranalyse durch ein akkreditiertes Trinkwasserlabor. (nur TW-Seite );1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+04.06;Mehrkosten je Wasserprobe und Wasseranalyse;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+05.01;Rohr Stahl niro geschweißt TW AD 35mm WD 1,5mm Pressen;80,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+05.02;Bogen Stahl niro 90Grad TW Pressverbindung AD 35mm;25,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+05.03;Muffe Stahl niro TW Pressverbindung AD 35mm;15,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+05.04;Absperrventil Schrägsitz Entleerungsanschluss Handrad PN16 DN32 Dämmsc halen;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+05.05;Anschluss an bestehende Trinkwasserinstallation;1,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+05.06;Rohrschelle Stahl verz L bis 0,5m AD 35mm;35,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+05.07;Rohrschelle Stahl verz L 0,5-1m AD 35mm;35,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+05.08;C-Profilschiene Stahl verz;11,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+05.09;Form-Hohlprofilstahlkonstruktion Stahl verz;10,0;kg;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+05.10;Wärmedämmung Ummantelung Rohr DN32 Gebäude Mineralwolle AS-Qualität si likonfrei Rohrschale D 30mm Mantel Kunststofffolie;55,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+05.11;Kältedämmung Rohr DN32 Gebäude flexibler Elastomerschaum D 19mm;25,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+05.12;Bogen flexibler Elastomerschaum Kältedämmung Rohr DN32 Gebäude 0,033W/ (mK) D 19mm;12,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+05.13;Bogen Mineralwolle AS-Qualität silikonfrei Wärmedämmung Rohr DN32 Gebä ude 0,035W/(mK) D 30mm kaschiert Alu-Folie;12,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+05.14;Für Armaturen DN 32;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.01;Rohr Stahl niro geschweißt TW AD 108mm WD 2mm Pressen;13,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.02;Rohr Stahl niro geschweißt TW AD 88,9mm WD 2mm Pressen;5,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.03;Rohr Stahl niro geschweißt TW AD 54mm WD 1,5mm Pressen;3,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.04;Bogen Stahl niro 90Grad TW Pressverbindung AD 108mm;10,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.05;Bogen Stahl niro 90Grad TW Pressverbindung AD 88,9mm;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.06;Bogen Stahl niro 90Grad TW Pressverbindung AD 54mm;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.07;T-Stück reduziert Stahl niro TW Pressverbindung AD 108mm x 88,9mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.08;T-Stück reduziert Stahl niro TW Pressverbindung AD 108mm x 35mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.09;Reduzierstück Stahl niro TW Pressverbindung AD 108mm x 88,9mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.10;Reduzierstück Stahl niro TW Pressverbindung AD 88,9mm x 54mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.11;Muffe Stahl niro TW Pressverbindung AD 108mm;3,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.12;Muffe Stahl niro TW Pressverbindung AD 88,9mm;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.13;Übergangsverschraubung Einsteckende AG Rotguss TW Pressverbindung AD 5 4mm R2;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.14;Übergangsflansch Stahl niro PN10/16 TW Pressverbindung AD 88,9mm;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.15;Schraubensatz und Dichtung für Flanschverbindung. DN80;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.16;Rohrschelle Stahl verz L bis 0,5m AD 108mm;12,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.17;Rohrschelle Stahl verz L 0,5-1m AD 108mm;12,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.18;Rohrschelle Stahl verz L bis 0,5m AD 88,9mm;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.19;Rohrschelle Stahl verz L bis 0,5m AD 54mm;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.20;C-Profilschiene Stahl verz;12,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.21;Form-Hohlprofilstahlkonstruktion Stahl verz;9,0;kg;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.22;Kältedämmung Rohr DN100 Gebäude flexibler Elastomerschaum D 20mm;20,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.23;Kältedämmung Rohr DN80 Gebäude flexibler Elastomerschaum D 20mm;10,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.24;Kältedämmung Rohr DN50 Gebäude flexibler Elastomerschaum D 20mm;10,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.25;Bogen flexibler Elastomerschaum Kältedämmung Rohr DN100 Gebäude 0,033W /(mK) D 20mm;10,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.26;Bogen flexibler Elastomerschaum Kältedämmung Rohr DN80 Gebäude 0,033W/ (mK) D 20mm;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.27;Bogen flexibler Elastomerschaum Kältedämmung Rohr DN50 Gebäude 0,033W/ (mK) D 20mm;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.28;T-Stück flexibler Elastomerschaum Kältedämmung Rohr DN100 Gebäude 0,03 3W/(mK) D 20mm;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+06.29;Dämmkappen für Steinfänger;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070101;Löschwasserltg Stahl niro geschweißt AD 108mm WD 2mm;75,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070102;Löschwasserltg Stahl niro geschweißt AD 88,9mm WD 2mm;1,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070103;Bogen 90Grad Stahl niro AD 108mm;18,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070104;T-Stück Stahl niro AD 108mm;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070105;Reduzierstück Stahl niro AD 108mm x 88,9mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070106;Muffe Stahl niro AD 108mm;11,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070107;Übergangsstück Stahl niro AD 88,9mm R3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070108;Rotguss Gewindemuffe Rp3 x Rp3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070109;Flansch PN10/16 Stahl niro AD 108mm;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070110;Schraubensatz und Dichtung für Flanschverbindung, DN100;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070111;Flanschabsperrventil DN100;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070112;Kältedämmung Rohr DN100 Gebäude flexibler Elastomerschaum D 20mm;13,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070113;Kältedämmung Rohr DN80 Gebäude flexibler Elastomerschaum D 20mm;1,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070114;Bogen flexibler Elastomerschaum Kältedämmung Rohr DN100 Gebäude 0,033W /(mK) D 20mm;8,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070115;T-Stück flexibler Elastomerschaum Kältedämmung Rohr DN100 Gebäude 0,03 3W/(mK) D 20mm;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070116;Rohrschelle Stahl verz L bis 0,5m AD 108mm;50,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070117;Rohrschelle Stahl verz L 0,5-1m AD 108mm;50,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070118;C-Profilschiene Stahl verz;25,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070119;Form-Hohlprofilstahlkonstruktion Stahl verz;15,0;kg;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070201;Anschluss an Bestand herstellen;1,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070202;Bestandswandhydrant überprüfen und auf Nassystem umrüsten;12,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070301;Kernbohrungen bis Ø 250 mm, Betondecken;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070302;Kernbohrungen bis Ø 250 mm, Betonwände;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+070303;Rohrabschottung, DN 100 (AD 108 mm);5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080101;Löschwasserltg Stahl niro geschweißt AD 108mm WD 2mm;34,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080102;Löschwasserltg Stahl niro geschweißt AD 88,9mm WD 2mm;1,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080103;Bogen 90Grad Stahl niro AD 108mm;15,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080104;Reduzierstück Stahl niro AD 108mm x 88,9mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080105;T-Stück Stahl niro AD 108mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080106;Muffe Stahl niro AD 108mm;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080107;Flansch PN10/16 Stahl niro AD 108mm;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080108;Flansch PN10/16 Stahl niro AD 88,9mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080109;Schraubensatz und Dichtung für Flanschverbindung, DN100;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080110;Schraubensatz und Dichtung für Flanschverbindung. DN80;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080111;Flanschabsperrventil DN100;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080112;Rohrschelle Stahl verz L bis 0,5m AD 108mm;20,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080113;Rohrschelle Stahl verz L 0,5-1m AD 108mm;20,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080114;C-Profilschiene Stahl verz;12,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080115;Form-Hohlprofilstahlkonstruktion Stahl verz;9,0;kg;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080116;Kältedämmung Rohr DN100 Gebäude flexibler Elastomerschaum D 20mm;13,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080117;Bogen flexibler Elastomerschaum Kältedämmung Rohr DN100 Gebäude 0,033W /(mK) D 20mm;8,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080118;T-Stück flexibler Elastomerschaum Kältedämmung Rohr DN100 Gebäude 0,03 3W/(mK) D 20mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080201;Anschluss an Bestand herstellen;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080202;Bestandswandhydrant überprüfen und auf Nassystem umrüsten;5,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080301;Kernbohrungen bis Ø 250 mm, Betonwände;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+080302;Rohrabschottung, DN 100 (AD 108 mm);1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090101;Schmutzwasserhebeanlage;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090102;Alarmkontaktgeber;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090103;Be- und Entlüftungsventil;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090201;Abwasserltg PE heißwasserbest. DN/OD50 Heizel.stumpfschweißen Gebäude;10,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090202;Abwasserltg PE heißwasserbest. DN/OD75 Heizel.stumpfschweißen Gebäude;12,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090203;Abwasserltg PE heißwasserbest. DN/OD90 Heizel.stumpfschweißen Gebäude;5,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090204;Abwasserltg PE heißwasserbest. DN/OD100 Heizel.stumpfschweißen Gebäude;4,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090205;Abwasserltg PE heißwasserbest. DN/OD125 Heizel.stumpfschweißen Gebäude;7,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090206;Abwasserltg PE heißwasserbest. DN/OD160 Heizel.stumpfschweißen Gebäude;45,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090207;Bogen Abwasserltg PE heißwasserbest. Heizel.stumpfschweißen DN/OD50;10,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090208;Bogen Abwasserltg PE heißwasserbest. Heizel.stumpfschweißen DN/OD75;14,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090209;Bogen Abwasserltg PE heißwasserbest. Heizel.stumpfschweißen DN/OD90;8,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090210;Bogen Abwasserltg PE heißwasserbest. Heizel.stumpfschweißen DN/OD100;10,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090211;Bogen Abwasserltg PE heißwasserbest. Heizel.stumpfschweißen DN/OD125;8,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090212;Bogen Abwasserltg PE heißwasserbest. Heizel.stumpfschweißen DN/OD160;18,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090213;Abzweig Abwasserltg PE heißwasserbest. Heizel.stumpfschweißen DN/OD50;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090214;Abzweig Abwasserltg PE heißwasserbest. Heizel.stumpfschweißen DN/OD75;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090215;Abzweig Abwasserltg PE heißwasserbest. Heizel.stumpfschweißen DN/OD100;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090216;Abzweig Abwasserltg PE heißwasserbest. Heizel.stumpfschweißen DN/OD125;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090217;Abzweig Abwasserltg PE heißwasserbest. Heizel.stumpfschweißen DN/OD160;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090218;Reduzierstück Abwasserltg PE heißwasserbest. Heizel.stumpfschweißen DN /OD75 DN50;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090219;Reduzierstück Abwasserltg PE heißwasserbest. Heizel.stumpfschweißen DN /OD90 DN50;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090220;Reduzierstück Abwasserltg PE heißwasserbest. Heizel.stumpfschweißen DN /OD125 DN100;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090221;Reduzierstück Abwasserltg PE heißwasserbest. Heizel.stumpfschweißen DN /OD160 DN90;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090222;Heizel.-Stumpfschweißung Abwasserleitung PE heißwasserbest. DN/OD50;15,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090223;Heizel.-Stumpfschweißung Abwasserleitung PE heißwasserbest. DN/OD75;15,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090224;Heizel.-Stumpfschweißung Abwasserleitung PE heißwasserbest. DN/OD90;15,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090225;Heizel.-Stumpfschweißung Abwasserleitung PE heißwasserbest. DN/OD110;15,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090226;Heizel.-Stumpfschweißung Abwasserleitung PE heißwasserbest. DN/OD125;15,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090227;Heizel.-Stumpfschweißung Abwasserleitung PE heißwasserbest. DN/OD160;50,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090228;Schweißmuffe Abwasserleitung PE heißwasserbest. DN/OD50;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090229;Schweißmuffe Abwasserleitung PE heißwasserbest. DN/OD75;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090230;Schweißmuffe Abwasserleitung PE heißwasserbest. DN/OD90;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090231;Schweißmuffe Abwasserleitung PE heißwasserbest. DN/OD110;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090232;Schweißmuffe Abwasserleitung PE heißwasserbest. DN/OD125;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090233;Schweißmuffe Abwasserleitung PE heißwasserbest. DN/OD160;15,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090234;Steckmuffe Abwasserleitung PE heißwasserbest. Heizel.stumpfschweißen D N/OD75;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090235;Einlauftrichter DN50;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090236;Anschluss an Bestandsleitung herstellen;1,0;psch;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090237;Anschlussarbeiten Notüberlauf;1,0;psch;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090238;Anschlussarbeiten Hebeanlage DN70;1,0;psch;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090239;Anschlussarbeiten Hebeanlage DN100;1,0;psch;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090240;Anschlussarbeiten Hebeanlage Druckleitung;1,0;psch;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090241;Rohrschelle Stahl verz L bis 0,5m AD 50mm;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090242;Rohrschelle Stahl verz L bis 0,5m AD 75mm;8,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090243;Rohrschelle Stahl verz L bis 0,5m AD 90mm;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090244;Rohrschelle Stahl verz L bis 0,5m AD 110mm;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090245;Rohrschelle Stahl verz L bis 0,5m AD 125mm;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090246;Rohrschelle Stahl verz L bis 0,5m AD 160mm;30,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090247;Rohrschelle Stahl verz L 0,5-1m AD 160mm;30,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090248;C-Profilschiene Stahl verz;30,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090249;Form-Hohlprofilstahlkonstruktion Stahl verz;25,0;kg;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090301;Kernbohrungen bis Ø 250 mm, Betonwände;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+090302;Brandschutzmanschette;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+10.01;Vorhandener Filter DN 150;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+10.02;Vorhandene Dosieranlage;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+10.03;Vorhandene KW-Verteiler;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+10.04;Zulage Glaswolle vorhand. Verteiler;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+10.05;Demontage von vorhandener FL-Nass/Trocken Trennstation Mannheim 1;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+10.06;Demontage von vorhandener FL-Nass/Trocken Trennstation Mannheim 2;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+10.07;Dem. Wasserleitungen DN 100-32, verzinkt, freiliegend;150,0;lfm;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+10.08;Dem. Wasserleitungen DN 150, Edelstahl, freiliegend;80,0;lfm;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+10.09;Abstoppern Bestandsleitungen DN 100-32 verzinkt & Edelstahl;15,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110101;Überflurhydrant DN 80 PN 16 - min. 48 m³/h Edelstahl 1.4401 Pressfitting-System für Löschwasserleitung Nass/Trock en;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110102;Löschwasserltg Stahl niro geschweißt AD 108mm WD 2mm;275,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110103;Brandschutztechnische Dämmung DN100;10,0;lfm;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110104;Löschwasserltg Stahl niro geschweißt AD 88,9mm WD 2mm;10,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110105;Brandschutztechnische Dämmung DN 80;5,0;lfm;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110106;Löschwasserltg Stahl niro geschweißt AD 54mm WD 1,5mm;4,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110107;Löschwasserltg Stahl niro geschweißt AD 22mm WD 1,2mm;10,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110108;Bogen 90Grad Stahl niro AD 108mm;32,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110109;Brandschutztechnische Dämmung Formteile  DN100;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110110;Bogen 90Grad Stahl niro AD 88,9mm;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110111;Bogen 90Grad Stahl niro AD 54mm;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110112;Bogen 90Grad Stahl niro AD 22mm;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110113;T-Stück Stahl niro AD 108mm;3,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110114;T-Stück reduziert Stahl niro AD 108mm x 54mm;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110115;Reduzierstück Stahl niro AD 108mm x 88,9mm;3,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110116;Reduzierstück Stahl niro AD 108mm x 54mm;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110117;Reduzierstück Stahl niro AD 54mm x 22mm;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110118;Übergangsstück Stahl niro AD 54mm Rp2;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110119;Übergangsstück Stahl niro AD 22mm R1/2;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110120;Muffe Stahl niro AD 108mm;15,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110121;Muffe Stahl niro AD 88,9mm;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110122;Muffe Stahl niro AD 22mm;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110123;Flansch PN10/16 Stahl niro AD 108mm;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110124;Be- und Entlüftungsventil DN50 nach DIN 14463-3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110125;Flansch PN10/16 Stahl niro AD 88,9mm;3,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110126;Schraubensatz und Dichtung für Flanschverbindung, DN100;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110127;Schraubensatz und Dichtung für Flanschverbindung. DN80;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110128;Flanschabsperrventil DN100;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110129;Be- und Entlüftungsventil DN50 nach DIN 14463-3;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110130;"Rotgussbogen 90° 1 1/4""? IA";4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110131;Tiefpunkt Entleerungsautomat DN 15;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110132;Rohrschelle Stahl verz L bis 0,5m AD 108mm;170,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110133;Rohrschelle Stahl verz L 0,5-1m AD 108mm;170,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110134;Rohrschelle Stahl verz L bis 0,5m AD 88,9mm;10,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110135;Rohrschelle Stahl verz L bis 0,5m AD 54mm;8,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110136;Rohrschelle Stahl verz L bis 0,5m AD 22mm;12,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110137;C-Profilschiene Stahl verz;100,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110138;Form-Hohlprofilstahlkonstruktion Stahl verz;75,0;kg;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110201;Demontage Überflurhydrant Bestand;1,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110301;Kernbohrungen bis Ø 250 mm, Betonwände;3,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110302;Kernbohrungen bis Ø 150 mm, Betonwände;3,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110303;Kernbohrungen bis Ø 250 mm, Betondecken;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110304;Kernbohrungen bis Ø 150 mm, Betondecken FÜR Überflurhydranten;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+110305;Rohrabschottung, DN 100 (AD 108 mm);5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120101;Löschwasser Einspeiseschrank mit Einspeisearmatur nach DIN14461-4, hän gend;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120102;Befestigung des Einspeiseschrankes am Boden;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120103;Trockenanschluss Entnahmearmatur DN50 mit Einbauschrank;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120201;Löschwasserltg Stahl niro geschweißt AD 88,9mm WD 2mm;37,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120202;Löschwasserltg Stahl niro geschweißt AD 54mm WD 1,5mm;2,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120203;Bogen 90Grad Stahl niro AD 88,9mm;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120204;Bogen 45Grad Stahl niro AD 54mm;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120205;Bogen 30Grad Stahl niro AD 54mm;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120206;T-Stück reduziert Stahl niro AD 88,9mm x 54mm;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120207;Reduzierstück Stahl niro AD 88,9mm x 54mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120208;Muffe Stahl niro AD 88,9mm;3,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120209;Übergangsstück Stahl niro AD 88,9mm R3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120210;Übergangsstück Stahl niro AD 54mm Rp2;7,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120211;Be- und Entlüftungsventil DN50 nach DIN 14463-3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120212;"Rotgussbogen 90° 1 1/4""? IA";2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120213;Rohrschelle Stahl verz L bis 0,5m AD 88,9mm;20,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120214;Rohrschelle Stahl verz L bis 0,5m AD 54mm;8,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120215;C-Profilschiene Stahl verz;12,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120216;Form-Hohlprofilstahlkonstruktion Stahl verz;10,0;kg;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120301;Bestands Entnahmeschrank stilllegen;6,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120401;Kernbohrungen bis Ø 150 mm, Betondecken;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120402;Kernbohrungen bis Ø 250 mm, Betonwände;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120403;Rohrabschottung, DN 80 (AD 88,9 mm);1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+120404;Einführung durch bauseitiges Blindelement in der Scheibe;1,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130101;Löschwasser Einspeiseschrank mit Einspeisearmatur nach DIN14461-4 steh end;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130102;Befestigung am Boden & Eindichten des Einspeiseschrankes an Bestandsab dichtung;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130103;Trockenanschluss Entnahmearmatur DN50 mit Einbauschrank;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130201;Löschwasserltg Stahl niro geschweißt AD 88,9mm WD 2mm;21,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130202;Löschwasserltg Stahl niro geschweißt AD 54mm WD 1,5mm;3,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130203;Löschwasserltg Stahl niro geschweißt AD 22mm WD 1,2mm;8,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130204;Bogen 90Grad Stahl niro AD 88,9mm;7,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130205;Bogen 45Grad Stahl niro AD 54mm;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130206;Bogen 30Grad Stahl niro AD 54mm;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130207;Bogen 90Grad Stahl niro AD 22mm;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130208;T-Stück reduziert Stahl niro AD 88,9mm x 54mm;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130209;T-Stück reduziert Stahl niro AD 88,9mm x 22mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130210;Reduzierstück Stahl niro AD 88,9mm x 54mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130211;Muffe Stahl niro AD 88,9mm;3,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130212;Muffe Stahl niro AD 22mm;3,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130213;Übergangsstück Stahl niro AD 88,9mm R3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130214;Übergangsstück Stahl niro AD 54mm Rp2;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130215;Übergangsstück Stahl niro AD 22mm R1/2;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130216;Be- und Entlüftungsventil DN50 nach DIN 14463-3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130217;"Rotgussbogen 90° 1 1/4""? IA";2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130218;Tiefpunkt Entleerungsautomat DN 15;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130219;Rohrschelle Stahl verz L bis 0,5m AD 88,9mm;15,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130220;Rohrschelle Stahl verz L bis 0,5m AD 54mm;7,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130221;Rohrschelle Stahl verz L bis 0,5m AD 22mm;12,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130222;C-Profilschiene Stahl verz;10,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130223;Form-Hohlprofilstahlkonstruktion Stahl verz;8,0;kg;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130301;Bestands Entnahmeschrank stilllegen;6,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130401;Kernbohrungen bis Ø 150 mm, Betondecken;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130402;Kernbohrungen bis Ø 150 mm, Betonwände;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130403;Rohrabschottung, DN 20 (AD 22,0 mm);1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+130404;Dichtungseinsatz mit DPS zur Abdichtung von Durchdringungen mit Rohren;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140101;Löschwasser Einspeiseschrank mit Einspeisearmatur nach DIN14461-4, hän gend;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140102;Befestigung des Einspeiseschrankes am Boden;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140103;Trockenanschluss Entnahmearmatur DN50 mit Einbauschrank;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140201;Löschwasserltg Stahl niro geschweißt AD 88,9mm WD 2mm;27,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140202;Löschwasserltg Stahl niro geschweißt AD 54mm WD 1,5mm;3,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140203;Bogen 90Grad Stahl niro AD 88,9mm;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140204;Bogen 45Grad Stahl niro AD 54mm;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140205;Bogen 30Grad Stahl niro AD 54mm;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140206;T-Stück reduziert Stahl niro AD 88,9mm x 54mm;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140207;Reduzierstück Stahl niro AD 88,9mm x 54mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140208;Muffe Stahl niro AD 88,9mm;3,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140209;Übergangsstück Stahl niro AD 88,9mm R3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140210;Übergangsstück Stahl niro AD 54mm Rp2;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140211;Be- und Entlüftungsventil DN50 nach DIN 14463-3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140212;"Rotgussbogen 90° 1 1/4""? IA";2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140213;Rohrschelle Stahl verz L bis 0,5m AD 88,9mm;20,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140214;Rohrschelle Stahl verz L bis 0,5m AD 54mm;7,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140215;C-Profilschiene Stahl verz;11,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140216;Form-Hohlprofilstahlkonstruktion Stahl verz;9,0;kg;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140301;Bestands Entnahmeschrank stilllegen;6,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140401;Kernbohrungen bis Ø 150 mm, Betondecken;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140402;Kernbohrungen bis Ø 250 mm, Betonwände;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140403;Rohrabschottung, DN 80 (AD 88,9 mm);1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+140404;Einführung durch bauseitiges Blindelement in der Scheibe;1,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+150101;Bestands Entnahmeschrank stilllegen;1,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160101;Löschwasser Einspeiseschrank mit Einspeisearmatur nach DIN14461-4 steh end;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160102;Befestigung Betonmauer & Eindichten des Einspeiseschrankes an Bestands abdichtung;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160103;Trockenanschluss Entnahmearmatur DN50 mit Einbauschrank;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160201;Löschwasserltg Stahl niro geschweißt AD 88,9mm WD 2mm;32,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160202;Löschwasserltg Stahl niro geschweißt AD 54mm WD 1,5mm;3,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160203;Löschwasserltg Stahl niro geschweißt AD 22mm WD 1,2mm;8,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160204;Bogen 90Grad Stahl niro AD 88,9mm;7,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160205;Bogen 45Grad Stahl niro AD 54mm;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160206;Bogen 30Grad Stahl niro AD 54mm;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160207;Bogen 90Grad Stahl niro AD 22mm;10,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160208;T-Stück reduziert Stahl niro AD 88,9mm x 54mm;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160209;T-Stück reduziert Stahl niro AD 88,9mm x 22mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160210;Reduzierstück Stahl niro AD 88,9mm x 54mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160211;Muffe Stahl niro AD 88,9mm;3,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160212;Muffe Stahl niro AD 22mm;3,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160213;Übergangsstück Stahl niro AD 88,9mm R3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160214;Übergangsstück Stahl niro AD 54mm Rp2;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160215;Übergangsstück Stahl niro AD 22mm R1/2;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160216;Be- und Entlüftungsventil DN50 nach DIN 14463-3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160217;"Rotgussbogen 90° 1 1/4""? IA";2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160218;Tiefpunkt Entleerungsautomat DN 15;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160219;Rohrschelle Stahl verz L bis 0,5m AD 88,9mm;25,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160220;Rohrschelle Stahl verz L bis 0,5m AD 54mm;8,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160221;Rohrschelle Stahl verz L bis 0,5m AD 22mm;10,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160222;C-Profilschiene Stahl verz;13,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160223;Form-Hohlprofilstahlkonstruktion Stahl verz;9,0;kg;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160301;Bestands Entnahmeschrank stilllegen;5,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160401;Kernbohrungen bis Ø 150 mm, Betondecken;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160402;Kernbohrungen bis Ø 150 mm, Betonwände;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160403;Kernbohrungen bis Ø 250 mm, Betonwände;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160404;Rohrabschottung, DN 80 (AD 88,9 mm);2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160405;Rohrabschottung, DN 20 (AD 22,0 mm);1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+160406;Dichtungseinsatz mit DPS zur Abdichtung von Durchdringungen mit Rohren;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170101;Löschwasser Einspeiseschrank mit Einspeisearmatur nach DIN14461-4, hän gend;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170102;Befestigung des Einspeiseschrankes am Boden;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170103;Trockenanschluss Entnahmearmatur DN50 mit Einbauschrank;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170201;Löschwasserltg Stahl niro geschweißt AD 88,9mm WD 2mm;27,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170202;Löschwasserltg Stahl niro geschweißt AD 54mm WD 1,5mm;3,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170203;Bogen 90Grad Stahl niro AD 88,9mm;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170204;Bogen 45Grad Stahl niro AD 54mm;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170205;Bogen 30Grad Stahl niro AD 54mm;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170206;T-Stück reduziert Stahl niro AD 88,9mm x 54mm;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170207;Reduzierstück Stahl niro AD 88,9mm x 54mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170208;Muffe Stahl niro AD 88,9mm;3,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170209;Übergangsstück Stahl niro AD 88,9mm R3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170210;Übergangsstück Stahl niro AD 54mm Rp2;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170211;Be- und Entlüftungsventil DN50 nach DIN 14463-3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170212;"Rotgussbogen 90° 1 1/4""? IA";2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170213;Rohrschelle Stahl verz L bis 0,5m AD 88,9mm;15,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170214;Rohrschelle Stahl verz L bis 0,5m AD 54mm;8,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170215;C-Profilschiene Stahl verz;10,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170216;Form-Hohlprofilstahlkonstruktion Stahl verz;8,0;kg;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170301;Bestands Entnahmeschrank stilllegen;5,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170401;Kernbohrungen bis Ø 150 mm, Betondecken;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170402;Kernbohrungen bis Ø 250 mm, Betonwände;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170403;Rohrabschottung, DN 80 (AD 88,9 mm);1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+170404;Einführung durch bauseitiges Blindelement in der Scheibe;1,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180101;Löschwasser Einspeiseschrank mit Einspeisearmatur nach DIN14461-4, hän gend;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180102;Befestigung des Einspeiseschrankes am Boden;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180103;Trockenanschluss Entnahmearmatur DN50 mit Einbauschrank;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180201;Löschwasserltg Stahl niro geschweißt AD 22mm WD 1,2mm;1,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180202;Löschwasserltg Stahl niro geschweißt AD 88,9mm WD 2mm;18,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180203;Löschwasserltg Stahl niro geschweißt AD 54mm WD 1,5mm;8,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180204;Bogen 90Grad Stahl niro AD 88,9mm;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180205;Bogen 45Grad Stahl niro AD 54mm;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180206;Bogen 30Grad Stahl niro AD 54mm;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180207;Bogen 15Grad Stahl niro AD 54mm;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180208;T-Stück reduziert Stahl niro AD 88,9mm x 54mm;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180209;T-Stück reduziert Stahl niro AD 88,9mm x 22mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180210;Reduzierstück Stahl niro AD 88,9mm x 54mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180211;Muffe Stahl niro AD 88,9mm;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180212;Übergangsstück Stahl niro AD 88,9mm R3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180213;Übergangsstück Stahl niro AD 54mm Rp2;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180214;Übergangsstück Stahl niro AD 22mm R1/2;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180215;Be- und Entlüftungsventil DN50 nach DIN 14463-3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180216;"Rotgussbogen 90° 1 1/4""? IA";2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180217;Tiefpunkt Entleerungsautomat DN 15;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180218;Rohrschelle Stahl verz L bis 0,5m AD 88,9mm;12,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180219;Rohrschelle Stahl verz L bis 0,5m AD 54mm;10,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180220;Rohrschelle Stahl verz L bis 0,5m AD 22mm;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180221;C-Profilschiene Stahl verz;7,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180222;Form-Hohlprofilstahlkonstruktion Stahl verz;7,0;kg;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180301;Bestands Entnahmeschrank stilllegen;5,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+180401;Einführung durch bauseitiges Blindelement in der Scheibe;1,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190101;Löschwasser Einspeiseschrank mit Einspeisearmatur nach DIN14461-4, hän gend;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190102;Befestigung des Einspeiseschrankes am Boden;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190103;Trockenanschluss Entnahmearmatur DN50 mit Einbauschrank;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190201;Löschwasserltg Stahl niro geschweißt AD 88,9mm WD 2mm;28,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190202;Löschwasserltg Stahl niro geschweißt AD 54mm WD 1,5mm;3,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190203;Löschwasserltg Stahl niro geschweißt AD 22mm WD 1,2mm;1,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190204;Bogen 90Grad Stahl niro AD 88,9mm;10,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190205;Bogen 45Grad Stahl niro AD 54mm;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190206;Bogen 30Grad Stahl niro AD 54mm;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190207;T-Stück reduziert Stahl niro AD 88,9mm x 54mm;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190208;T-Stück reduziert Stahl niro AD 88,9mm x 22mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190209;Reduzierstück Stahl niro AD 88,9mm x 54mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190210;Muffe Stahl niro AD 88,9mm;3,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190211;Übergangsstück Stahl niro AD 88,9mm R3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190212;Übergangsstück Stahl niro AD 54mm Rp2;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190213;Übergangsstück Stahl niro AD 22mm R1/2;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190214;Be- und Entlüftungsventil DN50 nach DIN 14463-3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190215;"Rotgussbogen 90° 1 1/4""? IA";2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190216;Tiefpunkt Entleerungsautomat DN 15;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190217;Rohrschelle Stahl verz L bis 0,5m AD 88,9mm;20,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190218;Rohrschelle Stahl verz L bis 0,5m AD 54mm;8,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190219;Rohrschelle Stahl verz L bis 0,5m AD 22mm;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190220;C-Profilschiene Stahl verz;9,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190221;Form-Hohlprofilstahlkonstruktion Stahl verz;8,0;kg;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190301;Bestands Entnahmeschrank stilllegen;5,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190401;Kernbohrungen bis Ø 150 mm, Betondecken;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+190402;Einführung durch bauseitiges Blindelement in der Scheibe;1,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200101;Löschwasser Einspeiseschrank mit Einspeisearmatur nach DIN14461-4 steh end;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200102;Befestigung Betonmauer & Eindichten des Einspeiseschrankes an Bestands abdichtung;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200103;Trockenanschluss Entnahmearmatur DN50 mit Einbauschrank;4,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200201;Löschwasserltg Stahl niro geschweißt AD 88,9mm WD 2mm;18,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200202;Löschwasserltg Stahl niro geschweißt AD 54mm WD 1,5mm;4,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200203;Löschwasserltg Stahl niro geschweißt AD 22mm WD 1,2mm;8,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200204;Bogen 90Grad Stahl niro AD 88,9mm;10,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200205;Bogen 90Grad Stahl niro AD 22mm;6,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200206;T-Stück reduziert Stahl niro AD 88,9mm x 22mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200207;Reduzierstück Stahl niro AD 88,9mm x 54mm;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200208;Muffe Stahl niro AD 88,9mm;3,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200209;Muffe Stahl niro AD 22mm;2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200210;Übergangsstück Stahl niro AD 88,9mm R3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200211;Übergangsstück Stahl niro AD 54mm Rp2;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200212;Übergangsstück Stahl niro AD 22mm R1/2;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200213;Be- und Entlüftungsventil DN50 nach DIN 14463-3;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200214;"Rotgussbogen 90° 1 1/4""? IA";2,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200215;Tiefpunkt Entleerungsautomat DN 15;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200216;Rohrschelle Stahl verz L bis 0,5m AD 88,9mm;15,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200217;Rohrschelle Stahl verz L bis 0,5m AD 54mm;7,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200218;Rohrschelle Stahl verz L bis 0,5m AD 22mm;8,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200219;C-Profilschiene Stahl verz;6,0;m;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200220;Form-Hohlprofilstahlkonstruktion Stahl verz;2,0;kg;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200301;Bestands Entnahmeschrank stilllegen;4,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200302;Anschluss an Bestandsleitung DN80 herstellen;1,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200303;Anschluss Bestandsabwasser herstellen;1,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200304;Demontage Bestandsleitung DN80;1,0;paus;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200401;Kernbohrungen bis Ø 150 mm, Betondecken;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200402;Kernbohrungen bis Ø 250 mm, Betonwände;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200403;Rohrabschottung, DN 80 (AD 88,9 mm);1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+200404;Dichtungseinsatz mit DPS zur Abdichtung von Durchdringungen mit Rohren;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+210101;Baustelleneinrichtung wie voran beschrieben;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+210201;Erstellen der Montageplanung;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+210301;Revisionsunterlagen;1,0;psch;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+210401;Wartungskosten Druckerhöhung Feuerlöschwasser;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+210402;Wartungskosten Feuerlöschentnahmestellen;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+210403;Wartungskosten Systemtrennung Nass/TRocken;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+210404;Wartungskosten Hebeanlage;5,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+210501;Obermonteur;10,0;Std;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+210502;Monteur;20,0;Std;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+210503;Hilfsmonteur;24,0;Std;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+210504;Helfer;10,0;Std;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+220101;Löschwasser Einspeiseschrank mit Einspeisearmatur nach DIN14461-4 steh end;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+220102;Befestigung Betonmauer & Eindichten des Einspeiseschrankes an Bestands abdichtung;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+230101;Mehrfach Einspeiseschrank;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83
+230102;Befestigung Betonmauer & Eindichten des Einspeiseschrankes an Bestands abdichtung;1,0;St;gaeb-flat;leistungsbeschreibungen/4781 - LV Feuerlöschversorgung.D83

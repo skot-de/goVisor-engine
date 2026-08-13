@@ -1,0 +1,34 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01010010;Lieferung des Steuergerätes;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+01020010;OCIT-Schnittstelle;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+01020020;Anschluss an den OCIT-Verkehrsrechner;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+01020030;IV-Videodetektionseinheit;2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+01020040;Funkuhr bzw. GDF-Uhr liefern;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+01020050;Schlüsselschalter mit Kontrollleuchte;2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+01020060;Qualitätsanalysefunktion;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+01030010;Erstellung der verkehrstechnischen Unterlagen (mit ÖV);1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+01030020;Erstellung der Festzeitprogramme;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+01030030;Erstellung der verkehrsabhängigen Programme;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+01030040;Erstellung der Basisprogramme;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+02010010;Fertigfundament für Steuergeräteschaltschrank liefern;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+02020010;Fahrverkehrsignalgeber liefern (3-feldig, 200er);6,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+02020020;Fahrverkehrsignalgeber mit Pfeilsymbol liefern (3-feldig, 200er);2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+02020030;Fußgängersignalgeber liefern (2-feldig, 200er);2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+02020040;Fußgängersignalgeber liefern (2-feldig, 200er);3,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+02020050;Fußgängersignalgeber liefern (3-feldig, 200er);4,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+02020060;Fg/Rd-Signalgeber liefern (2-feldig, 200er);1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+02020070;Blinksignalgeber liefern (Fg, 1-feldig, 200er);1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+02020080;Strab-Signalgeber liefern (1-feldig, 200er);4,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+02020090;Strab-Signalgeber liefern (2-feldig, 200er);2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+02020100;FG-Anforderungsgerät für Fußgänger und Sehbehinderte;4,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+02020110;FG-Anforderungsgerät für Sehbehinderte;6,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+02020120;Blindenakustik liefern;10,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+02020130;Kontrastblenden für FV-Signalgeber (3-begriffig, 200er);2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+02030010;Signalmast (Normallänge) liefern;7,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+02030020;Signalpeitschenmast (Auslegerlänge 4,50 m) liefern;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+02030030;Signalpeitschenmast (Auslegerlänge 6,00 m) liefern;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+02030040;Fundamentrahmen für Signalmast liefern;7,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+02030050;Ankerkorb für Signalpeitschenmast (bis 4,50 m Auslegerlänge) liefern;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+02030060;Ankerkorb für Signalpeitschenmast (bis 6,00 m Auslegerlänge) liefern;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+03010010;Aufstellung und Montage des Steuergerätes;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83
+03010020;Montage der Außenanlage;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/05_K66 LV.D83

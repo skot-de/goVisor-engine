@@ -1,0 +1,161 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0101010;Baustelleneinrichtung;1,0;psch;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0101020;Geräteeinsatz Wassersauger;5,0;h;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0101030;Provisorische Schachtabdeckungen - Liefern und Einbau;8,0;m2;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0201010;Baugrubensicherung Längsseite SÜD H bis 3,00m - Rigole;36,0;m;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0201020;Baugrubensicherung Längsseite SÜD H bis 4,60m;12,0;m;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0201030;Baugrubensicherung Längsseite SÜD-West H bis 2,50m;12,0;m;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0201040;Graben-Normverbau, senkrecht, OST, H bis 3m;63,0;m2;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202010;Aushub, Schlitzgraben T bis 1,75m Rohrgrabenaushub, im Außenbereich;4,0;m;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202020;Aushub Rohrgräben, h bis 1,00m, außerhalb Gebäude;21,5;m3;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202030;Aushub Rohrgräben, h bis 1,75m, außerhalb Gebäude;14,0;m3;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202040;Aushub Rohrgräben, h bis 2,5m, außerhalb Gebäude;46,5;m3;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202050;Aushub Rohrgräben, h bis 3,0m, außerhalb Gebäude;10,0;m3;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202060;Aushub Rohrgräben, h bis 4,0m, außerhalb Gebäude Aushub Gruben für Kontrollschächte, h bis 5,0m, im Außenbereich, Verbau;7,0;m3;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202070;Erdaushub, Schacht DN1.000, bis 3,90m - mit Verbau;22,5;m3;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202080;Erdaushub, Schacht DN1.500, bis 4,00m - mit Verbau;35,5;m3;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202090;Erdaushub, Schacht DN 1.000, bis 0,90m - mit Verbau;5,2;m3;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202100;Aushub Sedimentation und Rigolen, h bis 3,60m, im Außenbereich;255,0;m3;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202110;Zulage Handaushub, HB2;5,0;m3;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202120;Folienabdeckung von Böschungen, PE-Folie d = 0,5 mm;50,0;m2;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202130;Bodenaushub abfahren und entsorgen Z0;327,4;t;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202140;Bodenaushub abfahren und entsorgen Z1.1;167,2;t;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202150;Bodenaushub abfahren und entsorgen Z2 Vorbemerkungen - Verfüllen Rohrgräben;42,2;t;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202160;Hinterfüllen Rohrgräben im Außenbereich, gelagertes Material;78,5;m3;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202170;Hinterfüllen Rohrgräben im Außenbereich, Fremdmaterial;33,5;m3;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202180;Hinterfüllen Arbeitsräume RW-Retentionsanlage, gelagertes Material;90,0;m3;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202190;Hinterfüllen Arbeitsräume RW-Retentionsanlage, Fremdmaterial;106,0;m3;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202200;Liefern von Sand für Rohrbettung;39,5;m3;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0202210;Prüfung des Verdichtungsgrads;4,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203010;Vollwandrohr PP-MD Rohrleitung DN 110;2,0;m;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203020;Vollwandrohr PP-MD Rohrleitung DN 160;27,0;m;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203030;Vollwandrohr PP-MD Rohrleitung DN 200;4,5;m;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203040;Vollwandrohr PP-MD Rohrleitung DN 250;32,5;m;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203050;Vollwandrohr PP-MD Rohrleitung DN 315;13,0;m;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203060;Formstück PP-MD Bogen DN 160, alle Grade;1,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203070;Formstück PP-MD Bogen DN 200, alle Grade;1,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203080;Formstück PP-MD Bogen DN 250, alle Grade;4,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203090;Formstück PP-MD Abzweig DN 250/110;5,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203100;Formstück PP-MD Abzweig DN 250/250;2,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203110;Formstück PP-MD Reduzierstück exzentrisch  DN110/250;6,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203120;Formstück PP-MD Überschiebmuffe DN 160;2,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203130;Formstück PP-MD Doppelmuffe  DN 160;4,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203140;Formstück PP-MD Enddeckel DN 110;11,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203150;Formstück PP-MD Enddeckel DN 160;1,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203160;Formstück PP-MD Enddeckel DN 200;1,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203170;Formstück PP-MD Enddeckel DN 250 RW/SW-Schächte;2,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203180;SW-Übergabeschacht DN 1000 T bis 4,00m;1,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203190;RW-Sammelschacht DN 1000 T bis 1,50m;1,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203200;RW-Pumpschacht DN 1500 T bis 5,00m;1,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203210;Schachtabdeckung DN600, BLK D 400, Vollguss;3,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203220;RW-Übergabeschacht DN 400, PP;1,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203230;Markierungspflock;12,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0203240;Trassenwarnband;68,0;m;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0204010;Sedimentationsanlage (Sandfang) mit Start und Zielschacht Füllkörper-Rigole in Reihenschaltung;1,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0204020;Füllkörperrigole 1: max. 4,00x1,60x1,35m, mit 2 Kontrollschächten;1,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0204030;Füllkörperrigole 2-4: max. 4,80x1,60x1,35m, mit 2 Kontrollschächten;3,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0204040;Füllkörperrigole 5: 4,80x1,60x1,35m, mit 2 Kontrollschächten;1,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0204050;Schachtabdeckung DN600, BLK B125, Vollguss;11,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0204060;Schachtabdeckung DN600, BLK D400, Vollguss;1,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0204070;Regenwasserhebeanlage 15l/s Kabelverlegung für Regenwasserhebeanlage 15l/s;1,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0204080;Kabel NYY-J 3x1,5 in Kabelgraben;100,0;m;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0204090;Kabel NYY-J 5x2,5 in Kabelgraben;50,0;m;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0204100;Druckleitung DN 110 - PE;10,0;m;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0204110;Bogen PE DN 110, bis 90°;6,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0204120;Dämmung;2,0;m;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0204130;Rohrbegleitheizung, elektrisch;10,0;m;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0204140;Freiluftschrank für Druckschleife und Steuerung;1,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0204150;Leerrohr DN 50;6,0;m;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0301010;Werk-/ Montageplanung Retentionsanlage;1,0;psch;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0301020;Druck- und Dichtigkeitsprüfung Entwässerunganlage in AA;108,2;m;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0301030;Kanalreinigung, Hochdruckspülgerät;108,2;m;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0301040;Einmessen der RW-/ SW-Rohrleitungen;1,0;psch;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0301050;Kanalprüfung, Kamera;108,2;m;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0301060;Mithilfe bei behördlichen Abnahmen;1,0;St;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0301070;Revisionspläne anfertigen;1,0;psch;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0301080;Inbetriebnahme und Übergabe Pumpstation;1,0;psch;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0302010;Dokumentation;1,0;psch;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0401010;Meister und Gleichgestellte;2,0;h;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0401020;Obermonteure, Monteure und Gleichgestellte;3,0;h;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0401030;Hilfsmonteure, Helfer und Gleichgestellte;3,0;h;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+0401040;Auszubildende und Gleichgestellte;3,0;h;gaeb-flat;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.D83
+010;"Wie in der Ausführungsbeschreibung Titel ""Baustelleneinrichtung"" beschrieben,";1,0;psch;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+020;Geräteeinsatz Wassersauger zur temporären Grubenentwässerung bei anhaltenden Niederschlägen zur Ableitung von ggf. auftretendem Schichtenwasser in Aushubsohlen während der Bauzeit.;5,0;h;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+030;"Liefern und Einbau provisorischer Schachtabdeckungen während der Bauphase mittels Vlies und Stahlplatte als Frostschutz und Sicherung vor Beschädigung der Schachtköpfe;";8,0;m2;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+010;Sicherung der Baugrube zum Einbau der Rigolenkörper und Verrohrung auf der Südseite (Achse A) durch abschnittsweise mit fortschreitendem Aushub eingebrachten Verbauelementen z.B. Schleppboxen, geeignet für wechselnde Grabenbreiten, System nach Wahl des AN, einschließlich statischer Nachweise zur Vor;36,0;m;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+020;Sicherung der Baugrube zum Einbau des RW-Schachts mit Hebeanlage sowie der Hersteller des Anschlusses der RW- und SW-Entwässerung an die Bestandsleitungen der Stadtwerke Schwerin.;12,0;m;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+030;Sicherung der Baugrube zum Einbau des RW-Sammelschachts und der RW-Sedimentanlage.;12,0;m;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+040;Senkrechter-Normverbau für Graben abschnittsweise herstellen, vorhalten und wieder entfernen.;63,0;m2;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+010;Boden für Suchgraben ausheben zur;4,0;m;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+020;für RW/SW-Ableitung TA in AA;21,5;m3;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+030;für RW/SW-Ableitung TA in AA;14,0;m3;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+040;für RW/SW-Ableitung TA in AA;46,5;m3;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+050;für RW/SW-Ableitung TA in AA;10,0;m3;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+060;für RW/SW-Ableitung TA in AA;7,0;m3;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+070;für SW-Schacht DN 1.000;22,5;m3;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+080;für Pumpschacht DN 1.500;35,5;m3;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+090;für RW-Sammelschacht DN 1.500;5,2;m3;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+100;Herstellung von Gruben nach DIN EN 1610 und DIN 4124 und unter Beachtung der Ausführungsbeschreibung Erdarbeiten und der beigefügten Baugrunduntersuchungen,;255,0;m3;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+110;Zulage zu den Aushubpositionen für Handaushub bei nachträglich nach Abschluss der Erdarbeiten erforderlich werdenden Aushubarbeiten, bei denen Maschineneinsatz nicht möglich ist,;5,0;m3;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+120;Abdecken von Böschungen Rohrgräben, Sedimentationsanlage zur Sicherung gegen Tagwasser, mit Polyäthylenfolie 0,5 mm stark,;50,0;m2;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+130;Überschüssiges bzw. nicht einbaufähiges Material auf der Baustelle oder auf dem Lagerplatz laden, abfahren und auf geeigneter Deponie entsorgen.;327,4;t;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+140;Zulage für Entsorgung Bodenmaterial.;167,2;t;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+150;Zulage für Entsorgung Bodenmaterial.;42,2;t;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+160;Lagenweises Verfüllung der Rohrgräben im Außenbereich nach DIN 18300 und DIN 4124 oberhalb der Leitungszone und Bettungsschichten mit dem Aushubmaterial.;78,5;m3;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+170;Hinterfüllen von Rohrgräben im Außenbereich bis OK Gelände (Vorstufenausbau).;33,5;m3;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+180;Lagenweises Verfüllung der Arbeitsräume der RW-Retentionsanlage im Außenbereich nach DIN 18300 und DIN 4124 oberhalb der Bettungsschichten mit gelagertem Aushubmaterial.;90,0;m3;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+190;Hinterfüllen von Arbeitsräumen der RW-Retentionsanlage bis OK Gelände (Vorstufenausbau).;106,0;m3;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+200;Liefern von Sand/Feinkies 0/2 bis 0/4 für die Bettung, Seitenverfüllung und Abdeckung von RW-/SW-Entwässerungsleitungen sowie Kabel einschließlich Transport bis zur Einbaustelle.;39,5;m3;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+210;Durchführung von Plattendruckversuch nach DIN 18134;4,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+010;"Ausführung wie in Ausführungsbeschreibung ""Leitungen Abwasseranlagen in AA"" wie vor beschrieben,";2,0;m;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+020;DN 160;27,0;m;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+030;DN 200;4,5;m;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+040;DN 250;32,5;m;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+050;DN 315;13,0;m;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+060;"Ausführung wie in Ausführungsbeschreibung """;1,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+070;DN 200;1,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+080;DN 250;4,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+090;"Ausführung wie in Ausführungsbeschreibung """;5,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+100;"Ausführung wie in Ausführungsbeschreibung """;2,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+110;"Ausführung wie in Ausführungsbeschreibung ""Leitungen Abwasseranlagen in AA"" beschrieben, für";6,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+120;"Ausführung wie in Ausführungsbeschreibung ""Grundleitungen Abwasseranlagen unter Bodenplatte"" beschrieben, für";2,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+130;Ausführung wie in Ausführungsbeschreibung;4,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+140;Ausführung wie in Ausführungsbeschreibung;11,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+150;DN 160;1,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+160;DN 200;1,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+170;DN 250;2,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+180;jedoch als Schmutzwasser-Übergabeschacht;1,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+190;jedoch als Regenwasser-Sammelschacht wie folgt:;1,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+200;jedoch als Regenwasser-Pumpschacht sowie zur Montage einer Regenwasserpumpstation gem. Pos.;1,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+210;Schachtabdeckung, entsprechend DIN EN 124-2;3,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+220;KG-Systemschacht DN 400 aus Polypropylen (PP) aus Fertigteilen DN 400,;1,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+230;Markierungspflock aus Holz mit Bleistiftspitze und rotem Kopf, Länge 40cm, zur Markierung der freien RW-rohrenden für späteren Leitungsanschluss durch Galabau;12,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+240;"Trassenwarnband zur Warnung bei Grabarbeiten als PE-Folie mit einem eindeutigen grafischen Symol zur Warnung und der Bezeichnung ""Entwässerungsleitung""";68,0;m;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+010;Lieferung und Montage einer Sedimentationsanlage (Sandfang) zur Behandlung von belasteten Regenabflüssen mit höhengleichem Zu- und Ablaufniveau bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+020;Lieferung und Montage einer gedichteten Rigole zur Regenwasserrückhaltung nach DWA-A117 wie vor in Ausführungsbeschreibung beschrieben für;1,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+030;Rigole 2 bis 4:;3,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+040;Rigole 5:;1,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+050;Schachtabdeckung, entsprechend DIN EN 124-2;11,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+060;Belastungsklasse D400;1,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+070;"Regenwasser als Doppelpumpstation in Betonfertigschacht geeignet zur Förderung von Abwasser ohne Fäkalienanteil (Grauwasser);";1,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+080;Kabel NYY-J 3x1,5, Cu-Zahl 43;100,0;m;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+090;Kabel NYY-J 5x2,5, Cu-Zahl 43;50,0;m;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+100;Druckleitungsrohre zur Ableitung von Regenwasser aus der Pumpstation liefern und verlegen,;10,0;m;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+110;Formstück gemäß DIN EN 12201, abgestimmt auf Druckleitung aus Pos.;6,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+120;Wärmedämmung für vorgenannte Rohrleitung im frostgefährdeten Bereich der Druckschleife.;2,0;m;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+130;Elektrische Rohrbegleitheizung zum Frostschutz der PE-Druckleitung DN 110 im frostgefährdeten Bereich.;10,0;m;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+140;Freiluftschrank als Leerschrank zur Aufnahme der gedämmten Druckleitung DN110 und Druckschleife, der Rohrbegleitheizung sowie der Steuerungsanlagen der Regenwasserhebeanlage und ELT-Anschluss.;1,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+150;flexibles Kunststoffleerrohr DN 50 für die Verlegung im Erdreich für die geschützte, elektrische Verbindung zwischen Hebeanlage bzw. Rohrbegleitheizung und Steuerung.;6,0;m;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+010;Werk- und Montageplanung;1,0;psch;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+020;Die Druck- und Dichtheitsprüfung ist nach Fertigstellung der RW-/SW-Rohrleitungsarbeiten sowie der Retentionsanlagen und vor Verfüllung sowie vor Inbetriebnahme der Anlage durch einen zugelassenen Fachbetrieb durchzuführen.;108,2;m;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+030;Entwässungsleitung außerhalb der Bodenplatte sowie Retentionsanlage durchspülen mit kombiniertem Hochdruckspül- und Hochdrucksaug-Fahrzeug mit Wasserrückgewinnung einschl. Liefern des Wassers, Abfall aufsaugen, laden und entsorgen.;108,2;m;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+040;Einmessen und digitales Dokumentieren der Höhe und der Lage der erdverlegten RW-/SW-Entwässerungsleitungen TA in AA mit Lasermessgeräten nach Montageplanung einschl. Kontrolle der vorhandenen Abgangs- und Einleitungshöhen anzubindende erforderliche Entwässerungsleitungen.;1,0;psch;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+050;Kameraprüfung der neu verlegten Entwässerungsleitungen und der Retentionsanlage mit Video-Aufzeichnung, einschl. Dokumentieren und Einmessen der Beschädigungen (Muffenvesätze, Durchwurzelungen, Einmündungen, Verstopfungen, Risse, Bücher und dgl.) der Grundleitungen und Aufstellen eines Video- und Pr;108,2;m;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+060;Mithilfe des AN bei der behördlichen Abnahme durch einen vom Abwasserbetrieb Schwerin Bevollmächtigten.;1,0;St;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+070;Anfertigen von Revisionsplänen, die den endgültigen Zustand;1,0;psch;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+080;Durchführen der Inbetriebnahme Regenwasserpumpstation einschließlich angeschlossener PE-Druckleitung DN 110 sowie der Rohrbegleitheizung mit Steuer- und Regeleinheit.;1,0;psch;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+010;Erstellung und Übergabe an den AG der Dokumentation der Leistungen des AN;1,0;psch;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+010;Stundensatz für Meister und Gleichgestellte;2,0;h;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+020;Stundensatz für Obermonteure, Monteure und Gleichgestellte;3,0;h;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+030;Stundensatz für Hilfsmonteure, Helfer und Gleichgestellte;3,0;h;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83
+040;Stundensatz für Auszubildene und Gleichgestellte;3,0;h;gaeb;leistungsbeschreibungen/SN_NSS_SN_LV_VE046_kanalbau, TA in AA_260720.X83

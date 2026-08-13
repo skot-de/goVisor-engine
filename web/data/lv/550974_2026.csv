@@ -1,0 +1,218 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Basisliz;1,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+2;Gerätelizenz;177,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+3;Videomanagement Server Failoverlizenz;1,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+4;Bildvergleicherlizenz;1,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+5;Objektverfolgungslizenz;1,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+6;Systemerweiterung Lizenz;1,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+1;Nutzerabstimmung zu den Leistungsmerkmalen,;30,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+2;Nutzerabstimmung IT-Infrastruktur;20,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+3;Nutzerabstimmung Cybersecurity;25,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+4;Nutzerabstimmung Mitbestimmung;25,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+5;Nutzerabstimmung Backupkonzept;8,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+6;Nutzerabstimmung Updatekonzept;8,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+7;Nutzerabstimmung Kryptografie und Verschlüsselung;8,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+8;Inbetriebnahme, Konfiguration;45,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+9;Installation-Konfiguration Video-Client;3,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+10;Einrichtung Benutzer und Benutzerrechte;9,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+11;Umsetzung der Maßnahmen aus den Nutzerabstimmungen;50,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+12;Bedienerschulung;6,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+13;Administratoreneinweisung;8,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+14;Einrichtung Managementsystem;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+15;Kopplung zur GA;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+1;Ausarbeitung der Anzahl und Art der benötigten Kameras, sowie ein daraus resultierender Kameraverteilungsplan, inklusive Angaben zu benötigten Kabelanschlüssen und Kabelwegen.;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+2;Eingangsmodul für EMA / Stiller Alarm;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+3;Kamera 1:;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+4;Kamera 2:;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+5;Kamera 3:;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+6;Kamera 4:;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+7;Paniktasteranbindung;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+8;Anbindung EMA;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+9;Montagematerial für Verlegung und Erweiterung der Kabelwege;4,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+10;Ausrichtung und Inbetriebnahme;4,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+11;Einrichtung der Videoereignisse je Kanal gemäß Anforderungen des AG bzw. je Kamera bei Verwendung der Kamera- Detektionsmechanismen. Die Leistungsposition ist je Kamera, je Konfigurationsvorgang anzuwenden durchführen;4,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+12;Systemtest der Anlage bestehend aus:;1,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+13;Übergabe/ Gesamt-Dokumentation der;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+14;Durchführungspauschale + Projektleitung;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+15;Werk- und Montageplanung;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+16;Stundensatzvereinbarung für unvorhersehbare;8,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+1;Ausarbeitung Kameraverteilungsplan;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+2;Eingangsmodul für Türkontakte;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+3;Kamera 1:;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+4;Kamera 2:;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+5;Kamera 3:;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+6;Kamera 4:;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+7;Montagematerial für Verlegung und Erweiterung der Kabelwege;4,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+8;Ausrichtung und Inbetriebnahme;4,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+9;Einrichtung der Videoereignisse je Kanal gemäß Anforderungen des AG bzw. je Kamera bei Verwendung der Kamera- Detektionsmechanismen. Die Leistungsposition ist je Kamera, je Konfigurationsvorgang anzuwenden durchführen;4,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+10;Systemtest der Anlage bestehend aus:;1,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+11;Übergabe/ Gesamt-Dokumentation der;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+12;Durchführungspauschale + Projektleitung;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+13;Werk- und Montageplanung;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+14;Stundensatzvereinbarung für unvorhersehbare;8,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+1;Ausarbeitung der Anzahl und Art der benötigten Kameras, sowie ein daraus resultierender Kameraverteilungsplan, inklusive Angaben zu benötigten Kabelanschlüssen und Kabelwegen.;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+2;Eingangsmodul für Türkontakte;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+3;Kamera 1:;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+4;Kamera 2:;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+5;Kamera 3:;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+6;Kamera 4:;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+7;Kamera 5:;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+8;Kamera 6:;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+9;Montagematerial für Verlegung und Erweiterung der Kabelwege;6,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+10;Ausrichtung und Inbetriebnahme;6,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+11;Einrichtung der Videoereignisse je Kanal gemäß Anforderungen des AG bzw. je Kamera bei Verwendung der Kamera- Detektionsmechanismen. Die Leistungsposition ist je Kamera, je Konfigurationsvorgang anzuwenden durchführen;6,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+12;Systemtest der Anlage bestehend aus:;1,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+13;Übergabe/ Gesamt-Dokumentation der;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+14;Durchführungspauschale + Projektleitung;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+15;Werk- und Montageplanung;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+16;Stundensatzvereinbarung für unvorhersehbare;8,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+1;Überarbeitung Kameraverteilungsplan;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+2;Eingangsmodul für Not-Taster;4,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+3;Bedienplatz Client;3,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+4;Kamera Objektüberwachung;40,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+5;Kamera Objektüberwachung Zoomoptik;40,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+6;Wandanschlussdose außen für Kamera Objektüberwachung;80,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+7;Die vorhandene Notruftechnik soll wieder verwendet werden,;20,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+8;RJ45 Koppler, Buchse-Buchse,;80,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+9;Material für Verlegung und Erweiterung der Kabelwege;80,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+10;Ausrichtung und Inbetriebnahme;80,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+11;Einrichtung der Videoereignisse je Kanal gemäß Anforderungen des AG bzw. je Kamera bei Verwendung der Kamera- Detektionsmechanismen. Die Leistungsposition ist je Kamera, je Konfigurationsvorgang anzuwenden durchführen;80,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+12;Systemtest der Anlage bestehend aus:;1,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+13;Übergabe/ Gesamt-Dokumentation der;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+14;Durchführungspauschale + Projektleitung;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+15;Werk- und Montageplanung;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+16;Stundensatzvereinbarung für unvorhersehbare;30,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+1;Ausarbeitung der Anzahl und Art der benötigten Kameras, sowie ein daraus resultierender Kameraverteilungsplan, inklusive Angaben zu benötigten Kabelanschlüssen und Kabelwegen.;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+2;Eingangsmodul für Not-Taster;4,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+3;Kamera Objektüberwachung;15,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+4;Kamera Objektüberwachung Zoomoptik;10,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+5;Wandanschlussdose außen für Kamera Objektüberwachung;25,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+6;Kamera Flächenüberwachung;15,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+7;Wandmontagearm für 360 Grad Netzwerk Außenkamera;15,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+8;Notrufsprechstelle;20,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+9;Kameraanschlusskasten;8,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+10;Montagematerial für Verlegung und Erweiterung der Kabelwege;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+11;Ausrichtung und Inbetriebnahme;40,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+12;Einrichtung der Videoereignisse je Kanal gemäß Anforderungen des AG bzw. je Kamera bei Verwendung der Kamera- Detektionsmechanismen. Die Leistungsposition ist je Kamera, je Konfigurationsvorgang anzuwenden durchführen;40,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+13;Systemtest der Anlage bestehend aus:;1,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+14;Übergabe/ Gesamt-Dokumentation der;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+15;Durchführungspauschale + Projektleitung;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+16;Werk- und Montageplanung;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+17;Stundensatzvereinbarung für unvorhersehbare;30,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+1;Ausarbeitung der Anzahl und Art der benötigten Kameras, sowie ein daraus resultierender Kameraverteilungsplan, inklusive Angaben zu benötigten Kabelanschlüssen und Kabelwegen.;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+2;Eingangsmodul für Not-Taster;4,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+3;Kamera Objektüberwachung;7,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+4;Kamera Objektüberwachung Zoomoptik;8,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+5;Wandanschlussdose außen für Kamera Objektüberwachung;15,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+6;Kamera Flächenüberwachung;15,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+7;Wandmontagearm für 360 Grad Netzwerk Außenkamera;15,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+8;Notrufsprechstelle;25,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+9;Kameraanschlusskasten:;8,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+10;Material für Verlegung an den vorhandenen Trägerschienen;30,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+11;Ausrichtung und Inbetriebnahme;30,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+12;Einrichtung der Videoereignisse je Kanal gemäß Anforderungen des AG bzw. je Kamera bei Verwendung der Kamera- Detektionsmechanismen. Die Leistungsposition ist je Kamera, je Konfigurationsvorgang anzuwenden durchführen;30,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+13;Systemtest der Anlage bestehend aus:;1,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+14;Übergabe/ Gesamt-Dokumentation der;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+15;Durchführungspauschale + Projektleitung;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+16;Werk- und Montageplanung;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+17;Stundensatzvereinbarung für unvorhersehbare;30,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+1;Wartung der Kameras nach angehängter Arbeitskarte;177,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+2;Softwarewartungsvertrag;1,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+1;Wartung der Kameras nach angehängter Arbeitskarte;177,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+2;Softwarewartungsvertrag;1,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+1;Wartung der Kameras nach angehängter Arbeitskarte;177,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+2;Softwarewartungsvertrag;1,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+1;Wartung der Kameras nach angehängter Arbeitskarte;177,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+2;Softwarewartungsvertrag;1,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+1;Wartung der Kameras nach angehängter Arbeitskarte;177,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+2;Softwarewartungsvertrag;1,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+1;Bereitschaftspauschale;12,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+1;Bereitschaftspauschale;12,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+1;Bereitschaftspauschale;12,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+1;Bereitschaftspauschale;12,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+1;Bereitschaftspauschale;12,0;ST;gaeb;leistungsbeschreibungen/LV_Bielefeld Unicampus_Videosystem.x83
+;Video-Software;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Basislizenzen;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Gerätelizenzen;177,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Videomanagement Server Failoverlizenz;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Bildvergleicherlizenz;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Objektverfolgungslizenz;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Systemerweiterung Lizenz;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Montage und Einrichtung;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Nutzerabstimmung zu den Leistungsmerkmalen, inkl. Protokollierung;30,0;Stunden;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Nutzerabstimmung IT-Infrastruktur;20,0;Stunden;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Nutzerabstimmung Cybersecurity;25,0;Stunden;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Nutzerabstimmung Mitbestimmung;25,0;Stunden;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Nutzerabstimmung Backupkonzept;8,0;Stunden;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Nutzerabstimmung Updatekonzept;8,0;Stunden;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Nutzerabstimmung Kryptografie und Verschlüsselung;8,0;Stunden;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Inbetriebnahme, Konfiguration des Videomanagementservers;45,0;Stunden;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Installation-Konfiguration Video-Client;3,0;Stunden;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Einrichtung Benutzer und Benutzerrechte;9,0;Stunden;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Umsetzung der Maßnahmen aus den Nutzerabstimmungen;50,0;Stunden;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Bedienerschulung;6,0;Stunden;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Administratoreneinweisung;8,0;Stunden;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Einrichtung Managementsystem;1,0;Pauschale;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Kopplung zur GA;1,0;Pauschale;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Peripherie: Keine Preisangaben erforderlich;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Projekt Objekte;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Video Uni-Kasse;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Ausarbeitung Kameraverteilungsplan;1,0;Pauschale;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Eingangsmodul für EMA / Stiller Alarm;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Kamera 1;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Kamera 2;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Kamera 3;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Kamera 4;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Paniktasteranbindung;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Anbindung EMA;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Montagematerial;4,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Ausrichtung und Inbetriebnahme;4,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Einrichtung der Videoereignisse je Kanal;4,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Systemtest der Anlage;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Übergabe/ Gesamt-Dokumentation;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;"Durchführungspauschale + Projektleitung 
+Klärung und Koordination";1,0;Pauschale;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Werk- und Montageplanung;1,0;Pauschale;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;"Stundensatzvereinbarung für unvorhersehbare 
+Arbeiten";8,0;Stunden;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Video BITS-Raumüberwachung Geb. CITEC;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Eingangsmodul für Türkontakte;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Durchführungspauschale + Projektleitung;1,0;Pauschale;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Stundensatzvereinbarung für unvorhersehbare Arbeiten;8,0;Stunden;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Video BITS-Raumüberwachung Geb. X;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Kamera 5;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Kamera 6;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Video Parkhausüberwachung Geb. X Austausch;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Überarbeitung Kameraverteilungsplan;1,0;Pauschale;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Eingangsmodul für Not-Taster;4,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Bedienplatz Client;3,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Kamera Objektüberwachung;40,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Kamera Objektüberwachung Zoomoptik;40,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Wandanschlussdose außen für Kamera Objektüberwachung;80,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Notrufsäule;20,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;RJ45 Koppler, Buchse-Buchse,;80,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Einrichtung der Videoereignisse je Kanal gemäß Anforderungen;80,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Parkhausüberwachung Campus Süd;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Wandanschlussdos, außen für Kamera Objektüberwachung;25,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Kamera Flächenüberwachung;15,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Wandmontagearm für 360 Grad Netzwerk Außenkamera;15,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Kameraanschlusskasten;8,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Parkhausüberwachung BLB;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Montagematerial Trägerschienen;30,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Wartung 2027-2031;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Wartung Kameras 2027;177,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Softwarewartungsvertrag 2027;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Wartung Kameras 2028;177,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Softwarewartungsvertrag 2028;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Wartung Kameras 2029;177,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Softwarewartungsvertrag 2029;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Wartung Kameras 2030;177,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Softwarewartungsvertrag 2030;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Wartung Kameras 2031;177,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Softwarewartungsvertrag 2031;1,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Notfallservice 2027-2031;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Notfallservice 27 (pro Monat);12,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Notfallservice 28 (pro Monat);12,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Notfallservice 29 (pro Monat);12,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Notfallservice 30 (pro Monat);12,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx
+;Notfallservice 31 (pro Monat);12,0;Stück;preisblatt;vom_unternehmen_auszufuellende_dokumente/Preisblatt.xlsx

@@ -1,4 +1,53 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;Unterkunftscontainer aufstellen räumen L 6m B 2,5m;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+01.2;Unterkunftscontainer Vorhaltung;15,0;Wo;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+01.3;Bauzaun, Stahlrahmen (mobil), h=2,00 m;100,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+01.4;Bauzaun, Stahlrahmen, h=2,00 m,vorhalten;1500,0;mWo;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+01.5;Chemie-Toilette mit Waschgelegenheit;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+01.6;Chemie-Toilette Vorhaltung;15,0;Wo;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+01.7;Stromerzeuger;1,0;Stk;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+01.8;Nutzung Öffentliche Flächen, BE;1,0;psch;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+01.9;"Verkehrszeichen ""Achtung Dacharbeiten""";2,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+01.10;PSA gegen Absturz;1,0;Psch;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+02.1;Fahrbares Gerüst, LK 3, 8 m, 5 m²;1,0;Stk;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+02.2;Fahrbares Gerüst, 8 m, Gebr.überl.;8,0;StkW;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+02.3;LKW-Hebebühne, Arbeitshöhe 20 m, Miete;25,0;d;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+02.4;LKW-Hebebühne, Arbeitshöhe 30 m, Miete;25,0;d;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+02.5;LKW-Hebebühne, Arbeitshöhe 35 m, Miete;15,0;d;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+03.1;Bemessung Befestigung;1,0;Psch;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+03.2;Holzleiste 3x1,5 cm;360,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+03.3;Stahlwinkel 30x30x50mm;180,0;Stk;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+03.4;Beplankung, OSB/3 d=22mm;270,0;m²;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+03.5;Zulage Distanzhölzchen 8mm;270,0;m²;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+03.6;Zulage für Anpassung an Horizontalriegel;108,0;Stk;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+03.7;Löcher bis 50mm herstellen;306,0;Stk;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+03.8;Verlegung Trennlage;324,0;m²;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+03.9;Großraute;280,0;m²;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+03.10;Mehraufwand für konische Rauten;950,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+03.11;Mehraufwand für Ausklinkungen etc.;174,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+03.12;Haftstreifen - aus verzinktem Stahl;360,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+03.13;Fußpunkt mit Rückkantung;360,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+03.14;Anpassen an Rundung;360,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+03.15;oberer Abschluss Rückkantung seitlich;360,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+03.16;Anpassen an Rundung;360,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+03.17;Haftstreifen - aus verzinktem Stahl;9,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+03.18;Anschlussprofile;9,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+04.1;Abdeckung-kleiner 500 mm-einteilig;180,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+04.2;Mehraufwand Rundung;240,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+04.3;Schiebenaht als einfacher Querfalz;240,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+04.4;Haftstreifen - aus verzinktem Stahl;180,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+04.5;Endböden;12,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+05.1;Blech-Kasten, trapezförmig;6,0;Stk;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+05.2;Trittschutz Blech-Kasten;6,0;Stk;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+05.3;Zulage Lüftungsöffnung;6,0;Stk;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+05.4;Distanzhölzer 40/60 mm;72,0;Stk;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+05.5;Verblechung;6,0;Stk;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+06.1;Brettlage in Teilstücken erneuern;11,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+06.2;Treppenriegel aufdoppeln;10,0;Stk;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+06.3;Risse Riegel reparieren;25,0;Stk;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+07.1;Handlauf einkürzen;24,0;Stk;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+08.1;Stundenlohn Vorarbeiter;1,0;h;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
+08.2;Stundenlohn Facharbeiter;1,0;h;gaeb-flat;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten.D83
 1;Unterkunftscontainer, aufstellen und räumen, doppelwandig, isoliert, Einzelcontainer-Länge 6 m, Einzelcontainer-Breite 2,5 m, für Tagesunterkunft, mit einem Tisch, Maße L/B 0,8/1,6 m, 6 Stühle je Tisch.;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten_V33.X83
 2;Unterkunftscontainer vorhalten;15,0;Wo;gaeb;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten_V33.X83
 3;Bauzaun aus mobilen Stahlrahmenelementen mit Rundstahlfüllstäben, Stützfüßen aus Beton, incl. sämtlicher Verbindungen, Kupplungen etc. Der Zaun ist aufzustellen und nach Abschluß aller Bauarbeiten wieder abzubauen.;100,0;m;gaeb;leistungsbeschreibungen/Los 1 - Klempner- und Holzbauarbeiten_V33.X83

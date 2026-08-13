@@ -1,4 +1,82 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.0010;Schutzabdeck. Fenster bis 1m2 Folie herstellen beseitigen;39,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+01.0020;Schutzabdeck. Fenster bis 2m2 Folie herstellen beseitigen;118,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+01.0030;Schutzabdeck. Fenster bis 3m2 Folie herstellen beseitigen;41,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+01.0040;Schutzabdeck. Fenster bis 4m2 Folie herstellen beseitigen;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+01.0050;Schutzabdeck. Fenster bis 5m2 Folie herstellen beseitigen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+01.0060;Schutzabdeck. Tür bis 3m2 Folie herstellen beseitigen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+01.0070;Schutzabdeck. Tür bis 4m2 Folie herstellen beseitigen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+01.0080;Untergrund prüfen auf Schad-Hohlstellen abklopfen Außenwand;2000,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+01.0090;Prüfung Abreißfestigkeit;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+02.0010;Arbeitsplan für die Entsorgung von asbesthaltiger Baustoffen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+02.0020;Arbeitsplan für die Entsorgung von Dämstoffen mit lungengängigen Faser n;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+02.0030;Schutzmaßnahmen und Schutzausrüstung gemäß TRGS 519;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+02.0040;Schutzmaßnahmen und Schutzausrüstung gemäß TRGS 521;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+02.0050;Fugenband entfernen nicht schadstoffbelastet B 15-20cm laden LKW AN ge s.Vergüt.Entsorg.;1450,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+02.0060;Dichtstoff Fuge entfernen Bauteilfuge Schnur/Strick schadstoffbelastet B 30-35mm T 30-40mm laden LKW AN ges.Vergüt.Entsorg.;725,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+02.0070;Dichtstoff Fuge entfernen Bauteilfuge MW-Streifen schadstoffbelastet B 30-35mm T 30-40mm laden LKW AN ges.Vergüt.Entsorg.;725,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+02.0080;Plattenfuge ausdämmen B 30-40mm;1450,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+02.0090;Schlitz/Fehlstelle füllen Außenwand H bis 19,5m Kalkzement-Leichtputzm . B 4 cm T 5 cm;1450,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+03.0010;Abfall gefährlich AVV170204* schadstoffbelastet LKW AN transp. entsorg en Vergüt.Entsorg. AN;0,5;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+03.0020;Abfall nicht gefährlich AVV170407 nicht schadstoffbelastet LKW AN tran sp. entsorgen Vergüt.Entsorg. AN;0,5;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+03.0030;Abfall gefährlich AVV170603* schadstoffbelastet LKW AN transp. entsorg en Vergüt.Entsorg. AN;1,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+03.0040;Abfall nicht gefährlich AVV170604 nicht schadstoffbelastet LKW AN tran sp. entsorgen Vergüt.Entsorg. AN;0,25;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+03.0050;Abfall gefährlich AVV170605* schadstoffbelastet Haufwerksbeprobung LKW AN transp. entsorgen Vergüt.Entsorg. AN;1,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+03.0060;Abfall nicht gefährlich AVV170904 nicht schadstoffbelastet LKW AN tran sp. entsorgen Vergüt.Entsorg. AN;0,5;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+04.0010;Konsole Stahl verz;530,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+04.0020;Horizontale Putzabdichtung Verputzte Außenwärmedämmung Fensterbrüstung T 30 cm;305,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+04.0030;Außenfensterbank Naturwerkstein auflegen L 120 cm B 35cm D 3cm Granit;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+04.0040;Außenfensterbank Naturwerkstein auflegen L 156 cm B 35cm D 3cm Granit;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+04.0050;Außenfensterbank Naturwerkstein auflegen L 120 cm B 35cm D 2cm Granit;105,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+04.0060;Außenfensterbank Naturwerkstein auflegen L 245 cm B 35cm D 2cm Granit;35,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+04.0070;Außenfensterbank Naturwerkstein auflegen L 250 cm B 35cm D 2cm Granit;13,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+05.0010;Untergrund reinigen Waschbeton lose Verunreinigung Hochdruckwasserstra hlen laden LKW AN;2000,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+05.0020;Putz verfestigen Wand Acrylatbasis;2000,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+05.0030;Unebenheit Wand Kalkzement-Leichtputzm. D 5-10mm;50,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+05.0040;Grundierung Außenwand;1950,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+06.0010;Diagonalbewehrung WDVS Gittergewebe;780,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+06.0020;Sockelabschluss über Gel. WDVS Kunststoffprofil;135,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+06.0030;Kantenprofil WDVS Gewebeeckwinkel Schenkel 10/15cm;790,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+06.0040;Kantenprofil WDVS Abtropfprofil;245,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+06.0050;Kantenprofil WDVS Putzabschlussprofil;120,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+06.0060;WDVS anschließen Fenster/Tür Profil Dichtband;870,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+06.0070;Befestigungsel. WDVS Schwerlastkonsole PU-Hartschaum 250/250mm Ausspar ung Befestigung Mineralwolle D 160mm;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+06.0080;Befestigungsel. WDVS Montagequader PU-Hartschaum 198/198mm Aussparung Befestigung Mineralwolle D 160mm;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+06.0090;Teleskop-Geräteträger im Wärmedämm-Verbundsystem D 160mm;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+06.0100;Teleskop-Gerätedose im Wärmedämm-Verbundsystem D 160mm;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+06.0110;Gerüstankerloch schließen Art Struktur anpassen Wand WDVS Mineralwolle Dispersions-Silikatputz;181,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+06.0120;Aussparung Dämmpl. Befestigungsel. WDVS;155,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+07.0010;Dämmschicht Mineralwolle MW 0,035W/(mK) einlagig D 160mm WDVS Wand;1810,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+07.0020;Dämmschicht Mineralwolle MW 0,035W/(mK) D 30mm WDVS Leibung B 30 cm;850,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+07.0030;WDVS anschließen Fensterbank Dichtband Trennschnitt;890,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+07.0040;Armierungsputz außen Gewebeeinlage D 5-8mm Außenwand;1810,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+07.0050;Armierungsputz außen Gewebeeinlage D 5-8mm Leibung;850,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+07.0060;Außenputz Außenwand OP Dispersions-Silikatputz Kratzputz-Struktur Körn ung 2mm;1646,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+07.0070;Außenputz Leibung B 30 cm OP Dispersions-Silikatputz Kratzputz-Struktu r Körnung 2mm;850,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+07.0080;Oberputz OP Kalkzement-Putzm. Besenstrichputz WDVS Wand;190,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+07.0090;Außenputz Muster Außenwand OP Dispersions-Silikatputz Reibeputz-Strukt ur Körnung 1,5mm 0,5-1m2;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+07.0100;Außenputz Muster Außenwand OP Dispersions-Silikatputz Reibeputz-Strukt ur Körnung 2mm 0,5-1m2;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+07.0110;Außenputz Muster Außenwand OP Dispersions-Silikatputz Kratzputz-Strukt ur Körnung 1,5mm 0,5-1m2;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+07.0120;Außenputz Muster Außenwand OP Dispersions-Silikatputz Kratzputz-Strukt ur Körnung 2mm 0,5-1m2;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+08.0010;Perimeterdämmung Sockel W4-E PS-Hartschaum XPS 0,035W/(mK) einlagig D 160mm PW dh;55,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+08.0020;Perimeterdämmung Sockel W4-E PS-Hartschaum XPS 0,035W/(mK) einlagig D 140mm PW dh;140,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+08.0030;Perimeterdämmung Sockel W4-E PS-Hartschaum XPS 0,035W/(mK) einlagig D 30mm Leibung B 28 cm;38,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+08.0040;Zuschnitt Dämmpl WDVS Schräge;135,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+08.0050;Armierungsputz außen Gewebeeinlage D 4-5mm Außenwand;140,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+08.0060;Außenputz Außenwand OP Dispersions-Silikatputz Kratzputz-Struktur Körn ung 1,5mm;140,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+08.0070;Außenputz Leibung B 30 cm OP Dispersions-Silikatputz Kratzputz-Struktu r Körnung 1,5mm;38,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+09.0010;Erstbesch Wand Putz Sol-Silikatfarben-GBS Sol-Silikatfarbe Sol-Silikat farbe;1810,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+09.0020;Zulage farbliches Absetzen;190,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+09.0030;Erstbesch Leibung Putz B 30 cm Sol-Silikatfarben-GBS Sol-Silikatfarbe Sol-Silikatfarbe;850,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+09.0040;Erstbesch Sockel Putz Sol-Silikatfarben-GBS Sol-Silikatfarbe Sol-Silik atfarbe;140,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+09.0050;Erstbesch Leibung Putz B 30 cm Sol-Silikatfarben-GBS Sol-Silikatfarbe Sol-Silikatfarbe;38,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+09.0060;Feuchteschutz WDVS zementgeb Schlämme flexibel B 30-50cm;135,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+09.0070;Erstbesch Muster Wand Putz bis 0,5m2 Sol-Silikatfarben-GBS Sol-Silikat farbe Sol-Silikatfarbe;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+10.0010;Nisthilfe Mauersegler Holzbeton B 66 cm H 15 cm T 15cm Öffnung rund;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+10.0020;Nisthilfe Sperlinge Holzbeton B 43 cm H 24,5 cm T 20cm Öffnung oval;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+10.0030;Einlaufblende für Fledermäuse Holzbeton B 30 cm H 30 cm T 8cm Öffnung eckig;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+10.0040;Kernbohrung Beton Durchm. 50-100mm T 20-25cm schadstoffbelastet v.Hand Stoffe;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
+10.0050;Zulage Fassadentechnik GWC-Logo;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.D83
 0010;Schutzabdeckung;39,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
 0020;Schutzabdeckung;118,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
 0030;Schutzabdeckung;41,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83

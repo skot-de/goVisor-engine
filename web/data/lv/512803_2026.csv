@@ -1,0 +1,403 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0101.1;Baustelle einrichten;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0101.2;Baustelle räumen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0101.3;Bauzaun;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0102.1;Spartenpläne;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0102.2;Vermessungstechnische Absteckung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0102.3;Grenzsteine freimachen, sichern;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0102.4;Digitale Bilder herstellen und liefern;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0103.1;Verkehrssicherung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0103.2;Schild außer Kraft setzen für die Verkehrssicherung;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0103.3;Verkehrstafel aufstellen, vorhalten, abfahren;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0103.4;Verkehrszeichen aufstellen, vorhalten, abfahren;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0103.5;Absperrschranken;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0103.6;Provisorische Grabenüberfahrt;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0104.1;Entfernung von wildem Müll / oberflächlichen Ablagerungen;2,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0104.2;Wurzelstock roden;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0104.3;Schilderpfosten abbauen;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0104.4;Umsetzen der Schachtringe;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0104.5;Versetzen von Containern im Baufeld;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0104.6;Versetzen von Betonfundament für Verkehrstafel im Baufeld;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0105.1;Betonverbundsteinpflasterflächen ausbauen, laden, entsorgen;650,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0105.2;Bordsteine abbrechen, laden, entsorgen;200,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0105.3;1-zeilige Betonsteinrinne aufnehmen;200,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0105.4;Bituminöse Befestigung schneiden bis 30 cm;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0105.5;Bituminöse Schwarzdecke aufbrechen, laden;620,0;to;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0105.6;Asphaltschichten fräsen, laden;15,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0105.7;Quertransport von bituminösem Aufbruch- und Fräsgut zum Bereitstellung slager des AN;620,0;to;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0106.1;Suchgraben, Tiefe bis 1,25 m;15,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0106.2;Suchgraben, Tiefe über 1,25 m;10,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0106.3;Bodenaushub, laden, entsorgen;700,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0106.4;Bodenaushub, Zulage Oberboden abtragen, laden, verwerten;120,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0106.5;Bodenaushub, Zulage Mauerwerk/ unbewehrten Beton abbrechen;5,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0106.6;Bodenaushub, Zulage Stahlbetonabbruch;5,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0106.7;Bodenaushub, Zulage Handschachtung;20,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0106.8;Sicherung von Versorgungsleitung;220,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0106.9;Quertransport von Aushubmaterial zum Bereitstellungslager;700,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0107.1;Planum herstellen;1450,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0107.2;Frostschutzmaterial, liefern, einbauen;590,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0107.3;Schottertragschicht, liefern, einbauen;220,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0108.1;Lastplattendruckversuche;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0109.1;1-zeilige Betonsteinrinne liefern, verlegen;145,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0109.2;Hochbordsteine HB 15/25  (A5)  liefern, versetzten;145,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0109.3;Bordsteine T10 10/20/100  liefern, versetzen;88,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0110.1;Drain-Betonunterbau C 12/15;59,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0110.2;Geotextil GRK 5;390,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0110.3;Betonpflastersteine liefern, verlegen;390,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0110.4;Brechen, Knacken von Betonpflastersteine;390,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0110.5;Schachtabdeckungen, Straßenablaufkörper etc. angleichen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0110.6;Fugen verschließen;180,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0110.7;Zulage Betonpflaster, Läuferstein;360,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0110.8;Zulage Schieber-/Hydrantenkappe regulieren;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0110.9;Zulage Schieber-/Hydrantenkappe Zulage Pflastersetzrahmen;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0110.10;Zulage für Anpassarbeiten an Einbauten;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0110.11;Unterhaltungsarbeiten Pflasterflächen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0111.1;Tastbordstein 15/20/24 cm liefern, versetzen;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0111.2;Rollbordstein 15/17-20/24 cm liefern, versetzen;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0111.3;Übergangsstein 15/17-20/24 cm  auf Rollbord links/rechts , liefern, ve rsetzen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0111.4;Schrägbordstein 15/17-20/24 cm links/rechts liefern, versetzten;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0111.5;Übergangstein 15/17-20/24 cm links/rechts liefern, versetzten;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0111.6;Rippenplatten 30/30/10 liefern, verlegen;5,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0111.7;Noppenplatten 30/30/10 liefern, verlegen;2,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0111.8;Begleit- Distanzstreifen (D8) liefern, verlegen;4,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0112.1;Wasserhaltung Kanalbau;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0112.2;Straßenablauf abbrechen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0112.3;Sinkkastenanschlussleitung abbrechen;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0112.4;Bodenaushub, Rohrgraben Straßenablaufanschlüsse;120,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0112.5;Hochlast-Vollwand-RW-Kanalr. DN150;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0112.6;Rohranschluss Hauptkanal herstellen;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0112.7;Sand-Gem. z. Rohrummantlg. lief.;35,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0112.8;Straßenablauf 300x500mm liefern und einbauen;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0112.9;Aufsatz für Straßenablauf 300x500 Pultform;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0112.10;Schachtabdeckung ersetzten;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0112.11;Schachtkonus als Ersatz für Bruch;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0113.1;Asphaltdeckschicht MA 8S, liefern, einbauen;60,0;to;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0113.2;Gussasphaltoberfläche bearbeiten, abstreuen;590,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0113.3;Betonsteine vor Verschmutzung schützen;145,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0113.4;Asphalttragschicht AC 32 TS 14cm, liefern, einbauen;345,0;to;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0113.5;Asphaltbinderschicht  AC 16 BS 8cm, liefern, einbauen;58,0;to;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0113.6;Asphaltbinderschicht  AC 16 BS 12cm, liefern, einbauen;210,0;to;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0113.7;Asphaltdeckschicht AC 11 DS 4cm liefern, einbauen;31,0;to;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0113.8;Schichtenverbund zwischen den Asphaltschichten herstellen;1900,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0113.9;Anschluss an Bestand herstellen;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0113.10;Anschluss an Rinne herstellen;145,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0113.11;Abstumpfungsmaßnahme durchführen;1050,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0114.1;Markierung Typ II, Schmalstrich 12 cm, weiss herstellen;245,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0114.2;Markierung Typ II, unterbrochener Querstrich 2:1, weiss herstellen;35,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0114.3;Bodenhülse liefern und aufstellen;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0114.4;Schilderpfosten aufbauen aufstellen;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0114.5;Schilderpfosten liefern und aufstellen, L=3,0m - 3,5m;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0114.6;Schilderpfosten, Zulage Rohrrahmen;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0115.1;Gestellung einer Bereitstellungsfläche durch AN;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0115.2;Verwertung Boden BM-F0, BM-F0*;700,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0115.3;Zulage Verwertung  Boden BM-F1*;260,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0115.4;Zulage Verwertung  Boden BM-F2*;260,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0115.5;Zulage Verwertung  Boden BM-F3*;260,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0115.6;Bituminöse Schwarzdecke abfahren, entsorgen;618,75;to;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0115.7;Bituminöse Schwarzdecke Zulage PAK < 1.000mg/kg;310,0;to;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0115.8;Bituminöse Schwarzdecke Zulage PAK > 1.000mg/kg;125,0;to;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0200.1;Standsicherheitsnachweis aufstellen Baubehelfe 4-fach;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0200.2;Ausführungszeichnungen herstellen Baubehelfe 5-fach;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0200.3;Ausführungszeichnungen Bauwerk;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0200.4;Übergeordnete Ausführungsplanung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0200.5;Technische Bearbeitung Werkstattplanung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0200.6;Technische Bearbeitung Montageplanung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0200.7;Planung Arbeitsebenen, Bohrebenen, Dammschüttungen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0200.8;Baubegleitende Vermessung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0200.9;Arbeiten m. Messprogrammen (Zul.);1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0200.10;Beweissicherg. durchführen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0200.11;Bestandsunterlagen herst. und lief.;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0200.12;Lichtbilder herst. und liefern;500,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0200.13;Hochwasser-Alarmplan;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.1;Baustelle einrichten Sämtl.LV-Abschn. Zufahrt herst.AN;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.2;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.3;Bauzaun aufstellen und  entfernen Zaunhöhe 2,0 m Maschendraht;200,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.4;Koordination Umverleg. Versorgungsl.;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.5;Koordination mit Genehmigungsbehörden;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.6;Beweissicherung an den vorh. Gebäuden;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.7;Beweissicherung Straßenflächen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.8;Baubegleitende Erschütterungsmessungen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.9;Baustellenschild anfert. und aufst. Folie Typ 1;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.10;Baustellenschild abbauen Schild 4,0/3,0 m Verwerten;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.11;Baustelle einrichten (Zulage);1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.12;Baustelle einrichten (Zulage);1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.13;Koordinierung Kampfmittelbeseitigung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.14;Baustelle einrichten (Zulage);1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.15;Bohrplan für Kampfmittelsondierung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.16;Vermessungstechnische Absteckung der Sodierbohrungen;255,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.17;Lotrechte Sondierungsbohrungen;2040,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.18;Zulageposition Sondierung im Straßenaufbau;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.19;geneigte Sondierungsbohrungen;470,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.20;Zulage zu den Bohrsondierungen für Durchbohren von Trümmerschutt;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.21;Zulage zu den Bohrsondierungen für Durchbohren von Beton unbewehrt;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.22;Zulage zu den Bohrsondierungen für Durchbohren von Stahlbeton;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.23;Baggereinsatz Kampfmittelanomalien;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0201.24;Bohrungen für Ausschluss;200,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.1;Fläche abräumen Aufwuchs Wurzelstöcke Astwerk Steine/Mauer/Zaun Wst. Verwert. AN S.Abr.Verwert.AN übr.Räumg.Verw.AN;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.2;Bäume fällen mit Roden DU über 0,1-0,3 m verd.grobk.Bod. Holz Verwert. AN Wst.Verwert. AN S.Abr.Verwert. AN;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.3;Wurzelstock roden;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.4;Suchgraben herstellen ... Freitext ... Tiefe bis 1,25 m mit Masch.unterst. Boden einb.u.v. Abrechnung Abtrag;30,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.5;Baugrube herstellen ... Freitext ... ... Freitext ... Tiefe >3,00-5,00m Entsorg. gesond. ... Freitext ...;910,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.6;Baugrube herstellen ... Freitext ... ... Freitext ... Tiefe >1,75-3,00m Entsorg. gesond. ... Freitext ...;350,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.7;Baugrube herstellen ... Freitext ... ... Freitext ... Tiefe >1,75-3,00m BM-F2 Aushub verwert.AN ... Freitext ...;350,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.8;Baugrube herstellen ... Freitext ... ... Freitext ... Tiefe >3,00-5,00m BM-F3 Aushub verwert.AN ... Freitext ...;720,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.9;(Zul.) Hindernis im Boden Festgestein;10,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.10;(Zul.) Hindernis im Boden Mauerwerk;5,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.11;(Zul.) Hindernis im Boden, Beton;5,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.12;(Zul.) Hindernis im Boden Stahlbeton;5,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.13;Baust. lief. als BW-Hinterfüll.einb Widerl./Flüglwd. Baust. Unterl. AG Entwässerungsber. Abrechng.Auftrag;150,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.14;Baust. lief. als BW-Hinterfüll.einb Widerl./Flüglwd. Baust. Unterl. AG ohne Entw. Ber. Abrechng.Auftrag;950,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.15;Baust. lief. als BW-Hinterfüll.einb ... Freitext ... Baust. Unterl. AG gesamter Bereich Abrechng.Auftrag;500,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.16;Rammebene herstellen u. beseitigen;90,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.17;Rammebene herstellen u. beseitigen;90,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.18;Geräteeinsatz für Stahlspundwand ... Freitext ... Spundwand herst. Arb.pl herst/bes.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.19;Geräteeinsatz für Stahlspundwand Bauwerk Spundwand herst. Arb.pl herst/bes.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.20;Geräteeinsatz für Stahlspundwand Bauwerk Spundwand ziehen Arbeitspl. herst.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.21;Stahlspundwand herstellen Dauerkonstruktion Länge ü. 6-9 m S 240 GP min Wy 1200 cm3/m dicht, n.U.d.AG Spundwand freist. Lockerungsbohrung rammen;260,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.22;Stahlspundwand herstellen Dauerkonstruktion Länge ü. 9-12 m S 240 GP min Wy 1200 cm3/m dicht, n.U.d.AG Spundwand freist. Lockerungsbohrung rammen;950,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.23;Stahlspundwand herstellen Dauerkonstruktion Länge ü. 6-9 m S 240 GP min Wy 1200 cm3/m dicht, n.U.d.AG Aussteif. ges. Lockerungsbohrung rammen;260,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.24;Stahlspundwand herstellen Baugrubenverbau Länge ü. 9-12 m S 240 GP min Wy 1200 cm3/m dicht, n.U.d.AG Sp.Verank. herst. Lockerungsbohrung pressen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.25;Stahlspundwand herstellen Baugrubenverbau Länge ü. 6-9 m S 240 GP min Wy 1200 cm3/m dicht, n.U.d.AG Aussteif. ges. Lockerungsbohrung rammen;120,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.26;Stahlspundwand kürzen Baugrubenverbau;170,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.27;Stahlspundwand ziehen ziehen Wahl d. AN Länge ü. 6-9 m Bohlen verwerten;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.28;Stahlspundwand ziehen ziehen Wahl d. AN Länge ü. 6-9 m Bohlen verwerten;120,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.29;Gurtung/Aussteifung f. Verbau herst Spundwand S 355 Behelfskonstr.;7,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.30;Wasserh.anl.nach Wahl des AN herst. ... Freitext ... 30 bis 50 m3/h;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.31;Wasserhaltungsanlage vorhalten ... Freitext ... Messeinrichtung;30,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.32;Wasserhaltungsanlage betreiben ... Freitext ...;10,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.33;Neutralisationsanlage aufstellen ... Freitext ... CO2 PH-Wert 6,5-8,5;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.34;Neutralisationsanlage vorhalten;30,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0202.35;Neutralisationsanlage betreiben Abg.St. entsorgen;10,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0203.1;Brückenablauf in Betonbauteil einb. ... Freitext ... Rost 300 x 500 mm dämpfende Einlage senkr. Abgang 150 ... Freitext ...;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0203.2;Gusseisernes Anschlussrohr einbauen DN/ID 150 ... Freitext ... Besch. ZTV-Ing Ankerschienen;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0203.3;Reinigungs-Anschlussrohr einbauen ... Freitext ... Gusseisen;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0203.4;Gusseiserne Rohrleitung herstellen Überbau DN/ID 150 ... Freitext ... Ankerschienen;140,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0203.5;Elastische Rohrverbindung einbauen Leitung Guss DN/ID 150 Dehnweg 100 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0203.6;Elastische Rohrverbindung einbauen Leitung Guss DN/ID 150 Dehnweg 50 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0203.7;Rohrdurchführung herstellen ... Freitext ... ... Freitext ... Faserzement ... Freitext ... ohne Dichtung;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0203.8;Rohrdurchführung herstellen ... Freitext ... ... Freitext ... Faserzement ... Freitext ... ohne Dichtung;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0203.9;Rohrdurchführung herstellen Kammerwand ... Freitext ... Faserzement ... Freitext ... Nichtrost. Stahl nichtdr. Wasser;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0203.10;Dichtigkeitsprüfung DN 150;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0203.11;Kunststoffrohrltg herst.m.Erdarb. Rohr DN 200 PE-HD-Rohr Bettung Typ 1 Tiefe 1,25-1,75 m LM 1, Statik eing. verd. Bod. BM-0;27,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0203.12;Schachtanschluss herstellen (Zul.) Rohr DN 200 Kunststoff-Rohr Betonfertigteile Öffnung herst.;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0203.13;Schachtanschluss herstellen (Zul.) Rohr DN 200 Kunststoff-Rohr ... Freitext ... Öffnung herst. Anschluss+Gelenk;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0203.14;Rohr einbauen Widerlager Entw. Aufl.bank nichtrost.Stahl DN/ID 100 Länge ü. 50-75 cm Vogelschutzgitter;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0203.15;Dränschicht an Bauwerk herstellen Widerl./Flügelwd. Matte, RiZ Was 7;130,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0204.1;Bohrebene herstellen, beseitigen,;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0204.2;Geräteeinsatz für Pfähle gesamtes Bauwerk Ortbet.bohrpfähle Ebene gesondert;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0204.3;Ortbetonbohrpfahl herstellen Widerlager Pfahl-DU 90 cm Länge ü. 10-15 m vertikal ... Freitext ... verrohrt, Leerb. Bohrgut verwerten;250,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0204.4;Ortbetonbohrpfahl herstellen Stütze/Pfeiler Pfahl-DU 90 cm Länge ü. 6-10 m vertikal ... Freitext ... verrohrt, Leerb. Bohrgut verwerten;160,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0204.5;Betonstahl einbauen ... Freitext ... ... Freitext ...;25,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0204.6;Pfahlkopf herrichten ... Freitext ... Ortbetonbohrpfahl Pfahl-DU 90 cm Abbruch verwerten;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0204.7;Integritätsprüf. v. Pfählen durchf. gesamtes Bauwerk Bohrpfahl Pfahl-DU 90 cm vertikal;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0204.8;Kolonneneinsatz f. Hindernisbeseit. Bohrpfähle;20,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0204.9;Stillst. Bohrpf.arb. o. Personal;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0204.10;Stillst. Bohrpf.arb. m. Personal;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0204.11;Hindernisbohrungen;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0204.12;Geräteeinsatz für Pfähle gesamtes Bauwerk geb. Mikropfähle Ebene herst/bes.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0204.13;Verpresspfahl herstellen;350,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0204.14;Verpresspfahlkopf herrichten;78,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0204.15;Pfahlkopfanschlüsse reinigen;78,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0204.16;Unterwasserbeton herstellen ... Freitext ... Unbewehrt C30/37 ... Freitext ...;710,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0204.17;Baustoff als Baugr. lief. u. einb. ... Freitext ... ... Freitext ... Dpr 100 v. H. Abrechng. Auftrag;120,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.1;Beton f. Sauberkeitsschicht herst. C12/15 X0 ... Freitext ...;295,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.2;Bew. Beton einschl. Schalung herst. ... Freitext ... Stahlbeton C30/37 ... Freitext ...;350,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.3;Bew. Beton einschl. Schalung herst. Widerlager Stahlbeton C30/37 ... Freitext ... ... Freitext ... Vertikal ... Freitext ...;125,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.4;Bew. Beton einschl. Schalung herst. ... Freitext ... Stahlbeton C30/37 Vertikal ... Freitext ...;27,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.5;Bew. Beton einschl. Schalung herst. ... Freitext ... Stahlbeton C30/37 ... Freitext ...;28,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.6;Bew. Beton einschl. Schalung herst. ... Freitext ... Stahlbeton C30/37 ... Freitext ... ... Freitext ...;1,8;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.7;Bew. Beton einschl. Schalung herst. ... Freitext ... Stahlbeton C30/37 ... Freitext ... ... Freitext ... ... Freitext ...;1,5;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.8;Bew. Beton einschl. Schalung herst. Pfeiler Stahlbeton C30/37 Vertikal ... Freitext ...;62,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.9;Bew. Beton einschl. Schalung herst. ... Freitext ... Stahlbeton C35/45 Absch. + glätten;260,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.10;Bew. Beton einschl. Schalung herst. ... Freitext ... Stahlbeton C35/45 Absch. + glätten;87,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.11;Bew. Beton einschl. Schalung herst. ... Freitext ... Stahlbeton C30/37 XF4, XC4, XD3 ... Freitext ... ... Freitext ... Besenstrich;170,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.12;Bew. Beton einschl. Schalung herst. ... Freitext ... Stahlbeton C30/37 XF4, XC4, XD3 ... Freitext ... Besenstrich;0,4;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.13;Betonfertigteile einbauen Überbau FT:StBn, Bew.ges. C35/45 XF2, XC4, XD1 Stahlbleche;110,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.14;Betonstahl einbauen ... Freitext ... ... Freitext ...;50,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.15;Betonstahl einbauen ... Freitext ... ... Freitext ...;28,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.16;Betonstahl einbauen ... Freitext ... ... Freitext ...;0,3;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.17;Betonstahl einbauen ... Freitext ... ... Freitext ...;65,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.18;Betonstahl einbauen ... Freitext ... ... Freitext ...;13,5;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.19;Betonstahl einbauen Kappe ... Freitext ...;20,5;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.20;Betonstahl einbauen ... Freitext ... ... Freitext ...;28,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.21;Anschlussbewehrung herstellen;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.22;Verguss der Lageraussparungen;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.23;Unbewehrten Beton herstellen ... Freitext ...Ohne Schalung Abr. Frischbeton;4,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0205.24;Abbruchfuge Mauer sanieren;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0206.1;Traggerüst herstellen Öffnungen n. U. Grdg. beseitigen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0206.2;Arbeitsgerüst herstellen ... Freitext ... Umweltschutzeinr.;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0206.3;Schutzeinrichtung bereitstellen Überbau ... Freitext ... Beleucht./Heizng;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0206.4;Schutzeinr. b. Nichteinsatz vorhal.;1,0;Mt;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0206.5;Schutzeinrichtung einsetzen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0206.6;Schutzeinr. vorh.,unterh.,betreib.;1,0;Mt;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.1;Stahlkonstruktion herst. u. mont. Überbau ... Freitext ... ... Freitext ... Abr.n.Berechnen;185,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.2;Stahlverbundmittel herst. u.anschw. Kopfbolzendübel;6,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.3;Elastomerlager einbauen Widerlager 2 Achsen fest ... Freitext ... ... Freitext ... ... Freitext ... ... Freitext ...;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.4;Elastomerlager einbauen Widerlager 1 Achse fest ... Freitext ... ... Freitext ... ... Freitext ... ... Freitext ...;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.5;Elastomerlager einbauen Pfeiler 1 Achse fest ... Freitext ... ... Freitext ... ... Freitext ... ... Freitext ...;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.6;Elastomerlager einbauen Widerlager ... Freitext ... ... Freitext ... ... Freitext ...;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.7;Elastomerlager einbauen Pfeiler ... Freitext ... ... Freitext ... ... Freitext ...;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.8;Ankerplatte für Lager einbauen Widerlager Platte unten Dicke 20 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.9;Ankerplatte für Lager einbauen Pfeiler Platte unten Dicke 20 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.10;Ankerplatte für Lager einbauen Widerlager Platte oben Dicke 20 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.11;Ankerplatte für Lager einbauen Pfeiler Platte oben Dicke 20 mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.12;Pressenansatzpunkte;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.13;Ü-konstr., wasserundurchl., einb. Überbau u. Gesims ... Freitext ... ... Freitext ... ... Freitext ... ... Freitext ... Abdeckung Kappe;13,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.14;Überfahrhilfe herstellen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.15;Schutz Üko + prov. Rampe;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.16;Geländerverankerung einbauen Brücke Stahlplatte ... Freitext ...;82,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.17;Geländerpfostenaussparung verfüllen;82,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.18;Stahlgeländer einbauen Brücke Stahl ... Freitext ... Füllstabgeländer Seil DU 20 mm Anschlagkonstr. Vorhand.Fußpl. ... Freitext ...;189,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.19;Zulage Geländerbeleuchtung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.20;Geländerabschluss einbauen Gel 19 Blatt 1;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.21;Örtliches Aufmaß Geländer;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0207.22;Geländerbeleuchtung;180,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.1;Klemmfugenband FM 350 K und KSP 230 einbauen;4,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.2;Fugeneinlage einbauen Bestand-Neubau;3,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.3;Fugenverschlussband einbauen;6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.4;Bauwerksfuge herstellen Widerlager Fug 1, Bild 2 Abschl.Fug1,Bild5 Dicke 75-100 cm;7,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.5;Überbauabschluss herstellen RiZ Abs 3 Schräge Abs 5;12,9;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.6;Stahloberfläche vorbereiten ... Freitext ... Erstbeschichtung tro. Einwegstr. Sa 2 1/2 im Werk vorbereitete Fl.;1600,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.7;Stahlfl. mit Korr.schutz versehen ... Freitext ... Korr.system Nr.1 im Werk Zwischenreinigung;1250,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.8;Kantenschutz;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.9;Stahlfl. mit Korr.schutz versehen ... Freitext ... ... Freitext ... im Werk Zwischenreinigung;380,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.10;Kontrollflächen anlegen ... Freitext ...;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.11;Betonunterlage vorbereiten Kappe Oberfl. untersch. Teilflächen Vorb.nach Wahl AN abtr. von Besch. entsorgen;640,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.12;Qualitätsnachweis Hydrophobierung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.13;Hydrophobierung gemäß OS-A herst. Kappe Oberfl.untersch. ... Freitext ...;640,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.14;Anti-Graffiti-Beschichtung herst. ... Freitext ... auf Beton druckwasserstra. ... Freitext ... permanent transparent;250,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.15;Betonunterlage vorbereiten unter Kappe Oberfl. waager. strahlen/absaugen entf. von Zement entsorgen;550,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.16;Betonunterlage vorbereiten zwischen Kappen Oberfl. waager. strahlen/absaugen entf. von Zement entsorgen;500,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.17;Betonunterlage vorbereiten ... Freitext ... Unters. untersch. druckluftstrahlen entf. von Zement entsorgen;9,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.18;Betonunterlage versiegeln unter Kappen;550,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.19;Betonunterlage versiegeln zwischen Kappen;500,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.20;Betonunterlage versiegeln ... Freitext ...;9,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.21;Dichtungssch. aus 1 Bitbahn herst. Unter Kappen Teilflächen;540,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.22;Dichtungssch. aus 1 Bitbahn herst. Zwischen Kappen Schutzl.entfernen;520,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.23;Dichtungssch. aus 1 Bitbahn herst. ... Freitext ...;9,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.24;Verstärkungsstreifen einbauen Schrammbord Edelstahlband Breite mind.30 cm;170,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.25;Schutzlage herstellen;550,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.26;Verstärkungsstreifen einbauen Überbauende Edelstahlband Breite mind.50 cm;7,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.27;Deckaufstrich Überbauende;3,5;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.28;Asphaltschutzschicht herstellen ... Freitext ... MA11S,Bk100-Bk3,2 Dicke 4 cm Bimi10/40-65A+vvZ Kalk.füller CC 70;76,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.29;Asphaltschutzschicht herstellen zwischen Kappen MA11S,Bk100-Bk3,2 Dicke 4 cm Bimi10/40-65A+vvZ Kalk.füller CC 70;470,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.30;Anschl. a. Fuge m. B-fugenb. herst. ... Freitext ... Anschluss längs Schichtd. 4 cm über 20-100 m Breite 10 mm;170,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.31;Fuge abkleben;170,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.32;Erschwernis Überbauabdicht. (Zul.);6,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.33;Asphaltdecksch. aus MA 8 S herst. Bauw.Str./Rinnen Dicke 3,5 cm Bitumen 20/30+vvZ Kalk.füller CC 70 Handeinbau;52,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.34;Gussasphaltoberfläche bearbeiten fein abstreuen Verfahren C ungeb. verwert.;52,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.35;Anschluss a. Fuge m. Fugenm. herst. Fuge vor Kappen Schutzschicht Tiefe 40 mm Breite 20 mm Fugenmasse N1;170,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.36;Anschluss a. Fuge m. Fugenm. herst. Fuge vor Kappen Deckschicht Tiefe 35 mm Breite 20 mm Fugenmasse N1;170,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.37;Anschluss a. Fuge m. Fugenm. herst. versch.Randfugen Schutzschicht Tiefe 40 mm Breite 15 mm Fugenmasse N2;6,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.38;Anschluss a. Fuge m. Fugenm. herst. versch.Randfugen Deckschicht Tiefe 35 mm Breite 15 mm Fugenmasse N2;6,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.39;Fugenfüllung herstellen ... Freitext ... Kalt, 25 v.H. Breite 15-20 mm Tiefe 15 - 25 mm;14,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0208.40;Anschluss a. Fuge m. Fugenm. herst. Längs-/Querfuge Deckschicht Tiefe 40 mm Breite 20 mm Verf. mit Trstr. Fugenmasse N2;170,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.1;Böschungstreppe herstellen Stufenbr. 80 cm H/B n. Unterl. AG Betonfertigteile beids. Tr.w. Bet. Fugenmörtel;13,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.2;Böschungsbefestigung herstellen Bösch. Unterl. AG Betonpfl. 8 cm Planum herstellen Beton C 12/15 Fertigzementm.;6,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.3;Pflasterdecke mit Verb.pfl. herst. ... Freitext ...*Unterlage AG H, 10 cm*m.F., m.Vorsatz. Bettung 0/4*SZ 22*Fuge 0/4 Unterlage AG;30,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.4;Pflastersteine schneiden;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.5;Bordstein aus Beton setzen BSt. TB 8x25 cm ... Freitext ... gerader Stein ... Freitext ... ... Freitext ...;39,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.6;Bordstein trennen TBSt. 10/30-8/20 BSt.nassschneiden BSt. trennen;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.7;Fläche aus Rasensteinen herstellen R-Gittersteine schw.geneigte Fl. Beton 10cm dick Bett.0/5 30 v. H. Oberb. Saatgut;170,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.8;Rasensteine schneiden;49,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.9;Bordstein aus Beton setzen BSt. TB 8x25 cm Fuge Typ B gerader Stein bis 10 cm unt. OK F-beton 12 MPa;82,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.10;Bordstein trennen TBSt. 10/30-8/20 BSt.nassschneiden BSt. trennen;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.11;Vogel-Einflugschutz einbauen Widerlager Polycarb., 6mm;15,5;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.12;Vogel-Einflugschutz einbauen Pfeiler Polycarb., 6mm;35,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.13;Zulage Vogeleinflugschutz - Pfeiler;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.14;Flächenbefestigung herstellen, Wasserbausteine Planum herstellen, Beton C 20/25, d= 20 cm;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.15;Wasserbausteine liefern;35,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.16;Jahreszahl-Matrize einbauen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.17;Messbolzen einbauen Überbau Messing DU 10 - 20 mm L 40 - 80 mm Vertikal Mörtel Höhenmessung;22,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.18;Messbolzen einbauen Widerlager ... Freitext ... DU 10 - 20 mm L 40 - 80 mm Horizontal Mörtel Höhenmessung;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.19;Messbolzen einbauen Widerlager Messing DU 10 - 20 mm L 20 - 40 mm Horizontal Mörtel ... Freitext ...;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.20;Messbolzen einbauen ... Freitext ... ... Freitext ... DU 10 - 20 mm L 40 - 80 mm Horizontal Mörtel Höhenmessung;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.21;Messbolzen einbauen ... Freitext ... Messing DU 10 - 20 mm L 20 - 40 mm Horizontal Mörtel ... Freitext ...;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.22;Verankerung einbauen ... Freitext ... ... Freitext ... Stahl, n.rostend ... Freitext ...;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.23;Lichtmast liefern und einbauen;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.24;Anschluss Lichtmast;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.25;Kabelschutzrohr in Bauwerk verlegen KSR endl. d50 AN PE-HD-Rohr innen glatt Stahldraht einz.;93,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.26;Kabelschutzrohr in Bauwerk verlegen KSR endl.d110 AN PE-HD-Rohr innen glatt ... Freitext ...;180,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.27;Fledermauskasten liefern und montieren;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.28;Schachtabdeckung aufsetzen DIN 19584, D, B m. Schmutzfänger Deckel/Einl.+Rieg planmäßige Höhe Mörtel M20;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.29;Fertigteil für Schacht einbauen ... Freitext ...;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.30;Sicherheitssteigbügel;44,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.31;Rohrpfosten aufstellen Länge>2500-3000mm R.St. 60,3/2,0 mm mit Erdanker Boden Unterl. AG Fert.F0,3/0,3/0,8 Aushub i.Bst.vert;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.32;Zusatzschild liefern u. anbringen;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.33;Bauwerksnummer-Schild herstellen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.34;Bereitstellung Besichtigungsgerät 1. HP vor Abnahme;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.35;Schaltschrank für Beleuchtung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0209.36;Betonabzweigkasten;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.1;Technische Bearbeitung - Ausführungsunterlagen Abbruch Abbruchkonzept des AN;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.2;Technische Bearbeitung - Bestandsfeststellung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.3;Technische Bearbeitung - Baubehelfe für den Abbruch;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.4;Dokumentation Kabelarbeiten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.5;Kraneinsatz - Mobilkran;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.6;Kraneinsatz - Raupenkran;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.7;Kranaufstandsfläche herstellen u. beseitigen;100,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.8;Baubehelf herstellen Unterstützung der FW-Träger des westlichen Randfeldes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.9;Baubehelf herstellen Unterstützung der FW-Träger des östlichen Randfeldes;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.10;Herstellen einer Fahrstraße für den Raupenkran;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.11;Herstellen einer Fahrstraße für Abbruchgeräte;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.12;Schutzgerüst herstellen Gewässer ... Freitext ...;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.13;Verkehrsschilder ab- und aufbauen;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.14;Kippsicherung herstellen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.15;Einhausung herstellen und auf dem Überbau einsetzen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.16;Einhausung vorhalten;2,0;Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.17;Einhausung herstellen und außerhalb des Überbaues einsetzen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.18;Einhausung vorhalten;2,0;Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.19;Sichern von 2 Versorgungsleitungen (MSP);1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.20;Sichern einer Versorgungsleitung (FM);1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.21;Sichern einer Versorgungsleitung (Beleuchtung);1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.22;Entfernen von Oberflächenbefestigung - Osten;95,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.23;Entfernen von Oberflächenbefestigung - Westen;270,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.24;Boden bzw. Fels lösen und verwerten ... Freitext ... profilg. lösen Felsvert.B. verf. Planum nicht ges. Verwertung nachw.;22,5;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.25;Boden bzw. Fels lösen und verwerten ... Freitext ... profilg. lösen Felsvert.B. verf. Planum nicht ges. Verwertung nachw.;22,5;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.26;Boden bzw. Fels lösen und verwerten ... Freitext ... profilg. lösen Felsvert.B. verf. Planum nicht ges. Verwertung nachw.;325,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.27;Boden bzw. Fels lösen und verwerten ... Freitext ... profilg. lösen Felsvert.B. verf. Planum nicht ges. Verwertung nachw.;350,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.28;Einfache Pumpenanlage einrichten Stütze/Pfeiler FD bis 10 m3/h Höhe bis 5,0 m Schlauchleitung Vorflut 20-50 m Sumpf verfüllen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.29;Einfache Pumpenanlage betreiben Stütze/Pfeiler Schlauchleitung;2,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.30;Beton abbrechen Widerlager West Stahlbeton ... Freitext ... O.Erschütterung ... Freitext ...;125,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.31;Beton abbrechen Widerlager Ost Stahlbeton ... Freitext ... O.Erschütterung ... Freitext ...;125,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.32;Abbruch Mauerwerk - Widerlager West;2,5;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.33;Abbruch Mauerwerk - Widerlager Ost;5,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.34;Beton abbrechen Pfeiler West Stahlbeton ... Freitext ... O.Erschütterung ... Freitext ...;70,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.35;Beton abbrechen Pfeiler Ost Stahlbeton ... Freitext ... O.Erschütterung ... Freitext ...;70,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.36;Beton abbrechen ... Freitext ... Stahlbeton ... Freitext ... ... Freitext ... ... Freitext ...;0,7;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.37;Betonbauteil abbrechen ... Freitext ... Stahlbeton Verwerten;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.38;Asphaltbefestigung schneiden;12,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.39;Asphaltbefestigung aufbrechen/aufnehmen;62,5;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.40;Asphaltbefestigung schneiden;12,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.41;Asphaltbefestigung aufbrechen/aufnehmen;62,5;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.42;Asphalt fräsen ... Freitext ... ... Freitext ... ... Freitext ... Bauwerk mit Kappe Fahrbahn ... Freitext ... ... Freitext ...;550,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.43;Asphalt fräsen ... Freitext ... ... Freitext ... ... Freitext ... Bauwerk mit Kappe Geh- und Radwege Breite ü150-200cm ... Freitext ...;350,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.44;Pflasterd.m.Betonpfl.-steinen aufn. 10 cm dick ungeb. Fugenmat. ungeb. Bettung Steine lagern Pflaster säubern;75,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.45;Tragschicht unter Betonpflaster aufbrechen/aufnehmen;75,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.46;Bordstein aufnehmen. Flachbord Bet 20 Fund. ü. 10-20 cm Steine s.+ lagern ... Freitext ... Anteil WV 75-100;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.47;Plattenbelag aus Beton aufnehmen 6 cm dick ungeb. Fugenmat. ungeb. Bettung ... Freitext ...;20,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.48;Tragschicht unter Gehwegplatten aufbrechen/aufnehmen;20,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.49;Bordstein aufnehmen. Tiefbord Beton Fund. ü. 10-20 cm ... Freitext ...;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.50;Bordstein aufnehmen. Tiefbord Beton ... Freitext ... ... Freitext ...;170,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.51;Beton abbrechen Überbau Stahlbeton ... Freitext ... ... Freitext ... ... Freitext ...;250,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.52;Betonschnitt Überbauplatte;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.53;Schnitte Fachwerkträger;24,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.54;Stahlkonstruktion abbrechen ... Freitext ... Besch. entsorgen Abr.n.Wiegen;250,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.55;Rohrleitung zurückbauen ... Freitext ... Besch. entsorgen Abr.n.Berechnen;140,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.56;Rohrleitung zurückbauen ... Freitext ... Besch. entsorgen Abr.n.Berechnen;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.57;Rohrleitung zurückbauen ... Freitext ... Besch. entsorgen Abr.n.Berechnen;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.58;Rohrleitung zurückbauen ... Freitext ... Besch. entsorgen Abr.n.Berechnen;400,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.59;Rohrleitung zurückbauen ... Freitext ... Besch. entsorgen Abr.n.Berechnen;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.60;Rohrleitung zurückbauen ... Freitext ... Besch. entsorgen Abr.n.Berechnen;400,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.61;Dämmung einer stillgelegten Rohrleitung nach Unterlagen des AG zurückbauen;83,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.62;Lager ausbauen Pfeiler... Freitext ... ... Freitext ...;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.63;Lager ausbauen Pfeiler ... Freitext ... ... Freitext ...;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.64;Lager ausbauen Widerlager ... Freitext ... ... Freitext ...;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.65;Geländer abbauen Brücke Stahl H = 1100 mm Pfosten ausbauen;180,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.66;Handlauf bzw. Geländer rückbauen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.67;Übergangskonstruktion ausbauen Fahrbahn ... Freitext ... Unterk.+A.ausb.;13,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.68;Übergangskonstruktion ausbauen Kappe ... Freitext ... Unterk.+A.ausb.;8,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.69;Beleuchtungsmast rückbauen;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.70;Kabel aufnehmen und entfernen Beleuchtung Masse bis 2 kg/m;200,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.71;Kabel aufnehmen und entfernen E-Kabel Masse bis 2 kg/m;1800,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.72;Kabel aufnehmen und entfernen E-Kabel Masse bis 5 kg/m;360,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83
+0210.73;Dachpappe nach Unterlagen des AG zurückbauen;105,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/D02_Leistungsverzeichnis_Heinrich-Weitz-Brücke.D83

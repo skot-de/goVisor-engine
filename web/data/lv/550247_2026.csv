@@ -1,4 +1,34 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0101.1;Küchenmöbel Küche 4er WG;7,0;Stk;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+0101.2;Nischenwände Küche 4er WG;7,0;Stk;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+0101.3;Edelstahl-Arbeitsplatte Küche 4er WG;7,0;Stk;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+0102.1;Küchenmöbel Küche 5er WG;6,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+0102.2;Nischenwände Küche 5er WG;6,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+0102.3;Edelstahl-Arbeitsplatte Küche 5er WG;6,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+0103.1;Küchenmöbel Küche 5er WG Haus 19 2.OG;1,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+0103.2;Nischenwände Küche 5er WG Haus 19 2.OG;1,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+0103.3;Edelstahl-Arbeitsplatte Küche 5er WG Haus 19 2.OG;1,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+02.1;Elektrobackofen;14,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+02.2;Induktionskochfeld aufliegend;14,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+02.3;Dunstabzug Umluft;14,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+02.4;Fettfilter Dunstabzug;14,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+02.5;Aktivkohlefilter Dunstabzug;14,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+02.6;Kühlgerät;23,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+02.7;Tischkühlschrank;7,0;;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+02.8;Nischenleuchte 12W;14,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+02.9;Glasabdeckung Herdbereich;14,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+02.10;Relingstange 800 mm;28,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+02.11;Geschirr-Abtropfkorb;14,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+02.12;Abfallsack-Halterung;14,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+02.13;Nummernschild Alu;63,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+02.14;Ersatzteile Topfscharnier;20,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+02.15;Ersatzteile Zargenführung;5,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+02.16;Ersatzteile Zylinderkerne;20,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+03.1;Esstische WG Küchen und Gemeinschaftsraum 1800 x 800 x 740 (L x B x H);16,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+03.2;Sitzbank 1500 x 450 x 440 mm;32,0;St;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+0401.1;Stundenlohnarbeit Meister;5,0;h;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+0401.2;Stundenlohnarbeit Facharbeiter;5,0;h;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
+0401.3;Stundenlohnarbeit Helfer;5,0;h;gaeb-flat;leistungsbeschreibungen/LV Möblierung Küchen.D83
 1;Herstellung und Montage einer Küchenzeile gem. Systembeschreibung und Zeichnung mit;7,0;Stk;gaeb;leistungsbeschreibungen/LV Möblierung Küchen_V32.X83
 2;Lieferung und Montage von Nischenwänden gem. Systembeschreibung und Zeichnung mit;7,0;Stk;gaeb;leistungsbeschreibungen/LV Möblierung Küchen_V32.X83
 3;Lieferung und Montage einer Arbeitsplatte gem. Systembeschreibung und Zeichnung mit;7,0;Stk;gaeb;leistungsbeschreibungen/LV Möblierung Küchen_V32.X83

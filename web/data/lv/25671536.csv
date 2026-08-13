@@ -55,3 +55,59 @@
 05;Stundenverrechnungssatz Obermonteur;20,0;h;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
 06;Stundenverrechnungssatz Facharbeiter;50,0;h;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
 07;Stundenverrechnungssatz Helfer;50,0;h;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+0101;Standschrank 42 HE, 80/100, Standardausbau;6,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0102;bauseitigen Standschrank 42 HE montieren;4,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0103;Standschrank 24 HE, 80/80, Standardausbau;2,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0104;LWL-Patchfeld, 24 LC-Duplex, Standardausbau E9/125;20,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0105;19 Zoll Modulträger 24 Port;35,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0106;Rangierpanel;35,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0201;Unterverteilung freischalten;7,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0202;FI/LS-Schalter, 2p, B 16 A, 30 mA;30,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0203;Leitungsschutzschalter 1polig B 10 A;5,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0301;NHXMH-J 3x1,5;50,0;m;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0302;NHXMH-J 5x1,5;25,0;m;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0303;NHXMH-J 3x2,5;1250,0;m;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0304;LWL-Innenkabel 24E9/125 OS2;2000,0;m;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0305;Messung der Faserdämpfung einer LWL Faser E9/125;432,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0306;SSTP-Kabel, Kat. 7;30000,0;m;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0307;Messung Kat. 6a;600,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0401;RJ45 Modul Cat.6A, Farbcode T568 A;1200,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0402;Modulaufnahme 2 x RJ45 30 Grad;300,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0403;Abzweigkasten 5x2,5, AP.IP54;30,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0404;Gerätedose, HW. halogenfrei;10,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0405;Aus/Wechselschalter, UP;5,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0406;Steckdose, UP IP44;5,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0407;Verbindungsmodul Kat. 7;30,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0501;H07Z-U 1x4 gnge;25,0;m;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0502;H07Z-U 1x6 gnge;25,0;m;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0503;H07Z-R mehrdr. 1x16 gnge;250,0;m;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0504;Potentialausgleichsschiene, zusätzlicher PA;7,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0601;Anbauleuchte für Nebenräume, LED2300-840;10,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0701;Bohrung in Mauerwerk D bis 25 mm T 25 cm;450,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0702;Bohrung in Mauerwerk D 50 mm T 25 cm;250,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0703;Bohrung in Mauerwerk D 80 mm T 25 cm;25,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0704;Bohrung in Stahlbeton D bis 25 mm T 30 cm;30,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0705;Bohrung in Stahlbeton D 50 mm T 30 cm;45,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0706;Kernbohrung Stahlbeton D 80 mm T 30 cm;5,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0707;Bohrung für Geräte-/Verbindungsdose, in Trockenbau;15,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0801;Revisionsklappe 400x400 in GK;300,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0802;Abdecken / Abkleben;500,0;m2;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0901;C-Profilschiene 200 mm;250,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0902;Bügelschelle bis 46 mm;500,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0903;Kabelsammelhalter 15 Leitungen;5000,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0904;Installationskanal halogenfrei 30/20;550,0;m;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0905;Installationskanal halogenfrei 60/40, mit Trennsteg;300,0;m;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+0906;Installationskanal halogenfrei 100/60, mit Trennsteg;100,0;m;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+1001;Kabelabschottung S30, Mörtel 25mm;150,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+1002;Kabelabschottung S30, Mörtel 50mm;90,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+1003;Kabelabschottung S90, Mörtel 80mm;15,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+1004;Installationskanal I 30, 50/50;100,0;m;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+1005;Installationskanal I 30, 100/50;20,0;m;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+1006;Kabelabschottung Wand/Decke S 90, flexibel 0,01 m2;25,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+1101;WLAN- Accesspoint demontieren;150,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+1102;WLAN- Accesspoint montieren;300,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+1103;Revisionsklappe öffnen und schließen;300,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+1104;Deckenplatte öffnen und schließen;250,0;St;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+1105;Obermonteurstunde;20,0;h;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+1106;Facharbeiterstunde;50,0;h;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83
+1107;Helferstunde;50,0;h;gaeb-flat;leistungsbeschreibungen/Sana KW LV WLAN.D83

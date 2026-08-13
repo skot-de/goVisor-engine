@@ -1,4 +1,31 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01020010;Baustelleneinrichtung;1,0;psch;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01030010;Fertigungsplanung, WPS, CE-Doku EXC2;1,0;psch;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01030020;ZfP-Prüfungen (VT/MT), Maßhaltigkeit, alle Protokolle;1,0;psch;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01030030;An-/Abtransport, Mobilkran, Montagehilfsmittel;1,0;psch;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01030040;Zusammenstellung Dokumentation;1,0;psch;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01040010;Verstärkung des Bestandsträger (Kellergeschoss);2,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01040020;Stahlstütze HEA 200 (Eisspeicher KG);1,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01040030;Verstärkung Stahlträger HEA 240 (Chor 1, EG);2,0;Stüc;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01040040;Verstärkung Stahlträger HEA 260 (Band 1, EG);2,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01040050;Stahlträger IPE 220 (Foyer EG);2,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01040060;Verstärkung Stahlträger HEA 240 (Werkstatt 1, 1.OG);2,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01040070;Stahlträger IPE 220 (Veranstaltungen 1.OG);2,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01040080;Verstärkung Stahlträger HEA 260 (Band 2, 1.OG);2,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01040090;Stahlträger IPE 140 (Kältemaschine 1, 2.OG);4,0;St;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01050010;Stahlstützen HEA 180, S235 J2, Werkstattfertigung, 4 Geschosse;20903,0;kg;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01050020;Stützenfuß: Kleberanker, einbetoniert, Fu;188,0;Stüc;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01050030;Anschluss an Stahlbalken HV M12 10.9, geschraubt, Werkstattfertigung;310,0;Stüc;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01060010;Hauptträger HEB 180, S235 J2, Stirnplattenanschluss HV M12, Werkstatt;36650,0;kg;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01060020;Hauptträger HEB 180, S355 J2 - 6 Stück (erhöhte Anforderung );1450,0;kg;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01060030;HV-Garnituren M12 10.9, komplett geliefert und angezogen (Trägeranschl;360,0;Stüc;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01070010;Kreuzverbände (X-/K-Verband) HV M12 geschraubt, alle 4 Geschosse;80,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01070020;Dach- und Wandpfetten, Z-Profil 200 / IPE 140, S235 JR, M12 geschraubt;1600,0;kg;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01080010;Kleinteile: Knotenbleche, Steifen, Konsolen, Anschlagösen;3500,0;kg;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01090010;Dauerhafter Fugendichtstoff, Stahl-Beton/Mauerwerk-Anschlüsse;240,0;m;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01100010;Reaktive Brandschutzbeschichtung R90 (Intumescent Coating), inkl. Prim;1040,0;m2;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01110010;Gesamtmontage Tragwerk , 4 Geschosse, Systemgerüst, Abnahme;1,0;psch;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
+01110020;Ausbesserung nach Montage, Montageschäden und Schraubenköpfe M12;1,0;psch;gaeb-flat;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.D83
 0010;Einrichten und Räumen der Baustelle incl. aller benötigten Geräte und Maschinen,;1,0;psch;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
 0010;Erstellung und Freigabe aller Ausführungs- und Fertigungsunterlagen gem.;1,0;psch;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
 0020;Durchführung und Dokumentation aller Prüfungen (Werkstatt + Baustelle):;1,0;psch;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83

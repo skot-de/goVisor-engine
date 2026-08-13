@@ -1,4 +1,20 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.010;Systemglaswand Betreuungsraum EG, ca. 3,265 x 2,94 m;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260706 LV Systemglaswände_GAEB-Datei.D83
+01.020;Systemglaswand Ganztag EG, ca. 5,125 x 2,94 m;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260706 LV Systemglaswände_GAEB-Datei.D83
+01.030;Systemglaswand Sekretariat EG, ca. 5,79 x 2,94 m;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260706 LV Systemglaswände_GAEB-Datei.D83
+01.040;Systemglaswand Unterrichtsräume 1.OG-2.OG, ca. 4,35 x 2,65 m;4,0;Stk;gaeb-flat;leistungsbeschreibungen/20260706 LV Systemglaswände_GAEB-Datei.D83
+01.050;Systemglaswand Differenzierung 1.OG-2.OG, ca. 4,35 x 2,65 m;8,0;Stk;gaeb-flat;leistungsbeschreibungen/20260706 LV Systemglaswände_GAEB-Datei.D83
+01.060;Zulage gleitender Deckenanschluss oberes Profil Systemglaswand;28,0;lfm;gaeb-flat;leistungsbeschreibungen/20260706 LV Systemglaswände_GAEB-Datei.D83
+01.070;Zulage Tür-Einsatzelement, 1-flg., DIN links, ca. 1,13 x 2,10m;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260706 LV Systemglaswände_GAEB-Datei.D83
+01.080;Zulage Tür-Einsatzelement, 1-flg., DIN rechts, ca. 1,13 x 2,10m;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260706 LV Systemglaswände_GAEB-Datei.D83
+01.090;Zulage Tür-Einsatzelement, 1-flg., DIN rechts, ca. 1,14 x 2,10m;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260706 LV Systemglaswände_GAEB-Datei.D83
+01.100;Zulage Tür-Einsatzelement, 1-flg., DIN links, ca. 1,065 x 2,10m;4,0;Stk;gaeb-flat;leistungsbeschreibungen/20260706 LV Systemglaswände_GAEB-Datei.D83
+01.110;Zulage Tür-Einsatzelement, 1-flg., DIN rechts, ca. 1,065 x 2,10m;8,0;Stk;gaeb-flat;leistungsbeschreibungen/20260706 LV Systemglaswände_GAEB-Datei.D83
+01.120;Bodenschott Systemglaswände 130 mm;41,0;lfm;gaeb-flat;leistungsbeschreibungen/20260706 LV Systemglaswände_GAEB-Datei.D83
+01.130;Bodenschott Systemglaswände 190 mm;11,0;lfm;gaeb-flat;leistungsbeschreibungen/20260706 LV Systemglaswände_GAEB-Datei.D83
+01.140;Drücker-Drücker-Garnitur, verkröpft, rückgeführt;1,0;Stk;gaeb-flat;leistungsbeschreibungen/20260706 LV Systemglaswände_GAEB-Datei.D83
+01.150;Drücker-Knauf-Garnitur, verkröpft, rückgeführt;14,0;Stk;gaeb-flat;leistungsbeschreibungen/20260706 LV Systemglaswände_GAEB-Datei.D83
+02.010;Wartung Türen in Systemglaswänden;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20260706 LV Systemglaswände_GAEB-Datei.D83
 010;Gemäß Konstruktionsbeschreibung, jedoch;1,0;Stk;gaeb;leistungsbeschreibungen/20260706 LV Systemglaswände_GAEB-Datei_V33.X83
 020;Abmessungen:;1,0;Stk;gaeb;leistungsbeschreibungen/20260706 LV Systemglaswände_GAEB-Datei_V33.X83
 030;Abmessungen:;1,0;Stk;gaeb;leistungsbeschreibungen/20260706 LV Systemglaswände_GAEB-Datei_V33.X83

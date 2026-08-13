@@ -1,4 +1,59 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;Baustelle einrichten für Putzarbeiten;1,0;Psch;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+01.2;Baustelleneinrichtung vorhalten;4,0;Wo;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+01.3;Bauablaufplanung Balkenterminplan;1,0;psch;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+01.4;Dokumention und Bestandsunterlagen;1,0;Psch;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+02.1;Schutzabdeckungen Folie;500,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+03.1;Wanddurchbruch schließen bis 0,1 m²;20,0;Stck;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+03.2;Wanddurchbruch schließen 0,1 bis 0,5 m²;10,0;Stck;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+03.3;Wanddurchbruch schließen 0,5 bis 1,0 m²;5,0;Stck;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+03.4;Wanddurchbruch schließen 1,0 bis 6,0 m²;1,0;Stck;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+03.5;Wandschlitze schließen 5/5  cm;30,0;m;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+03.6;Wandschlitze schließen 15/10 cm;10,0;m;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+03.7;Wandschlitze schließen 35/10 cm;5,0;m;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+03.8;Wandschlitze schließen 40/15 cm;5,0;m;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+04.1;Untergründe prüfen, mechanisch reinigen;3392,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+04.2;Stb-Decken entgraten;77,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+04.3;Grundierung für Putzflächen auf Stahlbeton;880,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+04.4;Grundierung für Putzflächen auf Mauerwerk;2512,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+04.5;Haftbrücke für Wandflächen aus Mauerwerk;2512,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+04.6;Haftbrücke für Wandflächen aus Stahlbeton;880,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+04.7;Untergrund-Fehlstellen ausgleichen - Kalksandstein P III;10,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+04.8;Untergrund-Fehlstellen ausgleichen - Stahlbeton P III;20,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+05.1;Innenwandputz PIII 20 mm Q3 - DIN 18202 T 3 Z 7 einlagig Fliesengrundputz;32,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+05.2;Zulage zu Pos. 19.05.1 - beengte Räume -  1-lagig;30,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+05.3;Innenwandputz PII 20 mm Q3 - DIN 18202 T 3 Z 7 zweilagig, gefilzt;71,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+05.4;Zulage - Putzbewehrung aus Gittergewebe auf Wand;103,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+06.1;Innenwandputz PII 20 mm Q3 - DIN 18202 T 3 Z 7 zweilagig, gefilzt;300,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+06.2;Innenputz PII 20 mm als Deckenputz 2-lagig gefilzt;77,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+06.3;Treppenlaufstirnseiten P 2 15 mm, 2-lagig gefilzt;2,0;lfm;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+06.4;Zulage - Putzbewehrung aus Gittergewebe auf Wänden und Treppenläufen;377,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+07.1;Innenwandputz PIII 20 mm Q3 - DIN 18202 T 3 Z 7 zweilagig, gefilzt;980,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+07.2;Ein- und Beiputzen  Leibungen P III 20 mm, 2-lagig;26,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+07.3;Innenwandputz PIII 20 mm Q3, Kleinflächen 0,25-2,5m², 2-lagig;50,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+07.4;Innenwandputz PIII 20 mm Q3 - DIN 18202 T 3 Z 7 einlagig Fliesengrundputz;1010,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+07.5;Innenwandputz PII 20 mm Q3 - DIN 18202 T 3 Z 7 zweilagig, gefilzt;760,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+07.6;Zulage - Stützen und Unterzüge quadratisch oder rechteckig, PII, 20 mm, 2-lagig;30,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+07.7;Ein- und Beiputzen  Leibungen P II 20 mm, 2-lagig;6,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+07.8;Putzträger Drahtgitter punktverschweißt / Edelstahl;50,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+07.9;Putzträger Drahtgitter punktverschweißt / verzinkt;50,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+07.10;Ausgleichsputz 20- 30 mm Zement-Leichtputz;50,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+07.11;Zulage - Putzbewehrung aus Gittergewebe auf Wand;2750,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+08.1;Innenwandputz PII 20 mm Q3 - DIN 18202 T 3 Z 7 zweilagig, gefilzt;145,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+08.2;Ein- und Beiputzen  Leibungen P II 20 mm, 2-lagig;6,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+08.3;Innenwandputz PIII 20 mm Q3 - DIN 18202 T 3 Z 7 einlagig Fliesengrundputz;17,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+08.4;Zulage - beengte Räume -  1-lagig;17,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+08.5;Putzbewehrung aus Gittergewebe auf Wand;162,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+09.1;Eckschutzprofile, d= 10 mm Kunststoff;300,0;m;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+09.2;Anputzleiste APU;300,0;m;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+09.3;Einbau PE-Folie- Z;350,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+09.4;Dehnungsfugenprofil Edelstahl und Kunststoff;30,0;m;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+10.1;Innengerüst Gruppe 3 / 60 cm;200,0;m²;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+10.2;Gebrauchsüberlassung;1000,0;m²xW;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+10.3;Fahrgerüst 2,00 x 2,00 m;1,0;Stk;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+10.4;Fahrgerüst 2,00 x 2,00 m vorhalten;8,0;Stk/;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+11.1;Facharbeiter - FA;25,0;Std;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
+11.2;Helfer - HA;20,0;Std;gaeb-flat;leistungsbeschreibungen/323.01-V.44-unbepr. Langtext-LV_GAEB.D83
 1;Baustelle einrichten mit allen zur Durchführung der Putzarbeiten notwendigen Werkzeugen und Gerätschaften zur ordnungsgemäßen und fachgerechten Durchführung der Baumaßnahme. Dazu gehört auch das Vorhalten;1,0;Psch;gaeb;leistungsbeschreibungen/323.01-V.45-unbepr. Langtext-LV_GAEB_V33.X83
 2;Vorhalten der Baustelleneinrichtung über die vertragliche;4,0;Wo;gaeb;leistungsbeschreibungen/323.01-V.45-unbepr. Langtext-LV_GAEB_V33.X83
 3;Durch den AN ist innerhalb von 24 WT nach Auftragserteilung auf Grundlage der Vertragstermine ein Bauablaufplan als Balkenterminplan digital an den AG mit folgenden Inhalten zu übergeben:;1,0;psch;gaeb;leistungsbeschreibungen/323.01-V.45-unbepr. Langtext-LV_GAEB_V33.X83

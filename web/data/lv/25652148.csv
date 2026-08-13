@@ -41,3 +41,45 @@
 36;Pflasterbelag aus Rasenfugenpflaster liefern und auf überbaubarem Baumsubstrat einbauen.;25,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer_V33.X83
 37;Pflaster (8cm stark) auf Passmaß per Nassschneideverfahren trennen;16,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer_V33.X83
 38;Fuge zwischen Asphalt und Betonpflaster bzw. Bordsteinen mit Fugenvergussmasse TL Fug-StB füllen, Fugenbreite ca. 10 mm, Fugentiefe 50 mm;110,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer_V33.X83
+1.2.1;Baustelle einrichten, betreiben und nach Beendigung der Baumaßnahme räumen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.2.2;Bauzaun liefern und aufbauen und vorhalten;45,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.2.3;Bauzaun umsetzen;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.2.4;Teil-Sperrung der Hauptfahrbahn im Baubereich;2,0;st;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.3.1;Bitum. Befestigung und Unterlage schneiden 10-15cm;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.3.2;Bitum. Befestigung und Unterlage schneiden20-25cm;110,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.3.3;Bitum. Befestigung Dicke über 10 bis 15 cm abbrechen;83,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.3.4;Bitum. Befestigung Dicke über 20 bis 25 cm abbrechen;200,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.3.5;Baugrube ausheben und entsorgen,;120,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.3.6;Bauschutt entsorgen;1,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.3.7;Betonfundamente abbrechen;0,5;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.3.8;Reine Baufläche feinplanieren und verdichten;60,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.3.9;Baumsubstrat liefern und einbauen;58,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.310;Staudensubstrat liefern und einbauen;50,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.311;Boden für Leitungsgraben ausheben;8,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.312;Handschachtung, als Zulage;1,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.313;Suchgraben Homogenbereich 1 Tiefe bis 1,25 m;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.314;Entwässerungsrohr DN 100-150 ausbauen;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.315;Straßenablauf ausbauen und entsorgen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.316;Straßenablauf Betonteil Ablauf, Boden 1a.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.317;Straßenablauf Betonteil Schaft;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.318;Straßenablauf Betonteil Ablauf Konus;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.319;Straßenablauf  Betonteil Ablauf, Zwischenteil.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.320;Straßenablauf  Betonteil Ablauf, Auflagerring;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.321;Straßenablauf  Betonteil Ablauf, Aufsatz C 305x525;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.322;Straßenablauf  Verzinkter Eimer;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.323;Muffenloses Vollwand-Kunststoffrohr DN/OD 160,;8,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.324;Zulage Bogen DN/OD 160/15°-45°;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.325;Zulage Abzweig DN/OD 160/110,;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.326;Boden des AN in Leitungszone einbauen;1,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.327;Sicherung freigelegter vorhandener  Leitungen;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.328;Hochborde 12-15/30 enge Fugen, Rückenstütze bis;85,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.329;Hochborde 12-15/30, hier Radienstein r=1m;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.330;Rundborde 12-15/22 enge Fugen, Rückenstütze bis;19,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.331;Bordsteine auf Passmaß trennen;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.332;Tiefborde 8/30 enge Fugen,;32,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.333;Vorhandenen Asphalt fräsen;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.334;Bauseitige Klebeborde F 10 20/12cm;34,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.335;Pflasterbeläge aus Betonpflaster;28,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.336;Pflasterbeläge aus Rasenfugenpflaster;25,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.337;Pflaster auf Passmaß trennen;16,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83
+1.338;Fugen zum Asphalt vergießen;110,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/GAEBRubankBeckenhofer.D83

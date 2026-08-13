@@ -329,3 +329,168 @@
 0070;Örtliche Einweisung des Betreiberpersonals.;4,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.X83
 0080;Zusätzlich zu den in der VOB geforderten technischen Unterlagen, für die ausgeführten;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.X83
 0090;Beistellen von Personal für die Sachverständigenabnahme der raumlufttechnischen Anlagen, Vergütung des Sachverständigen durch gesonderten Vertrag.;2,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.X83
+01010010;Anlage Hockeyhalle;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01010020;Anlage Umkleiden und Athletik;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01010030;Ersatzfilter zu Anlage Umkleiden und Athletik;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01010040;Nachheizregister Umkleiden;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01010050;Ersatzfilter zu Anlage Hockeyhalle;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01010060;Autokrangestellung Anlage Umkleiden und Athletik;1,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01010070;Zur Inbetriebnahme und Konfiguration des;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020010;Weitwurfdüsen DN250 für rechteckige Luftleitungen;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020020;Drallauslass Zuluft 625x625;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020030;Lüftungsgitter Abluft 525x125;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020040;Lüftungsgitter Abluft 1625x425;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020050;Lüftungsgitter Abluft 425x125 runde Luftleitung;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020060;Tellerventil Abluft DN100;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020070;Tellerventil Abluft DN125;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020080;Tellerventil Abluft DN160;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020090;Tellerventil Zuluft DN100;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020100;Tellerventil Zuluft DN125;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020110;Tellerventil Zuluft DN160;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020120;Kulissenschalldämpfer 440x400x2000;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020130;Kulissenschalldämpfer 600x600x2000;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020140;Kulissenschalldämpfer 750x600x500;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020150;Kulissenschalldämpfer 885x700x750;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020160;Ansaugbogen 1000/500;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020170;wie vor jedoch 1200/1000;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020180;Ausblasbogen 600/600;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020190;wie vor jedoch 800/600;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020200;Brandschutzklappe DN125;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020210;Inspektionsöffnung für DN125 180/80mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020220;Volumenstromregler variabel 400x300;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020230;Zusatzschalldämpfer 400x300;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020240;Volumenstromregler variabel 300x300;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020250;Zusatzschalldämpfer 300x300;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020260;Volumenstrom-Begrenzer DN80;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020270;wie vor jedoch DN100;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020280;wie vor jedoch DN125;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020290;wie vor jedoch DN250;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020300;Rohrschalldämpfer 80x500/50;13,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020310;Rohrschalldämpfer 100x500/50;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020320;Rohrschalldämpfer 125x500/50;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020330;Rohrschalldämpfer 250x1000/50;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020340;Kulissenschalldämpfer 450x225x1000;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020350;Kulissenschalldämpfer 400x200x1000;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020360;Kulissenschalldämpfer 200x150x1000;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020370;Kanalrauchmelder 24 V;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020380;Luftltg rechteckig Stahl verz gefalzt;480,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020390;Formstück Luftltg rechteckig Stahl verz gefalzt;210,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020400;Luftltg rund ATC2 Stahl verz DN80;55,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020410;Luftltg rund ATC2 Stahl verz DN100;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020420;Luftltg rund ATC2 Stahl verz DN125;13,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020430;Luftltg rund ATC2 Stahl verz DN150;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020440;Luftltg rund ATC2 Stahl verz DN160;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020450;Luftltg rund ATC2 Stahl verz DN180;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020460;Luftltg rund ATC2 Stahl verz DN200;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020470;Luftltg rund ATC2 Stahl verz DN250;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020480;Luftltg rund ATC2 Stahl verz DN300;8,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020490;Luftltg rund flexibel Alu DN80 ATC2 H bis 3,5m;9,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020500;Luftltg rund flexibel Alu DN100 ATC2 H bis 3,5m;6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020510;Luftltg rund flexibel Alu DN125 ATC2 H bis 3,5m;4,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020520;Luftltg rund flexibel Alu DN160 ATC2 H bis 3,5m;2,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020530;Luftltg rund flexibel Alu DN200 ATC2 H bis 3,5m;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020540;Luftltg rund flexibel Alu DN250 ATC2 H bis 3,5m;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020550;Bogen Luftleitg rund 90Grad Stahl verz DN80 glatt H bis 3,5m;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020560;Bogen Luftleitg rund 90Grad Stahl verz DN100 glatt H bis 3,5m;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020570;Bogen Luftleitg rund 90Grad Stahl verz DN125 glatt H bis 3,5m;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020580;Bogen Luftleitg rund 90Grad Stahl verz DN160 glatt H bis 3,5m;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020590;Bogen Luftleitg rund 90Grad Stahl verz DN180 glatt H bis 3,5m;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020600;Bogen Luftleitg rund 90Grad Stahl verz DN200 glatt H bis 3,5m;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020610;Bogen Luftleitg rund 90Grad Stahl verz DN250 glatt H bis 3,5m;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020620;Bundkragen Luftleitg rund Stahl verz DN80 H bis 3,5m;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020630;Bundkragen Luftleitg rund Stahl verz DN180 H bis 3,5m;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020640;Bundkragen Luftleitg rund Stahl verz DN250 H bis 3,5m;19,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020650;Enddeckel Luftleitg rund Stahl verz DN250 H bis 3,5m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020660;Abzweigstück Luftleitg rund 90Grad Stahl verz DN80 symmetrisch H bis 3,5m;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020670;Abzweigstück Luftleitg rund 90Grad Stahl verz DN100 symmetrisch H bis 3,5m;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020680;Abzweigstück Luftleitg rund 90Grad Stahl verz DN125 symmetrisch H bis 3,5m;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020690;Abzweigstück Luftleitg rund 90Grad Stahl verz DN150 symmetrisch H bis 3,5m;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020700;Abzweigstück Luftleitg rund 90Grad Stahl verz DN160 symmetrisch H bis 3,5m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020710;Abzweigstück Luftleitg rund 90Grad Stahl verz DN180 symmetrisch H bis 3,5m;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020720;Abzweigstück Luftleitg rund 90Grad Stahl verz DN200 symmetrisch H bis 3,5m;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020730;Abzweigstück Luftleitg rund 90Grad Stahl verz DN250 symmetrisch H bis 3,5m;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020740;Übergangsstück Luftleitg rund konisch Stahl verz DN80 symmetrisch H bis 3,5m;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020750;Übergangsstück Luftleitg rund konisch Stahl verz DN100 symmetrisch H bis 3,5m;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020760;Übergangsstück Luftleitg rund konisch Stahl verz DN125 symmetrisch H bis 3,5m;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020770;Übergangsstück Luftleitg rund konisch Stahl verz DN150 symmetrisch H bis 3,5m;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020780;Übergangsstück Luftleitg rund konisch Stahl verz DN160 symmetrisch H bis 3,5m;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020790;Übergangsstück Luftleitg rund konisch Stahl verz DN180 symmetrisch H bis 3,5m;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020800;Übergangsstück Luftleitg rund konisch Stahl verz DN200 symmetrisch H bis 3,5m;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020810;Übergangsstück Luftleitg rund konisch Stahl verz DN250 symmetrisch H bis 3,5m;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020820;Übergangsstück Luftleitg rund konisch Stahl verz DN300 symmetrisch H bis 3,5m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020830;Muffe Luftleitg rund Stahl verz DN100 H bis 3,5m;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020840;Dachsockel 500x300;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020850;Dachsockel 500x325;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020860;Dachsockel 300x300;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01020870;Form-/Hohlprofilstahlkonstruktion Stahl verz;250,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01030010;Kombinierter Messwertgeber 24VDC IP3X 5-40GradC Umgebungsfeuchte 30-70% Luftqualitätsmessung VOC;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01030020;Kombinierter Messwertgeber 24VDC IP3X 5-40GradC Umgebungsfeuchte 30-70% Temperaturmessung Feuchtemessung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01030030;Kanaltemperatur-Messwertgeber 300mm Kunststoffrohr;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01030040;Installationsltg halogenfrei NHXMH-J 3x1,5RE vorh.Rohr/Unterflurkanal;80,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01030050;Installationsltg halogenfrei NHXMH-J 5x1,5RE vorh.Rohr/Unterflurkanal;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01030060;Installationskabel symmetrisch J-H(St)H 2x2x0,8 Bd vorh.Rohr/Unterflurkanal;110,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01030070;Installationskabel symmetrisch J-H(St)H 4x2x0,8 Bd vorh.Rohr/Unterflurkanal;230,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01030080;LIYCY 2x0,75mm²;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01030090;Elektroinstallationsrohr halogenfr.Kunststoff AD 25mm AP Abstandsschellen;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01030100;Elektroinstallationsrohr halogenfr.Kunststoff AD 20mm AP Abstandsschellen;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01030110;Elektroinstallationsrohr Alu AD 25mm Stahlkonstruktion Trägerklammern;16,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01030120;Elektroinstallationsrohr Alu AD 20mm Stahlkonstruktion Trägerklammern;16,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01030130;Elektroinstallationsrohr Alu AD 25mm, gewellt, flexibel;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01030140;Installationsleitung halogenfrei NHXMH-J 3x1,5RE anschließen;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01030150;Installationsleitung halogenfrei NHXMH-J 5x1,5RE anschließen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01030160;Installationskabel symmetrisch J-H(St)H 2x2x0,8 Bd Anschluss Betriebsm.;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01030170;Installationskabel symmetrisch Anschluss Betriebsmittel J-H(St)H 4x2x0,8 Bd;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01040010;Wärmedämmung Ummantelung Luftltg im Freien Mineralwolle Platte D 40mm Mantel Blech Stahl aluminiert;125,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01050010;Helfer/-in sämtliche Kosten/Zuschläge;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01050020;Monteur/-in sämtliche Kosten/Zuschläge;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01050030;Obermonteur/-in sämtliche Kosten/Zuschläge;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01050040;Baustelle einrichten räumen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01050050;Rollgerüst / fahrbare Arbeitsbühne für Arbeiten bis ca. 6,00 m;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01050060;Luftmengen- und Druckmessungen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01050070;Einweisung Betreiber;4,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01050080;Revisionsunterlagen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01050090;Beistellen Personal Sachverständigenabnahme raumlufttechnische Anlagen;6,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+01050100;Bezeichnungsschild mehrschichtig Kunststoff H 40mm B 100mm kleben;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02010010;Anlage Tennishalle;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02010020;Ersatzfilter zu Anlage Tennishalle;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02010030;Inbetriebnahme;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02020010;Weitwurfdüsen DN250 für runde Luftleitungen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02020020;Lüftungsgitter Abluft 1025x225;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02020030;Kulissenschalldämpfer 425x300x1750;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02020040;Kulissenschalldämpfer 390x400x2000;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02020050;Ansaugbogen 700/500;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02020060;Ausblasbogen 390/400;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02020070;Kanalrauchmelder 24 V;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02020080;Luftltg rechteckig Stahl verz gefalzt;105,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02020090;Formstück Luftltg rechteckig Stahl verz gefalzt;32,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02020100;Luftltg rund ATC2 Stahl verz DN250;1,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02020110;Luftltg rund ATC2 Stahl verz DN500;35,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02020120;Bogen Luftleitg rund 90Grad Stahl verz DN500 H bis 3,5m;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02020130;Abzweigstück Luftleitg rund 90Grad Stahl verz DN500 symmetrisch H bis 3,5m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02020140;Muffe Luftleitg rund Stahl verz DN500 H bis 3,5m;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02020160;Form-/Hohlprofilstahlkonstruktion Stahl verz;100,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02030010;Kombinierter Messwertgeber 24VDC IP3X 5-40GradC Umgebungsfeuchte 30-70% Luftqualitätsmessung VOC;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02030020;Kanaltemperatur-Messwertgeber 300mm Kunststoffrohr;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02030030;Installationsltg halogenfrei NHXMH-J 3x1,5RE vorh.Rohr/Unterflurkanal;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02030040;Installationsltg halogenfrei NHXMH-J 5x1,5RE vorh.Rohr/Unterflurkanal;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02030050;Installationskabel symmetrisch J-H(St)H 2x2x0,8 Bd vorh.Rohr/Unterflurkanal;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02030060;Installationskabel symmetrisch J-H(St)H 4x2x0,8 Bd vorh.Rohr/Unterflurkanal;80,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02030070;Elektroinstallationsrohr halogenfr.Kunststoff AD 25mm AP Abstandsschellen;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02030080;Elektroinstallationsrohr halogenfr.Kunststoff AD 20mm AP Abstandsschellen;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02030090;Elektroinstallationsrohr Alu AD 25mm Stahlkonstruktion Trägerklammern;6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02030100;Elektroinstallationsrohr Alu AD 20mm Stahlkonstruktion Trägerklammern;6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02030110;Elektroinstallationsrohr Alu AD 25mm, gewellt, flexibel;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02030120;Installationsleitung halogenfrei NHXMH-J 3x1,5RE anschließen;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02030130;Installationsleitung halogenfrei NHXMH-J 5x1,5RE anschließen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02030140;Installationskabel symmetrisch J-H(St)H 2x2x0,8 Bd Anschluss Betriebsm.;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02030150;Installationskabel symmetrisch Anschluss Betriebsmittel J-H(St)H 4x2x0,8 Bd;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02040010;Wärmedämmung Ummantelung Luftltg im Freien Mineralwolle Platte D 40mm Mantel Blech Stahl aluminiert;32,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02050010;Helfer/-in sämtliche Kosten/Zuschläge;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02050020;Monteur/-in sämtliche Kosten/Zuschläge;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02050030;Obermonteur/-in sämtliche Kosten/Zuschläge;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02050040;Baustelle einrichten räumen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02050050;Rollgerüst / fahrbare Arbeitsbühne für Arbeiten bis ca. 6,00 m;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02050060;Luftmengen- und Druckmessungen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02050070;Einweisung Betreiber;4,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02050080;Revisionsunterlagen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83
+02050090;Beistellen Personal Sachverständigenabnahme raumlufttechnische Anlagen;2,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/9 - Leistungsverzeichnis.D83

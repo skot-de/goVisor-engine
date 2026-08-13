@@ -1,0 +1,159 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Erstellen der Werk- und Montageplanung;1,0;psch;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+2;Beantragung einer Zustimmung im Einzelfall für die Metallpaneelwandkonstruktion als nichttragende Trennwand mit Anforderung an den Feuerwiderstand F30/EI30 durch den Auftragnehmer und Vorlage aller damit verbundenen gutachterlichen Stellungnahmen an das bayerische Staatsministerium für Wohnen, Bau u;1,0;psch;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+3;Vorgezogene Einmessung und Fixierung;1,0;psch;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+4;Mustervorlage und Abstimmung der Ausführung für alle erforderlichen Bauteile und Vorlage von Handmustern für die OP-Wandverkleidung.;1,0;psch;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+5;BIM-Dokumentation in Anlehnung an einen AsBuilt-Standard, zum Aufsetzen eines Facility-Management-Systems (CAFM) wie folgt:;1,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+1;Unterkonstruktion für einseitige Wandbeplankung mit OP-Wandbekleidung als Vorsatzschale, wie in den Vorbemerkungen beschrieben,;1081,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+2;Herstellen der Anschlusspunkte der eigenen Trockenbau(unter)konstruktion zu den angrenzenden Trockenbau(unter)konstruktionen des bauseitigen Trockenbauers, bestehend aus T-Anschlüssen,;153,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+3;Zusätzliche Profilstützen 40 x 110 x 2 mm;175,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+4;Traversen zur Objektbefestigung, PC-Arbeitsplatz;18,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+5;Traversen zur Objektbefestigung, Gasentnahme;18,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+6;Traversen zur Objektbefestigung, Geräteschiene;18,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+7;Traversen zur Objektbefestigung, oberschränke;18,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+8;Traversen zur Objektbefestigung, oberschränke;18,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+9;Befestigungstraverse aus Stahlblech;90,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+10;Wandverstärkungen/Unterkonstruktion zur Aufnahme für Unterputzdosen, bestehend aus A2-Plattenmaterial,;225,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+11;Zusätzlicher Ständer;100,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+12;Zulage für Mehraufwand für Ausbildung der Nische im OP für Großbildmonitore  folgt:;9,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+13;Anschluss oben,;1081,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+14;T-Verbindung für Trennwände der Vorpositionen, mit Inneneckprofilen, Ausführung rechtwinklig.;160,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+15;Freies Wandende für Trennwände der Vorpositionen,;25,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+16;Deckenschott (Schallschutz);220,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+17;Deckenschott (Schallschutz);25,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+18;Membrantüllen für das Verschließen der Bohrungen für einzeldurchführungen z.B. Elektokabel;500,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+19;Öffnung herstellen, als Türöffnung für 1-flügelige Schiebetür, vor der Wand;1,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+20;Öffnung herstellen, als Türöffnung für 1-flügelige Schiebetür,;4,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+21;Öffnung herstellen, als Türöffnung für 1-flügelige Schiebetür,;13,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+22;Öffnung herstellen, als Türöffnung für 1-flügelige Drehtür,;4,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+23;Öffnung herstellen, als Türöffnung für 1-flügelige Drehtür,;1,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+24;Öffnung herstellen, als Türöffnung für 1-flügelige Drehtür,;1,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+25;Öffnung zur Außenfassade herstellen,;5,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+26;Öffnung zur Außenfassade herstellen,;6,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+27;Öffnung herstellen, als Fensteröffnung für festverglaste Durchblickfenster,;4,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+28;Rechteck-Stahl-Hohlprofil nach Türzulassung,;50,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+29;Zulage für den Mehraufwand für das Anarbeiten der Unterkonstruktion OP-Wand an quadratische Betonstützen.;14,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+30;Erdungsanschluss für leitende Bauteile liefern und montieren mit Verortung in der W+M-Planung bestehend aus:;36,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+1;Wandschalenbekleidung aus Stahl verzinkt mit Pulverbeschichtung im Standard - RAL9003, bzw. Ton nach Wahl des Auftraggebers,;760,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+2;Zulage für Mehraufwand für die Ausführung der Wandbekleidungsplatten als Passelemente in den Rauminnen- und Außenecken mit der Breite von bis zu 601mm,;100,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+3;Zulage für Mehraufwand für die Ausführung der Wandbekleidungsplatten als Passelemente in den Rauminnen- und Außenecken mit der Breite von bis zu 1200mm,;100,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+4;Zulage für den Mehraufwand von Stützenverkleidungen aus Stahlblechplatten mit einem möglichst geringen Sonderaufbau an Stahlbetonstützen.;21,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+5;Zulagepreis für Mehraufwand für Wandschalenbekleidung aus Stahl verzinkt mit Feuerwiderstandsklasse EI30 gemäß EN 13501,;100,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+6;Zulage für Mehraufwendungen für die zusätzliche Ausstattung der Wandbeplankungen mit Schallschutzanforderung:;760,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+7;Zulage für Mehraufwendungen für horizontale Teilungsschnitte der Wandbekleidungs-Paneele über deren gesamte Feldbreite,;60,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+8;Zulage für Bleifolie mit Bleigleichwert mind. 0,1mm auf der Rückseite der Metallpaneele über die Gesamthöhe der Metallpaneele und dem Sockel,;470,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+9;Zulage für Bleifolie mit Bleigleichwert 0,5mm auf der Rückseite der Metallpaneele über die Gesamthöhe der Metallpaneele und dem Sockel,;220,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+10;Zulage für Mehraufwand für das Montieren von Einbauten/Abschirmungen im Bereich des Strahlenschutzes aufgrund bauseitiger Durchdringungen und weitere erforderlicher Abschirmungsebenen mit Auskragungen und mit Spezialgipsbasis-Spachtelmasse.;690,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+11;Mehraufwand (Zulage) für die Montage der Wandbeplankung Wandpaanele in Kleinflächen bis 5,0 m2.;250,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+12;Mehraufwand für spätere Anarbeitung an zuvor beschriebene;250,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+13;Mehraufwand für vorgezogene einseitige Beplankung/Bekleidung;250,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+14;Zulage Ausbildung Sockelprofil aus Stahl verzinkt;250,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+15;Deckenrandwinkel;250,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+16;Anspachteln von Einzelkabeldurchführungen in Deckenschotts bis 15;1000,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+17;Aussparung im Wandschott im Deckenhohlraum;675,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+18;Aussparung wie in Pos. 1.3.15 beschrieben;450,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+19;Aussparung wie in Pos. 1.3.15 beschrieben;225,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+20;Aussparung wie in Pos. 1.3.15 beschrieben;135,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+21;Bohrung 40 - 74mm Zulage Strahlenschutz Pb 0,5mm;500,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+22;Zulage für den Mehraufwand für das Herstellen einer umlaufenden Leibungsverkleidung aus verzinkten L-Winkeln an der Wandschale befestigt. Nach Montage der durchdringenden Medien wird die Restöffnung mit PU-Schaum (B)einseitig ausgeschäumt.;100,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+23;Öffnung herstellen, als Türöffnung für 1-flügelige Schiebetür,;1,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+24;Öffnung herstellen, als Türöffnung für 1-flügelige Schiebetür,;4,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+25;Öffnung herstellen, als Türöffnung für 1-flügelige Schiebetür,;13,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+26;Öffnung herstellen, als Türöffnung für 1-flügelige Schiebetür,;4,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+27;Öffnung herstellen, als Türöffnung für 1-flügelige Schiebetür,;1,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+28;Öffnung herstellen, als Türöffnung für 1-flügelige Schiebetür,;1,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+29;Öffnung zur Außenfassade herstellen,;5,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+30;Öffnung zur Außenfassade herstellen,;6,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+31;Öffnung zur Außenfassade herstellen,;2,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+32;Öffnung herstellen, als Fensteröffnung für festverglaste Durchblickfenster,;4,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+33;Zulage Unterputz-Wandeinbaukasten aus feuerverzinktem Stahlblech b/h/t=ca. 125/60/15 cm (Rastermaß);18,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+34;Bohrung 40 - 74mm;220,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+35;Bohrung 75 - 120 mm;100,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+36;Ausschnitt Laserwarnleuchte;24,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+37;Ausschnitt für Uhr;9,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+38;Ausschnitt E-Tableau, Rechteckiger Ausschnitt;9,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+39;Ausschnitt ETAK-Med-Gase ca. 60/32 cm;36,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+40;Ausschnitt Überströmöffnung in der Wandbeplankung,;36,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+41;Ausschnitt Überströmöffnung in der Wandbeplankung,;36,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+42;OP-Wand Fugenprofil aus Reinraumsilikon für nachträgliche De- und Montage der Paneele z.B. Wartung und Havarie;250,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+43;Zulage für abschnittsweise Montage;760,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+1;Leichtbauwand als Schachtwand/freistehende Vorsatzschale DIN 4103-1, Einbaubereich 1 DIN 4103-1 (Bereiche mit geringer Menschenansammlung),;700,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+2;Flurseitige Leichtbauwand als freistehende Vorsatzschale DIN 4103-1, Einbaubereich 1 DIN 4103-1 (Bereiche mit geringer Menschenansammlung),;100,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+3;Leichtbauwand als Schachtwand/freistehende Vorsatzschale DIN 4103-1, Einbaubereich 1 DIN 4103-1 (Bereiche mit geringer Menschenansammlung),;150,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+4;Mehraufwand für vorgezogene einseitige Beplankung/Bekleidung;250,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+5;Mehraufwand für spätere Anarbeitung an zuvor beschriebene;250,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+6;Mehraufwand für vorgezogene einseitige Beplankung/Bekleidung;250,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+7;Anschluss oben, gleitend bis 20 mm, 4-Plattenstreifen,;225,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+8;Anschluss oben, gleitend bis 20 mm, 4-Plattenstreifen,;25,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+9;Zulage für Mehraufwendungen für die zusätzliche Ausstattung der Wandbeplankungen mit Schallschutzanforderung:;860,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+10;Mehraufwand (Zulage) für die Montage der Wandbeplankung Trockenbau in Kleinflächen bis 5,0 m2.;75,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+11;Zusätzliche Profilstützen 40 x 110 x 2 mm;157,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+12;Zusätzlicher Ständer zur Wandverstärkung der Trockenbauseite in OP-Türöffnungen,;50,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+13;Rechteck-Stahl-Hohlprofil nach Türzulassung,;50,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+14;Rechteck-Stahl-Hohlprofil Profilabwickung;10,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+15;Anschluss oben, gleitend bis 20 mm,;250,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+16;Außenecke, mit eingespachteltem Alu-Eckschutzprofil,;10,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+17;T-Verbindung für Trennwände der Vorpositionen, mit Inneneckprofilen, Ausführung rechtwinklig.;75,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+18;Freies Wandende für Trennwände der Vorpositionen,;15,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+19;Befestigungstraverse aus Stahlblech;75,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+20;Wanddurchbrüche und Ausschnitte ohne Brandschutzanforderung,;100,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+21;Ausschnittsgröße über 500 bis 1.000 cm².;50,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+22;Ausschnittsgröße über 1.000 bis 2.000 cm²,;50,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+23;Zulage zu den Vorpositionen Wanddurchbrüchen/Ausschnitte;100,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+24;Ansichtsfläche: 500 bis 1.000 cm²;50,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+25;Ansichtsfläche: 1.000 bis 2.500 cm²;50,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+26;Zulage zu den Vorpositionen Wanddurchbrüchen/Ausschnitte;10,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+27;Ansichtsfläche: 500 bis 1.000 cm²;10,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+28;Ansichtsfläche: 1.000 bis 2.500 cm²;10,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+29;Öffnung herstellen, als Türöffnung für 1-flügelige Schiebetür,;1,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+30;Öffnung herstellen, als Türöffnung für 1-flügelige Schiebetür,;4,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+31;Öffnung herstellen, als Türöffnung für 1-flügelige Schiebetür,;13,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+32;Öffnung herstellen, als Türöffnung für 1-flügelige Schiebetür,;4,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+33;Öffnung herstellen, als Türöffnung für 1-flügelige Schiebetür,;1,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+34;Öffnung herstellen, als Türöffnung für 1-flügelige Schiebetür,;1,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+35;Öffnung herstellen, als Fensteröffnung für festverglaste Durchblickfenster,;4,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+1;Strahlenschutztürelement,;4,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+2;Strahlenschutztürelement,;1,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+3;Strahlenschutztürelement,;1,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+4;Zulage für Pulverbeschichtung in Akzentfage;1,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+5;Zulage für Pulverbeschichtung in Akzentfage;5,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+6;hermetische Strahlenschutz-Schiebetür, für Operationssäle geeignet und zugelassen,;1,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+7;hermetische Strahlenschutz-Schiebetür, für Operationssäle geeignet und zugelassen,;4,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+8;hermetische Strahlenschutz-Schiebetür, für Operationssäle geeignet und zugelassen,;3,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+9;hermetische Strahlenschutz-Schiebetür, für Operationssäle geeignet und zugelassen,;7,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+10;hermetische Strahlenschutz-Schiebetür, für Operationssäle geeignet und zugelassen,;3,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+11;Zulage für Pulverbeschichtung in Akzentfage;2,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+12;Zulage für Pulverbeschichtung in Akzentfage;16,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+13;Aktiv-Infrarot-Sicherheitsmelder zur Absicherung der Hauptschließkante bei automatisch betriebenen Schiebetüren während der Schließfahrt.;30,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+14;Einbau eines Durchsichtfensters 2000x1260 mm,;4,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+15;Verglasung vor bauseitiges Fassadenfensters mit vorgesetzten Innenfenster;5,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+16;Verglasung vor bauseitiges Fassadenfensters mit vorgesetzten Innenfenster;1,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+17;Verglasung vor bauseitiges Fassadenfensters mit vorgesetzten Innenfenster;4,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+18;Verglasung vor bauseitiges Fassadenfensters mit vorgesetzten Innenfenster;1,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+1;Zulage Wandheizung im Metallpaneelsystem im OP;760,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+2;Verteilerkasten inkl. Verteiler für die Wandheizung,;9,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+3;Leitungsführung bis zum Verteiler;250,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+4;Spülung des Rohrsystems nach der Installation und Durchführung einer Druckprobe,;9,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+1;Unterdecke DIN 18168-1, in den OP- und Rüsträumen;375,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+2;Unterdecke DIN 18168-1, in den OP- und Rüsträumen;50,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+3;Zulage für eine erhöhte Anzahl Noniusabhänger, sowie Auswechselungen der Unterkonstruktion im Bereiche von einbauten (OP-ZuluftdeckenDeckenstative, DVE´s bis zu einer Grundfläche ca. 600/600mm);50,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+4;Ausschnitte HLS, rund;33,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+5;Ausschnitte HLS, rund;55,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+6;Deckenausschnitt für die Durchführung/Anschluss der haustechnischen Installationen herstellen, einschließlich der erforderlichen Auswechselungen, Verstärkungen und Abhängungen der Unterkonstruktion in diesem Bereich.;75,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+7;Deckenausschnitt für die Durchführung/Anschluss der haustechnischen Installationen herstellen, einschließlich der erforderlichen Auswechselungen, Verstärkungen und Abhängungen der Unterkonstruktion in diesem Bereich.;75,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+8;Deckenausschnitt für die Durchführung/Anschluss der haustechnischen Installationen herstellen, einschließlich der erforderlichen Auswechselungen, Verstärkungen und Abhängungen der Unterkonstruktion in diesem Bereich.;45,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+9;Deckenausschnitt für die Durchführung/Anschluss der haustechnischen Installationen herstellen, einschließlich der erforderlichen Auswechselungen, Verstärkungen und Abhängungen der Unterkonstruktion in diesem Bereich.;45,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+10;Ausschnitt OP-Umluftdecke;9,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+11;Dauerlastische Verfugung;550,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+12;Deckenstative mit einer Grundfläche ca. 600 / 600 mm,;44,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+13;Weitspannträger;275,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+14;Weitspannträger;275,0;m;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+15;Unterdecke DIN 18168-1, innen,;5,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+16;Ansaugöffnungen für bauseitige Durchführung der Rauchansaugsysteme bohren mit Durchmesser 15mm;12,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+17;nachträgliches Öffnen und Schließen der Deckenkassetten aufgrund nachträglicher Installationen im Wandhohlraum, einschl. aller Dichtungsbänder und Anschlüsse;200,0;m2;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+1;SPS-Steuerung (speicherprogrammierbare Steuerung);9,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+2;Netzteil;9,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+3;Technische Funktionsprüfung der RLT- und klimatechnischen Versorgung eines OP-Raumes mit TAV-Decke nach DIN 1946-4 Tabelle 2 unter Lastbedingungen: 2 kW zusätzlich zu OP-Leuchten und Umfeldbeleuchtung, Messung der Verteilung der Zuluftaustrittsgeschwindigkeiten, Berechnung des Gesamt-Zuluftvolumenst;9,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+4;Hygienische Abnahmeprüfung nach DIN 1946-4:2008-12 - Schutzgradmessung an TAV-Decke OP 5 und TAV-Decke Hybrid OP;9,0;St;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+1;Stundenlohnarbeiten durch Facharbeiter/-in;20,0;h;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83
+2;Stundenlohnarbeiten durch Bauhelfer/-in;20,0;h;gaeb;leistungsbeschreibungen/260803_0612_OP-Wandsystem_Blankett.x83

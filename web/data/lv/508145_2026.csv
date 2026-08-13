@@ -1,4 +1,24 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.0010;Aufmaß und Werkpläne;1,0;Psch;gaeb-flat;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A.D83
+01.0020;Baustelleneinrichtung;1,0;psch;gaeb-flat;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A.D83
+01.0030;Einsatz Autokran;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A.D83
+01.0040;Alu-Fensterelement 1,51 x 1,51 m inkl. Fensterbank;4,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A.D83
+01.0050;Zulage Brandschutzverglasung F90;2,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A.D83
+01.0060;Sonnenschutzanlage;4,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A.D83
+01.0070;Alu-Fensterelement 1,51 x 1,51 m inkl. Fensterbank;3,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A.D83
+01.0080;Zulage Brandschutzverglasung;2,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A.D83
+01.0090;Sonnenschutzanlage;3,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A.D83
+01.0100;Alu-Fensterelement 2,50 x 1,90 m inkl. Fensterbank;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A.D83
+01.0110;Sonnenschutzanlage;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A.D83
+01.0120;"Alu-Fenster/-türelement 2,20 x 2,40 m inkl. trittsichere Fensterbank und erhöhtem Schallschutz;";1,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A.D83
+01.0130;Alu-Fenster-/Türelement 2,20 x 2,30 m inkl. trittsichere Fensterbank und erhöhtem Schallschutz;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A.D83
+01.0140;Neues RWA-Fensterelement;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A.D83
+01.0150;RWA Zentrale;1,0;psch;gaeb-flat;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A.D83
+01.0160;Wartungsvertrag;1,0;psch;gaeb-flat;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A.D83
+01.0170;Ausbau Alttüre;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A.D83
+01.0180;Alu-Türelement T90;1,0;Stk;gaeb-flat;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A.D83
+02.0010;Facharbeiterstunden;15,0;h;gaeb-flat;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A.D83
+02.0020;Helferstunden;15,0;h;gaeb-flat;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A.D83
 0010;Werkplanung nachfolgend beschriebener Fenster-/Türanlagen + Brandschutzelemente;1,0;Psch;gaeb;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A_V32.X83
 0020;Unternehmergebundene Baustelleneinrichtung liefern, vorhalten und nach Abschluss der Arbeiten räumen:;1,0;psch;gaeb;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A_V32.X83
 0030;A;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11- KMT - MRT-CT 470 - 05 Fenster+Sonnenschutz LV - Tektur A_V32.X83

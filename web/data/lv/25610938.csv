@@ -1,4 +1,18 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;Werkplanung Geländer und Absturzsicherungen Treppenturm;1,0;psch;gaeb-flat;anschreiben/2.1 LV Los 14 Metallbauarbeiten.D83
+01.2;BGI1_ Brüstungsgeländer Innen am Podest ca.b=1,45m;1,0;St;gaeb-flat;anschreiben/2.1 LV Los 14 Metallbauarbeiten.D83
+01.3;BGA1_Brüstungsgeländer in Fensteröffnung  Podeste b=1,625m,;1,0;St;gaeb-flat;anschreiben/2.1 LV Los 14 Metallbauarbeiten.D83
+01.4;BGA2_Brüstungsgeländer in Fensteröffnung  Podeste b=1,45m,;3,0;St;gaeb-flat;anschreiben/2.1 LV Los 14 Metallbauarbeiten.D83
+01.5;BGA3_Brüstungsgeländer in Fensteröffnung, b=1,45m, h=0,85m;1,0;St;gaeb-flat;anschreiben/2.1 LV Los 14 Metallbauarbeiten.D83
+01.6;BGA4_Brüstungsgeländer in Fensteröffnung Treppenlauf=1,50m,;1,0;St;gaeb-flat;anschreiben/2.1 LV Los 14 Metallbauarbeiten.D83
+01.7;BGA5_Brüstungsgeländer in Fensteröffnung Treppenlauf=1,50m,;1,0;St;gaeb-flat;anschreiben/2.1 LV Los 14 Metallbauarbeiten.D83
+01.8;BGA6_Brüstungsgeländer in Fensteröffnung Treppenlauf=1,625m,;1,0;St;gaeb-flat;anschreiben/2.1 LV Los 14 Metallbauarbeiten.D83
+02.1;Rohrhandlauf für Treppengeländer;41,0;m;gaeb-flat;anschreiben/2.1 LV Los 14 Metallbauarbeiten.D83
+02.2;Zulage Rohrverbindung;9,0;St;gaeb-flat;anschreiben/2.1 LV Los 14 Metallbauarbeiten.D83
+04.1;Metallabsturzsicherungen von Fenster, ca. 1,50m;4,0;St;gaeb-flat;anschreiben/2.1 LV Los 14 Metallbauarbeiten.D83
+04.2;Metallabsturzsicherungen von Fenster, ca.0,9m;4,0;St;gaeb-flat;anschreiben/2.1 LV Los 14 Metallbauarbeiten.D83
+04.3;Stahlblechwangen als Abstellwinkel;4,0;St;gaeb-flat;anschreiben/2.1 LV Los 14 Metallbauarbeiten.D83
+04.4;Facharbeiterstunden zum Nachweis;8,0;h;gaeb-flat;anschreiben/2.1 LV Los 14 Metallbauarbeiten.D83
 1;Vor Fertigungsbeginn hat der AN sämtliche für die Detailklärung, Prüfung und Herstellung erforderlichen Zeichnungen, Planungen, Nachweise, Details, etc. zu liefern, inkl. örtlichem Aufmaß.;1,0;psch;gaeb;anschreiben/2.2 LV Los 14 Metallbauarbeiten_V33.X83
 2;Brüstungsgeländer für Podeste der bauseitigen Stahlbetontreppe, wie folgt beschrieben und gem.anliegenden Zeichnungen liefern und in bauseits vorhandenen Fensteröffnungen gem. Detail montieren.;1,0;St;gaeb;anschreiben/2.2 LV Los 14 Metallbauarbeiten_V33.X83
 3;Brüstungsgeländer für Podeste der bauseitige Stahlbetontreppe, wie folgt beschrieben und gem.anliegenden Zeichnungen liefern und in bauseits vorhandenen Fensteröffnungen gem. Detail montieren.;1,0;St;gaeb;anschreiben/2.2 LV Los 14 Metallbauarbeiten_V33.X83

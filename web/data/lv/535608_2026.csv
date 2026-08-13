@@ -1,4 +1,81 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;W+M-Planung / Türliste Türen;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+01.2;W+M-Planung Kabelführung;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+01.3;Inbetriebnahme Elektrokomponenten;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+01.4;Bemusterung;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+02.1;(-1.01ST) T-30-RS-1-Drehtüre, Umfassungszarge, 1.010 x 2.140 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+02.2;(-1.06STa) T-30-1-Drehtüre, Eckzarge, 1.010 x 2.135 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+02.3;(-1.07STa,b,c,d,e,f) T-30-1-Drehtüre, Eckzarge, 1.010 x 2.135 mm;6,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+02.4;(-1.22STa) T-30-2-Drehtür, Eckzarge, 1.885 x 2.135 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+02.5;(-1.22STb) T-0-2-Drehtür, Eckzarge, 1.885 x 2.135 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+02.6;(-1.22ST c,e) T-30-1-Drehtür, Eckzarge 1.010 x 2.135 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+02.7;-1.22ST d) T-30-1-Drehtür, Eckzarge 1.010 x 2.135;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+02.8;(-1.25ST)T-0-2-Drehtür, Eckzarge, 1.885 x 2.135 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+02.9;(-1.27ST)T-30-1-Drehtür, Umfassungszarge, 1.010x 2.135 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+02.10;(-1.28STa)T-0-2-Drehtür, Blockzarge, 2.500x 2260 mm, Außentüre;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+02.11;(-1.28STb)T-0-2-Drehtür, Blockzarge, 2.500 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+02.12;(-1.29ST)T-30-RS-1-Drehtür, Eckzarge, 1.010 x 2.135 mm,;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+02.13;(-1.31STa)T-30-1-Drehtür, Eckzarge, 1.010 x 2.135 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+02.14;(0.04-ST)T-30-RS-1-Drehtür, Eckzarge, 1.200 x 2.290 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+02.15;(1.04-ST)T-0-1-Drehtür, Eckzarge, 1.010 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+02.16;(1.21-ST)T-0-1-Drehtür, Umfassungszarge, 1.010 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.1;(0.03-AGa) T-30-RS-1 Drehtür, 1.260 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.2;(0.05-AGb)T-0-1 Drehtür, 1.260 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.3;(0.09-AGe)T-0-1 Drehtür mit Seitenteil, 1.585 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.4;(0.11-AGa)T-0-1 Drehtür, 1.260 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.5;(0.11-AGb)T-0-1 Drehtür, 1.260 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.6;(0.18-AGa) T-0-1 Drehtür, 1.260 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.7;(0.18-AGb)T-0-1 Drehtür, 1.260 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.8;(0.25-AGa)T-0-1 Drehtür, 1.260 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.9;(0.25-AGb)T-0-1 Drehtür, 1.260 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.10;(0.30-AGa)T-30-RS-1 Drehtür, 1.260 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.11;(0.32-AGa)T-30-RS-1 Drehtür, 1.260 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.12;(0.36-AGa)T-0-1 Drehtür, 1.260 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.13;(0.36-AGb)T-0-1 Drehtür, 1.260 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.14;(0.38-AGa)T-0-1 Drehtür, 1.260 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.15;(0.38-AGb)T-0-1 Drehtür, 1.260 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.16;(0.55-AGa)T-0-1 Drehtür mit Seitenteil, 1.585 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.17;(0.55-AGb)T-0-1 Drehtür, 1.260 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.18;(1.01-AG)T-30-RS-1 Drehtür, 1.260 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.19;(1.05-AG)T-90-RS Drehtür, 1.260 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.20;(1.06-AGa)T-90-RS Drehtür, 1.260 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+03.21;(1.07-AG)T-90-RS Drehtür, 1.260 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.1;(-1.03VKa) T-0-1 Drehtür, Umfassungszarge, 1.010 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.2;(-1.03VKb) T-0-1 Drehtür, Umfassungszarge, 885 x 2.135 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.3;(-1.04VKa,b) T-0-1 Drehtür, Umfassungszarge, 885 x 2.135 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.4;(0.08-VK) T-0-1 Drehtür, Umfasszungszarge, 1.010 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.5;(0.09-VKa,c) T-0-1 Schiebetür, 1.135 x 2.260 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.6;(0.09-VKb) T-0-1 Schiebetür, 1.135 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.7;(0.44-VKb) T-0-1 Schiebetür, 1.135 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.8;(0.12-VK) T-0-1 Drehtür, Umfassungszarge, 1.010 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.9;(0.14-VK) T-0-1 Drehtür, Umfassungszarge, 885 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.10;(0.19-VK) T-0-1 Drehtür, Umfassungszarge, 885 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.11;(0.21-VK) T-0-1 Drehtür, Umfassungszarge, 1.010 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.12;(0.37-VK) T-0-1 Drehtür, Umfassungszarge, 885 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.13;(0.39-VK) T-0-1 Drehtür, Umfassungszarge, 885 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.14;(0.41-VK) T-0-1 Drehtür, Umfassungszarge, 885 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.15;(0.55-VKc) T-0-1 Drehtür, Umfassungszarge, 1.010 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.16;(0.56-VK) T-0-1 Drehtür, Umfassungszarge, 1.010 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.17;(1.09-VK) T-0-1 Drehtür, Umfassungszarge, 885 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.18;(1.10-VK) T-0-1 Drehtür, Umfassungszarge, 885 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.19;(1.11-VK) T-0-1 Drehtür, Umfassungszarge, 760 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.20;(1.13-VK) T-0-1 Drehtür, Umfassungszarge, 885 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.21;(1.14-VK) T-0-1 Drehtür, Umfassungszarge, 885 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.22;(1.15-VK) T-0-1 Drehtür, Umfassungszarge, 760 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.23;(1.16-VK) T-0-1 Drehtür, Umfassungszarge, 760 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.24;(1.17-VK) T-0-1 Drehtür, Umfassungszarge, 885 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+04.25;(1.18-VK) T-0-1 Drehtür, Umfassungszarge, 885 x 2.260 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+05.1;Fluchttürsteuerung;3,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+05.2;Fingerklemmschutz;29,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+05.3;Wandtürstopper;24,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+06.1;Vorarbeiter;5,0;h;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+06.2;Facharbeiter;10,0;h;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+06.3;Helfer;5,0;h;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+06.4;An- und Abfahrt für Regieleistungen;1,0;St;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+07.1;Wartung Vertragsjahr 1;1,0;psch;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+07.2;Wartung Vertragsjahr 2;1,0;psch;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+07.3;Wartung Vertragsjahr 3;1,0;psch;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
+07.4;Wartung Vertragsjahr 4;1,0;psch;gaeb-flat;leistungsbeschreibungen/327.01-V.56-unbepr. Langtext-LV_GAEB.D83
 1;Der AN hat für sämtliche Komponenten der nachfolgend beschriebenen Leistungen, basierend auf der Werkplanung und Detailplanung des Architekten prüffähige Ausführungszeichnungen und Türlisten;1,0;St;gaeb;leistungsbeschreibungen/327.01-V.57-unbepr. Langtext-LV_GAEB_V33.X83
 2;Der AN hat für sämtliche elektronische Komponenten der nach folgend beschriebenen Leistungen basierend auf der Werkplanung und Detailplanung des Architekten prüffähige Ausführungs- zeichnungen zur Kabelführung für sämtliche im Einzelbeschrieb benannten Positionen zu erstellen. Ausführung im Maßstab ;1,0;St;gaeb;leistungsbeschreibungen/327.01-V.57-unbepr. Langtext-LV_GAEB_V33.X83
 3;Inbetriebnahme aller in diesem;1,0;St;gaeb;leistungsbeschreibungen/327.01-V.57-unbepr. Langtext-LV_GAEB_V33.X83

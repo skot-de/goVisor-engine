@@ -1,4 +1,29 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;Vorbereiten der Gerüstaufstandsflächen;193,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+01.2;Fassadengerüst, LK 4, W09;3027,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+01.3;Zulage für erschwerte Gerüsterstellung auf dem Dach;656,0;m²;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+01.4;Gebrauchsüberlassung Fassadengerüst;96029,0;m²Wo;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+01.5;Gerüstkonsolen als Belagsverbreiterung 0,30 m;1285,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+01.6;Zulage für erschwerte Gerüsterstellung auf dem Dach;318,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+01.7;Gebrauchsüberlassung Gerüstkonsolen 0,30 m;23294,0;mWo;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+01.8;Gerüstkonsolen als Belagsverbreiterung 0,60 m;1285,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+01.9;Zulage für erschwerte Gerüsterstellung auf dem Dach;318,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+01.10;Gebrauchsüberlassung Gerüstkonsolen 0,60 m;23294,0;mWo;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+01.11;Innenliegender Seitenschutz;1259,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+01.12;Zulage für erschwerte Gerüsterstellung auf dem Dach;318,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+01.13;Gebrauchsüberlassung innenliegender Seitenschutz;39941,0;mWo;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+01.14;Überbrückung, LK 4, W09;12,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+01.15;Gebrauchsüberlassung Überbrückung;381,0;mWo;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+01.16;Schutz der Dachabdichtung - Bautenschutzmatte;159,0;m;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+01.17;Gerüsttreppenturm H = ca. 8,5 m;3,0;St;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+01.18;Gebrauchsüberlassung Gerüsttreppenturm H = ca. 8,5 m;92,4;StWo;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+01.19;Schutzdach über Baustellenzugang als Gerüstsonderkonstruktion;2,0;Stck;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+01.20;Gebrauchsüberlassung Schutzdach;118,0;StWo;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+02.1;Arbeits- und Schutzgerüst als Flächengerüst (Raumgerüst);22070,0;m³;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+02.2;Flächengerüst der vorg. Pos. vorhalten.;400085,0;m³Wo;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+03.1;Facharbeiter;20,0;h;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+03.2;Bauhelfer;20,0;h;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
+03.3;Lehrling (3. Lehrjahr);20,0;h;gaeb-flat;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten.D83
 1;Gerüstaufstandsflächen durch planieren, verfestigen und auslegen von Lastverteilungselementen für nachstehend beschriebene Gerüste vorbereiten. Abrechnung erfolgt nach Gebäudelänge mit Gerüstaufstellung.;193,0;m;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
 2;liefern und nach Herstellervorschrift und DIN 4420 fachgerecht aufstellen.;3027,0;m²;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
 3;Zulage zur Pos.;656,0;m²;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83

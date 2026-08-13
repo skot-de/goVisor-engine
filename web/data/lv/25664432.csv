@@ -1,0 +1,147 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Baustelle einrichten für Leistungen des AN. Eingeschlossen sind die für die Durchführung der vertraglichen Leistungen erforderlichen Lager- und Arbeitsplätze.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0020;Vorhalten der Baustelleneinrichtung für Leistungen des AN für die vertraglich vereinbarte Bauzeit.;18,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0030;Vor Baubeginn ist vom AN ein Verkehrslenkungsplan;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0040;Sicherung der gesamten Baustelle während der;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0050;Verkehrszeichen aller Art,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0060;"Umleitungstafel 0,9*0,6 aufstellen für die Vollsperrung ""Siebenmorgen""";7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0070;Verkehrslenkungstafel, 3 bis 4 farbig,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0010;Beweissicherung der sich im Trassenbereich befindenden;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0020;Beweissicherung der sich im Ausbaubereich befindenden;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0030;Nachschau der Beweissicherung im Falle von Einsprüchen der Anlieger;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0040;Erschütterungsmessung als Probemessung zur;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0050;Nullmessung in Gebäuden (alltägliche Erschütterung) vor;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0060;Erschütterungsmessung als Dauerüberwachung;14,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0070;Höhenfestpunkt einrichten, bestehend aus;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0080;Boden für Suchgraben ausheben,;10,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0090;Boden für Suchgraben ausheben,;20,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0100;Liefern von Stoffen;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0110;Bauzaun,;130,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0120;Stahlplatten SLW 60;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0130;Stahlplatten der Vorposition;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0140;Schutz gegen mechanische Schäden für Bäume;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0150;Stammdurchmesser von 41 cm bis 60 cm,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0160;Bäume teilweise entasten,;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0170;Verkehrszeichen aller Art;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0180;Fahrradständer;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0190;Poller;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0200;Temporären Stellplatz für Behinderte herstellen,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0210;Bei Verschmutzung bzw. trockener Witterung ist zur Vermeidung von Staubentwicklungen, die eigentliche Baustrecke und alle Zu- und Abfahrtswege unaufgefordert während der kompletten Bauzeit kontinuierlich zu reinigen und zu wässern.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0010;Einrichten, Vorhalten und Räumen der Baustelleneinrichtung für sämtliche in der Leistungsbeschreibung aufgeführten Leistungen, die zur Durchführung der Kampfmittelerkundung erforderlich sind.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0020;Kampfmittelbohrungen grundsätzlich mit einer im Durchmesser 120 mm großen Vollbohrschnecke herstellen.;350,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0030;Bohrlochsondierung, in vorh. Bohrloch, aktive Magnetik DIN 54145-2, Dokumentation wird gesondert vergütet, Abrechnung nach Messstrecke.;350,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0040;Auswertung Interpretation und Freigeben der Messdaten aus der Bohrlochsondierung hinsichtlich verdachtsrelevanter Anomalien, aktive Magnetik DIN 54145-2,;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0050;Baubegleitung der Erdarbeiten durch einen Fachkundigen nach §20 Sprengstoffgesetz inkl. der Sohlsondierung und aller hierfür erforderlichen Geräte, An- bzw. Abfahrt und sämtlicher Nebenkosten.;5,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0060;Grundwasserpeilrohr bestehend aus;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0070;Peilrohrverschlusskappe DN 50 für vorbeschriebene Brunnenrohre DN 50 PE, frostsichere Ausführung, mit angespritzter Kappe und Entlüftung liefern und einbauen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0010;Boden der Gräben für Entwässerungskanäle,;35,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0020;Pflasterbelag aus Beton inkl. Bettung aufnehmen,;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0030;Schotter unter Pflasterbelag,;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0040;Zulage zum Erdaushub;7,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0050;Zulage zum Erdaushub;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0060;Beton-/Mauerwerksschacht, Innenabmessung DN1000 - DN 1200 m Durchmesser, Innenhöhe ca. 1,80 m, Fließgerinne aus Profilbeton und Klinker in Baugrube abbrechen, einschließlich;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0070;Vertikaler Trennschnitt an vorh. Rohr;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0080;Boden der Gründungssohle des Kanalgrabens durch Einbringen von Grobschlag mittels Eindrücken oder vibrationsfreiem Einwalzen in Teilabschnitten unterhalb der Baugruben- und Grabensohle verbessern und verdichten.;3,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0090;Bodenaustausch mit verdichtungsfähigen Böden unterhalb der Leitungs- bzw. Schachtzone herstellen.;3,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0100;Zulageposition für die Erschwernisse, die auf Grund des Nachschachtens unterhalb der Baugruben- bzw. Grabensohle für den zuvor beschriebenen Bodenaustausch und für die zuvor beschriebene Untergrundverbesserung erforderlich werden, wenn die Ausschachtungs- und Verbauarbeiten auf Grund der ungestört a;3,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0110;Geotextil gemäß FGSV-Merkblatt 535 in Teilabschnitten als Trennschicht zwischen Bodenaustausch und gewachsenen Boden sowie des wieder zu verfüllenden Kanalgrabens in den Kanalgräben und Baugruben einbauen.;6,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0120;Normverbau DIN 18303 einbauen, Verbau wieder rückbauen, für Graben und Schachtbaugrube, erschütterungsarmer Einbau, Grabentiefe von 1,9 m bis 2,40 m,;55,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0130;Kopfverbau für Kanalgräben gem. DIN 4124,;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0140;Versorgungsleitung aus verschiedenen Materialien, unter Druck, über DN 63 bis DN 200, Länge der Sicherungsstrecke bis 1,4 m, Tiefe der Leitungsachse ab OK Gelände bis 1,5 m, sichern. Inkl. erf. Handschachtung.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0150;Ortbeton der Sauberkeitsschicht,;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0160;Schachtunterteil, SW 01,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0170;Wasserdichte Rohreinbindung von DN;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0180;Schachtring;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0190;Abdeckplatte;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0200;Auflagerring,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0210;Schachtabdeckung Klasse D 400,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0220;Verfüllen der Leitungszone,;1,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0230;Flüssigen Bodenbaustoff zwischen Bauwerken und Rohren einbauen.;3,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0240;Verfüllen von Gräben, Anschlussgräben und Schächten;30,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0250;Boden der Gräben für Entwässerungskanäle,;365,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0260;Aushub in mäßig bis stark verwittertem Fels,;15,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0270;Pflasterbelag aus Beton inkl. Bettung aufnehmen,;115,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0280;Schotter unter Pflasterbelag,;25,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0290;Zulage zum Erdaushub;45,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0300;Zulage zum Erdaushub;13,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0310;Hindernis im Boden, Rohrleitung aus PE/GG, bis DN 200 inkl. vorhandener Schutzrohre innerhalb der Baugrube abbrechen, laden und entsorgen. Inkl. erf. Trennschnitte. Abfall ist nicht gefährlich. Als Zulage zum Erdaushub.;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0320;Hindernis im Boden, Hausanschlussschieber aus Guss/Stahl inkl. aller Formteile abbrechen, laden und entsorgen. Abfall ist nicht gefährlich.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0330;Hindernis im Boden, Niederspannungskabelbündel inkl. Kabelschutzrohr innerhalb der Baugrube aufnehmen, laden und entsorgen. Inkl. erf. Trennschnitte. Abfall ist nicht gefährlich.;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0340;Zulage zum Erdaushaub;5,0;to;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0350;Hindernis aus Mauerwerk im Boden abbrechen,;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0360;Hindernis aus Beton im Boden abbrechen,;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0370;Hindernis aus Stahlbeton im Boden abbrechen,;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0380;Vertikaler Trennschnitt an vorh. Kanal;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0390;Boden der Gründungssohle des Kanalgrabens durch Einbringen von Grobschlag mittels Eindrücken oder vibrationsfreiem Einwalzen in Teilabschnitten unterhalb der Baugruben- und Grabensohle verbessern und verdichten.;15,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0400;Bodenaustausch mit verdichtungsfähigen Böden unterhalb der Leitungs- bzw. Schachtzone herstellen.;25,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0410;Zulageposition für die Erschwernisse, die auf Grund des Nachschachtens unterhalb der Baugruben- bzw. Grabensohle für den zuvor beschriebenen Bodenaustausch und für die zuvor beschriebene Untergrundverbesserung erforderlich werden, wenn die Ausschachtungs- und Verbauarbeiten auf Grund der ungestört a;10,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0420;Geotextil gemäß FGSV-Merkblatt 535 in Teilabschnitten als Trennschicht zwischen Bodenaustausch und gewachsenen Boden sowie des wieder zu verfüllenden Kanalgrabens in den Kanalgräben und Baugruben einbauen.;30,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0430;Spunddielen für Kanal-/Leitungsgräben,;235,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0440;Holzverbau im Bereich von Leitungs-/ Kanaldurchdringungen, als Erschwernis und Zulage zur Verbaupos.;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0450;Längslaufendes Kabelbündel;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0460;Teilabdichtung des DN 800 Rohres im Schacht Nr. 78471500 , z.B. durch Abmauerung,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0470;Pumpe mit Elektromotor,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0480;Pumpe der Vorposition;70,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0490;Abflussleitung nach Wahl des AN, Ein- und ausbauen sowie vorhalten, einschl. aller Armaturen, Form- und Paßstücke,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0500;Prov. Wasserüberleitung DN/OD 630 Rohrleitung in der Baugrube herstellen,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0510;offene Wasserhaltung auf der Grabensohle im Rohrgraben mitlaufend bestehend aus:;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0520;Pumpe mit Elektromotor für Pumpensümpfe,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0530;Pumpe der Pos. 04.0520.,;70,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0540;Pumpensumpf aus einem geschlitzten DN 400 Rohr aus PP oder ähnlichem Material herstellen,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0550;Geschlitztes DN 400 Rohr bei Verfüllung in Teilabschnitten entsprechend dem Verfüllfortschritt bis zur Oberkante mit geschlossenem DN 400 Rohr verlängern. Inklusive aller Erschwernisse bei der Verfüllung. Abriss des Rohres ab 1,5 m unter GOK und Verfüllung mit Flüssigboden. Als Zulageposition zur vo;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0560;Abflußleitung zur Absetzanlage,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0570;Absetzanlage, mehrteilig in geeigneter Größe z.B. Containerbauweise, Maximalhöhe ca. 2m,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0580;Entwässerungskanal/-leitung nach EN 1610;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0590;Passchnitt;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0600;PP-Überschiebmuffe DN/OD;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0610;PP-Bogen DN 400,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0620;Entwässerungskanal/-leitung nach EN 1610;11,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0630;Passchnitt;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0640;PP-Bogen DN 800,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0650;Ortbeton der Sauberkeitsschicht,;35,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0660;Erstellung einer Werk- und Montageplanung für die unten beschriebene Regenwasserbehandlungsanlage, bestehend aus RW01, RW02 und dem Lamellenklärer liefern und dem AG in 2-facher Ausfertigung vorlegen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0670;Stahlbeton-Sonderschacht, 4-eckig,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0680;Zusätzlicher raue Aussparung für Ablauf DN;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0690;Wasserdichte Rohreinbindung von DN;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0700;Wasserdichte Rohreinbindung von DN;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0710;DN;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0720;Schachtunterteil, RW 02;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0730;Zusätzlicher Anschluss für Zulauf DN/OD;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0740;Wasserdichte Rohreinbindung von DN;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0750;Lamellenklärer ViaTub 18L 272;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0760;Schachtring;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0770;Schachthals;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0780;Abdeckplatte;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0790;Auflagerring,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0800;Auflagerring,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0810;Schachtabdeckung Klasse D 400,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0820;Schachtabdeckung Klasse D 400,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0830;Verfüllen der Leitungszone,;40,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0840;Verfüllen der Leitungszone;20,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0850;Kabelbündel markieren, mit Trassenwarnband, gem. Vorgabe des AGs, mit Beschriftung, einschl. Lieferung, 30 cm über Scheitel verlegen.;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0860;Flüssigen Bodenbaustoff zwischen Bauwerken und Rohren einbauen.;15,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0870;Verfüllen von Gräben, Anschlussgräben und Schächten;145,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0010;Dynamische Lastplattendruckversuche im Bereich des Kanalgrabens zur Überprüfung der ausreichenden Bodenfestigkeit.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0020;Rammsondierung DIN 4094-DPL,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0030;Dichtheitsprüfung,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0040;DN;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0050;Dichtheitsprüfung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0060;des Schachtes RW02,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0070;des Lamellenklärers,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0080;des Schachtes SW01,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0090;TV-Untersuchung Haltungen DN/OD 400 PP - 800 PP;16,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0010;Auffüllung für Straßen,;3,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0020;seitlich gelagerten Schotter aus der Vorposition aufnehmen,;3,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0030;Planum für Verkehrsflächen herstellen.;130,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0040;Frostschutzschicht als 1. Tragschicht,;45,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0050;Schottertragschicht,;130,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0060;Feinplanum für Verkehrsflächen herstellen.;130,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0070;Gelagerte Steine auf Brechsand/Splitt 0/5 verlegen.;130,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0080;Rechteckspflaster 10/20/10 liefern.;30,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0090;Lastplattendruckversuche gemäß ZTVE-StB 17 und;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0010;Verdrängter und/oder überschüssiger Boden laden und zur zugelassenen Entsorgungsstelle abfahren.;445,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0020;Verwertung/Entsorgung;25,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0030;Verwertung/Entsorgung;390,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0040;Position für Leistung wie zuvor beschrieben, jedoch Laden und Entsorgung von Aushub Boden und ungebundene Trag- und Frostschutzschichten für den Straßenoberbau,;30,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0050;Abbruchstoffe, Gemisch aus Mauerwerk, Beton und vergleichbaren Stoffen laden und;65,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83
+0010;Während der Arbeiten sind die einzelnen Schritte mittels aussagekräftiger Fotodokumentation nachzuweisen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LANK2017 Bergisch Gladbach - Dolmanstraße RKB - LV.X83

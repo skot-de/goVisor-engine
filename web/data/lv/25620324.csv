@@ -1,4 +1,273 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0101.1;Baustelle einrichten und räumen;1,0;psch;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0101.2;Schachtgenehmigung;1,0;psch;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0101.3;aktuelles Zertifikat für Oberboden vorlegen;1,0;psch;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0101.4;Ausschachtungen und Zugänge absperren;100,0;m;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0101.5;Bestandsplan erstellen;1,0;psch;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0101.6;Dokumentation erstellen;1,0;psch;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0101.7;Suchschlitze zur Feststellung von Leitungen oder Wurzeln;15,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0101.8;Beton liefern und einbauen;5,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0101.9;Deklarationsanalyse / chemische Untersuchung nach LAGA;1,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0101.10;Deklarationsanalyse / chemische Untersuchung nach BBodenSchVO;1,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0101.11;Deklarationsanalyse / chemische Untersuchung nach EBV;1,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0101.12;Beweissicherung;1,0;psch;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0102.1;Landschaftsgärtner-Vorarbeiter;3,0;h;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0102.2;Landschaftsgärtner;3,0;h;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0102.3;Arbeiter;3,0;h;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0102.4;LKW einschließlich Fahrer;3,0;h;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0102.5;Radlader einschließlich Fahrer;3,0;h;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0102.6;Bagger bis 0,50m³ Greifer-/Löffelinhalt einschließlich Fahrer;3,0;h;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0102.7;Einachsfräse einschließlich Bediener;1,0;h;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0102.8;Drucklufthammer mit Kompressor einschließlich Bediener;1,0;h;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0102.9;Schneidgerät für Asphalt und Beton einschließlich Bediener;1,0;h;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0103.1;Bäume schützen (Stammschutz);5,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0103.2;Bäume durch Bauzaun schützen;70,0;m;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0103.3;Vegetationsflächen schützen;70,0;m;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0103.4;Wurzeln bei Freilegung schützen;15,0;m;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0103.5;Wurzeln zurückschneiden und behandeln (Dm bis 3 cm);15,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0103.6;Wurzeln schützen durch Einbettung;5,0;m;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0104.1;Verkehrsrechtliche Anordnung;2,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0104.2;Verkehrszeichen aller Art;10,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0104.3;Absperrschranke aufstellen, vorhalten, räumen;4,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0104.4;Leitbake doppelseitig aufstellen, vorhalten, räumen;8,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0106.1;Geotextil für Schotterweg liefern und verlegen;244,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0106.2;Geotextil des Schotterwegs  rückbauen und entsorgen;244,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0106.3;Schottermaterial 0/45 für Weg liefern und einbauen;48,8;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0106.4;Schottermaterial 0/45 für Weg zurückbauen und entsorgen;48,8;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0202.1;Baugelände abräumen, laden und entsorgen;10,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0202.2;Bauschutt laden und entsorgen;10,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0202.3;Fundamentreste aus Beton abbrechen, laden und entsorgen;5,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0202.4;Rasennnarbe abschälen;50,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0202.5;Zulage für Handarbeit: Rasennarbe abschälen;10,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0202.6;Vegetationsnarbe mit durchwurzeltem Boden abtragen;510,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0301.1;Boden und Auffüllungen für befestigten Flächen abtragen und entsorgen;429,65;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0301.2;Zulage Boden Entsorgung als Z2 Boden;100,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0301.3;Zulage für Entsorgung als BM-F1;100,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0301.4;Zulage für Entsorgung als BM-F2;100,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0301.5;Boden und Auffüllungen für Vegetationsflächen abtragen und entsorgen;109,1;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0301.6;Zulage für Handarbeit Boden abtragen und entsorgen;24,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0301.7;Boden für Böschungen und Mulden abtragen und entsorgen;100,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0302.1;zwischengelagerten Bodenaushub wieder einbauen;50,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0302.2;Oberboden für Vegetationsflächen abtragen und auf der Baustelle lagern;50,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0401.1;Planum herstellen;1238,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0401.2;Untergrund verdichten;1238,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0401.3;Lastplattendruckversuche auf Planum und auf dem Flächenaufbau;4,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0401.4;Dynamische Fallplatte;4,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0401.5;Baugrundverbesserung befahrbare Flächen: Frostschutzschicht 0/45;100,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0401.6;Knotensteifes Kombigitter mit geotextiler Trennlage liefern und einbauen;492,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0402.1;Befahrbare Flächen: Frostschutzschicht 0/45;226,32;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0402.2;Befahrbare Flächen: Tragschicht 0/32;73,8;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0402.3;Asphalttragschicht gemäß ZTV Asphalt-StB 07/13, 8 cm;492,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0402.4;Bitumenemulsion aufsprühen;492,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0402.5;Asphaltbetondeckschicht gem. ZTV Asphalt-StB 07, 4 cm;492,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0402.6;Fugenschnitt ausführen;20,0;m;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0402.7;Anschluss als Fuge mit Fugenmasse herstellen;150,0;m;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0402.8;Oberflächenschluss herstellen ECS 35;492,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0403.1;Begehbare Flächen: Frostschutzschicht 0/45;20,7;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0403.2;Begehbare Flächen: Tragschicht 0/32;17,25;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0403.3;Befahrbare Flächen: Frostschutzschicht 0/45;103,5;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0403.4;Befahrbare Flächen: Tragschicht 0/32;33,75;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0403.5;Pflasterdecke warmgrau 20x30x8 und 20x 20x8cm legen;115,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0403.6;Rasenstein liefern und legen;225,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0403.7;Zulage: Trennschnitt Pflaster;100,0;m;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0403.8;Noppenplatte legen;5,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0404.1;Tiefbord 8x25x100 aus Beton;149,0;m;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0404.2;Hochbord 15x30x100 aus Beton;116,0;m;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0404.3;Hochbord ohne Lücke 15x30x100 aus Beton;9,0;m;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0404.4;Übergangsstein aus Beton;3,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0404.5;Zulage für Trennschnitt (Borde aus Beton);50,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0405.1;Planum für Mauerscheibe herstellen;12,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0405.2;Frostschutzschicht für Mauerscheibe;4,8;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0405.3;Lastplattendruckversuch;2,0;Stüc;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0405.4;Fundamente für Mauerscheibe herstellen;10,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0405.5;Zulage Höhensprung: Fundament für Mauerscheiben;20,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0405.6;Mörtelbettung für Mauerscheiben  herstellen;0,6;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0405.7;Mauerscheibe Breite 0,45 und Höhe 0,80 liefern und einbauen;4,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0405.8;Mauerscheibe Breite 0,90 und Höhe 1,20 und 0,75  liefern und einbauen;8,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0405.9;Mauerscheibe Breite 0,75 und Höhe 0,98 und 1,00  liefern und einbauen;2,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0405.10;Mauerscheibe Breite 0,75 und Höhe 0,98 und 0,96 liefern und einbauen;2,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0405.11;Kompriband für L-Steine liefern und einbauen;12,0;m;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0405.12;Fugenverschluss mit Bitumen-Dachpappe liefern und anbringen;12,0;m;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0405.13;Mauerscheiben hinterfüllen;9,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0406.1;Fundament für Blockstufen herstellen;15,82;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0406.2;Dichtschlämme aufbringen;21,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0406.3;Blockstufe L100 liefern und verlegen;60,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0406.4;Zulage: farbiger Streifen für Blockstufe;60,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0406.5;Zulage: Aussparung in einer Stufe;2,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0501.1;Boden für Leitungsgraben und Schachtbauwerke ausheben, Maschinenarbeit;17,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0501.2;Zulage: für Arbeiten in Handschachtung;8,5;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0501.3;Grabensohle verdichten;40,0;m;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0501.4;Sand für Rohrgraben;3,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0501.5;zwischengelagerten Bodenaushub wiedereinbauen;17,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0501.6;Leerrohr DN 100;10,0;m;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0601.1;Entwässerungsrinne NW200 L100 Nr. 0/0;8,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0601.2;Zulage Stirnwand / Endscheibe: NW 200 Nr. 0/0;2,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0601.3;Zulage: Rinnengehrungsschnitt;2,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0601.4;Zulage: Stirnwand als Sieb NW200 Nr. 0/0;2,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0601.5;Rinnenausgang im Böschungsbereich herstellen;2,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0801.1;Rohrpfosten mit Bodenhülse für Hinweisschild, 3 m lang;2,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0801.2;Verkehrszeichen Nr. 2446 'Feuerwehrzufahrt' mit Zusatztext;2,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0801.3;Abfallbehälter 100 l liefern und aufbauen;1,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0801.4;Fahrradanlehnbügel liefern und montieren;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0801.5;Schalung bauen;2,5;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0801.6;Bewehrung für Panoramator einbauen;300,0;kg;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0801.7;Fundament herstellen;3,5;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0801.8;Bank liefern und montieren;2,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0801.9;Geländer seitlich der Treppe liefern und montieren;2,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0801.10;Geländer mittig der Treppe liefern und montieren;2,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0901.1;Quercus frainetto liefern und vorhalten;1,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0901.2;Acer campestre liefern und vorhalten;2,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0901.3;Quercus robur liefern und vorhalten;2,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0901.4;Quercus petraea liefern und vorhalten;1,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0901.5;Cornus sanguinea liefern und vorhalten;12,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0901.6;Crataegus monogyna liefern und vorhalten;24,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0901.7;Rosa canina liefern und vorhalten;12,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0901.8;Rosa rubiginosa liefern und vorhalten;32,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0901.9;Rosa tomentosa liefern und vorhalten;24,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0901.10;Salix repens liefern und vorhalten;24,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0901.11;Sarothamnus scoparius liefern und vorhalten;30,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0901.12;Thymus serpyllum liefern und vorhalten;2925,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0902.1;Pflanzgrube für Bäume ausheben;36,3;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0902.2;Pflanzgrube für Bäume lockern;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0902.3;Pflanzgrube für Bäume verfüllen;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0902.4;Oberboden liefern;6,0;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0902.5;Wasser- und Nährstoffspeicher mit Langzeitwirkung einbringen;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0902.6;Impfung mit Mykorrhiza-Pilzen;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0902.7;Pflanzgrube bis 40cm unter GOK auffüllen;24,68;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0902.8;Hochstämme pflanzen;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0902.9;Hochstämme düngen;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0902.10;Baumverankerung herstellen;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0902.11;Pflanzgrube auffüllen;19,36;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0902.12;Verdunstungsschutz anbringen;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0902.13;Zulage: temporärer Stammschutz;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0902.14;Wühlmausschutz herstellen;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0902.15;Baumscheibe abdecken/ mulchen;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0903.1;Baugrund lockern;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0903.2;Zulage: Baugrund lockern in Handarbeit;60,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0903.3;Oberboden für Sträucher/ Rosen liefern;24,4;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0903.4;Oberboden für Stauden in Rasenstein liefern;6,8;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0903.5;Unkrautentfernung vor Pflanzung;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0903.6;Wasser- und Nährstoffspeicher mit Langzeitwirkung einbringen;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0903.7;Planum für Pflanzfläche herstellen;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0903.8;Zulage Modellierung zu Planum für Pflanzfläche herstellen;20,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0903.9;Pflanzgrube für Sträucher, Containerware ausheben;158,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0903.10;Sträucher,  Containerware pflanzen;158,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0903.11;Sträucher düngen;158,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0903.12;Stauden pflanzen;2925,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0903.13;Pflanzfläche lockern;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0903.14;Pflanzfläche mulchen (Rindenmulch);122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0904.1;Baugrund lockern;729,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0904.2;Zulage: Baugrund lockern in Handarbeit;200,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0904.3;Oberboden liefern;72,9;m³;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0904.4;Planum für Rasenfläche herstellen;729,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0904.5;Zulage Modellierung zu Planum für Rasenfläche herstellen;167,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0904.6;Rasenfläche düngen;729,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+0904.7;Rasenfläche ansäen mit Regiosaatgut;729,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.1;Bäume wässern, 1. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.2;Bäume wässern, 2. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.3;Bäume wässern, 3. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.4;Bäume wässern, 4. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.5;Bäume wässern, 5. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.6;Bäume wässern, 6. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.7;Bäume wässern, 7. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.8;Bäume wässern, 8. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.9;Bäume wässern, 9. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.10;Bäume wässern, 10. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.11;Kontrolle der Bäume, 1. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.12;Kontrolle der Bäume, 2. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.13;Kontrolle der Bäume, 3. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.14;Unkraut aus den Baumscheiben entfernen, 1. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.15;Unkraut aus den Baumscheiben entfernen, 2. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.16;Unkraut aus den Baumscheiben entfernen, 3. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.17;Unkraut aus den Baumscheiben entfernen, 4. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.18;Unkraut aus den Baumscheiben entfernen, 5. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.19;Unkraut aus den Baumscheiben entfernen, 6. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.20;Leittrieb stäben;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.21;Pflanzflächen wässern, 1. Pflegegang;234,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.22;Pflanzflächen wässern, 2. Pflegegang;234,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.23;Pflanzflächen wässern, 3. Pflegegang;234,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.24;Pflanzflächen wässern, 4. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.25;Pflanzflächen wässern, 5. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.26;Pflanzflächen wässern, 6. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.27;Unkraut der Pflanzflächen entfernen, 1. Pflegegang;234,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.28;Unkraut der Pflanzflächen entfernen, 2. Pflegegang;234,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.29;Unkraut der Pflanzflächen entfernen, 3. Pflegegang;234,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.30;Unkraut der Pflanzflächen entfernen, 4. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.31;Unkraut der Pflanzflächen entfernen, 5. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.32;Unkraut der Pflanzflächen entfernen, 6. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.33;Wiese mähen, 1. Pflegegang;729,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.34;Wiese mähen, 2. Pflegegang;729,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1001.35;Wiese wässern, 1. Pflegegang;729,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.1;Bäume wässern, 1. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.2;Bäume wässern, 2. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.3;Bäume wässern, 3. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.4;Bäume wässern, 4. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.5;Bäume wässern, 5. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.6;Bäume wässern, 6. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.7;Bäume wässern, 7. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.8;Bäume wässern, 8. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.9;Bäume wässern, 9. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.10;Bäume wässern, 10. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.11;Kontrolle der Bäume, 1. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.12;Kontrolle der Bäume, 2. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.13;Kontrolle der Bäume, 3. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.14;Unkraut aus den Baumscheiben entfernen, 1. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.15;Unkraut aus den Baumscheiben entfernen, 2. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.16;Unkraut aus den Baumscheiben entfernen, 3. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.17;Unkraut aus den Baumscheiben entfernen, 4. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.18;Unkraut aus den Baumscheiben entfernen, 5. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.19;Unkraut aus den Baumscheiben entfernen, 6. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.20;Leittrieb stäben;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.21;Pflanzflächen wässern, 1. Pflegegang;234,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.22;Pflanzflächen wässern, 2. Pflegegang;234,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.23;Pflanzflächen wässern, 3. Pflegegang;234,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.24;Pflanzflächen wässern, 4. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.25;Pflanzflächen wässern, 5. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.26;Pflanzflächen wässern, 6. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.27;Unkraut der Pflanzflächen entfernen, 1. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.28;Unkraut der Pflanzflächen entfernen, 2. Pflegegang;234,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.29;Unkraut der Pflanzflächen entfernen, 3. Pflegegang;234,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.30;Unkraut der Pflanzflächen entfernen, 4. Pflegegang;234,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.31;Unkraut der Pflanzflächen entfernen, 5. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.32;Unkraut der Pflanzflächen entfernen, 6. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.33;Wiese mähen, 1. Pflegegang;729,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.34;Rasen mähen, 2. Pflegegang;729,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1002.35;Rasen wässern, 1. Pflegegang;729,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.1;Bäume wässern, 1. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.2;Bäume wässern, 2. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.3;Bäume wässern, 3. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.4;Bäume wässern, 4. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.5;Bäume wässern, 5. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.6;Bäume wässern, 6. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.7;Bäume wässern, 7. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.8;Bäume wässern, 8. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.9;Bäume wässern, 9. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.10;Bäume wässern, 10. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.11;Kontrolle der Bäume, 1. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.12;Kontrolle der Bäume, 2. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.13;Kontrolle der Bäume, 3. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.14;Unkraut aus den Baumscheiben entfernen, 1. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.15;Unkraut aus den Baumscheiben entfernen, 2. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.16;Unkraut aus den Baumscheiben entfernen, 3. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.17;Unkraut aus den Baumscheiben entfernen, 4. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.18;Unkraut aus den Baumscheiben entfernen, 5. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.19;Unkraut aus den Baumscheiben entfernen, 6. Pflegegang;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.20;Leittrieb stäben;6,0;St;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.21;Pflanzflächen wässern, 1. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.22;Pflanzflächen wässern, 2. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.23;Pflanzflächen wässern, 3. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.24;Pflanzflächen wässern, 4. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.25;Pflanzflächen wässern, 5. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.26;Pflanzflächen wässern, 6. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.27;Unkraut der Pflanzflächen entfernen, 1. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.28;Unkraut der Pflanzflächen entfernen, 2. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.29;Unkraut der Pflanzflächen entfernen, 3. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.30;Unkraut der Pflanzflächen entfernen, 4. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.31;Unkraut der Pflanzflächen entfernen, 5. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.32;Unkraut der Pflanzflächen entfernen, 6. Pflegegang;122,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.33;Wiese mähen, 1. Pflegegang;729,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.34;Rasen mähen, 2. Pflegegang;729,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
+1003.35;Rasen wässern, 1. Pflegegang;729,0;m²;gaeb-flat;leistungsbeschreibungen/Unbenannt.D83
 1;Anfuhr, Aufstellung und Beräumung aller für die planmäßige und vertragsmäßige Durchführung der Arbeiten erforderlichen Einrichtungen, Anlagen, Geräte und sonstige Betriebsmittel, wie Aufenthaltsräume, Baumaschinen, Baustellentoilette und Versorgungsanlagen.;1,0;psch;gaeb;leistungsbeschreibungen/Unbenannt_V33.X83
 2;Einholen von Genehmigungen bei Rechtsträgern der unterirdisch verlegten Leitungen.;1,0;psch;gaeb;leistungsbeschreibungen/Unbenannt_V33.X83
 3;Anforderungen an den zu liefernden Oberboden:;1,0;psch;gaeb;leistungsbeschreibungen/Unbenannt_V33.X83

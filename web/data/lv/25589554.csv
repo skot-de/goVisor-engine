@@ -1,0 +1,141 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01010001;WC-Kabine bereitstellen;1,0;psch;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01020001;Sicherungslasttrennschalter Gr.D02 3-polig;2,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01020002;Dauerhafte Beschriftung;1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01020003;Schaltplan anpassen;1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01030001;Feldverteiler, HW, IP30, 72PLE;7,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01030002;Ausschalter 230VAC 63A 3-polig;7,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01030003;Überspannungsmittelschutz Typ 2;7,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01030004;Externes DLS/3PH-Bus-Modul;7,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01030005;Leitungsschutzschalter 230/400VAC Ausschaltvermögen 6kA einpolig Charakter.B 10A;56,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01030006;Leitungsschutzschalter 230/400VAC Ausschaltvermögen 6kA einpolig Charakter.B 16A;3,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01030007;Hilfsschalter für Leitungsschutzschalter;25,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01030008;Multifunktionsrelais;3,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01030009;Dauerhafte Beschriftung;7,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01030010;Schaltplan;7,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01040001;Kabelleiter Funktionserhalt Stahl verz. H 60mm B 300mm;60,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01040002;Kabelrinne Stahl verz. H 60mm B 400mm, Wand / Decke;10,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01040003;Elektroinstallationskanal Leitungsführung H/B 20/30mm;640,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01040004;Elektroinstallationskanal Leitungsführung H/B 30/40mm;250,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01040005;Elektroinstallationskanal Leitungsführung H/B 40/60mm;330,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01040006;Elektroinstallationskanal Leitungsführung H/B 60/90mm;150,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01040007;Elektroinstallationskanal Leitungsführung H/B 20/30mm Stahl verz besch;120,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01040008;Elektroinstallationskanal Leitungsführung H/B 40/60mm Stahl verz besch;50,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01040009;Elektroinstallationsrohr halogenfr.Kunststoff AD 25mm AP Abstandsschellen;30,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01040010;Elektroinstallationsrohr AD 25mm AP Aluminium;30,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01040011;Kabelsammelhalterung mit FE 102x65mm;150,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01040012;Kabelsammelhalterung;140,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01040013;Schnellmontage-Profilschiene;30,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01040014;Bügelschelle;300,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01040015;Elektroinstallationskanal Geräteeinbau H/B 66/130mm Wand;120,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01040016;Gerätedose 1fach für Standardeinbauelement;42,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01040017;Ausschnitt in Stahlblechkanal;60,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01040018;Wandausgleich bei Unebenheiten;40,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01040019;Endplatte Geräteeinbaukanal  H/B 66/130mm;40,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01050001;Ltg. NYM-J 5x25;30,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01050002;Ltg. NYM-J 5x16;65,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01050003;Ltg. NYM-J 3x2,5;300,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01050004;Ltg. NYM-J 5x1,5;800,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01050005;Ltg. NYM-J 3x1,5;4500,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01050006;Installationskabel J-Y(St)Y 2x2x0,8 Bd;200,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01050007;Ltg. NYM-J bis 5x25 anschließen an Verteilung;4,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01050008;Ltg. NYM-J bis 5x16 anschließen an Verteilung;5,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01050009;Anschließen beigestellte Betriebsmittel;5,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01050010;Anschließen Tür / Feststellanlage;3,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01060001;Wippschalter einpolig Aus/Wechsel 10A 250V Gerätedose IP2X;14,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01060002;Wipptaster einpolig Aus/Wechsel 10A 250V Gerätedose IP2X;75,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01060003;Blindabdeckung IP2X;50,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01060004;Abzweigkasten 5 Klemmen 4mm2 IP44;70,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01060005;Wippschalter einpolig Aus/Wechsel 10A 250V AP-Ausführung IP44;9,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01070001;Anbauleuchte rechteckig, Klassenraum / Büros;223,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01070002;Anbauleuchte rechteckig, Bürobereiche;12,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01070003;Anbauleuchte rechteckig, Nebenräume;43,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01070004;Anbauleuchte rechteckig, Flurbereiche;69,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01070005;Einbau-Downlight rund, WC-Bereiche;44,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01070006;Einlegeleuchte für Deckensysteme;19,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01070007;FR Anbauleuchte;19,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01070008;Außenleuchte mit Notlicht;4,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01080001;Präsenz- und Bewegungsmelder 360° DALI;40,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01080002;Päsenzmelder mit Akustiksensor 360° ON/OFF;14,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01080003;Bewegungsmelder 360° ON/OFF 24m;56,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01080004;Bewegungsmelder 360° ON/OFF 8m;13,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01080005;Aufputzgehäuse für Präsenzmelder;102,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01080006;DALI Tastenankoppler;35,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090001;Zentralbatteriesystem;1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090002;Brandschutzgehäuse;1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090003;Aufatzlüfter-Set;1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090004;Batteriesatz 216V / 16 Ah;1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090005;Batterieblock-Einzelüberwachung;1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090006;Fernanzeige Unterputz;1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090007;Externes DLS/3PH-Bus-Modul;4,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090008;RZ-Scheibenleuchte Wand;25,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090009;RZ-Scheibenleuchte Decke;7,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090010;Seilabhängungs-Set;7,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090011;Sicherheitsleuchte Deckenanbau Fluchtweg asymmetrisch;23,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090012;Sicherheitsleuchte Deckenanbau Fluchtweg symmetrisch;26,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090013;Sicherheitsleuchte Deckenanbau 5lx;17,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090014;Sicherheitsleuchte Deckenanbau Technikraum IP54;6,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090015;Sicherheitsleuchte IP65 Wand Außen;14,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090016;Stromkreisbezeichnungsschild;127,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090017;Übersichtsplan / Dokumentation Sicherheitsbeleuchtung;1,0;psch;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090018;Aufwendungen für Abstimmungen;1,0;psch;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090019;Programmiersoftware;1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090020;Programmierung und Einweisung;1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090021;Abstellen MA für Durchführung der Sachverständigenabnahme;1,0;psch;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01090022;Wartungsvertrag;4,0;Jahr;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100001;Brandmeldezentrale;1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100002;Brandschutzschrank E30/I30;1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100003;Ringkarte 1 Melderring;6,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100004;Akku 12V / 38,0 Ah;2,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100005;Nebenbedienteil;1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100006;"Hinweisschild ""Brandmeldezentrale""";1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100007;Multisensormelder optisch/thermisch;96,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100008;Sockelsirene akustisch, busversorgt;85,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100009;Blitzleuchte EN54-23 C-3-8.5 rot;2,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100010;Meldersockel;183,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100011;Druckknopfmelder;17,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100012;Ersatzglasscheibe für Handmeldergehäuse;30,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100013;Staubkappe für zuvor beschriebenen Brandmelder;100,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100014;Melderkennzeichnungsschilder nach DIN 0833;115,0;ST;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100015;"Schild ""Außer Betrieb""";22,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100016;Metallschlüssel für Handmelder;5,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100017;Überspannungsschutzmodul für Übertragungsleitung;1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100018;Überspannungsableiter Typ 2, 1L/N/PE;1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100019;Brandmeldekabel J-Y(ST)Y 4x2x0,8;3500,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100020;Brandmeldekabel 4x2x0,8 E30 Einzelverlegung;580,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100021;Erstellung genehmigungsfähiger Unterlagen;1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100022;Adressierung und Programmierung;1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100023;Inbetriebnahme der kompletten Anlage;1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100024;Betriebsbuch;1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100025;Abnahme der Anlage mit dem Betreiber;1,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100026;Abnahme Abstellen eines MA zur TÜV Abnahm;1,0;psch;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01100027;Wartungsangebot Brandmeldeanlage;4,0;Jahr;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01110001;Potentialausgleichschiene;7,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01110002;Kunststoffaderltg. HO7V-R 1x25;80,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01110003;Kunststoffadernleitung HO7V-R 1x16;70,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01110004;Kunststoffadernleitung HO7V-R 1x6;100,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01110005;PA-Anschließen 1x6;40,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01110006;PA-Anschließen 1x16;15,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01110007;örtlicher Potentialausgleich;5,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01120001;Trockenbauverkofferung für Kabelzug öffnen und verschließen;8,0;m2;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01120002;Zwischendecke öffnen und verschließen;7,0;m2;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01120003;TB Installationsschacht,  zweiseitig, 30x20cm;4,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01120004;TB Installationsschacht,  zweiseitig, 45x32cm;30,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01130001;Bohren Durchbr. bis 30mm, bis 24cm in Beton;250,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01130002;Bohren Durchbr. bis 100mm, bis 35cm in Wand;14,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01130003;Bohren Durchbr. bis 100mm, bis 40cm in Decke;13,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01130004;Wanddurchbruch ohne Brandschutz schliessen (mit Steinwolle);10,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01140001;Brandschutzabschottung S90 Wand D 350mm 0,05-0,1m2, h bis 3,5m;8,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01140002;Brandschutzabschottung S90 Decke D 400mm 0,05-0,1m2;13,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01140003;Brandschutzabschottung Einzelkabel S90 Wand D 400mm;30,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01140004;Brandschutzbekl. Beflammung innen I30 Gipsfaser-Platte, 3seitig;15,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01150001;Einarbeitung in den Bestand;16,0;h;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01150002;Erstinbetriebnahme-Prüfungen;1,0;psch;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01150003;Revisions-/Übergabedokumentation;1,0;psch;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01150004;Stundenlohnarbeiten für Arbeitskraft Facharbeiter;30,0;h;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01150005;Stundenlohnarbeiten für Meister;15,0;h;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01160001;Anbauleuchte (Entladungslampen) demontieren und entsorgen;300,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01160002;Anbauleuchte (Allgemeinlampen) demontieren und entsorgen;50,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01160003;UP / AP Installationselement demontieren und entsorgen;70,0;St;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01160004;Installationskanal;600,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83
+01160005;Leitung/Kabel bis 5x4 mm²;1200,0;m;gaeb-flat;leistungsbeschreibungen/vetschau_lv_elt_d83.d83

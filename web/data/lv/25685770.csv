@@ -88,3 +88,92 @@
 6;Gestellung (Betriebsstunden) eines Baggers mit;10,0;h;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
 1;Kanalhaltungen, auch abschnittsweise, nach DIN EN 1610 mit Luft oder Wasser auf Dichtheit prüfen, Haus- und Senkenanschlüsse innerhalb der Haltungen sind u. U. zu verschließen.;260,0;m;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
 2;Schachtbauwerk nach DIN EN 1610 mit Luft oder Wasser auf Dichtheit prüfen.;11,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+1.1;Baustelle einrichten und räumen;1,0;psch;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+1.2;Baustelle sichern;1,0;psch;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+1.3;Verkehrssicherung;1,0;psch;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+1.4;Halteverbotszonen einrichten;5,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+1.5;Halteverbotszone umbauen;5,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+1.6;Verkehrszeichen außerhalb der Baustelle;1,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+1.7;Baustelle säubern;1,0;psch;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+1.8;"Erschwerniszulage ""Vor-Kopf-Arbeit""";260,0;m;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+1.9;Stahplattenüberdeckung SLW60;3,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+110;Lastplattendruckversuch;5,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+111;Vermessung Kanaltrasse;1,0;psch;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+112;Bestandsplan erstellen;1,0;psch;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+2.1;Bodenaushub und -wiedereinbau;700,0;m3;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+2.2;Bodenaushub und -beseitigung;950,0;m3;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+2.3;Bodenaushub Anschlüsse - Boden ist zu beseitigen;80,0;m3;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+2.4;Boden als Ersatzboden liefern und einbauen;300,0;m3;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+2.5;Kreuzungen von Versorgungsleitungen;30,0;m;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+2.6;Parallel laufende Versorgungsleitungen;100,0;m;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+2.7;Kreuzungen von Kabeln;50,0;m;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+2.8;Boden für Suchgraben - Zulage;30,0;m3;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+2.9;Handschachtung - Zulage;50,0;m3;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+210;Hindernis Mauerwerk/Beton - Zulage;1,5;m3;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+211;Minierung herstellen für seitliche Anschlüsse;30,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+212;Kopfloch für Versorger - Zulage;2,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+213;Rohrgrabenstabilisierung einbauen;275,0;t;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+214;Auffüllung der Leitungszone;135,0;m3;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+215;Verkleidung offener Baugrube - Einfachgleitschiene;1900,0;m2;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+216;Verkleidung offener Baugrube - Dielenkammerverbau;400,0;m2;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+217;Verkleidung offener Baugrube - Anschlüsse;320,0;m2;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+3.1;Rohrverl. - DN 500 PP;260,0;m;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+3.2;Sattelstück (Zulage) DN 500/150;43,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+3.3;Sattelstück (Zulage) DN 500/200;1,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+3.4;Rohrverl. - DN 200 PP;5,0;m;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+3.5;Rohrverlegung - PP DN 150;60,0;m;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+3.6;Bogen (Zulage), PP, DN 160;120,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+3.7;Paßstück (Zulage), DN 500 PP;20,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+3.8;Paßstück (Zulage), DN 200 PP;2,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+3.9;Paßstück (Zulage), DN 150 PP;2,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+310;Bogen (Zulage) PP DN 200;5,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+311;Anschlussstück (Zulage), Stzg./PP DN 150;20,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+312;Überschiebmuffe (Zulage), PP DN 150;20,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+313;Reduzierstück (Zulage), PP DN 200/150;2,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+4.1;Schachtunterteil DN1200 1848;1,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+4.2;Schachtunterteil DN1200 1857;1,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+4.3;Schachtunterteil DN1000 1858;1,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+4.4;Schachtunterteil DN1200 3836;1,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+4.5;Schachtunterteil DN1200;5,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+4.6;Schachthals DN 1200/625;8,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+4.7;Schachthals DN 1000/625;1,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+4.8;Schachtring DN 1200;9,0;m;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+4.9;Schachtring DN 1000;2,0;m;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+410;Ausgleichsring, 60 - 100 mm;18,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+411;Schachtabdeckung Kl. D 400 einbauen;8,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+412;Schachtabdeckung Kl. D 400 austauschen;3,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+413;Steigeisen austauschen;5,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+414;Schachtanschluß herstellen, DN 500;4,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+5.1;Rohr aufnehmen - bis DN 500;150,0;m;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+5.2;Rohr aufnehmen - bis DN 250;20,0;m;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+5.3;Trennungs des Kanals;13,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+5.4;Kanal verdämmern;15,0;m3;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+5.5;Schachtbauwerk beseitigen;3,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+6.1;Klinkerpflasterdecke aufnehmen und lagern;750,0;m2;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+6.2;Klinkerpflasterdecke wiederherstellen;50,0;m2;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+6.3;Neues Pflaster liefern - Zulage;50,0;m2;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+6.4;Pflaster entsorgen;200,0;m2;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+6.5;Pflaster schneiden;50,0;m;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+6.6;Schachtdeckel regulieren;11,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+6.7;Schlacke aufnehmen - Zulage;250,0;m3;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+6.8;Frostschutzschicht  erstellen;520,0;m2;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+6.9;Schottertragschicht erstellen;520,0;m2;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+610;Bitumin. Tragschicht herstellen;700,0;m2;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+611;Straßenablauf aufnehmen und beseitigen;3,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+612;Straßenablauf herstellen;3,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+613;Hydranten- u. Schieberkappen regulieren;10,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+614;Rinne aufnehmen;60,0;m;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+615;Rinne liefern und versetzen;50,0;m;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+616;Rinne liefern und versetzen;6,0;m;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+617;Bremshügel aus Sinussteine aufnehmen;1,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+618;Hochbordsteine aufnehmen;40,0;m;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+619;Hochbordsteine liefern und versetzen;40,0;m;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+620;Hochbordsteine schneiden;8,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+7.1;Verrechnungssatz für Werkpolier;15,0;h;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+7.2;Verrechnungssatz für Baufacharbeiter;40,0;h;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+7.3;Gestellung Kompressor;10,0;h;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+7.4;Gestellung Tauchmotorpumpe;10,0;h;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+7.5;LKW mit Bedienung;10,0;h;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+7.6;Bagger mit Bedienung;10,0;h;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+8.1;Dichtheitsprüfung, Kanäle DN 400 - 630;260,0;m;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83
+8.2;Dichtheitsprüfung Schachtbauwerk;11,0;St;gaeb-flat;leistungsbeschreibungen/Ruhrstraße - LV als GAEB90.d83

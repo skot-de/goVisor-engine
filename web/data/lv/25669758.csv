@@ -39,3 +39,43 @@
 12;Schachtabdeckungen der Klassen A - F ausbauen,;1,0;St;gaeb;sonstiges/2026-S-27.X83
 13;Risse mit Rissfr;250,0;m;gaeb;sonstiges/2026-S-27.X83
 14;Risse in L;250,0;m;gaeb;sonstiges/2026-S-27.X83
+0101.1;Verkehrsbehördliche Anordnung nach §45 Abs.6 StVO;3,0;St;gaeb-flat;sonstiges/2026-S-27.D83
+0101.2;Gebühr für die verkehrsbehörliche Anordnung;3,0;St;gaeb-flat;sonstiges/2026-S-27.D83
+0101.3;Verkehrssicherung;1,0;Psch;gaeb-flat;sonstiges/2026-S-27.D83
+0101.4;Schrankenzaun aufstellen, Zulage zur Verkehrssicherung;2150,0;m;gaeb-flat;sonstiges/2026-S-27.D83
+0101.5;Fahrbahnmarkierung, gelb, 12 cm;50,0;m;gaeb-flat;sonstiges/2026-S-27.D83
+0101.6;Stundenlohnarbeiten;30,0;h;gaeb-flat;sonstiges/2026-S-27.D83
+0101.7;Betriebsstunden Radladers;10,0;h;gaeb-flat;sonstiges/2026-S-27.D83
+0101.8;Betriebsstunden Baggers;10,0;h;gaeb-flat;sonstiges/2026-S-27.D83
+0101.9;Betriebsstunde LKW;15,0;h;gaeb-flat;sonstiges/2026-S-27.D83
+0102.1;Abbruchkante im Asphaltoberbau herstellen 10 cm dick;1160,0;m;gaeb-flat;sonstiges/2026-S-27.D83
+0102.2;Abbruchkante zwi. Bordstein und Rinnenanlage herstellen;50,0;m;gaeb-flat;sonstiges/2026-S-27.D83
+0102.3;1-rhg Rinne aufnehmen und beseitigen;50,0;m;gaeb-flat;sonstiges/2026-S-27.D83
+0102.4;Asphaltfläche in Kleinflächen bis 50 m² fräsen, ca. 10 cm;150,0;m²;gaeb-flat;sonstiges/2026-S-27.D83
+0102.5;Asphaltfläche fräsen, 50 m²- 200 m², ca. 10 cm;1450,0;m²;gaeb-flat;sonstiges/2026-S-27.D83
+0102.6;Asphaltfläche fräsen, < 200 m², ca. 10 cm;2500,0;m²;gaeb-flat;sonstiges/2026-S-27.D83
+0102.7;Asphaltbefestigung Fräsen, bis 20cm;800,0;m²;gaeb-flat;sonstiges/2026-S-27.D83
+0102.8;Straßenbefestigung beseitigen;1275,0;t;gaeb-flat;sonstiges/2026-S-27.D83
+0102.9;Teerhaltigen Straßenbelag entsorgen, Verwertungsklasse B >25-500mg/kg, Zulage;200,0;t;gaeb-flat;sonstiges/2026-S-27.D83
+0102.10;Teerhaltigen Straßenbelag entsorgen, Verwertungsklasse B >500- 1000mg/kg, Zulage;200,0;t;gaeb-flat;sonstiges/2026-S-27.D83
+0102.11;Teerhaltigen Straßenbelag entsorgen, Verwertungsklasse B >1000mg/kg, Zulage;100,0;t;gaeb-flat;sonstiges/2026-S-27.D83
+0102.12;Boden, Schotter, Packlage lösen, laden und beseitigen;160,0;m³;gaeb-flat;sonstiges/2026-S-27.D83
+0102.13;Leitpfosten aufnehmen, zwischenlagern + setzen;40,0;St;gaeb-flat;sonstiges/2026-S-27.D83
+0102.14;Bankette bis 20 cm Dicke abtragen und seitlich einbauen;450,0;m²;gaeb-flat;sonstiges/2026-S-27.D83
+0102.15;Bankettschotter 5/32 mm liefern und einbauen;200,0;t;gaeb-flat;sonstiges/2026-S-27.D83
+0102.16;Untergrund verdichten;800,0;m²;gaeb-flat;sonstiges/2026-S-27.D83
+0102.17;Schottermaterial STS liefern und einbauen;350,0;t;gaeb-flat;sonstiges/2026-S-27.D83
+0103.1;Ausbildung des Anschlusses am vorhandenem Asphaltoberbau;116,0;m²;gaeb-flat;sonstiges/2026-S-27.D83
+0103.2;Fugen der Asphaltdeckschicht herstellen;1160,0;m;gaeb-flat;sonstiges/2026-S-27.D83
+0103.3;Asphalttragdeckschicht AC 16 TD;4050,0;m²;gaeb-flat;sonstiges/2026-S-27.D83
+0103.4;Zulage Handeinbau;40,0;t;gaeb-flat;sonstiges/2026-S-27.D83
+0103.5;Asphalttragschicht AC 22 TS,  Handeinbau;300,0;t;gaeb-flat;sonstiges/2026-S-27.D83
+0103.6;Flächen mit Kehrmaschine oder Hand reinigen;5000,0;m²;gaeb-flat;sonstiges/2026-S-27.D83
+0103.7;Pflasterflächen als Angleichung regulieren;100,0;m²;gaeb-flat;sonstiges/2026-S-27.D83
+0103.8;Verbundpflaster, liefern;5,0;m2;gaeb-flat;sonstiges/2026-S-27.D83
+0103.9;Betonpflasterschnitt <10 cm Dicke herstellen;20,0;m;gaeb-flat;sonstiges/2026-S-27.D83
+0103.10;Kappe in Asphalt-Befestigung regulieren;5,0;St;gaeb-flat;sonstiges/2026-S-27.D83
+0103.11;Aufsätze der Straßenabläufe regulieren;6,0;St;gaeb-flat;sonstiges/2026-S-27.D83
+0103.12;Schachtabdeckungen aufnehmen und lagern;1,0;St;gaeb-flat;sonstiges/2026-S-27.D83
+0103.13;Fräs-Verguss-Verfahren nach Ziffer 6.2 H SR;250,0;m;gaeb-flat;sonstiges/2026-S-27.D83
+0103.14;Rissesanierung bis 10 mm, 2 cm Überlappung;250,0;m;gaeb-flat;sonstiges/2026-S-27.D83

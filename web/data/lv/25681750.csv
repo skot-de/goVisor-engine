@@ -1,4 +1,123 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01010010;Baustelle ein-richten aller Abschnitte Fläche des AG Räumen nicht ges Oberboden n.ges. Zufahrt n.ges. Vers.d.AN Vorh.+Betr.ges.;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01010020;Baust.einrichtung vorh.u.betreiben;2,0;Mt;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01010030;Baustelle räumen aller Abschnitte Einbauten beseit. Beseit.1,0 m u.G. Oberboden andeck. Zufahrt beseit.;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01010040;Baustellensicherung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01010050;Hinweisschild (Baustellenschild);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01010060;Info-Tafel Radwegeführung;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01010070;Reinigen öffentlicher Wege;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01010080;Baustellensicherung bei Wintereinbruch oder Hochwasser;4,0;Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01010090;Bauzaun;315,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01010100;Sicherung der Gasleitungs-/Medientrasse;350,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01020010;Beweissicherung vor Baubeginn;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01020020;Beweissicherung nach Bauende;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01020030;Einholen von erforderlichen Genehmigungen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01020040;Mehraufwand für Einholen Genehmigung Gasleitung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01020050;Bauzeitenplan / Zahlungsplan liefern;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01020060;Havarieplan liefern;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01020070;Baustelleneinrichtungsplan liefern;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01020080;Berechnungen und Nachweise;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01020090;Bemessung / Genehmigung Wasserhaltung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01020100;"Erstellen und Führen des Qualitätssicherungsplans nach ""QSP Bod""";1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01020110;Fotodokumentation liefern;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01020120;Baubestandsdokumentation;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01030010;Einholen Genehmigungen, Landesstraßenbaubehörde;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01030020;Einholen Genehmigungen, Straßenverkehrsamt Landkreis;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01030030;Verkehrssicherung inkl. Radwegeführung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01040010;Urvermessung erstellen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01040020;Erstellung Festpunktfeld;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01040030;Absteckung, Baufeldbegrenzung und -beschilderung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01040040;Messprogramm für Eigenüberwachung aufstellen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01040050;Bestandserfassung u. Bestandspläne der Dokumentation Bau;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01040060;"Deich-Dokumentation Endzustand (nach ""TV Vermessung LfU"")";1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+01040070;"Führen des Qualitätssicherungsplans nach ""QSP Verm""";1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02010010;Bäume schützen (Durchmesser: bis 100 cm);3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02010020;Lichtraumschnitt;100,0;lfdm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02010030;Sträucher, Büsche roden;100,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02010040;Zaun entfernen;250,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02010050;Weidezaun liefern und neu herstellen;250,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02020010;Asphalt schneiden;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02020020;Wegbefestigung Asphalt aufnehmen und entsorgen, Kleinflächen;25,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02020030;Schottertragschicht zur Wegbefestigung herstellen;45,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02020040;Asphaltschicht AC 0/16 TD, d=10 cm, Fahrbahn;25,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02020050;Seiten- / Mittelstreifen mähen;1100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02020060;Bauzuwegung instandsetzen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02020070;Mineralstoffgemisch 0/32 (B1) entspr. TL SoB-StB 04, kalkfrei, liefern;20,0;to;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02030010;Gelände abräumen;1800,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02030020;Abtragsflächen säubern und mähen;1800,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02030030;Planum herstellen Abweichung +/-2 cm;1800,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02030040;Geokunststoff liefern und verlegen;1800,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02030050;Schottertragschicht 0/32 liefern und einbauen;332,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02030060;Transportable Baustraße liefern, vorhalten und wieder abfahren;110,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02030070;Transportable Baustraße auslegen u. zurückbauen;110,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02030080;Schottertragschicht 0/32 aufnehmen und entsorgen;332,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02030090;Rückbau Geokunststoff;1800,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02030100;Rekultivierung, Flächen wieder herstellen;1800,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02040010;Flächen vorbereiten;2400,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02040020;Grobplanum der Lagerfläche / BE-Fläche;2400,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02040030;Planum herstellen auf Zufahrt;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02040040;Geokunststoff als Trenn- u. Bewehrungslage liefern und verlegen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02040050;Füllboden als Ausgleichschicht unter Stahlplatten herstellen;30,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02040060;Lagerflächenzufahrt mit Stahlplatten befestigen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02040070;Planum herstellen auf Zufahrt;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02040080;Geokunststoff als Trenn- u. Bewehrungslage liefern und verlegen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02040090;Schottertragschicht zur Wegbefestigung herstellen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02040100;Rückbau Zufahrten (Platten u. Unterbau);200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02040110;Rückbau ungebundener Befestigungen (Schotter);200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02040120;Rückbau Geokunststoff;400,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02040130;Rekultivierung, Flächen wieder herstellen;2400,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02050010;Deich-km-Steine, ausbauen, laden und transportieren;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02050020;vorh. Ausstattung abbauen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02050030;Sicherung von Medienmarkierungen;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02060010;Wasserh.anl.nach Wahl des AN herst . Schacht geschl. Haltung Bis 15 m3/h Schlauchleitung Messeinr. gesond. Hohlräume verf.;3,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02060020;Wasserhaltungsanlage vorhalten;21,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02060030;Wasserhaltung betreiben;7560,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02060040;Foerderdurchflussmessung;3,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02070010;Suchschachtungen Medien (inkl. Gasleitung), Tiefe bis 2m;80,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02070020;Herstellen von Baugruben an Gasleitung für Dichtigkeitsprüfung;69,3;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02070030;Schutzrohr verlängern ls;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02080010;"Beprobung Aushub gem. ErsatzbaustoffV; Tabelle 3 (Boden)";5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02080020;Untersuchung Oberboden gemäß Bundesbodenschutzverordnung;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02080030;Abfall nicht gefährlich AVV170504 BM0/BG-0 EBV weiterverwenden;86,4;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02080040;Abfall nicht gefährlich AVV170504 BM-F1/BG-F1 EBV weiterverwenden;21,6;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+02080050;Abfall nicht gefährlich AVV170504 BM-F3/BG-F3 EBV weiterverwenden;21,6;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+03010010;Flächen mähen, Vergrämungsmaßnahme;3909,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+03010020;Abtragsflächen mähen zum Baubeginn;2534,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+03010030;vorh. Oberboden auf Böschung aufreißen und zerkleinern;2534,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+03010040;Abtrag Oberboden 20cm (auf Zwischenlager Breese);2354,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+03010050;Abtrag Oberboden 10cm (auf Zwischenlager Lüttkenwisch);2354,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+03010060;Abtrag Oberboden (auf Zwischenlager) Handarbeit;180,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+03010070;Böschungssicherung (Grassoden) liefern und einbauen;75,0;lfdm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+03010080;Material des AG transportieren, bis 30km (Boden);247,9;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+03010090;Zusatzstoffe für Oberbodenverb. liefern, auftragen (auf Lagerplatz);2534,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+03010100;Oberböden und Zusätze auf Lagerplatz fräsen;760,2;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+03010110;gemischten Oberboden auf Deichböschungen andecken, D=30cm;2534,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+03010120;Zusatzstoffe für Oberbodenverb. liefern, auftragen (auf Böschung);2534,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+03010130;angemischten Oberboden und weitere Zusätze auf Böschung durchmischen;2534,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+03010140;Feinplanie auf Sanierungsflächen (Deichböschung);2534,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+04010010;Splitt 5/32 für Böschungsfilter liefern, kalkfrei;204,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+04020010;Rückbau vorhandenes Schotterband von Böschung (entsorgen);60,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+04020020;Rückbau vorhandener Vliesstoff von Böschung;250,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+04020030;Zulage Handausbau Ausbau Geokunststoff;250,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+04020040;Böschungsflächen/Unterlage profilieren als Vliesauflager;250,0;lfdm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+04020050;Schotterband 5/32 einbauen;204,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+04020060;Geokunststoff (GRK 4) als Schutzvlies über Filterband verlegen;850,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+05010010;Greifvogelstange herst. und setzen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+05010020;Deich-km-Steine aufstellen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+05010030;Rohrpfosten und Fundament für Schild liefern und einbauen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+05010040;Hinweisschild des AG montieren;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+05010050;Deichsperren/ Absperrpfosten (Poller), fest;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+05010060;Beton  C25/30 für Fundamente d. Deichsperren / Poller;1,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+06.0010;Baggerschurf zur Schichtdickenerkundung durchführen;2,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+06.0020;Sondereinsatz eines Baggers zur Haldenprofilierung;2,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+06.0030;Sondereinsatz eines Radladers für Bodenquertransp.;2,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+06.0040;Sondereinsatz einer Planierraupe zur Haldenprofilierung;2,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+06.0050;Sondereinsatz eines LKW-Kippers über 20 t;2,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+06.0060;Fläche leerpumpen;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+06.0070;Pumpe betreiben;120,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+06.0080;Bauzeitl. Hochwasserschutz;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+06.0090;Erosionsschutzmatte liefern;2200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
+06.0100;Erosionsschutzmatte auf Böschungen verlegen;2200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.D83
 0010;Baustelle für die vertragsgemäße Durchführung der;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.X83
 0020;Baustelleneinrichtung vorhalten, unterhalten und be-;2,0;Mt;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.X83
 0030;Baustelle räumen. Soweit nicht für bestimmte Leistungen;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis.X83

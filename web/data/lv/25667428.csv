@@ -1,4 +1,61 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;Altbesch/minderf. Schichten entfernen D 9000-10000mym fräsen Wand Normalbeton A2;60,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.2;"Wie vor, jedoch  als Referenzfläche;";2,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.3;"Wie vor, jedoch  Bauteil Wand-/Pfeilervorlage;";7,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.4;Wie vor, jedoch  Bauteil Öffnungsleibung;3,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.5;Altbesch/minderf. Schichten entfernen D 4000-5000mym fräsen Wand Normalbeton A2;25,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.6;"Wie vor, jedoch  Bauteil Wand-/Pfeilervorlage;";7,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.7;Wie vor, jedoch Öffnungsleibung;1,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.8;Geschädigten Beton abtragen Wand Stemmen T 30-40mm laden LKW AN;15,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.9;Fremdkörper entfernen Wand ausstemmen T 40-60mm;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.10;Untergrund reinigen Beton haftungsmindernde Schicht D 0,5-1cm Trockeneisstrahlen laden LKW AN (BA) Grundlagen Carbonbetonverstärkung Hinweis zum Prüfen der Oberflächenzugfestigkeit Bestandsbeton;45,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.11;Prüfen Oberflächenzugfestigkeit Wand Prüfflächen begrenzen;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.12;Haftbrücke auftragen Wand Zementschlämme kunststoffmodif.;35,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.13;"Wie vor, jedoch  Bauteil Wand-/Pfeilervorlage;";7,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.14;Wie vor, jedoch  Bauteil Öffnungsleibung Hinweis Sichtprüfung Frischbeton;3,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.15;Reprofilieren Beton C16/20 Wand D bis 10cm;35,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.16;"Wie vor, jedoch  als Muster/Musterfläche;";2,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.17;"Wie vor, jedoch  Bauteil Wand-/Pfeilervorlage;";7,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.18;Wie vor, jedoch  Bauteil Öffnungsleibung;3,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.19;"Wie vor, jedoch  Hohlkehle herstellen;  Radius 5 cm; anpassen an Wand;";25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.20;Herstellung und Prüfung von Betonprismen Hinweis zur Ausführung der Carbonbetonverstärkung;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.21;Ausgleichsspachtelung Wand Spachtel kunststoffmodif.;35,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.22;"Wie vor, jedoch  Bauteil Wand-/Pfeilervorlage;";7,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.23;Wie vor, jedoch Bauteil Öffnungsleibung;3,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.24;Bewehrungsgitter aus Carbonfaserverbundwerkstoff mit abZ/aBG;35,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.25;Bewehrungsgitter aus Carbonfaserverbundwerkstoff als Formgitter U;7,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.26;Bewehrungsgitter aus Carbonfaserverbundwerkstoff Leibung;3,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.27;Ausgleichsspachtelung Wand Spachtel kunststoffmodif.;35,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.28;"Wie vor, jedoch  Bauteil Wand-/Pfeilervorlage;";7,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.29;Wie vor, jedoch  Bauteil Öffnungsleibung;3,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.30;Fugenkante reprofilieren Wand senkr. Beton Handauftrag;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.31;Herstellung und Prüfung begleitender Prüfplatten gemäß abZ/aBG Z-31.10-182;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.32;Schutz Wand Normalbeton wasserhaltende Abdeck. feucht halten Dauer 7d;45,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.33;Abfall nicht gefährlich AVV170101 nicht schadstoffbelastet LKW AN transp. entsorgen Vergüt.Entsorg. AN;2000,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.34;Abfall nicht gefährlich AVV170904 nicht schadstoffbelastet LKW AN transp. entsorgen Vergüt.Entsorg. AN;2000,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+01.35;Abfall gefährlich AVV170106* schadstoffbelastet LKW AN transp. entsorgen Vergüt.Entsorg. AN;500,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+02.1;Besch OS2 Wand 2xOberfl-sch D 80mym;35,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+02.2;"Wie vor, jedoch  als Muster/Musterfläche;";2,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+02.3;"Wie vor, jedoch  Bauteil Wand-/Pfeilervorlage;";7,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+02.4;Wie vor, jedoch  Bauteil Öffnungsleibung Hinweis zur Oberflächenreinigung;3,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+02.5;Verunreinigungen entfernen Hochdruckwasserstrahlen Kammerwand Normalbeton A2;35,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+02.6;Besch OS11a Boden Grund Kratzsp Oberfl-sch Reaktionsharz D 1500mym Deckschicht Reaktionsharz D 3000mym Deckversiegl.;35,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+02.7;"Wie vor, jedoch  als Muster/Musterfläche;";2,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+03.1;Aufnehmen Einbauen Gitterroste Stahlübergang lagern 1x1m;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+03.2;Hakenschrauben komplett, zur Befestigung der vorbeschrieb.;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+03.3;Lastverteilender Belag Holz aufbauen 2kN/m2 L 3m B 3,5-4m;45,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+03.4;"Wie vor, jedoch  abbauen;";45,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+03.5;"Wie vor, jedoch  vorhalten;";360,0;m2Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+03.6;Anbringen Gerüstabdeck. Planen Gerüstverankerung;45,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+03.7;"Wie vor, jedoch  Abnehmen der;";45,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+03.8;"Wie vor, jedoch  Gebrauchsüberlassung für;";360,0;m2Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+03.9;aufbauen Seitenschutz Deckenrand H bis 4m;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+03.10;"Wie vor, jedoch  Entfernen;";20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+03.11;"Wie vor, jedoch  Gebrauchsüberlassung für;";160,0;mWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+03.12;Schutzabdeck. Fensterbank B bis 10cm Folie D 0,3mm herstellen beseitigen;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+03.13;Schutzabdeck. Wandfläche B 20-30cm Folie D 0,3mm herstellen beseitigen;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+03.14;Einrichten, Räumen der Baustelle, zusätzliche Anfahrt;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
+03.15;Profilhalbzylinder Bauschließung Toilette 3 Schlüssel;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519.D83
 1;Altbeschichtungen und minderfeste Schichten entfernen, starr, mineralisch, Schichtdicke über 9000 bis 10000 mym, durch Fräsen und Nachbearbeitung, Bauteil Wand, Fläche senkrecht, Normalbeton, Altbetonklasse A2, ermittelte Druckfestigkeit über 10 bis 20 MPa, Oberfläche glatt, anfallende Stoffe nicht ;60,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519_V33.X83
 2;als Referenzfläche;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519_V33.X83
 3;Bauteil Wand-/Pfeilervorlage;7,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/(1) LV Betoninstandsetzung 20260519_V33.X83

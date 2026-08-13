@@ -1,4 +1,76 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01010010;"Drehrahmengestellschrank 40HE 19""";1,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010020;Gestellschrankmontage;1,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010030;"Rackschublade 19""";1,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010040;Baugruppenträger;1,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010050;Frontplattensatz;1,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010060;Sprachalarmierungszentrale;1,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010070;Softwarelizenz;1,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010080;Havarieumschalteinheit;1,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010090;Digitale Interface-Einheit;1,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010100;Funkempfänger DCF77;1,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010110;Anschlussmodul für mindestens 4 Sprechstellen;1,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010120;Digitale Sprechstelle mit mind. 18 Tasten;2,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010130;Tastenerweiterung 4 Tasten;2,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010140;Sprechstellenanschlussdose;2,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010150;Leistungsverstärker;2,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010160;Leistungsverstärker als Havarieverstärker;1,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010170;Einheit zur Linien- und Systemüberwachung;1,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010180;Digitales Telefonanschlussmodul;1,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010190;Multi-I/O Slave Modul;1,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010200;Notstromversorgungseinheit;1,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010210;Notstromakku 12V DC / 100Ah;2,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01010220;Betriebsbuch;1,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01020010;Wandaufbaulautsprecher;10,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01020020;AB-Wandlaufbaulautsprecher;10,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01020030;Deckeneinbaulautsprecher;5,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01020040;AB-Deckeneinbaulautsprecher;5,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01020050;Wand/Decken-Aufbau-Lautsprecher;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01020060;Druckkammerlautsprecher;4,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01020070;Bezeichnungsschilder 2,3 m;20,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01030010;Kabelkanal Kunststoff;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01030020;Kabelkanal Stahlblech;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01030030;Kunststoffstangenrohr M25;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01030040;Sammelhalter Metall;25,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01030050;Steigeleiter E30;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01030060;Bügelschelle E30;40,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01030070;Brandschutzkanal;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01040010;NYM-I 3 x 1,5 mm²;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01040020;NYM-J 3 x 2,5 mm²;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01040030;NYM-J 1 x 16 mm²;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01040040;J-Y(St)Y 2x2x0,8 mm;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01040050;JE-H(St)H 2x2x0,8 mm E30;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01040060;JE-H(St)H 4x2x0,8 mm E30;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01040070;JE-H(St)H 10x2x0,8 mm E30;70,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01050010;Kombination Ausschalter/SCHUKO-Steckdose a.P.;1,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01050020;Feuchtraumwannenleuchte LED, ca. 29W;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01050030;Abzweigdose a.P.;1,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01050040;FI/LS 16A;2,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01060010;Bohrungen bis 20 mm Mauerwerk / Beton Länge bis 500 mm;10,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01060020;Bohrungen bis 20 mm Mauerwerk / Beton Länge bis 800 mm;10,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01060030;Bohrungen bis 50 mm Mauerwerk / Beton Länge bis 400 mm;10,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01060040;Bohrungen bis 50 mm Mauerwerk / Beton Länge bis 800 mm;10,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01070010;Bohrungen nach BT30;50,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01070020;Öffnen / Schließen von Abhangdecken;80,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01070030;Rauchdichtes Verschließen von Wanddurchbrüchen 20 mm;15,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01070040;Rauchdichtes Verschließen von Wanddurchbrüchen 50 mm;10,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01070050;Feuerbeständige (F90) Abschottung von Durchbrüchen 20 mm;5,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01070060;Feuerbeständige (F90) Abschottung von Durchbrüchen 50 mm;5,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01080010;Inbetriebnahme;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01080020;Aufschaltung auf HAZ und Übertragungsgerät;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01080030;Anschaltung Hauptuhr;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01080040;Erstellung der Revisionsunterlagen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01080050;Sachverständigenabnahme;6,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01080060;Einweisung;3,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01090010;Stundenlohnarbeiten Systemtechniker/-spezialist;10,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01090020;Stundenlohnarbeiten bauleitender Monteur;10,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01090030;Stundenlohnarbeiten Monteur;20,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01090040;Stundenlohnarbeiten Helfer;20,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+01090050;Anfahrtskosten;5,0;Stüc;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+02010010;Instandhaltung und Wartung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+02020010;Instandhaltung und Wartung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+02030010;Instandhaltung und Wartung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
+02040010;Instandhaltung und Wartung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.D83
 0010;"Drehrahmengestellschrank 40HE 19"" mit Schutzgrad IP20, Lastrolle für 19"" Schwenkrahmen, Glasfronttür aus Sicherheitsglas, zur Aufnahme der nachfolgenden Komponenten, fertig vormontiert und geprüft, inklusive Netzverteilung, Potentialausgleichschiene und allem benötigten Kleinmaterial.";1,0;Stück;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.X83
 0020;Gestellschrankmontage;1,0;Stück;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.X83
 0030;"Rackschublade 3 HE 19"", umseitig geschlossen, zur Ablage des Betriebsbuches und der Revisionsunterlagen im Zentralenschrank.";1,0;Stück;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-399_Hauptstr_ENS_LV.X83

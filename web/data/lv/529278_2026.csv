@@ -19,3 +19,23 @@
 0003;Prüftechniker zur Parametrierung und Programmierung von Schutzgeräten sowie zur Unterstützung der Inbetriebnahme (IBN) von PV-Anlagen.;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr_V33.X83
 0004;Pauschale für die Erstellung der Montageplanung der Trafoanlage einschl. der Fundamentplanung und der Erdungsplanung für den Potentialausgleich der Kompaktstation.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr_V33.X83
 0005;Aufstellen von techn. Unterlagen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr_V33.X83
+01.0001;Trafo-Kompaktstation.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr.D83
+01.0002;Aufstellen der vorgenannten Trafoanlage am Aufstellungsort.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr.D83
+01.0003;Anschluss der mittelspannungsseitigen Stromleitungszuführung.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr.D83
+01.0004;Genehmigungszeichnungen EVU.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr.D83
+01.0005;Inbetriebnahme mit EVU.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr.D83
+02.0001;V4A Bandeisen als Ringerder.;120,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr.D83
+02.0002;Anschluss Potentialerder durch Klemmen.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr.D83
+02.0003;Messung Erdungswiderstand.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr.D83
+02.0004;Kreuzstückedelstahlklemme.;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr.D83
+02.0005;SV-Klemmen für Flachleiter.;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr.D83
+02.0006;Kreuzstückklemme.;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr.D83
+02.0007;Abstandshalter zum vorlegen von Erdungsleitungen.;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr.D83
+02.0008;Kreuzstücke.;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr.D83
+02.0009;Tiefenerder.;27,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr.D83
+02.0010;Anschlussklemme für Tiefenerder.;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr.D83
+03.0001;Mittelspannungs-Monteurstunden.;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr.D83
+03.0002;Helferstunden.;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr.D83
+03.0003;Prüftechnikerstunden.;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr.D83
+03.0004;Erstellung der Montageplanung.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr.D83
+03.0005;Dokumentation.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB-Trafostation-Sporthalle Altenahr.D83

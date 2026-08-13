@@ -60,3 +60,64 @@
 8;Bestands-Kunststofffenster gang- und schließbar machen, wie;1,0;St;gaeb;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.X83
 9;Bestands-Kunststofffenster gang- und schließbar machen, wie;2,0;St;gaeb;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.X83
 1;Feinreinigung der Boden-, Decken- und Wandflächen, Fliesen,;185,0;m³;gaeb;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.X83
+0101.1;Baustelleneinrichtung;1,0;psch;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0101.2;Baustellen WC;1,0;psch;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0101.3;Baustellen-WC , vorhalten, Wochen;1,0;Wo;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0101.4;Fenster und Fensterbänke und HK schützen;1,0;psch;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0101.5;Fußboden mit Folie/Platte abdecken;25,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0101.6;Stundensatz Facharbeiter;1,0;h;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0101.7;Stundensatz Helfer;1,0;h;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0102.1;Türüberdeckungen erhöhen, d bis 20 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0102.2;Innentüren ausbauen u. entsorgen;6,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0102.3;Trennwände (leicht) abbrechen;4,5;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0102.4;Wohnung entrümpeln;0,5;m³;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0102.5;Wandfliesen abschlagen;2,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0102.6;Bodenbeläge,verklebt;9,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0102.7;Bodentürschwellen zurückbauen;6,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0102.8;Fußbodenbretter entfernen;62,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0102.9;Unterdecke entf.;1,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0103.1;Deckenbalkenlagen Höhenausgleich;73,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0103.2;Unterboden Spanplatte,NF, P4, auf Balken;68,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0104.1;Öffnungen bei- und zumauern;0,6;m³;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0104.2;KS-Sturz, d=11,5 cm, L=1,10 m;1,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0104.3;Gipskartonverkofferungen, GKBI;1,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0104.4;Eckausbildung;1,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0105.1;Kalkputz abschlagen;2,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0105.2;Putzrisse;30,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0105.3;Putz auf Altbauwände;2,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0105.4;Eckschutzleisten, verzinkt, Innenputz;2,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0105.5;Schlitze nachträglich schließen;3,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0106.1;Mineralischen Anstrich entfernen und entsorgen;65,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0106.2;Vorhandene Wandbekleidung entfernen und entsorgen;220,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0106.3;Wand- und Deckenflächen reinigen und grundieren;285,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0106.4;Fugenverschluß, innen, Acry;200,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0106.5;Spachtelung u. schleifen Wand- u. Deckenflächen;285,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0106.6;Streichmakulaturbeschichtung;265,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0106.7;Malervlies 40g;265,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0106.8;Beschichtung,Malervlies, Wände;200,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0106.9;Beschichtung,Malervlies, Decken;65,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0106.10;Anstrich, innen, Wände;15,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0106.11;Anstrich, innen, Decken;5,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0106.12;Lackieren Heizungsrohre weiß;160,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0107.1;Wand- und Bodenflächen reinigen und grundieren;11,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0107.2;Fliesen Boden- und Wandfläche liefern und verlegen;11,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0107.3;Liefern und verlegen von Sockelfliesen ca. 6 cm als Zuschnitt;13,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0107.4;Silikon;32,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0107.5;Eckschutzschienen PVC;2,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0107.6;Revisionsklappe befliesen, 40/40 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0107.7;Revisionsklappe befliesen, 20/25 cm;3,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0108.1;Unterboden reinigen;53,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0108.2;Vollflächige Spachtelung (Dielung/ Holz);2,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0108.3;Bodenbelag PVC, 2,5 mm;53,0;m²;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0108.4;Sockelleiste, Holz massiv, lasiert, 18/76 mm;62,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0108.5;Messingschienen, als Zulage;6,0;m;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0109.1;Erneuerung der Türschwellen aus Holz;1,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0109.2;Wohnungseingangstür, kompl., Lack-besch, 1010/2010;1,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0109.3;Weitwinkelspion für Tür;1,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0109.4;Innentür,kompl.,Lack-besch. 635/2010;1,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0109.5;Innentür,kompl.,Lack-besch. 885/2010;2,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0109.6;Innentür,kompl.,Lack-besch. 885/2010;2,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0109.7;Kunststofffenster Wartung;3,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0109.8;Kunststofffenster Wartung;1,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0109.9;Kunststofffenster Wartung;2,0;St;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83
+0110.1;Feinreinigung;185,0;m³;gaeb-flat;leistungsbeschreibungen/Z-FL-1026_LV Sanierungsarbeiten Rheinstraße 20.1.D83

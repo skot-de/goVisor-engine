@@ -177,3 +177,181 @@
 4;Monteurstunde - Nachweisfuehrung -;10,0;StD;gaeb;vom_unternehmen_auszufuellende_dokumente/13729-L6.X83
 5;Obermonteurstunde - Nachweisfuehrung -;10,0;StD;gaeb;vom_unternehmen_auszufuellende_dokumente/13729-L6.X83
 6;Kostenansatz fuer :;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/13729-L6.X83
+1.1.1;Demontage der Leuchten;70,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+1.1.2;Demontage der vorhandenen SNV- Verteilung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+1.1.3;Demontage aller Installationsgeraete;100,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+1.1.4;Demontage von Installationsleitungen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+1.1.5;Ausklemmen von Stromkreisen;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+1.1.6;Monteurstunde - partielle Demontage;10,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+2.1.1;Baustromverteiler für die gesamte Bauzeit;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+2.1.2;Baustromverteiler für weiteren Monat;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+2.1.3;Herstellung einer Baubeleuchtung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.1.1;Installationsverteiler IP 43 nach DIN;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.1.2;Schalter-Sicherungseinheit DO-System 3x63A;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.1.3;FI-Schalter 4P 6kA 40A 30mA Typ A QC;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.1.4;Sicherungslasttrennschalter;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.1.5;Einbau-Schaltgerät (REG) aufschnappbar;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.1.6;Installations-Einbaugeraet nach DIN VDE;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.1.7;Installations-Einbaugeraet nach DIN VDE;39,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.1.8;Installations-Einbaugerät nach DIN VDE;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.1.9;Überspannungsableiter T2 4P 40kA TT/TNS;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.1.10;Wechselstromschütz nach VDE;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.1.11;Reiheneinbaugerät (REG) für Installationsverteiler, aufschnappbar;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.1.12;Reiheneinbaugerät (REG) für Installationsverteiler;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.1.13;Dämmerungssch. mit Aufbaufühler;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.1.14;Digital-Schaltuhr 4-Kanäle;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.2.1;Installationsverteiler IP 43 nach DIN;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.2.2;Schalter-Sicherungseinheit DO-System 3x63A;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.2.3;FI-Schalter 4P 6kA 40A 30mA Typ A QC;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.2.4;Einbau-Schaltgerät (REG) aufschnappbar;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.2.5;Installations-Einbaugeraet nach DIN VDE (10A/B);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.2.6;Installations-Einbaugeraet nach DIN VDE (16A/B);20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.2.7;Installations-Einbaugerät nach DIN VDE (3 x 16A/B);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.2.8;Überspannungsableiter T2 4P 40kA TT/TNS;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.2.9;Gruppenschalter 16A 250V AC;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.3.1;Installationsverteiler IP 43 nach DIN;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.3.2;Schalter-Sicherungseinheit DO-System 3x63A;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.3.3;FI-Schalter 4P 6kA 40A 30mA Typ A QC;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.3.4;Einbau-Schaltgerät (REG) aufschnappbar;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.3.5;Installations-Einbaugeraet nach DIN VDE (10A/B);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.3.6;nstallations-Einbaugeraet nach DIN VDE (16A/B);21,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.3.7;Installations-Einbaugerät nach DIN VDE (3 x 16A/B);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.3.8;Überspannungsableiter T2 4P 40kA TT/TNS;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+3.3.9;Gruppenschalter 16A 250V AC;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+4.1.1;PVC-Mantelleitung (5x10);40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+4.1.2;PVC-Mantelleitung (5x2,5);50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+4.1.3;PVC-Mantelleitung (3x2,5);700,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+4.1.4;PVC-Mantelleitung (3x1,5);1680,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+4.1.5;PVC-Mantelleitung (5x1,5);700,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+4.1.6;Kabel (5x4);100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+4.1.7;FM-Installationsleitung (4x2x0,8);300,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+4.1.8;PVC-Mantelleitung (1x10);30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+5.1.1;UP.-Schalt- /Steckgeraet (UP-Universalschalter);4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+5.1.2;UP.-Schalt- /Steckgeraet (UP-Doppelwechselschalter);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+5.1.3;UP.-Schalt- /Steckgeraet (UP-Serienschalter);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+5.1.4;AP.-Schalt- /Steckgeraet (AP-Türtaster);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+5.1.5;Universal-LED-Dimmeinsatz-;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+5.1.6;Universal-LED-Nebenstellen-Dimmeinsatz-;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+5.1.7;Aufsatz Automatik-Schalter,(Hauptgerät);7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+5.1.8;Aufsatz Automatik-Schalter, (Nebenstelle);3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+5.1.9;UP.-Schalt-/Steckgeraet (UP-Schukosteckdose);50,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+5.1.10;AP.-Schalt-/Steckgeraet (AP-Schukosteckd.);6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+5.1.11;UP.-Schalt-/Steckgeraet (UP-Schuko m. Klappdeckel);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+5.1.12;Geraeteanschluss-Dose U.P.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+5.1.13;FR-AP.-Kunststoff-Abzweigkasten, grau;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+5.1.14;Antennensteckdose DIN 4533O;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+5.1.15;Klingeltaster mit Abdeckrahmen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+6.1.1;LED Wand- und Anbauleuchte;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+6.1.2;Wannen-/Anbauleuchte;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+6.1.3;Anbauleuchte - PMMA Scheibe;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+6.1.4;LED Wand- und Anbauleuchte;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+6.1.5;LED Wand- und Anbauleuchte;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+6.1.6;Anbauleuchte - PMMA Scheibe;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+6.1.7;Anbauleuchte - PMMA Scheibe;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+6.1.8;Wand- und Anbauleuchte LED;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+6.1.9;LED Wand- und Anbauleuchte;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+6.1.10;LED Scheinwerfer für Akzent- u. Flächenbel.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+6.2.1;Automatisches Prüf- und Steuerungssystem;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+6.2.2;Software zur Konfiguration;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+6.2.3;Einzelbatterie-Sicherheitsleuchte (Decke);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+6.2.4;Einzelbatterie-Sicherheitsleuchte (Decke);13,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+6.2.5;Einzelbatterie-Sicherheitsleuchte (Wand);2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+6.2.6;Einzelbatterie-Rettungszeichenleuchte (Wand);17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+6.2.7;Einzelbatterie-Rettungszeichenleuchte (Decke);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+6.2.8;Programmierung und Einweisung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+6.2.9;Programmierung der Leuchten;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+6.3.1;dekorative zylindrische Pollerleuchte;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+7.1.1;Datenkabel  CAT7 Duplex (Zwillingskabel);800,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+7.1.2;Installationskabel, S/FTP, 4P, Kat. 7;600,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+7.1.3;Serverschrank als Wandschrank;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+7.1.4;Fuehrungsring (Rangierbuegel);4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+7.1.5;19- Zoll- Patchpanel, Kat. 6A;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+7.1.6;beidseitiges Auflegen von Kabeln auf LSA;44,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+7.1.7;Messungen durchführen, einschl. Erstellen;44,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+7.1.8;1xRJ45 Dose Cat.6/Classe ERAL9010;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+7.1.9;2xRJ45 Dose Cat.6/Classe ERAL9010;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+7.1.10;AP.-TAE-Anschlußdose 1;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+8.1.1;Kabelrinne aus Stahlblech 200/60;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+8.1.2;Brüstungskanal aus PVC;90,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+8.1.3;Leitungsführungskanal aus PVC;64,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+8.1.4;Leitungsfuehrungskanal aus Hart-PVC;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+8.1.5;Sammelhalter zur Leitungsverlegung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+8.1.6;Leitungsführungskanal aus Hart-PVC;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+8.1.7;Leitungsführungskanal aus Hart-PVC;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+8.1.8;Leitungsführungskanal aus Hart-PVC;180,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+8.1.9;Form-und Zubehörteile für Brüstungskanal;82,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+8.1.10;Form-und Zubehörteile für Brüstungskanal;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+8.1.11;Brandschutzkanal für Kabeltrasse;8,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+9.1.1;Installations-Einbaugerät;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+9.1.2;PVC-Mantelleitung (5x1,5);200,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+9.1.3;PVC-Mantelleitung (3x1,5);150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+9.1.4;FM-Installationsleitung (2x2x0,6);160,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+9.1.5;FM-Installationsleitung (4x2x0,8);50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+9.1.6;FM-Installationsleitung (10x2x0,6);50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+9.1.7;Gummischlauchleitung;14,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+9.1.8;Schalt-/ Steckgerät (UP-Jalousiewippschalter/-taster);6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+9.1.9;Aufputz-Abzeigdose;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+9.1.10;Bohrung durch Außenwände;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+9.1.11;Kernbohrungen in Wänden;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+9.1.12;Kabel-Brandabschottung in Massivwänden;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+9.1.13;Anschluß beigestellter Stecker;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+9.1.14;Schutzrohre für Wind & Regenmelder;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+9.1.15;beigestellte Steurungskästen montieren;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+9.1.16;Gehäuse für Jalousiesteurgerät;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+9.1.17;gelieferte Zentralsteuerung montieren;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+9.1.18;Wind & Regenmelder;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+9.1.19;Programmierung der Steuerung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+9.1.20;Probelauf der Anlage;2,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+10.1.1;Video Außenstation;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+10.1.2;Netzgeräte für Audio- und Videoanlagen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+10.1.3;Videoverteiler, vierfach FVY1400-0400;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+10.1.4;Kombigerät mit Binäreingang/-ausgang;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+10.1.5;Türöffner-Relais FAA1200-0400;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+10.1.6;Video Freisprecher 3,5 AP WS;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+10.1.7;Türöffner in Ruhestrom-Ausführung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+11.1.1;Potentialausgleichsschiene;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+11.1.2;Banderdungsschelle NIRO - 6''                                         61;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+11.1.3;Banderdungsschelle NIRO - 4''                                         61;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+11.1.4;Erdungsanschluss an Metallteilen, rostfrei;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.1;Demontage der Fanganlage auf Flachdach;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.2;Fanganlage für Flachdächer;80,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.3;Fangpilz zum Errichten von Fanganlagen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.4;Anschluß- und  Verbindungsbauteil;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.5;Ableitanlage  auf  Leitungshalter;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.6;Ableitungen an Gebäudeaußenmauern;1,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.7;Anschlußbauteil für Metallverkleidungen;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.8;Universalklemme Fang- u. Ableitg.;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.9;Universalklemme Fang- u. Ableitg.;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.10;Dachrinnenklemme;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.11;Regenrohrschelle verstellbar;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.12;Fangstange 16mm rund, mit Gewinde M16;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.13;Fangstange 16mm rund, mit Gewinde M16;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.14;Nummernschild zur Kennzeichnung;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.15;Fangspitze für Fangleitungsenden;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.16;Erdeinführung;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.17;Trennstellenkästen Ausführung Guß;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.18;Unterputz-Trennstelle;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.19;Überbrückungsbänder;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.20;Messung und Kontrolle;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+12.1.21;TÜV-Abnahme der Blitzschutzanlage;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+13.1.1;Wechselrichter demontieren;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+13.1.2;Leitungsführungskanal  aus PVC weiß;8,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+13.1.3;Kernbohrung Decke und Wände 100/300;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+14.1.1;Mantelleitung o. Kabel absetzen (5x10-16);2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+14.1.2;Mantelleitung o. Kabel absetzen (5x2,5);120,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+14.1.3;Anschluss Waschtischarmatur;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+14.1.4;Anschluss Feststellanlage;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+14.1.5;Anschluss der WC-Becken;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+14.1.6;Steuerkasten für Lastenaufzug im OG;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+15.1.1;Verteilungen schotten;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+15.1.2;Decken/Wand -Durchbruch in Beton Gr.;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+15.1.3;Kernbohrung Decke und Wände 100/300;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+15.1.4;Durchbruch /Kernbohrung (Beton) 50/300;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+15.1.5;Wand-Durchbruch (Leichtbauw.- Betonw.);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+15.1.6;Graben für Außenbeleuchtung ca. 70 cm tief;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+16.1.1;Besichtigung / Erprobung der Anlage;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+16.1.2;Messung Isolationswiderstandes;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+16.1.3;Messung Schleifenimpedanz;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+16.1.4;Monteurstunde - Nachweisfuehrung -;10,0;StD;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+16.1.5;Obermonteurstunde - Nachweisfuehrung -;10,0;StD;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83
+16.1.6;Kostenansatz fuer: Einweisung, Nachweise, Revipläne;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/13729-L6.D83

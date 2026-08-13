@@ -60,3 +60,64 @@
 1;Arbeiten, welche nicht in den Positionen;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten_V33.X83
 2;Arbeiten, welche nicht in den Positionen;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten_V33.X83
 3;Arbeiten, welche nicht in den Positionen;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten_V33.X83
+01.1;Risse im Estrich schließen;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+01.2;Einmessen der Belagsflächen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+01.3;Haftgrundierung, Bodenfläche;41,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+01.4;Wandflächen vorbereiten;50,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+01.5;Wandflächen vorbereiten;5,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+01.6;Beton- und Putzüberstände entfernen;5,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+01.7;Estrichoberfläche abschleifen;41,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+01.8;Estrichoberfläche abfräsen;5,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+01.9;Untergründe vollflächig spachteln;25,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+01.10;Armierte Untergründe grundieren;50,0;;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+01.11;Risse im Estrich schließen;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+01.12;Fußboden-Höhenausgleich, Fliesen;10,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+01.13;Prüfung Feuchtigkeit, CM-Methode,Estrich;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+01.14;Überstand von Randstreifen entfernen;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+02.1;Abdichtung;25,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+02.2;Dichtband;21,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+02.3;Dichtmanschetten;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+02.4;Wandfliesen, EG, Dünnbett,;50,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+02.5;Anarbeiten Fenstereinrahmung;8,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+02.6;Zulage WC Betätigungsplatte;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+02.7;Zulage Urinal Betätigungsplatte;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+02.8;Fliesen, Löcher herstellen;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+02.9;Verfugung;50,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+02.10;Eckschienen/Leisten;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+02.11;Dauerplastische Fugen;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+03.1;Abdichtung;45,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+03.2;Dichtband;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+03.3;Bodenfliesen EG;25,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+03.4;Sockel, h=6cm, auf Gipskarton;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+03.5;Bodenfliesen OG;19,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+03.6;Sockel, h=6cm, auf Stahlbetonwand;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+03.7;Verfugung;45,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+03.8;Verfugung Sockel;70,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+03.9;Trennschiene, Edelstahl;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0401.1;Grundierung Wand;135,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0401.2;Rohrdurchführung Wand;15,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0401.3;Raumecken abdichten, senkrecht;45,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0401.4;Flächenandichtung Wand;135,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0401.5;Wandfliese Küche;135,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0401.6;Verfugung Wandfliese;135,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0401.7;Zulage Ausklinkungen;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0401.8;Anarbeiten Rolltorprofil;6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0401.9;Eckschutzschienen Edelstahl;18,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0401.10;Dauerplastische Fugen;75,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0402.1;Grundierung Boden;65,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0402.2;Rohrdurchführung Boden/Bodneinlauf;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0402.3;Flächenandichtung Boden;65,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0402.4;Raumecken abdichten waagerecht;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0402.5;Bodenfliesen 20/20, R 12V4;65,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0402.6;Hohlkehlsockel 10/20;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0402.7;Hohlkehlsockel Innenecken;8,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0402.8;Hohlkehlsockel Aussenecken;6,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0402.9;Verfugung Bodenbelag;65,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0402.10;Verfugung Sockel;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0402.11;Zulage Ausklinkungen;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0402.12;Anarbeiten Bodeneinlauf;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0402.13;Edelstahlschiene V4a;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+0402.14;Edelstahlschiene V4a;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+05.1;Stundensatz Meister, Naturwerkstein;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+05.2;Stundensatz Facharbeiter;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83
+05.3;Stundensatz Helfer;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Fliesenarbeiten.D83

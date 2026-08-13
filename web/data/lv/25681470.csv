@@ -188,3 +188,192 @@
 70;Stundenlohnarbeiten wie vor,;5,0;h;gaeb;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.X81
 80;Stundenlohnarbeiten wie vor,;5,0;h;gaeb;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.X81
 90;Stundenlohnarbeiten wie vor,;10,0;h;gaeb;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.X81
+1.1.10;Baustelle einrichten.;1,0;psch;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.1.20;Baustelle räumen.;1,0;psch;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.1.30;Kennzeichen der Baustelle gem. StVO und RSA.;1,0;psch;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.1.40;Zusätzliche Verkehrszeichen aufstellen.;8,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.1.50;Aufrechterhaltung PKW-/LKW-Verkehr.;2,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.1.60;Bauzaun einschl. der erforderlichen Tore standsicher herstellen.;450,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.1.70;Unterbrechung Bauzeit durch den AG.;2,0;d;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.1.80;Unterbau Feldwege aufnehmen. Aushub gem. EBV > BM-F3.;130,0;m³;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.1.90;Mineralgemisch für Feldwege.;130,0;m³;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.1.100;Wassergebundene Decke für Feldwege.;1100,0;m²;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.1.110;Nacharbeiten wassergebundene Decke.;1100,0;m²;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.1.120;Zaun einschl. Verstrebungen aufnehmen und wiederherstellen.;30,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.1.130;Geotextil als Trenn- und Filterschicht verlegen.;600,0;m²;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.1.140;Schicht aus frostunempfindlichem Baustoffgemisch herstellen.;210,0;m³;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.1.150;Baustraße zurückbauen.;210,0;m³;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.1.160;Bauseits lagernden Erdaushub umsetzen;460,0;m³;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.2.10;Baufeld freimachen.;400,0;qm;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.2.20;Wurzelstöcke roden.;5,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.2.30;Stammschutz herstellen und beseitigen.;5,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.2.40;Bäume fällen mit Roden. Durchmesser über 0,10 m bis 0,30 m.;20,0;St;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.2.50;Bäume fällen mit Roden. Durchmesser über 0,30 m bis 0,50 m.;5,0;St;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.2.60;Bäume fällen mit Roden. Durchmesser über 0,50 m bis 0,75 m.;1,0;St;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.3.10;Oberboden abtragen und lagern.;100,0;m³;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.3.20;Oberboden, gelagert, andecken.;90,0;m³;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.3.30;Oberboden liefern und andecken.;10,0;m3;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.3.40;Rasenansaat mit RSM Regio herstellen. Menge 5 g/m2*UG 06.;400,0;m2;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.4.10;Mauer- und Fundamentabbruch.;10,0;cbm;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.4.20;Beton abbrechen und entsorgen.;5,0;cbm;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.4.30;Stahlbeton abbrechen und entsorgen.;5,0;cbm;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.4.40;Abbruch Steinzeugrohr, Rohrdurchmesser DN 500 mm.;40,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.4.50;Vorhandenen Schacht und Unterteil abbrechen.;10,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.4.60;Gefährlichen Abfall aus Baustelle entsorgen. Abfallsschlüsselnummer: 170503*.;1600,0;t;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.5.10;PE-Rohre DA 630*37,4mm, PE 100 RC, SDR 17, mit Schutzmantel als Passstück.;11,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.5.20;AM d = 630 mm, Abwassermuffe liefern und einbauen.;14,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.5.30;PE-Bogen, DA 630 mm, 11°- 45°, SDR 17.;3,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.5.40;Provisorische Verbindung DN500 des Hauptkanales nach Ausbau des alten Schachtes herstellen.;5,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.5.50;Manschettendichtung TYP 2 B Dimension 480-510mm liefern und einbauen.;4,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.5.60;Manschettendichtung TYP 2 B extra breit für Dimension 630 mm liefern und einbauen.;2,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.5.70;Hausanschluss DN 150 an neu verlegten Hauptkanal PE-HD DA 630 wiederherstellen;1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.5.80;Querschläge i.M. 80 cm breit herstellen.;4,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.5.90;Querkreuzungen mit bestehenden Versorgungsleitungen.;5,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.5.100;Längskreuzung mit bestehenden Versorgungsleitungen.;15,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.5.110;Rohrgraben für Sammler DA630, t über 2,25 m bis 3,50 m;130,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.5.120;Bodenaushub in gemischter Arbeitsweise, Zulage;15,0;m³;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.5.130;Sandummantelung Versorgungsleitungen;5,0;m³;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.5.140;Abwasserrohr mit Schutzmantel DA 630*37,40mm, SDR 17 aus PE100 RC liefern und verlegen;130,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.5.150;Offene Wasserhaltung in den Rohrgräben der offenen Kanalverlegung, Zulage;130,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.5.160;Kontrollprüfung Dynamische Fallplatte;3,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.5.170;Kontrollprüfung Lastplattendruckversuch;3,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.5.180;Rammsondierung im Rohrgraben;15,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.5.190;Stillgelegte Rohrleitung DN 500 STZ verfüllen;130,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.5.200;Stillgelegten Schacht DN 1000 verfüllen;1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.6.10;Maschinenbaugrube herstellen, Tiefe bis 3,00 m. Aushub = BM-F0*, L=10,50m.;1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.6.20;Maschinenbaugrube herstellen, Tiefe bis 3,00 m. Aushub > BM-F3, L=10,50m.;1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.6.30;Maschinenbaugrube herstellen, Tiefe bis 4,75 m. Aushub > BM-F3, L=10,50m.;1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.6.40;Widerlager aus Stahlbeton herstellen und Rückbau, 1900 kN.;3,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.6.50;Einziehbaugrube herstellen, Tiefe bis 4,00 m. Aushub = BM-F0*. L= 9,50m.;1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.6.60;Einziehbaugrube herstellen, Tiefe bis 4,00 m. Aushub > BM-F3. L= 9,50m.;1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.6.70;Baugrube für Schachtabriss herstellen, Tiefe bis 3,75 m. Aushub = BM-F0*.;1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.6.80;Baugrube für Schachtabriss herstellen, Tiefe bis 4,00 m. Aushub > BM-F3.;1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.6.90;Bergegruben herstellen.;2,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.6.100;Mineral-, Sand- oder Kiesgemisch für Leitungszone liefern und einbauen.;30,0;m³;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.6.110;Offene Wasserhaltung in den Baugruben.;8,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.6.120;Anlage für statisches Berstlining liefern, 190  to.;1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.6.130;Berstlining (statisch)  für Langrohre von Baugrube zu Baugrube durchführen, 1900 kN.;195,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.6.140;Berstanlage umsetzen, 1900 kN.;2,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.6.150;Zugkraftmessung.;2,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.6.160;Abwasserrohr mit Schutzmantel DA 630*37,40mm, SDR 17 aus PE100 RC liefern.;195,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.6.170;Aufrechterhaltung der Vorflut, SW-Kanal DN 500, Qmax bis 300 l/s.;400,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.6.180;HD-Kanalreinigung bis DN 600.;700,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.6.190;TV-Befahrung eines SW-Kanals bis DN600.;700,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.6.200;Dichtheitsprüfung gemäß DIN EN 1610 durchführen und dokumentieren.;350,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.7.10;"PE-Schacht ""S100215-N"" liefern und einbauen.";1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.7.20;"PE-Schacht ""SW Neu 01"" liefern und einbauen.";1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.7.30;"PE-Schacht ""S100214-N"" liefern und einbauen.";1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.7.40;"PE-Schacht ""S100212-N"" liefern und einbauen.";1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.7.50;"PE-Schacht ""S100196-N"" liefern und einbauen.";1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.7.60;"PE-Schacht ""S100195-N"" liefern und einbauen.";1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.7.70;Schachtabdeckung Klasse D 400.;6,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.7.80;Schachtumrandungsplatte rechteckig 1,20*1,20 m liefern.;6,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.7.90;Schacht auf vorh. Leitung.;6,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.8.10;Bagger 0,4 m3 bis 1,0 m3.;5,0;h;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.8.20;Fontlader 45 kW bis 75 kW.;10,0;h;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.8.30;Flächenrüttler bis 0,75 t.;5,0;h;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.8.40;Kompressor bis 5 m3/min.;5,0;h;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.8.50;LKW, ca. 3,5 t Nutzlast.;5,0;h;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.8.60;Werkpolier (Berufsgruppe I).;5,0;h;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.8.70;Bauvorarbeiter (Berufsgruppe II).;5,0;h;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.8.80;Spezialbaufacharbeiter (Berufsgruppe III 1).;5,0;h;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+1.8.90;Baufacharbeiter (IV).;10,0;h;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.1.10;Baustelle einrichten.;1,0;psch;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.1.20;Baustelle räumen.;1,0;psch;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.1.30;Kennzeichen der Baustelle gem. StVO und RSA.;1,0;psch;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.1.40;Zusätzliche Verkehrszeichen aufstellen.;12,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.1.50;Aufrechterhaltung PKW-/LKW-Verkehr.;5,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.1.60;Bauzaun einschl. der erforderlichen Tore standsicher herstellen.;500,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.1.70;Unterbrechung Bauzeit durch den AG.;1,0;d;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.1.80;Zaun einschl. Verstrebungen aufnehmen und wiederherstellen.;90,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.1.90;Bauseits lagernden Erdaushub umsetzen;10,0;m³;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.2.10;Baufeld freimachen.;90,0;qm;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.2.20;Wurzelstöcke roden.;2,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.2.30;Stammschutz herstellen und beseitigen.;20,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.2.40;Wurzelvorhang herstellen Graben 40x150 cm*Graben sichern;20,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.2.50;Bäume fällen mit Roden. Durchmesser über 0,10 m bis 0,30 m.;3,0;St;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.2.60;Bäume fällen mit Roden. Durchmesser über 0,30 m bis 0,50 m.;2,0;St;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.3.10;Oberboden abtragen und lagern.;75,0;m³;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.3.20;Oberboden, gelagert, andecken.;60,0;m³;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.3.30;Oberboden liefern und andecken.;15,0;m3;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.3.40;Rasenansaat mit RSM Regio herstellen. Menge 5 g/m2*UG 06.;400,0;m2;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.4.10;Mauer- und Fundamentabbruch.;10,0;cbm;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.4.20;Beton abbrechen und entsorgen.;5,0;cbm;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.4.30;Stahlbeton abbrechen und entsorgen.;5,0;cbm;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.4.40;Abbruch Steinzeugrohr, Rohrdurchmesser DN 600 mm.;70,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.4.50;Vorhandenen Schacht und Unterteil abbrechen.;6,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.10;PE-Rohre DA 630*37,4mm, PE 100 RC, SDR 17, mit Schutzmantel als Passstück.;12,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.20;AM d = 630 mm, Abwassermuffe liefern und einbauen.;18,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.30;PE-Bogen, DA 630 mm, 11°- 45°, SDR 17.;1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.40;Provisorische Verbindung DN500 des Hauptkanales nach Ausbau des alten Schachtes herstellen.;7,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.50;Manschettendichtung TYP 2 B Dimension 480-510mm liefern und einbauen.;4,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.60;Manschettendichtung TYP 2 B extra breit für Dimension 630 mm liefern und einbauen.;2,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.70;Querschläge i.M. 80 cm breit herstellen.;2,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.80;Querkreuzungen mit bestehenden Versorgungsleitungen.;3,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.90;Längskreuzung mit bestehenden Versorgungsleitungen.;10,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.100;Bodenaushub für offenen Kanalgraben herstellen, Tiefe bis 3,00 m. Aushub = BM-0*;45,0;m³;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.110;Bodenaushub in gemischter Arbeitsweise, Zulage;10,0;m³;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.120;Sandummantelung Versorgungsleitungen;5,0;m³;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.130;Offene Wasserhaltung in den Rohrgräben der offenen Kanalverlegung;20,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.140;Kontrollprüfung Dynamische Fallplatte;3,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.150;Kontrollprüfung Lastplattendruckversuch;3,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.160;Rammsondierung im Rohrgraben;3,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.170;Asphaltbefestigung trennen Dicke ü. 6-15 cm;40,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.180;Asphaltbefestigung aufnehmen, laden und verwerten Dicke ü. 6-15 cm;50,0;m2;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.190;Planum gemäß ZTVE - StB (neueste Fassung) herstellen;50,0;m²;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.200;Frostschutzschicht herstellen 120 MN/m²;20,0;m3;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.210;Asphalttragschicht aus AC 32 T N herstellen, 230 kg/m2 Bk1,8-Bk0,3, Bitumen 70/100;50,0;m2;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.220;Asphaltdeckschicht aus AC 8 D N herstellen, 85 kg/m2 Bk1,8-Bk0,3, Bitumen 50/70;50,0;m2;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.230;Bitumenemulsion aufsprühen, Bk1,8-Bk0,3, Asphalt frisch, manuell, C40B5-S, Menge 300 g/m2 vor Asphaltdeckschicht;50,0;m2;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.240;Anschluss an Fuge mit Bitumenfugenband herstellen Anschluss längs+quer Breite 10 mm;20,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.250;Rinne aus Betonstein 1- oder 2-reihig aufnehmen, Steine seitlich lagern oder Verwertung AN;30,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.260;Rinne 1- oder 2-reihig mit gelagerten Pflasterstein wiederherstellen;20,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.270;Rinne 1- oder 2-reihig mit Pflastersteinen 160/240/140 wiederherstellen;10,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.280;Bordstein (Hochbord od. Rundbord) aufnehmen, Steine seitlich lagern oder Verwertung AN;20,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.290;Gelagerten Bordstein (Hochbord od, Rundbord) aus Beton setzen;10,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.300;Einfassung Hochbord 12/15/30 wiederherstellen;5,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.310;Einfassung Rundbord 15/30/100 wiederherstellen;5,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.320;Bordstein (Tiefbord) aufnehmen, Steine seitlich lagern oder Verwertung AN;10,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.330;Gelagerten Bordstein (Tiefbord) aus Beton setzen;5,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.340;Einfassung Tiefbord 10/30/100 wiederherstellen;5,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.350;Hochbordstein trennen, Nassschnitt;5,0;Stk;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.5.360;Tiefbordstein trennen, Nassschnitt;5,0;Stk;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.10;Maschinenbaugrube herstellen, Tiefe bis 2,75 m. Aushub = BM-0*, L=10,50m.;2,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.20;Maschinenbaugrube herstellen, Tiefe bis 3,25 m. Aushub = BM-0*, L=10,50m.;2,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.30;Maschinenbaugrube herstellen, Tiefe bis 3,25 m. Aushub = BM-F3, L=10,50m, Verwertung Wahl des AN;1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.40;Widerlager aus Stahlbeton herstellen und Rückbau, 1900 kN.;5,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.50;Einziehbaugrube herstellen, Tiefe bis 2,25 m. Aushub = BM-0*. L= 9,50m.;2,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.60;Einziehbaugrube herstellen, Tiefe bis 3,00 m. Aushub = BM-0*. L= 9,50m.;2,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.70;Baugrube für Schachtabriss herstellen, Tiefe bis 3,00 m. Aushub = BM-0*.;1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.80;Bergegruben herstellen.;1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.90;Mineral-, Sand- oder Kiesgemisch für Leitungszone liefern und einbauen.;35,0;m³;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.100;Offene Wasserhaltung in den Baugruben.;8,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.110;Anlage für statisches Berstlining liefern, 190  to.;1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.120;Berstlining (statisch)  für Langrohre von Baugrube zu Baugrube durchführen, 1900 kN.;445,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.130;Berstanlage umsetzen, 1900 kN.;5,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.140;Zugkraftmessung.;5,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.150;Abwasserrohr mit Schutzmantel DA 630*37,40mm, SDR 17 aus PE100 RC liefern.;445,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.160;Aufrechterhaltung der Vorflut, SW-Kanal DN 600, Qmax bis 300 l/s.;520,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.170;Rohrbrücke für provisorische Abwasserleitung;1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.180;Aufrechterhaltung der Vorflut, SW-Kanal DN 600, als Zulage;1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.190;HD-Kanalreinigung bis DN 600.;900,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.200;TV-Befahrung eines SW-Kanals bis DN600.;900,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.6.210;Dichtheitsprüfung gemäß DIN EN 1610 durchführen und dokumentieren.;450,0;m;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.7.10;"PE-Schacht ""S500061-N"" liefern und einbauen.";1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.7.20;"PE-Schacht ""S500060-N"" liefern und einbauen.";1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.7.30;"PE-Schacht ""S500059-N"" liefern und einbauen.";1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.7.40;"PE-Schacht ""S500058-N"" liefern und einbauen.";1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.7.50;"PE-Schacht ""S500057-N"" liefern und einbauen.";1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.7.60;"PE-Schacht ""S500056-N"" liefern und einbauen.";1,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.7.70;Schachtabdeckung Klasse D 400.;6,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.7.80;Schachtumrandungsplatte rechteckig 1,20*1,20 m liefern.;4,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.7.90;Schacht auf vorh. Leitung.;6,0;Stck;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.8.10;Bagger 0,4 m3 bis 1,0 m3.;5,0;h;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.8.20;Fontlader 45 kW bis 75 kW.;10,0;h;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.8.30;Flächenrüttler bis 0,75 t.;5,0;h;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.8.40;Kompressor bis 5 m3/min.;5,0;h;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.8.50;LKW, ca. 3,5 t Nutzlast.;5,0;h;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.8.60;Werkpolier (Berufsgruppe I).;5,0;h;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.8.70;Bauvorarbeiter (Berufsgruppe II).;5,0;h;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.8.80;Spezialbaufacharbeiter (Berufsgruppe III 1).;5,0;h;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81
+2.8.90;Baufacharbeiter (IV).;10,0;h;gaeb-flat;leistungsbeschreibungen/LV02-Sanierung Hauptsammler-2BA.D81

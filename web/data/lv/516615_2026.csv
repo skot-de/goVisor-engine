@@ -42,3 +42,46 @@
 170;Verfugen der Bodenbeläge aus Linoleum mit farblich passendem Schmelzdraht je Bereich bzw. Farbe.;134,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Boden_V33.X83
 180;Abdeckung von fertig verlegten Linoleumbelägen als besonderer Schutz, bestehend aus:;134,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Boden_V33.X83
 190;Elastische Verfugung an Stützen, Stahlblech- Umfassungszargen, Wandanschlüssen und anderen Einbauteilen mit Silikon-Fugendichtstoff herstellen. Fugenflanken zuvor mit einem Voranstrich, lösemittelhaltiger 1-komponentiger Universalprimer für Silikon-Fugendichtstoffe versehen. Fugenbreite bis 10 mm.;70,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Boden_V33.X83
+0101.20;Baustelleneinrichtung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0101.30;Rasternivellement;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0101.40;Verlegeplan;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0101.50;Ausführung in Abschnitten;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0101.60;Facharbeiterstunden;8,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0101.70;Helferstunden;8,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0102.10;Restfeuchtemessung;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0102.20;Randdämmstreifen abschneiden;530,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0102.30;Scheinfugen und Risse vergießen;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0102.40;Untergrund vorbereiten;935,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0102.50;Grundierung Trockenestrich;250,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0102.60;Grundierung Zementestrich;260,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0102.70;Spezialgrundierung Gußasphalt;425,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0102.80;Spachteln und Schleifen;935,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0102.90;Übergänge zum Bestand;18,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0102.100;Linoleum, Bahnenware, d = 2,5 mm;460,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0102.110;Linoleum, Bahnenware, d = 2,5 mm;475,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0102.120;Trennfugenprofile;18,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0102.130;Bewegungsfugenprofil;12,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0102.140;Anarbeiten an bodentiefe Elemente;18,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0102.150;Anarbeiten an Stahlblech-Umfassungszargen;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0102.160;Verfugen der Linoleumbeläge;935,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0102.170;Schutz der Bodenbeläge;935,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0102.180;Elastische Fugen;530,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0103.10;Scheinfugen und Risse vergießen;13,01;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0103.20;Untergrund vorbereiten;126,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0103.30;Grundierung Gußasphalt;126,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0103.40;Spachteln und Schleifen;126,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0103.50;Übergänge zum Bestand;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0103.60;Linoleum, Bahnenware, d = 2,5 mm;126,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0103.70;Anarbeiten an Stahlblech-Umfassungszargen;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0103.80;Verfugen der Linoleumbeläge;126,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0103.90;Schutz der Bodenbeläge;126,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0103.100;Elastische Fugen;65,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0103.110;Untergrund vorbereiten;134,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0103.120;Grundierung Gußasphalt;134,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0103.130;Spachteln und Schleifen;134,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0103.140;Übergänge zum Bestand;3,1;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0103.150;Linoleum, Bahnenware, d = 2,5 mm;134,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0103.160;Anarbeiten an Stahlblech-Umfassungszargen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0103.170;Verfugen der Linoleumbeläge;134,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0103.180;Schutz der Bodenbeläge;134,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83
+0103.190;Elastische Fugen;70,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Boden.D83

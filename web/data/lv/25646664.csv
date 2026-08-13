@@ -1,4 +1,50 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;Baustelleneinrichtung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+01.2;Baustellenräumung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+01.3;Ausführungsunterlagen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+01.4;Höhenfestpunkt herstellen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+02.1;Boden ausheben u. abfahren (AN);618,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+02.2;Planum herstellen;412,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+02.3;Überschüssigen Boden durch Herstellung des Planums;82,4;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+02.4;Sandboden liefern und als Zulage einbauen;634,48;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+02.5;Dynamischer Plattendruckversuch;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+03.1;Betontiefbord-T 10cm in Beton setzen;85,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+03.2;Trennschnitt an Tiefbord;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+03.3;3-reihige Gosse 16/24/14 in Beton setzen;55,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+03.4;Trennfuge in 3-reihige Gosse herstellen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+03.5;Straßenablauf mit Aufsatz 300*500 RF/PF;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+03.6;Rohrdurchlass DN 200 in Spw herstellen;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+03.7;Rohrgraben DN 150 Kunststoffrohr bis 1,50 m tief;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+03.8;Kunststoffrohr DN 150 blau liefern und einbauen;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+03.9;Bogen DN 150, 15°-45°, KGB;15,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+03.10;Grundwasserabsenkung bis 0,50 m ü. RS.;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+03.11;"Ungebundene Tragschicht 0/32; 25cm stark liefern/einbauen";412,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+03.12;Ermittlung der Wasserdurchlässigkeit kf;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+03.13;Pflasterdecke aus H-Verbundsteinen, Farbe: Grau;412,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+03.14;Diagonalschnitte ausführen - Betonsteine;35,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+03.15;Schachtabdeckung höhenmäßig anpassen.;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+03.16;Seitenräume mit Mubo andecken u. profilieren;460,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.1;Wasserzähler-Schacht QN 2,5:;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.2;Abdeckung Klasse D als Zulage;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.3;PE 100 RC Rohr 2 Zoll 63 x 5,8 mm 100 m flexible;250,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.4;Rohrgraben bis 1,25 m für Druckrohr DN 80;250,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.5;PP Klemmringverschraubung T-Stück 3fach Klemme DN 50;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.6;PP Klemmringverschraubung Endkappe Klemme DN 50;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.7;PP Klemmringverschraubung Durchgangsmuffe 2fach;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.8;PP Klemmringverschraubung Reduziermuffe 2fach Klemme;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.9;Gartenhydrant DN 40;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.10;Schacht aus Kunststoff DN 400 für Gartenhydrant;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.11;Kabelgraben herstellen;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.12;Kabelgraben wie vor, jedoch als Mitverlegung im Rohrgraben;200,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.13;Handschachtung im Bereich des Kabelgrabens;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.14;Erdkabel NYY 5*10²mm liefern u. verlegen;262,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.15;Kabelschutzrohr DN 125 liefern und verlegen;250,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.16;Steckdosenverteilersäule nach DIN EN 61439, Normschrank;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.17;Tiefenerder aus Edelstahl V4A nach Anweisung der Bauleitung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.18;Lichtauslegermaste LpH 7,00m mit Erdstück;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.19;Sicherungskästen EK 480 mit Überspannungsschutz;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.20;Technische Straßenleuchte, Profil 4 u. 5;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
+04.21;Straßenbeleuchtungssäule Größe 0 liefern und aufstellen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle.D83
 1;Für das Einrichten und Unterhalten der Baustelle, für;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
 2;Für das Räumen der Baustelle von Baubuden,;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
 3;Herstellen aller erforderlichen Ausführungsunterlagen,;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83

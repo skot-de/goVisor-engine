@@ -1,4 +1,225 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+111010;Grobplanum herstellen;6300,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+111020;Sand zur Auffüllung liefern und einbauen;350,0;m³;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+111030;Sand aufnehmen, zur Auffüllung einbauen;50,0;m³;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+111040;Suchgräben herstellen, t= bis 1,25 m;10,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+111050;Oberboden ausbauen, auf Miete lagern;1100,0;m³;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+111060;Zulage Oberboden in Handschachtung ausbauen;20,0;m³;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+111070;Begutachtung Oberboden nach BBodSchV herstellen;3,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+111080;Oberboden von Miete aufnehmen und entsorgen, BM-0 der EBV;1200,0;t;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+111090;Oberboden von Miete aufnehmen und einbauen;430,0;m³;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+111100;Oberboden liefern und einbauen;100,0;m³;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+111110;Unterboden ausbauen, auf Miete lagern;50,0;m³;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+111120;Begutachtung Unterboden nach EBV durchführen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+111130;Unterboden von Miete aufnehmen und entsorgen, BM-0 der EBV;90,0;t;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+111140;Unterboden aufnehmen, einbauen;50,0;m³;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121010;Feinplanum befestigte Flächen herstellen;2665,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121020;Baugrund nachverdichten;1000,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121030;RC-Schotter der BE aufnehmen, einbauen, d=33cm;1500,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121040;Tragschicht aus RC herstellen BK0,3, d=15cm;200,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121050;Frostschutzschicht aus RC herstellen BK0,3, d=33cm;1010,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121060;Schottertragschicht herstellen BK0,3, d=15cm;2510,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121070;Betonsteinpflasterbelag herstellen, grau;1410,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121080;Betonsteinpflasterbelag herstellen, schiefer/beige;940,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121090;Betonsteinpflasterläufer in Beton herstellen;150,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121100;Betonsteinpflaster Bestand aufnehmen, wiedervelegen;20,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121110;Anpassungen Pflasterbelag herstellen;600,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121120;Traufe aus Betonplatten herstellen;190,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121130;Kunststoffgitterbelag mit Rasenansaat herstellen;160,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121140;Mosaikpflaster liefern, einbauen;5,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121150;Kantenstein 6x25x100 cm liefern und einbauen;700,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121160;Tiefbordstein 8x30x100 cm liefern und einbauen;150,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121170;Tiefbordstein 8x20x100 cm liefern und einbauen;180,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121180;Anpassung Bordsteine herstellen;100,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121190;Statische Plattendruckversuche durchführen;9,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121200;Fassadenschutzmatte liefern und einbauen;425,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+121210;Fassadenfugenband liefern und einbauen;425,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+131010;Statische Berechnung Ballfangzaun herstellen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+131020;Ballfangzaun H 4m herstellen;30,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+131030;Stabgitterzaun h=1,83m herstellen;165,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+131040;Passstück Stabgitterzaun herstellen;20,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+131050;Toranlage herstellen, H 1,83m, Stabgitter, LW 1,5m;2,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+131060;Toranlage herstellen, H 1,83m, Stabgitter, LW 4m;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+132010;Stufenfundament herstellen;0,5;m³;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+132020;Betonblockstufe 15x30x100 liefern und einbauen;2,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+132030;Betonblockstufe Ecke herstellen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+132040;Betonblockstufe 15x30x50 liefern und einbauen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+132050;Betonblockstufe Passstück herstellen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+132060;Betonsitzblock 100x50x50 herstellen, Bauteil A;39,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+132070;Betonsitzblock 100x50x43 herstellen, Bauteil B;26,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+132090;Betonwinkelstütze H=60cm, L=100 cm;18,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+132100;Betonwinkelstütze Ecke herstellen;4,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+132110;Betonpalisade als Mauerabschluss herstellen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151010;Straßenablauf D400 liefern und einbauen;15,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151020;Pflasterrinne herstellen;180,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151030;Bewegungsfugen in Pflasterrinne herstellen;38,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151040;Kastenrinne B125 NW150 herstellen;40,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151050;Sinkkasten für Kastenrinne NW150 herstellen;6,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151060;Kastenrinne NW150, Stirnwand;12,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151070;Anpassung Kastenrinne herstellen;15,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151080;Werkplanung Fußabtrittsroste herstellen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151090;Fußabtrittsroste herstellen, vier-teilig;22,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151100;Fußabtrittsroste herstellen, zwei-teilig;4,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151110;Revisionsschacht in der Höhe anpassen, H +50cm;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151120;Revisionsschächte in der Höhe anpassen, H +- 20cm,;30,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151130;Pflasterläufer an Schächten herstellen, Pflasterbelag;75,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151140;Pflasterläufer an Schächten herstellen, Grünfläche;70,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151150;Rohrgraben herstellen bis 1,50m Tiefe;60,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151160;Kanal Regenwasser herstellen, DN 100;30,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151170;Kanal Regenwasser Bögen, DN 100;60,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151180;Kanal Regenwasser Abzweiger, DN 100;5,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151190;Kanal Regenwasser herstellen, DN 150;60,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151200;Kanal Regenwasser Bögen, DN 150;50,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151210;Kanal Regenwasser Abzweiger, DN 150;5,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151220;Rohranschluss an Grundleitung herstellen;30,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151230;Rohranschluss an vorh. Betonschacht herstellen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151240;Querung vorhandener Rohrleitung sichern;10,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+151250;Querung vorhandener Kabel sichern;10,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+152010;Automatische Bewässerung herstellen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+152020;Leitungsgraben herstellen bis 1m Tiefe;150,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+161010;Hockerbank herstellen, Mensa;10,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+161020;Tisch herstellen, Mensa;5,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+161030;Sitzauflage Betonsitzblock herstellen, Bauteil B;13,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+161040;Holzpodest Füllung herstellen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+161050;Holzpodest Unterkonstruktion herstellen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+161060;Holzpodest Belag herstellen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+161070;Natursteinblock 50x50x50 liefern und einbauen;21,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+161080;Abfallbehälter liefern und einbauen;3,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+161090;Abfallbehälter ausbauen, wiedereinbauen;2,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+161100;Werkplanung Hochbeeteinfassung herstellen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+161110;Hochbeeteinfassung herstellen, H=75 cm gerade;2,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+161120;Hochbeeteinfassung herstellen, H=78 cm schräg;2,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+161130;Hochbeeteinfassung herstellen, H=93 cm schräg;2,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+161140;Hochbeeteinfassung herstellen, H=110 cm gerade;2,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+161150;Hochbeeteinfassung herstellen, H=75 cm Ecke;2,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+161160;Hochbeeteinfassung herstellen, H=110 cm Ecke;2,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+161170;Hinweisschild herstellen, Sammelstelle;2,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+161180;Hinweissschild herstellen, Feuerwehrzufahrt;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+161190;Hinweisschild herstellen, Feuerwehrfläche;2,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+161200;Basketballkorb ausbauen, versetzen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+171010;Feinplanum Pflanzflächen herstellen;1300,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+171020;Pflanzflächen lockern;1300,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+171030;Mineralischer Dünger liefern und ausbringen, Pflanzflächen;1300,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+171040;Organischen Dünger liefern und ausbringen;1300,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+171050;Graben für Heckenpflanzung ausheben;45,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+171060;Pflanzflächen und Belag mulchen, Miscanthus;1200,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+171070;Pflanzgrube für Bäume herstellen;26,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+171080;Pflanzloch für Baum herstellen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+171090;Pflanzgraben für Kletterpflanzen herstellen;23,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+171100;Untersubstrat liefern und einbauen;22,0;m³;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+171110;Intensivsubstrat liefern und einbauen;25,0;m³;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172010;Hainbuche liefern und pflanzen, StU 16-18;3,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172020;Hainbuche liefern, Sommerpflanzung;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172030;Säulen-Hainbuche liefern und pflanzen, StU 16-18;3,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172040;Eiche liefern und pflanzen, StU 16-18;5,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172050;Ahorn liefern und pflanzen, StU 16-18;4,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172060;Säulen-Ahorn liefern und pflanzen, StU 16-18;2,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172070;Erle liefern und pflanzen, StU 16-18;3,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172080;Linde liefern und pflanzen, StU 16-18;3,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172090;Felsenbirne liefern und pflanzen, Sol 200-250;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172100;Felsenbirne liefern und pflanzen, Sol 150-175;4,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172110;Zier-Kirsche 1 liefern und pflanzen, Sol 150-200;2,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172120;Zier-Kirsche 2 liefern und pflanzen, Sol 150-200;2,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172130;Hainbuche liefern und pflanzen, Sol 200-250;2,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172140;Hasel liefern und pflanzen, Str 60-100;9,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172150;Ranunkelstrauch liefern und pflanzen, Str 60-100;32,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172160;Hartriegel liefern und pflanzen, Str 60-100;8,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172170;Kolkwitzie liefern und pflanzen, Str 60-100;12,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172180;Pfeifenstrauch liefern und pflanzen, Str 60-100;8,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172190;Sal-Weide liefern und pflanzen, Str 60-100;4,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172200;Zwerg-Purpur-Weide liefern und pflanzen, Str 40-60;500,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172210;Hainbuchenhecke liefern und pflanzen, 150-175;135,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172220;Akebie liefern und pflanzen, Sol 200-250;14,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172230;Pfeifenwinde liefern und pflanzen, Sol 200-250;4,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172240;Lampenputzergras liefern und pflanzen;1248,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172250;Schnee-Marbel liefern und pflanzen;888,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172260;Baumverankerung herstellen, Zweibock;26,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172270;Baumverankerung herstellen, Unterflur;2,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172280;Gießrand aus Holz herstellen;26,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172290;Stammschutz für Bäume durch Weißanstrich herstellen;26,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172300;Fertigstellungspflege herstellen, Pflanzflächen;1300,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172320;Unterhaltungspflege durchführen, 2 Jahre;6,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172330;Wässerungsgänge durchführen, Pflanzflächen;20,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172340;Wässerungsgänge durchführen, Baumbestand;6,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172350;Facharbeitereinsatz Baumpflege;40,0;h;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172360;Steigereinsatz für Astschnitt;24,0;h;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+172370;Astwerk sammeln und entsorgen;100,0;m³;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+173010;Feinplanum Rasenflächen herstellen;3600,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+173020;Rasenflächen fräsen;3600,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+173030;Rasenflächen Tiefenlockerung;500,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+173040;Rasendüngung herstellen;3600,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+173050;Rasenansaat RSM2.3 herstellen;3600,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+173060;Fertigstellungspflege Rasenflächen;3600,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+173080;Wässerung der Rasenflächen;3600,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+173090;Absperrung Vegetationsflächen;500,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+181010;Baustelleneinrichtung;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+181020;Baustelleneinrichtung vorhalten;24,0;Wo;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+181030;Baustelle räumen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+181040;Stammschutz für bestehende Bäume herstellen;10,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+181050;Temporäre Schotterflächen herstellen;30,0;m³;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+181060;Stahlplatten zur Überfahrung;12,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+181070;Bauzaun liefern und aufstellen;50,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+181080;Bauzauntor herstellen;3,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+181090;Bauzaun vorhalten;24,0;Wo;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+181100;Bauseitigen Bauzaun umstellen, Personaleinsatz;50,0;h;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+181110;Bauseitigen Bauzaun umstellen, Radladereinsatz;20,0;h;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+181120;Revisionspläne erstellen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+181130;Dokumentation erstellen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182010;Gras- und Krautnarbe entfernen;2450,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182020;RC-Schotter BE-Fläche ausbauen, lagern;2500,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182030;Geotextil ausbauen, entsorgen;2500,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182040;Begutachtung Mineralgemisch nach EBV durchführen;2,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182050;Mineralgemisch aufnehmen, entsorgen RC-1;350,0;t;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182060;Betonpflasterbeläge abbrechen, entsorgen;200,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182070;Alte Wegeinfassungen abbrechen, entsorgen;220,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182080;Alten Ablauf ausbauen und entsorgen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182090;Schacht ausbauen, entsorgen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182100;Kanalgrundleitung abbrechen, entsorgen;20,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182110;Betonmauer durch Schnitt abtrennen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182120;Betonmauer abbrechen, entsorgen;3,5;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182130;Stabgitterzaun ausbauen, entsorgen;130,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182140;Ballfangzaun ausbauen, entsorgen;35,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182150;Schulteich ausbauen, entsorgen;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182160;Wurzelstock roden SD= 0,1-0,3 m;5,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182170;Wurzelstock roden SD= 0,3-0,5 m;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182180;Wurzelstock roden SD= 0,5-0,7 m;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182190;Wurzelstock roden SD= 0,7-0,9 m;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182200;Strauchwerk roden;20,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+182210;Hecke roden;35,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+183010;Bauschutt sammeln und entsorgen;10,0;m³;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+183020;Organisches Material, sammeln, entsorgen;10,0;m³;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+183030;Unrat gemischt, sammeln, entsorgen;10,0;m³;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+184010;Einsatz einer führenden Fachkraft;5,0;h;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+184020;Einsatz einer gelernten Fachkraft;5,0;h;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+184030;Einsatz einer ungelernten Fachkraft;5,0;h;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+184040;Maschinensatz Baumaschine klein;5,0;h;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+184050;Maschinensatz Baumaschine groß;5,0;h;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+184060;Einsatz einer Trennscheibe,;5,0;h;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+184070;Einsatz eines Rüttlers;5,0;h;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+184080;Wasserhaltung Suchgraben mit Motorpumpe durchführen;5,0;h;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+184090;Tagessatz Kraneinsatz mit Bedienung;4,0;d;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+211010;Grobplanum herstellen;1200,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+211020;Oberboden liefern und einbauen;120,0;m³;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+211030;Bodenvitalisierung im Baumwurzelbereich;20,0;h;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+211040;Einsatz eines Saugbaggers;10,0;h;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+211050;Boden Saugbagger abfahren und entsorgen;40,0;t;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+221010;Feinplanum Rasenflächen herstellen;1200,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+221020;Rasenflächen fräsen;1200,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+221030;Rasenflächen Tiefenlockerung;700,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+221040;Rasendüngung herstellen;1200,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+221050;Rasenansaat RSM2.3 herstellen;1200,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+221060;Fertigstellungspflege Rasenflächen;1200,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+221070;Entwicklungspflege Rasenflächen, 2 Jahre;1200,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+221080;Wässerung der Rasenflächen;1200,0;m²;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+221090;Absperrung Rasenflächen;200,0;m;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+311010;Wartung automatische Bewässerung 1. Jahr;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+311020;Wartung automatische Bewässerung 2. Jahr;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+311030;Wartung automatische Bewässerung 3. Jahr;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+311040;Wartung automatische Bewässerung 4. Jahr;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+321010;Wartung Entwicklungspflege 1. Jahr;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+321020;Wartung Entwicklungspflege 2. Jahr;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+322010;Wartung Entwicklungspflege 1. Jahr;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
+322020;Wartung Entwicklungspflege 2. Jahr;1,0;Stk;gaeb-flat;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.D83
 010;Grobplanum herstellen;6300,0;m²;gaeb;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.X83
 020;Sand zur Auffüllung liefern und einbauen;350,0;m³;gaeb;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.X83
 030;Sand wie Bezugsposition einbauen, jedoch nicht liefern sondern von örtlicher Miete aufnehmen, zum Einbauort transportieren und einbauen.;50,0;m³;gaeb;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.X83
@@ -220,6 +441,227 @@
 020;Wartungskosten für die 2. Wartung, Instandhaltung und Inspektion der neu angelegten Pflanzflächen;1,0;Stk;gaeb;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.X83
 010;Wartungskosten für die 1. Wartung, Instandhaltung und Inspektion der neu angelegten Rasenflächen;1,0;Stk;gaeb;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.X83
 020;Wartungskosten für die 2. Wartung, Instandhaltung und Inspektion der neu angelegten Rasenflächen;1,0;Stk;gaeb;leistungsbeschreibungen/LV 57 Landschaftsbauarbeiten GAEB.X83
+111010;Grobplanum herstellen;6300,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+111020;Sand zur Auffüllung liefern und einbauen;350,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+111030;Sand aufnehmen, zur Auffüllung einbauen;50,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+111040;Suchgräben herstellen, t= bis 1,25 m;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+111050;Oberboden ausbauen, auf Miete lagern;1100,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+111060;Zulage Oberboden in Handschachtung ausbauen;20,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+111070;Begutachtung Oberboden nach BBodSchV herstellen;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+111080;Oberboden von Miete aufnehmen und entsorgen, BM-0 der EBV;1200,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+111090;Oberboden von Miete aufnehmen und einbauen;430,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+111100;Oberboden liefern und einbauen;100,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+111110;Unterboden ausbauen, auf Miete lagern;50,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+111120;Begutachtung Unterboden nach EBV durchführen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+111130;Unterboden von Miete aufnehmen und entsorgen, BM-0 der EBV;90,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+111140;Unterboden aufnehmen, einbauen;50,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121010;Feinplanum befestigte Flächen herstellen;2665,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121020;Baugrund nachverdichten;1000,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121030;RC-Schotter der BE aufnehmen, einbauen, d=33cm;1500,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121040;Tragschicht aus RC herstellen BK0,3, d=15cm;200,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121050;Frostschutzschicht aus RC herstellen BK0,3, d=33cm;1010,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121060;Schottertragschicht herstellen BK0,3, d=15cm;2510,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121070;Betonsteinpflasterbelag herstellen, grau;1410,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121080;Betonsteinpflasterbelag herstellen, schiefer/beige;940,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121090;Betonsteinpflasterläufer in Beton herstellen;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121100;Betonsteinpflaster Bestand aufnehmen, wiedervelegen;20,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121110;Anpassungen Pflasterbelag herstellen;600,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121120;Traufe aus Betonplatten herstellen;190,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121130;Kunststoffgitterbelag mit Rasenansaat herstellen;160,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121140;Mosaikpflaster liefern, einbauen;5,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121150;Kantenstein 6x25x100 cm liefern und einbauen;700,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121160;Tiefbordstein 8x30x100 cm liefern und einbauen;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121170;Tiefbordstein 8x20x100 cm liefern und einbauen;180,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121180;Anpassung Bordsteine herstellen;100,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121190;Statische Plattendruckversuche durchführen;9,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121200;Fassadenschutzmatte liefern und einbauen;425,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+121210;Fassadenfugenband liefern und einbauen;425,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+131010;Statische Berechnung Ballfangzaun herstellen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+131020;Ballfangzaun H 4m herstellen;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+131030;Stabgitterzaun h=1,83m herstellen;165,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+131040;Passstück Stabgitterzaun herstellen;20,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+131050;Toranlage herstellen, H 1,83m, Stabgitter, LW 1,5m;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+131060;Toranlage herstellen, H 1,83m, Stabgitter, LW 4m;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+132010;Stufenfundament herstellen;0,5;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+132020;Betonblockstufe 15x30x100 liefern und einbauen;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+132030;Betonblockstufe Ecke herstellen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+132040;Betonblockstufe 15x30x50 liefern und einbauen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+132050;Betonblockstufe Passstück herstellen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+132060;Betonsitzblock 100x50x50 herstellen, Bauteil A;39,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+132070;Betonsitzblock 100x50x43 herstellen, Bauteil B;26,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+132090;Betonwinkelstütze H=60cm, L=100 cm;18,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+132100;Betonwinkelstütze Ecke herstellen;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+132110;Betonpalisade als Mauerabschluss herstellen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151010;Straßenablauf D400 liefern und einbauen;15,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151020;Pflasterrinne herstellen;180,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151030;Bewegungsfugen in Pflasterrinne herstellen;38,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151040;Kastenrinne B125 NW150 herstellen;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151050;Sinkkasten für Kastenrinne NW150 herstellen;6,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151060;Kastenrinne NW150, Stirnwand;12,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151070;Anpassung Kastenrinne herstellen;15,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151080;Werkplanung Fußabtrittsroste herstellen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151090;Fußabtrittsroste herstellen, vier-teilig;22,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151100;Fußabtrittsroste herstellen, zwei-teilig;4,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151110;Revisionsschacht in der Höhe anpassen, H +50cm;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151120;Revisionsschächte in der Höhe anpassen, H +- 20cm,;30,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151130;Pflasterläufer an Schächten herstellen, Pflasterbelag;75,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151140;Pflasterläufer an Schächten herstellen, Grünfläche;70,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151150;Rohrgraben herstellen bis 1,50m Tiefe;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151160;Kanal Regenwasser herstellen, DN 100;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151170;Kanal Regenwasser Bögen, DN 100;60,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151180;Kanal Regenwasser Abzweiger, DN 100;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151190;Kanal Regenwasser herstellen, DN 150;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151200;Kanal Regenwasser Bögen, DN 150;50,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151210;Kanal Regenwasser Abzweiger, DN 150;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151220;Rohranschluss an Grundleitung herstellen;30,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151230;Rohranschluss an vorh. Betonschacht herstellen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151240;Querung vorhandener Rohrleitung sichern;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+151250;Querung vorhandener Kabel sichern;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+152010;Automatische Bewässerung herstellen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+152020;Leitungsgraben herstellen bis 1m Tiefe;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+161010;Hockerbank herstellen, Mensa;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+161020;Tisch herstellen, Mensa;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+161030;Sitzauflage Betonsitzblock herstellen, Bauteil B;13,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+161040;Holzpodest Füllung herstellen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+161050;Holzpodest Unterkonstruktion herstellen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+161060;Holzpodest Belag herstellen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+161070;Natursteinblock 50x50x50 liefern und einbauen;21,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+161080;Abfallbehälter liefern und einbauen;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+161090;Abfallbehälter ausbauen, wiedereinbauen;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+161100;Werkplanung Hochbeeteinfassung herstellen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+161110;Hochbeeteinfassung herstellen, H=75 cm gerade;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+161120;Hochbeeteinfassung herstellen, H=78 cm schräg;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+161130;Hochbeeteinfassung herstellen, H=93 cm schräg;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+161140;Hochbeeteinfassung herstellen, H=110 cm gerade;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+161150;Hochbeeteinfassung herstellen, H=75 cm Ecke;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+161160;Hochbeeteinfassung herstellen, H=110 cm Ecke;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+161170;Hinweisschild herstellen, Sammelstelle;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+161180;Hinweissschild herstellen, Feuerwehrzufahrt;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+161190;Hinweisschild herstellen, Feuerwehrfläche;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+161200;Basketballkorb ausbauen, versetzen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+171010;Feinplanum Pflanzflächen herstellen;1300,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+171020;Pflanzflächen lockern;1300,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+171030;Mineralischer Dünger liefern und ausbringen, Pflanzflächen;1300,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+171040;Organischen Dünger liefern und ausbringen;1300,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+171050;Graben für Heckenpflanzung ausheben;45,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+171060;Pflanzflächen und Belag mulchen, Miscanthus;1200,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+171070;Pflanzgrube für Bäume herstellen;26,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+171080;Pflanzloch für Baum herstellen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+171090;Pflanzgraben für Kletterpflanzen herstellen;23,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+171100;Untersubstrat liefern und einbauen;22,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+171110;Intensivsubstrat liefern und einbauen;25,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172010;Hainbuche liefern und pflanzen, StU 16-18;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172020;Hainbuche liefern, Sommerpflanzung;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172030;Säulen-Hainbuche liefern und pflanzen, StU 16-18;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172040;Eiche liefern und pflanzen, StU 16-18;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172050;Ahorn liefern und pflanzen, StU 16-18;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172060;Säulen-Ahorn liefern und pflanzen, StU 16-18;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172070;Erle liefern und pflanzen, StU 16-18;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172080;Linde liefern und pflanzen, StU 16-18;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172090;Felsenbirne liefern und pflanzen, Sol 200-250;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172100;Felsenbirne liefern und pflanzen, Sol 150-175;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172110;Zier-Kirsche 1 liefern und pflanzen, Sol 150-200;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172120;Zier-Kirsche 2 liefern und pflanzen, Sol 150-200;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172130;Hainbuche liefern und pflanzen, Sol 200-250;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172140;Hasel liefern und pflanzen, Str 60-100;9,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172150;Ranunkelstrauch liefern und pflanzen, Str 60-100;32,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172160;Hartriegel liefern und pflanzen, Str 60-100;8,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172170;Kolkwitzie liefern und pflanzen, Str 60-100;12,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172180;Pfeifenstrauch liefern und pflanzen, Str 60-100;8,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172190;Sal-Weide liefern und pflanzen, Str 60-100;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172200;Zwerg-Purpur-Weide liefern und pflanzen, Str 40-60;500,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172210;Hainbuchenhecke liefern und pflanzen, 150-175;135,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172220;Akebie liefern und pflanzen, Sol 200-250;14,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172230;Pfeifenwinde liefern und pflanzen, Sol 200-250;4,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172240;Lampenputzergras liefern und pflanzen;1248,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172250;Schnee-Marbel liefern und pflanzen;888,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172260;Baumverankerung herstellen, Zweibock;26,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172270;Baumverankerung herstellen, Unterflur;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172280;Gießrand aus Holz herstellen;26,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172290;Stammschutz für Bäume durch Weißanstrich herstellen;26,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172300;Fertigstellungspflege herstellen, Pflanzflächen;1300,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172320;Unterhaltungspflege durchführen, 2 Jahre;6,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172330;Wässerungsgänge durchführen, Pflanzflächen;20,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172340;Wässerungsgänge durchführen, Baumbestand;6,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172350;Facharbeitereinsatz Baumpflege;40,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172360;Steigereinsatz für Astschnitt;24,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+172370;Astwerk sammeln und entsorgen;100,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+173010;Feinplanum Rasenflächen herstellen;3600,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+173020;Rasenflächen fräsen;3600,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+173030;Rasenflächen Tiefenlockerung;500,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+173040;Rasendüngung herstellen;3600,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+173050;Rasenansaat RSM2.3 herstellen;3600,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+173060;Fertigstellungspflege Rasenflächen;3600,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+173080;Wässerung der Rasenflächen;3600,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+173090;Absperrung Vegetationsflächen;500,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+181010;Baustelleneinrichtung;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+181020;Baustelleneinrichtung vorhalten;24,0;Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+181030;Baustelle räumen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+181040;Stammschutz für bestehende Bäume herstellen;10,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+181050;Temporäre Schotterflächen herstellen;30,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+181060;Stahlplatten zur Überfahrung;12,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+181070;Bauzaun liefern und aufstellen;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+181080;Bauzauntor herstellen;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+181090;Bauzaun vorhalten;24,0;Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+181100;Bauseitigen Bauzaun umstellen, Personaleinsatz;50,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+181110;Bauseitigen Bauzaun umstellen, Radladereinsatz;20,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+181120;Revisionspläne erstellen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+181130;Dokumentation erstellen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182010;Gras- und Krautnarbe entfernen;2450,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182020;RC-Schotter BE-Fläche ausbauen, lagern;2500,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182030;Geotextil ausbauen, entsorgen;2500,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182040;Begutachtung Mineralgemisch nach EBV durchführen;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182050;Mineralgemisch aufnehmen, entsorgen RC-1;350,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182060;Betonpflasterbeläge abbrechen, entsorgen;200,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182070;Alte Wegeinfassungen abbrechen, entsorgen;220,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182080;Alten Ablauf ausbauen und entsorgen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182090;Schacht ausbauen, entsorgen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182100;Kanalgrundleitung abbrechen, entsorgen;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182110;Betonmauer durch Schnitt abtrennen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182120;Betonmauer abbrechen, entsorgen;3,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182130;Stabgitterzaun ausbauen, entsorgen;130,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182140;Ballfangzaun ausbauen, entsorgen;35,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182150;Schulteich ausbauen, entsorgen;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182160;Wurzelstock roden SD= 0,1-0,3 m;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182170;Wurzelstock roden SD= 0,3-0,5 m;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182180;Wurzelstock roden SD= 0,5-0,7 m;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182190;Wurzelstock roden SD= 0,7-0,9 m;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182200;Strauchwerk roden;20,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+182210;Hecke roden;35,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+183010;Bauschutt sammeln und entsorgen;10,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+183020;Organisches Material, sammeln, entsorgen;10,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+183030;Unrat gemischt, sammeln, entsorgen;10,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+184010;Einsatz einer führenden Fachkraft;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+184020;Einsatz einer gelernten Fachkraft;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+184030;Einsatz einer ungelernten Fachkraft;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+184040;Maschinensatz Baumaschine klein;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+184050;Maschinensatz Baumaschine groß;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+184060;Einsatz einer Trennscheibe,;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+184070;Einsatz eines Rüttlers;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+184080;Wasserhaltung Suchgraben mit Motorpumpe durchführen;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+184090;Tagessatz Kraneinsatz mit Bedienung;4,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+211010;Grobplanum herstellen;1200,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+211020;Oberboden liefern und einbauen;120,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+211030;Bodenvitalisierung im Baumwurzelbereich;20,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+211040;Einsatz eines Saugbaggers;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+211050;Boden Saugbagger abfahren und entsorgen;40,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+221010;Feinplanum Rasenflächen herstellen;1200,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+221020;Rasenflächen fräsen;1200,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+221030;Rasenflächen Tiefenlockerung;700,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+221040;Rasendüngung herstellen;1200,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+221050;Rasenansaat RSM2.3 herstellen;1200,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+221060;Fertigstellungspflege Rasenflächen;1200,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+221070;Entwicklungspflege Rasenflächen, 2 Jahre;1200,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+221080;Wässerung der Rasenflächen;1200,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+221090;Absperrung Rasenflächen;200,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+311010;Wartung automatische Bewässerung 1. Jahr;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+311020;Wartung automatische Bewässerung 2. Jahr;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+311030;Wartung automatische Bewässerung 3. Jahr;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+311040;Wartung automatische Bewässerung 4. Jahr;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+321010;Wartung Entwicklungspflege 1. Jahr;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+321020;Wartung Entwicklungspflege 2. Jahr;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+322010;Wartung Entwicklungspflege 1. Jahr;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
+322020;Wartung Entwicklungspflege 2. Jahr;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.D83
 010;Grobplanum herstellen;6300,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.X83
 020;Sand zur Auffüllung liefern und einbauen;350,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.X83
 030;Sand wie Bezugsposition einbauen, jedoch nicht liefern sondern von örtlicher Miete aufnehmen, zum Einbauort transportieren und einbauen.;50,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 57 Landschaftsbauarbeiten GAEB.X83

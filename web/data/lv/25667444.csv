@@ -1,4 +1,165 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01010001;Ausschreibungsanerkennung;;;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+01010002;Ausdrückliche Erklärung des Bieters:;;;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+01020001;Folgende Vertragsbedingungen werden vereinbart;;;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+01020002;Allgemeine Technische Vertragsbedingungen - ATV;;;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+01020003;Hinweise zur Baustelleneinrichtung;;;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+02010001;Baustelleneinrichtung Vorbereitung;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+02010002;Vorhaltung/Verlängerung BE der Pos. 02.01.0001;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+02010003;Einholung von Genehmigungen;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+02010004;Bauzaun, Stahlrahmen (mobil), h=2,00 m;80,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+02010005;Bauzaun, vorhalten;1280,0;mWo;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+02010006;"Bauzauntor, b=4,00 m;";1,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+02010007;Bauzauntor/-Tor vorhalten;16,0;mWo;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+02010008;Pfosten inkl. Verkehrszeichen aller Art aufstellen;1,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+02010009;Pfosten mit Verkehrszeichen vorhalten;16,0;StWo;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+02010010;Sichtschutz, einseitig aus PE-Folie am Maschendraht/Bauzaun befestigt;80,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+02010011;Schuttcontainer, Bauschutt;1,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+02010012;Herstellung einer provisorische Dachentwässerung am Gerüst entlang;4,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+02010013;Ausführung wie Vorpos. 02.01.0012, nur;12,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+02010014;Temporärer Regen- bzw. Schneeschutz während der Bauzeit;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+02010015;Autokran/Dachdeckerkran, Bereitstellung;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+02010016;Ausführung wie Vorpos. 02.01.0015, nur;40,0;h;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+02010017;Provisorische Überfahrt für schwere Fahrzeuge;12,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+02010018;Stundenlohn Facharbeiter;10,0;h;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+02010019;Stundenlohn Helfer;10,0;h;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010001;Rückbau und Entsorgung Ballastierung PV-Anlage;66,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010002;Verhandenen Terrassenbelag restlos entfernen;4,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010003;Abbruch bestehender Dichtungslagen Bituminös (teerhaltig);585,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010004;Untersuchung Dachabdichtung Bituminös (teerhaltig);1,0;psch;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010005;Abbruch bestehender Dachdämmung aus Styropor;585,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010006;Untersuchung Dachdämmung Styropor;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010007;Abbruch bestehender Zementestrich auf HWL-Platte (im Verbund);585,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010008;Untersuchung Zementestich auf HWL-Platte;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010009;Abbruch bestehender Dachpappe als Dampfsperre (bitumenhaltig);585,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010010;Untersuchung Dachpappe als Dampfsperre (bitumenhaltig);1,0;psch;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010011;Abbruch bestehender Holzlattung;585,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010012;Untersuchung Holzlattung (imprägniert);1,0;psch;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010013;Abbruch bestehender Wandanschlüsse mit Bitumenbahn;5,5;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010014;Abbruch bestehender Rinneneinhangblech;136,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010015;Abbruch bestehender Entwässerungsrinne;136,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010016;Ausführung wie Vorpos. 03.01.0015, nur;136,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010017;Rückbau Dachlüfter (Kaltlüfter) aus Kunststoff;22,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010018;Rückbau Sanitärlüfter aus Zinkblech;6,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010019;Rückbau Entlüftungsschnorchel aus Kunststoff;35,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010020;Abbruch bestehender Dachrandblende (Ortgang) aus Aluminium;23,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010021;Ausführung wie Vorpos. 03.01.0020, nur;23,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010022;Ausführung wie Vorpos. 03.01.0019 und 03.01.0020, nur;136,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010023;Rückbau Sekuranten auf Stahlbetondecke (Dachdecke);7,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010024;Abbruch bestehender Dachrandbohle (Holz);133,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010025;Untersuchung Dachrandbohle (imprägniert);1,0;psch;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010026;Rückbau bestehender Blechverkleidungen;6,3;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010027;Rückbau bestehender Blitzschutz;585,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010028;Abbruch bestehender Randabmauerung aus MW mit Putzbekleidung;15,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010029;Kernbohrung durch bestehend Decke;4,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010030;Reinigung / Freimachung innenliegende Dachrinne;25,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010031;Gesimsmauerwerk mit kleinen Abplatzungen, Ausbrüchen, Rissen etc.;12,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010032;Öffnung in der Betondecke mit Beton brandschutzgerecht verschließen;22,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010033;Abschottunge wegen abschnittsweisen Arbeiten;77,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010034;Temporärer Regen- bzw. Schneeschutz während der Bauzeit;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010035;Stundenlohn Facharbeiter Dachdarbeiten;12,0;h;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+03010036;Stundenlohn Helfer Dacharbeiten;12,0;h;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020001;Betonflächen reinigen, Dachfläche abkehren;585,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020002;Untergrundvorbereitung Oberflächentrocknung;585,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020003;Untergrund, Wasser saugen, Helfer;292,5;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020004;Vorbereitung für die Verlegung der Dampfbremse;585,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020005;Höhenausgleich Unebenheiten an Betonflächen;50,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020006;Höhenausgleich von größeren Absätzen und Unebenheiten an Betonflächen;50,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020007;Gefälle- und Niveauausgleich an Betonflächen;20,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020008;Liefern und Verlegen von imprägniertem Bauholz (Konstruktionsvollholz);134,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020009;Liefern und Verlegen von Dreischichtplatte am Dachrand;134,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020010;Stahl-Befestigungsteile, feuerverzinkt;25,0;kg;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020011;Herstellen eines ebenen Planums auf dem Gesims- und Ortgangbereich;134,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020012;Herstellen von Durchbrüchen DN 100 im unteren Bereich der Traufbohle;11,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020013;Liefern und montieren von Notabläufen;11,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020014;Demontage der Notabläufe;10,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020015;Voranstrich, kaltfl.Bitumenbasis;655,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020016;Elastomerbitumen-Dampfsperr-Schweißbahn, d= 4 mm, m. Einlage Alu;655,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020017;Anschluss Dampfsperre an Dachrand;134,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020018;Anschluss Schornsteinanschluss starr, L/B 275 x 140 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020019;Eckausbildung herstellen;4,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020020;BMI Icopal Sicherheitsdämmbahn Polar-EPS dh od. glw.;608,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020021;BMI Icopal EPS-Sicherheitsdämmbahn od. glw;1,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020022;Anfertigung einer Nachweisberechnung zur Windsogsicherung;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020023;Oberlage der Dachabdichtung;608,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020024;Dachabdichtunganschluss an Rinneneinhangblech;134,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020025;Dachabdichtunganschluss an Dunstrohr- oder Lüfterdurchführung;25,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020026;Ausführung wie Vorpos., nur Dachabdichtungsanschluss an Sekuranten;23,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020027;Abdichtung Leitungen, bis DN 125;22,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020028;Mehrteilige Aluminum-Dachrandprofil;22,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020029;Dachrandprofil , Zulage End- und Eckausbildung;4,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020030;Dämmung, Verlegeplan;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020031;Stundenlohn Facharbeiter Dachdarbeiten;12,0;h;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+04020032;Stundenlohn Helfer Dacharbeiten;12,0;h;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+05010001;Demontage der Lüftunsganlage auf dem Dach;1,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+05010002;Herstellung Kernbohrung DN 160;3,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+05010003;Ausführung wie Vorps. 05.01.0002, nur DN 120;22,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+05010004;Ausführung wie Vorps. 05.01.0002, nur DN 110;3,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+05010005;Strangentlüfter, 2-teilig, liefern und montieren;22,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+05010006;Ausführung wie Vorpos. 05.01.0005, nur DN 150 mm;3,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+05010007;Zulage zur Vorpos. 05.01.0005, f. liefern u. montieren Dämmkörper Miwo;22,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+05010008;Zulage zur Vorpos. 05.01.0006, f. liefern u. montieren Dämmkörper Miwo;5,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+05010009;Zulage zur Vorpos. 05.01.0005, f. liefern u. montieren Brandschutzm.;22,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+05010010;Zulage zur Vorpos. 05.01.0006, f. liefern u. montieren Brandschutzm.;5,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+05010011;Zulage zur Vorpos. 05.01.0005, f. liefern u. montieren Übergangsverb.;22,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+05010012;Abdichtg., Flüssigkunststoff, 2-komponentig, Kleinfl. 0,11 - 0,25 m2;5,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+05010013;Herstellung Podestauflager für Lüftungsanlage;2,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+05010014;Deckabstrich Heißbitumen, liefern und aufbringen;2,0;m2;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+05010015;Temporärer Seitenschutz / Dachschutz;24,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+05010016;Temporärer Seitenschutz / Dachschutz - Vorhaltung;24,0;mWo;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+05010017;Mehrpreis für Ausführung in Teilabschnitten;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+05010018;Mehrpreis Samstagarbeit, Facharbeiter - Dachabdichtung;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+05010019;Mehrpreis Samstagarbeit, Helfer - Dachabdichtung;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+06010001;Angaben zur Ausführung;;;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+06010002;Hängerinne, halbrund, Titanzink (Zn), Z 400;88,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+06010003;Korrosionsschutz Dachrinne und Rinneneinhang;88,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+06010004;Halbrunde Dehnungsausgeleicher, liefern und montieren;6,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+06010005;Rinnenendstück, liefern und montieren;6,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+06010006;Rinneneinhangstutzen, liefern und montieren;11,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+06010007;Laubfang, liefern und montieren- - - - -;11,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+06010008;Traufeinlaufblech, liefern und montieren;134,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+06010009;Dehnungsausgleicher, liefern und montieren;17,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+06010010;Regenstandrohr DN 100 rund mit Reinigungsöffnung, liefern u. montieren;11,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+06010011;Fallrohr, DN 100, liefern und montieren;105,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+06010012;Zulage zur Vorpos. Fallrohr, Fallrohrbögen leifern und montieren;22,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+06010013;Wasserfangkasten passend zur Dachrinne, liefern und montieren;1,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+06010014;Tropfblech, Titanzink Z 200 mm,2-fach gekantet, liefern und montieren;24,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+06010015;Stundenlohn Facharbeiter Klempnerarbeiten;8,0;h;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+06010016;Stundenlohn Helfer Klempnerarbeiten;8,0;h;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+07010001;Sicherheits- und Schutzmaßnahmen;;;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+07010002;Ausstattungsklasse 1 und 2;;;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+07010003;Einzelanschlagpunkt geneigt 5° auf Beton C20/25, liefern und montieren;5,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+07010004;Ausführung wie Vorpos.. 07.01.0003, nur Anfangs-Eckstütze,;5,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+07010005;Ausführung wie Vorpos.. 07.01.0003, nur Zwischenstütze,;18,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+07010006;8 mm Seilsicherungssystem, liefern und montieren;162,3;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+07010007;Spannelement, liefern und montieren;4,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+07010008;ForceLimiter / Kraftabsorber, liefern und montieren;4,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+07010009;Überfahrbares Kurvenelement, liefern und montieren;4,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+07010010;Systemschild;28,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+07010011;Seilgleiter, liefern und montieren;2,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+07010012;Persönliche Schutzausrüstung gegen Absturz (PSAgA, DACH);1,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+07010013;Aufbewahrungsschrank für PSA und Seil, liefern und montieren.;1,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+07010014;Wärmedämmkappen (therm. Isolierung), liefern und montieren;28,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+07010015;Stundenlohn Fachrabeiter Absturzsicherung;8,0;h;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+08010001;Sicherheits- und Schutzmaßnahmen;;;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+08010002;Flachdachgeländer für PV-Dächer lefern und montieren;134,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+08010003;Mehrpreis erhöhte Prüflast;134,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+08010004;Zulage zur Vorpos. 08.01.0002 u. 08.01.0003, f. Türelement f. Geländer;1,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+08010005;Fußleiste für Geländer, liefern und montieren;134,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+08010006;Mehrpreis klappbare Ausführung für Geländer, liefern und montieren;134,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+08010007;Unterlegsmatte - Schutzlage f. Geländergewichte, liefern und montieren;55,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+08010008;Absturzsicherung Aufflämmwinkel zur Sicherung , liefern und montieren;45,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+08010009;Wiederkehrende Überprüfung Geländersystem;1,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+08010010;Stundenlohn Fachrabeiter Absturzsicherung;12,0;h;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+09010001;Aushang Übersichtsplan und Systembeschreibung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+10010001;Aufarbeitung der innenliegenden Dachrinne;24,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+10010002;Auskleidung der innenliegenden Dachrinne;24,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+10010003;Zulage zu den Vorpos. f. Herstellung Dehnungsausgelich;3,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+10010004;Zulage für die Anpassung der Dachbahnen;24,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+10010005;Liefern und montieren einer Kappleiste;24,0;m;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+10010006;Anpassung des Rinnensystem an die Fallrohre;2,0;St;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+11010001;Zulage für Erschwernisse durch Schulbetrieb;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
+11010002;Zulage für Ausführung der Arbeiten ab 13:00 Uhr - 20:00 Uhr;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_D83.D83
 0001;unter Zugrundelegung des Leistungsverzeichnisses, der dazugehörigen Vorbemerkungen, der Vertragsbedingungen des Bauherrn und des terminlichen Ablaufs.;;;gaeb;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_X83.X83
 0002;Ich erkläre, dass ich meinen gesetzlichen Pflichten zur Zahlung der vom Finanzamt erhobenen Steuern sowie zur Zahlung der Beiträge zur Sozialversicherung (Kranken-, Renten- und Arbeitslosenversicherung) nachgekommen bin und Rückstände nicht vorhanden sind. Es ist mir bekannt, dass eine wissentlich f;;;gaeb;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_X83.X83
 0001;Folgende Vertragsbedingungen werden vereinbart:;;;gaeb;leistungsbeschreibungen/20260801_GOS_Haus 1_Los 5_LV-Dacharbeiten Hauptdach_X83.X83

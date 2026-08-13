@@ -1,4 +1,51 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+010101;Baustelle einrichten;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010102;Bauzaunbanner anfertigen und aufstellen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010103;Baustelle räumen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010201;Pflasterdecke aus Betonsteinpflaster (B+R-Anlagen) aufbrechen und lagern;50,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010202;Fahrradbügel abbauen B+R überdacht;27,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010203;Verkehrszeichen inkl. Pfosten abbauen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010204;Verkehrszeichen abbauen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010301;Ver- und Entsorgungsleitungen sichern, T bis 1,50 m;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010302;Boden liefern und einbauen;10,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010303;Planum herstellen und verdichten;40,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010401;Richtungsfelder aus Rippenplatten;2,5;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010501;Rohplanum in zukünftigen Vegetationsflächen;40,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010502;Oberboden liefern und andecken;40,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010503;"Potentilla fruticosa ""Goldteppich"" liefern";10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010504;"Panicum virgatum ""Shenandoah"" liefern";18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010505;"Geranium wall. ""Rozanne"" liefern";25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010506;"Verbena hastata ""Blue Spires"" (Eisenkraut) liefern";5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010507;"Pennisetum alopecuroides ""Hameln"" (Lampenputzergras) liefern";5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010508;Sträucher und Bodendecker fachgerecht pflanzen;63,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010509;Rindenmulch, ohne Holzanteile, gem. RAL-Gütebestimmungen;40,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010510;Fertigstellungspflege der Vegetationsflächen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010511;Entwicklungspflege Vegetationsflächen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010601;Rohrpfosten aufstellen Länge>3000-3500mm;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010602;Verkehrsschild liefern und anbringen, Größe 1, Höhe 3;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010603;Verkehrsschild liefern und anbringen, Größe 1, Höhe 2, Zusatzz. zeitl. Begrenzung;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010604;Verkehrsschild liefern und anbringen, Größe 1, Höhe 3, Zusatzz. Car-Sharing;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010605;Verkehrsschild liefern und anbringen, Größe 1, rund;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010606;Rammschutzpoller liefern und einbauen;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010607;Bodenhülse;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010608;Historische Stele herstellen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010609;Infotafel VBB liefern und montieren;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010610;Sitzbank mit Rückenlehne, liefern und montieren;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010611;Sitzbank mit Teilrückenlehne, gerundet, liefern und montieren;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010612;Schachtdeckel erneuern;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010613;Schachtdeckel erneuern;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010614;Fahrradbügel (Hoch-/Tief, einseitig);18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010615;Fahrradbügel (Hoch-/Tief, beidseitig);18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010616;Reinigung der bestehenden Fahrradabstellanlagen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010701;Erstellung eines Bauzeitenplanes;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010702;Erstellung eines Baustelleneinrichtungsplanes;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010703;Beweissicherung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010704;Verkehrsrechtliche Anordnung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010705;techn. Bauvermessung und sämtl. Absteckarbeiten durchführen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010706;Vorankündigung einer Baustelle gem. § 2, Abs. 2;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010707;Erarbeitung eines Sicherheits- und Gesundheitsschutzplanes;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010708;Erstellen einer Fotodokumentation;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
+010709;Bestandsdokumentation erstellen und an AG übergeben;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730.D83
 01;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730_V33.X83
 02;Bauzaunbanner nach Vorgabe des AG als farbigen Digitaldruck anfertigen und beschriften, zur Baustelle anfahren, sicher befestigen einschl. aller notwendigen Arbeiten. Standort ist noch abzustimmen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730_V33.X83
 03;Baustelle von allen Geräten, Anlagen, Einrichtungen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730_V33.X83
@@ -46,6 +93,82 @@
 07;Erarbeitung eines Sicherheits- und Gesundheitsschutzplanes gem. § 2, Abs. 3 Baustellenverordnung (BaustellV);1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730_V33.X83
 08;Erstellen einer Fotodokumentation zum Baufortschritt und von Punkten der kreuzenden Leitungen und Kabel, nach Montage und vor Verfüllung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730_V33.X83
 09;Bestandsdokumentation erstellen und an AG übergeben,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Los2_Griebnitzsee_20260730_V33.X83
+010101;Baustelle einrichten;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010102;Bauzaunbanner anfertigen und aufstellen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010103;Baustelle räumen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010201;Betonkuben abbauen;26,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010202;Bäume fällen, DU bis 20 cm;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010203;Wurzelstöcke roden, DU bis 20 cm,;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010204;Oberboden ggf. einschließlich Vegetationsdecke abtragen;50,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010205;Unterlage aus Kies/Schottertragschicht (RC-1) aufbrechen und verwerten;74,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010206;Bestandsbelag inkl. Trag- und Bindeschichtenrückbau;315,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010207;Fahrradbügel abbauen;28,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010208;Verkehrszeichen inkl. Pfosten abbauen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010301;Ver- und Entsorgungsleitungen sichern, T bis 1,50 m;55,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010302;Boden ausbauen und lagern;30,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010303;Haufwerk beproben;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010304;Boden (BM-0) entsorgen;20,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010305;Boden (BM-F3) entsorgen;10,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010306;Bodeneinbau/Verfüllen der Baugrube;30,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010307;Kabelgraben herstellen;70,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010308;Zulage für Bodenaushub in Handschachtung;35,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010309;Sand für Leitungszone, Kabelwarnband;55,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010310;Boden liefern und einbauen;80,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010311;Planum herstellen und verdichten;190,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010401;Magerbeton C 12/15, d ca. 5-10 cm;0,2;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010402;Einzelfundament C20/25, für Stele, l/b/t = 0,8x0,6x0,6m;0,7;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010403;Magerbeton C 12/15, d ca. 5-10 cm;0,2;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010404;Einzelfundament C20/25, für Stele, l/b/t = 0,8x0,6x0,6m;0,7;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010405;unbewehrtes Einzelfundament, C25/30, l/b/t = 0,92x0,92x0,12m;0,11;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010501;Begrenzungsband herstellen, Grünfläche;91,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010502;Schottertragschicht herstellen, B+R Anlage, 25 cm;16,25;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010503;Betonsteinpflasterfläche, B+R Anlage, herstellen, 8cm;65,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010504;Schottertragschicht herstellen,  Grünfläche Gehweg, 18cm;20,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010505;Natursteinpflasterfläche herstellen, Grünfläche Gehweg, 5cm;105,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010506;Pflasterdecken Anpassung herstellen, bis 0,5m²;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010601;Rohplanum in zukünftigen Vegetationsflächen;110,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010602;Oberboden liefern und andecken;200,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010603;Rasenflächen gem. DIN 18 917 herstellen;110,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010604;Fertigstellungspflege der Rasenflächen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010605;Pflanzgruben für Bäume herstellen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010606;Erdgemisch für Pflanzgruben wie vor herstellen;12,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010607;Ungarische Eiche (Quercus frainetto)  liefern;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010608;Ahornblättrige Platane (Platanus hispanica) liefern;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010609;Solitärbaum pflanzen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010610;Dreibockverankerungen für Solitärbäume herstellen;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010611;Auftragen von weißer Stammschutzfarbe;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010612;Fertigstellungspflege der Baumpflanzungen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010613;Entwicklungspflege Bäume;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010614;"Potentilla fruticosa ""Goldteppich"" liefern";25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010615;"Hemerocallis x cultorum ""Stella d´Oro"" liefern";50,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010616;"Geranium wall. ""Rozanne"" liefern";65,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010617;"Panicum virgatum ""Shenandoah"" liefern";45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010618;"Verbena hastata ""Blue Spires"" (Eisenkraut) liefern";15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010619;"Pennisetum alopecuroides ""Hameln"" (Lampenputzergras) liefern";10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010620;Sträucher und Bodendecker fachgerecht pflanzen;205,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010621;Rindenmulch, ohne Holzanteile, gem. RAL-Gütebestimmungen;90,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010622;Fertigstellungspflege der Vegetationsflächen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010623;Entwicklungspflege Vegetationsflächen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010624;Einfassung herstellen, Grünfläche;90,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010701;Reparatursäule liefern und aufstellen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010702;Doppelstockparker liefern und montieren;120,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010703;Graffitischutz B+R;42,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010704;Rohrpfosten aufstellen Länge>3000-3500mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010705;Verkehrsschild liefern und anbringen, Größe 1, Höhe 3;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010706;Verkehrsschild liefern und anbringen, Größe 1, Höhe 3, Zusatzz. Car-Sharing;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010707;Infostele VBB liefern und montieren;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010708;Pfosten mit Wegweiser liefern und montieren;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010709;Sitzbank liefern und montieren;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010710;Sitzbank mit Rückenlehne liefern und montieren;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010801;Erstellung eines Bauzeitenplanes;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010802;Erstellung eines Baustelleneinrichtungsplanes;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010803;Beweissicherung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010804;Verkehrsrechtliche Anordnung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010805;techn. Bauvermessung und sämtl. Absteckarbeiten durchführen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010806;Vorankündigung einer Baustelle gem. § 2, Abs. 2;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010807;Erarbeitung eines Sicherheits- und Gesundheitsschutzplanes;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010808;Erstellen einer Fotodokumentation;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
+010809;Bestandsdokumentation erstellen und an AG übergeben;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730.D83
 01;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730_V33.X83
 02;Bauzaunbanner nach Vorgabe des AG als farbigen Digitaldruck anfertigen und beschriften, zur Baustelle anfahren, sicher befestigen einschl. aller notwendigen Arbeiten. Standort ist noch abzustimmen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730_V33.X83
 03;Baustelle von allen Geräten, Anlagen, Einrichtungen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Los1_Golm_20260730_V33.X83

@@ -1,4 +1,19 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.0001;Geländerkonstruktion, Flachstahl TRH 1;28,5;m;gaeb-flat;leistungsbeschreibungen/07035-HvdV-LV-VA.260724 -- LV TSchlosserarbeiten.D83
+01.0002;Handlauf, Geländerseitig, Edelstahl, rund Ø 33,7 mm TRH 1;34,0;m;gaeb-flat;leistungsbeschreibungen/07035-HvdV-LV-VA.260724 -- LV TSchlosserarbeiten.D83
+01.0003;Handlauf, Wandseitig, Edelstahl, rund Ø 33,7 mm TRH 1;39,5;m;gaeb-flat;leistungsbeschreibungen/07035-HvdV-LV-VA.260724 -- LV TSchlosserarbeiten.D83
+01.0004;Geländerkonstruktion, Flachstahl TRH 2;37,0;m;gaeb-flat;leistungsbeschreibungen/07035-HvdV-LV-VA.260724 -- LV TSchlosserarbeiten.D83
+01.0005;Handlauf, Geländerseitig, Edelstahl, rund Ø 33,7 mm TRH 2;41,5;m;gaeb-flat;leistungsbeschreibungen/07035-HvdV-LV-VA.260724 -- LV TSchlosserarbeiten.D83
+01.0006;Handlauf, Wandseitig, Edelstahl, rund Ø 33,7 mm TRH 2;53,5;m;gaeb-flat;leistungsbeschreibungen/07035-HvdV-LV-VA.260724 -- LV TSchlosserarbeiten.D83
+02.0001;Freistehende Stahlrahmenkonstruktion;2,0;St;gaeb-flat;leistungsbeschreibungen/07035-HvdV-LV-VA.260724 -- LV TSchlosserarbeiten.D83
+02.0002;Querträger UPN;12,6;m;gaeb-flat;leistungsbeschreibungen/07035-HvdV-LV-VA.260724 -- LV TSchlosserarbeiten.D83
+02.0003;Befestigungsprofile aus Winkelstahl für Trapezblechfassade;3,8;m;gaeb-flat;leistungsbeschreibungen/07035-HvdV-LV-VA.260724 -- LV TSchlosserarbeiten.D83
+02.0004;Dacheindeckung aus Trapezblech;7,974;m²;gaeb-flat;leistungsbeschreibungen/07035-HvdV-LV-VA.260724 -- LV TSchlosserarbeiten.D83
+02.0005;Fassadenbekleidung aus Trapezblech;9,156;m;gaeb-flat;leistungsbeschreibungen/07035-HvdV-LV-VA.260724 -- LV TSchlosserarbeiten.D83
+02.0006;Dachrinne;4,0;m;gaeb-flat;leistungsbeschreibungen/07035-HvdV-LV-VA.260724 -- LV TSchlosserarbeiten.D83
+02.0007;Fallrohr;2,5;m;gaeb-flat;leistungsbeschreibungen/07035-HvdV-LV-VA.260724 -- LV TSchlosserarbeiten.D83
+04.0001;Lohnstunden  Facharbeiter;20,0;h;gaeb-flat;leistungsbeschreibungen/07035-HvdV-LV-VA.260724 -- LV TSchlosserarbeiten.D83
+04.0002;Lohnstunden  Helfer;20,0;h;gaeb-flat;leistungsbeschreibungen/07035-HvdV-LV-VA.260724 -- LV TSchlosserarbeiten.D83
 0001;Liefern, herstellen und fachgerecht montieren einer Geländeranlage für Treppenläufe und Podeste.;28,5;m;gaeb;leistungsbeschreibungen/07035-HvdV-LV-VA.260724 -- LV TSchlosserarbeiten_V33.X83
 0002;Liefern und fachgerecht montieren eines durchgehenden Handlaufs aus Edelstahl, Werkstoff 1.4301, für den Innenbereich befestigt an Geländerkonstruktion der Vorposition;34,0;m;gaeb;leistungsbeschreibungen/07035-HvdV-LV-VA.260724 -- LV TSchlosserarbeiten_V33.X83
 0003;Liefern und fachgerecht montieren eines durchgehenden Wandhandlaufs aus Edelstahl, Werkstoff 1.4301, für den Innenbereich.;39,5;m;gaeb;leistungsbeschreibungen/07035-HvdV-LV-VA.260724 -- LV TSchlosserarbeiten_V33.X83

@@ -1,4 +1,303 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1.1.10;Tauchtemp.fühler L=150 mm;24,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.1.20;VA-Tauchhülse 150 mm;24,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.1.30;Tauchtemp.fühler L=200 mm;4,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.1.40;VA-Tauchhülse 200 mm;4,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.1.50;Raumtemperatur/-feuchte-fühler;7,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.1.60;Raumtemperatur-Fühler;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.1.70;Tauchtemperatur-Wächter Einstellbereich 15 bis 95 Grad C;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.1.80;Tauchtemperatur-Sicherheitsbegrenzer Einstellbereich 30-110GradC PN16 1Schaltstufe;2,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.1.90;Druck-Sicherheitsbegrenzer Minimaldrucküberwachung für Flüssigkeiten;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.1.100;Differenzdruck-Wächter 30...500Pa;2,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.1.110;3-Wege Stellventil mit Antrieb stetig, DN 20;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.1.120;3-Wege Stellventil mit Antrieb stetig, DN 25;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.1.130;3-Wege Stellventil mit Antrieb stetig, DN 32;3,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.1.140;3-Wege Stellventil mit Antrieb stetig, DN 40;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.1.150;3-Wege Stellventil mit Antrieb stetig, DN 50;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.1.160;2-Wege Stellventil mit Antrieb stetig, DN 50;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.1.170;Graviertes Bezeichnungsschild für Feldgeräte;110,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.2.10;"BACnet Automationsstation inkl. 19""-Bedien- und Visualisierungseinheit";1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.2.20;Bedieneinheit für Automationsstation;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.2.30;Bedieneinheit Kassenbereich;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.2.40;Gigabit Switch, 5 Ports, Hutschienenmontage;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.2.50;CAT 6 -Patchkabel, 2 m;3,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.2.60;M-Bus Schnittstelle DDC bis 60 Teilnehmer;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.2.70;Datenschnittstelleneinheit Hardware/Grundsoftware Modbus-RTU;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.3.10;Phys. Ein-/Ausg. Binär Schalten/Stellen;19,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.3.20;Phys. Ein-/Ausg. AnalogAusgStell;23,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.3.30;Phys. Ein-/Ausg. BinärEingMelden;91,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.3.40;Phys. Ein-/Ausg. AnalogEingMessen;64,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.3.50;Programmierung M-Bus je Zähler;27,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.3.60;Gemeinsame Ein-/Ausgabe Modbus;20,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.3.70;Gemeinsame Ein-/Ausgabe BACnet;109,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.10;Standschrank, eintürig 800x1800x400 für Sockelmontage aus Stahlblech;3,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.20;Einspeisung 400VAC 63A;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.30;Phasenlampen;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.40;Phasenüberwachnung 400VAC;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.50;Überspannungsschutz 400VAC Einspeisung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.60;Netzwiederkehrschaltung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.70;Steuerspannungstransformator 230V AC;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.80;Sicherheitstransformator 230/24V AC;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.90;Schaltschrankbeleuchtung mit Steckdose je Schaltschrankfeld;3,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.100;Schaltschranklüfter 230V/50Hz;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.110;Sammelstörmeldung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.120;Brandmeldeschaltung mit Steuerung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.130;Pumpensteuerung 230VAC 4kW Netzabgang mit Meldung;8,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.140;Motorbaugruppe 230 V / 4,0 kW / EC;2,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.150;Netzabgang 230VAC 6A Leitungsschutzschalter für autarke Warmwasserbereitung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.160;Netzabgang 230VAC 16A Leitungsschutzschalter für autarke RLT;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.170;Netzabgang 400VAC 20A Leitungsschutzschalter für autarke RLT;3,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.180;Reparaturschalterüberwachung;2,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.190;Strömungsüberwachung Druckschalter;2,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.200;Klappensteuerung stetig Rückmeldung;10,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.210;Klappensteuerung 230V Auf/Zu Rückmeldung;2,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.220;Temperaturüberwachung (STW/STB);3,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.230;Drucküberwachung (Min/Max);1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.240;Meldung potentialfrei;31,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.250;Aufschaltung Messwert passiv;43,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.260;Aufschaltung Stellbefehl stetig;10,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.270;Einbau/Verdrahtung DDC auf Montageplatte;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.280;1:1 Funktionstest je Datenpunkt;201,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+1.4.290;Inbetriebnahme Schaltschrank;3,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.1.10;Tauchtemp.fühler L=150 mm;4,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.1.20;VA-Tauchhülse 150 mm;4,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.1.30;Raumtemperatur/-feuchte-fühler;6,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.1.40;Tauchtemperatur-Sicherheitsbegrenzer Einstellbereich 30-110GradC PN16 1Schaltstufe;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.1.50;Differenzdruck-Wächter 30...500 Pa;4,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.1.60;Differenzdruck-Wächter 30...300 Pa;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.1.70;Rauchmelder für Luftleitung mit DiBt-Zulassung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.1.80;2-Wege Stellventil mit Antrieb stetig, DN 40;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.1.90;Graviertes Bezeichnungsschild für Feldgeräte;44,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.2.10;"BACnet Automationsstation inkl. 19""-Bedien- und Visualisierungseinheit";1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.2.20;Gigabit Switch, 5 Ports, Hutschienenmontage;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.2.30;CAT 6 -Patchkabel, 2 m;2,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.2.40;M-Bus Schnittstelle DDC bis 3 Teilnehmer;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.3.10;Phys. Ein-/Ausg. Binär Schalten/Stellen;10,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.3.20;Phys. Ein-/Ausg. AnalogAusgStell;6,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.3.30;Phys. Ein-/Ausg. BinärEingMelden;53,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.3.40;Phys. Ein-/Ausg. AnalogEingMessen;18,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.3.50;Gemeinsame Ein-/Ausgabe BACnet;36,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.3.60;Programmierung M-Bus je Zähler;2,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.10;Standschrank, eintürig 800x1800x400 für Sockelmontage aus Stahlblech;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.20;Einspeisung 400VAC 32A;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.30;Phasenlampen;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.40;Phasenüberwachnung 400VAC;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.50;Überspannungsschutz 400VAC Einspeisung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.60;Netzwiederkehrschaltung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.70;Steuerspannungstransformator 230V AC;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.80;Sicherheitstransformator 230/24V AC;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.90;Schaltschrankbeleuchtung mit Steckdose je Schaltschrankfeld;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.100;Schaltschranklüfter 230V/50Hz;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.110;Brandmeldeschaltung mit Steuerung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.120;Motorbaugruppe  230 V / 4,0 kW / EC;3,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.130;Netzabgang für externen FU;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.140;Netzabgang 400VAC 20A Leitungsschutzschalter für autarke RLT;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.150;Reparaturschalterüberwachung;4,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.160;Filterüberwachung Druckschalter;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.170;Strömungsüberwachung Druckschalter;4,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.180;Klappensteuerung stetig Rückmeldung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.190;Klappensteuerung 230V Auf/Zu Rückmeldung;4,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.200;Temperaturüberwachung (STW/STB);1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.210;Rauchmeldeüberwachung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.220;Meldung potentialfrei;21,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.230;Aufschaltung Messwert passiv;16,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.240;Aufschaltung Stellbefehl stetig;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.250;Einbau/Verdrahtung DDC auf Montageplatte;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.260;1:1 Funktionstest je Datenpunkt;91,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+2.4.270;Inbetriebnahme Schaltschrank;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.1.10;Temperatur-Messwertgeber im Freien, aP;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.1.20;Raumtemperatur/-feuchte-fühler;6,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.1.30;Raumtemperatur/-feuchte-fühler Sichtbereich;3,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.1.40;Graviertes Bezeichnungsschild für Feldgeräte;14,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.2.10;"BACnet Automationsstation inkl. 19""-Bedien- und Visualisierungseinheit";1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.2.20;Gigabit Switch, 5 Ports, Hutschienenmontage;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.2.30;CAT 6 -Patchkabel, 2 m;2,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.2.40;M-Bus Schnittstelle DDC bis 3 Teilnehmer;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.3.10;Phys. Ein-/Ausg. Binär Schalten/Stellen;4,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.3.20;Phys. Ein-/Ausg. AnalogAusgStell;2,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.3.30;Phys. Ein-/Ausg. BinärEingMelden;33,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.3.40;Phys. Ein-/Ausg. AnalogEingMessen;21,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.3.50;Gemeinsame Ein-/Ausgabe BACnet;60,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.3.60;Programmierung M-Bus je Zähler;2,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.4.10;Standschrank, eintürig 800x1800x400 für Sockelmontage aus Stahlblech;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.4.20;Einspeisung 400VAC 80A;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.4.30;Sammelschienensystem 80A;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.4.40;Phasenlampen;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.4.50;Phasenüberwachnung 400VAC;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.4.60;Überspannungsschutz 400VAC Einspeisung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.4.70;Netzwiederkehrschaltung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.4.80;Steuerspannungstransformator 230V AC;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.4.90;Sicherheitstransformator 230/24V AC;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.4.100;Schaltschrankbeleuchtung mit Steckdose je Schaltschrankfeld;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.4.110;Schaltschranklüfter 230V/50Hz;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.4.120;Brandmeldeschaltung mit Steuerung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.4.130;Netzabgang 400VAC 20A Leitungsschutzschalter für autarke RLT;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.4.140;Netzabgang 400VAC 63A Leitungsschutzschalter für autarke RLT;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.4.150;Meldung potentialfrei;21,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.4.160;Aufschaltung Messwert passiv;19,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.4.170;Einbau/Verdrahtung DDC auf Montageplatte;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.4.180;1:1 Funktionstest je Datenpunkt;60,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+3.4.190;Inbetriebnahme Schaltschrank;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.1.10;Raumtemperatur/-feuchte-fühler;3,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.1.20;Differenzdruck-Wächter 30...500 Pa;3,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.1.30;Differenzdruck-Wächter 30...300 Pa;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.1.40;Rauchmelder für Luftleitung mit DiBt-Zulassung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.1.50;Graviertes Bezeichnungsschild für Feldgeräte;20,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.2.10;"BACnet Automationsstation inkl. 19""-Bedien- und Visualisierungseinheit";1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.2.20;Gigabit Switch, 5 Ports, Hutschienenmontage;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.2.30;CAT 6 -Patchkabel, 2 m;2,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.3.10;Phys. Ein-/Ausg. Binär Schalten/Stellen;6,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.3.20;Phys. Ein-/Ausg. AnalogAusgStell;3,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.3.30;Phys. Ein-/Ausg. BinärEingMelden;47,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.3.40;Phys. Ein-/Ausg. AnalogEingMessen;6,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.3.50;Gemeinsame Ein-/Ausgabe BACnet;2,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.10;Standschrank, eintürig 800x1800x400 für Sockelmontage aus Stahlblech;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.20;Einspeisung 400VAC 16A;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.30;Phasenlampen;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.40;Phasenüberwachnung 400VAC;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.50;Überspannungsschutz 400VAC Einspeisung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.60;Netzwiederkehrschaltung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.70;Steuerspannungstransformator 230V AC;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.80;Sicherheitstransformator 230/24V AC;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.90;Schaltschrankbeleuchtung mit Steckdose je Schaltschrankfeld;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.100;Schaltschranklüfter 230V/50Hz;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.110;Brandmeldeschaltung mit Steuerung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.120;Motorbaugruppe 230 V / 4,0 kW / EC;3,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.130;Reparaturschalterüberwachung;3,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.140;Filterüberwachung Druckschalter;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.150;Strömungsüberwachung Druckschalter;3,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.160;Klappensteuerung 230V Auf/Zu Rückmeldung;3,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.170;Rauchmeldeüberwachung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.180;Meldung potentialfrei;25,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.190;Aufschaltung Messwert passiv;6,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.200;Einbau/Verdrahtung DDC auf Montageplatte;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.210;1:1 Funktionstest je Datenpunkt;66,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+4.4.220;Inbetriebnahme Schaltschrank;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+5.1.10;3-Wege Stellventil mit Antrieb stetig, DN 25;2,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+5.1.20;Tauchtemp.fühler L=150 mm;4,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+5.1.30;VA-Tauchhülse 150 mm;4,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+5.1.40;Graviertes Bezeichnungsschild für Feldgeräte;8,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+5.2.10;Transport und Aufstellung Schaltschrank;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+5.2.20;Wiedermontage und Anschluss der Kabel;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+5.2.30;Inbetriebnahme Schaltschrank;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+5.2.40;Wiedereinbindung und Inbetriebnahme Bestands-RLT-Anlagen;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+5.2.50;Bestandskabel neu verlegen (RLT Zu-/Umluft);90,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+5.2.60;Bestandskabel neu verlegen (RLT Abluft);44,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+5.2.70;Bestandskabel neu verlegen (Steiger);153,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+5.2.80;Bestandskabel neu verlegen (Heizung);36,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+5.2.90;Bestandskabel neu verlegen (Klappe);22,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+5.2.100;Bestandskabel neu verlegen (Durchgang);75,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+5.2.110;Bestandskabel neu verlegen (links);8,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.10;NHXMH-J 3x1,5 Mantelleitung in Rohre oder Kanäle einziehen;1700,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.20;Elektroanschluss beidseitig;50,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.30;NHXMH-J 5x1,5 Mantelleitung in Rohre oder Kanäle einziehen;100,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.40;Elektroanschluss beidseitig;4,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.50;NHXMH-J 3x2,5 Mantelleitung in Rohre oder Kanäle einziehen;300,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.60;Elektroanschluss beidseitig;10,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.70;NHXMH-J 5x2,5 Mantelleitung in Rohre oder Kanäle einziehen;100,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.80;Elektroanschluss beidseitig;4,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.90;NHXMH-J 3x4 Mantelleitung in Rohre oder Kanäle einziehen;200,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.100;Elektroanschluss beidseitig;10,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.110;NHXMH-J 5x4 Mantelleitung in Rohre oder Kanäle einziehen;90,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.120;Elektroanschluss beidseitig;3,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.130;NHXMH-J 3x6 Mantelleitung in Rohre oder Kanäle einziehen;90,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.140;Elektroanschluss beidseitig;2,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.150;NHXMH-J 5x6 Mantelleitung in Rohre oder Kanäle einziehen;90,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.160;Elektroanschluss beidseitig;3,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.170;NHXMH-J 5x16 Mantelleitung in Rohre oder Kanäle einziehen;50,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.180;Elektroanschluss beidseitig;2,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.190;J-H(St)H 2x2x0,8 mm Fernmeldeleitung in Rohre oder Kanäle einziehen;2300,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.200;Elektroanschluss beidseitig;90,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.210;J-H(St)H 4x2x0,8 mm Fernmeldeleitung in Rohre oder Kanäle einziehen;3100,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.220;Elektroanschluss beidseitig;80,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.230;J-H(St)H 8x2x0,8 mm Fernmeldeleitung in Rohre oder Kanäle einziehen;100,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.240;Elektroanschluss beidseitig;5,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.250;Datenkabel Kat.6A geschirmt 4x2xAWG23, Außenb.;300,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.260;Elektroanschluss beidseitig;10,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.270;Potentialausgleichleitung NYY-J 1x16  gnge;50,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.280;Potentialausgleichleitung NYY-J 1x6  gnge;50,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.1.290;PA-Anschlüsse;10,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.10;Standard Kabelrinne 100x60 auf verlegefähigem Tragsystem;90,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.20;Standard Kabelrinne 200x60 auf verlegefähigem Tragsystem;50,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.30;Standard Kabelrinne 300x60 auf verlegefähigem Tragsystem;25,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.40;Trennsteg;50,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.50;Außenbogen f. verzinkt Kabelrinne 100x60;15,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.60;Außenbogen f. verzinkt Kabelrinne 200x60;10,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.70;Außenbogen f. verzinkt Kabelrinne 300x60;5,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.80;Vertikaler Auf-, Abgang verzinkt 100x60;5,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.90;Vertikaler Auf-, Abgang verzinkt 200x60;5,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.100;Steigtrasse 200 mm für direkte Wandbefestigung;40,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.110;Steigtrasse 300 mm für direkte Wandbefestigung;15,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.120;HUF-Hängestiel für Kabelrinne l=300 mm;50,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.130;HUF-Hängestiel für Kabelrinne l=400 mm;30,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.140;Standardausleger an Hängestiel KTU 110;50,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.150;Standardausleger an Hängestiel KTU 210;30,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.160;Wandausleger 110x40x55 mm (LxBxH), feuerverzinkt;50,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.170;Wandausleger 210x40x55 mm (LxBxH), feuerverzinkt;30,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.180;Elektroinstallationsrohr PVC hart M20;125,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.190;Elektroinstallationsrohr PVC hart M25;100,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.200;Elektroinstallationsrohr PVC hart M32;20,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.210;Abzweigkasten Kunststoff 100x100 mm;30,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.220;C-Profilschiene, 2,0 mm;40,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.230;Bügelschelle 16 mm;30,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.240;Bügelschelle 22 mm;20,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.250;Bügelschelle 28 mm;10,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.260;Kabelsammelhalter, Stahl, 50 x 85 mm;15,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.270;Kabelsammelhalter, Stahl, 35 x 60 mm;10,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.280;Kabelklammer, Halogenfrei, Flügelbreite ca. 160 mm;50,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.290;Kabelklammer, Halogenfrei, Bügelbreite ca. 240 mm;50,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.300;Kabelverschraubung Kunststoff  M20 (PG13,5);5,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.310;Kabelverschraubung Kunststoff  M25 (PG16);5,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+6.2.320;Kabelverschraubung Kunststoff  M32 (PG21);5,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+7.1.10;Gateway BACnet IP to Metasys;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+7.2.10;Abstimmung BACNet-Client;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+7.2.20;Erstellen der aktuellen EDE-Liste;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+7.2.30;Abstimmungen EDE-Liste mit JCI;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+7.2.40;Konfiguration/Parametrierung SNE DP durch JCI;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+7.2.50;Konfiguration/Parametrierung SNE DP durch AN;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+7.2.60;1:1 Test BACnet-Objekte AN;728,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+7.2.70;1:1 Test BACnet-Objekte JCI;728,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+7.2.80;Anlagenschema durch JCI;40,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+7.2.90;Generierung dynamischer Einblendungen durch JCI;763,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+7.2.100;Managementfunktion Ereignis-Langzeitsicherung durch JCI;197,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+7.2.110;Managementfunktion Historisierung in Datenbank durch JCI;142,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+7.2.120;Bedienfunktion Ereignis- Anweisungstext durch JCI;69,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+7.2.130;Bedienfunktion Nachricht an externer Stelle durch JCI;14,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+8.1.10;Automations-/Leitebene Schnittstellen;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+8.1.20;BSK-Feldmodul;17,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+8.1.30;Spannungsversorgung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+8.1.40;Dienstleistungen;17,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.1.10;Schnittstelle zum digitalen Betriebstagebuch TASKO;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.2.10;Kernbohrung Stahlbeton, D bis 50 mm, T über 20 bis 50 cm;10,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.2.20;Kernbohrung Stahlbeton, D bis 50 mm, T über 50 bis 80 cm;5,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.2.30;Kernbohrung Mauerwerk, D bis 50 mm, T über 20 bis 50 cm;20,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.2.40;Kernbohrung Mauerwerk, D bis 50 mm, T über 50 bis 80 cm;10,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.2.50;Beantragung von Kernbohrungen und Durchbrüchen;10,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.2.60;Anzeichnen von Kernbohrungen und Durchbrüchen;10,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.2.70;Wandschlitz in Mauerwerk 25 x 25 mm;20,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.2.80;Wandschlitz in Mauerwerk 50 x 25 mm;10,0;m;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.2.90;Herstellen einer Vorbohrung bis 20 mm;10,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.2.100;Brandschutzverschluss von Durchbrüchen bis 0,1 m²;30,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.2.110;Brandschutzverschluss von Durchbrüchen 0,1 bis 0,25  m²;5,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.2.120;Abkleben Komponenten;20,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.2.130;Fahrbare Gerüste aufbauen, abbauen, vorhalten;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.2.140;Fahrbare Gerüste vorhalten;5,0;StWo;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.2.150;mobile Hubarbeitsbühne, batteriebetrieben;5,0;d;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.3.10;Profilstahlkonstruktion, Montagehöhe bis 3,5 m;80,0;kg;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.3.20;Profilstahlkonstruktion, Montagehöhe über 3,5 m bis 6 m;50,0;kg;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.3.30;Profilstahlkonstruktion nichtrostend, Montagehöhe bis 3,5 m;50,0;kg;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.4.10;Mitwirkung bei Funktionsprüfungen;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.4.20;Mitwirkung bei der Sachverständigen-Prüfung RLT-Anlagen;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.4.30;Mitwirkung bei der Wirkprinzip-Prüfung;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.4.40;Wiederholte Einweisung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.5.10;Montage- und Werkstattplanung;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.5.20;Brandschutzdokumentation;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.5.30;Bestandsdokumentation;1,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.5.40;Dokumentation zur Schadstoffarmut;1,0;psch;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.6.10;Obermonteur;10,0;h;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.6.20;Monteur;10,0;h;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.6.30;Helfer;10,0;h;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
+9.7.10;Wartungs- / Inspektionskosten Gebäudeautomation;4,0;St;gaeb-flat;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.D83
 10;Tauchtemperaturfühler Länge 150mm;24,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
 20;VA-Tauchhülse 150 mm;24,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
 30;Tauchtemperaturfühler Länge 200mm;4,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
@@ -298,6 +597,305 @@
 20;Stundenverrechnungssatz für Monteur;10,0;h;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
 30;Stundenverrechnungssatz für Helfer;10,0;h;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
 10;Wartung / Inspektion für die wartungspflichtigen Komponenten der in diesem Leistungsverzeichnis enthaltenen Gebäudeautomation einschließlich direktem Zubehör, gemäß anliegendem Muster, einschließlich aller Nebenkosten, innerhalb der Verjährungszeit für Mängelansprüche.;4,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+1.1.10;Tauchtemp.fühler L=150 mm;24,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.1.20;VA-Tauchhülse 150 mm;24,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.1.30;Tauchtemp.fühler L=200 mm;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.1.40;VA-Tauchhülse 200 mm;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.1.50;Raumtemperatur/-feuchte-fühler;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.1.60;Raumtemperatur-Fühler;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.1.70;Tauchtemperatur-Wächter Einstellbereich 15 bis 95 Grad C;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.1.80;Tauchtemperatur-Sicherheitsbegrenzer Einstellbereich 30-110GradC PN16 1Schaltstufe;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.1.90;Druck-Sicherheitsbegrenzer Minimaldrucküberwachung für Flüssigkeiten;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.1.100;Differenzdruck-Wächter 30...500Pa;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.1.110;3-Wege Stellventil mit Antrieb stetig, DN 20;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.1.120;3-Wege Stellventil mit Antrieb stetig, DN 25;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.1.130;3-Wege Stellventil mit Antrieb stetig, DN 32;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.1.140;3-Wege Stellventil mit Antrieb stetig, DN 40;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.1.150;3-Wege Stellventil mit Antrieb stetig, DN 50;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.1.160;2-Wege Stellventil mit Antrieb stetig, DN 50;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.1.170;Graviertes Bezeichnungsschild für Feldgeräte;110,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.2.10;"BACnet Automationsstation inkl. 19""-Bedien- und Visualisierungseinheit";1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.2.20;Bedieneinheit für Automationsstation;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.2.30;Bedieneinheit Kassenbereich;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.2.40;Gigabit Switch, 5 Ports, Hutschienenmontage;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.2.50;CAT 6 -Patchkabel, 2 m;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.2.60;M-Bus Schnittstelle DDC bis 60 Teilnehmer;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.2.70;Datenschnittstelleneinheit Hardware/Grundsoftware Modbus-RTU;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.3.10;Phys. Ein-/Ausg. Binär Schalten/Stellen;19,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.3.20;Phys. Ein-/Ausg. AnalogAusgStell;23,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.3.30;Phys. Ein-/Ausg. BinärEingMelden;91,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.3.40;Phys. Ein-/Ausg. AnalogEingMessen;64,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.3.50;Programmierung M-Bus je Zähler;27,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.3.60;Gemeinsame Ein-/Ausgabe Modbus;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.3.70;Gemeinsame Ein-/Ausgabe BACnet;109,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.10;Standschrank, eintürig 800x1800x400 für Sockelmontage aus Stahlblech;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.20;Einspeisung 400VAC 63A;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.30;Phasenlampen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.40;Phasenüberwachnung 400VAC;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.50;Überspannungsschutz 400VAC Einspeisung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.60;Netzwiederkehrschaltung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.70;Steuerspannungstransformator 230V AC;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.80;Sicherheitstransformator 230/24V AC;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.90;Schaltschrankbeleuchtung mit Steckdose je Schaltschrankfeld;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.100;Schaltschranklüfter 230V/50Hz;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.110;Sammelstörmeldung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.120;Brandmeldeschaltung mit Steuerung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.130;Pumpensteuerung 230VAC 4kW Netzabgang mit Meldung;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.140;Motorbaugruppe 230 V / 4,0 kW / EC;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.150;Netzabgang 230VAC 6A Leitungsschutzschalter für autarke Warmwasserbereitung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.160;Netzabgang 230VAC 16A Leitungsschutzschalter für autarke RLT;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.170;Netzabgang 400VAC 20A Leitungsschutzschalter für autarke RLT;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.180;Reparaturschalterüberwachung;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.190;Strömungsüberwachung Druckschalter;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.200;Klappensteuerung stetig Rückmeldung;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.210;Klappensteuerung 230V Auf/Zu Rückmeldung;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.220;Temperaturüberwachung (STW/STB);3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.230;Drucküberwachung (Min/Max);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.240;Meldung potentialfrei;31,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.250;Aufschaltung Messwert passiv;43,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.260;Aufschaltung Stellbefehl stetig;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.270;Einbau/Verdrahtung DDC auf Montageplatte;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.280;1:1 Funktionstest je Datenpunkt;201,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+1.4.290;Inbetriebnahme Schaltschrank;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.1.10;Tauchtemp.fühler L=150 mm;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.1.20;VA-Tauchhülse 150 mm;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.1.30;Raumtemperatur/-feuchte-fühler;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.1.40;Tauchtemperatur-Sicherheitsbegrenzer Einstellbereich 30-110GradC PN16 1Schaltstufe;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.1.50;Differenzdruck-Wächter 30...500 Pa;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.1.60;Differenzdruck-Wächter 30...300 Pa;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.1.70;Rauchmelder für Luftleitung mit DiBt-Zulassung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.1.80;2-Wege Stellventil mit Antrieb stetig, DN 40;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.1.90;Graviertes Bezeichnungsschild für Feldgeräte;44,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.2.10;"BACnet Automationsstation inkl. 19""-Bedien- und Visualisierungseinheit";1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.2.20;Gigabit Switch, 5 Ports, Hutschienenmontage;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.2.30;CAT 6 -Patchkabel, 2 m;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.2.40;M-Bus Schnittstelle DDC bis 3 Teilnehmer;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.3.10;Phys. Ein-/Ausg. Binär Schalten/Stellen;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.3.20;Phys. Ein-/Ausg. AnalogAusgStell;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.3.30;Phys. Ein-/Ausg. BinärEingMelden;53,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.3.40;Phys. Ein-/Ausg. AnalogEingMessen;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.3.50;Gemeinsame Ein-/Ausgabe BACnet;36,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.3.60;Programmierung M-Bus je Zähler;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.10;Standschrank, eintürig 800x1800x400 für Sockelmontage aus Stahlblech;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.20;Einspeisung 400VAC 32A;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.30;Phasenlampen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.40;Phasenüberwachnung 400VAC;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.50;Überspannungsschutz 400VAC Einspeisung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.60;Netzwiederkehrschaltung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.70;Steuerspannungstransformator 230V AC;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.80;Sicherheitstransformator 230/24V AC;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.90;Schaltschrankbeleuchtung mit Steckdose je Schaltschrankfeld;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.100;Schaltschranklüfter 230V/50Hz;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.110;Brandmeldeschaltung mit Steuerung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.120;Motorbaugruppe  230 V / 4,0 kW / EC;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.130;Netzabgang für externen FU;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.140;Netzabgang 400VAC 20A Leitungsschutzschalter für autarke RLT;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.150;Reparaturschalterüberwachung;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.160;Filterüberwachung Druckschalter;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.170;Strömungsüberwachung Druckschalter;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.180;Klappensteuerung stetig Rückmeldung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.190;Klappensteuerung 230V Auf/Zu Rückmeldung;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.200;Temperaturüberwachung (STW/STB);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.210;Rauchmeldeüberwachung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.220;Meldung potentialfrei;21,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.230;Aufschaltung Messwert passiv;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.240;Aufschaltung Stellbefehl stetig;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.250;Einbau/Verdrahtung DDC auf Montageplatte;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.260;1:1 Funktionstest je Datenpunkt;91,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+2.4.270;Inbetriebnahme Schaltschrank;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.1.10;Temperatur-Messwertgeber im Freien, aP;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.1.20;Raumtemperatur/-feuchte-fühler;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.1.30;Raumtemperatur/-feuchte-fühler Sichtbereich;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.1.40;Graviertes Bezeichnungsschild für Feldgeräte;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.2.10;"BACnet Automationsstation inkl. 19""-Bedien- und Visualisierungseinheit";1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.2.20;Gigabit Switch, 5 Ports, Hutschienenmontage;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.2.30;CAT 6 -Patchkabel, 2 m;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.2.40;M-Bus Schnittstelle DDC bis 3 Teilnehmer;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.3.10;Phys. Ein-/Ausg. Binär Schalten/Stellen;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.3.20;Phys. Ein-/Ausg. AnalogAusgStell;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.3.30;Phys. Ein-/Ausg. BinärEingMelden;33,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.3.40;Phys. Ein-/Ausg. AnalogEingMessen;21,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.3.50;Gemeinsame Ein-/Ausgabe BACnet;60,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.3.60;Programmierung M-Bus je Zähler;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.4.10;Standschrank, eintürig 800x1800x400 für Sockelmontage aus Stahlblech;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.4.20;Einspeisung 400VAC 80A;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.4.30;Sammelschienensystem 80A;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.4.40;Phasenlampen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.4.50;Phasenüberwachnung 400VAC;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.4.60;Überspannungsschutz 400VAC Einspeisung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.4.70;Netzwiederkehrschaltung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.4.80;Steuerspannungstransformator 230V AC;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.4.90;Sicherheitstransformator 230/24V AC;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.4.100;Schaltschrankbeleuchtung mit Steckdose je Schaltschrankfeld;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.4.110;Schaltschranklüfter 230V/50Hz;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.4.120;Brandmeldeschaltung mit Steuerung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.4.130;Netzabgang 400VAC 20A Leitungsschutzschalter für autarke RLT;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.4.140;Netzabgang 400VAC 63A Leitungsschutzschalter für autarke RLT;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.4.150;Meldung potentialfrei;21,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.4.160;Aufschaltung Messwert passiv;19,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.4.170;Einbau/Verdrahtung DDC auf Montageplatte;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.4.180;1:1 Funktionstest je Datenpunkt;60,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+3.4.190;Inbetriebnahme Schaltschrank;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.1.10;Raumtemperatur/-feuchte-fühler;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.1.20;Differenzdruck-Wächter 30...500 Pa;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.1.30;Differenzdruck-Wächter 30...300 Pa;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.1.40;Rauchmelder für Luftleitung mit DiBt-Zulassung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.1.50;Graviertes Bezeichnungsschild für Feldgeräte;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.2.10;"BACnet Automationsstation inkl. 19""-Bedien- und Visualisierungseinheit";1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.2.20;Gigabit Switch, 5 Ports, Hutschienenmontage;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.2.30;CAT 6 -Patchkabel, 2 m;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.3.10;Phys. Ein-/Ausg. Binär Schalten/Stellen;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.3.20;Phys. Ein-/Ausg. AnalogAusgStell;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.3.30;Phys. Ein-/Ausg. BinärEingMelden;47,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.3.40;Phys. Ein-/Ausg. AnalogEingMessen;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.3.50;Gemeinsame Ein-/Ausgabe BACnet;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.10;Standschrank, eintürig 800x1800x400 für Sockelmontage aus Stahlblech;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.20;Einspeisung 400VAC 16A;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.30;Phasenlampen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.40;Phasenüberwachnung 400VAC;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.50;Überspannungsschutz 400VAC Einspeisung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.60;Netzwiederkehrschaltung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.70;Steuerspannungstransformator 230V AC;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.80;Sicherheitstransformator 230/24V AC;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.90;Schaltschrankbeleuchtung mit Steckdose je Schaltschrankfeld;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.100;Schaltschranklüfter 230V/50Hz;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.110;Brandmeldeschaltung mit Steuerung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.120;Motorbaugruppe 230 V / 4,0 kW / EC;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.130;Reparaturschalterüberwachung;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.140;Filterüberwachung Druckschalter;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.150;Strömungsüberwachung Druckschalter;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.160;Klappensteuerung 230V Auf/Zu Rückmeldung;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.170;Rauchmeldeüberwachung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.180;Meldung potentialfrei;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.190;Aufschaltung Messwert passiv;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.200;Einbau/Verdrahtung DDC auf Montageplatte;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.210;1:1 Funktionstest je Datenpunkt;66,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+4.4.220;Inbetriebnahme Schaltschrank;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+5.1.10;3-Wege Stellventil mit Antrieb stetig, DN 25;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+5.1.20;Tauchtemp.fühler L=150 mm;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+5.1.30;VA-Tauchhülse 150 mm;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+5.1.40;Graviertes Bezeichnungsschild für Feldgeräte;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+5.2.10;Transport und Aufstellung Schaltschrank;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+5.2.20;Wiedermontage und Anschluss der Kabel;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+5.2.30;Inbetriebnahme Schaltschrank;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+5.2.40;Wiedereinbindung und Inbetriebnahme Bestands-RLT-Anlagen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+5.2.50;Bestandskabel neu verlegen (RLT Zu-/Umluft);90,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+5.2.60;Bestandskabel neu verlegen (RLT Abluft);44,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+5.2.70;Bestandskabel neu verlegen (Steiger);153,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+5.2.80;Bestandskabel neu verlegen (Heizung);36,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+5.2.90;Bestandskabel neu verlegen (Klappe);22,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+5.2.100;Bestandskabel neu verlegen (Durchgang);75,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+5.2.110;Bestandskabel neu verlegen (links);8,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.10;NHXMH-J 3x1,5 Mantelleitung in Rohre oder Kanäle einziehen;1700,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.20;Elektroanschluss beidseitig;50,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.30;NHXMH-J 5x1,5 Mantelleitung in Rohre oder Kanäle einziehen;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.40;Elektroanschluss beidseitig;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.50;NHXMH-J 3x2,5 Mantelleitung in Rohre oder Kanäle einziehen;300,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.60;Elektroanschluss beidseitig;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.70;NHXMH-J 5x2,5 Mantelleitung in Rohre oder Kanäle einziehen;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.80;Elektroanschluss beidseitig;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.90;NHXMH-J 3x4 Mantelleitung in Rohre oder Kanäle einziehen;200,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.100;Elektroanschluss beidseitig;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.110;NHXMH-J 5x4 Mantelleitung in Rohre oder Kanäle einziehen;90,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.120;Elektroanschluss beidseitig;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.130;NHXMH-J 3x6 Mantelleitung in Rohre oder Kanäle einziehen;90,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.140;Elektroanschluss beidseitig;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.150;NHXMH-J 5x6 Mantelleitung in Rohre oder Kanäle einziehen;90,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.160;Elektroanschluss beidseitig;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.170;NHXMH-J 5x16 Mantelleitung in Rohre oder Kanäle einziehen;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.180;Elektroanschluss beidseitig;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.190;J-H(St)H 2x2x0,8 mm Fernmeldeleitung in Rohre oder Kanäle einziehen;2300,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.200;Elektroanschluss beidseitig;90,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.210;J-H(St)H 4x2x0,8 mm Fernmeldeleitung in Rohre oder Kanäle einziehen;3100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.220;Elektroanschluss beidseitig;80,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.230;J-H(St)H 8x2x0,8 mm Fernmeldeleitung in Rohre oder Kanäle einziehen;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.240;Elektroanschluss beidseitig;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.250;Datenkabel Kat.6A geschirmt 4x2xAWG23, Außenb.;300,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.260;Elektroanschluss beidseitig;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.270;Potentialausgleichleitung NYY-J 1x16  gnge;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.280;Potentialausgleichleitung NYY-J 1x6  gnge;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.1.290;PA-Anschlüsse;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.10;Standard Kabelrinne 100x60 auf verlegefähigem Tragsystem;90,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.20;Standard Kabelrinne 200x60 auf verlegefähigem Tragsystem;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.30;Standard Kabelrinne 300x60 auf verlegefähigem Tragsystem;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.40;Trennsteg;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.50;Außenbogen f. verzinkt Kabelrinne 100x60;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.60;Außenbogen f. verzinkt Kabelrinne 200x60;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.70;Außenbogen f. verzinkt Kabelrinne 300x60;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.80;Vertikaler Auf-, Abgang verzinkt 100x60;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.90;Vertikaler Auf-, Abgang verzinkt 200x60;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.100;Steigtrasse 200 mm für direkte Wandbefestigung;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.110;Steigtrasse 300 mm für direkte Wandbefestigung;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.120;HUF-Hängestiel für Kabelrinne l=300 mm;50,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.130;HUF-Hängestiel für Kabelrinne l=400 mm;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.140;Standardausleger an Hängestiel KTU 110;50,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.150;Standardausleger an Hängestiel KTU 210;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.160;Wandausleger 110x40x55 mm (LxBxH), feuerverzinkt;50,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.170;Wandausleger 210x40x55 mm (LxBxH), feuerverzinkt;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.180;Elektroinstallationsrohr PVC hart M20;125,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.190;Elektroinstallationsrohr PVC hart M25;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.200;Elektroinstallationsrohr PVC hart M32;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.210;Abzweigkasten Kunststoff 100x100 mm;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.220;C-Profilschiene, 2,0 mm;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.230;Bügelschelle 16 mm;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.240;Bügelschelle 22 mm;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.250;Bügelschelle 28 mm;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.260;Kabelsammelhalter, Stahl, 50 x 85 mm;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.270;Kabelsammelhalter, Stahl, 35 x 60 mm;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.280;Kabelklammer, Halogenfrei, Flügelbreite ca. 160 mm;50,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.290;Kabelklammer, Halogenfrei, Bügelbreite ca. 240 mm;50,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.300;Kabelverschraubung Kunststoff  M20 (PG13,5);5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.310;Kabelverschraubung Kunststoff  M25 (PG16);5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+6.2.320;Kabelverschraubung Kunststoff  M32 (PG21);5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+7.1.10;Gateway BACnet IP to Metasys;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+7.2.10;Abstimmung BACNet-Client;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+7.2.20;Erstellen der aktuellen EDE-Liste;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+7.2.30;Abstimmungen EDE-Liste mit JCI;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+7.2.40;Konfiguration/Parametrierung SNE DP durch JCI;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+7.2.50;Konfiguration/Parametrierung SNE DP durch AN;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+7.2.60;1:1 Test BACnet-Objekte AN;728,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+7.2.70;1:1 Test BACnet-Objekte JCI;728,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+7.2.80;Anlagenschema durch JCI;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+7.2.90;Generierung dynamischer Einblendungen durch JCI;763,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+7.2.100;Managementfunktion Ereignis-Langzeitsicherung durch JCI;197,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+7.2.110;Managementfunktion Historisierung in Datenbank durch JCI;142,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+7.2.120;Bedienfunktion Ereignis- Anweisungstext durch JCI;69,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+7.2.130;Bedienfunktion Nachricht an externer Stelle durch JCI;14,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+8.1.10;Automations-/Leitebene Schnittstellen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+8.1.20;BSK-Feldmodul;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+8.1.30;Spannungsversorgung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+8.1.40;Dienstleistungen;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.1.10;Schnittstelle zum digitalen Betriebstagebuch TASKO;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.2.10;Kernbohrung Stahlbeton, D bis 50 mm, T über 20 bis 50 cm;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.2.20;Kernbohrung Stahlbeton, D bis 50 mm, T über 50 bis 80 cm;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.2.30;Kernbohrung Mauerwerk, D bis 50 mm, T über 20 bis 50 cm;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.2.40;Kernbohrung Mauerwerk, D bis 50 mm, T über 50 bis 80 cm;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.2.50;Beantragung von Kernbohrungen und Durchbrüchen;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.2.60;Anzeichnen von Kernbohrungen und Durchbrüchen;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.2.70;Wandschlitz in Mauerwerk 25 x 25 mm;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.2.80;Wandschlitz in Mauerwerk 50 x 25 mm;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.2.90;Herstellen einer Vorbohrung bis 20 mm;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.2.100;Brandschutzverschluss von Durchbrüchen bis 0,1 m²;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.2.110;Brandschutzverschluss von Durchbrüchen 0,1 bis 0,25  m²;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.2.120;Abkleben Komponenten;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.2.130;Fahrbare Gerüste aufbauen, abbauen, vorhalten;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.2.140;Fahrbare Gerüste vorhalten;5,0;StWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.2.150;mobile Hubarbeitsbühne, batteriebetrieben;5,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.3.10;Profilstahlkonstruktion, Montagehöhe bis 3,5 m;80,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.3.20;Profilstahlkonstruktion, Montagehöhe über 3,5 m bis 6 m;50,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.3.30;Profilstahlkonstruktion nichtrostend, Montagehöhe bis 3,5 m;50,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.4.10;Mitwirkung bei Funktionsprüfungen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.4.20;Mitwirkung bei der Sachverständigen-Prüfung RLT-Anlagen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.4.30;Mitwirkung bei der Wirkprinzip-Prüfung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.4.40;Wiederholte Einweisung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.5.10;Montage- und Werkstattplanung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.5.20;Brandschutzdokumentation;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.5.30;Bestandsdokumentation;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.5.40;Dokumentation zur Schadstoffarmut;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.6.10;Obermonteur;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.6.20;Monteur;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.6.30;Helfer;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
+9.7.10;Wartungs- / Inspektionskosten Gebäudeautomation;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.D83
 10;Tauchtemperaturfühler Länge 150mm;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
 20;VA-Tauchhülse 150 mm;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
 30;Tauchtemperaturfühler Länge 200mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83

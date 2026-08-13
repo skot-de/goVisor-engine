@@ -1,0 +1,117 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01010010;Baustelle einrichten;1,0;psch;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01010020;Baustelle räumen;1,0;psch;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01010030;Verkehrssicherung längerer Dauer durchführen, Abschnitt 1;1,0;psch;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01010040;Verkehrssicherung längerer Dauer durchführen, Abschnitt 2;1,0;psch;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01010050;Verkehrssicherung längerer Dauer durchführen, Abschnitt 3;1,0;psch;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01010060;Verkehrssicherung längerer Dauer durchführen, Abschnitt 4;1,0;psch;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01010070;Fußgänger-/ und Radfahrverkehr aufrechterhalten;1,0;psch;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01010080;Abfallentsorgung aufrechterhalten;1,0;psch;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01020010;Rinne aus Betonsteinen aufnehmen (2-reihig);250,0;m;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01020020;Rinne aus Betonsteinen liefern und herstellen (2-reihig);250,0;m;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01020030;Läuferreihe in Beton legen;57,0;m;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01020040;Bordsteine (HB) aufnehmen;15,0;m;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01020050;Bordsteine (HB) des AG setzen;10,0;m;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01020060;Bordsteine (HB) liefern und setzen;62,0;m;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01020070;Bordsteinabsenkung 3 m herstellen;7,0;St.;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01020080;Bordsteinabsenkung 2 m herstellen;4,0;St.;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01020090;Bordsteine (TB) aufnehmen;20,0;m;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01020100;Bordsteine (TB) des AG setzen;15,0;m;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01020110;Bordsteine (TB) liefern und setzen;5,0;m;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01020120;Betonsteinpflaster umpflastern;15,0;m²;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01020130;Pflastersteine zuarbeiten;20,0;m;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01020140;Aufsatz für Straßenablauf regulieren;18,0;St;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01020150;Gehwegplatten 30/30 umpflastern;103,0;m²;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01030010;PAK haltigen Asphalt fräsen, über 2,5 bis 4 cm;4300,0;m²;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01030020;PAK haltigen Schotter, über 5 bis 8 cm aufnehmen;4113,0;m²;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01030030;PAK haltigen Schotter, bis 25 cm aufnehmen;187,0;m²;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01030040;Vorhandene Schottertragschicht profillieren;4300,0;m²;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01030050;Unterlage reinigen PAK Asphalt;4300,0;m²;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01030060;Bitumenemulsion aufsprühen;4300,0;m2;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01030070;Asphalttragdeckschicht AC 16 TD liefern und einbauen;1545,0;m2;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01030080;Asphalttragdeckschicht AC 16 TD mit Armierungsfaser liefern und einbauen;2570,0;m2;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01030090;Naht in Asphaltschicht herstellen;77,0;m;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01030100;Erschwernis infolge Einbauten;30,0;St;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01030110;Erschwernis infolge Einfassungen;1200,0;m;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01030120;Erschwernis infolge einragenden Straßenabläufe;40,0;St;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01030130;Abstumpfungsmaßnahme durchführen;4300,0;m²;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01030140;Verkehrsfläche kehren;4300,0;m²;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01030150;Probenahme von Asphaltmischgut;2,0;St;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01030160;Probenahme Bohrkerne, über 12 cm;2,0;St;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01040010;Boden lösen;174,0;m²;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01040020;Oberboden liefern und andecken;61,0;m³;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01040030;Rasensaat liefern und andecken;174,0;m²;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01050010;Feste Schachtabdeckung in Asphaltbefestigung ausbauen;24,0;St;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01050020;Bauseitig gelieferte einwalzbare Schachtabdeckung einbauen und anpassen;2,0;St;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01050030;Einwalzbare Schachtabdeckung einabuen und in Asphaltbef. anpassen;2,0;St;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01050040;Schachtabdeckung in Asphaltbefestigung anpassen;20,0;St;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01050050;Auflagerringe austauschen;3,0;St;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01060010;Werkpolier;5,0;Std;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01060020;Spezialbaufacharbeiter;5,0;Std;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01060030;Baufachwerker;10,0;Std;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01060040;Bauwerker;10,0;Std;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01060050;Bagger bis 0,4 m3;5,0;Std;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01060060;Frontlader, luftbereift, über 45-75 kW;5,0;Std;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01060070;Bohr- u. Abbauhammer bis 20 kg;5,0;Std;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01060080;LKW-Kipper m. Allradantr., ca. 12,0 t Nutzlast;5,0;Std;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01070010;Teerhaltigen Asphalt entsorgen;155,0;t;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01070020;Teerhaltige Steine entsorgen;375,0;t;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01080010;Abrechnungszeichnung anfertigen;1,0;psch;gaeb-flat;leistungsbeschreibungen/Deckschichterneuerungen 2026.D83
+01010010;Baustelle einrichten;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01010020;Baustelle räumen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01010030;Verkehrssicherung längerer Dauer durchführen, Abschnitt 1;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01010040;Verkehrssicherung längerer Dauer durchführen, Abschnitt 2;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01010050;Verkehrssicherung längerer Dauer durchführen, Abschnitt 3;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01010060;Verkehrssicherung längerer Dauer durchführen, Abschnitt 4;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01010070;Fußgänger-/ und Radfahrverkehr aufrechterhalten;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01010080;Abfallentsorgung aufrechterhalten;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01020010;Rinne aus Betonsteinen aufnehmen (2-reihig);250,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01020020;Rinne aus Betonsteinen liefern und herstellen (2-reihig);250,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01020030;Läuferreihe in Beton legen;57,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01020040;Bordsteine (HB) aufnehmen;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01020050;Bordsteine (HB) des AG setzen;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01020060;Bordsteine (HB) liefern und setzen;62,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01020070;Bordsteinabsenkung 3 m herstellen;7,0;St.;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01020080;Bordsteinabsenkung 2 m herstellen;4,0;St.;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01020090;Bordsteine (TB) aufnehmen;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01020100;Bordsteine (TB) des AG setzen;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01020110;Bordsteine (TB) liefern und setzen;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01020120;Betonsteinpflaster umpflastern;15,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01020130;Pflastersteine zuarbeiten;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01020140;Aufsatz für Straßenablauf regulieren;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01020150;Gehwegplatten 30/30 umpflastern;103,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01030010;PAK haltigen Asphalt fräsen, über 2,5 bis 4 cm;4300,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01030020;PAK haltigen Schotter, über 5 bis 8 cm aufnehmen;4113,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01030030;PAK haltigen Schotter, bis 25 cm aufnehmen;187,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01030040;Vorhandene Schottertragschicht profillieren;4300,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01030050;Unterlage reinigen PAK Asphalt;4300,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01030060;Bitumenemulsion aufsprühen;4300,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01030070;Asphalttragdeckschicht AC 16 TD liefern und einbauen;1545,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01030080;Asphalttragdeckschicht AC 16 TD mit Armierungsfaser liefern und einbauen;2570,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01030090;Naht in Asphaltschicht herstellen;77,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01030100;Erschwernis infolge Einbauten;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01030110;Erschwernis infolge Einfassungen;1200,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01030120;Erschwernis infolge einragenden Straßenabläufe;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01030130;Abstumpfungsmaßnahme durchführen;4300,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01030140;Verkehrsfläche kehren;4300,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01030150;Probenahme von Asphaltmischgut;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01030160;Probenahme Bohrkerne, über 12 cm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01040010;Boden lösen;174,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01040020;Oberboden liefern und andecken;61,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01040030;Rasensaat liefern und andecken;174,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01050010;Feste Schachtabdeckung in Asphaltbefestigung ausbauen;24,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01050020;Bauseitig gelieferte einwalzbare Schachtabdeckung einbauen und anpassen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01050030;Einwalzbare Schachtabdeckung einabuen und in Asphaltbef. anpassen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01050040;Schachtabdeckung in Asphaltbefestigung anpassen;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01050050;Auflagerringe austauschen;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01060010;Werkpolier;5,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01060020;Spezialbaufacharbeiter;5,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01060030;Baufachwerker;10,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01060040;Bauwerker;10,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01060050;Bagger bis 0,4 m3;5,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01060060;Frontlader, luftbereift, über 45-75 kW;5,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01060070;Bohr- u. Abbauhammer bis 20 kg;5,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01060080;LKW-Kipper m. Allradantr., ca. 12,0 t Nutzlast;5,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01070010;Teerhaltigen Asphalt entsorgen;155,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01070020;Teerhaltige Steine entsorgen;375,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83
+01080010;Abrechnungszeichnung anfertigen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Deckschichterneuerungen 2026.D83

@@ -1,4 +1,33 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;Baustelleneinrichtung Kleinmaßnahmen bis 75 m²;5,0;St;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+01.2;Baustelleneinrichtung Maßnahmen 75 m² - 150 m²;8,0;St;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+01.3;Baustelleneinrichtung für größere Einzelmaßnahmen;2,0;St;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+01.4;Sicherungsmaßnahmen;1,0;psch;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+01.5;Bauzaun für Malerarbeiten (Fassade);100,0;m;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+01.6;Verkehrssicherungsmaßnahmen in öffentlichen Bereichen;2,0;St;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+02.1;Gerüstbauarbeiten - Grundzeit;300,0;m²;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+02.2;Gerüstbauarbeiten - Gebrauchsüberlassung;300,0;m²/W;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+02.3;Sonderbauteile Gitterträger;6,0;St;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+0301.1;Untergrund prüfen;300,0;m²;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+0301.2;Verunreinigung entfernen;300,0;m²;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+0301.3;Löcher verfüllen Oberfläche glätten;10,0;m²;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+0301.4;Abkleben der Öffnungen;300,0;m²;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+0302.1;Grundierung/Haftgrund;300,0;m²;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+0302.2;Fassadenanstrich;300,0;m²;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+0302.3;Zulage für Fassadenanstrich;300,0;m²;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+0303.1;Schutz von angrenzenden Bauteilen;500,0;m²;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+0303.2;Malervlies liefern und verkleben;200,0;m2;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+0303.3;Verunreinigungen entfernen;850,0;m²;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+0303.4;Altbeschichtungen aufrauhen;850,0;m²;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+0303.5;Unebenheiten beispachteln;40,0;m²;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+0303.6;Zulage für Laibungen und Nischen;50,0;m;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+0303.7;Grundierung der Wandflächen;850,0;m²;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+0303.8;Acrylfugen;100,0;m;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+0303.9;Wandflächen Beschichtung, NAK 1, hochdeckend;850,0;m²;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+0303.10;Wandflächenbeschichtung farbig;50,0;m²;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+04.1;Stundenlohn Meister;1,0;h;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+04.2;Stundenlohn Facharbeiter;1,0;h;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
+04.3;Stundenlohn Helfer;1,0;h;gaeb-flat;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).D83
 1;Einrichten und Räumen der Baustelle mit An- und Abfuhr, sowie Vorhalten der zur Durchführung der nachstehend beschriebenen Arbeiten erforderlichen Maschinen, Geräte, Werkzeuge und Bauwagen inkl. Miet-WC für die Dauer der Arbeiten. Hinweis: Der Bieter hat sich vor Abgabe seines Angebotes über die Geg;5,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).X83
 2;für Leistungesumfang 75 m² - 150 m²;8,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).X83
 3;größerer Einzelmaßnahmen ab 150 m² Malerfläche.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).X83
@@ -28,6 +57,35 @@
 1;Meisterarbeiterstunden auf Nachweis;1,0;h;gaeb;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).X83
 2;Facharbeiterstunden auf Nachweis;1,0;h;gaeb;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).X83
 3;Stundenlohn Helfer auf Nachweis;1,0;h;gaeb;leistungsbeschreibungen/Leistungsverzeichnis Rahmenvertrag Malerarbeiten (1).X83
+01.1;Baustelleneinrichtung Kleinmaßnahmen bis 75 m²;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+01.2;Baustelleneinrichtung Maßnahmen 75 m² - 150 m²;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+01.3;Baustelleneinrichtung für größere Einzelmaßnahmen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+01.4;Sicherungsmaßnahmen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+01.5;Bauzaun für Malerarbeiten (Fassade);100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+01.6;Verkehrssicherungsmaßnahmen in öffentlichen Bereichen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+02.1;Gerüstbauarbeiten - Grundzeit;300,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+02.2;Gerüstbauarbeiten - Gebrauchsüberlassung;300,0;m²/W;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+02.3;Sonderbauteile Gitterträger;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+0301.1;Untergrund prüfen;300,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+0301.2;Verunreinigung entfernen;300,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+0301.3;Löcher verfüllen Oberfläche glätten;10,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+0301.4;Abkleben der Öffnungen;300,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+0302.1;Grundierung/Haftgrund;300,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+0302.2;Fassadenanstrich;300,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+0302.3;Zulage für Fassadenanstrich;300,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+0303.1;Schutz von angrenzenden Bauteilen;500,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+0303.2;Malervlies liefern und verkleben;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+0303.3;Verunreinigungen entfernen;850,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+0303.4;Altbeschichtungen aufrauhen;850,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+0303.5;Unebenheiten beispachteln;40,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+0303.6;Zulage für Laibungen und Nischen;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+0303.7;Grundierung der Wandflächen;850,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+0303.8;Acrylfugen;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+0303.9;Wandflächen Beschichtung, NAK 1, hochdeckend;850,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+0303.10;Wandflächenbeschichtung farbig;50,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+04.1;Stundenlohn Meister;1,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+04.2;Stundenlohn Facharbeiter;1,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
+04.3;Stundenlohn Helfer;1,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.D83
 1;Einrichten und Räumen der Baustelle mit An- und Abfuhr, sowie Vorhalten der zur Durchführung der nachstehend beschriebenen Arbeiten erforderlichen Maschinen, Geräte, Werkzeuge und Bauwagen inkl. Miet-WC für die Dauer der Arbeiten. Hinweis: Der Bieter hat sich vor Abgabe seines Angebotes über die Geg;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.X83
 2;für Leistungesumfang 75 m² - 150 m²;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.X83
 3;größerer Einzelmaßnahmen ab 150 m² Malerfläche.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis Rahmenvertrag Malerarbeiten.X83

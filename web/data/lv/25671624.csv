@@ -1,4 +1,21 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;BE: Baustelleneinrichtung;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Metallbauarbeiten.D83
+01.2;VA: Metallbeschichtung - Fehlstellen ausbessern;3,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Metallbauarbeiten.D83
+01.3;Werkstattzeichnungen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Metallbauarbeiten.D83
+02.1;Aluminium Einfachfenster, 3-teilig, b=2760mm h=700mm;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Metallbauarbeiten.D83
+02.2;Außenfensterbank Strangpressprofil D 1,5mm B 170mm L 2750 mm;5,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Metallbauarbeiten.D83
+03.1;Nebeneingangstür, Drehflügeltür 2flg, b=2010mm h=2510mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Metallbauarbeiten.D83
+03.2;Drückergarnitur Außentür;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Metallbauarbeiten.D83
+03.3;Obentürschließer Außentür;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Metallbauarbeiten.D83
+03.4;Türbodendichtung Außentür;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Metallbauarbeiten.D83
+03.5;Einsteckschloss Rohrrahmentüren;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Metallbauarbeiten.D83
+03.6;Türfalztreibriegel Standflügel;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Metallbauarbeiten.D83
+03.7;Türschwellenprofil, Edelstahlblech V4A, U-förmig gekantet;2,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Metallbauarbeiten.D83
+03.8;1-flügelige Schiebetoranlage;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Metallbauarbeiten.D83
+03.9;Auffütterung / Distanzkonstruktion für Wandmontage Schiebetüranlage;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Metallbauarbeiten.D83
+03.10;Dehnungsfugenzarge;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Metallbauarbeiten.D83
+04.1;Vordach, freitragend, 3000mm x 1200mm;1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Metallbauarbeiten.D83
+04.2;Statischer Nachweis: Vordach;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Metallbauarbeiten.D83
 1;Einrichten, Vorhalten über die vereinbarte Leistungszeit sowie Räumen der Baustelle und Wiederherstellen des Geländes einschließlich dem Entfernen von Verunreinigung.;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Metallbauarbeiten.X83
 2;Fehlstellen bzw. Beschädigungen am Metallüberzug;3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Metallbauarbeiten.X83
 3;Erstellen von Ausführungs- und Werkstattzeichnungen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/FFW_Nieder-Olm_LV_Metallbauarbeiten.X83

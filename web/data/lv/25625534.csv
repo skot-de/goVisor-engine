@@ -1,4 +1,304 @@
 ﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+3.1.1.1;Baustelleneinrichtung Hauptposition;1,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.1.2;Baustelleneinrichtung Vorhaltung 24 Wo;24,0;StWo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.1.3;Zulage, Herstellen Lagerplatz;1,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.1.4;Antrag Sondernutzfläche;1,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.1.5;Verlängerungsantrag Sondernutzfläche;4,0;Wo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.1.6;Verkehrssicherung der Sondernutzfläche;1,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.1.7;Verkehrssicherung der Sondernutzfläche Vorhaltung 24 Wo;24,0;StWo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.1.8;Bauzaun, Stahlrahmen (mobil), h=2,00 m;250,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.1.9;Bauzaun Vorhaltung 24 Wo;6000,0;mWo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.1.10;Bauzaun-Tor (3,50 m breit), abschließbar;2,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.1.11;Bauzaun-Tor Vorhaltung 24 Wo;48,0;StWo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.1.12;Toilettenkabine mit Handwaschbecken;1,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.1.13;Zulage Toilettenkabine, beheizt;12,0;StWo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.1.14;Toilettenkabine Vorhaltung 24 Wo;24,0;StWo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.1.15;Mobile Arbeitsrüstung;1,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.1.16;Mobile Arbeitsrüstung, Auf- und Abbau;4,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.1;Herrichten der Aufstandsfläche;150,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.2;AUFBAU: Stadtmauerrüstung, Metallgerüst, LK 4, BK W 09;540,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.3;RÜCKBAU: Stadtmauerrüstung;540,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.4;Vorhaltung: Stadtmauerrüstung;4320,0;m²Wo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.5;AUFBAU: Gerüstbrücke;25,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.6;RÜCKBAU: Gerüstbrücke;25,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.7;Vorhaltung: Gerüstbrücke;200,0;m²Wo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.8;AUFBAU: Gerüstverkleidung mit Netzen;560,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.9;RÜCKBAU: Gerüstverkleidung mit Netzen;560,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.10;Vorhaltung: Gerüstverkleidung Netz;4480,0;m²Wo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.11;AUFBAU: Gerüstverbreiterung, 30 cm;150,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.12;RÜCKBAU: Gerüstverbreiterung, 30 cm;150,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.13;Vorhaltung: Gerüstverbreiterung, 30 cm;1200,0;mWo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.14;AUFBAU: Gerüstverbreiterung, 70 cm;150,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.15;RÜCKBAU: Gerüstverbreiterung, 70 cm;150,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.16;Vorhaltung: Gerüstverbreiterung, 70 cm;1200,0;mWo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.17;AUFBAU: 3-teiliger Seitenschutz;2,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.18;RÜCKBAU: 3-teiliger Seitenschutz;2,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.19;Vorhaltung: 3-teiliger Seitenschutz;16,0;StWo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.20;Baum, Strauch schützen;3,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.21;Gehweg-/ Pflaster-/ Grünflächen schützen;50,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.22;Rückbau Einfriedung Maschendrahtzaun;10,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.23;Herstellung Einfriedung Maschendrahtzaun;10,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.24;Rückbau Natursteinmauerkronenabdeckung, Beton;5,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.25;Entfernen von flächigen pflanzlichen Bewuchs;80,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.26;Entfernen von pflanzlichen Bewuchs, Einzelpflanzen;10,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.27;Substanzschonende Reinigung des Stadtmauerwerk;540,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.28;Zulage, Reinigung für stark verschmutze Bereiche;120,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.29;Bodenaushub Mauerwerkssockel/ Fundament;60,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.30;Hinterfüllung Mauerwerkssockel, einschl. Verdichten;60,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.31;Wiederherstellung Natursteinmauerwerk in Kleinflächen;5,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.32;Verfugen des Natursteinmauerwerks;175,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.33;Wiederherstellung Mauerkrone Naturstein, bombiert, Fugen Romanzement;5,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.34;Lieferung von Natursteinen;2,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.35;Rückbau Ziegelmauerwerk;2,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.36;Wiederherstellung Ziegelmauerwerk;2,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.37;Partieller Rückbau Ziegelmauerwerk Mauerkrone;15,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.38;Wiederherstellung Ziegelmauerwerk Mauerkrone, Fugen Romanzement;15,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.39;Lieferung und Einbau von Mauerwerksbewehrung;75,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.40;Risssanierung Ziegelmauerwerk;15,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.41;Zulage für Edelstahlanker für Mauerwerksrisssanierung;15,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.42;Erneuerung Kleinflächen Ziegel;20,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.43;Erneuerung einzelner Ziegel;80,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.44;Lieferung Ziegel - Klosterformat Handstrich;5,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.45;Lieferung Ziegel - Klosterformat Maschinenfertigung;2,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.46;Überarbeitung Bestandsfugen Ziegelmauerwerk;100,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.47;Erneuerung Fugen Ziegelmauerwerk;50,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.48;Gelände beräumen;375,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.49;Grasnarbe abtragen, entsorgen;490,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.50;Boden abtragen, entsorgen;75,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.51;Zulage Boden abtragen, entsorgen, Bodenkl 5;75,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.52;Unterboden liefern;75,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.53;Unterboden einbauen;75,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.54;Unterbodengrobplanie;150,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.55;Unterbodengrobplanie, geböscht;225,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.56;Lehmboden liefern;30,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.57;Lehmboden einbauen;30,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.58;Erosionsschutzgewebe, Jute 500 g/m²;375,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.59;Oberboden liefern und andecken;75,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.60;Vegetationsflächen kreuzweise fräsen, maschinell;490,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.61;Starterdünger liefern und ausbringen;490,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.62;Rasenfläche herstellen;490,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.2.63;Rasenflächen gemäß DIN 18917 pflegen;490,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.1;Herrichten der Aufstandsfläche;70,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.2;AUFBAU: Stadtmauerrüstung, Metallgerüst, LK 4, BK W 09;280,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.3;RÜCKBAU: Stadtmauerrüstung;280,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.4;Vorhaltung: Stadtmauerrüstung;2240,0;m²Wo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.5;AUFBAU: Gerüstbrücke;25,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.6;RÜCKBAU: Gerüstbrücke;25,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.7;Vorhaltung: Gerüstbrücke;200,0;m²Wo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.8;AUFBAU: Gerüstverkleidung mit Netzen;300,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.9;RÜCKBAU: Gerüstverkleidung mit Netzen;300,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.10;Vorhaltung: Gerüstverkleidung Netz;2400,0;m²Wo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.11;AUFBAU: Gerüstverbreiterung, 30 cm;80,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.12;RÜCKBAU: Gerüstverbreiterung, 30 cm;80,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.13;Vorhaltung: Gerüstverbreiterung, 30 cm;640,0;mWo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.14;AUFBAU: Gerüstverbreiterung, 70 cm;80,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.15;RÜCKBAU: Gerüstverbreiterung, 70 cm;80,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.16;Vorhaltung: Gerüstverbreiterung, 70 cm;640,0;mWo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.17;AUFBAU: 3-teiliger Seitenschutz;2,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.18;RÜCKBAU: 3-teiliger Seitenschutz;2,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.19;Vorhaltung: 3-teiliger Seitenschutz;16,0;StWo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.20;Baum, Strauch schützen;2,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.21;Gehweg-/ Pflaster-/ Grünflächen schützen;50,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.22;Rückbau Einfriedung Maschendrahtzaun;10,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.23;Herstellung Einfriedung Maschendrahtzaun;10,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.24;Entfernen von flächigen pflanzlichen Bewuchs;50,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.25;Entfernen von pflanzlichen Bewuchs, Einzelpflanzen;10,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.26;Beräumung Zwischenraum Stadtmauer-Remise;5,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.27;Substanzschonende Reinigung des Stadtmauerwerk;325,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.28;Zulage, Reinigung für stark verschmutze Bereiche;125,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.29;Bodenaushub Mauerwerkssockel/ Fundament;32,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.30;Hinterfüllung Mauerwerkssockel, einschl. Verdichten;32,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.31;Wiederherstellung Natursteinmauerwerk in Kleinflächen;10,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.32;Verfugen des Natursteinmauerwerks;180,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.33;Lieferung von Natursteinen;2,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.34;Rückbau Ziegelmauerwerk;3,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.35;Wiederherstellung Ziegelmauerwerk;3,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.36;Partieller Rückbau Ziegelmauerwerk Mauerkrone;12,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.37;Wiederherstellung Ziegelmauerwerk Mauerkrone, Fugen Romanzement;12,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.38;Lieferung und Einbau von Mauerwerksbewehrung;50,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.39;Risssanierung Ziegelmauerwerk;20,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.40;Zulage für Edelstahlanker für Mauerwerksrisssanierung;20,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.41;Erneuerung Kleinflächen Ziegel;25,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.42;Erneuerung einzelner Ziegel;120,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.43;Lieferung Ziegel - Klosterformat Handstrich;5,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.44;Lieferung Ziegel - Klosterformat Maschinenfertigung;2,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.45;Überarbeitung Bestandsfugen Ziegelmauerwerk;120,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.46;Erneuerung Fugen Ziegelmauerwerk;80,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.47;Gelände beräumen;250,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.48;Grasnarbe abtragen, entsorgen;300,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.49;Boden abtragen, entsorgen;50,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.50;Zulage Boden abtragen, entsorgen, Bodenkl 5;50,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.51;Unterboden liefern;50,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.52;Unterboden einbauen;50,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.53;Unterbodengrobplanie;100,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.54;Unterbodengrobplanie, geböscht;150,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.55;Lehmboden liefern;20,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.56;Lehmboden einbauen;20,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.57;Erosionsschutzgewebe, Jute 500 g/m²;250,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.58;Oberboden liefern und andecken;45,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.59;Vegetationsflächen kreuzweise fräsen, maschinell;300,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.60;Starterdünger liefern und ausbringen;300,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.61;Rasenfläche herstellen;300,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.3.62;Rasenflächen gemäß DIN 18917 pflegen;300,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.1;Herrichten der Aufstandsfläche;50,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.2;AUFBAU: Stadtmauerrüstung, Metallgerüst, LK 4, BK W 09;165,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.3;RÜCKBAU: Stadtmauerrüstung;165,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.4;Vorhaltung: Stadtmauerrüstung;1320,0;m²Wo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.5;AUFBAU: Gerüstbrücke;25,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.6;RÜCKBAU: Gerüstbrücke;25,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.7;Vorhaltung: Gerüstbrücke;200,0;m²Wo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.8;AUFBAU: Gerüstverkleidung mit Netzen;180,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.9;RÜCKBAU: Gerüstverkleidung mit Netzen;180,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.10;Vorhaltung: Gerüstverkleidung Netz;1440,0;m²Wo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.11;AUFBAU: Gerüstverbreiterung, 30 cm;50,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.12;RÜCKBAU: Gerüstverbreiterung, 30 cm;50,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.13;Vorhaltung: Gerüstverbreiterung, 30 cm;400,0;mWo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.14;AUFBAU: Gerüstverbreiterung, 70 cm;50,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.15;RÜCKBAU: Gerüstverbreiterung, 70 cm;50,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.16;Vorhaltung: Gerüstverbreiterung, 70 cm;400,0;mWo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.17;AUFBAU: 3-teiliger Seitenschutz;1,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.18;RÜCKBAU: 3-teiliger Seitenschutz;1,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.19;Vorhaltung: 3-teiliger Seitenschutz;8,0;StWo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.20;Baum, Strauch schützen;2,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.21;Gehweg-/ Pflaster-/ Grünflächen schützen;50,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.22;Rückbau Einfriedung Maschendrahtzaun;12,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.23;Rückbau Natursteinmauerkronenabdeckung, Beton;10,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.24;Entfernen von flächigen pflanzlichen Bewuchs;70,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.25;Entfernen von pflanzlichen Bewuchs, Einzelpflanzen;5,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.26;Substanzschonende Reinigung des Stadtmauerwerk;200,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.27;Zulage, Reinigung für stark verschmutze Bereiche;120,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.28;Bodenaushub Mauerwerkssockel/ Fundament;28,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.29;Hinterfüllung Mauerwerkssockel, einschl. Verdichten;28,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.30;Wiederherstellung Natursteinmauerwerk in Kleinflächen;35,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.31;Verfugen des Natursteinmauerwerks;85,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.32;Wiederherstellung Mauerkrone Naturstein, bombiert, Fugen Romanzement;12,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.33;Lieferung von Natursteinen;4,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.34;Rückbau Ziegelmauerwerk;6,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.35;Wiederherstellung Ziegelmauerwerk;4,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.36;Partieller Rückbau Ziegelmauerwerk Mauerkrone;5,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.37;Wiederherstellung Ziegelmauerwerk Mauerkrone, Fugen Romanzement;5,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.38;Lieferung und Einbau von Mauerwerksbewehrung;25,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.39;Risssanierung Ziegelmauerwerk;15,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.40;Zulage für Edelstahlanker für Mauerwerksrisssanierung;15,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.41;Erneuerung Kleinflächen Ziegel;5,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.42;Erneuerung einzelner Ziegel;80,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.43;Lieferung Ziegel - Klosterformat Handstrich;3,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.44;Lieferung Ziegel - Klosterformat Maschinenfertigung;1,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.45;Überarbeitung Bestandsfugen Ziegelmauerwerk;120,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.46;Erneuerung Fugen Ziegelmauerwerk;50,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.47;Gelände beräumen;230,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.48;Grasnarbe abtragen, entsorgen;230,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.49;Boden abtragen, entsorgen;35,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.50;Zulage Boden abtragen, entsorgen, Bodenkl 5;35,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.51;Unterboden liefern;35,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.52;Unterboden einbauen;35,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.53;Unterbodengrobplanie;70,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.54;Unterbodengrobplanie, geböscht;100,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.55;Lehmboden liefern;15,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.56;Lehmboden einbauen;15,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.57;Erosionsschutzgewebe, Jute 500 g/m²;175,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.58;Oberboden liefern und andecken;35,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.59;Vegetationsflächen kreuzweise fräsen, maschinell;230,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.60;Starterdünger liefern und ausbringen;230,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.61;Rasenfläche herstellen;230,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.1.4.62;Rasenflächen gemäß DIN 18917 pflegen;230,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.1.1;AUFBAU: Fassadenrüstung, Metallgerüst, LK 4, BK W 09;110,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.1.2;RÜCKBAU: Fassadenrüstung;110,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.1.3;Vorhaltung: Fassadenrüstung;880,0;m²Wo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.1.4;AUFBAU: Treppenturm, vorgebaut;3,5;Stgm;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.1.5;RÜCKBAU: Treppenturm vorgebaut;3,5;Stgm;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.1.6;Vorhaltung: Treppenturm, vorgebaut;28,0;mWo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.1.7;AUFBAU: Gerüstverkleidung mit Netzen;120,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.1.8;RÜCKBAU: Gerüstverkleidung mit Netzen;120,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.1.9;Vorhaltung: Gerüstverkleidung Netz;960,0;m²Wo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.1.10;AUFBAU: Gerüstverbreiterung, 30 cm;35,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.1.11;RÜCKBAU: Gerüstverbreiterung, 30 cm;35,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.1.12;Vorhaltung: Gerüstverbreiterung, 30 cm;280,0;mWo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.1.13;AUFBAU: Gerüstverbreiterung, 70 cm;35,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.1.14;RÜCKBAU: Gerüstverbreiterung, 70 cm;35,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.1.15;Vorhaltung: Gerüstverbreiterung, 70 cm;280,0;mWo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.1.16;AUFBAU: 3-teiliger Seitenschutz;2,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.1.17;RÜCKBAU: 3-teiliger Seitenschutz;2,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.1.18;Vorhaltung: 3-teiliger Seitenschutz;16,0;StWo;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.2.1;Rückbau Dachbekleidung Bitumen;100,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.2.2;Rückbau Dachschalung;100,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.2.3;Rückbau Dachrandabschlüsse Zink;55,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.2.4;Rückbau Regenentwässerung Zink;28,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.2.5;Rückbau Dachkonstruktionshölzer;80,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.2.6;Ausbau Fenster und Außentür;2,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.2.7;Rückbau Mauerwerk Außen- und Innenwände;18,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.2.8;Rückbau Bodenplatte;5,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.2.9;Rückbau leichter Innenwände;20,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.2.10;Abbruch von Wand- u. Bodenfliesen;40,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.2.11;Demontage Rohrleitung DN 15 - DN 32  Kupfer Verteilungs-, Steig- und Anbindeleitungen,;25,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.2.12;Demontage und Entsorgung WC-Anlage,;3,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.2.13;Demontage und Entsorgung Waschtischanlage,;3,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.2.14;Demontage Rohrleitung DN 100  Abwasserleitung, Kunststoff-Rohr;20,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.2.15;Desgleichen wie vor, jedoch: Demontage Rohrleitung DN 70 und DN 50;25,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.2.16;Demontage Rohrleitung DN 15 - DN 50 Trinkwasserverteilung;20,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.3.1;Herstellen Ziegelmauerwerk Außenwände;15,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.3.2;horizontale Abdichtung mineralische Dichtschlämme;8,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.3.3;Erneuerung einzelner Ziegel;50,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.3.4;Erneuerung Kleinflächen Ziegel;5,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.3.5;Risssanierung Ziegelmauerwerk;20,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.3.6;Zulage für Edelstahlanker für Mauerwerksrisssanierung;20,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.3.7;Herstellen von Türöffnungen in Bestandsmauerwerk;1,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.3.8;Herstellen von Fensteröffnungen in Bestandsmauerwerk;1,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.3.9;Lieferung Ziegel - Klosterformat Handstrich;2,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.3.10;Überarbeitung Bestandsfugen Ziegelmauerwerk;110,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.3.11;Erneuerung Fugen Ziegelmauerwerk;25,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.3.12;Rückbau geschädigter Deckenputz;5,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.3.13;Innenputz, Anputzen der Deckenflächen;15,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.3.14;Rückbau geschädigter Innenwandputz;10,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.3.15;Innenputz, Anputzen der Wandflächen;30,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.3.16;Kernbohrungen Ø 160-220 mm, Bohrtiefe 50-80cm;2,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.3.17;Zulage Kernbohrungen;1,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.3.18;Konservierung vorh. Stahlträger;8,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.3.19;Einbindepunkte/ Auflagertaschen für HEB100 herstellen;6,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.3.20;Liefern und Einbau Stahlträger HEB 100, feuerverzinkt;3,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.4.1;Erneuerung der Schwellen, Dachkonstruktion;5,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.4.2;Sanierung geschädigter Sparrenfüße/-köpfe;5,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.4.3;Abbund, Richten, Einbau Bauholz, Sparren 16/20;2,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.4.4;Dachschalung, 32mm, liefern und einbauen;100,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.4.5;Traufgesimsschalung, d=24 mm;5,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.4.6;Unterdeckenschalung, Rauspund;10,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.4.7;Abbund, Richten, Einbau Bauholz, Pfetten/Schwellen/Sparren bis 10/14;82,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.4.8;Schwelle/ Pfette, Verdübelung;40,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.4.9;Sparrenverbindung;120,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.4.10;Ortgangbrett/ Zahnleiste liefern und einbauen;3,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.4.11;Kleineisenteile liefern;10,0;kg;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.4.12;Liefern von Bauholz  - Kiefer;2,0;m³;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.5.1;Dachabdichtung, untere Lage;100,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.5.2;Dachabdichtung, obere Lage;100,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.5.3;Ortgangverblechung;30,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.5.4;Vogel- und Insektenschutzgitter, Ti-Zinkblech;20,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.5.5;Tropfblech, Zinkblech Z 333;20,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.5.6;Dachrinne Z 333, Titanzinkblech;20,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.5.7;Zulage Einlassen der Rinnenhalter am Flachdach;20,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.5.8;Rinnen-Endstück, Titanzinkblech;2,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.5.9;Bewegungsausgleich Dachrinne als Zulage;2,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.5.10;Rinneneinhangstutzen,Form G,Ti-Zinkbl.;2,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.5.11;Fallrohr, Titanzinkblech, DN 100;6,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.5.12;Fallrohrbogen, doppelt,rund, Ti-Zn, DN100;2,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.5.13;Fallrohrbogen,einf.,rund, Ti-Zn, DN100;2,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.5.14;Lieferung und Einbau Dachlatten, 40/60mm, für Biber in Kronendeckung;28,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.5.15;Lieferung Biberschwanzziegel;28,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.5.16;Einbau Biberschwanzziegel, Kronendeckung, verschraubt;28,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.5.17;Zulage Trauf- und Firstausbildung Biberschwanz in Kronendeckung;40,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.5.18;Wandanschluss, Titanzink, Kappleiste;20,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.5.19;Kappleisten vermörteln;20,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.6.1;Tischlermäßige Aufarbeitung Außentür, kassetiert;4,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.6.2;Tischlermäßige Aufarbeitung Außentür, Holzschalung;1,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.6.3;Tischlermäßige Aufarbeitung Fenster;5,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.6.4;Zulage für Erneuerung von Glasscheiben ca. 750x950 mm;3,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.6.5;Herstellen 2-flg Fenster, Holz;1,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.6.6;Fensterbank, Holz, liefern und montieren;2,0;m;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.7.1;Malermäßige Aufarbeitung Außentür, kassettiert;4,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.7.2;Malermäßige Aufarbeitung Außentür, Holzschalung;1,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.7.3;Malermäßige Aufarbeitung Fenster;5,0;St;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.7.4;Wand- u. Deckenflächen, Untergrund säubern;210,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.7.5;Grundierung Wand- und Deckenflächen, Putz;210,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
+3.2.7.6;Wand-/Deckenfläche, Beschichtung Kalkfarbe;210,0;m²;gaeb-flat;leistungsbeschreibungen/5194-LOS3.D83
 1;Baustelleneinrichtung;1,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
 2;Vorhaltung der Baustelleneinrichtung: 24 Wochen;24,0;StWo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
 3;"Zulage zur Hauptposition ""Baustelleneinrichtung"":";1,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83

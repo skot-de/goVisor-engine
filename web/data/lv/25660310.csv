@@ -1,0 +1,35 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+11010;Markierung entfernen;600,0;m²;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+11020;Markierungsfläche trocknen;100,0;m²;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+11030;Vormarkierung herstellen;30000,0;m;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12010;Längsmarkierung Typ II herstellenO.Vorm.a.Erstmark*Breite 0,12 mStr./Lü.untersch*HeißplastikP 6*Überrollb. T 2... Freitext ...;3500,0;m;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12020;Längsmarkierung Typ II herstellenO.Vorm.a.Erneuer.*Breite 0,12 mStr./Lü.untersch*HeißplastikP 6*Überrollb. T 2... Freitext ...;30000,0;m;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12030;Längsmarkierung Typ II herstellenO.Vorm.a.Erstmark*Breite 0,15 mDurchgehend*HeißplastikP 6*Überrollb. T 2... Freitext ...;3000,0;m;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12040;Längsmarkierung Typ II herstellenO.Vorm.a.Erneuer.*Breite 0,12 mDurchgehend*HeißplastikP 6*Überrollb. T 2... Freitext ...;10000,0;m;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12050;Längsmarkierung Typ II herstellenO.Vorm.a.Erstmark*Breite 0,25 mStr./Lü.untersch*HeißplastikP 6*Überrollb. T 2... Freitext ...;7000,0;m;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12060;Längsmarkierung Typ II herstellenO.Vorm.a.Erneuer.*Breite 0,25 mStr./Lü.untersch*HeißplastikP 6*Überrollb. T 2... Freitext ...;3000,0;m;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12070;Längsmarkierung Typ II herstellenO.Vorm.a.Erneuer.*Breite 0,25 durchgehend;1000,0;m;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12080;Quermarkierung Typ II herstellenHaltlinie*... Freitext ...Heißplastik*P 6*Überrollb. T 2... Freitext ...;400,0;m;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12090;Quermarkierung Typ II herstellenWartelinie*... Freitext ...Heißplastik*P 6*Überrollb. T 2... Freitext ...;250,0;m;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12100;Quermarkierung Typ II herstellenFußgängerfurt*... Freitext ...Heißplastik*P 6*Überrollb. T 2... Freitext ...;400,0;m;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12110;Quermarkierung Typ II herstellenRadfahrerfurt*... Freitext ...Heißplastik*P 6*Überrollb. T 2... Freitext ...;2000,0;m;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12120;Quermarkierung Typ II herstellenFußgängerüberweg*... Freitext ...Heißplastik*P 6*Überrollb. T 2... Freitext ...;100,0;m;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12130;Sperrflächenschraf. Typ II herst.;50,0;m;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12140;Pfeilmarkierung Typ II herstellenGeradeaus*... Freitext ...Länge 5 m*HeißplastikP 6*Überrollb. T 2... Freitext ...;25,0;St;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12150;Pfeilmarkierung Typ II herstellenGerad.+li.o.re.ab*... Freitext ...Länge 5 m*HeißplastikP 6*Überrollb. T 2... Freitext ...;5,0;St;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12160;Pfeilmarkierung Typ II herstellenli.o.re. ab*... Freitext ...Länge 5 m*HeißplastikP 6*Überrollb. T 2... Freitext ...;10,0;St;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12170;Pfeilmarkierung Typ II herstellenn.li.o.re.wechs.*... Freitext ...Länge 5 m*HeißplastikP 6*Überrollb. T 2... Freitext ...;10,0;St;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12180;Sonst. Mark.zeichen Typ II herst.Piktogramm 1 m*... Freitext ...Heißplastik*P 6*Überrollb. T 2... Freitext ...;25,0;St;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12190;Sonst. Mark.zeichen Typ II herst.Piktogramm 0,50 m*... Freitext ...Heißplastik*P 6*Überrollb. T 2... Freitext ...;25,0;St;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12200;Sonst. Mark.zeichen Typ II herst.Piktogramm 1 m*... Freitext ...Heißplastik*P 6*Überrollb. T 2... Freitext ...;5,0;St;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12210;Sonst. Mark.zeichen Typ II herst.Verkehrsz.*... Freitext ...Heißplastik*P 6*Überrollb. T 2;5,0;St;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12220;"Sonst. Mark.zeichen Typ II herst.Piktogramm ""Fahrrad"" 1,30 m Länge, einschließlich Winkelpfeile ...Heißplastik*P 6*Überrollb. T 2";150,0;St;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12230;Sonst. Mark.zeichen Typ II herst.Verkehrsz.*.Heißplastik*P 6*Überrollb. T 2...;5,0;St;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12240;Profilierte Längsmarkierung HP 12 cm;100,0;m;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+12250;Eigenüberwachungspr.d.fert.Leist.<1km/<120m2;5,0;St;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+13010;Längsmarkierung Typ II herstellen;5,0;m²;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+13020;Rüttelstreifenfeld herstellen;3,0;St;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+14010;Rotbeschichtung von Radwegfurten;80,0;m²;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+15010;Längsmarkierung in Kaltspritzplastik Typ I;750,0;m;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+15020;Längsmarkierung Typ II Agglomerate;300,0;m;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83
+15030;Längsmarkierung Typ II Agglomerate;300,0;m;gaeb-flat;leistungsbeschreibungen/10 LV_Dickschichtmarkierung LK OS 2026_GAEB.D83

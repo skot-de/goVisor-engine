@@ -616,3 +616,620 @@
 4;Zulage Stundensatz Meister;50,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.X83
 5;Zulage Stundensatz Facharbeiter;50,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.X83
 6;Zulage Stundensatz Helfer;50,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.X83
+1.1;Erstellen Bauzeitenplan durch AN;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.2;Teilnahme an wöchentlichen Baubesprechungen;52,0;Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.3;Baustelleneinrichtung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.4;Kran;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.5;Baustellenbüro reinigen wöchentlich;24,0;StMt;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.6;Sanitärcontainer WC Damen/Herren aufstellen räumen doppelwandig wärmegedämmt;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.7;Sanitärcontainer vorhalten doppelwandig wärmegedämmt;24,0;StMt;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.8;Container Wasch-Toilettenraum reinigen 2x wöchentlich;24,0;StMt;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.9;Aufstellfläche für vorab beschriebene Container herstellen räumen;60,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.10;Stammschutz Ummantelung Bretter Polsterung herstellen Polsterung Dränrohre;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.11;Stammschutz Ummantelung Bretter Polsterung abbauen lagern;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.12;Stammschutz Ummantelung Bretter Polsterung herstellen Polsterung Dränrohre;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.13;Stammschutz Ummantelung Bretter Polsterung abbauen lagern;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.14;Bautenschutzmatte;20,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.15;Kran Unterbau und Fundamente;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.16;Stahlplatten 1,80 x 2,50m befahrbar;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.17;Trinkwasseranschluss;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.18;Rückbau Trinkwasseranschluss;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.19;Trinkwasserleitung;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.20;Rohrbegleitheizung;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.21;Isolierung alukaschiert;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.22;Kennzeichnungsschilder;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.23;Rohrleitung DN 100;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.24;Rohrabzweig DN 100;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.25;Rohrleitung wie vor, jedoch Bogen DN 100;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.26;Abwasseranschluss Sanitärcontainer;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.27;Rückbau Abwasseranschluss Sanitär-Container;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.28;Anschluss an Bestandskanal;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.29;Einmessen Lage Höhe Lageplan;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.30;Meterriss;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.31;2-flg.Tür abschließbar Stahl verstellbare Einbauzarge einbauen ausbauen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.32;1-flg. Tür abschließbar Stahl verstellbare Einbauzarge einbauen ausbauen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.33;Schließanlage für Baustellentüren;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.34;Abdeckung von Schlitzen und Öffnungen - OSB;25,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.35;Schließen von Öffnungen - OSB;50,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.36;Sichern Treppenloch;51,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.37;Sichern Deckenrand;9,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.38;Rüstebene Aufzugsschacht;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.39;Sicherung Aufzugsschachttüren;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.40;Bautreppe als Zugang zur Baugrube;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.41;Schutzabdeckung der Treppeläufe herstellen beseitigen;10,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.42;Temporäre Absturzsicherung Dachrand / Attika;118,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.43;Bauzaun Stahlrohrrahmen verz Vergitterung aufstellen räumen;288,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.44;Bauzaun Stahlrohrrahmen verz Vergitterung vorhalten;288,0;mWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.45;2-flg. Tor abschließbar Metallgitter einbauen ausbauen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+1.46;2-flg.Tor abschließbar Metallgitter vorhalten;48,0;StWo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.1;Stabmattenzaun abbrechen und entsorgen;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.2;Stabmattenzaun abbrechen und entsorgen;12,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.3;Findlinge aufnehmen seitlich lagern;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.4;Natursteinquader aufnehmen seitlich lagern;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.5;Ausbauen und Entsorgen Betonblockstufen;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.6;Abbruch Betonpalisaden;38,1;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.7;Abbruch Winkelstützwände;12,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.8;Leuchten aufnehmen laden und entsorgen;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.9;Ausbauen und Entsorgen Mülleimer;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.10;Ausbau und Enstorgungen Fahnenmast;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.11;Rückbau und Enstorgung Fundamente d. Infotafel;2,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.12;Ausbau und Enstorgung Handläufe;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.13;Ausbauen und Entsorgen Fundamente;1,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.14;Wurzelstock roden, Direktbeladung laden LKW AG und Entsorgen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.15;Heckengehölz roden ausgraben häckseln laden Behälter AN laden transp. LKW AN und entsorgen;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.16;Pflanzl.Bodendecke abräumen aufnehmen fördern auf LKW AN laden;330,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.17;Abfall nicht gefährlich AVV200201 pflanzliche Bodendecke aufnehmen, laden, abfahren und fachgerecht entsorgen.;49,5;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.18;Oberboden abtragen laden transp. LKW AN entsorgen Vergüt.Entsorg.gg.Nachweis;141,3;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.19;Oberboden abtragen laden fördern lagern;210,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.20;Abfall nicht gefährlich AVV170504 nicht schadstoffbelastet EBV 2023 BM-0 Sand LKW AN transp. entsorgen Beseitigungsanlage;130,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.21;Abbrechen Plattenbelag Pflasterklinker nicht schadstoffbelastet Geräteeinsatz mgl. Stoffe laden LKW AN ges.Vergüt.Entsorg.;100,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.22;Abbrechen Pflasterbelag Betonpflaster, Brechsand-Splitt;350,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.23;Abbrechen Pflasterbelag Betonpflaster, Bettung Brechsand-Splitt;230,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.24;Abbrechen Plattenbelag Betonpl.;50,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.25;Abfall nicht gefährlich AVV170102 nicht schadstoffbelastet LKW AN transp. entsorgen Beseitigungsanlage Vergüt.Entsorg.gg.Nachweis für vorab beschriebene Positionen;13,5;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.26;Abfall nicht gefährlich AVV170102 nicht schadstoffbelastet LKW AN transp. entsorgen Beseitigungsanlage Vergüt.Entsorg.gg.Nachweis für vorab beschriebene Positionen;120,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.27;Kopfsteinpflaster Schulhof als Einfassung Sandkasten;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.28;Bordstein Beton abbrechen 24kN/m3 Geräteeinsatz mgl. laden LKW AN nicht schadstoffbelastet ges.Vergüt.Entsorg.;125,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.29;Abfall nicht gefährlich AVV170101 nicht schadstoffbelastet LKW AN transp. entsorgen Beseitigungsanlage Vergüt.Entsorg.gg.Nachweis für vorab beschriebene Position Einfassung;16,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.30;Befestigung ohne Bindemittel Schotter Hoffläche abbrechen Geräteeinsatz mgl. laden LKW AN nicht schadstoffbelastet ges.Vergüt.Entsorg.;550,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.31;Abfall nicht gefährlich AVV170504 nicht schadstoffbelastet LKW AN transp. entsorgen Beseitigungsanlage Vergüt.Entsorg.gg.Nachweis für vorab beschriebene Positionen Schotter/Einfassung;550,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.32;Asphaltdeckschicht Asphaltbeton Hoffläche abbrechen Geräteeinsatz mgl. zerkleinern laden LKW AN nicht schadstoffbelastet ges.Vergüt.Entsorg.;10,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.33;Abfall nicht gefährlich AVV170302 nicht schadstoffbelastet EBV 2023 RuVA A LKW AN transp. entsorgen Beseitigungsanlage Vergüt.Entsorg.gg.Nachweis;22,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.34;Schacht Beton DN1000 T 2-3m abbrechen 24kN/m3 Geräteeinsatz mgl. zerkleinern laden transp. LKW AN entsorgen nicht schadstoffbelastet AVV170101 Vergüt.Entsorg.gg.Nachweis;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.35;Abbruch Bestandsschacht, Gesamttiefe bis 4,00 m;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.36;Abbruch Bestandsschacht, Gesamttiefe bis 5,00 m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.37;Straßenablauf Beton abbrechen 24kN/m3 Geräteeinsatz mgl. zerkleinern laden transp. LKW AN nicht schadstoffbelastet ges.Vergüt.Entsorg.;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.38;Abfall nicht gefährlich AVV170405 nicht schadstoffbelastet LKW AN transp. entsorgen Beseitigungsanlage Vergüt.Entsorg.gg.Nachweis für vorab beschriebene Position;0,1;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.39;Abfall nicht gefährlich AVV170101 nicht schadstoffbelastet LKW AN transp. entsorgen Beseitigungsanlage Vergüt.Entsorg.gg.Nachweis;3,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.40;Abfall nicht gefährlich AVV170904 nicht schadstoffbelastet LKW AN transp. entsorgen Beseitigungsanlage Vergüt.Entsorg.gg.Nachweis;1,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.41;Pumpensumpf herstellen räumen Betonbrunnenring DN1000;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+201.42;Temporäre Wasserhaltung mittels Drainagerohr;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.1;Auffüllung Baugrube lösen laden LKW AN ges.Vergüt.Entsorg. geböschte Wände SU*;1627,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.2;Auffüllung Baugrube lösen laden LKW AN ges.Vergüt.Entsorg. geböschte Wände SU SU*;138,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.3;Bodenaushub Baugrube lösen laden LKW AN ges.Vergüt.Entsorg. geböschte Wände SU*;2475,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.4;Gründungssohle verdichten Baugrube;1391,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.5;Planum herstellen +/-2cm 45MN/m2;1391,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.6;Boden für Magerbetonfundamente unter Streifenfundamenten, abgetreppt, lösen laden LKW AN ges.Vergüt.Entsorg. SU*;30,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.7;Boden für Magerbetonfundamente unter Einzelfundamenten h ca. 2,50 m, lösen laden LKW AN ges.Vergüt.Entsorg. SU*;74,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.8;Boden für Streifenfundament lösen laden LKW AN ges.Vergüt.Entsorg.SU*;161,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.9;Boden für Einzelfundament lösen laden LKW AN ges.Vergüt.Entsorg. SU*;157,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.10;Boden für Aufzug Unterfahrt lösen laden LKW AN ges.Vergüt.Entsorg. SU*;4,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.11;Boden für voutenartige Fundamentvertiefungen lösen laden LKW AN ges.Vergüt.Entsorg. SU*;7,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.12;Boden für voutenartige Fundamentvertiefungen lösen laden LKW AN ges.Vergüt.Entsorg. SU*;13,5;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.13;Boden für Einzelfundament Kran lösen laden LKW AN ges.Vergüt.Entsorg. SU*;16,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.14;Boden für  Lüftungsfundamente lösen laden LKW AN ges.Vergüt.Entsorg. SU*;61,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.15;Abfall nicht gefährlich AVV170504 nicht schadstoffbelastet EBV 2023 BM-0 Lehm Schluff LKW AN transp. entsorgen Beseitigungsanlage Vergüt.Entsorg. AN;748,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.16;Abfall nicht gefährlich AVV170504 nicht schadstoffbelastet EBV 2023 BM-0 Sand;28,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.17;Handschachtung;30,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.18;Böschungssicherung Gewebe Jute Nadelholzpflöcke;720,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.19;Arbeitsraum der Aufzugunterfahrt verfüllen+verdichten;0,525;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.20;Baugrube verfüllen und Verdichten;189,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.21;Baugrube außerhalb vom Gebäude liefern, verfüllen und verdichten;944,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.22;Kontrollprüfung Unterbau/Planum Verformungsmodul statischer Lastplattendruckversuch;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.23;Geotextil Vliesstoff Trennen Gründung KG + EG;1676,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.24;STS 0/45 D 30cm;1619,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.25;STS 0/45;30,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.26;STS 0/45;26,25;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.27;STS 0/45;17,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.28;STS 0/45 D 20cm;467,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.29;Drän- und Anfüllschutzbahn;539,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.30;Kontrollprüfung TSoB Verformungsmodul statischer Lastplattendruckversuch;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+202.31;Bodenprobe aus Haufwerken;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+203.1;Bodenaushub für RW/SW- und  Drainage-Leitungen lösen laden LKW AN ges.Vergüt.Entsorg. SU*;129,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+203.2;Bodenaushub für Schächte;10,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+203.3;Abfall nicht gefährlich AVV170504 nicht schadstoffbelastet EBV 2023 BM-0 Sand LKW AN transp. entsorgen Beseitigungsanlage Vergüt.Entsorg. AN;200,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+203.4;Planum Abweichung f. Schacht;7,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+203.5;Arbeitsraum verfüllen verdichten Füllsand (Umrechnungsfaktor 1,8);14,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+203.6;Druckdichtes Lehrrohrsystem;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+203.7;Mediendurchführung Mehrsparte Bodenplatte geschlossen 3Sparten;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+203.8;Druckwasserdichte Gebäudeeinführung;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+203.9;Abstandshalter;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.1;Schachtunterteil DN 1000, bis DN 200 gekrümmt, Kanalklinker;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.2;Seitenzulauf bis DN 150 Kanalklinker;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.3;Schachtring DN 1000;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.4;Schachtring DN 1000;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.5;Schachthals DN 1000 / 625;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.6;Auflagering DN 625;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.7;Schachtabdeckung Klasse D, rund;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.8;Abwasserrohr aus Polypropylen (PP) DN 110;112,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.9;PP-Abzweige 45° bis 87° DN 110;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.10;PP-Bogen 15° bis 87° DN 110;72,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.11;PP-Doppelmuffen DN 110;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.12;Austausch NBR-Dichtungen DN 110;84,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.13;Bodendurchführung für KG 2000 - DN 110;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.14;Bodendurchführung für KG 2000 mit Folienflansch - DN 110;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.15;Universaltrichter DN 110;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.16;Pumpensumpf 400/100 - LR;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.17;Bodenablauf für KG 2000;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.18;Bodenablauf für KG 2000 mit Folienflansch;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.19;Dichtheit prüfen bis DN 125;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.20;Fettabscheider;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.21;Aufsatzsysteme für Abscheider;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.22;Adapterstück Aufsatzstück;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.23;Probenahmeschächte Set;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.24;Fettschichtdicken-Messgerät;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.25;Anschlusskasten;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.26;Unterputzrahmen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.27;Kabeldurchführung DN 100;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.28;Entsorgungsschacht Kl. B;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.29;Inbetriebnahme Fettabscheider;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.30;Generalinspektion;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.31;Dränltg TP Ringe A PVC-U DN125 Arbeitsraum Baugrube;131,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.32;Dränltg TP Ringe A PVC-U DN125 Arbeitsraum Baugrube;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.33;Spül-/Kontroll-/Sammelschacht PVC-U DN315 Sandfang Abdeck. PP Kl.A;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.34;Aufsetzrohr PVC-U DN315;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.35;Sammelltg UP Stangen R1PVC-U DN200 Graben;4,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.36;Auskleidung Sohle Graben Geotextil;814,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+204.37;Sickerpackung Kies Ltg DN125 H 15cm H 30cm B 30cm;160,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.1;Schalungsplanung / Betonierkonzept;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.2;Schalung Streifenfundament H 1-1,5m;72,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.3;"Schalung Streifenfundament Innenseite; Gründung EG Achse 1-4/A+H; Statikpos.: F1, F2, F3";60,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.4;"Schalung Bodenplatte als Randschalung; Gründung KG";87,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.5;"Schalung Bodenplatte Randschalung; Gründung EG";25,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.6;"Schalung Einzelfundament; Gründung EG Statikpos.: F4-F9; 110.1+110.2";158,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.7;"Schalung Einzelfundament; Gründung EG";3,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.8;"Schalung Streifenfundament abgetreppt; Gründung EG";51,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.9;"Schalung Innenrand Aufzugsunterfahrt als Fundamentvertiefung in Statikpos. 50; Gründung KG";4,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.10;Randschalung Aufzugunterfahrt als Fundamentvertiefung;2,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.11;Zulage Schalung Eckausbildung stumpf;1,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.12;Zulage Schalung Eckausbildung stumpf;9,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.13;"Schalung Aussparung Verdrängungskörper rund in Streifenfundament; für Rohrdurchführung DN120";0,11;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.14;Schalung Deckenpl. Schalungspl. Decke ü. KG Statikpos. 40;441,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.15;"Schalung Deckenpl. Schalungspl.; Decke ü. EG Statikpos. 30A";665,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.16;"Schalung Deckenpl. Schalungspl.; Decke ü. 1. OG Statikpos. 20";1016,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.17;"Schalung Deckenpl. Schalungspl.; Decke ü. 2. OG Statikpos. 10";730,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.18;"Schalung Deckenpl. Schalungspl.; Decke ü. EG Statikpos. 30B";351,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.19;"Schalung Deckenpl. Randschalung; Decke ü. KG, EG, 1-2.OG";613,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.20;Schalung Deckenpl. Randschalung Decke ü. EG Statikpos.;109,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.21;"Schalung Unterzug rechteckig Schalungspl.; Statikpos.: 30.10, 30.17";61,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.22;"Schalung Unterzug rechteckig Schalungspl.; Statikpos.: 20.25";8,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.23;"Schalung Unterzug rechteckig Schalungspl.; Statikpos.: 20.30";10,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.24;"Schalung Unterzug rechteckig Schalungspl.; Statikpos.: 20.48";29,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.25;"Schalung Unterzug rechteckig Schalungspl.; Statikpos.: 10.25";9,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.26;"Schalung Unterzug rechteckig Schalungspl.; Statikpos.: 11";2,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.27;Schalung Überzug als Attika ü. 1.OG rechteckig Schalungspl.;71,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.28;Schalung Überzug als Attika ü. 2.OG rechteckig Schalungspl.;79,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.29;Zulage Schalung Eckausbildung stumpf Schalungspl.;1,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.30;Zulage Schalung Eckausbildung stumpf Schalungspl.;1,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.31;Zulage Schalung Eckausbildung stumpf Schalungspl.;1,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.32;Schalung Öffnung rund Deckenpl. oberer Bauwerksabschluss DN 250;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.33;"Schalung Aussparung Verdrängungskörper rund in Unterzug DN 200; Statikpos. 20.48";5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.34;"Schalung Aussparung Verdrängungskörper rund in Unterzug; DN 100";3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.35;"Schalung Aussparung Verdrängungskörper rund in Attika; DN 130";5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.36;Schalung Aussparung rechteckig Deckenpl.;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.37;Schalung Aussparung rechteckig Deckenpl.;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.38;Schalung Aussparung rechteckig Deckenpl.;7,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.39;"Randschalung Deckenpl. Aufzugloch Schalungspl.; Decke ü. KG, EG, 1.OG";6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.40;"Randschalung Deckenpl.Einbringöffnung Technik Schalungspl.; geeignet f. späteres Verschließen; Decke ü. KG";3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.41;"Schalung Öffnung rechteckig Deckenpl. oberer Bauwerksabschluss; Öffnung Dachdecke für Dachfenster";9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.42;"Sohle abstellen für Bodeneinläufe Öffnung rechteckig Bodenplatte;";9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.43;"Schalung Außenwand Rahmenschalung; EG";913,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.44;"Schalung Außenwand Rahmenschalung; 1.+2. OG";1933,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.45;Zulage Schalung Stumpfwinkelige Eckausbildung Außenwand Rahmenschalung;32,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.46;Zulage Schalung Stumpfwinkelige Eckausbildung Außenwand Rahmenschalung;19,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.47;Schalung Außenwand Abstellung Rahmenschalung;13,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.48;Schalung Außenwand Abstellung Rahmenschalung;27,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.49;"Schalung Außenwand Randschalung als freies Wandende; Außentreppenhaus; Statikpos.: W11-W15, W17-W19";31,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.50;Schalung Außenwand Randschalung als freies Wandende;13,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.51;Schalung Innenwand Abstellung Rahmenschalung;3,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.52;Schalung Innenwand Rahmenschalung;66,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.53;Schalung Innenwand Rahmenschalung;364,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.54;Schalung Innenwand Rahmenschalung;102,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.55;Zulage Schalung Eckausbildung stumpf Innenwand Rahmenschalung;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.56;Schalung Innenwand Abstellung Rahmenschalung;2,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.57;Schalung Innenwand Rahmenschalung;553,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.58;Schalung Innenwand Rahmenschalung;99,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.59;Zulage Schalung Eckausbildung stumpf Innenwand Rahmenschalung;4,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.60;Schalung Innenwand Randschalung als freies Wandende rechtwinklig z.Seitenschalung Rahmenschalung;9,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.61;Schalung Innenwand Randschalung als freies Wandende rechtwinklig z.Seitenschalung Rahmenschalung;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.62;Schalung Innenwand Randschalung rechtwinklig z.Seitenschalung Rahmenschalung;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.63;Schalung Öffnung T 20-30cm 2500-5000cm2 rechteckig Außenwand;3,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.64;Schalung Öffnung rechteckig Außenwand;7,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.65;Schalung Öffnung rechteckig Außenwand;8,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.66;Schalung Öffnung rechteckig Außenwand;2,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.67;Schalung Öffnung rechteckig Außenwand;16,5;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.68;Schalung Öffnung rechteckig Außenwand;12,5;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.69;Schalung Öffnung rechteckig Außenwand;88,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.70;Schalung Öffnung rechteckig Außenwand;4,5;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.71;Schalung Öffnung rechteckig Außenwand;50,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.72;Schalung Öffnung rechteckig Außenwand;8,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.73;Schalung Öffnung rechteckig Außenwand;8,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.74;Schalung Öffnung rechteckig Innenwand dreiseitig;15,5;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.75;Schalung Öffnung rechteckig Innenwand dreiseitig;5,5;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.76;Schalung freistehende Wand gekrümmt;43,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.77;Schalung freistehende Wand gekrümmt SB2;43,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.78;Schalung Außenwand Rahmenschalung;38,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.79;Schalung Außenwand Rahmenschalung SB2;38,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.80;Schalung Außenwand Rahmenschalung;95,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.81;Schalung Außenwand SB2 Rahmenschalung;95,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.82;Schalung Mittelwand SB2 Rahmenschalung;90,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.83;Schalung Außenwand Stirnabschalung rechtwinklig z.Seitenschalung Rahmenschalung;30,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.84;Öffnung herstellen in StB-Außenwand SB2;2,9;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.85;Schalung Aussparung Verdrängungskörper rund Außenwand;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.86;Eckausbildung Außenwand Rahmenschalung spitzwinkelig Rahmenschalung;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.87;Schalung Treppenlaufpl. Stufen SB2 Schalungspl.;9,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.88;Schalung Treppenlaufpl. Stufen SB2 Schalungspl.;10,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.89;Schalung Treppenlaufpl. Stufen SB2 Schalungspl.;9,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.90;Schalung Treppenlaufpl. Stufen SB2 Schalungspl.;10,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.91;Schalung Zwischen-Treppenpodestpl. SB2 Schalungspl. Zwischenpodest gerundet Außentreppenhaus;8,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.92;Schalung Treppenpodestpl. SB2 Schalungspl.;4,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.93;Schalung Treppenpodestpl. SB2 Schalungspl. Hauptpodest Außentreppe;6,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.94;Schalung Treppenpodestpl. SB2 Schalungspl.;6,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.95;Schalung Bodenpl. Randschalung Hauptpodest Außentreppe;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.96;Schalung Bodenpl. Randschalung H 25-50cm Hauptpodest Außentreppe;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.97;Schalung Bodenpl. Randschalung H 20 cm Zwischenpodest Außentreppe;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.98;Schalung Deckenpl. abgetreppt Schalungspl.;29,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.99;Schalung Deckenpl. rechtwinklig Randschalung H 25-50cm Schalungspl.;9,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.100;Schalung Deckenpl. schräg Randschalung H 25-50cm Schalungspl.;13,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.101;Schalung Deckenpl. rund Randschalung H 25-50cm Schalungspl.;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.102;Zulage Eckausbildung Randschalung spitzwinklig;0,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.103;Öffnung herstellen in StB-Decke rund für DN70;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.104;Öffnung herstellen in StB-Sohle rund für DN70;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.105;Öffnung herstellen in StB-Streifenfundament rund für DN70;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.106;Schalung SB2 Deckenpl.;32,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.107;Schalung SB2 Deckenpl. Randschalung Schalungspl. gerundet;38,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.108;Schalung SB2 Deckenpl. Randschalung Schalungspl.;51,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.109;Schalung Stütze innen rechteckig SB2 Rahmenschalung;17,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.110;Schalung Stütze innen rechteckig SB2 Rahmenschalung;10,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.111;Schalung Stütze innen rechteckig  Rahmenschalung;9,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.112;Schalung Stütze innen rechteckig  Rahmenschalung;5,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.113;Schalung Stütze innen und außen rechteckig  Rahmenschalung;11,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.114;Schalung Stütze innen rechteckig  Rahmenschalung;6,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.115;Schalung Stütze innen rechteckig  SB2 Rahmenschalung;6,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.116;Schalung Stütze innen quadratisch  Rahmenschalung;3,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.117;Schalung Stütze außen rund  SB3;54,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.118;Schalung Stütze innen rund  SB3;17,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.119;Schalung Stütze innen rund  SB3;5,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.120;Schalung Stütze innen rund  SB3;34,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.121;Schalung Stütze innen rund  SB3;7,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.122;Schalung Stütze innen rund  SB3;11,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.123;Schalung Stütze innen rund SB3;18,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.124;"Schalung Treppenpodestpl. SB2 Schalungspl. Schalungsecken scharfkantig; Zwischenpodest UG Statikpos. T6";4,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.125;Schalung Treppenpodestpl. SB 2 Schalungspl.;4,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.126;Schalung Treppenpodestpl. SB 2 Schalungspl.;4,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.127;"Schalung Treppenpodestpl. Schalungspl.; Schalungsecken scharfkantig; Zwischenpodest Halle EG; Statikpos. T15";8,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.128;Schalung Treppenpodestpl. Schalungspl. SB2;6,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.129;Schalung Auflager abgetreppt;7,35;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.130;Schalung Auflager Deckschalung;4,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+301.131;Schalung Bodenpl. Randschalung Treppenpodest;4,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.1;Überwachung und Dokumentation Betoneinbau Überwachungskl.2;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.2;"Ortbeton Sauberkeitsschicht Bodenplatte unbewehrt C12/15; u. Sohle KG/EG Statikpos.50/40B";699,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.3;Zulage Ortbeton Sauberkeitsschicht unter Bodenplatte, waagerechte Kleinflächen, unbewehrt C12/15;58,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.4;Zulage Ortbeton Sauberkeitsschicht unter Bodenplatte, geneigter Untergrund, unbewehrt C12/15;37,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.5;"Ortbeton Sauberkeitsschicht Streifenfundament unbewehrt C12/15; u. Streifenfundamente Statikpos. F1-F3";90,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.6;"Ortbeton Sauberkeitsschicht Einzelfundament unbewehrt C12/15; U. Einzelfun. Statikpos.: F6-F9, FL1, 110.1-110.2";178,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.7;Sauberkeitsschicht Natursand;767,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.8;Zulage für Sauberkeitsschicht Natursand an Voutenschräge;37,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.9;Thermischer Schutz der Betonbauteile im Rahmen der Warmbeton- / Winterbetonage;188,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.10;Winterbetonage;735,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.11;Ortbeton Bodenpl. Stahlbeton C30/37 WU XC2 Statikpos. 50*, Sohle KG;188,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.12;Ortbeton voutenartige Fundamentvertiefung in Bodenplatte Stahlbeton C30/37 XC2 WU;17,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.13;Ortbeton voutenartige Fundamentvertiefung in Bodenplatte Stahlbeton C30/37 XC2 WU;9,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.14;Ortbeton Aufzugunterfahrt Bodenpl. Stahlbeton C30/37 XC2 WU;3,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.15;Ortbeton Bodenpl. Stahlbeton C25/30 XC2 XF1 Statikpos. 40B;65,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.16;"Ortbeton Streifenfundament Stahlbeton C25/30 XC2; Pos. F1";28,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.17;Ortbeton Streifenfundament Stahlbeton C25/30 XC2 Pos. F2;36,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.18;Ortbeton Streifenfundament Stahlbeton C25/30 XC2 Pos. F3;28,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.19;Ortbeton Streifenfundament Stahlbeton C25/30 XC2 Außentreppenhaus;6,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.20;"Ortbeton Einzelfundament Stahlbeton C25/30 XC2; Pos. F7, F9, 110.1, 110.2";59,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.21;"Ortbeton Einzelfundament Stahlbeton C25/30 XC2; Pos. F4";17,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.22;Ortbeton Einzelfundament Stahlbeton C25/30 XC2, Pos. F8;23,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.23;Ortbeton Einzelfundament Stahlbeton C25/30 XC2, Pos. F5, F6, FL1;9,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.24;Ortbeton Magerbeton Streifenfundament unbewehrt C12/15;30,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.25;Ortbeton Magerbeton, Einzelfundament unbewehrt C12/15;69,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.26;Ortbeton Deckenpl. waager. Stahlbeton C30/37 XC1 Statikpos. 40A;133,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.27;Ortbeton Deckenpl. waager. Stahlbeton C30/37 XC3 Statikpos.30A;199,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.28;Ortbeton Deckenpl. waager. Stahlbeton C30/37 XC3 Statikpos.30B;158,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.29;Ortbeton Deckenpl. waager. Stahlbeton C30/37 XC3 Statikpos. 20+10;509,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.30;Ortbeton Innenwand Stahlbeton C25/30 XC1 d ca. 24cm, Statikpos. W1,W2,W3 KG-2.OG TRH2;40,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.31;Ortbeton Innenwand Stahlbeton C25/30 XC1 d ca. 25m, Statikpos. WA Aufzugswand;36,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.32;"Ortbeton Innenwand Stahlbeton C25/30 XC1 d ca. 24cm, h ca.4,31m; Statikpos. EG";7,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.33;"Ortbeton Innenwand Stahlbeton C25/30 XC1; Statikpos. EG";7,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.34;"Ortbeton Innenwand Stahlbeton C25/30 XC1, d ca. 24cm; Statikpos. W4-W5, W17";15,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.35;"Ortbeton Innenwand Stahlbeton C25/30 XC1; Statikpos. W6+W7";5,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.36;"Ortbeton Innenwand Stahlbeton C25/30 XC1 D 15-25cm; Statikpos. W7";6,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.37;"Ortbeton Außenwand Stahlbeton C25/30 XC3 d ca. 24cm; Statikpos. W10-W20 EG";82,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.38;"Ortbeton Außenwand polygonale Geometrie Stahlbeton C25/30 XC3; Statikpos. W10-W20 EG";2,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.39;"Ortbeton Außenwand polygonale Geometrie Stahlbeton C25/30 XC3; Statikpos. W10-W20 EG";2,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.40;"Ortbeton Außenwand polygonale Geometrie Stahlbeton C25/30 XC3; Statikpos. W10-W20 EG";1,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.41;"Ortbeton Außenwand polygonale Geometrie Stahlbeton C25/30 XC3; Statikpos. W10-W20 EG";2,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.42;"Ortbeton Außenwand polygonale Geometrie Stahlbeton C25/30 XC3; Statikpos. W10-W20 EG";2,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.43;"Ortbeton Außenwand polygonale Geometrie Stahlbeton C25/30 XC3; Statikpos. W10-W20 EG";1,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.44;"Ortbeton Außenwand Stahlbeton C25/30 XC3; Statikpos. W10-W24 1.OG,  Pos. W10-W19 2.OG";167,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.45;"Ortbeton Außenwand polygonale Geometrie Stahlbeton C25/30 XC3; Statikpos. W10-W24 1.OG";0,42;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.46;"Ortbeton Außenwand polygonale Geometrie Stahlbeton C25/30 XC3; Statikpos. W10-W24 1.OG";2,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.47;"Ortbeton Außenwand polygonale Geometrie Stahlbeton C25/30 XC3; Statikpos. W10-W24 1.OG";1,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.48;"Ortbeton Stütze innen Stahlbeton C25/30 XC1 rechteckig Querschnitt; Statikpos. S1-S2, S25 KG";2,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.49;"Ortbeton Stütze innen Stahlbeton C25/30 XC1  rechteckig Querschnitt; Statikpos. S23-S24 KG";1,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.50;"Ortbeton Stütze innen Stahlbeton C25/30 XC1 SB2 rechteckig Querschnitt; Statikpos. S6 EG";0,48;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.51;Ortbeton Stütze innen Stahlbeton C25/30 XC1 rechteckig Querschnitt 2000-2250cm2 L 400-450cm, Pos. S1 EG;0,55;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.52;"Ortbeton Stütze innen Stahlbeton C25/30 XC1 rechteckig Querschnitt; Statikpos. S24 EG";0,14;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.53;"Ortbeton Wandpfeiler innen Stahlbeton C25/30 XC1 rechteckig Querschnitt; Statikpos. W8-9";4,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.54;"Ortbeton Wandpfeiler innen Stahlbeton C25/30 XC1 SB2 rechteckig Querschnitt; Statikpos. W25 + W26 KG";1,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.55;"Ortbeton Stütze innen außen Stahlbeton C25/30 XC1 rechteckig Querschnitt; Statikpos. S22 EG";0,33;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.56;"Ortbeton Stütze innen außen Stahlbeton C25/30 XC1 SB3 rechteckig Querschnitt; Statikpos. S21 EG";1,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.57;"Ortbeton Stütze außen Stahlbeton C30/37 XF1 XC4 XD1 SB3 rund Querschnitt; Statikpos. S7-S20 EG";5,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.58;"Ortbeton Stütze innen Stahlbeton C25/30 XC1 SB3 rund; Statikpos. S2-S5, EG";2,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.59;"Ortbeton Stütze innen Stahlbeton C25/30 XC1 SB3 rund Querschnitt; Statikpos. S23 EG";0,46;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.60;"Ortbeton Stütze innen Stahlbeton C25/30 XC1 SB3 rund Querschnitt; Statikpos. S1-S12 1.OG";4,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.61;"Ortbeton Stütze innen Stahlbeton C25/30 XC1 SB3 rund Querschnitt; Statikpos. S6";2,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.62;"Ortbeton Träger wandartig Stahlbeton C25/30 XC1 SB2; Statikpos. WAT40";5,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.63;"Ortbeton Träger wandartig Stahlbeton C25/30 XC1 SB2; Statikpos. WAT41";5,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.64;"Ortbeton Träger wandartig Stahlbeton C25/30 XC1; Statikpos. WAT30";13,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.65;"Ortbeton Unterzug Stahlbeton C25/30 XC1; in Außenwand, Statikpos. 10.1-10.19";13,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.66;"Ortbeton Unterzug Stahlbeton C25/30 XC1; in Außenwand, Statikpos. 10.16, 10.18, 10.20";3,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.67;"Ortbeton Unterzug Stahlbeton C25/30 XC1; innen, Statikpos. 10.25, 2.OG";2,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.68;"Ortbeton Unterzug Stahlbeton C25/30 XC1; In Außenwand, Statikpos. 20.3 - 20.47, 1.OG";17,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.69;"Ortbeton Unterzug Stahlbeton C25/30 XC1; In Außenwand, Statikpos. 20.2, 1.OG";0,74;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.70;"Ortbeton Unterzug Stahlbeton C25/30 XC1; Statikpos. 20.7, 20.12, 20.13, 20.14, 20.17, 1.OG";5,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.71;"Ortbeton Unterzug Stahlbeton C25/30 XC1; innen; Statikpos. 20.31, 1.OG";4,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.72;"Ortbeton Unterzug Stahlbeton C25/30 XC1; innen, Statikpos. 20.48, 1.OG";7,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.73;"Ortbeton Unterzug Stahlbeton C25/30 XC1; innen; Statikpos. 20.31, 1.OG";4,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.74;"Ortbeton Unterzug Stahlbeton C25/30 XC1 innen; Pos. 20.30, 1.OG";2,1;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.75;"Ortbeton Unterzug außen Stahlbeton C25/30 XC1; Statikpos. 30.1-4, EG";17,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.76;"Ortbeton Unterzug Stahlbeton C25/30 XC1; in Außenwand, Statikpos. 30.11-13-14, EG";2,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.77;"Ortbeton Unterzug Stahlbeton C25/30 XC1; in Außenwand, Statikpos. 30.5-8,30.16, EG";6,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.78;"Ortbeton Unterzug Stahlbeton C25/30 XC1; in Außenwand, Statikpos. 30.10-12-15-17, EG";12,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.79;"Ortbeton Unterzug Stahlbeton C25/30 XC1; in Außenwand, Statikpos. 30.20-21, EG";2,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.80;"Ortbeton Attika als Überzug Stahlbeton C30/37 XC3; Decke über 2.OG";15,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.81;"Ortbeton Attika als Überzug Stahlbeton C30/37 XC3; Decke über 1.OG";14,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.82;Ortbeton Sturz Stahlbeton C25/30 XC1;0,5;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.83;"Ortbeton Kragpl. waager. Stahlbeton C25/30 XF1 XC4 SB2 Decken, Unregelmäßig geformte Grundfläche; Statikpos. 101";3,3;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.84;"Ortbeton Kragpl. geneigte, Stahlbeton C25/30 XF1 XC4 SB2 Decken, Unregelmäßig geformte Grundfläche; Statikpos. 101";3,2;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.85;"Ortbeton Treppenlaufpl. Stufen Stahlbeton C25/30 XF1 XC4 SB2 ; Statikpos. 102";3,2;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.86;"Ortbeton Treppenlaufpl. Stahlbeton C25/30 XF1 XC4 SB3; Statikpos. 102";4,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.87;"Zwischenpodest Ortbeton Treppenpodestpl. Stahlbeton C25/30 XF1 XC4 SB2 Platten; Grundriss halbkreisförmig; Statikpos. 103";2,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.88;"Hauptpodest Ortbeton Treppenpodestpl. Stahlbeton C25/30 XF1 XC4 SB2 Platten, Grundriss trapezförmig; Statikpos. 104";3,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.89;"Mittelwand, Ortbeton Außenwand Stahlbeton C25/30 XF1 XC4 SB2; Statikpos. 105";2,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.90;"Außenwand Längsrichtung, Ortbeton Außenwand Stahlbeton C25/30 XF1 XC4 SB2; Statikpos. 106";25,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.91;"Außenwand Eingang, Ortbeton Außenwand Stahlbeton C25/30 XF1 XC4 SB2; Statikpos. 107";9,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.92;"Außenwand Rückseite, Ortbeton Außenwand Stahlbeton C25/30 XF1 XC4 SB2; halbkreisförmiger Grundriss; Statikpos. 108";12,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.93;"Ortbeton Bodenpl. Stahlbeton C25/30 XC4 SB2, unregelmäßig geformte Grundrissfläche; Statikpos. 109";12,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.94;Ortbeton Podestplatte Außentr. Stahlbeton C25/30 XF1 XC4 SB2;2,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.95;Ortbeton Podestpl. Stahlbeton C30/37 XF4 XC4 SB2;5,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.96;Ortbeton Podeststufe. Stahlbeton C30/37 XF4 XC4 SB2;3,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.97;Ortbeton Podeststufe. Stahlbeton C30/37 XF4 XC4 SB2;3,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.98;Ortbeton abgetreppter seitlicher Abschluss  Podeststufe. Stahlbeton C30/37 XF4 XC4 SB2;0,26;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.99;Ortbeton abgetreppter seitlicher Abschluss  Podeststufe. Stahlbeton C30/37 XF4 XC4 SB2;0,27;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.100;"Zwischenpodest TRH 01 Ortbeton Treppenpodestpl. Stahlbeton C25/30 XC1 SB 2 Platten; Statikpos. T14";3,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.101;"Zwischenpodest TRH 01 Ortbeton Treppenpodestpl. Stahlbeton C25/30 XC1 Platten; Statikpos. T15";1,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.102;"Zwischenpodest TRH 02 Ortbeton Treppenpodestpl. Stahlbeton C25/30 XC1 Platten; Statikpos. T4-T6";3,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+302.103;Wiederherstellen der Sohle nach Einbau und Ausrichtung Bodenablauf durch TGA/Sänitär;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.1;Werkplanung El.-Wandplatte WU Halbfertigteil digital;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.2;El.-Wandplatte Wand-H 2,9 m D 30cm Außenwand Stahlbeton Normalbeton C25/30 XF1 XC2 WU;208,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.3;Wandelement mit 105,13° Innenwinkel;5,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.4;Wandelement mit 260,10° Außenwinkel;11,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.5;Wandelement mit 97,88° Innenwinkel;4,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.6;Wandelement mit 167,68° Innenwinkel;20,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.7;Wandelement mit 130,00° Innenwinkel;4,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.8;Wandelement mit 214,3° Außenwinkel;11,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.9;Wandelement mit 106,71° Innenwinkel;6,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.10;Lieferung u. Dosierung der Betonzusatzmittel gem. WU-Planung;72,0;l;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.11;Füllbeton Ortbeton El.-Wandplatte Außenwand Stahlbeton Normalbeton C25/30 XC1 WU;54,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.12;Verschlußkonen aus Faserbeton WU-gerecht;193,2;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.13;Fugenblech Arbeitsfuge vertikal Stahlblech 2seitig , liefern und einbauen;79,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.14;Fugenblech Arbeitsfuge horizontal Stahlblech, verzink, 2-seitig besch liefern und einbauen;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.15;Fugenblech Arbeitsfuge horizontal Stahlblech 2-seitig beschichtet Anschluss Boden-Wand-Deckenbereich - liefern und einbauen;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.16;Eckstück Fugenblech Stahlblech verz. 2-seitig beschichtet liefern und einbauen;27,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.17;Abschalelement Wand/Wand zur Herstellung von wasserundurchlässigen Arbeitsfugen;74,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.18;Fugenband-Stumpfstoss-Schweissungen;26,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.19;Fugenband-Formteil gem. WU-Planung;26,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.20;Trapezblech gem. WU-Planung;26,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.21;Dichtungsrohr für die Arbeits- bzw. Sollrissfugen in den Wänden gem. WU-Planung;26,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.22;Arbeitsfuge Injektionsschlauch mehrfach;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.23;Aussparung rechteckig Fertigteil El.-Wandplatte, Kellerwand Achse 1;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.24;Öffnungen in WU-Stahlbetonbauteilen schließen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.25;"Aussparung rund Fertigteil El.-Wandplatte; Aussparung für Lüftungskanäle; Kellergeschoss Ø ca. 150cm";2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.26;Aussparung rechteckig Fertigteil El.-Wandplatte;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+303.27;Aussparung rechteckig Fertigteil El.-Wandplatte;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+304.1;El.Wandplatte Wand-H 2,9 m D 24cm Innenwand Stahlbeton Normalbeton C25/30 XC1;30,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+304.2;Werkplanung Treppenlauf Vollfertigteil digital TRH 01, Treppe 1;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+304.3;Werkplanung Treppenlauf Vollfertigteil digital TRH 02, Treppe 2;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+304.4;"Treppenlauf gerade Fertigteil Platten- C25/30 XC1  SB3-FT; Pos. T2";4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+304.5;"Treppenlauf gerade Fertigteil Platten- C25/30 XC1  SB3-FT; Pos. T3";1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+304.6;Treppenlauf gerade Fertigteil Platten- C25/30 XC1 SB3-FT: Pos. T1;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+304.7;"Treppenlauf gerade Fertigteil Platten-C25/30 XC1 SB3-FT; Pos. T12";1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+304.8;"Treppenlauf gerade Fertigteil Platten-D 20cm Lauf-B 160cm Steigungen 13 St H 16,5 cm T 28 cm Unterschneidung 2cm C25/30 XC1 SB3-FT; Pos. T13+T11";2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+304.9;"Treppenlauf gerade Fertigteil Platten-D 20cm Lauf-B 160cm Steigungen 11 St H 16,5 cm T 28 cm Unterschneidung 2cm C25/30 XC1 SB3-FT; Pos. T10";1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+304.10;Verschlussstopfen aus Beton für Transportankeröffnungen, Sichtbeton SB2;24,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+304.11;"Unterzug Fertigteil Rechteckquer. H ca. 24 cm B ca. 24 cm L ca. 1,83 m C20/25 XC1; Pos. FS 2.OG";1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+304.12;"Unterzug Fertigteil Rechteckquer. H ca. 24 cm B ca. 24 cm L ca. 1,83 m C20/25 XC1;";1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+304.13;Unterzug Fertigteil Rechteckquer. H ca. 24 cm B ca. 24 cm L ca. 1,5 m C20/25 XC1,Pos. FS 2.OG;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+304.14;Liefern und Versetzen eines Sitzsockels aus Stahlbetonfertigteil. Durchmesser ca. 60cm;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+304.15;Wasserdichter Beton-Lichtschacht, 125cm x 50cm, Höhe 190cm, Abstandshalter 12cm;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.1;"Mauerwerk Innenwand KS-R P SFK20 RDK2,2 D 24cm Dünnbettm. 1,3W/(mK) 8DF(248/240/248) 2.OG; Pos.W4, 2. OG";96,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.2;"Mauerwerk Innenwand KS-R P SFK20 RDK2,2 D 24cm Dünnbettm. 1,3W/(mK) 8DF(248/240/248) 2.OG; Pos.W4, 2. OG";24,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.3;Mauerwerk Innenwand KS-R P SFK20 RDK2,2 D 24cm Dünnbettm. 1,3W/(mK) 8DF(248/240/248) EG;26,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.4;Mauerwerk Innenwand KS-R P SFK20 RDK2,2 D 24cm Dünnbettm. 1,3W/(mK) 8DF(248/240/248) EG;17,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.5;Mauerwerk Innenwand KS-R P SFK20 RDK2,2 D 24cm Dünnbettm. 1,3W/(mK) 8DF(248/240/248) EG;10,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.6;Mauerwerk Innenwand KS-R P SFK20 RDK2,2 D 24cm Dünnbettm. 1,3W/(mK) 8DF(248/240/248) EG;10,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.7;Mauerwerk Innenwand KS-R P SFK20 RDK2,2 D 24cm Dünnbettm. 1,3W/(mK) 8DF(248/240/248) EG;12,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.8;Mauerwerk Innenwand KS-R P SFK20 RDK2,2 D 17,5cm Dünnbettm. 1,3W/(mK) 6DF(248/175/248) EG;66,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.9;Mauerwerk Innenwand KS-R P SFK20 RDK2,2 D 11,5cm Dünnbettm. 1,3W/(mK) 4DF(248/115/248) EG;105,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.10;Mauerwerk Innenwand KS-R P SFK20 RDK2,2 D 11,5cm Dünnbettm. 1,3W/(mK) 4DF(248/115/248) KG;242,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.11;Abdichtung in/unter Wand D 15-25cm W4-E Bitumen-Dachdichtungsbahn PV200DD MSB-Q Bürstenstreich-Gießverf;64,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.12;Ausgleichs-Kimmschicht Wandfuß Mauersteine KS H 12,5-15cm D 24cm;64,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.13;Ausgleichs-Kimmschicht Wandfuß Mauersteine KS H 12,5-15cm  D 11,5cm;107,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.14;Ausgleichs-Kimmschicht Wandfuß Mauersteine KS H 12,5-15cm D 17,5 cm;16,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.15;Stumpfstoß Mauerwerk D 17,5-24cm;87,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.16;Öffnung b. Aufmauern herst.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.17;Öffnung b. Aufmauern herst.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.18;Öffnung b. Aufmauern herst.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.19;Öffnung b. Aufmauern herst.;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.20;Öffnung b. Aufmauern herst.;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.21;Öffnung b. Aufmauern herst.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.22;Öffnung b. Aufmauern herst.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.23;Öffnung b. Aufmauern herst.;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.24;Öffnung b. Aufmauern herst.;19,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.25;Öffnung b. Aufmauern herst.;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.26;Öffnung b. Aufmauern herst.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.27;Öffnung b. Aufmauern herst.;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.28;Öffnung b. Aufmauern herst.;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.29;Öffnung b. Aufmauern herst.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.30;Öffnung b. Aufmauern herst.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.31;Öffnung b. Aufmauern herst.;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.32;Öffnung b. Aufmauern herst.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.33;Öffnung b. Aufmauern herst.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.34;Öffnung b. Aufmauern herst.;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.35;Öffnung b. Aufmauern herst.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.36;Öffnung b. Aufmauern herst.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.37;Öffnung b. Aufmauern herst.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.38;Öffnung b. Aufmauern herst.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.39;Öffnung b. Aufmauern herst.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.40;Öffnungen in Stahlbetonbauteilen schließen;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.41;Öffnung überdecken mit KS-Flachsturz;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.42;Öffnung überdecken mit KS-Flachsturz;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.43;Öffnung überdecken mit KS-Flachsturz;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.44;Öffnung überdecken mit KS-Flachsturz;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.45;Öffnung überdecken mit KS-Flachsturz;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.46;Öffnung überdecken mit KS-Flachsturz;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.47;Abgleichen Mauerwerk Abschlüsse Mörtel MGIII;90,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.48;Auflager Sturz KS SFK12 Mörtel, Auflager Türstürze;32,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+305.49;Deckenanschluss MW;52,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+306.1;Schutzabdeck. Treppe Vlies Abdeck. Schaltafeln herstellen beseitigen;29,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+306.2;Schutzabdeck. Außen-Stütze Abdeck. Schaltafeln herstellen beseitigen;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+306.3;Riss füllen Innenwand injizieren Epoxidharz;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+306.4;Riss füllen Außenwand Epoxidharz;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+306.5;Riss füllen Decke injizieren Epoxidharz;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+306.6;Öffnungen in Stahlbetonbauteilen schließen;5,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+306.7;Öffnungen in Stahlbetonbauteilen schließen;6,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+306.8;Druckwasserdichte Gebäudeeinführung mit Systemdeckel;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+306.9;Systemdeckel;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+306.10;Systemdeckel;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+306.11;Abstandshalter für zuvor beschriebene druckwasserdichte Gebäudeeinführungen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+306.12;Elektroinstallationsrohr halogenfr.Kunststoff AD 16mm erdverlegt;42,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+306.13;Verbindungsdose, Werksfertigung,mit Deckel;109,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+306.14;Elektroinstallationsrohr verlegen in Beton;522,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.1;Trittschalldämmelem. tragend Bodenpl. Treppenlauf PE-Schaum;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.2;Trittschalldämmelem. tragend Treppenpodest -lauf PE-Schaum;28,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.3;Trittschalldämmelem. nichttragend Treppenlauf -hauswand PE-Schaum Platten;29,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.4;Fugenabdichtband  Treppenlauf / Wand;39,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.5;Treppenkantenprofil V4A;96,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.6;Treppenkantenprofil V4A;73,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.7;Baustahlgewebe BSt 500 M;70,0;to;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.8;Baustabstahl BSt 500 S;230,0;to;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.9;Abstandhalter für Bewehrung liefern und verlegen;5,3;to;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.10;Dübelleiste Pos. D1 Sohle KG;13,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.11;Dübelleiste Pos. D2 KG;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.12;Dübelleiste Pos. D3 KG;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.13;Dübelleiste, Pos. D4 KG;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.14;Dübelleiste, Pos. D4 EG;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.15;Dübelleiste, Pos. D5 EG;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.16;Dübelleiste, Pos. D6 EG;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.17;Dübelleiste, Pos. D7 EG;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.18;Dübelleiste, Pos. D8 OG;32,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.19;Dübelleiste, Pos. D9 OG;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.20;Dübelleiste, Pos. D10 2.OG;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.21;Bewehrungsanschluss Betonstabstahl El.-Wandplatte;21,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.22;Bewehrungsstoß geschraubt;47,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.23;Rückbiegeanschluss mit Dichtblech;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.24;Rückbiegeanschluss mit Dichtblech;32,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.25;Arbeitsfugenabschluss mit verzahntem Streckmetall Typ V;795,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.26;"tragender Anschlusskörper mit Dämmkörper zur thermischen Trennung frei auskragender; Stahlträger, Pos. 111";4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.27;Leerrohre in den Streifenfundamenten DN150;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.28;Einbau Gerüsthülsen, Ortbeton;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.29;Anker Anschluss Mauerwerk Stahl niro;431,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.30;Anker Anschluss Mauerwerk Stahl niro;433,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.31;Maueranschlusssch. Stahl niro Profil 25/15 Außenwand einbauen Beton;96,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.32;Maueranschlusssch. Stahl niro Profil 25/15 Innenwand einbauen Beton;75,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.33;Hauseinführung Dichtungseinsatz;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.34;Hauseinführung Dichtungseinsatz;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.35;Hauseinführung Dichtungseinsatz;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.36;Mediendurchführung mehrfach Innenwand geschlossen 2Sparten;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.37;Montagehilfseinr. Ankerschiene;21,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.38;Montagehilfseinr. Lastöse in Aufzugsschachtdecke;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.39;Profilstahl-Träger Doppel-T-Träger HEB H 100mm Stahl, für Verbindungssteg Außentreppe, Pos. 111;8,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+307.40;Gitterrost Laufstegabdeck. L 2100 mm B 1500 mm 30/10mm Tragstab-B 3 mm H 30 mm Stahl,  Pos. 111;7,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.1;Untergrund reinigen Beton Betongrate Schleifen;373,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.2;"Fehlstellen füllen Kalkzementputz; Gründung EG";5,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.3;"Grundierung Kunststoffemulsion Fundament; Sockelbereiche Gründung EG";373,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.4;Kratzspachtelung PMBC Gründung EG;373,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.5;Dichtungskehle Wand-Fundament Zementmörtel Haftbrücke;172,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.6;"Abdichtung Wand W2.1-E PMBC D 4mm 2-schichtig Spachtelverf Verstärkungseinlage; Sockelbereiche Gründung EG ü. Fundamente und aufgehende Wand";373,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.7;Anschluss Rohrdurchführung bzw. Dichtmanschetten Sockelbereiche Gründung EG;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.8;Untergrund reinigen Beton Betongrate Schleifen;123,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.9;"Fehlstellen füllen Kelleraußenwand Kalkzementputzm; Gründung KG";5,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.10;Dichtungskehle Wand-Sohle Zementmörtel Haftbrücke Stirnseiten Kellerwände;35,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.11;Voranstrich Bitumenlösung Außenwand Kellerwand, stirnseitig;123,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.12;Elastomerbitumen-Schweißbahnen, 1-lagig Außenwand Keller, stirnseitig;123,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.13;Perimeterdämmung Streifenfundament Seiten W2.1-E PS-Hartschaum XPS 0,038W/(mK) PW ds;86,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.14;Perimeterdämmung Streifenfundament horizontal W2.1-E PS-Hartschaum XPS 0,038W/(mK) PW ds;57,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.15;Voranstrich Bitumenemulsion waager.Fläche;706,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.16;Perimeterdämmung Bodenpl. Unterseite W2.2-E Schaumglas CG 0,042W/(mK) PB ds;521,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.17;Perimeterdämmung Bodenpl. Unterseite W2.2-E Schaumglas CG 0,042W/(mK) PB ds, für voutenartige Fundamentvertiefungen;39,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.18;Perimeterdämmung Bodenpl. Unterseite W2.1-E Schaumglas CG 0,042W/(mK) PB ds, lastabtragend;106,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.19;Perimeterdämmung Bodenpl. Unterseite W2.1-E Schaumglas CG 0,042W/(mK) PB ds, lastabtragend;75,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.20;Perimeterdämmung Kelleraußenwand W2.2-E PS-Hartschaum EPS 0,035W/(mK) PW;98,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.21;Perimeterdämmung Kelleraußenwand W2.2-E PS-Hartschaum EPS 0,035W/(mK) PW;152,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.22;Perimeterdämmung vertikal Bodenpl. W2.2-E PS-Hartschaum EPS 0,035W/(mK) PW;39,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.23;Perimeterdämmung horizontal W2.2-E PS-Hartschaum EPS 0,035W/(mK) PW;30,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.24;Trennlage PE-Folie 2lagig Dämmschicht;897,75;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.25;Flüssigkunststoff auf Kleinflächen;5,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.26;Zulage Abdichtung Flüssigkunststoff;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+308.27;Abstreuung mit Quarzsand;5,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+309.1;Kernbohrung, Stb-Wand WU;100,0;cm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+309.2;Kernbohrung, Stb-Wand WU;100,0;cm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+309.3;Kernbohrung, Stb-Wand WU;250,0;cm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+309.4;Kernbohrung Stahlbeton nicht schadstoffbelastet Geräteeinsatz mgl. Stoffe;500,0;cm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+309.5;Kernbohrung Stahlbeton nicht schadstoffbelastet Geräteeinsatz mgl. Stoffe;100,0;cm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+309.6;Kernbohrung Stahlbeton nicht schadstoffbelastet Geräteeinsatz mgl. Stoffe;100,0;cm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+309.7;Kernbohrung Stahlbeton nicht schadstoffbelastet Geräteeinsatz mgl. Stoffe;400,0;cm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+309.8;Kernbohrung, Stb Attika;130,0;cm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+309.9;Kernbohrung, Stb Attika;100,0;cm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+309.10;Kernbohrung Stahlbeton nicht schadstoffbelastet Geräteeinsatz mgl. Stoffe;500,0;cm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+309.11;Kernbohrung Stahlbeton nicht schadstoffbelastet Geräteeinsatz mgl. Stoffe;100,0;cm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+309.12;Kernbohrung Stahlbeton nicht schadstoffbelastet Geräteeinsatz mgl. Stoffe;100,0;cm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+309.13;Kernbohrung Stahlbeton nicht schadstoffbelastet Geräteeinsatz mgl. Stoffe;400,0;cm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+309.14;Kernbohrung KS nicht schadstoffbelastet Geräteeinsatz mgl.;250,0;cm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+309.15;Kernbohrung KS nicht schadstoffbelastet Geräteeinsatz mgl.;125,0;cm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+309.16;Kernbohrung KS nicht schadstoffbelastet Geräteeinsatz mgl.;100,0;cm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+309.17;Kernbohrung KS nicht schadstoffbelastet Geräteeinsatz mgl.;100,0;cm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+309.18;Installationsschlitze Stb.-Wände;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+309.19;Schlitz herstellen Mauerwerk;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+4.1;Abfall nicht gefährlich AVV170107 nicht schadstoffbelastet LKW AN transp. entsorgen Vergüt.Entsorg. AN;1,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+4.2;Abfall nicht gefährlich AVV170904 nicht schadstoffbelastet LKW AN transp. entsorgen Vergüt.Entsorg. AN;5,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+5.1;Antriebsaggregat elektr.Geräte bis 5kVA;1,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+5.2;Kompressor Bedienungspersonal 3-5m3/min;1,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+5.3;Abbruchhammer;1,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+5.4;Bohrhammer Werkzeug Bedienungspersonal 0,25-1kW;1,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+5.5;Trennschleifer Trennscheiben Bedienungspersonal Stein;1,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+5.6;Minibagger Fahrer/-in Tieflöffel;1,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+5.7;Radlader Fahrer/-in bis 18kW;1,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+5.8;Magerbeton;5,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+5.9;LKW - Allrad-Kipper ohne Anhänger;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+5.10;Kleintransporter;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+5.11;Minibagger bis 3t;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+5.12;Radlader, 0,6m3;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+5.13;Flächenrüttler;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+5.14;Kleingeräte;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+5.15;Motorsäge 45cm;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+5.16;Kompressor mit Abbruchhammer;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+5.17;Bohrhammer;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+5.18;Pumpenagregat 50 m3/h;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+5.19;Mulde 5 m³ für Bauschutt (Mischmulde);1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+6.1;Stundensatz Meister;50,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+6.2;Stundensatz Facharbeiter;100,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+6.3;Stundensatz Helfer;100,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+6.4;Zulage Stundensatz Meister;50,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+6.5;Zulage Stundensatz Facharbeiter;50,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83
+6.6;Zulage Stundensatz Helfer;50,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/1_LV_Erd_u_Rohbau_09530-2026.D83

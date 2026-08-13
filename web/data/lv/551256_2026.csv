@@ -1,0 +1,357 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0201.10;Holz-Alu-Fenster, 1,00 x 1,05 m, 1-flüglig, Drehkipp, Typ 1, System IV 78;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0201.20;Holz-Alu-Fenster, 1,00 x 1,05 m, 1-flüglig, Drehkipp, Typ 1, System IV 78, RC 2, Bediensperre;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0201.30;Holz-Alu-Fenster, 1,18 x 1,30m, 1-flüglig, Drehkipp, Typ 1, System IV 78, Kipp-vor-Dreh-Funktion, abschließbar;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0201.40;Holz-Alu-Fenster, 1,18 x 2,08m, 1-flüglig, Drehkipp, Typ 1, System IV 78, Kipp-vor-Dreh-Funktion, abschließbar;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0201.50;Holz-Alu-Fenster, 1,18 x 1,32m, 1-flüglig, Drehkipp, Typ 1, System IV 78, RC2, abschließbar;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0201.60;Holz-Alu-Fenster, 1,18 x 1,85m, 1-flüglig, Drehkipp, Typ 1, System IV 78, RC2, Rw 35dB, abschließbar;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0201.70;Holz-Alu-Fenster, 1,18 x 1,85m, 1-flüglig, Drehkipp, Typ 1, System IV 78,  Rw 35dB, Kipp-vor-Dreh, abschließbar;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0201.80;Holz-Alu-Fenster, 1,18 x 1,97m, 1-flüglig, Drehkipp, Typ 1, System IV 78,  Rw 35dB, Kipp-vor-Dreh, abschließbar;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0201.90;Holz-Alu-Fenster, 0,95-1,05 x 1,45-1,55 m, 1-flüglig, Drehkipp, Typ 1, System IV 78, Rw 32 dB, Blendrahmenverbreitung, Senkrechtmarkise;10,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0201.100;Holz-Alu-Fenster, 1,00x 1,47m, 1-flüglig, Drehkipp, Typ 1, System IV 78, Rw 37 dB, Blendrahmenverbreitung, Senkrechtmarkise;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0201.110;Holz-Alu-Fenster, 1,10x 1,50m, 1-flüglig, Drehkipp, Typ 1, System IV 78, Rw 32 dB, Blendrahmenverbreitung, Sonnenschutz: Senkrechtmarkise;4,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0201.120;Holz-Alu-Fenster, 1,10x 1,45m, 1-flüglig, Drehkipp, Typ 1, System IV 78, Blendrahmenverbreitung, Kipp-vor-Dreh, abschließbar, Senkrechtmarkise;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0201.130;Holz-Alu-Fenster, 1,10x 1,45m, 1-flüglig, Drehkipp, Typ 1, System IV 78, Rw 35 dB, Blendrahmenverbreitung, Senkrechtmarkise;11,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0201.140;Holz-Alu-Fenster, 1,26x 1,75m, 1-flüglig, Drehkipp, Typ 1, System IV 78, Rw 37 dB, Blendrahmenverbreitung;15,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0201.150;Holz-Alu-Fenster, 1,26x 1,47m, 1-flüglig, Drehkipp, Typ 1, System IV 78, Rw 37 dB, Blendrahmenverbreitung;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0202.10;Holz-Alu-Fenster, 1,52x 0,70 m, 1-flüglig, Kippflügel, Typ 1a, System IV 78, manueller Oberlichtöffner, Blendrahmenverbreitung, ALD;6,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0202.20;Holz-Alu-Fenster, 1,38x 0,69m, 1-flüglig, Kippflügel, Typ 1a, System IV 78, RC 2, elektrischer Oberlichtöffner, Blendrahmenverbreitung, ALD;4,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0202.30;Holz-Alu-Fenster, 1,64x 0,69m, 1-flüglig, Kippflügel, Typ 1a, System IV 78, RC 2, manueller Oberlichtöffner, Blendrahmenverbreitung, ALD;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0202.40;Holz-Alu-Fenster, 1,64x 0,69m, 1-flüglig, Kippflügel, Typ 1a, System IV 78, RC 2, Rw 32 dB, manueller Oberlichtöffner, Blendrahmenverbreitung, ALD;5,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0202.50;Holz-Alu-Fenster, 1,64x 0,70m, 1-flüglig, Kippflügel, Typ 1a, System IV 78, Rw 35 dB, manueller Oberlichtöffner, Blendrahmenverbreitung, ALD;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0202.60;Holz-Alu-Fenster, 1,64x 0,70m, 1-flüglig, Kippflügel, Typ 1a, System IV 78, manueller Oberlichtöffner, Blendrahmenverbreitung, ALD;5,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.10;Holz-Alu-Fenster, 1,38x 1,52m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Kipp-vor-Dreh, abschließbar;9,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.20;Holz-Alu-Fenster, 1,38x 1,52m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, RC 2, Kipp-vor-Dreh, abschließbar;3,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.30;Holz-Alu-Fenster, 1,39x 1,54m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Kipp-vor-Dreh, abschließbar;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.40;Holz-Alu-Fenster, 1,54x 1,47m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.50;Holz-Alu-Fenster, 1,54x 1,47m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Rw 35 dB, Bediensperre;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.60;Holz-Alu-Fenster, 1,39x 1,54 m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.70;Holz-Alu-Fenster, 1,39x 1,54m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung,  Kipp-vor-Dreh, abschließbar;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.80;Holz-Alu-Fenster, 1,39x 1,54m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, Rw 32 dB;8,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.90;Holz-Alu-Fenster, 1,39x 1,52m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, Rw 37 dB;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.100;Holz-Alu-Fenster, 1,39x 1,52m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, Rw 37 dB,  Kipp-vor-Dreh, abschließbar;12,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.110;Holz-Alu-Fenster, 1,39x 1,52m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, Rw 37 dB;5,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.120;Holz-Alu-Fenster, 1,39x 1,49m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, RC 2, abschließbar, Bediensperre;3,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.130;Holz-Alu-Fenster, 1,39x 1,49m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, RC 2, Rw 32 dB, Bediensperre;3,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.140;Holz-Alu-Fenster, 1,49x 1,47m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, RC 2, Rw 35 dB, abschließbar, Bediensperre;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.150;Holz-Alu-Fenster, 1,52x 1,51m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, Rw 32 dB;8,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.160;Holz-Alu-Fenster, 1,52x 1,60-1,65m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, Rw 32 dB;16,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.170;Holz-Alu-Fenster, 1,54x 1,47m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.180;Holz-Alu-Fenster, 1,54x 1,52m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, Rw 37, Kipp-vor-Dreh, abschließbar;5,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.190;Holz-Alu-Fenster, 1,54x 1,52m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, Rw 35;4,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.200;Holz-Alu-Fenster, 1,54x 1,52m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, Rw 35, Kipp-vor-Dreh-Funktion, abschließbar;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.210;Holz-Alu-Fenster, 1,54x 1,52m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, Rw 35;4,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.220;Holz-Alu-Fenster, 1,54x 1,52m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, Rw 37;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.230;Holz-Alu-Fenster, 1,54x 1,52m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, Rw 35, RC 2, abschließbar, Bediensperre;3,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.240;Holz-Alu-Fenster, 1,54x 1,52m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, Rw 37, RC 2, Griff: abschließbar;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.250;Holz-Alu-Fenster, 1,62x 1,57m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, Rw 32, RC 2;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.260;Holz-Alu-Fenster, 1,63x 1,38m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, RC 2, Kipp-vor-Dreh, abschließbar;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.270;Holz-Alu-Fenster, 1,64x 1,54m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, Rw 32;6,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.280;Holz-Alu-Fenster, 1,64x 1,66m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, Rw 32;6,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.290;Holz-Alu-Fenster, 1,60-1,65x 1,68m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, Rw 32, RC 2;4,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0203.300;Holz-Alu-Fenster, 1,32x 1,54m, 2-flüglig, Dreh- und Drehkippflügel, Typ 2, System IV 78, Blendrahmenverbreitung, RC 2, Bediensperre;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0204.10;Holz-Alu-Fenster, 2,36 x 1,85m, Festverglasung und Drehkippflügel, Typ 3, System IV 78;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0204.20;Holz-Alu-Fenster, 3,50x 2,91m, Festverglasung und Drehkippflügel, Typ 3, System IV 92, VSG, Kipp-vor-Dreh, abschließbar, absturzsichernde Verglasung;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0204.30;Holz-Alu-Fenster, 3,50x 2,65m, Festverglasung und Drehkippflügel, Typ 3, System IV 92, VSG, Kipp-vor-Dreh, abschließbar, absturzsichernde Verglasung;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0204.40;Holz-Alu-Fenster, 3,50x 2,30m, Festverglasung und Drehkippflügel, Typ 3, System IV 92, VSG, absturzsichernde Verglasung;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0204.50;Holz-Alu-Fenster, 3,02x 1,05m, Festverglasung und Drehkippflügel, Typ 3, System IV 78, RC 2, Bediensperre;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0204.60;Holz-Alu-Fenster, 2,00x 1,47m, Festverglasung und Drehkippflügel, Typ 3, System IV 78, Rw 37 dB;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0204.70;Holz-Alu-Fenster, 2,20x 1,47m, Festverglasung und Drehkippflügel, Typ 3, System IV 78, Rw 37 dB;3,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0204.80;Holz-Alu-Fenster, 2,20x 1,47m, Festverglasung und Drehkippflügel, Typ 3, System IV 78, Rw 37 dB, Kipp-vor-Dreh, abschließbar;3,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0204.90;Holz-Alu-Fenster, 2,34-2,36 x 1,96m, Festverglasung und Drehkippflügel, Typ 3, System IV 78, Rw 35 dB, RC 2, Bediensperre;4,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0204.100;Holz-Alu-Fenster, 2,34x 1,85m, Festverglasung und Drehkippflügel, Typ 3, System IV 78;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0204.110;"Holz-Alu-Fenster, 2,50x 1,47m, Festverglasung und Drehkippflügel, Typ 3, System IV 78, Rw 37 dB;";1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0204.120;Holz-Alu-Fenster, 2,92x 1,05m, Festverglasung und Drehkippflügel, Typ 3, System IV 78, Rw 35 dB, RC 2, Bediensperre;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0204.130;Holz-Alu-Fenster, 3,36-3,38x 1,60m, Festverglasung und Drehkippflügel, Typ 3, System IV 78, Rw 32 dB, RC 2, abschließbar;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0204.140;Holz-Alu-Fenster, 3,55-3,60x 1,60m, Festverglasung und Drehkippflügel, Typ 3, System IV 78, Rw 32 dB, RC 2, abschließbar;6,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0204.150;Holz-Alu-Fenster, 3,74x 1,85m, Festverglasung und zwi Drehkippflügel, Typ 3a, System IV 78;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0204.160;Holz-Alu-Fenster, 4,95-5,05x 1,85m, Festverglasung und Drehkippflügel, Typ 3a, System IV 78, Kipp-vor-Dreh, abschließbar;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0204.170;Holz-Statikpfosten zur Lastabtragung (IV 78);2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0204.180;Holz-Alu-Fenster, 3,70x 1,85m, Festverglasung und Drehkippflügel, Typ 3a, System IV 78, Kipp-vor-Dreh, abschließbar;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0205.10;Holz-Alu-Fenster, 2,12x 1,50m, 2-flüglig, Drehkippflügel, Typ 4, System IV 78, Blendrahmenverbreitung;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0205.20;Holz-Alu-Fenster, 2,12x 1,90m, 2-flüglig, Drehkippflügel, Typ 4, System IV 78, Blendrahmenverbreitung, Rw 35dB, Bediensperre;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0205.30;Holz-Alu-Fenster, 1,72 x 1,86m, 2-flüglig, Drehkippflügel, Typ 4, System IV 78, Blendrahmenverbreitung, Rw 40, VSG;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0205.40;Holz-Alu-Fenster, 1,77 x 2,26m, 2-flüglig, Drehkippflügel, Typ 4, System IV 78, Blendrahmenverbreitung, Rw 37, abschließbar;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0205.50;Holz-Alu-Fenster, 1,77 x 2,26m, 2-flüglig, Drehkippflügel, Typ 4, System IV 78, Blendrahmenverbreitung, abschließbar;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0205.60;Holz-Alu-Fenster, 1,77 x 2,11m, 2-flüglig, Drehkippflügel, Typ 4, System IV 78, Blendrahmenverbreitung, Rw 37;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0205.70;Holz-Alu-Fenster, 1,77 x 1,91m, 2-flüglig, Drehkippflügel, Typ 4, System IV 78, Blendrahmenverbreitung, Rw 37;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0205.80;Holz-Alu-Fenster, 1,77 x 1,68m, 2-flüglig,Drehkippflügel, Typ 4, System IV 78, Blendrahmenverbreitung, Rw 37;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0206.10;Holz-Alu-Fenster, 2,25-2,30 x 2,27m, Dreh-Kipp-Fenstertür und Festverglasung, Typ 5, System IV 78, Sockeldämmprofil, Rw 40 dB, VSG;3,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0206.20;Holz-Alu-Fenster, 2,30-2,35 x 2,27m, Dreh-Kipp-Fenstertür und Festverglasung, Typ 5, System IV 78, Sockeldämmprofil , Rw 40 dB, VSG;4,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0206.30;Holz-Alu-Fenster, 2,40 x 2,27m, Dreh-Kipp-Fenstertür und Festverglasung, Typ 5, System IV 78, Sockeldämmprofil , Rw 40 dB, VSG;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0206.40;Holz-Alu-Fenster, 3,87 x 2,27m, Dreh-Kipp-Fenstertür und Festverglasung, Typ 5, System IV 78, Sockeldämmprofil , Rw 40 dB, , VSG;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0206.50;"Holz-Alu-Fenster, 2,20 x 2,04m, zwei Dreh-kipp-Fenstertür, Stulp, Typ 5a, System IV 78, Sockeldämmprofil , Rw 37 dB; g-Wert 0,65, VSG, Abschließbarer";1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0206.60;Holz-Alu-Fenstertür, 1,84 x 2,34m, Fenstertürvals Stulp, Typ 5a, System IV 78, Sockeldämmprofil , Rw 40 dB, VSG, integrierter  Außentürgriff;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0206.70;Holz-Alu-Fenstertür, 1,01 x 2,17m, zwei Dreh-Kipp-Fenstertür, Typ 5b, System IV 78, Sockeldämmprofil , Rw 40 dB, VSG;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0206.80;Unterbauprofil, EPS oder PVC/TK, 74x300 mm;28,0;m;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0207.10;Holz-Alu-Fenster, 1,38 x 1,52m, Festverglasung, Typ 6, System IV 78;12,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0207.20;Holz-Alu-Fenster, 1,40 x 2,30m, Festverglasung, Typ 6, System IV 78, Rw 37 dB;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0207.30;Holz-Alu-Fenster, 2,25-2,30 x 2,21m, Festverglasung, Typ 6, System IV 78, VSG;3,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0207.40;Holz-Alu-Fenster, 0,79 x 2,27m, Festverglasung, Typ 6, System IV 78, VSG,  Rw 40 dB;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0207.50;Holz-Alu-Fenster, 1,50 x 2,17m, Festverglasung, Typ 6, System IV 78, VSG,  Rw 40 dB;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0207.60;Holz-Alu-Fenster, 1,80 x 2,77m, Festverglasung, Typ 6, System IV 78, Rw 37 dB, RC 2, Sockeldämmprofil;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0207.70;Holz-Alu-Fenster, 1,89 x 1,85m, Festverglasung, Typ 6, System IV 78;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0207.80;Holz-Alu-Fenster, 2,34 x 2,27m, Festverglasung, Typ 6, System IV 78, VSG,  Rw 40 dB;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0207.90;Holz-Alu-Fenster, 2,50-2,55 x 1,75m, Festverglasung, Typ 6, System IV 78, Rw 37 dB;15,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0208.10;Holz-Alu-Fenster, Rund, 1,07m, Festverglasung, Typ 7, System IV 78;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0208.20;Gebogene Innenfensterbank aus Holzwerkstoff für Rundfenster;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.10;Senkrechtmarkise, Vorbausystem, 900x1500 mm, Seilführung, Motorbetrieb;4,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.20;Senkrechtmarkise, Vorbausystem, 790x2270 mm, Seilführung, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.30;Senkrechtmarkise, Vorbausystem, 1000x1500 mm, Seilführung, Motorbetrieb;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.40;Senkrechtmarkise, Vorbausystem, 1000x1470 mm, Führungsschienen , Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.50;Senkrechtmarkise, Vorbausystem, 1040x15400 mm, Seilführung, Motorbetrieb;4,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.60;Senkrechtmarkise, Vorbausystem, 1100x1450 mm, Seilführung, Motorbetrieb;13,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.70;Senkrechtmarkise, Vorbausystem, 1100x1500 mm, Seilführung, Motorbetrieb;4,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.80;Senkrechtmarkise, Vorbausystem, 1140x2170 mm, Führungsschienen, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.90;Senkrechtmarkise, Vorbausystem, 1260x1750 mm, Seilführung, Motorbetrieb;3,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.100;Senkrechtmarkise, Vorbausystem, 1260x1470 mm, Führungsschienen , Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.110;Senkrechtmarkise, Vorbausystem, 1270x1750 mm, Seilführung, Motorbetrieb;6,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.120;Senkrechtmarkise, Vorbausystem, 1280x1750 mm, Seilführung, Motorbetrieb;6,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.130;Senkrechtmarkise, Vorbausystem, 1320x1540 mm, Seilführung, Motorbetrieb;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.140;Senkrechtmarkise, Vorbausystem, 1390x1490 mm, Seilführung, Motorbetrieb;6,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.150;Senkrechtmarkise, Vorbausystem, 1390x1520 mm, Seilführung, Motorbetrieb;18,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.160;Senkrechtmarkise, Vorbausystem, 1390x1540 mm, Seilführung, Motorbetrieb;11,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.170;Senkrechtmarkise, Vorbausystem, 1490x1470 mm, Seilführung, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.180;Senkrechtmarkise, Vorbausystem, 1520x1510 mm, Seilführung, Motorbetrieb;8,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.190;Senkrechtmarkise, Vorbausystem, 1520x1610 mm, Seilführung, Motorbetrieb;8,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.200;Senkrechtmarkise, Vorbausystem, 1520x1630 mm, Seilführung, Motorbetrieb;8,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.210;Senkrechtmarkise, Vorbausystem, 1520x2170 mm, Seilführung, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.220;Senkrechtmarkise, Vorbausystem, 1540x1470 mm, Seilführung, Motorbetrieb;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.230;Senkrechtmarkise, Vorbausystem, 1540x1520 mm, Seilführung, Motorbetrieb;20,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.240;Senkrechtmarkise, Vorbausystem, 1620x1720 mm, Seilführung, Motorbetrieb;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.250;Senkrechtmarkise, Vorbausystem, 1630x1390 mm, Seilführung, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.260;Senkrechtmarkise, Vorbausystem, 1640x1540 mm, Seilführung, Motorbetrieb;6,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.270;Senkrechtmarkise, Vorbausystem, 1640x1660 mm, Seilführung, Motorbetrieb;6,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.280;Senkrechtmarkise, Vorbausystem, 1640x1680 mm, Seilführung, Motorbetrieb;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.290;Senkrechtmarkise, Vorbausystem, 1650x1680 mm, Seilführung, Motorbetrieb;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.300;Senkrechtmarkise, Vorbausystem, 1720x1860 mm, Führungsschienen, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.310;Senkrechtmarkise, Vorbausystem, 1770x1680 mm, Seilführung, Motorbetrieb;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.320;Senkrechtmarkise, Vorbausystem, 1770x1910 mm, Seilführung, Motorbetrieb;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.330;Senkrechtmarkise, Vorbausystem, 1770x2110 mm, Seilführung, Motorbetrieb;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.340;Senkrechtmarkise, Vorbausystem, 1770x2260 mm, Seilführung, Motorbetrieb;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.350;Senkrechtmarkise, Vorbausystem, 1800x2770 mm, Seilführung, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.360;Senkrechtmarkise, Vorbausystem, 1840x2340 mm, Seilführung, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.370;Senkrechtmarkise, Vorbausystem, 1840x2340 mm, Seilführung, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.380;Senkrechtmarkise, Vorbausystem, 2000x1470 mm, Führungsschienen, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.390;Senkrechtmarkise, Vorbausystem, 2120x1500 mm, Seilführung, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.400;Senkrechtmarkise, Vorbausystem, 2120x1900 mm, Seilführung, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.410;Senkrechtmarkise, Vorbausystem, 2200x1470 mm, Führungsschienen, Motorbetrieb;6,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.420;Senkrechtmarkise, Vorbausystem, 2200x2050 mm, Führungsschienen, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.430;Senkrechtmarkise, Vorbausystem, 2280x2270 mm, Führungsschienen, Motorbetrieb;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.440;Senkrechtmarkise, Vorbausystem, 2290x2210 mm, Seilführung, Motorbetrieb;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.450;Senkrechtmarkise, Vorbausystem, 2290x2270 mm, Führungsschienen, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.460;Senkrechtmarkise, Vorbausystem, 2300x2210 mm, Seilführung, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.470;Senkrechtmarkise, Vorbausystem, 2330x2270 mm, Führungsschienen, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.480;Senkrechtmarkise, Vorbausystem, 2340x2270 mm, Führungsschienen, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.490;Senkrechtmarkise, Vorbausystem, 2350x2270 mm, Führungsschienen, Motorbetrieb;3,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.500;Senkrechtmarkise, Vorbausystem, 2350x1960 mm, Führungsschienen, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.510;Senkrechtmarkise, Vorbausystem, 2350x1850 mm, Führungsschienen, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.520;Senkrechtmarkise, Vorbausystem, 2360x1960 mm, Führungsschienen, Motorbetrieb;3,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.530;Senkrechtmarkise, Vorbausystem, 2360x1850 mm, Führungsschienen, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.540;Senkrechtmarkise, Vorbausystem, 2400x2270 mm, Führungsschienen, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.550;Senkrechtmarkise, Vorbausystem, 2500x1470 mm, Führungsschienen, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.560;Senkrechtmarkise, Vorbausystem, 2510x1750 mm, Seilführung, Motorbetrieb;3,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.570;Senkrechtmarkise, Vorbausystem, 2520x1750 mm, Seilführung, Motorbetrieb;9,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.580;Senkrechtmarkise, Vorbausystem, 2530x1750 mm, Seilführung, Motorbetrieb;3,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.590;Senkrechtmarkise, Vorbausystem, 2920x1050 mm, Führungsschienen, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.600;Senkrechtmarkise, Vorbausystem, 3360x1600 mm, Führungsschienen , Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.610;Senkrechtmarkise, Vorbausystem, 3380x1600 mm, Führungsschienen, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.620;Senkrechtmarkise, Vorbausystem, 3560x1600 mm, Führungsschienen, Motorbetrieb;2,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.630;Senkrechtmarkise, Vorbausystem, 3570x1600 mm, Führungsschienen, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.640;Senkrechtmarkise, Vorbausystem, 3580x1600 mm, Führungsschienen, Motorbetrieb;3,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.650;Senkrechtmarkise, Vorbausystem, 3700x1850 mm, Führungsschienen, ZIP-Führung, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.660;Senkrechtmarkise, Vorbausystem, 3740x1850 mm, Führungsschienen, ZIP-Führung, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.670;Senkrechtmarkise, Vorbausystem, 3870x2270 mm, Führungsschienen, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.680;Senkrechtmarkise, Vorbausystem, 4970x1850 mm, Führungsschienen, ZIP-Führung, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.690;Senkrechtmarkise, Vorbausystem, 5020x1850 mm, Führungsschienen, ZIP-Führung, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.700;Innenrollo, freihängend, 1400x2300 mm, Screenstoff, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0301.710;Wärmedämmung für Vorbaumarkisenkasten, PUR/PIR, d = 40 mm;21,0;m2;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0302.10;Senkrechtmarkise, Vorbausystem, 2300x2180 mm, Führungsschienen, Motorbetrieb;5,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0302.20;Senkrechtmarkise, Vorbausystem, 3490x2430 mm, Führungsschienen, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0302.30;Senkrechtmarkise, Vorbausystem, 3580x2430 mm, Führungsschienen, Motorbetrieb;1,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0302.40;Senkrechtmarkise, Vorbausystem, 3650x2430 mm, Führungsschienen, Motorbetrieb;3,0;St;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0401.10;Technische Dokumentation der Leistungen;1,0;psch;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0402.10;Werk- und Montageplanung und Statische Berechnung;1,0;psch;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0501.10;Schutzfolie Verglasung und Profile;775,0;m2;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0501.20;Bauendreinigung der Fensterelemente;775,0;m2;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0601.10;Polier-in sämtliche Kosten/Zuschläge;10,0;h;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0601.20;Facharbeiter-in sämtliche Kosten/Zuschläge;10,0;h;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+0601.30;Helfer-in sämtliche Kosten/Zuschläge;25,0;h;gaeb-flat;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.D83
+10;Holz-Alu-Fenster, brüstungstief gemäß Ausführungsbeschreibung, als einflügliges Fenster mit Drehkippbeschlag, ausgeführt im System IV 68 (Holz-Profilstärke 78 mm, Gesamt-Profilstärke inklusive Aluminium-Schalenkonstruktion 79 mm) als Integralfenster mit verdeckt liegendem Flügel;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+20;Breite: ca. 1,00 m;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+30;Holz-Alu-Fenster, brüstungstief  gemäß Ausführungsbeschreibung, als einflügliges Fenster mit Drehkippbeschlag.;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+40;Breite: ca. 1,18 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+50;Breite: ca. 1,18 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+60;Breite: ca. 1,18 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+70;Breite: ca. 1,18 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+80;Breite: ca. 1,18 m;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+90;Holz-Alu-Fenster, brüstungstief  gemäß Ausführungsbeschreibung, als einflügliges Fenster mit Drehkippbeschlag.;10,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+100;Breite: ca. 1,00 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+110;Breite: ca. 1,10 m;4,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+120;Breite: ca. 1,10 m;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+130;Breite: ca. 1,10 m;11,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+140;Breite: ca. 1,26 m;15,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+150;Breite: ca. 1,26 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+10;Holz-Alu-Fenster, brüstungstief  gemäß Ausführungsbeschreibung, als einflügliges Fenster mit Kippbeschlag.;6,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+20;Breite: ca. 1,38m;4,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+30;Breite: ca. 1,64m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+40;Breite: ca. 1,64m;5,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+50;Breite: ca. 1,64m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+60;Breite: ca. 1,64m;5,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+10;Holz-Alu-Fenster, brüstungstief  gemäß Ausführungsbeschreibung, als zweiflügliges Fenster mit Dreh- und Drehkippbeschlägen.;9,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+20;Breite: ca. 1,38 m;3,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+30;Breite: ca. 1,39 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+40;Breite: ca. 1,54 m;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+50;Breite: ca. 1,54 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+60;Holz-Alu-Fenster, brüstungstief gemäß Ausführungsbeschreibung, als zweiflügliges Fenster mit Dreh- und Drehkippbeschläge.;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+70;Breite: ca. 1,39 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+80;Breite: ca. 1,39 m;8,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+90;Breite: ca. 1,39 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+100;Breite: ca. 1,39 m;12,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+110;Breite: ca. 1,39 m;5,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+120;Breite: ca. 1,39 m;3,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+130;Breite: ca. 1,39 m;3,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+140;Breite: ca. 1,49 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+150;Breite: ca. 1,52 m;8,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+160;Breite: ca. 1,52 m;16,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+170;Breite: ca. 1,54 m;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+180;Breite: ca. 1,54 m;5,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+190;Breite: ca. 1,54 m;4,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+200;Breite: ca. 1,54 m;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+210;Breite: ca. 1,54 m;4,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+220;Breite: ca. 1,54 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+230;Breite: ca. 1,54 m;3,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+240;Breite: ca. 1,54 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+250;Breite: ca. 1,62 m;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+260;Breite: ca. 1,63 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+270;Breite: ca. 1,64 m;6,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+280;Breite: ca. 1,64 m;6,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+290;Breite: ca. 1,60-1,65 m;4,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+300;Breite: ca. 1,32 m;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+10;Holz-Alu-Fenster, brüstungstief gemäß Ausführungsbeschreibung, als Fenster mit Festverglasung und Drehkippbeschläge.;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+20;Breite: ca. 3,50 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+30;Breite: ca. 3,50 m;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+40;Breite: ca. 3,50 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+50;Breite: ca. 3,02 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+60;Breite: ca. 2,00 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+70;Breite: ca. 2,20 m;3,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+80;Breite: ca. 2,20 m;3,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+90;Breite: ca. 2,34- 2,36 m;4,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+100;Breite: ca. 2,34 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+110;Breite: ca. 2,50 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+120;Breite: ca. 2,92 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+130;Breite: ca. 3,36-3,38  m;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+140;Breite: ca. 3,55-3,60 m;6,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+150;Holz-Alu-Fenster, brüstungstief  gemäß Ausführungsbeschreibung, als Fenster mit Festverglassung und Drehkippbeschlag.;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+160;Breite: ca. 4,95-5,5 m;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+170;Lieferung und Einbau eines vertikalen Statikpfostens zur Lastabtragung der Fenstereinheit. Ausführung als Holz-Pfosten, systemkompatibel zu IV 78. Holzart, Qualität und Oberfläche analog zu den Fensterprofilen. Die bauliche Dimensionierung erfolgt durch den Auftragnehmer auf Basis der statischen Nac;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+180;Breite: ca. 3,70 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+10;Holz-Alu-Fenster, brüstungstief  gemäß Ausführungsbeschreibung, als zweiflügliges Fenster mit Dreh- und Drehkippbeschläge und Mittelpfosten.;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+20;Breite: ca. 2,12 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+30;Breite: ca. 1,60 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+40;Breite: ca. 1,77 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+50;Breite: ca. 1,77 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+60;Breite: ca. 1,77 m;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+70;Breite: ca. 1,77 m;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+80;Breite: ca. 1,77 m;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+10;Holz-Alu-Fenstertür, brüstungstief  gemäß Ausführungsbeschreibung, als Fenstertür mit  Drehkippbeschläge und Festverglasung.;3,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+20;Breite: ca. 2,30-2,35 m;4,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+30;Breite: ca. 2,40 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+40;Breite: ca. 3,87 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+50;Holz-Alu-Fenstertür, brüstungstief gemäß Ausführungsbeschreibung, als zwei Fenstertür,Hauptflügel mit Dreh-Kipp-Beschlag und den Nebenflügel mit Drehbeschlag.;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+60;Außentürgriff auf 1,05 m Höhe (integriert in die Glashaltleiste).;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+70;Holz-Alu-Fenstertür, brüstungstief  gemäß Ausführungsbeschreibung, als  Fenstertür mit  Drehkippbeschlag.;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+80;Liefern und Einbau eines druckfesten Unterbauprofils unter dem Fensterrahmen nach Leitdetailplan. Material nach Wahl des AN: hochverdichtetes EPS oder PVC/TK-Verbundwerkstoff (Thermoplastkern, 2 mm PVC-Deckschichten). Maße (BxH): ca. 74 x 300 mm, vor Ort exakt an den Bestand anzupassen (Kopplung zul;28,0;m;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+10;Holz-Alu-Fenster, brüstungstief  gemäß Ausführungsbeschreibung, als Festverglasung;12,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+20;Breite: ca. 1,40 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+30;Breite: ca. 2,25-2,30 m;3,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+40;Breite: ca. 0,79 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+50;Breite: ca. 1,5 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+60;Breite: ca. 1,80 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+70;Breite: ca. 1,89 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+80;Breite: ca. 2,34 m;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+90;Breite: ca. 2,50-2,55 m;15,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+10;Holz-Alu-Fenster, brüstungstief  gemäß Ausführungsbeschreibung, als Festverglasung;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+20;Liefern und betriebsfertiger Einbau einer gebogenen Innenfensterbank nach DIN 18355, formgerecht an die Rundöffnung angepasst. Lichtes Fenstermaß: Durchmesser 1.020 mm. Bauteildicke: 19 mm (gemäß Detailplan). Ausladung: 220 mm. Oberflächenbeschichtung passend zur raumseitigen Holz-Fensterbeschichtun;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+10;Lieferung und betriebsfertige Montage nach DIN EN 13561 und DIN 18073 unter dem Sturz auf Stahlbeton-Untergrund. Ausführung als Vorbausystem mit quadratischem Rollkasten, Abmessungen 110 x 110 mm, und Fallprofil (Endschiene) in stoffumspannter Ausführung. Kasten aus;4,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+20;Breite: ca. 790 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+30;Breite: ca. 1000 mm;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+40;Breite: ca. 1000 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+50;Breite: ca. 1040 mm;4,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+60;Breite: ca. 1100 mm;13,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+70;Breite: ca. 1100 mm;4,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+80;Breite: ca. 1140 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+90;Breite: ca. 1260 mm;3,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+100;Breite: ca. 1260 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+110;Breite: ca. 1270 mm;6,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+120;Breite: ca. 1280 mm;6,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+130;Breite: ca. 1320 mm;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+140;Breite: ca. 1390 mm;6,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+150;Breite: ca. 1390 mm;18,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+160;Breite: ca. 1390 mm;11,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+170;Breite: ca. 1490 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+180;Breite: ca. 1520 mm;8,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+190;Breite: ca. 1520 mm;8,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+200;Breite: ca. 1520 mm;8,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+210;Breite: ca. 1520 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+220;Breite: ca. 1540 mm;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+230;Breite: ca. 1540 mm;20,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+240;Breite: ca. 1620 mm;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+250;Breite: ca. 1630 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+260;Breite: ca. 1640 mm;6,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+270;Breite: ca. 1640 mm;6,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+280;Breite: ca. 1640 mm;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+290;Breite: ca. 1650 mm;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+300;Breite: ca. 1720 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+310;Breite: ca. 1770 mm;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+320;Breite: ca. 1770 mm;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+330;Breite: ca. 1770 mm;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+340;Breite: ca. 1770 mm;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+350;Breite: ca. 1800 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+360;Breite: ca. 1840 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+370;Breite: ca. 1900 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+380;Breite: ca. 2000 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+390;Breite: ca. 2120 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+400;Breite: ca. 2120 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+410;Breite: ca. 2200 mm;6,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+420;Breite: ca. 2200 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+430;Breite: ca. 2280 mm;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+440;Breite: ca. 2290 mm;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+450;Breite: ca. 2290 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+460;Breite: ca. 2300 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+470;Breite: ca. 2330 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+480;Breite: ca. 2340 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+490;Breite: ca. 2350 mm;3,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+500;Breite: ca. 2350 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+510;Breite: ca. 2350 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+520;Breite: ca. 2360 mm;3,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+530;Breite: ca. 2360 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+540;Breite: ca. 2400 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+550;Breite: ca. 2500 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+560;Breite: ca. 2510 mm;3,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+570;Breite: ca. 2520 mm;9,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+580;Breite: ca. 2520 mm;3,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+590;Breite: ca. 2920 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+600;Breite: ca. 3360 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+610;Breite: ca. 3380 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+620;Breite: ca. 3560 mm;2,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+630;Breite: ca. 3570 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+640;Breite: ca. 3580 mm;3,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+650;Breite: ca. 3700 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+660;Breite: ca. 3740 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+670;Breite: ca. 3870 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+680;Breite: ca. 4970 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+690;Breite: ca. 5020 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+700;Lieferung und betriebsfertige Montage eines innenliegenden Sonnenschutz-Rollos nach DIN EN 13120 in der Fensternische auf Beton/Mauerwerk. System freihängend ohne Seitenführung, mit kompaktem Kassetten- oder Trägerprofil. Sichtbare Aluminiumteile (Kassette, Unterleiste) nach Architektenwahl pulverbe;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+710;Lieferung und Einbau einer einlagigen Hinterdämmung für Vorbaumarkisenkästen im WDVS an der Außenwand nach VOB/C. Material aus PUR/PIR-Hartschaum nach DIN EN 13165. Bemessungswert Wärmeleitfähigkeit max. 0,025 W/(m·K), Nennwert max. 0,024 W/(m·K). Brandverhalten Klasse E nach DIN EN 13501-1. Vollflä;21,0;m2;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+10;Lieferung und betriebsfertige Montage einer Vorbau-Sonnenschutzanlage nach DIN EN 13561 und DIN 18073 für das Fenstermaß ca. 2.300 mm x 2.180 mm (B x H). Die Montage erfolgt unter dem Sturz auf einem Stahlbeton-Untergrund. Ausführung als Vorbausystem mit quadratischem Rollkasten, Abmessungen 110 x 1;5,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+20;Breite: ca. 3490 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+30;Breite: ca. 3580 mm;1,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+40;Breite: ca. 3650 mm;3,0;St;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+10;Erstellen einer Baudokumentation (getrennt nach Titeln / Gewerken). Die Dokumentation ist parallel zur Ausführung zu erstellen und fortzuschreiben.;1,0;psch;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+10;Vollständige, prüffähige Werk- und Montageplanung für alle Bauteile des Titels Holz-Aluminium-Fenster und -Türen sowie für die Sonnenschutzanlagen, einschl. vollständiger, prüffähiger statischer Berechnung für alle tragenden und lastabtragenden Bauteile (z. B. Elementkopplungen, Konsolen, Befestigun;1,0;psch;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+10;Ausführung einer Schutzfolie als Profilabdeckung auf beiden Seiten der ausgeschriebenen Profile mittels einer passenden vom Profilhersteller vorgeschriebenen Folie und im Nachgang abziehen und entsorgen der Folie.;775,0;m2;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+20;Vollständiges Entfernen aller Schutzfolien, Klebebänder und Aufkleber unmittelbar vor der Abnahme. Fachgerechtes Reinigen aller Glasflächen, Profile (innen und außen), Falze und Beschläge von baubedingten Verschmutzungen. Die Ausführung muss materialschonend und ohne aggressive Reinigungsmittel erfo;775,0;m2;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+10;Stundenlohnarbeiten durch Polier/-in;10,0;h;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+20;Stundenlohnarbeiten durch Facharbeiter/-in;10,0;h;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83
+30;Stundenlohnarbeiten durch Helfer/-in;25,0;h;gaeb;leistungsbeschreibungen/IQREK-260731-VE07 Holz-Alu-Fenster und Fenstertüren.X83

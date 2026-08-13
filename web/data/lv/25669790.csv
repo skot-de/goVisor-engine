@@ -1,0 +1,379 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Baustelle einrichten Dies.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00000002;Baustelle räumen Dies. LV-Abschn.;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00010001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00020001;Leitungserkundung;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00020002;Vegetationsfläche mähen Neigung 1:4-1:3*Böschungen Mähgut Verw. AN*beseitigen;520,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00020003;N. gefährl. Siedl.abfall entsorgen Gebühr einrechn.;0,2;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00020004;Einschlagplatz f. Gehölze einricht. Fläche AN;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00020005;Gehölze mit Ballen einschlagen H, Al, Sol;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00020006;Gehölze ohne Ballen einschlagen ... Freitext ...;110,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00030001;Acer pseudoplatanus liefern ... Freitext ...;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00030002;Alnus glutinosa liefern ... Freitext ...;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00030003;Carpinus betulus liefern ... Freitext ...;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00030004;Cornus sanguinea liefern v.Str 4Tr.60-100;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00030005;Corylus avellana liefern v.Str 4Tr.60-100;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00030006;Crataegus monogyna liefern v.Str 3Tr. 60-100;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00030007;Euonymus europaeus liefern v.Str 3Tr. 60-100;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00030008;Frangula alnus liefern v.Str 3 Tr.60-100;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00030009;Quercus robur liefern ... Freitext ...;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00030010;Viburnum opulus liefern v.Str 4Tr. 60-100;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040001;Pflanzstellen kennzeichnen bis Pflanzung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040002;Bodensubstrat liefern und einbauen;6,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040003;Bodenzuschlagsstoff lief. u. einb.;34,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040004;Organischen Dünger liefern ... Freitext ...;19,5;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040005;Dünger ausbringen Neigung 1:4-1:3*... Freitext ... organ. Dünger*... Freitext ... ... Freitext ...;19,5;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040006;Gütegesicherten Fertigkompost lief. Körnung 0-25 mm*lose anliefern;1,1;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040007;Bodenverbesserungsstoff ausbringen ... Freitext ...*... Freitext ... güteges. Kompost*... Freitext ... Gehölzfläche;685,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040008;Wühlmausschutz herstellen 80x80x60 cm*Sechseckdrahtg.;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040009;Hochstamm / Alleebaum pflanzen H ü. 10-14cm m.B.*... Freitext ... 80x80x60 cm*Boden, DU 80 cm Boden einplan.;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040010;Hochstamm / Alleebaum pflanzen H ü. 10-14cm m.B.*Neigung 1:4-1:3 80x80x60 cm*Boden, DU 80 cm Bodenverb.gesond.*Sicherung Brett Boden einplan.;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040011;Bambusstab, Länge = 300 cm, 20/24mm;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040012;Baumverankerung (Pfahlbock) herst. Dreibock*L 3 m, DU 8-10cm bunt geschält*Querholz halbr. 1 Bindung/Pfahl*Kokosstr. mittel;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040013;Rindenschutz herstellen StU bis 20 cm*Höhe bis 2,20 m ... Freitext ...;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040014;Pflanzscheibe mulchen Pflanzsch. DU 80*Nadelholzr. 10/40 Dicke 10 cm;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040015;Verfestigte Bodenfläche aufreißen ... Freitext ...*Tiefe ca. 20 cm Abstand = Tiefe*kreuzw. aufreißen;220,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040016;Oberboden liefern und andecken ... Freitext ...*3 cm unter Fahrb. Andeck. ü. 5-15cm*Abrechng.Auftrag;6,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040017;Rasendünger liefern;5,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040018;Rasendünger ausbringen;5,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040019;Rasenansaat mit RSM herstellen ... Freitext ...*... Freitext ... Feinplanum herst.*... Freitext ... ... Freitext ...;120,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040020;Rasenansaat mit RSM Regio herst. Neigung 1:4-1:3*... Freitext ... Feinplanum herst.*Menge 5 g/m2 UG 07*Grundmischung;100,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040021;Gehölzwurzeln in Schutzlös. tauchen ... Freitext ...*v.Hei, v.Str;110,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040022;Gehölz pflanzen v.Str.*Neigung 1:4-1:3 Böschung*Loch 40x40x40 cm Bodenverb. ges.*Boden einplan.;110,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040023;Pflanzscheibe mulchen Pflanzsch. DU 40*Nadelholzr. 10/40 Dicke 10 cm;110,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040024;Einzelgehölz wässern Hochstamm, Stbu*... Freitext ... 100 Liter*... Freitext ...;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00040025;Einzelgehölz wässern ... Freitext ...*... Freitext ... 20 Liter*... Freitext ...;110,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00050001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00050002;Einzelgehölz pflegen 1. Pflegegang*Fertigst.pflege Pflanzsch. jäten*... Freitext ... ... Freitext ...*Stamm u. Stock Bindung nachbess.*richten,entfernen;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00050003;Einzelgehölz pflegen 2. Pflegegang*Fertigst.pflege Pflanzsch. jäten*... Freitext ... ... Freitext ...*Stamm u. Stock Bindung nachbess.*richten,entfernen;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00050004;Gehölzfläche pflegen Böschung, 1:4-1:3*bis 0,5 St/m2 1. Pflegegang*Fertigst.pflege Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00050005;Gehölzfläche pflegen Böschung, 1:4-1:3*bis 0,5 St/m2 2. Pflegegang*Fertigst.pflege Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00050006;Extensivfläche mähen ... Freitext ...*ganzflächig ... Freitext ...*Freischneidegerät ... Freitext ...*Mähgut Verw. AN;100,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00050007;Extensivfläche mähen ... Freitext ...*ganzflächig ... Freitext ...*Freischneidegerät ... Freitext ...*Mähgut Verw. AN;100,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00050008;Rasen mähen ... Freitext ...*... Freitext ... ... Freitext ...*Fertigst.pflege Mähgut Verw. AN*Höhe 4-6 cm;120,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00050009;Einzelgehölz wässern Hochstamm, Stbu*10 Wässerungsg. 100 Liter*Fertigst.pflege;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00050010;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge 20 Liter*Fertigst.pflege;110,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00060001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00060002;Einzelgehölz pflegen 1. Pflegegang*E.-pflege 1. Jahr Pflanzsch. jäten*... Freitext ... ... Freitext ...*Stamm u. Stock Bindung nachbess.*richten,entfernen;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00060003;Einzelgehölz pflegen 2. Pflegegang*E.-pflege 1. Jahr Pflanzsch. jäten*... Freitext ... ... Freitext ...*Stamm u. Stock Bindung nachbess.*richten,entfernen;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00060004;Gießmulde mit Gießrand erneuern Mulde ausheben*Gießmulde DU 0,8m;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00060005;Pflanzscheibe mulchen Pflanzsch. DU 80*Nadelholzr. 10/40 Dicke 10 cm;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00060006;Gehölzfläche pflegen Böschung, 1:4-1:3*bis 0,5 St/m2 1. Pflegegang*E.-pflege 1. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00060007;Gehölzfläche pflegen Böschung, 1:4-1:3*bis 0,5 St/m2 2. Pflegegang*E.-pflege 1. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00060008;Extensivfläche mähen ... Freitext ...*ganzflächig ... Freitext ...*Freischneidegerät ... Freitext ...*Mähgut Verw. AN;100,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00060009;Extensivfläche mähen ... Freitext ...*ganzflächig ... Freitext ...*Freischneidegerät ... Freitext ...*Mähgut Verw. AN;100,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00060010;Rasen mähen ... Freitext ...*... Freitext ... ... Freitext ...*E.-pflege 1. Jahr Mähgut Verw. AN*Höhe 4-6 cm;120,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00060011;Einzelgehölz wässern Hochstamm, Stbu*10 Wässerungsg. 100 Liter*E.-pflege 1. Jahr;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00060012;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge 20 Liter*E.-pflege 1. Jahr;110,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00070001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00070002;Einzelgehölz pflegen 1. Pflegegang*E.-pflege 2. Jahr Pflanzsch. jäten*... Freitext ... ... Freitext ...*Stamm u. Stock Bindung nachbess.*richten,entfernen;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00070003;Einzelgehölz pflegen 2. Pflegegang*E.-pflege 2. Jahr Pflanzsch. jäten*... Freitext ... ... Freitext ...*Stamm u. Stock Bindung nachbess.*richten,entfernen;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00070004;Gehölzfläche pflegen Böschung, 1:4-1:3*bis 0,5 St/m2 1. Pflegegang*E.-pflege 2. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00070005;Gehölzfläche pflegen Böschung, 1:4-1:3*bis 0,5 St/m2 2. Pflegegang*E.-pflege 2. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00070006;Extensivfläche mähen ... Freitext ...*ganzflächig ... Freitext ...*Freischneidegerät ... Freitext ...*Mähgut Verw. AN;100,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00070007;Extensivfläche mähen ... Freitext ...*ganzflächig ... Freitext ...*Freischneidegerät ... Freitext ...*Mähgut Verw. AN;100,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00070008;Rasen mähen ... Freitext ...*... Freitext ... ... Freitext ...*E.-pflege 2. Jahr Mähgut Verw. AN*Höhe 4-6 cm;120,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00070009;Einzelgehölz wässern Hochstamm, Stbu*8 Wässerungsgänge 75 Liter*E.-pflege 2. Jahr;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00070010;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge 20 Liter*E.-pflege 2. Jahr;110,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00080001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00080002;Einzelgehölz pflegen 1. Pflegegang*E.-pflege 3. Jahr Pflanzsch. jäten*... Freitext ... ... Freitext ...*Stamm u. Stock Bindung nachbess.*richten,entfernen;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00080003;Einzelgehölz pflegen 2. Pflegegang*E.-pflege 3. Jahr Pflanzsch. jäten*... Freitext ... ... Freitext ...*Stamm u. Stock Bindung nachbess.*richten,entfernen;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00080004;Gießmulde mit Gießrand erneuern Mulde ausheben*Gießmulde DU 0,8m;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00080005;Pflanzscheibe mulchen Pflanzsch. DU 80*Nadelholzr. 10/40 Dicke 10 cm;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00080006;Erziehungsschn. an Jungbaum durchf. Baumhöhe ü. 4-6 m*Stammh. ü. 2,2-3m Kronen-DU ü. 3-5m*... Freitext ...;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00080007;Gehölzfläche pflegen Böschung, 1:4-1:3*bis 0,5 St/m2 1. Pflegegang*E.-pflege 3. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00080008;Gehölzfläche pflegen Böschung, 1:4-1:3*bis 0,5 St/m2 2. Pflegegang*E.-pflege 3. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00080009;Extensivfläche mähen ... Freitext ...*ganzflächig ... Freitext ...*Freischneidegerät ... Freitext ...*Mähgut Verw. AN;100,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00080010;Extensivfläche mähen ... Freitext ...*ganzflächig ... Freitext ...*Freischneidegerät ... Freitext ...*Mähgut Verw. AN;100,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00080011;Rasen mähen ... Freitext ...*... Freitext ... ... Freitext ...*E.-pflege 3. Jahr Mähgut Verw. AN*Höhe 4-6 cm;120,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00080012;Organisch-mineral. Dünger liefern;20,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00080013;Dünger ausbringen org.-min. Dünger*... Freitext ... ... Freitext ...;20,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00080014;Rasendünger liefern;6,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00080015;Rasendünger ausbringen;6,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00080016;Einzelgehölz wässern Hochstamm, Stbu*8 Wässerungsgänge 75 Liter*E.-pflege 3. Jahr;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00080017;Einzelgehölz wässern ... Freitext ...*4 Wässerungsgänge 20 Liter*E.-pflege 3. Jahr;110,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00090001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00090002;Einzelgehölz pflegen 1. Pflegegang*E.-pflege 4. Jahr Pflanzsch. jäten*... Freitext ... ... Freitext ...*Stamm u. Stock Bindung nachbess.*richten,entfernen;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00090003;Einzelgehölz pflegen 2. Pflegegang*E.-pflege 4. Jahr Pflanzsch. jäten*... Freitext ... ... Freitext ...*Stamm u. Stock Bindung nachbess.*richten,entfernen;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00090004;Baumverankerung entfernen Dreibock*Pfähle absägen;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00090005;Stäbung des Leittriebes entfernen;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00090006;Rindenschutz herstellen StU bis 20 cm*Höhe bis 2,20 m ... Freitext ...;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00090007;Einzelgehölz wässern Hochstamm, Stbu*6 Wässerungsgänge 75 Liter*E.-pflege 4. Jahr;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00090008;Gehölzfläche pflegen Böschung, 1:4-1:3*bis 0,5 St/m2 1. Pflegegang*... Freitext ... Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00090009;Gehölzfläche pflegen Böschung, 1:4-1:3*bis 0,5 St/m2 2. Pflegegang*... Freitext ... Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00090010;Extensivfläche mähen ... Freitext ...*ganzflächig ... Freitext ...*Freischneidegerät ... Freitext ...*Mähgut Verw. AN;100,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00090011;Extensivfläche mähen ... Freitext ...*ganzflächig ... Freitext ...*Freischneidegerät ... Freitext ...*Mähgut Verw. AN;100,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+00090012;Rasen mähen ... Freitext ...*... Freitext ... ... Freitext ...*... Freitext ... Mähgut Verw. AN*Höhe 4-6 cm;120,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01000001;Baustelle einrichten Dies.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01000002;Baustelle räumen Dies. LV-Abschn.;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01010001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01010002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01020001;Leitungserkundung;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01020002;Vegetationsfläche mähen ... Freitext ...*Mähgut Verw. AN beseitigen;380,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01020003;Vegetationsfläche mähen Neigung 1:4-1:3*Böschungen Mähgut Verw. AN*beseitigen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01020004;Vegetationsfläche mähen steiler 1:3*Böschungen Mähgut Verw. AN*beseitigen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01020005;N. gefährl. Siedl.abfall entsorgen Gebühr einrechn.;0,2;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01020006;Einschlagplatz f. Gehölze einricht. Fläche AN;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01020007;Gehölze mit Ballen einschlagen ... Freitext ...;22,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01020008;Gehölze ohne Ballen einschlagen J, l.Hei, Str;165,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01020009;Gehölze ohne Ballen einschlagen v.Hei, H, Sol;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030001;Acer pseudoplatanus liefern v.Hei 6cm 150-200;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030002;Acer pseudoplatanus liefern Al 3xv mDb 16-18;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030003;Alnus glutinosa liefern v.Hei 6cm 150-200;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030004;Carpinus betulus liefern v.Hei 5cm 125-150;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030005;Cornus alba Elegantisima liefern;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030006;Cornus sanguinea liefern v.Str 4Tr.60-100;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030007;Corylus avellana liefern v.Str 4Tr.60-100;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030008;Corylus avellana Contorta liefern;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030009;Cotoneaster sal. var. floc. liefern;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030010;Crataegus monogyna liefern v.Str 3Tr. 60-100;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030011;Frangula alnus liefern v.Str 3 Tr.60-100;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030012;Hamamelis interm. Pallida liefern;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030013;Hydrangea macr. Ankong liefern;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030014;Hydrangea macr. BloomStar lief.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030015;Lonicera x tellmaniana liefern;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030016;"Pinus mugo var. ""Pumilio"" liefern";1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030017;Rhododend. lut. Golden Sunset lief.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030018;Rhododendron luteum Nabucco liefern;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030019;Rhododend. wil. V. Böhlje lief.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030020;Rosa canina liefern v.Str 3Tr. 60-100;35,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030021;Salix viminalis liefern ... Freitext ...;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030022;Sambucus nigra liefern v.Str 3Tr. 60-100;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030023;Thuja occidentalis Smaragd liefern;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030024;Vaccinium corymb. Polaris liefern;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01030025;Viburnum opulus liefern v.Str 4Tr. 60-100;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040001;Pflanzstellen kennzeichnen bis Pflanzung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040002;Bodensubstrat liefern und einbauen;6,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040003;Bodenzuschlagsstoff liefern;18,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040004;Organischen Dünger liefern ... Freitext ...;26,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040005;Dünger ausbringen ... Freitext ...*... Freitext ... organ. Dünger*... Freitext ... ... Freitext ...;26,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040006;Gütegesicherten Fertigkompost lief. Körnung 0-25 mm*lose anliefern;1,5;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040007;Bodenverbesserungsstoff ausbringen ... Freitext ...*... Freitext ... güteges. Kompost*... Freitext ... ... Freitext ...;975,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040008;Wühlmausschutz herstellen 100x100x70 cm*Sechseckdrahtg.;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040009;Hochstamm / Alleebaum pflanzen Hü.14-18,Sol.m.B.*Neigung 1:4-1:3 100x100x70 cm*unterer Astkranz Boden, DU 100 cm*Bodenverb.gesond. Sicherung Brett*Boden einplan.;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040010;Bambusstab, Länge=300 cm, 20/24 mm;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040011;Baumverankerung (Pfahlbock) herst. Dreibock*L 3 m, DU 8-10cm bunt geschält*Querholz halbr. 1 Bindung/Pfahl*Kokosstr. mittel;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040012;Rindenschutz herstellen StU bis 20 cm*Höhe bis 2,20 m ... Freitext ...;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040013;Wurzelsperre einbauen Kunststoffplatte*... Freitext ... Graben ausheben*Oberboden;27,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040014;Pflanzscheibe v. Gehölz mulchen;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040015;Gehölzwurzeln in Schutzlös. tauchen ... Freitext ...*v.Hei, v.Str;190,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040016;Gehölz pflanzen v.Str.*... Freitext ... Loch 40x40x40 cm*Bodenverb. ges. Boden einplan.;90,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040017;Gehölz pflanzen v.Str.*Neigung 1:4-1:3 Böschung*Loch 40x40x40 cm Bodenverb. ges.*Boden einplan.;35,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040018;Gehölz pflanzen v.Str.*steiler 1:3 Böschung*Loch 40x40x40 cm Bodenverb. ges.*Boden einplan.;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040019;Gehölz pflanzen v.Hei.*Neigung 1:4-1:3 Böschung*Loch 60x60x40 cm Bodenverb. ges.*Boden einplan.;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040020;Gehölz pflanzen v.Hei.*steiler 1:3 Böschung*Loch 60x60x40 cm Bodenverb. ges.*Boden einplan.;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040021;Gehölz pflanzen ... Freitext ...*... Freitext ... ... Freitext ...*Loch 60x60x40 cm Gießrand*Bodenverb. ges. Boden einplan.;13,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040022;Baumverankerung (Baumpfahl) setzen Pfahl schräg*L 2 m, DU 6-8 cm bunt geschält*1 Bindung/Pfahl Kokosstr. mittel;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040023;Pflanzscheibe mulchen Pflanzsch. DU 40*Nadelholzr. 10/40 Dicke 10 cm;165,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040024;Pflanzscheibe mulchen Pflanzsch. DU 60*Nadelholzr. 10/40 Dicke 10 cm;38,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040025;Einzelgehölz wässern Hochstamm, Stbu*... Freitext ... 100 Liter*... Freitext ...;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040026;Einzelgehölz wässern ... Freitext ...*... Freitext ... 50 Liter*... Freitext ...;38,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01040027;Einzelgehölz wässern ... Freitext ...*... Freitext ... 20 Liter*... Freitext ...;165,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01050001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01050002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01050003;Einzelgehölz pflegen 1. Pflegegang*Fertigst.pflege Pflanzsch. jäten*... Freitext ... ... Freitext ...*Stamm u. Stock Bindung nachbess.*richten,entfernen;22,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01050004;Einzelgehölz pflegen 2. Pflegegang*Fertigst.pflege Pflanzsch. jäten*... Freitext ... ... Freitext ...*Stamm u. Stock Bindung nachbess.*richten,entfernen;22,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01050005;Gehölzfläche pflegen ... Freitext ...*bis 0,5 St/m2 1. Pflegegang*Fertigst.pflege Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;380,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01050006;Gehölzfläche pflegen ... Freitext ...*bis 0,5 St/m2 2. Pflegegang*Fertigst.pflege Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;380,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01050007;Gehölzfläche pflegen ... Freitext ...*bis 0,5 St/m2 1. Pflegegang*Fertigst.pflege Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01050008;Gehölzfläche pflegen ... Freitext ...*bis 0,5 St/m2 2. Pflegegang*Fertigst.pflege Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01050009;Gehölzfläche pflegen Böschung, st. 1:3*bis 0,5 St/m2 1. Pflegegang*Fertigst.pflege Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01050010;Gehölzfläche pflegen Böschung, st. 1:3*bis 0,5 St/m2 2. Pflegegang*Fertigst.pflege Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01050011;Einzelgehölz wässern Hochstamm, Stbu*10 Wässerungsg. 100 Liter*Fertigst.pflege;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01050012;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge 50 Liter*Fertigst.pflege;38,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01050013;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge 20 Liter*Fertigst.pflege;165,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01060001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;12,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01060002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01060003;Einzelgehölz pflegen 1. Pflegegang*E.-pflege 1. Jahr Pflanzsch. jäten*... Freitext ... Pfl.sch ü.80-100*Stamm u. Stock Bindung nachbess.*richten,entfernen;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01060004;Einzelgehölz pflegen 2. Pflegegang*E.-pflege 1. Jahr Pflanzsch. jäten*... Freitext ... Pfl.sch ü.80-100*Stamm u. Stock Bindung nachbess.*richten,entfernen;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01060005;Gießmulde mit Gießrand erneuern Mulde ausheben*Gießmulde DU 1,0m;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01060006;Pflanzscheibe mulchen Pflanzsch. DU 100*Nadelholzr. 10/40 Dicke 5 cm;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01060007;Gehölzfläche pflegen ... Freitext ...*bis 0,5 St/m2 1. Pflegegang*E.-pflege 1. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;380,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01060008;Gehölzfläche pflegen ... Freitext ...*bis 0,5 St/m2 2. Pflegegang*E.-pflege 1. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;380,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01060009;Gehölzfläche pflegen ... Freitext ...*bis 0,5 St/m2 1. Pflegegang*E.-pflege 1. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01060010;Gehölzfläche pflegen ... Freitext ...*bis 0,5 St/m2 2. Pflegegang*E.-pflege 1. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01060011;Gehölzfläche pflegen Böschung, st. 1:3*bis 0,5 St/m2 1. Pflegegang*E.-pflege 1. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01060012;Gehölzfläche pflegen Böschung, st. 1:3*bis 0,5 St/m2 2. Pflegegang*E.-pflege 1. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01060013;Einzelgehölz wässern Hochstamm, Stbu*10 Wässerungsg. 100 Liter*E.-pflege 1. Jahr;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01060014;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge 50 Liter*E.-pflege 1. Jahr;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01060015;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge 20 Liter*E.-pflege 1. Jahr;165,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01070001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01070002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01070003;Einzelgehölz pflegen 1. Pflegegang*E.-pflege 2. Jahr Pflanzsch. jäten*... Freitext ... Pfl.sch ü.80-100*Stamm u. Stock Bindung nachbess.*richten,entfernen;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01070004;Einzelgehölz pflegen 2. Pflegegang*E.-pflege 2. Jahr Pflanzsch. jäten*... Freitext ... Pfl.sch ü.80-100*Stamm u. Stock Bindung nachbess.*richten,entfernen;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01070005;Gehölzfläche pflegen ... Freitext ...*bis 0,5 St/m2 1. Pflegegang*E.-pflege 2. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;380,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01070006;Gehölzfläche pflegen ... Freitext ...*bis 0,5 St/m2 2. Pflegegang*E.-pflege 2. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;380,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01070007;Gehölzfläche pflegen ... Freitext ...*bis 0,5 St/m2 1. Pflegegang*E.-pflege 2. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01070008;Gehölzfläche pflegen ... Freitext ...*bis 0,5 St/m2 2. Pflegegang*E.-pflege 2. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01070009;Gehölzfläche pflegen Böschung, st. 1:3*bis 0,5 St/m2 1. Pflegegang*E.-pflege 2. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01070010;Gehölzfläche pflegen Böschung, st. 1:3*bis 0,5 St/m2 2. Pflegegang*E.-pflege 2. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01070011;Einzelgehölz wässern Hochstamm, Stbu*8 Wässerungsgänge 75 Liter*E.-pflege 2. Jahr;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01070012;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge ... Freitext ...*E.-pflege 2. Jahr;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01070013;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge 20 Liter*E.-pflege 2. Jahr;165,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01080001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01080002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01080003;Einzelgehölz pflegen 1. Pflegegang*E.-pflege 3. Jahr Pflanzsch. jäten*... Freitext ... Pfl.sch ü.80-100*Stamm u. Stock Bindung nachbess.*richten,entfernen;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01080004;Einzelgehölz pflegen 2. Pflegegang*E.-pflege 3. Jahr Pflanzsch. jäten*... Freitext ... Pfl.sch ü.80-100*Stamm u. Stock Bindung nachbess.*richten,entfernen;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01080005;Gießmulde mit Gießrand erneuern Mulde ausheben*Gießmulde DU 1,0m;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01080006;Pflanzscheibe mulchen Pflanzsch. DU 100*Nadelholzr. 10/40 Dicke 5 cm;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01080007;Erziehungsschn. an Jungbaum durchf. Baumhöhe ü. 4-6 m*Stammh. ü. 2,2-3m Kronen-DU ü. 3-5m*auf Astring schn. ... Freitext ...;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01080008;Gehölzfläche pflegen ... Freitext ...*bis 0,5 St/m2 1. Pflegegang*E.-pflege 3. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;380,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01080009;Gehölzfläche pflegen ... Freitext ...*bis 0,5 St/m2 2. Pflegegang*E.-pflege 3. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;380,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01080010;Gehölzfläche pflegen ... Freitext ...*bis 0,5 St/m2 1. Pflegegang*E.-pflege 3. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01080011;Gehölzfläche pflegen ... Freitext ...*bis 0,5 St/m2 2. Pflegegang*E.-pflege 3. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01080012;Gehölzfläche pflegen Böschung, st. 1:3*bis 0,5 St/m2 1. Pflegegang*E.-pflege 3. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01080013;Gehölzfläche pflegen Böschung, st. 1:3*bis 0,5 St/m2 2. Pflegegang*E.-pflege 3. Jahr Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01080014;Organisch-min. Dünger liefern;25,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01080015;Dünger ausbringen org.-min. Dünger*... Freitext ... ... Freitext ...;25,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01080016;Einzelgehölz wässern Hochstamm, Stbu*8 Wässerungsgänge 75 Liter*E.-pflege 3. Jahr;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01080017;Einzelgehölz wässern ... Freitext ...*4 Wässerungsgänge ... Freitext ...*E.-pflege 3. Jahr;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01080018;Einzelgehölz wässern ... Freitext ...*4 Wässerungsgänge 20 Liter*E.-pflege 3. Jahr;165,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01090001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01090002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01090003;Einzelgehölz pflegen 1. Pflegegang*E.-pflege 4. Jahr Pflanzsch. jäten*... Freitext ... Pfl.sch ü.80-100*Stamm u. Stock Bindung nachbess.*richten,entfernen;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01090004;Einzelgehölz pflegen 2. Pflegegang*E.-pflege 4. Jahr Pflanzsch. jäten*... Freitext ... Pfl.sch ü.80-100*Stamm u. Stock Bindung nachbess.*richten,entfernen;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01090005;Baumverankerung entfernen Dreibock*Pfähle absägen;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01090006;Stäbung des Leittriebes entfernen;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01090007;Rindenschutz herstellen StU über 20-30 cm*Höhe bis 2,70 m ... Freitext ...;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01090008;Einzelgehölz wässern Hochstamm, Stbu*6 Wässerungsgänge 75 Liter*E.-pflege 4. Jahr;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01090009;Gehölzfläche pflegen ... Freitext ...*bis 0,5 St/m2 1. Pflegegang*... Freitext ... Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;380,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01090010;Gehölzfläche pflegen ... Freitext ...*bis 0,5 St/m2 2. Pflegegang*... Freitext ... Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;380,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01090011;Gehölzfläche pflegen ... Freitext ...*bis 0,5 St/m2 1. Pflegegang*... Freitext ... Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01090012;Gehölzfläche pflegen ... Freitext ...*bis 0,5 St/m2 2. Pflegegang*... Freitext ... Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01090013;Gehölzfläche pflegen Böschung, st. 1:3*bis 0,5 St/m2 1. Pflegegang*... Freitext ... Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01090014;Gehölzfläche pflegen Böschung, st. 1:3*bis 0,5 St/m2 2. Pflegegang*... Freitext ... Pflanzsch. jäten*richten,entfernen Gehölzfl. mulchen;150,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+01090015;Baumverankerung entfernen Einzelpfahl*Verank. Verw. AN;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02000001;Baustelle einrichten Dies.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02000002;Baustelle räumen Dies. LV-Abschn.;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02010001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02020001;Leitungserkundung;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02020002;Vegetationsfläche mähen ... Freitext ...*Mähgut Verw. AN beseitigen;2400,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02020003;Vegetationsfläche mähen Neigung 1:4-1:3*Böschungen Mähgut Verw. AN*beseitigen;550,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02020004;Vegetationsfläche mähen steiler 1:3*Böschungen Mähgut Verw. AN*beseitigen;300,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02020005;Vegetationsfläche mähen steiler 1:3*Böschungen Mähgut Verw. AN*beseitigen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02020006;N. gefährl. Siedl.abfall entsorgen Gebühr einrechn.;0,2;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02020007;Einschlagplatz f. Gehölze einricht. Fläche AN;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02020008;Gehölze ohne Ballen einschlagen ... Freitext ...;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02020009;Gehölze ohne Ballen einschlagen J, l.Hei, Str;725,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02020010;Gehölze ohne Ballen einschlagen v.Hei, H, Sol;75,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030001;Acer campestre liefern l.Hei 80-100;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030002;Acer campestre liefern v.Hei 5cm 125-150;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030003;Acer pseudoplatanus liefern v.Hei 6cm 150-200;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030004;Alnus glutinosa liefern v.Hei 6cm 150-200;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030005;Carpinus betulus liefern l.Hei 80-100;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030006;Carpinus betulus liefern v.Hei 5cm 125-150;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030007;Cornus sanguinea liefern l.Str 3Tr. 70-90;35,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030008;Cornus sanguinea liefern v.Str 4Tr.60-100;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030009;Corylus avellana liefern l.Str 2Tr. 70-90;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030010;Corylus avellana liefern v.Str 4Tr.60-100;35,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030011;Crataegus monogyna liefern l.Str 2Tr. 70-90;35,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030012;Crataegus monogyna liefern v.Str 3Tr. 60-100;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030013;Fagus sylvatica liefern 4j.v.S 120-150;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030014;Frangula alnus liefern l.Str 2 Tr. 70-90;35,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030015;Frangula alnus liefern v.Str 3 Tr.60-100;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030016;Prunus avium liefern l.Hei 100-150;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030017;Prunus avium liefern v.Hei 6cm 150-200;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030018;Prunus spinosa liefern l.Str 2Tr. 70-90;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030019;Prunus spinosa liefern v.Str 3Tr. 60-100;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030020;Quercus robur liefern 4j.v.S 120-150;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030021;Rosa canina liefern l.Str 2Tr. 70-90;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030022;Rosa canina liefern v.Str 3Tr. 60-100;25,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030023;Salix caprea liefern l.Str 2Tr. 70-90;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030024;Salix viminalis liefern ... Freitext ...;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030025;Salix viminalis liefern ... Freitext ...;15,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030026;Sambucus nigra liefern l.Str 2Tr. 70-90;35,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030027;Sambucus nigra liefern v.Str 3Tr. 60-100;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030028;Sorbus aucuparia liefern l.Hei 100-150;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030029;Sorbus aucuparia liefern v.Hei 6cm 150-200;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030030;Viburnum opulus liefern l.Str 2Tr. 70-90;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02030031;Viburnum opulus liefern v.Str 4Tr. 60-100;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040001;Gehölzwurzeln in Schutzlös. tauchen ... Freitext ...*l.Hei, l.Str, J;520,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040002;Gehölzwurzeln in Schutzlös. tauchen ... Freitext ...*v.Hei, v.Str;320,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040003;Organischen Dünger liefern ... Freitext ...;90,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040004;Dünger ausbringen ... Freitext ...*... Freitext ... organ. Dünger*... Freitext ... ... Freitext ...;90,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040005;Gütegesicherten Fertigkompost lief. Körnung 0-25 mm*lose anliefern;5,5;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040006;Bodenverbesserungsstoff ausbringen ... Freitext ...*... Freitext ... güteges. Kompost*... Freitext ... Gehölzfläche;3575,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040007;Pflanzstellen kennzeichnen bis Pflanzung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040008;Gehölz pflanzen ... Freitext ...*... Freitext ... Loch 30x30x30 cm*Bodenverb. ges. Boden einplan.;40,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040009;Gehölz pflanzen l.Hei, l.Str.,J.*... Freitext ... ... Freitext ...*Loch 30x30x30 cm Bodenverb. ges.*Boden einplan.;480,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040010;Gehölz pflanzen v.Str.*Neigung 1:4-1:3 Böschung*Loch 40x40x40 cm Bodenverb. ges.*Boden einplan.;80,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040011;Gehölz pflanzen v.Str.*steiler 1:3 Böschung*Loch 40x40x40 cm Bodenverb. ges.*Boden einplan.;115,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040012;Gehölz pflanzen v.Hei.*... Freitext ... ... Freitext ...*Loch 50x50x40 cm Bodenverb. ges.*Boden einplan.;35,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040013;Gehölz pflanzen v.Hei.*Neigung 1:4-1:3 Böschung*Loch 50x50x40 cm Bodenverb. ges.*Boden einplan.;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040014;Baumverankerung (Baumpfahl) setzen Pfahl schräg*L 2 m, DU 6-8 cm bunt geschält*1 Bindung/Pfahl Kokosstr. mittel;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040015;Einzelgehölz gegen Wild schützen Schutz 12 Monate*biologisch ... Freitext ...;760,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040016;Pflanzscheibe mulchen Pflanzsch. DU 40*Nadelholzr. 10/40 Dicke 10 cm;760,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040017;Einzelgehölz wässern ... Freitext ...*... Freitext ... 50 Liter*... Freitext ...;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040018;Einzelgehölz wässern ... Freitext ...*... Freitext ... 20 Liter*... Freitext ...;715,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040019;Gehölz pflanzen, erschwert v.Str*... Freitext ... Loch 40x40x40 cm*Bodenverb. ges. Boden einplan.;50,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040020;Gehölz pflanzen, erschwert v.Hei*... Freitext ... Loch 40x40x40 cm*Bodenverb. ges. Boden einplan.;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040021;Baumverankerung (Baumpfahl) setzen Pfahl schräg*L 2,5m, DU 8-10cm bunt geschält*1 Bindung/Pfahl Kokosstr. mittel;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040022;Einzelgehölz gegen Wild schützen Schutz 12 Monate*biologisch ... Freitext ...;80,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040023;Pflanzscheibe mulchen Pflanzsch. DU 40*Nadelholzr. 10/40 Dicke 10 cm;80,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040024;Einzelgehölz wässern ... Freitext ...*... Freitext ... 20 Liter*... Freitext ...;50,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02040025;Einzelgehölz wässern ... Freitext ...*... Freitext ... 50 Liter*... Freitext ...;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02050001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02050002;Gehölzfläche pflegen ... Freitext ...*über 0,5-1 St/m2 1. Pflegegang*Fertigst.pflege Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;2950,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02050003;Gehölzfläche pflegen ... Freitext ...*über 0,5-1 St/m2 2. Pflegegang*Fertigst.pflege Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;2950,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02050004;Gehölzfläche pflegen Böschung, st. 1:3*über 0,5-1 St/m2 1. Pflegegang*Fertigst.pflege Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;300,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02050005;Gehölzfläche pflegen Böschung, st. 1:3*über 0,5-1 St/m2 2. Pflegegang*Fertigst.pflege Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;300,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02050006;Einzelgehölz gegen Wild schützen Schutz 12 Monate*biologisch ... Freitext ...;760,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02050007;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge 50 Liter*Fertigst.pflege;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02050008;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge 20 Liter*Fertigst.pflege;715,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02050009;Gehölzfläche pflegen Böschung, st. 1:3*über 0,5-1 St/m2 1. Pflegegang*Fertigst.pflege Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02050010;Gehölzfläche pflegen Böschung, st. 1:3*über 0,5-1 St/m2 2. Pflegegang*Fertigst.pflege Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02050011;Einzelgehölz gegen Wild schützen Schutz 12 Monate*biologisch ... Freitext ...;80,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02050012;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge 50 Liter*Fertigst.pflege;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02050013;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge 20 Liter*Fertigst.pflege;50,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02060001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02060002;Gehölzfläche pflegen ... Freitext ...*über 0,5-1 St/m2 1. Pflegegang*E.-pflege 1. Jahr Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;2950,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02060003;Gehölzfläche pflegen ... Freitext ...*über 0,5-1 St/m2 2. Pflegegang*E.-pflege 1. Jahr Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;2950,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02060004;Gehölzfläche pflegen Böschung, st. 1:3*über 0,5-1 St/m2 1. Pflegegang*E.-pflege 1. Jahr Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;300,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02060005;Gehölzfläche pflegen Böschung, st. 1:3*über 0,5-1 St/m2 2. Pflegegang*E.-pflege 1. Jahr Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;300,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02060006;Einzelgehölz gegen Wild schützen Schutz 12 Monate*biologisch ... Freitext ...;760,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02060007;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge 50 Liter*E.-pflege 1. Jahr;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02060008;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge 20 Liter*E.-pflege 1. Jahr;715,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02060009;Gehölzfläche pflegen Böschung, st. 1:3*über 0,5-1 St/m2 1. Pflegegang*E.-pflege 1. Jahr Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02060010;Gehölzfläche pflegen Böschung, st. 1:3*über 0,5-1 St/m2 2. Pflegegang*E.-pflege 1. Jahr Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02060011;Einzelgehölz gegen Wild schützen Schutz 12 Monate*biologisch ... Freitext ...;80,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02060012;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge 50 Liter*E.-pflege 1. Jahr;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02060013;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge 20 Liter*E.-pflege 1. Jahr;50,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02070001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;8,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02070002;Gehölzfläche pflegen ... Freitext ...*über 0,5-1 St/m2 1. Pflegegang*E.-pflege 2. Jahr Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;2950,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02070003;Gehölzfläche pflegen ... Freitext ...*über 0,5-1 St/m2 2. Pflegegang*E.-pflege 2. Jahr Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;2950,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02070004;Gehölzfläche pflegen Böschung, st. 1:3*über 0,5-1 St/m2 1. Pflegegang*E.-pflege 2. Jahr Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;300,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02070005;Gehölzfläche pflegen Böschung, st. 1:3*über 0,5-1 St/m2 2. Pflegegang*E.-pflege 2. Jahr Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;300,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02070006;Einzelgehölz gegen Wild schützen Schutz 12 Monate*biologisch ... Freitext ...;760,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02070007;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge ... Freitext ...*E.-pflege 2. Jahr;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02070008;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge 20 Liter*E.-pflege 2. Jahr;715,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02070009;Gehölzfläche pflegen Böschung, st. 1:3*über 0,5-1 St/m2 1. Pflegegang*E.-pflege 2. Jahr Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02070010;Gehölzfläche pflegen Böschung, st. 1:3*über 0,5-1 St/m2 2. Pflegegang*E.-pflege 2. Jahr Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02070011;Einzelgehölz gegen Wild schützen Schutz 12 Monate*biologisch ... Freitext ...;80,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02070012;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge ... Freitext ...*E.-pflege 2. Jahr;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02070013;Einzelgehölz wässern ... Freitext ...*6 Wässerungsgänge 20 Liter*E.-pflege 2. Jahr;50,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02080001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02080002;Organisch-mineral. Dünger liefern;90,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02080003;Dünger ausbringen org.-min. Dünger*... Freitext ... ... Freitext ...;90,0;kg;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02080004;Gehölzfläche pflegen ... Freitext ...*über 0,5-1 St/m2 1. Pflegegang*E.-pflege 3. Jahr Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;2950,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02080005;Gehölzfläche pflegen ... Freitext ...*über 0,5-1 St/m2 2. Pflegegang*E.-pflege 3. Jahr Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;2950,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02080006;Gehölzfläche pflegen Böschung, st. 1:3*über 0,5-1 St/m2 1. Pflegegang*E.-pflege 3. Jahr Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;300,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02080007;Gehölzfläche pflegen Böschung, st. 1:3*über 0,5-1 St/m2 2. Pflegegang*E.-pflege 3. Jahr Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;300,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02080008;Einzelgehölz gegen Wild schützen Schutz 12 Monate*biologisch ... Freitext ...;760,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02080009;Einzelgehölz wässern ... Freitext ...*4 Wässerungsgänge ... Freitext ...*E.-pflege 3. Jahr;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02080010;Einzelgehölz wässern ... Freitext ...*4 Wässerungsgänge 20 Liter*E.-pflege 3. Jahr;715,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02080011;Gehölzfläche pflegen Böschung, st. 1:3*über 0,5-1 St/m2 1. Pflegegang*E.-pflege 3. Jahr Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02080012;Gehölzfläche pflegen Böschung, st. 1:3*über 0,5-1 St/m2 2. Pflegegang*E.-pflege 3. Jahr Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02080013;Einzelgehölz gegen Wild schützen Schutz 12 Monate*biologisch ... Freitext ...;80,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02080014;Einzelgehölz wässern ... Freitext ...*4 Wässerungsgänge ... Freitext ...*E.-pflege 3. Jahr;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02080015;Einzelgehölz wässern ... Freitext ...*4 Wässerungsgänge 20 Liter*E.-pflege 3. Jahr;50,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02090001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02090002;Gehölzfläche pflegen ... Freitext ...*über 0,5-1 St/m2 1. Pflegegang*... Freitext ... Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;2950,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02090003;Gehölzfläche pflegen ... Freitext ...*über 0,5-1 St/m2 2. Pflegegang*... Freitext ... Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;2950,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02090004;Gehölzfläche pflegen Böschung, st. 1:3*über 0,5-1 St/m2 1. Pflegegang*... Freitext ... Pfahl/Bind.n.bess*richten,entfernen Gehölzfl. mulchen;300,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02090005;Gehölzfläche pflegen Böschung, st. 1:3*über 0,5-1 St/m2 2. Pflegegang*... Freitext ... Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;300,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02090006;Einzelgehölz gegen Wild schützen Schutz 12 Monate*biologisch ... Freitext ...;760,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02090007;Baumverankerung entfernen Einzelpfahl*Verank. Verw. AN;45,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02090008;Gehölzfläche pflegen Böschung, st. 1:3*über 0,5-1 St/m2 1. Pflegegang*... Freitext ... Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02090009;Gehölzfläche pflegen Böschung, st. 1:3*über 0,5-1 St/m2 2. Pflegegang*... Freitext ... Pflanzsch. jäten*Pfahl/Bind.n.bess richten,entfernen*Gehölzfl. mulchen;200,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02090010;Einzelgehölz gegen Wild schützen Schutz 12 Monate*biologisch ... Freitext ...;80,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83
+02090011;Baumverankerung entfernen Einzelpfahl*Verank. Verw. AN;30,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/AA01.D83

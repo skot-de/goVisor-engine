@@ -1,0 +1,459 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Handwaschbecken WC- und Duschbereich, 60x48cm, m. Hl. mittig, o. Ül.;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+20;Handwaschbecken WC-Bereich, 60x49cm, m. Hl. mittig, o. Ül.;28,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+30;Handwaschbecken Seminar und Besprechung, 50x38cm, m. Hl. mittig, o. Ül.;11,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+40;Schaftventil, unverschließbar;41,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+50;Röhrengeruchsverschluss;41,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+60;Eckventil regulierbar;45,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+70;Einhebel-Waschtischmischer WC- und Duschbereich;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+80;Einhebel-Waschtischarmatur elektr. berührungslos;20,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+90;Bluetoothmodul für Einhebel-Waschtischarmatur WC-Bereich elektr.;20,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+100;Parametrierung für o.g. Bluetoothmodul;20,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+110;Standventil WC-Bereich Kaltwasser;8,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+120;Standventil Seminar / Besprechung Kaltwasser;9,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+130;Standventil Werkstatt Kaltwasser;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+140;Wand-WC, spülrandlos;32,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+150;WC-Sitz inkl. Deckel;32,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+160;Betätigungsplatte für Spül-Stopp-Spülung;32,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+170;Toilettenbürstengarnitur;32,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+180;Toilettenpapierhalter;24,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+190;Ersatzrollenhalter für zwei WC-Papierrollen;24,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+200;Toilettenpapierspender für vier WC-Papierrollen;10,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+210;Einzelhaken;34,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+220;Hygienekombination mit integrierter Hygienebeutelhalterung;16,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+230;Urinal;14,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+240;Betätigungsplatte für Urinal Spülung;14,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+250;Duschwanne bodengleich 900x1200mm;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+260;Duschwannen-Fuß-Rahmen;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+270;Ablaufgarnitur;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+280;Brauseset Dusche;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+290;Unterputz-Duscharmatur;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+300;Unterputz-Masterbox;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+310;Duschkopf;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+320;Flüssigseifenspender;30,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+330;Handtuchspender;30,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+340;Abfallbehälter klein;8,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+350;Abfallbehälter groß;22,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+360;Waschtisch barrierefrei;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+370;Schaftventil, unverschließbar;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+380;Eckventil regulierbar;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+390;UP-Geruchsverschluss für Waschtisch;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+400;Waschtischarmatur mit langem Bedienungshebel;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+410;Wand-WC, verlängerte Ausladung, spülrandlos;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+420;WC-Sitzring;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+430;Betätigungsplatte für Spül-Stopp-Spülung;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+440;Stützklappgriff drehbar L:700mm;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+450;Aufrüstsatz WC-Papierhalter;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+460;Stützklappgriff mit integrierter Spülauslösung, L:700mm;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+470;Rückenstütze;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+480;Ausgussbecken;7,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+490;Fertigablauf Ausgussbecken;7,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+500;Auslaufventil;7,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+510;Auslaufventil mit Knebelgriff;7,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+520;Schrägsitzventil, gemäß DIN 3227;3,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+530;Bodenablauf Technikzentrale;2,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+540;Dichtstoff;2,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+550;Zubehör - Aufsatzrahmenverlängerung bis max 140 mm;2,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+560;Zubehör - Aufsatzrahmen mit Gewindehülsen, verschraubbar;2,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+570;Zubehör - Aufstockelement für Dünnbettmörtel;2,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+580;Zubehör - Edelstahlrost;2,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+590;Frostsichere Außenarmatur Steckschlüssel DN 15;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+600;Frostsichere Außenarmatur, Bediengriff DN 15;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+610;Abschließbarer Bediengriff;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+620;Verlängerung zu Außenarmatur;3,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+630;Befestigungsset zu Außenarmatur;3,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+640;E-Kleindurchlauferhitzer elektronisch geregelt 4,4-6,5 kW;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+650;Strahlregler < 5kW;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+660;Strahlregler > 5kW;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+670;E-Komfortdurchlauferhitzer elektronisch geregelt 18-27 kW;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+680;"Rotguss Hahnverlängerung 1/2"" x 12,5 mm";45,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+690;"Rotguss Hahnverlängerung 1/2"" x 17,5 mm";4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+700;"Rotguss Hahnverlängerung 1/2"" x 20 mm";2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+710;"Rotguss Hahnverlängerung 1/2"" x 25 mm";2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+720;"Rotguss Hahnverlängerung 1/2"" x 30 mm";2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+10;Montageelement für Waschtisch, nur Kaltwasser, ca 112 cm, Standarmatur;39,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+20;Montageelement für Waschtisch, ca 112 cm, Standarmatur;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+30;Montageelement für Wand-WC, ca 112 cm, mit  UP-Spülkasten 12 cm;32,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+40;Montageelement für Urinal, ca 130 cm, universell, für Urinalsteuerung;14,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+50;Montageelement für Wand-WC, ca 112 cm, mit  UP-Spülkasten 12 cm, barrierefrei, für Stütz- und Haltegriffe;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+60;Traversenelement für Wandarmatur AP;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+70;Montageelement für Ausgussbecken, ca 130 cm, Wandarmatur AP;7,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+80;Montageplatte universell, UP;7,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+90;Wandanker für Einzelmontage;7,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+10;Zuschlagsposition für Befestigung einer Rohrleitung bei Deckenhöhen > 3,50m bis max. 4,70m;220,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+20;Zuschlagsposition für Befestigung einer Rohrleitung bei Deckenhöhen > 4,70m bis max. 5,70m;150,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+30;Zuschlagsposition für Befestigung einer Rohrleitung bei Deckenhöhen > 5,70m bis max. 7,50m;80,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+40;Zuschlagsposition für Sonderbefestigungen für Deckenbereiche mit Feuerwiderstandsanforderungen bis DN 50;80,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+50;Montageschienen, verzinkt;280,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+60;Profilstahlkonstruktion, verzinkt;380,0;kg;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+70;Mehrschichtverbundrohr DN 12;60,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+80;Mehrschichtverbundrohr DN 15;70,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+90;Mehrschichtverbundrohr DN 20;6,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+100;Mehrschichtverbundrohr DN 25;6,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+110;Winkel DN 12;60,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+120;Winkel DN 15;70,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+130;Winkel DN 20;20,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+140;Winkel DN 25;15,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+150;T-Stück DN 12;20,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+160;T-Stück DN 15;16,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+170;T-Stück DN 20;8,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+180;T-Stück DN 25;6,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+190;T-Stück reduziert DN 15;16,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+200;T-Stück reduziert DN 20,;6,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+210;T-Stück reduziert DN 25,;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+220;Übergang DN 15 auf Gewinde,;25,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+230;Übergang DN 20 auf Gewinde,;8,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+240;Edelstahlrohr  DN 12;250,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+250;Edelstahlrohr  DN 15;380,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+260;Edelstahlrohr  DN 20;350,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+270;Edelstahlrohr  DN 25;210,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+280;Edelstahlrohr  DN 32;180,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+290;Edelstahlrohr  DN 40;85,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+300;Edelstahlrohr  DN 50;50,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+310;Edelstahlrohrbogen  DN 12;250,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+320;Edelstahlrohrbogen  DN 15;250,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+330;Edelstahlrohrbogen  DN 20;240,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+340;Edelstahlrohrbogen  DN 25;120,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+350;Edelstahlrohrbogen  DN 32;90,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+360;Edelstahlrohrbogen  DN 40;50,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+370;Edelstahlrohrbogen  DN 50;25,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+380;Edelstahlrohr-T-Stück DN 12;25,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+390;Edelstahlrohr-T-Stück DN 15;40,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+400;Edelstahlrohr-T-Stück DN 20;30,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+410;Edelstahlrohr-T-Stück DN 25;35,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+420;Edelstahlrohr-T-Stück DN 32;10,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+430;Edelstahlrohr-T-Stück DN 40;6,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+440;Edelstahlrohr-T-Stück DN 50;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+450;Edelstahlrohr-Muffe DN 12,;80,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+460;Edelstahlrohr-Muffe DN 15,;150,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+470;Edelstahlrohr-Muffe DN 20,;80,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+480;Edelstahlrohr-Muffe DN 25,;60,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+490;Edelstahlrohr-Muffe DN 32,;60,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+500;Edelstahlrohr-Muffe DN 40,;16,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+510;Edelstahlrohr-Muffe DN 50,;8,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+520;Edelstahlrohr-Schiebemuffe DN 12;25,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+530;Edelstahlrohr-Schiebemuffe DN 15,;70,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+540;Edelstahlrohr-Schiebemuffe DN 20,;40,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+550;Edelstahlrohr-Schiebemuffe DN 25,;60,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+560;Edelstahlrohr-Schiebemuffe DN 32,;60,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+570;Edelstahlrohr-Schiebemuffe DN 40,;14,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+580;Edelstahlrohr-Schiebemuffe DN 50,;6,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+590;Edelstahlrohr-Reduktion mit Einschubende DN 15,;30,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+600;Edelstahlrohr-Reduktion mit Einschubende DN 20,;25,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+610;Edelstahlrohr-Reduktion mit Einschubende DN 25,;15,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+620;Edelstahlrohr-Reduktion mit Einschubende DN 32,;10,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+630;Edelstahlrohr-Reduktion mit Einschubende DN 40,;5,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+640;Edelstahlrohr-Reduktion mit Einschubende DN 50,;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+650;Edelstahl Übergangsverschraubung mit Außen-/Innengewinde DN12;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+660;Edelstahl Übergangsverschraubung mit Außen-/Innengewinde DN15;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+670;Edelstahl Übergangsverschraubung mit Außen-/Innengewinde DN20;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+680;Schallsschutzset für Wandscheiben;130,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+10;Zählerbügel und Passstück für öffentlichen Wasserzähler bis DN 50;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+20;Rückspülfilter vollautomatisch;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+30;Drucksensoren Zubehör-Set;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+40;Kabel Störmeldung;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+50;Mehrstrahlzähler Trockenläufer DN40;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+60;Mehrstrahlzähler Trockenläufer DN50;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+70;Zählerbügel und Passstück für interne Hauswasserstation bis DN 50;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+80;Aufrüstung Automatikversion;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+90;Kabel Störmeldung;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+100;Einstrahl-Zähler mit Impulsausgang Q3 = 2,5m³/h;3,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+110;Einstrahl-Zähler mit Impulsausgang Q3 = 2,5m³/h;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+120;Wasserzähler-Anschlussbügel, waagerecht bis DN 50;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+130;Aufrüstung Automatikversion;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+140;Kabel Störmeldung;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+150;Freistrom-Absperrventil DN 12;14,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+160;Freistrom-Absperrventil DN 15;50,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+170;Freistrom-Absperrventil DN 20;16,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+180;Freistrom-Absperrventil DN 25;14,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+190;Freistrom-Absperrventil DN 32;6,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+200;Freistrom-Absperrventil DN 40;8,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+210;Freistrom-Absperrventil DN 50;12,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+220;Freistrom-Absperrventil mit Entleerung DN 15;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+230;Freistrom-Absperrventil mit Entleerung DN 20;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+240;Freistrom-Absperrventil mit Entleerung DN 25;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+250;Freistrom-Absperrventil mit Entleerung DN 32;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+260;Freistrom-Absperrventil mit Entleerung DN 40;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+270;Freistrom-Absperrventil mit Entleerung DN 50;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+280;Hygienespülung mit Durchflusssensor, 1 Anschluss;7,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+290;Freistrom-Kombi-Rückflussverhinderer DN15;3,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+300;Freistrom-Kombi-Rückflussverhinderer DN20;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+310;Freistrom-Kombi-Rückflussverhinderer DN25;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+320;Freistrom-Kombi-Rückflussverhinderer DN32;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+330;Freistrom-Kombi-Rückflussverhinderer DN40;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+340;Freistrom-Kombi-Rückflussverhinderer DN50;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+350;Rohrtrenner DN15;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+360;Rohrtrenner DN20;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+370;Systemtrenner DN50;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+380;Probenahmeventil für Freistrom-Absperrventile DN 15 bis DN 50;20,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+390;Körper-Notdusche für Über-Türmontage, Aufputz;9,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+400;Hinweisschild für Körper-Notdusche nach DIN EN ISO 7010 und ASR A1.3;9,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+410;Inbetriebnahme der Notduschen;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+420;Anschluss an Komponenten;8,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+10;Die Pumpe ist zusammen mit allen;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+20;Die Pumpe ist zusammen mit allen;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+30;Im Rahmen der Inbetriebnahme werden alle Aspekte;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+10;Zuschlagsposition für Befestigung einer Rohrleitung bei Deckenhöhen > 3,50m bis max. 4,70m;500,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+20;Zuschlagsposition für Befestigung einer Rohrleitung bei Deckenhöhen > 4,70m bis max. 5,70m;180,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+30;Zuschlagsposition für Befestigung einer Rohrleitung bei Deckenhöhen > 5,70m bis max. 7,50m;70,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+40;Zuschlagsposition für Sonderbefestigungen für Zwischendeckenbereiche mit Feuerwiderstandsanforderungen bis DN 50;14,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+50;Zuschlagsposition für Sonderbefestigungen für Zwischendeckenbereiche mit Feuerwiderstandsanforderungen ab DN 65;170,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+60;Montageschienen, verzinkt;170,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+70;Profilstahlkonstruktion, verzinkt;150,0;kg;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+80;Abflussrohr DN 70;770,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+90;Abflussrohr DN 90;95,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+100;Abflussrohr DN 100;270,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+110;Abflussrohr DN 125;125,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+120;Abflussrohr DN 150;70,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+130;Bogen DN 70;300,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+140;Bogen DN 90;110,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+150;Bogen DN 100;105,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+160;Bogen DN 125;65,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+170;Bogen DN 150;16,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+180;Abzweig DN 70;110,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+190;Abzweig DN 90;14,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+200;Abzweig DN 100;60,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+210;Abzweig DN 125;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+220;Abzweig DN 150;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+230;Reduzierung DN 90;25,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+240;Reduzierung DN 100;50,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+250;Reduzierung DN 125;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+260;Reduzierung DN 150;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+270;Reinigungsrohr DN 70;6,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+280;Reinigungsrohr DN 90;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+290;Reinigungsrohr DN 100;7,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+300;Reinigungsrohr DN 125;8,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+310;Reinigungsrohr DN 150;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+320;Elektroschweißmuffe DN 70;280,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+330;Elektroschweißmuffe DN 90;40,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+340;Elektroschweißmuffe DN 100;100,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+350;Elektroschweißmuffe DN 125;50,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+360;Elektroschweißmuffe DN 150;20,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+370;Langmuffe DN 70;60,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+380;Langmuffe DN 90;12,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+390;Langmuffe DN 100;30,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+400;Langmuffe DN 125;10,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+410;Langmuffe DN 150;8,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+420;Stütz- und Dehnmuffe DN 70;60,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+430;Stütz- und Dehnmuffe DN 90;12,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+440;Stütz- und Dehnmuffe DN 100;35,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+450;Stütz- und Dehnmuffe DN 125;10,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+460;Stütz- und Dehnmuffe DN 150;6,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+470;Spannverbinder DN 70;600,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+480;Spannverbinder DN 90;100,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+490;Spannverbinder DN 100;250,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+500;Spannverbinder DN 125;140,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+510;Spannverbinder DN 150;60,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+520;Enddeckel DN 70;60,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+530;Enddeckel DN 90;14,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+540;Enddeckel DN 100;10,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+550;Enddeckel DN 125;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+560;Enddeckel DN 150;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+570;Übergangsmuffe DN 70;70,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+580;Übergangsmuffe DN 90;25,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+590;Übergangsmuffe DN 100;40,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+600;Übergangsmuffe DN 125;10,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+610;Übergangsmuffe DN 150;10,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+620;Übergangsspannverbinder DN 70;40,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+630;Übergangsspannverbinder DN 90;20,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+640;Übergangsspannverbinder DN 100;14,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+650;Übergangsspannverbinder DN 125;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+660;Übergangsspannverbinder DN 150;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+670;Sichern der Grundleitungsanschlüsse vor Verschmutzung;30,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+680;Abwasserrohr mit Muffe DN 50;140,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+690;Abwasserrohr mit Muffe DN 70;30,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+700;Abwasserrohr mit Muffe DN 90;20,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+710;Abwasserrohr mit Muffe DN 100;35,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+720;Bogen DN 50;160,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+730;Bogen DN 70;20,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+740;Bogen DN 90;25,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+750;Bogen DN 100;8,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+760;WC-Doppelbogen DN 100;14,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+770;Abzweig DN 50;18,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+780;Abzweig DN 70;10,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+790;Abzweig DN 90;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+800;Abzweig DN 100;6,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+810;Reduktion exzentrisch mit Muffe DN 70;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+820;Reduktion exzentrisch mit Muffe DN 90;6,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+830;Reduktion exzentrisch mit Muffe DN 100;10,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+840;Doppelsteckmuffe DN 50;75,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+850;Doppelsteckmuffe DN 70;20,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+860;Doppelsteckmuffe DN 90;14,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+870;Doppelsteckmuffe DN 100;24,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+880;Haltekralle DN 50;150,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+890;Haltekralle DN 70;40,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+900;Haltekralle DN 90;25,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+910;Haltekralle DN 100;50,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+920;Enddeckel DN 50;80,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+930;Enddeckel DN 70;14,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+940;Enddeckel DN 90;6,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+950;Enddeckel DN 100;40,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+960;Übergangsmuffe DN 50;30,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+970;Übergangsmuffe DN 70;10,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+980;Übergangsmuffe DN 90;6,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+990;Übergangsmuffe DN 100;12,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+1000;Edelstahlrohr  DN 32;320,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+1010;Edelstahlrohrbogen  DN 32;175,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+1020;Edelstahlrohr-T-Stück DN 32;35,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+1030;Edelstahlrohr-Muffe DN 32,;90,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+1040;Edelstahlrohr-Schiebemuffe DN 32,;30,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+1050;Edelstahl Übergangsverschraubung mit Außen-/Innengewinde DN32;85,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+10;SW Dachdurchführung Flachdach DN 50;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+20;SW-Lüftung Dachdurchführung Flachdach DN 70;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+30;SW-Lüftung Dachdurchführung Flachdach DN 90;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+40;SW-Lüftung Dachdurchführung Flachdach DN 100;8,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+50;SW-Lüftung Dachdurchführung Flachdach DN 125;7,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+60;Standrohrverlängerung DN 50;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+70;Standrohrverlängerung DN 70;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+80;Standrohrverlängerung DN 90;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+90;Standrohrverlängerung DN 100;8,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+100;Standrohrverlängerung DN 125;7,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+110;Flachdach-Schiebeflansch DN 50;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+120;Flachdach-Schiebeflansch DN 70;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+130;Flachdach-Schiebeflansch DN 90;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+140;Flachdach-Schiebeflansch DN 100;8,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+150;Flachdach-Schiebeflansch DN 125;7,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+160;Schließen der Restöffnung im Deckendurchbruch;24,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+170;Kondensathebeanlage;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+180;Belüftungsventil DN70-100;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+190;Rohrbogengeruchsverschluss mit Einlauftrichter oval;24,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+200;AP-Geruchsverschluss für Geräte;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+210;Anschluss an Komponenten DN 30/50/56/70;85,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+220;Anschluss an Komponenten DN 90/100/125/150;8,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+230;Anschluss an Grundleitung;30,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+240;Lippendichtung;30,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+250;Montageschienen, verzinkt;20,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+260;Profilstahl zum Bau von Sonderhalterungen verzinkt;50,0;kg;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+10;Zuschlagsposition für Montage Dämmung bei Deckenhöhe > 3,5m bis max. 4,70m;480,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+20;Zuschlagsposition für Montage Dämmung bei Deckenhöhe > 4,70m bis max. 5,70m;120,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+30;Zuschlagsposition für Montage Dämmung bei Deckenhöhe > 5,70m bis max. 7,50m;15,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+40;Dämmen von Rohrleitungen mit Rohrschalen 15/20;200,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+50;Dämmen von Rohrleitungen mit Rohrschalen 18/20;320,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+60;Dämmen von Rohrleitungen mit Rohrschalen  22/20;290,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+70;Dämmen von Rohrleitungen mit Rohrschalen  28/30;250,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+80;Dämmen von Rohrleitungen mit Rohrschalen 35/40;200,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+90;Dämmen von Rohrleitungen mit Rohrschalen  42/40;100,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+100;Dämmen von Rohrleitungen mit Rohrschalen  54/50;50,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+110;Dämmen von Rohrleitungen mit 200% Rohrschalen 15/40;8,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+120;Dämmen von Rohrleitungen mit 200% Rohrschalen 18/40;4,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+130;Dämmung von Rohrleitungen in Vorwänden mit Dämmhülse 6-15;160,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+140;Dämmung von Rohrleitungen in Vorwänden mit Dämmhülse 6-18;130,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+150;Dämmung von Rohrleitungen in Vorwänden mit Dämmhülse 6-22;25,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+160;Dämmung von Rohrleitungen in Vorwänden mit Dämmhülse 9-15;8,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+170;Dämmung von Rohrleitungen in Vorwänden mit Dämmhülse 9-18;4,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+180;Tauwasserverhinderung an Regenwasserleitungen 114/25;20,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+190;Tauwasserverhinderung an Regenwasserleitungen 136/25;95,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+200;Tauwasserverhinderung an Regenwasserleitungen 160/25;40,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+210;Dämmung an Schmutzwasser- und Lüftungsleitungen DN50;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+220;Dämmung an Schmutzwasser- und Lüftungsleitungen DN70;6,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+230;Dämmung an Schmutzwasser- und Lüftungsleitungen DN90;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+240;Dämmung an Schmutzwasser- und Lüftungsleitungen DN100;6,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+250;Dämmung an Schmutzwasser- und Lüftungsleitungen DN125;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+260;Dämmung an Schmutzwasserleitungen in notwendigen Fluren DN50;5,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+270;Dämmung an Schmutzwasserleitungen in notwendigen Fluren DN70;90,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+280;Dämmung an Schmutzwasserleitungen in notwendigen Fluren DN90;25,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+290;Dämmung an Schmutzwasserleitungen in notwendigen Fluren DN100;5,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+300;Dämmung an trockener Löschleitung DN80;70,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+310;Brandschutzmanschette  15/22,5;8,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+320;Brandschutzmanschette  18/21;40,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+330;Brandschutzmanschette  22/19;35,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+340;Brandschutzmanschette  28/26;40,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+350;Brandschutzmanschette  35/22,5;20,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+360;Brandschutzmanschette  42/29;18,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+370;Brandschutzmanschette  54/38;7,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+380;Kennzeichnungsschilder;44,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+390;Brandschutzmanschette Kondensatleitung;50,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+400;Kennzeichnungsschilder;50,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+410;Rohrabschottung DN30-56;8,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+420;Rohrabschottung DN60/70;100,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+430;Rohrabschottung DN90;25,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+440;Rohrabschottung DN100;40,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+450;Rohrabschottung DN125;24,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+460;Rohrabschottung DN150;16,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+470;Kennzeichnungsschilder;162,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+480;Dämmschlauch DN 56;60,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+490;Dämmschlauch DN 70;100,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+500;Dämmschlauch DN 90;16,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+510;Dämmschlauch DN 100;30,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+520;Dämmschlauch DN 125;18,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+530;Dämmschlauch DN 150;10,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+540;Schalldämmmatten für Abwasserleitungen DN70;8,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+550;Schalldämmmatten für Abwasserleitungen DN90;30,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+560;Schalldämmmatten für Abwasserleitungen DN100;60,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+570;Schalldämmmatten für Abwasserleitungen DN125;2,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+580;Schalldämmmatten für Abwasserleitungen DN150;4,0;Stk;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+10;Zuschlagsposition für Befestigung einer Rohrleitung bei Deckenhöhen > 3,50m bis max. 4,70m;60,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+20;Montageschienen, verzinkt;35,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+30;Profilstahlkonstruktion, verzinkt;80,0;kg;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+40;Edelstahlrohr  DN 50;20,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+50;Edelstahlrohr  DN 80;95,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+60;Edelstahlrohrbogen  DN 50;20,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+70;Edelstahlrohrbogen  DN 80;30,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+80;Edelstahlrohr-T-Stück DN 80;15,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+90;Edelstahlrohr-Reduktion mit Einschubende DN 80,;12,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+100;Edelstahlrohr-Muffe DN 50;15,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+110;Edelstahlrohr-Muffe DN 80;35,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+120;Entnahmearmatur;7,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+130;Einspeisearmatur, hängend;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+140;Be- und Entlüfter, Typ BEG 50;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+150;Kugelhahn DN 32;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+160;Schutzschrank für Entnahmearmatur, AP;7,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+170;Schutzschrank für Einspeisearmatur, UP;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+180;Prüfung der Löschwasseranlage;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+190;Inbetriebnahme der Löschwasseranlage;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+200;Kontrollbuch nach DIN 14462;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+10;Druckprobe der Trinkwasseranlagein Abschnitten;1,0;psch;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+20;Spülung des SW-Netzes in Abschnitten;1,0;psch;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+30;Leitungsbeschriftung;500,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+40;Kunststoff-Bezeichnungsschild;30,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+50;Kunststoff-Bezeichnungsschild;30,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+60;Kunststoff-Bezeichnungsschild;40,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+70;Kunststoff-Bezeichnungsschild;60,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+80;Kunststoff-Bezeichnungsschild;60,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+90;Schild zur Kennzeichnung einer Revisionsöffnung;60,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+100;Erstinbetriebnahme der Trinkwasseranlagen;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+110;Zusätzliche Spülung der Trinkwasseranlage;1,0;psch;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+120;Zusätzliche Hygieneuntersuchung Trinkwasseranlage;1,0;psch;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+130;Wiederholtes Einweisen;12,0;h;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+140;Montageplanung für Sanitärtechnik;1,0;psch;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+150;Fotodokumentation aller Brandschutzdurchführungen und Leitungsabschottungen für das Gewerk Sanitär.;1,0;psch;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+160;Erstellung Übersichtspläne (M 1:100) je Ebene,;5,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+170;Brandschutzakte;1,0;psch;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+180;Anlagenschema einlaminiert;6,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+190;Bereitstellung von Revisionsunterlagen;1,0;psch;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+200;Zuarbeit für die Gewerke Elektro und MSR,;1,0;psch;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+210;Weiterführund des bauseitigen AKS;1,0;psch;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+220;Von der vom Auftraggeber eingesetzten Bauüberwachung wird eine digitale, cloudbasierte Bauüberwachungssoftware kostenfrei zur Verfügung gestellt. Der Auftragnehmer ist verpflichtet, mindestens den Projektleiter und den Bauleiter in dieser Software anzumelden und entsprechende Endgeräte zur Bearbeitu;1,0;psch;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+230;Teilnahme an Probebetrieb TMon;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+240;Teilnahme an einer Schwarzschaltung;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+250;Der Errichter betreibt seine Anlagen auf Anforderung des Bauherrn bis zur Gesamtabnahme des Gebäudes als bauzeitlicher Betrieb.;8,0;Wo;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+260;Universalerdungsschelle;12,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+270;Banderdungsschelle für Rohre 8-22 mm;16,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+280;Erdungsklemme;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+290;Potenzialausgleichsleitung NYM-I 1x 16 mm² grün/gelb;50,0;m;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+300;Beidseitiger elektrischer Anschluss;30,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+10;Kernbohrung anzeichnen;20,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+20;Kernbohrung  Ø 60 mm;6,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+30;Kernbohrung  Ø 80 mm;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+40;Kernbohrung  Ø 100 mm;4,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+50;Kernbohrung  Ø 130 mm;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+60;Kernbohrung  Ø 150 mm;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+70;Kernbohrung  Ø 180 mm;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+80;Kernbohrung  Ø 200 mm;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+90;Kernbohrung  Ø 220 mm;1,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+100;Deckendurchbrüche schließen bis 250cm² - T 32cm;40,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+110;Deckendurchbrüche schließen von 250-500 cm² - T 32cm;40,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+120;Deckendurchbrüche schließen von 500-1000 cm² - T 32cm;25,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+130;Deckendurchbrüche schließen von 1000-2000 cm² - T 32cm;15,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+140;Deckendurchbrüche schließen von 2000-3000 cm² - T 32cm;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+150;Wanddurchbrüche schließen bis 250cm² - T 20-40cm;30,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+160;Wanddurchbrüche schließen von 250-500 cm² - T 20-40cm;20,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+170;Wanddurchbrüche schließen von 500-1000 cm² - T 20-40cm;10,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+180;Wanddurchbrüche schließen von 1000-2000 cm² - T 20-40cm;2,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+190;Trockenbaudurchbrüche anzeichnen;155,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+200;Ausschnitt herstellen in bestehender beidseitig doppelt beplankter Gipskartonwand, mit innenliegender Akustikdämmung, Durchmesser bis 6 cm.;100,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+210;Ausschnitt herstellen in bestehender beidseitig doppelt beplankter Gipskartonwand, mit innenliegender Akustikdämmung, Durchmesser bis 10 cm.;40,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+220;Ausschnitt herstellen in bestehender beidseitig doppelt beplankter Gipskartonwand, mit innenliegender Akustikdämmung, Durchmesser bis 20 cm.;20,0;St;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+10;Stundenlohnarbeiten durch Obermonteur/-in;10,0;h;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+20;Stundenlohnarbeiten durch Monteur/in;10,0;h;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
+30;Stundenlohnarbeiten durch Helfer/in;10,0;h;gaeb;leistungsbeschreibungen/Gaeb-Datei_26 069-36 EU.X83
