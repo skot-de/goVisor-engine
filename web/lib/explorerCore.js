@@ -1637,26 +1637,26 @@ function renderAnalyse(l){
         const rec = recommend(l, userProfile, { ownBuyers: userContracts.map(c=>c.buyer_name).filter(Boolean) });
         const CLS = { gruen:'go', blau:'def', neutral:'open', gedaempft:'skip' };
         const kette = begruendungskette(rec.evals);
-        const zTags = rec.zusaetze.map(z=>`<span class="rec-z">${tk(z.t)}</span>`).join('');
+        const zTags = rec.zusaetze.map(z=>`<span class="rec-z">${esc(tk(z.t))}</span>`).join('');
         let head;
         if(rec.empfehlung){
           const b = rec.empfehlung;
-          head = `<div class="rec-verdict rec-${CLS[b.cls]}"><span class="rec-label">${tk(b.label)}</span>`
-            + (b.gruende&&b.gruende.length?`<span class="rec-grund">${b.gruende.map(tk).join(' · ')}</span>`:'')
-            + (b.frage?`<span class="rec-frage">${tk(b.frage)}</span>`:'') + `</div>`
-            + (b.schritt?`<div class="rec-step">${tk("Nächster Schritt:")}<b>${tk(b.schritt)}</b></div>`:'');
+          head = `<div class="rec-verdict rec-${CLS[b.cls]}"><span class="rec-label">${esc(tk(b.label))}</span>`
+            + (b.gruende&&b.gruende.length?`<span class="rec-grund">${esc(b.gruende.map(tk).join(' · '))}</span>`:'')
+            + (b.frage?`<span class="rec-frage">${esc(tk(b.frage))}</span>`:'') + `</div>`
+            + (b.schritt?`<div class="rec-step">${tk("Nächster Schritt:")}<b>${esc(tk(b.schritt))}</b></div>`:'');
         } else {
           const a = rec.einordnung;
           const hint = rec.gesperrt==='keine_unterlagen' ? tk('Für eine Empfehlung fehlen die Vergabeunterlagen.')
             : rec.gesperrt==='kaltstart' ? tk('Für eine Empfehlung fehlt die Mindestabdeckung im Eignungsprofil.')
             : rec.gesperrt==='kein_profil' ? tk('Für eine Empfehlung fehlt das Eignungsprofil.') : '';
-          head = `<div class="rec-verdict rec-${CLS[a.cls]}"><span class="rec-label">${tk(a.label)}</span>`
-            + (a.gruende&&a.gruende.length?`<span class="rec-grund">${a.gruende.map(tk).join(' · ')}</span>`:'') + `</div>`
-            + (hint?`<div class="rec-hint">${hint}</div>`:'');
+          head = `<div class="rec-verdict rec-${CLS[a.cls]}"><span class="rec-label">${esc(tk(a.label))}</span>`
+            + (a.gruende&&a.gruende.length?`<span class="rec-grund">${esc(a.gruende.map(tk).join(' · '))}</span>`:'') + `</div>`
+            + (hint?`<div class="rec-hint">${esc(hint)}</div>`:'');
         }
         return `<div class="rec26">${head}`
           + (zTags?`<div class="rec-zusaetze">${zTags}</div>`:'')
-          + `<table class="rec-kette"><tbody>${kette.map(k=>`<tr><td class="rec-e">${k.E}</td><td class="rec-kl">${tk(k.label)}</td><td class="rec-kz">${tk(k.zustand)}</td><td class="rec-kq">${tk(k.quelle)}</td></tr>`).join('')}</tbody></table></div>`;
+          + `<table class="rec-kette"><tbody>${kette.map(k=>`<tr><td class="rec-e">${k.E}</td><td class="rec-kl">${esc(tk(k.label))}</td><td class="rec-kz">${esc(tk(k.zustand))}</td><td class="rec-kq">${esc(tk(k.quelle))}</td></tr>`).join('')}</tbody></table></div>`;
       })()}
       <div class="scores">
         <div class="score" data-level="${l.relevanz}">

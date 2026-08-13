@@ -1430,3 +1430,36 @@ def test_verdrahtete_texte_sind_uebersetzt():
             if deutsch.search(k) and k not in en:
                 fehlend.append(f"{p.relative_to(web)}: {k!r}")
     assert not fehlend, "verdrahtet, aber nicht uebersetzt:\n  " + "\n  ".join(fehlend[:12])
+
+
+def test_uebersetzung_faellt_nicht_auf_prototyp_eigenschaften_zurueck():
+    """`tk("constructor")` darf nicht die Funktion `Object` liefern.
+
+    Importiertes JSON traegt die Object-Prototyp-Kette. Ohne Typ-Pruefung landete
+    `function Object() { [native code] }` in der Seite — gemessen, nicht vermutet.
+    Erreichbar ist das ueber daten-abgeleitete Schluessel (`tk(k.zustand)`, `tk(l.seen)`):
+    heute trifft kein Vokabular diese Namen, aber die Annahme stand nirgends geschrieben.
+    """
+    from pathlib import Path
+    quelle = (Path(__file__).resolve().parent.parent / "web" / "lib" / "i18n" / "index.tsx").read_text()
+    assert 'typeof roh === "string"' in quelle, "Typ-Pruefung im Flach-Zweig fehlt"
+
+
+def test_rec26_block_escapt_seine_labels():
+    """Der Empfehlungs-Block schreibt in `dangerouslySetInnerHTML`. Jeder DATEN-abgeleitete
+    Wert muss durch `esc()`; der Datenpfad fuehrt heute nur ueber ein geschlossenes
+    Zertifikats-Vokabular, aber das ist eine Eigenschaft der Daten, nicht des Codes.
+
+    Statische Literale (`tk("Naechster Schritt:")`) bleiben bewusst UNgeescaped: der
+    Katalog traegt an einigen Stellen absichtlich HTML-Entities (`&mdash;`, `&rarr;`),
+    die `esc()` zu sichtbarem `&amp;mdash;` verstuemmeln wuerde. Die Regel lautet also
+    „Daten escapen, Konstanten nicht" — nicht „alles escapen".
+    """
+    import re
+    from pathlib import Path
+    quelle = (Path(__file__).resolve().parent.parent / "web" / "lib" / "explorerCore.js").read_text()
+    block = re.search(r'const rec = recommend\(.*?</div>`;\n      \}\)\(\)\}', quelle, re.S)
+    assert block, "rec26-Block nicht gefunden — Test an den Code anpassen"
+    # `tk(` mit einem Bezeichner statt eines Literals = daten-abgeleitet.
+    roh = re.findall(r'\$\{(?!esc\()(tk\(\s*[A-Za-z_$][^)]*\)|[ab]\.gruende[^}]*|hint)\}', block.group(0))
+    assert not roh, f"ungeescapte Datenausgabe im rec26-Block: {roh}"

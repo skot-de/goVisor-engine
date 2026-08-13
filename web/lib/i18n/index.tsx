@@ -60,7 +60,14 @@ export function schluessel(s: string): string {
 /** Der eigentliche Nachschlag — ohne React, damit ihn auch `explorerCore` benutzen kann. */
 export function uebersetze(key: string, lang: Sprache,
                            vars?: Record<string, string | number>): string {
-  const flach = FLACH[lang]?.[schluessel(key)];
+  // `typeof === "string"` ist kein Zierrat: importiertes JSON traegt die Object-Prototyp-
+  // Kette. Ohne die Pruefung liefert `tk("constructor")` die Funktion `Object` und
+  // interpoliert `function Object() { [native code] }` in die Seite; mit `vars` wuerde
+  // `text.replace` zusaetzlich werfen. Erreichbar ueber daten-abgeleitete Schluessel
+  // (`tk(k.zustand)`, `tk(l.seen)`) — heute kein Vokabular trifft das, aber die Annahme
+  // steht nirgends geschrieben. `pfad()` unten prueft aus demselben Grund schon so.
+  const roh = FLACH[lang]?.[schluessel(key)];
+  const flach = typeof roh === "string" ? roh : undefined;
   const text = flach ?? pfad(KATALOG[lang], key) ?? pfad(KATALOG.de, key) ?? key;
   return vars
     ? text.replace(/\{(\w+)\}/g, (_m, n) => String(vars[n] ?? `{${n}}`))
