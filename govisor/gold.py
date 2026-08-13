@@ -2608,6 +2608,54 @@ def build_lead_detail(cfg: Config, country: str = "DE"):
     return n
 
 
+def _redundante_zweitquelle_sql(cfg: Config, country: str, spalte: str = "n.notice_id") -> str:
+    """SQL-Bedingung: schliesst Saetze aus, die eine Zweitquelle DOPPELT liefert.
+
+    Die einzige Stelle, an der die Dubletten-Firewall wirklich etwas ENTFERNT. Ueberall
+    sonst markiert und ergaenzt sie nur. Entsprechend eng ist die Bedingung — sie gilt
+    ausschliesslich fuer Saetze, die
+
+      1. mit dem staerksten Beleg als Dublette erkannt sind (`kaeufer_und_titel`,
+         also identische Vergabestelle UND Titel-Enthaltung >= 0,8 nach Zahlen- und
+         Geschwister-Sperre), UND
+      2. deren MASTER heute noch ein brauchbarer Lead ist.
+
+    Bedingung 2 ist der Kern. Ohne sie waere das genau der Ausschluss, der beim ersten
+    Entwurf gemessen und verworfen wurde: 64 gueltige Leads gegen 6 echte Dubletten, weil
+    der Master abgelaufen war und nur die Dublette lief. Fuer DTVP nachgemessen 2026-08-13:
+    von 45 belegten Dubletten haetten 11 (24 %) genau dieses Problem. Sie bleiben stehen.
+
+    Die Frist des Masters wird dabei so gelesen, wie das Produkt sie spaeter zeigt —
+    inklusive der aus dem Zwilling uebernommenen und der VERLAENGERTEN. Sonst wuerde die
+    Firewall eine Zeile wegwerfen, deren Information sie selbst gerade uebertragen hat.
+    `lead_deadline` wird hier bewusst NICHT gelesen: die Tabelle entsteht erst spaeter im
+    Lauf, eine Abhaengigkeit darauf waere eine Reihenfolgen-Falle.
+
+    Fehlt `notice_duplicates.parquet`, liefert die Funktion einen leeren String — der
+    Bauer verhaelt sich dann wie vor der Firewall.
+    """
+    dup = cfg.gold_dir / country / "notice_duplicates.parquet"
+    if not dup.exists():
+        return ""
+    NS = f"'{cfg.silver_table_glob('notices', country)}'"
+    ANR = _ANR_SQL(cfg, country)
+    return f"""
+            AND {spalte} NOT IN (
+              SELECT d.duplicate_id
+              FROM read_parquet('{dup.as_posix()}') d
+              JOIN read_parquet({NS}, hive_partitioning=1) m ON m.notice_id = d.master_id
+              LEFT JOIN (SELECT notice_id, min(wert) w FROM {ANR}
+                         WHERE feld='submission_deadline' GROUP BY 1) a
+                     ON a.notice_id = d.master_id
+              LEFT JOIN (SELECT notice_id, max(wert) w FROM {ANR}
+                         WHERE feld='submission_deadline_verlaengert' GROUP BY 1) v
+                     ON v.notice_id = d.master_id
+              WHERE d.beleg = 'kaeufer_und_titel'
+                AND coalesce(try_cast(v.w AS DATE),
+                             CAST(m.submission_deadline AS DATE),
+                             try_cast(a.w AS DATE)) >= current_date)"""
+
+
 def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: str | None = None):
     """F01/F02 (pin/cn) als Lead-Zeilen — der Blick nach vorn VOR der Vergabe (#1).
 
@@ -2685,6 +2733,7 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
             -- beschreibt. Konvention "markieren statt filtern": die Obergrenze bleibt nur als
             -- Absurditaets-Sperre gegen Parse-Muell, die Einordnung macht `_open_house_sql`.
             AND n.submission_deadline::DATE <= DATE '2200-01-01'
+            {_redundante_zweitquelle_sql(cfg, country)}
         ) TO '{out}.tmp' (FORMAT PARQUET, COMPRESSION ZSTD)
     """)
     import os

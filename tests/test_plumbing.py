@@ -1646,3 +1646,41 @@ def test_export_meldet_dubletten_fristen_nicht_als_schaetzung():
         encoding="utf-8")
     assert "starts_with(d.deadline_source, 'echt')" in src
     assert "d.deadline_source='echt' THEN 'actual'" not in src
+
+
+def test_tageslauf_reihenfolge_quellen_firewall_gold():
+    """Quellen-Import → Dubletten-Firewall → Gold. Beide Pfeile sind Pflicht.
+
+    Die Firewall liest Silber und schreibt `notice_enrichment`/`notice_duplicates`. Laeuft
+    ein Quellen-Import DANACH, sieht sie dessen Saetze erst am Folgetag — der Ausschluss
+    greift einen Lauf zu spaet, also genau dann, wenn die Dubletten schon im Produkt stehen.
+    Laeuft der Gold-Rebuild VOR ihr, fehlen die uebernommenen und verlaengerten Fristen.
+
+    Genau diese Reihenfolge ist beim Verdrahten schon einmal falsch gewesen: der DTVP-Block
+    stand urspruenglich im Dokumenten-Abschnitt, also hinter dem Gold-Rebuild.
+    """
+    from pathlib import Path
+    r = (Path(__file__).resolve().parent.parent / "scripts" / "daily_leads.sh").read_text()
+    i_dtvp = r.index("govisor.dtvp")
+    i_fw = r.index("govisor.dedupe")
+    i_gold = r.index("build_dach_gold.py")
+    assert i_dtvp < i_fw, "DTVP-Import muss vor der Firewall laufen"
+    assert i_fw < i_gold, "Firewall muss vor dem Gold-Rebuild laufen"
+
+
+def test_zweitquellen_ausschluss_prueft_den_master():
+    """Der einzige loeschende Pfad darf nur bei LAUFENDEM Master greifen.
+
+    Ohne die Master-Bedingung ist es der Ausschluss, der beim ersten Entwurf gemessen und
+    verworfen wurde: 64 gueltige Leads gegen 6 echte Dubletten. Und die Frist des Masters
+    muss so gelesen werden, wie das Produkt sie zeigt — sonst wirft die Firewall eine Zeile
+    weg, deren Information sie selbst gerade uebertragen hat.
+    """
+    from pathlib import Path
+    src = (Path(__file__).resolve().parent.parent / "govisor" / "gold.py").read_text(
+        encoding="utf-8")
+    b = src.split("def _redundante_zweitquelle_sql")[1].split("\ndef ")[0]
+    assert "d.beleg = 'kaeufer_und_titel'" in b
+    assert ">= current_date" in b
+    for feld in ("submission_deadline_verlaengert", "submission_deadline"):
+        assert feld in b, f"{feld} fehlt in der Master-Frist"

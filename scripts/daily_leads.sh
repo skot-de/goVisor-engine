@@ -135,24 +135,53 @@ $PY scripts/dedupe_at_sources.py \
 # Nicht-fatal: AT/CH sind Zusatzmaerkte, ein Problem dort darf den deutschen Kern nicht
 # mit herunterreissen. Laeuft VOR dem DE-Gold, weil der Frontend-Export spaeter alle drei
 # Laender in einem Durchgang liest.
+# DTVP (Deutsches Vergabeportal) — WIEDER AKTIV seit 2026-08-13.
+#
+# Der Connector lag auskommentiert, weil er beim ersten Vollauf rund zwei Drittel Dubletten
+# in die Lead-Liste geschrieben haette (gemessen an den ersten 60 Vorgaengen: 44 echte
+# Dubletten, hoechstens 4 neu). Die Notiz von damals verlangte ein `dedupe_dtvp_sources.py`
+# nach dem Muster von AT/CH. Das gibt es bewusst NICHT — die zentrale Firewall unten deckt
+# den Fall generisch ab, und ein viertes quellenspezifisches Skript waere genau die
+# Zersplitterung, die sie ersetzen soll.
+#
+# ⚠ REIHENFOLGE: DTVP muss VOR der Firewall laufen. Sie liest Silber; kommt der Import
+# danach, sieht sie die neuen Saetze erst am Folgetag und der Ausschluss greift einen Lauf
+# zu spaet — also genau dann, wenn die Dubletten schon im Produkt stehen.
+#
+# Ausgeschlossen wird in `gold._redundante_zweitquelle_sql`, und nur unter der Bedingung,
+# dass der Master heute noch ein brauchbarer Lead ist. Gemessen an den 60 vorhandenen
+# Saetzen: 45 mit Kaeufer-Beleg als Dublette erkannt, alle 45 mit laufendem Master, 15
+# bleiben als eigene Leads. Die Master-Pruefung greift bei dieser Menge also ins Leere —
+# sie ist fuer den Vollausbau (~6.800 Vorgaenge) da.
+#
+# NOCH NICHT geholt: der VOL-Bereich (8.640 offene Treffer) braucht CPV-Codes, die die
+# Suche als 2-stellige Division ablehnt; dazu SEKTVO (779), OTHER (214), ExAnte, ExPost.
+step "DTVP-Bekanntmachungen (VOB, unterschwellig)"
+$PY -m govisor.dtvp --regeln VOB --typen Tender --max-seiten 40 --stop-nach-bekannten 40 --silber \
+  || echo "  ⚠ DTVP-Import fehlgeschlagen — fremdes Portal, der Lauf geht ohne weiter."
+
 # DUBLETTEN-FIREWALL. Eine Pruefung fuer ALLE Quellen eines Landes — sie ersetzt die
 # Ueberlegung, je Quellenpaar ein Skript zu bauen (dedupe_at_sources / dedupe_ch_sources
 # bleiben vorerst, weil build_at_gold sie liest; mittelfristig entfallen sie).
 #
 # Gemessen 2026-08-13, Paare mit Kaeufer-Beleg / gesammelte Anreicherungswerte:
-#   DE   6.794 Paare · 57 % Beleg ·     32 Werte
-#   AT   5.715 Paare · 98 % Beleg ·  5.555 Werte  (4.207 NUTS, 1.348 Fristen)
-#   CH  18.676 Paare · 98 % Beleg ·  1.147 Werte
-# AT/CH liegen weit vor DE, weil TED und die nationale Quelle sich dort zu ~93 % ueberlappen.
+#   DE   6.116 Paare ·   976 mit Kaeufer-Beleg ·    21 Anreicherungswerte
+#   AT   5.421 Paare · 3.282 mit Kaeufer-Beleg · 3.703 Werte (2.614 NUTS, 1.072 Fristen)
+#   CH   2.874 Paare · 2.525 mit Kaeufer-Beleg ·   811 Werte
+# AT/CH liegen weit vor DE, weil TED und die nationale Quelle sich dort zu ~93 % ueberlappen
+# UND den Kaeufer fast gleich schreiben (98 % Beleg gegen 57 % in DE).
 #
 # ⚠ REIHENFOLGE: MUSS vor dem Gold-Rebuild laufen. `build_lead_deadline` liest
 # `notice_enrichment.parquet`; laeuft die Firewall danach, sind die uebernommenen Fristen
 # erst am naechsten Tag im Produkt. Die Datei ist optional — fehlt sie, verhaelt sich der
 # Wasserfall wie vorher, es gibt also keine harte Abhaengigkeit, nur eine zeitliche.
 #
-# Es wird NICHTS geloescht. Ein Ausschluss von Dubletten wurde gemessen und verworfen: er
-# haette 64 gueltige Leads gekostet, weil bei 61 davon die Frist des MASTERS abgelaufen ist
-# und nur die Dublette laeuft. Feld-Reichtum ist nicht Aktualitaet.
+# Sie MARKIERT und reichert an; geloescht wird an genau EINER Stelle, naemlich in
+# `gold._redundante_zweitquelle_sql` (siehe DTVP weiter unten) — und dort nur, wenn der
+# Master heute noch ein brauchbarer Lead IST. Ein Ausschluss ohne diese Bedingung wurde
+# gemessen und verworfen: er haette 64 gueltige Leads gekostet, weil bei 61 davon die Frist
+# des Masters abgelaufen ist und nur die der Dublette laeuft. Feld-Reichtum ist nicht
+# Aktualitaet.
 step "Dubletten-Firewall + Anreicherung (DE/AT/CH)"
 for L in DE AT CH; do
   $PY -m govisor.dedupe --country "$L" --ab-jahr "$(date +%Y)" --anreichern \
@@ -183,21 +212,6 @@ echo "  Gold ok."
 #     ⚠ NUR DE: der Fetcher deckt cosinex/DTVP ab. CH (simap.ch) verlangt für den Download
 #     eine Registrierung — dort kommen wir legitim nicht heran; AT liefert als
 #     `documents_url` nur die TED-Bekanntmachung. Siehe CLAUDE.md, EU-weit-Grundsatz.
-# DTVP: AUSGEBAUT bis der Dublettencheck steht. Gemessen 2026-08-13 an den ersten 60
-# geholten Vorgaengen: 44 sind ECHTE DUBLETTEN (identischer Titel UND identische
-# Vergabestelle zu einem bestehenden Lead), weitere 12 gleicher Titel bei abweichender
-# Kaeufer-Schreibweise — hoechstens 4 von 60 waren neu.
-#
-# Das deckt sich mit der Vormessung (62 % Ueberschneidung) — ich hatte sie gemessen und
-# den Dedup trotzdem nicht gebaut. AT und CH haben dafuer `atverg_dedup` bzw. `ted_dedup`.
-# Ohne Aequivalent haette der erste Vollauf ~6.800 Vorgaenge geholt und rund zwei Drittel
-# davon doppelt in die Lead-Liste geschrieben.
-#
-# Wieder aktivieren, sobald `dedupe_dtvp_sources.py` existiert (Muster:
-# scripts/dedupe_at_sources.py — Titel-Token + Kaeufer + Zeitfenster, Ergebnis als
-# gold/DE/dtvp_dedup.parquet, im Silber-Mapping ausgeschlossen).
-#   $PY -m govisor.dtvp --regeln VOB --typen Tender --max-seiten 40 --stop-nach-bekannten 40 --silber
-
 step "Vergabeunterlagen holen (DE/cosinex, höflich + idempotent)"
 $PY -m govisor.cli fetch-docs --country DE || echo "  ⚠ Fetch unvollständig — Auswertung läuft über den vorhandenen Bestand."
 # ⚠ DIESER SCHRITT FEHLTE (gemessen 2026-08-13: 2.114 Vorgänge heruntergeladen, 241 mit Text).
