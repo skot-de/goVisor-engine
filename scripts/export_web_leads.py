@@ -471,8 +471,15 @@ def export_branche(key):
           -- Auslauf zusätzlich JE MONAT quotiert. Ohne das nimmt die Quote wieder nur
           -- die nächstliegenden: mit reiner Phasen-Quote lag das Maximum bei 49 Tagen,
           -- obwohl 24 Monate erlaubt sind. So ist jeder Monat des Horizonts vertreten.
+          -- ⚠ PARTITION AUCH NACH LAND. Ohne das belegen AT/CH-Leads Rangplätze in
+          -- derselben Quote und schieben deutsche über den Deckel — obwohl sie unten per
+          -- `OR country <> 'DE'` ohnehin ungedeckelt durchgehen. Gemessen am 2026-08-13,
+          -- als AT/CH von 595/1.591 auf 17.124/8.608 Leads wuchsen: DE-Bau fiel von 5.608
+          -- auf 3.837, ohne dass sich am deutschen Bestand irgendetwas geändert hätte.
+          -- Der Deckel ist eine Quote FÜR DEUTSCHLAND; andere Länder dürfen sie nicht
+          -- aufzehren.
           SELECT *, row_number() OVER (
-            PARTITION BY phase,
+            PARTITION BY coalesce(country, 'DE'), phase,
               CASE WHEN phase = 'expiring' THEN least(coalesce(months_to_expiry, 0), 24) ELSE 0 END
             ORDER BY coalesce(days_to_deadline, days_to_expiry, 99999) ASC, lead_id) AS rn
           FROM filtered

@@ -2854,6 +2854,13 @@ def build_lead_export(cfg: Config, country: str = "DE"):
         COPY (
           SELECT
             d.lead_id, sl.slug,
+            -- Das Vergabe-LAND, ausdrücklich. Bis 2026-08-13 trug nur die alte AT/CH-Brücke
+            -- diese Spalte, der DE-Bauer nicht — der Web-Export unterschied die Länder daran
+            -- (`coalesce(country,'DE') <> 'DE'`). Als AT/CH auf denselben Bauer umgestellt
+            -- wurden, verschwand sie dort und der Export brach ab: „Referenced column
+            -- country not found". Ein Lead-Export ohne sein Land ist von der Konstruktion her
+            -- mehrdeutig — deshalb schreibt ihn jetzt JEDES Land, auch DE.
+            '{country}'                               AS country,
             d.titel                                   AS title,
             -- Freitext. GEMESSEN (2026-07-23, 437.401 offene Ausschreibungen ab 2024):
             -- die Notice-Beschreibung allein ist zu 61 % ein Zweizeiler (<200 Zeichen),

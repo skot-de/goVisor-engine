@@ -122,18 +122,23 @@ $PY scripts/dedupe_at_sources.py \
   && echo "  Abgleich ok." \
   || echo "  ⚠ AT-Abgleich fehlgeschlagen — voriger Stand bleibt gültig, Dubletten möglich."
 
-# AT- und CH-Gold: der Tageslauf hat beide Quellen bisher zwar TÄGLICH geholt, ihr Gold aber
-# NIE neu gebaut — nur DE. Damit hingen die österreichischen und Schweizer Leads im Frontend
-# an dem Zeitpunkt, an dem zuletzt jemand die Brücke von Hand gestartet hat, während das
-# Silber darunter weiterlief. Nicht-fatal: beide sind Zusatzmärkte, DE trägt das Produkt.
-step "AT-Gold (Brücke)"
-$PY -m govisor.cli gold --country AT --bridge \
-  && echo "  AT-Gold ok." || echo "  ⚠ AT-Gold fehlgeschlagen — AT-Leads bleiben auf altem Stand."
-
-step "CH-Gold (Brücke)"
-$PY -c "from govisor.config import Config; from govisor import simap; \
-print('  ', simap.build_ch_gold(Config(countries=('CH',), data_dir='data'), country='CH'), 'CH-Leads')" \
-  && echo "  CH-Gold ok." || echo "  ⚠ CH-Gold fehlgeschlagen — CH-Leads bleiben auf altem Stand."
+# AT- und CH-Gold: bis 2026-08-13 liefen hier zwei Schmalspur-Bruecken, die laut eigenem
+# Docstring "bewusst KEINE volle DE-Gold-Pipeline" bauten. Folge: der Auslauf-Radar — in DE
+# 86 % aller Leads — existierte fuer AT und CH ueberhaupt nicht, obwohl 227.117 bzw. 51.262
+# Zuschlaege im Silber lagen (AT sogar mit BESSERER Vertragsende-Abdeckung als DE: 27,4 %
+# gegen 14,9 %). Gemessen beim Umstellen: AT 595 → 17.124 Leads, CH 1.591 → 8.608.
+#
+# ⚠ Die alten Aufrufe duerfen NICHT wieder hierher: `gold --country AT --bridge` und
+# `simap.build_ch_gold` ueberschreiben lead_export mit der 595-Zeilen-Fassung. Wer sie
+# reaktiviert, setzt beide Laender ueber Nacht zurueck, ohne dass ein Test anschlaegt.
+#
+# Nicht-fatal: AT/CH sind Zusatzmaerkte, ein Problem dort darf den deutschen Kern nicht
+# mit herunterreissen. Laeuft VOR dem DE-Gold, weil der Frontend-Export spaeter alle drei
+# Laender in einem Durchgang liest.
+step "AT/CH-Gold (volle Pipeline, 26 Schritte je Land)"
+$PY scripts/build_dach_gold.py --laender AT,CH --as-of "$TODAY" \
+  && echo "  AT/CH-Gold ok." \
+  || echo "  ⚠ AT/CH-Gold unvollstaendig — beide Laender bleiben auf dem letzten Stand."
 
 # 2) Gold neu mit heutigem Stichtag — refresht Leads, Fristen, months_to_expiry. FATAL bei Fehler.
 step "Gold-Rebuild (Leads mit Stichtag $TODAY)"
@@ -188,12 +193,18 @@ fi
 #    lib/dataSource.ts). Fehlte bis 2026-08-10 im Tageslauf: Ingest und Gold liefen täglich,
 #    aber die Oberfläche zeigte den Stand des letzten Handlaufs (zuletzt 10 Tage alt).
 #    Läuft VOR dem Supabase-Push, weil das Frontend nicht davon abhängt.
-# Marktpuls (Saisonalitaet + aktuelle Lage) — laeuft VOR dem Frontend-Export, damit
-# marktpuls.json denselben Stand traegt wie der Rest von web/data. Rein lesend auf Gold,
-# ~40 s, kein Netz. Nicht fatal: ein Fehler hier darf den Tageslauf nicht abbrechen —
+# Marktpuls (Saisonalitaet + Jahres-Layer + aktuelle Lage) — laeuft VOR dem Frontend-Export,
+# damit marktpuls.json denselben Stand traegt wie der Rest von web/data. Rein lesend auf
+# Gold, kein Netz. Nicht fatal: ein Fehler hier darf den Tageslauf nicht abbrechen —
 # die Anzeige kennzeichnet einen veralteten Stand ab 2 Tagen selbst.
-step "Marktpuls berechnen (Saisonalitaet + Lage)"
-$PY scripts/build_marktpuls.py || echo "  ⚠ marktpuls.json bleibt auf dem letzten Stand — die Anzeige weist das aus."
+#
+# `--ab-jahr 2004` ist hier PFLICHT, nicht Kuer: der Schalter ist bewusst kein Default
+# (Historie kostet Laufzeit), aber ohne ihn schriebe der Tageslauf die 5-Jahres-Fassung
+# ueber die Historie — die Jahresansicht im Frontend fiele dann taeglich auf das kurze
+# Fenster zurueck. Gemessen kostet die volle Achse 2004-2025 nur +4 s (40 s -> 44 s),
+# weil der teure Attribut-Scan auf die eForms-Jahre gepinnt ist.
+step "Marktpuls berechnen (Saison + Jahre 2004-2025 + Lage)"
+$PY scripts/build_marktpuls.py --ab-jahr 2004 || echo "  ⚠ marktpuls.json bleibt auf dem letzten Stand — die Anzeige weist das aus."
 
 step "Frontend-Daten exportieren (web/data)"
 if $PY scripts/export_web_leads.py; then
