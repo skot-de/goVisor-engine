@@ -132,7 +132,16 @@ def fetch_batch(cfg: Config, country: str = "DE", limit: int | None = None,
         f"""SELECT lead_id, documents_url FROM read_parquet('{(G / 'lead_export.parquet').as_posix()}')
             WHERE phase='open' AND documents_url IS NOT NULL
               AND regexp_matches(documents_url, '/(V?MP)?Satellite/')
-            ORDER BY deadline_date DESC NULLS LAST""").fetchall()
+              -- Nur LAUFENDE Verfahren. Die Unterlagen haengen nur waehrend der Angebots-
+              -- frist am Portal; danach liefert der Endpoint die Landingpage (Status
+              -- `gated`) und der Versuch ist verschenkt.
+              AND deadline_date >= current_date
+            -- AUFSTEIGEND: naechste Frist zuerst. Vorher stand hier DESC — damit landeten
+            -- Fristen in 2029/2030 ganz oben (Rahmenvertraege und Fehlschaetzungen, deren
+            -- Ausschreibung laengst zu ist). Gemessen: von den ersten zwoelf Versuchen
+            -- gingen sechs an Vergaben aus 2025, Ausbeute null. Aufsteigend trifft man die
+            -- Verfahren, die sicher noch offen sind — und zugleich die dringendsten Leads.
+            ORDER BY deadline_date ASC""").fetchall()
     if limit:
         rows = rows[:limit]
 
