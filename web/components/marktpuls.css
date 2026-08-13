@@ -1,0 +1,122 @@
+/* Marktpuls — Namespace mp-*. Tokens aus globals.css.
+ *
+ * Das Element ist in sich geschlossen (Briefing AC1): es setzt KEINE Seitenbreite, kein
+ * Grid der Umgebung und keinen Hintergrund der Seite voraus, sondern bringt seinen eigenen
+ * Rahmen mit und passt sich per Container-Breite an. Alle Selektoren hängen an .mp-wrap,
+ * damit nichts nach aussen wirkt.
+ */
+.mp-wrap {
+  --mp-bar: var(--signal);
+  --mp-bar-hoch: var(--signal-deep);
+  --mp-bar-tief: var(--ink-300);
+  font-family: var(--sans, system-ui, sans-serif);
+  color: var(--ink-900, #12211d);
+  background: var(--surface, #fff);
+  border: 1px solid var(--line, #e3e7e5);
+  border-radius: 10px;
+  padding: 18px 18px 14px;
+  max-width: 100%;
+  container-type: inline-size;
+}
+
+/* ── Kopf ─────────────────────────────────────────────────────────────────── */
+.mp-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 12px; }
+.mp-head h3 { font-size: var(--t-title, 19px); font-weight: 700; letter-spacing: -.01em; margin: 0; }
+.mp-stand { font-size: var(--t-meta, 11px); color: var(--ink-500, #64766f); font-variant-numeric: tabular-nums; margin-left: auto; }
+.mp-stand[data-alt="ja"] { color: var(--flag, #b45309); background: var(--flag-wash, #fbf2e6); border-radius: 5px; padding: 2px 7px; }
+.mp-sub { font-size: var(--t-sm, 12.5px); color: var(--ink-500, #64766f); margin: 3px 0 0; line-height: 1.5; }
+
+/* ── Umschalter ───────────────────────────────────────────────────────────── */
+.mp-switch { display: flex; flex-wrap: wrap; gap: 10px 18px; margin: 14px 0 4px; }
+.mp-group { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.mp-group > .mp-lbl { font-size: var(--t-meta, 11px); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-400, #8c9b95); margin-right: 2px; }
+.mp-group button {
+  border: 1px solid var(--line-strong, #cfd6d3); background: var(--surface, #fff);
+  border-radius: 7px; padding: 4px 10px; font: inherit; font-size: var(--t-sm, 12.5px);
+  color: var(--ink-700, #33453f); cursor: pointer;
+}
+.mp-group button:hover:not(:disabled) { border-color: var(--signal, #10b981); }
+.mp-group button[aria-pressed="true"] { background: var(--ink-900, #12211d); color: #fff; border-color: var(--ink-900, #12211d); }
+.mp-group button:disabled { opacity: .45; cursor: not-allowed; }
+.mp-group button:focus-visible { outline: 2px solid var(--signal, #10b981); outline-offset: 2px; }
+
+/* ── Diagramm ─────────────────────────────────────────────────────────────── */
+.mp-chart { margin-top: 14px; }
+.mp-bars { display: grid; grid-template-columns: repeat(12, 1fr); gap: 4px; align-items: end; height: 168px; position: relative; }
+.mp-mean {
+  position: absolute; left: 0; right: 0; border-top: 1px dashed var(--ink-400, #8c9b95);
+  pointer-events: none;
+}
+.mp-mean span {
+  position: absolute; right: 0; top: -14px; font-size: var(--t-meta, 11px);
+  color: var(--ink-500, #64766f); background: var(--surface, #fff); padding: 0 3px;
+  font-variant-numeric: tabular-nums;
+}
+.mp-bar { display: flex; flex-direction: column; justify-content: flex-end; height: 100%; }
+.mp-bar i {
+  display: block; background: var(--mp-bar); border-radius: 3px 3px 0 0; min-height: 2px;
+  transition: height .18s ease;
+}
+.mp-bar[data-lvl="hoch"] i { background: var(--mp-bar-hoch); }
+.mp-bar[data-lvl="tief"] i { background: var(--mp-bar-tief); }
+.mp-bar b {
+  display: block; font-size: var(--t-meta, 11px); font-weight: 600; text-align: center;
+  color: var(--ink-700, #33453f); font-variant-numeric: tabular-nums; padding-bottom: 3px;
+  white-space: nowrap;
+}
+.mp-axis { display: grid; grid-template-columns: repeat(12, 1fr); gap: 4px; margin-top: 5px; }
+.mp-axis span { font-size: var(--t-meta, 11px); color: var(--ink-500, #64766f); text-align: center; }
+.mp-axis span[data-lvl="hoch"] { color: var(--ink-900, #12211d); font-weight: 600; }
+
+.mp-befund {
+  margin-top: 14px; padding: 10px 13px; border-radius: 8px;
+  background: var(--surface-2, #fafbfa); border: 1px solid var(--line, #e3e7e5);
+  font-size: var(--t-body, 13px); line-height: 1.55; color: var(--ink-700, #33453f);
+}
+.mp-basis { margin-top: 8px; font-size: var(--t-meta, 11px); color: var(--ink-500, #64766f); line-height: 1.55; }
+
+/* ── Hinweis / leere Kombination ──────────────────────────────────────────── */
+.mp-note {
+  margin-top: 12px; padding: 9px 12px; border-radius: 8px; font-size: var(--t-sm, 12.5px);
+  background: var(--flag-wash, #fbf2e6); color: var(--flag, #b45309); line-height: 1.5;
+}
+
+/* ── Aktuelle Lage ────────────────────────────────────────────────────────── */
+.mp-lage { margin-top: 22px; border-top: 1px solid var(--line, #e3e7e5); padding-top: 14px; }
+.mp-lage h4 { font-size: var(--t-lg, 15px); font-weight: 700; margin: 0 0 10px; }
+.mp-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
+.mp-kpi { background: var(--surface-2, #fafbfa); border: 1px solid var(--line, #e3e7e5); border-radius: 8px; padding: 9px 11px; }
+.mp-kpi b { display: block; font-size: 21px; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+.mp-kpi span { display: block; font-size: var(--t-meta, 11px); color: var(--ink-500, #64766f); margin-top: 2px; line-height: 1.4; }
+
+.mp-branchen { list-style: none; margin: 12px 0 0; padding: 0; }
+.mp-branchen li { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8px; padding: 4px 0; font-size: var(--t-sm, 12.5px); }
+.mp-branchen .mp-track { grid-column: 1 / -1; height: 4px; border-radius: 2px; background: var(--surface-3, #f1f3f2); overflow: hidden; }
+.mp-branchen .mp-track i { display: block; height: 100%; background: var(--signal, #10b981); }
+.mp-branchen .mp-n { font-variant-numeric: tabular-nums; color: var(--ink-700, #33453f); }
+
+/* ── Tabelle (Barrierefreiheit, Briefing §5) ──────────────────────────────── */
+.mp-table { margin-top: 14px; font-size: var(--t-sm, 12.5px); }
+.mp-table > summary { cursor: pointer; color: var(--ink-500, #64766f); font-size: var(--t-meta, 11px); }
+.mp-table > summary:focus-visible { outline: 2px solid var(--signal, #10b981); outline-offset: 2px; }
+.mp-table table { border-collapse: collapse; margin-top: 8px; width: 100%; }
+.mp-table th, .mp-table td { text-align: right; padding: 3px 8px; border-bottom: 1px solid var(--line, #e3e7e5); font-variant-numeric: tabular-nums; }
+.mp-table th:first-child, .mp-table td:first-child { text-align: left; }
+.mp-table thead th { color: var(--ink-500, #64766f); font-weight: 600; }
+
+.mp-quelle { margin-top: 12px; font-size: var(--t-meta, 11px); color: var(--ink-400, #8c9b95); line-height: 1.55; }
+
+/* Schmale Einbauorte: Werte über den Balken werden zu eng — nur die Achse bleibt. */
+@container (max-width: 520px) {
+  .mp-bar b { display: none; }
+  .mp-bars { height: 130px; }
+}
+
+.mp-sr {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mp-bar i { transition: none; }
+}

@@ -113,6 +113,18 @@ def fetch_one(documents_url: str, notice_id: str, out_root: Path,
     return FetchResult(notice_id, cx, portal, "downloaded", dest.stat().st_size, n_files, str(dest))
 
 
+def _waehle_connector(url: str):
+    """URL → zustaendiger Connector. Neue Plattform = eine Zeile hier plus ein Modul.
+
+    Bewusst eine Weiche statt einer Kette von `if` im Schleifenrumpf: der naechste
+    Connector (subreport, staatsanzeiger …) soll `fetch_batch` nicht anfassen muessen.
+    """
+    from . import docfetch_rib
+    if docfetch_rib.is_rib(url):
+        return docfetch_rib.fetch_one
+    return fetch_one
+
+
 def fetch_batch(cfg: Config, country: str = "DE", limit: int | None = None,
                 delay: float = 1.5) -> dict:
     """Alle offenen Leads mit cosinex-``documents_url`` → Unterlagen ziehen (höflich, idempotent).
@@ -131,7 +143,11 @@ def fetch_batch(cfg: Config, country: str = "DE", limit: int | None = None,
     rows = con.execute(
         f"""SELECT lead_id, documents_url FROM read_parquet('{(G / 'lead_export.parquet').as_posix()}')
             WHERE phase='open' AND documents_url IS NOT NULL
-              AND regexp_matches(documents_url, '/(V?MP)?Satellite/')
+              -- Zwei Connectoren: cosinex (Satellite-Pfad) und RIB/meinauftrag.
+              -- Die Zuordnung je Zeile macht `_waehle_connector` unten — hier nur
+              -- vorfiltern, damit nicht 7.000 ungedeckte Vorgaenge durchlaufen.
+              AND (regexp_matches(documents_url, '/(V?MP)?Satellite/')
+                   OR documents_url LIKE '%meinauftrag.rib.de%')
               -- Nur LAUFENDE Verfahren. Die Unterlagen haengen nur waehrend der Angebots-
               -- frist am Portal; danach liefert der Endpoint die Landingpage (Status
               -- `gated`) und der Versuch ist verschenkt.
@@ -149,7 +165,7 @@ def fetch_batch(cfg: Config, country: str = "DE", limit: int | None = None,
     results: list[FetchResult] = []
     counts: dict[str, int] = {}
     for i, (lead_id, url) in enumerate(rows, 1):
-        res = fetch_one(url, lead_id, out_root, session=s)
+        res = _waehle_connector(url)(url, lead_id, out_root, session=s)
         results.append(res)
         counts[res.status] = counts.get(res.status, 0) + 1
         if res.status in ("downloaded", "exists"):
@@ -164,7 +180,7 @@ def fetch_batch(cfg: Config, country: str = "DE", limit: int | None = None,
         pq.write_table(pa.Table.from_pylist([asdict(r) for r in results]),
                        out_root / "_manifest.parquet", compression="zstd")
     total_mb = sum(r.bytes for r in results if r.status == "downloaded") / 1e6
-    print(f"\ncosinex-Fetch {country}: {len(rows)} Vorgänge | " +
+    print(f"\nUnterlagen-Fetch {country}: {len(rows)} Vorgänge | " +
           " | ".join(f"{k}={v}" for k, v in sorted(counts.items())) +
           f" | {total_mb:.1f} MB neu")
     return {"total": len(rows), "counts": counts, "mb": round(total_mb, 1)}
