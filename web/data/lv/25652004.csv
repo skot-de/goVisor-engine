@@ -1,0 +1,13 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Demontage und Entsorgung der defekten Deckenheizung;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Erneuerung der Dunkelstrahler.x83
+20;Lieferung und Montage der kompletten Dunkelstrahler;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Erneuerung der Dunkelstrahler.x83
+30;Fahrbare Arbeitsbühne, 6,00 m;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Erneuerung der Dunkelstrahler.x83
+40;Inbetriebnahme und Abnahme durch den Schornsteinfeger;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Erneuerung der Dunkelstrahler.x83
+50;Stundenlohn Obermonteur;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Erneuerung der Dunkelstrahler.x83
+60;Stundenlohn Monteur;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Erneuerung der Dunkelstrahler.x83
+70;Stundenlohn Helfer;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Erneuerung der Dunkelstrahler.x83
+10;Wartungskosten im 1. Jahr der Gewährleistung, entsprechend dem Inhalt der textlichen Erläuterungen und des Wartungsvertrages.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Erneuerung der Dunkelstrahler.x83
+20;Wartungskosten im 2. Jahr der Gewährleistung, entsprechend dem Inhalt der textlichen Erläuterungen und des Wartungsvertrages;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Erneuerung der Dunkelstrahler.x83
+30;Wartungskosten im 3. Jahr der Gewährleistung, entsprechend dem Inhalt der textlichen Erläuterungen und des Wartungsvertrages.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Erneuerung der Dunkelstrahler.x83
+40;Wartungskosten im 4. Jahr der Gewährleistung, entsprechend dem Inhalt der textlichen Erläuterungen und des Wartungsvertrages;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Erneuerung der Dunkelstrahler.x83
+50;Wartungskosten im Folgejahr nach Ablauf der Gewährleistungszeit, entsprechend dem Inhalt der textlichen Erläuterungen und des Wartungsvertrages.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Erneuerung der Dunkelstrahler.x83

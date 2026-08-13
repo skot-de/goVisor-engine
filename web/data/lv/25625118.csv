@@ -1,0 +1,123 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Einholen einer verkehrsrechtlichen Anordnung.;1,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+20;Einholen einer Verlängerung der bestehenden VA,;1,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+30;Verkehrszeichen (Gefahren-, Vorschriften- und Richtzeichen) der Größe 1, dreieckig, rechteckig und quadratisch, wie z. B. VZ-Nrn 101, 123, 116 sowie rund, wie z. B. VZ-Nrn 250, 259, 209-30.;30,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+40;Zusatztafeln der Größe 1 + 2, rechteckig oder quadratisch, mit individueller Beschriftung, wie z. B. VZ-Nrn 1000-10, 1001-30, 1006-34.;15,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+50;Rechtecktafeln der Größe 500 x 750 mm, rechteckig, mit individueller Beschriftung.;6,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+60;Rechtecktafeln der Größe 1600 x 1250 mm oder 2000 x 1250 mm, rechteckig, mit individueller Beschriftung, wie z. B. VZ-Nrn 501-15, 541-10.;6,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+70;Umleitungswegweiser der Größen 350 x 1050 mm bzw. 350 x 1400 aufstellen, wie z. B. VZ-Nrn 454-10, 454-20, 455-30, 457.1, 457.2, etc..;5,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+80;Absperrschranke, einschließlich der erforderlichen gelben oder roten Warnleuchten. Das Zeichen 600 nach StvO.;115,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+90;Leitbaken, einschließlich Warnleuchte. Das Zeichen 605 nach StvO.;50,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+100;Gelbe Markierungsfolie, nach StVO, als durchgehender Schmalstrich oder Leitlinienmarkierung mit unterbrochenem Schmalstrich, nach Verkehrszeichenplänen oder durch nachträgliche Anordnung der Verkehrsbehörden, aufbringen.;1000,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+110;Gelbe Markierungsfolie, nach StVO, als Richtungspfeilmarkierung (rechts, links, geradeaus od. kombiniert), nach Verkehrszeichenplänen oder durch nachträgliche Anordnung der Verkehrsbehörden, aufbringen.;20,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+120;Deaktivierung bestehendes Verkerszeichen.;20,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+130;Verkehrsregelung mit Lichtsignalanlage.;1,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+140;Lichtsignalanlage betreiben,;10,0;d;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+150;Ausbau und seitliche Lagerung von Verkehrszeichen.;5,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+160;Aufnehmen und wiederversetzen von Verkehrszeichen.;5,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+170;Aufnehmen und Transport zum städtischen Lager von;5,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+10;Baumschutz vor mechanischer Beschädigung durch Mantel mit Polsterung am Baumstamm herstellen.;1,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+20;Schutzeinrichtung für Wurzelbereich von Bäumen gegen;10,0;m2;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+30;Fachgerechter Rückschnitt von überhängendem Bewuchs in den Baustellenbereich, zur Durchführung der Instandsetzungsarbeiten ohne Behinderungen.;10,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+10;Asphaltbeton fräsen, Fräsgut aufnehmen und entsorgen.;350,0;m2;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+20;Asphaltbinderschicht fräsen, Fräsgut aufnehmen und entsorgen.;100,0;m2;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+30;Asphalttragschicht fräsen und Fräsgut aufnehmen.;100,0;m2;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+40;Unterlage reinigen.;550,0;m2;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+50;Pflaster ausbauen, aufnehmen und entsorgen, einschließlich Transport und Entsorgung (Gebühr).;20,0;m2;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+60;Asphalt schneiden bis zu einer Tiefe von 15 cm.;50,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+70;Asphalt schneiden ab einer Tiefe von > 15 cm bis 25 cm.;1650,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+80;Asphalt schneiden ab einer Tiefe über 25 cm.;50,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+90;Asphaltbefestigung aufbrechen, aufnehmen und entsorgen, einschließlich Transport und Entsorgung (Gebühr).;65,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+100;Asphaltbefestigung teerhaltig aufbrechen, aufnehmen und entsorgen, einschließlich Transport und Entsorgung (Gebühr).;1,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+110;Leitsäule, links- und/oder rechtsweisend, demontieren und zu unserem Bauhof (KST) fahren.;12,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+120;Aufsatz für Straßenablauf Asphalt oder Pflaster bzw. Plattenbelag freilegen, ausbauen und entsorgen. Ablauföffnung durch geeignete Abdeckung sichern.;27,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+130;Straßenablauf aus Betonfertigteilen vollständig rückbauen und entsorgen.;14,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+10;Beton unbewehrt aufbrechen, aufnehmen und entsorgen, einschließlich Transport und Entsorgung (Gebühr).;2,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+20;Bauliche Anlage aufbrechen, aufnehmen und entsorgen, einschließlich Transport und Entsorgung (Gebühr).;2,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+30;Boden lösen, laden und entsorgen.;780,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+40;Zulage für Bodenklasse 7 lösen, schwerer Fels.;1,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+50;Zulage für reinen Handaushub in Bodenklassen 3 bis 6.‑;5,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+60;Schroppen liefern, einbauen und verdichten.;1,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+70;Frostschutzschicht herstellen.;265,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+80;Schottertragschicht herstellen.;125,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+90;Schottertragschicht herstellen.;90,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+100;Oberboden liefern und profilgerechtandecken, einschließlich aller erforderlichen Arbeiten.;10,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+110;Rasenansaat herstellen. Saatgut ohne Entmischung ausbringen und einarbeiten.;20,0;m2;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+10;Kabel-/Leitungsgraben herstellen.;470,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+20;Handaushub für Leitungs- und Kabelgraben profilgerecht herstellen.;1,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+30;Leitungszone mit Flußsand 0/2 verfüllen und verdichten.;60,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+40;Leitungssicherung quer, aller Benstandsleitungen und -Arten.;5,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+50;Kabel mit Abdeckhauben aus Kunststoff, 3 St/m, abdecken.;470,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+60;Kabelschutzrohr PE-HD DN 110, einschl. fester Rohrverbindung, einbauen. Wandungsdicke mind. 3 mm.;2760,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+70;Mastfundament nach Normalie herstellen, bestehend aus:;11,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+80;Kabelabzweigkasten mit Abdeckung D 400 aus Betonfertigteilen mit Schmutzschale aus verzinktem Stahlblech und Kabeleinführungsplatten oder -dielen für 4 Leerrohre DN 110 einbauen. Einführungsöffnungen entsprechend Herstellerangaben verschließen. Fugen mit Zementmörtel herstellen.;8,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+10;Alle Böden, Fels und sonst Baustoffe, schadstoffunbelastet, kein gefährlicher Abfall, gemäß:;5,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+20;Entsorgungsgebühr für alle Böden, Fels und sonstige Baustoffe, schadstoffunbelastet, kein gefährlicher Abfall, gemäß:;10,0;t;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+30;Alle Böden, Fels und sonst Baustoffe, schadstoffbelastetet, nicht gefährlicher Abfall, gemäß:;5,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+40;Entsorgungsgebühr für alle Böden, Fels und sonst Baust.;10,0;t;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+50;Alle Böden, Fels und sonst Baustoffe, schadstoffbelastetet, nicht gefährlicher Abfall, gemäß:;5,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+60;Entsorgungsgebühr für alle Böden, Fels und sonst Baust.;10,0;t;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+70;Alle Böden, Fels und sonst Baustoffe, schadstoffbelastetet, nicht gefährlicher Abfall, gemäß:;5,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+80;Entsorgungsgebühr für alle Böden, Fels und sonst Baust.;10,0;t;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+90;Alle Böden, Fels und sonst Baustoffe, schadstoffbelastetet, nicht gefährlicher Abfall, gemäß:;5,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+100;Entsorgungsgebühr für alle Böden, Fels und sonst Baust.;10,0;t;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+110;Abfuhr und Entsorgung von Straßenaufbruch zur Aufbereitungsanlage einschließlich Gebühren.;5,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+120;Abfuhr und Entsorgung von teerhaltigem bzw. PAK-belasteter Straßenaufbruch;10,0;t;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+130;Entsorgung von Pflasterbelägen jeglicher Art,;5,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+10;Randbegrenzungen ausbauen und entsorgen.;20,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+20;Randbegrenzungen ausbauen, reinigen, auf Paletten zu stapeln, aufnehmen, zum städtischen Bauhof zu fahren und dort abladen. Die Paletten sind in den EP einzurechnen.;820,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+30;Randbegrenzungen ausbauen, reinigen, seitlich lagern und wieder einbauen.;15,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+40;Rabatten 8 x 20 bis 8 x 30 liefern und versetzen.;10,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+50;Granit-Leistensteine liefern und versetzen.;10,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+60;Zulage Granit-Leistenstein;10,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+70;"Bordsteine aus Granit liefern und versetzen; mit Fase";10,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+80;Zulage Bordstein aus Granit für Bogensteine mit einem Radius unter 18 m.;15,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+90;Natursteine fasen  2/2 cm.;15,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+100;Granit- Großplaster, Ein- bzw. Zweizeiler ausbauen u. entsorgen.;10,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+110;Einbau einer ca. 40 cm langen Bodenhülse für eine rot-weißen Poller. Die Oberkante der Hülse ist auf Höhe der fertigen Oberkante des Asphaltbelags zu setzen. Das Fundament der Bodenhülse muss einen Abstand zur Oberkante der Hülse von mindestens 12 cm aufweisen. Damit soll gewährleistet werden, dass ;22,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+10;Schachtabdeckungen Kanal und Wasser, anpassen oder tauschen.;6,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+20;Anpassen oder austausch von schadhaften Straßenablauf - Abdeckungen.;1,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+30;Abdeckung von Bergeinlauf anpassen oder tauschen.;1,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+40;Anpassen oder austauschen von schadhafte Schieberkappen, einschließlich höhenverstellbare Kappen.;1,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+50;Anpassen oder austauschen von schadhaften Kabelschacht-Abdeckungen.;1,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+60;Lieferung von Schachtabdeckunge Klasse D 400;6,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+70;Lieferung von Straßenablauf-Aufsatz Klasse D 400;13,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+80;Lieferung von Bergablauf-Aufsatz Klasse D 400;13,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+90;Lieferung von Schieberkappen von Lagerstelle des Versorgungsunternehmens.;1,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+100;Lieferung von Kabelschacht-Abdeckung von Lagerstelle des Versorgungsunternehmens.;3,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+110;Lieferung von Ausgleichsteilen für Schachtabdeckungen;1,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+120;Lieferung von Ausgleichsteilen für Straßenablauf-Abdeckungen;1,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+130;Lieferung einer Beton-Übergangsplatte für ein Schachtbauwerk;6,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+140;Einbau Abdeckung Kanal/Wasser mit Elastomermörtel.;6,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+150;Einbau Aufsatz Straßenablauf mit Elastomermörtel.;13,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+160;Einbau Aufsatz Bergablauf mit Elastomermörtel.;13,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+10;Bitumenemulsion nach Herstellerangaben vollflächig und;2210,0;m2;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+20;Asphaltbeton für Tragschichten AC 22 TN liefern und;260,0;m2;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+30;Asphaltbeton für Deckschichten AC 5 DN liefern und;260,0;m2;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+40;Asphaltbeton für Tragschichten AC 32 TS liefern und;800,0;m2;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+50;Asphaltbeton für Binderschichten AC 22 BS liefern und;800,0;m2;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+60;Asphaltbeton für Deckschichten AC 11 DS liefern und einbauen.;1150,0;m2;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+70;Fugen nachträglich herstellen (Heißverguss);1900,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+80;Edelsplitt mit der Lieferkörnung 1/3 mm, ca. 0,75 kg/m2;1150,0;m2;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+10;Fläche der Markierung auf Anordnung des AG reinigen.;500,0;m2;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+20;Längsmarkierung Typ II einschl. evtl. Sperrflächenumrandung und Grenzmarkierung (VZ 299) herstellen.;470,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+30;Längsmarkierung Typ II einschl. evtl.;55,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+40;Längsmarkierung Typ II einschl. evtl.;490,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+50;Längsmarkierung Typ II einschl. evtl. Sperrflächenumrandung;5,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+60;Sperrfläche als Schrägstrichgatter Typ II als endgültige Markierung herstellen.;20,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+70;Sonstiges Markierungszeichen Typ II als endgültige Mar-;4,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+80;Pfeilmarkierung Typ II herstellen. Losen Schmutz von zu;1,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+10;Gemittelter Verrechnungslohn,;5,0;h;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+20;Zusätzliche Vergütung für die Arbeitsstunden bei;5,0;h;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+10;Kleintransporter bis 4,5 to Nutzlast.;2,0;h;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+20;Transport  Geräte in das Stadtgebiet Tübingen einschließlich evtl. notwendiger Baustelleneinrichtungen.;1,0;St;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+10;Beton C 20/25  liefern und einbauen.;2,0;m3;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+20;Schnellmontagemörtel, ohne Einbau!;2,0;kg;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+30;KG 2000 Rohre DN 100 mm.;2,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+40;KG 2000 Rohre DN 100 mm, Bogen.;2,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+50;KG 2000 Rohre DN 100, Abzweig,;2,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+60;KG 2000 Rohre DN 150 mm.;2,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+70;KG 2000 Rohre DN 150 mm, Bogen.;2,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+80;KG 2000 Rohre DN 150, Abzweig,;2,0;m;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+90;Flußsand, gewaschen, ohne Einbau!;2,0;t;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83
+100;Splitt, ohne Einbau!;2,0;t;gaeb;sonstiges/Tübingen - Schnarrenbergstraße_Mitte_LV.X83

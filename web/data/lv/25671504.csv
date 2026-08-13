@@ -1,0 +1,420 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Zählerschrank, univers Z, 1400x1050x205 mm, Schutzklasse II, 432 Platzeinheiten;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Kabelanschlusskasten, univ., 324x307x149mm, IP54, SKII, SaS-Träger-40mm, seitl.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Kabelrangierkanal, 4-feldig, aufsteckbar, H x B x T176 x 1050 x 135mm, RAL9010;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Plantasche, Klarsicht, DIN A4, selbstklebend;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Baustein, universN, 300x250mm, für 2 Trenner NH00 auf Sammelschienensystem 40m;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Baustein, universN, 450x250mm, für 4 NH00-Leisten auf Sammelschienenystem 60mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Komplettfeld, univers Z, 1350mm, 1ZP/RES, 1-feldig, 5-polig, mit Verdrahtung 16mm²;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;Komplettfeld, univers Z, 1350mm, 2ZP 1-feldig, 5-polig, mit Verdrahtung 16mm²;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+90;Komplettfeld, univers Z, 1350mm, 1RES SG, 1-feldig, 5-polig, mit Verdrahtung 16mm²;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+100;Verteilerfeld, univers Z, Höhe 1350mm, 7-reihig, 1-feldig, mit APZ unten;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+110;Lasttrennschalter 3polig 100A für Hutschiene oder Montageplatte;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+120;SLS-Schalter 3 polig E-Charakteristik 100A für Sammelschiene QuickConnect;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+130;SLS Schalter 3 polig Cs-Charakteristik 35A für Sammelschiene QuickConnect;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+140;Sicherungslasttrennschalter LT NH000/40mm 100A, Rahmenklemme 50mm², Abgang unten;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+150;Leitungsschutzschalter 1-polig 25kA 6A B-Charakteristik 1 Modul ÜKA;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+160;Kombiableiter T1+T2+T3 4P Iimp 12,5kA TT/TNS;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+170;Anmeldung der Anlage beim zuständigen Netzbetreiber und Koordinierung des Zählereinbaus mit dem Messstellenbetreiber;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Feldvert. AP, IP44, SKII, 144PLE, 3x7 Reihen, 800x1100x205mm,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Lasttrennschalter 4polig 160A für Hutschiene oder Montageplatte;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Überspannungsableiter T2 4P 40kA TT/TNS Defektanzeige;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Sicherungslasttrennschalter nach DIN VDE 0660 Teil 107;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Fehlerstromschutzschalter nach DIN VDE 0664 Teil 1,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Leitungsschutzschalter nach DIN VDE 0641 TEIL 11,;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Leitungsschutzschalter nach DIN VDE 0641 TEIL 11,;34,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;Leitungsschutzschalter nach DIN VDE 0641 TEIL 11,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+90;Leitungsschutzschalter nach DIN VDE 0641 TEIL 11,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+100;Leitungsschutzschalter nach DIN VDE 0641 TEIL 11,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+110;Schütz brummfrei nach DIN EN 61095 (VDE 0637-3) mit Kontaktstellungsanzeige durch Anzeigefenster, integriertes Beschriftungsfeld und geeignet zum nachträglichen Anbau von Zusatzeinrichtung. Gleichstrom-Magnetsystem mit Schutzschaltung gegen Überspannung und zur Begrenzung von Störspannungsspitze, zu;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+120;Kabelrangierkanal, 3-feldig, aufsteckbar;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+130;Schaltuhr Außenbeleuchtung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+140;Erstellen der Stromkreisauflistung für die;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+150;Feldvert. AP, IP44, SKII, 168PLE, 2x7 Reihen, 1250x550x205mm, o. Klemme;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+160;Lasttrennschalter 4polig 80A für Hutschiene oder Montageplatte;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+170;Überspannungsableiter T2 4P 40kA TT/TNS Defektanzeige;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+180;Sicherungslasttrennschalter nach DIN VDE 0660 Teil 107;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+190;Fehlerstromschutzschalter nach DIN VDE 0664 Teil 1,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+200;Leitungsschutzschalter nach DIN VDE 0641 TEIL 11,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+210;Leitungsschutzschalter nach DIN VDE 0641 TEIL 11,;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+220;Leitungsschutzschalter nach DIN VDE 0641 TEIL 11,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+230;Leitungsschutzschalter nach DIN VDE 0641 TEIL 11,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+240;Kabelrangierkanal, 2-feldig, aufsteckbar;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+250;Erstellen der Stromkreisauflistung für die;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Kabelbahn 60 x 100 x 0,8mm, gelocht mit integriertem;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Kabelbahn 60 x 300 x 0,8mm, gelocht mit integriertem;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Trennsteg für vorher genannte Kabelbahnen,;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Kantenschutz für die zuvor beschriebenen Kabelbühnen;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Konsole Breite 300 mm, sendzimirverzinkt;26,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Hängestiel Länge 300 mm mittelschwer/ doppelt;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;90° Bogen, bandverzinkt nach DIN EN 10327,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;Hammerfuß- Bügelschelle B12 feuerverzinkt,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+90;Steigeleiter, mittelschwer Breite 300 mm einschließlich;9,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+100;Sammelschellen E-30-90 incl. Befestigung;300,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+110;Isolierstoffrohr DIN VDE 0605, mittelschwer, flexibel,;600,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+120;Isolierstoffrohr DIN VDE 0605, mittelschwer, flexibel,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+130;Isolierstoffrohr DIN VDE 0605, mittelschwer, flexibel,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+140;Kunststoffstangenrohr DIN VDE 0605, hart, mittelschwer, starr, ACF, Nenngröße DN 16, Verlegung offen,;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+150;Kunststoffstangenrohr DIN VDE 0605, hart, mittelschwer, starr, ACF, Nenngröße DN 20, Verlegung offen,;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+160;Kunststoffstangenrohr DIN VDE 0605, hart, mittelschwer, starr, ACF, Nenngröße DN 25, Verlegung offen,;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+170;Flexibles Kabelschutzrohr DN 100, aus PE, in;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+180;Doppelsteckmuffe DN 100, sanddicht, inkl.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+190;Rohrverschlussstopfen für DN 100;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+200;Bemessungsbetriebsspannung AC: 1000 V;30,0;Stk.;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+210;Bemessungsbetriebsspannung AC: 690 V;8,0;Stk.;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+220;Verbindungsdose nach DIN EN 60670 (VDE 0606), 12 Einführungen, 3 Bodeneinführungen, komplett mit Lochwerkzeug und Verschlussstopfen, mit außenliegenden Befestigungsstellen, grau, anteilg benötigte Klemmen ist mit einzubeziehenn, für VDE-zugel. Einzelklemmen.;60,0;Stk.;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Mantelleitung NYM-J 3 x 1,5 mm², Cu-Zahl 43,;165,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Mantelleitung NYM-J 3 x 2,5 mm², Cu-Zahl 72,;780,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Mantelleitung NYM-J  5 x 1,5 mm², Cu-Zahl 72,;75,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Mantelleitung NYM-J 5 x 4 mm², Cu-Zahl 192,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Mantelleitung NYM-J 5 x 6 mm², Cu-Zahl 288,;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Mantelleitung NYM-J 3 x 1,5 mm², Cu-Zahl 43, nach VDE 0472,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Mantelleitung NYM-J 3 x 2,5 mm², Cu-Zahl 72,;410,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;Mantelleitung NYM-J  5 x 1,5 mm², Cu-Zahl 72,;360,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+90;Herdanschlusskabel  HO5 VV-F 5G 2,5;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+100;Installationskabel  DIN VDE 0815 J-Y(St)Y 2 x 2 x 0,8;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+110;Installationskabel  DIN VDE 0815 J-Y(St)Y 4 x 2 x 0,8;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+120;Mantelleitung NYM-J 3 x 1,5 mm², Cu-Zahl 43, nach VDE 0472,;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+130;"Mantelleitung NYM-J 3 x 2,5 mm²; Cu-Zahl 72";620,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+140;Mantelleitung NYM-J  5 x 1,5 mm², Cu-Zahl 72,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+150;Mantelleitung NYM-J 5 x 4 mm², Cu-Zahl 192,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+160;Installationskabel  DIN VDE 0815 J-Y(St)Y 2 x 2 x 0,8;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+170;Installationskabel  DIN VDE 0815 J-Y(St)Y 4 x 2 x 0,8;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+180;Mantelleitung NYM-J 3 x 1,5 mm², Cu-Zahl 43, nach VDE 0472,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+190;"Mantelleitung NYM-J 3 x 2,5 mm²; Cu-Zahl 72";195,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+200;Mantelleitung NYM-J  5 x 1,5 mm², Cu-Zahl 72,;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+210;Mantelleitung NYM-J 5 x 4 mm², Cu-Zahl 192,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+220;Installationskabel  DIN VDE 0815 J-Y(St)Y 2 x 2 x 0,8;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+230;Installationskabel  DIN VDE 0815 J-Y(St)Y 4 x 2 x 0,8;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+240;Kunststofffkabel NYY-J 5x 2,5 mm², Cu-Zahl 288,;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+250;Kunststofffkabel NYY-J 5 x 16 mm², Cu-Zahl 288,;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+260;Kunststofffkabel NYY-J 5 x 25 mm², Cu-Zahl  480;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Wippen - Aus- / Wechselschalter nach VDE 0632, u.P.,;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Universal-Tastdimmer 1-fach, Elektronikplattform, niedriger Eigenenergiebedarf, automatische Einstellung der minimalen Starthelligkeit für 230 V LED- und Energiesparlampen, lampenschonender Softanlauf, Phasenan- oder Phasenabschnitt je nach Lastart, selbstlernend, kurzschlussfest und überlastsicher ;17,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Jalousietaster, für die  Steuerung von Jalousiemotoren.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Taster;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Kinderschutz- Steckdosensicherung;133,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Herdanschlussdose, u.P., 5-polig, weiß, für Schraub-;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Schutzkontakt-Steckdose 1-fach, Unterputz;51,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;Schutzkontakt-Steckdose 2-fach, Unterputz;61,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+90;Schutzkontakt-Steckdose 3-fach, Unterputz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+100;Schutzkontakt-Steckdose 4-fach, Unterputz;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+110;Schukosteckdose mit Schutzkontakt nach VDE 0632, a.P.,;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Anschließen von Kabeln oder Leitungen an beigestellten;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Anschließen von Kabeln oder Leitungen an beigestellten;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Anschließen von Kabeln oder Leitungen an beigestellten;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Kabelanschluss an Rauchschutztüren,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Motorsteuereinheit zur Ansteuerung von 1 Motor 230 V AC, direkte Ansteuerung des Antriebs über Sonnenschutzzentrale oder einen Taster vor Ort, Montage in Zwischendecke;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Motorsteuereinheit zur Ansteuerung von bis zu 2 Motoren;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Motorsteuereinheit zur Ansteuerung von bis zu 3 Motoren;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Motorsteuereinheit zur Ansteuerung von bis zu 4 Motoren;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;4-Kanal Sonnenschutzzentrale mit vorkonfigurierten Steuerungsprogrammen für Raffstoren, Rollläden, Markisen, Markisoletten, Jalousien und Rollos. Dachflächenfenster oder Verdunkelungsanlagen müssen spezifisch angesteuert werden können.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Zur Ausführung kommt ein Notstrom-Kit.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Kompakter Messwertgeber aus massivem Kunststoff. Zur genauen Erfassung der Sonneneinstrahlung aus vier Himmelsrichtungen muss je eine Photodiode zur Verfügung stehen. Der Messwertgeber muss für den Empfang des DCF77-Zeitsignales geeignet sein. Bei Stromausfall werden Datum und Uhrzeit innerhalb von ;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;Geschossansteuerverteiler;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Rechteckige LED-Deckenanbauleuchte mit vollflächiger, randloser PMMA-Abdeckung.Anbauleuchte für die Deckenmontage in Innenräumen.Geeignet zur Anwendung in HACCP, IFS und/oder BRC Global Standard Food zertifizierten Unternehmen.Mit symmetrisch begrenzt breit strahlender Lichtstärkeverteilung.Lichtstä;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;LED-Feuchtraum-Anbauleuchte IP66 mit PC-Leuchtenkörper und PMMA-DiffusorMit Cliplos-Verschlusstechnik zur schutzartgerechten, einfachen Montage von Diffusor-Abdeckwanne und Leuchtenkörper nach dem Anschluss.Geeignet zur Anwendung in HACCP, IFS und/oder BRC Global Standard Food zertifizierten Unterne;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Runde LED-Anbauleuchte mit opaler, sphärisch geformter PC-Abdeckwanne, Leuchtendurchmesser 402 mm.Zur Wand- oder Deckenmontage.Mit lambertscher Lichtstärkeverteilung.Lichtstärkeverteilung: direktMaterial Reflektor: PMMA-AbdeckungLeuchtenkörper aus Stahlblech.Farbe Leuchtenkörper: weiß (ähnlich RAL 9;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Rundes LED-Downlight mit weißem Reflektor.Werkzeugloser Deckeneinbau durch Schnellmontagefedern.Geeignet zur Anwendung in HACCP, IFS und/oder BRC Global Standard Food zertifizierten Unternehmen.Mit symmetrisch eng strahlender Lichtstärkeverteilung.Ausstrahlungswinkel 72°.Deckenring und Kühlkörper au;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;LED-Einbauleuchte DALI mit mikroprismatischer Abdeckung.Ausführung M84 (625 mm x 625 mm).Einlegeleuchte für Decken mit sichtbaren Tragschienen.Geeignet zur Anwendung in HACCP, IFS und/oder BRC Global Standard Food zertifizierten Unternehmen.;120,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;LED-Anbauleuchten für Decken- und Wandmontage.Mit lambertscher Lichtstärkeverteilung.Lichtstärkeverteilung: direkt/indirektLeuchtenkörper aus stranggepresstem Aluminium. Mit rückseitig integriertem Leitungskanal zur Leitungsführung bei längsversetztem Wandauslass.Farbe Leuchtenkörper: weiß (ähnlich ;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Parametrierung DALI/DALI-2;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;Bewegungsmelder mit 360° Erfassungsbereich für die Deckenmontage;26,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+90;IR-Fernbedienung für Endanwender;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Vollüberwachtes Notlichtsystem - 24Ah zum Anschluss von;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Einseitige Rettungszeichenleuchten aus Aluminiumprofil;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Zweiseitige Rettungszeichenleuchten aus Aluminiumprofil;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Systemleuchten / Aluminiumprofilleuchten /;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Ketten/Seil/Ösen;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Systemleuchten / Downlights /;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Systemleuchten / Downlights /;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;Montageadapter für Seilabhängung;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+90;Trapezförmige LED-Sicherheitsleuchte zur Ausleuchtung;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+100;BUS-fähige Dreiphasenüberwachung;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+110;Für die Protokollierung der durchgeführten Prüfungen,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+120;Einweisung des Betriebspersonals und Erstellung eines;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+130;Mantelleitung NYM-J 3 x  2,5, Cu-Zahl 72,;320,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+140;NHXH-J 3 x 2,5 E-30, Cu-Zahl ,;215,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+150;Installationskabel  DIN VDE 0815 J-Y(St)Y 4 x 2 x 0,8;500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+160;Installationskabel  DIN VDE 0815 J-Y(St)Y 4 x 2 x 0,8;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+170;Übersichtsplan der Notlichtanlage in laminierter Form oder hinter Glas im Technikraum neben der Nolichtzentrale aushängen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+180;Mitwirkung an Vorabsprachen zur Sachverständigenprüfung durch Beistellung eines orts- und anlagenkundigen Monteurs inkl. Beistellung von Hilfsmitteln (Leitern usw.).;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+190;Mitwirkung an der Sachverständigenprüfung durch Beistellung eines orts- und anlagenkundigen Monteurs inkl. Beistellung von Hilfsmitteln (Leitern usw.).;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Runddraht mit Kunststoff-Mantel;400,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;MV-Klemmen Mehrzweck-Verbindungsklemme zur universellen Verwendung;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Satteldach Dachleitungshalter UNIsnap Bauhöhe 16mm grau NIRO;215,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Leitungshalter zum Befestigen von Rundleitern;150,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Anschlussklemme nach DIN EN 62561-1, zum Kreuz- und Parallelanschluss von Rundleitern, Flachbändern oder Seilen an Tiefenerdern. Ausführung für Tiefenerder Ø20-30 mm, mit vier Schrauben M8.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Tiefenerder Typ AZ NIRO (V4A) Stablänge 1500mm;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Schlagspitze TG/tZn;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;Leitungshalter NIRO Bauhöhe Leitungshalter 20mm;80,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+90;Nummernschild variabel für Rund- / Flachleiter;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+100;UNI-Trennklemme NIRO;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+110;PA-Schiene ohne Abdeckung mit Schrauben M10 für 6 Anschlüsse, mit Isolatoren Cu;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+120;Potentialausgleichschiene;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+130;"Erdungsbandschellen für Edelstahl-Rohre bis 4"" für";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+140;Erdungsanschluss an Metallkonstruktionen,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+150;Erdungsanschluss an Servertechnik etc. bis 16 mm²;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+160;Kunststoff-Mantelleitung NYM 1 x 6, Cu-Zahl 58,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+170;Kunststoff-Mantelleitung NYM 1 x 10, Cu-Zahl 96,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+180;Kunststoff-Mantelleitung NYM 1 x1 6, Cu-Zahl 154,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+190;Kunststoff-Mantelleitung NYM-J  1 x 25, Cu-Zahl 154;85,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+200;Blitzschutz- und Erdungsanlage messen und prüfen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+210;Bestandszeichnung nach DIN 48 820 und Anlagen-;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Kabelabschottung zur Verhinderung von Brandübertragung,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Kabelabschottung zur Verhinderung von Brandübertragung,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Kabelabschottung zur Verhinderung von Brandübertragung,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Verschließen von Einzelbohrungen mit Brandschutzschaum S90,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Verschließen von Einzelbohrungen mit Brandschutzschaum S90;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Verschließen von Einzelbohrungen mit Brandschutzschaum S90;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Brandschutzabkofferung an Decke (F30);2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Schlitze in Wände und Decken aus Mauerwerk fräsen,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Schlitze in Wände und Decken aus Mauerwerk fräsen;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Bohrungen in Mauerwerk nachträglich herstellen,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Bohrungen in Mauerwerk nachträglich herstellen,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Bohrungen in Mauerwerk nachträglich herstellen,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;15,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;30,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;30,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Feldvert. AP, IP44, SKII, 144PLE, 2x7 Reihen, 550x1250x205mm, o.Klemme;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Einbau Lastschalter als Kippschalter, 63 A, 400 V,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Überspannungsschutzableiter, Ableiter der;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Sicherungslasttrennschalter nach DIN VDE 0660 Teil 107;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Fehlerstromschutzschalter nach DIN VDE 0664 Teil 1,;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Leitungsschutzschalter nach DIN VDE 0641 TEIL 11,;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Leitungsschutzschalter nach DIN VDE 0641 TEIL 11,;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;Leitungsschutzschalter nach DIN VDE 0641 TEIL 11,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+90;Erstellen der Stromkreisauflistung für die;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Kabelbahn 60 x 100 x 0,8mm, gelocht mit integriertem;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Kantenschutz für die zuvor beschriebenen Kabelbühnen;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Konsole Breite 200 mm, sendzimirverzinkt;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Hängestiel Länge 200 mm mittelschwer/ doppelt;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Sammelschellen E-30-90 incl. Befestigung;150,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Isolierstoffrohr DIN VDE 0605, mittelschwer, flexibel,;520,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Isolierstoffrohr DIN VDE 0605, mittelschwer, flexibel,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;Isolierstoffrohr DIN VDE 0605, mittelschwer, flexibel,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+90;Kunststoffstangenrohr DIN VDE 0605, hart, mittelschwer, starr, ACF, Nenngröße DN 16, Verlegung offen,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+100;Kunststoffstangenrohr DIN VDE 0605, hart, mittelschwer, starr, ACF, Nenngröße DN 20, Verlegung offen,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+110;Kunststoffstangenrohr DIN VDE 0605, hart, mittelschwer, starr, ACF, Nenngröße DN 25, Verlegung offen,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+120;Bemessungsbetriebsspannung AC: 1000 V;10,0;Stk.;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+130;Bemessungsbetriebsspannung AC: 690 V;4,0;Stk.;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+140;Verbindungsdose nach DIN EN 60670 (VDE 0606), 12 Einführungen, 3 Bodeneinführungen, komplett mit Lochwerkzeug und Verschlussstopfen, mit außenliegenden Befestigungsstellen, grau, anteilg benötigte Klemmen ist mit einzubeziehenn, für VDE-zugel. Einzelklemmen.;20,0;Stk.;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Mantelleitung NYM-J 3 x 1,5 mm², Cu-Zahl 43,;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Mantelleitung NYM-J 3 x 2,5 mm², Cu-Zahl 72,;145,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Mantelleitung NYM-J  5 x 1,5 mm², Cu-Zahl 72,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Mantelleitung NYM-J 5 x 6 mm², Cu-Zahl 288,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Mantelleitung NYM-J 3 x 1,5 mm², Cu-Zahl 43, nach VDE 0472,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Mantelleitung NYM-J 3 x 2,5 mm², Cu-Zahl 72,;45,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Mantelleitung NYM-J  5 x 1,5 mm², Cu-Zahl 72,;70,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;Mantelleitung NYM-J 5 x 6 mm², Cu-Zahl 288,;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+90;Herdanschlusskabel  HO5 VV-F 5G 2,5;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+100;Installationskabel  DIN VDE 0815 J-Y(St)Y 2 x 2 x 0,8;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+110;Installationskabel  DIN VDE 0815 J-Y(St)Y 4 x 2 x 0,8;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+120;Mantelleitung NYM-J 3 x 1,5 mm², Cu-Zahl 43, nach VDE 0472,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+130;"Mantelleitung NYM-J 3 x 2,5 mm²; Cu-Zahl 72";195,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+140;Mantelleitung NYM-J  5 x 1,5 mm², Cu-Zahl 72,;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+150;Mantelleitung NYM-J 5 x 4 mm², Cu-Zahl 192,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+160;Installationskabel  DIN VDE 0815 J-Y(St)Y 2 x 2 x 0,8;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+170;Installationskabel  DIN VDE 0815 J-Y(St)Y 4 x 2 x 0,8;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+180;Kunststofffkabel NYY-J 5x 2,5 mm², Cu-Zahl 288,;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+190;Kunststofffkabel NYY-J 5 x 16 mm², Cu-Zahl 288,;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+200;Kunststofffkabel NYY-J 5 x 25 mm², Cu-Zahl  480;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Wippen - Aus- / Wechselschalter nach VDE 0632, u.P.,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Universal-Tastdimmer 1-fach, Elektronikplattform, niedriger Eigenenergiebedarf, automatische Einstellung der minimalen Starthelligkeit für 230 V LED- und Energiesparlampen, lampenschonender Softanlauf, Phasenan- oder Phasenabschnitt je nach Lastart, selbstlernend, kurzschlussfest und überlastsicher ;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Jalousietaster, für die  Steuerung von Jalousiemotoren.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Kinderschutz- Steckdosensicherung;28,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Herdanschlussdose, u.P., 5-polig, weiß, für Schraub-;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Schutzkontakt-Steckdose 1-fach, Unterputz;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Schutzkontakt-Steckdose 2-fach, Unterputz;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;Schukosteckdose mit Schutzkontakt nach VDE 0632, a.P.,;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Anschließen von Kabeln oder Leitungen an beigestellten;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Anschließen von Kabeln oder Leitungen an beigestellten;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Anschließen von Kabeln oder Leitungen an beigestellten;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;LED-Feuchtraum-Anbauleuchte IP66 mit PC-Leuchtenkörper und PMMA-DiffusorMit Cliplos-Verschlusstechnik zur schutzartgerechten, einfachen Montage von Diffusor-Abdeckwanne und Leuchtenkörper nach dem Anschluss.Geeignet zur Anwendung in HACCP, IFS und/oder BRC Global Standard Food zertifizierten Unterne;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Rundes LED-Downlight mit weißem Reflektor.Werkzeugloser Deckeneinbau durch Schnellmontagefedern.Geeignet zur Anwendung in HACCP, IFS und/oder BRC Global Standard Food zertifizierten Unternehmen.Mit symmetrisch eng strahlender Lichtstärkeverteilung.Ausstrahlungswinkel 72°.Deckenring und Kühlkörper au;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;LED-Einbauleuchte mit mikroprismatischer Abdeckung.Ausführung M84 (625 mm x 625 mm).Einlegeleuchte für Decken mit sichtbaren Tragschienen.Geeignet zur Anwendung in HACCP, IFS und/oder BRC Global Standard Food zertifizierten Unternehmen.;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;LED-Einbauleuchte mit mikroprismatischer Abdeckung.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Parametrierung DALI/DALI-2;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Bewegungsmelder mit 360° Erfassungsbereich für die Deckenmontage;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Vollüberwachtes Notlichtsystem - 12Ah zum Anschluss von;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;BUS-fähige Dreiphasenüberwachung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Einseitige Rettungszeichenleuchten aus Aluminiumprofil;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Zweiseitige Rettungszeichenleuchten aus Aluminiumprofil;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Systemleuchten / Aluminiumprofilleuchten /;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Ketten/Seil/Ösen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Systemleuchten / Downlights /;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;Systemleuchten / Downlights /;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+90;Montageadapter für Seilabhängung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+100;Trapezförmige LED-Sicherheitsleuchte zur Ausleuchtung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+110;Ausführung gem. VDE 0108, T. 1 und VDE 0100. EMC nach;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+120;zur Einzelüberwachung von LLp, AGL,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+130;Für die Protokollierung der durchgeführten Prüfungen,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+140;Einweisung des Betriebspersonals und Erstellung eines;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+150;Mitwirkung an Vorabsprachen zur Sachverständigenprüfung durch Beistellung eines orts- und anlagenkundigen Monteurs inkl. Beistellung von Hilfsmitteln (Leitern usw.).;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+160;Mitwirkung an der Sachverständigenprüfung durch Beistellung eines orts- und anlagenkundigen Monteurs inkl. Beistellung von Hilfsmitteln (Leitern usw.).;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+170;Mantelleitung NYM-J 3 x  2,5, Cu-Zahl 72,;65,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+180;NHXH-J 3 x 2,5 E-30, Cu-Zahl ,;55,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Runddraht mit Kunststoff-Mantel;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;MV-Klemmen Mehrzweck-Verbindungsklemme zur universellen Verwendung;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Satteldach Dachleitungshalter UNIsnap Bauhöhe 16mm grau NIRO;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Leitungshalter zum Befestigen von Rundleitern;60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Anschlussklemme nach DIN EN 62561-1, zum Kreuz- und Parallelanschluss von Rundleitern, Flachbändern oder Seilen an Tiefenerdern. Ausführung für Tiefenerder Ø20-30 mm, mit vier Schrauben M8.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Tiefenerder Typ AZ NIRO (V4A) Stablänge 1500mm;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Schlagspitze TG/tZn;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;Leitungshalter NIRO Bauhöhe Leitungshalter 20mm;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+90;Nummernschild variabel für Rund- / Flachleiter;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+100;UNI-Trennklemme NIRO;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+110;Potentialausgleichschiene;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+120;"Erdungsbandschellen für Edelstahl-Rohre bis 4"" für";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+130;Erdungsanschluss an Metallkonstruktionen,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+140;Erdungsanschluss an Servertechnik etc. bis 16 mm²;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+150;Kunststoff-Mantelleitung NYM 1 x 6, Cu-Zahl 58,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+160;Kunststoff-Mantelleitung NYM 1 x 10, Cu-Zahl 96,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+170;Kunststoff-Mantelleitung NYM 1 x1 6, Cu-Zahl 154,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+180;Kunststoff-Mantelleitung NYM-J  1 x 25, Cu-Zahl 154;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Erstellung von Revisionsunterlagen in schriftlicher;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Kabelabschottung zur Verhinderung von Brandübertragung,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Kabelabschottung zur Verhinderung von Brandübertragung,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Kabelabschottung zur Verhinderung von Brandübertragung,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Verschließen von Einzelbohrungen mit Brandschutzschaum S90,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Verschließen von Einzelbohrungen mit Brandschutzschaum S90;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Verschließen von Einzelbohrungen mit Brandschutzschaum S90;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;Brandschutzabkofferung an Decke (F30);2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Schlitze in Wände und Decken aus Mauerwerk fräsen,;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Schlitze in Wände und Decken aus Mauerwerk fräsen;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Bohrungen in Mauerwerk nachträglich herstellen,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Bohrungen in Mauerwerk nachträglich herstellen,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Bohrungen in Mauerwerk nachträglich herstellen,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;6,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Zertifikat der Leistungsbeständigkeit (VdS);1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Hinweisschild BMZ gemäß DIN 4066 zur schnellen und;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Wartungsfreier Blei-Akku;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Überspannungsableiter, bestehend aus;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Mehrfachsensormelder, nach dem Streulicht-, Wärme- und Brandgasdetektionsprinzip, einschl. Sockel, für trockene Räume, mit graviertem Bezeichnungsschild, DIN 1450 als Signalisationstext, Montage an Decke,;17,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Mehrfachsensormelder, nach dem Streulicht-, Wärme- und Brandgasdetektionsprinzip, einschl. Sockel, für trockene Räume, mit integriertem Signalgeber im Sockel, akustisch, mit graviertem Bezeichnungsschild, DIN 1450 als Signalisationstext, Montage an Decke,;26,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Mehrfachsensormelder, nach dem Streulicht-, Wärme- und Brandgasdetektionsprinzip, einschl. Sockel, für trockene Räume, mit graviertem Bezeichnungsschild, DIN 1450 als Signalisationstext, Montage in der Zwischendecke,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;Druckknopfmelder Hausalarm mit LED nach EN 60849 zur manuellen Alarmauslösung und zum Verbinden mit einer BMZ oder auch zum starten von Notdurchsagen, Sirenen, Alarmlicht, Wählgeräten, Zeitrelais usw.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+90;VdS-Nr. G 207018;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+100;VdS-Anerkennung: G 210106;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+110;Abschlusselement für die Ausgänge der;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+120;Feuerwehrlaufkarte A4, aus Kunststoff, in Abstimmung;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+130;Kopplerbaustein zur Ansteuerung Fremdsysteme durch BMA;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+140;VdS-Nr. G 213057;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+150;Zubehör FSD basic als Montageverlängerung für Hohlwände in Form von Vorhang- und Wärmedämmfassaden. Zur einfachen und schnellen Montage. In Kombination mit dem FSD basic inkl. Rundum-Sabotageschutz ergibt sich eine VdS-konforme Vorgehensweise (siehe VdS-Zertifikat G103133 / Anlage 3). Der Hohlwand-A;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+160;Schlüsseldepot;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+170;VdS-Nr. G 192034;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+180;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+190;Installationskabel, symmetrisch, mit rotem Außenmantel und;245,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+200;Aufschaltung der Brandschutztüren in der Brandwand auf die Brandmeldeanlage, inkl. der erforderlichen Peripherieteile,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;"Netzwerk-/Serverschrank zum Einbau von aktiven und passiven Komponenten in 19""-Technik.";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Gehäusematerial: Stahlblech, pulverbeschichtet;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Variable Befestigungsschiene für 1000mm Tiefe Schränke;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Kabelführung 1HE, 19 Zoll Format, zur;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Gehäusematerial: Kunststoff;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Gehäusematerial: Kunststoff;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;24 Steckplaetze, 1HE, mit 24 einzelgeschirmten RJ-45-Buchsen, zum Anschluss von Kategorie 6[A], 7 und 7A Kabeln, fuer Datenuebertragungsraten bis 10 GBit/s.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;"Rückversetzung min. 50mm aus 19""- Befestigungsebene;";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+90;Anschlussdose 1-fach, zur Montage UP, Trockenbau;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+100;Anschlussdose 2-fach, zur Montage UP, Trockenbau;26,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+110;Paargeschirmtes 100-Ohm-Installationskabel mit;600,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+120;Paargeschirmtes 100-Ohm-Installationskabel mit;340,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+130;LWL-Außenkabel, 12 Fasern, 50/125µm, Multimode, OM3-Faser;125,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+140;beidseitiges Anschließen der Kabeladern von Kat 7-;26,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+150;LWL-Kabel mit 12 Faser einführen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+160;Twisted-Pair-Faser-Messung (8-adrig);26,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+170;LWL-Patch-Kabel, 2m, SC-D/SC-D, OM3,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+180;LWL-Patch-Kabel, 1m, SC-D/SC-D, OM3,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+190;Unterputz-Rahmen für Außentürstationen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+200;Video-Modul zum Einbau in Standsäulen oder passend zu entsprechenden AP- bzw. UP-Unterputz-Rahmen für Außentürstationen als Sprechanlage nach;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+210;Klingeltastermodul;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+220;Ruftaster Anschlussmodul EB mit selbstklebender Halterung für;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+230;Video Innenstation zum Freisprechen für Sprechanlage nach DIN EN 5048 in 2Draht-Technik. Innenstation zur Wandmontage oder auf eine Gerätedose nach DIN 49073 bestehend aus Tragplatte mit Anschluss- Klemmblock und passenden Video-Designrahmen, beleuchtetes TFT- Farbdisplay 3,5 Zoll. Innenstation ist ;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+240;Video-Tischkonsole für den Einsatz im Bürobereich. Bestehend aus einer Tischkonsole aus Kunststoff mit Edelstahlkern, 8-adriger Anschlussschnur mit Steckverbinder RJ-45. Passend für Innenstationen ELCOM.TOUCH Video.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+250;Bus Strangversorgung mit Relais zur Versorgung von Innenstationen für Sprechanlage nach DIN EN 50486 in 2Draht- und i2Audio-Technik.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+260;Sicherheitstransformator mit getrennter Primär- und Sekundärwicklung. Schutz gegen Kurzschluss oder Überlast erfolgt durch einen integrierten thermischen Schalter auf der Primärseite. Breite Reiheneinbaugerät;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+270;Paargeschirmtes 100-Ohm-Installationskabel mit;450,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Hauptuhr;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Nebenuhr;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;DCF Funkempfänger;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Programmierpaket;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Datenschlüssel;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Läutwerk für Uhrensystem;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Installationskabel J-Y(St)Y 2x2x0,8 mm Installationskabel DIN VDE 0815 J-Y(St)Y 2 x 2 x 0,8 Bd, liefern und in Teillängen verlegen in bauseitig vorhandene Rohre / Kanäle bzw. Kabeltrassensysteme, Steigetrassen, einschließlich Befestigungsmaterial sowie Protokollierung;165,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;8,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;16,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;16,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;4,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;7,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;7,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Mehrfachsensormelder, nach dem Streulicht-, Wärme- und Brandgasdetektionsprinzip, einschl. Sockel, für trockene Räume, mit graviertem Bezeichnungsschild, DIN 1450 als Signalisationstext, Montage an Decke,;3,0;Stk.;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Mehrfachsensormelder, nach dem Streulicht-, Wärme- und Brandgasdetektionsprinzip, einschl. Sockel, für trockene Räume, mit integriertem Signalgeber im Sockel, akustisch, mit graviertem Bezeichnungsschild, DIN 1450 als Signalisationstext, Montage an Decke,;8,0;Stk.;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Druckknopfmelder Hausalarm mit LED nach EN 60849 zur manuellen Alarmauslösung und zum Verbinden mit einer BMZ oder auch zum starten von Notdurchsagen, Sirenen, Alarmlicht, Wählgeräten, Zeitrelais usw.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;VdS-Anerkennung: G 210106;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Abschlusselement für die Ausgänge der;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Installationskabel, symmetrisch, mit rotem Außenmantel und;135,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;Aufschaltung der Brandschutztüren in der Brandwand auf die Brandmeldeanlage, inkl. der erforderlichen Peripherieteile,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+90;Inbetriebnahme, Programmierung, Einregelung der Brandmeldeanlage,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+100;Betriebsbuch für Brandmeldeanlagen (nach DIN VDE 0833, Teil 1 und 2 bzw. DIN 14675) zur dokummentation des Zustand einer Anlage, als auch Ereignisse über den gesamten Zeitraum ihres Betriebes.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+110;Dokumentation der Brandmeldeanlage DIN 14675, VDI 6026 Blatt 1 erstellen, farbig, gefaltet DIN 824 im Ablageformat A4, Übergabe vor der Abnahme, geheftet in Ordnern mit Inhaltsverzeichnis und Trennblättern, Pläne werden als CAD-Datei vom AG gestellt.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+120;Mitwirkung an Vorabsprachen zur Sachverständigenprüfung durch Beistellung eines orts- und anlagenkundigen Monteurs inkl. Beistellung von Hilfsmitteln (Leitern usw.).;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+130;Mitwirkung an der Sachverständigenprüfung durch Beistellung eines orts- und anlagenkundigen Monteurs inkl. Beistellung von Hilfsmitteln (Leitern usw.).;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+140;Übersichtsplan der Brandmeldeanlage in laminierter Form oder hinter Glas im Technikraum BMZ;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Kabelführung 1HE, 19 Zoll Format, zur;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;24 Steckplaetze, 1HE, mit 24 einzelgeschirmten RJ-45-Buchsen, zum Anschluss von Kategorie 6[A], 7 und 7A Kabeln, fuer Datenuebertragungsraten bis 10 GBit/s.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Anschlussdose 1-fach, zur Montage UP, Trockenbau;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Anschlussdose 2-fach, zur Montage UP, Trockenbau;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Paargeschirmtes 100-Ohm-Installationskabel mit;600,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Paargeschirmtes 100-Ohm-Installationskabel mit;220,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;beidseitiges Anschließen der Kabeladern von Kat 7-;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;Twisted-Pair-Faser-Messung (8-adrig);9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Nebenuhr;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Läutwerk für Uhrensystem;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Installationskabel J-Y(St)Y 2x2x0,8 mm Installationskabel DIN VDE 0815 J-Y(St)Y 2 x 2 x 0,8 Bd, liefern und in Teillängen verlegen in bauseitig vorhandene Rohre / Kanäle bzw. Kabeltrassensysteme, Steigetrassen, einschließlich Befestigungsmaterial sowie Protokollierung;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Baustromverteiler IEC 61439-1 und 4 / VDE 0660-600-1 als;25,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Baustromkasten wie vor beschrieben:;25,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Baustromkasten wie vor beschrieben:;25,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;tragbare Vollgummi-Steckdosenkombination nach;20,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;tragbare Vollgummi-Steckdosenkombination nach;20,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;DIN VDE 0250 Teil 812,;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;DIN VDE 0250 Teil 812,/;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+80;Unterhaltung der Baustromanlage gemäß vorgenannter Positionen einschließlich regelmäßigen, wiederkehrender;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+90;Lieferung und Bereitstellung Kabelschutzmatte;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+100;Rückbau und Abtransport der Baustromeinrichtung und;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+110;Bereichsverteiler für Baustrombeleuchtung;20,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+120;Bereichsverteiler für Baustrombeleuchtung;20,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+130;LED Band;20,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+140;LED Band;20,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+150;LED Band;20,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+160;LED Band;20,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+170;LED Band;20,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+180;Bereichsverteiler für Baustrombeleuchtung;25,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+190;Baubeleuchtung wie vor beschrieben:;25,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+200;Baubeleuchtung wie vor beschrieben:;25,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+210;Feuchtraumleuchten mit Wanne, IP65, 1*58W oder LED, EVG,;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Durchführung von Suchschachtungen von Hand zur Erkundung der Lagen vorhandener Leitungen vor Herstellung des Rohrgrabens.;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Boden der Gräben für Ver- und Entsorgungsleitungen profilgerecht ausheben.;50,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Leistung wie Position vor,;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Ausheben von Hand;20,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Einbauen von Hand;20,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Füllmaterial für Baugräben unter Ver- und Entsorgungsleitungen anfahren und einbauen und verdichten,;15,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Neuen Boden zum Verfüllen anfahren und einbauen, Bodenklasse 3;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Starkstromkabel NYY-J 5x6 mm², Cu-Zahl 288,;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Starkstromkabel NYY-J 5x6 mm², Cu-Zahl 288,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Starkstromkabel NYY-J 5x10 mm², Cu-Zahl 480,;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Starkstromkabel NYY-J 5x10 mm², Cu-Zahl  480,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Kabelschutzband;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Durchführung von Suchschachtungen von Hand zur Erkundung der Lagen vorhandener Leitungen vor Herstellung des Rohrgrabens.;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Boden der Gräben für Ver- und Entsorgungsleitungen profilgerecht ausheben.;20,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Leistung wie Position vor,;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Ausheben von Hand;20,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Einbauen von Hand;20,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+60;Füllmaterial für Baugräben unter Ver- und Entsorgungsleitungen anfahren und einbauen und verdichten,;15,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+70;Neuen Boden zum Verfüllen anfahren und einbauen, Bodenklasse 3;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+10;Starkstromkabel NYY-J 5x6 mm², Cu-Zahl 288,;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+20;Starkstromkabel NYY-J 5x6 mm², Cu-Zahl 288,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+30;Starkstromkabel NYY-J 5x10 mm², Cu-Zahl 480,;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+40;Starkstromkabel NYY-J 5x10 mm², Cu-Zahl  480,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83
+50;Kabelschutzband;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/440-450.X83

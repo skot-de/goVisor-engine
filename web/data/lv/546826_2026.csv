@@ -1,0 +1,255 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Baustromhauptverteiler,;1,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+20;Digitale Zähleinrichtung, beglaubigt;1,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+30;Baustromzwischenverteiler,;4,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+40;Baustromunterverteiler;4,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+50;Baustromverteiler Beleuchtung;1,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+60;Baustromverteiler für die Containeranlage und die Außenbeleuchtung.;1,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+70;Baustromunterverteiler;1,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+80;Baustromverteiler DIN EN 61439-4 (VDE 0660-600-4), als Endverteiler (Krananschluß), Bedienung durch elektrotechnischen Laien, geeignet für die Versorgung frequenzgeregelter Antriebe, mit Berührungsschutzabdeckung DIN EN 50274 (VDE 0660-514), Gehäuse aus verzinktem Stahl, pulverbeschichtet, Schutzkla;1,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+90;Grundsätzlich ist für die Prüffristen der Betreiber (AN) der Gesamtanlage verantwortlich.;26,0;Mon;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+100;Miete und Vorhaltung Baustromhauptverteiler;22,0;StMt;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+110;Miete und Vorhaltung Baustromzwischenverteiler Etagen;88,0;StMt;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+120;Miete und Vorhaltung Baustromunterverteiler;88,0;StMt;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+130;Miete und Vorhaltung Container-Baustromunterverteiler mit Beleuchtung in vorbeschriebenen Umfang;24,0;StMt;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+140;Miete und Vorhaltung Baustromunterverteiler Beleuchtung;22,0;StMt;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+150;Miete und Vorhaltung Baustromunterverteiler 40 kVA;15,0;StMt;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+160;Miete und Vorhaltung Baustromzwischenverteiler Etagen;22,0;StMt;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+170;Warten und Betreiben Baustromhauptverteiler;22,0;StMt;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+180;Warten und Betreiben Baustromzwischenverteiler Etagen;88,0;StMt;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+190;Warten und Betreiben Baustromunterverteiler;88,0;StMt;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+200;Warten und Betreiben Baustromunterverteiler Beleuchtung;22,0;StMt;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+210;Warten und Betreiben Container-Baustromunterverteiler mit Beleuchtung;28,0;StMt;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+220;Warten und Betreiben Baustromunterverteiler;15,0;StMt;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+230;Warten und Betreiben Baustromunterverteiler;22,0;StMt;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+240;Umsetzen eines Baustromhauptverteilers;1,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+250;Umsetzen eines Baustromzwischenverteilers;6,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+260;Umsetzen eines Baustromunterverteilers;10,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+270;Umsetzen eines Baustromunterverteilers für Beleuchtung;1,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+280;Umsetzen eines Container-Baustromunterverteilers;1,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+290;NH-Sicherungseinsatz mit Kontaktmesser DIN 43620-1 und DIN VDE 0636-2 (VDE 0636-2), Bemessungsbetriebsspannung 690 V AC, für Betriebsklasse gG, Baugröße 00, Bemessungsstrom 80 A.;21,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+300;NH-Sicherungseinsatz mit Kontaktmesser DIN 43620-1 und DIN VDE 0636-2 (VDE 0636-2), Bemessungsbetriebsspannung 690 V AC, für Betriebsklasse gG, Baugröße 00, Bemessungsstrom 100 A.;12,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+310;NH-Sicherungseinsatz mit Kontaktmesser DIN 43620-1 und DIN VDE 0636-2 (VDE 0636-2), Bemessungsbetriebsspannung 690 V AC, für Betriebsklasse gG, Baugröße 1, Bemessungsstrom 125 A.;6,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+320;NH-Sicherungseinsatz mit Kontaktmesser DIN 43620-1 und DIN VDE 0636-2 (VDE 0636-2), Bemessungsbetriebsspannung 690 V AC, für Betriebsklasse gG, Baugröße 1, Bemessungsstrom 160 A.;6,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+330;NH-Sicherungseinsatz mit Kontaktmesser DIN 43620-1 und DIN VDE 0636-2 (VDE 0636-2), Bemessungsbetriebsspannung 690 V AC, für Betriebsklasse gG, Baugröße 3, Bemessungsstrom 630 A.;3,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+10;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 1 x 185, Cu-Zahl 1776, in vorh. Rohre/Unterflurkanäle.;50,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+20;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 70, Cu-Zahl 3360, in vorh. Rohre/Unterflurkanäle.;85,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+30;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 70, Cu-Zahl 3360, mit Befestigung gemäß bauaufsichtlicher Zulassung.;10,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+40;Bestehende Gummischlauchleitung H07RN-F 5G70, zurückziehen und an anderer Stelle, wie vor beschrieben, erneut verlegen .;40,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+50;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 35, Cu-Zahl 1680, in vorh. Rohre/Unterflurkanäle.;280,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+60;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 35, Cu-Zahl 1680, mit Befestigung gemäß bauaufsichtlicher Zulassung.;605,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+70;Bestehende Gummischlauchleitung H07RN-F 5G35, zurückziehen und an anderer Stelle, wie vor beschrieben, erneut verlegen .;120,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+80;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 4, Cu-Zahl 192, mit Befestigung gemäß bauaufsichtlicher Zulassung.;450,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+90;Bestehende Gummischlauchleitung H07RN-F 5G4, zurückziehen und an anderer Stelle, wie vor beschrieben, erneut verlegen.;90,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+100;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H05RR-F 5 G 2,5, Cu-Zahl 120.;240,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+110;Bestehende Gummischlauchleitung H07RN-F 5G 2,5, zurückziehen und an anderer Stelle, wie vor beschrieben, erneut verlegen.;80,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+120;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H05RR-F 5 G 1,5, Cu-Zahl 72.;160,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+130;Bestehende Gummischlauchleitung H07RN-F 5G 1,5, zurückziehen und an anderer Stelle, wie vor beschrieben, erneut verlegen.;30,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+140;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 3 G 1,5, Cu-Zahl 43.;450,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+150;Bestehende Gummischlauchleitung H07RN-F 3G 1,5, zurückziehen und an anderer Stelle, wie vor beschrieben, erneut verlegen.;120,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+160;Rückbau eines Stromkreises mit Freischalten des Stromkreises, Lösen der Anschlüsse am Verteiler oder einem Abzweigkasten, Rückziehen der Leitung;6,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+170;Rückbau eines Stromkreises mit Freischalten des Stromkreises, Lösen der Anschlüsse am Verteiler oder einem Abzweigkasten, Rückziehen der Leitung;3,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+180;Kabelbezeichnung;40,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+190;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 1 x 185, Cu-Zahl 7104,;1,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+200;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 35, Cu-Zahl 1680, nur anschließen an bauseitig vorhandenen Kabelübergangskasten;1,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+210;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 70, Cu-Zahl 3360, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;2,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+220;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 35, Cu-Zahl 1680, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;6,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+230;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 4, Cu-Zahl 192, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;4,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+240;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 2,5, Cu-Zahl 120, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;10,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+250;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 1,5, Cu-Zahl 72, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;2,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+260;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 3 G 1,5, Cu-Zahl 43, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;19,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+10;Wippschalter DIN EN 60669-1 (VDE 0632-1) 2-polig, Aus/Wechsel, 10 A, 250 V AC, in Aufputzausführung, Schutzart IP 44 DIN EN 60529 (VDE 0470-1).;2,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+20;CEE-Stecker DIN EN 60309-2 (VDE 0623-2), 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 16 A, Schutzart IP 65 DIN EN 60529 (VDE 0470-1).;5,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+30;CEE-Stecker DIN EN 60309-2 (VDE 0623-2), 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 32 A, Schutzart IP 65 DIN EN 60529 (VDE 0470-1).;6,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+40;CEE-Stecker DIN EN 60309-2 (VDE 0623-2), 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 63 A, Schutzart IP 65 DIN EN 60529 (VDE 0470-1).;4,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+50;CEE-Kupplung DIN EN 60309-2 (VDE 0623-2), 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 16 A, Schutzart IP 65 DIN EN 60529 (VDE 0470-1).;5,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+60;CEE-Kupplung DIN EN 60309-2 (VDE 0623-2), 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 32 A, Schutzart IP 65 DIN EN 60529 (VDE 0470-1).;6,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+70;CEE-Kupplung DIN EN 60309-2 (VDE 0623-2), 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 63 A, Schutzart IP 65 DIN EN 60529 (VDE 0470-1).;4,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+80;Verbindungsdose DIN EN IEC 60670-1 (VDE 0606-1) als Abzweigkasten, mit Einführungen für flexible Leitungen, aus Kunststoff, Grundfläche mind. 80/80 mm, Tiefe mind. 50 mm, mit Deckel mit Schraubbefestigung, Schutzart IP 65 DIN EN 60529 (VDE 0470-1), mit 5 Klemmen 4 mm2, Aufputz.;60,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+90;Verbindungsdose DIN EN IEC 60670-1 (VDE 0606-1) als Abzweigkasten, mit Einführungen für flexible Leitungen, aus Kunststoff, Grundfläche mind. 100/100 mm, Tiefe mind. 50 mm, mit Deckel mit Schraubbefestigung, Schutzart IP 65 DIN EN 60529 (VDE 0470-1), mit 5 Klemmen 6 mm2, Aufputz.;40,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+100;Dämmerungsschalter 230 V AC, mit Gehäuse für Wandmontage, Schutzart IP 55 DIN EN 60529 (VDE 0470-1),;2,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+10;Erdungsklemme an Fundamenterder;1,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+20;Profilstaberder Profil B 60x60x5, bis 6 m;1,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+30;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 50 RM, Cu-Zahl 480.;50,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+40;bestehendes Kabel NYY-J 1x50 mm²,;20,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+50;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 35 RM, Cu-Zahl 336.;15,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+60;bestehendes Kabel NYY-J 1x35 mm²,;3,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+70;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 25 RM, Cu-Zahl 240.;160,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+80;bestehendes Kabel NYY-J 1x25 mm²,;32,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+90;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 16 RE, Cu-Zahl 154.;30,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+100;bestehendes Kabel NYY-J 1x16 mm²,;6,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+110;Anschluß von NYY-J bis 1 x 50 qmm;2,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+120;Anschluß von NYY-J bis 1 x 35 qmm;8,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+130;Anschluß von NYY-J bis 1 x 25 qmm;8,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+140;Anschluß von NYY-J bis 1 x 16 qmm;24,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+10;Beleuchtungsmasten aus Holz,;10,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+20;Scheinwerfer, Schutzklasse I, Schutzart IP 54 DIN EN 60529 (VDE 0470-1), mit eloxiertem Spiegelreflektor, Abdeckung aus temperaturwechselbeständigem Silikatglas, klar, glatt, mit LED-Leuchtmittel, mind. 250 W, Farbtemperatur fest,;6,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+30;Scheinwerfer, Schutzklasse I, Schutzart IP 54 DIN EN 60529 (VDE 0470-1), mit eloxiertem Spiegelreflektor, Abdeckung aus temperaturwechselbeständigem Silikatglas, klar, glatt, mit LED-Leuchtmittel, mind. 1000 W, Farbtemperatur fest,;4,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+40;Hochdruck-Entladungslampe, Kolben HIT, 230 V AC, 250 W, Sockel E 40, Lichtfarbe neutralweiß.;2,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+50;Hochdruck-Entladungslampe, Kolben HIT, 230 V AC, 1000 W, Sockel E 40, Lichtfarbe neutralweiß.;2,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+60;LED Lichtband 25m;14,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+70;LED Lichtband mit SiBel 25m;12,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+80;Aufhängevorrichtung als Kettenpendel, aus nichtrostendem Länge bis 6 m, Belastbarkeit bis 150 kg;10,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+90;Rettungszeichenleuchte DIN EN 1838 und DIN EN 60598-2-22 (VDE 0711-2-22) für zentrale Versorgung, Rettungszeichen DIN EN ISO 7010, DIN 4844-1 und DIN ISO 3864-1, Rettungszeichen 2-seitig, Erkennungsweite mind. 25 m, in Dauerschaltung, für Wand- und Deckenanbau, Schutzart IP 65 DIN EN 60529 (VDE 0470;12,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+100;Einmaliges Versetzen der Holzmasten mit Scheinwerfer bis 1000W, einschl. 30m Zuleitung.;2,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+110;Einmaliges Versetzen des LED Lichtbandes;6,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+120;Einmaliges Versetzen der Fluchtweghinweisleuchte;2,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+10;Boden der Gräben für Kabel, ab Geländeoberfläche, profilgerecht lösen, seitlich lagern, verfüllen, verdichten, verdrängten Boden seitlich lagern, Abfall ist nicht gefährlich, Breite der Sohle über 0,3 bis 0,4 m, Aushubtiefe bis 0,8 m,;46,0;m3;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+20;Markierung von Kabeltrassen mit Kabelwarnband, Farbton gelb, in Trassenmitte, mit Beschriftung, max. Länge der Beschriftung 150 mm, verlegen 40 cm über Kabel.;190,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+30;Kabelrtrasse einmessen, einzeichnen und in Dokumentation übernehmen.;1,0;psch;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+40;Kennzeichnung von Kabeln mit Kabelerkennungsstreifen aus Kunststoff, für Kabeldurchmesser über 40 bis 60 mm, Befestigung am Kabel 1 St je 5 m.;10,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+50;Graben nach Kabelverlegung provisorisch verschließen.;46,0;m³;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+60;Nach Beendigung der Bauzeit zur Demontage des Kabels den Graben wieder öffnen.;46,0;m³;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+70;Baustraßenquerung 1 DN 90;4,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+80;Kabelschutzrohr aus Kunststoff, flexibel, DN 90, in Ringbunden, einschl. Lieferung, offen verlegen.;190,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+90;Abdichtstopfen, Außendurchmesser 90 mm, für Kabelschutzrohre, einschl. Lieferung.;2,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+100;Bauholz, Holzart Fichte/Tanne, Gebrauchsklasse 0 DIN 68800-1, ohne chemischen Holzschutz, Festigkeitsklasse C24 DIN EN 338, Sortierklasse S 10 DIN 4074-1, max. Holzfeuchte 18%, bis Querschnitt 8/20 cm, Einzellänge bis 0,4m.;8,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+110;so wie zuvor beschrieben jedoch;2,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+120;Behelfsbrücke für Leitungen, gemäß statischem Nachweis, in Hochlage, für Stromversorgungskabel, Länge bis 3 m, Durchfahrtshöhe über 4,5 bis 5 m, Nutzbreite über 3,75 bis 4,5 m, einschl. Anfahrschutz, aufbauen und abbauen.;1,0;St;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+130;Behelfsbrücke für Leitungen, gemäß statischem Nachweis, in Geländehöhe, für Stromversorgungskabel, Länge bis 3 m, Durchfahrtshöhe über 4,5 bis 5 m, Nutzbreite über 3 bis 3,75 m, einschl. Anfahrschutz, vorhalten, Abrechnung nach in Brückenachse gemessener Länge,;22,0;StMt;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+140;Behelfsbrücke für Leitungen, gemäß statischem Nachweis, in Geländehöhe, für Stromversorgungskabel, Länge bis 3 m, Durchfahrtshöhe über 4,5 bis 5 m, Nutzbreite über 3 bis 3,75 m, einschl. Anfahrschutz, instand halten DIN 31051, Abrechnung nach in Brückenachse gemessener Länge,;22,0;StMt;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+150;Kabelbrücke, groß als Überfahrschutz,;26,0;StMt;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+160;Schutzvorrichtung als Bekleidung/Belag für Kabel und Leitungen, aus Brettern, Dicke über 20 bis 25 mm, Höhe bis 1 m, herstellen und räumen, Abrechnung nach bekleideter/belegter Fläche.;15,0;m2;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+170;Bauholz, Holzart Fichte/Tanne, Gebrauchsklasse 0 DIN 68800-1, ohne chemischen Holzschutz, Festigkeitsklasse C24 DIN EN 338, Sortierklasse S 10 DIN 4074-1, max. Holzfeuchte 18%, bis Querschnitt 6/6cm, Einzellänge bis 4m.;20,0;m;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+180;Stahl bis 3 kg;6,0;kg;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+190;Stahl bis 10 kg;20,0;kg;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+200;Kleineisenteile bis 10 kg, feuerverzinkt,;10,0;kg;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+210;Profilstahl;8,0;kg;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+220;Stahlblech;24,0;kg;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+230;Werkstatt- und Montageplanung;1,0;psch;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+10;Stundenlohnarbeiten durch Obermonteur/-in;12,0;h;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+20;Stundenlohnarbeiten durch Obermonteur/-in;4,0;h;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+30;Stundenlohnarbeiten durch Obermonteur/-in;4,0;h;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+40;Stundenlohnarbeiten durch Monteur/-in;20,0;h;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+50;Stundenlohnarbeiten durch Monteur/-in;6,0;h;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+60;Stundenlohnarbeiten durch Monteur/-in;6,0;h;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+70;Stundenlohnarbeiten durch Helfer/-in;10,0;h;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+80;Stundenlohnarbeiten durch Helfer/-in;4,0;h;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+90;Stundenlohnarbeiten durch Helfer/-in;4,0;h;gaeb;leistungsbeschreibungen/MB_LV Baustrom_260610.X83
+10;Baustromhauptverteiler,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+20;Digitale Zähleinrichtung, beglaubigt;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+30;Baustromzwischenverteiler,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+40;Baustromunterverteiler;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+50;Baustromverteiler Beleuchtung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+60;Baustromverteiler für die Containeranlage und die Außenbeleuchtung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+70;Baustromunterverteiler;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+80;Baustromverteiler DIN EN 61439-4 (VDE 0660-600-4), als Endverteiler (Krananschluß), Bedienung durch elektrotechnischen Laien, geeignet für die Versorgung frequenzgeregelter Antriebe, mit Berührungsschutzabdeckung DIN EN 50274 (VDE 0660-514), Gehäuse aus verzinktem Stahl, pulverbeschichtet, Schutzkla;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+90;Grundsätzlich ist für die Prüffristen der Betreiber (AN) der Gesamtanlage verantwortlich.;26,0;Mon;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+100;Miete und Vorhaltung Baustromhauptverteiler;22,0;StMt;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+110;Miete und Vorhaltung Baustromzwischenverteiler Etagen;88,0;StMt;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+120;Miete und Vorhaltung Baustromunterverteiler;88,0;StMt;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+130;Miete und Vorhaltung Container-Baustromunterverteiler mit Beleuchtung in vorbeschriebenen Umfang;24,0;StMt;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+140;Miete und Vorhaltung Baustromunterverteiler Beleuchtung;22,0;StMt;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+150;Miete und Vorhaltung Baustromunterverteiler 40 kVA;15,0;StMt;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+160;Miete und Vorhaltung Baustromzwischenverteiler Etagen;22,0;StMt;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+170;Warten und Betreiben Baustromhauptverteiler;22,0;StMt;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+180;Warten und Betreiben Baustromzwischenverteiler Etagen;88,0;StMt;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+190;Warten und Betreiben Baustromunterverteiler;88,0;StMt;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+200;Warten und Betreiben Baustromunterverteiler Beleuchtung;22,0;StMt;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+210;Warten und Betreiben Container-Baustromunterverteiler mit Beleuchtung;28,0;StMt;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+220;Warten und Betreiben Baustromunterverteiler;15,0;StMt;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+230;Warten und Betreiben Baustromunterverteiler;22,0;StMt;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+240;Umsetzen eines Baustromhauptverteilers;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+250;Umsetzen eines Baustromzwischenverteilers;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+260;Umsetzen eines Baustromunterverteilers;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+270;Umsetzen eines Baustromunterverteilers für Beleuchtung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+280;Umsetzen eines Container-Baustromunterverteilers;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+290;NH-Sicherungseinsatz mit Kontaktmesser DIN 43620-1 und DIN VDE 0636-2 (VDE 0636-2), Bemessungsbetriebsspannung 690 V AC, für Betriebsklasse gG, Baugröße 00, Bemessungsstrom 80 A.;21,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+300;NH-Sicherungseinsatz mit Kontaktmesser DIN 43620-1 und DIN VDE 0636-2 (VDE 0636-2), Bemessungsbetriebsspannung 690 V AC, für Betriebsklasse gG, Baugröße 00, Bemessungsstrom 100 A.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+310;NH-Sicherungseinsatz mit Kontaktmesser DIN 43620-1 und DIN VDE 0636-2 (VDE 0636-2), Bemessungsbetriebsspannung 690 V AC, für Betriebsklasse gG, Baugröße 1, Bemessungsstrom 125 A.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+320;NH-Sicherungseinsatz mit Kontaktmesser DIN 43620-1 und DIN VDE 0636-2 (VDE 0636-2), Bemessungsbetriebsspannung 690 V AC, für Betriebsklasse gG, Baugröße 1, Bemessungsstrom 160 A.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+330;NH-Sicherungseinsatz mit Kontaktmesser DIN 43620-1 und DIN VDE 0636-2 (VDE 0636-2), Bemessungsbetriebsspannung 690 V AC, für Betriebsklasse gG, Baugröße 3, Bemessungsstrom 630 A.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+10;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 1 x 185, Cu-Zahl 1776, in vorh. Rohre/Unterflurkanäle.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+20;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 70, Cu-Zahl 3360, in vorh. Rohre/Unterflurkanäle.;85,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+30;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 70, Cu-Zahl 3360, mit Befestigung gemäß bauaufsichtlicher Zulassung.;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+40;Bestehende Gummischlauchleitung H07RN-F 5G70, zurückziehen und an anderer Stelle, wie vor beschrieben, erneut verlegen .;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+50;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 35, Cu-Zahl 1680, in vorh. Rohre/Unterflurkanäle.;280,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+60;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 35, Cu-Zahl 1680, mit Befestigung gemäß bauaufsichtlicher Zulassung.;605,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+70;Bestehende Gummischlauchleitung H07RN-F 5G35, zurückziehen und an anderer Stelle, wie vor beschrieben, erneut verlegen .;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+80;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 4, Cu-Zahl 192, mit Befestigung gemäß bauaufsichtlicher Zulassung.;450,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+90;Bestehende Gummischlauchleitung H07RN-F 5G4, zurückziehen und an anderer Stelle, wie vor beschrieben, erneut verlegen.;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+100;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H05RR-F 5 G 2,5, Cu-Zahl 120.;240,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+110;Bestehende Gummischlauchleitung H07RN-F 5G 2,5, zurückziehen und an anderer Stelle, wie vor beschrieben, erneut verlegen.;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+120;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H05RR-F 5 G 1,5, Cu-Zahl 72.;160,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+130;Bestehende Gummischlauchleitung H07RN-F 5G 1,5, zurückziehen und an anderer Stelle, wie vor beschrieben, erneut verlegen.;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+140;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 3 G 1,5, Cu-Zahl 43.;450,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+150;Bestehende Gummischlauchleitung H07RN-F 3G 1,5, zurückziehen und an anderer Stelle, wie vor beschrieben, erneut verlegen.;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+160;Rückbau eines Stromkreises mit Freischalten des Stromkreises, Lösen der Anschlüsse am Verteiler oder einem Abzweigkasten, Rückziehen der Leitung;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+170;Rückbau eines Stromkreises mit Freischalten des Stromkreises, Lösen der Anschlüsse am Verteiler oder einem Abzweigkasten, Rückziehen der Leitung;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+180;Kabelbezeichnung;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+190;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 1 x 185, Cu-Zahl 7104,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+200;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 35, Cu-Zahl 1680, nur anschließen an bauseitig vorhandenen Kabelübergangskasten;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+210;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 70, Cu-Zahl 3360, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+220;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 35, Cu-Zahl 1680, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+230;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 4, Cu-Zahl 192, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+240;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 2,5, Cu-Zahl 120, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+250;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 1,5, Cu-Zahl 72, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+260;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 3 G 1,5, Cu-Zahl 43, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;19,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+10;Wippschalter DIN EN 60669-1 (VDE 0632-1) 2-polig, Aus/Wechsel, 10 A, 250 V AC, in Aufputzausführung, Schutzart IP 44 DIN EN 60529 (VDE 0470-1).;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+20;CEE-Stecker DIN EN 60309-2 (VDE 0623-2), 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 16 A, Schutzart IP 65 DIN EN 60529 (VDE 0470-1).;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+30;CEE-Stecker DIN EN 60309-2 (VDE 0623-2), 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 32 A, Schutzart IP 65 DIN EN 60529 (VDE 0470-1).;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+40;CEE-Stecker DIN EN 60309-2 (VDE 0623-2), 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 63 A, Schutzart IP 65 DIN EN 60529 (VDE 0470-1).;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+50;CEE-Kupplung DIN EN 60309-2 (VDE 0623-2), 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 16 A, Schutzart IP 65 DIN EN 60529 (VDE 0470-1).;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+60;CEE-Kupplung DIN EN 60309-2 (VDE 0623-2), 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 32 A, Schutzart IP 65 DIN EN 60529 (VDE 0470-1).;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+70;CEE-Kupplung DIN EN 60309-2 (VDE 0623-2), 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 63 A, Schutzart IP 65 DIN EN 60529 (VDE 0470-1).;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+80;Verbindungsdose DIN EN IEC 60670-1 (VDE 0606-1) als Abzweigkasten, mit Einführungen für flexible Leitungen, aus Kunststoff, Grundfläche mind. 80/80 mm, Tiefe mind. 50 mm, mit Deckel mit Schraubbefestigung, Schutzart IP 65 DIN EN 60529 (VDE 0470-1), mit 5 Klemmen 4 mm2, Aufputz.;60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+90;Verbindungsdose DIN EN IEC 60670-1 (VDE 0606-1) als Abzweigkasten, mit Einführungen für flexible Leitungen, aus Kunststoff, Grundfläche mind. 100/100 mm, Tiefe mind. 50 mm, mit Deckel mit Schraubbefestigung, Schutzart IP 65 DIN EN 60529 (VDE 0470-1), mit 5 Klemmen 6 mm2, Aufputz.;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+100;Dämmerungsschalter 230 V AC, mit Gehäuse für Wandmontage, Schutzart IP 55 DIN EN 60529 (VDE 0470-1),;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+10;Erdungsklemme an Fundamenterder;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+20;Profilstaberder Profil B 60x60x5, bis 6 m;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+30;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 50 RM, Cu-Zahl 480.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+40;bestehendes Kabel NYY-J 1x50 mm²,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+50;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 35 RM, Cu-Zahl 336.;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+60;bestehendes Kabel NYY-J 1x35 mm²,;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+70;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 25 RM, Cu-Zahl 240.;160,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+80;bestehendes Kabel NYY-J 1x25 mm²,;32,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+90;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 16 RE, Cu-Zahl 154.;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+100;bestehendes Kabel NYY-J 1x16 mm²,;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+110;Anschluß von NYY-J bis 1 x 50 qmm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+120;Anschluß von NYY-J bis 1 x 35 qmm;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+130;Anschluß von NYY-J bis 1 x 25 qmm;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+140;Anschluß von NYY-J bis 1 x 16 qmm;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+10;Beleuchtungsmasten aus Holz,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+20;Scheinwerfer, Schutzklasse I, Schutzart IP 54 DIN EN 60529 (VDE 0470-1), mit eloxiertem Spiegelreflektor, Abdeckung aus temperaturwechselbeständigem Silikatglas, klar, glatt, mit LED-Leuchtmittel, mind. 250 W, Farbtemperatur fest,;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+30;Scheinwerfer, Schutzklasse I, Schutzart IP 54 DIN EN 60529 (VDE 0470-1), mit eloxiertem Spiegelreflektor, Abdeckung aus temperaturwechselbeständigem Silikatglas, klar, glatt, mit LED-Leuchtmittel, mind. 1000 W, Farbtemperatur fest,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+40;Hochdruck-Entladungslampe, Kolben HIT, 230 V AC, 250 W, Sockel E 40, Lichtfarbe neutralweiß.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+50;Hochdruck-Entladungslampe, Kolben HIT, 230 V AC, 1000 W, Sockel E 40, Lichtfarbe neutralweiß.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+60;LED Lichtband 25m;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+70;LED Lichtband mit SiBel 25m;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+80;Aufhängevorrichtung als Kettenpendel, aus nichtrostendem Länge bis 6 m, Belastbarkeit bis 150 kg;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+90;Rettungszeichenleuchte DIN EN 1838 und DIN EN 60598-2-22 (VDE 0711-2-22) für zentrale Versorgung, Rettungszeichen DIN EN ISO 7010, DIN 4844-1 und DIN ISO 3864-1, Rettungszeichen 2-seitig, Erkennungsweite mind. 25 m, in Dauerschaltung, für Wand- und Deckenanbau, Schutzart IP 65 DIN EN 60529 (VDE 0470;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+100;Einmaliges Versetzen der Holzmasten mit Scheinwerfer bis 1000W, einschl. 30m Zuleitung.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+110;Einmaliges Versetzen des LED Lichtbandes;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+120;Einmaliges Versetzen der Fluchtweghinweisleuchte;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+10;Boden der Gräben für Kabel, ab Geländeoberfläche, profilgerecht lösen, seitlich lagern, verfüllen, verdichten, verdrängten Boden seitlich lagern, Abfall ist nicht gefährlich, Breite der Sohle über 0,3 bis 0,4 m, Aushubtiefe bis 0,8 m,;46,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+20;Markierung von Kabeltrassen mit Kabelwarnband, Farbton gelb, in Trassenmitte, mit Beschriftung, max. Länge der Beschriftung 150 mm, verlegen 40 cm über Kabel.;190,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+30;Kabelrtrasse einmessen, einzeichnen und in Dokumentation übernehmen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+40;Kennzeichnung von Kabeln mit Kabelerkennungsstreifen aus Kunststoff, für Kabeldurchmesser über 40 bis 60 mm, Befestigung am Kabel 1 St je 5 m.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+50;Graben nach Kabelverlegung provisorisch verschließen.;46,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+60;Nach Beendigung der Bauzeit zur Demontage des Kabels den Graben wieder öffnen.;46,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+70;Baustraßenquerung 1 DN 90;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+80;Kabelschutzrohr aus Kunststoff, flexibel, DN 90, in Ringbunden, einschl. Lieferung, offen verlegen.;190,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+90;Abdichtstopfen, Außendurchmesser 90 mm, für Kabelschutzrohre, einschl. Lieferung.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+100;Bauholz, Holzart Fichte/Tanne, Gebrauchsklasse 0 DIN 68800-1, ohne chemischen Holzschutz, Festigkeitsklasse C24 DIN EN 338, Sortierklasse S 10 DIN 4074-1, max. Holzfeuchte 18%, bis Querschnitt 8/20 cm, Einzellänge bis 0,4m.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+110;so wie zuvor beschrieben jedoch;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+120;Behelfsbrücke für Leitungen, gemäß statischem Nachweis, in Hochlage, für Stromversorgungskabel, Länge bis 3 m, Durchfahrtshöhe über 4,5 bis 5 m, Nutzbreite über 3,75 bis 4,5 m, einschl. Anfahrschutz, aufbauen und abbauen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+130;Behelfsbrücke für Leitungen, gemäß statischem Nachweis, in Geländehöhe, für Stromversorgungskabel, Länge bis 3 m, Durchfahrtshöhe über 4,5 bis 5 m, Nutzbreite über 3 bis 3,75 m, einschl. Anfahrschutz, vorhalten, Abrechnung nach in Brückenachse gemessener Länge,;22,0;StMt;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+140;Behelfsbrücke für Leitungen, gemäß statischem Nachweis, in Geländehöhe, für Stromversorgungskabel, Länge bis 3 m, Durchfahrtshöhe über 4,5 bis 5 m, Nutzbreite über 3 bis 3,75 m, einschl. Anfahrschutz, instand halten DIN 31051, Abrechnung nach in Brückenachse gemessener Länge,;22,0;StMt;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+150;Kabelbrücke, groß als Überfahrschutz,;26,0;StMt;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+160;Schutzvorrichtung als Bekleidung/Belag für Kabel und Leitungen, aus Brettern, Dicke über 20 bis 25 mm, Höhe bis 1 m, herstellen und räumen, Abrechnung nach bekleideter/belegter Fläche.;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+170;Bauholz, Holzart Fichte/Tanne, Gebrauchsklasse 0 DIN 68800-1, ohne chemischen Holzschutz, Festigkeitsklasse C24 DIN EN 338, Sortierklasse S 10 DIN 4074-1, max. Holzfeuchte 18%, bis Querschnitt 6/6cm, Einzellänge bis 4m.;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+180;Stahl bis 3 kg;6,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+190;Stahl bis 10 kg;20,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+200;Kleineisenteile bis 10 kg, feuerverzinkt,;10,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+210;Profilstahl;8,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+220;Stahlblech;24,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+230;Werkstatt- und Montageplanung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+10;Stundenlohnarbeiten durch Obermonteur/-in;12,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+20;Stundenlohnarbeiten durch Obermonteur/-in;4,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+30;Stundenlohnarbeiten durch Obermonteur/-in;4,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+40;Stundenlohnarbeiten durch Monteur/-in;20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+50;Stundenlohnarbeiten durch Monteur/-in;6,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+60;Stundenlohnarbeiten durch Monteur/-in;6,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+70;Stundenlohnarbeiten durch Helfer/-in;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+80;Stundenlohnarbeiten durch Helfer/-in;4,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83
+90;Stundenlohnarbeiten durch Helfer/-in;4,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/MB_LV Baustrom_260610.X83

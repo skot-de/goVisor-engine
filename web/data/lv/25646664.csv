@@ -1,0 +1,47 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Für das Einrichten und Unterhalten der Baustelle, für;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+2;Für das Räumen der Baustelle von Baubuden,;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+3;Herstellen aller erforderlichen Ausführungsunterlagen,;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+4;Höhenfestpunkt, bestehend aus einem Bolzen mit Rundkopf;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+1;Nichttragfähigen Boden profilgerecht (Bodenklasse 1-4;618,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+2;Planum im Bereich der künftig befestigten Flächen;412,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+3;Überschüssigen Boden, der bei der Herstellung des vorg.;82,4;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+4;Frostsicheren, tragfähigen Sandboden liefern, abladen;634,48;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+5;Dynamischer Plattendruckversuch mit Hilfe des leichten Fallgewichtsgerätes durchführen.;5,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+1;Betontiefbordsteine, Form T, 10/30/50 cm, mit;85,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+2;Trennschnitt an Tiefbordstein herstellen;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+3;Dreireihige Gosse aus Betongossensteine 16/24/14 cm;55,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+4;Trennfuge in vorher genannter 3-reihiger Gosse herstellen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+5;Straßenablauf mit Aufsatz in Rinnen- oder Pultform 300*500,  Kl. C gemäß EN 124/DIN 1229, Schlitzweite 25 mm, Bauhöhe 125mm;3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+6;Aussparrung von 240mm lichter Weite in Spw. in der erf. Tiefe ca.-0,20 m NN herstellen.;3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+7;Rohrgraben in einer Tiefe bis 1,50 m Rohrgraben für Hausanschlussleitungen, in Handschachtung mit Maschinenunterstützung abschnittsweise entsprechend Baufortschritt ausheben, zur;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+8;Biegeweiche Vollwandabwasserrohre und Formstücke mit;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+9;Bögen KGB DN 150 15° - 45° passend zum vorgenannten;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+10;Grundwasserabsenkung wie vor;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+11;Ungebundene Tragschicht aus einem Baustoffgemisch 0/32 liefern und in einer Stärke von 25cm, gemäß RStO, Tafel 3 bei optimalen Wassergehalt einbauen.;412,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+12;Ermittlung der Wasserdurchlässigkeit kf;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+13;Pflasterdecke aus Beton- H-Verbundsteinen;412,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+14;Für das Ausführen von Diagonalschnittarbeiten bei der;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+15;Schachtabdeckungen im Bereich der Pflasterstraße;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+16;Seitenräume neben den Geh- u. Fußweg , mit Mutterboden;460,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+1;Wasserzähler-Schacht QN 2,5 liefern und fachgerecht einbauen:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+2;Wasserzählerschacht wie vor jedoch als Zulage für den Einbau einer Schachtabdeckung Klasse D, die die Last über einen Lastausgleichsverteilring in das Erdreich überträgt.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+3;PE 100 RC Rohr 2 Zoll 63 x 5,8 mm 100 m flexible Wasserleitung, DVGW - Standards: DIN EN 12201 - Druckstufe: PN16;250,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+4;Rohrgraben für die Verlegung der;250,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+5;PP Klemmringverschraubung T-Stück 3fach Klemme DN 50;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+6;PP Klemmringverschraubung Endkappe Klemme DN 50;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+7;PP Klemmringverschraubung Durchgangsmuffe 2fach Klemme;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+8;PP Klemmringverschraubung Reduziermuffe 2fach Klemme DN50/DN40 plus PE HD Rohr DN 40 ca. 50cm und;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+9;Gartenhydrant DN 40, für den Erdeinbau, für Wasser PN 16. Zur Erfüllung der Trinkwasserverordnung mediumberührende Werkstoffe gem. Metall-Bewertungsgrundlage sowie KTW- und Elastomer-Leitlinien des Umweltbundesamtes. Komplett montiert und einer Dichtheitsprüfung DIN ISO 2859, DIN 3230, unterzogen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+10;"KG Systemschacht DN 400 bestehend aus Systemrohr DN 400; Länge 1500mm und Teleskopabdeckung Gussdeckel Klasse D ohne Lüftung.Systemrohr im Bereich Durchgang PEHD Rohr DN 50 anbohren und Rohr durchführen. Im Schacht zuvor aufgeführten Gartenhydrant montieren und unteren Teil des Schachtes mit Splitt ";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+11;Kabelgraben in einer Tiefe von ca. 0,70m (gemessen von;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+12;Kabelgraben wie vor, jedoch als Mitverlegung im Rohrgraben der Wasserleitung. Das Beleuchtungskabel und das Leerrohr jeweils 30cm aus der Achse der Abwasserdruckrohrleitung in einer Tiefe von ca. 70cm (entspricht ca. 30-50cm unterhalb OK Sandboden) unterhalb fertiger Straße mitverlegen.;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+13;Boden im Bereich des Kabelgrabens, in Handschachtung;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+14;Erdkabel, Typ NYY J 5*10² nach VDE 0276, einschl.;262,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+15;"Kabelschutzrohr DN 125 aus Kunststoff Farbe ""Rot"";  ""EWE Standard"" liefern und im vorg. Kabelgraben höhen und fluchtgerecht verlegen.";250,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+16;Steckdosenverteilersäule nach DIN EN 61439, Normschrank mit einer Bautiefe von ca. 470mm: mit Zählerplatz und APZ,;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+17;Tiefenerder aus Edelstahl V4A nach Anweisung der Bauleitung durch eine elekt. Fachkraft herstellen und dokumentieren;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+18;Lichtauslegermasten mit Erdstück aus verzinktem;3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+19;Liefern und Einbauen von Mast-Sicherungskästen mit integriertem Überspannungsschutz;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+20;Technische LED-Straßenleuchte;3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83
+21;Straßenbeleuchtungssäule Größe 0 liefern und aufstellen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV GAEB Anlegestelle_V32.X83

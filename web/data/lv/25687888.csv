@@ -1,0 +1,127 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Außen-Temperaturfühler passiv;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0020;Raum-Temperaturfühler,AP,passiv;5,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0030;Rohr-Tauchtemperaturfühler passiv, bis 100 mm;4,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0040;Rohr-Tauchtemperaturfühler passiv, bis 200 mm;4,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0050;Kanal-Temperaturfühler, passiv, bis 200 mm;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0060;Kabeltemperaturfühler, passiv;3,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0070;Anlegetemperaturfühler, passiv;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0080;Druck-Messwertgeber Wasser;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0090;Raumbediengerät (RBG),Modbus, BACnet MSTP,usw., AP;4,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0100;Ventilstellantrieb elektromotorisch, stetig;3,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0110;elektrischer Stellantrieb (2-Punkt);3,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0120;Elektron. Wärmemengenzähler, q;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0010;BACnet-Automationsstation ASP 01;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0020;Zum Einbau von 10 Steuerkarten, aus eloxiertem Aluminium.;2,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0030;zum Abdecken von Anzeige- und Bedienelementen sowie zum Schutz vor Schmutz und Flüssigkeiten, abschließbar, Schutzart IP 54, Scharniere mit 180°;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0040;Zur Spannungsversorgung der Handbedien- und Steuermodulebene, bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0050;mit Störleuchte Sammelstörung und Anzeige örtlich, Quittiertaste, Hupe Quittiertaste und Lampenprüfung.;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0060;zur Ansteuerung 1-stufiger Antriebe integriert mit je:;2,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0070;zur Ansteuerung stetiger Antriebe 0..10 V integriert mit je:;5,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0080;zur Ansteuerung 2-Punkt Antriebe integriert mit je:;4,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0090;für Stör- und Betriebsmeldungen, integriert mit insgesamt;3,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0100;für Stör- und Betriebsmeldungen, integriert mit insgesamt;2,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0110;zur Abdeckung von Leerplätze der Modulebebene.;4,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0010;Kommunikations-Modul M-Bus für Zähler, 10 Endgeräte;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0020;M-Bus Impulsadapter, 2 Endgeräte;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0030;Kommunikations-Modul Modbus(RTU)/BACnet MSTP, usw.;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0040;KNX-Gateway Modul;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0010;Physikalische Ein-/Ausgabe Binär Schalten/Stellen;35,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0020;Physikalische Ein-/Ausgabe Analoge Ausgabe Stellen;14,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0030;Physikalische Ein-/Ausgabe Binäre Eingabe Melden;71,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0040;Physikalische Ein-/Ausgabe Analoge Eingabe Messen;29,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0050;Gemeinsame (kommunikativ) Ein-/Ausgabe Schalten;9,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0060;Gemeinsame (kommunikativ) Ein-/Ausgabe Stellen/Sollwert;5,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0070;Gemeinsame (kommunikativ)Ein-/Ausgabe Melden;27,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0080;Gemeinsame (kommunikativ) Ein-/Ausgabe Zählen;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0090;Gemeinsame (kommunikativ) Ein-/Ausgabe Messen;30,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0100;Grundaufwand M-Bus - RS232 (Anbindung Zähler);1,0;Psch;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0110;Datenaustausch M-Bus - Wärmemengenzähler;1,0;Stck;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0120;Datenaustausch M-Bus - Wasser- und Gaszähler;2,0;Stck;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0130;Dienstleistung für KNX(EIB);30,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0010;Standschaltschrank 2000 x 800 x 400 mm;2,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0020;Schaltschrank-Dokumentenablage;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0030;Laptop-Ablagetisch;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0040;Schaltschrank-Innenbeleuchtung;2,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0050;Verteilersteckdose;2,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0060;Schaltschrankfeld-Belüftung/Kühlung;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0070;Einspeisung Nennstrom 63A;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0080;Universal-Messgerät;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0090;Stromwandlereinheit, 3-polig;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0100;Netz-Überspannungsschutz, 4-polig,Typ 2;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0110;Phasenüberwachung;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0120;Überspannungsschutz Außenfühler bis 4 Adern;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0130;Gleichspannungsversorgung 24 VDC;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0140;Steuerspannungsversorgung 400/230V, bis 630VA;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0150;Steuerspannungsversorgung 230/24V, bis 630VA;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0160;Erdschluss-/Isolationsüberwachung;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0170;Steuerspannungssicherung, 1-polig bis 10A;8,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0180;Sammelstörmeldung / Quittierung;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0190;Automatische Wiedereinschaltung;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0200;FI-Schutzschalter 230V;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0210;"Motorbaugruppe Pumpe 230V; 1-stufig; <=1,1 kW";3,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0220;"Motorbaugruppe Ventilator 230V, mit Stufentrafo; <= 1,1 kW";2,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0230;"Motorbaugruppe Ventilator 230V, mit Stufentrafo; <= 1,1 kW";2,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0240;Motorvollschutz;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0250;"Wechselstrom-Sicherungsabgang; I<=16A";3,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0260;"Drehstrom-Sicherungsabgang; I<=40 A";1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0270;Hilfsrelais, 4 Kontakte;25,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0280;Steuerung stetige Ventil- und Klappenstellantriebe;6,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0290;Steuerung Ventil- und Klappenstellantriebe Auf/Zu;3,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0300;Steuerung Reparaturschalter;4,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0310;Steuerung sonstige Sicherheitssteuerungen;5,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0320;Aufschaltung Fühler/Sensoren mit bis zu 4 Klemmen;20,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0330;Aufschaltung mit bis zu 6 Klemmen für Aggregate;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0340;Aufschaltung mit bis zu 8 Klemmen für Aggregate;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0350;Aufschaltung mit bis zu 10 Klemmen für Aggregate;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0360;Aufschaltung mit bis zu 14 Klemmen für Aggregate;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0370;Einbau Automatisierungsstation ASP01, mit LVB;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0380;Lieferung und Montage je Schaltschrankfeld;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0010;Die Dienstleistung besteht im wesentlichen aus:;1,0;psch;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0020;1:1 Datenpunkttest aller übergebenen Datenpunkte gemäß;400,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0030;Koordination mit der IT-Fachabteilung des AG und Einholen von Informationen zur Ausführung Aufschaltung auf MBE. Darunter zählen unter anderem IP-Adressen, usw.;1,0;psch;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0010;Energie- Steuerltg. NYM-J 3 x 1,5 mm²;100,0;m;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0020;Energie- Steuerltg. NYM-J 4 x 1,5 mm²;100,0;m;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0030;Energie- Steuerltg. NYM-J 5 x 1,5 mm²;100,0;m;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0040;Energie- Steuerltg. NYM-J 3 x 2,5 mm²;50,0;m;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0050;Energie- Steuerltg. NYM-J 4 x 2,5 mm²;50,0;m;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0060;Steuerleitung YSLY-JZ 3x1,5 mm;50,0;m;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0070;Steuerleitung YSLYCY-OZ 4x 0,75 mm²;100,0;m;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0080;Melde-/Meßltg. J-Y(St)Y 2x2x0,8 mm²;480,0;m;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0090;Melde-/Meßltg. J-Y(St)Y 4x2x0,8 mm²;100,0;m;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0100;Melde-/Meßltg. J-Y(St)Y 6x2x0,8 mm²;50,0;m;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0110;Melde-/Meßltg. LiYCY 4x0,75 mm²;100,0;m;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0120;Anschluss einseitig 2 bis 4x2x0,8;120,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0130;Anschluss einseitig 6 bis 10x2x0,8;4,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0140;Anschluss einseitig 3 bis 7x1,5;70,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0150;Anschluss einseitig 3 bis 5x2,5;4,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0160;Kabelmarker bestehend aus Trägereinheit für mehrzeilige Beschriftung sowie Kabelbinder zur Befestigung der Beschriftung am Kabel. Komplett beschriftet und montiert. Der Kennzeichnungsschlüssel ist im Vorfeld mit dem Fachplaner und dem AG abzustimmen.;120,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0170;Bezeichnungsschilder graviert, Ausführung gemäß Standard des Auftraggebers, Farbe und Beschriftung nach Angaben des AG, aus mehrschichtigem Kunststoff, Beschriftung 3-Zeilig (1. Zeile: Description, 2.Zeile: Objektname, 3.Zeile: BMKZ Schaltplan / Kabelnummer). Beschriftung und Aufbau gemäß technische;60,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0001;Stahlkonstruktion verzinkt;10,0;kg;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0002;Montageschienen 40 x 22 x 1,7;10,0;m;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0003;Klemmkasten mit 4 Reihenklemmen;10,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0004;Klemmkasten mit 8 Reihenklemmen;4,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0005;Klemmkasten mit 10 Reihenklemmen;2,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0006;Klemmkasten mit 24 Reihenklemmen;1,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0001;Alu-Installationsrohr M20;10,0;m;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0002;Alu-Installationsrohr M25;10,0;m;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0003;Alu-Installationsrohr M32;5,0;m;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0004;Alu-Installationsrohr M40;5,0;m;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0010;Ausserinbetriebnahme bestehender Feldgeräte;40,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0010;Ausserinbetriebnahme bestehender Pumpen/Ventilatoren;10,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0010;Demontage von Schaltgeräten (Steuergeräten/Baugruppen);6,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0010;Demontage von Schaltanlagen;2,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0010;Demontage von Feldgeräten;40,0;St;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0010;Demont. Elekroinstallation bis 16 mm²;300,0;m;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0020;Demont. Elekroinst. bis 20x2x0,8 mm²;600,0;m;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0010;Montageplanung MSR-Hardware;1,0;psch;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0020;Einarbeitung Adressierungsschlüssel;1,0;psch;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0030;Messung Elektroinstallation Automationssystem;1,0;psch;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0040;zusätzliche Einweisung;1,0;Psch;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0050;Probebetrieb vor der Abnahme;1,0;Psch;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0010;Revisionsunterlagen Gebäudeautomation;1,0;psch;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0010;Stundenlohn Projektingenieur / Programmierer;10,0;h;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0020;Stundenlohn Techniker / Inbetriebnehmer;10,0;h;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0030;Stundenlohn Monteur;30,0;h;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0040;Stundenlohn Helfer;10,0;h;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83
+0010;Vollwartungsvertrag;5,0;Jahr;gaeb;leistungsbeschreibungen/LV MSR LES Sigmaringen.x83

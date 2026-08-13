@@ -1,0 +1,55 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Reinigen des Untergrundes von Bauschutt und grober Verschmutzung mit Industriestaubsauger. Beseitigen von groben Verunreinigungen in kleinerem Umfang (1 m³ auf 500m²) ist einzukalkulieren. Der anfallender Bauschutt ist durch den AN ordnungsgemäß zu entsorgen.;12800,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0020;Betonuntergrund mit einem geeigneten, lösemittelfreien Dispersionsvorstrich grundieren.;12800,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0010;Liefern und Montieren eines Hohlbodensystems in nicht brennbarer Ausführung. Die Schalungselemente aus Calciumsulfat werden durch eine stufenlos höhenverstellbare verzinkte, Chrom(VI)-freie Stahlstützenkonstruktion exakt auf Höhe einnivelliert, um eine gleichmäßige Estrichscheibe mit konstanten Eige;12200,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0020;jedoch:;800,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0030;Liefern und Einmischen eines werksseitig zugelassenen Beschleunigers/Zusatzmittels für Calciumsulfat-Fließestrich (CAF) zur Verkürzung der Austrocknungs- und Belegreifezeit.;7000,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0040;Zusätzlicher Aufwand für An- und Abfahrt, Gerätevorhaltung, Baustelleneinrichtung sowie Ausführung der Arbeiten zum einbringen des Fließestrichs bei geringer Flächengröße.;10,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0010;Lieferung und Montage eines zweilagigen Flächenhohlbodens.;600,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0020;Zulage zur v.g. Position Trockenhohlboden für die Ausführung der Plattenlage entlang gekrümmter Wand- und Fassadenverläufe.;25,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0030;Trockenhohlboden für die Ausführung von Austausch- und Reparaturarbeiten in zusammenhängenden Kleinflächen bis 2,50 m² je Einzelfläche.;150,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0010;Wandanschluss an aufgehenden Bauteilen mittels Randdämmstreifen herstellen.;4800,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0020;jedoch in gerundeter Ausführung.;2000,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0030;Wandanschluss an aufgehenden Bauteilen mittels Randdämmstreifen herstellen.;700,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0040;jedoch in gerundeter Ausführung.;300,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0050;Trittschalldämmplättchen für Stützfüße nach Erfodernis zur Einhaltung des Trittschallverbesserugnsmaßes liefern und fachgerecht einbauen.;1500,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0060;Anarbeiten der Systemplatten an aufgehende Rundstützen, einschließlich versiegeln der Schnittkanten mit einer lösemittelfreien Dispersionsversiegelung. Der Randdämmstreifen ist mittels Schlagtacker o.ä. zu fixieren.;435,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0070;Anarbeiten von Vor- und Rücklauf der aufgeständerten Bodenkonvektoren.;760,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0080;Anarbeiten von Kabeldurchführungen an Gewindestangen;100,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0090;Anarbeiten von der Unterkonstruktion von aufgeständerten Bodenkonvektoren.;760,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0100;Anarbeiten von Sockeln der ELT Unterverteilung auf dem Rohboden.;35,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0110;Wände mit Brandschutzanforderung stehen auf dem Rohboden.;135,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0120;Revisionsöffnung aus verzinktem Stahlrahmen, mit höhenverstellbaren Füßen in Hohlbodenplatte, liefern, ausbilden und montieren.;400,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0130;Revisionsöffnung aus verzinktem Stahlrahmen, mit höhenverstellbaren Füßen in Hohlbodenplatte, liefern, ausbilden und montieren.;35,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0140;Begehbare Schutzabdeckung für Ausschnitteflächen bündig aus OSB-Platten ca. 22 mm herstellen und gegen Verrutschen sichern.;550,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0150;Begehbare Schutzabdeckung für Ausschnitteflächen bündig aus OSB-Platten ca. 22 mm herstellen und gegen Verrutschen sichern.;435,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0160;Nachträgliche Auswechselung der Stützfußkonstruktion für bauseitige Rohre und Leitungen jeglicher Art.;50,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0170;Verharzen von Rissbildungen im Nasshohlraumboden mit  Wellenverbindern im Abstand von 20cm.;50,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0180;Saugheber für Doppelbodenplatten liefern und der;5,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0190;Lieferung von Reserveplatten einschließlich Einlagerung nach angabe der Bauleitung.;10,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0200;Liefern und fachgerechtes Montieren eines Gebäudetrennprofils als Dehnungsfugenprofil im Bereich einer Gebäudetrennfuge innerhalb des Hohlraumbodens.;135,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0210;Liefern und fachgerechtes Montieren eines Gebäudetrennprofils als Wandanschluss-Dehnungsfugenprofil im Bereich einer Gebäudetrennfuge zwischen Hohlraumboden und aufgehender Wand.;135,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0220;Liefern, fachgerechtes Anarbeiten und Montieren des Übergangsbereiches zwischen Boden-Boden-Gebäudetrennprofil und Boden-Wand-Gebäudetrennprofil. einschließlich aller erforderlichen Zuschnitte, Anpassungen und Gehrungsschnitte zur Herstellung eines durchgehenden und funktionsfähigen Fugenverlaufs.;40,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0230;Nachträglicher Austausch der Gummieinlage der vorgenannten Gebäudetrennfugenprofile;270,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0240;Schutz der Gebäudetrennfuge Boden-Boden mittels Bautenschutzmatten.;135,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0250;Trennfuge zur schalltechnischen Entkopplung unterhalb von Trockenbauwänden herstellen,;1100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0260;Trennfuge zur schalltechnischen Entkopplung unterhalb von Türblättern.;120,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0270;Bohrung für runde Aussparungen,Ø 68 mm, mit Spezialbohrgerät inkl. Staubabsaugung, herstellen.;20,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0280;V;10,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0290;Bohrung für runde Aussparungen,Ø 304 mm, mit Spezialbohrgerät inkl. Staubabsaugung, herstellen.;540,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0300;vorhandene Bohrungen im Hohlraumboden schließen;25,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0310;Abstellungen für einen Höhenversatz bei Belagswechsel mittels;45,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0320;Abstellungen für einen Höhenversatz bei Belagswechsel mittels;40,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0330;Abstellungen für einen Höhenversatz bei Belagswechsel mittels;65,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0340;Abstellungen für einen Höhenversatz bei freien Bodenenden mittels Aluminiumabstellwinkel.;200,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0350;Liefern und Montieren einer Auffahrrampe als Niveauausgleich zum Doppelboden, hergestellt aus 32 mm starken Trockenhohlraumbodenplatten, einschließlich Unterkonstruktion und Befestigungsmaterial.;25,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0360;Ausklinkungen der Hohlraumboden-Schalung im bereich von Fassadenkonsolen/Stahlwinkeln herstellen.;3250,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0010;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;100,0;h;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0020;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;40,0;h;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0030;Kostensatz für einen Entfernungskilometer bei einer;5,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0040;Materialkosten  zum Nachweis auf Verrechnung gemäß;500,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0010;Der AN hat bei seiner gesamten Leistungsausführung die Vorgaben der DGNB-/ QNG-Zertifizierung zu berücksichtigen. Der Zertifizierungsprozess ist im Rahmen seiner Arbeitsvorbereitung, der Bauausführung und der Projektdokumentation kontinuierlich zu begleiten. Der AN hat nach den Vorgaben der DGNB-Aud;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0010;Robustes Elektroheizgerät mit mind. 15 kW liefern und vorhalten. Inkl. Verkabelung zum nächstmöglichen Baustromverteiler.;10,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0020;Vorhaltung des zuvor beschriebenen Elektroheizgeräts.;80,0;StWo;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0030;Bautrockner mit mind. 60l/Tag Entfeuchtungsleistung liefern und vorhalten. Inkl. Verkabelung zum nächstmöglichen Baustromverteiler.;10,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83
+0040;Vorhaltung des zuvor beschriebenen Elektroheizgeräts.;80,0;StWo;gaeb;leistungsbeschreibungen/Leistungsverzeichnis VE 322 Hohlraumbodenarbeiten.X83

@@ -1,0 +1,555 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Herstellen von Meterrissen im Gebäude:;4,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Der für die Baudurchführung benötigte Bauwasseranschluss ist gemäß abzustimmenden Baustelleneinrichtungsplan einzurichten und den am Bau beteiligten Installations- und Ausbaufirmen zur Benutzung zu überlassen und auf Anordnung der Obejektüberwachung azubauen.;1,0;psch;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;Vorhalten und Unterhalten der Bauwasserversorgung für die Dauer der Arbeiten, auch über die Dauer der Rohbauarbeiten hinaus bis Bauende.;52,0;Wo;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0040;Fenster-, Tür-, Toröffnungen und dgl. in den Fassaden sowie Fluren und Durchgängen zu anderen Bauteilen mit Folienrahmen verschließen.;60,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0050;zusätzlich zur Folie mit Spanplatte/OSB,;20,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0060;Behelfsmäßige Tür, Material: Stahl, abschließbar im Bauwerk liefern, einbauen und räumen zum Mitbenutzen anderer Unternehmer, Ausführung geschlossen nach Wahl des AN lichte Öffnung min. ca.1,0 x 2,00 m, inkl. Füllelement zu Rohbauöffnung. Leistung einschl. Beschlag und Schließzylinder mit 6 Stück Sc;2,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0070;Bautür aus Stahl gem. Vorposition;24,0;StMt;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Liefern, Aufstellen und Abtransportieren eines Sanitär- Containers zur Nutzung für die Ausbaugewerke.;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;weitere Vorhalten des im 2. BA beschriebenen Wasch-WC- Containers über die Dauer des 2. BA hinaus.;52,0;Wo;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Schutzzaun, versetzbar, auf unbefestigtem Untergrund, aus Einzelelementen mit verzinktem Stahlrohrrahmen, Vergitterung, und Betonfüßen, Zaunoberkante über Oberfläche Gelände 2 m, aufstellen und räumen auf Anordnung der Objektüberwachung..;270,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Vorhaltung Bauzaun aus Vorposition über die Grundvorhaltedauer von vier Wochen hinaus.;14040,0;mxWo;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;Schutzzaun, versetzbar, auf unbefestigtem Untergrund, aus Einzelelementen mit verzinktem Stahlrohrrahmen und Vergitterung, Zaunoberkante über Oberfläche Gelände 2 m, umsetzen nach besonderer Anordnung des AG.;1,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0040;Behelfsmäßiges Tor, abschließbar, aus Metallgitter, Elemente auf Rollen, vorgefertigt, im Schutzzaun, Breite 5 m, Höhe 2 m, einbauen und ausbauen.;2,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Kantholzrahmen ca. 3,0 x 3,0m aus ca. 12x12 cm Kanthölzern.;48,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;In der Sporthallendecke sind 4 Deckenfelder der Stb.decke abzubrechen.;4,0;Stk;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Ungefähr in Achse 5 sind in der vorh. Stahlbetondachdecke Öffnungen für RWA herzustellen.;2,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;In der vorh. Stahlbetondachdecke sind Öffnungen für RWA herzustellen.;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;In der vorh. Stahlbetondachdecke sind Öffnungen für RWA herzustellen.;4,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0040;In allen Bestandsdecken Öffnungen für TGA herstellen.;11,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Abbruch Wände - Türöffnung anlegen - 1,01 x 2,26 m;1,0;Stk;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Fertigteilstürze für KS Mauerwerk der vorgenannten;3,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Abbruch nichttragender Betonunterzüge um bestehende Dachflächenfenster, 4- seitig, sowie fachgerechte Entsorgung des Abbruchmaterials unter Berücksichtigung der Umweltauflagen.;38,0;Stk;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Alle vorh. Oberflächenbefestigungen mit Unterbau in einer Stärke von insgesamt 15 cm aufnehmen und entsorgen.;529,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Vorh. Oberflächenbefestigungen wie in Vorposition beschrieben, mit Unterbau in einer Stärke von insgesamt 15 cm aufnehmen und entsorgen, jedoch;120,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;Vorh. Rasenflächen mit Mutterboden in einer Stärke von insgesamt 15 cm aufnehmen und entsorgen.;120,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0040;Das Erdniveau muss bis auf ca. -0,75 m abgesenkt werden. Dazu kommt der Aushub für die Fundamente und den Magerbeton unter den Fundamenten.;380,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0050;Grundposition: Abfuhr und Entsorgung des Aushubmaterials aus Vorpositionen einschl. Zuordnungsgruppe BM-0 nach EBV,;610,0;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0060;Zulage zu Grundposition 01.03.60, aber hier Zuordnungsgruppe BM-0* nach EBV;250,0;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0070;Zulage zu Grundposition 01.03.60, aber hier Zuordnungsgruppe BM-F1 nach EBV;100,0;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0080;Zulage zu Grundposition 01.03.60, aber hier Zuordnungsgruppe BM-F2 nach EBV;100,0;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0090;Zulage zu Grundposition 01.03.60, aber hier Zuordnungsgruppe BM-F3 nach EBV;100,0;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0100;Handaushub. Ausführung z.B. im Bereich von vorhandenen Leitungen.;20,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0110;Erstellung des Planums Baugrubensohle höhengerecht gemäß Planung inkl. Profilierung Bodenplattenversprünge.;400,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0120;Unterhalb  der  Bodenplatten sind  Druckpolster zwischen  den;60,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0130;Zulage zur Vorposition für die Verwendung von Hartkalkstein-Baustoffgemisch 0/45 mm nach;60,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0140;Seitliches Lagern von zum Wiedereinbau brauchbaren Materials aus den Vorpos. Oberflächenbefestigung aufnehmen und Aushub.;35,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0150;Verdichtungsfähiges, kapillarbrechendes  Bodenmaterial;40,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0160;Chemische Untersuchung;1,0;Psch;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Die Zugangssituation zum Innenhof ist wie folgt:;66,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Das Erdniveau im Innenhof muss bis auf ca. -0,80 m abgesenkt werden. Die Vorpos. endet auf ca. -0,15 m, damit sind in dieser Position noch 65 cm abzutragen, bevor ein 30 cm starkes Schotterpolster eingebaut wird (in sep. Position).;90,0;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;Abfuhr und Entsorgung des Aushubmaterials aus Vorpositionen einschl. Zuordnungsgruppe BM-0 nach EBV,;45,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0040;Unterhalb  der  Bodenplatte sind  Druckpolster zwischen den Streifenfundamenten zu erstellen. Für die Druckpolster ist ein  Recycling-Baustoff 0/45 mm zu verwenden. Dieses RC-Material muss den Vorgaben der Nachhaltigkeit NH entsprechen.;20,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Arbeits- und Schutzgerüst mit voll eingedielten;1170,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Gerüst der vorst. Position,;28080,0;m2Wo;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;Zulage zum vorstehenden Gerüst für die vollständige Abstrebung / Abstützung nach außen.;145,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0040;Abstrebung der vorst. Position;3480,0;mWo;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0050;Zulage zu dem zuvor beschriebenen Fassadengerüst für das Überbrücken von z.B. Eingängen. Einarbeiten eines Gitterträgers für Überbrückungen mit einer Länge bis zu 5,0 m.;2,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0060;Überbrückung, der vorst. Position;48,0;StWo;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0070;Innerer Seitenschutz mit Montage und Demontage, passend zu v.g. Gerüst. Grundeinsatzzeit für die Dauer der eigenen Arbeiten.;585,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0080;Innerer Seitenschutz aus Vorposition.;14040,0;mWo;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0090;Liefern und Verlegen von Konsolauslegern nach DIN 4420,;585,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0100;Konsolausleger 0,32 m aus Vorposition.;14040,0;mWo;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0110;Liefern, auf- und abbauen, vorhalten und abtransportieren von Schutzmaßnahmen bei Gerüstaufstellung auf Gebäudeversprüngen auf Dachflächen;35,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0120;Aufbauen und Abbauen Treppenaufgang für Gerüst,;16,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0130;Treppenaufgang aus Vorposition.;384,0;mWo;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Arbeits- und Schutzgerüst mit voll eingedielten;280,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Gerüst der vorst. Position,;6720,0;m2Wo;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;Zulage zum vorstehenden Gerüst für die vollständige Abstrebung / Abstützung nach außen.;36,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0040;Abstrebung der vorst. Position;864,0;mWo;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0050;Innerer Seitenschutz mit Montage und Demontage, passend zu v.g. Gerüst.;140,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0060;Innerer Seitenschutz aus Vorposition.;3360,0;mWo;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0070;Liefern und Verlegen von Konsolauslegern nach DIN 4420,;140,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0080;Konsolausleger 0,32 m aus Vorposition.;3360,0;mWo;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Ortbeton der Magerbetonfundamente und Auffüllungen im Erdreich als Bodenersatz, für Höhenversprünge, Abtreppungen, Fundamenttieferführungen etc. im Bereich der Gründung;90,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Schalungen der Magerbetonfundamente und Auffüllungen der Abtreppungen und Tieferführungen von Fundamenten und Bodenplatte, einhäuptig, Höhe bis ca. 1,00 m.;230,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;PE-Folie, 1-lagig 0,2 mm, liefern und als Trennlage lose mit 20 cm Stoßüberdeckung verlegen. Aufgehende Bauteile sind auszuschneiden.;700,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0040;Sauberkeitsschicht unter Fundamenten und Bodenplatten als unbewehrter R-Beton C12/15 liefern und sach- und fachgerecht einbauen. Oberfläche eben und höhengerecht abgezogen;360,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0050;Ortbeton der Einzel- und Streifenfundamente;32,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0060;seitliche Schalung für Einzel- und Streifenfundament, Höhe überwiegend 50-60 cm.;160,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0070;"Rechenwert der Wärmeleitfähigkeit 0,040 W/m*K;";30,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0080;Für den Anschluss der 15 cm starken Bodenplatten sind Auflagertaschen in Stb.-Bestandswänden herstellen,;54,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0090;Für den Anschluss der 25-26 cm starken Bodenplatten sind Auflagertaschen im Stb.-Bestand herstellen,;80,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0100;durch anstemmen oder fräsen der Oberfläche.;25,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0110;Ortbeton der Bodenplatten des Erdgeschoss d= ca. 15 cm,;19,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0120;Ortbeton der Bodenplattenergänzungen, d ca. 26 cm,;72,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0130;Ortbeton der Bodenplattenergänzungen, d ca. 25 cm,;18,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0140;Im Umbaubereich bei Achse 6 / D-H wird ein vorhandener Schornstein im Innenhof abgebrochen.;1,0;psch;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0150;Randschalung der Bodenplatte;20,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0160;Herstellen eines Ortbetonkellerschachtes aus WU-Beton;6,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0170;seitliche Schalung für den Ortbetonkellerschacht aus WU-Beton, Höhe überwiegend 290 cm.;46,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Außen- und Innenwände als Elementwände aus Elementtafeln und Passstücken sowie Füllbeton einschl. der;65,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Wandstärke bis ca. 30 cm;2,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;Schalung Außenwand, als Stirnabschalung der  Elementwände;4,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0040;Ortbeton der vorgen. Rechteckstützen aus;1,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0050;Schalung der Stützen als glatte Schalung.;10,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0060;Ortbeton der Unter-, Überzüge aus;8,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0070;Schalung der Unterzüge, zweihäuptig,;58,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0080;Schalung der Überzüge und Attiken, zweihäuptig,;13,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0090;Ortbeton der Sockel aus;1,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0100;Sockel als Fußpunkt der aufstehenden Holzfassade, zweihäuptig,;11,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0110;Ortbeton aus Normalbeton gem. DIN EN 206/DIN1045;34,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0120;Schalung als Großflächenschalung für Geschossdecken Geschosshöhe bis ca. 3,4 m im EG;215,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0130;Als glatte Schalung,;5,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0140;Stb.-Fertigteil,;8,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0150;Haustrennwand-Platten;55,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0160;Haustrennwand-Platten;30,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Stahlbetonsohle abbrechen, entfernen und entsorgen.;4,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Zulage für freistemmen der vorh. Anschlussbewehrung;30,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;Aushub und Entsorgung des Erdrelchs unterhalb der;5,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0040;Die 2 abzubrechenden Decken über KG und EG werden nach Erstellung des Mauerwerks in der Ebene darunter, von oben maßgenau geschnitten.;20,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0050;Abbruch Stahlbetondecke, d ca.14-16 cm.;12,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0060;Einlagige PE-Folie, 0,2 mm stark,;20,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0070;Ortbeton der Aufzugsunterfahrt;7,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0080;Einhäuptige Schalungen der Pumpensumpf Wände (h ca. 1 m und Unterfahrt-Vertiefung um 5 cm);9,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0090;Wasserundurchlässiger Sohlen-Wandanschluss;10,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0100;Ortbeton der Ringbalken im Mauerwerk;3,5;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0110;Schalung der Ringbalken auf Mauerwerk, zweihäuptig,;30,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0120;Gerüstbühnen im Aufzugsschacht nach Angabe der Aufzugsfirma, Balkenschuhe (bauseits beigestellt) an Mauerwerk/Stahlbeton andübeln. Kanthölzer einlegen und die Fläche mit Gerüstbohlen vollflächig abdecken.;2,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Betonstahl 500 S, DIN 488, als Stabstahl in verschiedenen Durchmessern und Längen liefern, schneiden, biegen und verlegen.;25,0;to;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Betonstahlmatten 500 M, DIN 488, als Lager- und Listenmatten liefern, schneiden, biegen und verlegen.;8,0;to;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;Nachträglicher Bewehrungsanschluss;8,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0040;Nachträglicher Bewehrungsanschluss;20,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0050;Nachträglicher Bewehrungsanschluss mit Hilfi-lnjekfionsmörtel HIT-HY 200-R-V3 o. glw.;20,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Herstellen von Deckendurchbrüchen bis 500 cm2 Größe;6,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Herstellen von Deckendurchbrüchen 500 bis 1.000 cm2;4,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;Herstellen von Deckendurchbrüchen 1.000 bis 2.500 cm2;2,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0040;Herstellen von Wanddurchbrüchen bis 500 cm2 Größe;12,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0050;Herstellen von Wanddurchbrüchen  500 bis 1.000 cm2;4,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0060;Verschluss mit Ortbeton nach erfolgter;4,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0070;Verschluss mit Ortbeton nach erfolgter;2,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0080;Verschluss mit Ortbeton nach erfolgter;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0090;Verschluss mit Ortbeton nach erfolgter;38,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0100;Verschluss mit Ortbeton/Mauerwerk/Vergussmörtel nach erfolgter Installation einschl. evtl. erforderlicher Schalung.;8,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0110;Verschluss mit Ortbeton/Mauerwerk/Vergussmörtel nach erfolgter Installation einschl. evtl. erforderlicher Schalung.;2,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Mauerwerk DIN 1053 aus Kalksandstein;20,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Mauerwerk DIN 1053 aus Kalksandstein;91,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;Mauerwerk DIN 1053 aus Kalksandstein;15,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0040;für Wandstärke 30 cm;7,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0050;Fertigteilstürze für KS Mauerwerk der vorgenannten;2,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0060;Fertigteilstürze für KS Mauerwerk der vorgenannten;3,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0070;Mauerwerk DIN 1053 aus Porenbeton PP2-0,35-DBM;59,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0080;Mauerwerk DIN 1053 aus Porenbeton PP2-0,35-DBM;2,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0090;Mauerwerk DIN 1053 aus Porenbeton PP2-0,35-DBM;7,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0100;Mauerwerk DIN 1053 aus Porenbeton PP2-0,35-DBM;14,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0110;für Wandstärke 30 cm;5,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0120;Fertigteilstürze für Porenbeton-Mauerwerk der vorgenannten;4,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0130;Fertigteilstürze für Porenbeton-Mauerwerk der vorgenannten;2,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0140;Fertigteilstürze für Porenbeton-Mauerwerk der vorgenannten;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0150;Öffnungen im Mauerwerk nach Zeichnung und Angabe;8,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0160;Öffnungen im Mauerwerk nach Zeichnung und Angabe;2,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0170;Öffnungen im Mauerwerk nach Zeichnung und Angabe;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0180;Vorhandene Kellerfenster ausbauen, Laibung säubern und von Dichtungsmaterial etc. befreien und Abbruchmaterial unter Berücksichtigung der Umweltauflagen fachgerecht Entsorgung.;14,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0190;vorhandene Fensteröffnungen aus MW-Wände;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0200;vorhandene Heizkörpernische in MW-Wände;3,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0210;vorhandene Türöffnungen aus MW-Wände;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0220;vorhandene Türöffnungen aus MW-Wände;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0230;Min. Haustrennwand-Platte, d = 40 mm;2,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0240;Mauerwerk DIN 1053 aus Kalksandstein;1,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0250;Liefern und einbauen einer besandeten Bitumendachbahn R500 rnit Rohfilzeinlagen Dicke = 3mm, nach DIN EN 13969 in Verbindung mit DIN V 20000-202;20,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0260;Maueranschlussschiene für den Anschluss der;270,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0270;Maueranschlussanker, passend zur vorgenannten Anschlussschiene für den Anschluss der;600,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0280;Herstellen von Wanddurchbrüchen bis 500 cm2;23,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0290;Wanddurchbrüche wie vor, jedoch;6,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0300;Wanddurchbrüche wie vor, jedoch;2,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0310;Verschluss mit Ortbeton/Mauerwerk/Vergussmörtel nach erfolgter Installation einschl. evtl. erforderlicher Schalung.;4,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0320;Wanddurchbrüche wie vor, jedoch;5,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0330;Wanddurchbrüche wie vor, jedoch;2,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Mauerwerk aus Kalksandstein,;40,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Mauerwerk aus Kalksandstein,;6,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;Mauerwerk aus Kalksandstein,;7,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0040;Vollfugige Untermörtelung MG lll, d 17,5-30 mm;23,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0050;Öffnungen im Mauerwerk nach Zeichnung und Angabe;3,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0060;Fertigteilstürze für KS Mauerwerk der vorgenannten;3,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0070;Liefern und einbauen einer besandeten Bitumendachbahn G 200 DD, nach DIN EN 13969 in Verbindung mit DIN V 20000-202 im Mauerwerk KG;12,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0080;Herstellen von Wanddurchbrüchen bis 500 cm2;2,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Es ist die Werk- und Montageplanung zu erstellen und zur Freigabe vorzulegen, unter Einhaltung der gesetzlichen Bestimmungen. Änderungen und Korrekturen sind zu übernehmen.;1,0;psch;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Stahlkonstruktion Innenhof wie folgt beschrieben:;2,3;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;Stahlkonstruktion wie folgt beschrieben:;0,7;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0040;Stahlkonstruktion wie folgt beschrieben:;0,08;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0050;Stahlkonstruktion wie folgt beschrieben:;0,1;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0060;Stahlkonstruktion wie folgt beschrieben:;0,2;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0070;Stahlkonstruktion Innenhof wie folgt beschrieben:;0,025;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0080;Stahlkonstruktion wie folgt beschrieben:;0,04;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0090;Stahlkonstruktion wie folgt beschrieben:;0,5;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0100;Stahlkonstruktion wie folgt beschrieben:;0,04;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0110;Stahlkonstruktion wie folgt beschrieben:;0,25;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0120;Stahlkonstruktion Sporthalle wie folgt beschrieben:;0,06;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0130;Stahlkonstruktion Sporthalle wie folgt beschrieben:;0,15;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0140;Stahlkonstruktion Sporthalle wie folgt beschrieben:;0,02;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0150;Stahlkonstruktion Sporthalle wie folgt beschrieben:;0,15;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0160;Stahlkonstruktion Sporthalle wie folgt beschrieben:;0,02;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0170;Stahlkonstruktion Sporthalle wie folgt beschrieben:;0,02;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0180;Stahlkonstruktion Sporthalle wie folgt beschrieben:;0,15;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0190;Zulage für den Einbau der vorbeschriebenen stat Pos. 50+51+52+53 (HEA 120) für Einbau in der Sporthalle;7,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0200;Stahlkonstruktion wie folgt beschrieben:;1,0;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0210;Stahlkonstruktion wie folgt beschrieben:;0,85;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0220;Stahlkonstruktion wie folgt beschrieben:;0,7;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0230;Stahlkonstruktion wie folgt beschrieben:;0,9;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0240;Stahlkonstruktion wie folgt beschrieben:;0,6;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0250;Stahlkonstruktion wie folgt beschrieben:;0,6;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0260;Stahlkonstruktion wie folgt beschrieben:;0,04;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Reinigen der abzudichtenden Flächen. Zementleim, Staub, Mörtelreste und Grate entfernen. Tragfähigen Untergrund herstellen.;170,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Reinigen und Grundieren der abzudichtenden, mineralischen Flächen mit lösemittelfreiem, verfestigendem Verkieselungskonzentrat (MV 1:1 in Wasser).;170,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;Fehlstellen, wie offene Fugen, Mörteltaschen oder Ausbrüche mit einem Mörtel aus flexibler, polymermodifzierter Dickbeschichtung (FPD) mit  Quarzsand-verschnitt (MV:1:1) verschließen.;40,0;kg;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0040;Gereinigten Untergrund mit lösemittelfreiem, verfestigendem Verkieselungskonzentrat (MV 1:1 mit Wasser) grundieren und innerhalb der Reaktionszeit der Grundierung starre, zementgebundene Dichtungsschlämme auftragen. Dichtungskehle aus wasserdichtem, sulfatbeständigem Mörtel mit einer Schenkellänge v;36,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0050;Sockelabdichtung mit 2-komp., flexibler, polymermodifizierter Dickbeschichtung (FPD), Rissüberbrückung > 2 mm, bis 1 bar druckwasserdicht nach 18 Std. (5°C und 90% r.F.), herstellen. Abdichtung in zwei Arbeitsgängen, 20 cm überlappend auf die erdberührte Bauwerksabdichtung bis mind. 30 cm über OK Ge;170,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0060;Zulage zur Abdichtung der Vorposition Sockelabdichtung, als Abdichtung bodentiefer Fenster-Türelemente bis auf die Rahmen bodentiefer Fenster-Türelemente aus Holz oder Kunststoff führen.;70,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0070;Zulage zur Vorposition für die Ausführung von Innen- und Außenecken im Grundriß bei der Herstellung von systemkonformen Ecken im Bereich der Fensterfußpunkteindichtungen.;30,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0080;Sockeldämmung bestehend aus:;144,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0090;Sockeldämmung wie vor, jedoch;16,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0100;Sockeldämmung wie vor, jedoch;10,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0110;Verrottungs- und wurzelfeste Noppenbahn als Anfüllschutzbahn;170,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0120;Zulage zu vorbeschriebener Sockelabdichtung für die Einbettung eines Dichtbandes an Innenecken und Fugen / Übergängen zu nichtmineralischen Bauteilen mit einem vliesbeschichteten Dichtband auf NBR-Kautschuk-Basis.;110,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung des AG ausführen. Der Verrechnungssatz für die jeweilige Arbeitskraft umfasst sämtliche Aufwendungen, insbesondere den tatsächlichen Lohn einschließlich vermögenswirksamer Leistungen mit den Zuschlägen für Gemeinkosten (Sozialkassenbeiträge, Wint;20,0;h;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung des AG ausführen. Der Verrechnungssatz für die jeweilige Arbeitskraft umfasst sämtliche Aufwendungen, insbesondere den tatsächlichen Lohn einschließlich vermögenswirksamer Leistungen mit den Zuschlägen für Gemeinkosten (Sozialkassenbeiträge, Wint;10,0;h;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Abwasserkanal aus PP-MD (Polypropylen mit mineralischen Additiven)-Vollwandrohren DIN EN 14758-1, mit Steckverbindung, DN/OD 110, Verlegung DIN EN 1610 in vorh. verbautem Graben, Bettung wird gesondert vergütet,;237,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Abwasserkanal aus PP-MD (Polypropylen mit mineralischen Additiven)-Vollwandrohren DIN EN 14758-1, mit Steckverbindung, DN/OD 125, Verlegung DIN EN 1610 in vorh. verbautem Graben, Bettung wird gesondert vergütet,;76,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;Abwasserkanal aus PP-MD (Polypropylen mit mineralischen Additiven)-Vollwandrohren DIN EN 14758-1, mit Steckverbindung, DN/OD 160, Verlegung DIN EN 1610 in vorh. verbautem Graben, Bettung wird gesondert vergütet,;159,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0040;Abwasserkanal aus PP-MD (Polypropylen mit mineralischen Additiven)-Vollwandrohren DIN EN 14758-1, mit Steckverbindung, DN/OD 200, Verlegung DIN EN 1610 in vorh. verbautem Graben, Bettung wird gesondert vergütet,;90,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0050;Abwasserkanal aus PP-MD (Polypropylen mit mineralischen Additiven)-Vollwandrohren DIN EN 14758-1, mit Steckverbindung, DN/OD 250, Verlegung DIN EN 1610 in vorh. verbautem Graben, Bettung wird gesondert vergütet,;21,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0060;Bogen, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 110, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;95,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0070;Bogen, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 125, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;20,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0080;Bogen, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 160, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;25,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0090;Bogen, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 200, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;18,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0100;Bogen, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 250, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;8,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0110;Abzweig, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 110, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;13,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0120;Abzweig, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 125, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;5,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0130;Abzweig, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 160, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;14,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0140;Abzweig, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 200, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;19,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0150;Abzweig, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 250, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;3,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0160;Reduzierstück, exzentrisch, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 125, 2. DN 110, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;5,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0170;sonst wie zuvorbeschrieben. Abrechnung nach größter Nennweite.;12,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0180;sonst wie zuvorbeschrieben. Abrechnung nach größter Nennweite.;3,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0190;sonst wie zuvorbeschrieben. Abrechnung nach größter Nennweite.;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0200;Muffenstopfen, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 110, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;67,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0210;Muffenstopfen, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 125, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;2,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0220;Muffenstopfen, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 160, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;2,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0230;Muffenstopfen, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 200, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0240;Muffenstopfen, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 250, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0250;Anschluss an bauseitigen Fettabscheider, mit zuvor beschriebenem Abwasser-Grundleitungsrohr. zwei Anschlüsse bis DN 125. Bis 2 m Tiefe.;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0260;im Zuege der Leerrohrverlegung für die Wärmepumpen zugdraht mit einziehen. Länge maximal 50 m.;6,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Schachttiefe:bis 2,0 m (KD - KS);1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Schachttiefe:bis 2,5 m (KD - KS);1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;Schachttiefe:bis 2,5 m (KD - KS);1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0040;Schachttiefe:bis 2,0 m (KD - KS);1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0050;Schachttiefe:bis 2,5 m (KD - KS);1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0060;Schachttiefe:bis 2,5 m (KD - KS);1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0070;Schachttiefe:bis 2,5 m (KD - KS);1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0080;Kontroll-/Spülschacht DN 400 für zuvor beschriebene Grundleitungen, ohne Sandfang, mit zwei Anschlüssen DN 160, Steigrohr und Schacht­deckel Klasse A15 aus Gußeisen.;2,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0090;Kontroll-/Spülschacht DN 400 für zuvor beschriebene Grundleitungen, ohne Sandfang, mit zwei Anschlüssen DN 160, Steigrohr und Schacht­deckel Klasse A15 aus Gußeisen.;2,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0100;Kontroll-/Spülschacht DN 400 für zuvor beschriebene Grundleitungen, ohne Sandfang, mit zwei Anschlüssen DN 200, Steigrohr und Schacht­deckel Klasse A15 aus Gußeisen.;2,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0110;Mehr-Schachttiefe von 50 cm, als Mehrkosten zu zuvor beschriebenen Revisionsschächten NW 1000 mm.;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0120;Anschluss an vorh. Bestandsschächte, 2 Anschlußrohre 110/110;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0130;Anschluss an vorh. Bestandsschächte, 2 Anschlußrohre 160/160;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0140;Anschluss an vorh. Bestandsschächte, 2 Anschlußrohre 200/200;2,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0150;Anschluss an vorh. Bestandsschächte, 2 Anschlußrohre 250/200;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0160;Anschluss an vorh. Bestandsschächte, 2 Anschlußrohre 250/250;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0170;Absturz außenliegend, mit Rohren und Formstücken aus KG-Rohr DN 110, Absturzhöhe unter 2,00 m, gemessen von Sohle Zulauf bis Sohle Einlauf, einschl. Ummantelung und Abstützung aus Beton, Rohr- und zusätzlichem Schachtanschluss, als Mehrkosten zu zuvor beschriebenem Revisionsschacht und Grundleitung.;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0180;Absturz außenliegend, mit Rohren und Formstücken aus KG-Rohr DN 160, Absturzhöhe unter 2,00 m, gemessen von Sohle Zulauf bis Sohle Einlauf, einschl. Ummantelung und Abstützung aus Beton, Rohr- und zusätzlichem Schachtanschluss, als Mehrkosten zu zuvor beschriebenem Revisionsschacht und Grundleitung.;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0190;Absturz außenliegend, mit Rohren und Formstücken aus KG-Rohr DN 200, Absturzhöhe unter 2,00 m, gemessen von Sohle Zulauf bis Sohle Einlauf, einschl. Ummantelung und Abstützung aus Beton, Rohr- und zusätzlichem Schachtanschluss, als Mehrkosten zu zuvor beschriebenem Revisionsschacht und Grundleitung.;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0200;Absturz außenliegend, mit Rohren und Formstücken aus KG-Rohr DN 250, Absturzhöhe unter 2,00 m, gemessen von Sohle Zulauf bis Sohle Einlauf, einschl. Ummantelung und Abstützung aus Beton, Rohr- und zusätzlichem Schachtanschluss, als Mehrkosten zu zuvor beschriebenem Revisionsschacht und Grundleitung.;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Mediendurchführung, einfach, rund,;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Die Grundleitungsanschlüsse sind vor dem Betonieren der Bodenplatte senkrecht auszurichten. Die ausgerichteten Anschlüssen sind gegen ein Verdrehen oder ein Verschieben während der Betonierarbeiten zu schützen.;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;Mediendurchführung, einfach, rund,;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0040;Mediendurchführung, einfach, rund, einschl. Deckel,;3,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0050;Mediendurchführung, einfach, rund, einschl. Deckel,;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0060;Mediendurchführung, einfach, rund, einschl. Deckel,;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0070;Nachträgliches Abdichten von Aussparungen rund, Durchmesser über 10 bis 25 cm, passend zur Flächenabdichtung mit kunststoffmodifizierter Bitumen-Dickbeschichtung.;5,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0080;Anschluss der vorstehend beschriebenen Grundleitungen an die Rohrenden der innerhalb/unterhalb der Gebäude vorverlegten SW-/RW-Kanalleitung DN 100 - 150, einschl. Muffen, Paßstücke etc.;4,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Kernbohrung, Untergrundfläche senkrecht, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 100 bis 150 mm, Bohrtiefe über 25 bis 30 cm, Wichte des Abbruchstoffes DIN EN 1991-1-1 24 kN/m3,;3,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Kernbohrung, Untergrundfläche senkrecht, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 150 bis 200 mm, Bohrtiefe über 25 bis 30 cm, Wichte des Abbruchstoffes DIN EN 1991-1-1 24 kN/m3, Arbeitshöhe bis 3,5 m über der Standfläche des hierfür erforderlichen Gerüstes,;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;Kernbohrung, Untergrundfläche senkrecht, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 200 bis 250 mm, Bohrtiefe über 25 bis 30 cm, Wichte des Abbruchstoffes DIN EN 1991-1-1 24 kN/m3, Arbeitshöhe bis 3,5 m über der Standfläche des hierfür erforderlichen Gerüstes,;1,0;St;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;für die komplette Anlage einschl. aller Nebenkosten sowie Übergabe an den Fachplaner zur Weiterleitung an den Bauherrn. Herstellen einer Funktionsbeschreibung.;1,0;psch;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Erstellung der Revisionsunterlagen einschl. aller Nebenkosten sowie Übergabe an den Fachplaner zur Weiterleitung an den Bauherrn.;1,0;psch;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;Druck- und Dichtigkeitsprobe für die vorstehend beschriebenen Grundleitungen und Schächte, einschl. der Leitungen innerhalb (unterhalb) der Gebäude auch in Teilbereichen,;1,0;psch;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Boden der Leitungsgräben bis 0,50 m Tiefe in Schottertragschicht der vorhandenen Tragschichten unter Pflasterung,;46,33;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0020;Boden der Gräben für Entwässerungskanalarbeiten einschl. Schächte, profilgerecht ausheben, seitlich lagern und verfüllen.;140,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0030;Boden der Gräben für Entwässerungskanalarbeiten einschl. Schächte, wie in Vorposition beschrieben, jedoch;130,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0040;Boden der Gräben für Entwässerungskanalarbeiten einschl. Schächte, wie in Vorposition beschrieben, jedoch;220,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0050;Rohrgrabenverbau nach Wahl des AN der Gräben für Entwässerungskanalarbeiten einschl. Schächte,;840,0;m2;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0060;als Zulage zu den vorgenannten Rohrgräben für eine offene Grundwasserhaltung für Rohrgräben bis Tiefe 2,50m.;210,0;m;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0070;Steinfreien Sand schichtenweise liefern, einbauen und verdichten, für Einbettung von Rohrleitungen,;177,0;m3;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0080;Grundposition: Abfuhr und Entsorgung des Aushubmaterials aus Vorpositionen Rohrgräben für Boden der Zuordnungsgruppe BM-0* nach EBV,;860,0;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0090;Zulage zu Grundposition 02.03.80, aber hier Zuordnungsgruppe BM-0* nach EBV;250,0;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0100;Zulage zu Grundposition 02.03.80, aber hier Zuordnungsgruppe BM-F1 nach EBV;100,0;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0110;Zulage zu Grundposition 02.03.80, aber hier Zuordnungsgruppe BM-F2 nach EBV;100,0;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0120;Zulage zu Grundposition 02.03.80, aber hier Zuordnungsgruppe BM-F3 nach EBV;100,0;t;gaeb;leistungsbeschreibungen/ZGM 2023-05_31.X83
+0010;Herstellen von Meterrissen im Gebäude:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Der für die Baudurchführung benötigte Bauwasseranschluss ist gemäß abzustimmenden Baustelleneinrichtungsplan einzurichten und den am Bau beteiligten Installations- und Ausbaufirmen zur Benutzung zu überlassen und auf Anordnung der Obejektüberwachung azubauen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;Vorhalten und Unterhalten der Bauwasserversorgung für die Dauer der Arbeiten, auch über die Dauer der Rohbauarbeiten hinaus bis Bauende.;52,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0040;Fenster-, Tür-, Toröffnungen und dgl. in den Fassaden sowie Fluren und Durchgängen zu anderen Bauteilen mit Folienrahmen verschließen.;60,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0050;zusätzlich zur Folie mit Spanplatte/OSB,;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0060;Behelfsmäßige Tür, Material: Stahl, abschließbar im Bauwerk liefern, einbauen und räumen zum Mitbenutzen anderer Unternehmer, Ausführung geschlossen nach Wahl des AN lichte Öffnung min. ca.1,0 x 2,00 m, inkl. Füllelement zu Rohbauöffnung. Leistung einschl. Beschlag und Schließzylinder mit 6 Stück Sc;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0070;Bautür aus Stahl gem. Vorposition;24,0;StMt;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Liefern, Aufstellen und Abtransportieren eines Sanitär- Containers zur Nutzung für die Ausbaugewerke.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;weitere Vorhalten des im 2. BA beschriebenen Wasch-WC- Containers über die Dauer des 2. BA hinaus.;52,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Schutzzaun, versetzbar, auf unbefestigtem Untergrund, aus Einzelelementen mit verzinktem Stahlrohrrahmen, Vergitterung, und Betonfüßen, Zaunoberkante über Oberfläche Gelände 2 m, aufstellen und räumen auf Anordnung der Objektüberwachung..;270,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Vorhaltung Bauzaun aus Vorposition über die Grundvorhaltedauer von vier Wochen hinaus.;14040,0;mxWo;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;Schutzzaun, versetzbar, auf unbefestigtem Untergrund, aus Einzelelementen mit verzinktem Stahlrohrrahmen und Vergitterung, Zaunoberkante über Oberfläche Gelände 2 m, umsetzen nach besonderer Anordnung des AG.;1,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0040;Behelfsmäßiges Tor, abschließbar, aus Metallgitter, Elemente auf Rollen, vorgefertigt, im Schutzzaun, Breite 5 m, Höhe 2 m, einbauen und ausbauen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Kantholzrahmen ca. 3,0 x 3,0m aus ca. 12x12 cm Kanthölzern.;48,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;In der Sporthallendecke sind 4 Deckenfelder der Stb.decke abzubrechen.;4,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Ungefähr in Achse 5 sind in der vorh. Stahlbetondachdecke Öffnungen für RWA herzustellen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;In der vorh. Stahlbetondachdecke sind Öffnungen für RWA herzustellen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;In der vorh. Stahlbetondachdecke sind Öffnungen für RWA herzustellen.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0040;In allen Bestandsdecken Öffnungen für TGA herstellen.;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Abbruch Wände - Türöffnung anlegen - 1,01 x 2,26 m;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Fertigteilstürze für KS Mauerwerk der vorgenannten;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Abbruch nichttragender Betonunterzüge um bestehende Dachflächenfenster, 4- seitig, sowie fachgerechte Entsorgung des Abbruchmaterials unter Berücksichtigung der Umweltauflagen.;38,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Alle vorh. Oberflächenbefestigungen mit Unterbau in einer Stärke von insgesamt 15 cm aufnehmen und entsorgen.;529,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Vorh. Oberflächenbefestigungen wie in Vorposition beschrieben, mit Unterbau in einer Stärke von insgesamt 15 cm aufnehmen und entsorgen, jedoch;120,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;Vorh. Rasenflächen mit Mutterboden in einer Stärke von insgesamt 15 cm aufnehmen und entsorgen.;120,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0040;Das Erdniveau muss bis auf ca. -0,75 m abgesenkt werden. Dazu kommt der Aushub für die Fundamente und den Magerbeton unter den Fundamenten.;380,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0050;Grundposition: Abfuhr und Entsorgung des Aushubmaterials aus Vorpositionen einschl. Zuordnungsgruppe BM-0 nach EBV,;610,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0060;Zulage zu Grundposition 01.03.60, aber hier Zuordnungsgruppe BM-0* nach EBV;250,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0070;Zulage zu Grundposition 01.03.60, aber hier Zuordnungsgruppe BM-F1 nach EBV;100,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0080;Zulage zu Grundposition 01.03.60, aber hier Zuordnungsgruppe BM-F2 nach EBV;100,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0090;Zulage zu Grundposition 01.03.60, aber hier Zuordnungsgruppe BM-F3 nach EBV;100,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0100;Handaushub. Ausführung z.B. im Bereich von vorhandenen Leitungen.;20,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0110;Erstellung des Planums Baugrubensohle höhengerecht gemäß Planung inkl. Profilierung Bodenplattenversprünge.;400,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0120;Unterhalb  der  Bodenplatten sind  Druckpolster zwischen  den;60,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0130;Zulage zur Vorposition für die Verwendung von Hartkalkstein-Baustoffgemisch 0/45 mm nach;60,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0140;Seitliches Lagern von zum Wiedereinbau brauchbaren Materials aus den Vorpos. Oberflächenbefestigung aufnehmen und Aushub.;35,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0150;Verdichtungsfähiges, kapillarbrechendes  Bodenmaterial;40,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0160;Chemische Untersuchung;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Die Zugangssituation zum Innenhof ist wie folgt:;66,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Das Erdniveau im Innenhof muss bis auf ca. -0,80 m abgesenkt werden. Die Vorpos. endet auf ca. -0,15 m, damit sind in dieser Position noch 65 cm abzutragen, bevor ein 30 cm starkes Schotterpolster eingebaut wird (in sep. Position).;90,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;Abfuhr und Entsorgung des Aushubmaterials aus Vorpositionen einschl. Zuordnungsgruppe BM-0 nach EBV,;45,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0040;Unterhalb  der  Bodenplatte sind  Druckpolster zwischen den Streifenfundamenten zu erstellen. Für die Druckpolster ist ein  Recycling-Baustoff 0/45 mm zu verwenden. Dieses RC-Material muss den Vorgaben der Nachhaltigkeit NH entsprechen.;20,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Arbeits- und Schutzgerüst mit voll eingedielten;1170,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Gerüst der vorst. Position,;28080,0;m2Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;Zulage zum vorstehenden Gerüst für die vollständige Abstrebung / Abstützung nach außen.;145,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0040;Abstrebung der vorst. Position;3480,0;mWo;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0050;Zulage zu dem zuvor beschriebenen Fassadengerüst für das Überbrücken von z.B. Eingängen. Einarbeiten eines Gitterträgers für Überbrückungen mit einer Länge bis zu 5,0 m.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0060;Überbrückung, der vorst. Position;48,0;StWo;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0070;Innerer Seitenschutz mit Montage und Demontage, passend zu v.g. Gerüst. Grundeinsatzzeit für die Dauer der eigenen Arbeiten.;585,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0080;Innerer Seitenschutz aus Vorposition.;14040,0;mWo;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0090;Liefern und Verlegen von Konsolauslegern nach DIN 4420,;585,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0100;Konsolausleger 0,32 m aus Vorposition.;14040,0;mWo;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0110;Liefern, auf- und abbauen, vorhalten und abtransportieren von Schutzmaßnahmen bei Gerüstaufstellung auf Gebäudeversprüngen auf Dachflächen;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0120;Aufbauen und Abbauen Treppenaufgang für Gerüst,;16,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0130;Treppenaufgang aus Vorposition.;384,0;mWo;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Arbeits- und Schutzgerüst mit voll eingedielten;280,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Gerüst der vorst. Position,;6720,0;m2Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;Zulage zum vorstehenden Gerüst für die vollständige Abstrebung / Abstützung nach außen.;36,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0040;Abstrebung der vorst. Position;864,0;mWo;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0050;Innerer Seitenschutz mit Montage und Demontage, passend zu v.g. Gerüst.;140,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0060;Innerer Seitenschutz aus Vorposition.;3360,0;mWo;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0070;Liefern und Verlegen von Konsolauslegern nach DIN 4420,;140,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0080;Konsolausleger 0,32 m aus Vorposition.;3360,0;mWo;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Ortbeton der Magerbetonfundamente und Auffüllungen im Erdreich als Bodenersatz, für Höhenversprünge, Abtreppungen, Fundamenttieferführungen etc. im Bereich der Gründung;90,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Schalungen der Magerbetonfundamente und Auffüllungen der Abtreppungen und Tieferführungen von Fundamenten und Bodenplatte, einhäuptig, Höhe bis ca. 1,00 m.;230,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;PE-Folie, 1-lagig 0,2 mm, liefern und als Trennlage lose mit 20 cm Stoßüberdeckung verlegen. Aufgehende Bauteile sind auszuschneiden.;700,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0040;Sauberkeitsschicht unter Fundamenten und Bodenplatten als unbewehrter R-Beton C12/15 liefern und sach- und fachgerecht einbauen. Oberfläche eben und höhengerecht abgezogen;360,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0050;Ortbeton der Einzel- und Streifenfundamente;32,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0060;seitliche Schalung für Einzel- und Streifenfundament, Höhe überwiegend 50-60 cm.;160,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0070;"Rechenwert der Wärmeleitfähigkeit 0,040 W/m*K;";30,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0080;Für den Anschluss der 15 cm starken Bodenplatten sind Auflagertaschen in Stb.-Bestandswänden herstellen,;54,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0090;Für den Anschluss der 25-26 cm starken Bodenplatten sind Auflagertaschen im Stb.-Bestand herstellen,;80,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0100;durch anstemmen oder fräsen der Oberfläche.;25,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0110;Ortbeton der Bodenplatten des Erdgeschoss d= ca. 15 cm,;19,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0120;Ortbeton der Bodenplattenergänzungen, d ca. 26 cm,;72,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0130;Ortbeton der Bodenplattenergänzungen, d ca. 25 cm,;18,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0140;Im Umbaubereich bei Achse 6 / D-H wird ein vorhandener Schornstein im Innenhof abgebrochen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0150;Randschalung der Bodenplatte;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0160;Herstellen eines Ortbetonkellerschachtes aus WU-Beton;6,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0170;seitliche Schalung für den Ortbetonkellerschacht aus WU-Beton, Höhe überwiegend 290 cm.;46,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Außen- und Innenwände als Elementwände aus Elementtafeln und Passstücken sowie Füllbeton einschl. der;65,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Wandstärke bis ca. 30 cm;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;Schalung Außenwand, als Stirnabschalung der  Elementwände;4,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0040;Ortbeton der vorgen. Rechteckstützen aus;1,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0050;Schalung der Stützen als glatte Schalung.;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0060;Ortbeton der Unter-, Überzüge aus;8,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0070;Schalung der Unterzüge, zweihäuptig,;58,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0080;Schalung der Überzüge und Attiken, zweihäuptig,;13,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0090;Ortbeton der Sockel aus;1,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0100;Sockel als Fußpunkt der aufstehenden Holzfassade, zweihäuptig,;11,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0110;Ortbeton aus Normalbeton gem. DIN EN 206/DIN1045;34,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0120;Schalung als Großflächenschalung für Geschossdecken Geschosshöhe bis ca. 3,4 m im EG;215,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0130;Als glatte Schalung,;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0140;Stb.-Fertigteil,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0150;Haustrennwand-Platten;55,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0160;Haustrennwand-Platten;30,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Stahlbetonsohle abbrechen, entfernen und entsorgen.;4,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Zulage für freistemmen der vorh. Anschlussbewehrung;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;Aushub und Entsorgung des Erdrelchs unterhalb der;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0040;Die 2 abzubrechenden Decken über KG und EG werden nach Erstellung des Mauerwerks in der Ebene darunter, von oben maßgenau geschnitten.;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0050;Abbruch Stahlbetondecke, d ca.14-16 cm.;12,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0060;Einlagige PE-Folie, 0,2 mm stark,;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0070;Ortbeton der Aufzugsunterfahrt;7,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0080;Einhäuptige Schalungen der Pumpensumpf Wände (h ca. 1 m und Unterfahrt-Vertiefung um 5 cm);9,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0090;Wasserundurchlässiger Sohlen-Wandanschluss;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0100;Ortbeton der Ringbalken im Mauerwerk;3,5;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0110;Schalung der Ringbalken auf Mauerwerk, zweihäuptig,;30,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0120;Gerüstbühnen im Aufzugsschacht nach Angabe der Aufzugsfirma, Balkenschuhe (bauseits beigestellt) an Mauerwerk/Stahlbeton andübeln. Kanthölzer einlegen und die Fläche mit Gerüstbohlen vollflächig abdecken.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Betonstahl 500 S, DIN 488, als Stabstahl in verschiedenen Durchmessern und Längen liefern, schneiden, biegen und verlegen.;25,0;to;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Betonstahlmatten 500 M, DIN 488, als Lager- und Listenmatten liefern, schneiden, biegen und verlegen.;8,0;to;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;Nachträglicher Bewehrungsanschluss;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0040;Nachträglicher Bewehrungsanschluss;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0050;Nachträglicher Bewehrungsanschluss mit Hilfi-lnjekfionsmörtel HIT-HY 200-R-V3 o. glw.;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Herstellen von Deckendurchbrüchen bis 500 cm2 Größe;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Herstellen von Deckendurchbrüchen 500 bis 1.000 cm2;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;Herstellen von Deckendurchbrüchen 1.000 bis 2.500 cm2;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0040;Herstellen von Wanddurchbrüchen bis 500 cm2 Größe;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0050;Herstellen von Wanddurchbrüchen  500 bis 1.000 cm2;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0060;Verschluss mit Ortbeton nach erfolgter;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0070;Verschluss mit Ortbeton nach erfolgter;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0080;Verschluss mit Ortbeton nach erfolgter;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0090;Verschluss mit Ortbeton nach erfolgter;38,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0100;Verschluss mit Ortbeton/Mauerwerk/Vergussmörtel nach erfolgter Installation einschl. evtl. erforderlicher Schalung.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0110;Verschluss mit Ortbeton/Mauerwerk/Vergussmörtel nach erfolgter Installation einschl. evtl. erforderlicher Schalung.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Mauerwerk DIN 1053 aus Kalksandstein;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Mauerwerk DIN 1053 aus Kalksandstein;91,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;Mauerwerk DIN 1053 aus Kalksandstein;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0040;für Wandstärke 30 cm;7,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0050;Fertigteilstürze für KS Mauerwerk der vorgenannten;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0060;Fertigteilstürze für KS Mauerwerk der vorgenannten;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0070;Mauerwerk DIN 1053 aus Porenbeton PP2-0,35-DBM;59,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0080;Mauerwerk DIN 1053 aus Porenbeton PP2-0,35-DBM;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0090;Mauerwerk DIN 1053 aus Porenbeton PP2-0,35-DBM;7,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0100;Mauerwerk DIN 1053 aus Porenbeton PP2-0,35-DBM;14,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0110;für Wandstärke 30 cm;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0120;Fertigteilstürze für Porenbeton-Mauerwerk der vorgenannten;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0130;Fertigteilstürze für Porenbeton-Mauerwerk der vorgenannten;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0140;Fertigteilstürze für Porenbeton-Mauerwerk der vorgenannten;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0150;Öffnungen im Mauerwerk nach Zeichnung und Angabe;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0160;Öffnungen im Mauerwerk nach Zeichnung und Angabe;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0170;Öffnungen im Mauerwerk nach Zeichnung und Angabe;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0180;Vorhandene Kellerfenster ausbauen, Laibung säubern und von Dichtungsmaterial etc. befreien und Abbruchmaterial unter Berücksichtigung der Umweltauflagen fachgerecht Entsorgung.;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0190;vorhandene Fensteröffnungen aus MW-Wände;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0200;vorhandene Heizkörpernische in MW-Wände;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0210;vorhandene Türöffnungen aus MW-Wände;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0220;vorhandene Türöffnungen aus MW-Wände;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0230;Min. Haustrennwand-Platte, d = 40 mm;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0240;Mauerwerk DIN 1053 aus Kalksandstein;1,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0250;Liefern und einbauen einer besandeten Bitumendachbahn R500 rnit Rohfilzeinlagen Dicke = 3mm, nach DIN EN 13969 in Verbindung mit DIN V 20000-202;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0260;Maueranschlussschiene für den Anschluss der;270,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0270;Maueranschlussanker, passend zur vorgenannten Anschlussschiene für den Anschluss der;600,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0280;Herstellen von Wanddurchbrüchen bis 500 cm2;23,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0290;Wanddurchbrüche wie vor, jedoch;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0300;Wanddurchbrüche wie vor, jedoch;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0310;Verschluss mit Ortbeton/Mauerwerk/Vergussmörtel nach erfolgter Installation einschl. evtl. erforderlicher Schalung.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0320;Wanddurchbrüche wie vor, jedoch;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0330;Wanddurchbrüche wie vor, jedoch;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Mauerwerk aus Kalksandstein,;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Mauerwerk aus Kalksandstein,;6,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;Mauerwerk aus Kalksandstein,;7,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0040;Vollfugige Untermörtelung MG lll, d 17,5-30 mm;23,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0050;Öffnungen im Mauerwerk nach Zeichnung und Angabe;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0060;Fertigteilstürze für KS Mauerwerk der vorgenannten;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0070;Liefern und einbauen einer besandeten Bitumendachbahn G 200 DD, nach DIN EN 13969 in Verbindung mit DIN V 20000-202 im Mauerwerk KG;12,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0080;Herstellen von Wanddurchbrüchen bis 500 cm2;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Es ist die Werk- und Montageplanung zu erstellen und zur Freigabe vorzulegen, unter Einhaltung der gesetzlichen Bestimmungen. Änderungen und Korrekturen sind zu übernehmen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Stahlkonstruktion Innenhof wie folgt beschrieben:;2,3;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;Stahlkonstruktion wie folgt beschrieben:;0,7;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0040;Stahlkonstruktion wie folgt beschrieben:;0,08;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0050;Stahlkonstruktion wie folgt beschrieben:;0,1;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0060;Stahlkonstruktion wie folgt beschrieben:;0,2;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0070;Stahlkonstruktion Innenhof wie folgt beschrieben:;0,025;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0080;Stahlkonstruktion wie folgt beschrieben:;0,04;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0090;Stahlkonstruktion wie folgt beschrieben:;0,5;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0100;Stahlkonstruktion wie folgt beschrieben:;0,04;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0110;Stahlkonstruktion wie folgt beschrieben:;0,25;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0120;Stahlkonstruktion Sporthalle wie folgt beschrieben:;0,06;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0130;Stahlkonstruktion Sporthalle wie folgt beschrieben:;0,15;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0140;Stahlkonstruktion Sporthalle wie folgt beschrieben:;0,02;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0150;Stahlkonstruktion Sporthalle wie folgt beschrieben:;0,15;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0160;Stahlkonstruktion Sporthalle wie folgt beschrieben:;0,02;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0170;Stahlkonstruktion Sporthalle wie folgt beschrieben:;0,02;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0180;Stahlkonstruktion Sporthalle wie folgt beschrieben:;0,15;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0190;Zulage für den Einbau der vorbeschriebenen stat Pos. 50+51+52+53 (HEA 120) für Einbau in der Sporthalle;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0200;Stahlkonstruktion wie folgt beschrieben:;1,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0210;Stahlkonstruktion wie folgt beschrieben:;0,85;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0220;Stahlkonstruktion wie folgt beschrieben:;0,7;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0230;Stahlkonstruktion wie folgt beschrieben:;0,9;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0240;Stahlkonstruktion wie folgt beschrieben:;0,6;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0250;Stahlkonstruktion wie folgt beschrieben:;0,6;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0260;Stahlkonstruktion wie folgt beschrieben:;0,04;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Reinigen der abzudichtenden Flächen. Zementleim, Staub, Mörtelreste und Grate entfernen. Tragfähigen Untergrund herstellen.;170,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Reinigen und Grundieren der abzudichtenden, mineralischen Flächen mit lösemittelfreiem, verfestigendem Verkieselungskonzentrat (MV 1:1 in Wasser).;170,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;Fehlstellen, wie offene Fugen, Mörteltaschen oder Ausbrüche mit einem Mörtel aus flexibler, polymermodifzierter Dickbeschichtung (FPD) mit  Quarzsand-verschnitt (MV:1:1) verschließen.;40,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0040;Gereinigten Untergrund mit lösemittelfreiem, verfestigendem Verkieselungskonzentrat (MV 1:1 mit Wasser) grundieren und innerhalb der Reaktionszeit der Grundierung starre, zementgebundene Dichtungsschlämme auftragen. Dichtungskehle aus wasserdichtem, sulfatbeständigem Mörtel mit einer Schenkellänge v;36,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0050;Sockelabdichtung mit 2-komp., flexibler, polymermodifizierter Dickbeschichtung (FPD), Rissüberbrückung > 2 mm, bis 1 bar druckwasserdicht nach 18 Std. (5°C und 90% r.F.), herstellen. Abdichtung in zwei Arbeitsgängen, 20 cm überlappend auf die erdberührte Bauwerksabdichtung bis mind. 30 cm über OK Ge;170,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0060;Zulage zur Abdichtung der Vorposition Sockelabdichtung, als Abdichtung bodentiefer Fenster-Türelemente bis auf die Rahmen bodentiefer Fenster-Türelemente aus Holz oder Kunststoff führen.;70,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0070;Zulage zur Vorposition für die Ausführung von Innen- und Außenecken im Grundriß bei der Herstellung von systemkonformen Ecken im Bereich der Fensterfußpunkteindichtungen.;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0080;Sockeldämmung bestehend aus:;144,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0090;Sockeldämmung wie vor, jedoch;16,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0100;Sockeldämmung wie vor, jedoch;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0110;Verrottungs- und wurzelfeste Noppenbahn als Anfüllschutzbahn;170,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0120;Zulage zu vorbeschriebener Sockelabdichtung für die Einbettung eines Dichtbandes an Innenecken und Fugen / Übergängen zu nichtmineralischen Bauteilen mit einem vliesbeschichteten Dichtband auf NBR-Kautschuk-Basis.;110,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung des AG ausführen. Der Verrechnungssatz für die jeweilige Arbeitskraft umfasst sämtliche Aufwendungen, insbesondere den tatsächlichen Lohn einschließlich vermögenswirksamer Leistungen mit den Zuschlägen für Gemeinkosten (Sozialkassenbeiträge, Wint;20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung des AG ausführen. Der Verrechnungssatz für die jeweilige Arbeitskraft umfasst sämtliche Aufwendungen, insbesondere den tatsächlichen Lohn einschließlich vermögenswirksamer Leistungen mit den Zuschlägen für Gemeinkosten (Sozialkassenbeiträge, Wint;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Abwasserkanal aus PP-MD (Polypropylen mit mineralischen Additiven)-Vollwandrohren DIN EN 14758-1, mit Steckverbindung, DN/OD 110, Verlegung DIN EN 1610 in vorh. verbautem Graben, Bettung wird gesondert vergütet,;237,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Abwasserkanal aus PP-MD (Polypropylen mit mineralischen Additiven)-Vollwandrohren DIN EN 14758-1, mit Steckverbindung, DN/OD 125, Verlegung DIN EN 1610 in vorh. verbautem Graben, Bettung wird gesondert vergütet,;76,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;Abwasserkanal aus PP-MD (Polypropylen mit mineralischen Additiven)-Vollwandrohren DIN EN 14758-1, mit Steckverbindung, DN/OD 160, Verlegung DIN EN 1610 in vorh. verbautem Graben, Bettung wird gesondert vergütet,;159,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0040;Abwasserkanal aus PP-MD (Polypropylen mit mineralischen Additiven)-Vollwandrohren DIN EN 14758-1, mit Steckverbindung, DN/OD 200, Verlegung DIN EN 1610 in vorh. verbautem Graben, Bettung wird gesondert vergütet,;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0050;Abwasserkanal aus PP-MD (Polypropylen mit mineralischen Additiven)-Vollwandrohren DIN EN 14758-1, mit Steckverbindung, DN/OD 250, Verlegung DIN EN 1610 in vorh. verbautem Graben, Bettung wird gesondert vergütet,;21,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0060;Bogen, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 110, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;95,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0070;Bogen, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 125, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0080;Bogen, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 160, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0090;Bogen, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 200, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0100;Bogen, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 250, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0110;Abzweig, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 110, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0120;Abzweig, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 125, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0130;Abzweig, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 160, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0140;Abzweig, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 200, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;19,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0150;Abzweig, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 250, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0160;Reduzierstück, exzentrisch, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 125, 2. DN 110, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0170;sonst wie zuvorbeschrieben. Abrechnung nach größter Nennweite.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0180;sonst wie zuvorbeschrieben. Abrechnung nach größter Nennweite.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0190;sonst wie zuvorbeschrieben. Abrechnung nach größter Nennweite.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0200;Muffenstopfen, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 110, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;67,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0210;Muffenstopfen, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 125, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0220;Muffenstopfen, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 160, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0230;Muffenstopfen, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 200, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0240;Muffenstopfen, Formstück aus PP-MD (Polypropylen mit mineralischen Additiven) DIN EN 14758-1, für Abwasserkanal, Steckverbindung, DN/OD 250, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0250;Anschluss an bauseitigen Fettabscheider, mit zuvor beschriebenem Abwasser-Grundleitungsrohr. zwei Anschlüsse bis DN 125. Bis 2 m Tiefe.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0260;im Zuege der Leerrohrverlegung für die Wärmepumpen zugdraht mit einziehen. Länge maximal 50 m.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Schachttiefe:bis 2,0 m (KD - KS);1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Schachttiefe:bis 2,5 m (KD - KS);1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;Schachttiefe:bis 2,5 m (KD - KS);1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0040;Schachttiefe:bis 2,0 m (KD - KS);1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0050;Schachttiefe:bis 2,5 m (KD - KS);1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0060;Schachttiefe:bis 2,5 m (KD - KS);1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0070;Schachttiefe:bis 2,5 m (KD - KS);1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0080;Kontroll-/Spülschacht DN 400 für zuvor beschriebene Grundleitungen, ohne Sandfang, mit zwei Anschlüssen DN 160, Steigrohr und Schacht­deckel Klasse A15 aus Gußeisen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0090;Kontroll-/Spülschacht DN 400 für zuvor beschriebene Grundleitungen, ohne Sandfang, mit zwei Anschlüssen DN 160, Steigrohr und Schacht­deckel Klasse A15 aus Gußeisen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0100;Kontroll-/Spülschacht DN 400 für zuvor beschriebene Grundleitungen, ohne Sandfang, mit zwei Anschlüssen DN 200, Steigrohr und Schacht­deckel Klasse A15 aus Gußeisen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0110;Mehr-Schachttiefe von 50 cm, als Mehrkosten zu zuvor beschriebenen Revisionsschächten NW 1000 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0120;Anschluss an vorh. Bestandsschächte, 2 Anschlußrohre 110/110;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0130;Anschluss an vorh. Bestandsschächte, 2 Anschlußrohre 160/160;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0140;Anschluss an vorh. Bestandsschächte, 2 Anschlußrohre 200/200;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0150;Anschluss an vorh. Bestandsschächte, 2 Anschlußrohre 250/200;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0160;Anschluss an vorh. Bestandsschächte, 2 Anschlußrohre 250/250;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0170;Absturz außenliegend, mit Rohren und Formstücken aus KG-Rohr DN 110, Absturzhöhe unter 2,00 m, gemessen von Sohle Zulauf bis Sohle Einlauf, einschl. Ummantelung und Abstützung aus Beton, Rohr- und zusätzlichem Schachtanschluss, als Mehrkosten zu zuvor beschriebenem Revisionsschacht und Grundleitung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0180;Absturz außenliegend, mit Rohren und Formstücken aus KG-Rohr DN 160, Absturzhöhe unter 2,00 m, gemessen von Sohle Zulauf bis Sohle Einlauf, einschl. Ummantelung und Abstützung aus Beton, Rohr- und zusätzlichem Schachtanschluss, als Mehrkosten zu zuvor beschriebenem Revisionsschacht und Grundleitung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0190;Absturz außenliegend, mit Rohren und Formstücken aus KG-Rohr DN 200, Absturzhöhe unter 2,00 m, gemessen von Sohle Zulauf bis Sohle Einlauf, einschl. Ummantelung und Abstützung aus Beton, Rohr- und zusätzlichem Schachtanschluss, als Mehrkosten zu zuvor beschriebenem Revisionsschacht und Grundleitung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0200;Absturz außenliegend, mit Rohren und Formstücken aus KG-Rohr DN 250, Absturzhöhe unter 2,00 m, gemessen von Sohle Zulauf bis Sohle Einlauf, einschl. Ummantelung und Abstützung aus Beton, Rohr- und zusätzlichem Schachtanschluss, als Mehrkosten zu zuvor beschriebenem Revisionsschacht und Grundleitung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Mediendurchführung, einfach, rund,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Die Grundleitungsanschlüsse sind vor dem Betonieren der Bodenplatte senkrecht auszurichten. Die ausgerichteten Anschlüssen sind gegen ein Verdrehen oder ein Verschieben während der Betonierarbeiten zu schützen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;Mediendurchführung, einfach, rund,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0040;Mediendurchführung, einfach, rund, einschl. Deckel,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0050;Mediendurchführung, einfach, rund, einschl. Deckel,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0060;Mediendurchführung, einfach, rund, einschl. Deckel,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0070;Nachträgliches Abdichten von Aussparungen rund, Durchmesser über 10 bis 25 cm, passend zur Flächenabdichtung mit kunststoffmodifizierter Bitumen-Dickbeschichtung.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0080;Anschluss der vorstehend beschriebenen Grundleitungen an die Rohrenden der innerhalb/unterhalb der Gebäude vorverlegten SW-/RW-Kanalleitung DN 100 - 150, einschl. Muffen, Paßstücke etc.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Kernbohrung, Untergrundfläche senkrecht, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 100 bis 150 mm, Bohrtiefe über 25 bis 30 cm, Wichte des Abbruchstoffes DIN EN 1991-1-1 24 kN/m3,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Kernbohrung, Untergrundfläche senkrecht, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 150 bis 200 mm, Bohrtiefe über 25 bis 30 cm, Wichte des Abbruchstoffes DIN EN 1991-1-1 24 kN/m3, Arbeitshöhe bis 3,5 m über der Standfläche des hierfür erforderlichen Gerüstes,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;Kernbohrung, Untergrundfläche senkrecht, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 200 bis 250 mm, Bohrtiefe über 25 bis 30 cm, Wichte des Abbruchstoffes DIN EN 1991-1-1 24 kN/m3, Arbeitshöhe bis 3,5 m über der Standfläche des hierfür erforderlichen Gerüstes,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;für die komplette Anlage einschl. aller Nebenkosten sowie Übergabe an den Fachplaner zur Weiterleitung an den Bauherrn. Herstellen einer Funktionsbeschreibung.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Erstellung der Revisionsunterlagen einschl. aller Nebenkosten sowie Übergabe an den Fachplaner zur Weiterleitung an den Bauherrn.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;Druck- und Dichtigkeitsprobe für die vorstehend beschriebenen Grundleitungen und Schächte, einschl. der Leitungen innerhalb (unterhalb) der Gebäude auch in Teilbereichen,;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0010;Boden der Leitungsgräben bis 0,50 m Tiefe in Schottertragschicht der vorhandenen Tragschichten unter Pflasterung,;46,33;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0020;Boden der Gräben für Entwässerungskanalarbeiten einschl. Schächte, profilgerecht ausheben, seitlich lagern und verfüllen.;140,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0030;Boden der Gräben für Entwässerungskanalarbeiten einschl. Schächte, wie in Vorposition beschrieben, jedoch;130,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0040;Boden der Gräben für Entwässerungskanalarbeiten einschl. Schächte, wie in Vorposition beschrieben, jedoch;220,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0050;Rohrgrabenverbau nach Wahl des AN der Gräben für Entwässerungskanalarbeiten einschl. Schächte,;840,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0060;als Zulage zu den vorgenannten Rohrgräben für eine offene Grundwasserhaltung für Rohrgräben bis Tiefe 2,50m.;210,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0070;Steinfreien Sand schichtenweise liefern, einbauen und verdichten, für Einbettung von Rohrleitungen,;177,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0080;Grundposition: Abfuhr und Entsorgung des Aushubmaterials aus Vorpositionen Rohrgräben für Boden der Zuordnungsgruppe BM-0* nach EBV,;860,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0090;Zulage zu Grundposition 02.03.80, aber hier Zuordnungsgruppe BM-0* nach EBV;250,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0100;Zulage zu Grundposition 02.03.80, aber hier Zuordnungsgruppe BM-F1 nach EBV;100,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0110;Zulage zu Grundposition 02.03.80, aber hier Zuordnungsgruppe BM-F2 nach EBV;100,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83
+0120;Zulage zu Grundposition 02.03.80, aber hier Zuordnungsgruppe BM-F3 nach EBV;100,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/ZGM 2023-05_31.X83

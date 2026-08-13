@@ -1,0 +1,691 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Rohr;15,2;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+2;Rohr;52,3;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+3;Rohr;8,6;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+4;Rohr;60,6;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+5;wie vor, jedoch Bogen Größe: DN 50;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+6;wie vor, jedoch Bogen Größe: DN 70;14,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+7;wie vor, jedoch Bogen Größe: DN 90;7,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+8;wie vor, jedoch Bogen Größe: DN 100;19,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+9;desgl. wie vor, jedoch Größe: DN 50;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;desgl. wie vor, jedoch Größe: DN 70;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+11;desgl. wie vor, jedoch Größe: DN 90;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+12;desgl. wie vor, jedoch Größe: DN 100;14,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+13;desgl. wie vor, jedoch Größe: DN 100;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+14;desgl. wie vor, jedoch Größe: DN 70;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+15;desgl. wie vor, jedoch Größe: DN 70;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+16;desgl. wie vor, jedoch Größe: DN 90;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+17;desgl. wie vor, jedoch Größe: DN 100;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+18;PP-Abwasserrohre DN 50;49,9;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+19;PP-Abwasserrohre DN 70;12,8;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+20;PP-Abwasserrohre DN 90;15,2;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+21;PP-Abwasserrohre DN 100;34,6;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+22;desgl. wie vor, jedoch Größe: DN 50;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+23;desgl. wie vor, jedoch Größe: DN 70;8,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+24;desgl. wie vor, jedoch Größe: DN 90;12,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+25;desgl. wie vor, jedoch Größe: DN 100;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+26;desgl. wie vor, jedoch Größe: DN 50;72,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+27;desgl. wie vor, jedoch Größe: DN 70;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+28;desgl. wie vor, jedoch Größe: DN 90;34,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+29;desgl. wie vor, jedoch Größe: DN 100;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+30;desgl. wie vor, jedoch;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+31;desgl. wie vor, jedoch;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+32;desgl. wie vor, jedoch;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+33;desgl. wie vor, jedoch;68,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+34;desgl. wie vor, jedoch;20,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+35;desgl. wie vor, jedoch;52,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+36;desgl. wie vor, jedoch;44,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+37;Flachdachhaube bestehend aus:;9,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+38;bestehende Grundleitungsanschlüsse soweit einsehbar prüfen. Mit Wasser spülen und ein störungsfreies Ablaufen prüfen und;22,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+39;Anschlüsse DN 100  an die vorhandenen;22,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+40;Anschlüsse DN 100 an die bauseits;9,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+41;Rohrbelüfter nach EN 12380;7,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+42;Klimagerät UP-Sifon DN32;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+43;Schutzschlauch  5 x 100mm;34,6;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+44;desgl. wie vor jedoch;15,2;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+45;desgl. wie vor jedoch;12,8;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+46;desgl. wie vor jedoch;49,9;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+47;Schutzschlauch  9 x 100mm;60,6;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+48;desgl. wie vor jedoch;8,6;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+49;desgl. wie vor jedoch;52,3;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+50;desgl. wie vor jedoch;15,2;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+51;Wickelstreifen;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+52;Technische Vorbemerkung zur Kältedämmung an Rohrleitungen und verfahrenstechnischen Anlagen zur Tauwasserverhinderung & Energieeinsparung - Dämmung von Kunststoff- und Mehrschichtverbundrohren Øa <= 160 mm;27,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+1;Rohr 1.4521;54,6;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+2;Rohr 1.4521;17,4;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+3;Rohr 1.4521;129,9;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+4;Rohr 1.4521;70,6;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+5;Rohr 1.4521;35,3;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+6;Bogen;35,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+7;Bogen;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+8;Bogen;75,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+9;Bogen;45,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;Bogen;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+11;T-Stück;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+12;T-Stück;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+13;T-Stück;13,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+14;T-Stück;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+15;T-Stück;7,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+16;Muffe;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+17;Muffe;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+18;Muffe;20,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+19;Muffe;18,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+20;Muffe;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+21;Reduzierung;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+22;Reduzierung;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+23;Reduzierung;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+24;Reduzierung;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+25;Gewinde-Übergangsstück;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+26;Gewinde-Übergangsstück;7,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+27;Gewinde-Übergangsstück;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+28;Gewinde-Übergangsstück;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+29;Gewinde-Übergangsstück;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+30;Wandscheibe;20,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+31;Wandscheibe;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+32;Wandscheibe;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+33;Doppelwandscheibe;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+34;Schallschlucker,;27,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+35;Schallschlucker;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+36;Dichtmanschette zur Abdichtung gegen;32,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+37;PE-Xc/Al/PE-Xc-Rohr,;10,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+38;zuvor beschriebenes Rohr mit 13mm Dämmung,;18,1;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+39;zuvor beschriebenes Rohr mit 13mm Dämmung,;45,9;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+40;zuvor beschriebenes Rohr mit 13mm Dämmung,;12,8;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+41;Bogen,;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+42;Bogen,;12,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+43;Bogen,;20,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+44;Bogen,;8,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+45;T-Stück,;31,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+46;T-Stück,;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+47;T-Stück,;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+48;T-Stück,;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+49;Kupplung,;12,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+50;Kupplung,;8,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+51;Kupplung,;8,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+52;Kupplung,;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+53;Kupplung,;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+54;Übergangsstück,;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+55;Übergangsstück,;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+56;Übergangsstück,;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+57;Übergangsstück,;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+58;Übergangsstück,;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+59;Wandscheibe,;8,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+60;Wandscheibe,;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+61;Doppelwandscheibe,;12,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+62;Doppelwandscheibe,;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+63;Übergangsstück,;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+64;Übergangsstück,;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+65;Schallschlucker,;12,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+66;Schallschlucker;18,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+67;Montageschiene Ausführungen (B x H x s);10,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+68;Wandplatte für vorbenannter-Profilschiene zur Wand- und Deckenbefestigung geeignet.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+69;Schienenendstopfen als optischer und funktionaler Schienenabschluss.;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+70;C-Profil mit durchgehender Lochung  38x40x2;10,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+71;Hammerkopfbefestigung M10x50 mm zu vorgenannter Profilschiene;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+72;Hammerkopfbefestigung M10x50 mm zu vorgenannter Profilschiene;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+73;Gewindestangen zur Anbindung an Bauteilen mit Gewindeanschluss;15,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+74;Gewindestangen zur Anbindung an Bauteilen mit Gewindeanschluss;1,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+75;Material: Stahl;40,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+76;Sechskantmuttern M10 - DIN 934 - galvanisch verzinkt - Festigkeitsklasse 8;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+77;Unterlegscheiben 10,5 x 30 x 4 mm, Galvanisch verzinkt;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+78;Bolzenanker (Kohlenstoffstahl) für höchste Leistung in gerissenem Beton und bei seismischen Lasten;40,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+79;Schraubanker / Betonschraube Sechskantkopf;50,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+80;Rohrschelle mit Schallschutzeinlage und;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+81;Rohrschelle mit Schallschutzeinlage und;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+82;Rohrschelle mit Schallschutzeinlage und;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+83;Rohrschelle mit Schallschutzeinlage und;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+84;Rohr 1.4521;15,9;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+85;Rohr 1.4521;8,2;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+86;Rohr 1.4521;85,5;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+87;Rohr 1.4521;45,2;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+88;Rohr 1.4521;20,6;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+89;Bogen;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+90;Bogen;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+91;Bogen;40,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+92;Bogen;28,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+93;Bogen;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+94;T-Stück;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+95;T-Stück;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+96;T-Stück;7,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+97;T-Stück;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+98;T-Stück;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+99;Muffe;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+100;Muffe;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+101;Muffe;12,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+102;Muffe;7,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+103;Muffe;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+104;Reduzierung;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+105;Reduzierung;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+106;Reduzierung;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+107;Reduzierung;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+108;PE 100 RC-Vollwandrohr;30,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+109;Reduzierstück Rotguss, Siliziumbronze oder Kupfer-;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+110;Reduzierstück Rotguss, Siliziumbronze oder Kupfer-;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+111;Reduzierstück Rotguss, Siliziumbronze oder Kupfer-;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+112;Muffe Rotguss, Siliziumbronze oder Kupfer-;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+113;"Anschlussverschraubung 20 mm x 1/2"" AG";2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+114;desgl. wie vor, jedoch als Winkelverschraubung;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+115;desgl. wie vor, jedoch als T-Stck;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+116;Montageschiene Ausführungen (B x H x s);8,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+117;Wandplatte für vorbenannter-Profilschiene zur Wand- und Deckenbefestigung geeignet.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+118;Schienenendstopfen als optischer und funktionaler Schienenabschluss.;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+119;C-Profil mit durchgehender Lochung  38x40x2;5,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+120;Hammerkopfbefestigung M10x50 mm zu vorgenannter Profilschiene;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+121;Hammerkopfbefestigung M10x50 mm zu vorgenannter Profilschiene;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+122;Gewindestangen zur Anbindung an Bauteilen mit Gewindeanschluss;8,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+123;Gewindestangen zur Anbindung an Bauteilen mit Gewindeanschluss;1,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+124;Material: Stahl;30,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+125;Sechskantmuttern M10 - DIN 934 - galvanisch verzinkt - Festigkeitsklasse 8;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+126;Unterlegscheiben 10,5 x 30 x 4 mm, Galvanisch verzinkt;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+127;Bolzenanker (Kohlenstoffstahl) für höchste Leistung in gerissenem Beton und bei seismischen Lasten;40,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+128;Schraubanker / Betonschraube Sechskantkopf;50,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+129;Rohrschelle mit Schallschutzeinlage und;55,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+130;Rohrschelle mit Schallschutzeinlage und;140,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+131;Rohrschelle mit Schallschutzeinlage und;85,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+132;Rohrschelle mit Schallschutzeinlage und;32,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+1;Geschlossenzelliges Dämmmaterial,;18,4;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+2;desgl. wie vor, jedoch;40,5;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+3;desgl. wie vor, jedoch;33,2;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+4;Rohrdämmung bestehend aus;12,5;lfm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+5;desgl. wie vor jedoch;5,5;lfm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+6;desgl. wie vor jedoch;17,5;lfm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+7;desgl. wie vor jedoch;20,5;lfm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+8;desgl. wie vor jedoch;16,5;lfm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+9;desgl. wie vor jedoch Wärmedämmungspassstück;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;desgl. wie vor jedoch  Ausschnitt Wärmedämmung;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+11;Klebeband, 30 mm, grau;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+12;"Dämmung von 65;Heizungs- und Warmwasser-Rohrleitungen nach der EnEV  Anforderung:";24,8;lfm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+13;desgl. wie vor jedoch;10,3;lfm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+14;desgl. wie vor jedoch;157,4;lfm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+15;desgl. wie vor jedoch;76,9;lfm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+16;desgl. wie vor jedoch;39,4;lfm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+17;desgl. wie vor jedoch Wärmedämmungspassstück;25,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+18;desgl. wie vor jedoch  Ausschnitt Wärmedämmung;85,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+19;Wickelstreifen zur nachträglichen Dämmung von Rohrverbindungen und als Körperschalldämmung;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+20;verzinkter Wickeldrahlt 0,7 mm;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+1;R90 Brandschutz-Rohrabschottung um nichtbrennbare;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+2;desgl. wie vor jedoch;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+3;desgl. wie vor jedoch;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+4;desgl. wie vor jedoch;7,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+5;desgl. wie vor jedoch;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+6;Erstellen von feuerbeständigen F-90 Decken- und Wandverschlüssen in fix und fertiger Arbeit, inkl. Schalmaterial, in F90 mit einem Brandschutzmörtelsystem im Verpressverfahren unter Zuhilfenahme von Verpresslanze bis zu einer Wand- und Deckenstärke von 24cm unter Berücksichtigung der teilweise beeng;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+7;desgl. wie vor jedoch bis 0,20 m²;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+8;desgl. wie vor jedoch bis 0,30 m²;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+9;Abwasser Brandschutzmanschette DN 100 geprüft und zugelassen vom Deutschen Institut für Bautechnik;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;desgl. wie vor, jedoch;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+11;desgl. wie vor, jedoch;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+12;desgl. wie vor, jedoch;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+13;Brandschutzabschottung von Kabeltrassen, Kabeln, brennbaren und nichtbrennbaren Rohren mit Brandschutzmörtel, in Massiver Wand oder Decke Feuerwiderstandsklasse S 90 DIN 4102-9, mitbauaufsichtlicher Zulassung, Zulassungsart DIBt (deutsche Zulassung), Nachbelegung uneingeschränkt gefordert, Abstand z;15,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+14;Feuerbeständige Verfüllung von Fugen zwischen Brandschutzdurchführungen und den umgebenden Wand- und Deckenbereichen mittels selbstverdichtenden, rauchgasdichtem;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+15;Beschilderung und Bezeichnung der;12,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+1;Wasserzähler-Anschlussbügel waagerecht;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+2;Automatik-Rückspül-Schutzfilter;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+3;Ventilgehäuse und -oberteil aus;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+4;desgl. wie vor jedoch DN 20;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+5;desgl. wie vor jedoch DN 25;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+6;desgl. wie vor jedoch DN 32;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+7;Freistrom-Kombi-Rückflussverhinderer, mit;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+8;Freistrom-Kombi-Rückflussverhinderer, mit;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+9;Freistrom-Absperrventile,;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;Freistrom-Absperrventile,;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+11;Freistrom-Absperrventile,;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+12;Freistrom-Absperrventile,;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+13;"Probenahmeventil DN 10 ( G 3/8""),";5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+14;Systemtrenner zum Schutz von Flüssigkeiten bis einschließlich Flüssigkeitskategorie 4 gemäß DIN EN 1717 . Wartungspflichtige Armatur nach DIN EN 806-5.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+15;Hygienespülung;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+16;Abdeckplatte für Hygienespülung;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+17;Set Kabel für Schnittstelle zu Hygienespülung;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+25;Fliesenrahmen;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+26;Frostfreien Gartenstandrohres DN 20 zur ganzjährigen Entnahme von Trinkwasser im Außenbereich.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+27;Frostsichere Außenarmatur, mit Steckschlüssel, Bausatzausführung, Bausatzausführung, geeignet für die Rohbauinstallation und für die nachträgliche Installation bei bereits fertiggestellter Außenwand, im geschlossenen Zustand mediumberührte Metallteile aus entzinkungsfreiem und korrosionsbeständigem ;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+1;Verwendungszwecke - Für Trockenbau - Zum Einbau in teil- oder raumhohe Vorwandinstallationen - Zum Einbau in raumhohe Installationswände - Zur Montage von Waschtischen - Für Standarmaturen - Für Fußbodenaufbauten 0-20 cm;26,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+2;Verwendungszwecke - Für Trockenbau - Zum Einbau in teil- oder raumhohe Vorwandinstallationen - Zum Einbau in raumhohe Installationswände - Zum Einbau in teil- oder raumhohe Systemwände - Für Wand-WCs mit Anschlussmaßen nach DIN EN 33:2011-11 - Für Wand-WCs mit Ausladung bis 62 cm - Für 1-Mengen-, 2-;16,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+3;Element für Wand-WC, 120 cm, mit Sigma UP-Spülkasten 12 cm, mit Hygienespülung;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+4;Netzteil für Power & Connect Box;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+5;Ausgussbecken-Montageelement 130 cm, Wandarmatur AP;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+6;Verwendungszwecke;11,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+7;Element für Waschtisch, barrierefreies Baden;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+8;Element f. WWC, 112 cm UP-SPK 12cm, BF,;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+9;Rohbauset mit Netzteil für WC-Steuerungen mit elektronischer;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;Verwendungszwecke - Zum Befestigen von  Montageelementen vor Trockenbau- und Massivwänden - Zum Befestigen der Beplankung bei teilhohen Vorwandinstallationen Eigenschaften - Von vorne stufenlos tiefenverstellbar, mit Schnelleinstellung - Wandanschluss 360G drehbar Technische Eigenschaften - Werkstof;59,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+11;Waschtisch, 55x44cm, m. Hl., m. Ül., weiß;24,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+12;Waschtisch, 60x48cm, m. Hl., m. Ül., weiß;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+13;"Schaftventil 1 1/4"" x D= 63 mm mit";23,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+14;Standventil, 1/2;16,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+15;Einhand-Sicherheitsmischbatterie 1/2;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+16;"Einhand-Sicherheitsmischbatterie 1/2"" für Waschtisch";1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+17;Selbstschluss-Standventil, 1/2;7,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+18;"Einhand-Spültischbatterie, 1/2"" integrierte Vorabsperrung";1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+19;Röhrensifon für Klassenzimmerbecken, Standardmodell, Chrom;26,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+20;Gummimanschette für Sifon;26,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+21;"Eckventil 1/2"" mit Regulierfunktion";28,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+22;Schallschutzset für Waschtisch, 240 x 750 x 5 mm, Schalldämmung bei Installation von Waschbecken.;26,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+23;Verwendungszwecke;17,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+24;Traditioneller WC-Sitz mit Sandwich Design;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+25;WC Sitz wie vor, jedoch als Sitzring ohne Deckel;11,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+26;WC-Betätigungsplatte;17,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+27;Für Wand-WC;17,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+28;Urinal Wandhängend ohne Deckel Abgang nach hinten;11,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+29;Urinal-Absaug-Siphon für waagerechten;11,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+30;Urinal-Zulaufgarnitur DN 15;11,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+31;Urinalsteuerung Netzbetrieb, Abdeckplatte, Round;11,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+32;Schallschutzset für Urinal;11,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+33;Ausgussbecken mit Überlauf;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+34;Wandausgussbecken, für Wandmontage, Chromnickelstahl, Oberfläche seidenmatt, Materialstärke 0,8 mm, fugenlos eingeschweißtes Becken, mit Klapprost und Spritzwand, Ablauf hinten mittig, Siebventil G 1 1/2 B, ohne Überlauf. Mit Wandwinkel als Ventilhalterung, inklusive Befestigungsmaterial.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+35;Auslaufventil, 1/2;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+36;Röhrengeruchverschluss, für Spülen,;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+37;Waschtisch barrierefrei;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+38;"Schaftventil 1 1/4"" x D= 63 mm mit";1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+39;Infrarot-Elektronik Armatur für Waschtisch 1/mit Mischung und variabel einstellbarem Temperaturbegrenzer;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+40;Fertigbauset für Waschtisch, mit UP-Geruchsverschluss;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+41;Schallschutzset für Waschtisch, 240 x 750 x 5 mm, Schalldämmung bei Installation von Waschbecken.;26,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+42;Wand-WC Tiefspüler, verlängerte Ausladung, barrierefrei Verwendungszwecke;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+43;WC Sitzring, antibakteriell;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+44;WC-Steuerung mit elektronischer Spülauslösung, Netzbetrieb,;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+45;Stützklappgriff;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+46;Stützklappgrif;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+47;Wandstützgriff;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+48;Befestigungsart;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+49;Aufrüstsatz WC-Papierhalter;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+50;Rückenstütze;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+51;Desinfektionsmittel- und Seifenspender, Spendergehäuse in Edelstahl gebürstet, mit Verschlussblende mit Sichtfenster zur Füllstandskontrolle,;8,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+52;Schaumseifenspender für 1.200 ml Schaumseife, Gehäuse Edelstahl gebürstet, transparent pulverbeschichtet gegen Finger- und Anlaufspuren, mit Edelstahl-Bedienhebel und herausnehmbarem Kunststoff-Nachfüllbehälter, Bedienung durch Drücken, Dosiermenge ca. 1,0 ml/Hub, mit Einheitsschloss und Sichtfenste;29,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+53;Papierhandtuchspender für bis zu 600 Falthandtücher, frei befüllbar mit handelsüblichen Falthandtüchern in C- oder V-Falzung, Edelstahl gebürstet, mit Einheitsschloss, Anti-Stau-Vorrichtung und Sichtfenster zur Füllstandskontrolle, Befüllung von vorne durch Herabklappen des Gehäuses,;19,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+54;Elektrischer Händetrockner Vandalensicherheit;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+55;Wandspiegel aus hochglanzpoliertem Edelstahl, unzerbrechlich, besonders geeignet für vandalismusgefährdete Bereiche, Größe optimiert für Fliesenraster, so dass der Spiegel zum zusätzlichen Schutz direkt auf dem Putz zwischen den Fliesen eingebettet werden kann, mit feuchtraumfester Trägerplatte, abg;7,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+56;VSG Kristallspiegel 1000 x 600 mm;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+57;VSG Kristallspiegel 800 x 600 mm;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+58;Abfallkorb mit 36 Liter Volumen, Edelstahl poliert, nach unten konisch zulaufend zur einfacheren Entnahme des Abfallbeutels, besonders feinmaschig, inklusive Befestigungsmaterial, mit Wandhalterung, für Aufputzmontage oder bodenstehend;9,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+59;WC-Papierspender für zwei Haushaltsrollen, Edelstahl gebürstet, transparent pulverbeschichtet, gegen Finger- und Anlaufspuren, mit seitlichen Schlitzen zur Füllstandskontrolle und Nachführung der nächsten Rolle, integrierte Haltespange für die zweite Rolle während des Abrollens der ersten Rolle, lee;11,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+60;WC-Bürstenhalter mit verdecktem Bürstenkopf/ Ausführung oben offen, Bürstenentnahme nach oben/ Behälter Edelstahl gebürstet, Innentopf und WC-Bürste aus schwarzem Kunststoff, Innentopf zur Reinigung herausnehmbar,;17,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+61;Hygieneabfallbehälter mit 8 Liter Volumen, mit an drei Seiten ansetzbarem Beutelhalter für ca. 50 einzelne Hygienebeutel aus Papier oder zwei Nachfüllkartons mit ca. 25 - 30 Hygienebeuteln aus Kunststoff, Edelstahl gebürstet, transparent pulverbeschichtet, gegen Finger- und Anlaufspuren, Montage des;16,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+62;WC-Papierhalter für 1 Haushaltsrolle;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+63;WC-Bürstengarnitung;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+64;WC-Papierhalter;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+65;Bodenablauf DIN EN 1253-1 mit Geruchverschluss mit einer Sperrwasserhöhe von mind. 50 mm, herausnehmbar, aus Kunststoff, Gehäuse aus PP, Abgang senkrecht, mit Klebeflansch, Anschluss DN 100, mit Aufsatzstück und Rostrahmen, Aufsatzstück aus Kunststoff, Höhe über 100 bis 150 mm, mit Abdeckplatte aus ;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+66;wie vor, jedoch mit rutschhemmendem Aufsatzrost;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+67;Bodenablauf DIN EN 1253-1 mit Geruchverschluss mit einer Sperrwasserhöhe von mind. 50 mm, herausnehmbar, aus Kunststoff, mit Brandschutzeinsatz, Gehäuse aus PP, Abgang senkrecht, mit Klebeflansch, Anschluss DN 100, mit Aufsatzstück und Rostrahmen, Aufsatzstück aus Kunststoff, Höhe über 100 bis 150 m;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+68;Anschlussfugen nach DIN 18540 mit geeigneter neutralvernetzender Masse.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+69;Hahnverlängerung, mit Innen- und;30,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+1;Mini-Durchlauferhitzer zur dezentralen Warmwasserversorgung von Einzelzapfstellen.;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+2;Elektro-Durchlauferhitzer, offen, hängende Anordnung, mit VDE-EMC-Zeichen, Geräuschverhalten DIN 4109-1 Gruppe I, mit Prüfbericht, für Überbeckenmontage, Bemessungsbetriebsspannung 400 V AC, Leistung 24 kW, elektronisch gesteuert, stufenlose Leistungsregelung, Temperatureinstellung von 35 bis 60 Gra;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+1;Durchbruch in bestehender Mauerwerkswand herstellen, inkl.;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+2;Schlitze in bestehender Mauerwerkswand herstellen, inkl.;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+3;Anzeichnen und Durchführung einer Kernbohrung Kernbohrungen durch Betondecke;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+4;Anzeichnen und Durchführung einer Kernbohrung Kernbohrungen durch Betondecke;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+5;Anzeichnen und Durchführung einer Kernbohrung Kernbohrungen durch Betondecke;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+6;Anzeichnen und Durchführung einer Kernbohrung Kernbohrungen durch Betondecke;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+7;Stundenlohnarbeiten Facharbeiter einschl. aller Nebenkosten, wie Auslösung, Fahr- und Wegegeld, Unternehmerzuschlag;20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+8;Stundenlohnarbeiten Helfer einschl. aller Nebenkosten, wie Auslösung, Fahr- und Wegegeld, Unternehmerzuschlag etc.;20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+9;Stundenlohnarbeiten Helfer unter Einsatz eines Stemmhammers, Maschinenstunden, einschl. aller Nebenkosten, wie Auslösung, Fahr- und Wegegeld, Unternehmerzuschlag etc. Stundenlohnarbeiten sind dem;20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;Gestellung, Vorhaltung und Abtransport eines Fahrgerüstes für Montagearbeiten in einer Höhe bis 3,8 Meter über der Standfläche;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+11;Werks- und Montageplanung Gewerk Sanitär;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+12;Schacht und Brunnenschaum 750ml;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+13;Revisions-, Wartungs- und Bedienungsanweisungen;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+14;Dichtheits- und Belastungsprüfung des Trinkwassersystems;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+15;Spülen der Leitungsanlage gemäß DIN 1988-2;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+16;Einweisung des Bedienpersonals;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+17;Probenentnahme und mikrobiologische Analyse des Trinkwassernetz vor Inbetriebnahme des neuen Leitungsnetzes.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+18;Schutzabdeckung mit Abdeckvlies Liefern und Verlegen einer Schutzabdeckung aus Vliesstoff mit PE- Folie kaschiert, Stöße;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+19;Malerplane HDPE transparent - 10µm;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+20;Gestellung, Vorhaltung und Abtransport eines Fahrgerüstes für Montagearbeiten in einer Höhe bis 3,8 Meter über der Standfläche;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+21;Beschilderung und Bezeichnung der Bauteile mit vorgefertigten Schilderträger;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+1;Modulierende Wärmepumpe in Split-Ausführung zum Heizen, aktiven Kühlen (Option) und zur Warmwasserbereitung mit der Wärmequelle Luft. Bei diesem System wird das Wärmepumpen-Innenteil geschützt im Gebäude und der Horizontal-Split-Verdampfer als Wärmequelle im Freien aufgestellt.;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+2;Das Zusatzmodul A ist für eine Wandmontage ausgelegt. Die Kommunikation mit dem OTS-Regler erfolgt über eine Vierdraht-Busleitung. Zwischen dem Wärmepumpen-;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+3;Raumtemperatur- und Feuchtigkeitsfühler für Wandmontage, einfache Verkabelung durch 2-Draht-Leitung (KNX-Standard);1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+4;Hydraulik-Absperrset 2-fach;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+5;Trennspeicher inkl. Isolierung;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+6;"Tauchhülse 210 mm, 1/2""";4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+7;E-Heizstab 9 KW;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+8;Anbindeleitung-Set;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+9;Ummantelung aus feuerverzinktem Stahlblech, Dicke 0,6 mm,;20,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;Zulage für Bögen d=100 mm in allen Winkelgraden;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+11;Gehwegplatten 40cm x 40cm x 5cm;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+12;Bautenschutzmatte aus Gummigranulat;10,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+13;Dachdurchführung für Flachdach;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+14;Fuss-Gestell für Außeneinheit Wärmepumpe;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+15;Transport Wärmepumpen;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+1;Rohrleitungen aus Kupfer nach;70,1;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+2;wie vor, jedoch Größe: 18 x 1,0 mm;65,6;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+3;wie vor, jedoch Größe: 22 x 1,0 mm;22,3;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+4;wie vor, jedoch Größe: 28 x 1,0 mm;130,2;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+5;wie vor, jedoch Größe: 35 x 1,0 mm;70,6;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+6;wie vor, jedoch Größe: 42 x 1,5 mm;55,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+7;wie vor, jedoch Größe: 54 x 2,0 mm;18,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+8;wie vor, jedoch Größe: 76 x 2,0 mm;29,3;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+9;Bogen mit Pressverbindern Größe:  15;45,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;desgl. wie vor, jedoch Größe: 18;39,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+11;desgl. wie vor, jedoch Größe: 22;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+12;desgl. wie vor, jedoch Größe: 28;100,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+13;desgl. wie vor, jedoch Größe: 35;38,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+14;desgl. wie vor, jedoch Größe: 42;35,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+15;desgl. wie vor, jedoch Größe: 54;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+16;desgl. wie vor, jedoch Größe: 76;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+17;Reduzierung mit Pressverbindern Größe: 18 mm, aus Kupfer;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+18;desgl. wie vor, jedoch Größe: 22 mm;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+19;desgl. wie vor, jedoch Größe: 28 mm;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+20;desgl. wie vor, jedoch Größe: 35 mm;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+21;desgl. wie vor, jedoch Größe: 42 mm;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+22;desgl. wie vor, jedoch Größe: 54 mm;8,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+23;desgl. wie vor, jedoch Größe: 76 mm;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+24;desgl. wie vor, jedoch Größe: 80 mm;12,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+25;T-Stück mit Pressverbindern;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+26;desgl. wie vor, jedoch Größe: 18 mm;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+27;desgl. wie vor, jedoch Größe: 22 mm;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+28;desgl. wie vor, jedoch Größe: 28 mm;8,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+29;desgl. wie vor, jedoch Größe: 35 mm;24,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+30;desgl. wie vor, jedoch Größe: 42 mm;18,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+31;desgl. wie vor, jedoch Größe: 54 mm;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+32;desgl. wie vor, jedoch Größe: 76 mm;11,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+33;Muffe mit Pressverbindern Größe: 15;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+34;desgl. wie vor, jedoch Größe:  22 mm;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+35;desgl. wie vor, jedoch Größe:  28 mm;7,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+36;desgl. wie vor, jedoch Größe:  35 mm;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+37;desgl. wie vor, jedoch Größe:  42 mm;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+38;desgl. wie vor, jedoch Größe:  54 mm;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+39;desgl. wie vor, jedoch Größe:  76 mm;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+40;"Gewinde-Übergangsstück Größe: 15 mm x 1/2""";45,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+41;"Gewinde-Übergangsstück Größe: 22 mm x 3/4""";40,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+42;"Gewinde-Übergangsstück Größe: 28 mm x 1""";10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+43;"Gewinde-Übergangsstück Größe: 35 mm x 1 1/4""";5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+44;"Gewinde-Übergangsstück Größe: 42 mm x 11/2""";5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+45;"Gewinde-Übergangsstück Größe: 54 mm x 2""";12,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+46;"Gewinde-Übergangsstück Größe: 76 mm x 21/2""";15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+47;"Gewinde-Übergangsstück Größe: 80 mm x 3""";12,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+48;Überbogen Größe 15mm;33,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+49;PP-Abwasserrohre DN 50;31,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+50;wie vor, jedoch Bogen Größe: DN 50;9,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+51;Montageschiene Ausführungen (B x H);20,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+52;Wandplatte für vorbenannter-Profilschiene zur Wand- und Deckenbefestigung geeignet.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+53;Schienenendstopfen als optischer und funktionaler Schienenabschluss.;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+54;C-Profil mit durchgehender Lochung  38x40x2;10,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+55;Hammerkopfbefestigung M8x50 mm zu vorgenannter Profilschiene;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+56;Hammerkopfbefestigung M10x50 mm zu vorgenannter Profilschiene;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+57;Gewindestangen M8 zur Anbindung an Bauteilen mit Gewindeanschluss;15,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+58;Gewindestangen M10 zur Anbindung an Bauteilen mit Gewindeanschluss;1,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+59;Material: Stahl;35,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+60;Sechskantmuttern M10 - DIN 934 - galvanisch verzinkt - Festigkeitsklasse 8;60,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+61;Unterlegscheiben 10,5 x 30 x 4 mm, Galvanisch verzinbkt;60,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+62;Schraubanker / Betonschraube Sechskantkopf;25,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+63;Rohrschelle mit Schallschutzeinlage und;95,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+64;Rohrschelle mit Schallschutzeinlage und;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+65;Rohrschelle mit Schallschutzeinlage und;85,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+66;Rohrschelle mit Schallschutzeinlage und;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+67;Rohrschelle mit Schallschutzeinlage und;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+68;Rohrschelle mit Schallschutzeinlage und;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+69;Rohrschelle mit Schallschutzeinlage und;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+70;Rohrleitungen aus Kupfer nach;250,2;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+71;wie vor, jedoch Größe: 18 x 1,0 mm;50,3;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+72;wie vor, jedoch Größe: 22 x 1,0 mm;13,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+73;wie vor, jedoch Größe: 28 x 1,0 mm;130,8;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+74;wie vor, jedoch Größe: 35 x 1,0 mm;82,1;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+75;wie vor, jedoch Größe: 42 x 1,5 mm;30,4;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+76;Bogen mit Pressverbindern Größe:  15;165,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+77;desgl. wie vor, jedoch Größe: 18;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+78;desgl. wie vor, jedoch Größe: 22;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+79;desgl. wie vor, jedoch Größe: 28;60,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+80;desgl. wie vor, jedoch Größe: 35;35,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+81;desgl. wie vor, jedoch Größe: 42;12,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+82;Reduzierung mit Pressverbindern Größe: 18 mm, aus Kupfer;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+83;desgl. wie vor, jedoch Größe: 22 mm;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+84;desgl. wie vor, jedoch Größe: 28 mm;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+85;desgl. wie vor, jedoch Größe: 35 mm;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+86;desgl. wie vor, jedoch Größe: 42 mm;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+87;T-Stück mit Pressverbindern;20,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+88;desgl. wie vor, jedoch Größe: 18 mm;28,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+89;desgl. wie vor, jedoch Größe: 22 mm;22,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+90;desgl. wie vor, jedoch Größe: 28 mm;19,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+91;desgl. wie vor, jedoch Größe: 35 mm;32,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+92;desgl. wie vor, jedoch Größe: 42 mm;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+93;Muffe mit Pressverbindern Größe: 15;18,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+94;desgl. wie vor, jedoch Größe:  22 mm;28,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+95;desgl. wie vor, jedoch Größe:  28 mm;28,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+96;desgl. wie vor, jedoch Größe:  35 mm;18,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+97;desgl. wie vor, jedoch Größe:  42 mm;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+98;"Gewinde-Übergangsstück Größe: 15 mm x 1/2""";185,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+99;"Gewinde-Übergangsstück Größe: 22 mm x 3/4""";170,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+100;"Gewinde-Übergangsstück Größe: 28 mm x 1""";18,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+101;"Gewinde-Übergangsstück Größe: 35 mm x 1 1/4""";14,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+102;"Gewinde-Übergangsstück Größe: 42 mm x 11/2""";16,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+103;Montageschiene Ausführungen (B x H);20,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+104;Wandplatte für vorbenannter-Profilschiene zur Wand- und Deckenbefestigung geeignet.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+105;Schienenendstopfen als optischer und funktionaler Schienenabschluss.;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+106;C-Profil mit durchgehender Lochung  38x40x2;10,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+107;Hammerkopfbefestigung M8x80 mm zu vorgenannter Profilschiene;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+108;Hammerkopfbefestigung M10x80 mm zu vorgenannter Profilschiene;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+109;Gewindestangen M8 zur Anbindung an Bauteilen mit Gewindeanschluss;15,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+110;Gewindestangen M10 zur Anbindung an Bauteilen mit Gewindeanschluss;10,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+111;Material: Stahl;35,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+112;Sechskantmuttern M10 - DIN 934 - galvanisch verzinkt - Festigkeitsklasse 8;60,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+113;Unterlegscheiben 10,5 x 30 x 4 mm, Galvanisch verzinbkt;60,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+114;Schraubanker / Betonschraube Sechskantkopf;25,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+115;Rohrschelle mit Schallschutzeinlage und;250,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+116;Rohrschelle mit Schallschutzeinlage und;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+117;Rohrschelle mit Schallschutzeinlage und;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+118;Rohrschelle mit Schallschutzeinlage und;45,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+119;Rohrschelle mit Schallschutzeinlage und;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+1;Quadro Schlauchisolierung;85,3;lfm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+2;wie vor, jedoch Rohr Größe: 18 mm;13,5;lfm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+3;wie vor, jedoch Rohr Größe: 22 mm;18,9;lfm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+4;wie vor, jedoch Rohr Größe: 28 mm;21,2;lfm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+5;wie vor, jedoch Rohr Größe: 35 mm;1,0;lfm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+6;desgl. wie vor jedoch;90,5;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+7;desgl. wie vor jedoch;60,8;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+8;desgl. wie vor jedoch;12,3;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+9;desgl. wie vor jedoch;154,3;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;desgl. wie vor jedoch;100,2;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+11;desgl. wie vor jedoch;55,2;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+12;desgl. wie vor jedoch;17,1;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+13;desgl. wie vor jedoch;141,2;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+14;desgl. wie vor jedoch;39,3;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+15;desgl. wie vor jedoch;5,5;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+16;desgl. wie vor jedoch;84,8;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+17;desgl. wie vor jedoch;51,9;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+18;desgl. wie vor jedoch;28,9;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+19;desgl. wie vor jedoch;12,3;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+20;desgl. wie vor jedoch;29,3;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+21;Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 25, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, als Rohrschale, Dämmschichtdicke 20 mm, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar), Wärmeleitfähigkeit 0,035 W/(mK) bei 40 Grad C Mitteltem;5,5;lfm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+22;desgl. wie vor jedoch;11,2;lfm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+23;desgl. wie vor jedoch;15,6;lfm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+24;desgl. wie vor jedoch;6,2;lfm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+25;Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Dreiwege-Regelventil,;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+26;desgl. wie vor jedoch;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+27;desgl. wie vor jedoch;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+28;Wärmedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Flanschen-Absperrventil,;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+29;Wärmedämmung an Rohrleitungen als Kappenisolierung für Einbauteile;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+30;desgl. wie vor jedoch;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+31;desgl. wie vor jedoch;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+32;desgl. wie vor jedoch;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+33;desgl. wie vor jedoch;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+34;Ausschnitte an Wärmedämmung mit Blechmantel;18,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+35;Blenden, Rosetten, Deckel an Wärmedämmung mit;8,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+36;Wickelstreifen zur nachträglichen Dämmung von Rohrverbindungen und als Körperschalldämmung,;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+37;Kleber für die Verklebung des Dämmstoffs;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+38;selbstklebendes Aluklebeband.;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+39;verzinkter Wickeldrahlt 0,7 mm;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+1;R90 Brandschutz-Rohrabschottung um nichtbrennbare;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+2;desgl. wie vor jedoch;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+3;desgl. wie vor jedoch;8,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+4;desgl. wie vor jedoch;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+5;desgl. wie vor jedoch;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+6;Abwasser Brandschutzmanschette DN 50 geprüft und zugelassen vom Deutschen Institut für Bautechnik;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+7;Erstellen von feuerbeständigen F-90 Decken- und Wandverschlüssen in fix und fertiger Arbeit, inkl. Schalmaterial, in F90 mit einem Brandschutzmörtelsystem im Verpressverfahren unter Zuhilfenahme von Verpresslanze bis zu einer Wand- und Deckenstärke von 24cm unter Berücksichtigung der teilweise beeng;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+8;desgl. wie vor jedoch bis 0,20 m²;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+9;desgl. wie vor jedoch bis 0,30 m²;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;Brandschutzabschottung von Kabeltrassen, Kabeln, brennbaren und nichtbrennbaren Rohren mit Brandschutzmörtel, in Massiver Wand oder Decke Feuerwiderstandsklasse S 90 DIN 4102-9, mitbauaufsichtlicher Zulassung, Zulassungsart DIBt (deutsche Zulassung), Nachbelegung uneingeschränkt gefordert, Abstand z;15,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+11;Feuerbeständige Verfüllung von Fugen zwischen Brandschutzdurchführungen und den umgebenden Wand- und Deckenbereichen mittels selbstverdichtenden, rauchgasdichtem;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+12;Beschilderung und Bezeichnung der;28,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+1;Kombinierter Vor- und Rücklaufverteiler, bestehend aus Vierkantrohr mit nebeneinander angeordneten, durch  Trennwand geteilte Kammern aus schwarzem Stahlblech S235. Vor- und Rücklaufkammer sind durch eine 20 mm Luftschicht thermisch getrennt. Die Luftschicht dient zur Verringerung des Wärmeübergangs;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+2;Wärmedämmung für Verteiler, bestehend aus ineinander fassenden Halbschalen mit Endstücken. Individuelle und passgenaue Ausschnitte für alle Anschlussstutzen sind werksseitig vorgesehen. Die Halbschalen werden mittels nichtrostender Spannbänder und Schnellschraubverschlüsse montiert. Die Dämmschichts;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+3;Standkonsole für Verteiler;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+4;Bezeichnungsschild rot/blau;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+5;Entleerungsrinne;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+6;Standkonsole für Entleerungsrinne;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+7;Zwischenflansch -Absperrklappe DN 80, PN 6 10 16;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+8;Heizungs-Kugelhahn;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+9;Abnehmbare und wiederverwendbare;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;Heizungs-Kugelhahn;14,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+11;Abnehmbare und wiederverwendbare;14,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+12;Heizungs-Kugelhahn;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+13;Abnehmbare und wiederverwendbare;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+14;Heizungs-Kugelhahn;8,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+15;wie zuvor beschrieben, jedoch Ausführung;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+16;Abnehmbare und wiederverwendbare;7,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+17;Heizungs-Kugelhahn;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+18;Abnehmbare und wiederverwendbare;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+19;Heizungs-Kugelhahn;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+20;Abnehmbare und wiederverwendbare;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+21;Thermometer passend für Kugelhahn;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+22;wie vor beschrieben, jedoch;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+23;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, differenzdruckgeregelt, ausgerüstet zum Anschluss an die Gebäudeautomation (GA) DIN EN ISO 16484-3,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+24;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, differenzdruckgeregelt, ausgerüstet zum Anschluss an die Gebäudeautomation (GA) DIN EN ISO 16484-3,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+25;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, differenzdruckgeregelt, ausgerüstet zum Anschluss an die Gebäudeautomation (GA) DIN EN ISO 16484-3,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+26;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, differenzdruckgeregelt, ausgerüstet zum Anschluss an die Gebäudeautomation (GA) DIN EN ISO 16484-3,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+27;"Schwerkraftbremsen, DN 25 (1"")";4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+28;Dreiwege-Muffenmischer DR;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+29;Dreiwege-Muffenmischer DR;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+30;Stellantrieb VRM-N;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+31;Montage eines bauseits gelieferten Regelkugelhahn;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+32;Durchgangsumstellventil mit Antrieb, für Medium Heißwasser, Mediumstemperatur über 5 bis 120 Grad C, Umgebungstemperatur 0 bis 50 Grad C, kvs-Wert 10 m3/h, Sitzleckage max. 0,05 % vom Kvs-Wert, PN 16, Gewindeanschluss mit Anschlussverschraubungen, DN 25, Anschlussgewinde G 1 1/2 B, mit gleichprozent;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+33;Durchgangsumstellventil mit Antrieb, für Medium Heißwasser, Mediumstemperatur über 5 bis 120 Grad C, Umgebungstemperatur 0 bis 50 Grad C, kvs-Wert 16 m3/h, Sitzleckage max. 0,05 % vom Kvs-Wert, PN 16, Gewindeanschluss mit Anschlussverschraubungen, DN 40, Anschlussgewinde G 1 1/2 B, mit gleichprozent;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+34;Strangregulierventil;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+35;Strangregulierventil;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+36;Gewindeflansch PN 6 DN 65;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+37;Gewindeflansch PN 6 DN 80;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+38;"Bimetall-Thermometer, Messing 1/2"" x 40 mm. Gehäuse: ABS-Kunststoff schwarz (Ø 63 mm) Sichtscheibe: Kunststoff";20,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+39;Abscheider für Schmutz mit Magneten zur Magnetitabscheidung, Einbau waagerecht, aus Messing, für Heizungswasser, mit Dämmschalen, mit Flanschanschluss, max. Betriebstemperatur bis 70 Grad C,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+40;Abscheider für Mikroblasen und Luft, Einbau waagerecht, für Heizungswasser, mit Flanschanschluss, max. Betriebstemperatur bis 70 Grad C, Nenndruck 0,6 MPa (6 bar), DN 65.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+41;Kugelhahn für das Füllen und Entleeren von Heizungsanlagen, selbstdichtend mit Gewindeeinschneiddichtung aus EPDM. Schwere Bauform aus vernickeltem Pressmessing. Flügelgriff (rot) entsprechend dem Einsatzzweck abnehmbar. Hartverchromte Kugel mit vollem Durchgang in Teflon gelagert. Blindkappe mit Ed;20,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+42;Schnellentlüfter DN 15 1/2 10 bar, mit automatischer Absperrung;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+43;Druckmessgerät, Messsystem Rohrfeder DIN EN 837-1, ohne Zusatzeinrichtungen, Nenndruck 0,6 MPa (6 bar), Gehäuse aus nichtrostendem Stahl, ohne Rand, Gehäusenenngröße 80mm, Güteklasse 1,6, Anzeigebereich 0 bis 4 bar, Anschluss G 1/2 unten, mediumberührte Teile aus Messing einschließlich;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+44;Druckknopfhahn mit Prüfzeugnis, geprüft bis 4 bar, Nenndruck 0,6 MPa (6 bar), aus Messing, Anschluss Muffe-Muffe, Anschlussgewinde G 1/2.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+45;Sicherheitsventil mit Anlüftvorrichtung, bauteilgeprüft, federbelastet, für geschlossene Wasserheizungsanlagen DIN EN 12828, für Wasser, max. Betriebstemperatur bis 20 Grad C,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+46;Sicherheitsventil mit Anlüftvorrichtung, bauteilgeprüft, federbelastet, für geschlossene Wasserheizungsanlagen DIN EN 12828, für Wasser, max. Betriebstemperatur bis 20 Grad C,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+47;Membran-Druckausdehnungsgefäß für geschlossene Heiz- und Kühlwassersysteme. Gefäße sind konstruiert und gefertigt nach DIN EN 13831. Zulassung gemäß Richtlinie für Druckgeräte 2014/68/EU.;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+48;Kappenventil;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+49;"statisches Abgleichventil DN32 direkte Volumenstromanzeige, Solar HT Sichtglas aus hochwertigem Kunststoff Zulassungen: geeignet für Heiz- u. Kühlwasser Wassermischungen mit gebräuchlichen Korrosions- und Frostschutzzusätzen Anschlussgewinde in Zoll: 1 1/4 x 1 1/4""";3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+50;"Rückschlagventil 11/4"" Hydraulik Wärmepumpen";3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+51;Steuereinheit, Hydraulik und Steuerungsmodul für Druck halten, entgasen, nachspeisen in geschlossenen Heizwasser- und Kühlkreisläufen.Gebaut nach DIN EN 12828 und den Anforderungen der VDI 4708 mit CE-Kennzeichen.Geeignet für den Einsatz in lärmsensiblen Bereichen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+52;Membran-Ausdehnungsgefäß für Steuereinheit;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+53;Anschlussset;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+54;Motorkugelhahn als Umrüstsatz zur Wassernachspeisung in Verbindung mit Druckhaltung;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+55;Inbetriebnahme Kategorie 1 für eine Standardanlage;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+56;Membran-Druckausdehnungsgefäß für geschlossene Heiz- und Kühlwassersysteme. Gefäße sind konstruiert und gefertigt nach DIN EN 13831. Zulassung gemäß Richtlinie für Druckgeräte 2014/68/EU.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+57;Kappenventil;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+58;Armatur zur direkten Verbindung von Nachspeiseeinrichtungen für Heiz- und Kühlwassersysteme mit Trinkwassernetzen. Im Einzelnen bestehend aus:  Armaturabsperrkugelhähnen mit Motoraufnahme für Kugelhahn Druckhaltung zur automatischen kontrollierten Nachspeisung Systemtrenner nach DIN 1988-100 bzw. DI;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+59;Patronengehäuse, kompakte Basisarmatur zur Aufbereitung von Füll- und Ergänzungswasser mittels Ionenaustauschverfahren zum Schutz von Wärmeerzeugern u. Warmwasserheizungsanlagen gemäß VDI 2035.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+60;Der Impulsgeber erweitert die Funktionalität Ihres Wasserzählers und ermöglicht eine komfortable Fernüberwachung des Wasserverbrauchs. Die erzeugten Impulse werden zuverlässig an ein externes Auslesegerät oder ein Datenerfassungssystem, wie z. B. eine Gebäudeleittechnik (GLT), weitergeleitet. So kön;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+61;Kationenharzpatrone zur Füll- und Ergänzungswasserenthärtung passend in das Patronengehäuse.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+62;Stabiler Kunststoffschlüssel für das sichere Lösen und Anziehen der Verschraubung zur Erleichterung des Kartuschenwechsels.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+63;Doppelnippel, beidseitig mit;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+64;Doppelnippel, beidseitig mit;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+65;Doppelnippel, beidseitig mit;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+66;desgl. wie vor jedoch;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+67;desgl. wie vor jedoch;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+68;desgl. wie vor jedoch;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+69;"Temperguss Reduzierung 3"" x 2 1/2""";4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+70;"Temperguss Reduzierung 2""";4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+71;"Temperguss Reduzierung 11/4""";2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+72;Beschreibung: Tauchhülse;16,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+1;wie vor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+2;wie vor beschrieben;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+3;wie vor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+4;wie vor beschrieben;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+5;passend zu den zuvor angebotenen Heizwänden in der;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+6;Röhrenradiator, wie zuvor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+7;Röhrenradiator, wie zuvor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+8;Röhrenradiator, wie zuvor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+9;Röhrenradiator, wie zuvor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;Röhrenradiator, wie zuvor beschrieben;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+11;Röhrenradiator, wie zuvor beschrieben;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+12;Röhrenradiator, wie zuvor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+13;Röhrenradiator, wie zuvor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+14;Röhrenradiator, wie zuvor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+15;passend zu den zuvor angebotenenRöhrenradiatoren in der;13,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+16;Konvektor wie zuvor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+17;Konsolen Set Boden;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+18;wie vor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+19;wie vor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+20;wie vor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+21;wie vor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+22;wie vor beschrieben;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+23;wie vor beschrieben;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+24;wie vor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+25;wie vor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+26;wie vor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+27;wie vor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+28;wie vor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+29;wie vor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+30;wie vor beschrieben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+31;wie vor beschrieben;21,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+32;wie vor beschrieben;8,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+33;wie vor beschrieben;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+34;passend zu den zuvor angebotenen Heizkörper in der;47,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+35;Anschlussarmatur Eck,- oder Durchgangsform für;47,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+36;Klemmverschraubung für Kupfer- und Weichstahlrohre mit der überlegenen 2-Stufen Technologie (Dichten-Klemmen).;94,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+37;Thermostat-Kopf;47,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+38;PVC Rosette, für den Heizkörperanschluss;94,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+39;Einmaliges Ausbauen und Wiedereinbauen;66,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+1;Leistung und technische Daten wie in vor genannter;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+2;Mehrpreis pro Meter gelochte Deckenstrahlplatte für;42,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+3;Kombinationssystem Heizen/Lüften bestehend aus:;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+4;Leistung und technische Daten wie in vor genannter;8,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+5;Mehrpreis pro Meter gelochte Deckenstrahlplatte für;32,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+6;Leistung und technische Daten wie in vor genannter;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+7;Hochgezogene Sammelkästen;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+8;Mehrpreis pro Meter gelochte Deckenstrahlplatte für;20,6;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+9;Mehrpreis für Sonderlackierung der Deckenstrahlplatten,;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;Montagesatz für Befestigung an;124,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+11;Montagesatz kurz für Befestigung an Betondecke;24,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+12;Volumenstromdurchflussreglerset DN 15;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+13;Volumenstromdurchflussreglerset DN 15;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+14;Volumenstromdurchflussreglerset DN 15;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+15;Thermostellantrieb für den Einbau auf;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+16;Systemerweiterungsmodul;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+17;flexible Registeranschlussgarnitur für die spannungsfreie Verbindung zwischen Deckenstrahlplatte und Rohrnetz,;18,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+18;flexible Registeranschlussgarnitur für die spannungsfreie Verbindung zwischen Deckenstrahlplatte und Rohrnetz,;16,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+19;Pressmuffen;324,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+20;Montage der Deckenstrahlplatten und des Zubehörs;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+21;Infrarot-Thermografie;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+1;Mantelleitung für die Verkabelung;200,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+2;Mantelleitung für die Verkabelung;50,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+3;Mantelleitung für die Verkabelung;100,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+4;PVC-Steckrohre für den Schutz;50,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+5;PVC-Steckrohre für den Schutz;10,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+6;PVC-Steckrohre für den Schutz;10,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+7;PVC-Steckrohre für den Schutz;10,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+8;Kabelkanal aus PVC auf Wänden oder;15,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+9;Kabelkanal aus PVC auf Wänden oder;15,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;Sammelhalterungen für bis zu 10 Leitungen;30,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+11;"""Außenfühler"" aller Art";1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+12;Luft-Wasser-Wärmepumpen;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+13;Inbetriebnahme der Wärmepumpen incl. Kühlfunktion;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+1;Anzeichnen und durchführung einer Kernbohrung Verikal. Kernbohrungen durch Betondecke;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+2;Anzeichnen und durchführung einer Kernbohrung Verikal. Kernbohrungen durch Betondecke;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+3;Anzeichnen und durchführung einer Kernbohrung horizontal oder Verikal. Kernbohrungen durch Betonwand Bodenhöhe in einen bauseitigen Graben;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+4;Schlitze in bestehender Mauerwerkswand herstellen, inkl.;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+5;Stundenlohnarbeiten Facharbeiter einschl. aller Nebenkosten, wie Auslösung, Fahr- und Wegegeld, Unternehmerzuschlag;20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+6;Stundenlohnarbeiten Helfer einschl. aller Nebenkosten, wie Auslösung, Fahr- und Wegegeld, Unternehmerzuschlag etc.;20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+7;Stundenlohnarbeiten Helfer unter Einsatz eines Stemmhammers, Maschinenstunden, einschl. aller Nebenkosten, wie Auslösung, Fahr- und Wegegeld, Unternehmerzuschlag etc. Stundenlohnarbeiten sind dem;20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+8;Werks- und Montageplanung Gewerk Heizung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+9;Schacht und Brunnenschaum 750ml;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;Gestellung, Vorhaltung und Abtransport eines Fahrgerüstes für Montagearbeiten in einer Höhe bis 3,8 Meter über der Standfläche;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+11;Revisions-, Wartungs- und Bedienungsanweisungen;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+12;Einweisung des Bedienpersonals;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+13;Schutzabdeckung mit Abdeckvlies Liefern und Verlegen einer Schutzabdeckung aus Vliesstoff mit PE- Folie kaschiert, Stöße;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+14;Malerplane HDPE transparent - 10µm;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+15;Wiederholte Einweisung des Bedienungspersonals;4,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+16;Druck- und Dichtheitsprüfung von Rohrleitungen, aus Kupfer, Betriebsmedium Heizungswasser, Außendurchmesser;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+17;Nach erfolgreichem Abdrücken Spülen des Rohrnetzes in Teilabschnitte nach Baufortschritt.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+18;Befüllung der Heizanlage mit entsalztem Wasser,;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+19;Durchführung und Dokumentation des Hydraulischen Abgleiches auf Datenträger, in einfacher Ausfertigung, Unterlagen auf Datenträger mit strukturierter Ablage, Ausführung gemäß Zeichnung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+20;Erstellen eines Inspektions- und;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+21;Bezeichnungsschild, Farbe und Beschriftung nach Angaben des AG, aus mehrschichtigem Kunststoff, Beschriftung 2-zeilig, gedruckt, rechteckig, Höhe über 40 bis 50 mm, Breite über 90 bis 100 mm, Befestigung durch Kleben.;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+1;Wartungsdienst für das 1.Jahr;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+2;Wartungsdienst für das 2.Jahr;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+3;Wartungsdienst für das 3.Jahr;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+4;Wartungsdienst für das 4.Jahr;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+1;Wartungsdienst für das 1.Jahr;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+2;Wartungsdienst für das 2.Jahr;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+3;Wartungsdienst für das 3.Jahr;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+4;Wartungsdienst für das 4.Jahr;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83

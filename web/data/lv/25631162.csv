@@ -1,0 +1,445 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;verzinktes Stahlrohr DN 125;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+2;Standrohrkappe aus Titanzinkblech, für Abdeckung der Verbindung von Regenstandrohre aus Stahl mit Regenfallrohre aus Zink, DN 100;3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+3;Standrohrkappe aus Titanzinkblech, für Abdeckung der Verbindung von Regenstandrohre aus Stahl mit Regenfallrohre aus Zink, DN 125;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+4;PP-Rohr DN 125;33,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+5;PP-Rohr DN 150;7,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+6;KG-Abzweig DN 100;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+7;KG-Abzweig DN 125;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+8;KG-Abzweig DN 150;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+9;KG-Abzweig DN 200;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+10;KG-Abzweig DN 250;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+11;KG-Abzweig DN 300;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+12;KG-Abzweig DN 300;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+13;KG-Bogen 45° DN 125;37,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+14;KG-Bogen 45° DN 125;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+15;KG-Bogen 45° DN 150;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+16;KG-Bogen 45° DN 200;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+17;KG-Bogen 45° DN 250;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+18;KG-Bogen 87° DN 100;26,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+19;KG Übergangsrohr DN 125;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+20;KG Übergangsrohr DN 150;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+21;KG Übergangsrohr DN 200;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+22;KG Übergangsrohr DN 250;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+23;KG Übergangsrohr DN 300;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+24;PP-Rohr DN 125;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+25;PP-Rohr Bogen 45° DN 100;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+26;PP-Rohr Bogen 45° DN 125;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+27;PP-Rohr Bogen 45° DN 150;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+28;PP-Rohr Bogen 87.5° DN 50;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+29;PP-Rohr Bogen 87.5° DN 125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+30;PP-Rohr Reduktion exentrisch DN90;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+31;PP-Rohr Reduktion exentrisch DN100;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+32;PP-Rohr Reduktion exentrisch DN125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+33;Bogen 87° verzinktes Stahlrohr DN 125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+34;Reinigungsstück PP-Rohr DN125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+35;Reinigungsstück PP-Rohr DN150;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+36;Doppelhebeanlage;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+37;Gleitrohrsystem auf Grundplatte, inkl. Steuerung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+38;Druckleitung DN30;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+39;Druckleitung Bogen DN30;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+40;Druckleitung Schweißmuffe DN30;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+41;Druckleitung T-Stück DN30;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+42;Brandschutzmanschette DN125;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+43;Brandschutzmanschetten DN100;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+44;Schwitzwasserisolierung DN125;33,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+45;Schwitzwasserisolierung DN150;7,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+46;KG-Wandelement DN100;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+47;Dachablauf für Regenwasser;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+48;Attika Ablauf DN 125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+49;Kontrollschacht DN400;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+50;Profilstahlkonstruktion;192,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+51;Bodenablauf DN100;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+1;KG-Rohr DN 100;92,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+2;KG-Rohr DN 125;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+3;KG-Rohr DN 150;1,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+4;liefern und montieren;12,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+5;HT-PP DN 50;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+6;HT-PP DN 70;7,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+7;liefern und montieren;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+8;liefern und montieren;1,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+9;liefern und montieren;17,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+10;liefern und montieren;24,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+11;liefern und montieren;16,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+12;liefern und montieren;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+13;KG-Abzweig scharf 45° DN 100;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+14;KG-Abzweig scharf 45° DN 125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+15;KG-Abzweig scharf 45° DN 150;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+16;KG-Abzweig scharf 87° DN 150;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+17;KG-Bogen 45° DN 100;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+18;KG-Bogen 45° DN 125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+19;KG-Übergangsrohr exzentrisch DN 150;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+20;Abzweig 45° DN 50;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+21;Abzweig 45° DN 70;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+22;Abzweig 45° DN 90;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+23;Abzweig 87° DN 70;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+24;Bogen 45° DN30;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+25;Bogen 45° DN40;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+26;Bogen 45° DN50;19,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+27;Bogen 45° DN70;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+28;HT-PP Bogen 45° DN90;17,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+29;HT-PP Bogen 87° DN30;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+30;HT-PP Bogen 87° DN40;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+31;HT-PP Bogen 87° DN50;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+32;HT-PP Bogen 87° DN90;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+33;HT-PP Reduktion exzentrisch DN50;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+34;HT-PP Reduktion exzentrisch DN50;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+35;HT-PP Reduktion exzentrisch DN70;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+36;HT-PP Reduktion exzentrisch DN90;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+37;HT-PP Reduktion exzentrisch DN100;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+38;HT-PP Reduktion exzentrisch DN125;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+39;HT-PP Übergang DN40;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+40;HT-PP Abzweig 45° DN70;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+41;HT-PP Abzweig 45° DN90;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+42;HT-PP Abzweig 45° DN100;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+43;HT-PP Abzweig 45° DN125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+44;HT-PP Abzweig 87° DN70;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+45;HT-PP Abzweig 87° DN90;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+46;HT-PP Bogen 45° DN50;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+47;HT-PP Bogen 45° DN70;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+48;HT-PP Bogen 45° DN90;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+49;HT-PP Bogen 45° DN100;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+50;HT-PP Bogenabzweig 87.5° DN90;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+51;HT-PP Reduktion exentrisch DN90;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+52;HT-PP Reduktion exentrisch DN125;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+53;Reinigungsstück DN100;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+54;Brandschutzmanschette DN40;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+55;Brandschutzmanschette DN50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+56;Brandschutzmanschette DN70;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+57;Brandschutzmanschette DN90;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+58;Dachhaube DN100;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+59;Dachhaube DN90;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+60;Doppelhebeanlage;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+61;Gleitrohrsystem auf Grundplatte, inkl. Steuerung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+62;Druckleitung DN30;18,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+63;Druckleitung Bogen DN30;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+64;Druckleitung Schweißmuffe DN30;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+65;Druckleitung T-Stück DN30;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+66;Bodenablauf DN100;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+67;KG-Wandelement DN100;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+68;zur druckwasserdichten Einbindung von Rohrleitungen mit glatter Oberfläche (KG, KG 2000, HT) in WU-Betonkonstruktionen: Bodenplatte und Wand, MPA-geprüft bis 5 bar. ǀ WU-Richtlinie: Beanspruchungsklasse 1 + 2;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+69;Für Abwasserrohre DN 100-DN150;4,0;;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+70;Profilstahlkonstruktion;140,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+1;Systemrohr CrNiMo DN12;65,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+2;Systemrohr CrNiMo DN15;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+3;Systemrohr CrNiMo DN20;44,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+4;Systemrohr CrNiMo DN25;56,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+5;Systemrohr CrNiMo DN32;18,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+6;Systemrohr CrNiMo DN50;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+7;CrNiMo Bogen DN12;96,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+8;CrNiMo Bogen DN15;26,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+9;CrNiMo Bogen DN20;39,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+10;CrNiMo Bogen DN25;59,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+11;CrNiMo Bogen DN32;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+12;CrNiMo Bogen DN50;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+13;CrNiMo T-Sück DN12;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+14;CrNiMo T-Sück DN;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+15;CrNiMo T-Sück DN20;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+16;CrNiMo T-Sück DN25;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+17;CrNiMo T-Sück DN32;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+18;für Kaltwasser mit Muffen für Entleerung, Temperatur-;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+19;"Gampper Auslaufventil 1/2"", mit";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+20;Wandscheibe;8,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+21;Doppelwandscheibe;20,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+22;Absperrventil DN 15;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+23;Absperrventil DN 20;3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+24;Absperrventil DN 25;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+25;Doppelwandscheibe;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+26;"Eckventil Doppel RV regulierbar,1/2"", Chrome";0,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+27;KEMPER PROTECT Systemtrenner BA, AG;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+28;"mit Spannmuffe - Zapfen R 1/2"", Prüfzapfen M 20 x 1,5 und Entlüftungsschraube einschließlich Wasser - Sackrohr";1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+29;Kennbänder Selbstklebende Experta - Kennbänder beschriftet an Rohrleitungen. Farbe und ausführung in Abstimmung mit der Bauleitung. Anordnung an freiliegenden Leitungen und in abgehängten Decken, in Abständen von ca. 1,0 m bzw. bei Raumein- und - ausgängen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+30;Bezeichnungsschilder;12,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+31;Spülen u. Druckprobe;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+32;Schrägsitzventil;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+33;Freistrom-Absperrventil DN50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+34;Unterrzähler,;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+35;Wasserzähler-Anschlußbügel;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+36;Feinfilter mit eingegossenen Messingverschraubungen, Kunststoffgehäuse mit Sichtglocke und einer Filterkerze, DVGW-geprüft.;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+37;komb. Freistromventil  DN 50 aus Rotguß mit;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+1;Isolierschlauch DN12;71,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+2;Isolierschlauch DN15;31,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+3;Isolierschlauch DN20;47,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+4;Isolierschlauch DN25;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+5;Isolierschlauch DN32;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+6;Isolierschlauch DN50;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+7;Rockwool Isolierung Rohrschale DN12;2,18;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+8;Rockwool Isolierung Rohrschale DN12;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+9;Wie vor, jedoch DN 15;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+10;Wie vor, jedoch DN 20;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+11;Wie vor, jedoch DN 25;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+12;wie vorher, jedoch für DN 12;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+13;wie vorher, jedoch für DN 15;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+14;wie vorher, jedoch für DN 20;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+15;wie vorher, jedoch für Rohrabschottung DN 25;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+1;Renova Nr. 1 mit Ablaufgarnitur, Urinal, porenfreie Versiegelung;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+2;Grohe Essence, 35 mm Keramikkartusche, o. Zugstange und;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+3;Gehäuse und Rohre Messing poliert,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+4;Zum Einbau in teilhohe oder raumhohe Vorwand-;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+5;60 l Edelstahlmatt;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+6;Farbe: Edelstahlmatt;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+7;Farbe: Edelstahlmatt;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+8;CWS ParadiseCream Slim 500ml. mit Panel mit Zylinderschloß;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+9;Wandhängendes Tiefspül-WC   Renova Nr. 1 mit 4,5-6 l-Spülmenge mit Montageelement,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+10;WC-Modul mit Uni-Spülkasten, mit integrierter;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+11;Zum Einbau in teilhohe oder raumhohe Vorwandinstallation vor Trocken- oder Nassbauwand Zum Einbau in raumhohe Installationswand im Trocken- oder Nassbau Geeignet für Fußbodenaufbau 0 - 20 cm Trocken- und Nassbauelement Installationsbaustein aus mineralischem Porenbeton, Baustoffklasse A1 Selbsttrage;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+12;TECEnow WC-Betätigungsplatte für;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+13;Toilettenpapierspender;10,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+14;Farbe: Edelstahlmatt;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+15;Farbe: Edelstahlmatt;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+16;- 6 Liter Fassungsvermögen;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+17;Urinalmodul mit TECE-Spülergehäuse U 1, Bauhöhe 1120 mm;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+18;Duravit Urinal D-Code aus Sanitärkeramik,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+19;TECEnow Urinal-Betätigungsplatte inklusive Kartusche;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+20;Montageelement für Wand-WC ­mit Infrarotauslösungvon vor­ne, aus Stahl mit Zink be­schich­tet, WC-Bo­gen, mit Be­tä­ti­gungs­plat­te, UP-Spül­ka­sten 6 bis 7,5 Li­ter, für Wand-WCs mit verlängerter;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+21;Vitalis Wand-WC D-Code;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+22;-Ruf-Set für Unterputz nach DIN 18030;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+23;Wandstützgriff aus Edelstahl, klappbar, an der Griff­zo­ne struk­tu­riert, mit Be­fes­ti­gungs­ma­te­ri­al, lin­ke oder rech­te Aus­füh­rung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+24;Behinderten-WC Rückenstütze mit gepolsterter Lehne mit beidseitig angebrachten, rechtwinklig gebogenen Befestigungsstangen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+25;Einhebel-Waschtischmischer 100 mit extra langem Comfortgriff 12,1 cm und Zug-;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+26;Vitalis;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+27;Geruchverschluss für Unterputz-Wandmontage aus Kunststoff;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+28;Duravit Urinal D-Code aus Sanitärkeramik,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+29;Urinalmodul inkl. Hygienespülung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+30;TECEnow Urinal-Betätigungsplatte inklusive Kartusche;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+31;Ausgußbecken, aus Stahl, innen emailliert, mit Überlauf, mit hoher Rückwand, mit Wulstrand und Wulstrandschoner, mit Klapprost aus Leichtmetall, Beckenabmessungen B: 500 mm, Farbton weiß,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+32;Ausguß-Geruchverschluß;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+33;Armatur HD für Ausgussbecken;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+34;DEM zur Einzelversorgung;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+35;druckloses Elektro-5-l-Speicher-Untertischgerät, mit;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+36;Niederdruckarmatur als Einhebelmischer .;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+37;druckloses Elektro-5-l-Speicher-Untertischgerät, mit;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+1;Baustelleneinrichtung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+2;Hochdruckspülung und Optische Inspektion aller vorhandenen Grundleitungen im Bereich unter der Bodenplatte bzw. im Kriechkeller. Es geht eventuell um ca. 15-25 m Leitungen unter der Bodenplatte.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+3;Spülen Trinkwasserrohrnetz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+4;Dichtigkeits-Zwischenprüfung;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+5;Druckprüfung Abwasser;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+6;Rohrkennzeichnung entsprechend dem Durchfluß-;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+7;Kernbohrung Beton;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+8;Kernbohrung Beton;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+9;Kernbohrung Beton;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+10;Trinkwasserhygiene-Untersuchung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+11;Satz für Monteur;20,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+12;Satz für Helfer;20,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Leistungsverzeichnis.X81
+1;verzinktes Stahlrohr DN 125;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+2;Standrohrkappe aus Titanzinkblech, für Abdeckung der Verbindung von Regenstandrohre aus Stahl mit Regenfallrohre aus Zink, DN 100;3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+3;Standrohrkappe aus Titanzinkblech, für Abdeckung der Verbindung von Regenstandrohre aus Stahl mit Regenfallrohre aus Zink, DN 125;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+4;PP-Rohr DN 125;33,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+5;PP-Rohr DN 150;7,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+6;KG-Abzweig DN 100;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+7;KG-Abzweig DN 125;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+8;KG-Abzweig DN 150;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+9;KG-Abzweig DN 200;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+10;KG-Abzweig DN 250;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+11;KG-Abzweig DN 300;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+12;KG-Abzweig DN 300;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+13;KG-Bogen 45° DN 125;37,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+14;KG-Bogen 45° DN 125;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+15;KG-Bogen 45° DN 150;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+16;KG-Bogen 45° DN 200;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+17;KG-Bogen 45° DN 250;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+18;KG-Bogen 87° DN 100;26,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+19;KG Übergangsrohr DN 125;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+20;KG Übergangsrohr DN 150;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+21;KG Übergangsrohr DN 200;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+22;KG Übergangsrohr DN 250;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+23;KG Übergangsrohr DN 300;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+24;PP-Rohr DN 125;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+25;PP-Rohr Bogen 45° DN 100;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+26;PP-Rohr Bogen 45° DN 125;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+27;PP-Rohr Bogen 45° DN 150;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+28;PP-Rohr Bogen 87.5° DN 50;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+29;PP-Rohr Bogen 87.5° DN 125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+30;PP-Rohr Reduktion exentrisch DN90;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+31;PP-Rohr Reduktion exentrisch DN100;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+32;PP-Rohr Reduktion exentrisch DN125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+33;Bogen 87° verzinktes Stahlrohr DN 125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+34;Reinigungsstück PP-Rohr DN125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+35;Reinigungsstück PP-Rohr DN150;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+36;Doppelhebeanlage;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+37;Gleitrohrsystem auf Grundplatte, inkl. Steuerung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+38;Druckleitung DN30;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+39;Druckleitung Bogen DN30;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+40;Druckleitung Schweißmuffe DN30;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+41;Druckleitung T-Stück DN30;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+42;Brandschutzmanschette DN125;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+43;Brandschutzmanschetten DN100;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+44;Schwitzwasserisolierung DN125;33,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+45;Schwitzwasserisolierung DN150;7,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+46;KG-Wandelement DN100;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+47;Dachablauf für Regenwasser;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+48;Attika Ablauf DN 125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+49;Kontrollschacht DN400;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+50;Profilstahlkonstruktion;192,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+51;Bodenablauf DN100;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+1;KG-Rohr DN 100;92,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+2;KG-Rohr DN 125;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+3;KG-Rohr DN 150;1,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+4;liefern und montieren;12,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+5;HT-PP DN 50;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+6;HT-PP DN 70;7,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+7;liefern und montieren;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+8;liefern und montieren;1,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+9;liefern und montieren;17,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+10;liefern und montieren;24,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+11;liefern und montieren;16,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+12;liefern und montieren;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+13;KG-Abzweig scharf 45° DN 100;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+14;KG-Abzweig scharf 45° DN 125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+15;KG-Abzweig scharf 45° DN 150;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+16;KG-Abzweig scharf 87° DN 150;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+17;KG-Bogen 45° DN 100;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+18;KG-Bogen 45° DN 125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+19;KG-Übergangsrohr exzentrisch DN 150;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+20;Abzweig 45° DN 50;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+21;Abzweig 45° DN 70;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+22;Abzweig 45° DN 90;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+23;Abzweig 87° DN 70;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+24;Bogen 45° DN30;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+25;Bogen 45° DN40;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+26;Bogen 45° DN50;19,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+27;Bogen 45° DN70;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+28;HT-PP Bogen 45° DN90;17,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+29;HT-PP Bogen 87° DN30;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+30;HT-PP Bogen 87° DN40;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+31;HT-PP Bogen 87° DN50;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+32;HT-PP Bogen 87° DN90;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+33;HT-PP Reduktion exzentrisch DN50;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+34;HT-PP Reduktion exzentrisch DN50;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+35;HT-PP Reduktion exzentrisch DN70;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+36;HT-PP Reduktion exzentrisch DN90;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+37;HT-PP Reduktion exzentrisch DN100;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+38;HT-PP Reduktion exzentrisch DN125;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+39;HT-PP Übergang DN40;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+40;HT-PP Abzweig 45° DN70;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+41;HT-PP Abzweig 45° DN90;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+42;HT-PP Abzweig 45° DN100;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+43;HT-PP Abzweig 45° DN125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+44;HT-PP Abzweig 87° DN70;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+45;HT-PP Abzweig 87° DN90;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+46;HT-PP Bogen 45° DN50;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+47;HT-PP Bogen 45° DN70;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+48;HT-PP Bogen 45° DN90;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+49;HT-PP Bogen 45° DN100;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+50;HT-PP Bogenabzweig 87.5° DN90;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+51;HT-PP Reduktion exentrisch DN90;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+52;HT-PP Reduktion exentrisch DN125;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+53;Reinigungsstück DN100;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+54;Brandschutzmanschette DN40;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+55;Brandschutzmanschette DN50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+56;Brandschutzmanschette DN70;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+57;Brandschutzmanschette DN90;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+58;Dachhaube DN100;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+59;Dachhaube DN90;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+60;Doppelhebeanlage;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+61;Gleitrohrsystem auf Grundplatte, inkl. Steuerung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+62;Druckleitung DN30;18,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+63;Druckleitung Bogen DN30;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+64;Druckleitung Schweißmuffe DN30;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+65;Druckleitung T-Stück DN30;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+66;Bodenablauf DN100;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+67;KG-Wandelement DN100;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+68;zur druckwasserdichten Einbindung von Rohrleitungen mit glatter Oberfläche (KG, KG 2000, HT) in WU-Betonkonstruktionen: Bodenplatte und Wand, MPA-geprüft bis 5 bar. ǀ WU-Richtlinie: Beanspruchungsklasse 1 + 2;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+69;Für Abwasserrohre DN 100-DN150;4,0;;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+70;Profilstahlkonstruktion;140,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+1;Systemrohr CrNiMo DN12;65,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+2;Systemrohr CrNiMo DN15;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+3;Systemrohr CrNiMo DN20;44,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+4;Systemrohr CrNiMo DN25;56,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+5;Systemrohr CrNiMo DN32;18,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+6;Systemrohr CrNiMo DN50;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+7;CrNiMo Bogen DN12;96,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+8;CrNiMo Bogen DN15;26,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+9;CrNiMo Bogen DN20;39,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+10;CrNiMo Bogen DN25;59,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+11;CrNiMo Bogen DN32;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+12;CrNiMo Bogen DN50;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+13;CrNiMo T-Sück DN12;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+14;CrNiMo T-Sück DN;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+15;CrNiMo T-Sück DN20;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+16;CrNiMo T-Sück DN25;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+17;CrNiMo T-Sück DN32;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+18;für Kaltwasser mit Muffen für Entleerung, Temperatur-;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+19;"Gampper Auslaufventil 1/2"", mit";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+20;Wandscheibe;8,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+21;Doppelwandscheibe;20,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+22;Absperrventil DN 15;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+23;Absperrventil DN 20;3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+24;Absperrventil DN 25;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+25;Doppelwandscheibe;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+26;"Eckventil Doppel RV regulierbar,1/2"", Chrome";0,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+27;KEMPER PROTECT Systemtrenner BA, AG;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+28;"mit Spannmuffe - Zapfen R 1/2"", Prüfzapfen M 20 x 1,5 und Entlüftungsschraube einschließlich Wasser - Sackrohr";1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+29;Kennbänder Selbstklebende Experta - Kennbänder beschriftet an Rohrleitungen. Farbe und ausführung in Abstimmung mit der Bauleitung. Anordnung an freiliegenden Leitungen und in abgehängten Decken, in Abständen von ca. 1,0 m bzw. bei Raumein- und - ausgängen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+30;Bezeichnungsschilder;12,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+31;Spülen u. Druckprobe;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+32;Schrägsitzventil;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+33;Freistrom-Absperrventil DN50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+34;Unterrzähler,;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+35;Wasserzähler-Anschlußbügel;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+36;Feinfilter mit eingegossenen Messingverschraubungen, Kunststoffgehäuse mit Sichtglocke und einer Filterkerze, DVGW-geprüft.;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+37;komb. Freistromventil  DN 50 aus Rotguß mit;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+1;Isolierschlauch DN12;71,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+2;Isolierschlauch DN15;31,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+3;Isolierschlauch DN20;47,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+4;Isolierschlauch DN25;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+5;Isolierschlauch DN32;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+6;Isolierschlauch DN50;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+7;Rockwool Isolierung Rohrschale DN12;2,18;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+8;Rockwool Isolierung Rohrschale DN12;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+9;Wie vor, jedoch DN 15;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+10;Wie vor, jedoch DN 20;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+11;Wie vor, jedoch DN 25;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+12;wie vorher, jedoch für DN 12;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+13;wie vorher, jedoch für DN 15;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+14;wie vorher, jedoch für DN 20;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+15;wie vorher, jedoch für Rohrabschottung DN 25;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+1;Renova Nr. 1 mit Ablaufgarnitur, Urinal, porenfreie Versiegelung;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+2;Grohe Essence, 35 mm Keramikkartusche, o. Zugstange und;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+3;Gehäuse und Rohre Messing poliert,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+4;Zum Einbau in teilhohe oder raumhohe Vorwand-;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+5;60 l Edelstahlmatt;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+6;Farbe: Edelstahlmatt;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+7;Farbe: Edelstahlmatt;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+8;CWS ParadiseCream Slim 500ml. mit Panel mit Zylinderschloß;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+9;Wandhängendes Tiefspül-WC   Renova Nr. 1 mit 4,5-6 l-Spülmenge mit Montageelement,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+10;WC-Modul mit Uni-Spülkasten, mit integrierter;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+11;Zum Einbau in teilhohe oder raumhohe Vorwandinstallation vor Trocken- oder Nassbauwand Zum Einbau in raumhohe Installationswand im Trocken- oder Nassbau Geeignet für Fußbodenaufbau 0 - 20 cm Trocken- und Nassbauelement Installationsbaustein aus mineralischem Porenbeton, Baustoffklasse A1 Selbsttrage;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+12;TECEnow WC-Betätigungsplatte für;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+13;Toilettenpapierspender;10,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+14;Farbe: Edelstahlmatt;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+15;Farbe: Edelstahlmatt;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+16;- 6 Liter Fassungsvermögen;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+17;Urinalmodul mit TECE-Spülergehäuse U 1, Bauhöhe 1120 mm;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+18;Duravit Urinal D-Code aus Sanitärkeramik,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+19;TECEnow Urinal-Betätigungsplatte inklusive Kartusche;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+20;Montageelement für Wand-WC ­mit Infrarotauslösungvon vor­ne, aus Stahl mit Zink be­schich­tet, WC-Bo­gen, mit Be­tä­ti­gungs­plat­te, UP-Spül­ka­sten 6 bis 7,5 Li­ter, für Wand-WCs mit verlängerter;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+21;Vitalis Wand-WC D-Code;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+22;-Ruf-Set für Unterputz nach DIN 18030;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+23;Wandstützgriff aus Edelstahl, klappbar, an der Griff­zo­ne struk­tu­riert, mit Be­fes­ti­gungs­ma­te­ri­al, lin­ke oder rech­te Aus­füh­rung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+24;Behinderten-WC Rückenstütze mit gepolsterter Lehne mit beidseitig angebrachten, rechtwinklig gebogenen Befestigungsstangen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+25;Einhebel-Waschtischmischer 100 mit extra langem Comfortgriff 12,1 cm und Zug-;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+26;Vitalis;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+27;Geruchverschluss für Unterputz-Wandmontage aus Kunststoff;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+28;Duravit Urinal D-Code aus Sanitärkeramik,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+29;Urinalmodul inkl. Hygienespülung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+30;TECEnow Urinal-Betätigungsplatte inklusive Kartusche;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+31;Ausgußbecken, aus Stahl, innen emailliert, mit Überlauf, mit hoher Rückwand, mit Wulstrand und Wulstrandschoner, mit Klapprost aus Leichtmetall, Beckenabmessungen B: 500 mm, Farbton weiß,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+32;Ausguß-Geruchverschluß;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+33;Armatur HD für Ausgussbecken;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+34;DEM zur Einzelversorgung;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+35;druckloses Elektro-5-l-Speicher-Untertischgerät, mit;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+36;Niederdruckarmatur als Einhebelmischer .;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+37;druckloses Elektro-5-l-Speicher-Untertischgerät, mit;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+1;Baustelleneinrichtung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+2;Hochdruckspülung und Optische Inspektion aller vorhandenen Grundleitungen im Bereich unter der Bodenplatte bzw. im Kriechkeller. Es geht eventuell um ca. 15-25 m Leitungen unter der Bodenplatte.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+3;Spülen Trinkwasserrohrnetz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+4;Dichtigkeits-Zwischenprüfung;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+5;Druckprüfung Abwasser;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+6;Rohrkennzeichnung entsprechend dem Durchfluß-;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+7;Kernbohrung Beton;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+8;Kernbohrung Beton;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+9;Kernbohrung Beton;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+10;Trinkwasserhygiene-Untersuchung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+11;Satz für Monteur;20,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83
+12;Satz für Helfer;20,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/22-006 AOK SZ Cuxhaven - KG410 Angebotsaufforderung.X83

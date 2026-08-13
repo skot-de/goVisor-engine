@@ -1,0 +1,750 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Baustelleneinrichtung für die ges. Leistung des AN (gem. VOB C ATV DIN 18299, 4.1. und Ziffern 4.21 - 4.2.18 soweit dies in den Leistungsbereich des AN fällt) einschl. der Baustelleneinrichtungen für die Kampfmittelsondierungen, sowie nachfolgend aufgeführter ergänzender Leistungen des AN liefern, e;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Unterkonstruktion für bauseits geliefertes Bauschild in Holzbauweise liefern und fachgerecht erstellen. Abmessungen der Querschnitte sowie Güteklasse des Holzes gemäß statischen Angaben (statische Berechnung ist durch den AN zu erbringen) einschl. aller hierfür erforderlichen Hölzer, Unterkonstrukti;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Sanitär-Container für die Nutzung der am Bau Beteiligten Firmen liefern und aufstellen.;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Vorhaltezeitverlängerung bzw. -verkürzung des Sanitär-Containers gem. der vorgenannten Position pro einer Woche.;130,0;StWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Trocken-WC mit Handwaschbecken liefern und aufstellen, einschl. regelmäßiger Reinigung und wieder entfernen.;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Vorhaltezeitverlängerung bzw. -verkürzung der WC-Kabine gem. der vorgenannten Position pro einer Woche.;130,0;StWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Bauzaun, Untergrund befestigt oder unbefestigt, als vorgefertigen Maschendrahtgitterzaun mit uml. Rohrtraversen, Standrohren und Fundamenten aufstellen, mit Verbindungsschellen verschrauben, vorhalten und nach besonderer Aufforderung durch den AG wieder entfernen.;315,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Zulage zu vorgenannten Position für das Erstellen eines verschließbaren Tores, 2-flügelig, Die Flügel sind jeweils mit entspr. Rollenführungen zu unterstützen und müssen in geöffnetem Zustand feststellbar sein. Es muß durch entspr. Sicherungsmaßnahme gewährleistet sein, das die Tore nicht in den Str;4,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;Vorhaltezeitverlängerung bzw. -verkürzung des Maschendrahtzauns einschließlich Tore und Verankerung gem. der vorgenannten Position pro einer Woche.;20475,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Entlang des Bauzaunes  bzw. im Einmündungsbereichen und zur Verkehrssicherung nach Angaben der zuständigen Ämter (Ordnunggamt, Tiefbauamt)  liefern, errichten, vorhalten, abräumen und abfahren. Die Baken sind mit gelber Dauerbeleuchtung und Lichtquellen gem. STVO bzw. RAS zu errichten.;5,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Vorhaltezeitverlängerung bzw. -verkürzung der Absperrbaken gem. der vorgenannten Position pro einer Woche.;325,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Vekehrszeichen aller Art gem. STVO einschl. der notwendigen Unterkonstruktionen/Pfosten liefern, aufstellen bzw. Anbringen z.B. am Bauzaun, vorhalten und beseitigen.;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Vorhaltezeitverlängerung bzw. -verkürzung aller Verkehrszeichen gem.;130,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Herstellen Baustraße, Lagerfläche, Wege usw., aus Schotter-Tragschicht, inkl. Vlies unter der Schotterschicht;350,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Liefern, Aufstellen und Vorhalten der Baustellenhauptstromversorgungsanlage mit einer für die Größe des Gesamtbauvorhabens ausreichenden Leistung. Anschluß erfolgt an das Netz des zuständigen E-Versorgers. Die erforderl. Anträge etc. sind ohne Mitwirkung des AG zu stellen Die Anlage ist entspr. den ;4,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Vorhaltezeitverlängerung bzw. -verkürzung des Baustromhauptverteilers gem. der vorgenannten Position pro einer Woche.;260,0;StWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Bausstromverteilerschrank Liefern, Einrichtung, Vorhalten und Abbauen der Baustromverteiler. Aufbau der Verteilerschränke im Gebäude, entsprechend den VDE-Vorschriften;15,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+18;Vorhaltezeitverlängerung bzw. -verkürzung der Baustromverteiler gem. der vorgenannten Position pro einer Woche.;975,0;StWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+19;Bauleitungcontainer / Besprechungscontainer;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+20;Vorhaltezeit Bauleitungscontainer;75,0;StWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+21;Baubeleuchtung (100 Watt Schiffsamaturen) für Verkehrswege im Gebäude, und in Treppenhäusern herstellen, für die gesamte Bauzeit vorhalten und beseitigen, nach Angabe Bauleitung. Einschl. aller erforderlichen Verkabelungen und Schaltungen, gem. Unfallverhütungsvorschriften.;25,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+22;Baubeleuchtung der vorgenannten Position eine Woche länger oder weniger Vorhalten.;1625,0;StkW;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+23;Liefern, Einrichtung , Vorhalten und Abbauen des Baustellenwasserhauptverteiler mit einer für die Größe des Gesamtbauvorhabens ausreichender Leistung. Anschluß erfolgt an das Netz des zuständigen Wasserversorgungsunternehmers.  Die Anlage ist entspr. den Vorschriften des zuständigen Versorgers zu er;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+24;Vorhaltezeitverlängerung bzw. -verkürzung der Bauwasserhauptverteilung gem. der vorgenannten Position pro einer Woche.;130,0;StWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+25;Abschließbare Bautüren bis Größe 1,00 / 2,23 liefern, nach Angaben der Bauleitung einbauen und für die Dauer der Bauzeit vorhalten. Einschl. späterem Abbau und Abfuhr der Tür.;15,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+26;Bautüren der vorgenannten Position eine Woche länger oder weniger Vorhalten.;975,0;StWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+27;Fensteröffnungen provisorisch schließen, Konstruktion aus Latten und OSB-Platten, liefern, vorhalten und auf besondere Aufforderung des AG wieder entfernen, inklusive fachgerechter Entsorgung.;1,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+28;Containergestellung für reinen Bauschutt, wie z. B. Beton, Ziegel, Kalksteine, Mörtel, Naturwerksteine, Steinzeug, etc.;3,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+29;Containergestellung für Baumischabfälle, wie z.B. Gemisch aus nicht recyclingfähigen Baustellenabfällen, verschmutzte Folien, Schleifpapier, Tapeten, etc.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+30;für Altholz;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+31;für Recyclingmaterial;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+32;Reinigung der öffentlichen Straßen und Wege mit Nasskehrmaschine (mit Absaugung) inkl. Bedienung, gemäß Anforderungen der Stadt Münster, ausführen;1,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+33;Pumpensumpf für den Betrieb von Unterwasser-Motorpumpen aus vorgef. Betonfertigteilen, mit Öffnungen für Wassereintritt u. Rohrdurchführungen für Sicker- u. Drainleitungen mit unterem Sumpfformstück .;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+34;Stichleitungen zum Hauptwassersammler liefern, oberirdisch ohne Erdarbeiten verlegen, abbauen u. abtransportieren einschl. der erforderl. Formstücke.;20,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+35;Lieferung, Montage u. Abbau von Unterwasser-Elektro-Motorpumpen für Pumpensümpfe. Fördermenge nach Erfordernis u. nach Wahl des AG sowie Gestellung u. Abbau aller notwendigen Schläuche für die Entsorgung der zu fördernden Wassermengen.;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+36;Zusätzliche weitere Vorhaltekosten der Elektromotorpumpe,;20,0;StWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+37;Zusätzliche weitere Vorhaltekosten der Wasserhaltungsanlage (ohne Elektromotorpumpe) als offene Wasserhaltung,;20,0;StWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Fläche abräumen von Schutt, Maschinenarbeit, und verladen in Schuttcontainer (ges. Pos);10,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Fläche abräumen von Schutt, Handarbeit, und verladen in Schuttcontainer (ges. Pos);10,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Fläche abräumen von Holzresten, Handarbeit, und verladen in Schuttcontainer (ges. Pos);10,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Roden von Sträuchern, Büschen, im Bereich des Baufeldes;1,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;vorhandene krautige Bewuchsnarbe;1,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Bodenaushub, Forstschürze, d= 40;21,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Zulage zur o.g Position der Frostschürze,;13,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;vorhandene Oberbodenschicht bis auf gewachsenen Untergrund (Gründungsebene) gemäß Bodengutachten;887,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;vorhandene Oberbodenschicht der o.g Position aufladen und abfahren und fachgerecht inkl.. Nachweis entsorgen.;735,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Schotterpolster als Tragschicht sowie Flächenfilter unmittelbar nach dem Aushub liefern und lagenweise profigerecht einbringen und verdichten. Voraussetzung dafür ist, dass der freigelegt Baugrund eine mind. steife Konsistenz hat. Die Einschätzung darüber ist mit dem baubegleitenden Büro für Baugrun;367,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Verfüllen der Arbeitsräumen der Baugrube, profilgerecht mit angelieferten Boden (separate Position) oder seitlich gelagerten Boden (separate Position) einschl. Verdichtungsarbeiten nach DIN 18300 mit einer Proctordichte von 98 %.;69,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Bodenaushub Medienschacht , Aushubtiefe ca. 1,3 m unter OKFF, Bodenklasse 3-5 und Hartkalksteinschotter, profilgerecht lösen, aufladen und abtransportieren. Inkl. Deponiegebühren/Entsorgungskosten. Abrechnung nach Aufmaß fester Masse.;7,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Verfüllen der Arbeitsräumen des Medienschachtes, profilgerecht mit angelieferten Boden (separate Position) oder seitlich gelagerten Boden (separate Position) einschl. Verdichtungsarbeiten nach DIN 18300 mit einer Proctordichte von 98 %.;2,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Lieferung von verdichtungsfähigen, schadstoffreien, frostsicheren (Frostempfindlichkeitsklasse F 1) Füllsanden mit Feinkornanteil < = 5 %, Durchlässigkeitsbeiwert gleichwertig den anstehenden Sanden F 1 mindestens jedoch Kf > = 1 x 10 hoch - 4 m/s- im eingebauten und verdichtetem Zustand, nach Wahl ;53,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Tansport des seitlich gelagerten Boden für die Arbeitsraumverfüllung nach Rücksprache mit der Bauleitung. Transportweg max. 150 m.;32,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Wurzelwerk im Zuge des Erdaushubs entfernen.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Hindernisse im Boden, Einzelgröße über 0,01 m³, bestehend aus angefülltem Beton, Mauerresten, Bauschuttresten, alten Fundamenten, abbrechen und aufnehmen, laden und zur Kippstelle des AN fördern und abladen (Deponie/Entsorgungsstelle).;16,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+18;Planum in Baugrube herstellen, zulässige Abweichung von;1093,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+19;Trennvlies liefern und zwischen Baugrund und Schotterschicht verlegen.;500,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+20;Folienabdeckung der Schotterschicht;1093,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Boden nach DIN 18300 für Kopflöcher ausheben;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Boden in Handarbeit für das Herstellen von Querschlägen zur Feststellung der Lage von Leitungen ausheben. Boden seitlich lagern, wieder einbauen u. verdichten einschl. der erforderlichen Verbauarbeiten.;5,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Boden nach DIN 18300 für Rohrgräben, Schächte und Bauwerke ausheben und den ausgebauten Boden abfahren, einschl. der zusätzlich erforderlichen Grabenverbauarbeiten. Die Baugrubensohle nach DIN EN 1610 abgleichen.;76,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Boden für die Verfüllung der Querschläge, Kopflöcher und Rohrgräben liefern, einbauen und lagenweise verdichten.;63,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Schachtanlage aus Beton DN 1000 für Schmutzwasser- oder Regenwasserdurchfluss liefern und einbauen.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Zulage zur Vorposition für die Erhöhung der Schachtanlage mittels Schachtring. Inkl. des tieferen Erdaushubs und fachgerechtem Einbau herstellen.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;"Inspektionsschacht aus Polypropylen; Typ/Fabrikat: Wavin Typ: SX 400 (oder gleichwertig) für Regenwasserdurchfluss liefern und einbauen.";2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Anschlussleitung PP (KG 2000) zum Schacht bzw. zur Sammelrohrleitung nach statischen und konstruktiven Erfordernissen nach DIN EN 1610  verlegen, einschl. Liefern aller Materialien.;95,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;Zulage für Formteile KG 2000, Bögen, Reduzierstücke, Muffe,Abzweig, Verschlusskappen, etc., DN 110.Vergütet wird der Mehraufwand für den Einbau des;30,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Schachtanlage aus Beton DN 1000 für Schmutzwasser- oder Regenwasserdurchfluss liefern und einbauen.;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Zulage zur Vorposition für die Erhöhung der Schachtanlage mittels Schachtring. Inkl. des tieferen Erdaushubs und fachgerechtem Einbau herstellen.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Schacht aus Polypropyle für Regenwasserdurchfluss liefern und einbauen.;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Anschlussleitung PP (KG 2000) zum Schacht bzw. zur Sammelrohrleitung nach statischen und konstruktiven Erfordernissen nach DIN EN 1610  verlegen, einschl. Liefern aller Materialien.;107,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Anschlussleitung PP (KG 2000) zum Schacht bzw. zur Sammelrohrleitung nach statischen und konstruktiven Erfordernissen nach DIN EN 1610  verlegen, einschl. Liefern aller Materialien.;26,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Anschlussleitung PP (KG 2000) zum Schacht bzw. zur Sammelrohrleitung nach statischen und konstruktiven Erfordernissen nach DIN EN 1610  verlegen, einschl. Liefern aller Materialien.;21,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Anschlussleitung PP (KG 2000) zum Schacht bzw. zur Sammelrohrleitung nach statischen und konstruktiven Erfordernissen nach DIN EN 1610  verlegen, einschl. Liefern aller Materialien.;17,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Zulage für Formteile KG 2000, Bögen, Reduzierstücke, Muffe,Abzweig, Verschlusskappen, etc., DN 110-200.Vergütet wird der Mehraufwand für den Einbau des;30,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+18;Zulage zur Vorposition für die Anschlußleitungen der vorgenannten Position für die Ausbildung eines Sturzgefälles auf einer Länge von ca. 2,50 m, das Rohr ist in diesem Bereich umlaufend in einem Magerbeton (d = 20 cm) zu verlegen. Ausbildung des Sturzgefälles einschl. aller erforderlichen Arbeiten ;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+19;Anschluss an Schachtanlagen (Schmutz- und Regenwasser) herstellen, einschließlich Freilegen der Leitung und Herstellen;4,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+20;Anschluss der Schmutzwasserleitungleitung an die Hauseinführungen fachgerecht herstellen einschl. aller erforderlichen Arbeiten und Materialien. Erforderliche Bögen und Verbindungsstücke werden gesondert angerechnet.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+21;Neu verlegte Kanäle vor Abnahme mittels Kanalfernauge (Fernsehkamera IBAK/Argus oder gleichwertig) gem. DWA Merkblatt 149 untersuchen.;273,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+22;Prüfung auf Wasserdichtigkeit nach DIN EN 1610 der Kanalhaltungen (Material siehe unten) einschl. Abzweige und Formstücke durchführen. Sicherung, AN- und Abtransport sowie vorhalten der erforderlichen Geräte und Gestellung der Füllstoffe mit anschl. schadloser Ableitung werden nicht besonders vergüt;273,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+23;Wasserdichtigkeitsprüfung nach DIN EN 1610 für Schächte durchführen, für Fertigteilschacht einschl. An- und Abtransport sowie Vorhaltung der erforderlichen Geräte, Sicherungs- und Absperreinrichtungen, Gestellung des Füllstoffes mit anschließen der schadloser Ableitung. Von der beabsichtigten Dichti;7,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+24;Alle nachfolgend aufgeführten Unterlagen sind 3-fach, in Ordnern mit Inhaltsverzeichnis,;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+25;Nachweise der Verdichtung im Kanalgraben gemäß ZTVE-StB durchführen (Rammsondierung). Zur Leistung gehören An- und Abfahren der Geräte, die Durchführung der Versuche entsprechend den Richtlinien einschließlich pausfähiger ausgewerteter Protokolle. Geforderter Verdichtungswert gemäß ZTVE. Diese Kontr;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;unterhalb der Schotterschicht erdfühlig nach der Norm DIN 18014;103,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Kreuzstücke, für ober- und unterirdische Verbindungen;11,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Schutzisolierungen mit Bitumen und Densoband herstellen;11,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Fundamenterder als Bandstahl, nach DIN EN 50164-2 (VDE 0185;103,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Kreuzstücke, für die Verbindungen von Bandstahl 30x3,5mm im;15,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;zum Aufstecken auf Runddrähte oder Bänder;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Anschlussfahne Flachband NIRO 1,5m (V4A) Anschlussfahnen für den Anschluss der Erdungsanlage an den Potenzialausgleich aus korrosionsfestem Edelstahl NIRO (V4A). Nach DIN EN 62561-2.;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Schutzkappe für Anschlussfahnen zum Aufstecken auf Runddrähte oder Bänder;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;zum Nachweis, einschl. aller Zuschläge, Auslösungen und aller;2,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;zum Nachweis, einschl. aller Zuschläge, Auslösungen und aller;2,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;an Trennstellen und technischen Betriebseinrichtungen-MSRAnlagen.;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Dokumentation der Erdungsanlage und Erstellung der;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Facharbeiter auf Anordnung der Bauleitung für unvorhergesehene Arbeiten zum besonderen Nachweis.;20,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Bauhelfer auf Anordnung der Bauleitung für unvorhergesehene Arbeiten zum besonderen Nachweis.;20,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Bagger: über 15 t Einsatzgewicht;1,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;LKW-Kipper: ca. 12 t Nutzlast;1,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Radlader, über 18 bis 37 kw,;1,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Sauberkeitsschicht aus Beton C 12/15;477,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;2-lagige PE-Folie (Baugleitfolie);478,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Stahlbeton, Forstschürze, d= 40,Ortbeton;21,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Stahlbeton-Sohlplatte WU, d = 30cm,Ortbeton;135,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Stahlbeton-Sohlplatte WU Medienschacht, d=30cm,Ortbeton;1,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Stahlbeton-Wand Aufzuguntegrfahrt WU, d=30cm, Ortbeton;2,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Beton der Attikawände aus bewehrtem Ortbeton, liefern und einbauen. Einbau in;7,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Geschossdecke aus Filigrandecke inkl. Ortbetonergänzung aus Beton,;438,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;Geschossdecke aus Filigrandecke inkl. Ortbetonergänzung aus Beton,;438,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Geschossdecke aus Filigrandecke inkl. Ortbetonergänzung aus Beton,;449,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Beton der Treppenpodeste in bewehrtem Fertigteil C30/37, mit rechtwinkligen Grundriss,;8,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Beton der Treppenläufe in bewehrtem Fertigteil C30/37 mit aufgesattelten Treppenstufen, in;4,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Beton der Stürze aus bewehrtem Ortbeton, liefern und einbauen.;1,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Beton der Unterzüge aus bewehrtem Ortbeton, liefern und einbauen.;0,269;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Beton der Deckengleichen Balken aus bewehrtem Ortbeton, liefern und einbauen.;0,204;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Beton der Ringbalken aus bewehrtem Ortbeton, liefern und einbauen.;1,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Randschalung für die Frostschürze der;209,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+18;Randschalung für die Sohle/Bodenplatte der zuvor beschriebenen Positionen, liefern und herstellen;112,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+19;Randschalung für die Sohlplatte WU Medienschacht der zuvor beschriebenen Positionen, liefern und herstellen;9,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+20;Randschalung für die Wände Medienschacht  der zuvor beschriebenen Positionen, liefern und herstellen;14,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+21;Randschalung für die Attika der zuvor beschriebenen Positionen, liefern und herstellen;75,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+22;Randschalung für Filigrandecken inkl. Ortbetonergänzung der zuvor beschriebenen Positionen, liefern und herstellen;321,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+23;Randschalung für Stürze und Unterzüge (3-seitige Schalung) der zuvor beschriebenen Positionen, liefern und herstellen;13,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+24;Randschalung für Stürze und Unterzüge (3-seitige Schalung) der zuvor beschriebenen Positionen, liefern und herstellen;4,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+25;Randschalung Deckengleichen Balken der zuvor beschriebenen Positionen, liefern und herstellen;2,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+26;Randschalung Ringbalken  der zuvor beschriebenen Positionen, liefern und herstellen;7,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+27;Tronsole Typ F-V1(Treppenlauf - Podest/Decke);5,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+28;Tronsole Typ F-V1((Podest - Wand));2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+29;Tronsole Typ B-V1(Trepeenlauf-Bodenplatte);1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+30;Perimeter-Dämmung Medienschacht ( Wände und sohlplatte) gegen Erdreich;15,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+31;Perimeter-Dämmung gegen Erdreich;52,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+32;Fugenblech Pentaflex KB80 o.glw. (oder gleichwertig), als einbaufertiges;15,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+33;Zulage zur Vorposition für die Lieferung und den Einbau von Innen- und Außenecken zu den vorgenannten Fugenbändern.;4,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+34;Baustahl BST 500 S bzw. Baustahl BST 500M liefern und nach den Bewehrungsplänen und Stahllisten des Statikers schneiden, biegen und einschließlich aller Nebenleistungen verlegen. Der Betonstahl wird entsprechend VOB DIN 18 331 nach den gestellten;53,0;t;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+35;Öffnung in der Sohlplatte für den Aufzugschacht anlegen und herstellen.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+36;Treppenöffnung (1,45 × 5,12 m) anlegen und herstellen.;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+37;Öffnung Dachgeschoss 0,9*1,4m anlegen und herstellen;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+38;Bodneausschnitt im Sohlplatte für Installationsleitungen, Querschnitt bis zu 0,6 m², in;2,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+39;Bodneausschnitt im Sohlplatte für Installationsleitungen, Querschnitt bis zu 0,75 m², in;2,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+40;Bodneausschnitt im Sohlplatte für Installationsleitungen, Querschnitt bis zu 0,1 m², in;2,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+41;Deckendurchbrüche für Installationsleitungen, Querschnitt bis zu 0,05 m², in;35,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+42;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;35,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+43;Deckendurchbrüche für Installationsleitungen, Querschnitt bis zu 0,1m², in;6,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+44;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;6,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+45;Deckendurchbrüche für Installationsleitungen, Querschnitt bis zu 0,15m², in;8,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+46;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;8,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+47;Deckendurchbrüche für Installationsleitungen, Querschnitt bis zu 1,3m², in;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+48;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+49;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+50;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+51;Dichteinsatz als Wanddurchführung, Typ/Fabrikat: Kraso Typ B, KG2000 (oder gleichwertig) liefern und einbauen.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+52;DN 100;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+53;DN 150;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+54;Kernbohrung StB-Wand, DN 200;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+55;DN 300;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+56;Druckwasserdichte Bodendurchf., DN 110, KG 2000;8,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Lieferung von runden Kunststoffschildern (Astralon),;25,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Mauersperrbahn gem. DIN 18533-2, d=10cm;97,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Mauersperrbahn gem. DIN 18533-2, d=15cm;111,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Mauersperrbahn gem. DIN 18533-2, d=24cm;51,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Waagerechte Mauerwerkssperre (über der ersten Steinreihe) gegen aufsteigende Feuchtigkeit unter Innen- und Außenwänden aus Mauerwerk. Abdichtungen jeweils einlagig aus Polyolefin Wanddicke 15 cm bis 24 cm. Außenwände;105,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Wärmedämmstein, KS-ISO-Kimmstein ,Wanddicke  d=10 cm,;97,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Wärmedämmstein, KS-ISO-Kimmstein ,Wanddicke  d=15 cm,;111,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Wärmedämmstein, KS-ISO-Kimmstein ,Wanddicke  d=24 cm,;51,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;Mauerwerk d=10 cm, KS-XL 20-2.0/DM;634,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Mauerwerk d=15 cm, KS-XL 20-2.0/DM;914,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Mauerwerk d=24 cm, KS-XL 20-2.0/DM;537,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Fenster-/Türöffnungen im Mauerwerk aus KS-XL-Steinen, d= 10 cm;57,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Fenster-/Türöffnungen im Mauerwerk aus KS-XL-Steinen, d= 15 cm;70,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Fenster-/Türöffnungen im Mauerwerk aus KS-XL-Steinen, d= 15 cm;12,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Fenster-/Türöffnungen im tragenden Mauerwerkswänden aus KS-XL-Steinen, d= 24 cm;15,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Fertigteilsturz MW KS.;70,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Wanddurchbrüche, bis 0,05 m²;21,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+18;Wanddurchbrüche  im Mauerwerk der vorgenannten Positionen nach erfolgter;21,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+19;Wanddurchbrüche, bis 0,1 m²;5,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+20;Wanddurchbrüche  im Mauerwerk der vorgenannten Positionen nach erfolgter;5,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+21;Wanddurchbrüche, bis 0,15 m²;17,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+22;Wanddurchbrüche  im Mauerwerk der vorgenannten Positionen nach erfolgter;17,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+23;Kernbohrung MW Wand, DN 100;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+24;DN 125;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+25;DN 150;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+26;DN 200;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+27;Anlegen von;1,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Vorbereitung des Untergrundes;115,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Abzudichtende saugfähige, mineralische;1,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Lunker, Poren, Putzrillen oder Fehlstellen < 5 mm;115,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Abdichtung gemäß der Wasser-;108,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Gerüstgestellung Lastklasse 4;1313,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Gerüstvorhaltung der vorgenannten Position pro Woche/m²;81250,0;qmWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Zulage Erschwernis/Mehraufwand Einrüstung Vorderdächer oder Nieschen;2,0;psch;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Zulage zum Gerüst der vorgenannten Pos. für das;42,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Vorhaltung für Gerüsttraversen um eine Woche;2600,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;30 cm Konsole am Standgerüst für jede Gerüstlage liefern,;263,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Konsole, Ausladung: 30 cm. Verlängerung der Gebrauchsüberlassung um eine Woche über vorgen. Grundeinsatzzeit hinaus.;16250,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Zusätzlicher Seitenschutz Innenseite Gerüst;158,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;Vorhaltung Zusätzlicher Seitenschutz Innenseite Gerüst für eine Woche;9750,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Treppenaufgang 1;11,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Vorhaltung Treppenaufgang 1;650,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Absturzsicherung Randbereiche;126,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Vorhaltung Absturzsicherung Randbereiche;7800,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Absturzsicherung Randbereiche Betonierarbeiten;168,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Vorhaltung Absturzsicherung Randbereiche Betonierarbeiten;10400,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Absturzsicherung Treppenläufe;210,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Vorhaltung Absturzsicherung Treppenläufe;13000,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Fläche abräumen von Schutt, Maschinenarbeit, und verladen in Schuttcontainer (ges. Pos);10,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Fläche abräumen von Schutt, Handarbeit, und verladen in Schuttcontainer (ges. Pos);10,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Fläche abräumen von Holzresten, Handarbeit, und verladen in Schuttcontainer (ges. Pos);10,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Roden von Sträuchern, Büschen, im Bereich des Baufeldes;1,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;vorhandene krautige Bewuchsnarbe;1,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Bodenaushub, Forstschürze, d= 40;27,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Zulage zur o.g Position der Frostschürze,;8,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;vorhandene Oberbodenschicht bis auf gewachsenen Untergrund (Gründungsebene) gemäß Bodengutachten;887,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;vorhandene Oberbodenschicht der o.g Position aufladen und abfahren und fachgerecht inkl.. Nachweis entsorgen.;735,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Schotterpolster als Tragschicht sowie Flächenfilter unmittelbar nach dem Aushub liefern und lagenweise profigerecht einbringen und verdichten. Voraussetzung dafür ist, dass der freigelegt Baugrund eine mind. steife Konsistenz hat. Die Einschätzung darüber ist mit dem baubegleitenden Büro für Baugrun;367,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Verfüllen der Arbeitsräumen der Baugrube, profilgerecht mit angelieferten Boden (separate Position) oder seitlich gelagerten Boden (separate Position) einschl. Verdichtungsarbeiten nach DIN 18300 mit einer Proctordichte von 98 %.;69,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Bodenaushub Medienschacht , Aushubtiefe ca. 1,3 m unter OKFF, Bodenklasse 3-5 und Hartkalksteinschotter, profilgerecht lösen, aufladen und abtransportieren. Inkl. Deponiegebühren/Entsorgungskosten. Abrechnung nach Aufmaß fester Masse.;7,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Verfüllen der Arbeitsräumen des Medienschachtes, profilgerecht mit angelieferten Boden (separate Position) oder seitlich gelagerten Boden (separate Position) einschl. Verdichtungsarbeiten nach DIN 18300 mit einer Proctordichte von 98 %.;2,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Lieferung von verdichtungsfähigen, schadstoffreien, frostsicheren (Frostempfindlichkeitsklasse F 1) Füllsanden mit Feinkornanteil < = 5 %, Durchlässigkeitsbeiwert gleichwertig den anstehenden Sanden F 1 mindestens jedoch Kf > = 1 x 10 hoch - 4 m/s- im eingebauten und verdichtetem Zustand, nach Wahl ;53,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Tansport des seitlich gelagerten Boden für die Arbeitsraumverfüllung nach Rücksprache mit der Bauleitung. Transportweg max. 150 m.;32,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Wurzelwerk im Zuge des Erdaushubs entfernen.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Hindernisse im Boden, Einzelgröße über 0,01 m³, bestehend aus angefülltem Beton, Mauerresten, Bauschuttresten, alten Fundamenten, abbrechen und aufnehmen, laden und zur Kippstelle des AN fördern und abladen (Deponie/Entsorgungsstelle).;16,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+18;Planum in Baugrube herstellen, zulässige Abweichung von;1093,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+19;Trennvlies liefern und zwischen Baugrund und Schotterschicht verlegen.;500,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+20;Folienabdeckung der Schotterschicht;1093,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Boden nach DIN 18300 für Kopflöcher ausheben und den ausgebauten Boden abfahren. Die Baugrubensohle nach DIN EN 1610 abgleichen.;9,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Boden in Handarbeit für das Herstellen von Querschlägen zur Feststellung der Lage von Leitungen ausheben. Boden seitlich lagern, wieder einbauen u. verdichten einschl. der erforderlichen Verbauarbeiten.;5,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Boden nach DIN 18300 für Rohrgräben, Schächte und Bauwerke ausheben und den ausgebauten Boden abfahren, einschl. der zusätzlich erforderlichen Grabenverbauarbeiten. Die Baugrubensohle nach DIN EN 1610 abgleichen.;71,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Boden für die Verfüllung der Baugruben und Rohrleitungen liefern. Einbau oberhalb der Leitungszone oder nach Angaben der Bauleitung.;63,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Schachtanlage aus Beton DN 1000 für Schmutzwasser- oder Regenwasserdurchfluss liefern und einbauen.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Zulage zur Vorposition für die Erhöhung der Schachtanlage mittels Schachtring. Inkl. des tieferen Erdaushubs und fachgerechtem Einbau herstellen.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;"Inspektionsschacht aus Polypropylen; Typ/Fabrikat: Wavin Typ: SX 400 (oder gleichwertig) für Regenwasserdurchfluss liefern und einbauen.";2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Anschlussleitung PP (KG 2000) zum Schacht bzw. zur Sammelrohrleitung nach statischen und konstruktiven Erfordernissen nach DIN EN 1610  verlegen, einschl. Liefern aller Materialien.;62,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;Zulage für Formteile KG 2000, Bögen, Reduzierstücke, Muffe,Abzweig, Verschlusskappen, etc., DN 110.Vergütet wird der Mehraufwand für den Einbau des;20,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Schacht aus Polypropyle für Regenwasserdurchfluss liefern und einbauen.;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Anschlussleitung PP (KG 2000) zum Schacht bzw. zur Sammelrohrleitung nach statischen und konstruktiven Erfordernissen nach DIN EN 1610  verlegen, einschl. Liefern aller Materialien.;63,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Anschlussleitung PP (KG 2000) zum Schacht bzw. zur Sammelrohrleitung nach statischen und konstruktiven Erfordernissen nach DIN EN 1610  verlegen, einschl. Liefern aller Materialien.;127,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Zulage für Formteile KG 2000, Bögen, Reduzierstücke, Muffe,Abzweig, Verschlusskappen, etc., DN 110-200.Vergütet wird der Mehraufwand für den Einbau des;25,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Zulage zur Vorposition für die Anschlußleitungen der vorgenannten Position für die Ausbildung eines Sturzgefälles auf einer Länge von ca. 2,50 m, das Rohr ist in diesem Bereich umlaufend in einem Magerbeton (d = 20 cm) zu verlegen. Ausbildung des Sturzgefälles einschl. aller erforderlichen Arbeiten ;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Anschluss an Schachtanlagen (Schmutz- und Regenwasser) herstellen, einschließlich Freilegen der Leitung und Herstellen;3,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Neu verlegte Kanäle vor Abnahme mittels Kanalfernauge (Fernsehkamera IBAK/Argus oder gleichwertig) gem. DWA Merkblatt 149 untersuchen.;252,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Prüfung auf Wasserdichtigkeit nach DIN EN 1610 der Kanalhaltungen (Material siehe unten) einschl. Abzweige und Formstücke durchführen. Sicherung, AN- und Abtransport sowie vorhalten der erforderlichen Geräte und Gestellung der Füllstoffe mit anschl. schadloser Ableitung werden nicht besonders vergüt;252,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+18;Wasserdichtigkeitsprüfung nach DIN EN 1610 für Schächte durchführen, für Fertigteilschacht einschl. An- und Abtransport sowie Vorhaltung der erforderlichen Geräte, Sicherungs- und Absperreinrichtungen, Gestellung des Füllstoffes mit anschließen der schadloser Ableitung. Von der beabsichtigten Dichti;5,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+19;Alle nachfolgend aufgeführten Unterlagen sind 3-fach, in Ordnern mit Inhaltsverzeichnis,;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+20;Nachweise der Verdichtung im Kanalgraben gemäß ZTVE-StB durchführen (Rammsondierung). Zur Leistung gehören An- und Abfahren der Geräte, die Durchführung der Versuche entsprechend den Richtlinien einschließlich pausfähiger ausgewerteter Protokolle. Geforderter Verdichtungswert gemäß ZTVE. Diese Kontr;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;unterhalb der Schotterschicht erdfühlig nach der Norm DIN 18014;121,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Kreuzstücke, für ober- und unterirdische Verbindungen;11,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Schutzisolierungen mit Bitumen und Densoband herstellen;11,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Fundamenterder als Bandstahl, nach DIN EN 50164-2 (VDE 0185;103,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Kreuzstücke, für die Verbindungen von Bandstahl 30x3,5mm im;15,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;zum Aufstecken auf Runddrähte oder Bänder;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Anschlussfahne Flachband NIRO 1,5m (V4A) Anschlussfahnen für den Anschluss der Erdungsanlage an den Potenzialausgleich aus korrosionsfestem Edelstahl NIRO (V4A). Nach DIN EN 62561-2.;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Schutzkappe für Anschlussfahnen zum Aufstecken auf Runddrähte oder Bänder;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;zum Nachweis, einschl. aller Zuschläge, Auslösungen und aller;2,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;zum Nachweis, einschl. aller Zuschläge, Auslösungen und aller;2,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;an Trennstellen und technischen Betriebseinrichtungen-MSRAnlagen.;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Dokumentation der Erdungsanlage und Erstellung der;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Facharbeiter auf Anordnung der Bauleitung für unvorhergesehene Arbeiten zum besonderen Nachweis.;20,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Bauhelfer auf Anordnung der Bauleitung für unvorhergesehene Arbeiten zum besonderen Nachweis.;20,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Bagger: über 15 t Einsatzgewicht;1,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;LKW-Kipper: ca. 12 t Nutzlast;1,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Radlader, über 18 bis 37 kw,;1,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Sauberkeitsschicht aus Beton C 12/15;485,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;2-lagige PE-Folie (Baugleitfolie);4855,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Stahlbeton, Forstschürze, d= 40,Ortbeton;10,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Stahlbeton, Forstschürze, d= 60 cm,Ortbeton;12,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Stahlbeton-Sohlplatte WU, d = 30cm,Ortbeton;130,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Stahlbeton-Sohlplatte WU Medienschacht, d=30cm,Ortbeton;1,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Stahlbeton-Wand Aufzuguntegrfahrt WU, d=30cm, Ortbeton;2,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Beton der Attikawände aus bewehrtem Ortbeton, liefern und einbauen. Einbau in;8,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;Geschossdecke aus Filigrandecke inkl. Ortbetonergänzung aus Beton,;415,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Geschossdecke aus Filigrandecke inkl. Ortbetonergänzung aus Beton,;415,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Geschossdecke aus Filigrandecke inkl. Ortbetonergänzung aus Beton,;415,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Beton der Treppenpodeste in bewehrtem Fertigteil C30/37, mit rechtwinkligen Grundriss,;17,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Beton der Treppenläufe in bewehrtem Fertigteil C30/37 mit aufgesattelten Treppenstufen, in;7,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Beton der Stürze aus bewehrtem Ortbeton, liefern und einbauen.;2,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Beton der Unterzüge aus bewehrtem Ortbeton, liefern und einbauen.;2,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Beton der Deckengleichen Balken aus bewehrtem Ortbeton, liefern und einbauen.;1,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Beton der Ringbalken aus bewehrtem Ortbeton, liefern und einbauen.;1,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+18;Beton der Stüzen aus bewehrtem Ortbeton, liefern und einbauen.;2,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+19;Beton der Wandartiger Träger aus bewehrtem Ortbeton, liefern und einbauen.;9,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+20;Beton der Aufkantungaus bewehrtem Ortbeton, liefern und einbauen.;2,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+21;Randschalung für die Frostschürze der;211,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+22;Randschalung für die Sohle/Bodenplatte der zuvor beschriebenen Positionen, liefern und herstellen;108,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+23;Randschalung für die Sohlplatte WU Medienschacht der zuvor beschriebenen Positionen, liefern und herstellen;9,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+24;Randschalung für die Wände Medienschacht  der zuvor beschriebenen Positionen, liefern und herstellen;14,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+25;Randschalung für die Attika der zuvor beschriebenen Positionen, liefern und herstellen;80,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+26;Randschalung für Filigrandecken inkl. Ortbetonergänzung der zuvor beschriebenen Positionen, liefern und herstellen;309,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+27;Randschalung für Stürze und Unterzüge (3-seitige Schalung) der zuvor beschriebenen Positionen, liefern und herstellen;20,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+28;Randschalung für Stürze und Unterzüge (3-seitige Schalung) der zuvor beschriebenen Positionen, liefern und herstellen;27,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+29;Randschalung Deckengleichen Balken der zuvor beschriebenen Positionen, liefern und herstellen;9,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+30;Randschalung Ringbalken  der zuvor beschriebenen Positionen, liefern und herstellen;11,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+31;Schalung-Stüzen der zuvor beschriebenen Positionen, liefern und herstellen;39,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+32;Schalung-Wandartiger Trägerder zuvor beschriebenen Positionen, liefern und herstellen;74,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+33;Tronsole Typ F-V1(Treppenlauf - Podest/Decke);11,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+34;Tronsole Typ F-V1((Podest - Wand));4,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+35;Tronsole Typ B-V1(Trepeenlauf-Bodenplatte);2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+36;Perimeter-Dämmung Medienschacht( Wände und sohlplatte)  gegen Erdreich;15,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+37;Perimeter-Dämmung gegen Erdreich;54,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+38;Fugenblech Pentaflex KB80 o.glw. (oder gleichwertig), als einbaufertiges;15,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+39;Zulage zur Vorposition für die Lieferung und den Einbau von Innen- und Außenecken zu den vorgenannten Fugenbändern.;4,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+40;Baustahl BST 500 S bzw. Baustahl BST 500M liefern und nach den Bewehrungsplänen und Stahllisten des Statikers schneiden, biegen und einschließlich aller Nebenleistungen verlegen. Der Betonstahl wird entsprechend VOB DIN 18 331 nach den gestellten;60,0;t;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+41;Öffnung in der Sohlplatte für den Aufzugschacht anlegen und herstellen.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+42;Treppenöffnung (1,45 × 5,12 m) anlegen und herstellen.;4,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+43;Öffnung Dachgeschoss 0,9*1,4m anlegen und herstellen;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+44;Bodneausschnitt im Sohlplatte für Installationsleitungen, Querschnitt bis zu 0,6 m², in;2,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+45;Bodneausschnitt im Sohlplatte für Installationsleitungen, Querschnitt bis zu 0,75 m², in;2,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+46;Bodneausschnitt im Sohlplatte für Installationsleitungen, Querschnitt bis zu 0,1 m², in;2,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+47;Deckendurchbrüche für Installationsleitungen, Querschnitt bis zu 0,05 m², in;65,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+48;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;65,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+49;Deckendurchbrüche für Installationsleitungen, Querschnitt bis zu 0,1m², in;2,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+50;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;2,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+51;Deckendurchbrüche für Installationsleitungen, Querschnitt bis zu 0,15m², in;16,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+52;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;16,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+53;Deckendurchbrüche für Installationsleitungen, Querschnitt bis zu 1,3m², in;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+54;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+55;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+56;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+57;Dichteinsatz als Wanddurchführung, Typ/Fabrikat: Kraso Typ B, KG2000 (oder gleichwertig) liefern und einbauen.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+58;DN 150;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+59;DN 100;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+60;Kernbohrung StB-Wand, DN 200;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+61;DN 300;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+62;Druckwasserdichte Bodendurchf., DN 110, KG 2000;8,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+63;Betonankerschiene für Mauerwerkanschluss;32,0;lfdm;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Lieferung von runden Kunststoffschildern (Astralon),;25,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Mauersperrbahn gem. DIN 18533-2, d=10cm;74,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Mauersperrbahn gem. DIN 18533-2, d=15cm;97,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Mauersperrbahn gem. DIN 18533-2, d=24cm;87,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Waagerechte Mauerwerkssperre (über der ersten Steinreihe) gegen aufsteigende Feuchtigkeit unter Innen- und Außenwänden aus Mauerwerk. Abdichtungen jeweils einlagig aus Polyolefin Wanddicke 15 cm bis 24 cm. Außenwände;105,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Wärmedämmstein, KS-ISO-Kimmstein ,Wanddicke  d=10 cm,;74,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Wärmedämmstein, KS-ISO-Kimmstein ,Wanddicke  d=15 cm,;97,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Wärmedämmstein, KS-ISO-Kimmstein ,Wanddicke  d=24 cm,;87,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;Mauerwerk d=10 cm, KS-XL 20-2.0/DM;753,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Mauerwerk d=15 cm, KS-XL 20-2.0/DM;828,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Mauerwerk d=24 cm, KS-XL 20-2.0/DM;338,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Fenster-/Türöffnungen im Mauerwerk aus KS-XL-Steinen, d= 10 cm;60,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Fenster-/Türöffnungen im Mauerwerk aus KS-XL-Steinen, d= 15 cm;69,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Fenster-/Türöffnungen im Mauerwerk aus KS-XL-Steinen, d= 15 cm;18,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Fenster-/Türöffnungen im tragenden Mauerwerkswänden aus KS-XL-Steinen, d= 24 cm;18,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Fertigteilsturz MW KS.;70,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Beidseitige Aussparungen bzw. beidseitiges Auflager für Rollladenkästen in den;62,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+18;Wanddurchbrüche, bis 0,05 m²;27,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+19;Wanddurchbrüche  im Mauerwerk der vorgenannten Positionen nach erfolgter;27,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+20;Wanddurchbrüche, bis 0,1 m²;4,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+21;Wanddurchbrüche  im Mauerwerk der vorgenannten Positionen nach erfolgter;4,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+22;Wanddurchbrüche, bis 0,15 m²;6,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+23;Wanddurchbrüche  im Mauerwerk der vorgenannten Positionen nach erfolgter;6,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+24;Kernbohrung MW Wand, DN 100;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+25;DN 125;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+26;DN 150;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+27;DN 200;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+28;"Wärmegedämmter Gurtwicklerkasten, Typ/Fabrikat: Lifo Gurtkasten; Groß (oder";62,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+29;Maueranschlussanker;150,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Vorbereitung des Untergrundes;110,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Erstellung Hohlkehle;56,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Abzudichtende saugfähige, mineralische;1,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Lunker, Poren, Putzrillen oder Fehlstellen < 5 mm;110,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Sockelabdichtung Mauerwerk Bereich WDVS;47,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Abdichtung gemäß der Wasser-;57,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Perimeter-Dämmung, Sockelbereich, d=240mm;45,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Lieferung und fachgerechte Montage von Dämmplatten aus;161,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Z - Isolierung aus einer 2 mm starken Kunststofffolie liefern;128,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Zulage zu vorgenannten Z-Isolierung für eine zusätzliche mechanische Befestigung der Z-Isolierung mit einer Wandanschlussschiene.;128,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Außenwandämmung aus Mineralwolle hinter dem;419,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Kimmschicht⋅d=11,5 cm,⋅Wärmedämmstein, liefern und als;56,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Klinkermauerwerk liefern und nach EC 6, DIN EN 1996 Teil;419,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Anlegen und Herstellen von Öffnungen <2,5 m² im Verblendmauerwerk der vorgenannten;25,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;Anlegen und Herstellen von Öffnungen >2,5 m²im Verblendmauerwerk der vorgenannten;75,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Anlegen und Herstellen der vertikalen Laibungen von;270,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Auflagerwinkel Grenadierschicht-/Läuferschicht LW 635;4,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Auflagerwinkel Grenadierschicht-/Läuferschicht LW 1135;10,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Auflagerwinkel Grenadierschicht-/Läuferschicht LW 1510;30,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Winkelkonsolanker mit Auflagerwinkel LW 1373 cm;14,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Lüftersiebchen im Farbton der Verfugung liefern und in die;210,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Senkrechte Dehnungsfuge gemäß DIN EN 1996-2 für den Außenbereich in der Verblendschale zur Sicherung der Beweglichkeit der Außenschale herstellen, fluchtgerecht hochführen und fachgerecht dauerelastisch gemäß den Herstellerangaben versiegeln.;2,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Verfugung Verblendmauerwerk;419,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Gerüstgestellung Lastklasse 4;1313,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Gerüstvorhaltung der vorgenannten Position nach der Grundstandszeit gemäß VOB, Abrechnung nach eingerüsteter Fläche je vorgehaltene Woche.;81250,0;qmWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Zulage Erschwernis/Mehraufwand Einrüstung Vorderdächer oder Nieschen;2,0;psch;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Zulage zum Gerüst der vorgenannten Pos. für das;42,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Vorhaltung für Gerüsttraversen um eine Woche;2600,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;30 cm Konsole am Standgerüst für jede Gerüstlage liefern,;263,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Konsole, Ausladung: 30 cm. Verlängerung der Gebrauchsüberlassung um eine Woche über vorgen. Grundeinsatzzeit hinaus.;16250,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Zusätzlicher Seitenschutz Innenseite Gerüst;158,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;Vorhaltung Zusätzlicher Seitenschutz Innenseite Gerüst für eine Woche;9750,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Treppenaufgang 1;11,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Vorhaltung Treppenaufgang 1;650,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Absturzsicherung Randbereiche;126,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Vorhaltung Absturzsicherung Randbereiche;7800,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Absturzsicherung Randbereiche Betonierarbeiten;168,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Vorhaltung Absturzsicherung Randbereiche Betonierarbeiten;10400,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Absturzsicherung Treppenläufe;210,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Vorhaltung Absturzsicherung Treppenläufe;13000,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Fläche abräumen von Schutt, Maschinenarbeit, und verladen in Schuttcontainer (ges. Pos);10,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Fläche abräumen von Schutt, Handarbeit, und verladen in Schuttcontainer (ges. Pos);10,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Fläche abräumen von Holzresten, Handarbeit, und verladen in Schuttcontainer (ges. Pos);10,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Roden von Sträuchern, Büschen, im Bereich des Baufeldes;1,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;vorhandene krautige Bewuchsnarbe;1,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Bodenaushub, Forstschürze, d= 40;27,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Zulage zur o.g Position der Frostschürze,;8,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;vorhandene Oberbodenschicht bis auf gewachsenen Untergrund (Gründungsebene) gemäß Bodengutachten;887,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;vorhandene Oberbodenschicht der o.g Position aufladen und abfahren und fachgerecht inkl.. Nachweis entsorgen.;735,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Schotterpolster als Tragschicht sowie Flächenfilter unmittelbar nach dem Aushub liefern und lagenweise profigerecht einbringen und verdichten. Voraussetzung dafür ist, dass der freigelegt Baugrund eine mind. steife Konsistenz hat. Die Einschätzung darüber ist mit dem baubegleitenden Büro für Baugrun;367,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Verfüllen der Arbeitsräumen der Baugrube, profilgerecht mit angelieferten Boden (separate Position) oder seitlich gelagerten Boden (separate Position) einschl. Verdichtungsarbeiten nach DIN 18300 mit einer Proctordichte von 98 %.;69,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Bodenaushub Medienschacht , Aushubtiefe ca. 1,3 m unter OKFF, Bodenklasse 3-5 und Hartkalksteinschotter, profilgerecht lösen, aufladen und abtransportieren. Inkl. Deponiegebühren/Entsorgungskosten. Abrechnung nach Aufmaß fester Masse.;7,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Verfüllen der Arbeitsräumen des Medienschachtes, profilgerecht mit angelieferten Boden (separate Position) oder seitlich gelagerten Boden (separate Position) einschl. Verdichtungsarbeiten nach DIN 18300 mit einer Proctordichte von 98 %.;2,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Lieferung von verdichtungsfähigen, schadstoffreien, frostsicheren (Frostempfindlichkeitsklasse F 1) Füllsanden mit Feinkornanteil < = 5 %, Durchlässigkeitsbeiwert gleichwertig den anstehenden Sanden F 1 mindestens jedoch Kf > = 1 x 10 hoch - 4 m/s- im eingebauten und verdichtetem Zustand, nach Wahl ;53,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Tansport des seitlich gelagerten Boden für die Arbeitsraumverfüllung nach Rücksprache mit der Bauleitung. Transportweg max. 150 m.;32,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Wurzelwerk im Zuge des Erdaushubs entfernen.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Hindernisse im Boden, Einzelgröße über 0,01 m³, bestehend aus angefülltem Beton, Mauerresten, Bauschuttresten, alten Fundamenten, abbrechen und aufnehmen, laden und zur Kippstelle des AN fördern und abladen (Deponie/Entsorgungsstelle).;16,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+18;Planum in Baugrube herstellen, zulässige Abweichung von;1093,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+19;Trennvlies liefern und zwischen Baugrund und Schotterschicht verlegen.;500,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+20;Folienabdeckung der Schotterschicht;1093,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Boden nach DIN 18300 für Kopflöcher ausheben und den ausgebauten Boden abfahren. Die Baugrubensohle nach DIN EN 1610 abgleichen.;9,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Boden in Handarbeit für das Herstellen von Querschlägen zur Feststellung der Lage von Leitungen ausheben. Boden seitlich lagern, wieder einbauen u. verdichten einschl. der erforderlichen Verbauarbeiten.;5,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Boden nach DIN 18300 für Rohrgräben, Schächte und Bauwerke ausheben und den ausgebauten Boden abfahren, einschl. der zusätzlich erforderlichen Grabenverbauarbeiten. Die Baugrubensohle nach DIN EN 1610 abgleichen.;71,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Boden für die Verfüllung der Baugruben und Rohrleitungen liefern. Einbau oberhalb der Leitungszone oder nach Angaben der Bauleitung.;63,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;"Inspektionsschacht aus Polypropylen; Typ/Fabrikat: Wavin Typ: SX 400 (oder gleichwertig) für Regenwasserdurchfluss liefern und einbauen.";0,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Anschlussleitung PP (KG 2000) zum Schacht bzw. zur Sammelrohrleitung nach statischen und konstruktiven Erfordernissen nach DIN EN 1610  verlegen, einschl. Liefern aller Materialien.;98,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Zulage für Formteile KG 2000, Bögen, Reduzierstücke, Muffe,Abzweig, Verschlusskappen, etc., DN 110.Vergütet wird der Mehraufwand für den Einbau des;16,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Schacht aus Polypropyle für Regenwasserdurchfluss liefern und einbauen.;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;Anschlussleitung PP (KG 2000) zum Schacht bzw. zur Sammelrohrleitung nach statischen und konstruktiven Erfordernissen nach DIN EN 1610  verlegen, einschl. Liefern aller Materialien.;117,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Anschlussleitung PP (KG 2000) zum Schacht bzw. zur Sammelrohrleitung nach statischen und konstruktiven Erfordernissen nach DIN EN 1610  verlegen, einschl. Liefern aller Materialien.;26,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Zulage für Formteile KG 2000, Bögen, Reduzierstücke, Muffe,Abzweig, Verschlusskappen, etc., DN 110-200.Vergütet wird der Mehraufwand für den Einbau des;20,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Anschluss an Schachtanlagen (Schmutz- und Regenwasser) herstellen, einschließlich Freilegen der Leitung und Herstellen;2,0;Stck;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Zulage zur Vorposition für die Anschlußleitungen der vorgenannten Position für die Ausbildung eines Sturzgefälles auf einer Länge von ca. 2,50 m, das Rohr ist in diesem Bereich umlaufend in einem Magerbeton (d = 20 cm) zu verlegen. Ausbildung des Sturzgefälles einschl. aller erforderlichen Arbeiten ;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Neu verlegte Kanäle vor Abnahme mittels Kanalfernauge (Fernsehkamera IBAK/Argus oder gleichwertig) gem. DWA Merkblatt 149 untersuchen.;252,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Prüfung auf Wasserdichtigkeit nach DIN EN 1610 der Kanalhaltungen (Material siehe unten) einschl. Abzweige und Formstücke durchführen. Sicherung, AN- und Abtransport sowie vorhalten der erforderlichen Geräte und Gestellung der Füllstoffe mit anschl. schadloser Ableitung werden nicht besonders vergüt;252,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Wasserdichtigkeitsprüfung nach DIN EN 1610 für Schächte durchführen, für Fertigteilschacht einschl. An- und Abtransport sowie Vorhaltung der erforderlichen Geräte, Sicherungs- und Absperreinrichtungen, Gestellung des Füllstoffes mit anschließen der schadloser Ableitung. Von der beabsichtigten Dichti;5,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Alle nachfolgend aufgeführten Unterlagen sind 3-fach, in Ordnern mit Inhaltsverzeichnis,;3,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+18;Nachweise der Verdichtung im Kanalgraben gemäß ZTVE-StB durchführen (Rammsondierung). Zur Leistung gehören An- und Abfahren der Geräte, die Durchführung der Versuche entsprechend den Richtlinien einschließlich pausfähiger ausgewerteter Protokolle. Geforderter Verdichtungswert gemäß ZTVE. Diese Kontr;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;unterhalb der Schotterschicht erdfühlig nach der Norm DIN 18014;121,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Kreuzstücke, für ober- und unterirdische Verbindungen;11,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Schutzisolierungen mit Bitumen und Densoband herstellen;11,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Fundamenterder als Bandstahl, nach DIN EN 50164-2 (VDE 0185;103,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Kreuzstücke, für die Verbindungen von Bandstahl 30x3,5mm im;15,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;zum Aufstecken auf Runddrähte oder Bänder;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Anschlussfahne Flachband NIRO 1,5m (V4A) Anschlussfahnen für den Anschluss der Erdungsanlage an den Potenzialausgleich aus korrosionsfestem Edelstahl NIRO (V4A). Nach DIN EN 62561-2.;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Schutzkappe für Anschlussfahnen zum Aufstecken auf Runddrähte oder Bänder;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;zum Nachweis, einschl. aller Zuschläge, Auslösungen und aller;2,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;zum Nachweis, einschl. aller Zuschläge, Auslösungen und aller;2,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;an Trennstellen und technischen Betriebseinrichtungen-MSRAnlagen.;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Dokumentation der Erdungsanlage und Erstellung der;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Facharbeiter auf Anordnung der Bauleitung für unvorhergesehene Arbeiten zum besonderen Nachweis.;20,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Bauhelfer auf Anordnung der Bauleitung für unvorhergesehene Arbeiten zum besonderen Nachweis.;20,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Bagger: über 15 t Einsatzgewicht;1,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;LKW-Kipper: ca. 12 t Nutzlast;1,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Radlader, über 18 bis 37 kw,;1,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Sauberkeitsschicht aus Beton C 12/15;485,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;2-lagige PE-Folie (Baugleitfolie);4855,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Stahlbeton, Forstschürze, d= 40,Ortbeton;10,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Stahlbeton, Forstschürze, d= 60 cm,Ortbeton;12,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Stahlbeton-Sohlplatte WU, d = 30cm,Ortbeton;130,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Stahlbeton-Sohlplatte WU Medienschacht, d=30cm,Ortbeton;1,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Stahlbeton-Wand Aufzuguntegrfahrt WU, d=30cm, Ortbeton;2,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Beton der Attikawände aus bewehrtem Ortbeton, liefern und einbauen. Einbau in;8,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;Geschossdecke aus Filigrandecke inkl. Ortbetonergänzung aus Beton;415,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Geschossdecke aus Filigrandecke inkl. Ortbetonergänzung aus Beton;415,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Geschossdecke aus Filigrandecke inkl. Ortbetonergänzung aus Beton,;415,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Beton der Treppenpodeste in bewehrtem Fertigteil C30/37, mit rechtwinkligen Grundriss,;17,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Beton der Treppenläufe in bewehrtem Fertigteil C30/37 mit aufgesattelten Treppenstufen, in;7,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Beton der Stürze aus bewehrtem Ortbeton, liefern und einbauen.;2,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Beton der Unterzüge aus bewehrtem Ortbeton, liefern und einbauen.;2,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Beton der Deckengleichen Balken aus bewehrtem Ortbeton, liefern und einbauen.;1,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Beton der Ringbalken aus bewehrtem Ortbeton, liefern und einbauen.;1,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+18;Beton der Stüzen aus bewehrtem Ortbeton, liefern und einbauen.;2,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+19;Beton der Wandartiger Träger aus bewehrtem Ortbeton, liefern und einbauen.;9,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+20;Beton der Aufkantungaus bewehrtem Ortbeton, liefern und einbauen.;2,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+21;Randschalung für die Frostschürze der;211,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+22;Randschalung für die Sohle/Bodenplatte der zuvor beschriebenen Positionen, liefern und herstellen;108,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+23;Randschalung für die Sohlplatte WU Medienschacht der zuvor beschriebenen Positionen, liefern und herstellen;9,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+24;Randschalung für die Wände Medienschacht  der zuvor beschriebenen Positionen, liefern und herstellen;14,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+25;Randschalung für die Attika der zuvor beschriebenen Positionen, liefern und herstellen;80,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+26;Randschalung für Filigrandecken inkl. Ortbetonergänzung der zuvor beschriebenen Positionen, liefern und herstellen;309,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+27;Randschalung für Filigranvordachn inkl. Ortbetonergänzung der zuvor beschriebenen Positionen, liefern und herstellen;14,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+28;Randschalung für Stürze und Unterzüge (3-seitige Schalung) der zuvor beschriebenen Positionen, liefern und herstellen;20,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+29;Randschalung für Stürze und Unterzüge (3-seitige Schalung) der zuvor beschriebenen Positionen, liefern und herstellen;27,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+30;Randschalung Deckengleichen Balken der zuvor beschriebenen Positionen, liefern und herstellen;9,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+31;Randschalung Ringbalken  der zuvor beschriebenen Positionen, liefern und herstellen;11,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+32;Schalung-Stüzen der zuvor beschriebenen Positionen, liefern und herstellen;39,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+33;Schalung-Wandartiger Trägerder zuvor beschriebenen Positionen, liefern und herstellen;74,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+34;Tronsole Typ F-V1(Treppenlauf - Podest/Decke);11,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+35;Tronsole Typ F-V1((Podest - Wand));4,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+36;Tronsole Typ B-V1(Trepeenlauf-Bodenplatte);2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+37;Perimeter-Dämmung Medienschacht( Wände und sohlplatte)  gegen Erdreich;15,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+38;Perimeter-Dämmung gegen Erdreich;54,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+39;Fugenblech Pentaflex KB80 o.glw. (oder gleichwertig), als einbaufertiges;15,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+40;Zulage zur Vorposition für die Lieferung und den Einbau von Innen- und Außenecken zu den vorgenannten Fugenbändern.;4,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+41;Baustahl BST 500 S bzw. Baustahl BST 500M liefern und nach den Bewehrungsplänen und Stahllisten des Statikers schneiden, biegen und einschließlich aller Nebenleistungen verlegen. Der Betonstahl wird entsprechend VOB DIN 18 331 nach den gestellten;60,0;t;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+42;Öffnung in der Sohlplatte für den Aufzugschacht anlegen und herstellen.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+43;Treppenöffnung (1,45 × 5,12 m) anlegen und herstellen.;4,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+44;Öffnung Dachgeschoss 0,9*1,4m anlegen und herstellen;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+45;Bodneausschnitt im Sohlplatte für Installationsleitungen, Querschnitt bis zu 0,6 m², in;2,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+46;Bodneausschnitt im Sohlplatte für Installationsleitungen, Querschnitt bis zu 0,75 m², in;2,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+47;Bodneausschnitt im Sohlplatte für Installationsleitungen, Querschnitt bis zu 0,1 m², in;2,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+48;Deckendurchbrüche für Installationsleitungen, Querschnitt bis zu 0,05 m², in;65,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+49;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;65,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+50;Deckendurchbrüche für Installationsleitungen, Querschnitt bis zu 0,1m², in;2,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+51;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;2,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+52;Deckendurchbrüche für Installationsleitungen, Querschnitt bis zu 0,15m², in;16,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+53;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;16,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+54;Deckendurchbrüche für Installationsleitungen, Querschnitt bis zu 1,3m², in;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+55;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+56;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+57;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+58;Dichteinsatz als Wanddurchführung, Typ/Fabrikat: Kraso Typ B, KG2000 (oder gleichwertig) liefern und einbauen.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+59;DN 150;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+60;DN 100;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+61;Kernbohrung StB-Wand, DN 200;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+62;DN 300;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+63;Druckwasserdichte Bodendurchf., DN 110, KG 2000;8,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+64;Betonankerschiene für Mauerwerkanschluss;32,0;lfdm;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Lieferung von runden Kunststoffschildern (Astralon),;25,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Mauersperrbahn gem. DIN 18533-2, d=10cm;74,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Mauersperrbahn gem. DIN 18533-2, d=15cm;97,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Mauersperrbahn gem. DIN 18533-2, d=24cm;87,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Waagerechte Mauerwerkssperre (über der ersten Steinreihe) gegen aufsteigende Feuchtigkeit unter Innen- und Außenwänden aus Mauerwerk. Abdichtungen jeweils einlagig aus Polyolefin Wanddicke 15 cm bis 24 cm. Außenwände;105,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Wärmedämmstein, KS-ISO-Kimmstein ,Wanddicke  d=10 cm,;74,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Wärmedämmstein, KS-ISO-Kimmstein ,Wanddicke  d=15 cm,;97,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Wärmedämmstein, KS-ISO-Kimmstein ,Wanddicke  d=24 cm,;87,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;Mauerwerk d=10 cm, KS-XL 20-2.0/DM;753,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Mauerwerk d=15 cm, KS-XL 20-2.0/DM;828,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Mauerwerk d=24 cm, KS-XL 20-2.0/DM;338,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Fenster-/Türöffnungen im Mauerwerk aus KS-XL-Steinen, d= 10 cm;60,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Fenster-/Türöffnungen im Mauerwerk aus KS-XL-Steinen, d= 15 cm;69,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Fenster-/Türöffnungen im Mauerwerk aus KS-XL-Steinen, d= 15 cm;18,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Fenster-/Türöffnungen im tragenden Mauerwerkswänden aus KS-XL-Steinen, d= 24 cm;18,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Fertigteilsturz MW KS.;70,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Beidseitige Aussparungen bzw. beidseitiges Auflager für Rollladenkästen in den;62,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+18;Wanddurchbrüche, bis 0,05 m²;27,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+19;Wanddurchbrüche  im Mauerwerk der vorgenannten Positionen nach erfolgter;27,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+20;Wanddurchbrüche, bis 0,1 m²;4,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+21;Wanddurchbrüche  im Mauerwerk der vorgenannten Positionen nach erfolgter;4,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+22;Wanddurchbrüche, bis 0,15 m²;6,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+23;Wanddurchbrüche  im Mauerwerk der vorgenannten Positionen nach erfolgter;6,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+24;Kernbohrung MW Wand, DN 100;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+25;DN 125;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+26;DN 150;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+27;DN 200;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+28;"Wärmegedämmter Gurtwicklerkasten, Typ/Fabrikat: Lifo Gurtkasten; Groß (oder";62,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+29;Maueranschlussanker;150,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Vorbereitung des Untergrundes;110,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Erstellung Hohlkehle;56,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Abzudichtende saugfähige, mineralische;1,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Lunker, Poren, Putzrillen oder Fehlstellen < 5 mm;110,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Sockelabdichtung Mauerwerk Bereich WDVS;47,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Abdichtung gemäß der Wasser-;57,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Perimeter-Dämmung, Sockelbereich, d=240mm;45,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Lieferung und fachgerechte Montage von Dämmplatten aus;161,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Z - Isolierung aus einer 2 mm starken Kunststofffolie liefern;128,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Zulage zu vorgenannten Z-Isolierung für eine zusätzliche mechanische Befestigung der Z-Isolierung mit einer Wandanschlussschiene.;128,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Außenwandämmung aus Mineralwolle hinter dem;419,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Kimmschicht⋅d=11,5 cm,⋅Wärmedämmstein, liefern und als;56,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Klinkermauerwerk liefern und nach EC 6, DIN EN 1996 Teil;419,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Anlegen und Herstellen von Öffnungen <2,5 m² im Verblendmauerwerk der vorgenannten;25,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;Anlegen und Herstellen von Öffnungen >2,5 m²im Verblendmauerwerk der vorgenannten;75,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Anlegen und Herstellen der vertikalen Laibungen von;270,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Auflagerwinkel Grenadierschicht-/Läuferschicht LW 635;4,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Auflagerwinkel Grenadierschicht-/Läuferschicht LW 1135;10,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Auflagerwinkel Grenadierschicht-/Läuferschicht LW 1510;30,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Winkelkonsolanker mit Auflagerwinkel LW 1373 cm;14,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Lüftersiebchen im Farbton der Verfugung liefern und in die;210,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Senkrechte Dehnungsfuge gemäß DIN EN 1996-2 für den Außenbereich in der Verblendschale zur Sicherung der Beweglichkeit der Außenschale herstellen, fluchtgerecht hochführen und fachgerecht dauerelastisch gemäß den Herstellerangaben versiegeln.;100,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Verfugung Verblendmauerwerk;419,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Gerüstgestellung Lastklasse 4;1313,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Gerüstvorhaltung der vorgenannten Position nach der Grundstandszeit gemäß VOB, Abrechnung nach eingerüsteter Fläche je vorgehaltene Woche.;81250,0;qmWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Zulage Erschwernis/Mehraufwand Einrüstung Vorderdächer oder Nieschen;2,0;psch;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Zulage zum Gerüst der vorgenannten Pos. für das;42,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Vorhaltung für Gerüsttraversen um eine Woche;2600,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;30 cm Konsole am Standgerüst für jede Gerüstlage liefern,;263,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Konsole, Ausladung: 30 cm. Verlängerung der Gebrauchsüberlassung um eine Woche über vorgen. Grundeinsatzzeit hinaus.;16250,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Zusätzlicher Seitenschutz Innenseite Gerüst;158,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;Vorhaltung Zusätzlicher Seitenschutz Innenseite Gerüst für eine Woche;9750,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Treppenaufgang 1;11,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Vorhaltung Treppenaufgang 1;650,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Absturzsicherung Randbereiche;126,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Vorhaltung Absturzsicherung Randbereiche;7800,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Absturzsicherung Randbereiche Betonierarbeiten;168,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Vorhaltung Absturzsicherung Randbereiche Betonierarbeiten;10400,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Absturzsicherung Treppenläufe;210,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Vorhaltung Absturzsicherung Treppenläufe;13000,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Fläche abräumen von Schutt, Maschinenarbeit, und verladen in Schuttcontainer (ges. Pos);10,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Fläche abräumen von Schutt, Handarbeit, und verladen in Schuttcontainer (ges. Pos);10,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Fläche abräumen von Holzresten, Handarbeit, und verladen in Schuttcontainer (ges. Pos);10,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Roden von Sträuchern, Büschen, im Bereich des Baufeldes;1,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;vorhandene krautige Bewuchsnarbe;1,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Bodenaushub, Forstschürze, d= 40;21,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Zulage zur o.g Position der Frostschürze,;13,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;vorhandene Oberbodenschicht bis auf gewachsenen Untergrund (Gründungsebene) gemäß Bodengutachten;887,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;vorhandene Oberbodenschicht der o.g Position aufladen und abfahren und fachgerecht inkl.. Nachweis entsorgen.;735,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Schotterpolster als Tragschicht sowie Flächenfilter unmittelbar nach dem Aushub liefern und lagenweise profigerecht einbringen und verdichten. Voraussetzung dafür ist, dass der freigelegt Baugrund eine mind. steife Konsistenz hat. Die Einschätzung darüber ist mit dem baubegleitenden Büro für Baugrun;367,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Verfüllen der Arbeitsräumen der Baugrube, profilgerecht mit angelieferten Boden (separate Position) oder seitlich gelagerten Boden (separate Position) einschl. Verdichtungsarbeiten nach DIN 18300 mit einer Proctordichte von 98 %.;69,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Bodenaushub Medienschacht , Aushubtiefe ca. 1,3 m unter OKFF, Bodenklasse 3-5 und Hartkalksteinschotter, profilgerecht lösen, aufladen und abtransportieren. Inkl. Deponiegebühren/Entsorgungskosten. Abrechnung nach Aufmaß fester Masse.;7,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Verfüllen der Arbeitsräumen des Medienschachtes, profilgerecht mit angelieferten Boden (separate Position) oder seitlich gelagerten Boden (separate Position) einschl. Verdichtungsarbeiten nach DIN 18300 mit einer Proctordichte von 98 %.;2,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Lieferung von verdichtungsfähigen, schadstoffreien, frostsicheren (Frostempfindlichkeitsklasse F 1) Füllsanden mit Feinkornanteil < = 5 %, Durchlässigkeitsbeiwert gleichwertig den anstehenden Sanden F 1 mindestens jedoch Kf > = 1 x 10 hoch - 4 m/s- im eingebauten und verdichtetem Zustand, nach Wahl ;53,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Tansport des seitlich gelagerten Boden für die Arbeitsraumverfüllung nach Rücksprache mit der Bauleitung. Transportweg max. 150 m.;32,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Wurzelwerk im Zuge des Erdaushubs entfernen.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Hindernisse im Boden, Einzelgröße über 0,01 m³, bestehend aus angefülltem Beton, Mauerresten, Bauschuttresten, alten Fundamenten, abbrechen und aufnehmen, laden und zur Kippstelle des AN fördern und abladen (Deponie/Entsorgungsstelle).;16,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+18;Planum in Baugrube herstellen, zulässige Abweichung von;1093,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+19;Trennvlies liefern und zwischen Baugrund und Schotterschicht verlegen.;500,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+20;Folienabdeckung der Schotterschicht;1093,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Boden nach DIN 18300 für Kopflöcher ausheben;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Boden in Handarbeit für das Herstellen von Querschlägen zur Feststellung der Lage von Leitungen ausheben. Boden seitlich lagern, wieder einbauen u. verdichten einschl. der erforderlichen Verbauarbeiten.;5,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Boden nach DIN 18300 für Rohrgräben, Schächte und Bauwerke ausheben und den ausgebauten Boden abfahren, einschl. der zusätzlich erforderlichen Grabenverbauarbeiten. Die Baugrubensohle nach DIN EN 1610 abgleichen.;82,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Boden für die Verfüllung der Querschläge, Kopflöcher und Rohrgräben liefern, einbauen und lagenweise verdichten.;63,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Schachtanlage aus Beton DN 1000 für Schmutzwasser- oder Regenwasserdurchfluss liefern und einbauen.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Zulage zur Vorposition für die Erhöhung der Schachtanlage mittels Schachtring. Inkl. des tieferen Erdaushubs und fachgerechtem Einbau herstellen.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;"Inspektionsschacht aus Polypropylen; Typ/Fabrikat: Wavin Typ: SX 400 (oder gleichwertig) für Regenwasserdurchfluss liefern und einbauen.";2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Anschlussleitung PP (KG 2000) zum Schacht bzw. zur Sammelrohrleitung nach statischen und konstruktiven Erfordernissen nach DIN EN 1610  verlegen, einschl. Liefern aller Materialien.;60,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;Anschlussleitung PP (KG 2000) zum Schacht bzw. zur Sammelrohrleitung nach statischen und konstruktiven Erfordernissen nach DIN EN 1610  verlegen, einschl. Liefern aller Materialien.;16,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Zulage für Formteile KG 2000, Bögen, Reduzierstücke, Muffe,Abzweig, Verschlusskappen, etc., DN 110.Vergütet wird der Mehraufwand für den Einbau des;30,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Zulage für Formteile KG 2000, Bögen, Reduzierstücke, Muffe,Abzweig, Verschlusskappen, etc., DN 160.Vergütet wird der Mehraufwand für den Einbau des;10,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Schachtanlage aus Beton DN 1000 für Schmutzwasser- oder Regenwasserdurchfluss liefern und einbauen.;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Zulage zur Vorposition für die Erhöhung der Schachtanlage mittels Schachtring. Inkl. des tieferen Erdaushubs und fachgerechtem Einbau herstellen.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Schacht aus Polypropyle für Regenwasserdurchfluss liefern und einbauen.;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Anschlussleitung PP (KG 2000) zum Schacht bzw. zur Sammelrohrleitung nach statischen und konstruktiven Erfordernissen nach DIN EN 1610  verlegen, einschl. Liefern aller Materialien.;53,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Anschlussleitung PP (KG 2000) zum Schacht bzw. zur Sammelrohrleitung nach statischen und konstruktiven Erfordernissen nach DIN EN 1610  verlegen, einschl. Liefern aller Materialien.;148,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Anschlussleitung PP (KG 2000) zum Schacht bzw. zur Sammelrohrleitung nach statischen und konstruktiven Erfordernissen nach DIN EN 1610  verlegen, einschl. Liefern aller Materialien.;17,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+18;Zulage für Formteile KG 2000, Bögen, Reduzierstücke, Muffe,Abzweig, Verschlusskappen, etc., DN 110-200.Vergütet wird der Mehraufwand für den Einbau des;30,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+19;Zulage zur Vorposition für die Anschlußleitungen der vorgenannten Position für die Ausbildung eines Sturzgefälles auf einer Länge von ca. 2,50 m, das Rohr ist in diesem Bereich umlaufend in einem Magerbeton (d = 20 cm) zu verlegen. Ausbildung des Sturzgefälles einschl. aller erforderlichen Arbeiten ;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+20;Anschluss an Schachtanlagen (Schmutz- und Regenwasser) herstellen, einschließlich Freilegen der Leitung und Herstellen;3,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+21;Anschluss der Schmutzwasserleitungleitung an die Hauseinführungen fachgerecht herstellen einschl. aller erforderlichen Arbeiten und Materialien. Erforderliche Bögen und Verbindungsstücke werden gesondert angerechnet.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+22;Neu verlegte Kanäle vor Abnahme mittels Kanalfernauge (Fernsehkamera IBAK/Argus oder gleichwertig) gem. DWA Merkblatt 149 untersuchen.;273,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+23;Prüfung auf Wasserdichtigkeit nach DIN EN 1610 der Kanalhaltungen (Material siehe unten) einschl. Abzweige und Formstücke durchführen. Sicherung, AN- und Abtransport sowie vorhalten der erforderlichen Geräte und Gestellung der Füllstoffe mit anschl. schadloser Ableitung werden nicht besonders vergüt;273,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+24;Wasserdichtigkeitsprüfung nach DIN EN 1610 für Schächte durchführen, für Fertigteilschacht einschl. An- und Abtransport sowie Vorhaltung der erforderlichen Geräte, Sicherungs- und Absperreinrichtungen, Gestellung des Füllstoffes mit anschließen der schadloser Ableitung. Von der beabsichtigten Dichti;7,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+25;Alle nachfolgend aufgeführten Unterlagen sind 3-fach, in Ordnern mit Inhaltsverzeichnis,;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+26;Nachweise der Verdichtung im Kanalgraben gemäß ZTVE-StB durchführen (Rammsondierung). Zur Leistung gehören An- und Abfahren der Geräte, die Durchführung der Versuche entsprechend den Richtlinien einschließlich pausfähiger ausgewerteter Protokolle. Geforderter Verdichtungswert gemäß ZTVE. Diese Kontr;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;unterhalb der Schotterschicht erdfühlig nach der Norm DIN 18014;103,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Kreuzstücke, für ober- und unterirdische Verbindungen;11,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Schutzisolierungen mit Bitumen und Densoband herstellen;11,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Fundamenterder als Bandstahl, nach DIN EN 50164-2 (VDE 0185;103,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Kreuzstücke, für die Verbindungen von Bandstahl 30x3,5mm im;15,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;zum Aufstecken auf Runddrähte oder Bänder;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Anschlussfahne Flachband NIRO 1,5m (V4A) Anschlussfahnen für den Anschluss der Erdungsanlage an den Potenzialausgleich aus korrosionsfestem Edelstahl NIRO (V4A). Nach DIN EN 62561-2.;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Schutzkappe für Anschlussfahnen zum Aufstecken auf Runddrähte oder Bänder;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;zum Nachweis, einschl. aller Zuschläge, Auslösungen und aller;2,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;zum Nachweis, einschl. aller Zuschläge, Auslösungen und aller;2,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;an Trennstellen und technischen Betriebseinrichtungen-MSRAnlagen.;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Dokumentation der Erdungsanlage und Erstellung der;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Facharbeiter auf Anordnung der Bauleitung für unvorhergesehene Arbeiten zum besonderen Nachweis.;20,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Bauhelfer auf Anordnung der Bauleitung für unvorhergesehene Arbeiten zum besonderen Nachweis.;20,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Bagger: über 15 t Einsatzgewicht;1,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;LKW-Kipper: ca. 12 t Nutzlast;1,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Radlader, über 18 bis 37 kw,;1,0;Std;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Sauberkeitsschicht aus Beton C 12/15;477,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;2-lagige PE-Folie (Baugleitfolie);478,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Stahlbeton, Forstschürze, d= 40,Ortbeton;21,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Stahlbeton-Sohlplatte WU, d = 30cm,Ortbeton;135,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Stahlbeton-Sohlplatte WU Medienschacht, d=30cm,Ortbeton;1,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Stahlbeton-Wand Aufzuguntegrfahrt WU, d=30cm, Ortbeton;2,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Beton der Attikawände aus bewehrtem Ortbeton, liefern und einbauen. Einbau in;7,0;m³;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Geschossdecke aus Filigrandecke inkl. Ortbetonergänzung aus Beton;438,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;Geschossdecke aus Filigrandecke inkl. Ortbetonergänzung aus Beton,;438,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Geschossdecke aus Filigrandecke inkl. Ortbetonergänzung aus Beton,;449,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Beton der Treppenpodeste in bewehrtem Fertigteil C30/37, mit rechtwinkligen Grundriss,;8,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Beton der Treppenläufe in bewehrtem Fertigteil C30/37 mit aufgesattelten Treppenstufen, in;4,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Beton der Stürze aus bewehrtem Ortbeton, liefern und einbauen.;1,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Beton der Unterzüge aus bewehrtem Ortbeton, liefern und einbauen.;0,269;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Beton der Deckengleichen Balken aus bewehrtem Ortbeton, liefern und einbauen.;0,204;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Beton der Ringbalken aus bewehrtem Ortbeton, liefern und einbauen.;1,0;m3;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Randschalung für die Frostschürze der;209,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+18;Randschalung für die Sohle/Bodenplatte der zuvor beschriebenen Positionen, liefern und herstellen;112,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+19;Randschalung für die Sohlplatte WU Medienschacht der zuvor beschriebenen Positionen, liefern und herstellen;9,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+20;Randschalung für die Wände Medienschacht  der zuvor beschriebenen Positionen, liefern und herstellen;14,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+21;Randschalung für die Attika der zuvor beschriebenen Positionen, liefern und herstellen;75,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+22;Randschalung für Filigrandecken inkl. Ortbetonergänzung der zuvor beschriebenen Positionen, liefern und herstellen;321,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+23;Randschalung für Stürze und Unterzüge (3-seitige Schalung) der zuvor beschriebenen Positionen, liefern und herstellen;13,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+24;Randschalung für Stürze und Unterzüge (3-seitige Schalung) der zuvor beschriebenen Positionen, liefern und herstellen;4,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+25;Randschalung Deckengleichen Balken der zuvor beschriebenen Positionen, liefern und herstellen;2,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+26;Randschalung Ringbalken  der zuvor beschriebenen Positionen, liefern und herstellen;7,0;m2;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+27;Tronsole Typ F-V1(Treppenlauf - Podest/Decke);5,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+28;Tronsole Typ F-V1((Podest - Wand));2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+29;Tronsole Typ B-V1(Trepeenlauf-Bodenplatte);1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+30;Perimeter-Dämmung Medienschacht ( Wände und sohlplatte) gegen Erdreich;15,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+31;Perimeter-Dämmung gegen Erdreich;52,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+32;Fugenblech Pentaflex KB80 o.glw. (oder gleichwertig), als einbaufertiges;15,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+33;Zulage zur Vorposition für die Lieferung und den Einbau von Innen- und Außenecken zu den vorgenannten Fugenbändern.;4,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+34;Baustahl BST 500 S bzw. Baustahl BST 500M liefern und nach den Bewehrungsplänen und Stahllisten des Statikers schneiden, biegen und einschließlich aller Nebenleistungen verlegen. Der Betonstahl wird entsprechend VOB DIN 18 331 nach den gestellten;53,0;t;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+35;Öffnung in der Sohlplatte für den Aufzugschacht anlegen und herstellen.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+36;Treppenöffnung (1,45 × 5,12 m) anlegen und herstellen.;2,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+37;Öffnung Dachgeschoss 0,9*1,4m anlegen und herstellen;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+38;Bodneausschnitt im Sohlplatte für Installationsleitungen, Querschnitt bis zu 0,6 m², in;2,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+39;Bodneausschnitt im Sohlplatte für Installationsleitungen, Querschnitt bis zu 0,75 m², in;2,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+40;Bodneausschnitt im Sohlplatte für Installationsleitungen, Querschnitt bis zu 0,1 m², in;2,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+41;Deckendurchbrüche für Installationsleitungen, Querschnitt bis zu 0,05 m², in;35,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+42;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;35,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+43;Deckendurchbrüche für Installationsleitungen, Querschnitt bis zu 0,1m², in;6,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+44;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;6,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+45;Deckendurchbrüche für Installationsleitungen, Querschnitt bis zu 0,15m², in;8,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+46;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;8,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+47;Deckendurchbrüche für Installationsleitungen, Querschnitt bis zu 1,3m², in;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+48;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+49;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+50;Deckendurchbrüche für Installationsleitungen, der zuvor beschriebenen Position nach;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+51;Dichteinsatz als Wanddurchführung, Typ/Fabrikat: Kraso Typ B, KG2000 (oder gleichwertig) liefern und einbauen.;1,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+52;DN 100;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+53;DN 150;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+54;Kernbohrung StB-Wand, DN 200;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+55;DN 300;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+56;Druckwasserdichte Bodendurchf., DN 110, KG 2000;8,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Lieferung von runden Kunststoffschildern (Astralon),;25,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Mauersperrbahn gem. DIN 18533-2, d=10cm;97,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Mauersperrbahn gem. DIN 18533-2, d=15cm;111,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Mauersperrbahn gem. DIN 18533-2, d=24cm;51,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Waagerechte Mauerwerkssperre (über der ersten Steinreihe) gegen aufsteigende Feuchtigkeit unter Innen- und Außenwänden aus Mauerwerk. Abdichtungen jeweils einlagig aus Polyolefin Wanddicke 15 cm bis 24 cm. Außenwände;105,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;Wärmedämmstein, KS-ISO-Kimmstein ,Wanddicke  d=10 cm,;97,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Wärmedämmstein, KS-ISO-Kimmstein ,Wanddicke  d=15 cm,;111,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Wärmedämmstein, KS-ISO-Kimmstein ,Wanddicke  d=24 cm,;51,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;Mauerwerk d=10 cm, KS-XL 20-2.0/DM;634,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Mauerwerk d=15 cm, KS-XL 20-2.0/DM;914,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Mauerwerk d=24 cm, KS-XL 20-2.0/DM;537,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Fenster-/Türöffnungen im Mauerwerk aus KS-XL-Steinen, d= 10 cm;57,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Fenster-/Türöffnungen im Mauerwerk aus KS-XL-Steinen, d= 15 cm;70,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Fenster-/Türöffnungen im Mauerwerk aus KS-XL-Steinen, d= 15 cm;12,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Fenster-/Türöffnungen im tragenden Mauerwerkswänden aus KS-XL-Steinen, d= 24 cm;15,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Fertigteilsturz MW KS.;70,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Wanddurchbrüche, bis 0,05 m²;21,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+18;Wanddurchbrüche  im Mauerwerk der vorgenannten Positionen nach erfolgter;21,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+19;Wanddurchbrüche, bis 0,1 m²;5,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+20;Wanddurchbrüche  im Mauerwerk der vorgenannten Positionen nach erfolgter;5,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+21;Wanddurchbrüche, bis 0,15 m²;17,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+22;Wanddurchbrüche  im Mauerwerk der vorgenannten Positionen nach erfolgter;17,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+23;Kernbohrung MW Wand, DN 100;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+24;DN 125;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+25;DN 150;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+26;DN 200;1,0;Stk;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+27;Anlegen von;1,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+28;Beidseitige Aussparungen bzw. beidseitiges Auflager für Rollladenkästen in den;75,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+29;"Wärmegedämmter Gurtwicklerkasten, Typ/Fabrikat: Lifo Gurtkasten; Groß (oder";75,0;St;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Vorbereitung des Untergrundes;115,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Abzudichtende saugfähige, mineralische;1,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Lunker, Poren, Putzrillen oder Fehlstellen < 5 mm;115,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Abdichtung gemäß der Wasser-;108,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+1;Gerüstgestellung Lastklasse 4;1313,0;m²;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+2;Gerüstvorhaltung der vorgenannten Position pro Woche/m²;81250,0;qmWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+3;Zulage Erschwernis/Mehraufwand Einrüstung Vorderdächer oder Nieschen;2,0;psch;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+4;Zulage zum Gerüst der vorgenannten Pos. für das;42,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+5;Vorhaltung für Gerüsttraversen um eine Woche;2600,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+6;30 cm Konsole am Standgerüst für jede Gerüstlage liefern,;263,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+7;Konsole, Ausladung: 30 cm. Verlängerung der Gebrauchsüberlassung um eine Woche über vorgen. Grundeinsatzzeit hinaus.;16250,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+8;Zusätzlicher Seitenschutz Innenseite Gerüst;158,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+9;Vorhaltung Zusätzlicher Seitenschutz Innenseite Gerüst für eine Woche;9750,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+10;Treppenaufgang 1;11,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+11;Vorhaltung Treppenaufgang 1;650,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+12;Absturzsicherung Randbereiche;126,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+13;Vorhaltung Absturzsicherung Randbereiche;7800,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+14;Absturzsicherung Randbereiche Betonierarbeiten;168,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+15;Vorhaltung Absturzsicherung Randbereiche Betonierarbeiten;10400,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+16;Absturzsicherung Treppenläufe;210,0;m;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83
+17;Vorhaltung Absturzsicherung Treppenläufe;13000,0;mWo;gaeb;leistungsbeschreibungen/WIE 415, 416_3_2_WIE 415, 416_Rohbauarbeiten.X83

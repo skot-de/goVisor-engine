@@ -1,0 +1,98 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Planungsbesprechung online < 2 h;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Planungsbesprechung online > 2 h < 4 h;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+3;Planungsbesprechung Präsenztermin in Cottbus;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;SiGe Koordination während der Planungsphase;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;LP 1 - Grundlagenermittlung Ingenieurbauwerk;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen LP 1 Bestandsaufnahme;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 2 - Vorplanung Ingenieurbauwerk;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+3;Besondere Leistungen LP 2 -  Mitwirkung bei der Genehmigungsstrategie;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+4;Besondere Leistung LP 2 - Vorbereitung Sondergutachten;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+5;Besondere Leistung LP 2-Verkehrskonzept;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 3 - Entwurfsplanung Ingenieurbauwerk;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistung LP 3 - Koordination Sondergutachten;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 4;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistung LP 4- Genehmigungsmanagement;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 1 Gebäude und Innenräume;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen LP 1 Bestandsaufnahme;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 2 Gebäude und Innenräume;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen LP 2 Aufstellen von Raumbüchern;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+3;Besondere Leistungen LP 2 - 3-D Gebäudemodellbearbeitung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 3 Gebäude und Innenräume;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen LP 3 - Fortschreiben von Raumbüchern;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 4 Gebäude;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 1 Tragwerksplanung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 2 Tragwerksplanung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 3 Tragwerksplanung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistung LP 4 Tragwerksplanung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 1 TGA;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen LP 2 -Bestandsaufnahme;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 2 TGA;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen LP 2 -;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 2 TGA;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen LP 3;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+3;Besondere Leistungen LP 3 Auslegung der technischen Systeme bei Ingenieurbauwerken nach Maschinenrichtlinie;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+4;Besondere Leistungen LP 3;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 4 TGA;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 1 Freianlagen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Leistungen gemäß  Anlage 11 (zu § 39 Absatz 4, § 40 Absatz 5) der HOAI (Fassung 2021):;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen LP 2 Bestandsaufnahme;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Leistungen gemäß  Anlage 11 (zu § 39 Absatz 4, § 40 Absatz 5) der HOAI (Fassung 2021):;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Leistungen gemäß  Anlage 11 (zu § 39 Absatz 4, § 40 Absatz 5) der HOAI (Fassung 2021):;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 1 Wärmeschutz;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen – Bestandsaufnahme Bauphysik (Wärmeschutz);1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 2 Wärmeschutz;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen LP 2 Bauphysik - Mitwirken am Raumbuch;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 3 Wärmeschutz;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen LP 3 Bauphysik - Fortschreiben des Raumbuches;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 4 Wärmeschutz;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 1 Brandschutz;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen – Bestandserfassung Brandschutz;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 2 Brandschutz;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen – Brandschutz – Gefahrstoff- und Nutzungsanalyse;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 3 Brandschutz;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 4 Brandschutz;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Planungsbesprechung online < 2 h;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Planungsbesprechung online > 2 h < 4 h;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+3;Planungsbesprechung Präsenztermin in Cottbus;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;LP 5 – Ausführungsplanung Ingenieurbauwerk – Leistungsprogramm (GU-Vergabe);1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;LP 6 – Vorbereitung der Vergabe Ingenieurbauwerk – Leistungsprogramm (GU-Vergabe);1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 7 - Mitwirken bei der Vergabe Ingenieurwerk;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen LP 7 – Ingenieurbauwerke – Prüfung von Nebenangeboten (GU-Vergabe);1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 5 – Gebäude und Innenräume – Leistungsprogramm (GU-Vergabe);1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 6 – Gebäude und Innenräume – Leistungsprogramm (GU-Vergabe);1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 7 – Gebäude und Innenräume – Leistungsprogramm (GU-Vergabe);1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen LP 7 – Gebäude und Innenräume – Prüfung von Nebenangeboten (GU-Vergabe);1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 5 – Tragwerksplanung – Leistungsprogramm (GU-Vergabe);1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 6 – Tragwerksplanung – Leistungsprogramm (GU-Vergabe);1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Besondere Leistungen LP 7 Tragwerk - Leistungsprogramm;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen LP 7 Tragwerk- Wertung von Nebenangeboten;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Leistungen LP 6 – Technische Ausrüstung – Leistungsprogramm (GU-Vergabe);1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 7 – Technische Ausrüstung – Leistungsprogramm (GU-Vergabe);1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen LP 7 TGA;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Leistungen LP 6 – Freianlagen – Leistungsprogramm (GU-Vergabe);1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Leistungen gemäß  Anlage 11 (zu § 39 Absatz 4, § 40 Absatz 5) der HOAI (Fassung 2021):;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen LP 7 – Freianlagen – Prüfung von Nebenangeboten (GU-Vergabe);1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 6 Wärmeschutz;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 7 Wärmeschutz;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen LP 7 Bauphysik - Nebenangebote;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Bauberatung Präsenztermin in Cottbus;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Sicherheits- und Gesundheitsschutzkoordination (SiGeKo) – Ausführungsphase;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Örtliche Bauüberwachung – Ingenieurbauwerke;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 8 – Gebäude und Innenräume – Objektüberwachung (GU-Vergabe);1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 9 – Gebäude und Innenräume – Objektbetreuung (GU-Vergabe);1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 8 – Technische Ausrüstung – Objektüberwachung (GU-Vergabe);1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Grundleistungen LP 9 – Technische Ausrüstung – Objektbetreuung (GU-Vergabe);1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Leistungsphase 8 – Objektüberwachung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Leistungsphase 9 – Objektbetreuung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Besondere Leistungen LP 8 Bauphysik - Messtechnische Prüfung Wärmeschutz;1,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen LP 8 Bauphysik - Energieausweis;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Leistungsphase 8 – Brandschutz – Objektüberwachung (GU-Vergabe);1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Besondere Leistungen LP 8 Brandschutz - Feuerwehrpläne;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+3;Besondere Leistungen LP 8 Brandschutz - Rettungspläne;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+1;Stundenverrechnungssatz Projektleiter;1,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+2;Stundenverrechnungssatz stellv. Projektleiter;1,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+3;Stundenverrechnungssatz Projektingenieur;1,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+4;Stundenverrechnungssatz Fachingenieur;1,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+5;Technischer Zeichner;1,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83
+6;Stundenverrechnungssatz Techniker;1,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.x83

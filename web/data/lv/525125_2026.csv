@@ -1,0 +1,123 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Untergrund Rohfußboden absaugen;1660,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+2;Untergrund Schalungen Holzwerkstoffplatten absaugen;30,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+3;Boden abfräsen;600,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+4;Dampfsperre/Behelfsabdichtung aus Elastomerbitumen einlagig liefern und mit Kaltbitumen einbauen;1660,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+5;Dampfsperre/Behelfsabdichtung aus Elastomerbitumen einlagig als Streifen an aufgehenden Bauteilen liefern und einbauen;175,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+6;Dampfsperre/Behelfsabdichtung aus Elastomerbitumen einlagig liefern und einbauen;30,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+7;Dampfsperre/Behelfsabdichtung aus Elastomerbitumen einlagig als Streifen an aufgehenden Bauteilen liefern und einbauen;630,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+8;Stufen in Dampfsperre herstellen;380,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+9;Randausbildung trittsicher in Dampfsperre herstellen;380,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+10;Bewegungsfugen in Dampfsperre herstellen;21,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+11;Entwässerungsöffnungen in Behelfsabdichtung durch Attika herstellen;17,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+12;Schäden in bituminierter Dampfsperre ausbessern;15,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+13;Randbereich Behelfsabdichtung als Baustellenschutz einbauen und beseitigen;480,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+14;Baustellenschutz ausbauen und entsorgen;480,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+1;Untergrund Flächenabdichtungen absaugen;1690,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+2;Gefälledämmungen Dach EPS dh liefern und einbauen;900,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+3;Mehr-/Minderpreis für größere/kleinere Dämmschichtdicken;10,0;m3;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+4;Wärmedämmungen Dach EPS dh als Gefällekeile liefern und einbauen;25,0;m3;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+5;Gefälledämmungen Dach MF nichtbrennbar liefern und einbauen;15,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+6;Wärmedämmungen Dach MF dh als Gefällekeile liefern und einbauen;1,0;m3;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+7;Gefälledämmungen Dach PIR;760,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+8;Mehr-/Minderpreis für größere/kleinere Dämmschichtdicken;9,0;m3;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+9;Wärmedämmungen Dach;5,0;m3;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+10;Grate, Firste und Kehlen in Dämmschichten herstellen;470,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+11;Wärmedämmungen Dach EPS an Wänden, Attiken o.ä. liefern und einbauen;30,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+12;Wärmedämmungen Dach EPS an Wänden, Attiken o.ä. liefern und einbauen;20,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+13;Wärmedämmungen Dach EPS an Wänden, Attiken o.ä. liefern und einbauen;15,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+14;Wärmedämmungen Dach MF an Wänden, Attiken o.ä. liefern und einbauen;15,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+15;Gehrungsschnitte am oberen Abschluss von Dämmschichten herstellen;40,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+16;Dachdämmung unterseitig an bauseitige Rohbauaufkantung der Attika anpassen;390,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+17;Sickenfüller für Trapezblech liefern und einbauen;150,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+1;Dachabdichtungen FPO mit mechanischen Befestigungen;1700,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+2;Dachabdichtungen FPO mit vollflächige Verklebung;100,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+3;Ecken als Formstücke liefern und einbauen;160,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+4;Grate, Firste und Kehlen in Dachabdichtungen herstellen;450,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+5;linienförmige mechanische Befestigung für Dachabdichtung liefern und verlegen;1700,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+6;Lastverteilerplatten liefern und verlegen;2,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+7;Bewegungsfugen in Dachabdichtungen herstellen;21,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+8;Abschottung von Teilflächen herstellen;21,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+9;mit Bahnenmaterial kaschierte Kantbleche liefern und einbauen;30,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+10;mit Bahnenmaterial kaschierte Kantbleche liefern und einbauen;60,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+11;Typ ATK . Attikaanschlüsse geklebt an Holzwerkstoffe herstellen;380,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+12;Typ ATK . Attikaanschlüsse geklebt an Massivwand herstellen;30,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+13;Typ WAÜ . Wandanschlüsse geklebt über Dämmschicht geführt herstellen;10,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+14;***;110,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+15;Typ RAB . Randabschluss mit Aufkantung und Kantblechblende herstellen;5,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+16;Typ RIA . offene Randabschlüsse FPO-Abdichtung herstellen;5,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+17;Einfassungen Geländerbefestigungen an aufgehenden Bauteilen herstellen;350,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+18;Verlängerung der Verjährungsfrist für Mängelansprüche auf 10 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+19;leitfähige Zwischenlage für die Prüfung der Dachdichtigkeit liefern und einbauen;1700,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+20;Kontrollrohre für Dichtheitsprüfung liefern und einbauen;12,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+21;Prüfung Dachdichtigkeit über leitfähige Zwischenlage durchführen;9,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+22;Beschilderungen für ausgeführte Dachaufbauten liefern und einbauen;10,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+23;Flüssigabdichtungen auf Dachflächen als Kleinflächen herstellen;30,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+1;Dachabläufe liefern und einbauen;17,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+2;Dachabläufe liefern und einbauen;1,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+3;Attikaabläufe als Notüberläufe liefern und einbauen;16,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+4;Dachentlüftungen liefern und einbauen;20,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+5;bauseits gestellte Dachhaube für Schachtentrauchung Aufzug nur einbauen;3,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+6;Kabeldurchführungen liefern und einbauen;2,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+7;Mehraufwand für Anschlüsse in beengtem Arbeitsraum;10,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+8;Einfassungen Metallblechbauteile liefern und einbauen;2,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+9;Einfassung Metallblechbauteile liefern und einbauen;25,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+10;Einfassungen Metallblechbauteile liefern und einbauen;5,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+11;Einfassungen Metallblechbauteile liefern und einbauen;2,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+12;Einfassungen Metallblechbauteile liefern und einbauen;5,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+13;Rohr-/Pfosteneinfassungen liefern und einbauen;5,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+14;Rohr-/Pfosteneinfassungen liefern und einbauen;2,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+15;Blitzschutzeinfassungen liefern und einbauen;10,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+16;Stahlrohr für Messfühler u.ä. liefern und einbauen;1,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+17;Anpressprofile liefern und einbauen;10,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+1;wasserdurchlässige Randprofile für Begrünungen liefern und einbauen;250,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+2;Kiesschüttungen 16/32 liefern und in Streifen einbauen;19,0;m3;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+3;Kiesschüttungen 8/16 liefern und in Streifen einbauen;2,0;m3;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+4;Betonplattenbelag 40/40cm liefern und einbauen;30,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+5;Plattenbeläge an Randanschlüsse und Einbauten durch Zuschnitt sauber anarbeiten;10,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+6;Schutzlagen liefern und einbauen;900,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+7;Bautenschutzmatten als Kleinflächen liefern und einbauen;20,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+1;Untergrund reinigen;830,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+2;Speicherschutzmatte liefern und einbauen;700,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+3;Drän- und Wasserspeicherelemente liefern und einbauen;700,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+4;Filtervlies liefern und einbauen;700,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+5;Vegetationssubstratschicht liefern und einbauen;700,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+6;Kontrollschächte liefern und einbauen;18,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+7;"Sprossenmischung ""Sedum"" liefern und ausbringen";700,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+1;Fertigstellungspflege für Sprossenmischung ausführen;700,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+2;extensive Dachbegrünung bewässern;700,0;m2;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+1;Anschlagpunkte für Untergrund-Befestigung in die Träger der Dachkonstruktion liefern und montieren;15,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+2;Permanente Seilsicherung für Anschlagpunkte liefern und montieren;150,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+3;Kraftbegrenzer liefern und montieren;2,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+4;Systemschild liefern und montieren;1,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+5;Persönliche Schutzausrüstung für spätere Arbeiten auf Dachflächen liefern und dem Bauherrn übergeben;1,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+1;Leiter aus Metall für Attikaüberstieg liefern und einbauen;1,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+2;Steigleiter aus Metall für Attikaüberstieg mit Rückenschutz liefern und einbauen;1,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+3;Befestigungspunkte für Leiter aus Metall an Massivwand liefern und montieren;10,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+1;Geländer mit Obergurt und vertikalen Pfosten als Einzellängen herstellen und montieren;230,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+2;Geländerbefestigungen über Kopfplatten mit Laschen herstellen;200,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+1;Kantbleche Attikaprofil Aluminium liefern und einbauen;5,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+2;Kantbleche Attikaprofil Aluminium liefern und einbauen;380,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+3;Kantbleche Attikaprofil Aluminium liefern und einbauen;30,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+4;Eckausbildungen Kantbleche herstellen;2,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+5;Eckausbildungen Kantbleche herstellen;40,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+6;Eckausbildungen Kantbleche herstellen;7,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+7;Endstücke an Kantblechen regendicht herstellen;11,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+8;Endstücke an Kantblechen regendicht herstellen;1,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+9;Aussparungen in Kantbleche herstellen;5,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+10;Kantbleche Dachrandprofil Aluminium liefern und einbauen;55,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+1;Kastenrinne für Dachentwässerung liefern und einbauen;55,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+2;Fallrohre für Dachentwässerung liefern und einbauen;1,5;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+3;Fallrohre für Dachentwässerung  liefern und einbauen;20,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+4;Richtungsänderungen Fallrohre Dachentwässerung ausführen;22,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+1;Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch;60,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+2;Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch;20,0;m;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+3;Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch;20,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+4;Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch;10,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+5;Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch;2,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+6;Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch;2,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+7;Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch;25,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+8;Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch;10,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+9;Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch;16,0;St;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+1;Stundenlohn Facharbeiter / Vorarbeiter;120,0;h;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83
+2;Stundenlohn Helfer;30,0;h;gaeb;leistungsbeschreibungen/2026-07-24-214_G21_0004_LV Dachabdichtung_GAEBXML_20260724.x83

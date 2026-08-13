@@ -1,0 +1,485 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Liefern, Einbauen und Wiederentfernen sowie Entsorgung;250,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Baukran;25,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Kran inkl. erforderlicher Fundamente bereitstellen, betreiben und abbauen,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Kran, wie zuvor beschrieben, über die Zeit der eigenen BE des AN hinaus, auch für Nutzung Dritter, vorhalten.;50,0;StWo;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Abschrankung mit Leit- bzw. Warnbaken zur Absperrung und Regelung des Verkehrs an Baustellen und Gefahrenbereichen.;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Abschrankung mit Warnbaken, wie zuvor beschrieben, vorhalten.;240,0;StWo;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Abschrankung mit Warnbaken, wie zuvor beschrieben, umsetzen.;5,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Überfahrt zur Baustelle für Baustellenverkehr mit niveaugleichem Schutz der Randsteinkante bei Gehwegen bzw. Aufkantungen / Randsteinen.;5,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Hilfsüberfahrt Randsteinkante wie zuvor beschrieben vorhalten.;400,0;m*Wo;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Überfahrt zur Baustelle über Aushubbereiche mit Stahlplatten für;9,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Hilfsüberfahrt Stahlplatte inkl. Absturzsicherung beidseitig, wie zuvor beschrieben, vorhalten.;720,0;m2Wo;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+8;Kabelbündel aus Elektrokabel, sowie Entwässerungsleitungen aus Steinzeugrohr oder ähnlichen vergleichbarem Material, sichern und spannungsfrei unterstützen.;10,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Einmessen, Abstecken und Dokumentieren der relevanten Rohbauachsen, Gebäudekanten, Höhenbezüge, Fundamente, Bodenplatten, etc.;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Meterriss, für die Leistungen Dritter, innerhalb der Baustelle unverrückbar herstellen. Mind. zwei pro Geschoss, in Abstimmung mit der BL und  am Aufzugschacht.;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Höhenfestpunkt mittels Einschlagbolzen,;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Liefern und Montieren einer geeigneten Bautafel aus einer Stützenkonstruktion aus Holz für das bauseitige Anbringen der Baustellenordnung und der Baugenehmigung.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Stammschutz vollflächige Bretter-Ummantelung mit Polsterung;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Aushub für Herstellung der Fundamente nach Abbruch;5,5;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Aushub für Herstellung von Einzelfundamenten nach Abbruch;8,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Aushub für Herstellung der Streifenfundamente nach Abbruch;30,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Aushub für Herstellung der Fundamente nach Abbruch;17,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Aushub für Herstellung der Fundamente nach Abbruch;8,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Aushub für Herstellung der Aufzugsunterfahrt nach Abbruch;28,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Aushub für Herstellung der Fundamente nach Abbruch;300,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+8;Aushub für Herstellung der Abtreppung oder der Tieferführung für die Fundamentverbreiterungen außen.;55,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+9;Aushub für Herstellung der Bodenplatte nach Abbruch der Bodenplatte.;35,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+10;Aushub für Handaushub Fundamente im Innenbereich;80,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+11;Aushub für Handaushub Abgrabung Hanggefälle hinter 2005er Bau;40,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+12;Bodenaushub, Bkl. 3-6 für Suchgraben;10,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+13;Wenn optisch (z.B. Anteile an Bauschutt, Straßenaufbruch,;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+14;Bodenaushub bauseits beprobt, laden, transportieren von Gemeindelagerplatz, (Entfernung ca. 3 km);125,0;t;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+15;Bodenaushub beprobt, laden, transportieren von Gemeindelagerplatz (Entfernung ca. 3 km);150,0;t;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+16;Bodenaushub beprobt, laden, transportieren von Gemeindelagerplatz (Entfernung ca. 3 km);125,0;t;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+17;Bodenaushub beprobt, laden,  transportieren von Gemeindelagerplatz (Entfernung ca. 3 km);30,0;t;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+18;Bodenaushub beprobt, laden,  transportieren von Gemeindelagerplatz (Entfernung ca. 3 km);25,0;t;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+19;Bodenaushub beprobt, laden,  transportieren von Gemeindelagerplatz (Entfernung ca. 3 km);5,0;t;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+20;Bodenaushub beprobt, laden, transportieren von Gemeindelagerplatz (Entfernung ca. 3 km);2,0;t;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+21;Entsorgung von erdverlegten Bestands-Abwasserleitungen StB DN 600;150,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+22;Entsorgung von erdverlegten Bestands-Elektroleitungen, bestehend aus:;100,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Planum in Baugrube herstellen, zulässige Abweichung von der Sollhöhe +/- 2 cm, Verformungsmodul mind. EV2 45 MPa, inkl. Nachweis,;150,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Geotextilvlies GRK 4, in 250 g/m² als Trennlage auf Aushubsohle Erdplanum.;150,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;wie zuvor beschrieben, jedoch:;500,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Feinkornfreie kapillarbrechende Kiesfilterschicht einbauen und verdichten.;37,5;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;zwischen Schottertragschicht und Sauberkeitsschicht.;150,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;unter Bodenplatten. Dicke ca. d= 5 cm.;150,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Verfüllen der bestehenden Lichtschächte aus Stahlbeton (Wanddicke d = ca. 20 cm);15,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Wiederverfüllen von Gräben mit Mittel- und Grobsand bis 4 mm, Liefermaterial;35,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Kies-Sand-Gemisch, natürliche Gesteinskörnung TL Gestein,;130,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Schotter-Splitt-Brechsand-Gemisch, natürliche Gesteinskörnung TL Gestein, Körnung 0/45, liefern, für Hauptverfüllung, DIN EN 1610, profilgerecht einbauen und lagenweise verdichten, in Graben unter Bodenplatte,;85,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Wiederverfüllen der Gräben, Arbeitsräume, Frostschürze und Fundamente, mit verdichtungsfähiges Schottergemisch, Liefermaterial kleiner gleich 45mm, BM-F0 zertifiziert, der Bodengruppe GW, GI In allen Profilierungen liefern,;400,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Verfüllen von Fundamenten und Leitungen, schichtweise inkl. Verdichten.;50,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Planum Grabensohle herstellen, Abweichung von der Sollhöhe max. +/- 2 cm einschl. verdichten EV2 mind. 45 MPa. Grabenbreiten von 30-60 cm.;80,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Planum Schachtsohle herstellen, Abweichung von der Sollhöhe max. +/- 2 cm einschl. verdichten EV2 mind. 45 MPa. Schachtabmessungen: ca. 150 x 150 cm.;10,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Kies-Sand-Gemisch, natürliche Gesteinskörnung TL Gestein, Körnung 0/4, liefern, für Bettungsschicht von Rohrleitungen, DIN EN 1610, Außendurchmesser über 100 bis 200 mm, profilgerecht einbauen und verdichten, in Graben, unter Versorgungs- und Entsorgungsleitungen, Kabeln, Schichtdicke über 50 bis 80;40,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Schotter-Splitt-Brechsand-Gemisch, natürliche Gesteinskörnung TL Gestein, Körnung 0/45, liefern, für Hauptverfüllung, DIN EN 1610, profilgerecht einbauen und verdichten, in Graben, Verdichtungsgrad mind. DPr 1, Verformungsmodul mind. EV2 120 MPa, Schichtdicke über 50 bis 80 cm.;64,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Planum herstellen, für Verkehrsflächen, zulässige Abweichung von der Sollhöhe +/- 2 cm, Verformungsmodul mind. Ev2 120 MPa.;20,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Sohle des Rohrgrabens profilgerecht füllen,;10,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Grund- / Standfläche herstellen und verdichten u.a. in Grabenbereichen, zur  Aufstellung längsorientierter Gerüste vorgerichtet.;400,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+8;Liefern von Stoffen frie Bau, Abrechnung nach Lieferschein;20,0;t;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Anschluss der neu errichteten Schmutzwasserleitungen an den bestehenden Schmutzwasserschacht;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Anschluss der neu errichteten Regenwasserleitungen an den bestehenden Regenwasserschacht;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Aushubtiefe 0 - 0,50 m;10,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Aushubtiefe 0 - 0,80 m;25,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Aushubtiefe 0 - 1,25 m;120,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Aushubtiefe 0 - 1,75 m;45,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Aushubtiefe 0 - 2,00 m;125,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Aushubtiefe 0 - 2,50 m;185,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Aushubarbeiten im Bereich von vorhandenen Versorgungsleitungen oder Medienkreuzungen. Durchführung ohne Unterstützung eines Baggers. Ausführung nur auf Anforderung durch die Bauleitung.;20,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+8;Aushubarbeiten im Bereich von vorhandenen Versorgungsleitungen oder Medienkreuzungen. Durchführung mit Unterstützung eines Baggers. Ausführung nur auf Anforderung durch die Bauleitung.;45,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+9;Grabensicherung bis zu einer Grabentiefe von 1,25 m;20,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+10;Grabensicherung bis zu einer Grabentiefe von 1,50 m;10,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+11;Grabensicherung bis zu einer Grabentiefe von 2,00 m;75,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+12;Grabensicherung bis zu einer Grabentiefe von 2,50 m;90,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+13;Grabensicherung von Kanalschächten bis zu einer Grabentiefe von 1,25 m, mit einem Schacht- Außendurchmesser von ca.1,2 m bis 1,5 m, entsprechend DIN 4124 und DIN EN 1610. Die Art der Grabensicherung wird dem Auftragnehmer überlassen. Es ist eine vorschriftsmäßige Sicherung durch Böschung, oder durch;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+14;Grabensicherung von Kanalschächten bis zu einer Grabentiefe von 1,50 m, mit einem Schacht- Außendurchmesser von ca.1,20 m bis 1,50 m, entsprechend DIN 4124 und DIN EN 1610. Die Art der Grabensicherung wird dem Auftragnehmer überlassen. Es ist eine vorschriftsmäßige Sicherung durch Böschung, oder dur;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+15;Grabensicherung von Kanalschächten bis zu einer Grabentiefe von 2,50 m, mit einem Schacht- Außendurchmesser von ca.1,20 m bis 1,50 m, entsprechend DIN 4124 und DIN EN 1610. Die Art der Grabensicherung wird dem Auftragnehmer überlassen. Es ist eine vorschriftsmäßige Sicherung durch Böschung, oder dur;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+16;Grabensicherung von Kanalschächten bis zu einer Grabentiefe von 2,80 m, mit einem Schacht- Außendurchmesser von ca.1,20 m bis 1,50 m, entsprechend DIN 4124 und DIN EN 1610. Die Art der Grabensicherung wird dem Auftragnehmer überlassen. Es ist eine vorschriftsmäßige Sicherung durch Böschung, oder dur;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+17;Erschwerniszuschläge für Erstellung von Kreuzungen mit Ver- und Entsorgungsleitungen (Abwasser, Wasser, Gas, Strom, Telefon, Tagwasserkanal) für evtl. Handaushub, einschließlich Sicherungen der Leitungen und Unterstützungssäulen aus Magerbeton, nach den Vorschriften der einzelnen Versorgungsbetriebe;6,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+18;Leitungszone der Entwässerungsleitungen herstellen. Abrechnung nach Aufmaß und Lieferscheinen mit Wiegenachweisen.;75,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+19;Auffüllung und langenweise verdichten von Rohr- oder Schachtgräben mit Schotter (0 - 32 mm).;75,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+20;Auffüllung und langenweise verdichten von Rohr- oder Schachtgräben mit seitlich gelagertem Material.;335,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+21;Fachgerechte Entsorgung von zwischengelagertem Kanalaushub als Zulage zur Position Erdaushub für Material welches zum wiederbefüllen nicht geeignet ist. Einschließlich Entsorgungsgebühren.;175,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+22;NEUTRATIP NS 7-700 CE o. glw.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+23;NEUTRACHECK-F 150 o. glw.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+24;Generalinspektion RecaPlus o. glw.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+25;Übergabe der Betriebs- und  Wartungsanleitung mit dem Betriebstagebuch;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+26;Kanalisationsrohr DN 100 (110 x 3,4 mm);50,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+27;Kanalisationsrohr DN 125 (125 x 3,9 mm);20,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+28;Kanalisationsrohr DN 150 (160 x 4,9 mm);40,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+29;Kanalisationsrohr DN 200 (200 x 6,2 mm);55,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+30;Bogen DN 100 (110 x 3,4 mm);25,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+31;Bogen DN 125 (125 x 3,9 mm);10,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+32;Bogen DN 150 (160 x 4,9 mm);10,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+33;Bogen DN 200 (200 x 6,2 mm);20,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+34;Abzweig DN 100 (110 x 3,4 mm);10,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+35;Abzweig DN 125 (125 x 3,9 mm);5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+36;Abzweig DN 150 (160 x 4,9 mm);5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+37;Abzweig DN 200 (200 x 6,2 mm);10,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+38;Übergang DN 125/100;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+39;Übergang DN 150/125;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+40;Übergang DN 200/150;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+41;Zusätzliche 3-fach-Lippendichtung für fetthaltige Abwasser in;25,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+42;Doppelmuffe DN 100;20,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+43;Doppelmuffe DN 125;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+44;Doppelmuffe DN 150;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+45;Doppelmuffe DN 200;25,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+46;Muffenstopfen DN 100, zum verschlissen von Ablaufanschlüsse während der Bauzeit.;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+47;Muffenstopfen DN 125;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+48;Muffenstopfen DN 150;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+49;Muffenstopfen DN 200;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+50;Kanalisationsrohr DN 100 (110 x 3,2 mm);150,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+51;Kanalisationsrohr DN 125 (125 x 3,2 mm);45,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+52;Kanalisationsrohr DN 150 (160 x 4,0 mm);140,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+53;Kanalisationsrohr DN 200 (200 x 4,9 mm);120,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+54;Bogen DN 100 (110 x 3,2 mm);45,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+55;Bogen DN 125 (125 x 3,2 mm);15,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+56;Bogen DN 150 (160 x 4,0 mm);25,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+57;Bogen DN 200 (200 x 4,9 mm);35,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+58;Abzweig DN 100 (110 x 3,2 mm);25,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+59;Abzweig DN 125 (125 x 3,2 mm);6,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+60;Abzweig DN 150 (160 x 4,0 mm);8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+61;Abzweig DN 200 (200 x 4,9 mm);10,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+62;Übergang DN 125/100;12,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+63;Übergang DN 150/100;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+64;Übergang DN 150/125;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+65;Übergang DN 200/150;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+66;Doppelmuffe DN 100;45,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+67;Doppelmuffe DN 125;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+68;Doppelmuffe DN 150;25,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+69;Doppelmuffe DN 200;20,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+70;Muffenstopfen DN 100, zum verschlissen von Ablaufanschlüsse während der Bauzeit.;15,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+71;Muffenstopfen DN 125;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+72;Muffenstopfen DN 150;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+73;Muffenstopfen DN 200;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+74;Revisionsschacht mit geschlossenem Gerinne, Schachtdurchmesser 1,20 m, Schachthöhe ca. 1,25 m, aus Betonfertigteilen, mit Muffe, nach DIN 4034, Teil 1, Außenwände mit Voranstrich und zwei Deckanstrichen mit Bitumenemulsion.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+75;Revisionsschacht mit geschlossenem Gerinne, Schachtdurchmesser 1,20 m, Schachthöhe ca. 1,35 m, aus Betonfertigteilen, mit Muffe, nach DIN 4034, Teil 1, Außenwände mit Voranstrich und zwei Deckanstrichen mit Bitumenemulsion.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+76;Revisionsschacht mit geschlossenem Gerinne, Schachtdurchmesser 1,20 m, Schachthöhe ca. 1,50 m, aus Betonfertigteilen, mit Muffe, nach DIN 4034, Teil 1, Außenwände mit Voranstrich und zwei Deckanstrichen mit Bitumenemulsion.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+77;Revisionsschacht mit geschlossenem Gerinne, Schachtdurchmesser 1,20 m, Schachthöhe ca. 1,650 m, aus Betonfertigteilen, mit Muffe, nach DIN 4034, Teil 1, Außenwände mit Voranstrich und zwei Deckanstrichen mit Bitumenemulsion.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+78;Revisionsschacht mit geschlossenem Gerinne, Schachtdurchmesser 1,20 m, Schachthöhe ca. 1,50 m, aus Betonfertigteilen, mit Muffe, nach DIN 4034, Teil 1, Außenwände mit Voranstrich und zwei Deckanstrichen mit Bitumenemulsion.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+79;Revisionsschacht mit geschlossenem Gerinne, Schachtdurchmesser 1,20 m, Schachthöhe ca. 3,10 m, aus Betonfertigteilen, mit Muffe, nach DIN 4034, Teil 1, Außenwände mit Voranstrich und zwei Deckanstrichen mit Bitumenemulsion.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+80;Höhenveränderung der Schächte, Ausführung mit Ausgleichsringen 10 cm als Betonfertigteil.;6,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+81;Anpassen von Schachtabdeckungen an die jeweilige Geländehöhe, Einbau eines Ausgleichsringes einschließlich Nebenarbeiten.;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+82;Schachtabdeckung, tagwasserdicht, Klasse B 125;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+83;Schachtabdeckung, tagwasserdicht, Klasse D 400;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+84;Aushubtiefe 0 - 1,50 m;20,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+85;Aushubtiefe 0 - 2,00 m;25,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+86;Aushubtiefe 0 - 3,20 m;30,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+87;Aushubarbeiten im Bereich von vorhandenen Versorgungsleitungen oder Medienkreuzungen. Durchführung ohne Unterstützung eines Baggers. Ausführung nur auf Anforderung durch die Bauleitung.;2,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+88;Aushubarbeiten im Bereich von vorhandenen Versorgungsleitungen oder Medienkreuzungen. Durchführung mit Unterstützung eines Baggers. Ausführung nur auf Anforderung durch die Bauleitung.;2,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+89;Grabensicherung bis zu einer Grabentiefe von 3,00 m;10,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+90;Leitungszone der Entwässerungsleitungen herstellen. Abrechnung nach Aufmaß und Lieferscheinen mit Wiegenachweisen.;25,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+91;Auffüllung und langenweise verdichten von Rohr- oder Schachtgräben mit Schotter (0 - 32 mm).;25,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+92;Auffüllung und langenweise verdichten von Rohr- oder Schachtgräben mit seitlich gelagertem Material.;50,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+93;Fachgerechte Entsorgung von zwischengelagertem Kanalaushub als Zulage zur Position Erdaushub für Material welches zum wiederbefüllen nicht geeignet ist. Einschließlich Entsorgungsgebühren.;20,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+94;Außenbelag aus Beton, Pflastersteine oder Asphalt aufbrechen und nach den Kanalisationsarbeiten den ursprünglichen Zustand wieder herstellen einschließlich Schuttbeseitigung.;25,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+95;Absperrung für die Kanalarbeiten erstellen, einschließlich Sicherung der Baustelle, Beschilderung und Beleuchtung sowie Anmeldung bei den zuständigen Behörden und Anmeldegebühren.;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+96;Anbau eines Sattelstückes DN 250, einschließlich allen erforderlichen Nebenarbeiten und Lieferung des benötigten Klein- und Anschlussmaterials.;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Stunden für Spülwagen mit Bedienung;8,0;h;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Stunden für Kamerawagen mit Bedienung;8,0;h;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Mitwirkung bei der Erstellung aller Technischen Daten für ausgeschriebene Produkte.;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Auf Grundlage der vom Auftraggeber zur Verfügung gestellten Ausführungspläne muss vom Auftragnehmer die Werks- und Montageplanung erbracht werden. Grundlage hierfür ist die;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Pauschale für die Durchführung einer Druckprobe aller bestehenden, erdverlegten Schmutz- und Regenwassergrundleitungen einschließlich vorheriger Spülung des Rohrnetzes, in Abstimmung mit der Bauleitung und dem Fachplaner.;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Vom AN sind Bestands- und Revisionsunterlagen für;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Aushubtiefe 0 - 0,50 m;25,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Aushubtiefe 0 - 0,80 m;15,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Aushubarbeiten im Bereich von vorhandenen Versorgungsleitungen oder Medienkreuzungen. Durchführung ohne Unterstützung eines Baggers. Ausführung nur auf Anforderung durch die Bauleitung.;10,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Aushubarbeiten im Bereich von vorhandenen Versorgungsleitungen oder Medienkreuzungen. Durchführung mit Unterstützung eines Baggers. Ausführung nur auf Anforderung durch die Bauleitung.;10,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Grabensicherung bis zu einer Grabentiefe von 1,25 m;5,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Erschwerniszuschläge für Erstellung von Kreuzungen mit Ver- und Entsorgungsleitungen (Abwasser, Wasser, Gas, Strom, Telefon, Tagwasserkanal) für evtl. Handaushub, einschließlich Sicherungen der Leitungen und Unterstützungssäulen aus Magerbeton, nach den Vorschriften der einzelnen Versorgungsbetriebe;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Leitungszone der Entwässerungsleitungen herstellen. Abrechnung nach Aufmaß und Lieferscheinen mit Wiegenachweisen.;25,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+8;Auffüllung und langenweise verdichten von Rohr- oder Schachtgräben mit Schotter (0 - 32 mm).;20,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+9;Auffüllung und langenweise verdichten von Rohr- oder Schachtgräben mit seitlich gelagertem Material.;10,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+10;Fachgerechte Entsorgung von zwischengelagertem Kanalaushub als Zulage zur Position Erdaushub für Material welches zum wiederbefüllen nicht geeignet ist. Einschließlich Entsorgungsgebühren.;20,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+11;Kanalisationsrohr DN 100 (110 x 3,4 mm);100,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+12;Bogen DN 100 (110 x 3,4 mm);45,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+13;Abzweig DN 100 (110 x 3,4 mm);15,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+14;Übergang DN 125/100;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+15;Doppelmuffe DN 100;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+16;Muffenstopfen DN 100, zum verschlissen von Ablaufanschlüsse während der Bauzeit.;14,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+17;Zusätzliche 3-fach-Lippendichtung für fetthaltige Abwasser in;65,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+18;Bodenablauf aus Gusseisen DN 100, mit Anstrich, geprüft nach DIN EN 1253, ohne Geruchverschluss, Baustoffklasse A 1, nicht brennbar, natürlicher, recyclebarer Werkstoff, geprüfter, integrierter Schallschutz gemäß, VDI 4100:2012 , SST III = 22 dB(A), mit Pressdichtungsflansch und Erdungsanschluss, mi;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+19;Geruchverschluss aus Kunststoff, zweiteilig herausnehmbar, bestehend aus Glocke und Staurohr, mit angespritzter Lippendichtung;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+20;Stutzenverlängerung aus Kunststoff 125 mm, mit Abdichtring zum Verschließen der Sicköffungen am Bodenablauf.;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+21;Oberteil aus Gusseisen DN 100, mit Anstrich, nicht brennbar gemäß Baustoffklasse A1, für Abdichtung der zweiten Dichtungsbahn;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+22;Stutzendurchmesser:	125 mm;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+23;Mauerkragen-Montageset DN 100;14,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+24;Innendurchmesser (Futterrohr) 200 mm;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+25;Futterrohr für Rohrdurchführung mit Innendurchmesser 200 mm;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Verrechnungssatz für Ingenieur, Meister, Obermonteur, Monteur, Helfer und Auszubildender als Baustellenmittellohn.;8,0;h;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Erstellen von Mauerdurchbrüchen und Schlitze in Beton- und Ziegelwänden und Decken. In die Stundenpauschale sind neben den Arbeitskosten auch die erforderlichen Maschinen und die Schuttbeseitigung mit einzukalkulieren.;15,0;h;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Stunden für Spülwagen mit Bedienung;8,0;h;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Stunden für Kamerawagen mit Bedienung;8,0;h;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Mitwirkung bei der Erstellung aller Technischen Daten für ausgeschriebene Produkte.;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Auf Grundlage der vom Auftraggeber zur Verfügung gestellten Ausführungspläne muss vom Auftragnehmer die Werks- und Montageplanung erbracht werden. Grundlage hierfür ist die;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Pauschale für die Durchführung einer Druckprobe aller bestehenden, erdverlegten Schmutz- und Regenwassergrundleitungen einschließlich vorheriger Spülung des Rohrnetzes, in Abstimmung mit der Bauleitung und dem Fachplaner.;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+8;Vom AN sind Bestands- und Revisionsunterlagen für;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Liefern und einbauen Drainleitung DN150 (PVC U Stangendrainrohr DN 150 nach DIN 4095) mit einer Mindestwassereintrittsfläche von 80 cm2/m, umlaufend um das Gebäude und unter der Bodenplatte. Das Rohr muss flexible und gütegesichert sein. Das Rohr liefern und höhen- und fluchtgerecht umlaufend um das;4,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Liefern und einbauen Drainleitung DN150 (PVC U Stangendrainrohr DN 150 nach DIN 4095) mit einer Mindestwassereintrittsfläche von 80 cm2/m, umlaufend um das Gebäude und unter der Bodenplatte. Das Rohr muss flexible und gütegesichert sein. Das Rohr liefern und höhen- und fluchtgerecht umlaufend um das;6,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;PVC-Rohre ungeschlitzt DN150 (Vorflutzuleitung),;6,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Spül-, Kontroll- und Sammelschacht DN 300 mit bzw. ohne Sandfang;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Schachtabdeckung (DN300) aus Gusseisen für die Belastungsklasse A15 liefern und versetzen, nach Fertigstellung des Neubaus.;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Rückstauklappe (DN 150) am Auslauf / Übergang am Übergabeschacht.;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Kies der Körnung 8/16, als Sickerpackung um die Drainleitung (beschrieben in Position 2.6.1) nach DIN 4095 in Verbindung mit dem Filtervlies liefern und einbauen.;2,7;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+8;Liefern und Verlegen eines Geotextils (GRK 3) unter der Tragschicht.;36,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+9;"Geokunststoff (filterstabile Drainmatte) liefern und verlegen entlang der Unterfangung mit der Hauptfunktion Drainieren und Schützen. Verlegeart und Überlappung nach Angabe Lieferant. Geotextilien nach Norm SN 670 090 ""Geokunststoffe - Grundnorm"" und ""Geokunststoffe - Grundnorm"" und Norm SN 670 241 ";20,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+10;"Drainleitung zwischen zwei Prüfpunkten mit Hochdruckspülgerät durchspülen, Leistung einschl. aller notwendigen Gerätschaften; inkl. Aufstellung eines Protokolls sowie schadloser Entfernung aller Gerätschaften nach Abschluss der Arbeiten.";1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Koordinationspauschale mit dem Tiefbau;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Aushubtiefe 0 - 0,80 m;265,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Grabensicherung bis zu einer Grabentiefe von 1,25 m;165,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Leitungszone der Entwässerungsleitungen herstellen. Abrechnung nach Aufmaß und Lieferscheinen mit Wiegenachweisen.;100,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Auffüllung und langenweise verdichten von Rohr- oder Schachtgräben mit Schotter (0 - 32 mm).;100,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Auffüllung und langenweise verdichten von Rohr- oder Schachtgräben mit seitlich gelagertem Material.;165,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Verbundsystem gemäß EN 15632 -1 /-2 geeignet bis:;660,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+8;Schrumpf-Endkappe für vorgenanntes Rohr, für Feuchträume;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+9;für vorgenannte Fernwärmeleitung in Gebäuden,;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+10;Anschlusstück CPX mit Aussengewinde;32,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+11;Verbindungsmuffe für vorgenanntes UNO Rohr;112,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+12;T-Stück für vorgenanntes UNO Rohr;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+13;Endkappe für vorgenanntes UNO Rohr;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+14;Schalen Sortiment;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+15;Mauerdurchführung-Dichtring für vorgenannte Fernwärmeleitung in Gebäuden oder Schächten, dicht gegen drückendes Wasser;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+16;Trassenwarnband;165,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+17;Presskupplung  DN 80 6bar 75/162;24,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+18;Kernbohrungen Durchmesser 150 - 250 mm in Stahlbetondecke oder Wänden Bauteilstärke ca. 45 cm einschließlich Stahlanteil, Schuttbeseitigung und sonstigem Zubehör.;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+19;Druckwasserfeste Abdichtung gegen drückendes Wasser als einfacher Dichtungseinsatz für Rohr-/Kabeldurchmesser 250 - 259 mm durch eine bereits vorgefertigte Kernlochbohrung und/oder Futterrohr mit einem Innendurchmesser von 350 mm liefern und nach Einbauanleitung des Herstellers montieren.;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Flexibles Kabelschutzrohr in Verbundrohrbauweise gemäß DIN EN 61386-24;800,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Kabelzugschacht 1m x 1 m x 1,4 m tiefe;7,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Elektroinstallationsrohr DIN EN 61386-22, Maße DIN EN 60423, nicht flammenausbreitend, aus PVC-U mit Kunststoffmantel aus PVC-P, mit hochgleitfähiger Innenschicht, doppelwandig, innen gewellt, außen glatt, biegsam, Außendurchmesser 20 mm, Klassifizierungscode 33412, Druckfestigkeit mittel, Schlagfes;400,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Elektroinstallationsrohr DIN EN 61386-22, Maße DIN EN 60423, nicht flammenausbreitend, aus PVC-U mit Kunststoffmantel aus PVC-P, mit hochgleitfähiger Innenschicht, doppelwandig, innen gewellt, außen glatt, biegsam, Außendurchmesser 25 mm, Klassifizierungscode 33412, Druckfestigkeit mittel, Schlagfes;500,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Elektroinstallationsrohr DIN EN 61386-22, Maße DIN EN 60423, nicht flammenausbreitend, aus PVC-U mit Kunststoffmantel aus PVC-P, mit hochgleitfähiger Innenschicht, doppelwandig, innen gewellt, außen glatt, biegsam, Außendurchmesser 32 mm, Klassifizierungscode 33412, Druckfestigkeit mittel, Schlagfes;100,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Elektroinstallationsrohr DIN EN 61386-22, Maße DIN EN 60423, nicht flammenausbreitend, aus PVC-U mit Kunststoffmantel aus PVC-P, mit hochgleitfähiger Innenschicht, doppelwandig, innen gewellt, außen glatt, biegsam, Außendurchmesser 40 mm, Klassifizierungscode 33412, Druckfestigkeit mittel, Schlagfes;100,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Gerätedose für Betoneinbau, 2-teilig, 2 Schraubdome mit Schraubabstand 60 mm, kombinierbar im Normabstand 71 mm, vollisolierter Leitungsübergang, geeignet für alle Schalungsarten und Gegenschalung, VDE zertifiziert nach DIN EN 60670 (VDE 0606) , Schutzart IP30, Rohr-/Kabeleinführungen: 2 x bis Ø 25 ;100,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Geräteverbindungsdose für Betoneinbau, 2-teilig, mit vergrößertem Anschlussraum, 4 Schraubdome mit Schraubabstand 60 mm, kombinierbar im Normabstand 71 mm, vollisolierter Leitungsübergang, geeignet für alle Schalungsarten und Gegenschalung, VDE zertifiziert nach DIN EN 60670 (VDE 0606), Schutzart IP;50,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Bewehrungsdose, 2-teilig, rückwärtig Boden grün mit Einführung max. 1x 25 mm, kombinierbar, geeignet für Gegenschalung ohne Abstützung, Vormontage in der Bewehrung, für den Betoneinbau, kombinierbar im Normabstand 71 mm, Schutzart IP30, halogenfrei;50,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Deckenleuchtenanschlussdose für den Betoneinbau, kombinierbar, Auslass vorn 35 mm, VDE zertifiziert nach DIN EN 60670 (VDE 0606), Schutzart IP30, Rohr-/Kabeleinführungen: 4 x bis Ø 25 mm, 45°, 2 x bis Ø 20 mm, halogenfrei;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Decken-Verbindungsdose für Betoneinbau, 4 Schraubdome mit Schraubabstand 60 mm, mit M5 Gewindebuchse (Traglast 10kg) zur Aufnahme eines Deckenhakens, kombinierbar im Normabstand 71 mm, vollisolierter Leitungsübergang, geeignet für alle Schalungsarten und Gegenschalung, VDE zertifiziert nach DIN EN 6;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Einbaukasten für Betoneinbau, geeignet als Verbindungskasten oder Einbaukasten für Zettler Lichtruf E1, Schutzart IP30, Rohr-/Kabeleinführungen: 8 x bis Ø 23 mm, halogenfrei;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Einbaukasten für Betoneinbau, vorbereitet für Aufnahme der WK-Klemmen 2,5 - 25 mm², geeignet zur Aufnahme einer 20-poligen Telefon-Anschlussleiste oder als Telefon-Durchgangskasten nach DIN 47614-615, kombinierbar, Schutzart IP30, Rohr-/Kabeleinführungen: 8 x bis Ø 47,5 mm, halogenfrei;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+8;Einbaukasten für Betoneinbau, vorbereitet für Aufnahme der WK-Klemmen 2,5 - 25 mm², geeignet zur Aufnahme einer 40-poligen Telefon-Anschlussleiste, als Telefon-Durchgangskasten nach DIN 47614-615, oder als IBT-Verteilung UP 015 (1-reihig, 15 TE), kombinierbar, Schutzart IP30, Rohr-/Kabeleinführungen;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+9;Rohrkapsel / Rohrkrümmer für Betoneinbau, 3-teilig, bestehend aus Rohrkapsel mit Unterteil und Rohrkrümmer 30°, halogenfrei;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+10;für Leuchte LBOARD E200-S LED;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;druckdichtes flexibles Leerrohrsystem (2,5 bar Außendruck) mit glatter Innenfläche für schonenden Kabelzug, abriebfest, witterungsbeständig, formstabil und knickfest;40,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;zur Verlängerung des Spiralschlauches;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;zum Einbetonieren und Anschluss von Kabelschutzschläuchen;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;zum nachträglichen Andübeln;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;zum Anschluss an die Dichtpackung HSI 150;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Rückbau einer Drainage-Bestandsleitungen, der stillgelegten Entwässerung, einschließlich Entsorgung des Rückbaumaterials.;7,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Rückbau Kontrollschacht der zuvor beschriebenen Drainage-Bestandsleitungen, der stillgelegten Entwässerung, einschließlich Entsorgung des Rückbaumaterials.;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Umfang der Schnittfläche über;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Umfang der Schnittfläche über;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Abbruch und fachgerechte Entsorgung von;4,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Abbruch und fachgerechte Entsorgung von;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Abstützung von Decken und Trägern,;20,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Abstützung von Decken und Trägern,;12,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Abbrechen von Stahlbetonbauteilen, z.B. Deckenränder, Deckenöffnungen, Wandöffnungen, durch Stemmen mit handgeführten Maschinen,;3,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Abbrechen von Stahlbetonbauteilen, z.B. vorhandene Fundamente, Lichtschächte, Wände, Deckenteile, etc., durch Stemmen mit handgeführten Maschinen.;5,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Herstellung von Öffnungen in der bestehenden Stahlbeton-Bodenplatte.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Herstellung von Öffnungen in der bestehenden Stahlbeton-Bodenplatte.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Abbrechen der bestehenden Stahlbeton Bodenplatte zur Fundamentverstärkung.;40,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+8;Herstellung von Öffnungen in der bestehenden Stahlbeton-Bodenplatte.;27,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+9;Herstellung von Öffnungen in der bestehenden Stahlbeton-Bodenplatte.;80,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+10;Herstellung von Öffnungen in der bestehenden Stahlbeton-Bodenplatte.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+11;Kernbohrung, Ansatz senkrecht zur Untergrundfläche,;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+12;Kernbohrung, Ansatz senkrecht zur Untergrundfläche,;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+13;Kernbohrung, Ansatz senkrecht zur Untergrundfläche,;71,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+14;Kernbohrung, Ansatz waagerecht zur Untergrundfläche,;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Abbruch der bestehenden Stahlbetonwand bis OK RFB;12,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Zurückschneiden der bestehenden Stahlbetonwand Kellerlichtschächte,;12,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Abbruch der gesamten bestehenden Holz-Attika-Konstruktion bis OK Rohdecke,;58,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Zulage für das fachgerechte Einschneiden der Stahlbeton-Abbruchwand für eine saubere, geradlinige Schnittkante.;168,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Herstellung rauer Fuge nach DIN EN 1992-1-1 in;18,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Aufbringen einer kunststoffmodifizierten, zementgebundenen Korrosions-;15,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Aufbringen einer kunststoffmodifizierten, zementgebundenen Korrosions-;45,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Abbruch bestehendes Punktfundament aus Stahlbeton,;25,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Abbruch bestehendes Punktfundament aus Stahlbeton,;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Abbruch bestehendes Streifenfundaments aus Stahlbeton,;48,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Abbruch bestehende Frostschürze aus Stahlbeton,;140,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Abbruch bestehende Leitungsgraben aus Stahlbeton,;140,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Abbruch von Flachdachkonstruktion komplett,;105,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Baustelleneinrichtung, An- und Abtransport der Bohreinheit, Einrichten, Vorhalten über die Bauzeit und Räumen:;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Auf- und Abbau der Bohreinheit am Bohrpunkt.;103,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Probebelastungen an dafür hergestellten Mikropfählen.;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Bodenplatten nach Unterlagen des AG für den Einbau der Mikropfähle herrichten und bei Bedarf schützen.;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Dokumentation einschließlich Erläuterungsbericht zum Bohr- und Betoniervorgang bzw. Verpressvorgang gem. gültigen Ausführungsvorschriften liefern.;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Kernbohrung, Ansatz senkrecht zur Untergrundfläche, aus bewehrtem Beton Bodenplatte Baukörper 1976,;81,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Kernbohrung, Ansatz schräg im Winkel von 45;20,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Bohrung / Kernen von Stahlbetonbauteilen einschließlich aller;10,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Bohrung, DN 178-220mm;260,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Bohrung, DN 178-220mm;490,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Bohrung durch Hindernisse wie;50,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Liefern und Einbauen Pfahlkopf Plattenverankerung d = ca. 50 mm Drucklast.;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Liefern und Einbauen Pfahlkopf Plattenverankerung d = ca. 50;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Liefern und Einbauen Pfahlkopf Plattenverankerung d = ca. 40;19,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Liefern und Einbauen Pfahlkopf Plattenverankerung d = ca. 40;24,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Liefern und Einbauen Pfahlkopf Plattenverankerung d = ca. 32;18,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Liefern und Einbauen Pfahlkopf Plattenverankerung d = ca. 32;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Mikropfahl (Verbundpfahl) einschl. Bewehrung bzw.;200,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+8;Mikropfahl (Verbundpfahl) einschl. Bewehrung bzw.;275,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+9;Mikropfahl (Verbundpfahl) einschl. Bewehrung bzw.;65,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+10;Mikropfahl (Verbundpfahl) einschl. Bewehrung bzw. Tragglied;202,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+11;Zulage zur Position Mikropfahl herstellen, für den Einbau eines;101,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+12;Mikropfahl nachverpressen;101,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+13;Zement-Mehrverbrauch über den Kalkulationswert für das;5,0;t;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Überwachung des Einbaus von Beton der Überwachungsklasse 2 gemäß DIN 1045-3 durch den AN und durch eine anerkannte Prüfstelle.;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Herstellung rauer Fuge nach DIN EN 1992-1-1 in;160,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Betonoberflächen zum nachträglichen Anschluss von Betonbauteilen;160,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;für Verfüllung von Rohrgräben, Fundamentabtreppungen, Tiefergründung etc., gegen Grund oder Schalung in allen Abmessungen.;25,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Aushub für Gebäudeunterfangung im Bereich unter den bestehenden Fundamenten nach DIN 4123 auf eine Höhe von ca. 2,0 m in Teilabschnitten mit einer Breite b=1,25m.;12,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Ortbeton für Unterfangung einschließlich der erforderlichen Schalung in einer Höhe von ca. 2,0m und einer Breite von ca. 1,25m. Tiefe bis ca. 70 cm.;12,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Ortbetonfundamente, gegen Grund. Plattenverankerungen der Mikropfähle sind vorhanden.;25,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Ortbetonfundamente, gegen Grund. Plattenverankerungen der Mikropfähle sind vorhanden.;60,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+8;in allen Abmessungen. Gegen Grund, Schalung oder Sauberkeitsschicht.;2,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+9;in allen Abmessungen. Gegen Grund, Schalung oder Sauberkeitsschicht. Betongüte C25/30, Expositionsklasse XC2, XF1, WF DIN EN 1992-1-1.;46,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+10;in allen Abmessungen. Gegen Grund, Schalung oder Sauberkeitsschicht.;3,5;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+11;in allen Abmessungen. Gegen Grund, Schalung oder Sauberkeitsschicht.;13,5;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+12;in allen Abmessungen. Gegen Grund, Schalung oder Sauberkeitsschicht. Betongüte C25/30, Expositionsklasse XC2, XF1, WF DIN EN 1992-1-1.;21,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+13;in allen Abmessungen. Gegen Grund, Schalung oder Sauberkeitsschicht. Betongüte C25/30, Expositionsklasse XC2, XF1, WF DIN EN 1992-1-1.;2,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+14;einhäuptig;135,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+15;zweihäuptig;22,4;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+16;Abrechnung nach tatsächlicher Ansichtsfläche der Schalhaut;20,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;"als fugenlose,wasserundurchlässige Konstruktion (""weiße Wanne""),";9,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Bodenplatte Stahlbeton d= 20cm,;120,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Fundamentplatte Stahlbeton als Pfahlplatte, d= 50cm,;18,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;einhäuptig als Bodenplattenrandschalung;8,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;"wasserundurchlässige Konstruktion (""weisse Wanne""),  Betongüte C30/37, wasserdichter Beton (wu-Beton) gemäß WU-Richtlinie des DAfStb, Beanspruchungsklasse 1, Nutzungsklasse A, Expositionsklasse XC2, XA1, WF DIN DEN 1992-1-1, einschließlich Normalschalung, einschließlich wasserdichter Schalungsbindee";2,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;"wasserundurchlässige Konstruktion (""weisse Wanne""),  Betongüte C30/37, wasserdichter Beton (wu-Beton) gemäß WU-Richtlinie des DAfStb, Beanspruchungsklasse 1, Nutzungsklasse A, Expositionsklasse XC2, XA1, WF DIN DEN 1992-1-1, einschließlich Normalschalung, einschließlich wasserdichter Schalungsbindee";2,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Liefern und einbauen Betonkörnung 0/16;4,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Betongüte C25/30, Expositionsklassen XC3, WO,;7,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Betongüte C25/30, Expositionsklassen XC3, WO;5,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Betongüte C25/30, Expositionsklassen XC3, WO;10,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Betongüte C25/30, Expositionsklassen XC3, WO;19,5;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+8;Betongüte C25/30, Expositionsklassen XC3, WO;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+9;Betongüte C25/30, Expositionsklassen XC3, WO;160,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+10;Zulage für schrägen Wandanschluss als Aufbetonage,;7,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+11;Zulage für schrägen Wandabschluss als Aufbetonage,;7,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+12;Dreikantleiste aus Holz 28 x 28 mm,;76,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+13;Dreikantleiste aus Holz, wir vor beschreiben, jedoch;25,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+14;Betongüte C34/45, Expositionsklassen XC4, XD3, XF2, WF;42,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+15;Herstellung rauer Fuge nach DIN EN 1992-1-1 in Betonoberflächen zum nachträglichen Anschluss von Betonbauteilen.;60,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+16;Betonoberflächen zum nachträglichen Anschluss von Betonbauteilen vorbereiten.;60,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+17;linienförmige Ausklinkung an der Oberseite zur Auflagerung der Holzdecken.;100,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+18;linienförmige Ausklinkung an der Oberseite zur Auflagerung der Holzdecken.;50,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Liefern, Herstellen und Entfernen von zweihäuptigen Schalungen für Stahlbeton-Wände als glatte Schalung aus Schalungsplatten, waagerecht angeordnet mit unregelmäßigen Stößen, für absatzfreie Betonfläche.;30,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Liefern, Herstellen und Entfernen von zweihäuptigen Schalungen für Stahlbeton-Wände als glatte Schalung aus Schalungsplatten, waagerecht angeordnet mit unregelmäßigen Stößen, für absatzfreie Betonfläche.;42,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Liefern, Herstellen und Entfernen von zweihäuptigen Schalungen für Stahlbeton-Wände als glatte Schalung aus Schalungsplatten, waagerecht angeordnet mit unregelmäßigen Stößen, für absatzfreie Betonfläche.;230,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Liefern, Herstellen und Entfernen von einhäuptigen Schalungen für Stahlbeton-Wände als glatte Schalung aus Schalungsplatten, waagerecht angeordnet mit unregelmäßigen Stößen, für absatzfreie Betonfläche.;10,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Zulage für Herstellen der Oberfläche in SB 3 Qualität einseitig.;72,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;wie zuvor beschrieben, jedoch;72,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Zulage Schalung der Wand für sichtbar bleibende Betonflächen.;42,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+8;Liefern, Herstellen und Entfernen von Schalung für Stahlbeton-Aufkantungen, -Schwellen und Attiken, zweihäuptig, wie aus den Plänen ersichtlich.;50,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+9;wie zuvor beschrieben, jedoch:;15,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+10;wie zuvor beschrieben, jedoch:;45,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+11;Liefern, Herstellen und Entfernen von Schalung für Stahlbeton-Aufbetonage, als Sichtbeton Erhöähung auf Bestands-Sichtbetonwand, zweihäuptig, wie aus den Plänen ersichtlich.;110,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+12;wie zuvor beschrieben, jedoch:;40,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+13;Schalung an freiem Wandende Stirnfläche. SB2;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+14;Schalung an freiem Wandende Stirnfläche. SB2;30,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+15;Schalung an freiem Wandende Stirnfläche. SB3;90,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+16;Schalung Überzug, beidseitig, SB2 glatt;9,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+17;Zulage für Herstellen der Oberfläche in SB 3 Qualität Wand Stirnfläche.;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+18;Zulage für Herstellen der Oberfläche in SB 3 Qualität Stützenflächen.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+19;Zulage Bretterschalung, wie vor beschrieben, einseitig,;5,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+20;Zulage für Herstellen der Oberfläche in SB 4 Qualität einseitig.;20,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+21;Eck- oder Kantenausbildung von Betonteilen, mittels Profilleiste in Schalung, Oberfläche glatt und nichtsaugend.;75,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+22;Schalung Wand, einhäuptig, Schalungshaut sichtbar bleibend.;10,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+23;Hoch verdichtete Trennfugendämmplatte, d = 20 mm, nicht brennbar (A1) mit umlaufendem, wechselseitigen Stufenfalz. Die Verarbeitungsrichtlinien sind zu beachten.;10,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+24;Zulage zu vorbeschriebenem Verschluß der Spannankerlöcher;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+25;Liefern und Einbau von Perimeterdämmung nach DIN 18164. An erdberührenden Wandbauteilen senkrecht.;140,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+26;Liefern und Einbau von Perimeterdämmung nach DIN 18164. An erdberührenden Wandbauteilen senkrecht.;180,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+27;Liefern und einbauen einer Schutzschicht als Schutz an erdberührenden;320,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+28;Hydrophobierung gemäß DAfStb-Instandsetzungsrichtlinie und TR Instandhaltung, zur Reduzierung der Wasseraufnahme bei freibewitterten Betonbauteilen, ohne Altbeschichtung als Oberflächenschutzsystem OS 1 (OS A), Bauteil Wand, auf Silan-/Siloxanbasis, in 2 Arbeitsgängen.;100,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Türöffnung in Stahlbetonwand, inkl. Sturzausbildung, mit umlaufender glatter, nichtsaugender Schalung mit regelmäßigen Stößen und Nagelstellen, verbleibende Betonwarzen und Grate abgeschliffen.;6,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Türöffnung in Stahlbetonwand, inkl. Sturzausbildung, mit umlaufender glatter, nichtsaugender Schalung mit regelmäßigen Stößen und Nagelstellen, verbleibende Betonwarzen und Grate abgeschliffen.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Türöffnung in Stahlbetonwand, inkl. Sturzausbildung, mit umlaufender glatter, nichtsaugender Schalung mit regelmäßigen Stößen und Nagelstellen, verbleibende Betonwarzen und Grate abgeschliffen.;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Zusätzliche Erhöhung über bestehender Türöffnung, Einlagearbeit bei Betonage Wanderhöhung,;6,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Zusätzliche Erhöhung über bestehender Türöffnung, Einlagearbeit bei Betonage Wanderhöhung,;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Kernbohrung, Ansatz senkrecht zur Untergrundfläche, aus bewehrtem Beton, Normalbeton,;30,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Kernbohrung, Ansatz horizontal zur Untergrundfläche, aus bewehrtem Beton, Normalbeton,;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+8;Herstellen einer Aussparung in StB-Wand;35,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+9;Herstellen einer Aussparung in Fundament, als Durchführung für Drainageleitung DN 150;6,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+10;Herstellen einer Aussparung in Fundament, als Durchführung für Drainageleitung DN 150;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+11;Herstellen einer runden Aussparung, Durchmesser D = 1,50 m, in Sichtbeton-Außenwand, scharfkantig mit r = 2 mm Rundung,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+12;Herstellen der Leibung runde Aussparung, Durchmesser D = 1,50 m,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Liefern und Montieren nichttragender, massiver Stahlbeton-Fertigteile als der Fassade vorgelagerter Stützenfuß mit Stoßschutzfunktion im Erdgeschoss, mit herkömmlicher Bewehrung, ohne integriertes Fallrohr.;79,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Zulage je Element für die auf dem Stahlbeton-Vordach des Bestandsbaus 2005 aufgestellten Fertigteile der Grundausführung, mit den nachfolgenden abweichenden bzw. ergänzenden Festlegungen.;17,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Zulage je Element an den Punkten, an denen das Fertigteil die Regenwasser-Fallleitung der Hauptdachentwässerung aufnimmt. Gegenüber vorheriger Position geänderte Bewehrung und zusätzliches einbetoniertes Fallrohr:;11,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Zulage je Element für die auf dem Stahlbeton-Vordach des Bestandsbaus 2005 aufgestellten Fertigteile, die die Regenwasser-Fallleitung der Hauptdachentwässerung aufnehmen. Geometrie, Sichtbetonanforderung (SB2), Kantenausbildung, Auflagerprinzip (Mörtelbett) und 4-Punkt-Rückverankerung wie Grundposit;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Zulage zu sämtlichen Stahlbeton-Fertigteilen des Untertitels 12.4 für die;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Herstellen und Liefern von Musterbauteilen (Musterplatten) aus durchgefärbtem,;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Provisorischer Kantenschutz für stossgefährdete Sichtbeton-;180,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Wie Vorposition, jedoch für flächige Bauteile, auf teilweise oder;270,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Herstellen einer vollflächigen zweilagigen Schutzabdeckung der bestehenden PVC-, Lino- und Kautschuk-Beläge aus:;50,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;wie vor beschrieben, jedoch:;50,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;wie vor beschrieben, jedoch:;10,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Herstellen einer vollflächigen Schutzabdeckung der bestehenden;20,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Staubschutzwand als Folienschutzwand im Gebäude, einschl. Vorhalten und wieder Beseitigen, diverse Raumhöhen, bestehend aus Trag- und Unterkonstruktion aus Holz, Bespannung mit verstärkter Gitterfolie, Anschlüsse an umfassende Massivbauteile zusätzlich abgeklebt, herstellen und unterhalten.;20,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Bauschutzwand im Gebäude, als Einbruch-, Staub- und Sichtschutz, einschl. Vorhalten und wieder Beseitigen, für diverse Raumhöhen, bestehend aus einseitig mit OSB-Holzwerkstoffplatten beplankter Holzkonstruktion, Anschlüsse an umfassende Bauteile zusätzlich staubdicht abgeklebt,;15,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Herstellen eines Witterungsschutzes als vollflächige Schutzabdeckung offener Dachränder, nach Teil-Abbruch Dachflächen,;25,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+8;Herstellen und Unterhalt eines temporären Witterungsschutzes als vollflächige Schutzabdeckung einer trapezförmigen offenen Dachfläche, nach Teil-Abbruch Dach, bestehend aus erforderlicher Holzträger Unterkonstruktion, vollflächigeAbdeckung aus OSB- Platten, Folie, gitterarmiert, Stöße vollflächig st;105,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+9;Herstellen und Unterhalt eines temporären Witterungsschutzes als vollflächige Schutzabdeckung und Abdichtung von Durchdringungen / Öffnungen in Bodenplatte;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+10;Herstellen und Unterhalt eines temporären Witterungsschutzes als vollflächige Schutzabdeckung und Abdichtung von Durchdringungen / Öffnungen in Bodenplatte;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+11;Bautür an bauseitigen Öffnungen, montieren und wieder demontieren, bestehend aus Stahlblechkonstruktion, abschließbar mit Schloss und Drückergarnitur und vorgerüstet für bauseitige Profilzylinder.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+12;Bautür Stahlblech;106,0;StWo;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+13;Schutzplanen als Wetterschutz für Bauteile, Schutzgerüste, offene Dächer und der gleichen, nach Bedarf sturmsicher anbringen. Aufmaß nach Fläche abgedeckter Bauteilfläche.;20,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+14;Bauplane, wie vor beschrieben, vorhalten und instandhalten.;2250,0;m2Wo;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Sockel und Fundamente,  Betongüte C 25/30,;100,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Betongüte C 25/30,;65,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Herstellung rauer Fuge nach DIN EN 1992-1-1 in Betonoberflächen zum nachträglichen Anschluss von Betonbauteilen.;190,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Betonoberflächen zum nachträglichen Anschluss von Betonbauteilen vorbereiten.;45,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Bestehende Stahlbetonwände oder Decken mit Betonersatzsystem (Haftbrücke, PCC II Grobmörtel M3 Qualität und Feinspachtel) nach Betoninstandhaltungsrichtlinie instandsetzen/verstärken.;5,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Für neuen Deckenabschluss / Wandabschluss im Bereich eines zurückgeschnittenen / zurückgespitzten Bauteils.;4,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Für neuen Deckenabschluss / Wandabschluss im Bereich eines zurückgeschnittenen / zurückgespitzten Bauteils.;16,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Kernbohrung, Ansatz senkrecht zur Untergrundfläche, aus bewehrtem Beton, Normalbeton,;35,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Herstellen einer Aussparung in bestehender StB-Decke;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Herstellen einer Aussparung in neuer StB-Decke;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Herstellen eines Bodenschlitz in bestehender StB-Decke;6,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+8;Herstellen eines Bodenschlitz in neuer StB-Decke;7,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+9;Abbruch der bestehenden Bodenplatte für Anschluss an Grundleitungen;15,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Bewehrungsanschluss, in Bohrloch eingemörtelt, mit bauaufsichtlicher Zulassung, Normalbeton, DIN 1045-2 ermittelte Festigkeit bis 30 N/mm2, Anker für tragende Funktion, aus Betonstahl B500B, Durchmesser 8 mm,  Bohrlochtiefe über 15 bis 25 cm.;4400,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Bewehrungsanschluss, in Bohrloch eingemörtelt, mit bauaufsichtlicher Zulassung, Normalbeton, DIN 1045-2 ermittelte Festigkeit bis 30 N/mm2, Anker für tragende Funktion, aus Betonstahl B500B, Durchmesser 10 mm,  Bohrlochtiefe über 25 bis 30 cm.;1000,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Bewehrungsanschluss, in Bohrloch eingemörtelt, mit bauaufsichtlicher Zulassung, Normalbeton, DIN 1048-2 ermittelte Festigkeit bis 30 N/mm2, Anker für tragende Funktion, aus Betonstahl B500B, Durchmesser 12 mm, Bohrlochtiefe über 30 bis 40 cm.;750,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Bewehrungsanschluss, in Bohrloch eingemörtelt, mit bauaufsichtlicher Zulassung, Normalbeton, DIN 1048-2 ermittelte Festigkeit bis 30 N/mm2, Anker für tragende Funktion, aus Betonstahl B500B, Durchmesser 14 mm, Bohrlochtiefe über 50 bis 60 cm.;90,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Stabstahl B500B (hochduktil), nach DIN 488-1, Durchmesser 8-12 mm, in allen Längen bis 12,00 m, liefern und fachgerecht einbauen.;15000,0;kg;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Stabstahl B500B (hochduktil), nach DIN 488-1, Durchmesser 14-28 mm, in allen Längen bis 14,00 m, liefern und fachgerecht einbauen.;8500,0;kg;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Lagermatten aus Betonstahl B500A (normalduktil), nach DIN 488-4;6000,0;kg;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+8;Unterstützungskörbe und -Schlangen nach DBV-Merkblatt aus B500 A, normalduktil, in allen Größen und Längen;1500,0;kg;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+9;Bewehrungsstähle in Edelstahl, B500B (hochduktil), mit bauaufsichtlicher Zulassung, Durchmesser 10-14 mm, in allen Größen und Längen liefern und fachgerecht einbauen. Verschnitt und Biegen wird nicht vergütet.;500,0;kg;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+10;Bewehrungsquerschnitt D=8/15cm;20,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+11;Bewehrungsquerschnitt D=10/15cm;20,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+12;Bewehrungsquerschnitt D=12/10cm;10,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+13;Bewehrungsquerschnitt D=8/15cm,;25,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+14;Bewehrungsquerschnitt D=10/15cm,;25,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+15;Bewehrungsquerschnitt D=12/15cm,;15,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+16;Typ: HTA 40/22;6,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+17;Typ: HTA 50/30;6,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+18;Typ: HTA-CE 38/17, Kurzstücke L < 25cm;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+19;Typ: HTA-CE 50/30, Kurzstücke L < 25cm;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+20;zwischen Bodenplatte und aufgehender Wand.;24,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+21;Baustahl S235 JR, rechteckige Einbauplatte, mit angeschweißten Kopfbolzendübeln oder Profilstahlknaggen und angeschweißten Bewehrungsstäben B500B, einschließlich einlagigem Korrosionsschutzanstrich gemäß DIN 55928, liefern.;5500,0;kg;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+22;Einbau von vorgenannten und anderen bauseits gelieferten Einbauplatten in Stahlbetonbauteile.;550,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Rohrdurchführung elastisch für Entwässerungsrohr DN 100.;6,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Rohrdurchführung elastisch für Entwässerungsrohr DN 150.;6,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Leuchten-Einbaugehäuse in Stahlbetonbauteil einbauen, ohne Lieferung.;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Vorhandene Öffnungen in bestehenden Stahlbetonwänden mit Mauerwerk kraftschlüssig und in voller Wanddicke schließen.;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Drän-/ Schutzmatte aus Polystyrol-Regenerat mit;150,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Haus-Trennwandplatte aus Mineralwolle (MW) d = 40 mm;3,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Lieferung und nach Herstellerangaben fachgerechter, Auftrag von;370,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Ausbildung der Bitumendickbeschichtung als Hohlkehle bei Übergängen von;105,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Lieferung und nach Herstellerangaben fachgerechter, Auftrag von;350,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+6;Lieferung und nach Herstellerangaben fachgerechter, Auftrag von;20,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+7;Beton von grober Verschmutzung, Zementleim, Staub, Öl, Fett reinigen und Entfernen von Graten, Mörtelresten, losen sowie haftungsmindernden Teilen.;1660,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+8;Fehlstellen verschließen, offene Fugen, Ausbruchstellen und sonstige Unebenheiten mit Egalisierspachtel ausgleichen.;1660,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+9;Bitumenemulsion abgestimmt auf nachfolgende Beschichtungen, auf vorbereiteten Bodenflächen nach Herstellervorschrift aufbringen.;1150,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+10;diffusionsdichte Bitumenbahn als Dampfsperre;1150,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+11;Zulage doppelte Abdichtung Bodenkanal. wie zuvor beschreiben, jedoch Ausführung zweilagig.;225,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+12;Feuchtigkeitsabdichtung waagrecht auf Bodenplatte EG, gem. DIN 18534, Untergrund Beton, Wassereinwirkungsklasse W3-l;75,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Besenreien Rohboden / -Wände staubbindend versiegeln, mit 2 Komponentenversiegelung für hohe Beanspruchung.;40,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Besenreinen Rohboden/ Wände staubbindend versiegeln, mit 2 Komponentenversiegelung, für hohe Beanspruchung. Die Versiegelung an den Wänden 20 cm hochführen.;75,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Baustellencontainer für Mischabfall;8,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Reinigen der Baustelle von grober Verschmutzung, Abfällen, und Rückständen, die nicht durch den AN zu verantworten sind. Abrechnung nach Aufwand und nur nach vorheriger ausdrücklicher Aufforderung durch die Bauleitung.;40,0;h;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Stundenlohnarbeiten für Meister, Polier und Gleichgestellte, sowie ähnliche Fachkräfte.;30,0;h;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Stundenlohnarbeiten für Vorarbeiterin, Vorarbeiter, Gesellin, Geselle, Facharbeiterin, Facharbeiter und Gleichgestellte, sowie ähnliche Fachkräfte.;40,0;h;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Stundenlohnarbeiten für Werkerin, Werker, Helferin, Helfer und Gleichgestellte.;60,0;h;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+5;Zusätzliche An- und Abfahrt für Zwischen-Auf-, Um- und Abbauten nach Erfordernis, auf besondere Aufforderung durch die Bauleitung.;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Bereitstellung des auf der Baustelle vorgehaltenen Baukrans einschließlich Kranführer des AN für Hebeleistungen und Transporte der Fremdgewerke (z. B. Holzbau, Fassade, Haustechnik) während der laufenden Rohbauzeit.;25,0;h;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Die Stoffpreise müssen anhand von Original-Einkaufsbelegen unter Abzug von Rabatten aller Art nachgewiesen werden. Auf diese Stoffpreise ist vom Auftragnehmer ein Faktor für Gemeinkosten, Gewinn sowie die anteiligen Fracht, Fuhr-und Ladekosten frei;4000,0;EUR;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Aushub für Herstellung der Fundamente nach Abbruch der Bodenplatte.;12,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Aushub für Herstellung der Bodenplatte nach Abbruch der Bodenplatte.;9,0;m3;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Herstellung von Öffnungen in der bestehenden Stahlbeton-Bodenplatte.;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Herstellung von Öffnungen in der bestehenden Stahlbeton-Bodenplatte.;24,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Zulage zur vorherigen Position für zusätzliche Erschwernisse zum Erhalt vorhandener, weiter zu nutzender  Elektro- und HLS-Leitungen (Wasser, Heizung, Schmutzwasser, Drainageleitung).;16,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Abbruch der bestehenden Stahlbeton-Attika bis OK Rohdecke,;50,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Abbruch an der bestehenden Stahlbeton-Decke.;10,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Betongüte C25/30, Expositionsklassen XC3, WO;91,0;m2;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Herstellen vorab von Probeflächen zur Beurteilung des optischen Farb- und Gesamteindrucks der Sichtbeton-Oberfläche in SB 3,;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Herstellen eines stufenweisen Steigungsausgleichs an Bestandstreppe durch Betonaufdopplung.;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Herstellen eines stufenweisen Steigungsausgleichs an Bestandstreppe durch Betonaufdopplung, wie zuvor beschreiben, jedoch;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Herstellen eines stufenweisen Steigungsausgleichs an Bestandstreppe durch Betonaufdopplung, wie zuvor beschreiben, jedoch;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Herstellen eines stufenweisen Steigungsausgleichs an Bestandstreppe durch Betonaufdopplung, wie zuvor beschreiben, jedoch;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Kernbohrung, Ansatz senkrecht zur Untergrundfläche, aus bewehrtem Beton, Normalbeton.;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Notablauf DN 100 mit Anschluss- / Klebeflansch in die Kernbohrung einbauen,;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+3;Temporäre Fallleitung DN 100 aus Polypropylen ab Unterkante des temporären;18,0;m;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+4;Vollständiger Rückbau der bauzeitlichen Notentwässerung nach Errichtung;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+1;Abbruch der bestehenden Bodenplatte für Anschluss an Grundleitungen;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83
+2;Abbruch der bestehenden Bodenplatte für Anschluss an Grundleitungen;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.013.2_Rohbau_260805.x83

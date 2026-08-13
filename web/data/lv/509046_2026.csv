@@ -1,0 +1,33 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Hardware;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;"Bestätigter Nettopreis für 2 Speichersysteme gemäß der angegebenen Konfiguration inklusive aller zum Betrieb und zur Administration notwendigen Hardware, Software, Lizenzen und Pflege sowie Support für die Laufzeit von 60 Monaten (gem. Kriterienkatalog).
+Bitte separat in den der Position 1.1.a - 1.1";;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Kosten der Hardware für 60 Monate Laufzeit, Einmalzahlung;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Kosten der Lizenz für 60 Monate Laufzeit, Einmalzahlung;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Kosten der Wartung für 60 Monate Laufzeit, Einmalzahlung;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;"Migration der ""Altdaten"" ca. 4 PIB, des zuvor verwenden ECS 500 System über das S3 Protokoll auf Bucketebene auf die neuen Systeme. Preis pro PIB bitte angeben.";;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Kosten für einen nachgelagerten In-Place Upgrade der bestehenden Nodeds, wenn nicht bereits im Wartungspreis enthalten.;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Summe Positionen 1 netto;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+Position;Bezeichnung;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+2;Dienstleistungen;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Kosten für Disk Retention Service. Die Preise sind nur einzutragen, wenn die Kosten nicht bereits in der Standardwartung enthalten sind, inkl. Erläuterungen zum Vorgehen auf einem gesonderten Blatt.;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Kosten für Full Disk Encryption gemäß BSI-Standard. Die Preise sind nur einzutragen, wenn die Kosten nicht bereits in der Standardwartung enthalten sind, inkl. Erläuterungen zum Vorgehen auf einem gesonderten Blatt.;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;BSI-konforme Löschung der Gesamtsysteme;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Kosten für Dienstleistungen pro einem Personentag ( 1 Personentag = 8 Arbeitsstunden);;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Schulungen: Kosten pro Schulungstag vor Ort inkl. Schulungsunterlagen;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Schulungen: Kosten pro Schulungstag Remote inkl. Schulungsunterlagen;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Summe Positionen 2 netto;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+3;Optionale Leistungen;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;"Die Lieferung von zwei weiteren S3-Objektspeichersystemen (optionale Leistung) wie in Position 1.1.
+Bitte separat in der Position 1.2.a - 1.2.c eintragen.";;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Kosten der Hardware für 60 Monate Laufzeit. Gefordert wird ein garantierter Rabatsatz auf den jeweils aktuelle Listenpreis der bei Bedarf angefragt wird.;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Kosten der Lizenz für 60 Monate Laufzeit. Gefordert wird ein garantierter Rabatsatz auf den jeweils aktuelle Listenpreis der bei Bedarf angefragt wird.;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Kosten der Wartung für 60 Monate Laufzeit. Gefordert wird ein garantierter Rabatsatz auf den jeweils aktuelle Listenpreis der bei Bedarf angefragt wird.;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Erweiterung eines bestehenden Speichersystemes aus 1.1 oder 1.2, um jeweils zusätzliche 500 TiB Nutzkapazität inklusive aller zusätzlich benötigten Komponenten in Euro.;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Zusätzliche Verbaute Hardware Kosten um jeweils 500 TiB SSDs. Gefordert wird ein garantierter Rabatsatz auf den jeweils aktuelle Listenpreis der bei Bedarf angefragt wird.;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Zusätzliche Verbaute Hardware Kosten um jeweils 500 TiB HDDs. Gefordert wird ein garantierter Rabatsatz auf den jeweils aktuelle Listenpreis der bei Bedarf angefragt wird.;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Erweiterung der bestehenden IP-Front-End-Ports pro System von 25 Gbit/s auf 100 Gbit/s, sofern noch nicht im Basissystem vorhanden. Gefordert wird ein Rabatsatz auf den jeweils aktuelle Listenpreis der bei Bedarf angefragt wird.;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+4;Summe Angebotvergleichspreis (netto) Positionen 1 - 2 in Euro;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Summe Angebotvergleichspreis (netto) Positionen 4 in Euro;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Umsatzsteuer 19%;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx
+;Summe Angebotsvergleichspreis (brutto) in Euro;;;preisblatt;vom_unternehmen_auszufuellende_dokumente/C2_Preisblatt 2026-020_060826.xlsx

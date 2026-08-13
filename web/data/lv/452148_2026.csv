@@ -1,0 +1,28 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Ortstermin an der Baustelle, nach Auftragsvergabe,;1,0;Psch;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0020;PV-Anlage mit einer Leistung von ca. 81,9 kWp;1,0;Psch;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0030;Solarkabel mit ausreichendem Querschnitt;1,0;Psch;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0040;Wechselrichter in angepasster Dimensionierung;5,0;St;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0050;Freischaltstelle mit NA-Schutz;1,0;St;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0060;Datenleitung verlegen zum Datenschrank;1,0;Psch;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0070;Modulerdungsleitungen;1,0;Psch;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0080;Anlagenüberwachung mittels Datenlogger;1,0;Psch;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0090;Feuerwehrschalter;1,0;St;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0100;Einspeisemanagement;1,0;Psch;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0110;Überspannungsschutzgerät für Photovoltaik DIN EN 61643-31 (VDE 0675-6-31), Typ 1 und 2, einteilig, Bemessungsbetriebsspannung 1000 V DC, Nennableitstoßstrom (8/20) je Leiter mind. 30 kA, Blitzstoßstrom (10/350) mind. 6,25 kA je Pol, Schutzpegel max. 4 kV, mit Funktionsanzeige am Gerät und potentialf;5,0;St;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0120;Absturzsicherung gemäß DGUV Vorschrift, ASR und BG Bau;1,0;Psch;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0130;Inbetriebnahme der PV-Anlage;1,0;Psch;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0140;Unterverteilung für vorgenannte Wechselrichter (WR);1,0;Psch;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0010;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 16 RE/16, Cu-Zahl 796, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;125,0;m;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0020;Außenkabel, symmetrisch, DIN VDE 0816-1 (VDE 0816-1), A-2Y(L)2Y, 10 x 2 x 0,8 STIII BD.;125,0;m;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0030;Kunststoff - Stangenrohr DN 25;50,0;m;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0040;Gitterrinne, Querschnitt bis 11.000 qmm;8,0;m;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0050;Breite bis 200 mm;15,0;m;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0060;Universal-Brandschott, Querschnitt bis 100 qcm;6,0;St;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0070;PERI UP Flex Treppenturm bis 3,00 kN/m²;1,0;Psch;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0080;Absperrband doppeltseitig bedruckt in rot weiß geblockt;1,0;Psch;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0010;Monteurstunden;8,0;h;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0020;Auszubildenden-,Helferstunden;8,0;h;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0030;Revisionsunterlagen;1,0;Psch;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0040;Meldung im Marktstammdatenregister;1,0;Psch;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83
+0010;Wartung der im Titel 1 beschriebenen PV-Anlage;5,0;St;gaeb;leistungsbeschreibungen/LV30 Photovoltaikanlagen_V33.X83

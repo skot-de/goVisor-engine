@@ -1,0 +1,24 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Baustelleneinrichtung einrichten und räumen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+20;Reinigung der Flächen von Straßen;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+10;Planum herstellen, zulässige Abweichung von der Sollhöhe +/- 2 cm, Verformungsmodul mind. EV2 45 MPa.;900,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+20;Boden, auf der Baustelle gelagert, schichtenweise in der Reihenfolge des Schichtenverzeichnisses einbauen und verdichten, in Baugruben, Förderweg bis 250 m, mit einer Bodengruppe, Bodengruppe 1 GU DIN 18196 (Kies-Schluff-Schotter-Gemisch), Verdichtungsgrad mind. DPr 0,97, Schichtdicke über 20 bis 30;150,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+30;Füllboden liefern einbauen verdichten;800,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+35;Im Bereich der Auffüllungen verläuft eine bereits eingesandete 10 kV Leitung in deren Bereich die Auffüllung mit erhöhter Vorsicht ausgeführt werden muss, sowie eine Druckluftleitung, die eingesandet werden muss.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+40;Boden profilgerecht aus Straßenkörper unterhalb der;50,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+50;Boden in Teilflächen profilgerecht aus Straßenkörper;5,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+70;Zulage Zwischenlagerung für nicht verwendbaren Boden auf Mieteinkl, notwendige Zwischentransporte,;50,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+80;In Mieten zwischengelagertes Material zum Auffüllen aus Grabenaushub der Leitungstrassen in vorgeschriebener Form auf Grundlage der LAGA- u. DepV-Richtwerte analysieren lassen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+90;In Mieten zwischengelagerten Material zum Auffüllen aus Grabenaushub der Leitungstrassen invorgeschriebener Form auf Grundlage derErsatzbaustoffverordnung (Materialklasse nach EBV,Anlage 1, Tabelle 3) analysieren lassen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+100;Bodenabfuhr des beprobten Materials auf Deponie.;90,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+110;Ummantelung von Kabeln und Leerrohren DN verschieden Leitungsarten,;15,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+10;STS DPr1 EV2 80MPA 0/32 D 15-20 cm;90,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+20;Geotextil-Vliesstoff aus PP/PET, mechanisch verfestigt, als temporäre Trennschicht zwischen Planum/Tragschicht und der provisorischen Asphaltbefestigung liefern und fachgerecht einbauen.;50,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+30;STS DPr1 EV2 80MPA 0/32 D 10 cm;20,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+40;Asphalttragschicht vor Aufbringen des Bindemittels der Folgeposition gründlich reinigen (gegebenenfalls unter Zuhilfenahme eines Dampfdruckreinigers oder ähnliches). Anfallendes Material ist der Verwertung nach Wahl des AN zuzuführen.;50,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+50;Bitumenemulsion zur Herstellung des Schichtenverbundes liefern und auf gereinigte Asphalttragschicht vor Einbau der Asphaltdeckschicht aufsprühen.;50,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+60;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;50,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+10;Revisionsunterlagen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+10;Polier, Stundenlohnarbeiten;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+20;Facharbeiter, Stundenlohnarbeiten;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83
+30;Helfer, Stundenlohnarbeiten;15,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/03 - LV ZAS_ARC_6_06_Erdauffüllungen.x83

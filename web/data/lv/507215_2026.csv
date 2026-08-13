@@ -1,0 +1,29 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Werkstattplanung im Stahlbau;1,0;Psch;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+2;Statische Nachweise;1,0;Psch;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+3;Baustelleneinrichtung;1,0;psch;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+1;Geschwei;4720,0;kg;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+2;Gel;54,0;lfm;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+3;Zulage f;2,1;lfm;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+4;Gitterroststufen Au;35,0;Stk.;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+1;Geschwei;775,0;kg;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+2;VSG f;12,5;m²;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+3;f;12,0;St;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+4;Kastenrinne;8,2;m;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+5;Rinneneinlaufblech;8,2;m;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+6;Einhangstutzen;1,0;St;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+7;Regenfallrohre;3,1;m;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+8;Regenstandrohre;1,0;St;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+9;Brustblech (Wandanschlussblech);12,0;m;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+1;Geschwei;1400,0;kg;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+2;Edelstahlpoller f;13,0;St;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+3;Estrichabstellwinkel 180 x 90 x 10 feuerverzinkt;2,5;lfm;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+4;Ortsfeste Steigleiter an baulichen Anlagen;1,0;St;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+5;Ortsfeste Steigleiter an baulichen Anlagen;1,0;St;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+6;Ortsfeste Steigleiter an baulichen Anlagen;2,0;St;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+7;Kleineisenteile;200,0;kg;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+8;Kleineisenteile, feuerverzinkt;100,0;kg;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+9;Profilstahl / Flachstahl;100,0;kg;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+1;Meister;10,0;h;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+2;jedoch Facharbeiter;20,0;h;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83
+3;jedoch Helfer;20,0;h;gaeb;leistungsbeschreibungen/ALTD-GS-06.X83

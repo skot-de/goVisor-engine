@@ -1,0 +1,217 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Baustelle einrichten;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+20;Baustelle räumen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+30;Bauzaun aufstellen und  entfernen;20,0;m;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+10;Vorankündigung erstellen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+20;SiGe-Plan erstellen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+30;SiGe-Koordinator stellen.;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+40;Lichtbilder herst. und liefern;100,0;St;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+50;Bestandunterlagen liefern;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+60;Bestandunterlagen liefern;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+70;Ausführungszeichnungen herstellen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+80;Standsicherheitsnachweis aufstellen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+90;Ausführungszeichnungen herstellen*4-fach;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+100;Standsicherheitsnachweis aufstellen*3-fach;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+110;Stahlbauzeichnung herstellen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+120;Prüfung von Ausführungsunterlagen der Baubehelfe;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+130;Vermessungsarbeiten durchführen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+140;Beweissicherungsverfahren;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+10;Verkehrssich. läng. Dauer aufbauen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+20;Verkehrssich. läng. Dauer vorhalten;90,0;d;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+30;Verkehrssich. läng. Dauer abbauen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+40;Kontrolle d. Verkehrss. an Arb.st.;90,0;d;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+50;Verkehrssich. läng. Dauer aufbauen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+60;Verkehrssich. läng. Dauer vorhalten;90,0;d;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+70;Verkehrssich. läng. Dauer abbauen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+80;Kontrolle d. Verkehrss. a. Uml.str.;90,0;d;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+90;Rückbau von Hindernissen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+100;Einbau Steine und Absperrpfosten;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+10;Baugelände abräumen;240,0;m2;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+20;Bäume fällen mit Roden;1,0;St;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+30;Bäume fällen mit Roden;2,0;St;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+40;Asphaltbefestigung trennen;7,0;m;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+50;Asphaltbefestigung aufnehmen;60,0;m2;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+60;Geländer abbauen;12,0;m;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+70;Geländer abbauen;6,0;m;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+80;Bauliche Anlage abbrechen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+10;Fangedamm n.W.d. AN herstellen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+20;Bachumleitung herstellen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+30;Wasserh.anl.nach Wahl des AN herst.;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+40;Wasserhaltungsanlage umsetzen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+50;Wasserhaltungsanlage vorhalten;80,0;d;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+60;Wasserhaltungsanlage betreiben;80,0;d;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+70;Pumpenanlage einrichten;2,0;St;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+80;Pumpenanlage vorhalten;80,0;d;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+90;Wasserhaltungsanlage betreiben;80,0;d;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+100;Mobile Absetzanlage aufstellen;1,0;St;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+110;Mobile Absetzanlage betreiben;80,0;d;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+10;Unbewehrten Beton herstellen;145,0;m3;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+20;Bew. Beton einschl. Schalung herst.;36,0;m3;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+30;Beton f. Sauberkeitsschicht herst.;51,0;m2;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+40;Anfangs- und Endstück Stahlbeton-Rahmenprofile herstellen und liefern;2,0;St;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+50;Stahlbeton-Trogprofile herstellen und liefern;4,0;St;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+60;Konstruktiver Rückbiegeanschluss für Rahmenfertigteile;250,0;Stk;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+70;Bew. Beton einschl. Schalung herst.;4,1;m3;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+80;Bew. Beton einschl. Schalung herst.;3,0;m3;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+90;Betonstahl einbauen;0,8;t;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+100;Betonstahl einbauen;0,4;t;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+110;Arbeitsgerüst herstellen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+120;Traggerüst herstellen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+130;Jahreszahl-Matrize einbauen;1,0;St;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+140;Kabelschutzrohr liefern/einbauen;15,0;m;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+10;Mobilkran einsetzen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+20;Kranstellfläche herstellen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+30;Standsicherheitsnachweise aufstellen;1,0;psch;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+10;Verstärkungsstreifen einbauen;32,0;m;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+20;Betonunterlage vorbereiten;21,0;m2;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+30;Betonunterlage grundieren;21,0;m2;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+40;Zulage jungen Beton (7 Tage) mit Epoxidharz versiegeln;21,0;m2;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+50;Epoxidharz liefern;45,0;kg;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+60;Verstärkungsstreifen einbauen;10,0;m;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+70;Überbauabschluss herstellen;8,0;m;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+80;Verstärkungsstreifen einbauen;8,0;m;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+90;Zulage Asphaltschutzschicht (Abs 5);8,0;m;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+100;Dichtungssch. aus 1 Bitbahn herst.;16,0;m2;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+110;Schutzlage herstellen;2,6;m2;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+120;Verstärkungsstreifen einbauen;6,5;m;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+130;Asphaltschutzschicht herstellen;13,0;m2;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+140;Streifen/Rinne aus MA herst.;3,1;m;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+150;Anschluss a. Fuge m. Fugenm. herst.;6,5;m;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+160;Anschluss a. Fuge m. Fugenm. herst.;3,1;m;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+170;Anschluss a. Fuge m. Fugenm. herst.;8,0;m;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+10;Baugrube herstellen;600,0;m3;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+20;Baugrube herstellen;144,0;m3;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+30;Dränschicht an Bauwerk herstellen;84,0;m2;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+40;Baust. lief. als BW-Hinterfüll.einb;84,0;m3;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+50;Baust. lief. als BW-Hinterfüll.einb;370,0;m3;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+60;Frostschutzschicht herstellen;21,0;m3;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+70;Planum herstellen;51,0;m2;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+80;Asphalttragsch. aus AC 22 T S herst;51,0;m2;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+90;Bitumenemulsion aufsprühen;51,0;m2;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+100;Asphaltdecksch. aus AC 11 D N herst;61,0;m2;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+110;Bordstein aus Beton setzen;4,0;m;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+120;Bordstein aus Beton setzen;4,0;m;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+130;Bordstein trennen;4,0;St;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+140;Rinne mit Pflast. aus Beton herst.;4,0;m;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+150;Sohlsubstrat aufnehmen, lagern, wieder einbauen;40,0;m2;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+160;Bankettbaustoff liefern, einbauen und verdichten;10,0;to;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+170;Oberboden andecken und einsäen;140,0;m2;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+180;Doppelgleitschienenverbau;90,0;m2;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+10;Stahlgeländer einbauen;6,2;m;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+20;Geländerabschluss herstellen Gel 19;4,0;St;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+30;Stahlgeländer einbauen;20,0;m;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+40;Messbolzen einbauen;4,0;St;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+50;Wasserbausteine liefern und einbauen, 30-50cm;18,0;t;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+10;Verrechnungssatz fuer Arbeitskraft;1,0;h;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+20;Verrechnungssatz fuer Arbeitskraft;1,0;h;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+30;Verrechnungssatz fuer Baugeraet;1,0;h;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+40;Verrechnungssatz fuer LKW;1,0;h;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+50;Verrechnungssatz fuer LKW;1,0;h;gaeb;leistungsbeschreibungen/22-020_Kurztext (1).X83
+10;Baustelle einrichten;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+20;Baustelle räumen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+30;Bauzaun aufstellen und  entfernen;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+10;Vorankündigung erstellen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+20;SiGe-Plan erstellen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+30;SiGe-Koordinator stellen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+40;Lichtbilder herst. und liefern;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+50;Bestandunterlagen liefern;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+60;Bestandunterlagen liefern;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+70;Ausführungszeichnungen herstellen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+80;Standsicherheitsnachweis aufstellen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+90;Ausführungszeichnungen herstellen*4-fach;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+100;Standsicherheitsnachweis aufstellen*3-fach;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+110;Stahlbauzeichnung herstellen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+120;Prüfung von Ausführungsunterlagen der Baubehelfe;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+130;Vermessungsarbeiten durchführen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+140;Beweissicherungsverfahren;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+10;Verkehrssich. läng. Dauer aufbauen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+20;Verkehrssich. läng. Dauer vorhalten;90,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+30;Verkehrssich. läng. Dauer abbauen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+40;Kontrolle d. Verkehrss. an Arb.st.;90,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+50;Verkehrssich. läng. Dauer aufbauen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+60;Verkehrssich. läng. Dauer vorhalten;90,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+70;Verkehrssich. läng. Dauer abbauen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+80;Kontrolle d. Verkehrss. a. Uml.str.;90,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+90;Rückbau von Hindernissen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+100;Einbau Steine und Absperrpfosten;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+10;Baugelände abräumen;240,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+20;Bäume fällen mit Roden;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+30;Bäume fällen mit Roden;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+40;Asphaltbefestigung trennen;7,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+50;Asphaltbefestigung aufnehmen;60,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+60;Geländer abbauen;12,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+70;Geländer abbauen;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+80;Bauliche Anlage abbrechen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+10;Fangedamm n.W.d. AN herstellen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+20;Bachumleitung herstellen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+30;Wasserh.anl.nach Wahl des AN herst.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+40;Wasserhaltungsanlage umsetzen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+50;Wasserhaltungsanlage vorhalten;80,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+60;Wasserhaltungsanlage betreiben;80,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+70;Pumpenanlage einrichten;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+80;Pumpenanlage vorhalten;80,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+90;Wasserhaltungsanlage betreiben;80,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+100;Mobile Absetzanlage aufstellen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+110;Mobile Absetzanlage betreiben;80,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+10;Unbewehrten Beton herstellen;145,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+20;Bew. Beton einschl. Schalung herst.;36,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+30;Beton f. Sauberkeitsschicht herst.;51,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+40;Anfangs- und Endstück Stahlbeton-Rahmenprofile herstellen und liefern;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+50;Stahlbeton-Trogprofile herstellen und liefern;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+60;Konstruktiver Rückbiegeanschluss für Rahmenfertigteile;250,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+70;Bew. Beton einschl. Schalung herst.;4,1;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+80;Bew. Beton einschl. Schalung herst.;3,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+90;Betonstahl einbauen;0,8;t;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+100;Betonstahl einbauen;0,4;t;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+110;Arbeitsgerüst herstellen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+120;Traggerüst herstellen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+130;Jahreszahl-Matrize einbauen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+140;Kabelschutzrohr liefern/einbauen;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+10;Mobilkran einsetzen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+20;Kranstellfläche herstellen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+30;Standsicherheitsnachweise aufstellen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+10;Verstärkungsstreifen einbauen;32,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+20;Betonunterlage vorbereiten;21,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+30;Betonunterlage grundieren;21,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+40;Zulage jungen Beton (7 Tage) mit Epoxidharz versiegeln;21,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+50;Epoxidharz liefern;45,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+60;Verstärkungsstreifen einbauen;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+70;Überbauabschluss herstellen;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+80;Verstärkungsstreifen einbauen;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+90;Zulage Asphaltschutzschicht (Abs 5);8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+100;Dichtungssch. aus 1 Bitbahn herst.;16,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+110;Schutzlage herstellen;2,6;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+120;Verstärkungsstreifen einbauen;6,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+130;Asphaltschutzschicht herstellen;13,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+140;Streifen/Rinne aus MA herst.;3,1;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+150;Anschluss a. Fuge m. Fugenm. herst.;6,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+160;Anschluss a. Fuge m. Fugenm. herst.;3,1;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+170;Anschluss a. Fuge m. Fugenm. herst.;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+10;Baugrube herstellen;600,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+20;Baugrube herstellen;144,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+30;Dränschicht an Bauwerk herstellen;84,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+40;Baust. lief. als BW-Hinterfüll.einb;84,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+50;Baust. lief. als BW-Hinterfüll.einb;370,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+60;Frostschutzschicht herstellen;21,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+70;Planum herstellen;51,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+80;Asphalttragsch. aus AC 22 T S herst;51,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+90;Bitumenemulsion aufsprühen;51,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+100;Asphaltdecksch. aus AC 11 D N herst;61,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+110;Bordstein aus Beton setzen;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+120;Bordstein aus Beton setzen;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+130;Bordstein trennen;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+140;Rinne mit Pflast. aus Beton herst.;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+150;Sohlsubstrat aufnehmen, lagern, wieder einbauen;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+160;Bankettbaustoff liefern, einbauen und verdichten;10,0;to;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+170;Oberboden andecken und einsäen;140,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+180;Doppelgleitschienenverbau;90,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+10;Stahlgeländer einbauen;6,2;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+20;Geländerabschluss herstellen Gel 19;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+30;Stahlgeländer einbauen;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+40;Messbolzen einbauen;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+50;Wasserbausteine liefern und einbauen, 30-50cm;18,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+10;Verrechnungssatz fuer Arbeitskraft;1,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+20;Verrechnungssatz fuer Arbeitskraft;1,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+30;Verrechnungssatz fuer Baugeraet;1,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+40;Verrechnungssatz fuer LKW;1,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83
+50;Verrechnungssatz fuer LKW;1,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/22-020_Kurztext.X83

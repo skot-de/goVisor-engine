@@ -1,0 +1,767 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Einbau der von der örtlichen Bauleitung eingelagernten Einbauteile der Unterflurhebenanlage und Anschluss der einbetonierten Unterflurhebeanlage an Druckleitung, Elektro- und MSR-Technik:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;"Muffen-Absperrschieber CuZn, Rp 1 1/2"" PN 16";2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Alarmschaltgerät, netzunabhängig,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;wie zuvor beschrieben, jedoch:;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;wie zuvor beschrieben, jedoch:;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;wie zuvor beschrieben, jedoch:;32,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;wie zuvor beschrieben, jedoch:;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;wie zuvor beschrieben, jedoch:;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen Außendurchmesser 75 mm, Gradzahl: 15-90°.;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen Außendurchmesser 90 mm, Gradzahl: 15-90°.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen Außendurchmesser 110 mm, Gradzahl: 15-90°.;42,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+90;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen Außendurchmesser 125 mm, Gradzahl: 15-90°.;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+100;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen Außendurchmesser 160 mm, Gradzahl: 15-90°.;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+110;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig größter Außendurchmesser 75 mm,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+120;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig größter Außendurchmesser 90 mm,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+130;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig größter Außendurchmesser 110 mm,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+140;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig größter Außendurchmesser 125 mm,;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+150;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig größter Außendurchmesser 160 mm,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+160;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück, exzentrisch,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+170;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück, exzentrisch,;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+180;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück, exzentrisch,;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+190;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück, exzentrisch,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+200;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Muffenstopfen, Außendurchmesser 75 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+210;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Muffenstopfen, Außendurchmesser 110 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+220;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Muffenstopfen, Außendurchmesser 90 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+230;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Muffenstopfen, Außendurchmesser 160 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+240;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Doppelsteckmuffe, Außendurchmesser 75 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+250;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Doppelsteckmuffe, Außendurchmesser 90 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+260;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Doppelsteckmuffe, Außendurchmesser 110 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+270;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Doppelsteckmuffe, Außendurchmesser 125 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+280;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Doppelsteckmuffe, Außendurchmesser 160 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+290;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reinigungsrohr mit runder Serviceöffnung, Verschlussdeckel aus PP, Außendurchmesser 160 mm.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+300;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Zugfeste Rohrverbindungsvorrichtung,;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+310;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Zugfeste Rohrverbindungsvorrichtung,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+320;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Zugfeste Rohrverbindungsvorrichtung,;110,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+330;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Zugfeste Rohrverbindungsvorrichtung, Außendurchmesser 125 mm.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+340;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Zugfeste Rohrverbindungsvorrichtung,;65,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+350;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Dachablauf DN 50 auf PP-Leitung AD 75.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+360;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Dachablauf DN 50 auf PP-Leitung AD 110.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+370;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Dachablauf DN 70 auf PP-Leitung AD 125.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+380;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Dachablauf DN 100 auf PP-Leitung AD 125.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+390;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Grundleitung DN 150.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;wie zuvor beschrieben, jedoch:;26,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;wie zuvor beschrieben, jedoch:;42,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;wie zuvor beschrieben, jedoch:;180,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;wie zuvor beschrieben, jedoch:;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;wie zuvor beschrieben, jedoch:;68,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;wie zuvor beschrieben, jedoch:;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;wie zuvor beschrieben, jedoch:;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen Außendurchmesser 40 mm, Gradzahl: 15-90°.;26,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+90;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen Außendurchmesser 50 mm, Gradzahl: 15-90°.;80,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+100;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen Außendurchmesser 75 mm, Gradzahl: 15-90°.;152,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+110;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen Außendurchmesser 90 mm, Gradzahl: 15-90°.;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+120;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen Außendurchmesser 110 mm, Gradzahl: 15-90°.;58,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+130;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen Außendurchmesser 125 mm, Gradzahl: 15-90°.;32,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+140;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen Außendurchmesser 160 mm, Gradzahl: 15-90°.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+150;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig größter Außendurchmesser 50 mm,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+160;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig größter Außendurchmesser 75 mm,;38,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+170;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig größter Außendurchmesser 90 mm,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+180;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig größter Außendurchmesser 110 mm,;45,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+190;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig größter Außendurchmesser 125 mm,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+200;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig größter Außendurchmesser 160 mm,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+210;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück, exzentrisch,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+220;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück, exzentrisch,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+230;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück, exzentrisch,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+240;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück, exzentrisch,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+250;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück, exzentrisch,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+260;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück, exzentrisch,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+270;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Muffenstopfen, Außendurchmesser 75 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+280;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Muffenstopfen, Außendurchmesser 110 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+290;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Muffenstopfen, Außendurchmesser 160 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+300;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Doppelsteckmuffe, Außendurchmesser 50 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+310;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Doppelsteckmuffe, Außendurchmesser 75 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+320;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Doppelsteckmuffe, Außendurchmesser 90 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+330;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Doppelsteckmuffe, Außendurchmesser 110 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+340;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Doppelsteckmuffe, Außendurchmesser 125 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+350;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Doppelsteckmuffe, Außendurchmesser 160 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+360;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reinigungsrohr mit runder Serviceöffnung, Verschlussdeckel aus PP, Außendurchmesser 70 mm.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+370;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reinigungsrohr mit runder Serviceöffnung, Verschlussdeckel aus PP, Außendurchmesser 110 mm.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+380;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reinigungsrohr mit runder Serviceöffnung, Verschlussdeckel aus PP, Außendurchmesser 125 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+390;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reinigungsrohr mit runder Serviceöffnung, Verschlussdeckel aus PP, Außendurchmesser 160 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+400;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Zugfeste Rohrverbindungsvorrichtung,;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+410;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Zugfeste Rohrverbindungsvorrichtung,;90,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+420;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Zugfeste Rohrverbindungsvorrichtung,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+430;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Zugfeste Rohrverbindungsvorrichtung,;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+440;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Zugfeste Rohrverbindungsvorrichtung,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+450;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Zugfeste Rohrverbindungsvorrichtung,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+460;Rohr aus PE-HD, wie zuvor im vollen Wortlaut beschrieben jedoch DN 40.;16,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+470;Bogen aus PE-HD, wie zuvor im vollen Wortlaut beschrieben jedoch DN 40, Gradzahl: 15-90°.;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+480;PE-HD Reduktion, wie zuvor im vollen Wortlaut beschrieben jedoch DN 100/40 exzentrisch;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+490;Heizwendel-Schweißmuffe,aus PE-Rohr DN 40;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+500;Tropfwassertrichter, DN 40;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+510;Tropfwasser-Siphon, mit Geruchsperre, DN 32,;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+520;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bodenablauf DN 50 auf PP-Leitung AD 50.;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+530;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bodenablauf DN 50 auf PP-Leitung AD 75.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+540;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Dachdurchführung DN 70 auf PP-Leitung AD 75.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+550;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Dachdurchführung DN 100 auf PP-Leitung AD 110.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+560;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Dachdurchführung DN 125 auf PP-Leitung AD 125.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+570;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Grundleitung DN 100 auf PP-Leitung.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+580;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Grundleitung DN 150.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;23,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;32,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;22,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen, Außendurchmesser 75 mm, Gradzahl: 15-90°.;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen, Außendurchmesser 90 mm, Gradzahl: 15-90°.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen, Außendurchmesser 110 mm, Gradzahl: 15-90°.;42,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+90;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen, Außendurchmesser 125 mm, Gradzahl: 15-90°.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+100;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen, Außendurchmesser 160 mm, Gradzahl: 15-90°.;0,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+110;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig, Außendurchmesser 75 mm, Gradzahl: 15-90°.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+120;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig, Außendurchmesser 90 mm, Gradzahl: 15-90°.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+130;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig, Außendurchmesser 110 mm, Gradzahl: 15-90°.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+140;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig, Außendurchmesser 125 mm, Gradzahl: 15-90°.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+150;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig, Außendurchmesser 160 mm, Gradzahl: 15-90°.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+160;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück, Außendurchmesser 90 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+170;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück, Außendurchmesser 110 mm.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+180;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück, Außendurchmesser 125 mm.;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+190;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück, Außendurchmesser 160 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+200;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Enddeckel, Außendurchmesser 75 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+210;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Enddeckel, Außendurchmesser 90 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+220;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Enddeckel, Außendurchmesser 110 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+230;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Enddeckel, Außendurchmesser 160 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+240;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reinigungsstück, Außendurchmesser 160 mm.;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+250;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;22,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+260;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+270;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;32,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+280;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;21,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+290;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;98,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+300;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen Rohraußendurchmesser: 75 mm, alle Winkelgrade.;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+310;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen Rohraußendurchmesser: 90 mm, alle Winkelgrade.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+320;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen Rohraußendurchmesser: 110 mm, alle Winkelgrade.;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+330;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen Rohraußendurchmesser: 125 mm, alle Winkelgrade.;34,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+340;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen Rohraußendurchmesser: 160 mm, alle Winkelgrade.;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+350;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig Rohraußendurchmesser: 75 mm. alle Winkelgrade.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+360;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig Rohraußendurchmesser: 90 mm, alle Winkelgrade.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+370;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig Rohraußendurchmesser: 110 mm, alle Winkelgrade.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+380;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig Rohraußendurchmesser: 125 mm, alle Winkelgrade.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+390;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig Rohraußendurchmesser: 160 mm, alle Winkelgrade.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+400;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück Rohraußendurchmesser: 75 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+410;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück Rohraußendurchmesser: 90 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+420;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück Rohraußendurchmesser: 110 mm.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+430;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück Rohraußendurchmesser: 125 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+440;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück Rohraußendurchmesser: 160 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+450;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Enddeckel Rohraußendurchmesser: 75 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+460;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Enddeckel Rohraußendurchmesser: 90 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+470;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Enddeckel Rohraußendurchmesser: 110 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+480;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Enddeckel Rohraußendurchmesser: 125 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+490;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Enddeckel Rohraußendurchmesser: 160 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+500;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reinigungsstück Rohraußendurchmesser: 160 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+510;Brandmanschette für Rohrleitungen DN 160.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;1,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen, Außendurchmesser 75 mm, Gradzahl: 15-90°.;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen, Außendurchmesser 90 mm, Gradzahl: 15-90°.;21,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen, Außendurchmesser 110 mm, Gradzahl: 15-90°.;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Bogen, Außendurchmesser 125 mm, Gradzahl: 15-90°.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+90;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig, Außendurchmesser 75 mm, Gradzahl: 15-90°.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+100;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig, Außendurchmesser 90 mm, Gradzahl: 15-90°.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+110;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig, Außendurchmesser 110 mm, Gradzahl: 15-90°.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+120;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Abzweig, Außendurchmesser 125 mm, Gradzahl: 15-90°.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+130;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück, Außendurchmesser 110 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+140;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück, Außendurchmesser 125 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+150;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Rohraußendurchmesser: 40 - 75 mm.;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+160;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Rohraußendurchmesser: 90 - 125 mm.;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+170;Brandmanschette für Rohrleitungen DN 50.;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+180;Brandmanschette für Rohrleitungen DN 75.;44,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+190;Brandmanschette für Rohrleitungen DN110;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+200;Brandmanschette für Rohrleitungen DN 125.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+210;Brandmanschette für Rohrleitungen DN 160.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Anschluss herstellen an bestehende Hausanschlussleitung, Edelstahlrohr DN 40, inkl. aller Form- und Verbindungsstücke.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Ultraschall-Hauswasserzähler, konformitätsbewertet gemäß MessEV, Baulänge DIN EN ISO 4064-4, als elektronisches Zählwerk, für Trinkwasser/Kaltwasser bis 30 Grad C, für waagerechten Einbau, Zifferblatt oben, Messwerterfassung über M-Bus DIN EN 13757, Energieversorgung über Netzanschluss, Dauerdurchfl;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Wasserzähler Anschlussgarnitur für vor genannten Wasserzähler, DN 40, zur spannungsfreien Aufnahme des Zählers, bestehend aus Haltebügel aus Edelstahl bzw. verzinktem Stahl, Anschlussverschraubungen, Längenausgleich, Dichtungen. mit Bügel aus Edelstahl bzw. verzinktem Stahl, mit Erdungsschraube.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Freistrom-Kombi-Rückflussverhinderer, absperrbar, komplett aus Rotguss, beständig gegen aggressives Wasser, frei von Messing im mediumberührten Bereich, mit selbstfettender EPDM-Lippendichtung als wartungsfreie Spindelabdichtung, totraumfrei, mit EPDM-Sitzdichtung, mit Edelstahl-Schließfeder, Baulän;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Trinkwasser Hauswasserfilter, Gewebefilter, zur Installation in der Trinkwasserhauptleitung gemäß DIN EN 806-2 und DIN 1988, unmittelbar nach der Wasserzähleranlage.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Druckminderer, Nenndruck 1,6 MPa (16 bar), min. Vordruck 6 bar, Hinterdruck 1,5 bis 6 bar, entlastet, DIN EN 1567, für Trinkwasserleitung DIN 1988-200, max. Betriebstemperatur 30 Grad C, mit Anschlussgewinde, mit Schallschutzprüfzeichen DIN EN ISO 3822-1 Klasse I, Gehäuse aus Rotguss, G 1 1/2.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Manometer für oben genannten Druckminderer, mit waagerechtem oder senkrechtem Anschluss G 1/4, Druckanzeigebereich: 0 bis 10 bar,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;"Auslaufventil, 1/2"", Messing, verchromt, Rückflussverhinderer, Rohrbelüfter, Schlauchverschraubung.";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Leistung wie zuvor im vollen Wortlaut beschrieben,jedoch Freistrom-Absperrventil DN 15.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Leistung wie zuvor im vollen Wortlaut beschrieben,jedoch Freistrom-Absperrventil DN 20.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Leistung wie zuvor im vollen Wortlaut beschrieben,jedoch Freistrom-Absperrventil DN 25.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Leistung wie zuvor im vollen Wortlaut beschrieben,jedoch Freistrom-Absperrventil DN 32.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Leistung wie zuvor im vollen Wortlaut beschrieben,jedoch Freistrom-Absperrventil DN 40.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Entleerungsventil DN 8, für Freistrom-Absperrventil, aus Rotguss/Kunststoff, mit drehbarem seitlichen Schlauchanschluss G 3/4 und Abdeckkappe mit Befestigungsband, mediumberührte Metallteile aus entzinkungsfreiem und korrosionsbeständigem Rotguss, beständig gegen aggressives Wasser, EPDM-Sitzdichtun;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Leistung wie zuvor in vollem Wortlaut beschrieben,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;Leistung wie zuvor in vollem Wortlaut beschrieben,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+90;Leistung wie zuvor in vollem Wortlaut beschrieben,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+100;Leistung wie zuvor in vollem Wortlaut beschrieben,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+110;Leistung wie zuvor in vollem Wortlaut beschrieben,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+120;Probenahmeventil, DN 8,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+130;Temperaturfühler, zur Weiterleitung der Temperatur an die zentrale Gebäudeleittechnik (GLT), Arbeitsbereich 0 °C - 100 °C, 4 Leitertechnik, Toleranzklasse A, passend für alle Nennweiten.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+140;Tauchhülse zur Aufnahme eines Temperaturfühlers.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+150;Strömungsteiler, dynamisch, nach Venturi-Prinzip mit Kartusche, mit Nasszellenzuleitung und -rückleitung, zur Zwangsdurchströmung bei Ringleitungsinstallation, als Montageeinheit mit zwei Absperrventilen, mit Dämm-;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+160;Frostsichere Außenarmatur DN 20 mit automatischer Entleerfunktion, alle im geschlossenen Zustand mediumberührten Metallteile aus Rotguss, mit wartungsfreier Spindelabdichtung, mit EPDM-Sitzdichtung, inkl. Rohrbelüftern und Rückflussverhinderer gem. DIN 1988, Teil 4, Schlauchanschlussverschraubung, V;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Spülgruppe 230 V, für automatisch auslösende Wasserwechsel zur Sicherstellung des bestimmungsgemäßen Betriebs, ermöglicht turbulenten Wasserwechsel in Trinkwasserleitungen bis DN 100 (doppelt turbulent bis DN 65), Freistrom-Absperrventil als Wartungsabsperrung, Durchfluss- und Temperaturmessarmatur,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Leistung wie zuvor in vollem Wortlaut beschrieben,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Edelstahl-Systemrohr Cr-Ni-Mo-Stahl, Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch:;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Edelstahl-Systemrohr Cr-Ni-Mo-Stahl, Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch:;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Edelstahl-Systemrohr Cr-Ni-Mo-Stahl, Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch:;95,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Edelstahl-Systemrohr Cr-Ni-Mo-Stahl, Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch:;110,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Edelstahl-Systemrohr Cr-Ni-Mo-Stahl, Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch:;18,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Edelstahl-Systemrohr Cr-Ni-Mo-Stahl, Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch:;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Rohrbogen DN 12;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Rohrbogen DN 15;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+90;Leistung wie zuvor im vollen Wortlaut beschrieben,jedoch Rohrbogen DN 20;62,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+100;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Rohrbogen DN 25;80,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+110;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Rohrbogen DN 32;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+120;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Rohrbogen DN 40;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+130;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch T-Stück größte Nennweite DN 15;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+140;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch T-Stück größte Nennweite DN 20;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+150;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch T-Stück größte Nennweite DN 25;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+160;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch T-Stück größte Nennweite DN 32;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+170;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch T-Stück größte Nennweite DN 40;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+180;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück bis max. DN 15;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+190;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück bis max. DN 20;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+200;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück bis max. DN 25;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+210;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück bis max. DN 32;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+220;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück bis max. DN 40;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+230;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Muffe DN 12;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+240;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Muffe DN 15;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+250;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Muffe DN 20;32,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+260;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Muffe DN 25;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+270;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Muffe DN 32;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+280;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Muffe DN 40;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+290;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Übergangsstück auf Fremdrohrmaterialien bzw. Armaturen, je nach Erforderniss als Pressverbindung, Innen- oder Außengewinde, DN 15;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+300;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Übergangsstück auf Fremdrohrmaterialien bzw. Armaturen, je nach Erforderniss als Pressverbindung, Innen- oder Außengewinde, DN 20.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+310;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Übergangsstück auf Fremdrohrmaterialien bzw. Armaturen, je nach Erforderniss als Pressverbindung, Innen- oder Außengewinde, DN 25.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+320;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Übergangsstück auf Fremdrohrmaterialien bzw. Armaturen, je nach Erforderniss als Pressverbindung, Innen- oder Außengewinde, DN 32.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+330;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Übergangsstück auf Fremdrohrmaterialien bzw. Armaturen, je nach Erforderniss als Pressverbindung, Innen- oder Außengewinde, DN 40;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+340;Mehrschichtverbundrohr, Rollenware, Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch: Nennweite 16x2,2 mm;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+350;Mehrschichtverbundrohr,Rollenware, Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch: Nennweite 20x2,8 mm;32,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+360;Mehrschichtverbundrohr, Rollenware, Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch: Nennweite 25x2,7 mm;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+370;Mehrschichtverbundrohr, Rollenware, Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch: Nennweite 32x3,2 mm;21,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+380;Mehrschichtverbundrohr, Stangenware, Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch: Nennweite 16x2,2 mm;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+390;Mehrschichtverbundrohr, Stangenware, Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch: Nennweite 20x2,8 mm;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+400;Mehrschichtverbundrohr, Stangenware, Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch: Nennweite 25x2,7 mm;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+410;Mehrschichtverbundrohr, Stangenware, Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch: Nennweite 32x3,2 mm;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+420;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Rohrbogen 16 mm, Gradzahl: 15-90°.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+430;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Rohrbogen 20 mm, Gradzahl: 15-90°.;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+440;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Rohrbogen 25 mm, Gradzahl: 15-90°.;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+450;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Rohrbogen 32 mm, Gradzahl: 15-90°.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+460;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch T-Stück größte Nennweite 16 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+470;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch T-Stück größte Nennweite 20 mm.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+480;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch T-Stück größte Nennweite 25 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+490;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch T-Stück größte Nennweite 32 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+500;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch T-Stück größte Nennweite 16 mm und Rp-Gewinde 1/2.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+510;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch T-Stück größte Nennweite 20 mm und Rp-Gewinde 1/2.;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+520;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch T-Stück größte Nennweite 25 mm und Rp-Gewinde 3/4.;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+530;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück bis max. 16 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+540;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück bis max. 20 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+550;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück bis max. 25 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+560;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Reduzierstück bis max. 32 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+570;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Muffe bis max. 16 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+580;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Muffe bis max. 20 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+590;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Muffe bis max. 25 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+600;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Muffe bis max. 32 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Leistung wie zuvor in vollem Wortlaut beschrieben,;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Leistung wie zuvor in vollem Wortlaut beschrieben,;34,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Leistung wie zuvor in vollem Wortlaut beschrieben,;105,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Leistung wie zuvor in vollem Wortlaut beschrieben,;130,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Leistung wie zuvor in vollem Wortlaut beschrieben,;38,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Leistung wie zuvor in vollem Wortlaut beschrieben,;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Leistung wie zuvor in vollem Wortlaut beschrieben,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;Leistung wie zuvor in vollem Wortlaut beschrieben,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+90;Leistung wie zuvor in vollem Wortlaut beschrieben,;64,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+100;Leistung wie zuvor in vollem Wortlaut beschrieben,;84,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+110;Leistung wie zuvor in vollem Wortlaut beschrieben,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+120;Leistung wie zuvor in vollem Wortlaut beschrieben,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+130;Isolierschlauch an Rohrleitunge,;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+140;Isolierschlauch an Rohrleitunge,;32,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+150;Isolierschlauch an Rohrleitunge,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+160;Isolierschlauch an Rohrleitunge,;21,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+170;Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch: Brandschutzrohrabschottung R90 - DN 15;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+180;Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch: Brandschutzrohrabschottung R90 - DN 20;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+190;Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch: Brandschutzrohrabschottung R90 - DN 25;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+200;Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch: Brandschutzrohrabschottung R90 - DN 32;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+210;Leistung wie zuvor in vollem Wortlaut beschrieben, jedoch: Brandschutzrohrabschottung R90 - DN 40;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Installationselement, Einbau in Trockenbauwand mit vorh. Unterkonstruktion aus Metall, ohne Bekleidung,;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Wand-WC Tiefspüler, spülrandlos für UP- Spülkasten- Teilgeschlossenes Keramikdesign;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Oberflächenbeschichtung für zuvor in vollen Wortlautbeschriebenen Keramik WC,;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;WC-Sitz, passend zu vor genanntem WC, mit Absenkautomatik, Befestigung von oben, WC-Deckel überlappend;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Abdeckplatte für Einbauspülkasten, für Einmengenspülung, aus nichtrostendem Stahl, Werkstoff-Nr 1.4301, gebürstet, mit Betätigungselement, aus nichtrostendem Stahl, Werkstoff-Nr 1.4301, gebürstet, Auslösung manuell, mechanisch, für Betätigung von vorn.;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Installationselement, Einbau in Trockenbauwand mit vorh. Unterkonstruktion aus Metall, ohne Bekleidung,;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Urinal, für UP-Steuerung, Zulauf hinten, weiß;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;Urinalsteuerung, rund, elektronische Spülauslösung, Netzbetrieb, Stahl gebürstet.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+90;Wandauslaufventil DIN EN 200 DN 15, Armaturenkörper aus Metall, verchromt, Geräuschverhalten DIN 4109-1 Gruppe I, mit Prüfbericht, Durchflussklasse A (max. 0,25 l/s), mit festem Auslauf, mit Schlauchanschlussverschraubung, Rohrbelüfter und Rückflussverhinderer, ohne Luftansaugung DIN EN 246, Ausladu;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+100;Traverse im Wandhohlraum, aus OSB-Platte, für vor genannten Wandauslaufventil.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+110;Installationselement, Einbau in Trockenbauwand mit vorh. Unterkonstruktion aus Metall, Bekleidung wird gesondert vergütet,;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+120;Waschtisch, 60x48cm, mit Hahnloch, mit Überlauf, eckige Form, weiß.;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+130;Oberflächenbeschichtung für zuvor in vollen Wortlautbeschriebenen Keramik Waschtisch,;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+140;Elektronische Waschtisch-Armatur, Kaltwasser/Vorgemischtes Wasser, chrom, Infrarot-Sensor gesteuert. Netzbetrieb. Geeignet zur Vernetzung mit Wassermanagement-System.;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+150;Ablaufventil DIN EN 274-1, für Waschbecken DN 32, aus Messing, verchromt, als Siebventil, Gewindeanschluss aus Messing.;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+160;Geruchverschluss DIN 19541 mit Prüfzeichen, für Waschbecken, 1 1/4 x DN 32, aus Messing, verchromt, als Röhrengeruchverschluss, mit Anschlussbogen.;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+170;Eckventil, als Absperr- und Anschlussventil, DN 15, Geräuschverhalten DIN 4109-1 Gruppe I, mit Prüfbericht, mit Betätigungssicherung, mit Schmutzfänger, aus Messing, verchromt, mit wartungsfreier Spindelabdichtung, Edelstahlkegel und EPDM-Sitzdichtung, mit Rosette.;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+180;Wandauslaufventil DIN EN 200 DN 15, Armaturenkörper aus Metall, verchromt, Geräuschverhalten DIN 4109-1 Gruppe I, mit Prüfbericht, Durchflussklasse A (max. 0,25 l/s), mit festem Auslauf, mit Schlauchanschlussverschraubung, Rohrbelüfter und Rückflussverhinderer, ohne Luftansaugung DIN EN 246, Ausladu;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+190;Traverse im Wandhohlraum, aus OSB-Platte, für vor genannten Wandauslaufventil.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+200;Installationselement höhenverstellbares WC, sensorgesteuerte WC-Spülung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+210;WC-Modul, sensorgesteuerte, weiß mit flächiger Frontansicht;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+220;Aufnahme für Montageplatte Stützklappgriffen;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+230;Montageplatte Stützklappgriff Links/Rechts;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+240;Funkempfänger für oben genanntes WC Modul, zur Anbindung WC-Spülauslösung (Funk);1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+250;Wand-WC barrierefrei, Tiefspüler, spülrandlos, verlängerte Ausladung 70 cm, weiß;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+260;Oberflächenbeschichtung für zuvor in vollen Wortlautbeschriebenen Keramik WC,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+270;WC-Sitz barrierefrei, antibakteriell, Befestigung von oben, weiß;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+280;Installationselement, Einbau in Trockenbauwand mit vorh. Unterkonstruktion aus Metall, ohne Bekleidung,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+290;Waschtisch barrierefrei, 65x55cm, mit Hahnloch, mit Überlauf, weiß.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+300;Oberflächenbeschichtung für zuvor in vollen Wortlautbeschriebenen Keramik Waschtisch,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+310;Elektronische Waschtischarmatur. Mischwasser, chrom, Infrarot-Sensor gesteuert. Netzbetrieb, Geeignet zur;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+320;Ablaufventil DIN EN 274-1, für Waschbecken DN 32, aus Messing, verchromt, als Siebventil, Gewindeanschluss aus Messing.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+330;Wandanschlußrohr;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+340;Eckventil, als Absperr- und Anschlussventil, DN 15, Geräuschverhalten DIN 4109-1 Gruppe I, mit Prüfbericht, mit Betätigungssicherung, mit Schmutzfänger, aus Messing, verchromt, mit wartungsfreier Spindelabdichtung, Edelstahlkegel und EPDM-Sitzdichtung, mit Rosette.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+350;Elektro-Durchflusswassererwärmer, hängende Anordnung, mit VDE-EMC-Zeichen, für Unterbeckenmontage, Bemessungsbetriebsspannung 400 V AC, Leistung 13,5 kW, elektronisch geregelt, Anschluss G 3/8, für festen Anschluss, für Montage an Wand, Anschluss Unterputz.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+360;Traverse im Wandhohlraum, aus OSB-Platte, für vor genannten Druchlauferhitzer, Wandauslaufventil.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+370;Wandauslaufventil DIN EN 200 DN 15, Armaturenkörper aus Metall, verchromt, Geräuschverhalten DIN 4109-1 Gruppe I, mit Prüfbericht, Durchflussklasse A (max. 0,25 l/s), mit festem Auslauf, mit Schlauchanschlussverschraubung, Rohrbelüfter und Rückflussverhinderer, ohne Luftansaugung DIN EN 246, Ausladu;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+380;Installationselement, Einbau in Trockenbauwand mit vorh. Unterkonstruktion aus Metall, Bekleidung wird gesondert vergütet,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+390;Waschtisch, 45x34cm, mit Hahnloch, mit Überlauf, eckige Form, weiß;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+400;Oberflächenbeschichtung für zuvor in vollen Wortlautbeschriebenen Keramik Waschtisch,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+410;Elektronische Waschtischarmatur. Mischwasser, chrom, Infrarot-Sensor gesteuert. Netzbetrieb, Geeignet zur;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+420;Ablaufventil DIN EN 274-1, für Waschbecken DN 32, aus Messing, verchromt, als Siebventil, Gewindeanschluss aus Messing.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+430;Geruchverschluss DIN 19541 mit Prüfzeichen, für Waschbecken, 1 1/4 x DN 32, aus Messing, verchromt, als Röhrengeruchverschluss, mit Anschlussbogen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+440;Eckventil, als Absperr- und Anschlussventil, DN 15, Geräuschverhalten DIN 4109-1 Gruppe I, mit Prüfbericht, mit Betätigungssicherung, mit Schmutzfänger, aus Messing, verchromt, mit wartungsfreier Spindelabdichtung, Edelstahlkegel und EPDM-Sitzdichtung, mit Rosette.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+450;Elektro-Durchflusswassererwärmer, hängende Anordnung, mit VDE-EMC-Zeichen, für Unterbeckenmontage, Bemessungsbetriebsspannung 400 V AC, Leistung 13,5 kW, elektronisch geregelt, Anschluss G 3/8, für festen Anschluss, für Montage an Wand, Anschluss Unterputz.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+460;Traverse im Wandhohlraum, aus OSB-Platte, für vor genannten Druchlauferhitzer.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+470;Geräteanschlußventil, mit Rückflußverhinderer DIN 3269;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+480;Elektro-Durchflusswassererwärmer, hängende Anordnung, mit VDE-EMC-Zeichen, für Unterbeckenmontage, Bemessungsbetriebsspannung 400 V AC, Leistung 13,5 kW, elektronisch geregelt, Anschluss G 3/8, für festen Anschluss, für Montage an Wand, Anschluss Unterputz.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+490;Traverse im Wandhohlraum, aus OSB-Platte, für vor genannten Durchlauferhitzer.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+500;Installationselement, Einbau in Trockenbauwand mit vorh. Unterkonstruktion aus Metall, ohne Bekleidung,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+510;Elektro-Durchflusswassererwärmer, offen, hängende Anordnung, für Einbau in Feuchtraum, mit VDE-EMC-Zeichen, für Überbeckenmontage, mit systemgebundener Armatur, Bemessungsbetriebsspannung 400 V AC, Leistung 13,5 kW, elektronisch gesteuert, Temperatureinstellung von 35 bis 60 Grad C, Anschluss G 3/8,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+520;Ausgussbecken, aus Stahl, emailliert, wandhängend, mit Rückwand, mit Klapprost aus verzinktem Stahl, Befestigung an Installationselement, mit Ab- und Überlaufgarnitur, Kette und Stopfen. Breite über 500 bis 550 mm, Ausladung über 300 bis 350 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+530;Geruchverschluss DIN 19541 mit Prüfzeichen, für Ausgussbecken, 1 1/4 x DN 32, aus Kunststoff, heißwasserbeständig, als Röhrengeruchverschluss, mit Anschlussbogen.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+540;Traverse im Wandhohlraum, aus OSB-Platte, für Durchlauferhitzer.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+550;Liefern und fachgerechtes Herstellen einer freistehenden bzw. an bestehende Bauteile anschließenden Trockenbau-/System-Installationswand zur Montage eines Ausgussbeckens, einschließlich Tragkonstruktion, Beplankung und erforderlichem Montagegestell.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;WC-Papierhalter;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Reservepapierhalter für 3 WC-Rollen;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;WC-Bürstengarnitur, freistehend;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Einzelhaken, d:50mm;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Hygienekombination, Behälter m. Beutelspender;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Einzelhaken, d:50mm;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Tropffreier Seifenspender, 500 ml,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;Papierhandtuchspender, 300 Papiertücher, abschließbar;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+90;Tropffreier Desinfektionsmittelspender, 500 ml, berührungslose Ausgabe von Desinfektonsgel, Schnellbefüllung durch Click-in-Bottle, Optische Füllstandsanzeige, batteriebetrieben;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+100;Wandablage, 60x14cm, weiß, Aufkantung umlaufend;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+110;Oberflächenbeschichtung für zuvor in vollen Wortlaut beschriebene Keramik WaWandablage,;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+120;Händetrockner, elektrisch, weiß,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+130;Abfallkorb aus Metall Gitter, weiß lackiert;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+140;Rechteckiger Spiegel mit geschliffenen Kanten,;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+150;Rechteckiger Spiegel mit geschliffenen Kanten,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+160;Stützklappgriff, L:850mm, Stahlkern;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+170;Aufrüstsatz WC-Spülauslösung, Funk,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+180;Aufrüstsatz WC-Papierhalter, weiche Lippe;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+190;Rückenstütze;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+200;WC-Bürstengarnitur, freistehend;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+210;Einzelhaken, d:50mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+220;Hygienekombination, Behälter m. Beutelspender;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+230;Tropffreier Seifenspender, 500 ml,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+240;Papierhandtuchspender, 300 Papiertücher, abschließbar;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+250;Tropffreier Desinfektionsmittelspender, 500 ml, berührungslose Ausgabe von Desinfektonsgel, Schnellbefüllung durch Click-in-Bottle, Optische Füllstandsanzeige, batteriebetrieben;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+260;Abfallkorb aus Metall Gitter, weiß lackiert;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+270;Rechteckiger Spiegel mit geschliffenen Kanten,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+280;Einzelhaken, d:50mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+290;Tropffreier Seifenspender, 500 ml,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+300;Papierhandtuchspender, 300 Papiertücher, abschließbar;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+310;Tropffreier Desinfektionsmittelspender, 500 ml, berührungslose Ausgabe von Desinfektonsgel, Schnellbefüllung durch Click-in-Bottle, Optische Füllstandsanzeige, batteriebetrieben;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+320;Abfallkorb aus Metall Gitter, weiß lackiert;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+330;Rechteckiger Spiegel mit geschliffenen Kanten,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+340;Einzelhaken, d:50mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Tragbarer Feuerlöscher DIN EN 3, als Aufladelöscher, mit innenliegender Treibgasflasche, Löschmittel Wasser mit Schaumbildner, Leistungsklasse A und B, 12 LE, Füllmenge 9 l, mit Wandhalter und Beschilderung.;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Tragbarer Feuerlöscher DIN EN 3, als Gaslöscher, Löschmittel CO2, Leistungsklasse B, 2 LE, Füllmenge 2 kg, mit Wandhalter und Beschilderung.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Abschnittsweises Abdrücken des Rohrnetzes;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Inbetriebnahme und Einregulierung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Prüfen der elektrischen Verkabelung der Steuer- und Regelanlage vor Inbetriebnahme, einschl. Erstellung eines Protokolls mit Aufführung der festgestellten Mängel.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Abnahmeprüfung der Schmutz- und Regenwasserinstallation nach Fertigstellung der Anlage.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Abnahmeprüfung der Wasserinstallation nach Fertigstellung der Anlage.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Hygieneinstallation nach Fertigstellung und Inbetriebnahme der neu errichteten Trinkwasserinstallation gemäß VDI/DVGW-Richtlinie 6023 in der jeweils gültigen Fassung durchzuführen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Unterweisung der Nutzer der Trinkwasseranlage gemäß den Anforderungen der VDI/DVGW-Richtlinie 6023, Kategorie C, in der jeweils gültigen Fassung.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;Reinigen aller neu installierten Zentralgeräte, Einrichtungen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;65,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;76,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;26,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+90;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+100;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+110;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch:;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+120;Fachgerechte Demontage einer bestehenden Trinkwasser-Hausanschlussstrecke in der Technikzentrale einschließlich aller zugehörigen Armaturen und Einbauteile.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+130;Demontage von Luftkanälen (RLT-Anlagen) aus Stahlblech,;15,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Kompakt-Wärmeübergabestation, als Plattenwärmeübertrager, aus Edelstahl, Verbindungen aus Stahl, geschweißte Ausführung nach EN 287, für freistehende Montage, Stabiler Rahmen aus geschlossenem Vierkantprofil, mit Flanschanschluss einschl. Gegenflansch, Schrauben und Dichtungen, mit Armaturen und Reg;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Sprührohr-Vakuumentgaserzur Systementgasung in geschlossenen Heizwasser- und Kühlkreisläufen, als vollautomatische Multifunktionseinheit mit Auto-Stopp-Betrieb und selbsttätigem hydraulischen Abgleich des Entgasungsprozesses und Überwachung der Nachspeiseanforderung,  Entgasung mittels einer Membran;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Membran-Druckausdehnungsgefäß mit Abnahmebescheinigung, DIN EN 13831, für Heizungswasser, aus Stahl, außen fertiglackiert, mit Gewindeanschlüssen, mit Membrane nicht auswechselbar, Anordnung stehend, mit Beschriftungschild für den IST-Wert;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Membran-Druckausdehnungsgefäß mit Abnahmebescheinigung, DIN EN 13831, für Heizungswasser, aus Stahl, außen fertiglackiert, mit Gewindeanschlüssen, mit Membrane nicht auswechselbar, Anordnung stehend, mit Beschriftungschild für den IST-Wert;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Membransicherheitsventil, bauteilgeprüft, federbelastet, für geschlossene Wasserheizungsanlagen DIN EN 12828, für Wasser, max. Betriebstemperatur bis 90 °C,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Absperrventil, für Wasser bis 120 °C, mit Gewindeanschluss, Gehäuse aus Rotguss, in Geradsitz-Durchgangsform, mit Handrad und plombierbarer Kappe, mit wartungsfreier Spindelabdichtung, Sitz weich dichtend, Nenndruck 0,6 MPa (6 bar), DN 15, einschließlich Übergang auf das ausgeschriebene Rohrmaterial;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Nachspeisearmatur für geschlossene Anlagensysteme DIN EN 12828 mit Prüfzeichen, mit Rohrtrenner mit unterschiedlichen, nicht kontrollierbaren Druckzonen, zur Einspeisung in Anlagen mit Membranausdehnungsgefäß, mit Wasserverbrauchserfassung, einschließlich Übergang auf das ausgeschriebene Rohrmateria;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Enthärtungsarmatur nach dem Ionenaustauschverfahren für kaltes Wasser, Enthärtung durch Kationentauscherharz, einschließlich Übergang auf das ausgeschriebene Rohrmaterial;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;Enthärtungspatrone nach dem Ionenaustauschverfahren für kaltes Wasser, Enthärtung durch Kationentauscherharz;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Verteiler, thermisch getrennt mittels Luftschicht, mit Prüfzeugnis, für Heizungswasser, aus Stahl Vierkantrohr, mit;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Technische Daten:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Technische Daten:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Technische Daten:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Technische Daten:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Technische Daten:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;wie zuvor im vollen Wortlaut beschrieben jedoch DN15;62,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;wie zuvor im vollen Wortlaub beschrieben jedoch DN20;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;wie zuvor im vollen Wortlaub beschrieben jedoch DN25;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+90;wie zuvor im vollen Wortlaub beschrieben jedoch DN32;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+100;wie zuvor im vollen Wortlaub beschrieben jedoch DN40;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+110;wie zuvor im vollen Wortlaub beschrieben jedoch DN50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+120;wie zuvor im vollen Wortlaut beschrieben jedoch DN25;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+130;wie zuvor im vollen Wortlaut beschrieben jedoch DN32;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+140;wie zuvor im vollen Wortlaut beschrieben jedoch DN40;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+150;wie zuvor im vollen Wortlaut beschrieben jedoch DN15;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+160;wie zuvor im vollen Wortlaut beschrieben jedoch DN20;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+170;wie zuvor im vollen Wortlaut beschrieben jedoch DN25;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+180;wie zuvor im vollen Wortlaut beschrieben jedoch DN25;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+190;wie zuvor im vollen Wortlaut beschrieben jedoch DN32;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+200;wie zuvor im vollen Wortlaut beschrieben jedoch DN40;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+210;Schlammabscheider inkl. Magnet zur kontinuierlichen Entfernung von magnetischen und nicht magnetischen Schmutz- und Schlammpartikeln aus Heiz- und Kühlkreisläufen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+220;wie zuvor im vollen Wortlaut beschrieben jedoch DN20;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+230;wie zuvor im vollen Wortlaut beschrieben jedoch DN25;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+240;wie zuvor im vollen Wortlaut beschrieben jedoch DN32;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+250;Luftabscheider wie zuvor im vollen Wortlaut beschrieben jedoch DN40, Rohranschlüsse DN25, Entlüftungsanschluss DN15;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+260;Luftabscheider wie zuvor im vollen Wortlaut beschrieben jedoch DN50, Rohranschlüsse DN32, Entlüftungsanschluss DN15;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+270;Luftabscheider wie zuvor im vollen Wortlaut beschrieben jedoch DN65, Rohranschlüsse DN40, Entlüftungsanschluss DN15;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+280;Füll- und Entleerungsarmatur, als Kugelhahn, für Wasser bis 120 °C, mit Steckschlüsselaufsatz und losem;42,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+290;Zeigerthermometer DIN EN 13190, Messsystem Gasdruck, Austritt des Messelementes nach hinten, glattes Messelement, Einbaulänge 50 mm, Tauchhülse wird gesondert vergütet, Gehäuse aus nichtrostendem Stahl, Gehäusenenndurchmesser 63 mm, Anzeigebereich 0 bis 60 °C, Genauigkeitsklasse 1, Position beinhalt;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+300;Maschinen-Glasthermometer, Einbaulänge 50 mm, Tauchhülse wird gesondert vergütet, mit V-förmigen Gehäuse DIN 16189, Form B, Anzeigebereich 0 bis 60 °C, einschl. Schutzrohr, Genauigkeitsklasse 1, Position beinhaltet liefern und montieren;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+310;Druckmessgerät, Messsystem Plattenfeder DIN EN 837-3, ohne Zusatzeinrichtungen, Nenndruck 0,6 MPa (6 bar), Gehäuse aus nichtrostendem Stahl, ohne Rand, Gehäusenenngröße 50, Güteklasse 1,6, Anzeigebereich 0 bis 6 bar, mediumberührte Teile aus Stahl, inkl. Anschlussblock mit bis zu 2 Manometerhähnen (;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+320;Wassersackrohr DIN 16282, U-Form, Nenndruck 0,6 MPa (6 bar), aus Stahl, zum Schutz von Manometern, Position beinhaltet liefern und montieren;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;wie zuvor im vollen Wortlaut beschrieben jedoch DN15;568,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;wie zuvor im vollen Wortlaut beschrieben jedoch DN20;39,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;wie zuvor im vollen Wortlaut beschrieben jedoch DN25;71,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;wie zuvor im vollen Wortlaut beschrieben jedoch DN32;129,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;wie zuvor im vollen Wortlaut beschrieben jedoch DN40;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;wie zuvor im vollen Wortlaut beschrieben jedoch DN50;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;wie zuvor im vollen Wortlaut beschrieben jedoch DN15;319,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;wie zuvor im vollen Wortlaut beschrieben jedoch DN20;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+90;wie zuvor im vollen Wortlaut beschrieben jedoch DN25;33,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+100;wie zuvor im vollen Wortlaut beschrieben jedoch DN32;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+110;wie zuvor im vollen Wortlaut beschrieben jedoch DN40;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+120;wie zuvor im vollen Wortlaut beschrieben jedoch DN50;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+130;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN15;122,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+140;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN20;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+150;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN25;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+160;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN32;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+170;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN40;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+180;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN20;78,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+190;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN25;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+200;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN32;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+210;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN40;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+220;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+230;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN65;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+240;wie zuvor im vollen Wortlaut beschrieben jedoch DN15;38,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+250;wie zuvor im vollen Wortlaut beschrieben jedoch DN20;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+260;Heizkörperanschluss-T-Stück aus Rotguss, passend zu v.g. Rohrmaterial, Pressanschlüsse, für Heizungswasser, DN15, Ausführung gemäß Zeichnung, Position beinhaltet liefern und montieren;36,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+270;"Übergangswinkel wie zuvor im vollen Wortlaut beschrieben jedoch Pressverbindung DN20 / Verschraubung R3/4""";74,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+280;Rohrleitung wie zuvor im vollen Wortlaut beschrieben jedoch DN15;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+290;Rohrleitung wie zuvor im vollen Wortlaut beschrieben jedoch DN20;1,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+300;Rohrleitung wie zuvor im vollen Wortlaut beschrieben jedoch DN25;1,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+310;Rohrleitung wie zuvor im vollen Wortlaut beschrieben jedoch DN32;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+320;Rohrleitung wie zuvor im vollen Wortlaut beschrieben jedoch DN40;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+330;Rohrleitung wie zuvor im vollen Wortlaut beschrieben jedoch DN50;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+340;Rohrleitung wie zuvor im vollen Wortlaut beschrieben jedoch DN65;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+350;Rohrbogen wie zuvor im vollen Wortlaut beschrieben jedoch DN15;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+360;Rohrbogen wie zuvor im vollen Wortlaut beschrieben jedoch DN20;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+370;Rohrbogen wie zuvor im vollen Wortlaut beschrieben jedoch DN25;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+380;Rohrbogen wie zuvor im vollen Wortlaut beschrieben jedoch DN32;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+390;Rohrbogen wie zuvor im vollen Wortlaut beschrieben jedoch DN40;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+400;Rohrbogen wie zuvor im vollen Wortlaut beschrieben jedoch DN50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+410;Rohrbogen wie zuvor im vollen Wortlaut beschrieben jedoch DN65;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+420;T-Stück wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN25;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+430;T-Stück wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN32;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+440;T-Stück wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN40;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+450;T-Stück wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN50;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+460;T-Stück wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN65;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+470;Reduzierung wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN32;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+480;Reduzierung wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN40;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+490;Reduzierung wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+500;Reduzierung wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN65;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+510;Blindflansch wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN32;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+520;"Einschweißmuffe bis 1/2""";60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+530;Tauchhülse, Einbaulänge nach Erfordernis, mit Klemmringverschraubung, aus Messing, zum Einschrauben;60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+540;Mischventile, vom Gewerk MSR beigestellt, einbauen, Einbaulänge bis 200 mm, mit Flanschanschluss,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+550;Passtück für Wärmemengenzähler wie zuvor im vollen Wortlaut beschrieben jedoch DN32;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+560;Anschluss herstellen, Vor- und Rücklauf, Form- und Verbindungsstücke werden gesondert vergütet, an Heizregister RLT-Gerät, Medium Wasser, einschl. vorbereitende Maßnahmen an der Anschlussstelle, mit Stahlrohr nichtrostend, Anschlussdimension Gerät bis DN25;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Wärmedämmung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN15;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Wärmedämmung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN20;45,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Wärmedämmung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN25;70,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Wärmedämmung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN32;135,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Wärmedämmung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN40;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Wärmedämmung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN50;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Wärmedämmung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN65;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;wie zuvor im vollen Wortlaut beschrieben jedoch DN15;230,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+90;wie zuvor im vollen Wortlaut beschrieben jedoch DN20;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+100;wie zuvor im vollen Wortlaut beschrieben jedoch DN25;60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+110;wie zuvor im vollen Wortlaut beschrieben jedoch DN32;45,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+120;wie zuvor im vollen Wortlaut beschrieben jedoch DN40;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+130;wie zuvor im vollen Wortlaut beschrieben jedoch DN50;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+140;wie zuvor im vollen Wortlaut beschrieben jedoch DN65;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+150;Wärmedämmkappe wie zuvor im vollen Wortlaut beschrieben jedoch DN15;90,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+160;Wärmedämmkappe wie zuvor im vollen Wortlaut beschrieben jedoch DN20;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+170;Wärmedämmkappe wie zuvor im vollen Wortlaut beschrieben jedoch DN25;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+180;Wärmedämmkappe wie zuvor im vollen Wortlaut beschrieben jedoch DN32;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+190;Wärmedämmkappe wie zuvor im vollen Wortlaut beschrieben jedoch DN40;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+200;Wärmedämmkappe wie zuvor im vollen Wortlaut beschrieben jedoch DN50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+210;Brandschutzabschottung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN15;34,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+220;Brandschutzabschottung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN20;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+230;Brandschutzabschottung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN25;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+240;Brandschutzabschottung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN32;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+250;Brandschutzabschottung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN40;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+260;Brandschutzabschottung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;wie zuvor im vollen Wortlaut beschrieben jedoch:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;wie zuvor im vollen Wortlaut beschrieben jedoch:;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;wie zuvor im vollen Wortlaut beschrieben jedoch:;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;wie zuvor im vollen Wortlaut beschrieben jedoch:;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;wie zuvor im vollen Wortlaut beschrieben jedoch:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;wie zuvor im vollen Wortlaut beschrieben jedoch:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;wie zuvor im vollen Wortlaut beschrieben jedoch:;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;wie zuvor im vollen Wortlaut beschrieben jedoch:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+90;wie zuvor im vollen Wortlaut beschrieben jedoch:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+100;Heizkörper Universalverschraubung, Doppelanschluss Eckausführung, matt vernickelt, absperrbar, mit Klemmringanschluss, mit Voreinstellung;37,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+110;Heizkörper Universalverschraubung, Doppelanschluss Eckausführung, matt vernickelt, absperrbar, mit Klemmringanschluss, mit Voreinstellung;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+120;Entfernen von Schutzfolie, Reinigen von Heizflächen als Plattenheizkörper/Heizwände, einschl. der Regulierventile und Befestigungen, Sichtkontrolle;42,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+130;Demontage, Zwischenlagerung und anschließende Wiedermontage vorhandener Heizflächen im Zuge von Maler- und Beschichtungsarbeiten. Die Leistung umfasst das fachgerechte Absperren der Heizungsanlage bzw. der betroffenen Heizkreise sowie das kontrollierte Entleeren der Heizflächen einschließlich ordnun;42,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Mobile Wasseraufbereitungsanlage zur Anlagenbefüllung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Druckprüfung, Spülung und Entlüftung der Heizungsanlage;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Inbetriebnahme und Einregulierung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Prüfen der elektrischen Verkabelung der Steuer- und Regelanlage vor Inbetriebnahme, einschl. Erstellung eines Protokolls mit Aufführung der festgestellten Mängel.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Dokumentation des Hydraulischen Abgleiches auf Datenträger, in einfacher Ausfertigung, Unterlagen auf Datenträger mit strukturierter Ablage in den separat ausgeschriebenen Dokumentationsunterlagen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Durchführung der Funktionsprüfung der Gesamtanlage im Rahmen eines Probebetriebes.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Reinigen aller neu installierten Zentralgeräte, Einrichtungen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;wie zuvor im vollen Wortlaut beschrieben jedoch Stahlrohr bis DN40;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;wie zuvor im vollen Wortlaut beschrieben jedoch Stahlrohr DN50 bis DN65;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;wie zuvor im vollen Wortlaut beschrieben jedoch Armaturen bis DN40;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Abbruch von Lufttöpfen im Gebäude, im Rahmen der Demontage der Rohrleitungen, Durchmesser bis 250 mm, Höhe bis 400 mm, nicht schadstoffbelastet, Abfall ist nicht gefährlich. Ausbau von Hand/mit handgeführten Kleingeräten einschließlich Trennen der angeschlossenen Leitungen. Aufgenommene Stoffe samme;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Fachgerechtes Abtrennen einer in Betrieb befindlichen Stahlrohrleitung im Gebäude sowie Vorbereitung eines späteren Wiederanschlusses.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Kompakt-Kälteübergabestation, als Plattenwärmeübertrager, aus Edelstahl, Verbindungen aus Stahl, geschweißte Ausführung nach EN 287, für freistehende Montage, Stabiler Rahmen aus geschlossenem Vierkantprofil, mit Flanschanschluss einschl. Gegenflansch, Schrauben und Dichtungen, mit Armaturen und Reg;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Sprührohr-Vakuumentgaserzur Systementgasung in geschlossenen Heizwasser- und Kühlkreisläufen, als vollautomatische Multifunktionseinheit mit Auto-Stopp-Betrieb und selbsttätigem hydraulischen Abgleich des Entgasungsprozesses und Überwachung der Nachspeiseanforderung,  Entgasung mittels einer Membran;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Membran-Druckausdehnungsgefäß mit Abnahmebescheinigung, DIN EN 13831, für Klimakaltwasser, aus Stahl, außen fertiglackiert, mit Gewindeanschlüssen, mit Membrane nicht auswechselbar, Anordnung stehend, mit Beschriftungschild für den IST-Wert;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Membran-Druckausdehnungsgefäß mit Abnahmebescheinigung, DIN EN 13831, für Klimakaltwasser, aus Stahl, außen fertiglackiert, mit Gewindeanschlüssen, mit Membrane nicht auswechselbar, Anordnung stehend, mit Beschriftungschild für den IST-Wert;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Membransicherheitsventil, bauteilgeprüft, federbelastet, für geschlossene Wasserkühlanlagen DIN EN 12828, für Wasser, max. Betriebstemperatur bis 90 °C,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Absperrventil, für Wasser bis 120 °C, mit Gewindeanschluss, Gehäuse aus Rotguss, in Geradsitz-Durchgangsform, mit Handrad und plombierbarer Kappe, mit wartungsfreier Spindelabdichtung, Sitz weich dichtend, Nenndruck 0,6 MPa (6 bar), DN 15, einschließlich Übergang auf das ausgeschriebene Rohrmaterial;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Nachspeisearmatur für geschlossene Anlagensysteme DIN EN 12828 mit Prüfzeichen, mit Rohrtrenner mit unterschiedlichen, nicht kontrollierbaren Druckzonen, zur Einspeisung in Anlagen mit Membranausdehnungsgefäß, mit Wasserverbrauchserfassung, einschließlich Übergang auf das ausgeschriebene Rohrmateria;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Enthärtungsarmatur nach dem Ionenaustauschverfahren für kaltes Wasser, Enthärtung durch Kationentauscherharz, einschließlich Übergang auf das ausgeschriebene Rohrmaterial;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;Enthärtungspatrone nach dem Ionenaustauschverfahren für kaltes Wasser, Enthärtung durch Kationentauscherharz;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Verteiler, thermisch getrennt mittels Luftschicht, mit Prüfzeugnis, für Klimakaltwasser, aus Stahl Vierkantrohr, mit;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Technische Daten:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Technische Daten:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;wie zuvor im vollen Wortlaut beschrieben jedoch DN15;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;wie zuvor im vollen Wortlaub beschrieben jedoch DN20;23,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;wie zuvor im vollen Wortlaub beschrieben jedoch DN25;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;wie zuvor im vollen Wortlaub beschrieben jedoch DN32;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;wie zuvor im vollen Wortlaub beschrieben jedoch DN40;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;wie zuvor im vollen Wortlaut beschrieben jedoch DN50;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+90;wie zuvor im vollen Wortlaut beschrieben jedoch DN65;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+100;wie zuvor im vollen Wortlaut beschrieben jedoch DN32;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+110;wie zuvor im vollen Wortlaut beschrieben jedoch DN40;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+120;wie zuvor im vollen Wortlaut beschrieben jedoch DN50;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+130;wie zuvor im vollen Wortlaut beschrieben jedoch DN65;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+140;Regulierventil wie zuvor im vollen Wortlaut beschrieben jedoch DN15;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+150;Regulierventil wie zuvor im vollen Wortlaut beschrieben jedoch DN20;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+160;Regulierventil wie zuvor im vollen Wortlaut beschrieben jedoch DN20;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+170;Regulierventil wie zuvor im vollen Wortlaut beschrieben jedoch DN25;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+180;Regulierventil wie zuvor im vollen Wortlaut beschrieben jedoch DN25;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+190;Regulierventil wie zuvor im vollen Wortlaut beschrieben jedoch DN32;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+200;wie zuvor im vollen Wortlaut beschrieben jedoch DN32;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+210;wie zuvor im vollen Wortlaut beschrieben jedoch DN40;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+220;wie zuvor im vollen Wortlaut beschrieben jedoch DN50;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+230;wie zuvor im vollen Wortlaut beschrieben jedoch DN65;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+240;Schlammabscheider inkl. Magnet zur kontinuierlichen Entfernung von magnetischen und nicht magnetischen Schmutz- und Schlammpartikeln aus Heiz- und Kühlkreisläufen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+250;Rückschlagklappe wie zuvor im vollen Wortlaut beschrieben jedoch DN32;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+260;Rückschlagklappe wie zuvor im vollen Wortlaut beschrieben jedoch DN40;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+270;Rückschlagklappe wie zuvor im vollen Wortlaut beschrieben jedoch DN50;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+280;Rückschlagklappe wie zuvor im vollen Wortlaut beschrieben jedoch DN56;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+290;Luftabscheider wie zuvor im vollen Wortlaut beschrieben jedoch DN65, Rohranschlüsse DN40, Entlüftungsanschluss DN15;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+300;Luftabscheider wie zuvor im vollen Wortlaut beschrieben jedoch DN80, Rohranschlüsse DN50, Entlüftungsanschluss DN15;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+310;Luftabscheider wie zuvor im vollen Wortlaut beschrieben jedoch DN100, Rohranschlüsse DN65, Entlüftungsanschluss DN15;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+320;Füll- und Entleerungsarmatur, als Kugelhahn, für Wasser bis 120 °C, mit Steckschlüsselaufsatz und losem Vierkantschlüssel, mit Verschlusskappe und Kette, Gehäuse aus Messing, metallisch dichtend, mit Gewindeanschluss, einschl. aller Verbindungsmittel liefern und montieren;42,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+330;Zeigerthermometer DIN EN 13190, Messsystem Gasdruck, Austritt des Messelementes nach hinten, glattes Messelement, Einbaulänge 50 mm, Tauchhülse wird gesondert vergütet, Gehäuse aus nichtrostendem Stahl, Gehäusenenndurchmesser 63 mm, Anzeigebereich 0 bis 60 °C, Genauigkeitsklasse 1, Position beinhalt;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+340;Maschinen-Glasthermometer, Einbaulänge 50 mm, Tauchhülse wird gesondert vergütet, mit V-förmigen Gehäuse DIN 16189, Form B, Anzeigebereich 0 bis 60 °C, einschl. Schutzrohr, Genauigkeitsklasse 1, Position beinhaltet liefern und montieren;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+350;Druckmessgerät, Messsystem Plattenfeder DIN EN 837-3, ohne Zusatzeinrichtungen, Nenndruck 0,6 MPa (6 bar), Gehäuse aus nichtrostendem Stahl, ohne Rand, Gehäusenenngröße 50, Güteklasse 1,6, Anzeigebereich 0 bis 6 bar, mediumberührte Teile aus Stahl, inkl. Anschlussblock mit bis zu 2 Manometerhähnen (;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+360;Wassersackrohr DIN 16282, U-Form, Nenndruck 0,6 MPa (6 bar), aus Stahl, zum Schutz von Manometern, Position beinhaltet liefern und montieren;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;wie zuvor im vollen Wortlaut beschrieben jedoch DN15;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;wie zuvor im vollen Wortlaut beschrieben jedoch DN20;190,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;wie zuvor im vollen Wortlaut beschrieben jedoch DN25;65,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;wie zuvor im vollen Wortlaut beschrieben jedoch DN32;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;wie zuvor im vollen Wortlaut beschrieben jedoch DN40;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;wie zuvor im vollen Wortlaut beschrieben jedoch DN50;130,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;wie zuvor im vollen Wortlaut beschrieben jedoch DN65;45,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;wie zuvor im vollen Wortlaut beschrieben jedoch DN15;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+90;wie zuvor im vollen Wortlaut beschrieben jedoch DN20;170,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+100;wie zuvor im vollen Wortlaut beschrieben jedoch DN25;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+110;wie zuvor im vollen Wortlaut beschrieben jedoch DN32;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+120;wie zuvor im vollen Wortlaut beschrieben jedoch DN40;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+130;wie zuvor im vollen Wortlaut beschrieben jedoch DN50;55,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+140;wie zuvor im vollen Wortlaut beschrieben jedoch DN65;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+150;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN15;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+160;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN20;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+170;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN25;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+180;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN32;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+190;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN40;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+200;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN50;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+210;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN65;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+220;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN20;54,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+230;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN25;56,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+240;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN32;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+250;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN40;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+260;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN50;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+270;wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN65;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+280;Rohrleitung wie zuvor im vollen Wortlaut beschrieben jedoch DN15;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+290;Rohrleitung wie zuvor im vollen Wortlaut beschrieben jedoch DN20;1,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+300;Rohrleitung wie zuvor im vollen Wortlaut beschrieben jedoch DN25;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+310;Rohrleitung wie zuvor im vollen Wortlaut beschrieben jedoch DN32;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+320;Rohrleitung wie zuvor im vollen Wortlaut beschrieben jedoch DN40;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+330;Rohrleitung wie zuvor im vollen Wortlaut beschrieben jedoch DN50;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+340;Rohrleitung wie zuvor im vollen Wortlaut beschrieben jedoch DN65;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+350;Rohrbogen wie zuvor im vollen Wortlaut beschrieben jedoch DN15;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+360;Rohrbogen wie zuvor im vollen Wortlaut beschrieben jedoch DN20;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+370;Rohrbogen wie zuvor im vollen Wortlaut beschrieben jedoch DN25;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+380;Rohrbogen wie zuvor im vollen Wortlaut beschrieben jedoch DN32;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+390;Rohrbogen wie zuvor im vollen Wortlaut beschrieben jedoch DN40;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+400;Rohrbogen wie zuvor im vollen Wortlaut beschrieben jedoch DN50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+410;Rohrbogen wie zuvor im vollen Wortlaut beschrieben jedoch DN65;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+420;T-Stück wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN40;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+430;T-Stück wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN50;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+440;T-Stück wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN65;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+450;Reduzierung wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN32;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+460;Reduzierung wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN40;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+470;Reduzierung wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+480;Reduzierung wie zuvor im vollen Wortlaut beschrieben jedoch größter Durchmesser DN65;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+490;wie zuvor im vollen Wortlaut beschrieben jedoch DN40;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+500;"Einschweißmuffe bis 1/2""";50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+510;Tauchhülse, Einbaulänge nach Erfordernis, mit Klemmringverschraubung, aus Messing, zum Einschrauben;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+520;Passtück für Kältemengenzähler wie zuvor im vollen Wortlaut beschrieben jedoch DN32;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+530;Anschluss herstellen, Vor- und Rücklauf, Form- und Verbindungsstücke werden gesondert vergütet, an Kühlregister RLT-Gerät, Medium Wasser, einschl. vorbereitende Maßnahmen an der Anschlussstelle, mit Stahlrohr nichtrostend, Anschlussdimension Gerät bis DN32;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+540;wie zuvor im vollen Wortlaut beschrieben jedoch DN15;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+550;wie zuvor im vollen Wortlaut beschrieben jedoch DN20;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+560;wie zuvor im vollen Wortlaut beschrieben jedoch DN25;46,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+570;wie zuvor im vollen Wortlaut beschrieben jedoch DN32;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+580;wie zuvor im vollen Wortlaut beschrieben jedoch DN40;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+590;wie zuvor im vollen Wortlaut beschrieben jedoch DN50;60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+600;wie zuvor im vollen Wortlaut beschrieben jedoch DN65;26,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Kältedämmung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN15, Dämmstärke 25 mm;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Kältedämmung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN20, Dämmstärke 33,5 mm;190,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Kältedämmung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN25, Dämmstärke 35 mm;65,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Kältedämmung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN32, Dämmstärke 35 mm;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Kältedämmung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN40, Dämmstärke 37,5 mm;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Kältedämmung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN50, Dämmstärke 38 mm;130,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Kältedämmung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN65, Dämmstärke 40,5 mm;45,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;wie zuvor im vollen Wortlaut beschrieben jedoch DN15;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+90;wie zuvor im vollen Wortlaut beschrieben jedoch DN20;230,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+100;wie zuvor im vollen Wortlaut beschrieben jedoch DN25;115,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+110;wie zuvor im vollen Wortlaut beschrieben jedoch DN32;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+120;wie zuvor im vollen Wortlaut beschrieben jedoch DN40;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+130;wie zuvor im vollen Wortlaut beschrieben jedoch DN50;75,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+140;wie zuvor im vollen Wortlaut beschrieben jedoch DN50;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+150;Kältedämmkappe wie zuvor im vollen Wortlaut beschrieben jedoch DN15, Dämmstärke 25 mm;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+160;Kältedämmkappe wie zuvor im vollen Wortlaut beschrieben jedoch DN20, Dämmstärke 33,5 mm;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+170;Kältedämmkappe wie zuvor im vollen Wortlaut beschrieben jedoch DN25, Dämmstärke 35 mm;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+180;Kältedämmkappe wie zuvor im vollen Wortlaut beschrieben jedoch DN32, Dämmstärke 35 mm;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+190;Kältedämmkappe wie zuvor im vollen Wortlaut beschrieben jedoch DN40, Dämmstärke 37,5 mm;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+200;Kältedämmkappe wie zuvor im vollen Wortlaut beschrieben jedoch DN50, Dämmstärke 38 mm;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+210;Kältedämmkappe wie zuvor im vollen Wortlaut beschrieben jedoch DN65, Dämmstärke 40,5 mm;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+220;Brandschutzabschottung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN15;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+230;Brandschutzabschottung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN20;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+240;Brandschutzabschottung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN25;17,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+250;Brandschutzabschottung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN32;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+260;Brandschutzabschottung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN40;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+270;Brandschutzabschottung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN50;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+280;Brandschutzabschottung wie zuvor im vollen Wortlaut beschrieben jedoch für Rohrleitung DN50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Stahlrohr wie zuvor im vollen Wortlaut beschrieben jedoch DN65;18,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Stahlrohr wie zuvor im vollen Wortlaut beschrieben jedoch DN100;18,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Fertigabzweig für wie zuvor im vollen Wortlaut beschriebenes Rohrsystem jedoch DN100/65, etagiert 45°;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Fertigabzweig für wie zuvor im vollen Wortlaut beschriebenes Rohrsystem jedoch DN300/100, etagiert 45°;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Erdverlegter Kugelhahn wie zuvor im vollen Wortlaut beschrieben jedoch DN65;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Straßenkappe wie zuvor im vollen Wortlaut beschrieben jedoch DN65;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Abschrumpfmuffe wie zuvor in vollem Wortlaut beschrieben jedoch Außendurchmesser Da = 140 mm;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;Abschrumpfmuffe wie zuvor in vollem Wortlaut beschrieben jedoch Außendurchmesser Da = 200 mm;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+90;Abschrumpfmuffe wie zuvor in vollem Wortlaut beschrieben jedoch Außendurchmesser Da = 450 mm;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+100;Endkappe wie zuvor im vollen Wortlaut beschrieben jedoch DN65;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+110;Zur Dehnungsaufnahme der Rohrleitungen bei Richtungsänderungen im Erdbereich. Aus rohrstatischen Gründen erfolgt die Anbringung der Dehnpolster stets für eine zweiseitige Dehnungsaufnahme. Das bedeutet, es werden jeweils 2 Streifen in der Längeneinheit von 1000mm für einen fertigen Meter Dehnpolster;16,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+120;Rohrunterlagen als Hilfsauflager der Rohrleitungen.;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+130;Trassenwarnband für VL + RL zur Markierung der Rohrleitungen über dem fertigen Sandbett und der ersten Füllage. Warnband 40 mm breit und 250 m pro Rolle mit schwarzer neutraler Aufschritt auf gelben Grund;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+140;Erstellung einer Dokumentation des Polsterplans mit einem CAD-Programm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+150;Dichtungseinsatz zur Abdichtung von Durchdringungen mit Rohren und Kabel. Dicht gegen drückendes und nichtdrückendes Wasser.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+160;Futterrohr in Stahlausführung, als Flanschplatte mit Hülse für Durchdringungen, mit Fest- und Losflansch nach DIN 18533,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+170;Stationäres Überwachungsgerät zur kontinuierlichen, stationären und automatischen Überwachung von Sensorschleifen aus Cu-Draht, NiCr-Draht oder technisch gleichen Überwachungssystemen auf Sensordrahtunterbrechung und Feuchte, mit alphanumerischer Anzeige.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+180;Verdrahtungsdose-CU mit 5-poliger Blockklemme;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+190;Druckprüfung, Entlüftung und Inbetriebnahme von erdverlegten Leitungen einschließlich aller erforderlichen Nebenleistungen ausführen. Die Leistung umfasst das Spülen der Rohrleitungen, das fachgerechte Füllen mit geeignetem Prüfmedium unter Vermeidung von Lufteinschlüssen sowie die vollständige Entl;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+200;Erstellen einer Dokumentation des Leitungsverlaufs mit einem CAD-Programm;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;wie zuvor im vollen Wortlaut beschrieben jedoch:;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;wie zuvor im vollen Wortlaut beschrieben jedoch:;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;wie zuvor im vollen Wortlaut beschrieben jedoch:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Thermostatventil, für 2-Rohr-Installation, Gehäuse aus Rotguss/Messing, Eckausführung, Spindel aus nicht rostendem Stahl, mit Gewindeanschluss, für Wasser, stufenlos voreinstellbar;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Thermostatventil, für 2-Rohr-Installation, Gehäuse aus Rotguss/Messing, Eckausführung, Spindel aus nicht rostendem Stahl, mit Gewindeanschluss, für Wasser, stufenlos voreinstellbar;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Entfernen von Schutzfolie, Reinigen von Umluftkühlern, einschl. des Gehäuses und Befestigungen, Sichtkontrolle;27,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Wechsel der Filter in Umluftkühlern nach Abschluss sämtlicher Bauarbeiten und erfolgtem Probebetrieb durchführen. Vorhandene, während der Bauphase eingesetzte Filter sind auszubauen und fachgerecht zu entsorgen. Lieferung und Einbau neuer, zum jeweiligen Umluftkühler passender Filtereinsätze in der ;27,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Mobile Wasseraufbereitungsanlage zur Anlagenbefüllung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Druckprüfung, Spülung und Entlüftung der Kälteanlage;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Inbetriebnahme und Einregulierung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Prüfen der elektrischen Verkabelung der Steuer- und Regelanlage vor Inbetriebnahme, einschl. Erstellung eines Protokolls mit Aufführung der festgestellten Mängel.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Dokumentation des Hydraulischen Abgleiches auf Datenträger, in einfacher Ausfertigung, Unterlagen auf Datenträger mit strukturierter Ablage in den separat ausgeschriebenen Dokumentationsunterlagen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Durchführung der Funktionsprüfung der Gesamtanlage im Rahmen eines Probebetriebes.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Reinigen aller neu installierten Zentralgeräte, Einrichtungen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Technische Einweisung des Betriebpersonals in die fertiggestellten technischen Installationen (Sanitär, Heizung, Kälte).;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Teilnahme an allen Technischen Abnahmen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Fahrbares Montagegerüst, Auf- und Abbau sowie;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Fahrbares Montagegerüst Auf- und Abbau sowie;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;wie zuvor in vollem Wortlaut beschrieben jedoch:;31,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;wie zuvor in vollem Wortlaut beschrieben jedoch:;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;wie zuvor in vollem Wortlaut beschrieben jedoch:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;wie zuvor in vollem Wortlaut beschrieben jedoch:;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;wie zuvor in vollem Wortlaut beschrieben jedoch:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;wie zuvor in vollem Wortlaut beschrieben jedoch:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;wie zuvor in vollem Wortlaut beschrieben jedoch:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Bezeichnungsschild, Farbe und Beschriftung nach Angabe des AG, mit mehrzeiliger Beschriftung, Schild aus Kunststofffolie als Klebeschild, dauerhaft bedruckt, Befestigungsgrund variabel, liefern und aufkleben.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;wie zuvor beschrieben, Abmessung BxH: 210x100 mm;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;wie zuvor beschrieben, Abmessung BxH: 100x54 mm;110,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;wie zuvor beschrieben, Abmessung BxH: 32x12 mm;190,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Banderole zur Rohrleitungskennzeichnung;580,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Stahlkonstruktion wie zuvor in vollem Wortlaut beschrieben, jedoch Ausführung für Sonderkonstruktionen als vorgefertigte Installationsschiene mit eingestanzten Langlöchern,;500,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Stahlkonstruktion wie zuletzt in vollem Wortlaut;280,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Erstellung der Bestands- und Revisionsunterlagen, mit;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Farbige Bestands-Anlagenschemata der Sanitärinstallation (Trinkwasser, Schmutzwasser und Regenwasser) jeweils 1-fach, bis zu einem Format von DIN A0 (Höhe) und einer Länge von 2,50 m, matt laminiert und feuchtegeschützt, im Technikraum aufhängen. Inkl. Befestigungs- und Kleinmaterial.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Farbiges Bestands-Anlagenschema der Heizungsinstallation, 1-fach, bis zu einem Format von DIN A0 (Höhe) und einer Länge von 2,50 m, matt laminiert und feuchtegeschützt, im Technikraum aufhängen. Inkl. Befestigungs- und Kleinmaterial.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Farbiges Bestands-Anlagenschema der Kälteinstallation,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Leistung wie zuvor in vollem Wortlaut beschrieben,;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Leistung wie zuvor in vollem Wortlaut beschrieben,;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Leistung wie zuvor in vollem Wortlaut beschrieben,;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Leistung wie zuvor in vollem Wortlaut beschrieben,;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Stunden eines Obermonteurs (nur auf bes. Anordnung des AG) 06:00-20:00 Uhr.;1,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Stunden eines Monteurs (nur auf bes. Anordnung des AG) 06:00-20:00 Uhr.;1,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Leistung wie zuvor im vollen Wortlaut beschrieben, jedoch Stunden eines Helfers (nur auf bes. Anordnung des AG) 06:00-20:00 Uhr.;1,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Stahlrohr wie zuvor im vollen Wortlaut beschrieben jedoch DN65;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Fertigbogen für wie zuvor im vollen Wortlaut beschriebenes Rohrsystem jedoch DN65;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Kugelhahn wie zuvor im vollen Wortlaut beschrieben jedoch DN65;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Abschrumpfmuffe wie zuvor in vollem Wortlaut beschrieben jedoch Außendurchmesser Da = 140 mm;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Endkappe wie zuvor im vollen Wortlaut beschrieben jedoch DN65;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Endboden wie zuvor im vollen Wortlaut beschrieben jedoch DN65;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Kugelhahn wie zuvor im vollen Wortlaut beschrieben jedoch DN20;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;Rohrleitung wie zuvor im vollen Wortlaut beschrieben jedoch DN20;1,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+90;Endkappe wie zuvor im vollen Wortlaut beschrieben jedoch DN20;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+100;Herstellen der Kältedämmung im Bereich der Entleerungsleitung DN20 und Armaturen, fachgerechte Ausführung der Kältedämmung einschließlich Nachisolierung, gemäß den Herstellervorgaben des eingesetzten erdverlegten Rohrsystems, einschließlich aller systemzugehörigen Komponenten und Abdichtungen;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+110;Zur Dehnungsaufnahme der Rohrleitungen bei Richtungsänderungen im Erdbereich. Aus rohrstatischen Gründen erfolgt die Anbringung der Dehnpolster stets für eine zweiseitige Dehnungsaufnahme. Das bedeutet, es werden jeweils 2 Streifen in der Längeneinheit von 1000mm für einen fertigen Meter Dehnpolster;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+120;Rohrunterlagen als Hilfsauflager der Rohrleitungen.;80,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+130;Trassenwarnband für VL + RL zur Markierung der Rohrleitungen über dem fertigen Sandbett und der ersten Füllage. Warnband 40 mm breit und 250 m pro Rolle mit schwarzer neutraler Aufschritt auf gelben Grund;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+140;Erstellung einer Dokumentation des Polsterplans mit einem CAD-Programm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+150;Stationäres Überwachungsgerät zur kontinuierlichen, stationären und automatischen Überwachung von Sensorschleifen aus Cu-Draht, NiCr-Draht oder technisch gleichen Überwachungssystemen auf Sensordrahtunterbrechung und Feuchte, mit alphanumerischer Anzeige.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+160;Verdrahtungsdose-CU mit 5-poliger Blockklemme;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Schachtbauwerk;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Dichtungseinsatz wie zuvor in vollem Wortlaut beschrieben, jedoch für:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Dichtungseinsatz wie zuvor in vollem Wortlaut beschrieben, jedoch für:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Dichtungseinsatz wie zuvor in vollem Wortlaut beschrieben, jedoch für:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+50;Dichtungseinsatz wie zuvor in vollem Wortlaut beschrieben, jedoch für:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+60;Dichtungseinsatz wie zuvor in vollem Wortlaut beschrieben, jedoch für:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+70;Dichtungseinsatz wie zuvor in vollem Wortlaut beschrieben, jedoch für:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+80;Straßenkappe wie zuvor im vollen Wortlaut beschrieben jedoch DN65;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+10;Technische Einweisung des Betriebpersonals in die fertiggestellten technischen Installationen (Fernkälteleitung).;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+20;Teilnahme an allen Technischen Abnahmen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+30;Bestands- und Revisionsunterlagen für die Fernkälteleitung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83
+40;Druckprüfung, Entlüftung und Inbetriebnahme von erdverlegten Leitungen einschließlich aller erforderlichen Nebenleistungen ausführen. Die Leistung umfasst das Spülen der Rohrleitungen, das fachgerechte Füllen mit geeignetem Prüfmedium unter Vermeidung von Lufteinschlüssen sowie die vollständige Entl;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/25019-2026-07-23-LV-VE401-SHK_V33.x83

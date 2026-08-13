@@ -1,0 +1,189 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Fernwirkanlage mit Gateway;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+2;Verdrahtung zwischen MS-Schaltanlage und EVU-Fernwirkanlage;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+3;Universalnetzmessgerät/ Netzanalysator;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+4;NSGAFÖU 1 x 4 mm²;3,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+5;NSGAFÖU 1 x 6 mm²;3,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+6;Transceiver LWL-I/O-System;6,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+7;LWL-Singlemode-Patchkabel, LC/LC, 3 m;4,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+8;Rail Ethernet-Switch;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+9;Netzwerkschrank Entkupplung Gebäude;4,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+10;"Managebarer Ethernet-Switch, 19"", 24 Ports";4,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+11;Leitungsschutzschalter, 2-polig bis 2 A, Charakteristik B/C;4,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+12;24 V DC-Puffermodul;4,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+1;Lastrennschalterfeld Netzeinspeisung EVU, 630 A;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+2;Leistungsschalterfeld Netzübergabe, 630 A;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+3;Mess- und Hochführfeld;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+4;Spannungswandlersatz;1,0;Satz;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+5;Strommesswandlersatz;1,0;Satz;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+6;Leistungsschalterfeld Trafo, 630 A;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+7;Leistungsschalterfeld Abgang Sekundärring 1, 2 und Reserve, 630 A;3,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+8;Einschub-Leistungsschalter 630 A;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+9;Schalterwagen/ Einschubhilfe;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+10;EVU-Zählerschrank, 1 Zählerplatz;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+11;Digitales Multifunktionsschutzgerät (UMZ/ AMZ Abgangs- bzw. Anlagenschutz);5,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+12;Schutzprüfung Multifunktionsschutzgerät (UMZ/ AMZ Abgangs- bzw. Anlagenschutz);5,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+13;Schutzprüfung übergeordneter Entkupplungsschutz;4,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+14;Feldstärkemessung gemäß 26. BimSchV;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+15;Druckimpulsberechnung;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+16;Druckentlastungskanal (Verbindung zum Druckentlastungsschacht);1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+17;Druckentlastungsklappe MS-Raum 1 m²;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+18;Koppelrelais;20,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+19;Blindschaltbild;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+20;Übersichtsschaltbild;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+21;Hochspannungsprüfer mit Halter;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+22;Hilfswagen für Einschubleistungsschalter;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+23;Isoliermatte;5,5;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+24;Beschilderung;1,0;Satz;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+25;CO;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+26;Antragstellung und Inbetriebnahme, Zähler und Zählersetzung;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+1;Gießharz-Transformator, 250 kVA;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+2;Trafolagerelemente;1,0;Satz;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+3;Trafo-Hilfs-Sammelschienensystem primär;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+4;Trafo-Hilfs-Sammelschienensystem sekundär, Stromschienenanschluss;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+5;Innenraum-Schutzerde für Traforäume;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+6;Erdungsschalterverriegelung Trafozelle;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+7;Erdungs- und Kurzschließvorrichtung, 3-polig,;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+8;Kunststoffgehäuse, Schutzart IP 55;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+9;3-poliger NH-Sicherungslasttrenner Gr. 00/100 A;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+10;Thermobox zur Transformator-Temperaturüberwachung;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+11;Wandgehäuse für Temperaturüberwachung;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+12;Absperrbalken mit Befestigungslaschen;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+13;Warn-, Bedienungs- und Hinweisschilder Trafozellen;1,0;Satz;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+14;Einbindung Meldungen Trafoschutz;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+1;Steuerspannungsschrank;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+2;DC USV Netzgerät 400 V/ 24 V;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+3;Redundanzmodul mit Überwachung;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+4;NH-Sicherungslasttrennschalter, 3-polig überwacht;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+5;Sammelschienenadapter für v. g. Sicherungslasttrennschalter;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+6;Motorschutzschalter;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+7;Neozed/D02, 3-poliger-Sicherungslasttrennschalter;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+8;Sicherungsautomat, 2-polig, für Gleichspannung;3,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+9;Hilfskontakte für o. g. Sicherungsautomaten 1- bis 3-polig;3,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+10;Elektronisches Kurzschluss-/Diagnosemodul für 24-V-DC-Verbraucher;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+11;Elektronischer Sicherungsautomat;5,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+12;Universal-Trennverstärker für Schaltschrankmontage,;4,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+13;Überspannungsableiter Typ 3, 24 V DC;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+1;Mittelspannungskabel Uo/U 6/10kV N2XSY 1 x 95RM/16 mm² RT;50,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+2;Kurzschlussfeste Befestigungsschellen;9,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+3;Innenraum Endverschluss 1 x 240 mm²;12,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+4;Innenraum Endverschluss 1 x 95 mm²;6,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+5;Hochspannungsprüfung der MS-Kabel, VLF-Verfahren;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+6;Kunststoffkabel NYY-O/J 1 x 240 mm² RM SW;50,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+7;Kabelanschluss 1 x 240 mm²;6,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+8;Installationsleitung NHXMH-J 3 x 1,5 mm²;25,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+9;Installationsleitung NHXMH-J 3 x 2,5 mm²;50,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+10;Installationsleitung NHXMH-J 5 x 2,5 mm²;40,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+11;Installationsleitung NHXMH-J 5 x 4 mm²;20,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+12;Installationsleitung NHXMH-J 5 x 10 mm²;15,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+13;Ölflex 100 CY 2 x 0,75 mm²;20,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+14;Ölflex 100 CY 3G1 mm²;25,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+15;Ölflex 100 BK 0,6/1 kV 3G1,5 mm²;50,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+16;Ölflex 100 BK 0,6/1 kV 5G1,5 mm²;25,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+17;Ölflex 100 BK 0,6/1 kV 3G2,5 mm²;30,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+18;Ölflex 100 BK 0,6/1 kV 4G2,5 mm²;15,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+19;Datenleitung A-2YF(L)2Y 10 x 2 x 0,8 mm²;8,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+20;Datenleitung A-2YF(L)2Y 4 x 2 x 0,8 mm²;25,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+21;Datenleitung A-2YF(L)2Y 2 x 2 x 0,8 mm²;25,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+22;Netzwerksystemkabel LAN CAT 7/PN;30,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+23;Geschirmte Stecker RJ45, passend für v. g. LAN-Kabel;4,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+24;Überspannungsableiter für Profinet;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+25;LAN-Patchkabel, 3 m;4,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+26;LAN-Patchkabel, 5 m;5,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+27;LAN-Patchkabel, 10 m;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+1;Kunststoffpanzerrohr M12 - M20;12,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+2;Kunststoffpanzerrohr M25 - M32;8,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+3;Stahlpanzerrohr M25 - M32;8,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+4;Stahlpanzerrohr M40;6,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+5;Installationsrohr Edelstahl V4A M63 - M40;3,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+6;Installationsrohr Edelstahl V4A M32 - M25;5,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+7;Kabelleiter, 300/60 mm, tauchfeuerverzinkt;8,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+8;Kabelleiterbogen 300/60 mm, horizontal 45°, tauchfeuerverzinkt;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+9;Kabelleiter, 500/60 mm, tauchfeuerverzinkt;22,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+10;Kabelleiterbogen 500/60 mm, horizontal 45°, tauchfeuerverzinkt;6,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+11;Kabelleiterbogen 500/60 mm, horizontal 90°, tauchfeuerverzinkt;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+12;Kabelrinne 300/60 mm, tauchfeuerverzinkte Ausführung;15,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+13;Kabelrinnenbogen 300/60 mm, horizontal 45° tauchfeuerverzinkt;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+14;Kabelrinnenbogen 300/60 mm, horizontal 90° tauchfeuerverzinkt;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+15;Trennsteg 60 mm;15,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+16;Deckel für Kabelrinne 300mm;12,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+17;Hängestiel, 300 mm lang;8,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+18;Hängestiel, 500 mm lang;20,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+19;Wand- und Stielausleger, 310 mm, tauchfeuerverzinkt;13,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+20;Wand- und Stielausleger, 500 mm, tauchfeuerverzinkt;20,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+21;Hängestiel, 3 000 mm lang;6,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+22;Feuerverzinkter Formstahl, diverse Profile;80,0;kg;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+23;C-Profilschiene feuerverzinkt;40,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+1;Rohbodenfläche reinigen;38,2;m²;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+2;Staubfester Anstrich Rohboden;68,8;m²;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+3;Doppelbodenanlage für Mittelspannungsraum;38,2;m²;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+4;Anarbeiten des Doppelbodens an aufgehende Bauteile;3,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+5;Trittschutzkante;4,5;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+6;Schaltanlagentragrahmen MS-Schaltanlage;8,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+7;Schaltanlagentragrahmen Schaltschrank USV;0,6;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+8;Schaltanlagentragrahmen Lüftungsanlage;2,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+9;Doppelboden-Zulage Randabschluss;30,6;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+10;Doppelboden-Zulage Rahmenbereich;10,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+11;Kennzeichnung Brandmelder im Doppelboden;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+12;Befestigungskette Doppelbodenplatte für Brandmelder;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+13;Provisorische Abdeckung/ Schutz des Doppelbodens;30,0;m²;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+14;Reservefeldabdeckung;2,0;m²;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+15;Saugheber und Steckschlüssel;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+16;Aufnehmen/ verschließen Doppelboden;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+17;Schachtleiter;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+1;Kernbohrung bis 300 mm, DN 200;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+2;Kernbohrung bis 300 mm, DN 100;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+3;Systemdeckel DN 160 für gewellte Kabelschutzrohrohre;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+4;Verschlussdeckel 150-D für Dichtpackung;32,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+5;Systemdeckel 150-D3/58;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+6;Verschlussstopfen für Systemdeckel, 58 mm;3,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+7;Systemdeckel zur Aufnahme von Segmenten;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+8;Brandschott (Weichschott) S90, DN 100;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+9;Brandschott (Weichschott) S90, B x H x T = 300 x 200 x 250 mm;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+10;Brandschott (Weichschott) S90, B x H x T = 400 x 200 x 250 mm;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+1;Überbrückungsband 200 - 500 mm, 16 mm², Kupfer;10,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+2;Überbrückungsband 200 - 500 mm, 25 mm², Kupfer;3,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+3;Anschluss- bzw. Überbrückungsseil 180 - 300 mm, 120 mm²;15,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+4;Potenzialausgleichsleitung NYY/H07V-K 1 x 120 mm²;15,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+5;Potenzialausgleichsleitung NYY 1 x 95 mm²;20,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+6;Potenzialausgleichsleitung NYY 1 x 50 mm²;8,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+7;Potenzialausgleichsleitung H07V-K 1 x 50 mm²;12,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+8;Potenzialausgleichsleitung H07V-K 1 x 25 mm²;8,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+9;Potenzialausgleichsleitung H07V-K 1 x 16 mm²;4,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+10;Potentialausgleichsleitung H07V-K 1 x 6 mm²;8,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+11;Kabelschuh, Material 1.4571, Bohrung 10 - 14 mm, 95 mm²;6,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+12;Kabelschuh, Material 1.4571, Bohrung 8 - 14 mm, 50 mm²;4,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+13;Kabelschuh, Material 1.4571, Bohrung 8 - 12 mm, 16 - 25 mm²;8,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+14;Kabelschuh, Material 1.4571, Bohrung 6 - 8 mm, 6 mm²;4,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+15;Gewindebohrung in Metall herstellen;8,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+16;Falzanschlussklemmen;10,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+17;Rohrschelle, V2A, für Rohrdurchmesser 135 - 150 mm;2,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+18;Potenzialausgleichsschiene (Erdungsbock);3,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+19;Stahlband 50 x 4 mm, 200 mm²;35,0;m;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+20;Erdungsprüfbuch/ Dokumentation;1,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+1;Inbetriebnahme der Kopplung mit dem PLS/ GA;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+2;Inbetriebnahme der Fernwirkanlage für das EVU;3,0;St;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+3;Inbetriebnahme der Mittelspannungsanlage und Probebetrieb;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+4;Mehrpreis für erweiterte Inbetriebnahme;1,0;d;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+5;Gemeinsame Inbetriebnahme der 4 Ringfelder und der Übergabe;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+6;Inbetriebnahme Trafo und Trafoabgangsfeld/ Reservefeld;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+7;Einweisung und Schulung des Betriebspersonals vor Ort;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+8;Dokumentation nach Fertigstellung für die Gesamtanlage;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+9;Mitwirkung bei der Anlagenzertifizierung und Konformitätserklärung;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+10;Arbeitsschutzkonzept/ Gefährdungsbeurteilung;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+1;Komplette ingenieurmäßige Projektabwicklung;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+2;Werks- und Montageplanung;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+3;Ingenieurstunden;16,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+4;Mehrpreis/ Zulage zum Verrechnungslohn Ingenieurstunde;4,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+5;Obermonteurstunden;10,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+6;Mehrpreis/ Zulage zum Verrechnungslohn;8,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+7;Monteurstunden;24,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+8;Mehrpreis/ Zulage zum Verrechnungslohn;12,0;h;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+9;Materiallieferungen nicht über EP erfasst;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+10;Wartungsvertrag 1. Jahr;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+11;Wartungsvertrag 2. Jahr;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+12;Wartungsvertrag 3. Jahr;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+13;Wartungsvertrag 4. Jahr;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+1;Baustelle einrichten;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+2;Vorhaltung und Unterhaltung der Baustelleneinrichtung;2,0;Mt;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83
+3;Baustelle räumen;1,0;psch;gaeb;leistungsbeschreibungen/LV_Bielefeld_10 kV Netz MS-Anlage.x83

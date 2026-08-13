@@ -1,0 +1,30 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Gerüstaufstandsflächen durch planieren, verfestigen und auslegen von Lastverteilungselementen für nachstehend beschriebene Gerüste vorbereiten. Abrechnung erfolgt nach Gebäudelänge mit Gerüstaufstellung.;217,0;m;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+2;liefern und nach Herstellervorschrift und DIN 4420 fachgerecht aufstellen.;4479,0;m²;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+3;Zulage zur Pos.;1172,0;m²;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+4;Zulage zur Pos.;163,0;m²;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+5;Fassadengerüst der vorg. Pos.;263885,0;m²Wo;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+6;Auskragung 0,30 m zu vorg. Gerüst einschl. des kompletten Belages in Stahlausführung liefern und am Gerüst nachträglich im Zuge der Fassadenarbeiten montieren und demontieren.;2261,0;m;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+7;Zulage zur Pos.;584,0;m;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+8;Konsolen der vorg. Pos.;83160,0;mWo;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+9;Auskragung 0,60 m;2261,0;m;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+10;Zulage zur Pos.;584,0;m;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+11;Konsolen der vorg. Pos.;81975,0;mWo;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+12;Innenliegender Seitenschutz bei einem Wandabstand über 0,30 m von der Fassade zum Gerüstbelag nach DIN EN 12811-1. An- und Abtransport, Montage und Demontage.;806,0;m;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+13;Zulage zur Pos.;254,0;m;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+14;Innenliegenden Seitenschutz der vorg. Pos.;36528,0;mWo;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+15;Überbrückung in vorbeschriebenem Gerüst über Eingängen herstellen unterhalten und nach Abschluss der Baumaßnahme wieder abbauen.;16,0;m;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+16;Überbrückung der vorg. Pos.;915,2;mWo;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+17;Aufstellen des Gerüstes auf Stahlbetondachflächen in unterschiedlichen Höhen und gleichzeitigem Schutz der Dachabdichtung im Gerüstbereich.;149,0;m;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+18;Treppenaufgang H = ca. 4,50 m aufbauen, vorhalten und nach Freigabe durch die Bauleitung abbauen.;1,0;St;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+19;Treppenaufgang der vorg. Pos.;32,0;StWo;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+20;Gerüsttreppenturm H = ca. 13,50 m aufbauen, vorhalten und nach Freigabe durch die Bauleitung abbauen.;2,0;St;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+21;Treppenaufgang der vorg. Pos.;118,0;StWo;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+22;Liefern, montieren, vorhalten und nach Beendigung der Arbeiten wieder demontieren eines Schutzdaches über dem Baustelleneingang, integriert in das Fassadengerüst.;2,0;St;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+23;Schutzdach der vorg. Pos.;118,0;StWo;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+1;Arbeits- und Schutzgerüst als Flächengerüst (Raumgerüst);918,0;m³;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+2;Raumgerüst/Flächengerüst der vorg. Pos.;12481,0;m³Wo;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+1;Facharbeiter;20,0;h;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+2;Bauhelfer;20,0;h;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+3;Lehrling (3. Lehrjahr);20,0;h;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83
+4;Liefern, Einhalten, Dokumentieren und Nachweisen sämtlicher Anforderungen gemäß den Vorgaben der DGNB-Zertifizierung (Version 2023, Auflage 4, Neubau Bildungsbauten, Qualitätsstufe 3) einschließlich aller hierfür erforderlichen Leistungen, Nebenleistungen und Nachweise. Die Leistungen umfassen insbe;1,0;psch;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_HSI_LV_Gerüstbauarbeiten_V33.X83

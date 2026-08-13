@@ -1,0 +1,91 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;Gerüste, Maschinen, Geräte, Werkzeuge und sonstige Betriebsmittel, die zur vertragsgemäßen Durchführung der Bauleistungen erforderlich sind, auf die Baustelle bringen, bereitstellen und - soweit der Geräteeinsatz nicht gesondert berechnet wird - betriebsfertig aufstellen einschließlich der dafür not;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0002;Vorhalten der vorbeschriebenen Baustelleneinrichtung für die gesamte Nutzungsdauer.;16,0;Wo;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0003;Räumen der Baustelle und Geländeflächen, auf denen sich Baustelleneinrichtungen befunden haben, dem früheren Zustand entsprechend herstellen, Lager- und Arbeitsplätze beseitigen.;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0001;Es ist eine voll­stän­di­ge Werk- und Montageplanung der elektro- und netzwerktech­ni­schen Aus­rüs­tung gemäß folgender Spezifikation zu lie­fern.;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0001;Komponenten für den Anschluss der Zuleitung in Bestandsverteilung einbauen;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0001;Installationsverteiler Gehäuse Stahl undurchsichtige Tür an Bedienfront abschließbar U 400 V I 100 A Innenaufstellung IP44 IK05 Schrank Standmontage;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0002;Leistungsschalter MCCB Hauptschalter 3polig 100A 400/415VAC Kat.A elektron. Auslösung Schutzfunktion LSI;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0003;Überspannungsschutzgerät Typ1/2 f.Sammelschienensystem 40mm Nennableitstoßstrom 20kA/Leiter TN-S-System 25kA/Pol 50kA N-PE Schutzpegel 1,5kV;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0004;Sicherungslasttrennschalter Gr.D02 3polig Sicherungseinsatz;5,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0005;Fehlerstromschutzschalter RCCB TypA unverzögert 40A Fehlerstrom 30mA 3polig+N 400VAC;4,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0006;Leitungsschutzschalter 230/400VAC Ausschaltvermögen 10kA 3polig Charakter.B 50A;3,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0007;Leitungsschutzschalter 230/400VAC Ausschaltvermögen 10kA 3polig Charakter.B 20A;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0008;Leitungsschutzschalter 230/400VAC Ausschaltvermögen 10kA einpolig Charakter.B 20A;2,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0009;Leitungsschutzschalter 230/400VAC Ausschaltvermögen 10kA einpolig Charakter.B 16A;24,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0010;Reihenklemme 690V 3-stöckig NT-L-PE bis 4mm2 Tragschiene;80,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0011;Reihenklemme 690V einstöckig bis 16mm2 Tragschiene;15,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0001;Kabelrinne gelocht Stahl niro H 100mm B 200mm;15,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0002;Bogen Kabelrinne 90Grad waager. Stahl niro H 100mm B 200mm;2,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0003;Stiel Ausleger Stahl niro bis 5kN Deckenbefestigung L bis 400mm;15,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0004;Ausleger Kabelrinne Stahl niro bis 1,5kN L 200mm an Stielen;15,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0005;Unterflur-Elektroinstallationskanal estrichüberdeckt Stahl bandverz H/B 28/250mm;24,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0006;Unterflurdose Stahl bandverz H/B 28/250mm;2,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0007;Unterflurdose 12Installationsgeräte Stahl bandverz H/B 28/250mm;5,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0008;Fußbodenebene Einbaueinheit 2Installationsgeräte;2,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0009;Fußbodenebene Einbaueinheit 12 Installationsgeräte;5,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0010;Elektroinstallationsrohr PE-HD AD 25mm auf Rohdecke;250,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0011;Elektroinstallationskanal Geräteeinbau H/B 70/170mm PVC-U freitragend;3,6;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0012;Elektroinstallationsrohr Alu AD 20mm AP;50,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0001;Installationsltg NYM-J 5x16 vorh.Rohr/Unterflurkanal;52,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0002;Installationsltg NYM-J 3x4 vorh.Rohr/Unterflurkanal;10,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0003;Installationsltg NYM-J 5x2,5 vorh.Rohr/Unterflurkanal;64,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0004;Installationsltg NYM-J 3x2,5 vorh.Rohr/Unterflurkanal;500,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0005;Installationsltg NYM-J 5x1,5 vorh.Rohr/Unterflurkanal;35,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0006;Installationsltg NYM-J 4x1,5 vorh.Rohr/Unterflurkanal;60,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0007;Installationsltg NYM-J 3x1,5 vorh.Rohr/Unterflurkanal;168,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0008;Installationsltg NYM-J 5x16 anschließen;3,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0009;Installationsltg NYM-J 4x1,5 anschließen;3,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0010;Installationsltg NYM-J 5x2,5 anschließen;2,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0011;Installationsltg NYM-J 3x4 anschließen;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0012;Installationsltg NYM-J 3x1,5 anschließen;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0001;Steuerleitung H05VV5-F 2x0,75 vorh.Rohr/Unterflurkanal;40,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0002;Steuerleitung H05VV5-F 2x0,75 anschließen;6,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0001;Kabel NYY-J 5x50RM vorh.Kabelrinne/Kanal;30,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0002;Kabel NYY-J 5x2,5RE vorh.Rohr/Unterflurkanal;30,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0003;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 50 RM, Cu-Zahl 2400, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0001;Schutzkontaktsteckdose 250V 16A Fußbodenversorgungseinheit Geräteeinbaudose Beschriftungsfeld IP2X;36,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0002;Schutzkontaktsteckdose 250V 16A Geräteeinbaukanal Geräteeinbaudose Beschriftungsfeld IP2X;6,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0003;Schutzkontaktsteckdose 250V 16A Hohlwand Gerätedose Beschriftungsfeld IP2X;35,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0004;Wippschalter einpolig Aus/Wechsel 10A 250V Hohlwand Gerätedose IP2X;3,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0005;Wippschalter einpolig Serien 10A 250V Hohlwand Gerätedose IP2X;3,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0006;Wippschalter 2polig Aus/Wechsel 10A 250V Hohlwand Gerätedose IP2X;2,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0007;Jalousieschalter 250V 10A Wipptaster Hohlwand Gerätedose IP2X;2,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0008;Bewegungsmelder 230V Infrarotsensor IP44 180Grad Reichweite 7m integr.Dämmerungsschalter 5-300lx mindAusschaltverzögerung 60 s;7,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0009;Gerätedose Kunststoff ID 70mm T 48mm IP2X UP Hohlwand;7,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0010;Verbindungsdose Kunststoff ID 70mm T 65mm IP2X UP Hohlwand;5,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0011;Deckenleuchtenanschlussdose Kunststoff Hohlwand;20,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0001;Anbauleuchte rechteckig LED 30W 3800 lm Abdeck. Opaldiffusor Gehäuse Alu IP54;2,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0002;Pendelleuchte rechteckig LED 44W 4700 lm Abdeck. Microprismen Gehäuse Alu IP20;11,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0003;Anbauleuchte rechteckig LED 30W 3260 lm Abdeck. Microprismen Gehäuse Alu IP20;4,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0004;Pendelleuchte rund LED 31W 2020 lm Abdeck. klar Gehäuse Alu IP20;10,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0005;Pollerleuchte/Stele Durchm 100 mm H 500 mm IP67 Gehäuse Alu Abdeck. Kunststoff opal glatt LED 40W;3,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0006;Anbauleuchte rund mindDurchm 200 mm maxDurchm 200 mm maxH 10 mm LED 30W mindLichtstrom 5300 lm maxAnschluss-P 48 W IP54 IK02 Gehäuse GFK Abdeckwanne Lichtstärkeverteil.sym. Einzelleuchte;2,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0001;Potentialausgleichsschiene Messing 7x2,5-25mm2/2x2,5-95mm2 Abdeck. 40x4mm;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0002;Installationsltg NYM-J 1x25 vorh.Rohr/Unterflurkanal;30,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0003;Installationsltg NYM-J 1x6 vorh.Rohr/Unterflurkanal;150,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0004;Installationsltg NYM-J 1x25 anschließen;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0005;Installationsltg NYM-J 1x6 anschließen;20,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0006;Erdungsbandrohrschelle Stahl niro 1x2,5mm2-2x16mm2 Durchm. bis 100mm;10,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0001;Brandschutzabschottung Leitungsanlagen Mörtelschott S90 0,05-0,1m2 bekriechbarer Raum Decke D 300mm;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0001;Kabel NYY-J 5x2,5RE vorh.Rohr/Unterflurkanal;30,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0002;Kabel NYY-J 5x2,5RE anschließen;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0001;Kabel NYY-J 5x2,5RE vorh.Rohr/Unterflurkanal;30,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0002;Kabel NYY-J 5x2,5RE anschließen;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0001;Verteiler Standschrank Einbau 19Zoll-Komponenten Stahlblech besch IP44 B 1m T 1m 42HE;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0002;Steckdosenleiste 230V Abzweigd. Überspannungsschutz 8Steckdosen;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0003;Patchfeld Spleißkassette LWL 1HE ausziehbar OS 2 LC 24Ausbrüche 24Kupplungen AnzPigtails 24 St;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0004;19Zoll-Patchfeld symm. 1HE 24x8 modular Kat.6A;2,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0005;LWL-Innenkabel Einmodenfaser J-DH 4x12E9/125 vorh.Kabelrinne/Kanal;30,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0006;Messung Cu PL Link Ea;26,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0007;Messung LWL OF10000;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0001;Datenkabel Horizontal-Steigbereich Kat.6A geschirmt 4x2xAWG23 vorh.Rohr/Unterflurkanal;268,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0001;Datenanschlussdose symm. Kat.6A 2Ausbrüche 2Ports Unterflurdose;2,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0002;Datenanschlussdose symm. Kat.6A 2Ausbrüche 2Ports Installationskanal;10,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0003;Datenanschlussdose symm. Kat.6A 2Ausbrüche 2Ports IP2X UP;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0001;Zutrittskontroll- und Zeiterfassungsterminal;1,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0002;Terminal für Zutrittskontrolle mit berührungsloser Identifikation,;2,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0003;Installationskabel symmetrisch J-Y(St)Y 2x2x0,8 Bd vorh.Rohr/Unterflurkanal;50,0;m;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0004;Installationskabel symmetrisch J-Y(St)Y 2x2x0,8 Bd Anschluss Türkontakt;2,0;St;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0001;Es ist eine vollständige Dokumentation der elektro- und netzwerktechnischen Ausrüstung zu liefern.;1,0;Psch;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83
+0001;Stundenlohnarbeiten durch Monteur/-in auf Anordnung des AG ausführen, der Verrechnungssatz umfasst sämtliche Aufwendungen wie Lohn- und Gehaltskosten, Nebenkosten, Zuschläge, sonstige Sozialkosten, Gemeinkosten, Wagnis und Gewinn.;20,0;h;gaeb;leistungsbeschreibungen/8d_LV Elektro_08.X83

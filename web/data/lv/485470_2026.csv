@@ -1,0 +1,829 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Die Werkstatt- und Montageplanung für die Baumaßnahme setzt sich im wesentlichen zusammen aus:;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Das Pflichtenheft dient als Grundlage für die gesamte Projektrealisierung.  Es umfasst die Bereiche:;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Die Gesamtinbetriebnahme der EMSR-Technik der Baumaßnahme gliedert sich grundsätzlich in folgende vier Schritte:;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;"Nach ""Auftragserteilung"" sind gemäß des Baufortschrittes folgende Unterlagen in einfacher Ausfertigung beim Auftraggeber einzureichen und zur Freigabe vorzulegen. Die Bauteilkennzeichnung der Betriebsmittel sowie die Variablenkodierung der Programmierung ist auf der Grundlage der auf der Anlage verw";1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;Zielgruppe Betriebspersonal. Das Personal erhält eine ausführliche Einweisung zur Handhabung der Gesamtanlage.;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;An- und Abtransport sämtlicher für die Baumaßnahme erforderlichen Geräte, Gerüste, Hebezeuge, Maschinen, Werkzeuge, Baubuden für Material und Personal einschließlich Sanitäranlagen mit allem erforderlichen Zubehör, sowie aller sonstiger Einrichtungen, die für die ordnungsgemäße Durchführung der ausg;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Räumen der Baustelleneinrichtung für sämtliche in der Ausschreibung aufgeführten Leistungen einschließlich Säuberung der Anlage und Bauwerke (besenrein) nach Beendigung der Bauarbeiten und die Wiederherstellung des übrigen Geländes und der Zufahrtswege in ihren ursprünglichen Zustand.;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;"für sämtliche in der Ausschreibung aufgeführten Leistungen aus nicht vom Auftragnehmer verursachten Gründen gemäß Position ""Vorhalten der Baustelleneinrichtung""";1,0;Wo;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;über den geplanten Durchführungszeitraum für sämtliche in der Ausschreibung aufgeführten Leistungen, gemäß Terminplan.;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Kurzschluss- und Lastflussberechnung der in diesem Gewerk angebotenen Schaltanlagen gem. VDE 0102, als Grundlage zur Herstellung der Anlagenselektivität, unter Berücksichtigung der;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Thermische Überprüfung der neu gelieferten Schaltanlagen mit folgenden Merkmalen:;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Prüfen der Installation der gesamten installierten Leistungen gemäß DIN VDE 0100 Teil 600:;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Es  ist unter Berücksichtigung der Berechnungsverfahren gemäß DIN EN 60079-14 der Nachweis der Eigensicherheit von Ex-i geschützten Stromkreisen zu erbringen und zu dokumentieren. Die Dokumentation beinhaltet im Wesentlichen:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;Nach Auftragsvergabe werden unter Berücksichtigung der verfahrenstechnischen und maschinentechnischen Anforderungen bauseits die einzelnen Sicherheitsfunktionen einschl. des erforderlichen Performance Levels spezifiziert.;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;der neu erstellten oder erweiterten Blitzschutz-, Erdungs- und Hauptpotentialausgleichsanlage unter Vorhaltung von Spezialmeßgeräten gemäß den VDE-Vorschriften 0100 Teil 410/6.1.2., Teil 540/ 1 - 4, einschließlich Blitzschutzprüfbuch gem. VDE 0185 mit Eintragung des Hauptpotentialausgleiches.;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;Durchführen nachfolgend beschriebener Messungen für die Kabelstrecke eines LWL-Kabels mit 12 Einzelfasern nach den Verlegen und betriebsfertigen Anschluss der Lichtwellenleiter.;4,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Qualifikation Dipl.-Ing. für Projektierungs- und Inbetriebnahmetätigkeiten.;20,0;Std;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Qualifikation Techniker / Dipl.-Ing. für Programmierungstätigkeiten (SPS;20,0;Std;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;CAE-Konstrukteur für das Einarbeiten von Änderungen und das Erstellen der Elektrodokumentation/Stromlaufpläne.;20,0;Std;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Pauschale für ein Baustellenan- und Abfahrt auf gesonderte Forderung der Bauleitung, inkl. der Kosten für Fahrzeit, Kilometerpauschale sowie sämtlicher zusätzlicher Nebenkosten.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;Qualifikation Meister / Techniker.;40,0;Std;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Qualifikation Facharbeiter Elektro / Metall.;40,0;Std;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;1-feldriger Schaltschrank in stahlblechgekapselter Ausführung mit folgender Ausstattung:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;1-feldriger Schaltschrank in stahlblechgekapselter Ausführung mit folgender Ausstattung:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;1-feldriger Schaltschrank in stahlblechgekapselter Ausführung mit folgender Ausstattung:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Der umgebaute Niederspannungsschaltraum befindet sich im bestehenden Werkstattgebäude EG.;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;1-feldriger Schaltschrank in stahlblechgekapselter Ausführung mit folgender Ausstattung:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Schaltschranklüfter zum Einbauen in v. g. Schaltschränke einschl. Motorschutzschalter, Filtereinsätze, Klein- und Befestigungsmaterial, erforderliche Ausstanzungen an den Schaltschränken etc.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Schaltschrankthermostat zur Steuerung von Lüftern, Heizungen und Wärmetauschern sowie zur Überwachung der Schaltschrank-Innentemperatur;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Einschub Kompakt-Leistungsschalter mit Motorantrieb für den Anlagenschutz, 3-polig, in Festeinbautechnik als Einspeiseschalter, für den unabhängigen Überstromzeitschutz, mit folgenden Merkmalen:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Adapter zur Aufnahme  Kompakt-Leistungsschalter montiert auf das Sammelschienensystem 185mm Verbindung oben / unten, Schraubkontaktierung mit folgenden Merkmalen:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Anschlussleiste für Kabelanschluss 3 polig oben / unten mit folgenden Merkmalen:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;NH-Lasttrennschalter mit Sicherungen in Leistenform Gr.3 mit Sicherungsüberwachung und Stromwandlern, mit folgenden Merkmalen:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;NH-Lasttrennschalter mit Sicherungen in Leistenform Gr.1 mit Sicherungsüberwachung und Stromwandlern, mit folgenden Merkmalen:;3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;NH-Lasttrennschalter mit Sicherungen in Leistenform Gr.00 mit Sicherungsüberwachung und Stromwandlern, mit folgenden Merkmalen:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;Stromwandler zur Erfassung des Strangstromes der Einspeisung, zur Montage auf die Sammelschiene, mit:;6,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+80;Stromwandler zur Erfassung des Strangstromes der Einspeisung, zur Montage auf die Sammelschiene, mit:;6,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+90;Multifunktionales Leistungsmessgerät mit Profinet zur Messung von Strom, Spannung, Wirk-, Blind- und Scheinleistung, Leistungsfaktor, Netzfrequenz, Energie, Klirrfaktor und Oberschwingungen Bidirektional arbeitende rückstellbare Zähler für Bezug und Lieferung von Wirk- und Blindarbeit müssen für die;4,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+100;Spannungswächterrelais zur 3phasigen Überwachung der Netzspannung, mit folgenden Leistungsmerkmalen:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;nach VDE 0570, zur Versorgung von Steuerungen entsprechend EN60204, zum Einsatz als Schutztrennung gemäß VDE100 einsetzbar zum Aufbau von SELV und PELV Stromkreisen geeignet.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Unterbrechungsfreie Spannungsversorgung zur Versorgung der MSR-;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Unterbrechungsfreie Spannungsversorgung, ausgeführt als redundande batteriegepufferte Gleichstromversorgung, im Parallelbetrieb mit  Batterien, bestehend aus:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Leitungsschutzschalter Typ C, 1-polige Ausführung, inkl. Hilfskontakt und Potentialklemmen;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Leitungsschutzschalter Typ C, 2-polige Ausführung, inkl. Hilfskontakt und Potentialklemmen;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;FI-Schutzschalter 40 A, 2-polig, 30 mA,Typ A, inkl. Hilfskontakt;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;mit aktiver Überstrombegrenzung, Überlast- und Kurzschlussschutz;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;mit aktiver Überstrombegrenzung, Überlast- und Kurzschlussschutz;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Geräteadapter für Nennstrom bis 160 A zur Aufnahme der Motorschutzschalter oder Lasttrenner direkt auf die Sammelschiene, Montage durch Aufrasten auf die Sammelschiene komplett mit allem notwendigem Kleinmaterial.;13,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Leistungsschalter für den Motorschutz,;3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Leistungsschalter für den Motorschutz,;8,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Leistungsschalter für den Motorschutz,;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;Leistungsschütz, nach DIN VDE 0660, IEC 158, mit:;8,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Leistungsschütz, nach DIN VDE 0660, IEC 158, mit:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;Stromwandler mit Messumformer zur Erfassung und Wandlung sinusförmiger Strangströme, zur Montage auf die Sammel- bzw. Hutschiene, mit:;8,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Technische Daten:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Technische Daten:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Koppelrelais zur Signalanpassung und Vervielfältigung;34,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Koppelrelais zur Signalanpassung und Vervielfältigung;13,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Koppelrelais zur Signalanpassung und Vervielfältigung;34,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Koppelrelais zur Signalanpassung und Vervielfältigung;13,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;nach DIN VDE 0660, IEC 373 mit:;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Meldeleuchten, zum Einbau in die Schaltschranktür;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;Leuchtdrucktaster, zum Einbau in die Schaltschranktür;10,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+80;Drucktaster, zum Einbau in die Schaltschranktür;10,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+90;Drehschalter, zum Einbau in die Schaltschranktür;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+100;Drehschalter (H-0-A), zum Einbau in die Schaltschranktür;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+110;Ex i-NAMUR-Trennschaltverstärker, 1-kanalig. zum Betrieb von Näherungsinitiatoren und Schaltern im Ex-Bereich. Das Signal wird über Relaisausgang (Schließer) in den sicheren Bereich übertragen, geeignete für den Anschluss von eigensicheren Geräten der Zone 0 - 2, Fehlererkennung (LFD), 3-Wege-Trennu;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+120;Ex i-NAMUR-Trennschaltverstärker, 1-kanalig. zum Betrieb von analogen Messkreisen im Ex-Bereich, geeignete für den Anschluss von eigensicheren Geräten der Zone 0 - 2, 3-Wege-Trennung;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Not-Aus-Schaltgerät, nach DIN EN 60947-5-1, mit Zulassung der BG oder TÜV, zur Überwachung der Not-Aus-Kreise, in folgender Ausführung:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Erweiterung für vorgenanntes Not-Aus-Schaltgerät  mit 5 Schaltglieder Ö + S, ansonsten wie in vorgenannter Position.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Not-Aus-Pilzschlagtaster mit rundem Tastkopf, Ausführung gem.VDE;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;zum Schutz der Einspeisung vor Blitzstrom und Überspannung, geeignet für die Blitzschutzklasse II;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;zum Schutz von in den Außenbereich geführte 3x400 VAC Versorgungsleitungen, (Motore / Außenschränke);3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;zum Schutz von in den Außenbereich geführte 230 VAC Versorgungsleitungen,;3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;zum Schutz von in den Außenbereich geführte 24 VDC Versorgungsleitungen,;10,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;zum Schutz von in den Außenbereich geführte MSR Leitungen, bestehend aus Schutzstecker und Basiselement mit integrierter Statusanzeige, für einen 2-adrigen erdpotenzialfrei betriebenen Signalkreis, z. B. 0(4) ... 20 mA Stromschleife, zur Montage auf Hutschiene.;10,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;zum Schutz von in den Außenbereich geführte MSR Leitungen, bestehend aus Schutzstecker und Basiselement mit integrierter Statusanzeige für einen 4-adrigen erdpotenzialfrei betriebenen Signalkreis für 4-Leiter-Messungen z. B. von Temperaturen und Gewichten, zur Montage auf Hutschiene.;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;zum Schutz von in den Außenbereich geführte MSR Leitungen, bestehend aus Schutzstecker und Basiselement bestehend aus Schutzstecker und Basiselement, mit integrierter Statusanzeige für zwei Signaladern mit gemeinsamem Bezugspotenzial, z. B Digital IN/OUT.;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+80;zum Schutz von in den Außenbereich geführte Ethernet Leitungen,;6,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Das Anwenderprogramm zur Steuerung der Anlagenbereiches mit allen Aggregaten, Messsonden, Schnittstellen und der notwendigen Verknüpfung der Einzelsignale (1 Prozessvariable).;67,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Anwenderprogrammierung für eine analoge Prozessvariable, ansonsten wie in vorgenannter Position.;48,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Datenkopplung zu anderen Automatisierungsstationen mittels S7-Kommunikation über Industrial Ethernet mit folgenden Leistungen:;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Datenkopplung zu maschinengebundenen Steuerungen (z.B Polymeranlage etc.) und / oder externen Bedienelementen über Industrial Ethernet, Profinet o.ä mit folgenden Leistungen:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;Alle erforderlichen Parametrierungs- und Programmierungsarbeiten, die erforderlich sind, um das vollgrafische Bedienpanel über die Profinet- schnittstelle der CPU in das SPS Programm derart einzubinden, die eine Visualisierung und Bedienung (analog zur zentralen Prozessleittechnik) des über die SPS ;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Konfiguration und der Feldebene, Netzwerkstruktur und Einbindung des Automatisierungssystems in ein vorhandenes übergeordnetes Prozessleitsystem. Die Einbindung in die bestehende Prozessleittechnik ist in Zusammenarbeit mit dem Lieferanten der Prozessleittechnik durchzuführen;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;SIMATIC ET 200SP, PROFINET, 2-Port Interface-Modul IM 155-6PN/2 High Feature, 1 Steckplatz für BusAdapter, max. 64 Peripheriemodule und 16 ET 200AL Module, S2-Redundanz, Multi Hot Swap, 0,25ms, taktsynchroner Betrieb, optionale PN-Zugentlastung, inklusive Server-Modul;4,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;SIMATIC ET 200SP, Busadapter BA 2xRJ45,;4,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;zur Erfassung von potentialfreien und Dreileiter Sensorausgängen.;16,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;SIMATIC ET 200SP, digitales Ausgangsmodul, DQ 8x 24VDC/0,5A High Feature, Source Output PNP, P-schaltend, passend für BU-Typ A0, Farbcode CC02, Kanal-Diagnose für: Kurzschluss und Drahtbruch, Versorgungsspannung, Kanalfehler-LED;16,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;SIMATIC ET 200SP, analoges HART Eingangsmodul, AI 4XI 2-Wire HART high Feature passend für BU-Typ A0, A1, Farbcode CC03, Kanal-Diagnose, 16bit, +/-0,3%,;8,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Analog-Ausgangskarte mit 8 AO, für die Speicherprogrammierbare Steuerung (SIMATIC S7-1500 und ET-200MP).;8,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;SIMATIC ET 200SP, analoges Ausgangsmodul, AQ 4XU/I Standard, passend für BU-Typ A0, A1, Farbcode CC00, Modul-Diagnose, 16 Bit, +/-0,3%;8,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+80;Automatisierungsgerät, bestehend aus einer S7-Profilschiene mit Erdungsanschluss, einer Stromversorgungsbaugruppe, sowie einer Zentralbaugruppe (CPU), mit folgender Ausstattung:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+90;zum Einbau in SIMATIC S7-1500 Automatisierungssysteme, im Einzelnen bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+100;Dezentrale Peripherie ET 200MP zum Anschluss von bis zu 30 ET-200MP Baugruppen an ein Zentralgerät vom Typ SIMATIC S7-1500.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+110;Dezentrale Peripherie ET 200MP zum Anschluss von bis zu 30 ET-200MP Baugruppen an ein Zentralgerät vom Typ SIMATIC S7-1500.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+120;Systemstromversorgung für Einbau in Grundmodul oder der dezentralen Peripherie ET200MP, versorgt den Rückwandbus der S7-1500 mit Betriebsspannung, im Einzelnen bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+130;Touchpanel zum Einbau in den Schaltschrank der NSUV, im Einzelnen bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Erweiterung Datenmodell;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Erweiterung Archivierung;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Erweiterung Protokollierung;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Erstellung Prozessbilder;10,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;Änderungsprozessbilder;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;"LWL-Rangierverteiler als 19""-Spleiß-Box, montiert im EDV-Schrank, zur Umsetzung von bis zu 2 x 12 LWL-Fasern zweier Erdkabel auf Frontkupplungen mit folgender Ausstattung:";2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;LWL Duplex-Patchkabel SC/SC 50/125 zur Verbindung zwischen Spleißbox und Switch mit folgenden Eigenschaften:;4,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Datenleitung Industrial Ethernet Cat.7 für Festverlegung mit folgenden Eigenschaften:;50,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Patchkabel Category 6-600MHz;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;Patchkabel Category 6-600MHz;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Patchkabel Category 6-600MHz;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;Patchkabel Category 6-600MHz;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+80;Cat.6a Netzwerkdose für Hutschienenmontage mit folgenden Eigenschaften:;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+90;Cat.5 Netzwerkdose für die Wandmontage im Außenbereich mit folgenden Eigenschaften:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+100;Industriestecker Ethernet für den Anschluss von Endverbrauchern im Außenbereich mit folgenden Eigenschaften:;6,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+110;Kompakter Industrial Ethernet managed Switch mit folgenden Eigenschaften:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+120;Kompakter Industrial Ethernet managed Switch mit folgenden Eigenschaften:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Digitaler Tauchsensor mit integrierter AD-Elektronik geeignet für die Messung von Trockensubstanz (TS) und Trübung in Kommunal- und Industrieabwasser, mit automatischer Wischerreinigung, wasserdichte Schraub- oder Steckverbindung.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Radarsensor, zur kontinuierlichen Füllstandsmessung von Flüssigkeiten, mit integrierter Hornantenne, Vor-Ort-Elektronik und Messwertanzeige im Anschlussgehäuse, mit folgenden Eigenschaften:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;zur Befestigung einer Radar-Höhenstandmessung an/in offenen Behältern und Becken.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Dreistabsonde in Kompaktbauweise, mit Messelektrode, Auswertegerät mit Ausgangsrelais und Testschaltung zur Zweipunktregelung von Pumpen und/oder als Füllstandalarmierung (min/max) .;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Überfüllsicherung als Vibrationssonde in Kompaktbauweise, zugelassen für den Betrieb in Ex-Bereichen der Zone 1 (Zündschutzart EEx ia IIC T6), mit Auswertegerät, 1 Ausgangsrelais und Messelektrode und Testschaltung.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Druckmesswertaufnehmer, Kompaktgerät, kontinuierlich arbeitend, mit Keramiksensor, nach dem kapazitiven Messprinzip, mit Temperaturkompensation, Selbstüberwachung und Vor-Ort-Elektronik mit Messwertanzeige im Anschlussgehäuse.;4,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Pt100-Widerstandsthermometer mit folgenden Eigenschaften:;3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Pt100-Widerstandsthermometer bestehend aus einer Tauchhülse sowie einem Temperaturwiderstandsthermometer mit folgenden Eigenschaften:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Widerstandsthermometer zur Umgebungstemperaturmessung;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Die Messgerätebeschriftung erfolgt mittels graviertem Edelstahlschild, das dauerhaft am Gerät mittels Edelstahldraht oder Nieten zu befestigen ist. Die Beschriftung beinhaltet das Anlagenkennzeichen und die Benennung gemäß Messstellenliste.;15,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Messeinrichtungsständer zur Aufnahme der Messeinrichtungen in Edel-;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Kabelrinne, Edelstahl 200 x 110 mm;6,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Kabelrinne, Edelstahl 600 x 110 mm;6,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Kabelrinne, T-Stück, Edelstahl 200 x 110 mm;4,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Kabelrinne, T-Stück, Edelstahl 600 x 110 mm;4,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;Kabelleiter, Edelstahl, 200 x 60;12,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Kabelleiter, Edelstahl, 400 x 60;6,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;Kabelleiter, Edelstahl, 600 x 60;6,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+80;Hängestiel aus Edelstahl, Werkstoff Nr. 1.4301, U-Profil 40 x 60 x 40 mm mit angeschweißter Kopfplatte, zur Befestigung an waagerechten oder senkrechten Betondecken und Stahlträgern.;6,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+90;Wandausleger us Edelstahl, Werkstoff Nr. 1.4301 als Hilfskonstruktion, bis zu einer Länge von 800 mm, zum abfangen von Kabelzuführungen, einschl. allem notwendigen Kleinmaterial.;6,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+100;Starres Stangen-Installationsrohr aus Edelstahl (1.4301) in sehr schwerer Ausführung für die Aufputzinstallation im industriellen Umfeld, mit folgenden Eigenschaften:;45,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+110;Starres Stangen-Installationsrohr aus Edelstahl (1.4301) in sehr schwerer Ausführung für die Aufputzinstallation im industriellen Umfeld, mit folgenden Eigenschaften:;30,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+120;Starres Stangen-Installationsrohr aus Kunststoff in schwerer Ausführung für die Aufputzinstallation im industriellen Umfeld, mit folgenden Eigenschaften:;21,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+130;Starres Stangen-Installationsrohr aus Kunststoff in schwerer Ausführung für die Aufputzinstallation im industriellen Umfeld, mit folgenden Eigenschaften:;21,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+140;Edelstahl-Abdeckung von Kabeltrassen (Gewicht ca. 20-30kg, Maße (BxLxH) ca. 50x40x30cm, öffnen und verschließen. Die Abdeckungen befinden sich im Außen- und Innenbereich vom KA Rendsburgr, im Einzelnen bestehend aus:;8,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+150;Schachtabdeckung von Kabelschacht befahrbar durch LKW oder PKW, Gewicht ca. 250 kg, Maße (BxLxH) 	ca. 95x95x12cm, öffnen und verschließen. Die Kabelschächte befindet sich auf dem Gelände der KA Rendsburg, im Einzelnen bestehend aus:;8,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;NYY-J 1x 240 mm²;1200,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;NYY-J 1x 120 mm²;100,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;NYY-J 5x6 mm²;100,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;NYY-J 5x10 mm²;100,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;NYY-J 5x35 mm²;200,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;NYY-J 5x95mm² RM SW;15,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;NYY-J 5x70mm² RM SW;25,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+80;A-2Y(L)2Y 2x2x0,8 mm;500,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+90;YSLY-J 4G 2,5 mm²;150,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+100;YSLY-J BK 4G 2,5 mm², schwarz, uv-beständig;150,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+110;YSLY-J BK 12G1,5 mm², schwarz, uv-beständig;150,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+120;YSLY-J 3G 1,5 mm², robust;150,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+130;YSLY-J 4G 1,5 mm², robust;150,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+140;YSLY-J 4G 2,5 mm², robust;150,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+150;YSLY-J 4G 10 mm², robust;150,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+160;YSLY-J 4G 35 mm², robust;150,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+170;YSLCY-J BK 4G2,5 mm², 0,6/1 kV, schwarz, uv-beständig;150,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+180;YSLCY-J BK 4G10 mm², 0,6/1 kV, schwarz, uv-beständig;150,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;"A-Optische Außenkabel: A-DQ(ZN)B2Y; feste Verlegung; Erdverlegung, Glasgarne; Polyethylen; schwarz, uv-beständig";400,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Datenleitung Industrial Ethernet Cat 6, gemäß PROFInet Guideline + IEC 61158-2 für feste Verlegung.;635,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Datenleitung Industrial Ethernet Cat 6, gemäß PROFInet Guideline + IEC 61158-2 für feste Verlegung.;250,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Brandmeldekabel mit Funktionserhalt, in Anlehnung an DIN VDE 0815, flammenwidrig, halogenfrei, geschirmt, Adern zu Paaren und je 4 Paare zu Bündeln verseilt.;150,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Einseitiger Anschluss Kabel/Leitungen 3x 2,5 mm²;10,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;EinseitigerAnschluss Kabel/Leitungen 4x 25 mm²;10,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Einseitiger Anschluss Kabel/Leitungen 5x 2,5 mm²;6,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Anschluss für Kabel und Leitungen mit bis zu 12 Adern und einen Querschnitt bis zu 1,5 mm²;6,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;Kabelanschluss für ein Netzwerk-Verlegekabel Cat.7 mit Auflegewerkzeug auf eine LSA+ Leiste oder Netzwerksteckdose, einschließlich allem notwendigen Kleinmaterial.;10,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Die Kabelbeschriftung erfolgt mittels Kabelbeschriftungsschild in witterungs-, uv-, öl- und chemikalienbeständiger Ausführung einschließlich UV-beständigen Kabelbindern aus Polyamid. Kabelbinder mit Stahlverschluss aus korrosionsbeständigem, nicht magnetischem Stahl.;320,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Rettungszeichenleuchte als Einzelbatterieleuchte gemäß DIN 4844 zur Kennzeichnung der Fluchtrichtung im Gefahrenfall mit:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;LED Feuchtraumleuchte mit folgenden Eigenschaften:;3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;zur Energieversorgung von Starkstrom- und Kommunikationsgeräten an Arbeitsplätzen. Für Geräteeinbau geeignet, einschl. Kabelhalteklammern und Befestigungsmaterial liefern und auf verlegefertigem Untergrund in Teillängen anbauen:;6,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;für Brüstungskanalsystem, geeignet für Einbaugeräte mit Abdeckungen (Kombi-Rahmen), Steckdosen und Schalter der Hersteller bestehend aus:;10,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;zur Montage in Brüstungskanal:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Zweifach Datensteckdosen (RJ-45) aus Kunststoff zur Montage in Brüstungskanal mit zugehörigem Rahmen für ortsveränderlichen Anschluss von Dateneinrichtungen. Buchsen geschirmt, Gehäuse geschirmt, mit Kabelzugentlastung gleiche Farbe wie Brüstungskanal.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;für die Aufputzmontage, mit schraublosen Anschlußklemmen, allseitiger Leitungseinführung.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+80;für die Aufputzmontage, mit schraublosen Anschlußklemmen, allseitiger Leitungseinführung.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+90;für die Aufputzmontage, mit schraublosen Anschlußklemmen, allseitiger Leitungseinführung.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+100;Thermostat Aufputzmontage zur Steuerung von Ventilatoren in Abhängigkeit der Lufttemperatur. Zur Schaltung von Drehstrom-Ventilatoren.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+110;CEE-Steckdosenkombination nach DIN EN 61439, mit folgenden Eigenschaften und folgender Ausstattung:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+120;CEE-Steckdosenkombination nach DIN EN 61439, mit folgenden Eigenschaften und folgender Ausstattung:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+130;LED Handscheinwerfer mit Notlichtfunktion;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+140;Dauerdrucklöscher;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+150;Kombiset bestehend aus Werkzeugschrank, Schreibpult und Rolluntersatz zur Aufnahme der Dokumentation in Schalträumen.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;für den vorgesehenen Doppelboden, haarbesenrein säubern, wobei Gips- und Mörtelreste zu entfernen sind.;18,5;m2;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;des Rohfußbodens zur Erzielung einer abriebfesten Rohbodenoberfläche mit einer 2 Komponentenmasse auf PU-Basis, abgestimmt mit dem Stützenkleber, einschließlich der Wandabwicklung liefern und aufbringen.;18,5;m2;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;für den NS-Raum, zur flexiblen Aufstellung von Schaltanlagen sowie Abdeckung von Elektroinstallationen, jederzeit zerstörungsfrei zu öffnen.;12,5;m2;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Gebrauchte Doppelbodenplatten im Raster 600x600 mm als Übergangslösung während der Bauphase und anschließender Entsorgung.;12,5;m2;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;aus dem gleichen Material wie vor liefern.;3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;"für Schaltschrankreihe Belastungswert ca. 800 kg/m² Doppelfußboden gemäß Aufstellungsplan """;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;"für Schaltschrankreihe Belastungswert ca. 800 kg/m² Doppelfußboden gemäß Aufstellungsplan """;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+80;zum Aufnehmen der Doppelbodenplatten liefern, einschließlich;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;LED-Rohrleuchte geeignet für den Einsatz in der Ex-Zone 1 sowie im Außenbereich mit folgenden Eigenschaften:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;LED-Flutlichtstrahler für den Einsatz im Außenbereich mit folgenden Eigenschaften:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;LED Mastauf- und Ansatzleuchte mit Leuchtengehäuse und Mastanbin- dung aus pulverbeschichteten, widerstandsfähigen Aluminium-Druckguss.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Stahl - Aufsatzmast gerade nach DIN EN 40.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;Lichtmastsicherungskasten mit Berührungsschutz nach DIN VDE 0636 0606, Schutzart IP 42, mit Sicherungssockel 2 x E 14 und Durchgangsverdrahtung bis 16 mm² und Abzweig bis 10 mm².;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Vor-Ort-Steuerstelle für die Außenmontage, direkt beim Aggregat, für einen Ein-Richtungs-Antrieb zur hardwaremäßigen Ansteuerung des Antriebes mit folgender Ausstattung:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Vor-Ort-Steuerstelle für die Außenmontage, direkt beim Aggregat, für einen FU-Antrieb zur hardwaremäßigen Ansteuerung des Antriebes mit folgender Ausstattung:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Vor-Ort-Steuerstelle für die Außenmontage, direkt beim Antrieb, für Auf- / Zu-Ansteuerung zur hardwaremäßigen Ansteuerung des Antriebes mit folgender Ausstattung:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Notaus-Taster als Komplettgerät rot/gelb im Kunststoffgehäuse mit folgender Ausstattung:;3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Reparaturschalter/Wartungsschalter zur Abschaltung von Antrieben und Aggregaten bei Reparatur und Wartung, mit folgenden Merkmalen:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Reparaturschalter/Wartungsschalter zur Abschaltung von Antrieben und Aggregaten bei Reparatur und Wartung, mit folgenden Merkmalen:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Reparaturschalter/Wartungsschalter zur Abschaltung von Antrieben und Aggregaten bei Reparatur und Wartung, mit folgenden Merkmalen:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Reparaturschalter/Wartungsschalter zur Abschaltung von Antrieben und Aggregaten bei Reparatur und Wartung, mit folgenden Merkmalen:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Vor-Ort-Steuerständer zur Aufnahme von 1 Vor-Ort-Steuerstelle und 1 Notaus-Schalter in Edelstahl 1.4571 o. 1.4404, Stärke 3 mm, bestehend aus:;3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Vor-Ort-Haube zur Aufnahme bis zu 4 Vor-Ort-Steuerstellen oder Klemm-;3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;mit folgender Ausstattung:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Kabelabzweigkasten für den Einsatz im Außenbereich mit folgender Ausstattung:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;mit folgender Ausstattung:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Klemmkasten als Übergangskasten für Pumpen, Rührwerke etc., mit eingebauter Klemmleiste für die Leistungskabel, Verschraubungen mit Zugentlastung einschl. nichtrostendem Befestigungsmaterial und einem Resopalschild (AKZ und Langtext).;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;Klemmkasten als Übergangskasten für Pumpen, Rührwerke etc., mit eingebauter Klemmleiste für die Leistungskabel, Verschraubungen mit Zugentlastung einschl. nichtrostendem Befestigungsmaterial und einem Resopalschild (AKZ und Langtext).;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+80;Klemmkasten als Übergangskasten für Pumpen, Rührwerke etc., mit eingebauter Klemmleiste für die Leistungskabel, Verschraubungen mit Zugentlastung einschl. nichtrostendem Befestigungsmaterial und einem Resopalschild (AKZ und Langtext).;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+90;Kernbohrung in Stahlbetondecken oder -wänden bauwerksschonend mit Diamantbohrgerät, Durchmesser bis 100 mm, bis 400 mm Stärke. Incl. Versiegelung der Bohrflächen und Entsorgung des Bohrkerns.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+100;sonst wie Position vor, jedoch 150/400 mm;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+110;Wand-Durchbruch in Mauerwerk oder Beton, Stärke bis 400 mm,;4,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+120;Geschlossene Kabeleinführungen in gas- und wasserdichter Ausführung, bestehend aus:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+130;sonst wie Position vor, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+140;Füllmodule für bauseitig Gasdichte Durchführung für ein Fach Typ GH 6x X  / Ex, um die Kabel in die Niederspannungsschaltanlage Schlammentwässerungsgebäude zu führen. Die Füllmodule sind entsprechend den Erfordernissen auszulegen:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+150;Füllmodule für bauseitig Gasdichte Durchführung für ein Fach Typ GH 6x X  / Ex, um die Schläuche und Rohre in die Niederspannungsschaltanlage Schlammentwässerungsgebäude zu führen. Die Füllmodule sind entsprechend den Erfordernissen auszulegen:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+160;Systemdeckel für Systemdurchführung HSI 150 mit Schrumpfeinsätzen für folgende Verkabelung:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+170;Brandschottmasse zur Abschottung von Durchbrüchen und Maueröffnungen mittels Hartschottmasse feuerbeständig für 90 Minuten.;2,0;m2;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+180;Kabeldurchführung mit Segmentunterteilung für Systemdurchführung HSI 150;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+190;Kunststoffflansch zur nachträglichen Montage an Außenwänden mit Kernbohrungen, zur Aufnahme von HSI 150  Systemkomponenten.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+200;Stecker zum Anschluss von Sensorik bestehend aus :;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+210;Stecker zum Anschluss von Ventilen bestehend aus :;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;NYY-J 1x 16 mm²;100,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;NYY-J 1x 50 mm²;200,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Einseitiger Anschluss Kabel/Leitungen 1x 6 mm²;10,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Einseitiger Anschluss Kabel/Leitungen 1x 50 mm²;10,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;Potentialausgleichsschiene für den Schutz- und Funktionspotentialausgleich nach DIN VDE 0100 Teil 410/540 und den Blitzschutz-Potentialausgleich nach DIN EN 62305-3 mit folgenden Eigenschaften:;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Potentialausgleichsschiene für den Schutz- und Funktionspotentialausgleich nach DIN VDE 0100 Teil 410/540 und den Blitzschutz-Potentialausgleich nach DIN EN 62305-3 mit folgenden Eigenschaften:;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;"Edelstahlseil flexibel bis 400mm lang aus nichtrostendem V4A Seil (W 1.4571; 1.4401 oder 1.4404), Seilquerschnitt min. 4 mm², Seilaufbau 7 x 19, mit 2 hydraulisch aufgepressten geschlossenen V4A-Rohrkabelschuhen (Pressung durch vom Hersteller geforderte Systempresszange für Edelstahlpresskabelschuhe";5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+80;"Edelstahlseil flexibel bis 400mm lang aus nichtrostendem V4A Seil (W 1.4571; 1.4401 oder 1.4404), Seilquerschnitt min. 16 mm², Seilaufbau 7 x 19, mit 2 hydraulisch aufgepressten geschlossenen V4A-Rohrkabelschuhen (Pressung durch vom Hersteller geforderte Systempresszange für Edelstahlpresskabelschuh";5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+90;"Edelstahlseil flexibel bis 400mm lang aus nichtrostendem V4A Seil (W 1.4571; 1.4401 oder 1.4404), Seilquerschnitt min. 50 mm², Seilaufbau 7 x 19, mit 2 hydraulisch aufgepressten geschlossenen V4A-Rohrkabelschuhen (Pressung durch vom Hersteller geforderte Systempresszange für Edelstahlpresskabelschuh";5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+100;Erdungsbandrohrschelle mit folgenden Eigenschaften:;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+110;Erdungsbandrohrschelle mit folgenden Eigenschaften:;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+120;Erdungsbandrohrschelle mit folgenden Eigenschaften:;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+130;Erdungsbandrohrschelle mit folgenden Eigenschaften:;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+140;aus verz. Stahl zum Anschluss an Stahlkonstruktionen durch Nieten/Schrauben, einschl. Bohren, Schweißen, Nieten/Schrauben.;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+150;aus Material 1.4301 zum Anschluss an Stahlkonstruktionen durch Nieten/Schrauben, einschl. Bohren, Schweißen, Nieten/Schrauben.;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+160;Anschlussklemme (schwere Ausführung) in Edelstahl 1.4301 mit Klemmstein zum Anschluss an Stahlkonstruktion. Anschluss längs und quer, Klemmbereich 5-18 mm.;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+170;Verbinder mit Druckwanne zum Anschluss von Rundleitern an Potentialausgleichsschienen mit folgenden Eigenschaften:;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Fangstange zum Schutz von Dachaufbauten nach DIN EN 62561-2;4,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Potentialausgleichsschiene für den Schutz- und Funktionspotentialausgleich nach DIN VDE 0100 Teil 410/540 und den Blitzschutz-Potentialausgleich nach DIN EN 62305-3 mit folgenden Eigenschaften:;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;"Edelstahlseil flexibel bis 400mm lang aus nichtrostendem V4A Seil (W 1.4571; 1.4401 oder 1.4404), Seilquerschnitt min. 4 mm², Seilaufbau 7 x 19, mit 2 hydraulisch aufgepressten geschlossenen V4A-Rohrkabelschuhen (Pressung durch vom Hersteller geforderte Systempresszange für Edelstahlpresskabelschuhe";7,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;"Edelstahlseil flexibel bis 400mm lang aus nichtrostendem V4A Seil (W 1.4571; 1.4401 oder 1.4404), Seilquerschnitt min. 16 mm², Seilaufbau 7 x 19, mit 2 hydraulisch aufgepressten geschlossenen V4A-Rohrkabelschuhen (Pressung durch vom Hersteller geforderte Systempresszange für Edelstahlpresskabelschuh";5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;"Edelstahlseil flexibel bis 400mm lang aus nichtrostendem V4A Seil (W 1.4571; 1.4401 oder 1.4404), Seilquerschnitt min. 50 mm², Seilaufbau 7 x 19, mit 2 hydraulisch aufgepressten geschlossenen V4A-Rohrkabelschuhen (Pressung durch vom Hersteller geforderte Systempresszange für Edelstahlpresskabelschuh";5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Erdungsbandrohrschelle mit folgenden Eigenschaften:;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;Erdungsbandrohrschelle mit folgenden Eigenschaften:;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+80;Erdungsbandrohrschelle mit folgenden Eigenschaften:;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+90;Erdungsbandrohrschelle mit folgenden Eigenschaften:;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+100;aus verz. Stahl zum Anschluss an Stahlkonstruktionen durch Nieten/Schrauben, einschl. Bohren, Schweißen, Nieten/Schrauben.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+110;aus Material 1.4301 zum Anschluss an Stahlkonstruktionen durch Nieten/Schrauben, einschl. Bohren, Schweißen, Nieten/Schrauben.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+120;Anschlussklemme (schwere Ausführung) in Edelstahl 1.4301 mit Klemmstein zum Anschluss an Stahlkonstruktion. Anschluss längs und quer, Klemmbereich 5-18 mm.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+130;Verbinder mit Druckwanne zum Anschluss von Rundleitern an Potentialausgleichsschienen mit folgenden Eigenschaften:;4,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+140;Edelstahlrunddraht für den Potentialausgleich in folgender Ausführung:;25,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+150;Edelstahlrunddraht für den Potentialausgleich in folgender Ausführung:;25,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+160;Edelstahlseil für den Potentialausgleich in folgender Ausführung:;25,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+170;Edelstahlseil für den Potentialausgleich in folgender Ausführung:;25,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+180;Edelstahlseil für den Potentialausgleich in folgender Ausführung:;25,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+190;Wanddurchführung zur nachträglichen, druckwasserdichten Durchführung eines Potentialausgleichsleiters durch eine Gebäudewand, bzw. Fundament.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+200;Regenrohrschelle, verstellbar bis 200 mm Durchmesser, für beliebige Querschnittsformen, St/tZn;4,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+210;Erdeinführungsstange nach DIN EN 62561-2 für die Verbindung der Ableitung mit der Erdungsanlage, mit folgenden Eigenschaften:;3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+220;Tiefenerder, aus VA-Stahl, Material 1.4571, Komplett mit Schlagspitze, Schlagkopf und Anschlussschellen liefern, mittels Rammbock einbringen, anschließen und einmessen.;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+230;Erstellung eines Lageplanes mit Gebäuden  und Objekten, darin dokumentiert die gesamte Blitzschutz-, Erdungs- und Hauptpotentialausgleichsanlage. Die folgenden Punkte sind im Lageplan zu dokumentieren und zu kennzeichnen:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Durchführung einer Bestandsaufnahme von nicht dokumentierten Kabeln und Leitungen, bzw. Steuerungskomponenten in den für die Umstellung vorzubereitenden Schaltschrank +H06 der Faulung 2+3.;20,0;Std;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;wie Position zuvor, jedoch;40,0;Std;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Den vorhandenen Schaltschrank +H06 800mm breit , auf seine neue Position in Zuge der Doppelboden Errichtung umstellen.;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Das im Werkstattgebäude vorhandene Mosaikschaltbild ist zu demontieren und alle nicht mehr benötigten Leitungen und Kabel sind abzuklemmen und zu isolieren. Die umweltgerechte Entsorgung bzw. die Zuführung zur Wiederverwertung ist sicherzustellen und schriftlich nachzuweisen.;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Das im Werkstattgebäude Mosaikschaltbild vorhandene Not -Aus System ist nach Vorgaben des AG zu demontieren und an einer anderen Stelle neben +H01 Links auf einer temporären Montageplatte neu zu montieren. Alle erforderlichen Leitungen und Kabel sind je nach neuen Einbauort ggf. zu verlängern und ne;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Das vorhandene Not -Aus System ist nach Errichtung der neuen Schaltanlage nach Vorgaben des AG zu demontieren und an einer anderen Stelle im neuen Schaltschrank NOT-AUS auf der Montageplatte neu zu montieren. Alle erforderlichen Leitungen, Kabel und Klemmleisten sind je nach neuen Einbauort ggf. zu ;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;Das im Werkstattgebäude Mosaikschaltbild vorhandene HMI ist nach Vorgaben des AG zu demontieren und an einer anderen Stelle neben +H01 Links auf einer temporären Montageplatte neu zu montieren. Alle erforderlichen Leitungen und Kabel sind je nach neuen Einbauort ggf. zu verlängern und neu anzuschlie;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Das vorhandene HMI ist nach Errichtung der neuen Schaltanlage nach Vorgaben des AG zu demontieren und an einer anderen Stelle im neuen Wandschaltschrank an der neu errichteten Wand des Schaltraums zu montieren. (Siehe Aufstellungsplan der neuen Schaltanlage). Alle erforderlichen Leitungen, Kabel und;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;Demontage und fachgerechte Entsorgung von Installationskomponenten wie z.B.:;8,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+80;Vorhandene Kabelbühne oder Steigetrasse, bis 500 mm Breite, zu 90% mit Kabeln belegt, im Innen- und Außenbereich an Decken oder Wänden montiert, komplett, einschießlich Hängestiele, Wandausleger, Schellen, Schrauben usw. demontieren und umweltgerecht mit Nachweis entsorgen.;5,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+90;sonst wie Position vor, jedoch bis zu einer Breite von 300 mm.;5,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+100;sonst wie Position vor, jedoch Demontage von Installationsrohren bis DN50.;20,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;1-feldriger Schaltschrank in stahlblechgekapselter Ausführung mit folgender Ausstattung:;3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;die Schaltschränke sind in den bestehenden Schaltraum 4. Reinigungsstufe einzubringen. Der endgültige Standort ist nach der Werkplanung durch den AN mit dem AG abzustimmen.;3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Schaltschranklüfter zum Einbauen in v. g. Schaltschränke einschl. Motorschutzschalter, Filtereinsätze, Klein- und Befestigungsmaterial, erforderliche Ausstanzungen an den Schaltschränken etc.;3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Schaltschrankthermostat zur Steuerung von Lüftern, Heizungen und Wärmetauschern sowie zur Überwachung der Schaltschrank-Innentemperatur;3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Kompakt-Leistungsschalter für den Anlagenschutz, 3-polig, in Festeinbautechnik als Einspeiseschalter, für den unabhängigen Überstromzeitschutz, mit folgenden Merkmalen:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Anschlussleiste für Kabelanschluss 3 polig oben / unten mit folgenden Merkmalen:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Stromwandler zur Erfassung des Strangstromes der Einspeisung, zur Montage auf die Sammelschiene, mit:;3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Multifunktionales Leistungsmessgerät mit Profinet zur Messung von Strom, Spannung, Wirk-, Blind- und Scheinleistung, Leistungsfaktor, Netzfrequenz, Energie, Klirrfaktor und Oberschwingungen Bidirektional arbeitende rückstellbare Zähler für Bezug und Lieferung von Wirk- und Blindarbeit müssen für die;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;Spannungswächterrelais zur 3phasigen Überwachung der Netzspannung, mit folgenden Leistungsmerkmalen:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Leitungsschutzschalter Typ C, 1-polige Ausführung, inkl. Hilfskontakt und Potentialklemmen;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Leitungsschutzschalter Typ C, 2-polige Ausführung, inkl. Hilfskontakt und Potentialklemmen;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;FI-Schutzschalter 40 A, 2-polig, 30 mA,Typ A, inkl. Hilfskontakt;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;mit aktiver Überstrombegrenzung, Überlast- und Kurzschlussschutz;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;mit aktiver Überstrombegrenzung, Überlast- und Kurzschlussschutz;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Geräteadapter für Nennstrom bis 160 A zur Aufnahme der Motorschutzschalter oder Lasttrenner direkt auf die Sammelschiene, Montage durch Aufrasten auf die Sammelschiene komplett mit allem notwendigem Kleinmaterial.;13,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Leistungsschalter für den Motorschutz,;7,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Leistungsschalter für den Motorschutz,;3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Stromwandler mit Messumformer zur Erfassung und Wandlung sinusförmiger Strangströme, zur Montage auf die Sammel- bzw. Hutschiene, mit:;13,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Koppelrelais zur Signalanpassung und Vervielfältigung;34,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Koppelrelais zur Signalanpassung und Vervielfältigung;13,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Koppelrelais zur Signalanpassung und Vervielfältigung;34,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Koppelrelais zur Signalanpassung und Vervielfältigung;13,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;nach DIN VDE 0660, IEC 373 mit:;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Meldeleuchten, zum Einbau in die Schaltschranktür;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;Leuchtdrucktaster, zum Einbau in die Schaltschranktür;10,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+80;Drucktaster, zum Einbau in die Schaltschranktür;10,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+90;Drehschalter, zum Einbau in die Schaltschranktür;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+100;Drehschalter (H-0-A), zum Einbau in die Schaltschranktür;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+110;Ex i-NAMUR-Trennschaltverstärker, 1-kanalig. zum Betrieb von Näherungsinitiatoren und Schaltern im Ex-Bereich. Das Signal wird über Relaisausgang (Schließer) in den sicheren Bereich übertragen, geeignete für den Anschluss von eigensicheren Geräten der Zone 0 - 2, Fehlererkennung (LFD), 3-Wege-Trennu;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+120;Ex i-NAMUR-Trennschaltverstärker, 1-kanalig. zum Betrieb von analogen Messkreisen im Ex-Bereich, geeignete für den Anschluss von eigensicheren Geräten der Zone 0 - 2, 3-Wege-Trennung;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+130;zur Warnung und Alarmierung im Gefahrenfall getrennt ansteuerbar, zur Aufputzmontage in Innen- und Außenräumen, mit folgender Ausstattung:;3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+140;zur Warnung und Alarmierung im Gefahrenfall, zur Aufputzmontage in Innen- und Außenräumen, mit folgender Ausstattung:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Not-Aus-Schaltgerät, nach DIN EN 60947-5-1, mit Zulassung der BG oder TÜV, zur Überwachung der Not-Aus-Kreise, in folgender Ausführung:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Erweiterung für vorgenanntes Not-Aus-Schaltgerät  mit 5 Schaltglieder Ö + S, ansonsten wie in vorgenannter Position.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Not-Aus-Pilzschlagtaster mit rundem Tastkopf, Ausführung gem.VDE;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;zum Schutz der Einspeisung vor Blitzstrom und Überspannung, geeignet für die Blitzschutzklasse II;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;zum Schutz von in den Außenbereich geführte 3x400 VAC Versorgungsleitungen, (Motore / Außenschränke);3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;zum Schutz von in den Außenbereich geführte 230 VAC Versorgungsleitungen,;3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;zum Schutz von in den Außenbereich geführte 24 VDC Versorgungsleitungen,;10,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;zum Schutz von in den Außenbereich geführte MSR Leitungen, bestehend aus Schutzstecker und Basiselement mit integrierter Statusanzeige, für einen 2-adrigen erdpotenzialfrei betriebenen Signalkreis, z. B. 0(4) ... 20 mA Stromschleife, zur Montage auf Hutschiene.;10,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;zum Schutz von in den Außenbereich geführte MSR Leitungen, bestehend aus Schutzstecker und Basiselement mit integrierter Statusanzeige für einen 4-adrigen erdpotenzialfrei betriebenen Signalkreis für 4-Leiter-Messungen z. B. von Temperaturen und Gewichten, zur Montage auf Hutschiene.;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;zum Schutz von in den Außenbereich geführte MSR Leitungen, bestehend aus Schutzstecker und Basiselement bestehend aus Schutzstecker und Basiselement, mit integrierter Statusanzeige für zwei Signaladern mit gemeinsamem Bezugspotenzial, z. B Digital IN/OUT.;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+80;zum Schutz von in den Außenbereich geführte Ethernet Leitungen,;6,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Das Anwenderprogramm zur Steuerung der Anlagenbereiches mit allen Aggregaten, Messsonden, Schnittstellen und der notwendigen Verknüpfung der Einzelsignale (1 Prozessvariable).;67,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Anwenderprogrammierung für eine analoge Prozessvariable, ansonsten wie in vorgenannter Position.;48,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Datenkopplung zu anderen Automatisierungsstationen mittels S7-Kommunikation über Industrial Ethernet mit folgenden Leistungen:;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Datenkopplung zu maschinengebundenen Steuerungen (z.B Polymeranlage etc.) und / oder externen Bedienelementen über Industrial Ethernet, Profinet o.ä mit folgenden Leistungen:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;Alle erforderlichen Parametrierungs- und Programmierungsarbeiten, die erforderlich sind, um das vollgrafische Bedienpanel über die Profinet- schnittstelle der CPU in das SPS Programm derart einzubinden, die eine Visualisierung und Bedienung (analog zur zentralen Prozessleittechnik) des über die SPS ;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Konfiguration und der Feldebene, Netzwerkstruktur und Einbindung des Automatisierungssystems in ein vorhandenes übergeordnetes Prozessleitsystem. Die Einbindung in die bestehende Prozessleittechnik ist in Zusammenarbeit mit dem Lieferanten der Prozessleittechnik durchzuführen;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;SIMATIC ET 200SP, PROFINET, 2-Port Interface-Modul IM 155-6PN/2 High Feature, 1 Steckplatz für BusAdapter, max. 64 Peripheriemodule und 16 ET 200AL Module, S2-Redundanz, Multi Hot Swap, 0,25ms, taktsynchroner Betrieb, optionale PN-Zugentlastung, inklusive Server-Modul;4,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;SIMATIC ET 200SP, Busadapter BA 2xRJ45,;4,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;zur Erfassung von potentialfreien und Dreileiter Sensorausgängen.;4,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;SIMATIC ET 200SP, digitales Ausgangsmodul, DQ 8x 24VDC/0,5A High Feature, Source Output PNP, P-schaltend, passend für BU-Typ A0, Farbcode CC02, Kanal-Diagnose für: Kurzschluss und Drahtbruch, Versorgungsspannung, Kanalfehler-LED;4,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;SIMATIC ET 200SP, analoges HART Eingangsmodul, AI 4XI 2-Wire HART high Feature passend für BU-Typ A0, A1, Farbcode CC03, Kanal-Diagnose, 16bit, +/-0,3%,;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Analog-Ausgangskarte mit 8 AO, für die Speicherprogrammierbare Steuerung (SIMATIC S7-1500 und ET-200MP).;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;SIMATIC ET 200SP, analoges Ausgangsmodul, AQ 4XU/I Standard, passend für BU-Typ A0, A1, Farbcode CC00, Modul-Diagnose, 16 Bit, +/-0,3%;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;"LWL-Rangierverteiler als 19""-Spleiß-Box, montiert im EDV-Schrank, zur Umsetzung von bis zu 2 x 12 LWL-Fasern zweier Erdkabel auf Frontkupplungen mit folgender Ausstattung:";2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;LWL Duplex-Patchkabel SC/SC 50/125 zur Verbindung zwischen Spleißbox und Switch mit folgenden Eigenschaften:;4,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Datenleitung Industrial Ethernet Cat.7 für Festverlegung mit folgenden Eigenschaften:;50,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Patchkabel Category 6-600MHz;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;Patchkabel Category 6-600MHz;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Patchkabel Category 6-600MHz;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;Patchkabel Category 6-600MHz;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+80;Cat.6a Netzwerkdose für Hutschienenmontage mit folgenden Eigenschaften:;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+90;Cat.5 Netzwerkdose für die Wandmontage im Außenbereich mit folgenden Eigenschaften:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+100;Industriestecker Ethernet für den Anschluss von Endverbrauchern im Außenbereich mit folgenden Eigenschaften:;6,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+110;Kompakter Industrial Ethernet managed Switch mit folgenden Eigenschaften:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Kabelrinne, Edelstahl 200 x 110 mm;6,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Kabelrinne, Edelstahl 600 x 110 mm;6,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Kabelrinne, T-Stück, Edelstahl 200 x 110 mm;4,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Kabelrinne, T-Stück, Edelstahl 600 x 110 mm;4,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;Kabelleiter, Edelstahl, 200 x 60;12,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Kabelleiter, Edelstahl, 400 x 60;6,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;Kabelleiter, Edelstahl, 600 x 60;6,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+80;Hängestiel aus Edelstahl, Werkstoff Nr. 1.4301, U-Profil 40 x 60 x 40 mm mit angeschweißter Kopfplatte, zur Befestigung an waagerechten oder senkrechten Betondecken und Stahlträgern.;6,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+90;Wandausleger us Edelstahl, Werkstoff Nr. 1.4301 als Hilfskonstruktion, bis zu einer Länge von 800 mm, zum abfangen von Kabelzuführungen, einschl. allem notwendigen Kleinmaterial.;6,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+100;Starres Stangen-Installationsrohr aus Edelstahl (1.4301) in sehr schwerer Ausführung für die Aufputzinstallation im industriellen Umfeld, mit folgenden Eigenschaften:;45,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+110;Starres Stangen-Installationsrohr aus Edelstahl (1.4301) in sehr schwerer Ausführung für die Aufputzinstallation im industriellen Umfeld, mit folgenden Eigenschaften:;30,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+120;Starres Stangen-Installationsrohr aus Kunststoff in schwerer Ausführung für die Aufputzinstallation im industriellen Umfeld, mit folgenden Eigenschaften:;21,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+130;Starres Stangen-Installationsrohr aus Kunststoff in schwerer Ausführung für die Aufputzinstallation im industriellen Umfeld, mit folgenden Eigenschaften:;21,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+140;Edelstahl-Abdeckung von Kabeltrassen (Gewicht ca. 20-30kg, Maße (BxLxH) ca. 50x40x30cm, öffnen und verschließen. Die Abdeckungen befinden sich im Außen- und Innenbereich vom KA Rendsburgr, im Einzelnen bestehend aus:;8,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+150;Schachtabdeckung von Kabelschacht befahrbar durch LKW oder PKW, Gewicht ca. 250 kg, Maße (BxLxH) 	ca. 95x95x12cm, öffnen und verschließen. Die Kabelschächte befindet sich auf dem Gelände der KA Rendsburg, im Einzelnen bestehend aus:;8,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;YSLY-J 4G 2,5 mm²;150,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;YSLY-J BK 4G 2,5 mm², schwarz, uv-beständig;150,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;YSLY-J BK 12G1,5 mm², schwarz, uv-beständig;150,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;YSLY-J 3G 1,5 mm², robust;150,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;YSLY-J 4G 1,5 mm², robust;150,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;YSLY-J 4G 2,5 mm², robust;150,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;YSLCY-J BK 4G2,5 mm², 0,6/1 kV, schwarz, uv-beständig;150,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;"A-Optische Außenkabel: A-DQ(ZN)B2Y; feste Verlegung; Erdverlegung, Glasgarne; Polyethylen; schwarz, uv-beständig";200,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Datenleitung Industrial Ethernet Cat 6, gemäß PROFInet Guideline + IEC 61158-2 für feste Verlegung.;250,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Datenleitung Industrial Ethernet Cat 6, gemäß PROFInet Guideline + IEC 61158-2 für feste Verlegung.;250,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Brandmeldekabel mit Funktionserhalt, in Anlehnung an DIN VDE 0815, flammenwidrig, halogenfrei, geschirmt, Adern zu Paaren und je 4 Paare zu Bündeln verseilt.;150,0;m;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Einseitiger Anschluss Kabel/Leitungen 3x 2,5 mm²;10,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;EinseitigerAnschluss Kabel/Leitungen 4x 25 mm²;10,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Einseitiger Anschluss Kabel/Leitungen 5x 2,5 mm²;6,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Anschluss für Kabel und Leitungen mit bis zu 12 Adern und einen Querschnitt bis zu 1,5 mm²;6,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;Kabelanschluss für ein Netzwerk-Verlegekabel Cat.7 mit Auflegewerkzeug auf eine LSA+ Leiste oder Netzwerksteckdose, einschließlich allem notwendigen Kleinmaterial.;10,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Die Kabelbeschriftung erfolgt mittels Kabelbeschriftungsschild in witterungs-, uv-, öl- und chemikalienbeständiger Ausführung einschließlich UV-beständigen Kabelbindern aus Polyamid. Kabelbinder mit Stahlverschluss aus korrosionsbeständigem, nicht magnetischem Stahl.;320,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;zur Montage in Brüstungskanal:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Zweifach Datensteckdosen (RJ-45) aus Kunststoff zur Montage in Brüstungskanal mit zugehörigem Rahmen für ortsveränderlichen Anschluss von Dateneinrichtungen. Buchsen geschirmt, Gehäuse geschirmt, mit Kabelzugentlastung gleiche Farbe wie Brüstungskanal.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;für die Aufputzmontage, mit schraublosen Anschlußklemmen, allseitiger Leitungseinführung.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;für die Aufputzmontage, mit schraublosen Anschlußklemmen, allseitiger Leitungseinführung.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;für die Aufputzmontage, mit schraublosen Anschlußklemmen, allseitiger Leitungseinführung.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Thermostat Aufputzmontage zur Steuerung von Ventilatoren in Abhängigkeit der Lufttemperatur. Zur Schaltung von Drehstrom-Ventilatoren.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;LED-Rohrleuchte geeignet für den Einsatz in der Ex-Zone 1 sowie im Außenbereich mit folgenden Eigenschaften:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;LED-Flutlichtstrahler für den Einsatz im Außenbereich mit folgenden Eigenschaften:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;LED Mastauf- und Ansatzleuchte mit Leuchtengehäuse und Mastanbin- dung aus pulverbeschichteten, widerstandsfähigen Aluminium-Druckguss.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Stahl - Aufsatzmast gerade nach DIN EN 40.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;Lichtmastsicherungskasten mit Berührungsschutz nach DIN VDE 0636 0606, Schutzart IP 42, mit Sicherungssockel 2 x E 14 und Durchgangsverdrahtung bis 16 mm² und Abzweig bis 10 mm².;1,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Vor-Ort-Steuerstelle für die Außenmontage, direkt beim Aggregat, für einen Ein-Richtungs-Antrieb zur hardwaremäßigen Ansteuerung des Antriebes mit folgender Ausstattung:;13,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Vor-Ort-Steuerstelle für die Außenmontage, direkt beim Antrieb, für Auf- / Zu-Ansteuerung zur hardwaremäßigen Ansteuerung des Antriebes mit folgender Ausstattung:;25,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;Notaus-Taster als Komplettgerät rot/gelb im Kunststoffgehäuse mit folgender Ausstattung:;3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Reparaturschalter/Wartungsschalter zur Abschaltung von Antrieben und Aggregaten bei Reparatur und Wartung, mit folgenden Merkmalen:;13,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Vor-Ort-Steuerständer zur Aufnahme von 1 Vor-Ort-Steuerstelle und 1 Notaus-Schalter in Edelstahl 1.4571 o. 1.4404, Stärke 3 mm, bestehend aus:;13,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;Vor-Ort-Haube zur Aufnahme bis zu 4 Vor-Ort-Steuerstellen oder Klemm-;3,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+30;mit folgender Ausstattung:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+40;Kabelabzweigkasten für den Einsatz im Außenbereich mit folgender Ausstattung:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+50;mit folgender Ausstattung:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+60;Klemmkasten als Übergangskasten für Pumpen, Rührwerke etc., mit eingebauter Klemmleiste für die Leistungskabel, Verschraubungen mit Zugentlastung einschl. nichtrostendem Befestigungsmaterial und einem Resopalschild (AKZ und Langtext).;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+70;Klemmkasten als Übergangskasten für Pumpen, Rührwerke etc., mit eingebauter Klemmleiste für die Leistungskabel, Verschraubungen mit Zugentlastung einschl. nichtrostendem Befestigungsmaterial und einem Resopalschild (AKZ und Langtext).;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+80;Klemmkasten als Übergangskasten für Pumpen, Rührwerke etc., mit eingebauter Klemmleiste für die Leistungskabel, Verschraubungen mit Zugentlastung einschl. nichtrostendem Befestigungsmaterial und einem Resopalschild (AKZ und Langtext).;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+90;Kernbohrung in Stahlbetondecken oder -wänden bauwerksschonend mit Diamantbohrgerät, Durchmesser bis 100 mm, bis 400 mm Stärke. Incl. Versiegelung der Bohrflächen und Entsorgung des Bohrkerns.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+100;sonst wie Position vor, jedoch 150/400 mm;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+110;Wand-Durchbruch in Mauerwerk oder Beton, Stärke bis 400 mm,;4,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+120;Geschlossene Kabeleinführungen in gas- und wasserdichter Ausführung, bestehend aus:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+130;sonst wie Position vor, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+140;Systemdeckel für Systemdurchführung HSI 150 mit Schrumpfeinsätzen für folgende Verkabelung:;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+150;Brandschottmasse zur Abschottung von Durchbrüchen und Maueröffnungen mittels Hartschottmasse feuerbeständig für 90 Minuten.;2,0;m2;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+160;Kabeldurchführung mit Segmentunterteilung für Systemdurchführung HSI 150;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+170;Kunststoffflansch zur nachträglichen Montage an Außenwänden mit Kernbohrungen, zur Aufnahme von HSI 150  Systemkomponenten.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+180;Stecker zum Anschluss von Sensorik bestehend aus :;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+190;Stecker zum Anschluss von Ventilen bestehend aus :;5,0;St;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Durchführung einer Bestandsaufnahme zur Konkretisierung der 400V AC und 24V DC Versorgung für den Dosierschrank in der vorhandenen Schaltanlage 4. Reinigungsstufe.;8,0;Std;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+20;wie Position zuvor, jedoch;16,0;Std;gaeb;leistungsbeschreibungen/Leistungsbeschreibung.x81
+10;Die Werkstatt- und Montageplanung für die Baumaßnahme setzt sich im wesentlichen zusammen aus:;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Das Pflichtenheft dient als Grundlage für die gesamte Projektrealisierung.  Es umfasst die Bereiche:;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Die Gesamtinbetriebnahme der EMSR-Technik der Baumaßnahme gliedert sich grundsätzlich in folgende vier Schritte:;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;"Nach ""Auftragserteilung"" sind gemäß des Baufortschrittes folgende Unterlagen in einfacher Ausfertigung beim Auftraggeber einzureichen und zur Freigabe vorzulegen. Die Bauteilkennzeichnung der Betriebsmittel sowie die Variablenkodierung der Programmierung ist auf der Grundlage der auf der Anlage verw";1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;Zielgruppe Betriebspersonal. Das Personal erhält eine ausführliche Einweisung zur Handhabung der Gesamtanlage.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;An- und Abtransport sämtlicher für die Baumaßnahme erforderlichen Geräte, Gerüste, Hebezeuge, Maschinen, Werkzeuge, Baubuden für Material und Personal einschließlich Sanitäranlagen mit allem erforderlichen Zubehör, sowie aller sonstiger Einrichtungen, die für die ordnungsgemäße Durchführung der ausg;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Räumen der Baustelleneinrichtung für sämtliche in der Ausschreibung aufgeführten Leistungen einschließlich Säuberung der Anlage und Bauwerke (besenrein) nach Beendigung der Bauarbeiten und die Wiederherstellung des übrigen Geländes und der Zufahrtswege in ihren ursprünglichen Zustand.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;"für sämtliche in der Ausschreibung aufgeführten Leistungen aus nicht vom Auftragnehmer verursachten Gründen gemäß Position ""Vorhalten der Baustelleneinrichtung""";1,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;über den geplanten Durchführungszeitraum für sämtliche in der Ausschreibung aufgeführten Leistungen, gemäß Terminplan.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Kurzschluss- und Lastflussberechnung der in diesem Gewerk angebotenen Schaltanlagen gem. VDE 0102, als Grundlage zur Herstellung der Anlagenselektivität, unter Berücksichtigung der;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Thermische Überprüfung der neu gelieferten Schaltanlagen mit folgenden Merkmalen:;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Prüfen der Installation der gesamten installierten Leistungen gemäß DIN VDE 0100 Teil 600:;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Es  ist unter Berücksichtigung der Berechnungsverfahren gemäß DIN EN 60079-14 der Nachweis der Eigensicherheit von Ex-i geschützten Stromkreisen zu erbringen und zu dokumentieren. Die Dokumentation beinhaltet im Wesentlichen:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;Nach Auftragsvergabe werden unter Berücksichtigung der verfahrenstechnischen und maschinentechnischen Anforderungen bauseits die einzelnen Sicherheitsfunktionen einschl. des erforderlichen Performance Levels spezifiziert.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;der neu erstellten oder erweiterten Blitzschutz-, Erdungs- und Hauptpotentialausgleichsanlage unter Vorhaltung von Spezialmeßgeräten gemäß den VDE-Vorschriften 0100 Teil 410/6.1.2., Teil 540/ 1 - 4, einschließlich Blitzschutzprüfbuch gem. VDE 0185 mit Eintragung des Hauptpotentialausgleiches.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;Durchführen nachfolgend beschriebener Messungen für die Kabelstrecke eines LWL-Kabels mit 12 Einzelfasern nach den Verlegen und betriebsfertigen Anschluss der Lichtwellenleiter.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Qualifikation Dipl.-Ing. für Projektierungs- und Inbetriebnahmetätigkeiten.;20,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Qualifikation Techniker / Dipl.-Ing. für Programmierungstätigkeiten (SPS;20,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;CAE-Konstrukteur für das Einarbeiten von Änderungen und das Erstellen der Elektrodokumentation/Stromlaufpläne.;20,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Pauschale für ein Baustellenan- und Abfahrt auf gesonderte Forderung der Bauleitung, inkl. der Kosten für Fahrzeit, Kilometerpauschale sowie sämtlicher zusätzlicher Nebenkosten.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;Qualifikation Meister / Techniker.;40,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Qualifikation Facharbeiter Elektro / Metall.;40,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;1-feldriger Schaltschrank in stahlblechgekapselter Ausführung mit folgender Ausstattung:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;1-feldriger Schaltschrank in stahlblechgekapselter Ausführung mit folgender Ausstattung:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;1-feldriger Schaltschrank in stahlblechgekapselter Ausführung mit folgender Ausstattung:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Der umgebaute Niederspannungsschaltraum befindet sich im bestehenden Werkstattgebäude EG.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;1-feldriger Schaltschrank in stahlblechgekapselter Ausführung mit folgender Ausstattung:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Schaltschranklüfter zum Einbauen in v. g. Schaltschränke einschl. Motorschutzschalter, Filtereinsätze, Klein- und Befestigungsmaterial, erforderliche Ausstanzungen an den Schaltschränken etc.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Schaltschrankthermostat zur Steuerung von Lüftern, Heizungen und Wärmetauschern sowie zur Überwachung der Schaltschrank-Innentemperatur;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Einschub Kompakt-Leistungsschalter mit Motorantrieb für den Anlagenschutz, 3-polig, in Festeinbautechnik als Einspeiseschalter, für den unabhängigen Überstromzeitschutz, mit folgenden Merkmalen:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Adapter zur Aufnahme  Kompakt-Leistungsschalter montiert auf das Sammelschienensystem 185mm Verbindung oben / unten, Schraubkontaktierung mit folgenden Merkmalen:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Anschlussleiste für Kabelanschluss 3 polig oben / unten mit folgenden Merkmalen:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;NH-Lasttrennschalter mit Sicherungen in Leistenform Gr.3 mit Sicherungsüberwachung und Stromwandlern, mit folgenden Merkmalen:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;NH-Lasttrennschalter mit Sicherungen in Leistenform Gr.1 mit Sicherungsüberwachung und Stromwandlern, mit folgenden Merkmalen:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;NH-Lasttrennschalter mit Sicherungen in Leistenform Gr.00 mit Sicherungsüberwachung und Stromwandlern, mit folgenden Merkmalen:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;Stromwandler zur Erfassung des Strangstromes der Einspeisung, zur Montage auf die Sammelschiene, mit:;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+80;Stromwandler zur Erfassung des Strangstromes der Einspeisung, zur Montage auf die Sammelschiene, mit:;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+90;Multifunktionales Leistungsmessgerät mit Profinet zur Messung von Strom, Spannung, Wirk-, Blind- und Scheinleistung, Leistungsfaktor, Netzfrequenz, Energie, Klirrfaktor und Oberschwingungen Bidirektional arbeitende rückstellbare Zähler für Bezug und Lieferung von Wirk- und Blindarbeit müssen für die;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+100;Spannungswächterrelais zur 3phasigen Überwachung der Netzspannung, mit folgenden Leistungsmerkmalen:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;nach VDE 0570, zur Versorgung von Steuerungen entsprechend EN60204, zum Einsatz als Schutztrennung gemäß VDE100 einsetzbar zum Aufbau von SELV und PELV Stromkreisen geeignet.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Unterbrechungsfreie Spannungsversorgung zur Versorgung der MSR-;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Unterbrechungsfreie Spannungsversorgung, ausgeführt als redundande batteriegepufferte Gleichstromversorgung, im Parallelbetrieb mit  Batterien, bestehend aus:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Leitungsschutzschalter Typ C, 1-polige Ausführung, inkl. Hilfskontakt und Potentialklemmen;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Leitungsschutzschalter Typ C, 2-polige Ausführung, inkl. Hilfskontakt und Potentialklemmen;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;FI-Schutzschalter 40 A, 2-polig, 30 mA,Typ A, inkl. Hilfskontakt;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;mit aktiver Überstrombegrenzung, Überlast- und Kurzschlussschutz;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;mit aktiver Überstrombegrenzung, Überlast- und Kurzschlussschutz;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Geräteadapter für Nennstrom bis 160 A zur Aufnahme der Motorschutzschalter oder Lasttrenner direkt auf die Sammelschiene, Montage durch Aufrasten auf die Sammelschiene komplett mit allem notwendigem Kleinmaterial.;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Leistungsschalter für den Motorschutz,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Leistungsschalter für den Motorschutz,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Leistungsschalter für den Motorschutz,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;Leistungsschütz, nach DIN VDE 0660, IEC 158, mit:;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Leistungsschütz, nach DIN VDE 0660, IEC 158, mit:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;Stromwandler mit Messumformer zur Erfassung und Wandlung sinusförmiger Strangströme, zur Montage auf die Sammel- bzw. Hutschiene, mit:;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Technische Daten:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Technische Daten:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Koppelrelais zur Signalanpassung und Vervielfältigung;34,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Koppelrelais zur Signalanpassung und Vervielfältigung;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Koppelrelais zur Signalanpassung und Vervielfältigung;34,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Koppelrelais zur Signalanpassung und Vervielfältigung;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;nach DIN VDE 0660, IEC 373 mit:;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Meldeleuchten, zum Einbau in die Schaltschranktür;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;Leuchtdrucktaster, zum Einbau in die Schaltschranktür;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+80;Drucktaster, zum Einbau in die Schaltschranktür;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+90;Drehschalter, zum Einbau in die Schaltschranktür;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+100;Drehschalter (H-0-A), zum Einbau in die Schaltschranktür;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+110;Ex i-NAMUR-Trennschaltverstärker, 1-kanalig. zum Betrieb von Näherungsinitiatoren und Schaltern im Ex-Bereich. Das Signal wird über Relaisausgang (Schließer) in den sicheren Bereich übertragen, geeignete für den Anschluss von eigensicheren Geräten der Zone 0 - 2, Fehlererkennung (LFD), 3-Wege-Trennu;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+120;Ex i-NAMUR-Trennschaltverstärker, 1-kanalig. zum Betrieb von analogen Messkreisen im Ex-Bereich, geeignete für den Anschluss von eigensicheren Geräten der Zone 0 - 2, 3-Wege-Trennung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Not-Aus-Schaltgerät, nach DIN EN 60947-5-1, mit Zulassung der BG oder TÜV, zur Überwachung der Not-Aus-Kreise, in folgender Ausführung:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Erweiterung für vorgenanntes Not-Aus-Schaltgerät  mit 5 Schaltglieder Ö + S, ansonsten wie in vorgenannter Position.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Not-Aus-Pilzschlagtaster mit rundem Tastkopf, Ausführung gem.VDE;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;zum Schutz der Einspeisung vor Blitzstrom und Überspannung, geeignet für die Blitzschutzklasse II;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;zum Schutz von in den Außenbereich geführte 3x400 VAC Versorgungsleitungen, (Motore / Außenschränke);3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;zum Schutz von in den Außenbereich geführte 230 VAC Versorgungsleitungen,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;zum Schutz von in den Außenbereich geführte 24 VDC Versorgungsleitungen,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;zum Schutz von in den Außenbereich geführte MSR Leitungen, bestehend aus Schutzstecker und Basiselement mit integrierter Statusanzeige, für einen 2-adrigen erdpotenzialfrei betriebenen Signalkreis, z. B. 0(4) ... 20 mA Stromschleife, zur Montage auf Hutschiene.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;zum Schutz von in den Außenbereich geführte MSR Leitungen, bestehend aus Schutzstecker und Basiselement mit integrierter Statusanzeige für einen 4-adrigen erdpotenzialfrei betriebenen Signalkreis für 4-Leiter-Messungen z. B. von Temperaturen und Gewichten, zur Montage auf Hutschiene.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;zum Schutz von in den Außenbereich geführte MSR Leitungen, bestehend aus Schutzstecker und Basiselement bestehend aus Schutzstecker und Basiselement, mit integrierter Statusanzeige für zwei Signaladern mit gemeinsamem Bezugspotenzial, z. B Digital IN/OUT.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+80;zum Schutz von in den Außenbereich geführte Ethernet Leitungen,;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Das Anwenderprogramm zur Steuerung der Anlagenbereiches mit allen Aggregaten, Messsonden, Schnittstellen und der notwendigen Verknüpfung der Einzelsignale (1 Prozessvariable).;67,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Anwenderprogrammierung für eine analoge Prozessvariable, ansonsten wie in vorgenannter Position.;48,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Datenkopplung zu anderen Automatisierungsstationen mittels S7-Kommunikation über Industrial Ethernet mit folgenden Leistungen:;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Datenkopplung zu maschinengebundenen Steuerungen (z.B Polymeranlage etc.) und / oder externen Bedienelementen über Industrial Ethernet, Profinet o.ä mit folgenden Leistungen:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;Alle erforderlichen Parametrierungs- und Programmierungsarbeiten, die erforderlich sind, um das vollgrafische Bedienpanel über die Profinet- schnittstelle der CPU in das SPS Programm derart einzubinden, die eine Visualisierung und Bedienung (analog zur zentralen Prozessleittechnik) des über die SPS ;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Konfiguration und der Feldebene, Netzwerkstruktur und Einbindung des Automatisierungssystems in ein vorhandenes übergeordnetes Prozessleitsystem. Die Einbindung in die bestehende Prozessleittechnik ist in Zusammenarbeit mit dem Lieferanten der Prozessleittechnik durchzuführen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;SIMATIC ET 200SP, PROFINET, 2-Port Interface-Modul IM 155-6PN/2 High Feature, 1 Steckplatz für BusAdapter, max. 64 Peripheriemodule und 16 ET 200AL Module, S2-Redundanz, Multi Hot Swap, 0,25ms, taktsynchroner Betrieb, optionale PN-Zugentlastung, inklusive Server-Modul;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;SIMATIC ET 200SP, Busadapter BA 2xRJ45,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;zur Erfassung von potentialfreien und Dreileiter Sensorausgängen.;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;SIMATIC ET 200SP, digitales Ausgangsmodul, DQ 8x 24VDC/0,5A High Feature, Source Output PNP, P-schaltend, passend für BU-Typ A0, Farbcode CC02, Kanal-Diagnose für: Kurzschluss und Drahtbruch, Versorgungsspannung, Kanalfehler-LED;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;SIMATIC ET 200SP, analoges HART Eingangsmodul, AI 4XI 2-Wire HART high Feature passend für BU-Typ A0, A1, Farbcode CC03, Kanal-Diagnose, 16bit, +/-0,3%,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Analog-Ausgangskarte mit 8 AO, für die Speicherprogrammierbare Steuerung (SIMATIC S7-1500 und ET-200MP).;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;SIMATIC ET 200SP, analoges Ausgangsmodul, AQ 4XU/I Standard, passend für BU-Typ A0, A1, Farbcode CC00, Modul-Diagnose, 16 Bit, +/-0,3%;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+80;Automatisierungsgerät, bestehend aus einer S7-Profilschiene mit Erdungsanschluss, einer Stromversorgungsbaugruppe, sowie einer Zentralbaugruppe (CPU), mit folgender Ausstattung:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+90;zum Einbau in SIMATIC S7-1500 Automatisierungssysteme, im Einzelnen bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+100;Dezentrale Peripherie ET 200MP zum Anschluss von bis zu 30 ET-200MP Baugruppen an ein Zentralgerät vom Typ SIMATIC S7-1500.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+110;Dezentrale Peripherie ET 200MP zum Anschluss von bis zu 30 ET-200MP Baugruppen an ein Zentralgerät vom Typ SIMATIC S7-1500.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+120;Systemstromversorgung für Einbau in Grundmodul oder der dezentralen Peripherie ET200MP, versorgt den Rückwandbus der S7-1500 mit Betriebsspannung, im Einzelnen bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+130;Touchpanel zum Einbau in den Schaltschrank der NSUV, im Einzelnen bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Erweiterung Datenmodell;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Erweiterung Archivierung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Erweiterung Protokollierung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Erstellung Prozessbilder;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;Änderungsprozessbilder;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;"LWL-Rangierverteiler als 19""-Spleiß-Box, montiert im EDV-Schrank, zur Umsetzung von bis zu 2 x 12 LWL-Fasern zweier Erdkabel auf Frontkupplungen mit folgender Ausstattung:";2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;LWL Duplex-Patchkabel SC/SC 50/125 zur Verbindung zwischen Spleißbox und Switch mit folgenden Eigenschaften:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Datenleitung Industrial Ethernet Cat.7 für Festverlegung mit folgenden Eigenschaften:;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Patchkabel Category 6-600MHz;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;Patchkabel Category 6-600MHz;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Patchkabel Category 6-600MHz;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;Patchkabel Category 6-600MHz;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+80;Cat.6a Netzwerkdose für Hutschienenmontage mit folgenden Eigenschaften:;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+90;Cat.5 Netzwerkdose für die Wandmontage im Außenbereich mit folgenden Eigenschaften:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+100;Industriestecker Ethernet für den Anschluss von Endverbrauchern im Außenbereich mit folgenden Eigenschaften:;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+110;Kompakter Industrial Ethernet managed Switch mit folgenden Eigenschaften:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+120;Kompakter Industrial Ethernet managed Switch mit folgenden Eigenschaften:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Digitaler Tauchsensor mit integrierter AD-Elektronik geeignet für die Messung von Trockensubstanz (TS) und Trübung in Kommunal- und Industrieabwasser, mit automatischer Wischerreinigung, wasserdichte Schraub- oder Steckverbindung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Radarsensor, zur kontinuierlichen Füllstandsmessung von Flüssigkeiten, mit integrierter Hornantenne, Vor-Ort-Elektronik und Messwertanzeige im Anschlussgehäuse, mit folgenden Eigenschaften:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;zur Befestigung einer Radar-Höhenstandmessung an/in offenen Behältern und Becken.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Dreistabsonde in Kompaktbauweise, mit Messelektrode, Auswertegerät mit Ausgangsrelais und Testschaltung zur Zweipunktregelung von Pumpen und/oder als Füllstandalarmierung (min/max) .;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Überfüllsicherung als Vibrationssonde in Kompaktbauweise, zugelassen für den Betrieb in Ex-Bereichen der Zone 1 (Zündschutzart EEx ia IIC T6), mit Auswertegerät, 1 Ausgangsrelais und Messelektrode und Testschaltung.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Druckmesswertaufnehmer, Kompaktgerät, kontinuierlich arbeitend, mit Keramiksensor, nach dem kapazitiven Messprinzip, mit Temperaturkompensation, Selbstüberwachung und Vor-Ort-Elektronik mit Messwertanzeige im Anschlussgehäuse.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Pt100-Widerstandsthermometer mit folgenden Eigenschaften:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Pt100-Widerstandsthermometer bestehend aus einer Tauchhülse sowie einem Temperaturwiderstandsthermometer mit folgenden Eigenschaften:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Widerstandsthermometer zur Umgebungstemperaturmessung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Die Messgerätebeschriftung erfolgt mittels graviertem Edelstahlschild, das dauerhaft am Gerät mittels Edelstahldraht oder Nieten zu befestigen ist. Die Beschriftung beinhaltet das Anlagenkennzeichen und die Benennung gemäß Messstellenliste.;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Messeinrichtungsständer zur Aufnahme der Messeinrichtungen in Edel-;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Kabelrinne, Edelstahl 200 x 110 mm;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Kabelrinne, Edelstahl 600 x 110 mm;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Kabelrinne, T-Stück, Edelstahl 200 x 110 mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Kabelrinne, T-Stück, Edelstahl 600 x 110 mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;Kabelleiter, Edelstahl, 200 x 60;12,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Kabelleiter, Edelstahl, 400 x 60;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;Kabelleiter, Edelstahl, 600 x 60;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+80;Hängestiel aus Edelstahl, Werkstoff Nr. 1.4301, U-Profil 40 x 60 x 40 mm mit angeschweißter Kopfplatte, zur Befestigung an waagerechten oder senkrechten Betondecken und Stahlträgern.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+90;Wandausleger us Edelstahl, Werkstoff Nr. 1.4301 als Hilfskonstruktion, bis zu einer Länge von 800 mm, zum abfangen von Kabelzuführungen, einschl. allem notwendigen Kleinmaterial.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+100;Starres Stangen-Installationsrohr aus Edelstahl (1.4301) in sehr schwerer Ausführung für die Aufputzinstallation im industriellen Umfeld, mit folgenden Eigenschaften:;45,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+110;Starres Stangen-Installationsrohr aus Edelstahl (1.4301) in sehr schwerer Ausführung für die Aufputzinstallation im industriellen Umfeld, mit folgenden Eigenschaften:;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+120;Starres Stangen-Installationsrohr aus Kunststoff in schwerer Ausführung für die Aufputzinstallation im industriellen Umfeld, mit folgenden Eigenschaften:;21,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+130;Starres Stangen-Installationsrohr aus Kunststoff in schwerer Ausführung für die Aufputzinstallation im industriellen Umfeld, mit folgenden Eigenschaften:;21,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+140;Edelstahl-Abdeckung von Kabeltrassen (Gewicht ca. 20-30kg, Maße (BxLxH) ca. 50x40x30cm, öffnen und verschließen. Die Abdeckungen befinden sich im Außen- und Innenbereich vom KA Rendsburgr, im Einzelnen bestehend aus:;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+150;Schachtabdeckung von Kabelschacht befahrbar durch LKW oder PKW, Gewicht ca. 250 kg, Maße (BxLxH) 	ca. 95x95x12cm, öffnen und verschließen. Die Kabelschächte befindet sich auf dem Gelände der KA Rendsburg, im Einzelnen bestehend aus:;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;NYY-J 1x 240 mm²;1200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;NYY-J 1x 120 mm²;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;NYY-J 5x6 mm²;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;NYY-J 5x10 mm²;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;NYY-J 5x35 mm²;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;NYY-J 5x95mm² RM SW;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;NYY-J 5x70mm² RM SW;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+80;A-2Y(L)2Y 2x2x0,8 mm;500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+90;YSLY-J 4G 2,5 mm²;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+100;YSLY-J BK 4G 2,5 mm², schwarz, uv-beständig;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+110;YSLY-J BK 12G1,5 mm², schwarz, uv-beständig;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+120;YSLY-J 3G 1,5 mm², robust;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+130;YSLY-J 4G 1,5 mm², robust;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+140;YSLY-J 4G 2,5 mm², robust;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+150;YSLY-J 4G 10 mm², robust;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+160;YSLY-J 4G 35 mm², robust;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+170;YSLCY-J BK 4G2,5 mm², 0,6/1 kV, schwarz, uv-beständig;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+180;YSLCY-J BK 4G10 mm², 0,6/1 kV, schwarz, uv-beständig;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;"A-Optische Außenkabel: A-DQ(ZN)B2Y; feste Verlegung; Erdverlegung, Glasgarne; Polyethylen; schwarz, uv-beständig";400,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Datenleitung Industrial Ethernet Cat 6, gemäß PROFInet Guideline + IEC 61158-2 für feste Verlegung.;635,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Datenleitung Industrial Ethernet Cat 6, gemäß PROFInet Guideline + IEC 61158-2 für feste Verlegung.;250,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Brandmeldekabel mit Funktionserhalt, in Anlehnung an DIN VDE 0815, flammenwidrig, halogenfrei, geschirmt, Adern zu Paaren und je 4 Paare zu Bündeln verseilt.;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Einseitiger Anschluss Kabel/Leitungen 3x 2,5 mm²;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;EinseitigerAnschluss Kabel/Leitungen 4x 25 mm²;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Einseitiger Anschluss Kabel/Leitungen 5x 2,5 mm²;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Anschluss für Kabel und Leitungen mit bis zu 12 Adern und einen Querschnitt bis zu 1,5 mm²;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;Kabelanschluss für ein Netzwerk-Verlegekabel Cat.7 mit Auflegewerkzeug auf eine LSA+ Leiste oder Netzwerksteckdose, einschließlich allem notwendigen Kleinmaterial.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Die Kabelbeschriftung erfolgt mittels Kabelbeschriftungsschild in witterungs-, uv-, öl- und chemikalienbeständiger Ausführung einschließlich UV-beständigen Kabelbindern aus Polyamid. Kabelbinder mit Stahlverschluss aus korrosionsbeständigem, nicht magnetischem Stahl.;320,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Rettungszeichenleuchte als Einzelbatterieleuchte gemäß DIN 4844 zur Kennzeichnung der Fluchtrichtung im Gefahrenfall mit:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;LED Feuchtraumleuchte mit folgenden Eigenschaften:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;zur Energieversorgung von Starkstrom- und Kommunikationsgeräten an Arbeitsplätzen. Für Geräteeinbau geeignet, einschl. Kabelhalteklammern und Befestigungsmaterial liefern und auf verlegefertigem Untergrund in Teillängen anbauen:;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;für Brüstungskanalsystem, geeignet für Einbaugeräte mit Abdeckungen (Kombi-Rahmen), Steckdosen und Schalter der Hersteller bestehend aus:;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;zur Montage in Brüstungskanal:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Zweifach Datensteckdosen (RJ-45) aus Kunststoff zur Montage in Brüstungskanal mit zugehörigem Rahmen für ortsveränderlichen Anschluss von Dateneinrichtungen. Buchsen geschirmt, Gehäuse geschirmt, mit Kabelzugentlastung gleiche Farbe wie Brüstungskanal.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;für die Aufputzmontage, mit schraublosen Anschlußklemmen, allseitiger Leitungseinführung.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+80;für die Aufputzmontage, mit schraublosen Anschlußklemmen, allseitiger Leitungseinführung.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+90;für die Aufputzmontage, mit schraublosen Anschlußklemmen, allseitiger Leitungseinführung.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+100;Thermostat Aufputzmontage zur Steuerung von Ventilatoren in Abhängigkeit der Lufttemperatur. Zur Schaltung von Drehstrom-Ventilatoren.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+110;CEE-Steckdosenkombination nach DIN EN 61439, mit folgenden Eigenschaften und folgender Ausstattung:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+120;CEE-Steckdosenkombination nach DIN EN 61439, mit folgenden Eigenschaften und folgender Ausstattung:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+130;LED Handscheinwerfer mit Notlichtfunktion;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+140;Dauerdrucklöscher;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+150;Kombiset bestehend aus Werkzeugschrank, Schreibpult und Rolluntersatz zur Aufnahme der Dokumentation in Schalträumen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;für den vorgesehenen Doppelboden, haarbesenrein säubern, wobei Gips- und Mörtelreste zu entfernen sind.;18,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;des Rohfußbodens zur Erzielung einer abriebfesten Rohbodenoberfläche mit einer 2 Komponentenmasse auf PU-Basis, abgestimmt mit dem Stützenkleber, einschließlich der Wandabwicklung liefern und aufbringen.;18,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;für den NS-Raum, zur flexiblen Aufstellung von Schaltanlagen sowie Abdeckung von Elektroinstallationen, jederzeit zerstörungsfrei zu öffnen.;12,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Gebrauchte Doppelbodenplatten im Raster 600x600 mm als Übergangslösung während der Bauphase und anschließender Entsorgung.;12,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;aus dem gleichen Material wie vor liefern.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;"für Schaltschrankreihe Belastungswert ca. 800 kg/m² Doppelfußboden gemäß Aufstellungsplan """;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;"für Schaltschrankreihe Belastungswert ca. 800 kg/m² Doppelfußboden gemäß Aufstellungsplan """;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+80;zum Aufnehmen der Doppelbodenplatten liefern, einschließlich;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;LED-Rohrleuchte geeignet für den Einsatz in der Ex-Zone 1 sowie im Außenbereich mit folgenden Eigenschaften:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;LED-Flutlichtstrahler für den Einsatz im Außenbereich mit folgenden Eigenschaften:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;LED Mastauf- und Ansatzleuchte mit Leuchtengehäuse und Mastanbin- dung aus pulverbeschichteten, widerstandsfähigen Aluminium-Druckguss.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Stahl - Aufsatzmast gerade nach DIN EN 40.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;Lichtmastsicherungskasten mit Berührungsschutz nach DIN VDE 0636 0606, Schutzart IP 42, mit Sicherungssockel 2 x E 14 und Durchgangsverdrahtung bis 16 mm² und Abzweig bis 10 mm².;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Vor-Ort-Steuerstelle für die Außenmontage, direkt beim Aggregat, für einen Ein-Richtungs-Antrieb zur hardwaremäßigen Ansteuerung des Antriebes mit folgender Ausstattung:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Vor-Ort-Steuerstelle für die Außenmontage, direkt beim Aggregat, für einen FU-Antrieb zur hardwaremäßigen Ansteuerung des Antriebes mit folgender Ausstattung:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Vor-Ort-Steuerstelle für die Außenmontage, direkt beim Antrieb, für Auf- / Zu-Ansteuerung zur hardwaremäßigen Ansteuerung des Antriebes mit folgender Ausstattung:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Notaus-Taster als Komplettgerät rot/gelb im Kunststoffgehäuse mit folgender Ausstattung:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Reparaturschalter/Wartungsschalter zur Abschaltung von Antrieben und Aggregaten bei Reparatur und Wartung, mit folgenden Merkmalen:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Reparaturschalter/Wartungsschalter zur Abschaltung von Antrieben und Aggregaten bei Reparatur und Wartung, mit folgenden Merkmalen:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Reparaturschalter/Wartungsschalter zur Abschaltung von Antrieben und Aggregaten bei Reparatur und Wartung, mit folgenden Merkmalen:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Reparaturschalter/Wartungsschalter zur Abschaltung von Antrieben und Aggregaten bei Reparatur und Wartung, mit folgenden Merkmalen:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Vor-Ort-Steuerständer zur Aufnahme von 1 Vor-Ort-Steuerstelle und 1 Notaus-Schalter in Edelstahl 1.4571 o. 1.4404, Stärke 3 mm, bestehend aus:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Vor-Ort-Haube zur Aufnahme bis zu 4 Vor-Ort-Steuerstellen oder Klemm-;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;mit folgender Ausstattung:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Kabelabzweigkasten für den Einsatz im Außenbereich mit folgender Ausstattung:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;mit folgender Ausstattung:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Klemmkasten als Übergangskasten für Pumpen, Rührwerke etc., mit eingebauter Klemmleiste für die Leistungskabel, Verschraubungen mit Zugentlastung einschl. nichtrostendem Befestigungsmaterial und einem Resopalschild (AKZ und Langtext).;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;Klemmkasten als Übergangskasten für Pumpen, Rührwerke etc., mit eingebauter Klemmleiste für die Leistungskabel, Verschraubungen mit Zugentlastung einschl. nichtrostendem Befestigungsmaterial und einem Resopalschild (AKZ und Langtext).;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+80;Klemmkasten als Übergangskasten für Pumpen, Rührwerke etc., mit eingebauter Klemmleiste für die Leistungskabel, Verschraubungen mit Zugentlastung einschl. nichtrostendem Befestigungsmaterial und einem Resopalschild (AKZ und Langtext).;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+90;Kernbohrung in Stahlbetondecken oder -wänden bauwerksschonend mit Diamantbohrgerät, Durchmesser bis 100 mm, bis 400 mm Stärke. Incl. Versiegelung der Bohrflächen und Entsorgung des Bohrkerns.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+100;sonst wie Position vor, jedoch 150/400 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+110;Wand-Durchbruch in Mauerwerk oder Beton, Stärke bis 400 mm,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+120;Geschlossene Kabeleinführungen in gas- und wasserdichter Ausführung, bestehend aus:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+130;sonst wie Position vor, jedoch;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+140;Füllmodule für bauseitig Gasdichte Durchführung für ein Fach Typ GH 6x X  / Ex, um die Kabel in die Niederspannungsschaltanlage Schlammentwässerungsgebäude zu führen. Die Füllmodule sind entsprechend den Erfordernissen auszulegen:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+150;Füllmodule für bauseitig Gasdichte Durchführung für ein Fach Typ GH 6x X  / Ex, um die Schläuche und Rohre in die Niederspannungsschaltanlage Schlammentwässerungsgebäude zu führen. Die Füllmodule sind entsprechend den Erfordernissen auszulegen:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+160;Systemdeckel für Systemdurchführung HSI 150 mit Schrumpfeinsätzen für folgende Verkabelung:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+170;Brandschottmasse zur Abschottung von Durchbrüchen und Maueröffnungen mittels Hartschottmasse feuerbeständig für 90 Minuten.;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+180;Kabeldurchführung mit Segmentunterteilung für Systemdurchführung HSI 150;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+190;Kunststoffflansch zur nachträglichen Montage an Außenwänden mit Kernbohrungen, zur Aufnahme von HSI 150  Systemkomponenten.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+200;Stecker zum Anschluss von Sensorik bestehend aus :;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+210;Stecker zum Anschluss von Ventilen bestehend aus :;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;NYY-J 1x 16 mm²;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;NYY-J 1x 50 mm²;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Einseitiger Anschluss Kabel/Leitungen 1x 6 mm²;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Einseitiger Anschluss Kabel/Leitungen 1x 50 mm²;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;Potentialausgleichsschiene für den Schutz- und Funktionspotentialausgleich nach DIN VDE 0100 Teil 410/540 und den Blitzschutz-Potentialausgleich nach DIN EN 62305-3 mit folgenden Eigenschaften:;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Potentialausgleichsschiene für den Schutz- und Funktionspotentialausgleich nach DIN VDE 0100 Teil 410/540 und den Blitzschutz-Potentialausgleich nach DIN EN 62305-3 mit folgenden Eigenschaften:;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;"Edelstahlseil flexibel bis 400mm lang aus nichtrostendem V4A Seil (W 1.4571; 1.4401 oder 1.4404), Seilquerschnitt min. 4 mm², Seilaufbau 7 x 19, mit 2 hydraulisch aufgepressten geschlossenen V4A-Rohrkabelschuhen (Pressung durch vom Hersteller geforderte Systempresszange für Edelstahlpresskabelschuhe";5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+80;"Edelstahlseil flexibel bis 400mm lang aus nichtrostendem V4A Seil (W 1.4571; 1.4401 oder 1.4404), Seilquerschnitt min. 16 mm², Seilaufbau 7 x 19, mit 2 hydraulisch aufgepressten geschlossenen V4A-Rohrkabelschuhen (Pressung durch vom Hersteller geforderte Systempresszange für Edelstahlpresskabelschuh";5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+90;"Edelstahlseil flexibel bis 400mm lang aus nichtrostendem V4A Seil (W 1.4571; 1.4401 oder 1.4404), Seilquerschnitt min. 50 mm², Seilaufbau 7 x 19, mit 2 hydraulisch aufgepressten geschlossenen V4A-Rohrkabelschuhen (Pressung durch vom Hersteller geforderte Systempresszange für Edelstahlpresskabelschuh";5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+100;Erdungsbandrohrschelle mit folgenden Eigenschaften:;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+110;Erdungsbandrohrschelle mit folgenden Eigenschaften:;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+120;Erdungsbandrohrschelle mit folgenden Eigenschaften:;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+130;Erdungsbandrohrschelle mit folgenden Eigenschaften:;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+140;aus verz. Stahl zum Anschluss an Stahlkonstruktionen durch Nieten/Schrauben, einschl. Bohren, Schweißen, Nieten/Schrauben.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+150;aus Material 1.4301 zum Anschluss an Stahlkonstruktionen durch Nieten/Schrauben, einschl. Bohren, Schweißen, Nieten/Schrauben.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+160;Anschlussklemme (schwere Ausführung) in Edelstahl 1.4301 mit Klemmstein zum Anschluss an Stahlkonstruktion. Anschluss längs und quer, Klemmbereich 5-18 mm.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+170;Verbinder mit Druckwanne zum Anschluss von Rundleitern an Potentialausgleichsschienen mit folgenden Eigenschaften:;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Fangstange zum Schutz von Dachaufbauten nach DIN EN 62561-2;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Potentialausgleichsschiene für den Schutz- und Funktionspotentialausgleich nach DIN VDE 0100 Teil 410/540 und den Blitzschutz-Potentialausgleich nach DIN EN 62305-3 mit folgenden Eigenschaften:;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;"Edelstahlseil flexibel bis 400mm lang aus nichtrostendem V4A Seil (W 1.4571; 1.4401 oder 1.4404), Seilquerschnitt min. 4 mm², Seilaufbau 7 x 19, mit 2 hydraulisch aufgepressten geschlossenen V4A-Rohrkabelschuhen (Pressung durch vom Hersteller geforderte Systempresszange für Edelstahlpresskabelschuhe";7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;"Edelstahlseil flexibel bis 400mm lang aus nichtrostendem V4A Seil (W 1.4571; 1.4401 oder 1.4404), Seilquerschnitt min. 16 mm², Seilaufbau 7 x 19, mit 2 hydraulisch aufgepressten geschlossenen V4A-Rohrkabelschuhen (Pressung durch vom Hersteller geforderte Systempresszange für Edelstahlpresskabelschuh";5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;"Edelstahlseil flexibel bis 400mm lang aus nichtrostendem V4A Seil (W 1.4571; 1.4401 oder 1.4404), Seilquerschnitt min. 50 mm², Seilaufbau 7 x 19, mit 2 hydraulisch aufgepressten geschlossenen V4A-Rohrkabelschuhen (Pressung durch vom Hersteller geforderte Systempresszange für Edelstahlpresskabelschuh";5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Erdungsbandrohrschelle mit folgenden Eigenschaften:;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;Erdungsbandrohrschelle mit folgenden Eigenschaften:;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+80;Erdungsbandrohrschelle mit folgenden Eigenschaften:;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+90;Erdungsbandrohrschelle mit folgenden Eigenschaften:;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+100;aus verz. Stahl zum Anschluss an Stahlkonstruktionen durch Nieten/Schrauben, einschl. Bohren, Schweißen, Nieten/Schrauben.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+110;aus Material 1.4301 zum Anschluss an Stahlkonstruktionen durch Nieten/Schrauben, einschl. Bohren, Schweißen, Nieten/Schrauben.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+120;Anschlussklemme (schwere Ausführung) in Edelstahl 1.4301 mit Klemmstein zum Anschluss an Stahlkonstruktion. Anschluss längs und quer, Klemmbereich 5-18 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+130;Verbinder mit Druckwanne zum Anschluss von Rundleitern an Potentialausgleichsschienen mit folgenden Eigenschaften:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+140;Edelstahlrunddraht für den Potentialausgleich in folgender Ausführung:;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+150;Edelstahlrunddraht für den Potentialausgleich in folgender Ausführung:;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+160;Edelstahlseil für den Potentialausgleich in folgender Ausführung:;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+170;Edelstahlseil für den Potentialausgleich in folgender Ausführung:;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+180;Edelstahlseil für den Potentialausgleich in folgender Ausführung:;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+190;Wanddurchführung zur nachträglichen, druckwasserdichten Durchführung eines Potentialausgleichsleiters durch eine Gebäudewand, bzw. Fundament.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+200;Regenrohrschelle, verstellbar bis 200 mm Durchmesser, für beliebige Querschnittsformen, St/tZn;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+210;Erdeinführungsstange nach DIN EN 62561-2 für die Verbindung der Ableitung mit der Erdungsanlage, mit folgenden Eigenschaften:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+220;Tiefenerder, aus VA-Stahl, Material 1.4571, Komplett mit Schlagspitze, Schlagkopf und Anschlussschellen liefern, mittels Rammbock einbringen, anschließen und einmessen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+230;Erstellung eines Lageplanes mit Gebäuden  und Objekten, darin dokumentiert die gesamte Blitzschutz-, Erdungs- und Hauptpotentialausgleichsanlage. Die folgenden Punkte sind im Lageplan zu dokumentieren und zu kennzeichnen:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Durchführung einer Bestandsaufnahme von nicht dokumentierten Kabeln und Leitungen, bzw. Steuerungskomponenten in den für die Umstellung vorzubereitenden Schaltschrank +H06 der Faulung 2+3.;20,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;wie Position zuvor, jedoch;40,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Den vorhandenen Schaltschrank +H06 800mm breit , auf seine neue Position in Zuge der Doppelboden Errichtung umstellen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Das im Werkstattgebäude vorhandene Mosaikschaltbild ist zu demontieren und alle nicht mehr benötigten Leitungen und Kabel sind abzuklemmen und zu isolieren. Die umweltgerechte Entsorgung bzw. die Zuführung zur Wiederverwertung ist sicherzustellen und schriftlich nachzuweisen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Das im Werkstattgebäude Mosaikschaltbild vorhandene Not -Aus System ist nach Vorgaben des AG zu demontieren und an einer anderen Stelle neben +H01 Links auf einer temporären Montageplatte neu zu montieren. Alle erforderlichen Leitungen und Kabel sind je nach neuen Einbauort ggf. zu verlängern und ne;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Das vorhandene Not -Aus System ist nach Errichtung der neuen Schaltanlage nach Vorgaben des AG zu demontieren und an einer anderen Stelle im neuen Schaltschrank NOT-AUS auf der Montageplatte neu zu montieren. Alle erforderlichen Leitungen, Kabel und Klemmleisten sind je nach neuen Einbauort ggf. zu ;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;Das im Werkstattgebäude Mosaikschaltbild vorhandene HMI ist nach Vorgaben des AG zu demontieren und an einer anderen Stelle neben +H01 Links auf einer temporären Montageplatte neu zu montieren. Alle erforderlichen Leitungen und Kabel sind je nach neuen Einbauort ggf. zu verlängern und neu anzuschlie;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Das vorhandene HMI ist nach Errichtung der neuen Schaltanlage nach Vorgaben des AG zu demontieren und an einer anderen Stelle im neuen Wandschaltschrank an der neu errichteten Wand des Schaltraums zu montieren. (Siehe Aufstellungsplan der neuen Schaltanlage). Alle erforderlichen Leitungen, Kabel und;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;Demontage und fachgerechte Entsorgung von Installationskomponenten wie z.B.:;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+80;Vorhandene Kabelbühne oder Steigetrasse, bis 500 mm Breite, zu 90% mit Kabeln belegt, im Innen- und Außenbereich an Decken oder Wänden montiert, komplett, einschießlich Hängestiele, Wandausleger, Schellen, Schrauben usw. demontieren und umweltgerecht mit Nachweis entsorgen.;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+90;sonst wie Position vor, jedoch bis zu einer Breite von 300 mm.;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+100;sonst wie Position vor, jedoch Demontage von Installationsrohren bis DN50.;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;1-feldriger Schaltschrank in stahlblechgekapselter Ausführung mit folgender Ausstattung:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;die Schaltschränke sind in den bestehenden Schaltraum 4. Reinigungsstufe einzubringen. Der endgültige Standort ist nach der Werkplanung durch den AN mit dem AG abzustimmen.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Schaltschranklüfter zum Einbauen in v. g. Schaltschränke einschl. Motorschutzschalter, Filtereinsätze, Klein- und Befestigungsmaterial, erforderliche Ausstanzungen an den Schaltschränken etc.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Schaltschrankthermostat zur Steuerung von Lüftern, Heizungen und Wärmetauschern sowie zur Überwachung der Schaltschrank-Innentemperatur;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Kompakt-Leistungsschalter für den Anlagenschutz, 3-polig, in Festeinbautechnik als Einspeiseschalter, für den unabhängigen Überstromzeitschutz, mit folgenden Merkmalen:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Anschlussleiste für Kabelanschluss 3 polig oben / unten mit folgenden Merkmalen:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Stromwandler zur Erfassung des Strangstromes der Einspeisung, zur Montage auf die Sammelschiene, mit:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Multifunktionales Leistungsmessgerät mit Profinet zur Messung von Strom, Spannung, Wirk-, Blind- und Scheinleistung, Leistungsfaktor, Netzfrequenz, Energie, Klirrfaktor und Oberschwingungen Bidirektional arbeitende rückstellbare Zähler für Bezug und Lieferung von Wirk- und Blindarbeit müssen für die;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;Spannungswächterrelais zur 3phasigen Überwachung der Netzspannung, mit folgenden Leistungsmerkmalen:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Leitungsschutzschalter Typ C, 1-polige Ausführung, inkl. Hilfskontakt und Potentialklemmen;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Leitungsschutzschalter Typ C, 2-polige Ausführung, inkl. Hilfskontakt und Potentialklemmen;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;FI-Schutzschalter 40 A, 2-polig, 30 mA,Typ A, inkl. Hilfskontakt;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;mit aktiver Überstrombegrenzung, Überlast- und Kurzschlussschutz;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;mit aktiver Überstrombegrenzung, Überlast- und Kurzschlussschutz;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Geräteadapter für Nennstrom bis 160 A zur Aufnahme der Motorschutzschalter oder Lasttrenner direkt auf die Sammelschiene, Montage durch Aufrasten auf die Sammelschiene komplett mit allem notwendigem Kleinmaterial.;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Leistungsschalter für den Motorschutz,;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Leistungsschalter für den Motorschutz,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Stromwandler mit Messumformer zur Erfassung und Wandlung sinusförmiger Strangströme, zur Montage auf die Sammel- bzw. Hutschiene, mit:;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Koppelrelais zur Signalanpassung und Vervielfältigung;34,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Koppelrelais zur Signalanpassung und Vervielfältigung;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Koppelrelais zur Signalanpassung und Vervielfältigung;34,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Koppelrelais zur Signalanpassung und Vervielfältigung;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;nach DIN VDE 0660, IEC 373 mit:;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Meldeleuchten, zum Einbau in die Schaltschranktür;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;Leuchtdrucktaster, zum Einbau in die Schaltschranktür;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+80;Drucktaster, zum Einbau in die Schaltschranktür;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+90;Drehschalter, zum Einbau in die Schaltschranktür;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+100;Drehschalter (H-0-A), zum Einbau in die Schaltschranktür;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+110;Ex i-NAMUR-Trennschaltverstärker, 1-kanalig. zum Betrieb von Näherungsinitiatoren und Schaltern im Ex-Bereich. Das Signal wird über Relaisausgang (Schließer) in den sicheren Bereich übertragen, geeignete für den Anschluss von eigensicheren Geräten der Zone 0 - 2, Fehlererkennung (LFD), 3-Wege-Trennu;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+120;Ex i-NAMUR-Trennschaltverstärker, 1-kanalig. zum Betrieb von analogen Messkreisen im Ex-Bereich, geeignete für den Anschluss von eigensicheren Geräten der Zone 0 - 2, 3-Wege-Trennung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+130;zur Warnung und Alarmierung im Gefahrenfall getrennt ansteuerbar, zur Aufputzmontage in Innen- und Außenräumen, mit folgender Ausstattung:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+140;zur Warnung und Alarmierung im Gefahrenfall, zur Aufputzmontage in Innen- und Außenräumen, mit folgender Ausstattung:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Not-Aus-Schaltgerät, nach DIN EN 60947-5-1, mit Zulassung der BG oder TÜV, zur Überwachung der Not-Aus-Kreise, in folgender Ausführung:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Erweiterung für vorgenanntes Not-Aus-Schaltgerät  mit 5 Schaltglieder Ö + S, ansonsten wie in vorgenannter Position.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Not-Aus-Pilzschlagtaster mit rundem Tastkopf, Ausführung gem.VDE;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;zum Schutz der Einspeisung vor Blitzstrom und Überspannung, geeignet für die Blitzschutzklasse II;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;zum Schutz von in den Außenbereich geführte 3x400 VAC Versorgungsleitungen, (Motore / Außenschränke);3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;zum Schutz von in den Außenbereich geführte 230 VAC Versorgungsleitungen,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;zum Schutz von in den Außenbereich geführte 24 VDC Versorgungsleitungen,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;zum Schutz von in den Außenbereich geführte MSR Leitungen, bestehend aus Schutzstecker und Basiselement mit integrierter Statusanzeige, für einen 2-adrigen erdpotenzialfrei betriebenen Signalkreis, z. B. 0(4) ... 20 mA Stromschleife, zur Montage auf Hutschiene.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;zum Schutz von in den Außenbereich geführte MSR Leitungen, bestehend aus Schutzstecker und Basiselement mit integrierter Statusanzeige für einen 4-adrigen erdpotenzialfrei betriebenen Signalkreis für 4-Leiter-Messungen z. B. von Temperaturen und Gewichten, zur Montage auf Hutschiene.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;zum Schutz von in den Außenbereich geführte MSR Leitungen, bestehend aus Schutzstecker und Basiselement bestehend aus Schutzstecker und Basiselement, mit integrierter Statusanzeige für zwei Signaladern mit gemeinsamem Bezugspotenzial, z. B Digital IN/OUT.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+80;zum Schutz von in den Außenbereich geführte Ethernet Leitungen,;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Das Anwenderprogramm zur Steuerung der Anlagenbereiches mit allen Aggregaten, Messsonden, Schnittstellen und der notwendigen Verknüpfung der Einzelsignale (1 Prozessvariable).;67,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Anwenderprogrammierung für eine analoge Prozessvariable, ansonsten wie in vorgenannter Position.;48,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Datenkopplung zu anderen Automatisierungsstationen mittels S7-Kommunikation über Industrial Ethernet mit folgenden Leistungen:;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Datenkopplung zu maschinengebundenen Steuerungen (z.B Polymeranlage etc.) und / oder externen Bedienelementen über Industrial Ethernet, Profinet o.ä mit folgenden Leistungen:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;Alle erforderlichen Parametrierungs- und Programmierungsarbeiten, die erforderlich sind, um das vollgrafische Bedienpanel über die Profinet- schnittstelle der CPU in das SPS Programm derart einzubinden, die eine Visualisierung und Bedienung (analog zur zentralen Prozessleittechnik) des über die SPS ;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Konfiguration und der Feldebene, Netzwerkstruktur und Einbindung des Automatisierungssystems in ein vorhandenes übergeordnetes Prozessleitsystem. Die Einbindung in die bestehende Prozessleittechnik ist in Zusammenarbeit mit dem Lieferanten der Prozessleittechnik durchzuführen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;SIMATIC ET 200SP, PROFINET, 2-Port Interface-Modul IM 155-6PN/2 High Feature, 1 Steckplatz für BusAdapter, max. 64 Peripheriemodule und 16 ET 200AL Module, S2-Redundanz, Multi Hot Swap, 0,25ms, taktsynchroner Betrieb, optionale PN-Zugentlastung, inklusive Server-Modul;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;SIMATIC ET 200SP, Busadapter BA 2xRJ45,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;zur Erfassung von potentialfreien und Dreileiter Sensorausgängen.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;SIMATIC ET 200SP, digitales Ausgangsmodul, DQ 8x 24VDC/0,5A High Feature, Source Output PNP, P-schaltend, passend für BU-Typ A0, Farbcode CC02, Kanal-Diagnose für: Kurzschluss und Drahtbruch, Versorgungsspannung, Kanalfehler-LED;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;SIMATIC ET 200SP, analoges HART Eingangsmodul, AI 4XI 2-Wire HART high Feature passend für BU-Typ A0, A1, Farbcode CC03, Kanal-Diagnose, 16bit, +/-0,3%,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Analog-Ausgangskarte mit 8 AO, für die Speicherprogrammierbare Steuerung (SIMATIC S7-1500 und ET-200MP).;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;SIMATIC ET 200SP, analoges Ausgangsmodul, AQ 4XU/I Standard, passend für BU-Typ A0, A1, Farbcode CC00, Modul-Diagnose, 16 Bit, +/-0,3%;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;"LWL-Rangierverteiler als 19""-Spleiß-Box, montiert im EDV-Schrank, zur Umsetzung von bis zu 2 x 12 LWL-Fasern zweier Erdkabel auf Frontkupplungen mit folgender Ausstattung:";2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;LWL Duplex-Patchkabel SC/SC 50/125 zur Verbindung zwischen Spleißbox und Switch mit folgenden Eigenschaften:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Datenleitung Industrial Ethernet Cat.7 für Festverlegung mit folgenden Eigenschaften:;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Patchkabel Category 6-600MHz;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;Patchkabel Category 6-600MHz;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Patchkabel Category 6-600MHz;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;Patchkabel Category 6-600MHz;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+80;Cat.6a Netzwerkdose für Hutschienenmontage mit folgenden Eigenschaften:;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+90;Cat.5 Netzwerkdose für die Wandmontage im Außenbereich mit folgenden Eigenschaften:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+100;Industriestecker Ethernet für den Anschluss von Endverbrauchern im Außenbereich mit folgenden Eigenschaften:;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+110;Kompakter Industrial Ethernet managed Switch mit folgenden Eigenschaften:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Kabelrinne, Edelstahl 200 x 110 mm;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Kabelrinne, Edelstahl 600 x 110 mm;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Kabelrinne, T-Stück, Edelstahl 200 x 110 mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Kabelrinne, T-Stück, Edelstahl 600 x 110 mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;Kabelleiter, Edelstahl, 200 x 60;12,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Kabelleiter, Edelstahl, 400 x 60;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;Kabelleiter, Edelstahl, 600 x 60;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+80;Hängestiel aus Edelstahl, Werkstoff Nr. 1.4301, U-Profil 40 x 60 x 40 mm mit angeschweißter Kopfplatte, zur Befestigung an waagerechten oder senkrechten Betondecken und Stahlträgern.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+90;Wandausleger us Edelstahl, Werkstoff Nr. 1.4301 als Hilfskonstruktion, bis zu einer Länge von 800 mm, zum abfangen von Kabelzuführungen, einschl. allem notwendigen Kleinmaterial.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+100;Starres Stangen-Installationsrohr aus Edelstahl (1.4301) in sehr schwerer Ausführung für die Aufputzinstallation im industriellen Umfeld, mit folgenden Eigenschaften:;45,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+110;Starres Stangen-Installationsrohr aus Edelstahl (1.4301) in sehr schwerer Ausführung für die Aufputzinstallation im industriellen Umfeld, mit folgenden Eigenschaften:;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+120;Starres Stangen-Installationsrohr aus Kunststoff in schwerer Ausführung für die Aufputzinstallation im industriellen Umfeld, mit folgenden Eigenschaften:;21,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+130;Starres Stangen-Installationsrohr aus Kunststoff in schwerer Ausführung für die Aufputzinstallation im industriellen Umfeld, mit folgenden Eigenschaften:;21,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+140;Edelstahl-Abdeckung von Kabeltrassen (Gewicht ca. 20-30kg, Maße (BxLxH) ca. 50x40x30cm, öffnen und verschließen. Die Abdeckungen befinden sich im Außen- und Innenbereich vom KA Rendsburgr, im Einzelnen bestehend aus:;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+150;Schachtabdeckung von Kabelschacht befahrbar durch LKW oder PKW, Gewicht ca. 250 kg, Maße (BxLxH) 	ca. 95x95x12cm, öffnen und verschließen. Die Kabelschächte befindet sich auf dem Gelände der KA Rendsburg, im Einzelnen bestehend aus:;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;YSLY-J 4G 2,5 mm²;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;YSLY-J BK 4G 2,5 mm², schwarz, uv-beständig;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;YSLY-J BK 12G1,5 mm², schwarz, uv-beständig;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;YSLY-J 3G 1,5 mm², robust;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;YSLY-J 4G 1,5 mm², robust;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;YSLY-J 4G 2,5 mm², robust;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;YSLCY-J BK 4G2,5 mm², 0,6/1 kV, schwarz, uv-beständig;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;"A-Optische Außenkabel: A-DQ(ZN)B2Y; feste Verlegung; Erdverlegung, Glasgarne; Polyethylen; schwarz, uv-beständig";200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Datenleitung Industrial Ethernet Cat 6, gemäß PROFInet Guideline + IEC 61158-2 für feste Verlegung.;250,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Datenleitung Industrial Ethernet Cat 6, gemäß PROFInet Guideline + IEC 61158-2 für feste Verlegung.;250,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Brandmeldekabel mit Funktionserhalt, in Anlehnung an DIN VDE 0815, flammenwidrig, halogenfrei, geschirmt, Adern zu Paaren und je 4 Paare zu Bündeln verseilt.;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Einseitiger Anschluss Kabel/Leitungen 3x 2,5 mm²;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;EinseitigerAnschluss Kabel/Leitungen 4x 25 mm²;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Einseitiger Anschluss Kabel/Leitungen 5x 2,5 mm²;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Anschluss für Kabel und Leitungen mit bis zu 12 Adern und einen Querschnitt bis zu 1,5 mm²;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;Kabelanschluss für ein Netzwerk-Verlegekabel Cat.7 mit Auflegewerkzeug auf eine LSA+ Leiste oder Netzwerksteckdose, einschließlich allem notwendigen Kleinmaterial.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Die Kabelbeschriftung erfolgt mittels Kabelbeschriftungsschild in witterungs-, uv-, öl- und chemikalienbeständiger Ausführung einschließlich UV-beständigen Kabelbindern aus Polyamid. Kabelbinder mit Stahlverschluss aus korrosionsbeständigem, nicht magnetischem Stahl.;320,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;zur Montage in Brüstungskanal:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Zweifach Datensteckdosen (RJ-45) aus Kunststoff zur Montage in Brüstungskanal mit zugehörigem Rahmen für ortsveränderlichen Anschluss von Dateneinrichtungen. Buchsen geschirmt, Gehäuse geschirmt, mit Kabelzugentlastung gleiche Farbe wie Brüstungskanal.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;für die Aufputzmontage, mit schraublosen Anschlußklemmen, allseitiger Leitungseinführung.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;für die Aufputzmontage, mit schraublosen Anschlußklemmen, allseitiger Leitungseinführung.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;für die Aufputzmontage, mit schraublosen Anschlußklemmen, allseitiger Leitungseinführung.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Thermostat Aufputzmontage zur Steuerung von Ventilatoren in Abhängigkeit der Lufttemperatur. Zur Schaltung von Drehstrom-Ventilatoren.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;LED-Rohrleuchte geeignet für den Einsatz in der Ex-Zone 1 sowie im Außenbereich mit folgenden Eigenschaften:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;LED-Flutlichtstrahler für den Einsatz im Außenbereich mit folgenden Eigenschaften:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;LED Mastauf- und Ansatzleuchte mit Leuchtengehäuse und Mastanbin- dung aus pulverbeschichteten, widerstandsfähigen Aluminium-Druckguss.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Stahl - Aufsatzmast gerade nach DIN EN 40.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;Lichtmastsicherungskasten mit Berührungsschutz nach DIN VDE 0636 0606, Schutzart IP 42, mit Sicherungssockel 2 x E 14 und Durchgangsverdrahtung bis 16 mm² und Abzweig bis 10 mm².;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Vor-Ort-Steuerstelle für die Außenmontage, direkt beim Aggregat, für einen Ein-Richtungs-Antrieb zur hardwaremäßigen Ansteuerung des Antriebes mit folgender Ausstattung:;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Vor-Ort-Steuerstelle für die Außenmontage, direkt beim Antrieb, für Auf- / Zu-Ansteuerung zur hardwaremäßigen Ansteuerung des Antriebes mit folgender Ausstattung:;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;Notaus-Taster als Komplettgerät rot/gelb im Kunststoffgehäuse mit folgender Ausstattung:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Reparaturschalter/Wartungsschalter zur Abschaltung von Antrieben und Aggregaten bei Reparatur und Wartung, mit folgenden Merkmalen:;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Vor-Ort-Steuerständer zur Aufnahme von 1 Vor-Ort-Steuerstelle und 1 Notaus-Schalter in Edelstahl 1.4571 o. 1.4404, Stärke 3 mm, bestehend aus:;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;Vor-Ort-Haube zur Aufnahme bis zu 4 Vor-Ort-Steuerstellen oder Klemm-;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+30;mit folgender Ausstattung:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+40;Kabelabzweigkasten für den Einsatz im Außenbereich mit folgender Ausstattung:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+50;mit folgender Ausstattung:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+60;Klemmkasten als Übergangskasten für Pumpen, Rührwerke etc., mit eingebauter Klemmleiste für die Leistungskabel, Verschraubungen mit Zugentlastung einschl. nichtrostendem Befestigungsmaterial und einem Resopalschild (AKZ und Langtext).;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+70;Klemmkasten als Übergangskasten für Pumpen, Rührwerke etc., mit eingebauter Klemmleiste für die Leistungskabel, Verschraubungen mit Zugentlastung einschl. nichtrostendem Befestigungsmaterial und einem Resopalschild (AKZ und Langtext).;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+80;Klemmkasten als Übergangskasten für Pumpen, Rührwerke etc., mit eingebauter Klemmleiste für die Leistungskabel, Verschraubungen mit Zugentlastung einschl. nichtrostendem Befestigungsmaterial und einem Resopalschild (AKZ und Langtext).;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+90;Kernbohrung in Stahlbetondecken oder -wänden bauwerksschonend mit Diamantbohrgerät, Durchmesser bis 100 mm, bis 400 mm Stärke. Incl. Versiegelung der Bohrflächen und Entsorgung des Bohrkerns.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+100;sonst wie Position vor, jedoch 150/400 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+110;Wand-Durchbruch in Mauerwerk oder Beton, Stärke bis 400 mm,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+120;Geschlossene Kabeleinführungen in gas- und wasserdichter Ausführung, bestehend aus:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+130;sonst wie Position vor, jedoch;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+140;Systemdeckel für Systemdurchführung HSI 150 mit Schrumpfeinsätzen für folgende Verkabelung:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+150;Brandschottmasse zur Abschottung von Durchbrüchen und Maueröffnungen mittels Hartschottmasse feuerbeständig für 90 Minuten.;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+160;Kabeldurchführung mit Segmentunterteilung für Systemdurchführung HSI 150;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+170;Kunststoffflansch zur nachträglichen Montage an Außenwänden mit Kernbohrungen, zur Aufnahme von HSI 150  Systemkomponenten.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+180;Stecker zum Anschluss von Sensorik bestehend aus :;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+190;Stecker zum Anschluss von Ventilen bestehend aus :;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+10;Durchführung einer Bestandsaufnahme zur Konkretisierung der 400V AC und 24V DC Versorgung für den Dosierschrank in der vorhandenen Schaltanlage 4. Reinigungsstufe.;8,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83
+20;wie Position zuvor, jedoch;16,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/Angebotsaufforderung.x83

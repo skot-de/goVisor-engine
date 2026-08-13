@@ -1,0 +1,266 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Chlorelektrolyseanlage;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0020;Zubehörsatz Chlorelektrolyseanlage,;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0030;Titrationskoffer;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0040;Natronlauge 4-6 %;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0050;Salzsäure 9%;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0060;Auffangwanne;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0070;Auffangwanne;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0080;Salzlösebehälter;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0090;Auffangwanne;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0100;Produktbehälter;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0110;Elektronik-Modul;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0120;Sensor-Kit;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0130;Blitzlicht-Hupe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0140;Membrandosierpumpe 1;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0150;Membrandosierpumpe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0160;Membrandosierpumpe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0170;Membrandosierpumpe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0180;Management System für die Prozesssteuerung;4,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0190;"Messwasserpumpe M1;";4,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0200;Konsole komplett:;4,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0210;"Messwasserentnahme;";4,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0220;Dosierstation;4,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0230;Entlüftung über Dach;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0010;Chlorelektrolyseanlage;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0020;Auffangwanne;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0030;Zubehörsatz NXT;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0040;Titrationskoffer;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0050;Natronlauge 4-6 %;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0060;Salzsäure 9%;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0070;"Elektronik-Modul GMS plus 200-240VAC; WM";1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0080;Sensor-Kit;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0090;Blitzlicht-Hupe 115-230VAC IP66;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0100;Membrandosierpumpe mit Schrittmotor;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0110;Membrandosierpumpe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0120;Management System für die Prozesssteuerung;2,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0130;Entlüftung über Dach;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0010;Chlorelektrolyseanlage;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0020;Auffangwanne;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0030;Zubehörsatz NXT;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0040;Titrationskoffer 1-40 g/l Cl2,;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0050;Natronlauge 4-6 %;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0060;Salzsäure 9%;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0070;Elektronik-Modul;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0080;Sensor-Kit;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0090;Blitzlicht-Hupe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0100;Membrandosierpumpe mit Schrittmotor;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0110;Membrandosierpumpe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0120;Management System für die Prozesssteuerung;2,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0130;Entlüftung über Dach;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0010;Chlorelektrolyseanlage;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0020;Auffangwanne;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0030;Zubehörsatz NXT;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0040;Titrationskoffer;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0050;Natronlauge 4-6 %;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0060;Salzsäure 9%;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0070;Elektronik-Modul;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0080;Sensor-Kit;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0090;Blitzlicht-Hupe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0100;Membrandosierpumpe mit Schrittmotor;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0110;Membrandosierpumpe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0120;Management System für die Prozesssteuerung;2,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0130;Entlüftung über Dach;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0010;Chlorelektrolyseanlage;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0020;Auffangwanne;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0030;Zubehörsatz NXT;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0040;Titrationskoffer;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0050;Natronlauge 4-6 %;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0060;Salzsäure 9%;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0070;Elektronik-Modul;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0080;Sensor-Kit;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0090;Blitzlicht-Hupe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0100;Membrandosierpumpe mit Schrittmotor;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0110;Membrandosierpumpe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0120;Management System für die Prozesssteuerung;2,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0130;Entlüftung über Dach;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0010;Chlorelektrolyseanlage;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0020;Auffangwanne;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0030;Zubehörsatz NXT;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0040;Titrationskoffer;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0050;Natronlauge 4-6 %;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0060;Salzsäure 9%;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0070;Elektronik-Modul;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0080;Sensor-Kit;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0090;Blitzlicht-Hupe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0100;Membrandosierpumpe mit Schrittmotor.;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0110;Membrandosierpumpe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0120;Anfang 2026 wurde eine neue Steuereinheit für die Badewassertechnik montiert.;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0130;Entlüftung über Dach;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0010;Chlorelektrolyseanlage;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0020;Zubehörsatz, bestehend aus:;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0030;Titrationskoffer;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0040;Natronlauge 4-6 %;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0050;Salzsäure 9%;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0060;Auffangwanne;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0070;Auffangwanne;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0080;Salzlösebehälter;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0090;Auffangwanne;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0100;Produktbehälter als NaClO Horizontaltank;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0110;Elektronik-Modul;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0120;Sensor-Kit;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0130;Blitzlicht-Hupe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0140;Membrandosierpumpe mit Schrittmotor;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0150;Membrandosierpumpe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0160;Management System für die Prozesssteuerung;4,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0170;"Messwasserpumpe M1;d25/32;230VAC";4,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0180;Konsole komplett:;4,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0190;"Messwasserentnahme;";4,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0200;Dosierstation VPP-E 15-600;4,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0210;Entlüftung über Dach;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0010;Chlorelektrolyseanlage;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0020;Auffangwanne;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0030;Zubehörsatz NXT;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0040;Titrationskoffer;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0050;Natronlauge 4-6 %;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0060;Salzsäure 9%;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0070;Elektronik-Modul;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0080;Sensor-Kit;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0090;Blitzlicht-Hupe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0100;Membrandosierpumpe mit Schrittmotor;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0110;Membrandosierpumpe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0120;Management System für die Prozesssteuerung;2,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0130;Entlüftung über Dach;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0010;Chlorelektrolyseanlage;2,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0020;Zubehörsatz, bestehend aus:;2,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0030;Titrationskoffer;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0040;Natronlauge 4-6 %;2,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0050;Salzsäure 9%;2,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0060;Auffangwanne;2,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0070;Auffangwanne;2,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0080;Salzlösebehälter;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0090;Auffangwanne;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0100;Produktbehälter;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0110;Produktbehälter;2,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0120;Elektronik-Modul;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0130;Sensor-Kit;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0140;Blitzlicht-Hupe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0150;Membrandosierpumpe mit Schrittmotor;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0160;Membrandosierpumpe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0170;Membrandosierpumpe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0180;Membrandosierpumpe;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0190;Management System für die Prozesssteuerung;4,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0200;"Messwasserpumpe M1;";4,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0210;Konsole komplett:;4,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0220;"Messwasserentnahme;";4,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0230;Dosierstation;4,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0240;Entlüftung über Dach;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0010;Wartung im 1. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0020;Material gemäß Herstellervorgaben für die jährliche Wartung,;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0030;Wartung im 2. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0040;Material gemäß Herstellervorgaben für die Wartung, alle 2 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0050;Wartung im 3. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0060;Material gemäß Herstellervorgaben für die jährliche Wartung,;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0070;Wartung im 4. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0080;Material gemäß Herstellervorgaben für die Wartung, alle 2 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0090;Ersatz-Elektrolysezelle;2,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0100;Wartung im 5. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0110;Material gemäß Herstellervorgaben für die Wartung, alle 5 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0120;Störungsbeseitigung nach Aktivierung durch den AG;30,0;h;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0130;Anfahrtspauschale zur Störungsbeseitigung;5,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0010;Wartung im 1. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0020;Material gemäß Herstellervorgaben für die jährliche Wartung,;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0030;Wartung im 2. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0040;Material gemäß Herstellervorgaben für die Wartung, alle 2 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0050;Wartung im 3. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0060;Material gemäß Herstellervorgaben für die jährliche Wartung,;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0070;Wartung im 4. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0080;Material gemäß Herstellervorgaben für die Wartung, alle 2 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0090;Ersatz-Elektrolysezelle;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0100;Wartung im 5. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0110;Material gemäß Herstellervorgaben für die Wartung, alle 5 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0120;Störungsbeseitigung nach Aktivierung durch den AG;30,0;h;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0130;Anfahrtspauschale zur Störungsbeseitigung;5,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0010;Wartung im 1. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0020;Material gemäß Herstellervorgaben für die jährliche Wartung,;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0030;Wartung im 2. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0040;Material gemäß Herstellervorgaben für die Wartung, alle 2 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0050;Wartung im 3. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0060;Material gemäß Herstellervorgaben für die jährliche Wartung,;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0070;Wartung im 4. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0080;Material gemäß Herstellervorgaben für die Wartung, alle 2 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0090;Ersatz-Elektrolysezelle;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0100;Wartung im 5. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0110;Material gemäß Herstellervorgaben für die Wartung, alle 5 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0120;Störungsbeseitigung nach Aktivierung durch den AG;30,0;h;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0130;Anfahrtspauschale zur Störungsbeseitigung;5,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0010;Wartung im 1. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0020;Material gemäß Herstellervorgaben für die jährliche Wartung,;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0030;Wartung im 2. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0040;Material gemäß Herstellervorgaben für die Wartung, alle 2 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0050;Wartung im 3. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0060;Material gemäß Herstellervorgaben für die jährliche Wartung,;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0070;Wartung im 4. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0080;Material gemäß Herstellervorgaben für die Wartung, alle 2 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0090;Ersatz-Elektrolysezelle;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0100;Wartung im 5. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0110;Material gemäß Herstellervorgaben für die Wartung, alle 5 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0120;Störungsbeseitigung nach Aktivierung durch den AG;30,0;h;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0130;Anfahrtspauschale zur Störungsbeseitigung;5,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0010;Wartung im 1. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0020;Material gemäß Herstellervorgaben für die jährliche Wartung,;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0030;Wartung im 2. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0040;Material gemäß Herstellervorgaben für die Wartung, alle 2 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0050;Wartung im 3. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0060;Material gemäß Herstellervorgaben für die jährliche Wartung,;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0070;Wartung im 4. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0080;Material gemäß Herstellervorgaben für die Wartung, alle 2 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0090;Ersatz-Elektrolysezelle;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0100;Wartung im 5. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0110;Material gemäß Herstellervorgaben für die Wartung, alle 5 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0120;Störungsbeseitigung nach Aktivierung durch den AG;30,0;h;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0130;Anfahrtspauschale zur Störungsbeseitigung;5,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0010;Wartung im 1. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0020;Material gemäß Herstellervorgaben für die jährliche Wartung,;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0030;Wartung im 2. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0040;Material gemäß Herstellervorgaben für die Wartung, alle 2 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0050;Wartung im 3. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0060;Material gemäß Herstellervorgaben für die jährliche Wartung,;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0070;Wartung im 4. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0080;Material gemäß Herstellervorgaben für die Wartung, alle 2 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0090;Ersatz-Elektrolysezelle;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0100;Wartung im 5. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0110;Material gemäß Herstellervorgaben für die Wartung, alle 5 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0120;Störungsbeseitigung nach Aktivierung durch den AG;30,0;h;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0130;Anfahrtspauschale zur Störungsbeseitigung;5,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0010;Inbetriebnahme nach der Winterpause zu Beginn der neuen Freibadsaison.;4,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0020;Material gemäß Herstellervorgaben für die jährliche Wartung,;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0030;Wartung im 1. Betriebsjahr;4,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0040;Wartung im 2. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0050;Material gemäß Herstellervorgaben für die Wartung, alle 2 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0060;Wartung im 3. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0070;Material gemäß Herstellervorgaben für die jährliche Wartung,;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0080;Wartung im 4. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0090;Material gemäß Herstellervorgaben für die Wartung, alle 2 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0100;Ersatz-Elektrolysezelle;4,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0110;Wartung im 5. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0120;Material gemäß Herstellervorgaben für die Wartung, alle 5 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0130;Störungsbeseitigung nach Aktivierung durch den AG;30,0;h;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0140;Anfahrtspauschale zur Störungsbeseitigung;5,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0010;Wartung im 1. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0020;Material gemäß Herstellervorgaben für die jährliche Wartung,;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0030;Wartung im 2. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0040;Material gemäß Herstellervorgaben für die Wartung, alle 2 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0050;Wartung im 3. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0060;Material gemäß Herstellervorgaben für die jährliche Wartung,;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0070;Wartung im 4. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0080;Material gemäß Herstellervorgaben für die Wartung, alle 2 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0090;Ersatz-Elektrolysezelle;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0100;Wartung im 5. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0110;Material gemäß Herstellervorgaben für die Wartung, alle 5 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0120;Störungsbeseitigung nach Aktivierung durch den AG;30,0;h;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0130;Anfahrtspauschale zur Störungsbeseitigung;5,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0010;Inbetriebnahme nach der Winterpause zu Beginn der neuen Freibadsaison.;4,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0020;Material gemäß Herstellervorgaben für die jährliche Wartung,;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0030;Wartung im 1. Betriebsjahr;1,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0040;Wartung im 2. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0050;Material gemäß Herstellervorgaben für die Wartung, alle 2 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0060;Wartung im 3. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0070;Material gemäß Herstellervorgaben für die jährliche Wartung,;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0080;Wartung im 4. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0090;Material gemäß Herstellervorgaben für die Wartung, alle 2 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0100;Ersatz-Elektrolysezelle;6,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0110;Wartung im 5. Betriebsjahr;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0120;Material gemäß Herstellervorgaben für die Wartung, alle 5 Jahre;1,0;psch;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0130;Störungsbeseitigung nach Aktivierung durch den AG;30,0;h;gaeb;leistungsbeschreibungen/BESBE260701_01.X83
+0140;Anfahrtspauschale zur Störungsbeseitigung;5,0;St;gaeb;leistungsbeschreibungen/BESBE260701_01.X83

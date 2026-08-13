@@ -1,0 +1,690 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Tauchtemperatur-Messwertgeber, 200mm Einsteck-Ausführung mit  Ms-Tasche;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Tauchtemperatur-Messwertgeber, 300mm Einsteck-Ausführung mit Ms-Tasche;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Tauchtemperatur-Messwertgeber, 150mm für Kaltwasser Einsteck-Ausführung mit Ms-Tasche;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Dreiwegeventil DN40 kvs 25 PN16, mit Ventil-Stellantrieb;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Dreiwegeventil DN25 kvs 10 PN16 mit Ventil-Stellantrieb;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Dreiwegeventil DN32 kvs 12,5 PN16 mit Ventil-Stellantrieb;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Dreiwegeventil mit Stellantrieb Stellungsrückmeldung;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Leckagedetektor mit Schaltkontakt und zwei Melde-LEDs eignet sich ideal zur Überwachung von Behältern, Zwischenböden, Zwischendecken oder Räumen gegen unerwünschten Wassereintritt und hilft somit, größere Wasserschäden zu vermeiden. Durch die höhenverstellbaren Meldekontakte kann der Ansprechzeitpun;6,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Wärmemengenzähler WMZ DN100 qp60 FL 250mm 100L MID;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;Wärmemengenzähler WMZ DN50 qp15 FL 270mm 100L MID;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0110;Wärmemengenzähler Ultraschall-Volumenmessteil DN40 qp 10 300mm Gewinde PN16 10L Batterie MID, qp 10 / qi 0,1 m³/h;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0120;Wärmemengenzähler Ultraschall-Volumenmessteil DN32 qp 6 / qi 0,06 m³/h, FL 260mm 10L Bat. MID;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0130;Einstrahl-Kaltwasserzähler DN15 Q3 2,5m³/h 110mm G3/4, PN16 30° MID, Einstrahltrockenläufer Kaltwasserzähler, Dynamikbereich (Q3/Q1) R80;4,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Automationsstation mit BACnet-Kommunikation mit folgenden Hard- und Softwareeigenschaften:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Gateway RS485, M-Bus 50DP mit Integriertem M-Bus Adapter 64 MB;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Gateway RS485 50DP 64 MB;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Gateway RS485, KNX 50DP mit Integriertem KNX Adapter 64 MB;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;16 Port Fast Ethernet Switch;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Überspannungsschutz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Überspannungsschutz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Überspannungsschutz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Ethernet-Patchkabel 1m, Cat 7;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Projektierung Binärer Ausgang Schalten/Stellen;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Projektierung Analoge Ausgabe Stellen DIN EN ISO 16484;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Projektierung Binäre Eingabe Melden DIN EN ISO 16484;115,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Projektierung Analoge Eingabe Messen;33,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Inbetriebnahme Binärer Ausgang Schalten/Stellen;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Inbetriebnahme Analoge Ausgabe Stellen;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Inbetriebnahme Binäre Eingabe Melden;115,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Inbetriebnahme Analoge Eingabe Messen;33,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Für das funktionelle Zusammenwirken zwischen Fremdsystem und Automationsstation werden folgende Voraussetzungen geschaffen:;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;Für das funktionelle Zusammenwirken zwischen Fremdsystem und Automationsstation werden folgende  Voraussetzungen;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0110;Die Dokumentation ist soweit wie möglich in elektronischer Form zur Verfügung zu stellen.;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0120;Erstmalige Einweisung des vom Auftraggeber benannten Personals in Funktion, Betriebsweise und Bedienung der Gebäudeautomations-Anlage;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0130;Nachregulierung Eintritt Kälteperiode/Heizungsperiode;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0140;Einrichten der Schnellabfrage zur Abfrage / Änderung von Istwerten, Sollwerten, Nutzungszeiten, Jahresdatenpunkten und Betriebszuständen;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0150;Erstellung einer EDE-Datei zum Datenaustausch zwischen einem BACnet-Server und einem BACnet-Client. Der EDE-File muss der Vorlage der BIG (BACnet Interest Group) entsprechen und enthält u.a. Datenpunkttypen, Datenpunktadressen, Informationen zum Aktualisierungsverhalten zu Wertebereichen, Skalierung;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0160;Projektierung / Inbetriebnahme Anbindung M-Bus-Geräte, die Anbindung der Geräte erfolgt mittels kommunikativer Aufschaltung über M-Bus. Je Gerät sind bis zu 25 gemeinsame Datenpunkte vorgesehen. Diese sind im AS-System anzulegen und anzuzeigen.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0170;Hardwarecheck der Datenpunkte mit:;165,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0180;Projektierung busfähige Handbedienebene;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0190;Inbetriebnahme Busfähige Handbedienebene mit:;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Schaltschrank als Anreihschrank, eintürig 800x1800x400, für Sockelmontage aus Stahlblech einschließlich Seitenwänden für Sockelmontage, Türen gummigedichtet mit innen liegenden Scharnieren und Stangen verschluss mit Doppelbartschlüssel.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Ablagepult für Türbreite 800mm, Belastbarkeit max. 30kg;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Schaltplantasche, aus Stahlblech, für Türbreite 800mm, zur Montage auf der Innenseite von Schaltschranktüren, incl. Befestigungsmaterial.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Einspeisung 400VAC 63A, mit Hauptsicherung, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Netz-ÜS-Ableiter < 100 A als Mittelschutz in 230/400 V AC Drehstromnetzen, Nennableitstrom 20 kA, mit potentialfreien Kontakt für Auslösemeldung. Mit Universalfuß zum Aufschnappen auf DIN/EN-Tragschienen, einschließlich Tragschienenanteil und Verbindung mit dem Potentialausgleich.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Sammelstörmeldung mit Signalisierung optisch und akustisch, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Phasenüberwachnung 400 VAC, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Phasenlampen für 400 V Netz, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Energiezähler mit LCD, Wirkenergie direkt 5(65)A 400V S0, M-Bus-Anschluss;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;Netzwiederkehrschaltung mit zentraler Störungsquittierung, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0110;Schaltschranklüfter 230 V / 50 Hz mit Filtermatte, Zuluftgitter, Abluftgitter, mit Raumthermostat im Schaltschrank und 1 Leitungsschutzschalter 1-polig;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0120;Schaltschrankbeleuchtung LED mit Steckdose, je Schaltschrankfeld, bestehend aus:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0130;E-DAT Industriestecker, IP 20, RJ 45.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0140;Steuerspannungstrafo 230VAC 250VA mit MSS primär und LSS sekundär nach VDE 050, Nennleistung VA: 250, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0150;Transformator 230/24VAC 160VA, nach VDE 0570/EN61558;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0160;Netzgerät 230VAC/24VDC 6A, mit Leitungsschutzschalter primär/sekundär, spannungsstabilisiert, Nennstrom A: 6, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0170;Netzabgang 230VAC, schaltbar 10A, Leitungsschutzschalter, Nennstrom A: 10, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0180;Übergabeklemmen, Feld 1 zu Feld 2;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0190;Pumpensteuerung 230VAC 4kW, Netzabgang mit Meldung, Nennleistung kW: 4, bestehend aus:;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0200;Pumpensteuerung 400VAC 1,5kW, Netzabgang mit Meldung, Nennleistung kW: 1,5 bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0210;Ventilsteuerung stetig, mit Rückmeldung, bestehend aus:;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0220;Meldung potentialfrei, bestehend aus:;78,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0230;Aufschaltung Messwert passiv, bestehend aus:;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0240;Busaufschaltung für Feldbus, Modbus, M-Bus, BACnet,. über Trennklemmen;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0250;Einbau / Verdrahtung auf Montageplatte der Automationsstation / Geräte, einschließlich sämtlicher Zubehörteile, einschließlich Beschilderung. Verdrahtungs- und Montagematerial, Reihenklemmen nach Bedarf.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0260;Werkstatt- / Montageplanung Schaltschrank nach DIN18386 (VOB Teil C). Werkstatt- und Montageplanung bestehend aus Erstellung und Übergabe folgender Unterlagen:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0270;Inbetriebnahme Schaltschrank. Überprüfung aller im Schaltschrank ankommenden Kabel / Leitungen nach DIN VDE 100 Teil 610. Überprüfung der Feldgeräte gemäß Schaltplan. Überprüfung der Stromaufnahme und der Drehrichtung der Antriebe. Prüfung der Steuerfunktion. Einstellen der Thermoauslöser. Einweisun;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0280;Schaltschrank aufstellen und mech./elektr. verbinden, Schaltschrank wie vorstehend beschrieben, zum Verwendungsort transportieren, aufstellen und mechanisch/elektrisch verbinden. Die örtlichen Begebenheiten sind zu beachten bzw. durch Baustellenbesichtigung zu überprüfen.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;"Kanaltemperatur-Messwertgeber, 300mm Kunststoffrohr, Anschlußgehäuse aus Kunststoff, Kunststoffrohr, Steckflansch, Messtoleranz entsprechend VDI 3512, entsprechend Genauigkeitsklasse ""A-TGA""";8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;"Kanalfeuchte-Temperatur-Messwertgeber, 300mm, Kunststoffrohr, Kunststoffgehäuse, Messtoleranz entsprechend VDI 3512, entsprechend Genauigkeitsklasse ""A-TGA""";8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Kanalrauchmelder 230 V AC, Rohr 0,6 m, inklusive Entnahmerohr 0,6 m. zur frühzeitigen Erkennung von Schwelbränden und Bränden mit Rauchentwicklung. Der Sensor arbeitet nach dem Streulichtprinzip. Mit Alarmschwellennachführung, dadurch längere Standzeit. Kontinuierliche Anzeige der Verschmutzung durc;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Kanaltemperatur-Frostschutzwächter, Fühlerleitungslänge 6m, Schaltpunkt einstellbar;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Kanalhygrostat, zweistufig, stetig, mit Display, IP65;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;"Tauchtemperatur-Messwertgeber, 100mm Einsteck-Ausführung mit Ms-Fühlertasche, Messtoleranz entsprechend VDI 3512, entsprechend Genauigkeitsklasse ""A-TGA""";8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;"Tauchtemperatur-Messwertgeber, 100mm für Kaltwasser Einsteck-Ausführung, mit Ms-Fühlertasche, Messtoleranz entsprechend VDI 3512, entsprechend Genauigkeitsklasse ""A-TGA""";4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Durchgangsventil DN20 kvs 6,3 PN16 mit Ventil-Stellantrieb;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Dreiwegeventil DN20 kvs 6,3 PN16, mit Ventil-Stellantrieb;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;Klappenantrieb, 24V AC/DC, 20 Nm, stetig, Stellungsrückmeldung;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0110;Klappenantrieb, 24V AC/DC, 20 Nm, Auf/Zu, 3-Punkt, Hilfsschalter;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0120;Differenzdruckwächter 100..1000Pa, mit Kunststoffgehäuse, Schlauchanschlüsse, Wandkonsole, 2m PVC-Schlauch und 2 Schlauchnippel;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0130;Differenzdruckwächter 20..300Pa, mit Kunststoffgehäuse, Schlauchanschlüsse, Wandkonsole, 2m PVC-Schlauch und 2 Schlauchnippel;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0140;Differenzdruck-Messwertgeber 500Pa, 0..100/300/500Pa, Anwendungsbereich luftneutrale Gase, Anschluß 3-adrig,Kunststoffgehäuse, Anschlußzubehör 2m PVC-Schlauch, 2 Anschlußnippel und 3 einstellbare Messbereiche;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0150;Reparatur- und Sicherheitsschalter, Hauptschalter mit Not-Aus-Funktionim;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Klimasensor zur Messung von Umweltparametern. Diese werden als serielles Telegramm über eine RS485/422 und /oder als analoge Signale über Spannungsausgänge zur weiteren Verarbeitung zur Verfügung gestellt.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Anschlusskabel für Klimasensor, 10m;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Anschlusskasten 12V DC/24V DC;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Montagesatz für Wetterstation, Klemmbereich d48 - 102 mm, Material Edelstahl, nicht rostend;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Geräteträger für Wetterstation, 4 m, Durchmesser 48 mm, Geräteträger incl. 2 Wandbriden und Erdbride, ohne Abspannung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Blitzschutzstab für Wetterstation, Stahl, feuerverzinkt, 48-50 mm, dient als äußerer Blitzschutz bei ordnungsgemäßer Integration in das lokale Blitzschuztkonzept;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Anschlusskasten für Blitzduktoren mit Hutschine für Montage von bis zu 1 Netz- und 9 Signalblitzduktoren oder 0 Netz- und 12 Signalblitzduktoren, lackiertes Aluminiumgehäuse;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Blitzduktor L Datapro-RS485-TR 6-pol. Ü-Spannung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Blitzduktor, 3-pol, dreipoliger Überspannungsableiter 275V, Hutschienenmontage;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Automationsstation mit BACnet-Kommunikation mit folgenden Hard- und Softwareeigenschaften:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Gateway RS485, M-Bus 50DP mit Integriertem M-Bus Adapter 64 MB;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Gateway RS485 50DP 64 MB;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Gateway RS485, KNX 50DP mit Integriertem KNX Adapter 64 MB;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;16 Port Fast Ethernet Switch;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Überspannungsschutz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Überspannungsschutz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Überspannungsschutz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Ethernet-Patchkabel 1m, Cat 7;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Projektierung Binärer Ausgang Schalten/Stellen;62,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Projektierung Analoge Ausgabe Stellen DIN EN ISO 16484;28,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Projektierung Binäre Eingabe Melden DIN EN ISO 16484;197,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Projektierung Analoge Eingabe Messen;66,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Inbetriebnahme Binärer Ausgang Schalten/Stellen;62,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Inbetriebnahme Analoge Ausgabe Stellen;28,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Inbetriebnahme Binäre Eingabe Melden;197,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Inbetriebnahme Analoge Eingabe Messen;66,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Projektierung BA Schalten;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;Projektierung Analoge Ausgabe Stellen/Sollwert;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0110;Projektierung Binäre Eingabe Zustand;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0120;Projektierung analoge Eingabe Messen;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0130;Inbetriebnahme Bin.Ausg.Schalten/Stellen;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0140;Inbetriebnahme Analoge Ausgabe Stellen/Sollwert;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0150;Inbetriebnahme Binäre Eingabe Zustand;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0160;Inbetriebnahme analoge Eingabe Messen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0170;Für das funktionelle Zusammenwirken zwischen Fremdsystem und Automationsstation werden folgende Voraussetzungen geschaffen:;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0180;Für das funktionelle Zusammenwirken zwischen Fremdsystem und Automationsstation werden folgende  Voraussetzungen;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0190;Die Dokumentation ist soweit wie möglich in elektronischer Form zur Verfügung zu stellen.;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0200;Erstmalige Einweisung des vom Auftraggeber benannten Personals in Funktion, Betriebsweise und Bedienung der Gebäudeautomations-Anlage;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0210;Nachregulierung Eintritt Kälteperiode/Heizungsperiode;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0220;Einrichten der Schnellabfrage zur Abfrage / Änderung von Istwerten, Sollwerten, Nutzungszeiten, Jahresdatenpunkten und Betriebszuständen;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0230;Erstellung einer EDE-Datei zum Datenaustausch zwischen einem BACnet-Server und einem BACnet-Client. Der EDE-File muss der Vorlage der BIG (BACnet Interest Group) entsprechen und enthält u.a. Datenpunkttypen, Datenpunktadressen, Informationen zum Aktualisierungsverhalten zu Wertebereichen, Skalierung;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0240;Projektierung / Inbetriebnahme Anbindung M-Bus-Geräte, die Anbindung der Geräte erfolgt mittels kommunikativer Aufschaltung über M-Bus. Je Gerät sind bis zu 25 gemeinsame Datenpunkte vorgesehen. Diese sind im AS-System anzulegen und anzuzeigen.;17,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0250;Hardwarecheck der Datenpunkte mit:;353,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0260;Projektierung busfähige Handbedienebene;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0270;Inbetriebnahme Busfähige Handbedienebene mit:;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Schaltschrank als Anreihschrank, eintürig 800x1800x400, für Sockelmontage aus Stahlblech einschließlich Seitenwänden für Sockelmontage, Türen gummigedichtet mit innen liegenden Scharnieren und Stangen verschluss mit Doppelbartschlüssel.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Ablagepult für Türbreite 800mm, Belastbarkeit max. 30kg;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Schaltplantasche, aus Stahlblech, für Türbreite 800mm, zur Montage auf der Innenseite von Schaltschranktüren, incl. Befestigungsmaterial.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Einspeisung 400VAC 63A, mit Hauptsicherung, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Netz-ÜS-Ableiter < 100 A als Mittelschutz in 230/400 V AC Drehstromnetzen, Nennableitstrom 20 kA, mit potentialfreien Kontakt für Auslösemeldung. Mit Universalfuß zum Aufschnappen auf DIN/EN-Tragschienen, einschließlich Tragschienenanteil und Verbindung mit dem Potentialausgleich.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Sammelstörmeldung mit Signalisierung optisch und akustisch, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Phasenüberwachnung 400 VAC, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Phasenlampen für 400 V Netz, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Energiezähler mit LCD, Wirkenergie direkt 5(65)A 400V S0, M-Bus-Anschluss;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;Netzwiederkehrschaltung mit zentraler Störungsquittierung, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0110;Schaltschranklüfter 230 V / 50 Hz mit Filtermatte, Zuluftgitter, Abluftgitter, mit Raumthermostat im Schaltschrank und 1 Leitungsschutzschalter 1-polig;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0120;Schaltschrankbeleuchtung LED mit Steckdose, je Schaltschrankfeld, bestehend aus:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0130;E-DAT Industriestecker, IP 20, RJ 45.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0140;Steuerspannungstrafo 230VAC 250VA mit MSS primär und LSS sekundär nach VDE 050, Nennleistung VA: 250, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0150;Transformator 230/24VAC 160VA, nach VDE 0570/EN61558;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0160;Netzgerät 230VAC/24VDC 6A, mit Leitungsschutzschalter primär/sekundär, spannungsstabilisiert, Nennstrom A: 6, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0170;Netzabgang 230VAC, schaltbar 10A, Leitungsschutzschalter, Nennstrom A: 10, bestehend aus:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0180;Übergabeklemmen, Feld 1 zu Feld 2;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0190;Netzabgang EC-Motor 400VAC 7,5kW, Motorschutzschalter, Nennleistung kW: 7,5, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0200;Netzabgang EC-Motor 230VAC, Motorschutzschalter, bestehend aus:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0210;Pumpensteuerung 230VAC 4kW, Netzabgang mit Meldung, Nennleistung kW: 4, bestehend aus:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0220;Dampfbefeuchter stetig 400VAC 7,5kW,max. Feuchteüberwachung, Nennleistung kW: 7,5, bestehend aus:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0230;WRG Wärmeradsteuerung stetig, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0240;Ventilsteuerung stetig, mit Rückmeldung, bestehend aus:;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0250;Volumenstromregler stetig, bestehend aus:;6,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0260;Brandschutzklappensteuerung Auf/Zu, mit Stellungsrückmeldung und Steuerung bestehend aus:;22,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0270;Frostschutzsteuerung, bestehend aus:;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0280;Ansteuerung Hygrostat;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0290;Filterüberwachung Druckschalter, bestehend aus:;12,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0300;Klappensteuerung Auf/Zu Rückmeldung, bestehend aus:;4,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0310;Klappensteuerung stetig Rückmeldung, bestehend aus:;8,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0320;Reparaturschalterüberwachung, bestehend aus:;4,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0330;Rauchmeldeüberwachung, bestehend aus:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0340;Brandmeldeschaltung, mit Steuerung, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0350;Meldung potentialfrei, bestehend aus:;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0360;Aufschaltung Messwert passiv, bestehend aus:;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0370;Aufschaltung Messwert aktiv, bestehend aus:;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0380;Busaufschaltung für Feldbus, Modbus, M-Bus, BACnet,. über Trennklemmen;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0390;Einbau / Verdrahtung auf Montageplatte der Automationsstation / Geräte, einschließlich sämtlicher Zubehörteile, einschließlich Beschilderung. Verdrahtungs- und Montagematerial, Reihenklemmen nach Bedarf.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0400;Werkstatt- / Montageplanung Schaltschrank nach DIN18386 (VOB Teil C). Werkstatt- und Montageplanung bestehend aus Erstellung und Übergabe folgender Unterlagen:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0410;Inbetriebnahme Schaltschrank. Überprüfung aller im Schaltschrank ankommenden Kabel / Leitungen nach DIN VDE 100 Teil 610. Überprüfung der Feldgeräte gemäß Schaltplan. Überprüfung der Stromaufnahme und der Drehrichtung der Antriebe. Prüfung der Steuerfunktion. Einstellen der Thermoauslöser. Einweisun;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0420;Schaltschrank aufstellen und mech./elektr. verbinden, Schaltschrank wie vorstehend beschrieben, zum Verwendungsort transportieren, aufstellen und mechanisch/elektrisch verbinden. Die örtlichen Begebenheiten sind zu beachten bzw. durch Baustellenbesichtigung zu überprüfen.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Tauchtemperatur-Messwertgeber 150mm Einsteck-Ausführung mit Ms-Tasche;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Tauchtemperatur-Messwertgeber 150mm für Kaltwasser Einsteck-Ausführung mit Ms-Tasche;17,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Tauchtemperatur-Messwertgeber 300mm für Kaltwasser Einsteck-Ausführung mit Ms-Tasche;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;"Strömungswächter für Fluide, für Einbau in Rohre von 1-8"" (DN25-200), 1 x Wechsler, Anschluß R1 (DN25), IP65";3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Plattenelektrode in 4-Drahttechnik, 2m Anschlusskabel, kunduktiver Leckage-Detektor für Schutzkleinspannung SELV oder PELV;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Dreiwegeventil DN50 kvs 40 PN16;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Dreiwegeventil mit Stellantrieb Stellungsrückmeldung;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Motor-Absperrklappe, DN50, 85m³/h, PN16, GG, Flansch, mit Stellmotor 15N/ 230V, zum Absperren oder Trennen von hydraulischen Anlagen;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Absperrklappe mit Zentrieraugen DN100 230V, ARI-ZESA, EN-JS1030 DN100, dichtschließend;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;Hauptschalter, Not-Aus-Schalter 3-pol. IP66;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0110;Kompakt KMZ US qp6 DN32 FL 260mm Netz MBus o.TF;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0120;Kompakt KMZ US qp15 DN50 FL 270mm Bat. MBus o.TF;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Automationsstation mit BACnet-Kommunikation mit folgenden Hard- und Softwareeigenschaften:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Gateway RS485, M-Bus 50DP mit Integriertem M-Bus Adapter 64 MB;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Gateway RS485 50DP 64 MB;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Gateway RS485, KNX 50DP mit Integriertem KNX Adapter 64 MB;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;16 Port Fast Ethernet Switch;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Überspannungsschutz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Überspannungsschutz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Überspannungsschutz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Ethernet-Patchkabel 1m, Cat 7;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Projektierung Binärer Ausgang Schalten/Stellen;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Projektierung Analoge Ausgabe Stellen DIN EN ISO 16484;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Projektierung Binäre Eingabe Melden DIN EN ISO 16484;66,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Projektierung Analoge Eingabe Messen;37,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Inbetriebnahme Binärer Ausgang Schalten/Stellen;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Inbetriebnahme Analoge Ausgabe Stellen;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Inbetriebnahme Binäre Eingabe Melden;66,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Inbetriebnahme Analoge Eingabe Messen;37,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Projektierung BA Schalten;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;Projektierung Analoge Ausgabe Stellen/Sollwert;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0110;Projektierung Binäre Eingabe Zustand;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0120;Projektierung analoge Eingabe Messen;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0130;Inbetriebnahme Bin.Ausg.Schalten/Stellen;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0140;Inbetriebnahme Analoge Ausgabe Stellen/Sollwert;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0150;Inbetriebnahme Binäre Eingabe Zustand;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0160;Inbetriebnahme analoge Eingabe Messen;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0170;Für das funktionelle Zusammenwirken zwischen Fremdsystem und Automationsstation werden folgende Voraussetzungen geschaffen:;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0180;Für das funktionelle Zusammenwirken zwischen Fremdsystem und Automationsstation werden folgende  Voraussetzungen;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0190;Die Dokumentation ist soweit wie möglich in elektronischer Form zur Verfügung zu stellen.;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0200;Erstmalige Einweisung des vom Auftraggeber benannten Personals in Funktion, Betriebsweise und Bedienung der Gebäudeautomations-Anlage;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0210;Nachregulierung Eintritt Kälteperiode/Heizungsperiode;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0220;Einrichten der Schnellabfrage zur Abfrage / Änderung von Istwerten, Sollwerten, Nutzungszeiten, Jahresdatenpunkten und Betriebszuständen;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0230;Erstellung einer EDE-Datei zum Datenaustausch zwischen einem BACnet-Server und einem BACnet-Client. Der EDE-File muss der Vorlage der BIG (BACnet Interest Group) entsprechen und enthält u.a. Datenpunkttypen, Datenpunktadressen, Informationen zum Aktualisierungsverhalten zu Wertebereichen, Skalierung;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0240;Projektierung / Inbetriebnahme Anbindung M-Bus-Geräte, die Anbindung der Geräte erfolgt mittels kommunikativer Aufschaltung über M-Bus. Je Gerät sind bis zu 25 gemeinsame Datenpunkte vorgesehen. Diese sind im AS-System anzulegen und anzuzeigen.;17,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0250;Hardwarecheck der Datenpunkte mit:;353,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0260;Projektierung busfähige Handbedienebene;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0270;Inbetriebnahme Busfähige Handbedienebene mit:;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Schaltschrank als Anreihschrank, eintürig 800x1800x400, für Sockelmontage aus Stahlblech einschließlich Seitenwänden für Sockelmontage, Türen gummigedichtet mit innen liegenden Scharnieren und Stangen verschluss mit Doppelbartschlüssel.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Ablagepult für Türbreite 800mm, Belastbarkeit max. 30kg;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Schaltplantasche, aus Stahlblech, für Türbreite 800mm, zur Montage auf der Innenseite von Schaltschranktüren, incl. Befestigungsmaterial.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Einspeisung 400VAC 63A, mit Hauptsicherung, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Netz-ÜS-Ableiter < 100 A als Mittelschutz in 230/400 V AC Drehstromnetzen, Nennableitstrom 20 kA, mit potentialfreien Kontakt für Auslösemeldung. Mit Universalfuß zum Aufschnappen auf DIN/EN-Tragschienen, einschließlich Tragschienenanteil und Verbindung mit dem Potentialausgleich.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Sammelstörmeldung mit Signalisierung optisch und akustisch, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Phasenüberwachnung 400 VAC, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Phasenlampen für 400 V Netz, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Energiezähler mit LCD, Wirkenergie direkt 5(65)A 400V S0, M-Bus-Anschluss;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;Netzwiederkehrschaltung mit zentraler Störungsquittierung, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0110;Schaltschranklüfter 230 V / 50 Hz mit Filtermatte, Zuluftgitter, Abluftgitter, mit Raumthermostat im Schaltschrank und 1 Leitungsschutzschalter 1-polig;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0120;Schaltschrankbeleuchtung LED mit Steckdose, je Schaltschrankfeld, bestehend aus:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0130;E-DAT Industriestecker, IP 20, RJ 45.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0140;Steuerspannungstrafo 230VAC 250VA mit MSS primär und LSS sekundär nach VDE 050, Nennleistung VA: 250, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0150;Transformator 230/24VAC 160VA, nach VDE 0570/EN61558;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0160;Netzgerät 230VAC/24VDC 6A, mit Leitungsschutzschalter primär/sekundär, spannungsstabilisiert, Nennstrom A: 6, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0170;Netzabgang 230VAC, schaltbar 10A, Leitungsschutzschalter, Nennstrom A: 10, bestehend aus:;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0180;Übergabeklemmen, Feld 1 zu Feld 2;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0190;Pumpensteuerung 230VAC 4kW, Netzabgang mit Meldung, Nennleistung kW: 4, bestehend aus:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0200;Pumpensteuerung 400VAC 4kW, Netzabgang mit Meldung, Nennleistung kW: 1,5 bestehend aus:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0210;Not-Aus-Steuerung, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0220;Kältemaschinen Anforderung, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0230;Ventilsteuerung stetig, mit Rückmeldung, bestehend aus:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0240;Klappensteuerung Auf/Zu, mit Rückmeldung, bestehend aus:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0250;Strömungsüberwachung mit Druckschalter, bestehend aus:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0260;Brandmeldeschaltung, mit Steuerung, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0270;Meldung potentialfrei, bestehend aus:;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0280;Aufschaltung Messwert passiv, bestehend aus:;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0290;Aufschaltung Messwert aktiv, bestehend aus:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0300;Busaufschaltung für Feldbus, Modbus, M-Bus, BACnet,. über Trennklemmen;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0310;Einbau / Verdrahtung auf Montageplatte der Automationsstation / Geräte, einschließlich sämtlicher Zubehörteile, einschließlich Beschilderung. Verdrahtungs- und Montagematerial, Reihenklemmen nach Bedarf.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0320;Werkstatt- / Montageplanung Schaltschrank nach DIN18386 (VOB Teil C). Werkstatt- und Montageplanung bestehend aus Erstellung und Übergabe folgender Unterlagen:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0330;Inbetriebnahme Schaltschrank. Überprüfung aller im Schaltschrank ankommenden Kabel / Leitungen nach DIN VDE 100 Teil 610. Überprüfung der Feldgeräte gemäß Schaltplan. Überprüfung der Stromaufnahme und der Drehrichtung der Antriebe. Prüfung der Steuerfunktion. Einstellen der Thermoauslöser. Einweisun;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0340;Schaltschrank aufstellen und mech./elektr. verbinden, Schaltschrank wie vorstehend beschrieben, zum Verwendungsort transportieren, aufstellen und mechanisch/elektrisch verbinden. Die örtlichen Begebenheiten sind zu beachten bzw. durch Baustellenbesichtigung zu überprüfen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Thermo-Kleinstellantrieb 24VDC stetig, Anpassung an Oventrop M30x1,0;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Thermo-Kleinstellantrieb 24VAC/DC 2-Pkt, Anpassung an Oventrop M30x1,0;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;"Kanaltemperatur-Messwertgeber, 200mm Kunststoffrohr, Anschlußgehäuse aus Kunststoff, Kunststoffrohr, Steckflansch, Messtoleranz entsprechend VDI 3512, entsprechend Genauigkeitsklasse ""A-TGA""";4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;"Raumtemperatur-Messwertgeber, Kunststoffgehäuse für Wandaufbau, Messtoleranz entsprechend VDI 3512, Genauigkeitsklasse ""A-TGA""";10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Leckagedetektor mit Schaltkontakt und zwei Melde-LEDs, zur Überwachung von Behältern, Zwischenböden, Zwischendecken oder Räumen gegen unerwünschten Wassereintritt, zur Vermeidung von Wasserschäden;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Raumbediengerät, Front weiß, Gehaeuse weiß;27,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Raumbediengerät, Front weiß, Gehaeuse weiß;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Bluetooth Mesh Room Controller fuer Raumsegmentsmanagement;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;LIOB-BIP I/O Modul, 40 Universelle I/O;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;LIOB-Connect Netzgeraet, 24 V DC, 15W Spannungsversorgung von LOYTEC-Geraeten;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0110;Werkstatt-/Montageplanung Raumautomation nach DIN18386 (VOB Teil C);31,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0120;Projektausführung Raumautomation;31,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0130;Inbetriebnahme Raumautomation;31,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0140;Dokumentation Raumautomation;31,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Thermo-Kleinstellantrieb 24VDC stetig, Anpassung an Oventrop M30x1,0;41,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Thermo-Kleinstellantrieb 24VAC/DC 2-Pkt, Anpassung an Oventrop M30x1,0;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;"Kanaltemperatur-Messwertgeber, 200mm Kunststoffrohr, Anschlußgehäuse aus Kunststoff, Kunststoffrohr, Steckflansch, Messtoleranz entsprechend VDI 3512, entsprechend Genauigkeitsklasse ""A-TGA""";3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;"Raumtemperatur-Messwertgeber, Kunststoffgehäuse für Wandaufbau, Messtoleranz entsprechend VDI 3512, Genauigkeitsklasse ""A-TGA""";3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Leckagedetektor mit Schaltkontakt und zwei Melde-LEDs, zur Überwachung von Behältern, Zwischenböden, Zwischendecken oder Räumen gegen unerwünschten Wassereintritt, zur Vermeidung von Wasserschäden;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Raumbediengerät, Front weiß, Gehaeuse weiß;43,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Bluetooth Mesh Room Controller fuer Raumsegmentsmanagement;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;LIOB-BIP I/O Modul, 40 Universelle I/O;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;LIOB-Connect Netzgeraet, 24 V DC, 15W Spannungsversorgung von LOYTEC-Geraeten;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;Werkstatt-/Montageplanung Raumautomation nach DIN18386 (VOB Teil C);43,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0110;Projektausführung Raumautomation;43,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0120;Inbetriebnahme Raumautomation;43,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0130;Dokumentation Raumautomation;43,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Thermo-Kleinstellantrieb 24VDC stetig, Anpassung an Oventrop M30x1,0;54,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Thermo-Kleinstellantrieb 24VAC/DC 2-Pkt, Anpassung an Oventrop M30x1,0;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;"Kanaltemperatur-Messwertgeber, 200mm Kunststoffrohr, Anschlußgehäuse aus Kunststoff, Kunststoffrohr, Steckflansch, Messtoleranz entsprechend VDI 3512, entsprechend Genauigkeitsklasse ""A-TGA""";4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;"Raumtemperatur-Messwertgeber, Kunststoffgehäuse für Wandaufbau, Messtoleranz entsprechend VDI 3512, Genauigkeitsklasse ""A-TGA""";3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Leckagedetektor mit Schaltkontakt und zwei Melde-LEDs, zur Überwachung von Behältern, Zwischenböden, Zwischendecken oder Räumen gegen unerwünschten Wassereintritt, zur Vermeidung von Wasserschäden;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Raumbediengerät, Front weiß, Gehaeuse weiß;52,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Raumbediengerät, Front weiß, Gehaeuse weiß;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Bluetooth Mesh Room Controller fuer Raumsegmentsmanagement;27,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;LIOB-BIP I/O Modul, 40 Universelle I/O;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;LIOB-Connect Netzgeraet, 24 V DC, 15W Spannungsversorgung von LOYTEC-Geraeten;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0110;Werkstatt-/Montageplanung Raumautomation nach DIN18386 (VOB Teil C);54,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0120;Projektausführung Raumautomation;54,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0130;Inbetriebnahme Raumautomation;54,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0140;Dokumentation Raumautomation;54,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;"Tauchtemperatur-Messwertgeber, 300mm für Kaltwasser Einsteck-Ausführung, mit Niro-Tasche, Niro-Fühlertasche, Messtoleranz entsprechend VDI 3512, entsprechend Genauigkeitsklasse ""A-TGA";3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;"Tauchtemperatur-Messwertgeber, 150mm für Kaltwasser Einsteck-Ausführung, mit Niro-Tasche, Niro-Fühlertasche, Messtoleranz entsprechend VDI 3512, entsprechend Genauigkeitsklasse ""A-TGA";4,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;"Tauchtemperatur-Messwertgeber, 100mm Einsteck-Ausführung mit Ms-Tasche, Ms-Fühlertasche, Messtoleranz entsprechend VDI 3512, entsprechend Genauigkeitsklasse ""A-TGA""";8,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Dreiwegeventil mit Stellantrieb und Stellungsrückmeldung;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Dreiwegeventil DN40 kvs 25 PN16 mit Ventil-Stellantrieb;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Dreiwegeventil mit Stellantrieb;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Durchgangsventil mit Stellantrieb und Stellungsrückmeldung;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Einstrahl-Kaltwasserzähler DN15 Q3 2,5m³/h 110mm G3/4, PN16 30° MID, Einstrahltrockenläufer Kaltwasserzähler, Dynamikbereich (Q3/Q1) R80;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Wärmemengenzähler Ultraschall-Volumenmessteil DN40 qp 10 300mm Gewinde PN16 10L Batterie MID, qp 10 / qi 0,1 m³/h;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;Wärmemengenzähler Ultraschall-Volumenmessteil DN32 qp 6 / qi 0,06 m³/h, FL 260mm 10L Bat. MID;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0110;Leckagedetektor mit Schaltkontakt und zwei Melde-LEDs eignet sich ideal zur Überwachung von Behältern, Zwischenböden, Zwischendecken oder Räumen gegen unerwünschten Wassereintritt und hilft somit, größere Wasserschäden zu vermeiden. Durch die höhenverstellbaren Meldekontakte kann der Ansprechzeitpun;6,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0120;Kanalhygrostat, zweistufig, stetig, mit Display, IP65;3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Automationsstation mit BACnet-Kommunikation mit folgenden Hard- und Softwareeigenschaften:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Gateway RS485, M-Bus 50DP mit Integriertem M-Bus Adapter 64 MB;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Gateway RS485 50DP 64 MB;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Gateway RS485, KNX 50DP mit Integriertem KNX Adapter 64 MB;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;16 Port Fast Ethernet Switch;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Überspannungsschutz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Überspannungsschutz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Überspannungsschutz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Ethernet-Patchkabel 1m, Cat 7;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Projektierung Binärer Ausgang Schalten/Stellen;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Projektierung Analoge Ausgabe Stellen DIN EN ISO 16484;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Projektierung Binäre Eingabe Melden DIN EN ISO 16484;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Projektierung Analoge Eingabe Messen;27,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Inbetriebnahme Binärer Ausgang Schalten/Stellen;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Inbetriebnahme Analoge Ausgabe Stellen;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Inbetriebnahme Binäre Eingabe Melden;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Inbetriebnahme Analoge Eingabe Messen;27,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Projektierung BA Schalten;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;Projektierung Analoge Ausgabe Stellen/Sollwert;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0110;Projektierung Binäre Eingabe Zustand;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0120;Projektierung analoge Eingabe Messen;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0130;Inbetriebnahme Bin.Ausg.Schalten/Stellen;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0140;Inbetriebnahme Analoge Ausgabe Stellen/Sollwert;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0150;Inbetriebnahme Binäre Eingabe Zustand;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0160;Inbetriebnahme analoge Eingabe Messen;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0170;Für das funktionelle Zusammenwirken zwischen Fremdsystem und Automationsstation werden folgende Voraussetzungen geschaffen:;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0180;Für das funktionelle Zusammenwirken zwischen Fremdsystem und Automationsstation werden folgende  Voraussetzungen;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0190;Die Dokumentation ist soweit wie möglich in elektronischer Form zur Verfügung zu stellen.;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0200;Erstmalige Einweisung des vom Auftraggeber benannten Personals in Funktion, Betriebsweise und Bedienung der Gebäudeautomations-Anlage;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0210;Nachregulierung Eintritt Kälteperiode/Heizungsperiode;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0220;Einrichten der Schnellabfrage zur Abfrage / Änderung von Istwerten, Sollwerten, Nutzungszeiten, Jahresdatenpunkten und Betriebszuständen;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0230;Erstellung einer EDE-Datei zum Datenaustausch zwischen einem BACnet-Server und einem BACnet-Client. Der EDE-File muss der Vorlage der BIG (BACnet Interest Group) entsprechen und enthält u.a. Datenpunkttypen, Datenpunktadressen, Informationen zum Aktualisierungsverhalten zu Wertebereichen, Skalierung;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0240;Projektierung / Inbetriebnahme Anbindung M-Bus-Geräte, die Anbindung der Geräte erfolgt mittels kommunikativer Aufschaltung über M-Bus. Je Gerät sind bis zu 25 gemeinsame Datenpunkte vorgesehen. Diese sind im AS-System anzulegen und anzuzeigen.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0250;Hardwarecheck der Datenpunkte mit:;148,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0260;Projektierung busfähige Handbedienebene;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0270;Inbetriebnahme Busfähige Handbedienebene mit:;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Schaltschrank als Anreihschrank, eintürig 800x1800x400, für Sockelmontage aus Stahlblech einschließlich Seitenwänden für Sockelmontage, Türen gummigedichtet mit innen liegenden Scharnieren und Stangen verschluss mit Doppelbartschlüssel.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Ablagepult für Türbreite 800mm, Belastbarkeit max. 30kg;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Schaltplantasche, aus Stahlblech, für Türbreite 800mm, zur Montage auf der Innenseite von Schaltschranktüren, incl. Befestigungsmaterial.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Einspeisung 400VAC 63A, mit Hauptsicherung, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Netz-ÜS-Ableiter < 100 A als Mittelschutz in 230/400 V AC Drehstromnetzen, Nennableitstrom 20 kA, mit potentialfreien Kontakt für Auslösemeldung. Mit Universalfuß zum Aufschnappen auf DIN/EN-Tragschienen, einschließlich Tragschienenanteil und Verbindung mit dem Potentialausgleich.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Sammelstörmeldung mit Signalisierung optisch und akustisch, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Phasenüberwachnung 400 VAC, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Phasenlampen für 400 V Netz, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Energiezähler mit LCD, Wirkenergie direkt 5(65)A 400V S0, M-Bus-Anschluss;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;Netzwiederkehrschaltung mit zentraler Störungsquittierung, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0110;Schaltschranklüfter 230 V / 50 Hz mit Filtermatte, Zuluftgitter, Abluftgitter, mit Raumthermostat im Schaltschrank und 1 Leitungsschutzschalter 1-polig;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0120;Schaltschrankbeleuchtung LED mit Steckdose, je Schaltschrankfeld, bestehend aus:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0130;E-DAT Industriestecker, IP 20, RJ 45.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0140;Steuerspannungstrafo 230VAC 250VA mit MSS primär und LSS sekundär nach VDE 050, Nennleistung VA: 250, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0150;Transformator 230/24VAC 160VA, nach VDE 0570/EN61558;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0160;Netzgerät 230VAC/24VDC 6A, mit Leitungsschutzschalter primär/sekundär, spannungsstabilisiert, Nennstrom A: 6, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0170;Netzabgang 230VAC, schaltbar 10A, Leitungsschutzschalter, Nennstrom A: 10, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0180;Netzabgang 400VAC 35A, Leitungsschutzschalter, Nennstrom A: 35, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0190;Übergabeklemmen, Feld 1 zu Feld 2;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0200;Pumpensteuerung 230VAC 4kW, Netzabgang mit Meldung, Nennleistung kW: 4, bestehend aus:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0210;Pumpensteuerung 400VAC 4kW, Netzabgang mit Meldung, Nennleistung kW: 1,5 bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0220;Ventilsteuerung stetig, mit Rückmeldung, bestehend aus:;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0230;Meldung potentialfrei, bestehend aus:;61,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0240;Aufschaltung Messwert passiv, bestehend aus:;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0250;Busaufschaltung für Feldbus, Modbus, M-Bus, BACnet,. über Trennklemmen;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0260;Einbau / Verdrahtung auf Montageplatte der Automationsstation / Geräte, einschließlich sämtlicher Zubehörteile, einschließlich Beschilderung. Verdrahtungs- und Montagematerial, Reihenklemmen nach Bedarf.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0270;Werkstatt- / Montageplanung Schaltschrank nach DIN18386 (VOB Teil C). Werkstatt- und Montageplanung bestehend aus Erstellung und Übergabe folgender Unterlagen:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0280;Inbetriebnahme Schaltschrank. Überprüfung aller im Schaltschrank ankommenden Kabel / Leitungen nach DIN VDE 100 Teil 610. Überprüfung der Feldgeräte gemäß Schaltplan. Überprüfung der Stromaufnahme und der Drehrichtung der Antriebe. Prüfung der Steuerfunktion. Einstellen der Thermoauslöser. Einweisun;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0290;Schaltschrank aufstellen und mech./elektr. verbinden, Schaltschrank wie vorstehend beschrieben, zum Verwendungsort transportieren, aufstellen und mechanisch/elektrisch verbinden. Die örtlichen Begebenheiten sind zu beachten bzw. durch Baustellenbesichtigung zu überprüfen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Thermo-Kleinstellantrieb 24VDC stetig, Anpassung an Oventrop M30x1,0;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;"Raumtemperatur-Messwertgeber, Kunststoffgehäuse für Wandaufbau, Messtoleranz entsprechend VDI 3512, Genauigkeitsklasse ""A-TGA""";9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Raumbediengerät, Front weiß, Gehaeuse weiß;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Bluetooth Mesh Room Controller fuer Raumsegmentsmanagement;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;LIOB-BIP I/O Modul, 40 Universelle I/O;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;LIOB-Connect Netzgeraet, 24 V DC, 15W Spannungsversorgung von LOYTEC-Geraeten;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Werkstatt-/Montageplanung Raumautomation nach DIN18386 (VOB Teil C);9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Projektausführung Raumautomation;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Inbetriebnahme Raumautomation;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;Dokumentation Raumautomation;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;"Tauchtemperatur-Messwertgeber, 300mm für Kaltwasser Einsteck-Ausführung, mit Niro-Tasche, Niro-Fühlertasche, Messtoleranz entsprechend VDI 3512, entsprechend Genauigkeitsklasse ""A-TGA";3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;"Tauchtemperatur-Messwertgeber, 150mm für Kaltwasser Einsteck-Ausführung, mit Niro-Tasche, Niro-Fühlertasche, Messtoleranz entsprechend VDI 3512, entsprechend Genauigkeitsklasse ""A-TGA";4,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Tauchtemperatur-Messwertgeber, 150mm Einsteck-Ausführung mit Ms-Tasche;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Dreiwegeventil mit Stellantrieb und Stellungsrückmeldung;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Durchgangsventil mit Stellantrieb und Stellungsrückmeldung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Einstrahl-Kaltwasserzähler DN15 Q3 2,5m³/h 110mm G3/4, PN16 30° MID, Einstrahltrockenläufer Kaltwasserzähler, Dynamikbereich (Q3/Q1) R80;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Wärmemengenzähler Ultraschall-Volumenmessteil DN32 qp 6 / qi 0,06 m³/h, FL 260mm 10L Bat. MID;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Leckagedetektor mit Schaltkontakt und zwei Melde-LEDs eignet sich ideal zur Überwachung von Behältern, Zwischenböden, Zwischendecken oder Räumen gegen unerwünschten Wassereintritt und hilft somit, größere Wasserschäden zu vermeiden. Durch die höhenverstellbaren Meldekontakte kann der Ansprechzeitpun;6,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Kanalhygrostat, zweistufig, stetig, mit Display, IP65;3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Automationsstation mit BACnet-Kommunikation mit folgenden Hard- und Softwareeigenschaften:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Gateway RS485, M-Bus 50DP mit Integriertem M-Bus Adapter 64 MB;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Gateway RS485 50DP 64 MB;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Gateway RS485, KNX 50DP mit Integriertem KNX Adapter 64 MB;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;16 Port Fast Ethernet Switch;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Überspannungsschutz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Überspannungsschutz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Überspannungsschutz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Ethernet-Patchkabel 1m, Cat 7;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Projektierung Binärer Ausgang Schalten/Stellen;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Projektierung Analoge Ausgabe Stellen DIN EN ISO 16484;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Projektierung Binäre Eingabe Melden DIN EN ISO 16484;58,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Projektierung Analoge Eingabe Messen;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Inbetriebnahme Binärer Ausgang Schalten/Stellen;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Inbetriebnahme Analoge Ausgabe Stellen;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Inbetriebnahme Binäre Eingabe Melden;58,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Inbetriebnahme Analoge Eingabe Messen;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Projektierung BA Schalten;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;Projektierung Analoge Ausgabe Stellen/Sollwert;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0110;Projektierung Binäre Eingabe Zustand;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0120;Projektierung analoge Eingabe Messen;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0130;Inbetriebnahme Bin.Ausg.Schalten/Stellen;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0140;Inbetriebnahme Analoge Ausgabe Stellen/Sollwert;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0150;Inbetriebnahme Binäre Eingabe Zustand;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0160;Inbetriebnahme analoge Eingabe Messen;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0170;Für das funktionelle Zusammenwirken zwischen Fremdsystem und Automationsstation werden folgende Voraussetzungen geschaffen:;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0180;Für das funktionelle Zusammenwirken zwischen Fremdsystem und Automationsstation werden folgende  Voraussetzungen;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0190;Die Dokumentation ist soweit wie möglich in elektronischer Form zur Verfügung zu stellen.;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0200;Erstmalige Einweisung des vom Auftraggeber benannten Personals in Funktion, Betriebsweise und Bedienung der Gebäudeautomations-Anlage;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0210;Nachregulierung Eintritt Kälteperiode/Heizungsperiode;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0220;Einrichten der Schnellabfrage zur Abfrage / Änderung von Istwerten, Sollwerten, Nutzungszeiten, Jahresdatenpunkten und Betriebszuständen;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0230;Erstellung einer EDE-Datei zum Datenaustausch zwischen einem BACnet-Server und einem BACnet-Client. Der EDE-File muss der Vorlage der BIG (BACnet Interest Group) entsprechen und enthält u.a. Datenpunkttypen, Datenpunktadressen, Informationen zum Aktualisierungsverhalten zu Wertebereichen, Skalierung;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0240;Projektierung / Inbetriebnahme Anbindung M-Bus-Geräte, die Anbindung der Geräte erfolgt mittels kommunikativer Aufschaltung über M-Bus. Je Gerät sind bis zu 25 gemeinsame Datenpunkte vorgesehen. Diese sind im AS-System anzulegen und anzuzeigen.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0250;Hardwarecheck der Datenpunkte mit:;77,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0260;Projektierung busfähige Handbedienebene;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0270;Inbetriebnahme Busfähige Handbedienebene mit:;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Schaltschrank als Anreihschrank, eintürig 1000x1800x400, für Sockelmontage aus Stahlblech einschließlich Seitenwänden für Sockelmontage, Türen gummigedichtet mit innen liegenden Scharnieren und Stangen verschluss mit Doppelbartschlüssel.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Ablagepult für Türbreite 1000mm, Belastbarkeit max. 30kg;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Schaltplantasche, aus Stahlblech, für Türbreite 1000mm, zur Montage auf der Innenseite von Schaltschranktüren, incl. Befestigungsmaterial.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Einspeisung 400VAC 25A, mit Hauptsicherung, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Netz-ÜS-Ableiter < 100 A als Mittelschutz in 230/400 V AC Drehstromnetzen, Nennableitstrom 20 kA, mit potentialfreien Kontakt für Auslösemeldung. Mit Universalfuß zum Aufschnappen auf DIN/EN-Tragschienen, einschließlich Tragschienenanteil und Verbindung mit dem Potentialausgleich.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Sammelstörmeldung mit Signalisierung optisch und akustisch, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Phasenüberwachnung 400 VAC, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Phasenlampen für 400 V Netz, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Energiezähler mit LCD, Wirkenergie direkt 5(65)A 400V S0, M-Bus-Anschluss;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;Netzwiederkehrschaltung mit zentraler Störungsquittierung, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0110;Schaltschranklüfter 230 V / 50 Hz mit Filtermatte, Zuluftgitter, Abluftgitter, mit Raumthermostat im Schaltschrank und 1 Leitungsschutzschalter 1-polig;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0120;Schaltschrankbeleuchtung LED mit Steckdose, je Schaltschrankfeld, bestehend aus:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0130;E-DAT Industriestecker, IP 20, RJ 45.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0140;Steuerspannungstrafo 230VAC 250VA mit MSS primär und LSS sekundär nach VDE 050, Nennleistung VA: 250, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0150;Transformator 230/24VAC 160VA, nach VDE 0570/EN61558;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0160;Netzgerät 230VAC/24VDC 6A, mit Leitungsschutzschalter primär/sekundär, spannungsstabilisiert, Nennstrom A: 6, bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0170;Netzabgang 230VAC, schaltbar 10A, Leitungsschutzschalter, Nennstrom A: 10, bestehend aus:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0180;Pumpensteuerung 230VAC 4kW, Netzabgang mit Meldung, Nennleistung kW: 4, bestehend aus:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0190;Ventilsteuerung stetig, mit Rückmeldung, bestehend aus:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0200;Meldung potentialfrei, bestehend aus:;56,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0210;Aufschaltung Messwert passiv, bestehend aus:;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0220;Aufschaltung Stellbefehl, bestehend aus:;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0230;Busaufschaltung für Feldbus, Modbus, M-Bus, BACnet,. über Trennklemmen;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0240;Einbau / Verdrahtung auf Montageplatte der Automationsstation / Geräte, einschließlich sämtlicher Zubehörteile, einschließlich Beschilderung. Verdrahtungs- und Montagematerial, Reihenklemmen nach Bedarf.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0250;Werkstatt- / Montageplanung Schaltschrank nach DIN18386 (VOB Teil C). Werkstatt- und Montageplanung bestehend aus Erstellung und Übergabe folgender Unterlagen:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0260;Inbetriebnahme Schaltschrank. Überprüfung aller im Schaltschrank ankommenden Kabel / Leitungen nach DIN VDE 100 Teil 610. Überprüfung der Feldgeräte gemäß Schaltplan. Überprüfung der Stromaufnahme und der Drehrichtung der Antriebe. Prüfung der Steuerfunktion. Einstellen der Thermoauslöser. Einweisun;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0270;Schaltschrank aufstellen und mech./elektr. verbinden, Schaltschrank wie vorstehend beschrieben, zum Verwendungsort transportieren, aufstellen und mechanisch/elektrisch verbinden. Die örtlichen Begebenheiten sind zu beachten bzw. durch Baustellenbesichtigung zu überprüfen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Thermo-Kleinstellantrieb 24VDC stetig, Anpassung an Oventrop M30x1,0;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;"Raumtemperatur-Messwertgeber, Kunststoffgehäuse für Wandaufbau, Messtoleranz entsprechend VDI 3512, Genauigkeitsklasse ""A-TGA""";2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Raumbediengerät, Front weiß, Gehaeuse weiß;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Bluetooth Mesh Room Controller fuer Raumsegmentsmanagement;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;LIOB-BIP I/O Modul, 40 Universelle I/O;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;LIOB-Connect Netzgeraet, 24 V DC, 15W Spannungsversorgung von LOYTEC-Geraeten;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Werkstatt-/Montageplanung Raumautomation nach DIN18386 (VOB Teil C);2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Projektausführung Raumautomation;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Inbetriebnahme Raumautomation;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;Dokumentation Raumautomation;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 2 x 2 x 0,8 Bd., Arbeitshöhe bis 4m, Verlegen und beidseitig Auflegen und Anklemmen;2730,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;4x2x0,8 Bd;1920,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5, Cu-Zahl 43, Arbeitshöhe bis 4m, verlegen und beidseitig auflegen und anklemmen;3555,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;3x2,5;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;4x1,5;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;4x2,5;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;4x4;75,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;5x1,5;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;5x2,5;1150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;5x4;180,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0110;5x6;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0120;5x10;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0130;5x16;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0140;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH(St)-J 3 x 1,5/1,5 RE, Cu-Zahl 58, Arbeitshöhe bis 4m, verlegen und beidseitig auflegen kund anklemmen;320,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0150;4 x 1,5/1,5 RE;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0160;5 x 1,5/1,5 RE;170,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0170;Kabel 2YSLCY-J 4 G 1,5, Cu-Zahl 95, Arbeitshöhe bis 4m, verlegen und beidseitig auflegen und anklemmen;160,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0180;4G2,5;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0190;4G4;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0200;4G6;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0210;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 4 x 95/50, Cu-Zahl 3648, Arbeitshöhe des Montageortes bis 4 m über der Standfläche des hierfür erforderlichen Gerüstes, verlegen und beidseitig auflegen und anklemmen;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0220;Halogenfreie Schlauchleitung H05Z1Z1-F3G0,75mm²;1200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0230;Halogenfreie Schlauchleitung H05Z1Z1-F 4G0,75mm²;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0240;Halogenfreie Schlauchleitung H05Z1Z1-F 5G0,75mm²;350,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0250;Halogenfreie Schlauchleitung H05Z1Z1-F 7G0,75mm²;350,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0260;Halogenfreie Schlauchleitung H05Z1Z1-F 12G0,75mm²;350,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0270;Halogenfreie Schlauchleitung H05Z1Z1-F 3G1mm²;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0280;Halogenfreie Schlauchleitung H05Z1Z1-F 4G1mm²;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0290;Halogenfreie Schlauchleitung H05Z1Z1-F 5G1mm²;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0300;Halogenfreie Schlauchleitung H05Z1Z1-F 3G1,5mm²;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0310;Halogenfreie Schlauchleitung H05Z1Z1-F 4G1,5mm²;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0320;Halogenfreie Schlauchleitung H05Z1Z1-F 5G1,5mm²;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0330;Halogenfreie Daten- und Steuerleitung;400,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0340;Halogenfreie Daten- und Steuerleitung;125,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0350;Halogenfreie Daten- und Steuerleitung;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0360;Halogenfreie Daten- und Steuerleitung;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0370;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 3 G 1,5, Cu-Zahl 43, Arbeitshöhe bis 4 m, Verlegen und beidseitig auflegen und anklemmen;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0380;4G1,5;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0390;4G2,5;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0400;4G4;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0410;5G1,5;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0420;5G2,5;45,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0430;Kunststoffmantelleitung NYM-J 1x6 gn/ge, Cu-Zahl 58,;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0440;Kunststoffmantelleitung NYM-J  1x10 gn/ge, Cu-Zahl 96,;140,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0450;Kunststoffmantelleitung NYM-J 1x16 gn/ge, Cu-Zahl 154,;190,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0460;Kunststoffmantelleitung NYM-J 1 x 25 gn/ge, Cu-Zahl 240;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0470;Außenkabel, symmetrisch, DIN VDE 0816-1 (VDE 0816-1), A-2Y(L)2Y, 2 x 2 x 0,8 STIII BD, Arbeitshöhe bis 4 m, Verlegen und beidseitig auflegen und anklemmen;380,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0480;4x2x0,8 STIII BD;160,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0490;Bauseits vorh. Fensterkontaktleitung H05RN-F 4G0,75 in Teillängen in Leerrohre einziehen bzw. auf;500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0500;Fensterkontaktleitung H05RN-F 4G0,75 zum Verlängern von;525,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0510;Warmschrumpf Verbindungsgarnitur, Kabel und Leitungen bis 5x1,5 mm², speziell für die Reparatur und das Verbinden von flexiblen Kabeln und Leitungen geeignet. Auftrommelbar, querwasserdicht, alterungs-, UV- und chemikalienbeständig. einschl. Zubehör zum Verbinden von Leitungsenden;235,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0520;Vollgeschirmtes RJ45-Modul S Cat.6A;40,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0530;Vollgeschirmter RJ45-Stecker Cat.6A;40,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0540;"Datenleitung S/FTP Cat.7 4x2xAWG22/1 FRNC, Kupfer-Installationskabel 100Ohm mit geschirmten Paaren und einem Gesamtschirm (PiMF) für die strukturierte Gebäudeverkabelung nach ISO/IEC11801 und EN 50173; S/FTP 4x2xAWG22/1 FRNC Cat.7, geeignet für Übertragungsbandbreiten bis 900MHz, Leiter blanker Cu-D";460,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0550;Anschluss herstellen für Leitung, an bauseitigem Feldgerät oder Schaltschrank, 2x2x0,8mm, beidseitig, einschließlich absetzen, einführen, auflegen und anklemmen;30,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0560;Anschluss herstellen für Leitung, an bauseitigem Feldgerät oder Schaltschrank, 4x2x0,8mm, beidseitig, einschließlich absetzen, einführen, auflegen und anklemmen;30,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0570;Anschluss herstellen für Leitung, an bauseitigem Feldgerät oder Schaltschrank, 3x1,5 mm2, beidseitig, einschließlich absetzen, einführen, auflegen und anklemmen;45,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0580;Anschluss herstellen für Leitung, an bauseitigem Feldgerät oder Schaltschrank, 5x1,5 mm2, beidseitig, einschließlich absetzen, einführen, auflegen und anklemmen;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0590;Anschluss herstellen für Leitung, an bauseitigem Feldgerät oder Schaltschrank, 3x2,5 mm2, beidseitig, einschließlich absetzen, einführen, auflegen und anklemmen;20,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0600;Anschluss herstellen für Leitung, an bauseitigem Feldgerät oder Schaltschrank, 5x2,5 mm2, beidseitig, einschließlich absetzen, einführen, auflegen und anklemmen;20,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0610;Anschluss herstellen für Leitung, an bauseitigem Feldgerät oder Schaltschrank, 5x6 mm2, beidseitig, einschließlich absetzen, einführen, auflegen und anklemmen;16,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0620;Anklemmen Datenkabel Kat.7, Abisolieren, Einführen, Abfangen, beidseitig Auflegen und Kennzeichnen aller vorgenannten Kabel an Regel und Steuergeräten, Meßgebern und Antrieben;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0630;Anschluß PA-Mantelleitung bis 1x6 mm², einschl.;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0640;Anschluß PA-Mantelleitung bis 1x10 mm², einschl.;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0650;Anschluß PA-Mantelleitung bis 1x16 mm², einschl.;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0660;Anschluß PA-Mantelleitung bis 1x25;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0670;Fensterkontakt anschließen;141,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0680;Universal Hauptschalter (Reparaturschalter), Aufputz, stabiles Aufputz-Kunststoffgehäuse (grau/schwarz), Maße (HxBxT): 125 x 100 x 85 mm, Drehgriff (rot/gelb), Maße (HxBxT): 65 x 65 x 35 mm, 4-poliger Schalteinsatz mit 4 Leistungskontakten (L1, L2, L3, L4 bzw. N), mit Durchschleifklemmen im Gehäuseb;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Wandschrank, eintürig 800x1000x300, aus Stahlblech, Tür gummigedichtet mit innen liegenden Scharnieren, Vorreiber und Stangenverschluss mit Doppelbartschlüssel, Kabelzuführung durch Verschraubung von oben/unten. Türanschlag rechts/links. Komplett aufgebaut mit Kanäle und Hutschinen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Blitzschutz -Ableiter 230/400 V TN-S 4-polig;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Blitzschutz -Ableiter 230V TN-S 2-polig, Breite 4TE, mit Fernmeldekontakt, anwendungsoptimierter Einsatz in kompakten Elektroinstallationen, Funkenstrecken-Technologie mit Folgestrombegrenzung, Defektanzeige;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;1 DA Kombi-Ableiter, Spannungsebene 24V AC/DC mit FM;80,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;1 DA Kombi-Ableiter, 0-10 V analog mit FM Kontakt, Überspannungsschutzstecker mit integrierter Statusanzeige und Fernmeldeoption. Querspannungsgrob- und Feinschutz für eine erdpotenzialfrei betriebene Doppeladern, Längsspannungsgrobschutz zur Erde. Ausführung 0-10 V;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Auswerteeinheit Überspannungsschutz für bis zu 10 VSPC R Schutzstecker. Mit potentialfreien Meldekontakt und Speisung. Dieser wird mit bis zu 10 Basismodulen mit Fernmeldeoption verdrahtet und liefert die Versorgungsspannung. Bei Ausfall eines Schutzmodules wird der potenialfreie Meldekontakt;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Herstellen des Potenzialausgleichs sämtlicher zu erfassender Betriebsmittel und Anlagenteile einschl. aller erforderlichen Potenzialausgleichsschienen, Erdungsbandrohrschellen, Verbindungsmaterial und sonstigem systemspezifischem Klein- und Befestigungsmaterial.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Werkstatt-/Montageplanung Schaltschrank nach DIN18386 (VOB Teil C);2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Schaltschrank Transport und Montage aufstellen und mech./elektr. verbinden Schaltschrank wie vorstehend beschrieben zum Verwendungsort transportieren, aufstellen und mechanisch/elektrisch verbinden. Die örtlichen Begebenheiten sind zu beachten bzw. durch Baustellenbesichtigung zu überprüfen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Halogenfreies Kunststoffstangenrohr, grau RAL 7035, EN 20;160,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Halogenfreies Kunststoffstangenrohr, grau RAL 7035, EN 25;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Halogenfreies Kunststoffstangenrohr, grau RAL 7035, EN 32;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Installationsrohr EN 16 flexibel, mit Befestigung, Installationsrohr VDE 0605 und DIN EN 50086-1/-2-2, gewellt, Klassifizierung 2221 für Unterputz- und Hohlwandinstallation geeignet, flammwidrig, selbstverlöschend, korrosionsfest, Verlegung im Trockenbau, in Mauerschlitz oder auf Rohfußboden mit Bef;180,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Installationsrohr EN 20 flexibel, mit Befestigung, Installationsrohr VDE 0605 und DIN EN 50086-1/-2-2, gewellt, Klassifizierung 2221 für Unterputz- und Hohlwandinstallation geeignet, flammwidrig, selbstverlöschend, korrosionsfest, Verlegung im Trockenbau, in Mauerschlitz oder auf Rohfußboden mit Bef;110,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Installationsrohr EN 32 flexibel, mit Befestigung, Installationsrohr VDE 0605 und DIN EN 50086-1/-2-2, gewellt, Klassifizierung 2221 für Unterputz- und Hohlwandinstallation geeignet, flammwidrig, selbstverlöschend, korrosionsfest, Verlegung im Trockenbau, in Mauerschlitz oder auf Rohfußboden mit Bef;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Leitungsführungskanal, 20x20 mm;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Leitungsführungskanal, 60x40 mm;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Leitungsführungskanal, 20x20 mm, Stahlblech;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;Leitungsführungskanal, 60x40 mm, Stahlblech;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0110;Kabelrinne für Kabelträgersystem DIN EN 61537 (VDE 0639), gelocht, aus bandverzinktem Stahl DIN EN 10346, Dicke 1 mm, Seitenhöhe mind. 60 mm, Breite mind. 100 mm, Arbeitshöhe bis 4 m.;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0120;B 200mm;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0130;B 300mm;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0140;B 400mm;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0150;B 500mm;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0160;B 600mm;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0170;Bogen, für Kabelrinne, 45 bis 100 Grad, waagerecht, flexibel, aus bandverzinktem Stahl DIN EN 10346, Dicke 1 mm, Seitenhöhe mind. 60 mm, Breite mind. 100 mm, Arbeitshöhe bis 4 m.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0180;B 200mm;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0190;B 300mm;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0200;B 400mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0210;B 500mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0220;B 600mm;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0230;Anbau-Abzweigstück, für Kabelrinne, aus bandverzinktem Stahl DIN EN 10346, Dicke 1 mm, Seitenhöhe mind. 60 mm, Breite mind. 100 mm, Arbeitshöhe bis 4 m.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0240;B 200mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0250;B 300mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0260;B 400mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0270;B 500mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0280;B 600mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0290;Reduzierstück, für Kabelrinne, aus bandverzinktem Stahl DIN EN 10346, Dicke 1 mm, Seitenhöhe mind. 60 mm, Breite mind. 200 mm, Arbeitshöhe bis 4 m.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0300;B 300mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0310;B 400mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0320;B 500mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0330;B 600mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0340;Bogen, für Kabelrinne, senkrecht, flexibel, aus bandverzinktem Stahl DIN EN 10346, Dicke 1 mm, Seitenhöhe mind. 60 mm, Breite mind. 100 mm, Arbeitshöhe bis 4 m.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0350;B 200mm;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0360;B 300mm;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0370;B 400mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0380;B 500mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0390;B 600mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0400;Kabelleiter 60x200 mm, mit durchgängig gelochtem Seitenholm, mit eingenieteten, nach oben offenen und verstärkten C-Profil-Sprossen, zur Befestigung von Kabeln und Leitungen mit Bügelschellen, eingerollter Seitenholm zur Verstärkung und als Kantenschutz;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0410;Kabelleiter 60x300 mm, mit durchgängig gelochtem Seitenholm, mit eingenieteten, nach oben offenen und verstärkten C-Profil-Sprossen, zur Befestigung von Kabeln und Leitungen mit Bügelschellen, eingerollter Seitenholm zur Verstärkung und als Kantenschutz;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0420;Kabelleiter 60x400 mm, mit durchgängig gelochtem Seitenholm, mit eingenieteten, nach oben offenen und verstärkten C-Profil-Sprossen, zur Befestigung von Kabeln und Leitungen mit Bügelschellen, eingerollter Seitenholm zur Verstärkung und als Kantenschutz;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0430;Kabelleiter 60x600 mm, mit durchgängig gelochtem Seitenholm, mit eingenieteten, nach oben offenen und verstärkten C-Profil-Sprossen, zur Befestigung von Kabeln und Leitungen mit Bügelschellen, eingerollter Seitenholm zur Verstärkung und als Kantenschutz;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0440;Ausleger für Kabelrinne, aus bandverzinktem Stahl DIN EN 10346, Dicke 1 mm, Tragfähigkeit bis 1,5 kN, Länge 100 mm, an der Wand aus Beton befestigen mit bauaufsichtlich zugelassenen Dübeln, Arbeitshöhe bis 4 m.;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0450;L 200mm;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0460;L 300mm;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0470;L 400mm;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0480;L 500mm;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0490;L 600mm;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0500;Stiel für Ausleger für Kabelrinne bis 600mm, aus bandverzinktem Stahl DIN EN 10346, Dicke 1 mm, als U-Profil, Tragfähigkeit bis 5 kN, an Decke befestigen mit bauaufsichtlich zugelassenen Dübeln, Stiellänge bis 400 mm, Arbeitshöhe bis 4 m.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0510;Stiel für Ausleger für Kabelrinne bius 600mm, aus bandverzinktem Stahl DIN EN 10346, Dicke 1 mm, als U-Profil, Tragfähigkeit bis 5 kN, an Decke befestigen mit bauaufsichtlich zugelassenen Dübeln, Stiellänge bis 600 mm, Arbeitshöhe bis 4 m.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0520;Stiel für Ausleger für Kabelrinne bis 600mm, aus bandverzinktem Stahl DIN EN 10346, Dicke 1 mm, als U-Profil, Tragfähigkeit bis 5 kN, an Decke befestigen mit bauaufsichtlich zugelassenen Dübeln, Stiellänge bis 800 mm, Arbeitshöhe bis 4 m.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0530;Gewindestange für Deckenabhängung, M 8, für Kabelrinne, aus bandverzinktem Stahl DIN EN 10346,;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0540;Gewindestange für Deckenabhängung, M 8, für Kabelrinne, aus bandverzinktem Stahl DIN EN 10346,;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0550;Gelenkverbinder;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0560;Trennsteg 45 mm, zur Trennung von Kabeln und Leitungen mit unterschiedlichen Spannungen oder Funktionen.;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0570;Trennsteg 45 mm, zur Trennung von Kabeln und Leitungen mit unterschiedlichen Spannungen oder Funktionen.;65,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0580;C-Profilschiene, Breite 35 mm, Höhe 18 mm, gelocht, aus bandverzinktem Stahl DIN EN 10346, Dicke 1 mm, Schlitzbreite 17 mm, an Decke befestigen mit bauaufsichtlich zugelassenen Dübeln, Arbeitshöhe bis 4 m.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0590;Sammelhalter aus Metall M30 für hohe mechanische Standfestigkeit, auch im Brandfall. Halogenfrei, brandlastfrei. Zur sicheren Montage oberhalb von Brandschutzdecken geeignet. Zugelassen für das Errichten einer Trasse mit Funktionserhalt nach DIN 4102 Teil 12. Für Wand- und Deckenmontage. Verschluss ;180,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0600;Sammelhalter aus Metall M70 für hohe mechanische Standfestigkeit, auch im Brandfall. Halogenfrei, brandlastfrei. Zur sicheren Montage oberhalb von Brandschutzdecken geeignet. Zugelassen für das Errichten einer Trasse mit Funktionserhalt nach DIN 4102 Teil 12. Für Wand- und Deckenmontage. Verschluss ;230,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0610;Kabelklammer Metall zur Deckenmontage für hohe mechanische Standfestigkeit, auch im Brandfall. Halogenfrei, brandlastfrei. Zur sicheren Montage oberhalb von Brandschutzdecken geeignet. Zugelassen für das Errichten einer Trasse mit Funktionserhalt nach DIN 4102 Teil 12. Für Deckenmontage. Das Einlege;150,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0620;Gerätedose DIN EN 60670-1 (VDE 0606-1) und DIN 49073, als Schallschutzdose, aus Kunststoff, Durchmesser 60 mm, Tiefe bis zu 54,5 mm, luftdicht, mit Schrauben und Nagellaschen, Schutzart IP 3X DIN EN 60529 (VDE 0470-1), Montage in Beton, Unterputz oder in Hohlwand.;65,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0630;Verbindungsdose DIN EN 60670-1 (VDE 0606-1) als Abzweigkasten, mit Einführungen für flexible Leitungen, aus Kunststoff, Grundfläche mind. 80/80 mm, Tiefe mind. 50 mm, mit Deckel, Schutzart IP 3X DIN EN 60529 (VDE 0470-1), Montage Aufputz, auf Beton oder im Hohlraumboden bzw. in Trockenbauwand;130,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0001;Kabelrinne für Kabelträgersystem DIN EN 61537 (VDE 0639), ungelocht, einschl. Abdeckung, aus nichtrostendem Stahl, Dicke 0,75 mm, Seitenhöhe mind. 60 mm, Breite mind. 100 mm.;18,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0002;B 200mm;27,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0003;B 200mm;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0004;Bogen, für Kabelrinne, bis 90 Grad, waagerecht, einschl. Abdeckung, aus nichtrostendem Stahl, Dicke 0,75 mm, Seitenhöhe mind. 60 mm, Breite mind. 100 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0005;200mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0006;300mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0007;Bogen, für Kabelrinne, bis 90 Grad, senkrecht, einschl. Abdeckung, aus nichtrostendem Stahl, Dicke 0,75 mm, Seitenhöhe mind. 60 mm, Breite mind. 100 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0008;B 200mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0009;B 300mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Steigleiter, ungelocht, Sprossenabstand 300 mm, einschl. aller systembedingten Form- und Verbindungsstücke, einschl. Abdeckung, aus nichtrostendem Stahl, Dicke 0,75 mm, Seitenhöhe mind. 60 mm, Breite mind. 100 mm.;1,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0011;B 200mm;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0012;B 300mm;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0013;T-Abzweig, für Kabelrinne, einschl. Abdeckung, aus nichtrostendem Stahl, Dicke 0,75 mm, Seitenhöhe mind. 60 mm, Breite mind. 100 mm.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0014;B 200mm;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0015;B 300mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0016;Reduzierstück, für Kabelrinne, einschl. Abdeckung, aus nichtrostendem Stahl, Dicke 0,75 mm, Seitenhöhe mind. 60 mm, Breite mind. 100 mm.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0017;B 200mm;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0018;B 300mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0019;Gelenkstück, für Kabelrinne, einschl. Abdeckung, aus nichtrostendem Stahl, Dicke 0,75 mm, Seitenhöhe mind. 60 mm, Breite mind. 100 mm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;B 200mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0021;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus Aluminium, einwandig, glatt, starr, mit angeformter Muffe, Außendurchmesser 20 mm, Druckfestigkeit Klasse 2 - leicht (320 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE 0605-1), Verleg;225,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0022;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus Aluminium, einwandig, glatt, starr, mit angeformter Muffe, Außendurchmesser 40 mm, Druckfestigkeit Klasse 2 - leicht (320 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE 0605-1), Verleg;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0023;C-Profilschiene, Breite 41 mm, Höhe 40 mm, gelocht, aus nichtrostendem Stahl, Dicke 0,75 mm, an Stahlkonstruktion befestigen.;12,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0024;C-Profilschiene, Breite 56 mm, Höhe 40 mm, gelocht, aus nichtrostendem Stahl, Dicke 0,75 mm, an Stahlkonstruktion befestigen.;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0025;Montagefuß zur Aufständerung von Rohrleitungs- und Kabeltrassen auf Flachdachinstallationen, Profilschiene Stahl in Block aus vulkanisierten Gummi,;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0026;Montagefuß zur Aufständerung von Rohrleitungs- und Kabeltrassen auf Flachdachinstallationen, Profilschiene Stahl in Block aus vulkanisierten Gummi,;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0027;Montagefuß zur Aufständerung von Rohrleitungs- und Kabeltrassen auf Flachdachinstallationen, Profilschiene Stahl in Block aus vulkanisierten Gummi,;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Datenanschlussdose, symmetrisch, Kategorie 6 Index A tiefgestellt DIN EN 50173-1 (VDE 0800-173-1), Link-Klasse D, DIN EN 50173-1 (VDE 0800-173-1), Potentialausgleich DIN EN 50310 (VDE 0800-2-310), kompakt, 2 Ports, RJ45-Buchse DIN EN 60603-7-51, in löt-, schraub- und abisolierfreier Technik (LSA-Tec;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Fachgerechtes Herstellen eines elektrischen Anschlusses von Cat7-Kabeln auf RJ45 Steckverbindern, als einseitigen Anschluss, liefern und Anschließen des RJ45-Steckverbinder, einschl. RJ45 Steckverbinder für Ethernet 10/100/1000 MBit, mit Knickschutz, mit Kabelbeschriftung und Kabelmarker;150,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Messung Kupferkabel PL (Permanent Link) - Installationsstrecke, DIN EN 50173-1 (VDE 0800-173-1), Link Klasse E Index A tiefgestellt, Darstellung der Messung als Tabelle und als Grafik, Dokumentation vorab digital zur Prüfung und nach Freigabe als Ausdruck und auf Datenträger, im PDF-Format und mit O;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Duplex Patchkabel, MM-50, SC/LC, 0,5m;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;LWL-Innenkabel DIN VDE V 0888-100-1-1 (VDE V 0888-100-1-1), als Mehrmodenfaser Mehrmodenfaser OM 3, typisch 10 Gbps bis 300 m, J-DH, 4 x 2 G 50/125, Wellenlänge 1300 nm, Bandbreite für 1 km 1200 MHz, auf vorh. Kabelrinnen oder in offene Kanäle, mechanische Anforderungen DIN EN 60794-1-2 (VDE 0888-10;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Fiber Industrial Mini Patch Box zur Hutschienen- bzw. Wandmontage. Zum Spleissen oder Patchen von bis zu 12 Simplex Lichtwellenleiterfasern. Komplett spleissfertig bestückt mit Spleißkassette, im Gehäuse integriert, 12 Pigtails (SC), Spleisskamm, Zugentlastung Kabelbinder sowie sämtlichem Zubehör.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;LWL-Anschluß/Spleissen/Montage pro Faser montieren, thermischem Spleissen. Bestehend aus:;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Messung LWL-Faser, DIN VDE 0800-173-100 (VDE 0800-173-100), OM3, Nachweis der Polarität, Länge und Einfügedämpfung DIN EN 50173-1 (VDE 0800-173-1) bezogen auf die Netzanwendung, Dokumentation vorab digital zur Prüfung und nach Freigabe als Ausdruck und auf Datenträger, im PDF-Format und mit Original;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Netzwerkschrank, VX IT Netzwerk-/Serverschrank standard, BHT 800x2100x800, 42 HE Aluminium-Sichttür geschlossen, Seitenwand verschraubbar, Stahlblech für VX, Steckdosenleiste 7 Dosen, Lüftermodul 100-240V 280cbm/h passend für VX IT Einspeisebaugruppe, Kleinmaterial;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;Netzwerk Switch, managed, Fast Ethernet, Anzahl Ports: 6x RJ45, 2x ST-Multimode, IP30, -40 °C bis 75 °C.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;EMS Volumenlizenz für vorhandene Qanteon 50 DP. Erweiterung der nutzbaren Datenbasis der Qanteon-Software um 50 Datenpunkte. Es können alle Funktionen gemäß Vorbemerkungen Qanteon BEMS, Absatz EMS, verwendet werden. Freischaltung mit Software-Lizenzschlüssel.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Trendkurven bis zu 500 TK und 500 OTW Programm zur Aufzeichnung und Darstellung von Trendkurven. Es werden bis zu 500 Trendkurven multitask aufgezeichnet. Eine Trendkurve wird mit ihrem individuellen Klartextnamen aufgerufen. Nach Aufruf des Menüs werden die eingerichteten Makros und in einer Übersi;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;GLT-Client für MS-Windows. Software zur Bedienung der GLT von einem Windows-PC aus. Die Client-Software wird auf dem PC installiert und ermöglicht bei Aufruf die uneingeschränkte Bedienung der GLT von diesem Rechner aus. Die Verbindung zwischen GLT und dem Windows-Computer wird über ein Netzwerk her;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Projektierung / Inbetriebname Dynamische Einblendung DIN EN ISO 16484 GA-FL Abschnitt 8.2. Dienstleistung pro Einblendung.;1350,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Änderung Einblendpunkt.;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Erstellung der Klartexte nach Abklärung mit dem Auftraggeber für:;1350,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Anlagenbilderstellung Raumautomation;139,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Anlagenbilderstellung Gebäudemanagement.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Anlagenbildänderung Gebäudemanagement.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Erstellen einer temporären Schutzabdeckung für Objekte, aus Kunsstoff Folie mit staubdicher Abdichtung durch Klebeband;10,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Erstellen einer temporären Schutzabdeckung für Objekte,aus Holz Plattenmaterial 10 mm, mit Kantenhölzern 30x30 mm zum mechanischen Schutz, mit Schrauben, bodenstehend;10,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Erstellen einer temporären Schutzabdeckung für auf dem Rohboden verlegte Rohrleitungen aus Holz aus Plattenmaterial 20 mm, mit Kantenhölzern 30x30 mm zum mechanischen Schutz, mit Schrauben, bodenstehend, wiederverwandbar;10,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Form-/Hohlprofilstahlkonstruktion, aus verzinktem Stahl, für Stütz-, Hänge-, Trag- und Sonderbefestigung, schallentkoppelt gelagert, der rechnerische Nachweis der Tragfähigkeit ist auf Verlangen vorzulegen, Arbeitshöhe des Montageortes bis 3,5 m über der Standfläche des hierfür erforderlichen Gerüst;150,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Form-/Hohlprofilstahlkonstruktion, aus nichtrostendem Stahl, für Stütz-, Hänge-, Trag- und Sonderbefestigung, schallentkoppelt gelagert, der rechnerische Nachweis der Tragfähigkeit ist auf Verlangen vorzulegen, Arbeitshöhe des Montageortes bis 3,5 m über der Standfläche des hierfür erforderlichen Ge;100,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Schlitz 15x20 in Mauerwerk mit Schlitzfräse herstellen, einschl. Ausstemmen und Schuttbeseitigung.;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Schlitz 15x20 in Beton mit Schlitzfräse herstellen, einschl. Ausstemmen und Schuttbeseitigung.;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Kernbohrung, Untergrundfläche senkrecht oder waagerecht, aus Stahlbeton, Normalbeton, Bohrdurchmesser bis 50 mm, Bohrtiefe über 25 bis 30 cm, Wichte des Abbruchstoffes DIN EN 1991-1-1 20 kN/m3, Arbeitshöhe bis 4 m, Geräteeinsatz ist möglich, max. Gesamtgewicht bis 0,5 t, Ausführung staubarm, ohne Wa;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Kernbohrung, Untergrundfläche senkrecht oder waagerecht, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 50 bis 100 mm, Bohrtiefe über 25 bis 30 cm, Wichte des Abbruchstoffes DIN EN 1991-1-1 20 kN/m3, Arbeitshöhe bis 4 m, Geräteeinsatz ist möglich, max. Gesamtgewicht bis 0,5 t, Ausführung staubarm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Kernbohrung, Untergrundfläche senkrecht oder waagerecht, aus Mauerwerk, Bohrdurchmesser über 25 bis 50 mm, Bohrtiefe über 20 bis 25 cm, Wichte des Abbruchstoffes DIN EN 1991-1-1 4,5 kN/m3, Arbeitshöhe bis 4 m, Geräteeinsatz ist möglich, max. Gesamtgewicht bis 0,5 t, Ausführung innerhalb des Bauwerks;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Kernbohrung, Untergrundfläche senkrecht oder waagerecht, aus Mauerwerk aus Porenbetonstein, Bohrdurchmesser über 50 bis 100 mm, Bohrtiefe über 20 bis 25 cm, Wichte des Abbruchstoffes DIN EN 1991-1-1 4,5 kN/m3, Arbeitshöhe bis 3 m, Geräteeinsatz ist möglich, max. Gesamtgewicht bis 0,5 t, Ausführung i;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Öffnung Trockenbauwand für Kabelverlegung, ohne Schließen, enthält Leistungen wie folgt:;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Brandschutzabschottung an Kabel-/Leitungsanlagen als Mörtelschott, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse S 90 DIN 4102-9, in Wand oder Decke, Decke aus Stahlbeton oder Mauerwerk, Dicke bis 300 mm, unterbrochene Kabelpritsche, ec;6,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Brandschutzabschottung an Kabel-/Leitungsanlagen als Mörtelschott, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse S 90 DIN 4102-9, in Wand oder Decke, Decke aus Stahlbeton oder Mauerwerk, Dicke bis 300 mm, unterbrochene Kabelpritsche, ec;5,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Brandschutzabschottung an Kabel-/Leitungsanlagen als Mineralwolleplattenschott in Wände oder Decken, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse S 90 DIN 4102-9, im Gebäude, Oberkante Abschottung über Gelände/Fußboden bis 4,0 m, Wand ;4,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Brandschutzabschottung an Kabel-/Leitungsanlagen als Mineralwolleplattenschott in Wände oder Decken, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse S 90 DIN 4102-9, im Gebäude, Oberkante Abschottung über Gelände/Fußboden bis 4,0 m, Wand ;4,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Brandschutzabschottung an Kabel-/Leitungsanlagen als flexibles Schott, Feuerwiderstandsklasse S 90 DIN 4102-9, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, runder Durchbruch, Durchmesser bis 50 mm, Baustoffklasse DIN 4102-1 A (nichtbrennbar), Schmelzpunkt gr;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Brandschutzabschottung an Kabel-/Leitungsanlagen als flexibles Schott, Feuerwiderstandsklasse S 90 DIN 4102-9, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, runder Durchbruch, Durchmesser über 50 bis 100 mm, Baustoffklasse DIN 4102-1 A (nichtbrennbar), Schmel;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Brandschutzabschottung an Kabel-/Leitungsanlagen als flexibles Schott, Feuerwiderstandsklasse S 90 DIN 4102-9, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, runder Durchbruch, Durchmesser über 50 bis 100 mm, Baustoffklasse DIN 4102-1 A (nichtbrennbar), Schmel;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Brandschutzkabelkanal als selbsttragendes Fertigteil, Beflammung von innen, rechteckig, mit allgemeinem bauaufsichtlichen Prüfzeugnis, Feuerwiderstandsklasse I 30 DIN 4102-11, waagerecht oder senkrecht, Innenmaße B/H 300/120 mm, im Gebäude, Oberkante Kanal über Gelände/Fußboden bis 4,0 m, mit Kabelr;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Schließen von Ringspalten bei Einzelkabeldurchführungen durch Beton-, Mauerwerk- und Trockenbauwände mit geeignetem Schottmaterial;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Inbetriebnahme Gebäudemanagement und Konfiguration.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Information zur Gebäudeautomation vom AN der Wärme- und Kälteerzeugung entgegennehmen und fortschreiben, die Informationen werden mit den AN der beteiligten Leistungsbereiche abgestimmt und bearbeitet nach Bauzeitenplan, die Abstimmung umfasst Benutzeradress-System, Anlagenkonfiguration der Gebäudea;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Information zur Gebäudeautomation vom AN der RLT-Anlagen entgegennehmen und fortschreiben, die Informationen werden mit den AN der beteiligten Leistungsbereiche abgestimmt und bearbeitet nach Bauzeitenplan, die Abstimmung umfasst Benutzeradress-System, Anlagenkonfiguration der Gebäudeautomation, bet;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Information zur Gebäudeautomation vom AN der Sanitärtechnischen Anlagen entgegennehmen und fortschreiben, die Informationen werden mit den AN der beteiligten Leistungsbereiche abgestimmt und bearbeitet nach Bauzeitenplan, die Abstimmung umfasst Benutzeradress-System, Anlagenkonfiguration der Gebäude;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Gemeinsamer Funktionstest mit dem AN KNXvor Ort auf der Baustelle, um im Praxisbetrieb festzustellen, ob die errichtete Anlage ordnungsgemäß funktioniert. Hier muss im Beisein des AG die entsprechende Funktionalität der Gesamtanlage nachgewiesen werden.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Gemeinsamer Funktionstest mit den EDV-Systemspezialisten des AG vor Ort auf der Baustelle, um im Praxisbetrieb festzustellen, ob die Kommunikation über das Netzwerk ordnungsgemäß funktioniert. Hier muss im Beisein des AG die entsprechende Kommunikation zwischen Managementrechner, GLT, Monitoringsyst;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0070;Prüfung der von anderen AN installierten GA-Schaltschränke, auf Beschriftung/Bezeichnung von Gerät, Kabel, Klemme, gemäß Verbindungsplänen/-tabellen, der mechanischen Befestigung, für die von anderen AN installierten Verbindungen, zwischen Automationseinrichtungen und den Sensoren, mit Prüfprotokoll;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0080;Probebetrieb mit Nachweis durch Protokoll der in den technischen Beschreibungen aufgeführten Leistungsmerkmale und Überprüfung der angeschlossenen Datenpunkte. Störungsfreier Probebetrieb für eine Betriebsdauer von mindestens 7 Wochentagen mindestens 14 Tage vor Beantragung der Abnahme erforderlich.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0090;Schulung des Bedienungspersonals für bis zu 5 Teilnehmer, theoretische und praktische Schulung des Bedienungspersonals vor Ort, Dauer je nach Erfordernis mindestens jedoch 3 Arbeitstage, einschließlich auf die installierte Anlage vor Ort abgestimmte Schulungsunterlagen, die durchgeführte Schulung wi;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0100;Wiederholte Einweisung des Bedienungspersonals für bis zu 5 Teilnehmer, vor Ort, die durchgeführte Einweisung wird protokolliert;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Stundenlohnarbeiten durch Regelungstechniker/-in;4,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Stundenlohnarbeiten durch Ingenieur,;4,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Stundenlohnarbeiten durch Facharbeiter,;4,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0010;Dokumentation und Revisionsunterlagen gemäß der Vorgabe der BiMa entsprechend den Technischen Vertragbedingungen - Zusätzlicher Teil;1,0;PSCH;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0020;Leitungskennzeichnung am Ende der Leitung mit dauerhaftem Beschriftungsträger entsprechend der Bestandsleitungskennzeichnung mit Kunststoff-Kabelmarker:;200,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0030;Bezeichnungsschild, Farbe und Beschriftung nach Angaben des AG, aus Schicht-Pressstoff mit Kunststoffabdeckung, Beschriftung 2-zeilig, gedruckt, rechteckig, Höhe 40 mm, Breite 100 mm, Befestigung mit Schildträger aus verzinktem Stahl, Halter und Spannband.;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0040;Bezeichnungsschild DIN 825, Farbe und Beschriftung nach Angaben des AG, aus mehrschichtigem Kunststoff, Beschriftung einzeilig, gedruckt, rechteckig, Höhe 26 mm, Breite 52 mm, Befestigung mit Schildträger aus verzinktem Stahl, Halter und Spannband.;60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0050;Anlagen und Betriebsmittel gemäß Bezeichnung in den Schemen beschriften. Dazu gehören u.a. Lüftungsanlagen, Wärme- und Kälteerzeuger, Stellventile, Pumpen, Volumenstromregler, Brandschutzklappen, usw.;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83
+0060;Anlagenschema der Topologie ISPs erstellen, mit CAD-Programm, anhand von Montageplänen des AN, Übergabe vor der Abnahme, als Wandschaubild farbig, der Anlagen je Zentrale vergrößert auf A1 und farbig, in Posterrahmen, hinter Schutzscheibe;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 30024205.X83

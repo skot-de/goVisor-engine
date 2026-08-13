@@ -1,0 +1,113 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Bereitstellung der Baustelleneinrichtung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+1;"Folgende Anlagenteile sind vollständig zu demontieren (s. auch Plan/Zeichnung ""Abbruch""):";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+1;Als anschlussfertiges Kompaktmodul für den Betrieb mit Biogas (Methangehalt > 40 %), brennwertfähig.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+2;"heizungsseitig gem. DIN EN 12828:2014-07; bestehend aus Druckausdehnungsgefäß mind. 12 l, Sicherheitsventil 6 bar, Manometer, Automatikentlüfter und KFE-Kugelhahn zum Füllen und Entleeren,";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+3;Pumpengruppe inkl. Q-Sensor und automatischem Absperrventil, bestehend aus Hocheffizienz-Nassläuferpumpe, elektronisch geregelt (von BHKW-Modulsteuerung), Energieeffizienzindex (EEI) = 0.19,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+4;BHKW speditionsgerecht verpacken und liefern, frei Bordsteinkante.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+1;Transport des Maschinensatzes von der Abladestelle zum Aufstellort.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+2;Ausrichtung und Montage des Maschinensatzes am Aufstellort.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+3;"Bestehend aus Abgasleitung wie in Pos. 2.01.1 beschrieben; inkl. aller Formteile, Abgasmessstutzen, Kondensatfalle und Montagematerial vom BHKW-Modul innerhalb des Aufstellraumes bis zum Schornsteineintritt.";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+4;Lieferung und Montage von Elastomeren (z. B.: Sylomer).;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+1;Gasentfeuchtungsanlage für Biogasvolumenstrom bis 40 Nm³/h mit Nacherhitzung und Aktivkohlebehälter;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+2;Geeignete Luftpumpe;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+3;Hocheffiziente Umwälzpumpe mit einem elektronisch kommutierten Motor, ausgelegt für die Umwälzung von Flüssigkeiten in Heizungsanlagen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+1;zur Belüftung des Aufstellungsraums;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+2;Raumbediengerät zur Temperaturregelung des ausgeschriebenen Ventilators;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+3;Kühlsystem zur frei bewitterten Aufstellung auf dem Außengelände der Kläranlage nahe des Betriebsgebäudes als Tischkühlerkonstruktion, ausgeführt als Wasser-Glykol/Luft System. Der Kühlsystem-Wärmetauscher ist auf die gesamte Wärmeleistung auszulegen. Er ist einschließlich Notkühl-Wärmetauscher am B;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+4;Plattenwärmetauscher, kupfergelötet;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+5;Hocheffizienz-Nassläuferpumpe, elektronisch geregelt;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+6;Geschlossenes Membran-Ausdehnungsgefäßes (MAG) für den Notkühlkreislauf eines Blockheizkraftwerks (BHKW), ausgelegt für ein Wasser-Glykol-Gemisch (30-50 % Glykolanteil). Das MAG dient dem Druckausgleich bei Temperatur- und Volumenänderungen im geschlossenen Kühlkreislauf und stellt einen sicheren un;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+7;Metalltisch aus korrosionsbeständigem Edelstahl, ausgelegt zur sicheren, erhöhten Aufstellung eines Plattenwärmetauschers mit einem Betriebsgewicht von ca. 70 kg.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+1;Liefern, Herstellen und fachgerechtes Montieren einer betriebsfertigen Rohrleitung gemäß den nachstehenden technischen Angaben und Rahmenbedingungen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+2;Technische Ausgangsdaten (für Kalkulation bereitgestellt):;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+3;Druckprüfung der beiden gesamten Gasleitungen (Rohgas und Reingas) eischließlich Einbauteilen im Lieferumfang des Auftragnehmers nach DVGW Arbeitsblatt 472 im Druckmessverfahren mit Luft.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+4;Technische Ausgangsdaten (für Kalkulation bereitgestellt):;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+5;Technische Ausgangsdaten (für Kalkulation bereitgestellt):;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+6;Technische Ausgangsdaten (für Kalkulation bereitgestellt):;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+7;Technische Ausgangsdaten (für Kalkulation bereitgestellt):;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+8;Technische Ausgangsdaten (für Kalkulation bereitgestellt):;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+9;Technische Ausgangsdaten (für Kalkulation bereitgestellt):;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+10;Liefern und fachgerechtes Montieren eines industrietauglichen Kugelhahns für Heizungsanlagen. Der Kugelhahn wird in eine gedämmte Rohrleitung aus unlegiertem Stahl eingebaut und muss für den Betrieb mit Heizwasser geeignet sein.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+11;Liefern und fachgerechtes Montieren eines industrietauglichen Kugelhahns für Heizungsanlagen. Der Kugelhahn wird in eine gedämmte Rohrleitung aus unlegiertem Stahl eingebaut und muss für den Betrieb mit Heizwasser geeignet sein.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+1;Betriebsfertiger Anschluss des bestehenden Lasttrennerabgangs für die ehemalige Mikrogasturbine als Abgang für das BHKW bis 250A in der Schaltanlage im Keller des Betriebsgebäudes.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+2;Universalmeßgerät, Türeinbau, mit Profinet/Ethernet;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+4;Externes NA-Schutz Steuergerät fertig montiert im IP65 Inastallationskasten;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+6;Abgang für Niederspannungsschaltanlage (Pos. 05.02.1) in vorhandener Verteilung im Schaltraum 1.OG schaffen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+7;Steckbare Blitzstrom- und;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+8;Überspannungsschutz Typ 3, als Geräteschutz für;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+9;Doppelstock-Reihenklemme mit zweistufigem;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+10;Doppelstock-Reihenklemme mit zweistufigem;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+11;Doppelstock-Reihenklemme mit zweistufigem;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+1;Niederspannungsschaltanlage als Wandschrank, als Kabelverteiler mit Vorsicherungen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+2;nach VDE 0606, mit Kabelverschraubungen IP 54, mit 7 ausbrechbaren Einführungsöffnungen und;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+3;nach DIN 49016, Material PVC-U, verstärkte Wandung, mit allem Zubehör wie Steckbögen und -muffen, Befestigungsschellen und Schrauben aus 1.4571, in Stangen zu 3 m, grau nach RAL 7035.;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+4;nach DIN 49016, Material PVC-U, verstärkte Wandung, mit allem Zubehör wie Steckbögen und -muffen, Befestigungsschellen und Schrauben aus 1.4571, in Stangen zu 3 m, grau nach RAL 7035.;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+5;Für Installationen im Aussenbereich;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+6;für den Leistungsteil von Antrieben.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+7;für die Meldeleitungen;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+8;Zur störsicheren Übertragung von Signalen im mA-Bereich unter rauen Umgebungsbedingungen, im Freien sowie bei Erdverlegung.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+9;- geeignet für Erdverlegung und Verlegung im Kabelleerrohr;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+10;für Abgänge aus dem vorgenannten Stahlblechschrank;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+11;für Abgänge aus dem vorgenannten Stahlblechschrank;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+12;für Abgänge aus dem vorgenannten Stahlblechschrank;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+13;für Abgänge aus dem vorgenannten Stahlblechschrank;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+14;als Zuleitung zum vorgenannten Stahlblechschrank;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+15;für das Zuleitungskabel zum vorgenannten Stahlblechschrank;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+16;sonst wie vor.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+17;sonst wie vor.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+18;sonst wie vor.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+19;wie vor.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+1;zum Anschluss von Geländern, Haltestangen und Rohren Zulassung für Einbau in Ex-Zone 1.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+2;Material 1.4571, nach DIN EN 50164, 8 mm Durchmesser, in Teillängen, einschl. Leitungshalter aus 1.4571, montieren.;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+3;Material 1.4571, Anschluss an Erdungsfestpunkt oder Schiene mit Edelstahlschraube M12, U-Scheibe und Anschlussklemme 8 mm.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+4;Material 1.4571, Verbindungsklemme für Kreuz- oder Parallelanschluss von 2 Rundstähle 8 mm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+5;Edelstahldrahtseil, Werkstoff 1.4401, drallarm und spannungsfrei;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+6;zum Anschluss des Edelstahlseils, zum Anschluss von Konstruktionen wie z.B. Einstiege, Geländer, Tauchwände, Rohre, etc. und zum Anschrauben an Erdungsfestpunkte (EFP);10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+7;zum Anschluss des Edelstahlseils, zum Anschluss von Konstruktionen wie z.B. Einstiege, Geländer, Tauchwände, Rohre, etc. und zum Anschrauben an Erdungsfestpunkte (EFP) für den Anschluss z.B. einer Potentialausgleichsschiene mit Vierkantlöchern 11x11 mm und Doppelüberleger;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+8;mit Anschlussklemmen für Bandstahl 30 x 4 mm, 10 Rundleiter bis 95 mm2, montieren und anschließen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+9;mit 10 Anschlüssen Schraube/Mutter M10x25mm2, Abmessungen 435x40x6 mm, montieren und anschließen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+10;als Potentialausgleichsleitung in Teillängen bis 0,5 m, einschließlich Kabelschuh beiseitig, Edelstahlschraube, U-Scheibe, sowie bohren und Gewinde schneiden bis M8 in Metall;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+11;auf Putz in Schutzrohren oder auf Kabelbühne verlegen, als Potentialausgleichsleitung an der Potentialausgleichsschiene anschließen.;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+1;Anbindung an das übergeordnete PLS mittels Profinetschnittstelle,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+3;"Anpassung und Aktualisierung des vorhandenen Mosaikbilds / Blindschaltbilds in der Leitwarte der Kläranlage entsprechend dem neuen Prozessbild ""BHKW + Gasaufbereitung + Energiemanagement"".";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+4;Liefern, Verlegen und beidseitiges Anschließen der Elektro-Steuerleitungen zwischen BHKW und vorhandenem PLS der Kläranlage (BHKW-Freigabe, BHKW-Betrieb, BHKW-Störung, Solleistungsvorgabe, Ist-Leistungsrückmeldung). Verlegen in vorhandenem Kabelkanal oder vorhandener Kabelbühne.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+5;Für die Klärung und Durchsprache der Funktionen der;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+6;Eine Liste sämtlicher Meldungen und Messwerte ist in gedruckter und digitaler Form mindestens 4 Wochen vor dem geplanten Funktionstest zu übergeben. Die Bezeichnung der Werte muss eindeutig sein. Diese ‘100%-Liste‘ wird in Abstimmung mit der Betriebsabteilung auf  die notwendigen Werte reduziert.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+7;Nach Fertigstellung und vollständiger Inbetriebnahme der Regelung ist der Probebetrieb der Anlage zu begleiten. Auf Anforderung sind einfache Parameter- und Softwareanpassungen durchzuführen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+1;Drucksensor mit Anschlusskabel zur Überwachung des Heizungsanlagendruckes. Anschlussfertig am BHKW im Rücklauf der Pumpengruppe montiert und über analogen Eingang mit der Steuerung verbunden.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+2;Lieferung, fachgerechte Montage und Inbetriebnahme eines vollständigen Temperaturmesssystems für eine Heizwasserleitung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+3;Lieferung, fachgerechte Montage und Inbetriebnahme eines vollständigen Temperaturmesssystems.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+4;Herstellen des vollständigen Anschlusses des bauseits vorhandenen Gasdurchfluss-Messgeräts vom Typ Binder Combimass eco basic an das neue Blockheizkraftwerk gemäß Herstellerangaben und den im BHKW-Handbuch beschriebenen Einbindungsanforderungen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+2;Für das Blockheizkraftwerk (BHKW) mit einer thermischen Leistung von 100 kW ist gemäß niedersächsischer Feuerungsverordnung ein externer Heizungsnotschalter bereitzustellen und fachgerecht zu installieren. Der Heizungsnotschalter muss in die bestehende Not-Aus-Schleife des BHKW integriert werden und;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+1;OpenVPN-Gateway zur Fernüberwachung und -steuerung des BHKW-Moduls über Ethernet-LAN. Ein Netzwerkanschluss mit den nötigen Portfreigaben wird bauseits gestellt.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+1;"Wiedereinbindung der vorhandenen Gaswarnanlage (Gasmaster + Xgard Crowcon) in die sicherheitstechnische Kette des neuen BHKW-Systems; Anpassung der Signalführung, Schnittstellen, Prüfabläufe und Dokumentation.";1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+2;Liefern, Verlegen und beidseitiges Anschließen der Elektro-Steuerleitungen zwischen BHKW und vorhandenem Prozess-Leit-System (PLS) der Kläranlage (BHKW-Freigabe, BHKW-Betrieb, BHKW-Störung, Soll-Leistungsvorgabe, Ist-Leistungs-Rückmeldung). Verlegen in neuer Kabeltrasse (s. Pos. 7.01.4).;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+3;Der Auftragnehmer hat sämtliche elektrische Verbraucher und Geräte die zum Betrieb der BHKW-Anlage notwendig sind in seinem Schalt-, mess- und regelungstechnischen Leistungsumfang (auch beigestellte Anlagenteile wie Umwälzpumpen etc.) mit der BHKW-Schaltanlage zu verkabeln, einschließlich Potenziala;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+4;Zum Leistungsumfang des Auftragnehmers gehören außerdem alle notwendigen Kabelrinnen mit sämtlichem Zubehör aus verzinktem Stahlblech sowie erforderliches Klein- und Befestigungsmaterialien.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+1;Erstellung von Werk- und Motageplanung für alle zu liefernden Anlagen und Anlagenkomponenten, sowie Schaltplänen und Schaltungsunterlagen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+2;Die Maße im Leistungsverzeichnis dienen dem Bieter als Kalkulationsgrundlage.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+3;Zur bauseitigen Programmierung der Ansteuerung des BHKW ist gemeinsam mit dem Auftraggeber und dem Planungsbüro ein Lastenheft zu erstellen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+1;Inbetriebnahme des BHKW-Moduls, Einstellung aller Maschinenparameter, Einregulierung der Gasstrecke, Kontrolle aller für den Betrieb notwendigen Funktionen, Emissionsmessung, Test der Sicherheitseinrichtungen (insbesondere der Netzüberwachung und Abschaltorgane), Einweisung des Betreibers, Erstellun;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+2;Durchführung der vollständigen Kurzschlussstromermittlung für die neu errichtete BHKW-Anlage einschließlich aller betroffenen Niederspannungs-Einspeise-, Verteil- und Abgangspunkte.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+3;"mit allen Nebenleistungen, wie Absprache mit dem EVU und AG; Ermittlung der Anschlussleistung, Terminkoordination, Abholung und Montage der Zähler, usw.";1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+4;Überprüfung der gesamten elektrischen Anlage nach Fertigstellung, nach VDE 0100 Teil 600 bzw. DGUV V3, einschließlich Mantelprüfung der angeschlossenen Kabel und Eintragung in einen Übergabebericht;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+6;Teilnahme an der Sachverständigenprüfung.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+7;Prüfung und Durchmessen der Anlage einschl. der Erstellung eines Messprotokolls sowie Einsatz der erforderlichen Messgeräte;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+8;Prüfung und Durchmessen der Anlage einschl. der Erstellung eines Messprotokolls sowie Einsatz der erforderlichen Messgeräte nach ABB bzw. VDE 0185;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+1;Der AN erstellt neue Raumzeichnungen oder Anlagenzeichnungen in CAD (as built) und stellt diese dem AG zur Verfügung.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+2;Der AN führt bis zur Abnahme / Inbetriebnahme die vom AG als Muster zur Verfügung gestellten Messstellenliste /Antriebsliste im gesamten Projekt.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+3;Gründliche Einweisung des Betreiberpersonals in den Betrieb, die Störungsbeseitigung und die Wartung der gelieferten Anlage bzw. Anlagekomponenten. Die Einweisung des AG erfolgt nach erfolgreicher Inbetriebnahme der gesamtheitlichen Anlage durch den AN.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+4;Lieferung einer ausführlichen technischen Dokumentation und einer verbindlichen Betriebsanleitung für die Bedienung aller Anlagenteile im Zusammenwirken.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+5;Für jede Maschine ist eine Konformitätserklärung im Sinne der Richtlinie 2006/42/EG (Maschinenrichtlinie bzw. der 9. Produktsicherheitsverordnung (Maschinensicherheitsverordnung) zu erbringen und der Dokumentation beizulegen, wobei der Inverkehrbringer bestätigt, dass die Maschinen den Sicherheitsan;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+6;Die neue Anlage ist zu beschildern.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+1;Der AN ist während der gesamten Umbauzeit für die Sicherheit des eigenen Personals sowie für die eigens bestellten Nachunternehmen verantwortlich. Der AN überprüft die Arbeitsmittel entsprechend der Betriebssicherheitsverordnung, führt eine Unterweisung aller eingesetzten Arbeitnehmer in den eingese;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+2;Der AN hat in Zusammenarbeit mit der örtlichen Bauüberwachung für eine ausreichende und rechtzeitige Koordination seiner Lieferungen und Leistungen mit den übrigen an der Baumaßnahme beteiligten Gewerken zu sorgen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+1;4 Wochen nach Auftragserteilung ist die Anmeldung der Netzanfrage (Anschluss einer Erzeugungsanlage an das Versorgungsnetz) über den Auftraggeber beim Netzbetreiber einzureichen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+2;Antrag auf Zulassung nach dem KWK-Gesetz BHKW-Modul;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+3;Anmeldung BHKW-Anlage im Marktstammdatenregister;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+1;Fachingenieur auf Nachweis, nur nach ausdrucklicher;1,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+2;Obermonteur auf Nachweis, nur nach ausdrucklicher Anweisung der Bauleitung.;1,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+3;Monteur;1,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+4;Hilfsmonteur;1,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83
+1;Der Auftraggeber schließt einen Instandhaltungsvertrag nur mit dem BHKW-Hersteller ab.;60000,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BHKW-Sarstedt (1).X83

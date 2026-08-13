@@ -1,0 +1,645 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Prüffähige Detail-, Werkstatt- und Montageplanung der beschriebenen Bauteile,  einschließlich der Abbund- und Montageplanung für alle in dieser Ausschreibung beschriebenen Leistungen und Untergewerken, mit allen Ausführungsdetails Werkstattplanung AN, in prüfbarer Form, inkl. Zusammenführung der Arc;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Zulage zur Baustelleneinrichtung, für das Vorhalten und Abdecken der Konstruktionsteile mit einer geeigneten, stabilen Planenabdeckung ca. 0,2mm (auch im eingebauten Zustand während der Bauphase),;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Planenabdeckung, wie vor beschrieben,;600,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Statische Nachweise aller Verbindungsmittel für das Bauwerk,;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Statische Nachweise wie zuvor beschrieben,;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Statische Nachweise wie zuvor beschrieben,;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Nachweis des Brandschutzes für alle Bauteile mit Brandschutzanforderungen.;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Liefern und abladen von Konstruktionsvollholz;18,5;m3;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Liefern von Brettschichholz, nach DIN EN 14080;2,5;m3;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Liefern von Brettschichholz, nach DIN EN 14080;156,5;m3;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Liefern von Brettschichholz, nach DIN EN 14080;3,5;m3;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Liefern von Brettschichholz, nach DIN EN 14080;3,0;m3;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Mehrpreis für das Liefern von Brettschichtholz in Sicht-Qualität gemäß BS-Holz-Merkblatt der Studiengemeinschaft Holzleimbau e. V.;2360,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Abbinden und Aufstellen oder Verlegen;910,0;lfm;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Abbinden und Aufstellen;305,0;lfm;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Abbinden und Aufstellen oder Verlegen;2235,0;lfm;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Herstellen von Ausnehmungen an Stützenenden z.B. zum verdeckten Einbau von Stahlteilen;40,0;Stk;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Herstellen von Zapfen an Stützenenden;40,0;Stk;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Herstellen von Ausklinkungen an Trägerenden;50,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Herstellen einer rechtechigen Aussparung in BS-Holz bis;45,0;Stk;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Anpassung der Holzträger an schräge Wand oder Träger,;156,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Anpassung der Zwischenhölzer an schräge Rippenseite,;240,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;Herstellen von Ausnehmungen an Stützenenden z.B. zum verdeckten Einbau von Stahlteilen;10,0;Stk;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;zum versenkten Einbau von Stahlplatten o. ä.;138,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;zum versenkten Einbau von Stahlplatten o. ä.;129,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+13;zum bündigen Einbau Träger an CLT-Wand.;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+14;zum versenkten Einbau von Stahlplatten.;195,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+15;zum versenkten Einbau von Balkenträger.;18,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+16;zum versenkten Einbau von Balkenträger.;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+17;Herstellen von Zapfen an Stürtzenenden;96,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+18;Herstellen von Ausnehmungen an Stürtzenenden;46,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+19;Herstellen von Ausfräsungen in Holzbauteilen parallel zur Faser;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+20;Herstellen von stirnseitigen Schlitzen ( auch verdeckt) in Holzbauteilen;231,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+21;Herstellen von stirnseitigen Schlitzen ( auch verdeckt) in Holzbauteilen;24,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+22;Herstellen von Schlitzen in Holzbauteilen;22,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+23;Herstellen von stirnseitigen Schlitzen ( auch verdeckt) in Holzbauteilen;74,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+24;Herstellen von stirnseitigen Schlitzen ( auch verdeckt) in Holzbauteilen;289,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+25;Herstellen von beidseitigen Schrägschnitten in Längsrichtung von Hölzern verschiedener Querschnitte einschließlich Hobel;23,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+26;Herstellung von Sacklochbohrungen für Schraubenköpfe.;50,0;Stk;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+27;"Aufbringen einer werkseitigen Oberflächenbeschichtung auf gehobelte und geschliffene Holzoberflächen, als wasserverdünnbare, diffusionsoffene und feuchteregulierende, dauerelastische Mittelschichtlasur auf Reinacrylat-Basis;";350,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+28;Muster Oberflächenbehandlung auf Trägerplatte, analog der Holzarten;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Herstellen, Abbinden, Liefern und Montieren einer Rippenplatte aus Brettschichtholz mit oberseitiger durchgängiger CLT-Platte nach ETA-20/0893;1815,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Herstellen, Abbinden, Liefern und Montieren einer Rippenplatte aus Brettschichtholz mit oberseitiger durchgängiger CLT-Platte nach ETA-20/0893;290,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Herstellen, Abbinden, Liefern und Montieren einer Rippenplatte aus Brettschichtholz mit oberseitiger durchgängiger CLT-Platte nach ETA-20/0893;210,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Herstellen von Ausklinkungen an Rippenenden;553,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Ausfräsung an Oberkante der Rippen für Leitungsführung;1200,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Anpassung der Rippendecke an schräge Wand oder Träger, parallel der Rippen;222,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Anpassung der Rippendecke an schräge Wand oder Träger, senkrecht der Rippen;222,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;im Bereich der Oberlichten laufen die Rippen durch,;26,7;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;auskragende Dachelemente aus über Kreuz verklebten, allseitig gehobelten, keilgezinkten und genuteten Brettlamellen, aus Fichte, in Industriequalität, d=120 mm,;805,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;Dachelemente aus über Kreuz verklebten, allseitig gehobelten, keilgezinkten und genuteten Brettlamellen, aus Fichte, in Industriequalität, d=160 mm,;80,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;Dachelemente aus über Kreuz verklebten, allseitig gehobelten, keilgezinkten und genuteten Brettlamellen, aus Fichte, in Industriequalität, d=200 mm,;195,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;Dachelemente aus über Kreuz verklebten, allseitig gehobelten, keilgezinkten und genuteten Brettlamellen, aus Fichte, in Industriequalität, d=240 mm,;22,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+13;Ausfräsung an der Oberseite der CLT-Platte zum bündigen Einbau des T-Profils Oberkante der Rippen für Leitungsführung;150,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+14;Anpassung der CLT-Platten an Dachkantenverlauf,;150,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+15;Anpassung der CLT-Platten an schräge Wand oder Träger,;41,5;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+16;Aussparungen für Oberlichter;6,5;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+17;Herstellen rechtwinklige Ausfräsungen an der Ober- oder Unterseite der Massivholzdecken, am Endauflager zum einschieben in den Stahlträger.;8,0;lfm;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+18;Herstellen rechtwinklige Ausfräsungen an der Ober- und Unterseite der Massivholzdecken, am Endauflager zum einschieben in den Stahlträger.;10,0;lfm;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+19;Herstellen sichtbare Eckstöße der CLT-Wände auf Gehrung mit rückseitigem Winkel;4,0;lfm;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Außenwände, aussteifend tragend einschl. Aussparungen für Fenster und Türen, (Öffnungen bis 2,5 m² werden übermessen);580,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;GKFI, d=12,5mm;75,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Zulage für herstellen einer einlagigen vollflächigen Beplankung auf Holzständerwänden, anstatt GF.;85,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Zulage für die Ausführung einer luftdichten Kabeldurchführung,;200,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Zulage für die Ausführung der vorgenannten Holzständerwände einseitig beplankt / geschlossen und spätere Montage der zweiten Seite / Beplankung auf der Baustelle, nach der TGA-Installation.;100,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Zulage für die Herstellung des Übergangs Bestands-Pultdach an Fluchtbalkon und aufgehende Aussenwand-Bestand sowie -Neubau.;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Liefern und Abbinden und Montieren von Brettsperrholz nach Europäisch technischer Zulassung ETA-14/0349 oder gleichwertig aus kreuzweise verklebten, allseitig gehobelten,;3,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Untermörtelung der Schwellen der Holzrahmenbauwänden;77,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Untermörtelung der Stützen;100,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;Untermörtelung der Rippen an Stb.-Wand;33,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;Untermörtelung der CLT-Decke auf Stb.-Wand;87,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;Fugenverschluss mittels eines für Außenbereich geeigneten Fugendichtbands siehe DIN 68800-2 (z.B. komprimiertes Fugenband) zwischen XPS-Dämmung (bauseits) und Holzrahmen-Außenwand.;110,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+13;Holzrahmenkonstruktion als vierseitige Zarge mit Schräge zur Aufnahme Glasdach.;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+14;Holzattika-Aufkantung aus BSH-Trägern als Wiederverwendung der Bestandskonstruktion :;250,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+15;wie vor beschrieben, jedoch;50,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+16;Luftdichter Anschluss als Streifen, ca. 70 cm Breite, zur Führung der luftdichten Ebene über den Geschossstoß hinweg, über den Wänden des OG zur Schaffung einer flächigen luftdichten Ebene, einlegen und anschließen.;115,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+17;Herstellen von Schlitzen (auch verdeckt) in sämtlichen Holzbauteilen, einschließlich verschließen in selber Holzart, unter Aufnahme der Maserungsrichtung;20,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+18;Bohren von Sacklöchern und anschließendes Verschließen durch das Einleimen von Passstücken gleicher Holzart und Oberflächenqualität (Mindestdicke 20mm), wie das ausgenommene Bauteil.;60,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+19;Herstellen Wandverkleidung StB-Sockel,;135,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Liefern und Abbinden und Montieren von Brettsperrholz;300,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Innenwand als Wanderweiterung von CLT Wand d = 160 mm Holzrahmenkonstruktion, in REI0,;190,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;für Innenwände CLT d=160 mm;80,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Liefern und Abbinden und Montieren von Brettsperrholz;68,5;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Innenwand als Wanderweiterung von CLT Wand 160mm Aufzug Holzrahmenkonstruktion, in F0,;55,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;für Innenwände CLT d=160 mm Aufzug;125,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Liefern und Abbinden und Montieren von Brettsperrholz;95,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Innenwand als Wanderweiterung von CLT Wand 240mm Holzrahmenkonstruktion, in REI0,;55,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;für Innenwände CLT d=240 mm;30,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;Beispiel:;300,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;rechtwinklige Ausfräsung seitlich der CLT-Wände;24,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;Ausfräsung an der Unterseite ( Stirnseite) der CLT-Wand;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+13;Mehr-Minderpreis zu zuvor beschriebenen CLT-Wänden und BSH-Trägern, Ausführung der Oberfläche in Sichtqualität;100,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+14;Innenwand als Holzrahmenkonstruktion, in F0,;26,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+15;Innenwand als Holzrahmenkonstruktion, in F0,;434,09;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+16;Innenwand als Holzrahmenkonstruktion, in F0,;23,19;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+17;Innenwand als Holzrahmenkonstruktion, in F0,;48,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+18;Innenwand als Holzrahmenkonstruktion, in F0,;430,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+19;Innenwand als Holzrahmenkonstruktion, in F0,;40,55;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+20;Innenwand als Holzrahmenkonstruktion, in F0,;113,31;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+21;Innenwand als Holzrahmenkonstruktion, in F0,;9,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+22;Ausbildung Anschluss Innenwand an Aussenwand, mit Wandschwert;31,5;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+23;Innenwand als Holzrahmenkonstruktion, in REI30,;15,18;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+24;Innenwand als Holzrahmenkonstruktion, in REI30,;30,16;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+25;Innenwand als Holzrahmenkonstruktion, in REI30, Fichte;31,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+26;Innenwand als Holzrahmenkonstruktion, in REI30, Fichte,;34,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+27;Innenwand als Holzrahmenkonstruktion, in REI30, Fichte,;10,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+28;Innenwand als Holzrahmenkonstruktion, in REI30, Fichte,;42,77;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+29;"Herstellen einer Wandverjüngung in REI30 an nichttragender inneren Metallständerwand. Wandverjüngung ""Variante 3"": Breite ≤ 625 mm und Dicke 48 mm nach z.B. Knauf System-Datenblatt W11.de mit Schallschutzeigenschaften.";3,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+30;Zulage zu vorgenannten Innenwänden, für die Ausführung der Innenwände in Lichter Raumhöhen bis ca. 3,75 m,;40,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+31;Zulage zu vorgenannten Innenwänden für die zusätzliche Ausführung von Platten-Verstärkungen in den Innenwänden aus ESB, für vorherig aufgeführte unterschiedliche Wandstärken, zur Aufnahme Ober-, Wandschränke, etc.;192,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+32;Zulage für die einseitige Abstellung der Wandbeplankung, aus GF,GK,OSB, auf einer Höhe von ca. 50 cm ü.OK RFB, für TGA-Installationen und spätere Fertigstellung der Beplankung, durch Anarbeiten und Schließen der Bekleidung zu einem späteren Zeitpunkt, nach Aufforderung durch die BL.;200,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+33;Zulage zu Innenwänden EG+OG, Wandstoß zwischen Holzständerwänden mit verschiedenen Brandschutzanforderungen durch Gipsfaserstreifen GF d = 12,5 mm brandschutztechnisch schließen.;10,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+34;ESB-Platte, d=22mm;100,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+35;ESB-Platte, wie vor beschrieben, jedoch zweilagig, d = 2 x 22mm;30,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+36;Zulage zur Vorposition für die Ausführung von Rippen 10/16;50,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+37;Zulage für die Untermörtelung der Schwellen / Holzwände, mit schwindarmem Mörtel (z.B. Pagel Unterstopfmörtel V14 oder gleichwertig), einschließlich einer Feuchtesperre zwischen Mörtel und Holzrahmenwand.;250,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Einpressen von Mineralwollestreifen, d = 10 mm, in Fuge zwischen Innenwand und Dachbalken der Holzbalkendecke, zur Gewährleistung der Brandschutzanforderung. Mineralwolle, nicht brennbar, nicht glimmend, Schmelzpunkt > 1000°.;25,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Unterer Abschluss der AW / CLT-Wand / Holzrahmenwand an Stb-Sockel und Boden- / - Deckenplatte, inkl. aller erforderlichen Verbindungs- und Befestigungsmittel, einschließlich Untergrundvorbehandlung.;650,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Seiticher Abschluss der AW / CLT-Wand / Holzrahmenwand an AW, inkl. aller erforderlichen Verbindungs- und Befestigungsmittel, einschließlich Untergrundvorbehandlung.;47,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;wie zuvor beschrieben, jedoch:;50,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;wie zuvor beschrieben, jedoch:;20,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;wie zuvor beschrieben, jedoch:;105,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;wie zuvor beschrieben, jedoch:;130,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;wie zuvor beschrieben, jedoch:;100,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;wie zuvor beschrieben, jedoch:;35,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;wie zuvor beschrieben, jedoch:;5,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;Oberer Abschluss der AW Holz-Wand und Fensterelemente an Holz-Dach/Deckenplatte inkl. aller erforderlichen Verbindungs- und Befestigungsmittel, einschließlich Untergrundvorbehandlung.;370,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;Oberer Abschluss der IW Holz-Wand an Holz-Träger BSH / Rippe / CLT-Decke /Holzdach Bestand inkl. aller erforderlichen Verbindungs- und Befestigungsmittel, einschließlich Untergrundvorbehandlung.;360,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+13;wie zuvor beschrieben, jedoch:;5,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+14;Zulage AO für die Herstellung eines gleitenden Deckenanschlusses, in linearer Ausführung.;400,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+15;Zulage AO für die Herstellung eines gleitenden Deckenanschlusses, in abgewickelter Ausführung, den Holzbalken und der Holzdecke folgend.;40,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+16;Luftdichter Anschluss als Streifen, ca. 30 cm Breite,;120,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+17;Fugenverschluss mittels eines für Außenbereich geeigneten Fugendichtbands;120,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+18;Luftdichter Verschluss der Bauteilfuge zwischen OSB und Beton mittels eines für Außenbereich geeigneten Bitumenkautschukbandes;120,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+19;Zulage für Ausbildung Stirnseite Innenwand d = 15 - 29 cm;12,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+20;Zulage für Ausbildung Stirnseite, wie vor beschreiben, jedoch;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+21;Zulage für Anschluss Wandschwert mit  d = 5 cm als Übergang an Außenfassade/Außenwandelemente, einschließlich ggf. erforderliche Ausklinkungen.;13,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Herstellen von werksseitigen Türöffnungen in CLT-Wand d = 160 mm,;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Herstellen von werksseitigen Türöffnungen in CLT-Wand d = 160 mm,;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Herstellen von werksseitigen Türöffnungen in CLT-Wand d = 160 mm,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Herstellen von werksseitigen Türöffnungen in CLT-Wand d = 210 mm,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Herstellen von werksseitigen Türöffnungen in Holzrahmenwand d = 100 mm,;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Herstellen von werksseitigen Türöffnungen in Holzrahmenwand d = 150 mm,;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Herstellen von werksseitigen Türöffnungen in Holzrahmenwand d = 150 mm,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Herstellen von werksseitigen Türöffnungen in Holzrahmenwand d = 150 mm,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Herstellen von werksseitigen Türöffnungen in Holzrahmenwand d = 210 mm,;11,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;Herstellen von werksseitigen Türöffnungen in Holzrahmenwand d = 210 mm,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;Herstellen von werksseitigen Türöffnungen in Holzrahmenwand d = 210 mm,;11,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;Herstellen von werksseitigen Türöffnungen in Holzrahmenwand d = 250 mm,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+13;Herstellen von werksseitigen Türöffnungen in Holzrahmenwand d = 290 mm,;9,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+14;Herstellen von werksseitigen Türöffnungen in Holzrahmenwand d = 290 mm,;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+15;Herstellen von werksseitigen Türöffnungen in Holzrahmenwand d = 290 mm,;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+16;Herstellen von werksseitigen Türöffnungen in Holzrahmenwand d = 290 mm,;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+17;Aussparungen für Notentwässerung im Bauablauf;13,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+18;Schließen der Aussparung für Notentwässerung im Bauablauf,;13,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+19;Herstellen einer Bohrung d = 10 cm, t = 12 cm zzgl.;13,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+20;Aussparungen in Dachkonstruktion Holzbalkendach, mit umlaufender beidseitiger Kantenausbildung.;7,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+21;Aussparungen in Dachkonstruktion Holzbalkendach, mit umlaufender beidseitiger Kantenausbildung.;9,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+22;Aussparungen in Dachkonstruktion Holzbalkendach, mit umlaufender beidseitiger Kantenausbildung.;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+23;Aussparungen in Dachkonstruktion Holzbalkendach, mit umlaufender beidseitiger Kantenausbildung.;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+24;Herstellen einer Aussparung als Bodenschlitz;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+25;Aussparungen in Holzattika Gründach (Entwässerung), mit umlaufender beidseitiger Kantenausbildung.;15,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+26;Aussparungen in Holzrahmen-Wänden, mit umlaufender beidseitiger Kantenausbildung.;90,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+27;Aussparungen in Holzrahmen-Wänden, mit umlaufender beidseitiger Kantenausbildung.;12,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+28;Aussparungen in CLT-Wänden, mit umlaufender beidseitiger Kantenausbildung.;30,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+29;Herstellen einer Aussparung;15,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+30;Herstellen einer Aussparung als Wandschlitz;15,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+31;Herstellen einer Aussparung als Wandschlitz;20,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+32;Herstellen einer durchgehenden Bohrung;200,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+33;wie vor beschrieben, jedoch;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+34;wie vor beschrieben, jedoch;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+35;wie vor beschrieben, jedoch;6,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+36;wie vor beschrieben, jedoch;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+37;wie vor beschrieben, jedoch;40,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+38;Herstellen einer durchgehenden Bohrung;60,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+39;wie vor beschrieben, jedoch;25,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+40;Herstellen einer Aussparung  als runde Ausfräsung in der mittleren Lage;50,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;"Holzfassade als geschlossene, hinterlüftete, vertikale Vorhangfassade mit Holzschalung aus Nut-Feder-Bretten, gemäß zuvor beschriebenen Anforderungen Fassade, mit ""breiter Schalungs-Ansicht"".";140,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;"Holzfassade als geschlossene, hinterlüftete, vertikale Vorhangfassade mit Holzschalung aus Nut-Feder-Bretten, gemäß zuvor beschriebenen Anforderungen Fassade, mit ""schmaler Schalungs-Ansicht""..";400,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;wie zuvor beschrieben, jedoch:;25,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Seitlicher Abschluss der AW an AW als Aussen-Eckausbildung der Vorhang-;40,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Seitlicher Abschluss der AW an AW als Innen-Eckausbildung der Vorhang-;52,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Abschluss der AW an AW als Innen-Eckausbildung der Vorhang-;12,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Abschluss der AW an PR-Fassade der Vorhangfassade, inkl. aller erforderlichen Verbindungs- und Befestigungsmittel, sowie Unterkonstruktionen.;15,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Herstellen einer Vorhangfassade mit horizontaler Bretterschalung, wie Bestand, im Bereich zweier angrenzenden Attiken.;10,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Musterfläche der Holzschalung Vorhangfassade nach dem Beschrieb der vorangegangenen Position zur Freigabe der Qualität und Ausführung der Elemente zur Produktion durch den AG.;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;Herstellen von Lisenenverkleidungen als dreiseitige Holzverblendung aus;142,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;Zulage für den Anschluß an Fenstermarkisenanlage,;350,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;Muster der U-förmigen Holzschalung der Lisene nach dem Beschrieb der vorangegangenen Position zur Freigabe der Qualität und Ausführung der Elemente zur Produktion durch den AG.;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Herstellen der Verbindung des bauseitigen FT-Stützenfuß mit der Holzstütze, einschließlich eingeklebter Edelstahl-Gewindestange in Holzstütze, vergießen der eingeklebten Edelstahl-Gewindestange V4A, M16 aus der Holzstütze in Hüllwellrohr des bauseitigen Beton-Fertigteils, in umgedrehter Lage, sowie ;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Gelochtes Blech oder Profil als Belüftungsabschluss, Lüftungsprofil.;1100,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Bituminöse Abdichtung (Polymerbitumen),;170,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;"Herstellen einer Revisionssklappe in der Lisene aus Dreischichtplatte, als ""Tapeten-Klappe"", keine sichtbaren Bänder, Öffnung 100 - 120Grad, zur Revision der Regen-Fallleitungen, abschließbar mit Dreikantschlüssel, einschließlich Schloss.";8,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Herstellen einer Klappe, wie vor beschrieben, jedoch in Nut-Feder-Schalung;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Herstellen einer Notentwässerung ca. DN 100 für die Bauphase.;13,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Ausklinkung / Ausschnitt in Attikaaufkantung d = 12 cm, für Speier der Notentwässerung.;15,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Ausklinkung / Ausschnitt in Außenwandbekleidung für bauseitgen Speier der Notentwässerung.;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Durchmesser 6 mm;200,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Durchmesser 6 mm;1030,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Durchmesser 8 mm;2700,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Durchmesser 8 mm;385,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Durchmesser 8 mm;5090,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Durchmesser 8 mm;250,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Durchmesser 10 mm;310,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Durchmesser 10 mm;250,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Durchmesser 10 mm;250,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;Selbstschneidende Holzschrauben mit Bohrspitze und Sechskantkopf und Vollgewinde nach ETA-11/0190;270,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;Durchmesser 8 mm;1160,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;Durchmesser 8 mm;500,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+13;Durchmesser 8 mm;420,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+14;Durchmesser 8 mm;130,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+15;Durchmesser 10 mm;380,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+16;Durchmesser 10 mm;420,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+17;Durchmesser 10 mm;8630,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+18;Durchmesser 10 mm;280,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+19;Durchmesser 10 mm;140,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+20;Selbstschneidende Holzschrauben mit Bohrspitze und Sechskantkopf und Vollgewinde nach ETA-11/0190;240,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+21;Durchmesser 12 mm;20,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+22;Durchmesser 10 mm;200,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+23;Durchmesser 8 mm;1180,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+24;Durchmesser 5 mm;250,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+25;Stabdübel verzinkt, aus Rundstahl S235,;4070,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+26;Stabdübel verzinkt, aus Rundstahl S335,;930,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+27;Stabdübel verzinkt, aus Rundstahl S335,;1410,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+28;Bolzen oder Gewindestange verzinkt, Festigkeit 8.8,;40,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+29;Gewindestange Edelstahl A4;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+30;Balkenträger zum Anschluß der bestehenden PERI-Träger an ein Randholz;54,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+31;Holzverbinderschraube nach ETA-13 0523;1810,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+32;Balkenträger zum verdeckten Anschluß von Holzbalken,;20,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+33;Sondernägel, nach DIN EN 1995,;590,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+34;Holznagelverbinder aus Stahlblechformteilen;40,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+35;Holznagelverbinder aus Stahlblechformteilen;410,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+36;Holznagelverbinder aus Stahlblechformteilen;25,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+37;Holznagelverbinder aus Stahlblechformteilen;25,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+38;Platte für Zugkräfte für den Holzbau, Simpson StrongTIE;25,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+39;Holznagelverbinder aus Stahlblech,;50,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+40;Platte für Zugkräfte für den Holzbau, Rothoblaas Typ WHT PLATE, WHT 540 oder gleichwertig;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+41;Platte für Zugkräfte für den Holzbau, Rothoblaas Typ WHT PLATE T, WHTPT 600 oder gleichwertig;80,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+42;Holznagelverbinder aus Stahlblechformteilen;130,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+43;Platte für Scherkräfte für den Holzbau, Rothoblaas Typ TITAN PLATE, TCP200  oder gleichwertig;28,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+44;Platte für Scherkräfte für den Holzbau, Rothoblaas Typ TITAN PLATE, TCP300  oder gleichwertig;160,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+45;Winkelverbinder aus Stahlblechformteilen;50,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+46;Herstellung einer Holz/Beton-Verbindung,;6,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+47;HECO-Betonschraube MULTI-MONTI-S;160,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+48;HECO-Betonschraube MULTI-MONTI-plus F;230,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+49;HECO-Holz-Beton-Verbinder MULTI-MONTI TimberConnect;220,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+50;Spreizanker Hilti HST4 M12;130,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+51;zugzonentauglicher Dübel;100,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+52;zugzonentauglicher Dübel;40,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+53;zugzonentauglicher Dübel;340,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+54;zugzonentauglicher Verbundanker;64,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+55;zugzonentauglicher Verbundanker;52,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+56;zugzonentauglicher Verbundanker;50,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+57;zugzonentauglicher Verbundanker;55,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Schwierigkeitsgrad nach;500,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Schwierigkeitsgrad nach;250,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Schwierigkeitsgrad nach;600,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Schwierigkeitsgrad nach;250,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Schwierigkeitsgrad nach;150,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;rechteckige Stahlplatte mit angeschweißtem Schlitzblech;1040,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;rechteckige Stahlplatte mit angeschweißtem Schlitzblech;425,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;rechteckige Stahlplatte mit angeschweißtem Schlitzblech;325,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;rechteckige Stahlplatte;125,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;rechteckige Stahlplatte als Zuglasche;250,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;rechteckige Stahlplatte;1800,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;recheckige Kopfplatte;255,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+13;trapezförmige Stahlplatte;860,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+14;2x rechteckige Stahlplatten zu einem Winkel zusammen geschweißt;1600,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+15;2x rechteckige Stahlplatten zu einem Winkel zusammen geschweißt;425,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+16;3x trapezförmige Stahlplatten zu einem Z-Profil zusammen geschweißt;175,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+17;recheckiges Schlitzblech;260,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+18;rechteckige Stahlplatte;80,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+19;Stahlplatte Schwierigkeitsgrad E5;115,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+20;rechteckige Stahlplatte;1900,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+21;rechteckige Stahlplatte;675,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+22;rechteckige Stahlplatte;850,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+23;Schlitzblech, Schwierigkeitsgrad E5;350,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+24;rechteckige Stahlplatte;955,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+25;Schlitzblech, Schwierigkeitsgrad E5;350,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+26;rechteckige Stahlplatte als Auflagerplatte;500,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+27;zu o. g. Positionen für die Ausführung von Schrägbohrungen unter 45° einschließlich Senkung für die Aufnahme von Schraubenköpfen von Vollgewindeschrauben d=10mm (z.B. ABC SpaxS).;60,0;Stk;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+28;Baustellenschweißung der Stahlteile an bauseits eingelegte Einbauteile in Bodenplatte, Wand oder Decke, einschließlich Ausrichten und Anschweißen;35,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+29;Baustellenschweißung der Stahlteile an bauseits eingelegte Einbauteile in Bodenplatte, Wand oder Decke, einschließlich Ausrichten und Anschweißen;20,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+30;Zulage zu oben genannten Positionen;55,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+31;rechteckige Kopfplatte;300,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+32;Baustellenschweißung der Stahlteile an bauseits eingelegte Einbauteile in Wände, einschließlich Ausrichten und Anschweißen;6,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Baustahlteile, aus Walzprofilen DIN 10056-1, S235 JR,;625,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Stahlprofil HEM 100 (~41,8 kg/m) als Überzug, zur Verstärkung der Decken, aus Walzprofilen nach DIN 1025 bzw. DIN 1026, einschließlich Steifen, Kopfplatten, Knaggen, Bohrungen Verbindungsmitteln und Schweißnähten.;1150,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Stahlprofil HEB 2200(~71,5 kg/m) als Überzug,;745,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Stahlprofil HEB 2200(~134 kg/m) als Unterzug bzw. dgl. Träger, aus Walzprofilen nach DIN 1025 bzw. DIN 1026, einschließlich Steifen, Kopfplatten, Knaggen, Bohrungen Verbindungsmitteln und Schweißnähten.;1700,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Stahlprofil T-Stahl (~23,2 kg/m) als dgl. Träger, aus Walzprofilen nach DIN 10055, einschließlich Steifen, Kopfplatten, Knaggen, Bohrungen Verbindungsmitteln und Schweißnähten.;1700,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;als Quadratisches Hohlprofil DIN EN 10210-2, warmgefertigt, nach beiliegenden Unterlagen, einschließlich aller Steifen, Kopfplatten, Verbindungsmittel, Schweißnähte,;180,0;kg;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Brandschutzbekleidung Stahlträger / Stahlstützen;25,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Brandschutzfugenband;50,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;selbstklebendes Fugendichtband liefern und einbauen;35,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Fenster-Typ 1.2,e,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Fenster-Typ 1.2,d,;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Fenster-Typ 1.2,e,;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Fenster-Typ 1.1,o,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Fenster-Typ 1.2,d,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Fenster-Typ 1.1,d,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Fenster-Typ 1.1,e,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Fenster-Typ 1.2,o,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Fenster-Typ 1.1,d,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;Fenster-Typ 1.2,d,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;Fenster-Sondertyp 1 t,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;Fenster-Sondertyp 1 t,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Fenster-Typ 2 e,;16,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Fenster-Typ 2 o,;26,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Fenster-Typ 2 d,;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Fenster-Typ 2 e,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Fenster-Typ 2 o,;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Fenster-Typ 2 d,;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Fenster-Sondertyp 2 t,;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Fenster-Typ 3 d,;18,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Fenster-Typ 3 d,;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Fenster-Typ 3 o,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Fenster-Sondertyp 3 e,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Fenster-Sondertyp 3 o,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Fenster-Sondertyp 3 o,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Fenster-Typ 4 e,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Fenster-Typ 4 d,;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Fenster-Sondertyp 4 d,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Fenster-Typ 5 e,;7,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Fenster-Typ 6 e,;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Fenster-Typ 6 e,;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Fenster-Typ 6 d,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Fenster-Typ 6 e,;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Fenster-Typ 6 e,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Absturzsicherung Stangensystem;75,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Mehr- und Minderpreis für Festverglasung,;16,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Mehr- und Minderpreis für Festverglasung,;20,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Mehr-/Minderpreis je Fenstertür für die Ausführung des unteren Anschlusses als thermisch getrennte Anschlagdichtungsschwelle (AD-Schwelle) für nach innen öffnende Fenstertüren, Aufkantungshöhe max. 20 mm, mit bündig in die Schwelle eingelassenen Schließplatten;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;"Mehr-/Minderpreis je Fenstertür: außenseitig feststehender Rundknauf (Türknopf, Kugelform) anstelle des Türdrückers, ohne Betätigungsfunktion, als Zieh- und Zuziehhilfe. Edelstahl, fein matt gebürstet, auf Rosette, verdeckt verschraubt und gegen Abdrehen gesichert; kompatibel mit dem Panik- bzw. Not";1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Zulage je Fensterelement gemäß Positionsplan (Sondersituation Fassadenschwert in Elementmitte): Ausbildung des Fensterelements zur Aufnahme und Anbindung des bauseitigen Fassadenschwerts (Titel Holzbau).;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;"Zulage je Dreh-Kipp-Flügel: abschließbarer Fenstergriff mit Schließzylinder, Sperrwirkung mind. 100 Nm gemäß DIN 18267 bzw. Klassifizierung nach DIN EN 13126-3, gleichschließend je Gebäudeabschnitt nach Angabe des AG, inkl. Schlüssel; Edelstahl, fein matt gebürstet, formgleich mit dem Standard-Fenst";10,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Liefern und Montieren eines Fenstergriffs mit integrierter Kindersicherung anstelle des Standard-Fenstergriffs gemäß Vortext Abschnitt 2.5.;132,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Liefern und Montieren einer Griffstange (Stoßgriff) auf der Außenseite des Türflügels anstelle eines Außendrückers.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;"Zulage zur Fenstertür-/Außentür-Position: Ausrüstung als Notausgangsverschluss nach DIN EN 179 mit Innendrücker. Selbstverriegelndes Panik-Mehrfachverriegelungsschloss (Automatikverriegelung) mit Umschaltfunktion B und Motoröffner (M-Öffner) zur elektrischen Freischaltung; Verkabelung bis zum Überga";1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;"Wie Zulage Notausgangsverriegelung, jedoch als Panikverschluss nach DIN EN 1125 (Vollpanik) mit Umschaltfunktion B, Automatikverriegelung und Motoröffner; Betätigung innen über waagerechte Betätigungsstange (siehe Zulage Pushbar-Stange). Für Türen mit Paniknutzung gemäß Einzelposition.";4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;Liefern und Einbauen eines Profilzylinders mit Not- und Gefahrenfunktion (PZN, beidseitig auch bei innen steckendem Schlüssel schließbar) nach DIN 18252 / DIN EN 1303, passend zum Panik- bzw. Notausgangsschloss, einschließlich 3 Schlüsseln je Zylinder. Vorbereitung für die Einbindung in die bauseiti;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+13;"Innenseitige, waagerechte Panik-Betätigungsstange (Push-Bar) nach DIN EN 1125 in Edelstahl, fein matt gebürstet, passend und zugelassen zur Vollpanikverriegelung; wirksame Länge über die Flügelbreite gemäß Zulassung. Optisch abgestimmt auf die übrigen Beschläge in Edelstahl.";8,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+14;Integrierter Obentürschließer für zuvor beschriebene Tür-Elemente, mit mecha-;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+15;Integrierte Obentürschließer (zwei Stück) mit Gleitschienen und integrierter;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+16;Türfeststeller für Bodenmontage im Außenbereich, für schwere Türen bis 1,50;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+17;Fingerschutz zur Sicherung der Nebenschließkante, Montage auf Bandseite an;11,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+18;Nach dem betriebsfertigen Einbau der Feststellanlagen am Anwendungsort sind;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+19;Handmuster des Holz-Alu Profils mit Holzart, Lasur und Pulverbeschichtung wie Ausführung.;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Antrieb:    		Motor, 230 V AC, mit reagibler Hindernis- und Blo				ckiererkennung, ohne Bedienschalter;56,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Markisen-Anlagen wie vor beschrieben,;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Markisen-Anlagen wie vor beschrieben,;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Markisen-Anlagen wie vor beschrieben,;18,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Markisen-Anlagen wie vor beschrieben,;6,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Zulage Pulverbeschichtung sämtlicher Alu- und Metall-Teile, Führungsschiene, etc. in RAL 050 60 10 Ecru Ochre;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Drahtgebundene, akkugepufferte Notsteuerung, bestehend aus Unterputz-Steuerungselektronik mit Akkupack (ohne separates Wechselgehäuse), geeignet für UP- und AP-Verbau, sowie mechanischem 12-V-DC-Antrieb im Sonnenschutzelement;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Muster Führungsschienen pulverbeschichtet, mit Kunststoffabdeckungen;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Muster Behang Soltis 92,;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Prüffähiger statischer Nachweis für das Bedachungssystem erstellen und zur Freigabe dem Auftraggeber vorlegen.;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Erbringen sämtlicher erforderlichen Berechnungen und Nachweise aller durch den AN vorgesehenen Entwässerungsgegenstände auf dem Dach  (z.B. Regenrinne, Ablaufkörper, Regenfallrohre usw.) der nachfolgend aufgeführten Entwässerungsgegenstände und rechtzeitig der Fachbauleitung zur Prüfung und Freigabe;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Erstellung Verlegeplan und Berechnung der Gefälledämmung, Kehlreiter, etc.;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Wasser von Dachflächen, eben, saugen und trocknen.;1650,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Dachfläche reinigen, von grober Verschmutzung, eben und flach geneigt, reinigen, scharf abfegen. festsitzenden Mörtelresten und dergleichen, Schutt aufnehmen und entsorgen, inkl. Entsorgungsgebühr.;350,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Fachgerechtes und dauerhaftes Schließen der Aussparungen / Löcher z.B. der bauseitigen Entlüftungen über Dach in der Holz-Decke, mit geeigneten Maßnahmen.;7,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Provisorische Notabdichtung an Dachdurchdringungen fachgerecht und durchtrittsicher herstellen und zu einem späteren Zeitpunkt entfernen und restlos fachgerecht entsorgen.;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Provisorische Notabdichtung an Dachdurchdringungen fachgerecht und;6,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Dachfläche reinigen, von groben Verschmutzungen, festsitzenden Mörtelresten u. dgl., Schutt lösen, aufnehmen und in Container sammeln und entsorgen.;1650,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Bitumen-Voranstrich lösemittelfrei, schnelltrocknend, zur Verbesserung des Haftgrundes für Dampfsperre aus Bitumenbahnen, vollfächig auf oberflächentrockene Flächen, kaltstreichen, rollen oder spritzen.;1650,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Bitumen-Dampfsperre nach DIN EN 13 970,;2045,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Anschluss Dampfsperre an aufgehende Bauteile, wie Attika, Wand-Sockel etc.;125,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Trennlage/Gleitschicht, lose verlegt auf dem Untergrund;1650,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Wärmedämmung als Grunddämmung aus Holzfaser-Dämmsystem;1450,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Wärmedämmung aus Holzfaserdämmung als Gefälledämmung, Gefälle min. 2,5%, wie vor beschrieben, jedoch als Gefälledämmung;1450,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Mehrpreis der zuvor beschriebenen Gefälledämmung, je 10 mm Mehrstärke;100,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Mineralwollstreifen 038, entlang Attika,;300,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Mineralwollstreifen 038, um Dachdurchführungen,;20,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Mineralwollstreifen 038, um Dachdurchführungen,;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Mineralwollstreifen 038, um Dachdurchführungen,;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Dämmkeile aus Mineralwolle, am Anschluss der Flachdachdämmung an Dachrand und aufgehenden Bauteilen, Ecken mit Gehrungsschnitt. einschl. Schneidearbeiten, Verschnitt, etc.;62,5;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Brandstreifen aus Mineralwolle hoch verpresst, zur Unterbrechung der HWF-Dachflächen, den Oberkanten HWF Gefälledämmung folgend.;35,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;Zulage für die Herstellung einer linearen, fluchttreuen Aussparung für das spätere Verfüllen mit dem Brandstreifen, durch z.B. Balken oder eine sonstige Leerkonstruktion als Anschlag für die HWF;35,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;Linienentwässerungssystem aus HWF, mit Gefälle in zwei Richtungen für die Verlegung in Kehlbereichen ohne Gefälle zur gezielten Wasserableitung zu den Dachabläufen für genutzte und nicht genutzte Dachflächen, auf dem Untergrund nach Verlegeplan des Herstellers mit passendem Industriedachkleber strei;6,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;wie vor jedoch,;20,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+13;wie vor jedoch,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+14;Linienentwässerungssystem aus HWF, mit Gefälle in drei Richtungen,;7,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+15;Linienentwässerungssystem aus HWF, mit Gefälle in drei Richtungen,;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+16;Linienentwässerungssystem aus HWF, mit Gefälle in drei Richtungen,;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+17;Linienentwässerungssystem aus HWF, mit Gefälle in zwei Richtungen,;110,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Einlagige Dachabdichtung gemäß Vorbemerkung A.2, lose verlegt, Lagesicherung durch Auflast gemäß Vorbemerkung A.6.;1660,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Die an der Attika ca. 5 cm hochgeführte Flächenabdichtung mit einem Verbundblechwinkel des Abdichtungssystems, Abmessungen 5 × 5 cm, 1 Kantung, und geeigneten Befestigungsmitteln linienförmig befestigen.;260,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Einlagige Dachabdichtung gemäß Vorbemerkung A.2, jedoch vollflächig verklebt – wahlweise als selbstklebende, unterseitig vlieskaschierte Bahn mit systemzugehörigem Haftgrund oder als vlieskaschierte Bahn mit systemzugehörigem Flächenkleber.;260,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Abdichtung wie zuvor beschrieben, jedoch ohne Dämmkeil.;260,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Wandanschluss an aufgehende Bauteile wie folgt herstellen:;190,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Wandanschluss wie zuvor beschrieben, jedoch Wärmedämmung XPS, WLG 035, 18 cm, senkrecht am aufgehenden Bauteil befestigen.;25,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Die am aufgehenden Bauteil ca. 5 cm hochgeführte Flächenabdichtung mit einem Verbundblechwinkel des Abdichtungssystems, 5 × 5 cm, 1 Kantung, und geeigneten Befestigungsmitteln befestigen;80,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Durchdringungsformteil aus dem Systemprogramm des Abdichtungsherstellers, aus dem Material der Dachabdichtung, für Durchdringungen Ø ca. 8–18 mm, mit Anschlusskragen Ø ca. 150 mm, einschließlich der systemzugehörigen Teile für den oberen, dauerhaft dichten Abschluss – wahlweise Warmschrumpfschlauch ;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Zulage Ausbildung von 90° Außen- und Innenecken, zur Abdeckung der Vorpositionenn, einschl. aller Gehrungsschnitte und Verbindungen durch Lötung und Schweißen.;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;Flachdachhaube bestehend aus:;15,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;Anschluss an bauseitige Dachdurchführungen, wie Entlüftungen über Dach, Schwanenhals, etc.;12,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;Rohrdurchführungen in Flachdachabdichtung, mittels Anschluss der Dampfsperre, Dämmung und Dachabdichtungsbahn, eindichten.;27,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+13;Maßnahmen zur Aufnahme horizontaler Kräfte mit Befestigungsschiene aus dem Systemprogramm des Abdichtungsherstellers, einschließlich Lieferung aller erforderlichen Materialien:;750,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+14;Eindichten von Lichtkuppeln und Dachausstieg ca. 1,2 x 1,8 m i. L. bzw. 0,8 x 1,5 m einschließlich sämtlicher Anschlußarbeiten aller Lagen des Dachaufbaus.;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+15;Eindichten von Glasdach als Lichtband ca. 2,24 x 4,24 m i. L.;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+16;Zulage für fachgerechte Abstellung und Abdichtung von arbeitstäglichen Verlegeabschnitten, einschließlich Schutz vor Hinter- und Unterläufigkeit und eindringendem Wasser in die Holzwollfaserdämmung.;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Rückbau Dachaufbau Turnschuhgang,;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Elastomerbitumen-Schweißbahn als Dampfsperrbahn;10,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Wärmedämmung aus Mineralwolle, druckfest;10,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Einlagige Dachabdichtung gemäß Vorbemerkung A.2, Fügetechnik nach A.4, Qualitätssicherung nach A.5, Trenn- und Ausgleichslagen nach A.3. Lagesicheung gem. A.6.;10,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Herstellen des Attika-Anschlusses, Anarbeiten der EPDM-Dachabdichtung an vorhandene Umrisse und Ecken, inkl. Klemmschienen einschl. sämtlicher Anschlüsse und Verbindungen.;17,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Elastomerbitumen-Schweißbahn als Dampfsperrbahn;35,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Wärmedämmung aus Mineralwolle;35,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Einlagige Dachabdichtung gemäß Vorbemerkung A.2, Fügetechnik nach A.4, Qualitätssicherung nach A.5, Trenn- und Ausgleichslagen nach A.3. Lagesicheung gem. A.6.;35,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Wandanschluss an aufgehende Bauteile wie folgt herstellen:;40,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Dacheinlauf (Freispiegelentwässerung) aus wärmegedämmtem Polyurethan nach DIN EN 1253-2, DN 70 bzw. DN 100, min. Abflussmenge 7,1 l/s bei 35mm Anstauhöhe, mit Kiesfang und werkseitig eingeschäumter Anschlussmanschette passend zur jeweiligen Flachdachabdichtung. Inkl. wärmegedämmtem Aufstockelement u;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Dacheinlauf (Freispiegelentwässerung) aus wärmegedämmtem Polyurethan nach DIN EN 1253-2, DN 70 bzw. DN 100, min. Abflussmenge 7,1 l/s bei 35mm Anstauhöhe, mit Kiesfang und werkseitig eingeschäumter Anschlussmanschette passend zur jeweiligen Flachdachabdichtung. Inkl. wärmegedämmtem Aufstockelement u;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Anstauelement für Dacheinlauf Freispiegel DN 70, aus Polyamid, nach DIN EN 1253-2, zur Notentwässerung, einstellbare Höhe der Einlaufkante von 25 mm – 105 mm;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Attika-Druckströmungsgully als Komplett-Set zur Hauptentwässerung, mit abgewinkeltem Attikagully, aus Polyurethan, wärmegedämmt, nach DIN EN 1253-2, in der Nennweite DN 70, min. Abflussmenge 10,6 l/s bei 35mm Anstauhöhe, , Anschlussrohr nichtrostender Stahl, nach DIN EN 1253-2, inkl. Anstauelement, ;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Attika-Druckströmungsgully als Komplett-Set zur Notentwässerung, mit abgewinkeltem Attikagully, aus Polyurethan, wärmegedämmt, nach DIN EN 1253-2, in der Nennweite DN 70, min. Abflussmenge 10,6 l/s bei 35mm Anstauhöhe,  Anschlussrohr nichtrostender Stahl, nach DIN EN 1253-2, inkl. Anstauelement, Ans;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Kaskadenbauteil für Fallleitung zur sicheren Weiterleitung von Regenwasser von höher gelegenen Dachflächen über die darunter liegenden Dachflächen, bestehend aus Kaskadenbauteil für die Führung des Rohrsystems DN 70 durch die Wärmedämmung, mit vorgefertigten Bohrungen zur Befestigung des Bauteils in;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Kaskaden-Deckendurchführung, Nennweite DN 70, Stutzenlänge 1000 mm, zur Rohrdurchführung durch die Stahlbetondecke bei Flüssigkunststoffabdichtungen, mit angeschweißter Muffe zur Aufnahme eines Rohres mit OD 75 mm, Metallblech für Flüssigkunststoffabdichtung baustellenseitig kantbar;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Rechteckspeier, aus Edelstahl rostfrei, nach DIN EN 1253-2, Stutzenmaß 150 mm x 50 mm, mit einer Stutzenlänge von 600 mm und 0 Grad Stutzenneigung, Abflussmenge min. 1,4 l/s bei 35 mm Stauhöhe,;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Rechteckspeier, aus Edelstahl rostfrei, nach DIN EN 1253-2, Stutzenmaß 300 mm x 100 mm, mit einer Stutzenlänge von 600 mm und 0 Grad Stutzenneigung, Abflussmenge min. 3,2 l/s bei 35 mm Stauhöhe,;9,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;Regenfallrohr aus Polypropylen nach DIN EN 1451-1, Steckrohrsystem mit vormontierter EPDM-Lippendichtung, DN 70, Nennrohrlänge nach Einbausituation;76,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;Regenfallrohr aus nichtrostendem Stahl (1.4301) nach DIN EN 1124, Steckrohrsystem mit vormontierter EPDM-Lippendichtung, DN 70, Nennrohrlänge nach Einbausituation;25,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;Rohrbogen 87,5° aus Polypropylen nach DIN EN 1451-1, Steckrohrsystem mit vormontierter EPDM-Lippendichtung, DN 70;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+13;Reinigungsrohr aus Polypropylen nach DIN EN 1451-1, Steckrohrsystem mit vormontierter EPDM-Lippendichtung, DN 70;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+14;Rohrbogen 87,5° aus nichtrostendem Stahl (1.4301) nach DIN EN 1451-1, Steckrohrsystem mit vormontierter EPDM-Lippendichtung, DN 70;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+15;Rohrabzweig 87,5° aus nichtrostendem Stahl (1.4301) nach DIN EN 1451-1, Steckrohrsystem mit vormontierter EPDM-Lippendichtung, DN 70;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+16;Sicherungsschelle für Polypropylen Rohr DN 70, aus Edelstahl rostfrei, Werkstoffnummer 1.4301, zur zugsicheren Verbindung von Gullys mit dem  Rohrsystem und von Rohren und Formteilen;20,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+17;Sicherungsschelle für Edelstahl Rohr DN 70, aus Edelstahl rostfrei, Werkstoffnummer 1.4301, zur zugsicheren Verbindung von Gullys mit dem  Rohrsystem und von Rohren und Formteilen;17,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+18;Rohrschelle für Polypropylen Rohr DN 70, aus Stahl verzinkt, mit;40,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+19;Rohrschelle für Polypropylen Rohr DN 70, a;25,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+20;Herstellen von  geschweißten, dichten Edelstahlrohrübergängen DN 70 und DN 100 Rohrbogen 87,5° in Vertikalfallrohr.;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Dachfläche abfegen und lose Verunreinigungen;1650,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Schutzlage aus Polyester- und Polypropylen-Fasermischung,;1650,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Bautenschutzplatte aus Gummigranulat als Schutzlage über Dachdichtung, verrottungsfest, bitumenbeständig. Matten stumpf stoßen und lose verlegen.;1650,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;druckbelastbares Drän- und Speicherelement, multifunktional;1400,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Filterschicht für Dachbegrünung aus Polyester/Polypropylen;1400,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Mineralisches Schüttstoffgemisch aus natürlichen;1400,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Mehr- bzw. Minderpreis je 1 cm;200,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Kontrollschacht mit arretierbarem Deckel;12,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Aufstockelement für zuvor beschriebenen Kontrollschacht;12,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;Kiesfangleiste mit Teleskopfunktion, Innenleiste als;750,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;Kies 16/32 gemäß Vorgaben FLL-Dachbegrünungs-;270,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;Vorhandenen, bauseits auf der Baustelle zwischengelagerten;150,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+13;Sprossenmischung aus mindestens fünf verschiedenen;1400,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+14;Zulage zu Sedumsprossen, für Kraut-Sedum für naturnahe Trockenstandorte.;1000,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+15;Pflege der Extensivbegrünung: bis zur Erreichung;1400,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+16;Betonplatten, grau, liefern und auf der Substrat-;80,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Auflastgehaltende PV-Unterkonstruktion;236,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Erstellen einer Verlege- und Montageplanung;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Feuchtesensorband, liefern und verlegen im Dachaufbau,;1650,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Anschlussleitungen liefern und verlegen im Dachaufbau,;1650,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Anschlussset zur Anbindung der Sensorbänder an;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Kabeldurchführungen Dampfsperre,;16,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Mess- und Auswerteeinheit zur automatischen, programmgesteuerten;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Erweiterung der Messeinheiten um 16 Eingangskanäle, als Mulltplexerkarte;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Relaixkarte mit 8 Relais zur Ausgabe von Alarm- und Statusmeldungen;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Ethernetmodul zur Anbindung zur Anbindung der Mess- und Auswerteeinheiten an das Internet über bauseitigen Netzwerkanschluss.;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;Einrichten der Steuerungssoftware,;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;Endmontage und Inbetriebnahme des Systems vor Ort inkl.;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;Einrichten des Systems auf dem Monitoringportal mit;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+13;Aufschaltung des Monitoringsystems auf das;2,0;Jr;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Anschluss und Eindichten der Abdichtung an Blitzschutzdurchführung, mit Formteil aus dem Material der Dachdichtung, Ausführung nach Herstellervorgabe.;12,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Dunstrohreinfassung, in Flachdachabdichtung, wärmegedämmt, mit regensicherer Abdeckung, inkl. Eindichten, Klemmring und elastischer Versiegelung.;25,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Schwanenhals 150 mm;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;"Rohreinfasssung für Flachdach, mit Manschette und Dichtring, zweiteilig, einschl. Anarbeiten des Dachaufbaus an Rohrdurchführung; Einfassung für Anschluss von Dampfsperre und Abdichtungsbahn.";15,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Anschluss der Abdichtung, an Stab-/ Rohrdurchführung, mit Anschweißflansch.;15,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Bauseitige Durchführungen (HLS/EL/etc.) in Flachdachabdichtung, mittels Anschluss der Dampfsperre, Dämmung und Dachdichtungsbahn eindichten.;20,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Medienbogen 180° liefern, montieren u. eindichten,;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Bodenablauf DIN EN 1253-1, mit Geruchsverschluss, Rückstauverschluss und Reinigungsöffnung, mit 2 Isolierflanschen, sowie Aufstockelement nach Erfordernis, mit Anschlusstrichter (radondicht DIN 18533 W1.1-E, DIN 18533 W1.2-E) und Mauerkragen mit Spannband und Trittschutzeinsatz ebenfalls radondicht.;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Fassaden-/Terrassenrinne, begehbar und rollstuhlbefahrbar, gegen Ausheben gesichert, bestehend aus:;65,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Aufsetzkranz für Lichtkuppel, mit wärmegedämmter Laibung aus glasfaserverstärktem Kunststoff und mit ebenem Klebebefestigungsflansch, Aufsetzkranz vorbereitet für rechteckigen Lichtkuppelkörper.;7,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Lichtkuppel für Flachdach, mit eckiger, dreifach Verglasung als Ganzglasrahmen und Aluminium-Einfräsrahmen, mit nichtrostenden Öffnungseinrichtung und elektrischem Antrieb und Funkwandschalter inkl. rechteckigem, wärmegedämmtem Metallaufsetzkranz und BBX Dampfsperrschürze und Innenfutter.;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Lichtkuppel für Flachdach, mit eckiger, dreifach Verglasung als Ganzglasrahmen und Aluminium-Einfräsrahmen,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Rauchlift liefern und montieren;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;RWA-Beschlag, entsprechend EN 12101-2;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;RWA-Zentrale EN 230 V/48 V 30A-2-1 LAMILUX;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Lüftertaster AP;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Einfassen der Lichtkuppel, anschließen an Flächenabdichtung, Eckausbildungen und Versiegeln der Anschlussoberkante mit Dichtungsmasse;7,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Liefern und Montieren Solar-Hitzeschutz Markise,;7,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;Aufsetzkranz für Lichtkuppel, mit wärmegedämmter Laibung aus glasfaserverstärktem Kunststoff und mit ebenem Klebebefestigungsflansch, Aufsetzkranz vorbereitet für rechteckigen Lichtkuppelkörper.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;Lichtkuppel für Flachdach, mit eckiger, dreifach Verglasung als Ganzglasrahmen und Aluminium-Einfräsrahmen, mit nichtrostenden Öffnungseinrichtung und elektrischem Antrieb und Funkwandschalter inkl. rechteckigem, wärmegedämmtem Metallaufsetzkranz und BBX Dampfsperrschürze und Innenfutter.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;Einfassen der Lichtkuppel, anschließen an Flächenabdichtung, Eckausbildungen und Versiegeln der Anschlussoberkante mit Dichtungsmasse;7,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+13;Einfassen der Lichtkuppel, anschließen an Flächenabdichtung, Eckausbildungen und Versiegeln der Anschlussoberkante mit Dichtungsmasse;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+14;Inbetriebnahme motorisch betriebene Lichtkuppeln und innenliegende Markise,;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Glasdach als Lichtband Komplettsystem, geneigt, 7°;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Erstellen und Liefern einer prüffähigen Statik für die Dach-Lichtbänder zur Vorlage in digitaler Form und in Schriftform in 3-facher Ausfertigung.;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Inbetriebnahme motorisch betriebene Öffnungsflügel,;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Attikablende aus Aluminium-Platten, gekantet, beschichtet, außen,;225,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Attikablende aus Aluminium-Platten, gekantet, beschichtet, außen,;30,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Attikablende aus Aluminium-Platten-Material, gekantet, beschichtet, außen,;255,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Attikablende aus Aluminium-Platten-Material, gekantet, beschichtet, außen,;12,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Attikablende aus Aluminium-Platten-Material, gekantet, beschichtet, außen,;16,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Mehr- und Minderpreis  zu Pos. 1.10.1.1 - 1.10.1.4, für die Ausführung als vorab beschichtete Aluminiumbleche und nachträglicher Kantung.;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Gesimsabeckung / Fensterbankprofil,;65,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Strukturierte Trenn-/Entkopplungslage als kapillarbrechende, schallentkoppelnde Zwischenlage unter der Kupfer-Doppelstehfalzdeckung, vollflächig auf die Schalung verlegen. Produkt kompatibel zu Kupfer. Leitfabrikat: strukturierte Trennlage (z. B. Vlies-Wirrgelege) – oder gleichwertig.;45,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Herstellen Attikablende bzw. Attika-Verkleidung aus Kupferblech,;45,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;Zulage zu vorbeschriebenem Kupferblech,;45,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;Zulage zu vorbeschriebenem Kupferblech, d = 0,7 mm bzw. 0,8 mm,;55,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;Zulage zu vorbeschriebenem Kupferblech, d = 0,7 mm bzw. 0,8 mm,;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+13;Handmuster Kupferblech, DIN A 3,;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+14;Handmuster Kupferblech, DIN A 3,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+15;Alublech d = 2 mm (roh),;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Überfahrbares Seilsystem;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Mehr- / Minderpreis zu vorher genannten Stützenelementen des Seilsystems und der Einzelanschläge für eine abweichende Ausführung mit der Stützenhöhe 400 mm.;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Persönliche Schutzausrüstung, bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;PSA-Schrank zur praktischen und spritz-;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Erstellung einer Montagedokumentation gemäß;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Absturzsicherung mit kaltselbstklebend,;27,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Flachdachausstieg mit Scherentreppe, 150 x 80 cm,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Absturzsicherung für Dachausstieg;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Flüssigabdichtung in zwei Schichten;25,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Eindichten Türanschluss mit Flüssigkunststoff (Flk),;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Eindichten Lüfter mit Flüssigkunststoff (Flk),;15,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Eindichten Lüfter mit Flüssigkunststoff (Flk),;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Eindichten Blitzschutz-Formteil mit Flüssigkunststoff (FlK),;30,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Fensterabdichtung im Sockelbereich der Fenstertüren im Erdgeschoss,;46,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Flüssigabdichtung an aufgehenden Bauteilen, mit zweikomponentigen Polyu-;10,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;Fugenverschluss mittels eines für den Außenbereich geeigneten Fugendichtbands siehe DIN 68800-2 (z.B. komprimiertes Fugenband) zwischen XPS-Dämmung und Holzrahmen-Außenwand, im Sockelbereich EG und OG zu bauseitiger XPS-Dämmung;35,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;Elastsomerbitumenschweißbahn liefern und als Zuschnitt-;25,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;Fachgerechtes vollflächiges Schließen von Attika-Durchführungen;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+13;Aufstockelement, aus Polyurethan, nach DIN EN 1253,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+14;Mechanische Befestigung zur Aufnahme horizontaler Kräfte;270,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+15;Zulage zu vorgenannter Notentwässerung,;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+16;Bauabnahme der gesamten Dachfläche nach dem elektronischen Messverfahren EFVM;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Reinigen der Baustelle von grober Verschmutzung, Abfällen, und Rückständen, die nicht durch den AN zu verantworten sind. Abrechnung nach Aufwand und nur nach vorheriger ausdrücklicher Aufforderung durch die Bauleitung.;8,0;h;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Stundenlohnarbeiten für Vorarbeiterin, Vorarbeiter, Gesellin, Geselle, Facharbeiterin, Facharbeiter und Gleichgestellte, sowie ähnliche Fachkräfte.;16,0;h;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Stundenlohnarbeiten für Werkerin, Werker, Helferin, Helfer und Gleichgestellte. Der Verrechnungssatz für die jeweilige Arbeitskraft umfasst sämtliche Aufwendungen wie Lohn- und Gehaltskosten, Lohn- und Gehaltsnebenkosten, lohngebundene und lohnabhängige Kosten, sonstige Sozialkosten, Gemeinkosten, W;24,0;h;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Zusätzliche An- und Abfahrt für Zwischen-Auf-, Um- und Abbauten nach Erfordernis, auf besondere Aufforderung durch die Bauleitung.;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Baustellencontainer für Mischabfall;5,0;m3;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Die Stoffpreise müssen anhand von Original-Einkaufsbelegen unter Abzug von Rabatten aller Art nachgewiesen werden. Auf diese Stoffpreise ist vom Auftragnehmer ein Faktor für Gemeinkosten, Gewinn sowie die anteiligen Fracht, Fuhr-und Ladekosten frei;2500,0;EUR;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Abstützung von Decken und Trägern,;30,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Abstützung von Decken und Trägern,;60,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Die Zangenträger im Bestand werden an neue Stahlstützen QRO 160x8,;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Die Zangenträger im Bestand werden bis zu StB-Wand gekürzt,;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Die Zangenträger im Bestand werden unterseitig verschlossen;80,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Einbau der bestehenden PERI-Träger zur Dachverstärkung der Bestandsflachdächer, inkl. Bauteilöffnung der Dachkonstruktion der Bestandsdächer in konstruktiv notwendigen Abmessungen, inkl. Befestigung auf oder an bestehenden Zangenträgern;22,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Kürzung und Verstärkung der bestehenden PERI-Träger;54,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;SB-Flachpressplatten (mit Kennzeichung nach DIN EN 13986) OSB/3 nach DIN EN 300 oder glw.,d = 22 mm,;86,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Liefern und montieren Dachrandträger trapezförmig, aus BSH,;30,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Liefern und montieren Dachrandträger Traufe trapezförmig, aus BSH,;25,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Zulage für die Ausbildung von Aussen- und Innenecken der Dachrandträger,;15,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Dachelemente aus über Kreuz verklebten, allseitig gehobelten, keilgezinkten und genuteten Brettlamellen, aus Nadelholz C24, in Industriequalität, d=220 mm,;420,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Untermörtelung der CLT-Decke auf Stb.-Decke;53,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Bestands-Holzdecke mit Bekleidung aus Einzellatten sorgsamer Rückbau der Lattung ca. 3-5 Reihen und nach Installations- bzw. Entwässerungsarbeiten Wiedereinbau / Remontage. Einschließlich Befestigungsmittel,;25,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Zulage zu vorheriger Position,;5,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Innenwand als Holzrahmenkonstruktion, in F30,;30,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Zulage zu vorgenannten Innenwänden, für die Ausführung der Innenwände in Lichter Raumhöhen bis ca. 3,75 m,;24,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Aussparungen in Dachkonstruktion Holzbalkendach, mit umlaufender beidseitiger Kantenausbildung.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Herstellen einer Bohrung in der CLT-Decke,  mit umlaufender beidseitiger Kantenausbildung.;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Fenster 1 UG,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Fenster 2 UG,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Außentür UG Lichtschacht,;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Außentür UG Kellereingang,;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Integrierter Obentürschließer für zuvor beschriebene Tür-Elemente, mit mecha-;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Türfeststeller für Bodenmontage im Außenbereich, für schwere Türen bis 1,50;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Dachablauf abbrechen und anfallenden Bauschutt entsorgen.;6,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Dachrandabschluss einschließlich Attikaabdeckung aus Kupferblech entfernen und anfallenden Bauschutt entsorgen, Metall geht in Besitz des AN über.;300,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Dachrandabschluss einschließlich Attikaabdeckung aus Aluminium / verzinktesMetallblech eloxiert / pulverbeschichtet entfernen und anfallenden Bauschutt entsorgen, Metall geht in Besitz des AN über.;50,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Lichtkuppel komplett einschl. Bohlenkranz entfernen und anfallenden Bauschutt entsorgen.;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Antennenhalterung einschl. Befestigung entfernen und anfallenden Bauschutt entsorgen.;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Blitzableiter einschl. Befestigungen entfernen und anfallenden Bauschutt entsorgen.;60,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Dachabdichtung aus Bitumenbahn in Teilflächen ausbessern. Schadhafte Stellen reinigen, Beulen und Falten öffnen, Überstände entfernen, Risse mit Schleppstreifen abdecken.;50,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Kiesschüttung abschnittsweise von der Dachfläche aufnehmen, seitlich lagern und nach Beendigung der Abdichtungsarbeiten wieder aufbringen.;40,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Rückbau in Teilbereichen des bestehenden, kompletten Dachaufbaus bis auf OK Holzwerkstoffplatte, im Anschluß an angrenzende Dachbereiche, für nachträgliche Ertüchtigung des Dachtragwerks durch die Zimmerarbeiten.;150,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;Rückbau in Teilbereichen des bestehenden, kompletten Dachaufbaus bis auf OK Holzwerkstoffplatte, wie vor beschrieben, jedoch;45,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;Im Bereich des rückgebauten Dachaufbaus die Dämmung mit Dachabdichtung aus Bitumenbahn abstellen und schützen, um Hinterläufigkeit zum Bestand zu verhindern, mit Schleppstreifen abdecken und sichern.;90,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;Im Bereich des rückgebauten Dachaufbaus abstellen und schützen, wie vor beschrieben, jedoch;35,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+13;Rückbau Teilbereich des bestehenden Holzdachs aus Holzwerkstoffplatte d = ca. 2,5 cm, im Anschluß an angrenzende Dachbereiche, für nachträgliche Ertüchtigung des Dachtragwerks durch die Zimmerarbeiten.;150,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+14;Rückbau Teilbereich des bestehenden Holzdachs wie vor beschrieben, jedoch;35,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Elastomerbitumenbahn nach DIN EN 13707,;155,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Elastomerbitumen-Schweißbahn als Dampfsperrbahn;155,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Wärmedämmung aus Mineralwolle;155,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Wärmedämmung aus Mineralwolle;155,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Mehrpreis der zuvor beschriebenen Dämmung, je 10 mm Mehrstärke;10,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Dämmkeile aus Mineralwolle gemäß Hauptposition Gefälledämmung, am Anschluss der Flachdachdämmung an Dachrand und aufgehenden Bauteilen, Ecken mit Gehrungsschnitt. einschl. Schneidearbeiten, Verschnitt, etc.;65,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Elastomerbitumen als untere Lage nach DIN EN 13707;155,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Polymerbitumen-Schweißbahn mit NBBW-konformem integriertem;155,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Anschluss Dampfsperre der Holzbalkendecke an aufgehende bauseitige Holz-Bauteil Attika, Holzständerwände, etc.;65,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;Zulage Ausbildung von 90° Außen- und Innenecken, zur Abdeckung der Vorpositionen, einschl. aller Gehrungsschnitte und Verbindungen durch Lötung und Schweißen.;22,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;Zulage für den Mehraufwand für die Ausbildung von Kleinflächen ca. 1,0 - 2,0 m², sämtlicher vorgenannter Positionen.;6,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;Zulage für den Mehraufwand für die Ausbildung von Kleinflächen ca. 5,0 - 6,0 m², sämtlicher vorgenannter Positionen.;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Rückbau Dachaufbau Vordächer und Entsorgung,;1,0;psch;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Elastomerbitumen-Schweißbahn als Dampfsperrbahn;110,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Wärmedämmung als Grunddämmung aus Holzfaser-Dämmsystem;110,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Wärmedämmung aus Holzfaserdämmung als Gefälledämmung, Gefälle min. 2,5%, wie vor beschrieben, jedoch als Gefälledämmung;110,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Mehrpreis der zuvor beschriebenen Gefälledämmung, je 10 mm Mehrstärke;10,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Mineralwollstreifen 038, entlang Attika,;115,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Mineralwollstreifen 038, um Dachdurchführungen,;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Einlagige Dachabdichtung gemäß Vorbemerkung A.2, lose verlegt, Lagesicherung durch Auflast gemäß Vorbemerkung A.6.;110,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Herstellen des Attika-Anschlusses, Anarbeiten der einlagigen Dachabdichtung an vorhandene Umrisse und Ecken, inkl. Klemmschienen einschl. sämtlicher Anschlüsse und Verbindungen.;115,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Kürzen Anschluß Pultdach-Aufbau mit Stehfalz-Kupfer-Abdeckung im Bereich, Attika-Anschluß, einschließlich Entsorgung.;15,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Herstellen Dämmklotz aus XPS, WLG 035,;15,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Herstellen Kupferverwahrung voroxidiert, als Attika-Anschluss auf Dämmklotz und überlappend auf Bestands-Kupferabdeckung angeschlossen.;15,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Vorhandene Attikaabdeckung abnehmen und bauseits zwischenlagern, nach Beendigung der Abdichtungsarbeiten wieder montieren;65,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Wandanschluss an aufgehende Bauteile wie folgt herstellen:;55,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Mehr- und Minderpreis für Ausführung Mehr- oder Minderstärke Wärmedämmung XPS, WLG 035, um 20 mm;25,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Wandanschluss an aufgehende Bauteile wie folgt herstellen:;50,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Trennlage oder Vordeckung, aus Bitumenbahnen mit Glasvlieseinlage, Nähte überlappend, im Nahtbereich mechanisch befestigt.;135,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Ständig nutzbare Flachdachabsturzsicherung zur;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Mehr- / Minderpreis zu vorher genannten Stützenelementen des Seilsystems und der Einzelanschläge für eine abweichende Ausführung mit der Stützenhöhe 400 mm.;8,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Persönliche Schutzausrüstung, bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Absturzsicherung mit kaltselbstklebend,;35,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Dacheinlauf (Freispiegelentwässerung) aus wärmegedämmtem Polyurethan nach DIN EN 1253-2, DN 100, min. Abflussmenge 7,4 l/s bei 35mm Anstauhöhe, mit Kiesfang und werkseitig eingeschäumter Anschlussmanschette passend zur jeweiligen Flachdachabdichtung Bitumen (Bestandsdächer). Inkl. wärmegedämmtem Auf;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Rechteckspeier, aus Edelstahl rostfrei, nach DIN EN 1253-2, Stutzenmaß 150 mm x 50 mm, mit einer Stutzenlänge von 600 mm und 0 Grad Stutzenneigung, Abflussmenge min. 1,4 l/s bei 35 mm Stauhöhe, mit Bitumenmanschette in der Größe 600 mm x 500 mm, mit vorgestanzten Aussparungen im Flansch zur Befestig;6,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Regenfallrohr aus Polypropylen nach DIN EN 1451-1, Steckrohrsystem mit vormontierter EPDM-Lippendichtung, DN 100, Nennrohrlänge nach Einbausituation;6,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Regenfallrohr aus nichtrostendem Stahl (1.4301) nach DIN EN 1124, Steckrohrsystem mit vormontierter EPDM-Lippendichtung, DN 100, Nennrohrlänge nach Einbausituation;10,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Rohrbogen 87,5° aus nichtrostendem Stahl (1.4301) nach DIN EN 1451-1, Steckrohrsystem mit vormontierter EPDM-Lippendichtung, DN 100;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Sicherungsschelle für Polypropylen Rohr DN 100, aus Edelstahl rostfrei, Werkstoffnummer 1.4301, zur zugsicheren Verbindung von Gullys mit dem  Rohrsystem und von Rohren und Formteilen;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Sicherungsschelle für Edelstahl Rohr DN 100, aus Edelstahl rostfrei, Werkstoffnummer 1.4301, zur zugsicheren Verbindung von Gullys mit dem  Rohrsystem und von Rohren und Formteilen;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Rohrschelle für Polypropylen Rohr DN 100, aus Stahl verzinkt, mit;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Rohrschelle für Polypropylen Rohr DN 100, a;25,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;Sicherungskralle zur längskraftschlüssigen Verbindung von SML-Rohrverbindungen nach DIN 19522/EN 877, Anschluss des Dacheinlauf Freispiegel DN 100 an bestehendes Gussinnenfallrohr DN 100;3,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;Herstellen von  geschweißten, dichten Edelstahlrohrübergängen DN 70 und DN 100 Rohrbogen 87,5° in Vertikalfallrohr.;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Liefern und montieren einer vorgehängten, kastenförmigen Dachrinne aus Titanzink nach DIN EN 612, Werkstoff und Oberfläche gemäß Vorbemerkung.;38,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Liefern und einbauen eines kastenförmigen Rinneneinhangstutzens (Rinnenauslauf) passend zur Kastenrinne NG 333, mit Ablaufstutzen zum Anschluss des Regenfallrohres DN 100, Werkstoff gemäß Vorbemerkung.;2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Herstellen einer Rinnen-Innenecke als handwerkliche Leistung bauseits. Die Ecke ist nach dem tatsächlichen Bauwinkel bauseits herzustellen. Als Grundkörper dient die Standard-Kastenrinne NG 333 (Werkstoff und Oberfläche gemäß Vorbemerkung).;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Herstellen einer Rinnen-Außenecke als handwerkliche Leistung bauseits. Die Ecke ist nach dem tatsächlichen Bauwinkel bauseits herzustellen. Als Grundkörper dient die Standard-Kastenrinne NG 333 (Werkstoff und Oberfläche gemäß Vorbemerkung).;4,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Liefern und einbauen eines kastenförmigen Bewegungsausgleichers (Dehnungsausgleicher) passend zur Kastenrinne NG 333, Werkstoff gemäß Vorbemerkung, zum Ausgleich der temperaturbedingten Längenänderung der Rinne.;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;"Herstellen eines Rinnenabschlusses als handwerkliche Leistung bauseits. Die Rinne soll optisch in Verlängerung der angrenzenden Außenkante des Daches abzuschließen; die Rinne ist bauseits spitz zur Rinnenaußenseite auslaufend auszubilden. Als Grundkörper dient die Standard-Kastenrinne NG 333 (Werkst";2,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Dachfläche Kiesbelag abräumen, im Baustellenbereich lagern, für späteren Wiedereinbau.;600,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Dachfläche abfegen und lose Verunreinigungen;600,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Schutzlage aus Polyester- und Polypropylen-Fasermischung,;600,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Bautenschutzplatte aus Gummigranulat als Schutzlage über Dachdichtung, verrottungsfest, bitumenbeständig. Matten stumpf stoßen und lose verlegen.;600,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;druckbelastbares Drän- und Speicherelement, multifunktional;600,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Filterschicht für Dachbegrünung aus Polyester/Polypropylen;600,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+7;Mineralisches Schüttstoffgemisch aus natürlichen;600,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+8;Mehr- bzw. Minderpreis je 1 cm;200,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+9;Kontrollschacht mit arretierbarem Deckel;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+10;Aufstockelement für zuvor beschriebenen Kontrollschacht;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+11;Kiesfangleiste mit Teleskopfunktion, Innenleiste als;210,0;m;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+12;Vorhandenen, bauseits auf der Baustelle zwischengelagerten;150,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+13;Sprossenmischung aus mindestens fünf verschiedenen;400,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+14;Zulage zu Sedumsprossen, für Kraut-Sedum für naturnahe Trockenstandorte.;400,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+15;Pflege der Extensivbegrünung: bis zur Erreichung;400,0;m2;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Reinigen der Baustelle von grober Verschmutzung, Abfällen, und Rückständen, die nicht durch den AN zu verantworten sind. Abrechnung nach Aufwand und nur nach vorheriger ausdrücklicher Aufforderung durch die Bauleitung.;8,0;h;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Stundenlohnarbeiten für Vorarbeiterin, Vorarbeiter, Gesellin, Geselle, Facharbeiterin, Facharbeiter und Gleichgestellte, sowie ähnliche Fachkräfte.;10,0;h;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Stundenlohnarbeiten für Werkerin, Werker, Helferin, Helfer und Gleichgestellte. Der Verrechnungssatz für die jeweilige Arbeitskraft umfasst sämtliche Aufwendungen wie Lohn- und Gehaltskosten, Lohn- und Gehaltsnebenkosten, lohngebundene und lohnabhängige Kosten, sonstige Sozialkosten, Gemeinkosten, W;16,0;h;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+4;Zusätzliche An- und Abfahrt für Zwischen-Auf-, Um- und Abbauten nach Erfordernis, auf besondere Aufforderung durch die Bauleitung.;1,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+5;Baustellencontainer für Mischabfall;3,0;m3;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+6;Die Stoffpreise müssen anhand von Original-Einkaufsbelegen unter Abzug von Rabatten aller Art nachgewiesen werden. Auf diese Stoffpreise ist vom Auftragnehmer ein Faktor für Gemeinkosten, Gewinn sowie die anteiligen Fracht, Fuhr-und Ladekosten frei;1500,0;EUR;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+1;Jährliche wiederkehrende Inspektion durch eine;5,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+2;Pflegen der extensiven Dachbegrünung, es sind;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83
+3;Mehrpreis zur Vorposition für den erhöhten Pflege-;10,0;St;gaeb;leistungsbeschreibungen/JPH-E.016.1_Holzbau_260811.x83

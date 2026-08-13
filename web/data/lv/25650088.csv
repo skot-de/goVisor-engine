@@ -1,0 +1,183 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0002;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;Psch;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0003;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung des AG ausführen. Der Verrechnungssatz für die jewelige Arbeitskraft umfasst sämtliche Aufwendungen, insbesondere den tatsaechlichen Lohn einschliesslich vermögenswirksamer Leistungen mit den Zuschlägen fuer;5,0;h;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0004;Stundenlohnarbeiten durch Baugeräte auf Anordnung des;5,0;h;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0005;Stundenlohnarbeiten durch Baugeräte auf Anordnung des AG ausführen. Der Verrechnungssatz für das jeweilige Gerät umfasst sämtliche Aufwendungen für den Einsatz, insbesondere Gerätevorhalte- und Betriebsstoffkosten sowie sämtliche Zuschläge einschliesslich der Kosten für das Bedienungspersonal. Der V;5,0;h;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0006;Stundenlohnarbeiten durch Baugeräte auf Anordnung des AG ausführen. Der Verrechnungssatz für das jeweilige Gerät umfasst sämtliche Aufwendungen für den Einsatz, insbesondere Gerätevorhalte- und Betriebsstoffkosten sowie sämtliche Zuschläge einschliesslich der Kosten für das Bedienungspersonal. Der V;5,0;h;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0007;Stundenlohnarbeiten durch Lastkraftwagen auf Anordnung des AG ausführen. Der Verrechnungssatz für den jeweiligen LKW umfasst sämtliche Aufwendungen für den Einsatz des LKW, insbesondere Gerätevorhalte- und Be- triebsstoffkosten sowie sämtliche Zuschläge ein-schliesslich der Kosten für den Fahrer. De;5,0;h;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0008;Baugelände abräumen. Baugelände nach Angabe des AG.;1,0;Psch;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0009;Bauliche Anlage abbrechen. Anlage nach Angaben des AG. Abgerechnet wird die feste Masse des abzubrechenden;5,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0010;Bauzaun an den Stellen, die vom öffentlichen;30,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0011;Schutzzaun herstellen.;1090,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0012;Im Rahmen der Bauvorbereitung ist die bestehende Tief-;1,0;Psch;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0001;Verkehrssicherung längerer Dauer einschließlich Ver-;1,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0002;Verkehrssicherung längerer Dauer vorhalten, warten, in-;270,0;d;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0003;Kontrolle der Verkehrssicherung an Arbeitsstellen einschließlich temporärer Verkehrsschilder, vorüberge-;240,0;d;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0004;Vorhandene Verkehrsschildkombination verändern, Ände-;20,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0005;Verkehrssicherung längerer Dauer einschließlich Ver-;1,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0006;Verkehrssicherung längerer Dauer vorhalten, warten, in-;30,0;d;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0007;Kontrolle der Verkehrssicherung an Arbeitsstellen einschließlich temporärer Verkehrsschilder, vorüberge-;30,0;d;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0008;Vorhandene Verkehrsschildkombination verändern, Ände-;20,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0009;Verkehrssicherung längerer Dauer einschließlich Ver-;4,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0010;Verkehrssicherung längerer Dauer vorhalten, warten, in-;28,0;d;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0011;Kontrolle der Verkehrssicherung an Arbeitsstellen einschließlich temporärer Verkehrsschilder, vorüberge-;28,0;d;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0012;Vorhandene Verkehrsschildkombination verändern, Ände-;4,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0013;Verkehrsschild aufbauen, vorhalten, warten, instand;3,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0014;Verkehrsschild aufbauen, vorhalten, warten, instand;5,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0015;Verkehrsschild aufbauen, vorhalten, warten, instand;3,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0016;Verkehrsschild aufbauen, vorhalten, warten, instand;5,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0017;Verkehrsschild aufbauen, vorhalten, warten, instand;5,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0018;Kontrolle der temporären Verkehrsschilder, vorüberge-;300,0;d;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0019;Erschwernis infolge Anliegerverkehr.;1,0;Psch;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0020;Anrampen, Anschrägen vor aufrechten Hindernissen wie z.B. Bordsteine nach Wahl des AN herstellen, unterhalten und nach Bauende wieder zurückbauen. In diese Position sind alle Aufwendungen, auch die temporäre Verkehrssicherung, die zur Herstellung und den Rückbau einer Anrampungen oder für das Anschr;95,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0021;Mast (Ständer/Pfosten) mit standsicherer Gründung zur Kabelüberführung liefern, aufstellen, vorhalten, warten, betreiben und beseitigen.;4,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0022;Mast (Ständer/Pfosten) mit standsicherer Gründung zur Kabelüberführung liefern, aufstellen, vorhalten, warten, betreiben und beseitigen.;4,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0001;Bäume fällen, höchstens 0,25 m über dem Erdboden;2,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0002;Bäume fällen, höchstens 0,25 m über dem Erdboden;2,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0003;Bäume fällen, höchstens 0,25 m über dem Erdboden;2,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0004;Bäume fällen, höchstens 0,25 m über dem Erdboden;2,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0005;Wurzelstöcke roden. Gemessen wird der Durchmesser der;25,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0006;Wurzelstöcke roden. Gemessen wird der Durchmesser der;20,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0007;Wurzelstöcke roden. Gemessen wird der Durchmesser der;6,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0008;Strauchbestand und sonstiger Aufwuchs bis 0,10 m Stamm-;50,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0009;Oberboden ggf. einschließlich Vegetationsdecke abtragen;1365,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0010;Gelagerten Oberboden des AG profilgerecht andecken. Ab-;1365,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0011;Oberboden ggf. einschließlich Vegetationsdecke abtra-;895,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0012;Rasenansaat mit RSM herstellen. Saatgut ohne Entmi-;9470,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0013;Bankett abtragen ggf. einschließlich Vegetationsde-;840,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0014;Nicht gefährlicher Boden oder Fels innerhalb der;420,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0015;Nicht gefährlicher Boden oder Fels innerhalb der;420,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0016;Geeigneten Baustoff liefern, profilgerecht einbauen und;485,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0017;Bankett gemäß ZTV E-StB profilgerecht herstellen. Er-;4190,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0018;Bankette im Bereich der Umleitungsstrecke profilgerecht;1200,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0019;Boden aus Abtragsbereichen profilgerecht lösen und;5870,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0020;Fels im anstehenden Ausbauabschnitt profilgerecht abtragen, laden und fördern und einer geeigneten Wiederverwertung zuführen.;295,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0021;Abtreppung bzw. horizontale Berme herstellen in geneigter Grundfläche bzw. in Böschungen für Anschüttung herstellen. Die Berme dient als Auflager der Böschungsverbreiterungen oder des Bankettunterbaus in schräg geneigten Bereichen neben der Fahrbahn bzw. Bankett.;75,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0022;Gefährlichen Boden und Fels innerhalb der Baustelle nach Angabe des AG unter Beachtung der gesetzlichen Bestimmungen separieren, laden, auf einer vom AN anzumietenden Fläche innerhalb der Baustelle zwischenlagern inkl. aller erforderlichen Aufwendungen, aufladen und zur vom AG vorgegebenen Deponie t;245,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0023;Gefährlichen Boden und Fels innerhalb der Baustelle nach Angabe des AG unter Beachtung der gesetzlichen Bestimmungen separieren, laden, auf einer vom AN anzumietenden Fläche innerhalb der Baustelle zwischenlagern inkl. aller erforderlichen Aufwendungen, aufladen und zur vom AG vorgegebenen Deponie t;570,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0024;Nicht gefährlicher Boden oder Fels innerhalb der;1975,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0025;Nicht gefährlicher Boden oder Fels innerhalb der;1380,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0026;Nicht gefährlicher Boden oder Fels innerhalb der;2725,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0027;Erschwernisse infolge von längs verlaufenden Schutzeinrichtungen (Schutzplanken).;216,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0028;Erschwernis infolge zusätzlicher Pfosten des Fahrzeug-Rückhaltesystems (Schutzplanken, Schutzeinrichtung) entlang der Schutzeinrichtung. Vergütet wird der;70,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0029;Erschwernis infolge Einbauten, Schächten, Straßenabläufen oder andere Hindernisse im Baufeld.;5,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0030;Erschwernis infolge Einfassungen, Borden und Fahr-;540,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0031;Erschwernisse infolge von längs und quer verlaufenden Versorgungsleitungen Dritter oder Überführungen (Brücken, Stromleitungen, etc.).;210,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0032;Geeigneten Baustoff liefern, in Auftragsbereichen pro-;2550,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0033;Kombinationsgeogitter mit Vliesstoff, zweiaxial gestreckt aus Polypropylen (PP), UV-stabilisiert, liefern und verlegen. Das Bodenbewehrungselement bestehend aus einem Geogitter und einem mit dem Geogitter fest verbundenem Filtervliesstoff sind folgende techn. Eigenschaften nachzuweisen:;2070,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0034;Suchgraben nach Angaben des AG einschließlich Hand-;3,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0035;Zulage zum Erdaushub der Vorpositionen für;3,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0036;Mulde herstellen.Boden bzw. Fels profilgerecht lösen.;1865,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0037;Mulde ausräumen und profilgerecht wiederherstellen.;20,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0038;Sohlbereich von Mulden, Gräben, Bachläufen durch Eindrücken von Naturgestein befestigen. Mulde führt evtl. Wasser. Mulde parallel der Fahrbahn, sowie ins Gelände abführend.;35,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0039;Kies-Rigole mit senkrechter Sickerschicht herstellen. Sickerschicht durch Einfüllen und Verdichten von Filtermaterial in Sickergraben herstellen. Sickerrohrleitungen werden gesondert vergütet. Ab-rechnung erfolgt nach Länge der insgesamt fertiggestellten Kies-Rigole mit allen Bestandteilen inkl. Mul;10,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0001;Leitungsgraben einschließlich Schachtbaugruben herstel-;940,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0002;Leitungsgraben einschließlich Schachtbaugruben herstel-;85,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0003;"Boden bzw. Fels (Baubeschreibung Pkt. 2.7.1) lösen. Vergütet wird jeglicher Mehraufwand als Zulage zu vorhergehenden Positionen ""Leitungsgraben einschließlich Schachtbaugruben herstellen"".";305,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0004;Straßenablauf einschließlich Aufsatz ausbauen. An-;6,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0005;Entwässerungsrohrleitung abbrechen. Entwässerungsrohr-;45,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0006;Entwässerungsrohrleitung abbrechen. Entwässerungsrohr-;55,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0007;Straßenablauf aus Betonfertigteilen nach DIN 4052 ein-;4,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0008;Aufsatz für Straßenablauf aufsetzen.;4,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0009;Straßenablauf aus Betonfertigteilen nach DIN 4052 ein-;3,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0010;Aufsatz für Straßenablauf aufsetzen.;3,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0011;Anschlussleitung zum Schacht bzw. zur Sammelrohrleitung;25,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0012;Anschlussleitung zum Schacht bzw. zur Sammelrohrleitung;115,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0013;Formstück in Rohrleitung einbauen. Vergütet wird der;12,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0014;Formstück in Rohrleitung einbauen.;2,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0015;Formstück in Rohrleitung einbauen. Vergütet wird der;4,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0016;Formstück in Rohrleitung einbauen. Vergütet wird der;2,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0017;Formstück in Rohrleitung einbauen. Vergütet wird der;8,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0018;Formstück in Rohrleitung einbauen.;2,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0019;Formstück in Rohrleitung einbauen. Vergütet wird der;2,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0020;Böschungsstück einbauen. Vergütet wird der Mehraufwand;1,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0021;Böschungsstück einbauen. Vergütet wird der Mehraufwand;1,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0022;Entwässerungsleitung aus Kunststoffrohren nach stati-;95,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0023;Entwässerungsleitung aus Kunststoffrohren nach stati-;45,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0024;Formstück in Rohrleitung einbauen. Vergütet wird der;1,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0025;Böschungsstück einbauen. Vergütet wird der Mehraufwand;14,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0026;Böschungsstück einbauen. Vergütet wird der Mehraufwand;6,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0027;Baustoff liefern, in Leitungsgraben einschließlich;200,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0028;Sickerrohrleitung in Sickeranlage verlegen. Schachtanschluss wird gesondert verguetet.;3055,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0029;Formstück in Rohrleitung einbauen. Vergütet wird der;8,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0030;Formstück in Rohrleitung einbauen. Vergütet wird der;39,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0031;Formstück in Rohrleitung einbauen. Vergütet wird der;16,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0032;Formstück in Rohrleitung einbauen. Vergütet wird der;2,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0033;Rohrleitung an Schacht anschließen, Anschluss abdich-;47,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0034;Rohrleitung an Schacht anschließen, Anschluss abdich-;1,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0035;Böschungsstück einbauen. Vergütet wird der Mehraufwand;8,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0036;Senkrechte Sickerschicht durch Einfüllen und Verdichten;830,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0037;Geotextil als Filter in Sickeranlagen einbauen. Über-;7030,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0038;Entwässerungsschacht / Kontrollschacht aus PE/PP für;7,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0039;Entwässerungsschacht / Kontrollschacht aus PE/PP für;13,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0040;Schacht-Aufsetzrohr aus PE/PP, DN;14,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0041;Abdeckung für Aufsetzrohr bestehend aus;20,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0042;In Hohlräumen und Bereichen in denen das übliche;3,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0001;Baustoff für Bodenaustausch profilgerecht;4850,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0002;Frostschutzschicht herstellen. Erschwernisse durch;2935,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0003;Frostschutzschicht herstellen. Erschwernisse durch;175,0;m3;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0001;Asphalt fräsen und Fräsgut aufnehmen. Anschlusskante;45,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0002;Asphalt fräsen und Fräsgut aufnehmen. Anschlusskante;795,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0003;Bituminöse Befestigung aus Asphalt, Teer oder Verfestigung mit Teer, nach Wahl des AN Aufbrechen oder Fräsen und aufnehmen.;2755,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0004;Belastete Straßenbefestigung auf Teerbasis einschl.;625,0;t;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0005;Asphaltbefestigung geradlinig trennen.;139,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0006;Asphaltbefestigung geradlinig trennen.;225,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0007;Unterlage reinigen. Anfallendes Kehrgut nach Wahl des;31290,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0008;Bitumenemulsion zur Herstellung des Schichtenverbundes;31290,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0009;Asphalttragschicht aus Asphalttragschichtmischgut;3085,0;t;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0010;Asphalttragschicht aus Asphalttragschichtmischgut;11800,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0011;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;12465,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0012;Asphalttragschicht aus Asphalttragschichtmischgut;495,0;t;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0013;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;1495,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0014;Abstumpfungsmaßnahme zur Erhöhung der Anfangsgriffig-;13165,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0015;Unterlage reinigen. Anfallendes Kehrgut nach Wahl des;445,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0016;Bitumenemulsion zur Herstellung des Schichtenverbundes;445,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0017;Asphalttragschicht aus Asphalttragschichtmischgut;450,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0018;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;445,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0019;Abstumpfungsmaßnahme zur Erhöhung der Anfangsgriffig-;445,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0020;Flankenfläche des hochliegenden Randes der Asphalt-;2195,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0021;Anschluss als Fuge mit Fugenmasse herstellen.;155,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0022;Erschwernisse infolge von längs verlaufenden Schutzeinrichtungen (Schutzplanken).;216,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0023;Erschwernis infolge zusätzlicher Pfosten des Fahrzeug-Rückhaltesystems (Schutzplanken, Schutzeinrichtung) entlang der Schutzeinrichtung. Vergütet wird der;70,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0024;Erschwernis infolge Einbauten, Schächten, Straßenabläufen oder anderen einzelnen Hindernissen im Baufeld.;5,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0025;Erschwernis infolge Einfassungen, Borden und Fahr-;540,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0026;Erschwernisse infolge von längs und quer verlaufenden Versorgungsleitungen Dritter oder Überführungen (Brücken, Stromleitungen, etc.).;210,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0001;Bordstein aufnehmen.;145,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0002;Bordstein aufnehmen.;275,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0003;Natursteinpflasterdecke aufnehmen. Aufnehmen der Trag-;145,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0004;Natursteinpflasterdecke zur Wiederverwendung aufnehmen.;10,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0005;Rinne mit Pflastersteinen des AG herstellen. Lagerplatz;10,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0006;Betonsteinpflaster um die Ein- und Auslaufstellen der Entwässerungseinrichtungen (Böschungsstücke, Regeneinläufe), einschließlich der ggf.;90,0;m2;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0007;Rinne mit Pflastersteinen aus Beton herstellen. Mehr-;40,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0008;Rinne mit Pflastersteinen aus Beton herstellen. Mehr-;100,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0009;Bankettsteine verlegen.;280,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0010;Klebeflachborde F 20x25 Farbe grau.;195,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0011;Klebeflachborde FB 20x25 Farbe grau.;4,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0012;Betonsteinpflaster im Nassschnitt quer oder längs fluchtgerecht schneiden. Auf Paßmaß trennen und zugearbeitete Steine an Kanten und Einfassungen bzw. an Aussparungen und Einbauten.;40,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0013;Bordstein auf Passmaß trennen.;10,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0001;Verkehrsschild ggf. mit Aufstellvorrichtung abbauen.;8,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0002;Leitpfosten abbauen.;115,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0003;Leitpfosten abbauen.;8,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0004;Stationierungszeichen und Bauwerksnummern auf eingeschlagener Halterung und auf Schutzleitplaken aufnehmen, säubern und zum Lagerplatz der Straßenmeisterei Diez transportieren, abladen und stapeln.;2,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0005;Leitpfostenfundamente liefern und mittels Ramme einbauen und Leitpfosten des AG aufstellen.;115,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0006;Anfangs-/Endkonstruktion (AEK) aus Stahl abbauen.;1,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0007;Anfangs-/Endkonstruktion (AEK) aus Stahl abbauen.;2,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0008;Schutzeinrichtung (SE) aus Stahl einschließlich sämtli-;64,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0009;Schutzplanken-Absenkung mit Endausbildung herstellen.;1,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0010;Anfangs-/Endkonstruktion (AEK) für Fahrzeug Rückhalte-;4,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0011;Schutzeinrichtung (SE) am äußeren Fahrbahnrand ein-;142,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0012;Pfosten des Fahrzeug-Rückhaltesystems (FRS) unter er-;20,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0013;Zusätzlichen Pfosten des Fahrzeug-Rückhaltesystems;32,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0014;Zusatzkonstruktion zum Schutz von Motorradfahrern an;142,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0015;Zusatzkonstruktion zum Schutz von Motorradfahrern an;158,0;m;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0001;In erster Linie dient die Leistung zum höhengerechten;1,0;Psch;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0002;Bestandsunterlagen liefern, bestehend aus;1,0;Psch;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0003;Die Entwässerungseinrichtungen (Mulden/Gräben, Rinnen und Bordsteine, Durchlässe, Schächte, Rohrleitungen, Sickerleitungen) sowie die Anschlüsse der vorh. Entwässerungseinrichtungen an die Vorflut sind in Lage und Höhe nicht planerische ausgearbeitet, sondern müssen zur Erneuerung insgesamt in ihrer;1,0;Psch;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0001;Belastungsfahrzeug als Gegengewicht (z.B. ausreichend;6,0;h;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0002;Probegefäß zur Aufnahme von Baustoffproben, für Kon-;18,0;St;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0001;Vorankündigung gemäß Baustellenverordnung erstellen und;1,0;Psch;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0002;Sicherheits- und Gesundheitsschutzplan (SiGe-Plan) nach;1,0;Psch;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0003;Sicherheits- und Gesundheitsschutzkoordinator während;1,0;Psch;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0001;Baubuero (Container) für den AG, doppelwandig, mit einem Fenster je Arbeitsplatz, antransportieren und nach Angaben des AG innerhalb der Baustelle aufbauen.;1,0;Psch;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83
+0002;Baubüro für den AG mit allen Einrichtungen vor- und;8,0;Mt;gaeb;leistungsbeschreibungen/16_K156DREINIE.X83

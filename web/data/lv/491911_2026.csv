@@ -1,0 +1,203 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+001;Zu- und Abluftgerät Mensa 5000 m³/h;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+002;Zu- und Abluftgerät Nebenräume 4000 m³/h;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+003;Zu- und Abluftgerät Küche 10.500 m³/h;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+004;Kompakt-Lüftungsgerät Nebenräume 4120 m³/h;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+005;Dezentrales Lüftungsgerät AUL / FOL horizontal seitlich;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+006;Dezentrales Lüftungsgerät AUL / FOL horizontal rückseitig;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+007;Dezentrales Lüftungsgerät AUL / FOL vertikal;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+008;Kleinlüfter Keller 150 m³/h;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+009;Abluftventilator Zwischenlager Müll 200 m³/h;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+010;Druckmessumformer zur Montage im Zuluft-/Abluftkanal zwecks konstanter Druckregelung;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+011;Kanalrauchmelder;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+012;Elektrische Verdrahtung der RLT-Anlage und deren Regelungseinrichtung, einschl. sämtlicher Bauteile wie Differenzdrucküberwachungen, Temperaturfühler und Weiteren;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+013;Potentialausgleichanschluss;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+014;Inbetriebnahme und Einregulierung einer zentralen Lüftungsanlage nach Vorgabe und unter Mitwirkung des Herstellers. Die Inbetriebnahme ist zu dokumentieren und das Protokoll den Revisionsunterlagen beizufügen.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+015;Inbetriebnahme und Einregulierung einer dezentralen Lüftungsanlage nach Vorgabe und unter Mitwirkung des Herstellers. Die Inbetriebnahme ist zu dokumentieren und das Protokoll den Revisionsunterlagen beizufügen.;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+016;Kondensathebeanlage;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+017;Kugelsiphon;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+001;Zu- und Abluftkanal aus verzinktem Eisenblech in Form von Rechteckkanälen , Blechstärke nach DIN 1946, in allen Längen, einschl. der Pass- und Verbindungsstücke, alle Stöße einwandfrei gedichtet und nach den VDE-Vorschriften an den Stößen geerdet. Flanschenverbindung als Winkelflansch oder Spezialve;440,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+002;Zu- und Abluftkanal jedoch als Formstücke, Übergangsstücke, Übergänge von rund auf eckig, Bogen und Weitere für Kanal bis einer Kantenlänge von;875,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+003;Wickelfalzrohr Durchmesser 80 mm;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+004;Wickelfalzrohr Durchmesser 100 mm;55,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+005;Wickelfalzrohr Durchmesser 125 mm;75,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+006;Wickelfalzrohr Durchmesser 140 mm;1,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+007;Wickelfalzrohr Durchmesser 160 mm;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+008;Wickelfalzrohr Durchmesser 180 mm;45,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+009;Wickelfalzrohr Durchmesser 200 mm;55,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+010;Wickelfalzrohr Durchmesser 224 mm;45,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+011;Wickelfalzrohr Durchmesser 250 mm;85,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+012;Wickelfalzrohr Durchmesser 315 mm;41,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+013;Bogen Durchmesser 80 mm;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+014;Bogen Durchmesser 100 mm;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+015;Bogen Durchmesser 125 mm;32,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+016;Bogen Durchmesser 140 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+017;Bogen Durchmesser 160 mm;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+018;Bogen Durchmesser 180 mm;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+019;Bogen Durchmesser 200 mm;29,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+020;Bogen Durchmesser 224 mm;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+021;Bogen Durchmesser 250 mm;21,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+022;Bogen Durchmesser 315 mm;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+023;Abzweig Durchmesser 100 mm;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+024;Abzweig Durchmesser 125 mm;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+025;Abzweig Durchmesser 140 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+026;Abzweig Durchmesser 160 mm;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+027;Abzweig Durchmesser 180 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+028;Abzweig Durchmesser 200 mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+029;Abzweig Durchmesser 250 mm;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+030;Muffe Durchmesser 80 mm;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+031;Muffe Durchmesser 100 mm;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+032;Muffe Durchmesser 125 mm;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+033;Muffe Durchmesser 140 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+034;Muffe Durchmesser 160 mm;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+035;Muffe Durchmesser 180 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+036;Muffe Durchmesser 200 mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+037;Muffe Durchmesser 224 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+038;Muffe Durchmesser 250 mm;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+039;Reduzierung Durchmesser 100 mm;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+040;Reduzierung Durchmesser 125 mm;36,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+041;Reduzierung Durchmesser 140 mm;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+042;Reduzierung Durchmesser 160 mm;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+043;Reduzierung Durchmesser 180 mm;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+044;Reduzierung Durchmesser 200 mm;54,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+045;Reduzierung Durchmesser 224 mm;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+046;Reduzierung Durchmesser 250 mm;33,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+047;Kanalstutzen Durchmesser 80 mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+048;Kanalstutzen Durchmesser 100 mm;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+049;Kanalstutzen Durchmesser 125 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+050;Kanalstutzen Durchmesser 140 mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+051;Kanalstutzen Durchmesser 160 mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+052;Kanalstutzen Durchmesser 200 mm;32,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+053;Kanalstutzen Durchmesser 250 mm;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+054;Flexrohr Durchmesser 80 mm;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+055;Flexrohr Durchmesser 100 mm;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+056;Flexrohr Durchmesser 125 mm;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+057;Flexrohr Durchmesser 160 mm;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+058;Flexrohr Durchmesser 180 mm;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+059;Flexrohr Durchmesser 200 mm;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+060;Flexrohr Durchmesser 250 mm;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+061;Rohrschelle für vorbeschriebene Lüftungsrohre;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+062;Rohrschelle;19,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+063;Rohrschelle;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+064;Rohrschelle;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+065;Rohrschelle;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+066;Rohrschelle;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+067;Rohrschelle;19,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+068;Rohrschelle;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+069;Rohrschelle;28,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+070;Rohrschelle;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+071;Profilschiene für mittelschwere Anwendungen, zur Aufnahme von Rohrschellen für vorbeschriebene Lüftungsrohre;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+072;Rohrschelle für vorbeschriebene Lüftungsrohre;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+073;Rohrschelle;19,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+074;Rohrschelle;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+075;Rohrschelle;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+076;Rohrschelle;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+077;Rohrschelle;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+078;Rohrschelle;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+079;Rohrschelle;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+080;Rohrschelle;29,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+081;Rohrschelle;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+082;Montageschiene zur Befestigung und Auflage von Lüftungskanälen;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+083;Erfassungshaube 3500 x 2400 x 450 mm Deckenhaube;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+084;Erfassungshaube 3600 x 1400 x 420 mm Wandhaube;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+085;Erfassungshaube 2400 x 1200 x 420 mm Wandhaube;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+086;Filterkasten;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+087;Zuluft-Quellauslass 2000 x 625 mm seitlich;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+088;Zuluft-Quellauslass 1500 x 625 mm seitlich;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+089;Konstant-Volumenstromregler;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+090;Konstant-Volumenstromregler;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+091;Konstant-Volumenstromregler;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+092;Konstant-Volumenstromregler;23,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+093;Konstant-Volumenstromregler;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+094;Konstant-Volumenstromregler;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+095;Rohrschalldämpfer;34,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+096;Rohrschalldämpfer DN 80;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+097;Rohrschalldämpfer DN 100;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+098;Rohrschalldämpfer DN 125;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+099;Rohrschalldämpfer DN 160;23,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+100;Rohrschalldämpfer DN 200;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+101;Rohrschalldämpfer DN 250;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+102;Zuluftventil, Frontteil aus Stahlblech, weiß einbrennlackiert, Einbaurahmen aus verzinktem Stahlblech;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+103;Zuluftventil;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+104;Abluftventil, Frontteil aus Stahlblech, weiß einbrennlackiert, Einbaurahmen aus verzinktem Stahlblech;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+105;Abluftventil;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+106;Abluftventil;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+107;Induktivauslass, verstellbar;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+108;Radialauslass;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+109;Radialauslass;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+110;Radialauslass;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+111;Radialauslass;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+112;Radialauslass;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+113;Radialauslass;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+114;Revisionsdeckel für Kanaleinbau;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+115;Revisionsdeckel für Kanaleinbau;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+116;Brandschutzklappe mit in rechteckiger Bauform;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+117;Brandschutzklappe in rechteckiger Bauform;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+118;Brandschutzklappe in rechteckiger Bauform;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+119;Brandschutzklappe in rechteckiger Bauform;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+120;Brandschutzklappe in rechteckiger Bauform;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+121;Brandschutzklappe in rechteckiger Bauform;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+122;Brandschutzklappe in rechteckiger Bauform;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+123;Brandschutzklappe in rechteckiger Bauform;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+124;Brandschutzklappe in runder Bauform;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+125;Brandschutzklappe in runder Bauform;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+126;Brandschutzklappe in runder Bauform;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+127;Brandschutzklappe in runder Bauform;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+128;Brandschutzklappe in runder Bauform;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+129;Brandschutzklappe in runder Bauform als Überströmklappe;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+130;Rauchschutzklappe;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+131;Rauchschutzklappe;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+132;Rauchschutzklappe;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+133;Bezeichnungsschilder für Feldgeräte;39,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+134;Kennzeichnung von Luftkanälen mit selbstklebender Folie 25 x 150 mm, Bezeichnung der Luftart nach DIN 1946, T. 1, mit Angabe der Luftstromrichtung;500,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+135;Wetterschutzgitter in rechteckiger Bauform;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+136;Wetterschutzgitter in rechteckiger Bauform;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+137;Dachdurchführung DN 315;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+138;Dachhaube DN 315;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+139;Steildachdurchführung;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+140;Deflektorhaube;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+141;Dachhaube;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+001;Dämmung diffusionsdicht;493,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+002;Dämmung aus Mineralwolle diffusionsdicht;35,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+001;Kernbohrung in Geschossdecke;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+002;Kernbohrung in Beton- oder Mauerwerkswand 24 cm stark;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+003;Kernbohrung in Beton- oder Mauerwerkswand 24 cm stark;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+004;Kernbohrung in Beton- oder Mauerwerkswand 24 cm stark;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+005;Kernbohrung in Beton- oder Mauerwerkswand 24 cm stark;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+006;Kernbohrung in Beton- oder Mauerwerkswand 24 cm stark;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+007;Kernbohrung in Beton- oder Mauerwerkswand 24 cm stark;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+008;Kernbohrung in Beton- oder Mauerwerkswand 24 cm stark;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+009;Mehr- oder Minderpreis je cm Bohrtiefe in Betondecke;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+010;Mehr- oder Minderpreis je cm Bohrtiefe in Beton- oder Mauerwerkswand;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+011;Mehr- oder Minderpreis je cm Bohrtiefe in Beton- oder Mauerwerkswand;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+012;Mehr- oder Minderpreis je cm Bohrtiefe in Beton- oder Mauerwerkswand;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+013;Mehr- oder Minderpreis je cm Bohrtiefe in Beton- oder Mauerwerkswand;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+014;Mehr- oder Minderpreis je cm Bohrtiefe in Beton- oder Mauerwerkswand;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+015;Mehr- oder Minderpreis je cm Bohrtiefe in Beton- oder Mauerwerkswand;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+016;Mehr- oder Minderpreis je cm Bohrtiefe in Beton- oder Mauerwerkswand;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+017;Verschluss von belegtem Wanddurchbruch mit einem freien Querschnitt zwischen Leitung / Brandschutzlappe und Massivbauteil;56,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+018;Verschluss von belegtem Wanddurchbruch mit einem freien Querschnitt zwischen Leitung / Brandschutzlappe und Massivbauteil;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+019;Verschluss von belegtem Wanddurchbruch mit einem freien Querschnitt zwischen Leitung / Brandschutzlappe und Massivbauteil;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+020;Verschluss von belegtem Wanddurchbruch mit einem freien Querschnitt zwischen Leitung / Brandschutzlappe und Massivbauteil;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+021;Verschluss von belegtem Wanddurchbruch mit einem freien Querschnitt zwischen Leitung / Brandschutzlappe und Massivbauteil;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+022;Verschluss von belegtem Wanddurchbruch mit einem freien Querschnitt zwischen Leitung / Brandschutzlappe und Massivbauteil;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+023;Verschluss von, mit Brandschutzklappe, belegtem Deckendurchbruch mit einem freien Querschnitt zwischen Leitung und Massivbauteil;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+024;Verschluss von, mit Brandschutzklappe, belegtem Deckendurchbruch mit einem freien Querschnitt zwischen Leitung und Massivbauteil;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+025;Verschluss von, mit Brandschutzklappe, belegtem Deckendurchbruch mit einem freien Querschnitt zwischen Leitung und Massivbauteil;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+026;Verschluss von, mit Brandschutzklappe, belegtem Deckendurchbruch mit einem freien Querschnitt zwischen Leitung und Massivbauteil;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+027;System-Profilstahlkonstruktion;300,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+028;Mitwirken bei der Abnahme der RLT-Anlagen durch einen anerkannten Sachverständigen zur Vorlage für eine baurechtliche Genehmigung. Die Abnahme beinhaltet im wesentlichen:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+029;Messen der Luftvolumenströme und Einstellen der Luftvolumenstrom-Sollwerte an den Drosselklappen und Luftauslässen für jeweils 1 Luftkanalnetz / Lüftungsanlage einschließlich Erstellen der Messprotokolle, Herstellung und wieder verschließen von Messöffnungen.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+030;Arbeitsgerüst verfahrbar,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+031;Anlagen und Regelschema alrodiert, das Schema gezeichnet auf 110 g-Papier, luftdicht eingeschweißt in eine 1 mm starke Kunststofffolie, voll abwaschbar, an 4 Ecken an der Wand anzuschrauben, enthält das Lüftungsschaltbild und das Kältschaltbild für die Anschlussleitung der Wärmetauscher mit Pumpen, ;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+032;Revisionsunterlagen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+033;Monteur Stunde;40,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+034;Helfer Stunde;40,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+001;Wartung/Kontrolle sämtlicher  vorgenannter lüftungstechnischer Komponenten;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+002;wie zuvor beschrieben, jedoch im 2. Jahr;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+003;wie zuvor beschrieben, jedoch im 3. Jahr;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+004;wie zuvor beschrieben, jedoch im 4. Jahr;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+005;1 kompletter Satz Ersatzfilter für die zuvor beschriebenen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+006;Leistung wie vor beschrieben,;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+007;Leistung wie vor beschrieben,;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83
+008;Leistung wie vor beschrieben,;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Leistungsverzeichnis GAEB XML 3.30 2025-0455.X83

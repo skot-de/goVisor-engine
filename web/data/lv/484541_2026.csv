@@ -1,0 +1,647 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Baustelleneinrichtung für die Ausführung aller Leistungen des AN, soweit nicht in gesonderten Positionen erfasst, einrichten.;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+20;Baustelleneinrichtung des AN vorhalten für die Dauer der Leistungen des AN;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+30;Baustelleneinrichtung des AN räumen.;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+40;Schnurgerüst zur Absteckung der Hauptachen der baulichen Anlage des Bau D sowie Bau E in Abstimmung mit der Bauleitung,;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+50;Meterriss nach Rohbau-Fertigstellung der einzelnen Geschosse bzw. Bauteile, in Abstimmung mit der Bauleitung, im Treppenhausbereich an Zugängen bzw. Bereichstüren. Ausführung nach Wahl des AN. Der Meterriss ist so auszuführen, dass ein Beseitigen oder Verändern nicht ohne Hilfsmittel möglich ist.;7,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+60;Leihgebühr für Baustromverteiler;14,0;Mona;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+70;Leihgebühr für Baustromverteiler;14,0;Mona;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+80;Kabelabzweigkasten 2,5 qmm, IP54;10,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+90;Kabelabzweigkasten bis 5 x 16 qmm, IP54;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+100;Verbindungsdose nach DIN VDE 0606 aus Thermoplast;20,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+110;Verbindungsdose nach DIN VDE 0606 aus Thermoplast;30,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+120;Aus Kontroll Schalter auf Putz,mit Kontrollampe  wassergeschützt,;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+130;Wechselschalter Aufputz wassergeschützt IP44;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+140;Taster - Steckdosen Kombination;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+150;Schukosteckdosen, auf Putz, wassergeschützt,;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+160;Schukosteckdosen 2-fach;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+170;CEE Steckdose auf Putz 5x16A rot mit Deckel.;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+180;CEE Steckdose auf Putz 5x32A rot mit Deckel.;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+190;Kreuzerder mit Anschlusslasche;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+200;LED-Feuchtraumleuchte;16,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+210;Umbau vorhandener LED-Feuchtraumleuchte während der Baumaßnahme je nach Erfordernis.;10,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+220;Gummikabel H07RN-F 3G1,5;140,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+230;schwere Gummileitung für Baustellen als H07RN-F 3G2,5;120,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+240;schwere Gummileitung für Baustellen als H07RN-F 5G1,5;20,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+250;Anschlüsse, Verteilungen, Verlängerungen, Messeinrichtungen etc. sowie eine Frostschutzeinhausung mit Frostwächter für Container und mind. 2 Zapfstellen;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+260;Vorbeschriebene Bauwasserverteiler vorhalten über die Dauer der Leistungen des AN hinaus.;20,0;Wo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+270;Fläche für Baustellenverkehr für nichtöffentlichen Verkehr, frostsicher, Dicke 30 cm, hydraulisch gebunden, natürliche Gesteinskörnung TL Gestein, Belastungsklasse RStO 12 Bk0,3, herstellen.;320,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+280;Fläche für Baustellenverkehr für nichtöffentlichen Verkehr, frostsicher, Dicke 30 cm, hydraulisch gebunden, natürliche Gesteinskörnung TL Gestein, Belastungsklasse RStO 12 Bk0,3, räumen.;320,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+290;Besprechungscontainer mit Fenster, Rolladen zur Nutzung durch den AG, aufstellen,;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+300;Vorbeschriebenen Besprechungscontainer vorhalten, instand halten DIN 31051,;73,0;StWo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+310;Vorbeschriebenen Besprechungscontainer räumen.;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+320;Sanitärcontainer, aufstellen, beheizbar, elektrisch, doppelwandig, wärmegedämmt,;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+330;Vorbeschriebenen Sanitärcontainer vorhalten, instand halten DIN 31051,;73,0;StWo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+340;Vorbeschriebenen Sanitärcontainer  räumen.;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+350;Bürocontainer mit Fenster und Rolladen zur Nutzung durch den AG, aufstellen,;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+360;Vorbeschriebenen Bürocontainer vorhalten, instand halten DIN 31051,;73,0;StWo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+370;Vorbeschriebenen Bürocontainer räumen.;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+380;Schutzzaun, versetzbar, als geschlossener Zaun aus Brettern, einseitig gehobelt, verschraubt, mit Standfüßen, Zaunoberkante über Oberfläche Gelände 2 m, aufstellen.;140,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+390;als nicht versetzbarer Schutzzaun im Bereich von zu schützenden Bäumen nach beiliegendem  Protokoll des Baumschutzkonzetes.;150,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+400;Zulage zu vor beschriebenen Bauzaun für die Herstellung eines Schauloch im Brett, gehobelt, Durchmesser ca 10 cm,;15,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+410;Vorbeschriebenen Schutzzaun umsetzen nach besonderer Anordnung des AG.;50,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+420;Vorbeschriebenen Schutzzaun vorhalten und instand halten DIN 31051.;10700,0;mWo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+430;nicht versetzbarer Schutzzaun im Bereich von zu schützenden Bäumen.;11400,0;mWo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+440;Vorbeschriebenen Schutzzaun räumen.;140,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+450;nicht versetzbarer Schutzzaun im Bereich von zu schützenden Bäumen..;150,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+460;Behelfsmäßiges Tor, abschließbar, 2-flügelig, aus Brettern, im Bauzaun, Breite über 3,75 bis 4 m, Höhe über 1,75 bis 2 m, einbauen, Ausführung gemäß Einzelbeschreibung,;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+470;Leistung wie vor, jedoch Breite über 5,5 bis 6 m;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+480;Vorbeschriebene Tore vorhalten und instand halten DIN 31051.;152,0;StWo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+490;Vorbeschriebene Tore räumen.;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+500;Behang für Schutzzaun, Zaunoberkante über Oberfläche Gelände 2 m, aus lichtdurchlässigen und randverstärkten Kunststoffnetzen, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar), Farbton grau, anbringen, Ausführung gemäß Einzelbeschreibung,;50,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+510;Vorbeschriebenen Behang vorhalten und instand halten DIN 31051.;3800,0;mWo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+520;Vorbeschriebenen Behang abhängen.;50,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+530;Absperrschrankengitter, temporär, TL Absperrschranken,;30,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+540;Vorbeschriebenes Absperrschrankengitter vorhalten und instand halten DIN 31051.;320,0;mWo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+550;Vorbeschriebenes Absperrschrankengitter räumen.;30,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+560;Arbeitstägliche Sicherung der Baustelle nach Betriebsschluss nach Fertigstellung der Leistungen des AN,;30,0;Wo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+570;Einkürzung der Baumkrone,;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+580;Lastverteilung unterhalb der Baumkrone (+1,5 m),;100,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+590;Vorbeschriebene Lastverteilung vorhalten und instand halten DIN 31051.;1500,0;m²Wo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+600;Vorbeschriebenes Lastverteilung räumen.;100,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+610;Wurzelnachbehandlung im Bereich der Baugrubenböschung,;120,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+620;Vorbeschriebene Wurzelnachbehanglung vorhalten,;1700,0;m²Wo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+630;Vorbeschriebene Wurzelnachbehandlung räumen.;120,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+640;2. Kampfmittelsondierung für das gesamte Baufeld;1800,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+650;Planung und Berechnungen der Wasserhaltung Bau D+E;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+660;Offene Wasserhaltung zum Schutz vor Tagwasser;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+670;Geschlossene Wasserhaltung mit Unterstützung;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+680;Zulage zu vor beschriebener Wasserhaltung;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+690;Stationären Turmdrehkran vorhalten über die Dauer der Leistungen des AN hinaus;6,0;StWo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+700;Bedienung des vorbeschriebenen Turmdrehkrans;1,0;Std;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+710;wie vor, tägliche Arbeitszeit über 6-9 Std.;1,0;Std;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+720;Bedienung des vorbeschriebenen Turmdrehkrans;1,0;Std;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+730;bei einer durchgängigen täglichen Arbeitszeit vor Ort von;1,0;Std;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+740;Absturzsicherung an Bauwerksöffnungen, offene Deckenkanten etc.;900,0;mWo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+750;Absturzsicherung an Schachttüren der Breite von 1,1 m,;50,0;StWo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+760;an Bodenöffnungen in Betondecken,;20,0;StWo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+770;Rüstplattform für die Aufzugsmontage;3,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+780;Winterbaubeheizung / Bautemperierung einrichten und für die Dauer der Grundstandzeit von 4 Wochen vorhalten.;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+790;Vorbeschriebene Winterbaubeheizung / Bautemperierung über die in der Pauschalposition enthaltene Vorhaltedauer;10,0;Wo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+800;Vorbeschriebene Winterbaubeheizung / Bautemperierung;5,0;Wo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+810;Vorbeschriebene Winterbaubeheizung / Bautemperierung räumen;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+10;Schutzvorrichtung als Witterungsschutz an Wandöffnungen, einschl. Trag- und Unterkonstruktion sowie Aussteifung,;30,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+20;Vollständiger Abruch des Gebäude-Anbaus von 1979;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+30;Schutzvorrichtung als Witterungsschutz an Dachöffnung,;45,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+40;Bau- und Abbruchabfälle, Beton, Ziegel, Fliesen und Keramik,;460,0;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+50;Bau- und Abbruchabfälle, Holz, Glas und Kunststoff,;3,5;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+60;Bau- und Abbruchabfälle, Holz, Glas und Kunststoff,;0,3;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+70;Bau- und Abbruchabfälle, Holz, Glas und Kunststoff,;0,1;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+80;Bau- und Abbruchabfälle, Metalle,;0,5;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+90;Bau- und Abbruchabfälle, Metalle,;0,2;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+100;Bau- und Abbruchabfälle auf Gipsbasis,;0,5;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+10;Statische Berechnung DIN EN 12811-1 einschl. erforderlicher Ausführungszeichnungen für nachfolgend beschriebenes freistehenden Arbeitsgerüst anfertigen.;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+20;Aufbauen längenorientiertes Standgerüst, Fassadengerüst DIN EN 12810-1, als Arbeits- und Schutzgerüst DIN EN 12811-1,;2100,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+30;Höhe der obersten Gerüstlage 4 m.;125,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+40;Gebrauchsüberlassung für vorbeschriebenes Standgerüst;40050,0;m²Wo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+50;Abbauen und abfahren des vorbeschriebenen Standgerüsts;2225,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+60;Aufbauen Belagverbreiterung wandseitig,;800,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+70;Gebrauchsüberlassung für vorbeschriebene Belagsverbreiterung;14400,0;mWo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+80;Abbauen und abfahren der vorbeschriebenen Belagverbreiterung;800,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+90;Aufbauen zusätzlichen Seitenschutz DIN EN 12811-1, an einer Gerüstlage, Höhe der Gerüstlage 10 m.;800,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+100;Gebrauchsüberlassung für vorbeschriebenen Seitenschutz;7200,0;mWo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+110;Abbauen und abfahren des vorbeschriebenen Seitenschutzes;800,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+120;Aufbauen Treppenaufgang für Gerüst,;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+130;Gebrauchsüberlassung für vorbeschriebenen Treppenaufgang;36,0;StWo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+140;Abbauen und abfahren des vorbeschriebenen Treppenaufgangs;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+150;Aufbauen Überbrückung in Gerüst,;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+160;Länge des überbrückten Zwischenraums über 3 bis 4 m;3,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+170;Gebrauchsüberlassung für vorbeschriebene Überbrückung Länge über 9 bis 10m;18,0;StWo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+180;Länge über 3 bis 4 m;54,0;StWo;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+190;Abbauen und abfahren der vorbeschriebenen Überbrückung Länge über 9 bis 10 m;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+200;Länge über 3 bis 4 m;3,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+10;Boden für Baugrube nach Abtrag des Oberbodens,;1270,0;m³;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+20;Aushub im Bereich der Tiefergründung,;1180,0;m³;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+30;Boden für Schächte, Ausführung unter der Bodenplatte,;25,0;m³;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+40;Boden für Magerbetonverfüllung,;540,0;m³;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+50;Boden für Magerbetonabtreppung,;60,0;m³;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+60;Böschungssicherung, aus reißfester UV-beständiger Folie, einlagig, überlappt, zum Schutz gegen Abspülungen und Auflockerungen.;600,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+70;Gründungssohle verdichten, in Baugruben, Verdichtungsgrad mind. DPr 0,98.;1430,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+80;Planum herstellen, zulässige Abweichung von der Sollhöhe +/- 2 cm, Verformungsmodul mind. EV2 100 MPa.;1430,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+90;Statischer Plattendruckversuch auf Anordnung des AG;5,0;Stk;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+100;Dynamischer Plattendruckversuch auf besondere Anordnung des AG;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+110;Flächenbelastungsfilter in ausgehobener Baugrube, frostsicher, Dicke 33 cm, ungebunden,;1200,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+120;Arbeitsraum profilgerecht verfüllen und verdichten,;160,0;m3;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+130;Leistung wie vor, jedoch Tiefe über 3,00 bis 3,50 m.;560,0;m³;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+10;Bodenbewegung von Hand im Bereich vorhandener;15,0;m³;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+20;Suchgräben herstellen;10,0;m³;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+30;jedoch über 1,25 bis;5,0;m³;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+40;Erschwernis durch Behinderungen bei der Verlegung von;3,0;Stk;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+50;Wurzelsperre;5,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+60;Planumsfläche verdichten;1160,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+70;Plattendruckversuch;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+80;Dynamischer Plattendruckversuch;4,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+90;Rammsondierung;20,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+100;Baugrubenverbau der Rohrgräben, mit Verbauplatten, z.B.;970,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+110;Boden für Schachtbaugruben mit Verbau nach dem Abtrag;450,0;m³;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+120;Zusatzmassen einbauen und verdichten;170,0;m³;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+130;Entwässerungsanschlußleitung DN 160 (RW);115,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+140;Entwässerungsanschlußleitung DN 160 (SW);10,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+150;Kanalrohr KG 2000 DN 160 (RW);170,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+160;Abwasserkanal KG 2000 DN 200;50,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+170;EA Einfachabzweig 45°;18,0;Stk;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+180;EA Einfachabzweig 45° für späteren Anschluß;10,0;Stk;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+190;EA Einfachabzweig 45°;6,0;Stk;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+200;EA Einfachabzweig 45° für späteren Anschluß;4,0;Stk;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+210;aus KG 2000;2,0;Stk;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+220;Muffenlose Kunststoffrohre DN/OD 160,;80,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+230;Muffenlose Kunststoffrohre DN/OD 200;10,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+240;Anschlussleitung als außenliegender Absturz herstellen;2,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+250;Einfachabzweig 45°;2,0;Stk;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+260;aus Hochlast-Kanalrohrsystem aus Polypropylen, vollwandig,;5,0;Stk;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+270;Anbinden an bauseits vorh. Anschlussleitung;1,0;Stk;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+280;Anbinden an bauseits vorh. Schachtanschlüsse;4,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+290;Kompaktschacht, rund, als Fertigteil, aus Kunststoff,;3,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+300;Kompaktschacht, rund, als Fertigteil, aus Kunststoff,;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+310;Einstiegsschacht DIN EN 13598-2, aus PE, rund,;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+320;Einstiegsschacht PE DN/ID 600 T 1,15 m (RW);2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+330;Schachtunterteil SU-M, rund, lichte Weite 1,00 m,;1,0;Stk;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+340;Schachtunterteil SU-M, liefern und versetzen wie Bezugsposition, jedoch;1,0;Stk;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+350;Schachtunterteil SU-M, liefern und versetzen wie Bezugsposition, jedoch;1,0;Stk;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+360;Seitenzulauf für Betonschächte DN 1000;3,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+370;Übergangsplatte aus Stahlbeton, Güte wie DIN 4034-1,;2,0;Stk;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+380;Schachthälse nach DIN V 4034-1 und DIN EN 1917, SH-M;1,0;Stk;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+390;Betonschachtringe mit Muffenverbindung Durch-;2,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+400;Typ II D/60, Form A -Edelstahl/PE nach DIN V 19555, Farbe schwarz, mit 2,55 mm Wanddicke, für runde Wände, Steigmaß 250 mm nach;31,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+410;Auflagerringe gem. DIN V 4034-1 und DIN EN 1917, AR-V;4,0;Stk;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+420;Schachtabdeckungen Klasse C 250, entsprechend DIN EN;3,0;Stk;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+430;TV-Abnahmebefahrung des Entwässerungssystems wie;450,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+440;Rohrleitungen und Schächte vor Kamerainspektion spülen.;450,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+450;Dokumentation der Kamerainspektion als Video und;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+460;Die Dichtheitsprüfung gemäß DIN EN 1610 und DWA A 139;90,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+470;Die Dichtheitsprüfung gemäß DIN EN 1610 und DWA A 139;8,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+480;Bestandspläne nach Abschluss der Baumaßnahme;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+490;Frostschutzschicht nach ZTVE -StB für Verkehrsflächen der Bk 1,0 nach RSTO 2012 und gemäß der Vorbemerkungen zu den Flächenbefestigungen einbauen.;90,0;m³;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+500;im Bereich von Fuß- und Nebenwegen.;300,0;m³;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+510;Stunden eines Facharbeiters.;30,0;h;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+520;Stunden eines Gehilfen.;20,0;h;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+530;Stunden eines Radladers mit 1,2 cbm;10,0;h;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+540;Stunden eines Baggers, einschl. Bedienung.;10,0;h;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+550;Stunden eines Minibaggers, einschl. Bedienung.;10,0;h;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+560;Stunden eines LKWs, 7,5 t Nutzlast einschl. Bedienung.;10,0;h;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+570;Stunden eines Kompressors, einschl. Bedienung.;5,0;h;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+580;Stunden eines Trennschleifers, einschl. Trennscheibe;5,0;h;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+590;Stunden einer leichten Vibrationsplatte einschl.;5,0;h;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+10;Boden aus Rohrgräben und Schachtbaugruben ohne;45,0;m³;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+20;Zusatzmassen Leitungszone einbauen und verdichten;15,0;m³;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+30;Vollwandrohre aus Polypropylen (PP-MD) KG 2000 Rohre SN10 DN 110 gemäß DIN EN 14758-1 mit werkseitig eingelegtem patentierten Dreifach-Dichtsystem aus SBR nach DIN EN 681-1. Ringsteifigkeit gemäß DIN EN ISO 9969 >10kN/m². Alle Formteile haben eine tatsächlich gemessene Ringsteifigkeit, die gemäß der;260,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+40;KG 2000 - Rohr DN 125;20,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+50;KG 2000 Bogen 15-90° DN 110,;135,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+60;KG-2000 Bogen 15-90°, DN 125;8,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+70;KG 2000 - Abzweig 45°, DN110/110;30,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+80;KG 2000-Abzweig 45°, DN 110/125;4,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+90;KG 2000 - Reduktion DN 125/110;4,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+100;KG-Rohrdurchführungen durch WU-Bodenplatte mit Frischbetonfolienanschluss.;44,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+110;Anschluss einer vorhandenen Grundleitung DN 150;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+120;Anschluss einer Grundleitung DN 150 aus KG-Rohr;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+130;Zulage für den Einbau einer NBR-Dichtung mit dem vorgenannten KG2000-Rohr DN 110 für die Entwässerung fetthaltiger Küchenabwässer;80,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+140;Durchführung durch Betonwand mit Frischbetonverbundfolie;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+150;NW 125;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+160;NW 150;3,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+170;NW 200;4,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+180;Durchführung durch Betonbodenplatte mit Frischbetonverbundfolie;3,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+190;NW 150;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+200;Abdichtung mittels Ringraumdichtung z.B. Doyma o.glw.,;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+210;Abdichtung mittels Ringraumdichtung z.B. Doyma o.glw.,;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+220;Abdichtung mittels Ringraumdichtung z.B. Doyma o.glw.,;4,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+230;Abdichtung mittels Ringraumdichtung z.B. Doyma o.glw.,;4,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+10;Ortbeton Magerbetonverfüllung unter Streifenfundamenten,;540,0;m³;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+20;Ortbeton Streifenfundament, obere Betonfläche waagerecht, aus Stahlbeton, Normalbeton C 25/30 DIN EN 206, DIN 1045-2, natürliche Gesteinskörnung, Expositionsklasse XF1 (Frostangriff, mäßige Wassersättigung ohne Taumittel), Expositionsklasse XC2 (Bewehrungskorrosion durch Karbonatisierung, nass/selte;140,0;m3;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+30;Ortbeton Sauberkeitsschicht, für Bodenplatte, Untergrund waagerecht, obere Betonfläche waagerecht, als unbewehrter Beton, Normalbeton C 8/10 DIN EN 206, DIN 1045-2, natürliche Gesteinskörnung, Dicke 5 cm, Ausführung gemäß Einzelbeschreibung,;1430,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+40;Perimeterdämmung unter Bodenplatte, Wassereinwirkungsklasse W2.2-E (hohe Einwirkung von drückendem Wasser über 3 m Eintauchtiefe), aus Polystyrol-Hartschaum XPS DIN EN 13164, Bemessungswert der Wärmeleitfähigkeit max. 0,040 W/(mK), Nennwert der Wärmeleitfähigkeit max. 0,039 W/(mK), Dicke 120 mm, Anw;1430,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+50;Perimeterdämmung auf Kelleraußenwand, Wassereinwirkungsklasse W2.2-E (hohe Einwirkung von drückendem Wasser über 3 m Eintauchtiefe), aus Polystyrol-Hartschaum XPS DIN EN 13164, Bemessungswert der Wärmeleitfähigkeit max. 0,040 W/(mK), Nennwert der Wärmeleitfähigkeit max. 0,039 W/(mK), Dicke 120 mm, A;170,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+60;seitlich auf Streifenfundament, Bodenplatte, Aufzugsunterfahrt;600,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+70;Ortbeton Bodenplatte, als Stahlbeton, Normalbeton C 25/30 DIN EN 206, DIN 1045-2, natürliche Gesteinskörnung, Expositionsklasse XC4 (Bewehrungskorrosion durch Karbonatisierung, wechselnd nass und trocken), Feuchtigkeitsklasse WF (Betonkorrosion, feuchte Umgebung), mit hohem Wassereindringwiderstand,;190,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+80;Dicke 30 cm.;1140,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+90;Dicke 30 cm der Aufzugsunterfahrt;7,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+100;Dicke 20 cm.;57,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+110;Ortbeton Außenwand, als Stahlbeton, Normalbeton C 25/30 DIN EN 206, DIN 1045-2, natürliche Gesteinskörnung, Expositionsklasse XC4 (Bewehrungskorrosion durch Karbonatisierung, wechselnd nass und trocken), Feuchtigkeitsklasse WF (Betonkorrosion, feuchte Umgebung), mit hohem Wassereindringwiderstand, D;110,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+120;"als Sichtbeton, mit besonderen Anforderungen, Klasse SB 3 gemäß DBV-Merkblatt ""Sichtbeton"", Dicke 25 cm, Erprobungsflächen werden gesondert vergütet.";50,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+130;Ortbeton Schachtwand, als Stahlbeton, Normalbeton C 25/30 DIN EN 206, DIN 1045-2, natürliche Gesteinskörnung, Expositionsklasse XC4 (Bewehrungskorrosion durch Karbonatisierung, wechselnd nass und trocken), Feuchtigkeitsklasse WF (Betonkorrosion, feuchte Umgebung), mit hohem Wassereindringwiderstand,;6,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+140;Abreiben der erhärteten Betonoberfläche, an senkrechten Bauteilen, zur Aufnahme der Abdichtung.;70,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+150;Ortbeton Schachtwand, als Stahlbeton, Normalbeton C 25/30 DIN EN 206, DIN 1045-2, natürliche Gesteinskörnung, Expositionsklasse XC1 (Bewehrungskorrosion durch Karbonatisierung, trocken/ständig nass), Feuchtigkeitsklasse WO (Betonkorrosion, trockene Umgebung), als Sichtbeton, mit normalen Anforderung;35,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+160;"als Sichtbeton, mit besonderen Anforderungen, Klasse SB 3 gemäß DBV-Merkblatt ""Sichtbeton"", Dicke 25 cm,";35,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+170;Ortbeton Treppenhauswand, als Stahlbeton, Normalbeton C 25/30 DIN EN 206, DIN 1045-2, natürliche Gesteinskörnung, Expositionsklasse XC1 (Bewehrungskorrosion durch Karbonatisierung, trocken/ständig nass), Feuchtigkeitsklasse WO (Betonkorrosion, trockene Umgebung), als Sichtbeton, mit besonderen Anfor;270,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+180;Ortbeton Innenwand, als Stahlbeton, Normalbeton C 25/30 DIN EN 206, DIN 1045-2, natürliche Gesteinskörnung, Expositionsklasse XC1 (Bewehrungskorrosion durch Karbonatisierung, trocken/ständig nass), Feuchtigkeitsklasse WO (Betonkorrosion, trockene Umgebung), Dicke 25 cm.;130,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+190;"als Sichtbeton, mit besonderen Anforderungen, Klasse SB 3 gemäß DBV-Merkblatt ""Sichtbeton"", Dicke 25 cm,";260,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+200;Ortbeton Stütze, außen, als Stahlbeton, Normalbeton C 25/30 DIN EN 206, DIN 1045-2, natürliche Gesteinskörnung, Expositionsklasse XC3 (Bewehrungskorrosion durch Karbonatisierung, mäßig feucht), Feuchtigkeitsklasse WO (Betonkorrosion, trockene Umgebung), als Sichtbeton, mit besonderen Anforderungen, ;35,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+210;Ortbeton Stütze, außen, als Stahlbeton, Normalbeton C 25/30 DIN EN 206, DIN 1045-2, natürliche Gesteinskörnung, Expositionsklasse XC4 (Bewehrungskorrosion durch Karbonatisierung, wechselnd nass und trocken), Feuchtigkeitsklasse WF (Betonkorrosion, feuchte Umgebung), als Sichtbeton, mit besonderen An;35,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+220;Ortbeton Deckenplatte, obere Betonfläche waagerecht, als Stahlbeton, Normalbeton C 25/30 DIN EN 206, DIN 1045-2, natürliche Gesteinskörnung, Expositionsklasse XC1 (Bewehrungskorrosion durch Karbonatisierung, trocken/ständig nass), Feuchtigkeitsklasse WO (Betonkorrosion, trockene Umgebung), Deckendic;165,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+230;Ortbeton Deckenplatte, obere Betonfläche waagerecht, als Stahlbeton, Normalbeton C 25/30 DIN EN 206, DIN 1045-2, natürliche Gesteinskörnung, Expositionsklasse XC3 (Bewehrungskorrosion durch Karbonatisierung, mäßig feucht), Feuchtigkeitsklasse WO (Betonkorrosion, trockene Umgebung), Deckendicke 20 cm;135,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+240;Ortbeton Deckenplatte, obere Betonfläche waagerecht, als Stahlbeton, Normalbeton C 25/30 DIN EN 206, DIN 1045-2, natürliche Gesteinskörnung, Expositionsklasse XC3 (Bewehrungskorrosion durch Karbonatisierung, mäßig feucht), Feuchtigkeitsklasse WO (Betonkorrosion, trockene Umgebung), als Sichtbeton, m;60,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+250;Ortbeton Deckenplatte, obere Betonfläche waagerecht, als Stahlbeton, Normalbeton C 25/30 DIN EN 206, DIN 1045-2, natürliche Gesteinskörnung, Expositionsklasse XC4 (Bewehrungskorrosion durch Karbonatisierung, wechselnd nass und trocken), Feuchtigkeitsklasse WF (Betonkorrosion, feuchte Umgebung), Deck;60,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+260;Ortbeton Treppenpodestplatte obere Betonfläche waagerecht, als Stahlbeton, Normalbeton C 25/30 DIN EN 206, DIN 1045-2, natürliche Gesteinskörnung, Expositionsklasse XC1 (Bewehrungskorrosion durch Karbonatisierung, trocken/ständig nass),;35,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+270;Ortbeton Attika, obere Betonfläche waagerecht, als Stahlbeton, Normalbeton C 25/30 DIN EN 206, DIN 1045-2, natürliche Gesteinskörnung, Expositionsklasse XC3 (Bewehrungskorrosion durch Karbonatisierung, mäßig feucht), Feuchtigkeitsklasse WO (Betonkorrosion, trockene Umgebung), Dicke 25 cm.;35,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+280;Schalungsplanung für alle Sichtbeton-Bauteile mit;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+290;Schalung Streifenfundament, Bauteilhöhe bis 0,5 m.;500,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+300;Schalung Bodenplatte, als Randschalung, Schalungshöhe über 25 bis 50 cm.;95,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+310;Schalung Bodenplatte, als Randschalung, Schalungshöhe über 15 bis 25 cm.;5,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+320;Schalung Außenwand, Stirnabschalung wird gesondert vergütet, mit Dreikantleiste für gefaste Betonkanten, Stöße geordnet, Bauteilhöhe über 2 bis 3 m.;325,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+330;"Schalung Außenwand, Randschalung wird gesondert vergütet, Schalungshaut geeignet für sichtbar bleibende Betonflächen, 2. Schalseite ohne Anforderung, mit besonderen Anforderungen, Klasse SB 3 gemäß DBV-Merkblatt ""Sichtbeton"", mit Dreikantleiste für gefaste Betonkanten, Stöße geordnet, ohne Fuge, Hül";50,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+340;Schalung Außenwand, Stirnabschalung wird gesondert vergütet, mit Dreikantleiste für gefaste Betonkanten, Stöße geordnet, Bauteilhöhe über 0,5 bis 1 m.;15,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+350;Schalung Schachtwand, Stirnabschalung wird gesondert vergütet, mit Dreikantleiste für gefaste Betonkanten, Stöße geordnet, Bauteilhöhe über 3 bis 4 m.;70,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+360;"Schalung Schachtwand, Randschalung wird gesondert vergütet, Schalungshaut geeignet für sichtbar bleibende Betonflächen, 2. Schalseite ohne Anforderung, mit normalen Anforderungen, Klasse SB 2 gemäß DBV-Merkblatt ""Sichtbeton"", mit Dreikantleiste für gefaste Betonkanten, Stöße geordnet, ohne Fuge, Hül";35,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+370;"Schalung Schachtwand, Randschalung wird gesondert vergütet, Schalungshaut geeignet für sichtbar bleibende Betonflächen, 2. Schalseite ohne Anforderung, mit besonderen Anforderungen, Klasse SB 3 gemäß DBV-Merkblatt ""Sichtbeton"", mit Dreikantleiste für gefaste Betonkanten, Stöße geordnet, ohne Fuge, H";35,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+380;Schalung Treppenhauswand, Stirnabschalung wird gesondert vergütet, mit Dreikantleiste für gefaste Betonkanten, Stöße geordnet, Hüllrohr aus Faserzement, Bauteilhöhe über 3 bis 4 m, Ausführung gemäß Einzelbeschreibung,;120,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+390;"Schalung Treppenhauswand, Randschalung wird gesondert vergütet, Schalungshaut geeignet für sichtbar bleibende Betonflächen, 2. Schalseite ohne Anforderung, mit besonderen Anforderungen, Klasse SB 3 gemäß DBV-Merkblatt ""Sichtbeton"", mit Dreikantleiste für gefaste Betonkanten, Stöße geordnet, ohne Fug";120,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+400;"Schalung Treppenhauswand, Randschalung wird gesondert vergütet, Schalungshaut geeignet für sichtbar bleibende Betonflächen, mit besonderen Anforderungen, Klasse SB 3 gemäß DBV-Merkblatt ""Sichtbeton"", mit Dreikantleiste für gefaste Betonkanten, Stöße geordnet, ohne Fuge, Hüllrohr aus Faserzement, Bau";300,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+410;Schalung Innenwand, Stirnabschalung wird gesondert vergütet, mit Dreikantleiste für gefaste Betonkanten, Stöße geordnet, Bauteilhöhe über 3 bis 4 m.;480,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+420;"Schalung Innenwand, Stirnabschalung wird gesondert vergütet, Schalungshaut geeignet für sichtbar bleibende Betonflächen, 2. Schalseite ohne Anforderung, mit besonderen Anforderungen, Klasse SB 3 gemäß DBV-Merkblatt ""Sichtbeton"", mit Dreikantleiste für gefaste Betonkanten, Stöße geordnet, Hüllrohr au";230,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+430;"Schalung Innenwand, Stirnabschalung wird gesondert vergütet, Schalungshaut geeignet für sichtbar bleibende Betonflächen, mit besonderen Anforderungen, Klasse SB 3 gemäß DBV-Merkblatt ""Sichtbeton"", mit Dreikantleiste für gefaste Betonkanten, Stöße geordnet, Hüllrohr aus Faserzement, Bauteilhöhe über ";50,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+440;Zulage für die Herstellung einer vorgezogenen  Sichtbetonwand SB3 wie vor beschrieben,;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+450;"Schalung Treppenhauswand, als Randschalung, Wanddicke über 20 bis 25 cm, Schalungshaut geeignet für sichtbar bleibende Betonflächen, mit besonderen Anforderungen, Klasse SB 3 gemäß DBV-Merkblatt ""Sichtbeton"", mit Dreikantleiste für gefaste Betonkanten, ohne Fuge, Bauteilhöhe über 3 bis 4 m.";15,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+460;"Schalung Stütze, außen, Querschnitt rund, Schalungshaut geeignet für sichtbar bleibende Betonflächen, mit besonderen Anforderungen, Klasse SB 3 gemäß DBV-Merkblatt ""Sichtbeton"", mit geordneten Stößen, ohne Fuge, Bauteilhöhe über 3 bis 4 m.";65,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+470;Schalung Deckenplatte, waagerecht,;50,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+480;Höhe der Abstützung über 3,5 bis 4,0m;210,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+490;Schalung Deckenplatte Aufzugsschacht, waagerecht,;5,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+500;Schalung Deckenplatte Treppenhaus, waagerecht,;22,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+510;Höhe der Abstützung über 10,5 bis 11,0m;22,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+520;Schalung Deckenplatte Aussenbereich waagerecht,;120,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+530;Schalung Treppenpodestplatte, waagerecht,;15,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+540;Höhe der Abstützung über 1,5 bis 2,5m;15,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+550;Höhe der Abstützung über 2,5 bis 3,5m.;10,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+560;Schalung Podestplatte als Randschalung;10,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+570;Aufbauen und Abbauen sowie Vorhalten von Traggerüsten der Bemessungsklasse B nach DIN EN 12812 für alle eigenen Leistungen des AN, wie vor beschrieben,;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+580;Schalung Deckenplatte, als Randschalung, Schalungshöhe über 15 bis 25 cm.;345,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+590;"Schalungshaut geeignet für sichtbar bleibende Betonflächen, mit besonderen Anforderungen, Klasse SB 3 gemäß DBV-Merkblatt ""Sichtbeton"".";30,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+600;Schalung Attika, Stirnabschalung wird gesondert vergütet, Bauteilhöhe über 0,5 bis 1 m.;70,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+610;Schalung Attika, als Stirnabschalung, Wanddicke über 20 bis 25 cm, mit Dreikantleiste für gefaste Betonkanten, Bauteilhöhe über 0,5 bis 1 m.;10,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+620;Schalung für Öffnungen, in Decken- und Bodenplatten aus Stahlbeton, Schalungshaut für Betonflächen ohne Anforderung;20,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+630;Einzelgröße über 1.000 bis 2.500 cm2.;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+640;Schalung für Türöffnungen in Wänden aus Stahlbeton, Aussparungstiefe von 20 bis 25 cm ,;4,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+650;Einzelgröße über 25.000 bis 50.000 cm2.;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+660;"Schalung für Türöffnungen in Wänden aus Stahlbeton, Schalungshaut geeignet für sichtbar bleibende Betonflächen,mit besonderen Anforderungen, Klasse SB 3 gemäß DBV-Merkblatt ""Sichtbeton"",";15,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+670;Einzelgröße über 25.000 bis 50.000 cm2.;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+680;Einzelgröße über 50.000 bis 75.000 cm2.;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+690;Schalung für Öffnungen, in Wänden aus Stahlbeton,;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+700;Schalung Schlitz, Schlitztiefe bis 5 cm, Schlitzbreite über 5 bis 10 cm, für Innenwand aus Ortbeton.;20,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+710;Schalung Schlitz, Schlitztiefe über 5 bis 10 cm, Schlitzbreite über 5 bis 10 cm, für Innenwand aus Ortbeton.;20,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+720;prov. Abdeckungen von Deckenöffnungen im Obergeschoss, aus Holz, unverschiebbar, durchtrittsicher und regendicht,;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+730;Durchbruch schließen, Ausführung in Deckenfläche, mit Durchdringungen, aus Beton,;15,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+740;Erstellen einer Werk- und Montageplanung für alle WU-Bauteile einschl. Abdichtung;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+750;Frischbetonkunststoffbahn mit Verbundschicht;1430,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+760;an Stirnflächen der Bodenplatte, Höhe der Bodenplatten von 20 bis 40 cm;310,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+770;außen in zweihäuptig geschalten Außenwänden (der Tiefergündung), Wandhöhe ca. 300 cm.;190,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+780;außen in zweihäuptiger Schachtwand (des Aufzugschachts), Wandhöhe ca. 65 cm,;6,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+790;Ausbildung der Anschlüsse;385,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+800;Frischbetonkunststoffbahn mit Verbundschicht;490,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+810;Spannstelle nach dem Ausschalen entsprechend den Herstellervorgaben abkleben.;100,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+820;Anbindung an einen Stahlbetonfertiglichtschacht mittels;5,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+830;Bewehrung aus Betonstabstahl B500B DIN 488-1, DIN 488-2, alle Durchmesser, alle Längen, Ausführung gemäß Zeichnung.;45,0;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+840;Bewehrung aus Betonstahlmatten B500B DIN 488-1, DIN 488-4, als Lagermatte.;51,0;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+850;Unterstützungsböcke, Abstandhalter für Bewehrung;2,0;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+860;Unterstützungskörbe, Abstandhalter für Bewehrung;1,0;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+870;Rückbiegeanschluss aus Betonstahl B500B;100,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+880;Rückbiegeanschluss aus Betonstahl B500B;23,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+890;Rückbiegeanschluss aus Betonstahl B500B;250,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+900;Ankerschiene aus Stahl feuerverzinkt,;8,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+910;Leistung wie vor, jedoch;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+920;Lastöse aus Stahl feuerverzinkt,;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+930;Gerüsthülsen, bauseits beigestellt,;18,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+940;Trittschalldämmelement, tragend, zwischen Treppenpodest und -lauf, gerader Lauf, mit Konsolauflager, in Betonfertigteilbauweise, Dämmstoff Polyethylen-Schaum, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar), Feuerwiderstandsklasse R 90 DIN EN 13501-2, Dicke Treppenlaufplatte 20 cm,;20,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+950;schallbrückenfreie Fugenausbildung, nicht tragend, zwischen Treppenlauf und -hauswand,;22,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+960;Tragendes Trittschalldämmelement zwischen Treppenlauf und Bodenplatte. Aus hoch widerstandsfähigem PE-Schaum, selbstklebend. Zur sicheren schallbrückenfreien Ausführung der Fuge.;3,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+970;Dorn zur Lagesicherung des vorbeschriebenen Trittschaldämmelementes zwischen Lauf- und Bodenplatte,;4,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+980;Fugenblech zur Abdichtung von horizontalen und vertikalen Arbeitsfugen zwischen Bodenplatte und Wand;260,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+990;Eckausbildung vor beschriebener Fugenbleche.;20,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1000;Licht- und Lüftungsschacht, als 1-teiliges Betonfertigteil aus wasserundurchlässigem Beton,;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1010;Treppenlauf, gerade, als Fertigteil DIN EN 13369 und DIN EN 14843, Dicke Treppenlaufplatte 20 cm, Breite Treppenlauf 144 cm,;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1020;Steigungen '7' St ,;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1030;Treppenlauf, gerade, als Fertigteil DIN EN 13369 und DIN EN 14843, Dicke Treppenlaufplatte 20 cm, Breite Treppenlauf 144 cm,;4,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1040;Brückenpodestplatte als Fertigteil DIN EN 13369,;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1050;Anschluss der vorbeschriebenen Brückenpodestplatte an die  Brettsperrholzdecke (siehe Titel 14) des Bau D bzw. E, mit;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1060;Bewehrung aus Betonstabstahl B500A DIN 488-1, DIN 488-2, alle Durchmesser, alle Längen, Ausführung gemäß Zeichnung für Betonfertigteile;2,0;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1070;Schutz von Sichtbetonbodenflächen der Treppenfertigteile,;100,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1080;als Flächenschutz auf dem Brückenfertigteil;30,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+10;Fundamenterder aus Bandstahl verzinkt,;270,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+20;Ringerder 10 mm Edelstahl, V4A;360,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+30;Anschlußfahnen 10 mm, bis 3 m Länge,;22,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+40;Erdungsanschlüsse an Metallkonstruktion;8,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+50;Mauerdurchführungen bis 60 cm Wandstärke,;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+60;Durchführungen durch Bauteile aus WU-Beton mit außenliegender Frischbeton-Verbundfolie;10,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+70;Revisionsunterlagen Fundamenterder Neubau (Bauteil D und E gemeinsam);1,0;Psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+80;Leerrohr M20 aus Kunststoff, PVC- und Halogen-frei,;45,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+90;M25;50,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+100;Zugdraht zum Einziehen in die vorher genannten Leerrohrsysteme;120,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+110;Gerätedose DIN VDE 0606-1 und DIN 49073, aus;8,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+120;Gerätedose DIN VDE 0606-1 und DIN 49073, aus;20,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+130;Deckendose 45° mit:;8,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+140;End- und Übergangstüllen sowie Wand- und Deckenkrümmer 30° zur Sicherung eines;10,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+10;Rechtzeitig vor Beginn der Ausfühung der eigenen Stahlbauarbeiten hat der AN eigenverantwortlich vorgegebene Maße und benannte Höhen auf Übereinstimmung mit am Bau vorhandenen Meterrissen und die Maßgenauigkeit des Rohbaus sowie der Bestandssituation des Übergang OG von der Mensa Bau D zum Bestandsg;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+20;Vom AN sind folgende Zeichnungen anzufertigen: Ausführungszeichnungen einschl. Übersichts- und Detailzeichnungen, in Papierform und auf Datenträger, Wechseldatenträger - USB in den Datenformaten DXF und PDF.;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+30;Vom AN sind folgende Berechnungen anzufertigen: statische Berechnungen mit Positionsplänen, in Papierform und auf Datenträger, Wechseldatenträger - USB in den Datenformaten DXF und PDF.;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+40;Gerüste, Höhenarbeitsbühnen, Höhenzugangstechnik und Personensicherungssysteme für eigene Stahlbauarbeiten entsprechend den UVV aufstellen, für die Dauer der eigenen Arbeiten vorhalten und abbauen.;1,0;Psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+50;Hauptstützen aus Profilstahl HEB-200,;1,8;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+60;OG-Stützen aus Profilstahl HEA-200,;0,3;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+70;Hauptstützen aus Profilstahl HEA-160,;0,5;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+80;Hauptträger aus Profilstahl HEA-160,;0,4;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+90;Hauptträger aus Profilstahl HEA-200,;0,7;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+100;Hauptträger aus Profilstahl HEB-240,;1,3;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+110;Hauptträger aus Profilstahl HEA-160,;0,2;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+120;Hauptträger aus Profilstahl HEB-200,;1,5;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+130;Diagonalträger aus Profilstahl HEA-200,;0,9;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+140;Unterkonstruktion für aufgeständerten Boden im Verbindungsbau gemäß Plan A-12.02_Detailplan_Verbindungsbau;0,75;t;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+150;Kreuzverband Zugstabsystem aus Rundstahl D 20 mm, Einzellänge ca. 4.900 mm,;4,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+160;Einzellänge ca. 3.100 mm,;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+170;Kreuzverband Zugstabsystem aus Rundstahl D 16 mm, Einzellänge ca. 5,200 mm,;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+180;Abschlussprofil für Trapezblechanschluss an Wand,;10,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+190;Stahltrapezprofil DIN EN 1090-1 als Tragschale für Flachdach, konstruktive Ausbildung DIN EN 1090-4, aus Stahlblech DIN EN 10346 S280GD, verzinkt und  kunststoffbeschichtet (ALZ),;30,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+200;Profilbezeichnung 85/280 mm ,;26,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+210;Sickendämmung in vor beschriebes Stahltrapezprofil 135/310 mm, aus Mineralwolle, MW DIN EN 13162, Bemessungswert der Wärmeleitfähigkeit max. 0,032 W/(mK),;30,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+220;Profilbezeichnung 85/280 mm ,;14,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+230;Sickendämmung wie vor beschrieben jedoch;30,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+240;Profilbezeichnung 85/280 mm ,;14,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+250;Stützenfußbefestigung der vor beschriebenen Stützenträger;12,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+10;Werkstatt- und Montagepläne für die gesamte Holzkonstruktion;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+20;Bestandsdokumentation für die gesamte Holzkonstruktion;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+30;Feuchtemanagement / Witterungsschutz zur Kontrolle der Feuchte, um sicherzustellen,;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+40;Luftdichtigkeitsmanagement zur Koordination und Kontrolle der Maßnahmen zur Einhaltung der geforderten Luftwechselrate von n50 < 1,0 1/h.;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+50;Wetterschutzbahn zum Schutz der Decken und Dächer während der Bauzeit,;2725,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+60;Sockelabdichtung mit vorbeschriebener Wetterschutzbahn,;950,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+70;an Stützen, Umfang bis 100 cm, 4 Ecken;158,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+80;Abdichtung der Stirnflächen / Deckenkanten;460,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+90;Folienabdeckung der Stützen aus Holz;158,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+100;Folienabdeckung der Träger aus Holz;690,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+110;Folienabdeckung der Wände und Brüstungen aus Holz;860,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+120;Durchtrittsichere, unverschiebliche Abdeckung und;100,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+130;Einzelgröße über 0,25 bis 0,5 m2;15,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+140;Einzelgröße über 0,5 bis 1 m2;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+150;Durchtrittsichere, unverschiebliche Abdeckung und;40,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+160;Provisorischer Deckeneinlauf in Deckenplatten aus Bettsperrholz;20,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+170;Provisorische Regenentwässerungsleitung;75,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+180;Schutz der Stütze gegen mechanische Beschädigung während der Bauzeit;158,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+190;Abdichtung unter Stützen und Wänden auf Betonbodenplatten;160,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+200;Stütze, aus Brettschichtholz, Nutzungsklasse 1 DIN EN 1995-1-1, Gebrauchsklasse 0 DIN 68800-1, ohne chemischen Holzschutz, Holzart Fichte/Tanne, Festigkeitsklasse GL 24c DIN EN 14080, Oberfläche Sichtqualität (gehobelt, Bläue und Rotstreifigkeit auf 10 % der Oberfläche und fest verwachsene Äste zulä;15,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+210;Länge ca. 3,87 m;3,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+220;Stütze, aus Brettschichtholz, Nutzungsklasse 1 DIN EN 1995-1-1, Gebrauchsklasse 0 DIN 68800-1, ohne chemischen Holzschutz, Holzart Fichte/Tanne, Festigkeitsklasse GL 24c DIN EN 14080, Oberfläche Sichtqualität (gehobelt, Bläue und Rotstreifigkeit auf 10 % der Oberfläche und fest verwachsene Äste zulä;25,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+230;Länge über 3,35 bis 3,55 m;86,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+240;Stütze, aus Brettschichtholz, Nutzungsklasse 1 DIN EN 1995-1-1, Gebrauchsklasse 0 DIN 68800-1, ohne chemischen Holzschutz, Holzart Fichte/Tanne, Festigkeitsklasse GL 28h DIN EN 14080, Oberfläche Sichtqualität (gehobelt, Bläue und Rotstreifigkeit auf 10 % der Oberfläche und fest verwachsene Äste zulä;29,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+250;Holzrahmenbaukonstruktion als aussteifende Außenwand, tragend,;15,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+260;Einzellänge über 1,00 bis 2,50 m;35,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+270;Einzellänge über 2,50 bis 3,50 m;160,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+280;Holzrahmenbaukonstruktion als Brüstung in Außenwand,;250,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+290;Höhe über 1,00 bis 1,10 m;18,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+300;Holzrahmenbaukonstruktion als Sturz in Außenwand,;205,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+310;Höhe über 0,65 bis 0,70 m;70,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+320;Holzrahmenbaukonstruktion als Attika,;210,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+330;Wärmedämmschicht zwischen Betonsockel und Außenwand;140,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+340;Dampfbremse feuchtevariabel, sd-Wert variabel zwischen 0,2 und 20 m;500,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+350;Bauteilbreite über 25 bis 50 cm;205,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+360;Bauteilbreite über 50 bis 75 cm;200,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+370;Holzrahmenbaukonstruktion als aussteifende Innenwand, tragend,;6,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+380;Einzellänge über 6,50 bis 7,00 m;150,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+390;Holzrahmenbaukonstruktion als aussteifende Innenwand, tragend,;55,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+400;Einzellänge über 6,50 bis 7,00 m;140,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+410;Einzellänge über 14,00 bis 14,50 m;55,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+420;Öffnung herstellen als Türöffnung in vorbeschriebenen Wänden;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+430;Abmessungen BxH ca. 0,96 x 2,65 m;4,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+440;Abmessungen BxH ca. 1,10 x 2,65 m;12,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+450;Abmessungen BxH ca. 1,10 x 3,40 m;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+460;Abmessungen BxH ca. 1,35 x 2,85 m;6,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+470;Abmessungen BxH ca. 1,65 x 2,65 m;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+480;Öffnung herstellen in vorbeschriebenen Wänden;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+490;Öffnung herstellen in vorbeschriebenen Wänden;25,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+500;Querschnitt über 250 bis 500 cm2;15,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+510;Querschnitt über 500 bis 1000 cm2;10,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+520;Querschnitt über 1000 bis 2500 cm2;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+530;Öffnung schalldicht schließen in vorbeschriebenen Innenwänden;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+540;Öffnung schalldicht schließen in vorbeschriebenen Innenwänden;25,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+550;Querschnitt über 250 bis 500 cm2;15,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+560;Querschnitt über 500 bis 1000 cm2;10,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+570;Querschnitt über 1000 bis 2500 cm2;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+580;Deckenträger, aus Brettschichtholz, Nutzungsklasse 1 DIN EN 1995-1-1, Gebrauchsklasse 0 DIN 68800-1, ohne chemischen Holzschutz, Holzart Fichte/Tanne, Festigkeitsklasse GL 28c DIN EN 14080, Oberfläche Auslesequalität (gehobelt, frei von Bläue und Rotstreifigkeit, fest verwachsene Äste zulässig, alle;8,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+590;Länge ca. 3,40 bis 3,60 m;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+600;Deckenträger, aus Brettschichtholz, Nutzungsklasse 1 DIN EN 1995-1-1, Gebrauchsklasse 0 DIN 68800-1, ohne chemischen Holzschutz, Holzart Fichte/Tanne, Festigkeitsklasse GL 28c DIN EN 14080, Oberfläche Auslesequalität (gehobelt, frei von Bläue und Rotstreifigkeit, fest verwachsene Äste zulässig, alle;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+610;Länge ca. 7,20 m;4,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+620;Länge ca. 28,80 m;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+630;Deckenträger, aus Brettschichtholz, Nutzungsklasse 1 DIN EN 1995-1-1, Gebrauchsklasse 0 DIN 68800-1, ohne chemischen Holzschutz, Holzart Fichte/Tanne, Festigkeitsklasse GL 28c DIN EN 14080, Oberfläche Auslesequalität (gehobelt, frei von Bläue und Rotstreifigkeit, fest verwachsene Äste zulässig, alle;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+640;Länge ca. 14,40 m;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+650;Länge ca. 18,00 m;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+660;Länge ca. 28,80 m;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+670;Deckenträger, aus Brettschichtholz, Nutzungsklasse 1 DIN EN 1995-1-1, Gebrauchsklasse 0 DIN 68800-1, ohne chemischen Holzschutz, Holzart Fichte/Tanne, Festigkeitsklasse GL 28c DIN EN 14080, Oberfläche Auslesequalität (gehobelt, frei von Bläue und Rotstreifigkeit, fest verwachsene Äste zulässig, alle;4,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+680;Länge ca. 10,80 m;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+690;Länge ca. 14,40 m;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+700;Deckenträger, aus Brettschichtholz, Nutzungsklasse 1 DIN EN 1995-1-1, Gebrauchsklasse 0 DIN 68800-1, ohne chemischen Holzschutz, Holzart Fichte/Tanne, Festigkeitsklasse GL 28c DIN EN 14080, Oberfläche Auslesequalität (gehobelt, frei von Bläue und Rotstreifigkeit, fest verwachsene Äste zulässig, alle;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+710;Länge ca. 10,80 m;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+720;Länge ca. 14,40 m;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+730;Deckenträger, aus Brettschichtholz, Nutzungsklasse 1 DIN EN 1995-1-1, Gebrauchsklasse 0 DIN 68800-1, ohne chemischen Holzschutz, Holzart Fichte/Tanne, Festigkeitsklasse GL 28c DIN EN 14080, Oberfläche Auslesequalität (gehobelt, frei von Bläue und Rotstreifigkeit, fest verwachsene Äste zulässig, alle;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+740;Länge ca. 3,60 m;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+750;Länge ca. 7,20 m;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+760;Länge ca. 10,80 m;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+770;Länge ca. 14,40 m;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+780;Deckenträger, aus Brettschichtholz, Buchenfurnierschschichtholz für tragende Zwecke;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+790;Deckenträger, aus Brettschichtholz, Buchenfurnierschschichtholz für tragende Zwecke;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+800;Länge ca. 10,80 m;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+810;Länge ca. 14,40 m;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+820;Deckenträger, aus Brettschichtholz, Buchenfurnierschschichtholz für tragende Zwecke;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+830;Länge ca. 28,80 m;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+840;Deckenträger, aus Brettschichtholz, Buchenfurnierschschichtholz für tragende Zwecke;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+850;Deckenträger, aus Brettschichtholz, Buchenfurnierschschichtholz für tragende Zwecke;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+860;Länge ca. 7,20 m;3,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+870;Länge ca. 10,80 m;3,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+880;Länge ca. 14,40 m;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+890;Deckenträger, aus Brettschichtholz, Buchenfurnierschschichtholz für tragende Zwecke;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+900;Länge ca. 10,80 m;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+910;Länge ca. 14,40 m;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+920;Länge ca. 21,60 m;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+930;Füllholz/Verblockung oberhalb von Wänden zwischen Trägern/Deckenbalken;30,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+940;Breite 12 cm, Höhe 36 cm;20,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+950;Decke aus Brettsperrholz DIN EN 16351, Feuerwiderstandsklasse F 30 - B DIN 4102-4, Gebrauchsklasse 0 DIN 68800-1, ohne chemischen Holzschutz, Holzart Nordische Fichte, Festigkeitsklasse C 24 DIN EN 338, 5 Schichten;565,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+960;Rippendecke;650,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+970;Rippen BxH = 24 x 36 cm;270,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+980;Rippen BxH = 28 x 36 cm;350,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+990;Rippen BxH = 28 x 52 cm;370,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1000;Brüstung aus Brettsperrholz DIN EN 16351, Feuerwiderstandsklasse F 30 - B DIN 4102-4, Gebrauchsklasse 0 DIN 68800-1, ohne chemischen Holzschutz, Holzart Nordische Fichte, Festigkeitsklasse C 24 DIN EN 338,;30,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1010;Ecke auf Gehrung ausbilden in vorbeschriebenen Brüstungen;4,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1020;Holzrahmenbaukonstruktion als 3-seitige Unterkonstruktion für Oberlichtverglasung;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1030;Aussparung in Brettsperrholzdecke,;20,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1040;Durchmesser über 25 bis 50 cm;10,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1050;Öffnung herstellen in vorbeschriebenen Decken;45,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1060;Querschnitt über 250 bis 500 cm2;20,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1070;Querschnitt über 500 bis 1000 cm2;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1080;Querschnitt über 1000 bis 2500 cm2;15,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1090;Querschnitt über 2500 bis 5000 cm2;15,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1100;Öffnung schließen in vorbeschriebenen Decken;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1110;Querschnitt über 250 bis 500 cm2;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1120;Öffnung schließen in vorbeschriebenen Decken;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1130;Querschnitt über 250 bis 500 cm2;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1140;Querschnitt über 500 bis 1000 cm2;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1150;Querschnitt über 1000 bis 2500 cm2;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1160;Querschnitt über 2500 bis 5000 cm2;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1170;Anschluss Stützenfuß an Stahlbeton-Bodenplatte;83,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1180;Anschluss Attika an Randbalken;210,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1190;gemäß Schnitt C-C;110,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1200;Anschluss Attika an Randbalken;120,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1210;Anschluss Stütze an Balken;104,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1220;Anschluss Brüstung an Balken;50,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1230;Anschluss Balken an Balken;128,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1240;Anschlusskräfte N,d bis 25 kN, Vz,d bis 40 kN;48,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1250;Anschlusskräfte N,d bis 30 kN, Vz,d bis 50 kN;70,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1260;Anschlusskräfte N,d bis 40 kN, Vz,d bis 88 kN;60,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1270;Anschluss Decke an Decke;840,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1280;Anschluss Decke an Balken;345,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1290;Anschluss Decke an Riegel;115,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1300;Anschlusskräfte Vy,d bis 5 kN/m, Vz,d bis 15 kN/m;48,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1310;Anschlusskräfte Vz,d bis 23 kN/m;15,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1320;Anschluss Decke an Stahlbeton-Wand;46,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1330;Anschlusskräfte Vy,d bis 5 kN/m, Vz,d bis 15 kN/m;46,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1340;Anschluss Brüstung an Stütze;16,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1350;Anschluss Stütze an Balken;22,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1360;Anschlusskräfte Vy,d bis 15 kN;15,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1370;Anschlusskräfte Vy,d bis 30 kN;56,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1380;Anschlusskräfte Vy,d bis 35 kN;184,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1390;Anschluss Decke an Balken;1290,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1400;Anschluss Verblockung zwischen Deckenbalken;15,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1410;Verbundanker zwischen Oberlichtzarge und Stahlbetonwand;6,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1420;Konsole für Vordächer gemäß Zeichnung Blatt K9 Regeldetail 1;30,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1430;Konsole für Vordächer gemäß Zeichnung Blatt K9 Regeldetail 2;32,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1440;Konsole für Vordächer gemäß Zeichnung Blatt K9 Regeldetail 3;36,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1450;Konsole für Vordächer gemäß Zeichnung Blatt K9 Regeldetail 4;16,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1460;Bauschnittholz Holzart Fichte/Tanne, Gebrauchsklasse 0 DIN 68800-1, ohne chemischen Holzschutz, Festigkeitsklasse C 24 DIN EN 338, Sortierklasse S 10 DIN 4074-1, Nutzungsklasse 2, max. Holzfeuchte 18 %, bis Querschnitt 6/14 cm, Einzellänge bis 4 m.;11,0;m3;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1470;Querschnitt 8/16 cm;5,0;m³;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1480;Abbinden und Aufstellen oder Verlegen des Bauschnittholzes, Holzart Fichte/Tanne, bis Querschnitt 6/14 cm, für Vordach, Oberfläche quer geneigt ausbilden;1300,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1490;Querschnitt 8/16 cm;460,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1500;Schifterschnitt.;130,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1510;Ausnehmung an Stirn vorbeschriebener Hölzer;2120,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1520;Anschluss Balkenkopf an Profilstahlträger,;2120,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1530;Dachschalung Vordach, als Unterlage für Deckung, aus Sperrholzplatten DIN EN 13986,;520,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1540;als Randschalung, Breite ca. 20 cm;435,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1550;Bekleidung des Vordachs unterseitig,;520,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1560;Gehrung ausbilden in vorbeschriebenen Schalungen und Bekleidungen.;16,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1570;Aussparung in Vordach,;32,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1580;Holzrahmenbaukonstruktion als Außenschale auf tragenden Außenwänden und Stützen,;1300,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1590;Dampfbremse feuchtevariabel, sd-Wert variabel zwischen 0,2 und 20 m;400,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1600;Rollraum ausbilden an Unterkante vorbeschriebener Außenschale;85,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1610;Länge ca. 150 cm.;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1620;Anarbeiten vorbeschriebener Außenschale an Konsolen der Vordächer;115,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1630;Unterkonstruktion für Außenwandbekleidung, aus Bauschnittholz, Holzart Fichte/Tanne, Gebrauchsklasse 3 - Holz der Bewitterung oder Kondensation ausgesetzt,;1200,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1640;Vorbeugender chemischer Holzschutz für nicht sichtbar bleibende Bauteile,;1200,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1650;Außenwandbekleidung, im Außenbereich, als Boden-Deckel-Schalung senkrecht;1050,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1660;unter Vordächern, Höhe ca. 25 cm.;310,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1670;an Brüstungen EG, Höhe ca. 40 cm.;70,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1680;an Brüstungen EG, Höhe ca. 70 cm.;20,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1690;Außenwandbekleidung, im Außenbereich, an Leibungen von Öffnungen;70,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1700;Außenwandbekleidung, im Außenbereich, als Lisene zwischen Öffnungen;8,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1710;Höhe ca. 195 cm,;80,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1720;Höhe ca. 275 cm,;8,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1730;Abschrägen der unteren Stirnseiten aller vertikalen Holzbretter;900,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1740;Ausklinkung in vorbeschriebener Bekleidung;20,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1750;Kleintierschutz am oberen und unteren Abschluss der Lüftungsebene der Außenwandbekleidung;1800,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1760;Revi-Klappe in vorbeschriebener Außenwandbekleidung;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+1770;Mediendurchführung durch vorbeschriebene Außenwandbekleidung;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+10;Planung der Gefälledämmung auf Grundlage der AG-seitigen Planung,;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+20;Reinigen des Untergrundes aus Beton von festhaftenden Verunreinigungen, aufgenommene Stoffe entsorgen, nicht gefährlich, nicht schadstoffbelastet.;135,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+30;Reinigen des Untergrundes aus Wetterschutzfolie von festhaftenden Verunreinigungen, aufgenommene Stoffe entsorgen, nicht gefährlich, nicht schadstoffbelastet,;1590,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+40;Trocknen des Untergrundes, Untergrund Beton und Holz;1725,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+50;Voranstrich für bahnenförmige Abdichtungen, aus Bitumenemulsion, auf Decke, Untergrund Beton.;135,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+60;Dampfsperre als Luftdichtheits- und diffusionsdichte Schicht sd-Wert größer gleich 1500 m DIN 4108-3, DIN 4108-7, für nicht belüftetes Dach, aus Bitumenbahnen, kaltselbstklebende Elastomerbitumenbahn mit Aluminium-Polyester-Kombination mit Glasgewebe 200 g/m²;135,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+70;Vorbeschriebene Dampfbremse luft- und dampfdicht ebenengleich anschließen an Wetterschutz-/Dampfsperrbahn aus PP-Faservlies mit rutschhemmender Beschichtung (aus Titel Holzbau),;70,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+80;Wärmedämmschicht als Flachdachdämmung, für nicht belüftetes Dach, aus Polyurethan-/Polyisocyanurat-Hartschaum in Platten, PUR/PIR DIN EN 13165, Anwendungsgebiet DIN 4108-10 DAA, hohe Druckbelastbarkeit - dh, Bemessungswert der Wärmeleitfähigkeit max. 0,030 W/(mK), Nennwert der Wärmeleitfähigkeit max;1200,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+90;Gefälledämmschicht als Flachdachdämmung, für nicht belüftetes Dach, Neigung über 2 bis 2,5 %, aus Polyurethan-/Polyisocyanurat-Hartschaum in Platten, PUR/PIR DIN EN 13165, Anwendungsgebiet DIN 4108-10 DAA, hohe Druckbelastbarkeit - dh, Bemessungswert der Wärmeleitfähigkeit max. 0,030 W/(mK), Nennwer;1200,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+100;Abdichtung von Dächern, DIN 18531-1 und DIN 18531-3, für nicht genutzte Dächer, Neigung größer gleich 2 %, Anforderungen hinsichtlich Widerstandsfähigkeit gegen Flugfeuer und strahlende Wärme B ROOF, Untergrund Dämmschicht aus Polyurethan-/Polyisocyanurat-Hartschaum, 2-lagig,;1200,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+110;Horizontale Dränschicht aus vlieskaschierten Dränmatten, Abrechnung in der Horizontalprojektion.;1200,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+120;Vegetationstragschicht für mehrschichtige Dachbegrünung, als Vegetationssubstrat für Extensivbegrünung, Gehalt an organischer Substanz bis 65 g/l, Korngröße 0/1 bis 0/8 mm, Gehalt an Feinanteilen kleiner 0,063 mm bis 15 %, Wasserdurchlässigkeit 0,3 bis 30 mm/min, max. Wasserkapazität 35 bis 65 Vol.-;1200,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+130;Säfertige Mischung zur Dachbegrünung;1200,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+140;Fertigstellungspflege für vorbeschriebene extensive Begrünung bei Ansaat entsprechend den FLL Dachbegrünungsrichtlinien;1200,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+150;Entwicklungspflege für vorbeschriebene extensive Begrünung im 1. und 2. Jahr nach Fertigstellung, entsprechend den FLL Dachbegrünungsrichtlinien;3600,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+160;Kiesfangleiste aus Aluminium zur Randeinfassung und Abgrenzung von Dachbegrünungen.;200,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+170;Sicherheitsstreifen für Dachbegrünung aus Kies, Körnung 16/32, Schichtdicke 5 cm, durchschnittliche Breite 50 cm.;130,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+180;Attikaanschluss, starr,;200,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+190;Anschluss an Oberlichtzarge;31,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+200;Anschluss an Oberlicht, wärmegedämmt, starr,;21,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+210;Ausbildung von Innen- und Außenecken in vorbeschriebenen hochgeführten Abdichtungen;32,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+220;Anschluss an Aufsatzkranz von Flachdachfenster, starr,;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+230;Bautenschutzmatte aus Gummigranulat auf Recyclingbasis;100,0;m²;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+240;Attikagully, aus Polyurethan, wärmegedämmt, Nennweite DN 100.;8,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+250;Rechteckspeier aus Edelstahl rostfrei,;12,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+260;Einzelformteil als Mediendurchgang,;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+270;Nennweite 150 mm;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+280;Einzelformteil als Lüfterhaube für Dunstrohr,;16,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+290;Formstück als Kabeldurchgang für Einzelkabel;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+300;Abdichtung von Dächern, DIN 18531-1 und DIN 18531-3, für nicht genutzte Dächer, Neigung größer gleich 2 %, Anforderungen hinsichtlich Widerstandsfähigkeit gegen Flugfeuer und strahlende Wärme B ROOF, Untergrund Holz, 2-lagig,;525,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+310;Attikaabschluss, starr,;435,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+320;Wandanschluss, starr,;420,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+330;Ausbildung von Innen- und Außenecken in vorbeschriebenen hochgeführten Abdichtungen;30,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+340;Balkondirekteinlauf mit Fallrohrdurchgang,;32,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+350;Dampfsperre als Luftdichtheits- und diffusionsdichte Schicht sd-Wert größer gleich 1500 m DIN 4108-3, DIN 4108-7, für nicht belüftetes Dach, aus Bitumenbahnen, kaltselbstklebende Elastomerbitumenbahn mit Aluminium-Polyester-Kombination mit Glasgewebe 200 g/m²;100,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+360;Vorbeschriebene Dampfbremse luft- und dampfdicht anschließen an Dampfsperrbahn aufgehender Bauteile (Wand/Attika).;85,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+370;Ausbildung von Innen- und Außenecken in vorbeschriebener hochgeführter Dampfbremse;16,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+380;Wärmedämmschicht als Flachdachdämmung, für nicht belüftetes Dach, aus Polyurethan-/Polyisocyanurat-Hartschaum in Platten, PUR/PIR DIN EN 13165, Anwendungsgebiet DIN 4108-10 DAA, hohe Druckbelastbarkeit - dh, Bemessungswert der Wärmeleitfähigkeit max. 0,030 W/(mK), Nennwert der Wärmeleitfähigkeit max;100,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+390;Abdichtung von Dächern, DIN 18531-1 und DIN 18531-3, für nicht genutzte Dächer, Neigung größer gleich 2 %, Anforderungen hinsichtlich Widerstandsfähigkeit gegen Flugfeuer und strahlende Wärme B ROOF, Untergrund Dämmschicht aus Polyurethan-/Polyisocyanurat-Hartschaum, 2-lagig,;100,0;m2;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+400;Attika-/Wandanschluss, starr,;85,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+410;Ausbildung von Innen- und Außenecken in vorbeschriebenen hochgeführten Abdichtungen;16,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+420;Technische Bearbeitung der RWA-Oberlichter;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+430;Flachdachfenster als RWA einschl. Aufsatzkranz,;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+440;RWA-Zentrale EN 24V 2,5A-1-1 Basic BUS;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+450;24 V / 230V -Schlüsseltaster, AP, IP20;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+460;Wind-/ Regenfühler einschl. Standrohr;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+470;Decken-Rauchmelder zum Anschluss an vorbeschriebene RWA-Zentrale;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+480;Wartung aller vorbeschriebenen RWA-Anlagen;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+490;im 2. Jahr nach Abnahme;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+500;im 3. Jahr nach Abnahme;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+510;im 4. Jahr nach Abnahme;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+10;Attikaabdeckung aus legiertem Zink DIN EN 988 (Titanzink),;210,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+20;Zuschnittbreite 500 mm;35,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+30;Zuschnittbreite 900 mm;15,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+40;Außenecke, aus Titanzink, Dicke 0,7 mm, zur Attikaabdeckung.;8,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+50;Schiebenaht, hinterlegt, aus Titanzink, Dicke 0,7 mm, zur Attikaabdeckung.;35,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+60;Gesimsabdeckung Vordach aus legiertem Zink DIN EN 988 (Titanzink),;435,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+70;Außenecke, aus Titanzink, Dicke 0,7 mm, zur Gesimsabdeckung.;30,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+80;Regenfallrohr DIN EN 612, kreisförmig, Nenngröße 100, aus legiertem Zink DIN EN 988 (Titanzink), Dicke 0,7 mm, befestigen mit Rohrschellen, an Holz.;130,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+90;Rohrbogen für Regenfallrohr, aus legiertem Zink DIN EN 988 (Titanzink), Dicke 0,7 mm, Nenngröße 100, Krümmung 72 Grad.;16,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+100;Standrohrkappe für Standrohr, aus legiertem Zink DIN EN 988 (Titanzink).;16,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+110;Regenstandrohr aus verzinktem Stahl, Dicke 2 mm, kreisförmig, Nenngröße 100, Länge 2 m, Befestigung mit Rohrschelle an Holz, einschl. Anschluss an die erdverlegte Leitung.;16,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+10;Werk- und Montageplanung für die nachfolgend beschriebenen Fenster, Außentüren, Sonnenschutzanlagen und Oberlichter auf der Basis AG-seitiger Ausführungsplanung;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+20;Fensterelement 3-teilig;45,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+30;Einbauöffnung BxH ca. 3000 x 2020 mm;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+40;Einbauöffnung BxH ca. 3000 x 2020 mm;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+50;Einbauöffnung BxH ca. 3000 x 2020 mm;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+60;Fensterelement 3-teilig;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+70;Einbauöffnung BxH ca. 3000 x 2020 mm;21,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+80;Einbauöffnung BxH ca. 1500 x 2020 mm;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+90;Außentürelement 4-teilig;4,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+100;Außentürelement  3-teilig;3,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+110;Tür-Nr. EA 0.05, EA 0.06;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+120;nach außen öffnend, als Notausgangstür;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+130;nach außen öffnend, als Notausgangstür;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+140;Außentürelement 1-teilig;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+150;als Notausgangstür, nach außen öffnend;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+160;als Notausgangstür, nach außen öffnend;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+170;Außentürelement 1-teilig;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+180;Außentürelement 1-teilig;3,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+190;Einbruchhemmung RC2 nach DIN EN 1627 ff. als Gesamtelement;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+200;Einbauöffnung BxH ca. 1350 x 2850 mm;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+210;Absturzsicherung außen vor Öffnungsflügel vorbeschriebener Fenster;94,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+220;Einzellänge ca. 1900 mm;8,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+230;Zustandsüberwachung vorbeschriebener Türen;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+240;Außenfensterbank aus Titanzink,;280,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+250;Stoßverbinder als Schiebenaht für vorbeschriebene Außenfensterbank;80,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+260;Stoßverbinder als Eckverbinder für vorbeschriebene Außenfensterbank;10,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+270;Seitlicher Abschluss mit Auf- und Gegenkantung;20,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+280;Aussparung für durchbindende Wandvorlage für vorbeschriebene Außenfensterbank;84,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+290;Fenster-Markise mit Textilbehang als Sonnenschutz,;5,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+300;Abmessungen BxH ca. 1500 x 2020 mm;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+310;Abmessungen BxH ca. 3000 x 2020 mm;71,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+320;Abmessungen BxH ca. 3000 x 2850 mm;9,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+330;Motorsteuereinheit, für Sonnenschutzanlagen, für bis zu 6 anschließbare Antriebe, mit elektrischer Verriegelung der Steuerbefehle, ohne Selbsthaltung, Einbau in Deckenhohlraum.;26,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+340;Messwertgeber Wind, für Sonnenschutzanlagensteuerung, beheizt.;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+350;Standrohr zur Befestigung der Messwertgeber, für Sonnenschutzanlagensteuerung, aus verzinktem Stahl, Länge 1,5 m.;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+360;Fensterelement festverglast;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+370;Fensterelement;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+380;Fenster-/Türelement;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+390;Tür-Nr. DA 0.11;1,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+400;Außenfensterbank aus Titanzink, Dicke 0,8 mm, Breite 150 mm,;30,0;m;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+410;Stoßverbinder als Schiebenaht für vorbeschriebene Außenfensterbank;4,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+420;Seitlicher Abschluss mit Auf- und Gegenkantung;8,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+430;Oberlicht über Luftraum;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+440;Einsatzelement in vorbeschriebenem Oberlicht;4,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+450;Wind-/ Regenfühler einschl. Standrohr;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+460;Steuer-Zentrale zur Ansteuerung von 4 Antrieben;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+470;Schlüsseltaster, Aufputz-Ausführung,;2,0;St;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+480;Wartung aller vorbeschriebenen Fenster, Außentüren, Oberlichter und Sonnenschutzanlagen;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+490;im 2. Jahr nach Abnahme;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+500;im 3. Jahr nach Abnahme;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+510;im 4. Jahr nach Abnahme;1,0;psch;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+10;Stundenlohnarbeiten durch Bauvorarbeiter/-in;50,0;h;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+20;Stundenlohnarbeiten durch Bauwerker/-in;200,0;h;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83
+30;Stundenlohnarbeiten durch Bauhelfer/-in;50,0;h;gaeb;leistungsbeschreibungen/PWS-Tragwerkhuelle-LV.x83

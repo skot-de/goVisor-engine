@@ -1,0 +1,470 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Einrichten, über die Bauzeit lt. vorhalten und nach Fertigstellung räumen der Baustelle für sämtliche im Leistungsverzeichnis beschriebenen Leistungen, inkl. Materialvorhaltekosten, Verkehrssicherungsmaßnahmen und tägliche Reinigung.;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Vermessungsleistung durch einen amtlich anerkannten;1,0;Psch;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Erstellen der Ausführungsdokumentation und der;1,0;psch;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Bauzaun umsetzen;500,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Wurzelstock roden, von Baumfällung;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Einzelsträucher und -aufwuchs abschneiden,;50,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Wurzelstöcke und Wurzelwerk roden,;50,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Vegetationsfläche säubern;150,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Mähen von Brachflächen Wildstauden,;1000,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;Kleinaufwuchs roden;200,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+8;Pflanzliche Bodendecke abräumen,;1000,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+9;Vegetationsfläche säubern;1000,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Konstruktionen/Bauteile abbrechen;2,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Konstruktionen/Bauteile abbrechen;10,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Beseitigen von Fremd- und Störstoffen;10,0;t;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;best. KTS (Kiestragschicht) säubern,;1000,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Bituminöse Befestigung schneiden, Schichtdicke der Asphaltschicht 10 bis 20 cm.;200,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Asphalttrag- und Deckschicht, Stärke 10 bis 15 cm, auf ungebundener Tragschicht, abbrechen.;500,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;Konstruktionen/Bauteile abbrechen;3,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+8;Bordsteine ausbauen;10,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+9;Schachtabdeckung liefern und einbauen, Klasse D 400 gemäß DIN EN;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+10;Schachtabdeckung, bauseits Klasse B125 - D400 gemäß DIN EN 124/DIN1229, Kennmaß D 610mm, beifahren und fachgerecht einbauen;5,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+11;Auspflasterbare Schachtabdeckung Klasse C250,;8,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+12;Auspflasterbare Schachtabdeckung Klasse C250,;4,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+13;Auspflasterbare Schachtabdeckung Klasse C250,;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+14;Schachtabdeckung D62,5 höher setzen,;25,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+15;Schachtabdeckung D62,5cm tiefer setzen,;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+16;Schachtkonus freilegen und drehen nach Angabe der;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+17;Schachtabdeckung eckig ca. 1000/1000mm von;5,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+18;Wasserschieber der Höhenlage anpassen,;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Bauseits vorhandene Rohbodenfläche profilieren,;6050,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Suchschlitz herstellen;20,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Oberboden profilgerecht lösen und laden;150,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Boden für Baumgruben in schwach geneigten Vegetationsflächen bis 1:4 lösen und fördern, In wechselnden Breiten gemäß Lageplan, Regelabmessungen 3 x 3 x 1,0 m, Sohle 40 cm tief lockern.;275,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Baumgrube / Baumgraben /Pflanzgraben ausheben;370,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Boden für Vegetationsflächen profilgerecht lösen und laden;150,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;Boden für Belagsflächen profilgerecht lösen und laden;450,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+8;Unterboden als F2 Kies;150,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+9;Unterboden für Vegetationsflächen, als kiesige Rotlage;50,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+10;Bauseits vorhandenen Boden von Haufwerk laden,;120,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+11;RC Material / Schottertragschicht aus Parkplätze / BE Fläche profilgerecht lösen und laden;50,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+12;Zulage zu vorbeschriebener Position für die Transportentfernung über 200 m bis 1500 m.;250,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+13;Wurzelschutzvlies für Schächte, Rigolen und Rohrleitungen, aus verrottungsfesten Synthesefasern, mind. GRK2, Schichtdicke mind 1mm, Flächengewicht min. 200g/m2, liefern und mit 50cm Stoßüberdeckung verlegen.;300,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Probenahme und Deklarationsuntersuchungen von;4,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;An- und Abfahrt für Beprobung;4,0;psch;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Entnahme von Bodenproben aus Haufwerken, Volumen über 200 bis 300 m3, einschl. Protokoll.;8,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Untersuchung zur Abfalldeklaration nach LAGA-Merkblatt 20, Tabelle II.1.2-2 Untersuchungsprogramm für die Bewertung von schadstoffbelastetem Boden, Untersuchung im Feststoff aus Haufwerken.;4,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Aufnehmen und Laden von separiertem, aufgemieteten und bauseits deklarierten Material..;1125,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Entsorgung von Stoffinventar gem. AVV-Nr. der Gruppe 1701 und 1705, ohne Fremdbestandteile;200,0;t;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;Entsorgung von Stoffinventar wie in vorhergehender Position beschrieben, jedoch;150,0;t;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+8;Entsorgung von Stoffinventar gem. AVV-Nr. der Gruppe 1701 und 1705, ohne Fremdbestandteile;1000,0;t;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+9;Entsorgung von Stoffinventar wie in vorhergehender Position beschrieben, jedoch;500,0;t;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+10;Entsorgung von Stoffinventar wie in vorhergehender Position beschrieben, jedoch;400,0;t;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+11;Entsorgung von Bauschutt gem. AVV-Nr. der Gruppe 1701 und 1705, Fremdbestandteile < 10 %;76,8;t;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+12;Entsorgung von Bauschutt wie in vorhergehender Position beschrieben, jedoch;20,0;t;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+13;Bitumengemische mit einem EPA-PAK-Gehalt ≤ 25 mg/kg, gebrochen, nicht  schadstoffbelasteter nicht gefährlicher Abfall, nicht überwachungsbedürftig, Abfallschlüssel 170302 gem. Abfallverzeichnisverordnung AVV in aktueller Fassung, an einer amtlich zugelassenen Entsorgungsstelle auf Anweisung des AG m;80,0;t;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+14;Holz A1-A3 gem. Altholzverordnung, nicht behandelt, nicht  schadstoffbelasteter nicht gefährlicher Abfall, nicht überwachungsbedürftig, Abfallschlüssel 170201 gem. Abfallverzeichnisverordnung AVV in aktueller Fassung, an einer amtlich zugelassenen Entsorgungsstelle auf Anweisung des AG mit allen Lei;10,0;t;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+15;Holz A4 gem. Altholzverordnung, behandelt, schadstoffbelasteter gefährlicher Abfall, überwachungsbedürftig, Abfallschlüssel 170204* gem. Abfallverzeichnisverordnung AVV in aktueller Fassung, an einer amtlich zugelassenen Entsorgungsstelle auf Anweisung des AG mit allen Leistungen inkl. Übernahme, Tr;10,0;t;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+16;BMA gemischte Bau- und Abbruchabfälle, nicht  schadstoffbelasteter nicht gefährlicher Abfall, nicht überwachungsbedürftig, Abfallschlüssel 170904 gem. Abfallverzeichnisverordnung AVV,;10,0;t;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Vlieskaschierte Noppenbahn aus PE / HDPE als;380,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Baugrund außerhalb unterbauter Flächen für Verkehrsflächen profilieren als Teilschicht Tragschicht,.;4050,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Baugrund verdichten als Unterlage für Kiestragschicht.;4050,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Geogitter als Bodenbewehrung gem. TL Geok E-StB 05 liefern und fachgerecht gemäß der Herstellerverlegeanleitung einbauen.;300,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Sickerpackung einbauen;10,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Frostschutzschicht 0/45 nach ZTVT-StB,;100,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;Frostschutzschicht 0/45 nach ZTVT-StB,;607,5;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+8;Kiestragschicht überarbeiten;500,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+9;Kiestragschicht 0/32 nach ZTVT-StB 02,;1400,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+10;Kiestragschicht korrigieren im Bereich Schadenstellen, Aufgrabungen usw.;200,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+11;Feinplanie Kiestragschicht unter Asphaltflächen;1000,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+12;Kiestragschicht 0/32 nach ZTVT-StB 02,;50,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+13;Dränbetontragschicht gemäß Merkblatt für Dränbetontragschichten (DBT) und Merkblatt für wasserdurchlässige Befestigungen von Verkehrsflächen, nach Nutzungskategorie N2 gemäß ZTV Wegebau 2013 der FLL liefern, einbauen und statisch lagenweise verdichten.;20,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+14;Schutzlage für Abdichtung erdberührter Wände DIN 18533-1 und DIN 18533-3, aus Bautenschutzmatten/-platten aus Gummigranulat, Dicke 10 mm, lose verlegen, Überlappungsbreite 10 cm.;50,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+15;Hinterfüllung der Fassadenrinne / Bordstein bei abweichenden Abständen zur Fassade gegenüber der planerischen Abstimmung mit wasserdurchlässigem Splitt-Kunstharz-Gemisch;80,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+16;Beton C12/15 liefern und einbauen als Schleppkeil an Übergang unterbauter und nicht unterbauter Flächen,;5,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+17;Dränagegraben herstellen;20,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+18;Säubern der Dachabdichtung und der verlegten Schutzlage auf unterbauten Flächen durch abkehren von Unrat und losen Verschmutzungen, optisch auf Schadstellen und Auffälligkeiten überprüfen und diese unverzüglich der BL melden;230,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+19;Gleitlage über Abdichtung aus Kunststoff - Folie in mehreren Teilflächen,;180,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+20;Gleitlage über Abdichtung aus diffusionsoffene Kunststoff - Folie oder Rieselschutzvlies in mehreren Teilflächen,;50,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+21;Trenn- und Schutzvlies, aus verrottungsfesten Synthesefasern, mind. GRK2, Schichtdicke mind. 2mm, Flächengewicht mind. 500g/m2, als mechanische Schutzlage gem. DIN 18195 und FFL Richtlinie Dachbegrünung, liefern und mit 10cm Stoßüberdeckung auf der wurzelfesten Abdichtung verlegen, einschließlich ho;230,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+22;Drainagegitter Gitter / Vlies, Kunststoffgitter aus extrudiertem PEHD mit ober- und unterseitig vollflächig aufkaschierten Vliesstoff aus Polypropylen (PP);230,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+23;Aufsatz für Dacheinlauf mit Funktion als Einlaufkasten in der Vegetationsfläche, aus Stahl feuerverzinkt, liefern und einbauen, bestehend aus:;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+24;Stickkanal aus Stahl feuerverzinkt liefern und nach Herstellerangaben fachgerecht verlegen, einschließlich erforderlicher Verbindungsstücke.;20,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+25;Schottertragschicht (STS) herstellen;60,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Großsteinpflasterzeile setzen;93,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Granitsteine als Hochbord;95,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Hochbord wie vorbeschrieben liefern und setzen;6,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Hochbord wie vorbeschrieben liefern und setzen;6,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Hochbord wie vorbeschrieben liefern und setzen;8,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Hochbord wie vorbeschrieben liefern und setzen;4,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;Granitsteine als Tiefbord;90,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+8;Bordsteine steinmetzmäßig bearbeiten;25,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+9;Bordsteinstöße verfugen mit Sandbeton 0/4,;190,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+10;Dehnfugen herstellen;30,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+11;Betoneinfasssteine setzen;200,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+12;Bordsteine steinmetzmäßig bearbeiten;10,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+13;Bordsteine steinmetzmäßig bearbeiten;30,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+14;Kleinsteinpflasterzeile setzen, 3reihig;10,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+15;Metalleinfassung als Stahlwinkel liefern und einbauen;270,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+16;Zuschnitt Stahlwinkel 100 x 60 x 5 mm,;20,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+17;Metalleinfassung als Stahlwinkel liefern und einbauen;8,55;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+18;Zuschnitt Stahlwinkel 250 x 120 x 10 mm,;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+19;Stahlwinkel wie vorbeschrieben liefern und setzen;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+20;Stahlwinkel wie vorbeschrieben liefern und setzen;2,7;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Einrichten, über die Bauzeit lt. vorhalten und nach Fertigstellung räumen der Baustelle für sämtliche Asphaltbauarbeiten wie nachfolgend beschriebenen.;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Asphalttragschicht;970,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Oberfläche reinigen;970,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Oberfläche ansprühen;970,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Splittmastixasphalt SMA 11 S herstellen;970,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Fugen mit Fugenverguss;120,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;Heißplastikmasse als aufgelegte Markierung als Markierungsstreifen durchgezogen auf Asphalt liefern und aufbringen als Einzelstreifen mit Breite 120 mm, Dicke 2mm, einschließlich Untergrundvorbehandlung nach Herstellerangaben, Material verschleißfest, UV- und wetterbeständig, verformungsstabil, gepr;40,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+8;Schottertragschicht ZTV SoB-StB, für befestigte Wegeflächen, liefern und höhengerecht einbauen, aus gebrochenem Natursteinschotter-Splitt-Sand-Gemisch, Körnung 0/22, Schichtdicke 14 cm, im verdichteten Zustand, Planum +/- 1cm, mit Gefälle, verdichten, EV2-Modul 120 MN/m2,;200,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+9;Kunststeinplattenbelag herstellen;1000,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+10;Zulage zu Pflasterbauarbeiten in beengten Verhältnissen unter Bänke, Fahradanlehnbügel oder im Nebengebäude / Treppenpodest;65,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+11;Zulage zu Pflasterbauarbeiten;420,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+12;Zulage zu Pflasterbauarbeiten;70,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+13;Zuarbeiten von Kunststeinplatten;300,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+14;Schneiden des vorbeschriebenen Plattenbelag an Rändern;30,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+15;Schneiden des vorbeschriebenen Plattenbelag für Aussparung an Einbauten, Belagsstärke 10cm, Schnittverlauf gerundet oder gerade an Einbauten wie Masten und Zaunpfosten, Abmessung kleinner 20/20cm oder Radius kleiner 10cm.;50,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+16;Klinkerbelag herstellen;1300,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+17;Klinkerbelag aus Format 30/6/6,5cm;575,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+18;Zulage zu;14,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+19;Zulage zu;340,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+20;Zulage zu;165,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+21;Zuarbeiten von Klinkerpflaster;360,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+22;Zuarbeiten von Klinkerp;20,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+23;Pflaster/Platten aus Beton nach;300,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+24;Schneiden des vorbeschriebenen Plattenbelag Rasenpflaster an Rändern;180,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+25;Betonsteinzeile als Stellplatztrennzeile herstellen;110,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+26;Bändchengewebe aus 100 % Polypropylen, UV-stabilisiert, in Bahnenbreite ca 50-150cm, im Traufstreifen unter Splittschüttung liefern und verlegen, mit folgenden Eigenschaften:;15,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+27;Kiesschüttung für den Traufstreifen liefern und einbauen aus Granitschotter 16/22, Farbe anthrazit;15,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Einrichten, über die Bauzeit lt. vorhalten und nach Fertigstellung räumen der Baustelle für sämtliche Asphaltbauarbeiten wie nachfolgend beschriebenen.;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Asphalttragschicht herstellen für Kunststoffflächen;200,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Zulage zu vorbeschriebenem Drainasphalt für die ausbilldung von Randanschlüsse in Keilform 1:1 für randseitige Verkrallnut für den Anschluss an Kunststoffbelag in;65,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Fallschutzbelag einbauen nach DIN EN 1177;200,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Einrichten, über die Bauzeit lt. vorhalten und nach Fertigstellung räumen der Baustelle für sämtliche Asphaltbauarbeiten wie nachfolgend beschriebenen.;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Asphalttragschicht herstellen für Kunststoffflächen;585,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Zulage zu vorbeschriebenem Drainasphalt für die ausbilldung von Randanschlüsse in Keilform 1:1 für randseitige Verkrallnut für den Anschluss an Kunststoffbelag in;105,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Musterstück;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Kunststoffbelag, wasserdurchlässig herstellen;585,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Zulage zu vorbeschriebenem Fallschutzbelag für die ausbilldung von Randanschlüsse für erhöhte Schichtdicke des EPDM Aufbau für Verkrallnut und ausbildung Verkrallnut in Basisschicht.;105,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;Markierung für Kunststoffbelag herstellen;160,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+8;Markierung für Kunststoffbelag herstellen;50,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+9;Markierung für Kunststoffbelag herstellen;10,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+10;Markierung für Kunststoffbelag herstellen;95,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+11;Markierung für Kunststoffbelag herstellen;80,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Baugrund außerhalb unterbauter Flächen für;170,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Baugrund verdichten außerhalb unterbauter Flächen als Unterlage für Kiestragschicht.;170,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Frostschutz-Kiestragschicht 0/64 nach ZTVT-StB,;75,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Streifenfundament Treppenlaufplatte herstellen,;12,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Treppenlaufplatte herstellen, geschalt;2,5;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Betonstabstahl B500B für Fundamente und Betonelemente;750,0;kg;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;Betonfertigteil aus Beton DIN-EN 206-1/ DIN 1045;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+8;Beton-Blockstufe wie in vorhergehender Grundposition beschrieben, jedoch;6,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+9;Zulage für das Herstellen von Kernbohrungen D=65 mm in den vorbeschriebenen Blockstufen,;6,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+10;Winkelstützelement:;3,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+11;Betonfertigteil wie vorbeschrieben liefern und einbauen, jedoch Höhe 70cm und Fußlänge 35cm;82,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+12;Betonfertigteil wie vorbeschrieben liefern und einbauen, jedoch mit Höhe 95cm, Fußlänge 45cm;10,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+13;Betonfertigteil wie vorbeschrieben liefern und einbauen, jedoch mit Höhe 120cm, Fußlänge 60cm;9,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+14;Betonfertigteil wie vorbeschrieben liefern und einbauen, jedoch mit Höhe 145cm und Fußlänge 70cm;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+15;Betonfertigteil aus SV-Hochleistungsbeton Flowstone C 80/95 XC4, XD3, XF4, WF aus Stahlbeton, statisch bewehrt nach DIN EN 13198, Biegefestigkeit: mind. 12 MpA,;47,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Statischer Nachweis für sämtliche nachfolgend beschriebenen Einfriedungen und Ballfangzäune mit Höhe 4 m und 6 m und aller Fundamente durch den AN.;1,0;psch;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Doppelstab-Gittermattenzaun herstellen;28,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Zulage zu Gittermattenzaun;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Zulage zu Gittermattenzaun Ausführung gemäß den technischen Vorschriften der Position Gittermattenzaun für: Endpfosten unmittelbar an aufgehenden Bauteilen wie Wände für die Erschwernis Grabarbeiten und Mehrmenge Fundamentbeton. Zaunhöhe 1050 mm;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Zulage zu Gittermattenzaun;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Ballfangzaun aus Dopelstabgittermatten herstellen;22,5;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;Zulage zu Ballfanggitter;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+8;Zulage zu Ballfanggitter;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+9;Geländer / Handlauf aus Stahl, Handlauf entsprechend;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Schliderpfosten;5,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Verkehrszeichenschilder liefern und montieren an Schilderpfosten als reflektierende Verkehrsschilder entsprechend der Straßenverkehrsordnung (StVO) nach DIN 67520 genormt mit ca. folgenden Inhalten (zum Teil mehrfach):;4,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Fundamente für Einbauteile herstellen;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Abfallbehälter;4,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Werkstattzeichnung/Montagepläne für die Herstellung der Metall- und Holzkonstruktion Freiraummöbel aus nachfolgend beschriebenen Positionen.;1,0;Psch;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Fundamente für Einbauteile herstellen;63,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;Bankgestell für Balken-Bank ohne Rückenlehne;54,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+8;Bankgestell für Balken-Bank wie vorbeschrieben, jedoch Länge IPE300 660mm;9,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+9;Sitzauflage f. Bankgestell ohne Rückenlehne, Länge 3600 mm, Breite 480mm liefern und einbauen;6,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+10;Sitzauflage f. Bankgestell ohne Rückenlehne wie vorbeschrieben liefern und einbauen jedoch,;4,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+11;Sitzauflage f. Bankgestell ohne Rückenlehne wie vorbeschrieben liefern und einbauen jedoch,;6,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+12;Sitzauflage f. Bankgestell ohne Rückenlehne wie vorbeschrieben liefern und einbauen jedoch,;3,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+13;Unterflurbaumschutzrost 180 x 180 cm zur Überbauung mit Pflasterbelag;3,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+14;Verfüllung der Baumöffnung 60x60 cm mit Schotter Dolomit 8/16 mit Schichtdicke 15 cm nach Bemusterung und Freigabe durch den AG.;3,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+15;Erstellung einer Belüftung der Baumscheibe nach ZTV VegtraMü;40,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+16;Erstellung einer Belüftung der Horizontalverbindung Baumgruben nach ZTV VegtraMü;208,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+17;T-Stücke NW 110/110 liefern und als Verbindungsstücke;40,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+18;Doppelabzweig-Stücke NW 110/110 liefern und als Verbindungsstücke;20,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+19;Dränleitung (Teilsickerrohreinbau);100,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+20;Dränspül- bzw. Kontrollschacht einbauen;5,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+21;Anschluß der vorbeschriebenen Entwässerungsleitungen an Bestandsleitung aus Kunststoff, an vorgerüsteten Abzweig,;10,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+22;Betonfertigteil aus Beton DIN-EN 206-1/ DIN 1045;24,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+23;doppelt U-förmiger Anlehnbügel,;36,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+24;Fahrradständer einbauen;10,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Werkstattzeichnung/Montagepläne für die Herstellung der Holz-, Fels- und Metallkonstruktionen der Spielbauten aus nachfolgend beschriebenen Positionen.;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Spielbauten einbauen;5,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Kletter- und Hangelgeräte einbauen;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Bodenhülsen;4,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Spielbauten gemäß EN 1176 mit Schutzzeichen (TÜV) nach Herstellervorschrift, liefern und einbauen,;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Bodenhülsen;4,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Handballtor 3 x 2 m aufstellen geeignet für Freibereich;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Bodenhülsen;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Volleyballanlage;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;Tischtennisplatten einbauen,;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Entwässerungsrinnen einbauen;112,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Zuschlag für Winkelstückes;4,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Zuschlag für den Einbau in Entwässerungsrinnen;8,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Entwässerungsflachrinnen einbauen;16,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Zuschlag für den Einbau in Entwässerungsrinnen;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Zuschlag für Paßstück;6,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;Einlaufkasten mit verzinktem Eimer einbauen;17,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+8;Abdeckung Fassadenrinne aus fvz. Guss-Längsstabrost mit Stababstand 6-9 mm aus Stahlguss feuerverzinkt, nach Bemusterung, mit Rostarretierung, für Bereich Asphaltflächen Kl. C250, Rutschhemmungsklasse R11, Breite 13-15 cm.;128,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+9;Zuschlag für Winkelstückes;4,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+10;Zuschlag für Paßstücke;6,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+11;Entwässerungsrinnen einbauen;95,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+12;Zuschlag für den Einbau in Entwässerungsrinnen;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+13;Zuschlag für Paßstück;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+14;Einlaufkasten mit verzinktem Eimer einbauen;11,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+15;Abdeckung Fassadenrinne aus fvz. Guss-Längsstabrost mit Stababstand 6-9 mm aus Stahlguss feuerverzinkt, nach Bemusterung, mit Rostarretierung, für Bereich Asphaltflächen Kl. A15, Rutschhemmungsklasse R11, Breite 13-15 cm.;95,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+16;Zuschlag für Paßstücke;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+17;Entwässerungsrinnen einbauen;290,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+18;Entwässerungsrinnen einbauen;33,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+19;Entwässerungsrinnen einbauen;10,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+20;Stickkanal aus Stahl feuerverzinkt liefern und nach Herstellerangaben fachgerecht verlegen, einschließlich erforderlicher Verbindungsstücke.;25,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+21;Zuschlag für den Einbau in Entwässerungsrinnen;70,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+22;Zuschlag für Paßstück;40,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+23;Zuschlag für Paßstücke;40,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+24;Zuschlag für Aussparrung in Abdeckung und Rinne, passend zu Fallrohr DN70-100;5,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+25;Auslaufstutzen in vorbeschriebenem Rinnekörper;10,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+26;Auslaufstutzen in vorbeschriebenem Rinnekörper aus verz.Stahl herstellen für unterseitigen Anschlussstutzen DN 100, Rohrleitung, inkl. Gitter als Laubfang.;40,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+27;Hinterfüllung der Fassadenrinne / Platten bei abweichenden Abständen zur Fassade gegenüber der planerischen Abstimmung mit wasserdurchlässigem Splitt-Kunstharz-Gemisch;240,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+28;Hinterfüllung der Fassadenrinne / Platten bei abweichenden Abständen zur Fassade gegenüber der planerischen Abstimmung mit wasserdurchlässigem Splitt/Schotter-Kunstharz-Gemisch;100,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+29;Hofablauf 300/300 mm, erstellen;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+30;Straßenablauf, Durchmesser (innen) 450 mm, erstellen;3,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+31;Gräben für Ver-, Entsorgungsleitungen und Dränleitungen;70,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+32;Leistung wie vorbeschrieben, jedoch Tiefe 0,8 bis einschließlich 1,25 m unter OK Bestand.;80,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+33;Leistung wie vorbeschrieben, jedoch Tiefe über 1,25 m bis einschl. 1,75 m unter OK Bestand.;50,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+34;Erstellen eines Suchgrabens zur Bestandserschließung;20,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+35;Rohrleitung aus Kunststoffrohren DN;40,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+36;Bogen,;50,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+37;Abzweig,;5,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+38;Überschubmuffe,;5,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+39;Rohrleitung aus Kunststoffrohren DN;150,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+40;Bogen,;80,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+41;Formteil, Übergang DN125 auf DN100;10,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+42;Formteil, Übergang DN150 auf DN100;10,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+43;Abzweig,;10,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+44;Überschubmuffe,;25,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+45;Anschluß der vorbeschriebenen Entwässerungsleitungen an Bestandsleitung aus Kunststoff, an vorgerüsteten Abzweig,;15,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+46;Wurzelschutzvlies für Schächte, Rigolen und Rohrleitungen, aus verrottungsfesten Synthesefasern, mind. GRK2, Schichtdicke mind 1mm, Flächengewicht min. 200g/m2, liefern und mit 50cm Stoßüberdeckung verlegen.;150,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+47;Dränleitung (Teilsickerrohreinbau);150,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+48;Sickergrube einbauen;10,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+49;Liefern Kies/Sandgemisch als Auflager für Rohrleitungen,;30,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+50;Mehrpreis Bodenaustausch;10,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Baugrund vor Auftrag der Vegetationsschicht kreuzweise;2000,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Baum-/Pflanzgrube verfüllen mit Substrat (nicht über-;313,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Substrat (überbaubar), Sieblinie B der ZTV-Vegtra- Mü;260,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Vegetationstragschicht herstellen;260,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Vegetationstragschicht für Wiesenflächen mit mittlerer bis hoher Belastung, z. B. Frischwiese / Fettwiese im öffentlichen Grün, Bodensubstrat für Wiesenflächen,;10,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Dränageschicht für Versickerungsmulde ungeb. herstellen;500,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;Dränschicht herstellen;500,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+8;Vegetationstragschicht für Wiesenflächeen in  Versickerungsmulde mit geringer bis mittlerer Belastung, Bodensubstrat für Wiesenflächen,;640,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+9;Boden lockern;900,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+10;Zulage zu vorbeschriebener Position für die Flächenneigung steiler 1:4 bis 1:1,5.;300,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+11;Boden feinplanieren;900,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+12;Zulage zu vorbeschriebener Position für die Flächenneigung steiler 1:4 bis 1:1,5.;300,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+13;Pflanzfläche verfüllen mit Substrat für Staudenflächen 40% 0/22 Oberboden, 40% Fertigkompost 0/20 + 20% Sand;140,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+14;Vegetationstragschicht herstellen;875,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+15;Oberboden feinplanieren;1015,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+16;Rutschungssicherung herstellen durch Einbau von Zäunen;200,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Acer campestre, Feldahorn,;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Acer campestre, Feldahorn,;3,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Acer campestre, Feldahorn,;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Acer campestre - Feldahorn,;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Castanea sativa, Essbare Kastanie,;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Castanea sativa, Essbare Kastanie,;3,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;Pinus sylvestris, Gewöhnliche Kiefer,;3,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+8;Pinus sylvestris, Gewöhnliche Kiefer,;4,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+9;Acer platanoides, Spitz-Ahorn,;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+10;Acer platanoides, Spitz-Ahorn,;3,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+11;Carpinus betulus, Hainbuche,;7,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+12;Tilia tomentosa, Silber-Linde,;3,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+13;Tilia tomentosa, Silber-Linde,;3,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+14;Tilia tomentosa, Silber-Linde,;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+15;Tilia tomentosa, Silber-Linde,;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+16;Pflanzenverankerung mit Pfahl-Vierbock mit Rahmen aus Vierkanthölzern für verpflanzte Bäume, Pfahl, weißgeschält, 10/10cm, L 450cm, Vierkanthölzer 5x8cm, L 80cm, 4 Hölzer bodeneben, 4 Hölzer als oberer Abschluss, liefern, Pfosten aufstellen, Einbindetiefe 50cm, Bodenklasse 3-5 DIN 18300, Vierkanthöl;26,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+17;Pflanzenverankerung herstellen;16,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+18;Verdunstungsschutz an Stamm und Hauptästen mit;45,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+19;Zulage für zuvor beschriebene Gehölze mit Ballen pflanzen Stammumfang 25 - 40 cm für die Lagerung vor Ort für ca. 6-8 Wochen inkl. aller Pflegearbeiten.;13,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+20;Corylus avellana ‘Hallesche Riesennuss‘, Haselnuss;8,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+21;Corylus avellana Wunder von Bollweiler;9,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+22;Sambucus nigra ‘Haidegg‘, Schwarzer Holunder,;9,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+23;Vaccinium corymbosum ‘Reka‘,Heidelbeere;6,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+24;Vaccinium corymbosum ‘Bluecrop‘,Heidelbeere;6,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+25;Aruncus dioicus -Wald-Geißbart,;168,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+26;Dryopteris filix-mas - Wurmfarn,;168,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+27;Aquilegia vulgaris;560,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+28;Aster divaricatus;560,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+29;Campanula trachelium;280,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+30;Helleborus foetidus;280,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+31;Primula veris;560,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+32;Geranium nodosum;280,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+33;Corydalis ochroleuca;560,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+34;Fragaria vesca;560,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+35;Luzula nivea;560,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+36;Stellaria holostea;560,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+37;Viola odorata ‘Königin Charlotte;560,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+38;Anemone nemorosa;2800,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+39;Scilla bifolia;5600,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+40;Hemerocallis lilioasphodelus;162,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+41;Molinia caerulea;108,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+42;Aquilegia vulgaris;270,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+43;Aster divaricatus ‘Tradescant;270,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+44;Astrantia major;135,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+45;Melittis melissophyllum;270,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+46;Primula veris;270,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+47;Geranium nodosum;135,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+48;Carex montana;270,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+49;Fragaria vesca;270,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+50;Geranium sanguineum;270,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+51;Potentilla alba;270,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+52;Viola odorata ‘Donau‘;270,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+53;Anemone nemorosa;1350,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+54;Scilla bifolia;2700,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+55;Aruncus dioicus -Wald-Geißbart,;27,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+56;Dryopteris filix-mas - Wurmfarn,;27,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+57;Aquilegia vulgaris;90,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+58;Aster divaricatus;90,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+59;Astrantia major;45,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+60;Athyrium filix-femina;45,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+61;Geranium nodosum;90,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+62;Polystichum setiferum ‘Proliferum;45,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+63;Carex umbrosa;90,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+64;Corydalis ochroleuca;90,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+65;Fragaria vesca;90,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+66;Lamium maculatum‘White Nancy;90,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+67;Luzula sylvatica;90,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+68;Anemone nemorosa;450,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+69;Lilium martagon ‘Snowy Morning‘;90,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+70;Scilla bifolia;900,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+71;Hemerocallis lilioasphodelus;30,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+72;Molinia caerulea;20,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+73;Aquilegia vulgaris;50,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+74;Aster divaricatus ‘Tradescant;50,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+75;Campanula persicifollia;50,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+76;Geranium nodosum;50,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+77;Carex montana;50,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+78;Fragaria vesca;50,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+79;Luzula nivea;50,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+80;Potentilla alba;50,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+81;Eranthis hyemalis;400,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+82;Scilla bifolia;400,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Rasenfläche (Ansaat) herstellen;2600,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Rasenfläche (Ansaat) herstellen;290,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Ansaat Blumen-Kräuter-Klimarasen , Flächenneigung bis 1:4;630,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Zulage zu vorbeschriebener Position für die Arbeiten in Sickermulde, Breite 1-5m .;630,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Pflanzfläche / Baumscheibe bearbeiten;6846,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Pflanzenverankerung als Pfahl-Vierbock mit Lattenrahmen;42,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Düngen von Gehölzen;126,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Pflanzfläche schützen;45,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Pflanzfläche schützen nach der Pflanzung;1015,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Wässern;420,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;Wässern der Pflanzfläche,;10150,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+8;Wässern;3900,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+9;Düngen;2030,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+10;Düngen;520,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+11;Begehung der Flächen mit Beseitigung des unerwünschten Aufwuchs, inkl. Wurzelwerk.;500,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+12;Magerrasen/ artenreiche Wildpflanzen- Blumenwiese, Flächenneigung bis 1:4 mähen, hier Schröpfschnitt des Schnellbegrüners nach etwa 8 Wochen nach Ansaat;640,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+13;Magerrasen/ artenreiche Wildpflanzen- Blumenwiese, Flächenneigung bis 1:4 mähen;3200,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+14;Zulage zu vorbeschriebener Position für die Flächenneigung steiler 1:4 bis 1:1,5.;1500,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+15;Parkplatzrasen mähen;1500,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+16;Rasen mähen;2600,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+17;Laub entfernen;1905,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Pflanzfläche / Baumscheibe bearbeiten;6846,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Pflanzenverankerung als Pfahl-Vierbock mit Lattenrahmen;42,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Düngen von Gehölzen;126,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Wässern;420,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Wässern der Pflanzfläche,;10150,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Wässern;3900,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;Düngen;2030,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+8;Düngen;520,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+9;Magerrasen/ artenreiche Wildpflanzen- Blumenwiese, Flächenneigung bis 1:4 mähen;3200,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+10;Zulage zu vorbeschriebener Position für die Flächenneigung steiler 1:4 bis 1:1,5.;1500,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+11;Parkplatzrasen mähen;1500,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+12;Rasen mähen;2600,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+13;Aerifizieren;260,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+14;Besanden von Rasen;260,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+15;Rasen nachsäen;260,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+16;Pflanzenverankerung als Pfahl-Dreibock mit Lattenrahmen nachrichten, bei Bedarf Austausch der Latten und Neuanordnung des Bindegut aus Kokosstrick.;42,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+17;Laub entfernen;1905,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Pflanzfläche / Baumscheibe bearbeiten;6846,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Pflanzenverankerung als Pfahl-Vierbock mit Lattenrahmen;42,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Düngen von Gehölzen;126,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Wässern;420,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Wässern der Pflanzfläche,;10150,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Wässern;3900,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;Düngen;2030,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+8;Düngen;520,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+9;Magerrasen/ artenreiche Wildpflanzen- Blumenwiese, Flächenneigung bis 1:4 mähen;3200,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+10;Zulage zu vorbeschriebener Position für die Flächenneigung steiler 1:4 bis 1:1,5.;1500,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+11;Parkplatzrasen mähen;1500,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+12;Rasen mähen;2600,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+13;Aerifizieren;260,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+14;Besanden von Rasen;260,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+15;Rasen nachsäen;260,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+16;Laub entfernen;1905,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+17;Pflegeschnitt an Bäumen durchführen, bis 10 % des;42,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+18;Giessrand zu Ende der Entwicklungspflege höhengleich;42,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+19;Zum Ende der Entwicklungspflege Pflanzenverankerung aus;42,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Verdichtungskontrollen der Vorleistung (Baugrubenverfüllung, Grundleitungsbau, etc.);2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Verdichtungskontrollen der Vorleistung (Baugrubenverfüllung, Grundleitungsbau, etc.);5,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Verdichtungskontrollen;25,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Baustellenleiter;5,0;h;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Facharbeiter;50,0;h;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Helfer;20,0;h;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;Maschinenführer/ Fahrer;40,0;h;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+8;LKW- Kipper, Nutzlast über 5 bis 8 t;10,0;h;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+9;LKW- Kipper, Nutzlast über 8 bis 12 t;5,0;h;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+10;Radlader, über 18 bis 37 kW;50,0;h;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+11;Radlader, über 37 bis 55 kW;15,0;h;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+12;Hydraulikbagger mit Radfahrwerk;25,0;h;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+13;Stampfer;10,0;h;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+14;Flächenrüttler, Fliehkraft über 10 bis 16 kN;10,0;h;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+15;Aufbruchhammer;5,0;h;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Baugrund außerhalb unterbauter Flächen für;30,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Baugrund verdichten außerhalb unterbauter Flächen als Unterlage für Kiestragschicht.;30,0;m2;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Frostschutz-Kiestragschicht 0/64 nach ZTVT-StB,;10,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Erstellung der Montage- und Werkstattplanung in Form von Positions-, Detail- und Schalplänen für alle Stahlbeton-Fertigteile einschließlich Erstellen von Übersichts- und Elementpläne zur Vorlage beim Architekten, Tragwerksplaner und Prüfingenieur.;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Vorab sind Handmuster zur Abstimmung und Festlegung von;2,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Oberfläche Sichtbeton SB4, Platte mit Fundament nach statischer Erfordernis, LxH 388x185cm,;3,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;"Zulage zu in Vorposition beschriebener StB-Fertigteilmauer für aufgesetzte Beschriftung ""GRUNDSCHULE NORD"".";15,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Boden der Gräben;150,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Boden der Gräben;70,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Boden der Gräben;100,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Boden / Baugrube;100,0;m3;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+1;Kabelkleinschacht 65x40x80 cm;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+2;Kabelschacht 100x100x110 cm;8,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+3;Kabelschacht 140x100x110 cm;3,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+4;Kabelschachtaufsatz 70/ 70, 10 cm;8,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+5;Kabelschachtaufsatz 70/ 140, 10 cm;3,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+6;Schachtabdeckung LW 650/ 400/ B 125;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+7;Schachtabdeckung LW 700/ 700/ B 125;4,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+8;Schachtabdeckung LW 700/ 1400/ B 125;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+9;Mehrpreis für V4A Erdungsanschluss;11,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+10;Rohrdurchführung DN50;24,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+11;Rohrdurchführung DN110/160;60,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+12;Verschlussstopfen DN50;24,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+13;Verschlussstopfen DN110/160;60,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+14;Fundamentrohr PE-HD DN350 L 1000 mm;8,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+15;Doppel- Dichtpackung - Rohr-Ø 160 mm;17,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+16;Systemdeckel für Kabelschutzrohre Ø 160 mm;17,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+17;Kabelschutzrohr DN50;150,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+18;Kabelschutzrohr DN160;550,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+19;Bogen 90°, DN160;6,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+20;Zugseil in Rohrsystem;800,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+21;Abstandshalter DN160 mm 2-zügig;70,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+22;Abstandshalter DN160 mm 4-zügig;25,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+23;Kabelwarnband;310,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+24;Montageplanung erdverlegte Elektrotrasse;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+25;Einmessen der Schächte/ Rohrtrassen;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+26;Fotodokumentation Erdverlegte Elektrotrasse;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+27;Bandstahl 30x3,5 mm, V4A - Baugrube;310,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+28;Rundstahl 10 mm, V4A - Baugrube;25,0;m;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+29;Klemme Klasse N Stahl V4A Rd10;20,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+30;Verbinder Klasse N Kreuzverbindung Stahl V4A rund;10,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+31;Anschlussfahne bis 1,5 m, Rundstahl 10 mm, V4A;10,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+32;Meßtechnische Überprüfung je Anschlußfahne/ -punkt;10,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81
+33;Fotodokumentation Blitzschutz- und Erdungsanlagen;1,0;St;gaeb;leistungsbeschreibungen/260519_Einlese-LV_V33.X81

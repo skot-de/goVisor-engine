@@ -1,0 +1,1023 @@
+﻿Code;Art;Kriterium;Hauptgruppe;Gruppe;Gewichtung;Gewicht Gruppe;Gewicht Hauptgruppe;Prozent
+A.1.1.1;Ausschluss;Eine Internetbasierte Bestellabwicklung (Webshop) ist verfügbar;1. Service;1.1 Web-Shop;;;;
+A.1.1.2;Ausschluss;Die Zugriffe auf den Web-Shop erfolgen SSL-verschlüsselt;1. Service;1.1 Web-Shop;;;;
+A.1.1.3;Ausschluss;Der Webshop kann über das Open Catalog Interface (OCI) an das E-Procurementsystem der hessischen Hochschulen (Wallmedien WPS/SAP SRM) für den direkten Zugriff (Punch-out) gemäß Anlage 6 angebunden werden.;1. Service;1.1 Web-Shop;;;;
+B.1.1.4;Bewertung;Das Warenangebot kann in einer nach BMECat 1.2 formatierten XML-Datei inkl. eCl@ss 5.1.4 übermittelt und min. täglich aktualisiert werden.;1. Service;1.1 Web-Shop;50,0;;;
+A.1.1.5;Ausschluss;Der Web-Shop ist ausschließlich bestückt mit den vereinbarten Produkten dieses Vertrages;1. Service;1.1 Web-Shop;;;;
+A.1.1.6;Ausschluss;Hinterlegung von Systemen mit von der Hochschule festgelegten Standardkonfigurationen im Web-Shop;1. Service;1.1 Web-Shop;;;;
+A.1.1.7;Ausschluss;Änderung der Systemkonfiguration durch den Besteller durch Auswahl vereinbarter, alternativer Komponenten (z.B. andere CPU) oder zusätzlicher Komponenten (z.B. alternative SSD/Festplatte);1. Service;1.1 Web-Shop;;;;
+A.1.1.8;Ausschluss;Alle Systeme und alternative oder zusätzliche Komponenten müssen mit dem vereinbarten, bereits rabattierten Nettopreis ausgezeichnet sein;1. Service;1.1 Web-Shop;;;;
+A.1.1.9;Ausschluss;Reporting gegenüber der bestellenden Hochschule über die von ihr erteilten Aufträge gegliedert nach Systemgruppen (Desktop Computer, Notebooks, Monitore), Form des Reportings online (Web-Oberfläche) oder per Zusendung halbjährlicher Reports;1. Service;1.1 Web-Shop;;;;
+A.1.2.1;Ausschluss;Anlieferung Frei Verwendungsstelle;1. Service;1.2 Lieferung;;;;
+A.1.2.2;Ausschluss;Lieferstatusverfolgung über ein Hersteller- oder Partner-Webportal, über das der gesamte Verlauf eines Einzelauftrags vom Bestelleingang bis zur Auslieferung am Verwendungsort des Auftraggebers abgebildet ist und in dem sämtliche Informationen stets aktuell bereitgestellt werden.;1. Service;1.2 Lieferung;;;;
+A.1.2.3;Ausschluss;Lieferzeit: innerhalb von 10 Werktagen nach Eingang der Einzelbestellung;1. Service;1.2 Lieferung;;;;
+A.1.2.4;Ausschluss;Optional: Direktlieferung zum Arbeitsplatz: Der Gerätehersteller liefert PCs, Notebooks, Monitore und Dockingstations direkt zum individuellen Arbeitsplatz, bis zur Bürotür (nicht nur zur Empfangsstelle), des Nutzers in der Hochschule .;1. Service;1.2 Lieferung;;;;
+A.1.3.1;Ausschluss;Sachmängelhaftung gemäß EVB-IT Kauf;1. Service;1.3 Systemservice;;;;
+A.1.3.2;Ausschluss;Hardware-Instandhaltungsservice für 36 Monate gemäß Rahmenvertrag;1. Service;1.3 Systemservice;;;;
+A.1.3.3;Ausschluss;Alternativ: Hardware-Instandhaltungsservice für 12 Monate gemäß Rahmenvertrag;1. Service;1.3 Systemservice;;;;
+A.1.3.4;Ausschluss;Alternativ: Hardware-Instandhaltungsservice für 24 Monate gemäß Rahmenvertrag;1. Service;1.3 Systemservice;;;;
+A.1.3.5;Ausschluss;Alternativ: Hardware-Instandhaltungsservice für 48 Monate gemäß Rahmenvertrag;1. Service;1.3 Systemservice;;;;
+A.1.3.6;Ausschluss;Alternativ: Hardware-Instandhaltungsservice für 60 Monate gemäß Rahmenvertrag;1. Service;1.3 Systemservice;;;;
+B.1.3.7;Bewertung;Qualität der Ersatzteile für den jeweiligen Servicezeitraum;1. Service;1.3 Systemservice;100,0;;;
+A.1.3.8;Ausschluss;Alternativ: Ersatzteillieferung ohne Austausch durch einen Servicetechniker;1. Service;1.3 Systemservice;;;;
+A.1.3.9;Ausschluss;Vor-Ort-Service für A.1.3.2 - A.1.3.6 gemäß Rahmenvertrag Ziffer 5.4;1. Service;1.3 Systemservice;;;;
+A.1.3.10;Ausschluss;Alternativ zu A.1.3.9:  Entfall des Vor-Ort-Service, statt dessen Reparaturservice gemäß Rahmenvertrag Ziffer 5.5 (Abhol- und Reparaturservice oder Bring-In Service).;1. Service;1.3 Systemservice;;;;
+A.1.3.11;Ausschluss;Störungsannahme per Telefon?;1. Service;1.3 Systemservice;;;;
+A.1.3.12;Ausschluss;Hotline deutschsprachig?;1. Service;1.3 Systemservice;;;;
+A.1.3.13;Ausschluss;Kosten für die Hotline nicht mehr als 0,14 Euro pro Minute aus dem deutschen Festnetz;1. Service;1.3 Systemservice;;;;
+A.1.3.14;Ausschluss;Störungsannahme per E-Mail;1. Service;1.3 Systemservice;;;;
+A.1.3.15;Ausschluss;E-Mail Korrespondenz deutschsprachig?;1. Service;1.3 Systemservice;;;;
+A.1.3.16;Ausschluss;Störungsannahme über Support-Webseite;1. Service;1.3 Systemservice;;;;
+A.1.3.17;Ausschluss;Störungsannahme und - bearbeitung mindestens Mo-Fr an Werktagen von 8:00 - 17:00 Uhr unabhängig, ob über Telefon, E-Mail oder Support-Webseite eingegangen;1. Service;1.3 Systemservice;;;;
+A.1.3.18;Ausschluss;Störungsannahme und vollständige Bearbeitung inklusive Steuerung von Vor-Ort Einsätzen entweder direkt durch den Rahmenvertragspartner oder einen einzigen Erfüllungsgehilfen (z.B. Hersteller), d.h.  kein mehrstufiges Verfahren wie z.B. Vorprüfung durch den Rahmenvertragspartner und  Weiterleitung an einen Erfüllungsgehilfen zur weiteren Bearbeitung.;1. Service;1.3 Systemservice;300,0;;;
+B.1.4.1;Bewertung;Optional: Der Gerätehersteller stellt eine API-Schnittstelle u. a. für Gerätegarantieabfragen zur Verfügung und ermöglicht die einfache, zentrale Beantragung der API-Schlüssel zum Einbinden in ein ITSM-System.;1. Service;1.4 Zusätzliche Leistungen;30,0;;;
+B.1.4.2;Bewertung;Optional: Der Gerätehersteller bietet ein Self-Maintainer-Programm für das Zusenden von CRU (Customer Self Replaceable Units), also vom Anbieter zu tauschenden Ersatzteilen, an.;1. Service;1.4 Zusätzliche Leistungen;30,0;;;
+B.1.4.3;Bewertung;Optional: Der Gerätehersteller stellt ein konsolidiertes, webbasiertes, zentrales Lifecycle-Portal zur durchgängigen Verwaltung des Gerätelebenszyklus (Planung, Vorkonfiguration, Deployment, Betrieb/Support, Retire) zur Verfügung. Es ermöglicht die strukturierte Erfassung und Übertragung von Konfigurationsdaten (z. B. BIOS/UEFI, Asset-Tags, Image-Services) sowie die Ticketbearbeitung. Der Betrieb ;1. Service;1.4 Zusätzliche Leistungen;30,0;;;
+B.1.4.4;Bewertung;Optional: Sofern intelligente Dockinglösungen bzw. verwaltbares Zubehör angeboten werden, soll der Gerätehersteller ein zentrales Management über eine webbasierte Administrationsoberfläche ermöglichen. Die Lösung soll insbesondere die zentrale Inventarisierung, Statusüberwachung, Konfigurationsverwaltung und Firmwareverwaltung sowie eine vereinfachte Administration des angeschlossenen Zubehörs unt;1. Service;1.4 Zusätzliche Leistungen;30,0;;;
+B.1.4.5;Bewertung;Optional: Der Hersteller bietet auf Wunsch des Auftraggebers eine projektbezogene Lagerbevorratung der Hardware in Deutschland an. Die Kosten für diese Lagerung sind vollständig im angebotenen Hardwarepreis einkalkuliert und werden nicht gesondert berechnet.);1. Service;1.4 Zusätzliche Leistungen;30,0;;;
+A.1.4.6;Ausschluss;Optional: Werksseitige Installation von plattformübergreifenden Images sowie Anpassung der BIOS/UEFI-Konfiguration. Die Konfiguration erfolgt nach Vorgabe des Auftraggebers.  Der Gerätehersteller stellt ein entsprechendes Tool zur Erstellung, Bereitstellung und Aktualisierung des Images und der Einstellungen zur Verfügung.;1. Service;1.4 Zusätzliche Leistungen;;;;
+A.1.4.7;Ausschluss;Optional: Möglichkeit der Aktualisierung des Images durch den Auftraggeber jederzeit auf Anforderung;1. Service;1.4 Zusätzliche Leistungen;;;;
+A.1.4.8;Ausschluss;Optional: Mehrere Images pro System möglich;1. Service;1.4 Zusätzliche Leistungen;;;;
+A.1.4.9;Ausschluss;"Optional: Automatisierte Übermittlung von Asset-Daten (PCs und Notebooks) vom Geräthersteller  zum Endkunden per E-Mail nach Abschluss des Fertigungsprozesses. (Bestellnummer, Seriennummer, Mac-Adresse(n), Modelbezeichnung)
+Die Asset-Daten müssen in einem standardisierten Format (z. B. .CSV, .XML) bereitgestellt werden";1. Service;1.4 Zusätzliche Leistungen;;;;
+A.1.1.1;Ausschluss;"x86-Technologie (64 Bit) AMD / Intel Prozessor, Mindestleistung ≥ 1750 Score Points „Overall“ im Benchmark „SYSmark 30“, Hardwareunterstützung für AES-Verschlüsselung.
+
+Testeinstellung: Auflösung 1920×1080 bei 60 Hz, Betriebssystem Windows 11 Pro 24H2 oder höher. Der Leistungswert SYSmark 30 „Overall Rating“ ist für die angebotene Konfiguration durch Vorlage eines geeigneten Messprotokolls mit dem";1. Technische Anforderungen;1.1 Prozessor;;;;
+A.1.1.2;Ausschluss;"Alternativ: x86-Technologie (64 Bit) AMD / Intel Prozessor,  Mindestleistung ≥ 1800 Score Points „Overall“ im Benchmark „SYSmark 30“, Hardwareunterstützung für AES-Verschlüsselung.
+
+Testeinstellung: Auflösung 1920×1080 bei 60 Hz, Betriebssystem Windows 11 Pro 24H2 oder höher. Der Leistungswert SYSmark 30 „Overall Rating“ ist für die angebotene Konfiguration durch Vorlage eines geeigneten Messproto";1. Technische Anforderungen;1.1 Prozessor;;;;
+A.1.2.1;Ausschluss;16 GB RAM DDR5 oder höher;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.2.2;Ausschluss;Alternativ: 32 GB RAM DDR5 erhältlich;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.2.3;Ausschluss;Alternativ: 64 GB RAM DDR5 erhältlich;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.3.1;Ausschluss;"Ethernet-Adapter, RJ-45, 10/100/1000 Mbit/s, autosensing, Unterstützung für Preboot-Execution-Environment (PXE 2.1); WOL";1. Technische Anforderungen;1.3 Netzwerkkarte;;;;
+A.1.4.1;Ausschluss;Min. 240 GB SSD, M.2 PCIe;1. Technische Anforderungen;1.4 Festplatte;;;;
+A.1.4.2;Ausschluss;Alternativ:  min. 480 GB SSD, M.2 PCIe;1. Technische Anforderungen;1.4 Festplatte;;;;
+A.1.4.3;Ausschluss;Alternativ:  min. 1 TB SSD, M.2 PCIe;1. Technische Anforderungen;1.4 Festplatte;;;;
+A.1.5.1;Ausschluss;onboard-Soundkarte;1. Technische Anforderungen;1.5 Sound;;;;
+B.1.6.1;Bewertung;internes DVD±R, ±RW Laufwerk;1. Technische Anforderungen;1.6 Optische Laufwerke;10,0;;;
+A.1.7.1;Ausschluss;Min. 2x USB 2.0 Typ-A extern;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.2;Ausschluss;Min. 1x USB 3.2 Typ-A extern;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.3;Ausschluss;Min. 2 digitale Schnittstellen für Monitore (davon mindestens 1x DisplayPort);1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+B.1.7.4;Bewertung;optionale 3. digitale Schnittstelle für Monitor (HDMI oder DP);1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;20,0;;;
+A.1.7.5;Ausschluss;Min. 2x USB 2.0 Typ-A, erreichbar ohne Klappen oder Abdeckungen;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.6;Ausschluss;Min. 1x USB 3.2 Typ-C (mind. 5G Bits/s) , erreichbar ohne Klappen oder Abdeckungen;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.7;Ausschluss;1x Kopfhörer u. 1x Mikrofon (jeweils 3,5mm Klinkenbuchse) oder kombinierte Stereokopfhörer-/Mikrofonbuchse, erreichbar ohne Klappen oder Abdeckungen;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.8;Ausschluss;1x PCIe x16 Gen3 oder neuer, volle Bauhöhe;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.9;Ausschluss;1x PCIe x1, volle Bauhöhe;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.10;Ausschluss;Schnittstellen- und Laufwerke über BIOS deaktivierbar, Passwortschutz für System und Setup;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.11;Ausschluss;Einstellung der Bootreihenfolge im BIOS möglich;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.8.1;Ausschluss;TPM mind. 2.0 Modul onboard mind. FIPS-140-2 zertifiziert;1. Technische Anforderungen;1.8 Sicherheit/ Management;;;;
+A.1.8.2;Ausschluss;TPM über kostenlose Software ein-/aus-schaltbar;1. Technische Anforderungen;1.8 Sicherheit/ Management;;;;
+A.1.8.3;Ausschluss;SCCM-fähige Treiberpakete verfügbar;1. Technische Anforderungen;1.8 Sicherheit/ Management;;;;
+A.1.9.1;Ausschluss;Onboard;1. Technische Anforderungen;1.9 Grafikkarte;;;;
+A.1.9.2;Ausschluss;Unterstützung von mind. zwei unabhängigen Displays (digitaler Anschluss);1. Technische Anforderungen;1.9 Grafikkarte;;;;
+A.1.9.3;Ausschluss;Auflösung min. 3.840 x 2.160 digital;1. Technische Anforderungen;1.9 Grafikkarte;;;;
+A.1.9.4;Ausschluss;DirectX 12, OpenGL 4.x Unterstützung;1. Technische Anforderungen;1.9 Grafikkarte;;;;
+A.1.10.1;Ausschluss;"Gehäuseform Mini-Tower, Maximales Gehäusevolumen ≤ 16 Liter 
+Laufwerksschächte: min. 1x 3,5""  (intern) und min. 1x Slim (extern)";1. Technische Anforderungen;1.10 Gehäuse;;;;
+A.1.10.2;Ausschluss;Werkzeuglose Montage von Gehäusedeckel, Laufwerken und Steckkarten;1. Technische Anforderungen;1.10 Gehäuse;;;;
+A.1.10.3;Ausschluss;Gehäuse mit Vorrichtung zur Diebstahlsicherung (Kensington-Lock);1. Technische Anforderungen;1.10 Gehäuse;;;;
+B.1.10.4;Bewertung;Gehäuseöffnungs-Sensor;1. Technische Anforderungen;1.10 Gehäuse;10,0;;;
+B.1.10.5;Bewertung;Optional abschliessbare Kabelabdeckung;1. Technische Anforderungen;1.10 Gehäuse;10,0;;;
+A.1.11.1;Ausschluss;Netzteil 110-240 Volt;1. Technische Anforderungen;1.11 Stromversorgung;;;;
+A.1.11.2;Ausschluss;"Eingebaute Netzteile müssen bei den Lastzuständen 20%, 50% und 100% mindestens einen Wirkungsgrad von 87%, 90% und 87% haben. 
+Nachweis: Messprotokoll oder 80plus Gold-Zertifizierung";1. Technische Anforderungen;1.11 Stromversorgung;;;;
+A.1.12.1;Ausschluss;Tastatur in deutscher Sprache (MF2-Tastatur) mit min. 105 Tasten, USB schwarz;1. Technische Anforderungen;1.12 Tastatur und Maus;;;;
+A.1.12.2;Ausschluss;Optional Tastatur in englischer Sprache, UK oder US , USB schwarz erhältlich;1. Technische Anforderungen;1.12 Tastatur und Maus;;;;
+A.1.12.3;Ausschluss;Optische Maus mit min. 2 Tasten und Mausrad, USB schwarz;1. Technische Anforderungen;1.12 Tastatur und Maus;;;;
+A.1.12.4;Ausschluss;"Die ergonomischen Eigenschaften von Tastaturen für Arbeitsplatzcomputer sollten nach dem Standard EN ISO 9241-4 geprüft sein und die dort geforderten Parameter einhalten.
+Nachweis: Herstellererklärung und der Bieter legt spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht vor.";1. Technische Anforderungen;1.12 Tastatur und Maus;;;;
+A.1.13.1;Ausschluss;Microsoft Windows 11 Professional 64 Bit OEM vorinstalliert inkl. Lizenz;1. Technische Anforderungen;1.13 Betriebssystem;;;;
+A.1.13.2;Ausschluss;Alternativ Microsoft Windows 11 Home 64 BIT OEM  vorinstalliert inkl. Lizenz;1. Technische Anforderungen;1.13 Betriebssystem;;;;
+B.1.13.3;Bewertung;Alternativ Ubuntu LTS 24.04 Werksseitig, Gerät ist offziell zertifiziert und auf folgender Seite gelistet: URL: https://certification.ubuntu.com/desktop;1. Technische Anforderungen;1.13 Betriebssystem;20,0;;;
+A.1.14.1;Ausschluss;Neugeräte aus Serienproduktion;1. Technische Anforderungen;1.14 Allgemeine Eigenschaften;;;;
+A.1.14.2;Ausschluss;Ein- und Ausschalter an Gerätevorderseite, durch dessen Betätigung das Gerät min. in den Schein-Aus-Zustand versetzt werden kann;1. Technische Anforderungen;1.14 Allgemeine Eigenschaften;;;;
+A.2.1.1;Ausschluss;Wake-On-LAN;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.2;Ausschluss;"Der Hersteller muss ermöglichen, dass das System‑BIOS im Rahmen der vom Hersteller freigegebenen Versionen sowohl aktualisiert (Upgrade) als auch auf frühere, freigegebene BIOS‑Stände zurückgesetzt (Downgrade) werden kann.
+Einschränkungen von BIOS‑Downgrades sind  zulässig, wenn sicherheitskritische BIOS‑ bzw. Firmware‑Updates ein Downgrade aus Sicherheitsgründen unterbinden";2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.3;Ausschluss;"Energiemanagement: Das Gerät muss ein ACPI-konformes Betriebssystem unterstützen. Das Gerät muss bei Inaktivität selbständig in den Ruhemodus übergehen sowie den Monitor ausschalten. Voreinstellung bei Auslieferung:
+- Monitor aus ≤ 15 Min
+- Ruhemodus (ACPI S3) ≤ 30 Min";2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.4;Ausschluss;Der Kunde soll die Möglichkeit haben mindestens eine kundenspezifische Information selbst im Geräte-BIOS zu hinterlegen, z.B. die Inventarnummer des Gerätes und/oder eine Anlagennummer. Das Feld im BIOS muss durch den Kunden initial gefüllt und nachträglich bearbeitet werden können.;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.5;Ausschluss;Kostenloses Tool vom Gerätehersteller zur automatisierten Firmware- u. Treiberaktualisierung (Windows) verfügbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.6;Ausschluss;Kostenloses Tool vom Gerätehersteller zur Bios-Konfiguration verfügbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.2.1;Ausschluss;Optional: Aufkleber mit Assetdaten (z.B. Seriennummer, MAC.Adresse) auf Verpackung;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.2.2.2;Ausschluss;Optional Aufkleber mit Assetdaten (z.B. Seriennummer, MAC.Adresse) auf System;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.2.2.3;Ausschluss;Optional Aufbringen kundenspezifischer Aufkleber auf System;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.3.1.1;Ausschluss;"Das Gerät erfüllt vollständig die Anforderungen des aktuellen ENERGY-STAR-Programms für Computer (derzeit ENERGY STAR Version 9.0).
+
+Nachweise: Herstellererklärung; der Bieter verpflichtet sich, spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht oder ein Dokument gemäß der jeweils gültigen ENERGY-STAR-Testvorschrift oder ein Dokument mit folgenden Angaben vorzulegen:
+
+Name des Prüfl";3 - Qualität / Sicherheit / Umwelt;3.1 Energieverbrauch;;;;
+A.3.2.1;Ausschluss;"GS-Zeichen; CE; WEEE; EU-RoHS – entsprechende Konformitäts- und Zertifikatsunterlagen werden beigefügt.";3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.2;Ausschluss;"Erfüllung von Umweltkriterien analog zur EPEAT-Zertifizierung: Bitte geben Sie an, ob die Kriterien entsprechend der Norm ""EPEAT Gold"" erfüllt werden (alle mit ""R"" markierten und mindestens 75% der mit ""O"" markierten Kriterien). Fügen Sie als Nachweis bitte entweder eine Zertifizierung nach EPEAT Gold bei oder einen gleichwertigen Nachweis zur Erfüllung der genannten Kriterien. Da sich die EPEAT-K";3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;;;;
+B.3.2.3;Bewertung;Erfüllung von Umweltkriterien analog zur Climate+Zertifizierung, ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung ist beizufügen;3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;20,0;;;
+A.3.2.4;Ausschluss;Einhaltung der ILO-Kernarbeitsnormen - ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung ist beizufügen;3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.5;Ausschluss;EcoVadis-Zertifizierung (mind. Platin, Nachweis: Herstellererklärung);3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;;;;
+A.1.1.1;Ausschluss;"x86-Technologie (64 Bit) AMD / Intel Prozessor, Mindestleistung ≥ 1750 Score Points „Overall“ im Benchmark „SYSmark 30“, Hardwareunterstützung für AES-Verschlüsselung.
+
+Testeinstellung: Auflösung 1920×1080 bei 60 Hz, Betriebssystem Windows 11 Pro 24H2 oder höher. Der Leistungswert SYSmark 30 „Overall Rating“ ist für die angebotene Konfiguration durch Vorlage eines geeigneten Messprotokolls mit dem";1. Technische Anforderungen;1.1 Prozessor;;;;
+A.1.1.2;Ausschluss;"Alternativ: x86-Technologie (64 Bit) AMD / Intel Prozessor, Mindestleistung ≥ 1800 Score Points „Overall“ im Benchmark „SYSmark 30“, Hardwareunterstützung für AES-Verschlüsselung.
+
+Testeinstellung: Auflösung 1920×1080 bei 60 Hz, Betriebssystem Windows 11 Pro 24H2 oder höher. Der Leistungswert SYSmark 30 „Overall Rating“ ist für die angebotene Konfiguration durch Vorlage eines geeigneten Messprotok";1. Technische Anforderungen;1.1 Prozessor;;;;
+A.1.1.3;Ausschluss;Alternativ: x86-Technologie (64 Bit) AMD / Intel Prozessor, Mindestleistung ≥ 1900 Score Points „Overall“ im Benchmark „SYSmark 30“, Hardwareunterstützung für AES-Verschlüsselung. Testeinstellung: Auflösung 1920×1080 bei 60 Hz, Betriebssystem Windows 11 Pro 24H2 oder höher. Der Leistungswert SYSmark 30 „Overall Rating“ ist für die angebotene Konfiguration durch Vorlage eines geeigneten Messprotoko;1. Technische Anforderungen;1.1 Prozessor;;;;
+A.1.2.1;Ausschluss;16 GB RAM DDR5;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.2.2;Ausschluss;Alternativ 32 GB RAM DDR5 erhältlich;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.2.3;Ausschluss;Alternativ 64 GB RAM DDR5 erhältlich;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.2.4;Ausschluss;Alternativ 128 GB RAM DDR5 erhältlich;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.3.1;Ausschluss;"Ethernet-Adapter, RJ-45, 10/100/1000 Mbit/s, autosensing, Unterstützung für Preboot-Execution-Environment (PXE 2.1); WOL";1. Technische Anforderungen;1.3 Netzwerkkarte;;;;
+A.1.3.2;Ausschluss;"Optional zusätzlicher Ethernet-Adapter, mind.2.5Gbit/s, RJ-45, autosensing, Unterstützung für Preboot-Execution-Environment (PXE 2.1); WOL";1. Technische Anforderungen;1.3 Netzwerkkarte;;;;
+A.1.3.3;Ausschluss;Optional Wifi 6 oder Wifi 7 mit Bluetooth 5.x;1. Technische Anforderungen;1.3 Netzwerkkarte;;;;
+A.1.4.1;Ausschluss;mind. 480 GB SSD M.2 PCIe;1. Technische Anforderungen;1.4 SSD/Festplatte;;;;
+A.1.4.2;Ausschluss;Alternativ 1TB SSD M.2 PCIe;1. Technische Anforderungen;1.4 SSD/Festplatte;;;;
+A.1.4.3;Ausschluss;Alternativ 2TB SSD M.2 PCIe;1. Technische Anforderungen;1.4 SSD/Festplatte;;;;
+A.1.4.4;Ausschluss;Optional 2. zusätzliche mind. 480GB SSD M.2 PCIe;1. Technische Anforderungen;1.4 SSD/Festplatte;;;;
+A.1.4.5;Ausschluss;Optional 2. zusätzliche 1TB SSD M.2 PCIe;1. Technische Anforderungen;1.4 SSD/Festplatte;;;;
+A.1.4.6;Ausschluss;Optional 2. zusätzliche 2TB SSD M.2 PCIe;1. Technische Anforderungen;1.4 SSD/Festplatte;;;;
+A.1.4.7;Ausschluss;Optional zusätzliche 4 TB HDD, SATA 6 Gb/s;1. Technische Anforderungen;1.4 SSD/Festplatte;;;;
+A.1.4.8;Ausschluss;Optional: Festplatte/SSD verbleibt im Reparaturfall beim Kunden;1. Technische Anforderungen;1.4 SSD/Festplatte;;;;
+A.1.4.9;Ausschluss;Raid-Controller mind. Raid 1;1. Technische Anforderungen;1.4 SSD/Festplatte;;;;
+A.1.5.1;Ausschluss;onboard-Soundkarte;1. Technische Anforderungen;1.5 Sound;;;;
+B.1.6.1;Bewertung;Optional internes DVD±R, ±RW, Laufwerk;1. Technische Anforderungen;1.6 Optische Laufwerke;10,0;;;
+B.1.6.2;Bewertung;Optional interner, SDHC-kompatibler Kartenleser erhältlich;1. Technische Anforderungen;1.6 Optische Laufwerke;10,0;;;
+A.1.7.1;Ausschluss;Min. 1 USB 2.0 Typ-A extern;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.2;Ausschluss;Min. 3 USB 3.2  Typ-A extern;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.3;Ausschluss;Min. 1 USB 3.2 Typ-C (mind. 10Gbit/s) extern;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.4;Ausschluss;Min. 3 digitale Schnittstellen für Monitore (davon mindestens 2x DisplayPort);1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.5;Ausschluss;optionale 4. digitale Schnittstelle DisplayPort 2.1, UHBR20 extern;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+B.1.7.6;Bewertung;Optional USB Typ-C Thunderbolt  4 (40 Gbps) extern;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;20,0;;;
+B.1.7.7;Bewertung;Optional Serielle Schnittstelle extern;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;20,0;;;
+A.1.7.8;Ausschluss;Min. 2x USB 2.0, Typ-A erreichbar ohne Klappen oder Abdeckungen;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.9;Ausschluss;Min. 1x USB 3.2 Typ-A, erreichbar ohne Klappen oder Abdeckungen;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.10;Ausschluss;Min. 1x USB 3.2 Typ-C (mind. 10Gbit/s), erreichbar ohne Klappen oder Abdeckungen;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.11;Ausschluss;1x Kopfhörer u. 1x Mikrofon (jeweils 3,5mm Klinkenbuchse) oder kombinierte Stereokopfhörer-/Mikrofonbuchse, erreichbar ohne Klappen oder Abdeckungen;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.12;Ausschluss;1x PCIe x16 Gen4 oder neuer, volle Bauhöhe;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.13;Ausschluss;1x PCIe x4, volle Bauhöhe;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.14;Ausschluss;1x PCIe x1, volle Bauhöhe;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+B.1.7.15;Bewertung;Weitere PCIe-Schnittstellen;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;20,0;;;
+A.1.7.16;Ausschluss;Mind. 3 M.2 Schnittstellen;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.17;Ausschluss;Schnittstellen- und Laufwerke über BIOS deaktivierbar, Passwortschutz für System und Setup;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.18;Ausschluss;Einstellung der Bootreihenfolge im BIOS möglich;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.8.1;Ausschluss;TPM mind. 2.0 Modul onboard mind. FIPS-140-2 zertifiziert;1. Technische Anforderungen;1.8 Sicherheit/ Management;;;;
+A.1.8.2;Ausschluss;TPM Modul über kostenlose Software ein-/aus-schaltbar;1. Technische Anforderungen;1.8 Sicherheit/ Management;;;;
+A.1.8.3;Ausschluss;SCCM-fähige Treiberpakete verfügbar;1. Technische Anforderungen;1.8 Sicherheit/ Management;;;;
+A.1.9.1;Ausschluss;Onboard;1. Technische Anforderungen;1.9 Grafikkarte;;;;
+A.1.9.2;Ausschluss;Unterstützung von mind. drei unabhängigen Displays (digitaler Anschluss);1. Technische Anforderungen;1.9 Grafikkarte;;;;
+A.1.9.3;Ausschluss;Auflösung min. 3.840 x  2.160 Pixel digital;1. Technische Anforderungen;1.9 Grafikkarte;;;;
+A.1.9.4;Ausschluss;DirectX 12 und OpenGL 4.x und Unterstützung;1. Technische Anforderungen;1.9 Grafikkarte;;;;
+A.1.9.5;Ausschluss;Optional Grafikkarte mit mind. 4 GB RAM, min. 2 digitale Schnittstellen erhältlich, Auflösung mindestens einmal 3.840 x 2.160;1. Technische Anforderungen;1.9 Grafikkarte;;;;
+A.1.10.1;Ausschluss;"Gehäuseform Mini-Tower, Maximales Gehäusevolumen ≤ 16 Liter 
+Laufwerksschächte: min. 1x 3,5""  (intern) und min. 1x Slim (extern),";1. Technische Anforderungen;1.10 Gehäuse;;;;
+A.1.10.2;Ausschluss;Werkzeuglose Montage von Gehäusedeckel, Laufwerken und Steckkarten;1. Technische Anforderungen;1.10 Gehäuse;;;;
+A.1.10.3;Ausschluss;Gehäuse mit Vorrichtung zur Diebstahlsicherung (Kensington-Lock);1. Technische Anforderungen;1.10 Gehäuse;;;;
+B.1.10.4;Bewertung;Gehäuseöffnungs-Sensor;1. Technische Anforderungen;1.10 Gehäuse;10,0;;;
+B.1.10.5;Bewertung;Optional Abschliessbare Kabelabdeckung;1. Technische Anforderungen;1.10 Gehäuse;10,0;;;
+A.1.11.1;Ausschluss;Netzteil 110-240 Volt;1. Technische Anforderungen;1.11 Stromversorgung;;;;
+A.1.11.2;Ausschluss;"Eingebaute Netzteile müssen bei den Lastzuständen 20%, 50% und 100% mindestens einen Wirkungsgrad von 87%, 90% und 87% haben. 
+Nachweis: Messprotokoll oder 80plus Gold-Zertifizierung";1. Technische Anforderungen;1.11 Stromversorgung;;;;
+A.1.12.1;Ausschluss;Tastatur in deutscher Sprache (MF2-Tastatur) mit min. 105 Tasten, USB schwarz;1. Technische Anforderungen;1.12 Tastatur und Maus;;;;
+A.1.12.2;Ausschluss;Optional Tastatur in englischer Sprache, UK oder US , USB schwarz erhältlich;1. Technische Anforderungen;1.12 Tastatur und Maus;;;;
+A.1.12.3;Ausschluss;Optische Maus mit min. 2 Tasten und Mausrad, USB schwarz;1. Technische Anforderungen;1.12 Tastatur und Maus;;;;
+A.1.12.4;Ausschluss;"Die ergonomischen Eigenschaften von Tastaturen für Arbeitsplatzcomputer sollten nach dem Standard EN ISO 9241-4 geprüft sein und die dort geforderten Parameter einhalten.
+Nachweis: Herstellererklärung und der Bieter legt spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht vor.";1. Technische Anforderungen;1.12 Tastatur und Maus;;;;
+A.1.13.1;Ausschluss;Microsoft Windows 11 Professional 64 Bit OEM vorinstalliert inkl. Lizenz;1. Technische Anforderungen;1.13 Betriebssystem;;;;
+A.1.13.2;Ausschluss;Alternativ Microsoft Windows 11 Home 64 BIT OEM  vorinstalliert inkl. 11 Lizenz;1. Technische Anforderungen;1.13 Betriebssystem;;;;
+A.1.13.3;Ausschluss;"Alternativ Ubuntu LTS 24.04 Werksseitig, Gerät ist offziell zertifiziert und auf folgender Seite gelistet; URL: https://certification.ubuntu.com/desktop";1. Technische Anforderungen;1.13 Betriebssystem;;;;
+A.1.14.1;Ausschluss;Neugeräte aus Serienproduktion;1. Technische Anforderungen;1.14 Allgemeine Eigenschaften;;;;
+A.1.14.2;Ausschluss;Alle imagerelevanten Bauteile über Produktlebenszyklus unverändert konstant;1. Technische Anforderungen;1.14 Allgemeine Eigenschaften;;;;
+B.1.14.3;Bewertung;geplante Produktlaufzeit in Monaten (Nachweis mit Hersteller-Roadmap);1. Technische Anforderungen;1.14 Allgemeine Eigenschaften;40,0;;;
+A.1.14.4;Ausschluss;Ein- und Ausschalter an Gerätevorderseite, durch dessen Betätigung das Gerät min. in den Schein-Aus-Zustand versetzt werden kann;1. Technische Anforderungen;1.14 Allgemeine Eigenschaften;;;;
+A.2.1.1;Ausschluss;Wake-on-LAN;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.2;Ausschluss;"Der Hersteller muss ermöglichen, dass das System‑BIOS im Rahmen der vom Hersteller freigegebenen Versionen sowohl aktualisiert (Upgrade) als auch auf frühere, freigegebene BIOS‑Stände zurückgesetzt (Downgrade) werden kann.
+Einschränkungen von BIOS‑Downgrades sind  zulässig, wenn sicherheitskritische BIOS‑ bzw. Firmware‑Updates ein Downgrade aus Sicherheitsgründen unterbinden";2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.3;Ausschluss;"Energiemanagement: Das Gerät muss ein ACPI-konformes Betriebssystem unterstützen. Das Gerät muss bei Inaktivität selbständig in den Ruhemodus übergehen sowie den Monitor ausschalten. Voreinstellung bei Auslieferung:
+- Monitor aus ≤ 15 Min
+- Ruhemodus (ACPI S3) ≤ 30 Min";2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.4;Ausschluss;Der Kunde soll die Möglichkeit haben mindestens eine kundenspezifische Information selbst im Geräte-BIOS zu hinterlegen, z.B. die Inventarnummer des Gerätes und/oder eine Anlagennummer. Das Feld im BIOS muss durch den Kunden initial gefüllt und nachträglich bearbeitet werden können.;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.5;Ausschluss;Kostenloses Tool vom Gerätehersteller zur automatisierten Firmware- u. Treiberaktualisierung (Windows) verfügbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.6;Ausschluss;Kostenloses Tool vom Gerätehersteller zur Bios-Konfiguration verfügbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.2.1;Ausschluss;Optional: Aufkleber mit Assetdaten (z.B. Seriennummer, MAC.Adresse) auf Verpackung;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.2.2.2;Ausschluss;Optional Aufkleber mit Assetdaten (z.B. Seriennummer, MAC.Adresse) auf System;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.2.2.3;Ausschluss;Optional Aufbringen kundenspezifischer Aufkleber auf System;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.3.1.1;Ausschluss;"Das Gerät erfüllt vollständig die Anforderungen des aktuellen ENERGY-STAR-Programms für Computer (derzeit ENERGY STAR Version 9.0).
+
+Nachweise: Herstellererklärung; der Bieter verpflichtet sich, spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht oder ein Dokument gemäß der jeweils gültigen ENERGY-STAR-Testvorschrift oder ein Dokument mit folgenden Angaben vorzulegen:
+
+Name des Prüfl";3 - Qualität / Sicherheit / Umwelt;3.1 Energieverbrauch;;;;
+A.3.2.1;Ausschluss;"GS-Zeichen; CE; WEEE; EU-RoHS – entsprechende Konformitäts- und Zertifikatsunterlagen werden beigefügt.";3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.2;Ausschluss;"Erfüllung von Umweltkriterien analog zur EPEAT-Zertifizierung: Bitte geben Sie an, ob die Kriterien entsprechend der Norm ""EPEAT Gold"" erfüllt werden (alle Epeat-Kriterien mit ""R"" markierten und mindestens 75% der mit ""O"" markierten Kriterien). Fügen Sie als Nachweis bitte entweder eine Zertifizierung nach EPEAT Gold bei oder einen gleichwertigen Nachweis zur Erfüllung der genannten Kriterien. Da ";3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;;;;
+B.3.2.3;Bewertung;Erfüllung von Umweltkriterien analog zur Climate+Zertifizierung, ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung ist beizufügen;3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;20,0;;;
+A.3.2.4;Ausschluss;Einhaltung der ILO-Kernarbeitsnormen - ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung ist beizufügen;3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.5;Ausschluss;EcoVadis-Zertifizierung (mind. Platin, Nachweis: Herstellererklärung);3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;;;;
+A.1.1.1;Ausschluss;"x86-Technologie (64 Bit) AMD / Intel Prozessor, Mindestleistung ≥ 1750 Score Points „Overall“ im Benchmark „SYSmark 30“, Hardwareunterstützung für AES-Verschlüsselung.
+
+Testeinstellung: Auflösung 1920×1080 bei 60 Hz, Betriebssystem Windows 11 Pro 24H2 oder höher. Der Leistungswert SYSmark 30 „Overall Rating“ ist für die angebotene Konfiguration durch Vorlage eines geeigneten Messprotokolls mit dem";1. Technische Anforderungen;1.1 Prozessor;;;;
+A.1.1.2;Ausschluss;"Alternativ: x86-Technologie (64 Bit), AMD / Intel, Mindestleistung ≥ 1800 Score Points „Overall“ im Benchmark „SYSmark 30“, Hardwareunterstützung für AES-Verschlüsselung
+
+Testeinstellung: Auflösung 1920×1080 bei 60 Hz, Betriebssystem Windows 11 Pro 24H2 oder höher. Der Leistungswert SYSmark 30 „Overall Rating“ ist für die angebotene Konfiguration durch Vorlage eines geeigneten Messprotokolls mit d";1. Technische Anforderungen;1.1 Prozessor;;;;
+A.1.2.1;Ausschluss;16 GB RAM DDR5;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.2.2;Ausschluss;Alternativ: 32GB RAM DDR5;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.2.3;Ausschluss;Alternativ: 64GB RAM DDR5;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.3.1;Ausschluss;"Ethernet-Adapter, RJ-45, 10/100/1000 Mbit/s, autosensing, Unterstützung für Preboot-Execution-Environment (PXE 2.1); WOL";1. Technische Anforderungen;1.3 Netzwerkkarte;;;;
+A.1.4.1;Ausschluss;Min. 240 GB SSD M.2 PCIe;1. Technische Anforderungen;1.4 Festplatte;;;;
+A.1.4.2;Ausschluss;Alternativ: min. 480 GB SSD M.2  PCIe;1. Technische Anforderungen;1.4 Festplatte;;;;
+A.1.4.3;Ausschluss;Alternativ: min. 1TB SSD M.2  PCIe;1. Technische Anforderungen;1.4 Festplatte;;;;
+A.1.4.4;Ausschluss;Optional zusätzliche 2TB HDD, SATA 6 Gb/s;1. Technische Anforderungen;1.4 Festplatte;;;;
+A.1.4.5;Ausschluss;Optional: Festplatte/SSD verbleibt im Reparaturfall beim Kunden;1. Technische Anforderungen;1.4 Festplatte;;;;
+A.1.5.1;Ausschluss;onboard-Soundkarte;1. Technische Anforderungen;1.5 Sound;;;;
+B.1.6.1;Bewertung;Optional internes DVD±R, ±RW, Laufwerk;1. Technische Anforderungen;1.6 Optische Laufwerke;10,0;;;
+B.1.6.2;Bewertung;Optional interner, SDHC-kompatibler Kartenleser erhältlich;1. Technische Anforderungen;1.6 Optische Laufwerke;10,0;;;
+A.1.7.1;Ausschluss;Min. 2x USB 2.0 extern;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.2;Ausschluss;Min. 2x USB 3.2 (mind. 5 Gbits/s) extern;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.3;Ausschluss;Min. 2 digitale Schnittstellen für Monitore (davon mindestens 1x DisplayPort);1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.4;Ausschluss;optionale 3. digitale Schnittstelle für Monitor (HDMI 2.1 oder DP 2.1 UHBR20);1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.5;Ausschluss;Min. 1x USB 3.2 (mind. 5 Gbits/s) Typ A, erreichbar ohne Klappen oder Abdeckungen;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.6;Ausschluss;Min. 1x USB 3.2 (mind. 5 Gbits/s) Typ C, erreichbar ohne Klappen oder Abdeckungen;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.7;Ausschluss;1x Kopfhörer u. 1x Mikrofon (jeweils 3,5mm Klinkenbuchse) oder kombinierte Stereokopfhörer-/Mikrofonbuchse, erreichbar ohne Klappen oder Abdeckungen;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.8;Ausschluss;1x PCIe x16 Gen 3 oder neuer, halbe Bauhöhe;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.9;Ausschluss;1x PCIe x1;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+B.1.7.10;Bewertung;Weitere PCIe-Schnittstellen;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;20,0;;;
+A.1.7.11;Ausschluss;M.2 Schnittstelle;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.12;Ausschluss;Schnittstellen- und Laufwerke über BIOS deaktivierbar, Passwortschutz für System und Setup, auch konfigurierbar über kostenfreie Hersteller-Tools;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.13;Ausschluss;Einstellung der Bootreihenfolge im BIOS möglich;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.8.1;Ausschluss;TPM mind. 2.0 Modul onboard mind. FIPS-140-2 zertifiziert;1. Technische Anforderungen;1.8 Sicherheit/ Management;;;;
+A.1.8.2;Ausschluss;TPM Modul über kostenlose Software ein-/aus-schaltbar;1. Technische Anforderungen;1.8 Sicherheit/ Management;;;;
+A.1.8.3;Ausschluss;SCCM-fähige Treiberpakete verfügbar;1. Technische Anforderungen;1.8 Sicherheit/ Management;;;;
+A.1.9.1;Ausschluss;Onboard;1. Technische Anforderungen;1.9 Grafikkarte;;;;
+A.1.9.2;Ausschluss;Auflösung min. 3.840 x 2.160 digital;1. Technische Anforderungen;1.9 Grafikkarte;;;;
+A.1.9.3;Ausschluss;DirectX 12 und OpenGL 4.x  Unterstützung;1. Technische Anforderungen;1.9 Grafikkarte;;;;
+B.1.9.4;Bewertung;Optional Grafikkarte mit mind. 4 GB RAM, min. 2 digitale Schnittstellen (davon mindestens 1x DisplayPort) erhältlich, Auflösung mindestens einmal 3.840 x 2.160;1. Technische Anforderungen;1.9 Grafikkarte;20,0;;;
+A.1.10.1;Ausschluss;"Gehäuseform ""Small Form Factor"", Maximales Gehäusevolumen ≤ 9 Liter 
+Laufwerksschächte: min. 1x 3,5"" (intern) und min. 1x Slim (extern),";1. Technische Anforderungen;1.10 Gehäuse;;;;
+A.1.10.2;Ausschluss;Werkzeuglose Montage von Gehäusedeckel, Laufwerken und Steckkarten;1. Technische Anforderungen;1.10 Gehäuse;;;;
+A.1.10.3;Ausschluss;Gehäuse mit Vorrichtung zur Diebstahlsicherung (Kensington-Lock);1. Technische Anforderungen;1.10 Gehäuse;;;;
+B.1.10.4;Bewertung;Optional Gehäuseöffnungs-Sensor;1. Technische Anforderungen;1.10 Gehäuse;10,0;;;
+B.1.10.5;Bewertung;Optional Abschliessbare Kabelabdeckung;1. Technische Anforderungen;1.10 Gehäuse;10,0;;;
+A.1.11.1;Ausschluss;Netzteil 110-240 Volt;1. Technische Anforderungen;1.11 Stromversorgung;;;;
+A.1.11.2;Ausschluss;"Eingebaute Netzteile müssen bei den Lastzuständen 20%, 50% und 100% mindestens einen Wirkungsgrad von 87%, 90% und 87% haben. 
+Nachweis: Messprotokoll oder 80plus Gold-Zertifizierung";1. Technische Anforderungen;1.11 Stromversorgung;;;;
+A.1.12.1;Ausschluss;Tastatur in deutscher Sprache (MF2-Tastatur) mit min. 105 Tasten, USB schwarz;1. Technische Anforderungen;1.12 Tastatur und Maus;;;;
+A.1.12.2;Ausschluss;Optional Tastatur in englischer Sprache, UK oder US , USB schwarz erhältlich;1. Technische Anforderungen;1.12 Tastatur und Maus;;;;
+A.1.12.3;Ausschluss;Optische Maus mit min. 2 Tasten und Mausrad, USB schwarz;1. Technische Anforderungen;1.12 Tastatur und Maus;;;;
+A.1.12.4;Ausschluss;"Die ergonomischen Eigenschaften von Tastaturen für Arbeitsplatzcomputer sollten nach dem Standard EN ISO 9241-4 geprüft sein und die dort geforderten Parameter einhalten.
+Nachweis: Herstellererklärung und der Bieter legt spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht vor.";1. Technische Anforderungen;1.12 Tastatur und Maus;;;;
+A.1.13.1;Ausschluss;Microsoft Windows 11 Professional 64 Bit OEM vorinstalliert inkl. Lizenz;1. Technische Anforderungen;1.13 Betriebssystem;;;;
+A.1.13.2;Ausschluss;Alternativ Microsoft Windows 11 Home 64 BIT OEM  vorinstalliert inkl. Lizenz;1. Technische Anforderungen;1.13 Betriebssystem;;;;
+A.1.13.3;Ausschluss;"Alternativ Ubuntu LTS 24.04 Werksseitig, Gerät ist offziell zertifiziert und auf folgender Seite gelistet; URL: https://certification.ubuntu.com/desktop";1. Technische Anforderungen;1.13 Betriebssystem;;;;
+A.1.14.1;Ausschluss;Neugeräte aus Serienproduktion;1. Technische Anforderungen;1.14 Allgemeine Eigenschaften;;;;
+A.1.14.2;Ausschluss;Alle imagerelevanten Bauteile über Produktlebenszyklus unverändert konstant;1. Technische Anforderungen;1.14 Allgemeine Eigenschaften;;;;
+B.1.14.3;Bewertung;geplante Produktlaufzeit in Monaten (Nachweis mit Hersteller-Roadmap);1. Technische Anforderungen;1.14 Allgemeine Eigenschaften;40,0;;;
+A.1.14.4;Ausschluss;Ein- und Ausschalter an Gerätevorderseite, durch dessen Betätigung das Gerät min. in den Schein-Aus-Zustand versetzt werden kann;1. Technische Anforderungen;1.14 Allgemeine Eigenschaften;;;;
+A.2.1.1;Ausschluss;Wake-on-LAN;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.2;Ausschluss;"Der Hersteller muss ermöglichen, dass das System‑BIOS im Rahmen der vom Hersteller freigegebenen Versionen sowohl aktualisiert (Upgrade) als auch auf frühere, freigegebene BIOS‑Stände zurückgesetzt (Downgrade) werden kann.
+Einschränkungen von BIOS‑Downgrades sind  zulässig, wenn sicherheitskritische BIOS‑ bzw. Firmware‑Updates ein Downgrade aus Sicherheitsgründen unterbinden";2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.3;Ausschluss;"Energiemanagement: Das Gerät muss ein ACPI-konformes Betriebssystem unterstützen. Das Gerät muss bei Inaktivität selbständig in den Ruhemodus übergehen sowie den Monitor ausschalten. Voreinstellung bei Auslieferung:
+- Monitor aus ≤ 15 Min
+- Ruhemodus (ACPI S3) ≤ 30 Min";2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.4;Ausschluss;Der Kunde soll die Möglichkeit haben mindestens eine kundenspezifische Information selbst im Geräte-BIOS zu hinterlegen, z.B. die Inventarnummer des Gerätes und/oder eine Anlagennummer. Das Feld im BIOS muss durch den Kunden initial gefüllt und nachträglich bearbeitet werden können.;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.5;Ausschluss;Kostenloses Tool vom Gerätehersteller zur automatisierten Firmware- u. Treiberaktualisierung (Windows) verfügbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.6;Ausschluss;Kostenloses Tool vom Gerätehersteller zur Bios-Konfiguration verfügbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.2.1;Ausschluss;Optional: Aufkleber mit Assetdaten (z.B. Seriennummer, MAC.Adresse) auf Verpackung;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.2.2.2;Ausschluss;Optional Aufkleber mit Assetdaten (z.B. Seriennummer, MAC.Adresse) auf System;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.2.2.3;Ausschluss;Optional Aufbringen kundenspezifischer Aufkleber auf System;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.3.1.1;Ausschluss;"Das Gerät erfüllt vollständig die Anforderungen des aktuellen ENERGY-STAR-Programms für Computer (derzeit ENERGY STAR Version 9.0).
+
+Nachweise: Herstellererklärung; der Bieter verpflichtet sich, spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht oder ein Dokument gemäß der jeweils gültigen ENERGY-STAR-Testvorschrift oder ein Dokument mit folgenden Angaben vorzulegen:
+
+Name des Prüfl";3 - Qualität / Sicherheit / Umwelt;3.1 Energieverbrauch;;;;
+A.3.2.1;Ausschluss;"GS-Zeichen; CE; WEEE; EU-RoHS – entsprechende Konformitäts- und Zertifikatsunterlagen werden beigefügt.";3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.2;Ausschluss;"Erfüllung von Umweltkriterien analog zur EPEAT-Zertifizierung: Bitte geben Sie an, ob die Kriterien entsprechend der Norm ""EPEAT Gold"" erfüllt werden (alle mit ""R"" markierten und mindestens 75% der mit ""O"" markierten Kriterien). Fügen Sie als Nachweis bitte entweder eine Zertifizierung nach EPEAT Gold bei oder einen gleichwertigen Nachweis zur Erfüllung der genannten Kriterien. Da sich die EPEAT-K";3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;;;;
+B.3.2.3;Bewertung;Erfüllung von Umweltkriterien analog zur Climate+Zertifizierung, ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung ist beizufügen;3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;20,0;;;
+A.3.2.4;Ausschluss;Einhaltung der ILO-Kernarbeitsnormen - ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung ist beizufügen;3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.5;Ausschluss;EcoVadis-Zertifizierung (mind. Platin, Nachweis: Herstellererklärung);3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;;;;
+A.1.1.1;Ausschluss;"x86-Technologie (64 Bit) AMD / Intel Prozessor,  Mindestleistung ≥ 1700 Score Points „Overall“ im Benchmark „SYSmark 30“, Hardwareunterstützung für AES-Verschlüsselung
+
+Testeinstellung: Auflösung 1920×1080 bei 60 Hz, Betriebssystem Windows 11 Pro 24H2 oder höher. Der Leistungswert SYSmark 30 „Overall Rating“ ist für die angebotene Konfiguration durch Vorlage eines geeigneten Messprotokolls mit dem";1. Technische Anforderungen;1.1 Prozessor;;;;
+A.1.1.2;Ausschluss;"Alternativ: x86-Technologie (64 Bit) AMD / Intel Prozessor,  Mindestleistung ≥ 1900 Score Points „Overall“ im Benchmark „SYSmark 30“, Hardwareunterstützung für AES-Verschlüsselung
+
+Testeinstellung: Auflösung 1920×1080 bei 60 Hz, Betriebssystem Windows 11 Pro 24H2 oder höher. Der Leistungswert SYSmark 30 „Overall Rating“ ist für die angebotene Konfiguration durch Vorlage eines geeigneten Messprotok";1. Technische Anforderungen;1.1 Prozessor;;;;
+A.1.2.1;Ausschluss;16 GB RAM DDR5;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.2.2;Ausschluss;Alternativ: 32GB RAM DDR5;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.2.3;Ausschluss;Alternativ: 64GB RAM DDR5;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.3.1;Ausschluss;"Ethernet-Adapter, RJ-45, 10/100/1000 Mbit/s, autosensing, Unterstützung für Preboot-Execution-Environment (PXE 2.1); WOL";1. Technische Anforderungen;1.3 Netzwerkkarte;;;;
+A.1.3.2;Ausschluss;Optional onboard WLAN-Adapter Wifi 6 oder Wifi 7 mit Bluetooth mind. 5.x;1. Technische Anforderungen;1.3 Netzwerkkarte;;;;
+A.1.4.1;Ausschluss;Min. 240 GB SSD M.2 PCIe;1. Technische Anforderungen;1.4 Festplatte;;;;
+A.1.4.2;Ausschluss;Alternativ: Min. 480 GB SSD M.2 PCIe;1. Technische Anforderungen;1.4 Festplatte;;;;
+A.1.4.3;Ausschluss;Alternativ: Min. 1TB SSD M.2 PCIe;1. Technische Anforderungen;1.4 Festplatte;;;;
+A.1.4.4;Ausschluss;Optional: Festplatte/SSD verbleibt im Reparaturfall beim Kunden;1. Technische Anforderungen;1.4 Festplatte;;;;
+A.1.5.1;Ausschluss;onboard-Soundkarte;1. Technische Anforderungen;1.5 Sound;;;;
+B.1.6.1;Bewertung;Optional interner, SDHC-kompatibler Kartenleser erhältlich;1. Technische Anforderungen;1.6 SD Card;10,0;;;
+A.1.7.1;Ausschluss;Min. 2x USB 3.2 extern;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+B.1.7.2;Bewertung;2x USB 2.0 Typ-A;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;20,0;;;
+A.1.7.3;Ausschluss;Min. 2 digitale Schnittstellen für Monitore (davon mindestens 1x DisplayPort);1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+B.1.7.4;Bewertung;optionale 3. digitale Schnittstelle HDMI 2.1 FRL oder DisplayPort 2.1 (UHBR20);1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;20,0;;;
+A.1.7.5;Ausschluss;1x Kopfhörer u. 1x Mikrofon (jeweils 3,5mm Klinkenbuchse) oder kombinierte Stereokopfhörer-/Mikrofonbuchse, erreichbar ohne Klappen oder Abdeckungen;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.6;Ausschluss;Min. 1x USB 3.2, Typ-A (mind. mind. 5Gbist/s) erreichbar ohne Klappen oder Abdeckungen;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.7;Ausschluss;Min. 1x USB 3.2, Typ-C (mind. 10Gbist/s) erreichbar ohne Klappen oder Abdeckungen;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.8;Ausschluss;1x M.2 Schnittstelle;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+B.1.7.9;Bewertung;2. zusätzliche M2. Schnittstelle für weitere SSD;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;20,0;;;
+A.1.7.10;Ausschluss;Schnittstellen- und Laufwerke über BIOS deaktivierbar, Passwortschutz für System und Setup;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.11;Ausschluss;Einstellung der Bootreihenfolge im BIOS möglich;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.8.1;Ausschluss;TPM mind. 2.0 Modul onboard mind. FIPS-140-2 zertifiziert;1. Technische Anforderungen;1.8 Sicherheit/ Management;;;;
+A.1.8.2;Ausschluss;TPM Modul über kostenlose Software ein-/aus-schaltbar;1. Technische Anforderungen;1.8 Sicherheit/ Management;;;;
+A.1.8.3;Ausschluss;SCCM-fähige Treiberpakete verfügbar;1. Technische Anforderungen;1.8 Sicherheit/ Management;;;;
+A.1.9.1;Ausschluss;Onboard;1. Technische Anforderungen;1.9 Grafikkarte;;;;
+A.1.9.2;Ausschluss;Auflösung min. 3.840 x 2.160 Pixel digital;1. Technische Anforderungen;1.9 Grafikkarte;;;;
+A.1.9.3;Ausschluss;DirectX 12 und OpenGL 4.x Unterstützung;1. Technische Anforderungen;1.9 Grafikkarte;;;;
+A.1.10.1;Ausschluss;"Gehäuseform ""Mini-PC"", Maximales Gehäusevolumen ≤ 1,2 Liter";1. Technische Anforderungen;1.10 Gehäuse;;;;
+B.1.10.2;Bewertung;Werkzeuglose Montage von Gehäusedeckel, Laufwerken und Steckkarten;1. Technische Anforderungen;1.10 Gehäuse;20,0;;;
+A.1.10.3;Ausschluss;Gehäuse mit Vorrichtung zur Diebstahlsicherung (Kensington-Lock);1. Technische Anforderungen;1.10 Gehäuse;;;;
+B.1.10.4;Bewertung;Gehäuseöffnungs-Sensor;1. Technische Anforderungen;1.10 Gehäuse;10,0;;;
+A.1.11.1;Ausschluss;Netzteil 110-240 Volt;1. Technische Anforderungen;1.11 Stromversorgung;;;;
+A.1.12.1;Ausschluss;Tastatur in deutscher Sprache (MF2-Tastatur) mit min. 105 Tasten, USB schwarz;1. Technische Anforderungen;1.12 Tastatur und Maus;;;;
+A.1.12.2;Ausschluss;Optional Tastatur in englischer Sprache, UK oder US , USB schwarz erhältlich;1. Technische Anforderungen;1.12 Tastatur und Maus;;;;
+A.1.12.3;Ausschluss;Optische Maus mit min. 2 Tasten und Mausrad, USB schwarz;1. Technische Anforderungen;1.12 Tastatur und Maus;;;;
+A.1.12.4;Ausschluss;"Die ergonomischen Eigenschaften von Tastaturen für Arbeitsplatzcomputer sollten nach dem Standard EN ISO 9241-4 geprüft sein und die dort geforderten Parameter einhalten.
+Nachweis: Herstellererklärung und der Bieter legt spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht vor.";1. Technische Anforderungen;1.12 Tastatur und Maus;;;;
+A.1.13.1;Ausschluss;Microsoft Windows 11 Professional 64 Bit OEM vorinstalliert inkl. Lizenz;1. Technische Anforderungen;1.13 Betriebssystem;;;;
+A.1.13.2;Ausschluss;Alternativ Microsoft Windows 11 Home 64 BIT OEM  vorinstalliert inkl. Lizenz;1. Technische Anforderungen;1.13 Betriebssystem;;;;
+A.1.13.3;Ausschluss;"Alternativ Ubuntu LTS 24.04 Werksseitig, Gerät ist offziell zertifiziert und auf folgender Seite gelistet; URL: https://certification.ubuntu.com/desktop";1. Technische Anforderungen;1.13 Betriebssystem;;;;
+A.1.14.1;Ausschluss;Neugeräte aus Serienproduktion;1. Technische Anforderungen;1.14 Allgemeine Eigenschaften;;;;
+A.1.14.2;Ausschluss;Alle imagerelevanten Bauteile über Produktlebenszyklus unverändert konstant;1. Technische Anforderungen;1.14 Allgemeine Eigenschaften;;;;
+B.1.14.3;Bewertung;geplante Produktlaufzeit in Monaten (Nachweis mit Hersteller-Roadmap);1. Technische Anforderungen;1.14 Allgemeine Eigenschaften;40,0;;;
+A.1.14.4;Ausschluss;Ein- und Ausschalter an Gerätevorderseite, durch dessen Betätigung das Gerät min. in den Schein-Aus-Zustand versetzt werden kann;1. Technische Anforderungen;1.14 Allgemeine Eigenschaften;;;;
+A.2.1.1;Ausschluss;Wake-on-LAN;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.2;Ausschluss;"Der Hersteller muss ermöglichen, dass das System‑BIOS im Rahmen der vom Hersteller freigegebenen Versionen sowohl aktualisiert (Upgrade) als auch auf frühere, freigegebene BIOS‑Stände zurückgesetzt (Downgrade) werden kann.
+Einschränkungen von BIOS‑Downgrades sind  zulässig, wenn sicherheitskritische BIOS‑ bzw. Firmware‑Updates ein Downgrade aus Sicherheitsgründen unterbinden";2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.3;Ausschluss;"Energiemanagement: Das Gerät muss ein ACPI-konformes Betriebssystem unterstützen. Das Gerät muss bei Inaktivität selbständig in den Ruhemodus übergehen sowie den Monitor ausschalten. Voreinstellung bei Auslieferung:
+- Monitor aus ≤ 15 Min
+- Ruhemodus (ACPI S3) ≤ 30 Min";2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.4;Ausschluss;Der Kunde soll die Möglichkeit haben mindestens eine kundenspezifische Information selbst im Geräte-BIOS zu hinterlegen, z.B. die Inventarnummer des Gerätes und/oder eine Anlagennummer. Das Feld im BIOS muss durch den Kunden initial gefüllt und nachträglich bearbeitet werden können.;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.5;Ausschluss;Kostenloses Tool vom Gerätehersteller zur automatisierten Firmware- u. Treiberaktualisierung (Windows) verfügbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.6;Ausschluss;Kostenloses Tool vom Gerätehersteller zur Bios-Konfiguration verfügbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.2.1;Ausschluss;Optional: Aufkleber mit Assetdaten (z.B. Seriennummer, MAC.Adresse) auf Verpackung;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.2.2.2;Ausschluss;Optional Aufkleber mit Assetdaten (z.B. Seriennummer, MAC.Adresse) auf System;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.2.2.3;Ausschluss;Optional Aufbringen kundenspezifischer Aufkleber auf System;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.3.1.1;Ausschluss;"Das Gerät erfüllt vollständig die Anforderungen des aktuellen ENERGY-STAR-Programms für Computer (derzeit ENERGY STAR Version 9.0).
+
+Nachweise: Herstellererklärung; der Bieter verpflichtet sich, spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht oder ein Dokument gemäß der jeweils gültigen ENERGY-STAR-Testvorschrift oder ein Dokument mit folgenden Angaben vorzulegen:
+
+Name des Prüfl";3 - Qualität / Sicherheit / Umwelt;3.1 Energieverbrauch;;;;
+A.3.2.1;Ausschluss;"GS-Zeichen; CE; WEEE; EU-RoHS – entsprechende Konformitäts- und Zertifikatsunterlagen werden beigefügt.";3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.2;Ausschluss;"Erfüllung von Umweltkriterien analog zur EPEAT-Zertifizierung: Bitte geben Sie an, ob die Kriterien entsprechend der Norm ""EPEAT Gold"" erfüllt werden (alle Epeat Kriterien mit ""R""  und mindestens 75% der mit ""O"" markierten Kriterien). Fügen Sie als Nachweis bitte entweder eine Zertifizierung nach EPEAT Gold bei oder einen gleichwertigen Nachweis zur Erfüllung der genannten Kriterien. Da sich die E";3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;;;;
+B.3.2.3;Bewertung;Erfüllung von Umweltkriterien analog zur Climate+Zertifizierung, ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung ist beizufügen;3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;20,0;;;
+A.3.2.4;Ausschluss;Einhaltung der ILO-Kernarbeitsnormen - ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung ist beizufügen;3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.5;Ausschluss;EcoVadis-Zertifizierung (mind. Platin, Nachweis: Herstellererklärung);3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;;;;
+A.1.1.1;Ausschluss;"x86-Technologie (64 Bit) AMD / Intel Prozessor,  Mindestleistung ≥ 1800 Score Points „Overall“ im Benchmark „SYSmark 30“, Hardwareunterstützung für AES-Verschlüsselung
+
+Testeinstellung: Auflösung 1920×1080 bei 60 Hz, Betriebssystem Windows 11 Pro 24H2 oder höher. Der Leistungswert SYSmark 30 „Overall Rating“ ist für die angebotene Konfiguration durch Vorlage eines geeigneten Messprotokolls mit dem";1. Technische Anforderungen;1.1 Prozessor;;;;
+A.1.2.1;Ausschluss;32 GB RAM DDR5;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.2.2;Ausschluss;Alternativ: 64GB RAM DDR5;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.3.1;Ausschluss;"Ethernet-Adapter, RJ-45, 10/100/1000 Mbit/s, autosensing, Unterstützung für Preboot-Execution-Environment (PXE 2.1); WOL";1. Technische Anforderungen;1.3 Netzwerkkarte;;;;
+A.1.3.2;Ausschluss;onboard WLAN-Adapter Wifi 6 oder Wifi 7 mit Bluetooth mind. 5.x;1. Technische Anforderungen;1.3 Netzwerkkarte;;;;
+A.1.4.1;Ausschluss;480 GB SSD M.2 PCIe;1. Technische Anforderungen;1.4 Festplatte;;;;
+A.1.4.2;Ausschluss;Alternativ: 1TB SSD M.2 PCIe;1. Technische Anforderungen;1.4 Festplatte;;;;
+B.1.4.3;Bewertung;Alternativ: 2TB SSD M.2 PCIe;1. Technische Anforderungen;1.4 Festplatte;20,0;;;
+B.1.4.4;Bewertung;Optional zusätzlich: 1TB SSD M.2 PCIe;1. Technische Anforderungen;1.4 Festplatte;10,0;;;
+B.1.4.5;Bewertung;Erweiterungsslot M.2 vorhanden;1. Technische Anforderungen;1.4 Festplatte;20,0;;;
+A.1.4.6;Ausschluss;Optional: Festplatte/SSD verbleibt im Reparaturfall beim Kunden;1. Technische Anforderungen;1.4 Festplatte;;;;
+A.1.5.1;Ausschluss;onboard-Soundkarte;1. Technische Anforderungen;1.5 Sound;;;;
+A.1.5.2;Ausschluss;integriertes Dual-Array-Mikrofon;1. Technische Anforderungen;1.5 Sound;;;;
+A.1.5.3;Ausschluss;mind. 2 Integrierte Lautsprecher;1. Technische Anforderungen;1.5 Sound;;;;
+B.1.6.1;Bewertung;Optional interner, SDHC-kompatibler Kartenleser erhältlich;1. Technische Anforderungen;1.6 Kartenleser;10,0;;;
+A.1.7.1;Ausschluss;Min.1 digitaler Monitore Ausgang (DP oder HDMI);1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+B.1.7.2;Bewertung;zusätzlicher digitaler Monitore Ausgang HDMI 2.1;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;20,0;;;
+A.1.7.3;Ausschluss;Min. 2x USB 3.2 Typ-A (5 Gbis/s) erreichbar ohne Klappen oder Abdeckungen;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.4;Ausschluss;Min. 2x USB 3.2 Typ-A (10 Gbits/s) erreichbar ohne Klappen oder Abdeckungen;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.5;Ausschluss;Min. 1x USB 3.2 Typ-C (20 Gbits/s) erreichbar ohne Klappen oder Abdeckungen;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.6;Ausschluss;Audio In/Out;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+B.1.7.7;Bewertung;digitaler Monitore Eingang HDMI oder DP;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;20,0;;;
+A.1.7.8;Ausschluss;Schnittstellen- und Laufwerke über BIOS deaktivierbar, Passwortschutz für System und Setup;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.7.9;Ausschluss;Einstellung der Bootreihenfolge im BIOS möglich;1. Technische Anforderungen;1.7 Schnittstellen/ Anschlüsse/ Systemboard-Steckplätze;;;;
+A.1.8.1;Ausschluss;TPM mind. 2.0 Modul onboard mind. FIPS-140-2 zertifiziert;1. Technische Anforderungen;1.8 Sicherheit/ Management;;;;
+A.1.8.2;Ausschluss;TPM mind. 2.0 Modul über kostenlose Software ein-/aus-schaltbar;1. Technische Anforderungen;1.8 Sicherheit/ Management;;;;
+A.1.8.3;Ausschluss;SCCM-fähige Treiberpakete verfügbar;1. Technische Anforderungen;1.8 Sicherheit/ Management;;;;
+A.1.9.1;Ausschluss;Onboard;1. Technische Anforderungen;1.9 Grafikkarte;;;;
+A.1.9.2;Ausschluss;Auflösung min. 3.840 x 2.160 Pixel digital;1. Technische Anforderungen;1.9 Grafikkarte;;;;
+A.1.9.3;Ausschluss;DirectX 12 und OpenGL 4.x Unterstützung;1. Technische Anforderungen;1.9 Grafikkarte;;;;
+B.1.9.4;Bewertung;Optional Grafikkarte mit mind. 4 GB RAM;1. Technische Anforderungen;1.9 Grafikkarte;20,0;;;
+A.1.10.1;Ausschluss;"Gehäuseformfaktor ""All-in-One"", die PC-Technik befindet sich im inneren des Monitors, Rucksacklösungen sind nicht zulässig";1. Technische Anforderungen;1.10 Gehäuse + Display;;;;
+A.1.10.2;Ausschluss;"23.8 oder 24"" Bildschirm, sichtbare Bildschirmdiagonale ≥ 60 cm, entspiegeltes / mattes Display";1. Technische Anforderungen;1.10 Gehäuse + Display;;;;
+A.1.10.3;Ausschluss;Alternatives Touchpanel erhältlich;1. Technische Anforderungen;1.10 Gehäuse + Display;;;;
+A.1.10.4;Ausschluss;Paneltyp IPS (In-Plane Switching) oder VA (Vertical Alignment);1. Technische Anforderungen;1.10 Gehäuse + Display;;;;
+A.1.10.5;Ausschluss;Auflösung mind. FHD 16:9 oder höher, Helligkeit mind. 250 Nits oder höher;1. Technische Anforderungen;1.10 Gehäuse + Display;;;;
+A.1.10.6;Ausschluss;Integrierte FHD-Kamera mit Status-LED und mechanische Schutzfunktion zur Wahrung der Privatsphäre;1. Technische Anforderungen;1.10 Gehäuse + Display;;;;
+A.1.10.7;Ausschluss;Höhenverstellbar mind. 110 mm;1. Technische Anforderungen;1.10 Gehäuse + Display;;;;
+A.1.10.8;Ausschluss;Neigbar nach hinten und drehbar (swivel und tilt);1. Technische Anforderungen;1.10 Gehäuse + Display;;;;
+B.1.10.9;Bewertung;Drehbar vom Querformat ins Hochformat (Pivotfunktion);1. Technische Anforderungen;1.10 Gehäuse + Display;20,0;;;
+A.1.10.10;Ausschluss;Gehäuse mit Vorrichtung zur Diebstahlsicherung (Kensington-Lock);1. Technische Anforderungen;1.10 Gehäuse + Display;;;;
+A.1.11.1;Ausschluss;Netzteil 110-240 Volt;1. Technische Anforderungen;1.11 Stromversorgung;;;;
+A.1.12.1;Ausschluss;Kabellose (Wireless)Tastatur in deutscher Sprache (MF2-Tastatur) mit min. 105 Tasten,schwarz;1. Technische Anforderungen;1.12 Tastatur und Maus;;;;
+A.1.12.2;Ausschluss;Alternativ: kabellose (Wireless) Tastatur in englischer Sprache, UK oder US , schwarz erhältlich;1. Technische Anforderungen;1.12 Tastatur und Maus;;;;
+A.1.12.3;Ausschluss;Kabellose (Wireless) optische Maus mit min. 2 Tasten und Mausrad, schwarz;1. Technische Anforderungen;1.12 Tastatur und Maus;;;;
+A.1.12.4;Ausschluss;"Die ergonomischen Eigenschaften von Tastaturen für Arbeitsplatzcomputer sollten nach dem Standard EN ISO 9241-4 geprüft sein und die dort geforderten Parameter einhalten.
+Nachweis: Herstellererklärung und der Bieter legt spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht vor.";1. Technische Anforderungen;1.12 Tastatur und Maus;;;;
+A.1.13.1;Ausschluss;Microsoft Windows 11 Professional 64 Bit OEM vorinstalliert inkl. Win Lizenz;1. Technische Anforderungen;1.13 Betriebssystem;;;;
+A.1.13.2;Ausschluss;Alternativ Microsoft Windows 11 Home 64 BIT OEM  vorinstalliert inkl. Lizenz;1. Technische Anforderungen;1.13 Betriebssystem;;;;
+B.1.13.3;Bewertung;"Alternativ Ubuntu LTS 24.04 Werksseitig, Gerät ist offziell zertifiziert und auf folgender Seite gelistet; URL: https://certification.ubuntu.com/desktop";1. Technische Anforderungen;1.13 Betriebssystem;20,0;;;
+A.1.14.1;Ausschluss;Neugeräte aus Serienproduktion;1. Technische Anforderungen;1.14 Allgemeine Eigenschaften;;;;
+A.1.14.2;Ausschluss;Alle imagerelevanten Bauteile über Produktlebenszyklus unverändert konstant;1. Technische Anforderungen;1.14 Allgemeine Eigenschaften;;;;
+B.1.14.3;Bewertung;geplante Produktlaufzeit in Monaten (Nachweis mit Hersteller-Roadmap);1. Technische Anforderungen;1.14 Allgemeine Eigenschaften;40,0;;;
+A.1.14.4;Ausschluss;Ein- und Ausschalter durch dessen Betätigung das Gerät min. in den Schein-Aus-Zustand versetzt werden kann;1. Technische Anforderungen;1.14 Allgemeine Eigenschaften;;;;
+A.2.1.1;Ausschluss;Wake-on-LAN;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.2;Ausschluss;"Der Hersteller muss ermöglichen, dass das System‑BIOS im Rahmen der vom Hersteller freigegebenen Versionen sowohl aktualisiert (Upgrade) als auch auf frühere, freigegebene BIOS‑Stände zurückgesetzt (Downgrade) werden kann.
+Einschränkungen von BIOS‑Downgrades sind  zulässig, wenn sicherheitskritische BIOS‑ bzw. Firmware‑Updates ein Downgrade aus Sicherheitsgründen unterbinden";2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.3;Ausschluss;"Energiemanagement: Das Gerät muss ein ACPI-konformes Betriebssystem unterstützen. Das Gerät muss bei Inaktivität selbständig in den Ruhemodus übergehen sowie den Monitor ausschalten. Voreinstellung bei Auslieferung:
+- Monitor aus ≤ 15 Min
+- Ruhemodus (ACPI S3) ≤ 30 Min";2. Zusätzliche Leistungen;2.1 Management;;;;
+B.2.1.4;Bewertung;Der Kunde soll die Möglichkeit haben mindestens eine kundenspezifische Information selbst im Geräte-BIOS zu hinterlegen, z.B. die Inventarnummer des Gerätes und/oder eine Anlagennummer. Das Feld im BIOS muss durch den Kunden initial gefüllt und nachträglich bearbeitet werden können.;2. Zusätzliche Leistungen;2.1 Management;20,0;;;
+A.2.1.5;Ausschluss;Kostenloses Tool vom Gerätehersteller zur automatisierten Firmware- u. Treiberaktualisierung (Windows) verfügbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.6;Ausschluss;Kostenloses Tool vom Gerätehersteller zur Bios-Konfiguration verfügbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.2.1;Ausschluss;Optional: Aufkleber mit Assetdaten (z.B. Seriennummer, MAC.Adresse) auf Verpackung;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.2.2.2;Ausschluss;Optional Aufkleber mit Assetdaten (z.B. Seriennummer, MAC.Adresse) auf System;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.2.2.3;Ausschluss;Optional Aufbringen kundenspezifischer Aufkleber auf System;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.3.1.1;Ausschluss;"Das Gerät erfüllt vollständig die Anforderungen des aktuellen ENERGY-STAR-Programms für Computer (derzeit ENERGY STAR Version 9.0).
+
+Nachweise: Herstellererklärung; der Bieter verpflichtet sich, spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht oder ein Dokument gemäß der jeweils gültigen ENERGY-STAR-Testvorschrift oder ein Dokument mit folgenden Angaben vorzulegen:
+
+Name des Prüfl";3 - Qualität / Sicherheit / Umwelt;3.1 Energieverbrauch;;;;
+A.3.2.1;Ausschluss;"GS-Zeichen; CE; WEEE; EU-RoHS – entsprechende Konformitäts- und Zertifikatsunterlagen werden beigefügt.";3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.2;Ausschluss;"Erfüllung von Umweltkriterien analog zur EPEAT-Zertifizierung: Bitte geben Sie an, ob die Kriterien entsprechend der Norm ""EPEAT Silver"" erfüllt werden (alle Epeat Kriterien mit ""R""  und mindestens 75% der mit ""O"" markierten Kriterien). Fügen Sie als Nachweis bitte entweder eine Zertifizierung nach EPEAT Silver bei oder einen gleichwertigen Nachweis zur Erfüllung der genannten Kriterien. Da sich d";3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;;;;
+B.3.2.3;Bewertung;Erfüllung von Umweltkriterien analog zur Climate+Zertifizierung, ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung ist beizufügen;3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;20,0;;;
+A.3.2.4;Ausschluss;Einhaltung der ILO-Kernarbeitsnormen - ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung ist beizufügen;3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.5;Ausschluss;EcoVadis-Zertifizierung (mind. Platin, Nachweis: Herstellererklärung);3 - Qualität / Sicherheit / Umwelt;3.2 Zertifizierungen;;;;
+A.1.1.1;Ausschluss;"x86-Technologie (64 Bit) AMD / Intel Prozessor,  Mindestleistung ≥ 1500 Score Points „Overall“ im Benchmark „SYSmark 30“, Hardwareunterstützung für AES-Verschlüsselung.
+
+Testeinstellung: Auflösung 1920×1200 bei 60 Hz, Displayhelligkeit mind. 200 Nits, Betriebssystem Windows 11 Pro 24H2 oder höher. Der Nachweis für die Benchmark-Leistung kann auch auf einer anderen gleichartigen Notebook-Plattform ";1. Technische Anforderungen;1.1 Prozessor;;;;
+A.1.1.2;Ausschluss;"Alternativ: x86-Technologie (64 Bit) AMD / Intel Prozessor,  Mindestleistung ≥ 1550 Score Points „Overall“ im Benchmark „SYSmark 30“, Hardwareunterstützung für AES-Verschlüsselung.
+
+Testeinstellung: Auflösung 1920×1200 bei 60 Hz, Displayhelligkeit mind. 200 Nits, Betriebssystem Windows 11 Pro 24H2 oder höher. Der Leistungswert SYSmark 30 „Overall Rating“ ist für die angebotene Konfiguration durch ";1. Technische Anforderungen;1.1 Prozessor;;;;
+A.1.2.1;Ausschluss;16 GB RAM DDR5;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.2.2;Ausschluss;Alternativ 32 GB RAM DDR5;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.3.1;Ausschluss;"Ethernet-Adapter, RJ-45, 10/100/1000 Mbit/s, Autosensing, Unterstützung für Preboot-Execution-Environment (PXE 2.1); WOL, Durchleitung MAC-Adresse (virtuelle MAC und/oder LOM/NIC MAC [sofern im Endgerät vorhanden], Pre-OS Support";1. Technische Anforderungen;1.3 Netzwerkkarte/ Kommunikation;;;;
+A.1.3.2;Ausschluss;WLAN-Adapter Wifi 6 oder Wifi 7;1. Technische Anforderungen;1.3 Netzwerkkarte/ Kommunikation;;;;
+A.1.3.3;Ausschluss;Bluetooth mind. 5.3;1. Technische Anforderungen;1.3 Netzwerkkarte/ Kommunikation;;;;
+A.1.4.1;Ausschluss;Min. 240 GB SSD, M.2 PCIe;1. Technische Anforderungen;1.4 SSD;;;;
+A.1.4.2;Ausschluss;Alternativ min. 480 GB SSD, M.2 PCIe;1. Technische Anforderungen;1.4 SSD;;;;
+A.1.4.3;Ausschluss;Alternativ min. 1TB SSD, M.2 PCIe;1. Technische Anforderungen;1.4 SSD;;;;
+B.1.4.4;Bewertung;Optional: SSD verbleibt im Reparaturfall beim Kunden;1. Technische Anforderungen;1.4 SSD;30,0;;;
+A.1.5.1;Ausschluss;Soundkarte onboard;1. Technische Anforderungen;1.5 Sound;;;;
+A.1.5.2;Ausschluss;Integriertes Mikrofon und Lautsprecher;1. Technische Anforderungen;1.5 Sound;;;;
+A.1.6.1;Ausschluss;Min. 3 x USB Anschlüsse (davon mind. 1x USB Type-C Thunderbolt 4.0, 40Gbit/s m. PD 3.1 & DisplayPort 2.1);1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze;;;;
+A.1.6.2;Ausschluss;digitaler Bildschirmausgang mind. HDMI 2.0;1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze;;;;
+B.1.6.3;Bewertung;digitaler Bildschirmausgang HDMI 2.1;1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze;20,0;;;
+A.1.6.4;Ausschluss;Integrierte HD-Kamera mit Status-LED und Kameraschutzblende (mechanisch);1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze;;;;
+A.1.6.5;Ausschluss;Stereokopfhörer- / Mikrofonbuchse (ggf. kombiniert);1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze;;;;
+A.1.7.1;Ausschluss;TPM mind. 2.0 Modul onboard mind. FIPS-140-2 zertifiziert;1. Technische Anforderungen;1.7 Sicherheit/ Management;;;;
+B.1.7.2;Bewertung;TPM mind. 2.0 Modul onboard mind. FIPS-140-3 zertifiziert;1. Technische Anforderungen;1.7 Sicherheit/ Management;20,0;;;
+A.1.7.3;Ausschluss;Der Kunde soll die Möglichkeit haben mindestens eine kundenspezifische Information selbst im Geräte-BIOS zu hinterlegen, z.B. die Inventarnummer des Gerätes und/oder eine Anlagennummer. Das Feld im BIOS muss durch den Kunden initial gefüllt und nachträglich bearbeitet werden können.;1. Technische Anforderungen;1.7 Sicherheit/ Management;;;;
+A.1.7.4;Ausschluss;SCCM-fähige Treiberpakete verfügbar;1. Technische Anforderungen;1.7 Sicherheit/ Management;;;;
+A.1.7.5;Ausschluss;Kostenbloses Tool vom Gerätehersteller zur automatisierten Firmware- u. Treiberaktualisierung (Windows) verfügbar;1. Technische Anforderungen;1.7 Sicherheit/ Management;;;;
+A.1.7.6;Ausschluss;Kostenloses Tool vom Gerätehersteller zur Bios-Konfiguration verfügbar;1. Technische Anforderungen;1.7 Sicherheit/ Management;;;;
+A.1.8.1;Ausschluss;Grafikkarte onboard;1. Technische Anforderungen;1.8 Grafikkarte;;;;
+A.1.9.1;Ausschluss;Maximales Hersteller Start Gewicht ≤ 1,4 kg;1. Technische Anforderungen;1.9 Gehäuse;;;;
+A.1.9.2;Ausschluss;Integrierte Lautsprecher & integriertes Mikrofon;1. Technische Anforderungen;1.9 Gehäuse;;;;
+A.1.10.1;Ausschluss;"14"" entspiegeltes / mattes Display";1. Technische Anforderungen;1.10 Display;;;;
+A.1.10.2;Ausschluss;Auflösung WUXGA (mind. 1.920 x 1.200 Pixel), 16:10 oder höher, Helligkeit 250 Nits oder höher;1. Technische Anforderungen;1.10 Display;;;;
+A.1.10.3;Ausschluss;"Das Display erfüllt die ergonomischen Eigenschaften nach der EN ISO 9241 und hält mindestens Pixelfehlerklasse I ein.
+Nachweis: Herstellererklärung";1. Technische Anforderungen;1.10 Display;;;;
+A.1.11.1;Ausschluss;Lithium Ionen Akku ≥ 45 Wh;1. Technische Anforderungen;1.11 Stromversorgung;;;;
+B.1.11.2;Bewertung;Alternative Akku-Größe zu A.1.11.1 ≥ 55 Wh;1. Technische Anforderungen;1.11 Stromversorgung;20,0;;;
+B.1.11.3;Bewertung;Alternative Akku-Größe zu A.1.11.1 ≥ 65 Wh;1. Technische Anforderungen;1.11 Stromversorgung;20,0;;;
+A.1.11.5;Ausschluss;Netzteil 100-240V im Lieferumfang enthalten;1. Technische Anforderungen;1.11 Stromversorgung;;;;
+A.1.12.1;Ausschluss;Hintergrundbeleuchtete QWERTZ-Tastatur (deutsches Layout);1. Technische Anforderungen;1.12 Interne Tastatur;;;;
+A.1.12.2;Ausschluss;Optional US-Englisches und UK-Englisches Tastaturlayout erhältlich;1. Technische Anforderungen;1.12 Interne Tastatur;;;;
+A.1.12.3;Ausschluss;Integriertes Touchpad;1. Technische Anforderungen;1.12 Interne Tastatur;;;;
+A.1.13.1;Ausschluss;Optional: USB-C Dockingstation vom Hersteller des Endgerätes mit Ladefunktion und 40 Gb/s Datenübertragung (Alle Schnittstellen sind im Preisblatt anzugeben.);1. Technische Anforderungen;1.13 Portreplikator / Dockinstation;;;;
+A.1.13.2;Ausschluss;Dockingstation innerhalb der Produktfamilie (Notebook A,B,C,D) austauschbar;1. Technische Anforderungen;1.13 Portreplikator / Dockinstation;;;;
+A.1.13.3;Ausschluss;Dockingstation mit min. 3 digitalen Bildschirmanschlüssen (DisplayPort oder HDMI),  Ladefunktion mind. 90 Watt,  und Netzwerkanschluss mit durchgeschleifter MAC-Adresse, PXE 2.1, WOL,;1. Technische Anforderungen;1.13 Portreplikator / Dockinstation;;;;
+A.1.13.4;Ausschluss;Dockingstation generationsübergreifend kompatibel;1. Technische Anforderungen;1.13 Portreplikator / Dockinstation;;;;
+A.1.13.5;Ausschluss;Dockingstationkabellänge des USB-C Anschlusskabels mind. 50 cm;1. Technische Anforderungen;1.13 Portreplikator / Dockinstation;;;;
+B.1.13.6;Bewertung;Dockingstation Schnell-Ladefunktion (35% in 20 Minuten) / Express Ladefunktion des Gerätes bei entsprechendem Netzteil;1. Technische Anforderungen;1.13 Portreplikator / Dockinstation;20,0;;;
+B.1.13.7;Bewertung;Dockingstation Stromversorgung über USB-C (einfach) >100 Watt;1. Technische Anforderungen;1.13 Portreplikator / Dockinstation;20,0;;;
+A.1.14.1;Ausschluss;Microsoft Windows 11 Professional 64 Bit OEM vorinstalliert inkl. Lizenz;1. Technische Anforderungen;1.14 Betriebssystem;;;;
+A.1.14.2;Ausschluss;Alternativ Microsoft Windows 11 Home 64 BIT OEM  vorinstalliert inkl. Lizenz;1. Technische Anforderungen;1.14 Betriebssystem;;;;
+B.1.14.3;Bewertung;Alternativ Linux, Ubuntu mind. 24.04 LTS (werksseitig);1. Technische Anforderungen;1.14 Betriebssystem;30,0;;;
+A.2.1.1;Ausschluss;"Das Gerät erfüllt vollständig die Anforderungen des aktuellen ENERGY-STAR-Programms für Computer (derzeit ENERGY STAR Version 9.0).
+
+Nachweise: Herstellererklärung; der Bieter verpflichtet sich, spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht oder ein Dokument gemäß der jeweils gültigen ENERGY-STAR-Testvorschrift oder ein Dokument mit folgenden Angaben vorzulegen:
+
+Name des Prüfl";2. Zusätzliche Leistungen/ Sicherheit/ Umwelt;2.1 Energieverbrauch;;;;
+A.2.2.1;Ausschluss;Optional: Aufkleber mit Assetdaten (z.B. Seriennummer, MAC.Adresse) auf Verpackung;2. Zusätzliche Leistungen/ Sicherheit/ Umwelt;2.2 Geräteetikettierung;;;;
+A.2.2.2;Ausschluss;Optional: Aufkleber mit Assetdaten (z.B. Seriennummer, MAC.Adresse) auf System;2. Zusätzliche Leistungen/ Sicherheit/ Umwelt;2.2 Geräteetikettierung;;;;
+A.2.2.3;Ausschluss;Optional: Aufbringen kundenspezifischer Aufkleber auf System;2. Zusätzliche Leistungen/ Sicherheit/ Umwelt;2.2 Geräteetikettierung;;;;
+A.2.3.1;Ausschluss;"GS-Zeichen; CE; WEEE; EU-RoHS – entsprechende Konformitäts- und Zertifikatsunterlagen werden beigefügt.";2. Zusätzliche Leistungen/ Sicherheit/ Umwelt;2.3 Zertifizierungen;;;;
+A.2.3.2;Ausschluss;"TCO-Zertifizierung: Das Gerät erfüllt die aktuellen Anforderungen des TCO Certified-Labels für Notebooks (TCO 9 oder neuer); ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung wird beigefügt.";2. Zusätzliche Leistungen/ Sicherheit/ Umwelt;2.3 Zertifizierungen;;;;
+A.2.3.3;Ausschluss;Erfüllung der Umweltkriterien gemäß EPEAT-Standard in der Einstufung „EPEAT Gold“ (aktuelle Version, inkl. Climate+ soweit verfügbar): Es werden alle mit „R“ gekennzeichneten Kriterien sowie mindestens 75 % der mit „O“ gekennzeichneten Kriterien erfüllt. Als Nachweis ist entweder eine gültige EPEAT-Gold-Registrierung (z. B. ein Auszug aus der EPEAT-Produktdatenbank) oder ein gleichwertiger Nachwei;2. Zusätzliche Leistungen/ Sicherheit/ Umwelt;2.3 Zertifizierungen;;;;
+B.2.3.4;Bewertung;Erfüllung von Umweltkriterien analog zur Climate+Zertifizierung, ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung ist beizufügen;2. Zusätzliche Leistungen/ Sicherheit/ Umwelt;2.3 Zertifizierungen;20,0;;;
+A.2.3.5;Ausschluss;Einhaltung der ILO-Kernarbeitsnormen - ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung ist beizufügen;2. Zusätzliche Leistungen/ Sicherheit/ Umwelt;2.3 Zertifizierungen;;;;
+A.2.3.6;Ausschluss;EcoVadis-Zertifizierung (mind. Platin, Nachweis: Herstellererklärung);2. Zusätzliche Leistungen/ Sicherheit/ Umwelt;2.3 Zertifizierungen;;;;
+A.1.1.1;Ausschluss;"x86-Technologie (64 Bit) AMD / Intel Prozessor, Mindestleistung ≥ 1700 Score Points „Overall“ im Benchmark „SYSmark 30“, Hardwareunterstützung für AES-Verschlüsselung.
+
+Testeinstellung: Auflösung 1920×1200 bei 60 Hz, Displayhelligkeit mind. 200 Nits, Betriebssystem Windows 11 Pro 24H2 oder höher. Der Leistungswert SYSmark 30 „Overall Rating“ ist für die angebotene Konfiguration durch Vorlage eines";1. Technische Anforderungen;1.1 Prozessor;;;;
+A.1.1.2;Ausschluss;"Alternativ: x86-Technologie (64 Bit) AMD / Intel Prozessor , Mindestleistung ≥ 1750 Score Points „Overall“ im Benchmark „SYSmark 30“, Hardwareunterstützung für AES-Verschlüsselung.
+
+Testeinstellung: Auflösung 1920×1200 bei 60 Hz, Displayhelligkeit mind. 200 Nits, Betriebssystem Windows 11 Pro 24H2 oder höher. Der Leistungswert SYSmark 30 „Overall Rating“ ist für die angebotene Konfiguration durch ";1. Technische Anforderungen;1.1 Prozessor;;;;
+A.1.2.1;Ausschluss;16 GB RAM DDR5;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.2.2;Ausschluss;Alternativ: 32 GB RAM DDR5;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.2.3;Ausschluss;Alternativ: 64 GB RAM DDR5;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.3.1;Ausschluss;"Ethernet-Adapter RJ-45, 10/100/1000 Mbit/s, (oder Adapter im Lieferumfang), Autosensing, Unterstützung für Preboot-Execution-Environment (PXE 2.1); WOL";1. Technische Anforderungen;1.3 Netzwerkkarte/ Kommunikation;;;;
+A.1.3.2;Ausschluss;WLAN-Adapter Wifi 6 oder Wifi 7;1. Technische Anforderungen;1.3 Netzwerkkarte/ Kommunikation;;;;
+A.1.3.3;Ausschluss;Bluetooth mind. 5.3;1. Technische Anforderungen;1.3 Netzwerkkarte/ Kommunikation;;;;
+A.1.4.1;Ausschluss;Min. 480 GB SSD M.2 PCIe;1. Technische Anforderungen;1.4 SSD;;;;
+A.1.4.2;Ausschluss;Alternativ: Min. 1TB SSD M.2 PCIe;1. Technische Anforderungen;1.4 SSD;;;;
+A.1.4.3;Ausschluss;Alternativ bis zu 2 TB SSD M.2 PCIe erhältlich;1. Technische Anforderungen;1.4 SSD;;;;
+A.1.4.4;Ausschluss;Optional: Festplatte/SSD verbleibt im Reparaturfall beim Kunden;1. Technische Anforderungen;1.4 SSD;;;;
+A.1.5.1;Ausschluss;Soundkarte onboard;1. Technische Anforderungen;1.5 Sound;;;;
+A.1.5.2;Ausschluss;mind. 2 Integrierte Mikrofone mit Rauschunterdrückung;1. Technische Anforderungen;1.5 Sound;;;;
+A.1.5.3;Ausschluss;mind. 2 Integrierte Lautsprecher;1. Technische Anforderungen;1.5 Sound;;;;
+A.1.6.1;Ausschluss;Min. 4 x USB Anschlüsse (davon mind. 2x USB Type-C, mind. 1x Thunderbolt 4.0, 40Gbit/s);1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;;;;
+A.1.6.2;Ausschluss;3 digitale Bildschirmausgänge (davon mind. 1x HDMI 2.0 oder DP 2.0);1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;;;;
+B.1.6.3;Bewertung;HDMI 2.1 Anschluss;1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;10,0;;;
+A.1.6.4;Ausschluss;Stereokopfhörer- / Mikrofonbuchse (ggf. kombiniert);1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;;;;
+A.1.6.5;Ausschluss;Schnittstellen- und Laufwerksverriegelung über BIOS, Passwortschutz für System und Setup;1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;;;;
+A.1.6.6;Ausschluss;Integrierte Kamera,mind. FHD mit Status-LED und Kameraschutzblende (mechanisch);1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;;;;
+A.1.6.7;Ausschluss;Optional IR- Kamera, mind.Full-HD mit Status-LED und Kameraschutzblende (mechanisch);1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;;;;
+A.1.7.1;Ausschluss;TPM mind. 2.0 Modul onboard mind. FIPS-140-2 zertifiziert;1. Technische Anforderungen;1.7 Sicherheit/ Management;;;;
+B.1.7.2;Bewertung;TPM mind. 2.0 Modul onboard mind. FIPS-140-3 zertifiziert;1. Technische Anforderungen;1.7 Sicherheit/ Management;20,0;;;
+A.1.7.3;Ausschluss;Der Kunde soll die Möglichkeit haben mindestens eine kundenspezifische Information selbst im Geräte-BIOS zu hinterlegen, z.B. die Inventarnummer des Gerätes und/oder eine Anlagennummer. Das Feld im BIOS muss durch den Kunden initial gefüllt und nachträglich bearbeitet werden können.;1. Technische Anforderungen;1.7 Sicherheit/ Management;;;;
+A.1.7.4;Ausschluss;Optional integrierter biometrischer Fingerabdruck-Leser erhältlich;1. Technische Anforderungen;1.7 Sicherheit/ Management;;;;
+A.1.7.5;Ausschluss;Optional integrierter Smartcard-Reader erhältlich;1. Technische Anforderungen;1.7 Sicherheit/ Management;;;;
+A.1.7.6;Ausschluss;Kostenbloses Tool vom Gerätehersteller zur automatisierten Firmware- u. Treiberaktualisierung (Windows) verfügbar;1. Technische Anforderungen;1.7 Sicherheit/ Management;;;;
+A.1.7.7;Ausschluss;Kostenloses Tool vom Gerätehersteller zur Bios-Konfiguration verfügbar;1. Technische Anforderungen;1.7 Sicherheit/ Management;;;;
+A.1.8.1;Ausschluss;Grafikkarte onboard;1. Technische Anforderungen;1.8 Grafikkarte;;;;
+A.1.8.2;Ausschluss;DirectX12.x & OpenGL mind. 4.6 Unterstützung;1. Technische Anforderungen;1.8 Grafikkarte;;;;
+A.1.9.1;Ausschluss;max. Hersteller Start-Gewicht ≤ 1,4 kg;1. Technische Anforderungen;1.9 Gehäuse;;;;
+A.1.9.3;Ausschluss;Gehäuse mit Vorrichtung zur Diebstahlsicherung (Kensington, Noble oder vergleichbar);1. Technische Anforderungen;1.9 Gehäuse;;;;
+A.1.10.1;Ausschluss;"14"" entspiegeltes / mattes Display";1. Technische Anforderungen;1.10 Display;;;;
+A.1.10.2;Ausschluss;Auflösung WUXGA (mind. 1.920 x 1.200 Pixel), 16:10, Helligkeit 300 Nits oder höher;1. Technische Anforderungen;1.10 Display;;;;
+B.1.10.3;Bewertung;Optional: Hardwareseitiger Blaulichtfilter;1. Technische Anforderungen;1.10 Display;20,0;;;
+B.1.10.4;Bewertung;Optional: stromsparendes Display (Low Power < 3,5 Watt);1. Technische Anforderungen;1.10 Display;20,0;;;
+A.1.10.5;Ausschluss;"Das Display erfüllt die ergonomischen Eigenschaften nach der EN ISO 9241 und hält mindestens Pixelfehlerklasse 1 ein.
+Nachweis: Herstellererklärung und der Bieter legt spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht vor.";1. Technische Anforderungen;1.10 Display;;;;
+A.1.11.1;Ausschluss;Lithium Ionen Akku ≥ 45 Wh;1. Technische Anforderungen;1.11 Stromversorgung;;;;
+B.1.11.2;Bewertung;Alternative Akku-Größe zu A.1.11.1 ≥ 55 Wh;1. Technische Anforderungen;1.11 Stromversorgung;20,0;;;
+B.1.11.3;Bewertung;Alternative Akku-Größe zu A.1.11.1 ≥ 65 Wh;1. Technische Anforderungen;1.11 Stromversorgung;20,0;;;
+B.1.11.4;Bewertung;Schnell-Ladefunktion (35% in 20 Minuten);1. Technische Anforderungen;1.11 Stromversorgung;20,0;;;
+A.1.11.5;Ausschluss;Netzteil 100-240V (USB-C) im Lieferumfang enthalten;1. Technische Anforderungen;1.11 Stromversorgung;;;;
+A.1.11.6;Ausschluss;Netzteil innerhalb der Produktfamilie austauschbar;1. Technische Anforderungen;1.11 Stromversorgung;;;;
+A.1.11.7;Ausschluss;"Eine angemessene Batterieleistung wird angenommen, wenn folgender Wert des Benchmarks „MobileMark 30“ eingehalten wird: „Battery life“: min. 08:00h
+Nachweis: Messprotokoll, Eine angemessene Batterie-Leistung wird angenommen, wenn folgender Wert des Benchmarks „MobileMark 30“ eingehalten wird:
+ „Battery life “: (Einstellung: CPU wie unter A1.1.1  1920x1200 bei 60 Hz, 250 Nits nach der aktuellen Bap";1. Technische Anforderungen;1.11 Stromversorgung;;;;
+B.1.11.9;Bewertung;Schnell-Ladefunktion (35% in 20 Minuten) / Express Ladefunktion des Gerätes bei entsprechendem Netzteil;1. Technische Anforderungen;1.11 Stromversorgung;20,0;;;
+B.1.11.10;Bewertung;Batterie LED-Statusanzeige;1. Technische Anforderungen;1.11 Stromversorgung;20,0;;;
+B.1.11.11;Bewertung;Optional: 3 Jahre Hersteller-Akkuservice (Tausch bei Nennkapazität <50% oder aufblähen);1. Technische Anforderungen;1.11 Stromversorgung;20,0;;;
+A.1.12.1;Ausschluss;Optional: USB-C Dockingstation vom Hersteller des Endgerätes mit Ladefunktion und 40 Gbit/s Datenübertragung (Alle Schnittstellen sind im Preisblatt anzugeben.);1. Technische Anforderungen;1.12 Portreplikator / Dockinstation;;;;
+A.1.12.2;Ausschluss;Dockingstation innerhalb der Produktfamilie (Notebook A,B,C,D) austauschbar;1. Technische Anforderungen;1.12 Portreplikator / Dockinstation;;;;
+A.1.12.3;Ausschluss;Dockingstation mit min. 3 digitalen Bildschirmanschlüssen (DisplayPort oder HDMI),  Ladefunktion mind. 90 Watt,  und Netzwerkanschluss mit durchgeschleifter MAC-Adresse, PXE 2.1, WOL,;1. Technische Anforderungen;1.12 Portreplikator / Dockinstation;;;;
+A.1.12.4;Ausschluss;Dockingstation generationsübergreifend kompatibel;1. Technische Anforderungen;1.12 Portreplikator / Dockinstation;;;;
+A.1.12.5;Ausschluss;Dockingstationkabellänge des USB-C Anschlusskabels mind. 50 cm;1. Technische Anforderungen;1.12 Portreplikator / Dockinstation;;;;
+B.1.12.6;Bewertung;Dockingstation Schnell-Ladefunktion (35% in 20 Minuten) / Express Ladefunktion des Gerätes bei entsprechendem Netzteil;1. Technische Anforderungen;1.12 Portreplikator / Dockinstation;20,0;;;
+B.1.12.7;Bewertung;Dockingstation Stromversorgung über USB-C (einfach) >100 Watt;1. Technische Anforderungen;1.12 Portreplikator / Dockinstation;20,0;;;
+A.1.13.1;Ausschluss;Spritzwassergeschützte, hintergrundbeleuchtete QWERTZ-Tastatur (deutsches Layout);1. Technische Anforderungen;1.13 Eingabegeräte;;;;
+A.1.13.2;Ausschluss;Optional US-Englisches und UK-Englisches Tastaturlayout erhältlich;1. Technische Anforderungen;1.13 Eingabegeräte;;;;
+A.1.13.3;Ausschluss;Touchpad, Multitouch fähig;1. Technische Anforderungen;1.13 Eingabegeräte;;;;
+A.1.14.1;Ausschluss;Microsoft Windows 11 Professional 64 Bit OEM vorinstalliert inkl. Lizenz;1. Technische Anforderungen;1.14 Betriebssystem;;;;
+A.1.14.2;Ausschluss;Alternativ Microsoft Windows 11 Home 64 BIT OEM  vorinstalliert inkl. Lizenz;1. Technische Anforderungen;1.14 Betriebssystem;;;;
+B.1.14.3;Bewertung;"Alternativ Linux, Ubuntu mind. 24.04 LTS (werksseitig), Gerät ist offziell zertifiziert und auf folgender Seite gelistet; URL: https://certification.ubuntu.com/";1. Technische Anforderungen;1.14 Betriebssystem;30,0;;;
+A.1.15.1;Ausschluss;Neugeräte aus Serienproduktion;1. Technische Anforderungen;1.15 Allgemeine Eigenschaften;;;;
+A.1.15.2;Ausschluss;Weitere Gerätetypen der gleichen Produktfamilie mit 16 Zoll Display verfügbar;1. Technische Anforderungen;1.15 Allgemeine Eigenschaften;;;;
+A.1.15.3;Ausschluss;Alle imagerelevanten Bauteile über Produktlebenszyklus unverändert - Wo aus Liefer‑ oder Technologiergründen Komponenten angepasst werden müssen, stellt der Hersteller funktional gleichwertige Bauteile mit identischer oder höherer Kompatibilität bereit;1. Technische Anforderungen;1.15 Allgemeine Eigenschaften;;;;
+B.1.15.4;Bewertung;Geplante Produktlaufzeit in Monaten (Nachweis mit Hersteller-Roadmap);1. Technische Anforderungen;1.15 Allgemeine Eigenschaften;30,0;;;
+B.1.15.5;Bewertung;Der Computer ist so gebaut, dass Akku, SSD ausgetauscht werden können.;1. Technische Anforderungen;1.15 Allgemeine Eigenschaften;30,0;;;
+B.1.15.6;Bewertung;Der USB-C Anschluss ist Modular verbaut - im Falle eines Defektes muss nicht das komplette Mainboard getauscht werden;1. Technische Anforderungen;1.15 Allgemeine Eigenschaften;50,0;;;
+A.2.1.1;Ausschluss;Wake-on-LAN, PXE 2.x -Boot, Durchleitung MAC-Adresse (virtuelle MAC und/oder LOM/NIC MAC [sofern im Endgerät vorhanden], Pre-OS Support,;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.2;Ausschluss;"Der Hersteller muss ermöglichen, dass das System‑BIOS im Rahmen der vom Hersteller freigegebenen Versionen sowohl aktualisiert (Upgrade) als auch auf frühere, freigegebene BIOS‑Stände zurückgesetzt (Downgrade) werden kann.
+Einschränkungen von BIOS‑Downgrades sind  zulässig, wenn sicherheitskritische BIOS‑ bzw. Firmware‑Updates ein Downgrade aus Sicherheitsgründen unterbinden";2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.3;Ausschluss;"Energiemanagement: Das Gerät muss ein ACPI-konformes Betriebssystem unterstützen. Das Gerät muss bei Inaktivität selbständig in den Ruhemodus übergehen sowie den Monitor ausschalten. Voreinstellung bei Auslieferung:
+- Monitor aus ≤ 15 Min
+- Ruhemodus (ACPI S3) ≤ 30 Min";2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.4;Ausschluss;Der Kunde soll die Möglichkeit haben mindestens eine kundenspezifische Information selbst im Geräte-BIOS zu hinterlegen, z.B. die Inventarnummer des Gerätes und/oder eine Anlagennummer. Das Feld im BIOS muss durch den Kunden initial gefüllt und nachträglich bearbeitet werden können.;2. Zusätzliche Leistungen;2.1 Management;;;;
+B.2.1.5;Bewertung;Ersatzteil & Treiberversorgung mind. 5 Jahre ab Kaufdatum;2. Zusätzliche Leistungen;2.1 Management;30,0;;;
+B.2.1.6;Bewertung;Öffentlich zugängliche und bebilderte Service/Reparatur-anleitung verfügbar, in deutscher Sprache;2. Zusätzliche Leistungen;2.1 Management;10,0;;;
+A.2.1.7;Ausschluss;SCCM-fähige Treiberpakete verfügbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.8;Ausschluss;Kostenloses Tool vom Gerätehersteller zur automatisierten Firmware- u. Treiberaktualisierung (Windows) verfügbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.9;Ausschluss;Kostenloses Tool vom Gerätehersteller zur Bios-Konfiguration verfügbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.2.1;Ausschluss;Optional: Aufkleber mit Assetdaten (z.B. Seriennummer, MAC.Adresse) auf Verpackung;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.2.2.2;Ausschluss;Optional: Aufkleber mit Assetdaten (z.B. Seriennummer, MAC.Adresse) auf System;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.2.2.3;Ausschluss;Optional: Aufbringen kundenspezifischer Aufkleber auf System;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.3.1.1;Ausschluss;"Das Gerät erfüllt vollständig die Anforderungen des aktuellen ENERGY-STAR-Programms für Computer (derzeit ENERGY STAR Version 9.0).
+
+Nachweise: Herstellererklärung; der Bieter verpflichtet sich, spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht oder ein Dokument gemäß der jeweils gültigen ENERGY-STAR-Testvorschrift oder ein Dokument mit folgenden Angaben vorzulegen:
+
+Name des Prüfl";3. Qualität/ Sicherheit/ Umwelt;3.1 Energieverbrauch;;;;
+A.3.2.1;Ausschluss;"GS-Zeichen; CE; WEEE; EU-RoHS – entsprechende Konformitäts- und Zertifikatsunterlagen werden beigefügt.";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.2;Ausschluss;"TCO-Zertifizierung: Das Gerät erfüllt die aktuellen Anforderungen des TCO Certified-Labels für Notebooks (TCO 9 oder neuer); ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung wird beigefügt.";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.3;Ausschluss;Erfüllung der Umweltkriterien gemäß EPEAT-Standard in der Einstufung „EPEAT Gold“ (aktuelle Version, inkl. Climate+ soweit verfügbar): Es werden alle mit „R“ gekennzeichneten Kriterien sowie mindestens 75 % der mit „O“ gekennzeichneten Kriterien erfüllt. Als Nachweis ist entweder eine gültige EPEAT-Gold-Registrierung (z. B. ein Auszug aus der EPEAT-Produktdatenbank) oder ein gleichwertiger Nachwei;3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+B.3.2.4;Bewertung;Erfüllung von Umweltkriterien analog zur Climate+Zertifizierung, ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung ist beizufügen;3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;20,0;;;
+A.3.2.5;Ausschluss;Einhaltung der ILO-Kernarbeitsnormen - ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung ist beizufügen;3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.6;Ausschluss;EcoVadis-Zertifizierung (mind. Platin, Nachweis: Herstellererklärung);3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+A.1.1.1;Ausschluss;"x86-Technologie (64 Bit) AMD / Intel Prozessor, Mindestleistung ≥ 1700 Score Points „Overall“ im Benchmark „SYSmark 30“, AES-NI-Funktionen.
+
+Testeinstellung: Auflösung 1920×1200 bei 60 Hz, Displayhelligkeit mind. 200 Nits, Betriebssystem Windows 11 Pro 24H2 oder höher. Der Leistungswert SYSmark 30 „Overall Rating“ ist für die angebotene Konfiguration durch Vorlage eines geeigneten Messprotokolls m";1. Technische Anforderungen;1.1 Prozessor;;;;
+A.1.1.2;Ausschluss;"Alternativ: x86-Technologie (64 Bit) AMD / Intel Prozessor,  Mindestleistung ≥ 1800 Score Points „Overall“ im Benchmark „SYSmark 30“, AES-NI-Funktionen.
+
+Testeinstellung: Auflösung 1920×1200 bei 60 Hz, Displayhelligkeit mind. 200 Nits, Betriebssystem Windows 11 Pro 24H2 oder höher.Der Leistungswert SYSmark 30 „Overall Rating“ ist für die angebotene Konfiguration durch Vorlage eines geeigneten Mess";1. Technische Anforderungen;1.1 Prozessor;;;;
+A.1.2.1;Ausschluss;16 GB RAM DDR5;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.2.2;Ausschluss;Alternativ: 32 GB RAM DDR5;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.2.3;Ausschluss;Alternativ: 64 GB RAM DDR5;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.3.1;Ausschluss;"Ethernet-Adapter RJ-45, 10/100/1000 Mbit/s, (oder Adapter im Lieferumfang), Autosensing, Unterstützung für Preboot-Execution-Environment (PXE 2.1); WOL";1. Technische Anforderungen;1.3 Netzwerkkarte/ Kommunikation;;;;
+A.1.3.2;Ausschluss;WLAN-Adapter Wifi 6 oder Wifi7;1. Technische Anforderungen;1.3 Netzwerkkarte/ Kommunikation;;;;
+A.1.3.3;Ausschluss;Bluetooth mind. 5.3;1. Technische Anforderungen;1.3 Netzwerkkarte/ Kommunikation;;;;
+A.1.3.4;Ausschluss;Optional integriertes Mobiles Breitband Modul 4G oder 5G erhältlich, externe Simcard-Schnittstelle inkl. E-Sim;1. Technische Anforderungen;1.3 Netzwerkkarte/ Kommunikation;;;;
+A.1.4.1;Ausschluss;Min. 480 GB SSD M.2 PCIe;1. Technische Anforderungen;1.4 SSD;;;;
+A.1.4.2;Ausschluss;Alternativ: Min. 1TB SSD M.2 PCIe;1. Technische Anforderungen;1.4 SSD;;;;
+A.1.4.3;Ausschluss;Alternativ bis zu 2 TB SSD M.2 PCIe;1. Technische Anforderungen;1.4 SSD;;;;
+A.1.4.4;Ausschluss;Optional: Festplatte/SSD verbleibt im Reparaturfall beim Kunden;1. Technische Anforderungen;1.4 SSD;;;;
+A.1.5.1;Ausschluss;Soundkarte onboard;1. Technische Anforderungen;1.5 Sound;;;;
+A.1.5.2;Ausschluss;mind. 2 Integrierte Mikrofone mit Rauschunterdrückung;1. Technische Anforderungen;1.5 Sound;;;;
+A.1.5.3;Ausschluss;mind. 2 Integrierte Lautsprecher;1. Technische Anforderungen;1.5 Sound;;;;
+A.1.6.1;Ausschluss;Min. 4 x USB Anschlüsse (davon mind. 2x USB Type-C, mind. 1x Thunderbolt 4.0, 40Gbit/s);1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;;;;
+A.1.6.2;Ausschluss;3 digitale Bildschirmausgänge (davon mind. 1x HDMI 2.0 oder DP 2.1);1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;;;;
+B.1.6.3;Bewertung;HDMI 2.1;1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;10,0;;;
+A.1.6.4;Ausschluss;Optionaler Smart Card Reader;1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;;;;
+A.1.6.5;Ausschluss;Stereokopfhörer- / Mikrofonbuchse (ggf. kombiniert);1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;;;;
+A.1.6.6;Ausschluss;Schnittstellen- und Laufwerksverriegelung über BIOS, Passwortschutz für System und Setup;1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;;;;
+A.1.6.7;Ausschluss;Integrierte Kamera mit Status-LED und Kameraschutzblende (mechanisch);1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;;;;
+A.1.6.8;Ausschluss;Alternativ IR- Kamera, mind.Full-HD mit Status-LED und Kameraschutzblende (mechanisch);1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;;;;
+A.1.7.1;Ausschluss;TPM mind. 2.0 Modul onboard mind. FIPS-140-2 zertifiziert;1. Technische Anforderungen;1.7 Sicherheit/ Management;;;;
+B.1.7.2;Bewertung;TPM mind. 2.0 Modul onboard mind. FIPS-140-3 zertifiziert;1. Technische Anforderungen;1.7 Sicherheit/ Management;20,0;;;
+A.1.7.3;Ausschluss;Optional integrierter biometrischer Fingerabdruck-Leser erhältlich;1. Technische Anforderungen;1.7 Sicherheit/ Management;;;;
+A.1.7.4;Ausschluss;SCCM-fähige Treiberpakete verfügbar;1. Technische Anforderungen;1.7 Sicherheit/ Management;;;;
+A.1.7.5;Ausschluss;Kostenbloses Tool vom Gerätehersteller zur automatisierten Firmware- u. Treiberaktualisierung (Windows) verfügbar;1. Technische Anforderungen;1.7 Sicherheit/ Management;;;;
+A.1.7.6;Ausschluss;Kostenloses Tool vom Gerätehersteller zur Bios-Konfiguration verfügbar;1. Technische Anforderungen;1.7 Sicherheit/ Management;;;;
+A.1.8.1;Ausschluss;Grafikkarte onboard;1. Technische Anforderungen;1.8 Grafikkarte;;;;
+A.1.8.2;Ausschluss;DirectX12.x & OpenGL mind. 4.6 Unterstützung;1. Technische Anforderungen;1.8 Grafikkarte;;;;
+A.1.9.1;Ausschluss;max. Start-Gewicht ≤ 1,4 kg (Notebook, gilt nicht für 2in1 siehe A1.10.3);1. Technische Anforderungen;1.9 Gehäuse;;;;
+A.1.9.3;Ausschluss;Gehäuse mit Vorrichtung zur Diebstahlsicherung (Kensington, Noble oder vergleichbar);1. Technische Anforderungen;1.9 Gehäuse;;;;
+A.1.10.1;Ausschluss;"14"" entspiegeltes / mattes Display";1. Technische Anforderungen;1.10 Display;;;;
+A.1.10.2;Ausschluss;Auflösung WUXGA (mind. 1.920 x 1.200 Pixel), 16:10, Helligkeit 400 Nits oder höher;1. Technische Anforderungen;1.10 Display;;;;
+A.1.10.3;Ausschluss;Alternativ 2in1 360 Grad WUXGA (oder höher) Helligkeit 500 Nits oder höher mit Touchdisplay inkl. aktiver Stifteingabe;1. Technische Anforderungen;1.10 Display;;;;
+B.1.10.4;Bewertung;Optional: Hardwareseitiger Blaulichtfilter;1. Technische Anforderungen;1.10 Display;20,0;;;
+B.1.10.5;Bewertung;Optional: stromsparendes Display (Low Power < 3,5 Watt);1. Technische Anforderungen;1.10 Display;20,0;;;
+A.1.10.6;Ausschluss;"Das Display erfüllt die ergonomischen Eigenschaften nach der EN ISO 9241 und hält mindestens Pixelfehlerklasse 1 ein.
+Nachweis: Herstellererklärung und der Bieter legt spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht vor.";1. Technische Anforderungen;1.10 Display;;;;
+A.1.11.1;Ausschluss;Lithium Ionen Akku ≥ 50 Wh;1. Technische Anforderungen;1.11 Stromversorgung;;;;
+B.1.11.2;Bewertung;Alternative Akku-Größe zu A.1.11.1 ≥ 65 Wh;1. Technische Anforderungen;1.11 Stromversorgung;20,0;;;
+A.1.11.3;Ausschluss;Netzteil 100-240V (USB-C) im Lieferumfang enthalten;1. Technische Anforderungen;1.11 Stromversorgung;;;;
+A.1.11.4;Ausschluss;Netzteil innerhalb der Produktfamilie austauschbar;1. Technische Anforderungen;1.11 Stromversorgung;;;;
+A.1.11.5;Ausschluss;"Eine angemessene Batterieleistung wird angenommen, wenn folgender Wert des Benchmarks „MobileMark 30“ eingehalten wird: „Battery life“: min. 08:00h
+Nachweis: Messprotokoll, Eine angemessene Batterie-Leistung wird angenommen, wenn folgender Wert des Benchmarks „MobileMark 30“ eingehalten wird:
+ „Battery life “: (Einstellung: CPU wie unter A1.1.1 1920x1200 bei 60 Hz, 250 Nits nach der aktuellen Bapc";1. Technische Anforderungen;1.11 Stromversorgung;;;;
+B.1.11.7;Bewertung;Schnell-Ladefunktion (35% in 20 Minuten) / Express Ladefunktion des Gerätes bei entsprechendem Netzteil;1. Technische Anforderungen;1.11 Stromversorgung;20,0;;;
+B.1.11.8;Bewertung;Batterie LED-Statusanzeige;1. Technische Anforderungen;1.11 Stromversorgung;20,0;;;
+B.1.11.9;Bewertung;Optional: 3 Jahre Hersteller-Akkuservice (Tausch bei Nennkapazität <50% oder aufblähen);1. Technische Anforderungen;1.11 Stromversorgung;20,0;;;
+A.1.12.1;Ausschluss;Optional: USB-C Dockingstation vom Hersteller des Endgerätes mit Ladefunktion und 40 Gbit/s Datenübertragung (Alle Schnittstellen sind im Preisblatt anzugeben.);1. Technische Anforderungen;1.12 Portreplikator / Dockinstation;;;;
+A.1.12.2;Ausschluss;Dockingstation innerhalb der Produktfamilie (Notebook A,B,C,D) austauschbar;1. Technische Anforderungen;1.12 Portreplikator / Dockinstation;;;;
+A.1.12.3;Ausschluss;Dockingstation mit min. 3 digitalen Bildschirmanschlüssen (DisplayPort oder HDMI),  Ladefunktion mind. 90 Watt,  und Netzwerkanschluss mit durchgeschleifter MAC-Adresse, PXE 2.1, WOL,;1. Technische Anforderungen;1.12 Portreplikator / Dockinstation;;;;
+A.1.12.4;Ausschluss;Dockingstation generationsübergreifend kompatibel;1. Technische Anforderungen;1.12 Portreplikator / Dockinstation;;;;
+A.1.12.5;Ausschluss;Dockingstationkabellänge des USB-C Anschlusskabels mind. 50 cm;1. Technische Anforderungen;1.12 Portreplikator / Dockinstation;;;;
+B.1.12.6;Bewertung;Dockingstation Schnell-Ladefunktion (35% in 20 Minuten) / Express Ladefunktion des Gerätes bei entsprechendem Netzteil;1. Technische Anforderungen;1.12 Portreplikator / Dockinstation;20,0;;;
+A.1.13.1;Ausschluss;Spritzwassergeschützte, hintergrundbeleuchtete QWERTZ-Tastatur (deutsches Layout);1. Technische Anforderungen;1.13 Interne Tastatur;;;;
+A.1.13.2;Ausschluss;Optional US-Englisches und UK-Englisches Tastaturlayout erhältlich;1. Technische Anforderungen;1.13 Interne Tastatur;;;;
+A.1.13.3;Ausschluss;Touchpad, Multitouch fähig;1. Technische Anforderungen;1.13 Interne Tastatur;;;;
+A.1.14.1;Ausschluss;Microsoft Windows 11 Professional 64 Bit OEM vorinstalliert inkl. Lizenz;1. Technische Anforderungen;1.14 Betriebssystem;;;;
+A.1.14.2;Ausschluss;Alternativ Microsoft Windows 11 Home 64 BIT OEM  vorinstalliert inkl. Lizenz;1. Technische Anforderungen;1.14 Betriebssystem;;;;
+B.1.14.3;Bewertung;"Alternativ Linux, Ubuntu mind. 24.04 LTS (werksseitig), Gerät ist offziell zertifiziert und auf folgender Seite gelistet; URL: https://certification.ubuntu.com/";1. Technische Anforderungen;1.14 Betriebssystem;30,0;;;
+A.1.15.1;Ausschluss;Neugeräte aus Serienproduktion;1. Technische Anforderungen;1.15 Allgemeine Eigenschaften;;;;
+A.1.15.2;Ausschluss;Weitere Gerätetypen der gleichen Produktfamilie mit 13 Zoll Display verfügbar;1. Technische Anforderungen;1.15 Allgemeine Eigenschaften;;;;
+A.1.15.3;Ausschluss;Alle imagerelevanten Bauteile über Produktlebenszyklus unverändert - Wo aus Liefer‑ oder Technologiergründen Komponenten angepasst werden müssen, stellt der Hersteller funktional gleichwertige Bauteile mit identischer oder höherer Kompatibilität bereit;1. Technische Anforderungen;1.15 Allgemeine Eigenschaften;;;;
+B.1.15.4;Bewertung;Geplante Produktlaufzeit in Monaten (Nachweis mit Hersteller-Roadmap);1. Technische Anforderungen;1.15 Allgemeine Eigenschaften;30,0;;;
+B.1.15.5;Bewertung;Der Computer ist so gebaut, dass Akku und SSD ausgetauscht werden können.;1. Technische Anforderungen;1.15 Allgemeine Eigenschaften;30,0;;;
+B.1.15.6;Bewertung;Der USB-C Anschluss ist Modular verbaut - im Falle eines Defektes muss nicht das komplette Mainboard getauscht werden;1. Technische Anforderungen;1.15 Allgemeine Eigenschaften;50,0;;;
+A.2.1.1;Ausschluss;Wake-on-LAN, PXE 2.x -Boot, Durchleitung MAC-Adresse (virtuelle MAC und/oder LOM/NIC MAC [sofern im Endgerät vorhanden], Pre-OS Support,;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.2;Ausschluss;"Der Hersteller muss ermöglichen, dass das System‑BIOS im Rahmen der vom Hersteller freigegebenen Versionen sowohl aktualisiert (Upgrade) als auch auf frühere, freigegebene BIOS‑Stände zurückgesetzt (Downgrade) werden kann.
+Einschränkungen von BIOS‑Downgrades sind  zulässig, wenn sicherheitskritische BIOS‑ bzw. Firmware‑Updates ein Downgrade aus Sicherheitsgründen unterbinden";2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.3;Ausschluss;"Energiemanagement: Das Gerät muss ein ACPI-konformes Betriebssystem unterstützen. Das Gerät muss bei Inaktivität selbständig in den Ruhemodus übergehen sowie den Monitor ausschalten. Voreinstellung bei Auslieferung:
+- Monitor aus ≤ 15 Min
+- Ruhemodus (ACPI S3) ≤ 30 Min";2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.4;Ausschluss;Der Kunde soll die Möglichkeit haben mindestens eine kundenspezifische Information selbst im Geräte-BIOS zu hinterlegen, z.B. die Inventarnummer des Gerätes und/oder eine Anlagennummer. Das Feld im BIOS muss durch den Kunden initial gefüllt und nachträglich bearbeitet werden können.;2. Zusätzliche Leistungen;2.1 Management;;;;
+B.2.1.5;Bewertung;Ersatzteil & Treiberversorgung mind. 5 Jahre ab Kaufdatum;2. Zusätzliche Leistungen;2.1 Management;30,0;;;
+B.2.1.6;Bewertung;Öffentlich zugängliche und bebilderte Service/Reparatur-anleitung verfügbar, in deutscher Sprache;2. Zusätzliche Leistungen;2.1 Management;10,0;;;
+A.2.1.7;Ausschluss;SCCM-fähige Treiberpakete verfügbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.8;Ausschluss;Kostenloses Tool vom Gerätehersteller zur automatisierten Firmware- u. Treiberaktualisierung (Windows) vefügbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.9;Ausschluss;Kostenloses Tool vom Gerätehersteller zur Bios-Konfiguration verfügbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.2.1;Ausschluss;Optional: Aufkleber mit Assetdaten (z.B. Seriennummer, MAC.Adresse) auf Verpackung;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.2.2.2;Ausschluss;Optional:Aufkleber mit Assetdaten (z.B. Seriennummer, MAC.Adresse) auf System;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.2.2.3;Ausschluss;Optional: Aufbringen kundenspezifischer Aufkleber auf System;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.3.1.1;Ausschluss;"Das Gerät erfüllt vollständig die Anforderungen des aktuellen ENERGY-STAR-Programms für Computer (derzeit ENERGY STAR Version 9.0).
+
+Nachweise: Herstellererklärung; der Bieter verpflichtet sich, spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht oder ein Dokument gemäß der jeweils gültigen ENERGY-STAR-Testvorschrift oder ein Dokument mit folgenden Angaben vorzulegen:
+
+Name des Prüfl";3. Qualität/ Sicherheit/ Umwelt;3.1 Energieverbrauch;;;;
+A.3.2.1;Ausschluss;"GS-Zeichen; CE; WEEE; EU-RoHS – entsprechende Konformitäts- und Zertifikatsunterlagen werden beigefügt.";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.2;Ausschluss;"TCO-Zertifizierung: Das Gerät erfüllt die aktuellen Anforderungen des TCO Certified-Labels für Notebooks (TCO 9 oder neuer); ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung wird beigefügt.";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.3;Ausschluss;Erfüllung der Umweltkriterien gemäß EPEAT-Standard in der Einstufung „EPEAT Gold“ (aktuelle Version, inkl. Climate+ soweit verfügbar): Es werden alle mit „R“ gekennzeichneten Kriterien sowie mindestens 75 % der mit „O“ gekennzeichneten Kriterien erfüllt. Als Nachweis ist entweder eine gültige EPEAT-Gold-Registrierung (z. B. ein Auszug aus der EPEAT-Produktdatenbank) oder ein gleichwertiger Nachwei;3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+B.3.2.4;Bewertung;Erfüllung von Umweltkriterien analog zur Climate+Zertifizierung, ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung ist beizufügen;3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;20,0;;;
+A.3.2.5;Ausschluss;Einhaltung der ILO-Kernarbeitsnormen - ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung ist beizufügen;3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.6;Ausschluss;EcoVadis-Zertifizierung (mind. Platin, Nachweis: Herstellererklärung);3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+A.1.1.1;Ausschluss;"x86-Technologie (64 Bit) AMD / Intel Prozessor,  Mindestleistung ≥ 1700 Score Points „Overall“ im Benchmark „SYSmark 30“, AES-NI-Funktionen.
+
+Testeinstellung: Auflösung 1920×1200 bei 60 Hz, Displayhelligkeit mind. 200 Nits, Betriebssystem Windows 11 Pro 24H2 oder höher. Der Leistungswert SYSmark 30 „Overall Rating“ ist für die angebotene Konfiguration durch Vorlage eines geeigneten Messprotokolls ";1. Technische Anforderungen;1.1 Prozessor;;;;
+A.1.1.2;Ausschluss;"Alternativ: x86-Technologie (64 Bit) AMD / Intel Prozessor, Mindestleistung ≥ 1800 Score Points „Overall“ im Benchmark „SYSmark 30“, AES-NI-Funktionen.
+
+Testeinstellung: Auflösung 1920×1200 bei 60 Hz, Displayhelligkeit mind. 200 Nits, Betriebssystem Windows 11 Pro 24H2 oder höher. Der Leistungswert SYSmark 30 „Overall Rating“ ist für die angebotene Konfiguration durch Vorlage eines geeigneten Mess";1. Technische Anforderungen;1.1 Prozessor;;;;
+A.1.2.1;Ausschluss;32GB RAM DDR5;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.2.2;Ausschluss;Alternativ: 64GB RAM DDR5;1. Technische Anforderungen;1.2 Arbeitsspeicher;;;;
+A.1.3.1;Ausschluss;"Ethernet-Adapter RJ-45, 10/100/1000 Mbit/s, (oder Adapter im Lieferumfang), Autosensing, Unterstützung für Preboot-Execution-Environment (PXE 2.1); WOL";1. Technische Anforderungen;1.3 Netzwerkkarte/ Kommunikation;;;;
+A.1.3.2;Ausschluss;WLAN-Adapter Wifi 6 oder Wifi 7;1. Technische Anforderungen;1.3 Netzwerkkarte/ Kommunikation;;;;
+A.1.3.3;Ausschluss;Bluetooth mind. 5.4;1. Technische Anforderungen;1.3 Netzwerkkarte/ Kommunikation;;;;
+A.1.3.4;Ausschluss;Optional integriertes Mobiles Breitband Modul 5G erhältlich, externe Simcard-Schnittstelle inkl. E-Sim;1. Technische Anforderungen;1.3 Netzwerkkarte/ Kommunikation;;;;
+A.1.4.1;Ausschluss;Min. 480 GB SSD M.2 PCIe;1. Technische Anforderungen;1.4 SSD;;;;
+A.1.4.2;Ausschluss;Alternativ 1TB SSD M.2 PCIe;1. Technische Anforderungen;1.4 SSD;;;;
+A.1.4.3;Ausschluss;Alternativ bis zu 2 TB SSD M.2 PCIe erhältlich;1. Technische Anforderungen;1.4 SSD;;;;
+A.1.4.4;Ausschluss;Optional: Festplatte/SSD verbleibt im Reparaturfall beim Kunden;1. Technische Anforderungen;1.4 SSD;;;;
+A.1.5.1;Ausschluss;Soundkarte onboard;1. Technische Anforderungen;1.5 Sound;;;;
+A.1.5.2;Ausschluss;mind. 2 Integrierte Mikrofone mit Rauschunterdrückung;1. Technische Anforderungen;1.5 Sound;;;;
+A.1.5.3;Ausschluss;mind. 2 Integrierte Lautsprecher;1. Technische Anforderungen;1.5 Sound;;;;
+A.1.6.1;Ausschluss;Min. 3 x USB Anschlüsse (davon mind. 2x USB Type-C, mind. 1x Thunderbolt 4.0, 40Gbit/s);1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;;;;
+A.1.6.2;Ausschluss;2 digitale Bildschirmausgänge (davon mind. 1x HDMI 2.0 oder DP 2.1);1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;;;;
+B.1.6.3;Bewertung;HDMI 2.1 Anschluss;1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;10,0;;;
+A.1.6.4;Ausschluss;Stereokopfhörer- / Mikrofonbuchse (ggf. kombiniert);1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;;;;
+A.1.6.5;Ausschluss;Schnittstellen- und Laufwerksverriegelung über BIOS, Passwortschutz für System und Setup;1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;;;;
+A.1.6.6;Ausschluss;Integrierte ≥5MP IR- Kamera mit Status-LED und Kameraschutzblende (mechanisch);1. Technische Anforderungen;1.6 Schnittstellen / Anschlüsse / Systemboard-Steckplätze / Laufwerke;;;;
+A.1.7.1;Ausschluss;TPM mind. 2.0 Modul onboard mind. FIPS-140-2 zertifiziert;1. Technische Anforderungen;1.7 Sicherheit/ Management;;;;
+B.1.7.2;Bewertung;TPM mind. 2.0 Modul onboard mind. FIPS-140-3 zertifiziert;1. Technische Anforderungen;1.7 Sicherheit/ Management;10,0;;;
+A.1.7.3;Ausschluss;Optional integrierter biometrischer Fingerabdruck-Leser erhältlich;1. Technische Anforderungen;1.7 Sicherheit/ Management;;;;
+A.1.8.1;Ausschluss;Grafikkarte onboard;1. Technische Anforderungen;1.8 Grafikkarte;;;;
+A.1.8.2;Ausschluss;DirectX12.x & OpenGL mind. 4.6 Unterstützung;1. Technische Anforderungen;1.8 Grafikkarte;;;;
+A.1.9.1;Ausschluss;max. Start-Gewicht ≤ 1,3 kg;1. Technische Anforderungen;1.9 Gehäuse;;;;
+A.1.9.3;Ausschluss;Gehäuse mit Vorrichtung zur Diebstahlsicherung (Kensington, Noble oder vergleichbar);1. Technische Anforderungen;1.9 Gehäuse;;;;
+A.1.10.1;Ausschluss;"14"" entspiegeltes / mattes Display";1. Technische Anforderungen;1.10 Display;;;;
+A.1.10.2;Ausschluss;LED Hintergrundbeleuchtung;1. Technische Anforderungen;1.10 Display;;;;
+A.1.10.3;Ausschluss;Auflösung WUXGA (mind. 1.920 x 1.200 Pixel), 16:10, Helligkeit mind. 400 Nits;1. Technische Anforderungen;1.10 Display;;;;
+A.1.10.4;Ausschluss;Alternativ: OLED- oder IPS Touchdisplay mind. WUXGA (1920 x 1.200 Pixel) 16:10  oder höher, Helligkeit mind.300 Nits;1. Technische Anforderungen;1.10 Display;;;;
+A.1.10.5;Ausschluss;Optional Hardwareseitiger Blaulichtfilter;1. Technische Anforderungen;1.10 Display;;;;
+B.1.10.5;Bewertung;Optional: stromsparendes Display (Low Power < 3,5 Watt);1. Technische Anforderungen;1.10 Display;20,0;;;
+A.1.10.6;Ausschluss;"Das Display erfüllt die ergonomischen Eigenschaften nach der EN ISO 9241 und hält mindestens Pixelfehlerklasse 1 ein.
+Nachweis: Herstellererklärung und der Bieter legt spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht vor.";1. Technische Anforderungen;1.10 Display;;;;
+A.1.11.1;Ausschluss;Lithium Ionen Akku ≥ 40 Wh;1. Technische Anforderungen;1.11 Stromversorgung;;;;
+B.1.11.2;Bewertung;Alternative Akku-Größe zu A.1.11.1 ≥ 55 Wh;1. Technische Anforderungen;1.11 Stromversorgung;20,0;;;
+A.1.11.3;Ausschluss;Netzteil 100-240V (USB-C) im Lieferumfang enthalten;1. Technische Anforderungen;1.11 Stromversorgung;;;;
+A.1.11.4;Ausschluss;Netzteil innerhalb der Produktfamilie austauschbar;1. Technische Anforderungen;1.11 Stromversorgung;;;;
+A.1.11.5;Ausschluss;"Eine angemessene Batterieleistung wird angenommen, wenn folgender Wert des Benchmarks „MobileMark 30“ eingehalten wird: „Battery life“: min. 08:00h
+Nachweis: Messprotokoll, Eine angemessene Batterie-Leistung wird angenommen, wenn folgender Wert des Benchmarks „MobileMark 30“ eingehalten wird:
+ „Battery life “: (Einstellung: CPU wie unter A1.1.1 1920x1200 bei 60 Hz, 250 Nits nach der aktuellen Bapc";1. Technische Anforderungen;1.11 Stromversorgung;;;;
+B.1.11.7;Bewertung;Schnell-Ladefunktion (35% in 20 Minuten) / Express Ladefunktion des Gerätes bei entsprechendem Netzteil;1. Technische Anforderungen;1.11 Stromversorgung;20,0;;;
+B.1.11.8;Bewertung;Batterie LED-Statusanzeige;1. Technische Anforderungen;1.11 Stromversorgung;20,0;;;
+B.1.11.9;Bewertung;Optional: 3 Jahre Hersteller-Akkuservice (Tausch bei Nennkapazität <50% oder aufblähen);1. Technische Anforderungen;1.11 Stromversorgung;20,0;;;
+A.1.12.1;Ausschluss;Optional: USB-C Dockingstation vom Hersteller des Endgerätes mit Ladefunktion und 40 Gbits/s Datenübertragung (Alle Schnittstellen sind im Preisblatt anzugeben.);1. Technische Anforderungen;1.12 Portreplikator / Dockinstation;;;;
+A.1.12.2;Ausschluss;Dockingstation innerhalb der Produktfamilie (Notebook A,B,C,D) austauschbar;1. Technische Anforderungen;1.12 Portreplikator / Dockinstation;;;;
+A.1.12.3;Ausschluss;Dockingstation mit min. 3 digitalen Bildschirmanschlüssen (DisplayPort oder HDMI),  Ladefunktion mind. 90 Watt,  und Netzwerkanschluss mit durchgeschleifter MAC-Adresse, PXE 2.1, WOL,;1. Technische Anforderungen;1.12 Portreplikator / Dockinstation;;;;
+A.1.12.4;Ausschluss;Dockingstation generationsübergreifend kompatibel;1. Technische Anforderungen;1.12 Portreplikator / Dockinstation;;;;
+A.1.12.5;Ausschluss;Dockingstationkabellänge des USB-C Anschlusskabels mind. 50 cm;1. Technische Anforderungen;1.12 Portreplikator / Dockinstation;;;;
+B.1.12.6;Bewertung;Dockingstation Schnell-Ladefunktion (35% in 20 Minuten) / Express Ladefunktion des Gerätes bei entsprechendem Netzteil;1. Technische Anforderungen;1.12 Portreplikator / Dockinstation;20,0;;;
+B.1.12.7;Bewertung;Dockingstation Stromversorgung über USB-C (einfach) ≥100 Watt;1. Technische Anforderungen;1.12 Portreplikator / Dockinstation;20,0;;;
+A.1.13.1;Ausschluss;Spritzwassergeschützte, hintergrundbeleuchtete QWERTZ-Tastatur (deutsches Layout);1. Technische Anforderungen;1.13 Interne Tastatur;;;;
+A.1.13.2;Ausschluss;Optional US-Englisches und UK-Englisches Tastaturlayout erhältlich;1. Technische Anforderungen;1.13 Interne Tastatur;;;;
+A.1.13.3;Ausschluss;Touchpad, Multitouch fähig;1. Technische Anforderungen;1.13 Interne Tastatur;;;;
+A.1.14.1;Ausschluss;Microsoft Windows 11 Professional 64 Bit OEM vorinstalliert inkl. Lizenz;1. Technische Anforderungen;1.14 Betriebssystem;;;;
+A.1.14.2;Ausschluss;Alternativ Microsoft Windows 11 Home 64 BIT OEM  vorinstalliert inkl. Lizenz;1. Technische Anforderungen;1.14 Betriebssystem;;;;
+B.1.14.3;Bewertung;"Alternativ Linux, Ubuntu mind. 24.04 LTS (werksseitig), Gerät ist offziell zertifiziert und auf folgender Seite gelistet; URL: https://certification.ubuntu.com/";1. Technische Anforderungen;1.14 Betriebssystem;30,0;;;
+A.1.15.1;Ausschluss;Neugeräte aus Serienproduktion;1. Technische Anforderungen;1.15 Allgemeine Eigenschaften;;;;
+A.1.15.2;Ausschluss;Weitere Gerätetypen der gleichen Produktfamilie mit 13 Zoll Display verfügbar;1. Technische Anforderungen;1.15 Allgemeine Eigenschaften;;;;
+A.1.15.3;Ausschluss;Alle imagerelevanten Bauteile über Produktlebenszyklus unverändert - Wo aus Liefer‑ oder Technologiergründen Komponenten angepasst werden müssen, stellt der Hersteller funktional gleichwertige Bauteile mit identischer oder höherer Kompatibilität bereit;1. Technische Anforderungen;1.15 Allgemeine Eigenschaften;;;;
+B.1.15.4;Bewertung;Geplante Produktlaufzeit in Monaten (Nachweis mit Hersteller-Roadmap);1. Technische Anforderungen;1.15 Allgemeine Eigenschaften;30,0;;;
+B.1.15.5;Bewertung;Der Computer ist so gebaut, dass Akku und SSD ausgetauscht werden können.;1. Technische Anforderungen;1.15 Allgemeine Eigenschaften;30,0;;;
+B.1.15.6;Bewertung;Der USB-C Anschluss ist Modular verbaut - im Falle eines Defektes muss nicht das komplette Mainboard getauscht werden;1. Technische Anforderungen;1.15 Allgemeine Eigenschaften;50,0;;;
+A.2.1.1;Ausschluss;Wake-on-LAN, PXE 2.x -Boot, Durchleitung MAC-Adresse (virtuelle MAC und/oder LOM/NIC MAC [sofern im Endgerät vorhanden], Pre-OS Support,;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.2;Ausschluss;"Der Hersteller muss ermöglichen, dass das System‑BIOS im Rahmen der vom Hersteller freigegebenen Versionen sowohl aktualisiert (Upgrade) als auch auf frühere, freigegebene BIOS‑Stände zurückgesetzt (Downgrade) werden kann.
+Einschränkungen von BIOS‑Downgrades sind  zulässig, wenn sicherheitskritische BIOS‑ bzw. Firmware‑Updates ein Downgrade aus Sicherheitsgründen unterbinden";2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.3;Ausschluss;"Energiemanagement: Das Gerät muss ein ACPI-konformes Betriebssystem unterstützen. Das Gerät muss bei Inaktivität selbständig in den Ruhemodus übergehen sowie den Monitor ausschalten. Voreinstellung bei Auslieferung:
+- Monitor aus ≤ 15 Min
+- Ruhemodus (ACPI S3) ≤ 30 Min";2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.4;Ausschluss;Der Kunde soll die Möglichkeit haben mindestens eine kundenspezifische Information selbst im Geräte-BIOS zu hinterlegen, z.B. die Inventarnummer des Gerätes und/oder eine Anlagennummer. Das Feld im BIOS muss durch den Kunden initial gefüllt und nachträglich bearbeitet werden können.;2. Zusätzliche Leistungen;2.1 Management;;;;
+B.2.1.5;Bewertung;Ersatzteil & Treiberversorgung & Biosupdate mind. 5 Jahre ab Kaufdatum;2. Zusätzliche Leistungen;2.1 Management;30,0;;;
+B.2.1.6;Bewertung;Öffentlich zugängliche und bebilderte Service/Reparatur-anleitung verfügbar, in deutscher Sprache;2. Zusätzliche Leistungen;2.1 Management;10,0;;;
+A.2.1.7;Ausschluss;SCCM-fähige Treiberpakete verfügbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.8;Ausschluss;Kostenloses Tool vom Gerätehersteller zur automatisierten Firmware- u. Treiberaktualisierung (Windows) verfügbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.9;Ausschluss;Kostenloses Tool vom Gerätehersteller zur Bios-Konfiguration verfügbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.2.1;Ausschluss;Optional: Aufkleber mit Assetdaten (z.B. Seriennummer, MAC.Adresse) auf Verpackung;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.2.2.2;Ausschluss;Optional: Aufkleber mit Assetdaten (z.B. Seriennummer, MAC.Adresse) auf System;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.2.2.3;Ausschluss;Optional: Aufbringen kundenspezifischer Aufkleber auf System;2. Zusätzliche Leistungen;2.2 Geräteetikettierung;;;;
+A.3.1.1;Ausschluss;"Das Gerät erfüllt vollständig die Anforderungen des aktuellen ENERGY-STAR-Programms für Computer (derzeit ENERGY STAR Version 9.0).
+
+Nachweise: Herstellererklärung; der Bieter verpflichtet sich, spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht oder ein Dokument gemäß der jeweils gültigen ENERGY-STAR-Testvorschrift oder ein Dokument mit folgenden Angaben vorzulegen:
+
+Name des Prüfl";3. Qualität/ Sicherheit/ Umwelt;3.1 Energieverbrauch;;;;
+A.3.2.1;Ausschluss;"GS-Zeichen; CE; WEEE; EU-RoHS – entsprechende Konformitäts- und Zertifikatsunterlagen werden beigefügt.";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.2;Ausschluss;"TCO-Zertifizierung: Das Gerät erfüllt die aktuellen Anforderungen des TCO Certified-Labels für Notebooks (TCO 9 oder neuer); ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung wird beigefügt.";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.3;Ausschluss;Erfüllung der Umweltkriterien gemäß EPEAT-Standard in der Einstufung „EPEAT Gold“ (aktuelle Version, inkl. Climate+ soweit verfügbar): Es werden alle mit „R“ gekennzeichneten Kriterien sowie mindestens 75 % der mit „O“ gekennzeichneten Kriterien erfüllt. Als Nachweis ist entweder eine gültige EPEAT-Gold-Registrierung (z. B. ein Auszug aus der EPEAT-Produktdatenbank) oder ein gleichwertiger Nachwei;3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+B.3.2.4;Bewertung;Erfüllung von Umweltkriterien analog zur Climate+Zertifizierung, ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung ist beizufügen;3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;50,0;;;
+A.3.2.5;Ausschluss;Einhaltung der ILO-Kernarbeitsnormen - ein entsprechender Nachweis, Zertifikat oder gleichwertige Bestätigung ist beizufügen;3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.6;Ausschluss;EcoVadis-Zertifizierung (mind. Platin, Nachweis: Herstellererklärung);3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+A.1.1.1;Ausschluss;"23.8""-24"" Flachbildschirm, sichtbare Bildschirmdiagonale ≥ 60 cm";1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.2;Ausschluss;Entspiegeltes/ mattes Display;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.3;Ausschluss;Paneltyp IPS (In-Plane Switching) oder VA (Vertical Alignment);1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.4;Ausschluss;Native Auflösung 1920 x 1080 bei  ≥ 100 Hz;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+B.1.1.5;Bewertung;Bildwiederholfrequenz ≥ 120 Hz;1. Technische Anforderungen;1.1 Eigenschaften;20,0;;;
+A.1.1.6;Ausschluss;Seitenverhältnis 16:9;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.7;Ausschluss;Farbskala ≥ 99 % sRGB;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.8;Ausschluss;Farbtiefe ≥ 16.7 Millionen Farben;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.9;Ausschluss;"Das Display erfüllt die ergonomischen Eigenschaften nach der EN ISO 9241 und hält mindestens Pixelfehlerklasse 1 ein.
+Nachweis: Herstellererklärung und der Bieter legt spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht vor.";1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.10;Ausschluss;Reaktionszeit (Grau zu Grau) max. 5 ms;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.11;Ausschluss;Kontrast (Standard) min. 1000:1;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.12;Ausschluss;Helligkeit (Standard) min. 250 cd/m²;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+B.1.1.13;Bewertung;Helligkeit (Standard)  ≥ 300 cd/m²;1. Technische Anforderungen;1.1 Eigenschaften;20,0;;;
+A.1.1.14;Ausschluss;Blickwinkel (horizontal x vertikal) von min. 178° x 178°;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.15;Ausschluss;Höhenverstellbar mind. 100 mm;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+B.1.1.16;Bewertung;Höhenverstellbar ≥ 150 mm;1. Technische Anforderungen;1.1 Eigenschaften;20,0;;;
+A.1.1.17;Ausschluss;Neigbar -5° ≥ 20°;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.18;Ausschluss;Drehbar vom Querformat ins Hochformat (Pivotfunktion);1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.19;Ausschluss;Vesa-Halterung nach Standard MIS-D (100 mm);1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.20;Ausschluss;Ein- und Ausschalter, durch dessen Betätigung das Gerät min. in den Schein-Aus-Zustand versetzt werden kann;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.21;Ausschluss;Netzteil in Monitorgehäuse integriert;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.22;Ausschluss;Gehäuse mit Vorrichtung zur Diebstahlsicherung (Kensington oder vergleichbar);1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.23;Ausschluss;Herstellereigene optionale Soundbar erhältlich, Alternativ Lautsprecher integriert;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+B.1.1.24;Bewertung;Optional Monitor ohne Fuß lieferbar - Minderpreis im Preisblatt angeben;1. Technische Anforderungen;1.1 Eigenschaften;20,0;;;
+B.1.1.25;Bewertung;"Optional Hersteller eigener Monitorfuß zur Befestigung des Micro PC ""D"" lieferbar";1. Technische Anforderungen;1.1 Eigenschaften;20,0;;;
+A.1.2.1;Ausschluss;DisplayPort mind. 1.2, inkl. Anschlusskabel im Lieferumfang;1. Technische Anforderungen;1.2 Anschlüsse;;;;
+A.1.2.2;Ausschluss;HDMI  mind. 1.4;1. Technische Anforderungen;1.2 Anschlüsse;;;;
+A.1.2.3;Ausschluss;Integrierter USB-Hub mit min. 5GBit/s 4 Downstream-Anschlüssen  (davon mind. 1x USB-C);1. Technische Anforderungen;1.2 Anschlüsse;;;;
+A.1.3.1;Ausschluss;Neugeräte aus Serienproduktion;1. Technische Anforderungen;1.3 Allgemeine Anforderungen;;;;
+A.2.1.1;Ausschluss;Energiemanagement: Display Power Management System VESA DPMS oder vergleichbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.2;Ausschluss;Energiemanagement: Der Stand-By Zustand (Bereitschaftsmodus/Sleep-Mode) wird nach spätestens 30 Minuten Inaktivität automatisch hergestellt;2. Zusätzliche Leistungen;2.1 Management;;;;
+B.2.1.3;Bewertung;Service-Identifikationsnr. ist im OSD hinterlegt, und per WMI auslesbar;2. Zusätzliche Leistungen;2.1 Management;10,0;;;
+B.2.1.4;Bewertung;Firmwareupdate durch den Auftraggeber möglich;2. Zusätzliche Leistungen;2.1 Management;20,0;;;
+B.2.1.5;Bewertung;"Kostenfreie Management Software, Softwarefunktionalität:
+ • mind. lauffähig unter Win11
+ • Kompatibel zu allen ausgeschriebenen Monitoren
+ • Skriptunterstützung für den Rollout von Einstellungen.
+ • Grundeinstellungen: Helligkeit & Kontrast; Auto-Restore
+ • KVM-Verwaltung  
+ • Multi-Display-Unterstützung
+ • Möglichkeit zur Zonierung des Bildschirminhaltes / Feste Skalierung von Anwendungsfenstern ";2. Zusätzliche Leistungen;2.1 Management;20,0;;;
+A.3.1.1;Ausschluss;"Das Gerät erfüllt vollständig die  Anforderungen des aktuellen Energy Star Version 8 oder neuer für Computerbildschirme (EU-Richtlinie 2009/789/EG Anhang C Teil II).*
+Nachweise: Herstellererklärung und der Bieter verpflichtet sich spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht oder Dokument gemäß Testvorschrift des aktuellen Energy Star oder ein Dokument, das folgende Angaben en";3. Qualität/ Sicherheit/ Umwelt;3.1 Energieverbrauch;;;;
+A.3.2.1;Ausschluss;"GS-Zeichen; CE; WEEE; EU-RoHS;
+Nachweis: Zertifikate beilegen";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.2;Ausschluss;"Erfüllung der aktuellen Anforderungen an das TCO 10-Label
+Nachweis: Herstellererklärung und der Bieter legt dem Angebot Zuschlagserteilung einen Prüfbericht vor. Alternativ: Nachweis über das TCO Displays bzw. TCO Certified Displays Label.";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.3;Ausschluss;"Erfüllung von Umweltkriterien analog zur EPEAT-Zertifizierung: Bitte geben Sie an, ob die Kriterien entsprechend der Norm ""EPEAT Gold"" erfüllt werden (alle mit ""R"" markierten und mindestens 75% der mit ""O"" markierten Kriterien). Fügen Sie als Nachweis bitte entweder eine Zertifizierung nach EPEAT Gold bei oder einen gleichwertigen Nachweis zur Erfüllung der genannten Kriterien. Da sich die EPEAT-K";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+B.3.2.4;Bewertung;"Low Blue Light Filter, TÜV zertifiziert 
+Nachweis: Der Bieter legt mit dem Angebot ein Zertifikat vor";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;30,0;;;
+B.3.2.5;Bewertung;"Flimmerfrei, TÜV zertifiziert 
+Nachweis: Der Bieter legt mit dem Angebot ein Zertifikat vor";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;30,0;;;
+A.1.1.1;Ausschluss;"27"" Flachbildschirm, sichtbare Bildschirmdiagonale ≥ 68 cm";1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.2;Ausschluss;Entspiegeltes/ mattes Display;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.3;Ausschluss;Paneltyp IPS (In-Plane Switching) oder VA (Vertical Alignment);1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.4;Ausschluss;Native Auflösung 1920 x 1080 bei ≥ 100 Hz;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+B.1.1.5;Bewertung;Bildwiederholfrequenz ≥ 120 Hz;1. Technische Anforderungen;1.1 Eigenschaften;20,0;;;
+A.1.1.6;Ausschluss;Seitenverhältnis 16:9;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.7;Ausschluss;Farbskala ≥ 99 % sRGB;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.8;Ausschluss;Farbtiefe ≥ 16.7 Millionen Farben;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.9;Ausschluss;"Das Display erfüllt die ergonomischen Eigenschaften nach der EN ISO 9241 und hält mindestens Pixelfehlerklasse 1 ein.
+Nachweis: Herstellererklärung und der Bieter legt spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht vor.";1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.10;Ausschluss;Reaktionszeit (Grau zu Grau) max. 5 ms;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.11;Ausschluss;Kontrast (Standard) min. 1000:1;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.12;Ausschluss;Helligkeit (Standard) min. 250 cd/m²;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+B.1.1.13;Bewertung;Helligkeit (Standard) ≥ 300 cd/m²;1. Technische Anforderungen;1.1 Eigenschaften;20,0;;;
+A.1.1.14;Ausschluss;Blickwinkel (horizontal x vertikal) von min. 178° x 178°;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.15;Ausschluss;Höhenverstellbar mind. 100 mm;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+B.1.1.16;Bewertung;Höhenverstellbar ≥ 150 mm;1. Technische Anforderungen;1.1 Eigenschaften;20,0;;;
+A.1.1.17;Ausschluss;Neigbar -5° ≥ 20°;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.18;Ausschluss;Drehbar vom Querformat ins Hochformat (Pivotfunktion);1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.19;Ausschluss;Vesa-Halterung nach Standard MIS-D (100 mm);1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.20;Ausschluss;Ein- und Ausschalter, durch dessen Betätigung das Gerät min. in den Schein-Aus-Zustand versetzt werden kann;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.21;Ausschluss;Netzteil in Monitorgehäuse integriert;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.22;Ausschluss;Gehäuse mit Vorrichtung zur Diebstahlsicherung (Kensington oder vergleichbar);1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.23;Ausschluss;Herstellereigene optionale Soundbar erhältlich, Alternativ Lautsprecher integriert;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+B.1.1.24;Bewertung;Optional Monitor ohne Fuß lieferbar - Minderpreis im Preisblatt angeben;1. Technische Anforderungen;1.1 Eigenschaften;20,0;;;
+B.1.1.25;Bewertung;"Optional Hersteller eigener Monitorfuß zur Befestigung des Micro PC ""D"" lieferbar -";1. Technische Anforderungen;1.1 Eigenschaften;20,0;;;
+A.1.2.1;Ausschluss;DisplayPort mind. 1.2, inkl. Anschlusskabel im Lieferumfang;1. Technische Anforderungen;1.2 Anschlüsse;;;;
+A.1.2.2;Ausschluss;HDMI mind. 1.4;1. Technische Anforderungen;1.2 Anschlüsse;;;;
+A.1.2.3;Ausschluss;Integrierter USB-Hub mit min. 5GBit/s 4 Downstream-Anschlüssen  (davon mind. 1x USB-C);1. Technische Anforderungen;1.2 Anschlüsse;;;;
+A.1.3.1;Ausschluss;Neugeräte aus Serienproduktion;1. Technische Anforderungen;1.3 Allgemeine Anforderungen;;;;
+A.2.1.1;Ausschluss;Energiemanagement: Display Power Management System VESA DPMS oder vergleichbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.2;Ausschluss;Energiemanagement: Der Stand-By Zustand (Bereitschaftsmodus/Sleep-Mode) wird nach spätestens 30 Minuten Inaktivität automatisch hergestellt;2. Zusätzliche Leistungen;2.1 Management;;;;
+B.2.1.3;Bewertung;Service-Identifikationsnr. ist im OSD hinterlegt, und per WMI auslesbar;2. Zusätzliche Leistungen;2.1 Management;10,0;;;
+B.2.1.4;Bewertung;Firmwareupdate durch den Auftraggeber möglich;2. Zusätzliche Leistungen;2.1 Management;10,0;;;
+B.2.1.5;Bewertung;"Kostenfreie Management Software, Softwarefunktionalität:
+ • mind. lauffähig unter Win11
+ • Kompatibel zu allen ausgeschriebenen Monitoren
+ • Skriptunterstützung für den Rollout von Einstellungen.
+ • Grundeinstellungen: Helligkeit & Kontrast; Auto-Restore
+ • KVM-Verwaltung  
+ • Multi-Display-Unterstützung
+ • Möglichkeit zur Zonierung des Bildschirminhaltes / Feste Skalierung von Anwendungsfenstern ";2. Zusätzliche Leistungen;2.1 Management;20,0;;;
+A.3.1.1;Ausschluss;"Das Gerät erfüllt vollständig die  Anforderungen des aktuellen Energy Star Version 8.x für Computerbildschirme (EU-Richtlinie 2009/789/EG Anhang C Teil II).*
+Nachweise: Herstellererklärung und der Bieter verpflichtet sich spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht oder Dokument gemäß Testvorschrift des aktuellen Energy Star oder ein Dokument, das folgende Angaben enthält, vo";3. Qualität/ Sicherheit/ Umwelt;3.1 Energieverbrauch;;;;
+A.3.2.1;Ausschluss;"GS-Zeichen; CE; WEEE; EU-RoHS;
+Nachweis: Zertifikate beilegen";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.2;Ausschluss;"Erfüllung der aktuellen Anforderungen an das TCO 10-Label
+Nachweis: Herstellererklärung und der Bieter legt spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht vor. Alternativ: Nachweis über das TCO Displays bzw. TCO Certified Displays Label.";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.3;Ausschluss;"Erfüllung von Umweltkriterien analog zur EPEAT-Zertifizierung: Bitte geben Sie an, ob die Kriterien entsprechend der Norm ""EPEAT Gold"" erfüllt werden (alle mit ""R"" markierten und mindestens 75% der mit ""O"" markierten Kriterien). Fügen Sie als Nachweis bitte entweder eine Zertifizierung nach EPEAT Gold bei oder einen gleichwertigen Nachweis zur Erfüllung der genannten Kriterien. Da sich die EPEAT-K";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+B.3.2.4;Bewertung;"Low Blue Light Filter, TÜV zertifiziert 
+Nachweis: Der Bieter legt mit dem Angebot ein Zertifikat vor";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;30,0;;;
+B.3.2.5;Bewertung;"Flimmerfrei, TÜV zertifiziert 
+Nachweis: Der Bieter legt mit dem Angebot ein Zertifikat vor";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;30,0;;;
+A.1.1.1;Ausschluss;"27"" Flachbildschirm, sichtbare Bildschirmdiagonale ≥ 68 cm";1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.2;Ausschluss;Entspiegeltes/ mattes Display;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.3;Ausschluss;Paneltyp IPS (In-Plane Switching) oder VA (Vertical Alignment);1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.4;Ausschluss;Native Auflösung 1920 x 1080 oder höher, bei ≥ 100 Hz;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+B.1.1.5;Bewertung;Bildwiederholfrequenz ≥ 120 Hz;1. Technische Anforderungen;1.1 Eigenschaften;20,0;;;
+A.1.1.6;Ausschluss;Seitenverhältnis 16:9;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.7;Ausschluss;Farbskala ≥ 99 % sRGB;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.8;Ausschluss;Farbtiefe ≥ 16.7 Millionen Farben;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.9;Ausschluss;"Das Display erfüllt die ergonomischen Eigenschaften nach der EN ISO 9241 und hält mindestens Pixelfehlerklasse 1 ein.
+Nachweis: Herstellererklärung und der Bieter legt spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht vor.";1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.10;Ausschluss;Reaktionszeit (Grau zu Grau) max. 5 ms;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.11;Ausschluss;Kontrast (Standard) min. 1000:1;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.12;Ausschluss;Helligkeit (Standard) min. 250 cd/m²;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+B.1.1.13;Bewertung;Helligkeit (Standard) ≥ 300 cd/m²;1. Technische Anforderungen;1.1 Eigenschaften;20,0;;;
+A.1.1.14;Ausschluss;Blickwinkel (horizontal x vertikal) von min. 178° x 178°;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.15;Ausschluss;Höhenverstellbar mind. 100 mm;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+B.1.1.16;Bewertung;Höhenverstellbar ≥ 150 mm;1. Technische Anforderungen;1.1 Eigenschaften;20,0;;;
+A.1.1.17;Ausschluss;Neigbar -5° ≥ 20°;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.18;Ausschluss;Drehbar vom Querformat ins Hochformat (Pivotfunktion);1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.19;Ausschluss;Vesa-Halterung nach Standard MIS-D (100 mm);1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.20;Ausschluss;Ein- und Ausschalter, durch dessen Betätigung das Gerät min. in den Schein-Aus-Zustand versetzt werden kann;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.21;Ausschluss;Netzteil in Monitorgehäuse integriert;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.22;Ausschluss;Gehäuse mit Vorrichtung zur Diebstahlsicherung (Kensington oder vergleichbar);1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.23;Ausschluss;Herstellereigene optionale Soundbar erhältlich, Alternativ Lautsprecher integriert;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+B.1.1.24;Bewertung;"Optional Hersteller eigener Monitorfuß zur Befestigung des Micro PC ""D"" lieferbar -";1. Technische Anforderungen;1.1 Eigenschaften;20,0;;;
+A.1.2.1;Ausschluss;DisplayPort mind. 1.2 inkl. Anschlusskabel;1. Technische Anforderungen;1.2 Anschlüsse;;;;
+A.1.2.2;Ausschluss;HDMI mind. 1.4;1. Technische Anforderungen;1.2 Anschlüsse;;;;
+A.1.2.3;Ausschluss;Integrierter USB-Hub mit mind.5GBit/s 4 Downstream-Anschlüssen;1. Technische Anforderungen;1.2 Anschlüsse;;;;
+A.1.2.4;Ausschluss;USB-C Anschluß m. DP-Alt-Mode mind. 1.4 / 5Gbit/s, mind.90 Watt PD inkl. Anschlusskabel;1. Technische Anforderungen;1.2 Anschlüsse;;;;
+B.1.2.5;Bewertung;USB-C Anschluß m. DP-Alt-Mode mind. 1.4 / 5Gbit/s, ≥ 100 Watt PD inkl. Anschlusskabel;1. Technische Anforderungen;1.2 Anschlüsse;20,0;;;
+A.1.2.6;Ausschluss;Ethernet-Anschluß, RJ-45, mind. 10/100/1000 Mbit/s;1. Technische Anforderungen;1.2 Anschlüsse;;;;
+A.1.2.7;Ausschluss;MAC-Adressen-Pass-Through-Funktion, WOL, für die ausgeschriebenen Notebooks;1. Technische Anforderungen;1.2 Anschlüsse;;;;
+A.1.2.8;Ausschluss;Daisy-Chain Anschluß (Displayport oder USB-C);1. Technische Anforderungen;1.2 Anschlüsse;;;;
+A.1.3.1;Ausschluss;Neugeräte aus Serienproduktion;1. Technische Anforderungen;1.3 Allgemeine Anforderungen;;;;
+A.2.1.1;Ausschluss;Energiemanagement: Display Power Management System VESA DPMS oder vergleichbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.2;Ausschluss;Energiemanagement: Der Stand-By Zustand (Bereitschaftsmodus/Sleep-Mode) wird nach spätestens 30 Minuten Inaktivität automatisch hergestellt;2. Zusätzliche Leistungen;2.1 Management;;;;
+B.2.1.3;Bewertung;Service-Identifikationsnr. ist im OSD hinterlegt, und per WMI auslesbar;2. Zusätzliche Leistungen;2.1 Management;10,0;;;
+B.2.1.4;Bewertung;Firmwareupdate durch den Auftraggeber möglich;2. Zusätzliche Leistungen;2.1 Management;10,0;;;
+B.2.1.5;Bewertung;"Kostenfreie Management Software, Softwarefunktionalität:
+ • mind. lauffähig unter Win11
+ • Kompatibel zu allen ausgeschriebenen Monitoren
+ • Skriptunterstützung für den Rollout von Einstellungen.
+ • Grundeinstellungen: Helligkeit & Kontrast; Auto-Restore
+ • KVM-Verwaltung  
+ • Multi-Display-Unterstützung
+ • Möglichkeit zur Zonierung des Bildschirminhaltes / Feste Skalierung von Anwendungsfenstern ";2. Zusätzliche Leistungen;2.1 Management;20,0;;;
+A.3.1.1;Ausschluss;"Das Gerät erfüllt vollständig die  Anforderungen des aktuellen Energy Star Version 8.x für Computerbildschirme (EU-Richtlinie 2009/789/EG Anhang C Teil II).*
+Nachweise: Herstellererklärung und der Bieter verpflichtet sich spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht oder Dokument gemäß Testvorschrift des aktuellen Energy Star oder ein Dokument, das folgende Angaben enthält, vo";3. Qualität/ Sicherheit/ Umwelt;3.1 Energieverbrauch;;;;
+A.3.2.1;Ausschluss;"GS-Zeichen; CE; WEEE; EU-RoHS;
+Nachweis: Zertifikate beilegen";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.2;Ausschluss;"Erfüllung der aktuellen Anforderungen an das TCO 10-Label
+Nachweis: Herstellererklärung und der Bieter legt spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht vor. Alternativ: Nachweis über das TCO Displays bzw. TCO Certified Displays Label.";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.3;Ausschluss;"Erfüllung von Umweltkriterien analog zur EPEAT-Zertifizierung: Bitte geben Sie an, ob die Kriterien entsprechend der Norm ""EPEAT Gold"" erfüllt werden (alle mit ""R"" markierten und mindestens 75% der mit ""O"" markierten Kriterien). Fügen Sie als Nachweis bitte entweder eine Zertifizierung nach EPEAT Gold bei oder einen gleichwertigen Nachweis zur Erfüllung der genannten Kriterien. Da sich die EPEAT-K";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+B.3.2.4;Bewertung;"Low Blue Light Filter, TÜV zertifiziert 
+Nachweis: Der Bieter legt mit dem Angebot ein Zertifikat vor";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;30,0;;;
+B.3.2.5;Bewertung;"Flimmerfrei, TÜV zertifiziert 
+Nachweis: Der Bieter legt mit dem Angebot ein Zertifikat vor";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;30,0;;;
+A.1.1.1;Ausschluss;"27"" Flachbildschirm, sichtbare Bildschirmdiagonale ≥ 68 cm";1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.2;Ausschluss;Entspiegeltes/ mattes Display;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.3;Ausschluss;Paneltyp IPS (In-Plane Switching) oder VA (Vertical Alignment);1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.4;Ausschluss;Native Auflösung 3.840 x 2.160 bei ≥ 100 Hz;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+B.1.1.5;Bewertung;Bildwiederholfrequenz ≥ 120 Hz;1. Technische Anforderungen;1.1 Eigenschaften;20,0;;;
+A.1.1.6;Ausschluss;Seitenverhältnis 16:9;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.7;Ausschluss;Farbskala ≥ 99 % sRGB;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.8;Ausschluss;Farbtiefe ≥ 1.06 Millarden Farben (Mind. 10 Bit);1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.9;Ausschluss;"Das Display erfüllt die ergonomischen Eigenschaften nach der EN ISO 9241 und hält mindestens Pixelfehlerklasse 1 ein.
+Nachweis: Herstellererklärung und der Bieter legt spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht vor.";1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.10;Ausschluss;Reaktionszeit (Grau zu Grau) max. 5 ms;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.11;Ausschluss;Kontrast (Standard) min. 1000:1;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.12;Ausschluss;Helligkeit (Standard) min. 300 cd/m²;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+B.1.1.13;Bewertung;Helligkeit (Standard) ≥ 350 cd/m²;1. Technische Anforderungen;1.1 Eigenschaften;20,0;;;
+A.1.1.14;Ausschluss;Blickwinkel (horizontal x vertikal) von min. 178° x 178°;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.15;Ausschluss;Höhenverstellbar mind. 100 mm;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+B.1.1.16;Bewertung;Höhenverstellbar ≥ 150 mm;1. Technische Anforderungen;1.1 Eigenschaften;20,0;;;
+A.1.1.17;Ausschluss;Neigbar -5° ≥ 20°;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.18;Ausschluss;Drehbar vom Querformat ins Hochformat (Pivotfunktion);1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.19;Ausschluss;Vesa-Halterung nach Standard MIS-D (100 mm);1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.20;Ausschluss;Ein- und Ausschalter, durch dessen Betätigung das Gerät min. in den Schein-Aus-Zustand versetzt werden kann;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.21;Ausschluss;Netzteil in Monitorgehäuse integriert;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.22;Ausschluss;Gehäuse mit Vorrichtung zur Diebstahlsicherung (Kensington oder vergleichbar);1. Technische Anforderungen;1.1 Eigenschaften;;;;
+A.1.1.23;Ausschluss;Herstellereigene optionale Soundbar erhältlich, Alternativ Lautsprecher integriert;1. Technische Anforderungen;1.1 Eigenschaften;;;;
+B.1.1.24;Bewertung;"Optional Hersteller eigener Monitorfuß zur Befestigung des Micro PC ""D"" lieferbar -";1. Technische Anforderungen;1.1 Eigenschaften;20,0;;;
+A.1.2.1;Ausschluss;DisplayPort mind. 1.4 inkl. Anschlusskabel;1. Technische Anforderungen;1.2 Anschlüsse;;;;
+A.1.2.2;Ausschluss;HDMI mind. 2.0;1. Technische Anforderungen;1.2 Anschlüsse;;;;
+A.1.2.3;Ausschluss;Integrierter USB-Hub mit min. 4 Downstream-Anschlüssen USB-3.2;1. Technische Anforderungen;1.2 Anschlüsse;;;;
+A.1.2.4;Ausschluss;USB-C Anschluß m. DP-Alt-Mode mind. 1.4 / 5Gbit/s, mind.90 Watt PD inkl. Anschlusskabel;1. Technische Anforderungen;1.2 Anschlüsse;;;;
+B.1.2.5;Bewertung;USB-C Anschluß m. DP-Alt-Mode mind. 1.4 / 5Gbit/s, ≥100 Watt PD inkl. Anschlusskabel;1. Technische Anforderungen;1.2 Anschlüsse;20,0;;;
+A.1.2.6;Ausschluss;Ethernet-Anschluß, RJ-45, mind. 10/100/1000 Mbit/s;1. Technische Anforderungen;1.2 Anschlüsse;;;;
+B.1.2.7;Bewertung;Daisy-Chain Anschluß (Displayport oder USB-C);1. Technische Anforderungen;1.2 Anschlüsse;20,0;;;
+A.1.3.1;Ausschluss;Neugeräte aus Serienproduktion;1. Technische Anforderungen;1.3 Allgemeine Anforderungen;;;;
+A.1.3.2;Ausschluss;MAC-Adressen-Pass-Through-Funktion, WOL, für die ausgeschriebenen Notebooks;1. Technische Anforderungen;1.3 Allgemeine Anforderungen;;;;
+A.2.1.1;Ausschluss;Energiemanagement: Display Power Management System VESA DPMS oder vergleichbar;2. Zusätzliche Leistungen;2.1 Management;;;;
+A.2.1.2;Ausschluss;Energiemanagement: Der Stand-By Zustand (Bereitschaftsmodus/Sleep-Mode) wird nach spätestens 30 Minuten Inaktivität automatisch hergestellt;2. Zusätzliche Leistungen;2.1 Management;;;;
+B.2.1.3;Bewertung;Service-Identifikationsnr. ist im OSD hinterlegt, und per WMI auslesbar;2. Zusätzliche Leistungen;2.1 Management;10,0;;;
+B.2.1.4;Bewertung;Firmwareupdate durch den Auftraggeber möglich;2. Zusätzliche Leistungen;2.1 Management;10,0;;;
+B.2.1.5;Bewertung;"Kostenfreie Management Software, Softwarefunktionalität:
+ • mind. lauffähig unter Win11
+ • Kompatibel zu allen ausgeschriebenen Monitoren
+ • Skriptunterstützung für den Rollout von Einstellungen.
+ • Grundeinstellungen: Helligkeit & Kontrast; Auto-Restore
+ • KVM-Verwaltung  
+ • Multi-Display-Unterstützung
+ • Möglichkeit zur Zonierung des Bildschirminhaltes / Feste Skalierung von Anwendungsfenstern ";2. Zusätzliche Leistungen;2.1 Management;20,0;;;
+A.3.1.1;Ausschluss;"Das Gerät erfüllt vollständig die  Anforderungen des aktuellen Energy Star Version 8.x für Computerbildschirme (EU-Richtlinie 2009/789/EG Anhang C Teil II).*
+Nachweise: Herstellererklärung und der Bieter verpflichtet sich spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht oder Dokument gemäß Testvorschrift des aktuellen Energy Star oder ein Dokument, das folgende Angaben enthält, vo";3. Qualität/ Sicherheit/ Umwelt;3.1 Energieverbrauch;;;;
+A.3.2.1;Ausschluss;"GS-Zeichen; CE; WEEE; EU-RoHS;
+Nachweis: Zertifikate beilegen";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.2;Ausschluss;"Erfüllung der aktuellen Anforderungen an das TCO 9-Label
+Nachweis: Herstellererklärung und der Bieter legt spätestens auf Nachfrage vor Zuschlagserteilung einen Prüfbericht vor. Alternativ: Nachweis über das TCO Displays bzw. TCO Certified Displays Label.";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+A.3.2.3;Ausschluss;"Erfüllung von Umweltkriterien analog zur EPEAT-Zertifizierung: Bitte geben Sie an, ob die Kriterien entsprechend der Norm ""EPEAT Gold"" erfüllt werden (alle mit ""R"" markierten und mindestens 75% der mit ""O"" markierten Kriterien). Fügen Sie als Nachweis bitte entweder eine Zertifizierung nach EPEAT Gold bei oder einen gleichwertigen Nachweis zur Erfüllung der genannten Kriterien. Da sich die EPEAT-K";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;;;;
+B.3.2.4;Bewertung;"Low Blue Light Filter, TÜV zertifiziert 
+Nachweis: Der Bieter legt mit dem Angebot ein Zertifikat vor";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;30,0;;;
+B.3.2.5;Bewertung;"Flimmerfrei, TÜV zertifiziert 
+Nachweis: Der Bieter legt mit dem Angebot ein Zertifikat vor";3. Qualität/ Sicherheit/ Umwelt;3.2 Zertifizierungen;30,0;;;

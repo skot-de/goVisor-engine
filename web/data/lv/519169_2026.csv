@@ -1,0 +1,985 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Baustelleneinrichtung für die im nachfolgenden Leistungsverzeichnis enthaltenen Leistungen (gemäß VOB/ C ATV DIN 18299, 4.1) einschl. nachfolgend aufgeführter ergänzender Leistungen des AN liefern und einrichten.;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;Baustelleneinrichtung wie vor beschrieben vorhalten und unterhalten für die Dauer der Rohbauzeit.;45,0;Wo;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Baustelleneinrichtung abräumen. Alle vom AN vorgenommenen Einbauten, Kranfundamente oder sonstiger Einrichtungen für die Ausführung seiner Leistungen sind zu räumen und die Flächen sind wieder in den Urzustand zu versetzen. Dies gilt insbesondere für öffentliche Flächen, die vom AN in Benutzung geno;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;Baukran als Unterdreher mit Ausleger ca. 58 m,;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+50;Baukran vorhalten und betreiben für die Dauer der Rohbauarbeiten.;45,0;Wo;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+60;Baustraße bzw. BE-Fläche aus tragfähigem Untergrund für eigene Zwecke und für Zwecke anderer Unternehmer, befahrbar für LKW bis 40 to aus RS-Schotter 0/45 mm, herstellen. Einbaudicke ca. 50 cm.;400,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+70;Geotextilvlies GRK 2, 120 g/m2 liefern und auf der Fläche für die Baustrasse auslegen.;800,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+80;Bauzaun, Untergrund befestigt oder unbefestigt, als vorgefertiger Drahtgitterzaun mit umlaufenden Rohrtraversen, Standrohren und Fundamenten aufstellen, (keine offenen Drahtspitzen an der Oberkante!!!);215,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+90;Bauzaunelemente als Toranlage mit Scharnier und Rollen ausstatten und montieren, abschließbar mit Bügelschloss o.gwl. als Zahlenschloss. als Zulage zum Bauzaun. Ausführung für 2 Tore aus je 2 Elementen.;4,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+100;Verlängerung der Vorhaltung der Bauzaunelemente einschl. Tor über die genannte Grundvorhaltezeit hinaus;14620,0;mWo;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+110;Bauzaun wie in Position;70,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+120;Verlängerung der Vorhaltung der Bauzaunelemente über die genannte Grundvorhaltezeit hinaus;4760,0;mWo;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+130;Verplanung der Bauzaunelemente als Sichtschutz einschl. der erforderlichen Windaussteifung gegen umfallen.;100,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+140;Verlängerung der Vorhaltung der Sichtschutzelemente über die genannte Grundvorhaltezeit hinaus.;6800,0;mWo;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+150;Liefern, Aufstellen, Vorhalten und unterhalten der Baustellenstromversorgung. Der Anschluß wird durch den Hauselektriker im Haus hergestellt und zur Verfügung gestellt.;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+160;Verlängerung der Vorhaltezeit für den Baustromhauptverteiler.;52,0;StWo;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+170;Liefern, Aufstellen, Vorhalten und unterhalten der Baustromverteilerschränke für alle Nachfolge-/Ausbaugewerke. Es sind in jedem Geschoss jeweils ein Verteilerschrank mit mind. 10 Steckdosen 230 V und eine Steckdose für 400 V aufzustellen.;3,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+180;Verlängerung der Vorhaltezeit für den Baustromverteiler der Ausbaugewerke;156,0;StWo;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+190;Liefern, Einrichtung , Vorhalten und Abbauen des;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+200;Verlängerung der Vorhaltezeit des Bauwasserverteilers;52,0;StWo;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+210;Bürocontainer (Besprechnungscontainer) für Zwecke des AG aufstellen, anschließen, vorhalten und beseitigen, als Doppelcontainer, Größe ca. 6,00 x 6,00 m mit integriertem Windfang ca. 1,20 x 1,50 m und WC Raum;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+220;Vorhaltung Bürocontainer Pos.;90,0;Wo;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+230;Sanitärcontainer für Zwecke des AG aufstellen,;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+240;Vorhaltung Sanitärcontainer Pos.;90,0;Wo;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+250;Sanitärcontainer für Zwecke des AG aufstellen,;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+260;Vorhaltung Sanitärcontainer (Frau) aus Pos.;90,0;Wo;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+270;Zulage zu den Büro- und Sanitärcontainern in Ausführung als Doppelstockanlage einschl. der erforderlichen Treppe und Laufsteg sowie der zugehörigen Geländer.;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+280;Lieferung von Meterrissplaketten aus Kunststoff ,;10,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+290;Schnurgerüste aufstellen zur bauseitigen Einmessung aller Hauptachsen. Diese werden vom Vermesser eingemessen und auf den Schnurgerüsten abgesetzt. Es werden 8 Achsen in Querrichtung und 4 Achsen in Längsrichtung eingemessen.;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+300;Gerüst-Treppenturm als Abstieg in die Baugrube im Arbeitsraum aufstellen, vorhalten und nach Fertigstellung des KG wieder entfernen. Höhenüberbrückung ca. 4,00 m.;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+310;Provisorische Abdichtung der Ausstiegsöffnung in der Dachdecke,;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+320;Provisorische Abdichtung der Lichtkuppelöffnung;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+330;Provisorische Abdichtung von Öffnungen in der Dachdecke,;25,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+340;Rückbau des prov. Schutzes der Fassade.;460,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+350;Rückbau einer Stabgitter-Zaunanlage im Bereich der jetzigen Fahrradabstellfläche. Zaunhöhe ca. 240 cm. Zaunanlage sauber abbauen und nach Angabe auf dem Schulgelände zwischenlagern. Zaunpfosten ausgraben, Fundamente abstemmen, Fundamentlöcher mit geeignetem Material verfüllen und verdichten, Zaunpfo;70,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+360;Abfallcontainer für reinen Bauschutt,;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+370;Abfallcontainer Restmüll/Mischmüll,;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+380;Abfallcontainer Bauholz;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+390;Komplettes Bauschild bestehend aus:;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+400;Vor Beginn der Baumaßnahmen liefern eines Stammschutzes bis zu einer Höhe von 2 m und standsicher befestigen.;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Technische Bearbeitung zum Verbau,;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;Lage des Verbaus einschl. aller erforderlichen Sondierbohrungspunkte und Verbauträgerpunkte einmessen.;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Baustelle für die Durchführung der Verbauarbeiten einrichten, vorhalten und nach vollständiger Verbauerstellung wieder räumen einschl. aller damit verbundenen Leistungen.;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;Einrichten, vorhalten und abbauen der Baustelleneinrichtung für die Ausführung der vertikalen Sondierbohrungen und der Bohrlochdetektion. Einschl. An- und Abtransport der notwendigen Geräte.;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+50;Herstellen der notwendigen Sondierbohrungen im Bereich der Verbauträger zur Feststellung der Kampfmittelfreiheit einschl. Einbau von Kunststoffleerrohren. Die Bohrungen sind gemäß den technischen Verwaltungsvorschriften herzustellen und bis zum Abschluss der Kampfmittelsondierungen zu sichern.;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+60;Sondierung der vorgenannten vertikalen Bohrlöcher.;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+70;Stahlträger HEB 360 und HEB 550, Stahlgüte S 235. Stahlträger liefern und einbauen. Einzellängen 7,70 m bis 10,20 m.;90,0;t;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+80;Herstellen eines Bohrträgerverbaus mit Holzausfachung.;470,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+90;Stumpfwinkelige und Rechtwinkelige Eckausbildung des vorgenannten Verbaus als Innen- und Außenecke.;7,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+100;Rückbau der Holzausfachung oder der Stahlplatten Zug um Zug zum Zeitpunkt der Arbeitsraumverfüllung und Abtransport.;470,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+110;Ziehen der Verbauträger nach Verfüllung des Arbeitsraumes und Abtransport der Verbauträger. Der Verdrängungsraum der Träger ist durch einspülen mit Sand vollständig zu verfüllen.;470,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+120;Absturzsicherung an Oberkante des Verbaus herstellen,;155,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+130;Stillstands- und Wartestunden der Mannschaft einschl. der Geräte, soweit diese nicht durch den AN zu vertreten sind.;10,0;h;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+140;Stillstands- und Wartetag Großbohrgerät ohne;1,0;d;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Erstellung der wasserrechtlichen Anträge;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;Regelmäßige Ablesung der Wasseruhren zur Feststellung der;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Wassermengenmessvorrichtung in die jeweils in Betrieb befind- liche Sammelleitung einbauen, entsprechend dem Baufort- schritt umsetzen, für die Dauer der Grundwasserabsenkung vorhalten, warten und betreiben.;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;Anlage zur offenen Grundwasserhaltung nach Unterlagen des AG in der Baugrube liefern, montieren und wieder entfernen, inkl. aller erforderlicher Materialien und Geräte, ausreichend bemessen zur sicheren Trockenhaltung der Baugrubenfläche.;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+50;Anlage für offene Wasserhaltung vorhalten und betreiben. Sämtliche Vorhaltekosten außer Rohrleitung zur Übernahme des AG.;150,0;d;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+60;Anlage zur geschlossenen Wasserhaltung liefern, montieren und wieder entfernen, inkl. aller erforderlicher Materialien und Geräte, ausreichend bemessen zur sicheren Trockenhaltung der Baugrubenfläche. Anlage besteht aus Vakuumpumpen (in ausreichender Anzahl) mit Schalldämmung, Sammelleitung mit Ansc;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+70;An- u. Abtransporte der Bohrkolonne inkl. Bohrgerät (wahlweise auch Spülbohrgerät mit Meißel), Einrichtung, Umstellen und Abrüsten am Einsatzort. Vorbohren für Einbringen von kiesummantelten Vakuumfiltern auf einer Strecke von ca. 80 m entlang der geplanten Baugrube. Abstand der Vakuumbrunnen / Bohr;25,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+80;Anlage für geschlossene Wasserhaltung vorhalten u. betreiben, einschl. aller Filter sowie sämtliche erforderliche Anlagen zur Ableitung zur Anlage für Gesamtfördermenge von 5 m³/h.;150,0;d;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+90;Überwachung und Wartung der gesamten Grundwasserabsenkungsanlage, unabhängig von der Anzahl der betriebenen Geräte, ununterbrochen mit dem erforderlichen fachkundigen Personal, von Beginn der Betriebsbereitschaft bis Ende der Betriebsbereitschaft.;150,0;d;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Wurzelrodung der bauseits gefällten Bäume;5,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;Bodenaushub im Homogenbereich A1 + A2 (Auffüllungen Sand + Schluff), partiell mit Glasasche, Schotter, Bauschutt und Asphaltbruch durchsetzt, ausheben und im Baustellenbereich separieren.;1210,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Aushub im Homogenbereich A3 Mergel,;2300,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;Zulage zu den Bodenaushubpositionen;460,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+50;Transport, Kippgebühr und Entsorgung des Bodenaushubs der;6700,0;to;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+60;Zulage zur Vorposition BM 0, Transport, Kippgebühr und Entsorgung des Bodenaushubs gemäß Ersatzbaustoffverordnung BM F1.;1000,0;to;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+70;Zulage zur Position Aushub BM 0, Zuordnung gemäß Ersatzbaustoffverordnung BM F2, sonst wie in vorstehender Position beschrieben.;900,0;to;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+80;Zulage zur Position Aushub BM 0, Zuordnung gemäß Ersatzbaustoffverordnung BM F3, sonst wie in vorstehender Position beschrieben.;100,0;to;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+90;Boden der Klasse 3 bis 5 zur Herstellung von Suchgräben, Querschlägen, Freilegung von Leitungen etc. von Hand ausheben. Als Zulage zu den Aushubpositionen.;20,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+100;Verdichtungsfähigen Boden nichtbindig, steinfreier Füllsand, liefern und für Bodenauffüllungen unter den nicht unterkellerten Bereichen gemäß ZTV-A STB 89 lagenweise einbauen und auf 100 % der einfachen Proktordichte verdichten.;340,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+110;Verdichtungsfähigen Boden, nichtbindig, steinfreier Füllsand, liefern und für Arbeitsraumverfüllungen gemäß ZTV-A STB 89 lagenweise (<30 cm) einbauen und auf 100 % der einfachen Proktordichte verdichten.;600,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+120;Hartkalksteinschotter mit Güteschutzzeugnis,;410,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+130;Plattendruckversuche zur Verdichtungsprüfung der Trag- / Fliterschicht unter der Bodenplatte.;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+140;Sandbett aus feinkörnigem Sand, Körnung 0-5 mm,;615,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+150;Bodenaushub für Unterfangungen zum Altbau;30,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+160;"Schalung der Unterfangungsabschnitte, rauh, aus nicht saugenden Schalungsplatten einschl. oberen ""Einfülltrichter"",";55,0;m²;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+170;Teilabbruch Fundament am Bestandsgebäude BT E;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+180;Bodenaushub für Leitungsgräben;110,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+190;Bodenaushub für Leitungsgräben im Gebäudebereich unterhalb der Sohle im bereits angelegten Flächenfilter,;50,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+200;Verdichtungsfähigen Boden,;50,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+210;Besenwagen zur Sauberhaltung der öffentlichen Verkehrswege auf einer Länge von jeweils ca. 200 m auf Anordnung der Bauleitung einschl. Bedienung/Fahrer und fachgerechter Entsorgung der aufgenommenen Verschmutzungen.;20,0;d;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Durch das beauftragte Ingenieurbüro wurde ein vorläufiges Betonbaukonzept nach DIN 1045 erarbeitet und in der Planungsphase fortgeschrieben. Dieses Betonbaukonzept ist während der Bauausführung durch den Rohbauunternehmer fortzuschreiben einschl. der damit verbundenen Abstimmungen mit den Planungsbe;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;eigenverantwortliche Überprüfung und Werkplanung der Gesamtheit der WU-Abdichtung bis Unterkante Decke über UG.;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Unterfangung Bauteil E, Abschnittsweise im Pilgerschrittverfahren, Gesamtbreite ca. 8,0 m,;12,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;1-lagige PE-Folienabdeckung auf Filterschicht;746,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+50;2-lagige PE-Folienabdeckung auf Sauberkeitsschicht;746,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+60;Sauberkeitsschicht aus unbewehrtem Beton unter;746,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+70;Randschalung der Sauberkeitsschicht;330,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+80;Ortbeton zur Herstellung der Negativbaukörper im Bereich der Tieferführungen an Aufzugsunterfahrten;15,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+90;"Abschalung der Sauberkeitsschicht im Bereich der Tieferführungen der Aufzugsunterfahrten etc. als einhäuptige Schalung zur Herstellung eines ""Negativbaukörpers"",";16,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+100;Bodenplatte für die Aufzugsschächte, D 35 cm;3,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+110;Randschalung der Bodenplatte, einhäuptig, rauh, aus nicht saugenden Schalungsplatten, Schalungshöhe 35 cm;4,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+120;Aussenwände in Ortbetonbauweise, Aufzugsunterfahrt;4,5;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+130;Schalung der Aussenwände Aufzugsunterfahrt;12,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+140;Magerbetonauffüllung unter Fundamenten, abgetreppt, 30°, in Stufenform, Beton C 12/15;95,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+150;Schalung der Magerbetonauffüllungen,;235,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+160;Bodenplatte aus Stahlbeton gemäß ZTV auf Trennlage,;95,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+170;Bodenplatte aus Stahlbeton gemäß ZTV auf Trennlage,;101,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+180;Randschalung der Bodenplatte, einhäuptig, rauh, aus nicht saugenden Schalungsplatten, Schalungshöhe 35 und 45 cm;80,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+190;Flügelglätten der Betonoberfläche der gesamten Bodenplatte in min. 2 Betonierabschnitten;410,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+200;Aufbeton auf der Bodenplatte für eine Rampe im Übergang zum Bauteil E,;9,5;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+210;Klemmfugenband aus PVC-P Werkstoffen mit bauaufsichtlicher Zulassung, außenliegend, zum Anschluss an den Bestand;10,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+220;Fugenbandecken von der horizontalen in die vertikale als;10,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+230;Abdichtung von Arbeitsfugen bei den tieferliegenden;218,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+240;Weichpolster aus vorgepressten Steinwolleplatten (Trennfugenplatten) seitlich an Tieferführungen z.B.Fundamenten, Sohlversprünge und Aufzugsunterfahrten;14,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+250;Weichpolster aus vorgepressten Steinwolleplatten (Trennfugenplatten) seitlich an Tieferführungen z.B.Fundamenten, Sohlversprünge und Aufzugsunterfahrten;30,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+260;Ausführung der Stahlbeton-Außenwände mit Mehrschicht-Halbfertigteilwänden und Ortbetonverguss im Kernbereich,;200,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+270;Wandhöhe 378 cm.;125,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+280;Aussenwände in Ortbetonbauweise;12,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+290;Schalung der Aussenwände, einhäuptig,;95,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+300;Ausführung der Stahlbeton-Innenwände mit Mehrschicht-Halbfertigteilwänden und Ortbetonverguss im Kernbereich,;125,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+310;Innenwände in Ortbetonbauweise;9,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+320;Schalung der Innenwände;70,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+330;Leibungsschalung für Türöffnungen,;5,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+340;Zulage zu der vorgenannten Wandschalung für Sichtbetonschalung, SHK 2, Oberfläche glatt z.B. Betoplan o.dlw, in gleichmäßiger Fugenteilung und Anordnung der Spannanker in Abstimmung  mit dem Architekten einschl. zusätzlicher Maßnahmen beim betonieren. Die Sichtbetonschalung wird in der Hauptsache im;65,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+350;Die Sichtbetonflächen sind für die gesamte Bauzeit zu schützen.;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+360;Muster-Wandfläche am Aufzugsschacht in Sichtbetonausführung wie in der Vorposition beschrieben herstellen. Flächengröße ca. 20 m2.;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+370;Stützen aus Stahlbeton, Aussenwand Fensterbereich,;0,3;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+380;Schalung der Stützen;4,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+390;Ortbeton der Einzelfundamente (nicht unterkellerter Bereich);3,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+400;Schalung der Einzelfundamente;10,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+410;Ortbeton der Fundamente (nicht unterkellerter Bereich);25,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+420;Schalung der Fundamente;65,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+430;Bodenplatte aus Stahlbeton gemäß ZTV auf Trennlage,;64,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+440;Randschalung der Bodenplatte, einhäuptig, rauh, aus nicht saugenden Schalungsplatten, Schalungshöhe 30 cm;13,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+450;Elementdeckenplatte mit Aufbeton, als Fertigteil DIN EN 13369 und DIN EN 13747,;202,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+460;Deckendicke gesamt 28 cm.;200,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+470;Schrägschnitte der Filigranplatten an schräg verlaufenden Wandauflagern als Zulage;21,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+480;Decken aus Stahlbeton, Treppenpodest,;1,4;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+490;Schalung für Massivplattendecken, Treppenpodest,;6,5;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+500;Deckenrandschalung,;5,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+510;Abdichtung von Schwindfugen/Sollrissfugen mit Schwindrohre SR Thermoplast mit Dichtflansche oder gleichwertig im Bereich der WU- Außenwände. Die Schwindrohre sind in Abständen von ca. 5,00 m zur Erzeugung einer Querschnittsschwächung mittig in die Vergusszone der Halbfertigteilwände einzubauen.;150,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Aussenwände in Ortbetonbauweise;75,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;Schalung der Aussenwände;605,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Innenwände in Ortbetonbauweise;58,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;Schalung der Innenwände;475,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+50;Zulage zur Schalung für die Herstellung nichtrechtwinklige Ecken als stumpfe oder spitzwinkele Eckeausführungen.;100,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+60;Zulage zu der vorgenannten Wandschalung für Sichtbetonschalung, SHK 2, Oberfläche glatt z.B. Betoplan o. glw, in gleichmäßiger Fugenteilung und Anordnung der Spannanker in Abstimmung  mit dem Architekten einschl. zusätzlicher Maßnahmen beim betonieren. Die Sichtbetonschalung wird in der Hauptsache i;500,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+70;Die Sichtbetonflächen sind für die gesamte Bauzeit zu schützen.;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+80;Leibungsschalung für Tür- und Fensteröffnungen,;180,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+90;Stützen aus Stahlbeton, Aussenwand Fensterbereich,;22,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+100;Schalung der Stützen;270,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+110;Stützen aus Stahlbeton, Innenwand, Zugangsportal zu den Klassenzimmern, Ausführung in Sichtbeton SB 2,;24,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+120;Schalung der Stützen;165,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+130;Musterstütze in Sonderform (kleine Stütze) wie in der Vorposition dargestellt herstellen. Stützenhöhe min. 1,00 m.;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+140;Ortbeton der Balken/Sturz, zwischen den beiden Stützen der Vorposition,;4,9;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+150;Schalung der Balken/Sturz;30,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+160;Ortbeton der Unterzüge;19,5;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+170;Schalung der Unterzüge;210,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+180;Ortbeton der Überzüge/Brüstungen;30,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+190;Schalung der Überzüge/Brüstungen;250,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+200;Decken aus Stahlbeton,;9,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+210;Schalung für Massivplattendecken,;44,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+220;Decken aus Stahlbeton, Treppenpodeste;3,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+230;Schalung für Treppenpodestdecken,;15,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+240;Elementdeckenplatte mit Aufbeton, als Fertigteil DIN EN 13369 und DIN EN 13747,;980,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+250;Deckendicke gesamt 28 cm, Stützweite 7,25 m.;570,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+260;Deckendicke gesamt 25 cm, Stützweite 7,25 m.;285,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+270;Schrägschnitte der Filigranplatten an schräg verlaufenden Wandauflagern als Zulage;105,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+280;Deckenrandschalung,;77,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+290;Schalung für unterseitigem Deckenversatz;150,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+300;Ringbalken auf Mauerwerkswänden,;115,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+310;Ortbeton der Überzüge/Attika;29,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+320;Schalung der Überzüge;315,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+330;Trennwandplatten, d = 30 mm, jeweils im Anschluss an die bestehenden Bauteile C und E im Bereich der Betondecken, in Streifen geschnitten, mit Kleber an den Wandflächen fixieren.;55,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+340;Deckenöffnungen herstellen einschl. Schalung,;125,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+350;Deckenöffnungen herstellen einschl. Schalung,;12,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+360;Deckenöffnungen herstellen einschl. Schalung,;6,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+370;Deckenöffnungen herstellen einschl. Schalung,;16,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+380;Deckenrandschalung für eine Dachöffnung herstellen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+390;Deckenrandschalung für eine Dachöffnung herstellen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+400;Deckenrandschalung für eine Dachöffnung herstellen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+410;Deckenöffnungen nach Installation schließen einschl. Schalung,;125,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+420;Deckenöffnungen nach Installation schließen einschl. Schalung,;12,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+430;Deckenöffnungen nach Installation schließen einschl. Schalung,;6,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+440;Deckenöffnungen nach Installation schließen einschl. Schalung,;16,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+450;Wanddurchbrüche herstellen im Zuge;35,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+460;Wanddurchbrüche herstellen im Zuge;8,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+470;Wanddurchbrüche herstellen im Zuge;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+480;Wanddurchbrüche herstellen im Zuge;4,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+490;Wanddurchbrüche herstellen im Zuge;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+500;Wanddurchbrüche  nach Fertigstellung;35,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+510;Wanddurchbrüche nach Fertigstellung;8,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+520;Wanddurchbrüche nach Fertigstellung;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+530;Wanddurchbrüche nach Fertigstellung;4,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+540;Wanddurchbrüche nach Fertigstellung;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+550;Treppen als Fertigteil ,;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+560;Treppen als Fertigteil ,;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+570;Treppen als Fertigteil ,;4,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Betonstabstahl B 500 B DIN 488;115,0;t;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;Betonstahllagermatten B 500 A DIN 488;4,0;t;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Betonstabstahl für Schubbügel, dreidimensional gebogen,;2600,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;Abstandhalter für die Deckenbewehrung;0,5;t;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+50;Betonstahl als Lagermatten und Stabstahl BSt 500 S und M zum Einbau im Fertigteilwerk,;80,0;to;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+60;Tronsole als tragendes Trittschalldämmelement zwischen Treppenlauf und Bodenplatte, aus hoch widerstandsfähiger PE-Schaum, selbstklebend, zur sicheren schallbrückenfreien Ausführung der Fuge.;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+70;Trittschalldämmplatte, EPS. 10 mm dick, für den restlichen Bereich der unteren Aufstandsfläche des Treppenfußes.;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+80;Tronsole Typ F-V2 als tragendes Trittschalldämmelement zwischen Podest/Decke und Lauf mit Z-förmigem Fugenprofil, mit bauaufsichtlicher Zulassung (Z 15.7-310),;11,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+90;Tronsole Typ L-420 für die schallbrückenfreie Fugenausbildung zwischen Treppenlauf und Wand, aus hoch widerstandsfähiger PE-Schaum, selbstklebend, zur sicheren schallbrückenfreien Ausführung der Fuge.;29,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+100;Doppel-Dreikant oder Trapezleiste in die Wandschalung einbauen als Betonierabschnittsfuge in der Höhenunterteilung der Wandflächen im Treppenhaus.;50,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+110;Perimeterdämmung unter der Sohle/Gründungsplatte,;615,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+120;Perimeterdämmung an Außenwände, erdberührt,;440,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+130;Perimeterdämmung an Fundamentseitenflächen;120,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+140;Noppenbahn mit Vliesauflage als Drain- und Schutzbahn vor der Perimeterdämmung der Außenwände,;560,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+150;Streifengleitlager auf Mauerwerkswand,;115,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+160;Durchstanzbewehrung im Bereich der Geschossdecken;18,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+170;Durchstanzbewehrung im Bereich der Geschossdecken;54,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+180;Durchstanzbewehrung im Bereich der Geschossdecken;60,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+190;Zulage Schraubanschlüsse Betonstabstahl für die Gewindemuffe mit Nagelflansch als Zulage zur Betonstabstahlbewehrung, Muffenstab gebogen, nach Herstellervorgaben einbauen,;100,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+200;Zulage Schraubanschlüsse Betonstabstahl für das erforderliche aufschneiden von Gewinden als Zulage zur Betonstabstahlbewehrung.;100,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+210;Rückbiegeanschluss mit zweilagiger Rückbiegebewehrung in einem verzinkten Stahlblechverwahrkasten zur Herstellung von Bewehrungsanschlüssen,;135,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+220;Rückbiegeanschluss mit zweilagiger Rückbiegebewehrung in einem verzinkten Stahlblechverwahrkasten zur Herstellung von Bewehrungsanschlüssen,;20,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+230;Rückbiegeanschluss mit zweilagiger Rückbiegebewehrung in einem verzinkten Stahlblechverwahrkasten zur Herstellung von Bewehrungsanschlüssen,;3,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+240;Rückbiegeanschluss mit zweilagiger Rückbiegebewehrung in einem verzinkten Stahlblechverwahrkasten zur Herstellung von Bewehrungsanschlüssen,;12,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+250;Einklebeanker/Bewehrungsanschluss zum Anschluss von neuen Betonbauteilen an den Bestand, herstellen von Bohrungen, Bohrloch säubern, Injektionsmörtel einbringen und Bewehrungsstab kraftschlüssig eindrehen, die Herstellervorgaben sind zu beachten,;370,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+260;Einbauteil im Kopf der Zugstützen best. aus:;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+270;Futterrohr, fertig gedämmt, zur Einbringung von Luftleitungen im Erdreich.;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+280;Futterrohr, fertig gedämmt, zur Einbringung von Luftleitungen im Erdreich.;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+290;Futterrohre aus Faserzement zum Einbau in Halbfertigteilwände, Wanddicke 300 mm,;3,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+300;Futterrohre aus Faserzement zum Einbau in Halbfertigteilwände, Wanddicke 300 mm,;3,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+310;Maueranschlussschiene HMS 25/15-D oder gleichwertig zum Einbetonieren, zur Befestigung von Mauerwerk mit Maueranschlussankern Typ ML, Sendzimirverzinkt (SV) mit Vollschaumfüllung (Vf), Einzellänge 2500mm, Belastung Z/Q = 1,2/1,5kN/Befestigungspunkt, liefern und gemäß Einbau- und Verwendungsanleitung;200,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+320;Ankerschienen, Edelstahl mit Vollschaumfüllung;10,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+330;Ankerschienen, Edelstahl mit Vollschaumfüllung;136,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+340;Stahlankerplatten aus Baustahl;20,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+350;Stahlankerplatten aus Edelstahl V4A, S275;10,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+360;Halfenschienen mit Schaumfüllung,;24,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+370;Halfenschienen mit Schaumfüllung,;10,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+380;Halfenschienen mit Schaumfüllung,;10,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+390;Gerüsthülsen, von der Aufzugsfirma beigestellt,;18,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+400;Wellenanker mit Innengewindehülse und Seilschlaufe, von der Aufzugsfirma beigestellt, auf die Deckenschalung nach Zeichnungsvorgabe fachgerecht einbauen und nach dem ausschalen die Seilschlaufen einschrauben.;5,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Mauerwerk der Innen- und Aussenwände, tragend,;940,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;Mauerwerk der Innenwände, nichttragend,;155,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Mauerwerk der Innenwände, nichttragend,;4,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;Zulage zu den Mauerwerkswänden für das Herstellen nichtrechtwinklige Wandecken durch Sägen der Steine.;38,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+50;Ausgleichsschicht/Iso-Kimmschicht am Wandfuß im EG aus Mauersteinen, aus Kalksandsteinen DIN EN 771-2 in Verbindung mit DIN 20000-402 oder DIN 106,;93,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+60;Ausgleichsschicht/Iso-Kimmschicht am Wandfuß im EG aus Mauersteinen, aus Kalksandsteinen DIN EN 771-2 in Verbindung mit DIN 20000-402 oder DIN 106,;20,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+70;Ausgleichsschicht/Kimmschicht am Wandfuß aus Mauersteinen, aus Kalksandsteinen DIN EN 771-2 in Verbindung mit DIN V 20000-402 oder DIN V 106, Höhe der Ausgleichsschicht über 7,5 bis 10 cm, Mauerwerksdicke 24 cm.;180,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+80;Ausgleichsschicht/Kimmschicht am Wandfuß aus Mauersteinen, aus Kalksandsteinen DIN EN 771-2 in Verbindung mit DIN V 20000-402 oder DIN V 106, Höhe der Ausgleichsschicht über 7,5 bis 10 cm,;24,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+90;Deckenanschluss Mauerwerk, nicht tragend, Fuge ≤ 20 mm, Nach dem Ausschalen der Betondecke ist die Fuge von ≤ 20 mm mit einem NM II oder einem Leichtmörtel vollständig auszustopfen.;48,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+100;Wanddurchbrüche herstellen im Zuge;46,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+110;Wanddurchbrüche herstellen im Zuge;23,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+120;Wanddurchbrüche herstellen im Zuge;14,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+130;Wanddurchbrüche herstellen im Zuge;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+140;Wanddurchbrüche herstellen im Zuge;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+150;Wanddurchbrüche herstellen im Zuge;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+160;Wanddurchbrüche  nach Fertigstellung;46,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+170;Wanddurchbrüche nach Fertigstellung;23,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+180;Wanddurchbrüche nach Fertigstellung;14,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+190;Wanddurchbrüche nach Fertigstellung;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+200;Wanddurchbrüche nach Fertigstellung;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+210;Wanddurchbrüche nach Fertigstellung;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+220;Dämmung zwischen Neubau (Ortbeton) und Bestand in durchgehender Gebäudetrennfuge nach DIN 4109-1 mit Schallschutzanforderungen.;170,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+230;Die Gebäudetrennfuge ist oberseitig prov. abzudichten, sodass kein Wasser in die Trennfuge eindringt.;18,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+240;Mauerwerk mit Stumpfstoß an vorh. Wand aus Beton anschließen, Mauerwerksdicke über 17,5 bis 24 cm,;200,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+250;Mauerwerk mit Stumpfstoß an vorh. Wand aus Beton anschließen mit anzudübelnden Ankernlaschen, Mauerwerksdicke 24 cm,;11,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+260;Waagerechte Abdichtung gegen aufsteigende Feuchtigkeit in den Wänden gemäß DIN 18533, Wanddicke bis 24 cm,;48,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+270;Öffnungen anlegen mit Überdeckung mit Betonfertigteilsturz,;19,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+280;Öffnungen anlegen mit Überdeckung mit Betonfertigteilsturz,;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+290;Öffnungen anlegen mit Überdeckung mit Betonfertigteilsturz,;3,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+300;Öffnungen anlegen ohne Überdeckung,;80,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+310;Mörtelhohlkehle am Fundamentübergang;30,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+320;Ausgleichsschicht/Iso-Kimmschicht am Wandfuß des Klinkermauerwerks aus frostbeständigen und wärmedämmenden Kimmsteinen.;30,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+330;Verblendsteine liefern,;1120,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+340;Verblendmauerwerk aus den vorstehend beschriebenen Verblendsteinen herstellen, im wilden Verband vermauert, in allen Höhen der Fassade als Flächen, Brüstungsbänder und Pfeiler, im wesentlichen vor KS Wänden und vor Betonwänden mit ca. 22,5 cm Abstand zur tragenden Wand einschl. der erforderlichen Lu;1120,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+350;Öffnungen anlegen ohne Überdeckung,;68,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+360;Öffnungen anlegen ohne Überdeckung,;25,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+370;Öffnungen anlegen ohne Überdeckung,;78,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+380;Verblendmauerwerk verfugen,;1120,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+390;Abdichtung in die Verblendschicht, Wanddicke 11,5 cm, einlegen, bis zur Hintermauerwand führen und dort ca. 10 cm hochführen.;320,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+400;Wärmedämmung der Fassadenflächen;1000,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+410;Zulage zur vorgen. Fassadendämmung, im Leibungsbereich mit extrudierten Polystyrol Dämmstreifen, XPS einschl. Lagesicherung durch verkleben. Querschnitt ca. 80 x 200 mm.;560,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+420;Fassadendämmung wie vor beschrieben, jedoch im Sockelbereich mit extrudierten Polystyrol Dämmplatten, XPS,;120,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+430;Dehnungsfugen im Verblendmauerwerk;290,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+440;Dehnungsfugen dauerelastisch verfugen mit Material auf PU Basis. Die frische Fuge ist zu besanden und dem Farbton der;290,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+450;Die Fallrohre liegen in der Ebene des Verblendmauerwerks.;116,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+460;Musterflächen der Verblendung einschl. Verfugung anlegen;3,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+470;Werk- und Montageplanung für den gesamten Umfang der Klinkerabfangungen, Betonfertigteile und deren Abfangung bzw. Befestigung.;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+480;"Einzelkonsolanker zur Abfangung von Verblendmauerwerk aus nichtrostendem Edelstahl der Korrosionswiderstandsklasse III gemäß Z-30.3-6 bzw. nach EN 1993-1-4: 2015, Tabelle A.3;";96,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+490;"Auflagerwinkel als Zwischenwinkel über Tür- bzw. Fensteröffnungen bzw. im Sockelbereich zur Abfangung von Verblendmauerwerk aus nichtrostendem Edelstahl der Korrosionswiderstandsklasse III gemäß Z-30.3-6 bzw. nach EN 1993-1-4: 2015, Tabelle A.3;";43,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+500;"Auflagerwinkel als Zwischenwinkel über Tür- bzw. Fensteröffnungen bzw. im Sockelbereich zur Abfangung von Verblendmauerwerk aus nichtrostendem Edelstahl der Korrosionswiderstandsklasse III gemäß Z-30.3-6 bzw. nach EN 1993-1-4: 2015, Tabelle A.3;";40,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+510;Stahlbeton-Fertigteil als Fenstersturz bzw. zur Auflagerung des Verblendmauerwerks;360,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+520;"Einzelkonsolanker zur Abfangung von Betonfertigteilen aus nichtrostendem Edelstahl der Korrosionswiderstandsklasse III gemäß Z-30.3-6 bzw. nach EN 1993-1-4: 2015, Tabelle A.3;";360,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+530;Ankerschienen aus Edelstahl als Kurzstücke eingebaut im Fertigteil zur Befestigung der Einzelkonsole mit dem Betonfertigteil.;360,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+540;Gerüstanker zum dauerhaften Verbleib in der Verblendschale aus Edelstahl als Gewindehülse oder Flachankerhülse mit Aussteifungsstreben und Grundplatte zur Verankerung an der tragenden Wandschale als Mauerwerk oder Beton einschl. thermischer Trennplatte und Verschlussstopfen,;90,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+550;Klinkerriemchen liefern,;510,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+560;Vorstehend beschriebenen Riemchen im Blockverband vollflächig gem. Herstellervorgaben und Zulassung verkleben.;510,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+570;Verblendmauerwerk verfugen,;510,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+580;Öffnungen anlegen (ohne Eckriemchen),;75,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+590;Ausführung von Außenecken mit ganzen und 3/4 Eckriemchen als Formsteine.;60,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+600;Ausführung von Stürzen / Fensterbänke mit Eckriemchen als Formsteine.;42,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+610;Die Riemchen sind vor Ausführung des Bodenbelags auszuführen.;165,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+620;Schutz der Riemchen mit Folie. Die Folie ist so zu befestigen, dass diese ca. 16 Wochen verbleibt.;510,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Mörtelhohlkehle am Übergang Wand / Bodenplatte mit Mörtel MG III herstellen, Rundungsradius ca. 4-5 cm.;125,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;Stossfugen an den Halb-Fertigteilwänden auf der Aussenseite mit Mörtel verfüllen und glätten einschl. evtl. erforderlicher Haftbrücken, als Grundlage für die nachfolgend beschriebene Abdichtung.;130,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Wandabdichtung, aussen, Treppenhaus KG;60,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;Wandabdichtung, aussen, in Streifenform an den Stossfugen der Halbfertigteilwände und im Übergang Boden / Wand;235,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+50;Sockelabdichtung, aussen, hinter der Verblendung mit rissüberbrückender, mineralischer Dichtungsschlämmen MDS gemäß DIN 18533,;100,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+60;im Bereich der bodentiefen Fenster.;15,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Arbeits- und Schutzgerüste mit voll eingedielten;1700,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;Gerüstvorhaltung der vorst. Positionen, gemäß VOB,;68000,0;m2Wo;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Konsolauskragung 60 cm mit Bohlenabdeckung,;800,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;Konsolvorhaltung der vorst. Positionen, gemäß VOB, Abrechnung nach Länge der Konsolausleger je vorgehaltene Woche.;16000,0;mWo;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+50;Konsolauskragung 30 cm mit Bohlenabdeckung,;800,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+60;Konsolvorhaltung der vorst. Positionen, gemäß VOB, Abrechnung nach Länge der Konsolausleger je vorgehaltene Woche.;16000,0;mWo;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+70;innenliegender Seitenschutz an den Konsolauskragungen einschl. der dafür erforderlichen Einsteckpfosten,;600,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+80;Treppenturm mit Systemtreppen aus Aluminium,;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+90;Transportplattform in verschiedenen Höhen am Gerüst mittels Konsolauslager anbringen, Plattformgröße ca. 300 x 100 cm,;4,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+100;Bauaufzug für Personen und Material,;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+110;Bauaufzug vorhalten und betreuen, gemäß VOB, Abrechnung nach Stück je vorgehaltene Woche.;20,0;StWo;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+120;Innenliegenden Seitenschutz vorhalten gemäß VOB, Abrechnung nach m je vorgehaltene Woche.;24000,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+130;Treppenturm vorhalten, gemäß VOB, Abrechnung nach Stück je vorgehaltene Woche.;80,0;StWo;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+140;Transportplattform vorhalten, gemäß VOB, Abrechnung nach Stück je vorgehaltene Woche.;80,0;StWo;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+150;Gitterträger zur Überbrückung offener Bereiche;6,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+160;Gitterträger der vorst. Position vorhalten gemäß VOB, Abrechnung nach Stück je vorgehaltene Woche.;240,0;StWo;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+170;Arbeitsgerüst umankern im Zuge der Verblendarbeiten,;1750,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+180;Gerüstbühnen  im Aufzugsschacht nach Angabe;4,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+190;Absturzsicherung vor den Öffnungen zum Aufzugsschacht;4,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Stundenlohnarbeiten durch Bauvorarbeiter/-in;20,0;h;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;Facharbeiter/ Geselle;40,0;h;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Helfer/Azubi (3.Lehrjahr);20,0;h;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;Einsatz eines Baggers, 0,70 m³;5,0;h;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+50;Einsatz eines Radladers, 100 PS;5,0;h;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+60;Verrechnungssatz für Hochbaukran;10,0;h;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+70;Verrechnungssatz für Flex / Winkelschleifer-Einsatz;10,0;h;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+80;Verrechnungssatz für Bohr-/Stemmhammer-Einsatz;10,0;h;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+90;Wassersauger zum absaugen von Tagwasser im Gebäude auf Anweisung einschl. Bedienung;10,0;h;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Glasrahmentrennwand einschl. Türen ausbauen.;13,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;Vorhandene WC-Trennwände  ausbauen und fachgerecht entsorgen.;19,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Vorhandene Wandfliesen ausbauen und fachgerecht entsorgen.;50,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;Vorhandene Bodenfliesen ausbauen und fachgerecht entsorgen.;28,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+50;Vorhandenen Bodenbelag aus Linoleum ausbauen und fachgerecht entsorgen.;225,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+60;Staubschutzwand als nichttragende innere Trennwand;58,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+70;Mauerwerk abbrechen, Wanddicke 24 cm zzgl. Putz,;36,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+80;Mauerwerk abbrechen, Wanddicke 11,5 cm zzgl. Putz,;42,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+90;Werksteinbelag in Streifen aufschneiden und herausnehmen einschl. der Trittschalldämmung.;3,5;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+100;Mauerwerk der Innenwände, nichttragend,;18,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+110;Ausgleichsschicht/Kimmschicht am Wandfuß aus Mauersteinen, aus Kalksandsteinen DIN EN 771-2 in Verbindung mit DIN 20000-402, Höhe der Ausgleichsschicht über 7,5 bis 10 cm, Mauerwerksdicke 24 cm.;6,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+120;Vorhandene Abhangdecke als Trockenbau-Rasterdecke einschl. Unterkonstruktion ausbauen und fachgerecht entsorgen.;273,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+130;Herstellen der Türöffnung in der Stahlbetonwand.;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+140;Abbruch der Mauerwerkswand, aus Mauerziegel und Wandbelag. Das Abbruchmaterial ist fachgerecht zu entsorgen, einschl. Transport- und Entsorgungskosten.;38,0;m2;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+150;Bauzeitliche Abstützung der Decken für den Stahlträgereinbau, bestehend aus Stahlträgern, Stützen und Schwellhölzern. Die Stahlträger werden vom KG bis ins 2. OG eingebaut. Die Decken sind durchgehend bis in den Keller auf Oberkante Sohle bauzeitlich abzufangen.;13,5;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+160;Auflager für Abfangträger herstellen,;8,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+170;Stahlträger für Abfangungen von Deckenbauteilen, nach Zeichnung und Angabe werkstattmäßig vorbereiten, mit Korrosionsschutz (2 x Grundanstrich) versehen und örtlich verbauen, einschl. 3 cm Quellmörtel oberseitig des Stahlträgers, einschl. Unterstützung bis zur Aushärtung der Ausmörtelung der Auflage;12,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+180;Profilstahl liefern, verschiedene Profilabmessungen, Stahlgüte S235.;450,0;kg;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+190;Stahlträger zur brandschutztechnischen Ertüchtigung mit Gipsmörtel nach DIN EN 13279-1 mit DIN 18550-2 bzw. DIN EN 13914-2 verputzen.;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+200;Stahlträger zur brandschutztechnischen Ertüchtigung mit Gipsmörtel nach DIN EN 13279-1 mit DIN 18550-2 bzw. DIN EN 13914-2 verputzen.;3,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Bodenaushub im Homogenbereich A1 + A2 (Auffüllungen MuBo, Sand + Schluff), partiell mit Glasasche, Schotter, Bauschutt und Asphaltbruch durchsetzt, ausheben und im Baustellenbereich separieren.;60,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;Hartkalksteinschotter mit Güteschutzzeugnis,;8,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Wandöffnung herstellen in der Aussenwand am Kriechkeller,;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;Stahlblechklappe, doppelwandig mit Dämmkern, als Zugang zum Kriechkeller einschl. Stahleckzarge liefern und in die vorgenannte Öffnung aussenbündig, nach aussen aufschlagend, einbauen.;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Aushub der Asphaltschicht als Vorbereitung für die Herstellung der Rohrgräben.;5,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;Aushub der Schotterschicht als Vorbereitung für die Herstellung der Rohrgräben.;6,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Bodenaushub für Leitungsgräben außerhalb des Gebäudes,;410,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;Bodenaushub für Leitungsgräben außerhalb des Gebäudes,;160,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+50;Rohrgrabenverbau mit Systemverbaumodulen,;225,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+60;Transport, Kippgebühr und Entsorgung des Bodenaushubs der;1100,0;to;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+70;Zulage zur Vorposition BM 0, Transport, Kippgebühr und Entsorgung des Bodenaushubs gemäß Ersatzbaustoffverordnung BM F1.;320,0;to;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+80;Zulage zur Position Aushub BM 0, Zuordnung gemäß Ersatzbaustoffverordnung BM F2, sonst wie in vorstehender Position beschrieben.;150,0;to;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+90;Zulage zur Position Aushub BM 0, Zuordnung gemäß Ersatzbaustoffverordnung BM F3, sonst wie in vorstehender Position beschrieben.;50,0;to;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+100;Verdichtungsfähigen Boden,;500,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+110;Boden der anstehenden Homogenbereiche gemäß ZTVE-StB in Handarbeit und Maschinenschachtung z.B. für das Herstellen von Querschlägen zwecks Feststellung der Lage von Leitungen aller Art ausheben und abfahren bzw., wenn geeignet, seitlich lagern und wieder einbauen.;20,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+120;Offene Wasserhaltungsarbeiten für die Trockenlegung der Baugruben ca. 0,50 m unter Baugrubensohle herstellen und während der gesamten Bauzeit unterhalten.;225,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+130;Bodenaustausch unterhalb Rohrauflager/Flächenfilter aus filterstabilem Kalksteinschotter 0/45 mm herstellen. wasserhaltenden sowie wasserempfindliche anstehende Böden gemäß ZTVE-StB ausheben, laden und zur freien Verwendung des AN abfahren.;75,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+140;Bodenaustausch unterhalb Rohrauflager/Flächenfilter aus Grobschlag 20/80 mm herstellen. Nicht ausreichend standfesten anstehenden Boden, gemäß ZTVE-StB  ausheben, laden und zur freien Verwendung des AN abfahren.;10,0;m3;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+150;In Baugruben angetroffene Versorgungskabel während der Bauarbeiten bei Bedarf an Holz- oder Stahlträgern so aufhängen und sichern, dass sie sich nicht verschieben können. Inklusive des erforderlichen erschwerten Aushubes unterhalb der Leitungen in Bodenklasse 3-5, inklusive waagerechten oder senkrec;12,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+160;Sonst wie in der Vorposition, jedoch:;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+170;Sonst wie in der Vorposition, jedoch:;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+180;Wie zuvor, jedoch:;3,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+190;In Baugruben angetroffene Versorgungskabel während der Bauarbeiten bei Bedarf an Holz- oder Stahlträgern so aufhängen und sichern, dass sie sich nicht verschieben können. Inklusive des erforderlichen erschwerten Aushubes unterhalb der Leitungen, inklusive waagerechten oder senkrechten Holzverbau im ;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+200;Vorhandene Versorgungskabel innerhalb des Rohrgrabens von Hand freilegen, seitlich neben dem Rohrgraben ablagern, während der Bauzeit mit Gerüstbohlen abdecken und nach Beendigung der Rohrverlegung auf dem planierten eingefüllten Boden neu verlegen.;12,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+210;Wie zuvor, jedoch:;8,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+220;Wie zuvor, jedoch:;5,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+230;Dynamischen Plattendruckversuch im Rohrgraben zur Überprüfung der Verdichtung und der Standfestigkeit der unteren Bettung sowie der Leitungszone durchführen.;40,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+240;Rammsondierungen mit der leichten Rammsonde nach DIN 4094 (DPL-10 bzw. DPL-5) in Leitungsgraben durchführen, einschließlich Auswertung und Beurteilung der Ergebnisse durch einen Gutachter in einem Untersuchungsbericht.;5,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Fundamenterder aus Bandstahl verzinkt;200,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;Ringerder 10 mm Edelstahl, V4A;530,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Anschlußfahnen 10 mm, V4A, bis 3,m Länge;12,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;Erdungsanschlüsse an Metallkonstruktion;5,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+50;Mauerdurchführungen bis 60 cm Wandstärke;4,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+60;Monteurstunden;10,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+70;Helferstunden;10,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+80;Revisionsunterlagen;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Betonleerrohr M20;330,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;Betonleerrohr wie vor, jedoch M25;120,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Betonleerrohr wie vor, jedoch M16;50,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;Zugdraht zum Einziehen in die vorher genannten Leerrohrsysteme;550,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+50;Gerätedose EH 41mm / Ortbeton;10,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+60;Gerätedose EH 58 mm, Ortbeton;110,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+70;Geräte Verbindungsdose EH 91 mm, Durchmesser 60 mm, Ortbeton;38,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+80;Betonbaudose 60;4,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+90;Geräte-Verbindungsdose, als Electronic-Dose;38,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+100;Geräte-Verbindungsdose, als Doppeldose;25,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+110;Verbindungsdose Einbautiefe 95mm,;22,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+120;Verbindungskasten EH 80 mm, Ortbeton, 128 x 128 mm;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+130;Verbindungskasten EH 84 mm, Ortbeton, 180 x 180 mm;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Monteurstunden;12,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;Helferstunden;12,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Revisionsunterlagen Leerrohrsysteme;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Zulage für Revisionsschacht;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;Zulage für Revisionsschacht;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+50;Zulage für Revisionsschacht;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+60;Schachtabdeckung C250 für vorgenannten Revisionsschacht;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+70;KG 2000 Rohre SN10 DN 110;40,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+80;wie vor, jedoch KG 2000 - Rohr DN 125;10,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+90;wie vor, jedoch KG 2000 - Rohr DN 160;15,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+100;wie vor, jedoch KG 2000 - Rohr DN 200;55,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+110;wie vor, jedoch KG 2000 Bogen 15-90° DN 110,;8,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+120;wie vor, jedoch KG-2000 Bogen 15-90°, DN 125;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+130;wie vor, jedoch KG-2000 Bogen 15-90°, DN 160;4,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+140;wie vor, jedoch KG-2000 Bogen 15-90°, DN 200;4,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+150;wie vor, jedoch KG 2000 - Abzweig 45°, DN200/200/110;4,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+160;wie vor, jedoch KG 2000-Abzweig 45°, DN 200/200/125;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+170;wie vor, jedoch KG 2000-Abzweig 45°, DN 200/200/160;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+180;wie vor, jedoch KG 2000-Abzweig 45°, DN 200/200/200;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+190;wie vor, jeodch KG 2000 - Reduktion DN 125/100;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+200;wie vor, jeodch KG 2000 - Reduktion DN 160/125;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+210;wie vor, jeodch KG 2000 - Reduktion DN 200/160;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+220;Anschluss einer Grundleitung DN 150;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+230;Anschluss einer Grundleitung DN 200 an den Übergabeschacht einschl. Lieferung und Montage der erforderlichen Anschlussmaterialien wie z.B. Verbinder sowie Dichtungs- und Befestigungsmaterialien;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+240;Demontage und Entsorgung vorh. Mischwassergrundleitung;65,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+250;KG 2000 Rohre SN10 DN 110;50,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+260;wie vor, jedoch KG 2000 Bogen 15-90° DN 110,;6,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+270;wie vor, jedoch KG 2000 - Abzweig 45°, DN 110/110/110;4,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+50;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+60;Zulage für Revisionsschacht;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+70;Zulage für Revisionsschacht;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+80;Zulage für Revisionsschacht;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+90;Schachtabdeckung C250 für vorgenannten Revisionsschacht;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+100;Schachtabdeckung D400 für vorgenannten Revisionsschacht;4,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+110;KG 2000 Rohre SN10 DN 110;55,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+120;wie vor, jedoch KG 2000 - Rohr DN 125;15,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+130;wie vor, jedoch KG 2000 - Rohr DN 160;75,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+140;wie vor, jedoch KG 2000 Bogen 15-90° DN 110,;12,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+150;wie vor, jedoch KG-2000 Bogen 15-90°, DN 125;3,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+160;wie vor, jedoch KG-2000 Bogen 15-90°, DN 160;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+170;wie vor, jedoch KG 2000 - Abzweig 45°, DN125/125/110;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+180;wie vor, jedoch KG 2000-Abzweig 45°, DN 150/150/110;4,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+50;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+60;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+70;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+80;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+90;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+100;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+110;Zulage für Revisionsschacht;5,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+120;Zulage für Revisionsschacht;5,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+130;Zulage für Revisionsschacht;5,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+140;Schachtabdeckung C250 für vorgenannten Revisionsschacht;4,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+150;Schachtabdeckung D400 für vorgenannten Revisionsschacht;6,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+160;KG 2000 Rohre SN10 DN 110;35,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+170;wie vor, jedoch KG 2000 - Rohr DN 125;40,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+180;wie vor, jedoch KG 2000 - Rohr DN 160;175,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+190;wie vor, jedoch KG 2000 - Rohr DN 200;90,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+200;wie vor, jedoch KG 2000 Bogen 15-90° DN 110,;10,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+210;wie vor, jedoch KG-2000 Bogen 15-90°, DN 125;4,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+220;wie vor, jedoch KG-2000 Bogen 15-90°, DN 160;10,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+230;wie vor, jedoch KG-2000 Bogen 15-90°, DN 200;6,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+240;wie vor, jedoch KG 2000 - Abzweig 45°, DN200/200/110;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+250;wie vor, jedoch KG 2000-Abzweig 45°, DN 200/200/150;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+260;wie vor, jedoch KG 2000-Abzweig 45°, DN 160/160/160;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+270;wie vor, jeodch KG 2000 - Reduktion DN 125/100;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+280;wie vor, jeodch KG 2000 - Reduktion DN 160/125;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+290;wie vor, jeodch KG 2000 - Reduktion DN 200/160;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Hebeanlage;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;WU-Einbauset;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Abdeckplatte schwarz;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;Zulaufstutzen;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+50;Stück Dichtung DN70 für Rohrdurchführung,;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+60;Montage der v.g. Hebeanlage;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+70;Inbetriebnahme Hebeanlage;1,0;psch;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Wanddurchführung für KG 2000;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+20;Wanddurchführung s.w.v., jedoch DN 125;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+30;Wanddurchführung s.w.v., jedoch DN 160;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+40;Bodendurchführung für KG 2000 DN 110;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+50;Bodenablauf für KG 2000;3,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+60;Mauerkragen für Luftleitung, DN 710;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+70;Mauerkragen für Luftleitung s.w.v., jedoch DN 800;1,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+80;Lüftungsrohr DN 710 für Erdverlegung,;1,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+90;Lüftungsrohr DN 800 für Erdverlegung,;1,0;m;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+100;Endstopfen DN 710,;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+110;Endstopfen DN 800,;2,0;St;gaeb;leistungsbeschreibungen/SGK-2026-07-16-LV Rohbau.X83
+10;Baustelleneinrichtung für die im nachfolgenden Leistungsverzeichnis enthaltenen Leistungen (gemäß VOB/ C ATV DIN 18299, 4.1) einschl. nachfolgend aufgeführter ergänzender Leistungen des AN liefern und einrichten.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;Baustelleneinrichtung wie vor beschrieben vorhalten und unterhalten für die Dauer der Rohbauzeit.;45,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Baustelleneinrichtung abräumen. Alle vom AN vorgenommenen Einbauten, Kranfundamente oder sonstiger Einrichtungen für die Ausführung seiner Leistungen sind zu räumen und die Flächen sind wieder in den Urzustand zu versetzen. Dies gilt insbesondere für öffentliche Flächen, die vom AN in Benutzung geno;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;Baukran als Unterdreher mit Ausleger ca. 58 m,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+50;Baukran vorhalten und betreiben für die Dauer der Rohbauarbeiten.;45,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+60;Baustraße bzw. BE-Fläche aus tragfähigem Untergrund für eigene Zwecke und für Zwecke anderer Unternehmer, befahrbar für LKW bis 40 to aus RS-Schotter 0/45 mm, herstellen. Einbaudicke ca. 50 cm.;400,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+70;Geotextilvlies GRK 2, 120 g/m2 liefern und auf der Fläche für die Baustrasse auslegen.;800,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+80;Bauzaun, Untergrund befestigt oder unbefestigt, als vorgefertiger Drahtgitterzaun mit umlaufenden Rohrtraversen, Standrohren und Fundamenten aufstellen, (keine offenen Drahtspitzen an der Oberkante!!!);215,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+90;Bauzaunelemente als Toranlage mit Scharnier und Rollen ausstatten und montieren, abschließbar mit Bügelschloss o.gwl. als Zahlenschloss. als Zulage zum Bauzaun. Ausführung für 2 Tore aus je 2 Elementen.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+100;Verlängerung der Vorhaltung der Bauzaunelemente einschl. Tor über die genannte Grundvorhaltezeit hinaus;14620,0;mWo;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+110;Bauzaun wie in Position;70,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+120;Verlängerung der Vorhaltung der Bauzaunelemente über die genannte Grundvorhaltezeit hinaus;4760,0;mWo;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+130;Verplanung der Bauzaunelemente als Sichtschutz einschl. der erforderlichen Windaussteifung gegen umfallen.;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+140;Verlängerung der Vorhaltung der Sichtschutzelemente über die genannte Grundvorhaltezeit hinaus.;6800,0;mWo;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+150;Liefern, Aufstellen, Vorhalten und unterhalten der Baustellenstromversorgung. Der Anschluß wird durch den Hauselektriker im Haus hergestellt und zur Verfügung gestellt.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+160;Verlängerung der Vorhaltezeit für den Baustromhauptverteiler.;52,0;StWo;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+170;Liefern, Aufstellen, Vorhalten und unterhalten der Baustromverteilerschränke für alle Nachfolge-/Ausbaugewerke. Es sind in jedem Geschoss jeweils ein Verteilerschrank mit mind. 10 Steckdosen 230 V und eine Steckdose für 400 V aufzustellen.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+180;Verlängerung der Vorhaltezeit für den Baustromverteiler der Ausbaugewerke;156,0;StWo;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+190;Liefern, Einrichtung , Vorhalten und Abbauen des;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+200;Verlängerung der Vorhaltezeit des Bauwasserverteilers;52,0;StWo;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+210;Bürocontainer (Besprechnungscontainer) für Zwecke des AG aufstellen, anschließen, vorhalten und beseitigen, als Doppelcontainer, Größe ca. 6,00 x 6,00 m mit integriertem Windfang ca. 1,20 x 1,50 m und WC Raum;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+220;Vorhaltung Bürocontainer Pos.;90,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+230;Sanitärcontainer für Zwecke des AG aufstellen,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+240;Vorhaltung Sanitärcontainer Pos.;90,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+250;Sanitärcontainer für Zwecke des AG aufstellen,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+260;Vorhaltung Sanitärcontainer (Frau) aus Pos.;90,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+270;Zulage zu den Büro- und Sanitärcontainern in Ausführung als Doppelstockanlage einschl. der erforderlichen Treppe und Laufsteg sowie der zugehörigen Geländer.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+280;Lieferung von Meterrissplaketten aus Kunststoff ,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+290;Schnurgerüste aufstellen zur bauseitigen Einmessung aller Hauptachsen. Diese werden vom Vermesser eingemessen und auf den Schnurgerüsten abgesetzt. Es werden 8 Achsen in Querrichtung und 4 Achsen in Längsrichtung eingemessen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+300;Gerüst-Treppenturm als Abstieg in die Baugrube im Arbeitsraum aufstellen, vorhalten und nach Fertigstellung des KG wieder entfernen. Höhenüberbrückung ca. 4,00 m.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+310;Provisorische Abdichtung der Ausstiegsöffnung in der Dachdecke,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+320;Provisorische Abdichtung der Lichtkuppelöffnung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+330;Provisorische Abdichtung von Öffnungen in der Dachdecke,;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+340;Rückbau des prov. Schutzes der Fassade.;460,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+350;Rückbau einer Stabgitter-Zaunanlage im Bereich der jetzigen Fahrradabstellfläche. Zaunhöhe ca. 240 cm. Zaunanlage sauber abbauen und nach Angabe auf dem Schulgelände zwischenlagern. Zaunpfosten ausgraben, Fundamente abstemmen, Fundamentlöcher mit geeignetem Material verfüllen und verdichten, Zaunpfo;70,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+360;Abfallcontainer für reinen Bauschutt,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+370;Abfallcontainer Restmüll/Mischmüll,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+380;Abfallcontainer Bauholz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+390;Komplettes Bauschild bestehend aus:;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+400;Vor Beginn der Baumaßnahmen liefern eines Stammschutzes bis zu einer Höhe von 2 m und standsicher befestigen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Technische Bearbeitung zum Verbau,;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;Lage des Verbaus einschl. aller erforderlichen Sondierbohrungspunkte und Verbauträgerpunkte einmessen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Baustelle für die Durchführung der Verbauarbeiten einrichten, vorhalten und nach vollständiger Verbauerstellung wieder räumen einschl. aller damit verbundenen Leistungen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;Einrichten, vorhalten und abbauen der Baustelleneinrichtung für die Ausführung der vertikalen Sondierbohrungen und der Bohrlochdetektion. Einschl. An- und Abtransport der notwendigen Geräte.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+50;Herstellen der notwendigen Sondierbohrungen im Bereich der Verbauträger zur Feststellung der Kampfmittelfreiheit einschl. Einbau von Kunststoffleerrohren. Die Bohrungen sind gemäß den technischen Verwaltungsvorschriften herzustellen und bis zum Abschluss der Kampfmittelsondierungen zu sichern.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+60;Sondierung der vorgenannten vertikalen Bohrlöcher.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+70;Stahlträger HEB 360 und HEB 550, Stahlgüte S 235. Stahlträger liefern und einbauen. Einzellängen 7,70 m bis 10,20 m.;90,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+80;Herstellen eines Bohrträgerverbaus mit Holzausfachung.;470,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+90;Stumpfwinkelige und Rechtwinkelige Eckausbildung des vorgenannten Verbaus als Innen- und Außenecke.;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+100;Rückbau der Holzausfachung oder der Stahlplatten Zug um Zug zum Zeitpunkt der Arbeitsraumverfüllung und Abtransport.;470,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+110;Ziehen der Verbauträger nach Verfüllung des Arbeitsraumes und Abtransport der Verbauträger. Der Verdrängungsraum der Träger ist durch einspülen mit Sand vollständig zu verfüllen.;470,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+120;Absturzsicherung an Oberkante des Verbaus herstellen,;155,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+130;Stillstands- und Wartestunden der Mannschaft einschl. der Geräte, soweit diese nicht durch den AN zu vertreten sind.;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+140;Stillstands- und Wartetag Großbohrgerät ohne;1,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Erstellung der wasserrechtlichen Anträge;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;Regelmäßige Ablesung der Wasseruhren zur Feststellung der;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Wassermengenmessvorrichtung in die jeweils in Betrieb befind- liche Sammelleitung einbauen, entsprechend dem Baufort- schritt umsetzen, für die Dauer der Grundwasserabsenkung vorhalten, warten und betreiben.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;Anlage zur offenen Grundwasserhaltung nach Unterlagen des AG in der Baugrube liefern, montieren und wieder entfernen, inkl. aller erforderlicher Materialien und Geräte, ausreichend bemessen zur sicheren Trockenhaltung der Baugrubenfläche.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+50;Anlage für offene Wasserhaltung vorhalten und betreiben. Sämtliche Vorhaltekosten außer Rohrleitung zur Übernahme des AG.;150,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+60;Anlage zur geschlossenen Wasserhaltung liefern, montieren und wieder entfernen, inkl. aller erforderlicher Materialien und Geräte, ausreichend bemessen zur sicheren Trockenhaltung der Baugrubenfläche. Anlage besteht aus Vakuumpumpen (in ausreichender Anzahl) mit Schalldämmung, Sammelleitung mit Ansc;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+70;An- u. Abtransporte der Bohrkolonne inkl. Bohrgerät (wahlweise auch Spülbohrgerät mit Meißel), Einrichtung, Umstellen und Abrüsten am Einsatzort. Vorbohren für Einbringen von kiesummantelten Vakuumfiltern auf einer Strecke von ca. 80 m entlang der geplanten Baugrube. Abstand der Vakuumbrunnen / Bohr;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+80;Anlage für geschlossene Wasserhaltung vorhalten u. betreiben, einschl. aller Filter sowie sämtliche erforderliche Anlagen zur Ableitung zur Anlage für Gesamtfördermenge von 5 m³/h.;150,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+90;Überwachung und Wartung der gesamten Grundwasserabsenkungsanlage, unabhängig von der Anzahl der betriebenen Geräte, ununterbrochen mit dem erforderlichen fachkundigen Personal, von Beginn der Betriebsbereitschaft bis Ende der Betriebsbereitschaft.;150,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Wurzelrodung der bauseits gefällten Bäume;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;Bodenaushub im Homogenbereich A1 + A2 (Auffüllungen Sand + Schluff), partiell mit Glasasche, Schotter, Bauschutt und Asphaltbruch durchsetzt, ausheben und im Baustellenbereich separieren.;1210,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Aushub im Homogenbereich A3 Mergel,;2300,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;Zulage zu den Bodenaushubpositionen;460,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+50;Transport, Kippgebühr und Entsorgung des Bodenaushubs der;6700,0;to;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+60;Zulage zur Vorposition BM 0, Transport, Kippgebühr und Entsorgung des Bodenaushubs gemäß Ersatzbaustoffverordnung BM F1.;1000,0;to;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+70;Zulage zur Position Aushub BM 0, Zuordnung gemäß Ersatzbaustoffverordnung BM F2, sonst wie in vorstehender Position beschrieben.;900,0;to;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+80;Zulage zur Position Aushub BM 0, Zuordnung gemäß Ersatzbaustoffverordnung BM F3, sonst wie in vorstehender Position beschrieben.;100,0;to;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+90;Boden der Klasse 3 bis 5 zur Herstellung von Suchgräben, Querschlägen, Freilegung von Leitungen etc. von Hand ausheben. Als Zulage zu den Aushubpositionen.;20,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+100;Verdichtungsfähigen Boden nichtbindig, steinfreier Füllsand, liefern und für Bodenauffüllungen unter den nicht unterkellerten Bereichen gemäß ZTV-A STB 89 lagenweise einbauen und auf 100 % der einfachen Proktordichte verdichten.;340,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+110;Verdichtungsfähigen Boden, nichtbindig, steinfreier Füllsand, liefern und für Arbeitsraumverfüllungen gemäß ZTV-A STB 89 lagenweise (<30 cm) einbauen und auf 100 % der einfachen Proktordichte verdichten.;600,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+120;Hartkalksteinschotter mit Güteschutzzeugnis,;410,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+130;Plattendruckversuche zur Verdichtungsprüfung der Trag- / Fliterschicht unter der Bodenplatte.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+140;Sandbett aus feinkörnigem Sand, Körnung 0-5 mm,;615,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+150;Bodenaushub für Unterfangungen zum Altbau;30,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+160;"Schalung der Unterfangungsabschnitte, rauh, aus nicht saugenden Schalungsplatten einschl. oberen ""Einfülltrichter"",";55,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+170;Teilabbruch Fundament am Bestandsgebäude BT E;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+180;Bodenaushub für Leitungsgräben;110,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+190;Bodenaushub für Leitungsgräben im Gebäudebereich unterhalb der Sohle im bereits angelegten Flächenfilter,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+200;Verdichtungsfähigen Boden,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+210;Besenwagen zur Sauberhaltung der öffentlichen Verkehrswege auf einer Länge von jeweils ca. 200 m auf Anordnung der Bauleitung einschl. Bedienung/Fahrer und fachgerechter Entsorgung der aufgenommenen Verschmutzungen.;20,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Durch das beauftragte Ingenieurbüro wurde ein vorläufiges Betonbaukonzept nach DIN 1045 erarbeitet und in der Planungsphase fortgeschrieben. Dieses Betonbaukonzept ist während der Bauausführung durch den Rohbauunternehmer fortzuschreiben einschl. der damit verbundenen Abstimmungen mit den Planungsbe;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;eigenverantwortliche Überprüfung und Werkplanung der Gesamtheit der WU-Abdichtung bis Unterkante Decke über UG.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Unterfangung Bauteil E, Abschnittsweise im Pilgerschrittverfahren, Gesamtbreite ca. 8,0 m,;12,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;1-lagige PE-Folienabdeckung auf Filterschicht;746,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+50;2-lagige PE-Folienabdeckung auf Sauberkeitsschicht;746,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+60;Sauberkeitsschicht aus unbewehrtem Beton unter;746,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+70;Randschalung der Sauberkeitsschicht;330,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+80;Ortbeton zur Herstellung der Negativbaukörper im Bereich der Tieferführungen an Aufzugsunterfahrten;15,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+90;"Abschalung der Sauberkeitsschicht im Bereich der Tieferführungen der Aufzugsunterfahrten etc. als einhäuptige Schalung zur Herstellung eines ""Negativbaukörpers"",";16,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+100;Bodenplatte für die Aufzugsschächte, D 35 cm;3,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+110;Randschalung der Bodenplatte, einhäuptig, rauh, aus nicht saugenden Schalungsplatten, Schalungshöhe 35 cm;4,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+120;Aussenwände in Ortbetonbauweise, Aufzugsunterfahrt;4,5;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+130;Schalung der Aussenwände Aufzugsunterfahrt;12,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+140;Magerbetonauffüllung unter Fundamenten, abgetreppt, 30°, in Stufenform, Beton C 12/15;95,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+150;Schalung der Magerbetonauffüllungen,;235,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+160;Bodenplatte aus Stahlbeton gemäß ZTV auf Trennlage,;95,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+170;Bodenplatte aus Stahlbeton gemäß ZTV auf Trennlage,;101,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+180;Randschalung der Bodenplatte, einhäuptig, rauh, aus nicht saugenden Schalungsplatten, Schalungshöhe 35 und 45 cm;80,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+190;Flügelglätten der Betonoberfläche der gesamten Bodenplatte in min. 2 Betonierabschnitten;410,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+200;Aufbeton auf der Bodenplatte für eine Rampe im Übergang zum Bauteil E,;9,5;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+210;Klemmfugenband aus PVC-P Werkstoffen mit bauaufsichtlicher Zulassung, außenliegend, zum Anschluss an den Bestand;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+220;Fugenbandecken von der horizontalen in die vertikale als;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+230;Abdichtung von Arbeitsfugen bei den tieferliegenden;218,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+240;Weichpolster aus vorgepressten Steinwolleplatten (Trennfugenplatten) seitlich an Tieferführungen z.B.Fundamenten, Sohlversprünge und Aufzugsunterfahrten;14,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+250;Weichpolster aus vorgepressten Steinwolleplatten (Trennfugenplatten) seitlich an Tieferführungen z.B.Fundamenten, Sohlversprünge und Aufzugsunterfahrten;30,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+260;Ausführung der Stahlbeton-Außenwände mit Mehrschicht-Halbfertigteilwänden und Ortbetonverguss im Kernbereich,;200,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+270;Wandhöhe 378 cm.;125,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+280;Aussenwände in Ortbetonbauweise;12,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+290;Schalung der Aussenwände, einhäuptig,;95,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+300;Ausführung der Stahlbeton-Innenwände mit Mehrschicht-Halbfertigteilwänden und Ortbetonverguss im Kernbereich,;125,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+310;Innenwände in Ortbetonbauweise;9,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+320;Schalung der Innenwände;70,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+330;Leibungsschalung für Türöffnungen,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+340;Zulage zu der vorgenannten Wandschalung für Sichtbetonschalung, SHK 2, Oberfläche glatt z.B. Betoplan o.dlw, in gleichmäßiger Fugenteilung und Anordnung der Spannanker in Abstimmung  mit dem Architekten einschl. zusätzlicher Maßnahmen beim betonieren. Die Sichtbetonschalung wird in der Hauptsache im;65,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+350;Die Sichtbetonflächen sind für die gesamte Bauzeit zu schützen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+360;Muster-Wandfläche am Aufzugsschacht in Sichtbetonausführung wie in der Vorposition beschrieben herstellen. Flächengröße ca. 20 m2.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+370;Stützen aus Stahlbeton, Aussenwand Fensterbereich,;0,3;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+380;Schalung der Stützen;4,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+390;Ortbeton der Einzelfundamente (nicht unterkellerter Bereich);3,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+400;Schalung der Einzelfundamente;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+410;Ortbeton der Fundamente (nicht unterkellerter Bereich);25,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+420;Schalung der Fundamente;65,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+430;Bodenplatte aus Stahlbeton gemäß ZTV auf Trennlage,;64,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+440;Randschalung der Bodenplatte, einhäuptig, rauh, aus nicht saugenden Schalungsplatten, Schalungshöhe 30 cm;13,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+450;Elementdeckenplatte mit Aufbeton, als Fertigteil DIN EN 13369 und DIN EN 13747,;202,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+460;Deckendicke gesamt 28 cm.;200,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+470;Schrägschnitte der Filigranplatten an schräg verlaufenden Wandauflagern als Zulage;21,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+480;Decken aus Stahlbeton, Treppenpodest,;1,4;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+490;Schalung für Massivplattendecken, Treppenpodest,;6,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+500;Deckenrandschalung,;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+510;Abdichtung von Schwindfugen/Sollrissfugen mit Schwindrohre SR Thermoplast mit Dichtflansche oder gleichwertig im Bereich der WU- Außenwände. Die Schwindrohre sind in Abständen von ca. 5,00 m zur Erzeugung einer Querschnittsschwächung mittig in die Vergusszone der Halbfertigteilwände einzubauen.;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Aussenwände in Ortbetonbauweise;75,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;Schalung der Aussenwände;605,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Innenwände in Ortbetonbauweise;58,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;Schalung der Innenwände;475,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+50;Zulage zur Schalung für die Herstellung nichtrechtwinklige Ecken als stumpfe oder spitzwinkele Eckeausführungen.;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+60;Zulage zu der vorgenannten Wandschalung für Sichtbetonschalung, SHK 2, Oberfläche glatt z.B. Betoplan o. glw, in gleichmäßiger Fugenteilung und Anordnung der Spannanker in Abstimmung  mit dem Architekten einschl. zusätzlicher Maßnahmen beim betonieren. Die Sichtbetonschalung wird in der Hauptsache i;500,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+70;Die Sichtbetonflächen sind für die gesamte Bauzeit zu schützen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+80;Leibungsschalung für Tür- und Fensteröffnungen,;180,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+90;Stützen aus Stahlbeton, Aussenwand Fensterbereich,;22,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+100;Schalung der Stützen;270,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+110;Stützen aus Stahlbeton, Innenwand, Zugangsportal zu den Klassenzimmern, Ausführung in Sichtbeton SB 2,;24,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+120;Schalung der Stützen;165,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+130;Musterstütze in Sonderform (kleine Stütze) wie in der Vorposition dargestellt herstellen. Stützenhöhe min. 1,00 m.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+140;Ortbeton der Balken/Sturz, zwischen den beiden Stützen der Vorposition,;4,9;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+150;Schalung der Balken/Sturz;30,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+160;Ortbeton der Unterzüge;19,5;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+170;Schalung der Unterzüge;210,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+180;Ortbeton der Überzüge/Brüstungen;30,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+190;Schalung der Überzüge/Brüstungen;250,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+200;Decken aus Stahlbeton,;9,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+210;Schalung für Massivplattendecken,;44,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+220;Decken aus Stahlbeton, Treppenpodeste;3,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+230;Schalung für Treppenpodestdecken,;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+240;Elementdeckenplatte mit Aufbeton, als Fertigteil DIN EN 13369 und DIN EN 13747,;980,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+250;Deckendicke gesamt 28 cm, Stützweite 7,25 m.;570,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+260;Deckendicke gesamt 25 cm, Stützweite 7,25 m.;285,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+270;Schrägschnitte der Filigranplatten an schräg verlaufenden Wandauflagern als Zulage;105,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+280;Deckenrandschalung,;77,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+290;Schalung für unterseitigem Deckenversatz;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+300;Ringbalken auf Mauerwerkswänden,;115,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+310;Ortbeton der Überzüge/Attika;29,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+320;Schalung der Überzüge;315,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+330;Trennwandplatten, d = 30 mm, jeweils im Anschluss an die bestehenden Bauteile C und E im Bereich der Betondecken, in Streifen geschnitten, mit Kleber an den Wandflächen fixieren.;55,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+340;Deckenöffnungen herstellen einschl. Schalung,;125,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+350;Deckenöffnungen herstellen einschl. Schalung,;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+360;Deckenöffnungen herstellen einschl. Schalung,;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+370;Deckenöffnungen herstellen einschl. Schalung,;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+380;Deckenrandschalung für eine Dachöffnung herstellen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+390;Deckenrandschalung für eine Dachöffnung herstellen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+400;Deckenrandschalung für eine Dachöffnung herstellen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+410;Deckenöffnungen nach Installation schließen einschl. Schalung,;125,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+420;Deckenöffnungen nach Installation schließen einschl. Schalung,;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+430;Deckenöffnungen nach Installation schließen einschl. Schalung,;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+440;Deckenöffnungen nach Installation schließen einschl. Schalung,;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+450;Wanddurchbrüche herstellen im Zuge;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+460;Wanddurchbrüche herstellen im Zuge;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+470;Wanddurchbrüche herstellen im Zuge;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+480;Wanddurchbrüche herstellen im Zuge;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+490;Wanddurchbrüche herstellen im Zuge;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+500;Wanddurchbrüche  nach Fertigstellung;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+510;Wanddurchbrüche nach Fertigstellung;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+520;Wanddurchbrüche nach Fertigstellung;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+530;Wanddurchbrüche nach Fertigstellung;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+540;Wanddurchbrüche nach Fertigstellung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+550;Treppen als Fertigteil ,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+560;Treppen als Fertigteil ,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+570;Treppen als Fertigteil ,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Betonstabstahl B 500 B DIN 488;115,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;Betonstahllagermatten B 500 A DIN 488;4,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Betonstabstahl für Schubbügel, dreidimensional gebogen,;2600,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;Abstandhalter für die Deckenbewehrung;0,5;t;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+50;Betonstahl als Lagermatten und Stabstahl BSt 500 S und M zum Einbau im Fertigteilwerk,;80,0;to;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+60;Tronsole als tragendes Trittschalldämmelement zwischen Treppenlauf und Bodenplatte, aus hoch widerstandsfähiger PE-Schaum, selbstklebend, zur sicheren schallbrückenfreien Ausführung der Fuge.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+70;Trittschalldämmplatte, EPS. 10 mm dick, für den restlichen Bereich der unteren Aufstandsfläche des Treppenfußes.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+80;Tronsole Typ F-V2 als tragendes Trittschalldämmelement zwischen Podest/Decke und Lauf mit Z-förmigem Fugenprofil, mit bauaufsichtlicher Zulassung (Z 15.7-310),;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+90;Tronsole Typ L-420 für die schallbrückenfreie Fugenausbildung zwischen Treppenlauf und Wand, aus hoch widerstandsfähiger PE-Schaum, selbstklebend, zur sicheren schallbrückenfreien Ausführung der Fuge.;29,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+100;Doppel-Dreikant oder Trapezleiste in die Wandschalung einbauen als Betonierabschnittsfuge in der Höhenunterteilung der Wandflächen im Treppenhaus.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+110;Perimeterdämmung unter der Sohle/Gründungsplatte,;615,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+120;Perimeterdämmung an Außenwände, erdberührt,;440,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+130;Perimeterdämmung an Fundamentseitenflächen;120,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+140;Noppenbahn mit Vliesauflage als Drain- und Schutzbahn vor der Perimeterdämmung der Außenwände,;560,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+150;Streifengleitlager auf Mauerwerkswand,;115,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+160;Durchstanzbewehrung im Bereich der Geschossdecken;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+170;Durchstanzbewehrung im Bereich der Geschossdecken;54,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+180;Durchstanzbewehrung im Bereich der Geschossdecken;60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+190;Zulage Schraubanschlüsse Betonstabstahl für die Gewindemuffe mit Nagelflansch als Zulage zur Betonstabstahlbewehrung, Muffenstab gebogen, nach Herstellervorgaben einbauen,;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+200;Zulage Schraubanschlüsse Betonstabstahl für das erforderliche aufschneiden von Gewinden als Zulage zur Betonstabstahlbewehrung.;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+210;Rückbiegeanschluss mit zweilagiger Rückbiegebewehrung in einem verzinkten Stahlblechverwahrkasten zur Herstellung von Bewehrungsanschlüssen,;135,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+220;Rückbiegeanschluss mit zweilagiger Rückbiegebewehrung in einem verzinkten Stahlblechverwahrkasten zur Herstellung von Bewehrungsanschlüssen,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+230;Rückbiegeanschluss mit zweilagiger Rückbiegebewehrung in einem verzinkten Stahlblechverwahrkasten zur Herstellung von Bewehrungsanschlüssen,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+240;Rückbiegeanschluss mit zweilagiger Rückbiegebewehrung in einem verzinkten Stahlblechverwahrkasten zur Herstellung von Bewehrungsanschlüssen,;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+250;Einklebeanker/Bewehrungsanschluss zum Anschluss von neuen Betonbauteilen an den Bestand, herstellen von Bohrungen, Bohrloch säubern, Injektionsmörtel einbringen und Bewehrungsstab kraftschlüssig eindrehen, die Herstellervorgaben sind zu beachten,;370,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+260;Einbauteil im Kopf der Zugstützen best. aus:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+270;Futterrohr, fertig gedämmt, zur Einbringung von Luftleitungen im Erdreich.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+280;Futterrohr, fertig gedämmt, zur Einbringung von Luftleitungen im Erdreich.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+290;Futterrohre aus Faserzement zum Einbau in Halbfertigteilwände, Wanddicke 300 mm,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+300;Futterrohre aus Faserzement zum Einbau in Halbfertigteilwände, Wanddicke 300 mm,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+310;Maueranschlussschiene HMS 25/15-D oder gleichwertig zum Einbetonieren, zur Befestigung von Mauerwerk mit Maueranschlussankern Typ ML, Sendzimirverzinkt (SV) mit Vollschaumfüllung (Vf), Einzellänge 2500mm, Belastung Z/Q = 1,2/1,5kN/Befestigungspunkt, liefern und gemäß Einbau- und Verwendungsanleitung;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+320;Ankerschienen, Edelstahl mit Vollschaumfüllung;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+330;Ankerschienen, Edelstahl mit Vollschaumfüllung;136,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+340;Stahlankerplatten aus Baustahl;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+350;Stahlankerplatten aus Edelstahl V4A, S275;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+360;Halfenschienen mit Schaumfüllung,;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+370;Halfenschienen mit Schaumfüllung,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+380;Halfenschienen mit Schaumfüllung,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+390;Gerüsthülsen, von der Aufzugsfirma beigestellt,;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+400;Wellenanker mit Innengewindehülse und Seilschlaufe, von der Aufzugsfirma beigestellt, auf die Deckenschalung nach Zeichnungsvorgabe fachgerecht einbauen und nach dem ausschalen die Seilschlaufen einschrauben.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Mauerwerk der Innen- und Aussenwände, tragend,;940,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;Mauerwerk der Innenwände, nichttragend,;155,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Mauerwerk der Innenwände, nichttragend,;4,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;Zulage zu den Mauerwerkswänden für das Herstellen nichtrechtwinklige Wandecken durch Sägen der Steine.;38,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+50;Ausgleichsschicht/Iso-Kimmschicht am Wandfuß im EG aus Mauersteinen, aus Kalksandsteinen DIN EN 771-2 in Verbindung mit DIN 20000-402 oder DIN 106,;93,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+60;Ausgleichsschicht/Iso-Kimmschicht am Wandfuß im EG aus Mauersteinen, aus Kalksandsteinen DIN EN 771-2 in Verbindung mit DIN 20000-402 oder DIN 106,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+70;Ausgleichsschicht/Kimmschicht am Wandfuß aus Mauersteinen, aus Kalksandsteinen DIN EN 771-2 in Verbindung mit DIN V 20000-402 oder DIN V 106, Höhe der Ausgleichsschicht über 7,5 bis 10 cm, Mauerwerksdicke 24 cm.;180,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+80;Ausgleichsschicht/Kimmschicht am Wandfuß aus Mauersteinen, aus Kalksandsteinen DIN EN 771-2 in Verbindung mit DIN V 20000-402 oder DIN V 106, Höhe der Ausgleichsschicht über 7,5 bis 10 cm,;24,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+90;Deckenanschluss Mauerwerk, nicht tragend, Fuge ≤ 20 mm, Nach dem Ausschalen der Betondecke ist die Fuge von ≤ 20 mm mit einem NM II oder einem Leichtmörtel vollständig auszustopfen.;48,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+100;Wanddurchbrüche herstellen im Zuge;46,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+110;Wanddurchbrüche herstellen im Zuge;23,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+120;Wanddurchbrüche herstellen im Zuge;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+130;Wanddurchbrüche herstellen im Zuge;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+140;Wanddurchbrüche herstellen im Zuge;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+150;Wanddurchbrüche herstellen im Zuge;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+160;Wanddurchbrüche  nach Fertigstellung;46,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+170;Wanddurchbrüche nach Fertigstellung;23,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+180;Wanddurchbrüche nach Fertigstellung;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+190;Wanddurchbrüche nach Fertigstellung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+200;Wanddurchbrüche nach Fertigstellung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+210;Wanddurchbrüche nach Fertigstellung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+220;Dämmung zwischen Neubau (Ortbeton) und Bestand in durchgehender Gebäudetrennfuge nach DIN 4109-1 mit Schallschutzanforderungen.;170,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+230;Die Gebäudetrennfuge ist oberseitig prov. abzudichten, sodass kein Wasser in die Trennfuge eindringt.;18,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+240;Mauerwerk mit Stumpfstoß an vorh. Wand aus Beton anschließen, Mauerwerksdicke über 17,5 bis 24 cm,;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+250;Mauerwerk mit Stumpfstoß an vorh. Wand aus Beton anschließen mit anzudübelnden Ankernlaschen, Mauerwerksdicke 24 cm,;11,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+260;Waagerechte Abdichtung gegen aufsteigende Feuchtigkeit in den Wänden gemäß DIN 18533, Wanddicke bis 24 cm,;48,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+270;Öffnungen anlegen mit Überdeckung mit Betonfertigteilsturz,;19,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+280;Öffnungen anlegen mit Überdeckung mit Betonfertigteilsturz,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+290;Öffnungen anlegen mit Überdeckung mit Betonfertigteilsturz,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+300;Öffnungen anlegen ohne Überdeckung,;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+310;Mörtelhohlkehle am Fundamentübergang;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+320;Ausgleichsschicht/Iso-Kimmschicht am Wandfuß des Klinkermauerwerks aus frostbeständigen und wärmedämmenden Kimmsteinen.;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+330;Verblendsteine liefern,;1120,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+340;Verblendmauerwerk aus den vorstehend beschriebenen Verblendsteinen herstellen, im wilden Verband vermauert, in allen Höhen der Fassade als Flächen, Brüstungsbänder und Pfeiler, im wesentlichen vor KS Wänden und vor Betonwänden mit ca. 22,5 cm Abstand zur tragenden Wand einschl. der erforderlichen Lu;1120,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+350;Öffnungen anlegen ohne Überdeckung,;68,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+360;Öffnungen anlegen ohne Überdeckung,;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+370;Öffnungen anlegen ohne Überdeckung,;78,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+380;Verblendmauerwerk verfugen,;1120,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+390;Abdichtung in die Verblendschicht, Wanddicke 11,5 cm, einlegen, bis zur Hintermauerwand führen und dort ca. 10 cm hochführen.;320,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+400;Wärmedämmung der Fassadenflächen;1000,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+410;Zulage zur vorgen. Fassadendämmung, im Leibungsbereich mit extrudierten Polystyrol Dämmstreifen, XPS einschl. Lagesicherung durch verkleben. Querschnitt ca. 80 x 200 mm.;560,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+420;Fassadendämmung wie vor beschrieben, jedoch im Sockelbereich mit extrudierten Polystyrol Dämmplatten, XPS,;120,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+430;Dehnungsfugen im Verblendmauerwerk;290,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+440;Dehnungsfugen dauerelastisch verfugen mit Material auf PU Basis. Die frische Fuge ist zu besanden und dem Farbton der;290,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+450;Die Fallrohre liegen in der Ebene des Verblendmauerwerks.;116,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+460;Musterflächen der Verblendung einschl. Verfugung anlegen;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+470;Werk- und Montageplanung für den gesamten Umfang der Klinkerabfangungen, Betonfertigteile und deren Abfangung bzw. Befestigung.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+480;"Einzelkonsolanker zur Abfangung von Verblendmauerwerk aus nichtrostendem Edelstahl der Korrosionswiderstandsklasse III gemäß Z-30.3-6 bzw. nach EN 1993-1-4: 2015, Tabelle A.3;";96,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+490;"Auflagerwinkel als Zwischenwinkel über Tür- bzw. Fensteröffnungen bzw. im Sockelbereich zur Abfangung von Verblendmauerwerk aus nichtrostendem Edelstahl der Korrosionswiderstandsklasse III gemäß Z-30.3-6 bzw. nach EN 1993-1-4: 2015, Tabelle A.3;";43,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+500;"Auflagerwinkel als Zwischenwinkel über Tür- bzw. Fensteröffnungen bzw. im Sockelbereich zur Abfangung von Verblendmauerwerk aus nichtrostendem Edelstahl der Korrosionswiderstandsklasse III gemäß Z-30.3-6 bzw. nach EN 1993-1-4: 2015, Tabelle A.3;";40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+510;Stahlbeton-Fertigteil als Fenstersturz bzw. zur Auflagerung des Verblendmauerwerks;360,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+520;"Einzelkonsolanker zur Abfangung von Betonfertigteilen aus nichtrostendem Edelstahl der Korrosionswiderstandsklasse III gemäß Z-30.3-6 bzw. nach EN 1993-1-4: 2015, Tabelle A.3;";360,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+530;Ankerschienen aus Edelstahl als Kurzstücke eingebaut im Fertigteil zur Befestigung der Einzelkonsole mit dem Betonfertigteil.;360,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+540;Gerüstanker zum dauerhaften Verbleib in der Verblendschale aus Edelstahl als Gewindehülse oder Flachankerhülse mit Aussteifungsstreben und Grundplatte zur Verankerung an der tragenden Wandschale als Mauerwerk oder Beton einschl. thermischer Trennplatte und Verschlussstopfen,;90,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+550;Klinkerriemchen liefern,;510,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+560;Vorstehend beschriebenen Riemchen im Blockverband vollflächig gem. Herstellervorgaben und Zulassung verkleben.;510,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+570;Verblendmauerwerk verfugen,;510,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+580;Öffnungen anlegen (ohne Eckriemchen),;75,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+590;Ausführung von Außenecken mit ganzen und 3/4 Eckriemchen als Formsteine.;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+600;Ausführung von Stürzen / Fensterbänke mit Eckriemchen als Formsteine.;42,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+610;Die Riemchen sind vor Ausführung des Bodenbelags auszuführen.;165,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+620;Schutz der Riemchen mit Folie. Die Folie ist so zu befestigen, dass diese ca. 16 Wochen verbleibt.;510,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Mörtelhohlkehle am Übergang Wand / Bodenplatte mit Mörtel MG III herstellen, Rundungsradius ca. 4-5 cm.;125,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;Stossfugen an den Halb-Fertigteilwänden auf der Aussenseite mit Mörtel verfüllen und glätten einschl. evtl. erforderlicher Haftbrücken, als Grundlage für die nachfolgend beschriebene Abdichtung.;130,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Wandabdichtung, aussen, Treppenhaus KG;60,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;Wandabdichtung, aussen, in Streifenform an den Stossfugen der Halbfertigteilwände und im Übergang Boden / Wand;235,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+50;Sockelabdichtung, aussen, hinter der Verblendung mit rissüberbrückender, mineralischer Dichtungsschlämmen MDS gemäß DIN 18533,;100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+60;im Bereich der bodentiefen Fenster.;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Arbeits- und Schutzgerüste mit voll eingedielten;1700,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;Gerüstvorhaltung der vorst. Positionen, gemäß VOB,;68000,0;m2Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Konsolauskragung 60 cm mit Bohlenabdeckung,;800,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;Konsolvorhaltung der vorst. Positionen, gemäß VOB, Abrechnung nach Länge der Konsolausleger je vorgehaltene Woche.;16000,0;mWo;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+50;Konsolauskragung 30 cm mit Bohlenabdeckung,;800,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+60;Konsolvorhaltung der vorst. Positionen, gemäß VOB, Abrechnung nach Länge der Konsolausleger je vorgehaltene Woche.;16000,0;mWo;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+70;innenliegender Seitenschutz an den Konsolauskragungen einschl. der dafür erforderlichen Einsteckpfosten,;600,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+80;Treppenturm mit Systemtreppen aus Aluminium,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+90;Transportplattform in verschiedenen Höhen am Gerüst mittels Konsolauslager anbringen, Plattformgröße ca. 300 x 100 cm,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+100;Bauaufzug für Personen und Material,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+110;Bauaufzug vorhalten und betreuen, gemäß VOB, Abrechnung nach Stück je vorgehaltene Woche.;20,0;StWo;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+120;Innenliegenden Seitenschutz vorhalten gemäß VOB, Abrechnung nach m je vorgehaltene Woche.;24000,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+130;Treppenturm vorhalten, gemäß VOB, Abrechnung nach Stück je vorgehaltene Woche.;80,0;StWo;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+140;Transportplattform vorhalten, gemäß VOB, Abrechnung nach Stück je vorgehaltene Woche.;80,0;StWo;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+150;Gitterträger zur Überbrückung offener Bereiche;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+160;Gitterträger der vorst. Position vorhalten gemäß VOB, Abrechnung nach Stück je vorgehaltene Woche.;240,0;StWo;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+170;Arbeitsgerüst umankern im Zuge der Verblendarbeiten,;1750,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+180;Gerüstbühnen  im Aufzugsschacht nach Angabe;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+190;Absturzsicherung vor den Öffnungen zum Aufzugsschacht;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Stundenlohnarbeiten durch Bauvorarbeiter/-in;20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;Facharbeiter/ Geselle;40,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Helfer/Azubi (3.Lehrjahr);20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;Einsatz eines Baggers, 0,70 m³;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+50;Einsatz eines Radladers, 100 PS;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+60;Verrechnungssatz für Hochbaukran;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+70;Verrechnungssatz für Flex / Winkelschleifer-Einsatz;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+80;Verrechnungssatz für Bohr-/Stemmhammer-Einsatz;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+90;Wassersauger zum absaugen von Tagwasser im Gebäude auf Anweisung einschl. Bedienung;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Glasrahmentrennwand einschl. Türen ausbauen.;13,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;Vorhandene WC-Trennwände  ausbauen und fachgerecht entsorgen.;19,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Vorhandene Wandfliesen ausbauen und fachgerecht entsorgen.;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;Vorhandene Bodenfliesen ausbauen und fachgerecht entsorgen.;28,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+50;Vorhandenen Bodenbelag aus Linoleum ausbauen und fachgerecht entsorgen.;225,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+60;Staubschutzwand als nichttragende innere Trennwand;58,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+70;Mauerwerk abbrechen, Wanddicke 24 cm zzgl. Putz,;36,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+80;Mauerwerk abbrechen, Wanddicke 11,5 cm zzgl. Putz,;42,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+90;Werksteinbelag in Streifen aufschneiden und herausnehmen einschl. der Trittschalldämmung.;3,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+100;Mauerwerk der Innenwände, nichttragend,;18,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+110;Ausgleichsschicht/Kimmschicht am Wandfuß aus Mauersteinen, aus Kalksandsteinen DIN EN 771-2 in Verbindung mit DIN 20000-402, Höhe der Ausgleichsschicht über 7,5 bis 10 cm, Mauerwerksdicke 24 cm.;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+120;Vorhandene Abhangdecke als Trockenbau-Rasterdecke einschl. Unterkonstruktion ausbauen und fachgerecht entsorgen.;273,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+130;Herstellen der Türöffnung in der Stahlbetonwand.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+140;Abbruch der Mauerwerkswand, aus Mauerziegel und Wandbelag. Das Abbruchmaterial ist fachgerecht zu entsorgen, einschl. Transport- und Entsorgungskosten.;38,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+150;Bauzeitliche Abstützung der Decken für den Stahlträgereinbau, bestehend aus Stahlträgern, Stützen und Schwellhölzern. Die Stahlträger werden vom KG bis ins 2. OG eingebaut. Die Decken sind durchgehend bis in den Keller auf Oberkante Sohle bauzeitlich abzufangen.;13,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+160;Auflager für Abfangträger herstellen,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+170;Stahlträger für Abfangungen von Deckenbauteilen, nach Zeichnung und Angabe werkstattmäßig vorbereiten, mit Korrosionsschutz (2 x Grundanstrich) versehen und örtlich verbauen, einschl. 3 cm Quellmörtel oberseitig des Stahlträgers, einschl. Unterstützung bis zur Aushärtung der Ausmörtelung der Auflage;12,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+180;Profilstahl liefern, verschiedene Profilabmessungen, Stahlgüte S235.;450,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+190;Stahlträger zur brandschutztechnischen Ertüchtigung mit Gipsmörtel nach DIN EN 13279-1 mit DIN 18550-2 bzw. DIN EN 13914-2 verputzen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+200;Stahlträger zur brandschutztechnischen Ertüchtigung mit Gipsmörtel nach DIN EN 13279-1 mit DIN 18550-2 bzw. DIN EN 13914-2 verputzen.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Bodenaushub im Homogenbereich A1 + A2 (Auffüllungen MuBo, Sand + Schluff), partiell mit Glasasche, Schotter, Bauschutt und Asphaltbruch durchsetzt, ausheben und im Baustellenbereich separieren.;60,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;Hartkalksteinschotter mit Güteschutzzeugnis,;8,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Wandöffnung herstellen in der Aussenwand am Kriechkeller,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;Stahlblechklappe, doppelwandig mit Dämmkern, als Zugang zum Kriechkeller einschl. Stahleckzarge liefern und in die vorgenannte Öffnung aussenbündig, nach aussen aufschlagend, einbauen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Aushub der Asphaltschicht als Vorbereitung für die Herstellung der Rohrgräben.;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;Aushub der Schotterschicht als Vorbereitung für die Herstellung der Rohrgräben.;6,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Bodenaushub für Leitungsgräben außerhalb des Gebäudes,;410,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;Bodenaushub für Leitungsgräben außerhalb des Gebäudes,;160,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+50;Rohrgrabenverbau mit Systemverbaumodulen,;225,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+60;Transport, Kippgebühr und Entsorgung des Bodenaushubs der;1100,0;to;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+70;Zulage zur Vorposition BM 0, Transport, Kippgebühr und Entsorgung des Bodenaushubs gemäß Ersatzbaustoffverordnung BM F1.;320,0;to;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+80;Zulage zur Position Aushub BM 0, Zuordnung gemäß Ersatzbaustoffverordnung BM F2, sonst wie in vorstehender Position beschrieben.;150,0;to;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+90;Zulage zur Position Aushub BM 0, Zuordnung gemäß Ersatzbaustoffverordnung BM F3, sonst wie in vorstehender Position beschrieben.;50,0;to;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+100;Verdichtungsfähigen Boden,;500,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+110;Boden der anstehenden Homogenbereiche gemäß ZTVE-StB in Handarbeit und Maschinenschachtung z.B. für das Herstellen von Querschlägen zwecks Feststellung der Lage von Leitungen aller Art ausheben und abfahren bzw., wenn geeignet, seitlich lagern und wieder einbauen.;20,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+120;Offene Wasserhaltungsarbeiten für die Trockenlegung der Baugruben ca. 0,50 m unter Baugrubensohle herstellen und während der gesamten Bauzeit unterhalten.;225,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+130;Bodenaustausch unterhalb Rohrauflager/Flächenfilter aus filterstabilem Kalksteinschotter 0/45 mm herstellen. wasserhaltenden sowie wasserempfindliche anstehende Böden gemäß ZTVE-StB ausheben, laden und zur freien Verwendung des AN abfahren.;75,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+140;Bodenaustausch unterhalb Rohrauflager/Flächenfilter aus Grobschlag 20/80 mm herstellen. Nicht ausreichend standfesten anstehenden Boden, gemäß ZTVE-StB  ausheben, laden und zur freien Verwendung des AN abfahren.;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+150;In Baugruben angetroffene Versorgungskabel während der Bauarbeiten bei Bedarf an Holz- oder Stahlträgern so aufhängen und sichern, dass sie sich nicht verschieben können. Inklusive des erforderlichen erschwerten Aushubes unterhalb der Leitungen in Bodenklasse 3-5, inklusive waagerechten oder senkrec;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+160;Sonst wie in der Vorposition, jedoch:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+170;Sonst wie in der Vorposition, jedoch:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+180;Wie zuvor, jedoch:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+190;In Baugruben angetroffene Versorgungskabel während der Bauarbeiten bei Bedarf an Holz- oder Stahlträgern so aufhängen und sichern, dass sie sich nicht verschieben können. Inklusive des erforderlichen erschwerten Aushubes unterhalb der Leitungen, inklusive waagerechten oder senkrechten Holzverbau im ;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+200;Vorhandene Versorgungskabel innerhalb des Rohrgrabens von Hand freilegen, seitlich neben dem Rohrgraben ablagern, während der Bauzeit mit Gerüstbohlen abdecken und nach Beendigung der Rohrverlegung auf dem planierten eingefüllten Boden neu verlegen.;12,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+210;Wie zuvor, jedoch:;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+220;Wie zuvor, jedoch:;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+230;Dynamischen Plattendruckversuch im Rohrgraben zur Überprüfung der Verdichtung und der Standfestigkeit der unteren Bettung sowie der Leitungszone durchführen.;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+240;Rammsondierungen mit der leichten Rammsonde nach DIN 4094 (DPL-10 bzw. DPL-5) in Leitungsgraben durchführen, einschließlich Auswertung und Beurteilung der Ergebnisse durch einen Gutachter in einem Untersuchungsbericht.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Fundamenterder aus Bandstahl verzinkt;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;Ringerder 10 mm Edelstahl, V4A;530,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Anschlußfahnen 10 mm, V4A, bis 3,m Länge;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;Erdungsanschlüsse an Metallkonstruktion;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+50;Mauerdurchführungen bis 60 cm Wandstärke;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+60;Monteurstunden;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+70;Helferstunden;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+80;Revisionsunterlagen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Betonleerrohr M20;330,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;Betonleerrohr wie vor, jedoch M25;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Betonleerrohr wie vor, jedoch M16;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;Zugdraht zum Einziehen in die vorher genannten Leerrohrsysteme;550,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+50;Gerätedose EH 41mm / Ortbeton;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+60;Gerätedose EH 58 mm, Ortbeton;110,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+70;Geräte Verbindungsdose EH 91 mm, Durchmesser 60 mm, Ortbeton;38,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+80;Betonbaudose 60;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+90;Geräte-Verbindungsdose, als Electronic-Dose;38,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+100;Geräte-Verbindungsdose, als Doppeldose;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+110;Verbindungsdose Einbautiefe 95mm,;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+120;Verbindungskasten EH 80 mm, Ortbeton, 128 x 128 mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+130;Verbindungskasten EH 84 mm, Ortbeton, 180 x 180 mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Monteurstunden;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;Helferstunden;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Revisionsunterlagen Leerrohrsysteme;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Zulage für Revisionsschacht;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;Zulage für Revisionsschacht;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+50;Zulage für Revisionsschacht;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+60;Schachtabdeckung C250 für vorgenannten Revisionsschacht;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+70;KG 2000 Rohre SN10 DN 110;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+80;wie vor, jedoch KG 2000 - Rohr DN 125;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+90;wie vor, jedoch KG 2000 - Rohr DN 160;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+100;wie vor, jedoch KG 2000 - Rohr DN 200;55,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+110;wie vor, jedoch KG 2000 Bogen 15-90° DN 110,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+120;wie vor, jedoch KG-2000 Bogen 15-90°, DN 125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+130;wie vor, jedoch KG-2000 Bogen 15-90°, DN 160;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+140;wie vor, jedoch KG-2000 Bogen 15-90°, DN 200;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+150;wie vor, jedoch KG 2000 - Abzweig 45°, DN200/200/110;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+160;wie vor, jedoch KG 2000-Abzweig 45°, DN 200/200/125;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+170;wie vor, jedoch KG 2000-Abzweig 45°, DN 200/200/160;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+180;wie vor, jedoch KG 2000-Abzweig 45°, DN 200/200/200;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+190;wie vor, jeodch KG 2000 - Reduktion DN 125/100;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+200;wie vor, jeodch KG 2000 - Reduktion DN 160/125;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+210;wie vor, jeodch KG 2000 - Reduktion DN 200/160;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+220;Anschluss einer Grundleitung DN 150;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+230;Anschluss einer Grundleitung DN 200 an den Übergabeschacht einschl. Lieferung und Montage der erforderlichen Anschlussmaterialien wie z.B. Verbinder sowie Dichtungs- und Befestigungsmaterialien;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+240;Demontage und Entsorgung vorh. Mischwassergrundleitung;65,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+250;KG 2000 Rohre SN10 DN 110;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+260;wie vor, jedoch KG 2000 Bogen 15-90° DN 110,;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+270;wie vor, jedoch KG 2000 - Abzweig 45°, DN 110/110/110;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+50;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+60;Zulage für Revisionsschacht;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+70;Zulage für Revisionsschacht;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+80;Zulage für Revisionsschacht;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+90;Schachtabdeckung C250 für vorgenannten Revisionsschacht;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+100;Schachtabdeckung D400 für vorgenannten Revisionsschacht;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+110;KG 2000 Rohre SN10 DN 110;55,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+120;wie vor, jedoch KG 2000 - Rohr DN 125;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+130;wie vor, jedoch KG 2000 - Rohr DN 160;75,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+140;wie vor, jedoch KG 2000 Bogen 15-90° DN 110,;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+150;wie vor, jedoch KG-2000 Bogen 15-90°, DN 125;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+160;wie vor, jedoch KG-2000 Bogen 15-90°, DN 160;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+170;wie vor, jedoch KG 2000 - Abzweig 45°, DN125/125/110;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+180;wie vor, jedoch KG 2000-Abzweig 45°, DN 150/150/110;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+50;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+60;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+70;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+80;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+90;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+100;Revisionsschacht (Einsteigschacht) aus Betonfertigteilen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+110;Zulage für Revisionsschacht;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+120;Zulage für Revisionsschacht;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+130;Zulage für Revisionsschacht;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+140;Schachtabdeckung C250 für vorgenannten Revisionsschacht;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+150;Schachtabdeckung D400 für vorgenannten Revisionsschacht;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+160;KG 2000 Rohre SN10 DN 110;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+170;wie vor, jedoch KG 2000 - Rohr DN 125;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+180;wie vor, jedoch KG 2000 - Rohr DN 160;175,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+190;wie vor, jedoch KG 2000 - Rohr DN 200;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+200;wie vor, jedoch KG 2000 Bogen 15-90° DN 110,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+210;wie vor, jedoch KG-2000 Bogen 15-90°, DN 125;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+220;wie vor, jedoch KG-2000 Bogen 15-90°, DN 160;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+230;wie vor, jedoch KG-2000 Bogen 15-90°, DN 200;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+240;wie vor, jedoch KG 2000 - Abzweig 45°, DN200/200/110;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+250;wie vor, jedoch KG 2000-Abzweig 45°, DN 200/200/150;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+260;wie vor, jedoch KG 2000-Abzweig 45°, DN 160/160/160;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+270;wie vor, jeodch KG 2000 - Reduktion DN 125/100;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+280;wie vor, jeodch KG 2000 - Reduktion DN 160/125;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+290;wie vor, jeodch KG 2000 - Reduktion DN 200/160;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Hebeanlage;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;WU-Einbauset;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Abdeckplatte schwarz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;Zulaufstutzen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+50;Stück Dichtung DN70 für Rohrdurchführung,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+60;Montage der v.g. Hebeanlage;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+70;Inbetriebnahme Hebeanlage;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+10;Wanddurchführung für KG 2000;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+20;Wanddurchführung s.w.v., jedoch DN 125;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+30;Wanddurchführung s.w.v., jedoch DN 160;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+40;Bodendurchführung für KG 2000 DN 110;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+50;Bodenablauf für KG 2000;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+60;Mauerkragen für Luftleitung, DN 710;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+70;Mauerkragen für Luftleitung s.w.v., jedoch DN 800;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+80;Lüftungsrohr DN 710 für Erdverlegung,;1,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+90;Lüftungsrohr DN 800 für Erdverlegung,;1,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+100;Endstopfen DN 710,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83
+110;Endstopfen DN 800,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/SGK-2026-07-16-LV Rohbau (1).X83

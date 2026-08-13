@@ -1,0 +1,73 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Wechselrichter für Photovoltaikanlage, trafolos, AC-seitig kurzschlussfest, erdschlussüberwacht, DC-seitig einschl. Lasttrennschalter, als Multi-Strang-Wechselrichter, netzseitig 3-phasig,;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+20;Wechselrichter für Photovoltaikanlage, trafolos, AC-seitig kurzschlussfest, erdschlussüberwacht, DC-seitig einschl. Lasttrennschalter, als Multi-Strang-Wechselrichter, netzseitig 3-phasig,;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+30;Wechselrichter für Photovoltaikanlage, trafolos, AC-seitig kurzschlussfest, erdschlussüberwacht, DC-seitig einschl. Lasttrennschalter, als Multi-Strang-Wechselrichter, netzseitig 3-phasig,;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+40;Wechselrichter für Photovoltaikanlage, trafolos, AC-seitig kurzschlussfest, erdschlussüberwacht, DC-seitig einschl. Lasttrennschalter, als Multi-Strang-Wechselrichter, netzseitig 3-phasig,;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+50;Generatoranschlusskasten 1 MPP-Tracker (1x1 String);4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+60;Generatoranschlusskasten 2 MPP-Tracker (2x1 String);2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+70;Generatoranschlusskasten 3 MPP-Tracker (3x1 String);4,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+80;PV AC-Sammelschrank;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+90;Data Manager;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+100;Befehlsgerät in Komplettbauform, als NOT-AUS-Schalter Photovoltaik, Betätigung durch Drucktaste, mit Kontaktelement 6 A, 1 S und 1 Ö, Gebrauchskategorie AC-15, mit Aufbaugehäuse, Schutzart IP 65 DIN EN 60529 (VDE 0470-1), Frontausführung quadratisch mit systembedingtem Bezeichnungsschild.;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+110;Gitterrinne für Kabelträgersystem DIN EN 61537 (VDE 0639), einschl. aller systembedingten Form- und Verbindungsstücke, aus feuerverzinktem Stahl DIN EN ISO 1461, Seitenhöhe mind. 35 mm, Breite mind. 100 mm.;200,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+120;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 16 RE, Cu-Zahl 154, auf vorh. Kabelrinnen oder in offene Kanäle.;300,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+130;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 16 RE, Cu-Zahl 154, mit Bügelschellen auf vorh. Ankerschienen oder Kabelleiter.;20,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+140;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-Y(St)Y, 2 x 2 x 0,8 Bd.;400,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+150;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-4-1 (VDE 0819-4-1), Kategorie 7 DIN EN 50173-1 (VDE 0800-173-1), geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Leitungswiderstand 0,065 Ohm/m und Kabeldurchmesser 0,007 m DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse F, DIN EN 5;400,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+160;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 90, DIN 4102-12, JE-H(St)H, 2 x 2 x 0,8 Bd, E 90 konforme Verlegung mit den dafür zertifizierten Befestigungsmitteln.;200,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+170;Unterkonstruktion Solarmodule, Ausrichtung Ost/West, Neigung 15°;193,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+180;Ballaststein für PV-Flachdachsystem;600,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+190;Photovoltaikmodul, zur Aufdachmontage,;193,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+200;Gummischlauchleitung DIN EN 50618 (VDE 0283-618) H1Z2Z2-K 1 x 6, Cu-Zahl 58, Farbton rot.;600,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+210;Gummischlauchleitung DIN EN 50618 (VDE 0283-618) H1Z2Z2-K 1 x 6, Cu-Zahl 58, Farbton schwarz.;600,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+220;Fassadenunterkonstruktion zur Befestigung der BIPV-Module;235,0;m2;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+230;Montage der PV-Module einschließlich Backrail-Befestigungssystem als Tragesystem.;235,0;m2;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+240;PV-Modul S-1;14,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+250;PV-Modul S-2;14,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+260;PV-Modul S-3;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+270;PV-Modul S-4;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+280;PV-Modul S-5;22,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+290;PV-Modul S-2;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+300;PV-Modul O-1;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+310;PV-Modul O-2;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+320;PV-Modul O-3;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+330;PV-Modul O-4;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+340;Mehrkosten für Einfärbung der Module;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+350;örtliches Aufmaß vor Anlieferung der Module;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+360;Verbindungskabel PV-Fassadenmodule;62,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+370;Gummischlauchleitung DIN EN 50618 (VDE 0283-618) H1Z2Z2-K 1 x 6, Cu-Zahl 58, Farbton rot.;400,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+380;Gummischlauchleitung DIN EN 50618 (VDE 0283-618) H1Z2Z2-K 1 x 6, Cu-Zahl 58, Farbton schwarz.;400,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+390;Metall-Schutzschlauch, flexibel, zur Überbrückung der Brandsperre;10,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+400;UV-beständiger und halogenfreier  Schutzschlauch;100,0;m;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+10;Einrichten und Räumen der Baustelle;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+20;Vorhalten und Betreiben der Baustelleneinrichtung;10,0;Mt;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+30;Krangestellung für Materialtransporte auf das Dach des 5 OG;24,0;h;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+40;Krangestellung für Materialtransporte für die PV-Fassadenmodule;48,0;h;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+10;Brandschutzabschottung an Kabel-/Leitungsanlagen als Mineralwolleplattenschott, Feuerwiderstandsklasse S 90 DIN 4102-9, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, eckiger Durchbruch, Querschnitt über 0,02 bis 0,05 m2, Baustoffklasse DIN 4102-1 A (nichtbren;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+20;Nachträgliches Öffnen und feuerwiderstandsfähiges;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+10;Abstimmung mit dem Gewerk Starkstromanlagen;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+20;Abstimmung Gewerk Fassadenbau;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+30;Abstimmung und Integration Gewerk Gebäudeautomation;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+40;Windlastberechnung und Windgutachten;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+50;Bemusterung der PV-Module;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+10;Stundenlohnarbeiten durch Obermonteur/-in;10,0;h;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+20;Stundenlohnarbeiten durch Monteur/-in;10,0;h;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+30;Stundenlohnarbeiten durch Helfer/-in;8,0;h;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+10;Bezeichnungsschild;6,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+20;Hinweisschild Photovoltaikanlage;1,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+30;Kennzeichnung von Kabeln mit Kabelerkennungsstreifen aus Kunststoff, einschl. Lieferung, Befestigung an Kabelenden.;140,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+40;Bezeichnungsschild, Beschriftung gedruckt, befestigen durch Kleben, Ausführung gemäß Einzelbeschreibung,;2,0;St;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+10;Mitwirken am IAÜ-Prozess;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+20;Besprechungsreihe zum IAÜ-Prozess;12,0;h;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+30;Zwischenzeitlicher Betrieb;12,0;Wo;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+40;Nachweis der Leistungsbereitstellung für PV-Fassadenmodule;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+50;Nachweis der Leistungsbereitstellung für PV-Dachmodule;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+60;Mitwirken und Teilnahme am 1:1-Test;4,0;h;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+70;Simulation Schwarzschaltung, Mitwirken und Teilnahme;8,0;h;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+80;Inbetriebnahme der PV-Anlagen im Rahmen der IBM-Phase 1;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+90;Wiederholte Einweisung;4,0;h;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+100;Teilnahme an einem zweiwöchigen gewerkeübergreifenden Probebetriebs zum TMon;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+10;Erstellung von Werk- und Montageunterlagen für das Gewerk Photovoltaik;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+20;Prüfung der gesamten elektrischen Anlagen nach DIN VDE 0100-600;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+30;Erstellung Übersichtsplan der Photovoltaikanlage für die Feuerwehr;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83
+40;Erstellen von Revisionsunterlagen für das Gewerk Photovoltaik;1,0;psch;gaeb;leistungsbeschreibungen/GAEB-Datei 26 060-34 EU.X83

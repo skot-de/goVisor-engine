@@ -1,0 +1,64 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+5;Technische Bearbeitung (Werkstatt- und Montageplanung) für alle in den nachfolgenden Leistungspositionen beschriebenen Arbeiten der Vergabeeinheit gem. ZTV, VOB/C und Vortexten.;1,0;psch;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+10;Teleskopbühne als Arbeits- und Montagebühne, Anhängefahrzeug, mit seitlichen Auslegern, mit externer Energieversorgung, inkl. Bedienung durch AN, Gebrauchsüberlassung nach gesonderter Position abzurechnen.;1,0;St;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+15;Gebrauchsüberlassung für die stationäre Teleskopbühne. Abrechnung je Tag (d).;15,0;d;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+5;Lieferung & Montage der Mauerwerkskrone auf bauseitiger Unterkonstruktion als Dachrandabschluss.;87,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+10;Kehlblech als untergelegte Dachkehle, auf Schalung aufliegend mit vertieftem Wasserlauf und einfacher Rückkantung lt. Detail;87,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+15;Traufblech als Rinneneinlaufblech.;250,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+20;Gesimsabdeckung;110,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+25;Dachrinne, aufliegend und befestigt an Vorpositionen, kastenförmig, nach DIN EN 612.;110,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+30;"Fallrohranschlüsse der Vorposition Dachrinne an Folgeposition Fallleitung als gelötete Klempnerarbeit gemäß Detail und Referenzbild Plan ""Ortgang, First & Traufe ).";13,0;St;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+35;Regenfallleitung, rund, nach DIN EN 612 zum Anschluss an Dachrinnensysteme.;75,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+40;Ausbildung der Regenfalleitung innenliegend im Bereich der Alukästen / Rücksprünge Fassade.;75,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+45;Herstellung des Regeldetails Dachrandanschluss Bereich Alukästen;9,0;St;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+50;Standrohr aus verzinktem Stahlrohr.;10,0;St;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+55;Speier des Flachdaches, bis zu DN 100 mm,;10,0;St;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+60;Stundensatz für Leistungen, welche nicht in den Positionen erfasst sind und nur auf ausdrückliche Anweisung der Bauleitung gegen Nachweis zur Ausführung kommen.;20,0;h;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+65;Stundensatz für Leistungen, welche nicht in den Positionen erfasst sind und nur auf ausdrückliche Anweisung der Bauleitung gegen Nachweis zur Ausführung kommen.;20,0;h;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+5;Attikaabdeckung aus Titanzinkblech, 3-seitig, 4-fach gekantet, mit Gefälle zur Dachseite.;44,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+10;Lieferung & Montage der Unterkonstruktion;105,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+15;Strukturierte Trennlage aus Kunststoff-Faservlies unter;105,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+20;Wandbekleidung in Winkelstehfalztechnik, auf vorhandener Unterkonstruktion.;105,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+25;Herstellen von kreisrunden oder eckigen Ausschnitten / Bohrungen für Speier, Leuchten u.dgl. bis zu einer Größe von 15x15 cm.;20,0;St;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+30;Lieferung & Montage der Unterkonstruktion für die Wand-/Gaubenbekleidung Winkelstehfalz der Rundgauben.;60,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+35;Strukturierte Trennlage aus Kunststoff-Faservlies unter;60,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+40;Gauben- / Wandbekleidung in Winkelstehfalztechnik, auf vorhandener Unterkonstruktion.;60,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+5;Erstellung der Unterkonstruktion;150,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+10;Wandbekleidung in Winkelstehfalztechnik, auf vorhandener Unterkonstruktion.;150,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+15;Unterer Abschluss der Stehfalzwandbekleidung als stehend gerader oder runder Abschluss mit gekantetem Einhangblech und Lochblechstreifen.;44,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+20;"Oberer Abschluss der Stehfalzwandbekleidung als stehend gerader ""Fassadenfirst"" ohne zusätzliches Abdeckblech.";44,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+25;Insektenschutzgitter/Hinterlüftung als Winkelprofil im Bereich des aller;200,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+30;Insektenschutzgitter/Hinterlüftung als Winkelprofil im Bereich des aller;200,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+35;Laibungsausbildung und Stehfalzwandbekleidung mit Laibungsblechen.;20,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+40;Durchdringung in Blechwandbekleidungen.;5,0;St;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+45;Durchdringung in Blechwandbekleidungen.;5,0;St;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+50;Zulage für die Herstellung von Durchdringungen im Falzbereich der Blechschare anstelle Einbau in Scharenfläche.;1,0;St;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+55;Attikaabdeckung aus Titanzinkblech, 3-seitig, 4-fach gekantet, mit Gefälle zur Dachseite.;44,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+5;Leistungsumfang;28,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+10;wie Vorposition, jedoch hier über dem Eingangsbereich.;65,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+15;Liefern und montieren von:;80,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+20;Herstellen von kleinteiligen Bohrungen / Ausschnitte für Kabel, Leuchtmittel und dergleichen, bis DN 67 mm ( Größe Dosenbohrer ) inkl. Entgraten.;5,0;St;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+25;Durchdringung in Blechwandbekleidungen.;5,0;St;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+5;Aluminiumverkleidung  zwischen Fensterelementen;12,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+10;Aluminiumverkleidung  zwischen Fensterelementen / Eingangsüberdachung;8,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+15;Aluminiumverkleidung  zwischen Dachrand / Eingangsüberdachung;15,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+20;"Attikaabdeckung / Dachrandblech lt. Systemdetail ""Blech1""";15,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+25;Zulage für die Ausführung eines Notüberlaufs / Speiers lt. Detailplanung in DRB3.;1,0;St;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+30;Aluminiumverkleidung über Fensterelementen;8,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+35;"Attikaabdeckung / Dachrandblech lt. Systemdetail ""Blech1""";8,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+40;Zulage für die Verkleidung von bauseitigen Notüberlaufen mit DN100 mm-Abmessungen per rechteckig gekanntetem Verkleidungsrohr.;6,0;St;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+45;Aluminiumverkleidung  zwischen Fensterelementen;8,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+50;Aluminiumverkleidung über Treppenhaus;12,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+55;systemkonforme Aluminiumverkleidung des TRH-Fensters im Innenbereich.;12,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+60;"Attikaabdeckung / Dachrandblech lt. Systemdetail ""Blech1""";8,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+65;Aluminiumverkleidung unter Fensterelementen;7,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+70;Aluminiumverkleidung oberhalb Fensterelement;4,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+75;"Attikaabdeckung / Dachrandblech lt. Systemdetail ""Blech1""";4,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+80;Aluminiumverkleidung  zwischen Fensterelementen;4,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+85;Aluminiumverkleidung am Sockelpunkt der Fensterelemente;65,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+90;PIR-Dämmung, WLG 023 unterhalb der P+R-Fassade als Unterbau Sockelprofil verkleben.;65,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+95;Zulage für Sockelhöhe des o.g. Sockelprofils & der PIR-Dämmung bis zu 40 cm bei abgesenktem Geländeverlauf.;30,0;m;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+5;Aluminiumverkleidung Einhausung Haupteingang;32,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+10;wie Vorsposition, hier jedoch Mensa-Vordereingang:;50,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+15;Aluminiumverkleidung an Tür;5,0;m²;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83
+20;Herstellen von kreisrunden oder eckigen Ausschnitten / Bohrungen in o.g. Eingangsfassaden für Klingeln, Leuchten u.dgl. bis zu einer Größe von bis zu 15x15 cm.;5,0;St;gaeb;leistungsbeschreibungen/20260709_lv_klempner_fassade_gs_neuenhaus.x83

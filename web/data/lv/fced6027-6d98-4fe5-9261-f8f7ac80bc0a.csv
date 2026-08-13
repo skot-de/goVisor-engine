@@ -1,0 +1,505 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Bauzaun nach Unterlagen des AG einschl. der erforderli-;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Bauzaun innerhalb der Baustelle umsetzen. Nicht wieder-;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Absperren und Kennzeichnen der Baustelle, sowie der Baustellenausfahrten auf öffentliche Straßen nach StVO, StVZO, den Unfallverhütungsvorschriften, die RSA, sowie den ergänzenden Bestimmungen des jeweiligen Bundeslandes, den Vorschriften der Verkehrsbehörde mit elektrischer Beleuchtung, den erforde;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Baustelleninformationsschild einschließlich Aufstell-;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Baustelleninformationsschild und Aufstellvorrichtung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Notwendige Abstimmungen mit Dritten und sämtliche Koordinierungsleistungen, die zur jeweiligen Verkehrsführungsphase notwendig sind.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Beantragung der verkehrsbehördlichen Anordnungen für alle Verkehrsführungsphasen (Vollsperrung Hasentorstraße, Umleitungsstrecke für Hasentorstraße und Umleitung für Fußgänger) und Anpassung bei wesentlichen Änderungen bei den zuständigen Verkehrsbehörden.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Beschilderung der Verkehrsführung für die Vollsperrung der Hasentorstraße im Baubereich nach StVO, RSA und den Vorschriften der Verkehrsbehörde mit den erforderlichen Verkehrs- und Hinweiszeichen, ggf. erforderlichen Gelbmarkierungen sowie elektrischer Beleuchtung herstellen, incl. An- und Abtranspo;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Beschilderung der Umleitungsstrecke nach StVO, RSA und den Vorschriften der Verkehrsbehörde mit den erforderlichen Verkehrs- und Hinweiszeichen, Plantafeln, ggf. erforderlichen Gelbmarkierungen sowie elektrischer Beleuchtung herstellen, incl. An- und Abtransport, Vorhaltung, Betrieb sowie ggf. erfor;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Beschilderung der Umleitungsstrecke für Fußgänger nach StVO, RSA und den Vorschriften der Verkehrsbehörde mit den erforderlichen Verkehrs- und Hinweiszeichen, sowie elektrischer Beleuchtung herstellen, incl. An- und Abtransport, Vorhaltung, Betrieb sowie ggf. erforderlicher mehrmaliger Umstellungen ;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Kontrolle der Verkehrssicherung an Arbeitsstellen und der Umleitungsführungen einschließlich temporärer Verkehrsschilder, baulicher Leitelemente gemäß ZTV-SA durchführen. Die Kontrolle ist unmittelbar nach deren Durchführung zu erfassen und zu dokumentieren. Arbeits- und Hilfsmittel sind vom AN zu s;300,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Anliegerinformaton erstellen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Gebühren, gem. VOB-B §4, für sämtliche erforderliche öffentlich-rechtliche Genehmigungen und Erlaubnisse, Schachtscheine, Sondernutzungen für die Erlaubnis zur Grundstücksbenutzung und Zustimmungen. Sowie die Aufwendungen für deren Erlangung wie Abstimmungsaufwendungen, Ortstermine, Erstellen der no;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Koordinierung der Bauarbeiten und aller am Bauvorhaben beteiligter Firmen während der gesamten Bauzeit. Die Koordinierungsaufwendungen gelten für die Gesamtbaumaßnahme. Vergütet wird der über die normale Baukoordination hinausgehende Aufwand durch die verschiedenen Vorhabenbeteiligten, wie z.B. Ver-;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Beweissicherung nach VOB/B § 3 Ziff. 4 durchführen. Beweissicherung vor Aufnahme der Bautätigkeit gemeinsam mit dem AG und den entsprechenden Eigentümern durchführen. Beweissicherung für im Baubereich, im Baufeld und im Zufahrtsbereich zur Baustelle vorhandene Bauwerke, Wege, Gewässer und Straßen et;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Nach Abschluss der Arbeiten ist die schriftliche Zustimmung der von den Bauarbeiten betroffenen Grundstücks- und sonstigen Eigentümern über die ordnungsgemäße Angleichung der Grundstückszugänge sowie -zufahrten bzw. der Grundstücks- eingründungen sowie die Freistellung von Ansprüchen gegenüber dem A;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Durchführung der Dokumentation zur Sicherung der schadlosen Verwertung gemäß § 5 Abs. 3 KrW - / AbfG. Dokumentation vom AN erstellen und Entsorgungsnachweis dem AG übergeben.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Einholung der Schachtgenehmigungen von allen Versorgungsunternehmen bzw. Rechtsträgern öffentlicher und privater Leitungen, die von der Baumaßnahme betroffen sind.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Suchgraben nach Unterlagen des AG einschließlich Hand-;50,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Suchgraben nach Unterlagen des AG einschließlich Hand-;50,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Sicherung und Schutz der im Baubereich vorhandenen Gasleitung (Stadtwerke Sangerhausen) inkl. Schieber. Leitungsverlauf siehe Lageplan.;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Sicherung und Schutz der im Baubereich vorhandenen Trinkwasserleitung (Wasserverband Südharz) inkl. Schächte. Leitungsverlauf siehe Lageplan.;180,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Sicherung und Schutz der im Baubereich vorhandenen Regenwasserleitung (Wasserverband Südharz) inkl. Schächte (5 Stück). Leitungsverlauf siehe Lageplan.;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Vorhandenes Telekom-Kabel (bei Antreffen) trennen, aufnehmen und entfernen. Leitungen sind außer Betrieb. Notwendige Erdarbeiten sind einzukalkulieren.;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Vorankündigung gemäß Baustellenverordnung erstellen und;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Sicherheits- und Gesundheitsschutzplan (SiGe-Plan) nach;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Unterlage für spätere Arbeiten nach RAB 32 auf der;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Sicherheits- und Gesundheitsschutzkoordinator während;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Probenahme und Analyse der Ausbaumaterialien zur Entsorgung/ Wiederverwendung nach Ersatzbaustoffverordnung (EBV) neue Bundes-Bodenschutz- und Altlastverordnung (BBodschV neue Fassung) durchführen.;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Probenahme und Analyse der Ausbaumaterialien zur Entsorgung/ Wiederverwendung nach Richtlinien für die umweltverträgliche Verwertung von Ausbaustoffen mit teer-/pechtypischen Bestandteilen sowie für die Verwertung von Ausbauasphalt im Straßenbau (RuVA) durchführen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Baubegleitende Abfalluntersuchung für alle Böden.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Baubegleitende Abfalluntersuchung für alle ungebundenen Schichten.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Baubegleitende Abfalluntersuchung für alle Aufbruchmassen aus Beton / Naturstein, wie Abbruchbeton Brücke, Natursteinabbruch Brücke, Bahnschwellen, Tragschichten mit hydraulischen Bindemitteln, Pflaster, Borde, Schlacke etc..;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Baubegleitende Abfalluntersuchung für alle bituminösen und teerhaltigen Aufbruchmassen (Asphalt / Dichtungen). Entnahme einer repräsentativen Mischprobe, Dokumentation der Probenahme, Teilen der Proben und Herstellen von Rückstellproben, fachgerechte Lagerung, Rückstellproben >= 6 Monate.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Standsicherheitsnachweis aufstellen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Ausführungszeichnungen herstellen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Technische Bearbeitung einer Abbruchtechnologie, ggf. statische Berechnung erstellen, (u.a. Kranauswahl, Abbruchkonzeption) des vorhandenen Brückenbauwerkes analog ZTV-ING, Teil 1, Abschnitt 2 durchführen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Technische Bearbeitung einer Montagetechnologie, ggf. statische Berechnung erstellen, (u.a. Kranauswahl, Montagekonzeption) des Überbaues (Stahlverbundfertigteile) analog ZTV-ING, Teil 1, Abschnitt 2 durchführen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Werkstattplanung für sämtliche Ausstattungen wie z.B. Geländer / Berührungsschutz herstellen und in prüffähiger Form liefern.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Werkstattplanung für Stahlbau (Überbaufertigteile) herstellen und in prüffähiger Form liefern.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Bautagesberichte täglich aufstellen/führen und dem Auftraggeber bzw. der BÜ übergeben.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Bestandsunterlagen gemäß ZTV-Ing, Teil 1, Abschnitt 2,;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Lichtbilder über den wesentlichen Bauablauf des Bau-;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0100;"Leistungen zur Überwachung des Betonierens gemäß den Anforderungen der Überwachungsklasse 2, geregelt in der DIN 1045-3, im DIN-Fachbericht ""Beton"" sowie in den ZTV-ING, Teil 3 Massivbau.";1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0110;Prüfplan für die Eigenüberwachung des AN für alle ausgeschriebenen Bauleistungen unter Berücksichtigung der Vorschriften (ZTV's u.a.) aufstellen, dem AG zur Bestätigung vorlegen und eventuelle Prüfbemerkungen einarbeiten.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0120;Erstellung von Bestandsplänen IZ-Plan für den AG.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0130;Brückenhauptprüfung gemäß DIN 1076 in Verbindung mit dem Allgemeinesn Rundschreiben Straßenbau (ARS) Nr. 10/2013, über die RI-EBW-PRÜF, einschl. aller notwendigen Material- und Tragfähigkeitsprüfungen durchführen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Fläche nach Unterlagen des AG abräumen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Bäume fällen, höchstens 0,25 m über dem Erdboden;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Bäume fällen, höchstens 0,25 m über dem Erdboden;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Wurzelstöcke roden. Gemessen wird der Durchmesser der;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Wurzelstöcke roden. Gemessen wird der Durchmesser der;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Oberboden ggf. einschließlich Vegetationsdecke abtra-;310,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Oberboden ggf. einschließlich Vegetationsdecke abtra-;150,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Gefährlichen Abfall aus Abbruch laden, zur;270,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Boden bzw. Fels aus Abtragsbereichen profilgerecht;100,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0100;Baustoff für Bodenaustausch profilgerecht;100,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0110;Planum herstellen nach Unterlagen des AG.;1300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0120;Geeigneten Baustoff liefern, in Auftragsbereichen pro-;1150,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Übernehmen der Grundabsteckung, der Festpunktfelder in Lage und Höhe sowie des Baufeldes vom AG in der Örtlichkeit inkl. Prüfen der Festpunkte auf Abmarkungsmängel und Übereinstimmung mit den Festpunktbeschreibungen sowie Sichern der Fest- und Achspunkte inkl. der dazu erforderlichen Messungen. Erst;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Erstellen und Konkretisieren von Messprogrammen für Ingenieurbauwerke inklusive der Konzeption eines Sondernetzes für Setzungs- und Verformungsvermessung des Bauwerks auf Grund des Messstellenplans.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Erstellen eines Messkonzeptes und Durchführung der Messungen auf Maßgenauiglkeit der Fertigteile.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Verdichten des Lage- und Höhenfestpunktfeldes nach ZTV-Verm 2.3.2 und nach RAS-Verm inkl. Übergabe der Unterlagen für das ergänzte Lage- und Höhenfestpunktfeld an die Vermessungsstelle, die Bauoberleitung und die Örtliche Bauüberwachung.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Sondernetz nach Vorgaben des Messkonzeptes und ZTV-Verm 2.3.3 für Ing.Bauwerke herstellen:;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Übernehmen und Prüfen der vorhandenen Vermessung als Urgeländeaufnahme durch das Bauunternehmen als Grundlage für die Bauausführung. Nichtanerkennung bedarf der Schriftform spätestens zwei Wochen nach Übergabe der Daten. Bei Nichtanerkennung der übergebenen Daten ist eine gemeinsame Urgeländeaufnahm;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Absteckung Ingenieurbauwerk nach Lage und Höhe, sowie Absteckung der Straßenachse einschließlich der zugehörigen Kontrollmessungen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Durchführen und Dokumentieren von Eigenüberwachungsvermessungen während des Baues durch geeignete Messverfahren.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Durchführen der Messungen zur Erfassung von Setzungs- und Verformungsvermessung an Ingenieurbauwerken gemäß freigegebenem Messprogramm(en) von Baubeginn bis Bauwerksabnahme.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0100;Durchführen und Dokumentieren der fortlaufenden Bestandserfassung als Basis für die Teilbestandsdoku-mentation der beauftragten Leistung.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0110;Durchführen und Dokumentieren von Beweissicherungs- messungen zur Erfassung von Auswirkungen auf die Umgebung der Baumaßnahme gemäß Messprogramm.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0120;Ermittlung einer Ausgleichsgradiente unter Berücksichtigung der Rohbauistgradiente. Bestmögliche Angleichung an die Sollgradiente unter Beachtung der ZTV-ING, Teil 1, Abschnitt 4.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0130;Vorhandene Lage- und Höhenfestpunkte im Baubereich während der gesamten Bauzeit nach Wahl des AN mit geeigneten Mitteln sichern und unterhalten.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0140;Grenzpunkte bzw. -marken im Nahbereich der Baufeldgrenze vor Aufnahme der Arbeiten einmessen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Erstellen eines Messprogramms für die messtechnische;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Durchführung sämtlicher während der Bauausführung für;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Bestandsaufnahme zur Beweissicherung an Gleisen im Bereich der Baumaßnahme durchführen.;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Einsatz Sicherungsaufsicht.;40,0;Schi;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Verrechnungssatz als Zulage bei Arbeiten an Sonntagen;24,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Einsatz Sicherungs-, Absperr- und Überwachungsposten,;80,0;Schi;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Verrechnungssatz als Zulage bei Arbeiten an;48,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Erstunterweisung ALB durch die Fachdienste der DB AG für die;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Einsatz Beauftragter des Anlagenbeauftragten für Arbeiten in;40,0;Schi;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0100;Verrechnungssatz als Zulage bei Nachtarbeit, bei Arbeiten an;24,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0110;Feste Absperrung nach Ril 132.0118 und DGUV201-021;250,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0120;Feste Absperrung der vorhergehenden Position vorhalten und betreiben.;70000,0;md;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0130;Einsatz Sh2 - Scheibensteller.;40,0;Schi;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0140;Verrechnungssatz als Zulage bei Arbeiten an Sonntagen;24,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0150;Schutzhaltesignal (Sh2) als Tages- und Nachtzeichen (DS 301/DV 301) aufstellen und abbauen, einschließlich An-und Abtransport.;160,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0160;Schutzhaltesignal (Sh2) als Tages- und Nachtzeichen (DS 301/DV 301) vorhalten, betreiben und warten, einschließlich Betriebsstoffe/Energieversorgung.;1280,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0170;Einsatz Bahnerdungsberechtigter, einschließlich zugehörender;40,0;Schi;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0180;Verrechnungssatz als Zulage bei Arbeiten an Sonntagen;24,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0190;Erdungsvorrichtung bestehend aus zwei Erdungsstangen zur profilfreien Erdung, inkl. Erdungsseile und Spannungsprüfer PHE gemäß VDE 0681 einsetzen,;40,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0200;Zusätzliche Erdungsseil zur profilfreien Erdung einsetzen,;80,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0210;Einsatz Schaltantragsteller, einschließlich zugehörender;40,0;Schi;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0220;Verrechnungssatz als Zulage bei Arbeiten an Sonntagen;24,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0230;Örtliche Einweisung des Schaltantragsteller bzw. Anlagenbeauftragter für Arbeiten in der Nähe von Oberleitungsanlagen, inkl. Nebenkosten, An-/Abfahrt und;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0240;Herstellung des Erdungsschutzes durch eine zertifizierte bahnzugelassene Firma.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0250;Herstellung des Erdungsschutzes für Endzustand durch eine zertifizierte bahnzugelassene Firma.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0260;Schutzerdungskonstruktion vom Bauwerk einschließlich Stoss- und Eckausbildungen und mit Anschlüssen zur Befestigung der Erdungsdrähte bis Schiene einbauen.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0270;Fachtechnische Abnahmeprüfung der Bauwerkserdung (Bauwerk) vor Ort durch Alv OLA oder zugelassenen Prüfer der DB.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0280;Einsatz Technisch Berechtigter - Bauüberwacher Bahn;40,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0290;Verrechnungssatz als Zulage bei Arbeiten an Sonntagen;24,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0300;Erstellen und einreichen des Betra-Antrages und Einholung aller;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0310;"Erstellung der digitalen Sicherungsplanung über das Portal ""Sipla Workflow"" einschließlich notwendiger Abstimmung.";20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0320;Sicherungsmaßnahmen über die durchzuführenden Arbeiten;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0330;Einsatz einer Kolonne zur Ausführung manueller Gleisstopf- arbeiten während und nach der Bauarbeiten neben dem Gleis.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0340;Gleisbaumaschine während der Sperrpause bereitstellen und vorhalten.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0350;Gleis im Bauwerksbereich auf Weisung des AG und in Abstimmung mit der DB AG im besonderen Arbeitsstopfgang stopfen, richten und verdichten.;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0360;Bettungsstoffe transportieren und entladen aus Selbstentladewagen.;50,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0370;Sicherung und Schutz des im Baubereich (nördlich der DB-Strecke) vorhandenen Kabelkanal.;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Kies-/Sandpolster auf Vlies o.ä. zum Schutz der unterführten Gleisanlage zur Vermeidung von Verschmutzungen durch Abbruch des Brückenbauwerkes einbauen, vorhalten, unterhalten und nach Beendigung der Abbrucharbeiten zurückbauen und entsorgen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Arbeitsgerüste, einschließlich ggf. erforderlicher;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Schutzgerüst, einschließlich ggf. erforderlicher;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Geländer nach Unterlagen des AG abbauen und nach Wahl;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Beton nach Unterlagen des AG abbrechen.;15,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Berührungsschutz auf Bauwerk im Bereich der Oberleitungs- anlagen aus Stahlprofilen, Stahlblech und Maschendraht nach Unterlagen des AG abbauen und nach Wahl des AN verwerten.;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Asphaltbefestigung geradlinig trennen.;130,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Asphaltbefestigung aufbrechen und aufnehmen.;85,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Asphaltbefestigung geradlinig trennen.;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0100;Asphaltbefestigung aufbrechen und aufnehmen.;230,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0110;Abdichtung nach Unterlagen des AG aufnehmen. Erforder-;320,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0120;Bordstein aufnehmen.;70,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0130;Beton nach Unterlagen des AG abbrechen.;30,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0140;Schutzrohrel für Leitungen (Telekom) ausbauen.;110,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0150;Beton nach Unterlagen des AG abbrechen.;100,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0160;Stahlkonstruktion nach Unterlagen des AG abbrechen und;45,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0170;Restliches Brückenbauwerk bis mindestens 50 cm unter neuer Gründungssohle abbrechen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0180;Schienenschnitte nach Wahl des AN herstellen.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0190;Gleise im Bereich der Baugrube inkl. Schwellen (Beton) ausbauen.;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0200;Ausbau Gleisschotter im Bereich der rückgebauten Gleise (Baugrubenbereich). Dicke der Schicht bis 50 cm.;250,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Aufstellflächen / Bohr-/Rammebenen / Planum (Arbeitsebenen) für Geräte zur Herstellung der Baugrubenverbauten inkl. Lockerungsbohrungen nach Wahl des AN herstellen, vorhalten, unterhalten und beseitigen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Geräte für Stahlspundwand nach Unterlagen des AG ein-;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Stahlspundwand entsprechend statischen und konstrukti-;250,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Stahlspundwand nach Unterlagen des AG kürzen. Baustoff;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Kolonne zur Beseitigung von Hindernissen einsetzen.;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Baustillstandskosten im Rahmen aller für die Verbauherstellung notwendigen Arbeiten aus Gründen die der AN nicht zu vertreten hat. Abgerechnet werden Baustellen-Arbeitstage.;4,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Aufstellflächen / Bohrebenen / Planum (Arbeitsebenen) für Geräte zur Herstellung der Tiefgründungen nach Wahl des AN herstellen, vorhalten, unterhalten und beseitigen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Geräte für das Herstellen von Pfählen nach Unterlagen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Ortbetonbohrpfahl entsprechend statischen und konstruk-;250,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0100;Zulage für Pfähle unter Wasserauflast herstellen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0110;Absetzbecken für geförderten Bohrschlamm während der Tiefgründungsarbeiten zum schadlosen Ableiten des geförderten Wassers nach Wahl des AN betriebsbereit aufbauen, vorhalten, betreiben und abbauen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0120;Betonstahl entsprechend statischen und konstruktiven;22,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0130;Pfahlkopf für den Anschluss der Pfahlkopfplatte bzw.;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0140;Abnahme des jeweils ersten Bohrpfahles einer jeden Gründungsachse durch den Ersteller des Baugrundgutachtens in Abstimmung mit dem AG durchführen und protokollieren.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0150;Low-Strain-Integritätsprüfung von Pfählen nach Unterla-;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0160;Kolonne zur Beseitigung von Hindernissen einsetzen.;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0170;Baustillstandskosten im Rahmen der Bohrarbeiten aus Gründen die der AN nicht zu vertreten hat. Abgerechnet werden Baustellen-Arbeitstage.;4,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Baugrube nach Unterlagen des AG herstellen.;4200,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Zulage zu vorhergehender Position für den Ausbau der Magerbetonschicht.;180,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;"Baugrube analog der Position ""Baugrube herstellen"" zusätzlich unter der geplanten Baugrubensohle (unbekannte Gründungs- sohle Bestandsbauwerk) ausheben.";150,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Stahlspundwand säubern. Anhaftenden Boden von freige-;80,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Baustoff nach Unterlagen des AG liefern, in Baugrube;6400,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Unbewehrten Beton nach Unterlagen des AG herstellen.;500,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Wasserhaltungsanlage nach Wahl des AN zum Trockenlegen;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Wasserhaltungsanlage nach Wahl des AN zum Trockenlegen;90,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Wasserhaltungsanlage nach Wahl des AN zum unterbre-;90,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0100;Stromaggregat als Reserveeinrichtung betriebsbereit;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0110;Stromaggregat als Reserveeinrichtung vorhalten.;90,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0120;Notstrom-Aggregat während der Dauer des Stromausfalles betreiben. Abgerechnet werden die erforderlichen Betriebsstunden.;80,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Trag- / Montagegerüst der Bemessungsklasse B entsprechend Technologie des AN für die Überbaumontage / Kappenbetonage des gesamten Brückenbauwerks nach statischen, konstruktiven und sicherheitstechnischen Erfordernissen herstellen, vorhalten, unterhalten und beseitigen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Gerüste (Arbeits-und Schutzgerüst) inkl. notwendiger Treppentürme für das gesamte Bauwerk, einschließlich Gründung nach statischen, konstruktiven und sicherheitstechnischen Erfordernissen herstellen, ggf. umsetzen und vorhalten.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Probekörper für Kontrollprüfungen aus Beton, Einpress-;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Herstellen einer Probeplatte für den Nachweis des Frost-Tausalz-Widerstandes (FTSW). Probeplatte mit Abmessungen B x L x H = 70 x 40 x 20 cm aus dem zu prüfenden Beton bei der Betonage sowie Entsorgung der Plattenreste nach der Bohrkernentnahme.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Nachweis des Frost-Tausalz-Widerstand. Transport der Bohrkerne zum Labor des AN und Durchführung des Nachweises - Frost-Tausalz-Widerstand.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Beton für Sauberkeitsschicht einschließlich ggf. erfor-;220,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Bewehrten Beton einschließlich Schalung nach Unterlagen;240,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Betonstahl entsprechend statischen und konstruktiven;53,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Bewehrten Beton einschließlich Schalung nach Unterlagen;750,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Betonstahl entsprechend statischen und konstruktiven;120,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Bewehrte Betonfertigteile entsprechend statischen und;25,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0100;Betonstahl entsprechend statischen und konstruktiven;10,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0110;Dichtungsstreifen gegen Betonaustritt zwischen den Halbfertigteilen des Überbaus (VFT-Verbundträger) liefern und vor dem Betonieren der Ortbetonergänzung einbauen.;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0120;Bewehrten Beton einschließlich Schalung nach Unterlagen;120,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0130;Betonstahl entsprechend statischen und konstruktiven;40,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0140;Betonstahl entsprechend statischen und konstruktiven;0,15;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0150;Bewehrten Beton einschließlich Schalung nach Unterlagen;70,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0160;Betonstahl entsprechend statischen und konstruktiven;6,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0170;Bewehrten Beton einschließlich Schalung nach Unterlagen;30,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0180;Betonstahl entsprechend statischen und konstruktiven;4,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0190;Anschluss der Schleppplatten an die Rahmenstiele nach Unterlagen des AG herstellen.;13,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0200;Arbeitsfugen entsprechend ZTV-ING, Teil 3, Abschnitt 3, Punkt 2.1 vorbereiten.;160,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0210;"Jahreszahl-Matrize nach RIZ ""Jahr 1"" einbauen.";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Stahlkonstruktion entsprechend statischen und kon-;50,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Alle Transporte der Stahlträger für den Überbau.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Die gesamten Betonfertigteile der vorhergehenden Position wurden auf die Stahlträger der Verbundfertigteilträger betoniert und werden gemeinsam mit diesen zur Baustelle geliefert, dort zwischengelagert, zu ganzen Trägern montiert und endgültig auf die Unterbauten bzw. Behelfskonstruktionen eingebaut;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Erforderlichen Aufwendungen zum Nachweis Aufschweißbiegeversuch nach DIN 1 8800-7, Stahlbauten T7 für ensprechend dicke Stahlbleche.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Schweissnahtprüfung nach genehmigten Prüfplan durchführen.;200,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Schweissnahtprüfung nach genehmigten Prüfplan durchführen.;450,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Stahloberfläche nach Unterlagen des AG für Korrosions-;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Stahloberfläche nach Unterlagen des AG grundbeschich-;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Stahloberfläche nach Unterlagen des AG zwischenbeschichten.;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Stahloberfläche nach Unterlagen des AG deckbeschichten.;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Stahloberfläche nach Unterlagen des AG für Korrosions-;150,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Stahloberfläche nach Unterlagen des AG grundbeschich-;150,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Transport- u. Montageschäden sind unaufgefordert analog ZTV-ING 4.3 bzw. dem Korrosionsschutzaufbau auszubessern und werden nicht gesondert vergütet.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Herstellung von Kontrollflächen nach DIN EN ISO 12944-7 im Beisein der örtlichen Bauüberwachung des AG einschließlich Protokollierung gemäß der ZTV-ING, Teil 4, Abschnitt 3, Anhang B.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Herstellung von Doppelkontrollflächen nach DIN EN ISO 12944-7 im Beisein der örtlichen Bauüberwachung des AG auf der Baustelle einschließlich Protokollierung gemäß ZTV-ING,;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0100;Kennzeichnung des angewendeten Korrosionsschutzsystems am Bauwerk gemäß ZTV-ING, Teil 4, Abschnitt 3,;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0110;Fuge zwischen Beton- und Stahlbauteilen mit einem dauerelastischem 2-Komponentenkitt, der mit den anschließenden Beschichtungssystemen verträglich und überstreichbar ist, verschließen.;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0120;Dichtungsstreifen zwischen Schalung und Stahlträger zur Stoßdichtung und zum Schutz des Korrosionsschutzes beim Betonieren und Ausschalen liefern, einbauen und nach dem Betonieren wieder ausbauen.;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Provisorische Überbauentwässerung herstellen zur bauzeitlichen Entwässerung und Schutz der Hinterfüllung/Baugrubenverfüllung vor Ausspülung.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Dränschicht an erdberührten Flächen von Bauwerken nach;380,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Hydrophobierung gemäß Oberflächenschutzsystem A(OS-A);300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Betonunterlage nach Unterlagen des AG vorbereiten. Vor-;100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Betonunterlage nach Unterlagen des AG vorbereiten. Vor-;155,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Vorbereitete Betonunterlage mit Reaktionsharz versie-;100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Vorbereitete Betonunterlage mit Reaktionsharz versie-;155,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Anti-Graffiti-Beschichtung nach Unterlagen des AG her-;350,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Anlegen von 1 Stck. Musterflächen 1,0 m x 1,0 m für permanentes System mit Funktionstest für Acrylharz, Buntsprühlack, Wasserlack und Filzstift zur Prüfung des vom AN vorgeschlagenen Reinigungsverfahren.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Erstellen eines Dokumentationsblattes zum Anti-Graffiti-Schutz an Bauwerksflächen, gesondert Beton, erstellen und dem AG jeweils in 3-facher Ausfertigung übergeben.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Witterungsbedingte Schutzeinrichtung entsprechend sta-;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0100;Witterungsbedingte Schutzeinrichtung bei Nichteinsatz;1,0;Mt;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0110;Schutzeinrichtung einsetzen nach Unterlagen des AG.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0120;Schutzeinrichtung betriebsbereit vorhalten, unterhalten;1,0;Mt;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0130;Schutzeinrichtung beheizen.;5,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0140;Schutzeinrichtung beleuchten.;240,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Dichtungsschicht aus einer Bitumen-Schweißbahn gemäß;100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Dichtungsschicht aus einer Bitumen-Schweißbahn gemäß;155,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Verstärkungsstreifen nach Unterlagen des AG einbauen;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Schutzlage nach Unterlagen des AG aus Glasvlies-;100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Asphaltschutzschicht auf Dichtungsschicht herstellen.;25,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Asphaltschutzschicht auf Dichtungsschicht herstellen.;130,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Streifen bzw. Rinne aus Gussasphalt herstellen.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Asphaltdeckschicht aus Gussasphalt MA 11 S herstellen.;140,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Zulage für die Asphaltdeckschicht - vorherige Position - bei niedrigen Außentemperaturen.;140,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0100;Oberfläche der Gussasphaltschicht bearbeiten.;140,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0110;Anschluss als Fuge mit Fugenmasse herstellen.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0120;Anschluss als Fuge mit Fugenmasse herstellen.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0130;Anschluss als Fuge mit Fugenmasse herstellen.;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0140;Fuge zwischen den Fertigteilen schließen.;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0150;Fugeneinlage nach Unterlagen des AG einbauen.;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0160;Bituminösen Dichtungsaufstrich für erd- bzw. wasserberührte Flächen herstellen. Flächen säubern.;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Fahrbahnabschlußprofil für Abdichtung nach Unterlagen;13,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Berührungsschutz an Brücken über Oberleitungsanlagen;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Geschweißtes Stahlgeländer nach Unterlagen des AG ein-;70,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Handlauf einschließlich der Halterungen nach Unterlagen;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Messbolzen einbauen.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Messbolzen einbauen.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Messbolzen einbauen.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Kabelschutzrohr in Bauwerk vor dem Betonieren nach Un-;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Pflasterdecke in gebundener Bauweise mit Pflasterstei-;70,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Bordstein aus Beton setzen. Breite der Rückenstütze;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Bordstein aus Beton setzen. Breite der Rückenstütze;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Planum herstellen nach Unterlagen des AG.;70,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Belastungsfahrzeug als Gegengewicht (z.B. ausreichend;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Bohrkern für Kontrollprüfungen nach Angabe des AG ent-;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Probegefäß zur Aufnahme von Baustoffproben, für Kon-;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Probegefäß zur Aufnahme von Baustoffproben, für Kon-;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Probegefäß zur Aufnahme von Baustoffproben, für Kon-;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Technische Bearbeitung der Ablaufplanung und Arbeitsvorbereitung einschl. Bauverfahren und Bauhilfszustände durchführen. Die technische Bearbeitung für das Bauvorhaben mit detaillierten Ausführungszeichnungen und Standsicherheitsnachweisen ist vom Auftragnehmer für folgende Bauteile/ Bauvorgänge zu ;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Lichtbilder über den wesentlichen Bauablauf des Bauwerks in digitalisierter Form (Auflösung mindestens;300,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Pauschale für Koordinierungsleistungen;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Bestandsunterlagen Übergabe der Bestandsunterlagen durch ein zugelassenes, unabhängiges Vermessungsbüro auf der Basis des gepflegten und fortgeführten Festpunktfeldes im amtlichen Lage- und Höhenbezugssystem.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Nicht gefährlichen Abfall aus Aufbruch und Ausbau;20,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Nicht gefährlichen Abfall aus Aufbruch und Ausbau;40,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Nicht gefährlichen Abfall aus Aufbruch und Ausbau;20,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Nicht gefährlichen Abfall aus Aufbruch und Ausbau;350,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Nicht gefährlichen Abfall aus Aufbruch und Ausbau;1500,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Nicht gefährlichen Abfall aus Aufbruch und Ausbau;80,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Nicht gefährlichen Abfall aus Aufbruch und Ausbau;235,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Nicht gefährlichen Abfall aus Aufbruch und Ausbau;950,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Schutz für Baumstamm durch Mantel mit Polsterung her-;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Schutz für Baumstamm durch Mantel mit Polsterung her-;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Fläche nach Unterlagen des AG abräumen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Bäume fällen, höchstens 0,25 m über dem Erdboden;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Bäume fällen, höchstens 0,25 m über dem Erdboden;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Bäume fällen, höchstens 0,25 m über dem Erdboden;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Wurzelstöcke roden. Gemessen wird der Durchmesser der;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Wurzelstöcke roden. Gemessen wird der Durchmesser der;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Wurzelstöcke roden. Gemessen wird der Durchmesser der;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0100;Alle Mehraufwendungen für sämtliche Fäll- und Rodungs-;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0110;Oberboden ggf. einschließlich Vegetationsdecke abtragen;525,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0120;Zulage Oberbodenabtrag auf steilen Flächen;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0130;Gelagerten Oberboden des AG profilgerecht andecken. Ho-;185,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0140;Gelagerten Oberboden des AG aufnehmen und weiterverwen-;340,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0150;Boden bzw. Fels aus Abtragsbereichen profilgerecht lösen, laden und nach Wahl des AN verwerten. Beschreibung der Homogenbereiche nach Unterlagen des AG. Die Herstellung von Mulden und Gräben wird gesondert vergütet. Profilgerecht lösen.;375,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0160;Abtreppung nach Unterlagen des AG in geneigter Grundfläche für Anschüttung herstellen, Sohle der Abtreppung verdichten einschließlich ggf. erforderlicher Wasserzugabe. Boden bzw. Fels aus Abtragsbereichen profilgerecht lösen, laden und nach Wahl des AN verwerten. Beschreibung der Homogenbereiche nac;100,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0170;Boden bzw. Fels aus Abtragsbereichen profilgerecht lösen, laden und nach Wahl des AN verwerten. Beschreibung der Homogenbereiche nach Unterlagen des AG. Die Herstellung von Mulden und Gräben wird gesondert vergütet.;155,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0180;Geotextil als Trenn- und Filterschicht verlegen. Trenn-;100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0190;Geeigneten Baustoff liefern, in Auftragsbereichen pro-;30,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0200;Geeigneten Baustoff liefern, in Auftragsbereichen pro-;1525,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0210;Planum herstellen nach Unterlagen des AG.;2800,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Rasenansaat mit RSM Regio herstellen. Saatgut ohne Ent-;1800,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Rasen mähen.;1800,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Rasen mähen.;1800,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Vegetationsfläche wässern, Wasser liefern. Bodenart,;1800,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Baugrube nach Unterlagen des AG herstellen.;20,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Boden des AG in Baugrube nach Unterlagen des AG ein-;20,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Baustoff nach Unterlagen des AG liefern, in Baugrube;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Einfache Pumpenanlage für offene Wasserhaltung zum Tro-;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Einfache Pumpenanlage für offene Wasserhaltung ein-;30,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Einfache Pumpenanlage für offene Wasserhaltung betrei-;30,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Freigelegten Schacht einschließlich Abdeckung vollstän-;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Entwässerungsrohrleitung abbrechen. Entwässerungsrohr-;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Entwässerungsrohrleitung abbrechen. Entwässerungsrohr-;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Freigelegtes Schachtteil ausbauen. Aufbruch von Stra-;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Freigelegtes Schachtteil ausbauen. Aufbruch von Stra-;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Entwässerungsleitung aus Kunststoffrohren nach stati-;65,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Entwässerungsleitung aus Kunststoffrohren nach stati-;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Rohrleitung an Schacht anschließen, Anschluss abdich-;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Rohrleitung an Schacht anschließen, Anschluss abdich-;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0100;Rohranschluss an Sammelrohrleitung herstellen, An-;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0110;Rohranschluss an Sammelrohrleitung herstellen, An-;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0120;Fertigteil-Schacht mit Schachthals einschließlich der;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0130;Betonauflagering, lichter DU 625 mm, einbauen. Fugen;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0140;Schachtabdeckung, mit lichter Weite mindestens 610 mm;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0150;Straßenablauf einschließlich Aufsatz ausbauen. An-;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0160;Straßenablauf aus Betonfertigteilen einbauen. Fugen mit;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0170;Aufsatz für Straßenablauf aufsetzen.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0180;Straßenablauf aus Betonfertigteilen einbauen. Fugen mit;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0190;Aufsatz für Straßenablauf aufsetzen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0200;Entwässerungsleitung aus Kunststoffrohren nach stati-;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0210;Entwässerungsleitung aus Kunststoffrohren nach stati-;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0220;Rohrleitung an Schacht anschließen, Anschluss abdich-;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0230;Rohrleitung an Ablauf anschließen, Anschluss abdichten. Vergütet wird der Mehraufwand für das Herstellen des Anschlusses einschließlich Passstücke gegenüber der bis zur Innenfläche des Ablaufes durchgemessenen Rohrleitung.;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0240;Rohranschluss an Sammelrohrleitung herstellen, An-;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0250;Rohranschluss an Sammelrohrleitung herstellen, An-;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0260;Rohranschluss an Sammelrohrleitung herstellen, An-;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0270;Formstück in Rohrleitung einbauen. Vergütet wird der Mehraufwand für den Einbau des Formstückes gegenüber der bis zur Innenfläche der Sammelrohrleitung durchgemessenen Rohrleitung.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0280;Formstück in Rohrleitung einbauen. Vergütet wird der Mehraufwand für den Einbau des Formstückes gegenüber der bis zur Innenfläche der Sammelrohrleitung durchgemessenen Rohrleitung.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0290;Formstück in Rohrleitung einbauen. Vergütet wird der Mehraufwand für den Einbau des Formstückes gegenüber der bis zur Innenfläche der Sammelrohrleitung durchgemessenen Rohrleitung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0300;Formstück in Rohrleitung einbauen. Vergütet wird der;60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0310;Sickerrohrleitung herstellen, Erdarbeiten ausführen.;225,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0320;Geotextil als Filter nach Unterlagen des AG in Sicker-;375,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0330;Rohrleitung an Schacht anschließen, Anschluss abdich-;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0340;Entwässerungsschacht auf Dichtheit prüfen. Erforderli-;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0350;Entwässerungsrohrleitung auf Dichtheit prüfen. Erfor-;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0360;Entwässerungsrohrleitung auf Dichtheit prüfen. Erfor-;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0370;Entwässerungsrohrleitung auf Dichtheit prüfen. Erfor-;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0380;Kameradurchfahrung von Entwässerungsrohrleitungen aus-;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0390;Kameradurchfahrung von Entwässerungsrohrleitungen aus-;27,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0400;Kameradurchfahrung von Entwässerungsrohrleitungen aus-;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0410;Kameradurchfahrung von Entwässerungsrohrleitungen aus-;92,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0420;Kameradurchfahrung von Entwässerungsrohrleitungen aus-;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0430;Kameradurchfahrung von Entwässerungsrohrleitungen aus-;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Schicht ohne Bindemittel aufnehmen;750,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Schicht ohne Bindemittel aufnehmen;175,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Bankett abtragen ggf. einschließlich Vegetationsde-;40,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Frostschutzschicht herstellen.;850,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Frostschutzschicht herstellen.;175,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Schottertragschicht herstellen.;1650,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Bankett gemäß ZTV E-StB profilgerecht herstellen.;55,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Erschwernis durch Einbauten. Abgerechnet wird nach;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Erschwernis durch Einbauten. Abgerechnet wird nach;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Asphalt fräsen und Fräsgut aufnehmen. Anschlusskante;1700,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Asphaltbefestigung aufbrechen und aufnehmen. Abrechnung;230,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Asphaltbefestigung geradlinig trennen.;75,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Asphaltbefestigung geradlinig trennen.;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Asphalttragschicht aus Asphalttragschichtmischgut;1650,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Bitumenemulsion zur Herstellung des Schichtenverbundes;1650,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Asphaltbinderschicht aus Asphaltbinder AC 16 B S SG;1650,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Bitumenemulsion zur Herstellung des Schichtenverbundes;1650,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Bitumenemulsion zur Herstellung des Schichtenverbundes;280,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0100;Asphaltdeckschicht aus Splittmastixasphalt SMA 11 S;1900,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0110;Abstumpfungsmaßnahme zur Erhöhung der Anfangsgriffig-;1900,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0120;Anschluss als Fuge mit Fugenmasse herstellen.;75,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0130;Anschluss als Fuge mit Fugenmasse herstellen.;500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0140;Erschwernis infolge Einbauten, Schächten und Straßenab-;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0150;Erschwernis infolge Einfassungen, Borden und Fahr-;630,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Tragschicht mit hydraulischem Bindemittel aufnehmen.;300,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Tragschicht mit hydraulischem Bindemittel aufnehmen.;60,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Plattenbelag mit Platten aus Beton aufnehmen. Aufnehmen;700,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Pflasterdecke mit Pflastersteinen aus Beton aufnehmen.;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Schlackepflasterdecke aufnehmen. Aufnehmen der Tragschicht wird gesondert vergütet.;280,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Bordstein aufnehmen.;935,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Streifen oder Rinne mit Pflastersteinen aus Beton auf-;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Pflasterdecke mit Pflastersteinen aus Beton mit Vor-;940,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Pflastersteine auf Passmaß trennen und Pflastersteine;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Anpassung der Pflasterdecke an Aussparungen oder Ein-;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Fundamentgraben für Einfassung, Streifen, Rinnen her-;935,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0100;Bordstein aus Beton setzen. Breite der Rückenstütze;468,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0110;Bordstein aus Beton setzen. Breite der Rückenstütze;468,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0120;Bordstein auf Passmaß trennen.;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0130;Bewegungsfuge im Fundament von Streifen, Rinnen und;160,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0140;Bewegungsfuge in einer Dicke von 8 mm bis 15mm in Bor-;160,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0150;Rinne mit Pflastersteinen aus Beton herstellen. Mehr-;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0160;Bewegungsfuge im Fundament von Streifen, Rinnen und;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0170;Bewegungsfuge in Streifen und Rinnen herstellen. Fugen-;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Zaun aufnehmen, einschließlich Verstrebungen.;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Maschendrahtzaun, einschließlich der erforderlichen;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Pfostenverstrebung für Maschendrahtzaun, einschließlich;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Bestandszäune sichern und vor Beschädigungen schützen nach Wahl des AN. Die Erschwernisse bei Erd-, Verbau-, Fundament, Bord- und Pflasterarbeiten sind einzurechnen.;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Strauchbestand und sonstiger Aufwuchs bis 0,10 m Stamm-;110,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Zaun aufnehmen, einschließlich Verstrebungen.;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Zaun aufnehmen, einschließlich Verstrebungen.;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Stahlgitterzaun des AG, einschließlich der erforderli-;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Fahrgastunterstand abbrechen;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Werkstattplanung für sämtliche Ausstattungen wie z.B.: Fahrgastunterstand herstellen und in prüffähiger Form liefern. Inkl. Pfostenabsteckung in Lage und Höhe erarbeiten und liefern.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Fahrgastunterstand liefern und montieren;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Sitzbank aus Stahlkonstruktion, vollbadfeuerverzinkt und spezialfarbbeschichtet, liefern und einbauen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Bordstein aus Beton setzen. Breite der Rückenstütze;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Bordstein aus Beton setzen. Breite der Rückenstütze;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Bodenindikatoren einbauen;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Plattenbelag mit Platten aus Beton einschließlich han-;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Plattenbelag mit Platten aus Beton einschließlich han-;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Bauliche Anlage abbrechen. Anlage nach Unterlagen des;6,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Böschungstreppe nach Unterlagen des AG entsprechend RiZ;7,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Geländer nach Unterlagen des AG abbauen und nach Wahl;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Werkstattplanung für sämtliche Ausstattungen wie z.B. Geländer / Berührungsschutz herstellen und in prüffähiger Form liefern. Inkl. Pfostenabsteckung in Lage und Höhe erarbeiten und liefern.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Geschweißtes Stahlgeländer nach Unterlagen des AG ein-;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Bewehrte Betonfertigteile entsprechend statischen und;150,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Verkehrsschild ggf. mit Aufstellvorrichtung abbauen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Rohrpfosten mit Abdeckkappe für Verkehrsschild aufstel-;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Rohrpfosten mit Abdeckkappe für Verkehrsschild aufstel-;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Rohrpfosten mit Abdeckkappe für Verkehrsschild aufstel-;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Verkehrsschild nach Unterlagen des AG liefern.;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Verkehrsschild nach Unterlagen des AG anbringen.;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Fläche für Markierung schonend trocknen. Abgerechnet;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Fläche für Markierung reinigen. Kehrgut aufnehmen und;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Längsmarkierung Typ II einschl. evtl. Sperrflächenum-;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Längsmarkierung Typ II einschl. evtl. Sperrflächenum-;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Längsmarkierung Typ II einschl. evtl. Sperrflächenum-;180,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Verkehrssich., Verkehrsregelung Einrichtungen zur Verkehrssicherung und Verkehrsregelung nach StVO an dem unter Verkehr befindlichen Knotenpunkten und im Bereich der freien Strecke unter Aufrechterhaltung des Verkehrs aufbauen, ständig vorhalten, unterhalten und betreiben, mehrmals umsetzen, abbauen;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Längsmarkierung einschl. evtl. Sperrflächenumrandung;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Längsmarkierung einschl. evtl. Sperrflächenumrandung;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Längsmarkierung einschl. evtl. Sperrflächenumrandung;180,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0100;Fläche für Markierung schonend trocknen. Abgerechnet;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0110;Fläche für Markierung reinigen. Kehrgut aufnehmen und;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0120;Längsmarkierung Typ II einschl. evtl.;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0130;Längsmarkierung Typ II einschl. evtl.;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0140;Längsmarkierung Typ II einschl. evtl.;180,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Straßenbeleuchtungsmast nach Unterlagen des AG abbauen.;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Vorhandenes Beleuchtungskabel der Stadtwerke Sangerhausen (bei Antreffen) trennen, aufnehmen und entfernen. Leitungen sind außer Betrieb. Notwendige Erdarbeiten sind einzukalkulieren.;250,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Boden für Kabel-/Leitungsgraben ausheben. Planum herstellen wird nicht gesondert vergütet.;210,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Boden für Kopflöcher/Baugruben im Leitungsgraben profilgerecht ausheben. Straßenaufbruch wird gesondert vergütet.;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Sohle verdichten und Oberfläche profilgerecht herstellen. Leitungsgraben mit Kopflöcher (Baugruben).;70,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Einbau des Fundamentrohres (L = 1000 mm / D = 300 mm) nach geeignetem Verfahren. Einsetzen und Ausrichten des Fundamentrohres. Einpassen des Kabeldurchführungsstutzens und Einführen der Kabelenden.;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Verlegtes Erdkabel einsanden, bis OK Leitungszone Material Sand 0/2 liefern und einbauen.;210,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Schutzrohr der Gasleitung ausbauen.;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Vorhandene Gasleitungen der Stadtwerke Sangerhausen (bei Antreffen) im Baubereich trennen, aufnehmen und entfernen. Leitung außer Betrieb. Notwendige Erdarbeiten sind einzukalkulieren.;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Boden für Kopflöcher im Leitungsgraben profilgerecht ausheben. Straßenaufbruch wird gesondert vergütet.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Boden für Leitungsgraben ausheben. Planum herstellen wird nicht gesondert vergütet.;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Sohle des Leitungsgraben verdichten und Oberfläche profilgerecht herstellen.;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Leitungszone für Rohrleitung d 125, Einbau Kies-Sand-Gemisch der Körnung 0-3.;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Schutzrohr der Trinkwasserleitung ausbauen.;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Vorhandene Trinkwasserleitung vom Wasserverband Südharz im Baubereich (bei Antreffen) trennen, aufnehmen und entfernen. Leitung außer Betrieb. Notwendige Erdarbeiten sind einzukalkulieren.;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Asphaltoberbau schneiden, Dicke der Befestigung bis 20 cm, Ausführung mit Fugenschneidgerät.;66,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Asphaltbefestigung aufbrechen und aufnehmen.;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Abbruch des Pflasterbelages, aus Betonpflaster, einschl. Bettung aus Kiessand, im Rahmen einer Teilabbruchmaßnahme, aufgenommene Stoffe laden und entsorgen.;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Schicht ohne Bindemittel aufnehmen.;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Schieber-/Hydrantenkappen, einschließlich Tragplatte ausbauen und im Baubereich lagern.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;"Einbau von Rohraufhängungen mit Ankerschiene, Hängestangen, Rohrschelle mit elastischer Zwischenlage und sämtlichen Befestigungsmaterialien entsprechend RiZ ""Was 13"" Bild 2, Bauwerksplan und entsprechend Herstellerangaben.";15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Mantelrohr aus Stahlrohr DIN 2460, aus Stahl P235, Stahlrohr DN 450 (457 x 6,3mm) liefern und einbauen.;28,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Manuelle Prüfung von Schweißverbindungen durch Ultraschallprüfung am Mantelrohr St d457 x 6,3mm durchführen.;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Prüfung/Kontrolle/Abnahme der Rohraufhängung nach Montage der Fertigteile und am Bauende der Gesamtmaßnahme.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Boden für Rohrleitungs- und Kabelgräben sowie Kopflöcher Tiefe  bis 1,25 m, nach DIN 18300 ausheben, fördern und umweltgerecht entsorgen.;150,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Aushub von Hand / Suchschachtung / Zul. Bodenaushub von Hand im Bereich vorhandener Versorgungsleitungen und für angeordnete Suchgräben als Zulage zum Baggeraushub.;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Zulage zu den Aushubpositionen für Erschwernisse innerhalb des Bodenaushubes für Beton bewehrt, auf LKW des AN laden, und zur Verwertungsanlage transportieren und umweltgerecht auf Nachweis entsorgen (einschließlich Entsorgungskosten).;1,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Rohrleitungskreuzung aus PE, sichern.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Kabelkreuzung sichern.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Aushubstoffe, schadstoffbelasteter nicht gefährlicher Abfall,  gemäß Zuordnung bis Z 2, auf LKW des AN laden und zur Verwertungsanlage transportieren, und umweltgerecht auf Nachweis entsorgen (einschließlich Entsorgungskosten).;150,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Verdichtungsfähigen Boden, liefern, profilgerecht in Kabel und Leitungsgräben, Kopflöchern, Baugruben und in Arbeitsräumen von Bauwerken außerhalb der Leitungszone lagenweise einbauen und verdichten.;78,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;In Leitungszone für Rohrleitung d 125 Einbau Kies-Sand-Gemisch der Körnung 0-3.;72,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Boden für Suchgraben nach Anweisung durch den AG ausheben.;4,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0100;Beton C12/15 einbauen als Widerlager für Versorgungsleitungen, Beton C 12/15 nach DIN 1045, mit Schalung einbauen und verdichten.;1,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;Asphaltschnitte, Rückschnitte (vorh. Decke) bis 20cm tief vor Nahtausbildung neue-alte Decke durchführen.;32,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Planum herstellen ZTV E-StB Auf- und Abtrag bis 5cm, zulässige Abweichung von der Sollhöhe +/- 2 cm.;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Frostschutzschicht, in Fahrbahnen, Bauklasse III RStO, Verdichtungsgrad mind. DPr 1, Verformungsmodul EV2 auf der Oberfläche mind. 80 MN/m2, aus Baustoffgemisch für Frostschutzschicht, ohne RC-Baustoffe und industriell hergestellte Gesteinskörnungen, Körnung 0/45, Schichtdicke 30 cm, Feinanteil Kate;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Asphalttragschicht ZTV Asphalt-StB, Mischgutart AC 32 TS, Bauklasse III RStO, Mitverwendung von Asphaltgranulat ist zulässig, Bindemittel Straßenbaubitumen 50/70 TL Bitumen-StB u. DIN EN 12591, Schichtdicke 10 cm, Einbau in Teilflächen.;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Bitumenhaltiges Bindemittel in den Verkehrsflächen der Bauklasse SV, inkl. Fräsbereich aufsprühen.;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;Asphaltbinderschicht ZTV Asphalt-StB, Mischgutart AC 16 B S, Asphaltgranulat kann zugegeben werden, Schichtdicke 6 cm, Bindemittel polymermodifiziertes Bitumen 25/55-55 A TL Bitumen-StB und DIN EN 14023, Bauklasse III RStO, Einbau in Teilflächen, mit Fertiger.;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;Bitumenhaltiges Bindemittel in den Verkehrsflächen der Bauklasse III, inkl. Fräsbereich aufsprühen.;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeckschichten AC 16 DS in Verkehrsflächen nach Unterlagen des AG herstellen. Anlieferung des Asphaltmischguts in thermoisolierten Transportbehältern.;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Nähte in bituminösen Schichten ausbilden, einschl.;66,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0100;Nähte in bituminösen Schichten ausbilden, einschl.;66,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0110;Anschluss an Deckschicht, Dicke der Deckschicht 4 cm, anschmelzbares Fugenband, Breite mind. 10 mm, ankleben, Einzellänge bis 20 m.;66,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0120;Frostschutzschicht, in Hoffläche, RLW, Verdichtungsgrad mind. DPr 1, Verformungsmodul EV2 auf der Oberfläche mind. 80 MN/m2, aus Baustoffgemisch für Frostschutzschicht, ohne RC-Baustoffe und industriell hergestellte Gesteinskörnungen, Körnung 0/45, Schichtdicke 43 cm, Feinanteil Kategorie UF 3, im e;18,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0130;Einbauteile (Hydranten-, Schieberkappen) in Asphaltbefestigung freilegen und an die neue Höhe anpassen.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0010;PE-Rohr aus PE 100 für die Wasserversorgung, nach DIN EN 12201 und DVGW 335 Teil A2, SDR 11, Schmelzindexgruppe 003 bzw. 005 Richtlinie 14.3.1 der GKR, Prüfbescheinigung 3.1 B nach EN 10204, DIN-DVGW Prüfzeichen und RAL-Gütezeichen, Farbe königsblau, Heizelementstumpfschweißung 280x 25,4 mm;215,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0020;Zulage PE-Rohr aus PE 100, 280x 25,4 mm für die Wasserversorgung, in Mantelrohr einziehen, einschließlich Einzugshilfe auf Geitkufen aus PE, d 280 / d450 x Steghöhe bis 80 cm;34,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0030;Mantelrohr aus Stahlrohr DIN 2460, aus Stahl P235 , Stahlrohr DN 450  (457 x 6,3mm) Technische Lieferbedingungen DIN EN 10216-1, geschweißt, als Mantelrohr, Nenndruck 5 MPa (50 bar), mit Schweißfase für Stumpfschweißverbindung, einschl. Schweißverbindung, werkseitige PE-Umhüllung DIN EN 10288, Schic;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0040;Druckprüfung für Wasser DN 400.;215,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0050;Desinfektion und Spülung DN 250 Enthalten sind die Gebühren der Probenahme, Untersuchung und Gesundheitsamt, Spülmittelzusatz, anteilige Wasserkosten sowie anteilige Abwassereinleitgebühren Durchführung der Desinfektion und Spülung (einschl. aller Nebenleistungen , Gestellung der Chemikalien,  des W;215,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0060;PE-Elektroschweißmuffe, breite Schweißzone, Strichcodierungen für automatische Schweißung und Traceability, integrierte Haltevorrichtung möglich DVGW-Zulassung nach VP 607;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0070;PE-Losflansch für Vorschweißbunde für den Einsatz in der Gas- Trinkwasser- und Abwasserversorgung, nach DIN 8074/75, 19533, 1696, DVGW-Zulassung G 477;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0080;PE-Vorschweißbund für den Einsatz in der Gas-,Trinkwasser- und Abwasserversorgung, verlängerte Ausführung, nach DIN 8074/75, 19533, 16963 DVGW-Zulassung G 477;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0090;Absperrschieber nach DIN EN 1171, weichdichtend, Baulänge DIN EN 558-1, Grundreihe 15 (F 5) mit Flanschen nach DIN EN 1092-2, PN 10/16;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0100;Flanschtück aus duktilem Guss, nach DIN EN 545 Serie A und DIN 28645 mit DVGW Zertifikat entsprechend DIN EN 545 und DVGW VP 545.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0110;Flanschbogen aus duktilem Guß, nach DIN EN 545 Serie A und DIN 28637 mit DVGW Zertifikat entsprechend DIN EN 545 und DVGW VP 545.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0120;EBG f. Schieber 100/250, teleskopierbar für Rohrdeckung 1,15-1,55 m, bestehend aus zwei Hülsrohren, formschlüssig verschiebbar mit angeschweißter Glocke, Abstreifkappe und Abdeckkappe Schlüsselstange bestehend aus Vierkantstahl und Quadratrohr, St 37-2, feuerverzinkt mit Auszugssicherung, innenliege;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0130;Straßenkappe aus GG, für Absperrarmaturen des Wasserversorgung, DIN 4056, Größe 1, Gehäuse und Deckel aus Gusseisen EN-JL 1030 (GG 20) Bolzen und Steg aus nichtrostendem Stahl;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0140;Trassenwarnband für Trinkwasser, mit Ortungsband liefgern und Baugrube verlegen;181,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0150;Flanschstück mit Flanschstutzen aus duktilem Guß, nach DIN EN 545 Serie A und DIN 28643 mit DVGW Zertifikat entsprechend DIN EN 545 und DVGW VP;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0160;Blindflansch aus duktilem Guß, nach DIN EN 545 Serie A, DIN 28646 und Flanschanschluß nach DIN 28604 mit DVGW Zertifikat entsprechend DIN EN 545 und DVGW VP 545.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0170;"Kugelhahn für Trinkwasser aus Edelstahl (DIN 3433) voller Durchgang 3/4"" (DN15, LW14) Außengewinde ISO 228-1 ausblassichere Schaltwelle einstellbare Stopfbuchse";2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0180;"PE-Elektroschweißwinkel 45° mit bzw. ohne entfernbaren Mittenanschlag, breite Schweißzone, Strichcodierungen für automatische Schweißung und Traceability, integrierte Haltevorrichtung möglich DVGW-Zulassung nach VP 607;";7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0190;Rechteckschacht;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0200;Abbruch Trinkwasserleitung AZ bis DN 250, Abbruchunternehmen mus Sachkundenachweis gemäß TRGS519 besitzen Verlegetiefe bis 2 m, im Rahmen einer Teilabbruchmaßnahme einschließlich fachgerechtes Trennen mittels Rohrschnitt, Ausbaustoffe sind fachgerecht in Big Bags zu entsorgen.;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0210;Zulage zum Abbruch der TW-Leitung für den Umgang mit Asbest.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0220;Zulage für das Zerkleinern von Asbestzementrohren und hohlraumfreies Verpacken in 1m³ BagBags nach Anweisung der zuständigen Behörde Abbruchunternehmen mit Sachkundenachweis gemäß TRGS519 Abrechnung erfolgt nacg BigBag.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0230;Bodenaushub in Handschachtung  in Bereichen von Asbestzementleitungen. Entsprechende Schutzmaßnahmen wie vor beschrieben sind zu treffen.;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0240;Rohrschnitte an vorhandener AZ-Leitung DN 250 fachgerecht herstellen und Schnittstelle fachgerecht versiegeln. Die Herstellervorschriften sind zu beachten.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0250;Abbruch Trinkwasserleitung GG bis DN 250, Verlegetiefe bis 2 m, im Rahmen einer Teilabbruchmaßnahme einschließlich fachgerechtes Trennen mittels Rohrschnitt, Abbruch geht in Sachherrschaft des AN über die Entsorgungsgebühren werden vom AN übernommen,;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0260;Dichtungseinsatz bestehend  Dichtungseinsatz zum Einbau in vorh. Schachtöffnung dicht gegen drückendes Wasser, Dichtung einseitig für Rohrdurchführung Durchmesser Medienrohr d 457 mm Öffnungsdurchmesser 600mm nichtgeteilte Dichtung doppelt dichtend, asymmetrisch profilierte Stahlringe aus Edelstahl ;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0270;Dichtungseinsatz bestehend  Dichtungseinsatz zum Einbau in vorh. Schachtöffnung dicht gegen drückendes Wasser, Dichtung einseitig für Rohrdurchführung Durchmesser Medienrohr d 280 mm Öffnungsdurchmesser 350mm nichtgeteilte Dichtung doppelt dichtend, asymmetrisch profilierte Stahlringe aus Edelstahl ;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0280;Absperrschieber nach EN 1074 mit DIN-DVGW-Baumusterprüfzertifikat für Trinkwasser Absperrarmatur für Trink- und Brauchwasser bis 50°C DN 250, PN 10 - 16 Baulänge DIN EN 558-1, Grundreihe 15 (DIN 3202, F5) Gummierter Absperrkeil mit Gleitschuhen Wartungsfreie und korrosionssichere Spindelabdichtung D;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0290;Posten, Aluminium mit Schraubk. 48mm/1,50m, liefern und in Beton B15 20 x 20 x 50cm setzen einschl. Materiallieferung u. erfoderlicher Erdarbeiten Aushub wird Eigentum des AN und ist zu entsorgen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0300;Hinterlegplatte 100 x 140 mm C, VVA liefern und montieren.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0310;Hinweisschild HA 100 x 140 komplett aus Kunststoff, gepreßt, mit wechselbaren Kunststoffziffern liefern und befestigen einschließlich Befestigungsmaterial Befestigung an Gebäuden, Zäunen aus Metall und Holz.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0320;Stillgelegte Trinkwasserleitung verfüllen mit hydraulisch gebundenem, fließfähigen Füllstoff, Druckfestigkeit mind. 5 N/mm2, bis zum Scheitel, einschl. Entlüftungs- und Einfüllöffnungen anlegen, Leitung AZ DN250;160,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0330;Anfertigen von Bestandsplänen einschl. Knotenpunkten für Trinkwasserleitungen, Hausanschlussleitungen, Hüll- und Schutzrohre.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83
+0340;Arbeitsgerüste, einschließlich ggf. erforderlicher Gründung sowie ggf. erforderlicher Treppentürme und weiterer Leitergänge, nach statischen, konstruktiven und sicherheitstechnischen Erfordernissen herstellen und beseitigen, für den Zeitraum der eigenen Leistung vorhalten und unterhalten.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV.X83

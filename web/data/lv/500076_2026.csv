@@ -1,0 +1,691 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Baustelle nach den angegebenen Baufristen und Leistungen einrichten und räumen. Verladen, Anfahren, Abladen und Aufstellen aller notwendigen Unterkünfte, sämtliche Geräte, Maschinen, Vorrichtungen, Werkstätten, Anlagen und Fahrzeuge.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Für das Einholen der Verkehrsanordnung, den Antransport, den Aufbau, das Umsetzen, Unterhalten und Entfernen der kompletten;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Transport Auf- und Abbau von Haltverbotszonen auf einer Länge von bis zu 300,00 m;18,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Haltverbotsschilder einschl. Zusatzzeichen der v.g. Position vorhalten;72,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Transport Auf- und Abbau eines transportablen Rückhaltesystem mit Aufhaltestufe = T3;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Transportable Rückhaltesystem der v.g. Position in den nächsten Bauabschnitt bis zu einer Länge von 300 m umsetzen;17,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Transportables Rückhaltesystem der Pos.;790,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Transport, Auf- und Abbau von Absperrschrankengitter aus Kunsstoff (HDPE) zur Längsabsicherung an Geh- und Radwegen oder als Fußgängernotweg;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Absperrschrankengitter der v.g. Position vorhalten;790,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Absperrschrankengitter einschl. Aufstellvorrichtung der Pos.;17,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;Transportable Lichtsignalanlage als Fußgängerschutzanlage aufstellen und abbauen.;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;Signalanlage 2-phasig;18,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;Transp. Lichtsignalanlage der vorherigen Position vorhalten einschl. Energieversorung sowie 24 Std. Bereitschaftdienst bei Störung der Lichtsignalanlage;790,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;Signalanlage Typ D;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;Transportable Lichtsignalanlage der vorherigen Position  vorhalten und betrieben einschl. 24 Std. Bereitschftsdienst bei Störungen.;100,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;Zulage für den Einbau eines Modules zur vorberechtigten Grünanforderung der Lichtsignalanlagen aus v.g. Positionen;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;Zulage für den Vorhalt, Unterhalt und Betreiben der Grünanforderung durch die Feuerwehr;790,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;Erstellen der Signaltechnischen Unterlagen für die Lichtsignalanlagen aus v.g. Positionen einschl. externer Prüfung der Unterlagen durch unabhängigen Planungsbüro und zur Genehmigung bei der zuständigen Verkehrsbehörde einreichen.;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;Provisorische, modulare Mittelinsel als Querungshilfe herstellen und beseitigen;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+20;Provisorische, modulare Mittelinsel vorhalten und unterhalten.;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+21;Müllgefäße zum Sammelplatz transportieren;120,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Plantafel liefern, folieren, aufstellen und abbauen;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Plantafel vorhalten und unterhalten;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Umleitungsbeschilderung liefern, aufstellen und abbauen;19,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Umleitungsbeschilderung vorhalten und unterhalten;19,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Oberboden;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Vorh. Asphaltbefestigungen maschinell bis 15 cm Stärke;2000,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Vorh. Asphaltbefestigungen maschinell bis 20 cm Stärke;2440,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Vorh. Asphaltbefestigung bis;1200,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Vorh. Asphaltbefestigung bis;1200,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Vorh. bit. Fahrbahndecke;1810,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Teer-/pechhaltiger Straßenaufbruch;900,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Vorh. einreihige Pflasterrinne;2400,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Vorh. dreireihige Pflasterrinne aus;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Vorh. sechsreihige Pflasterrinne aus;210,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;Vorh. Verkehrsschilder;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;Vorh. Verkehrs-, Hinweis-,;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;Vorh. Straßenabläufe, bestehend aus Rost, Betonunterteil etc., aufnehmen, abfahren und der Verwertung / Wiederverwertung nach Wahl des AN zuführen.;61,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;Vorh. Kanalrohre;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Pumpensümpfe zum Überpumpen des anfallenden;20,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Motorpumpenanlagen mit einer Leistung von 30 m3/h aufstellen, einschl. Vorhaltung der Anlage und aller Nebenarbeiten wie der erforderlichen Stromversorgung, Aufstell- und Ziehvorrichtung.;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Umsetzungen der Motorpumpenanlage;12,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Betrieb der Motorpumpenanlage;3000,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Rohrgräben für eine Kanalleitung aus PP-Rohren DN 200 in der erforderlichen Rohrgrabenbreite nach DIN EN 1610, bis zu einer Tiefe von 2,50 m in;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Rohrgräben für eine Kanalleitung aus PP-Rohren DN 300 in der erforderlichen Rohrgrabenbreite nach DIN EN 1610, bis zu einer Tiefe von 2,50 m in Böden;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Boden;50,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Boden,;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Boden,;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Boden,;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Bodenaushub in allen Tiefen, in Handschachtung, nur auf Anweisung der Bauleitung, als Zulage zum Bodenaushub.;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Baugrube zur Errichtung des RKB´s und Trennbauwerkes  mit den Abmessungen ca. 9,00 x 5,00 m in Böden;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Baugrubenwände mit senkrechtem Verbau nach Wahl des AN, gemäß DIN 18.303, Abschnitt 3, in Einzellängen und -flächen verkleiden, den Verbau;130,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;PP-Rohre DN 200, SN;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;PP-Bögen DN 200 (KG 2000), 15° - 87°, liefern und als Zulage einbauen.;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;PP-Überschiebmuffe DN 200, liefern und als Zulage einbauen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;Schrägschnitt für PP-Rohre;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;PP-Rohre DN 315, SN;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;PP-Bögen DN 315 (KG 2000), 15° - 87°, liefern und als Zulage einbauen.;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;PP-Überschiebmuffe DN 300, liefern und als Zulage einbauen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;Schrägschnitt für PP-Rohre;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;Anschluss eines neuen Polypropylenrohrkanals;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;Kontrollschacht bis zu einer lichten Schachttiefe von 3,50 m nach beigefügter Regelzeichnung Nr.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+20;PP-Schachtmuffe DN 200 mit angeformter Muffe und fest eingelegter ölbeständiger FE-Dichtung sowie äußerer Besandung liefern und als Zulage in die Kontrollschächte einbauen.;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+21;PP-Schachtmuffe DN 300 mit angeformter Muffe und fest eingelegter ölbeständiger FE-Dichtung sowie äußerer Besandung liefern und als Zulage in die Kontrollschächte einbauen.;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+22;Erstellung eines Schachtbauwerkes;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+23;Schachtabdeckungen mit Entlüftungsöffnung für Fahrbahn, Klasse D (400 kN-Prüfkraft), lichte Öffnung;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+24;Mall-Lamellenklärer ViaTub 18R 20;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+25;Trennbauwerk 1;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+26;Einweisung in die Regenwasserbehandlungsanlage;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+27;Sand, Splitt etc.,;15,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+28;Hartkalksteinschüttung, Vorabsiebung oder gebrochenes Kies-Sand-Gemisch, Körnung 0/32 - 0/45 mm,;320,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+29;Querschläge NUR AUF ANWEISUNG DER BAULEITUNG zur Feststellung der genauen Lage von Kabeln und Leitungen bis zu einer Länge von;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+30;Unterquerungen von vorh. Kabeln, Rohren und Kanalleitungen bis;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+31;Im Rohrgraben und sichtbare, frei in der Rohrgrabenwand verlaufende vorh. Kabel und Leitungen bis DN;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Rohrgräben für eine Kanalleitung aus PP-Rohren DN 200 in der erforderlichen Rohrgrabenbreite nach DIN EN 1610, bis zu einer Tiefe von 2,00 m in;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Rohrgräben für eine Kanalleitung aus PP-Rohren DN 400 in der erforderlichen Rohrgrabenbreite nach DIN EN 1610, bis zu einer Tiefe von 2,00 m;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Boden;50,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Boden,;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Boden,;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Boden,;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Bodenaushub in allen Tiefen, in Handschachtung, nur auf Anweisung der Bauleitung, als Zulage zum Bodenaushub.;1,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Baugrube zur Errichtung des RKB´s und Trennbauwerkes  mit den Abmessungen ca. 8,50 x 4,50 m in Böden;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Baugrubenwände mit senkrechtem Verbau nach Wahl des AN, gemäß DIN 18.303, Abschnitt 3, in Einzellängen und -flächen verkleiden, den Verbau;110,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;PP-Rohre DN 200, SN;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;PP-Bögen DN 200 (KG 2000), 15° - 87°, liefern und als Zulage einbauen.;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;PP-Überschiebmuffe DN 200, liefern und als Zulage einbauen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;Schrägschnitt für PP-Rohre;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;PP-Rohre DN 400, SN;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;PP-Bögen DN 400 (KG 2000), 15° - 45°, liefern und als Zulage einbauen.;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;PP-Überschiebmuffe DN 400, liefern und als Zulage einbauen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;Schrägschnitt für PP-Rohre;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;PP-Schachtmuffe DN 200 mit angeformter Muffe und fest eingelegter ölbeständiger FE-Dichtung sowie äußerer Besandung liefern und als Zulage in die Kontrollschächte einbauen.;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;PP-Schachtmuffe DN 400 mit angeformter Muffe und fest eingelegter ölbeständiger FE-Dichtung sowie äußerer Besandung liefern und als Zulage in die Kontrollschächte einbauen.;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+20;Mall-Lamellenklärer ViaTub 18R 20;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+21;Trennbauwerk 2;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+22;Einweisung in die Regenwasserbehandlungsanlage;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+23;Sand, Splitt etc.,;15,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+24;Hartkalksteinschüttung, Vorabsiebung oder gebrochenes Kies-Sand-Gemisch, Körnung 0/32 - 0/45 mm,;230,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+25;Querschläge NUR AUF ANWEISUNG DER BAULEITUNG zur Feststellung der genauen Lage von Kabeln und Leitungen bis zu einer Länge von;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+26;Unterquerungen von vorh. Kabeln, Rohren und Kanalleitungen bis;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+27;Im Rohrgraben und sichtbare, frei in der Rohrgrabenwand verlaufende vorh. Kabel und Leitungen bis DN;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Rohrgräben für eine Kanalleitung aus PP-Rohren DN 200 in der erforderlichen Rohrgrabenbreite nach DIN EN 1610, bis zu einer Tiefe von 1,50 m in;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Rohrgräben für eine Kanalleitung aus PP-Rohren DN 250 in der erforderlichen Rohrgrabenbreite nach DIN EN 1610, bis zu einer Tiefe von 1,50 m in;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Boden;30,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Boden,;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Boden,;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Boden,;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Bodenaushub in allen Tiefen, in Handschachtung, nur auf Anweisung der Bauleitung, als Zulage zum Bodenaushub.;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Baugrube zur Errichtung des RKB´s und Trennbauwerkes  mit den Abmessungen ca. 8,50 x 4,50 m in Böden;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Baugrubenwände mit senkrechtem Verbau nach Wahl des AN, gemäß DIN 18.303, Abschnitt 3, in Einzellängen und -flächen verkleiden, den Verbau;95,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;PP-Rohre DN 200, SN;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;PP-Bögen DN 200 (KG 2000), 15° - 87°, liefern und als Zulage einbauen.;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;PP-Überschiebmuffe DN 200, liefern und als Zulage einbauen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;Schrägschnitt für PP-Rohre;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;PP-Rohre DN 250, SN;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;PP-Bögen DN 250 (KG 2000), 15° - 87°, liefern und als Zulage einbauen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;PP-Überschiebmuffe DN 250, liefern und als Zulage einbauen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;Schrägschnitt für PP-Rohre;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;PP-Schachtmuffe DN 200 mit angeformter Muffe und fest eingelegter ölbeständiger FE-Dichtung sowie äußerer Besandung liefern und als Zulage in die Kontrollschächte einbauen.;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;PP-Schachtmuffe DN 250 mit angeformter Muffe und fest eingelegter ölbeständiger FE-Dichtung sowie äußerer Besandung liefern und als Zulage in die Kontrollschächte einbauen.;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+20;Mall-Lamellenklärer ViaTub 18R 20;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+21;Trennbauwerk 3;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+22;Einweisung in die Regenwasserbehandlungsanlage;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+23;Sand, Splitt etc.,;20,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+24;Hartkalksteinschüttung, Vorabsiebung oder gebrochenes Kies-Sand-Gemisch, Körnung 0/32 - 0/45 mm,;190,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+25;Querschläge NUR AUF ANWEISUNG DER BAULEITUNG zur Feststellung der genauen Lage von Kabeln und Leitungen bis zu einer Länge von;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+26;Unterquerungen von vorh. Kabeln, Rohren und Kanalleitungen bis;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+27;Im Rohrgraben und sichtbare, frei in der Rohrgrabenwand verlaufende vorh. Kabel und Leitungen bis DN;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Rohrgräben für eine Kanalleitung aus PP-Rohren DN 200 in der erforderlichen Rohrgrabenbreite nach DIN EN 1610, bis zu einer Tiefe von 1,50 m in;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Rohrgräben für eine Kanalleitung aus PP-Rohren DN 250 in der erforderlichen Rohrgrabenbreite nach DIN EN 1610, bis zu einer Tiefe von 1,50 m in;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Boden;25,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Boden,;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Boden,;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Boden,;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Bodenaushub in allen Tiefen, in Handschachtung, nur auf Anweisung der Bauleitung, als Zulage zum Bodenaushub.;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Baugrube zur Errichtung des RKB´s und Trennbauwerkes  mit den Abmessungen ca. 10,00 x 4,50 m in Böden;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Baugrubenwände mit senkrechtem Verbau nach Wahl des AN, gemäß DIN 18.303, Abschnitt 3, in Einzellängen und -flächen verkleiden, den Verbau;110,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;PP-Rohre DN 200, SN;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;PP-Bögen DN 200 (KG 2000), 15° - 87°, liefern und als Zulage einbauen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;PP-Überschiebmuffe DN 200, liefern und als Zulage einbauen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;Schrägschnitt für PP-Rohre;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;PP-Rohre DN 250, SN;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;PP-Bögen DN 250 (KG 2000), 15° - 87°, liefern und als Zulage einbauen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;PP-Überschiebmuffe DN 250, liefern und als Zulage einbauen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;Schrägschnitt für PP-Rohre;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;PP-Schachtmuffe DN 200 mit angeformter Muffe und fest eingelegter ölbeständiger FE-Dichtung sowie äußerer Besandung liefern und als Zulage in die Kontrollschächte einbauen.;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;PP-Schachtmuffe DN 250 mit angeformter Muffe und fest eingelegter ölbeständiger FE-Dichtung sowie äußerer Besandung liefern und als Zulage in die Kontrollschächte einbauen.;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+20;Mall-Lamellenklärer ViaTub 18R 20;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+21;Trennbauwerk 4;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+22;Einweisung in die Regenwasserbehandlungsanlage;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+23;Sand, Splitt etc.,;10,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+24;Hartkalksteinschüttung, Vorabsiebung oder gebrochenes Kies-Sand-Gemisch, Körnung 0/32 - 0/45 mm,;230,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+25;Querschläge NUR AUF ANWEISUNG DER BAULEITUNG zur Feststellung der genauen Lage von Kabeln und Leitungen bis zu einer Länge von;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+26;Unterquerungen von vorh. Kabeln, Rohren und Kanalleitungen bis;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+27;Im Rohrgraben und sichtbare, frei in der Rohrgrabenwand verlaufende vorh. Kabel und Leitungen bis DN;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Rohrgräben für eine Kanalleitung aus PP-Rohren DN 200 in der erforderlichen Rohrgrabenbreite nach DIN EN 1610, bis zu einer Tiefe von 2,00 m in;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Rohrgräben für eine Kanalleitung aus PP-Rohren DN 300 in der erforderlichen Rohrgrabenbreite nach DIN EN 1610, bis zu einer Tiefe von 2,00 m in Böden;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Boden;35,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Boden,;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Boden,;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Boden,;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Bodenaushub in allen Tiefen, in Handschachtung, nur auf Anweisung der Bauleitung, als Zulage zum Bodenaushub.;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Baugrube zur Errichtung des RKB´s und Trennbauwerkes mit den Abmessungen ca. 8,00 x 4,50 m in Böden;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Baugrubenwände mit senkrechtem Verbau nach Wahl des AN, gemäß DIN 18.303, Abschnitt 3, in Einzellängen und -flächen verkleiden, den Verbau;100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;PP-Rohre DN 200, SN;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;PP-Bögen DN 200 (KG 2000), 15° - 87°, liefern und als Zulage einbauen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;PP-Überschiebmuffe DN 200, liefern und als Zulage einbauen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;Schrägschnitt für PP-Rohre;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;PP-Rohre DN 315, SN;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;PP-Bögen DN 315 (KG 2000), 15° - 87°, liefern und als Zulage einbauen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;PP-Überschiebmuffe DN 300, liefern und als Zulage einbauen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;Schrägschnitt für PP-Rohre;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;PP-Schachtmuffe DN 200 mit angeformter Muffe und fest eingelegter ölbeständiger FE-Dichtung sowie äußerer Besandung liefern und als Zulage in die Kontrollschächte einbauen.;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;PP-Schachtmuffe DN 300 mit angeformter Muffe und fest eingelegter ölbeständiger FE-Dichtung sowie äußerer Besandung liefern und als Zulage in die Kontrollschächte einbauen.;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+20;Mall-Lamellenklärer ViaTub 18R 20;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+21;Trennbauwerk 5;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+22;Einweisung in die Regenwasserbehandlungsanlage;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+23;Sand, Splitt etc.,;20,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+24;Hartkalksteinschüttung, Vorabsiebung oder gebrochenes Kies-Sand-Gemisch, Körnung 0/32 - 0/45 mm,;210,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+25;Querschläge NUR AUF ANWEISUNG DER BAULEITUNG zur Feststellung der genauen Lage von Kabeln und Leitungen bis zu einer Länge von;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+26;Unterquerungen von vorh. Kabeln, Rohren und Kanalleitungen bis;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+27;Im Rohrgraben und sichtbare, frei in der Rohrgrabenwand verlaufende vorh. Kabel und Leitungen bis DN;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Rohrgräben für eine Kanalleitung aus PP-Rohren DN 150 in der erforderlichen Rohrgrabenbreite nach DIN EN 1610, bis zu einer Tiefe von 1,00 m;680,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Rohrgräben wie vor, jedoch bis zu einer Tiefe von 1,50 m,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Rohrgräben für eine Kanalleitung aus PP-Rohren DN 250 in der erforderlichen Rohrgrabenbreite nach DIN EN 1610, bis zu einer Tiefe von 1,00 m;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Rohrgräben wie vor, jedoch bis zu einer Tiefe von 1,50 m,;1150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Rohrgräben wie vor, jedoch bis zu einer Tiefe von 2,00 m;65,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Rohrgräben wie vor, jedoch bis zu einer Tiefe von 2,50 m.;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Rohrgräben wie vor, jedoch bis zu einer Tiefe von 3,00 m;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Rohrgräben für eine Kanalleitung aus Stahlbetonrohren DN 300 SB in der erforderlichen Rohrgrabenbreite nach DIN EN 1610, bis zu einer Tiefe von 1,00 m in Böden;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Rohrgräben wie vor, jedoch bis zu einer Tiefe von 1,50 m,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Boden;2320,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;Bodenaushub wie vor, jedoch gemäß DepV;580,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;PP-Rohre DN 150, SN;700,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;PP-Bögen DN 150 (KG 2000), 15° - 87°, liefern und als Zulage einbauen.;480,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;PP-Rohre DN 250;1280,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;PP-Bögen DN 250 (KG 2000), 15° - 87°, liefern und als Zulage einbauen.;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;PP-Abzweig DN 250/150 (KG 2000), 45°, liefern und als Zulage einbauen.;93,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;Wandverstärkte Stahlbetonrohre DN 300 K-FM, vom Typ;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;Stahlbetonrohr-Gelenkstück DN 300 KF-GM Spitzende/Spitzende, liefern und einbauen, als Zulage zu den Stahlbetonrohren.;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;Stahlbetonrohr-Gelenkstück DN 300 KF-GM Spitzende/Muffe, liefern und einbauen, als Zulage zu den Stahlbetonrohren.;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+20;"Anbohren eines Stahlbetonrohrkanals DN 300 KF-GM für Steinzeugrohre DN 150, einschl. Lieferung und Einsetzen des Flexset-Anschlusselementes ""B"", Bohrung 172 mm, nach Vorschrift des Herstellers, einschl. des Verschlusstellers.";4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+21;Kontrollschacht bis zu einer lichten Schachttiefe von 1,00 m nach beigefügter Regelzeichnung Nr.;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+22;Kontrollschächte wie vor, jedoch bis zu einer Tiefe von 1,50 m;23,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+23;Kontrollschächte wie vor, jedoch bis zu einer Tiefe von 2,00 m;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+24;Kontrollschächte wie vor, jedoch bis zu einer Tiefe von 2,50 m;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+25;Kontrollschächte wie vor, jedoch bis zu einer Tiefe von 3,00 m;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+26;PP-Schachtmuffe DN 150 mit angeformter Muffe und fest eingelegter ölbeständiger FE-Dichtung sowie äußerer Besandung liefern und als Zulage in die Kontrollschächte einbauen.;27,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+27;PP-Schachtmuffe DN 250 mit angeformter Muffe und fest eingelegter ölbeständiger FE-Dichtung sowie äußerer Besandung liefern und als Zulage in die Kontrollschächte einbauen.;69,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+28;Richtungsänderungen der Fließrinne bis 100 gon in Schachtbauwerken, als Zulage zu den Schachtbauwerken gemäß Regelblatt 2.;25,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+29;Seitl. Zuflüsse;14,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+30;Schachtabdeckungen mit Entlüftungsöffnung für Fahrbahn, Klasse D (400 kN-Prüfkraft), lichte Öffnung;32,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+31;Straßenabläufe nach EN 124 / DIN 1229, in schwerer Ausführung, für hoch belastete Verkehrsflächen, für niedrigen Einbau ohne Geruchsverschluss, aus Betonfertigteilen für Trockenschlamm, einschließlich Längsaufsatz, Belastungsklasse D 400, Abmessungen 300 × 500 mm, Rost-Schlitzweite 34,5 mm, nach DIN;120,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+32;Sand, Splitt, Schotter etc. bis zu einer Korngröße 0/22 mm, aus nicht bindigem Material, zur Unterbettung von;3080,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+33;Hartkalksteinschüttung, Vorabsiebung oder gebrochenes Kies-Sand-Gemisch, Körnung 0/32 - 0/45 mm,;490,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+34;Querschläge NUR AUF ANWEISUNG DER BAULEITUNG zur Feststellung der genauen Lage von Kabeln und Leitungen bis zu einer Länge von;35,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+35;Im Rohrgraben und sichtbare, frei in der Rohrgrabenwand verlaufende vorh. Kabel und Leitungen bis DN;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+36;Unterquerungen von vorh. Kabeln, Rohren und Kanalleitungen bis;55,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Vorhandenen, im Zuge des Bodenaushubs freigelegten Durchlass DN 800 B abbrechen, aufladen und zur Deponie oder Wiederaufbereitungsanlage abfahren einschl. aller Nebenarbeiten.;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Boden,;150,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Baugrubenwände mit senkrechtem Verbau nach Wahl des AN, gemäß DIN 18.303, Abschnitt 3, in Einzellängen und -flächen verkleiden, den Verbau;100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Wandverstärkte Stahlbetonrohre DN 1.000 K-FM, vom Typ;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Wandverstärktes Stahlbetonrohr-Gelenkstück DN 1.000 K-FM Spitzende/Muffe, liefern und einbauen, als Zulage zu den Stahlbetonrohren;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Wandverstärktes Stahlbetonrohr-Stirnstück DN 1.000 K-FM liefern und einbauen, als Zulage zu den Stahlbetonrohren;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Kontrollschacht bis zu einer lichten Schachttiefe von 2,50 m nach beigefügter Regelquerschnittes Nr.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Erstellung eines Schachtbauwerkes;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Richtungsänderungen der Fließrinne bis 100 gon in Schachtbauwerken, als Zulage zu den Schachtbauwerken gemäß Regelblatt 14.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Kontrollschacht bis zu einer lichten Schachttiefe von 2,50 m nach beigefügter Regelquerschnittes Nr.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;Kontrollschacht bis zu einer lichten Schachttiefe von 2,50 m nach beigefügter Regelquerschnittes Nr.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;Seitl. Zuflüsse;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;Schachtabdeckungen mit Entlüftungsöffnung für Fahrbahn, Klasse D (400 kN-Prüfkraft), lichte Öffnung;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;Zweischichtige Kombinationsmatte aus zweiaxial gestreckten, formstabilen, knotensteifen, monolithischen Geogittern, thermisch verbunden mit einem mechanisch verfestigten Trenn- und Filtervliesstoff, Typ;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;Frostsichere Hartkalksteinschüttung 0/45 liefern und zur Untergrundstabilisierung bzw. zum Ausgleich von Bodenunebenheiten nach Anweisung der Bauleitung einbauen, sonst wie vor, jedoch einschl. des erforderlichen Bodenaushubes;35,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;Hartkalksteinschüttung;35,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;Weserkies;20,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;Sand, Splitt, Schotter etc. bis zu einer Korngröße 0/22 mm, aus nicht bindigem Material, zur Unterbettung von;150,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;Hartkalksteinschüttung, Vorabsiebung oder gebrochenes Kies-Sand-Gemisch, Körnung 0/32 - 0/45 mm,;50,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+20;Erschwernis der Bauarbeiten für die erforderliche Ausführung in;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Oberboden von Pflanzen, Buschwerk,;180,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Vorh. Bäume;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Vorh. Baumstubben mit und ohne Stockausschlag, Stammdurchmesser;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Vorh. Leitpfosten aufnehmen, aufladen, abfahren und der Verwertung/Wiederverwertung nach Wahl des AN zuführen.;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Vorh. Verkehrsschilder;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Oberboden nach DIN 18.320,;60,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Vorh. Brückengeländer,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Erschwernis der Bauarbeiten infolge beengter Platzverhältnisse im Bereich;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Erschwernis der Bauarbeiten für die erforderliche Ausführung in;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Für die erforderliche Grundwasserhaltung;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;Wasserhaltung während sämtlicher Bauarbeiten;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;Vorhandenen, im Zuge des Bodenaushubs freigelegten Durchlass, bestehend aus Fundamenten, Mauern und Deckenplatten aus Stahlbeton, Beton, Naturstein- oder Ziegelmauerwerk abbrechen, aufladen und zur Deponie oder Wiederaufbereitungsanlage abfahren einschl. aller Nebenarbeiten.;30,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;Boden,;750,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;Bodenaushub in allen Tiefen, in Handschachtung, nur auf Anweisung der Bauleitung, als Zulage.;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;Baugrubenwände mit senkrechtem Verbau nach Wahl des AN, gemäß DIN 18.303, Abschnitt 3, in Einzellängen und -flächen verkleiden, den Verbau;150,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;Zweischichtige Kombinationsmatte aus zweiaxial gestreckten, formstabilen, knotensteifen, monolithischen Geogittern, thermisch verbunden mit einem mechanisch verfestigten Trenn- und Filtervliesstoff, Typ;170,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;Frostsichere Hartkalksteinschüttung 0/45 liefern und zur Untergrundstabilisierung bzw. zum Ausgleich von Bodenunebenheiten nach Anweisung der Bauleitung einbauen, sonst wie vor, jedoch einschl. des erforderlichen Bodenaushubes;100,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;Hartkalksteinschüttung;100,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;'Vorabsiebung, Hartkalksteinschüttung bis 0/100 o.ä. zur Verfüllung der Baugrube bis OK Planum der Straße';1500,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+20;Beton der Festigkeitsklasse C 12/15, XO, gemäß DIN EN 206-1 als Unterbeton in einer Stärke von;20,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+21;Zementestrich CT-C25-F4, erdfeucht, 5 cm stark, gemäß DIN EN 13813 und DIN EN 18560 liefern und zur Schaffung einer planebenen Ausgleichsschicht unter;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+22;Stahlbetonrahmendurchlass (Kastenprofile) nach Blatt 13, bestehend aus U-Profil und Deckel für U-Profil mit Kopfbalken, aus;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+23;Beton der Festigkeitsklasse C 12/15, XO, als Profilbeton zur;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+24;Vorbereitete Betonunterlage mit Epoxidharz grundieren.;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+25;Vorbereitete Betonunterlage vor Herstellen der Dichtungsschicht mit Epoxidharzmörtel kratzspachteln.;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+26;Dichtungsschicht aus einer Bitumenschweißbahn gemäß ZTV-BEL-B Teil 1 herstellen. Dichtungsschicht an aufgehende Bauwerkskonstruktionen anschließen. Das Einbauen von Verstärkungsstreifen wird gesondert vergütet.;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+27;Asphaltschutzschicht auf Dichtungsschicht herstellen. Fugen herstellen und verfüllen wird gesondert vergütet.;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+28;Fugen in der Asphaltschutzschicht bei Deckenstößen sowie als Randfuge bei Brückenkappen/Kopfbalken oder Randeinführungen mit  heiß verarbeitbarer elastischer Fugenmasse gemäß ZTV Fug-StB herstellen.;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+29;"Stahlbeton C 30/37 LP;";4,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+30;Stahlbeton C 30/37 LP, XC4, XD3, XF4, gemäß DIN 206-1 und DIN 1045, der;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+31;Betonstahl Bst 500 A/B nach DIN 488 liefern, zuschneiden, biegen und nach Bewehrungszeichnung verlegen, einschl. Abstandshaltern aus Zementklötzen.;3,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+32;Aufstellen der Ausführungsunterlagen für den Durchlass und der daran anbindenden Stütz- bzw. Uferwände einschl. Sohlgründungen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+33;Fugenblech,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+34;Fundamenterder aus verzinktem Bandstahl, 4 x 40 mm, entsprechend der DIN 18.014, frei Baustelle liefern und in;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+35;Erdungsfestpunkt bestehend aus:;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+36;Dehnungsfugen in Stahlbetonsohlen;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+37;Eigenüberwachung bei;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+38;Veranlassung einer Fremdüberwachung durch eine anerkannte Überwachungsstelle gemäß DIN 1045-3.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+39;Formstein als Sandsteinblock zur Geländeabfangung (Weserhartsandstein), Baulänge;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+40;Formstein als Sandsteinblock wie vor, jedoch höhenversetzt als zweite Reihe hinter der ersten Formsteinreihe versetzen. Einbindetiefe 5 - 10 cm.;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+41;Beton der Festigkeitsklasse C 12/15, XO, als Profilbeton zur;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+42;Eichenholz,;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+43;Wasserbausteinschüttung;15,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+44;Weserkies;15,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+45;Vegetations- und Böschungsflächen etc. gem. DIN 18.915 lockern und im Feinplanum herstellen. Rasenmischung FLL RSM Regio (UG 6 - Oberes Weser- und Leinebergland mit Harz);180,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+46;Geschweißtes Stahlgeländer, feuerverzinkt,;22,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+47;Geschweißtes Stahlgeländer wie vor, jedoch mittels U-Platte auf den Stahlbetonwinkelstützen montieren;22,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+48;Stunden eines Schlossers auf Nachweis;24,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+49;Querschläge NUR AUF ANWEISUNG DER BAULEITUNG zur Feststellung der genauen Lage von Kabeln und Leitungen bis zu einer Länge von;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Grobplanum als Feinplanum mit Quergefälle nach Angabe der Bauleitung;5450,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Schottertragschicht 0/45 aus frostsicherer Hartkalksteinschüttung gemäß TL SoB-StB, aus Brüchen, die dem Güteschutz „Kalkstein“ angehören, mit einer Bruchflächigkeit der groben Gesteinskörnung mindestens der Kategorie C90/3 gemäß TL Gestein-StB und DIN EN 933-5, für Straßen der Belastungsklasse Bk 1;6900,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Flüssigboden als zeitweise fließfähiges, selbstverdichtendes Verfüllmaterial (ZFSV), Verdichtungsmaßklasse C1, Wasserdurchlässigkeit nach DIN 18.130: k = 10^-6 bis 10^-8 m/s, des Fabrikats/Typ: Terra Flow HB oder gleichwertige Art, zur Verfüllung;100,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Einreihige Pflasterrinne aus Basamentsteinen mit 3 mm Abstandshalter,;140,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Zweireihige Pflasterrinne aus Basamentsteinen mit 3 mm Abstandshalter,;2300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Dreireihige Pflasterrinne aus Basamentsteinen mit 3 mm Abstandshalter,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Entwässerungsrinne aus Asphaltbeton AC 8 D N herstellen;430,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Asphalttragdeckschicht AC 16 TD, temperaturabgesenkt,  gemäß ab 2027 aktueller TL Asphalt-StB  liefern und gemäß ZTV Asphalt im Baugruben- und Rohrgrabenbereich der Belastungsklasse;3500,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Asphalttragdeckschicht AC 16;258,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Fugenbänder;4070,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;Statische Plattendruckversuche gemäß DIN 18.314 auf Anordnung der Bauleitung durchführen, einschl. der Gerätegestellung, der erforderlichen Hilfskräfte und eines beladenen LKW' s.;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Stunden eines Baufacharbeiters auf Nachweis.;120,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Stunden eines Baggers (8 bis 30 to), einschl. Bedienung, auf Nachweis.;80,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Stunden eines Minibaggers (bis 8,0 to), einschl. Bedienung auf Nachweis.;80,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Stunden eines Allrad-Dreiseitenkippers, 10,0 bis 22,0 to Nutzlast, einschl. Fahrer, auf Nachweis.;80,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Stunden für handgeführte Motorkleingeräte (Bohrhammer, Motorsäge, Rüttelplatte etc.), einschl. Bedienung, auf Nachweis.;80,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Vorh. Asphaltbefestigungen maschinell bis 15 cm Stärke;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Vorh. Asphaltbefestigungen maschinell bis 20 cm Stärke;260,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Vorh. Asphaltbefestigung bis;200,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Vorh. Asphaltbefestigung bis;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Vorh. bit. Fahrbahndecke;2000,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Teer-/pechhaltiger Straßenaufbruch;200,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Rohrleitungsöffnungen;125,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;PVC-Rohrleitung;45,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Kanalfüllmasse zum Verfüllen der vorh. Kanalleitungen bzw. der Schächte liefern und einbauen, einschl. aller Nebenarbeiten.;155,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Vorh. Schachtbauwerke mit den max. Abmessungen von;70,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;Schachtabdeckungen von vorh. Schächten ausbauen, auf LKW laden, abfahren und der Verwertung / Wiederverwertung nach Wahl des AN zuführen.;70,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Pumpensümpfe zum Überpumpen des anfallenden;90,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Motorpumpenanlagen mit einer Leistung von 30 m3/h aufstellen, einschl. Vorhaltung der Anlage und aller Nebenarbeiten wie der erforderlichen Stromversorgung, Aufstell- und Ziehvorrichtung.;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Umsetzungen der Motorpumpenanlage;90,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Betrieb der Motorpumpenanlage;4000,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Für das Einbringen einer Fäkalpumpe mit Schwimmerschaltung, Leistung;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Betrieb der Fäkalpumpe einschl. aller Energie- und Nebenkosten.;50,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Kanalleitung aus Kanal-PVC 200 nach DIN 19.534, Farbe rotbraun, seitl. der Rohrleitung oder unterhalb Rohrsohle zur;850,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;PVC-hart-Bögen DN 200 liefern und als Zulage zu der Kanal-PVC-Rohrleitung einbauen.;20,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Regenwasserhaltung während;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Schmutzwasserhaltung während der Verlegung;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Rohrgräben für eine Kanalleitung aus PP-Rohren DN 200 in der erforderlichen Rohrgrabenbreite nach DIN EN 1610, bis zu einer Tiefe von 1,50 m in;70,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Rohrgräben wie vor, jedoch bis zu einer Tiefe von 2,00 m;265,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Rohrgräben wie vor, jedoch bis zu einer Tiefe von 2,50 m.;290,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Rohrgräben wie vor, jedoch bis zu einer Tiefe von 3,00 m;180,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Rohrgräben wie vor, jedoch bis 3,50 m;45,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Rohrgräben für eine Kanalleitung aus PP-Rohren DN 250 in der erforderlichen Rohrgrabenbreite nach DIN EN 1610, bis zu einer Tiefe von 2,50 m in;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Boden;1680,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Bodenaushub wie vor, jedoch gemäß DepV;420,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Erschwernis für die Herstellung von Rohrgräben mit gegenläufigen Fließrichtungen als Zulage zu den Rohrgrabenpositionen.;225,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Boden,;100,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;Boden,;50,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;Boden,;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;Bodenaushub in allen Tiefen, in Handschachtung, nur auf Anweisung der Bauleitung, als Zulage zum Bodenaushub.;50,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;Baugruben im Bereich vorh.;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;Rohrgraben- und Baugrubenwände mit stählernen Kanaldielen nach VOB Teil C, DIN 18.303, Abschnitt 3, in Einzellängen und -flächen verkleiden, den Verbau einschl. der erforderlichen Aussteifungen vorhalten und später wieder beseitigen. Als Zulage zum;150,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;PP-Rohre DN 200, SN;820,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;PP-Bögen DN 200 (KG 2000), 15° - 87°, liefern und als Zulage einbauen.;20,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;PP-Abzweig DN 200/150 (KG 2000) liefern und als Zulage einbauen.;35,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;PP-Rohre DN 250, SN;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+20;PP-Bögen DN 250 (KG 2000), 15° - 87°, liefern und als Zulage einbauen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+21;PP-Überschiebmuffe DN 250, liefern und als Zulage einbauen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+22;Anschluss eines neuen PP-Kanals;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+23;Kontrollschacht bis zu einer lichten Schachttiefe von 1,50 m nach beigefügter Regelzeichnung Nr.;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+24;Kontrollschächte wie vor, jedoch bis zu einer Tiefe von 2,00 m;7,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+25;Kontrollschächte wie vor, jedoch bis zu einer Tiefe von 2,50 m;9,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+26;Kontrollschächte wie vor, jedoch bis zu einer Tiefe von 3,00 m;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+27;Kontrollschächte wie vor, jedoch bis zu einer Tiefe von 3,50 m;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+28;Richtungsänderungen der Fließrinne bis 100 gon in Schachtbauwerken, als Zulage zu den Schachtbauwerken gemäß Regelblatt 2.;9,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+29;Seitl. Zuflüsse;8,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+30;Schachtabdeckungen mit Entlüftungsöffnung für Fahrbahn, Klasse D (400 kN-Prüfkraft), lichte Öffnung;25,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+31;Erstellung eines Schachtbauwerkes auf einen vorh.;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+32;Schachtfutter DN 200 aus Polyurethan, KGF-PUR, liefern und als Zulage in die Kontrollschächte einbauen.;50,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+33;PP-Schachtmuffe DN 250 mit angeformter Muffe und fest eingelegter ölbeständiger FE-Dichtung sowie äußerer Besandung liefern und als Zulage in die Kontrollschächte einbauen.;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+34;Sand,;1190,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+35;Hartkalksteinschüttung, Vorabsiebung oder gebrochenes Kies-Sand-Gemisch, Körnung 0/32 - 0/45 mm,;2100,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+36;Frostsichere Hartkalksteinschüttung 0/45,;620,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+37;Zweischichtige Kombinationsmatte aus zweiaxial gereckten, formstabilen, knotensteifen, monolithischen Tensar Geogittern, thermisch verbunden mit einem mechanisch verfestigten Trenn- und Filtervliesstoff, Typ Triax 150-GD, der Fa. Tensar international oder gleichwertig, liefern und auf;950,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+38;Querschläge NUR AUF ANWEISUNG DER BAULEITUNG zur Feststellung der genauen Lage von Kabeln und Leitungen bis zu einer Länge von;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+39;Unterquerungen von vorh. Kabeln, Rohren und Kanalleitungen bis;50,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+40;Im Rohrgraben und sichtbare, frei in der Rohrgrabenwand verlaufende vorh. Kabel und Leitungen bis DN;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+41;Beton der Festigkeitsklasse C 12/15, XO, zur Unterfangung von unterquerten Leitungen bzw. zur Rohrum- mantelung bei einer Mindestwandstärke von 25 cm von der Grabensohle an einbauen, einschl. der erforderlichen Schal- und aller Nebenarbeiten sowie der Materiallieferung.;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+42;Erstmalige Druckprobe für die Prüfung von Muffeneinzelverbindungen mit Luft im nicht begehbaren Bereich nach DIN EN 1610 und DWA A 139 mittels Muffenprüfpacker mit integrierter TV-Kamera.;415,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+43;Durchführung einer Rammsondierung durch eine Fremdfirma auf besondere Anordnung der Bauleitung mit der leichten Rammsonde nach DIN 4094 (Künzelstab) zur Überprüfung der Verdichtung innerhalb der Leitungszone;25,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Rohrgräben für eine Kanalleitung aus Betonrohren DN 300 B in der erforderlichen Rohrgrabenbreite nach DIN EN 1610, bis zu einer Tiefe von 1,50 m in Böden;155,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Rohrgräben wie vor, jedoch bis zu einer Tiefe von 2,00 m;230,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Rohrgräben wie vor, jedoch bis zu einer Tiefe von 2,50 m.;280,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Rohrgräben wie vor, jedoch bis zu einer Tiefe von 3,00 m;105,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Rohrgräben für eine Kanalleitung aus Betonrohren DN 400 B in der erforderlichen Rohrgrabenbreite nach DIN EN 1610, bis zu einer Tiefe von 2,00 m in Böden;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Rohrgräben wie vor, jedoch bis zu einer Tiefe von 2,50 m.;41,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Rohrgräben für eine Kanalleitung aus Betonrohren DN 500 B in der erforderlichen Rohrgrabenbreite nach DIN EN 1610, bis zu einer Tiefe von 2,00 m in Böden;105,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Rohrgräben wie vor, jedoch bis zu einer Tiefe von 2,50 m.;130,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Boden;2496,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Bodenaushub wie vor, jedoch gemäß DepV;624,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;Boden,;100,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;Boden,;50,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;Boden,;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;Bodenaushub in allen Tiefen, in Handschachtung, nur auf Anweisung der Bauleitung, als Zulage zum Bodenaushub.;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;Baugruben im Bereich;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;Baugruben im Bereich;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;Baugruben im Bereich;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;Rohrgraben- und Baugrubenwände mit stählernen Kanaldielen nach VOB Teil C, DIN 18.303, Abschnitt 3, in Einzellängen und -flächen verkleiden, den Verbau einschl. der erforderlichen Aussteifungen vorhalten und später wieder beseitigen. Als Zulage zum;150,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;Betonrohre DN 300 KF-GM, Typ 2, nach EN 1916 und DIN V 1201 mit Güteschutzzeichen und FBS-Qualitätszeichen, Expositionsklasse;740,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+20;Betonrohr-Gelenkstücke DN 300, Spitzende/Spitzende liefern und einbauen, als Zulage zu den Betonrohren.;27,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+21;Betonrohr-Gelenkstücke DN 300, Spitzende/Muffen liefern und einbauen, als Zulage zu den Betonrohren.;27,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+22;Betonrohr-Stirnstück DN 300 KF-GM liefern und einbauen, als Zulage zu den Betonrohren.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+23;Anbohren eines Betonrohrkanals;76,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+24;Betonrohre DN 400 KF-GM, Typ 2, nach EN 1916 und DIN V 1201 mit Güteschutzzeichen und FBS- Qualitätszeichen, Expositionsklasse;76,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+25;Betonrohr-Gelenkstücke DN 400, Spitzende/Spitzende liefern und einbauen, als Zulage zu den Betonrohren.;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+26;Betonrohr-Gelenkstücke DN 400, Spitzende/Muffen liefern und einbauen, als Zulage zu den Betonrohren.;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+27;Anbohren eines Betonrohrkanals;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+28;Betonrohre DN 500 KF-GM, Typ 2, nach EN 1916 und DIN V 1201 mit Güteschutzzeichen und FBS- Qualitätszeichen, Expositionsklasse;216,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+29;Betonrohr-Gelenkstücke DN 500, Spitzende/Spitzende liefern und einbauen, als Zulage zu den Betonrohren.;14,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+30;Betonrohr-Gelenkstücke DN 500, Spitzende/Muffen liefern und einbauen, als Zulage zu den Betonrohren.;14,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+31;Anbohren eines Betonrohrkanals;11,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+32;Anschluss eines neuen Betonrohrkanals;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+33;Anschluss eines neuen Betonrohrkanals;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+34;Kontrollschacht bis zu einer lichten Schachttiefe von 1,50 m nach beigefügter Regelzeichnung Nr.;8,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+35;Kontrollschächte wie vor, jedoch bis zu einer Tiefe von 2,00 m;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+36;Kontrollschächte wie vor, jedoch bis zu einer Tiefe von 2,50 m;7,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+37;Kontrollschächte wie vor, jedoch bis zu einer Tiefe von 3,00 m;3,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+38;Kontrollschacht bis zu einer lichten Schachttiefe von 1,50 m nach beigefügter Regelzeichnung Nr.;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+39;Kontrollschächte wie vor, jedoch bis zu einer Tiefe von 2,00 m;9,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+40;Kontrollschächte wie vor, jedoch bis zu einer Tiefe von 2,50 m;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+41;Richtungsänderungen der Fließrinne bis 100 gon in Schachtbauwerken, als Zulage zu den Schachtbauwerken gemäß Regelblatt 2.;12,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+42;Richtungsänderungen der Fließrinne bis 100 gon in Schachtbauwerken, als Zulage zu den Schachtbauwerken gemäß Regelblatt 3.;9,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+43;Seitl. Zuflüsse;36,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+44;Schachtabdeckungen mit Entlüftungsöffnung für Fahrbahn, Klasse D (400 kN-Prüfkraft), lichte Öffnung;38,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+45;Erstellung eines Schachtbauwerkes;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+46;Sand, Splitt, Schotter etc. bis zu einer Korngröße 0/22 mm, aus nicht bindigem Material, zur Unterbettung von;2200,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+47;Hartkalksteinschüttung, Vorabsiebung oder gebrochenes Kies-Sand-Gemisch, Körnung 0/32 mm,;2420,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+48;Frostsichere Hartkalksteinschüttung 0/45,;995,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+49;Zweischichtige Kombinationsmatte aus zweiaxial gereckten, formstabilen, knotensteifen, monolithischen Tensar Geogittern, thermisch verbunden mit einem mechanisch verfestigten Trenn- und Filtervliesstoff, Typ Triax 150-GD, der Fa. Tensar international oder gleichwertig, liefern und auf;1505,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+50;Unterquerungen von vorh. Kabeln, Rohren und Kanalleitungen bis;50,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+51;Im Rohrgraben und sichtbare, frei in der Rohrgrabenwand verlaufende vorh. Kabel und Leitungen bis DN;940,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+52;Beton der Festigkeitsklasse C 12/15, XO, zur Unterfangung von unterquerten Leitungen bzw. zur Rohrum- mantelung bei einer Mindestwandstärke von 25 cm von der Grabensohle an einbauen, einschl. der erforderlichen Schal- und aller Nebenarbeiten sowie der Materiallieferung.;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+53;Durchführung eines dynamischen Plattendruckversuches mit Hilfe des leichten Fallgewichtsgerätes, welches den technischen Prüfvorschriften für Boden und Fels im Straßenbau, TP BF-StB Teil B 8.3 entspricht.;40,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Rohrgräben für eine Kanalleitung aus PP-Rohren DN 150 in der erforderlichen Rohrgrabenbreite nach DIN EN 1610, bis zu einer Tiefe von 1,50 m in Böden;18,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Rohrgräben wie vor, jedoch bis zu einer Tiefe von 2,00 m;68,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Rohrgräben wie vor, jedoch bis zu einer Tiefe von 2,50 m.;75,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Rohrgräben wie vor, jedoch bis zu einer Tiefe von 3,00 m;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Rohrgräben wie vor, jedoch bis 3,50 m;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Boden;464,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Bodenaushub wie vor, jedoch gemäß DepV;116,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;PP-Rohre DN 150, SN;215,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;PP-Bögen DN 150 (KG 2000), 15° - 87°, liefern und als Zulage einbauen.;200,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Prov. Anschlüsse der vorh. Anschlussleitungen;50,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;Anschlüsse der neuen Anschlussleitung an die vorh. Anschlussleitung;40,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;Anschluss einer neuen Anschlussleitung an einen vorh. Hauskontrollschacht, einschl. der Bohrung oder Stemmarbeiten, Einbau des wasserdichten Dichtungselementes, der Sohl- und Bermenprofilierung sowie der;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;Rohrgraben- und Baugrubenwände mit stählernen Kanaldielen nach VOB Teil C, DIN 18.303, Abschnitt 3, in Einzellängen und -flächen verkleiden, den Verbau einschl. der erforderlichen Aussteifungen vorhalten und später wieder beseitigen. Als Zulage zum;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;Sand,;275,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;Hartkalksteinschüttung, Vorabsiebung oder gebrochenes Kies-Sand-Gemisch, Körnung 0/32 - 0/45 mm,;640,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;Unterquerungen von vorh. Kabeln, Rohren und Kanalleitungen bis;40,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;Unterquerungen von frostfrei gegründeten Grundstücks- mauern aus Beton-, Naturstein- oder Ziegelmauerwerk mit den zu verlegenden Rohrleitungen. Mauerhöhe;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;Unterquerungen von Hecken,;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;Unterquerungen von vorh. Zäunen,;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+20;Im Rohrgraben und sichtbare, frei in der Rohrgrabenwand verlaufende vorh. Kabel und Leitungen bis DN;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+21;Beton der Festigkeitsklasse C 12/15, XO, zur Unterfangung von unterquerten Leitungen bzw. zur Rohrum- mantelung bei einer Mindestwandstärke von 25 cm von der Grabensohle an einbauen, einschl. der erforderlichen Schal- und aller Nebenarbeiten sowie der Materiallieferung.;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+22;Vorh. Rohrleitung;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Rohrgräben für eine Kanalleitung aus PP-Rohren DN 150 in der erforderlichen Rohrgrabenbreite nach DIN EN 1610, bis zu einer Tiefe von 1,50 m in Böden;115,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Rohrgräben wie vor, jedoch bis zu einer Tiefe von 2,00 m;270,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Rohrgräben wie vor, jedoch bis zu einer Tiefe von 2,50 m.;325,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Rohrgräben wie vor, jedoch bis zu einer Tiefe von 3,00 m;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Boden;1584,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Bodenaushub wie vor, jedoch gemäß DepV;396,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;PP-Rohre DN 150, SN;780,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;PP-Bögen DN 150 (KG 2000), 15° - 87°, liefern und als Zulage einbauen.;450,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Prov. Anschlüsse der vorh. Anschlussleitungen;113,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Anschlüsse der neuen Anschlussleitung an die vorh. Anschlussleitung;103,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;Anschluss einer neuen Anschlussleitung an einen vorh. Hauskontrollschacht, einschl. der Bohrung oder Stemmarbeiten, Einbau des wasserdichten Dichtungselementes, der Sohl- und Bermenprofilierung sowie der;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;Rohrgraben- und Baugrubenwände mit stählernen Kanaldielen nach VOB Teil C, DIN 18.303, Abschnitt 3, in Einzellängen und -flächen verkleiden, den Verbau einschl. der erforderlichen Aussteifungen vorhalten und später wieder beseitigen. Als Zulage zum;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;Sand,;1015,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;Hartkalksteinschüttung, Vorabsiebung oder gebrochenes Kies-Sand-Gemisch, Körnung 0/32 - 0/45 mm,;2000,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;Unterquerungen von vorh. Kabeln, Rohren und Kanalleitungen bis;40,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;Unterquerungen von frostfrei gegründeten Grundstücks- mauern aus Beton-, Naturstein- oder Ziegelmauerwerk mit den zu verlegenden Rohrleitungen. Mauerhöhe;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;Unterquerungen von Hecken,;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;Unterquerungen von vorh. Zäunen,;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;Im Rohrgraben und sichtbare, frei in der Rohrgrabenwand verlaufende vorh. Kabel und Leitungen bis DN;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+20;Beton der Festigkeitsklasse C 12/15, XO, zur Unterfangung von unterquerten Leitungen bzw. zur Rohrum- mantelung bei einer Mindestwandstärke von 25 cm von der Grabensohle an einbauen, einschl. der erforderlichen Schal- und aller Nebenarbeiten sowie der Materiallieferung.;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+21;Vorh. Rohrleitung;700,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Grobplanum als Feinplanum mit Quergefälle nach Angabe der Bauleitung;2500,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;"Schottertragschicht 0/45 aus frostsicherer Hartkalksteinschüttung gemäß TL SoB-StB aus Brüchen, die dem Güteschutz ""Kalkstein"" angehören,";2750,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Flüssigboden als zeitweise fließfähiges, selbstverdichtendes Verfüllmaterial (ZFSV), Verdichtungsmaßklasse C1, Wasserdurchlässigkeit nach DIN 18.130: k = 10^-6 bis 10^-8 m/s, des Fabrikats/Typ: Terra Flow HB oder gleichwertige Art, zur Verfüllung;100,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Asphalttragdeckschicht AC 16 TD, temperaturabgesenkt,  gemäß ab 2027 aktueller TL Asphalt-StB  liefern und gemäß ZTV Asphalt im Baugruben- und Rohrgrabenbereich der Belastungsklasse;2000,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Asphalttragdeckschicht AC 16;170,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Fugenbänder;460,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Stunden eines Baufacharbeiters auf Nachweis.;120,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Stunden eines Baggers (8 bis 30 to), einschl. Bedienung, auf Nachweis.;80,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Stunden eines Minibaggers (bis 8,0 to), einschl. Bedienung auf Nachweis.;80,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Stunden eines Allrad-Dreiseitenkippers, 10,0 bis 22,0 to Nutzlast, einschl. Fahrer, auf Nachweis.;80,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Stunden für handgeführte Motorkleingeräte (Bohrhammer, Motorsäge, Rüttelplatte etc.), einschl. Bedienung, auf Nachweis.;80,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Vorh. Betonsteinpflaster (Verbund-, Rechteck-, Sechseck-, Ökopflaster etc.) bis d = 14 cm stark in Sand, Splitt o.ä. versetzt,;3600,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Vorh. Hoch- bzw. Rundbordanlagen,;2400,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Vorh. Flachbordanlagen,;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Vorh. Tiefbordanlage, d bis 10 cm, einschl. Betonunterbau und -rückenstütze;2500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Vorh. Verkehrsschilder;58,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Vorh. Straßenleuchte,;24,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Oberboden;15,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Boden,;2260,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Bodenaushub in allen Tiefen, in Handschachtung, nur auf Anweisung der Bauleitung, als Zulage.;15,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Grobplanum als Feinplanum mit Quergefälle nach Angabe der Bauleitung;5300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Innerhalb des geplanten Ausbauquerschnittes sichtbare  Kabel, Kabelleerrohre und Leitungen;700,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;"Schottertragschicht 0/45 aus frostsicherer Hartkalksteinschüttung gemäß TL SoB-StB aus Brüchen, die dem Güteschutz ""Kalkstein"" angehören,";3500,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Frostsichere Hartkalksteinschüttung 0/45,;1590,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Schachtabdeckungen der;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Vorhandene Schieber- oder Hydrantenkappen von Versorgungsleitungen aufnehmen, im Baustellenbereich  lagern, Förderweg:;75,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Tiefbordsteine;2000,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Radiensteine, unter 6 m Radius, als Bogensteine liefern und versetzen, als Zulage zu den Tiefbordsteinen.;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;Radiensteine, von 6 bis 11 m Radius, als gerade Bordsteine, L = 0,50 m, liefern und versetzen, als Zulage zu den Tiefbordsteinen.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;Radiensteine, ab 11 m Radius, als gerade Bordsteine, L = 1,00 m, liefern und versetzen, als Zulage zu den Tiefbordsteinen.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;Sägeschnitte für;150,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;Hochbordsteine A 15/30 bzw. Rundbordsteine A 15/22,;2580,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;Radiensteine, unter 10 m Radius, als Bogensteine liefern und versetzen, als Zulage zu den Tiefbordsteinen.;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;Radiensteine, von 10 bis 20 m Radius, als gerade Bordsteine, L = 0,50 m, liefern und versetzen, als Zulage zu den Tiefbordsteinen.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;Radiensteine, ab 20 m Radius, als gerade Bordsteine, L = 1,00 m, liefern und versetzen, als Zulage zu den Tiefbordsteinen.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;Zulage zu den Hochbordsteine A 15/30 bzw. Rundbordsteine A 15/22 für das Liefern und Versetzen von Absenksteinen Farbe grau, mit Basaltvorsatz der Güteklasse I und Güteschutznachweis.;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;Sägeschnitte für;150,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+20;Verbindungsbord, links oder rechts passend, als Übergangsstein;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+21;Mittelbordstein;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+22;Verbindungsbord, links oder rechts passend, als Übergangsstein;8,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+23;Übergangsstein;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+24;Sonderbordstein;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+25;Sonderbordübergangsstein links oder rechts passend;4,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+26;Flachbordstein F 10,;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+27;Flachbordstein F 10 als Übergangsstein auf einen Mittelbordstein 25/20;8,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+28;Rampenstein;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+29;Schmiegestein;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+30;Betonrechteckpflaster 20 x;4400,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+31;Betonsteinpflaster, des Fabr. Lintel, Typ CHEOPS SV linear, oder gleichwertige Art,;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+32;Orientierungspflaster gem. DIN 32984: 2011-10, Noppenplatte als Aufmerksamkeitsfeld mit richtungsneutral versetzt zueinander angeordneten Tastnoppen, Noppenhöhe;5,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+33;Orientierungspflaster wie vor, jedoch als Rippenplatte für Richtungs- oder Sperrfelder.;9,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+34;Sägeschnitte für;1500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+35;Stahlbetonwinkelstützen aus C 30/37, XD1-XC4, XF4, nach DIN EN 206-1, Lastfall 1 (SLW 60), alle sichtbaren Flächen in Sichtbeton, Fabr.;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Oberboden;250,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Sandigen Oberboden nach DIN 18.320 und DIN 18.915 frei von jeglichen Fremdstoffen und ausdauernden Pflanzen bzw. Pflanzenteilen frei Baustelle liefern und nach Angaben der Bauleitung;50,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Boden,;70,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Vorh. Asphaltbefestigungen maschinell bis 15 cm Stärke;115,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Vorh. Asphaltbefestigung bis;100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Vorh. Betonsteinpflaster;470,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Vorh. Betongehwegplatten in verschiedenen Abmessungen und Verlegearten;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Vorh. Betonsteinstufen;20,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Vorh. Betonbefestigungen maschinell bis 15 cm Stärke;55,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Vorh. bewehrte Betonflächen,;25,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;Vorh. unbewehrte Betonflächen;25,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;Vorh. Betonfundamentkanten;850,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;Vorh. Kastenrinnen;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;Entwässerungsrinne als Kastenrinne, Klasse D, aus Polymer-Beton;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;Grobplanum als Feinplanum mit Quergefälle nach Angabe der Bauleitung;190,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;'Schotter-, Splitt-, Kiesgemisch 0/22';85,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;Fugenbänder;115,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;Asphalttragschicht AC 22 T N,;30,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;Asphaltbetondeckschicht AC 8 D N (Heißeinbau),  temperaturabgesenkt, gemäß ab 2027 aktueller TL-Asphalt-StB liefern und gemäß ZTV-Asphalt;15,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Kabelgraben in;2135,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Kabelschutzrohre DN;4270,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Bauseitig gestelltes Straßenbeleuchtungskabel ausrollen und;2135,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Sand,;1700,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Lampenfundamente bestehend aus einem PVC-Rohr DN 400, L = 1,50 m herstellen.  Die Fundamentoberkante soll 20 cm unter Gehwegniveau sitzen. Nach Aufstellung des Mastes ist der Hohlraum mit Kies zu verfüllen und mit einer 5 cm starken Zementestrichschicht abzudecken.;30,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Vorh. Unterstand fachgerecht aufnehmen und entsorgen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;vorh. Businformationssäule in Beton bzw. Sand versetzt, fachgerecht aufnehmen vom Unterbau und Sand trennen und zur Wiederverwendung lagern.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Boden,;30,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Grobplanum als Feinplanum mit Quergefälle nach Angabe der Bauleitung;55,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;"Schottertragschicht 0/45 aus frostsicherer Hartkalksteinschüttung gemäß TL SoB-StB aus Brüchen, die dem Güteschutz ""Kalkstein"" angehören,";40,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Betonrechteckpflaster 20 x 10 x;35,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Farbzulage für;8,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Sägeschnitte für;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Busbordsteine;14,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Busbordübergangsstein, links oder rechts, passend zu den Hochbordsteinen;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;Orientierungspflaster gem. DIN 32984: 2011-10, Noppenplatte als Aufmerksamkeitsfeld mit richtungsneutral versetzt zueinander angeordneten Tastnoppen, Noppenhöhe;2,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;Orientierungspflaster wie vor, jedoch als Rippenplatte für Richtungs- oder Sperrfelder.;2,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;2-Feld-Wartehalle liefern und einbauen wie in den Vorbemerkungen zu den Wartehallen beschreiben.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;Beton C 20/25 XC2, für die Plattenfundamente liefern und einbauen. Die Kosten für die Schalung sind im Einheitspreis enthalten. Es ist dem AN freigestellt, die Fundamente im Bereich unterhalb des Planums ohne Verwendung von Schalung in den Fundamentgräben einzubauen. Abgerechnet wird in jedem Fall d;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;Betonstahl liefern, ablängen, biegen und nach statischen Erfordernissen;0,5;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;Abfallbehälter rechteckig. C-40 mit Deckel für verdeckte Verschraubung, zur Befestigung an einer vorderen Stütze der Wartehalle. nach außen zeigend.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;2-er Drahtgittersitzbank, liefern und montieren - Einzelsitze;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;Anlehn-Fahrradbügel liefern und montieren;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Vorh. Unterstand fachgerecht aufnehmen und entsorgen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;vorh. Businformationssäule in Beton bzw. Sand versetzt, fachgerecht aufnehmen vom Unterbau und Sand trennen und zur Wiederverwendung lagern.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Boden,;25,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Grobplanum als Feinplanum mit Quergefälle nach Angabe der Bauleitung;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;"Schottertragschicht 0/45 aus frostsicherer Hartkalksteinschüttung gemäß TL SoB-StB aus Brüchen, die dem Güteschutz ""Kalkstein"" angehören,";35,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Tiefbordsteine;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Sägeschnitte für;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Betonrechteckpflaster 20 x 10 x;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Farbzulage für;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Sägeschnitte für;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;Busbordsteine;14,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;Busbordübergangsstein, links oder rechts, passend zu den Hochbordsteinen;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;Orientierungspflaster gem. DIN 32984: 2011-10, Noppenplatte als Aufmerksamkeitsfeld mit richtungsneutral versetzt zueinander angeordneten Tastnoppen, Noppenhöhe;2,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;Orientierungspflaster wie vor, jedoch als Rippenplatte für Richtungs- oder Sperrfelder.;2,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;2-Feld-Wartehalle liefern und einbauen wie in den Vorbemerkungen zu den Wartehallen beschreiben.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;Beton C 20/25 XC2, für die Plattenfundamente liefern und einbauen. Die Kosten für die Schalung sind im Einheitspreis enthalten. Es ist dem AN freigestellt, die Fundamente im Bereich unterhalb des Planums ohne Verwendung von Schalung in den Fundamentgräben einzubauen. Abgerechnet wird in jedem Fall d;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;Betonstahl liefern, ablängen, biegen und nach statischen Erfordernissen;0,5;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;Abfallbehälter rechteckig. C-40 mit Deckel für verdeckte Verschraubung, zur Befestigung an einer vorderen Stütze der Wartehalle. nach außen zeigend.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;2-er Drahtgittersitzbank, liefern und montieren - Einzelsitze;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+20;Anlehn-Fahrradbügel liefern und montieren;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;vorh. Businformationssäule in Beton bzw. Sand versetzt, fachgerecht aufnehmen vom Unterbau und Sand trennen und zur Wiederverwendung lagern.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Boden,;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Grobplanum als Feinplanum mit Quergefälle nach Angabe der Bauleitung;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;"Schottertragschicht 0/45 aus frostsicherer Hartkalksteinschüttung gemäß TL SoB-StB aus Brüchen, die dem Güteschutz ""Kalkstein"" angehören,";15,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Tiefbordsteine;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Sägeschnitte für;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Betonrechteckpflaster 20 x 10 x;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Farbzulage für;7,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Sägeschnitte für;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Busbordsteine;14,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;Busbordübergangsstein, links oder rechts, passend zu den Hochbordsteinen;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;Orientierungspflaster gem. DIN 32984: 2011-10, Noppenplatte als Aufmerksamkeitsfeld mit richtungsneutral versetzt zueinander angeordneten Tastnoppen, Noppenhöhe;2,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;Orientierungspflaster wie vor, jedoch als Rippenplatte für Richtungs- oder Sperrfelder.;2,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;2-Feld-Wartehalle liefern und einbauen wie in den Vorbemerkungen zu den Wartehallen beschreiben.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;Beton C 20/25 XC2, für die Plattenfundamente liefern und einbauen. Die Kosten für die Schalung sind im Einheitspreis enthalten. Es ist dem AN freigestellt, die Fundamente im Bereich unterhalb des Planums ohne Verwendung von Schalung in den Fundamentgräben einzubauen. Abgerechnet wird in jedem Fall d;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;Betonstahl liefern, ablängen, biegen und nach statischen Erfordernissen;0,5;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;Abfallbehälter rechteckig. C-40 mit Deckel für verdeckte Verschraubung, zur Befestigung an einer vorderen Stütze der Wartehalle. nach außen zeigend.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;2-er Drahtgittersitzbank, liefern und montieren - Einzelsitze;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;Anlehn-Fahrradbügel liefern und montieren;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;vorh. Businformationssäule in Beton bzw. Sand versetzt, fachgerecht aufnehmen vom Unterbau und Sand trennen und zur Wiederverwendung lagern.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Boden,;30,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Grobplanum als Feinplanum mit Quergefälle nach Angabe der Bauleitung;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;"Schottertragschicht 0/45 aus frostsicherer Hartkalksteinschüttung gemäß TL SoB-StB aus Brüchen, die dem Güteschutz ""Kalkstein"" angehören,";35,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Tiefbordsteine;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Sägeschnitte für;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Betonrechteckpflaster 20 x 10 x;45,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Farbzulage für;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Sägeschnitte für;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Busbordsteine;14,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;Busbordübergangsstein, links oder rechts, passend zu den Hochbordsteinen;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;Orientierungspflaster gem. DIN 32984: 2011-10, Noppenplatte als Aufmerksamkeitsfeld mit richtungsneutral versetzt zueinander angeordneten Tastnoppen, Noppenhöhe;2,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;Orientierungspflaster wie vor, jedoch als Rippenplatte für Richtungs- oder Sperrfelder.;2,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;2-Feld-Wartehalle liefern und einbauen wie in den Vorbemerkungen zu den Wartehallen beschreiben.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;Beton C 20/25 XC2, für die Plattenfundamente liefern und einbauen. Die Kosten für die Schalung sind im Einheitspreis enthalten. Es ist dem AN freigestellt, die Fundamente im Bereich unterhalb des Planums ohne Verwendung von Schalung in den Fundamentgräben einzubauen. Abgerechnet wird in jedem Fall d;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;Betonstahl liefern, ablängen, biegen und nach statischen Erfordernissen;0,5;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;Abfallbehälter rechteckig. C-40 mit Deckel für verdeckte Verschraubung, zur Befestigung an einer vorderen Stütze der Wartehalle. nach außen zeigend.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;2-er Drahtgittersitzbank, liefern und montieren - Einzelsitze;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;Anlehn-Fahrradbügel liefern und montieren;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Vorh. Unterstand fachgerecht aufnehmen und entsorgen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;vorh. Businformationssäule in Beton bzw. Sand versetzt, fachgerecht aufnehmen vom Unterbau und Sand trennen und zur Wiederverwendung lagern.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Boden,;40,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Grobplanum als Feinplanum mit Quergefälle nach Angabe der Bauleitung;80,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;"Schottertragschicht 0/45 aus frostsicherer Hartkalksteinschüttung gemäß TL SoB-StB aus Brüchen, die dem Güteschutz ""Kalkstein"" angehören,";55,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Betonrechteckpflaster 20 x 10 x;45,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Farbzulage für;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Sägeschnitte für;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Busbordsteine;14,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Busbordübergangsstein, links oder rechts, passend zu den Hochbordsteinen;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;Orientierungspflaster gem. DIN 32984: 2011-10, Noppenplatte als Aufmerksamkeitsfeld mit richtungsneutral versetzt zueinander angeordneten Tastnoppen, Noppenhöhe;2,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;Orientierungspflaster wie vor, jedoch als Rippenplatte für Richtungs- oder Sperrfelder.;2,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;2-Feld-Wartehalle liefern und einbauen wie in den Vorbemerkungen zu den Wartehallen beschreiben.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;Beton C 20/25 XC2, für die Plattenfundamente liefern und einbauen. Die Kosten für die Schalung sind im Einheitspreis enthalten. Es ist dem AN freigestellt, die Fundamente im Bereich unterhalb des Planums ohne Verwendung von Schalung in den Fundamentgräben einzubauen. Abgerechnet wird in jedem Fall d;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;Betonstahl liefern, ablängen, biegen und nach statischen Erfordernissen;0,5;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;Abfallbehälter rechteckig. C-40 mit Deckel für verdeckte Verschraubung, zur Befestigung an einer vorderen Stütze der Wartehalle. nach außen zeigend.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;2-er Drahtgittersitzbank, liefern und montieren - Einzelsitze;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;Anlehn-Fahrradbügel liefern und montieren;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;Stahlbetonwinkelstützen aus C 30/37, XD1-XC4, XF4, nach DIN EN 206-1, Lastfall 1 (SLW 60), alle sichtbaren Flächen in Sichtbeton, Fabr.;32,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Vorh. Unterstand fachgerecht aufnehmen und entsorgen.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;vorh. Businformationssäule in Beton bzw. Sand versetzt, fachgerecht aufnehmen vom Unterbau und Sand trennen und zur Wiederverwendung lagern.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Boden,;30,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Grobplanum als Feinplanum mit Quergefälle nach Angabe der Bauleitung;55,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;"Schottertragschicht 0/45 aus frostsicherer Hartkalksteinschüttung gemäß TL SoB-StB aus Brüchen, die dem Güteschutz ""Kalkstein"" angehören,";35,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Tiefbordsteine;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Sägeschnitte für;5,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Betonrechteckpflaster 20 x 10 x;45,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Farbzulage für;70,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Sägeschnitte für;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;Busbordsteine;11,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;Busbordübergangsstein, links oder rechts, passend zu den Hochbordsteinen;2,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;Orientierungspflaster gem. DIN 32984: 2011-10, Noppenplatte als Aufmerksamkeitsfeld mit richtungsneutral versetzt zueinander angeordneten Tastnoppen, Noppenhöhe;2,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;Orientierungspflaster wie vor, jedoch als Rippenplatte für Richtungs- oder Sperrfelder.;2,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;3-Feld-Wartehalle liefern und einbauen wie in den Vorbemerkungen zu den Wartehallen beschreiben.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;Beton C 20/25 XC2, für die Plattenfundamente liefern und einbauen. Die Kosten für die Schalung sind im Einheitspreis enthalten. Es ist dem AN freigestellt, die Fundamente im Bereich unterhalb des Planums ohne Verwendung von Schalung in den Fundamentgräben einzubauen. Abgerechnet wird in jedem Fall d;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;Betonstahl liefern, ablängen, biegen und nach statischen Erfordernissen;0,5;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;Abfallbehälter rechteckig. C-40 mit Deckel für verdeckte Verschraubung, zur Befestigung an einer vorderen Stütze der Wartehalle. nach außen zeigend.;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;2-er Drahtgittersitzbank, liefern und montieren - Einzelsitze;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+20;Anlehn-Fahrradbügel liefern und montieren;1,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Stunden eines Baufacharbeiters auf Nachweis.;150,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Stunden eines Baggers (8 bis 30 to), einschl. Bedienung, auf Nachweis.;80,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Stunden eines Minibaggers (bis 8,0 to), einschl. Bedienung auf Nachweis.;80,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Stunden eines Allrad-Dreiseitenkippers, 10,0 bis 22,0 to Nutzlast, einschl. Fahrer, auf Nachweis.;80,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Stunden für handgeführte Motorkleingeräte (Bohrhammer, Motorsäge, Rüttelplatte etc.), einschl. Bedienung, auf Nachweis.;80,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Rohrgräben;270,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Rohrgräben;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Rohrgräben;350,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Rohrgräben;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Rohrgräben;55,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+6;Rohrgräben;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+7;Rohrgräben;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+8;Rohrgräben;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+9;Rohrgräben;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+10;Rohrgräben;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+11;Rohrgräben;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+12;Boden;230,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+13;Bodenaushub in allen Tiefen, in Handschachtung, nur auf Anweisung der Bauleitung, als Zulage zum Bodenaushub.;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+14;Baugruben im Bereich vorh. Leitungen zur Übernahme bzw. Trennung mit den Abmessungen 1,50 m x 1,00 m in Böden;10,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+15;Baugruben im Bereich vorh. Leitungen zur Übernahme bzw. Trennung mit den Abmessungen 1,50 m x 1,00 m in Böden;6,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+16;Bauseits gelieferte PVC-Rohre;900,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+17;Bauseits gelieferte PVC-Rohre;420,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+18;Querschläge NUR AUF ANWEISUNG DER BAULEITUNG zur Feststellung der genauen Lage von Kabeln und Leitungen bis zu einer Länge von;15,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+19;Sand 0/8 mm, aus nicht bindigem Material, als Unterbettungs-, Ummantelungs- und Verfüllungsmaterial frei Baustelle liefern und nach Angaben der Bauleitung einbauen und verdichten.;310,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+20;"Frostsichere Hartkalksteinschüttung 0/45 gemäß TL SoB-StB aus Brüchen,  die dem Güteschutz ""Kalkstein"" angehören, liefern und gemäß ZTV SoB-StB zur Grabenauffüllung einbauen, sonst wie vor, jedoch Umrechnungsfaktor";170,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+21;Unterquerungen von vorh. Kabeln, Rohren und Kanalleitungen bis;50,0;Stck;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+22;Im Rohrgraben und sichtbare, frei in der Rohrgrabenwand verlaufende vorh. Kabel und Leitungen bis DN;900,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Grobplanum als Feinplanum mit Quergefälle nach Angabe der Bauleitung;110,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;"Schottertragschicht 0/45 aus frostsicherer Hartkalksteinschüttung gemäß TL SoB-StB aus Brüchen, die dem Güteschutz ""Kalkstein"" angehören,";125,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Asphalttragdeckschicht AC 16;55,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+1;Stunden eines Baufacharbeiters auf Nachweis.;20,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+2;Stunden eines Baggers (8 bis 30 to), einschl. Bedienung, auf Nachweis.;8,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+3;Stunden eines Allrad-Dreiseitenkippers, 10,0 bis 22,0 to Nutzlast, einschl. Fahrer, auf Nachweis.;8,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+4;Stunden eines Radladers,;8,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83
+5;Stunden für handgeführte Motorkleingeräte (Bohrhammer, Motorsäge, Rüttelplatte etc.), einschl. Bedienung, auf Nachweis.;8,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/NEU_02.1 LV Istrup L712, V2, 25-028.X83

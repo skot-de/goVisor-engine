@@ -1,0 +1,79 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Bauzeitenplan mit einer Aufgliederung in die;1,0;psch;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+20;Bestandsaufnahme zur Beweissicherung der als;1,0;psch;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+30;Sicherheits- und Gesundheitsschutz-Koordinator gemäß;1,0;psch;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+40;Leitungsrecherche für Baugrunderkundung im Bereichder Schwanenburgbrücke durchführen.;1,0;psch;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+10;Verkehrssicherung an Arbeitsstellen von kürzerer Dauer;12,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+20;Verkehrssicherung an Arbeitsstellen von längerer Dauer im Geh- und Radwegbereich aufstellen, beseitigen, vorhalten, warten und betreiben.Vorübergehende Sicherungsmaßnahmen durchführen.;5,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+30;Verkehrssicherung an Arbeitsstellen von kürzerer Dauer im Geh- und Radwegbereich aufstellen, beseitigen, vorhalten, warten und betreiben.Vorübergehende Sicherungsmaßnahmen durchführen.;5,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+40;Verkehrssicherung an Arbeitsstellen von kürzerer Dauer;13,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+50;Beschildern der Radwegumleitung im Rahmen der Bohrarbeiten und Drucksondierungen gem. VZ422-16 bzw. VZ422-17 aufstellen, beseitigen, vorhalten, warten und betreiben.;6,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+60;Verkehrssicherung für die Nutzung der Hilfsausfahrt (Ein- und Ausfahrt) an der Anschlussstelle Herrenhausen. Einschließlich Beantragen und Einholen der verkehrsbehördlichen Anordnung bzw. der Genehmigung zur Nutzung des Bewirtschaftsungsweges sowie der dafür anfallenden Gebühren für deren Erteilung.;4,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+10;Baustelle für die vertragsgemäße Durchführung der;1,0;psch;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+20;Baustelle für Bohrarbeiten räumen. Soweit nicht für;1,0;psch;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+30;Vorschachten am Ansatzpunkt bis zu einer Tiefe von 2,0;6,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+40;Bohrung für Baugrunduntersuchung nach DIN EN ISO;30,0;m;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+50;Bohrung für Baugrunduntersuchung nach DIN EN ISO;30,0;m;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+60;Bohrung für Baugrunduntersuchung nach DIN EN ISO;15,0;m;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+70;Bohrung für Baugrunduntersuchung nach DIN EN ISO;5,0;m;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+80;Bohrung für Baugrunduntersuchung nach DIN EN ISO;1,0;m;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+90;Bohrung für Baugrunduntersuchung nach DIN EN ISO;1,0;m;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+100;Umstellen von Trockenbohrung auf Rotationskernbohrverfahren SK6L/Geobor S oder gleichwertiges Verfahren;6,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+110;Rotationskernbohrverfahren SK6L/Gebor S mit Dreifachkernrohr oder gleichwertig mit Umlaufspühlung durchführen.;1,0;m;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+120;Rotationskernbohrverfahren SK6L/Gebor S mit Dreifachkernrohr oder gleichwertig mit Umlaufspühlung durchführen.;1,0;m;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+130;Rotationskernbohrverfahren SK6L/Gebor S mit Dreifachkernrohr oder gleichwertig mit Umlaufspühlung durchführen.;10,0;m;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+140;Rotationskernbohrverfahren SK6L/Gebor S mit Dreifachkernrohr oder gleichwertig mit Umlaufspühlung durchführen.;30,0;m;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+150;Rotationskernbohrverfahren SK6L/Gebor S mit Dreifachkernrohr oder gleichwertig mit Umlaufspühlung durchführen.;25,0;m;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+160;Rotationskernbohrverfahren SK6L/Gebor S mit Dreifachkernrohr oder gleichwertig mit Umlaufspühlung durchführen.;1,0;m;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+170;Probe mit Entnahmegerät nach Baubeschreibung entnehmen.;6,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+180;Probe entnehmen. Bezeichnen und Lagern der Probe bzw.;250,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+190;Probe entnehmen. Bezeichnen und Lagern der Probe bzw.;30,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+200;Zweck = Untersuchung auf Betonaggressivität nach DIN;2,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+210;Bohrloch nach Baubeschreibung verfüllen.;35,0;m;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+220;Bohrloch nach Baubeschreibung verfüllen.;110,0;m;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+230;Gerät für Baugrunderkundung am jeweiligen Ansatzpunkt;3,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+240;Gerät für Baugrunderkundung am jeweiligen Ansatzpunkt;3,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+250;Schutz der Zuwegung mit lastverteilenden Platten auslegen, beseitigen, vorhalten und umsetzen.;500,0;m2;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+260;Kolonnenstunden für Hindernisbeseitigung an der;2,0;h;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+10;Baustelle für die vertragsgemäße Durchführung der;1,0;psch;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+20;Baustelle für Drucksondierungen räumen.;1,0;psch;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+30;Vorschachten am Ansatzpunkt bis zu einer Tiefe von 2,0;6,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+40;Drucksondierung für Baugrunduntersuchung nach DIN;140,0;m;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+50;Gerät innerhalb des Arbeitsgeländes nach Lageplan und;2,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+60;Gerät innerhalb des Arbeitsgeländes nach Lageplan und;4,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+70;Schutz der Zuwegung mit lastverteilenden Platten auslegen, beseitigen, vorhalten und umsetzen.;500,0;m2;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+80;Kolonnenstunden für Hindernisbeseitigung an der;2,0;h;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+10;Baustelle für die vertragsgemäße Durchführung der;1,0;psch;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+20;Baustelle für Kernbohrungen räumen.;1,0;psch;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+30;Kernbohrung in Beton vertikal und horizontal zur Gewinnung von Materialproben durchführen.;75,0;cm;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+40;Kernbohrung in Asphalt zur Öffnung der;50,0;cm;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+50;Kernbohrung in Asphalt zur Öffnung der;150,0;cm;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+60;Kernbohrung in Asphalt zur Öffnung der;150,0;cm;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+10;Baustelle für die vertragsgemäße Durchführung der;1,0;psch;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+20;Baustelle für Kleinbohrungen räumen;1,0;psch;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+30;Vorschachten am Ansatzpunkt bis zu einer Tiefe von 2,0;5,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+40;Kleinbohrung für Baugrunduntersuchung nach DIN EN ISO;25,0;m;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+50;Kleinbohrung für Baugrunduntersuchung nach DIN EN ISO;25,0;m;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+60;Kleinbohrung für Baugrunduntersuchung nach DIN EN ISO;5,0;m;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+70;Probe aus Entnahmerohr entnehmen. Bezeichnen und;100,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+80;Probe aus Entnahmerohr entnehmen. Bezeichnen und Lagern;10,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+90;Gerät innerhalb des Arbeitsgeländes nach Lageplan und;2,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+100;Gerät innerhalb des Arbeitsgeländes nach Lageplan und;2,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+110;Kolonnenstunden für Hindernisbeseitigung an der;2,0;h;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+10;Baustelle für die vertragsgemäße Durchführung der;1,0;psch;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+20;Baustelle für Handschürfe räumen;1,0;psch;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+30;Handschurf nach DIN EN 22475-1 bis t = 1,00 m Tiefe in Asphaltkernbohrung D=300 mm herstellen und Proben entnehmen. Schichtenverzeichnis nach DIN 4022 führen.;12,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+10;"Endvermessung der Ansatzpunkte unmittelbar nach Ausführung der jeweiligen Erkundung (Lage in UMT-Koordinaten; Höhe auf mNHN).";39,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+10;Untersuchung von Bodenmaterial nach EBV 2021, Anl. 1, Tab. 3;16,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+10;Erweichungspunkt Ring und Kugel nach EN 1427 inkl. vorheriger Aufbereitung der Asphaltprobe;13,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+20;Untersuchung von Bodenmaterial als Erweiterung der;1,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+30;Untersuchung von RC-Material nach EBV 2021, Anl.1, Tab.1;8,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+40;Untersuchung von RC-Material als Erweiterung der;1,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+50;Untersuchung von Asphaltproben;26,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+60;Asbest-Bestimmung gem. IFA 7487 mit Angabe der Asbestart;26,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+70;Asbest-Bestimmung gem. VDI 3866;1,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+80;PAK-Untersuchung von Dichtungsmaterial;4,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+90;Untersuchung von Wasserproben auf Betonaggressivität;3,0;St;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+110;Lieferung der ausgewählten Boden- und Baustoffproben an;1,0;psch;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+10;Bereiben eines Probenlagers zur fachgerechten Lagerung von Probenmaterial (Schutz vor Frost und Austrocknung). Das Probenlager muss über einen Stromanschluss, Beleuchtung einen Arbeitstischzur Bodenansprache und einenSchreibtisch verfügen und muss in näheren Umgebung des Untersuchungsraums liegen. M;3,0;Mon;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83
+20;Entsorgung der von der BÜ / dem AG freigegebenen Proben einschl. Probenumhüllung.;1,0;psch;gaeb;leistungsbeschreibungen/Schwanenburgbrücke.X83

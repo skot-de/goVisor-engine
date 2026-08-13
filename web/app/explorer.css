@@ -337,6 +337,14 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
 .zug-bar{height:8px;border-radius:99px;background:var(--surface-3);overflow:hidden}
 .zug-bar i{display:block;height:100%;border-radius:99px;background:var(--signal)}
 .zug-v{font-size:var(--t-meta);font-weight:600;color:var(--ink-700);font-variant-numeric:tabular-nums}
+/* CSV-Download unserer extrahierten Tabelle — sitzt rechts in der Sektions-Überschrift. */
+/* KEIN margin-left:auto — `.cov` in derselben h4 hat das schon; zwei auto-Ränder teilen sich
+   den Freiraum und schieben die Herkunftsangabe in die Mitte. Der Knopf folgt ihr einfach. */
+.dl-csv{align-self:center;display:inline-flex;align-items:center;gap:5px;font-size:var(--t-meta);
+  font-weight:600;color:var(--ink-500);text-decoration:none;border:1px solid var(--line-strong);
+  border-radius:99px;padding:3px 10px;white-space:nowrap}
+.dl-csv svg{width:13px;height:13px}
+.dl-csv:hover{color:var(--ink-900);border-color:var(--ink-400);background:var(--surface-3)}
 /* Leistungsumfang — das LV selbst (GAEB/Preisblatt). Mengen als Chips, Positionen als Tabelle. */
 .lu-sum{font-size:var(--t-body);color:var(--ink-700);margin-bottom:var(--s3)}
 .lu-mengen{display:flex;flex-wrap:wrap;gap:var(--s2);margin-bottom:var(--s3)}

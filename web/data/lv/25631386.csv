@@ -1,0 +1,79 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Schutzabdeckung;39,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0020;Schutzabdeckung;118,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0030;Schutzabdeckung;41,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0040;Schutzabdeckung;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0050;Schutzabdeckung;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0060;Schutzabdeckung;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0070;Schutzabdeckung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0080;Untergrund prüfen;2000,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0090;Prüfung und Protokollierung der Abreißfestigkeit des Untergrundes vor Ausführung WDVS.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0010;"Arbeitsplan nach TRGS 519 "" Asbest; Abbruch-, Sanierungs- oder Instandhaltungsarbeiten"". Der Arbeitsplan muss insbesondere Folgendes beschreiben:";1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0020;Arbeitsplan nach TRGS 5;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0030;Schutzmaßnahmen und persönliche Schutzausrüstung gemäß TRGS 519 als Baustelleneinrichtung, sowie organisatorischen und technischen Maßnahmen gem. Vorgabe der Berufsgenossenschaft.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0040;Schutzmaßnahmen und persönliche Schutzausrüstung gemäß TRGS 5;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0050;Fugenband;1450,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0060;Dichtstoff aus Fuge entfernen,;725,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0070;Dichtstoff aus Fuge entfernen,;725,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0080;Ausstopfen der ausgeräumten Plattenfugen, Bauteil Wand/Fassade,;1450,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0090;Schlitz/Fehlstelle füllen,;1450,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0010;Bau- und Abbruchabfälle, Holz, Glas und Kunststoff,;0,5;t;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0020;Bau- und Abbruchabfälle, Metalle,;0,5;t;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0030;Bau- und Abbruchabfälle,;1,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0040;Bau- und Abbruchabfälle,;0,25;t;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0050;Bau- und Abbruchabfälle,;1,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0060;Sonstige Bau- und Abbruchabfälle,;0,5;t;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0010;Konsole für Fensterbänke;530,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0020;Horizontale Putzabdichtung (zweite Dichtungsebene) einschl. seitlichem Randabschluss, wannenförmig,;305,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0030;Fensterbank, außen,;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0040;Fensterbank, außen,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0050;Fensterbank, außen,;105,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0060;Fensterbank, außen,;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0070;Fensterbank, außen,;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0010;Reinigen des Untergrundes;2000,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0020;Putzschicht;2000,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0030;Unebenheiten;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0040;Grundierung als Vorbereitung für strukturierten Oberputz, auf den Putzfarbton abgestimmt,;1950,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0010;Diagonalbewehrung für;780,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0020;Sockelabschluss über Geländeoberfläche als Systemabschluss für;135,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0030;Kantenprofil;790,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0040;Kantenprofil;245,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0050;Kantenprofil;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0060;Wärmedämm-Verbundsystem (WDVS);870,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0070;Befestigungselement im;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0080;Befestigungselement im;45,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0090;Teleskop-Gerätedose im Wärmedämm-Verbundsystem (WDVS), Ausführung gemäß DIN 18015-5, aus Kunststoff, Feuerbeständigkeit 650°C, halogenfrei, für die Befestigung von Leuchten, Bewegungsmeldern usw., Montagefläche für Geräte 120 x 120 mm, Gewichtsbelastung bei Wand- oder Deckenanbau 50 N (5kg), einschl;45,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0100;Teleskop-Gerätedose im Wärmedämm-Verbundsystem (WDVS), Ausführung gemäß DIN 18015-5, aus Kunststoff, Feuerbeständigkeit 650°C, halogenfrei, für die Befestigung von Schaltern, Steckdosen usw., Maße Gerätedose ( L x B x T) 68 x 70 x 50 mm, einschl. erforderlicher Aussparung im Dämmstoff, Befestigung i;45,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0110;Gerüstankerloch schließen,;181,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0120;Aussparung in Dämmplatte für auf dem Untergrund vorh. Befestigungselemente,;155,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0010;Dämmschicht;1810,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0020;Dämmschicht aus Mineralwolle MW DIN EN 13162, nichtbrennbar, Bemessungswert der Wärmeleitfähigkeit max. 0,035 W/(mK), Nennwert der Wärmeleitfähigkeit max. 0,034 W/(mK), einlagig, Dicke 30 mm, als Platten, stumpf, für Wärmedämm-Verbundsystem (WDVS) an Leibung, Breite Leibung 30cm, Arbeitshöhe der zu ;850,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0030;Wärmedämm-Verbundsystem (WDVS);890,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0040;Armierungsputz,;1810,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0050;Armierungsputz,;850,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0060;Außenputz DIN 18550-1;1646,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0070;Außenputz DIN 18550-1;850,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0080;Oberputz DIN 18550-1,;190,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0090;Außenputz DIN 18550-1;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0100;Außenputz DIN 18550-1;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0110;Außenputz DIN 18550-1;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0120;Außenputz DIN 18550-1;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0010;Perimeterdämmung;55,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0020;Perimeterdämmung;140,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0030;Perimeterdämmung an Sockel, Wassereinwirkungsklasse W4-E (Spritzwasser und Bodenfeuchte am Wandsockel sowie Kapillarwasser in und unter Wänden), aus Polystyrol-Hartschaum XPS DIN EN 13164, Bemessungswert der Wärmeleitfähigkeit max. 0,035 W/(mK), Nennwert der Wärmeleitfähigkeit max. 0,034 W/(mK), ein;38,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0040;Zuschnitt Dämmplatte,;135,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0050;Armierungsputz,;140,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0060;Außenputz DIN 18550-1;140,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0070;Außenputz DIN 18550-1;38,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0010;Erstbeschichtung;1810,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0020;Zulage für das farbliche Absetzen der Fassadenflächen in Kammputztechnik.;190,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0030;Erstbeschichtung;850,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0040;Erstbeschichtung;140,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0050;Erstbeschichtung;38,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0060;Feuchteschutz (Putzabdichtung) für später von Erde oder Kiesschüttung berührte Putzflächen für;135,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0070;Erstbeschichtung;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0010;Nisthilfe für Mauersegler, aus Holzbeton, B 66 cm H 15 cm T 15cm, Öffnung rund, Wandmontage, inklusive druckfester Dämmung als Ausgleich der Einbautiefe.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0020;Nisthilfe für;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0030;Einlaufblende für Fledermäuse, aus Holzbeton, B 30 cm H 30 cm T 8cm, Öffnung eckig, Wandmontage, inklusive druckfester Dämmung als Ausgleich der Einbautiefe, Rohr aus PVC als Durchgang zum Drempelbereich,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0040;Kernbohrung,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83
+0050;Zulage für die Erstellung des GWC-Logos, als geglättete Oberfläche im Bereich einer Fassadenfläche mit Kammzugtechnik, einschließlich anzufertigender Plotterfolie und notwendiger Abklebearbeiten, einschließlich Mehraufwand für Beschichtungsarbeite;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/0113_260701_023_LV.X83

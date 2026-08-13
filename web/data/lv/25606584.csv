@@ -1,0 +1,72 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Reinigen des Untergrundes aus Beton, von grober Verschmutzung, von festhaftenden Verunreinigungen, durch Schleifen mit anschließendem Absaugen, für Trockenbauarbeiten, Untergrund waagerecht, zu bearbeiten sind über 20 bis 30 % der Gesamtfläche, abgerechnet wird die Gesamtfläche, aufgenommene Stoffe ;40,0;m2;gaeb;sonstiges/26A30338.X83
+0020;Sperrschicht gegen Restfeuchte aus der Rohdecke aus PE-Folie, Dicke 0,3 mm, lose verlegen, Überlappungsbreite 10 cm, Ausführung gemäß Zeichnung.;40,0;m2;gaeb;sonstiges/26A30338.X83
+0030;Randdämmstreifen aus Mineralwolle, Dicke 10 mm, Höhe 80 mm, für Trockenunterboden Ausführung gemäß Zeichnung.;70,0;m;gaeb;sonstiges/26A30338.X83
+0040;Ausgleichsschicht als Schüttung, bei größeren Unebenheiten, aus Perlit, unter Unterböden, einbauen, lose geschüttet,;40,0;m2;gaeb;sonstiges/26A30338.X83
+0050;Trockenunterboden aus Gipsfaserplatten DIN EN 15283-2, mit Grenzwerten für Ebenheitsabweichungen mit erhöhten Ebenheitsanforderungen DIN 18202 Ausgabe 2019-07 Tabelle 3 Zeile 4, Dicke 23 mm + 23 mm, mit Gipsfaserplatte als Zusatzplatte zur Erhöhung der Tragfähigkeit, Dicke 10 mm, Feuerwiderstandskla;40,0;m2;gaeb;sonstiges/26A30338.X83
+0010;Deckenbekleidung DIN 18168-1, zusätzliche Flächenlast bis 0,15 kN/m2, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar), in Verbindung mit Rohdecke der Bauart II DIN 4102-4, Bekleidung aus Gipsplatten DIN 18180 und DIN EN 520, einlagig, Bauplatten Typ A, Dicke 12,5 mm, mit Grenzwerten für Ebenheitsabweic;40,0;m2;gaeb;sonstiges/26A30338.X83
+0020;Öffnung herstellen, einschl. Unterkonstruktion verstärken, mit CW-Profil, CW 75/50 DIN 18182-1, aus verzinktem Stahl, eckig, Anschluss umlaufend,;9,0;m2;gaeb;sonstiges/26A30338.X83
+0030;Revisionsklappe, Rahmen aus Aluminium, mit Füllung aus Gipsplatten, ohne Spachtelung, Dicke 12,5 mm,;9,0;St;gaeb;sonstiges/26A30338.X83
+0010;Nichttragende innere Trennwand DIN 18183-1, DIN 4103-1, ballwurfsicher DIN 18032-3, DIN EN 13964, Einbaubereich 1 DIN 4103-1 (Bereiche mit geringer Menschenansammlung), Höhe bis 3 m, Dicke 125 mm, bewertetes Schalldämm-Maß DIN 4109 Rw 50 dB, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar), mit Grenzwer;30,0;m2;gaeb;sonstiges/26A30338.X83
+0020;Nichttragende innere Trennwand DIN 18183-1, DIN 4103-1, ballwurfsicher DIN 18032-3, DIN EN 13964, Einbaubereich 1 DIN 4103-1 (Bereiche mit geringer Menschenansammlung), Höhe bis 3 m, Dicke 125 mm, bewertetes Schalldämm-Maß DIN 4109 Rw 50 dB, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar), mit Grenzwer;6,0;m2;gaeb;sonstiges/26A30338.X83
+0010;Installationswand für Installationselemente, Installationselemente werden gesondert vergütet, als Vorsatzschale für Vorwandinstallation, raumhoch, einseitige Wandbefestigung,;20,0;m2;gaeb;sonstiges/26A30338.X83
+0020;Installationswand für Installationselemente, Installationselemente werden gesondert vergütet, als Vorsatzschale für Vorwandinstallation, raumhoch, einseitige Wandbefestigung,;20,0;m2;gaeb;sonstiges/26A30338.X83
+0010;Installationswand für Installationselemente, Installationselemente werden gesondert vergütet, als Vorsatzschale für Vorwandinstallation, raumhoch, einseitige Wandbefestigung,;20,0;m2;gaeb;sonstiges/26A30338.X83
+0010;Trennwandanlage, mit Bodenabstand,;1,0;St;gaeb;sonstiges/26A30338.X83
+0010;Trennwandanlage, mit Bodenabstand,;1,0;St;gaeb;sonstiges/26A30338.X83
+0020;Trennwandanlage, mit Bodenabstand,;1,0;St;gaeb;sonstiges/26A30338.X83
+0005;Trennwandanlage, mit Bodenabstand,;1,0;St;gaeb;sonstiges/26A30338.X83
+0010;Trennwandanlage, mit Bodenabstand,;1,0;St;gaeb;sonstiges/26A30338.X83
+0010;Innentürelement aus Türblatt und Zarge, als Drehflügeltür, einflügelig, mit Anschlagfalz, als barrierefreie Ausführung DIN 18040,;2,0;St;gaeb;sonstiges/26A30338.X83
+0005;Innentürelement aus Türblatt und Zarge, als Drehflügeltür, einflügelig, mit Anschlagfalz, als barrierefreie Ausführung DIN 18040,;1,0;St;gaeb;sonstiges/26A30338.X83
+0010;Innentürelement aus Türblatt und Zarge, als Drehflügeltür, einflügelig, mit Anschlagfalz, als barrierefreie Ausführung DIN 18040,;1,0;St;gaeb;sonstiges/26A30338.X83
+0010;Innentürelement aus Türblatt und Zarge, als Drehflügeltür, einflügelig, mit Anschlagfalz, als barrierefreie Ausführung DIN 18040,;1,0;St;gaeb;sonstiges/26A30338.X83
+0010;Reinigen des Untergrundes aus Beton, von grober Verschmutzung, von festhaftenden Verunreinigungen, durch Schleifen mit anschließendem Absaugen, für Trockenbauarbeiten, Untergrund waagerecht, zu bearbeiten sind über 20 bis 30 % der Gesamtfläche, abgerechnet wird die Gesamtfläche, aufgenommene Stoffe ;80,0;m2;gaeb;sonstiges/26A30338.X83
+0020;Sperrschicht gegen Restfeuchte aus der Rohdecke aus PE-Folie, Dicke 0,3 mm, lose verlegen, Überlappungsbreite 10 cm, Ausführung gemäß Zeichnung.;80,0;m2;gaeb;sonstiges/26A30338.X83
+0030;Randdämmstreifen aus Mineralwolle, Dicke 10 mm, Höhe 80 mm, für Trockenunterboden Ausführung gemäß Zeichnung.;180,0;m;gaeb;sonstiges/26A30338.X83
+0040;Ausgleichsschicht als Schüttung, bei größeren Unebenheiten, aus Perlit, unter Unterböden, einbauen, lose geschüttet,;80,0;m2;gaeb;sonstiges/26A30338.X83
+0050;Trockenunterboden aus Gipsfaserplatten DIN EN 15283-2, mit Grenzwerten für Ebenheitsabweichungen mit erhöhten Ebenheitsanforderungen DIN 18202 Ausgabe 2019-07 Tabelle 3 Zeile 4, Dicke 23 mm + 23 mm, mit Gipsfaserplatte als Zusatzplatte zur Erhöhung der Tragfähigkeit, Dicke 10 mm, Feuerwiderstandskla;80,0;m2;gaeb;sonstiges/26A30338.X83
+0010;Deckenbekleidung DIN 18168-1, zusätzliche Flächenlast bis 0,15 kN/m2, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar), in Verbindung mit Rohdecke der Bauart II DIN 4102-4, Bekleidung aus Gipsplatten DIN 18180 und DIN EN 520, einlagig, Bauplatten Typ A, Dicke 12,5 mm, mit Grenzwerten für Ebenheitsabweic;80,0;m2;gaeb;sonstiges/26A30338.X83
+0020;Öffnung herstellen, einschl. Unterkonstruktion verstärken, mit CW-Profil, CW 75/50 DIN 18182-1, aus verzinktem Stahl, eckig, Anschluss umlaufend,;18,0;m2;gaeb;sonstiges/26A30338.X83
+0030;Revisionsklappe, Rahmen aus Aluminium, mit Füllung aus Gipsplatten, ohne Spachtelung, Dicke 12,5 mm,;18,0;St;gaeb;sonstiges/26A30338.X83
+0010;Nichttragende innere Trennwand DIN 18183-1, DIN 4103-1, ballwurfsicher DIN 18032-3, DIN EN 13964, Einbaubereich 1 DIN 4103-1 (Bereiche mit geringer Menschenansammlung), Höhe bis 3 m, Dicke 125 mm, bewertetes Schalldämm-Maß DIN 4109 Rw 50 dB, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar), mit Grenzwer;6,0;m2;gaeb;sonstiges/26A30338.X83
+0010;Nichttragende innere Trennwand DIN 18183-1, DIN 4103-1, ballwurfsicher DIN 18032-3, DIN EN 13964, Einbaubereich 1 DIN 4103-1 (Bereiche mit geringer Menschenansammlung), Höhe bis 3 m, Dicke 125 mm, bewertetes Schalldämm-Maß DIN 4109 Rw 50 dB, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar), mit Grenzwer;6,0;m2;gaeb;sonstiges/26A30338.X83
+0010;Nichttragende innere Trennwand DIN 18183-1, DIN 4103-1, ballwurfsicher DIN 18032-3, DIN EN 13964, Einbaubereich 1 DIN 4103-1 (Bereiche mit geringer Menschenansammlung), Höhe bis 3 m, Dicke 125 mm, bewertetes Schalldämm-Maß DIN 4109 Rw 50 dB, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar), mit Grenzwer;6,0;m2;gaeb;sonstiges/26A30338.X83
+0010;Installationswand für Installationselemente, Installationselemente werden gesondert vergütet, als Vorsatzschale für Vorwandinstallation, raumhoch, einseitige Wandbefestigung,;5,0;m2;gaeb;sonstiges/26A30338.X83
+0010;Installationswand für Installationselemente, Installationselemente werden gesondert vergütet, als Vorsatzschale für Vorwandinstallation, raumhoch, einseitige Wandbefestigung,;5,0;m2;gaeb;sonstiges/26A30338.X83
+0020;Installationswand für Installationselemente, Installationselemente werden gesondert vergütet, als Vorsatzschale für Vorwandinstallation, raumhoch, einseitige Wandbefestigung,;3,0;m2;gaeb;sonstiges/26A30338.X83
+0010;Installationswand für Installationselemente, Installationselemente werden gesondert vergütet, als Vorsatzschale für Vorwandinstallation, raumhoch, einseitige Wandbefestigung,;5,0;m2;gaeb;sonstiges/26A30338.X83
+0020;Installationswand für Installationselemente, Installationselemente werden gesondert vergütet, als Vorsatzschale für Vorwandinstallation, raumhoch, einseitige Wandbefestigung,;10,0;m2;gaeb;sonstiges/26A30338.X83
+0010;Installationswand für Installationselemente, Installationselemente werden gesondert vergütet, als Vorsatzschale für Vorwandinstallation, raumhoch, einseitige Wandbefestigung,;5,0;m2;gaeb;sonstiges/26A30338.X83
+0010;Installationswand für Installationselemente, Installationselemente werden gesondert vergütet, als Vorsatzschale für Vorwandinstallation, raumhoch, einseitige Wandbefestigung,;5,0;m2;gaeb;sonstiges/26A30338.X83
+0020;Installationswand für Installationselemente, Installationselemente werden gesondert vergütet, als Vorsatzschale für Vorwandinstallation, raumhoch, einseitige Wandbefestigung,;10,0;m2;gaeb;sonstiges/26A30338.X83
+0010;Installationswand für Installationselemente, Installationselemente werden gesondert vergütet, als Vorsatzschale für Vorwandinstallation, raumhoch, einseitige Wandbefestigung,;5,0;m2;gaeb;sonstiges/26A30338.X83
+0020;Installationswand für Installationselemente, Installationselemente werden gesondert vergütet, als Vorsatzschale für Vorwandinstallation, raumhoch, einseitige Wandbefestigung,;10,0;m2;gaeb;sonstiges/26A30338.X83
+0010;Installationswand für Installationselemente, Installationselemente werden gesondert vergütet, als Vorsatzschale für Vorwandinstallation, raumhoch, einseitige Wandbefestigung,;5,0;m2;gaeb;sonstiges/26A30338.X83
+0010;Installationswand für Installationselemente, Installationselemente werden gesondert vergütet, als Vorsatzschale für Vorwandinstallation, raumhoch, einseitige Wandbefestigung,;5,0;m2;gaeb;sonstiges/26A30338.X83
+0020;Installationswand für Installationselemente, Installationselemente werden gesondert vergütet, als Vorsatzschale für Vorwandinstallation, raumhoch, einseitige Wandbefestigung,;3,0;m2;gaeb;sonstiges/26A30338.X83
+0010;Installationswand für Installationselemente, Installationselemente werden gesondert vergütet, als Vorsatzschale für Vorwandinstallation, raumhoch, einseitige Wandbefestigung,;5,0;m2;gaeb;sonstiges/26A30338.X83
+0020;Installationswand für Installationselemente, Installationselemente werden gesondert vergütet, als Vorsatzschale für Vorwandinstallation, raumhoch, einseitige Wandbefestigung,;10,0;m2;gaeb;sonstiges/26A30338.X83
+0010;Trennwandanlage, mit Bodenabstand,;1,0;St;gaeb;sonstiges/26A30338.X83
+0020;Trennwandanlage, mit Bodenabstand,;1,0;St;gaeb;sonstiges/26A30338.X83
+0030;Trennwandanlage, mit Bodenabstand,;1,0;St;gaeb;sonstiges/26A30338.X83
+0010;Trennwandanlage, mit Bodenabstand,;1,0;St;gaeb;sonstiges/26A30338.X83
+0010;Trennwandanlage, mit Bodenabstand,;1,0;St;gaeb;sonstiges/26A30338.X83
+0020;Trennwandanlage, mit Bodenabstand,;1,0;St;gaeb;sonstiges/26A30338.X83
+0030;Trennwandanlage, mit Bodenabstand,;1,0;St;gaeb;sonstiges/26A30338.X83
+0010;Trennwandanlage, mit Bodenabstand,;1,0;St;gaeb;sonstiges/26A30338.X83
+0010;Trennwandanlage, mit Bodenabstand,;1,0;St;gaeb;sonstiges/26A30338.X83
+0020;Trennwandanlage, mit Bodenabstand,;1,0;St;gaeb;sonstiges/26A30338.X83
+0030;Trennwandanlage, mit Bodenabstand,;1,0;St;gaeb;sonstiges/26A30338.X83
+0010;Trennwandanlage, mit Bodenabstand,;1,0;St;gaeb;sonstiges/26A30338.X83
+0005;Innentürelement aus Türblatt und Zarge, als Drehflügeltür, einflügelig, mit Anschlagfalz, als barrierefreie Ausführung DIN 18040,;1,0;St;gaeb;sonstiges/26A30338.X83
+0010;Innentürelement aus Türblatt und Zarge, als Drehflügeltür, einflügelig, mit Anschlagfalz, als barrierefreie Ausführung DIN 18040,;1,0;St;gaeb;sonstiges/26A30338.X83
+0010;Innentürelement aus Türblatt und Zarge, als Drehflügeltür, einflügelig, mit Anschlagfalz, als barrierefreie Ausführung DIN 18040,;2,0;St;gaeb;sonstiges/26A30338.X83
+0005;Innentürelement aus Türblatt und Zarge, als Drehflügeltür, einflügelig, mit Anschlagfalz, als barrierefreie Ausführung DIN 18040,;1,0;St;gaeb;sonstiges/26A30338.X83
+0010;Innentürelement aus Türblatt und Zarge, als Drehflügeltür, einflügelig, mit Anschlagfalz, als barrierefreie Ausführung DIN 18040,;1,0;St;gaeb;sonstiges/26A30338.X83
+0010;Innentürelement aus Türblatt und Zarge, als Drehflügeltür, einflügelig, mit Anschlagfalz, als barrierefreie Ausführung DIN 18040,;2,0;St;gaeb;sonstiges/26A30338.X83
+0010;Innentürelement aus Türblatt und Zarge, als Drehflügeltür, einflügelig, mit Anschlagfalz, als barrierefreie Ausführung DIN 18040,;1,0;St;gaeb;sonstiges/26A30338.X83
+0020;Innentürelement aus Türblatt und Zarge, als Drehflügeltür, einflügelig, mit Anschlagfalz, als barrierefreie Ausführung DIN 18040,;1,0;St;gaeb;sonstiges/26A30338.X83
+0010;Innentürelement aus Türblatt und Zarge, als Drehflügeltür, einflügelig, mit Anschlagfalz, als barrierefreie Ausführung DIN 18040,;2,0;St;gaeb;sonstiges/26A30338.X83
+0010;Stundenlohnarbeiten durch Facharbeiter/-in;20,0;h;gaeb;sonstiges/26A30338.X83
+0020;Stundenlohnarbeiten durch Helfer/-in;20,0;h;gaeb;sonstiges/26A30338.X83

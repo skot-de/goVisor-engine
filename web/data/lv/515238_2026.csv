@@ -1,0 +1,11 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Baustelle für sämtliche, in der der Leistungsbeschreibung aufgeführten Leistungen einrichten.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/VH15.X83
+20;Baustelle für sämtliche, in der der Leistungsbeschreibung aufgeführten Leistungen räumen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/VH15.X83
+30;Planung der beschriebenen Stahlbau- und Schlosserarbeiten;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/VH15.X83
+10;Technikeinhausung;1,8;t;gaeb;vom_unternehmen_auszufuellende_dokumente/VH15.X83
+20;Lamellenwandsystem aus stranggepresstem Aluminium,;75,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH15.X83
+30;Eckausbildung der Lamellenwand,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH15.X83
+40;Einflügelige Lamellenwandtür,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH15.X83
+50;Zweiflügelige Lamellenwandtür,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH15.X83
+60;Gittermatte aus Stahl, feuerverzinkt, liefern und einbauen,;41,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH15.X83
+10;Innenseitige Absturzsicherung an Dachrand aus Baustahl, feuerverzinkt S235JR+AR bestehend aus:;95,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH15.X83

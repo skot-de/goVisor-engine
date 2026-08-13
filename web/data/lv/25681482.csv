@@ -1,0 +1,15 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Personenaufzug nach EN 81, ohne Maschinenraum,;1,0;St;gaeb;leistungsbeschreibungen/2025-03_LV461_Aufzugsanlage_2026-08-05.X83
+20;Notrufsystem;1,0;St;gaeb;leistungsbeschreibungen/2025-03_LV461_Aufzugsanlage_2026-08-05.X83
+30;Evakuierungsfahrt;1,0;St.;gaeb;leistungsbeschreibungen/2025-03_LV461_Aufzugsanlage_2026-08-05.X83
+40;Brandfallsteuerung (dynamisch);1,0;St.;gaeb;leistungsbeschreibungen/2025-03_LV461_Aufzugsanlage_2026-08-05.X83
+50;Montagegerüst;1,0;St;gaeb;leistungsbeschreibungen/2025-03_LV461_Aufzugsanlage_2026-08-05.X83
+60;Abdeckung Entlüfungsöffnung oberhalb Schacht- und Kabinenzugangstür anbringen, sodass die Entlüftung des Aufzugsschachtes in das Treppenhaus zur Entrauchungs- öffnung öffenbares Fenster erfolgen kann,;1,0;St;gaeb;leistungsbeschreibungen/2025-03_LV461_Aufzugsanlage_2026-08-05.X83
+70;ENEV-Kit mit Rauchansaugsystem und Steuerung;1,0;St;gaeb;leistungsbeschreibungen/2025-03_LV461_Aufzugsanlage_2026-08-05.X83
+80;Wetterschutzabdeckung für Rauchabzug Aufzug,;1,0;St;gaeb;leistungsbeschreibungen/2025-03_LV461_Aufzugsanlage_2026-08-05.X83
+10;Monteur-Stunde, sonst wie vor;4,0;Std;gaeb;leistungsbeschreibungen/2025-03_LV461_Aufzugsanlage_2026-08-05.X83
+10;Bestandsunterlagen erstellen und übergeben.;1,0;St;gaeb;leistungsbeschreibungen/2025-03_LV461_Aufzugsanlage_2026-08-05.X83
+20;Abnahmen mit TÜV / Behörden über Antragsstellung AN;1,0;St;gaeb;leistungsbeschreibungen/2025-03_LV461_Aufzugsanlage_2026-08-05.X83
+30;Wechselinterval Riemen/ Gurte Tragmittell;1,0;St;gaeb;leistungsbeschreibungen/2025-03_LV461_Aufzugsanlage_2026-08-05.X83
+40;Wartungskosten Personenaufzug 1000kg;1,0;St;gaeb;leistungsbeschreibungen/2025-03_LV461_Aufzugsanlage_2026-08-05.X83
+50;Wartungskosten Personenaufzug 1000kg;1,0;St.;gaeb;leistungsbeschreibungen/2025-03_LV461_Aufzugsanlage_2026-08-05.X83

@@ -1,0 +1,315 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;Einrichten der Baustelleneinrichtung f;1,0;psch;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0002;ü;30,0;Wo;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0003;Bauzaun mit Plane liefern, aufstellen, vorhalten, unterhalten und auf Anforderung der Bauleitung abbauen,;120,0;m;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0004;ü;3600,0;m/Wo;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0005;mit Plane und abschlie;3,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0006;ü;90,0;St/W;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0007;Bauschuttcontainer fur Holzabfalle mit einem;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0008;Im Bauschuttcontainer anfallenden Holz Bauschutt laden,;2,0;t;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0009;jedoch fur Mauerwerk/Ziegel;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0010;jedoch Mauerwerk/Ziegel;2,0;t;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0011;jedoch f;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0012;jedoch mineralischer Mischabbruch;2,0;t;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0013;jedoch fur;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0014;jedoch;2,0;t;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0015;Herstellen von Staubw;100,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0016;Herstellung tempor;80,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0017;Erstellen einer inneren Schutzauskleidung der Aufzugskabine,;60,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0018;Herstellen von Schutzbekleidungen an den Aufzugsportalen in allen Etagen;56,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0019;Auf- und Abbauen, geschossweises umsetzten sowie Vorhalten aller erforderlichen Arbeits- und Schutzger;4,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0020;Auf- und Abbauen, geschossweises umsetzten sowie Vorhalten aller erforderlichen Arbeits- und Schutzger;120,0;St/W;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0021;Baustelle von allen Ger;1,0;psch;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0022;als Lagerfl;1,0;psch;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0023;Herstellen, Aush;1,0;psch;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0001;Fachgerechtes Ausf;2,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0002;Pflasterbelag im Bereich der Feuerwehzufahrt in vorh. St;64,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0003;Pflasterbelag im Bereich der Fu;24,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0004;Sichernstellen der Pflanzen im Bereich des neu herzustellenden barrierefreien Eingangs;7,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0005;Boden f;48,0;m³;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0006;Der vorhandene Oberboden einschlie;33,5;m³;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0007;Ü;150,0;t;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0008;Zulage f;150,0;m³;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0009;Zulage f;75,0;m³;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0010;Zulage f;20,0;m³;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0011;Zulage f;10,0;m³;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0012;Handaushub darf nur nach Vereinbarung mit der Bauleitung durchgef;5,0;m³;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0013;Aushubohle nach Abschluss der Erdarbeiten profilgerecht herstellen, planieren und verdichten.;280,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0014;Ü;3,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0015;Herstellen von Gräben für Installationsleitungen;120,0;m;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0016;vorh. Aushubmaterial als verdichtungsf;20,0;m³;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0017;Frostschutzschicht aus Schotter, einschl. profilgerecht verdichten.;60,0;m³;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0018;Tragschicht aus Kies mit Verdichtungsgrad mind. 98-103% DPr herstellen.;112,0;m³;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0019;Vorfabrizierte Winkelst;12,0;m;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0020;Zulage f;4,0;m;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0021;Liefern und einbauen von Tiefbordsteine aus Beton mit Frost- und Tausalzbest;38,0;m;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0022;Zulage f;5,0;m;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0023;Liefern und einbauen von Rasengittersteinen.;64,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0024;versickerungsf;10,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0025;jedoch im Bereich der Eingangst;9,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0026;ACO Profiline X (GFK), L=100cm, B=15,5cm, h;3,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0027;ACO Fassadenrinnen Lochrost, verzinkt, K3, L=100cm;3,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0028;Asphaltdeckschicht nach ZTV Asphalt-StB 07/13,;20,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0029;Verschlie;30,0;m;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0030;Wiedereinbau des Oberbodens der Pflanzflächen;90,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0031;einheim. Stauden und Gr;20,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0032;Liefern und einbauen von Fahrradst;3,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0033;Pflanzfl;200,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0001;L;24,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0002;Abbrechen von Mauerwerksw;8,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0003;Abbrechen von Innenmauerwerksw;80,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0004;Herstellen von Wand;4,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0005;Die f;4,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0006;Abbrechen von Vorsatzschalen aus Mauerwerk im Ostfl;110,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0007;Trockenbauw;181,7;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0008;Trockenbauw;96,9;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0009;Die vorhandene Metall-Brandschutzdecke in den Flurbereichen ist vollst;314,25;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0010;bestehend aus:;314,25;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0011;Ort: WC-Kerne;135,75;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0012;Abbrechen von Stahlbetonw;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0013;Holz- oder Vollglast;69,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0014;Die ausgebauten Glast;61,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0015;Die ausgebauten Holzt;8,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0016;MAlrkierte Stahlumfassungszargen aus Massiv- und Trockenbauw;4,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0017;Stahlumfassungszargen aus Massiv- und Trockenbauw;26,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0018;Toilettentrennw;40,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0019;Ausbau Bodenbel;10,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0020;Ausbau Bodenbel;861,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0021;Bodenbelag:;320,44;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0022;Bodenbelag:;69,819;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0023;Wandfliesen-Bel;460,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0024;R;8,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0025;Vorhandenen Doppelboden einschlie;325,28;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0001;Kernbohrung in Mauerwerk- / Betonw;150,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0002;Bohrdurchmesser bis 200mm;150,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0003;Bohrdurchmesser bis 150mm;200,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0004;Bohrdurchmesser bis 200mm;200,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0005;Bohrdurchmesser bis 150mm;300,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0006;Bohrdurchmesser bis 200mm;300,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0007;Bohrdurchmesser bis 300mm;300,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0008;Kernbohrung in Mauerwerk- / Betonw;150,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0009;Kernbohrung in Mauerwerk- / Betonw;150,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0010;Bohrdurchmesser bis 150mm;200,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0011;Bohrdurchmesser bis 200mm;200,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0012;Bohrdurchmesser bis 150mm;300,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0013;Bohrdurchmesser bis 200mm;300,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0014;Bohrdurchmesser bis 300mm;300,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0001;Meterrisse in jeder Etage dauerhaft anbringen,;8,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0002;Innenmauerwerk als;29,4;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0003;Eng;4,9;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0004;Bestehende T;2,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0005;Wanddurchbr;10,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0006;Wanddurchbr;10,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0007;Wanddurchbr;10,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0008;Wanddurchbr;10,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0009;Reinigen des Untergrundes der W;481,47;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0010;Putzhaftbr;481,47;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0011;Gipsputz nach DIN 18550, mineralisch gebunden;481,47;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0001;Vorarbeiter;100,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0002;Facharbeiter;100,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0003;Kleintransporter;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0004;Abbruchhammer normal;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0005;Abbruchhammer schwer;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0006;Winkelschleifer;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0007;Trennscheibe;50,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0008;Akku-Schrauber;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0009;Säbelsäge-Akku;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0010;Hubwagen;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0011;Materialien, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Anwendung kommen:;1,0;m³;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0012;Leiter;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0013;OSB Platte;50,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0014;Gewebefolie;50,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0015;Baufolie;50,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0016;Klebeband;30,0;R;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0001;Einrichten der Baustelleneinrichtung f;1,0;psch;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0002;ü;30,0;Wo;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0003;Bauzaun mit Plane liefern, aufstellen, vorhalten, unterhalten und auf Anforderung der Bauleitung abbauen,;120,0;m;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0004;ü;3600,0;m/Wo;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0005;mit Plane und abschlie;3,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0006;ü;90,0;St/W;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0007;Bauschuttcontainer fur Holzabfalle mit einem;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0008;Im Bauschuttcontainer anfallenden Holz Bauschutt laden,;2,0;t;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0009;jedoch fur Mauerwerk/Ziegel;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0010;jedoch Mauerwerk/Ziegel;2,0;t;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0011;jedoch f;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0012;jedoch mineralischer Mischabbruch;2,0;t;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0013;jedoch fur;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0014;jedoch;2,0;t;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0015;Herstellen von Staubw;110,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0016;Herstellung tempor;80,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0017;Auf- und Abbauen, geschossweises umsetzten sowie Vorhalten aller erforderlichen Arbeits- und Schutzger;4,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0018;Auf- und Abbauen, geschossweises umsetzten sowie Vorhalten aller erforderlichen Arbeits- und Schutzger;120,0;St/W;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0019;Baustelle von allen Ger;1,0;psch;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0020;als Lagerfl;1,0;psch;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0021;Herstellen, Aush;1,0;psch;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0001;L;2,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0002;- Stahlbetonwand;5,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0003;Abbrechen von Mauerwerksw;3,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0004;Abbrechen von Innenmauerwerksw;25,6;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0005;Herstellen von Wand;5,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0006;Die f;5,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0007;Abbrechen von Vorsatzschalen aus Mauerwerk im Westfl;115,15;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0008;Trockenbauw;96,352;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0009;Trockenbauw;157,326;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0010;Die vorhandene Metall-Brandschutzdecke in den Flurbereichen ist vollst;177,054;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0011;bestehend aus:;177,054;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0012;Ort: WC-Kerne;70,2;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0013;Abbrechen von Stahlbetonw;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0014;Holz- oder Vollglast;54,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0015;Die ausgebauten Glast;45,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0016;Die ausgebauten Holzt;9,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0017;MAlrkierte Stahlumfassungszargen aus Massiv- und Trockenbauw;11,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0018;Stahlumfassungszargen aus Massiv- und Trockenbauw;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0019;Ausbau Bodenbel;68,72;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0020;Ausbau Bodenbel;936,51;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0021;Bodenbelag:;160,39;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0022;Bodenbelag:;36,984;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0023;Wandfliesen-Bel;36,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0024;R;5,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0025;Vorhandenen Doppelboden einschlie;96,15;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0001;Der T;10,0;m;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0002;Kernbohrung in Mauerwerk- / Betonw;150,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0003;Bohrdurchmesser bis 200mm;150,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0004;Bohrdurchmesser bis 150mm;200,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0005;Bohrdurchmesser bis 200mm;200,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0006;Bohrdurchmesser bis 150mm;300,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0007;Bohrdurchmesser bis 200mm;300,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0008;Bohrdurchmesser bis 300mm;300,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0009;Kernbohrung in Mauerwerk- / Betonw;150,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0010;Kernbohrung in Mauerwerk- / Betonw;150,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0011;Bohrdurchmesser bis 150mm;200,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0012;Bohrdurchmesser bis 200mm;200,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0013;Bohrdurchmesser bis 150mm;300,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0014;Bohrdurchmesser bis 200mm;300,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0015;Bohrdurchmesser bis 300mm;300,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0001;Meterrisse in jeder Etage dauerhaft anbringen,;10,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0002;Erstellen von Innenmauerwerk als Schachtwand zwischen der vorh. Massivbaukonstruktion.;83,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0003;Bestehende T;5,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0004;Wanddurchbr;10,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0005;Wanddurchbr;10,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0006;Wanddurchbr;10,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0007;Wanddurchbr;10,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0008;Reinigen des Untergrundes der W;119,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0009;Putzhaftbr;119,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0010;Gipsputz nach DIN 18550, mineralisch gebunden;119,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0001;Vorarbeiter;100,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0002;Facharbeiter;100,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0003;Helfer;100,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0004;Kleintransporter;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0005;Abbruchhammer normal;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0006;Abbruchhammer schwer;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0007;Winkelschleifer;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0008;Trennscheibe;50,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0009;Akku-Schrauber;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0010;Säbelsäge-Akku;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0011;Hubwagen;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0012;Materialien, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Anwendung kommen:;1,0;m³;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0013;Leiter;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0014;OSB Platte;50,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0015;Gewebefolie;50,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0016;Baufolie;50,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0017;Klebeband;30,0;R;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0001;Einrichten der Baustelleneinrichtung f;1,0;psch;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0002;ü;30,0;Wo;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0003;Bauzaun mit Plane liefern, aufstellen, vorhalten, unterhalten und auf Anforderung der Bauleitung abbauen,;120,0;m;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0004;ü;3600,0;m/Wo;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0005;mit Plane und abschlie;3,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0006;ü;90,0;St/W;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0007;Bauschuttcontainer fur Holzabfalle mit einem;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0008;Im Bauschuttcontainer anfallenden Holz Bauschutt laden,;2,0;t;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0009;jedoch fur Mauerwerk/Ziegel;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0010;jedoch Mauerwerk/Ziegel;2,0;t;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0011;jedoch f;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0012;jedoch mineralischer Mischabbruch;2,0;t;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0013;jedoch fur;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0014;jedoch;2,0;t;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0015;Herstellen von Staubw;110,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0016;Herstellung tempor;90,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0017;Erstellen einer inneren Schutzauskleidung der Aufzugskabine,;35,5;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0018;Herstellen von Schutzbekleidungen an den Aufzugsportalen in allen Etagen;88,2;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0019;die an den W;3,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0020;die an den W;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0021;Auf- und Abbauen, geschossweises umsetzten sowie Vorhalten aller erforderlichen Arbeits- und Schutzger;4,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0022;Auf- und Abbauen, geschossweises umsetzten sowie Vorhalten aller erforderlichen Arbeits- und Schutzger;120,0;St/W;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0023;Baustelle von allen Ger;1,0;psch;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0024;als Lagerfl;1,0;psch;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0025;Herstellen, Aush;1,0;psch;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0001;L;4,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0002;Vorhandene Gewerbek;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0003;R;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0004;Der Empfangstresen im EG vollst;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0005;- Stahlbetonwand;9,616;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0006;Abbrechen von Stahlbetonw;2,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0007;- Stahlbetontreppe;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0008;Stahlbetonbodenplatte im Anschluss an verbleibende Aufzugsw;50,0;m;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0009;Die auf der Au;30,0;m;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0010;Abbrechen von Innenmauerwerk im Bereich des neu zu erstellenden Self-Service-Bereichs.;37,088;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0011;Abbrechen von Innenmauerwerksw;2,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0012;Abbrechen von Innenmauerwerksw;12,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0013;Herstellen von Wand;5,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0014;Die f;5,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0015;Abbrechen von Vorsatzschalen aus Mauerwerk im Westfl;122,7;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0016;Trockenbauw;14,592;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0017;Trockenbauw;50,336;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0018;Die vorhandene Metall-Brandschutzdecke in den Flurbereichen ist vollst;446,506;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0019;bestehend aus:;706,542;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0020;Ort: WC-Kerne,;161,93;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0021;Innent;19,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0022;Innent;60,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0023;Ausbau Bodenbel;187,53;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0024;Ausbau Bodenbel;1534,55;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0025;Bodenbelag:;1280,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0026;Bodenbelag:;384,3;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0027;Wandfliesen-Bel;900,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0028;R;17,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0029;Vorhandenen Doppelboden einschlie;69,81;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0001;Kernbohrung in Mauerwerk- / Betonw;150,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0002;Bohrdurchmesser bis 200mm;150,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0003;Bohrdurchmesser bis 150mm;200,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0004;Bohrdurchmesser bis 200mm;200,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0005;Bohrdurchmesser bis 150mm;300,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0006;Bohrdurchmesser bis 200mm;300,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0007;Bohrdurchmesser bis 300mm;300,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0008;Kernbohrung in Mauerwerk- / Betonw;150,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0009;Kernbohrung in Mauerwerk- / Betonw;150,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0010;Bohrdurchmesser bis 150mm;200,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0011;Bohrdurchmesser bis 200mm;200,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0012;Bohrdurchmesser bis 150mm;300,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0013;Bohrdurchmesser bis 200mm;300,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0014;Bohrdurchmesser bis 300mm;300,0;cm;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0015;Liefern und Herstellen der erforderlichen Schalung f;12,0;m2;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0016;Verbindung des Bestandsbetons, ohne D;100,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0017;Liefern und Einbauen der erforderlichen Bewehrung f;1,0;t;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0018;Baustahlgewebematten, Typ nach Vorgabe Statik, liefern, lagern und nach Zeichnung schneiden, biegen und verlegen. Verschnitt und erforderlicher Bindedraht sowie Abstandhalter f;1,0;t;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0019;Zur Abfangung der vorhandenen Stahlbetondeckenplatte sowie der neu zu erstellenden Treppe und Bodenplatte sind nach statischer Berechnung Stahltr;1000,0;kg;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0020;Bodenplatte als Stahlbeton im Bereich des stillgelegten Aufzugsschachtes sowie im Bereich der neu zu erstellender Treppe ausf;0,8;m3;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0021;Betontreppe als Stahlbeton im EG im Bereich des Selfservices ausf;1,13;m3;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0022;Stahlbeton im EG als Verbindung zwischen dem Self-Service-Bereich und dem Flur F003 ausf;1,1;m3;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0023;Liefern und einbauen von Kleineisenteilen wie Ankerplatten, Laschen, Auflagerwinkel, Lasthaken und dgl. als Walz-/ Hohlprofile und Winkel, einschl. Kopfplatten, Laschen, Anschlu;200,0;kg;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0001;Meterrisse in jeder Etage dauerhaft anbringen,;10,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0002;Erstellen von Innenmauerwerk als Trennwand zwischen der vorh. Massivbaukonstruktion.;160,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0003;Bestehende T;1,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0004;Wanddurchbr;10,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0005;Wanddurchbr;10,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0006;Wanddurchbr;10,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0007;Wanddurchbr;10,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0008;Reinigen des Untergrundes der W;952,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0009;Putzhaftbr;952,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0010;Gipsputz nach DIN 18550, mineralisch gebunden;952,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0001;Vorarbeiter;100,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0002;Facharbeiter;100,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0003;Helfer;100,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0004;Kleintransporter;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0005;Abbruchhammer normal;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0006;Abbruchhammer schwer;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0007;Winkelschleifer;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0008;Trennscheibe;50,0;St;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0009;Akku-Schrauber;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0010;Säbelsäge-Akku;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0011;Hubwagen;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0012;Materialien, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Anwendung kommen:;1,0;m³;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0013;Leiter;50,0;h;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0014;OSB Platte;50,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0015;Gewebefolie;50,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0016;Baufolie;50,0;m²;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83
+0017;Klebeband;30,0;R;gaeb;leistungsbeschreibungen/26-07-20_2501_vbw_LV Baumeisterarbeiten-Blankett.X83

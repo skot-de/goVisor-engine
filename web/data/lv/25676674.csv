@@ -1,0 +1,21 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Firmeneigene Baustelleneinrichtung;1,0;psch;gaeb;leistungsbeschreibungen/26A10214 LV.X83
+0010;Bezeichnung: 2-teiliges Fenster, einflügelig mit;101,0;St;gaeb;leistungsbeschreibungen/26A10214 LV.X83
+0020;2-teiliges Fenster wie vor beschrieben;5,0;St;gaeb;leistungsbeschreibungen/26A10214 LV.X83
+0030;Bezeichnung: 3-teiliges Fenster, zweiflügelig mit;6,0;St;gaeb;leistungsbeschreibungen/26A10214 LV.X83
+0040;Zulage für RC3-Anforderung;4,0;St;gaeb;leistungsbeschreibungen/26A10214 LV.X83
+0050;Seitliche Blendrahmenverbreiterung, geeignet zur;604,0;lfdm;gaeb;leistungsbeschreibungen/26A10214 LV.X83
+0060;Obere Blendrahmenverbreiterung, geeignet zur Anpassung;165,0;lfdm;gaeb;leistungsbeschreibungen/26A10214 LV.X83
+0070;Untere Blendrahmenverbreiterung gedämmt, geeignet zur;165,0;lfdm;gaeb;leistungsbeschreibungen/26A10214 LV.X83
+0080;Liefern und Einbauen einer dreiseitigen;52,0;lfdm;gaeb;leistungsbeschreibungen/26A10214 LV.X83
+0090;Liefern und Einbauen einer dreiseitigen;769,0;lfdm;gaeb;leistungsbeschreibungen/26A10214 LV.X83
+0100;Balkon-Fenstertür;1,0;St;gaeb;leistungsbeschreibungen/26A10214 LV.X83
+0110;Innenfensterbank Länge  1,30 -1,50m;106,0;St;gaeb;leistungsbeschreibungen/26A10214 LV.X83
+0120;Innenfensterbank wie vor beschrieben, jedoch L bis 2 m;6,0;St;gaeb;leistungsbeschreibungen/26A10214 LV.X83
+0130;Außenfensterbank aus Aluminium-Strangpressprofilen;112,0;lfdm;gaeb;leistungsbeschreibungen/26A10214 LV.X83
+0140;Zulage für das Bekleben der Fensterfläche mit;11,0;m2;gaeb;leistungsbeschreibungen/26A10214 LV.X83
+0150;Selbstklebende, klarsichtige und kratzunempfindliche;11,0;m2;gaeb;leistungsbeschreibungen/26A10214 LV.X83
+0160;Wärmegedämmte zweiflügelige Stahltür, doppelwandig.;1,0;St;gaeb;leistungsbeschreibungen/26A10214 LV.X83
+0170;Tür wie vor beschrieben, jedoch Ausführung einflügelig;1,0;St;gaeb;leistungsbeschreibungen/26A10214 LV.X83
+0010;Ausführung gemäß Ausführungsbeschreibung  im Hinweis;5,0;h;gaeb;leistungsbeschreibungen/26A10214 LV.X83
+0020;Ausführung gemäß Ausführungsbeschreibung  im Hinweis;5,0;h;gaeb;leistungsbeschreibungen/26A10214 LV.X83

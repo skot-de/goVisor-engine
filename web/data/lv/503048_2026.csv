@@ -1,0 +1,737 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Anfertigen von der Werk- und Montageplanung als 3D Modell entsprechend genanntem Hinweis für die gesamten Lieferungen und Leistungen des Auftragnehmers.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;In dieser Position sind durch den Auftragnehmer alle Lieferungen und Leistungen aufzunehmen, die zur ordnungsgemäßen, vorschriftsgemäßen und mangelfreien Durchführung der Lieferungen und Leistungen aller im Leistungsverzeichnis genannten Positionen bis zur Vollendung des Auftrages notwendig sind (in;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Projektabwicklung im Rahmen der MSR ist durch den Auftragnehmer auszuführen, hierbei:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Kabelliste 2-fach erstellen, beinhaltend die Darstellung von Leitungen und Kabeln mit Klemmen auf der Kabel- und Geräteliste sowie deren fortlaufende Nummerierung.;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Bezeichnung aller elektrischen Feldgeräte wie Fühler, Mischer, Pumpen, RLT-Anlagen, etc. in elektronischer Ausgabeform bestehend aus:;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch anstelle für Feldgeräte als Kabelbezeichnung mit Kabelbezeichnungsbinder.;250,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Abisolieren, Eindichten und Einführen der verlegten Elektroleitungen für alle im Leistungsverzeichnis enthaltenen elektrischen Bauteile, auch wenn diese nicht einzeln erwähnt wurden;120,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Stellen von Sicherheitsarbeitsgerüsten und Leitern nach UVV für die Dauer der gesamten Montagearbeiten einschl. Auf- und Abbau, An- und Abfahrt für alle Geschosse für die gesamte Bauzeit bis 10,0 m Arbeitshöhe ohne Hebebühnen.;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Beistellen von Hebe-/ Scherenbühnen mit elektrischem Antrieb für Arbeitshöhen bis 10,0 m. Hebebühnen aller Art als Hub-, Schertisch, etc.;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Stundensatz für Hebe-/ Scherenbühnen mit elektrischem Antrieb für Arbeitshöhen bis 10,0 m. Hebebühnen aller Art als Hub-, Schertisch, etc.;16,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;An- und Abfahrt für zuvor benannte Hebe-/ Scherenbühnen, die nach der regulären Bauzeit erforderlich sind.;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Bezeichnungsschilder aus Alublech mit abgeschrägten Kanten und eingravierter Schrift mit min. 3-zeiliger Beschriftung für Schriftgröße 12 bis 20.;400,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Zulage für Bezeichnungsschilder für Schilderhalter aus Alublech mit rückseitiger Befestigungsmöglichkeit an Wand oder Decke direkt,;170,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Flussrichtungspfeile in farbiger Ausführung, mit maschineller Beschriftung, zum Aufkleben an Rohrisolierung, Stahlkonstruktionen oder Kanäle, Lieferung und Montage nach DIN 2403, DIN 2404 und DIN 12792.;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Flussrichtungspfeile in farbiger Ausführung, mit maschineller Beschriftung, zum Aufkleben an Rohrisolierung, Stahlkonstruktionen oder Kanäle, Lieferung und Montage nach DIN 2403, DIN 2404 und DIN 12792.;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Sonderschild entsprechend der Verwendung in angepasster Form als Klebeschild für Türaufkleber erstellen und anbringen (z. B. Hinweis-/ Gefahrenschilder, etc.).;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Revisionsplan des Schemas als CAD-Plot farbig angelegt, auf VK100 Platte 19 mm aufgeklebt, mit Plexiglasabdeckung in der Zentrale gut sichtbar aufhängen, einschl. der entsprechenden Wandaufhänger aus Edelstahl.;32,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuvor in vollem Wortlaut, jedoch Querung Dachflächen bis 0,5 m2, vertikal oder horizontal, rund oder eckig;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuvor in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuvor in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuvor in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuvor in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuvor in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuvor in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Dichtheitsmessung des erstellten Luftleitungsnetzes mit allen Einbauten und Verbindungen gemäß DIN EN 12599 mit schriftlicher Dokumentation durch den Auftragnehmer und Einreichung beim Fachplaner binnen 14 Werktagen nach Durchführung.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Erstellen eines Luftgeschwindigkeitsprotokolls je einzelnen Kanalabschnitt.;70,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Nachweis der Strömungsrichtung zwischen Räumen gemäß DIN 1946 Teil 4, Punkt 5.2.5. ist bei geschlossenen Türen mittels;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Nachweis / Einregulieren der Nennvolumenströme der installierten Auslässe / Einlässe mit Angabe;2600,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Anlageninbetriebnahme Lüftungsanlagen durch den Werks-Kundendienst. Nachweis der Leistung sowie aller Funktionen unter Angabe von;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Anlageninbetriebnahme Lüftungsanlagen durch den Werks-Kundendienst. Nachweis der Leistung sowie aller Funktionen unter Angabe von;14,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Zulage zum Einregulieren der Umwälzpumpen inkl. Sperren der Funktionen.;14,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Zulage zum Einregulieren der Volumenstromregelventilen aller Art, manuell oder elektronische.;14,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Inbetriebnahme und Einregulierung der vorstehenden Anlage. Die Inbetriebnahme beinhaltet:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Inbetriebnahme der Schaltanlagen und Funktionsprobe der Steuerung entsprechend der, gemäß durch die Fachbauleitung freigegebenen, Funktionsliste mit zu erfüllenden Schaltungen.  Prüfen der angeschlossenen Antriebe auf richtige Drehrichtung. Messen der Motor-/ Istströme und Einstellung der thermische;14,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Inbetriebnahme Automationsstation, bestehend aus:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Übergabe / Aufschaltung auf GLT im Werk für erstellte Anlage bestehend aus:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Einweisung des Bedienpersonals zu einem vorgeschlagenen Termin des Bauherrn bestehend aus:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+10;Der Probebetrieb beginnt nach schriftlicher Anmeldung bei der Bauleitung, frühestens nach mangelfreier Übergabe und ausgeführter Vorabnahme (keine Abnahme).;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+11;Um der Forderung nach der Gesamtheit von Maschinen gemäß der EG-Maschinenrichtlinie 2006/42/EG (Mai 2006) zu entsprechen, ist eine Nachweisführung einschl. einer zugehörigen Dokumentation zu erbringen.;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+12;Abnahme der im Leistungsverzeichnis geführten Gewerke, nach der zuvor benannten Anforderungen.;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+13;Während dem durch Dritte ausgeführten und koordinierten Inbetriebnahmemanagement / Monitoringmanagement hat der Auftragnehmer folgendermaßen mitzuwirken:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Anfertigen von Bestandsunterlagen in 2-facher Ausfertigung entsprechend genanntem Hinweis für die gesamten Lieferungen und Leistungen des AN.;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Anfertigen von Bestandsunterlagen als 3D Modell entsprechend genanntem Hinweis für die gesamten Lieferungen und Leistungen des Auftragnehmers.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Tarifliche Lohnstunde;100,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Tarifliche Lohnstunde;140,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Tarifliche Lohnstunde;80,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Tarifliche Lohnstunde;80,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Tarifliche Lohnstunde;80,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Tarifliche Lohnstunde;80,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Zuschlag für Arbeiten außerhalb der üblichen;25,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Zuschlag für Arbeiten außerhalb der üblichen;50,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Zuschlag für Arbeiten außerhalb der üblichen;40,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+10;Zuschlag für Arbeiten außerhalb der üblichen;40,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+11;Zuschlag für Arbeiten außerhalb der üblichen;30,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+12;Zuschlag für Arbeiten außerhalb der üblichen;25,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Korrosionsbeständiger Kunststoff-Dachradialventilator mit Gehäuse in stabiler, rotationsgesinterter Ausführung, einseitig saugend, Splitterschutz gemäß UVV ab Baugröße 160 als kunststoffbeschichtetes Drahtgeflecht. Das Fördermedium wird bei senkrechter Montage gemäß den Anforderungen für belastete A;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Frequenzumrichter für Schaltschrankeinbau zur Regelung von Dachradialventilatoren.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Dachaufsatz zur Aufnahme eines Dachradialventilators.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Sockelschalldämpfer zur Aufnahme eines Dachradialventilators.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Kugelmanschette zur Befestigung eines Dachradialventilators.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Selbsttätige Jalousieklappe als Zubehör zu Dachventilator aus chemisch beständigen Kunststoffen, Klappengehäuse mit quadratischen Lamellenbereich und runden Muffenanschlüssen zum direkten Einschweißen / Einkleben in die Rohrleitung, formstabile Lamellen aus PVC-Hohlkammerprofilen freischwingend im G;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Erstellen einer Abspannung für Fortluftleitung, mind. 5,0 m über OK-Dach aus Edelstahldraht mit transparentem Schutzschlauch, den statischen Erfordernissen angepasst inkl. verstellbaren Spannschlössern.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Korrosionsbeständiger Kunststoff-Dachradialventilator mit Gehäuse in stabiler, rotationsgesinterter Ausführung, einseitig saugend, Splitterschutz gemäß UVV ab Baugröße 160 als kunststoffbeschichtetes Drahtgeflecht. Das Fördermedium wird bei senkrechter Montage gemäß den Anforderungen für belastete A;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Frequenzumrichter für Schaltschrankeinbau zur Regelung von Dachradialventilatoren.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Dachaufsatz zur Aufnahme eines Dachradialventilators.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Sockelschalldämpfer zur Aufnahme eines Dachradialventilators.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Kugelmanschette zur Befestigung eines Dachradialventilators.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Selbsttätige Jalousieklappe als Zubehör zu Dachventilator aus chemisch beständigen Kunststoffen, Klappengehäuse mit quadratischen Lamellenbereich und runden Muffenanschlüssen zum direkten Einschweißen / Einkleben in die Rohrleitung, formstabile Lamellen aus PVC-Hohlkammerprofilen freischwingend im G;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Erstellen einer Abspannung für Fortluftleitung, mind. 5,0 m über OK-Dach aus Edelstahldraht mit transparentem Schutzschlauch, den statischen Erfordernissen angepasst inkl. verstellbaren Spannschlössern.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Korrosionsbeständiger Kunststoff-Dachradialventilator mit Gehäuse in stabiler, rotationsgesinterter Ausführung, einseitig saugend, Splitterschutz gemäß UVV ab Baugröße 160 als kunststoffbeschichtetes Drahtgeflecht. Das Fördermedium wird bei senkrechter Montage gemäß den Anforderungen für belastete A;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Frequenzumrichter für Schaltschrankeinbau zur Regelung von Dachradialventilatoren.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Dachaufsatz zur Aufnahme eines Dachradialventilators.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Sockelschalldämpfer zur Aufnahme eines Dachradialventilators.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Kugelmanschette zur Befestigung eines Dachradialventilators.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Selbsttätige Jalousieklappe als Zubehör zu Dachventilator aus chemisch beständigen Kunststoffen, Klappengehäuse mit quadratischen Lamellenbereich und runden Muffenanschlüssen zum direkten Einschweißen / Einkleben in die Rohrleitung, formstabile Lamellen aus PVC-Hohlkammerprofilen freischwingend im G;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Erstellen einer Abspannung für Fortluftleitung, mind. 5,0 m über OK-Dach aus Edelstahldraht mit transparentem Schutzschlauch, den statischen Erfordernissen angepasst inkl. verstellbaren Spannschlössern.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Korrosionsbeständiger Kunststoff-Dachradialventilator mit Gehäuse in stabiler, rotationsgesinterter Ausführung, einseitig saugend, Splitterschutz gemäß UVV ab Baugröße 160 als kunststoffbeschichtetes Drahtgeflecht. Das Fördermedium wird bei senkrechter Montage gemäß den Anforderungen für belastete A;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Frequenzumrichter für Schaltschrankeinbau zur Regelung von Dachradialventilatoren.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Dachaufsatz zur Aufnahme eines Dachradialventilators.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Sockelschalldämpfer zur Aufnahme eines Dachradialventilators.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Kugelmanschette zur Befestigung eines Dachradialventilators.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Selbsttätige Jalousieklappe als Zubehör zu Dachventilator aus chemisch beständigen Kunststoffen, Klappengehäuse mit quadratischen Lamellenbereich und runden Muffenanschlüssen zum direkten Einschweißen / Einkleben in die Rohrleitung, formstabile Lamellen aus PVC-Hohlkammerprofilen freischwingend im G;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Erstellen einer Abspannung für Fortluftleitung, mind. 5,0 m über OK-Dach aus Edelstahldraht mit transparentem Schutzschlauch, den statischen Erfordernissen angepasst inkl. verstellbaren Spannschlössern.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Luftrichtung über Motor drückend, mit direktem Antrieb Axialventilator bestehend aus:;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Frequenzumrichter für Schaltschrankeinbau zur Regelung von Axialventilatoren.;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Erstellen einer Abspannung für Fortluftleitung, mind. 5,0 m über OK-Dach aus Edelstahldraht mit transparentem Schutzschlauch, den statischen Erfordernissen angepasst inkl. verstellbaren Spannschlössern.;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;60,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;55,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;45,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+11;Leistungsende für die Einlässe der AB stellt ein Rohr-Schrägschnitt 45° mit umlaufendem Kantenschutz inkl. Schutzgitter über den Rohrquerschnitt mit Maschenweite 10 mm.;9,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+12;Leistungsende für die Einlässe der AB stellt ein Rohr-Schrägschnitt 45° mit umlaufendem Kantenschutz inkl. Schutzgitter über den Rohrquerschnitt mit Maschenweite 10 mm.;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+13;Leistungsende für die Einlässe der AB stellt ein Rohr-Schrägschnitt 45° mit umlaufendem Kantenschutz inkl. Schutzgitter über den Rohrquerschnitt mit Maschenweite 10 mm.;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch als;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch als;60,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+16;Leistung wie zuletzt in vollem Wortlaut, jedoch als;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+17;Leistung wie zuletzt in vollem Wortlaut, jedoch als;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+18;Leistung wie zuletzt in vollem Wortlaut, jedoch als;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+19;Leistung wie zuletzt in vollem Wortlaut, jedoch als;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+20;Leistung wie zuletzt in vollem Wortlaut, jedoch als;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+21;Leistung wie zuletzt in vollem Wortlaut, jedoch als;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+22;Leistung wie zuletzt in vollem Wortlaut, jedoch als;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+23;Leistung wie zuletzt in vollem Wortlaut, jedoch als;14,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+24;Leistung wie zuletzt in vollem Wortlaut, jedoch als;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+25;Leistung wie zuletzt in vollem Wortlaut, jedoch als;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+26;Leistung wie zuletzt in vollem Wortlaut, jedoch als;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+27;Leistung wie zuletzt in vollem Wortlaut, jedoch als;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+28;Leistung wie zuletzt in vollem Wortlaut, jedoch als;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+29;Leistung wie zuletzt in vollem Wortlaut, jedoch als;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+30;Leistung wie zuletzt in vollem Wortlaut, jedoch als;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+31;Leistung wie zuletzt in vollem Wortlaut, jedoch als;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+32;Leistung wie zuletzt in vollem Wortlaut, jedoch als;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+33;Leistung wie zuletzt in vollem Wortlaut, jedoch als;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+34;Leistung wie zuletzt in vollem Wortlaut, jedoch als;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+35;Leistung wie zuletzt in vollem Wortlaut, jedoch als;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+36;Leistung wie zuletzt in vollem Wortlaut, jedoch als;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+37;Leistung wie zuletzt in vollem Wortlaut, jedoch als;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+38;Leistung wie zuletzt in vollem Wortlaut, jedoch als;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+39;Leistung wie zuletzt in vollem Wortlaut, jedoch als;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+40;Leistung wie zuletzt in vollem Wortlaut, jedoch als;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+41;Leistung wie zuletzt in vollem Wortlaut, jedoch als;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+42;Leistung wie zuletzt in vollem Wortlaut, jedoch als;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+43;Leistung wie zuletzt in vollem Wortlaut, jedoch als;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+44;Leistung wie zuletzt in vollem Wortlaut, jedoch als;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;80,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;12,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;35,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistungsende für die Einlässe der AB stellt ein Rohr-Schrägschnitt 45° mit umlaufendem Kantenschutz inkl. Schutzgitter über den Rohrquerschnitt mit Maschenweite 10 mm.;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistungsende für die Einlässe der AB stellt ein Rohr-Schrägschnitt 45° mit umlaufendem Kantenschutz inkl. Schutzgitter über den Rohrquerschnitt mit Maschenweite 10 mm.;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch als;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch als;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch Bundkragen zum Anschluss von Rohren an Kanäle;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch Bundkragen zum Anschluss von Rohren an Kanäle;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch Revisionsstück mit Reinigungsdeckel;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch Revisionsstück mit Reinigungsdeckel;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Zulage für vor benannte Brandschutzklappe für Ausführung System als Übergang Edelstahl von Brandschutzklappe auf Rohrsystem PP`s oder PP`s el, BSK und Rohrsystem selbe DN.;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Zulage für vor benannte Brandschutzklappe für Ausführung System als Übergang Edelstahl von Brandschutzklappe auf Rohrsystem PP`s oder PP`s el, BSK und Rohrsystem selbe DN.;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Zulage für vor benannte Brandschutzklappe für Ausführung System als Übergang Edelstahl von Brandschutzklappe auf Rohrsystem PP`s oder PP`s el, BSK und Rohrsystem selbe DN.;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Zulage für vor benannte Brandschutzklappe für Ausführung System als Übergang Edelstahl von Brandschutzklappe auf Rohrsystem PP`s oder PP`s el, BSK und Rohrsystem selbe DN.;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+10;Zulage für vor benannte Brandschutzklappe für Ausführung System als Übergang Edelstahl von Brandschutzklappe auf Rohrsystem PP`s oder PP`s el, BSK und Rohrsystem selbe DN.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+12;Zulage für vor benannte Brandschutzklappe für Ausführung System als Übergang Edelstahl von Brandschutzklappe auf Rohrsystem PP`s oder PP`s el, BSK und Rohrsystem selbe DN.;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch als;9,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch als;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch als;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch für Kanaldämmung mit größter Kantenlänge;40,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch für Formteildämmung mit größter Kantenlänge;10,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;17,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Form-/ Hohlprofilstahl nach Angabe der Projektleitung bearbeiten und herstellen von Konstruktionen für Stütz-, Hänge-, Trag- und Sonderauflager aus bandverzinkter Stahl zur Schaffung von Sonderbefestigungen.;50,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+10;Zuschlag für genannte Sonderbefestigung zur gesamten Bauteillackierung nach Standard-RAL-Ton über das Standard-Programm.;10,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+16;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+17;Leistung wie zuletzt in vollem Wortlaut, jedoch;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Technische Daten:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Die Kalkulation der Position Inbetriebnahme enthält:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Fachgerechte Erstbefüllung der RLT-Anlage mit dem Kältemittel R513A zur Inbetriebnahme, sowie Nachbefüllung zur Einregulierung inkl. aller benötigten Dichtheitsprüfungen, Funktionskontrollen und Dokumentationen.;30,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Elastischer Sylomer-Streifen aus hochwertigem zelligem Polyurethan, Brandverhalten B2, zur Vibrations-, Körperschall- und Trittschalldämmung, Schockminderung und Lärmdämpfung, verschleißfest, in Lieferlängen a 1,5 m;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Technische Daten:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Die Kalkulation der Position Inbetriebnahme enthält:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Fachgerechte Erstbefüllung der RLT-Anlage mit dem Kältemittel R513A zur Inbetriebnahme, sowie Nachbefüllung zur Einregulierung inkl. aller benötigten Dichtheitsprüfungen, Funktionskontrollen und Dokumentationen.;40,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Elastischer Sylomer-Streifen aus hochwertigem zelligem Polyurethan, Brandverhalten B2, zur Vibrations-, Körperschall- und Trittschalldämmung, Schockminderung und Lärmdämpfung, verschleißfest, in Lieferlängen a 1,5 m;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Technische Daten:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Die Kalkulation der Position Inbetriebnahme enthält:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Fachgerechte Erstbefüllung der RLT-Anlage mit dem Kältemittel R513A zur Inbetriebnahme, sowie Nachbefüllung zur Einregulierung inkl. aller benötigten Dichtheitsprüfungen, Funktionskontrollen und Dokumentationen.;40,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Elastischer Sylomer-Streifen aus hochwertigem zelligem Polyurethan, Brandverhalten B2, zur Vibrations-, Körperschall- und Trittschalldämmung, Schockminderung und Lärmdämpfung, verschleißfest, in Lieferlängen a 1,5 m;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Technische Daten:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Die Kalkulation der Position Inbetriebnahme enthält:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Fachgerechte Erstbefüllung der RLT-Anlage mit dem Kältemittel R513A zur Inbetriebnahme, sowie Nachbefüllung zur Einregulierung inkl. aller benötigten Dichtheitsprüfungen, Funktionskontrollen und Dokumentationen.;30,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Elastischer Sylomer-Streifen aus hochwertigem zelligem Polyurethan, Brandverhalten B2, zur Vibrations-, Körperschall- und Trittschalldämmung, Schockminderung und Lärmdämpfung, verschleißfest, in Lieferlängen a 1,5 m;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Technische Daten:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Die Kalkulation der Position Inbetriebnahme enthält:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Fachgerechte Erstbefüllung der RLT-Anlage mit dem Kältemittel R513A zur Inbetriebnahme, sowie Nachbefüllung zur Einregulierung inkl. aller benötigten Dichtheitsprüfungen, Funktionskontrollen und Dokumentationen.;30,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Elastischer Sylomer-Streifen aus hochwertigem zelligem Polyurethan, Brandverhalten B2, zur Vibrations-, Körperschall- und Trittschalldämmung, Schockminderung und Lärmdämpfung, verschleißfest, in Lieferlängen a 1,5 m;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Technische Daten:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Die Kalkulation der Position Inbetriebnahme enthält:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Fachgerechte Erstbefüllung der RLT-Anlage mit dem Kältemittel R513A zur Inbetriebnahme, sowie Nachbefüllung zur Einregulierung inkl. aller benötigten Dichtheitsprüfungen, Funktionskontrollen und Dokumentationen.;30,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Elastischer Sylomer-Streifen aus hochwertigem zelligem Polyurethan, Brandverhalten B2, zur Vibrations-, Körperschall- und Trittschalldämmung, Schockminderung und Lärmdämpfung, verschleißfest, in Lieferlängen a 1,5 m;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Technische Daten:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Die Kalkulation der Position Inbetriebnahme enthält:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Fachgerechte Erstbefüllung der RLT-Anlage mit dem Kältemittel R513A zur Inbetriebnahme, sowie Nachbefüllung zur Einregulierung inkl. aller benötigten Dichtheitsprüfungen, Funktionskontrollen und Dokumentationen.;25,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Elastischer Sylomer-Streifen aus hochwertigem zelligem Polyurethan, Brandverhalten B2, zur Vibrations-, Körperschall- und Trittschalldämmung, Schockminderung und Lärmdämpfung, verschleißfest, in Lieferlängen a 1,5 m;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Technische Daten:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Die Kalkulation der Position Inbetriebnahme enthält:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Fachgerechte Erstbefüllung der RLT-Anlage mit dem Kältemittel R513A zur Inbetriebnahme, sowie Nachbefüllung zur Einregulierung inkl. aller benötigten Dichtheitsprüfungen, Funktionskontrollen und Dokumentationen.;35,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Elastischer Sylomer-Streifen aus hochwertigem zelligem Polyurethan, Brandverhalten B2, zur Vibrations-, Körperschall- und Trittschalldämmung, Schockminderung und Lärmdämpfung, verschleißfest, in Lieferlängen a 1,5 m;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Technische Daten:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Die Kalkulation der Position Inbetriebnahme enthält:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Fachgerechte Erstbefüllung der RLT-Anlage mit dem Kältemittel R513A zur Inbetriebnahme, sowie Nachbefüllung zur Einregulierung inkl. aller benötigten Dichtheitsprüfungen, Funktionskontrollen und Dokumentationen.;35,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Elastischer Sylomer-Streifen aus hochwertigem zelligem Polyurethan, Brandverhalten B2, zur Vibrations-, Körperschall- und Trittschalldämmung, Schockminderung und Lärmdämpfung, verschleißfest, in Lieferlängen a 1,5 m;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Technische Daten:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Die Kalkulation der Position Inbetriebnahme enthält:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Fachgerechte Erstbefüllung der RLT-Anlage mit dem Kältemittel R513A zur Inbetriebnahme, sowie Nachbefüllung zur Einregulierung inkl. aller benötigten Dichtheitsprüfungen, Funktionskontrollen und Dokumentationen.;30,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Elastischer Sylomer-Streifen aus hochwertigem zelligem Polyurethan, Brandverhalten B2, zur Vibrations-, Körperschall- und Trittschalldämmung, Schockminderung und Lärmdämpfung, verschleißfest, in Lieferlängen a 1,5 m;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Technische Daten:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Die Kalkulation der Position Inbetriebnahme enthält:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Fachgerechte Erstbefüllung der RLT-Anlage mit dem Kältemittel R513A zur Inbetriebnahme, sowie Nachbefüllung zur Einregulierung inkl. aller benötigten Dichtheitsprüfungen, Funktionskontrollen und Dokumentationen.;40,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Elastischer Sylomer-Streifen aus hochwertigem zelligem Polyurethan, Brandverhalten B2, zur Vibrations-, Körperschall- und Trittschalldämmung, Schockminderung und Lärmdämpfung, verschleißfest, in Lieferlängen a 1,5 m;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Technische Daten:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Die Kalkulation der Position Inbetriebnahme enthält:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Fachgerechte Erstbefüllung der RLT-Anlage mit dem Kältemittel R513A zur Inbetriebnahme, sowie Nachbefüllung zur Einregulierung inkl. aller benötigten Dichtheitsprüfungen, Funktionskontrollen und Dokumentationen.;30,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Elastischer Sylomer-Streifen aus hochwertigem zelligem Polyurethan, Brandverhalten B2, zur Vibrations-, Körperschall- und Trittschalldämmung, Schockminderung und Lärmdämpfung, verschleißfest, in Lieferlängen a 1,5 m;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Technische Daten:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Die Kalkulation der Position Inbetriebnahme enthält:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Fachgerechte Erstbefüllung der RLT-Anlage mit dem Kältemittel R513A zur Inbetriebnahme, sowie Nachbefüllung zur Einregulierung inkl. aller benötigten Dichtheitsprüfungen, Funktionskontrollen und Dokumentationen.;50,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Elastischer Sylomer-Streifen aus hochwertigem zelligem Polyurethan, Brandverhalten B2, zur Vibrations-, Körperschall- und Trittschalldämmung, Schockminderung und Lärmdämpfung, verschleißfest, in Lieferlängen a 1,5 m;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Technische Daten:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Die Kalkulation der Position Inbetriebnahme enthält:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Fachgerechte Erstbefüllung der RLT-Anlage mit dem Kältemittel R513A zur Inbetriebnahme, sowie Nachbefüllung zur Einregulierung inkl. aller benötigten Dichtheitsprüfungen, Funktionskontrollen und Dokumentationen.;25,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Elastischer Sylomer-Streifen aus hochwertigem zelligem Polyurethan, Brandverhalten B2, zur Vibrations-, Körperschall- und Trittschalldämmung, Schockminderung und Lärmdämpfung, verschleißfest, in Lieferlängen a 1,5 m;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;2280,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;2310,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;975,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;685,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;695,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;300,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;35,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch;480,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;75,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;70,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;100,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;300,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;180,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;460,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;780,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;2500,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch;100,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;670,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch;450,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+16;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+17;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+18;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+19;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+20;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+21;Leistung wie zuletzt in vollem Wortlaut, jedoch als;235,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+22;Leistung wie zuletzt in vollem Wortlaut, jedoch als;675,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+23;Leistung wie zuletzt in vollem Wortlaut, jedoch als;1190,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+24;Leistung wie zuletzt in vollem Wortlaut, jedoch als;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+25;Leistung wie zuletzt in vollem Wortlaut, jedoch als;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+26;Leistung wie zuletzt in vollem Wortlaut, jedoch als;4200,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+27;Leistung wie zuletzt in vollem Wortlaut, jedoch als;110,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+28;Leistung wie zuletzt in vollem Wortlaut, jedoch als;360,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+29;Leistung wie zuletzt in vollem Wortlaut, jedoch als;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+30;Leistung wie zuletzt in vollem Wortlaut, jedoch als;320,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+31;Leistung wie zuletzt in vollem Wortlaut, jedoch als;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+32;Leistung wie zuletzt in vollem Wortlaut, jedoch als;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+33;Leistung wie zuletzt in vollem Wortlaut, jedoch als;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+34;Leistung wie zuletzt in vollem Wortlaut, jedoch als;16,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+35;Leistung wie zuletzt in vollem Wortlaut, jedoch als;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+36;Leistung wie zuletzt in vollem Wortlaut, jedoch als;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+37;Leistung wie zuletzt in vollem Wortlaut, jedoch als;75,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+38;Leistung wie zuletzt in vollem Wortlaut, jedoch als;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+39;Leistung wie zuletzt in vollem Wortlaut, jedoch als;290,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+40;Leistung wie zuletzt in vollem Wortlaut, jedoch als;45,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+41;Leistung wie zuletzt in vollem Wortlaut, jedoch als;115,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+42;Leistung wie zuletzt in vollem Wortlaut, jedoch als;35,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+43;Leistung wie zuletzt in vollem Wortlaut, jedoch als;125,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+44;Leistung wie zuletzt in vollem Wortlaut, jedoch als;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+45;Leistung wie zuletzt in vollem Wortlaut, jedoch als;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+46;Leistung wie zuletzt in vollem Wortlaut, jedoch als;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+47;Leistung wie zuletzt in vollem Wortlaut, jedoch als;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+48;Leistung wie zuletzt in vollem Wortlaut, jedoch als;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+49;Leistung wie zuletzt in vollem Wortlaut, jedoch Enddeckel als Über- oder Einschub;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+50;Leistung wie zuletzt in vollem Wortlaut, jedoch Enddeckel als Über- oder Einschub;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+51;Leistung wie zuletzt in vollem Wortlaut, jedoch Enddeckel als Über- oder Einschub;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+52;Leistung wie zuletzt in vollem Wortlaut, jedoch Enddeckel als Über- oder Einschub;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+53;Leistung wie zuletzt in vollem Wortlaut, jedoch Enddeckel als Über- oder Einschub;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+54;Leistung wie zuletzt in vollem Wortlaut, jedoch Enddeckel als Über- oder Einschub;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+55;Leistung wie zuletzt in vollem Wortlaut, jedoch Enddeckel als Über- oder Einschub;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+56;Leistung wie zuletzt in vollem Wortlaut, jedoch Enddeckel als Über- oder Einschub;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+57;Leistung wie zuletzt in vollem Wortlaut, jedoch Enddeckel als Über- oder Einschub;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+58;Leistung wie zuletzt in vollem Wortlaut, jedoch Enddeckel als Über- oder Einschub;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+59;Leistung wie zuletzt in vollem Wortlaut, jedoch Enddeckel als Über- oder Einschub;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+60;Leistung wie zuletzt in vollem Wortlaut, jedoch Enddeckel als Über- oder Einschub;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+61;Leistung wie zuletzt in vollem Wortlaut, jedoch Enddeckel als Über- oder Einschub;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+62;Leistung wie zuletzt in vollem Wortlaut, jedoch Enddeckel als Über- oder Einschub;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+63;Leistung wie zuletzt in vollem Wortlaut, jedoch Enddeckel als Über- oder Einschub;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+64;Leistung wie zuletzt in vollem Wortlaut, jedoch Enddeckel als Über- oder Einschub;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+65;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;120,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+66;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;320,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+67;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;560,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+68;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+69;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+70;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;1800,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+71;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;75,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+72;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;480,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+73;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+74;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;160,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+75;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+76;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+77;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+78;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+79;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+80;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+81;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+82;Leistung wie zuletzt in vollem Wortlaut, jedoch Bundkragen zum Anschluss von Rohren an Kanäle;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+83;Leistung wie zuletzt in vollem Wortlaut, jedoch Bundkragen zum Anschluss von Rohren an Kanäle;100,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+84;Leistung wie zuletzt in vollem Wortlaut, jedoch Bundkragen zum Anschluss von Rohren an Kanäle;170,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+85;Leistung wie zuletzt in vollem Wortlaut, jedoch Bundkragen zum Anschluss von Rohren an Kanäle;580,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+86;Leistung wie zuletzt in vollem Wortlaut, jedoch Bundkragen zum Anschluss von Rohren an Kanäle;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+87;Leistung wie zuletzt in vollem Wortlaut, jedoch Bundkragen zum Anschluss von Rohren an Kanäle;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+88;Leistung wie zuletzt in vollem Wortlaut, jedoch Bundkragen zum Anschluss von Rohren an Kanäle;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+89;Leistung wie zuletzt in vollem Wortlaut, jedoch Bundkragen zum Anschluss von Rohren an Kanäle;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+90;Leistung wie zuletzt in vollem Wortlaut, jedoch Bundkragen zum Anschluss von Rohren an Kanäle;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+91;Leistung wie zuletzt in vollem Wortlaut, jedoch Bundkragen zum Anschluss von Rohren an Kanäle;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+92;Leistung wie zuletzt in vollem Wortlaut, jedoch;205,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+93;Leistung wie zuletzt in vollem Wortlaut, jedoch;200,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+94;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+95;Leistung wie zuletzt in vollem Wortlaut, jedoch;415,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+96;Leistung wie zuletzt in vollem Wortlaut, jedoch;140,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+97;Leistung wie zuletzt in vollem Wortlaut, jedoch;430,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+98;Leistung wie zuletzt in vollem Wortlaut, jedoch;60,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+99;Leistung wie zuletzt in vollem Wortlaut, jedoch;215,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+100;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+101;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+102;Leistung wie zuletzt in vollem Wortlaut, jedoch Revisionsstück mit Reinigungsdeckel;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+103;Leistung wie zuletzt in vollem Wortlaut, jedoch Revisionsstück mit Reinigungsdeckel;150,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+104;Leistung wie zuletzt in vollem Wortlaut, jedoch Revisionsstück mit Reinigungsdeckel;100,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+105;Leistung wie zuletzt in vollem Wortlaut, jedoch Revisionsstück mit Reinigungsdeckel;1100,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+106;Leistung wie zuletzt in vollem Wortlaut, jedoch Revisionsstück mit Reinigungsdeckel;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+107;Leistung wie zuletzt in vollem Wortlaut, jedoch Revisionsstück mit Reinigungsdeckel;75,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+108;Leistung wie zuletzt in vollem Wortlaut, jedoch Revisionsstück mit Reinigungsdeckel;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+109;Leistung wie zuletzt in vollem Wortlaut, jedoch Revisionsstück mit Reinigungsdeckel;35,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+110;Leistung wie zuletzt in vollem Wortlaut, jedoch Revisionsstück mit Reinigungsdeckel;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+111;Leistung wie zuletzt in vollem Wortlaut, jedoch Revisionsstück mit Reinigungsdeckel;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+112;Leistung wie zuletzt in vollem Wortlaut, jedoch Revisionsstück mit Reinigungsdeckel;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+113;Leistung wie zuletzt in vollem Wortlaut, jedoch Revisionsstück mit Reinigungsdeckel;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+114;Leistung wie zuletzt in vollem Wortlaut, jedoch Revisionsstück mit Reinigungsdeckel;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;80,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;320,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;100,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;80,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;210,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch als;160,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch als;130,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch als;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch als;35,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch als;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch Nippel zum Verbinden von Rohren;32,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch Bundkragen zum Anschluss von Rohren an Kanäle;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch Bundkragen zum Anschluss von Rohren an Kanäle;35,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+16;Leistung wie zuletzt in vollem Wortlaut, jedoch Revisionsstück mit Reinigungsdeckel;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+17;Leistung wie zuletzt in vollem Wortlaut, jedoch Revisionsstück mit Reinigungsdeckel;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Brandschutzbekleidung für Stahlblech-Lüftungsleitungen L 90, nach DIN 4102, als gerader Kanal aus 35 mm PROMATECT-LS-Silikat-Brandschutzbauplatten, zementgebunden, feuchtigkeitsunempfindlich,;10,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Brandschutzbekleidung für Stahlblech-Lüftungsleitungen L 90, nach DIN 4102, als gerader Kanal aus 35 mm PROMATECT-LS-Silikat-Brandschutzbauplatten, zementgebunden, feuchtigkeitsunempfindlich,;140,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Revisionsöffnung in der Lüftungsleitung, der vorgenannten Grundposition, mit dem Promat-Montagerahmen.;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Anschlüsse der Lüftungsleitung der vorgenannten Grundposition, an allgemein bauaufsichtlich zugelassene Brandschutzklappen.;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Oberflächenimprägnierung der Lüftungsleitung der vorgenannten Grundposition.;150,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;35,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;14,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;18,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;18,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+16;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+17;Leistung wie zuletzt in vollem Wortlaut, jedoch;55,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+18;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+19;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+20;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+21;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+22;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+23;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+24;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+25;Leistung wie zuletzt in vollem Wortlaut, jedoch;65,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+26;Leistung wie zuletzt in vollem Wortlaut, jedoch;80,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+27;Leistung wie zuletzt in vollem Wortlaut, jedoch;240,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+28;Leistung wie zuletzt in vollem Wortlaut, jedoch;960,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+29;Leistung wie zuletzt in vollem Wortlaut, jedoch;35,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+30;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+31;Leistung wie zuletzt in vollem Wortlaut, jedoch;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+32;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;65,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Zulage für vor benannte BSK K90 für den Einbausatz in Trockenbau in Leichtbauwände mit gleitendem Deckenanschluss.;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Zulage für vor benannte BSK K90 für den Einbausatz in Trockenbau in Leichtbauwände mit gleitendem Deckenanschluss.;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;185,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Zulage für vor benannte BSK K90 für den Einbausatz in Trockenbau in Leichtbauwände mit gleitendem Deckenanschluss.;160,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Zulage für vor benannte BSK K90 für den Einbausatz in Trockenbau in Leichtbauwände mit gleitendem Deckenanschluss.;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+10;Zulage für vor benannte BSK K90 für den Einbausatz in Trockenbau in Leichtbauwände mit gleitendem Deckenanschluss.;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;12,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+12;Zulage für vor benannte BSK K90 für den Einbausatz in Trockenbau in Leichtbauwände mit gleitendem Deckenanschluss.;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+16;Leistung wie zuletzt in vollem Wortlaut, jedoch;24,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+17;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+18;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+19;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+20;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+21;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+22;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+23;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+24;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+25;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+26;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+27;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+28;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+29;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+30;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+31;Leistung wie zuletzt in vollem Wortlaut, jedoch;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+32;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+33;Leistung wie zuletzt in vollem Wortlaut, jedoch;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+34;Leistung wie zuletzt in vollem Wortlaut, jedoch;7,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+35;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+36;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+37;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+38;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+39;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+40;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+41;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+42;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+43;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+44;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+45;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+46;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+47;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+48;Leistung wie zuletzt in vollem Wortlaut, jedoch;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+49;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+50;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+51;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+52;Leistung wie zuletzt in vollem Wortlaut, jedoch;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+53;Leistung wie zuletzt in vollem Wortlaut, jedoch;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+54;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+55;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+56;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+57;Leistung wie zuletzt in vollem Wortlaut, jedoch;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+58;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+59;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+60;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+61;Leistung wie zuletzt in vollem Wortlaut, jedoch;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+62;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+63;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+64;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+65;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+66;Leistung wie zuletzt in vollem Wortlaut, jedoch;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+67;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+68;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+69;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+70;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+71;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+72;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+73;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+74;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+75;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+76;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+77;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+78;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+79;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+80;Zulage für vor benannte Brandschutzklappe für Ausführung System mit:;380,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+81;Zulage für vor benannte Brandschutzklappe für Ausführung System mit:;162,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;22,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;9,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;65,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;80,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;24,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;960,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;45,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;65,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Externer Kaltwasserregister zur Zuluftkühlung, Einbau in Zuluftkanal mit werkseitig wärmegedämmt ausgeführten Gehäuse, mit einseitiger Luftströmungsrichtung links. Kanalanschluss über Flanschrahmen-System. Wasserseitiger Anschluss DN 32 zur Einbindung in das Gebäudeseitige Kaltwassernetz und Anschlu;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;60,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;80,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;125,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;170,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;115,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;140,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;530,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;170,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Elastisches Fugendichtband zum schallschutzgerechten und luftdichten Ringspaltverschluss zwischen Lüftungseinbaute und Wandkonstruktion zur Aufrechterhaltung der bauakustischen Eigenschaften der Wand gem. DIN 4109.;955,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Zulage zu Lüftungsgitter für Ausführung mit Mengeneinstellung, Lamellen gegenläufig gekuppelt, frontseitig verstellbar Gleichrichtersatz mit horizontalen einzeln einstellbaren Gleichrichterlamellen;955,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;90,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Zulage für vor benannte Auslässe für Ausführung System anstelle schwarzer Luftleitelemente:;225,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;12,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;12,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;22,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;22,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch für Kanaldämmung mit größter Kantenlänge;2210,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch für Kanaldämmung mit größter Kantenlänge;680,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch für Formteildämmung mit größter Kantenlänge;660,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch für Formteildämmung mit größter Kantenlänge;205,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch für Kanaldämmung mit größter Kantenlänge;75,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch für Kanaldämmung mit größter Kantenlänge;1270,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch für Kanaldämmung mit größter Kantenlänge;380,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch für Formteildämmung mit größter Kantenlänge;25,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch für Formteildämmung mit größter Kantenlänge;380,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch für Formteildämmung mit größter Kantenlänge;115,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch für Kanaldämmung mit größter Kantenlänge;350,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch für Kanaldämmung mit größter Kantenlänge;730,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch für Kanaldämmung mit größter Kantenlänge;50,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch für Kanaldämmung mit größter Kantenlänge;20,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch für Formteildämmung mit größter Kantenlänge;60,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+16;Leistung wie zuletzt in vollem Wortlaut, jedoch für Formteildämmung mit größter Kantenlänge;150,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+17;Leistung wie zuletzt in vollem Wortlaut, jedoch für Formteildämmung mit größter Kantenlänge;15,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+18;Leistung wie zuletzt in vollem Wortlaut, jedoch für Formteildämmung mit größter Kantenlänge;10,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+19;Leistung wie zuletzt in vollem Wortlaut, jedoch;515,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+20;Leistung wie zuletzt in vollem Wortlaut, jedoch;145,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;120,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;230,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;160,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;230,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch;300,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+16;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+17;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+18;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+19;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+20;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+21;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;70,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+22;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+23;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+24;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+25;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+26;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+27;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;70,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+28;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;90,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+29;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+30;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+31;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;16,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+32;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+33;Leistung wie zuletzt in vollem Wortlaut, jedoch;80,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+34;Leistung wie zuletzt in vollem Wortlaut, jedoch;175,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+35;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+36;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+37;Leistung wie zuletzt in vollem Wortlaut, jedoch;120,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+38;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+39;Leistung wie zuletzt in vollem Wortlaut, jedoch;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+40;Leistung wie zuletzt in vollem Wortlaut, jedoch;100,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+41;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+42;Leistung wie zuletzt in vollem Wortlaut, jedoch;120,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+43;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+44;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+45;Leistung wie zuletzt in vollem Wortlaut, jedoch;120,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+46;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+47;Leistung wie zuletzt in vollem Wortlaut, jedoch;250,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+48;Leistung wie zuletzt in vollem Wortlaut, jedoch;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch für Kanaldämmung mit größter Kantenlänge;350,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch für Kanaldämmung mit größter Kantenlänge;730,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch für Kanaldämmung mit größter Kantenlänge;20,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch für Kanaldämmung mit größter Kantenlänge;20,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch für Formteildämmung mit größter Kantenlänge;60,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch für Formteildämmung mit größter Kantenlänge;150,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch für Formteildämmung mit größter Kantenlänge;10,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch für Formteildämmung mit größter Kantenlänge;10,0;m²;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;16,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch;14,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+16;Leistung wie zuletzt in vollem Wortlaut, jedoch;14,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+17;Leistung wie zuletzt in vollem Wortlaut, jedoch;14,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+18;Leistung wie zuletzt in vollem Wortlaut, jedoch;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+19;Leistung wie zuletzt in vollem Wortlaut, jedoch;120,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+20;Leistung wie zuletzt in vollem Wortlaut, jedoch;120,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;630,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;275,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;35,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;65,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;125,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;200,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;75,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;130,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;185,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch;310,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+16;Leistung wie zuletzt in vollem Wortlaut, jedoch;1440,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+17;Leistung wie zuletzt in vollem Wortlaut, jedoch;150,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+18;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+19;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+20;Leistung wie zuletzt in vollem Wortlaut, jedoch;170,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+21;Leistung wie zuletzt in vollem Wortlaut, jedoch;130,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+22;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+23;Leistung wie zuletzt in vollem Wortlaut, jedoch;1950,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+24;Form-/ Hohlprofilstahl nach Angabe der Projektleitung bearbeiten und herstellen von Konstruktionen für Stütz-, Hänge-, Trag- und Sonderauflager aus bandverzinktem Stahl zur Schaffung von Sonderbefestigungen.;7500,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+25;Zuschlag für genannte Sonderbefestigung zur gesamten Bauteillackierung nach Standard-RAL-Ton über das Standard-Programm.;1125,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+26;Leistung wie zuletzt in vollem Wortlaut, jedoch;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+27;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+28;Leistung wie zuletzt in vollem Wortlaut, jedoch;60,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+29;Leistung wie zuletzt in vollem Wortlaut, jedoch;35,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+30;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+31;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Sockelhalter zur Realisierung von beliebigen Aufbauten mit Montageschienen bis zu einer Breite von 40 mm mit einer Plattenabmessung von 350 mm x 350mm.;200,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Halter zur Erstellung von Konsolen für Wand-, Boden- und Deckenmontage oder Ständer für Rahmenkonstruktionen mit Montageschienen bis 40 mm.;165,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Verbinder zur optimierten Befestigung von Rahmenkonstruktionen aus Montagschienen bis 40 mm.;475,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;60,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;120,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;1700,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+11;Form-/ Hohlprofilstahl nach Angabe der Projektleitung bearbeiten und herstellen von Konstruktionen für Stütz-, Hänge-, Trag- und Sonderauflager aus feuerverzinkter Stahl zur Schaffung von Sonderbefestigungen.;1250,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+12;Dachdurchführung mit Platten-Lochung ausgelegt auf Schwerlastankern M12 zur Befestigung auf Dächern und an Beton.;165,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+13;Universalgelenk mit Durchgangsloch Ø 17,0 mm zur Befestigung direkt am Baukörper, an Trägerklammern, Montageschienen etc. nutzbar.;620,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+14;Montagesystem zur rationellen Befestigungen von Rohrschellen und anderen Bauteilen an Montageschienen bis 40 mm. Bauteil besitzt ein metrisches Außengewinde.;620,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+15;Spannset zur Errichtung von Abspannungen und Windverbänden.;310,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+16;Gewindestab M10 zur Konstruktion von Konsolen oder Aufständerungen oder als direkte Verbindung zwischen Grundplatte und Rohrschelle.;930,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+17;Verbindungselement zwischen zwei Gewindestäben. Schlitz zum nachträglichen Prüfen der Einschraubtiefen.;310,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Zulage für die mögliche planerische Anpassung an bauseits festgestellte, punktuelle Planabweichungen, siehe Praxisbeispiele unten.;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+1;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;Jahr;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+2;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;Jahr;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+3;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;Jahr;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+4;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;Jahr;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+5;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;Jahr;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+6;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+7;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+8;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+9;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+10;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83
+11;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 403 Lueftung_260511.x83

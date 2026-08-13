@@ -1,0 +1,46 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Einrichten und Räumen der Baustelle für die Errichtung;1,0;Stück;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+2;Auf- und Abbau der kompletten Bohranlage am;1,0;mal;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+3;Umsetzen der Bohreinrichtung;1,0;mal;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+4;Verkehrsrechtliche Anordnung;1,0;psch;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+5;Verkehrssicherung, Auf-/ Abbau;1,0;psch;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+6;Bohrwasser;1,0;psch;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+7;Vorhalten eines Netzersatzaggregates;1,0;psch;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+8;Dokumentation erstellen;1,0;psch;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+9;Schachtgenemigungen;1,0;Stk;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+1;Teufe 0 - 100 m u. GOK;70,0;m;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+2;Wiederverfüllen der Bohrung mit Füllkies;60,0;m;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+3;Wiederverfüllen der Bohrung mit Ton;10,0;m;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+1;Bohrung im indirektem Spülbohrverfahren;70,0;m;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+2;Bohrung im indirektem Spülbohrverfahren;1,0;m;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+3;Geophysikalische Bohlochvermessung nach abteufen der Hauptbohrung ,gemäß DVGW Regelwerk W 110:;70,0;m;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+1;Filterboden PVC-U, DN 175;1,0;Stk;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+2;Filterrohr PVC-U DN 175, einschl. HDPE-Flügelführung;10,0;m;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+3;PVC-Gewebefilter DN 175 mit Gewindeverbindg.;1,0;m;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+4;Aufsatzrohr PVC-U DN 175, (normalwandig),;60,0;m;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+5;Filterkiesschüttung DN 420 nach DIN 4924, Körnung dem;14,0;m;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+6;Füllkies  DN 420;46,0;m;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+7;Tonsperre DN 420  aus Quellton;10,0;m;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+8;Entsanden und Entwicklung des Brunnens;1,0;psch;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+9;Verlegen, Vorhalten und späteres Wiederaufnehmen;1,0;psch;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+10;Auf- und Abbau einer Pumpenanlage;1,0;mal;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+11;Leistungspumpversuch über 3 h mit;1,0;Stk;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+12;Löschwasser-Sauganschluss-Ständer rot.;1,0;Stk;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+13;Wasserdichter Brunnenkopf aus ST37, verzinkt;1,0;Stk;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+14;Unterwassermotorpumpe Typ: LOWARA;1,0;Stk;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+15;Unterwassermotorpumpe Typ Lowara;1,0;Stk;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+16;Steigleitung für Unterwassermotorpumpe,;20,0;m;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+17;Pumpenübergang;2,0;Stk;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+18;Steigleitung für Unterwassermotorpumpe,;25,0;m;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+19;Pumpenübergang;2,0;Stk;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+20;Stahlsicherungsseil für Unterwassermotorpumpe liefern und montieren;25,0;m;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+21;Elektroschrank mit Zählerplatzfür die Einspeisung durch das Netz  durch den Energieversorger und separat durch die Feuerwehr;1,0;Stk;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+22;Beantragung des Hausanschlusses und der Zählersetzung;1,0;psch;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+23;Schutzbügel aus Stahlrohr verz.;2,0;Stk;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+24;"Hinweisschild ""Löschwasserbrunnen""";1,0;Stk;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+25;Bohrgut zum Nachweis entsorgen einschl.;8,0;m³;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+26;Entsorgung Bohrspülung,;1,0;psch;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+27;Inbetriebnahme der Brunnenanlage im Beisein der Feuerwehr und Übergabe;1,0;Stk;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+1;Standfläche 2,00 x 2,00 Meter um den;1,0;psch;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+1;Facharbeiter;1,0;Std;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81
+2;Kolonnenstunde zur Beseitigung von Hin-;1,0;Std;gaeb;leistungsbeschreibungen/LWE 6 - Striesa.x81

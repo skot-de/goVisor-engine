@@ -1,0 +1,203 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Abbruch des Kälteerzeugers, Luftkühler als Direktverdampfer, ein Kältekreislauf, Wärmeübertrager aus Kupferrohren mit Aluminiumlamellen, Rahmen aus Stahl und Lamellen aus Kunststoff, im Rahmen einer Totalabbruchmaßnahme, nicht schadstoffbelastet,;3,0;St;gaeb;sonstiges/LV Kälte.X83
+0020;Abbruch des Verflüssigers, im Rahmen einer Totalabbruchmaßnahme, nicht schadstoffbelastet,;3,0;St;gaeb;sonstiges/LV Kälte.X83
+0030;Abbruch der Kältemittelleitung einschl. Formstücke, Kupferrohr, Außendurchmesser 6 mm, mit Dämmung, Abbruch der Dämmung wird gesondert vergütet, im Rahmen einer Totalabbruchmaßnahme, nicht schadstoffbelastet,;50,0;m;gaeb;sonstiges/LV Kälte.X83
+0040;Abbruch der Kältemittelleitung einschl. Formstücke, Kupferrohr, Außendurchmesser 12 mm, mit Dämmung, Abbruch der Dämmung wird gesondert vergütet, im Rahmen einer Totalabbruchmaßnahme, nicht schadstoffbelastet,;50,0;m;gaeb;sonstiges/LV Kälte.X83
+0050;Abbruch der Kältemittelleitung einschl. Formstücke, Kupferrohr, Außendurchmesser 16 mm, mit Dämmung, Abbruch der Dämmung wird gesondert vergütet, im Rahmen einer Totalabbruchmaßnahme, nicht schadstoffbelastet,;50,0;m;gaeb;sonstiges/LV Kälte.X83
+0060;Fachgerechte Entleerung eines Kälteerzeugers mit Entsorgung;15,0;kg;gaeb;sonstiges/LV Kälte.X83
+0010;Stundenlohnarbeiten durch Monteur/-in;20,0;h;gaeb;sonstiges/LV Kälte.X83
+0020;Stundenlohnarbeiten durch Helfer/-in;20,0;h;gaeb;sonstiges/LV Kälte.X83
+0010;Luft-Wasser-Wärmepumpe / Kaltwassererzeuger, reversible Ausführung, natürliches Kältemittel, ca. 14 kW Kühlen / 15 kW Heizen;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0020;Glykolauffangwanne / Rückhaltesystem, passend zum 14-kW-Kaltwassersatz;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0030;Unterkonstruktion / Aufstellsystem für 14-kW-Luft-Wasser-Wärmepumpe mit Glykolauffangwanne;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0040;Hydraulische Weiche, wärmegedämmt, ca. 100 l;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0050;Glykolauffangwanne / Rückhaltesystem, passend zur hydraulischen Weiche ca. 100 l;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0060;Unterkonstruktion / Aufstellsystem für hydraulische Weiche mit Glykolauffangwanne;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0070;Kältedämmung mit witterungsbeständiger Edelstahl-Blechverkleidung für zuvor ausgeschriebene hydraulische Weiche, ca. 100 l, zur hydraulischen Entkopplung von Erzeuger- und Verbraucherkreis, liefern und fachgerecht montieren.;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0080;Frostschutzventil-Set für Außenkreis / Wärmepumpenanschluss;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0090;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, differenzdruckgeregelt,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0100;Mischregelarmatur mit Antrieb, für Medium Kühlwasser, Mediumstemperatur über -10 bis 50 Grad C, Umgebungstemperatur -10 bis 50 Grad C, kvs-Wert 6,3 m3/h, PN 6, Flanschanschluss, DN 40, Stellverhältnis größer gleich 1:50, Spindelabdichtung mit Doppel-O-Ring aus EPDM, elektromotorischer Antrieb, Stell;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0110;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, differenzdruckgeregelt,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0120;Mischregelarmatur mit Antrieb, für Medium Kühlwasser, Mediumstemperatur über -10 bis 50 Grad C, Umgebungstemperatur -10 bis 50 Grad C, kvs-Wert 2,5 m3/h, PN 6, Flanschanschluss, DN 20, Stellverhältnis größer gleich 1:50, Spindelabdichtung mit Doppel-O-Ring aus EPDM, elektromotorischer Antrieb, Stell;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0130;Luft-Wasser-Wärmepumpe / Kaltwassererzeuger, reversible Ausführung, natürliches Kältemittel, ca. 38,5 kW Kühlen / 45,2 kW Heizen;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0140;Glykolauffangwanne / Rückhaltesystem, passend zum 38-kW-Kaltwassersatz;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0150;Kältespeicheranlage, für Wasser mit Frostschutzmittel, aus Stahl, bestehend aus einem Speicher, stehend, Speichervolumen 300 l, mit 5 Anschlussstutzen,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0160;Diffusionsdichte Dämmung Kältespeicher 300 l, Brandklasse A, Innenaufstellung;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0170;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, differenzdruckgeregelt,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0180;Mischregelarmatur mit Antrieb, für Medium Kühlwasser, Mediumstemperatur über -10 bis 50 Grad C, Umgebungstemperatur -10 bis 50 Grad C, kvs-Wert 10 m3/h, PN 6, Flanschanschluss, DN 40, Stellverhältnis größer gleich 1:50, Spindelabdichtung mit Doppel-O-Ring aus EPDM, elektromotorischer Antrieb, Stells;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0010;Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 76,1 mm, Wanddicke 1,5 mm, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäuden, Arbeitshöhe des Montageo;10,0;m;gaeb;sonstiges/LV Kälte.X83
+0020;Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 54 mm, Wanddicke 1,5 mm, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäuden, Arbeitshöhe des Montageort;120,0;m;gaeb;sonstiges/LV Kälte.X83
+0030;Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 42 mm, Wanddicke 1,5 mm, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäuden, Arbeitshöhe des Montageort;25,0;m;gaeb;sonstiges/LV Kälte.X83
+0040;Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 35 mm, Wanddicke 1,2 mm, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäuden, Arbeitshöhe des Montageort;50,0;m;gaeb;sonstiges/LV Kälte.X83
+0050;Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 28 mm, Wanddicke 1 mm, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäuden, Arbeitshöhe des Montageortes;100,0;m;gaeb;sonstiges/LV Kälte.X83
+0060;Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 22 mm, Wanddicke 1 mm, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäuden, Arbeitshöhe des Montageortes;100,0;m;gaeb;sonstiges/LV Kälte.X83
+0070;Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 18 mm, Wanddicke 1 mm, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäuden, Arbeitshöhe des Montageortes;5,0;m;gaeb;sonstiges/LV Kälte.X83
+0080;Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 15 mm, Wanddicke 1 mm, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäuden, Arbeitshöhe des Montageortes;5,0;m;gaeb;sonstiges/LV Kälte.X83
+0090;Bogen aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 76,1 mm.;8,0;St;gaeb;sonstiges/LV Kälte.X83
+0100;Bogen aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 54 mm.;35,0;St;gaeb;sonstiges/LV Kälte.X83
+0110;Bogen aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 42 mm.;15,0;St;gaeb;sonstiges/LV Kälte.X83
+0120;Bogen aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 35 mm.;10,0;St;gaeb;sonstiges/LV Kälte.X83
+0130;Bogen aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 28 mm.;30,0;St;gaeb;sonstiges/LV Kälte.X83
+0140;Bogen aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 22 mm.;60,0;St;gaeb;sonstiges/LV Kälte.X83
+0150;Bogen aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 18 mm.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0160;Bogen aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 15 mm.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0170;T-Stück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 54 mm.;18,0;St;gaeb;sonstiges/LV Kälte.X83
+0180;T-Stück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 42 mm.;10,0;St;gaeb;sonstiges/LV Kälte.X83
+0190;T-Stück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 35 mm.;5,0;St;gaeb;sonstiges/LV Kälte.X83
+0200;T-Stück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 28 mm.;5,0;St;gaeb;sonstiges/LV Kälte.X83
+0210;T-Stück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 22 mm.;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0220;T-Stück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 18 mm.;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0230;T-Stück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 15 mm.;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0240;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 54 mm, 2. Durchmesser 42 mm.;3,0;St;gaeb;sonstiges/LV Kälte.X83
+0250;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 54 mm, 2. Durchmesser 35 mm.;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0260;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 54 mm, 2. Durchmesser 28 mm.;3,0;St;gaeb;sonstiges/LV Kälte.X83
+0270;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 54 mm, 2. Durchmesser 22 mm.;8,0;St;gaeb;sonstiges/LV Kälte.X83
+0280;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 54 mm, 2. Durchmesser 18 mm.;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0290;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 54 mm, 2. Durchmesser 15 mm.;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0300;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 42 mm, 2. Durchmesser 35 mm.;4,0;St;gaeb;sonstiges/LV Kälte.X83
+0310;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 42 mm, 2. Durchmesser 28 mm.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0320;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 42 mm, 2. Durchmesser 22 mm.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0330;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 42 mm, 2. Durchmesser 18 mm.;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0340;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 42 mm, 2. Durchmesser 15 mm.;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0350;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 35 mm, 2. Durchmesser 28 mm.;5,0;St;gaeb;sonstiges/LV Kälte.X83
+0360;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 35 mm, 2. Durchmesser 22 mm.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0370;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 35 mm, 2. Durchmesser 18 mm.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0380;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 35 mm, 2. Durchmesser 15 mm.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0390;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 28 mm, 2. Durchmesser 22 mm.;4,0;St;gaeb;sonstiges/LV Kälte.X83
+0400;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 28 mm, 2. Durchmesser 18 mm.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0410;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 28 mm, 2. Durchmesser 15 mm.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0420;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 22 mm, 2. Durchmesser 18 mm.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0430;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 22 mm, 2. Durchmesser 15 mm.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0440;Reduzierstück aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 18 mm, 2. Durchmesser 15 mm.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0450;Übergangsstück aus Rotguss, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 76,1 mm.;4,0;St;gaeb;sonstiges/LV Kälte.X83
+0460;Übergangsflansch als Pressfitting, Nenndruck 1 MPa (10 bar), aus Rotguss, mit Pressmuffe, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 54 mm.;5,0;St;gaeb;sonstiges/LV Kälte.X83
+0470;Übergangsstück aus Rotguss, mit Einsteckende/Außengewinde, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 54 mm, Gewindeanschluss R 2.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0480;Übergangsstück aus Rotguss, mit Einsteckende/Außengewinde, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 42 mm, Gewindeanschluss R 1 1/2.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0490;Übergangsstück aus Rotguss, mit Einsteckende/Außengewinde, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 35 mm, Gewindeanschluss R 1 1/4.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0500;Übergangsstück aus Rotguss, mit Einsteckende/Außengewinde, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 28 mm, Gewindeanschluss R 1.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0510;Übergangsstück aus Rotguss, mit Einsteckende/Außengewinde, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 22 mm, Gewindeanschluss R 1.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0520;Übergangsstück aus Rotguss, mit Einsteckende/Außengewinde, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 22 mm, Gewindeanschluss R 3/4.;20,0;St;gaeb;sonstiges/LV Kälte.X83
+0530;Übergangsstück aus Rotguss, mit Einsteckende/Außengewinde, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 18 mm, Gewindeanschluss R 3/4.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0540;Übergangsstück aus Rotguss, mit Einsteckende/Außengewinde, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 15 mm, Gewindeanschluss R 1/2.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0550;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung mit Gewindestäben, mit bauaufsichtlich zugelassenen Dübeln, einschl. Bohrarbeiten, Rohr aus Stahl,;10,0;St;gaeb;sonstiges/LV Kälte.X83
+0560;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung mit Gewindestäben, mit bauaufsichtlich zugelassenen Dübeln, einschl. Bohrarbeiten, Rohr aus Stahl,;120,0;St;gaeb;sonstiges/LV Kälte.X83
+0570;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung mit Gewindestäben, mit bauaufsichtlich zugelassenen Dübeln, einschl. Bohrarbeiten, Rohr aus Stahl,;20,0;St;gaeb;sonstiges/LV Kälte.X83
+0580;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung mit Gewindestäben, mit bauaufsichtlich zugelassenen Dübeln, einschl. Bohrarbeiten, Rohr aus Stahl,;50,0;St;gaeb;sonstiges/LV Kälte.X83
+0590;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung mit Gewindestäben, mit bauaufsichtlich zugelassenen Dübeln, einschl. Bohrarbeiten, Rohr aus Stahl,;100,0;St;gaeb;sonstiges/LV Kälte.X83
+0600;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung mit Gewindestäben, mit bauaufsichtlich zugelassenen Dübeln, einschl. Bohrarbeiten, Rohr aus Stahl,;100,0;St;gaeb;sonstiges/LV Kälte.X83
+0610;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung mit Gewindestäben, mit bauaufsichtlich zugelassenen Dübeln, einschl. Bohrarbeiten, Rohr aus Stahl,;10,0;St;gaeb;sonstiges/LV Kälte.X83
+0620;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung mit Gewindestäben, mit bauaufsichtlich zugelassenen Dübeln, einschl. Bohrarbeiten, Rohr aus Stahl,;10,0;St;gaeb;sonstiges/LV Kälte.X83
+0630;Rohrleitungs-Auflager für zwei Rohrleitungen bis DN 76 auf Flachdach, Höhe bis 500 mm;10,0;St;gaeb;sonstiges/LV Kälte.X83
+0640;Mehrpreis Rohrleitungs-Auflager, zusätzliche Erhöhung um 250 mm;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0010;Abscheider für Schmutz mit Magneten zur Magnetitabscheidung, aus Messing, für Wasser-Glycol-Gemisch, mit Dämmschalen, mit Gewindeanschluss, max. Betriebstemperatur bis 70 Grad C, Nenndruck 0,6 MPa (6 bar), DN 40,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0020;Abscheider für Schmutz mit Magneten zur Magnetitabscheidung, für Wasser-Glycol-Gemisch, mit Dämmschalen, mit Gewindeanschluss, max. Betriebstemperatur bis 70 Grad C, Nenndruck 0,6 MPa (6 bar), DN 65,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0030;3-Wege-Ventil mit Bypassfunktion für Deckenkassetten/Fan-Coils;4,0;St;gaeb;sonstiges/LV Kälte.X83
+0040;Absperrventil, für Klimakaltwasser, bis 120 Grad C, Gehäuse aus Rotguss, in Geradsitz-Durchgangsform, Nenndruck 0,6 MPa (6 bar), DN 65, mit Dämmschalen.;4,0;St;gaeb;sonstiges/LV Kälte.X83
+0050;Absperrventil, für Klimakaltwasser, bis 120 Grad C, mit Pressanschluss, Gehäuse aus Rotguss, in Geradsitz-Durchgangsform, Nenndruck 0,6 MPa (6 bar), DN 50, mit Dämmschalen.;10,0;St;gaeb;sonstiges/LV Kälte.X83
+0060;Absperrventil, für Klimakaltwasser, bis 120 Grad C, mit Pressanschluss, Gehäuse aus Rotguss, in Geradsitz-Durchgangsform, Nenndruck 0,6 MPa (6 bar), DN 40, mit Dämmschalen.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0070;Absperrventil, für Klimakaltwasser, bis 120 Grad C, mit Pressanschluss, Gehäuse aus Rotguss, in Geradsitz-Durchgangsform, Nenndruck 0,6 MPa (6 bar), DN 32, mit Dämmschalen.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0080;Absperrventil, für Klimakaltwasser, bis 120 Grad C, mit Pressanschluss, Gehäuse aus Rotguss, in Geradsitz-Durchgangsform, Nenndruck 0,6 MPa (6 bar), DN 25, mit Dämmschalen.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0090;Absperrventil, für Klimakaltwasser, bis 120 Grad C, mit Pressanschluss, Gehäuse aus Rotguss, in Geradsitz-Durchgangsform, Nenndruck 0,6 MPa (6 bar), DN 20, mit Dämmschalen.;10,0;St;gaeb;sonstiges/LV Kälte.X83
+0100;Absperrventil, für Klimakaltwasser, bis 120 Grad C, mit Pressanschluss, Gehäuse aus Rotguss, in Geradsitz-Durchgangsform, Nenndruck 0,6 MPa (6 bar), DN 15, mit Dämmschalen.;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0010;Deckenkassette als Fan-Coil, 4-seitig ausblasend, 2-Leiter, ca. 4,85 kW Kühlen;4,0;St;gaeb;sonstiges/LV Kälte.X83
+0050;Wandgerät als Fan-Coil, 2-Leiter, ca. 2,70 kW Kühlen;5,0;St;gaeb;sonstiges/LV Kälte.X83
+0060;Wandgerät als Fan-Coil, 2-Leiter, ca. 3,81 kW Kühlen;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0070;Wandgerät als Fan-Coil, 2-Leiter, ca. 4,87 kW Kühlen;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0090;Kondensatpumpe für Klimainnengeräte;8,0;St;gaeb;sonstiges/LV Kälte.X83
+0010;Regelung Mischkreis im Gebäude, Heiz-/Kühlbetrieb, mit Fühlern und GLT-Vorbereitung;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0020;Regelung gemischter Kühlkreis, mit Fühlern und GLT-Vorbereitung;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0030;Regel-/Steuerplatine für Fan-Coil- und Umluftkühlgeräte;4,0;St;gaeb;sonstiges/LV Kälte.X83
+0040;Kabelfernbedienung für Deckenkassetten / Fan-Coil-Geräte;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0050;Kabelfernbedienung für Wandgeräte;8,0;St;gaeb;sonstiges/LV Kälte.X83
+0060;Kabelzugliste für Fremdgewerk ELT/MSR;1,0;psch;gaeb;sonstiges/LV Kälte.X83
+0010;Kältedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 65, im Gebäude, Dämmung aus Mineralwolle, kaschiert mit Aluminiumfolie, als Rohrschale, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar), Wärmeleitfähigkeit 0,035 W/(mK) bei 0 Grad C Mitteltemperatur ;10,0;m;gaeb;sonstiges/LV Kälte.X83
+0020;Kältedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 50, im Gebäude, Dämmung aus Mineralwolle, kaschiert mit Aluminiumfolie, als Rohrschale, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar), Wärmeleitfähigkeit 0,035 W/(mK) bei 0 Grad C Mitteltemperatur ;20,0;m;gaeb;sonstiges/LV Kälte.X83
+0030;Dämmung wie vor jedoch als Mehraufwand;10,0;St;gaeb;sonstiges/LV Kälte.X83
+0040;Dämmung wie vor jedoch als Mehraufwand;16,0;St;gaeb;sonstiges/LV Kälte.X83
+0050;Dämmung wie vor jedoch als Mehraufwand;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0060;Kältedämmung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 50, im Gebäude, Dämmung aus Mineralwolle, kaschiert mit Aluminiumfolie, als Rohrschale, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar), Wärmeleitfähigkeit 0,035 W/(mK) bei 0 Grad C Mitteltemperatur DIN EN 12667,;120,0;m;gaeb;sonstiges/LV Kälte.X83
+0070;Kältedämmung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 40, im Gebäude, Dämmung aus Mineralwolle, kaschiert mit Aluminiumfolie, als Rohrschale, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar), Wärmeleitfähigkeit 0,035 W/(mK) bei 0 Grad C Mitteltemperatur DIN EN 12667,;25,0;m;gaeb;sonstiges/LV Kälte.X83
+0080;Kältedämmung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 32, im Gebäude, Dämmung aus Mineralwolle, kaschiert mit Aluminiumfolie, als Rohrschale, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar), Wärmeleitfähigkeit 0,035 W/(mK) bei 0 Grad C Mitteltemperatur DIN EN 12667,;50,0;m;gaeb;sonstiges/LV Kälte.X83
+0090;Kältedämmung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 25, im Gebäude, Dämmung aus Mineralwolle, kaschiert mit Aluminiumfolie, als Rohrschale, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar), Wärmeleitfähigkeit 0,035 W/(mK) bei 0 Grad C Mitteltemperatur DIN EN 12667,;100,0;m;gaeb;sonstiges/LV Kälte.X83
+0100;Kältedämmung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 20, im Gebäude, Dämmung aus Mineralwolle, kaschiert mit Aluminiumfolie, als Rohrschale, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar), Wärmeleitfähigkeit 0,035 W/(mK) bei 0 Grad C Mitteltemperatur DIN EN 12667,;100,0;m;gaeb;sonstiges/LV Kälte.X83
+0110;Kältedämmung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 15, im Gebäude, Dämmung aus Mineralwolle, kaschiert mit Aluminiumfolie, als Rohrschale, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar), Wärmeleitfähigkeit 0,035 W/(mK) bei 0 Grad C Mitteltemperatur DIN EN 12667,;5,0;m;gaeb;sonstiges/LV Kälte.X83
+0120;Kältedämmung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 12, im Gebäude, Dämmung aus Mineralwolle, kaschiert mit Aluminiumfolie, als Rohrschale, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar), Wärmeleitfähigkeit 0,035 W/(mK) bei 0 Grad C Mitteltemperatur DIN EN 12667,;5,0;m;gaeb;sonstiges/LV Kälte.X83
+0130;Dämmung wie vor jedoch als Mehraufwand;35,0;St;gaeb;sonstiges/LV Kälte.X83
+0140;Dämmung wie vor jedoch als Mehraufwand;15,0;St;gaeb;sonstiges/LV Kälte.X83
+0150;Dämmung wie vor jedoch als Mehraufwand;10,0;St;gaeb;sonstiges/LV Kälte.X83
+0160;Dämmung wie vor jedoch als Mehraufwand;30,0;St;gaeb;sonstiges/LV Kälte.X83
+0170;Dämmung wie vor jedoch als Mehraufwand;60,0;St;gaeb;sonstiges/LV Kälte.X83
+0180;Dämmung wie vor jedoch als Mehraufwand;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0190;Dämmung wie vor jedoch als Mehraufwand;18,0;St;gaeb;sonstiges/LV Kälte.X83
+0200;Dämmung wie vor jedoch als Mehraufwand;10,0;St;gaeb;sonstiges/LV Kälte.X83
+0210;Dämmung wie vor jedoch als Mehraufwand;5,0;St;gaeb;sonstiges/LV Kälte.X83
+0220;Dämmung wie vor jedoch als Mehraufwand;5,0;St;gaeb;sonstiges/LV Kälte.X83
+0230;Dämmung wie vor jedoch als Mehraufwand;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0240;Dämmung wie vor jedoch als Mehraufwand;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0250;Dämmung wie vor jedoch als Mehraufwand;10,0;St;gaeb;sonstiges/LV Kälte.X83
+0260;Dämmung wie vor jedoch als Mehraufwand;10,0;St;gaeb;sonstiges/LV Kälte.X83
+0270;Dämmung wie vor jedoch als Mehraufwand;10,0;St;gaeb;sonstiges/LV Kälte.X83
+0280;Dämmung wie vor jedoch als Mehraufwand;10,0;St;gaeb;sonstiges/LV Kälte.X83
+0290;Dämmung wie vor jedoch als Mehraufwand;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0300;Dämmung wie vor jedoch als Mehraufwand;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0310;Wärmedämmung einschl. Ummantelung DIN 4140,;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0010;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Mauerwerk aus Betonstein, Bohrdurchmesser über 150 bis 200 mm, Bohrtiefe über 20 bis 25 cm, nicht schadstoffbelastet,;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0020;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Mauerwerk aus Betonstein, Bohrdurchmesser über 100 bis 150 mm, Bohrtiefe über 20 bis 25 cm, nicht schadstoffbelastet,;16,0;St;gaeb;sonstiges/LV Kälte.X83
+0030;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Mauerwerk aus Betonstein, Bohrdurchmesser über 50 bis 100 mm, Bohrtiefe über 20 bis 25 cm, nicht schadstoffbelastet,;22,0;St;gaeb;sonstiges/LV Kälte.X83
+0040;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Mauerwerk aus Kalksandstein, Bohrdurchmesser über 25 bis 50 mm, Bohrtiefe über 12,5 bis 15 cm, nicht schadstoffbelastet,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0050;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Mauerwerk aus Kalksandstein, Bohrdurchmesser über 50 bis 100 mm, Bohrtiefe über 12,5 bis 15 cm, nicht schadstoffbelastet,;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0060;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Mauerwerk aus Kalksandstein, Bohrdurchmesser über 100 bis 150 mm, Bohrtiefe über 12,5 bis 15 cm, nicht schadstoffbelastet,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0070;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Mauerwerk aus Kalksandstein, Bohrdurchmesser über 150 bis 200 mm, Bohrtiefe über 12,5 bis 15 cm, nicht schadstoffbelastet,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0080;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Mauerwerk aus Kalksandstein, Bohrdurchmesser über 25 bis 50 mm, Bohrtiefe über 20 bis 25 cm, nicht schadstoffbelastet,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0090;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Mauerwerk aus Kalksandstein, Bohrdurchmesser über 50 bis 100 mm, Bohrtiefe über 20 bis 25 cm, nicht schadstoffbelastet,;6,0;St;gaeb;sonstiges/LV Kälte.X83
+0100;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Mauerwerk aus Kalksandstein, Bohrdurchmesser über 100 bis 150 mm, Bohrtiefe über 20 bis 25 cm, nicht schadstoffbelastet,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0110;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Mauerwerk aus Kalksandstein, Bohrdurchmesser über 150 bis 200 mm, Bohrtiefe über 20 bis 25 cm, nicht schadstoffbelastet,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0120;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Mauerwerk aus Kalksandstein, Bohrdurchmesser über 25 bis 50 mm, Bohrtiefe über 25 bis 30 cm, nicht schadstoffbelastet,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0130;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Mauerwerk aus Kalksandstein, Bohrdurchmesser über 50 bis 100 mm, Bohrtiefe über 25 bis 30 cm, nicht schadstoffbelastet,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0140;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Mauerwerk aus Kalksandstein, Bohrdurchmesser über 100 bis 150 mm, Bohrtiefe über 25 bis 30 cm, nicht schadstoffbelastet,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0150;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Mauerwerk aus Kalksandstein, Bohrdurchmesser über 150 bis 200 mm, Bohrtiefe über 25 bis 30 cm, nicht schadstoffbelastet,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0160;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Mauerwerk aus Kalksandstein, Bohrdurchmesser über 50 bis 100 mm, Bohrtiefe über 20 bis 25 cm, nicht schadstoffbelastet,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0170;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 25 bis 50 mm, Bohrtiefe über 20 bis 25 cm, nicht schadstoffbelastet,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0180;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 50 bis 100 mm, Bohrtiefe über 20 bis 25 cm, nicht schadstoffbelastet,;4,0;St;gaeb;sonstiges/LV Kälte.X83
+0190;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 100 bis 150 mm, Bohrtiefe über 20 bis 25 cm, nicht schadstoffbelastet,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0200;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 150 bis 200 mm, Bohrtiefe über 20 bis 25 cm, nicht schadstoffbelastet,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0210;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 25 bis 50 mm, Bohrtiefe über 25 bis 30 cm, nicht schadstoffbelastet,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0220;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 50 bis 100 mm, Bohrtiefe über 25 bis 30 cm, nicht schadstoffbelastet,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0230;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 100 bis 150 mm, Bohrtiefe über 25 bis 30 cm, nicht schadstoffbelastet,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0240;Kernbohrung, Untergrundfläche waagerecht, Bohrkernsicherung nicht erforderlich, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 150 bis 200 mm, Bohrtiefe über 25 bis 30 cm, nicht schadstoffbelastet,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0010;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0020;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;6,0;St;gaeb;sonstiges/LV Kälte.X83
+0030;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0040;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;8,0;St;gaeb;sonstiges/LV Kälte.X83
+0050;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;4,0;St;gaeb;sonstiges/LV Kälte.X83
+0060;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;14,0;St;gaeb;sonstiges/LV Kälte.X83
+0070;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0080;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0090;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0100;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0110;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0120;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0130;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0140;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0150;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0160;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0170;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0180;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0190;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0200;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;2,0;St;gaeb;sonstiges/LV Kälte.X83
+0210;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0220;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0010;Zusätzliche Druck- und Dichtheitsprüfung von Rohrleitungen, aus nichtrostendem Stahl DIN EN 10296-2, geschweißt, Betriebsmedium Heizungswasser, Außendurchmesser über 25 bis 63 mm,;3,0;St;gaeb;sonstiges/LV Kälte.X83
+0020;Befüllung der Heizanlage mit enthärtetem Wasser, Wasser mit Frostschutz bis -20 Grad C, für eine Gesamtheizleistung bis 50 kW, Summe Erdalkalien max. 1,5 mol/m3, Fließdruck 2 bar, Nachweis des zulässigen pH-Wertes im Anlagenwasser im Bereich von 8,2 bis 9,5 8 bis 12 Wochen nach Inbetriebnahme VDI 20;3,0;m3;gaeb;sonstiges/LV Kälte.X83
+0010;Stundenlohnarbeiten durch Facharbeiter/-in;10,0;h;gaeb;sonstiges/LV Kälte.X83
+0020;Stundenlohnarbeiten durch Helfer/-in;10,0;h;gaeb;sonstiges/LV Kälte.X83
+0030;Bezeichnungsschild DIN 825, Farbe und Beschriftung nach Angaben des AG, aus verzinktem Stahl mit Kunststoffabdeckung, Beschriftung 3-zeilig, gedruckt, rechteckig, Höhe 52 mm, Breite 105 mm, Befestigung mit Schildträger aus verzinktem Stahl, Halter und Spannband, Befestigungsuntergrund Rohrleitung.;20,0;St;gaeb;sonstiges/LV Kälte.X83
+0040;Fließrichtungspfeile für die Kennzeichnung;20,0;St;gaeb;sonstiges/LV Kälte.X83
+0050;Form-/Hohlprofilstahlkonstruktion, aus verzinktem Stahl, für Stütz-, Hänge-, Trag- und Sonderbefestigung, schallentkoppelt gelagert.;50,0;kg;gaeb;sonstiges/LV Kälte.X83
+0060;Montagewinkel, aus verzinktem Stahl, für Stütz-, Hänge-, Trag- und Sonderbefestigung.;50,0;kg;gaeb;sonstiges/LV Kälte.X83
+0070;Rohrleitungs-Auflager für zwei Rohrleitungen bis DN 76 auf Flachdach, Höhe bis 500 mm;10,0;St;gaeb;sonstiges/LV Kälte.X83
+0080;MPC-Systemschiene 38/40-2,00mm, verzinkt;10,0;m;gaeb;sonstiges/LV Kälte.X83
+0090;Einweisung des Betriebspersonals;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0100;Anlage,- Strangschema,der Gesamtanlage, DIN A3 - Format, farbig;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0110;Brandschutzkataster für brandschutztechnische Abschottungen und Verschlüsse;1,0;St;gaeb;sonstiges/LV Kälte.X83
+0120;Bestandsunterlagen / Technische Dokumentation;3,0;St;gaeb;sonstiges/LV Kälte.X83

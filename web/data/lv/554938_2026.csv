@@ -1,0 +1,1165 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Gruppenbatteriesystem, IP20, bis 250 W;10,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Gruppenbatteriesystem, IP54, bis 370 W;3,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;Brandschutzgehäuse E30 für Gruppenbatteriesystem 250 W;3,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+40;Netzüberwachungsmodul DUW;13,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+50;"Fernbedien- und Visualisierungstableau als 10,1"" Touchscreen mit Wandhalterung, gemäß DIN VDE 0108-100, für die Programmierung, Bedienung und zentralen Visualisierung der Anlagenzustände aller im Leistungsverzeichnis enthaltenen Gruppenbatteriesystemen (max. 253 Anlagen):";1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+60;Inbetriebnahme Sicherheitbeleuchtungsanlage mit anschließender Programmierung der Gerätegrundfunktionen aller im LV enthaltenen Gruppenbatteriesysteme, Netzüberwachungsmodule und Fernbedien- und Anzeigetableaus.;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+70;Inbetriebnahme Sicherheitbeleuchtungsanlage mit anschließender Programmierung der Gerätegrundfunktionen eines im Bestand vorhandenen Gruppenbatteriesystems.;3,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+80;Zielortprogrammierung pro Leuchte;140,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Wandler-/ Wandlermessschrank, IP55/II, ca. 1900 x 600 x 400 mm + 100 mm Sockel, nach DIN VDE 0603/3 und VDE-AR-N 4100:2019-04;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Schrank,IP54/I, ca. 1900 x 800 x 400 mm + 100 mm Sockel;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;Schrank,IP54/I, ca. 1900 x 600 x 400 mm + 100 mm Sockel;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+40;Leistungsschalter, 3-polig, 50 kA, 1000 A;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+50;NH00-Sicherungslasttrennschalter für Montageplatte bzw. Hutschienenmontage nach DIN EN 60947-3 (VDE 0660-107) und geeignet für NH-Sicherungseinsätze nach IEC 60269-2 / DIN VDE 0636-2. Bestehend aus 3-poligem Schalterunterteil und plombierbarem Griffeinsatz, Berührungsschutz am Griff, mit verschiebba;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+60;NH-Sicherungs-Lastschaltleiste, Gr. NH3, 3-polig ,;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+70;NH-Sicherungs-Lastschaltleiste, Gr. NH1, 3-polig ,;3,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+80;NH-Sicherungs-Lastschaltleiste, Gr. NH00, 3-polig ,;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+90;D02-Sicherungsunterteil 3-polig, 63 A,;8,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+100;Motorschutzschalter 0,4 - 0,63A;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+110;Überspannungsschutzgerät Typ 2, 4-polig;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+120;Multimessgerät, 3-phasig, indirekt, m. Wandler, in Schaltschranktür;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+130;Energiezähler, 3-phasig, indirekt, mit Wandler,;7,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Schrank, IP54/I, ca. 1900 x 1050 x 300 mm + 100 mm Sockel;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Schrank, IP54/I, ca. 1900 x 800 x 300 mm + 100 mm Sockel;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;Leistungsschalter Baugröße 3-polig, 50 kA, 250 A;3,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+40;Leistungsschalter Baugröße 3-polig, 50 kA, 160 A;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+50;NH00-Sicherungslasttrennschalter für Montageplatte bzw. Hutschienenmontage nach DIN EN 60947-3 (VDE 0660-107) und geeignet für NH-Sicherungseinsätze nach IEC 60269-2 / DIN VDE 0636-2. Bestehend aus 3-poligem Schalterunterteil und plombierbarem Griffeinsatz, Berührungsschutz am Griff, mit verschiebba;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+60;NH-Sicherungs-Lastschaltleiste, Gr. NH3, 3-polig ,;25,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+70;Leitungsschutzschalter, 1-polig, 16 A, B, 6 kA;12,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+80;D02-Sicherungsunterteil 3-polig, 63 A,;11,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+90;Motorschutzschalter 0,4 - 0,63A;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+100;Überspannungsableiter, 4-polig, 40 kA, Typ 2, TN-S,;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+110;Multimessgerät, 3phasig, indirekt, m. Wandler, in Schaltschranktür;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+120;Energiezähler, 3-phasig, indirekt, mit Wandler,;11,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Schrank-/Wandverteiler, IP43/I, ca. 1850 x 550 x 200 mm, mit 100 mm Sockel;6,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Schrankmaße:;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;Schrankmaße:;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+40;Schrankmaße:;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+50;Lasttrennschalter, 3-pol., 100 A;7,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+60;Lasttrennschalter, 3-pol., 63 A;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+70;Lasttrennschalter für D02 Sicherungen, 3-pol., für Sammelschiene;44,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+80;3-poligen Lastschalter für Neozed-Sicherungen,;8,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+90;D01-Sicherungsunterteil 3-polig, 16 A,;12,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+100;D01-Sicherungsunterteil 1-polig, 16 A,;8,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+110;Fehlerstromschutzschalter 4-polig, 40 A, 30 mA;25,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+120;FI-Leitungsschutzschalter 2-polig, 10 A, 30 mA, B, 6 kA;84,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+130;Leitungsschutzschalter, 3-polig, 35 A, C, 6 kA;22,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+140;Nennstrom:;3,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+150;Nennstrom:;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+160;Nennstrom:;174,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+170;Nennstrom:;51,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+180;Nennstrom:;8,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+190;Nennstrom:;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+200;Nennstrom:;8,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+210;Hilfskontaktschalter für FI- und Leitungsschutzschalter, 2 Hiko,;120,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+220;Treppenlichtautomat, 1S, 230 V, 10 A;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+230;Fernschalter, 2S, 230 V AC, 110 V DC, 16 A mit Zentralsteuerung;7,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+240;Schaltrelais 8 - 230 V, 2 Schließer;7,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+250;Überspannungsableiter der Anforderungsklasse C.;12,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+260;Spannungsversorgung 24 V DC 2,5A;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+270;KNX REG Spannungsversorgung 320 mA, mit Drossel;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+280;KNX REG USB-Schnittstelle;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+290;KNX REG Bereichs-/Linienkoppler;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+300;KNX REG DALI-Gateway, 1 Linie;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+310;KNX REG Binäreingang, 6-fach;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+320;KNX REG Schaltaktor, 4-fach, 16 A;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+330;KNX REG Schaltaktor, 8-fach, 16 A;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+340;KNX REG Jalousieaktor, 8-fach, 6 A;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+350;Haubenverteiler, 4-reihig, IP65/II;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Wipp-Universalschalter, u.P., 250V/10A, IP 20, 1-polig,;28,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Wipp-Serienschalter, u.P., 250V/10A, IP 20, 1-polig,;3,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;Wipp-Taster, u.P., 250V/10A, IP 20, 1-polig,;18,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+40;Wipp-Taster, u.P., 250V/10A, IP 20, 1-polig, beleuchtet;7,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+50;EnOcean Funk Wandsender-Modul mit 2 Wippen. Batterieloses wartungsfreies Gerät ohne externe Spannungsversorgung und ist in Verbindung mit entsprechenden Funk-Empfängern geeignet zur Übertragung von Schalt-, Dimm- oder Jalousiebefehlen an Funk-Empfänger des EnOcean-Systems. Jeder Kanal kann beliebig ;7,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+60;EnOcean KNX Gateway als bidirektionales Gateway zur Übertragung von EnOcean Funksignalen auf den KNX Bus oder von KNX-Telegrammen ins EnOcean-System. EnOcean Empfängerfunktionen zur Umsetzung in KNX-Telegramme sind u. a. Schalten, Dimmen, Jalousie, Lichtszene, Fensterkontakte, Temperatur-, Helligkei;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+70;KNX Tastsensor, 1-fach, u.P., IP20, reinweiß glänzend;22,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+80;KNX Tastsensor, 2-fach, u.P., IP20, reinweiß glänzend;3,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+90;KNX Bewegungsmelder u.P., IP20, reinweiß glänzend, MH bis 2,20 m;28,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+100;KNX Bewegungsmelder u.P., IP44, reinweiß glänzend, MH bis 2,20 m;32,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+110;Binäreingang (UP) KNX Secure als Tasterschnittstelle zum Anschluss von Tastern, Schaltern oder potenzialfreien Kontakten. Unterputzgerät mit integriertem Busankoppler, Busanschluss über KNX Anschlussklemme, Programmier-Taste mit LED und vorkonfektionierte Anschlussleitungen.;15,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+120;"KNX Touchpanel 8"" u.P., m. Wandmontageadapter";2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+130;KNX Wetterstation für Wind, Regen, Helligkeit, Temperatur;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+140;Bewegungsmelder u.P., 180°, IP20,;8,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+150;Bewegungsmelder u.P., 180°, Slave, IP20,;3,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+160;Mini-Präsenzmelder u.P., 360° - Master, IP20, weiß,;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+170;Mini-Präsenzmelder, 360°, Slave , IP20, weiß,;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+180;Schutzkontaktsteckdose u.P., 250V/16A, IP20, Farbe reinweiß glänzend, im historisch anmutenden Design mit runder Frontansicht und Rundrahmen;25,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+190;Schutzkontaktsteckdose u.P., 250V/16A, IP20,;153,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+200;Geräteanschlussdose nach DIN VDE 0606,;35,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+210;Wipp-;50,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+220;Wipp-Universalschalter a.P., 250V/10A, min. IP44, 1-polig, beleuchtet, als Aus- und Wechselschalter,;16,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+230;Präsenzmelder, 360°, IP20, mit Aufputzgehäuse,;15,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+240;Steckdosenkombination a.P., 3x Schuko, 1x CEE 16 A, 1x CEE 32 A mit integrierter Schutzgeräte (FI + LS), IP44;15,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+250;Schutzkontaktsteckdose a.P., 250V/16A, min. IP44, einfach;24,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+260;Schutzkontaktsteckdose a.P., 250V/16A, min. IP44,;13,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+270;CEEform Steckdose 16A, 5-polig, 400V, nach DIN VDE 0623, EN60309-2, Schutzart: IP54, Gehäuse Elektrograu, Klappdeckel in Kennfarbe, Gehäuse und Einsatz aus temperaturbeständigen, schlag- und bruchfesten Spezialkunststoff, Steckrichtung schräg von unten, Leitungseinführungen 1x oben und 2x unten blin;10,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+280;CEEform Steckdose 32A,;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+290;Aufputzgehäuse, 1-fach, für den Einbau von UP-Geräten mit integrierter flammwidriger Bodenplatte und separatem Rahmen mit Beschriftungsfeld, komplett mit allem erforderlichen Zubehör und passend zum eingesetzten Schalterprogramm.;25,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+300;Aufputzgehäuse, 2-fach;10,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+310;FR- Verbindungsdose ca. 80 x 80 mm, IP54,;80,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+320;FR- Verbindungsdose ca. 100 x 100 mm, IP54,;100,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+330;Unterputz Verbindungskasten, 87 x 87 x 60 mm, halogenfrei, mit Deckel, mit Geräteschrauben;75,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+340;Unterputz Verbindungskasten, ca. 159 x 159 x 75 mm, halogenfrei, mit Deckel, mit Geräteschrauben;62,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+350;Abschlussdeckel für Bestands-Verbindungskasten, u.P., bis 160 x 160 mm, weiß, halogenfrei, einschließlich Befestigungsschrauben.;60,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+360;Geräteabzweigdose in Mauerwerk nach DIN VDE 0606,;145,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+370;Putzausgleichsring mit Befestigungsschrauben, passend für die im Leistungsverzeichnis beschriebene Geräteabzweigdosen in Mauerwerk, Höhe ca. 12 mm.;65,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+380;Gerätedose in Hohlwänden nach DIN VDE 0606,;120,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+390;Ausführung als Schallschutz-Gerätedose,;35,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+400;Ausführung als Brandschutz-Gerätedose,;24,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+410;Multikontakt-Leuchtenlift bis 20 kg;8,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Kabelrinne für Kabelträgersystem DIN EN 61537 (VDE 0639), gelocht, aus feuerverzinktem Stahl DIN EN ISO 1461,;230,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Breite:;100,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;Breite:;60,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+40;Breite:;15,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+50;Kabelrinne aus glasfaserverstärktem Polyester, halogenfrei, mit ungelochten Seitenholmen, mit angeformtem Verbinder, mit querverlaufenden Verstärkungen (5 mm) über die gesamte Kabelrinnenbreite sowie Befestigungslochung im Boden, mechanische Festigkeit nach IEC 61537,;80,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+60;Breite:;105,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+70;Bogen, für Kabelrinne, 90 Grad, waagerecht, gelocht,;50,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+80;Breite:;30,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+90;Breite:;10,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+100;Breite:;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+110;Bogen, für Kabelrinne, 45 Grad,;30,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+120;Bogen, für Kabelrinne, 45 Grad,;20,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+130;Bogen, für Kabelrinne, 45 Grad,;10,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+140;Bogen, für GFK-Kabelrinne, 90 Grad, waagerecht,;7,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+150;Breite:;8,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+160;Bogen, für GFK-Kabelrinne, 45 Grad,;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+170;Bogen, für GFK-Kabelrinne, 45 Grad,;8,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+180;Gelenkverbinder für Metall-Kabelrinne, vertikal - winkelverstellbar 0-90°, aus Stahl, verzinkt, im Set (2 Stk.),;60,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+190;Gelenkverbinder für GFK-Kabelrinne, vertikal - winkelverstellbar 0-90°, aus glasfaserverstärktem Polyester, halogenfrei, im Set (2 Stk.),;15,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+200;T-Abzweig, für Kabelrinne, waagerecht, gelocht,;20,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+210;Breite:;12,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+220;Breite:;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+230;Breite:;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+240;Trennstege zur Trennung von Kabeln und Leitungen in Kabelrin- nen mit unterschiedlichen Spannungen oder Funktionen.;405,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+250;Trennstege zur Trennung von Kabeln und Leitungen in GFK-Kabelrinnen mit unterschiedlichen Spannungen oder Funktionen.;195,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+260;Kabelrinne für Kabelträgersystem DIN EN 61537 (VDE 0639), gelocht, Feuerwiderstandsklasse E 30 DIN 4102-12, mit Funktionserhalt, aus feuerverzinktem Stahl DIN EN ISO 1461,;28,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+270;Breite:;4,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+280;Bogen, für Kabelrinne, 90 Grad, waagerecht, Feuerwiderstandsklasse E 30 DIN 4102-12, mit Funktionserhalt, aus feuerverzinktem Stahl DIN EN ISO 1461,;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+290;Breite:;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+300;Bogen, für Kabelrinne, 45 Grad,;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+310;Bogen, für Kabelrinne, 45 Grad,;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+320;Gelenkverbinder für Metall-Kabelrinne, vertikal - winkelverstellbar 0-90°, Feuerwiderstandsklasse E 30 DIN 4102-12, mit Funktionserhalt, aus Stahl, verzinkt, im Set (2 Stk.),;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+330;Zulage für das Herstellen eines individuellen horizontalen Kabelrinnenbogens durch winkelgerechtes Schneiden und Verbinden von Kabelrinnen aus Metall oder GFK sofern keine standardisierten Kabelrinnenformstücke verwendet werden können, einschl. Korrosionsschutzmaßnahmen und Befestigungsmaterialien.;78,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+340;Stiel für Ausleger für Kabelrinne,;10,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+350;Stiellänge:;50,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+360;Stiellänge:;30,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+370;Stiellänge:;20,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+380;Stiellänge:;10,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+390;Stiel für GFK-Ausleger, aus glasfaserverstärktem Polyester,;55,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+400;Stiellänge:;85,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+410;Stiel/Hängestiel mit variabler Kopfplatte für Ausleger, Stiel aus Stahl-U-Profil, feuerverzinkt nach DIN EN ISO 1461, mit serieller Langlochung, für Befestigung durch Dübelung an Ziegeldecken, -wände oder Böden.;10,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+420;Stiel bis 400 mm, Ziegeldecke, MH bis 4 m;20,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+430;Stiel bis 600 mm, Ziegeldecke, MH bis 4 m;25,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+440;Stiel bis 800 mm, Ziegeldecke, MH bis 4 m;20,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+450;Stiel bis 1000 mm, Ziegeldecke, MH bis 4 m;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+460;Stiel für Ausleger für Kabelrinne,;20,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+470;Stiellänge:;8,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+480;Stiellänge:;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+490;Zulage für Ausgleichsmaßnahme bei Stielmontage;100,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+500;Ausleger für Kabelrinne, aus feuerverzinktem Stahl DIN EN ISO 1461, Tragfähigkeit bis 1,5 kN, einseitig an Stielen, Stiele werden gesondert vergütet,;100,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+510;Nennlänge:;150,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+520;Nennlänge:;30,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+530;Nennlänge:;16,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+540;Nennlänge:;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+550;Ausleger für GFK-Kabelrinne, aus glausfaserverstärktem Polyester, halogenfrei, Tragfähigkeit bis 1,4 kN, an Stielen, Stiele werden gesondert vergütet,;60,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+560;Nennlänge:;80,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+570;Ausleger für Kabelrinne, aus feuerverzinktem Stahl DIN EN ISO 1461, Tragfähigkeit bis 1,5 kN, an der Wand aus Mauerwerk befestigen mit bauaufsichtlich zugelassenen Dübeln,;150,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+580;Nennlänge:;120,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+590;Nennlänge:;100,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+600;Nennlänge:;50,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+610;Nennlänge:;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+620;Ausleger für GFK-Kabelrinne, aus glasfaserverstärktem Polyester, halogenfrei, Tragfähigkeit bis 1,4 kN, an der Wand aus Mauerwerk befestigen mit bauaufsichtlich zugelassenen Dübeln,;30,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+630;Nennlänge:;40,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+640;Ausleger für Kabelrinne, Feuerwiderstandsklasse E30 DIN 4102-12, mit Funktionserhalt, aus feuerverzinktem Stahl DIN EN ISO 1461, Tragfähigkeit bis 3,5 kN, einseitig an Stielen, Stiele werden gesondert vergütet,;25,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+650;Nennlänge:;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+660;Ausleger für Kabelrinne, Feuerwiderstandsklasse E30 DIN 4102-12, mit Funktionserhalt, aus feuerverzinktem Stahl DIN EN ISO 1461, Tragfähigkeit bis 1,5 kN, an der Wand aus Mauerwerk befestigen mit bauaufsichtlich zugelassenen Dübeln,;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+670;Nennlänge:;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+680;Zulage für zweite Abhängung bei Kabeltrassen mit Funktionserhalt E30 gemäß bauaufsichtlicher Zulassung des Tragsystems, damit keine Einschränkungen für darauf verlegte Kabel- und Leitungstypen bestehen.;36,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+690;Steigleiter, Sprossenabstand 300 mm, aus feuerverzinktem Stahl DIN EN ISO 1461, einschl. aller systembedingten Form- und Verbindungsstücke,;80,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+700;Nennbreite:;60,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+710;Nennbreite:;20,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+720;Nennbreite:;16,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+730;Nennbreite:;2,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+740;Steigleiter, Sprossenabstand 300 mm, aus glasfaserverstärktem Polyester, einschl. aller systembedingten Form- und Verbindungsstücke, halogenfrei;12,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+750;Nennbreite:;10,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+760;Zulage für Montage von Steigtrassen in beengten Räumen;15,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+770;Steigleiter, Feuerwiderstandsklasse E30 DIN 4102-12, mit Funktionserhalt, Sprossenabstand 300 mm, einschl. aller systembedingten Form- und Verbindungsstücke, aus feuerverzinktem Stahl DIN EN ISO 1461,;8,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+780;Nennbreite:;2,5;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+790;mit serieller Langlochung,;90,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+800;aus Stahl oder Stahlblech Fe36 B oder S355 J2G3 C, feuerverzinkt nach DIN 50976, Stahlkonstruktionen die durch bauliche Erfor- dernisse benötigt werden und durch nicht handelsübliche Be- festigungen und Halterungen erbracht werden können, sind nur nach Freigabe durch die Objekt-/Bauüberwachung herzu;250,0;kg;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+810;Stahlkonstruktionen Einzelgewicht über 10 kg bis 20 kg/Stück.;200,0;kg;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+820;Bügelschellen für die Befestigung von Kabel und;500,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+830;Bügelschellen für die Befestigung von Kabel und;500,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+840;Bügelschellen für die Befestigung von Kabel und;700,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+850;Bügelschellen für die Befestigung von Kabel und;800,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+860;Bügelschellen für die Befestigung von Kabel und;700,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+870;Bügelschellen für die Befestigung von Kabel und;500,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+880;Bügelschellen für die Befestigung von Kabel und;500,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+890;Bügelschellen für die Befestigung von Kabel und;300,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+900;Kabelsammelhalter Größe 1, Kunststoff, halogenfrei, flammenwidrig nach DIN VDE 0471, bis 15 Leitungen;500,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+910;wie jevor, jedoch als Metallsammelhalter, E30;100,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+920;bis 30 Kabel;300,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+930;bis 30 Kabel, jedoch als Metallsammelhalter, E30;80,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+940;bis 70 Kabel;200,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+950;bis 70 Kabel, jedoch als Metallsammelhalter, E30;50,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+960;Installationskanal als Kunststoff-Leitungsführungskanal,;75,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+970;Installationskanal als Kunststoff-Leitungsführungskanal,;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+980;Außenmaß H/B mind. 40/60 mm,;8,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+990;Außenmaß H/B mind. 40/60 mm,;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1000;Installationskanal als Kunststoff-Leitungsführungskanal,;10,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1010;Außenmaß H/B mind. 60/110 mm,;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1020;Außenmaß H/B mind. 60/110 mm,;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1030;Installationskanal als Kunststoff-Leitungsführungskanal,;10,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1040;Außenmaß H/B mind. 60/230 mm,;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1050;Außenmaß H/B mind. 60/230 mm,;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1060;Trennwand bis Höhe 110 mm, zur Unterteilung von Kunststoff-Leitungsführungskanälen in Bereiche unterschiedlicher Spannungsebenen oder Funktionen.;20,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1070;Kanalaussenmaß H/B mind. 30/30 mm, mit innenliegendem Deckel,;25,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1080;Kanalaussenmaß H/B mind. 40/60 mm, mit innenliegendem Deckel,;15,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1090;Zulage für individuelle Anpassung LF-Kanal;85,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1100;Zur Vereinheitlichung des Brüstungskanalsystemes sind alle Teile und systemgebundenes Zubehör eines Herstellers zu verwenden.;30,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1110;Wandabschlussblende für wandmontierten Brüstungskanal,;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1120;Zulage für individuelle Anpassung Brüstungskanal;12,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1130;Geräteeinbaudose, 1-fach für vorbeschriebenen Brüstungskanal zur Montage von Installationsgeräten der Starkstrom-, Tele- kommunikations- und Datentechnik von Fremdherstellern.;45,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1140;Geräteeinbaudose, 2-fach;18,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1150;Schalldämmung von Sprechschall für Brüstungskanalsysteme im Bereich von Raumtrennwänden durch Einbau einer weichen Schalldämmeinlage in den Kanal.;7,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1160;Brandschutzkabelkanal als selbsttragendes Fertigteil, Beflammung von innen, rechteckig, mit allgemeinem bauaufsichtlichen Prüfzeugnis, Feuerwiderstandsklasse I30 DIN 4102-11, mit abnehmbarem Deckel, waagerecht, Innenmaße (B/T) ca. 110/100 mm, im Gebäude, Oberkante Kanal über Gelände/Fußboden bis 4 m;9,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1170;Innenmaße (B/T) ca. 250/120 mm;4,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1180;Isolierstoffrohr flexibel aus Kunststoff,;400,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1190;Nenngröße EN 32,;100,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1200;Nenngröße EN 40,;40,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1210;Isolierstoffrohr flexibel aus Kunststoff,;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1220;Nenngröße EN 32,;10,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1230;Isolierstoffrohr starr aus Kunststoff,;500,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1240;Nenngröße EN 32,;120,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1250;Nenngröße EN 40,;35,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1260;Nenngröße EN 50,;12,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1270;Tauchfeuerverzinktes Stahlrohr, ohne Gewinde,;200,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1280;Nenngröße EN 32,;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1290;Nenngröße EN 40,;20,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1300;Nenngröße EN 50,;10,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5 RE, Cu-Zahl 43,;120,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5 RE, Cu-Zahl 43,;800,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5 RE, Cu-Zahl 43,;500,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+40;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5 RE, Cu-Zahl 43,;110,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+50;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5 RE, Cu-Zahl 43,;380,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+60;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5 RE, Cu-Zahl 43,;1220,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+70;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 1,5 RE, Cu-Zahl 72,;130,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+80;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 1,5 RE, Cu-Zahl 72,;880,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+90;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 1,5 RE, Cu-Zahl 72,;520,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+100;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 1,5 RE, Cu-Zahl 72,;135,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+110;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 1,5 RE, Cu-Zahl 72,;340,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+120;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 1,5 RE, Cu-Zahl 72,;1120,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+130;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 2,5 RE, Cu-Zahl 72,;135,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+140;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 2,5 RE, Cu-Zahl 72,;1450,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+150;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 2,5 RE, Cu-Zahl 72,;1050,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+160;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 2,5 RE, Cu-Zahl 72,;300,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+170;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 2,5 RE, Cu-Zahl 72,;250,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+180;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 2,5 RE, Cu-Zahl 72,;750,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+190;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 2,5 RE, Cu-Zahl 120,;125,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+200;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 2,5 RE, Cu-Zahl 120,;1250,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+210;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 2,5 RE, Cu-Zahl 120,;1150,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+220;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 2,5 RE, Cu-Zahl 120,;360,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+230;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 2,5 RE, Cu-Zahl 120,;250,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+240;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 2,5 RE, Cu-Zahl 120,;750,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+250;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 4 RE, Cu-Zahl 115,;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+260;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 4 RE, Cu-Zahl 115,;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+270;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 4 RE, Cu-Zahl 115,;20,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+280;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 4 RE, Cu-Zahl 192,;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+290;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 4 RE, Cu-Zahl 192,;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+300;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 4 RE, Cu-Zahl 192,;20,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+310;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 6 RE, Cu-Zahl 288,;400,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+320;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 6 RE, Cu-Zahl 288,;200,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+330;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 10 RE, Cu-Zahl 480,;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+340;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 10 RE, Cu-Zahl 480,;25,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+350;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 16 RM, Cu-Zahl 768,;100,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+360;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 16 RM, Cu-Zahl 768,;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+370;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 25 RM, Cu-Zahl 1200,;200,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+380;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 25 RM, Cu-Zahl 1200,;70,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+390;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 35 RM, Cu-Zahl 1680,;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+400;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 35 RM, Cu-Zahl 1680,;25,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+410;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XCH 4 x 35 RM/16, Cu-Zahl 1528,;30,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+420;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XCH 4 x 35 RM/16, Cu-Zahl 1528,;5,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+430;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XCH 4 x 120 RM/70, Cu-Zahl 5388,;72,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+440;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XCH 4 x 120 RM/70, Cu-Zahl 5388,;18,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+450;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XCH 4 x 185 RM/95, Cu-Zahl 8159,;62,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+460;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XCH 4 x 185 RM/95, Cu-Zahl 8159,;3,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+470;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 3 x 1,5 RE, Cu-Zahl 43,;40,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+480;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5 RE, Cu-Zahl 43,;10,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+490;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5 RE, Cu-Zahl 43,;10,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+500;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 10 RE, Cu-Zahl 96,;100,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+510;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 10 RE, Cu-Zahl 96,;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+520;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 10 RE, Cu-Zahl 96,;25,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+530;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 10 RE, Cu-Zahl 96,;5,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+540;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 16 RM, Cu-Zahl 154,;200,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+550;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 16 RM, Cu-Zahl 154,;100,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+560;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 16 RM, Cu-Zahl 154,;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+570;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 16 RM, Cu-Zahl 154,;10,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+580;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 25 RM, Cu-Zahl 240,;200,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+590;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 25 RM, Cu-Zahl 240,;100,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+600;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 25 RM, Cu-Zahl 240,;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+610;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 25 RM, Cu-Zahl 240,;10,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+620;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 50 RM, Cu-Zahl 480,;15,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+630;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 50 RM, Cu-Zahl 480,;5,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+640;Halogenfreie Kunststoffaderleitung DIN EN 50525-3-41 (VDE 0285-525-3-41), H07Z-K 1 x 4, Cu-Zahl 38, gn/ge,;750,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+650;Halogenfreie Kunststoffaderleitung DIN EN 50525-3-41 (VDE 0285-525-3-41), H07Z-K 1 x 6, Cu-Zahl 58, gn/ge,;250,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+660;Halogenfreie Kunststoffaderleitung DIN EN 50525-3-41 (VDE 0285-525-3-41), H07Z-K 1 x 10, Cu-Zahl 96, gn/ge,;500,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+670;Halogenfreie Kunststoffaderleitung DIN EN 50525-3-41 (VDE 0285-525-3-41), H07Z-K 1 x 16, Cu-Zahl 154, gn/ge,;800,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+680;halogenfreie Gummischlauchleitung DIN EN 50525-3-21 (VDE 0285-525-3-21) H07ZZ-F 3 G 1,5, Cu-Zahl 43,;120,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+690;halogenfreie Gummischlauchleitung DIN EN 50525-3-21 (VDE 0285-525-3-21) H07ZZ-F 5 G 1,5, Cu-Zahl 72,;90,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+700;Halogenfreies Kabel DIN VDE 0266 (VDE 0266) NHXH-J FE 180 3 x 1,5 RE, Cu-Zahl 43,;20,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+710;Halogenfreies Kabel DIN VDE 0266 (VDE 0266) NHXH-J FE 180 3 x 1,5 RE, Cu-Zahl 43,;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+720;Halogenfreies Kabel DIN VDE 0266 (VDE 0266) NHXH-J FE 180 3 x 1,5 RE, Cu-Zahl 43,;10,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+730;Halogenfreies Kabel DIN VDE 0266 (VDE 0266) NHXH-J FE 180 3 x 1,5 RE, Cu-Zahl 43,;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+740;Halogenfreies Kabel DIN VDE 0266 (VDE 0266) NHXH-J FE 180 5 x 4 RE, Cu-Zahl 192,;20,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+750;Halogenfreies Kabel DIN VDE 0266 (VDE 0266) NHXH-J FE 180 5 x 4 RE, Cu-Zahl 192,;10,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+760;Busleitung KNX-TP HCH 2x2x0,8, grün, halogenfrei, Prüfspannung 4 kV, Verlegung in Montagewänden.;20,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+770;Busleitung KNX-TP HCH 2x2x0,8, grün, halogenfrei, Prüfspannung 4 kV, Verlegung auf vorh. Kabelrinnen oder in offene Kanäle, Montagehöhe bis 4 m.;100,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+780;Busleitung KNX-TP HCH 2x2x0,8, grün, halogenfrei, Prüfspannung 4 kV, Verlegung in vorh. Rohre/Unterflurkanäle, Montagehöhe bis 4 m.;100,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+790;Busleitung KNX-TP HCH 2x2x0,8, grün, halogenfrei, Prüfspannung 4 kV, Verlegung mit vorh. Bügelschellen auf vorh. Ankerschienen oder Kabelleiter, Montagehöhe bis 4 m.;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+800;Busleitung KNX-TP HCH 2x2x0,8, grün, halogenfrei, Prüfspannung 4 kV, Verlegung mit vorh. Sammelbefestigung, Montagehöhe bis 4 m.;20,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+810;Busleitung KNX-TP HCH 2x2x0,8, grün, halogenfrei, Prüfspannung 4 kV, Verlegung u.P.  in vorh. Mauerschlitz, einschl. Dübelschlaufen, Montagehöhe bis 4 m.;500,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+820;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 4 x 2 x 0,8 Bd, halogenfrei, in Montagewänden.;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+830;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 4 x 2 x 0,8 Bd, halogenfrei, Verlegung auf vorh. Kabelrinnen oder in offene Kanäle, Montagehöhe bis 4 m.;200,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+840;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 4 x 2 x 0,8 Bd, halogenfrei, Verlegung in vorh. Rohre/Unterflurkanäle, Montagehöhe bis 4 m.;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+850;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 4 x 2 x 0,8 Bd, halogenfrei, Verlegung mit vorh. Bügelschellen auf vorh. Ankerschienen oder Kabelleiter, Montagehöhe bis 4 m.;100,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+860;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 4 x 2 x 0,8 Bd, halogenfrei, Verlegung mit vorh. Sammelbefestigung, Montagehöhe bis 4 m.;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+870;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 4 x 2 x 0,8 Bd, halogenfrei, Verlegung u.P.  in vorh. Mauerschlitz, einschl. Dübelschlaufen, Montagehöhe bis 4 m.;200,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+880;Mantelleitung und Kabel absetzen, einführen und nach;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+890;Kabel absetzen, einführen und nach;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+900;Kabel absetzen, einführen und nach;6,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+910;Mantelleitung und Kabel absetzen, einführen und nach;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+920;Mantelleitung und Kabel absetzen, einführen und nach;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+930;Mantelleitung und Kabel absetzen, einführen und nach;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+940;Mantelleitung und Kabel absetzen, einführen und nach;8,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+950;Mantelleitung und Kabel absetzen, einführen und nach;25,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+960;Mantelleitung und Kabel absetzen, einführen und nach;30,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+970;Mantelleitung und Kabel absetzen, einführen und nach;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+980;Mantelleitung und Kabel absetzen, einführen und nach;35,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+990;Mantelleitung und Kabel absetzen, einführen und nach;40,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1000;Mantelleitung und Kabel absetzen, einführen und nach;50,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1010;Mantelleitung und Kabel absetzen, einführen und nach;6,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1020;Mantelleitung und Kabel absetzen, einführen und nach;20,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1030;Mantelleitung und Kabel absetzen, einführen und nach;55,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1040;Mantelleitung und Kabel absetzen, einführen und nach;60,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1050;Mantelleitung und Kabel absetzen, einführen und nach;75,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1060;Mantelleitung und Kabel absetzen, einführen und nach;110,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1070;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 4 x 2 x AWG 23, halogenfrei, flammwidrig, auf vorh. Kabelrinn;1800,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1080;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 2 x (4 x 2 x AWG 23), halogenfrei, flammwidrig, auf vorh. Kab;4500,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1090;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 4 x 2 x AWG 23, halogenfrei, flammwidrig, in Montagewänden.;200,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1100;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 2 x (4 x 2 x AWG 23), halogenfrei, flammwidrig, in Montagewän;550,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1110;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 4 x 2 x AWG 23, halogenfrei, flammwidrig, in vorh. Rohre/Unte;400,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1120;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 2 x (4 x 2 x AWG 23), halogenfrei, flammwidrig, in vorh. Rohr;900,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1130;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 4 x 2 x AWG 23, halogenfrei, flammwidrig, mit sep. ausgeschri;300,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1140;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 2 x (4 x 2 x AWG 23), halogenfrei, flammwidrig, mit sep. ausg;400,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1150;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 4 x 2 x AWG 23, halogenfrei, flammwidrig, mit sep. ausgeschri;300,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1160;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 2 x (4 x 2 x AWG 23), halogenfrei, flammwidrig, mit sep. ausg;900,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1170;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 4 x 2 x AWG 23, halogenfrei, flammwidrig, unter Putz ohne Sch;200,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1180;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 2 x (4 x 2 x AWG 23), halogenfrei, flammwidrig, unter Putz oh;350,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1190;Installationskabel, symmetrisch, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, J-H(St)H, 2 x 2 x 0,8 Bd, auf vorh. Kabelrinnen oder in offene Kanäle.;200,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1200;Installationskabel, symmetrisch, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, J-H(St)H, 2 x 2 x 0,8 Bd, in Montagewänden.;200,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1210;Installationskabel, symmetrisch, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, J-H(St)H, 2 x 2 x 0,8 Bd, in vorh. Rohre/Unterflurkanäle.;500,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1220;Installationskabel, symmetrisch, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, J-H(St)H, 2 x 2 x 0,8 Bd, mit sep. ausgeschriebenen Bügelschellen.;100,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1230;Installationskabel, symmetrisch, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, J-H(St)H, 2 x 2 x 0,8 Bd, mit  sep. ausgeschriebener Sammelbefestigung.;500,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1240;Installationskabel, symmetrisch, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, J-H(St)H, 2 x 2 x 0,8 Bd, unter Putz ohne Schlitzarbeiten.;500,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1250;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 2 x 2 x 0,8 Bd, auf Putz.;30,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1260;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 2 x 2 x 0,8 Bd, auf vorh. Kabelrinnen oder in offene Kanäle.;300,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1270;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 4 x 2 x 0,8 Bd, auf vorh. Kabelrinnen oder in offene Kanäle.;80,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1280;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 8 x 2 x 0,8 Bd, auf vorh. Kabelrinnen oder in offene Kanäle.;40,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1290;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 2 x 2 x 0,8 Bd, in vorh. Rohre/Unterflurkanäle.;20,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1300;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 4 x 2 x 0,8 Bd, in vorh. Rohre/Unterflurkanäle.;20,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1310;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 8 x 2 x 0,8 Bd, in vorh. Rohre/Unterflurkanäle.;10,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1320;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 2 x 2 x 0,8 Bd, mit sep. ausgeschriebenen Bügelschellen.;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1330;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 4 x 2 x 0,8 Bd, mit sep. ausgeschriebenen Bügelschellen.;40,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1340;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 8 x 2 x 0,8 Bd, mit sep. ausgeschriebenen Bügelschellen.;20,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1350;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 8 x 2 x 0,8 Bd, mit  sep. ausgeschriebener Sammelbefestigung.;5,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1360;HSLCH-JZ/-OZ/-JB 2 x 4 mm²;200,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1370;HSLCH-JZ/-OZ/-JB 2 x 4 mm²;100,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1380;HSLCH-JZ/-OZ/-JB 2 x 4 mm²;200,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1390;HSLCH-JZ/-OZ/-JB 2 x 4 mm²;100,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1400;HSLCH-JZ/-OZ/-JB 2 x 4 mm²;50,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1410;HSLCH-JZ/-OZ/-JB 2 x 4 mm²;500,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+1420;Zulage für Kabelverlegung auf Steigtrassen in beengten Räumen;300,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Leuchtentyp 1b - Hallenstrahler, LED, DALI, abgependelt, rund, ca. 400 mm, IP65.;8,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Kugelleuchte mit Leitungspendel und Anschlussdose Ø 110 mm, LED, ca. 38 W Leuchten-Anschlussleistung, Leuchten-Lichtstrom mind. 5750 lm, Farbtemperatur 3000 K. Farbwiedergabeindex (CRI) > 80. Mit austauschbarem LED-Modul mit Übertemperaturschutz und einer Lebenserwartung von mindestens 50.000 Betrie;33,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;Kompakter Deckenstrahler, symmetrisch tief-/ breitstreuende Lichtstärkeverteilung. Hocheffiziente und verlustarme Lichtverteilung durch Reflektor und optischer Linse. LED, 27 W Leuchten-Anschlussleistung, Leuchten-Lichtstrom 2623 lm, Halbstreuwinkel 90°, Farbtemperatur 3000 K. Farbwiedergabeindex (C;35,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+40;Leuchtentyp 4 - Anbauleuchte, LED, DALI, Wand/Decke, rund ca. 400 mm, IP44;29,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+50;Kugelleuchte mit Leitungspendel und Baldachin, LED, ca. 26 W Leuchten-Anschlussleistung, Leuchten-Lichtstrom mind. 2600 lm, Farbtemperatur 3000 K. Farbwiedergabeindex (CRI) > 90. Mit austauschbarem LED-Modul mit Übertemperaturschutz und einer Lebenserwartung von mindestens 50.000 Betriebsstunden. 20;3,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+60;Leuchtentyp 6 - Anbauleuchte, LED, DALI, Decke, histor., rund ca. 400 mm, IP44;6,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+70;Leuchtentyp 7 - Lichtbandsystem, LED, EVG, anbau, eckig ca. 50 x 62 mm (H/B), Länge ca. 29,30 m, IP64.;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+80;Leuchtentyp 8 - Anbauleuchte, LED, EVG, Wand, linienförmig ca. 600 mm, IP44;22,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+90;Leuchtentyp 9 - Anbauleuchte, LED, EVG, Wand/Decke, zylindrisch/flach Dm ca. 500 mm, IP54,;50,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+100;Leuchtentyp 9.1 - Anbauleuchte, LED, EVG, Wand/Decke, zylindrisch/flach Dm ca. 300 mm, IP54;19,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+110;Leuchtentyp 10 - Anbau-/Pendelleuchte, LED, EVG, Wand/Decke, linienförmig, ca. 1550 x 100 x 90 mm, IP66;151,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+120;Leuchtentyp 11 - Anbauleuchte, LED, EVG, Wand/Decke, linienförmig, ca. 1530 x 110 x 100 mm, opal, IP54;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+130;Leuchtentyp 12 - Anbauleuchte, LED, DALI, Wand/Decke, rund ca. 350 mm, IP44;33,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+140;Leuchtentyp 13 - Ringleuchte, LED, DALI, abgependelt, rund ca. 690 mm, direkt/indirekt, IP20;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+150;Leuchtentyp 14 - Pendelleuchte, LED, DALI, direkt/indirekt, abgependelt, linienförmig, ca. 1550 x 50 x 75 mm, IP20;22,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+160;Leuchtentyp 11 - Anbauleuchtet, LED, EVG, Wand/Decke, linienförmig, ca. 1530 x 110 x 100 mm, prismat., IP54;29,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+170;Knotenkette, verzinkt, zum Abpendeln des Leuchtentyp 10, in Teillängen bis 2 m montiert, einschl. Befestigungsmaterial für Decke und Leuchte.;60,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+180;Leuchtenhalterung für Leuchtentyp 7;50,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+190;Montage beigestellter Bestands-Mastleuchte, Höhe ca. 2,00 m;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+200;Restauratorische Aufarbeitung Bestands-Mastleuchte;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+210;Montage beigestellter Bestands-Mastleuchte.;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;SL1 - Sicherheitsnotleuchte, Kunststoff, rechteckig, sym., Anbau, IP65;77,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;SL2 - Sicherheitsnotleuchte, Aluminium, rund, sym., Anbau, IP65;40,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;SL3 - Sicherheitsnotleuchte, Kunststoff, quadr., sym., Anbau, IP41;50,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+40;SL4 - Sicherheitsnotleuchte, Kunststoff, quadr., sym., Einbau, IP20;8,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+50;SL5 - Sicherheitsnotleuchte (kombiniert), Stahlblech, rechteckig, sym., Anbau, IP65;6,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+60;SL6 - Sicherheitsnotleuchte, Stahlblech, rechteckig, sym., Anbau, IP65;13,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+70;SL7 - Sicherheitsnotleuchte, Stahlblech, rechteckig, sym., bodenstehend, IP65;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+80;SL8 - Sicherheitsnotleuchte (kombiniert), Stahlblech, rund, sym., Anbau, IP40;21,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+90;SL9 - Sicherheitsnotleuchte m. Piktogramm, Stahlblech, rechteckig, sym., Anbau, IP40;9,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+100;RZ1 - Rettungszeichenleuchte, Wandanbau, IP65, EKW 25 m;31,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+110;RZ2 - Rettungszeichenleuchte, Wand-/Deckenanbau, IP40, EKW 20 m;12,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+120;RZ3 - Rettungszeichenleuchte, Wand-/Deckenanbau, IP65, EKW 20 m;35,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+130;RZ4 - Rettungszeichenleuchte, Deckenpendel, IP65, EKW 40 m;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+140;Leuchten-Überwachungsbaustein;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+150;Montageadapter für SL3 bei AP-Installation;10,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+160;Deckenpendel für RZ3, als Seilbendel, einstellbar bis 100 cm;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+170;Stromkreis- und Leuchtenbezeichnungsschild;309,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Potentialausgleichsschiene Kupfer, 10 x Bolzen M10, ca. 435 x 40 x 5 mm;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Potentialausgleichsschiene aus Messing, als Klemmschiene 10 mm x 10 mm, mit Kunststoffabdeckung, mit Anschluss für 7 x 2,5 bis 25 mm2, 2 x 2,5 bis 95 mm2 und ein Flachband bis 40 mm x 4 mm.;35,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;"Erdungsbandrohrschelle 1/4"" bis 1 1/2"" bzw.";75,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+40;"Erdungsbandrohrschelle 3/4 bis 6"" bzw.";40,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+50;Erdungsanschluss an Metallteilen herstellen,;50,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+60;Erdungsanschluss an vorhandenen Geräten und Anlagen;20,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+70;Erdungsanschluss von ableitfähigen Fußböden in;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Fangspitze ca. 600 mm;24,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Fangstange ca. 1000 mm, mit Befestigung auf Firstziegel;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;Alu Runddraht, blank;425,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+40;Alu Runddraht, blank;65,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+50;Mehrzweckverbindungsklemme;40,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+60;Falzklemme mit Klemmblock;30,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+70;Dachrinnenklemme mit Doppelüberleger St/tZn;30,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+80;Schneefanggitterklemme;30,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+90;Stangenhalter für Satteldächer;3,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+100;Dachleitungshalter für Firstziegel;70,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+110;Dachleitungshalter für Schrägdachflächen;300,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+120;Anschlusslasche;3,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+130;Überbrückungslasche;60,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+140;Dachleitungshalter für Flachdächer;50,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+150;Stangenhalter für Erdeinführungsstange;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+160;Leitungshalter für Regenfallrohre;30,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+170;Dehnungsstück;20,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+180;Erdeinführungsstange;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+190;Prüfung und Messung der Bestands-Erdungsanlage;25,0;h;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+200;Prüfung und Messung der Blitzschutzanlage;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Blitzstromkombiableiter Typ 1+2, 4-polig, im Gehäuse;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Überspannungsableiter Typ 2 nach EN 61643-11, 2-polig,;6,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Brandmelderzentrale DIN 14675, DIN VDE 0833-1 (VDE 0833-1), DIN VDE 0833-2 (VDE 0833-2), DIN EN 54-2, DIN EN 54-4 und DIN EN 54-13,;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Brandschutzgehäuse F30;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;Feuerwehr-Laufkarte DIN 14675, Format DIN A4, aus Papier in Folie lamminiert, Grundrisspläne werden im DWG-Format auf Datenträger zur Verfügung gestellt.;120,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+40;Das Feuerwehr-Informations- und Bediensystem besteht i. d. R. aus einem zweiflügeligen Stahlblech-Gehäuse, welches für Aufputzmontage ausgelegt ist. Eine zentrale Türöffnung durch die Feuerwehrschließung (Profilhalbzylinder) ermöglicht das Öffnen beider Türflügel. Die linke Tür ist mit Klarsichtfeld;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+50;Feuerwehr-Schlüsseldepot DIN 14675, FSD 3 (hohes Risiko), für bis zu 4 überwachte Schlüssel vom digitalen Schließsystem, einschl. Schließzylinder DIN 18252, Gehäuse aus nichtrostendem Stahl, zur Montage in Bestandsmauerwerk einschließlich Stemm und Spitzarbeiten;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+60;Freischaltelement DIN 14675, mit Schließzylinder nach den Anschlussbedingungen der örtlich zuständigen Feuerwehr;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+70;Hinweisleuchte zur Orientierung für die Feuerwehr, als Blitzleuchte, Kalottenfarbe orange, Schutzart IP 54 DIN EN 60529 (VDE 0470-1), zur Montage an Fassade.;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+80;Energieversorgungseinheit DIN EN 54-4, mit Störmeldeanzeige am Gerät und Weiterleitung an die Zentrale, zur Versorgung von Alarmierungseinrichtugen für Brand, Überbrückungszeit wie Zentrale, Bemessungsbetriebsspannung 24 V DC, Gehäuse für Aufputzmontage.;7,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+90;Mehrpunkt-Rauchmelder als Ansaugrauchmelder, DIN EN 54-20, mit einem Messsystem, Klasse C (übliche Empfindlichkeit), mit 4 Alarmschwellen, für Meldereinzelkennung, mit Luftfilter und Kondensatabscheider, mit Luftrückführung, zwei Rohrleitungsanschlüsse, mit halogenfreiem Ansaugrohrsystem mit allen F;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+100;Mehrpunkt-Rauchmelder als Ansaugrauchmelder, DIN EN 54-20, mit einem Messsystem, Klasse C (übliche Empfindlichkeit), mit 4 Alarmschwellen, für Meldereinzelkennung, mit Luftfilter und Kondensatabscheider, mit Luftrückführung, zwei Rohrleitungsanschlüsse, mit halogenfreiem Ansaugrohrsystem mit allen F;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+110;Mehrpunkt-Rauchmelder als Ansaugrauchmelder, DIN EN 54-20, mit einem Messsystem, Klasse C (übliche Empfindlichkeit), mit 4 Alarmschwellen, für Meldereinzelkennung, mit Luftfilter und Kondensatabscheider, mit Luftrückführung, zwei Rohrleitungsanschlüsse, mit halogenfreiem Ansaugrohrsystem mit allen F;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+120;Mehrpunkt-Rauchmelder als Ansaugrauchmelder, DIN EN 54-20, mit einem Messsystem, Klasse C (übliche Empfindlichkeit), mit 4 Alarmschwellen, für Meldereinzelkennung, mit Luftfilter und Kondensatabscheider, mit Luftrückführung, zwei Rohrleitungsanschlüsse, mit halogenfreiem Ansaugrohrsystem mit allen F;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+130;Mehrpunkt-Rauchmelder als Ansaugrauchmelder, DIN EN 54-20, mit einem Messsystem, Klasse C (übliche Empfindlichkeit), mit 4 Alarmschwellen, für Meldereinzelkennung, mit Luftfilter und Kondensatabscheider, mit Luftrückführung, zwei Rohrleitungsanschlüsse, mit halogenfreiem Ansaugrohrsystem mit allen F;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+140;Linienförmiger Wärmemelder, DIN EN 54-22, mit einem Messsystem und Linienabschlussmodul, mit Signalausgängen für Alarm- und Voralarm, einschließlich ca. 110 m Sensorleitung mit PVC und Nylonummantelung, Befestigungsmitteln aufgebaut, in I-Form, in Aufputzausführung, mit Bezeichnungsschild, Schriftgr;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+150;Linienförmiger Wärmemelder, DIN EN 54-22, mit einem Messsystem und Linienabschlussmodul, mit Signalausgängen für Alarm- und Voralarm, einschließlich ca. 150 m Sensorleitung mit PVC und Nylonummantelung, Befestigungsmitteln aufgebaut, in I-Form, in Aufputzausführung, mit Bezeichnungsschild, Schriftgr;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+160;Rauchmelder, DIN EN 54-7, nach dem Streulichtprinzip, einschl. Sockel, für Meldereinzelkennung, für trockene Räume, mit graviertem Bezeichnungsschild, Schriftgröße für ungünstigste Lesebedingungen DIN 1450, Montage an Zwischendecke mit dafür geeigneten Meldersockel,;12,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+170;Rauchmelder, DIN EN 54-7, nach dem Streulichtprinzip, einschl. Sockel, für Meldereinzelkennung, für trockene Räume, mit graviertem Bezeichnungsschild, Schriftgröße für ungünstigste Lesebedingungen DIN 1450, Montage an Zwischendecke mit dafür geeigneten Meldersockel,;70,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+180;Rauchmelder, DIN EN 54-7, nach dem Streulichtprinzip, einschl. Sockel, für Meldereinzelkennung, für trockene Räume, mit graviertem Bezeichnungsschild, Schriftgröße für ungünstigste Lesebedingungen DIN 1450, Montage an Decke, Montagehöhe über 5 m bis 6 m.;6,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+190;Mehrfachsensormelder, DIN EN 54-5 und DIN EN 54-7, nach dem Streulicht- und Wärmeprinzip, einschl. Sockel, für Meldereinzelkennung, für trockene Räume, mit graviertem Bezeichnungsschild, Schriftgröße für ungünstigste Lesebedingungen DIN 1450, Montage an Decke mit dafür geeigneten Meldersockel,;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+200;Thermodifferentialmeldermelder, DIN EN 54-5, nach dem Wärmeprinzip, einschl. Sockel, für Meldereinzelkennung, für trockene Räume, mit graviertem Bezeichnungsschild, Schriftgröße für ungünstigste Lesebedingungen DIN 1450, Montage an Decke mit dafür geeigneten Meldersockel,;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+210;Handfeuermelder, DIN EN 54-11 Typ B, für Anwendung in Innenräumen, für Meldereinzelkennung, in Aufputzausführung, Gehäuse aus Isolierstoff, mit graviertem Bezeichnungsschild, Schriftgröße für ungünstigste Lesebedingungen DIN 1450, einschl. Schild Außer-Betrieb DIN VDE 0833-2 (VDE 0833-2), Montage an;37,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+220;Ersatzglasscheibe für Druckknopfmelder;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+230;Metallschlüssel für Handmelder;3,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+240;Signalgeber, optisch und akustisch, für Alarmierungseinrichtung einer Brandmeldeanlage, DIN EN 54-23, Gefahrensignal DIN EN 842, als Blitzleuchte einschl. Leuchtmittel, Typ A (für die Anwendung in Gebäuden), für Wand- und Deckenmontage,;10,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+250;Signalgeber, akustisch, für Alarmierungseinrichtung einer Brandmeldeanlage, DIN EN 54-23, Gefahrensignal DIN EN 842, als akustischer Signalgeber, für Wand- und Deckenmontage,;58,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+260;Bus-Koppler mit Leitungsüberwachung gemäß DIN EN 54-13 zur Kopplung der ISP mit der BMA.;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+270;Bus-Koppler mit Leitungsüberwachung gemäß DIN EN 54-13 zur Kopplung des Aufzuges mit der BMA.;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+280;Bus-Koppler mit Leitungsüberwachung gemäß DIN EN 54-13 zur Kopplung der ELA mit der BMA.;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+290;Bus-Koppler mit Leitungsüberwachung gemäß DIN EN 54-13 zur Kopplung der BOS Anlage mit der BMA.;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+300;Bus-Koppler mit Leitungsüberwachung gemäß DIN EN 54-13 zur Kopplung der RLT Anlage mit der BMA.;6,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+310;Leiter nach DIN EN 131 Arbeitshöhe min. 3,2m;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+320;Leiterauflage;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+330;Leiterhalterung zum Einbau von Feuerwehrschließung;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+340;Feuerwehrabnahme;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+350;Inbetriebnahme und Programmierung der beschriebenen Anlage;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+360;Projektmanagement bestehend aus:;1,0;psch;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+370;Schild BMZ nach DIN 4066 zur Beklebung der bauseitigen Raumtür;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+380;Betriebsbuch nach DIN VDE 0833 und DIN 14675;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Verteiler als Standschrank für Datennetze. anreihbar, Türanschlag wahlweise links/rechts, einschl. Sockel, Höhe  ca.100 mm, zum Einbau von 19-Zoll-Komponenten, aus Stahlblech, verzinkt und lackiert oder pulverbeschichtet, Schutzart IP 2X DIN EN 60529 (VDE 0470-1), Potentialausgleich DIN EN 50310 (VD;3,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Wandgehäuse Tiefe 673 mm;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;Steckdosenleiste mit 7 Steckdosen, 250V/16A;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+40;Die Steckdosenleiste wird mit 2 Haltewinkel;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+50;Ausführung;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+60;Rangierpanel, waagerecht, eine Höheneinheit.;15,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+70;19 Zoll Patchfeld, symmetrisch, eine Höheneinheit, 24 x 8, modular, Kategorie 6 Index A tiefgestellt DIN EN 50173-1, Link-Klasse E Index A tiefgestellt DIN EN 50173-1, Potentialausgleich DIN EN 50310 (VDE 0800-2-310), Funkstörstrahlung DIN EN 55022 (VDE 0878-22), Klasse B, GG45-Buchse DIN EN 60603-7;15,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+80;Buchse, dienstneutral, RJ45 DIN EN 60603-7-51, Kategorie 6 Index A tiefgestellt DIN EN 50173-1, Funkstörstrahlung DIN EN 55022 (VDE 0878-22), Klasse B.;270,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+90;Hutschienenmodul 1 Port mit Modularer Buchse, symmetrisch, Kategorie 6 Index A tiefgestellt DIN EN 50173-1, Link-Klasse E Index A tiefgestellt DIN EN 50173-1, Potentialausgleich DIN EN 50310 (VDE 0800-2-310), modular, Funkstörstrahlung DIN EN 55022 (VDE 0878-22), Klasse B, RJ45-Buchse DIN EN 60603-7;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+100;Datenanschlussdose, symmetrisch, Kategorie 6 Index A tiefgestellt DIN EN 50173-1, Link-Klasse E Index A tiefgestellt DIN EN 50173-1, Potentialausgleich DIN EN 50310 (VDE 0800-2-310), modular, Funkstörstrahlung DIN EN 55022 (VDE 0878-22), Klasse B, 2 Ports, RJ45-Buchse DIN EN 60603-7-51, in Schneidkl;134,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+110;Messung pro Link Messung nach DIN EN 50173-1.;223,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+120;Konfektioniertes Datenkabel, Stecker/Stecker, DIN EN 50173-1, Kategorie 6 Index A tiefgestellt geprüft DIN EN 61935-2 (VDE 819-935-2),;30,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+130;Konfektioniertes Datenkabel, Stecker/Stecker, DIN EN 50173-1, Kategorie 6 Index A tiefgestellt geprüft DIN EN 61935-2 (VDE 819-935-2),;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+140;Konfektioniertes Datenkabel, Stecker/Stecker, DIN EN 50173-1, Kategorie 6 Index A tiefgestellt geprüft DIN EN 61935-2 (VDE 819-935-2),;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Türstation MODULAR in V2A-Design, bestehend aus:;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Features;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;DAB+ Zuspielgerät;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;Der Verstärker muss ein achtkanaliges Netzwerk-Verarbeitungsgerät sein. Die Stromversorgung der Endstufe muss über ein universelles Schaltnetzteil erfolgen, das den Betrieb bei jeder Wechselspannung zwischen 100 und 240 V bei 50 oder 60 Hz unterstützt. Das Netzteil muss über eine Leistungsfaktorkorr;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+40;zur digitalen Vernetzung der Anlagenkomponenten. Der Switch muss sämtliche Protokolle die vom Hersteller gefordert sind unterstützen;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+50;"Einbau und Verkabelung der ELA-Zentrale in 19"" Schrank aus dem Titel Datennetz. Die Verkabelung ist nach Herstellervorgaben durchzuführen. Einschließlich Systembedingten Zuebhörs wie z.B. Leerblenden, Steckverbindungen etc.";1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+60;Sprechstelle;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+70;60 W 16 Ohm 2-Wege Lautsprechersystem mit passiver Frequenzweiche für den Deckeneinbau in randlosem Design mit moderner Optik. Bestückt mit 6,5“ wetterfestem Papier-Membran-Tieftöner und 1-Zoll-Schwingspule sowie 0,75“ Aluminium-Kalottenhochtöner. Der Lautsprecher verfügt über verlustarme 70/100 V Ü;19,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+80;60 Watt 8 Ohm Zeilenlautsprecher für den Wandaufbau. Bestückt mit 4 x 2,75“ Breitbandchassis mit wetterfester Papier-Membrane. Der Lautsprecher verfügt über verlustarme 70/100V Übertrager mit niedriger Sättigung und 8 Ohm-Bypass.Ausgeführt als geschlossenes System aus pulverbeschichtetem Aluminium. ;39,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+90;50 Watt 8 Ohm 2-Wege Lautsprechersystem mit passiver Frequenzweiche für den Wandaufbau. Bestückt mit 4,5“ wetterfesten Papier-Membrane-Tieftöner und 0,75“ Seidenkalotten-Hochtöner. Der Lautsprecher verfügt über verlustarme 70/100 V Übertrager mit niedriger Sättigung und 8 Ohm-Bypass. Ausgeführt als ;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+100;Der Lautsprecher verfügt über zwei 6-Zoll-Lautsprecher und einen Kompressionstreiber in einem Bassreflexgehäuse und ist eine leistungsstarke Lösung für eine breite Palette von Anwendungen. Das rekonfigurierbare, rotierbare Horn sorgt zudem für eine optimale Abdeckung.;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+110;Wand-/Deckenhalterung aus galvanisiertem, pulverbeschichtetem Stahl zur flächenbündigen Montage eines Lautsprechers Typ 4. Die Halterung besteht aus einer Lautsprecher-Montageplatte, welche mit vier M6-Innensechskant-Senkkopfschrauben am Lautsprecher fixiert wird, sowie einer Wand-/Deckenhalterung, ;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+120;Erstellung Pflichtenheft;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+130;Einmessung / Ebene;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Notruf Behinderten-WC als Kompakt-Set, bestehend aus 1-Kammer-Signalleuchte rot, 1 Stück Zugtaster, 1 Stück Abstelltaster, Meldeeinheit und Netzteil, einschl. Stromquelle für Sicherheitszwecke DIN VDE 0100-560 (VDE 0100-560), Weiterleitung Störung zur übergeordneten Leittechnik, Weiterleitung Notruf;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Zusätzlicher Zugtaster;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;Dienstzimmereinheit;5,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;KNX Projektierung;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;KNX Inbetriebnahme;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;KNX Hinzufügen / Änderung eines Busteilnehmers;20,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+40;KNX Dokumentation;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Ringraumdichtung Dm 125 mm, 1 Kabel bis 70 mm;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Ringraumdichtung Dm 125 mm, 9 Kabel bis 20 mm;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;Injektionsankerhülse für Vollstein-Mauerwerk, zur sicheren Befestigung von Kabeltragsystemen an Ziegelwänden und -decken, einschl Bohrung, Ankerstange und allem systembedingten Zubehör.;200,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+40;Kunststoff-Siebhülse:;100,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+50;Abdichten von belegten Kabeleinführungen, mit Schrumpfschlauch, dicht gegen drückendes Wasser DIN 18195-6.;3,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+60;Warmschrumpf-Verbindungsmuffe für 5x1,5 bis 5x16mm²;75,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+70;Warmschrumpf-Verbindungsmuffe für 5x25 bis 5x150mm²;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Durchbruchsbohrung in Mauerwerk;350,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Durchbruchsbohrung in Mauerwerk;200,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;Durchbruchsbohrung in Mauerwerk;55,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+40;Durchbruchsbohrung in Beton;200,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+50;Kernbohrung mit Kernbohrgerät in Stahlbeton in Teillängen herstellen,;150,0;cm;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+60;Kernbohrung mit Kernbohrgerät in Stahlbeton in Teillängen herstellen,;150,0;cm;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+70;Kernbohrung mit Kernbohrgerät in Stahlbeton in Teillängen herstellen,;100,0;cm;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+80;Kernbohrung mit Kernbohrgerät in Stahlbeton in Teillängen herstellen,;100,0;cm;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+90;Kernbohrung mit Kernbohrgerät in Mauerwerk in Teillängen herstellen,;250,0;cm;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+100;Kernbohrung mit Kernbohrgerät in Mauerwerk in Teillängen herstellen,;250,0;cm;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+110;Kernbohrung mit Kernbohrgerät in Mauerwerk in Teillängen herstellen,;200,0;cm;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+120;Kernbohrung mit Kernbohrgerät in Mauerwerk in Teillängen herstellen,;200,0;cm;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+130;Beantragung einer Kernbohrung oder eines Durchbruchs in massive Decken oder Wände vor der Ausführung, Antrag schriftlich in Form eines Formulars einschließlich eines Planausschnittes mit Angabe von Lage, Dimension und Abstandsmaßen bezogen auf Wände und Decken, Übergabe an die Objektüberwachung, Aus;20,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+140;Anzeichnen von Durchbrüchen bzw. Kernbohrungen, die bauseits erstellt werden, in Wände und Decken aus Mauerwerk oder Stahlbeton;20,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+150;Wandschlitz in Beton in Teillängen herstellen,;100,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+160;Wandschlitz in Beton in Teillängen herstellen,;100,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+170;Wandschlitz in Mauerwerk in Teillängen herstellen,;2800,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+180;Wandschlitz in Mauerwerk in Teillängen herstellen,;1200,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+190;Zulage für besondere Sorgfalt beim Herstellen von Wandschlitzen;2000,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+200;Zulage für besondere Sorgfalt beim Herstellen von Bohrungen;50,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+210;Zulage für Sondierung vor Stemm-/ Spitz- / Bohrarbeiten;1000,0;m;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Kabelschott Typ 1 in Wand u. Decke;40,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;jedoch Schottgröße:;15,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;jedoch Schottgröße:;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+40;brandschutztechnisches Verschließen des Ringspaltes bei Einzelkabeldurchführungen;300,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+50;Kabelschott Typ 2 in Wand u. Decke;40,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+60;jedoch Schottgröße:;20,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+70;jedoch Schottgröße:;10,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+80;Kabelschott Typ 3 in Wand;6,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Auf- und Abbauen fahrbares Gerüst DIN 4420-3, DIN EN 12810;60,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Auf- und Abbauen fahrbares Gerüst DIN 4420-3, DIN EN 12810;30,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;Auf- und Abbauen fahrbares Gerüst DIN 4420-3, DIN EN 12810;12,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Überprüfung Bestandsstromkreis;75,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Besondere Erschwernis bei Arbeiten in beengten Deckenbereichen;100,0;h;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Auf Grundlage der Ausführungsplanung und Berechnungen des Auftraggebers sind sofort nach der Übergabe die für die Ausführung erforderlichen Unterlagen für den gesamten im vorliegenden Leistungsverzeichnis beschriebenen Leistungsumfang als Montage- und Werkstattplanung zu erstellen und dem AG zu über;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Die Brandschutzdokumentation ist im Vorfeld der behördlichen Abnahmen als separate Unterlage zu erstellen und dem Bauherren zu übergeben.;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;Auf Grundlage der erstellten und freigegebenen Werkstatt- und Montageplanung, der letztgültigen Ausführungsplanung, der aktuellsten Architekten-Werkpläne und der ausgeführten Leistung sind für den gesamten im vorliegenden Leistungsverzeichnis beschriebenen Leistungsumfang Unterlagen mitzuliefern und;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+40;Auf Grundlage der erstellten und freigegebenen Werkstatt- und Montageplanung, der letztgültigen Ausführungsplanung, der aktuellsten Architekten-Werkpläne und der ausgeführten Leistung sind für den gesamten im vorliegenden Leistungsverzeichnis beschriebenen Leistungsumfang Unterlagen mitzuliefern und;700,0;h;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+50;"Erstellen einer Dokumentationsakte gemäß ""Dokumentationsrichtlinie Schadstoffarmut"" digital als Grundlage zur Koordination der entsprechenden Anforderungen an die Schadstoffarmut. Vorlegen und während der Leistungserbringung fortschreiben.";1,0;psch;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Mitwirkung bei der Sachverständigenprüfung als Begleitung der Sachverständigen-Prüfung durch einen vom AG separat beauftragten Sachverständigen in sachlichem, personellem und zeitlichem Umfang einschl. Vorhaltung der erforderlichen Prüfeinrichtungen und der notwendigen technischen Ausrüstung für die;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Mitwirkung bei der Sachverständigenprüfung als Begleitung der Sachverständigen-Prüfung durch einen vom AG separat beauftragten Sachverständigen in sachlichem, personellem und zeitlichem Umfang einschl. Vorhaltung der erforderlichen Prüfeinrichtungen und der notwendigen technischen Ausrüstung für die;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;Mitwirkung bei der Wirkprinzipprüfung als Begleitung der Wirkprinzip-Prüfung durch einen vom AG separat beauftragten Sachverständigen in sachlichem, personellem und zeitlichem Umfang einschl. Vorhaltung der erforderlichen Prüfeinrichtungen und der notwendigen technischen Ausrüstung für die Dauer der;1,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+40;Wiederholte Einweisung des Bedienungs- und Wartungspersonals in alle in diesem Leistungsverzeichnis aufgeführten Anlagen, zusätzlich zur einmaligen Einweisung als Nebenleistung nach Punkt 3.4.2 DIN 18379 VOB/C.;2,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Stundenverrechnungssatz für Obermonteur;20,0;h;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Stundenverrechnungssatz für Monteur;20,0;h;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+30;Stundenverrechnungssatz für Helfer;20,0;h;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Wartung / Inspektion für die wartungspflichtigen Komponenten der in diesem Leistungsverzeichnis enthaltenen elektrotechnischen Anlagen einschließlich direktem Zubehör, gemäß anliegendem Muster, einschließlich aller Nebenkosten, innerhalb der Verjährungszeit für Mängelansprüche.;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+20;Wartung / Inspektion für die wartungspflichtigen Komponenten der in diesem Leistungsverzeichnis enthaltenen Brandmelde- und Alarmierungsanlage einschließlich direktem Zubehör, gemäß anliegendem Muster, einschließlich aller Nebenkosten, innerhalb der Verjährungszeit für Mängelansprüche.;4,0;St;gaeb;leistungsbeschreibungen/260630_SBH_LV_1-440-01.X83
+10;Gruppenbatteriesystem, IP20, bis 250 W;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Gruppenbatteriesystem, IP54, bis 370 W;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;Brandschutzgehäuse E30 für Gruppenbatteriesystem 250 W;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+40;Netzüberwachungsmodul DUW;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+50;"Fernbedien- und Visualisierungstableau als 10,1"" Touchscreen mit Wandhalterung, gemäß DIN VDE 0108-100, für die Programmierung, Bedienung und zentralen Visualisierung der Anlagenzustände aller im Leistungsverzeichnis enthaltenen Gruppenbatteriesystemen (max. 253 Anlagen):";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+60;Inbetriebnahme Sicherheitbeleuchtungsanlage mit anschließender Programmierung der Gerätegrundfunktionen aller im LV enthaltenen Gruppenbatteriesysteme, Netzüberwachungsmodule und Fernbedien- und Anzeigetableaus.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+70;Inbetriebnahme Sicherheitbeleuchtungsanlage mit anschließender Programmierung der Gerätegrundfunktionen eines im Bestand vorhandenen Gruppenbatteriesystems.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+80;Zielortprogrammierung pro Leuchte;140,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Wandler-/ Wandlermessschrank, IP55/II, ca. 1900 x 600 x 400 mm + 100 mm Sockel, nach DIN VDE 0603/3 und VDE-AR-N 4100:2019-04;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Schrank,IP54/I, ca. 1900 x 800 x 400 mm + 100 mm Sockel;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;Schrank,IP54/I, ca. 1900 x 600 x 400 mm + 100 mm Sockel;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+40;Leistungsschalter, 3-polig, 50 kA, 1000 A;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+50;NH00-Sicherungslasttrennschalter für Montageplatte bzw. Hutschienenmontage nach DIN EN 60947-3 (VDE 0660-107) und geeignet für NH-Sicherungseinsätze nach IEC 60269-2 / DIN VDE 0636-2. Bestehend aus 3-poligem Schalterunterteil und plombierbarem Griffeinsatz, Berührungsschutz am Griff, mit verschiebba;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+60;NH-Sicherungs-Lastschaltleiste, Gr. NH3, 3-polig ,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+70;NH-Sicherungs-Lastschaltleiste, Gr. NH1, 3-polig ,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+80;NH-Sicherungs-Lastschaltleiste, Gr. NH00, 3-polig ,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+90;D02-Sicherungsunterteil 3-polig, 63 A,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+100;Motorschutzschalter 0,4 - 0,63A;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+110;Überspannungsschutzgerät Typ 2, 4-polig;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+120;Multimessgerät, 3-phasig, indirekt, m. Wandler, in Schaltschranktür;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+130;Energiezähler, 3-phasig, indirekt, mit Wandler,;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Schrank, IP54/I, ca. 1900 x 1050 x 300 mm + 100 mm Sockel;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Schrank, IP54/I, ca. 1900 x 800 x 300 mm + 100 mm Sockel;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;Leistungsschalter Baugröße 3-polig, 50 kA, 250 A;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+40;Leistungsschalter Baugröße 3-polig, 50 kA, 160 A;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+50;NH00-Sicherungslasttrennschalter für Montageplatte bzw. Hutschienenmontage nach DIN EN 60947-3 (VDE 0660-107) und geeignet für NH-Sicherungseinsätze nach IEC 60269-2 / DIN VDE 0636-2. Bestehend aus 3-poligem Schalterunterteil und plombierbarem Griffeinsatz, Berührungsschutz am Griff, mit verschiebba;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+60;NH-Sicherungs-Lastschaltleiste, Gr. NH3, 3-polig ,;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+70;Leitungsschutzschalter, 1-polig, 16 A, B, 6 kA;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+80;D02-Sicherungsunterteil 3-polig, 63 A,;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+90;Motorschutzschalter 0,4 - 0,63A;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+100;Überspannungsableiter, 4-polig, 40 kA, Typ 2, TN-S,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+110;Multimessgerät, 3phasig, indirekt, m. Wandler, in Schaltschranktür;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+120;Energiezähler, 3-phasig, indirekt, mit Wandler,;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Schrank-/Wandverteiler, IP43/I, ca. 1850 x 550 x 200 mm, mit 100 mm Sockel;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Schrankmaße:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;Schrankmaße:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+40;Schrankmaße:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+50;Lasttrennschalter, 3-pol., 100 A;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+60;Lasttrennschalter, 3-pol., 63 A;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+70;Lasttrennschalter für D02 Sicherungen, 3-pol., für Sammelschiene;44,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+80;3-poligen Lastschalter für Neozed-Sicherungen,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+90;D01-Sicherungsunterteil 3-polig, 16 A,;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+100;D01-Sicherungsunterteil 1-polig, 16 A,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+110;Fehlerstromschutzschalter 4-polig, 40 A, 30 mA;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+120;FI-Leitungsschutzschalter 2-polig, 10 A, 30 mA, B, 6 kA;84,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+130;Leitungsschutzschalter, 3-polig, 35 A, C, 6 kA;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+140;Nennstrom:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+150;Nennstrom:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+160;Nennstrom:;174,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+170;Nennstrom:;51,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+180;Nennstrom:;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+190;Nennstrom:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+200;Nennstrom:;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+210;Hilfskontaktschalter für FI- und Leitungsschutzschalter, 2 Hiko,;120,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+220;Treppenlichtautomat, 1S, 230 V, 10 A;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+230;Fernschalter, 2S, 230 V AC, 110 V DC, 16 A mit Zentralsteuerung;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+240;Schaltrelais 8 - 230 V, 2 Schließer;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+250;Überspannungsableiter der Anforderungsklasse C.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+260;Spannungsversorgung 24 V DC 2,5A;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+270;KNX REG Spannungsversorgung 320 mA, mit Drossel;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+280;KNX REG USB-Schnittstelle;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+290;KNX REG Bereichs-/Linienkoppler;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+300;KNX REG DALI-Gateway, 1 Linie;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+310;KNX REG Binäreingang, 6-fach;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+320;KNX REG Schaltaktor, 4-fach, 16 A;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+330;KNX REG Schaltaktor, 8-fach, 16 A;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+340;KNX REG Jalousieaktor, 8-fach, 6 A;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+350;Haubenverteiler, 4-reihig, IP65/II;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Wipp-Universalschalter, u.P., 250V/10A, IP 20, 1-polig,;28,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Wipp-Serienschalter, u.P., 250V/10A, IP 20, 1-polig,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;Wipp-Taster, u.P., 250V/10A, IP 20, 1-polig,;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+40;Wipp-Taster, u.P., 250V/10A, IP 20, 1-polig, beleuchtet;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+50;EnOcean Funk Wandsender-Modul mit 2 Wippen. Batterieloses wartungsfreies Gerät ohne externe Spannungsversorgung und ist in Verbindung mit entsprechenden Funk-Empfängern geeignet zur Übertragung von Schalt-, Dimm- oder Jalousiebefehlen an Funk-Empfänger des EnOcean-Systems. Jeder Kanal kann beliebig ;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+60;EnOcean KNX Gateway als bidirektionales Gateway zur Übertragung von EnOcean Funksignalen auf den KNX Bus oder von KNX-Telegrammen ins EnOcean-System. EnOcean Empfängerfunktionen zur Umsetzung in KNX-Telegramme sind u. a. Schalten, Dimmen, Jalousie, Lichtszene, Fensterkontakte, Temperatur-, Helligkei;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+70;KNX Tastsensor, 1-fach, u.P., IP20, reinweiß glänzend;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+80;KNX Tastsensor, 2-fach, u.P., IP20, reinweiß glänzend;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+90;KNX Bewegungsmelder u.P., IP20, reinweiß glänzend, MH bis 2,20 m;28,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+100;KNX Bewegungsmelder u.P., IP44, reinweiß glänzend, MH bis 2,20 m;32,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+110;Binäreingang (UP) KNX Secure als Tasterschnittstelle zum Anschluss von Tastern, Schaltern oder potenzialfreien Kontakten. Unterputzgerät mit integriertem Busankoppler, Busanschluss über KNX Anschlussklemme, Programmier-Taste mit LED und vorkonfektionierte Anschlussleitungen.;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+120;"KNX Touchpanel 8"" u.P., m. Wandmontageadapter";2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+130;KNX Wetterstation für Wind, Regen, Helligkeit, Temperatur;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+140;Bewegungsmelder u.P., 180°, IP20,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+150;Bewegungsmelder u.P., 180°, Slave, IP20,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+160;Mini-Präsenzmelder u.P., 360° - Master, IP20, weiß,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+170;Mini-Präsenzmelder, 360°, Slave , IP20, weiß,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+180;Schutzkontaktsteckdose u.P., 250V/16A, IP20, Farbe reinweiß glänzend, im historisch anmutenden Design mit runder Frontansicht und Rundrahmen;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+190;Schutzkontaktsteckdose u.P., 250V/16A, IP20,;153,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+200;Geräteanschlussdose nach DIN VDE 0606,;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+210;Wipp-;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+220;Wipp-Universalschalter a.P., 250V/10A, min. IP44, 1-polig, beleuchtet, als Aus- und Wechselschalter,;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+230;Präsenzmelder, 360°, IP20, mit Aufputzgehäuse,;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+240;Steckdosenkombination a.P., 3x Schuko, 1x CEE 16 A, 1x CEE 32 A mit integrierter Schutzgeräte (FI + LS), IP44;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+250;Schutzkontaktsteckdose a.P., 250V/16A, min. IP44, einfach;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+260;Schutzkontaktsteckdose a.P., 250V/16A, min. IP44,;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+270;CEEform Steckdose 16A, 5-polig, 400V, nach DIN VDE 0623, EN60309-2, Schutzart: IP54, Gehäuse Elektrograu, Klappdeckel in Kennfarbe, Gehäuse und Einsatz aus temperaturbeständigen, schlag- und bruchfesten Spezialkunststoff, Steckrichtung schräg von unten, Leitungseinführungen 1x oben und 2x unten blin;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+280;CEEform Steckdose 32A,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+290;Aufputzgehäuse, 1-fach, für den Einbau von UP-Geräten mit integrierter flammwidriger Bodenplatte und separatem Rahmen mit Beschriftungsfeld, komplett mit allem erforderlichen Zubehör und passend zum eingesetzten Schalterprogramm.;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+300;Aufputzgehäuse, 2-fach;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+310;FR- Verbindungsdose ca. 80 x 80 mm, IP54,;80,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+320;FR- Verbindungsdose ca. 100 x 100 mm, IP54,;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+330;Unterputz Verbindungskasten, 87 x 87 x 60 mm, halogenfrei, mit Deckel, mit Geräteschrauben;75,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+340;Unterputz Verbindungskasten, ca. 159 x 159 x 75 mm, halogenfrei, mit Deckel, mit Geräteschrauben;62,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+350;Abschlussdeckel für Bestands-Verbindungskasten, u.P., bis 160 x 160 mm, weiß, halogenfrei, einschließlich Befestigungsschrauben.;60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+360;Geräteabzweigdose in Mauerwerk nach DIN VDE 0606,;145,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+370;Putzausgleichsring mit Befestigungsschrauben, passend für die im Leistungsverzeichnis beschriebene Geräteabzweigdosen in Mauerwerk, Höhe ca. 12 mm.;65,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+380;Gerätedose in Hohlwänden nach DIN VDE 0606,;120,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+390;Ausführung als Schallschutz-Gerätedose,;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+400;Ausführung als Brandschutz-Gerätedose,;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+410;Multikontakt-Leuchtenlift bis 20 kg;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Kabelrinne für Kabelträgersystem DIN EN 61537 (VDE 0639), gelocht, aus feuerverzinktem Stahl DIN EN ISO 1461,;230,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Breite:;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;Breite:;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+40;Breite:;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+50;Kabelrinne aus glasfaserverstärktem Polyester, halogenfrei, mit ungelochten Seitenholmen, mit angeformtem Verbinder, mit querverlaufenden Verstärkungen (5 mm) über die gesamte Kabelrinnenbreite sowie Befestigungslochung im Boden, mechanische Festigkeit nach IEC 61537,;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+60;Breite:;105,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+70;Bogen, für Kabelrinne, 90 Grad, waagerecht, gelocht,;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+80;Breite:;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+90;Breite:;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+100;Breite:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+110;Bogen, für Kabelrinne, 45 Grad,;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+120;Bogen, für Kabelrinne, 45 Grad,;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+130;Bogen, für Kabelrinne, 45 Grad,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+140;Bogen, für GFK-Kabelrinne, 90 Grad, waagerecht,;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+150;Breite:;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+160;Bogen, für GFK-Kabelrinne, 45 Grad,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+170;Bogen, für GFK-Kabelrinne, 45 Grad,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+180;Gelenkverbinder für Metall-Kabelrinne, vertikal - winkelverstellbar 0-90°, aus Stahl, verzinkt, im Set (2 Stk.),;60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+190;Gelenkverbinder für GFK-Kabelrinne, vertikal - winkelverstellbar 0-90°, aus glasfaserverstärktem Polyester, halogenfrei, im Set (2 Stk.),;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+200;T-Abzweig, für Kabelrinne, waagerecht, gelocht,;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+210;Breite:;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+220;Breite:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+230;Breite:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+240;Trennstege zur Trennung von Kabeln und Leitungen in Kabelrin- nen mit unterschiedlichen Spannungen oder Funktionen.;405,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+250;Trennstege zur Trennung von Kabeln und Leitungen in GFK-Kabelrinnen mit unterschiedlichen Spannungen oder Funktionen.;195,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+260;Kabelrinne für Kabelträgersystem DIN EN 61537 (VDE 0639), gelocht, Feuerwiderstandsklasse E 30 DIN 4102-12, mit Funktionserhalt, aus feuerverzinktem Stahl DIN EN ISO 1461,;28,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+270;Breite:;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+280;Bogen, für Kabelrinne, 90 Grad, waagerecht, Feuerwiderstandsklasse E 30 DIN 4102-12, mit Funktionserhalt, aus feuerverzinktem Stahl DIN EN ISO 1461,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+290;Breite:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+300;Bogen, für Kabelrinne, 45 Grad,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+310;Bogen, für Kabelrinne, 45 Grad,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+320;Gelenkverbinder für Metall-Kabelrinne, vertikal - winkelverstellbar 0-90°, Feuerwiderstandsklasse E 30 DIN 4102-12, mit Funktionserhalt, aus Stahl, verzinkt, im Set (2 Stk.),;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+330;Zulage für das Herstellen eines individuellen horizontalen Kabelrinnenbogens durch winkelgerechtes Schneiden und Verbinden von Kabelrinnen aus Metall oder GFK sofern keine standardisierten Kabelrinnenformstücke verwendet werden können, einschl. Korrosionsschutzmaßnahmen und Befestigungsmaterialien.;78,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+340;Stiel für Ausleger für Kabelrinne,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+350;Stiellänge:;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+360;Stiellänge:;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+370;Stiellänge:;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+380;Stiellänge:;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+390;Stiel für GFK-Ausleger, aus glasfaserverstärktem Polyester,;55,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+400;Stiellänge:;85,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+410;Stiel/Hängestiel mit variabler Kopfplatte für Ausleger, Stiel aus Stahl-U-Profil, feuerverzinkt nach DIN EN ISO 1461, mit serieller Langlochung, für Befestigung durch Dübelung an Ziegeldecken, -wände oder Böden.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+420;Stiel bis 400 mm, Ziegeldecke, MH bis 4 m;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+430;Stiel bis 600 mm, Ziegeldecke, MH bis 4 m;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+440;Stiel bis 800 mm, Ziegeldecke, MH bis 4 m;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+450;Stiel bis 1000 mm, Ziegeldecke, MH bis 4 m;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+460;Stiel für Ausleger für Kabelrinne,;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+470;Stiellänge:;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+480;Stiellänge:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+490;Zulage für Ausgleichsmaßnahme bei Stielmontage;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+500;Ausleger für Kabelrinne, aus feuerverzinktem Stahl DIN EN ISO 1461, Tragfähigkeit bis 1,5 kN, einseitig an Stielen, Stiele werden gesondert vergütet,;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+510;Nennlänge:;150,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+520;Nennlänge:;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+530;Nennlänge:;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+540;Nennlänge:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+550;Ausleger für GFK-Kabelrinne, aus glausfaserverstärktem Polyester, halogenfrei, Tragfähigkeit bis 1,4 kN, an Stielen, Stiele werden gesondert vergütet,;60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+560;Nennlänge:;80,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+570;Ausleger für Kabelrinne, aus feuerverzinktem Stahl DIN EN ISO 1461, Tragfähigkeit bis 1,5 kN, an der Wand aus Mauerwerk befestigen mit bauaufsichtlich zugelassenen Dübeln,;150,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+580;Nennlänge:;120,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+590;Nennlänge:;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+600;Nennlänge:;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+610;Nennlänge:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+620;Ausleger für GFK-Kabelrinne, aus glasfaserverstärktem Polyester, halogenfrei, Tragfähigkeit bis 1,4 kN, an der Wand aus Mauerwerk befestigen mit bauaufsichtlich zugelassenen Dübeln,;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+630;Nennlänge:;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+640;Ausleger für Kabelrinne, Feuerwiderstandsklasse E30 DIN 4102-12, mit Funktionserhalt, aus feuerverzinktem Stahl DIN EN ISO 1461, Tragfähigkeit bis 3,5 kN, einseitig an Stielen, Stiele werden gesondert vergütet,;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+650;Nennlänge:;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+660;Ausleger für Kabelrinne, Feuerwiderstandsklasse E30 DIN 4102-12, mit Funktionserhalt, aus feuerverzinktem Stahl DIN EN ISO 1461, Tragfähigkeit bis 1,5 kN, an der Wand aus Mauerwerk befestigen mit bauaufsichtlich zugelassenen Dübeln,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+670;Nennlänge:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+680;Zulage für zweite Abhängung bei Kabeltrassen mit Funktionserhalt E30 gemäß bauaufsichtlicher Zulassung des Tragsystems, damit keine Einschränkungen für darauf verlegte Kabel- und Leitungstypen bestehen.;36,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+690;Steigleiter, Sprossenabstand 300 mm, aus feuerverzinktem Stahl DIN EN ISO 1461, einschl. aller systembedingten Form- und Verbindungsstücke,;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+700;Nennbreite:;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+710;Nennbreite:;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+720;Nennbreite:;16,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+730;Nennbreite:;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+740;Steigleiter, Sprossenabstand 300 mm, aus glasfaserverstärktem Polyester, einschl. aller systembedingten Form- und Verbindungsstücke, halogenfrei;12,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+750;Nennbreite:;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+760;Zulage für Montage von Steigtrassen in beengten Räumen;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+770;Steigleiter, Feuerwiderstandsklasse E30 DIN 4102-12, mit Funktionserhalt, Sprossenabstand 300 mm, einschl. aller systembedingten Form- und Verbindungsstücke, aus feuerverzinktem Stahl DIN EN ISO 1461,;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+780;Nennbreite:;2,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+790;mit serieller Langlochung,;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+800;aus Stahl oder Stahlblech Fe36 B oder S355 J2G3 C, feuerverzinkt nach DIN 50976, Stahlkonstruktionen die durch bauliche Erfor- dernisse benötigt werden und durch nicht handelsübliche Be- festigungen und Halterungen erbracht werden können, sind nur nach Freigabe durch die Objekt-/Bauüberwachung herzu;250,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+810;Stahlkonstruktionen Einzelgewicht über 10 kg bis 20 kg/Stück.;200,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+820;Bügelschellen für die Befestigung von Kabel und;500,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+830;Bügelschellen für die Befestigung von Kabel und;500,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+840;Bügelschellen für die Befestigung von Kabel und;700,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+850;Bügelschellen für die Befestigung von Kabel und;800,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+860;Bügelschellen für die Befestigung von Kabel und;700,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+870;Bügelschellen für die Befestigung von Kabel und;500,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+880;Bügelschellen für die Befestigung von Kabel und;500,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+890;Bügelschellen für die Befestigung von Kabel und;300,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+900;Kabelsammelhalter Größe 1, Kunststoff, halogenfrei, flammenwidrig nach DIN VDE 0471, bis 15 Leitungen;500,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+910;wie jevor, jedoch als Metallsammelhalter, E30;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+920;bis 30 Kabel;300,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+930;bis 30 Kabel, jedoch als Metallsammelhalter, E30;80,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+940;bis 70 Kabel;200,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+950;bis 70 Kabel, jedoch als Metallsammelhalter, E30;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+960;Installationskanal als Kunststoff-Leitungsführungskanal,;75,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+970;Installationskanal als Kunststoff-Leitungsführungskanal,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+980;Außenmaß H/B mind. 40/60 mm,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+990;Außenmaß H/B mind. 40/60 mm,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1000;Installationskanal als Kunststoff-Leitungsführungskanal,;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1010;Außenmaß H/B mind. 60/110 mm,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1020;Außenmaß H/B mind. 60/110 mm,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1030;Installationskanal als Kunststoff-Leitungsführungskanal,;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1040;Außenmaß H/B mind. 60/230 mm,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1050;Außenmaß H/B mind. 60/230 mm,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1060;Trennwand bis Höhe 110 mm, zur Unterteilung von Kunststoff-Leitungsführungskanälen in Bereiche unterschiedlicher Spannungsebenen oder Funktionen.;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1070;Kanalaussenmaß H/B mind. 30/30 mm, mit innenliegendem Deckel,;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1080;Kanalaussenmaß H/B mind. 40/60 mm, mit innenliegendem Deckel,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1090;Zulage für individuelle Anpassung LF-Kanal;85,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1100;Zur Vereinheitlichung des Brüstungskanalsystemes sind alle Teile und systemgebundenes Zubehör eines Herstellers zu verwenden.;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1110;Wandabschlussblende für wandmontierten Brüstungskanal,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1120;Zulage für individuelle Anpassung Brüstungskanal;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1130;Geräteeinbaudose, 1-fach für vorbeschriebenen Brüstungskanal zur Montage von Installationsgeräten der Starkstrom-, Tele- kommunikations- und Datentechnik von Fremdherstellern.;45,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1140;Geräteeinbaudose, 2-fach;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1150;Schalldämmung von Sprechschall für Brüstungskanalsysteme im Bereich von Raumtrennwänden durch Einbau einer weichen Schalldämmeinlage in den Kanal.;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1160;Brandschutzkabelkanal als selbsttragendes Fertigteil, Beflammung von innen, rechteckig, mit allgemeinem bauaufsichtlichen Prüfzeugnis, Feuerwiderstandsklasse I30 DIN 4102-11, mit abnehmbarem Deckel, waagerecht, Innenmaße (B/T) ca. 110/100 mm, im Gebäude, Oberkante Kanal über Gelände/Fußboden bis 4 m;9,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1170;Innenmaße (B/T) ca. 250/120 mm;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1180;Isolierstoffrohr flexibel aus Kunststoff,;400,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1190;Nenngröße EN 32,;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1200;Nenngröße EN 40,;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1210;Isolierstoffrohr flexibel aus Kunststoff,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1220;Nenngröße EN 32,;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1230;Isolierstoffrohr starr aus Kunststoff,;500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1240;Nenngröße EN 32,;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1250;Nenngröße EN 40,;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1260;Nenngröße EN 50,;12,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1270;Tauchfeuerverzinktes Stahlrohr, ohne Gewinde,;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1280;Nenngröße EN 32,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1290;Nenngröße EN 40,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1300;Nenngröße EN 50,;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5 RE, Cu-Zahl 43,;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5 RE, Cu-Zahl 43,;800,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5 RE, Cu-Zahl 43,;500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+40;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5 RE, Cu-Zahl 43,;110,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+50;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5 RE, Cu-Zahl 43,;380,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+60;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5 RE, Cu-Zahl 43,;1220,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+70;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 1,5 RE, Cu-Zahl 72,;130,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+80;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 1,5 RE, Cu-Zahl 72,;880,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+90;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 1,5 RE, Cu-Zahl 72,;520,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+100;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 1,5 RE, Cu-Zahl 72,;135,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+110;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 1,5 RE, Cu-Zahl 72,;340,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+120;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 1,5 RE, Cu-Zahl 72,;1120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+130;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 2,5 RE, Cu-Zahl 72,;135,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+140;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 2,5 RE, Cu-Zahl 72,;1450,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+150;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 2,5 RE, Cu-Zahl 72,;1050,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+160;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 2,5 RE, Cu-Zahl 72,;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+170;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 2,5 RE, Cu-Zahl 72,;250,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+180;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 2,5 RE, Cu-Zahl 72,;750,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+190;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 2,5 RE, Cu-Zahl 120,;125,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+200;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 2,5 RE, Cu-Zahl 120,;1250,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+210;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 2,5 RE, Cu-Zahl 120,;1150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+220;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 2,5 RE, Cu-Zahl 120,;360,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+230;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 2,5 RE, Cu-Zahl 120,;250,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+240;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 2,5 RE, Cu-Zahl 120,;750,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+250;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 4 RE, Cu-Zahl 115,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+260;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 4 RE, Cu-Zahl 115,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+270;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 4 RE, Cu-Zahl 115,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+280;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 4 RE, Cu-Zahl 192,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+290;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 4 RE, Cu-Zahl 192,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+300;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 4 RE, Cu-Zahl 192,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+310;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 6 RE, Cu-Zahl 288,;400,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+320;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 6 RE, Cu-Zahl 288,;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+330;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 10 RE, Cu-Zahl 480,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+340;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 10 RE, Cu-Zahl 480,;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+350;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 16 RM, Cu-Zahl 768,;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+360;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 16 RM, Cu-Zahl 768,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+370;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 25 RM, Cu-Zahl 1200,;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+380;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 25 RM, Cu-Zahl 1200,;70,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+390;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 35 RM, Cu-Zahl 1680,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+400;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 35 RM, Cu-Zahl 1680,;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+410;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XCH 4 x 35 RM/16, Cu-Zahl 1528,;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+420;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XCH 4 x 35 RM/16, Cu-Zahl 1528,;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+430;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XCH 4 x 120 RM/70, Cu-Zahl 5388,;72,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+440;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XCH 4 x 120 RM/70, Cu-Zahl 5388,;18,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+450;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XCH 4 x 185 RM/95, Cu-Zahl 8159,;62,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+460;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XCH 4 x 185 RM/95, Cu-Zahl 8159,;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+470;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 3 x 1,5 RE, Cu-Zahl 43,;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+480;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5 RE, Cu-Zahl 43,;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+490;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5 RE, Cu-Zahl 43,;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+500;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 10 RE, Cu-Zahl 96,;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+510;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 10 RE, Cu-Zahl 96,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+520;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 10 RE, Cu-Zahl 96,;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+530;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 10 RE, Cu-Zahl 96,;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+540;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 16 RM, Cu-Zahl 154,;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+550;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 16 RM, Cu-Zahl 154,;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+560;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 16 RM, Cu-Zahl 154,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+570;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 16 RM, Cu-Zahl 154,;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+580;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 25 RM, Cu-Zahl 240,;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+590;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 25 RM, Cu-Zahl 240,;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+600;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 25 RM, Cu-Zahl 240,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+610;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 25 RM, Cu-Zahl 240,;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+620;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 50 RM, Cu-Zahl 480,;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+630;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 1 x 50 RM, Cu-Zahl 480,;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+640;Halogenfreie Kunststoffaderleitung DIN EN 50525-3-41 (VDE 0285-525-3-41), H07Z-K 1 x 4, Cu-Zahl 38, gn/ge,;750,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+650;Halogenfreie Kunststoffaderleitung DIN EN 50525-3-41 (VDE 0285-525-3-41), H07Z-K 1 x 6, Cu-Zahl 58, gn/ge,;250,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+660;Halogenfreie Kunststoffaderleitung DIN EN 50525-3-41 (VDE 0285-525-3-41), H07Z-K 1 x 10, Cu-Zahl 96, gn/ge,;500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+670;Halogenfreie Kunststoffaderleitung DIN EN 50525-3-41 (VDE 0285-525-3-41), H07Z-K 1 x 16, Cu-Zahl 154, gn/ge,;800,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+680;halogenfreie Gummischlauchleitung DIN EN 50525-3-21 (VDE 0285-525-3-21) H07ZZ-F 3 G 1,5, Cu-Zahl 43,;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+690;halogenfreie Gummischlauchleitung DIN EN 50525-3-21 (VDE 0285-525-3-21) H07ZZ-F 5 G 1,5, Cu-Zahl 72,;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+700;Halogenfreies Kabel DIN VDE 0266 (VDE 0266) NHXH-J FE 180 3 x 1,5 RE, Cu-Zahl 43,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+710;Halogenfreies Kabel DIN VDE 0266 (VDE 0266) NHXH-J FE 180 3 x 1,5 RE, Cu-Zahl 43,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+720;Halogenfreies Kabel DIN VDE 0266 (VDE 0266) NHXH-J FE 180 3 x 1,5 RE, Cu-Zahl 43,;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+730;Halogenfreies Kabel DIN VDE 0266 (VDE 0266) NHXH-J FE 180 3 x 1,5 RE, Cu-Zahl 43,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+740;Halogenfreies Kabel DIN VDE 0266 (VDE 0266) NHXH-J FE 180 5 x 4 RE, Cu-Zahl 192,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+750;Halogenfreies Kabel DIN VDE 0266 (VDE 0266) NHXH-J FE 180 5 x 4 RE, Cu-Zahl 192,;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+760;Busleitung KNX-TP HCH 2x2x0,8, grün, halogenfrei, Prüfspannung 4 kV, Verlegung in Montagewänden.;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+770;Busleitung KNX-TP HCH 2x2x0,8, grün, halogenfrei, Prüfspannung 4 kV, Verlegung auf vorh. Kabelrinnen oder in offene Kanäle, Montagehöhe bis 4 m.;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+780;Busleitung KNX-TP HCH 2x2x0,8, grün, halogenfrei, Prüfspannung 4 kV, Verlegung in vorh. Rohre/Unterflurkanäle, Montagehöhe bis 4 m.;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+790;Busleitung KNX-TP HCH 2x2x0,8, grün, halogenfrei, Prüfspannung 4 kV, Verlegung mit vorh. Bügelschellen auf vorh. Ankerschienen oder Kabelleiter, Montagehöhe bis 4 m.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+800;Busleitung KNX-TP HCH 2x2x0,8, grün, halogenfrei, Prüfspannung 4 kV, Verlegung mit vorh. Sammelbefestigung, Montagehöhe bis 4 m.;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+810;Busleitung KNX-TP HCH 2x2x0,8, grün, halogenfrei, Prüfspannung 4 kV, Verlegung u.P.  in vorh. Mauerschlitz, einschl. Dübelschlaufen, Montagehöhe bis 4 m.;500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+820;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 4 x 2 x 0,8 Bd, halogenfrei, in Montagewänden.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+830;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 4 x 2 x 0,8 Bd, halogenfrei, Verlegung auf vorh. Kabelrinnen oder in offene Kanäle, Montagehöhe bis 4 m.;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+840;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 4 x 2 x 0,8 Bd, halogenfrei, Verlegung in vorh. Rohre/Unterflurkanäle, Montagehöhe bis 4 m.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+850;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 4 x 2 x 0,8 Bd, halogenfrei, Verlegung mit vorh. Bügelschellen auf vorh. Ankerschienen oder Kabelleiter, Montagehöhe bis 4 m.;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+860;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 4 x 2 x 0,8 Bd, halogenfrei, Verlegung mit vorh. Sammelbefestigung, Montagehöhe bis 4 m.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+870;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 4 x 2 x 0,8 Bd, halogenfrei, Verlegung u.P.  in vorh. Mauerschlitz, einschl. Dübelschlaufen, Montagehöhe bis 4 m.;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+880;Mantelleitung und Kabel absetzen, einführen und nach;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+890;Kabel absetzen, einführen und nach;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+900;Kabel absetzen, einführen und nach;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+910;Mantelleitung und Kabel absetzen, einführen und nach;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+920;Mantelleitung und Kabel absetzen, einführen und nach;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+930;Mantelleitung und Kabel absetzen, einführen und nach;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+940;Mantelleitung und Kabel absetzen, einführen und nach;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+950;Mantelleitung und Kabel absetzen, einführen und nach;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+960;Mantelleitung und Kabel absetzen, einführen und nach;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+970;Mantelleitung und Kabel absetzen, einführen und nach;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+980;Mantelleitung und Kabel absetzen, einführen und nach;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+990;Mantelleitung und Kabel absetzen, einführen und nach;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1000;Mantelleitung und Kabel absetzen, einführen und nach;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1010;Mantelleitung und Kabel absetzen, einführen und nach;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1020;Mantelleitung und Kabel absetzen, einführen und nach;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1030;Mantelleitung und Kabel absetzen, einführen und nach;55,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1040;Mantelleitung und Kabel absetzen, einführen und nach;60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1050;Mantelleitung und Kabel absetzen, einführen und nach;75,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1060;Mantelleitung und Kabel absetzen, einführen und nach;110,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1070;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 4 x 2 x AWG 23, halogenfrei, flammwidrig, auf vorh. Kabelrinn;1800,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1080;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 2 x (4 x 2 x AWG 23), halogenfrei, flammwidrig, auf vorh. Kab;4500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1090;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 4 x 2 x AWG 23, halogenfrei, flammwidrig, in Montagewänden.;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1100;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 2 x (4 x 2 x AWG 23), halogenfrei, flammwidrig, in Montagewän;550,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1110;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 4 x 2 x AWG 23, halogenfrei, flammwidrig, in vorh. Rohre/Unte;400,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1120;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 2 x (4 x 2 x AWG 23), halogenfrei, flammwidrig, in vorh. Rohr;900,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1130;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 4 x 2 x AWG 23, halogenfrei, flammwidrig, mit sep. ausgeschri;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1140;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 2 x (4 x 2 x AWG 23), halogenfrei, flammwidrig, mit sep. ausg;400,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1150;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 4 x 2 x AWG 23, halogenfrei, flammwidrig, mit sep. ausgeschri;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1160;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 2 x (4 x 2 x AWG 23), halogenfrei, flammwidrig, mit sep. ausg;900,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1170;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 4 x 2 x AWG 23, halogenfrei, flammwidrig, unter Putz ohne Sch;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1180;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 2 x (4 x 2 x AWG 23), halogenfrei, flammwidrig, unter Putz oh;350,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1190;Installationskabel, symmetrisch, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, J-H(St)H, 2 x 2 x 0,8 Bd, auf vorh. Kabelrinnen oder in offene Kanäle.;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1200;Installationskabel, symmetrisch, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, J-H(St)H, 2 x 2 x 0,8 Bd, in Montagewänden.;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1210;Installationskabel, symmetrisch, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, J-H(St)H, 2 x 2 x 0,8 Bd, in vorh. Rohre/Unterflurkanäle.;500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1220;Installationskabel, symmetrisch, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, J-H(St)H, 2 x 2 x 0,8 Bd, mit sep. ausgeschriebenen Bügelschellen.;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1230;Installationskabel, symmetrisch, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, J-H(St)H, 2 x 2 x 0,8 Bd, mit  sep. ausgeschriebener Sammelbefestigung.;500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1240;Installationskabel, symmetrisch, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, J-H(St)H, 2 x 2 x 0,8 Bd, unter Putz ohne Schlitzarbeiten.;500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1250;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 2 x 2 x 0,8 Bd, auf Putz.;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1260;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 2 x 2 x 0,8 Bd, auf vorh. Kabelrinnen oder in offene Kanäle.;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1270;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 4 x 2 x 0,8 Bd, auf vorh. Kabelrinnen oder in offene Kanäle.;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1280;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 8 x 2 x 0,8 Bd, auf vorh. Kabelrinnen oder in offene Kanäle.;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1290;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 2 x 2 x 0,8 Bd, in vorh. Rohre/Unterflurkanäle.;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1300;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 4 x 2 x 0,8 Bd, in vorh. Rohre/Unterflurkanäle.;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1310;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 8 x 2 x 0,8 Bd, in vorh. Rohre/Unterflurkanäle.;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1320;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 2 x 2 x 0,8 Bd, mit sep. ausgeschriebenen Bügelschellen.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1330;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 4 x 2 x 0,8 Bd, mit sep. ausgeschriebenen Bügelschellen.;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1340;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 8 x 2 x 0,8 Bd, mit sep. ausgeschriebenen Bügelschellen.;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1350;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 8 x 2 x 0,8 Bd, mit  sep. ausgeschriebener Sammelbefestigung.;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1360;HSLCH-JZ/-OZ/-JB 2 x 4 mm²;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1370;HSLCH-JZ/-OZ/-JB 2 x 4 mm²;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1380;HSLCH-JZ/-OZ/-JB 2 x 4 mm²;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1390;HSLCH-JZ/-OZ/-JB 2 x 4 mm²;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1400;HSLCH-JZ/-OZ/-JB 2 x 4 mm²;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1410;HSLCH-JZ/-OZ/-JB 2 x 4 mm²;500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1420;Zulage für Kabelverlegung auf Steigtrassen in beengten Räumen;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Leuchtentyp 1b - Hallenstrahler, LED, DALI, abgependelt, rund, ca. 400 mm, IP65.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Kugelleuchte mit Leitungspendel und Anschlussdose Ø 110 mm, LED, ca. 38 W Leuchten-Anschlussleistung, Leuchten-Lichtstrom mind. 5750 lm, Farbtemperatur 3000 K. Farbwiedergabeindex (CRI) > 80. Mit austauschbarem LED-Modul mit Übertemperaturschutz und einer Lebenserwartung von mindestens 50.000 Betrie;33,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;Kompakter Deckenstrahler, symmetrisch tief-/ breitstreuende Lichtstärkeverteilung. Hocheffiziente und verlustarme Lichtverteilung durch Reflektor und optischer Linse. LED, 27 W Leuchten-Anschlussleistung, Leuchten-Lichtstrom 2623 lm, Halbstreuwinkel 90°, Farbtemperatur 3000 K. Farbwiedergabeindex (C;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+40;Leuchtentyp 4 - Anbauleuchte, LED, DALI, Wand/Decke, rund ca. 400 mm, IP44;29,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+50;Kugelleuchte mit Leitungspendel und Baldachin, LED, ca. 26 W Leuchten-Anschlussleistung, Leuchten-Lichtstrom mind. 2600 lm, Farbtemperatur 3000 K. Farbwiedergabeindex (CRI) > 90. Mit austauschbarem LED-Modul mit Übertemperaturschutz und einer Lebenserwartung von mindestens 50.000 Betriebsstunden. 20;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+60;Leuchtentyp 6 - Anbauleuchte, LED, DALI, Decke, histor., rund ca. 400 mm, IP44;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+70;Leuchtentyp 7 - Lichtbandsystem, LED, EVG, anbau, eckig ca. 50 x 62 mm (H/B), Länge ca. 29,30 m, IP64.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+80;Leuchtentyp 8 - Anbauleuchte, LED, EVG, Wand, linienförmig ca. 600 mm, IP44;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+90;Leuchtentyp 9 - Anbauleuchte, LED, EVG, Wand/Decke, zylindrisch/flach Dm ca. 500 mm, IP54,;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+100;Leuchtentyp 9.1 - Anbauleuchte, LED, EVG, Wand/Decke, zylindrisch/flach Dm ca. 300 mm, IP54;19,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+110;Leuchtentyp 10 - Anbau-/Pendelleuchte, LED, EVG, Wand/Decke, linienförmig, ca. 1550 x 100 x 90 mm, IP66;151,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+120;Leuchtentyp 11 - Anbauleuchte, LED, EVG, Wand/Decke, linienförmig, ca. 1530 x 110 x 100 mm, opal, IP54;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+130;Leuchtentyp 12 - Anbauleuchte, LED, DALI, Wand/Decke, rund ca. 350 mm, IP44;33,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+140;Leuchtentyp 13 - Ringleuchte, LED, DALI, abgependelt, rund ca. 690 mm, direkt/indirekt, IP20;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+150;Leuchtentyp 14 - Pendelleuchte, LED, DALI, direkt/indirekt, abgependelt, linienförmig, ca. 1550 x 50 x 75 mm, IP20;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+160;Leuchtentyp 11 - Anbauleuchtet, LED, EVG, Wand/Decke, linienförmig, ca. 1530 x 110 x 100 mm, prismat., IP54;29,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+170;Knotenkette, verzinkt, zum Abpendeln des Leuchtentyp 10, in Teillängen bis 2 m montiert, einschl. Befestigungsmaterial für Decke und Leuchte.;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+180;Leuchtenhalterung für Leuchtentyp 7;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+190;Montage beigestellter Bestands-Mastleuchte, Höhe ca. 2,00 m;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+200;Restauratorische Aufarbeitung Bestands-Mastleuchte;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+210;Montage beigestellter Bestands-Mastleuchte.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;SL1 - Sicherheitsnotleuchte, Kunststoff, rechteckig, sym., Anbau, IP65;77,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;SL2 - Sicherheitsnotleuchte, Aluminium, rund, sym., Anbau, IP65;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;SL3 - Sicherheitsnotleuchte, Kunststoff, quadr., sym., Anbau, IP41;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+40;SL4 - Sicherheitsnotleuchte, Kunststoff, quadr., sym., Einbau, IP20;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+50;SL5 - Sicherheitsnotleuchte (kombiniert), Stahlblech, rechteckig, sym., Anbau, IP65;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+60;SL6 - Sicherheitsnotleuchte, Stahlblech, rechteckig, sym., Anbau, IP65;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+70;SL7 - Sicherheitsnotleuchte, Stahlblech, rechteckig, sym., bodenstehend, IP65;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+80;SL8 - Sicherheitsnotleuchte (kombiniert), Stahlblech, rund, sym., Anbau, IP40;21,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+90;SL9 - Sicherheitsnotleuchte m. Piktogramm, Stahlblech, rechteckig, sym., Anbau, IP40;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+100;RZ1 - Rettungszeichenleuchte, Wandanbau, IP65, EKW 25 m;31,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+110;RZ2 - Rettungszeichenleuchte, Wand-/Deckenanbau, IP40, EKW 20 m;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+120;RZ3 - Rettungszeichenleuchte, Wand-/Deckenanbau, IP65, EKW 20 m;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+130;RZ4 - Rettungszeichenleuchte, Deckenpendel, IP65, EKW 40 m;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+140;Leuchten-Überwachungsbaustein;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+150;Montageadapter für SL3 bei AP-Installation;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+160;Deckenpendel für RZ3, als Seilbendel, einstellbar bis 100 cm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+170;Stromkreis- und Leuchtenbezeichnungsschild;309,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Potentialausgleichsschiene Kupfer, 10 x Bolzen M10, ca. 435 x 40 x 5 mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Potentialausgleichsschiene aus Messing, als Klemmschiene 10 mm x 10 mm, mit Kunststoffabdeckung, mit Anschluss für 7 x 2,5 bis 25 mm2, 2 x 2,5 bis 95 mm2 und ein Flachband bis 40 mm x 4 mm.;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;"Erdungsbandrohrschelle 1/4"" bis 1 1/2"" bzw.";75,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+40;"Erdungsbandrohrschelle 3/4 bis 6"" bzw.";40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+50;Erdungsanschluss an Metallteilen herstellen,;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+60;Erdungsanschluss an vorhandenen Geräten und Anlagen;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+70;Erdungsanschluss von ableitfähigen Fußböden in;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Fangspitze ca. 600 mm;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Fangstange ca. 1000 mm, mit Befestigung auf Firstziegel;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;Alu Runddraht, blank;425,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+40;Alu Runddraht, blank;65,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+50;Mehrzweckverbindungsklemme;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+60;Falzklemme mit Klemmblock;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+70;Dachrinnenklemme mit Doppelüberleger St/tZn;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+80;Schneefanggitterklemme;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+90;Stangenhalter für Satteldächer;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+100;Dachleitungshalter für Firstziegel;70,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+110;Dachleitungshalter für Schrägdachflächen;300,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+120;Anschlusslasche;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+130;Überbrückungslasche;60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+140;Dachleitungshalter für Flachdächer;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+150;Stangenhalter für Erdeinführungsstange;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+160;Leitungshalter für Regenfallrohre;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+170;Dehnungsstück;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+180;Erdeinführungsstange;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+190;Prüfung und Messung der Bestands-Erdungsanlage;25,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+200;Prüfung und Messung der Blitzschutzanlage;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Blitzstromkombiableiter Typ 1+2, 4-polig, im Gehäuse;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Überspannungsableiter Typ 2 nach EN 61643-11, 2-polig,;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Brandmelderzentrale DIN 14675, DIN VDE 0833-1 (VDE 0833-1), DIN VDE 0833-2 (VDE 0833-2), DIN EN 54-2, DIN EN 54-4 und DIN EN 54-13,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Brandschutzgehäuse F30;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;Feuerwehr-Laufkarte DIN 14675, Format DIN A4, aus Papier in Folie lamminiert, Grundrisspläne werden im DWG-Format auf Datenträger zur Verfügung gestellt.;120,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+40;Das Feuerwehr-Informations- und Bediensystem besteht i. d. R. aus einem zweiflügeligen Stahlblech-Gehäuse, welches für Aufputzmontage ausgelegt ist. Eine zentrale Türöffnung durch die Feuerwehrschließung (Profilhalbzylinder) ermöglicht das Öffnen beider Türflügel. Die linke Tür ist mit Klarsichtfeld;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+50;Feuerwehr-Schlüsseldepot DIN 14675, FSD 3 (hohes Risiko), für bis zu 4 überwachte Schlüssel vom digitalen Schließsystem, einschl. Schließzylinder DIN 18252, Gehäuse aus nichtrostendem Stahl, zur Montage in Bestandsmauerwerk einschließlich Stemm und Spitzarbeiten;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+60;Freischaltelement DIN 14675, mit Schließzylinder nach den Anschlussbedingungen der örtlich zuständigen Feuerwehr;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+70;Hinweisleuchte zur Orientierung für die Feuerwehr, als Blitzleuchte, Kalottenfarbe orange, Schutzart IP 54 DIN EN 60529 (VDE 0470-1), zur Montage an Fassade.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+80;Energieversorgungseinheit DIN EN 54-4, mit Störmeldeanzeige am Gerät und Weiterleitung an die Zentrale, zur Versorgung von Alarmierungseinrichtugen für Brand, Überbrückungszeit wie Zentrale, Bemessungsbetriebsspannung 24 V DC, Gehäuse für Aufputzmontage.;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+90;Mehrpunkt-Rauchmelder als Ansaugrauchmelder, DIN EN 54-20, mit einem Messsystem, Klasse C (übliche Empfindlichkeit), mit 4 Alarmschwellen, für Meldereinzelkennung, mit Luftfilter und Kondensatabscheider, mit Luftrückführung, zwei Rohrleitungsanschlüsse, mit halogenfreiem Ansaugrohrsystem mit allen F;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+100;Mehrpunkt-Rauchmelder als Ansaugrauchmelder, DIN EN 54-20, mit einem Messsystem, Klasse C (übliche Empfindlichkeit), mit 4 Alarmschwellen, für Meldereinzelkennung, mit Luftfilter und Kondensatabscheider, mit Luftrückführung, zwei Rohrleitungsanschlüsse, mit halogenfreiem Ansaugrohrsystem mit allen F;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+110;Mehrpunkt-Rauchmelder als Ansaugrauchmelder, DIN EN 54-20, mit einem Messsystem, Klasse C (übliche Empfindlichkeit), mit 4 Alarmschwellen, für Meldereinzelkennung, mit Luftfilter und Kondensatabscheider, mit Luftrückführung, zwei Rohrleitungsanschlüsse, mit halogenfreiem Ansaugrohrsystem mit allen F;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+120;Mehrpunkt-Rauchmelder als Ansaugrauchmelder, DIN EN 54-20, mit einem Messsystem, Klasse C (übliche Empfindlichkeit), mit 4 Alarmschwellen, für Meldereinzelkennung, mit Luftfilter und Kondensatabscheider, mit Luftrückführung, zwei Rohrleitungsanschlüsse, mit halogenfreiem Ansaugrohrsystem mit allen F;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+130;Mehrpunkt-Rauchmelder als Ansaugrauchmelder, DIN EN 54-20, mit einem Messsystem, Klasse C (übliche Empfindlichkeit), mit 4 Alarmschwellen, für Meldereinzelkennung, mit Luftfilter und Kondensatabscheider, mit Luftrückführung, zwei Rohrleitungsanschlüsse, mit halogenfreiem Ansaugrohrsystem mit allen F;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+140;Linienförmiger Wärmemelder, DIN EN 54-22, mit einem Messsystem und Linienabschlussmodul, mit Signalausgängen für Alarm- und Voralarm, einschließlich ca. 110 m Sensorleitung mit PVC und Nylonummantelung, Befestigungsmitteln aufgebaut, in I-Form, in Aufputzausführung, mit Bezeichnungsschild, Schriftgr;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+150;Linienförmiger Wärmemelder, DIN EN 54-22, mit einem Messsystem und Linienabschlussmodul, mit Signalausgängen für Alarm- und Voralarm, einschließlich ca. 150 m Sensorleitung mit PVC und Nylonummantelung, Befestigungsmitteln aufgebaut, in I-Form, in Aufputzausführung, mit Bezeichnungsschild, Schriftgr;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+160;Rauchmelder, DIN EN 54-7, nach dem Streulichtprinzip, einschl. Sockel, für Meldereinzelkennung, für trockene Räume, mit graviertem Bezeichnungsschild, Schriftgröße für ungünstigste Lesebedingungen DIN 1450, Montage an Zwischendecke mit dafür geeigneten Meldersockel,;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+170;Rauchmelder, DIN EN 54-7, nach dem Streulichtprinzip, einschl. Sockel, für Meldereinzelkennung, für trockene Räume, mit graviertem Bezeichnungsschild, Schriftgröße für ungünstigste Lesebedingungen DIN 1450, Montage an Zwischendecke mit dafür geeigneten Meldersockel,;70,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+180;Rauchmelder, DIN EN 54-7, nach dem Streulichtprinzip, einschl. Sockel, für Meldereinzelkennung, für trockene Räume, mit graviertem Bezeichnungsschild, Schriftgröße für ungünstigste Lesebedingungen DIN 1450, Montage an Decke, Montagehöhe über 5 m bis 6 m.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+190;Mehrfachsensormelder, DIN EN 54-5 und DIN EN 54-7, nach dem Streulicht- und Wärmeprinzip, einschl. Sockel, für Meldereinzelkennung, für trockene Räume, mit graviertem Bezeichnungsschild, Schriftgröße für ungünstigste Lesebedingungen DIN 1450, Montage an Decke mit dafür geeigneten Meldersockel,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+200;Thermodifferentialmeldermelder, DIN EN 54-5, nach dem Wärmeprinzip, einschl. Sockel, für Meldereinzelkennung, für trockene Räume, mit graviertem Bezeichnungsschild, Schriftgröße für ungünstigste Lesebedingungen DIN 1450, Montage an Decke mit dafür geeigneten Meldersockel,;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+210;Handfeuermelder, DIN EN 54-11 Typ B, für Anwendung in Innenräumen, für Meldereinzelkennung, in Aufputzausführung, Gehäuse aus Isolierstoff, mit graviertem Bezeichnungsschild, Schriftgröße für ungünstigste Lesebedingungen DIN 1450, einschl. Schild Außer-Betrieb DIN VDE 0833-2 (VDE 0833-2), Montage an;37,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+220;Ersatzglasscheibe für Druckknopfmelder;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+230;Metallschlüssel für Handmelder;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+240;Signalgeber, optisch und akustisch, für Alarmierungseinrichtung einer Brandmeldeanlage, DIN EN 54-23, Gefahrensignal DIN EN 842, als Blitzleuchte einschl. Leuchtmittel, Typ A (für die Anwendung in Gebäuden), für Wand- und Deckenmontage,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+250;Signalgeber, akustisch, für Alarmierungseinrichtung einer Brandmeldeanlage, DIN EN 54-23, Gefahrensignal DIN EN 842, als akustischer Signalgeber, für Wand- und Deckenmontage,;58,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+260;Bus-Koppler mit Leitungsüberwachung gemäß DIN EN 54-13 zur Kopplung der ISP mit der BMA.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+270;Bus-Koppler mit Leitungsüberwachung gemäß DIN EN 54-13 zur Kopplung des Aufzuges mit der BMA.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+280;Bus-Koppler mit Leitungsüberwachung gemäß DIN EN 54-13 zur Kopplung der ELA mit der BMA.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+290;Bus-Koppler mit Leitungsüberwachung gemäß DIN EN 54-13 zur Kopplung der BOS Anlage mit der BMA.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+300;Bus-Koppler mit Leitungsüberwachung gemäß DIN EN 54-13 zur Kopplung der RLT Anlage mit der BMA.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+310;Leiter nach DIN EN 131 Arbeitshöhe min. 3,2m;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+320;Leiterauflage;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+330;Leiterhalterung zum Einbau von Feuerwehrschließung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+340;Feuerwehrabnahme;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+350;Inbetriebnahme und Programmierung der beschriebenen Anlage;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+360;Projektmanagement bestehend aus:;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+370;Schild BMZ nach DIN 4066 zur Beklebung der bauseitigen Raumtür;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+380;Betriebsbuch nach DIN VDE 0833 und DIN 14675;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Verteiler als Standschrank für Datennetze. anreihbar, Türanschlag wahlweise links/rechts, einschl. Sockel, Höhe  ca.100 mm, zum Einbau von 19-Zoll-Komponenten, aus Stahlblech, verzinkt und lackiert oder pulverbeschichtet, Schutzart IP 2X DIN EN 60529 (VDE 0470-1), Potentialausgleich DIN EN 50310 (VD;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Wandgehäuse Tiefe 673 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;Steckdosenleiste mit 7 Steckdosen, 250V/16A;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+40;Die Steckdosenleiste wird mit 2 Haltewinkel;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+50;Ausführung;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+60;Rangierpanel, waagerecht, eine Höheneinheit.;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+70;19 Zoll Patchfeld, symmetrisch, eine Höheneinheit, 24 x 8, modular, Kategorie 6 Index A tiefgestellt DIN EN 50173-1, Link-Klasse E Index A tiefgestellt DIN EN 50173-1, Potentialausgleich DIN EN 50310 (VDE 0800-2-310), Funkstörstrahlung DIN EN 55022 (VDE 0878-22), Klasse B, GG45-Buchse DIN EN 60603-7;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+80;Buchse, dienstneutral, RJ45 DIN EN 60603-7-51, Kategorie 6 Index A tiefgestellt DIN EN 50173-1, Funkstörstrahlung DIN EN 55022 (VDE 0878-22), Klasse B.;270,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+90;Hutschienenmodul 1 Port mit Modularer Buchse, symmetrisch, Kategorie 6 Index A tiefgestellt DIN EN 50173-1, Link-Klasse E Index A tiefgestellt DIN EN 50173-1, Potentialausgleich DIN EN 50310 (VDE 0800-2-310), modular, Funkstörstrahlung DIN EN 55022 (VDE 0878-22), Klasse B, RJ45-Buchse DIN EN 60603-7;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+100;Datenanschlussdose, symmetrisch, Kategorie 6 Index A tiefgestellt DIN EN 50173-1, Link-Klasse E Index A tiefgestellt DIN EN 50173-1, Potentialausgleich DIN EN 50310 (VDE 0800-2-310), modular, Funkstörstrahlung DIN EN 55022 (VDE 0878-22), Klasse B, 2 Ports, RJ45-Buchse DIN EN 60603-7-51, in Schneidkl;134,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+110;Messung pro Link Messung nach DIN EN 50173-1.;223,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+120;Konfektioniertes Datenkabel, Stecker/Stecker, DIN EN 50173-1, Kategorie 6 Index A tiefgestellt geprüft DIN EN 61935-2 (VDE 819-935-2),;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+130;Konfektioniertes Datenkabel, Stecker/Stecker, DIN EN 50173-1, Kategorie 6 Index A tiefgestellt geprüft DIN EN 61935-2 (VDE 819-935-2),;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+140;Konfektioniertes Datenkabel, Stecker/Stecker, DIN EN 50173-1, Kategorie 6 Index A tiefgestellt geprüft DIN EN 61935-2 (VDE 819-935-2),;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Türstation MODULAR in V2A-Design, bestehend aus:;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Features;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;DAB+ Zuspielgerät;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;Der Verstärker muss ein achtkanaliges Netzwerk-Verarbeitungsgerät sein. Die Stromversorgung der Endstufe muss über ein universelles Schaltnetzteil erfolgen, das den Betrieb bei jeder Wechselspannung zwischen 100 und 240 V bei 50 oder 60 Hz unterstützt. Das Netzteil muss über eine Leistungsfaktorkorr;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+40;zur digitalen Vernetzung der Anlagenkomponenten. Der Switch muss sämtliche Protokolle die vom Hersteller gefordert sind unterstützen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+50;"Einbau und Verkabelung der ELA-Zentrale in 19"" Schrank aus dem Titel Datennetz. Die Verkabelung ist nach Herstellervorgaben durchzuführen. Einschließlich Systembedingten Zuebhörs wie z.B. Leerblenden, Steckverbindungen etc.";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+60;Sprechstelle;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+70;60 W 16 Ohm 2-Wege Lautsprechersystem mit passiver Frequenzweiche für den Deckeneinbau in randlosem Design mit moderner Optik. Bestückt mit 6,5“ wetterfestem Papier-Membran-Tieftöner und 1-Zoll-Schwingspule sowie 0,75“ Aluminium-Kalottenhochtöner. Der Lautsprecher verfügt über verlustarme 70/100 V Ü;19,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+80;60 Watt 8 Ohm Zeilenlautsprecher für den Wandaufbau. Bestückt mit 4 x 2,75“ Breitbandchassis mit wetterfester Papier-Membrane. Der Lautsprecher verfügt über verlustarme 70/100V Übertrager mit niedriger Sättigung und 8 Ohm-Bypass.Ausgeführt als geschlossenes System aus pulverbeschichtetem Aluminium. ;39,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+90;50 Watt 8 Ohm 2-Wege Lautsprechersystem mit passiver Frequenzweiche für den Wandaufbau. Bestückt mit 4,5“ wetterfesten Papier-Membrane-Tieftöner und 0,75“ Seidenkalotten-Hochtöner. Der Lautsprecher verfügt über verlustarme 70/100 V Übertrager mit niedriger Sättigung und 8 Ohm-Bypass. Ausgeführt als ;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+100;Der Lautsprecher verfügt über zwei 6-Zoll-Lautsprecher und einen Kompressionstreiber in einem Bassreflexgehäuse und ist eine leistungsstarke Lösung für eine breite Palette von Anwendungen. Das rekonfigurierbare, rotierbare Horn sorgt zudem für eine optimale Abdeckung.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+110;Wand-/Deckenhalterung aus galvanisiertem, pulverbeschichtetem Stahl zur flächenbündigen Montage eines Lautsprechers Typ 4. Die Halterung besteht aus einer Lautsprecher-Montageplatte, welche mit vier M6-Innensechskant-Senkkopfschrauben am Lautsprecher fixiert wird, sowie einer Wand-/Deckenhalterung, ;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+120;Erstellung Pflichtenheft;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+130;Einmessung / Ebene;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Notruf Behinderten-WC als Kompakt-Set, bestehend aus 1-Kammer-Signalleuchte rot, 1 Stück Zugtaster, 1 Stück Abstelltaster, Meldeeinheit und Netzteil, einschl. Stromquelle für Sicherheitszwecke DIN VDE 0100-560 (VDE 0100-560), Weiterleitung Störung zur übergeordneten Leittechnik, Weiterleitung Notruf;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Zusätzlicher Zugtaster;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;Dienstzimmereinheit;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;KNX Projektierung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;KNX Inbetriebnahme;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;KNX Hinzufügen / Änderung eines Busteilnehmers;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+40;KNX Dokumentation;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Ringraumdichtung Dm 125 mm, 1 Kabel bis 70 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Ringraumdichtung Dm 125 mm, 9 Kabel bis 20 mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;Injektionsankerhülse für Vollstein-Mauerwerk, zur sicheren Befestigung von Kabeltragsystemen an Ziegelwänden und -decken, einschl Bohrung, Ankerstange und allem systembedingten Zubehör.;200,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+40;Kunststoff-Siebhülse:;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+50;Abdichten von belegten Kabeleinführungen, mit Schrumpfschlauch, dicht gegen drückendes Wasser DIN 18195-6.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+60;Warmschrumpf-Verbindungsmuffe für 5x1,5 bis 5x16mm²;75,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+70;Warmschrumpf-Verbindungsmuffe für 5x25 bis 5x150mm²;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Durchbruchsbohrung in Mauerwerk;350,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Durchbruchsbohrung in Mauerwerk;200,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;Durchbruchsbohrung in Mauerwerk;55,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+40;Durchbruchsbohrung in Beton;200,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+50;Kernbohrung mit Kernbohrgerät in Stahlbeton in Teillängen herstellen,;150,0;cm;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+60;Kernbohrung mit Kernbohrgerät in Stahlbeton in Teillängen herstellen,;150,0;cm;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+70;Kernbohrung mit Kernbohrgerät in Stahlbeton in Teillängen herstellen,;100,0;cm;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+80;Kernbohrung mit Kernbohrgerät in Stahlbeton in Teillängen herstellen,;100,0;cm;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+90;Kernbohrung mit Kernbohrgerät in Mauerwerk in Teillängen herstellen,;250,0;cm;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+100;Kernbohrung mit Kernbohrgerät in Mauerwerk in Teillängen herstellen,;250,0;cm;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+110;Kernbohrung mit Kernbohrgerät in Mauerwerk in Teillängen herstellen,;200,0;cm;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+120;Kernbohrung mit Kernbohrgerät in Mauerwerk in Teillängen herstellen,;200,0;cm;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+130;Beantragung einer Kernbohrung oder eines Durchbruchs in massive Decken oder Wände vor der Ausführung, Antrag schriftlich in Form eines Formulars einschließlich eines Planausschnittes mit Angabe von Lage, Dimension und Abstandsmaßen bezogen auf Wände und Decken, Übergabe an die Objektüberwachung, Aus;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+140;Anzeichnen von Durchbrüchen bzw. Kernbohrungen, die bauseits erstellt werden, in Wände und Decken aus Mauerwerk oder Stahlbeton;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+150;Wandschlitz in Beton in Teillängen herstellen,;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+160;Wandschlitz in Beton in Teillängen herstellen,;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+170;Wandschlitz in Mauerwerk in Teillängen herstellen,;2800,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+180;Wandschlitz in Mauerwerk in Teillängen herstellen,;1200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+190;Zulage für besondere Sorgfalt beim Herstellen von Wandschlitzen;2000,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+200;Zulage für besondere Sorgfalt beim Herstellen von Bohrungen;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+210;Zulage für Sondierung vor Stemm-/ Spitz- / Bohrarbeiten;1000,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Kabelschott Typ 1 in Wand u. Decke;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;jedoch Schottgröße:;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;jedoch Schottgröße:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+40;brandschutztechnisches Verschließen des Ringspaltes bei Einzelkabeldurchführungen;300,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+50;Kabelschott Typ 2 in Wand u. Decke;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+60;jedoch Schottgröße:;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+70;jedoch Schottgröße:;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+80;Kabelschott Typ 3 in Wand;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Auf- und Abbauen fahrbares Gerüst DIN 4420-3, DIN EN 12810;60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Auf- und Abbauen fahrbares Gerüst DIN 4420-3, DIN EN 12810;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;Auf- und Abbauen fahrbares Gerüst DIN 4420-3, DIN EN 12810;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Überprüfung Bestandsstromkreis;75,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Besondere Erschwernis bei Arbeiten in beengten Deckenbereichen;100,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Auf Grundlage der Ausführungsplanung und Berechnungen des Auftraggebers sind sofort nach der Übergabe die für die Ausführung erforderlichen Unterlagen für den gesamten im vorliegenden Leistungsverzeichnis beschriebenen Leistungsumfang als Montage- und Werkstattplanung zu erstellen und dem AG zu über;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Die Brandschutzdokumentation ist im Vorfeld der behördlichen Abnahmen als separate Unterlage zu erstellen und dem Bauherren zu übergeben.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;Auf Grundlage der erstellten und freigegebenen Werkstatt- und Montageplanung, der letztgültigen Ausführungsplanung, der aktuellsten Architekten-Werkpläne und der ausgeführten Leistung sind für den gesamten im vorliegenden Leistungsverzeichnis beschriebenen Leistungsumfang Unterlagen mitzuliefern und;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+40;Auf Grundlage der erstellten und freigegebenen Werkstatt- und Montageplanung, der letztgültigen Ausführungsplanung, der aktuellsten Architekten-Werkpläne und der ausgeführten Leistung sind für den gesamten im vorliegenden Leistungsverzeichnis beschriebenen Leistungsumfang Unterlagen mitzuliefern und;700,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+50;"Erstellen einer Dokumentationsakte gemäß ""Dokumentationsrichtlinie Schadstoffarmut"" digital als Grundlage zur Koordination der entsprechenden Anforderungen an die Schadstoffarmut. Vorlegen und während der Leistungserbringung fortschreiben.";1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Mitwirkung bei der Sachverständigenprüfung als Begleitung der Sachverständigen-Prüfung durch einen vom AG separat beauftragten Sachverständigen in sachlichem, personellem und zeitlichem Umfang einschl. Vorhaltung der erforderlichen Prüfeinrichtungen und der notwendigen technischen Ausrüstung für die;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Mitwirkung bei der Sachverständigenprüfung als Begleitung der Sachverständigen-Prüfung durch einen vom AG separat beauftragten Sachverständigen in sachlichem, personellem und zeitlichem Umfang einschl. Vorhaltung der erforderlichen Prüfeinrichtungen und der notwendigen technischen Ausrüstung für die;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;Mitwirkung bei der Wirkprinzipprüfung als Begleitung der Wirkprinzip-Prüfung durch einen vom AG separat beauftragten Sachverständigen in sachlichem, personellem und zeitlichem Umfang einschl. Vorhaltung der erforderlichen Prüfeinrichtungen und der notwendigen technischen Ausrüstung für die Dauer der;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+40;Wiederholte Einweisung des Bedienungs- und Wartungspersonals in alle in diesem Leistungsverzeichnis aufgeführten Anlagen, zusätzlich zur einmaligen Einweisung als Nebenleistung nach Punkt 3.4.2 DIN 18379 VOB/C.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Stundenverrechnungssatz für Obermonteur;20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Stundenverrechnungssatz für Monteur;20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+30;Stundenverrechnungssatz für Helfer;20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+10;Wartung / Inspektion für die wartungspflichtigen Komponenten der in diesem Leistungsverzeichnis enthaltenen elektrotechnischen Anlagen einschließlich direktem Zubehör, gemäß anliegendem Muster, einschließlich aller Nebenkosten, innerhalb der Verjährungszeit für Mängelansprüche.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+20;Wartung / Inspektion für die wartungspflichtigen Komponenten der in diesem Leistungsverzeichnis enthaltenen Brandmelde- und Alarmierungsanlage einschließlich direktem Zubehör, gemäß anliegendem Muster, einschließlich aller Nebenkosten, innerhalb der Verjährungszeit für Mängelansprüche.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260630_SBH_LV_1-440-01.X83
+1.13.90;Ansaugrauchmelder Aufzugsschacht;;;preisblatt;vertragsbedingungen/InstandGMA 2018_Anlage_4_Preisblätter_1-440-01.xlsm
+1.13.100;Ansaugrauchmelder Technikschacht;;;preisblatt;vertragsbedingungen/InstandGMA 2018_Anlage_4_Preisblätter_1-440-01.xlsm
+1.13.110;Ansaugrauchmelder Zwischengeschoss;;;preisblatt;vertragsbedingungen/InstandGMA 2018_Anlage_4_Preisblätter_1-440-01.xlsm
+1.13.120;Ansaugrauchmelder Dach Männerhalle;;;preisblatt;vertragsbedingungen/InstandGMA 2018_Anlage_4_Preisblätter_1-440-01.xlsm
+1.13.130;Ansaugrauchmelder Dach Frauenhalle;;;preisblatt;vertragsbedingungen/InstandGMA 2018_Anlage_4_Preisblätter_1-440-01.xlsm
+1.13.140;Linienförmiger Wärmemelder Frauenhalle;;;preisblatt;vertragsbedingungen/InstandGMA 2018_Anlage_4_Preisblätter_1-440-01.xlsm
+1.13.150;Linienförmiger Wärmemelder Männerhalle;;;preisblatt;vertragsbedingungen/InstandGMA 2018_Anlage_4_Preisblätter_1-440-01.xlsm
+1.13.160;optischer Rauchmelder an Zwischendecke;;;preisblatt;vertragsbedingungen/InstandGMA 2018_Anlage_4_Preisblätter_1-440-01.xlsm
+1.13.170;optischer Rauchmelder an Zwischendecke mit akustischem Signalgeber;;;preisblatt;vertragsbedingungen/InstandGMA 2018_Anlage_4_Preisblätter_1-440-01.xlsm
+1.13.180;optischer Rauchmelder Rohdecke, MH über 5 m bis 6 m;;;preisblatt;vertragsbedingungen/InstandGMA 2018_Anlage_4_Preisblätter_1-440-01.xlsm
+1.13.190;Mehrkriterienmelder an Zwischendecke mit akustischem Signalgeber;;;preisblatt;vertragsbedingungen/InstandGMA 2018_Anlage_4_Preisblätter_1-440-01.xlsm
+1.13.200;Thermodifferentialmelder mit akustischem Signalgeber;;;preisblatt;vertragsbedingungen/InstandGMA 2018_Anlage_4_Preisblätter_1-440-01.xlsm

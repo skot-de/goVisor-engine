@@ -1,0 +1,163 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Bestehend aus;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Horizontalwindrad (BA2)  (Los 4).x83
+20;Windrad Mast freistehend mit Statik;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Horizontalwindrad (BA2)  (Los 4).x83
+30;Kombigerät Sinuswechselrichter zur Netzeinspeisung mit Windkraftregler und Dumpload;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Horizontalwindrad (BA2)  (Los 4).x83
+40;Statik zur Gesamtanlage als Standsicherheitsnachweis zur Vorlage an Prüfstatiker.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Horizontalwindrad (BA2)  (Los 4).x83
+10;Windbaum mit 16 Kleinwindturbinen.(wie Beispielfoto);1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Windbaum (BA2)  (Los 3).x83
+20;Schaltschrank mit Komponenten lt. Hersteller;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Windbaum (BA2)  (Los 3).x83
+30;Statik zur Gesamtanlage als Standsicherheitsnachweis zur Vorlage an Prüfstatiker.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Windbaum (BA2)  (Los 3).x83
+10;Glasfaseranschluss für Pumphäuschen und W-LAN Access Points bestellen und begleiten.;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/W-LAN Access Points  (Los 5).x83
+20;W-LAN Access Points mit POE Speisung .;3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/W-LAN Access Points  (Los 5).x83
+30;Überspannungsschutz Typ 2;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/W-LAN Access Points  (Los 5).x83
+40;Mast für W-LAN Access Point;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/W-LAN Access Points  (Los 5).x83
+50;Mast mit Montagematerial zur Montage an Container.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/W-LAN Access Points  (Los 5).x83
+60;Standsäule zur Aufnahme Komponenten zum Betrieb W-LAN Access Point mit Montageplatte und Gehäuse min IP 54 für untenstehende Komponenten und Hutschiene.;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/W-LAN Access Points  (Los 5).x83
+70;LWL-Hutschienenbox, bestückt, SM, 6 SC DX mit Pigtails und Kupplungen;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/W-LAN Access Points  (Los 5).x83
+80;LWL CU Medienconverter .;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/W-LAN Access Points  (Los 5).x83
+90;Glasfaserpatchkabel singlemode, passend zu den übrigen Komponenten 0,5m lang.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/W-LAN Access Points  (Los 5).x83
+100;Patchkabel Cat 7 outdoortauglich bis zu 10m lang.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/W-LAN Access Points  (Los 5).x83
+110;Cat7 Patchkabel 0,2m Lang;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/W-LAN Access Points  (Los 5).x83
+120;Industrial Ethernet Switch zur Hutschienenmontage;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/W-LAN Access Points  (Los 5).x83
+130;Konfiguration und in Betriebnahme nach Vorgaben AG;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/W-LAN Access Points  (Los 5).x83
+140;Herstellen, Errichten und Prüfen einer Erdungsanlage;2,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/W-LAN Access Points  (Los 5).x83
+150;Bestehende Erderanlage messen.;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/W-LAN Access Points  (Los 5).x83
+160;Potentialausgleichsschiene;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/W-LAN Access Points  (Los 5).x83
+10;5fach Schuko-Steckdose mit Überspannungsschutz Klasse 3;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+20;LWL-Hutschienenbox, bestückt, SM, 6 SC DX mit Pigtails und Kupplungen;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+30;Industrial Ethernet Switch zur Hutschienenmontage;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+40;LWL CU Medienconverter für Zähler.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+50;W-LAN Access Points mit POE Speisung .;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+60;Überspannungsschutz Typ 2;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;"Dekorative Straßenleuchte vom Typ ""City-Seidenweber"" ohne Schirm als Aufsatzleuchte.";12,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+20;Connect Wireless, Smart Plug;11,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+30;Connect Wireless, Smart Plug Cellular;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+40;Lichtmast, konisch, LPH 4,5 m, Zopf-Ø 76 mm,;12,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+50;Kabelübergangskasten für die Leuchtenmasten liefern und montieren.;12,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+60;runder LED-Strahler mit Montagebügel liefern, montieren und betriebsferig anschließen;16,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+70;runder LED-Strahler mit Montagebügel liefern, montieren und betriebsferig anschließen;6,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+80;Langfeldleuchte LED;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+90;Leuchtengehäuse aus hochkorrosionsbeständigem Aluminium-Druckguss AlSi12 (Leg. 230), Polyesterpulver beschichtet in hochwertig deckendem und UV-stabilen Schichtverfahren, alle äußeren Stahlteile aus rostfreiem Edelstahl, temperaturwechselbeständiges Sicherheitsglas (ESG) - einseitig entspiegelt, dun;6,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+100;Leuchtengehäuse aus hochkorrosionsbeständigem Aluminium-Druckguss AlSi12 (Leg. 230), Polyesterpulver beschichtet in hochwertig deckendem und UV-stabilen Schichtverfahren, alle äußeren Stahlteile aus rostfreiem Edelstahl, temperaturwechselbeständiges Sicherheitsglas (ESG) - einseitig entspiegelt, dun;10,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+110;Mehrpreis für die Ausführung der vor genannten Maststrahler S2.1 in Farbe RAL7012 Basaltgrau oder in RAL- oder DB-Farbe nach Vorgabe AG.;16,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+120;Mehrpreis für die Ausführung der vor genannten Maststrahler S1.1 und S1.2 in Farbe RAL7012 Basaltgrau oder in RAL- oder DB-Farbe nach Vorgabe AG.;16,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+130;Leuchtenmast Stahl feuerverzinkt, konisch, gerade.;4,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+140;Mastkappe zum Verschluss der oberen Mastöffnung.;4,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+150;Verschraubung muss UV beständig sein.;16,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+160;Leuchtenmast aus Pos. 130,;4,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+170;Säuberung von Köcherfundamenten kurz vor stellen des Mastes.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+180;Ausrichten und Einstellen von drei Maststrahlern am 10,00 m Mast zusammen mit dem Lichtplaner.;4,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+190;Kabelübergangskasten für die Leuchtenmasten liefern und montieren.;4,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+200;Abzweigdose IP65 mit zwei außenliegenden Befestigungslaschen (bis 4 Kabel bis 5*2,5mm² und DALI Modul);4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+210;Vandalensicherer Taster zur Anforderung Licht Solardach, Sportanlage und Calanetics.;3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+220;DALI Tastenkoppler zur Anbindung der Taster.;3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;Handyladestation mit 30 Schließfächern;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+20;Anschluss bauseitiger E-Bike Ladebügel;3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;Kabel NYY-J 5 x 16 mm² nach DIN VDE 0276 Teil 603, Cu-;250,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+20;Kabel NYY-J 5 x 10 mm² nach DIN VDE 0276 Teil 603, Cu-;500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+30;Kabel NYY-J 3 x 10 mm² nach DIN VDE 0276 Teil 603, Cu-;350,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+50;Kabel NYY-J 5 x 2,5 mm² nach DIN VDE 0276 Teil 603, Cu-;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+60;Flexible Leitung 5 x 1,5 mm²;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+70;Kabel NYY-J 5 x 1,5 mm² nach DIN VDE 0276 Teil 603, Cu-;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+80;Kabel NYY-J 7 x 1,5 mm² nach DIN VDE 0276 Teil 603, Cu-;250,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+90;Kabel NYY-J 3 x 2,5 mm² nach DIN VDE 0276 Teil 603, Cu-;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+100;Kabel NYM-J 3 x 1,5 mm² nach DIN VDE 0276 Teil 603, Cu-;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+120;LWL Kabel 8E9/125mikro m OS2 A-DQ(ZN)B2Y;500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+130;CAT 7 Datenleitung UV beständig;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;Schutzart:;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+20;Lüfter zur Entwärmung des Technikraumes im Materialcontainer.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+30;Thermostat zur Lüftersteuerung mit potentialfreiem Kontakt für 230V Schaltspannung aP.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+40;min. tropfwassergeschützt IP 44, Anschluß-;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+50;Doppelsteckdose;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+60;Abzweigdosen a.P.FR IP 54;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+70;Abzweigkasten a.P.FR IP min. 65 geschützter Außenraum;14,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;Aluminium Kabelführungsrohr ES 40 inkl. Metallschellen 2 laschig passend für Rohr mit einer Befestigungsschraube M 5 mit Torxkopf .;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+20;Aluminium Kabelführungsrohr ES 32 inkl. Metallschellen 2 laschig passend für Rohr mit einer Befestigungsschraube M 5 mit Torxkopf .;88,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+30;Aluminium Kabelführungsrohr ES 25 inkl. Metallschellen 2 laschig passend für Rohr mit einer Befestigungsschraube M 5 mit Torxkopf .;116,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+40;Kuparohr halogenfrei M25 halogenfrei nach DIN VDE V 0604-2-100;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+50;Kuparohr halogenfrei M40 halogenfrei nach DIN VDE V 0604-2-100;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+60;Nasslackierung von Aluminiumrohren und Metallschellen in einem Bereich von ca. 20cm. Diese sind an einem  HEB Trager 170 - 190. DEr HEB TRäger und der Untergrund sind so zu schützen, dass keine Farbe an ihm haften bleibt.;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;Herstellen, Errichten und Prüfen einer Erdungsanlage;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+20;Bestehende Erderanlage messen.;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+30;Potentialausgleichsschiene;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+40;Erdungsleitung für Generatoranschlusskästen und Verbindung  zum Calestenics Pavillon H07V-K 1x16mm² .;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+50;Erdungspunkt für Generatoranschlusskästen un d Calesthenics.;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;Abdeckungen Calesdtenics an 2 Pfosten einmal demontieren und wieder montieren.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+20;Attikableche demontieren und nach den Rohr,;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+30;Bohrungen durch  HEB oder Pfeiler (Dicke bis 20mm) als Kabeldurchführung bis Ø50mm;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+40;Löcher in HEB Träger bohren und dann Gewinde M5- M6 schneiden.;318,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+50;Gerüst , Steiger oder Arbeitsbühne für den Bereich Calesthenics und PV Dach. für die gesamte benötigte Zeit (Montage und Abnahme ) vorhalten.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+60;Absperrung Arbeitsgebiet mit Bauzäunen für die gesamte Montagezeit.;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+70;Lastverteilungsplatten liefern, während der gesamten Bauzeit  vorhalten , ggfs. mehrmals umverlegen, nach Fertigstellung der Arbeiten wieder abtransportieren.;120,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;Hausanschlusskasten für die Installation im Freien, mit Zählerplatz ( < 30kW Anschlussleistung ) und allen Komponenten für eine Teileinspeisungsanlage.nach TAB.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+20;5fach Schuko-Steckdose mit Überspannungsschutz Klasse 3;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+30;LWL-Hutschienenbox, bestückt, SM, 6 SC DX mit Pigtails und Kupplungen;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+40;Industrial Ethernet Switch zur Hutschienenmontage;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+50;LWL CU Medienconverter für Zähler.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+60;LWL CU Medienconverter für Zähler.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;"Dekorative Straßenleuchte vom Typ ""City-Seidenweber"" ohne Schirm als Aufsatzleuchte.";17,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+20;Connect Wireless, Smart Plug;16,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+30;Connect Wireless, Smart Plug Cellular;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+40;Lichtmast, konisch, LPH 4,5 m, Zopf-Ø 76 mm,;16,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+50;Säuberung von Köcherfundamenten kurz vor stellen des Mastes.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+60;Lichtmast, konisch, LPH 4,5 m, Zopf-Ø 76 mm,;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+70;Kabelübergangskasten für die Leuchtenmasten liefern und montieren.;17,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+80;D2.2 Decken- oder Wandleuchte Materialcontainer mit Bewegungsmelder;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;Anschluss bauseitiger E-Bike Ladebügel;3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+20;Schukosteckdose IP 54 als 2er Kombination mit Klappdeckel.;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;Kabel NYY-J 3 x 10 mm² nach DIN VDE 0276 Teil 603, Cu-;245,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+20;Kabel NYY-J 5 x 10 mm² nach DIN VDE 0276 Teil 603, Cu-;1025,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+30;Kabel NYY-J 5 x 16 mm² nach DIN VDE 0276 Teil 603, Cu-;245,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+40;Kabel NYY-J 3 x 2,5 mm² nach DIN VDE 0276 Teil 603, Cu-;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+50;Kabel NYY-J 7 x 1,5 mm² nach DIN VDE 0276 Teil 603, Cu-;245,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+60;Kabel NYM-J 3 x 1,5 mm² nach DIN VDE 0276 Teil 603, Cu-;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+70;LWL Kabel 8E9/125mikro m OS2 A-DQ(ZN)B2Y;750,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;Unterverteilung zur Montage in Container min IP 54  bestückt lt Detailplan SLP UV Pumphäuschen inkl. Datenfeld zur Montage Patchfelder Spleisskassetten und Switche aus Positionen des Unterpunktes Netzwerkkomponeneten.;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+30;Übergabe UV für Windrad .;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+40;Doppelsteckdose;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+50;Abzweigdosen a.P.FR IP 54;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;Kuparohr halogenfrei M25 halogenfrei nach DIN VDE V 0604-2-100;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+20;Kuparohr halogenfrei M40 halogenfrei nach DIN VDE V 0604-2-100;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;Herstellen, Errichten und Prüfen einer Erdungsanlage;4,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+20;Potentialausgleichsschiene;4,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;"Dekorative Straßenleuchte vom Typ ""City-Seidenweber"" ohne Schirm als Aufsatzleuchte.";9,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+20;Connect Wireless, Smart Plug;8,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+30;Connect Wireless, Smart Plug Cellular;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+40;Lichtmast, konisch, LPH 4,5 m, Zopf-Ø 76 mm,;9,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+50;Kabelübergangskasten für die Leuchtenmasten liefern und montieren.;9,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+60;D2.2 Decken- oder Wandleuchte Materialcontainer mit Bewegungsmelder;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;Schukosteckdose IP 54 als 2er Kombination mit Klappdeckel.;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;Kabel NYY-J 5 x 16 mm² nach DIN VDE 0276 Teil 603, Cu-;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+20;Kabel NYY-J 5 x 10 mm² nach DIN VDE 0276 Teil 603, Cu-;175,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+30;Kabel NYY-J 3 x 10 mm² nach DIN VDE 0276 Teil 603, Cu-;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+40;Kabel NYM-J 3 x 1,5 mm² nach DIN VDE 0276 Teil 603, Cu-;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+50;Kabel NYY-J 7 x 1,5 mm² nach DIN VDE 0276 Teil 603, Cu-;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+60;LWL Kabel 8E9/125mikro m OS2 A-DQ(ZN)B2Y;70,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;Unterverteilung zur Montage in Container min IP 54  bestückt lt Detailplan SLP UV Lagercontainer mit :;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+20;Doppelsteckdose;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+30;Abzweigdosen a.P.FR IP 54;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+40;Erstprüfung der elektrischen Anlage und der;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;Kuparohr halogenfrei M25 halogenfrei nach DIN VDE V 0604-2-100;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+20;Kuparohr halogenfrei M40 halogenfrei nach DIN VDE V 0604-2-100;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;Herstellen, Errichten und Prüfen einer Erdungsanlage;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+20;Bestehende Erderanlage messen.;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+30;Potentialausgleichsschiene;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;Öffnung und Sicherung der Kabelzugschächte.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+20;Energiemonitoring mit Erstellung einer Webseite für Besucher im internen W-LAN und ggfs. nach Wunsch AG mit link auf anderer Webseite.;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+30;Erstprüfung der elektrischen Anlage und der;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+40;Zusammenstellung und Übergabe der Dokumentation.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Licht und Elektro  (Los 1).x83
+10;Durchmesser ca 2,2m;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Westernwindrad (Los 6).x83
+20;Verbundwechselrichter auf Laufeigenschaften des Windrades aus Vorposition optimiert.;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Westernwindrad (Los 6).x83
+30;Statik zur Gesamtanlage als Standsicherheitsnachweis zur Vorlage an Prüfstatiker.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Westernwindrad (Los 6).x83
+40;PV Dachauflage bestehend aus :;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Solardach (BA1)  (Los 2 ).x83
+50;Aufmaß der;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Solardach (BA1)  (Los 2 ).x83
+60;Werk- und Montageplanung der Dachauflage unter Berücksichtigung des Aufmaßes aus Vorposition.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Solardach (BA1)  (Los 2 ).x83
+10;Stringverkabelung bis zum allen Generatoranschlusskasten.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Solardach (BA1)  (Los 2 ).x83
+20;NYCWY 2 x 10mm²;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Solardach (BA1)  (Los 2 ).x83
+30;Generatoranschlusskasten in Edelstahlgehäuse mit Zylinderschloss;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Solardach (BA1)  (Los 2 ).x83
+40;Hybrid Wechselrichter für Speicher, PV Anlage, Parknetz und Einspeisung ins öffentliche Netz.;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Solardach (BA1)  (Los 2 ).x83
+50;Energiespeicher mit BMS in modularer Bauform.;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Solardach (BA1)  (Los 2 ).x83
+60;Gestell zur Montage des/der Wechselrichterr, da die Belastbarkeit der Containnerzwischenwand nicht bekannt ist.;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/Solardach (BA1)  (Los 2 ).x83
+10;Hubsteiger und Kran für die gesamte Montagezeit vorhalten inkl. Bedienungspersonal, Betriebsstoffe und An- und Abfahrt.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Solardach (BA1)  (Los 2 ).x83
+20;Attikableche demontieren und nach den Verkabelungsarbeiten wieder montieren.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Solardach (BA1)  (Los 2 ).x83
+30;Absperrung Arbeitsgebiet mit Bauzäunen für die gesamte Montagezeit.;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Solardach (BA1)  (Los 2 ).x83
+40;Lastverteilungsplatten liefern, während der gesamten Bauzeit  vorhalten , ggfs. umverlegen, nach Fertigstellung der Arbeiten wieder abtransportieren.;230,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/Solardach (BA1)  (Los 2 ).x83

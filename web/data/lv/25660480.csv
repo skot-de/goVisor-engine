@@ -1,0 +1,66 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+20;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;Psch;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+30;Bauzaun aus mobilen Stahlrahmenelementen mit Rundstahl-;50,0;m;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+40;Höhenfestpunkt nach DIN 18708 (Form B) aus Stahl, verzinkt herstellen aus einem 160 mm langen Bolzen (Rundkopf,;2,0;St;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+50;Absteckung des Brückenbauwerkes, sowie der Wege- und Bachachsen und -ränder.;1,0;psch;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+10;Bauzeitenplan als Netzplan, Zahlplan und Baustellen- einrichtungsplan detailliert und prüffähig liefern,;1,0;psch;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+20;Vor Beginn, während und nach Beendigung der;1,0;psch;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+30;Standsicherheitsnachweise für das gesamte Bauwerk (Überbau inkl. Lager, Geländer, Belag etc. und Auflagerbänke);1,0;psch;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+40;Ausführungszeichnungen für das gesamte Bauwerk (Überbau inkl. Lager, Geländer, Belag etc. und Auflagerbänke) und für alle Bauzustände und den Endzustand, sowie Werkstattzeichnungen für die werkseitig herzustellenden Fertigteile erstellen,;1,0;psch;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+50;Bestandsübersichtszeichnung gem. ZTV-ING, Teil 1, Abschn. 2 Pkt. 4.2, für jedes Teilbauwerk anfertigen und liefern, unter Einbeziehung unmittelbar angrenzender Bauwerke und Einrichtungen.;1,0;psch;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+60;Bestandsunterlagen gem. ZTV-ING, Teil 1, Abschn. 2 Pkt. 4.1 Abs. (2) , für jedes Teilbauwerk anfertigen und liefern.;1,0;psch;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+70;Bauwerksdaten mit einem Erfassungsprogramm auf der Datenbasis der ASB-ING gem. ARS 22/2013 nach Übernahme der vom AG bereit gestellten Grunddaten erfassen.;1,0;psch;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+80;Deklarationsanalyse für Aushubboden, Abbruchgut (auch abzubrechende Brückenteile aus Holz und Beton) und Auffüllungen nach Ersatzbaustoffverordnung 2023 durchführen.;2,0;St;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+90;Deklarationsanalyse für Aushubboden, Abbruchgut (auch abzubrechende Brückenteile aus Holz und Beton) und;2,0;St;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+10;Einrichtungen zur Verkehrssicherung und Verkehrsrege-;1,0;psch;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+10;Böschungen und Flächen im Bereich ddes Bauwerkes von störendem Bewuchs befreien.;50,0;m2;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+20;Papierkorb / Mülleimer (rechteckig auf einbetoniertem Standfuß) bauzeitlich abbauen, reinigen und zur Wiederverwendung vorbereiten und innerhalb der Baustelle lagern.;1,0;St;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+30;Hecke einschl. zugehöriger Wurzelstöcke roden.;3,0;m;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+40;Hecken und Sträucher währemd der Baumaßnahme mit;3,0;m;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+50;Baumschutz an Bäumen herstellen, einschl. aller;3,0;St;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+60;vorh. Zäune inkl. Türen und Tore abbauen.;10,0;m;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+70;Strauch aus Beet hera;3,0;St;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+80;Zulage zu zuvor beschriebenem Zaun für:;1,0;St;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+90;vorh. Zäune bauzeitlich abbauen.;5,0;m;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+100;vorh. Zäune und Einfriedungen einschl. Durchgänge,;10,0;m;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+110;Sicherung und Erhaltung der Höhenfestpunkte durch;1,0;psch;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+120;Die im Zuge des Straßenbau´s möglicherweise freigelegten Grenzsteine im Bereich der Baustelle sichern.;1,0;St;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+130;Bauschutt (Ziegelschutt, Steine etc.) und Erdhaufen;1,0;m3;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+140;Im Baufeld gefundenes Abfallmaterial ( Plast, Gummi;1,0;m3;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+10;Bauliche Anlage abbrechen.;1,0;psch;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+20;Betonplatten = Gehwegplatten einschl. Bettung aufbrechen und aufnehmen.;3,0;m2;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+30;Läuferzeile  aufnehmen.;5,0;m;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+10;Oberboden ggf. einschließlich Vegetationsdecke abtra-;10,0;m3;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+20;Boden und ungebundene Tragschichten aus Abtragsbereichen;25,0;m3;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+30;Zulage für evtl. im Untergrund vorgefundene;1,0;m3;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+40;Oberboden liefern und profilgerecht andecken. Abgerech-;10,0;m3;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+50;Böschungen entsprechend Neubauzustand;50,0;m2;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+60;Oberboden für Decksaat vorbereiten und ansäen. Das Saatgut einarbeiten und andrücken.;50,0;m2;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+10;Wasserhaltung in Abhängigkeit der gewählten Technologie nach Wahl des AN entsprechend hydrologischen und bautechnischen Erfordernissen herstellen, vorhalten, unterhalten, mehrmals entsprechend der Technologie der Bauabschnitte umbauen und beseitigen einschl. aller Nebenarbeiten.;1,0;psch;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+10;Untergrundverbesserung durchführen.;2,0;m3;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+20;Bewehrten Beton einschließlich Schalung nach Unterlagen;5,0;m3;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+30;Betonstahl entsprechend statischen und konstruktiven;1,0;t;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+10;Brückenüberbau aus Aluminium einschl. Lager, Geländer und Belag und einschl. Beschichtung liefern und gebrauchsfertig einbauen.;1,0;psch;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+20;Brückenüberbau wie in Vorposition beschreiben, jedoch:;1,0;psch;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+30;Preisauf- bzw. Preisabschlag zu zuvor genannten Überbaupsoitionen(hier Alu-Überbau) für:;10,0;m2;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+40;Preisauf- bzw. Preisabschlag zu zuvor genannten Überbaupsoitionen(hier Edelstahl-Überbau) für:;10,0;m2;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+10;Baustoff liefern und als Bauwerkshinterfüllung profil-;20,0;m3;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+10;Erosionsschutzmatte auf Böschungen, in Mulden oder;40,0;m2;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+10;Bach- bzw. Grabenbett durch Ausbaggern von Schlamm Geröll und Anlandungen säubern und anschließend höhenmäßig entsprechend Planung  an die neue Höhenlage angleichen und profilieren. Gleichmäßiges Gefälle im Ausbaubereich herstellen.;20,0;m2;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+20;Kolkschutzriegel aus Beton C20/25 X0 herstellen.;15,0;m;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+30;Wasserbaupflaster LMB 5/40 aus frostbeständigen;35,0;m2;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+10;Planum herstellen.;15,0;m2;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+20;Boden verdichten.;15,0;m2;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+30;Schottertragschicht herstellen.;5,0;m3;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+40;dynamische Schicht ohne Bindemittel nach DIN 18035, Teil 5, für Wege herstellen.;3,0;m2;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+50;wassergebundene Deckschicht ohne Bindemittel für Wege herstellen.;3,0;m2;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+10;Bordsteine aus Beton setzen.;10,0;m;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+20;Bordsteine auf Passmaß trennen.;5,0;St;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+30;Betonpflastersteine liefern.;10,0;m2;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+40;Pflasterdecke herstellen.;10,0;m2;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+50;Pflasterstreifen herstellen, einschließlich der erforderlichen Erdarbeiten;10,0;m;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+10;"Geotextiles Vlies entsprechend ""Merkblatt für die";100,0;m2;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+20;Mobile Baustraße aus Schwerlastplatten herstellen.;100,0;m2;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+30;Mobile Baustraße aus Vorposition vorhalten, täglich kontrollieren, warten (inkl. reinigen) und betreiben.;10000,0;m2d;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83
+40;Sämtliche für die Herstellung der Baustraße;1,0;psch;gaeb;leistungsbeschreibungen/2b_LV_70-26.X83

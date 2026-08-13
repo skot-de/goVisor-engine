@@ -1,0 +1,932 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Anfertigen von der Werk- und Montageplanung als 3D Modell entsprechend genanntem Hinweis für die gesamten Lieferungen und Leistungen des Auftragnehmers.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Rohrspannungsberechnung für alle vorher beschriebenen Gewerke.;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;In dieser Position sind durch den Auftragnehmer alle Lieferungen und Leistungen aufzunehmen, die zur ordnungsgemäßen, vorschriftsgemäßen und mangelfreien Durchführung der Lieferungen und Leistungen aller im Leistungsverzeichnis genannten Positionen bis zur Vollendung des Auftrages notwendig sind (in;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Projektabwicklung im Rahmen der MSR ist durch den Auftragnehmer auszuführen, hierbei:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Kabelliste 2-fach erstellen, beinhaltend die Darstellung von Leitungen und Kabeln mit Klemmen auf der Kabel- und Geräteliste sowie deren fortlaufende Nummerierung.;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Bezeichnung aller elektrischen Feldgeräte wie Fühler, Mischer, Pumpen, RLT-Anlagen, etc. in elektronischer Ausgabeform bestehend aus:;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch anstelle für Feldgeräte als Kabelbezeichnung mit Kabelbezeichnungsbinder.;250,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Abisolieren, Eindichten und Einführen der verlegten Elektroleitungen für alle im Leistungsverzeichnis enthaltenen elektrischen Bauteile, auch wenn diese nicht einzeln erwähnt wurden;120,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Stellen von Sicherheitsarbeitsgerüsten und Leitern nach UVV für die Dauer der gesamten Montagearbeiten einschl. Auf- und Abbau, An- und Abfahrt für alle Geschosse für die gesamte Bauzeit bis 10,0 m Arbeitshöhe ohne Hebebühnen.;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Beistellen von Hebe-/ Scherenbühnen mit elektrischem Antrieb für Arbeitshöhen bis 10,0 m. Hebebühnen aller Art als Hub-, Schertisch, etc.;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Stundensatz für Hebe-/ Scherenbühnen mit elektrischem Antrieb für Arbeitshöhen bis 10,0 m. Hebebühnen aller Art als Hub-, Schertisch, etc.;16,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;An- und Abfahrt für zuvor benannte Hebe-/ Scherenbühnen, die nach der regulären Bauzeit erforderlich sind.;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Bezeichnungsschilder aus Alublech mit abgeschrägten Kanten und eingravierter Schrift mit min. 3-zeiliger Beschriftung für Schriftgröße 12 bis 20.;200,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Zulage für Bezeichnungsschilder für Schilderhalter aus Alublech mit rückseitiger Befestigungsmöglichkeit an Wand oder Decke direkt,;100,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Flussrichtungspfeile in farbiger Ausführung, mit maschineller Beschriftung, zum Aufkleben an Rohrisolierung, Stahlkonstruktionen oder Kanäle, Lieferung und Montage nach DIN 2403, DIN 2404 und DIN 12792.;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Flussrichtungspfeile in farbiger Ausführung, mit maschineller Beschriftung, zum Aufkleben an Rohrisolierung, Stahlkonstruktionen oder Kanäle, Lieferung und Montage nach DIN 2403, DIN 2404 und DIN 12792.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Sonderschild entsprechend der Verwendung in angepasster Form als Klebeschild für Türaufkleber erstellen und anbringen (z. B. Hinweis-/ Gefahrenschilder, etc.).;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Revisionsplan des Schemas als CAD-Plot farbig angelegt, auf VK100 Platte 19 mm aufgeklebt, mit Plexiglasabdeckung in der Zentrale gut sichtbar aufhängen, einschl. der entsprechenden Wandaufhänger aus Edelstahl.;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuvor in vollem Wortlaut, jedoch Querung Dachflächen bis 0,5 m2, vertikal oder horizontal, rund oder eckig;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuvor in vollem Wortlaut, jedoch Querung von Wänden oder Decken bis 0,5 m2, vertikal oder horizontal, rund oder eckig;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Anfertigen von Bestandsunterlagen in 1-facher Ausfertigung entsprechend genanntem Hinweis für die gesamten Lieferungen und Leistungen des Auftragnehmers.;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Anfertigen von Bestandsunterlagen als 3D Modell entsprechend genanntem Hinweis für die gesamten Lieferungen und Leistungen des Auftragnehmers.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Bei der Neubauabnahme nach VOB werden neu gebaute Abwasserleitungen vor der Inbetriebnahme geprüft.;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Abpressen der Kondensatleitungen nach DIN, unter Verwendung von Druckmessgeräten, mit welchen ein einwandfreies Ablesen einer Druckänderung von 0,1 bar gestattet ist, das Druckmessgerät ist möglichst an der tiefsten Stelle der Leitungsanlage anzuordnen, die fertiggestellten aber noch nicht verdecken;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Absperren und Entleeren der Trinkwasserleitungen vom vorhandenen Leitungsnetz und Verschließen der Anschlüsse für die gesamte Bauphase.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch für Teilstrecken der Trinkwasser-Leitungen, separat Absperrbar;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Abpressen der Trinkwasserleitungen nach DVGW - DIN 1988, Teil 2, unter Verwendung von Druckmessgeräten, mit welchen ein einwandfreies Ablesen einer Druckänderung von 0,1 bar gestattet ist, das Druckmessgerät ist möglichst an der tiefsten Stelle der Leitungsanlage anzuordnen, die fertiggestellten abe;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt genannt, jedoch nur Abdrücken von Teilstrecken, welche aufgrund des Baufortschrittes fertig gestellt werden müssen, mit Kalkulation von Dichtheitsprüfungszeit und benötigten Materialien wie verlöten der Rohrenden oder Abstopfen.;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Absperren und Entleeren der Leitungen für Regenwassernutzung vom vorhandenen Leitungsnetz und Verschließen der Anschlüsse für die gesamte Bauphase.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch für Teilstrecken der Leitungen für Regenwassernutzung, separat Absperrbar;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Abpressen der Trinkwasserleitungen nach DVGW - DIN 1988, Teil 2, unter Verwendung von Druckmessgeräten, mit welchen ein einwandfreies Ablesen einer Druckänderung von 0,1 bar gestattet ist, das Druckmessgerät ist möglichst an der tiefsten Stelle der Leitungsanlage anzuordnen, die fertiggestellten abe;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Leistung wie zuletzt genannt, jedoch nur Abdrücken von Teilstrecken, welche aufgrund des Baufortschrittes fertig gestellt werden müssen, mit Kalkulation von Dichtheitsprüfungszeit und benötigten Materialien wie verlöten der Rohrenden oder Abstopfen.;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Druckprobe als Dichtigkeitsprüfung mit Schreiber pro Alarmgruppe, Alarmlinienverteiler oder Hydrantengruppe;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Spülen der Rohrleitung pro Alarmgruppe, Alarmlinienverteiler oder Hydrantengruppe;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Zulage zum Einregulieren der Filteranlagen inkl. Säubern nach erfolgter Inbetriebnahme.;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Zulage zum Einregulieren der Druckminderer aller Art, manuell oder elektronische.;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Zulage zum Einregulieren der Volumenstromregelventilen aller Art, manuell oder elektronische.;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Zulage zum Einregulieren der Temperaturregelventile aller Art, manuell oder elektronische.;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Zulage zum Einregulieren der Strangregler / Differenzdruckregler aller Art, manuell oder elektronische.;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Zulage zum Einregulieren der Umwälzpumpen inkl. sperren der Funktionen.;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Zulage zum Einregulieren der Hygienespülstellen und Dokumentation für Spülzeit, Spülmenge sowie Temperaturregelung.;45,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Die Inbetriebnahme beinhaltet folgende Punkte:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Die Inbetriebnahme beinhaltet folgende Punkte:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Generalinspektion/Leckageprüfung freistehender Fettabscheider;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Die Inbetriebnahme beinhaltet folgende Punkte:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Die Inbetriebnahme beinhaltet folgende Punkte:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;Inbetriebnahme und Einregulierung der vorstehenden Anlage. Die Inbetriebnahme beinhaltet:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+14;Inbetriebnahme der Schaltanlagen und Funktionsprobe der Steuerung entsprechend der, gemäß durch die Fachbauleitung freigegebenen, Funktionsliste mit zu erfüllenden Schaltungen.  Prüfen der angeschlossenen Antriebe auf richtige Drehrichtung. Messen der Motor-/Istströme und Einstellung der thermischen;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+15;Inbetriebnahme Automationsstation, bestehend aus:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+16;Übergabe / Aufschaltung auf GLT im Werk für erstellte Anlage bestehend aus:;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+17;Einweisung des Bedienpersonals zu einem vorgeschlagenen Termin des Bauherrn bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+18;Der Probebetrieb beginnt nach schriftlicher Anmeldung bei der Bauleitung, frühestens nach mangelfreier Übergabe und ausgeführter Vorabnahme (keine Abnahme).;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+19;Um der Forderung nach der Gesamtheit von Maschinen gemäß der EG-Maschinenrichtlinie 2006/42/EG (Mai 2006) zu entsprechen, ist eine Nachweisführung einschl. einer zugehörigen Dokumentation zu erbringen.;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+20;Abnahme der im Leistungsverzeichnis geführten Gewerke, nach der zuvor benannten Anforderungen.;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+21;VdS- Installationsattest bezogen auf die beschriebenen Montageleistungen gemäß den geltenden Richtlinien für sämtliche Anlagenteile erstellen;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+22;Funktionsprüfung und Inbetriebnahme der beschriebenen Anlagen und Anlagenteile;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+23;Konformitätserklärungen und -Bescheinigungen gemäß DGRL bezogen auf die in diesem Untertitel beschriebenen Montageleistungen;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+24;Einweisung des Bedienungspersonals des Auftragsgebers in Funktion, Bedienung und Wartung der Feuerlöschanlage durch einen Fachingenieur oder -Techniker bezogen auf die beschriebenen Montageleistungen einschließlich;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+26;Abnahme der im Leistungsverzeichnis geführten Gewerke, nach der zuvor benannten Anforderungen.;1,0;psch;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+27;Während dem durch Dritte ausgeführten und koordinierten Inbetriebnahmemanagement / Monitoringmanagement hat der Auftragnehmer folgendermaßen mitzuwirken:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Tarifliche Lohnstunde;60,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Tarifliche Lohnstunde;60,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Tarifliche Lohnstunde;60,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Tarifliche Lohnstunde;60,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Tarifliche Lohnstunde;30,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Tarifliche Lohnstunde;20,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Zuschlag für Arbeiten außerhalb der üblichen;8,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Zuschlag für Arbeiten außerhalb der üblichen;20,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Zuschlag für Arbeiten außerhalb der üblichen;15,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Zuschlag für Arbeiten außerhalb der üblichen;10,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Zuschlag für Arbeiten außerhalb der üblichen;10,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Zuschlag für Arbeiten außerhalb der üblichen;5,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;16,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;55,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;85,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;55,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+16;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+17;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+18;Leistung wie zuletzt in vollem Wortlaut, jedoch;130,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+19;Leistung wie zuletzt in vollem Wortlaut, jedoch;100,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;55,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;85,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;60,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;13,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;145,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;110,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;115,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Zulage für das verschließen von Aussparungen mit Brandschutzanforderung an die Querung für das Anbringen eines Ausführungsschildes. Gemäß Zulassungsbescheid muss die Rohrabschottung mit einem Ausführungsschild dauerhaft gekennzeichnet werden. Ausführungsschild beschriften und neben der Rohrabschottu;7,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Feuerbeständiger Mörtel auf Zementbasis mit wärmeisolierender Wirkung durch Perlite gemäß Herstellerangabe verarbeiten, Liefermenge 20 kg,;5,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;35,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Form-/ Hohlprofilstahl nach Angabe der Projektleitung bearbeiten und herstellen von Konstruktionen für Stütz-, Hänge-, Trag- und Sonderauflager aus bandverzinkter Stahl zur Schaffung von Sonderbefestigungen.;150,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Zuschlag für genannte Sonderbefestigung zur gesamten Bauteillackierung nach Standard-RAL-Ton über das Standard-Programm.;20,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;7,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;48,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;380,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;285,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;130,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;1040,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;70,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;105,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;350,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;100,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;125,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+16;Leistung wie zuletzt in vollem Wortlaut, jedoch;150,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+17;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+18;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+19;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+20;Leistung wie zuletzt in vollem Wortlaut, jedoch;120,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+21;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+22;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+23;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+24;Leistung wie zuletzt in vollem Wortlaut, jedoch;35,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+25;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+26;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+27;Leistung wie zuletzt in vollem Wortlaut, jedoch;110,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+28;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+29;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+30;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+31;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+32;Leistung wie zuletzt in vollem Wortlaut, jedoch;45,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+33;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+34;Leistung wie zuletzt in vollem Wortlaut, jedoch;100,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+35;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+36;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+37;Leistung wie zuletzt in vollem Wortlaut, jedoch;35,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+38;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+39;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+40;Leistung wie zuletzt in vollem Wortlaut, jedoch;80,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+41;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+42;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+43;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+44;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+45;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+46;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+47;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+48;Leistung wie zuletzt in vollem Wortlaut, jedoch;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+49;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+50;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+51;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+52;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+53;Leistung wie zuletzt in vollem Wortlaut, jedoch;55,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+54;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+55;Leistung wie zuletzt in vollem Wortlaut, jedoch;100,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+56;Leistung wie zuletzt in vollem Wortlaut, jedoch;60,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+57;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+58;Leistung wie zuletzt in vollem Wortlaut, jedoch;250,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+59;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+60;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+61;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+62;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+63;Leistung wie zuletzt in vollem Wortlaut, jedoch;45,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+64;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;35,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;400,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;60,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;35,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;190,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+16;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+17;Leistung wie zuletzt in vollem Wortlaut, jedoch;70,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+18;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+19;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+20;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Röhrengeruchverschluss, geprüft nach DIN 19545, mit Zuflussrohr, mit Trichter für mehrere Überläufe, mit Abflussstutzen, mit Rosette für Abflussstutzen, mit Dichtungssatz, Werkstoff: Polypropylen;80,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Röhrengeruchverschluss, mit Zuflussrohr, mit Trichter für mehrere Überläufe, mit Abflussstutzen, mit Rosette für Abflussstutzen, mit Dichtungssatz, Werkstoff: verzinktes Blech mind. 0,8 mm.;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Kondensatablauf / Geruchsverschluss DN 40, teiltransparent zum Entwässern von RLT-Anlagen.;75,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;"Füll-/ Entleerkugelhahn aus Rotguss PN 16, 1/2"" Durchgang,  selbstdichtend mit Abdicht-Endkappe für Temperaturen bis +130°C Mediumstemperatur und 50°C Umgebungstemperatur.";15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Ablaufkörper gem. DIN EN 1253 / DIN 19599 aus Gusseisen bestehend aus:;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Aufsatzstück aus Kunststoff Stutzendurchmesser 198 mm, Dünnbett mit angespritztem Kunststoffvlies für die Dünnbettanbindung Rahmen aus Edelstahl 196*196 mm, Schlitzrost aus Edelstahl, verschraubt, geeignet mit Verschieberahmen höhenverstellbar, mit Abdichtring;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Für vom Küchenbauer gelieferte, montierte und eingedichtete Kastenrinnen aus Edelstahl 1.4301 ist der abwasserseitige Anschluss an den entsprechenden Ablaufkörper DN 100, Stutzenneigung 90 °, innerhalb des Hohlraumbodens mit PP-MX Rohr und Formteilen zu erfolgen.;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Für vom Küchenbauer gelieferte, montierte und eingedichtete Bodenabläufe aus Edelstahl 1.4301 ist der abwasserseitige Anschluss an den entsprechenden Ablaufkörper DN 100, Stutzenneigung 90 °, innerhalb des Hohlraumbodens mit PP-MX Rohr und Formteilen zu erfolgen.;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Be-/ Entlüftung für Einbau in Flachdächern mit zwei Dichtungsebenen als Warmdach, zweiteilig, schlagfest, UV-beständig, witterungsbeständig, temperaturbeständig bis mind. 90°, geeignet auch für Anschluss von Bitumen, bestehend aus:;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Leistung wie Zuletzt in vollem Wortlaut, jedoch Ausführung;35,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Leistung wie Zuletzt in vollem Wortlaut, jedoch Ausführung;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Kompakte, anschlussfertige, vollüberflutbare Doppelpumpen-Hebeanlage zur Förderung von fäkalienhaltigem Abwasser.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;Absperrschieber mit Plattenelement und Flanschanschlüssen zum Absperren des Rohrleitungsnetzes. Inkl. Montagezubehör.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+14;Absperrschieber mit Plattenelement und festen HT-/KG-Flanschanschlüssen zum Absperren des Rohrleitungsnetzes.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+15;Handmembranpumpe zur manuellen Entleerung eines Sammelbehälters. Festinstallation und mobiler Einsatz möglich. Das abgepumpte Medium muss direkt in die Druckrohrleitung oder einer anderen Sammelstelle zugeführt werden.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+16;Kugelhahn zum Umschalten zwischen 2 Kreisläufen:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+17;Fettabscheideranlage für fetthaltige Abwasser aus Kantinen- und Küchenbetrieb, Werkstoff 1.4571, zur Freiaufstellung in frostgeschützten Räumen, Bauform oval ohne Trennwand mit Direktabsaugung, Nenngröße Fettabscheideranlage NS 7 gemäß DIN EN 1825 u. DIN 4040-100, aus Edelstahl, mit:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+18;Fettschichtdickenmessgerät für Fettabscheideranlagen zur elektronischen Messung der Fettschicht. Geeignet für flüssige und/oder aushärtende Fette. Mit zwei potentialfreien Wechslerkontakten zur Anzeige Vollmeldung;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+19;"Fülleinheit als Freier Auslauf gemäß DIN 1988 Teil 4, zum Anschluss ans Trinkwassernetz mit Kugelhahn G ¾""";1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+20;Schauglas DN 200 mit Scheibenwischer, mit Markierung der Fettschichtdicke;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+21;Probenahmerohr DN 150/DN 150, Edelstahl, Werkstoff 1.4571 in runder Ausführung zum Einbau in senkrechte Rohrleitungen hinter Abscheider, mit CE-Verbinder und Tempo-Kralle, Anschlüsse DIN 19522 - SML-Rohr;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+22;Probeentnahmetopf für Fettabscheider, in runder Ausführung, zum Einbau in senkrechte Rohrleitungen DN 150 hinter Abscheideranlagen, mit CE-Verbinder und Tempo-Kralle, Werkstoff 1.4571, Anschlüsse gemäß DIN EN 877;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+23;Absperrschieber mit Handrad DN 150, Baulänge 60 mm Werkstoff Gehäuse GG 25, Schieberplatte und Spindel Edelstahl, einschließlich Schrauben und Dichtungen;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+24;Flanschanschlussergänzungsteil DN 150 Flanschmaße gemäß DIN 2501, PN 10 bestehend aus:;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+25;Rohr-Anschluss-Set für Fettabscheider, bestehend aus: Bogen 87,5° mit Beruhigungsstrecke und Rohrleitung L = 1500 mm, Edelstahl, Werkstoff 1.4404;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+26;Anschlusskasten als Entsorgungsanschluss und Fernbedienung der fetthaltigen Lagerungen aus dem Fettabscheider, aus Edelstahl, Werkstoff 1.4301, Anbringung Aufputz, Abmessungen (bxhxt) 500 x 500 x 160 mm;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+27;Unterputzrahmen für zuvor genannten Anschlusskasten, Abmessungen (bxhxt) 565 x 565 x 15 mm;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+28;Betriebstagebuch für Fettabscheider,ausgelegt für 5 Jahre, enthalten sind: Checklisten und Formblätter zur Dokumentation der Eigenkontrolle, Wartung und Entsorgung der Anlage gemäß DIN4040-100, umfasst 60 Seiten, 2-fache Ringösenheftung;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;380,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;285,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;130,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;1040,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;70,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;35,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;250,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;35,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;400,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;115,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;230,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;70,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;400,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;230,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;70,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;150,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;35,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Sonderformteil erstellen für;75,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;150,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;150,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Zulage für das verschließen von Aussparungen mit Brandschutzanforderung an die Querung für das Anbringen eines Ausführungsschildes. Gemäß Zulassungsbescheid muss die Rohrabschottung mit einem Ausführungsschild dauerhaft gekennzeichnet werden. Ausführungsschild beschriften und neben der Rohrabschottu;220,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Feuerbeständiger Mörtel auf Zementbasis mit wärmeisolierender Wirkung durch Perlite gemäß Herstellerangabe verarbeiten, Liefermenge 20 kg,;150,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Steuermodul mit Thermostat mit Rohranlegefühler und Alarmmeldekontakt, Temperaturbereich 0°C bis +150°C. Digitale Anzeige von Temperaturen und Fehlermeldungen.;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Anschluss- und Endabschlussgarnitur für Frostband, bestehend aus PG-Verschraubung, Schrumpfschläuchen und Schlitzdichtungen;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Halogenfreies, selbstverlöschendes und raucharmes Heizband neuester Generation, bestehend aus: Zwei parallelen, verzinnten Kupferlitzen, 1,2 mm2, dem dazwischenliegenden molekular-vernetzten, selbstregelnden Heizelement, einer elektrischen Isolierhülle und einem Schutzmantel aus selbstverlöschenden,;400,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Temperaturhalteband-T-Abzweig mit Stromanschluss, bestehend aus:;14,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Temperaturhalteband-Muffe mit Stromanschluss, bestehend aus:;14,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Isoliereinführung  für Blechummantelungen zur sicheren und reibungslosen Einführung von Temperaturhaltebändern, Kabeln oder Rohranlegefühlern.;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Nylon Kabelbinder für Rohre aller Art, DN 10 bis DN 100, Temperatur- (160°C) und UV-beständig;800,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Befestigungswinkel (Edelstahl V4A) für Anschluss- und Verbindungskasten;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;"Kennzeichnungsaufkleber ""Achtung - el. Begleitband, Netzspannung 230 V"", alle 5 m bei Aufputz-Rohrführung auf der Dämmung bzw. dem Blechmantel befestigen";135,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Steuermodul mit Thermostat mit Rohranlegefühler und Alarmmeldekontakt, Temperaturbereich 0°C bis +150°C. Digitale Anzeige von Temperaturen und Fehlermeldungen.;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Anschluss- und Endabschlussgarnitur für Frostband, bestehend aus PG-Verschraubung, Schrumpfschläuchen und Schlitzdichtungen;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Halogenfreies, selbstverlöschendes und raucharmes Heizband neuester Generation, bestehend aus: Zwei parallelen, verzinnten Kupferlitzen, 1,2 mm2, dem dazwischenliegenden molekular-vernetzten, selbstregelnden Heizelement, einer elektrischen Isolierhülle und einem Schutzmantel aus selbstverlöschenden,;50,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;Temperaturhalteband-T-Abzweig mit Stromanschluss, bestehend aus:;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+14;Temperaturhalteband-Muffe mit Stromanschluss, bestehend aus:;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+15;Isoliereinführung  für Blechummantelungen zur sicheren und reibungslosen Einführung von Temperaturhaltebändern, Kabeln oder Rohranlegefühlern.;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+16;Nylon Kabelbinder für Rohre aller Art, DN 10 bis DN 100, Temperatur- (160°C) und UV-beständig;100,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+17;Befestigungswinkel (Edelstahl V4A) für Anschluss- und Verbindungskasten;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+18;"Kennzeichnungsaufkleber ""Achtung - el. Begleitband, Netzspannung 230 V"", alle 5 m bei Aufputz-Rohrführung auf der Dämmung bzw. dem Blechmantel befestigen";15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;70,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;100,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;220,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch;330,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;70,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+16;Leistung wie zuletzt in vollem Wortlaut, jedoch;115,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+17;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+18;Leistung wie zuletzt in vollem Wortlaut, jedoch;380,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+19;Leistung wie zuletzt in vollem Wortlaut, jedoch;45,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+20;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+21;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+22;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+23;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+24;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+25;Leistung wie zuletzt in vollem Wortlaut, jedoch;150,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+26;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+27;Leistung wie zuletzt in vollem Wortlaut, jedoch;60,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+28;Leistung wie zuletzt in vollem Wortlaut, jedoch;110,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+29;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+30;Form-/ Hohlprofilstahl nach Angabe der Projektleitung bearbeiten und herstellen von Konstruktionen für Stütz-, Hänge-, Trag- und Sonderauflager aus bandverzinkter Stahl zur Schaffung von Sonderbefestigungen.;1800,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+31;Zuschlag für genannte Sonderbefestigung zur gesamten Bauteillackierung nach Standard-RAL-Ton über das Standard-Programm.;270,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+32;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+33;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+34;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+35;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+36;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+37;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+38;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+39;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Fertigkonsole mit aufgeschweißter Zweiloch-Grundplatte zur schnelle Befestigung an Montageschienen bis zu einer Breite von 40 mm, geeignet für die Rohre- und Kanalmontage.;80,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Fertigkonsole mit aufgeschweißter Zweiloch-Grundplatte zur schnelle Befestigung an Montageschienen bis zu einer Breite von 40 mm, geeignet für die Rohre- und Kanalmontage.;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Verbinder zur optimierten Befestigung von Rahmenkonstruktionen aus Montagschienen bis 40 mm.;80,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Grundplatte mit zentrischem Gewindeanschluss zur Anbindung an Trägerprofile bis zu 80 mm Breite.;80,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;180,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;35,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Form-/ Hohlprofilstahl nach Angabe der Projektleitung bearbeiten und herstellen von Konstruktionen für Stütz-, Hänge-, Trag- und Sonderauflager aus feuerverzinkter Stahl zur Schaffung von Sonderbefestigungen.;250,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Für den Einbau in einer Ständerwand oder in einer Trockenbau Vorwand vor einer Massiv- oder Ständerwand vormontierte Einheit, bestehend aus:;125,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Für den Einbau in einer Ständerwand oder in einer Trockenbau Vorwand vor einer Massiv- oder Ständerwand vormontierte Einheit, bestehend aus:;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Für den Einbau in einer Ständerwand oder in einer Trockenbau Vorwand vor einer Massiv- oder Ständerwand vormontierte Einheit, bestehend aus:;45,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Für den Einbau in einer Ständerwand oder in einer Trockenbau Vorwand vor einer Massiv- oder Ständerwand vormontierte Einheit, bestehend aus:;95,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Für den Einbau in einer Ständerwand oder in einer Trockenbau Vorwand vor einer Massiv- oder Ständerwand vormontierte Einheit, bestehend aus:;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Für den Einbau in einer Ständerwand oder in einer Trockenbau Vorwand vor einer Massiv- oder Ständerwand vormontierte Einheit, bestehend aus:;19,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Für den Einbau in einer Ständerwand oder in einer  Trockenbau Vorwand vor einer Massiv- oder Ständerwand vormontierte Einheit, bestehend aus:;7,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Für den Einbau in einer Ständerwand oder in einer Trockenbau Vorwand vor einer Massiv- oder Ständerwand vormontierte Einheit, bestehend aus:;33,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Traverse im Wandhohlraum, aus Mehrschichtholzplatte mit Stahlblechprofilen, verzinkt, Konsollast bis 1,5 kN/m Wandlänge.;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Wand-WC-Tiefspüler für 6 Liter Spülung mit 180 mm Lochabstand aus Sanitärkeramik, außen glatte, geschlossene rechteckige Bauform, vorn übergehend in einen Halbkreis. Wandanschluss mit Aufkantung. Aus Hygienegründen mit geschlossenem Spülrand und keramischem Spülwasserverteiler, einschl. Befestigungs;125,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;WC-Sitz mit Deckel passend zu zuvor genannten WC-Anlagen in Anlehnung an das bemusterte Fabrikat nach Standardvorgabe, aus Kunststoff, mit Edelstahlscharnieren.;125,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Abdeckplatte, Betätigungsplatte zur manuellen Spülauslösung von WC-Anlagen, passend zu 2-Mengen oder Start-Stopp-UP-Elementen für WC-Anlagen und WC-Anlagen (BF), bestehend aus:;125,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Wand-Urinal, mit 250 mm Lochabstand aus weißer Sanitärkeramik, außen glatte, geschlossene Bauform, mit Spülrand. Aus Hygienegründen mit geschlossenen Seitenflächen, mit Pflegeschutzeinlassung als Oberflächenbeschichtung als Absaugurinal, mit Prüfzeichen PA I 3288, für Zulauf verdeckt und Ablauf verd;45,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Wand-WC-Tiefspüler für 6 Liter Spülung mit 180 mm Lochabstand aus Sanitärkeramik, außen glatte geschlossene rechteckige Bauform, vorn übergehend in einen Halbkreis. Wandanschluss mit Aufkantung. Aus Hygienegründen mit geschlossenem Spülrand und keramischem Spülwasserverteiler, einschl. Befestigungsm;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;WC-Sitz für Barrierefreie WC-Anlagen ohne Deckel passend zu zuvor genannten WC-Anlagen in Anlehnung an das bemusterte Fabrikat nach Standardvorgabe, aus Kunststoff, mit Edelstahlscharnieren.;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Abdeckplatte, Fertigbauset zur Urinalauslösung elektronisch sichtbar, vandalensicher bestehend aus:;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Waschtisch-Schallschutzset bestehend aus Schallschutzband, Gummihülsen, Unterlegscheiben mit Gummiauflage aus Naturkautschuk;95,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Waschtisch mit Überlauf aus weißer Sanitärkeramik mit Hahnlochbank für Einlocharmatur, mittig. Rechteckiger Waschtisch, einschl. Befestigungsmaterial als Schallschutzbefestigungsset, Montagehöhe 850 mm.;95,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Waschtisch-Einhand-Einlocharmatur mit Keramikscheiben mit integrierten Fettdepots;12,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Waschtisch-Einhand-Einlocharmatur mit Keramikscheiben mit integrierten Fettdepots;83,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;"Eckventil aus Messing verchromt, DN 15, als Absperr- und Anschlussventil, Geräuschverhalten gemäß DIN 4109,Gruppe I, mit Gewindeanschluss, Kappenhandrad, Schubrosette und Filtersieb; Prüfzeichen nach PA-IX 198/ IA";110,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;"Zugstangen-Ablaufgarnitur 1 1/4"" für Waschtische, chrom";95,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+14;Flaschen-Geruchsverschluss aus Messing verchromt, Prüfzeichen gemäß DIN 19 545, als Röhrengeruchverschluss mit Verstellrohr bis 250 mm, Abgangsbogen 220 mm und Rosette 32 x 80 x 26 mm.;95,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+15;Waschtisch-Schallschutzset bestehend aus Schallschutzband, Gummihülsen, Unterlegscheiben mit Gummiauflage aus Naturkautschuk;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+16;Waschtisch aus weißem Sanitärporzellan nach DIN EN 14688 ohne Überlauf, mit Hahnloch mittig. Rechteckiger Waschtisch, einschl. Befestigungsmaterial als Schallschutzbefestigungsset, Montagehöhe 850 mm.;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+17;Netzabhängige, opto- elektronisch gesteuerte Waschtischarmatur DN 15 mit diebstahlsicherem Luftsprudler mit integriertem Mengenregler. Zum Anschluss an Warmwasser und Kaltwasser mit Temperaturwahlgriff an Armatur. Einzelsteuerung in Kompaktbauweise mit Steuerelektronik, Magnetventilkartusche, 230 V ;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+18;Netzabhängige, opto- elektronisch gesteuerte Waschtischarmatur DN 15 mit diebstahlsicherem Luftsprudler mit integriertem Mengenregler. Zum Anschluss an  Kaltwasser in Verbindung mit einem druckfesten Untertisch-Durchlauferhitzer mit Temperaturwahlgriff an Armatur. Einzelsteuerung in Kompaktbauweise ;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+19;"Eckventil aus Messing verchromt, DN 15, als Absperr- und Anschlussventil, Geräuschverhalten gemäß DIN 4109,Gruppe I, mit Gewindeanschluss, Kappenhandrad, Schubrosette und Filtersieb; Prüfzeichen nach PA-IX 198/ IA";8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+20;Schaft-Ablaufventil für Waschtisch mit Haube, zum Anschluss von Röhrengeruchsverschlüssen, Schaftlänge 45 mm, verchromt;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+21;"Wandeinbau-Geruchsverschluss für Waschbecken DN 50, mit Abdeckplatte 18,2x33,5cm, weiß, Anschlussbogen d=40mm, mit Überwurfmutter 11/4"" weiß, Abgangsdimension d=50 und d=56mm, mit Dichtungsmaterial";6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+22;Spülbecken / Ausgussbecken 505 x 330 mm (b x t) aus Stahl, innen und außen weiß emailliert, mit 3-seitigem Kunststoffrand, Abgang 50 mm, mit Außengewinde, NW 40, ohne Überlauf, Randprofile grau, Ablaufventil mit Stopfen verchromt und Kette.;19,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+23;"Einhebelmischer für Kalt-/ Warmwasser für Wandmontage, Rohrauslauf mit Laminarstrahlregler, gerade Anschlüsse 3/8"" x 1/2"", Ausladung 100 mm, schwenkbar, inkl. S-Anschlüssen absperrbar";17,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+24;"Einhebelmischer für Kaltwasser in Verbindung mit einem druckfesten Übertisch-Durchlauferhitzer für Wandmontage, Rohrauslauf mit Laminarstrahlregler, gerade Anschlüsse 3/8"" x 1/2"", Ausladung 100 mm, schwenkbar, inkl. S-Anschlüssen absperrbar";2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+25;Röhren-Geruchsverschluss als Raumsparmodell für die Ableitung von Spülbeckenanlagen / Ausgussbeckenanlagen mit einem Becken inkl. Anschluss einer Spülmaschine mit Anschlussring und Klemmverbindung.;19,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+26;"Eckventil aus Messing verchromt, DN 15, als Absperr- und Anschlussventil, Geräuschverhalten gemäß DIN 4109,Gruppe I, mit Gewindeanschluss, Kappenhandrad, Schubrosette und Filtersieb; Prüfzeichen nach PA-IX 198/ IA";5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+27;"Eckventil aus Messing verchromt, DN 15, als Absperr- und Anschlussventil, Geräuschverhalten gemäß DIN 4109,Gruppe I, mit Gewindeanschluss, Kappenhandrad, Schubrosette und Filtersieb; Prüfzeichen nach PA-IX 198/ IA,";30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+28;Röhren-Geruchsverschluss als Raumsparmodell für die Ableitung von Spülbeckenanlagen mit zwei Becken inkl. Anschluss einer Spülmaschine mit Anschlussring und Klemmverbindung.;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+29;Ablaufkörper gem. DIN EN 1253 / DIN 19599 aus Gusseisen bestehend aus:;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+30;Zulage für Guss-Bodenablauf, für Brandschutzmanschette R 90, zum mörtellosen Einbau in Kernbohrungen, Kernbohrung 225 mm, Höhe 150 mm, mit Brandschutz-Set sowie Brandschutzschaum für Ringspaltverfüllung, aus Material A1, nicht brennbar (Kartusche mit 215 mm).;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+31;Zulage für Guss-Bodenablauf für Kombi-Geruchsverschluss mit Hitzeschild für Feuerwiderstandsdauer R 90, als Mehrpreis zu Grundgeruchsverschluss im Grundkörper des Ablaufs enthalten.;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+32;Zulage für Guss-Bodenablauf für Aufsatzstück nach Dünnbettverfahren bestehend aus:;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+33;Quadratische Duschwanne, (bxlxh) 800 x 800 x 85 mm (+/- 50 x 50 x 10 mm) mit glatter Oberfläche aus weißem Sanitäracryl, inkl. Rutschhemmung, in bodenaufgesetzter Ausführung geeignet für den Anschluss an einen Standard-Duschablauf, Position Mitte, Ausführung mit umlaufendem Rand zur Aufnahme der Abd;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+34;Unterkonstruktion für Duschwanne bestehend aus Duschwannenfüße aus Stahl, mit Kunststoff-Auflagern, höhenverstellbar 100-185 mm.;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+35;Duschwannenablauf, Ablaufdurchmesser = 90 mm, chrom, mit Geruchsverschluss auf Kunststoff und waagerechtem Abgang, Sperrwasserhöhe mindestens 50 mm;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+36;"Unterputz-Einbaukörper (ohne Fertigmontageset) für Wandeinbau, Dehnstoff-Thermostat, Integrierte Mischwasserabsperrung oben, Keramik Oberteil 1/2"" 180°, Abgang oben 1/2"" absperrbar, Abgang unten 1/2"" nur mit separatem Absperrventil verwendbar, eingebaute Rückflussverhinderer, Schmutzfangsiebe und Be";6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+37;Fertigmontageset für 34 966 ohne Unterputz-Körper, Rosetten- und Schaftabdichtungen, verdeckte Befestigung, Mengengriff mit Spartaste und individuell einstellbarem Sparanschlag, Temperaturwählgriff mit Sicherheitssperre 38°C, chrom;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+38;Elastomer UP-Einbau-Set für Trockenausbau 34 100, Elastomer-Einbaukörper, Verlängerungen und Befestigungsmaterial, Einbautiefenausgleich durch Faltbalg;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+39;Ablaufkörper gem. DIN EN 1253 / DIN 19599 aus Gusseisen bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+40;Zulage für Guss-Bodenablauf, für Brandschutzmanschette R 90, zum mörtellosen Einbau in Kernbohrungen, Kernbohrung 225 mm, Höhe 150 mm, mit Brandschutz-Set sowie Brandschutzschaum für Ringspaltverfüllung, aus Material A1, nicht brennbar (Kartusche mit 215 mm).;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+41;Zulage für Guss-Bodenablauf für Kombi-Geruchsverschluss mit Hitzeschild für Feuerwiderstandsdauer R 90, als Mehrpreis zu Grundgeruchsverschluss im Grundkörper des Ablaufs enthalten.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+42;Zulage für Guss-Bodenablauf für Aufsatzstück nach Dünnbettverfahren bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+43;"Unterputz-Einbaukörper (ohne Fertigmontageset) für Wandeinbau, Dehnstoff-Thermostat, Integrierte Mischwasserabsperrung oben, Keramik Oberteil 1/2"" 180°, Abgang oben 1/2"" absperrbar, Abgang unten 1/2"" nur mit separatem Absperrventil verwendbar, eingebaute Rückflussverhinderer, Schmutzfangsiebe und Be";1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+44;Fertigmontageset für 34 966 ohne Unterputz-Körper, Rosetten- und Schaftabdichtungen, verdeckte Befestigung, Mengengriff mit Spartaste und individuell einstellbarem Sparanschlag, Temperaturwählgriff mit Sicherheitssperre 38°C, chrom;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+45;Elastomer UP-Einbau-Set für Trockenausbau 34 100, Elastomer-Einbaukörper, Verlängerungen und Befestigungsmaterial, Einbautiefenausgleich durch Faltbalg;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Rechtwinklig gebogener, U-förmiger Halter, nach rechts geöffnet, klappbar, diebstahlgeschützt durch verdeckte Verschraubung, zur Wandmontage, leicht zu reinigen, Edelstahloberfläche mit Kern aus Stahl oder Kunststoff, inkl. Befestigungsmaterial;125,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Zylindrischer Reserve-Papierhalter mit runder Rosette, diebstahlgeschützt durch verdeckte Verschraubung, zur Wandmontage, leicht zu reinigen, Edelstahloberfläche mit Kern aus Stahl oder Kunststoff, inkl. Befestigungsmaterial;125,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Bürstengarnitur bestehend aus:;125,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Zylindrischer Papierhalter mit runder Rosette, diebstahlgeschützt durch verdeckte Verschraubung, zur Wandmontage,  leicht zu reinigen, 90° gebogen für senkrechte Rollenlage, Kunststoff in reinweiß, inkl. Befestigungsmaterial;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Bürstengarnitur bestehend aus:;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Zwei parallele, übereinander angeordnete, durch einen Verbindungsbogen zusammengefügte Stangen, dienen zum Festhalten und Abstützen, belastbar nach DIN 18040 (Stützlast 100 kg), leicht zu reinigen, kann nach oben und gebremst nach unten geklappt und in hochgeklappter Stellung nach links oder rechts ;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Zwei parallele, übereinander angeordnete, durch einen Verbindungsbogen zusammengeführte Stangen mit zwei integrierten Tasten dient zum Festhalten und Abstützen, belastbar nach DIN 18040 (Stützlast 100kg) leicht zu reinigen, Stützklappgriff kann nach oben und gebremst nach unten geklappt und in hochg;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Gepolsterte Lehne mit beidseitig angebrachten, rechtwinklig gebogenen Befestigungsstangen, dient zum Abstützen des Rückens auf dem WC, leicht zu reinigen, mit durchgehendem, korrosionsgeschütztem Stahlkern, zur Befestigung an Stützklappgriffen oder Wandstützgriffen mit Wandplatte, erfüllt die Anford;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Abfallbehälter zur Wandmontage mit Deckel, nach oben Klappbar, mit zwei Edelstahlscharnieren verdeckt angeordnet, gesamt aus Edelstahl. Größe ca. (h/b/t) 600 x 400 x 250 mm, inkl. Befestigungsmaterial.;95,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Zwei parallele, übereinander angeordnete, durch einen Verbindungsbogen zusammengefügte Stangen, dienen zum Festhalten und Abstützen, belastbar nach DIN 18040 (Stützlast 100 kg), leicht zu reinigen, kann nach oben und gebremst nach unten geklappt und in hochgeklappter Stellung nach links oder rechts ;12,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Abfallbehälter zur Wandmontage mit Deckel, nach oben Klappbar, mit zwei Edelstahlscharnieren verdeckt angeordnet, gesamt aus Edelstahl. Größe ca. (h/b/t) 600 x 400 x 250 mm, inkl. Befestigungsmaterial.;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Abfallbehälter zur Wandmontage mit Deckel, nach oben Klappbar, mit zwei Edelstahlscharnieren verdeckt angeordnet, gesamt aus Edelstahl. Größe ca. (h/b/t) 600 x 400 x 250 mm, inkl. Befestigungsmaterial.;19,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;Brauseset Edelstahl bestehend aus:;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+14;Wandanschlussbogen mit 2 Rückflussverhinderern (RV), DN 15, Edelstahl;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+15;"Dichtmanschette für Wandscheiben 1/2"" aus Vlies, mit Gummi-Dichtkragen. Vor Fliesenarbeiten.";6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+16;Duschkorb in gerader Ausführung zur Wandmontage, bestehend aus Edelstahlhalter, matt geschliffenn, mit Einsatz aus hochwertigem Kunststoff in RAL 7016. Größe (h/b/t) 67 x 220 x 115 mm, inkl. Befestigungsmaterial.;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+17;Brauseset Edelstahl bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+18;Wandanschlussbogen mit 2 Rückflussverhinderern (RV), DN 15, Edelstahl;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+19;"Dichtmanschette für Wandscheiben 1/2"" aus Vlies, mit Gummi-Dichtkragen. Vor Fliesenarbeiten.";1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+20;Konstruktion aus Stangen und Sitzelementen, dient als Sitzgelegenheit im Duschbereich, kann hochgeklappt werden, Neigung der Sitzfläche ist verstellbar, mit durchgehendem, korrosionsgeschütztem Stahlkern und Wandplatte aus Polyamid mit integriertem Stahlkern, maximale Belastung 150 kg, Montage an de;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+21;Zwei parallele, übereinander angeordnete, durch einen Verbindungsbogen zusammengefügte Stangen, dienen zum Festhalten und Abstützen, belastbar nach DIN 18040 (Stützlast 100 kg), leicht zu reinigen, kann nach oben und gebremst nach unten geklappt und in hochgeklappter Stellung nach links oder rechts ;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+22;Senkrecht und waagerecht angeordnete, im rechtem Winkel verbundene Stangen mit Befestigungsrosetten und Brausehalter, geeignet für Handbrausen verschiedener Hersteller, Brausehalter kann stufenlos geneigt und in der Höhe verstellt werden, konische Aufnahme am Brausehalter erleichtert das Einhängen d;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+23;Duschkorb in gerader Ausführung zur Wandmontage, bestehend aus Edelstahlhalter, matt geschliffenn, mit Einsatz aus hochwertigem Kunststoff in RAL 7016. Größe (h/b/t) 67 x 220 x 115 mm, inkl. Befestigungsmaterial.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Kleinspeicher als elektronisch geregelter, Durchlauferhitzer, Untertischmontage, für die Versorgung einer druckfesten Zapfstelle geeignet, mit stufenloser Temperatureinstellung 35 bis 50°C sowie freier Temperaturbegrenzung, Leistung 5,7 KW, Festanschluss 1/PE/230V/ 50 Hz, inkl. Befestigungsmaterial;85,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Kleinspeicher als elektronisch geregelter Durchlauferhitzer, Übertischmontage, für die Versorgung einer druckfesten Zapfstelle geeignet, mit stufenloser Temperatureinstellung 20 bis 60°C sowie freier Temperaturbegrenzung, Leistung 11 / 13,5 kW (gewählt 11 kW bei Absicherung 16 A) KW, Festanschluss 3;19,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Kleinspeicher als elektronisch geregelter Durchlauferhitzer, Untertischmontage, für die Versorgung einer druckfesten Zapfstelle geeignet, mit stufenloser Temperatureinstellung 20 bis 60°C sowie freier Temperaturbegrenzung, Leistung 11 / 13,5 kW (gewählt 11 kW bei Absicherung 16 A) KW, Festanschluss ;13,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Auslaufventil mit Rückflussverhinderer und Belüfter, chrom matt, DN 15 mit Sterngriff;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Auslaufventil mit Rückflussverhinderer und Belüfter, chrom matt, DN 20 mit Sterngriff;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;"Eckventil aus Messing verchromt, DN 15, als Absperr- und Anschlussventil, Geräuschverhalten gemäß DIN 4109,Gruppe I, mit Gewindeanschluss, Kappenhandrad, Schubrosette und Filtersieb; Prüfzeichen nach PA-IX 198/ IA";10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;"Eckventil aus Messing verchromt, DN 15, als Absperr- und Anschlussventil, Geräuschverhalten gemäß DIN 4109,Gruppe I, mit Gewindeanschluss, Kappenhandrad, Schubrosette und Filtersieb und Rückflussverhinderer; Prüfzeichen nach PA-IX 198/ IA";2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;"Eckventil aus Messing verchromt, DN 20, als Absperr- und Anschlussventil, Geräuschverhalten gemäß DIN 4109,Gruppe I, mit Gewindeanschluss, Kappenhandrad, Schubrosette und Filtersieb; Prüfzeichen nach PA-IX 198/ IA";6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Rotguss-Absperrventile mit Entleerung;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Rotguss-Absperrventile mit Entleerung;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Kugelabsperrventil aus Messing verchromt, DN 15, als Absperrventil, mit integriertem Rückflussverhinderer, mit beidseitigem Außengewinde, Betätigung über nicht abschließbaren Hebelgriff aus Stahl mit Kunststoffummantelung, 90 ° Schaltweg;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Frostsichere Außenarmatur mit autom. Entleerfunktion, als Bausatz auch für Rohbauinstallation mit nachträglicher Längenanpassung nach Fertigstellung der Außenwand, alle im geschlossenen Zustand mediumberührten Metallteile aus Rotguss, mit wartungsfreier Spindelabdichtung, mit EPDM-Sitzdichtung, inkl;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Kristallspiegel in rechteckiger Form, mit unsichtbarer Magnetbefestigung, geschliffenen C-Kanten, inkl. Befestigungsmaterial.;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Kristallspiegel in rechteckiger Form, mit unsichtbarer Magnetbefestigung, geschliffenen C-Kanten, inkl. Befestigungsmaterial für Behinderten-Waschtische.;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Kristallspiegel in rechteckiger Form, mit unsichtbarer Magnetbefestigung, geschliffenen C-Kanten, inkl. Befestigungsmaterial.;45,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;Kristallspiegel in rechteckiger Form, mit unsichtbarer Magnetbefestigung, geschliffenen C-Kanten, inkl. Befestigungsmaterial.;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+14;Ablagekorb zur Wandmontage, mit zwei Edelstahlscharnieren, gesamt aus Edelstahl, Ausführung als Gitter-Korb. Größe ca. (h/b/t) 150 x 300 x 150 mm, inkl. Befestigungsmaterial. Die Ausführungsgröße ist vor Bestellung und Einbau mit dem Bauherrn und dem Auftraggeber abzustimmen.;55,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+15;Fuge als Eck-, Anschluss- und Bewegungsfuge an sanitären Einrichtungsgegenständen, einschließlich reinigen der Flächen, liefern und ausspritzen unter Verwendung von Dichtstoffen im Farbton der Raumverfugung (Klärung vor Ausführung mit dem Auftraggeber und der Bauleitung).;550,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Produktbeschreibung:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Baugruppe zur temperatursensiblen Rücklaufeinspeisung für optimale Temperatur-Einschichtung in den Pufferspeicher und besseren Einbindung regenerativer Wärmeerzeuger.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Touch-Display 10,1 Zoll für Hydraulikmodule;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Pufferspeicher für alle Warmwasser-Zentralheizungsanlagen. Verwendbar für Festbrennstoffkessel, ölgefeuerte Heizkessel, Wärmepumpen, Solaranlagen, Gas oder Elektrodurchlauferhitzer. Gefertigt aus Qualitätsstahl S235 JRG2. Außen mit Rostschutzanstrich, innen roh.;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Stutzen für System-Pufferspeicher DN65;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Kompakte Druckerhöhung zur Löschwasserversorgung als mittelbarer Anschluss mit Trinkwasser-Vollversorgung nach DIN EN 1717, DIN 1988-600 und DIN 14462.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Sammelverrohrung für drei Trinkwasser-Nachspeisearmaturen DN 25 mit Anschluss DN 100, werksseitig montiert.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Druckhaltepumpe zum Ausgleich von Druckabfällen in der;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Steinfänger für Trinkwasseranlagen nach DIN EN 806 zum Einbau in Löschwasserleitungen. Vollständig aus      Edelstahl zur Aufnahme der dynamischen und statischen Belastungen bei hohen Fließgeschwindigkeiten im Vergleich zu Feinfiltern.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Flanschanschluss einseitig DN 100, PN 10 / 16;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Anschluss Notentwässerung DN 100 / 80 / 100, PE-HD;3,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Nicht durchströmtes Membran-Druckausdehnungsgefäß für Anlagen, die nicht den Anforderungen der DIN 1988 unterliegen, z. B. Feuerlösch-, Betriebswassersysteme.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;Löschwassereinspeisung für Feuerwehr bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+14;"Für schnelle Befüllung und Entleerung von Löschwasserleitungen ""trocken"" und ""nass / trocken"",Messing, PN16, Eingang 2"", Bauform E, Entlüftungsleistung 1.500 l/min";1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+15;Optisch / Akustischer Signalgeber erzeugt aus elektrischen Signalen sichtbare (Dauerlicht) und hörbare (Hupe) Signale. Dieser ist nach EN60598 / VDE 0711T1 aufgebaut und geprüft.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+16;Armaturen-Sicherungs-Set zur sicherheitstechnischen Kennzeichnung und Absicherung von Armaturen im Leitungsweg der Löschwasseranlage nach DIN 1988-600. Bestehend aus einem Sicherungsband mit definierter Reißfestigkeit, Schloss, Sicherungs-Kennzeichnungsschild und Schlüsselkennzeichnung. Ein einheitl;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+17;bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+18;Das Kontrollbuch für Feuerlöschanlagen ist bei Abnahme durch den Installateur oder Sachverständigen auszufüllen.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+19;Zur Anlieferung der Trennstation wird diese in einzelnen Segmenten- (geteilte Ausführung) von handlicher Größe werksseitig geteilt.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+20;Komplett ausgestattete Regenwasserzentrale zur vollautomatischen Realisierung aller Mess-, Schalt- und Überwachungsaufgaben der Regenwasser-Nutzungsanlage.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+21;Das Anschluss- und Sicherheitspaket ermöglicht den einfachen und schnellen Anschluss des Speichers an die Regenwasserzentrale. Alle Komponenten sind steckfertig vorkonfektioniert.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+22;Tauchmotorpumpenset für den Unterwasser-Einsatz zur Befüllung der Regenwasserzentrale.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;140,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;900,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;520,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;200,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;70,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;85,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;75,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;65,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;135,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+16;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+17;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+18;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+19;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+20;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+21;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+22;Leistung wie zuletzt in vollem Wortlaut, jedoch;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+23;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+24;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+25;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+26;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+27;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+28;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+29;Leistung wie zuletzt in vollem Wortlaut, jedoch;70,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+30;Leistung wie zuletzt in vollem Wortlaut, jedoch;180,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+31;Leistung wie zuletzt in vollem Wortlaut, jedoch;85,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+32;Leistung wie zuletzt in vollem Wortlaut, jedoch;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+33;Leistung wie zuletzt in vollem Wortlaut, jedoch;35,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+34;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+35;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+36;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+37;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+38;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+39;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+40;Leistung wie zuletzt in vollem Wortlaut, jedoch;85,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+41;Leistung wie zuletzt in vollem Wortlaut, jedoch;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+42;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+43;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+44;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+45;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+46;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+47;Leistung wie zuletzt in vollem Wortlaut, jedoch;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+48;Leistung wie zuletzt in vollem Wortlaut, jedoch;110,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+49;Leistung wie zuletzt in vollem Wortlaut, jedoch;65,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+50;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+51;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+52;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+53;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+54;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+55;Leistung wie zuletzt in vollem Wortlaut, jedoch;350,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+56;Leistung wie zuletzt in vollem Wortlaut, jedoch;880,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+57;Leistung wie zuletzt in vollem Wortlaut, jedoch;420,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+58;Leistung wie zuletzt in vollem Wortlaut, jedoch;125,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+59;Leistung wie zuletzt in vollem Wortlaut, jedoch;110,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+60;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+61;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+62;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+63;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+64;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+65;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+66;Leistung wie zuletzt in vollem Wortlaut, jedoch;260,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+67;Leistung wie zuletzt in vollem Wortlaut, jedoch;150,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+68;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+69;Leistung wie zuletzt in vollem Wortlaut, jedoch;100,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+70;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+71;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+72;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+73;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+74;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+75;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+76;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+77;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+78;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+79;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+80;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+81;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+82;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+83;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+84;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+85;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+86;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+87;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+88;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+89;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+90;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+91;Leistung wie zuletzt in vollem Wortlaut, jedoch;80,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+92;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+93;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+94;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+95;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+96;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+97;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+98;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+99;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+100;Leistung wie zuletzt in vollem Wortlaut, jedoch;240,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+101;Leistung wie zuletzt in vollem Wortlaut, jedoch;95,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+102;Leistung wie zuletzt in vollem Wortlaut, jedoch;65,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+103;Leistung wie zuletzt in vollem Wortlaut, jedoch;55,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+104;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+105;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+106;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+107;Leistung wie zuletzt in vollem Wortlaut, jedoch;85,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+108;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+109;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+110;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+111;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+112;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+113;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+114;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+115;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+116;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+117;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+118;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+119;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+120;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+121;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+122;Leistung wie zuletzt in vollem Wortlaut, jedoch;150,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+123;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+124;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+125;Leistung wie zuletzt in vollem Wortlaut, jedoch;85,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+126;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+127;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+128;Leistung wie zuletzt in vollem Wortlaut, jedoch;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+129;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+130;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+131;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+132;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+133;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+134;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+135;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+136;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+137;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+138;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+139;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+140;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+141;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+142;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+143;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+144;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+145;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+146;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+147;Leistung wie zuletzt in vollem Wortlaut, jedoch;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+148;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+149;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+150;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+151;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+152;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+153;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+154;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+155;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+156;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+157;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+158;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+159;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+160;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+161;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+162;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+163;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+164;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+165;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+166;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+167;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+168;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+169;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+170;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+171;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+172;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+173;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+174;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+175;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+176;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+177;Leistung wie zuletzt in vollem Wortlaut, jedoch;100,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+178;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+179;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+180;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+181;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+182;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+183;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Elektronischer Kaltwasserzähler nach dem Ultraschall-Messprinzip zur Erfassung von schwankenden Durchflüssen, Zonenzähler, hermetisch verschlossen, 2-teiliges Edelstahlgehäuse. Der Zähler ist konform mit der MID 2014/32/EU, Genauigkeitsklasse 2 nach OML R49, mit gültiger Eichgültigkeitsdauer / Begla;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Elektronischer Kaltwasserzähler nach dem Ultraschall-Messprinzip zur Erfassung von schwankenden Durchflüssen, Zonenzähler, hermetisch verschlossen, 2-teiliges Edelstahlgehäuse. Der Zähler ist konform mit der MID 2014/32/EU, Genauigkeitsklasse 2 nach OML R49, mit gültiger Eichgültigkeitsdauer / Begla;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Zulage als Zuschlag zu vor genannter Position für die zusätzliche Ausführung eines Passstückes DN 40 mit Passlänge entsprechend der Zähleinrichtung.;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Elektronischer Kaltwasserzähler nach dem Ultraschall-Messprinzip zur Erfassung von schwankenden Durchflüssen, Zonenzähler, hermetisch verschlossen, 2-teiliges Edelstahlgehäuse. Der Zähler ist konform mit der MID 2014/32/EU, Genauigkeitsklasse 2 nach OML R49, mit gültiger Eichgültigkeitsdauer / Begla;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Elektronischer Kaltwasserzähler nach dem Ultraschall-Messprinzip zur Erfassung von schwankenden Durchflüssen, Zonenzähler, hermetisch verschlossen, 2-teiliges Edelstahlgehäuse. Der Zähler ist konform mit der MID 2014/32/EU, Genauigkeitsklasse 2 nach OML R49, mit gültiger Eichgültigkeitsdauer / Begla;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Zulage als Zuschlag zu vor genannter Position für die zusätzliche Ausführung eines Passstückes DN 32 mit Passlänge entsprechend der Zähleinrichtung.;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Zulage für Eichgebühr für obig genannte Zähleinrichtungen mit Beglaubigungsschreiben liefern und den Bestandsunterlagen beiheften!;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Zulage als Zuschlag zu vor genannter Position für die zusätzliche Ausführung mit Wertübertragung auf die Gebäudeleittechnik.;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Rückspül- und ausspülbarer Flanschen-Feinfilter mit max. Anfangsdruckverlust 200 mbar bei Nenndurchfluss.;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Zulage für genannte Feinfilter als Rückspülautomatik zur vollautomatischen Rückspülung der Filter und Filterkombinationen.;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Zulage für genannte Rückspülautomatik zur vollautomatischen differenzdruckabhängige Steuerung der Rückspülung für Filter oder Filter-Druckminderer-Kombinationen in Verbindung mit einer Rückspülautomatik mit potentialfreiem Kontakt.;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Verschraubungs-Kombi-Rückflussverhinderer absperrbar, komplett aus Rotguss, beständig gegen aggressives Wasser, frei von Messing im mediumberührten Bereich, durch Kunststoffströmungskörper aus POM/EPDM Öffnungsdruck nur <_ 10 mbar, dadurch besonders geeignet für Zirkulationssysteme, mit selbstfetten;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;Verschraubungs-Kombi-Rückflussverhinderer absperrbar, komplett aus Rotguss, beständig gegen aggressives Wasser, frei von Messing im mediumberührten Bereich, durch Kunststoffströmungskörper aus POM/EPDM Öffnungsdruck nur <_ 10 mbar, dadurch besonders geeignet für Zirkulationssysteme, mit selbstfetten;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch;35,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+16;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+17;Leistung wie zuletzt in vollem Wortlaut, jedoch;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+18;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+19;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+20;Hygienespülung, zur Sicherstellung des bestimmungsgemäßen Betriebes durch automatisch ausgelöste Zwangsspülungen in TW-Anlagen, zum Einbau im Nassbau oder in Vorwandsystemen, Anschluss an die Systemsteuerung möglich, max. Volumenstrom bis 15 l/min (inkl. Zubehör für Umstellung der Volumenströme von ;45,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+21;Therm-Zirkulations-Regulierventil;16,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+22;Therm-Zirkulations-Regulierventil;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+23;Therm-Zirkulations-Regulierventil;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+24;Sicherungseinrichtung nach DIN 1988, Teil 4 zum Schutz der öffentlichen Trinkwassergüte.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+25;Schmutzfänger aus Rotguss in Schrägsitzform, mit austauschbarerem Doppelsiebeinsatz aus Edelstahl, Nenndruck PN 16, beidseitig mit Anschlussverschraubungen für Presssystem Edelstahl DN 40;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+26;Schmutzfänger aus Rotguss in Schrägsitzform, mit austauschbarerem Doppelsiebeinsatz aus Edelstahl, Nenndruck PN 16, beidseitig mit Anschlussverschraubungen für Presssystem Edelstahl DN 50;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+27;Durchflussmessarmatur für Durchfluss- und Temperatur mit integriertem Sensor zur Ermittlung des Volumenstromes und der Temperatur in Trinkwassersystemen zwecks Einstellung vorgegebener Volumenströme, lt. Berechnungsgrundlage, komplett mit Sensorkörper, komplett aus Rotguss, Nenndruck PN 16, max. 110;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+28;"Füll-/ Entleerkugelhahn aus Rotguss PN 16, 1/2"" Durchgang,  selbstdichtend mit Abdicht-Endkappe für Temperaturen bis +130°C Mediumstemperatur und 50°C Umgebungstemperatur.";4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+29;"Füll-/ Entleerkugelhahn aus Rotguss PN 16, 3/4"" Durchgang,  selbstdichtend mit Abdicht-Endkappe für Temperaturen bis +130°C Mediumstemperatur und 50°C Umgebungstemperatur.";2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+30;"Füll-/ Entleerkugelhahn aus Rotguss PN 16, 1"" Durchgang,  selbstdichtend mit Abdicht-Endkappe für Temperaturen bis +130°C Mediumstemperatur und 50°C Umgebungstemperatur.";2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+31;Membran-Sicherheitsventil mit Sicherheitsventil-Austauschsatz A 152, Gehäuse aus entzinkungsbeständigem Messing, Federhaube aus hochwertigem, temperaturbeständigem Kunststoff, Membrane und Dichtung aus bestgeeigneten Elastomeren, für geschlossene Wassererwärmer nach DIN 4753 T1 und DIN 1988, bauteil;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+32;Probenahmeventil aus Rotguss, zur Probenahme von Trinkwasser, Bestimmung mikrobiologischer und chemischer Parameter nach TrinkwV, mediumberührte Metallteile aus entzinkungsfreiem und korrosionsbeständigem Rotguss, beständig gegen aggressives Wasser, abflammbarer und drehbarer Edelstahl-Auslaufbogen,;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+33;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+34;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+35;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+36;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+37;Stellelektrode mit vier Messpunkten für:;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+38;Elektrodenrelais zur konduktiven Erfassung von Füllständen, sowohl Grenzpegelsignalisierung als auch min./ max. Steuerung. Auch als Kontaktschutzrelais verwendbar, wenn Geber eine geringere Kontaktbelastung benötigt, jedoch größere Lasten geschalten werden sollen.;1,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;510,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;210,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;55,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;180,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;530,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;280,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;145,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;70,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;85,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;75,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;65,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;970,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;350,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;160,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;140,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;80,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;80,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;60,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;420,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;80,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch;105,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch;700,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+16;Leistung wie zuletzt in vollem Wortlaut, jedoch;150,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+17;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+18;Leistung wie zuletzt in vollem Wortlaut, jedoch;250,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+19;Leistung wie zuletzt in vollem Wortlaut, jedoch;200,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+20;Leistung wie zuletzt in vollem Wortlaut, jedoch;150,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+21;Leistung wie zuletzt in vollem Wortlaut, jedoch;180,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+22;Leistung wie zuletzt in vollem Wortlaut, jedoch;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+23;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+16;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+17;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+18;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+19;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+20;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+21;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+22;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+23;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+24;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+25;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+26;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+27;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+28;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+29;Leistung wie zuletzt in vollem Wortlaut, jedoch als Zulage für Bögen bis 90 °,;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+30;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+31;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+32;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+33;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+34;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+35;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+36;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+37;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+38;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+39;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+40;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+41;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+42;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+43;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+44;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+45;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;70,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;45,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;100,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;150,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;250,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;60,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;70,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;60,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;70,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+15;Zulage für das verschließen von Aussparungen mit Brandschutzanforderung an die Querung für das Anbringen eines Ausführungsschildes. Gemäß Zulassungsbescheid muss die Rohrabschottung mit einem Ausführungsschild dauerhaft gekennzeichnet werden. Ausführungsschild beschriften und neben der Rohrabschottu;225,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+16;Feuerbeständiger Mörtel auf Zementbasis mit wärmeisolierender Wirkung durch Perlite gemäß Herstellerangabe verarbeiten, Liefermenge 20 kg,;90,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;200,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;100,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;60,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch;800,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+16;Leistung wie zuletzt in vollem Wortlaut, jedoch;200,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+17;Leistung wie zuletzt in vollem Wortlaut, jedoch;420,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+18;Leistung wie zuletzt in vollem Wortlaut, jedoch;160,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+19;Leistung wie zuletzt in vollem Wortlaut, jedoch;50,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+20;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+21;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+22;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+23;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+24;Leistung wie zuletzt in vollem Wortlaut, jedoch;180,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+25;Leistung wie zuletzt in vollem Wortlaut, jedoch;80,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+26;Leistung wie zuletzt in vollem Wortlaut, jedoch;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+27;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+28;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+29;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+30;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+31;Form-/ Hohlprofilstahl nach Angabe der Projektleitung bearbeiten und herstellen von Konstruktionen für Stütz-, Hänge-, Trag- und Sonderauflager aus bandverzinkter Stahl zur Schaffung von Sonderbefestigungen.;2500,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+32;Zuschlag für genannte Sonderbefestigung zur gesamten Bauteillackierung nach Standard-RAL-Ton über das Standard-Programm.;375,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+33;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+34;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+35;Leistung wie zuletzt in vollem Wortlaut, jedoch;8,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+36;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+37;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+38;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+39;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+40;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+41;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+42;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;60,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;160,0;lfdm;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Leistung wie zuletzt in vollem Wortlaut, jedoch;35,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+12;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+13;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+14;Leistung wie zuletzt in vollem Wortlaut, jedoch;32,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+15;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+16;Leistung wie zuletzt in vollem Wortlaut, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+17;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+18;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+19;Leistung wie zuletzt in vollem Wortlaut, jedoch;7,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+20;Leistung wie zuletzt in vollem Wortlaut, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+21;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+22;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Löschwassereinspeisungsschrank mit Vierkantverschluss, Aufputz zum Anschluss an die Löschwasserleitung „trocken“ nach TRVB F 128 Pkt. 3.2  Schrank Bauart C, aus Stahlblech gekantet und verschweißt.  Außenflächen Edelstahl geschliffen Vier Montagebohrungen in der Rückwand.  Wasseranschluss Ø 100 mm m;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Löschwasserentnahmeschrank mit Vierkantverschluss, Aufputz zum Anschluss an die Löschwasserleitung „trocken“ nach TRVB F 128 Pkt. 3.4  Schrank Bauart C, aus Stahlblech gekantet und verschweißt. Außenflächen Edelstahl geschliffen;32,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Be- und Entlüftungsventil;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Verschraubungs -Kugelhahn bestehend aus:;8,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;15,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Zulage für das verschließen von Aussparungen mit Brandschutzanforderung an die Querung für das Anbringen eines Ausführungsschildes. Gemäß Zulassungsbescheid muss die Rohrabschottung mit einem Ausführungsschild dauerhaft gekennzeichnet werden. Ausführungsschild beschriften und neben der Rohrabschottu;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Feuerbeständiger Mörtel auf Zementbasis mit wärmeisolierender Wirkung durch Perlite gemäß Herstellerangabe verarbeiten, Liefermenge 20 kg,;30,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung wie zuletzt in vollem Wortlaut, jedoch;35,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung wie zuletzt in vollem Wortlaut, jedoch;75,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung wie zuletzt in vollem Wortlaut, jedoch;170,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung wie zuletzt in vollem Wortlaut, jedoch;6,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung wie zuletzt in vollem Wortlaut, jedoch;12,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Form-/ Hohlprofilstahl nach Angabe der Projektleitung bearbeiten und herstellen von Konstruktionen für Stütz-, Hänge-, Trag- und Sonderauflager aus bandverzinkter Stahl zur Schaffung von Sonderbefestigungen.;10,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Zuschlag für genannte Sonderbefestigung zur gesamten Bauteillackierung nach Standard-RAL-Ton über das Standard-Programm.;10,0;kg;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung wie zuletzt in vollem Wortlaut, jedoch;40,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Leistung wie zuletzt in vollem Wortlaut, jedoch;30,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Zulage für die mögliche planerische Anpassung an bauseits festgestellte, punktuelle Planabweichungen, siehe Praxisbeispiele unten.;25,0;St;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+1;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;Jahr;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+2;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;Jahr;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+3;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;Jahr;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+4;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;Jahr;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+5;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;Jahr;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+6;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+7;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+8;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+9;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+10;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83
+11;Leistung gemäß AMEV-Empfehlung Wartung Nr. 142 wie zuletzt in vollem Wortlaut, jedoch;1,0;h;gaeb;leistungsbeschreibungen/Wup_Barmer_HV_LV_VE 401 Sanitär + Feuerlöschtechnik_260713.x83

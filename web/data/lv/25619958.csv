@@ -1,0 +1,49 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Photovoltaikmodul, zur Aufdachmontage,;58,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0020;Unterkonstruktion als Montagesystem für v.g. PV-Module;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0030;Wechselrichter für Photovoltaikanlage, trafolos, AC-seitig kurzschlussfest, erdschlussüberwacht, DC-seitig einschl. Lasttrennschalter, als Hybridwechselrichter, netzseitig 3-phasig,;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0010;Batterieanlage mit wiederaufladbaren Batterien DIN EN 61427-2 (VDE 510-41), Gehäuse aus Stahl, Oberfläche lackiert, Innenaufstellung, Schutzart IP 31 DIN EN 60529 (VDE 0470-1),;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0010;Datenlogger zur Anlagenüberwachung PV-Anlage = 25 kWp;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0020;Dreiphasiger Energiezähler MID 1A/5A Stromwandler S0 + MBUS;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0030;MID Durchführungs-Stromwandlersatz Kl. 0,5 - bis 50A;4,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0010;Gitterrinne für Kabelträgersystem DIN EN 61537 (VDE 0639), einschl. Abdeckung mit Drehriegelverschluss, aus feuerverzinktem Stahl DIN EN ISO 1461, Seitenhöhe mind. 60 mm, Breite mind. 60 mm.;30,0;m;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0020;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus Kunststoff, UV-stabilisiert, Außendurchmesser 32 mm, Druckfestigkeit Klasse 4 - schwer (1250 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 4 - schwer DIN EN 61386-1 (VDE 0605-1), max. Gebrauchstemperatur Klasse 1 (;18,0;m;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0030;Gummischlauchleitung DIN EN 50618 (VDE 0283-618) H1Z2Z2-K 1 x 6, Cu-Zahl 58.;380,0;m;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0040;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 6 RE, Cu-Zahl 58.;30,0;m;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0050;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 16 RE, Cu-Zahl 154.;40,0;m;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0060;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 16 RE, Cu-Zahl 768.;30,0;m;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0070;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-4-1 (VDE 0819-4-1), Kategorie 7 DIN EN 50173-1 (VDE 0800-173-1), geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), für PoE, Typ 2, Leitungswiderstand 0,065 Ohm/m und Kabeldurchmesser 0,007 m DIN EN 50174-2 (VDE 0800-174-2), Link-Kl;40,0;m;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0080;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, JE-H(St)H, 2 x 2 x 0,8 Bd, auf Putz mit Abstandsschellen.;30,0;m;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0090;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 6 RE, Cu-Zahl 58, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;15,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0100;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 16 RE, Cu-Zahl 154, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;20,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0110;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 16 RE, Cu-Zahl 768, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0120;Datenkabel für Außenanwendung DIN EN 50288-4-1 (VDE 0819-4-1), Kategorie 7 DIN EN 50173-1 (VDE 0800-173-1), geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), für PoE, Typ 2, Leitungswiderstand 0,065 Ohm/m und Kabeldurchmesser 0,007 m DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse F, DIN EN 501;4,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0130;MC4 Multi-Contact Stecker max. 43A  6mm²;6,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0140;MC4 Multi-Contact-Buchse max. 43A 6mm²;6,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0150;Überspannungs-Ableiter;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0160;Y-Anschlussleitung;3,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0170;Gehäuse für Überspannungsschutz , Schutzart P65;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0180;Potentialausgleichsschiene DIN VDE 0618-1 (VDE 0618-1), aus Messing, als Klemmschiene 10 mm x 10 mm, mit Kunststoffabdeckung, mit Anschluss für 7 x 2,5 bis 25 mm2, 2 x 2,5 bis 95 mm2 und ein Flachband bis 40 mm x 4 mm, Ausführung gemäß Einzelbeschreibung.;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0190;Auslöseschalter für PV-Feuerwehrschalter;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0200;"Schild/Aufkleber ""Feuerwehrschalter - PV-Anlage"" DIN A6";1,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0210;DC-Feuerwehrschaltung für 3 PV-Modul-Stringleitungen 3x30A;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0220;Buchse, dienstneutral, RJ45 DIN EN 60603-7-51 (VDE 0687-603-7-51), Kategorie 6 Index A tiefgestellt DIN EN 50173-1 (VDE 0800-173-1), zum Anschluss von massivem Datenkabel.;4,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0230;Datenanschlussdose, symmetrisch, Kategorie 6 Index A tiefgestellt DIN EN 50173-1 (VDE 0800-173-1), Link-Klasse E Index A tiefgestellt, DIN EN 50173-1 (VDE 0800-173-1), modular, Anzahl Ausbrüche 1 St, 1 Port, RJ45-Buchse DIN EN 60603-7-51, Schutzart IP 67 DIN EN 60529 (VDE 0470-1), mit Staubschutz, i;4,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0240;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-4-1 (VDE 0819-4-1), Kategorie 7 DIN EN 50173-1 (VDE 0800-173-1), geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), für PoE, Typ 2, Leitungswiderstand 0,065 Ohm/m und Kabeldurchmesser 0,007 m DIN EN 50174-2 (VDE 0800-174-2), Link-Kl;4,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0250;Messung Kupferkabel PL (Permanent Link) - Installationsstrecke, DIN EN 50173-1 (VDE 0800-173-1), Link Klasse E Index A tiefgestellt, Darstellung der Messung als Tabelle und als Grafik, Dokumentation vorab digital zur Prüfung und nach Freigabe auf Datenträger, im PDF-Format, als Kurzreport (Sammelrep;4,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0260;Konfektioniertes Datenkabel/Twisted Pair, Stecker/Stecker, DIN EN 50173-1 (VDE 0800-173-1), Kategorie 6 Index A tiefgestellt geprüft DIN EN 61935-2 (VDE 0819-935-2),;4,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0270;Modularer Layer 3 Switch, mit 4 Ethernet-Ports 10/100/1000 TX automatische Erkennung, Typ 1, 2 Ethernet-Uplink-Ports, Backplane-Bandbreite ungeblockt, Vollduplexbetrieb, Systemsoftware update-fähig (flash memory), mit Inband- und/oder Out-of-Band-Management, Quality of Service (QoS) Priorisierung na;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0010;Stundenlohnarbeiten durch Spezialbaufacharbeiter/-in;8,0;h;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0020;Stundenlohnarbeiten durch Elektriker/in;8,0;h;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0030;Deckendurchbruch in Stahlbeton, Dicke über 25 bis 36 cm, bohren, für Kabelschutzrohr DN 50.;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0040;Mehrfach-Luftdichtungsmanschette Leitungsmanschette Ausführung gemäß DIN 18015-5, zur dauerhaften Abdichtung von Installationsdurchführungen durch die Luftdichtung, 1-teilig, extrem starke Klebekraft, UV-beständig, halogenfrei, Temperaturbeständigkeit von -25°C bis +80°C, mit 6 werkzeuglosen Leitung;3,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0050;Brandschutzabschottung an Kabel-/Leitungsanlagen als flexibles Schott, Klassifizierung EI 90 DIN EN 13501-2, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, runder Durchbruch, Durchmesser über 50 bis 100 mm, Baustoffklasse DIN 4102-1 A (nichtbrennbar), Schmelzp;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0060;Notwendige Arbeitsschutz- und Sicherheitsmaßnahmen für die Montageflächen. Die Baustelle ist mit Absperrungen und Warnschildern auszurüsten. Erforderliche Schutzausrüstungen wie PSA, Sicherheitsgurte und Sicherheitsseile sind einzusetzen.;1,0;psch;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0070;Selbstfahrende Hubarbeitsbühne als Scherenarbeitsbühne, Arbeitshöhe kleiner 10m, Tragfähigkeit mind. 300 kg.;1,0;psch;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0080;Bereitstellung eines geeigneten Materiallifts (Dachdeckerlift) zur unterstützenden Beförderung von PV-Modulen und Montagematerialien auf das Dach während der Bauausführung. Der Lift muss für den sicheren und materialschonenden Vertikaltransport bis zu einer Förderhöhe von unter 10 m geeignet sein un;1,0;psch;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0010;Der Auftraggeber übergibt die Ausführungspläne als *.DWG Datei, die weitere Bearbeitung erfolgt mittels CAD System. Die vorhandenen CAD Struktur ist beizubehalten.;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0020;Vervielfältigung der im Vortext beschriebenen, bzw. genannten Revisionsunterlagen zusätzlich zu dem 1-fach abzugebenden Satz.;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0030;Zusätzliche Einweisung des Bedienungspersonals. Über die Einweisung ist Protokoll zu führen mit einer Teilnehmerliste und Einweisungszeiten. Das Protokoll ist vom einzuweisenden Personal zu unterschreiben.;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0040;Erstellen aller erforderlichen Anträge für die Überschusseinspeisung, sowie Eintragung ins Markenstammregister, sowie Abstimmung mit dem Auftraggeber, sowie späteren Nutzer der Anlage.;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0050;Anmeldung und Fertigmeldung beim zuständigen Energie- versorger.;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83
+0060;Gemeinsame Abnahme der kompletten v.g. PV- Anlage mit dem Energieversorger durch die Elektrofachfirma vor Ort.;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30321.X83

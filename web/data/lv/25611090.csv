@@ -1,0 +1,66 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;Schließplan - Schloßzahl  81 Stück;1,0;psch;gaeb;leistungsbeschreibungen/26A70180.X83
+0001;Profilzylinder liefern und montieren;66,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0002;Zulage Pos. 01.02.0001: Gruppenschließung für 8 Schließgruppen;48,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0003;Zulage Pos. 01.02.0001: Einzelschließung;30,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0004;Zulage Pos. 01.02.0001: Einzelschließung mit Schließberechtigung von Dezernat 14.2 bei den Räumen 0.25.T01, 0.32.T01, 0.32.T03;3,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0005;Zulage Pos. 01.02.0001: Einzelschließung ohne Generalschließung für 1.16.T01;1,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0006;Zylinderverlängerung für Profilzylinder;150,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0007;Zulage Profilzylinder wie vor, jedoch mit erhöhtem Aufbohrschutz f. Außentüren;7,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0008;Schutzmechanismus gegen Staub und Witterungseinflüsse f. Außentüren;7,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0009;Zulage Freilauffunktion;20,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0010;Profilzylinder als Nachlieferung;10,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0011;Schließzylinder als Halbzylinder liefern und montieren:;4,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0012;Zylinderverlängerung für Halbzylinder;10,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0013;Profilhalbzylinder als Nachlieferung;1,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0014;Profil-Blindzylinder liefern und montieren;1,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0015;Zylinderverlängerung für Blindzylinder;1,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0016;Profilzylinder, Blindzylinder, als Nachlieferung;1,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0017;Schlüssel für Einzelschließungen für 32 Profilzylinder;103,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0018;Schlüssel für Einzelschließungen ohne Generalschließung für 1 Profilzylinder;3,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0019;Hauptschlüssel für 8 Gruppen;51,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0020;Schlüssel für v.g. Gruppen- u. Einzelschließungen bei Nachlieferung;25,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0021;Generalschlüssel passend für LFZ, SLG, NEA/NSVH und Einfriedung;3,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0022;Generalschlüssel als Nachlieferung;1,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0023;Schlüsselschrank für 250 Schlüssel;1,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0001;Schließplan - Schloßzahl 53 Stück;1,0;psch;gaeb;leistungsbeschreibungen/26A70180.X83
+0001;Profilzylinder liefern und montieren;53,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0002;Zulage Pos. 02.02.0001: Gruppenschließung für 4 Schließgruppen als Ergänzung von Schließgruppen des LFZ;25,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0003;Zulage Pos. 02.02.0001: Gruppenschließung für 3 Schließgruppen;27,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0004;Zulage Pos. 02.02.0001: Einzelschließung;2,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0005;Zylinderverlängerung für Profilzylinder;125,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0006;Zulage Profilzylinder wie vor, jedoch mit erhöhtem Aufbohrschutz;14,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0007;Schutzmechanismus gegen Staub und Witterungseinflüsse f. Außentüren;14,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0008;Zulage Freilauffunktion;30,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0009;Profilzylinder als Nachlieferung;10,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0010;Schließzylinder als Halbzylinder liefern und montieren:;2,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0011;Zylinderverlängerung für Halbzylinder;8,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0012;Profilhalbzylinder als Nachlieferung;1,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0013;Profil-Blindzylinder liefern und montieren;1,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0014;Zylinderverlängerung für Blindzylinder,;1,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0015;Profilzylinder, Blindzylinder, als Nachlieferung;1,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0016;Schlüssel für Einzelschließungen für 2 Profilzylinder;13,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0017;Hauptschlüssel für 1 Schließgruppe als Ergänzung 1 Schließgruppe des LFZ;1,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0018;Hauptschlüssel für 3 Schließgruppen;30,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0019;Schlüssel für v.g. Gruppen- u. Einzelschließungen bei Nachlieferung;25,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0020;Generalschlüssel passend für LFZ, SLG u. Außenbereich;3,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0021;Generalschlüssel als Nachlieferung;1,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0022;Schlüsselschrank für 50 Schlüssel;1,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0001;Schließplan - Schloßzahl 9 Stück;1,0;psch;gaeb;leistungsbeschreibungen/26A70180.X83
+0001;Profilzylinder liefern und montieren;5,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0002;Zylinderverlängerung für Profilzylinder;15,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0003;Zulage Pos. 03.02.0001: Gruppenschließung für 2 Schließgruppen;5,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0004;Schutzmechanismus gegen Staub und Witterungseinflüsse f. Außentüren;5,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0005;Zulage Profilzylinder wie vor, jedoch mit erhöhtem Aufbohrschutz;5,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0006;Profilzylinder als Nachlieferung;1,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0007;Schlüssel für v.g. Gruppen- u. Einzelschließungen bei Nachlieferung;10,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0001;Profilzylinder liefern und montieren;4,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0002;Zylinderverlängerung für Profilzylinder;12,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0003;Zulage Profilzylinder wie vor, jedoch mit erhöhtem Aufbohrschutz;4,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0004;Schutzmechanismus gegen Staub und Witterungseinflüsse f. Außentüren;4,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0005;Profilzylinder als Nachlieferung;1,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0006;Schlüssel für Einzelschließungen für 4 Profilzylinder;12,0;St;gaeb;leistungsbeschreibungen/26A70180.X83
+0001;Schließanlagenverwaltung;1,0;psch;gaeb;leistungsbeschreibungen/26A70180.X83
+0002;Programmierung, Einweisung;24,0;h;gaeb;leistungsbeschreibungen/26A70180.X83
+0001;Stundenlohnarbeiten durch Facharbeiter/-in;40,0;h;gaeb;leistungsbeschreibungen/26A70180.X83
+0002;Stundenlohnarbeiten durch Helfer/-in;40,0;h;gaeb;leistungsbeschreibungen/26A70180.X83

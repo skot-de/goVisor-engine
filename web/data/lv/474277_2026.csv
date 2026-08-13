@@ -1,0 +1,445 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Elektronische Energiezähler für Direktmessung Drehstrom bis 35A BAC-Net MSTP;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+2;Elektronische Energiezähler für Direktmessung Drehstrom bis 25A BAC-Net MSTP;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+3;Sensoreinheit zur Messung von Temperatur und Luftqualität;7,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+4;Abdeckung der Sensoreinheit blanko mit Präsenzmelder Weiß;7,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+5;Außenwandwiderstandsthermometer/Witterungsfühler mit passivem Ausgang, mit Gehäuse aus schlagzähem Kunststoff und Schnappdeckel. Die Messumformer dienen zur Erfassung der Außentemperatur, der Temperatur im Feuchtraumbereich, z. B. als Außenfühler, Witterungsfühler, zur Montage auf Außenwänden.;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+6;Kanaltemperaturfühler, Einbaulänge 250 mm;6,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+7;Kanaldruckaufnehmer 2500Pa;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+8;Tauchtemperaturfühler;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+9;Tauchtemperaturfühler;6,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+10;Tauchtemperaturfühler;4,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+11;Differenzdruckschalter Luft 50-500Pa;3,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+12;Kanalrauchmelder 24V AC inklusive Entnahmerohr 0,6 m.;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+13;Frostschutzthermostat 3m Auto Luft;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+14;Differenzdruckschalter Luft 20-300Pa;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+15;2-Wege-Zonenventil;3,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+16;2-Wege-Zonenventil Außengewinde DN15 wie vor,;4,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+17;Ventilstellantrieb 180N 24 V AC stetig;7,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+18;3-Wege-Regelventil;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+19;Ventilstellantrieb 500 N 24 V AC stetig;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+20;3-Wege-Regelventil;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+21;Ventilstellantrieb 500 N 24 V AC stetig;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+22;3-Wege-Regelventil;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+23;Ventilstellantrieb 500 N 24 V AC stetig;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+24;3-Wege-Regelventil;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+25;Ventilstellantrieb 500 N 24 V AC stetig;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+26;3-Wege-Regelventil;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+27;Ventilstellantrieb 500 N 24 V AC stetig;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+1;Kompakte Automationsstation m. 36 integrierten Ein-/Ausgängen m. Display;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+2;Automation Server Basic Software- Bundle- Standard;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+3;Advanced Bediendisplay, inclusive Montagerahmen;1,0;St.;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+4;USB Kabel 2,85m für Advanced Display Y-Anschluss;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+5;Spannungsversorgungsmodul;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+6;Sockel für Spannungsversorgungsmodul;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+7;Automation Server Premium Secure Boot Hardware - NL;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+8;Sockel für Automationserver Premium;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+9;Automation Server Premium Secure Boot Software - Standard;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+10;Automation Server Premium Secure Boot Software - Modbus;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+11;12-fach Digital-Ausgangsmodul (Form A) mit Handbedienebene;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+12;Modulsockel für I/O Module;11,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+13;8-fach Digital-Ausgangsmodul (Form C) mit Handebene;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+14;8-fach Analog-Ausgangsmodul (Strom/Spannung) mit Handbedienebene;1,0;St.;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+15;Digitaleingangsmodul mit Statusanzeige;6,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+16;Universaleingangsmodul mit Statusanzeige UI-16;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+17;8-fach Analog-Ausgangsmodul (Spannung) mit Handebene;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+18;Verlängerung CIO-Bus S-Kabel 1,5m;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+19;BACnet/IP-Raumcontroller mit 12 Universaleingängen/4 Ausgängen 230 V;4,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+1;Hardware DI - Dienstleistung;135,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+2;Hardware DO - Dienstleistung;36,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+3;Hardware AI - Dienstleistung;36,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+4;Hardware AO - Dienstleistung;28,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+5;Kommunikativ AI Bac Net-MSTP AI;2,0;St.;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+6;Kommunikativ DI Bac Net-MSTP BI;9,0;St.;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+7;Kommunikativ AO Bac Net-MSTP AO;4,0;St.;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+8;Kommunikativ DI Modbus-IP BI;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+9;Kommunikativ DO Modbus-IP BO;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+10;Kommunikativ AI Modbus-IP AI;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+11;Kommunikativ AO Modbus-IP AO;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+12;Kommunikativ AO Bac Net-IP AO;3,0;St.;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+13;Kommunikativ AI Bac Net-IP AI;2,0;St.;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+14;Kommunikativ DO Bac Net-IP BO;2,0;St.;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+15;Kommunikativ DI Bac Net-IP BI;2,0;St.;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+1;Überspannungsschutz Einspeisung Typ 2, 4-polig,;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+2;Überspannungsschutz für aussenliegende Busleitungen, Melde- oder Messleitungen.;4,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+3;Fernsignalisierung Ableiter;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+4;Aussenleitungen Energiekabel;3,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+5;Überspannungsschutz für Außenfühler + Klemmkasten;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+6;Einbau- und Verteilkasten für bis zu 3 Stk. Überspannungsableiter und deren Zubehörmodule;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+1;Erstellung Anlagenbilder;38,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+2;Erstellung Dynamische Einblendung;250,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+3;Vorkonfigurierte Trenddarstellungen;84,0;St.;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+4;Aufschaltung der Hardware Datenpunkt auf Gebäudeleitrechner EcoStruxure Building Operation;235,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+5;Aufschaltung der Kommunikativen Datenpunkt auf Gebäudeleitrechner EcoStruxure Building Operation;50,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+1;Anreihschrank 1800x800x400mm;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+2;Anreihschaltschrank+Sockel für Außenaufstellung;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+3;Komfortleuchte 18 Watt mit Türpositionsschalter,;4,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+4;Schaltschrankheizung 230V 1500W;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+5;Schaltschrankklimatisierung 400V 1,5kW;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+6;Steuerspannungserzeugung 230 / 24 VAC - 160 VA;3,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+7;3-Fach-Steckdose für Reiheneinbau mit FI-Schutzschalter;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+8;Schaltschrankbelüftung 55 m³/h;4,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+9;Baugruppe Phasenüberwachung;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+10;Kombiableiter 3P+N Imax 40kA;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+11;Überspannungsschutz Busleitung;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+12;Überspannungsschutz Fühlerleitung;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+13;Einspeisung 400V bis 35A mit Hauptschalter;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+14;Einspeisung 400V bis 25A mit Hauptschalter;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+15;Anwischeinrichtung;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+16;Sammelstörmeldung;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+17;Steuertransformator 230V/24V, 630VA;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+18;Steuertransformator 230V/24V, 500VA;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+19;Steuertransformator 400V / 230V, 500 VA;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+20;Steuertransformator 230V/24V, 1000VA;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+21;Netzgerät 24VDC 1,5 A;3,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+22;Einbau und Verdrahtung Netzteil 230VAC/24VDC;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+23;Einbau Ethernetanschlussdose-Hutschienen;7,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+24;Einbau und Verdrahtung Touchpanel und Netzteil;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+25;Einbau und Verdrahtung Switch und Netzteil;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+26;Montage und Verdrahtung BSK-Modul;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+27;Sicherungsüberwachung 230V;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+28;Sicherungsüberwachung 24 VAC;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+29;Sicherungsüberwachung 24 VDC;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+30;Baugruppe Aufschaltung Reparaturschalter;4,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+31;Baugruppe Luftstromüberwachung;4,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+32;Baugruppe 1 Meldung direkt auf DDC;10,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+33;Baugruppe 2 Meldungen direkt auf DDC;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+34;Steuerbaugruppe Aufschaltung Fühler aktiv;23,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+35;Steuerbaugruppe Aufschaltung Fühler passiv;35,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+36;Verriegelung ohne Koppelrelais 5 Meldungen;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+37;Verriegelung über Koppelrelais 1 Meldung;11,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+38;Einbau und Verdrahtung beigestelltes Gerät;10,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+39;Steuerung 2-Pkt mit 2 Meldungen;6,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+40;Steuerung Stetig ohne Meldungen;25,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+41;Steuerung motorische BSK;20,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+42;Steuerung Volumenstromregler;14,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+43;Motorbaugruppe 1-stufig,;10,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+44;Motorbaugruppe EC o.Bypass,LS-Schalter, o.Handschalter bis 4kW,400V;4,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+45;Motorbaugruppe;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+46;Schaltkasten-Kleingehäuse,;4,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+1;Installationsleitung NHXMH-J 3x1,5;600,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+2;Installationsleitung NHXMH-J 4x1,5;1275,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+3;Installationsleitung NHXMH-J 5x1,5;5,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+4;Installationsleitung NHXMH-J  7x1,5;5,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+5;Installationsleitung NHXMH-J  3x2,5;5,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+6;Installationsleitung NHXMH-J  4x2,5;40,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+7;Installationsleitung NHXMH-J  5x2,5;5,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+8;Installationsleitung NHXMH-J  4x4;5,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+9;Installationsleitung NHXMH-J 5x4;5,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+10;Installationsleitung NHXMH-J 5x6;5,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+11;Motor-Anschlussleitung, 4 x 1,5mm2, halogenfrei,;20,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+12;Motor-Anschlussleitung , 4x2,5mm2, halogenfrei,;12,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+13;Motor-Anschlussleitung , 4x4mm2, halogenfrei,mit verbessertem Brandverhalten,;2,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+14;Motor-Anschlussleitung , 4x6 mm2, halogenfrei,mit verbessertem Brandverhalten,;2,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+15;Motor-Anschlussleitung 4x10 mm2, mit verbessertem Brandverhalten,;2,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+16;Fernmeldekabel J-H(ST)H 2x2x0,8 halogenfrei,;510,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+17;Fernmeldekabel J-H(ST)H 4x2x0,8 halogenfrei;25,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+18;Fernmeldekabel J-H(ST)H6x2x0,8 halogenfrei;20,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+19;FernmeldekabelJ-H(ST)H 10x2x0,8 halogenfrei;20,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+20;ICAT 7 4x2xAWG23 Netzwerkleitung halogenfrei;25,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+21;ICAT 7 4x2xAWG24 Netzwerkleitung halogenfrei;5,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+22;Patchleitung bis zu 5 m;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+23;Kabelmarker;100,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+24;Beidseitiges Anklemmen  J-H(ST)H 2x2x0,8;74,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+25;Beidseitiges Anklemmen J-H(ST)H 4x2x0,8;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+26;Beidseitiges Anklemmen J-H(ST)H 6x2x0,8;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+27;Beidseitiges Anklemmen J-H(ST)H 10x2x0,8;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+28;Beidseitiges Anklemmen CAT7 4x2xAWG23;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+29;Beidseitiges Anklemmen CAT7 4x2xAWG24;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+30;Beidseitiges Anklemmen NHXMH-J bis 4x1,5;16,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+31;Beidseitiges Anklemmen NHXMH-J 5x1,5;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+32;Beidseitiges Anklemmen NHXMH-J 7x1,5;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+33;Beidseitiges Anklemmen NHXMH-J 3x2,5;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+34;Beidseitiges Anklemmen NHXMH-J 4x2,5;4,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+35;Beidseitiges Anklemmen NHXMH-J 5x2,5;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+36;Beidseitiges Anklemmen NHXMH-J 5x4,0;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+37;Beidseitiges Anklemmen NHXMH-J 5x6,0;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+38;Kabelrinne  60x100 mm;40,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+39;Kabelrinne  60x200 mm;10,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+40;Kabelrinne  60x300 mm;20,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+41;Trennsteg für Kabelrinne 60 mm,;70,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+42;Kabelleiter, 60x200 mm;7,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+43;Kabelleiter, 60x300 mm;7,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+44;Kabelleiter, 60x500 mm;3,5;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+45;Deckel für Kabelrinne 100 mm;20,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+46;Deckel für Kabelrinne 200 mm;25,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+47;Deckel für Kabelrinne 300 mm;10,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+48;Kunststoffpanzerrohr NW 16 halogenfrei;100,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+49;Kunststoffpanzerrohr NW 20 halogenfrei;50,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+50;Kunststoffpanzerrohr NW 25 halogenfrei;50,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+51;Kunststoffpanzerrohr NW 32 halogenfrei;50,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+52;Kunststoffpanzerrohr NW 40halogenfrei;50,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+53;Kunststoffpanzerrohr NW 50halogenfrei;50,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+54;Kunststoffpanzerrohr NW 63halogenfrei;120,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+55;Aluminiumpanzerrohr NW 16 hohe Festigkeit mit Gewinde;5,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+56;Aluminiumpanzerrohr NW 20 hohe Festigkeit mit Gewinde;5,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+57;Aluminiumpanzerrohr NW 25 hohe Festigkeit mit Gewinde;5,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+58;Aluminiumpanzerrohr NW 32 hohe Festigkeit mit Gewinde;5,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+59;Aluminiumpanzerrohr NW 40 hohe Festigkeit mit Gewinde;2,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+60;Aluminiumpanzerrohr NW 50 hohe Festigkeit mit Gewinde;2,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+61;Flexibles Kunstoffpanzerrohr NW 25 UV Beständig;15,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+62;Flexibles Kunstoffpanzerrohr NW 32 UV Beständig;20,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+63;Flexibles Kunstoffpanzerrohr NW 25 UV Beständig;20,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+64;Anschlussverschraubung für Flex-Rohr NW 25;20,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+65;Anschlussverschraubung für Flex-Rohr NW 32;10,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+66;Anschlussverschraubung für Flex-Rohr NW 40;10,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+67;Anschlussverschraubung für Flex-Rohr NW 50;10,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+68;Abzweigdose 100 x 100 mm mittelfeste Ausführung;40,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+69;Abzweigdose 150 x 150 mm mittelfeste Ausführung;8,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+70;Resopalschild 80x50 mm, dreizeilig;80,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+71;Bügelschellen 22-28 mm,;50,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+72;Bügelschellen 34-40 mm,;50,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+73;C-Profil-Schiene für Kabelschellen,;60,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+74;Elektroinstallationskanal DIN EN 50085-2-1 (VDE 0604-2-1) als Leitungsführungskanal, Außenmaße H/B mind. 60/57 mm, aus Kunstsoff halogenfrei, einschl. aller systembedingten Form- und Verbindungsstücke, auf Beton.;8,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+75;Außenmaße H/B mind. 60/110 mm;6,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+76;Außenmaße H/B mind. 60/190 mm;3,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+77;Brandschutzabschottung an Kabel-/Leitungsanlagen als flexibles Schott, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse S 90 DIN 4102-9, im Gebäude, Oberkante Abschottung über Gelände/Fußboden bis 3,5 m, Wand aus Stahlbeton, Dicke 240 mm, ;3,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+78;Querschnitt bis 0,01 m2;3,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+79;Brandschutzabschottung an Einzelkabeln nach Leitungsanlagen-Richtlinie (LAR) des Bundeslandes der Ausführung/Muster Leitungsanlagen-Richtlinie (MLAR), Feuerwiderstandsklasse S 90 DIN 4102-9, im Gebäude, Oberkante Abschottung über Gelände/Fußboden über 3,5 bis 4 m, Wand aus Beton, Dicke 240 mm, freie;65,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+80;freier Ringspalt im Durchbruch über 15 bis 30 mm;25,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+81;freier Ringspalt im Durchbruch über 30 bis 40 mm;10,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+82;Brandschutzkabelkanal als selbsttragendes Fertigteil, Beflammung von außen, rechteckig, mit allgemeinem bauaufsichtlichen Prüfzeugnis, Feuerwiderstandsklasse E 90 DIN 4102-12, mit Funktionserhalt, mit abnehmbarem Deckel, waagerecht, Innenmaße B/H 110/100 mm, im Gebäude, Oberkante Kanal über Gelände/;10,0;m;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+1;Kabeldurchführungen für Verkabelung,;12,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+2;Nenngröße 13,5;12,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+3;Nenngröße 16;6,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+4;Nenngröße 21;6,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+5;Nenngröße 26;4,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+6;Nenngröße 36;2,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+7;Profilstahlkonstruktion, verzinkt,;150,0;kg;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+8;Profilstahlkonstruktionen, verzinkt,;100,0;kg;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+9;Profilstahlkonstruktionen, verzinkt,;80,0;kg;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+10;Dachhalter zur Aufständerung von Tragkonstruktionen auf;60,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+11;Baustelleneinrichtung für sämtliche AN-Leistungen;1,0;Psch;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+12;Auf- und Abbau und Vorhaltung von;1,0;psch;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+13;Auf- und Abbau und Vorhaltung von;1,0;psch;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+14;Funktionsprüfungen und -Messungen ent-;1,0;psch;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+15;Montageunterlagen einschl. Berechnungen,;1,0;psch;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+16;Elektroangaben;1,0;psch;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+17;Mitwirkung Brandfalltest;1,0;psch;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+18;Einweisung Nutzer;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+19;Koordination Schnittstellen Gebäudeautomation zu TGA Gewerken;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+20;Dokumentation GLT;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+21;"Für die digitale Abwicklung der Bauprozesse wird vom Auftraggeber die Datenplattform ""Planradar"" eingesetzt. Mit diesem Instrument werden insbesondere folgende Prozesse erstellt und verwaltet:";1,0;psch;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+1;1 x jährliche Wartung Neuanlagen 1. Jahr;1,0;St;gaeb;leistungsbeschreibungen/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83 (1).X83
+1;Elektronische Energiezähler für Direktmessung Drehstrom bis 35A BAC-Net MSTP;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+2;Elektronische Energiezähler für Direktmessung Drehstrom bis 25A BAC-Net MSTP;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+3;Sensoreinheit zur Messung von Temperatur und Luftqualität;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+4;Abdeckung der Sensoreinheit blanko mit Präsenzmelder Weiß;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+5;Außenwandwiderstandsthermometer/Witterungsfühler mit passivem Ausgang, mit Gehäuse aus schlagzähem Kunststoff und Schnappdeckel. Die Messumformer dienen zur Erfassung der Außentemperatur, der Temperatur im Feuchtraumbereich, z. B. als Außenfühler, Witterungsfühler, zur Montage auf Außenwänden.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+6;Kanaltemperaturfühler, Einbaulänge 250 mm;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+7;Kanaldruckaufnehmer 2500Pa;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+8;Tauchtemperaturfühler;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+9;Tauchtemperaturfühler;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+10;Tauchtemperaturfühler;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+11;Differenzdruckschalter Luft 50-500Pa;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+12;Kanalrauchmelder 24V AC inklusive Entnahmerohr 0,6 m.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+13;Frostschutzthermostat 3m Auto Luft;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+14;Differenzdruckschalter Luft 20-300Pa;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+15;2-Wege-Zonenventil;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+16;2-Wege-Zonenventil Außengewinde DN15 wie vor,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+17;Ventilstellantrieb 180N 24 V AC stetig;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+18;3-Wege-Regelventil;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+19;Ventilstellantrieb 500 N 24 V AC stetig;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+20;3-Wege-Regelventil;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+21;Ventilstellantrieb 500 N 24 V AC stetig;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+22;3-Wege-Regelventil;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+23;Ventilstellantrieb 500 N 24 V AC stetig;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+24;3-Wege-Regelventil;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+25;Ventilstellantrieb 500 N 24 V AC stetig;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+26;3-Wege-Regelventil;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+27;Ventilstellantrieb 500 N 24 V AC stetig;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+1;Kompakte Automationsstation m. 36 integrierten Ein-/Ausgängen m. Display;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+2;Automation Server Basic Software- Bundle- Standard;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+3;Advanced Bediendisplay, inclusive Montagerahmen;1,0;St.;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+4;USB Kabel 2,85m für Advanced Display Y-Anschluss;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+5;Spannungsversorgungsmodul;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+6;Sockel für Spannungsversorgungsmodul;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+7;Automation Server Premium Secure Boot Hardware - NL;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+8;Sockel für Automationserver Premium;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+9;Automation Server Premium Secure Boot Software - Standard;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+10;Automation Server Premium Secure Boot Software - Modbus;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+11;12-fach Digital-Ausgangsmodul (Form A) mit Handbedienebene;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+12;Modulsockel für I/O Module;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+13;8-fach Digital-Ausgangsmodul (Form C) mit Handebene;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+14;8-fach Analog-Ausgangsmodul (Strom/Spannung) mit Handbedienebene;1,0;St.;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+15;Digitaleingangsmodul mit Statusanzeige;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+16;Universaleingangsmodul mit Statusanzeige UI-16;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+17;8-fach Analog-Ausgangsmodul (Spannung) mit Handebene;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+18;Verlängerung CIO-Bus S-Kabel 1,5m;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+19;BACnet/IP-Raumcontroller mit 12 Universaleingängen/4 Ausgängen 230 V;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+1;Hardware DI - Dienstleistung;135,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+2;Hardware DO - Dienstleistung;36,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+3;Hardware AI - Dienstleistung;36,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+4;Hardware AO - Dienstleistung;28,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+5;Kommunikativ AI Bac Net-MSTP AI;2,0;St.;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+6;Kommunikativ DI Bac Net-MSTP BI;9,0;St.;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+7;Kommunikativ AO Bac Net-MSTP AO;4,0;St.;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+8;Kommunikativ DI Modbus-IP BI;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+9;Kommunikativ DO Modbus-IP BO;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+10;Kommunikativ AI Modbus-IP AI;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+11;Kommunikativ AO Modbus-IP AO;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+12;Kommunikativ AO Bac Net-IP AO;3,0;St.;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+13;Kommunikativ AI Bac Net-IP AI;2,0;St.;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+14;Kommunikativ DO Bac Net-IP BO;2,0;St.;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+15;Kommunikativ DI Bac Net-IP BI;2,0;St.;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+1;Überspannungsschutz Einspeisung Typ 2, 4-polig,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+2;Überspannungsschutz für aussenliegende Busleitungen, Melde- oder Messleitungen.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+3;Fernsignalisierung Ableiter;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+4;Aussenleitungen Energiekabel;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+5;Überspannungsschutz für Außenfühler + Klemmkasten;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+6;Einbau- und Verteilkasten für bis zu 3 Stk. Überspannungsableiter und deren Zubehörmodule;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+1;Erstellung Anlagenbilder;38,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+2;Erstellung Dynamische Einblendung;250,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+3;Vorkonfigurierte Trenddarstellungen;84,0;St.;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+4;Aufschaltung der Hardware Datenpunkt auf Gebäudeleitrechner EcoStruxure Building Operation;235,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+5;Aufschaltung der Kommunikativen Datenpunkt auf Gebäudeleitrechner EcoStruxure Building Operation;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+1;Anreihschrank 1800x800x400mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+2;Anreihschaltschrank+Sockel für Außenaufstellung;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+3;Komfortleuchte 18 Watt mit Türpositionsschalter,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+4;Schaltschrankheizung 230V 1500W;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+5;Schaltschrankklimatisierung 400V 1,5kW;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+6;Steuerspannungserzeugung 230 / 24 VAC - 160 VA;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+7;3-Fach-Steckdose für Reiheneinbau mit FI-Schutzschalter;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+8;Schaltschrankbelüftung 55 m³/h;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+9;Baugruppe Phasenüberwachung;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+10;Kombiableiter 3P+N Imax 40kA;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+11;Überspannungsschutz Busleitung;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+12;Überspannungsschutz Fühlerleitung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+13;Einspeisung 400V bis 35A mit Hauptschalter;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+14;Einspeisung 400V bis 25A mit Hauptschalter;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+15;Anwischeinrichtung;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+16;Sammelstörmeldung;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+17;Steuertransformator 230V/24V, 630VA;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+18;Steuertransformator 230V/24V, 500VA;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+19;Steuertransformator 400V / 230V, 500 VA;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+20;Steuertransformator 230V/24V, 1000VA;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+21;Netzgerät 24VDC 1,5 A;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+22;Einbau und Verdrahtung Netzteil 230VAC/24VDC;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+23;Einbau Ethernetanschlussdose-Hutschienen;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+24;Einbau und Verdrahtung Touchpanel und Netzteil;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+25;Einbau und Verdrahtung Switch und Netzteil;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+26;Montage und Verdrahtung BSK-Modul;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+27;Sicherungsüberwachung 230V;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+28;Sicherungsüberwachung 24 VAC;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+29;Sicherungsüberwachung 24 VDC;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+30;Baugruppe Aufschaltung Reparaturschalter;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+31;Baugruppe Luftstromüberwachung;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+32;Baugruppe 1 Meldung direkt auf DDC;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+33;Baugruppe 2 Meldungen direkt auf DDC;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+34;Steuerbaugruppe Aufschaltung Fühler aktiv;23,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+35;Steuerbaugruppe Aufschaltung Fühler passiv;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+36;Verriegelung ohne Koppelrelais 5 Meldungen;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+37;Verriegelung über Koppelrelais 1 Meldung;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+38;Einbau und Verdrahtung beigestelltes Gerät;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+39;Steuerung 2-Pkt mit 2 Meldungen;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+40;Steuerung Stetig ohne Meldungen;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+41;Steuerung motorische BSK;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+42;Steuerung Volumenstromregler;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+43;Motorbaugruppe 1-stufig,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+44;Motorbaugruppe EC o.Bypass,LS-Schalter, o.Handschalter bis 4kW,400V;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+45;Motorbaugruppe;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+46;Schaltkasten-Kleingehäuse,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+1;Installationsleitung NHXMH-J 3x1,5;600,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+2;Installationsleitung NHXMH-J 4x1,5;1275,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+3;Installationsleitung NHXMH-J 5x1,5;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+4;Installationsleitung NHXMH-J  7x1,5;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+5;Installationsleitung NHXMH-J  3x2,5;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+6;Installationsleitung NHXMH-J  4x2,5;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+7;Installationsleitung NHXMH-J  5x2,5;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+8;Installationsleitung NHXMH-J  4x4;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+9;Installationsleitung NHXMH-J 5x4;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+10;Installationsleitung NHXMH-J 5x6;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+11;Motor-Anschlussleitung, 4 x 1,5mm2, halogenfrei,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+12;Motor-Anschlussleitung , 4x2,5mm2, halogenfrei,;12,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+13;Motor-Anschlussleitung , 4x4mm2, halogenfrei,mit verbessertem Brandverhalten,;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+14;Motor-Anschlussleitung , 4x6 mm2, halogenfrei,mit verbessertem Brandverhalten,;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+15;Motor-Anschlussleitung 4x10 mm2, mit verbessertem Brandverhalten,;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+16;Fernmeldekabel J-H(ST)H 2x2x0,8 halogenfrei,;510,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+17;Fernmeldekabel J-H(ST)H 4x2x0,8 halogenfrei;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+18;Fernmeldekabel J-H(ST)H6x2x0,8 halogenfrei;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+19;FernmeldekabelJ-H(ST)H 10x2x0,8 halogenfrei;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+20;ICAT 7 4x2xAWG23 Netzwerkleitung halogenfrei;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+21;ICAT 7 4x2xAWG24 Netzwerkleitung halogenfrei;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+22;Patchleitung bis zu 5 m;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+23;Kabelmarker;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+24;Beidseitiges Anklemmen  J-H(ST)H 2x2x0,8;74,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+25;Beidseitiges Anklemmen J-H(ST)H 4x2x0,8;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+26;Beidseitiges Anklemmen J-H(ST)H 6x2x0,8;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+27;Beidseitiges Anklemmen J-H(ST)H 10x2x0,8;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+28;Beidseitiges Anklemmen CAT7 4x2xAWG23;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+29;Beidseitiges Anklemmen CAT7 4x2xAWG24;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+30;Beidseitiges Anklemmen NHXMH-J bis 4x1,5;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+31;Beidseitiges Anklemmen NHXMH-J 5x1,5;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+32;Beidseitiges Anklemmen NHXMH-J 7x1,5;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+33;Beidseitiges Anklemmen NHXMH-J 3x2,5;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+34;Beidseitiges Anklemmen NHXMH-J 4x2,5;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+35;Beidseitiges Anklemmen NHXMH-J 5x2,5;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+36;Beidseitiges Anklemmen NHXMH-J 5x4,0;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+37;Beidseitiges Anklemmen NHXMH-J 5x6,0;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+38;Kabelrinne  60x100 mm;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+39;Kabelrinne  60x200 mm;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+40;Kabelrinne  60x300 mm;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+41;Trennsteg für Kabelrinne 60 mm,;70,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+42;Kabelleiter, 60x200 mm;7,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+43;Kabelleiter, 60x300 mm;7,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+44;Kabelleiter, 60x500 mm;3,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+45;Deckel für Kabelrinne 100 mm;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+46;Deckel für Kabelrinne 200 mm;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+47;Deckel für Kabelrinne 300 mm;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+48;Kunststoffpanzerrohr NW 16 halogenfrei;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+49;Kunststoffpanzerrohr NW 20 halogenfrei;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+50;Kunststoffpanzerrohr NW 25 halogenfrei;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+51;Kunststoffpanzerrohr NW 32 halogenfrei;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+52;Kunststoffpanzerrohr NW 40halogenfrei;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+53;Kunststoffpanzerrohr NW 50halogenfrei;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+54;Kunststoffpanzerrohr NW 63halogenfrei;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+55;Aluminiumpanzerrohr NW 16 hohe Festigkeit mit Gewinde;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+56;Aluminiumpanzerrohr NW 20 hohe Festigkeit mit Gewinde;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+57;Aluminiumpanzerrohr NW 25 hohe Festigkeit mit Gewinde;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+58;Aluminiumpanzerrohr NW 32 hohe Festigkeit mit Gewinde;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+59;Aluminiumpanzerrohr NW 40 hohe Festigkeit mit Gewinde;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+60;Aluminiumpanzerrohr NW 50 hohe Festigkeit mit Gewinde;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+61;Flexibles Kunstoffpanzerrohr NW 25 UV Beständig;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+62;Flexibles Kunstoffpanzerrohr NW 32 UV Beständig;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+63;Flexibles Kunstoffpanzerrohr NW 25 UV Beständig;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+64;Anschlussverschraubung für Flex-Rohr NW 25;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+65;Anschlussverschraubung für Flex-Rohr NW 32;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+66;Anschlussverschraubung für Flex-Rohr NW 40;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+67;Anschlussverschraubung für Flex-Rohr NW 50;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+68;Abzweigdose 100 x 100 mm mittelfeste Ausführung;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+69;Abzweigdose 150 x 150 mm mittelfeste Ausführung;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+70;Resopalschild 80x50 mm, dreizeilig;80,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+71;Bügelschellen 22-28 mm,;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+72;Bügelschellen 34-40 mm,;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+73;C-Profil-Schiene für Kabelschellen,;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+74;Elektroinstallationskanal DIN EN 50085-2-1 (VDE 0604-2-1) als Leitungsführungskanal, Außenmaße H/B mind. 60/57 mm, aus Kunstsoff halogenfrei, einschl. aller systembedingten Form- und Verbindungsstücke, auf Beton.;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+75;Außenmaße H/B mind. 60/110 mm;6,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+76;Außenmaße H/B mind. 60/190 mm;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+77;Brandschutzabschottung an Kabel-/Leitungsanlagen als flexibles Schott, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse S 90 DIN 4102-9, im Gebäude, Oberkante Abschottung über Gelände/Fußboden bis 3,5 m, Wand aus Stahlbeton, Dicke 240 mm, ;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+78;Querschnitt bis 0,01 m2;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+79;Brandschutzabschottung an Einzelkabeln nach Leitungsanlagen-Richtlinie (LAR) des Bundeslandes der Ausführung/Muster Leitungsanlagen-Richtlinie (MLAR), Feuerwiderstandsklasse S 90 DIN 4102-9, im Gebäude, Oberkante Abschottung über Gelände/Fußboden über 3,5 bis 4 m, Wand aus Beton, Dicke 240 mm, freie;65,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+80;freier Ringspalt im Durchbruch über 15 bis 30 mm;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+81;freier Ringspalt im Durchbruch über 30 bis 40 mm;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+82;Brandschutzkabelkanal als selbsttragendes Fertigteil, Beflammung von außen, rechteckig, mit allgemeinem bauaufsichtlichen Prüfzeugnis, Feuerwiderstandsklasse E 90 DIN 4102-12, mit Funktionserhalt, mit abnehmbarem Deckel, waagerecht, Innenmaße B/H 110/100 mm, im Gebäude, Oberkante Kanal über Gelände/;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+1;Kabeldurchführungen für Verkabelung,;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+2;Nenngröße 13,5;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+3;Nenngröße 16;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+4;Nenngröße 21;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+5;Nenngröße 26;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+6;Nenngröße 36;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+7;Profilstahlkonstruktion, verzinkt,;150,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+8;Profilstahlkonstruktionen, verzinkt,;100,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+9;Profilstahlkonstruktionen, verzinkt,;80,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+10;Dachhalter zur Aufständerung von Tragkonstruktionen auf;60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+11;Baustelleneinrichtung für sämtliche AN-Leistungen;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+12;Auf- und Abbau und Vorhaltung von;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+13;Auf- und Abbau und Vorhaltung von;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+14;Funktionsprüfungen und -Messungen ent-;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+15;Montageunterlagen einschl. Berechnungen,;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+16;Elektroangaben;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+17;Mitwirkung Brandfalltest;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+18;Einweisung Nutzer;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+19;Koordination Schnittstellen Gebäudeautomation zu TGA Gewerken;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+20;Dokumentation GLT;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+21;"Für die digitale Abwicklung der Bauprozesse wird vom Auftraggeber die Datenplattform ""Planradar"" eingesetzt. Mit diesem Instrument werden insbesondere folgende Prozesse erstellt und verwaltet:";1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83
+1;1 x jährliche Wartung Neuanlagen 1. Jahr;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/260601_19882_LGR_Gebäudeautomation_Versand-LV_x83.X83

@@ -1,0 +1,69 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+010;Herstellung eines Grenzmusters für die ausgeschriebenen Fenster-, Fassaden- und Sonnenschutzkonstruktionen zur Abstimmung von Profilgeometrie, Oberflächen, Verglasung, Sonnenschutz und Anschlüssen an den Baukörper.;1,0;LE;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+020;Einrichtung, Vorhalten und Räumen der Baustelle, einschl. Bereitstellung aller für die Ausführung der gesamten Arbeiten erforderlichen Aufenthalts- und Materialräume der Baustelle für das gesamte Gebäude und für sämtliche in der nachstehend beschriebenen Leistungsbeschreibung aufgeführten Leistungen;1,0;LE;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+030;Verlängerung der Vorhaltung der Baustelle aus vom AN nicht zu verantwortenden Gründen.;1,0;Wo;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+040;Der AN hat die Erstellung kompletter Bestandsunterlagen als Darstellung des Endzustandes der ausgeführten Vertragsleistung zu übernehmen. Alle Pläne und sonstige Planungsunterlagen und Berechnungen sind digital und 3fach als Papierpause zu erstellen.;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+050;Herstellen eines provisorischen Verschlusses der Öffnungen im Bereich der Absetzbühnen für Materialanlieferungen der einzelnen Geschosse.;3,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+060;Vorhalten des provisorischen Verschlusses.;18,0;St/M;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+070;Rückbauen des Verschlusses, der Tür und fachgerechtes entsorgen der Einzelteile.;3,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+080;Mehraufwand für den späteren Einbau der Fenster / Fenstertüren im Bereich der Absetzbühnen.;3,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+010;Alu-Fensterband, 5-flügelig;5,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+020;Alu-Fensterband, 5-flügelig;15,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+030;Alu-Fensterband, 5-flügelig;6,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+040;Alu-Fensterband, 5-flügelig;13,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+050;Alu-Fensterband, 5-flügelig;2,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+060;Alu-Fensterband, 5-flügelig;3,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+070;Alu-Fensterband, 5-flügelig;5,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+080;Alu-Fensterband, 5-flügelig;2,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+090;Alu-Fensterband, 4-flügelig;3,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+100;Alu-Fensterband, 3-flügelig;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+110;Alu-Fensterband, 4-flügelig;3,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+120;Alu-Fenstertür als auswärtsöffnende Fluchttür für Fensterband,;3,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+130;Obertürschließer mit Gleitschiene auf der Bandgegenseite für auswärtsöffnende Türen, geeignet für Türblattabmessungen ca. 1,40 m x 3,06 m. Ausführung ohne Feststellanlage/Magnettürhalter.;3,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+140;Zulage für die Ausführung der Obentürschließer statt mit der Oberfläche Edelstahl, gebürstet matt (analog Türbeschlag),;3,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+150;Absturzsicherung als Stangensystem.;64,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+160;Türfeststeller (Bodentürstopper) zur mechanischen Fixierung der auswärtsöffnenden Alu-Fenstertüren FE4a-T / FE4b-T im geöffneten Zustand.;3,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+010;Alu-Pfosten-Riegel-Konstruktion mit seitlicher Festverglasung links und rechts, sowie über dem zweiflügeligen Schiebetür-Einsatzelement und darüberliegender Festverglasung.;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+020;Pfostenriegel-Einsatzelement für die vorgenannte Pfostenriegel-Konstruktion als Schiebetürelement.;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+030;Alu-Pfosten-Riegel-Konstruktion, mit sechsteiliger Aufteilung.;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+040;Ausführung eines Einsatzelements als nach innen aufgehende Fenstertür, 1-flügelig mit Dreh-Funktion;2,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+050;Alu-Pfosten-Riegel-Konstruktion, mit vierteiliger Aufteilung.;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+060;Alu-Pfosten-Riegel-Konstruktion, mit sechsteiliger Aufteilung.;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+070;Ausführung eines Einsatzelements als nach innen aufgehende Fenstertür, 1-flügelig mit Dreh-Funktion;2,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+080;Alu-Pfosten-Riegel-Konstruktion mit seitlicher Festverglasung links und rechts, sowie über dem zweiflügeligen Schiebetür-Einsatzelement und darüberliegender Festverglasung. Auf Ebene der Abhangdecke wird ein gedämmtes Blindpanel gemäß Einteilung auf gesamter Breite eingebaut.;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+090;Pfostenriegel-Einsatzelement für die vorgenannte Pfostenriegel-Konstruktion als Schiebetürelement.;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+100;Liefern und montieren von außenliegenden Griffmuscheln aus Edelstahl an den PR-Einsatztüren / Balkontüren zur Dachterrasse, passend zum vorhandenen Beschlagsystem und zur Oberflächenqualität der Aluminium-Profilsysteme gemäß ZTV Fensterbauarbeiten. Ausführung als flächenbündige Griffmulde für komfor;4,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+010;Rohrrahmentür, als 1-flg. Fluchtwegsdrehtür inkl. festverglastem Oberlicht gem. Planung und Türliste herstellen, liefern und fachgerecht montieren inkl. gangbar machen.;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+020;Rohrrahmentür, als 1-flg. Fluchtwegsdrehtür inkl. festverglastem Oberlicht und Seitenteil gem. Planung und Türliste herstellen, liefern und fachgerecht montieren inkl. gangbar machen.;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+030;Rohrrahmentür, als 1-flg. Drehtür inkl. festverglastem Oberlicht gem. Planung und Türliste herstellen, liefern und fachgerecht montieren inkl. gangbar machen.;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+040;Rohrrahmentür, als 2-flg. Drehtür nach außen öffnend als mit beidseitigen, flügelüberdeckenden Füllung und Alu-Verkleidung gem. Planung und Türliste herstellen, liefern und fachgerecht montieren inkl. gangbar machen.;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+050;Rohrrahmentür aus Alu, als 1-flg. auswärtsöffnende Drehtür flügelüberdeckenden Füllung und Alu-Verkleidung gem. Planung und Türliste herstellen, liefern und fachgerecht montieren inkl. gangbar machen. Tür wird in der Rohbauöffnung morntiert mit einem Versatz von 5 cm von der Außenkante Rohbau.;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+060;Obertürschließer mit Gleitschiene auf der Bandgegenseite für auswärtsöffnende Türen, geeignet für Türblattabmessungen ca. 1,40 bis 1,75 m x 3,06 m. Ausführung ohne Feststellanlage/Magnettürhalter.;4,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+070;Zulage für die Ausführung der Obentürschließer statt mit der Oberfläche Edelstahl, gebürstet matt (analog Türbeschlag),;4,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+080;Boden-Türstopper (gefederter Türpuffer) zur mechanischen Anschlagbegrenzung der auswärtsöffnenden Alu-Türen im geöffneten Zustand.;4,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+010;Drehkippfenster in Kunststoff, inkl. Befestigungsmaterial, Profiltiefe 58 mm, als 4-Kammern Profil und Mitteldichtung,;3,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+020;DIN rechts;2,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+030;Drehkippfenster in Kunststoff, inkl. Befestigungsmaterial, Profiltiefe 58 mm, als 4-Kammern Profil und Mitteldichtung,;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+010;Lamellen-Fenster, 4-flügelig, als Rauchabzugsfenster mit elektrischem Antrieb, Einbau in Dämmebene.;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+010;Ausführung eines außenliegenden LM-Raffstores mit Lamellen und LM-Schienenführung beidseitig, inklusive Sonnenschutzkasten.;51,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+020;Fensterband: ca. 4900 x 2200 mm;3,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+030;Fensterband: ca. 3700 x 2200 mm;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+040;Fensterband: ca. 7100 x 2200 mm;3,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+050;Fensterband: ca. 7100 x 3000 mm;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+060;Fensterband: ca. 5600 x 3000 mm;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+070;Fensterband: ca. 6900 x 3000 mm;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+080;Liefern und Montieren eines Windwächters zur automatischen Überwachung der Windgeschwindigkeit für die außenliegenden LM-Raffstores gemäß Ausführungsbeschreibung Sonnenschutz mit Motorantrieb, einschließlich aller erforderlichen Zubehörteile zur vollständigen Einbindung in die Steuerung der Sonnensc;4,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+090;Durchführen aller erforderlichen Justierungs- und Nachjustierungsarbeiten nach vollständiger Montage sämtlicher Sonnenschutzelemente (Raffstore, Motorisierung, Windwächter, Steuerung) gemäß Titel 07 sowie nach Anschluss der elektrischen Versorgung durch den AN ELT.;1,0;LE;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+010;Herstellung, Lieferung und Montage, der gekanteten Fensterbank inkl. sämtlicher Zubehörteile und Befestigungsmaterialien. Die Ausführung erfolgt gemäß Ausführungsbeschreibung und Planung.;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+020;Herstellung, Lieferung und Montage, der gekanteten Fensterbank inkl. sämtlicher Zubehörteile und Befestigungsmaterialien. Die Ausführung erfolgt gemäß Ausführungsbeschreibung und Planung.;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+030;Herstellung, Lieferung und Montage, der gekanteten Fensterbank inkl. sämtlicher Zubehörteile und Befestigungsmaterialien. Die Ausführung erfolgt gemäß Ausführungsbeschreibung und Planung.;3,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+040;Herstellung, Lieferung und Montage, der gekanteten Fensterbank inkl. sämtlicher Zubehörteile und Befestigungsmaterialien. Die Ausführung erfolgt gemäß Ausführungsbeschreibung und Planung.;3,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+050;Herstellung, Lieferung und Montage, der gekanteten Fensterbank inkl. sämtlicher Zubehörteile und Befestigungsmaterialien. Die Ausführung erfolgt gemäß Ausführungsbeschreibung und Planung.;11,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+060;Herstellung, Lieferung und Montage, der gekanteten Fensterbank inkl. sämtlicher Zubehörteile und Befestigungsmaterialien. Die Ausführung erfolgt gemäß Ausführungsbeschreibung und Planung.;40,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+070;Herstellung, Lieferung und Montage, der gekanteten Fensterbank inkl. sämtlicher Zubehörteile und Befestigungsmaterialien. Die Ausführung erfolgt gemäß Ausführungsbeschreibung und Planung.;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+080;Herstellung, Lieferung und Montage, der gekanteten Fensterbank inkl. sämtlicher Zubehörteile und Befestigungsmaterialien. Die Ausführung erfolgt gemäß Ausführungsbeschreibung und Planung.;3,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+090;Herstellung, Lieferung und Montage, der gekanteten Fensterbank inkl. sämtlicher Zubehörteile und Befestigungsmaterialien. Die Ausführung erfolgt gemäß Ausführungsbeschreibung und Planung.;5,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+100;Herstellung, Lieferung und Montage, der gekanteten Fensterbank inkl. sämtlicher Zubehörteile und Befestigungsmaterialien. Die Ausführung erfolgt gemäß Ausführungsbeschreibung und Planung.;1,0;St;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+010;Helfer;10,0;h;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+020;Baufacharbeiter / Stahlbauschlosser;10,0;h;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83
+030;Bauvorarbeiter / Obermonteur;10,0;h;gaeb;leistungsbeschreibungen/IHK2026-EU584_260731_AVA_Fenster_LV.X83

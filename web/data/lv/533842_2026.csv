@@ -1,0 +1,237 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Fassaden-Mockup;1,0;psch;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Rüstung P-R-Fassade innen;1,0;psch;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+20;Rüstungen Loggia;1,0;psch;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Erstellen einer prüffähigen Statik für die nachfolgend beschriebenen Fassaden und deren Bestandteile.;1,0;psch;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+20;Erstellen einer prüffähigen Glasstatik für die nachfolgend beschriebenen Fassaden.;1,0;psch;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+30;Werk- und Montageplanung gem. TAB-Ziffer 1.5 für die nachfolgend beschriebenen Fassaden und deren Bestandteile, inkl. der notwendigen bauphysikalischen Nachweise wie U-Wert, Winddichtigkeit etc.;1,0;psch;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+40;Reinigung der nachfolgend beschriebenen Fenster, Pfosten-Riegel-Fassaden, Türanlagen und Fensterbänke gemäß TAB-Ziffer 1.9;1,0;psch;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+50;Bestands- und Revisionsunterlagen;1,0;psch;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Alu-Fenster, 2-tlg., b/h=2,96/2,085m, RC2, 40dB;7,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+20;Alu-Fenster, 2-tlg., b/h=2,56/2,085, RC2, 35dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+30;Alu-Fenster, 4-tlg., b/h=4,96/2,085m, RC2, 35dB;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+40;ohne Anforderungen an die Normflankenpegeldifferenz.;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+50;Alu-Fenster, 2-tlg., b/h=2,96/2,085m, RC2, 35dB;4,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+60;ohne Anforderungen an die Normflankenpegeldifferenz.;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+70;Alu-Fenster, 3-tlg., b/h=3,96/2,085m, RC2, 35dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+80;Alu-Fenster, Loggia, 2-tlg., b/h=2,80/2,085m, RC4, 35dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+90;Alu-Loggia-Tür, 1-tlg., b/h=1,38/2,81m, RC4, 35dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+100;Alu-Fenster, 1-tlg., b/h=1,16/2,085m, RC2, 35dB;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+110;Alu-Fenster, 1-tlg., b/h=2,90/2,085m, Glasbrüstung, Zulage;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+120;Alu-Fenster, 2-tlg., b/h=2,76/2,085m, RC2, 35dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+130;Alu-Fenster, 2-tlg., b/h=2,36/2,085m, RC2, 35dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+140;Alu-Fenster, 3-tlg., b/h=3,96/2,085m, RC2, 35dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+150;Alu-Fenster, 3-tlg., b/h=3,96/2,085m, RC2, 35dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+160;Alu-Fenster, 2-tlg., b/h=2,56/2,085m, RC2, 35dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+170;Alu-Fenster, 2-tlg., b/h=2,96/2,085m, RC4, 40dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+180;Alu-Fenster, 2-tlg., b/h=2,56/2,085m, RC4, 40dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+190;ohne Anforderungen an die Normflankenpegeldifferenz.;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+200;Alu-Fenster, 1-tlg., b/h=1,16/2,085m, RC4, 40dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+210;Alu-Fenster, 2-tlg., b/h=2,56/2,485m, RC2, 40dB;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+220;Alu-Fenster, 3-tlg., b/h=3,96/2,485m, RC2, 40dB;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+230;Alu-Fenster bzw. Tür, Sportraum, 4-tlg., b/h=4,96/2,360m, RC2, 40dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+240;Alu-Fenster bzw. Tür, Sportraum, 2-tlg., b/h=2,57/2,360m, RC2, 40dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+250;Alu-Fenster, 2-tlg., b/h=2,96/2,085m, RC4, 35dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+260;Alu-Fenster, 3-tlg., b/h=3,96/2,085m, RC4, 35dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+270;Alu-Fenster, 1-tlg., b/h=1,16/2,085m, RC4, 35dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+280;Alu-Fenster, 2-tlg., b/h=2,56/2,085m, RC2, 35dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+290;Alu-Fenster, 3-tlg., b/h=3,56/2,085m, RC2, 35dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+300;Alu-Fenster bzw. -tür, Terrasse, 4-tlg., b/h=4,96/2,850m, RC2, 35dB;3,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+310;Alu-Fenster, 2-tlg., b/h=2,96/1,885m, RC2, 35dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+320;Alu-Fenster, 2-tlg., b/h=1,40/1,81m, Insektenschutzgitter, Zulage;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+330;Alu-Fenster, 3-tlg., b/h=3,96/1,885m, RC2, 35dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+340;Alu-Fenster, 3-tlg., b/h=3,96/2,085m, RC2, 35dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+350;Alu-Fenster, 3-tlg., beschusshemmend, b/h=3,96/2,085m, RC4, 35dB;3,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+360;Alu-Fenster, beschusshemmend, 2-tlg., b/h=3,01/2,085m, RC2/RC4, 35dB;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+370;Anschlaghülsen für PSA-Anschlagpunkt;45,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+380;Abnehmbarer Steckbolzen als PSA-Anschlagpunkt;3,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Aluminium-Fensterbank, Standardfenster, l=100-120cm, Abw=225mm;4,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+20;"Länge: ca. 220-240 cm;";1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+30;"Länge: ca. 240-260 cm;";8,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+40;"Länge: ca. 260-280 cm;";1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+50;"Länge: ca. 280-300 cm;";18,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+60;"Länge: ca. 340-360 cm;";1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+70;"Länge: ca. 380-400 cm;";8,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+80;"Länge: ca. 480-500 cm;";4,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+90;Aluminium-Fensterbank, Fenster Leistelle, l=280-300cm, Abw=230mm;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+100;"Länge: ca. 380-400 cm;";3,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Pfosten-Riegel-Fassade B-C/1, RC2;29,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+20;Pfosten-Riegel-Fassade B/1-2, RC2;23,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+30;Pfosten-Riegel-Fassade, Ganzglasecke, RC2, Zulage;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+40;Pfosten-Riegel-Fassade, B/1-2, Tür T.001.1, 2-flg., RC3, Zulage;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+50;Pfosten-Riegel-Fassade B/1-3, RC3;35,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+60;Pfosten-Riegel-Fassade, Windfang Innentrennwand, RC2;27,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+70;Pfosten-Riegel-Fassade, Windfang Innentrennwand, Tür T.001.2, 2-flg., RC2, Zulage;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+80;Kommunikationsstele Haupteingang;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Brüstungsabdeckung Loggia;12,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+20;Brüstungsabdeckung Loggia, Abschluss, Zulage;4,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+30;Attika, Terrasse, I. OG;18,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+40;Attika, Terrasse, I. OG, Abschluss, Zulage;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+50;Attika, Terrasse, I. OG, Ganzglasgeländer;18,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Stahl-RR-Tür, 1-flg., b/h=1,26/2,225m, RC2, T.015.1;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+20;"Türnummer: T.017.1;";1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+30;"Türnummer: T.022.1;";1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+40;"Türnummer: T.023.1;";1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+50;Stahl-RR-Tür, 1-flg., b/h=1,26/2,225m, RC4, T.026.1;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+60;"Tür-Nummer T.027.1;";1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+70;"Türnummer: T.028.1;";1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+80;Stahl-RR-Tür, 1-flg., b/h=1,40/2,225m, RC3, T.021.2;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+90;Kommunikationsstele Paketraum;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Bestands- und Revisionsunterlagen;1,0;psch;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Textiler Sonnenschutz, außenliegend, Schienenführung, 1-tlg., b/h=1,08/1,81m;6,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+20;"Breite: 2,80 m;";3,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+30;"Breite: 2,96 m;";1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+40;"Breite: 3,96 m;";1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+50;Textiler Sonnenschutz, außenliegend, Schienenführung, 1-tlg., b/h=1,08/2,01m;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+60;"Breite: 1,16 m;";2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+70;"Breite: 1,40 m;";1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+80;"Breite: 1,48 m;";18,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+90;"Breite: 2,36 m;";1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+100;"Breite: 2,48 m;";5,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+110;"Breite: 2,56 m;";3,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+120;"Breite: 2,76 m;";1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+130;"Breite: 2,88 m;";2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+140;"Breite: 2,96 m;";8,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+150;"Breite: 3,56 m;";1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+160;"Breite: 3,96 m;";4,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+170;Textiler Sonnenschutz, außenliegend, Schienenführung, 1-tlg., b/h=2,48/2,285m;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+180;Anordnung vor Rettungsweg.;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+190;Textiler Sonnenschutz, außenliegend, Schienenführung, 1-tlg., b/h=1,16/2,41;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+200;"Breite: 2,56 m;";2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+210;"Breite: 3,96 m;";2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Erstellen einer prüffähigen Statik für die nachfolgend beschriebenen Fassaden und deren Bestandteile.;1,0;psch;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+20;Werk- und Montageplanung gem. TAB-Ziffer 1.5 für die nachfolgend beschriebenen Fassaden und deren Bestandteile, inkl. der notwendigen bauphysikalischen Nachweise wie U-Wert, Winddichtigkeit etc.;1,0;psch;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+30;Bestands- und Revisionsunterlagen;1,0;psch;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Wärmedämmung an Außenflächen, 1-lagig, d=180mm;511,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+20;Bauart Brandwand, d=100mm, Nord, H.b.5,50m, Zulage;6,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+30;Einbauort:;555,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+40;Einbauort:;583,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+50;Bauart Brandwand, d=130mm, Süd, H.b.16,50m, Zulage;32,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+60;Einbauort:;638,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+70;Bauart Brandwand, d=100mm, West, H.b.5,50m, Zulage;6,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+80;Bauart Brandwand, d=100mm, West, H.b.16,00m, Zulage;6,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+90;Einbauort:;113,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+100;Einbauort:;23,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+110;Wärmedämmung Stützen, 1-lagig, d=180mm, b=0,80m, H.b.4,50m;17,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+120;Wärmedämmung Stützen, 1-lagig, d=50mm, b=0,25m, Ost, H.b.4,50m;50,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+130;Wärmedämmung Sturz, 1-lagig, d=100mm, b=0,43m, Ost, H.b.4,50m;30,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+140;Horizontale Brandsperre;189,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+150;Wärmedämmung Unterdecke Überhang, d=180 mm, H.b.5,00m;91,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+160;Wärmedämmung Unterdecke Loggia, d=180 mm, H.b.4,50m;38,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+170;Wärmedämmung Brüstung Loggia, d=180 mm, h=0,80m;13,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+180;Wärmedämmung Sturz Loggia, d=180 mm, H.b.4.50m, h=0,50m;13,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+190;Wärmedämmung Unteransicht Sturz Loggia, d=50 mm, b=0,25m, H.b.4.50m;12,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+200;Wärmedämmung Fassadenbekleidung Loggia, d=180 mm, H.b.4.50m;33,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+210;Wärmedämmung Gebäudeüberhöhung III. OG, 1-lagig, d=180 mm, H.b.3,00m, G-H/5;15,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+220;Einbauort:;62,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Elementrahmen, b/h=5,05/4,70m;42,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+20;Elementrahmen, b/h=5,05/5,74m;5,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+30;Elementrahmen, b/h=5,05/6,24m;8,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+40;Elementrahmen, b/h=3,65/4,70m;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+50;Elementrahmen, b/h=3,65/5,74m;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+60;Elementrahmen, b/h=4,66/5,70m;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+70;Elementrahmen, b/h=5,05/4,975m;27,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+80;Elementrahmen, b/h=5,05/4,975m, Sockelblech, Zulage;54,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Profilblechfassade, b/h=4,80/4,45m;10,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+20;Profilblechfassade, b/h=4,80/4,45m, RA, Zulage;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+30;mit Ausschnitt für Fenster;15,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+40;mit Ausschnitt für Fenster;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+50;mit Ausschnitt für Fenster;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+60;mit Ausschnitt für Fenster;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+70;mit Ausschnitt für Fenster;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+80;mit Ausschnitt für Fenster;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+90;mit Ausschnitt für Fenster;4,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+100;mit Ausschnitt für Fenster;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+110;mit Ausschnitt für Fenster;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+120;mit Ausschnitten für Fenster;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+130;Profilblechfassade, b/h=4,80/5,49m;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+140;mit Ausschnitt für Fenster;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+150;mit Ausschnitt für Fenster;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+160;mit Ausschnitt für Fenster;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+170;Profilblechfassade, b/h=4,80/5,99m, Fensterausschnitt b/h=3,80/1,95m;3,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+180;mit Ausschnitt für Fenster;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+190;mit Ausschnitten für Fenster;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+200;mit Ausschnitten für Fenster und Loggia;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+220;mit Ausschnitt für Loggia;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+230;Profilblechfassade, b/h=4,80/5,99m, Wetterschutzgitter, b/h=1,40/2,70m, Zulage;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+240;Profilblechfassade, b/h=3,40/4,45m;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+250;Profilblechfassade, b/h=3,40/5,49m;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+260;Profilblechfassade, b/h=4,80/4,85m;11,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+270;Profilblechfassade, b/h=4,80/4,85m, Wetterschutzgitter b/h=1,40/2,00m, Zulage;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+280;Profilblechfassade, b/h=4,80/4,85m, Wetterschutzgitter b/h=0,30/2,095m, Zulage;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+290;Profilblechfassade, b/h=4,80/4,85m, Wetterschutzgitter b/h=0,30/2,145m, Zulage;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+300;mit Ausschnitt für Tapetentür;3,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+310;mit Ausschnitt für Zugangstür;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+320;Profilblechfassade, b/h=4,80/4,85m, Wetterschutzgitter b/h=0,70/1,00m, 2 St, Zulage;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+330;mit Ausschnitten für Fenster und Tapetentür;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+340;Profilblechfassade, b/h=4,80/4,85m, Wetterschutzgitter b/h=2,40/1,40m, Zulage;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+350;mit Ausschnitt für Fenster;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+360;mit Ausschnitt für Fenster und Fenstertüren zur Terrasse;3,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+370;mit Ausschnitten für Tapetentüren;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+380;Profilblechfassade, b/h=4,80/4,85m, Wetterschutzgitter b/h=0,40/2,20m, Zulage;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+390;Profilblechfassade, b/h=4,80/4,85m, Wetterschutzgitter b/h=2,40/0,70m, Zulage;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+400;Profilblechfassade, b/h=4,41/4,45m, Fensterausschnitt b/h=3,90/1,95m;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+410;Profilblechfassade, Speierdurchlässe, b/h=250/250mm;11,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+420;Profilblechfassade, Notentwässerung, b/h=250/250mm;5,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+430;Profilblechfassade, Ausschnitte, b/h=100/100mm;5,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+440;Profilblechfassade, Ausschnitte, b/h=400/400mm;5,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+450;Profilblechfassade, Ausschnitte, b/h=130/240mm, mit Rahmen;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+460;Profilblechfassade, Sockelblech, Zulage;18,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Fugenblech, horizontal, l=2,80m;97,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+20;"Einzellängen: ca. 1,40 m;";2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+30;"Einzellängen: ca. 1,25 m;";2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+40;Fugenblech, horizontal, l=1,80m, Außenecke;18,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+50;Fugenblech, horizontal, l=1,10m, Innenecke;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+60;Fugenblech, horizontal, l=2,30m, Innenecke;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+70;Fugenblech, horizontal, l=1,80m, Übergangsprofil;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+80;Fugenblech, vertikal, l=2,36m;43,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+90;"Einzellängen: ca. 2,60 m;";65,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+100;"Einzellängen: ca. 3,64 m;";4,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+110;"Einzellängen: ca. 3,89 m;";6,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+120;"Einzellängen: ca. 2,50 m;";20,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+130;Fugenblech, vertikal, l=2,60m, b=200mm;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+140;"Einzellängen: ca. 2,36 m;";1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+150;Fugenblech, vertikal, l=2,60m, b=185mm;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+160;Ansichtsbreite abweichend 1115 mm.;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+170;"Einzellängen: ca. 2,36 m;";2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+180;"Einzellängen: ca. 2,36 m;";2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+190;Fugenblech, vertikal, l=2,36m, Außenecke;18,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+200;"Einzellängen: ca. 2,60 m;";22,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+210;"Einzellängen: ca. 3,64 m;";4,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+220;"Einzellängen: ca. 3,89 m;";2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+230;"Einzellängen: ca. 2,50 m;";6,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+240;Fugenblech, vertikal, l=2,50m, b=450mm;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+250;"Einzellängen: ca. 1,85 m;";1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+260;Fugenblech, Revisionsöffnungen, b/h=150/300mm, Zulage;18,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+270;Fugenblech, UK Außenleuchten, b/h=160/120mm, Zulage;17,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+280;Fugenblech, Sockelblech, b=275mm, Zulage;27,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Vorgehängte hinterlüftete und vorkultivierte Grünfassade, inkl. UK;23,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+20;Alu-Profil, oberer Abschluss zur Attika;5,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+30;Alu-Profil, unterer Abschluss, Entwässerungsrinne;5,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+40;Alu-Profil, unterer Abschluss, Entwässerungsrinne, Abfluss DN50, Zulage;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+50;Alu-Profil, seitlicher Abschluss Grünfassade;10,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+60;Bewässerungsanlage;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Unterdecke mit Unterkonstruktion, Regelbereich;84,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+20;"Breite der Deckenfelder 0,665 m;";6,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+30;"Breite der Deckenfelder 0,685 m;";6,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Brüstungsbekleidung mit Unterkonstruktion;13,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+20;Sturzbekleidung mit Unterkonstruktion, H.b.4,50m;13,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+30;Deckenbekleidung mit Unterkonstruktion, H.b.4,50m;38,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+40;Bekleidung Unteransicht Sturz mit Unterkonstruktion, H.b.4,50m;12,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+50;Bekleidung Unteransicht Sturz, Abschluss, Zulage, H.b.4,50m;6,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+60;Fassadenbekleidung Loggia mit Unterkonstruktion, H.b.4,50m;33,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+70;Fassadenbekleidung Loggia, Anschluss an VHF, Zulage, H.b.4,50m;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Fassadenbekleidung EG, West, mit Unterkonstruktion, H.b.5,50m;26,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+20;Fassadenbekleidung EG, West, Wetterschutzgitter b/h=1,00/2,40m, Zulage;2,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+30;Fassadenbekleidung EG, West, Ausschnitt Füllstutzen, b/h=0,37/0,39m, Zulage;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+40;Fassadenbekleidung EG, West, Notentwässerung, b/h=250/250mm, Zulage;1,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+50;Fassadenbekleidung EG, West, Sockelblech, Zulage;6,0;m;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Fassadenbekleidung III. OG, Nord, mit Unterkonstruktion, H.b. 3,00 m;15,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+20;Fassadenbekleidung III. OG, Nord, Ausschnitte für Leiter, Zulage;1,0;psch;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+30;Fassadenbekleidung III. OG, West, mit Unterkonstruktion, H.b. 3,00 m;62,0;m2;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Sturzbleche mit Unterkonstruktion, Sektionaltore;6,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+20;Laibungsbleche mit Unterkonstruktion, Sektionaltore;12,0;St;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+10;Stundenlohnarbeiten durch Meister/-in;10,0;h;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+20;durch Vorarbeiter/-in.;10,0;h;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+30;durch Baufacharbeiter/-in.;10,0;h;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83
+40;Stundenlohnarbeiten durch Bauhelfer/-in.;10,0;h;gaeb;leistungsbeschreibungen/260716_LSRE_VE38_Fassadenarbeiten.X83

@@ -897,6 +897,18 @@ function renderChecklistBlock(a, l){
   return `<div class="va-checklist" data-clroot="${l.id}">${chead}${firstday}${stake}${toc}${groupsHtml}${offen}${weitere}</div>`;
 }
 
+// Download-Knopf für unsere extrahierte Tabelle (nicht für die Original-Unterlagen — die
+// bleiben beim Portal, siehe /api/lead-export). Der Text wird bei JEDEM Aufruf gebaut, nicht
+// als Modulkonstante: dort würde `tk()` beim Import auswerten und die Sprache einfrieren.
+function csvLink(id, was){
+  const titel = was==='lv' ? tk("Alle Positionen als CSV herunterladen (Excel-tauglich)")
+                           : tk("Alle Kriterien als CSV herunterladen (Excel-tauglich)");
+  return `<a class="dl-csv" href="/api/lead-export?was=${was}&id=${encodeURIComponent(id)}"
+    download title="${esc(titel)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+    ><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>CSV</a>`;
+}
+
 function renderDocs(l){
   const istOffen = l.src === 'f02' && (l.tage == null || l.tage >= 0);
   const check = items => (items&&items.length) ? `<ul class="va-check">${items.map(x=>{
@@ -976,7 +988,7 @@ function renderDocs(l){
     const herkunft = s.quelle && s.quelle.indexOf('gaeb') >= 0
       ? tk("aus dem GAEB-Leistungsverzeichnis") : tk("aus dem Preisblatt der Unterlagen");
     return `<section class="sec">
-      <h4>${tk("Leistungsumfang")}<span class="cov">${herkunft}</span></h4>
+      <h4>${tk("Leistungsumfang")}<span class="cov">${herkunft}</span>${csvLink(l.id,'lv')}</h4>
       <p class="lu-sum">${tk("{n} Positionen im Leistungsverzeichnis.", {n: zahl(s.nPositionen)})}</p>
       ${mengen.length ? `<div class="lu-mengen">${mengen.map(([e,v])=>
         `<span class="lu-chip"><b>${esc(zahl(v))}</b> ${esc(e)}</span>`).join('')}</div>` : ''}
@@ -1002,7 +1014,7 @@ function renderDocs(l){
       <span class="kr-txt">${esc(x.text||'')}</span>
       ${x.gewichtung!=null?`<span class="kr-gew">${esc(String(x.gewichtung))}</span>`:''}</li>`;
     return `<section class="sec">
-      <h4>${tk("Entscheidungskriterien")}<span class="cov">${tk("aus der Kriterienmatrix der Unterlagen")}</span></h4>
+      <h4>${tk("Entscheidungskriterien")}<span class="cov">${tk("aus der Kriterienmatrix der Unterlagen")}</span>${csvLink(l.id,'kriterien')}</h4>
       ${a.length ? `<div class="kr-block kr-ko">
         <div class="kr-h"><b>${tk("Ausschlusskriterien")}</b>
           <span class="kr-n">${a.length}</span>

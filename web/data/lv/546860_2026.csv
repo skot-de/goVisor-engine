@@ -1,0 +1,28 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Einrichten und Räumen der Baustelle incl. aller benötigten Geräte und Maschinen,;1,0;psch;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0010;Erstellung und Freigabe aller Ausführungs- und Fertigungsunterlagen gem.;1,0;psch;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0020;Durchführung und Dokumentation aller Prüfungen (Werkstatt + Baustelle):;1,0;psch;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0030;Bereitstellung und Betrieb aller Hebezeuge und Transportmittel:;1,0;psch;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0040;Zusammenstellung einer Dokumentation 2-fach Papier + digital (Stick),;1,0;psch;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0010;Verstärkung des Bestandsträger (Kellergeschoss);2,0;St;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0020;Neue Stütze (Kellergeschoss);1,0;St;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0030;Verstärkung des Bestandsträger (Erdgeschoss);2,0;Stück;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0040;Verstärkung des Bestandsträger (Erdgeschoss);2,0;St;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0050;Neue Träger (Erdgeschoss);2,0;St;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0060;Verstärkung des Bestandsträger (1.Obergeschoss);2,0;St;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0070;Neue Träger (1.Obergeschoss);2,0;St;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0080;Verstärkung des Bestandsträger (1.Obergeschoss);2,0;St;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0090;Neue Träger (2.Obergeschoss);4,0;St;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0010;Liefern, Werkstattfertigen und Baustellenmontage von Stahlstützen:;20903,0;kg;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0020;Liefern und fachgerechtes Einbauen der Kleberanker-Verankerung gem. statischem Nachweis:;188,0;Stück;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0030;Herstellung von Stützenstößen (Druckstoß) in EG, 1.OG, 2.OG und DG:;310,0;Stück;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0010;Liefern, Werkstattfertigen und Baustellenmontage von Haupt-Deckenträgern/-Riegeln:;36650,0;kg;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0020;Liefern, Werkstattfertigen und Montieren von 6 Sonderträgern HEB 180 S355 J2:;1450,0;kg;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0030;Liefern und planmäßiges Anziehen aller HV-Schraubengarnituren an Trägerknoten:;360,0;Stück;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0010;Liefern, Werkstattfertigen und Montieren von Wandverbänden (4 Geschosse):;80,0;m;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0020;Liefern, Werkstattfertigen und Montieren von Dach- und Wandpfetten:;1600,0;kg;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0010;Liefern und Einbauen aller Kleinteile (Werkstattfertigung):;3500,0;kg;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0010;Dauerelastischer Dichtstoff an Stützenfuß-Übergängen und Wandanschlüssen:;240,0;m;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0010;Aufbringen reaktiver Brandschutzbeschichtung auf alle tragenden Stützen und Träger:;1040,0;m2;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0010;Vollständige Montage Baukörper (4 Geschosse, H≈14 m):;1,0;psch;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83
+0020;Ausbesserung aller Schäden an Korrosionsschutz -und Brandschutzbeschichtungen nach Montage:;1,0;psch;gaeb;leistungsbeschreibungen/24-18_NEU_AUSSCHREI_LOS -19.X83

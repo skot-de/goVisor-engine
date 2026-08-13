@@ -1,0 +1,609 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Betrifft Position(en): Sämtliche Positionen unter der OZ 03;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Betrifft Position(en): Sämtliche Positionen unter der OZ 03;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Betrifft Position(en): Sämtliche Positionen unter der OZ 03;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Betrifft Position(en): Sämtliche Positionen unter der OZ 04;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Betrifft Position(en): Sämtliche Anlagen unter der OZ 02;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Betrifft Position(en): Sämtliche Positionen unter der OZ 05;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Betrifft Position(en): Sämtliche Positionen unter der OZ 05;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Betrifft Position(en): Sämtliche Positionen unter der OZ 05;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;In dieser Sammelposition sind nachfolgend beschriebenen Leistungen eingerechnet:;1,0;psch;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Baustelle;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Baustelle;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Stundenlohnarbeiten durch Auszubildende/r (Mittellohn);20,0;h;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Stundenlohnarbeiten durch Arbeiter/-in;20,0;h;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Stundenlohnarbeiten durch Facharbeiter/-in;20,0;h;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Stundenlohnarbeiten durch Monteur/-in;20,0;h;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Stundenlohnarbeiten durch Meister/-in;10,0;h;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Stundenlohnarbeiten durch Obermonteur/-in;10,0;h;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Stundenlohnarbeiten durch Techniker/-in;10,0;h;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Stundenlohnarbeiten durch Handwerker/-in;10,0;h;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Erstellung und Implementierung eines Anlagenkennzeichnungssystems für alle Anlage dieses Leistungsverzeichnis lt. DIN 6779-12, in Abstimmung mit der Betriebsführung.;1,0;Psch;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Montageplanung des Auftragnehmers in CAD im angegebenen Format. Änderungen aus der Sphäre des AN werden dem Auftraggeber zeitgerecht zur Kenntnis gebracht und in den Einheitspreis eingerechnet. Die letzte Version des Montageplans wird als Bestandsplan ausgewiesen.;1,0;Psch;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Schlitz- und Durchbruchspläne, sowie Leerrohrpläne, prüfen, ergänzen und fortschreiben, mit CAD-Programm, für den zu erbringenden Leistungsumfang, anhand vom AG zur Verfügung gestellter Baupläne, in Abstimmung mit anderen Leistungsbereichen, nach Bauzeitenplan, als Papierzeichnung/Plotterausdruck un;1,0;Psch;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Hydraulisches Schema als schematische Darstellung in Größe DIN A0 der im Positionsstichwort genannten gesamten Anlage hinter Glas auf Metall-Trägerplatte geklebt und in Technik-Zentrale aufgehängt.;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Hydraulisches Schema als schematische Darstellung in Größe DIN A0 der im Positionsstichwort genannten gesamten Anlage hinter Glas auf Metall-Trägerplatte geklebt und in Technik-Zentrale aufgehängt.;3,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Hydraulisches Schema als schematische Darstellung in Größe DIN A0 der im Positionsstichwort genannten gesamten Anlage hinter Glas auf Metall-Trägerplatte geklebt und in Technik-Zentrale aufgehängt.;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Hydraulisches Schema als schematische Darstellung in Größe DIN A0 der im Positionsstichwort genannten gesamten Anlage hinter Glas auf Metall-Trägerplatte geklebt und in Technik-Zentrale aufgehängt.;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Hydraulisches Schema als schematische Darstellung in Größe DIN A0 der im Positionsstichwort genannten gesamten Anlage hinter Glas auf Metall-Trägerplatte geklebt und in Technik-Zentrale aufgehängt.;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Hydraulisches Schema als schematische Darstellung in Größe DIN A0 der im Positionsstichwort genannten gesamten Anlage hinter Glas auf Metall-Trägerplatte geklebt und in Technik-Zentrale aufgehängt.;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Raumkühlgerät in Splitbauweise,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Rahmenkonstruktion zur Aufständerung von Klimageräten u. a. auf Flachdächern.;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Wärmeübergabestation, als Plattenwärmeübertrager, aus Kupfer,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Einstufige Heizpatrone 1 1/2 Zoll.;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Wärmespeicheranlage für Heizwasser,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Plattenwärmeübertrager,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Kombinierter, hydraulisch entkoppelter Vor- und Rücklaufverteiler mit Aufteilung auf Strömungsbereiche mit unterschiedliche Temperaturstufen, bestehend aus einem Druckbehälter in geschweißter Ausführung mit Rohrleitungsanschlüssen, eingebauten Trennblechen und den hydraulisch erforderlichen Einbaute;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Zubehör zu kombinierter, hydraulisch entkoppelter Vor- und Rücklaufverteiler;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Dienstleistungen zu kombinierter, hydraulisch entkoppelter Vor- und Rücklaufverteiler mit:;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Nachspeisestation,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Membran-Druckausdehnungsgefäß mit Abnahmebescheinigung,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Membran-Druckausdehnungsgefäß mit Abnahmebescheinigung,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Druckhalteanlage;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Kreiselpumpe als Umwälzpumpe,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Kreiselpumpe als Umwälzpumpe,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Kreiselpumpe als Umwälzpumpe,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Kreiselpumpe als Umwälzpumpe,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Kreiselpumpe als Umwälzpumpe,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Spülen der kompletten Rohrleitung/Leitungsanlage, für Heizungswasser.;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Befüllung der Heizanlage mit enthärtetem Wasser,;7,5;m3;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Dokumentation des Hydraulischen Abgleiches;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Zusätzliche Druck- und Dichtheitsprüfung aller Rohrleitungen, aus mittelschwerem Stahlgewinderohr DIN EN 10255, geschweißt, Betriebsmedium Heizungswasser, Ausführung DIN EN 14336, Prüfmedium Luft/Gas.;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Wiederholte Einweisung;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Beistellen von Personal;6,0;h;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Beistellen von Personal;6,0;h;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Funktionsmessung für Heizungsanlagen DIN 18380,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Rohrleitung;468,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Rohrleitung;156,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Rohrleitung;40,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Rohrleitung;40,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Rohrleitung;42,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Rohrleitung;84,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Rohrleitung;98,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Rohrleitung;110,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Rohrleitung;90,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+100;Rohrleitung;210,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+110;Rohrleitung;110,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Übergangsflansch,;6,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Übergangsflansch,;20,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Übergangsflansch,;10,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Übergangsverschraubung,;70,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Übergangsverschraubung,;60,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Übergangsverschraubung,;60,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Übergangsverschraubung,;78,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Übergangsverschraubung,;70,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Übergangsverschraubung,;28,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+100;Bogen,;10,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+110;Bogen,;10,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+120;Bogen,;20,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+130;Bogen,;50,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+140;Bogen,;60,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+150;Bogen,;55,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+160;Bogen,;66,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+170;Reduzierstück,;20,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+180;Reduzierstück,;10,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+190;Reduzierstück,;10,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+200;Reduzierstück,;10,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+210;Reduzierstück,;28,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+220;Reduzierstück,;22,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+230;Reduzierstück,;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+240;T-Stück,;18,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+250;T-Stück,;20,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+260;T-Stück,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+270;T-Stück,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+280;T-Stück,;10,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+290;T-Stück,;22,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+300;T-Stück,;28,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+310;T-Stück,;14,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+320;T-Stück,;6,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+330;T-Stück,;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+340;Rohraufhängung als Rohrschelle,;10,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+350;Rohraufhängung als Rohrschelle,;10,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+360;Rohraufhängung als Rohrschelle,;15,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+370;Rohraufhängung als Rohrschelle,;15,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+380;Rohraufhängung als Rohrschelle,;25,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+390;Rohraufhängung als Rohrschelle,;25,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Schmutzfänger,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Schmutzfänger,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Kugelhahn,;24,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Kugelhahn,;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Kugelhahn,;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Kugelhahn,;32,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Kugelhahn,;36,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Kugelhahn,;12,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Abgleichventil;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+100;Abgleichventil;3,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+110;Abgleichventil;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+120;Abgleichventil;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+130;Abgleichventil;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+140;Abgleichventil;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+150;Rückschlagventil;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+160;Rückschlagventil;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+170;Rückschlagventil;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+180;Rückschlagventil;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+190;Membransicherheitsventil,;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+200;Membransicherheitsventil,;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+210;Entlüftungsarmatur,;6,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+220;Entlüftungsarmatur,;12,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+230;Entlüftungsarmatur,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+240;Entleerungsarmatur,;6,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+250;Entleerungsarmatur,;16,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+260;Wassersackrohr DIN 16282,;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Unterkonstruktion zur Montage und Aufständerung von Leitungen auf flachen oder leicht geneigten Dächern, insbesondere zur Montage von Rohrleitungen.;9,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Unterkonstruktion zur Montage und Aufständerung von Leitungen auf flachen oder leicht geneigten Dächern, insbesondere zur Montage von Rohrleitungen.;15,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Wärmezähler,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Spülen der Leitungsanlage DIN EN 806-4;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Fußbodenheizung DIN EN 1264-1,;1205,0;m2;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Abdeckung;1205,0;m2;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Trittschalldämmschicht;1205,0;m2;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Schutzrohr;425,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Funktionsheizen DIN EN 1264-4,;1205,0;m2;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Heizkreisverteiler;36,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Heizkreisverteiler;13,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Heizkreisverteiler;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Heizkreisverteiler;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+100;Heizkreisverteiler;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+110;Verteilerschrank für Heizkreisverteiler, höhenverstellbar;36,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+120;Verteilerschrank für Heizkreisverteiler, höhenverstellbar;13,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+130;Verteilerschrank für Heizkreisverteiler, höhenverstellbar;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+140;Verteilerschrank für Heizkreisverteiler, höhenverstellbar;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+150;Verteilerschrank für Heizkreisverteiler, höhenverstellbar;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Distanzstück für Wärmezähler,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Zeigerthermometer DIN EN 13190,;22,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Druckmessgerät,;12,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Differenzdruckmessgerät,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Abluftgerät mit Wärmerückgewinnung in bedarfsgeführten Abluftsystemen, bestehend aus Abluftgerät für Außenaufstellung, dazu passender Sole-Wasser-Wärmepumpe für Innenaufstellung, Regelung und Zubehör;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Schaltkasten 1650m3/h;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Regelung 1650m3/h;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Wärmeübertrager Luft - Wärmeträgermedium:;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;für Abluftgerät;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;mit Differenzdrucksensor für konstanten statischen Unterdruck im Kanalsystem;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Inbetriebnahme mit Funktionsprüfung des Lüftungs- und WRG-Systems mit Leistungsmessung und Protokollierung;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+100;Interface zur Fernbedienung, Visualisierung und Anlagenüberwachung;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+110;Zu- und Abluftgerät für Innenaufstellung 500m3/h:;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+120;Zu- und Abluftgerät für Innenaufstellung 450m3/h:;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+130;Zubehör für Ventilatorgestützte Wohnraumlüftungsgeräte für Innenaufstellung;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+140;Fernbedienung für Ventilatorgestützte Wohnraumlüftungsgeräte für Innenaufstellung;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+150;Rahmenkonstruktion zur Aufständerung von Lüftungsgeräten u. a. auf Flachdächern.;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+160;Unterkonstruktion zur Aufständerung von Lüftungsgeräten auf Flachdächern.;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Schalldämpfer,;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Schalldämpfer,;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Schalldämpfer,;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Telefonieschalldämpfer für RLT-Anlagen;60,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Elastisches Verbindungsstück,;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Luftleitung, rechteckig,;10,0;m2;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Luftleitung, rechteckig,;5,0;m2;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Formstück für Luftleitung, rechteckig,;8,0;m2;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Formstück für Luftleitung, rechteckig,;4,0;m2;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Luftleitung, rund, flexibel,;120,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Wickelfalzrohr;160,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Wickelfalzrohr;20,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Wickelfalzrohr;20,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Wickelfalzrohr;300,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Wickelfalzrohr;15,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Wickelfalzrohr;15,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Wickelfalzrohr;15,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Wickelfalzrohr;15,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Übergangsstück, für Luftleitung, rund,;10,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Übergangsstück, für Luftleitung, rund,;10,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Übergangsstück, für Luftleitung, rund,;6,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Übergangsstück, für Luftleitung, rund,;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Übergangsstück, für Luftleitung, rund,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Übergangsstück, für Luftleitung, rund,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Übergangsstück, für Luftleitung, rund,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Bogen, für Luftleitung, rund,;45,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Bogen, für Luftleitung, rund,;30,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+100;Bogen, für Luftleitung, rund,;10,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+110;Bogen, für Luftleitung, rund,;7,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+120;Bogen, für Luftleitung, rund,;10,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+130;Bogen, für Luftleitung, rund,;6,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+140;Bogen, für Luftleitung, rund,;50,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+150;Bogen, für Luftleitung, rund,;16,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+160;Bogen, für Luftleitung, rund,;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+170;Bogen, für Luftleitung, rund,;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+180;Bogen, für Luftleitung, rund,;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+190;Bogen, für Luftleitung, rund,;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+200;Bogen, für Luftleitung, rund,;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+210;Abzweigstück, für Luftleitung, rund,;61,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+220;Abzweigstück, für Luftleitung, rund,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+230;Abzweigstück, für Luftleitung, rund,;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+240;Abzweigstück, für Luftleitung, rund,;58,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+250;Abzweigstück, für Luftleitung, rund,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+260;Abzweigstück, für Luftleitung, rund,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+270;Abzweigstück, für Luftleitung, rund,;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+280;Abzweigstück, für Luftleitung, rund,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+290;Steckverbinder, für Luftleitung, rund,;15,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+300;Steckverbinder, für Luftleitung, rund,;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+310;Steckverbinder, für Luftleitung, rund,;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+320;Steckverbinder, für Luftleitung, rund,;30,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+330;Steckverbinder, für Luftleitung, rund,;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+340;Steckverbinder, für Luftleitung, rund,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+350;Steckverbinder, für Luftleitung, rund,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+360;Steckverbinder, für Luftleitung, rund,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+370;Enddeckel, für Luftleitung, rund;12,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Unterkonstruktion zur Montage und Aufständerung von Leitungen auf flachen oder leicht geneigten Dächern, insbesondere zur Montage von Luftkanälen.;15,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Unterkonstruktion zur Montage und Aufständerung von Leitungen auf flachen oder leicht geneigten Dächern, insbesondere zur Montage von Luftkanälen.;17,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand,;52,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand,;3,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Wetterschutzgitter, für Fortluft,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Wetterschutzgitter, für Fortluft,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Luftgitter;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Luftgitter;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Luftgitter;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Luftgitter;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Luftgitter;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Luftventil,;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Luftventil,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Luftventil,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Luftventil,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+100;Luftventil,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+110;Luftventil,;6,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+120;Automatisches Tellerventil Typ ATVC-100, mit elektrothermischem Antrieb für elektrischen Anschluss 230V / 50Hz, Volumenstrom einstellbar, für den Einbau in Fortluftanlagen. SEV-geprüft.;115,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Dokumentation des lüftungstechnischen Abgleiches auf Datenträger.;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Beistellen von Personal für die Sachverständigenabnahme der raumlufttechnischen Anlagen, Vergütung des Sachverständigen durch gesonderten Vertrag.;6,0;h;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Funktionsmessung für raumlufttechnische Anlagen DIN 12599, die Funktionsmessungen an Lüftungsanlagen, Messung Luft- bzw. Strömungsgeschwindigkeit bzw. der Luftvolumenstrom, Messungen in Luftleitungen, Gesamtvolumenstrommessung an Lüftungszentrale, Trichtermessungen an Luftdurchlässen.;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Brandschutzabschottung von Rohrleitung;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Brandschutzabschottung von Rohrleitung;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Brandschutzabschottung von Rohrleitung;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Brandschutzabschottung von Rohrleitung;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Brandschutzabschottung von Rohrleitung;19,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Brandschutzabschottung von Rohrleitung;170,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Brandschutzabschottung von Rohrleitung;45,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Brandschutzabschottung von Rohrleitung;14,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Brandschutzabschottung von Rohrleitung;12,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+100;Brandschutzabschottung von Rohrleitung;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+110;Brandschutzabschottung von Rohrleitung;54,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+120;Brandschutzabschottung von Rohrleitung;54,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+130;Brandschutzabschottung von Rohrleitung;10,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+140;Brandschutzabschottung von Rohrleitung;59,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+150;Brandschutzabschottung von Rohrleitung;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+160;Brandschutzbekleidung mit allgemeinem bauaufsichtlichen Prüfzeugnis bzw. DIN 4102-4,;14,0;m2;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Zeigerthermometer DIN EN 13190,;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Druckprobe Trinkwasserinstallation der neu installierten Trinkwasserinstallation komplett oder in Teilabschnitten gemäß Norm, einschl. der Gestellung der erforderlichen Pumpen, Anschluss und Dichtungsmaterial, Erstellung eines Druck-Protokolls, inkl. provisorische Presskappen für das Abdrücken von T;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Spülen der Leitungsanlage DIN EN 806-4;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Füllen der Trinkwasserinstallation einschl. der Entnahmestellen mittels filtriertem Trinkwasser nach DIN 1988-2, in den Dimensionen DN 12 - 50, ab dem Übergabepunkt.;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Durchflusswassererwärmer mit Plattenübertrager, angebunden an zentrale Wärmeversorgung;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Filter, rückspülbar,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Rückflussverhinderer,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Druckerhöhungsanlage;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Kreiselpumpe,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Fäkalienhebeanlage DIN EN 12050-1,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Die Grauwasser-Recycling-Anlagen sind für die Aufbereitung von Grauwasser, d.h. schwach belastetem Abwasser der Körperhygiene (Dusche, Badewanne, Handwaschbecken) ausgelegt. Mit BioMembranfilter-Technologie Der Gesamtreinigungsprozess setzt sich aus der Sedimentation, der biologischen Reinigung (Bel;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Rohrleitung;1264,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Rohrleitung;458,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Rohrleitung;139,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Rohrleitung;75,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Rohrleitung;194,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Rohrleitung;90,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Rohrleitung;56,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Rohrleitung;275,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Rohrleitung;352,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+100;Rohrleitung;120,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+110;Rohrleitung;80,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+120;Winkelkonsole,;1500,0;kg;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+130;Form-/Hohlprofilstahlkonstruktion,;1500,0;kg;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+140;Rohraufhängung,;32,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+150;Rohraufhängung,;25,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+160;Rohraufhängung,;30,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+170;Rohraufhängung,;50,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+180;Rohraufhängung,;60,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+190;Rohraufhängung,;50,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+200;Rohraufhängung,;30,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Übergangsflansch,;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Übergangsflansch,;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Übergangsflansch,;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Übergangsverschraubung,;96,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Übergangsverschraubung,;334,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Übergangsverschraubung,;48,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Übergangsverschraubung,;36,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Übergangsverschraubung,;44,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Übergangsverschraubung,;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+100;Übergangsverschraubung,;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+110;Bogen,;20,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+120;Bogen,;20,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+130;Bogen,;40,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+140;Bogen,;70,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+150;Bogen,;80,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+160;Bogen,;58,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+170;Bogen,;55,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+180;Reduzierstück,;150,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+190;Reduzierstück,;50,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+200;Reduzierstück,;20,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+210;Reduzierstück,;70,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+220;Reduzierstück,;20,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+230;Reduzierstück,;30,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+240;Reduzierstück,;15,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+250;Reduzierstück,;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+260;Reduzierstück,;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+270;T-Stück,;200,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+280;T-Stück,;150,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+290;T-Stück,;50,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+300;T-Stück,;20,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+310;T-Stück,;20,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+320;T-Stück,;20,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+330;T-Stück,;20,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+340;T-Stück,;42,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+350;T-Stück,;48,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+360;T-Stück,;15,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+370;T-Stück,;15,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Kugelhahn DIN EN ISO 16135,;48,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Absperrventil,;160,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Absperrventil,;23,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Absperrventil,;18,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Absperrventil,;22,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Absperrventil,;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Absperrventil,;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Entleerungsventil,;25,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Probenahmeventil,;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+100;Zirkulations-Regulierventil;7,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+110;Zirkulations-Regulierventil;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+120;Wandauslaufventil;3,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Abwasserleitung;26,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Abwasserleitung;110,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Abwasserleitung;114,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Abwasserleitung;366,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Abwasserleitung;65,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Abwasserleitung;602,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Abwasserleitung;90,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Abwasserleitung;60,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Abzweig,;10,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Abzweig,;56,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Abzweig,;65,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Abzweig,;20,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Abzweig,;130,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Abzweig,;35,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Abzweig,;15,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Bogen,;60,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Bogen,;163,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+100;Bogen,;162,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+110;Bogen,;75,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+120;Bogen,;89,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+130;Bogen,;355,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+140;Bogen,;34,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+150;Bogen,;14,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+160;Reduzierstück,;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+170;Reduzierstück,;56,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+180;Reduzierstück,;16,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+190;Reduzierstück,;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+200;Reduzierstück,;6,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+210;Reduzierstück,;10,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+220;Reduzierstück,;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+230;Reinigungsrohr mit Verschlussdeckel,;10,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+240;Reinigungsrohr mit Verschlussdeckel,;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+250;Reinigungsrohr mit Verschlussdeckel,;34,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+260;Reinigungsrohr mit Verschlussdeckel,;12,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+270;Reinigungsrohr mit Verschlussdeckel,;3,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Bodenablauf DIN EN 1253-1 mit Geruchverschluss,;3,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Tiefspül-WC,;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Tiefspül-WC,;51,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Handwaschbecken,;60,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Ausgussbecken,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Duschwanne,;46,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Duschwanne,;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Duschabtrennung;46,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Wanneneinhängesitz,;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Duschvorhangstange;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Duschvorhang Ecke, komplett mit Befestigungsmaterial:;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;WC-Bürstengarnitur,;59,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Einhängesitz, mit Rückenlehne,;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;WC-Rückenstütze für WC-Ausladung von 650 bis 700 mm,;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Haltegriff,;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Stützklappgriff für WC,;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+100;Stützklappgriff für WC,;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+110;WC-Papierhalterkombination,;59,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+120;Haken,;59,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+130;Abfallbehälter,;59,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+140;Ablaufventil DIN EN 274-1,;60,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+150;Geruchverschluss;60,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+160;Geruchverschluss;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+170;Geruchverschluss DIN 19541 mit Prüfzeichen,;54,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Wandbatterie,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Einhandmischer für Standmontage,;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Einhandmischer für Standmontage,;52,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Einhandmischer für Wandmontage,;46,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Einhandmischer für Wandmontage,;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Duschstangengarnitur,;54,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Eckventil,;228,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Geräteanschlussventil,;6,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Rohbauset für Wandeinbau,;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Spülarmatur für WC, elektronisch gesteuert,;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Installationselement,;51,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Installationselement,;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Abdeckplatte für Einbauspülkasten,;59,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Installationselement,;52,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Installationselement,;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Installationselement,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Installationselement,;54,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+100;Traverse;54,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Zeigerthermometer DIN EN 13190,;3,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Druckmessgerät,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Mehrstrahl-Flügelrad-Hauswasserzähler,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Wärmedämmung ohne Ummantelung DIN 4140;50,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Wärmedämmung ohne Ummantelung DIN 4140;50,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Wärmedämmung ohne Ummantelung DIN 4140;20,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Wärmedämmung ohne Ummantelung DIN 4140;20,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Wärmedämmung einschl. Ummantelung DIN 4140;170,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Wärmedämmung einschl. Ummantelung DIN 4140;124,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Wärmedämmung einschl. Ummantelung DIN 4140;248,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Wärmedämmung einschl. Ummantelung DIN 4140;250,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Wärmedämmung einschl. Ummantelung DIN 4140;130,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+100;Wärmedämmung einschl. Ummantelung DIN 4140;205,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+110;Wärmedämmung einschl. Ummantelung DIN 4140;20,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+120;Wärmedämmung einschl. Ummantelung DIN 4140;30,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+130;Wärmedämmung einschl. Ummantelung DIN 4140;35,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+140;Wärmedämmung ohne Ummantelung DIN 4140;52,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+150;Wärmedämmung ohne Ummantelung DIN 4140;18,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+160;Wärmedämmung ohne Ummantelung DIN 4140;9,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+170;Wärmedämmung ohne Ummantelung DIN 4140;7,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+180;Wärmedämmung ohne Ummantelung DIN 4140;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+190;Wärmedämmung ohne Ummantelung DIN 4140;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+200;Wärmedämmung einschl. Ummantelung DIN 4140;6,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+210;Wärmedämmung einschl. Ummantelung DIN 4140;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+220;Wärmedämmung einschl. Ummantelung DIN 4140;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+230;Wärmedämmung einschl. Ummantelung DIN 4140;24,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+240;Wärmedämmung einschl. Ummantelung DIN 4140;24,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+250;Wärmedämmung einschl. Ummantelung DIN 4140;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+260;Wärmedämmung einschl. Ummantelung DIN 4140;8,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+270;Wärmedämmung einschl. Ummantelung DIN 4140;12,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+280;Wärmedämmung einschl. Ummantelung DIN 4140;12,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+290;Wärmedämmung einschl. Ummantelung DIN 4140;23,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+300;Wärmedämmung einschl. Ummantelung DIN 4140;6,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+310;Wärmedämmung einschl. Ummantelung DIN 4140;6,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Kältedämmung DIN 4140,;50,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Kältedämmung DIN 4140,;50,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Kältedämmung DIN 4140,;75,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Kältedämmung DIN 4140,;164,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Kältedämmung DIN 4140,;50,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Kältedämmung DIN 4140,;30,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Kältedämmung DIN 4140,;366,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Kältedämmung DIN 4140,;602,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Kältedämmung DIN 4140,;90,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+100;Kältedämmung DIN 4140,;60,0;m;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+110;Kältedämmung DIN 4140,;108,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+120;Kältedämmung DIN 4140,;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+130;Kältedämmung DIN 4140,;9,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+140;Kältedämmung DIN 4140,;25,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+150;Kältedämmung DIN 4140,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+160;Kältedämmung DIN 4140,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Kombinierte Brandschutzabschottung (Kombischott) mit bauaufsichtlichem Verwendbarkeitsnachweis, Ausführung gemäß Zeichnung.;125,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Kombinierte Brandschutzabschottung (Kombischott) mit bauaufsichtlichem Verwendbarkeitsnachweis, Ausführung gemäß Zeichnung.;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Kombinierte Brandschutzabschottung (Kombischott) mit bauaufsichtlichem Verwendbarkeitsnachweis, Ausführung gemäß Zeichnung.;3,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Kombinierte Brandschutzabschottung (Kombischott) mit bauaufsichtlichem Verwendbarkeitsnachweis, Ausführung gemäß Zeichnung.;7,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Kombinierte Brandschutzabschottung (Kombischott) mit bauaufsichtlichem Verwendbarkeitsnachweis, Ausführung gemäß Zeichnung.;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Schließen der Fuge um Brandschutzklappe, gemäß allgemeiner bauaufsichtlicher Zulassung der Brandschutzklappe, Klassifizierung EI 90 DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, rauchdicht S, im Installationsschacht, Arbeitshöhe des Montageortes bis 3,5 m ;52,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Schließen der Fuge um runden Luftleitungen, gemäß allgemeiner bauaufsichtlicher Zulassung der Luftleietungen, Klassifizierung EI 90 DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen Einbau, rauchdicht S, im Installationsschacht Decke, Arbeitshöhe des Montageortes bis 3,5 m über der St;12,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Brandschutzabschottung von Rohrleitung;52,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Brandschutzabschottung von Rohrleitung;52,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+100;Brandschutzabschottung von Rohrleitung;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+110;Brandschutzabschottung von Rohrleitung;30,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+120;Brandschutzabschottung von Rohrleitung;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+130;Brandschutzabschottung an Kabel-/Leitungsanlagen;3,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+140;Brandschutzabschottung an Kabel-/Leitungsanlagen;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+150;Brandschutzbekleidung mit allgemeinem bauaufsichtlichen Prüfzeugnis bzw. DIN 4102-4,;14,0;m2;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Abschottung (Schott) von nicht brennbaren Rohrleitungen (n.b.Rohr) ohne Dämmung mittels einer beidseitigen Streckenisolierung aus Steinwollematten und Steinwolleschalen zur Unterbindung der Wärmeweiterleitung.;11,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Abschottung (Schott) von nicht brennbaren Rohrleitungen (n.b.Rohr) ohne Dämmung mittels einer beidseitigen Streckenisolierung aus Steinwollematten und Steinwolleschalen zur Unterbindung der Wärmeweiterleitung.;130,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Abschottung (Schott) von nicht brennbaren Rohrleitungen (n.b.Rohr) ohne Dämmung mittels einer beidseitigen Streckenisolierung aus Steinwollematten und Steinwolleschalen zur Unterbindung der Wärmeweiterleitung.;32,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Abschottung (Schott) von nicht brennbaren Rohrleitungen (n.b.Rohr) ohne Dämmung mittels einer beidseitigen Streckenisolierung aus Steinwollematten und Steinwolleschalen zur Unterbindung der Wärmeweiterleitung.;14,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Abschottung (Schott) von nicht brennbaren Rohrleitungen (n.b.Rohr) ohne Dämmung mittels einer beidseitigen Streckenisolierung aus Steinwollematten und Steinwolleschalen zur Unterbindung der Wärmeweiterleitung.;28,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Abschottung (Schott) von nicht brennbaren Rohrleitungen (n.b.Rohr) ohne Dämmung mittels einer beidseitigen Streckenisolierung aus Steinwollematten und Steinwolleschalen zur Unterbindung der Wärmeweiterleitung.;20,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Abschottung (Schott) in einer Wand oder Decke für die Maßnahme (beidseitig) bei nicht brennbaren Rohrleitungen (n.b.Rohr) mit einer Dämmung aus Elastomer.;45,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Abschottung (Schott) in einer Wand oder Decke für die Maßnahme (beidseitig) bei nicht brennbaren Rohrleitungen (n.b.Rohr) mit einer Dämmung aus Elastomer.;43,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Abschottung (Schott) in einer Wand oder Decke für die Maßnahme (beidseitig) bei nicht brennbaren Rohrleitungen (n.b.Rohr) mit einer Dämmung aus Elastomer.;13,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+100;Abschottung (Schott) in einer Wand oder Decke für die Maßnahme (beidseitig) bei nicht brennbaren Rohrleitungen (n.b.Rohr) mit einer Dämmung aus Elastomer.;13,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+110;Abschottung (Schott) in einer Wand oder Decke für die Maßnahme (beidseitig) bei nicht brennbaren Rohrleitungen (n.b.Rohr) mit einer Dämmung aus Elastomer.;18,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+120;Abschottung (Schott) in einer Wand oder Decke für die Maßnahme (beidseitig) bei nicht brennbaren Rohrleitungen (n.b.Rohr) mit einer Dämmung aus Elastomer.;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Absicherung der Durchführung einer Ablaufleitung (Ablaufl.) ohne Dämmung als offenes System (U/U) mit einer Brandschutzmanschette in der Klassifikation EI90 durch einen Bauteil EI90.;3,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Absicherung der Durchführung einer Ablaufleitung (Ablaufl.) ohne Dämmung als offenes System (U/U) mit einer Brandschutzmanschette in der Klassifikation EI90 durch einen Bauteil EI90.;55,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Absicherung der Durchführung einer Ablaufleitung (Ablaufl.) ohne Dämmung als offenes System (U/U) mit einer Brandschutzmanschette in der Klassifikation EI90 durch einen Bauteil EI90.;60,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Absicherung der Durchführung einer Ablaufleitung (Ablaufl.) ohne Dämmung als offenes System (U/U) mit einer Brandschutzmanschette in der Klassifikation EI90 durch einen Bauteil EI90.;59,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Absicherung der Durchführung einer Ablaufleitung (Ablaufl.) ohne Dämmung als offenes System (U/U) mit einer Brandschutzmanschette in der Klassifikation EI90 durch einen Bauteil EI90.;55,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Absicherung der Durchführung einer Ablaufleitung (Ablaufl.) ohne Dämmung als offenes System (U/U) mit einer Brandschutzmanschette in der Klassifikation EI90 durch einen Bauteil EI90.;3,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Abschottung (Schott) von Ablaufleitungen (Ablaufl.) ohne Dämmung als offenes System (U/U) mit einem Brandschutzband (Brandschutzb.) in der Klassifikation EI90 durch einen Bauteil EI90.;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Abschottung (Schott) von Ablaufleitungen (Ablaufl.) ohne Dämmung als offenes System (U/U) mit einem Brandschutzband (Brandschutzb.) in der Klassifikation EI90 durch einen Bauteil EI90.;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Abschottung (Schott) von Ablaufleitungen (Ablaufl.) ohne Dämmung als offenes System (U/U) mit einem Brandschutzband (Brandschutzb.) in der Klassifikation EI90 durch einen Bauteil EI90.;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Abschottung (Schott) von Ablaufleitungen (Ablaufl.) ohne Dämmung als offenes System (U/U) mit einem Brandschutzband (Brandschutzb.) in der Klassifikation EI90 durch einen Bauteil EI90.;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Abschottung (Schott) von Ablaufleitungen (Ablaufl.) ohne Dämmung als offenes System (U/U) mit einem Brandschutzband (Brandschutzb.) in der Klassifikation EI90 durch einen Bauteil EI90.;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Abschottung (Schott) von Ablaufleitungen (Ablaufl.) ohne Dämmung als offenes System (U/U) mit einem Brandschutzband (Brandschutzb.) in der Klassifikation EI90 durch einen Bauteil EI90.;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;In dieser Sammelposition sind nachfolgende Leistungen eingerechnet -;1,0;Psch;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Innerhalb der Gesamt - Inbetriebnahme werden alle Informationspunkte in einem 1:1 Test überprüft und innerhalb einer Checkliste dokumentiert sowie jeweils durch Unterschrift des AG bestätigt .;1,0;ST;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Anklemmen der eingesetzten Brandschutzklappe nach der erforderlichen Struktur;60,0;ST;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Tableau für die Visualisierung von Summenstörungen mittels LED.;1,0;ST;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Sammelstörmeldeeinrichtung,;15,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Meldungsanzeige,;15,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Lampenprüfeinrichtung,;3,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Bediengerät für Automationseinrichtung,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Bediengerät für Automationseinrichtung,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Software für das Bedienen und Beobachten je Bedieneinrichtung,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Optimierungsprogramm;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Automationseinrichtung,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Physikalische Ein-/Ausgabefunktion,;68,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Physikalische Ein-/Ausgabefunktion,;11,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Physikalische Ein-/Ausgabefunktion,;24,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Physikalische Ein-/Ausgabefunktion,;12,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Tauchtemperatur-Messwertgeber;11,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Tauchtemperatur-Messwertgeber;9,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Außentemperatur-Messwertgeber mit eingebautem Feuchtemesswertgeber,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Druck-Messwertgeber,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Druck-Kontaktgeber,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Rauchmelder,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Durchgangsregelarmatur mit Antrieb,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Schrankfeld,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Seitenwand für Schaltschrank,;2,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Trennwand für Schaltschrank,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Schaltplantasche für Schaltschrank,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Klappbares Ablagepult für Schaltschrank,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Be- und Entlüftung für Schaltschrank,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Handschaltung;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Sammelstörmeldeeinrichtung,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Meldungsanzeige,;9,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Lampenprüfeinrichtung,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Einspeisung;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Leistungsbaugruppe;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Leistungsbaugruppe;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Leistungsabgang;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Leistungsabgang;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Pumpenschaltgerät für Einzelpumpe,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Pumpenschaltgerät für Doppelpumpe,;4,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Beidseitiges (beids.) Anklemmen von externen Geräten. Im Positionsstichwort angegeben ist das externe Gerät. Abgerechnet wird die Anzahl der angeklemmten Geräte.;20,0;ST;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;In dieser Positon sind Klemmarbeiten für die GA/MSR Komponenten der Feldebene enthalten (Eigene Geräte). Die Kabel für die GA/MSR sind im LV der Elektrotechnik enthalten. Etwaige Dienstleistungskosten welche im Einheitspreis GA/MSR-Kabel enthalten wären, sind somit in dieser Position zu berücksichti;40,0;ST;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Physikalische Funktion Binäre Eingabe (BI) gemäß GA-Funktionsliste 1.1.2 VDI 3814 Blatt 3.1.;68,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Physikalische Funktion Binäre Ausgabe (BO) gemäß GA-Funktionsliste 1.1.4 VDI 3814 Blatt 3.1.;11,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Physikalische Funktion Analoge Eingabe (AI) gemäß GA-Funktionsliste 1.1.1 VDI 3814 Blatt 3.1.;24,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Physikalische Funktion Analoge Ausgabe (AO) gemäß GA-Funktionsliste 1.1.3 VDI 3814 Blatt 3.1.;12,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Virtuelle oder Gemeinsame Binäre Wertefunktion (BV) gemäß GA-Funktionsliste 1.2.2 VDI 3814 Blatt 3.1.;20,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Virtuelle oder Gemeinsame Analoge Wertefunktion (AV) gemäß GA-Funktionsliste 1.2.1 VDI 3814 Blatt 3.1.;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Ein-/Ausgabe Funktionen und Parameter gemäß GA-Funktionsliste 3. VDI 3814 Blatt 3.1.;200,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Funktion Grafik gemäß GA-Funktionsliste 3. VDI 3814 Blatt 3.1.;30,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;In dieser Sammelposition sind nachfolgende Leistungen eingerechnet -;1,0;Psch;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Komplexe Funktion Zeitplan gemäß GA-Funktionsliste 1.3.1 VDI 3814 Blatt 3.1.;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Komplexe Funktion Kalender gemäß GA-Funktionsliste 1.3.2 VDI 3814 Blatt 3.1.;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Komplexe Funktion Alarm-/Ereignismeldung gemäß GA-Funktionsliste 1.3.3 VDI 3814 Blatt 3.1.;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Komplexe Funktion Datenaufzeichnung gemäß GA-Funktionsliste 1.3.4 VDI 3814 Blatt 3.1.;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Komplexe Funktion Gruppenauftrag gemäß GA-Funktionsliste 1.3.5 VDI 3814 Blatt 3.1.;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Komplexe Funktion Gerätestatus gemäß GA-Funktionsliste 1.3.6 VDI 3814 Blatt 3.1.;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Komplexe Funktion Programmstatus gemäß GA-Funktionsliste 1.3.7 VDI 3814 Blatt 3.1.;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Zeitenfunktion gemäß GA-Funktionsliste 2.1.1. VDI 3814 Blatt 3.1.;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+100;Funktion Arithmetische Berechnung gemäß GA-Funktionsliste 2.1.2. VDI 3814 Blatt 3.1.;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+110;Funktion Grenzwertüberwachung gemäß GA-Funktionsliste 2.2.1. VDI 3814 Blatt 3.1.;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+120;Funktion Frostschutzsteuerung gemäß GA-Funktionsliste 2.2.10. VDI 3814 Blatt 3.1.;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+130;Funktion Sicherheitssteuerung gemäß GA-Funktionsliste 2.2.11. VDI 3814 Blatt 3.1.;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+140;Funktion Sollwertführung/ -kennlinie gemäß GA-Funktionsliste 2.3.2. VDI 3814 Blatt 3.1.;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+150;Funktion h,x-Sollwertführung gemäß GA-Funktionsliste 2.4.3. VDI 3814 Blatt 3.1.;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+160;Funktion Schaltzeitpunktoptimierung gemäß GA-Funktionsliste 2.4.4. VDI 3814 Blatt 3.1.;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+170;Funktion Energieniveau gemäß GA-Funktionsliste 2.4.1. VDI 3814 Blatt 3.1.;5,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Erstellung eines Bedien- und Beobachtungskonzeptes,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Projektdokumentation für das Elektronische Handbuch,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Schulung;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Bezeichnungsschild DIN 825, Farbe und Beschriftung nach Angaben des AG,;50,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Bestandsplan erstellen,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Bestandsplan fortschreiben,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Betriebsmittel beschriften.;50,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Information zur Gebäudeautomation;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Information zur Gebäudeautomation;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Schulung;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Wiederholte Einweisung;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Stundenlohnarbeiten durch Systemintegrator/-in;5,0;h;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Stundenlohnarbeiten durch Regelungstechniker/-in;5,0;h;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Stundenlohnarbeiten durch DDC/GLT-Techniker/-in;5,0;h;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Stundenlohnarbeiten durch Programmierer/-in;5,0;h;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Stundenlohnarbeiten durch Elektriker/in;10,0;h;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Stundenlohnarbeiten durch Obermonteur/-in;5,0;h;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Stundenlohnarbeiten durch Monteur/-in;5,0;h;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+80;Stundenlohnarbeiten durch Facharbeiter/-in;5,0;h;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+90;Stundenlohnarbeiten durch Techniker/-in;5,0;h;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Inspektion und Wartung der Anlagenautomation (AA) bestehend aus:;3,0;JR;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Die Softwarewartung für Anlagenautomation (AA) beinhaltet:;3,0;JR;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;Inspektion und Wartung für Feldgeräte Anlagenautomation (AA) und Raumautomation (RA) bestehend aus:;3,0;JR;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Inspektion und Wartung für GA-System Verteiler bestehend aus:;3,0;JR;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;Schlitz-, Durchbruchs- und Leerrohrpläne erstellen und fortschreiben,;1,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;Prüfung der von anderen AN installierten GA-Verrohrung, Netzstromversorgungsleitungen und GA-Verkabelung,;150,0;St;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+10;WEB-Server integriert in einem Rechner des GA-Managements oder in eine Zentraleineheit einer Automationseinrichtung zur Ausführung von Systemmanagement-, Mensch-System- und Kommunikationsfunktionen des GA-Systems über WEB-Browser. Unterstützung für alle marktüblichen aktuellen Browser und Formate. D;1,0;ST;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+20;WEB-Server integriert in einem Rechner des GA-Managements oder in eine Zentraleineheit einer Automationseinrichtung zur Ausführung von Systemmanagement-, Mensch-System- und Kommunikationsfunktionen des GA-Systems über WEB-Browser. Unterstützung für alle marktüblichen aktuellen Browser und Formate. D;1,0;ST;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+30;GA-Management (GA-M) Hardware (HW) Kommunikationsschnittstelle (Komm.Schnittstelle) für den Datenaustausch mit einem Modem.;1,0;ST;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+40;Remote Desktop für ereignisgesteuerten und ferngesteuerten Verbindungsaufbau, Übertragungsrate entsprechend der angegebenen Netzverbindung und Netzverfügbarkeit, einschließlich erforderlicher Zusatzeinrichten, Softwareaufwand, systembedingtes Zubehör, wie Netz- und Datenkabel, Aufstellung und betrie;1,0;ST;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+50;Übernahme der Kosten für den VPN/RDP/IT-Servicedienst durch den AN für den im Positionsstichwort angegebenen Zeitraum.;1,0;ST/J;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+60;Modem für ereignisgesteuerten und ferngesteuerten Verbindungsaufbau, Übertragungsrate entsprechend der angegebenen Netzverbindung und Netzverfügbarkeit, einschließlich erforderlicher Zusatzeinrichten, Softwareaufwand, systembedingtes Zubehör, wie Netz- und Datenkabel, Aufstellung und betriebsfertige;1,0;ST;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83
+70;Übernahme der Kosten für den Telefon/Internetanbieter durch den AN für den im Positionsstichwort angegebenen Zeitraum.;1,0;ST/J;gaeb;leistungsbeschreibungen/2384WG-LV-HT_260602.x83

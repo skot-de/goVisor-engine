@@ -1,0 +1,21 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Einrichten und Räumen der Baustelle, Vorhalten der Baustelleneinrichtung,;1,0;psch;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
+2;Temporäre Verstärkung des vorhandenen Wirtschaftshofes zur Erstellung;100,0;m2;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
+3;Vorhalten der in der Vorposition beschriebenen Last verteilenden Stahlplatten;2600,0;m2/d;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
+4;Umsetzung der in den Vorpositionen beschriebenen Aufstellfläche für einen;1,0;St;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
+5;Temporären Ausgleichs- und Egalisierungsschicht unterhalb der in den;100,0;m2;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
+1;Hauptträger des Stahlträgerfachwerksystem als Abfangung der auskragenden EG-Decke und darüber befindlicher Geschosse im Bereich des Wirtschafts-;1,0;St;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
+2;Hauptträger des Stahlträgerfachwerksystem als Abfangung der auskragenden EG-Decke und darüber befindlicher Geschosse im Bereich des Wirtschafts-;2,0;St;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
+3;Zulage zu in den Vorpositionen beschriebene einteilige Hauptträger für eine;3,0;St;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
+4;Nebenträger des Stahlträgerfachwerksystem als Abfangung der auskragenden EG-Decke und darüber befindlicher Geschosse im Bereich des Wirtschafts-;2,0;St;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
+5;Nebenträger des Stahlträgerfachwerksystem als Abfangung der auskragenden EG-Decke und darüber befindlicher Geschosse im Bereich des Wirtschafts-;3,0;St;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
+6;Am Hauptträger 1 werden drei Zugstützen in den Achsen 14, 15 und 16;3,0;St;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
+7;Auflagerpunkte der Hauptträger des Stahlträgerfachwerksystem als Abfangung der auskragenden EG-Decke und darüber befindlicher Geschosse im Bereich des Wirtschaftshofes, wie in der Statik beschrieben und in den Anlagen;3,0;St;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
+8;Auflagerpunkte der Hauptträger des Stahlträgerfachwerksystem als Abfangung der auskragenden EG-Decke und darüber befindlicher Geschosse im Bereich des Wirtschaftshofes, wie in der Statik beschrieben und in den Anlagen;3,0;St;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
+9;Auflagerpunkte der fünf Nebenträger des Stahlträgerfachwerksystem als;3,0;St;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
+10;Konstruktiver Anschluss der Stahl-Träger des Stahlfachwerks an aufgelagerte;545,0;St;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
+1;Werkplanung für die gesamte Leistung Titel Stahlbau erstellen und zur Freigabe durch den Planer und Statiker einreichen. Die Pläne sind im M 1:10, Details im M 1:2 bis 1:5 in digitaler Form und in Papierform ein zureichen.;1,0;psch;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
+2;Ausführungsstatik für das beschriebene Stahl-Fachwerk-Träger-System;1,0;psch;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
+1;Vorarbeiter, einschl. aller Zuschläge;3,0;h;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
+2;Facharbeiter, einschl. aller Zuschläge.;5,0;h;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83
+3;Helfer, einschl. aller Zuschläge.;5,0;h;gaeb;leistungsbeschreibungen/EASK-A-2.0-Fachwerkträger..x83

@@ -1,0 +1,525 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Geraete, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Baustelle von allen Geraeten, Anlagen, Einrichtungen;1,0;Psch;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Bauschild des AG aufstellen. Schildgröße ca. 1mx1m. Aufstellvorrichtung liefern und nach Angaben des AG aufstellen. Nach Abschluss der Maßnahme Schild und aufstelleinrichtung abbauen. Schild an AG übergeben, Aufstelleinrichtung in Eigentum AN übernehmen und verwerten.;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Stundenlohnarbeiten durch Arbeitskraefte auf Anordnung;5,0;h;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Stundenlohnarbeiten durch Arbeitskraefte auf Anordnung;5,0;h;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Stundenlohnarbeiten durch Arbeitskraefte auf Anordnung;5,0;h;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Stundenlohnarbeiten durch Lastkraftwagen auf Anordnung;5,0;h;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+50;Stundenlohnarbeiten durch Baugeraete auf Anordnung des;5,0;h;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+60;Stundenlohnarbeiten durch Baugeraete auf Anordnung des;5,0;h;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+70;Stundenlohnarbeiten durch Baugeraete auf Anordnung des;5,0;h;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+80;Stundenlohnarbeiten durch Baugeraete auf Anordnung des;5,0;h;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+90;Stundenlohnarbeiten durch Baugeraete auf Anordnung des;10,0;h;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Schutz für Baumstamm durch Mantel mit Polsterung her-;34,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Schutz für Baumstamm durch Mantel mit Polsterung her-;11,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Schutz für Baumstamm durch Mantel mit Polsterung her-;13,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Schutz für Baumstamm durch Mantel mit Polsterung her-;18,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+50;Schutz für Baumstamm durch Mantel mit Polsterung her-;7,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+60;Schutz für Baumstamm durch Mantel mit Polsterung;31,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+70;Bäume fällen, höchstens 0,25 m über dem Erdboden;3,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+80;Bäume fällen, höchstens 0,25 m über dem Erdboden;2,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+90;Bäume fällen, höchstens 0,25 m über dem Erdboden;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+100;Bäume fällen, höchstens 0,25 m über dem Erdboden;19,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+110;Lichtraumprofilschnitt durchführen. Äste erforderli-;55,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Absteckung der Straßen und Rohrleitungen;1,0;psch;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Anfertigung einer Beweissicherungsdokumentation;1,0;psch;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Erstellung einer Fotodokumentation;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Bestandspläne erstellen.;1,0;psch;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+50;Höhenfestpunkt bestehend aus einem Bolzen mit Rundkopf;8,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+60;Plattendruckversuch nach DIN 18 134 fuer Kontroll-;8,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+70;Bohrkern für Kontrollprüfungen nach Angabe des AG ent-;18,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+80;Untersuchung Bodenaushub nach Ersatzbaustoffverordnung.;2,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+90;Untersuchung Bodenaushub (Oberboden) nach §12 BBodSchV;2,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Verkehrssicherung an Arbeitsstellen von längerer Dauer;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Verkehrssicherung an Arbeitsstellen von längerer Dauer;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Verkehrssicherung an Arbeitsstellen von längerer Dauer;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Verkehrssicherung an Arbeitsstellen von längerer Dauer;8,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+50;Transportable Lichtsignalanlage einschließlich Energie-;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+60;Transportable Lichtsignalanlage vorhalten, warten und;112,0;d;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+70;Transportable Lichtsignalanlage umsetzen. Vorübergehen-;5,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+80;Elektrische Warnbeleuchtung;120,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+90;Bauzaun einschl. der erforderlichen;75,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+100;Bauzaun innerhalb der Baustelle umsetzen. Nicht;75,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+110;Bauzaun einschl. der erforderlichen;600,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+120;Bauzaun innerhalb der Baustelle umsetzen. Nicht;600,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Oberboden ggf. einschließlich Vegetationsdecke abtra-;10,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Oberboden liefern und profilgerecht andecken;650,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Boden bzw. Fels aus Abtragsbereichen profilgerecht;615,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Boden aus Abtragsbereichen profilgerecht lösen.;125,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+50;Bodeneinbau in Seitenstreifen;125,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+60;Ausheben und Laden von Hand;50,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+70;Suchgraben nach Unterlagen des AG herstellen. Aushub;25,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+80;Planum herstellen;3900,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Asphaltbefestigung aufbrechen und aufnehmen.;222,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Asphaltbefestigung aufbrechen und aufnehmen.;108,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Asphaltbefestigung geradlinig trennen.;80,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Schicht ohne Bindemittel aufnehmen.;230,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+50;Pflasterdecke aufbrechen und aufnehmen. Aufbruch der;10,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+60;Plattenbelag aufbrechen und aufnehmen. Aufbruch der;80,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+70;Betondecke schneiden.;4,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+80;Betondecke schneiden.;23,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+90;Betondecke ausbauen und aufnehmen. Dicke der Beton-;3,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+100;Rasengittersteine / Rasenfugensteine einschließlich;15,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+110;Kastenrinne aus Beton mit Gussabdeckung;12,5;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+120;Bordsteine aufnehmen.;4,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+130;Hindernisse ueber 0,25 m3 Rauminhalt je Hinderniss;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+140;Verkehrsschild ggf. mit Aufstellvorrichtung abbauen;4,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Deckschicht ohne Bindemittel aus Recycling-Baustoffen;150,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Schottertragschicht herstellen.;310,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Schottertragschicht aus Baustoffgemisch für;410,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Schottertragschicht aus Baustoffgemisch für;3140,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+50;Pflasterdecke aus Betonpflastersteinen;2800,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+60;Pflasterdecke aus Betonpflastersteinen;580,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+70;Pflasterdecke aus Betonpflastersteinen;170,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+80;Pflastersteine auf Passmaß trennen und Pflastersteine;50,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+90;Asphalttragschicht aus Asphalttragschichtmischgut;300,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+100;Asphalttragschicht AC 22 T N von Hand herstellen;300,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+110;Unterlage reinigen. Anfallendes Kehrgut der Verwertung;300,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+120;Bitumenemulsion zur Herstellung des Schichtenverbundes;300,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+130;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;290,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+140;Asphaltbeton AC 8 D N von Hand herstellen;290,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+150;Bankett profilgerecht herstellen. Erschwernisse durch;600,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+160;Umpflasterung für Schieber- und Hydrantenkappen aus;15,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+170;Anschluss als Fuge mit Fugenmasse herstellen.;50,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+180;Anschluss als Fuge mit Fugenmasse herstellen.;50,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Bordsteine aus Beton setzen.;12,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Bordsteine aus Beton setzen.;20,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Bordsteine aus Beton setzen.;110,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Bordsteine aus Beton setzen.;50,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+50;Bordsteine aus Beton setzen.;1100,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+60;Bordsteine auf Passmaß trennen.;20,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+70;Pflasterstreifen herstellen, einschließlich der Aus-;10,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+80;Bewehrte Betonfertigteile, entsprechend statischen und;24,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+90;Bewehrte Betonfertigteile, entsprechend statischen und;2,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+100;Bewehrte Betonfertigteile, entsprechend statischen und;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+110;Winkelstützwand aus zuvorbeschriebenen L-Steinen 80cm Bauhöhe herstellen.;27,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+120;Geschweißtes Stahlgeländer nach Unterlagen des AG ein-;24,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+130;Eckausbildung für Stahlgeländer herstellen.;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+140;Endausbildung für Stahlgeländer fachgerecht herstellen.;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Kastenrinne mit Abdeckung einbauen. Formstücke und An-;25,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Kastenrinne mit Abdeckung einbauen. Formstücke und An-;25,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Sickerrohrleitung in Sickeranlage verlegen. Schachtan-;10,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Rohrleitung an Schacht anschließen, Anschluss dichten.;2,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+50;Rigolenvlies zur Umhüllung der Rigole;8,0;m²;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+60;Waschkies 8/16 als Rigolenfüllstoff liefern und einbauen.;1,5;m³;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+70;Formstück in Rohrleitung einbauen. Vergütet wird der;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Rasenansaat herstellen. Saatgut ohne Entmischung aus-;1250,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Rasenfläche wässern;1250,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Rasen mähen;1250,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Saatflaeche gleichmaessig duengen.;1250,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Quermarkierung Typ I als Verkehrsfreigabemarkierung;87,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Sonstiges Markierungszeichen Typ II als endgültige Mar-;6,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Schild mit Verkehrszeichen nach StVO und VwV-StVO;4,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Schild mit Verkehrszeichen nach StVO und VwV-StVO;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Schild mit Verkehrszeichen nach StVO und VwV-StVO;5,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Schild mit Zusatzzeichen nach StVO und VwV-StVO;3,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+50;Schild mit Zusatzzeichen nach StVO und VwV-StVO;5,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+60;Rohrpfosten mit Abdeckkappe für Verkehrsschild aufstel-;11,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Demontage des vorhandenen Schiebetorflügels (Stahl, ca. 10,00 m Breite) inkl. Aushängen aus der Führungsschiene und kippsicherem Zwischenlagern für die Wiederverwendung. Demontage der vorhandenen Lauf-/Führungsschiene einschließlich sämtlicher Befestigungs- und Verankerungsmittel im Bereich der Torö;1,0;psch;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Herstellen der beiden neuen Pfostenfundamente aus Stahlbeton C25/30, XC4, in den Abmessungen des Bestands, jedoch mit einer um 25 cm höher liegenden Oberkante entsprechend der neuen Sollhöhe, inkl. Schalung, Bewehrung und Betonage. Lotrechtes und fluchtgerechtes Einrichten und Einbetonieren der vorh;1,0;psch;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Wiederanschluss des Maschendrahtzauns an das Tor auf der neuen Höhenlage: Endpfosten ggf. neu setzen bzw. höhenversetzen, Maschendrahtgeflecht neu einhängen und mit Spanndraht und Spannschlossverbindern spannen, Übergang zum Tor ohne Stolperkante herstellen. Wiederanschluss des Stabgitterzauns an da;1,0;psch;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Folgende Stundenlohnarbeiten sind;10,0;h;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Folgende Stundenlohnarbeiten sind;10,0;h;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Wartung- und Bestandsunterlagen (WBU);1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Vorhandenen Lichtmast demontieren;30,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+50;Altes Beleuchtungskabel demontieren und fachgerecht;1150,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+60;vorhandenes Kabel bis 5x16 mm2;2,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+70;Kabelgraben in Bodengruppe 3;1500,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+80;Ausheben und Laden von Hand;10,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+90;Boden verdichten.;300,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+100;PVC-Schutzrohr DIN 8061;12,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+110;PVC-Schutzrohr DIN 8061;10,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+120;Sandbett mit Füllmaterial;30,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+130;Mastgrube für Straßenleuchten;37,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+140;Beton für Mastfundamente in den;10,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+150;Grube für eine Muffe;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+160;Suchschachtung;5,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+170;Baustellensicherung bestehend aus:;1,0;psch;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+180;Kunststoffkabel NYY-J 5 x 16 re, Cu-Zahl 768,;1500,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+190;Zulage zur Kabelverlegung für geschlossene Verlegung mittels Erdrakete.;10,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+200;Kennzeichnung von Kabeln;500,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+210;Kunststoffkabel NYY-J 5 x 1,5 re,;150,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+220;Anschließen von Kabeln oder Leitungen,;37,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+230;Anschließen von Kabeln oder Leitungen,;37,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+240;Erdkabelverbindungsmuffe in Schrumpftechnik;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+250;Markierung der Kabeltrasse mit;1500,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+260;Für Inbetriebsetzung der Anlage nach der AVBEltV,;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+270;Für Koordinierung mit dem örtlichem EVU sowie mit dem;1,0;psch;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+280;Multifunktionale Leuchten-/ Mastkombination LED;35,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+290;Multifunktionale Leuchten-/ Mastkombination LED;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+300;Multifunktionale Leuchten-/ Mastkombination LED;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+310;Kabelübergangskästen;37,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+320;Kabelübergangskästen für o.g.Leuchten;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Vegetationsdecke vor Oberbodenabtrag mindestens 15 cm;10000,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Oberboden ggf. einschließlich Vegetationsdecke abtragen;550,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Oberboden ggf. einschließlich Vegetationsdecke abtra-;2550,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Oberboden liefern und profilgerecht andecken;100,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+50;Boden bzw. Fels aus Abtragsbereichen profilgerecht;400,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+60;Schicht ohne Bindemittel aufnehmen.;100,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+70;Geeigneten Baustoff liefern, in Auftragsbereichen pro-;1600,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+80;Boden für Leitungsgraben (Kanal) einschließlich;10,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+90;Bodenaustausch;5,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+100;Baustoff nach Unterlagen des AG liefern, in Leitungs-;1,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+110;Ausheben und Laden von Hand;50,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+120;Suchgraben nach Unterlagen des AG herstellen. Aushub;25,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+130;Mulde nach Unterlagen des AG herstellen.;850,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+140;Planum herstellen;9300,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+150;Planum herstellen;15,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+160;Hindernisse ueber 0,25 m3 Rauminhalt je Hinderniss;5,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Fangedamm als Erddamm herstellen, vorhalten, unter-;20,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Einfache Pumpenanlage für offene Wasserhaltung zur Umleitung eines Grabens sowie;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Einfache Pumpenanlage für offene Wasserhaltung ein-;5,0;d;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Einfache Pumpenanlage für offene Wasserhaltung betrei-;25,0;h;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Asphaltbefestigung aufbrechen und aufnehmen.;35,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Asphaltbefestigung geradlinig trennen.;205,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Betondecke aufnehmen. Dicke der Betondecke nach Unter-;50,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Betondecke schneiden.;7,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+50;Entwässerungsrohrleitung abbrechen. Entwässerungsrohr-;2,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+60;Verkehrsschild ggf. mit Aufstellvorrichtung abbauen;2,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Deckschicht ohne Bindemittel aus Recycling-Baustoffen;150,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Schicht aus Schotterrasen (Baustoffgemisch aus grober;125,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Frostschutzschicht aus Baustoffgemisch für;60,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Frostschutzschicht aus Baustoffgemisch für;1200,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+50;Schottertragschicht herstellen.;250,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+60;Schottertragschicht herstellen.;7000,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+70;Asphalttragschicht aus Asphalttragschichtmischgut;220,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+80;Asphalttragschicht AC 22 T N von Hand herstellen;220,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+90;Asphalttragschicht aus Asphalttragschichtmischgut;5880,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+100;Asphalttragschicht AC 22 T N von Hand herstellen;300,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+110;Unterlage reinigen. Anfallendes Kehrgut der Verwertung;6100,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+120;Bitumenemulsion zur Herstellung des Schichtenverbundes;220,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+130;Bitumenemulsion zur Herstellung des Schichtenverbundes;5880,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+140;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;210,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+150;Asphaltbeton AC 8 D N von Hand herstellen;210,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+160;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;5800,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+170;Asphaltbeton AC 8 D N von Hand herstellen;300,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+180;Flankenfläche des hochliegenden Randes der Asphalt-;4460,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+190;Bankett profilgerecht herstellen. Erschwernisse durch;4260,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+200;Anschluss als Fuge mit Fugenmasse herstellen.;190,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+210;Anschluss als Fuge mit Fugenmasse herstellen.;67,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+220;Schottertragschicht aus Baustoffgemisch für;12,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+230;Umpflasterung von Einbauten in unbefestigten Flächen;3,0;m²;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Bordsteine aus Beton setzen.;60,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Bordsteine aus Beton setzen.;7,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Bordsteine aus Beton setzen.;8,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Bordsteine aus Beton setzen.;8,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+50;Bordsteine auf Passmaß trennen.;8,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+70;Streifen aus Pflastersteinen aus Beton herstellen.;60,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+80;Bewegungsfuge im Fundament von Streifen, Rinnen und;9,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Entwässerungskanal/-leitung DIN EN 1610;10,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Böschungsstück einbauen. Vergütet wird der Mehraufwand;1,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Abwasserkanal reinigen,;18,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Regenwasserdurchlass durch Fernauge prüfen,;18,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Rasenansaat herstellen. Saatgut ohne Entmischung aus-;2600,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Rasenfläche wässern;2600,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Rasen mähen;2660,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Saatflaeche gleichmaessig duengen.;2600,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Längsmarkierung Typ II einschl. evtl.;45,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Längsmarkierung Typ II einschl. evtl.;62,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Quermarkierung Typ I als Verkehrsfreigabemarkierung;20,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Sonstiges Markierungszeichen Typ II als endgültige Mar-;11,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Schild mit Verkehrszeichen nach StVO und VwV-StVO;2,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Schild mit Verkehrszeichen nach StVO und VwV-StVO;9,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Schild mit Verkehrszeichen nach StVO und VwV-StVO;3,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Schild mit Verkehrszeichen nach StVO und VwV-StVO;9,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+50;Schild mit Verkehrszeichen nach StVO und VwV-StVO;2,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+60;Schild mit Zusatzzeichen nach StVO und VwV-StVO;6,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+70;Schild mit Zusatzzeichen nach StVO und VwV-StVO;3,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+80;Rohrpfosten mit Abdeckkappe für Verkehrsschild aufstel-;24,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Weidezaun aufnehmen und wiederherstellen;140,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Weidezaun aufnehmen und wiederherstellen;50,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Zaun aufnehmen, einschließlich Verstrebungen;35,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Weidezaun des AG einschließlich der erforderlichen Erdarbeiten;35,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+50;Zaun aufnehmen, einschließlich Verstrebungen.;75,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+60;Maschendrahtzaun, einschließlich der erforderlichen;90,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Die Position umfasst alle Vorarbeiten und die Herstellung eines zeitweiligen Amphibienschutzzaunes nordöstlich der K6825 (Station 4+090 bis 4+160, Länge ca. 90 m). Zunächst sind Baustelleneinrichtung und -räumung (Pauschalen) sowie das Mähen der Vegetationsfläche (180 m², Streifenbreite bis 2,00 m) ;1,0;psch;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+20;Die Position bündelt sämtliche Kontroll-, Instandhaltungs- und Rückbauleistungen am bereits errichteten Schutzzaun während der Bausaison IV. 2026. Dazu zählen 8 Zaunkontrollgänge auf Funktionsfähigkeit und Dichtheit, die Reparatur beschädigter Zaunabschnitte (5 m) sowie der Ersatz beschädigter Marki;1,0;psch;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+30;Mineralischen Bodenverbesserungsstoff liefern.;528,5;kg;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+40;Mineralischen Bodenverbesserungsstoff liefern.;15,1;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+50;Mineralischen Bodenverbesserungsstoff liefern.;35,0;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+60;Dreibock liefern;151,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+70;Bindegurt aus Polyestergewebe liefern, UV Stabil, 50mm breit, 1,00m lang;453,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+80;Kükendraht liefern, verzinkter Bandstahl, Maschenweite 13mm, 50cm hoch.;302,0;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+90;Rohrmatte 1,20 m hoch 1,6 m.;75,5;m;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+100;Quercus petraea (Traubeneiche) liefern.;38,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+110;Acer pseudoplatanus (Bergahorn) liefern.;38,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+120;Tilia platyphyllos (Sommerlinde) liefern.;37,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+130;Tilia cordata (Winterlinde) liefern.;37,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+140;Einzelbaumstandorte mähen/mulchen;755,0;m²;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+150;Pflanzgruben ausheben 100x100x70 cm, wiederverwendbares;151,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+160;Rindenmulch liefern und mit einer Schicktdicke von ca.;151,0;m2;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+170;Baumverankerung als Pfahlbock herstellen. Pfähle geke-;151,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+180;Rindenschutz herstellen.;151,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+190;Fertigstellungspflege im Herstellungsjahr durchführen.;1,0;Psch;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+200;Entwicklungspflege 1. Jahr;151,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+210;Entwicklungspflege 2. Jahr;151,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+220;Entwicklungspflege 3. Jahr;151,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+230;Entwicklungspflege 4. Jahr;151,0;St;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+240;50 L / Baum;30,2;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+250;50 L / Baum;60,4;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+260;50 L / Baum;60,4;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+270;50 L / Baum;60,4;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+280;50 L / Baum;60,4;m3;gaeb;leistungsbeschreibungen/LV-RW-Zaatzke_V33.X83
+10;Geraete, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Baustelle von allen Geraeten, Anlagen, Einrichtungen;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Bauschild des AG aufstellen. Schildgröße ca. 1mx1m. Aufstellvorrichtung liefern und nach Angaben des AG aufstellen. Nach Abschluss der Maßnahme Schild und aufstelleinrichtung abbauen. Schild an AG übergeben, Aufstelleinrichtung in Eigentum AN übernehmen und verwerten.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Stundenlohnarbeiten durch Arbeitskraefte auf Anordnung;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Stundenlohnarbeiten durch Arbeitskraefte auf Anordnung;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Stundenlohnarbeiten durch Arbeitskraefte auf Anordnung;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Stundenlohnarbeiten durch Lastkraftwagen auf Anordnung;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+50;Stundenlohnarbeiten durch Baugeraete auf Anordnung des;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+60;Stundenlohnarbeiten durch Baugeraete auf Anordnung des;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+70;Stundenlohnarbeiten durch Baugeraete auf Anordnung des;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+80;Stundenlohnarbeiten durch Baugeraete auf Anordnung des;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+90;Stundenlohnarbeiten durch Baugeraete auf Anordnung des;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Schutz für Baumstamm durch Mantel mit Polsterung her-;34,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Schutz für Baumstamm durch Mantel mit Polsterung her-;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Schutz für Baumstamm durch Mantel mit Polsterung her-;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Schutz für Baumstamm durch Mantel mit Polsterung her-;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+50;Schutz für Baumstamm durch Mantel mit Polsterung her-;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+60;Schutz für Baumstamm durch Mantel mit Polsterung;31,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+70;Bäume fällen, höchstens 0,25 m über dem Erdboden;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+80;Bäume fällen, höchstens 0,25 m über dem Erdboden;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+90;Bäume fällen, höchstens 0,25 m über dem Erdboden;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+100;Bäume fällen, höchstens 0,25 m über dem Erdboden;19,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+110;Lichtraumprofilschnitt durchführen. Äste erforderli-;55,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Absteckung der Straßen und Rohrleitungen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Anfertigung einer Beweissicherungsdokumentation;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Erstellung einer Fotodokumentation;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Bestandspläne erstellen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+50;Höhenfestpunkt bestehend aus einem Bolzen mit Rundkopf;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+60;Plattendruckversuch nach DIN 18 134 fuer Kontroll-;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+70;Bohrkern für Kontrollprüfungen nach Angabe des AG ent-;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+80;Untersuchung Bodenaushub nach Ersatzbaustoffverordnung.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+90;Untersuchung Bodenaushub (Oberboden) nach §12 BBodSchV;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Verkehrssicherung an Arbeitsstellen von längerer Dauer;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Verkehrssicherung an Arbeitsstellen von längerer Dauer;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Verkehrssicherung an Arbeitsstellen von längerer Dauer;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Verkehrssicherung an Arbeitsstellen von längerer Dauer;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+50;Transportable Lichtsignalanlage einschließlich Energie-;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+60;Transportable Lichtsignalanlage vorhalten, warten und;112,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+70;Transportable Lichtsignalanlage umsetzen. Vorübergehen-;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+80;Elektrische Warnbeleuchtung;120,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+90;Bauzaun einschl. der erforderlichen;75,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+100;Bauzaun innerhalb der Baustelle umsetzen. Nicht;75,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+110;Bauzaun einschl. der erforderlichen;600,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+120;Bauzaun innerhalb der Baustelle umsetzen. Nicht;600,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Oberboden ggf. einschließlich Vegetationsdecke abtra-;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Oberboden liefern und profilgerecht andecken;650,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Boden bzw. Fels aus Abtragsbereichen profilgerecht;615,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Boden aus Abtragsbereichen profilgerecht lösen.;125,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+50;Bodeneinbau in Seitenstreifen;125,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+60;Ausheben und Laden von Hand;50,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+70;Suchgraben nach Unterlagen des AG herstellen. Aushub;25,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+80;Planum herstellen;3900,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Asphaltbefestigung aufbrechen und aufnehmen.;222,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Asphaltbefestigung aufbrechen und aufnehmen.;108,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Asphaltbefestigung geradlinig trennen.;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Schicht ohne Bindemittel aufnehmen.;230,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+50;Pflasterdecke aufbrechen und aufnehmen. Aufbruch der;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+60;Plattenbelag aufbrechen und aufnehmen. Aufbruch der;80,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+70;Betondecke schneiden.;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+80;Betondecke schneiden.;23,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+90;Betondecke ausbauen und aufnehmen. Dicke der Beton-;3,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+100;Rasengittersteine / Rasenfugensteine einschließlich;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+110;Kastenrinne aus Beton mit Gussabdeckung;12,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+120;Bordsteine aufnehmen.;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+130;Hindernisse ueber 0,25 m3 Rauminhalt je Hinderniss;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+140;Verkehrsschild ggf. mit Aufstellvorrichtung abbauen;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Deckschicht ohne Bindemittel aus Recycling-Baustoffen;150,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Schottertragschicht herstellen.;310,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Schottertragschicht aus Baustoffgemisch für;410,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Schottertragschicht aus Baustoffgemisch für;3140,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+50;Pflasterdecke aus Betonpflastersteinen;2800,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+60;Pflasterdecke aus Betonpflastersteinen;580,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+70;Pflasterdecke aus Betonpflastersteinen;170,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+80;Pflastersteine auf Passmaß trennen und Pflastersteine;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+90;Asphalttragschicht aus Asphalttragschichtmischgut;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+100;Asphalttragschicht AC 22 T N von Hand herstellen;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+110;Unterlage reinigen. Anfallendes Kehrgut der Verwertung;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+120;Bitumenemulsion zur Herstellung des Schichtenverbundes;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+130;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;290,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+140;Asphaltbeton AC 8 D N von Hand herstellen;290,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+150;Bankett profilgerecht herstellen. Erschwernisse durch;600,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+160;Umpflasterung für Schieber- und Hydrantenkappen aus;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+170;Anschluss als Fuge mit Fugenmasse herstellen.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+180;Anschluss als Fuge mit Fugenmasse herstellen.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Bordsteine aus Beton setzen.;12,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Bordsteine aus Beton setzen.;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Bordsteine aus Beton setzen.;110,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Bordsteine aus Beton setzen.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+50;Bordsteine aus Beton setzen.;1100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+60;Bordsteine auf Passmaß trennen.;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+70;Pflasterstreifen herstellen, einschließlich der Aus-;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+80;Bewehrte Betonfertigteile, entsprechend statischen und;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+90;Bewehrte Betonfertigteile, entsprechend statischen und;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+100;Bewehrte Betonfertigteile, entsprechend statischen und;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+110;Winkelstützwand aus zuvorbeschriebenen L-Steinen 80cm Bauhöhe herstellen.;27,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+120;Geschweißtes Stahlgeländer nach Unterlagen des AG ein-;24,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+130;Eckausbildung für Stahlgeländer herstellen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+140;Endausbildung für Stahlgeländer fachgerecht herstellen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Kastenrinne mit Abdeckung einbauen. Formstücke und An-;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Kastenrinne mit Abdeckung einbauen. Formstücke und An-;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Sickerrohrleitung in Sickeranlage verlegen. Schachtan-;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Rohrleitung an Schacht anschließen, Anschluss dichten.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+50;Rigolenvlies zur Umhüllung der Rigole;8,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+60;Waschkies 8/16 als Rigolenfüllstoff liefern und einbauen.;1,5;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+70;Formstück in Rohrleitung einbauen. Vergütet wird der;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Rasenansaat herstellen. Saatgut ohne Entmischung aus-;1250,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Rasenfläche wässern;1250,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Rasen mähen;1250,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Saatflaeche gleichmaessig duengen.;1250,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Quermarkierung Typ I als Verkehrsfreigabemarkierung;87,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Sonstiges Markierungszeichen Typ II als endgültige Mar-;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Schild mit Verkehrszeichen nach StVO und VwV-StVO;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Schild mit Verkehrszeichen nach StVO und VwV-StVO;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Schild mit Verkehrszeichen nach StVO und VwV-StVO;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Schild mit Zusatzzeichen nach StVO und VwV-StVO;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+50;Schild mit Zusatzzeichen nach StVO und VwV-StVO;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+60;Rohrpfosten mit Abdeckkappe für Verkehrsschild aufstel-;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Demontage des vorhandenen Schiebetorflügels (Stahl, ca. 10,00 m Breite) inkl. Aushängen aus der Führungsschiene und kippsicherem Zwischenlagern für die Wiederverwendung. Demontage der vorhandenen Lauf-/Führungsschiene einschließlich sämtlicher Befestigungs- und Verankerungsmittel im Bereich der Torö;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Herstellen der beiden neuen Pfostenfundamente aus Stahlbeton C25/30, XC4, in den Abmessungen des Bestands, jedoch mit einer um 25 cm höher liegenden Oberkante entsprechend der neuen Sollhöhe, inkl. Schalung, Bewehrung und Betonage. Lotrechtes und fluchtgerechtes Einrichten und Einbetonieren der vorh;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Wiederanschluss des Maschendrahtzauns an das Tor auf der neuen Höhenlage: Endpfosten ggf. neu setzen bzw. höhenversetzen, Maschendrahtgeflecht neu einhängen und mit Spanndraht und Spannschlossverbindern spannen, Übergang zum Tor ohne Stolperkante herstellen. Wiederanschluss des Stabgitterzauns an da;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Folgende Stundenlohnarbeiten sind;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Folgende Stundenlohnarbeiten sind;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Wartung- und Bestandsunterlagen (WBU);1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Vorhandenen Lichtmast demontieren;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+50;Altes Beleuchtungskabel demontieren und fachgerecht;1150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+60;vorhandenes Kabel bis 5x16 mm2;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+70;Kabelgraben in Bodengruppe 3;1500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+80;Ausheben und Laden von Hand;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+90;Boden verdichten.;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+100;PVC-Schutzrohr DIN 8061;12,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+110;PVC-Schutzrohr DIN 8061;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+120;Sandbett mit Füllmaterial;30,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+130;Mastgrube für Straßenleuchten;37,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+140;Beton für Mastfundamente in den;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+150;Grube für eine Muffe;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+160;Suchschachtung;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+170;Baustellensicherung bestehend aus:;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+180;Kunststoffkabel NYY-J 5 x 16 re, Cu-Zahl 768,;1500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+190;Zulage zur Kabelverlegung für geschlossene Verlegung mittels Erdrakete.;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+200;Kennzeichnung von Kabeln;500,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+210;Kunststoffkabel NYY-J 5 x 1,5 re,;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+220;Anschließen von Kabeln oder Leitungen,;37,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+230;Anschließen von Kabeln oder Leitungen,;37,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+240;Erdkabelverbindungsmuffe in Schrumpftechnik;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+250;Markierung der Kabeltrasse mit;1500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+260;Für Inbetriebsetzung der Anlage nach der AVBEltV,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+270;Für Koordinierung mit dem örtlichem EVU sowie mit dem;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+280;Multifunktionale Leuchten-/ Mastkombination LED;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+290;Multifunktionale Leuchten-/ Mastkombination LED;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+300;Multifunktionale Leuchten-/ Mastkombination LED;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+310;Kabelübergangskästen;37,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+320;Kabelübergangskästen für o.g.Leuchten;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Vegetationsdecke vor Oberbodenabtrag mindestens 15 cm;10000,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Oberboden ggf. einschließlich Vegetationsdecke abtragen;550,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Oberboden ggf. einschließlich Vegetationsdecke abtra-;2550,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Oberboden liefern und profilgerecht andecken;100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+50;Boden bzw. Fels aus Abtragsbereichen profilgerecht;400,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+60;Schicht ohne Bindemittel aufnehmen.;100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+70;Geeigneten Baustoff liefern, in Auftragsbereichen pro-;1600,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+80;Boden für Leitungsgraben (Kanal) einschließlich;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+90;Bodenaustausch;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+100;Baustoff nach Unterlagen des AG liefern, in Leitungs-;1,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+110;Ausheben und Laden von Hand;50,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+120;Suchgraben nach Unterlagen des AG herstellen. Aushub;25,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+130;Mulde nach Unterlagen des AG herstellen.;850,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+140;Planum herstellen;9300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+150;Planum herstellen;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+160;Hindernisse ueber 0,25 m3 Rauminhalt je Hinderniss;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Fangedamm als Erddamm herstellen, vorhalten, unter-;20,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Einfache Pumpenanlage für offene Wasserhaltung zur Umleitung eines Grabens sowie;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Einfache Pumpenanlage für offene Wasserhaltung ein-;5,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Einfache Pumpenanlage für offene Wasserhaltung betrei-;25,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Asphaltbefestigung aufbrechen und aufnehmen.;35,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Asphaltbefestigung geradlinig trennen.;205,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Betondecke aufnehmen. Dicke der Betondecke nach Unter-;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Betondecke schneiden.;7,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+50;Entwässerungsrohrleitung abbrechen. Entwässerungsrohr-;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+60;Verkehrsschild ggf. mit Aufstellvorrichtung abbauen;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Deckschicht ohne Bindemittel aus Recycling-Baustoffen;150,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Schicht aus Schotterrasen (Baustoffgemisch aus grober;125,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Frostschutzschicht aus Baustoffgemisch für;60,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Frostschutzschicht aus Baustoffgemisch für;1200,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+50;Schottertragschicht herstellen.;250,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+60;Schottertragschicht herstellen.;7000,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+70;Asphalttragschicht aus Asphalttragschichtmischgut;220,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+80;Asphalttragschicht AC 22 T N von Hand herstellen;220,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+90;Asphalttragschicht aus Asphalttragschichtmischgut;5880,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+100;Asphalttragschicht AC 22 T N von Hand herstellen;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+110;Unterlage reinigen. Anfallendes Kehrgut der Verwertung;6100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+120;Bitumenemulsion zur Herstellung des Schichtenverbundes;220,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+130;Bitumenemulsion zur Herstellung des Schichtenverbundes;5880,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+140;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;210,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+150;Asphaltbeton AC 8 D N von Hand herstellen;210,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+160;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;5800,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+170;Asphaltbeton AC 8 D N von Hand herstellen;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+180;Flankenfläche des hochliegenden Randes der Asphalt-;4460,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+190;Bankett profilgerecht herstellen. Erschwernisse durch;4260,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+200;Anschluss als Fuge mit Fugenmasse herstellen.;190,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+210;Anschluss als Fuge mit Fugenmasse herstellen.;67,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+220;Schottertragschicht aus Baustoffgemisch für;12,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+230;Umpflasterung von Einbauten in unbefestigten Flächen;3,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Bordsteine aus Beton setzen.;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Bordsteine aus Beton setzen.;7,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Bordsteine aus Beton setzen.;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Bordsteine aus Beton setzen.;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+50;Bordsteine auf Passmaß trennen.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+70;Streifen aus Pflastersteinen aus Beton herstellen.;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+80;Bewegungsfuge im Fundament von Streifen, Rinnen und;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Entwässerungskanal/-leitung DIN EN 1610;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Böschungsstück einbauen. Vergütet wird der Mehraufwand;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Abwasserkanal reinigen,;18,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Regenwasserdurchlass durch Fernauge prüfen,;18,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Rasenansaat herstellen. Saatgut ohne Entmischung aus-;2600,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Rasenfläche wässern;2600,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Rasen mähen;2660,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Saatflaeche gleichmaessig duengen.;2600,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Längsmarkierung Typ II einschl. evtl.;45,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Längsmarkierung Typ II einschl. evtl.;62,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Quermarkierung Typ I als Verkehrsfreigabemarkierung;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Sonstiges Markierungszeichen Typ II als endgültige Mar-;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Schild mit Verkehrszeichen nach StVO und VwV-StVO;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Schild mit Verkehrszeichen nach StVO und VwV-StVO;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Schild mit Verkehrszeichen nach StVO und VwV-StVO;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Schild mit Verkehrszeichen nach StVO und VwV-StVO;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+50;Schild mit Verkehrszeichen nach StVO und VwV-StVO;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+60;Schild mit Zusatzzeichen nach StVO und VwV-StVO;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+70;Schild mit Zusatzzeichen nach StVO und VwV-StVO;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+80;Rohrpfosten mit Abdeckkappe für Verkehrsschild aufstel-;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Weidezaun aufnehmen und wiederherstellen;140,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Weidezaun aufnehmen und wiederherstellen;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Zaun aufnehmen, einschließlich Verstrebungen;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Weidezaun des AG einschließlich der erforderlichen Erdarbeiten;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+50;Zaun aufnehmen, einschließlich Verstrebungen.;75,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+60;Maschendrahtzaun, einschließlich der erforderlichen;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+10;Die Position umfasst alle Vorarbeiten und die Herstellung eines zeitweiligen Amphibienschutzzaunes nordöstlich der K6825 (Station 4+090 bis 4+160, Länge ca. 90 m). Zunächst sind Baustelleneinrichtung und -räumung (Pauschalen) sowie das Mähen der Vegetationsfläche (180 m², Streifenbreite bis 2,00 m) ;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+20;Die Position bündelt sämtliche Kontroll-, Instandhaltungs- und Rückbauleistungen am bereits errichteten Schutzzaun während der Bausaison IV. 2026. Dazu zählen 8 Zaunkontrollgänge auf Funktionsfähigkeit und Dichtheit, die Reparatur beschädigter Zaunabschnitte (5 m) sowie der Ersatz beschädigter Marki;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+30;Mineralischen Bodenverbesserungsstoff liefern.;528,5;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+40;Mineralischen Bodenverbesserungsstoff liefern.;15,1;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+50;Mineralischen Bodenverbesserungsstoff liefern.;35,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+60;Dreibock liefern;151,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+70;Bindegurt aus Polyestergewebe liefern, UV Stabil, 50mm breit, 1,00m lang;453,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+80;Kükendraht liefern, verzinkter Bandstahl, Maschenweite 13mm, 50cm hoch.;302,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+90;Rohrmatte 1,20 m hoch 1,6 m.;75,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+100;Quercus petraea (Traubeneiche) liefern.;38,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+110;Acer pseudoplatanus (Bergahorn) liefern.;38,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+120;Tilia platyphyllos (Sommerlinde) liefern.;37,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+130;Tilia cordata (Winterlinde) liefern.;37,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+140;Einzelbaumstandorte mähen/mulchen;755,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+150;Pflanzgruben ausheben 100x100x70 cm, wiederverwendbares;151,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+160;Rindenmulch liefern und mit einer Schicktdicke von ca.;151,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+170;Baumverankerung als Pfahlbock herstellen. Pfähle geke-;151,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+180;Rindenschutz herstellen.;151,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+190;Fertigstellungspflege im Herstellungsjahr durchführen.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+200;Entwicklungspflege 1. Jahr;151,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+210;Entwicklungspflege 2. Jahr;151,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+220;Entwicklungspflege 3. Jahr;151,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+230;Entwicklungspflege 4. Jahr;151,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+240;50 L / Baum;30,2;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+250;50 L / Baum;60,4;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+260;50 L / Baum;60,4;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+270;50 L / Baum;60,4;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83
+280;50 L / Baum;60,4;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/LV-RW-Zaatzke_V33.X83

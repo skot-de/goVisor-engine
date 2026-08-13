@@ -1,0 +1,77 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Bauzaun liefern;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+20;Bauzaun umsetzen;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+30;Warnleuchten liefern;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+10;Grasnarbe abräumen;100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+20;Grasnarbe abräumen, Böschung;60,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+30;Strauchaufwuchsflächen lösen, Kippe, 0,50 bis 1,00 m;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+40;Starkwurzeln lösen, Kippe;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+50;Fahrradständer lösen, Kippe;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+60;Schürfgruben herstellen;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+70;Leitungen, Rohre, freilegen;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+80;Leitungen, Kabel, freilegen;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+90;Betonabbruch;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+100;Boden in Handarbeit lösen, Kippe;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+110;Stahlmattenzaun Höhe 1.200 mm, lösen, Kippe;9,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+120;Stahlmattenzaun-Toranlage lösen, Kippe;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+10;Betonpflaster lösen, lagern;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+20;Betonpflaster, gelagert, einbauen;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+30;Schnitt an Betonpflaster Stärke 10 cm;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+40;Betonpfaster lösen,Kippe;2,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+50;Betonkantensteine lösen, Kippe;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+60;Betonkantensteine lösen, einbauen;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+70;Tragschichtmaterial liefern;2,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+10;Stahlmattenzaun, H 2.430 mm, Pfostenabstand 2.500 mm;14,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+20;"Stahlmattenzaun; H 2.430 mm, Pfostenabstand 1.250 mm";5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+30;Stahlmattenzaun, H 2.430 mm, Pfostenabstand 2.500 mm;11,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+40;"Stahlmattenzaun; H 2.430 mm, Pfostenabstand 1.250 mm";7,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+50;Stahlmattenzaun, H 2.430 mm, Rasen, Böschung;178,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+60;Stahlmattenzaun, H 2.430 mm, Rasen;111,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+70;Stahlmattenzaun, H 1.800 mm;7,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+80;Endpfosten liefern, H 2.430 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+90;Zwischenpfosten liefern, H 2.430 mm;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+100;Eckausbildungen liefern, H 2.430 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+110;Zwischenpfosten liefern, H 1.800 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+120;Schrägschnitte herstellen;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+130;Höhen - Stufen herstellen;2,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+140;Toranlage Nr. 1, Höhe 2.400 mm, Breite 5.000 mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+150;Toranlage Nr. 2, Höhe 2.400 mm, Breite 1.500 mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+160;Toranlage Nr. 3, Höhe 2.400 mm, Breite 1.250 mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+170;Toranlage Nr. 4, Höhe 2.400 mm, Breite 1.500 mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+180;Toranlage Nr. 5, Höhe 2.400 mm, Breite 1.000 mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+190;Toranlage Nr. 6, Höhe 2.400 mm, Breite 1.250 mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+200;Hydraulischen Türschließer zu Tor Nr. 6;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+210;Toranlage Nr. 7, Höhe 1.800 mm, Breite 1.750 mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+220;Tieferbohrungen Punktfundamente, Position F2;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+230;Mehraushub für Fundamentvergrößerung/-vertiefung,F1;4,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+240;Magerbeton liefern, Position F1;4,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+250;Schalung liefern;100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+260;Betonstahl liefern, Stabstahl;0,75;t;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+270;Betonstahl liefern, Matten;0,75;t;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+280;Montageplanung liefern;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+290;Grabenaushub Erdungsband, lösen, lagern, Pflasterbelag;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+300;Boden aus Grabenaushub gelagert einbauen, Pflasterbelag;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+310;Grabenaushub Erdungsband, lösen, lagern, Rasenböschung;32,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+320;Boden aus Grabenaushub gelagert einbauen, Rasenböschung;32,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+330;Grabenaushub Erdungsband, lösen, lagern, Rasen;18,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+340;Boden aus Grabenaushub gelagert einbauen, Rasen;18,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+350;Blitzschutzband liefern, verlegen;350,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+360;Erdungsanschlussfahnen liefern, verlegen, 1.100 mm;27,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+370;Tiefenerder liefern;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+380;CAD - Bestandszeichnung liefern;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+390;Fotodokumentation liefern;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+400;Prüf- und Abschlussbericht liefern;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+10;Fahrradbügel liefern;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+10;Oberboden liefern, einbauen, Rasen;70,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+20;Oberboden liefern, einbauen, Rasenböschung;45,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+30;Feinplanum herstellen, Rasen;900,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+40;Feinplanum herstellen, Rasenböschung;535,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+50;Rasenansaat liefern, einsäen, Rasen;900,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+60;Rasenansaat liefern, einsäen, Rasenböschung;535,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+10;Facharbeiter;3,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+20;Hilfsarbeiter;3,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+30;0,5 cbm Frontlader;3,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+40;Minibagger;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+50;LKW 7,5 to;3,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+60;Kompressor;3,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83
+70;Motorsäge;3,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb-Datei.x83

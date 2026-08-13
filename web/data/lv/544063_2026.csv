@@ -1,0 +1,582 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Wurzelwerk gefällter Bäume ausbauen und komplett entsorgen.;5,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Roden von Strauchwerk, einschließlich Wurzelwerk, nur bei zusammenhängendem Bewuchs (ca. 3 St/m²),;20,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Hecke als zusammenhängender Pflanzenbestand in Reihe (ca. 3 St/m) angeordnet, inkl. Wurzelwerk, roden.;50,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Aufnehmen von Betonpflasterbelag, einschl. Pflasterunterbau, aufnehmen, verladen und entsorgen;500,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Reinigung der öffentlichen und privaten;100,0;h;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Unterhalb des Kalksteinschotters der Vorposition ist ein Geotextil der Qualität = 200gr/m2 zu liefern und vollflächig einzubauen gemäß Herstellerrichtlinien.;700,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Baustelleneinrichtungsflächen aus Schotter 0/45, liefern, herstellen und unterhalten;700,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Prüfungen zur Ermittlung der Verdichtungs- bzw. Tragfähigkeitswerte mittels Lastplattendruckversuch nach DIN 18134 durch unabhängiges Prüflabor, einschl. Bereitstellung der erforderlichen Fahrzeuge/Geräte, Prüfprotokolle in dreifacher Ausfertigung.;5,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Baustelleneinrichtungsflächen aus RC 0/45, aufnehmen und entsorgen Den Baustraßenunterbau (RC 0/45) rückstandsfrei ausbauen, laden, abtransportieren und ordnungsgemäß entsorgen einschließlich der Entsorgungskosten.;700,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;Das Geotextil unterder Baustrasse ausbauen, abtransportieren und ordnungsgemäß entsorgen einschließlich der Entsorgungskosten.;700,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+11;Vermessungspunkte innerhalb der Baustelle deutlich sichtbar kennzeichnen und vor Lageänderung schützen.;10,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Einrichtung der Eigenüberwachung für Beton der Überwachungsklasse ÜK2 (oder höher). Bereitstellung einer ständigen Betonprüfstelle gemäß den Vorgaben der DIN 1045-3. Einweisung des Baustellenpersonals in das Führen der erforderlichen Betoniertagebücher, Annahmeprüfungen und Nachbehandlungsnachweise.;1,0;Psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Durchführung der erforderlichen Kontrollprüfungen an der Baustelle für die Betonsorte C30/37. Im Leistungsumfang enthalten:;1,0;Psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Der Bodenaushub ist vor der Abfuhr erneut zu beproben, um die Einstufung gem. der Ersatzbaustoffverordnung vorzunehmen.;1,0;Psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Baukran als Turmdrehkran auf der Baustelle anliefern und bereitstellen, samt späterem Abbau und Abtransport.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Kranaufstellfläche aus einem Schotterpolster herstellen;1,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Baukran wie zuvor beschrieben als Turmdrehkran, Vorhaltung,;52,0;StWo;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;für fremde Handwerker/Baufirmen, einschl. Kranführer. Abrechnung nach Stunden.;100,0;h;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Freimachen des Baufeldes und sonstiger benötigter Flächen von Gestrüpp, Sträuchern und Bäumen bis 15 cm mittleren Durchmessers, inkl. Abfuhr und vorschriftsmäßiger Entsorgung des anfallenden Materials auf Deponie nach Wahl des AN;665,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Abtrag des zersetzungsgefährdeten humosen Oberbodens (schluffig-sandige Böden mit Humusanteil) mit glatten Schneiden. Der Boden ist aus bautechnischen Gründen von der Wiederverwertung im Gründungsbereich ausgeschlossen.;665,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Oberboden der Vorposition aufladen, abfahren und entsorgen.;475,0;t;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Aushub bis mindestens 1,00 m Tiefe unter zukünftiger GOK von lehmigen und schluffigen Böden mit Schrumpfungsneigung.;665,0;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Zulage zur vorbeschriebenen Position.;9,5;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Boden ab Baugrubensohle für Verbindungsschacht lösen und für den Abtransport bereitstellen.;38,0;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Boden ab Baugrubensohle für Aufzugsunterfahrt lösen und für den Abtransport bereitstellen.;19,0;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Boden ab Baugrubensohle für Streifen- und Punktfundament ausschachten, einschl. Herstellen des Planums der Sohle, das Aushubmaterial für den Abtransport bereitstellen.;190,0;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Zulage für das Herstellen von Streifenfundamenten im Bereich des Bestandsgebäudes bis UK Bestandskellersohle.;28,5;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;Zur Verhinderung von Durchnässungen sind die Böschungen mit einer PE-Folie abzudecken.;950,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+11;Abfuhr der bereitgestellten Bodenmassen aus den Vorpositioen,;1444,0;t;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+12;Baugrubensohle des KG nach dem Aushub planieren und verdichten. Ausführung unmittelbar vor dem Einbringen der Sauberkeitsschicht als planebene Fläche, mit höchstens +/- 2 cm Höhendifferenz auf eine Länge von 5,0 m.;541,5;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+13;Lieferung und lagenweiser Einbau von grobem, verdichtbaren, nichtbindigen verdichtungswilligem, raumbeständigen Material (Schotter 0/45 bis 5/45) als kapillarbrechende, drainierende Gründungsschicht, statisch verdichtet auf 100 % Proctor.;997,5;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+14;Lieferung, Einbau und lagenweise Verdichtung eines geeigneten Füllsandes (nichtbindig, gewaschen, max. 10 % Feinanteil) zur Herstellung des Sohlenunterbaus oberhalb der Grobschotterschicht. Einbaustärke gemäß Planung, lagenweiser Einbau im Vor-Kopf-Verfahren, in max. 30 cm starken Schichten, statisc;142,5;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+15;Herstellen eines tragfähigen und verdichteten Gründungsplanums in einem höhergelegenem Bereich gegenüber der Regelbodenplattenhöhe, in einer Höhe von ca. 0,50 m über Standardniveau.;47,5;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+16;Durchführung von statischen Lastplattendruckversuchen nach DIN 18134 zur Kontrolle der Verdichtung des Gründungspolsters (Ev2 = 80 MN/m², Ev2/Ev1 = 2,5).;4,75;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+17;Verfüllung von Arbeitsräumen (z. B. Fundamentgräben) mit nichtbindigem, verdichtungsfähigem Material (Füllsand mit < 10 % Feinkornanteil), lagenweise verdichtet.;47,5;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Planung und Vorbereitung der Beantragung einer wasserrechtlichen Genehmigung für Entnahme und Einleitung von Schichten- und Sickerwasser aus Wasserhaltung. Alle notwendigen Unterlagen und Berechnungen für den Antrag sind vom AN aufzustellen.;1,0;Psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Lieferung und Verlegung einer umlaufenden Drainageleitung mit Filtervlies, Anschluss an genehmigte Vorflut oder Pumpensumpf, zur Vermeidung von Einstauwassern.;150,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Geschlossenen Grundwasserhaltung für die Baugrube herstellen und betreiben;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Vorhalten und betreiben der zuvor beschriebenen Wasserhaltung;12,0;Wo;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Stehendes Niederschlagswasser aus Schächten und Gruben durch Abpumpen beseitigen, inkl. Abwasserleitungen.;40,0;h;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Anlage zur offenen Grundwasserhaltung wie vorbeschrieben Pos. vorhalten und Betreiben ohne Stromkosten, Wartung, Unterhaltung, Kontrollen. Einleitgebühren gehen zu Lasten des AG.;20,0;Wo;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Redundante Pumpenanlage, ausreichend dimensioniert für die zuvor beschriebene offene Wasserhaltung erstellen, vorhalten , im Bedarfsfall betreiben und anschließend beseitigen.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Der Auftragnehmer hat die Koordination der Arbeiten des Blitzschutzgewerkes im Bereich des Rohbaus sicherzustellen.;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Erstellung eines Gerüstaufstellplanes inklusive Ansichten und Draufsichten in dreifacher Ausfertigung, mit Angaben der Verankerungen. Einholen aller öffentlich-rechtlicher Genehmigungen und Erlaubnisse, die zur Erbringung der Leistungen des Bieters erforderlich sind.;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Prüffähige statische Berechnung nach DIN 4420-1 mit Zeichnungen für alle nachfolgend beschriebenen Gerüste und Sonderkonstruktionen;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Erstellung von Verankerungsprotokollen für alle nachfolgend beschreibenen Gerüste nach Merkblatt für das Anbringen von Dübeln zur Verankerung von Fassadengerüsten;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Erstellung einer Höhenausgleichslage zur Sicherstellung der Standsicherheit und Nivellierung des Gerüstes.;200,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Längenorientiertes Standgerüst, in Teilabschnitten nach Baufortschritt, gemäß DIN EN 12811-1 und DIN EN 12810-1 aufbauen.;900,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Gebrauchsüberlassung des längenorientierten Standgerüsts für Fassadenarbeiten.;45000,0;m²Wo;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Fassadengerüst, wie zuvor beschrieben, abbauen;900,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Innengeländer als wandseitigen Seitenschutz bzw. Absturzsicherung am Fassadengerüst aufbauen, bestehend aus Geländerholm, Zwischenholm und ggf. Bordbrett. Das Geländer ist überall dort anzubringen, wo der Abstand zur Wand mehr als 30 cm beträgt.;250,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Gebrauchsüberlassung der Seitenschutz/Innengeländer am Fassadengerüst.;12500,0;mWo;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Innengeländer als wandseitigen Seitenschutz bzw. Absturzsicherung am Fassadengerüst abbauen, bestehend aus Geländerholm, Zwischenholm und ggf. Bordbrett.;250,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Belagverbreiterung, wandseitig, mit Konsolen an längenorientierten Standgerüst für Fassadenarbeiten nach DIN EN 12811-1. Konsolen an allen Gerüstlagen für zwei Belagsfelder aufbauen.;250,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Gebrauchsüberlassung der Belagverbreiterung mit Konsolen.;12500,0;mWo;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;Belagverbreiterung, wandseitig, mit Konsolen an längenorientierten Standgerüst für Fassadenarbeiten nach DIN EN 12811-1. Konsolen an allen Gerüstlagen für zwei Belagsfelder abbauen.;250,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+11;Zulage für das abschnittsweise Entfernen der vorher beschriebenen zusätzlichen wandseitigen Belagverbreiterung mit Konsolen an allen Gerüstlagen nach Aufforderung durch die Bauleitung.;250,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+12;Treppen gemäß DIN EN 12811-1, vorgebaut vor Fassadengerüst, auf- und abbauen, inkl. Doppelhandlauf und Stirngeländer. Verankerung am Gerüst. Inkl. Gebrauchsüberlassung bis 4 Wochen (Grundeinsatzzeit).;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+13;Gebrauchsüberlassung der zuvor beschriebenen Treppe;50,0;mWo;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+14;Gebrauchsüberlassung der zuvor beschriebenen Treppe;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+15;Seitenschutz bzw. Höhensicherung vor großflächigen Gebäudeöffnungen auf- und abbauen, bestehend aus Gerüstbauteilen und Schutznetzen. Befestigung in Rohboden und Stahlbetondecke.;100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+16;Bereitstellen einer Facharbeiterkolonne für den Umbau des zuvor beschriebenen Gerüstes.;50,0;h;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+17;Löcher in der Fassade, die ohne Verschulden des Auftragnehmers entstanden sind oder vorhanden sind, beim Abrüsten materialgerecht schließen. Material wird bauseitig gestellt.;100,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Umbau des zuvor beschriebenen Fassadengerüstes zum Raumgerüst Gerüst LK 4 flächenorientiert,;50,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Gebrauchsüberlassung der vorherigen Position,je angefangene Woche;2500,0;m²Wo;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Boden im Bereich der geplanten Fundamentabtreppung abtragen, einschl. Herstellen eines ebenen Planums der Baugrubensohle für die Treppenstufen der Abtreppung. Das Aushubmaterial zur späteren Wiederverwendung seitlich lagern, nach Fertigstellung der Fundamentabtreppung das Fundament fachgerecht hinte;28,5;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Herstellen einer Fundamentabtreppung in Stahlbetonbauweise mit einer Neigung von 30° einschließlich sämtlicher hierfür erforderlicher Nebenleistungen.;28,5;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;"Füllbeton, unbewehrt, für Auffüllung im Gründungsbereich; evtl. erforderliche Schalung in gesonderter Position.";133,0;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Herstellen einer flächigen Sauberkeitsschicht als unbewehrte Unterlage für nachfolgende Bodenplatten auf dem vorbereiteten und verdichteten Planum.;570,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Streifenfundamente aus Stahlbeton, auf Sauberkeitsschicht betoniert, Schalung und Bewehrung in gesonderter Position.;95,0;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Zulage für das Herstellen von Streifenfundamenten im Bereich des Bestandsgebäudes bis UK Bestandskellersohle.;28,5;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Einzelfundamente aus Stahlbeton, allseitig geschalt, Schalung und Bewehrung in gesonderter Position.;1,9;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Liefern und Einbauen eines Fundamenterders nach DIN 18014 in ein Streifenfundament aus Beton. Der Erder ist gemäß Norm als geschlossener Ring- oder Strahlenerder im Fundament anzuordnen. Ausführung einschließlich aller erforderlichen Verbindungselemente, Potentialausgleichsanschlüsse und Messanschlu;90,25;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Herstellen von Aussparrungen im Streifenfundament bzw. in der Frostschürze zur Durchführung von Rohrleitungen bis einschließlich DN 150.;9,5;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Dämmung unter Bodenplatte mit extrudierten Polystyrol-Hartschaumplatten mit Stufenfalz auf vorhandenen Unterbau lose verlegt im Verband.;570,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Dämmung an vertikalen Bauteilen mit extrudierten Polystyrol-Hartschaumplatten mit Stufenfalz auf vorhandenen Unterbau verklebt im Verband.;95,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Weiche Polsterung vertikaler Höhenversätze der Fundamente und Kelleraußenwände aus einer Mineralwolle;114,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;"Zweilagige Trennlage als Gleitlager unter Bodenplatte, mit PE-Folie; Stöße überlappt.";475,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Schalung der Streifenfundamente, bewehrt, als Seitenschalung.;114,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Schalung für Plattenränder von Boden- und Fundamentplatten, glatt, einhäuptig.;114,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Öffnungen und Aussparungen, eckig, für Aufzugsschacht in Beton- und Stahlbetonkonstruktionen herstellen (schalen), Kanten umlaufend, beidseitig gefast.;0,95;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Öffnungen und Aussparungen, eckig, für Schacht TGA in Beton- und Stahlbetonkonstruktionen herstellen (schalen), Kanten umlaufend, beidseitig gefast.;0,95;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Herstellen der Schalung für Ortbetontreppe zur Überwindung eines Sohlversprunges.;9,5;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Zulage für den zusätzlichen Aufwand zum Schalen einer neu herzustellenden Bodenplatte über einem vorhandenen Bodendurchbruch mit Abmessungen von ca. 3,50 × 2,00 m, gemäß VOB/C DIN 18331 / DIN 18299.;9,5;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Bodenplatte aus WU-Beton auf Sauberkeitsschicht, Oberfläche abgezogen, Schalung und Bewehrung in gesonderter Position.;570,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Zulage für Betonierarbeiten am Sohlversprung;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Nachbehandlung der Betonoberfläche gem. der DIN 1045 durch geeignete Maßnahmen wie z.B. abdecken mit einer Poyethylen-Folie oder Flutung.;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Sohlenversprung im Bereich von Bodentiefen Fenstern- / Türen zum späteren Einbau einer bauseiteigen Entwässerungsrinne herstellen.;1,9;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Sohlenversprung im Bereich von Bodentiefen Fenstern- / Türen zum späteren Einbau einer bauseiteigen Entwässerungsrinne herstellen.;0,95;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Zulage für das fachgerechte Anschließen einer neu herzustellenden Stahlbeton-Bodenplatte an eine vorhandene Bodenplatte im Altbau, gemäß VOB/C DIN 18331 / DIN 18299.;9,5;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Betonstabstahl B500 A / B für Bauteile aus Ortbeton.;5,7;t;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Betonmattenstahl B500 A / B für Bauteile aus Ortbeton.;5,7;t;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Rückbiegeanschluss mit integriertem Fugenband;3,8;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Rückbiegeanschluss mit integriertem Fugenband;4,75;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Es ist eine Fachbauleitung Wasserundurchlässigkeit (WU) zu stellen.;1,0;Psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Zehnjährige Gewährleistung auf die;1,0;Psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Beschichtetes Arbeitsfugenblech, b = ca. 167 mm für;55,1;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Beschichtetes Arbeitsfugenblech, b = ca. 167 mm für;3,8;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Beschichtetes Arbeitsfugenblech, b = ca. 80 mm für;30,4;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Beschichtete Fugenbleche laut Regeldetail im;89,3;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Klemmvorrichtung zur Herstellung der;5,7;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Montage der Klemmvorrichtung durch Fachkräfte;5,7;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Ortbetonsollbruchelemente (verzahnt) zur;2,375;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;Einbau von Ortbetonsollbruchelementen;19,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+11;Fugenband-Klemmprofil-Konstruktion, bestehend;16,625;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+12;Zulage für die Ausführung der vorgenannten;16,625;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+13;Fugenband-Formteil als Zulage von den;9,5;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+14;Fugenband-Formteil (Winkel-/Spiegelecke) 320er;2,85;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+15;Fugenband-Stumpfstoss-Schweissungen zur;2,85;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+16;Kunstharzinjektion von Rissen bzw. kreuzenden;9,5;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+17;Klemmschutzprofil;16,625;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+18;Vorbereitung des Klemmhorizontes (u.a.;16,625;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+19;Abdichtungsmodul, frei Baustelle liefern;5,7;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+20;Eckelement für Abdichtungsmodul, frei Baustelle;3,8;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+21;Einbau von Abdichtungsmodul-Elementen;6,08;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+22;Rohrspreizen, für die Bauteildicke d = 24 cm,;47,5;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+23;Rohrspreizen, für die Bauteildicke d = 28 cm,;47,5;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+24;Einbau der vorgenannten Position;71,25;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+25;Liefern und fachgerechtes Einbauen eines Universaltrichter DN 110 als Bodendurchführung für den Einbau in WU-Betonbodenplatten mit Frischbetonverbundfolie. Zum Anschluss von KG-Rohren bei Versatz und zum direkten Anschluss an KG- / KG 2000-Grundleitungen.;3,8;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;FBV-Folie - Bodenplatte (horizontal);593,75;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;FBV-Folie - Bodenplatte (vertikal);213,75;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Ausbildung von Tiefteilen;1,9;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Übergangstreifen;104,5;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Dichtstreifen Sohle/Wand (ohne;9,5;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Dichtstreifen Sohle/Wand (bis 21-50cm;104,5;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Fugenbänder verkleben mit FBV System;11,4;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Eindichtung Rohrdurchdringungen DN 50 bis;1,9;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Eindichtung Fundamenterder;9,5;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;Eindichtung Spann- und Ankerstellen;71,25;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Schalung für Plattenränder von Boden- und Fundamentplatten, glatt, einhäuptig.;95,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Schalung für Beton- und Stahlbetonwände, rau.;95,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;"Schalung für Deckengleichen Balken, glatt, aus nicht saugenden Schalungsplatten; Schalung wird für die Abwicklung des Bauteils gerechnet.";4,75;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;"Schalung für Deckengleichen Balken, glatt, aus nicht saugenden Schalungsplatten; Schalung wird für die Abwicklung des Bauteils gerechnet.";6,65;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Öffnungen und Aussparungen, eckig, für Haustechnik in der Decke anlegen;1,9;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Pos. 308;23,75;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Pos. W302;47,5;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Pos. 302;4,75;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Pos. 303;4,75;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;Pos. 301;23,75;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+11;Betonstabstahl B500 A / B für Bauteile aus Ortbeton.;9,5;t;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+12;Betonmattenstahl B500 A / B für Bauteile aus Ortbeton.;9,5;t;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Schalung für Beton- und Stahlbetonwände, rau.;9,5;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Pos. 203;19,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Pos. 204;57,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Pos. 205;7,6;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Pos. 205;7,6;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Pos. 205;17,1;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Pos. 208;14,25;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Pos. 205;9,5;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Schalung für freistehende Stützen mit rechteckigem Querschnitt, glatt, aus nicht saugenden Schalungsplatten.;33,25;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;Schalung für freistehende Stützen mit rundem Querschnitt, Sichtbeton, aus nicht saugenden Schalungsplatten.;9,5;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+11;Schalung für halbgewendelte Treppenanlagen   mit zwei Zwischenpodesten (Treppenpodeste, Laufplatten mit aufbetonierten Keilstufen), rau, für späteren Putzauftrag.;19,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+12;Liefern und fachgerechtes Einbauen eines Trittschalldämmelements zur schalltechnischen Entkopplung von Treppen und Podestplatten an aufgehenden Bauteilen.;14,25;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+13;Deckenrandschalung für Deckenplatten, glatt, mit geordneten Stößen.;95,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+0014;Schalung der Deckenplatten, Kragplatten, Podeste, Balkone etc., aus nicht saugenden Schalungsplatten, für nachfolgende Beschichtung.;0,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+0015;Öffnungen und Aussparungen, eckig, für Haustechnik in der Decke anlegen;5,7;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+0016;Öffnungen und Aussparungen, eckig, für Haustechnik in der Decke anlegen;1,9;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Wände aus Stahlbeton, Oberfläche glatt, mit regelmäßig sichtbaren Schalungsstößen. Betonwarzen und Grate abschleifen. Schalung und Bewehrung in gesonderten Positionen.;4,75;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Pos. 203;14,25;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Pos. 204;38,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Pos. 205;4,75;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Pos. 206;4,75;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Pos. 207;14,25;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Pos. 208;9,5;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Pos. 209;0,95;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Pos. 210;0,95;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;Pos. 210;0,95;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+11;Pos. 210;8,55;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+12;Pos. 213;1,9;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+13;Pos. 214;0,95;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+14;Pos. 215;9,5;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+15;Pos. 216;1,9;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+16;"Stützen aus Stahlbeton mit rundem Querschnitt, Oberfläche in Sichtbeton SB 2, mit regelmäßig sichtbaren Schalungsstößen; Schalung und Bewehrung in gesonderter Position.";0,95;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+17;"Treppenlauf, halbgewendelt mit zwei Zwischenpodesten, aus Stahlbeton mit aufbetonierten Keilstufen für Belag auf Tritt- und Setzstufen; Laufuntersicht mit glatter Oberfläche, mit gefasten Kanten, Betonwarzen und Grate abgeschliffen; Schalung und Bewehrung in gesonderter Position.";19,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+18;Pos. 201;522,5;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+19;Pos. 201;47,5;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+20;Nachbehandlung der Betonoberfläche gem. der DIN 1045 durch geeignete Maßnahmen wie z.B. abdecken mit einer Poyethylen-Folie oder Flutung;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Schalung für Beton- und Stahlbetonwände, rau.;9,5;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Pos. 106;57,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Pos. 107;19,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Pos. 108;7,6;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Pos. 109;19,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Pos. 1110;12,35;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Pos. 111;15,2;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Schalung für freistehende Stützen mit rechteckigem Querschnitt, glatt, aus nicht saugenden Schalungsplatten.;33,25;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Schalung für halbgewendelte Treppenanlagen   mit zwei Zwischenpodesten (Treppenpodeste, Laufplatten mit aufbetonierten Keilstufen), rau, für späteren Putzauftrag.;19,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;Liefern und fachgerechtes Einbauen eines Trittschalldämmelements zur schalltechnischen Entkopplung von Treppen und Podestplatten an aufgehenden Bauteilen.;14,25;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+11;Deckenrandschalung für Deckenplatten, glatt, mit geordneten Stößen.;95,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+12;Öffnungen und Aussparungen, eckig, für Aufzugsschacht in Filigrandecke herstellen, Kanten umlaufend, beidseitig gefast.;0,95;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Wände aus Stahlbeton, Oberfläche glatt, mit regelmäßig sichtbaren Schalungsstößen. Betonwarzen und Grate abschleifen. Schalung und Bewehrung in gesonderten Positionen.;4,75;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Pos. 106;38,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Pos. 107;4,75;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Pos. 108;4,75;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Pos. 109;14,25;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Pos. 110;9,5;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Pos. 111;9,5;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Pos. 112/113;1,9;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Pos. 114;8,55;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;Pos. 115;1,9;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+11;Pos. 116;9,5;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+12;Pos. 116;1,9;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+13;Pos. 114;1,9;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+14;"Treppenlauf, halbgewendelt mit zwei Zwischenpodesten, aus Stahlbeton mit aufbetonierten Keilstufen für Belag auf Tritt- und Setzstufen; Laufuntersicht mit glatter Oberfläche, mit gefasten Kanten, Betonwarzen und Grate abgeschliffen; Schalung und Bewehrung in gesonderter Position.";19,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+15;Pos. 101;522,5;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+16;Pos. 101;47,5;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+17;Nachbehandlung der Betonoberfläche gem. der DIN 1045 durch geeignete Maßnahmen wie z.B. abdecken mit einer Poyethylen-Folie oder Flutung;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;"Schalung für Überzüge, glatt, aus nicht saugenden Schalungsplatten; Schalung wird für die Abwicklung des Bauteils gerechnet.";38,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Schalung für freistehende Stützen mit rechteckigem Querschnitt, glatt, aus nicht saugenden Schalungsplatten.;47,5;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Öffnungen und Aussparungen, eckig, für Aufzugsschacht in Filigrandecke herstellen, Kanten umlaufend, beidseitig gefast.;0,95;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Wände aus Stahlbeton, Oberfläche glatt, mit regelmäßig sichtbaren Schalungsstößen. Betonwarzen und Grate abschleifen. Schalung und Bewehrung in gesonderten Positionen.;19,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Zulage für die Betonage der Innenwände im Verlauf der Dachneigung.;9,5;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Unterzüge aus Stahlbeton, Oberfläche glatt, mit gefasten Kanten. Betonwarzen und Grate abgeschliffen. Schalung und Bewehrung in gesonderten Positionen.;14,25;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;"Stützen aus Stahlbeton mit quadratischem/rechteckigem Querschnitt, Oberfläche glatt, mit regelmäßig sichtbaren Schalungsstößen; Schalung und Bewehrung in gesonderter Position.";38,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Boden ab Baugrubensohle für Aufzugsunterfahrt abtragen, einschl. Herstellen des Planums der Sohle, das Aushubmaterial zur Wiederverwendung seitlich lagern, das Fundament nach Fertigstellung hinterfüllen, Restaushubmaterial entsorgen.;28,5;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Schalung für Plattenränder von Boden- und Fundamentplatten, glatt, einhäuptig.;9,5;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Schalung für Aufzug Beton- und Stahlbetonwände, rau.;33,25;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Pos. 309;9,5;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Pos. W301;4,75;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Betonstabstahl B500 A / B für Bauteile aus Ortbeton.;4,75;t;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Betonmattenstahl B500 A / B für Bauteile aus Ortbeton.;4,75;t;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Pos. W201;23,75;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Schalung für Aufzug Beton- und Stahlbetonwände, rau.;47,5;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;Türöffnung in Betonwand schalen, 3-seitig, glatt, aus nicht saugendem Schalungsmaterial.;1,9;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+11;Betonstabstahl B500 A / B für Bauteile aus Ortbeton.;4,75;t;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+12;Betonmattenstahl B500 A / B für Bauteile aus Ortbeton.;4,75;t;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+13;Schalung für Aufzug Beton- und Stahlbetonwände, rau.;57,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+14;Türöffnung in Betonwand schalen, 3-seitig, glatt, aus nicht saugendem Schalungsmaterial.;0,95;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+15;Pos. W101;28,5;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+16;Schalung für Plattenränder von Boden- und Fundamentplatten, glatt, einhäuptig.;9,5;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+17;Schalung für Aufzug Beton- und Stahlbetonwände, rau.;4,75;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+18;Öffnungen und Aussparungen, eckig, für Aufzugsschacht in Filigrandecke herstellen, Kanten umlaufend, beidseitig gefast.;0,95;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+19;Wände für Aufzug aus Stahlbeton, Oberfläche glatt, mit regelmäßig sichtbaren Schalungsstößen. Betonwarzen und Grate abschleifen. Schalung und Bewehrung in gesonderten Positionen.;19,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+20;Decken aus Stahlbeton als Geschossdecken. Oberfläche eben abgezogen und rau abgerieben. Schalung und Bewehrung sowie Abstellen mit Dämmstreifen in gesonderten Positionen.;4,75;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+21;Einbau und Reinigung der vom Aufzugsbauer gelieferten Ankerschienen und Lastaufnahmemittel nach Angabe des Aufzugsbauers.;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Betonstabstahl B500 A / B für Bauteile aus Ortbeton.;28,5;t;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Betonmattenstahl B500 A / B für Bauteile aus Ortbeton.;28,5;t;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Anschluss von Mauerwerk an Stahlbetonstütze als kraftschlüssigen Anschluss herstellen. Die Verankerung erfolgt mit zugelassenen Maueranschlussschienen (z.B. C-Profil) im Beton und entsprechenden Mauerverbindern (Edelstahl). Die Verbinder sind in jeder zweiten Lagerfuge (Höhenabstand ca. 50 cm) einzu;71,25;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Decken- und Bodenöffnung behelfsmäßig umwehren, durch Herstellen, Vorhalten, Unterhalten und Beseitigen von Trag- und Unterkonstruktion sowie der erforderlichen Aussteifungen, Absturzsicherungen und Befestigung an massiven Bauteilen.;2,85;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Herstellen, Vorhalten, Unterhalten und abschließendes Entfernen einer behelfsmäßigen Umwehrung (provisorisches Treppengeländer) zur Sicherung einer Decken- und Bodenöffnung während der gesamten Bauzeit.;19,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Waagerechte Abdichtung gegen Bodenfeuchte in/unter Wänden aus Kalksandsteinmauerwerk, DIN 18195-4, Auflagerflächen mit Mörtel MG III abgleichen, Abdichtung einlagig, aus Bitumenbahnen, Bitumen-Dachdichtungsbahnen DIN 52130 G 200 DD mit Glasgewebeeinlage 200 g/m2, Stoßüberdeckung lose, Verbreiterung ;100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Kimmsteine dämmend, aus Kalksandstein zur Herstellung eines planebenen Niveaus an geometrisch bedingten Wärmebrücken des Wandfußes, mit Stoßfugen mit Nut und Feder ohne Mörtelfuge.;100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Mauerwerk der Außenwand.;200,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Herstellen von Öffnung für Fenster, Türen etc. im Zuge der Herstellung des Mauerwerks.;25,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Waagerechte Abdichtung gegen Bodenfeuchte in/unter Wänden aus Kalksandsteinmauerwerk, DIN 18195-4, Auflagerflächen mit Mörtel MG III abgleichen, Abdichtung einlagig, aus Bitumenbahnen, Bitumen-Dachdichtungsbahnen DIN 52130 G 200 DD mit Glasgewebeeinlage 200 g/m2, Stoßüberdeckung lose, Verbreiterung ;120,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Kimmsteine dämmend, aus Kalksandstein zur Herstellung eines planebenen Niveaus an geometrisch bedingten Wärmebrücken des Wandfußes, mit Stoßfugen mit Nut und Feder ohne Mörtelfuge.;25,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Mauerwerk der Innenwand.;70,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Kimmsteine dämmend, aus Kalksandstein zur Herstellung eines planebenen Niveaus an geometrisch bedingten Wärmebrücken des Wandfußes, mit Stoßfugen mit Nut und Feder ohne Mörtelfuge.;100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Mauerwerk der Innenwand.;270,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Flachanker (Mauerverbinder) aus Stahl beim Aufmauern mit Stumpfstoßtechnik einlegen und systemgerecht verbinden.;100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Herstellen von Öffnung für Fenster, Türen etc. im Zuge der Herstellung des Mauerwerks.;15,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Öffnung überdecken mit Fertigsturz nach bauaufsichtlicher Zulassung/Typenstatistik,;5,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Öffnung überdecken mit Fertigsturz nach bauaufsichtlicher Zulassung/Typenstatistik,;10,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Ausführung einer flexiblen, rissüberbrückenden und polymermodifizierten Bitumendickbeschichtung (PMBC) bzw. Reaktivabdichtung auf zementärer Basis (2K), zur Abdichtung erdberührter Bauteile im Sockelbereich gemäß DIN 18533-3 gegen Bodenfeuchte und nicht drückendes Wasser.;150,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Schutzlage auf erdberührten Wänden aus Noppenbahnen mit integrierter Gleit-, Schutz- und Lastverteilungsschicht, für vertikale Flächen vor Perimeterdämmung, einschl. der erforderlichen Eckausbildungen, dem Fixieren der oberen Randabschlüsse und dem Herstellen von Durchdringungen.;50,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Mauerwerk der Außenwand.;250,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Herstellen von Öffnung für Fenster, Türen etc. im Zuge der Herstellung des Mauerwerks.;20,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Mauerwerk der Innenwand.;70,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Mauerwerk der Innenwand.;330,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Flachanker (Mauerverbinder) aus Stahl beim Aufmauern mit Stumpfstoßtechnik einlegen und systemgerecht verbinden.;100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Herstellen von Öffnung für Fenster, Türen etc. im Zuge der Herstellung des Mauerwerks.;15,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Öffnung überdecken mit Fertigsturz nach bauaufsichtlicher Zulassung/Typenstatistik,;5,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Öffnung überdecken mit Fertigsturz nach bauaufsichtlicher Zulassung/Typenstatistik,;10,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Mauerwerk der Außenwand.;200,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Zulage für das Mauern des Giebels aus Kalksandstein im Bereich der Satteldächer, einschließlich aller zusätzlichen Arbeits- und Anpassungsleistungen.;100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Mauerwerk der Innenwand.;50,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Zulage für das Mauern des Giebels aus Kalksandstein im Bereich der Satteldächer, einschließlich aller zusätzlichen Arbeits- und Anpassungsleistungen.;10,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Flachanker (Mauerverbinder) aus Stahl beim Aufmauern mit Stumpfstoßtechnik einlegen und systemgerecht verbinden.;10,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Herstellen von Öffnung für Fenster, Türen etc. im Zuge der Herstellung des Mauerwerks.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Öffnung überdecken mit Fertigsturz nach bauaufsichtlicher Zulassung/Typenstatistik,;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Perimeterdämmung, einschl. Eckausbildung und Herstellen von Ausschnitten für Durchdringungen, anbringen.;80,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Wärmedämmung als Kerndämmung oder als Dämmung im Verblendmauerwerk mit Luftschicht zwischen zwei Wänden, aus Mineralwolleplatten, wasserabweisend imprägniert, mit Kunststoffscheiben auf den Ankern befestigt.;700,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Dämmung zur Verhinderung von Schallübertragung, nicht brennbar und verrottungsfest, als Trennlage bei Gebäudedehnfugen in den Fugenhohlraum der zweischaligen Haustrennwand abgleitsicher einstellen.;100,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Feuchtigkeitssperrschicht L-Folie nach DIN 1053 Teil 1;100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Fenster- und Türleibungen im Bereich der;200,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Wärmedämmelement aus Schaumglas am Mauerfuß zur thermischen Trennung und Lastabtragung, druckfest und wasserdicht im Mörtelbett verlegen.;100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Herstellen eines Verblendmauerwerks aus frostbeständigen Vormauerziegeln gemäß DIN EN 771-1 und DIN 105-100 im Normalformat (NF), einschließlich aller Nebenleistungen wie Anarbeitung an Öffnungen, Ecken, Anschlüsse an andere Bauteile, Mauerwerksversätze, Laibungen, Rollschichten, Zuschnitte und pass;650,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Zulage für das Verblenden des Giebels eines Satteldaches, einschließlich sämtlicher zusätzlicher Zuschnitt-, Anschluss- und Befestigungsarbeiten.;100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Fassadenverankerung bei zweischaligem Mauerwerk mit Abfangkonsolen-System, mit Verstaz, komplett mit bauaufsichtlichen Zulassungen und prüffähigen statischen Nachweisen.;14,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Fassadenverankerung bei zweischaligem Mauerwerk mit Abfangkonsolen-System, mit Verstaz, komplett mit bauaufsichtlichen Zulassungen und prüffähigen statischen Nachweisen.;20,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Fassadenverankerung bei zweischaligem Mauerwerk mit Abfangkonsolen-System, mit Verstaz, komplett mit bauaufsichtlichen Zulassungen und prüffähigen statischen Nachweisen.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Horizontale Feuchtigkeitssperre in der Verblendschale;100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;Herstellen von Öffnungen beim Aufmauern;40,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+11;Liefern und fachgerecht einbauen von Stoßfugenlüftern aus UV- und witterungsbeständigem Kunststoff zur Hinterlüftung der Vormauerschale gemäß DIN 4108-3 und DIN EN 1996-2 (Eurocode 6 - Ausführung von Mauerwerk).;500,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+12;Luftschichtanker gem. DIN EN 1996 bzw. nach Zulassung;5000,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+13;Dübelanker aus Edelstahl V4A gem. DIN EN 1996 bzw. nach Zulassung;3000,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+14;Unteren Verblendecken bei den bodentiefen Fenster und Türen;10,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+15;Verfugung von Verblendmauerwerk mit Mörtelgruppe III aus feingekörntem Sand, MV 1:2, Farbe nach Wahl (grau, antrazit). Vor der Verfugung ist das Mauerwerk zu wässern, abzusäuern;650,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+16;Herstellen der vertikalen Dehnungs- bzw. Bewegungsfuge als;70,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Wanddurchbruch in Mauerwerk oder Beton materialgerecht und bündig schließen, Rohrhülsen oder Rohrummantelungen sind zu fixieren. Einputzarbeiten ggf. gesondert.;100,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Schlitze in Mauerwerk aus Mauerziegeln, Kalksand-, Porenbeton- und Leichtbetonsteinen, schließen, mit Beton.;250,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Staubschutzwand errichten und nach Fertigstellung der Maßnahme wieder zurückbauen;50,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Bautür, behelfsmäßig einbauen, vorhalten und beseitigen.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Bauschuttcontainer (Absetzmulde) für gemischten Bauschutt aufstellen, vorhalten und abfahren, entsprechend der Vorschriften für Bauschutt und Abfallbeseitigung.;5,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Abbruch einer vorhandenen 3-stufigen Treppenanlage aus Stahlbeton einschließlich Podest im Außenbereich gemäß VOB / C DIN 18459 (Abbruch- und Rückbauarbeiten).;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Abbruch und Ausbau von 2 vorhandenen Außentüren aus Aluminium,;2,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Abbruch und Ausbau von vorhandenen Fenstern aus Kunststoff (PVC) gemäß VOB/C DIN 18459 (Abbruch- und Rückbauarbeiten).;3,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Abbruch von vorhandenem Außenmauerwerk gemäß VOB/C DIN 18459 (Abbruch- und Rückbauarbeiten).;30,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Zulage für den erhöhten Aufwand beim erschütterungsarmen und besonders vorsichtigen Abbruch von Außenmauerwerk im Bereich von vorhandenen Stützen, die vollständig zu erhalten sind, gemäß VOB/C DIN 18459 (Abbruch- und Rückbauarbeiten).;4,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Abbruch und Ausbau einer vorhandenen Innentür einschließlich Stahlzarge,;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Abbruch von vorhandenem Innenmauerwerk mit einer Wandstärke von ca. 24 cm gemäß VOB/C DIN 18459 (Abbruch- und Rückbauarbeiten).;15,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Abbruch und Rückbau einer vorhandenen gewendelten Treppenanlage aus Stahlbeton mit ca. 17 Steigungen, führend vom Kellergeschoss zum Erdgeschoss, gemäß VOB/C DIN 18459 (Abbruch- und Rückbauarbeiten).;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Temporäres, staubdichtes Versiegeln von vorhandenen Bestandstüren zum Schutz angrenzender Bereiche vor Staub- und Schmutzeintrag während der Bau- und Abbrucharbeiten, gemäß VOB/C DIN 18299.;3,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Abbruch von vorhandenem Außenmauerwerk gemäß VOB/C DIN 18459 (Abbruch- und Rückbauarbeiten).;30,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Zulage für den erhöhten Aufwand beim erschütterungsarmen und besonders vorsichtigen Abbruch von Außenmauerwerk im Bereich von vorhandenen Stützen, die vollständig zu erhalten sind, gemäß VOB/C DIN 18459 (Abbruch- und Rückbauarbeiten).;4,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Abbruch und Ausbau von vorhandenen Fenstern aus Kunststoff (PVC) gemäß VOB/C DIN 18459 (Abbruch- und Rückbauarbeiten).;5,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Abbruch und Ausbau vorhandener WC-Keramik (WC-Becken inkl. Spülkasten, Sitz und Befestigungsmittel) gemäß VOB/C DIN 18459.;4,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Abbruch von vorhandenem Innenmauerwerk mit einer Wandstärke von ca. 24 cm gemäß VOB/C DIN 18459 (Abbruch- und Rückbauarbeiten).;15,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Sicherung der freigelegter Leitung, längs oder quer zur;5,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Sicherung der freigelegten Wasserleitung,längs oder;50,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Boden der Bodenklasse 3-5 DIN 18300 (2012) in Tiefen;240,0;m3;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Seitlich lagernden Boden und Bodengemisch der VorPOS;240,0;m3;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Vorhandenen Unterbau mit Fremdmaterialien aus;40,0;m3;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Boden mit Fremdmaterialien aus Abtragsbereichen;40,0;m3;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Boden von Hand lösen u. fördern. Boden aus;10,0;m3;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Bauliche Anlage abbrechen. Abgerechnet wird das Volumen;5,0;m3;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Betonbordsteine aufnehmen. Tiefbordsteine verschiedener;10,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;Betonrückenstütze angrenzender Randsteine/Bordsteine;3,0;m3;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+11;Pflaster/Platten aus Beton aufnehmen. Aufbruchgut der;20,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+12;Vorhandene Kanalleitung versch. Materialien fachgerecht;75,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+13;Vorhandene Mischwasserleitung fachgerecht verdämmern.;10,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+14;Vorhandene Schachtbauwerke ausbauen, Deckel, Geschränk,;3,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+15;Sand für die Verfüllung der Baugruben und Rohrgräben;120,0;m3;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Anschluss einer Leitungen DN150/Da 160 an den MW-Kanal;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Herstellen eines MW-Anschlusses PP DN 150 an/auf eine;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Schachthals 1000/625 liefern und aufsetzen. Bauhöhe;1,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Ausgleichsringe liefern und aufsetzen. Auflageringe DN;2,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Schmutzfänger liefern und einsetzen. Schmutzfänger, DIN;1,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Schachtabdeckung liefern und versetzen.;1,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Schächte DN 600 aus Polypropylen;4,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Schächte DN 600 aus Polypropylen;2,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Schächte DN 600 aus Polypropylen;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;Schächte DN 600 aus Polypropylen;2,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+11;Schächte DN 600 aus Polypropylen;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+12;DN 600 Schachtrohr Baulänge 700 mm;10,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+13;Teleskopadapter Kl. D aus Polypropylen (PP) DN 600;10,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+14;Schachtabdeckung Klasse D400, BUDALOCK®, Firma;10,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+15;Schmutzfänger liefern und einsetzen. Schmutzfänger, DIN;10,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+16;PP SN 16 DN/OD 160;350,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+17;PP SN 16 DN/OD 160;15,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+18;PP Bögen DN/OD 100/160 -  15°;10,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+19;PP Bögen DN/OD 100/160 -  30°;20,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+20;PP Bögen DN/OD 100/160 -  45°;10,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+21;PP Deckel DN/OD 160;15,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+22;PP Abzweige DN/OD 160/160 45°;18,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+23;PP Abzweige DN/OD 100/100 45°;5,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+24;Übergangsstück  z. B. VPC-Kupplung oder gleichwertig;8,0;Stck;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+25;Fettabscheideranlage mit integriertem Schlammfang nach;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Überfahrtsschutz auf Gehweg/Stellplätzen und ggf.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Vorhaltedauer für vor genannten Überfahrtschutz;50,0;Wo;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Baum fällen ohne Roden des Wurzelstockes. Baumstamm entasten, Stamm in Stücke von 1,00 m Länge schneiden und außerhalb des Baugeländes in messbaren Raummetern stapeln. Unbrauchbares Material entsorgen.;5,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Roden von Strauchwerk, einschließlich Wurzelwerk, nur bei zusammenhängendem Bewuchs (ca. 3 St/m²),;20,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Hecke als zusammenhängender Pflanzenbestand in Reihe (ca. 3 St/m) angeordnet, inkl. Wurzelwerk, roden.;50,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Aufnehmen von Betonpflasterbelag, einschl. Pflasterunterbau, Rückbaumaterial für spätere Entsorgung seitlich lagern.;500,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Demontage einer bestehenden Kletterwandkonstruktion (Fläche ca. 5 m x 2 m) an einer Hausfassade. Die Leistung umfasst:;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Fachgerechter Abbau eines bestehenden zeltförmigen Seilklettergerüstes (Seilkletterpyramide) mit zentralem Stahlmast, abgespannten Kletterseilen und Bodenverankerungen.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Reinigung der öffentlichen und privaten;100,0;h;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;Unterhalb des Kalksteinschotters der Vorposition ist ein Geotextil der Qualität = 200gr/m2 zu liefern und vollflächig einzubauen gemäß Herstellerrichtlinien.;700,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+11;Baustelleneinrichtungsflächen aus RC 0/45, liefern, herstellen und unterhalten;700,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+12;Prüfungen zur Ermittlung der Verdichtungs- bzw. Tragfähigkeitswerte mittels Lastplattendruckversuch nach DIN 18134 durch unabhängiges Prüflabor, einschl. Bereitstellung der erforderlichen Fahrzeuge/Geräte, Prüfprotokolle in dreifacher Ausfertigung.;5,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+13;Baustelleneinrichtungsflächen aus RC 0/45, aufnehmen und entsorgen Den Baustraßenunterbau (RC 0/45) rückstandsfrei ausbauen, laden, abtransportieren und ordnungsgemäß entsorgen einschließlich der Entsorgungskosten.;700,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+14;Das Geotextil unterder Baustrasse ausbauen, abtransportieren und ordnungsgemäß entsorgen einschließlich der Entsorgungskosten.;700,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+15;Vermessungspunkte innerhalb der Baustelle deutlich sichtbar kennzeichnen und vor Lageänderung schützen.;10,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Baukran als Turmdrehkran auf der Baustelle anliefern und bereitstellen, samt späterem Abbau und Abtransport.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Baukran wie zuvor beschrieben als Turmdrehkran, Vorhaltung, inkl. städtische Gebühren.;52,0;StMt;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;für fremde Handwerker/Baufirmen, einschl. Kranführer. Abrechnung nach Stunden.;100,0;h;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Staubschutzwand errichten und nach Fertigstellung der Maßnahme wieder zurückbauen;50,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Bautür, behelfsmäßig einbauen, vorhalten und beseitigen.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Bauschuttcontainer (Absetzmulde) für gemischten Bauschutt aufstellen, vorhalten und abfahren, entsprechend der Vorschriften für Bauschutt und Abfallbeseitigung.;10,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Leistungsbeschreibung:;3,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Abbruch und Ausbau von 1 vorhandenen Außentüren aus Aluminium,;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Abbruch und Ausbau einer vorhandenen Innentür einschließlich Stahlzarge,;2,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Abbruch von vorhandenem Innenmauerwerk mit einer Wandstärke von ca. 24 cm gemäß VOB/C DIN 18459 (Abbruch- und Rückbauarbeiten).;80,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Vollständiger Rückbau einer Dachhälfte eines bestehenden Satteldaches mit einer Neigung von ca. 35°.;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Abbruch von vorhandenem Außenmauerwerk gemäß VOB/C DIN 18459 (Abbruch- und Rückbauarbeiten).;150,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Abbruch und vollständiger Rückbau einer bestehenden Stahlbeton-Bodenplatte.;170,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Vorhandene Schottertragschicht unter der Bodenplatte aufnehmen und abfahren;300,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Abbruch und vollständiger Rückbau der vorhandenen Streifenfundamente.;50,0;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Freimachen des Baufeldes und sonstiger benötigter Flächen von Gestrüpp, Sträuchern und Bäumen bis 15 cm mittleren Durchmessers, sowie Abbruch von Fundamenten und Betonresten bis 1,00 m³, inkl. Abfuhr und vorschriftsmäßiger Entsorgung des anfallenden Materials auf Deponie nach Wahl des AN;700,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Abtrag des zersetzungsgefährdeten humosen Oberbodens (schluffig-sandige Böden mit Humusanteil) mit glatten Schneiden. Der Boden ist aus bautechnischen Gründen von der Wiederverwertung im Gründungsbereich ausgeschlossen. Nicht tragfähig unter Gründungskörpern.;150,0;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Aushub bis mindestens 1,00 m Tiefe unter zukünftiger GOK von lehmigen und schluffigen Böden mit Schrumpfungsneigung. Boden ist fachgerecht auf der Baustelle zwischenzulagern und im nicht tragenden Bereich wiederzuverwenden.;500,0;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Abfuhr der vorher beschriebenen Auffüllungen;1200,0;t;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Zulage zur vorbeschriebenen Position.;10,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Zur Verhinderung von Durchnässungen sind die Böschungen mit einer PE-Folie abzudecken.;700,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Baugrubensohle des KG nach dem Aushub planieren und verdichten. Ausführung unmittelbar vor dem Einbringen der Sauberkeitsschicht als planebene Fläche, mit höchstens +/- 2 cm Höhendifferenz auf eine Länge von 5,0 m.;450,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Lieferung und lagenweiser Einbau von grobem, verdichtbaren, nichtbindigen verdichtungswilligem, raumbeständigen Material (Schotter 0/45 bis 5/45) als kapillarbrechende, drainierende Gründungsschicht, statisch verdichtet auf 100 % Proctor.;550,0;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Lieferung, Einbau und lagenweise Verdichtung eines geeigneten Füllsandes (nichtbindig, gewaschen, max. 10 % Feinanteil) zur Herstellung des Sohlenunterbaus oberhalb der Grobschotterschicht. Einbaustärke gemäß Planung, lagenweiser Einbau im Vor-Kopf-Verfahren, in max. 30 cm starken Schichten, statisc;50,0;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;Durchführung von statischen Lastplattendruckversuchen nach DIN 18134 zur Kontrolle der Verdichtung des Gründungspolsters (Ev2 = 80 MN/m², Ev2/Ev1 = 2,5).;5,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+11;Verfüllung von Arbeitsräumen (z. B. Fundamentgräben) mit nichtbindigem, verdichtungsfähigem Material (Füllsand mit < 10 % Feinkornanteil), lagenweise verdichtet.;50,0;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Planung und Vorbereitung der Beantragung einer wasserrechtlichen Genehmigung für Entnahme und Einleitung von Schichten- und Sickerwasser aus Wasserhaltung. Alle notwendigen Unterlagen und Berechnungen für den Antrag sind vom AN aufzustellen.;1,0;Psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Lieferung und Verlegung einer umlaufenden Drainageleitung mit Filtervlies, Anschluss an genehmigte Vorflut oder Pumpensumpf, zur Vermeidung von Einstauwassern.;150,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Anlage zur geschlossenen Grundwasserhaltung;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Stehendes Niederschlagswasser aus Schächten und Gruben durch Abpumpen beseitigen, inkl. Abwasserleitungen.;40,0;h;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Anlage zur offenen Grundwasserhaltung wie vorbeschrieben Pos. vorhalten und Betreiben ohne Stromkosten, Wartung, Unterhaltung, Kontrollen. Einleitgebühren gehen zu Lasten des AG.;20,0;Wo;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Redundante Pumpenanlage, ausreichend dimensioniert für die zuvor beschriebene offene Wasserhaltung erstellen, vorhalten , im Bedarfsfall betreiben und anschließend beseitigen.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Der Auftragnehmer hat die Koordination der Arbeiten des Blitzschutzgewerkes im Bereich des Rohbaus sicherzustellen.;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Erstellung eines Gerüstaufstellplanes inklusive Ansichten und Draufsichten in dreifacher Ausfertigung, mit Angaben der Verankerungen. Einholen aller öffentlich-rechtlicher Genehmigungen und Erlaubnisse, die zur Erbringung der Leistungen des Bieters erforderlich sind.;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Prüffähige statische Berechnung nach DIN 4420-1 mit Zeichnungen für alle nachfolgend beschriebenen Gerüste und Sonderkonstruktionen;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Erstellung von Verankerungsprotokollen für alle nachfolgend beschreibenen Gerüste nach Merkblatt für das Anbringen von Dübeln zur Verankerung von Fassadengerüsten;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Erstellung einer Höhenausgleichslage zur Sicherstellung der Standsicherheit und Nivellierung des Gerüstes.;600,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Längenorientiertes Standgerüst, in Teilabschnitten nach Baufortschritt, gemäß DIN EN 12811-1 und DIN EN 12810-1 aufbauen.;450,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Gebrauchsüberlassung des längenorientierten Standgerüsts für Fassadenarbeiten.;9000,0;m²Wo;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Fassadengerüst, wie zuvor beschrieben, abbauen;450,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Innengeländer als wandseitigen Seitenschutz bzw. Absturzsicherung am Fassadengerüst aufbauen, bestehend aus Geländerholm, Zwischenholm und ggf. Bordbrett. Das Geländer ist überall dort anzubringen, wo der Abstand zur Wand mehr als 30 cm beträgt.;100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Gebrauchsüberlassung der Seitenschutz/Innengeländer am Fassadengerüst.;2000,0;mWo;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Innengeländer als wandseitigen Seitenschutz bzw. Absturzsicherung am Fassadengerüst abbauen, bestehend aus Geländerholm, Zwischenholm und ggf. Bordbrett.;100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Belagverbreiterung, wandseitig, mit Konsolen an längenorientierten Standgerüst für Fassadenarbeiten nach DIN EN 12811-1. Konsolen an allen Gerüstlagen für zwei Belagsfelder aufbauen.;100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Gebrauchsüberlassung der Belagverbreiterung mit Konsolen.;2000,0;mWo;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;Belagverbreiterung, wandseitig, mit Konsolen an längenorientierten Standgerüst für Fassadenarbeiten nach DIN EN 12811-1. Konsolen an allen Gerüstlagen für zwei Belagsfelder abbauen.;100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+11;Zulage für das abschnittsweise Entfernen der vorher beschriebenen zusätzlichen wandseitigen Belagverbreiterung mit Konsolen an allen Gerüstlagen nach Aufforderung durch die Bauleitung.;100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+12;Treppen gemäß DIN EN 12811-1, vorgebaut vor Fassadengerüst, auf- und abbauen, inkl. Doppelhandlauf und Stirngeländer. Verankerung am Gerüst. Inkl. Gebrauchsüberlassung bis 4 Wochen (Grundeinsatzzeit).;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+13;Gebrauchsüberlassung der zuvor beschriebenen Treppe;20,0;mWo;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+14;Gebrauchsüberlassung der zuvor beschriebenen Treppe;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+15;Seitenschutz bzw. Höhensicherung vor großflächigen Gebäudeöffnungen auf- und abbauen, bestehend aus Gerüstbauteilen und Schutznetzen. Befestigung in Rohboden und Stahlbetondecke.;50,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+16;Bereitstellen einer Facharbeiterkolonne für den Umbau des zuvor beschriebenen Gerüstes.;50,0;h;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+17;Löcher in der Fassade, die ohne Verschulden des Auftragnehmers entstanden sind oder vorhanden sind, beim Abrüsten materialgerecht schließen. Material wird bauseitig gestellt.;100,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Boden ab Baugrubensohle für Streifenfundament abtragen, einschl. Herstellen des Planums der Sohle, Aushubmaterial wird entsorg. Abrechnung in gesonderter Position.;100,0;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Pos. 503;50,0;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Pos. 504;5,0;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Pos. 505;12,0;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Liefern und Einbauen eines Fundamenterders nach DIN 18014 in ein Streifenfundament aus Beton. Der Erder ist gemäß Norm als geschlossener Ring- oder Strahlenerder im Fundament anzuordnen. Ausführung einschließlich aller erforderlichen Verbindungselemente, Potentialausgleichsanschlüsse und Messanschlu;90,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Herstellen von Aussparrungen im Streifenfundament bzw. in der Frostschürze zur Durchführung von Rohrleitungen bis einschließlich DN 150.;10,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;"Füllbeton, unbewehrt, für Auffüllung im Gründungsbereich; evtl. erforderliche Schalung in gesonderter Position.";150,0;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Sauberkeitsschicht unter Streifenfundamente, aus unbewehrtem Beton unter Gründungsbauteilen aller Art (Einzel- und Streifenfundamente, Boden- und Fundamentplatten).;100,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Sauberkeitsschicht unter Bodenplatte, aus unbewehrtem Beton unter Gründungsbauteilen aller Art (Einzel- und Streifenfundamente, Boden- und Fundamentplatten).;300,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Dämmung unter Bodenplatte mit extrudierten Polystyrol-Hartschaumplatten mit Stufenfalz auf vorhandenen Unterbau lose verlegt im Verband.;300,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;"Zweilagige Trennlage als Gleitlager unter Bodenplatte, mit PE-Folie; Stöße überlappt.";300,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Schalung der Streifenfundamente, bewehrt, als Seitenschalung.;70,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Schalung für Plattenränder von Boden- und Fundamentplatten, glatt, einhäuptig.;70,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Schalung für Plattenränder von Boden- und Fundamentplatten, glatt, einhäuptig.;70,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Bodenplatte aus WU-Beton auf Sauberkeitsschicht / Schotterpolster, Oberfläche abgezogen, Schalung und Bewehrung in gesonderter Position.;300,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Bodenplatte aus WU-Beton auf Sauberkeitsschicht / Schotterpolster, Oberfläche abgezogen, Schalung und Bewehrung in gesonderter Position.;300,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Sohle unter 45° im Übergangsbereich von 25 zu 40 cm ausbilden;47,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Nachbehandlung der Betonoberfläche gem. der DIN 1045 durch geeignete Maßnahmen wie z.B. abdecken mit einer Poyethylen-Folie oder Flutung;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Sohlenversprung im Bereich von Bodentiefen Fenstern- / Türen zum späteren Einbau einer bauseiteigen Entwässerungsrinne herstellen.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Sohlenversprung im Bereich von Bodentiefen Fenstern- / Türen zum späteren Einbau einer bauseiteigen Entwässerungsrinne herstellen.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Zulage für das fachgerechte Anschließen einer neu herzustellenden Stahlbeton-Bodenplatte an eine vorhandene Bodenplatte im Altbau, gemäß VOB/C DIN 18331 / DIN 18299.;20,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Es ist eine Fachbauleitung Wasserundurchlässigkeit (WU) zu stellen.;1,0;Psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Zehnjährige Gewährleistung auf die;1,0;Psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Beschichtetes Arbeitsfugenblech, b = ca. 167 mm für;30,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Beschichtete Fugenbleche laut Regeldetail im;30,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Klemmvorrichtung zur Herstellung der;2,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Montage der Klemmvorrichtung durch Fachkräfte;2,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Ortbetonsollbruchelemente (verzahnt) zur;2,5;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Einbau von Ortbetonsollbruchelementen;20,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Fugenband-Klemmprofil-Konstruktion, bestehend;29,5;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;Zulage für die Ausführung der vorgenannten;29,5;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+11;Fugenband-Formteil als Zulage von den;6,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+12;Fugenband-Formteil (Winkel-/Spiegelecke) 320er;2,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+13;Fugenband-Stumpfstoss-Schweissungen zur;2,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+14;Kunstharzinjektion von Rissen bzw. kreuzenden Arbeitsfugen am Bestand zur Verhinderung von Hinterläufigkeiten. Die Abrechnung erfolgt je gesetztem Packer.;5,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+15;Klemmschutzprofil;29,5;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+16;Vorbereitung des Klemmhorizontes (u.a.;29,5;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+17;Rohrspreizen, für die Bauteildicke d = 24 cm,;50,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+18;Rohrspreizen, für die Bauteildicke d = 28 cm,;25,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+19;Einbau der vorgenannten Position;75,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+20;Liefern und fachgerechtes Einbauen eines Universaltrichter DN 110 als Bodendurchführung für den Einbau in WU-Betonbodenplatten. Zum Anschluss von KG- / HT-Rohren bei Versatz und zum direkten Anschluss an KG- / KG 2000-Grundleitungen.;2,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;FBV-Folie - Bodenplatte (horizontal);395,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;FBV-Folie - Bodenplatte (vertikal);145,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Ausbildung von Tiefteilen;2,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Dichtstreifen Sohle/Wand (bis 21-50cm;58,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Fugenbänder verkleben mit FBV System;25,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Eindichtung Rohrdurchdringungen DN 50 bis;2,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Eindichtung Fundamenterder;10,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Die folgenden Arbeitsschritte sind zu kalkulieren:;16,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Schalung für Beton- und Stahlbetonwände, rau.;120,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Pos. 407;5,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Pos. 411;5,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Schalung für freistehende Stützen mit rechteckigem Querschnitt, glatt, aus nicht saugenden Schalungsplatten.;20,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Am Stützenkopf ist die Stütze für das Auflager der Stahlträger zu verjüngen.;6,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Schalung der Wand aus Stahlbeton, senkrecht angeordnet mit geordneten Stößen, Betonfläche möglichst absatzfrei.;640,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Anlegen von Öffnungen für Fenster in der zuvor beschriebenen Schaltung anlegen.;90,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Wände aus Stahlbeton, Oberfläche glatt, mit regelmäßig sichtbaren Schalungsstößen. Betonwarzen und Grate abschleifen. Schalung und Bewehrung in gesonderten Positionen.;160,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Pos. 403;3,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Pos. 404;3,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Pos. 407;20,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Pos. 408;3,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Pos. 408a;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Pos. 410;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Pos. 411;20,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Pos. 412;2,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;"Stützen aus Stahlbeton mit rundem Querschnitt, Oberfläche in Sichtbeton SB 2, mit regelmäßig sichtbaren Schalungsstößen; Schalung und Bewehrung in gesonderter Position.";1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Betonstabstahl B500 A / B für Bauteile aus Ortbeton.;50,0;t;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Betonmattenstahl B500 A / B für Bauteile aus Ortbeton.;50,0;t;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Gewindeständen M27für Stahlträger in die Stahlbetonstützen einbetonieren.;10,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Waagerechte Abdichtung gegen Bodenfeuchte in/unter Wänden aus Kalksandsteinmauerwerk, DIN 18195-4, Auflagerflächen mit Mörtel MG III abgleichen, Abdichtung einlagig, aus Bitumenbahnen, Bitumen-Dachdichtungsbahnen DIN 52130 G 200 DD mit Glasgewebeeinlage 200 g/m2, Stoßüberdeckung lose, Verbreiterung ;80,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Kimmsteine dämmend, aus Kalksandstein zur Herstellung eines planebenen Niveaus an geometrisch bedingten Wärmebrücken des Wandfußes, mit Stoßfugen mit Nut und Feder ohne Mörtelfuge.;80,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Mauerwerk der Außenwand.;350,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Herstellen von Öffnung für Fenster, Türen etc. im Zuge der Herstellung des Mauerwerks.;20,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Waagerechte Abdichtung gegen Bodenfeuchte in/unter Wänden aus Kalksandsteinmauerwerk, DIN 18195-4, Auflagerflächen mit Mörtel MG III abgleichen, Abdichtung einlagig, aus Bitumenbahnen, Bitumen-Dachdichtungsbahnen DIN 52130 G 200 DD mit Glasgewebeeinlage 200 g/m2, Stoßüberdeckung lose, Verbreiterung ;60,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Kimmsteine dämmend, aus Kalksandstein zur Herstellung eines planebenen Niveaus an geometrisch bedingten Wärmebrücken des Wandfußes, mit Stoßfugen mit Nut und Feder ohne Mörtelfuge.;10,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Mauerwerk der Innenwand.;25,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Kimmsteine dämmend, aus Kalksandstein zur Herstellung eines planebenen Niveaus an geometrisch bedingten Wärmebrücken des Wandfußes, mit Stoßfugen mit Nut und Feder ohne Mörtelfuge.;50,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Mauerwerk der Innenwand.;190,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Flachanker (Mauerverbinder) aus Stahl beim Aufmauern mit Stumpfstoßtechnik einlegen und systemgerecht verbinden.;50,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Herstellen von Öffnung für Fenster, Türen etc. im Zuge der Herstellung des Mauerwerks.;10,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Öffnung überdecken mit Fertigsturz nach bauaufsichtlicher Zulassung/Typenstatistik,;14,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Öffnung überdecken mit Fertigsturz nach bauaufsichtlicher Zulassung/Typenstatistik,;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Ausführung einer flexiblen, rissüberbrückenden und polymermodifizierten Bitumendickbeschichtung (PMBC) bzw. Reaktivabdichtung auf zementärer Basis (2K), zur Abdichtung erdberührter Bauteile im Sockelbereich gemäß DIN 18533-3 gegen Bodenfeuchte und nicht drückendes Wasser.;80,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Schutzlage auf erdberührten Wänden aus Noppenbahnen mit integrierter Gleit-, Schutz- und Lastverteilungsschicht, für vertikale Flächen vor Perimeterdämmung, einschl. der erforderlichen Eckausbildungen, dem Fixieren der oberen Randabschlüsse und dem Herstellen von Durchdringungen.;40,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Perimeterdämmung, einschl. Eckausbildung und Herstellen von Ausschnitten für Durchdringungen, anbringen.;50,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Wärmedämmung als Kerndämmung oder als Dämmung im Verblendmauerwerk mit Luftschicht zwischen zwei Wänden, aus Mineralwolleplatten, wasserabweisend imprägniert, mit Kunststoffscheiben auf den Ankern befestigt.;400,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Feuchtigkeitssperrschicht L-Folie nach DIN 1053 Teil 1;100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Fenster- und Türleibungen im Bereich der;100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Wärmedämmelement aus Schaumglas am Mauerfuß zur thermischen Trennung und Lastabtragung, druckfest und wasserdicht im Mörtelbett verlegen.;400,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Herstellen eines Verblendmauerwerks aus frostbeständigen Vormauerziegeln gemäß DIN EN 771-1 und DIN 105-100 im Normalformat (NF), einschließlich aller Nebenleistungen wie Anarbeitung an Öffnungen, Ecken, Anschlüsse an andere Bauteile, Mauerwerksversätze, Laibungen, Rollschichten, Zuschnitte und pass;400,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Fassadenverankerung bei zweischaligem Mauerwerk mit Abfangkonsolen-System, mit Verstaz, komplett mit bauaufsichtlichen Zulassungen und prüffähigen statischen Nachweisen.;6,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Fassadenverankerung bei zweischaligem Mauerwerk mit Abfangkonsolen-System, mit Verstaz, komplett mit bauaufsichtlichen Zulassungen und prüffähigen statischen Nachweisen.;12,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Horizontale Feuchtigkeitssperre in der Verblendschale;100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Herstellen von Öffnungen beim Aufmauern;18,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Liefern und fachgerecht einbauen von Stoßfugenlüftern aus UV- und witterungsbeständigem Kunststoff zur Hinterlüftung der Vormauerschale gemäß DIN 4108-3 und DIN EN 1996-2 (Eurocode 6 - Ausführung von Mauerwerk).;300,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;Luftschichtanker gem. DIN EN 1996 bzw. nach Zulassung;3000,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+11;Dübelanker aus Edelstahl V4A gem. DIN EN 1996 bzw. nach Zulassung;2000,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+12;Unteren Verblendecken bei den bodentiefen Fenster und Türen;10,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+13;Verfugung von Verblendmauerwerk mit Mörtelgruppe III aus feingekörntem Sand, MV 1:2, Farbe nach Wahl (grau, antrazit). Vor der Verfugung ist das Mauerwerk zu wässern, abzusäuern;400,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+14;Herstellen der vertikalen Dehnungs- bzw. Bewegungsfuge als;50,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Wanddurchbruch in Mauerwerk oder Beton materialgerecht und bündig schließen, Rohrhülsen oder Rohrummantelungen sind zu fixieren. Einputzarbeiten ggf. gesondert.;50,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Schlitze in Mauerwerk aus Mauerziegeln, Kalksand-, Porenbeton- und Leichtbetonsteinen, schließen, mit Beton.;100,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Bauzaun aus mobilen Stahlrahmenelementen mit Rundstahlfüllstäben-Gitterfüllung, Stützfüßen aus Beton. Die Bauzaunelemente sind untereinander zu verschrauben.;30,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Tür, verschließbar, passend zum Bauzaun.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Bauzaun aus mobilen Stahlrahmenelementen mit Rundstahlfüllstäben-Gitterfüllung, Stützfüßen aus Beton, inkl. sämtlicher Verbindungen, Kupplungen etc., vorhalten und unterhalten.;120,0;mWo;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Bauzaun nach Beendigung der Baustelle einschl. Tor und Türe abbauen, die Teile verladen und abtransportieren, inkl. Verschließen der Grablöcher der Zaunstützen sowie Wiederherstellen der Oberfläche (wie vorhanden). Anschlüsse an Beläge und das Gelände des Umfeldes in gleicher Art herstellen.;30,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Die für diese Maßnahme erforderlichen Geräte und Werkzeuge sind zur Baustelle zu schaffen, vorzuhalten und nach der Fertigstellung wieder abzutransportieren.;1,0;Psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Bautür, behelfsmäßig einbauen, vorhalten und beseitigen.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Erstellen und liefern einer prüffähigen Statik für den;1,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Pauschale für die Erstellung einer Baustelleneinrichtung zum Auf- / Einbau des Verbaus. Der An- und Abtransport der notwendigen Geräte, Bauteile und andere Hilfsmittel ist in diese Position einzukalkulieren. Der Einbau der Träger erfolgt in einem Zuge.;1,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Herstellen einer Trägerbohlenwand aus Stahlplatten und Stahlträgern.;8,0;lfdm;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Vorhaltung/Miete über die vereinbarte Woche hinaus,für den Verbau der gesamten Baugrube.;10,0;Wo;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Planung und Vorbereitung der Beantragung einer wasserrechtlichen Genehmigung für Entnahme und Einleitung von Schichten- und Sickerwasser aus Wasserhaltung. Alle notwendigen Unterlagen und Berechnungen für den Antrag sind vom AN aufzustellen.;1,0;Psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Lieferung und Verlegung einer umlaufenden Drainageleitung mit Filtervlies, Anschluss an genehmigte Vorflut oder Pumpensumpf, zur Vermeidung von Einstauwassern.;40,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Geschlossenen Grundwasserhaltung für die Baugrube herstellen und betreiben;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Vorhalten und betreiben der zuvor beschriebenen Wasserhaltung;8,0;Wo;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Stehendes Niederschlagswasser aus Schächten und Gruben durch Abpumpen beseitigen, inkl. Abwasserleitungen.;10,0;h;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Aushub von Boden für die Herstellung einer neuen Außentreppe zum Kellergeschoss gemäß VOB/C DIN 18300.;40,0;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Zur Verhinderung von Durchnässungen sind die Böschungen mit einer PE-Folie abzudecken.;50,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+8;Baugrubensohle des KG nach dem Aushub planieren und verdichten. Ausführung unmittelbar vor dem Einbringen der Sauberkeitsschicht als planebene Fläche, mit höchstens +/- 2 cm Höhendifferenz auf eine Länge von 5,0 m.;10,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+9;Lieferung und lagenweiser Einbau von grobem, verdichtbaren, nichtbindigen verdichtungswilligem, raumbeständigen Material (Schotter 0/45 bis 5/45) als kapillarbrechende, drainierende Gründungsschicht, statisch verdichtet auf 100 % Proctor.;20,0;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+10;Durchführung von statischen Lastplattendruckversuchen nach DIN 18134 zur Kontrolle der Verdichtung des Gründungspolsters (Ev2 = 80 MN/m², Ev2/Ev1 = 2,5).;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+11;Verfüllung von Arbeitsräumen (z. B. Fundamentgräben) mit nichtbindigem, verdichtungsfähigem Material (Füllsand mit < 10 % Feinkornanteil), lagenweise verdichtet.;20,0;m³;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Herstellen einer Stahlbeton-Bodenplatte / Fundamentplatte im Bereich der Treppen vor dem neuen Kellerzugang gemäß VOB/C DIN 18331 in WU-Qualität;10,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Liefern und Einbauen eines Bodenablaufs zur Entwässerung von Regen- und Oberflächenwasser in der neu herzustellenden Bodenplatte im Bereich der Außentreppe / des Kellerzugangs, gemäß VOB/C DIN 18381 (Entwässerungsanlagen für Gebäude) und DIN 18331.;2,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Klemmfugenband zur Abdichtung der Fuge zwischen der neuen Sohle und der Betonaußenwand mit einem bauaufsichtlich zugelassenem System;8,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Herstellen von seitlichen Außenwänden entlang der neuen Außentreppe (Treppenwangen) aus Stahlbeton in WU-Qualität gemäß Planung und VOB/C DIN 18331 bzw. DIN 18330.;50,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Klemmkonstruktion als Kombinationsfugenband mit Mittelschlauch als Eckfugenband, Klemm- und Betonierteil nach DIN 18541-2 und DIN 18541-2 liefern und fachgerecht einbauen.;7,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Vorhandene Kellerlichtschächte aus einer Stahlbetonkonstruktion abbrechen und Material abfahren.;1,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Ausführung einer flexiblen, rissüberbrückenden und polymermodifizierten Bitumendickbeschichtung (PMBC) bzw. Reaktivabdichtung auf zementärer Basis (2K), zur Abdichtung erdberührter Bauteile im Sockelbereich gemäß DIN 18533-3 gegen Bodenfeuchte und drückendes Wasser.;12,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Schutzlage auf erdberührten Wänden aus Noppenbahnen mit integrierter Gleit-, Schutz- und Lastverteilungsschicht, für vertikale Flächen vor Perimeterdämmung, einschl. der erforderlichen Eckausbildungen, dem Fixieren der oberen Randabschlüsse und dem Herstellen von Durchdringungen.;12,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Vorhandenes Kellerfenster ausbauen und entsorgen.;2,0;Stk;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Herstellen eines Durchbruchs im bestehenden Außenmauerwerk zur Aufnahme einer neuen Kellertür gemäß VOB/C DIN 18459.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Staubschutzwand errichten und nach Fertigstellung der Maßnahme wieder zurückbauen;50,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Bautür, behelfsmäßig einbauen, vorhalten und beseitigen.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Bauschuttcontainer (Absetzmulde) für gemischten Bauschutt aufstellen, vorhalten und abfahren, entsprechend der Vorschriften für Bauschutt und Abfallbeseitigung.;3,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Abbruch und Ausbau einer vorhandenen Innentür einschließlich Stahlzarge,;5,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Abbruch von vorhandenem Innenmauerwerk mit einer Wandstärke bis ca. 24 cm gemäß VOB/C DIN 18459 (Abbruch- und Rückbauarbeiten).;15,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Kleinflächen in verputztem Mauerwerk nachträglich abbrechen und entsorgen. Nach erfolgter Installation Putzträger aufbringen und verputzen.;10,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Durchbruch in Wänden aus Mauerwerk aller Festigkeiten beidseitig geputzt, ausbrechen und entsorgen, einschl. aller erforderlichen Abstütz- und Sicherungsmaßnahmen. Zum Schutz der verbleibenden, angrenzenden Wandfläche, sind vor Beginn der Abbrucharbeiten die Ränder der neu zu erstellenden Öffnung ei;3,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Bodenbelag aus Textil, auf Estrich vollflächig verklebt, ausbauen und entsorgen. Der Estrich ist von loser und haftvermindernder Verschmutzung zu reinigen.;50,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Bodenfliesen mit Klebstoff, in Teilflächen von Hand oder mit Kleingeräten vollständig entfernen. Bauschutt entsorgen.;200,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Abbruch und Ausbau einer vorhandenen Innentür einschließlich Stahlzarge,;5,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Abbruch von vorhandenem Innenmauerwerk mit einer Wandstärke bis ca. 24 cm gemäß VOB/C DIN 18459 (Abbruch- und Rückbauarbeiten).;50,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Kleinflächen in verputztem Mauerwerk nachträglich abbrechen und entsorgen. Nach erfolgter Installation Putzträger aufbringen und verputzen.;10,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Durchbruch in Wänden aus Mauerwerk aller Festigkeiten beidseitig geputzt, ausbrechen und entsorgen, einschl. aller erforderlichen Abstütz- und Sicherungsmaßnahmen. Zum Schutz der verbleibenden, angrenzenden Wandfläche, sind vor Beginn der Abbrucharbeiten die Ränder der neu zu erstellenden Öffnung ei;2,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Abbruch und Ausbau vorhandener Keramik (Becken inkl. Befestigungsmittel) gemäß VOB/C DIN 18459.;8,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Bodenbelag aus Textil, auf Estrich vollflächig verklebt, ausbauen und entsorgen. Der Estrich ist von loser und haftvermindernder Verschmutzung zu reinigen.;100,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;Bodenfliesen mit Klebstoff, in Teilflächen von Hand oder mit Kleingeräten vollständig entfernen. Bauschutt entsorgen.;200,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Kimmsteine dämmend, aus Kalksandstein zur Herstellung eines planebenen Niveaus an geometrisch bedingten Wärmebrücken des Wandfußes, mit Stoßfugen mit Nut und Feder ohne Mörtelfuge.;5,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Mauerwerk der Innenwand.;15,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Flachanker (Mauerverbinder) aus Stahl beim Aufmauern mit Stumpfstoßtechnik einlegen und systemgerecht verbinden.;10,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Öffnung überdecken mit Fertigsturz nach bauaufsichtlicher Zulassung/Typenstatistik,;2,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Kimmsteine dämmend, aus Kalksandstein zur Herstellung eines planebenen Niveaus an geometrisch bedingten Wärmebrücken des Wandfußes, mit Stoßfugen mit Nut und Feder ohne Mörtelfuge.;20,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Mauerwerk der Innenwand.;50,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Flachanker (Mauerverbinder) aus Stahl beim Aufmauern mit Stumpfstoßtechnik einlegen und systemgerecht verbinden.;50,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Herstellen von Öffnung für Fenster, Türen etc. im Zuge der Herstellung des Mauerwerks.;3,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Öffnung überdecken mit Fertigsturz nach bauaufsichtlicher Zulassung/Typenstatistik,;3,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;"Zumauern von bestehenden Wandnischen in Mauerwerkswänden bis zu einer Tiefe von ca. 20 cm einschließlich aller erforderlichen Nebenleistungen gemäß VOB/C, ATV DIN 18330 ""Mauerarbeiten"".";20,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+1;Mauerwerk der Innenwand.;50,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+2;Flachanker (Mauerverbinder) aus Stahl beim Aufmauern mit Stumpfstoßtechnik einlegen und systemgerecht verbinden.;50,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+3;Herstellen von Öffnung für Fenster, Türen etc. im Zuge der Herstellung des Mauerwerks.;5,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+4;Öffnung überdecken mit Fertigsturz nach bauaufsichtlicher Zulassung/Typenstatistik,;5,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+5;Herstellen von Öffnung für Fenster, Türen etc. im Zuge der Herstellung des Mauerwerks.;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+6;Öffnung überdecken mit Fertigsturz nach bauaufsichtlicher Zulassung/Typenstatistik,;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83
+7;"Zumauern von bestehenden Wandnischen in Mauerwerkswänden bis zu einer Tiefe von ca. 20 cm einschließlich aller erforderlichen Nebenleistungen gemäß VOB/C, ATV DIN 18330 ""Mauerarbeiten"".";20,0;m²;gaeb;leistungsbeschreibungen/Leistungsverzeichnis GAEB.X83

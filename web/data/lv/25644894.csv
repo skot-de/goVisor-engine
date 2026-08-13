@@ -1,0 +1,133 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Grundausbau FC2080 (19'', Standschrank) Brandmelderzentrale Sinteso FC2080 im Standschrank;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+20;F-30-Brandschutz Gehäuse zur;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+30;Sockelrahmen verstärkt mit Mutter M12 für Stellfüße;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+40;Rechnerbaugruppe als CPU-Modul der;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+50;Die I/O-Karte (FUE) stellt die;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+60;Trägerplatte mit Kabelkanälen seitlich;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+70;Der Träger ist eine mechanische Baugruppe, die benötigt wird, um die FC2080 mit zusätzlichen Optionen, wie Relais, Steckdosen oder I/OBausteine auszurüsten. Der Träger ist mit zwei Hutschienen 430 mm Länge übereinander vorgerüstet.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+80;Träger für die 19''-Stromversorgung für folgende Elemente:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+90;Die Stromversorgung wandelt Netzspannung in Systemspannung um, überprüft Netzspannung und Batterien und lädt Batterien. Sie dient zum Kaskadieren innerhalb der Zentrale mit der bereits vorhandenen 150 W-Stromversorgung, max. 3 Stück 150 W-Stromversorgungen sind kaskadierbar. Sie weist folgende Merkm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+100;"Batteriewanne (19"") für den Einbau und die Fixierung der Batterien in das FC2080-Gehäuse (19"", Standschrank) FH2080-AA. Für jeden SV-Träger (19"", Stromversorgung) FHA2022-A1 wird ein Batteriepaar benötigt und somit eine Batteriewanne (19"").";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+110;Bei der Batterie handelt es sich um einen wieder aufladbaren, gas- und säurefreien Blei-Akkumulator mit 12 V und 100 Ah. Der Akkumulator in geschlossener Bauart ist wartungsarm und lageunabhängig durch Verwendung eines festen Elektrolyts.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+120;"Der Kartenhalter für die Aufnahme von maximal 5 Modulbuskarten oder I/O Karten. Der Kartenhalter wird auf den Träger (19"", Kartenhalter) FHA2023-A1 montiert.";4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+130;Die Linienkarte FCL2008-A1 (FDnet, P) dient zur modularen Erweiterung der;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+140;Das Vernetzungsmodul ist zum Einbau in die Zentralen und die Bedienterminals vorgesehen. Mit dem Modul können mehrere Stationen über den Systembus vernetzt werden. Standardmäßig wird für die Vernetzung im Loop ein Modul pro Station auf das PMI- & Mainboard gesteckt. Neben der Zweidrahtverbindung für;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+150;Mit dem LWL-Vernetzungsmodul werden FS20-Stationen über große Distanzen vernetzt. Das Vernetzungsmodul weist folgende Merkmale auf:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+160;Schlüsseldepot-Adapter als eine;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+170;Anschluss an Sinteso FDnet Ringund/;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+180;Die I/O Karte dient der Auswertung von potentialfreien Kontakten bzw. der Ausgabe von Meldungen über Brandfallsteuerrelais. Eigenschaften:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+190;Hardware-Komponente zur Freischaltung der Funktion SintesoView. Der Lizenzschlüssel S1 FCA2033-A1 dient zusätzlich zur Freischaltung der Funktion BACnet 3rd party mit folgenden Funktionen: - Anzeige von Meldungen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+200;Erweiterung / Software Upgrade z. optionellen SIGMANET Verbindung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+210;Versorgungsänderung der;24,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+10;Feuerwehr-Anlaufstation (FAS);1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+20;"Ausführung als Standschrank, zur Montage neben der Feuerwehr-Anlaufstation (FAS). Standschrank aus Stahlblech, pulverbeschichtet nach freiwählbarer gängiger RAL-Farbe. Türe geschlossen ausgeführt, ohne Sichtscheibe. Inkl. CL1-Schließung in Profilhalbzylinderform. Tür inkl. Hinweisschild ""Feuerwehrle";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+30;Feuerwehrschlüsseldepot (FSD) nach DIN 14675 Klasse 3 mit VdS-Anerkennung. Inkl. Heizung, Außentür-Anbohrschutz und;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+40;Feuerwehrschlüsseldepot-Säule als Hohlsäule mit Deckelüberwachung für Feuerwehrschlüsseldepot. Nach DIN 14675 in Anlehnung an den VdS. Zur Anwendung bei schwierigen Einbaubedingungen. Die abnehmbare Rückwand ermöglicht eine leichte und schnelle Montage von FSD und FSE. Feste Bodenplatte zur Befestig;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+50;Ankerplatte für Bodenplatte mit Gewindestangen M12 (300 mm) zum Einbetonieren. Inklusive 4 Gewindemuffen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+60;Sockel für FSD-Hohlsäule.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+70;Blendrahmen mit Regenschutz für das Feuerwehr-Schlüsseldepot, aus Edelstahl. Zur Abdeckung und als zusätzlicher Witterungsschutz.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+80;Teleskopleiter aus Aluminium mit 4x5 Sprossen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+90;Leitersicherung / -halterung aus Stahlblech, pulverbeschichtet in feuerrot (RAL 3000) zur Wandmontage. Zur gesicherten, freihängenden Verwahrung und Halterung einer Leiter. Leitersicherung über 4 Positionen in der Tiefe einstellbar. Schwenkbare Verschlussklappe mit CL1-Schloss. Inkl. Hinweisschild n;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+100;Sicherheits-Profilhalbzylinder mit um 90° links/rechts einstellbarer Schließbartstellung, links/rechts umlegbar, inkl. 3 Schlüsseln und Sicherungsschein.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+110;Freischaltelement nach DIN 14675 mit VdS-Anerkennung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+120;Blitzleuchte für Feuerwehrsäule, LED-Blitzleuchte in witterungsbeständiger IP67-Ausführung. Leistung ca. 2 Watt, integrierter Spannungswandler (Versorgungsspannung 12–30 Volt) zur Ansteuerung in 12/24 Volt, Betriebsstrom: ca. 150 mA, Blitzfrequenz: ca. 1,7 Hz,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+130;Blitzleuchte RBL5 (gelb,24V) Schutzart IP54, Blitzfrequenz 1,1Hz, Stromaufnahme 180mA/24VDC, Gehäusefarbe: grau,Signalfarbe: gelb,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+140;Wandhalterung für angebotene Blitzleuchte zur Montage der Blitzleuchte an einer Wand inklusive Befestigung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+10;ASA Neuronaler Migrationsmelder, FDOOT241-A4 Neuronaler Brandmelder zur Detektion von Schwel- und Flammenbränden von festen und flüssigen Stoffen. 2 optische Sensoren in Vor-/Rückwärts-Streuung und 2 Wärmesensoren in Redundanz zur;28,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+20;Druckknopfmelder nach DIN 14655 zur;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+30;Rauchansaugsystem FDA-241. Die FDA241-Melderserie besteht aus Frühwarn-Rauchmeldern mit Dualwellenlängen (Blau und Infrarot) zum Schutz kleiner geschäftskritischer Umgebungen bis max. 800 m². Der Melder saugt in einem Rohrnetz kontinuierlich Luft in die Ansaugöffnungen. Die Luft wird in eine Detekti;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+40;Kommunikationsschnittstelle zur direkten Integration eines Ansaugrauchmelders in den Peripheriebus des Brandmeldesystems. Die Schnittstelle ermöglicht die bidirektionale Kommunikation zwischen der Brandmelderzentrale und dem  Ansaugrauchmelder zur Übertragung von Grundeinstellungen und Parametersätz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+50;PVC Rohr zur Erstellung von Rohrsystemen von Rauchansaugsystemen.;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+60;PVC Bogen zur Erstellung von Rohrsystemen von Rauchansaugsystemen.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+70;PVC-U Muffe für d=25mm PVC Rohr;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+80;Ansaugöffnungs-Clip 2.0 - 7.0 PA;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+90;PVC Rohrschelle mit Spannbügel zur Montage von d=25mm Rohrsystemen.;64,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+100;Der Signalsockel FDSB291 bildet eine Einheit mit dem Melder und besitzt bereits einen Sockel und wird an Decken montiert.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+110;Meldersockel FDB221 aus schlag- und kratzfestem Kunststoff. Extra lange Montageschlitze erlauben die Wiederverwendung bestehender Bohrlöcher aus älteren Systemen. Schraublose Anschlussklemmen 'orange'. Platz für Zusatzklemmen wie Mikroklemmen 0,5 mm;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+120;Zum Anschluss an Sinteso FDnet Ringund/ oder Stichleitung ohne zusätzliche Spannungsversorgung. Der Ein-/ Ausgabebaustein muss mindestens nachfolgende Anforderungen erfüllen:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+130;Zusatzleergehäuse für die Zentrale;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+140;Ein-/Ausgabebaustein Standard Schnittstelle Löschen, FDCIO224 SST Zum Anschluss an Sinteso FDnet Ring und/oder Stichleitung ohne zusätzliche Spannungsversorgung.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+150;Gehäuse inkl. Deckel (Schraubverschluss), geeignet zum Einbau der Sinteso Steuerbausteine FDCI22x/FDCIO22x und des SAFEDLINK Repeaters in trockener, schmutziger und feuchter Umgebung. Mit diesem Gehäuse erreichen die Bausteine die Schutzart IP65:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+160;Der Signalgeber FDS224-R mit VdS-Anerkennung dient der Alarmierung in einem adressierten Brandmeldesystem und löst bei einem Brandalarm ein akustisches Gefahrensignal aus. Der Schallpegel und die Töne sind einstellbar, die Alarmgeräte sind synchronisiert.;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+170;Der Signalgeber FDS226-RR dient der Alarmierung in einem adressierten Brandmeldesystem und löst bei einem Brandalarm ein akustisches und ein optisches Gefahrensignal aus. Der Schallpegel, die Töne und die Lichtstärke sind einstellbar, die Alarmgeräte sind synchronisiert.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+180;Melderschild zur Anbringung an die Zwischendecke.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+190;Stundenarbeit für einen Inbetriebsetzer für die Umschaltung der Brandmelder von der alten auf die neue Zentrale;256,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+200;Stundenarbeit für einen Fachmonteur für unvorhergesehene Arbeiten;8,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+10;Demontage und Entsorgung von vorhandenem Rauchmelder + Sockel;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+20;Demontage und Entsorgung vorhandener Handfeuermelder;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+30;Demontage und Entsorgung vorhandenes Rauchansaugsystem;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+40;Demontage und Entsorgung vorhandener Signalgeber;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+50;Demontage und Entsorgung von vorhandenen Kopplern;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+10;Konfiguration des Gesamtsystems TOPSIS mit den Erweiterungen der Brandmeldeanlage;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+20;Bearbeiten und Einbinden eines Lageplans in das vorhandene TopSIS System.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+30;Bearbeiten und Einbinden eines Grundrisses in das vorhandene TopSIS System.;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+40;Bearbeiten und Einbinden einer Orientierungsgrafik in das vorhandene TopSIS System. (große Grafik);18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+50;Programmierung von Text im Managementsystem (je 15 Zeilen);15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+60;Stammdatenversorgung für die zusätzlichen Melder zur Einbindung in der TOPSIS;42,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+10;Änderung des vorhandenen Leitungsnetzes: Einzelne Ringleitungen aus der Überwachung entnehmen, Ringleitungen physisch trennen, neue Melder physisch verbinden, neue Peripherie programmiertechnisch einbinden.;32,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+20;Fernmelde-Verteiler mit Funktionserhalt E30 Stahlblech-Gehäuse, DIBT-zugelassen mit Montagewanne für LSA-Leisten (max. Ausbau 6x10DA);4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+30;Stahlblech-Verteilerkasten für LSA-Leisten (max. Ausbau 40x10DA);2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+40;LSA Montagewanne in Schnellanschlusstechnik für 30+1 Leisten mit Rastermaß.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+50;LSA Montagewanne in Schnellanschlusstechnik für 1x10+1 mit Rastermaß.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+60;IY(St)Y 2x2x0,8 an LSA Leiste in Schnellanschlusstechnik auflegen;34,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+70;LSA Trennleiste 10DA in Schnellanschlusstechnik mit Schilderrahmen;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+80;LSA Erdungsleiste in Schnellanschlusstechnik 38-pol. in Fernmelder-Verteiler;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+90;IY(St)Y 8x2x0,8 an LSA in Schnellanschlusstechnik auflegen;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+100;Rangierungen 2-adrig im Verteiler einbringen, nach Kundenvorgabe.;180,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+110;Brandmeldekabel JE-H(St)H E30 2x2x0,8 R mit Funktionserhalt E30 nach DIN 4102 Teil 12 PVC-Mantel rot mit Aufdruck;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+120;Brandmeldekabel JE-H(St)H E30 8x2x0,8 R mit Funktionserhalt E30 nach DIN 4102 Teil 12 PVC-Mantel rot mit Aufdruck;440,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+130;"Brandmeldekabel J-H(ST)H 2x2x0,8  nach DIN VDE 0815/4.81 PVC-Mantel rot mit Aufdruck ""BRANDMELDEKABEL""";600,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+140;A-2Y/(L)2Y 2x2x0,8mm²;130,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+150;PVC-Einzelader H07V-U 10 nach DIN VDE 0281 Teil 3, HD 21.3 S3 und IEC60227-3 Mantel grün/gelb, Verlegung in Kanal und Rohr;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+160;C-Profil-Schiene, DIN EN 10142 Stahl, sendzimirverzinkt;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+170;Kunststoff-panzerrohr, in grau, zur Aufputzmontage, inkl. zugelassener Befestigungsmitteln, starr, EN25;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+180;Alu-Steckrohr EN25 starr für schwere Druckbeanspruchung alufarben -45 ... +250°C;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+190;Leitungsführungskanal 40x60mm;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+200;Stahl-Panzerrohr EN25 starr für schwere Druckbeanspruchung verzinkt -45 ... +400°C;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+210;Bohrung, Mauerstärke bis 20cm, Bohrung bis 30mm, Entsorgung der Bohrreste;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+220;Bohrung, Mauerstärke bis 35cm, Bohrung bis 50mm, Entsorgung der Bohrreste;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+230;Bohrung Beton (Stärke bis 35cm), Bohrung bis 30mm Durchmesser, Entsorgung der Bohrreste;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+240;Kernbohrung Beton (Deckenstärke bis 40cm), Bohrung bis 60mm Durchmesser, Montageort: Boden, Entsorgung der Bohrreste;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+250;Herstellen Weichschott bis 0,05 m²;46,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+260;Durchbruch bis 25 mm Durchmesser mit Silikon verschließen;28,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+270;I30-Brandschutzverkleidung circa 20x20cm für die Einhausung von 2x 8x2x0.8mm E30 Kabeln in Flucht- und Rettungswegen an Rohdecke. Abrechnungseinheit Meter;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+280;Überspannungsschutz für A-2Y/(L)2Y 2x2x0,8mm²-Leitung am Gebäudeeintritt inkl. Iso-Gehäuse, Leitung, fachgerechter Anbindung an Potentialausgleichsschiene;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+290;Zur Justage der Linearmelders transportieren, fachgerecht aufbauen und nach erfolgter Installation wieder zurückbauen und abtransportieren. Für die Melder der Hörsäale.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+300;LWL Universalkabel 1x8 E9/125im A/I-DQ(ZN)BH, OS2;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+310;19 Zoll Patchfeld Steckertyp LC zum Einbau im Schrank S522 Feld S;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+320;Patchfeld 8 Fasern Steckertyp LC zur Aufputz Montage im BMZ Raum LWL Kompakt Spleißbox 4xLC Duplex 082 spleißfertig, Wandmontage, lichtgrau # 4 x LC-DX#SM Kupplungen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+330;Patchkabel 10m, Singlemode, Steckertyp LC-SC;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+340;Faserfusionsspleiße;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+350;ODTR-Messung mit Vor- und Nachlauflänge in zwei  Wellenlängen (bei Single# modefasern 1310nm und 1550 nm, bei Multimodefasern 1300 nm und 850 nm). Der Messaufbau ist skizzenhaft darzustellen. Die Vorlauflängen bei Singlemodefasern beträgt 1000m und bei Multimodefasern 150m. Im Messprotokoll muss die;32,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+10;Neuerstellung der Dokumentation der Brandmeldeanlage.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+20;Feuerwehr-Laufkarte DIN A3 nach TAB der Brandschutzbehörde mit erheblichen Abweichungen zur DIN 14675. UV-beständig, lichtecht, wasser- und reißfest, Reiter versehen gemäß den Anschlußbedingungen der örtlichen Feuerwehr.;648,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+30;Bereitstellung von anlagenspezifischen Unterlagen und Erstellung der Brandfallsteuermatrix. Auf Basis dieser Matrix werden die Steuerungen in der Brandmeldezentrale verknüpft und versorgt.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+40;Begleitung der Abnahme einer Brandmeldeanlage durch einen geprüften Sachverständigen. Der Sachverständige wird kundenseitig bestellt.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+50;Teilnahme an der Abnahme der Brandmeldeanlage mit der Berufsfeuerwehr Köln.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+60;Erstellung der Montageplanung auf Grundlage von Grundrissen der Ausführungsplanung.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+70;Projektleitung und Koordination Überwachung der Realisierung des;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+10;Schaltschrank 24 HE komplett mit Schwenkrahmen 22 HE zum Ausbau mit max. 2 Verstärkern und bis zu 80 LS-Linien, oder 40 A/B / Loop Linien. Leistungsmerkmale:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+20;Der System-Controller ist die intelligente Zentraleinheit des Sprachalarmsystems. Jedes System wird von mindestens einem Controller gesteuert. Bei Bedarf sind die System Controller vernetzbar, wodurch das Sprachalarmsystem modular erweitert werden kann.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+30;Der Ethernet Switch mit 24 100BASE-TX Ports bietet die Möglichkeit der freien IP-Vergabe, es können mehrere dieser Switche in einer Anlage eingesetzt wer den. Das mit 48 V DC betriebene Gerät ist steuerbar, einzelne Ports können nach Bedarf abgeschaltet werden. Damit wird eine redundante Anbindung e;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+40;Die Ausgabeeinheit überwacht die Verstärker sowie die angeschlossenen 100 V Linien. Sie erlaubt zudem eine Havarieumschaltung im Falle eines ausgefallenen Verstärkers. Die Steuerung der Ausgabe einheit erfolgt über Ethernet durch den System-Controller. Eine Ausgabeeinheit kann bis zu 4 Nutz und 4 Re;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+50;Class-D Verstärker mit 4 Kanäle mit jeweils 250 W Leistung bei 100 V,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+60;LWL-Switch mit Ringfunktionalität gegen Netzausfälle innerhalb von 200ms;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+70;Main Frame für bis zu 3 Gleichrichter 3HE.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+80;Gleichrichter 2000W / 48 V;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+90;Batteriesatz 48V, 150Ah Batteriemodul 48 V / 150 Ah bestehend aus 4 zertifizierten 12 V Batterien in einem Strang verschaltet. Lieferung inklusive Anschlusskabelsatz und Temperaturfühler;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+100;Sprechstelle für Nicht-Alarm Anwendungen mit 18 frei programmierbaren Tasten.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+110;"Feuerwehrsprechstelle im Gehäuse mit 18 frei programmierbaren Tasten, Stahlblechgehäuse pulverbeschichtet in RAL 3000, Tür mit CL1 Schließung oder Vorbereitung für Profilhalbzylinder inkl. Beschriftung """"Brandfallmikrofon""""Leistungsmerkmale:";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+120;Der Kartenhalter für die Aufnahme von maximal 5 Modulbuskarten oder I/O Das End-Of-Line Modul wird am Ende jeder 100 V Linie angeschlossen um der Ausgabeeinheit die Linienüberwachung zu ermöglichen. Das Modul besitzt ein kompaktes Gehäuse in robuster Ausführung. Es ist gegen alle üblichen elektrisch;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+130;Konfiguration der einzelnen Komponenten des angebotenen Systemschranks 24/2;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+10;STI-Sprachverständlichkeitsmessung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+20;Versorgung der Zentrale  der Sprachalarmierungsanlage;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+30;Neuerstellung der Dokumentation der;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+40;Überwachung und Realisierung des Projekts, Teilnahme an Besprechungen, Koordination der Termine Projektabwicklung und Koordination des gesamten Liefer- und Leistungsumfanges bestehend unter anderem aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+50;Änderung des vorhandenen Leitungsnetz und Einbinden der neuen Peripherie;18,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+60;Zum Anschluss an Sinteso FDnet Ring- und oder Stichleitung.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+70;Demontage von vorhandenen Kopplern und Bereitstellung zur Entsorgung.;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+80;Sammelhalter für 15 Leitungen E30 Funktionserhalt E30.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+90;C-Profil-Schiene, DIN EN 10142 Stahl, sendzimirverzinkt;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+100;KSV-Schellen inkl. Gegenwanne;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83
+110;Begleitung der Abnahme einer Sprachalarmierungsananlage durch einen geprüften Sachverständigen. Der Sachverständige wird kundenseitig bestellt. je Tagessatz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_260715_322_BMA.x83

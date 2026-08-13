@@ -1,0 +1,102 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;Bestandsunterlagen gemäß ZTV-Ing, Teil 1, Abschnitt 2,;1,0;Psch;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0002;Durchführung von Vermessungsleistungen;1,0;Psch;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0003;Bauzeitenplan mit einer Aufgliederung in Planung,;1,0;Psch;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0001;Baustelleneinrichtung herstellen,;1,0;Psch;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0002;Baustelleneinrichtung vorhalten.;7,0;Mt;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0003;Räumen der Baustelle von allen Geräten,;1,0;Psch;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0004;Vorankündigung gemäß Baustellenverordnung erstellen und;1,0;Psch;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0005;Sicherheits- und Gesundheitsschutzplan (SiGe-Plan) nach;1,0;Psch;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0006;Sicherheits- und Gesundheitsschutzkoordinator während;1,0;Psch;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0007;Erfassung und Dokumentation des Zustands von Straßen,;1,0;Psch;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0008;Gefährdungsermittlung und -beurteilung für;1,0;Psch;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0009;Dokumentationsaufnahmen (Übersichts- und;1,0;Psch;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0010;Abstimmung / Einholung von Genehmigungen zur;1,0;Psch;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0011;Durchführen und Auswerten einer Leitungsrecherche im;1,0;Psch;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0012;Der Weinberg ist mit geeigneten Mitteln vor negativer;1,0;Psch;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0013;Vogelnisthilfe nach örtlicher Festlegung an Felswänden,;2,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0001;Flächen am Hangfuß entlang des Wirtschaftswegs von;600,0;m2;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0002;Flächen von Buschwerk, Hecken und Bäumen bis einschl.;350,0;m2;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0003;Baum im Bestand, im Bereich der Zauntrasse;3,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0004;Gem. Position 01.03.0030.;2,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0005;Labiles und absturzgefährdetes Totholz aus dem Hang;10,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0001;Am Hangfuß abgelagertes Hangschuttmaterial beräumen, um;600,0;m;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0002;Das Felssturzmaterial (Blockgrößen bis ca. 15 m³) im;80,0;m3;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0003;Flächiges Beräumen der Felsflächen von lockerem;12000,0;m2;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0001;Verladung und Transport von Rückschnitt und Astwerk;150,0;t;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0002;Regelkonforme Verwertung pflanzlicher Stoffe (Gestrüpp,;150,0;t;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0003;Laden und Transport von nicht gefährlichem;200,0;t;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0004;Entsorgung Bodenmaterial bis BM-0*  Anlage 1 Tab 3 EBV;200,0;t;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0001;Verkehrssicherung an Arbeitsstellen von kürzerer Dauer;2,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0001;Verfestigte Bodenfläche im Bereich des Wirtschafsweges;1360,0;m2;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0001;Oberboden ggf. einschließlich Vegetationsdecke abtragen;196,0;m3;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0002;Herstellung einer befahrbaren Tragschicht im Bereich;510,0;m3;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0001;Steinschlagschutznetz bestehend aus hochfestem;1000,0;m2;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0002;Randseil entsprechend System 03.01.0010..;90,0;m;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0003;Felsnägel entsprechend System 03.01.0010. liefern;20,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0004;Schraubbarer Ankerbügel/ Flexkopf für Felsnägel des;20,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0005;Rückbau des temporären Netzvorhangs.;1000,0;m2;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0001;Steinschlagschutzzaun mit Energieaufnahme mind. 3.000;35,0;m;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0002;Felsnägel für die Gründung der Zaunstützen (Druckpfahl);4,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0003;Felsnägel für die Gründung der Zaunstützen (Zugpfahl);4,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0004;Felsnägel für die bergseitige Abspannung nach;5,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0005;Schraubbarer Ankerbügel/ Flexkopf für Felsnägel der;5,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0006;Felsnägel für die seitliche Abspannung nach;4,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0007;Schraubbarer Ankerbügel/ Flexkopf für Felsnägel der;4,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0008;Zulage für Mehrlängen für Felsnägel (selbstbohrend) 50/;4,0;m;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0009;Zulage für Mehrlängen für Felsnägel (selbstbohrend) 40/;13,0;m;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0010;Runsennetz für Steinschlagschutzzaun 1 auf Anweisung;10,0;m;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0001;Steinschlagschutzzaun mit Energieaufnahme mind. 2.000;125,0;m;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0002;Felsnägel für die Gründung der Zaunstützen (Druckpfahl);12,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0003;Felsnägel für die Gründung der Zaunstützen (Zugpfahl);12,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0004;Felsnägel für die bergseitige Abspannung nach;13,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0005;Schraubbarer Ankerbügel/ Flexkopf für Felsnägel der;13,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0006;Felsnägel für die seitliche Abspannung nach;4,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0007;Schraubbarer Ankerbügel/ Flexkopf für Felsnägel der;4,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0008;Zulage für Mehrlängen für Felsnägel (selbstbohrend) 40/;123,0;m;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0001;Steinschlagschutzzaun mit Energieaufnahme mind. 3.000;140,0;m;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0002;Felsnägel für die Gründung der Zaunstützen (Druckpfahl);15,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0003;Felsnägel für die Gründung der Zaunstützen (Zugpfahl);15,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0004;Felsnägel für die bergseitige Abspannung nach;16,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0005;Schraubbarer Ankerbügel/ Flexkopf für Felsnägel der;16,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0006;Felsnägel für die seitliche Abspannung nach;4,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0007;Schraubbarer Ankerbügel/ Flexkopf für Felsnägel der;4,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0008;Zulage für Mehrlängen für Felsnägel (selbstbohrend) 50/;45,0;m;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0009;Zulage für Mehrlängen für Felsnägel (selbstbohrend) 40/;105,0;m;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0001;Steinschlagschutzzaun mit Energieaufnahme mind. 2.000;80,0;m;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0002;Felsnägel für die Gründung der Zaunstützen (Druckpfahl);9,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0003;Felsnägel für die Gründung der Zaunstützen (Zugpfahl);9,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0004;Felsnägel für die bergseitige Abspannung nach;10,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0005;Schraubbarer Ankerbügel/ Flexkopf für Felsnägel der;10,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0006;Felsnägel für die seitliche Abspannung nach;4,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0007;Schraubbarer Ankerbügel/ Flexkopf für Felsnägel der;4,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0008;Zulage für Mehrlängen für Felsnägel (selbstbohrend) 40;96,0;m;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0001;Felsnägel zur Einzelblocksicherung liefern und gem.;40,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0002;Zusätzliche Längen für Felsnägel Durchmesser 32 mm zur;35,0;m;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0003;Geotextilstrümpfe liefern sowie in Bohrloch einbauen /;20,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0001;Felsnägel zur Einzelblocksicherung liefern und gem.;5,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0002;Felsnägel zur Einzelblocksicherung liefern und gem.;14,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0003;Bohrloch der Felnägel 03.07.0020. mit stark thixotrop;1680,0;kg;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0001;Aus- und Abräumen von Vegetationsresten und Hangschutt;240,0;m2;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0002;Spritzbeton liefern und auf den Fels in;100,0;m3;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0003;Felsnägel zur Herstellung der Betonunterfangung liefern;240,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0004;Liefern von Bewehrung aus Baustahlmatten Q257A BSt 500;300,0;kg;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0001;Probenägel entsprechend den Ausführungen in 03.08.0030.;2,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0002;Probenägel entsprechend den Ausführungen in 03.07.0010.;2,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0003;Probenägel entsprechend den Ausführungen in 03.04.0030.;2,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0004;Probenägel entsprechend den Ausführungen in 03.04.0020.;2,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0005;Zugversuche gemäß Ausführungsstatik und Plänen an den;8,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0006;Zugversuche gemäß Ausführungsstatik und Plänen an;9,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0001;Herstellen der Probenkörper und Prüfung der einaxialen;15,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0002;Herstellen der Probenkörper und Prüfung der einaxialen;3,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0001;Tragseiltrennung gem. Angaben des Systemherstellers für;4,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0002;Tragseiltrennung gem. Angaben des Systemherstellers für;4,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0003;Talseitige Abspannung gem. Angaben des;2,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0004;Talseitige Abspannung gem. Angaben des;2,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0001;Zusätzliche Längen für Felsnägel Durchmesser 28 mm,;10,0;m;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0002;Zusätzliche Längen für Felsnägel Durchmesser 32 mm,;20,0;m;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0003;Zementmörtel einschließlich Sandbeimengung und;5000,0;kg;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0004;Geotextilstrümpfe liefern sowie in Bohrloch einbauen /;20,0;St;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0001;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;40,0;h;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0002;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;40,0;h;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83
+0003;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;40,0;h;gaeb;leistungsbeschreibungen/B53_FSM_Pallien_Biewer_20260811.X83

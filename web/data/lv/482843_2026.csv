@@ -1,0 +1,261 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Das Einrichten der Baustelle, das Vorhalten, Umsetzen (falls erforderlich) über die Bauzeit des AN sowie Räumen der Baustelle mit folgenden in den Pauschalpreis einzurechnende Leistungen:;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+20;Schutzabdeckung für neu eingebaute Bodenbeläge.;3100,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+30;Herstellen und Liefern von Unterlagen/ Nachweisen/;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Feuchtigkeitsmessung nach dem CM-Verfahren, Ausführung auf Anordnung des AG.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+20;Prüfen der Oberflächenzugfestigkeit, an vorbereitetem Untergrund, Prüfflächen durch Ringnut begrenzen, Protokollieren der Ergebnisse durch Eintragen in die Grundrisse.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+30;Untergrund von groben Verschmutzungen reinigen, aufgenommene Stoffe in Behältnis des AN sammeln, abfahren und entsorgen, inkl. staubfreiem Absaugen mittels Industriestaubsauger.;3076,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+40;Risse im Estrich kraftschlüssig schließen.;618,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+50;Abschneiden des Überstandes des Randdämmstreifens, für Bodenbelagarbeiten.;1631,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Anschleifen und Absaugen des Untergrundes aus Zementestrich, für Bodenbelagarbeiten.;580,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+20;Voranstrich für nachfolgende Bodenbeläge B:011 aus Dispersion, vollflächig auf oberflächentrockene Flächen.;580,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Textiler Bodenbelag als Kugelgarn gem. DIN EN 1307, als Bahnenware;580,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+20;"Zulage zur Vorposition ""Teppich"" für die runde Ausführung des Bodenbelags.";19,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+30;"Zulage zur Vorposition ""Teppich "" für das Anarbeiten des Bodenbelags an nicht rechtwinklige Innen-/AußenEcken.";4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+40;Oberboden B:011 an Stützen anarbeiten.;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+50;Oberboden B:011 an aus den Wänden herausstehenden Stützen anarbeiten.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+60;Oberboden B:011 an Trockenbauvorbauten anarbeiten.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+70;Bodentank mit dem zuvor beschriebenen Bodenbelag B:011 belegen einschl. Verfugung, dauerelastischen Anschlüssen und Anarbeitungen.;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Sockelleiste, Hochkant-Rechteckprofil, oberseitig angeschrägt, Ecken und Stöße sowie Endungungen an Türen auf Gehrung geschnitten.;336,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+20;"Zulage zur Vorposition ""Sockelleiste Vollholz zu B:011"" für die runde Ausführung der Sockelleiste.";19,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+30;"Zulage zur Vorposition ""Sockelleiste Vollholz zu B:011"" für das Herstellen der Gehrung in nicht rechtwinkligen Innen-/Außen-Ecken.";5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Anschleifen und Absaugen des Untergrundes aus Zementestrich, für Bodenbelagarbeiten.;1568,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+20;Anschleifen und Absaugen des Untergrundes aus Stahlbeton, für Bodenbelagarbeiten.;31,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+30;Untergrundvorbehandlung: Untergrund auf Eignung, Trag- sowie Haftfähigkeit prüfen.;1599,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+40;Vollflächige Verspachtelung des Untergrundes (Estrich, Beton), Spachtelung der vorbehandelten;1568,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+50;Vollflächige Verspachtelung des Untergrundes (Beton), Spachtelung der vorbehandelten;31,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Bodenbelag aus Linoleum DIN EN ISO 24011 (oder gleichwertig), mit werkseitiger Oberflächenvergütung, Einstufung DIN EN ISO 10874 Klasse 34 (oder gleichwertig);1515,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+20;Bodenbelag aus Linoleum DIN EN ISO 24011 (oder gleichwertig), mit werkseitiger Oberflächenvergütung, Einstufung DIN EN ISO 10874 Klasse 34 (oder gleichwertig);54,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+30;Bodenbelag aus Linoleum DIN EN ISO 24011 (oder gleichwertig), mit werkseitiger Oberflächenvergütung, Einstufung DIN EN ISO 10874 Klasse 34 (oder gleichwertig);31,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+40;Zulage zu den Vorpositionen Linoleum und Linoleum, ableitfähig für die runde Ausführung des Bodenbelags.;42,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+50;Zulage zu den Vorpositionen Linoleum und Linoleum, ableitfähig für das Anarbeiten des Bodenbelags an nicht rechtwinklige Innen-/AußenEcken.;29,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+60;Belagsnähte der vorbeschriebenen Linoleum Beläge B:021/022 fräsen und thermisch verschweißen, mittels Schweißschnur.;1019,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+70;Oberboden B:021 + B:022 an Stützen anarbeiten.;57,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+80;Oberboden B:021 + B:022 an aus den Wänden herausstehenden Stützen anarbeiten.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+90;Oberboden B:021 + B:022 an Trockenbauvorbauten anarbeiten.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+100;Oberboden B:021 + B:022 an Trockenbauvorbauten anarbeiten.;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+110;Elastische Verfugung mit 1-Komponenten-Dichtstoff auf Silikonbasis, Fuge glatt;61,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+120;Die sichtbar bleibende Fuge, nach bauseitig erfolgtem 2K-Anstrich, zur Stütze hin leicht angewinkelt und den Bodenbelag leicht überlappend dauerelastisch verfugen und gleichmäßig abziehen.;57,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+130;Abschlussprofil Aluminium;87,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+140;Dehnfugenprofil für Beläge bis 3 mm mit EPDM-Fuge, vulkanisiert.;124,0;Lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+150;Bodentank mit dem zuvor beschriebenen Bodenbelag B:021 belegen einschl. Verfugung, dauerelastischen Anschlüssen und Anarbeitungen.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Hohlkehl-Sockelleiste BxH 5,3x82 mm;815,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+20;Zulage zu der Vorposition für das Herstellen der Gehrung in nicht rechtwinklige Innen-/AußenEcken.;19,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+30;Hochführen des Linoleums B:021 an das zuvor beschriebene Hohlkehlsockelprofil und fachgerechte Verklebung gemäß den Herstellervorgaben.;815,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+40;"Hohlkehl-Sockelleiste wie in der Position ""Hohlkehlsockelleiste BxH 5,3x82mm"" beschrieben, jedoch Ausführung als gebogenes Profil zur Ausbildung der Sockelleiste an runden Wänden.";36,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+50;Hochführen des Linoleums B:021 an das zuvor beschriebene Hohlkehlsockelprofil in runden Bereichen und fachgerechte Verklebung gemäß den Herstellervorgaben.;36,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+60;Linoleum Sockel an Rundstützen oder halben Rundstützen herstellen.;55,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+70;Sockelleiste, Hochkant-Rechteckprofil, oberseitig angeschrägt, Ecken und Stöße auf Gehrung geschnitten.;58,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+80;Zulage zu der Vorposition für das Herstellen der Gehrung in nicht rechtwinklige Innen-/AußenEcken.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+90;"Zulage zur Vorposition ""Sockelleiste Vollholz zu B:022"" für die runde Ausführung der Sockelleiste.";7,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+100;Sockelleiste, Hochkant-Rechteckprofil, oberseitig angeschrägt, Ecken und Stöße auf Gehrung geschnitten.;37,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Erstpflege des Oberbelags, mit Pflegemitteln gemäß Herstellervorgaben. Arbeiten innerhalb einer Woche nach Aufforderung durch die Bauleitung des Architekten ausführen.;1568,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Fußabstreifer mit Rahmen und Matteneinlage als aufrollbare Eingangsmatte mit Aluminium-Trägerprofilen ausgelegt für schwerlast Belastung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+20;"Zulage zur Position ""Eingangsmatte Nord, 10,95 m x 3,10 m - B:081"" für 2 eingearbeitete um 90° gedrehte Aluprofile mit  B= ca. 46,5 mm, L= ca. 3,10m, Einlage im Farbton 76.02 beige, lichte Breite bis Kante der ausgesparten Profile 110mm.";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+30;Fußabstreifer mit Rahmen und Matteneinlage als aufrollbare Eingangsmatte mit Aluminium-Trägerprofilen ausgelegt für normale bis starke Belastung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+40;"Ausführung wie in Position ""Eingangsmatte Ost, 9,95 m x 3,00 m - B:081"" beschrieben, jedoch:";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+50;"Ausführung wie in Position ""Eingangsmatte Ost, 9,95 m x 3,00 m - B:081"" beschrieben, jedoch:";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+60;"Ausführung wie in Position ""Eingangsmatte Ost, 9,95 m x 3,00 m - B:081"" beschrieben, jedoch:";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+70;"Ausführung wie in Position ""Eingangsmatte Ost, 9,95 m x 3,00 m - B:081"" beschrieben, jedoch:";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+80;"Ausführung wie in Position ""Eingangsmatte Ost, 9,95 m x 3,00 m - B:081"" beschrieben, jedoch:";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+90;"Ausführung wie in Position ""Eingangsmatte Ost, 9,95 m x 3,00 m - B:081"" beschrieben, jedoch:";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+100;"Ausführung wie in Position ""Eingangsmatte";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+110;"Ausführung wie in Position ""Eingangsmatte Ost, 9,95 m x 3,00 m - B:081"" beschrieben, jedoch:";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+120;"Ausführung wie in Position ""Eingangsmatte Ost, 9,95 m x 3,00 m - B:081"" beschrieben, jedoch:";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+130;Fußabstreifer mit Rahmen und Matteneinlage als aufrollbare Eingangsmatte mit Aluminium-Trägerprofilen ausgelegt für normale bis starke Belastung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+140;"Ausführung wie in Position ""Sauberlaufmatte Spülküche-Mensa, 1,861 m x 1,50 m - B:081"" beschrieben, jedoch:";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Anschleifen und Absaugen des Untergrundes aus Zementestrich, für Bodenbelagarbeiten.;836,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+20;Voranstrich für nachfolgende Bodenbeläge B:082 aus Dispersion, vollflächig auf oberflächentrockene Flächen.;836,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Strapazierfähiges Sauberlaufsystem für maximale Feuchtigkeitsaufnahme und sehr guter Schmutzentfernung im Eingangs- und Innenbereich mit starker Begehungsfrequenz.;836,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+20;Zulage  zur Vorposition Sauberlaufzone für die runde Ausführung des Bodenbelags.;50,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+30;Oberboden B:082 fugenlos an Stützen anarbeiten.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+40;Oberboden B:082 an aus den Wänden herausstehenden Stützen 3-seitig anarbeiten.;36,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+50;Der Übergang zwischen Sauberlaufzone und Industrieparkett unter Türen ist mittels Edelstahlblech herzustellen.;21,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+60;Elastische Verfugung mit 1-Komponenten-Dichtstoff auf Silikonbasis, Fuge glatt;115,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+70;Lieferung und Einbau eines Taktilen Leitstreifen im Teppich.;25,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+80;Ausführung wie in der Vorposition beschrieben, jedoch im Bereich Bambusparkett.;5,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Sockelleiste, Hochkant-Rechteckprofil, oberseitig angeschrägt, Ecken und Stöße auf Gehrung geschnitten.;331,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+20;"Zulage zur Vorposition ""Sockelleiste Vollholz zu B:082"" für die runde Ausführung der Sockelleiste.";50,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+30;Sockelleiste Vollholz B:082 an aus den Wänden herausstehenden Stützen 3-seitig anarbeiten.;36,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Inkl. aller Nebenkosten.;100,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+20;Inkl. aller Nebenkosten.;100,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Das Einrichten der Baustelle, das Vorhalten, Umsetzen (falls erforderlich) über die Bauzeit des AN sowie Räumen der Baustelle mit folgenden in den Pauschalpreis einzurechnende Leistungen:;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+20;Schutzabdeckung für neu eingebauten Parkettbodenbelag.;9000,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+30;Herstellen und Liefern von Unterlagen/ Nachweisen/;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+40;Einweisung des Reinigungspersonal der Stadt Rheine für die fachgerechte und Beschädigungsfreie Reinigung und Pflege der Parkettböden.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Feuchtigkeitsmessung nach dem CM-Verfahren, Ausführung auf Anordnung des AG.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+20;Prüfen der Oberflächenzugfestigkeit, an vorbereitetem Untergrund, Prüfflächen durch Ringnut begrenzen, Protokollieren der Ergebnisse durch Eintragen in die Grundrisse.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+30;Untergrund von groben Verschmutzungen reinigen, aufgenommene Stoffe in Behältnis des AN sammeln, abfahren und entsorgen, inkl. staubfreiem Absaugen mittels Industriestaubsauger.;8942,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+40;Risse im Estrich kraftschlüssig schließen.;1751,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+50;Abschneiden des Überstandes des Randdämmstreifens, für Bodenbelagarbeiten.;4885,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+60;Anschleifen und Absaugen des Untergrundes aus Zementestrich, für Bodenbelagarbeiten.;8942,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+70;Vollflächige Verspachtelung des Untergrundes, Spachtelung der vorbehandelten;6942,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+80;Vollflächige Verspachtelung des Untergrundes (Beton), Spachtelung der vorbehandelten;2000,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+90;Voranstrich für Verklebung der Parkettbeläge.;8942,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Industrieparkett als Hochkantlamelle gem. DIN EN 14761, vollflächig spannungsfrei auf Untergrund verklebt.;466,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+20;"Ausführung wie Position ""Hochkantlamelle, Bambus, 280x140x10mm, Mensa"", jedoch:";265,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+30;"Ausführung wie Position ""Hochkantlamelle, Bambus, 280x140x10mm, Mensa"", jedoch:";2428,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+40;"Ausführung wie Position ""Hochkantlamelle, Bambus, 280x140x10mm, Mensa"", jedoch:";5280,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+50;"Zulage zu den Vorpositionen ""Hochkantlamelle, Bambus, 280x140x10mm, [...]"" für die runde Ausführung des Bodenbelags.";213,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+60;"Zulage zu der Vorposition ""Hochkantlamelle, Bambus, 280x140x10mm, Flur"" für die Ausführung des Bodenbelags in gebogenen Flurbereichen.";433,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+70;"Zulage zu den Vorpositionen ""Hochkantlamelle, Bambus, 280x140x10mm, [...]""  für das Anarbeiten des Bodenbelags an nicht rechtwinklige Innen-/AußenEcken.";21,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+80;Oberboden B:031 an Stützen anarbeiten.;196,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+90;Oberboden B:031 an aus den Wänden herausstehenden Stützen anarbeiten.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+100;Oberboden B:031 an Trockenbauvorbauten anarbeiten.;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+110;Oberboden B:031 an Trockenbauvorbauten anarbeiten.;85,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+120;Elastische Verfugung mit 1-Komponenten-Dichtstoff auf Silikonbasis, Fuge glatt;31,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+130;Elastische Verfugung mit 1-Komponenten-Dichtstoff auf Silikonbasis, Fuge glatt;165,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+140;"Zulage zu den Vorpositionen ""Verfugung, dauerelastisch, zu Lerninseln"" für die runde Ausführung der Verfugung.";30,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+150;Die sichtbar bleibende Fuge an Rundstützen, nach bauseitig erfolgtem 2K-Anstrich, zur Stütze hin leicht angewinkelt und den Bodenbelag leicht überlappend dauerelastisch verfugen und gleichmäßig abziehen.;196,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+160;Der Übergang zwischen Industrieparkett und Fliesen (B:044) unter Türen ist mittels Edelstahlblech herzustellen.;37,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+170;V2A Winkel als Abschlusswinkel zum Bambusparkett liefern, zuschneiden und einbauen.;88,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+180;"Zulage  zur Vorposition ""V2A Abschlusswinkel"" für die runde Ausführung im Bereich der Aula.";7,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+190;Korkstreifen als Anschluss an andere Bodenbeläge und im Bereich von Estrich-Dehnungsfugen. Ausführung oberflächengleich zum Parkett, bündig abschleifen.;1544,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+200;Bodentank mit dem zuvor beschriebenen Bodenbelag B:031 belegen einschl. Verfugung, dauerelastischen Anschlüssen und Anarbeitungen.;131,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Sockelleiste als Breitlamelle, oberseitig 1/4 abgerundet, Ecken und Stöße auf Gehrung geschnitten.;4596,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+20;"Zulage zur Vorposition ""Sockelleiste Massiv, Bambus, 50x15mm"" für die runde Ausführung der Sockelleiste.";213,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+30;"Zulage zur Vorposition ""Sockelleiste Massiv, Bambus, 50x15mm"" für das Herstellen der Gehrung in nicht rechtwinkligen Innen-/Außen-Ecken.";21,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+40;Sockelleiste Massiv Bambus B:031 an aus den Wänden herausstehenden Stützen 3-seitig anarbeiten.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+50;"""Sockelleiste Massiv, Bambus, 50x15mm"" an Trockenbauvorbauten anarbeiten.";96,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Industrieparkett als Hochkantlamelle gem. DIN EN 14761, vollflächig spannungsfrei auf Untergrund verklebt.;366,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+20;"Ausführung wie Position ""Hochkantlamelle, Bambus gedämpft, 280x140x10mm, Lerninseln B:033"", jedoch:";139,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+30;"Zulage zu den Vorpositionen ""Hochkantlamelle, Bambus gedämpft, 280x140x10mm, [...]"" für die runde Ausführung des Bodenbelags.";34,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+40;"Zulage zu den Vorpositionen ""Hochkantlamelle, Bambus gedämpft, 280x140x10mm, [...]""  für das Anarbeiten des Bodenbelags an nicht rechtwinklige AußenEcken.";22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+50;Oberboden B:032+B:033 an Stützen anarbeiten.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+60;Bodentank mit dem zuvor beschriebenen Bodenbelag B:032 belegen einschl. Verfugung, dauerelastischen Anschlüssen und Anarbeitungen.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Sockelleiste als Breitlamelle, oberseitig 1/4 abgerundet, Ecken und Stöße auf Gehrung geschnitten.;212,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+20;"Zulage zur Vorposition ""Sockelleiste Massiv, Bambus gedämpft, 50x15mm"" für die runde Ausführung der Sockelleiste.";34,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+30;"Zulage zur Vorposition ""Sockelleiste Massiv, Bambus gedämpft, 50x15mm"" für das Herstellen der Gehrung in nicht rechtwinkligen Innen-/Außen-Ecken.";8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Erstpflege des Industrieparketts mit Erstpflegeöl gemäß Herstellervorgaben, Leistungsausführung innerhalb einer Woche nach Aufforderung durch die Bauleitung des Architekten.;8942,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Inkl. aller Nebenkosten.;100,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+20;Inkl. aller Nebenkosten.;100,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten.X83
+10;Das Einrichten der Baustelle, das Vorhalten, Umsetzen (falls erforderlich) über die Bauzeit des AN sowie Räumen der Baustelle mit folgenden in den Pauschalpreis einzurechnende Leistungen:;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+20;Schutzabdeckung für neu eingebaute Bodenbeläge.;3100,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+30;Herstellen und Liefern von Unterlagen/ Nachweisen/;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Feuchtigkeitsmessung nach dem CM-Verfahren, Ausführung auf Anordnung des AG.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+20;Prüfen der Oberflächenzugfestigkeit, an vorbereitetem Untergrund, Prüfflächen durch Ringnut begrenzen, Protokollieren der Ergebnisse durch Eintragen in die Grundrisse.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+30;Untergrund von groben Verschmutzungen reinigen, aufgenommene Stoffe in Behältnis des AN sammeln, abfahren und entsorgen, inkl. staubfreiem Absaugen mittels Industriestaubsauger.;3076,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+40;Risse im Estrich kraftschlüssig schließen.;618,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+50;Abschneiden des Überstandes des Randdämmstreifens, für Bodenbelagarbeiten.;1631,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Anschleifen und Absaugen des Untergrundes aus Zementestrich, für Bodenbelagarbeiten.;580,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+20;Voranstrich für nachfolgende Bodenbeläge B:011 aus Dispersion, vollflächig auf oberflächentrockene Flächen.;580,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Textiler Bodenbelag als Kugelgarn gem. DIN EN 1307, als Bahnenware;580,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+20;"Zulage zur Vorposition ""Teppich"" für die runde Ausführung des Bodenbelags.";19,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+30;"Zulage zur Vorposition ""Teppich "" für das Anarbeiten des Bodenbelags an nicht rechtwinklige Innen-/AußenEcken.";4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+40;Oberboden B:011 an Stützen anarbeiten.;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+50;Oberboden B:011 an aus den Wänden herausstehenden Stützen anarbeiten.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+60;Oberboden B:011 an Trockenbauvorbauten anarbeiten.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+70;Bodentank mit dem zuvor beschriebenen Bodenbelag B:011 belegen einschl. Verfugung, dauerelastischen Anschlüssen und Anarbeitungen.;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Sockelleiste, Hochkant-Rechteckprofil, oberseitig angeschrägt, Ecken und Stöße sowie Endungungen an Türen auf Gehrung geschnitten.;336,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+20;"Zulage zur Vorposition ""Sockelleiste Vollholz zu B:011"" für die runde Ausführung der Sockelleiste.";19,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+30;"Zulage zur Vorposition ""Sockelleiste Vollholz zu B:011"" für das Herstellen der Gehrung in nicht rechtwinkligen Innen-/Außen-Ecken.";5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Anschleifen und Absaugen des Untergrundes aus Zementestrich, für Bodenbelagarbeiten.;1568,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+20;Anschleifen und Absaugen des Untergrundes aus Stahlbeton, für Bodenbelagarbeiten.;31,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+30;Untergrundvorbehandlung: Untergrund auf Eignung, Trag- sowie Haftfähigkeit prüfen.;1599,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+40;Vollflächige Verspachtelung des Untergrundes (Estrich, Beton), Spachtelung der vorbehandelten;1568,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+50;Vollflächige Verspachtelung des Untergrundes (Beton), Spachtelung der vorbehandelten;31,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Bodenbelag aus Linoleum DIN EN ISO 24011 (oder gleichwertig), mit werkseitiger Oberflächenvergütung, Einstufung DIN EN ISO 10874 Klasse 34 (oder gleichwertig);1515,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+20;Bodenbelag aus Linoleum DIN EN ISO 24011 (oder gleichwertig), mit werkseitiger Oberflächenvergütung, Einstufung DIN EN ISO 10874 Klasse 34 (oder gleichwertig);54,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+30;Bodenbelag aus Linoleum DIN EN ISO 24011 (oder gleichwertig), mit werkseitiger Oberflächenvergütung, Einstufung DIN EN ISO 10874 Klasse 34 (oder gleichwertig);31,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+40;Zulage zu den Vorpositionen Linoleum und Linoleum, ableitfähig für die runde Ausführung des Bodenbelags.;42,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+50;Zulage zu den Vorpositionen Linoleum und Linoleum, ableitfähig für das Anarbeiten des Bodenbelags an nicht rechtwinklige Innen-/AußenEcken.;29,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+60;Belagsnähte der vorbeschriebenen Linoleum Beläge B:021/022 fräsen und thermisch verschweißen, mittels Schweißschnur.;1019,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+70;Oberboden B:021 + B:022 an Stützen anarbeiten.;57,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+80;Oberboden B:021 + B:022 an aus den Wänden herausstehenden Stützen anarbeiten.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+90;Oberboden B:021 + B:022 an Trockenbauvorbauten anarbeiten.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+100;Oberboden B:021 + B:022 an Trockenbauvorbauten anarbeiten.;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+110;Elastische Verfugung mit 1-Komponenten-Dichtstoff auf Silikonbasis, Fuge glatt;61,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+120;Die sichtbar bleibende Fuge, nach bauseitig erfolgtem 2K-Anstrich, zur Stütze hin leicht angewinkelt und den Bodenbelag leicht überlappend dauerelastisch verfugen und gleichmäßig abziehen.;57,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+130;Abschlussprofil Aluminium;87,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+140;Dehnfugenprofil für Beläge bis 3 mm mit EPDM-Fuge, vulkanisiert.;124,0;Lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+150;Bodentank mit dem zuvor beschriebenen Bodenbelag B:021 belegen einschl. Verfugung, dauerelastischen Anschlüssen und Anarbeitungen.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Hohlkehl-Sockelleiste BxH 5,3x82 mm;815,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+20;Zulage zu der Vorposition für das Herstellen der Gehrung in nicht rechtwinklige Innen-/AußenEcken.;19,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+30;Hochführen des Linoleums B:021 an das zuvor beschriebene Hohlkehlsockelprofil und fachgerechte Verklebung gemäß den Herstellervorgaben.;815,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+40;"Hohlkehl-Sockelleiste wie in der Position ""Hohlkehlsockelleiste BxH 5,3x82mm"" beschrieben, jedoch Ausführung als gebogenes Profil zur Ausbildung der Sockelleiste an runden Wänden.";36,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+50;Hochführen des Linoleums B:021 an das zuvor beschriebene Hohlkehlsockelprofil in runden Bereichen und fachgerechte Verklebung gemäß den Herstellervorgaben.;36,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+60;Linoleum Sockel an Rundstützen oder halben Rundstützen herstellen.;55,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+70;Sockelleiste, Hochkant-Rechteckprofil, oberseitig angeschrägt, Ecken und Stöße auf Gehrung geschnitten.;58,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+80;Zulage zu der Vorposition für das Herstellen der Gehrung in nicht rechtwinklige Innen-/AußenEcken.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+90;"Zulage zur Vorposition ""Sockelleiste Vollholz zu B:022"" für die runde Ausführung der Sockelleiste.";7,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+100;Sockelleiste, Hochkant-Rechteckprofil, oberseitig angeschrägt, Ecken und Stöße auf Gehrung geschnitten.;37,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Erstpflege des Oberbelags, mit Pflegemitteln gemäß Herstellervorgaben. Arbeiten innerhalb einer Woche nach Aufforderung durch die Bauleitung des Architekten ausführen.;1568,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Fußabstreifer mit Rahmen und Matteneinlage als aufrollbare Eingangsmatte mit Aluminium-Trägerprofilen ausgelegt für schwerlast Belastung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+20;"Zulage zur Position ""Eingangsmatte Nord, 10,95 m x 3,10 m - B:081"" für 2 eingearbeitete um 90° gedrehte Aluprofile mit  B= ca. 46,5 mm, L= ca. 3,10m, Einlage im Farbton 76.02 beige, lichte Breite bis Kante der ausgesparten Profile 110mm.";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+30;Fußabstreifer mit Rahmen und Matteneinlage als aufrollbare Eingangsmatte mit Aluminium-Trägerprofilen ausgelegt für normale bis starke Belastung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+40;"Ausführung wie in Position ""Eingangsmatte Ost, 9,95 m x 3,00 m - B:081"" beschrieben, jedoch:";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+50;"Ausführung wie in Position ""Eingangsmatte Ost, 9,95 m x 3,00 m - B:081"" beschrieben, jedoch:";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+60;"Ausführung wie in Position ""Eingangsmatte Ost, 9,95 m x 3,00 m - B:081"" beschrieben, jedoch:";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+70;"Ausführung wie in Position ""Eingangsmatte Ost, 9,95 m x 3,00 m - B:081"" beschrieben, jedoch:";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+80;"Ausführung wie in Position ""Eingangsmatte Ost, 9,95 m x 3,00 m - B:081"" beschrieben, jedoch:";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+90;"Ausführung wie in Position ""Eingangsmatte Ost, 9,95 m x 3,00 m - B:081"" beschrieben, jedoch:";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+100;"Ausführung wie in Position ""Eingangsmatte";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+110;"Ausführung wie in Position ""Eingangsmatte Ost, 9,95 m x 3,00 m - B:081"" beschrieben, jedoch:";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+120;"Ausführung wie in Position ""Eingangsmatte Ost, 9,95 m x 3,00 m - B:081"" beschrieben, jedoch:";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+130;Fußabstreifer mit Rahmen und Matteneinlage als aufrollbare Eingangsmatte mit Aluminium-Trägerprofilen ausgelegt für normale bis starke Belastung.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+140;"Ausführung wie in Position ""Sauberlaufmatte Spülküche-Mensa, 1,861 m x 1,50 m - B:081"" beschrieben, jedoch:";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Anschleifen und Absaugen des Untergrundes aus Zementestrich, für Bodenbelagarbeiten.;836,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+20;Voranstrich für nachfolgende Bodenbeläge B:082 aus Dispersion, vollflächig auf oberflächentrockene Flächen.;836,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Strapazierfähiges Sauberlaufsystem für maximale Feuchtigkeitsaufnahme und sehr guter Schmutzentfernung im Eingangs- und Innenbereich mit starker Begehungsfrequenz.;836,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+20;Zulage  zur Vorposition Sauberlaufzone für die runde Ausführung des Bodenbelags.;50,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+30;Oberboden B:082 fugenlos an Stützen anarbeiten.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+40;Oberboden B:082 an aus den Wänden herausstehenden Stützen 3-seitig anarbeiten.;36,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+50;Der Übergang zwischen Sauberlaufzone und Industrieparkett unter Türen ist mittels Edelstahlblech herzustellen.;21,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+60;Elastische Verfugung mit 1-Komponenten-Dichtstoff auf Silikonbasis, Fuge glatt;115,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+70;Lieferung und Einbau eines Taktilen Leitstreifen im Teppich.;25,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+80;Ausführung wie in der Vorposition beschrieben, jedoch im Bereich Bambusparkett.;5,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Sockelleiste, Hochkant-Rechteckprofil, oberseitig angeschrägt, Ecken und Stöße auf Gehrung geschnitten.;331,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+20;"Zulage zur Vorposition ""Sockelleiste Vollholz zu B:082"" für die runde Ausführung der Sockelleiste.";50,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+30;Sockelleiste Vollholz B:082 an aus den Wänden herausstehenden Stützen 3-seitig anarbeiten.;36,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Inkl. aller Nebenkosten.;100,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+20;Inkl. aller Nebenkosten.;100,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Das Einrichten der Baustelle, das Vorhalten, Umsetzen (falls erforderlich) über die Bauzeit des AN sowie Räumen der Baustelle mit folgenden in den Pauschalpreis einzurechnende Leistungen:;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+20;Schutzabdeckung für neu eingebauten Parkettbodenbelag.;9000,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+30;Herstellen und Liefern von Unterlagen/ Nachweisen/;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+40;Einweisung des Reinigungspersonal der Stadt Rheine für die fachgerechte und Beschädigungsfreie Reinigung und Pflege der Parkettböden.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Feuchtigkeitsmessung nach dem CM-Verfahren, Ausführung auf Anordnung des AG.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+20;Prüfen der Oberflächenzugfestigkeit, an vorbereitetem Untergrund, Prüfflächen durch Ringnut begrenzen, Protokollieren der Ergebnisse durch Eintragen in die Grundrisse.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+30;Untergrund von groben Verschmutzungen reinigen, aufgenommene Stoffe in Behältnis des AN sammeln, abfahren und entsorgen, inkl. staubfreiem Absaugen mittels Industriestaubsauger.;8942,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+40;Risse im Estrich kraftschlüssig schließen.;1751,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+50;Abschneiden des Überstandes des Randdämmstreifens, für Bodenbelagarbeiten.;4885,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+60;Anschleifen und Absaugen des Untergrundes aus Zementestrich, für Bodenbelagarbeiten.;8942,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+70;Vollflächige Verspachtelung des Untergrundes, Spachtelung der vorbehandelten;6942,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+80;Vollflächige Verspachtelung des Untergrundes (Beton), Spachtelung der vorbehandelten;2000,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+90;Voranstrich für Verklebung der Parkettbeläge.;8942,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Industrieparkett als Hochkantlamelle gem. DIN EN 14761, vollflächig spannungsfrei auf Untergrund verklebt.;466,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+20;"Ausführung wie Position ""Hochkantlamelle, Bambus, 280x140x10mm, Mensa"", jedoch:";265,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+30;"Ausführung wie Position ""Hochkantlamelle, Bambus, 280x140x10mm, Mensa"", jedoch:";2428,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+40;"Ausführung wie Position ""Hochkantlamelle, Bambus, 280x140x10mm, Mensa"", jedoch:";5280,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+50;"Zulage zu den Vorpositionen ""Hochkantlamelle, Bambus, 280x140x10mm, [...]"" für die runde Ausführung des Bodenbelags.";213,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+60;"Zulage zu der Vorposition ""Hochkantlamelle, Bambus, 280x140x10mm, Flur"" für die Ausführung des Bodenbelags in gebogenen Flurbereichen.";433,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+70;"Zulage zu den Vorpositionen ""Hochkantlamelle, Bambus, 280x140x10mm, [...]""  für das Anarbeiten des Bodenbelags an nicht rechtwinklige Innen-/AußenEcken.";21,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+80;Oberboden B:031 an Stützen anarbeiten.;196,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+90;Oberboden B:031 an aus den Wänden herausstehenden Stützen anarbeiten.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+100;Oberboden B:031 an Trockenbauvorbauten anarbeiten.;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+110;Oberboden B:031 an Trockenbauvorbauten anarbeiten.;85,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+120;Elastische Verfugung mit 1-Komponenten-Dichtstoff auf Silikonbasis, Fuge glatt;31,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+130;Elastische Verfugung mit 1-Komponenten-Dichtstoff auf Silikonbasis, Fuge glatt;165,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+140;"Zulage zu den Vorpositionen ""Verfugung, dauerelastisch, zu Lerninseln"" für die runde Ausführung der Verfugung.";30,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+150;Die sichtbar bleibende Fuge an Rundstützen, nach bauseitig erfolgtem 2K-Anstrich, zur Stütze hin leicht angewinkelt und den Bodenbelag leicht überlappend dauerelastisch verfugen und gleichmäßig abziehen.;196,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+160;Der Übergang zwischen Industrieparkett und Fliesen (B:044) unter Türen ist mittels Edelstahlblech herzustellen.;37,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+170;V2A Winkel als Abschlusswinkel zum Bambusparkett liefern, zuschneiden und einbauen.;88,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+180;"Zulage  zur Vorposition ""V2A Abschlusswinkel"" für die runde Ausführung im Bereich der Aula.";7,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+190;Korkstreifen als Anschluss an andere Bodenbeläge und im Bereich von Estrich-Dehnungsfugen. Ausführung oberflächengleich zum Parkett, bündig abschleifen.;1544,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+200;Bodentank mit dem zuvor beschriebenen Bodenbelag B:031 belegen einschl. Verfugung, dauerelastischen Anschlüssen und Anarbeitungen.;131,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Sockelleiste als Breitlamelle, oberseitig 1/4 abgerundet, Ecken und Stöße auf Gehrung geschnitten.;4596,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+20;"Zulage zur Vorposition ""Sockelleiste Massiv, Bambus, 50x15mm"" für die runde Ausführung der Sockelleiste.";213,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+30;"Zulage zur Vorposition ""Sockelleiste Massiv, Bambus, 50x15mm"" für das Herstellen der Gehrung in nicht rechtwinkligen Innen-/Außen-Ecken.";21,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+40;Sockelleiste Massiv Bambus B:031 an aus den Wänden herausstehenden Stützen 3-seitig anarbeiten.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+50;"""Sockelleiste Massiv, Bambus, 50x15mm"" an Trockenbauvorbauten anarbeiten.";96,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Industrieparkett als Hochkantlamelle gem. DIN EN 14761, vollflächig spannungsfrei auf Untergrund verklebt.;366,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+20;"Ausführung wie Position ""Hochkantlamelle, Bambus gedämpft, 280x140x10mm, Lerninseln B:033"", jedoch:";139,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+30;"Zulage zu den Vorpositionen ""Hochkantlamelle, Bambus gedämpft, 280x140x10mm, [...]"" für die runde Ausführung des Bodenbelags.";34,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+40;"Zulage zu den Vorpositionen ""Hochkantlamelle, Bambus gedämpft, 280x140x10mm, [...]""  für das Anarbeiten des Bodenbelags an nicht rechtwinklige AußenEcken.";22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+50;Oberboden B:032+B:033 an Stützen anarbeiten.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+60;Bodentank mit dem zuvor beschriebenen Bodenbelag B:032 belegen einschl. Verfugung, dauerelastischen Anschlüssen und Anarbeitungen.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Sockelleiste als Breitlamelle, oberseitig 1/4 abgerundet, Ecken und Stöße auf Gehrung geschnitten.;212,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+20;"Zulage zur Vorposition ""Sockelleiste Massiv, Bambus gedämpft, 50x15mm"" für die runde Ausführung der Sockelleiste.";34,0;lfdm;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+30;"Zulage zur Vorposition ""Sockelleiste Massiv, Bambus gedämpft, 50x15mm"" für das Herstellen der Gehrung in nicht rechtwinkligen Innen-/Außen-Ecken.";8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Erstpflege des Industrieparketts mit Erstpflegeöl gemäß Herstellervorgaben, Leistungsausführung innerhalb einer Woche nach Aufforderung durch die Bauleitung des Architekten.;8942,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+10;Inkl. aller Nebenkosten.;100,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83
+20;Inkl. aller Nebenkosten.;100,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/22-067_15_Bodenbelagsarbeiten_xml32.X83

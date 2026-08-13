@@ -1,0 +1,68 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Allgemeine, vollständige Einrichtung der Baustelle nach Maßgabe der angegebenen Leistungen. Bereitstellung, Antransport und Vorhaltung über die Dauer der Bauzeit und ggf. Umsetzen von Maschinen und Werkzeugen und Arbeitsbühnen, welche für die Ausführung der Arbeiten dieses Gewerkes erforderlich sind;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+20;Aufwendungen für;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+30;Baustelle von allen Geräten, Anlagen, Einrichtungen und dgl. räumen.;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+10;Beweissicherungsverfahren durchführen für alle Abschnitte dieses Leistungsverzeichnisses.;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+20;Bauzeitenplan aufstellen, liefern und fortschreiben nach Unterlagen des AG.;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+30;Bauzeitenplan aufgrund von Änderungen und/oder Verzögerungen, die nicht im Verantwortungsbereich des AN liegen, fortschreiben.;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+40;Bauwerksbuch aufstellen und liefern nach Unterlagen des AG.;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+50;Vermessungsarbeiten gemäß ZTV-ING bzw. Baubeschreibung durchführen und dokumentieren.;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+60;Lichtbilder über den wesentlichen Bauablauf des Bauwerks in digitalisierter Form (Auflösung mindestens;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+70;Werkstattzeichnungen für sämtliche Stahlbauteile auf Grundlage der Genehmigungsstatik und Ausführungspläne des AG herstellen.;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+10;Schweißnahtprüfung auf gesonderte Anordnung des AG durchführen. Schweißnaht bewerten. Die Ergebnisse sind dem AG im Original zu übergeben.;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+20;Dichtigkeitsprüfungen auf Anordnung des AG durchführen.;4,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+10;Arbeitsgerüste für den Einsatzbereich Brücke gemäß den statischen, konstruktiven und sicherheitstechnischen Anforderungen herstellen, vorhalten, unterhalten und nach Abschluss der eigenen Leistungen wieder beseitigen.;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+20;Traggerüst der Bemessungsklasse B für das gesamte Bauwerk gemäß den statischen, konstruktiven und sicherheitstechnischen Anforderungen herstellen, vorhalten, unterhalten und nach Abschluss der Arbeiten wieder beseitigen.;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+30;Bestehende Holzbrücke, ca. 25,0 m lang und ca. 3,6 m breit, vierfach gestützt, vollständig abbrechen und rückbauen.;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+10;Kernbohrung in bewehrtem Beton bis 50cm Stärke Ø 120mm für Anschluss der Brückenheizung.;1,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+20;Löcher herausgebohrter Verankerung der Bestandsbrücke in Widerlagern und Auflagerbalken verschließen;8,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+10;OS11a Beschichtung der Oberseiten beider Widerlager und Fundamentbalken.;11,5;m²;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+10;Gräben für Verlegung von Schutzrohren und Kabeln für Niederspannungsleitung bis Planum in (wassergebunden) Wegebereichen herstellen.;10,0;m;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+20;Leerrohr DN 110,;12,0;m;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+30;Wiederherstellen der Wassergebundenen Wegedecke inkl. Material.;5,0;m²;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+10;Liefern und Einbau der Profile.;4,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+20;Liefern und Einbau der Profile.;2,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+30;Liefern und Einbau der Profile.;4,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+40;Liefern und Einbau der Profile.;31,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+50;Zur Installation der Flächenheizung werden quer zur Brückenlängsrichtung Quadrathohlprofile unter den Pressrosten angeordnet. Die Verschweißung mit den Pressrosten erfolgt konstruktiv punktuell. Je Feld zwischen zwei Querträgern werden 10 Rohre angeordnet.;1030,0;lfm.;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+60;Je Brückenseite sind die Auslässe jeweils zwei benachbarter Rohre zwecks Schutz vor Vandalismus über angeschweißte Abdeckbleche ober- und unterseitig sowie in Richtung Brückenmitte verschlossen (siehe Ausführungsplanung).;270,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+70;Liefern und Einbau der Profile.;12,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+80;Herstellen, Liefern und Einbau des Anschlusses inkl. Bohrlöcher in Kopfplatte und Anschlussblech.;8,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+90;Herstellen, Liefern und Einbau des Anschlusses inkl. Bohrlöcher in Anschlussblech.;10,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+100;Herstellen, Liefern und Einbau des Anschlusses inkl. Bohrlöcher in Anschlussblech.;4,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+110;Herstellen, Liefern und Einbau des Anschlusses inkl. Bohrlöcher in Anschlussblech.;4,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+120;Herstellen, Liefern und Einbau des Anschlusses inkl. Bohrlöchern in Anschlussblechen.;1,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+130;Herstellen, Liefern und Einbau des Anschlusses inkl. Bohrlöchern in Anschlussblechen.;1,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+140;Herstellen, Liefern und Einbau des Anschlusses inkl. Bohrlöchern in Anschlussblechen.;1,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+150;Herstellen, Liefern und Einbau des Anschlusses inkl. Bohrlöchern in Anschlussblechen.;1,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+10;Liefern und Einbau der Profile.;2,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+20;Liefern und Einbau der Profile.;426,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+30;Liefern und Einbau der Profile.;2,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+40;Liefern und Einbau der Profile.;62,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+50;Liefern und Einbau der Profile.;2,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+60;Herstellen, Liefern und Einbau des Anschlusses inkl. Bohrlöcher in Kopfplatte und Anschlussblech.;62,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+10;Nicht zugängliche und nicht mehr erreichbare Flächen sind gemäß dem Beschichtungsplan wie folgt zu behandeln.;90,0;dm²;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+20;Nicht zugängliche und nicht mehr erreichbare Flächen sind gemäß dem Beschichtungsplan wie folgt zu behandeln.;520,0;dm²;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+10;Die tragende Deckschicht der Brücke wird aus verschweißten Pressrosten mit Rutschhemmklasse ≥ R11 ausgebildet.;102,0;m²;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+20;An beiden Widerlagern wird die Fuge zwischen Pressrosten und Stahlbetonwiderlagern über ein an die Pressroste geschweißtes Winkelblech abgeschlossen.Diese liegt verschieblich auf der Betonplatte auf. Die Gleitsicherheit, sowie das bündige Anliegen der Bauteile muss gewährleistet sein. Das Widerlager;2,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+30;Befestigung auf Stahlunterkonstruktion über 4 Klemmverbindungen je Nebenträger.;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+10;Wandlerzählerschrank 50 kW Vorhalteleistung nach Richtlinie der Stadtwerke Herne;1,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+20;Potentialausgleichsschiene;1,0;Stk;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+30;Steuerschrank Brückenheizung zur Aufstellung im Freien.;1,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+40;Schnee- und Eismelder für;1,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+50;GSM Störmeldung der Anlage;1,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+60;Kombifühler für Feuchtigkeit und;1,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+70;BHLR Sonderheizleitung für Beton;10,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+80;Lieferung Anschluss und Montage von Rundsteckverbindungen;10,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+90;Herstellen, Errichten und Prüfen einer Erdungsanlage;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+100;Kabel NYY-J 5 x 16 mm² nach DIN VDE 0276 Teil 603, Cu-;15,0;m;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+110;Kabel NYY-J 1 x 16 mm² nach DIN VDE 0276 Teil 603, Cu-;20,0;m;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+120;Flexible Leitung 3 x 2,5 mm²;285,0;m;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+130;Erstprüfung der elektrischen Anlage und der;1,0;Stk;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+140;Zusammenstellung und Übergabe der Dokumentation.;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+150;Bohrungen in HEBs Ø 6,2  (Dicke 10mm) zur Befestigung der Kabelbühne Bohren.;120,0;St;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+160;Kabelbühne zum Einsatz in ungeschütztem Außenraum.;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+170;Kabelbühne zum Einsatz in ungeschütztem Außenraum.;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+180;Kabelspangen V2A  inkl.Distanzstück und Befestigungsmaterial.;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+190;Erdungspunkt Brücke;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83
+200;Erdungsverbindungsleitungen isoliert für Kabelbühne mit 2 aufgequetschten Ringkabelschuhen 6mm ²;1,0;psch;gaeb;leistungsbeschreibungen/Ersatzneubau Hueller Bach.X83

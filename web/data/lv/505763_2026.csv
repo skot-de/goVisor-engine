@@ -1,0 +1,26 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Gerüstaufstandsflächen durch planieren, verfestigen und auslegen von Lastverteilungselementen für nachstehend beschriebene Gerüste vorbereiten. Abrechnung erfolgt nach Gebäudelänge mit Gerüstaufstellung.;193,0;m;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+2;liefern und nach Herstellervorschrift und DIN 4420 fachgerecht aufstellen.;3027,0;m²;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+3;Zulage zur Pos.;656,0;m²;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+4;Fassadengerüst der vorg. Pos.;96029,0;m²Wo;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+5;Auskragung 0,30 m zu vorg. Gerüst einschl. des kompletten Belages in Stahlausführung liefern und am Gerüst nachträglich im Zuge der Fassadenarbeiten montieren und demontieren.;1285,0;m;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+6;Zulage zur Pos.;318,0;m;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+7;Konsolen der vorg. Pos.;23294,0;mWo;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+8;Auskragung 0,60 m;1285,0;m;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+9;Zulage zur Pos.;318,0;m;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+10;Konsolen der vorg. Pos.;23294,0;mWo;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+11;Innenliegender Seitenschutz bei einem Wandabstand über 0,30 m von der Fassade zum Gerüstbelag nach DIN EN 12811-1. An- und Abtransport, Montage und Demontage.;1259,0;m;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+12;Zulage zur Pos.;318,0;m;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+13;Innenliegenden Seitenschutz der vorg. Pos.;39941,0;mWo;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+14;Überbrückung in vorbeschriebenem Gerüst über Eingängen herstellen unterhalten und nach Abschluss der Baumaßnahme wieder abbauen.;12,0;m;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+15;Überbrückung der vorg. Pos.;381,0;mWo;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+16;Aufstellen des Gerüstes auf Stahlbetondachflächen in unterschiedlichen Höhen und gleichzeitigem Schutz der Dachabdichtung im Gerüstbereich.;159,0;m;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+17;Gerüsttreppenturm  H = ca. 8,50 m aufbauen, vorhalten und nach Freigabe durch die Bauleitung abbauen.;3,0;St;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+18;Gerüsttreppenturm der vorg. Pos.;92,4;StWo;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+19;Liefern, montieren, vorhalten und nach Beendigung der Arbeiten wieder demontieren eines Schutzdaches über dem Baustelleneingang, integriert in das Fassadengerüst.;2,0;Stck;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+20;Schutzdach der vorg. Pos.;118,0;StWo;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+1;Arbeits- und Schutzgerüst als Flächengerüst (Raumgerüst);22070,0;m³;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+2;Raumgerüst/Flächengerüst der vorg. Pos.;400085,0;m³Wo;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+1;Facharbeiter;20,0;h;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+2;Bauhelfer;20,0;h;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83
+3;Lehrling (3. Lehrjahr);20,0;h;gaeb;leistungsbeschreibungen/HSI-ARC-ALV__260716_NSH_LV_Gerüstbauarbeiten_V33.X83

@@ -1,0 +1,57 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01;Verteiler als Standschrank für Fernmeldetechnik, zum Einbau von 19-Zoll-Komponenten, aus Stahlblech, beschichtet, Schutzart IP 2X DIN EN 60529, Potentialausgleich nach DIN VDE 0100 und DIN VDE 0800-2, mit einer Tür aus Sicherheitsglas, Türanschlag wahlweise links/rechts, Türöffnungswinkel 180 Grad, ;6,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+02;bauseitig beigestellten Schaltschrank Fabrikat Rittal VX IT, Bestellnummer 5309116, auf der Baustelle auspacken, aufstellen, endmontieren und mit folgenden Komponenten nachrüsten:;4,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+03;Verteiler als Standschrank für Fernmeldetechnik, zum Einbau von 19-Zoll-Komponenten, aus Stahlblech, beschichtet, Schutzart IP 2X DIN EN 60529, Potentialausgleich nach DIN VDE 0100 und DIN VDE 0800-2, mit einer Tür aus Sicherheitsglas, Türanschlag wahlweise links/rechts, Türöffnungswinkel 180 Grad, ;2,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+04;LWL-Patchfeld mit Spleißkassette und Zubehör, ausziehbar, als 19-Zoll-Bauteil, 1 Höheneinheit,;20,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+05;"1HE, 19""-Modulträger 24 Port unbestückt";35,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+06;"19""-Rangierpanel, zum horizontalen Rangieren der Patchkabel, mit 5 Kabelführungsbügeln, aus Stahlblech mit Polyamid-Bügeln,Farbe RAL 7035, zum Einbau in vorgenannte Standschränke,";35,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+01;Vorhandene Unterverteilung nach Rücksprache mit dem Nutzer abschalten und nach Installation der erforderlichen Erweiterungen wieder in Betrieb nehmen.;7,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+02;Fehlerstromschutzschalter mit Überstromschutz DIN EN 61009-1 (VDE 0664-20), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514),;30,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+03;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514),;5,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+01;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5.;50,0;m;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+02;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 1,5.;25,0;m;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+03;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 2,5.;1250,0;m;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+04;Innenkabel mit Lichtwellenleiter, halogenfrei,;2000,0;m;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+05;Messung der Faserdämpfung einer LWL Faser E9/125;432,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+06;SSTP-Kabel 4 x 2 x AWG 22, Kat. 7 nach EN 50173 / ISO IEC 11801;30000,0;m;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+07;Messung Kat. 6a für die gesamte Übertragungsstrecke nach EN 50173 und ISO IEC 11801, in graphischer Form. einschl. Messprotokoll;600,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+01;RJ45 Modul Cat.6;1200,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+02;Modulaufnahme 2 x RJ45 30 Grad in Ausführung zur Aufnahme von 2 Stück RJ45 Modul/Kupplungen geeignet für Einbau in Unter- oder Aufputz-Anwendungen, Brüstungskanal oder Unterflursystemen, unbestückt, mit 30° Auslass, integrierter Staubschutzklappe, Codiermöglichkeit durch farbige Staubschutzklappen s;300,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+03;Verbindungsdose DIN EN 60670-1 (VDE 0606-1) als Abzweigkasten, mit Einführungen für Mantelleitungen für ortsfeste Installation, aus halogenfreiem Kunststoff, Grundfläche mind. 80/80 mm, Tiefe mind. 37 mm, mit Deckel, Schutzart IP 54 DIN EN 60529 (VDE 0470-1), mit 5 Klemmen bis 5 x 4 mm2, Aufputz, au;30,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+04;Gerätedose DIN EN 60670-1 (VDE 0606-1) und DIN 49073, aus halogenfreiem Kunststoff, Einbauöffnung 68 mm, Tiefe bis 65 mm, mit Schrauben, Unterputz, in Hohlwand, alle marktüblichen Baustoffe.;10,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+05;Wippschalter DIN EN 60669-1 (VDE 0632-1), Einbau in Gerätedose, 1 polig, Aus/Wechsel, 10 A, 250 V AC,;5,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+06;Schutzkontaktsteckdose DIN VDE 0620-1 (VDE 0620-1), Einbau in Gerätedose, Schutzart IP 44 DIN EN 60529 (VDE 0470-1), 16 A, 250 V AC,;5,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+07;Modularer Verbinder für 2 Datenkabel, geschirmt, bis 1000 MHz, 4 x 2(Paar), Kategorie 7 DIN EN 50173, einschl. systembedingtem Zubehör und Anschluss beider Datenkabel;30,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+01;Halogenfreie Aderleitung DIN EN 50525-3-41 (VDE 0285-525-3-41), CU-Leiter eindrähtig,;25,0;m;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+02;Halogenfreie Aderleitung DIN EN 50525-3-41 (VDE 0285-525-3-41), CU-Leiter eindrähtig,;25,0;m;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+03;Halogenfreie Aderleitung DIN EN 50525-3-41 (VDE 0285-525-3-41), CU-Leiter mehrdrähtig,;250,0;m;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+04;Potentialausgleichsschiene, für den zusätzlichen Potentialausgleich, mit Anschluss für mind.;7,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+01;LED-Feuchtraum-Anbauleuchte IP66 mit PC-Leuchtenkörper und PC-Diffusor.;10,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+01;Bohrung, Untergrundfläche senkrecht oder waagerecht, aus Mauerwerk, alle üblichen Baustoffe,;450,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+02;Bohrung, Untergrundfläche senkrecht oder waagerecht, aus Mauerwerk, alle üblichen Baustoffe,;250,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+03;Bohrung, Untergrundfläche senkrecht oder waagerecht, aus Mauerwerk, alle üblichen Baustoffe,;25,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+04;Bohrung, Untergrundfläche aus Stahlbeton, Normalbeton, senkrecht oder waagerecht, senkrecht über Kopf,;30,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+05;Bohrung, Untergrundfläche aus Stahlbeton, Normalbeton, senkrecht oder waagerecht, senkrecht über Kopf,;45,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+06;Kernbohrung, Untergrundfläche senkrecht oder waagerecht, aus Stahlbeton, Normalbeton,;5,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+07;Bohrung für beigestellte Geräte-/Verbindungsdose, Untergrundfläche senkrecht oder waagerecht, in Trockenbau, alle marktüblichen Baustoffe,;15,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+01;Revisionsklappe 400x400 aus Stahlblech, weiß beschichtet, liefern und in GK- Decke oder GK- Abkofferung einbauen, inkl. Erstellung der Montageöffnung und Entsorgung des Abbruchmaterials;300,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+02;Abdecken von Büromaterialien und Einrichtungsgegenständen mit Schutzfolie auf gesonderte Anordnung des Nutzers sowie Sichern der Folienränder durch Abkleben zum Schutz gegen Verschmutzung durch die Installationsarbeiten, rückstandsfreies Entfernen der Schutzmaterialien nach Beendigung der Arbeiten, ;500,0;m2;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+01;C-Profilschiene, gelocht, aus feuerverzinktem Stahl DIN EN ISO 1461, Länge;250,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+02;Bügelschelle aus feuerverzinktem Stahl DIN EN ISO 1461, Druck- und Gegenwanne Polypropylen, halogenfrei,;500,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+03;Kabelsammelhalter, aus Polypropylen, halogenfrei,;5000,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+04;Elektroinstallationskanal DIN EN 50085-2-1 (VDE 0604-2-1) als Leitungsführungskanal, aus Kunststoff, halogenfrei, Farbton:;550,0;m;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+05;Elektroinstallationskanal DIN EN 50085-2-1 (VDE 0604-2-1) als Leitungsführungskanal, aus Kunststoff, halogenfrei, Farbton:;300,0;m;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+06;Elektroinstallationskanal DIN EN 50085-2-1 (VDE 0604-2-1) als Leitungsführungskanal, aus Kunststoff, halogenfrei, Farbton:;100,0;m;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+01;Brandschutzabschottung an Kabel-/Leitungsanlagen als Mörtelschott, mit allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse S 30 DIN 4102-9, in Wänden aus Mauerwerk, in Wänden oder Decken aus Stahlbeton, Dicke bis 450 mm, runder Durchbruch,;150,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+02;Brandschutzabschottung an Kabel-/Leitungsanlagen als Mörtelschott, mit allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse S 30 DIN 4102-9, in Wänden aus Mauerwerk, in Wänden oder Decken aus Stahlbeton, Dicke bis 450 mm, runder Durchbruch,;90,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+03;Brandschutzabschottung an Kabel-/Leitungsanlagen als Mörtelschott, mit allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse S 90 DIN 4102-9, in Wänden aus Mauerwerk, in Wänden oder Decken aus Stahlbeton, Dicke bis 400 mm, runder Durchbruch,;15,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+04;Brandschutzkabelkanal als selbsttragendes Fertigteil, Beflammung von innen, rechteckig, mit allgemeinem bauaufsichtlichen Prüfzeugnis, Feuerwiderstandsklasse I 30 DIN 4102-11, mit abnehmbarem Deckel, Montage direkt an der Wand oder unter der Decke sowie unterhalb von Systemböden auf dem Rohfußboden,;100,0;m;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+05;Brandschutzkabelkanal als selbsttragendes Fertigteil, Beflammung von innen, rechteckig, mit allgemeinem bauaufsichtlichen Prüfzeugnis, Feuerwiderstandsklasse I 30 DIN 4102-11, mit abnehmbarem Deckel, Montage direkt an der Wand oder unter der Decke sowie unterhalb von Systemböden auf dem Rohfußboden,;20,0;m;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+06;Brandschutzabschottung an Kabel-/Leitungsanlagen als flexibles Schott, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse S 90 DIN 4102-9, Baustoffklasse DIN 4102-1 A (nichtbrennbar), Schmelzpunkt größer gleich 1000 Grad C, im Gebäude, in Wä;25,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+01;bauseits vorhandenen WLAN- Accesspoint demontieren und dem Auftraggeber zur weiteren Verwendung übergeben. Der Standort und die Ident- Nummer des Accesspoints sind zu dokumentieren.;150,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+02;bauseits beigestellten WLAN- Accesspoint an der Decke montieren und bauseits beigestelltes Verbindungskabel beidseitig in Accesspoint und Datenanschlussdose einstecken.;300,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+03;bauseits vorhandene Revisionsklappe öffnen und nach erfolgter Kabelverlegung wieder schließen;300,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+04;bauseits vorhandene Deckenplatte mit sichtbarem Tragesystem öffnen, auf der Baustelle zwischenlagern und nach Kabelverlegung wieder schließen.;250,0;St;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+05;Stundenverrechnungssatz Obermonteur;20,0;h;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+06;Stundenverrechnungssatz Facharbeiter;50,0;h;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83
+07;Stundenverrechnungssatz Helfer;50,0;h;gaeb;leistungsbeschreibungen/Sana KW LV WLAN_V33.X83

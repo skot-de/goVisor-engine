@@ -1,0 +1,75 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Einrichten und Räumen der Baustelle mit An- und Abfuhr, sowie Vorhalten der zur Erbringung aller nachstehend beschriebenen Leistungen erforderlichen Hebezeuge, Maschinen, Materialien, Geräte (Höhenzugangstechnik, Montageaufzüge/-lifte, Hebebühnen, Gerüste) und Werkzeuge, sowie erforderliche Persönli;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+20;Die Grundlage der Werkstatt- und Montageplanung bilden die Ausschreibungsunterlagen, die Ausführungsplanung des Fachplaners, das zu erstellende Aufmaß des Auftragnehmers und Besprechungstermine mit Auftragnehmer, Bauherr, Nutzer und Fachplaner.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+30;Anforderungen, Bestandteile und notwendige Angaben gemäß den anzuwendenden technischen Regelwerken.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+40;Zum Lieferumfang gehörten die vollständige Dokumentation und Benutzerinformation in Anlehnung an DIN EN 17206, DIN 56928 und EG-Maschinenrichtlinie 2006/42/EG einschließlich der nachgeführten Werkstatt- und Montageplanung mit statischen Berechnungen sowie nachfolgend genannte Unterlagen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+50;Die maschinentechnischen Einrichtungen werden durch einen ermächtigten Sachverständigen geprüft. Zur Prüfung gehören eine Vor-, Bau- und Abnahmeprüfung. Die Kosten für die Prüfung trägt der Auftraggeber.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+60;Die Einweisung, Unterweisung und Schulung soll das Betriebspersonal in die Lage versetzen, die maschinentechnischen Einrichtungen (Obermaschinerie Kettenzüge und Rollbildwand) und die zugehörige Steuerungstechnik sicher und effizient nutzen zu können.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;Der Kettenzug ist anhand der in den Zusätzlichen Technischen Vertragsbedingungen (ZTV) beschriebenen Anforderungen an die Konstruktion, Steuerung und Ausstattung der Maschinentechnik mit Triebwerken, zwei voneinander unabhängigen Sicherungseinrichtungen, Fahrbereichsbegrenzungen, Gebern und Lastmess;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+20;Der Steuerungsschrank Obermaschinerie beinhaltet alle für den Betrieb des in den ZTV beschriebenen Gesamtsystems erforderlichen zentralen Steuerungskomponenten und die zentrale Unterverteilung für die Energieversorgung der Anlage inkl. der Antriebe.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+30;Aufgrund von brandschutztechnischer Abstimmung ist unterhalb des Schaltschrankes eine nichtbrennbare Schutzwanne (Auffangwanne) aus Stahlblech zu installieren.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+40;Als Bedieneinheit ist ein mobiles tragbares Bedienpult inkl. Steuerungssoftware vorgesehen. Mit ihm können alle im System vorhandenen Achsen bedient werden.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+50;Für den Anschluss eines Bedienpults sind Steckstellen vorzusehen. Diese sind an folgenden Positionen zu installieren:;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+60;Der Leitungszug für die Verkabelung der Steckstelle auf der Bühne erfolgt bauseits.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+70;Die Kettenzüge sind über systemzugehörige, mobile System-Anschlussleitungen (Daten/Netzwerk + Energie + Potentialausgleich) mit der Unterverteilung/Zentralsteuerung zu verbinden.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+80;Verlängerung der in der Position zuvor beschriebenen Systemleitung zur Verbindung des Kettenzugs mit der Steuerung.;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+90;Für die Verlegung der Anschlussleitungen zu den Kettenzügen sind im Bereich des Wartungsganges im Dachgeschoss Kabelrinnen zu installieren.;34,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+100;Kabelbrücke als mobiler und flexibel einsetzbarer Trittschutz der Anschlussleitungen der Kettenzüge.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+110;Für die Montage der Kettenzüge sind Standgestelle zu liefern, die eine flexible Positionierung der Kettenzüge auf dem Wartungsumgang ermöglichen.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+120;Um die Aufhängungen der Traversen bzw. die einzelnen Lastpunkte dauerhaft festsetzen zu können und um einen Ausbau bzw. ein Umsetzen der Kettenzüge zu ermöglichen, sind entsprechende Bauteile zur Festsetzung der Lastpunkte zu liefern. Zudem muss durch die Bauteile die Deckendurchführung (Durchmesser;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+130;Drahtseil als Anschlagmittel zur Abhängung der Traversen von den Verriegelung der Tragmittel/Lastöse der Festsetzungen der Lastpunkte.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;Traversenaufhängung passend zu dem zuvor beschriebenen Traversensystem.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+20;Schäkel nach DIN EN 13889: 2009-02;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+30;Es ist ein Traversensystem für den flexiblen Einsatz zu liefern. Dieses soll wahlweise als Lastaufnahmemittel an den Kettenzügen, aber auch für andere temporäre Konstruktionen zum Einsatz kommen.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+40;Länge:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+50;Länge:;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+60;Länge:;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+70;Länge:;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+80;Länge:;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+90;Transportsystem für zuvor beschrieben Traversen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+100;Zur Aufnahme von veranstaltungstechnischen Geräten ist jeweils mittig unterhalb der zuvor beschriebenen Traversenstrecken ein abgehängtes Rundrohr zu installieren.;34,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;Die Leistung dieser Position umfasst die Lieferung, Montage und Inbetriebsetzung einer elektromechanisch angetriebenen Rollbildwand mit kletternder Wickelwelle, die zum Aufrollen der nachfolgend beschriebenen Projektionsfläche geeignet ist. Neben der Projektionsfläche, der Wickelwelle und einem ggf.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+20;Die Leistung dieser Position umfasst die Lieferung und Montage einer Projektionsfläche/Bildwandfläche für die Rollbildleinwand.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+30;Für die Steuerung und Bedienung der Rollbildwand ist im Bereich des Wartungsumgangs (2. Obergeschoss) in der Saaldecke/Saalhülle in der Nähe der Rollbildwand ein zentraler Kompaktschaltschrank zu installieren. Für die tägliche Bedienung durch den Nutzer ist im Bereich der Bühne im Erdgeschoss (Einba;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+40;Für die Montage der Rollbildwand sind zwei Befestigungskonsolen anzufertigen und zu installieren.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;Drahtseilhalter mit 6-Kugel-Mechanismus;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+20;Drahtseilhalter mit 6-Kugel-Mechanismus;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+30;Anschlagseil DIN EN 13414-1;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+40;Länge: 2 m;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+50;Länge: 3 m;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+60;Rundschlinge mit Stahldrahtseileinlage (Steelflex) nach DIN EN 1492-2 und DIN EN 13414-1 /-3,;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+70;Umfang: 4 m / Nutzlänge: 2 m;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+80;Umfang: 6 m / Nutzlänge: 3 m;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+90;Rundschlinge aus Polyesterfaser (Doppelmantel) nach DIN EN 1492-2;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+100;Umfang: 4 m / Nutzlänge: 2 m;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+110;Halbschelle/-coupler mit Ringöse;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+120;Schäkel mit Bolzen, Mutter und Splint nach DIN EN 13889:2009-02;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+130;Schäkel mit Bolzen, Mutter und Splint nach DIN EN 13889:2009-02;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;Steckfusspodest mit Trägerrahmen aus Aluminiumprofil und Holzbelag aus dem System eines Herstellers für Bühnenpodeste.;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+20;Steckfuss für das zuvor beschriebene Bühnenpodestsystem;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+30;Eckdaten:;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+40;Eckdaten:;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+50;Eckdaten:;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+60;Verbindungsklammer für das zuvor beschriebene Bühnenpodestsystem;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+70;Fuss-/Beinklammer für das zuvor beschriebene Bühnenpodestsystem;17,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+80;Fuss-/Beinklammer für das zuvor beschriebene Bühnenpodestsystem;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+90;Geländer für das zuvor beschriebene Bühnenpodestsystem;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+100;Eckdaten:;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+110;Transport- und Lagerwagen für die zuvor beschriebenen Bühnenpodeste;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+120;Transport- und Lagerwagen für die zuvor beschriebenen Sicherheitsgeländer;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+130;Transportcase für alle in diesem Titel beschriebenen Steckfüße und Zubehörteile.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+140;Textilverkleidung für das zuvor beschriebene Bühnenpodestsystem;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+150;Textilverkleidung für das zuvor beschriebene Bühnenpodestsystem;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+160;Textilverkleidung für das zuvor beschriebene Bühnenpodestsystem;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+170;Textilverkleidung für das zuvor beschriebene Bühnenpodestsystem;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+180;Klettband (Hakenband) für die Montage der zuvor beschriebenen Podestverkleidung am Bühnenpodestsystem;75,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+190;Steckfusspodest mit Trägerrahmen aus Aluminiumprofil und Holzbelag aus dem System eines Herstellers für Bühnenpodeste. Ausführung als Dirigentenpodets mit Zubehörteilen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;Für die Einrichtung von veranstaltungstechnischen Geräten und Wartungsarbeiten wird ein Personenlift benötigt, der von einer Person bewegt und genutzt werden kann. Aufgrund der begrenzten Standflächen können nur Produkte ohne Ausleger eingesetzt werden.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+20;Doppel-Stufen-Stehleiter für den professionellen Einsatz.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+30;Eckdaten:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;Es werden Stundenverrechnungssätze für Stundenlohnarbeiten einschl. aller Nebenkosten, wie Auslösung, Fahr- und Wegegeld, Unternehmerzuschlag etc. abgefragt. Die angegebene Stundenzahl ist nicht verbindlich.;2,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+20;Es werden Stundenverrechnungssätze für Stundenlohnarbeiten einschl. aller Nebenkosten, wie Auslösung, Fahr- und Wegegeld, Unternehmerzuschlag etc. abgefragt. Die angegebene Stundenzahl ist nicht verbindlich.;4,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+30;Es werden Stundenverrechnungssätze für Stundenlohnarbeiten einschl. aller Nebenkosten, wie Auslösung, Fahr- und Wegegeld, Unternehmerzuschlag etc. abgefragt. Die angegebene Stundenzahl ist nicht verbindlich.;4,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+40;Es werden Stundenverrechnungssätze für Stundenlohnarbeiten einschl. aller Nebenkosten, wie Auslösung, Fahr- und Wegegeld, Unternehmerzuschlag etc. abgefragt. Die angegebene Stundenzahl ist nicht verbindlich.;4,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+10;Jährlich ist eine Wartung in den Sommermonaten - voraussichtlich während der Sommerferien - durchzuführen. Diese soll die Wartung im Sinne der vorbeugenden Instandhaltung und die Sachkundigenprüfung beinhalten.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83
+20;Maschinentechnische Arbeitsmittel der Veranstaltungstechnik sind nach der;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Gaeb Version 3.2.x83

@@ -1,0 +1,1047 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;PP-Abflußrohr, schalldämmend, Typ: bis DN 50;70,0;lfdm;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+2;PP-Abflußrohr, schalldämmend, Typ: DN 70;25,0;lfdm;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+3;PP-Abflußrohr, schalldämmend, Typ: DN 100;800,0;lfdm;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+4;PP-Abflußrohr, schalldämmend, Typ: DN 125;50,0;lfdm;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+5;PP-Abflußrohr, schalldämmend, Typ: DN 150;60,0;lfdm;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+6;PP-Abflußrohr, schalldämmend, Typ: DN 200;5,0;lfdm;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+7;PP-Bogen, schalldämmend, alle Winkelgraden als Zulage,;90,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+8;PP-Bogen, schalldämmend, alle Winkelgraden als Zulage,;15,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+9;PP-Bogen, schalldämmend, alle Winkelgraden als Zulage,;500,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+10;PP-Bogen, schalldämmend, alle Winkelgraden als Zulage,;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+11;PP-Bogen, schalldämmend, alle Winkelgraden als Zulage,;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+12;PP-Bogen, schalldämmend, alle Winkelgraden als Zulage,;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+13;PP-Abflußrohr-Abzweig, schalldämmend, als Zulage, ggf. Reduzierungen in allen Winkelgraden;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+14;PP-Abflußrohr-Abzweig, schalldämmend, als Zulage, ggf. Reduzierungen in allen Winkelgraden;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+15;PP-Abflußrohr-Abzweig, schalldämmend, als Zulage, ggf. Reduzierungen in allen Winkelgraden;175,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+16;PP-Abflußrohr-Abzweig, schalldämmend, als Zulage, ggf. Reduzierungen in allen Winkelgraden;12,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+17;PP-Abflußrohr-Abzweig, schalldämmend, als Zulage, ggf. Reduzierungen in allen Winkelgraden;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+18;PP-Abflußrohr-Abzweig, schalldämmend, als Zulage, ggf. Reduzierungen in allen Winkelgraden;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+19;PP-Doppelabzweig, schalldämmend, als Zulage, ggf. Reduzierungen, Typ: DN 100;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+20;PP-Doppelabzweig, schalldämmend, als Zulage, ggf. Reduzierungen, Typ: DN 125;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+21;PP-Eckabzweig, schalldämmmend, als Zulage, Typ: DN 100;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+22;PP-Reduzierung, schalldämmend, als Zulage,;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+23;PP-Reduzierung, schalldämmend, als Zulage,;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+24;PP-Reduzierung, schalldämmend, als Zulage,;25,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+25;PP-Reduzierung, schalldämmend, als Zulage,;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+26;PP-Reduzierung, schalldämmend, als Zulage,;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+27;PP-Reduzierung, schalldämmend, als Zulage,;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+28;PP-Reinigungsrohr mit runder Öffnung für Falleitungen,;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+29;PP-Reinigungsrohr mit runder Öffnung für Falleitungen,;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+30;PP-Reinigungsrohr mit runder Öffnung für Falleitungen,;25,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+31;PP-Reinigungsrohr mit runder Öffnung für Falleitungen,;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+32;PP-Reinigungsrohr mit runder Öffnung für Falleitungen,;15,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+33;PP-Reinigungsrohr mit runder Öffnung für Falleitungen,;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+34;PP-Endstopfen als Zulage (Muffenstopfen),;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+35;PP-Endstopfen als Zulage (Muffenstopfen),;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+36;PP-Endstopfen als Zulage (Muffenstopfen),;6,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+37;PP-Endstopfen als Zulage (Muffenstopfen),;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+38;PP-Endstopfen als Zulage (Muffenstopfen),;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+39;PP-Endstopfen als Zulage (Muffenstopfen),;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+40;PP-Schiebe- oder Doppelmuffen, schalldämmend,;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+41;PP-Schiebe- oder Doppelmuffen, schalldämmend,;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+42;PP-Schiebe- oder Doppelmuffen, schalldämmend,;75,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+43;PP-Schiebe- oder Doppelmuffen, schalldämmend,;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+44;PP-Schiebe- oder Doppelmuffen, schalldämmend,;7,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+45;PP-Schiebe- oder Doppelmuffen, schalldämmend,;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+46;PP-Übergang, an KG-Grundleitung,;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+47;PP-Übergang, an KG-Grundleitung,;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+48;PP-Objektanschlüsse, schalldämmend, bestehend aus;26,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+49;PP-Objektanschlüsse, schalldämmend, bestehend aus;9,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+50;PP-Objektanschlüsse, schalldämmend, bestehend aus;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+51;schallgedämmt mit IG M10 und AG 1/2 Zoll;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+52;schallgedämmt mit IG M10 und AG 1/2 Zoll;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+53;schallgedämmt mit IG M10 und AG 1/2 Zoll;500,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+54;schallgedämmt mit IG M10 und AG 1/2 Zoll;25,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+55;schallgedämmt mit IG M10 und AG 1/2 Zoll;40,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+56;schallgedämmt mit IG M10 und AG 1/2 Zoll;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+57;Rohrschott R90 für;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+58;Rohrschott R90 für;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+59;Rohrschott R90 für;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+60;Auszugsichere Verbindung;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+61;Auszugsichere Verbindung;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+62;Auszugsichere Verbindung;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+63;Anschluß an Entlüftungsleitung, Typ: DN 80;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+64;Anschluß an Entlüftungsleitung, Typ: DN 100;15,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+65;Anschluß an Entlüftungsleitung, Typ: DN 150;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+66;HT-Abflußrohr, Typ: DN 30;30,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+67;HT-Abflußrohr, Typ: DN 50;50,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+68;HT-Passstücke als Zulage, Typ: bis DN 50;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+69;HT-Abzweig als Zulage, ggf. Reduzierungen in allen;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+70;HT-Doppelabzweig als Zulage, ggf. Reduzierungen;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+71;HT-Eckabzweig als Zulage, Typ: bis DN 50;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+72;HT-Bogen in allen Winkelgraden als Zulage,;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+73;HT-Siphonbogen, ggf. reduziert, mit Gummimanschette;8,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+74;HT-Reduzierung als Zulage, alle Übergangsdimensionen,;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+75;HT-Reinigungsrohr mit runder Öffnung für Falleitungen,;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+76;HT-Endstopfen als Zulage (Muffenstopfen),Typ: bis DN 50;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+77;HT-Schiebe- oder Doppelmuffen, als Zulage;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+78;HT-Objektanschlüsse beschrieben wie vor;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+79;Rohrbelüfter, Typ: DN 50;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+80;Rohrbelüfter, Typ: DN 70;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+81;Rohrbelüfter, Typ: DN 100;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+82;Kondensatwasserablauf für Entwässerungsgerät wie;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+83;wie vor beschrieben, jedoch in der Ausführung:;3,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+84;wie vor beschrieben, jedoch in der Ausführung:;2,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+85;wie vor beschrieben, jedoch in der Ausführung:;3,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+86;wie vor beschrieben, jedoch in der Ausführung:;2,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+87;wie vor beschrieben, jedoch in der Ausführung:;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+88;wie vor beschrieben, jedoch in der Ausführung:;3,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+89;wie vor beschrieben, jedoch in der Ausführung:;12,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+90;wie vor beschrieben, jedoch in der Ausführung:;2,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+91;wie vor beschrieben, jedoch in der Ausführung:;2,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+92;wie vor beschrieben, jedoch in der Ausführung:;1,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+93;wie vor beschrieben, jedoch in der Ausführung:;1,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+94;wie vor beschrieben, jedoch in der Ausführung:;8,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+95;wie vor beschrieben, jedoch in der Ausführung:;1,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+96;wie vor beschrieben, jedoch in der Ausführung:;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+97;wie vor beschrieben, jedoch in der Ausführung:;1,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+98;wie vor beschrieben, jedoch in der Ausführung:;1,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+99;wie vor beschrieben, jedoch in der Ausführung:;1,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+100;wie vor beschrieben, jedoch in der Ausführung:;11,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+101;wie vor beschrieben, jedoch in der Ausführung:;31,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+102;wie vor beschrieben, jedoch in der Ausführung:;3,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+103;Erstellung, Prüfung und Vorlage eines vollständigen, prüffähigen hydraulischen Berechnungsnachweises für das angebotene Druckströmungs-Entwässerungssystem (LORO-DRAINJET) gemäß DIN EN 12056-3 und DIN 1986-100.;1,0;psch;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+104;Anfertigen einer detaillierten, koordinierungsfähigen Werk- und Montageplanung für das gesamte Druckströmungs-Entwässerungssystem im Maßstab 1:50 / 1:20 unter Berücksichtigung der örtlichen Gegebenheiten und des zuvor erstellten hydraulischen Nachweises.;1,0;psch;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+105;Dimension: DN 70;15,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+106;Dimension: DN 100 (DA 110 mm);65,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+107;Verlängerungsstück passend für Bodenabläufe;25,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+108;wie vor beschrieben, jedoch in der Ausführung:;2,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+109;wie vor beschrieben, jedoch in der Ausführung:;5,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+110;wie vor beschrieben, jedoch in der Ausführung:;9,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+111;wie vor beschrieben, jedoch in der Ausführung:;2,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+112;wie vor beschrieben, jedoch in der Ausführung:;9,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+113;wie vor beschrieben, jedoch in der Ausführung:;8,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+114;wie vor beschrieben, jedoch in der Ausführung:;2,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+115;wie vor beschrieben, jedoch in der Ausführung:;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+116;wie vor beschrieben, jedoch in der Ausführung:;8,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+117;wie vor beschrieben, jedoch in der Ausführung:;2,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+118;wie vor beschrieben, jedoch in der Ausführung:;1,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+119;wie vor beschrieben, jedoch in der Ausführung:;5,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+120;wie vor beschrieben, jedoch in der Ausführung:;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+121;wie vor beschrieben, jedoch in der Ausführung:;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+122;wie vor beschrieben, jedoch in der Ausführung:;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+123;Ausführung des Rinnen-Ablaufstutzens mit Klebeflansch auf Ebene Rohboden (2. Abdichtungsebene),;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+124;Abdeckung (Designrost) passend für die vorbeschriebene Reihenduschrinne (Wassereinlaufbreite 100 mm) und auf die jeweilige Länge angepasst.;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+125;wie vor beschrieben, jedoch in der Ausführung:;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+126;Ausführung des Rinnen-Ablaufstutzens mit Klebeflansch auf Ebene Rohboden (2. Abdichtungsebene),;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+127;Abdeckung (Designrost) passend für die vorbeschriebene Reihenduschrinne (Wassereinlaufbreite 100 mm) und auf die jeweilige Länge angepasst.;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+128;Steckerfertige Kleinhebeanlage, geeignet für die Abwasserentsorgung von häuslichem Schwarzwasser, ideal zum Anschluss von WC, Bidet, Dusche und Waschbecken.;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+1;Edelstahlrohr, Typ: 15 x 1 mm (DN12);450,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+2;Edelstahlrohr, Typ: 18 x 1 mm (DN15);330,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+3;Edelstahlrohr, Typ: 22 x 1,2 mm (DN20);275,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+4;Edelstahlrohr, Typ: 28 x 1,2 mm (DN25);55,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+5;Edelstahlrohr, Typ: 35 x 1,5 mm (DN32);95,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+6;Edelstahlrohr, Typ: 42 x 1,5 mm (DN40);125,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+7;Edelstahlrohr, Typ: 54 x 1,5 mm (DN50);60,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+8;Edelstahlrohr, Typ: 64 x 2,0 mm (DN60);10,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+9;Edelstahlrohr, Typ: 67,1 x 2,0 mm (DN65);60,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+10;Edelstahlrohr, Typ: 88,9 x 2,0 mm (DN80);15,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+11;Edelstahlrohr, Typ: 108 x 2,0 mm (DN100);25,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+12;Edelstahlbogen, alle Winkelgrade als Zulage,;350,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+13;Edelstahlbogen, alle Winkelgrade als Zulage,;400,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+14;Edelstahlbogen, alle Winkelgrade als Zulage,;150,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+15;Edelstahlbogen, alle Winkelgrade als Zulage,;50,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+16;Edelstahlbogen, alle Winkelgrade als Zulage,;40,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+17;Edelstahlbogen, alle Winkelgrade als Zulage,;70,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+18;Edelstahlbogen, alle Winkelgrade als Zulage,;15,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+19;Bogen für Edelstahlrohr, alle Winkelgrade als Zulage,;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+20;Bogen für Edelstahlrohr, alle Winkelgrade als Zulage,;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+21;Bogen für Edelstahlrohr, alle Winkelgrade als Zulage,;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+22;Bogen für Edelstahlrohr, alle Winkelgrade als Zulage,;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+23;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;40,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+24;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;70,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+25;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;70,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+26;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+27;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;15,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+28;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+29;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+30;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+31;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+32;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+33;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+34;Reduzierung für Edelstahlrohr, alle Übergangsdimensionen, als Zulage;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+35;Reduzierung für Edelstahlrohr, alle Übergangsdimensionen, als Zulage;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+36;Reduzierung für Edelstahlrohr, alle Übergangsdimensionen, als Zulage;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+37;Reduzierung für Edelstahlrohr, alle Übergangsdimensionen, als Zulage;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+38;Reduzierung für Edelstahlrohr, alle Übergangsdimensionen, als Zulage;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+39;Reduzierung für Edelstahlrohr, alle;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+40;Reduzierung für Edelstahlrohr, alle;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+41;Reduzierung für Edelstahlrohr, alle;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+42;Reduzierung für Edelstahlrohr, alle;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+43;Reduzierung für Edelstahlrohr, alle;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+44;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;25,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+45;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;50,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+46;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+47;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+48;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+49;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+50;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+51;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+52;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+53;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+54;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+55;Übergang auf Außengewinde, ggf. reduziert, als Zulage;60,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+56;Übergang auf Außengewinde, ggf. reduziert, als Zulage;60,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+57;Übergang auf Außengewinde, ggf. reduziert, als Zulage;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+58;Übergang auf Außengewinde, ggf. reduziert, als Zulage;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+59;Übergang auf Außengewinde, ggf. reduziert, als Zulage;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+60;Übergang auf Außengewinde, ggf. reduziert, als Zulage;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+61;Übergang auf Außengewinde, ggf. reduziert, als Zulage;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+62;Übergang auf Flanschverbindung, ggf. reduziert, als Zulage;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+63;Übergang auf Flanschverbindung, ggf. reduziert, als Zulage;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+64;Liefern und Verlegen einer erdverlegten Trinkwasserleitung außerhalb von Gebäuden aus Polyethylen hoher Dichte (PE-HD / PE 100-RC), für Trinkwasser nach DIN EN 12201 und DVGW-Arbeitsblatt W 400.;20,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+65;Ringraumdichtung DN 100 für Medienrohr da 25;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+66;PE-Druckrohr, DN 20 (25 x 2,3 mm);125,0;lfdm;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+67;PE-Druckrohr Bogen, DN 20 (25 x 2,3 mm);40,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+68;E-Schweiß-T-Stück, DN 20 (25 x 2,3 mm);10,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+69;Rohrschellen als Zulage, wie im Vortext beschrieben,;300,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+70;Rohrschellen als Zulage, wie im Vortext beschrieben,;200,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+71;Rohrschellen als Zulage, wie im Vortext beschrieben,;150,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+72;Rohrschellen als Zulage, wie im Vortext beschrieben,;40,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+73;Rohrschellen als Zulage, wie im Vortext beschrieben,;50,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+74;Rohrschellen als Zulage, wie im Vortext beschrieben,;100,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+75;Rohrschellen als Zulage, wie im Vortext beschrieben,;50,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+76;Rohrschellen als Zulage, wie im Vortext beschrieben,;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+77;Rohrschellen als Zulage, wie im Vortext beschrieben,;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+78;Rohrschellen als Zulage, wie im Vortext beschrieben,;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+79;Rohrschellen als Zulage, wie im Vortext beschrieben,;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+80;Deckenwinkel aus Edelstahl mit Wandabstand und;6,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+81;Deckenwinkel aus Edelstahl mit Wandabstand und;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+82;Deckenwinkel aus Edelstahl mit Wandabstand und;8,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+83;"Wandscheibe, Typ 15 x 1/2""";30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+84;"Wandscheibe, Typ 18 x 1/2""";20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+85;"Wandscheibe, Typ 22 x 3/4""";5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+86;"Doppelwandscheibe, Typ 15 x 1/2"" x 15";30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+87;"Doppelwandscheibe, Typ 18 x 1/2"" x 18";20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+88;"Doppelwandscheibe, Typ 22 x 1/2"" x 22";10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+89;"Doppelwandscheibe, Typ 28 x 1/2"" x 28";1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+90;"Wandscheiben-T-Stück, Typ 15 x 1/2"" x 15";2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+91;"Wandscheiben-T-Stück, Typ 18 x 1/2"" x 18";4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+92;"Wandscheiben-T-Stück, Typ 22 x 1/2"" x 22";1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+93;"Wandscheiben-T-Stück, Typ 28 x 1/2"" x 28";1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+94;wie vor beschrieben, jedoch in der Ausführung:;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+95;Einpressdüse, Typ 22 mm;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+96;Einpressdüse, Typ 28 mm;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+97;Verschlußstopfen mit Gewindemuffe und Dichtung als;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+98;Verschlußstopfen mit Gewindemuffe und Dichtung als;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+99;Verschlußstopfen mit Gewindemuffe und Dichtung als;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+100;Verschlußstopfen mit Gewindemuffe und Dichtung als;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+101;Liefern und Benutzen der für die Druckprüfung von Trinkwasserleitungen nötigen Betriebsstoffe und Medien über den gesamten Leistungszeitraum.;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+102;Das Fertigstellen von Bauteilen in mehreren Arbeitsgängen zur Ermöglichung von Arbeiten anderer Unternehmer ist, soweit die eigenen Leistungen im Zuge gleichartiger Arbeiten kontinuierlich erbracht werden können, gemäß DIN 18381.eine Nebenleistung.;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+103;Spülen der Trinkwasserinstallation vor der Inbetriebnahme einschließlich aller dazu notwendigen Betriebsstoffe und Nebenarbeiten, wie im Vortext beschrieben, mit allen Anlagenteilen der Kalt- und Warmwasserleitungen einschließlich Zirkulation.;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+104;Das Fertigstellen von Bauteilen in mehreren Arbeitsgängen zur Ermöglichung von Arbeiten anderer Unternehmer ist, soweit die eigenen Leistungen im Zuge gleichartiger Arbeiten kontinuierlich erbracht werden können, gemäß DIN 18381.eine Nebenleistung.;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+1;Rohrisolierung Mineralfaser, alukaschiert, DN 12;450,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+2;Rohrisolierung Mineralfaser, alukaschiert, DN 15;330,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+3;Rohrisolierung Mineralfaser, alukaschiert, DN 20;275,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+4;Rohrisolierung Mineralfaser, alukaschiert, DN 25;55,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+5;Rohrisolierung Mineralfaser, alukaschiert, DN 32;95,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+6;Rohrisolierung Mineralfaser, alukaschiert, DN 40;125,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+7;Rohrisolierung Mineralfaser, alukaschiert, DN 50;60,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+8;Rohrisolierung Mineralfaser, alukaschiert, DN 60;10,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+9;Rohrisolierung Mineralfaser, alukaschiert, DN 65;60,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+10;Rohrisolierung Mineralfaser, alukaschiert, DN 80;15,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+11;Rohrisolierung Mineralfaser, alukaschiert, DN 100;25,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+12;Zulage für Paßstücke, DN 12;150,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+13;Zulage für Paßstücke, DN 15;100,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+14;Zulage für Paßstücke, DN 20;100,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+15;Zulage für Paßstücke, DN 25;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+16;Zulage für Paßstücke, DN 32;50,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+17;Zulage für Paßstücke, DN 40;50,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+18;Zulage für Paßstücke, DN 50;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+19;Zulage für Paßstücke, DN 60;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+20;Zulage für Paßstücke, DN 65;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+21;Zulage für Paßstücke, DN 80;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+22;Zulage für Paßstücke, DN 100;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+23;Zulage für Bögen, DN 12;350,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+24;Zulage für Bögen, DN 15;400,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+25;Zulage für Bögen, DN 20;150,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+26;Zulage für Bögen, DN 25;50,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+27;Zulage für Bögen, DN 32;40,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+28;Zulage für Bögen, DN 40;70,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+29;Zulage für Bögen, DN 50;15,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+30;Zulage für Bögen, DN 60;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+31;Zulage für Bögen, DN 65;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+32;Zulage für Bögen, DN 80;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+33;Zulage für Bögen, DN 100;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+34;Zulage für Abzweige und Stutzen, DN 12;40,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+35;Zulage für Abzweige und Stutzen, DN 15;70,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+36;Zulage für Abzweige und Stutzen, DN 20;70,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+37;Zulage für Abzweige und Stutzen, DN 25;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+38;Zulage für Abzweige und Stutzen, DN 32;15,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+39;Zulage für Abzweige und Stutzen, DN 40;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+40;Zulage für Abzweige und Stutzen, DN 50;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+41;Zulage für Abzweige und Stutzen, DN 60;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+42;Zulage für Abzweige und Stutzen, DN 65;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+43;Zulage für Abzweige und Stutzen, DN 80;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+44;Zulage für Abzweige und Stutzen, DN 100;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+45;Zulage für Endkappen, DN 12;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+46;Zulage für Endkappen, DN 15;40,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+47;Zulage für Endkappen, DN 20;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+48;Zulage für Endkappen, DN 25;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+49;Zulage für Endkappen, DN 32;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+50;Zulage für Endkappen, DN 40;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+51;Zulage für Endkappen, DN 50;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+52;Zulage für Endkappen, DN 60;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+53;Zulage für Endkappen, DN 65;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+54;Zulage für Endkappen, DN80;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+55;Zulage für Endkappen, DN100;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+56;Zulage für Armaturenkappen, DN 12;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+57;Zulage für Armaturenkappen, DN 15;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+58;Zulage für Armaturenkappen, DN 20;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+59;Zulage für Armaturenkappen, DN 25;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+60;Zulage für Armaturenkappen, DN 32;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+61;Zulage für Armaturenkappen, DN 40;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+62;Zulage für Armaturenkappen, DN 50;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+63;Zulage für Armaturenkappen, DN 60;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+64;Zulage für Armaturenkappen, DN 65;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+65;Zulage für Armaturenkappen, DN 80;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+66;Zulage für Armaturenkappen, DN 100;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+67;Zulage Kappen Rohrhalterung, DN 12;25,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+68;Zulage Kappen Rohrhalterung, DN 15;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+69;Zulage Kappen Rohrhalterung, DN 20;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+70;Zulage Kappen Rohrhalterung, DN 25;15,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+71;Zulage Kappen Rohrhalterung, DN 32;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+72;Zulage Kappen Rohrhalterung, DN 40;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+73;Zulage Kappen Rohrhalterung, DN 50;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+74;Zulage Kappen Rohrhalterung, DN 60;60,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+75;Zulage Kappen Rohrhalterung, DN 65;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+76;Zulage Kappen Rohrhalterung, DN 80;18,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+77;Zulage Kappen Rohrhalterung, DN 100;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+78;Zulage für Übergang, DN 12;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+79;Zulage für Übergang, DN 15;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+80;Zulage für Übergang, DN 20;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+81;Zulage für Übergang, DN 25;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+82;Zulage für Übergang, DN 32;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+83;Zulage für Übergang, DN 40;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+84;Zulage für Übergang, DN 50;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+85;Zulage für Übergang, DN 60;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+86;Zulage für Übergang, DN 65;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+87;Zulage für Übergang, DN 80;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+88;Zulage für Übergang, DN 100;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+89;Zulage für Ausschnitte, bis DN 25;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+90;Zulage für Ausschnitte, bis DN 50;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+91;Zulage für Ausschnitte, bis DN 100;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+92;Rohrtyp: Cu-, Edelstahl, Isolierung: 5 mm, DN 12;50,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+93;Rohrtyp: Cu-, Edelstahl, Isolierung: 5 mm, DN 15;100,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+94;Rohrtyp: Cu-, Edelstahl, Isolierung: 5 mm, DN 20;10,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+95;Rohrtyp: Cu-, Edelstahl, Isolierung: 9 mm, DN 12;50,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+96;Rohrtyp: Cu-, Edelstahl, Isolierung: 9 mm, DN 15;100,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+97;Rohrtyp: Cu-, Edelstahl, Isolierung: 9 mm, DN 20;10,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+98;Zulage für Passstücke (5 oder 9 mm), Cu/V2A-Rohr, DN 12;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+99;Zulage für Passstücke (5 oder 9 mm), Cu/V2A-Rohr, DN 15;50,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+100;Zulage für Passstücke (5 oder 9 mm), Cu/V2A-Rohr, DN 20;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+101;Zulage für Bögen (5 oder 9 mm), Cu/V2A-Rohr, DN 12;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+102;Zulage für Bögen (5 oder 9 mm), Cu/V2A-Rohr, DN 15;40,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+103;Zulage für Bögen (5 oder 9 mm), Cu/V2A-Rohr, DN 20;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+104;Zulage für T-Stücke (5 oder 9 mm), Cu/V2A-Rohr, DN 12;50,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+105;Zulage für T-Stücke (5 oder 9 mm), Cu/V2A-Rohr, DN 15;100,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+106;Zulage für T-Stücke (5 oder 9 mm), Cu/V2A-Rohr, DN 20;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+107;Zulage Armaturenkappen (5 oder 9 mm), Cu/V2A-Rohr,DN 12;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+108;Zulage Armaturenkappen (5 oder 9 mm), Cu/V2A-Rohr,DN 15;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+109;Zulage Armaturenkappen (5 oder 9 mm), Cu/V2A-Rohr,DN 20;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+110;Zulage Kappen Rohrhalterung(5 o.9 mm),Cu/V2A-Rohr,DN 12;25,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+111;Zulage Kappen Rohrhalterung(5 o.9 mm),Cu/V2A-Rohr,DN 15;40,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+112;Zulage Kappen Rohrhalterung(5 o.9 mm),Cu/V2A-Rohr,DN 20;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+113;Zulage für Übergang, DN 12;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+114;Zulage für Übergang, DN 15;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+115;Zulage für Übergang, DN 20;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+116;Zulage für Ausschnitte, bis DN 25;15,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+117;Isolierungsband für Rohrtyp: bis einschl. DN 25;20,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+118;Isolierungsband für Rohrtyp: DN 32 - einschl. DN 50;5,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+119;Isolierungsband für Rohrtyp: DN 65 bis einschl. DN 80;5,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+120;Isolierungsband für Rohrtyp: DN 100 bis einschl. DN 125;15,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+121;Isolierungsband für Rohrtyp: DN 150 bis einschl. DN 200;10,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+122;Rohrabschottung R 90 für metallische Rohre wie vor beschrieben, jedoch für Nennweite bis DN15;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+123;Rohrabschottung R 90 für metallische Rohre wie vor beschrieben, jedoch für Nennweite DN 20;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+124;Rohrabschottung R 90 für metallische Rohre wie vor beschrieben, jedoch für Nennweite DN 25;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+125;Rohrabschottung R 90 für metallische Rohre wie vor beschrieben, jedoch für Nennweite DN 32;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+126;Rohrabschottung R 90 für metallische Rohre wie vor beschrieben, jedoch für Nennweite DN 32;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+127;Rohrabschottung R 90 für metallische Rohre wie vor beschrieben, jedoch für Nennweite DN 32;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+128;Rohrabschottung R 90 für metallische Rohre wie vor beschrieben, jedoch für Nennweite DN 32;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+129;Rohrabschottung R 90 für metallische Rohre wie vor beschrieben, jedoch für Nennweite DN 32;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+1;Anschluß an die städtische Wasserversorgung herstellen, einschl. Lieferung der erforderlichen Materialien wie Flansche, Übergangsstücke, Rohrbögen und Rohrpaßstücke, Übergänge, Wasserzähleranschlußplatte, Anschluß entsprechend der Bedingungen des örtlichen Versorgungsunternehmens, incl. aller Verbin;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+2;Flanschanschluß PN 16;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+3;Paßstück zur Vorrüstung eines Wasserzählers von Seiten des Versorgers beschriebenwie vor, als Zulage, bestehend aus:;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+4;Flanschanschluß PN 16;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+5;Flanschanschluß PN 16;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+6;Manometer für Trinkwasseanlagen mit Absperrkugelhahn;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+7;Bimetall- Zeigerthermometer,;8,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+8;Tauchhülsen für Rohr DN 20 - DN 50;8,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+9;Tauchhülsen für Rohr DN 20 - DN 50;10,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+10;Kugelhahn aus Edelstahl für Trinkwasser, Typ DN 12;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+11;Kugelhahn aus Edelstahl für Trinkwasser, Typ DN 15;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+12;Kugelhahn aus Edelstahl für Trinkwasser, Typ DN 20;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+13;Kugelhahn aus Edelstahl für Trinkwasser, Typ DN 25;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+14;Kugelhahn aus Edelstahl für Trinkwasser, Typ DN 32;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+15;Kugelhahn aus Edelstahl für Trinkwasser, Typ DN 40;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+16;Kugelhahn aus Edelstahl für Trinkwasser, Typ DN 50;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+17;Zwischenflansch-Absperrklappe für Trinkwasser;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+18;Zwischenflansch-Absperrklappe für Trinkwasser;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+19;Zwischenflansch-Absperrklappe für Trinkwasser;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+20;Rotguß-Schrägsitzventil;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+21;Rotguß-Schrägsitzventil, mit Entleerung, Typ DN 20;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+22;Rotguß-Schrägsitzventil, mit Entleerung, Typ DN 25;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+23;Rotguß-Schrägsitzventil, mit Entleerung, Typ DN 32;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+24;Rotguß-Freistromschrägsitzventil, mit;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+25;Rotguß-Freistromschrägsitzventil,  mit Entleerung,;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+26;Verlängerung mit Gewindenippeln, Typ: DN12 oder DN15, Armaturenanschluß-Verlängerung: bis 25 mm;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+27;Verlängerung mit Gewindenippeln, Typ: DN12 oder DN15, Armaturenanschluß-Verlängerung: bis 50 mm;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+28;Verlängerung mit Gewindenippeln, Typ: DN12 oder DN15, rmaturenanschluß-Verlängerung: bis 80 mm;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+29;Rotguß-Probenahme-Einheit,;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+30;Rotguß-Probenahme-Einheit,;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+31;Rotguß-Probenahme-Einheit,;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+32;Rotguß-Probenahme-Einheit,;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+33;Rotguß-Probenahme-Einheit,;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+34;Rotguß-Probenahme-Einheit,;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+35;Rotguß-Probenahme-Einheit,;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+36;Rotguß-Probenahme-Einheit,;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+37;"Füll- und Entleerungs-Kugelhahn Typ: 1/2"" , PN 16";4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+38;"Füll- und Entleerungs-Kugelhahn Typ: 3/4"" , PN 16";4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+39;Verlängerung mit Gewindenippeln,;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+40;Verlängerung mit Gewindenippeln,;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+41;Verlängerung mit Gewindenippeln,;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+42;Verlängerung mit Gewindenippeln, Typ: DN12 oder DN15;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+43;Kaltwasserzähler wie vor;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+44;Typ                         : Qn 6,3;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+45;Typ                         : Qn 16;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+46;Typ                         : Qn 16;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+47;M-Buszähler als Zubehör für zuvor beschriebenen;6,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+48;Verlängerungen der Kabel für zuvor beschriebene Kaltwasserzähler zwischen Zählwerk und Recheneinheit auf bis zu 10m als Zulage.;6,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+49;Paßstück zur Vorrüstung eines Wasserzählers beschrieben;6,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+50;Elektronische Spüleinrichtung zur Verhinderung von Trinkwasserstagnation in Rohrleitungen;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+51;Füllschlauch als Gewebeschlauch, mit;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+52;Unterputzventil, Typ: DN 15;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+53;Zulage Spindelverlängerung für vorgenanntes UP-Ventil DN 15;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+54;Unterputzventil, Typ: DN 20;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+55;Zulage Spindelverlängerung für vorgenanntes UP-Ventil DN 20;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+56;Zirkulations-Regulierventil, automatisch, Typ DN 15;15,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+1;Montageelement für Wand-WC mit UP-Spülkasten mit;8,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+2;Tiefspül-WC DIN EN 997, aus Sanitärporzellan;8,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+3;WC-Sitz mit Deckel, passend zum zuvor beschriebenem WC;8,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+4;Betätigungsplatte zur WC-Spülauslösung;8,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+5;Toilettenpapierspender für 2 herkömmliche Kleinrollen (Doppelrollenspender);8,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+6;Lieferung und fachgerechte Wandmontage einer hochwertigen, langlebigen WC-Bürstengarnitur aus hochglänzendem, durchgefärbtem Polyamid. Speziell geeignet für den Einsatz in barrierefreien Objekten sowie hochfrequentierten, öffentlichen oder gewerblichen Sanitärräumen.;8,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+7;Montageelement für Wand-Urinal mit Druckspüler mit;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+8;Ausführung:;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+9;Ausführung:;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+10;Montageelement für Wand-WC mit UP-Spülkasten mit;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+11;Tiefspül Wand-WC Behinderte, barrierefrei, nach DIN 1385-6 und DIN EN 38,;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+12;WC - Sitz mit metallischen Scharnieren als Spezialsitz für vorgenanntes Behinderten-WC,;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+13;Betätigungsplatte zur WC-Spülauslösung;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+14;Stützklappgriff, drehbar;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+15;Stützklappgriff, drehbar;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+16;Aufrüstsatz WC-Spülauslösung (Funk);6,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+17;Rückenstütze für Tiefspül-WC;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+18;Hygienebeutelspender dient zur Aufnahme und Entnahme von handelsüblichen Hygienebeuteln aus Kunststoff;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+19;Hygieneabfallbehälter dient zur Aufnahme von verwendeten Hygienebeuteln;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+20;Lieferung und fachgerechte Wandmontage einer hochwertigen, langlebigen WC-Bürstengarnitur aus hochglänzendem, durchgefärbtem Polyamid. Speziell geeignet für den Einsatz in barrierefreien Objekten sowie hochfrequentierten, öffentlichen oder gewerblichen Sanitärräumen.;3,0;St;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+21;Montageelement für Waschtisch, für Einloch oder;8,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+22;Waschtisch mit Ablagefläche nach DIN EN 14688, zum Einbau in Sanitärräumen.;6,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+23;Waschtisch nach DIN EN 14688, zum Einbau in Sanitärräumen.;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+24;Lieferung und fachgerechte Montage eines runden Einbauwaschtischs für den Einbau von oben (Auflage-Einbau) in eine bauseitige Trägerplatte. Geeignet für öffentliche Sanitärräume.;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+25;Baby-Badewanne, asymmetrisch;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+26;Berührungslose, elektronisch gesteuerte Waschtischarmatur;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+27;Berührungslose, elektronisch gesteuerte Waschtischarmatur;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+28;Converter 30 V -> 6 V, kurze Ausführung, inkl. Unterputzdose und Deckel;12,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+29;Flüssigseifenspender aus Kunststoff;13,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+30;Papierhandtuchspender;12,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+31;Abfallbehälter für Sanitär- und Waschräume;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+32;Einsatzbereich im Neubau und Sanierung in öffentlichen,;31,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+33;Mehrpreis für vorgenannte Position in Fertiglackierung des Herstellers nach RAL-Farbskala, liefern;31,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+34;wie vor, Duschpaneel jedoch als barrierefreie Einhand-Bedienung mit:;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+35;Mehrpreis für vorgenannte Position in Fertiglackierung des Herstellers nach RAL-Farbskala, liefern;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+36;Bestehend aus:;34,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+37;Zum Verdecken der Zugangsleitungen.;34,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+38;Mehrpreis für vorgenannte Position in Fertiglackierung des Herstellers nach RAL-Farbskala, liefern;34,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+39;Mehrpreis für vorgenannte Position als;250,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+40;Mehrpreis für vorgenannte Position in Fertiglackierung des Herstellers nach RAL-Farbskala, liefern;250,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+41;Duschhandlauf mit verschiebbarer Brausehalterstange;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+42;Einhängesitz, klappbar;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+43;Montageelement für Waschtisch barrierefrei;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+44;Waschtisch Behinderte nach DIN DIN EN 14688, DIN- EN 31,;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+45;Elektronische Waschtisch-Armatur;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+46;Rohmontageset Dusche Unterputz, DN15, mit Klebeflansch;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+47;Fertigmontageset für elektronische Duscheinrichtung, ausgeführt als Unterputz-Dusche in Nennweite DN15.;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+48;Mehrpreis für vorgenannte Position in Fertiglackierung des Herstellers nach RAL-Farbskala, liefern;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+49;Duschhandlauf mit verschiebbarer Brausehalterstange und als Eckmontage.;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+50;Einhängesitz, klappbar;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+51;Handbrause:;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+52;Waschtisch-Einhebelmischer;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+53;Montageelement für Ausgussbecken, für Wandarmatur für;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+54;Verwendungszwecke;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+55;Waschtisch-Einhebelmischer;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+56;Waschtisch-Einhebelmischer;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+57;Berührungslose, elektronisch gesteuerte Wandarmatur für Aufputzmontage:;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+58;Eckventil mit Regulierfunktion;22,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+59;Geräte-Kombinations-Eckventil,;12,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+60;Auslaufventil mit;9,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+61;Auslaufventil mit abschließbaren Griff;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+62;Auslaufventil;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+63;Auslaufventil mit;7,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+64;Geräteschrägsitzventil mit;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+65;Geräteschrägsitzventil mit abschließbaren Griff;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+66;Frostsichere Außenwandarmatur;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+67;Zur Einbindung von vorgenannten Armaturen in das CNX-Wassermanagement-System mittels Schnellverbindern, Anschlussleitung, Stecker;16,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+68;Zentrale Rechnereinheit zur Spannungsversorgung sowie Errichtung eines Wassermanagement-Systems und Steuerung der ausgeschriebenen Dusch- und Waschtischarmaturen.;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+69;Zur elektrischen Verdrahtung von Duschen, Waschtischarmaturen;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+70;Bestandsaufnahme vor Installation sowie Erstellung eines gebäudespezifischen Verdrahtungsplanes nach Herstellervorgaben sowie Einweisung des Fachgewerkes Elektrotechnik in die Leitungsverlegung zu den örtlich zu verbauenden Armaturen und der zugehörigen Steuereinheit.;70,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+71;Verdrahtungsarbeiten / Bestandsaufnahme durch eine Elektrofachkraft des Armaturenherstellers an den örtlich verbauten Armaturen und der zugehörigen Steuereinheit.;70,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+72;Inbetriebnahme der vorbeschriebenen Anlagen in Zusammenarbeit mit dem Werkskundendienst bestehend aus folgenden Arbeiten:;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+73;Leistungsumfang:;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+74;Schlüsselschalter für thermische Desinfektion;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+75;Haartrockner für den Einsatz im öffentlichen Bereich.;22,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+76;Duschliege für Einsatzgebiete z.B. in Schulen, Kitas, öffentliche Einrichtungen;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+1;Hydraulik:;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+2;Absperr-Set für FW E-Geräte/Module mit Dämmung,;4,0;Stk.;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+3;Drehzahlregulierte Brauchwasserpumpe;2,0;Stk.;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+4;Rückspülbarer Trinkwasserfeinfilter aus Messingguss,;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+5;Softwareerweiterung für die vorgenannten 2er Kaskade für eine vollautomatische Durchführung von thermischen;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+6;Pufferspeicher als Warmwasser-Schichtenspeicher.;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+7;Temperaturabhängige Umschaltung des primärseitigen;2,0;Stk.;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+8;Fühler-Set Speicher, Pt1000, Leitung 7m, AD 5mm;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+9;ComLog als Gateway-Modul im Gehäuse zur logischen;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+10;RS485 Modbus RTU Interface integriert in Controller-Chip des Reglers für o.g. Trinkwasser-;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+11;Inbetriebnahme für zuvor beschriebenes;1,0;psch;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+1;Monteurstunden;20,0;h;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+2;Helferstunden/Lehrlingstunden;20,0;h;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+3;Elektriker-Monteurstunden;10,0;h;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+4;Elektriker-Lehrling;10,0;h;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+5;Herstellen von Schlitzen  in Betonbauteilen (Wand, Boden) durch maschinelles fräsen für anschließende Verlegung von Sanitärrohren,;10,0;m;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+6;Erstellen von Kernbohrungen;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+7;Erstellen von Kernbohrungen;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+8;Erstellen von Kernbohrungen;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+9;Einkalkulieren sämtlicher Mehrkosten für die Durchführung der Installationsarbeiten (z.B. Luftleitungen, Klimageräte, Rohrleitungen) in einer Montagehöhe von mehr als 3,50 m über Oberkante Fertigfußboden (OKFF) mittels Montagehilfe. Die Position umfasst die Gestellung, den Auf- und Abbau, das Verfah;1,0;psch;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+10;Vorhaltezeitverlängerung um je einen;40,0;d;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+11;Proaktive Schnittstellenklärung und Koordination für den fachgerechten Einbau und Inbetruebnahme sämtlicher RLT-Komponenten (Lüftungsauslässe, Gitter, Brandschutzklappen, Volumenstromregler etc.) sowie für die Einbringung und Aufstellung der zentralen Lüftungsgeräte.;1,0;psch;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+12;Alle Anlagen im gegenständlichen Leistungsverzeichnis sind gemeinsam mit den beteiligten Koordinationsgewerken vor Übergabe an den Auftraggeber einem vollumfänglichen Probebetrieb zu unterziehen.;1,0;psch;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+13;Erstellen der Anlagendokumentation mit allgemein verständlicher und vollständiger Anlagenbeschreibung der Anlagenteile (incl. aller technischen Angaben aus Unterlagen der Zulieferer) mit wichtigen Grundeinstellungs- Betriebs-, Pflege- und Wartungshinweisen in tabellarischer Form.;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+14;Einweisung des Bedienpersonals im Zusammenhang mit der Inbetriebnahme in die Funktion und Bedienung der vollständig errichteten Gesamtanlage, bestehend aus:;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+15;Zusätzlich zu der Ersteinweisung ist die Einweisung nach einem Zeitraum von zwei Monaten nach Übergabe zu;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+1;Jahreswartungspauschale für das 1. Betriebs-/Wartungsjahr;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+2;Jahreswartungspauschale für das 2. Betriebs-/Wartungsjahr;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+3;Jahreswartungspauschale für das 3. Betriebs-/Wartungsjahr;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+4;Jahreswartungspauschale für das 4. Betriebs-/Wartungsjahr inkl. Endbegehung;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.24-LV SAN_V32.X83
+1;PP-Abflußrohr, schalldämmend, Typ: bis DN 50;70,0;lfdm;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+2;PP-Abflußrohr, schalldämmend, Typ: DN 70;25,0;lfdm;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+3;PP-Abflußrohr, schalldämmend, Typ: DN 100;800,0;lfdm;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+4;PP-Abflußrohr, schalldämmend, Typ: DN 125;50,0;lfdm;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+5;PP-Abflußrohr, schalldämmend, Typ: DN 150;60,0;lfdm;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+6;PP-Abflußrohr, schalldämmend, Typ: DN 200;5,0;lfdm;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+7;PP-Bogen, schalldämmend, alle Winkelgraden als Zulage,;90,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+8;PP-Bogen, schalldämmend, alle Winkelgraden als Zulage,;15,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+9;PP-Bogen, schalldämmend, alle Winkelgraden als Zulage,;500,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+10;PP-Bogen, schalldämmend, alle Winkelgraden als Zulage,;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+11;PP-Bogen, schalldämmend, alle Winkelgraden als Zulage,;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+12;PP-Bogen, schalldämmend, alle Winkelgraden als Zulage,;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+13;PP-Abflußrohr-Abzweig, schalldämmend, als Zulage, ggf. Reduzierungen in allen Winkelgraden;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+14;PP-Abflußrohr-Abzweig, schalldämmend, als Zulage, ggf. Reduzierungen in allen Winkelgraden;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+15;PP-Abflußrohr-Abzweig, schalldämmend, als Zulage, ggf. Reduzierungen in allen Winkelgraden;175,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+16;PP-Abflußrohr-Abzweig, schalldämmend, als Zulage, ggf. Reduzierungen in allen Winkelgraden;12,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+17;PP-Abflußrohr-Abzweig, schalldämmend, als Zulage, ggf. Reduzierungen in allen Winkelgraden;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+18;PP-Abflußrohr-Abzweig, schalldämmend, als Zulage, ggf. Reduzierungen in allen Winkelgraden;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+19;PP-Doppelabzweig, schalldämmend, als Zulage, ggf. Reduzierungen, Typ: DN 100;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+20;PP-Doppelabzweig, schalldämmend, als Zulage, ggf. Reduzierungen, Typ: DN 125;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+21;PP-Eckabzweig, schalldämmmend, als Zulage, Typ: DN 100;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+22;PP-Reduzierung, schalldämmend, als Zulage,;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+23;PP-Reduzierung, schalldämmend, als Zulage,;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+24;PP-Reduzierung, schalldämmend, als Zulage,;25,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+25;PP-Reduzierung, schalldämmend, als Zulage,;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+26;PP-Reduzierung, schalldämmend, als Zulage,;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+27;PP-Reduzierung, schalldämmend, als Zulage,;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+28;PP-Reinigungsrohr mit runder Öffnung für Falleitungen,;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+29;PP-Reinigungsrohr mit runder Öffnung für Falleitungen,;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+30;PP-Reinigungsrohr mit runder Öffnung für Falleitungen,;25,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+31;PP-Reinigungsrohr mit runder Öffnung für Falleitungen,;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+32;PP-Reinigungsrohr mit runder Öffnung für Falleitungen,;15,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+33;PP-Reinigungsrohr mit runder Öffnung für Falleitungen,;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+34;PP-Endstopfen als Zulage (Muffenstopfen),;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+35;PP-Endstopfen als Zulage (Muffenstopfen),;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+36;PP-Endstopfen als Zulage (Muffenstopfen),;6,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+37;PP-Endstopfen als Zulage (Muffenstopfen),;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+38;PP-Endstopfen als Zulage (Muffenstopfen),;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+39;PP-Endstopfen als Zulage (Muffenstopfen),;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+40;PP-Schiebe- oder Doppelmuffen, schalldämmend,;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+41;PP-Schiebe- oder Doppelmuffen, schalldämmend,;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+42;PP-Schiebe- oder Doppelmuffen, schalldämmend,;75,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+43;PP-Schiebe- oder Doppelmuffen, schalldämmend,;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+44;PP-Schiebe- oder Doppelmuffen, schalldämmend,;7,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+45;PP-Schiebe- oder Doppelmuffen, schalldämmend,;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+46;PP-Übergang, an KG-Grundleitung,;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+47;PP-Übergang, an KG-Grundleitung,;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+48;PP-Objektanschlüsse, schalldämmend, bestehend aus;26,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+49;PP-Objektanschlüsse, schalldämmend, bestehend aus;9,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+50;PP-Objektanschlüsse, schalldämmend, bestehend aus;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+51;schallgedämmt mit IG M10 und AG 1/2 Zoll;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+52;schallgedämmt mit IG M10 und AG 1/2 Zoll;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+53;schallgedämmt mit IG M10 und AG 1/2 Zoll;500,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+54;schallgedämmt mit IG M10 und AG 1/2 Zoll;25,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+55;schallgedämmt mit IG M10 und AG 1/2 Zoll;40,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+56;schallgedämmt mit IG M10 und AG 1/2 Zoll;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+57;Rohrschott R90 für;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+58;Rohrschott R90 für;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+59;Rohrschott R90 für;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+60;Auszugsichere Verbindung;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+61;Auszugsichere Verbindung;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+62;Auszugsichere Verbindung;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+63;Anschluß an Entlüftungsleitung, Typ: DN 80;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+64;Anschluß an Entlüftungsleitung, Typ: DN 100;15,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+65;Anschluß an Entlüftungsleitung, Typ: DN 150;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+66;HT-Abflußrohr, Typ: DN 30;30,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+67;HT-Abflußrohr, Typ: DN 50;50,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+68;HT-Passstücke als Zulage, Typ: bis DN 50;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+69;HT-Abzweig als Zulage, ggf. Reduzierungen in allen;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+70;HT-Doppelabzweig als Zulage, ggf. Reduzierungen;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+71;HT-Eckabzweig als Zulage, Typ: bis DN 50;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+72;HT-Bogen in allen Winkelgraden als Zulage,;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+73;HT-Siphonbogen, ggf. reduziert, mit Gummimanschette;8,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+74;HT-Reduzierung als Zulage, alle Übergangsdimensionen,;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+75;HT-Reinigungsrohr mit runder Öffnung für Falleitungen,;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+76;HT-Endstopfen als Zulage (Muffenstopfen),Typ: bis DN 50;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+77;HT-Schiebe- oder Doppelmuffen, als Zulage;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+78;HT-Objektanschlüsse beschrieben wie vor;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+79;Rohrbelüfter, Typ: DN 50;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+80;Rohrbelüfter, Typ: DN 70;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+81;Rohrbelüfter, Typ: DN 100;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+82;Kondensatwasserablauf für Entwässerungsgerät wie;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+83;wie vor beschrieben, jedoch in der Ausführung:;3,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+84;wie vor beschrieben, jedoch in der Ausführung:;2,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+85;wie vor beschrieben, jedoch in der Ausführung:;3,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+86;wie vor beschrieben, jedoch in der Ausführung:;2,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+87;wie vor beschrieben, jedoch in der Ausführung:;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+88;wie vor beschrieben, jedoch in der Ausführung:;3,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+89;wie vor beschrieben, jedoch in der Ausführung:;12,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+90;wie vor beschrieben, jedoch in der Ausführung:;2,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+91;wie vor beschrieben, jedoch in der Ausführung:;2,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+92;wie vor beschrieben, jedoch in der Ausführung:;1,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+93;wie vor beschrieben, jedoch in der Ausführung:;1,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+94;wie vor beschrieben, jedoch in der Ausführung:;8,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+95;wie vor beschrieben, jedoch in der Ausführung:;1,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+96;wie vor beschrieben, jedoch in der Ausführung:;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+97;wie vor beschrieben, jedoch in der Ausführung:;1,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+98;wie vor beschrieben, jedoch in der Ausführung:;1,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+99;wie vor beschrieben, jedoch in der Ausführung:;1,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+100;wie vor beschrieben, jedoch in der Ausführung:;11,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+101;wie vor beschrieben, jedoch in der Ausführung:;31,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+102;wie vor beschrieben, jedoch in der Ausführung:;3,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+103;Erstellung, Prüfung und Vorlage eines vollständigen, prüffähigen hydraulischen Berechnungsnachweises für das angebotene Druckströmungs-Entwässerungssystem (LORO-DRAINJET) gemäß DIN EN 12056-3 und DIN 1986-100.;1,0;psch;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+104;Anfertigen einer detaillierten, koordinierungsfähigen Werk- und Montageplanung für das gesamte Druckströmungs-Entwässerungssystem im Maßstab 1:50 / 1:20 unter Berücksichtigung der örtlichen Gegebenheiten und des zuvor erstellten hydraulischen Nachweises.;1,0;psch;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+105;Dimension: DN 70;15,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+106;Dimension: DN 100 (DA 110 mm);65,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+107;Verlängerungsstück passend für Bodenabläufe;25,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+108;wie vor beschrieben, jedoch in der Ausführung:;2,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+109;wie vor beschrieben, jedoch in der Ausführung:;5,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+110;wie vor beschrieben, jedoch in der Ausführung:;9,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+111;wie vor beschrieben, jedoch in der Ausführung:;2,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+112;wie vor beschrieben, jedoch in der Ausführung:;9,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+113;wie vor beschrieben, jedoch in der Ausführung:;8,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+114;wie vor beschrieben, jedoch in der Ausführung:;2,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+115;wie vor beschrieben, jedoch in der Ausführung:;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+116;wie vor beschrieben, jedoch in der Ausführung:;8,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+117;wie vor beschrieben, jedoch in der Ausführung:;2,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+118;wie vor beschrieben, jedoch in der Ausführung:;1,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+119;wie vor beschrieben, jedoch in der Ausführung:;5,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+120;wie vor beschrieben, jedoch in der Ausführung:;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+121;wie vor beschrieben, jedoch in der Ausführung:;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+122;wie vor beschrieben, jedoch in der Ausführung:;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+123;Ausführung des Rinnen-Ablaufstutzens mit Klebeflansch auf Ebene Rohboden (2. Abdichtungsebene),;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+124;Abdeckung (Designrost) passend für die vorbeschriebene Reihenduschrinne (Wassereinlaufbreite 100 mm) und auf die jeweilige Länge angepasst.;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+125;wie vor beschrieben, jedoch in der Ausführung:;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+126;Ausführung des Rinnen-Ablaufstutzens mit Klebeflansch auf Ebene Rohboden (2. Abdichtungsebene),;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+127;Abdeckung (Designrost) passend für die vorbeschriebene Reihenduschrinne (Wassereinlaufbreite 100 mm) und auf die jeweilige Länge angepasst.;4,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+128;Steckerfertige Kleinhebeanlage, geeignet für die Abwasserentsorgung von häuslichem Schwarzwasser, ideal zum Anschluss von WC, Bidet, Dusche und Waschbecken.;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+1;Edelstahlrohr, Typ: 15 x 1 mm (DN12);450,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+2;Edelstahlrohr, Typ: 18 x 1 mm (DN15);330,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+3;Edelstahlrohr, Typ: 22 x 1,2 mm (DN20);275,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+4;Edelstahlrohr, Typ: 28 x 1,2 mm (DN25);55,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+5;Edelstahlrohr, Typ: 35 x 1,5 mm (DN32);95,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+6;Edelstahlrohr, Typ: 42 x 1,5 mm (DN40);125,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+7;Edelstahlrohr, Typ: 54 x 1,5 mm (DN50);60,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+8;Edelstahlrohr, Typ: 64 x 2,0 mm (DN60);10,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+9;Edelstahlrohr, Typ: 67,1 x 2,0 mm (DN65);60,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+10;Edelstahlrohr, Typ: 88,9 x 2,0 mm (DN80);15,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+11;Edelstahlrohr, Typ: 108 x 2,0 mm (DN100);25,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+12;Edelstahlbogen, alle Winkelgrade als Zulage,;350,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+13;Edelstahlbogen, alle Winkelgrade als Zulage,;400,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+14;Edelstahlbogen, alle Winkelgrade als Zulage,;150,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+15;Edelstahlbogen, alle Winkelgrade als Zulage,;50,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+16;Edelstahlbogen, alle Winkelgrade als Zulage,;40,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+17;Edelstahlbogen, alle Winkelgrade als Zulage,;70,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+18;Edelstahlbogen, alle Winkelgrade als Zulage,;15,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+19;Bogen für Edelstahlrohr, alle Winkelgrade als Zulage,;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+20;Bogen für Edelstahlrohr, alle Winkelgrade als Zulage,;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+21;Bogen für Edelstahlrohr, alle Winkelgrade als Zulage,;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+22;Bogen für Edelstahlrohr, alle Winkelgrade als Zulage,;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+23;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;40,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+24;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;70,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+25;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;70,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+26;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+27;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;15,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+28;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+29;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+30;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+31;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+32;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+33;Abzweig für Edelstahlrohr, ggf. reduziert, als Zulage;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+34;Reduzierung für Edelstahlrohr, alle Übergangsdimensionen, als Zulage;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+35;Reduzierung für Edelstahlrohr, alle Übergangsdimensionen, als Zulage;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+36;Reduzierung für Edelstahlrohr, alle Übergangsdimensionen, als Zulage;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+37;Reduzierung für Edelstahlrohr, alle Übergangsdimensionen, als Zulage;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+38;Reduzierung für Edelstahlrohr, alle Übergangsdimensionen, als Zulage;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+39;Reduzierung für Edelstahlrohr, alle;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+40;Reduzierung für Edelstahlrohr, alle;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+41;Reduzierung für Edelstahlrohr, alle;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+42;Reduzierung für Edelstahlrohr, alle;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+43;Reduzierung für Edelstahlrohr, alle;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+44;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;25,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+45;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;50,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+46;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+47;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+48;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+49;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+50;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+51;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+52;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+53;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+54;Muffe für Edelstahlrohr, ggf. reduziert, als Zulage;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+55;Übergang auf Außengewinde, ggf. reduziert, als Zulage;60,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+56;Übergang auf Außengewinde, ggf. reduziert, als Zulage;60,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+57;Übergang auf Außengewinde, ggf. reduziert, als Zulage;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+58;Übergang auf Außengewinde, ggf. reduziert, als Zulage;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+59;Übergang auf Außengewinde, ggf. reduziert, als Zulage;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+60;Übergang auf Außengewinde, ggf. reduziert, als Zulage;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+61;Übergang auf Außengewinde, ggf. reduziert, als Zulage;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+62;Übergang auf Flanschverbindung, ggf. reduziert, als Zulage;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+63;Übergang auf Flanschverbindung, ggf. reduziert, als Zulage;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+64;Liefern und Verlegen einer erdverlegten Trinkwasserleitung außerhalb von Gebäuden aus Polyethylen hoher Dichte (PE-HD / PE 100-RC), für Trinkwasser nach DIN EN 12201 und DVGW-Arbeitsblatt W 400.;20,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+65;Ringraumdichtung DN 100 für Medienrohr da 25;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+66;PE-Druckrohr, DN 20 (25 x 2,3 mm);125,0;lfdm;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+67;PE-Druckrohr Bogen, DN 20 (25 x 2,3 mm);40,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+68;E-Schweiß-T-Stück, DN 20 (25 x 2,3 mm);10,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+69;Rohrschellen als Zulage, wie im Vortext beschrieben,;300,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+70;Rohrschellen als Zulage, wie im Vortext beschrieben,;200,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+71;Rohrschellen als Zulage, wie im Vortext beschrieben,;150,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+72;Rohrschellen als Zulage, wie im Vortext beschrieben,;40,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+73;Rohrschellen als Zulage, wie im Vortext beschrieben,;50,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+74;Rohrschellen als Zulage, wie im Vortext beschrieben,;100,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+75;Rohrschellen als Zulage, wie im Vortext beschrieben,;50,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+76;Rohrschellen als Zulage, wie im Vortext beschrieben,;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+77;Rohrschellen als Zulage, wie im Vortext beschrieben,;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+78;Rohrschellen als Zulage, wie im Vortext beschrieben,;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+79;Rohrschellen als Zulage, wie im Vortext beschrieben,;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+80;Deckenwinkel aus Edelstahl mit Wandabstand und;6,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+81;Deckenwinkel aus Edelstahl mit Wandabstand und;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+82;Deckenwinkel aus Edelstahl mit Wandabstand und;8,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+83;"Wandscheibe, Typ 15 x 1/2""";30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+84;"Wandscheibe, Typ 18 x 1/2""";20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+85;"Wandscheibe, Typ 22 x 3/4""";5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+86;"Doppelwandscheibe, Typ 15 x 1/2"" x 15";30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+87;"Doppelwandscheibe, Typ 18 x 1/2"" x 18";20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+88;"Doppelwandscheibe, Typ 22 x 1/2"" x 22";10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+89;"Doppelwandscheibe, Typ 28 x 1/2"" x 28";1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+90;"Wandscheiben-T-Stück, Typ 15 x 1/2"" x 15";2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+91;"Wandscheiben-T-Stück, Typ 18 x 1/2"" x 18";4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+92;"Wandscheiben-T-Stück, Typ 22 x 1/2"" x 22";1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+93;"Wandscheiben-T-Stück, Typ 28 x 1/2"" x 28";1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+94;wie vor beschrieben, jedoch in der Ausführung:;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+95;Einpressdüse, Typ 22 mm;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+96;Einpressdüse, Typ 28 mm;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+97;Verschlußstopfen mit Gewindemuffe und Dichtung als;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+98;Verschlußstopfen mit Gewindemuffe und Dichtung als;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+99;Verschlußstopfen mit Gewindemuffe und Dichtung als;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+100;Verschlußstopfen mit Gewindemuffe und Dichtung als;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+101;Liefern und Benutzen der für die Druckprüfung von Trinkwasserleitungen nötigen Betriebsstoffe und Medien über den gesamten Leistungszeitraum.;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+102;Das Fertigstellen von Bauteilen in mehreren Arbeitsgängen zur Ermöglichung von Arbeiten anderer Unternehmer ist, soweit die eigenen Leistungen im Zuge gleichartiger Arbeiten kontinuierlich erbracht werden können, gemäß DIN 18381.eine Nebenleistung.;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+103;Spülen der Trinkwasserinstallation vor der Inbetriebnahme einschließlich aller dazu notwendigen Betriebsstoffe und Nebenarbeiten, wie im Vortext beschrieben, mit allen Anlagenteilen der Kalt- und Warmwasserleitungen einschließlich Zirkulation.;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+104;Das Fertigstellen von Bauteilen in mehreren Arbeitsgängen zur Ermöglichung von Arbeiten anderer Unternehmer ist, soweit die eigenen Leistungen im Zuge gleichartiger Arbeiten kontinuierlich erbracht werden können, gemäß DIN 18381.eine Nebenleistung.;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+1;Rohrisolierung Mineralfaser, alukaschiert, DN 12;450,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+2;Rohrisolierung Mineralfaser, alukaschiert, DN 15;330,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+3;Rohrisolierung Mineralfaser, alukaschiert, DN 20;275,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+4;Rohrisolierung Mineralfaser, alukaschiert, DN 25;55,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+5;Rohrisolierung Mineralfaser, alukaschiert, DN 32;95,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+6;Rohrisolierung Mineralfaser, alukaschiert, DN 40;125,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+7;Rohrisolierung Mineralfaser, alukaschiert, DN 50;60,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+8;Rohrisolierung Mineralfaser, alukaschiert, DN 60;10,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+9;Rohrisolierung Mineralfaser, alukaschiert, DN 65;60,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+10;Rohrisolierung Mineralfaser, alukaschiert, DN 80;15,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+11;Rohrisolierung Mineralfaser, alukaschiert, DN 100;25,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+12;Zulage für Paßstücke, DN 12;150,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+13;Zulage für Paßstücke, DN 15;100,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+14;Zulage für Paßstücke, DN 20;100,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+15;Zulage für Paßstücke, DN 25;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+16;Zulage für Paßstücke, DN 32;50,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+17;Zulage für Paßstücke, DN 40;50,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+18;Zulage für Paßstücke, DN 50;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+19;Zulage für Paßstücke, DN 60;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+20;Zulage für Paßstücke, DN 65;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+21;Zulage für Paßstücke, DN 80;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+22;Zulage für Paßstücke, DN 100;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+23;Zulage für Bögen, DN 12;350,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+24;Zulage für Bögen, DN 15;400,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+25;Zulage für Bögen, DN 20;150,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+26;Zulage für Bögen, DN 25;50,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+27;Zulage für Bögen, DN 32;40,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+28;Zulage für Bögen, DN 40;70,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+29;Zulage für Bögen, DN 50;15,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+30;Zulage für Bögen, DN 60;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+31;Zulage für Bögen, DN 65;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+32;Zulage für Bögen, DN 80;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+33;Zulage für Bögen, DN 100;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+34;Zulage für Abzweige und Stutzen, DN 12;40,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+35;Zulage für Abzweige und Stutzen, DN 15;70,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+36;Zulage für Abzweige und Stutzen, DN 20;70,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+37;Zulage für Abzweige und Stutzen, DN 25;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+38;Zulage für Abzweige und Stutzen, DN 32;15,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+39;Zulage für Abzweige und Stutzen, DN 40;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+40;Zulage für Abzweige und Stutzen, DN 50;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+41;Zulage für Abzweige und Stutzen, DN 60;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+42;Zulage für Abzweige und Stutzen, DN 65;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+43;Zulage für Abzweige und Stutzen, DN 80;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+44;Zulage für Abzweige und Stutzen, DN 100;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+45;Zulage für Endkappen, DN 12;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+46;Zulage für Endkappen, DN 15;40,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+47;Zulage für Endkappen, DN 20;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+48;Zulage für Endkappen, DN 25;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+49;Zulage für Endkappen, DN 32;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+50;Zulage für Endkappen, DN 40;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+51;Zulage für Endkappen, DN 50;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+52;Zulage für Endkappen, DN 60;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+53;Zulage für Endkappen, DN 65;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+54;Zulage für Endkappen, DN80;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+55;Zulage für Endkappen, DN100;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+56;Zulage für Armaturenkappen, DN 12;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+57;Zulage für Armaturenkappen, DN 15;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+58;Zulage für Armaturenkappen, DN 20;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+59;Zulage für Armaturenkappen, DN 25;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+60;Zulage für Armaturenkappen, DN 32;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+61;Zulage für Armaturenkappen, DN 40;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+62;Zulage für Armaturenkappen, DN 50;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+63;Zulage für Armaturenkappen, DN 60;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+64;Zulage für Armaturenkappen, DN 65;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+65;Zulage für Armaturenkappen, DN 80;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+66;Zulage für Armaturenkappen, DN 100;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+67;Zulage Kappen Rohrhalterung, DN 12;25,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+68;Zulage Kappen Rohrhalterung, DN 15;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+69;Zulage Kappen Rohrhalterung, DN 20;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+70;Zulage Kappen Rohrhalterung, DN 25;15,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+71;Zulage Kappen Rohrhalterung, DN 32;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+72;Zulage Kappen Rohrhalterung, DN 40;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+73;Zulage Kappen Rohrhalterung, DN 50;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+74;Zulage Kappen Rohrhalterung, DN 60;60,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+75;Zulage Kappen Rohrhalterung, DN 65;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+76;Zulage Kappen Rohrhalterung, DN 80;18,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+77;Zulage Kappen Rohrhalterung, DN 100;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+78;Zulage für Übergang, DN 12;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+79;Zulage für Übergang, DN 15;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+80;Zulage für Übergang, DN 20;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+81;Zulage für Übergang, DN 25;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+82;Zulage für Übergang, DN 32;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+83;Zulage für Übergang, DN 40;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+84;Zulage für Übergang, DN 50;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+85;Zulage für Übergang, DN 60;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+86;Zulage für Übergang, DN 65;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+87;Zulage für Übergang, DN 80;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+88;Zulage für Übergang, DN 100;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+89;Zulage für Ausschnitte, bis DN 25;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+90;Zulage für Ausschnitte, bis DN 50;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+91;Zulage für Ausschnitte, bis DN 100;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+92;Rohrtyp: Cu-, Edelstahl, Isolierung: 5 mm, DN 12;50,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+93;Rohrtyp: Cu-, Edelstahl, Isolierung: 5 mm, DN 15;100,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+94;Rohrtyp: Cu-, Edelstahl, Isolierung: 5 mm, DN 20;10,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+95;Rohrtyp: Cu-, Edelstahl, Isolierung: 9 mm, DN 12;50,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+96;Rohrtyp: Cu-, Edelstahl, Isolierung: 9 mm, DN 15;100,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+97;Rohrtyp: Cu-, Edelstahl, Isolierung: 9 mm, DN 20;10,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+98;Zulage für Passstücke (5 oder 9 mm), Cu/V2A-Rohr, DN 12;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+99;Zulage für Passstücke (5 oder 9 mm), Cu/V2A-Rohr, DN 15;50,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+100;Zulage für Passstücke (5 oder 9 mm), Cu/V2A-Rohr, DN 20;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+101;Zulage für Bögen (5 oder 9 mm), Cu/V2A-Rohr, DN 12;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+102;Zulage für Bögen (5 oder 9 mm), Cu/V2A-Rohr, DN 15;40,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+103;Zulage für Bögen (5 oder 9 mm), Cu/V2A-Rohr, DN 20;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+104;Zulage für T-Stücke (5 oder 9 mm), Cu/V2A-Rohr, DN 12;50,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+105;Zulage für T-Stücke (5 oder 9 mm), Cu/V2A-Rohr, DN 15;100,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+106;Zulage für T-Stücke (5 oder 9 mm), Cu/V2A-Rohr, DN 20;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+107;Zulage Armaturenkappen (5 oder 9 mm), Cu/V2A-Rohr,DN 12;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+108;Zulage Armaturenkappen (5 oder 9 mm), Cu/V2A-Rohr,DN 15;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+109;Zulage Armaturenkappen (5 oder 9 mm), Cu/V2A-Rohr,DN 20;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+110;Zulage Kappen Rohrhalterung(5 o.9 mm),Cu/V2A-Rohr,DN 12;25,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+111;Zulage Kappen Rohrhalterung(5 o.9 mm),Cu/V2A-Rohr,DN 15;40,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+112;Zulage Kappen Rohrhalterung(5 o.9 mm),Cu/V2A-Rohr,DN 20;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+113;Zulage für Übergang, DN 12;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+114;Zulage für Übergang, DN 15;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+115;Zulage für Übergang, DN 20;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+116;Zulage für Ausschnitte, bis DN 25;15,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+117;Isolierungsband für Rohrtyp: bis einschl. DN 25;20,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+118;Isolierungsband für Rohrtyp: DN 32 - einschl. DN 50;5,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+119;Isolierungsband für Rohrtyp: DN 65 bis einschl. DN 80;5,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+120;Isolierungsband für Rohrtyp: DN 100 bis einschl. DN 125;15,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+121;Isolierungsband für Rohrtyp: DN 150 bis einschl. DN 200;10,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+122;Rohrabschottung R 90 für metallische Rohre wie vor beschrieben, jedoch für Nennweite bis DN15;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+123;Rohrabschottung R 90 für metallische Rohre wie vor beschrieben, jedoch für Nennweite DN 20;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+124;Rohrabschottung R 90 für metallische Rohre wie vor beschrieben, jedoch für Nennweite DN 25;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+125;Rohrabschottung R 90 für metallische Rohre wie vor beschrieben, jedoch für Nennweite DN 32;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+126;Rohrabschottung R 90 für metallische Rohre wie vor beschrieben, jedoch für Nennweite DN 32;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+127;Rohrabschottung R 90 für metallische Rohre wie vor beschrieben, jedoch für Nennweite DN 32;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+128;Rohrabschottung R 90 für metallische Rohre wie vor beschrieben, jedoch für Nennweite DN 32;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+129;Rohrabschottung R 90 für metallische Rohre wie vor beschrieben, jedoch für Nennweite DN 32;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+1;Anschluß an die städtische Wasserversorgung herstellen, einschl. Lieferung der erforderlichen Materialien wie Flansche, Übergangsstücke, Rohrbögen und Rohrpaßstücke, Übergänge, Wasserzähleranschlußplatte, Anschluß entsprechend der Bedingungen des örtlichen Versorgungsunternehmens, incl. aller Verbin;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+2;Flanschanschluß PN 16;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+3;Paßstück zur Vorrüstung eines Wasserzählers von Seiten des Versorgers beschriebenwie vor, als Zulage, bestehend aus:;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+4;Flanschanschluß PN 16;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+5;Flanschanschluß PN 16;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+6;Manometer für Trinkwasseanlagen mit Absperrkugelhahn;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+7;Bimetall- Zeigerthermometer,;8,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+8;Tauchhülsen für Rohr DN 20 - DN 50;8,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+9;Tauchhülsen für Rohr DN 20 - DN 50;10,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+10;Kugelhahn aus Edelstahl für Trinkwasser, Typ DN 12;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+11;Kugelhahn aus Edelstahl für Trinkwasser, Typ DN 15;30,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+12;Kugelhahn aus Edelstahl für Trinkwasser, Typ DN 20;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+13;Kugelhahn aus Edelstahl für Trinkwasser, Typ DN 25;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+14;Kugelhahn aus Edelstahl für Trinkwasser, Typ DN 32;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+15;Kugelhahn aus Edelstahl für Trinkwasser, Typ DN 40;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+16;Kugelhahn aus Edelstahl für Trinkwasser, Typ DN 50;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+17;Zwischenflansch-Absperrklappe für Trinkwasser;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+18;Zwischenflansch-Absperrklappe für Trinkwasser;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+19;Zwischenflansch-Absperrklappe für Trinkwasser;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+20;Rotguß-Schrägsitzventil;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+21;Rotguß-Schrägsitzventil, mit Entleerung, Typ DN 20;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+22;Rotguß-Schrägsitzventil, mit Entleerung, Typ DN 25;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+23;Rotguß-Schrägsitzventil, mit Entleerung, Typ DN 32;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+24;Rotguß-Freistromschrägsitzventil, mit;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+25;Rotguß-Freistromschrägsitzventil,  mit Entleerung,;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+26;Verlängerung mit Gewindenippeln, Typ: DN12 oder DN15, Armaturenanschluß-Verlängerung: bis 25 mm;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+27;Verlängerung mit Gewindenippeln, Typ: DN12 oder DN15, Armaturenanschluß-Verlängerung: bis 50 mm;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+28;Verlängerung mit Gewindenippeln, Typ: DN12 oder DN15, rmaturenanschluß-Verlängerung: bis 80 mm;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+29;Rotguß-Probenahme-Einheit,;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+30;Rotguß-Probenahme-Einheit,;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+31;Rotguß-Probenahme-Einheit,;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+32;Rotguß-Probenahme-Einheit,;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+33;Rotguß-Probenahme-Einheit,;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+34;Rotguß-Probenahme-Einheit,;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+35;Rotguß-Probenahme-Einheit,;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+36;Rotguß-Probenahme-Einheit,;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+37;"Füll- und Entleerungs-Kugelhahn Typ: 1/2"" , PN 16";4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+38;"Füll- und Entleerungs-Kugelhahn Typ: 3/4"" , PN 16";4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+39;Verlängerung mit Gewindenippeln,;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+40;Verlängerung mit Gewindenippeln,;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+41;Verlängerung mit Gewindenippeln,;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+42;Verlängerung mit Gewindenippeln, Typ: DN12 oder DN15;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+43;Kaltwasserzähler wie vor;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+44;Typ                         : Qn 6,3;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+45;Typ                         : Qn 16;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+46;Typ                         : Qn 16;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+47;M-Buszähler als Zubehör für zuvor beschriebenen;6,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+48;Verlängerungen der Kabel für zuvor beschriebene Kaltwasserzähler zwischen Zählwerk und Recheneinheit auf bis zu 10m als Zulage.;6,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+49;Paßstück zur Vorrüstung eines Wasserzählers beschrieben;6,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+50;Elektronische Spüleinrichtung zur Verhinderung von Trinkwasserstagnation in Rohrleitungen;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+51;Füllschlauch als Gewebeschlauch, mit;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+52;Unterputzventil, Typ: DN 15;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+53;Zulage Spindelverlängerung für vorgenanntes UP-Ventil DN 15;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+54;Unterputzventil, Typ: DN 20;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+55;Zulage Spindelverlängerung für vorgenanntes UP-Ventil DN 20;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+56;Zirkulations-Regulierventil, automatisch, Typ DN 15;15,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+1;Montageelement für Wand-WC mit UP-Spülkasten mit;8,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+2;Tiefspül-WC DIN EN 997, aus Sanitärporzellan;8,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+3;WC-Sitz mit Deckel, passend zum zuvor beschriebenem WC;8,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+4;Betätigungsplatte zur WC-Spülauslösung;8,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+5;Toilettenpapierspender für 2 herkömmliche Kleinrollen (Doppelrollenspender);8,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+6;Lieferung und fachgerechte Wandmontage einer hochwertigen, langlebigen WC-Bürstengarnitur aus hochglänzendem, durchgefärbtem Polyamid. Speziell geeignet für den Einsatz in barrierefreien Objekten sowie hochfrequentierten, öffentlichen oder gewerblichen Sanitärräumen.;8,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+7;Montageelement für Wand-Urinal mit Druckspüler mit;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+8;Ausführung:;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+9;Ausführung:;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+10;Montageelement für Wand-WC mit UP-Spülkasten mit;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+11;Tiefspül Wand-WC Behinderte, barrierefrei, nach DIN 1385-6 und DIN EN 38,;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+12;WC - Sitz mit metallischen Scharnieren als Spezialsitz für vorgenanntes Behinderten-WC,;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+13;Betätigungsplatte zur WC-Spülauslösung;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+14;Stützklappgriff, drehbar;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+15;Stützklappgriff, drehbar;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+16;Aufrüstsatz WC-Spülauslösung (Funk);6,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+17;Rückenstütze für Tiefspül-WC;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+18;Hygienebeutelspender dient zur Aufnahme und Entnahme von handelsüblichen Hygienebeuteln aus Kunststoff;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+19;Hygieneabfallbehälter dient zur Aufnahme von verwendeten Hygienebeuteln;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+20;Lieferung und fachgerechte Wandmontage einer hochwertigen, langlebigen WC-Bürstengarnitur aus hochglänzendem, durchgefärbtem Polyamid. Speziell geeignet für den Einsatz in barrierefreien Objekten sowie hochfrequentierten, öffentlichen oder gewerblichen Sanitärräumen.;3,0;St;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+21;Montageelement für Waschtisch, für Einloch oder;8,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+22;Waschtisch mit Ablagefläche nach DIN EN 14688, zum Einbau in Sanitärräumen.;6,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+23;Waschtisch nach DIN EN 14688, zum Einbau in Sanitärräumen.;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+24;Lieferung und fachgerechte Montage eines runden Einbauwaschtischs für den Einbau von oben (Auflage-Einbau) in eine bauseitige Trägerplatte. Geeignet für öffentliche Sanitärräume.;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+25;Baby-Badewanne, asymmetrisch;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+26;Berührungslose, elektronisch gesteuerte Waschtischarmatur;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+27;Berührungslose, elektronisch gesteuerte Waschtischarmatur;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+28;Converter 30 V -> 6 V, kurze Ausführung, inkl. Unterputzdose und Deckel;12,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+29;Flüssigseifenspender aus Kunststoff;13,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+30;Papierhandtuchspender;12,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+31;Abfallbehälter für Sanitär- und Waschräume;10,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+32;Einsatzbereich im Neubau und Sanierung in öffentlichen,;31,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+33;Mehrpreis für vorgenannte Position in Fertiglackierung des Herstellers nach RAL-Farbskala, liefern;31,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+34;wie vor, Duschpaneel jedoch als barrierefreie Einhand-Bedienung mit:;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+35;Mehrpreis für vorgenannte Position in Fertiglackierung des Herstellers nach RAL-Farbskala, liefern;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+36;Bestehend aus:;34,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+37;Zum Verdecken der Zugangsleitungen.;34,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+38;Mehrpreis für vorgenannte Position in Fertiglackierung des Herstellers nach RAL-Farbskala, liefern;34,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+39;Mehrpreis für vorgenannte Position als;250,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+40;Mehrpreis für vorgenannte Position in Fertiglackierung des Herstellers nach RAL-Farbskala, liefern;250,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+41;Duschhandlauf mit verschiebbarer Brausehalterstange;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+42;Einhängesitz, klappbar;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+43;Montageelement für Waschtisch barrierefrei;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+44;Waschtisch Behinderte nach DIN DIN EN 14688, DIN- EN 31,;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+45;Elektronische Waschtisch-Armatur;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+46;Rohmontageset Dusche Unterputz, DN15, mit Klebeflansch;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+47;Fertigmontageset für elektronische Duscheinrichtung, ausgeführt als Unterputz-Dusche in Nennweite DN15.;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+48;Mehrpreis für vorgenannte Position in Fertiglackierung des Herstellers nach RAL-Farbskala, liefern;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+49;Duschhandlauf mit verschiebbarer Brausehalterstange und als Eckmontage.;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+50;Einhängesitz, klappbar;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+51;Handbrause:;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+52;Waschtisch-Einhebelmischer;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+53;Montageelement für Ausgussbecken, für Wandarmatur für;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+54;Verwendungszwecke;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+55;Waschtisch-Einhebelmischer;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+56;Waschtisch-Einhebelmischer;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+57;Berührungslose, elektronisch gesteuerte Wandarmatur für Aufputzmontage:;3,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+58;Eckventil mit Regulierfunktion;22,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+59;Geräte-Kombinations-Eckventil,;12,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+60;Auslaufventil mit;9,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+61;Auslaufventil mit abschließbaren Griff;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+62;Auslaufventil;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+63;Auslaufventil mit;7,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+64;Geräteschrägsitzventil mit;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+65;Geräteschrägsitzventil mit abschließbaren Griff;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+66;Frostsichere Außenwandarmatur;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+67;Zur Einbindung von vorgenannten Armaturen in das CNX-Wassermanagement-System mittels Schnellverbindern, Anschlussleitung, Stecker;16,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+68;Zentrale Rechnereinheit zur Spannungsversorgung sowie Errichtung eines Wassermanagement-Systems und Steuerung der ausgeschriebenen Dusch- und Waschtischarmaturen.;1,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+69;Zur elektrischen Verdrahtung von Duschen, Waschtischarmaturen;4,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+70;Bestandsaufnahme vor Installation sowie Erstellung eines gebäudespezifischen Verdrahtungsplanes nach Herstellervorgaben sowie Einweisung des Fachgewerkes Elektrotechnik in die Leitungsverlegung zu den örtlich zu verbauenden Armaturen und der zugehörigen Steuereinheit.;70,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+71;Verdrahtungsarbeiten / Bestandsaufnahme durch eine Elektrofachkraft des Armaturenherstellers an den örtlich verbauten Armaturen und der zugehörigen Steuereinheit.;70,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+72;Inbetriebnahme der vorbeschriebenen Anlagen in Zusammenarbeit mit dem Werkskundendienst bestehend aus folgenden Arbeiten:;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+73;Leistungsumfang:;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+74;Schlüsselschalter für thermische Desinfektion;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+75;Haartrockner für den Einsatz im öffentlichen Bereich.;22,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+76;Duschliege für Einsatzgebiete z.B. in Schulen, Kitas, öffentliche Einrichtungen;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+1;Hydraulik:;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+2;Absperr-Set für FW E-Geräte/Module mit Dämmung,;4,0;Stk.;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+3;Drehzahlregulierte Brauchwasserpumpe;2,0;Stk.;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+4;Rückspülbarer Trinkwasserfeinfilter aus Messingguss,;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+5;Softwareerweiterung für die vorgenannten 2er Kaskade für eine vollautomatische Durchführung von thermischen;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+6;Pufferspeicher als Warmwasser-Schichtenspeicher.;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+7;Temperaturabhängige Umschaltung des primärseitigen;2,0;Stk.;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+8;Fühler-Set Speicher, Pt1000, Leitung 7m, AD 5mm;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+9;ComLog als Gateway-Modul im Gehäuse zur logischen;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+10;RS485 Modbus RTU Interface integriert in Controller-Chip des Reglers für o.g. Trinkwasser-;2,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+11;Inbetriebnahme für zuvor beschriebenes;1,0;psch;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+1;Monteurstunden;20,0;h;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+2;Helferstunden/Lehrlingstunden;20,0;h;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+3;Elektriker-Monteurstunden;10,0;h;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+4;Elektriker-Lehrling;10,0;h;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+5;Herstellen von Schlitzen  in Betonbauteilen (Wand, Boden) durch maschinelles fräsen für anschließende Verlegung von Sanitärrohren,;10,0;m;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+6;Erstellen von Kernbohrungen;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+7;Erstellen von Kernbohrungen;20,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+8;Erstellen von Kernbohrungen;5,0;Stk;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+9;Einkalkulieren sämtlicher Mehrkosten für die Durchführung der Installationsarbeiten (z.B. Luftleitungen, Klimageräte, Rohrleitungen) in einer Montagehöhe von mehr als 3,50 m über Oberkante Fertigfußboden (OKFF) mittels Montagehilfe. Die Position umfasst die Gestellung, den Auf- und Abbau, das Verfah;1,0;psch;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+10;Vorhaltezeitverlängerung um je einen;40,0;d;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+11;Proaktive Schnittstellenklärung und Koordination für den fachgerechten Einbau und Inbetruebnahme sämtlicher RLT-Komponenten (Lüftungsauslässe, Gitter, Brandschutzklappen, Volumenstromregler etc.) sowie für die Einbringung und Aufstellung der zentralen Lüftungsgeräte.;1,0;psch;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+12;Alle Anlagen im gegenständlichen Leistungsverzeichnis sind gemeinsam mit den beteiligten Koordinationsgewerken vor Übergabe an den Auftraggeber einem vollumfänglichen Probebetrieb zu unterziehen.;1,0;psch;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+13;Erstellen der Anlagendokumentation mit allgemein verständlicher und vollständiger Anlagenbeschreibung der Anlagenteile (incl. aller technischen Angaben aus Unterlagen der Zulieferer) mit wichtigen Grundeinstellungs- Betriebs-, Pflege- und Wartungshinweisen in tabellarischer Form.;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+14;Einweisung des Bedienpersonals im Zusammenhang mit der Inbetriebnahme in die Funktion und Bedienung der vollständig errichteten Gesamtanlage, bestehend aus:;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+15;Zusätzlich zu der Ersteinweisung ist die Einweisung nach einem Zeitraum von zwei Monaten nach Übergabe zu;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+1;Jahreswartungspauschale für das 1. Betriebs-/Wartungsjahr;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+2;Jahreswartungspauschale für das 2. Betriebs-/Wartungsjahr;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+3;Jahreswartungspauschale für das 3. Betriebs-/Wartungsjahr;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83
+4;Jahreswartungspauschale für das 4. Betriebs-/Wartungsjahr inkl. Endbegehung;1,0;Psch;gaeb;leistungsbeschreibungen/410.01-V.25-LV SAN_V33.X83

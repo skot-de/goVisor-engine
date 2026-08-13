@@ -1,0 +1,599 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Tauchtemperaturfühler Länge 150mm;24,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;VA-Tauchhülse 150 mm;24,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;Tauchtemperaturfühler Länge 200mm;4,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;VA-Tauchhülse 200 mm;4,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+50;Raumfühler zur Erfassung von Raumtemperatur und Raumfeuchte (relativ).;7,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+60;Raumtemperatur-Fühler;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+70;Tauchtemperatur-Wächter, Sollwertsteller verdeckt innerhalb des Gehäuses, Einstellbereich von +15 bis +95 Grad C, in Kapillarrohrausführung ohne Schutzrohr, Einbaulänge 200 mm, mit einer Schaltstufe als elektrischen Kontaktgeber, Schaltkontaktbelastung 230V AC, 2 A, Gehäuse in Schutzart IP 43 DIN EN;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+80;Tauchtemperatur-Sicherheitsbegrenzer, Sollwertsteller innerhalb des Gehäuses und mechanischer Entriegelung am Gerät, Einstellbereich von 30 bis 110 Grad C, in Kapillarrohrausführung einschl. Schutzrohr mit Gewinde, PN 16, aus Messing, Einbaulänge 200 mm, mit einer Schaltstufe, Kontaktbelastung 230 V;2,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+90;Sicherheits-Druckbegrenzer, Druckbegrenzer für Minimaldrucküberwachung (bei Unterschreitung Mindestdruckwert) von Drücken in Flüssigkeiten, Gasen und Dämpfen, bauteilgeprüft nach VdTÜF-Merkblatt Druck 100, sowie nach DIN EN 1854 und DIN EN 764-7, geeignet zur Minimaldrucküberwachung von Dampf, Heißw;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+100;Differenzdruck-Wächter, für Luft, einschl. Wand- oder Rohrhalterung, mit kompletter Messleitung bis 3 m, einschl. Anschlusszubehör, 1 Schaltstufe Potentialfrei, Gehäuse in Schutzart IP 43 DIN EN 60529 (VDE 0470-1), einschl. Anschluss an das Medium.;2,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+110;3-Wege Stellventil mit Antrieb stetig, stetige Ansteuerung passend zum verwendeten Automationssystem, Anschlussnennweite DN 20, einschließlich ohrverschraubungen;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+120;3-Wege Stellventil mit Antrieb stetig, stetige Ansteuerung passend zum verwendeten Automationssystem, Anschlussnennweite DN 25, einschließlich Rohrverschraubungen;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+130;3-Wege Stellventil mit Antrieb stetig, stetige Ansteuerung passend zum verwendeten Automationssystem,;3,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+140;3-Wege Stellventil mit Antrieb stetig, stetige Ansteuerung passend zum verwendeten Automationssystem,;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+150;3-Wege Stellventil mit Antrieb stetig, stetige Ansteuerung passend zum verwendeten Automationssystem,;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+160;2-Wege Stellventil mit Antrieb stetig, stetige Ansteuerung passend zum verwendeten Automationssystem,;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+170;Kunststoff Bezeichnungsschild selbstklebend,;110,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;"BACnet Automationsstation (DDC) inkl. 19""-Bedien- und Visualisierungseinheit";1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Bedieneinheit für Automationsstation zur Vor-Ort-Bedienung am Schaltschrank,;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;Bedieneinheit Kassenbereich;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;Gigabit Switch, 5 Ports, Hutschienenmontage;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+50;CAT 6 -Patchkabel einschl. Stecker bis max. 2 m;3,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+60;M-Bus Schnittstelle zur Einbindung von Verbrauchszählern in die Gebäudeautomation;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+70;Datenschnittstelleneinheit (DSE) zum Datenaustausch zwischen;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Physikalische Ein-/Ausgabefunktion, Bi-;19,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Physikalische Ein-/Ausgabefunktion;23,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;Physikalische Ein-/Ausgabefunktion;91,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;Physikalische Ein-/Ausgabefunktion;64,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+50;Programmierungen M-Bus je anzubindenen Zähler;27,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+60;Gemeinsame Ein-/Ausgabefunktion Modbus;20,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+70;Gemeinsame Ein-/Ausgabefunktion BACnet;109,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Standschrank, eintürig 800x1800x400 für Sockelmontage aus Stahlblech Türen gummigedichtet mit innen liegenden;3,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Einspeisung 400VAC 63A;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;Phasenlampen für 400V Netz;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;Phasenüberwachnung 400VAC;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+50;Überspannungs-Ableiter 4-poliger, modularer, steckbarer;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+60;Netzwiederkehrschaltung;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+70;Steuerspannungstransformator;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+80;Sicherheitstransformator 230/24V AC;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+90;Schaltschrankbeleuchtung mit Steckdose je Schaltschrankfeld;3,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+100;Schaltschranklüfter 230V/50 Hz mit Filtermatte, Zuluftgitter,;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+110;Sammelstörmeldung von DDC;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+120;Brandmeldeschaltung;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+130;Pumpensteuerung 230VAC 4kW Netzabgang mit Meldung;8,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+140;Motorbaugruppe;2,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+150;Netzabgang 230VAC 6A;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+160;Netzabgang 230VAC 16A;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+170;Netzabgang 400VAC 20A;3,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+180;Reparaturschalterüberwachung;2,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+190;Strömungsüberwachung Druckschalter;2,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+200;Klappensteuerung stetig Rückmeldung;10,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+210;Klappensteuerung 230V Auf/Zu Rückmeldung;2,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+220;Temperaturüberwachung (STW/STB);3,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+230;Drucküberwachung (Min/Max);1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+240;Meldung potentialfrei;31,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+250;Aufschaltung Messwert passiv;43,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+260;Aufschaltung Stellbefehl stetig;10,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+270;Einbau/Vertdrahtung auf Montageplatte;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+280;1:1 Funktionstest je Datenpunkt;201,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+290;Inbetriebnahme Schaltschrank;3,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Tauchtemperaturfühler Länge 150mm;4,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;VA-Tauchhülse 150 mm;4,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;Raumfühler zur Erfassung von Raumtemperatur und Raumfeuchte (relativ).;6,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;Tauchtemperatur-Sicherheitsbegrenzer, Sollwertsteller innerhalb des Gehäuses und mechanischer Entriegelung am Gerät, Einstellbereich von 30 bis 110 Grad C, in Kapillarrohrausführung einschl. Schutzrohr mit Gewinde, PN 16, aus Messing, Einbaulänge 200 mm, mit einer Schaltstufe, Kontaktbelastung 230 V;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+50;Differenzdruck-Wächter, für Luft, einschl. Wand- oder Rohrhalterung, mit kompletter Messleitung bis 3 m, einschl. Anschlusszubehör, 1 Schaltstufe Potentialfrei, Gehäuse in Schutzart IP 43 DIN EN 60529 (VDE 0470-1), einschl. Anschluss an das Medium.;4,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+60;Differenzdruck-Wächter, für Luft, einschl. Wand- oder Rohrhalterung, mit kompletter Messleitung bis 3 m, einschl. Anschlusszubehör, 1 Schaltstufe Potentialfrei, Gehäuse in Schutzart IP 43 DIN EN 60529 (VDE 0470-1), einschl. Anschluss an das Medium.;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+70;Rauchmelder, für Luftleitung,;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+80;2-Wege Stellventil mit Antrieb stetig, stetige Ansteuerung passend zum verwendeten Automationssystem, Anschlussnennweite DN 40, Flansch;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+90;Kunststoff Bezeichnungsschild selbstklebend,;44,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;"BACnet Automationsstation (DDC) inkl. 19""-Bedien- und Visualisierungseinheit";1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Gigabit Switch, 5 Ports, Hutschienenmontage;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;CAT 6 -Patchkabel einschl. Stecker bis max. 2 m;2,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;M-Bus Schnittstelle zur Einbindung von Verbrauchszählern in die Gebäudeautomation;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Physikalische Ein-/Ausgabefunktion, Bi-;10,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Physikalische Ein-/Ausgabefunktion;6,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;Physikalische Ein-/Ausgabefunktion;53,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;Physikalische Ein-/Ausgabefunktion;18,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+50;Gemeinsame Ein-/Ausgabefunktion BACnet;36,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+60;Programmierungen M-Bus je anzubindenen Zähler;2,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Standschrank, eintürig 800x1800x400 für Sockelmontage aus Stahlblech Türen gummigedichtet mit innen liegenden;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Einspeisung 400VAC 32A;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;Phasenlampen für 400V Netz;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;Phasenüberwachnung 400VAC;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+50;Überspannungs-Ableiter 4-poliger, modularer, steckbarer Überspannungs-Ableiter mit integrierter ACI-Schalter-/Funkenstrecke und Schraubanschlussklemme für;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+60;Netzwiederkehrschaltung;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+70;Steuerspannungstransformator;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+80;Sicherheitstransformator 230/24V AC;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+90;Schaltschrankbeleuchtung mit Steckdose je Schaltschrankfeld;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+100;Schaltschranklüfter 230V/50 Hz mit Filtermatte, Zuluftgitter,;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+110;Brandmeldeschaltung;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+120;Motorbaugruppe;3,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+130;Netzabgang für externen FU 230VAC 5,5kW;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+140;Netzabgang 400VAC 20A;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+150;Reparaturschalterüberwachung;4,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+160;Filterüberwachung Druckschalter;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+170;Strömungsüberwachung Druckschalter;4,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+180;Klappensteuerung stetig Rückmeldung;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+190;Klappensteuerung 230V Auf/Zu Rückmeldung;4,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+200;Temperaturüberwachung (STW/STB);1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+210;Rauchmeldeüberwachung;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+220;Meldung potentialfrei;21,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+230;Aufschaltung Messwert passiv;16,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+240;Aufschaltung Stellbefehl stetig;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+250;Einbau/Vertdrahtung auf Montageplatte von DDC-Geräten und sämtlichen Zubehör;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+260;1:1 Funktionstest je Datenpunkt;91,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+270;Inbetriebnahme Schaltschrank;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Außentemperatur-Messwertgeber,;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Raumfühler zur Erfassung von Raumtemperatur und Raumfeuchte (relativ).;6,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;Raumfühler zur Erfassung von Raumtemperatur und Raumfeuchte (relativ) im Sichtbereich.;3,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;Kunststoff Bezeichnungsschild selbstklebend,;14,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;"BACnet Automationsstation (DDC) inkl. 19""-Bedien- und Visualisierungseinheit";1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Gigabit Switch, 5 Ports, Hutschienenmontage;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;CAT 6 -Patchkabel einschl. Stecker bis max. 2 m;2,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;M-Bus Schnittstelle zur Einbindung von Verbrauchszählern in die Gebäudeautomation;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Physikalische Ein-/Ausgabefunktion, Bi-;4,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Physikalische Ein-/Ausgabefunktion;2,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;Physikalische Ein-/Ausgabefunktion;33,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;Physikalische Ein-/Ausgabefunktion;21,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+50;Gemeinsame Ein-/Ausgabefunktion BACnet;60,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+60;Programmierungen M-Bus je anzubindenen Zähler;2,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Standschrank, eintürig 800x1800x400 für Sockelmontage aus Stahlblech Türen gummigedichtet mit innen liegenden;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Einspeisung 400VAC 80A;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;SAMMELSCHIENENSYSTEM;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;Phasenlampen für 400V Netz;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+50;Phasenüberwachnung 400VAC;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+60;Überspannungs-Ableiter 4-poliger, modularer, steckbarer;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+70;Netzwiederkehrschaltung;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+80;Steuerspannungstransformator;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+90;Sicherheitstransformator 230/24V AC;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+100;Schaltschrankbeleuchtung mit Steckdose je Schaltschrankfeld;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+110;Schaltschranklüfter 230V/50 Hz mit Filtermatte, Zuluftgitter,;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+120;Brandmeldeschaltung;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+130;Netzabgang 400VAC 20A;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+140;Netzabgang 400VAC 63A;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+150;Meldung potentialfrei;21,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+160;Aufschaltung Messwert passiv;19,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+170;Einbau/Vertdrahtung auf Montageplatte;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+180;1:1 Funktionstest je Datenpunkt;60,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+190;Inbetriebnahme Schaltschrank;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Raumfühler zur Erfassung von Raumtemperatur und Raumfeuchte (relativ).;3,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Differenzdruck-Wächter, für Luft, einschl. Wand- oder Rohrhalterung, mit kompletter Messleitung bis 3 m, einschl. Anschlusszubehör, 1 Schaltstufe Potentialfrei, Gehäuse in Schutzart IP 43 DIN EN 60529 (VDE 0470-1), einschl. Anschluss an das Medium.;3,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;Differenzdruck-Wächter, für Luft, einschl. Wand- oder Rohrhalterung, mit kompletter Messleitung bis 3 m, einschl. Anschlusszubehör, 1 Schaltstufe Potentialfrei, Gehäuse in Schutzart IP 43 DIN EN 60529 (VDE 0470-1), einschl. Anschluss an das Medium.;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;Rauchmelder, für Luftleitung,;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+50;Kunststoff Bezeichnungsschild selbstklebend,;20,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;"BACnet Automationsstation (DDC) inkl. 19""-Bedien- und Visualisierungseinheit";1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Gigabit Switch, 5 Ports, Hutschienenmontage;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;CAT 6 -Patchkabel einschl. Stecker bis max. 2 m;2,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Physikalische Ein-/Ausgabefunktion, Bi-;6,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Physikalische Ein-/Ausgabefunktion;3,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;Physikalische Ein-/Ausgabefunktion;47,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;Physikalische Ein-/Ausgabefunktion;6,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+50;Gemeinsame Ein-/Ausgabefunktion BACnet;2,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Standschrank, eintürig 800x1800x400 für Sockelmontage aus Stahlblech Türen gummigedichtet mit innen liegenden Scharnieren und Stangenverschluss mit Doppelbartschlüssel.;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Einspeisung 400VAC 16A;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;Phasenlampen für 400V Netz;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;Phasenüberwachnung 400VAC;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+50;Überspannungs-Ableiter 4-poliger, modularer, steckbarer;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+60;Netzwiederkehrschaltung;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+70;Steuerspannungstransformator;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+80;Sicherheitstransformator 230/24V AC;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+90;Schaltschrankbeleuchtung mit Steckdose je Schaltschrankfeld;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+100;Schaltschranklüfter 230V/50 Hz mit Filtermatte, Zuluftgitter,;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+110;Brandmeldeschaltung;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+120;Motorbaugruppe;3,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+130;Reparaturschalterüberwachung;3,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+140;Filterüberwachung Druckschalter;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+150;Strömungsüberwachung Druckschalter;3,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+160;Klappensteuerung 230V Auf/Zu Rückmeldung;3,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+170;Rauchmeldeüberwachung;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+180;Meldung potentialfrei;25,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+190;Aufschaltung Messwert passiv;6,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+200;Einbau/Vertdrahtung auf Montageplatte;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+210;1:1 Funktionstest je Datenpunkt;66,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+220;Inbetriebnahme Schaltschrank;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;3-Wege Stellventil mit Antrieb stetig, stetige Ansteuerung passend zum verwendeten Automationssystem,;2,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Tauchtemperaturfühler Länge 150mm;4,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;VA-Tauchhülse 150 mm;4,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;Kunststoff Bezeichnungsschild selbstklebend,;8,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Der im Zuge der Baumaßnahme außer Betrieb genommene und an einem sicheren Ort zwischengelagerte Schaltschrank ist für den Wiedereinbau vorzubereiten, fachgerecht zu transportieren und am vorgesehenen Aufstellort wieder zu positionieren.;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Die im Zuge der Außerbetriebnahme ausgefädelten und gesicherten Kabel sind wieder fachgerecht in den Schaltschrank einzuführen, zu verlegen und anzuschließen. Es handelt sich um ca. 40 Kabel.;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;Nach Abschluss der mechanischen und elektrischen Arbeiten ist der Schaltschrank gemeinsam mit der bauseitigen Einspeisung schrittweise in Betrieb zu nehmen. Es handelt sich um einen Umfang von ca. 75 Datenpunkten.;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;Im Zuge der Baumaßnahme wurden bestehende raumlufttechnische Anlagen (RLT) betriebslos belassen. Diese sind nach Abschluss der Arbeiten wieder in die Gebäudeautomation (GA/GLT) zu integrieren, in Betrieb zu nehmen und auf ordnungsgemäße Funktion zu prüfen.;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+50;Bestandskabel neu verlegen (RLT Zu-/Umluft);90,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+60;Bestandskabel neu verlegen (RLT Abluft);44,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+70;Bestandskabel neu verlegen (Steiger);153,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+80;Bestandskabel neu verlegen (Heizung);36,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+90;Bestandskabel neu verlegen (Klappe);22,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+100;Bestandskabel neu verlegen (Durchgang);75,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+110;Bestandskabel neu verlegen (links);8,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;NHXMH-J 3x1,5 Mantelleitung;1700,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Elektroanschluss beidseitig;50,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;NHXMH-J 5x1,5 Mantelleitung;100,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;Elektroanschluss beidseitig;4,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+50;NHXMH-J 3x2,5 Mantelleitung;300,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+60;Elektroanschluss beidseitig;10,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+70;NHXMH-J 5x2,5 Mantelleitung;100,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+80;Elektroanschluss beidseitig;4,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+90;NHXMH-J 3x4 Mantelleitung;200,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+100;Elektroanschluss beidseitig;10,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+110;NHXMH-J 5x4 Mantelleitung;90,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+120;Elektroanschluss beidseitig;3,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+130;NHXMH-J 3x6 Mantelleitung;90,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+140;Elektroanschluss beidseitig;2,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+150;NHXMH-J 5x6 Mantelleitung;90,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+160;Elektroanschluss beidseitig;3,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+170;NHXMH-J 5x16 Mantelleitung;50,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+180;Elektroanschluss beidseitig;2,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+190;J-H(St)H 2x2x0,8mm Fernmeldeleitung;2300,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+200;Elektroanschluss beidseitig;90,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+210;J-H(St)H 4x2x0,8mm Fernmeldeleitung;3100,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+220;Elektroanschluss beidseitig;80,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+230;J-H(St)H 8x2x0,8mm Fernmeldeleitung;100,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+240;Elektroanschluss beidseitig;5,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+250;Datenkabel Horizontal-/Steigbereich Kat. 6A geschirmt 4x2xAWG23, halogenfrei;300,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+260;Elektroanschluss beidseitig;10,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+270;POTENTIALAUSGLEICHLEITUNG;50,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+280;Potentialausgleichleitung;50,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+290;PA-ANSCHLÜSSE;10,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Standard Kabelrinne 100x60;90,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Standard Kabelrinne 200x60;50,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;Standard Kabelrinne 300x60;25,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;Trennsteg für vorgenannte Kabeltrassen,;50,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+50;Außenbogen f. verzinkt Kabelrinne 100x60;15,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+60;Außenbogen f. verzinkt Kabelrinne 200x60;10,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+70;Außenbogen f. verzinkt Kabelrinne 300x60;5,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+80;Vertikaler Auf-, Abgang verzinkt 100x60;5,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+90;Vertikaler Auf-, Abgang verzinkt 200x60;5,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+100;Steigtrasse 200 mm;40,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+110;Steigtrasse 300 mm;15,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+120;HUF-Hängestiel für Kabelrinne l=300 mm;50,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+130;HUF-Hängestiel für Kabelrinne l=400 mm;30,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+140;Standardausleger an Hängestiel KTU 110;50,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+150;Standardausleger an Hängestiel KTU 210;30,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+160;Wandausleger zur Montage an Betonwänden, Mauerwerk;50,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+170;Wandausleger zur Montage an Betonwänden, Mauerwerk;30,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+180;Installationsrohr FPKuEMF20;125,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+190;Installationsrohr FPKuEMF25;100,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+200;Installationsrohr FPKuEMF32;20,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+210;Verbindungsdose DIN VDE 0606 als Abzweigkasten, aus;30,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+220;C-Profilschiene, Schlitzweite passend zu verwendetem Bügelschellentyp, mit vorgestanzter Bodenlochung,;40,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+230;Bügelschelle 16mm,;30,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+240;Bügelschelle 22mm;20,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+250;Bügelschelle 28mm;10,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+260;Kabelsammelhalter zur Befestigung von Kabeln in Zwischendecken,;15,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+270;Kabelsammelhalter zur Befestigung von Kabeln in Zwischendecken,;10,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+280;Kabelklammer zur Befestigung von Kabeln in Zwischendecken, flammwidrig nach DIN VDE 0471/ DIN IEC 695,;50,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+290;Kabelklammer zur Befestigung von Kabeln in Zwischendecken, flammwidrig nach DIN VDE 0471/ DIN IEC 695,;50,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+300;Kabelverschraubung nach EN 50262;5,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+310;Kabelverschraubung nach EN 50262;5,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+320;Kabelverschraubung nach EN 50262;5,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Gateway BACnet IP to Metasys Network Automation Engine SNE2200 als BACnet Station zur Verbindung der Automationsebene mit dem Netzwerk der Managementebene,(ADX V10/11) mit einer Verarbeitungskapazität von 2500 Objekten.;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Projektbesprechung der aufzuschaltenden Liegenschaft mit dem Betreiber der übergeordneten Manmagementebene (BACnet DIN EN ISO 16484-5 Protocol Revision 1.12);1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;zum Austausch von BACnet-Objekten pro BACnetobjekt, entsprechend EN ISO 16484-6 aus Abschnitt 1 und 2, Spalte 1 bis 5.;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;Abstimmungen der aktuellen EDE-Liste mit der Firma Johnson Controls zum Austausch von BACnet-Objekten.;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;Konfiguration/Parametrierung Datenpunkte aller ISP,;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+50;Konfiguration/Parametrierung Datenpunkte aller ISP,;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+60;Die aufgeschaltenen BACnet Objetkte sind in ihrer Funktion gemeinsam mit dem Errichter der Gebäudeleittechnik (JCI) umfänglich im 1:1 Test zu erproben und schriftlich zu dokumentieren.;728,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+70;Die aufgeschaltenen BACnet Objetkte sind in ihrer Funktion gemeinsam mit dem AN der BACnet-Clients umfänglich im 1:1 Test zu erproben und schriftlich zu dokumentieren.;728,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+80;Erstellung und Eingabe der funktionalen, statischen Darstellung einer gebäudetechnischen Anlage oder eines Gebäudeteils mit farbigen Symbolen oder Bildern, für die graphische Bedienung und Darstellung auf den Bedienstationen. Die Bilderstellung erfolgt nach vorher genehmigten Musterbildern, mit ents;40,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+90;Generierung dynamischer Einblendungen für Anlagenschema zur graphischen Bedienung und Darstellung von Soll- und Istwerten, Kontaktzuständen, Mess-/Zählwerten, Statusmeldungen sowie die Verküpfung von Folgebildern und Anlagenübersichten. Die Folgebilder sind untereinander in beiden Richtungen zu verk;763,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+100;Managementfunktion, Ereignis-Langzeitspeicherung gemäß;197,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+110;Managementfunktion, Historisierung in Datenbank gemäß;142,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+120;Bedienfunktion, Ereignis-Anweisungstext gemäß Funktion;69,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+130;Bedienfunktion, Nachricht an externer Stelle parametrieren gemäß Funktion 8.4 GA-Funktionsliste, Beiblatt 070-5.;14,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Bereitstellung von Gateways bzw. Schnittstellen zur Einbindung des BSK-Bussystems in die Gebäudeautomation:;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;BSK-Feldmodul mit Busanbindung (2DI / 1DO, 230 V);17,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;Bereitstellung aller notwendigen Stromversorgungen für das Bussystem und die Feldgeräte:;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;Dienstleistungen in folgendem Umfang:;17,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Schnittstelle zum digitalen Betriebstagebuch TASKO;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Kernbohrung, Untergrundfläche senkrecht oder waagerecht, aus Stahlbeton, Bohrdurchmesser bis 50 mm, Bohrtiefe über 20 bis 50 cm, in Diamant-Kernbohrtechnik, nass, Ausführung in allen Geschossen, Montagehöhe bis 3,5 m, einschließlich Lösen des Bohrkerns aus dem Gefüge, Entsorgung des Bohrkerns und de;10,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;jedoch;5,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;Kernbohrung, Untergrundfläche senkrecht oder waagerecht, aus Mauerwerk KS bzw. MZ NF, Bohrdurchmesser bis 50 mm, Bohrtiefe über 50 bis 80 cm, in Diamant-Kernbohrtechnik, nass, Ausführung in allen Geschossen, Montagehöhe bis 3,5 m, einschließlich Lösen des Bohrkerns aus dem Gefüge, Entsorgung des Boh;20,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;jedoch;10,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+50;Beantragung einer Kernbohrung oder eines Durchbruchs in massive Decken oder Wände vor der Ausführung, Antrag schriftlich in Form eines Formulars einschließlich eines Planausschnittes mit Angabe von Lage, Dimension und Abstandsmaßen bezogen auf Wände und Decken, Übergabe an die Objektüberwachung, Aus;10,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+60;Anzeichnen von Durchbrüchen bzw. Kernbohrungen, die bauseits erstellt werden, in Wände und Decken aus Mauerwerk oder Stahlbeton;10,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+70;Wandschlitz in Mauerwerk in Teillängen herstellen,;20,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+80;jedoch BxT bis 50 x 25 mm;10,0;m;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+90;Herstellen einer Vorbohrung mit Durchmesser bis 20 mm zum Abgleich der beiden Raum- bzw. Geschossseiten;10,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+100;Wand- oder Deckendurchbruch oder Kernbohrungen in Mauerwerk und Beton nach Fertigstellung der Installation und Schottung brandschutzgerecht verschließen,;30,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+110;jedoch;5,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+120;nachträgliches Abkleben von Komponenten, wie Fühler, Dosen etc., für bauseitigen Anstrich der Wände / Decken, mit Klebeband, reißfester Folie o.ä.,;20,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+130;Fahrbare Gerüste Auf- und Abbauen, für die Montage der in;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+140;Fahrbare Gerüste vorhalten, für die Montage der in diesem Leistungsverzeichnis aufgeführten technischen Anlagen, Aufstellung im Gebäude, Arbeitshöhe über Fußboden über 3,50 bis 6,0 m, Arbeitsfläche nach Wahl des AN in Abhängigkeit der Abmessungen der zu montierenden Komponenten, einschl. Vorhaltung ;5,0;StWo;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+150;Mobile Hubarbeitsbühne, als Teleskop-Gelenksteiger oder Scheren-Arbeitsbühne, batteriebetrieben, mit markierungsfreier Bereifung, für die Montage der in diesem Leistungsverzeichnis aufgeführten technischen Anlagen, Aufstellung im Gebäude, Arbeitshöhe über Fußboden über 3,50 bis 8,0 m, Tragkraft;5,0;d;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Profilstahlkonstruktion für Stütz-, Hänge- und Tragkonstruktionen, Festpunkte sowie Sonderbefestigungen, die durch bauliche Erfordernisse benötigt werden und durch nicht handelsübliche Befestigungen und Halterungen erbracht werden müssen, maßgerecht einbauen, als Installationsschienensystem, feuerve;80,0;kg;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;jedoch Montagehöhe über 3,5 m bis 6 m;50,0;kg;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;jedoch aus nichtrostendem Stahl;50,0;kg;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Mitwirkung bei den jeweiligen Funktionsprüfungen der Anlagen der Auftragnehmer Sanitäranlagen, Heizungsanlagen, Lüftungsanlagen, Elektroanlagen sowie Schwimmbadtechnik, im Wesentlichen bestehend aus:;1,0;psch;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Mitwirkung bei der Sachverständigenprüfung der RLT-Anlagen als Begleitung der Sachverständigen-Prüfung durch einen vom AG separat beauftragten Sachverständigen in sachlichem, personellem und zeitlichem Umfang einschl. Vorhaltung der erforderlichen Prüfeinrichtungen und der notwendigen technischen Au;1,0;psch;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;jedoch Mitwirkung bei der Wirkprinzip-Prüfung;1,0;psch;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;Wiederholte Einweisung des Bedienungs- und Wartungspersonals in alle in diesem Leistungsverzeichnis aufgeführten Anlagen, zusätzlich zur einmaligen Einweisung als Nebenleistung nach Punkt 3.3.3 DIN 18386 VOB/C.;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Auf Grundlage der Ausführungsplanung und Berechnungen des Auftraggebers sind sofort nach der Übergabe die für die Ausführung erforderlichen Unterlagen für den gesamten im vorliegenden Leistungsverzeichnis beschriebenen Leistungsumfang als Montage- und Werkstattplanung zu erstellen und dem AG zu über;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Die Brandschutzdokumentation ist im Vorfeld der behördlichen Abnahmen als separate Unterlage zu erstellen und dem Bauherren zu übergeben.;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;Auf Grundlage der erstellten und freigegebenen Werkstatt- und Montageplanung, der letztgültigen Ausführungsplanung, der aktuellsten Architekten-Werkpläne und der ausgeführten Leistung sind für den gesamten im vorliegenden Leistungsverzeichnis beschriebenen Leistungsumfang Unterlagen mitzuliefern und;1,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+40;"Erstellen einer Dokumentationsakte gemäß ""Dokumentationsrichtlinie Schadstoffarmut"" digital als Grundlage zur Koordination der entsprechenden Anforderungen an die Schadstoffarmut. Vorlegen und während der Leistungserbringung fortschreiben.";1,0;psch;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Stundenverrechnungssatz für Obermonteur;10,0;h;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+20;Stundenverrechnungssatz für Monteur;10,0;h;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+30;Stundenverrechnungssatz für Helfer;10,0;h;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Wartung / Inspektion für die wartungspflichtigen Komponenten der in diesem Leistungsverzeichnis enthaltenen Gebäudeautomation einschließlich direktem Zubehör, gemäß anliegendem Muster, einschließlich aller Nebenkosten, innerhalb der Verjährungszeit für Mängelansprüche.;4,0;St;gaeb;leistungsbeschreibungen/20260716_SBH_LV_1-480-01.X83
+10;Tauchtemperaturfühler Länge 150mm;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;VA-Tauchhülse 150 mm;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;Tauchtemperaturfühler Länge 200mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;VA-Tauchhülse 200 mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+50;Raumfühler zur Erfassung von Raumtemperatur und Raumfeuchte (relativ).;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+60;Raumtemperatur-Fühler;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+70;Tauchtemperatur-Wächter, Sollwertsteller verdeckt innerhalb des Gehäuses, Einstellbereich von +15 bis +95 Grad C, in Kapillarrohrausführung ohne Schutzrohr, Einbaulänge 200 mm, mit einer Schaltstufe als elektrischen Kontaktgeber, Schaltkontaktbelastung 230V AC, 2 A, Gehäuse in Schutzart IP 43 DIN EN;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+80;Tauchtemperatur-Sicherheitsbegrenzer, Sollwertsteller innerhalb des Gehäuses und mechanischer Entriegelung am Gerät, Einstellbereich von 30 bis 110 Grad C, in Kapillarrohrausführung einschl. Schutzrohr mit Gewinde, PN 16, aus Messing, Einbaulänge 200 mm, mit einer Schaltstufe, Kontaktbelastung 230 V;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+90;Sicherheits-Druckbegrenzer, Druckbegrenzer für Minimaldrucküberwachung (bei Unterschreitung Mindestdruckwert) von Drücken in Flüssigkeiten, Gasen und Dämpfen, bauteilgeprüft nach VdTÜF-Merkblatt Druck 100, sowie nach DIN EN 1854 und DIN EN 764-7, geeignet zur Minimaldrucküberwachung von Dampf, Heißw;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+100;Differenzdruck-Wächter, für Luft, einschl. Wand- oder Rohrhalterung, mit kompletter Messleitung bis 3 m, einschl. Anschlusszubehör, 1 Schaltstufe Potentialfrei, Gehäuse in Schutzart IP 43 DIN EN 60529 (VDE 0470-1), einschl. Anschluss an das Medium.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+110;3-Wege Stellventil mit Antrieb stetig, stetige Ansteuerung passend zum verwendeten Automationssystem, Anschlussnennweite DN 20, einschließlich ohrverschraubungen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+120;3-Wege Stellventil mit Antrieb stetig, stetige Ansteuerung passend zum verwendeten Automationssystem, Anschlussnennweite DN 25, einschließlich Rohrverschraubungen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+130;3-Wege Stellventil mit Antrieb stetig, stetige Ansteuerung passend zum verwendeten Automationssystem,;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+140;3-Wege Stellventil mit Antrieb stetig, stetige Ansteuerung passend zum verwendeten Automationssystem,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+150;3-Wege Stellventil mit Antrieb stetig, stetige Ansteuerung passend zum verwendeten Automationssystem,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+160;2-Wege Stellventil mit Antrieb stetig, stetige Ansteuerung passend zum verwendeten Automationssystem,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+170;Kunststoff Bezeichnungsschild selbstklebend,;110,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;"BACnet Automationsstation (DDC) inkl. 19""-Bedien- und Visualisierungseinheit";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Bedieneinheit für Automationsstation zur Vor-Ort-Bedienung am Schaltschrank,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;Bedieneinheit Kassenbereich;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;Gigabit Switch, 5 Ports, Hutschienenmontage;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+50;CAT 6 -Patchkabel einschl. Stecker bis max. 2 m;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+60;M-Bus Schnittstelle zur Einbindung von Verbrauchszählern in die Gebäudeautomation;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+70;Datenschnittstelleneinheit (DSE) zum Datenaustausch zwischen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Physikalische Ein-/Ausgabefunktion, Bi-;19,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Physikalische Ein-/Ausgabefunktion;23,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;Physikalische Ein-/Ausgabefunktion;91,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;Physikalische Ein-/Ausgabefunktion;64,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+50;Programmierungen M-Bus je anzubindenen Zähler;27,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+60;Gemeinsame Ein-/Ausgabefunktion Modbus;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+70;Gemeinsame Ein-/Ausgabefunktion BACnet;109,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Standschrank, eintürig 800x1800x400 für Sockelmontage aus Stahlblech Türen gummigedichtet mit innen liegenden;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Einspeisung 400VAC 63A;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;Phasenlampen für 400V Netz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;Phasenüberwachnung 400VAC;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+50;Überspannungs-Ableiter 4-poliger, modularer, steckbarer;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+60;Netzwiederkehrschaltung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+70;Steuerspannungstransformator;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+80;Sicherheitstransformator 230/24V AC;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+90;Schaltschrankbeleuchtung mit Steckdose je Schaltschrankfeld;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+100;Schaltschranklüfter 230V/50 Hz mit Filtermatte, Zuluftgitter,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+110;Sammelstörmeldung von DDC;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+120;Brandmeldeschaltung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+130;Pumpensteuerung 230VAC 4kW Netzabgang mit Meldung;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+140;Motorbaugruppe;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+150;Netzabgang 230VAC 6A;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+160;Netzabgang 230VAC 16A;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+170;Netzabgang 400VAC 20A;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+180;Reparaturschalterüberwachung;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+190;Strömungsüberwachung Druckschalter;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+200;Klappensteuerung stetig Rückmeldung;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+210;Klappensteuerung 230V Auf/Zu Rückmeldung;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+220;Temperaturüberwachung (STW/STB);3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+230;Drucküberwachung (Min/Max);1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+240;Meldung potentialfrei;31,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+250;Aufschaltung Messwert passiv;43,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+260;Aufschaltung Stellbefehl stetig;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+270;Einbau/Vertdrahtung auf Montageplatte;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+280;1:1 Funktionstest je Datenpunkt;201,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+290;Inbetriebnahme Schaltschrank;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Tauchtemperaturfühler Länge 150mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;VA-Tauchhülse 150 mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;Raumfühler zur Erfassung von Raumtemperatur und Raumfeuchte (relativ).;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;Tauchtemperatur-Sicherheitsbegrenzer, Sollwertsteller innerhalb des Gehäuses und mechanischer Entriegelung am Gerät, Einstellbereich von 30 bis 110 Grad C, in Kapillarrohrausführung einschl. Schutzrohr mit Gewinde, PN 16, aus Messing, Einbaulänge 200 mm, mit einer Schaltstufe, Kontaktbelastung 230 V;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+50;Differenzdruck-Wächter, für Luft, einschl. Wand- oder Rohrhalterung, mit kompletter Messleitung bis 3 m, einschl. Anschlusszubehör, 1 Schaltstufe Potentialfrei, Gehäuse in Schutzart IP 43 DIN EN 60529 (VDE 0470-1), einschl. Anschluss an das Medium.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+60;Differenzdruck-Wächter, für Luft, einschl. Wand- oder Rohrhalterung, mit kompletter Messleitung bis 3 m, einschl. Anschlusszubehör, 1 Schaltstufe Potentialfrei, Gehäuse in Schutzart IP 43 DIN EN 60529 (VDE 0470-1), einschl. Anschluss an das Medium.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+70;Rauchmelder, für Luftleitung,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+80;2-Wege Stellventil mit Antrieb stetig, stetige Ansteuerung passend zum verwendeten Automationssystem, Anschlussnennweite DN 40, Flansch;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+90;Kunststoff Bezeichnungsschild selbstklebend,;44,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;"BACnet Automationsstation (DDC) inkl. 19""-Bedien- und Visualisierungseinheit";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Gigabit Switch, 5 Ports, Hutschienenmontage;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;CAT 6 -Patchkabel einschl. Stecker bis max. 2 m;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;M-Bus Schnittstelle zur Einbindung von Verbrauchszählern in die Gebäudeautomation;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Physikalische Ein-/Ausgabefunktion, Bi-;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Physikalische Ein-/Ausgabefunktion;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;Physikalische Ein-/Ausgabefunktion;53,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;Physikalische Ein-/Ausgabefunktion;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+50;Gemeinsame Ein-/Ausgabefunktion BACnet;36,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+60;Programmierungen M-Bus je anzubindenen Zähler;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Standschrank, eintürig 800x1800x400 für Sockelmontage aus Stahlblech Türen gummigedichtet mit innen liegenden;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Einspeisung 400VAC 32A;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;Phasenlampen für 400V Netz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;Phasenüberwachnung 400VAC;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+50;Überspannungs-Ableiter 4-poliger, modularer, steckbarer Überspannungs-Ableiter mit integrierter ACI-Schalter-/Funkenstrecke und Schraubanschlussklemme für;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+60;Netzwiederkehrschaltung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+70;Steuerspannungstransformator;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+80;Sicherheitstransformator 230/24V AC;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+90;Schaltschrankbeleuchtung mit Steckdose je Schaltschrankfeld;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+100;Schaltschranklüfter 230V/50 Hz mit Filtermatte, Zuluftgitter,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+110;Brandmeldeschaltung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+120;Motorbaugruppe;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+130;Netzabgang für externen FU 230VAC 5,5kW;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+140;Netzabgang 400VAC 20A;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+150;Reparaturschalterüberwachung;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+160;Filterüberwachung Druckschalter;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+170;Strömungsüberwachung Druckschalter;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+180;Klappensteuerung stetig Rückmeldung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+190;Klappensteuerung 230V Auf/Zu Rückmeldung;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+200;Temperaturüberwachung (STW/STB);1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+210;Rauchmeldeüberwachung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+220;Meldung potentialfrei;21,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+230;Aufschaltung Messwert passiv;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+240;Aufschaltung Stellbefehl stetig;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+250;Einbau/Vertdrahtung auf Montageplatte von DDC-Geräten und sämtlichen Zubehör;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+260;1:1 Funktionstest je Datenpunkt;91,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+270;Inbetriebnahme Schaltschrank;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Außentemperatur-Messwertgeber,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Raumfühler zur Erfassung von Raumtemperatur und Raumfeuchte (relativ).;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;Raumfühler zur Erfassung von Raumtemperatur und Raumfeuchte (relativ) im Sichtbereich.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;Kunststoff Bezeichnungsschild selbstklebend,;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;"BACnet Automationsstation (DDC) inkl. 19""-Bedien- und Visualisierungseinheit";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Gigabit Switch, 5 Ports, Hutschienenmontage;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;CAT 6 -Patchkabel einschl. Stecker bis max. 2 m;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;M-Bus Schnittstelle zur Einbindung von Verbrauchszählern in die Gebäudeautomation;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Physikalische Ein-/Ausgabefunktion, Bi-;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Physikalische Ein-/Ausgabefunktion;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;Physikalische Ein-/Ausgabefunktion;33,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;Physikalische Ein-/Ausgabefunktion;21,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+50;Gemeinsame Ein-/Ausgabefunktion BACnet;60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+60;Programmierungen M-Bus je anzubindenen Zähler;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Standschrank, eintürig 800x1800x400 für Sockelmontage aus Stahlblech Türen gummigedichtet mit innen liegenden;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Einspeisung 400VAC 80A;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;SAMMELSCHIENENSYSTEM;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;Phasenlampen für 400V Netz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+50;Phasenüberwachnung 400VAC;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+60;Überspannungs-Ableiter 4-poliger, modularer, steckbarer;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+70;Netzwiederkehrschaltung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+80;Steuerspannungstransformator;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+90;Sicherheitstransformator 230/24V AC;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+100;Schaltschrankbeleuchtung mit Steckdose je Schaltschrankfeld;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+110;Schaltschranklüfter 230V/50 Hz mit Filtermatte, Zuluftgitter,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+120;Brandmeldeschaltung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+130;Netzabgang 400VAC 20A;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+140;Netzabgang 400VAC 63A;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+150;Meldung potentialfrei;21,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+160;Aufschaltung Messwert passiv;19,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+170;Einbau/Vertdrahtung auf Montageplatte;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+180;1:1 Funktionstest je Datenpunkt;60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+190;Inbetriebnahme Schaltschrank;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Raumfühler zur Erfassung von Raumtemperatur und Raumfeuchte (relativ).;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Differenzdruck-Wächter, für Luft, einschl. Wand- oder Rohrhalterung, mit kompletter Messleitung bis 3 m, einschl. Anschlusszubehör, 1 Schaltstufe Potentialfrei, Gehäuse in Schutzart IP 43 DIN EN 60529 (VDE 0470-1), einschl. Anschluss an das Medium.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;Differenzdruck-Wächter, für Luft, einschl. Wand- oder Rohrhalterung, mit kompletter Messleitung bis 3 m, einschl. Anschlusszubehör, 1 Schaltstufe Potentialfrei, Gehäuse in Schutzart IP 43 DIN EN 60529 (VDE 0470-1), einschl. Anschluss an das Medium.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;Rauchmelder, für Luftleitung,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+50;Kunststoff Bezeichnungsschild selbstklebend,;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;"BACnet Automationsstation (DDC) inkl. 19""-Bedien- und Visualisierungseinheit";1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Gigabit Switch, 5 Ports, Hutschienenmontage;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;CAT 6 -Patchkabel einschl. Stecker bis max. 2 m;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Physikalische Ein-/Ausgabefunktion, Bi-;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Physikalische Ein-/Ausgabefunktion;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;Physikalische Ein-/Ausgabefunktion;47,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;Physikalische Ein-/Ausgabefunktion;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+50;Gemeinsame Ein-/Ausgabefunktion BACnet;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Standschrank, eintürig 800x1800x400 für Sockelmontage aus Stahlblech Türen gummigedichtet mit innen liegenden Scharnieren und Stangenverschluss mit Doppelbartschlüssel.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Einspeisung 400VAC 16A;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;Phasenlampen für 400V Netz;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;Phasenüberwachnung 400VAC;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+50;Überspannungs-Ableiter 4-poliger, modularer, steckbarer;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+60;Netzwiederkehrschaltung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+70;Steuerspannungstransformator;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+80;Sicherheitstransformator 230/24V AC;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+90;Schaltschrankbeleuchtung mit Steckdose je Schaltschrankfeld;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+100;Schaltschranklüfter 230V/50 Hz mit Filtermatte, Zuluftgitter,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+110;Brandmeldeschaltung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+120;Motorbaugruppe;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+130;Reparaturschalterüberwachung;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+140;Filterüberwachung Druckschalter;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+150;Strömungsüberwachung Druckschalter;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+160;Klappensteuerung 230V Auf/Zu Rückmeldung;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+170;Rauchmeldeüberwachung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+180;Meldung potentialfrei;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+190;Aufschaltung Messwert passiv;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+200;Einbau/Vertdrahtung auf Montageplatte;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+210;1:1 Funktionstest je Datenpunkt;66,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+220;Inbetriebnahme Schaltschrank;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;3-Wege Stellventil mit Antrieb stetig, stetige Ansteuerung passend zum verwendeten Automationssystem,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Tauchtemperaturfühler Länge 150mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;VA-Tauchhülse 150 mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;Kunststoff Bezeichnungsschild selbstklebend,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Der im Zuge der Baumaßnahme außer Betrieb genommene und an einem sicheren Ort zwischengelagerte Schaltschrank ist für den Wiedereinbau vorzubereiten, fachgerecht zu transportieren und am vorgesehenen Aufstellort wieder zu positionieren.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Die im Zuge der Außerbetriebnahme ausgefädelten und gesicherten Kabel sind wieder fachgerecht in den Schaltschrank einzuführen, zu verlegen und anzuschließen. Es handelt sich um ca. 40 Kabel.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;Nach Abschluss der mechanischen und elektrischen Arbeiten ist der Schaltschrank gemeinsam mit der bauseitigen Einspeisung schrittweise in Betrieb zu nehmen. Es handelt sich um einen Umfang von ca. 75 Datenpunkten.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;Im Zuge der Baumaßnahme wurden bestehende raumlufttechnische Anlagen (RLT) betriebslos belassen. Diese sind nach Abschluss der Arbeiten wieder in die Gebäudeautomation (GA/GLT) zu integrieren, in Betrieb zu nehmen und auf ordnungsgemäße Funktion zu prüfen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+50;Bestandskabel neu verlegen (RLT Zu-/Umluft);90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+60;Bestandskabel neu verlegen (RLT Abluft);44,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+70;Bestandskabel neu verlegen (Steiger);153,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+80;Bestandskabel neu verlegen (Heizung);36,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+90;Bestandskabel neu verlegen (Klappe);22,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+100;Bestandskabel neu verlegen (Durchgang);75,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+110;Bestandskabel neu verlegen (links);8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;NHXMH-J 3x1,5 Mantelleitung;1700,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Elektroanschluss beidseitig;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;NHXMH-J 5x1,5 Mantelleitung;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;Elektroanschluss beidseitig;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+50;NHXMH-J 3x2,5 Mantelleitung;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+60;Elektroanschluss beidseitig;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+70;NHXMH-J 5x2,5 Mantelleitung;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+80;Elektroanschluss beidseitig;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+90;NHXMH-J 3x4 Mantelleitung;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+100;Elektroanschluss beidseitig;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+110;NHXMH-J 5x4 Mantelleitung;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+120;Elektroanschluss beidseitig;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+130;NHXMH-J 3x6 Mantelleitung;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+140;Elektroanschluss beidseitig;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+150;NHXMH-J 5x6 Mantelleitung;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+160;Elektroanschluss beidseitig;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+170;NHXMH-J 5x16 Mantelleitung;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+180;Elektroanschluss beidseitig;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+190;J-H(St)H 2x2x0,8mm Fernmeldeleitung;2300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+200;Elektroanschluss beidseitig;90,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+210;J-H(St)H 4x2x0,8mm Fernmeldeleitung;3100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+220;Elektroanschluss beidseitig;80,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+230;J-H(St)H 8x2x0,8mm Fernmeldeleitung;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+240;Elektroanschluss beidseitig;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+250;Datenkabel Horizontal-/Steigbereich Kat. 6A geschirmt 4x2xAWG23, halogenfrei;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+260;Elektroanschluss beidseitig;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+270;POTENTIALAUSGLEICHLEITUNG;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+280;Potentialausgleichleitung;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+290;PA-ANSCHLÜSSE;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Standard Kabelrinne 100x60;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Standard Kabelrinne 200x60;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;Standard Kabelrinne 300x60;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;Trennsteg für vorgenannte Kabeltrassen,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+50;Außenbogen f. verzinkt Kabelrinne 100x60;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+60;Außenbogen f. verzinkt Kabelrinne 200x60;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+70;Außenbogen f. verzinkt Kabelrinne 300x60;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+80;Vertikaler Auf-, Abgang verzinkt 100x60;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+90;Vertikaler Auf-, Abgang verzinkt 200x60;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+100;Steigtrasse 200 mm;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+110;Steigtrasse 300 mm;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+120;HUF-Hängestiel für Kabelrinne l=300 mm;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+130;HUF-Hängestiel für Kabelrinne l=400 mm;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+140;Standardausleger an Hängestiel KTU 110;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+150;Standardausleger an Hängestiel KTU 210;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+160;Wandausleger zur Montage an Betonwänden, Mauerwerk;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+170;Wandausleger zur Montage an Betonwänden, Mauerwerk;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+180;Installationsrohr FPKuEMF20;125,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+190;Installationsrohr FPKuEMF25;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+200;Installationsrohr FPKuEMF32;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+210;Verbindungsdose DIN VDE 0606 als Abzweigkasten, aus;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+220;C-Profilschiene, Schlitzweite passend zu verwendetem Bügelschellentyp, mit vorgestanzter Bodenlochung,;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+230;Bügelschelle 16mm,;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+240;Bügelschelle 22mm;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+250;Bügelschelle 28mm;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+260;Kabelsammelhalter zur Befestigung von Kabeln in Zwischendecken,;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+270;Kabelsammelhalter zur Befestigung von Kabeln in Zwischendecken,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+280;Kabelklammer zur Befestigung von Kabeln in Zwischendecken, flammwidrig nach DIN VDE 0471/ DIN IEC 695,;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+290;Kabelklammer zur Befestigung von Kabeln in Zwischendecken, flammwidrig nach DIN VDE 0471/ DIN IEC 695,;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+300;Kabelverschraubung nach EN 50262;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+310;Kabelverschraubung nach EN 50262;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+320;Kabelverschraubung nach EN 50262;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Gateway BACnet IP to Metasys Network Automation Engine SNE2200 als BACnet Station zur Verbindung der Automationsebene mit dem Netzwerk der Managementebene,(ADX V10/11) mit einer Verarbeitungskapazität von 2500 Objekten.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Projektbesprechung der aufzuschaltenden Liegenschaft mit dem Betreiber der übergeordneten Manmagementebene (BACnet DIN EN ISO 16484-5 Protocol Revision 1.12);1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;zum Austausch von BACnet-Objekten pro BACnetobjekt, entsprechend EN ISO 16484-6 aus Abschnitt 1 und 2, Spalte 1 bis 5.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;Abstimmungen der aktuellen EDE-Liste mit der Firma Johnson Controls zum Austausch von BACnet-Objekten.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;Konfiguration/Parametrierung Datenpunkte aller ISP,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+50;Konfiguration/Parametrierung Datenpunkte aller ISP,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+60;Die aufgeschaltenen BACnet Objetkte sind in ihrer Funktion gemeinsam mit dem Errichter der Gebäudeleittechnik (JCI) umfänglich im 1:1 Test zu erproben und schriftlich zu dokumentieren.;728,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+70;Die aufgeschaltenen BACnet Objetkte sind in ihrer Funktion gemeinsam mit dem AN der BACnet-Clients umfänglich im 1:1 Test zu erproben und schriftlich zu dokumentieren.;728,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+80;Erstellung und Eingabe der funktionalen, statischen Darstellung einer gebäudetechnischen Anlage oder eines Gebäudeteils mit farbigen Symbolen oder Bildern, für die graphische Bedienung und Darstellung auf den Bedienstationen. Die Bilderstellung erfolgt nach vorher genehmigten Musterbildern, mit ents;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+90;Generierung dynamischer Einblendungen für Anlagenschema zur graphischen Bedienung und Darstellung von Soll- und Istwerten, Kontaktzuständen, Mess-/Zählwerten, Statusmeldungen sowie die Verküpfung von Folgebildern und Anlagenübersichten. Die Folgebilder sind untereinander in beiden Richtungen zu verk;763,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+100;Managementfunktion, Ereignis-Langzeitspeicherung gemäß;197,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+110;Managementfunktion, Historisierung in Datenbank gemäß;142,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+120;Bedienfunktion, Ereignis-Anweisungstext gemäß Funktion;69,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+130;Bedienfunktion, Nachricht an externer Stelle parametrieren gemäß Funktion 8.4 GA-Funktionsliste, Beiblatt 070-5.;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Bereitstellung von Gateways bzw. Schnittstellen zur Einbindung des BSK-Bussystems in die Gebäudeautomation:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;BSK-Feldmodul mit Busanbindung (2DI / 1DO, 230 V);17,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;Bereitstellung aller notwendigen Stromversorgungen für das Bussystem und die Feldgeräte:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;Dienstleistungen in folgendem Umfang:;17,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Schnittstelle zum digitalen Betriebstagebuch TASKO;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Kernbohrung, Untergrundfläche senkrecht oder waagerecht, aus Stahlbeton, Bohrdurchmesser bis 50 mm, Bohrtiefe über 20 bis 50 cm, in Diamant-Kernbohrtechnik, nass, Ausführung in allen Geschossen, Montagehöhe bis 3,5 m, einschließlich Lösen des Bohrkerns aus dem Gefüge, Entsorgung des Bohrkerns und de;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;jedoch;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;Kernbohrung, Untergrundfläche senkrecht oder waagerecht, aus Mauerwerk KS bzw. MZ NF, Bohrdurchmesser bis 50 mm, Bohrtiefe über 50 bis 80 cm, in Diamant-Kernbohrtechnik, nass, Ausführung in allen Geschossen, Montagehöhe bis 3,5 m, einschließlich Lösen des Bohrkerns aus dem Gefüge, Entsorgung des Boh;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;jedoch;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+50;Beantragung einer Kernbohrung oder eines Durchbruchs in massive Decken oder Wände vor der Ausführung, Antrag schriftlich in Form eines Formulars einschließlich eines Planausschnittes mit Angabe von Lage, Dimension und Abstandsmaßen bezogen auf Wände und Decken, Übergabe an die Objektüberwachung, Aus;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+60;Anzeichnen von Durchbrüchen bzw. Kernbohrungen, die bauseits erstellt werden, in Wände und Decken aus Mauerwerk oder Stahlbeton;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+70;Wandschlitz in Mauerwerk in Teillängen herstellen,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+80;jedoch BxT bis 50 x 25 mm;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+90;Herstellen einer Vorbohrung mit Durchmesser bis 20 mm zum Abgleich der beiden Raum- bzw. Geschossseiten;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+100;Wand- oder Deckendurchbruch oder Kernbohrungen in Mauerwerk und Beton nach Fertigstellung der Installation und Schottung brandschutzgerecht verschließen,;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+110;jedoch;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+120;nachträgliches Abkleben von Komponenten, wie Fühler, Dosen etc., für bauseitigen Anstrich der Wände / Decken, mit Klebeband, reißfester Folie o.ä.,;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+130;Fahrbare Gerüste Auf- und Abbauen, für die Montage der in;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+140;Fahrbare Gerüste vorhalten, für die Montage der in diesem Leistungsverzeichnis aufgeführten technischen Anlagen, Aufstellung im Gebäude, Arbeitshöhe über Fußboden über 3,50 bis 6,0 m, Arbeitsfläche nach Wahl des AN in Abhängigkeit der Abmessungen der zu montierenden Komponenten, einschl. Vorhaltung ;5,0;StWo;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+150;Mobile Hubarbeitsbühne, als Teleskop-Gelenksteiger oder Scheren-Arbeitsbühne, batteriebetrieben, mit markierungsfreier Bereifung, für die Montage der in diesem Leistungsverzeichnis aufgeführten technischen Anlagen, Aufstellung im Gebäude, Arbeitshöhe über Fußboden über 3,50 bis 8,0 m, Tragkraft;5,0;d;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Profilstahlkonstruktion für Stütz-, Hänge- und Tragkonstruktionen, Festpunkte sowie Sonderbefestigungen, die durch bauliche Erfordernisse benötigt werden und durch nicht handelsübliche Befestigungen und Halterungen erbracht werden müssen, maßgerecht einbauen, als Installationsschienensystem, feuerve;80,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;jedoch Montagehöhe über 3,5 m bis 6 m;50,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;jedoch aus nichtrostendem Stahl;50,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Mitwirkung bei den jeweiligen Funktionsprüfungen der Anlagen der Auftragnehmer Sanitäranlagen, Heizungsanlagen, Lüftungsanlagen, Elektroanlagen sowie Schwimmbadtechnik, im Wesentlichen bestehend aus:;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Mitwirkung bei der Sachverständigenprüfung der RLT-Anlagen als Begleitung der Sachverständigen-Prüfung durch einen vom AG separat beauftragten Sachverständigen in sachlichem, personellem und zeitlichem Umfang einschl. Vorhaltung der erforderlichen Prüfeinrichtungen und der notwendigen technischen Au;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;jedoch Mitwirkung bei der Wirkprinzip-Prüfung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;Wiederholte Einweisung des Bedienungs- und Wartungspersonals in alle in diesem Leistungsverzeichnis aufgeführten Anlagen, zusätzlich zur einmaligen Einweisung als Nebenleistung nach Punkt 3.3.3 DIN 18386 VOB/C.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Auf Grundlage der Ausführungsplanung und Berechnungen des Auftraggebers sind sofort nach der Übergabe die für die Ausführung erforderlichen Unterlagen für den gesamten im vorliegenden Leistungsverzeichnis beschriebenen Leistungsumfang als Montage- und Werkstattplanung zu erstellen und dem AG zu über;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Die Brandschutzdokumentation ist im Vorfeld der behördlichen Abnahmen als separate Unterlage zu erstellen und dem Bauherren zu übergeben.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;Auf Grundlage der erstellten und freigegebenen Werkstatt- und Montageplanung, der letztgültigen Ausführungsplanung, der aktuellsten Architekten-Werkpläne und der ausgeführten Leistung sind für den gesamten im vorliegenden Leistungsverzeichnis beschriebenen Leistungsumfang Unterlagen mitzuliefern und;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+40;"Erstellen einer Dokumentationsakte gemäß ""Dokumentationsrichtlinie Schadstoffarmut"" digital als Grundlage zur Koordination der entsprechenden Anforderungen an die Schadstoffarmut. Vorlegen und während der Leistungserbringung fortschreiben.";1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Stundenverrechnungssatz für Obermonteur;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+20;Stundenverrechnungssatz für Monteur;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+30;Stundenverrechnungssatz für Helfer;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83
+10;Wartung / Inspektion für die wartungspflichtigen Komponenten der in diesem Leistungsverzeichnis enthaltenen Gebäudeautomation einschließlich direktem Zubehör, gemäß anliegendem Muster, einschließlich aller Nebenkosten, innerhalb der Verjährungszeit für Mängelansprüche.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/20260716_SBH_LV_1-480-01.X83

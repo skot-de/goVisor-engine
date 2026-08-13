@@ -1,0 +1,8 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1.;Einmalige Einrichtung und Setup für das DAM-System, Migration des bestehenden DAM (u.a. 50.000 Assets unter Beibehaltung der bestehenden Einsortierungs-Systematik und Metadaten, Nutzenden-Datenbank (ca. 15.000 User), etc.), Abstimmungsgespräche, Kick-off, Präsenzschulung usw.;1,0;"einmalige 
+Pauschale";preisblatt;vom_unternehmen_auszufuellende_dokumente/25-08276_A1 Preisblatt.xlsx
+2.;Lizenz zur Nutzung des DAM-Systems (inkl. Speicherkapazität des Servers 6 TB, mind. 15.000 Nutzende, mind. 150 Admins) inkl. Service und Support zum DAM-System;48,0;monatliche Pauschale;preisblatt;vom_unternehmen_auszufuellende_dokumente/25-08276_A1 Preisblatt.xlsx
+3.;Traffic (Up- und Downstream), insbesondere Streamingkosten durch Nutzung des Media Players auf tk.de, kalkulatorische Annahme: 30 TB pro Monat;1440,0;Preis pro TB;preisblatt;vom_unternehmen_auszufuellende_dokumente/25-08276_A1 Preisblatt.xlsx
+4.;Erweiterung der Speicherkapazität des DAM-Systems über das ursprüngliche Maß von 6 TB hinaus (optional), kalkulatorische Annahme: 1 zusätzlicher TB pro Monat ab Vertragsmonat 12;37,0;Preis pro TB pro Monat;preisblatt;vom_unternehmen_auszufuellende_dokumente/25-08276_A1 Preisblatt.xlsx
+5.;Onlineschulung zur Bedienung des DAM-System (max. 4 Stunden je Schulung) (optional);8,0;Stückpreis;preisblatt;vom_unternehmen_auszufuellende_dokumente/25-08276_A1 Preisblatt.xlsx
+6.;Programmierleistungen für weitere Optimierung des DAM-Systems nach der Erstkonfiguration. (z. B. Erstellung von neuen Schnittstellen, Suchfiltern oder Funktionalitäten, Anpassung der Oberfläche etc.) (optional);320,0;Stundenpreis;preisblatt;vom_unternehmen_auszufuellende_dokumente/25-08276_A1 Preisblatt.xlsx

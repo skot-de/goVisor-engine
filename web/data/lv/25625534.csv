@@ -1,0 +1,301 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Baustelleneinrichtung;1,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+2;Vorhaltung der Baustelleneinrichtung: 24 Wochen;24,0;StWo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+3;"Zulage zur Hauptposition ""Baustelleneinrichtung"":";1,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+4;Beantragung einer Sondernutzung im;1,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+5;Zulage zur Vorposition Antrag auf Erteilung einer Sondernutzung im;4,0;Wo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+6;Verkehrssicherung der Sondernutzfl;1,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+7;Vorhaltung der Verkehrssicherung: 24 Wochen;24,0;StWo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+8;Bauzaun aus mobilen Stahlrahmenelementen mit Rundstahlf;250,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+9;Vorhaltung des Bauzauns: 24 Wochen;6000,0;mWo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+10;Zulage zur Vorposition Bauzaun f;2,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+11;Vorhaltung des Bauzaun-Tor: 24 Wochen;48,0;StWo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+12;Baustellen-Toilettenkabine mit Handwaschbecken, anschlussfrei, und Handdesinfketionsspender antransportieren, aufstellen und vorhalten inkl.;1,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+13;Zulage zur Vorposition Baustellen-Toilettenkabine f;12,0;StWo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+14;Vorhaltung Toilettenkabine: 24 Wochen;24,0;StWo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+15;Liefern und Vorhalten einer mobilen Arbeitsr;1,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+16;Mehrmaliges Aufbauen inkl. fachgerechter Sicherung, Vorhalten, Umsetzen und Abbauen der mobilen R;4,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+1;Herrichten, Aufbau, Vorhaltung und R;150,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+2;AUFBAU:;540,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+3;R;540,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+4;Stadtmauerger;4320,0;m²Wo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+5;AUFBAU:;25,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+6;R;25,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+7;Ger;200,0;m²Wo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+8;AUFBAU: Vollfl;560,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+9;R;560,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+10;Ger;4480,0;m²Wo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+11;AUFBAU: Verbreiterung des Ger;150,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+12;R;150,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+13;Ger;1200,0;mWo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+14;AUFBAU: Verbreiterung des Ger;150,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+15;R;150,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+16;Ger;1200,0;mWo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+17;AUFBAU:;2,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+18;R;2,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+19;3-teiliger Seitenschutz;16,0;StWo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+20;Sch;3,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+21;Sch;50,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+22;R;10,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+23;Herstellung einer Einfriedung bestehend aus Maschendrahtzaun mit Zaunpfeilern zum Verschluss der Baustellenzufahrt und des Sanierungs- und Arbeitsbereichs.;10,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+24;R;5,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+25;Behutsames Entfernen von;80,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+26;Behutsames Entfernen von einzelnem Pflanzbewuchs wie Birken, Str;10,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+27;Stadtmauerfl;540,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+28;"Zulage  zur Vorposition ""Substanzschonene Reinigung des Stadtmauerwerks"" f";120,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+29;Aufschachtung des Mauerwerkssockels/ Bestandsfundamentes f;60,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+30;Hinterf;60,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+31;Wiederherstellen von gesch;5,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+32;Erneuerung von Fugen im Natursteinmauerwerk aus Kalkm;175,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+33;Wiederherstellen bzw. Aufbau der Mauerkrone in Natursteinmauerwerk in leicht gerundeter, bombierter Form, so dass anfallendes Regenwasser seitlich abgeleitet werden kann. Die Leistung beinhaltet:;5,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+34;Lieferung von Natursteinen f;2,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+35;Partieller und vorsichtiger Ausbau von konstruktiv gesch;2,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+36;Wiederherstellung des zuvor zur;2,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+37;Partieller und vorsichtiger Ausbau von konstruktiv gesch;15,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+38;Wiederherstellung des zuvor zur;15,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+39;Lieferung und Einbau von Mauerwerksbewehrung in den obersten Ziegelschichten der Mauerkrone zur Sicherung des Mauerwerkes und konstruktiven Risssicherung.;75,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+40;Schlie;15,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+41;Zulage f;15,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+42;Erneuerung von Ziegeln in Kleinfl;20,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+43;Erneuerung einzelner Ziegel aus dem vorhandenen;80,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+44;Lieferung von Ziegeln f;5,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+45;Lieferung von Ziegeln f;2,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+46;Erneuerung von Bestandsfugen im Ziegelmauerwerk der Stadtmauer mit Kalkm;100,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+47;Erneuerung von Fugen am neu hergestellten bzw. ersetzten Ziegelmauerwerk mit Kalkm;50,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+48;Ber;375,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+49;Vorhandene Grasnarbe, nicht brauchbar, in unterschiedlicher St;490,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+50;Boden;75,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+51;Zulage zur Vorposition bei Vorhandensein von hohem Bauschuttanteil im Boden;75,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+52;Sandigen Boden als Unterboden der Vegetationsfl;75,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+53;Unterboden h;75,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+54;Unterboden f;150,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+55;Unterboden f;225,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+56;Lehmigen Boden als Abdichtungsebene im Unterbodenaufbau der Vegetationsfl;30,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+57;Lehmboden;30,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+58;Erosionsschutzgewebe aus Jutegewebe auf egalisierter Fl;375,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+59;Oberboden liefern, im Baustellenbereich verteilen, profilgerecht  und angeb;75,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+60;Vegetationsfl;490,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+61;NPK-Starterd;490,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+62;Rasenfl;490,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+63;Rasenfl;490,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+1;Herrichten, Aufbau, Vorhaltung und R;70,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+2;AUFBAU:;280,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+3;R;280,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+4;Stadtmauerger;2240,0;m²Wo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+5;AUFBAU:;25,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+6;R;25,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+7;Ger;200,0;m²Wo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+8;AUFBAU: Vollfl;300,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+9;R;300,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+10;Ger;2400,0;m²Wo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+11;AUFBAU: Verbreiterung des Ger;80,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+12;R;80,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+13;Ger;640,0;mWo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+14;AUFBAU: Verbreiterung des Ger;80,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+15;R;80,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+16;Ger;640,0;mWo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+17;AUFBAU:;2,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+18;R;2,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+19;3-teiliger Seitenschutz;16,0;StWo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+20;Sch;2,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+21;Sch;50,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+22;R;10,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+23;Herstellung einer Einfriedung bestehend aus Maschendrahtzaun mit Zaunpfeilern zum Verschluss der Baustellenzufahrt und des Sanierungs- und Arbeitsbereichs.;10,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+24;Behutsames Entfernen von;50,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+25;Behutsames Entfernen von einzelnem Pflanzbewuchs wie Birken, Str;10,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+26;Behutsames vollst;5,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+27;Stadtmauerfl;325,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+28;"Zulage  zur Vorposition ""Substanzschonene Reinigung des Stadtmauerwerks"" f";125,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+29;Aufschachtung des Mauerwerkssockels/ Bestandsfundamentes f;32,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+30;Hinterf;32,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+31;Wiederherstellen von gesch;10,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+32;Erneuerung von Fugen im Natursteinmauerwerk aus Kalkm;180,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+33;Lieferung von Natursteinen f;2,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+34;Partieller und vorsichtiger Ausbau von konstruktiv gesch;3,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+35;Wiederherstellung des zuvor zur;3,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+36;Partieller und vorsichtiger Ausbau von konstruktiv gesch;12,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+37;Wiederherstellung des zuvor zur;12,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+38;Lieferung und Einbau von Mauerwerksbewehrung in den obersten Ziegelschichten der Mauerkrone zur Sicherung des Mauerwerkes und konstruktiven Risssicherung.;50,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+39;Schlie;20,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+40;Zulage f;20,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+41;Erneuerung von Ziegeln in Kleinfl;25,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+42;Erneuerung einzelner Ziegel aus dem vorhandenen;120,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+43;Lieferung von Ziegeln f;5,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+44;Lieferung von Ziegeln f;2,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+45;Erneuerung von Bestandsfugen im Ziegelmauerwerk der Stadtmauer mit Kalkm;120,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+46;Erneuerung von Fugen am neu hergestellten bzw. ersetzten Ziegelmauerwerk mit Kalkm;80,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+47;Ber;250,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+48;Vorhandene Grasnarbe, nicht brauchbar, in unterschiedlicher St;300,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+49;Boden;50,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+50;Zulage zur Vorposition bei Vorhandensein von hohem Bauschuttanteil im Boden;50,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+51;Sandigen Boden als Unterboden der Vegetationsfl;50,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+52;Unterboden h;50,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+53;Unterboden f;100,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+54;Unterboden f;150,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+55;Lehmigen Boden als Abdichtungsebene im Unterbodenaufbau der Vegetationsfl;20,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+56;Lehmboden;20,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+57;Erosionsschutzgewebe aus Jutegewebe auf egalisierter Fl;250,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+58;Oberboden liefern, im Baustellenbereich verteilen, profilgerecht  und angeb;45,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+59;Vegetationsfl;300,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+60;NPK-Starterd;300,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+61;Rasenfl;300,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+62;Rasenfl;300,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+1;Herrichten, Aufbau, Vorhaltung und R;50,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+2;AUFBAU:;165,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+3;R;165,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+4;Stadtmauerger;1320,0;m²Wo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+5;AUFBAU:;25,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+6;R;25,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+7;Ger;200,0;m²Wo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+8;AUFBAU: Vollfl;180,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+9;R;180,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+10;Ger;1440,0;m²Wo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+11;AUFBAU: Verbreiterung des Ger;50,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+12;R;50,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+13;Ger;400,0;mWo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+14;AUFBAU: Verbreiterung des Ger;50,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+15;R;50,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+16;Ger;400,0;mWo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+17;AUFBAU:;1,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+18;R;1,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+19;3-teiliger Seitenschutz;8,0;StWo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+20;Sch;2,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+21;Sch;50,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+22;R;12,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+23;R;10,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+24;Behutsames Entfernen von;70,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+25;Behutsames Entfernen von einzelnem Pflanzbewuchs wie Birken, Str;5,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+26;Stadtmauerfl;200,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+27;"Zulage  zur Vorposition ""Substanzschonene Reinigung des Stadtmauerwerks"" f";120,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+28;Aufschachtung des Mauerwerkssockels/ Bestandsfundamentes f;28,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+29;Hinterf;28,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+30;Wiederherstellen von gesch;35,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+31;Erneuerung von Fugen im Natursteinmauerwerk aus Kalkm;85,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+32;Wiederherstellen bzw. Aufbau der Mauerkrone in Natursteinmauerwerk in leicht gerundeter, bombierter Form, so dass anfallendes Regenwasser seitlich abgeleitet werden kann. Die Leistung beinhaltet:;12,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+33;Lieferung von Natursteinen f;4,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+34;Partieller und vorsichtiger Ausbau von konstruktiv gesch;6,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+35;Wiederherstellung des zuvor zur;4,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+36;Partieller und vorsichtiger Ausbau von konstruktiv gesch;5,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+37;Wiederherstellung des zuvor zur;5,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+38;Lieferung und Einbau von Mauerwerksbewehrung in den obersten Ziegelschichten der Mauerkrone zur Sicherung des Mauerwerkes und konstruktiven Risssicherung.;25,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+39;Schlie;15,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+40;Zulage f;15,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+41;Erneuerung von Ziegeln in Kleinfl;5,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+42;Erneuerung einzelner Ziegel aus dem vorhandenen;80,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+43;Lieferung von Ziegeln f;3,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+44;Lieferung von Ziegeln f;1,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+45;Erneuerung von Bestandsfugen im Ziegelmauerwerk der Stadtmauer mit Kalkm;120,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+46;Erneuerung von Fugen am neu hergestellten bzw. ersetzten Ziegelmauerwerk mit Kalkm;50,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+47;Ber;230,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+48;Vorhandene Grasnarbe, nicht brauchbar, in unterschiedlicher St;230,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+49;Boden;35,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+50;Zulage zur Vorposition bei Vorhandensein von hohem Bauschuttanteil im Boden;35,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+51;Sandigen Boden als Unterboden der Vegetationsfl;35,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+52;Unterboden h;35,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+53;Unterboden f;70,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+54;Unterboden f;100,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+55;Lehmigen Boden als Abdichtungsebene im Unterbodenaufbau der Vegetationsfl;15,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+56;Lehmboden;15,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+57;Erosionsschutzgewebe aus Jutegewebe auf egalisierter Fl;175,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+58;Oberboden liefern, im Baustellenbereich verteilen, profilgerecht  und angeb;35,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+59;Vegetationsfl;230,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+60;NPK-Starterd;230,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+61;Rasenfl;230,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+62;Rasenfl;230,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+1;AUFBAU:;110,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+2;R;110,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+3;Fassadenger;880,0;m²Wo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+4;AUFBAU: Treppenturm, vorgebaut vor Fassadenger;3,5;Stgm;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+5;R;3,5;Stgm;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+6;"Treppenturm vorgebaut (siehe Vorposition);";28,0;mWo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+7;AUFBAU: Vollfl;120,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+8;R;120,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+9;Ger;960,0;m²Wo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+10;AUFBAU: Verbreiterung des Ger;35,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+11;R;35,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+12;Ger;280,0;mWo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+13;AUFBAU: Verbreiterung des Ger;35,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+14;R;35,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+15;Ger;280,0;mWo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+16;AUFBAU:;2,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+17;R;2,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+18;3-teiliger Seitenschutz;16,0;StWo;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+1;Dachfl;100,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+2;Unterbau der Dachabdichtungsbahn aus Holzschalung/ Holzwerkstoffplatte/OSB-Platte aufnehmen, transportieren und fachgerecht entsorgen, inkl. Sortierung und Kippgeb;100,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+3;Aufnehmen der Dachrandabschl;55,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+4;Aufnehmen der Regenentw;28,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+5;R;80,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+6;Ausbau vorhandener Fenster und Au;2,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+7;R;18,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+8;R;5,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+9;Vollst;20,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+10;Abbruch von Wand- und Bodenbekleidungen mit Fliesen in verschiedenen Formaten;40,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+11;Demontage Rohrleitung DN 15 - DN 32  Kupfer;25,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+12;Demontage und Entsorgung WC-Anlage,;3,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+13;Demontage und Entsorgung Waschtischanlage,;3,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+14;Demontage Rohrleitung DN 100  Abwasserleitung, Kunststoff-Rohr, einschlie;20,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+15;Desgleichen wie vor, jedoch:;25,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+16;Demontage Rohrleitung DN 15 - DN 50 Trinkwasserverteilung;20,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+1;Herstellen von W;15,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+2;Aufbringen einer mineralische Dichtschl;8,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+3;Erneuerung einzelner Ziegel aus dem vorhandenen;50,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+4;Erneuerung von Ziegeln in Kleinfl;5,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+5;Schlie;20,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+6;Zulage f;20,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+7;Herstellen von T;1,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+8;Herstellen von Fenster;1,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+9;Lieferung von Ziegeln f;2,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+10;Erneuerung von Bestandsfugen im Ziegelmauerwerk des Klosternebengeb;110,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+11;Erneuerung von Fugen am neu hergestellten bzw. ersetzten Ziegelmauerwerk mit Kalkm;25,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+12;Vorsichtiger R;5,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+13;Anputzen der Innendeckenfl;15,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+14;Vorsichtiger R;10,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+15;Anputzen der Innenwandfl;30,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+16;Kernbohrungen als Nassbohrung, horizontal und vertikal, im;2,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+17;Zulage f;1,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+18;Konservierung der freiliegenden Stahltr;8,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+19;Vorsichtiges Freistemmen  zur Herstellung von Einbindepunkte/ Auflagertaschen in den angrenzenden Kellerw;6,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+20;Liefern und Einbau von Stahltr;3,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+1;Vorsichtiger Ausbau der gesch;5,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+2;Sanierung gesch;5,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+3;Abbund und Aufstellen, Richten und Einbauen von Bauholz f;2,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+4;Lieferung und Einbau  einer vollfl;100,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+5;Herstellen eines Traufgesimes mittels Nut-Feder-Schalung, impr;5,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+6;Lieferung Holzschalung aus Rauspund und fachgerechte und Montage unter den Deckenbalken und Anarbeitung an den Bestand, als Vorbereitung der Herstellung der Deckenbekleidung mit Kalkputz.;10,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+7;Abbund und Aufstellen, Richten und Einbauen von Bauholz f;82,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+8;Lieferung und konstruktive Verankerung der Schwelle/ Pfette an der stadtmauerseitigen R;40,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+9;Lieferung und konstruktive Verbindung der Sparren an Schwelle und Pfette mit;120,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+10;Ausbildung des seitlichen Dachabschlusses der;3,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+11;Kleineisenteile,;10,0;kg;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+12;Liefern von Bauschnittholz aus Kantholz f;2,0;m³;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+1;Dachabdichtung aus einer Lage Elastomerbitumen Kaltselbstklebebahn liefern und als untere Lage auf nicht hitzebest;100,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+2;Dachabdichtung aus einer Lage Elastomerbitumen Kaltselbstklebebahn mit Schwei;100,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+3;Liefern einer Ortgang- und Firstverblechung ohne Falz. Montage und Einbau in die Bitumendachabdichtung an den freien Ortgangseiten und des oberen Firstabschlusses des Pultdaches. Die St;30,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+4;"Vogel- und Insektenschutzgitter aus gestanztem, gekantetem Titan-Zinkblech;";20,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+5;Tropfblech an Traufe des Pultdaches am;20,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+6;Lieferung und Einbau;20,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+7;Zulage f;20,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+8;Rinnen-Endst;2,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+9;Bewegungsausgleich f;2,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+10;Rinneneinhangstutzen, konisch und gerade (Form G),;2,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+11;Fallrohr, rund, f;6,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+12;Fallrohrbogen mit Doppelbogen, zur Verbindung zwischen der Dachrinne und dem runden Regenfallrohr, als Zulage.;2,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+13;Fallrohrbogen, einfach, rund, als Teil der Verbindung zwischen der Dachrinne und dem runden Fallrohr, als Zulage.;2,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+14;Lieferung und Einbau der erforderlichen Dachlattung;28,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+15;Lieferung der Dacheindeckung - Biberschwanzziegel.;28,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+16;Einbau der Eindeckung mit neuen Biberschwanzziegel in Kronendeckung, trockene Verlegung, inkl.;28,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+17;Zulage f;40,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+18;Wandanschluss der Ziegeldeckung aus;20,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+19;Die Kappleisten sind nach der Ausf;20,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+1;Vorhandene 1-flg. Au;4,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+2;Vorhandene 1-flg. Au;1,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+3;Vorhandene 1-flg. Fenster aus Holz, Blendrahmen mit oberen horizontalen oder Bogenabschluss, ca. 1,00 x 1,00m,  tischlerm;5,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+4;Zulage f;3,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+5;Herstellen und Einbau eines 2-flg. Fenster aus Holz mit Blendrahmen ca. 1,80 x 1,50m.;1,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+6;Fensterbank f;2,0;m;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+1;Vorhandene 1-flg. Au;4,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+2;Vorhandene 1-flg. Au;1,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+3;Vorhandene 1-flg. Fenster aus Holz, Blendrahmen mit oberen horizontalen oder Bogenabschluss, ca. 1,00 x 1,00m, malerm;5,0;St;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+4;S;210,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+5;Grundierung, verfestigend, von Innenwandfl;210,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83
+6;Beschichtung von Wand- und Deckenfl;210,0;m²;gaeb;leistungsbeschreibungen/5194-LOS3.X83

@@ -1,0 +1,17 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Einrichten der Baustelle für sämtliche in der Leistungsbeschreibung aufgeführten Leistungen, außer den in den nachfolgenden Positionen gesondert beschriebenen Teilen der Baustelleneinrichtung.;1,0;psch;gaeb;leistungsbeschreibungen/LV Zimmererarbeiten_V33.X83
+10;Konstruktionsvollholz, sichtbar, Nadelholz;4,68;m3;gaeb;leistungsbeschreibungen/LV Zimmererarbeiten_V33.X83
+20;wie Pos.;3,24;m3;gaeb;leistungsbeschreibungen/LV Zimmererarbeiten_V33.X83
+30;wie Pos.;0,252;m3;gaeb;leistungsbeschreibungen/LV Zimmererarbeiten_V33.X83
+40;wie Pos.;0,175;m³;gaeb;leistungsbeschreibungen/LV Zimmererarbeiten_V33.X83
+50;wie Pos.;2,05;m3;gaeb;leistungsbeschreibungen/LV Zimmererarbeiten_V33.X83
+60;wie Pos.;0,336;m3;gaeb;leistungsbeschreibungen/LV Zimmererarbeiten_V33.X83
+10;Bolzenanker als Befestigung der Fußhölzer/Fußpfetten an neuem bauseitigem Stahlbeton-Drempel. Abstand: e<1000 mm;40,0;St;gaeb;leistungsbeschreibungen/LV Zimmererarbeiten_V33.X83
+20;Windrispenband mit Zulassung nach DIN EN 14545:2009-02 liefern und nach Angaben Statik montieren.;90,0;m;gaeb;leistungsbeschreibungen/LV Zimmererarbeiten_V33.X83
+30;Kleineisenteile wie Drahtnägel, Klammern, Zuganker, Bolzenanker, Schrauben,;200,0;kg;gaeb;leistungsbeschreibungen/LV Zimmererarbeiten_V33.X83
+10;Konstruktionsvollholz bearbeiten, Schrägschnitt/ Profilierung/ Gehrungsschnitt.;280,0;St;gaeb;leistungsbeschreibungen/LV Zimmererarbeiten_V33.X83
+20;Ausklinkung der Sparren 10x20 cm im Bereich des Dachüberstandes.;60,0;St;gaeb;leistungsbeschreibungen/LV Zimmererarbeiten_V33.X83
+30;Abbund und Aufstellen aller Konstruktionsvollholzelemte für Dachkonstruktion;640,0;m;gaeb;leistungsbeschreibungen/LV Zimmererarbeiten_V33.X83
+10;Für evtl. erforderliche Arbeiten, die nicht im Leistungsverzeichnis erfasst sind und gegen Nachweis zur Ausführung kommen, werden berechnet für Facharbeiter;25,0;h;gaeb;leistungsbeschreibungen/LV Zimmererarbeiten_V33.X83
+20;Für evtl. erforderliche Arbeiten, die nicht im Leistungsverzeichnis erfasst sind und gegen Nachweis zur Ausführung kommen, werden berechnet für Helfer;25,0;h;gaeb;leistungsbeschreibungen/LV Zimmererarbeiten_V33.X83
+10;Der AN hat die Dokumentationsunterlagen seiner Leistungen in 2-facher Ausführung in Papierform zu übergeben. Die Unterlagen sind in Ordnern, DIN A4 mit Einschubrückenschild zu übergeben. Mit jedem Satz Dokumentationsordner ist ein Datenträger abzugeben.;1,0;Stüc;gaeb;leistungsbeschreibungen/LV Zimmererarbeiten_V33.X83

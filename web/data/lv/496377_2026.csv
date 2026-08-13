@@ -1,0 +1,44 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+5;ixalo Freigabeterminal pro ǀ SE;1,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+10;Ethernet Buskoppler EBK zur Umsetzung von Signalen des RS-485 Bussystems auf Ethernet/LAN. Der Buskoppler EBK dient zur Anbindung von bis zu 32  Systemkomponenten wie z.B. SEFM, Wandleser an die Programmiersoftware Keymanager für ixalo ǀ SE.;1,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+15;Wandleser mit Kommunikation über verschlüsselte Zweidrahtleitung;5,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+20;mit integrierter Steuerung und elektronischer Berechtigungsprüfung.;6,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+25;Berührungslose Identifikation an ixalo-Zylindern ǀ SE und ixalo-Wandlesern ǀ SE.;30,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+30;Elektronischer Zylinder mit elektronischer Berechtigungsprüfung.;49,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+35;Mehrpreis für die Ausführung Doppelknaufzylinder-Panik ǀ SE;1,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+40;Elektronischer Zylinder mit elektronischer Berechtigungsprüfung.;1,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+45;ixalo-Beschlag ǀ SE Elektronischer Beschlag zum Einbau in WC Türen.;2,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+50;ixalo-Beschlag ǀ SE Elektronischer Beschlag zum Einbau in WC Türen.;2,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+55;Zylinderverlängerung für ixalo-Doppelknaufzylinder ǀ SE;120,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+60;Zylinderverlängerung für ixalo-Doppelknaufzylinder ǀ SE, Ausführung Panik,;1,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+65;Aufpreis für Ausführung IP 65 beidseitig;1,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+70;Adapter Schild für Beschläge in Edelstahl zur Abdeckung von Rosettenbohrungen.;1,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+75;ixalo Netzfilter für Hutschiennetzteile;7,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+80;Externes Schaltnetzteil für Schließsystem ixalo ǀ SE Online/Data on Transponder (2,1A);7,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+85;Automatenkasten mit Hutschiene mit mindestens 12 Teilungseinheiten liefern.;1,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+90;Automatenkasten mit Hutschiene mit mindestens 12 Teilungseinheiten liefern.;6,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+95;Aufputz Gehäuse und Dichtmanschetten für Wandleser;1,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+100;ixalo-Wandleser kompakt ǀ SE für Aufzug;2,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+105;Profildoppelzylinder für Außentüren aus der Anlage Q A G W S R;9,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+110;Profildoppelzylinder für Innentüren aus der Anlage Q A G W S R;5,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+115;Grundlänge BL 31/31 mm;18,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+120;5 mm;40,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+125;5 mm;50,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+130;Profilhalbzylinder für Möbeltüren aus der Anlage Q A G W S R;96,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+135;"Projektierung der ixalo ǀ SE ""Data on Transponder"" Schließanlage";1,0;psch;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+140;Montage der ixalo Elektronik-Zylinder ǀ SE;49,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+145;Montage des ixalo-Wandleser-Sets ǀ SE;5,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+150;Montage des ixalo-Wandleser-Aufzug mit Relais und Anbindung;2,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+155;Montage des ixalo-Freigabeterminal und Buskoppler EBK;1,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+160;Fachgerechte Montage und Anschluss, sowie Zusammenschaltung der Komponenten -Sicherungsautomaten 16A -Netzteil und USV -Wandleser kompakt -Aufschaltung: Türöffner (z.B. E-Öffner, A-Öffner, Drehtürantrieb..);7,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+165;Montage ixalo-Beschlag ǀ SE an vorhandene;2,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+170;Installieren und Einrichten der ixalo- Freigabeterminal;1,0;psch;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+175;Eingabe der Schließberechtigungen in die vorhandene ixalo-Programmiersoftware ǀ SE;1,0;psch;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+180;Unterstützung vor Ort für die Server-Client Installation an mehreren Standorten.;1,0;psch;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+185;Montage der Zylinder Mechanisch;14,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+190;Montage der Blindzylinder;8,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+195;Montage der Möbelzylinder;86,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+5;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;10,0;h;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+10;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;5,0;h;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+15;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;5,0;h;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83
+20;Zusätzliche Anfahrtspauschale inklusive An- und Abfahrt;2,0;St;gaeb;sonstiges/2026-07-15 169 Los 229 LV Schliessanlage_V33.X83

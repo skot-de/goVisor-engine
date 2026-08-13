@@ -1,0 +1,32 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Diesel-Notstromaggregat 350 kVA, 50 Hz,;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0020;nach DIN VDE 0100/718;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0030;Tankvolumen ca. 200 Liter,;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0040;Motorisch betriebener Lasttrennschalter zur Integration;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0050;Motorisch betriebener Lasttrennschalter zur Integration;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0060;zur Entkopplung des gesamten;6,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0070;zur Einleitung der erwärmten Abluft in den SV-Raum;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0080;zum Anschluss des Notstromaggregates an den;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0090;Abluftschalldämpfer zur Installation zwischen;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0100;Wetterschutzgitter am Auslass des Abluftkanals;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0110;Temperatur- und Aggregatgesteuert;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0120;Zuluftschalldämpfer zur Installation an der;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0130;Wetterschutzgitter für die Zuluft;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0140;zum Transport des Dieselkraftstoffes vom Tank zum Dieselnotstromaggregat.;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0150;zur Erkennung von Dieselaustritt;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0160;Abgasleitung aus Edelstahl zur Ableitung der;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0170;Vollkunststoff-Sicherheitstank oder Stahlblechtank;3,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0180;Aufstellung des Kraftstoff-Dieseltanks;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0190;3.000 Liter Diesel oder geeignet Heizöl, EL;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0200;geeignet für den NEA-Raum,;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0210;Bohren von Löchern als Decken-;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0220;Bohren von Löchern als Decken-;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0230;Hebe-/Kranfahrzeuge für das Einbringen;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0240;Monteurstunde für Sonderarbeiten nach gesonderter;10,0;h;gaeb;leistungsbeschreibungen/LV NEA.x83
+0250;Durchführung eines 4 stündigen Probelaufs;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0260;Begleitung der Sachverständigenabnahme,;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0270;Erstellung einer Dokumentation;1,0;St;gaeb;leistungsbeschreibungen/LV NEA.x83
+0010;Wartung des Dieselnotstromaggregates.;1,0;Jr;gaeb;leistungsbeschreibungen/LV NEA.x83
+0020;Wartung des Dieselnotstromaggregates.;1,0;Jr;gaeb;leistungsbeschreibungen/LV NEA.x83
+0030;Wartung des Dieselnotstromaggregates.;1,0;Jr;gaeb;leistungsbeschreibungen/LV NEA.x83
+0040;Wartung des Dieselnotstromaggregates.;1,0;Jr;gaeb;leistungsbeschreibungen/LV NEA.x83

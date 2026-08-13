@@ -1,0 +1,35 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Einrichtung der Baustelle;1,0;psch;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+10;Verkehrszeichen außerhalb der Baustelle aufstellen. Amtliche Verkehrszeichen entsprechend der StVO für die Regelung des Verkehrs außerhalb der Baustelle, retroreflektierend, einschl. Pfosten für  die Beschilderung der Umleitungsstrecken während der gesamten Bauzeit aufstellen, unterhalten, wenn nöti;10,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+20;Absperrschranken außerhalb der Baustelle Straßenabsperrung mit Absperrschranken, für die Regelung des Verkehrs aufladen, anliefern, nach den Vorschriften der StVO aufstellen, umstellen und für die Dauer der Bauzeit vorhalten, mit roten bzw. gelben Warnlampen beleuchten und nach Aufhebung der Verkehr;10,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+30;Absperrbaken außerhalb der Baustelle beidseitig rot-weiß, mit Fuß, (rückstrahlend) bereitstellen, aufstellen,vorhalten und beleuchten (dauergelb).;5,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+40;Erstellen von Verkehrszeichenplänen zur Leitung des Fahrzeug- und Fußgängerverkehrs für einzelne Bauphasen bzw. Bauabschnitte.;2,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+10;Flächen freilegen;10,0;m2;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+10;Kabelgraben einschl. Aufbruch und Wiederherstellung;10,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+10;Kunststoffrohre  - DU 110 mm -  gerade,;10,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+30;Flexibles Kunststoffrohr (Kaboflex oder gleichwertiges);5,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+40;Kiessand zum Verfüllen der Gräben einbauen und;2,0;m³;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+20;Signalkabel in neue und vorhandene Kabelschutzrohre einziehen.;85,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+10;Abzweigkasten für Fußgängerverkehr mit einer max. Radlast;2,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+10;Sockelrahmen in Beton.;1,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+20;Erdungsstab liefern und einbauen;1,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+10;Signalmaste, DN 159/108 mm,;2,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+10;Schmalstriche, Strichbreite: 12 cm, ohne Unterbrechung auftragen.;20,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+20;Breitstriche, Strichbreite: 50 cm,  als Haltelinie, auftragen.;7,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+10;Fahrbahnmarkierung Breite 12-30 cm entfernen;5,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+10;Signalsteuergerät mit Kunststoffschrank und Anschluss an VSR über Ocit-LTE-Schnittstelle wie vor beschrieben gemäß beiliegendem Lageplan ausbaufähig bis zu 5 Signalgruppen mit allen notwendigen Bauteilen,;1,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+20;Lieferung und Einbau des Modems auf der Steuergeräteseite.;1,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+30;Steuergerät mit Bedienteil in Kunststoffschrank mit Sockel mit allen dazugehörigen Kabelarbeiten montieren (Erdung nach VDE-Richtlinie).;1,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+40;Versorgen des Steuergerätes mit 3 Programmen in;1,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+50;Prüfung und Inbetriebnahme der Signalanlage;1,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+10;40 Volt-;4,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+10;Montage von Signalgebern am Mast;2,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+20;Montage von Signalgebern am Ausleger;2,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+10;Grundmast für Peitschenmast, feuerverzinkt, Bauform gerade abgesetzt mit Masttür aus Stahl 125 x 350mm und Mastkappe, für Ausleger von 3,0-6,0m Länge je nach Belastung, Befestigung mit Erdstück ES21 Länge 1200mm liefern.;2,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+20;Ausleger Peitschenmast für Grundmast mit gerade abgesetzter Bauform, feuerverzinkt mit Grundausladung von 3,0m Länge, Auslage für 1 Signalgeber, Durchfahrtshöhe größer oder gleich 4,5m mit Signalhalterung montieren.;2,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+30;Mastverteiler liefern und montieren incl. aller Kabelarbeiten;2,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+10;Wärmebildkamera zur Detektion von Kfz und Fahrrädern mit allen zugehörigen Bauteilen.;2,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+20;Montage, Anschluss und Ausrichtung eines Detektors;2,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+10;Signalkabel NYY-J 19 x 1,5 qmm liefern.;100,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+20;Signalkabel (Nachrichtenkabel 2 DA) liefern.;100,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83
+10;Wartung;120,0;Mon;gaeb;leistungsbeschreibungen/Angebotsaufforderung.X83

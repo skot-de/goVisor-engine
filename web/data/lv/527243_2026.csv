@@ -1,0 +1,26 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Baustelleneinrichtung für den eigenen Bedarf zur vertragsgemäßen Erfüllung der Bauleistung nach den Vorgaben des Arbeitsschutzgesetzes (wie z. B. Bereitstellung eines Aufenthaltsraumes nach den Anforderungen des Arbeitsschutzgesetzes), sowie für die Vorhaltung der erforderlichen Gerätschaften, Werkz;1,0;St;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0010;Einfache Tribünenbank nach historischem Vorbild neu anfertigen. Die Bestandsbänke werden aufgrund der bleihaltigen Beschichtung erneuert/teilerneuert.;180,0;m;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0020;Einfache Tribünenbank nach historischem Vorbild neu anfertigen. Die Bestandsbänke werden aufgrund der bleihaltigen Beschichtung erneuert / teilerneuert.;200,0;m;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0030;Instandsetzung der Holzbänke, Bestand:;100,0;m;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0010;Holzbrüstung aus Ober- und Untergurt mit Stäben und Abdeckung (Handlauf) aus gehobelten, geschliffenen einfachen Brettern gefugt. Bretter untereinander durch Holzschrauben und/oder Nagelung verbunden.;80,0;m;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0020;Holzbrüstung aus Ober- und Untergurt mit Stäben und Abdeckung (Handlauf) aus gehobelten, geschliffenen einfachen Brettern gefügt. Bretter untereinander durch Holzschrauben und/oder Nagelung verbunden.;350,0;m;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0030;Holzbrüstung aus Ober- und Untergurt mit Stäben und Abdeckung (Handlauf) aus gehobelten, geschliffenen einfachen Brettern gefugt. Bretter untereinander durch Holzschrauben und/oder Nagelung verbunden.;20,0;m;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0040;Pfosten zur Verankerung der Holzbrüstung an Stahlbeton aus Flachstahl, feuerverzinkt, an Stahlplatte angeschweißt. Die Platte ist mit drei Schrauben am Stahlbeton befestigt.;10,0;St;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0050;Pfosten zur Verankerung der Holzbrüstung an Stahlbeton aus Flachstahl, feuerverzinkt, an Stahlplatte angeschweißt. Die Platte ist mit drei Schrauben am Stahlbeton befestigt;200,0;St;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0060;Pfosten zur Verankerung der Holzbrüstung an Stahlbeton aus Flachstahl, feuerverzinkt, an Stahlplatte angeschweißt. Die Platte ist mit drei Schrauben am Stahlbeton befestigt.;50,0;St;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0070;Abstelltisch, gem. Bestand, aus gehobelten, geschliffenen einfachen Brettern gefugt. Bretter durch Flacheisen an Holzbrüstung geschraubt.;80,0;m;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0080;Abstelltisch, gem. Bestand, aus gehobelten, geschliffenen einfachen Brettern gefugt. Bretter durch Flacheisen an Holzbrüstung geschraubt.;80,0;m;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0090;Abstelltisch, gem. Bestand, aus gehobelten, geschliffenen einfachen Brettern gefugt. Bretter durch Flacheisen an Holzbrüstung geschraubt.;20,0;m;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0100;Blumenkasten, gem. Bestand, aus gehobelten, geschliffenen einfachen Brettern gefugt. Bretter durch Flacheisen an Holzbrüstung geschraubt.;100,0;m;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0110;Flachstahl 1- Fach gekantet feuerverzinkt zur Verankerung der Abstelltische an der Holzbrüstung mittels Schrauben.;100,0;St;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0120;Flachstahl 2- Fach gekantet feuerverzinkt zur Verankerung der Blumenkasten an der Holzbrüstung mittels Schrauben.;150,0;St;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0130;Flachstahl 1- Fach gekantet feuerverzinkt zur Verankerung der Blumenkasten an der Holzbrüstung mittels Schrauben.;150,0;St;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0140;Geländer für Zugang TRH3, 2.OG:;2,0;St;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0150;Geländer für Zugang TRH3, 2.OG:;1,0;St;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0010;Rückbau der vorhandenen Holzvertäfelung.;10,0;m²;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0020;Einbau der an anderer Stelle demontierten und;10,0;m²;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0010;Farbmuster zur Findung des Ergänzungsfarbtons in drei verschiedenen Farbtönen nach Auswahl;3,0;St;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0011;Muster Holzbrüstung inkl. Abstelltisch und Blumenkasten;1,0;m;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0001;Stundenlohnarbeiten (Facharbeiter) auf Anordnung des AG;20,0;St;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83
+0002;wie vor, jedoch Lohnstunde eines Helfers.;10,0;St;gaeb;leistungsbeschreibungen/VE_370.01_Tischler Bänke_V33.X83

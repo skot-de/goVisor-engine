@@ -1,0 +1,355 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;Vorhandene Vegetationsfläche um ca. 5 cm Stärke abschieben und so die vorliegende Gras- und Krautschicht, Höhe bis ca. 30-50 cm aufnehmen,;200,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0002;Von den von Bewuchs freigelegten Flächen, aus Teilflächen der gesamten Anlage, den Oberboden je nach Höhenplanung, ca. 30cm tief abtragen und auf geordneter Miete lagern.;100,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0003;Vorhandene Bodenmieten von Oberboden beproben, zur Feststellung der Wiederverwendbarkeit gem. BBodSchV und EBV.;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0004;Oberboden von vorhandener Miete auf der Baustelle aufnehmen, Oberboden bereits analysiert, vor Ort sieben mit entsprechendem Gerät, im Baustellenbereich transportieren und in Vegetationsflächen einbauen.;50,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0005;Siebrückstände der Vorposition, unbrauchbare Stoffe, wie: Beton, Ziegel, Mörtel, Steine, Fliesen, Keramik , AVV-Nr.170107, sammeln, laden, abfahren und entsorgen, einschl. Entsorgungskosten.;5,0;t;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0006;Oberboden aus der zwischengelagerten Miete laden, abfahren und entsorgen.;50,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0007;Zulage zur Pos. 01.01.0006 für die Entsorgung von belasteten Material, Klassifizierung nach Klasse 1/1* - BM-1/1*;20,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0008;Zulage zur Pos. 01.01.0006 für die Entsorgung von belasteten Material, Klassifizierung nach Klasse 2/2* - BM-2/2*;25,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0009;Zulage zur Pos. 01.01.0006 für die Entsorgung von belasteten Material, Klassifizierung nach Klasse 3/3* - BM-3/3*;5,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0011;Unterboden ausbauen und auf Miete lagern;740,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0012;Vorhandene Bodenmieten von Unterboden beproben, zur Feststellung der LAGA/EVB-Klassifizierung, dazu;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0013;Unterboden aus der zwischengelagerten Miete laden, abfahren und entsorgen.;740,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0014;Zulage zur Pos. 01.01.0013  für den Entsorgung von belasteten Material, Klassifizierung nach Klasse 1/1* - BM-1/1*;700,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0015;Zulage zur Pos. 01.01.0013  für den Entsorgung von belasteten Material, Klassifizierung nach Klasse 2/2* - BM-2/2*;40,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0016;Zulage zur Pos. 01.01.0013 für den Entsorgung von belasteten Material, Klassifizierung nach Klasse 3/3* - BM-3/3*;40,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0017;Sand 0/2 / 0/4, für Auffüllungen liefern und in Lagen bis max. 30 cm einbauen und verdichten, Einbaustärke bis max. ca. 50 cm.;150,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0019;Aus von Oberboden freigelegten Flächen Unterboden unter Massenausgleiches und neuer Höhenplanung an zu hohen Stellen ausbauen und den zu tiefen Stellen wieder einbauen.;1000,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Planum für Belagsflächen herstellen und verdichten. Ebenflächigkeit 1 cm unter der 4 m Latte.;1400,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0020;Ausgleichsschicht herstellen, aus Kiessand oder glw., Frostbeständigkeit: nach DIN 4226/1,;210,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0030;Frostschutzschicht herstellen,;480,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0040;Frostschutzschicht herstellen,;850,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0050;Schottertragschicht herstellen, Bk 0,3, RStO 12;480,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0060;Schottertragschicht herstellen, Bk 1,0, RStO 12;850,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0070;Mehraufwand für das zweilagige einbauen der 20 cm STS inkl. Unterbrechung für die Einbringung der Schrittschutzspannung durchdas Fachgewerk Blitzschutz.;550,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0080;Hochbordstein liefern und einbauen, B 12/15cm,;5,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0090;Bordstein aus Beton DIN EN 1340, DIN 483, Form T,;400,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0100;Tiefbord-Kurvenstein liefern und einbauen,;3,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0110;Kantensteine liefern und einbauen, aus Beton DIN EN 1340, Form K - Kantstein;10,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0120;Zuschnitt von Passstücken der Kantensteine / Borde der;42,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0130;Mehrstein-System aus Beton liefern, aufnehmen, transportieren und in ungebundener Bauweise verlegen,;620,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0140;Aus dem angebotenen Mehrstein-Systemen der Vorposition und einem durchgehendem Streifen der taktilen Rippenplatten ist eine ebene, aussagekräftige Musterfläche in den original Steinformaten und -farben von je 3x3m zu liefern und anzulegen, dem AG zur Auswahl vorzustellen und nach der Produktentschei;9,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0150;Betonsteinpflaster liefern und als einzeiligen Läufer umlaufend an der Außenkanten Pflasterbeläge einbauen.;200,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0160;Betonsteinpflaster liefern und als zweizeiligen Läufer umlaufend an der Außenkanten Pflasterbeläge einbauen.;61,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0170;Betonsteinpflasterbelag, im Muster gem. Verlegeplan für die Weg- und Platzflächen herstellen;190,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0180;Betonsteinpflasterbelag, im Muster gem. Verlegeplan für die Weg- und Platzflächen herstellen;116,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0190;Pflasterstein aus Beton liefern, aufnehmen, transportieren und in ungebundener Bauweise verlegen,;250,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0200;Pflasterbelag herstellen, Splittfugenpflaster, Beton,;93,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0210;Zur Vorpos., jedoch Vollsteine 20 x 10 x 8cm, in der Farbe anthrazit liefern und als 10cm breiter Läufer, als Bilderrahmen um die Stellplatzreihen und zur Trennung der senkrechten Stellplätze einlegen.;25,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0220;Zulage zur Pos. für das Verlegen des Pflasters der Vorposition, jedoch in niedrig überbauten Bereichen unter 1,80 m Lichtraumhöhe in Handarbeit.;250,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0230;Anpassung Plattenbelag, Betonstein und Betonplatten bis 12 cm Stärke herstellen.;600,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0240;Anpassungen Kleinpflasterbelag herstellen;50,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0250;Taktiles Orientierungspflaster verlegen, Noppenplatte. liefern und verlegen.;8,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0260;Taktiles Orientierungspflaster verlegen, Rippenplatte liefern und verlegen.;22,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0270;Betonsteinpflaster liefern und als einzeiligen Läufer umlaufend an der Außenkanten Pflasterbeläge einbauen.;180,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0280;Anpassung Plattenbelag Betonstein und Betonplatten bis 12 cm Stärke herstellen.;3,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0290;Dynamische Schicht 0/16 profilgerecht herstellen,;200,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0300;Wassergebundene Wegedecke, Tenne herstellen,;200,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0310;Aus der angebotenen WGWD der Vorposition ist eine ebene, aussagekräftige Musterfläche in den original Steinformaten und -farben von je 2x2m zu liefern und anzulegen, dem AG zur Auswahl vorzustellen und nach der Produktentscheidung durch den AG vom AN abzubauen und zu entsorgen. Inkl. aller Nebenleis;4,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0320;Rinne aus Fertigelementen herstellen,;190,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0330;Schnitt an Muldensteinrinne herstellen.;4,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0340;Bewegungsfugen für Pflasterrinne der Vorpositionen herstellen.;32,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0350;Umlaufend um das Gebäude einen Streifen von 0,5x0,5m aus ausheben, verdrängten Boden fachgerecht beseitigen und mit zu liefernden Schaumgals-Schotter einfüllen und verdichten.;105,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0360;Schutzlage an erdberührten Bauteilen herstellen;110,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0370;Flachstahl-Einfassung herstellen;110,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0380;Abdeckung der Sohle mit Vlies 150 g/m² aus Geotextil liefern und inkl. der Überlappung verlegen. Inkl. Überlappung bei Bahnenverlegung von 20 cm.;34,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0390;Kiesbelag auf Vlies der Vorposition herstellen;34,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0400;Traufplattenstreifen herstellen, grau, aus Betongehwegplatten,;8,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0410;Umlaufende Pflaster Läufer an Schächten und Abläufen in der Pflasterdecke und in Grünflächen.;40,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0420;Kontrollprüfung nach ZTVT-StB 95 u.;6,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0430;Dynamischer Plattendruckversuch als Kontrollprüfung nach aktueller ZTVT-StB  für Verformungsmodul (Plattendruckversuch);6,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Betonstufen liefern und einbauen.;36,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0020;Betonstufen liefern und einbauen.;24,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0030;Betonsitzblock, Quader, Element;23,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0040;Betonsitzblock, Quader, Element;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0050;Betonsitzblock, Quader, Element;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0060;Für die samtliche Betonteile der Bühne ist eine Werkplanung vorzulegen, aus der die Lage und Höhe der Stufen, Sitzelemente sowie der Winkelstützen hervorgeht und vor Bestellung der Betonteil-Elemente der BÜ zur Freizeichnung vorzulegen.;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0070;Dehnungsfuge herstellen, Treppe;24,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0080;Sitzauflage Il Posto auf Sitzblöcken herstellen. Sitzauflage, Unterkonstruktion und Verbindungsmittel liefern und auf Betonsitzblöcke montieren.;4,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0110;Betonwinkelstützen, inkl. Fundament, H=1,40m, liefern und einbauen,;8,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0120;Betonwinkelstützen, inkl. Fundament, H=1,40m, liefern und einbauen,;4,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0130;Betonwinkelstützen als Eckelement, zweiteilig, inkl. Fundament, H=1,40m, liefern und einbauen,;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0140;Winkelstützen der Vorposition durch lotrechten Schnitt passgenau mit Fuge max. 3mm in der Breite und im Winkel gem. Lageplan anpassen.;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0150;Betonwinkelstützen,inkl. Fundament, H=1,0m, liefern und einbauen,;20,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0160;Betonwinkelstützen als Eckelement, einteilig, inkl. Fundament, H=0,55m, liefern und einbauen,;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0170;Winkelstützen der Vorposition durch lotrechten Schnitt passgenau mit Fuge max. 3mm in der Breite und im Winkel gem. Lageplan anpassen.;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Suchgräben zum Auffinden von Bestandsleitungen jeglicher Art herstellen.;15,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0020;Straßenabläufe 300/500 herstellen,;14,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0030;Straßenabläufe 300/500;3,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0040;Schwerlastrinne Bauhöhe 450 mm - Rinnen mit Hyperbel-Form aus Beton C 40/50 mit Aufschwemmsicherung, ohne Innengefälle, L 500/1000 mm, Breite oben/am Boden 650/690 mm, Klasse F 900 - Entwässerungsrinne ohne Innengefälle Bauhöhe 450 mm, aus Beton C 40/50, nach DIN EN 1433 bis Belastungsklasse D 400 a;12,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0050;Sinkkästen, aus Polymerbeton, passend zur Vorposition inkl. Reduzierung von DN 200/150 liefern und einbauen.;3,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0060;Entwässerungsrinne entsprechend DIN EN 1433 und DIN 19580, mit schraubloser Sicherheitsarretierung;16,5;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0070;Sinkkasten entsprechend DIN EN 1433 und DIN V 19580, mit integrierter austauschbarer Dämpfung,;3,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0080;Kombistirnwand passend für Kastenrinnen der Vorposition aus Polymerbeton mit Gussabdeckung, passend für Rinnenanfang und -ende zum wasserdichten Verschluss, aus Kunststoff Polypropylen PP anthrazitschwarz mit verzinkten Kantenschutz,;6,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0090;Zuschnitt der Kastenrinnen der;9,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0100;Fuß-Abtritts-Roste gem. Ausführungsplanung / Detail;5,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0110;Zwei Stück Fuß-Abtritts-Roste gem. Ausführungsplanung / Detail herstellen, einteilig, selbsttragend, feuerverzinkt, bestehend aus:;8,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0120;Rohrgraben erstellen für Leitungen DN 200 bis 1,5 m;121,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0130;Kanal Regenwasser herstellen, DN 100,  KG2000,;37,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0140;Formteile in Rohrleitung liefern und einbauen.;50,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0150;Kanal Regenwasser herstellen, DN 150,  KG2000,;76,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0160;Formteile in Rohrleitung liefern und einbauen.;110,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0170;Kanal Regenwasser herstellen, DN 200,  KG2000,;10,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0180;KG2000 Abzweig DN/OD 160/110 SN10,;23,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0190;Kanalschacht DN 1000, Schachtunterteil, Steigrohr und;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0200;Bestandsschächte in der Höhe anpassen, +/- H 10 cm,;8,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0210;Bestandsschächte in der Höhe anpassen, +/- H 20 cm,;7,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0220;Anschlüsse der Fallrohre an die Grundleitung herstellen,;5,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0230;Rohrgraben erstellen für Leitungen DN 150 bis 1,5 m;25,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0240;Kanal Regenwasser herstellen, DN 150,  KG2000,;30,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0250;Formteile in Rohrleitung liefern und einbauen.;30,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0260;KG2000 Abzweig DN/OD 160/110 SN10,;5,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0270;Rohrgraben erstellen für Leitungen DN 150 bis 1,5 m;20,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0280;Kanal Regenwasser herstellen, DN 150,  KG2000,;20,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0290;Formteile in Rohrleitung liefern und einbauen.;18,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0300;KG2000 Abzweig DN/OD 160/110 SN10,;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0310;Rohrgraben erstellen für Leitungen DN 100 bis 1,5 m;100,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0320;Kiesdrainage bestehend aus:;100,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0330;Spül-, Kontroll- und Sammelschacht für fachgerechte Dränanlagen nach DIN 4095,;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0340;KG2000 Abzweig DN/OD 160/110 SN10,;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Verlegung von Leerrohren in Graben der Vorposition.;10,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0020;Kabelgraben herstellen,;236,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0030;Erdkabel liefern und verlegen,;124,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0040;Erdabzweigmuffen liefern, verlegen und anschließen,;5,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0050;Kabel, Kabelstränge sowie gleichartige Hindernisse suchen, von Hand freilegen, während der Bauzeit sichern (abstützen, abhängen, absteifen o.ä.) und während der;5,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0060;Seitlich lagernde Bestandsmastleuchten, Hess Madrid, LPH 4m, aufnehmen, transportieren, aufstellen und Kabel durch zertifizierte Elektro-Fachfirma auflegen.;4,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0070;Mastleuchten liefern und einbauen;8,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0080;Dokumentation der gesamten Bauleistung Leitungsbau für den AG herstellen. Aufmaß im Landeskoordinatensystem. Pläne sind im digitalen PDF und DXF-Format entsprechend den Richtlinien des AG anzufertigen.;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0090;Inbetriebnahme der Elektroanlagen, Erstellen eines Prüf- und Meßprotokolls.;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Hockerbank liefern und einbauen;24,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0020;Tisch liefern und einbauen;12,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0030;Streifenfundament für Bank-Tisch-Kombination herstellen aus Ortbeton ohne Bewehrung herstellen,;2,4;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0040;Bordstein aus Beton DIN EN 1340, DIN 483, Form T,;24,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0050;Natursteinblöcke liefern und einbauen;8,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0060;Natursteinblöcke liefern und einbauen;3,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0070;Natursteinblock der Vorposition anpassen,;5,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0080;Bauseits vorhandene unregelmäßige Natursteinquader (Sandstein), Abmessungen von ca. 80x60x50cm bis ca. 100x80x70cm, palletiert, auf der Baustelle nach Angaben BÜ verteilen und auf ca. 10cm zu liefernde und einzubauende STS höhen- und fluchtgerecht setzen.;10,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0090;Fahrradanlehnbügel liefern und einbauen.;18,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0100;Rohrpfosten für Verkehrsschild liefern und einbauen;10,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0110;Verkehrsschild: 1 Schild inkl.  Befestigungsmaterial liefern und montieren.;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0120;Verkehrsschild: 1 Schild inkl. Befestigungsmaterial liefern und montieren.;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0130;Hinweisschild herstellen und aufstellen, ALU- oder V2A-Platte ca. 50 x 40 cm groß, mit wetterfester reflecktierender Kunststoffbeschichtung und Beschriftung, auszugehen ist von ca. 25 Buchstaben je Schild, z.B. Typ Arial, Höhe ca. 10 cm, Text nach Angabe durch den AG (je Schild unterschiedlich mögl.;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0140;Verkehrsschild: 1 Schild inkl.  Befestigungsmaterial liefern und montieren.;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0150;Rettungszeichen ISO 7010 E 007 1 Schilder an 1 Pfosten, incl. Pfosten und Befestigungsmaterial liefern, montieren und einbauen.;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0160;Verkehrsschild: 1 Schilder an 1 Pfosten, inkl. Pfosten und Befestigungsmaterial liefern, montieren und einbauen.;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0170;Türanschlagpfosten herstellen und einbauen;4,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0180;Absperrpfosten liefern und einbauen;3,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0190;Schilder ausbauen und seitlich lagern und nach Fertigstellung der Maßnahme aufnehmen und mit neuem Betonfundament B15/20, Masse: 30x30x40cm wieder einbauen.;5,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0200;Einbauten wie Wasserschieber, Gas und Straßenkappen etc. vor Ort sichern und höhen- und fachgerecht wieder einbauen.;12,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Oberboden gem. DIN 18915, Bodengruppe 4a, humos, pH-5,5-7,5, für Versickerung geeignet - nicht schlechter als kf-Wert 10;70,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0020;Düngen NPK - der Kulturen im Garten- und Landschaftsbau,;280,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0030;Organischen Langzeitdünger;280,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0040;Vegetationsflächen fräsen,;280,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0050;Feinplanum Pflanzflächen herstellen, Oberfläche feinplanieren: Genauigkeit von 1 cm unter der 4 m langen Messlatte. Anschlüsse an Wege, Plätze und sonstige Beläge 5 cm unter OK.;280,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0060;Pflanzgrube für Baum herstellen, 12 m²,;84,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0070;Baumverankerung mit je 3 Pfählen,;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0080;Pflanzverankerung unterirdisch, für Bäume bis StU 35-40  liefern und einbauen.;6,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0090;Baumbewässerungssack 75l liefern und einbauen,;7,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0100;Gießrand bei Hochstämmen mit einem Gießrand aus HDPE-Streifen, Stärke min. 2mm, Höhe min. 25cm, Radius min. Ballengröße. Enden min. 30cm überlappend und eng anliegend. Einbindung in das Erdreich 10cm.;7,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0110;Zur Belüftung und Bewässerung des Wurzelraumes.;6,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0120;Baumstamm-Schutzfarbe weiß, liefern und Baumstämme gemäß Herstellerangaben fachgerecht behandeln.;7,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0130;Pflanzflächen nach der Pflanzung schützen gegen Verunkrautung, Austrocknen und Erosion durch Mulchung mit Rindenmulch, Typ RM mittel. Flächen sind vor dem Mulchen durch den AG abzunehmen, ob Ebenheit oder die Gießmulden aller Gehölze, ordnungsgemäß hergestellt sind. Dicke der Mulchdecke 5 cm.;74,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0140;Splittmulch liefern und auf Pflanzflächen einbauen;103,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0150;Erdplanum für Sportrasenfläche, Auf- und Abtrag bis 5 cm, gem. DIN 18035-4 herstellen,;216,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0160;Untere Rasentragschichtgemisch DIN 18035-4 liefern und in einer Dicke 13,5 cm fachgerecht einbauen.;216,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0170;Obere Schicht der Rasentragschicht  - gemäß DIN 18035 - 4 und den Richtwerten der BBschV. bzw. LAGA-Z 0 - für Sportanlagen (Fußballfelder, Golfplätze etc.), Banketten und anderweitigen Grünanlagen, die einer sportfunktionellen oder gleichwertigen Belastung ausgesetzt sind. - als Decklage über der Vo;216,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0180;Planum herstellen.;216,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Hochstammbäume liefern und pflanzen,;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0020;Hochstammbäume liefern und pflanzen,;6,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0030;Virburnum bodnatense ´Dawn`- Schneeball `Dawn´;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0040;Hedera helix >Goldheart<;20,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0050;Carex folioissima `Icedance´ - Segge;360,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0060;Carex muskingumensis - Palmenwedel-Segge;290,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0070;Carex pendula - Riesen-Segge;40,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0080;Galanthus elwesii ´Polar Bear` - Elwes Schneeglöckchen, Gr. 8+, je nach Platz ca. 10-15 Stck/ Grüppchen/ Explosionsgruppen in den Pflanzflächen eingestreut;1500,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0090;Crocus tommassinianus  - Elfenkokus, Gr. 5+, je nach Platz ca. 10-15 Stck/ Grüppchen/ Explosionsgruppen in den Pflanzflächen eingestreut;1500,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0100;Fertigstellungspflege ca. 280 m² Pflanzflächen, 1 Stk Solitäre und 13 Stk Hochstämme nach DIN 18916 (Wässerung wird gesondert vergütet),;6,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0110;Wässerungsgänge der Gehölze und Bäume durchführen;15,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Dünger für Rasen im Garten- und Landschaftsbau,;366,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0020;Dünger für Rasen im Garten- und Landschaftsbau,;216,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0030;Rasenflächen fräsen, durch kreuzweises fräsen lockern, Tiefe 15 cm. Dünger ist mit unterzufräsen.;150,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0040;Feinplanum für Rasenflächen herstellen,;366,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0050;Vorbereitete Rasenflächen gem. DIN 18917 einsäen, mit;100,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0060;Vorbereitete Rasenflächen gem. DIN 18917 einsäen, mit;50,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0070;Vorbereitete Rasenflächen gem. DIN 18917 einsäen, mit;216,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0080;Fertigstellungspflege der Rasenflächen gem. DIN 18917;366,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0090;Wässerung der Rasenflächen im Zuge der Fertigstellungspflege.;216,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Betonpoller ausbauen und entsorgen, H ca. 90 cm, inkl. Fundament ausbauen,;10,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0020;Schilder ausbauen und entsorgen;3,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0030;Mülleimer ausbauen, laden und entsorgen,;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0040;Mineralische Abfallstoffe wie: Betonbruch, Steine, Ziegel und sonstige Bauschutt-Materialien, die aus der Siebanlage anfallen, sammeln, laden, abfahren;5,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0050;Organische Abfallstoffe, wie: Wurzelmaterial, Schnittgut, Laub, Holz und sonstige organische Materialien, die aus der Siebanlage anfallen, sammeln, laden, abfahren und entsorgen, einschl. Entsorgungskosten;5,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0060;Gemischte Abfallstoffe wie: Folienreste, Kunststoffe,  Papier, Glas, Metall und sonstige Stoffe, die aus der Siebanlage anfallen, sammeln, laden, abfahren und entsorgen, einschl. Entsorgungskosten bei Endlagerung / Entsorgung in Deponie oder Verwertungsstelle.;10,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0070;Stammschutz für bestehende Bäume;15,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0001;"Entspr. Stundenlohnarbeiten wie vor unter ""Allgemeines"" beschrieben.";10,0;h;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0002;"Entspr. Stundenlohnarbeiten wie vor unter ""Allgemeines"" beschrieben.";10,0;h;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0003;"Entspr. Stundenlohnarbeiten wie vor unter ""Allgemeines"" beschrieben.";10,0;h;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0004;Einsatz eines Radladers oder Baggers ab 45 KW bis ca. 125 KW, einschließlich eines Fahrers auf Anordnung der Bauleitung / des AG ausführen. Inkl. An- und Abtransport der Maschine.;5,0;h;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0005;Einsatz eines Radladers oder Baggers bis ca. 45 KW, einschließlich eines Fahrers auf Anordnung der Bauleitung / des AG ausführen. Inkl. An- und Abtransport der Maschine.;5,0;h;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0006;"Einsatz eines motorgetriebenen Hand-Trennschneiders, inkl. Trenn- und Schleifscheiben wie notwendig. Sonst wie vor unter ""Allgemeines"" beschrieben.";5,0;h;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0007;"Einsatz eines motorgetriebenen Hand-Rüttlers, zum Lagenweise Verdichten von neu eingebautem Füllsand für befahrbare Flächen. Sonst wie vor unter ""Allgemeines"" beschrieben.";5,0;h;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Vorhandene Vegetationsfläche um ca. 5 cm Stärke abschieben und so die vorliegende Gras- und Krautschicht, Höhe bis ca. 30-50 cm aufnehmen,;100,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0020;Von den von Bewuchs freigelegten Flächen, aus Teilflächen der gesamten Anlage, den Oberboden je nach Höhenplanung, ca. 30cm tief abtragen und auf geordneter Miete lagern.;100,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0030;Vorhandene Bodenmieten von Oberboden beproben, zur Feststellung der Wiederverwendbarkeit gem. BBodSchV und EBV.;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0040;Oberboden von vorhandener Miete auf der Baustelle aufnehmen, Oberboden bereits analysiert, vor Ort sieben mit entsprechendem Gerät, im Baustellenbereich transportieren und in Vegetationsflächen einbauen.;50,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0050;Siebrückstände der Vorposition, unbrauchbare Stoffe, wie: Beton, Ziegel, Mörtel, Steine, Fliesen, Keramik , AVV-Nr.170107, sammeln, laden, abfahren und entsorgen, einschl. Entsorgungskosten.;5,0;t;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0060;Oberboden aus der zwischengelagerten Miete laden, abfahren und entsorgen.;45,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0070;Zulage zur Pos. 02.01.0060 für die Entsorgung von belasteten Material, Klassifizierung nach Klasse 1/1* - BM-1/1*;45,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0080;Zulage zur Pos. 02.01.0060 für die Entsorgung von belasteten Material, Klassifizierung nach Klasse 2/2* - BM-2/2*;30,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0090;Zulage zur Pos. 02.01.0060 für die Entsorgung von belasteten Material, Klassifizierung nach Klasse 3/3* - BM-3/3*;15,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0100;Unterboden ausbauen und auf Miete lagern;910,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0110;Vorhandene Bodenmieten von Unterboden beproben, zur Feststellung der LAGA/EVB-Klassifizierung, dazu;3,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0120;Unterboden aus der zwischengelagerten Miete laden, abfahren und entsorgen.;910,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0130;Zulage zur Pos. 02.01.0120  für den Entsorgung von belasteten Material, Klassifizierung nach Klasse 1/1* - BM-1/1*;100,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0140;Zulage zur Pos. 02.01.0120  für den Entsorgung von belasteten Material, Klassifizierung nach Klasse 2/2* - BM-2/2*;50,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0150;Zulage zur Pos. 02.01.0120 für den Entsorgung von belasteten Material, Klassifizierung nach Klasse 3/3* - BM-3/3*;50,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0160;Sand 0/2 / 0/4, für Auffüllungen liefern und in Lagen bis max. 30 cm einbauen und verdichten, Einbaustärke bis max. ca. 50 cm.;150,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0170;Aus von Oberboden freigelegten Flächen Unterboden unter Massenausgleiches und neuer Höhenplanung an zu hohen Stellen ausbauen und den zu tiefen Stellen wieder einbauen.;500,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Planum für Belagsflächen herstellen und verdichten. Ebenflächigkeit 1 cm unter der 4 m Latte.;1882,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0020;Ausgleichsschicht herstellen, aus Kiessand oder glw., Frostbeständigkeit: nach DIN 4226/1,;340,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0030;Frostschutzschicht herstellen,;280,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0040;Frostschutzschicht herstellen,;1600,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0050;Schottertragschicht herstellen, Bk 0,3, RStO 12;280,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0060;Schottertragschicht herstellen, Bk 1,0, RStO 12;1530,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0070;Mehraufwand für das zweilagige einbauen der 20cm STS inkl. Unterbrechung für die Einbringung der Schrittschutzspannung durchdas Fachgewerk Blitzschutz.;100,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0080;Rundbordstein liefern und einbauen, B 15/22cm,;6,5;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0090;Hochbord-Übergangsstein liefern und einbauen,;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0100;Hochbordstein liefern und einbauen, B 12/15cm,;30,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0110;Hochbord-Kurvenstein liefern und einbauen,;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0120;Bordstein aus Beton DIN EN 1340, DIN 483, Form T,;153,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0130;Tiefbord-Kurvenstein liefern und einbauen,;3,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0140;Kantensteine liefern und einbauen, aus Beton DIN EN 1340, Form K - Kantstein;100,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0150;Zuschnitt von Passstücken der Kantensteine / Borde der;30,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0160;Mehrstein-System aus Beton liefern, aufnehmen, transportieren und in ungebundener Bauweise verlegen,;1171,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0170;Aus dem angebotenen Mehrstein-Systemen der Vorposition und einem durchgehendem Streifen der taktilen Rippenplatten ist eine ebene, aussagekräftige Musterfläche in den original Steinformaten und -farben von je 3x3m zu liefern und anzulegen, dem AG zur Auswahl vorzustellen und nach der Produktentschei;9,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0180;Betonsteinpflaster liefern und als einzeiligen Läufer umlaufend an der Außenkanten Pflasterbeläge einbauen.;260,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0190;Betonsteinpflaster liefern und als zweizeiligen Läufer umlaufend an der Außenkanten Pflasterbeläge einbauen.;58,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0200;Betonsteinpflaster liefern und als einzeiligen Läufer umlaufend an der Außenkanten Pflasterbeläge einbauen.;401,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0210;Betonsteinpflasterbelag, im Muster gem. Verlegeplan für die Weg- und Platzflächen herstellen;80,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0220;Betonsteinpflasterbelag, im Muster gem. Verlegeplan für die Weg- und Platzflächen herstellen;280,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0230;Betonsteinpflasterbelag, im Muster gem. Verlegeplan für die Weg- und Platzflächen herstellen;20,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0240;Betonsteinpflasterbelag, im Muster gem. Verlegeplan für die Weg- und Platzflächen herstellen;52,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0250;Pflasterbelag herstellen, Splittfugenpflaster, Beton,;146,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0260;Zur Vorpos., jedoch Vollsteine 20 x 10 x 8cm, in der Farbe anthrazit liefern und als 10cm breiter Läufer, als Bilderrahmen um die Stellplatzreihen und zur Trennung der senkrechten Stellplätze einlegen.;44,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0270;Zulage zur Pos. für das Verlegen des Pflasters der Vorposition, jedoch in niedrig überbauten Bereichen unter 1,80 m Lichtraumhöhe in Handarbeit.;240,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0280;Anpassung Plattenbelag, Betonstein und Betonplatten bis 12 cm Stärke herstellen.;350,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0290;Taktiles Orientierungspflaster verlegen, Noppenplatte. liefern und verlegen.;26,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0300;Taktiles Orientierungspflaster verlegen, Rippenplatte liefern und verlegen.;50,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0310;Anpassung Plattenbelag Betonstein und Betonplatten bis 12 cm Stärke herstellen.;13,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0320;Rinne aus Fertigelementen herstellen,;173,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0330;Schnitt an Muldensteinrinne herstellen.;11,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0340;Bewegungsfugen für Pflasterrinne der Vorpositionen herstellen.;30,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0350;Schutzlage an erdberührten Bauteilen herstellen;60,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0360;Traufplattenstreifen herstellen, grau, aus Betongehwegplatten,;34,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0370;Umlaufende Pflaster Läufer an Schächten und Abläufen in der Pflasterdecke und in Grünflächen.;56,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0380;Kontrollprüfung nach ZTVT-StB 95 u.;3,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0390;Dynamischer Plattendruckversuch als Kontrollprüfung nach aktueller ZTVT-StB  für Verformungsmodul (Plattendruckversuch);6,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Ring-Fundament für Einhausung liefern und erstellen inkl. Biegen, Nebenarbeiten, Kleinteilen und Erdarbeiten.;105,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0020;Bestands-Fahrradüberdachung, auf dem Baufeld lagernd,  mittels Wasser-Hochdruckreiniger säubern, aufnehmen und auf zu erstellendes Streifenfundament (Extra-Position) höhen- und fluchtgerecht aufbauen;6,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0030;Bestands-Wandelement, auf dem Baufeld lagernd,  mittels Wasser-Hochdruckreiniger säubern, aufnehmen und in zuvor erstelltes Dachmodul höhen- und fluchtgerecht einbauen inkl. aller Nebenarbeiten.;20,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Suchgräben zum Auffinden von Bestandsleitungen jeglicher Art herstellen.;15,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0020;Strassenabläufe liefern und einbauen.;13,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0030;Entwässerungsrinne entsprechend DIN EN 1433 und DIN 19580, mit schraubloser Sicherheitsarretierung;15,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0040;Sinkkasten entsprechend DIN EN 1433 und DIN V 19580, mit integrierter austauschbarer Dämpfung,;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0050;Kombistirnwand passend für Kastenrinnen der Vorposition aus Polymerbeton mit Gussabdeckung, passend für Rinnenanfang und -ende zum wasserdichten Verschluss, aus Kunststoff Polypropylen PP anthrazitschwarz mit verzinkten Kantenschutz,;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0060;Zuschnitt der Kastenrinnen der;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0070;Fuß-Abtritts-Roste gem. Ausführungsplanung / Detail;4,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0080;Rohrgraben erstellen für Leitungen DN 200 bis 1,5 m;230,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0090;Kanal Regenwasser herstellen, DN 100,  KG2000,;37,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0100;Formteile in Rohrleitung liefern und einbauen.;44,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0110;Kanal Regenwasser herstellen, DN 150,  KG2000,;133,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0120;Formteile in Rohrleitung liefern und einbauen.;80,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0130;Kanal Regenwasser herstellen, DN 200,  KG2000,;60,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0140;KG2000 Abzweig DN/OD 160/110 SN10,;14,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0150;Bestandsschächte in der Höhe anpassen, +/- H 10 cm,;8,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0160;Bestandsschächte in der Höhe anpassen, +/- H 20 cm,;10,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0170;Schacht Beton-/Stahlbetonfertigteile DN1000 Gerinne;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0180;Schachtabdeckung Schachthals DN625 D400 rund Guss;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0190;Schmutzfänger DIN 1221 Form F für Schachtabdeckung  liefern und setzen.;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Verlegung von Leerrohren in Graben der Vorposition.;15,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0020;Kabelgraben herstellen,;203,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0030;Erdkabel liefern und verlegen,;230,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0040;Erdabzweigmuffen liefern, verlegen und anschließen,;5,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0050;Kabel, Kabelstränge sowie gleichartige Hindernisse suchen, von Hand freilegen, während der Bauzeit sichern (abstützen, abhängen, absteifen o.ä.) und während der;10,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0060;Mastleuchten liefern und einbauen;5,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0070;Dokumentation der gesamten Bauleistung Leitungsbau für den AG herstellen. Aufmaß im Landeskoordinatensystem. Pläne sind im digitalen PDF und DXF-Format entsprechend den Richtlinien des AG anzufertigen.;1,0;psch;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0080;Inbetriebnahme der Elektroanlagen, Erstellen eines Prüf- und Meßprotokolls.;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Bestands-Fahrradanlehnbügel, auf dem Camps eingelagert, aufnehmen, transportieren und einbauen.;72,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0020;Rohrpfosten für Verkehrsschild liefern und einbauen;8,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0030;Verkehrsschild: 1 Schild inkl.  Befestigungsmaterial liefern und montieren.;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0040;Verkehrsschild: 1 Schild inkl. Befestigungsmaterial liefern und montieren.;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0050;Hinweischild herstellen und aufstellen, ALU- oder V2A-Platte ca. 50 x 40 cm groß, mit wetterfester reflecktierender Kunststoffbeschichtung und Beschriftung, auszugehen ist von ca. 25 Buchstaben je Schild, z.B. Typ Arial, Höhe ca. 10 cm, Text nach Angabe durch den AG (je Schild unterschiedlich mögl.);2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0060;Verkehrsschild: 1 Schilder an 1 Pfosten, inkl. Pfosten und Befestigungsmaterial liefern, montieren und einbauen.;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0070;Absperrpfosten liefern und einbauen;3,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0080;Schilder ausbauen und seitlich lagern und nach Fertigstellung der Maßnahme aufnehmen und mit neuem Betonfundament B15/20, Masse: 30x30x40cm wieder einbauen.;5,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0090;Einbauten wie Wasserschieber, Gas und Straßenkappen etc. vor Ort sichern und höhen- und fachgerecht wieder einbauen.;12,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Oberboden gem. DIN 18915, Bodengruppe 4a, humos, pH-5,5-7,5, für Versickerung geeignet - nicht schlechter als kf-Wert 10;40,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0020;Düngen NPK - der Kulturen im Garten- und Landschaftsbau,;135,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0030;Organischen Langzeitdünger;135,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0040;Vegetationsflächen fräsen,;135,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0050;Feinplanum Pflanzflächen herstellen, Oberfläche feinplanieren: Genauigkeit von 1 cm unter der 4 m langen Messlatte. Anschlüsse an Wege, Plätze und sonstige Beläge 5 cm unter OK.;135,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0060;Pflanzgrube für Baum herstellen, 12 m²,;120,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0070;Baumverankerung mit je 3 Pfählen,;4,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0080;Pflanzverankerung unterirdisch, für Bäume bis StU 35-40  liefern und einbauen.;6,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0090;Baumbewässerungssack 75l liefern und einbauen,;10,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0100;Gießrand bei Hochstämmen mit einem Gießrand aus HDPE-Streifen, Stärke min. 2mm, Höhe min. 25cm, Radius min. Ballengröße. Enden min. 30cm überlappend und eng anliegend. Einbindung in das Erdreich 10cm.;4,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0110;Zur Belüftung und Bewässerung des Wurzelraumes.;6,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0120;Baumstamm-Schutzfarbe weiß, liefern und Baumstämme gemäß Herstellerangaben fachgerecht behandeln.;10,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0130;Pflanzflächen nach der Pflanzung schützen gegen Verunkrautung, Austrocknen und Erosion durch Mulchung mit Rindenmulch, Typ RM mittel. Flächen sind vor dem Mulchen durch den AG abzunehmen, ob Ebenheit oder die Gießmulden aller Gehölze, ordnungsgemäß hergestellt sind. Dicke der Mulchdecke 5 cm.;135,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0140;Splittmulch liefern und auf Pflanzflächen einbauen;103,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Hochstammbäume liefern und pflanzen,;4,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0020;Hochstammbäume liefern und pflanzen,;6,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0030;Virburnum bodnatense ´Dawn`- Schneeball `Dawn´;7,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0040;Hedera helix >Goldheart<;20,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0050;Carex folioissima `Icedance´ - Segge;360,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0060;Carex muskingumensis - Palmenwedel-Segge;290,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0070;Carex pendula - Riesen-Segge;40,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0080;Galanthus elwesii ´Polar Bear` - Elwes Schneeglöckchen, Gr. 8+, je nach Platz ca. 10-15 Stck/ Grüppchen/ Explosionsgruppen in den Pflanzflächen eingestreut;1500,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0090;Crocus tommassinianus  - Elfenkokus, Gr. 5+, je nach Platz ca. 10-15 Stck/ Grüppchen/ Explosionsgruppen in den Pflanzflächen eingestreut;1500,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0100;Fertigstellungspflege ca. 135m² Pflanzflächen, 7 Stk Solitäre und 4 Stk Hochstämme nach DIN 18916 (Wässerung wird gesondert vergütet), für die Zeit von der Pflanzung im Herbst bis zur Abnahme nach dem Austrieb bis - einer Vegetationsperiode - Ende Juni.;6,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0110;Wässerungsgänge der Gehölze und Bäume durchführen;10,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Feinplanum für Rasenflächen herstellen,;50,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0020;Dünger für Rasen im Garten- und Landschaftsbau,;50,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0030;Vorbereitete Rasenflächen gem. DIN 18917 einsäen, mit;50,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Vorhandene Klinkerwand im Erdreich eines ehemaligen Gebäudes der alten Kasernenanlage freilegen, abbrechen, laden und fachgerecht entsorgen.;25,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0020;Betonpflaster-/-plattenbeläge ausbauen, Betonrechteckpflaster,  20/10/10cm bis 30/30/10 und Betonplattenbelag 50/50/6cm - einzelne Platten 25 cm oder 75 cm lang, Kleinflächen in Klinkerpflaster in Sand verlegt, aufnehmen, laden und entsorgen, inkl.;815,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0030;Betonrechteckpflaster, 20/10/8cm, aufnehmen, säubern und seitlich zum Wiedereinbau lagern.;75,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0040;Bitumengemische, wie: Asphalt, AVV 170302, ungefährliche Stoffe, Stärke  ca.15 cm,;100,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0050;Vorhandene Naturstein-Schottertragschicht der BE-Flächen ausbauen und für Wiedereinbau seitlich auf Miete lagern. Einbau wird gesondert vergütet.;230,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0060;Vorhandene Schottertragschicht der Verkehrsflächen ausbauen und zur Beprobung zur Abfuhr und Entsorgung seitlich auf Miete lagern. Abfuhr und Entsorgung wird gesondert vergütet.;115,0;m²;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0070;Mastleuchten ausbauen und entsorgen;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0080;Fahrradbügel aus Rundrohr, verzinkt, einbetoniert, ausbauen, Betonfuss entfernen und Betonbruch fachgerecht entsorgen und Anhnlenbügel zum wiedereinbau seitlich bauseits lagern.;10,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0090;Betonpoller ausbauen und entsorgen, H ca. 90 cm, inkl. Fundament ausbauen,;7,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0100;Schilder ausbauen und entsorgen;5,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0110;Mülleimer ausbauen, laden und entsorgen,;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0120;Vorh. Tiefborde und Kantensteine aus Beton inkl. Betonfundament;142,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0130;Mineralische Abfallstoffe wie: Betonbruch, Steine, Ziegel und sonstige Bauschutt-Materialien, die aus der Siebanlage anfallen, sammeln, laden, abfahren;5,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0140;Organische Abfallstoffe, wie: Wurzelmaterial, Schnittgut, Laub, Holz und sonstige organische Materialien, die aus der Siebanlage anfallen, sammeln, laden, abfahren und entsorgen, einschl. Entsorgungskosten;5,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0150;Gemischte Abfallstoffe wie: Folienreste, Kunststoffe,  Papier, Glas, Metall und sonstige Stoffe, die aus der Siebanlage anfallen, sammeln, laden, abfahren und entsorgen, einschl. Entsorgungskosten bei Endlagerung / Entsorgung in Deponie oder Verwertungsstelle.;10,0;m³;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0160;Stammschutz für bestehende Bäume;10,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0001;"Entspr. Stundenlohnarbeiten wie vor unter ""Allgemeines"" beschrieben.";10,0;h;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0002;"Entspr. Stundenlohnarbeiten wie vor unter ""Allgemeines"" beschrieben.";10,0;h;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0003;"Entspr. Stundenlohnarbeiten wie vor unter ""Allgemeines"" beschrieben.";10,0;h;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0004;Einsatz eines Radladers oder Baggers ab 45 KW bis ca. 125 KW, einschließlich eines Fahrers auf Anordnung der Bauleitung / des AG ausführen. Inkl. An- und Abtransport der Maschine.;5,0;h;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0005;Einsatz eines Radladers oder Baggers bis ca. 45 KW, einschließlich eines Fahrers auf Anordnung der Bauleitung / des AG ausführen. Inkl. An- und Abtransport der Maschine.;5,0;h;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0006;"Einsatz eines motorgetriebenen Hand-Trennschneiders, inkl. Trenn- und Schleifscheiben wie notwendig. Sonst wie vor unter ""Allgemeines"" beschrieben.";5,0;h;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0007;"Einsatz eines motorgetriebenen Hand-Rüttlers, zum Lagenweise Verdichten von neu eingebautem Füllsand für befahrbare Flächen. Sonst wie vor unter ""Allgemeines"" beschrieben.";5,0;h;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Sinus-/Rampensteine als Schwelle einbauen,;6,5;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0040;Anpassung Plattenbelag, Betonstein und Betonplatten bis 12 cm Stärke herstellen.;60,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0050;Rinne aus Fertigelementen herstellen,;6,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0060;Schnitt an Muldensteinrinne herstellen.;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0070;Bewegungsfugen für Pflasterrinne der Vorpositionen herstellen.;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0080;Umlaufende Pflaster Läufer an Schächten und Abläufen in der Pflasterdecke und in Grünflächen.;12,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0090;Einbauten wie Wasserschieber, Gas und Straßenkappen etc. vor Ort sichern und höhen- und fachgerecht wieder einbauen.;5,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0100;Kontrollprüfung nach ZTVT-StB 95 u.;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Bestands-Kontaktschleifen der Schrankenanlage aufnehmen, seitlich sichern und im Zuge der Oberbau-Einbringung wieder wie vorgefunden neu verlegen.;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Suchgräben zum Auffinden von Bestandsleitungen jeglicher Art herstellen.;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0010;Baustelle einrichten, Geräte, Werkzeuge und sonstige;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0020;Baustelleneinrichtung der Pos. 04.11.0010 vorhalten, für die Dauer der Bauzeit.;34,0;Wo;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0030;Baustelle von allen Geräten, Anlagen, Einrichtungen und;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0040;Offener Bauzaun aus verzinktem Stahl, H/B 2/~3,5 m, Stahlrohrrahmen  ~42 und 33 mm, mit Stahlmattenfüllung, Maschenweite 90 x 400 mm,  5 mm, Stecksystem, mit 4-Loch-Betonfüßen L/H/B 62/15/23 cm, mit entspr. Verbindungsgelenken, liefern, aufstellen, abbauen und entfernen.;200,0;m;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0050;Wie Vorposition -BZ-, jedoch Ausführung als zweiflügeliges Tor.;2,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0060;Vorgenannten Bauzaun und Bautor bzgl. Pos. -BZ-, vorhalten, unterhalten und betreiben.;34,0;Wo;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0070;Zur Abrechnung und Revision sind Lagepläne digital zu erstellen (alle ausgeführten Bauten aufmessen):;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83
+0080;Zur Abnahme der Gesamtanlage ist eine Dokumentation zu erstellen und vierfach geordnet und beschriftet in (4) Ordnern, in Papierform, sowie digital (gescant) auf CD oder DVD zu übergeben:;1,0;St;gaeb;sonstiges/GAEB-Datei_26A30293.X83

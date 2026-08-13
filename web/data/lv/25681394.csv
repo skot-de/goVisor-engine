@@ -1,0 +1,249 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Niederspannungshauptverteilung;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0020;Leerschrank;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0030;Wandverteiler Aufputz;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0040;Überspannungschutzgehäuse mit Ableiter Typ 1 + 2, Dehn,;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0050;Leergehäuse mit nicht durchsichtigem Deckel.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0060;NH-Sicherungslasttrennschalter in Leistenbauform DIN EN IEC 60947-3 (VDE 0660-107), fingersicher DIN EN 50274 (VDE 0660-514), Bemessungsbetriebsspannung 400 V AC, Baugröße 00, Einfachunterbrechung, 3-polig, 3-polig schaltbar, zur Montage auf Sammelschiene, mit NH-Sicherungseinsatz.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0070;NH-Sicherungslasttrennschalter in Trennerbauform DIN EN IEC 60947-3 (VDE 0660-107), fingersicher DIN EN 50274 (VDE 0660-514), Bemessungsbetriebsspannung 400 V AC, Baugröße 00, Einfachunterbrechung, 3-polig, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), mit NH-Sicherungseinsatz.;5,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0080;NH-Sicherungslasttrennschalter in Leistenbauform DIN EN IEC 60947-3 (VDE 0660-107), fingersicher DIN EN 50274 (VDE 0660-514), Bemessungsbetriebsspannung 400 V AC, Baugröße 1, Einfachunterbrechung, 3-polig, 3-polig schaltbar, zur Montage auf Sammelschiene, mit NH-Sicherungseinsatz.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0090;Leistungsschalter für Wechselstrom DIN EN 60947-2 (VDE 0660-101), Kompaktbauweise (MCCB), für Motorschutz als Hauptschalter, 3-polig, Bemessungsbetriebsstrom 315 A, Bemessungsbetriebsspannung 400/415 V AC bei 50/60 Hz, Bemessungsgrenzkurzschlussausschaltvermögen Icu mind. 100 kA, Bemessungsbetriebsk;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0100;Leistungsschalter für Wechselstrom DIN EN 60947-2 (VDE 0660-101), Kompaktbauweise (MCCB), als Hauptschalter, 3-polig, Bemessungsbetriebsstrom 40 A, Bemessungsbetriebsspannung 400/415 V AC bei 50/60 Hz, Bemessungsgrenzkurzschlussausschaltvermögen Icu mind. 100 kA, Bemessungsbetriebskurzschlussausscha;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0110;Leistungsschalter für Wechselstrom DIN EN 60947-2 (VDE 0660-101), Kompaktbauweise (MCCB), als Hauptschalter, 3-polig, Bemessungsbetriebsstrom 63 A, Bemessungsbetriebsspannung 400/415 V AC bei 50/60 Hz, Bemessungsgrenzkurzschlussausschaltvermögen Icu mind. 100 kA, Bemessungsbetriebskurzschlussausscha;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0120;Leistungsschalter für Wechselstrom DIN EN 60947-2 (VDE 0660-101), Kompaktbauweise (MCCB), als Hauptschalter, 3-polig, Bemessungsbetriebsstrom 100 A, Bemessungsbetriebsspannung 400/415 V AC bei 50/60 Hz, Bemessungsgrenzkurzschlussausschaltvermögen Icu mind. 100 kA, Bemessungsbetriebskurzschlussaussch;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0130;Dx/D0x Sicherungssockel (Sicherungsunterteil) DIN VDE 0636-3 (VDE 0636-3), einschl. Passeinsatz und Schraubkappe, Baugröße D 01, mit Sicherungseinsatz, Bemessungsstrom 16 A, einpolig mit Abdeckung.;2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0140;Dx/D0x Sicherungssockel (Sicherungsunterteil) DIN VDE 0636-3 (VDE 0636-3), einschl. Passeinsatz und Schraubkappe, Baugröße D 02, mit Sicherungseinsatz, Bemessungsstrom 63 A, einpolig mit Abdeckung.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0150;Dx/D0x Sicherungssockel (Sicherungsunterteil) DIN VDE 0636-3 (VDE 0636-3), einschl. Passeinsatz und Schraubkappe, Baugröße D 02, mit Sicherungseinsatz, Bemessungsstrom 63 A, 3-polig mit Abdeckung.;5,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0160;Dx/D0x Sicherungssockel (Sicherungsunterteil) DIN VDE 0636-3 (VDE 0636-3), einschl. Passeinsatz und Schraubkappe, Baugröße D 02, Bemessungsbetriebsspannung 400 V AC/250 V DC, für Stromschiene als Reitersicherung, mit Sicherungseinsatz, Bemessungsstrom 63 A, 3-polig mit Abdeckung.;30,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0170;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514),;14,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0180;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514),;15,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0190;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514),;85,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0200;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514),;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0210;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514),;4,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0220;Leitungsschutzschalter DIN EN 60947-2 (VDE 0660-101), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514),;2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0230;Fehlerstromschutzschalter mit Überstromschutz (RCBO) DIN EN 61009-1 (VDE 0664-20), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Typ A pulsstromsensitiv, Auslösung unverzögert, Auslösecharakteristik B, DIN EN 60898-1 (VDE 0641-11), Bemessungsstrom 16 A, Bemessungsf;28,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0240;Fehlerstromschutzschalter (RCCB) DIN EN 61008-1 (VDE 0664-10), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Typ A pulsstromsensitiv, Auslösung unverzögert, Bemessungsstrom 63 A, Bemessungsfehlerstrom 30 mA, 3-polig + N, 400 V AC, Kurzschlussfestigkeit 6 kA, stoßst;2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0250;Fehlerstromschutzschalter (RCCB) DIN EN 61008-1 (VDE 0664-10), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Typ A pulsstromsensitiv, Auslösung unverzögert, Bemessungsstrom 40 A, Bemessungsfehlerstrom 30 mA, 3-polig + N, 400 V AC, Kurzschlussfestigkeit 6 kA, stoßst;18,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0260;Fehlerstromschutzschalter (RCCB) DIN EN 61008-1 (VDE 0664-10), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Typ B allstromsensitiv, Auslösung unverzögert, Bemessungsstrom 40 A, Bemessungsfehlerstrom 30 mA, 3-polig + N, 400 V AC, Kurzschlussfestigkeit 6 kA, stoßstr;2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0270;Fehlerstromschutzschalter (RCCB) DIN EN 61008-1 (VDE 0664-10), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Typ A pulsstromsensitiv, Auslösung unverzögert, Bemessungsstrom 25 A, Bemessungsfehlerstrom 30 mA, einpolig + N, 230 V AC, Kurzschlussfestigkeit 6 kA, stoßs;2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0280;Reihenklemme DIN EN 60947-7-1 (VDE 0611-1), Bemessungsisolationsspannung 690 V AC, Isolationsgruppe C, einstöckig, für Leiterquerschnitt bis 4 mm2, mit Schraubanschlüssen, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), e;15,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0290;Reihenklemme DIN EN 60947-7-1 (VDE 0611-1), Bemessungsisolationsspannung 690 V AC, Isolationsgruppe C, einstöckig, für Leiterquerschnitt bis 16 mm2, mit Schraubanschlüssen, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), ;60,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0300;Reihenklemme DIN EN 60947-7-1 (VDE 0611-1), Bemessungsisolationsspannung 690 V AC, Isolationsgruppe C, einstöckig, für Leiterquerschnitt bis 35 mm2, mit Schraubanschlüssen, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), ;12,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0310;Reihenklemme DIN EN 60947-7-1 (VDE 0611-1), Bemessungsisolationsspannung 690 V AC, Isolationsgruppe C, einstöckig, für Leiterquerschnitt bis 70 mm2, mit Schraubanschlüssen, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), ;6,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0320;Neutralleiter-Reihentrennklemme DIN EN 60947-7-1 (VDE 0611-1), Bemessungsisolationsspannung 690 V AC, für Leiterquerschnitt bis 4 mm2, mit Schraubanschlüssen, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), einschl. syste;10,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0330;Neutralleiter-Reihentrennklemme DIN EN 60947-7-1 (VDE 0611-1), Bemessungsisolationsspannung 690 V AC, für Leiterquerschnitt bis 16 mm2, mit Schraubanschlüssen, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), einschl. syst;20,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0340;Neutralleiter-Reihenklemme DIN EN 60947-7-1 (VDE 0611-1), Bemessungsisolationsspannung 690 V AC, für Leiterquerschnitt bis 35 mm2, mit Schraubanschlüssen, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), einschl. systemgeb;4,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0350;Neutralleiter-Reihenklemme DIN EN 60947-7-1 (VDE 0611-1), Bemessungsisolationsspannung 690 V AC, für Leiterquerschnitt bis 70 mm2, mit Schraubanschlüssen, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), einschl. systemgeb;2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0360;Schutzleiter-Reihenklemme DIN EN 60947-7-2 (VDE 0611-3), für Leiterquerschnitt bis 4 mm2, mit Schraubanschlüssen, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), einschl. systemgebundenem Zubehör mit dauerhafter Anschluss;20,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0370;Schutzleiter-Reihenklemme DIN EN 60947-7-2 (VDE 0611-3), für Leiterquerschnitt bis 16 mm2, mit Schraubanschlüssen, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), einschl. systemgebundenem Zubehör mit dauerhafter Anschlus;40,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0380;Schutzleiter-Reihenklemme DIN EN 60947-7-2 (VDE 0611-3), für Leiterquerschnitt bis 35 mm2, mit Schraubanschlüssen, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), einschl. systemgebundenem Zubehör mit dauerhafter Anschlus;8,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0390;Schutzleiter-Reihenklemme DIN EN 60947-7-2 (VDE 0611-3), für Leiterquerschnitt bis 70 mm2, mit Schraubanschlüssen, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), einschl. systemgebundenem Zubehör mit dauerhafter Anschlus;4,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0400;Reihenklemme DIN EN 60947-7-1 (VDE 0611-1), Isolationsgruppe C, 3-stöckig, für NT-L-PE-Anschluss, für Leiterquerschnitt bis 4 mm2, mit schraubenlosen Anschlüssen, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), einschl. s;250,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0410;Reihenklemme DIN EN 60947-7-1 (VDE 0611-1), Isolationsgruppe C, 2-stöckig, für Leiterquerschnitt bis 4 mm2, mit schraubenlosen Anschlüssen, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), einschl. systemgebundenem Zubehör;45,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0420;Überspannungsschutzgerät DIN EN 61643-11 (VDE 0675-6-11), Typ 2, Einbauort am Betriebsmittel, als NH-Bauform, Maße DIN 43620-3, mit Funktionsanzeige und potentialfreiem Kontakt für Fernanzeige, Bemessungsbetriebsspannung 230/400 V AC, Nennableitstoßstrom (8/20) je Leiter mind. 20 kA, für TN-C-System;2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0430;Überspannungsschutzgerät Kombi Typ 1 u. 2 für TNS-System, 4-pol. mit potentialfreiem Kontakt zur Fernanzeige;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0440;Fernschalter DIN EN 60669-2-2 (VDE 0632-2-2), bistabil (Stromstoßschalter), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), mit Handbetätigung und Schaltstellungsanzeige, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), Bemessungsbetriebsspannung 400 V AC, Be;2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0450;Fernschalter DIN EN 60669-2-2 (VDE 0632-2-2), monostabil (Installationsrelais), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), mit Schaltstellungsanzeige, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), Bemessungsbetriebsspannung 400 V AC, Bemessungssteuers;2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0460;Fernschalter DIN EN 60669-2-2 (VDE 0632-2-2), bistabil (Stromstoßschalter), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), mit Handbetätigung und Schaltstellungsanzeige, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), Bemessungsbetriebsspannung 400 V AC, Be;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0470;Installationsschütz DIN EN 61095 (VDE 0637-3), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Bemessungsisolationsspannung 500 V AC, 3-polig, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), Gebrauchskategorie AC-3, Bemessungsbetriebsstrom mind. 20 A, Bemess;3,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0480;Dämmerungsschalter 230 V AC, für Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), mit Fernmesselement,;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0490;Digitale Zeitschaltuhr, als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), Bemessungsbetriebsspannung 230 V AC, mit Tagesprogramm, mit DCF 77-Funksignal und Antenne, mind. 3 Kanäle, mit 2 W, min. Schaltabstand 1 m;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0500;Dreiphasenüberwachung DPÜ8;3,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0510;Ausschalter DIN EN 60669-1 (VDE 0632-1), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), Bemessungsbetriebsspannung 230 V AC, Bemessungsstrom 16 A, einpolig, mit Hilfsschalter 1 S.;3,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0520;Einbau von beigestelltem M-Bus-Zähler mit Stromwandler in die NSHV.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0010;Wippschalter DIN EN 60669-1 (VDE 0632-1) einpolig, Aus/Wechsel, 10 A, 250 V AC, in Gerätedose, Einsatz mit Schrauben befestigen,;3,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0020;Wippschalter DIN EN 60669-1 (VDE 0632-1) einpolig, Serien, 10 A, 250 V AC, in Gerätedose, Einsatz mit Schrauben befestigen,;40,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0030;Schutzkontaktsteckdose DIN VDE 0620-1 (VDE 0620-1), 250 V AC, 16 A, in Gerätedose, Einsatz mit Schrauben befestigen.;39,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0040;Schutzkontaktsteckdose DIN VDE 0620-1 (VDE 0620-1), 250 V AC, 16 A, 2-fach, in Gerätedose, Einsatz mit Schrauben befestigen.;27,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0050;Schutzkontaktsteckdose DIN VDE 0620-1 (VDE 0620-1), 250 V AC, 16 A, 3-fach, in Gerätedose, Einsatz mit Schrauben befestigen.;13,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0060;Steckdosenkombination, 3-fach,;42,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0070;Schutzkontaktsteckdose DIN VDE 0620-1 (VDE 0620-1), 250 V AC, 16 A, in Gerätedose, Schutzart IP 44 DIN EN 60529 (VDE 0470-1), Einsatz mit Schrauben befestigen.;4,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0080;Gerätedose DIN EN IEC 60670-1 (VDE 0606-1) und DIN 49073, aus Kunststoff, Innendurchmesser 60 mm, Tiefe 40 mm, mit Schrauben, Unterputz.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0090;Gerätedose DIN EN IEC 60670-1 (VDE 0606-1) und DIN 49073, aus Kunststoff, Innendurchmesser 60 mm, Tiefe 40 mm, mit Schrauben, in Hohlwand.;15,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0100;Geräteanschlussdose DIN EN IEC 60670-1 (VDE 0606-1) Farbton weiß, RAL 1013, in Unterputzausführung, mit Verbindungsklemmen bis 4 mm2, 5-polig 400 V AC.;5,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0110;Präsenzmelder für 230 V AC, als Master, mit Infrarotsensor, Schutzart IP 2X DIN EN 60529 (VDE 0470-1), Erfassungsbereich 360 Grad, Reichweite mind. 8 m, mit integriertem Dämmerungsschalter, Einstellbereich 5 bis 300 lx,;13,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0120;Präsenzmelder für 230 V AC, als Master, zum Einbau in Gerätedose, mit Infrarotsensor, Schutzart IP 2X DIN EN 60529 (VDE 0470-1), Erfassungsbereich 360 Grad, Reichweite mind. 8 m, mit integriertem Dämmerungsschalter, Einstellbereich 5 bis 300 lx,;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0130;Abdeckung mit Zentralplatte als Blindabdeckung.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0140;Abdeckung mit Zentralplatte als Blindabdeckung, jedoch IP 44. Passend zum Schalterprogramm.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0150;Wippschalter DIN EN 60669-1 (VDE 0632-1) einpolig, Aus/Wechsel, 10 A, 250 V AC, in Aufputzausführung, Schutzart IP 44 DIN EN 60529 (VDE 0470-1),;9,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0160;Schutzkontaktsteckdose DIN VDE 0620-1 (VDE 0620-1), 250 V AC, 16 A, in Aufputzausführung, Schutzart IP 44 DIN EN 60529 (VDE 0470-1).;22,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0170;Schutzkontaktsteckdose DIN VDE 0620-1 (VDE 0620-1), 250 V AC, 16 A, 2-fach, in Aufputzausführung, Schutzart IP 44 DIN EN 60529 (VDE 0470-1).;4,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0180;Abzweigdose aus duroplastischem Werkstoff, Aufputzausführung, IP 54, betriebsfertig verdrahtet und dauerhaft mit der Stromkreisnummer - innen und außen - beschriftet.;80,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0190;Abzweigdose aus duroplastischem Werkstoff, Aufputzausführung, IP 54, betriebsfertig verdrahtet und dauerhaft mit der Stromkreisnummer - innen und außen - beschriftet.;20,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0200;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus PE-HD, einwandig, glatt, starr, Außendurchmesser 16 mm, Druckfestigkeit Klasse 1 - sehr leicht (125 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE 0605-1), max. Gebrauchstemperatur Kla;250,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0210;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus PE-HD, einwandig, glatt, starr, Außendurchmesser 25 mm, Druckfestigkeit Klasse 2 - leicht (320 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE 0605-1), max. Gebrauchstemperatur Klasse 1;160,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0220;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus PE-HD, einwandig, glatt, starr, Außendurchmesser 32 mm, Druckfestigkeit Klasse 2 - leicht (320 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE 0605-1), max. Gebrauchstemperatur Klasse 1;50,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0230;Elektroinstallationskanal 40/57 nach DIN VDE 0604 als Leitungsführungskanal, für Decken- und Wandmontage;10,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0240;Elektroinstallationskanal 40/60 nach DIN VDE 0604 als Leitungsführungskanal, für Decken- und Wandmontage;140,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0250;Elektroinstallationskanal 20/30 nach DIN VDE 0604 als Leitungsführungskanal, für Decken- und Wandmontage;350,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0260;Elektroinstallationskanal 15/15 PVC;10,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0270;Kabelrinne für Kabelträgersystem DIN EN 61537 (VDE 0639), gelocht, mit einem Trennsteg, aus bandverzinktem Stahl DIN EN 10346, Seitenhöhe mind. 60 mm, Breite mind. 200 mm, Einbau im Innenbereich.;45,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0280;Bogen, für Kabelrinne, bis 90 Grad, senkrecht, aus bandverzinktem Stahl DIN EN 10346, Seitenhöhe mind. 60 mm, Breite mind. 200 mm, Einbau im Innenbereich.;2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0290;Ausleger aus bandverzinktem Stahl DIN EN 10346, Tragfähigkeit bis 2,5 kN, Länge 200 mm, an der Wand aus Beton, befestigen mit bauaufsichtlich zugelassenen Dübeln, Einbau im Innenbereich.;48,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0300;Ausleger aus bandverzinktem Stahl DIN EN 10346, Tragfähigkeit bis 2,5 kN, Länge 200 mm, an Stielen, einseitig, Stiele werden gesondert vergütet, Einbau im Innenbereich.;10,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0310;Kabelrinne für Kabelträgersystem DIN EN 61537 (VDE 0639), gelocht, mit einem Trennsteg, aus bandverzinktem Stahl DIN EN 10346, Seitenhöhe mind. 60 mm, Breite mind. 300 mm, Einbau im Innenbereich.;20,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0320;Bogen, für Kabelrinne, 90 Grad, waagerecht, aus bandverzinktem Stahl DIN EN 10346, Breite mind. 300 mm, Einbau im Innenbereich.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0330;T-Abzweig, für Kabelrinne, aus bandverzinktem Stahl DIN EN 10346, Seitenhöhe mind. 60 mm, Breite mind. 300 mm, Einbau im Innenbereich.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0340;Ausleger aus bandverzinktem Stahl DIN EN 10346, Tragfähigkeit bis 2,5 kN, Länge 300 mm, an der Wand aus Beton, befestigen mit bauaufsichtlich zugelassenen Dübeln, Einbau im Innenbereich.;22,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0350;Ausleger aus bandverzinktem Stahl DIN EN 10346, Tragfähigkeit bis 2,5 kN, Länge 300 mm, an Stielen, einseitig, Stiele werden gesondert vergütet, Einbau im Innenbereich.;5,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0360;Kabelrinne für Kabelträgersystem DIN EN 61537 (VDE 0639), gelocht, mit einem Trennsteg, aus bandverzinktem Stahl DIN EN 10346, Seitenhöhe mind. 60 mm, Breite mind. 400 mm, Einbau im Innenbereich.;60,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0370;Bogen, für Kabelrinne, 90 Grad, waagerecht, aus bandverzinktem Stahl DIN EN 10346, Breite mind. 400 mm, Einbau im Innenbereich.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0380;Ausleger aus bandverzinktem Stahl DIN EN 10346, Tragfähigkeit bis 2,5 kN, Länge 400 mm, an der Wand aus Beton, befestigen mit bauaufsichtlich zugelassenen Dübeln, Einbau im Innenbereich.;65,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0390;Ausleger aus bandverzinktem Stahl DIN EN 10346, Tragfähigkeit bis 2,5 kN, Länge 400 mm, an Stielen, einseitig, Stiele werden gesondert vergütet, Einbau im Innenbereich.;10,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0400;Steigleiter als Kabelleiter, Sprossenabstand 300 mm, mit einem Trennsteg, aus bandverzinktem Stahl DIN EN 10346, Seitenhöhe mind. 60 mm, Breite mind. 300 mm, an Trapezblechdecke befestigen, Einbau im Innenbereich.;6,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0410;C-Profilschiene bis 40 x 22 mm, gelocht. Verzinkt nach DIN EN 10142. In Teillängen, Befestigung an Mauerwerk oder Beton mit zugelassenen Dübeln und Schrauben.;10,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0420;Bügelschelle, passend zur C-Schiene 40 x 22 mm. Spannbereich 16 bis 50 mm. Einschl. Wanne und Gegenwanne.;50,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0430;Sammelhalter aus Metall für Wand- oder Deckenmontage.;20,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0440;Sammelhalter aus Metall für Wand- oder Deckenmontage.;20,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0450;Sammelhalter aus Metall für Wand- oder Deckenmontage.;10,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0460;Sammelhalter aus Polypropylen für Wand- oder Deckenmontage. Farbe: Grau;20,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0470;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 1,5, Cu-Zahl 43.;800,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0480;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 1,5, Cu-Zahl 72.;250,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0490;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 7 x 1,5, Cu-Zahl 101.;10,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0500;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 2,5, Cu-Zahl 72.;3800,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0510;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 2,5, Cu-Zahl 120.;800,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0520;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 7 x 2,5, Cu-Zahl 168.;120,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0530;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 4, Cu-Zahl 192.;350,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0540;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 10, Cu-Zahl 480.;10,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0550;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 25 RM/16, Cu-Zahl 1142.;15,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0560;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 35 SM/16, Cu-Zahl 1526.;45,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0570;Installationskabel, symmetrisch, J-Y(St)Y, 2 x 2 x 0,8 Bd.;500,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0580;Installationskabel, symmetrisch, J-Y(St)Y, 4 x 2 x 0,8 Bd.;200,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0590;Bohrung durch Mauerwerk,;23,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0600;Bohrung durch Mauerwerk und Beton,;10,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0610;Kernbohrung durch Mauerwerk und Beton,;56,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0620;Beschriftungsschild;120,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0630;Stromkreisbeschriftungsschild;190,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0640;Elektroinstallationskanal 65/130 nach DIN VDE 0604 als Geräteeinbaukanal;96,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0650;Wandabdeckrahmen 3-fach, für v. g. Kanal.;36,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0660;Wandabdeckrahmen 4-fach, für v. g. Kanal.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0670;Elektroinstallationskanal 65/170 nach DIN VDE 0604 als Geräteeinbaukanal;170,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0680;Außeneck für v. g. Kanal 65/170.;12,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0690;Endstück für v. g. Kanal 65/170.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0700;Wandabdeckrahmen 3-fach, für v. g. Kanal.;20,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0710;Wandabdeckrahmen 4-fach, für v. g. Kanal.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0720;Ausschnitt bis 80x40 mm;10,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0730;Ausschnitt bis 40x40 mm;15,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0740;Bohrung bis 25 mm;20,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0750;Geräteeinbaudose für v. g. Kanal.;210,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0760;Kanal-Lärmschottung;30,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0010;Brandschutzabschottung, als Weichschott;2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0020;Brandschutzabschottung, als Weichschott;4,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0030;Brandschutzabschottung, als Weichschott;2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0040;Brandschutzabschottung, als Weichschott;6,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0050;Brandschutzabschottung, als Weichschott;56,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0060;Brandschutzkabelmanschette als Vorschott;3,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0070;Brandschutzkanal I90/E30, 220x150 mm;6,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0080;Brandschutzkanal I90/E30, 120x95 mm;1,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0090;Restspaltverschluss von Einzelkabel durch Mauerwerks- oder Betonwand;75,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0010;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 1 x 6, Cu-Zahl 58.;50,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0020;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 1 x 16, Cu-Zahl 154.;270,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0030;Kunststoffaderleitung DIN EN 50525-2-31 (VDE 0285-525-2-31), H07V-K 1 x 6, Cu-Zahl 58, Farbton grün/gelb.;50,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0040;Potentialausgleichsschiene;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0050;Potentialausgleichsschiene DIN VDE 0618-1 (VDE 0618-1), aus verzinktem Stahl, mit Kunststoffabdeckung, mit Anschluss für 7 x 2,5 bis 25 mm2, ein Flachband bis 30 mm x 3,5 mm, und Massivrundleiter, Durchmesser 8 bis 10 mm.;5,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0060;PA-Anschlüsse;10,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0070;PA-Überbrückungsleitungen,;5,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0080;Erdungsbandrohrschelle;3,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0090;Schutzpotentialausgleich von Türen herstellen und die Durchgängigkeit des Schutzleiters dokumentieren.;4,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0010;Anschluss für Fremdgewerk bis Kabelquerschnitt 3 x 2,5 mm², einschl. systembedingtes Zubehör.;5,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0020;Anschluss für Fremdgewerk bis Kabelquerschnitt 5 x 2,5 mm², einschl. systembedingtes Zubehör.;2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0030;Anschluss für Fremdgewerk bis Kabelquerschnitt 5 x 16 mm², einschl. systembedingtes Zubehör.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0040;Anschluss für Fremdgewerk bis Kabelquerschnitt 2 x 2 x 0,8 mm², einschl. systembedingtes Zubehör.;3,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0050;Inbetriebnahme von Geräten gemeinsam mit den Fremdgewerken. Anschluss bis 3 x 2,5 mm².;5,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0060;Inbetriebnahme von Geräten gemeinsam mit den Fremdgewerken. Anschluss bis 5 x 2,5 mm².;2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0070;Inbetriebnahme von Geräten gemeinsam mit den Fremdgewerken. Anschluss bis 5 x 16 mm².;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0080;Isolationsmessung an Kabeln und Leitungen der Fremdgewerke, einschl. Messprotokoll. (Alle Adern);10,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0090;Isolationsmessung an Kabeln und Leitungen der Fremdgewerke, einschl. Messprotokoll. (Alle Adern);3,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0100;Isolationsmessung an Kabeln und Leitungen der Fremdgewerke, einschl. Messprotokoll. (Alle Adern);1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0110;Isolationsmessung an Kabeln und Leitungen der Fremdgewerke, einschl. Messprotokoll. (Alle Adern);10,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0120;Isolationsmessung an Kabeln und Leitungen der Fremdgewerke, einschl. Messprotokoll. (Alle Adern);1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0010;Wand- und Spiegelleuchte LED,;2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0020;Anbauleuchte, Bauform rund, Betriebsgerät in der Leuchte,;17,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0030;Anbauleuchte, Bauform rechteckig, Betriebsgerät in der Leuchte,;19,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0040;Anbauleuchte, Bauform rechteckig,;70,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0050;Anbauleuchte, Bauform rechteckig, Betriebsgerät in der Leuchte,;19,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0060;Einbauleuchte, Bauform quadratisch,;15,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0070;Installationskleinverteiler DIN EN 60670-24 (VDE 0606-24), U Index n tiefgestellt kleiner gleich 400 V AC, I Index n tiefgestellt kleiner gleich 125 A, Bedienung durch elektrotechnischen Laien, Gehäuse aus Kunststoff,;4,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0080;Überspannungsschutzgerät DIN EN 61643-11 (VDE 0675-6-11), Typ 2, Einbauort am Betriebsmittel, als NH-Bauform, Maße DIN 43620-3, mit Funktionsanzeige und potentialfreiem Kontakt für Fernanzeige, Bemessungsbetriebsspannung 230 V AC, Nennableitstoßstrom (8/20) je Leiter mind. 5 kA, für TN-S-System mit ;4,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0010;24V-Notlichtsystem;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0020;Aufschaltung des Notlichtsystems auf die Gebäudeautomation;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0030;Brandschutzschrank für vorgenannte Position.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0040;Quadratische Sicherheitsleuchte als LED-Downlight für Deckenaufbaumontage, mit symmetrischer Lichtverteilung zur Ausleuchtung von Räumen.;14,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0050;Aufputzadapter für vorgenannte Sicherheitsleuchte;14,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0060;Sicherheitsleuchte als LED-Downlight für Deckenaufbaumontage, mit asymmetrischer Lichtverteilung zur Ausleuchtung von Rettungswegen.;9,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0070;Aufputzadapter für vorgenannte Sicherheitsleuchte;9,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0080;Trapezförmige LED-Sicherheitsleuchte/ Orientierungsleuchte zum Anschluss an 24V-Sicherheitsstromversorgungsanlagen.;4,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0090;LED-Rettungszeichen-Scheibenleuchte aus hochwertigem Aluminiumprofil für Deckenaufbaumontage.;11,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0100;Aufputzadapter für vorgenannte Sicherheitsleuchte;11,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0110;Fernanzeige mit drei Status LEDs und Schlüsselschalter;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0120;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 2,5, Cu-Zahl 72.;570,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0130;Funktionserhaltkabel E30,;50,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0140;Programmierung und Inbetriebnahme der Sicherheitsbeleuchtungsanlagen einschl. Erstellung eines Prüfbuches.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0150;Nutzereinweisung in die Sicherheitsbeleuchtungsanlage;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0160;Pauschalpreis für die Teilnahme an der Sachverständigenabnahme der Sicherheitsbeleuchtungsanlage;1,0;psch;gaeb;leistungsbeschreibungen/26A50116.X83
+0010;Türklingel aus Edelstahl mit Beschriftungsfeld,;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0020;Türgong für Innenbereich als AP-Montage, 8-12V.;3,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0030;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-Y(St)Y, 4 x 2 x 0,8 Bd.;45,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0010;LSA Mini-Verteilerkasten für 60 DA;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0020;Trennleiste, symmetrisch, für 10 DA, Leiterdurchmesser 0,8 mm, mit Bezeichnungsstreifen, in löt-, schraub- und abisolierfreier Technik (LSA-Technik).;4,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0030;Trennleiste, symmetrisch, für 10 DA, Leiterdurchmesser 0,6 mm, mit Bezeichnungsstreifen, in löt-, schraub- und abisolierfreier Technik (LSA-Technik).;2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0040;LSA-Plus-Anschlussleiste 10 DA;4,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0050;LSA-Plus-Anschlussleiste 10 DA;4,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0060;Rangierung 2-drähtig in FM-Verteilern.;40,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0070;Installationskabel, symmetrisch, J-Y(St)Y, 20 x 2 x 0,8 Bd.;50,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0080;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1 (VDE 0800-173-1), geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Leitungswiderstand 0,065 Ohm/m und Kabeldurchmesser 0,007 m DIN EN 50174-2 (VDE 0800-174-2), Li;100,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0090;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1 (VDE 0800-173-1), geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Leitungswiderstand 0,065 Ohm/m und Kabeldurchmesser 0,007 m DIN EN 50174-2 (VDE 0800-174-2), Li;2550,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0100;LWL-Innenkabel DIN VDE V 0888-100-1-1 (VDE V 0888-100-1-1), als Einmodenfaser OS 2, DIN EN 50173-1 (VDE 0800-173-1), J-DH, 6 x 2 E 9/125, Wellenlänge 1310 nm.;45,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0110;Patchkabel Kat. 6 - Kat 6, 2,0 m, Blau;20,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0120;Patchkabel Kat. 6 - Kat 6, 2,0 m, Grau;20,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0130;"Netzwerkschrank 19"" - 42 HE";1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0140;"Kabelführungsbügel für eine flexible und systemgerechte Kabelführung seitlich am 19""-Montagerahmen. Kabelführungsbügel chromatiert,";12,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0150;Rangierpanel 19“ – 1HE;3,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0160;"Steckdosenleiste, 10-fach, ohne Schalter, mit Überspannungsschutz für vorhandenen 19""-Schrank.";2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0170;"Fachboden fest, für vorhandenen 19""-Schrank.";1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0180;"19"" Patchpanel für RJ45-Kat.6A, 500MHz.";4,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0190;19“ Patchpanel für RJ45-Kat.3;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0200;"19"" LWL-Rangierverteiler 1 HE, 12 Fasern";1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0210;Fusionsspleißung Singlemode;24,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0220;Erstellung eines OTDR-Messprotokolls für ein verlegtes;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0230;Datenanschlussdose, symmetrisch, Kategorie 6 Index A tiefgestellt DIN EN 50173-1 (VDE 0800-173-1), Link-Klasse E Index A tiefgestellt, DIN EN 50173-1 (VDE 0800-173-1), Potentialausgleich DIN EN 50310 (VDE 0800-2-310), modular, Anzahl Ausbrüche 1 St, 2 Ports, RJ45-Buchse DIN EN 60603-7-51, einschl. G;40,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0240;Datenanschlussdose, symmetrisch, Kategorie 6 Index A tiefgestellt DIN EN 50173-1 (VDE 0800-173-1), Link-Klasse E Index A tiefgestellt, DIN EN 50173-1 (VDE 0800-173-1), Potentialausgleich DIN EN 50310 (VDE 0800-2-310), modular, Anzahl Ausbrüche 1 St, 2 Ports, RJ45-Buchse DIN EN 60603-7-51, einschl. G;2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0250;Beschriftungen der DV-Anschlussdosen;42,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0260;Messung der DV-Teilnehmerkabel nach DIN EN 50346;84,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0270;Dokumentation für FM-Verteilerschrank;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0280;Inbetriebnahme, Einweisung und Dokumentation der DV-Anlage.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0290;Erstellen von Satinlisten für BWI;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0300;Digitaler Schließzylinder für Datenräume der Bundeswehr.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0010;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 10 RE, Cu-Zahl 480.;35,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0020;Verbinder, DIN EN IEC 62561-1 (VDE 0185-561-1), Klasse N für normale Belastung, für Kreuzverbindungen, aus nichtrostendem Stahl, Werkstoff-Nr 1.4571, für Rd 10 mit Rd 10, mit Zwischenplatte.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0030;FM-Muffe 20 DA (Fett/Trocken);2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0040;Gebäudeeinführung für 3 Kabel bis D = 40 mm;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0050;Mastaufsatzleuchte LED;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0060;Lichtmast als gerader Mast DIN EN 40-2 und DIN EN 40-5 aus Feuerverzinktem Stahl beschichtet;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0070;Lichtmastfundament als Fertigfundament;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0080;Mast-Sicherungskasten mit Überspannungsableiter;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0090;Verbindungen von Flachstahl und Rundeisen mittels Densobinde schützen.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0100;Verbinder, DIN EN IEC 62561-1 (VDE 0185-561-1), Klasse N für normale Belastung, für Kreuzverbindungen, aus nichtrostendem Stahl, Werkstoff-Nr 1.4571, für Rd 10 mit Rd 10, mit Zwischenplatte.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0110;Anschluss der Erdung an Mastleuchte;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0010;Normalstunden eines Technikers;5,0;h;gaeb;leistungsbeschreibungen/26A50116.X83
+0020;Normalstunden eines Obermonteurs;20,0;h;gaeb;leistungsbeschreibungen/26A50116.X83
+0030;Normalstunden eines Monteurs;30,0;h;gaeb;leistungsbeschreibungen/26A50116.X83
+0040;Normalstunden eines Helfers;15,0;h;gaeb;leistungsbeschreibungen/26A50116.X83
+0010;Baustellenverteiler IP 54, abschließbar (Typ 1);1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0020;Baustellenverteiler einen weiteren Monat vorhalten und prüfen.;2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0030;Gummischlauchleitung DIN VDE 0282-4 H07RN-F 5 G16 Cu-Zahl 1200.;50,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0040;Gummischlauchleitung DIN VDE 0282-4 H07RN-F 3 G 1,5, Cu-Zahl 43. Verlegung mit Schellen.;120,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0050;Wechselschalter, AP, IP 44,;2,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0060;Abzweigdose, AP, IP 44,;10,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0070;Feuchtraumwannenleuchte 1 x 58 W oder LED, IP54.;15,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0080;Verbindungskabel H07RN-F5G4, 30m mit CEE-Stecker und Kupplung.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0010;Starkstromleitung;1600,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0020;Installations- und Brüstungskanäle aus PVC oder Metall bis 120/70 demontieren, trennen, nach Werkstoffen sortieren und entsorgen.;10,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0030;Installationsgeräte unter Putz, einschl. Einbaudose, demontieren, trennen, nach Werkstoffen sortieren und entsorgen.;210,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0040;Installationsgeräte auf Putz, demontieren, trennen, nach Werkstoffen sortieren und entsorgen.;35,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0050;Abzweigdosen oder Anschlussdosen AP/UP, abklemmen, demontieren und entsorgen.;15,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0060;Verteilung ca. 1250 x 1200 x 250 einschl. Befestigungsmaterialien, demontieren und dem BwDLZ übergeben.;1,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0070;Deckenleuchten, Wandleuchten, Notleuchten, abgehängte Leuchten oder Einbauleuchten bis 2x58W, abklemmen, demontieren, einschl. Befestigungsmaterialien, Abhängung und Leuchtmittel.;18,0;St;gaeb;leistungsbeschreibungen/26A50116.X83
+0080;Fernmelde- oder Datenleitung bis 4x2x0,8 abklemmen, demontieren, trennen, nach Werkstoffen sortieren und entsorgen.;200,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0090;Installationsrohre aus Kunststoff oder Metall bis M40 demontieren, trennen, nach Werkstoffen sortieren und entsorgen.;150,0;m;gaeb;leistungsbeschreibungen/26A50116.X83
+0100;Bauseitige Mantelleitung bis 5 x 2,5 mm² von der Decke lösen und provisorisch mit Kabelbindern und Schraubhaken an Wänden und Deckenprofilen befestigen, einschl. Befestigungsmaterial. Nach Fertigstellung neuer Trassen wieder fachgerecht mit Kabelschlaufen verlegen.;70,0;m;gaeb;leistungsbeschreibungen/26A50116.X83

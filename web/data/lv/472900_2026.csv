@@ -1,0 +1,237 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Bauzaun, auf befestigtem Untergrund, aus Einzelelementen mit verzinktem Stahlrohrrahmen und Vergitterung, mit Standfüßen, Zaunoberkante über Oberfläche Gelände 2 m, aufstellen und räumen.;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+20;Bauzaun, auf befestigtem Untergrund, aus Einzelelementen mit verzinktem Stahlrohrrahmen und Vergitterung, mit Standfüßen, Zaunoberkante über Oberfläche Gelände 2 m, vorhalten.;600,0;mWo;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+30;Behelfsmäßiges Tor,, 2-flügelig, aus Metallgitter, vorgefertigt, im Bauzaun, Breite über 2,75 bis 3 m, Höhe über 1,75 bis 2 m, einbauen und ausbauen. Tor abschließbar einschl., Kette und Vorhängeschloss mit 5 Schlüsseln.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+40;Behelfsmäßiges Tor, abschließbar, 2-flügelig, aus Metallgitter, vorgefertigt, im Bauzaun, Breite über 2,75 bis 3 m, Höhe über 1,75 bis 2 m.;20,0;StWo;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+50;Mobile Toilette mit Handwaschbecken, mit Urinal, mit Seifenspender, mit Papierhandtuchhalter, mit Toilettenpapierhalter, aufstellen und räumen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+60;Mobile Toilette mit Handwaschbecken, mit Urinal, mit Seifenspender, mit Papierhandtuchhalter, mit Toilettenpapierhalter, vorhalten, einschl. wöchentlicher Leerung und Reinigung.;20,0;StWo;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+70;Verkehrssicherung Gehwegsperrung einschl. Beleuchtung und Beschilderung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+80;Aufbauen längenorientiertes Standgerüst, Fassadengerüst DIN EN 12810-1, als Arbeitsgerüst DIN EN 12811-1, Lastklasse 3 (2 kN/m2), Breitenklasse SW06, Höhenklasse H 1, alle Gerüstlagen genutzt, verankern, Einrüstung für Abbrucharbeiten, an senkrechten Bauwerksflächen, außen, Höhe der obersten Gerüstl;1470,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+90;Gebrauchsüberlassung für längenorientiertes Standgerüst, Fassadengerüst DIN EN 12810-1, als Arbeitsgerüst DIN EN 12811-1, Lastklasse 3 (2 kN/m2), Breitenklasse SW06, Höhenklasse H 1, alle Gerüstlagen genutzt, Einrüstung für Abbrucharbeiten, an senkrechten Bauwerksflächen, außen, Höhe der obersten Ge;10290,0;m2Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+100;Abbauen längenorientiertes Standgerüst, Fassadengerüst DIN EN 12810-1, als Arbeitsgerüst DIN EN 12811-1, Lastklasse 3 (2 kN/m2), Breitenklasse SW06, Höhenklasse H 1, alle Gerüstlagen genutzt, Einrüstung für Abbrucharbeiten, an senkrechten Bauwerksflächen, außen, Höhe der obersten Gerüstlage 12 m, üb;1470,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+110;Aufbauen Belagverbreiterung wandseitig,;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+120;Gebrauchsüberlassung für Belagverbreiterung wandseitig,;700,0;mWo;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+130;Abbauen Belagverbreiterung wandseitig,;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+140;Aufbauen zusätzlichen 3-teiligen Seitenschutz, DIN EN 12811-1, an einer Gerüstlage, Höhe der Gerüstlage 12 m.;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+150;Gebrauchsüberlassung für zusätzlichen 3-teiligen Seitenschutz, DIN EN 12811-1, an einer Gerüstlage, Höhe der Gerüstlage 12 m.;700,0;mWo;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+160;Entfernen zusätzlichen 3-teiligen Seitenschutz, DIN EN 12811-1, an einer Gerüstlage, Höhe der Gerüstlage 12 m.;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+170;Aufbauen von Schutzeinrichtungen an Standgerüst, als Dachfanggerüst DIN 4420-1, Schutzwand aus Netzen, Breite des Dach-/Deckenüberstandes über 0,3 bis 0,5 m.;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+180;Gebrauchsüberlassung für Schutzeinrichtungen an Standgerüst, als Dachfanggerüst DIN 4420-1, Schutzwand aus Netzen, Breite des Dach-/Deckenüberstandes über 0,3 bis 0,5 m.;700,0;mWo;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+190;Abbauen von Schutzeinrichtungen an Standgerüst, als Dachfanggerüst DIN 4420-1, Schutzwand aus Netzen, Breite des Dach-/Deckenüberstandes über 0,3 bis 0,5 m.;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+200;Aufbauen Überbrückung in Gerüst,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+210;Gebrauchsüberlassung für Überbrückung in Gerüst,;14,0;StWo;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+220;Abbauen Überbrückung in Gerüst,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+230;Anbringen der Gerüstbekleidung, mit engmaschigen Netzen, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar), einschl. zusätzlich erforderlicher Gerüstverankerungen.;1470,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+240;Gebrauchsüberlassung für Gerüstbekleidung, mit engmaschigen Netzen, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar).;10290,0;m2Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+250;Abnehmen der Gerüstbekleidung, mit engmaschigen Netzen, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar).;1470,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+260;Schutzgeländer, aus Holz, gehobelt, Höhe 1 m, einrichten und dem AG übergeben.;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+270;Behelfsmäßige Tür, einflügelig, aus Stahlblech, im Bauwerk, Breite über 2,75 bis 3 m, Höhe über 2 bis 2,25 m, einbauen und ausbauen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+280;Raum für persönliche Schutzausrüstung in;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+290;Einwegschutzanzüge einschließlich Einweg-;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+300;Atemschutzmasken P3 (Halbmasken) und Handschuhe für;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+310;1-Kammer-Schleusen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+320;4-Kammer-Personenschleuse gemäß TRGS 519;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+330;2-Kammer-Materialschleuse gemäß TRGS 519;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+340;Aufbau von Abschottungen nach TRGS 519 und TRGS 521;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+350;Regelbare Unterdruckanlage/ technisches Lüftungsgerät;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+360;Freimessung nach TRGS 519;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+370;Sanitärcontainer (Wasch- und Umkleidecontainer) in;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+10;Öffnung im Bereich der Fassade erweitern, einseitig, durch Sägen, in Wand aus Stahlbeton, Normalbeton, einseitig beschichtet,;195,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+20;Abbruch des Fensters, des Einfachfensters, mit Verglasung, einteilig, aus Kunststoff, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;295,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+30;Abbruch des Fensters, des Einfachfensters, mit Verglasung, einteilig, aus Kunststoff, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+40;Abbruch des Fensters, des Einfachfensters, mit Verglasung, einteilig, aus Kunststoff, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+50;Abbruch des Fensters, des Einfachfensters, mit Verglasung, einteilig, aus Kunststoff, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;32,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+60;Abbruch des Fensters, des Einfachfensters, mit Verglasung, einteilig, aus Kunststoff, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+70;Abbruch der Fensterbank, aus Aluminium, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;215,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+80;Abbruch des Rollladenpanzers aus Kunststoff, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+90;Abbruch des Rollladenkastens aus Kunststoff, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;31,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+100;Abbruch Außenjalousie/Raffstore, an Fenster/Tür, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;145,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+110;Abbruch des Rollladenkastens aus Aluminium, im Rahmen einer Teillabbruchmaßnahme, nicht schadstoffbelastet,;93,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+120;Abbruch des Gitters, aus verzinktem Stahl, im Rahmen einer Teillabbruchmaßnahme, nicht schadstoffbelastet,;300,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+130;Abbruch des Gitterrostes, aus verzinktem Stahl, im Rahmen einer Teillabbruchmaßnahme, nicht schadstoffbelastet,;2,5;t;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+140;Abbruch des Pollers im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;150,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+150;Abbruch des Masthalters aus verzinktem Stahl, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;100,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+160;Abbruch der Steigleiter, mit Seitenholmen, aus verzinktem Stahl, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;200,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+170;Abbruch des Zauntores aus Rahmen und Füllung, einschl. Pfosten aus Stahl, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;750,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+180;Abbruch des Vordachs aus Holz und Stahl, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;0,5;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+190;Abbruch der Kragplatte aus Stahlbeton, Normalbeton,;1,5;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+200;Abbruch von Wärmedämm-Verbundsystem (WDVS) an Außenwand, Oberfläche mit Oberputz, Putz, mineralisch, Dämmschicht aus Polystyrol-Hartschaum, Befestigung geklebt und gedübelt, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;8,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+10;Aufbauen längenorientiertes Standgerüst, Fassadengerüst DIN EN 12810-1, als Arbeitsgerüst DIN EN 12811-1, Lastklasse 3 (2 kN/m2), Breitenklasse SW06, Höhenklasse H 1, alle Gerüstlagen genutzt, verankern, Einrüstung für Abbrucharbeiten, an senkrechten Bauwerksflächen, außen, Höhe der obersten Gerüstl;170,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+20;Gebrauchsüberlassung für längenorientiertes Standgerüst, Fassadengerüst DIN EN 12810-1, als Arbeitsgerüst DIN EN 12811-1, Lastklasse 3 (2 kN/m2), Breitenklasse SW06, Höhenklasse H 1, alle Gerüstlagen genutzt, Einrüstung für Abbrucharbeiten, an senkrechten Bauwerksflächen, außen, Höhe der obersten Ge;1020,0;m2Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+30;Abbauen längenorientiertes Standgerüst, Fassadengerüst DIN EN 12810-1, als Arbeitsgerüst DIN EN 12811-1, Lastklasse 3 (2 kN/m2), Breitenklasse SW06, Höhenklasse H 1, alle Gerüstlagen genutzt, Einrüstung für Abbrucharbeiten, an senkrechten Bauwerksflächen, außen, Höhe der obersten Gerüstlage 12 m, üb;170,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+40;Aufbauen flächenorientiertes Standgerüst, DIN EN 12810-1, als Arbeits- und Schutzgerüst DIN EN 12811-1, Gerüstergänzungen werden gesondert vergütet, Lastklasse 3 (2 kN/m2), Höhenklasse H 1, Verankerung am Bauwerk nicht möglich, Standfestigkeit herstellen, Einrüstung für Abbrucharbeiten, Grundfläche ;120,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+50;Gebrauchsüberlassung für flächenorientiertes Standgerüst, DIN EN 12810-1, als Arbeitsgerüst DIN EN 12811-1, Lastklasse 3 (2 kN/m2), mit einer Gerüstlage, Höhenklasse H 1, Einrüstung für Abbrucharbeiten, Grundfläche rechteckig, Höhe der obersten Gerüstlage 5 m, über Lastverteiler belastbar.;720,0;m3Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+60;Abbauen flächenorientiertes Standgerüst, DIN EN 12810-1, als Arbeits- und Schutzgerüst DIN EN 12811-1, Gerüstergänzungen werden gesondert vergütet, Lastklasse 3 (2 kN/m2), Höhenklasse H 1, Einrüstung für Abbrucharbeiten, Grundfläche rechteckig, Höhe der obersten Gerüstlage 9 m, über Lastverteiler be;120,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+70;Anbringen der Gerüstbekleidung, mit engmaschigen Netzen, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar), einschl. zusätzlich erforderlicher Gerüstverankerungen.;170,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+80;Gebrauchsüberlassung für Gerüstbekleidung, mit engmaschigen Netzen, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar).;1020,0;m2Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+90;Abnehmen der Gerüstbekleidung, mit engmaschigen Netzen, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar).;170,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+100;Abbruch der Decke aus Stahlbeton, Normalbeton, Betonfestigkeitsklasse nach Prüfung,;5,25;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+110;Abbruch des Unterzugs aus Stahlbeton, Normalbeton,;1,1;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+120;Abbruch der Stahlkonstruktion, korrosionsschutzbeschichtet, aus Quadrat-Hohlprofil, Einzellänge über 2,5 bis 2,75 m, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet, Abfall ist nicht gefährlich,;1,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+130;Abbruch des Fensters, mit Verglasung, aus Kunststoff, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;25,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+140;Abbruch der Dämmung der Außenwand, Dämmschicht aus Mineralwolle, kaschiert, als Platte, lose verlegt, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;1,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+150;Entfernen der asbesthaltigen Faserzementplatten gemäß;35,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+160;Abbruch der Wandbekleidung aus Holz/Holzwerkstoff, im Rahmen einer Teilabbruchmaßnahme, Wichte des Abbruchstoffes DIN EN 1991-1-1 7,5 kN/m3, Ausführung im Freien,;7,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+170;Abbruch des Grund- und Tragprofils der Wandbekleidung, aus Aluminiumprofil, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;35,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+180;Abbruch der Flachdachdämmung, Dämmschicht aus Mineralwolle, als Platte, lose verlegt, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet, Wichte des Abbruchstoffes DIN EN 1991-1-1 2,5 kN/m3, Ausführung im Freien, Arbeitshöhe bis 2 m,;1,5;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+190;als Paneelblech, geschraubt, im Rahmen einer Teilabbruchmaßnahme,;22,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+200;Platten, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;25,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+10;Abbruch des Balkens aus Holz/Holzwerkstoff einschl. aller Verbindungsmittel, im Rahmen einer Teilabbruchmaßnahme, Altholzkategorie A IV, Wichte des Abbruchstoffes DIN EN 1991-1-1 7,5 kN/m3, Ausführung innerhalb des Bauwerks,;26,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+20;Abbruch der Deckenbekleidung aus Holz/Holzwerkstoff, im Rahmen einer Teilabbruchmaßnahme, Altholzkategorie A IV, Wichte des Abbruchstoffes DIN EN 1991-1-1 7,5 kN/m3, Ausführung innerhalb des Bauwerks,;10,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+30;Abbruch der Dachabdichtung, Bitumenbahn, einlagig, Bahnendicke über 4 bis 5 mm, geschweißt, im Rahmen einer Teilabbruchmaßnahme,;320,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+40;Abbruch der Dachabdichtung, Bitumenbahn, 2-lagig, Gesamtdicke der Abdichtungsbahnen 12 mm, geschweißt, im Rahmen einer Teilabbruchmaßnahme,;350,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+50;Abbruch des Flachdachablaufs aus nichtrostendem Stahl, im Rahmen einer Teilabbruchmaßnahme,;150,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+60;Abbruch der Flachdachdämmung, Dämmschicht aus Polystyrol-Hartschaum, als Platte, mechanisch befestigt, im Rahmen einer Teilabbruchmaßnahme,;60,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+70;Dämmschicht aus Kies, als Schüttung, im Rahmen einer Teilabbruchmaßnahme, Charakterisierung Bodenmaterial Klasse BM-0 Sand nach EBV 2023, Anlage 1, Tabelle 3, Wichte des Abbruchstoffes DIN EN 1991-1-1 17 kN/m3, Ausführung auf Dachfläche,;35,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+80;Abbruch der Schutzlage an Dach, Bahn, mehrschichtig, mit Kunststoffvlies, Gesamtdicke der Abdichtungsbahnen 10 mm, lose verlegt, im Rahmen einer Teilabbruchmaßnahme,;350,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+90;Abbruch der Schutzlage an Dach, Polypropylenvlies (PP), im Rahmen einer Teilabbruchmaßnahme,;350,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+100;Entfernen der Attika- und der Maschinenraum-;250,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+110;Abbruch Attikaabdeckung, aus Aluminium, im Rahmen einer Teillabbruchmaßnahme,;1,5;t;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+120;Abbruch Attikaabdeckung, aus Titanzink, im Rahmen einer Teilabbruchmaßnahme,;1,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+130;Abbruch der Decke aus Stahlbeton im Bereich Maschinenraum, Normalbeton,;7,5;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+140;Abbruch der Außenwand aus Stahlbeton im Bereich Maschinenraum, Normalbeton,;16,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+150;Bekleidung Kehlbalkenlage, aus OSB-Platten DIN EN 13986, Verwendung im Trockenbereich, Nutzungsklasse 1 DIN EN 1995-1-1, Plattentyp OSB/3 DIN EN 300, Dicke 22 mm, befestigen mit Schrauben aus nichtrostendem Stahl, Untergrund Holz.;105,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+160;Abdeckung aus PE-Folie, Dicke 0,2 mm, 2 Lagig, Stöße verkleben oder verschweißen.;115,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+10;Entfernen der asbesthaltigen Brandschutztüren mitsamt;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+20;Abbruch der Tür, aus beschichtetem Stahl, im Rahmen einer Teilabbruchmaßnahme,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+30;Abbruch der Tür, Innentür, aus Holz/Holzwerkstoff, im Rahmen einer Teilabbruchmaßnahme,;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+40;Abbruch der Tür, Innentür, aus Holz/Holzwerkstoff, im Rahmen einer Teilabbruchmaßnahme,;55,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+50;Abbruch des Fensterelements, der Fenstertür, mit Verglasung, 4-teilig, aus Aluminium, im Rahmen einer Teilabbruchmaßnahme,;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+60;Abbruch des Fensterelements, der Fenstertür, mit Verglasung, einteilig, aus Aluminium, im Rahmen einer Teilabbruchmaßnahme,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+70;Abbruch mobile Trennwand, aus Holz/Holzwerkstoff, im Rahmen einer Teilabbruchmaßnahme,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+80;Abbruch von WC-Trennwände und Schamwände, einschl. Türblätter, aus HPL, im Rahmen einer Teilabbruchmaßnahme, Ausführung innerhalb des Bauwerks,;40,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+10;Abbruch der Asbesthaltige Fensterbankabdeckung,;32,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+20;Abbruch der Asbesthaltige Fensterbankabdeckung,;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+30;Abbruch der Asbesthaltige Fensterbankabdeckung,;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+40;Abbruch der Asbesthaltige Fensterbankabdeckung,;120,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+50;Abbruch der Bekleidung aus Faserzementtafeln, großformatig, im Rahmen einer Teilabbruchmaßnahme,;12,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+60;Abbruch von Bekleidungsplatten an Wand, einschl. Laibungen und Sturzverkleidung aus Gipsplatten, einlagig, befestigt im Batzenverfahren, mit Spachtelung, beschichtet, im Rahmen einer Teillabbruchmaßnahme, Fensterflächen werden übermessen.;750,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+70;Abbruch der Dämmung der Innenwand, Dämmschicht aus Holzwolle-Platten, als Platte, verklebt, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;480,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+80;Abbruch der Dämmung der Außenwand, Dämmschicht aus Polystyrol-Hartschaum, als Platte, lose verlegt, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;240,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+90;Abbruch der Wandbekleidung aus Holz/Holzwerkstoff, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;105,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+100;Abbruch der Wandbekleidung aus Holz/Holzwerkstoff, im Rahmen einer Teilabbruchmaßnahme, Altholzkategorie A I, Wichte des Abbruchstoffes DIN EN 1991-1-1 7,5 kN/m3,;38,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+110;Abbruch von Fliesen/Platten an Wand, aus Steingutfliesen, kleinformatig, Dicke bis 10 mm, einschl. Entfernen von Kleberesten/Mörtelresten, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+120;Abbruch von Putz an Innenwand, Gips-Putzmörtel, im Rahmen einer Teilabbruchmaßnahme,;2670,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+130;Abbruch von Putz an Innenwand, Kalkzement-Normalputzmörtel (GP), ohne Putzträger, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;220,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+140;Abbruch des Handlaufs aus Holz, im Rahmen einer Teillabbruchmaßnahme, Altholzkategorie A I, Querschnitt B/H 40/240 mm, Wichte des Abbruchstoffes DIN EN 1991-1-1 7,5 kN/m3, Ausführung innerhalb des Bauwerks,;45,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+150;Abbruch der Untermauerung des Treppenlaufs aus Mauerwerk aus Leichtziegel, einschl. Putz, einseitig, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;2,5;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+160;Sonstige Bau- und Abbruchabfälle,;1,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+10;Schutzvorrichtung als Bekleidung/Belag für Bodenflächen, aus OSB-Platten, Dicke über 14 bis 20 mm, herstellen, Abrechnung nach bekleideter/belegter Fläche. Schutzvorrichtung wird dem AG übergeben.;75,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+20;Schutzvorrichtung als Bekleidung/Belag für Treppen,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+30;Abbruch des Bodenbelages, aus Betonwerkstein, großformatig, Dicke bis 10 mm, einschl. Entfernen von Kleberesten/Mörtelresten, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet, Wichte des Abbruchstoffes DIN EN 1991-1-1 20 kN/m3, Ausführung innerhalb des Bauwerks,;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+40;Abbruch des Bodenbelages, aus Betonwerkstein, großformatig, Dicke über 25 bis 30 mm, einschl. Mörtelbett, Bettungsdicke 2 cm, im Rahmen einer Teillabbruchmaßnahme, nicht schadstoffbelastet, Wichte des Abbruchstoffes DIN EN 1991-1-1 20 kN/m3, Ausführung innerhalb des Bauwerks,;125,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+50;Abbruch des Bodenbelages, aus Betonwerkstein, großformatig, Dicke über 20 bis 25 mm, einschl. Mörtelbett, Bettungsdicke 1 cm, im Rahmen einer Teillabbruchmaßnahme, nicht schadstoffbelastet, Wichte des Abbruchstoffes DIN EN 1991-1-1 20 kN/m3, Ausführung innerhalb des Bauwerks,;61,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+60;Abbruch des Bodenbelages, aus Betonwerkstein, großformatig, Dicke über 10 bis 15 mm, einschl. Mörtelbett, im Rahmen einer Teillabbruchmaßnahme, nicht schadstoffbelastet, Wichte des Abbruchstoffes DIN EN 1991-1-1 20 kN/m3, Ausführung innerhalb des Bauwerks,;125,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+70;Abbruch des Bodenbelages aus Zementestrich, unbewehrt, als Verbundestrich, ohne Beläge und Beschichtungen, im Rahmen einer Teillabbruchmaßnahme, nicht schadstoffbelastet,;60,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+80;Abbruch des Bodenbelages aus Zementestrich, unbewehrt, als Verbundestrich, ohne Beläge und Beschichtungen, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;125,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+90;Abbruch des Bodenbelages aus Zementestrich, unbewehrt, als Verbundestrich, ohne Beläge und Beschichtungen, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;75,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+100;Abbruch des Bodenbelages aus Zementestrich, unbewehrt, als Verbundestrich, ohne Beläge und Beschichtungen, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;115,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+110;Abbruch des Bodenbelages aus Zementestrich, unbewehrt, als Verbundestrich, ohne Beläge und Beschichtungen, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;195,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+120;Abbruch des Bodenbelages aus Zementestrich, unbewehrt, als Verbundestrich, einschl. Beschichtung, einseitig, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;142,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+130;Abbruch des Bodenbelages aus Gussasphaltestrich, als Verbundestrich, ohne Beläge und Beschichtungen, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;90,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+140;Abbruch des Bodenbelages aus Gussasphaltestrich, als Verbundestrich, ohne Beläge und Beschichtungen, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;165,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+150;Abbruch des Bodenbelages aus Gussasphaltestrich, als Verbundestrich, ohne Beläge und Beschichtungen, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;345,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+160;Abbruch der Fußbodendämmung, Dämmschicht aus Polystyrol-Hartschaum, als Platte, lose verlegt, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet, Wichte des Abbruchstoffes DIN EN 1991-1-1 0,3 kN/m3,;520,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+170;Abbruch der Fußbodendämmung, Dämmschicht aus Perlit, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;271,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+180;Rückstandsfreie Entfernung des asbesthaltigen;85,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+190;Beseitigung asbesthaltige Bodenbelagskleber;1,7;t;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+200;Abbruch von Bodenbelag aus PVC, im Rahmen einer Teilabbruchmaßnahme, geklebt, Wichte des Abbruchstoffes DIN EN 1991-1-1 10 kN/m3,;585,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+210;Abbruch von Bodenbelag aus Linoleum, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet, geklebt, Wichte des Abbruchstoffes DIN EN 1991-1-1 10 kN/m3,;11,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+220;Abbruch des Bodenbelages, aus Steinzeugfliesen, kleinformatig, Dicke bis 10 mm, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;75,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+230;Abbruch des Bodenbelages, aus Asphaltplatten, kleinformatig, Dicke bis 30 mm, im Rahmen einer Teilabbruchmaßnahme,;80,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+240;Abbruch von Belag aus Massivholzparkett aus Holz/Holzwerkstoff, vollflächig verklebt, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;110,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+250;Abbruch der Abdichtung auf Boden, Pappe, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;375,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+260;Abbruch von Fliesen/Platten an Sockel, Höhe 70 mm, aus Steinzeugfliesen, kleinformatig, Dicke bis 10 mm, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;950,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+270;Abbruch der Sockelleiste aus Holz/Holzwerkstoff, Querschnitt B/H 5/60 mm, genagelt, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;850,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+280;Sonstige Bau- und Abbruchabfälle,;500,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+10;Abbruch der Deckenbekleidung aus Holz einschl. Unterkonstruktion, im Rahmen einer Teilabbruchmaßnahme, Wichte des Abbruchstoffes DIN EN 1991-1-1 7,5 kN/m3,;110,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+20;Abbruch der Deckenbekleidung aus Holz einschl. Unterkonstruktion , im Rahmen einer Teilabbruchmaßnahme, Wichte des Abbruchstoffes DIN EN 1991-1-1 7,5 kN/m3,;160,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+30;Abbruch der Deckenbekleidung aus Holz,einschl. Unterkonstrutktion, im Rahmen einer Teilabbruchmaßnahme, Wichte des Abbruchstoffes DIN EN 1991-1-1 7,5 kN/m3,;55,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+40;Abbruch der Deckenbekleidung aus Holz einschl. Unterkonstrutktion, im Rahmen einer Teilabbruchmaßnahme, Wichte des Abbruchstoffes DIN EN 1991-1-1 7,5 kN/m3,;16,5;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+50;Abbruch von Putz an Decke, Gips-Putzmörtel, ohne Putzträger, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet, Wichte des Abbruchstoffes DIN EN 1991-1-1 13 kN/m3,;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+60;Entfernen der Tapezierung aus Papierwandbekleidung für nachträgliche Behandlung, mehrfach beschichtet, strukturiert, einlagig, einschl. Tapetenunterlage, nicht schadstoffbelastet, von Decken.;650,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+10;Demontage Hauptverteilung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+20;Demontage Unterverteilung EDV Raum;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+30;Demontage  Unterverteilung Sprechanlage;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+40;Demontage Etagenverteilung;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+50;Demontage Installations- und Brüstungskanäle,;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+60;Demontage Installationskanäle;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+70;Demontage Installationskanäle;250,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+80;Demontage Installationsrohre,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+90;Demontage Installationsrohre;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+100;Demontage Konsolen;90,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+110;Demontage von Kabelrinnen;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+120;Demontage von Kabelrinnen;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+130;Demontage von Deckenstiel mit Ausleger;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+140;Demontage von Wandausleger;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+150;Demontage von Kabel und Leitungen;15500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+160;Demontage von Kabel und Leitungen;350,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+170;Demontage von Kabel und Leitungen;400,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+180;Demontage vorhandener Installationsgeräte;595,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+190;Demontage vorhandenes;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+200;Demontage vorhandener Gerätedosen;350,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+210;Demontage vorhandener Abzweigdose;185,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+220;Demontage vorhandenem Installtionsgehäuse;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+230;Demontage vorhandener Installationsgeräte;52,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+240;Demontage vorhandener Gerätedosen;310,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+250;Demontage vorhandener;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+260;Demontage vorhandener;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+270;Demontage vorhandener;155,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+280;Demontage vorhandener;135,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+290;Demontage vorhandener;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+300;Demontage vorhandener;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+310;Demontage der vorhandenen;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+320;Demontage der vorhandenen;145,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+330;Demontage der vorhandenen;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+340;Stahlkonstruktionsanschluß;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+350;Demontage Potentialausgleichschiene 100A;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+360;Demontage Erdungsanschluß;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+370;Demontage von Kabel und Leitungen;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+380;Demontage vorhandenem Aussensprechstelle;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+390;Demontage von Kabel und Leitungen;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+400;Demontage vorhandenem Installtionsgehäuse;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+410;Demontage Datenschrank;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+420;Demontage Datenschrank;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+430;Demontage Patchkabel;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+440;Demontage vorhandener  Installationsberäte;118,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+450;Demontage von Datenkabel;11500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+460;Entfernen von quecksilberhaltigen Bauteilen z.B.;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+470;Beseitigung Leuchtstoffröhren und andere;100,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+10;wie diese in den Vorbemerkungen beschrieben worden ist. Im Wesentlichen bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+20;Abbruch Verteiler, aus Stahl, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet, Abfall ist nicht gefährlich, mit 4 Anschlussstutzen, Einzelgewicht über 25 bis 50 kg, Ausführung innerhalb des Bauwerkes, Ausführung im Kellergeschoss, aufgenommene Stoffe sammeln, und auf der Baustelle lage;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+30;Abbruch Plattenheizkörper, aus Stahl, im Rahmen einer Teilabbruchmaßnahme, nicht schadtstoffbelastet, Abfall ist nicht gefährlich, Bauhöhe über 500 bis 550 mm, Bautiefe über 75 bis 100 mm, Baulänge über 450 bis 500 mm, Einzelgewicht über 20 bis 50 kg, Ausführung innerhalb des Bauwerks, Ausführung in;49,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+40;Wie zuvor beschrieben,;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+50;Wie zuvor beschrieben,;45,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+60;Wie zuvor beschrieben,;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+70;Wie zuvor beschrieben,;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+80;Wie zuvor beschrieben,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+90;Abbruch Gliederheizkörper, aus Stahl, im Rahmen einer Teilabbruchmaßnahme, Bauhöhe über 500 bis 550 mm, Bautiefe über 75 bis 100 mm, Baulänge über 600 bis 700 mm, Einzelgewicht über 20 bis 50 kg, Ausführung innerhalb des Bauwerks, Ausführung in allen Geschossen, aufgenommene Stoffe sammeln, und auf ;11,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+100;Wie zuvor beschrieben,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+110;Wie zuvor beschrieben,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+120;Beseitigung asbesthaltige Gliederheizkörper.;1,5;t;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+130;Abbruch der Rohrleitung aus Stahl, Außendurchmesser bis DN 20, im Gebäude, Ausführung in allen Geschossen, Höhe bis 4 m, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet, nicht schadstoffbelastet, mittleres Gewicht `3` kN/m, Geräteeinsatz möglich, max. Gesamtgewicht der Geräte ohne Besc;491,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+140;Wie zuvor beschrieben,;176,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+150;Wie zuvor beschrieben,;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+160;Abbruch der Armatur , aus nichtrostendem Stahl, Außendurchmesser bis 20 mm, im Gebäude, Ausführung in allen Geschossen, Höhe bis 4 m, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+170;Abbruch der Armatur , aus nichtrostendem Stahl, Außendurchmesser über 20 mm bis 50 mm, im Gebäude, Ausführung in allen Geschossen, Höhe bis 4 m, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+180;Entfernen von asbesthaltigen Flachdichtungen zwischen;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+190;wie dieses in den Vorbemerkungen beschrieben worden ist. Im Wesentlichen bestehend aus:;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+200;Abbruch der Rohrleitung einschl. der Form- und Verbindungsstücke, Befestigungen und Armaturen aus verzinktem Stahl, Außendurchmesser bis 20 mm, im Gebäude, Ausführung in allen Geschossen, Höhe bis 4 m, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet, nicht schadstoffbelastet, Abfall is;172,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+210;Wie zuvor beschrieben,;48,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+220;Wie zuvor beschrieben,;48,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+230;Abbruch der Rohrleitung einschl. der Form- und Verbindungsstücke, Befestigungen und Armaturen aus duktilem Gusseisen, Außendurchmesser über 40 bis 60 mm, im Gebäude, Ausführung in allen Geschossen, Höhe bis 4 m, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet, nicht schadstoffbelastet,;38,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+240;Wie zuvor beschrieben,;55,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+250;Abbruch WC, aus Sanitärporzellan, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+260;Abbruch Einbauspülkasten, aus Sanitärporzellan, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+270;Abbruch Urinal, aus Sanitärporzellan, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+280;Abbruch Waschbecken, aus Sanitärporzellan, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+290;Abbruch Abwasserhebeanlage, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+300;Entfernen der Abwasser- und Dachentwässerungsrohre aus;55,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+310;Beseitigung asbesthaltige Baustoffe;1,3;t;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+320;Entfernen von KMF-Stopfmassen als Hinterfüllung im;0,5;t;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+330;Rückstandsfreies Entfernen der Rohrdämmung an den;0,9;t;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+340;Beseitigung anderes Dämmmaterial, das aus gefährlichen;0,5;t;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+350;Abbruch des Axialventilators, für Fortluft, mit Schwingungsdämpfer, mit Elektromotor, Gehäuse aus verzinktem Stahl, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+360;Abbruch der Luftleitung einschl. der Form- und Verbindungsstücke und Befestigungen, aus verzinktem Stahl, Nenndurchmesser über DN 100 bis DN 150, im Rahmen einer Teilabbruchmaßnahme, nicht schadstoffbelastet,;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+10;Abbruch Aufzug, nicht schadstoffbelastet,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83
+20;"Entfernen der asbesthaltigen Bremsbeläge als ""Arbeiten";30,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/VH01.X83

@@ -1,0 +1,479 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+20;Industrial Ethernet Switch;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+30;Profilschiene 482,6 mm;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+40;Systemstromversorgung;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+50;Standard modulare CPU;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+60;Digitalausgabemodul;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+70;Koppelrelais;16,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+80;16 Digitale Relais-Ausgänge;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+90;8 analoge Ausgänge;2,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+100;32 Digitale Eingänge für 24V DC;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+110;Analogeingabemodul,;6,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+120;Memory Card;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+130;Frontstecker in Push-In Technik;10,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+140;Industrial Ethernet TP Cord;2,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+150;Mini Tower PC;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+160;"Flat Panel 15"" Touch Schaltschrankeinbau";1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+170;Comfort Panel, Touchbedienung;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+10;Witterungsfühler, Pt 1000;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+20;Tauchtemp.fühler PT1000 ohne Schutzrohr;26,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+30;Schutzrohr PN10;26,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+40;Kabeltemperaturfühler;6,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+50;Schutzrohr PN16;4,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+60;Schutzrohr PN16;2,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+70;DREIWEGE-UMSCHALTVENTIL DN 100, GEFLANSCHT;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+80;MISCHERANTRIEB MIT 3-PKT.-ANSTEUERUNG;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+90;DREIWEGE-MISCHVENTIL PN16 Kvs 16 GEFLANSCHT;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+100;DREIWEGE-MISCHVENTIL DN 50, PN16 Kvs 40 GEFLANSCHT;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+110;DREIWEGE-MISCHVENTIL DN 32, PN16 Kvs 16 GEFLANSCHT;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+120;DREIWEGE-MISCHVENTIL DN 25, PN16 Kvs 10 GEFLANSCHT;5,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+130;DREIWEGE-MISCHVENTIL DN 20,  PN16 Kvs 6,3 GEFLANSCHT;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+140;ELEKTR. VENTILSTELLANTRIEB 800N HUB20;9,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+150;RINGDROSSELKLAPPE;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+160;MISCHERANTRIEB MIT 3-PKT.-ANSTEUERUNG;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+170;Ultraschall-Wärmezähler, Qp = 15,0 m3/h, mit Impulsmodul;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+180;Ultraschall-Wärmezähler, Qp = 3,5 m3/h, mit Impulsmodul;2,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+10;Schaltschrank/ Anreihschrank;2,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+20;Schaltschrank-Transport und betriebsfertige Montage;2,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+30;Schaltschrankentlüftung;2,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+40;Schaltplantasche für Schaltschranktür;2,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+50;LED Schaltschrankbeleuchtung mit Steckdose;2,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+60;Schutzkontaktsteckdose 230 V AC, 16 A;2,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+70;Fehlerstromschutzschalter;2,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+80;Sicherungsabgang 3pol. bis 32A;2,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+90;Netzeinspeisung 400 V / 3 x 63 A;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+100;Überspannungsschutzgerät als Schutz für;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+110;Überspannungsschutz 230V;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+120;Überspannungs-Ableiter 10V;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+130;Phasenkontolle, 3-phasig, über Phasenüberwachungsrelais;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+140;Automatische Netzwiedereinschaltung;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+150;Baugruppe zur Spannungsversorgung der SPS;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+160;Baugruppe Meldeeingang;52,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+170;Baugruppe Sensoreingang;36,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+180;Motorbaugruppe 1st. bis 4 kW 230V;11,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+190;Ansteuerung stetig;22,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+200;Ausgang potentialfrei über SPS DQ,;17,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+210;Baugruppe Not- Ausschaltung;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+220;Baugruppe Niedertemperaturkessel;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+230;Baugruppe Wassermangel;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+240;Baugruppe MAX.-Druckbegrenzung;2,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+250;Baugruppe MIN.-Druckbegrenzung;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+260;Baugruppe SI.-Temp.-Begrenzer;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+270;Baugruppe Schmutzwasserpumpen;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+280;Baugruppe Druckhalteanlage;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+290;Not-Handbedienebene Analogwertgeber;9,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+300;Not-Handbedienebene Koppelrelais;9,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+310;Einbau Systemkomponenten SPS;10,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+320;Einregulierung und Inbetriebnahme;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+330;Erstellung aller Schaltplanunterlagen;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+10;Kunststoffkabel NYCWY;15,0;m;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+20;PVC-Mantelleitung NHXMH-J 5X1,5 MM2;80,0;m;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+30;PVC-Mantelleitung NHXMH-J 5X1,5 MM2;390,0;m;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+40;PVC-Mantelleitung NHXMH-J 3X1,5 MM2;290,0;m;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+50;PVC-Fernmeldeleitung J-H(ST)H 2X2X0,8 MM2;450,0;m;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+60;PVC-Fernmeldeleitung J-H(ST)H 4X2X0,8 MM2;190,0;m;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+70;Kabelrinne verzinkt 60 x 100 mm;12,0;m;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+80;Kabelrinne verzinkt 60 x 200 mm;10,0;m;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+90;Steigetrasse 200 mm;10,0;m;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+100;Kunststoff-Panzerrohr starr 20 mm;60,0;m;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+110;Kunststoff-Panzerrohr starr 25 mm;30,0;m;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+120;Kunststoff-Panzerrohr starr 32 mm;30,0;m;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+130;Kunststoff-Panzerrohr starr 40 mm;30,0;m;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+140;Alusteckrohr, M32 offene Verlegung, auf Putz;15,0;m;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+150;Leistung wie Vorposition nur M 25;30,0;m;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+160;Leistung wie Vorposition nur M 20;40,0;m;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+170;Kabelabzweigkasten;20,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+180;Leitungen absetzen, 7X1,5 mm²;10,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+190;Leitungen absetzen, 5X1,5 mm²;38,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+200;Leitungen absetzen, 3X1,5 mm²;32,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+210;Schwachstromsteuerleitung 2x2x0,8 mm absetzen;68,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+220;Schwachstromsteuerleitung 4x2x0,8 mm absetzen;20,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+230;Installations-Kleinverteiler System;4,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+240;Potentialausgleichsschiene VDE 0100;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+250;Erdungsbandrohrschelle VDE 0190;18,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+260;Demontage, Öffnen vorh. Brandabschottungen;4,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+270;Öffnen und Verschließen vorhandene Brandschottung;4,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+280;Kabelabschottung zur Verhinderung von Brandübertragung, form-, alterungs- und korrosionsbeständig, geeignet zur Nachbelegung mit Kabeln,;5,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+290;Kabelabschottung zur Verhinderung von Brandübertragung, form-, alterungs- und korrosionsbeständig, geeignet zur Nachbelegung mit Kabeln,;5,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+10;Projektabwicklung und Koordination;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+20;Programmierung und Parametrierung von SPS-Funktionen pro Hardware I/O;98,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+30;Inbetriebnahme Automationsstation pro Hardware I/O;98,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+40;Einzelprüfung der Informationen und Funktionen (1:1 Test);98,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+50;Bilderstellung für auf WinCC, je Bild;11,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+60;Bilderstellung für auf PLS, je Bild;11,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+70;Erstellung der Werk- und Montageplanung Gebäudeautomation mittels TRIC V8 Software,;1,0;psch;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+80;Erstellung der SPS-Dokumentation;1,0;psch;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+90;Einweisung des Bedienungspersonals;1,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+10;Stundenlohnarbeiten sind rechtzeitig anzukündigen und dürfen nur nach Genehmigung durch den Auftraggeber durchgeführt werden. Über jede auf Stundenlohnbasis ausgeführte Arbeit hat der Auftragnehmer während der Ausführung täglich eine genaue Liste der Namen, Berufsbezeichnungen, Tätigkeiten und Arbei;10,0;h;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+20;wie vor, jedoch;60,0;h;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+30;wie vor, jedoch;20,0;h;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+40;wie vor, jedoch;30,0;h;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+10;Demontage von Regel- und Steuereinrichtungen;2,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+20;Demontage von Elektroleitungen;1,0;psch;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+10;Wartungsarbeiten an MSR- Einrichtungen und Gebäudeautomationssysteme;5,0;St;gaeb;leistungsbeschreibungen/Los 1 - p590_lv_msr_final_2026_06_03.x83
+10;Entleeren;1,0;psch;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+20;Anlage nach der Druckprobe entleeren, durchspuelen,;1,0;psch;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+30;Für Stütz-, Hänge-, Trag- und Sonderbefestigungen einschl. Befestigungsmaterial.;150,0;kg;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+40;Bezeichnungsschild;16,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+50;Vom AN sind Revisionsunterlagen zu erstellen.;1,0;Psch;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+60;Einweisung des Bedienungspersonal;1,0;Psch;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+10;Gas-Brennwertkessel 310 kW;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+20;Regelgerät;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+30;Träger für Regelgerät;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+40;Brennerkabel;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+50;Minimal-Druckwächter;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+60;"Reduziernippel von 1/4"" auf 1/2""";1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+70;Sicherheitstemperatur- u. Maximal-Druckbegrenzer;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+80;Vorlaufzwischenstück mit Armaturenbalken;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+90;Armaturenbalken;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+100;Funktionsmodul;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+110;E-Pumpen Stecker;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+120;Ringdrosselklappe;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+130;Ausdehnungsgefäß;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+140;"Kappenventil 3/4x3/4""";1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+150;"Membran-Sicherheitsventil nach TRD 721, 1 1/4""";1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+160;Hydraul. Weiche bis 27 m³/h;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+170;Ultraschall-Wärmezähler, Qp = 15 m3/h, mit Impulsmodul;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+180;Transport und Montage Gaskessel;1,0;psch;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+190;Elektroinstallation;1,0;psch;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+200;Werkseitige Inbetriebnahme der Brennwertkessel- Anlage mit dem Kesselhersteller zur Garantieverlängerung;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+10;Gasbrenner;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+20;Kugelhahn DN 50;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+30;Doppelnippel R 2 x 120;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+40;Filter DN 50;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+50;Druckregelgerät DN 50;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+60;Manometer 0-60 mbar mit Druckknopfhahn;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+70;Axial-Kompensator Set DN 50;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+80;Bogen lang;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+90;Prüfbrenner;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+100;Flammenrückschlagsicherung;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+110;Doppelnippel R 1 1/2 x 120;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+120;Prisma mit Klemmschraube;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+130;Montageschiene 28 x 28 x 950;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+140;Haltefuß mit Klemmschraube;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+150;Kugelhahn;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+160;Filter RP 3/4;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+170;Doppelnippel R 3/4 x 50;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+180;Druckregelgerät;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+190;Manometer 0-160 mbar mit Druckknopfhahn;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+200;Axial-Kompensator R 3/4 PN10;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+210;Doppelnippel R 3/4 x 80;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+220;Bogen lang G4-3/4;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+230;Prisma mit Klemmschraube;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+240;Montageschiene 28 x 28 x 950;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+250;Haltefuß mit Klemmschraube;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+260;Verbindungsteile DN 20;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+270;Prüfbrenner;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+280;Transport und Montage Gsbrenner;1,0;psch;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+290;Inbetriebnahme und Einregulierung des Brenners durch den Brennerhersteller für Flüssiggas und Klärgas mit Durchführung von Leistungsmessungen und Dichtheitsprüfung der Armaturengruppen von Kugelhahn bis zu den Magnetventilen (nach DIN 4756).;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+10;Bogen 87° mit Stützfuß  200 mm;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+20;Blinddeckel 200 mm;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+30;Prüföffnung Niedertemperatur, 200 mm;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+40;Edelstahltür 15/30;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+50;Längenelement 1080 mm, 200 mm;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+60;Längenelement 1080 mm mit Abstandshaltern, 200 mm;3,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+70;Längenelement 1080 mm mit Ablaßschlaufe, 200 mm;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+80;Längenelement 540 mm, 200 mm;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+90;Abschlusselement mit Hinterlüftung;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+100;Einzeldichtung Silikonausführung;11,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+110;Längenelement 1080 mm, 200 mm;3,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+120;Längenelement 540 mm, 200 mm;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+130;Längenelement mit Messstutzen, 200 mm;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+140;Bogen 87°, 200 mm;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+150;Bogen 87°, mit Prüföffnung, 200 mm;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+160;Kesselanschlusselement zum Einstecken , 200 mm;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+170;Einzeldichtung Silikonausführung, 200 mm;7,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+180;Klemmband für Verbindungsleitung, 200 mm;7,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+190;Schornsteinwange;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+10;BHKW- u. System-Pufferspeicher 2.000 l;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+20;Isolierung f. BHKW- u. System-Puffersp. 2.000 l;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+30;Transport und Montage Pufferspeicher;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+40;Ultraschall-Wärmezähler, Qp = 3,5 m3/h, mit Impulsmodul;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+10;Membrandruckausdehnungsgefäß;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+20;Membrandruckausdehnungsgefäß;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+30;Schmutz- und Schlammabscheider DN 100;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+40;automatischer Schnell-/Großentlüfter;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+50;Sicherheitsventil für Wärmeerzeuger,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+60;Sicherheitsventil für Wärmeerzeuger,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+70;Wasserstandsbegrenzer;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+80;Anschlussgruppe für Nachspeisesystem;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+90;elektronischer u. programmierbarer Wasserzähler;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+100;Wasserenthärtungsarmatur;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+110;Elektroinstallation;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+120;Erstfüllung aufbereitetes Heizungswasser;1,0;psch;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+130;VDI-Messung und Dokumentation;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+10;Rohr aus nichtrostendem Stahl, 54,0 x 1,5 mm;1,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+20;Leistung wie zuletzt in vollem Wortlaut beschrieben,;5,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+30;Leistung wie zuletzt in vollem Wortlaut beschrieben,;15,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+40;Leistung wie zuletzt in vollem Wortlaut beschrieben,;5,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+50;Leistung wie zuletzt in vollem Wortlaut beschrieben,;5,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+60;Leistung wie zuletzt in vollem Wortlaut beschrieben,;5,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+70;Bogen;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+80;Bogen wie vor, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+90;Bogen wie vor, jedoch;8,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+100;Bogen wie vor, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+110;Bogen wie vor, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+120;Bogen wie vor, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+130;T-Stück wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+140;T-Stück wie vor, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+150;T-Stück wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+160;T-Stück wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+170;T-Stück wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+180;T-Stück wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+190;Muffe wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+200;Muffe wie vor, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+210;Muffe wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+220;Muffe wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+230;Muffe wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+240;Muffe wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+250;Reduzierung wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+260;Reduzierung wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+270;Reduzierung wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+280;Reduzierung wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+290;Reduzierung wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+300;Übergangsstück wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+310;Übergangsstück wie vor, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+320;Übergangsstück wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+330;Übergangsstück wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+340;Übergangsstück wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+350;Übergangsstück wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+360;Kugelhahn,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+370;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+380;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+390;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+400;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+410;Flüssiggaszähler;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+420;Bezeichnungsschild,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+430;Anschluß herstellen;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+440;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+450;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+10;Rohrleitungen ohne Form- und Verbindungsstuecke,;50,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+20;Leistung wie zuletzt in vollem Wortlaut beschrieben,;30,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+30;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+40;Leistung wie zuletzt in vollem Wortlaut beschrieben,;20,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+50;Leistung wie zuletzt in vollem Wortlaut beschrieben,;5,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+60;Rohrleitungen ohne Form- und Verbindungsstuecke,;40,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+70;Leistung wie zuletzt in vollem Wortlaut beschrieben,;15,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+80;Leistung wie zuletzt in vollem Wortlaut beschrieben,;10,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+90;Leistung wie zuletzt in vollem Wortlaut beschrieben,;40,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+100;Rohrbogen aus Stahl zum Einschweissen DIN 2606,;30,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+110;Leistung wie zuletzt in vollem Wortlaut beschrieben,;8,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+120;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+130;Leistung wie zuletzt in vollem Wortlaut beschrieben,;10,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+140;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+150;Leistung wie zuletzt in vollem Wortlaut beschrieben,;26,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+160;Leistung wie zuletzt in vollem Wortlaut beschrieben,;8,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+170;Leistung wie zuletzt in vollem Wortlaut beschrieben,;10,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+180;Leistung wie zuletzt in vollem Wortlaut beschrieben,;16,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+190;T-Stueck aus Stahl zum Einschweissen DIN 2615,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+200;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+210;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+220;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+230;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+240;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+250;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+260;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+270;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+280;Reduzierstueck aus Stahl zum Einschweissen DIN 2616,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+290;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+300;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+310;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+320;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+330;Leistung wie zuletzt in vollem Wortlaut beschrieben,;6,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+340;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+350;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+360;Rundschweissnaht an Stahlrohr einschl. Abschraegen;80,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+370;Leistung wie zuletzt in vollem Wortlaut beschrieben,;24,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+380;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+390;Leistung wie zuletzt in vollem Wortlaut beschrieben,;20,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+400;Leistung wie zuletzt in vollem Wortlaut beschrieben,;6,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+410;Leistung wie zuletzt in vollem Wortlaut beschrieben,;36,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+420;Leistung wie zuletzt in vollem Wortlaut beschrieben,;30,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+430;Leistung wie zuletzt in vollem Wortlaut beschrieben,;20,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+440;Leistung wie zuletzt in vollem Wortlaut beschrieben,;20,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+450;Verteiler;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+460;Flanschen-Absperrventil,;8,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+470;Leistung wie zuletzt in vollem Wortlaut beschrieben,;6,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+480;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+490;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+500;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+510;Leistung wie zuletzt in vollem Wortlaut beschrieben,;18,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+520;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+530;Schmutzfaenger mit Flanschanschluss,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+540;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+550;Flanschen-Rueckschlagklappe,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+560;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+570;Kugelhahn,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+580;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+590;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+600;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+610;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+620;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+630;Glasthermometer,;18,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+640;Manometer,;3,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+650;Wassersackrohr DIN 16 282,;3,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+660;Manometerventil,;3,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+670;Hocheffizienz-Nassläufer- Doppelpumpe DN 65;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+680;Hocheffizienz-Nassläufepumpe DN 65;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+690;Hocheffizienz-Nassläufepumpe DN 32;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+700;Entleerungsventil,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+710;Leistung wie zuletzt in vollem Wortlaut beschrieben,;16,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+720;Heizungsseitiger Anschluß;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+730;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+740;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+750;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+760;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+770;Leistung wie zuletzt in vollem Wortlaut beschrieben,;8,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+780;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+790;Einbau beigestellter Armaturen und Geraete,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+800;Einbau beigestellter Armaturen und Geraete,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+810;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+820;Einschweisstauchhuelse,;24,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+830;Luftgefaess mit zwei Kloepperboeden,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+840;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+850;Kondensatwassersammelleitung;8,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+860;Leistung wie zuletzt in vollem Wortlaut beschrieben,;12,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+10;Waermedaemmung DIN 4140 Teil 1 an Rohrleitungen,;40,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+20;Leistung wie zuletzt in vollem Wortlaut beschrieben,;20,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+30;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+40;Leistung wie zuletzt in vollem Wortlaut beschrieben,;10,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+50;Leistung wie zuletzt in vollem Wortlaut beschrieben,;3,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+60;Leistung wie zuletzt in vollem Wortlaut beschrieben,;35,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+70;Leistung wie zuletzt in vollem Wortlaut beschrieben,;10,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+80;Leistung wie zuletzt in vollem Wortlaut beschrieben,;5,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+90;Leistung wie zuletzt in vollem Wortlaut beschrieben,;5,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+100;Waermedaemmung DIN 4140 Teil 1 an Rohrleitungen,;10,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+110;Leistung wie zuletzt in vollem Wortlaut beschrieben,;10,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+120;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+130;Leistung wie zuletzt in vollem Wortlaut beschrieben,;10,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+140;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+150;Leistung wie zuletzt in vollem Wortlaut beschrieben,;5,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+160;Leistung wie zuletzt in vollem Wortlaut beschrieben,;5,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+170;Leistung wie zuletzt in vollem Wortlaut beschrieben,;5,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+180;Leistung wie zuletzt in vollem Wortlaut beschrieben,;35,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+190;Haube DIN 4140 Teil 1, fest verschraubt,;8,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+200;Leistung wie zuletzt in vollem Wortlaut beschrieben,;6,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+210;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+220;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+230;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+240;Leistung wie zuletzt in vollem Wortlaut beschrieben,;18,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+250;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+260;Leistung wie zuletzt in vollem Wortlaut beschrieben,;3,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+270;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+280;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+290;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+300;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+310;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+320;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+330;Leistung wie zuletzt in vollem Wortlaut beschrieben,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+340;Zulage zur Daemmung an Rohrleitungen;6,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+350;Zulage zur Daemmung an Rohrleitungen;10,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+360;Ausschnitt;36,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+370;Brandschutz-Rohrdurchführung;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+380;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+390;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+400;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+410;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+420;Leistung wie zuletzt in vollem Wortlaut beschrieben,;8,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+430;Leistung wie zuletzt in vollem Wortlaut beschrieben,;6,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+10;Rohrleitung aus Rohren aus nichtrostendem Stahl;1,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+20;Leistung wie zuletzt in vollem Wortlaut beschrieben,;5,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+30;Leistung wie zuletzt in vollem Wortlaut beschrieben,;10,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+40;Leistung wie zuletzt in vollem Wortlaut beschrieben,;5,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+50;Leistung wie zuletzt in vollem Wortlaut beschrieben,;20,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+60;Bogen;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+70;Bogen wie vor, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+80;Bogen wie vor, jedoch;10,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+90;Bogen wie vor, jedoch;5,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+100;Bogen wie vor, jedoch;20,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+110;T-Stück;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+120;T-Stück wie vor, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+130;T-Stück wie vor, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+140;T-Stück wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+150;T-Stück wie vor, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+160;Muffe;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+170;Muffe wie vor, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+180;Muffe wie vor, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+190;Muffe wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+200;Muffe wie vor, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+210;Reduzierung;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+220;Reduzierung wie vor, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+230;Reduzierung wie vor, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+240;Reduzierung wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+250;Übergangsstück;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+260;Übergangsstück wie vor, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+270;Übergangsstück wie vor, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+280;Übergangsstück wie vor, jedoch;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+290;Übergangsstück wie vor, jedoch;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+300;Rückschlagventil,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+310;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+320;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+330;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+340;Absperrventil mit Schallschutzprüfzeichen;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+350;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+360;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+370;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+380;Probenahmeventil;3,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+390;Bezeichnungsschild,;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+400;Zeigerthermometer,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+410;Manometer;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+420;Manometerhahn;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+430;Auslaufventil;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+440;Anschluss herstellen;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+450;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+460;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+470;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+480;Nachspuelen;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+10;Waermedaemmung DIN 4140 Teil 1 an Rohrleitungen,;1,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+20;Leistung wie zuletzt in vollem Wortlaut beschrieben,;5,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+30;Leistung wie zuletzt in vollem Wortlaut beschrieben,;5,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+40;Leistung wie zuletzt in vollem Wortlaut beschrieben,;10,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+50;Waermedaemmung DIN 4140 Teil 1 an Rohrleitungen,;1,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+60;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+70;Leistung wie zuletzt in vollem Wortlaut beschrieben,;5,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+80;Leistung wie zuletzt in vollem Wortlaut beschrieben,;5,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+90;Waermedaemmung DIN 4140 Teil 1 an Rohrleitungen,;1,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+100;Leistung wie zuletzt in vollem Wortlaut beschrieben,;5,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+110;Leistung wie zuletzt in vollem Wortlaut beschrieben,;5,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+120;Leistung wie zuletzt in vollem Wortlaut beschrieben,;10,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+130;Rohrabschottung R 90;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+140;Leistung wie zuletzt in vollem Wortlaut beschrieben,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+150;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+160;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+10;Heizwand liefern (ohne Montage),;3,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+20;Heizwand liefern (ohne Montage),;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+30;Thermostat-Ventilunterteil;5,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+40;Thermostatkopf, Behördenmodell;5,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+50;Regulier- und Fussventil;5,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+60;Heizkoerperentlueftung fuer Warmwasser;5,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+70;Blindstopfen für Heizkörper;5,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+80;Steckschluessel;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+90;Plattenheizkoerper;5,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+100;Einmaliges Ausbauen und Wiedereinbauen von;5,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+10;Demontage;20,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+20;Leistung wie zuletzt in vollem Wortlaut beschrieben,;10,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+30;Leistung wie zuletzt in vollem Wortlaut beschrieben,;30,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+40;Leistung wie zuletzt in vollem Wortlaut beschrieben,;30,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+50;Leistung wie zuletzt in vollem Wortlaut beschrieben,;20,0;m;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+60;Demontage;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+70;Demontage eines Ausdehnungsgefäßes;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+80;Demontage;8,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+90;Leistung wie zuletzt in vollem Wortlaut beschrieben,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+100;Leistung wie zuletzt in vollem Wortlaut beschrieben,;8,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+110;Leistung wie zuletzt in vollem Wortlaut beschrieben,;8,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+120;Demontage;3,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+130;Demontage;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+140;Demontage und Entsorgung Lufterhitzer;3,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+150;Demontage Stahlkonstruktion;150,0;kg;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+160;300 lfdm;1,0;psch;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+170;Demontage von Regel- und Steuereinrichtungen;1,0;psch;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+10;Die vereinbarten Verrechnungssätze gelten unabhängig von der Anzahl der abgerechneten Stunden.;10,0;h;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+20;Verrechnungssatz wie vor,;15,0;h;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+30;Verrechnungssatz wie vor,;15,0;h;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+10;Kernbohrung in der Decke/ Wand aus Stahlbeton,;2,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+20;wie vor, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+30;wie vor, jedoch;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+40;Wanddurchbruch 40/20 cm in Mauerwerk bis 24,0 cm,;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+50;Wanddurchbruch wie vor, jedoch in;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+60;Wanddurchbruch wie vor, jedoch in;1,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83
+10;Wartung jährlich;4,0;St;gaeb;leistungsbeschreibungen/Los 2 - P590_LV_Heizung_final_2026_06_03.x83

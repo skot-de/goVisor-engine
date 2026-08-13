@@ -1,0 +1,182 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+20;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+30;Beleuchtungsanlage für die Arbeiten in den Tagesrandzeiten gemäß der vom AN gewählten Arbeitszeiten unter Berücksichtigung von Jahreszeiten bedingten Randbedingungen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+40;Vorankündigung gemäß Baustellenverordnung erstellen und;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;Schutz- und Sicherungsmaßnahmen herstellen, für die;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+20;Schutz- und Sicherungsmaßnahmen herstellen, für die;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+30;Schutz- und Sicherungsmaßnahmen herstellen, für die;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+40;Schutz- und Sicherungsmaßnahmen herstellen, für die;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+50;Schutz- und Sicherungsmaßnahmen herstellen, für die;145,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+60;Schutz- und Sicherungsmaßnahmen herstellen, für die;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+70;Schutz- und Sicherungsmaßnahmen herstellen, für die;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+80;Schutz- und Sicherungsmaßnahmen herstellen, für die;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;Beweissicherung vor Beginn der Bauarbeiten durchführen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+20;Neu gebaute Gleise dürfen nicht in Betrieb genommen werden,;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;Asphaltbefestigung geradlinig trennen.;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+20;Asphaltbefestigung aufbrechen und aufnehmen.;495,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+30;Ausbaumaterial aus vorheriger LV-Position auf Transport-LKW zur Entsorgung verladen.;220,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+40;Ausbaumaterial aus vorheriger LV-Position;220,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+50;Ausbaumaterial aus vorheriger LV-Position nachweislich;220,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+60;Oberboden einschließlich Vegetationsdecke, Wachstumsschicht abtragen und Trennlage aus Geotextil 2-lagig ausbauen.;5,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+70;Gleis der Oberbauart Feste Fahrbahn demontieren,;210,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+80;Schwellengleis demontieren, Schienenschnitte;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+90;Querverbinder demontieren.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+100;Erschwernis infolge Einbauten.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+110;Erschwernis infolge Einbauten, Schächten und Straßenab-;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;Gleisentwässerung vollständig ausbauen.;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+20;Gleisentwässerung funktionstüchtig herstellen.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+30;Gleisentwässerung funktionstüchtig herstellen.;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;Schienenauflagerung bei allen Zweiblockschwellen;70,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+20;Schienenauflagerung bei allen Zweiblockschwellen;70,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+30;Herstellung des Straßenbahngleises in der Oberbauart;70,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+40;Herstellung des Straßenbahngleises in der Oberbauart;70,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+50;Gleis verlegen und montieren.;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+60;Zulage zum Einbau Feste Fahrbahn Schiene verlegen und montieren.;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+70;Zulage zum Einbau Rasengleis Schiene verlegen und montieren.;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+80;Querverbinder im Gleisbereich einbauen,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+90;Verbindungsschweißung herstellen.;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+100;Verbindungsschweißung herstellen.;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+110;Verbindungsschweißung herstellen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+120;Verbindungsschweißung herstellen.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+130;Verbindungsschweißung herstellen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+140;HCS-Empfangsschleife im Gleiskasten oder Kabelschacht;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+150;Einbau und Anschluss HCS-Empfangsschleife im Rahmengleis mit gekröpften Isolierspurstangen -  ohne Gleiskasten Gleis;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+160;Wiederinbetriebnahme Folgeweichensteuerung HN3V - 1P35W;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;Bitumenemulsion zur Herstellung des Schichtenverbundes;495,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+20;Asphaltbinder gemäß ZTV-Asphalt StB in der jeweils;495,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+30;Gussasphalt fachgerecht gemäß ZTV-Asphalt StB in der;495,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+40;Flanken der verbliebenen/bereits vorhandenen Asphalttrag- ,;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+50;Erschwernis durch Einbauten.;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+60;Wachstumsschicht für nicht befahrenen Fertigrasen;27,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+70;Fertigrasen fachgerecht entsprechend der gültigen;27,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+80;Fertigstellungspflege für Rasenflächen nach DIN 18916;27,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+90;Rasenfläche wässern. Wassermenge je Arbeitsgang und Quadratmeter 15 Liter. Wasser liefern.;27,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+100;Erschwernis durch Einbauten.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+110;Erschwernis durch Einbauten.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+120;Schienenkammerfüllung fachgerecht entsprechend der;280,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+130;Schienenkammerfüllung fachgerecht entsprechend der;16,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+140;Fuge im Gleisbereich fachgerecht entsprechend der;280,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+150;Fuge im Gleisbereich fachgerecht entsprechend der;280,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+160;Fuge im Gleisbereich fachgerecht entsprechend der;280,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+170;Fuge im Gleisbereich fachgerecht entsprechend der;280,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+180;Fugenspalt als Randfuge fachgerecht herstellen.;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+190;Randfugen fachgerecht säubern und verfüllen.;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+200;Fugenspalt als Randfuge fachgerecht herstellen.;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+210;Randfugen fachgerecht säubern und verfüllen.;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+220;Fugenspalt als Randfuge fachgerecht herstellen.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+230;Randfugen fachgerecht säubern und verfüllen.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+240;Fugenspalt als Scheinfuge im Gleisbereich fachgerecht;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+250;Scheinfugen im Gleisbereich fachgerecht säubern und;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+260;Schienenanbaukästen vollständig unter- und seitlich;24,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;Längsmarkierung einschl. evtl. Sperrflächenumrandung;34,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+20;Längsmarkierung einschl. evtl. Sperrflächenumrandung;14,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+30;Längsmarkierung einschl. evtl. Sperrflächenumrandung;9,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+40;Längsmarkierung einschl. evtl. Sperrflächenumrandung;9,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+50;Längsmarkierung einschl. evtl. Sperrflächenumrandung;21,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+60;Längsmarkierung einschl. evtl. Sperrflächenumrandung;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+70;Fläche für Markierung reinigen. Kehrgut aufnehmen und;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+80;Fläche für Markierung schonend trocknen. Abgerechnet;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+90;Längsmarkierung Typ I einschl. evtl. Sperrflächenumran-;34,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+100;Längsmarkierung Typ I einschl. evtl. Sperrflächenumran-;14,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+110;Längsmarkierung Typ I einschl. evtl. Sperrflächenumran-;9,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+120;Längsmarkierung Typ I einschl. evtl. Sperrflächenumran-;9,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+130;Längsmarkierung Typ I einschl. evtl. Sperrflächenumran-;21,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+140;Längsmarkierung Typ I einschl. evtl. Sperrflächenumran-;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+150;Längsmarkierung Typ I einschl. evtl. Sperrflächenumran-;34,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+160;Längsmarkierung Typ I einschl. evtl. Sperrflächenumran-;14,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+170;Längsmarkierung Typ I einschl. evtl. Sperrflächenumran-;9,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+180;Längsmarkierung Typ I einschl. evtl. Sperrflächenumran-;9,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+190;Längsmarkierung Typ I einschl. evtl. Sperrflächenumran-;21,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+200;Längsmarkierung Typ I einschl. evtl. Sperrflächenumran-;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;Schlussvermessung inkl. laufender Bestandserfassung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+20;Durchführung von Bauvermessungen. Voraussetzung ist;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;Asphaltbefestigung geradlinig trennen.;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+20;Asphaltbefestigung aufbrechen und aufnehmen.;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+30;Ausbaumaterial aus vorheriger LV-Position auf Transport-LKW zur Entsorgung verladen.;15,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+40;Ausbaumaterial aus vorheriger LV-Position;15,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+50;Ausbaumaterial aus vorheriger LV-Position nachweislich;15,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+60;Erschwernis infolge Einbauten, Schächten und Straßenab-;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+70;Natursteinpflasterdecke zur Wiederverwendung aufnehmen.;13,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+80;Bordstein aufnehmen.;27,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+90;Schicht ohne Bindemittel aufnehmen;4,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;Frostschutzschicht herstellen.;4,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;Pflasterdecke mit Kleinpflastersteinen aus Naturstein;13,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+20;Fugenpflege der ungebunden verlegten Platten- und Pflasterbeläge durch Nachverfugen mit Bettungsmaterial. Fugen mit Bettungsmaterial 0/8 einschlämmen und Pflasterfläche abtrocknen lassen. Nach ausreichendem Abtrocknen die Restfugen erneut mit Bettungsmaterial verfüllen, einschlämmen und abtrocknen l;13,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+30;Bordstein des AG setzen. Breite der Rückenstütze mind.;27,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+40;Raumfuge in Randeinfassung herstellen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;Asphaltbefestigung geradlinig trennen.;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+20;Asphalttragschicht aus Asphalttragschichtmischgut;5,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+30;Unterlage reinigen. Anfallendes Kehrgut nach Wahl des;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+40;Bitumenemulsion zur Herstellung des Schichtenverbundes;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+50;Asphaltbinderschicht aus Asphaltbinder AC 16 B S herstellen. Anlieferung des Asphaltmischguts;3,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+60;Bitumenemulsion zur Herstellung des Schichtenverbundes;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+70;Asphaltdeckschicht aus Splittmastixasphalt SMA 11 S;2,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+80;Anschluss als Fuge mit Fugenmasse herstellen.;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+90;Anschluss als Fuge mit Fugenmasse herstellen.;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;Verkehrsschild ggf. mit Aufstellvorrichtung abbauen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+20;Rohrpfosten mit Abdeckkappe für Verkehrsschild aufstel-;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+30;Verkehrsschild nach Unterlagen des AG anbringen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;"Schlussvermessung nach ""Anforderungskatalog für Leistungen bei Projektierungs- und Schlussmessungen für die Landeshauptstadt Dresden"", Pkt. 2.2, 2.3 und 2.4 (Ausgabe 01.02.2026)";1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;Beweissicherung vor Beginn der Bauarbeiten durchführen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+20;zwischen dem AN Gewerk Gleisbau und der;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+30;Koordinierung von Leistungen des AG bzw. durch den AG beauftragte Leistungen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;Asphaltbefestigung geradlinig trennen.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+20;Asphaltbefestigung aufbrechen und aufnehmen.;240,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+30;Ausbaumaterial aus vorheriger LV-Position;105,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+40;Ausbaumaterial aus vorheriger LV-Position auf Transport-LKW zur Entsorgung verladen.;105,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+50;Ausbaumaterial aus vorheriger LV-Position nachweislich;105,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+60;Oberboden einschließlich Vegetationsdecke, Wachstumsschicht abtragen und Trennlage aus Geotextil 2-lagig ausbauen.;25,0;m3;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+70;Schwellengleis demontieren, Schienenschnitte;70,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+80;Schwellengleis demontieren, Schienenschnitte;13,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+90;Querrinne im Gleisbereich i;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+100;Erschwernis infolge Einbauten, Schächten und Straßenab-;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;Gleis verlegen und montieren.;71,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+20;Gleis verlegen und montieren.;12,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+30;Vorhandenes Gleis lage- und höhenmäßig durcharbeiten.;24,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+40;Verbindungsschweißung herstellen.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+50;Verbindungsschweißung herstellen.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+60;Verbindungsschweißung herstellen.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;Asphalttragschicht aus Asphalttragschichtmischgut;205,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+20;Asphaltbinder gemäß ZTV-Asphalt StB in der jeweils;45,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+30;Asphaltbinder gemäß ZTV-Asphalt StB in der jeweils;160,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+40;Gussasphalt fachgerecht gemäß ZTV-Asphalt StB in der;160,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+50;Gussasphalt fachgerecht gemäß ZTV-Asphalt StB in der;45,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+60;Flanken der verbliebenen/bereits vorhandenen Asphalttrag- ,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+70;Erschwernis durch Einbauten.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+80;Wachstumsschicht für nicht befahrenen Fertigrasen;165,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+90;Fertigrasen fachgerecht entsprechend der gültigen;165,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+100;Rasenfläche wässern. Wassermenge je Arbeitsgang und Quadratmeter 15 Liter. Wasser liefern.;165,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+110;Fertigstellungspflege für Rasenflächen nach DIN 18916;165,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+120;Schienenkammerfüllung fachgerecht entsprechend der;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+130;Schienenkammerfüllung fachgerecht entsprechend der;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+140;Schienenkammerfüllung fachgerecht entsprechend der;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+150;Fuge im Gleisbereich fachgerecht entsprechend der;47,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+160;Fuge im Gleisbereich fachgerecht entsprechend der;47,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+170;Fuge im Gleisbereich fachgerecht entsprechend der;47,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+180;Fuge im Gleisbereich fachgerecht entsprechend der;47,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+190;Fugenspalt als Randfuge fachgerecht herstellen.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+200;Randfugen fachgerecht säubern und verfüllen.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+210;Fugenspalt als Randfuge fachgerecht herstellen.;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+220;Randfugen fachgerecht säubern und verfüllen.;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+230;Fugenspalt als Randfuge fachgerecht herstellen.;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+240;Randfugen fachgerecht säubern und verfüllen.;4,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;Längsmarkierung einschl. evtl. Sperrflächenumrandung;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+20;Längsmarkierung einschl. evtl. Sperrflächenumrandung;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+30;Längsmarkierung einschl. evtl. Sperrflächenumrandung;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+40;Sonstige Markierung wie Quermarkierung, Schrägstrich;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+50;Fläche für Markierung reinigen. Kehrgut aufnehmen und;200,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+60;Fläche für Markierung schonend trocknen. Abgerechnet;200,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+70;Längsmarkierung Typ I einschl. evtl. Sperrflächenumran-;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+80;Längsmarkierung Typ I einschl. evtl. Sperrflächenumran-;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+90;Längsmarkierung Typ I einschl. evtl. Sperrflächenumran-;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+100;Quermarkierung Typ I als Verkehrsfreigabemarkierung;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+110;Längsmarkierung Typ I einschl. evtl. Sperrflächenumran-;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+120;Längsmarkierung Typ I einschl. evtl. Sperrflächenumran-;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+130;Längsmarkierung Typ I einschl. evtl. Sperrflächenumran-;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+140;Quermarkierung Typ I als endgültige Markierung herstel-;2,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;Schlussvermessung inkl. laufender Bestandserfassung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+20;Durchführung von Bauvermessungen. Voraussetzung ist;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+10;vorhandene, freigelegte Schachtabdeckung einschließlich Rahmen aus Gusseisen und Betonauflageringen ausbauen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+20;Auflagering wird von der SEDD frei Baustelle beigestellt. Betonauflagering;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83
+30;Schachtabdeckung wird von SEDD frei Baustelle beigestellt. Schachtabdeckung vom LKW des AG abladen, bei Bedarf auf dem Baugelände zwischenlagern, laden, zum Einbauort transportieren und gemäß den;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_DVB_Gleisüberfahrten_Los_1-1.X83

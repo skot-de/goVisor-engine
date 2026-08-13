@@ -1,0 +1,13 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;frei Baustelle;1,0;St;gaeb;leistungsbeschreibungen/71-26_GAEB-LV_24.07.26_AufzugsA_V32.X83
+2;Gesamtpreis der Schachtentrauchung;1,0;St;gaeb;leistungsbeschreibungen/71-26_GAEB-LV_24.07.26_AufzugsA_V32.X83
+3;Ausführung der Tableaus nach der;1,0;St;gaeb;leistungsbeschreibungen/71-26_GAEB-LV_24.07.26_AufzugsA_V32.X83
+4;Reduzierung der Schachtkopfhöhe;1,0;St;gaeb;leistungsbeschreibungen/71-26_GAEB-LV_24.07.26_AufzugsA_V32.X83
+5;Liefern, montieren, verdrahten und betriebsfertig herstellen einer Zugangsbeschränkung für die Haltestelle Dachgeschoss.;1,0;St;gaeb;leistungsbeschreibungen/71-26_GAEB-LV_24.07.26_AufzugsA_V32.X83
+1;Teilwartung der Aufzugsanlage zur Erlangung;5,0;Jahr;gaeb;leistungsbeschreibungen/71-26_GAEB-LV_24.07.26_AufzugsA_V32.X83
+2;Wartung der Schachtentrauchung zur Erlangung;5,0;Jahr;gaeb;leistungsbeschreibungen/71-26_GAEB-LV_24.07.26_AufzugsA_V32.X83
+3;Im Störungsfall wird eine Sprechverbindung;5,0;Jahr;gaeb;leistungsbeschreibungen/71-26_GAEB-LV_24.07.26_AufzugsA_V32.X83
+4;Jährliche Gebühren für die Bereitstellung;5,0;Jahr;gaeb;leistungsbeschreibungen/71-26_GAEB-LV_24.07.26_AufzugsA_V32.X83
+10;Liefern, montieren, verdrahten, parametrieren und betriebsfertig herstellen einer Schnittstelle der Aufzugssteuerung zur bauseitigen Gebäudeautomation (GA/GLT).;1,0;psch;gaeb;leistungsbeschreibungen/71-26_GAEB-LV_24.07.26_AufzugsA_V32.X83
+10;Stunde auf Anordnung der Bauleitung zum;20,0;h;gaeb;leistungsbeschreibungen/71-26_GAEB-LV_24.07.26_AufzugsA_V32.X83
+20;Stunde auf Anordnung der Bauleitung zum;20,0;h;gaeb;leistungsbeschreibungen/71-26_GAEB-LV_24.07.26_AufzugsA_V32.X83

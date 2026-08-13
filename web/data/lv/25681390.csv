@@ -1,0 +1,24 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Erdung als Ringerder, DIN EN IEC 62561-2 (VDE 0185-561-2), aus nichtrostendem Stahl, Rd 10, Werkstoff-Nr 1.4571, in vorh. Baugrube einlegen.;230,0;m;gaeb;leistungsbeschreibungen/26A50113.X83
+0020;Verbinder, DIN EN IEC 62561-1 (VDE 0185-561-1), Klasse N für normale Belastung, für Kreuzverbindungen, aus nichtrostendem Stahl, Werkstoff-Nr 1.4301, für Rd 10 mit Rd 10, mit Zwischenplatte.;34,0;St;gaeb;leistungsbeschreibungen/26A50113.X83
+0030;Korrosionsschutz an Anschluss- und Verbindungsstellen im Erdreich mit Korrosionsschutzbinde DIN 30672-1 und DIN 30672-2.;34,0;St;gaeb;leistungsbeschreibungen/26A50113.X83
+0040;Gebäudeeinführung für Potentialausgleich erstellen und nach der Verlegung abdichten.;1,0;St;gaeb;leistungsbeschreibungen/26A50113.X83
+0010;Fangleitung DIN EN 50164-2, aus Aluminium, Rd 10,;50,0;m;gaeb;leistungsbeschreibungen/26A50113.X83
+0020;Dachleitungshalter für Metalldach mit Klemmbock Al (Rundstehfalz);35,0;St;gaeb;leistungsbeschreibungen/26A50113.X83
+0030;Dachrinnenklemme mit Klemmbock Al;17,0;St;gaeb;leistungsbeschreibungen/26A50113.X83
+0040;Ableitung DIN EN IEC 62561-2 (VDE 0185-561-2), aus Aluminium, Rd 8, an Wänden.;42,0;m;gaeb;leistungsbeschreibungen/26A50113.X83
+0050;Leitungshalter für v.g. Ableitung, mit Überleger und Abdeckbund, Kompletteinheit mit Abdeckbund für das Verlegen von Leitungen, feste Leitungsführung,;36,0;St;gaeb;leistungsbeschreibungen/26A50113.X83
+0060;Rohrschelle, DIN EN IEC 62561-1 (VDE 0185-561-1), Klasse N für normale Belastung, aus nichtrostendem Stahl, für Rohrnennweite über 100 bis 150 mm, bestehend aus Spannband und Spannkopf, für Leitungsanschlüsse Rd 7 bis 10 oder Fl 40.;24,0;St;gaeb;leistungsbeschreibungen/26A50113.X83
+0070;Trennstück DIN EN IEC 62561-1 (VDE 0185-561-1), Klasse N für normale Belastung, aus nichtrostendem Stahl, Werkstoff-Nr 1.4301, Klemmbereich Rd 8-10/Rd 8-10.;14,0;St;gaeb;leistungsbeschreibungen/26A50113.X83
+0080;Erdeinführung einschl. Anschluss an die Erdungseinrichtung, DIN EN IEC 62561-2 (VDE 0185-561-2) Stange mit 2 runden Enden aus nichtrostendem Stahl, Rd 16, Werkstoff-Nr 1.4571, Länge 1500 mm.;14,0;St;gaeb;leistungsbeschreibungen/26A50113.X83
+0090;Nummernschild mit dauerhafter witterungsbeständiger Beschriftung.;14,0;St;gaeb;leistungsbeschreibungen/26A50113.X83
+0100;Blitzschutzbuch;1,0;St;gaeb;leistungsbeschreibungen/26A50113.X83
+0010;Oberboden abtragen und seitlich lagern;225,0;m;gaeb;leistungsbeschreibungen/26A50113.X83
+0020;Seitlich gelagerten Oberboden auftragen;225,0;m;gaeb;leistungsbeschreibungen/26A50113.X83
+0030;Boden für Kabelgräben, Breite x Tiefe = 0,4 m x 0,2 m, nach Abtrag des Oberbodens lösen und seitlich lagern.;225,0;m;gaeb;leistungsbeschreibungen/26A50113.X83
+0040;Seitlich gelagerten Boden auftragen;225,0;m;gaeb;leistungsbeschreibungen/26A50113.X83
+0050;Pflasterflächen aufnehmen und im Seitenbereich, Transportweg bis 50 m, zwischenlagern.;12,0;m²;gaeb;leistungsbeschreibungen/26A50113.X83
+0010;Normalstunden eines Blitzschutzmonteurs;5,0;h;gaeb;leistungsbeschreibungen/26A50113.X83
+0010;Demontage Ringerder inkl. Entsorgung;250,0;m;gaeb;leistungsbeschreibungen/26A50113.X83
+0020;Demontage Erdeinführung inkl. Entsorgung;12,0;St;gaeb;leistungsbeschreibungen/26A50113.X83
+0030;Demontage Ableiter inkl. Entsorgung;48,0;m;gaeb;leistungsbeschreibungen/26A50113.X83

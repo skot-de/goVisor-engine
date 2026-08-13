@@ -1,0 +1,90 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Einrichtung der Baustelle nach Maßgabe der ausgeschriebenen Leistung und Räumung nach Abschluss der Arbeiten.;1,0;psch;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+2;Eingerichtete Baustelle und Lagerplätze für die Dauer der Baumaßnahmen sichern. Dazu gehören:;1,0;psch;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+3;Sicherung der Baustelle durch amtliche Verkehrszeichen gemäß RSA 95  aufstellen, unterhalten und abbauen.;1,0;psch;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+4;Auf- und Abbau von Halteverbotszonen, einseitig, einschl. Halteverbotsprotokoll;5,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+5;Halteverbotszone der v. g. Pos. aufnehmen,;5,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+6;Auf- und Abbau sowie Vorhalten von Verkehrszeichen;1,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+7;Beseitigung von Verschmutzung im Bereich der Baustelle und der Lagerplätze inklusive der Anfahrtswege und Zufahrten durch Baustellenfahrzeuge und Lieferanten während der gesamten Bauzeit.;1,0;psch;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+8;"Erschwerniszulage für ""Vor-Kopf-Arbeit"" bei Bauausführung unter";260,0;m;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+9;Stahlplatten als vorübergehende Baugrubenabdeckung zur Überfahrung von Baugruben und Rohrgräben für SLW60, einschl. Angleichung mit Asphaltbinder nach Angabe des AG, verlegen, bei Bedarf versetzen u. später wieder entfernen.;3,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+10;Lastplattendruckversuch, nach DIN 18134 und TP BF-StB Teil 8.1, auf Anordnung des AG durchführen.;5,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+11;Absteckung der geplanten Kanaltrasse in der Örtlichkeit inklusive der wetterfesten Kennzeichnung der Kanalachsen und Schachtlagen.;1,0;psch;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+12;Erstellung eines Bestandsplans zu den vertraglich erstellten Entwässerungsanlagen.;1,0;psch;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+1;Zuordnung laut Bodengutachten: Homogenbereich A1 und A2, B1 und B2;700,0;m3;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+2;Zuordnung laut Bodengutachten: Homogenbereich A1 und A2, B1 und B2;950,0;m3;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+3;Bodenaushub für seitliche Anschlüsse zur Übernahme der Hausanschlüsse aus der alten Kanaltrasse;80,0;m3;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+4;Auffüllungsmaterial Füllkies 0/32, verdichtbar, liefern und;300,0;m3;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+5;Freilegen der beim Bodenaushub vorgefundenen Ver- und Entsorgungsleitungen, einschließlich Sichern der Leitungen;30,0;m;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+6;Freilegen der beim Bodenaushub vorgefundenen parallel;100,0;m;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+7;Freilegen der beim Bodenaushub vorgefundenen Kabel;50,0;m;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+8;Boden für Suchgraben,;30,0;m3;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+9;Ausheben und Laden des Bodens von Hand als;50,0;m3;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+10;Hindernis aus Mauerwerk, unbewehrtem Beton oder Stahlbeton;1,5;m3;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+11;Minierung seitlich der Hauptkanalbaugrube zum Anschluss;30,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+12;Kopfloch oder Graben im Straßen- und Gehwegbereich (Oberfläche:;2,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+13;Rohrgrabenstabilsierung aus Mineralgemisch Hartkalkstein 0/45 mm;275,0;t;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+14;Füllmaterial in der Leitungszone nach DIN EN 1610 profilgerecht;135,0;m3;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+15;Verbau für Baugrube nach statischen und konstruktiven Erfordernissen;1900,0;m2;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+16;Dielenkammerverbau Baugrubenwände unabhängig von der Tiefe der;400,0;m2;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+17;Verbau für Baugrube nach statischen und konstruktiven;320,0;m2;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+1;Vorgefertigte Rohre für Abwasserkanäle zeichnungsgemäß liefern und;260,0;m;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+2;Sattelstück in die in der Pos. Rohrverlegung näher;43,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+3;Sattelstück in die in der Pos. Rohrverlegung näher;1,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+4;Vorgefertigte Rohre für Abwasserkanäle zeichnungsgemäß liefern und verlegen.;5,0;m;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+5;Vorgefertigte Rohre für Abwasserkanäle zeichnungsgemäß liefern und verlegen.;60,0;m;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+6;Bogen wie in der Pos. Rohrverlegung näher erläutert;120,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+7;Paßstück wie in der Pos. Rohrverlegung näher erläutert;20,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+8;Paßstück wie in der Pos. Rohrverlegung näher erläutert;2,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+9;Paßstück wie in der Pos. Rohrverlegung näher erläutert;2,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+10;Bogen wie in der Pos. Rohrverlegung näher erläutert als Zulage zu dieser Pos. herstellen.;5,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+11;Anschlussstück wie in der Pos. Rohrverlegung näher;20,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+12;Formstück wie in der Pos. Rohrverlegung näher erläutert;20,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+13;Formstück wie in der Pos. Rohrverlegung näher erläutert;2,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+1;Schachtunterteil zum gelenkigen Anschluß von;1,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+2;Schachtunterteil zum gelenkigen Anschluß von;1,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+3;Schachtunterteil zum gelenkigen Anschluß von;1,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+4;Schachtunterteil zum gelenkigen Anschluß von;1,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+5;Schachtunterteil zum gelenkigen Anschluß von;5,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+6;Neuen Schachthals liefern und fachgerecht einbauen.;8,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+7;Neuen Schachthals liefern und fachgerecht einbauen.;1,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+8;Schachtring liefern und fachgerecht einbauen.;9,0;m;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+9;Schachtring liefern und fachgerecht einbauen.;2,0;m;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+10;Ausgleichsring liefern und fachgerecht einbauen.;18,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+11;Schachtabdeckung für Abwasserschacht VIATOP 1,;8,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+12;Die vorhandene Schachtabdeckung ist freizustemmen und zu entsorgen.;3,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+13;Korrodierte oder zerstörte Steigeisen ausbauen und durch neue Steigeisen nach DIN 1212 E und DIN 1264 ersetzen, inkl. Lohn- und Gerätekosten.;5,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+14;Anschluß an MW-Schacht einschließlich Stemm- und Dichtungsarbeiten;4,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+1;Rohre des Hauptkanals freilegen, aufnehmen und beseitigen.;150,0;m;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+2;Rohre der Hausanschlüsse und Senken freilegen, aufnehmen und beseitigen, im Zuge des Kanalneubaus.;20,0;m;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+3;Alter Mischwasserkanal DN 300 m Bereich der;13,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+4;Stillgelegten Kanal einschl. der Schachtbauwerke verdämmern.;15,0;m3;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+5;Schachtbauwerk von Abwasserkanälen abbrechen;3,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+1;vorh. Klinkerpflaster aufnehmen, säubern und seitl. im Bereich der Baustelleneinrichtung lagern.;750,0;m2;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+2;Aufgenommene Klinkerpflasterdecke wieder herstellen.;50,0;m2;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+3;Betonpflastersteine nach DIN 18501-80 (100/200/80mm);50,0;m2;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+4;Nicht mehr brauchbares Pflaster der v. g. Pos. laden,;200,0;m2;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+5;Pflaster, d = 8 bis 10 cm, zur Angleichung an Abgrenzungen;50,0;m;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+6;Schachtdeckel auf Höhe setzen,;11,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+7;Die in der Grabensohle angetroffene Felsschicht;250,0;m3;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+8;Kornabgestuftes  Mineralgemisch 0/32 mm aus Naturstein;520,0;m2;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+9;Kornabgestuftes Mineralgemisch 0/32 mm aus Naturstein;520,0;m2;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+10;Asphalttragschicht  ZTV Asphalt-StB, Mischgutart AC 22 T N;700,0;m2;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+11;Straßenabläufe einschl. Aufsatz vollständig ausbauen.;3,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+12;Straßenablauf-Trockenschlamm-Pultform 500/36 liefern und versetzen. Straßenabläufe aus Beton gemäß DIN 4052-1, bestehend aus den Einzelteilen: Straßenablauf, Unterteil, Eimer 2a, Schaft 5d, Auflagerring 10a, und dem gusseisernen Aufsatz „BEGU“ quadratisch, 500 x 500 mm,  gemäß DIN 19583, Klasse D400;3,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+13;Hydranten- und Schieberkappen im Straßenbereich freilegen;10,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+14;1-reihige Rinne, in Beton versetzt, einschl. der Fundamente;60,0;m;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+15;1-reihige Pflasterrinne aus Pflastersteinen 16 x 24 x;50,0;m;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+16;1-reihige Pflasterrinne aus Pflastersteinen 100 x 50 x;6,0;m;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+17;Sinusstein: 3,5m x 3,8m;1,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+18;Bordsteine, in Beton versetzt, einschl. der Fundamente;40,0;m;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+19;Grandura®Hochbordsteine n. DIN EN 1340, Typ DIT 12/15 x;40,0;m;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+20;Hochbordsteine der v. g. Pos. mit einer schallgedämmten;8,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+1;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung des AG ausführen.;15,0;h;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+2;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung des AG ausführen.;40,0;h;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+3;Gestellung (Betriebsstunden) eines Kompressors mit;10,0;h;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+4;Gestellung (Betriebsstunden) einer Tauchmotorpumpe mit Bedienung und Betriebsstoffen, auf Anordnung des AG ausführen.;10,0;h;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+5;Gestellung (Betriebsstunden) eines  LKW mit;10,0;h;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+6;Gestellung (Betriebsstunden) eines Baggers mit;10,0;h;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+1;Kanalhaltungen, auch abschnittsweise, nach DIN EN 1610 mit Luft oder Wasser auf Dichtheit prüfen, Haus- und Senkenanschlüsse innerhalb der Haltungen sind u. U. zu verschließen.;260,0;m;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83
+2;Schachtbauwerk nach DIN EN 1610 mit Luft oder Wasser auf Dichtheit prüfen.;11,0;St;gaeb;leistungsbeschreibungen/Ruhrstraße - LV als GAEB_xml31.x83

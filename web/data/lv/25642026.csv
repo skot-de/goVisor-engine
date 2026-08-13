@@ -1,0 +1,95 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Einrichten der Baustelle, anfahren, vorhalten und;1,0;psch;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+20;Räumen der Baustelleneinrichtung, Instandsetzung der;1,0;psch;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+30;Liefern, Aufstellen, Vorhalten, Umsetzen, Betreiben und;1,0;psch;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+40;Beweissicherung für maßgeblich angrenzende Bereiche vor;1,0;psch;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+50;Durchführung von Baumschutzmaßnahmen nach den örtlichen;2,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+60;Aufstellen, Vorhalten, mehrmals umsetzen und beseitigen;100,0;lfdm;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+70;Baustellenüberfahrt zum Schutz von asphaltierten Geh-;100,0;m2;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+80;Vergütung von Baustillstandszeiten (abgerechnet nach;10,0;d;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+90;Brachland mit Gras-, Kleinstrauch- und Staudenbewuchs;100,0;m2;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+10;Oberboden, stark verwurzelt, lösen, aufnehmen und im;100,0;m2;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+20;Liefern und Errichten einer Stützwand aus Stützwinkeln, glatt, Sichtseite innen, Mindestwandstärke 12 cm, nach DIN EN 206-1, DIN 1045-2, DIN 1045-4, DIN EN 15258, Eurocode 2  DIN EN 1992,;20,0;m;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+30;Stützwinkelelemente wie Vorposition, jedoch in den Abmessungen;4,0;Stck;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+40;Zulage Eckausbildung aus 2 Elementen der Position 1.2.20;4,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+50;Zulage Eckausbildung aus einem Element 155/85/12 Baulänge 1,0m der Position 1.2.20 und zwei Elementen;2,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+60;Rohrdurchführung für Rohr PP DN 200 durch vorbeschriebenes Stützwandelement herstellen.;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+70;Planum für Oberflächen herstellen.;75,0;m2;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+80;Tiefbordstein Beton, Breite 80 mm, Höhe 250 mm liefern;30,0;lfdm;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+90;Betonsteinpflaster DIN EN 1338, 200 x 100 x 80, Farbe grau, glatt, mit Fase,;25,0;m2;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+100;Zulage zum Betonsteinpflaster, Erschwerter Aufwand bei;7,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+110;Oberboden, Bodenklasse 1, unkrautfrei, liefern,;5,0;m3;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+120;Rasenansaat mit Regel-Saatgutmischung Gebrauchsrasen A;30,0;m2;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+10;Suchschlitze zum Auffinden von Kabel und Leitungen;3,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+20;Boden der Gräben und Gruben für Entwässerungskanäle bis;30,0;m3;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+30;Verbau DIN 18303 für Gräben und Schächte nach Wahl des;30,0;m2;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+40;Zulage zum Bodenaushub:;25,0;m3;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+50;Zulage zum Bodenaushub:;5,0;m3;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+60;Stein mit Rauminhalt über 0,1 m³ lösen und laden.;2,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+70;Geladenen Boden zum Zwischenlager fördern, abladen und;175,0;m3;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+80;Geeigneten Füllboden, Kies-Sandgemisch mit Größtkorn 20;5,0;m3;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+90;Geeigneten Füllboden, Kies-Sandgemisch, liefern und in;20,0;m3;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+100;Boden vom Zwischenlager laden und fördern und in;145,0;m3;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+110;Zulage zum Boden einbauen:;5,0;m3;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+120;Werksplanung mit statischem Nachweis der Spundwand,;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+130;Verbau für Baugrube Sandfanganlage aus abgedichteten;240,0;m2;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+140;Boden der Grube für Lamellenkläre profilgerecht;145,0;m3;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+150;Zulage zum Bodenaushub:;80,0;m3;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+160;Geeigneten Füllboden, Kies-Sandgemisch, liefern und in;40,0;m3;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+170;Spundwand aus vorheriger Position ziehen, laden und;240,0;m2;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+180;Liefern und montieren einer durchgehenden oberen;24,0;lfdm;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+190;Gurtung aus vorheriger Position abbauen, laden und abtransportieren.;24,0;lfdm;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+200;Gründungssohle für Schacht, Beton, rund, bis DN 1500;5,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+210;Vorbereitung der Baugrubensohle Lamellenklärer VIATUB;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+220;Vorhandene Einzelkabel, Kabelbündel, Freispiegel- und;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+230;Durchführung von leichten Rammsondierungen (Künzelstab);2,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+240;Plattendruckversuch nach DIN 18134 für Kontrollprüfung unter der Pflasterfläche,;2,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+250;Verdichtungsprüfung mit leichtem Fallgewichtsgerät auf;5,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+260;Organisations- Verwaltungs- und Koordinierungsaufwand,;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+10;Mineralische Abfälle untersuchen, deklarieren und;1,0;Stck;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+20;Zwischengelagerter Boden, zur Verfüllung nicht geeignet bzw. Überschussboden,;65,0;m3;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+30;Boden wie Pos. 1.4.20, jedoch als Zulage:;65,0;m3;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+40;Boden wie Pos. 1.4.20, jedoch als Zulage:;65,0;m3;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+50;Boden wie Pos. 1.4.20;15,0;m3;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+10;Geschlossene Grundwasserabsenkungsanlage nach Wahl des;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+20;Geschlossene Grundwasserabsenkung nach Wahl des;10,0;lfdm;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+30;Geschlossene Grundwasserabsenkung nach Wahl des;24,0;lfdm;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+10;Abwasserkanalrohr aus  PP, Vollwand DN 500,;2,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+20;Rohrverbindung Betonrohr DN 600 mit PP-Rohr DN 500;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+30;Anbausattel für Kanalhauptrohr PP DN 500, für;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+40;Rohrverbindung mit Rohr und Formstücken PP DN 200;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+50;Abwasserkanal aus  PP-Rohr, Vollwand DN 200,;11,0;m;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+60;Sondermanschettendichtung für Rohr PP DN 200, Typ;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+70;Schacht DIN 19549, rund, lichte Weite 1,0 m, aus Beton-;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+80;Kanalschacht Kunststoff, DN 600, KG-Systemschacht,;2,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+90;Schmutzfänger  F DIN  1221, schwere Ausführung,;3,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+100;Trassenwarnband aus Kunststoff, Breite 40 mm, Dicke 0,;12,0;m;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+110;Böschungsstück 45° Beton für Auslauf Rohrleitung PP DN;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+120;Auslaufgitter aus Edelstahl für Rohr bis;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+130;Böschungsstück 45° Beton für Auslauf Rohrleitung PP DN;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+140;Dichtheitsprüfung von Abwasserkanälen/-leitungen nach;11,0;m;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+150;Dichtheitsprüfung von Regelschächten Beton DN 1000 und;3,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+160;TV  Inspektion Rohr PP DN 200 mit selbstfahrendem;11,0;m;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+10;Lamellenklärer VIATUB II 40, monolithischer;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+20;Trennbauwerk, Beton, rund, monolithisch,;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+30;Schachtabdeckung mit Scharnier und Öffnungshilfe;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+40;Sicherheitssteigleiter, vollständig aus Edelstahl,;2,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+50;Steigeisengänge mit Steigeisen DIN 1212, Steigmaß 250;2,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+60;Dichtheitsprüfung Sonderbauwerk Lamellenklärer nach DIN;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+70;Dichtheitsprüfung von Regelschacht aus Beton DN 1500;2,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+10;Rückbau vorhandene Zaunanlage, Maschendraht (Wildzaun),;10,0;lfdm;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+20;Trennung Betonrohrleitung DN 600 durch senkrechten;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+10;Liefern und Herstellen einer Anlagenumzäunung aus;11,0;lfdm;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+20;Liefern und Herstellen einer LKW-befahrbaren, 2;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+30;Sicherheitsgeländer,  lichte Höhe 1,0 m,;18,0;lfdm;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+40;Klinkermauerwerk der Rohdichteklasse 1,9, Wandstärke 24 cm, außen als Sichtmauerwerk, Mörtel MG 3,;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+50;Durchführung baubegleitender Reinigung der durch die;1,0;psch;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+60;Organisations- und Verwaltungsaufwand des AN für die;1,0;psch;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+70;Dokumentationsmappe nach den Anforderungen der Stadt;1,0;St;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+10;Arbeitskraftkosten Polier, einschließlich aller;1,0;h;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+20;Arbeitskraftkosten Facharbeiter, einschließlich aller;3,0;h;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+30;Gerätekosten Frontlader bis 75 KW, einschließlich aller;3,0;h;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+40;Gerätekosten Radbagger bis 0,5 m³, einschließlich aller;3,0;h;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+50;Gerätekosten LKW bis 18 t, einschließlich aller;3,0;h;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+60;Gerätekosten Notstromaggregat (geräuscharm),;3,0;h;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83
+70;Gerätekosten einschließlich Betriebskosten für eine Elektrische Schmutzwasser- Tauchmotorpumpe zur offenen Wasserhaltung in einer Baugrube einschließlich aller Arbeitsmittel und Bedienungspersonal.;10,0;h;gaeb;leistungsbeschreibungen/LV Sandfanganlage Rehpfuhl Bernau.X83

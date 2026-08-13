@@ -1,0 +1,26 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Baustelle für sämtliche aufgeführte Leistungen einrichten, sowie Räumung der Baustelle und Wiederherstellung der Flächen, einschließlich Entfernung von Verunreinigungen. Bestandteil der Baustelleneinrichtung sind sämtlich notwendige Geräte, Werkzeuge und Hilfsmittel, Materialvorhaltekosten sowie all;1,0;psch;gaeb;sonstiges/26A30322.X83
+0010;Nichtragende innere Trennwand nach DIN 4103-1 als Montagewand, bewertes Schalldämm-Maß n.A. des Herstellers.;41,888;m2;gaeb;sonstiges/26A30322.X83
+0020;Nichtragende innere Trennwand nach DIN 4103-1 als Montagewand, bewertes Schalldämm-Maß n.A. des Herstellers. Brandschutztechnische Anforderungen an die Wand (Wohnungstrennwand) ist mind. Feuerwiderstandsklasse F60-AB (hochfeuerhemmend) nach DIN 4102-2.;13,6;m2;gaeb;sonstiges/26A30322.X83
+0030;Nichtragende innere Trennwand nach DIN 4103-1 als Montagewand, bewertes Schalldämm-Maß n.A. des Herstellers. Brandschutztechnische Anforderungen an die Wand ist mind. Feuerwiderstandsklasse F30 nach DIN 4102-2.;9,248;m2;gaeb;sonstiges/26A30322.X83
+0040;Nichtragende innere Trennwand nach DIN 4103-1 als Vorsatzschale, bewertes Schalldämm-Maß n.A. des Herstellers der Gipsplatten.;85,594;m2;gaeb;sonstiges/26A30322.X83
+0010;Nichtragende innere Trennwand nach DIN 4103-1 als Montagewand, bewertes Schalldämm-Maß n.A. des Herstellers.;170,214;m2;gaeb;sonstiges/26A30322.X83
+0020;Nichtragende innere Trennwand nach DIN 4103-1 als Montagewand, bewertes Schalldämm-Maß n.A. des Herstellers. Brandschutztechnische Anforderungen an die Wand (Notwendige Flure) ist mind. Feuerwiderstandsklasse F60-AB (hochfeuerhemmend) nach DIN 4102-2.;35,97;m2;gaeb;sonstiges/26A30322.X83
+0030;Nichtragende innere Trennwand nach DIN 4103-1 als Vorsatzschale, bewertes Schalldämm-Maß n.A. des Herstellers der Gipsplatten.;124,195;m2;gaeb;sonstiges/26A30322.X83
+0010;Nichtragende innere Trennwand nach DIN 4103-1 als Montagewand, bewertes Schalldämm-Maß n.A. des Herstellers.;195,941;m2;gaeb;sonstiges/26A30322.X83
+0020;Nichtragende innere Trennwand (Drempel) nach DIN 4103-1 als Montagewand, bewertes Schalldämm-Maß n.A. des Herstellers.;37,587;m2;gaeb;sonstiges/26A30322.X83
+0030;Nichtragende innere Trennwand nach DIN 4103-1 als Montagewand, bewertes Schalldämm-Maß n.A. des Herstellers. Brandschutztechnische Anforderungen an die Bekleidung, Feuerwiderstandsklasse F30 nach DIN 4102-2.;387,738;m2;gaeb;sonstiges/26A30322.X83
+0040;Nichtragende innere Trennwand nach DIN 4103-1 als Vorsatzschale, bewertes Schalldämm-Maß n.A. des Herstellers der Gipsplatten.;69,744;m2;gaeb;sonstiges/26A30322.X83
+0010;Rieselschutz aus Glasvlies oder ggf. Folie, lose verlegen mit einer Überlappungsbreite von 9 cm gemäß Zeichnung.;923,3;m2;gaeb;sonstiges/26A30322.X83
+0020;Liefern und Anbringen von Mineralwolle-Randdämmstreifen mit einer Dicke von mind. 10 mm gemäß Zeichnung an allen aufstrebenden Bauteilen zur Schallentkopplung und Aufnahme von Dehnungen.;1081,85;m;gaeb;sonstiges/26A30322.X83
+0030;Untergrundausgleich mit schwerer Schüttung von ca. 15 mm - 40 mm inkl. Rieselschutz mit Abschluss einer Holzfaserdämmplatte von 10 mm. Der Rieselschutz sowie die Holzfaserdämmplatte sind gesondert aufgeführt.;923,3;m2;gaeb;sonstiges/26A30322.X83
+0040;Liefern und Einbau einer Holzfaserdämmplatte WF nach DIN EN 13171 als Untergrund für Verlegeplatten aus EPS mit einer Dicke von 10 mm. Die Holzfaserdämmplatten werden schwimmend gemäß den technischen Anforderungen des Herstellers verlegt.;923,3;m2;gaeb;sonstiges/26A30322.X83
+0050;Liefern und Einbau von Verlegeplatten aus EPS auf einer Holzfaserdämmplatten. Maßtoleranzen des Rohfußbodens müssen den Anforderungen in DIN 18202 entsprechen. Die Platten werden versetzt Kante an Kante nach den technischen Anforderungen des Herstellers verlegt.;923,3;m2;gaeb;sonstiges/26A30322.X83
+0060;Randverstärkung für die in Pos.:;394,55;m;gaeb;sonstiges/26A30322.X83
+0070;Verlegen einer PE-Folie mit einer Dicke von 0,2 mm zwischen dem Heizungssystems und der Lastverteilungsschicht.  Lose verlegen mit einer Überlappungbreite von 3 cm.;923,3;m2;gaeb;sonstiges/26A30322.X83
+0080;Liefern und Verlegen von Trockenestrich Fertigelementen aus Gipsfaserplatten mit Stufenfalz, Knauf Brio 18 o. glw. in einer Dicke von 18 mm, die für den Einsatz auf den Verlegeplatten wie in Pos.;923,3;m2;gaeb;sonstiges/26A30322.X83
+0010;Deckenbekleidung aus Gipsplatten mit Unterkonstruktion nach DIN 18168-1 an vorhandene  Holzwerkstoffdecke OSB 22 mm befestigen,;923,3;m2;gaeb;sonstiges/26A30322.X83
+0020;Liefern und Einbauen von Revisionsklappen die in Pos.;20,0;Stck;gaeb;sonstiges/26A30322.X83
+0010;Stundenlohn für unvorhergesehene Arbeiten zum Nachweis und nur nach ausdrücklicher Beauftragung durch die Bauleitung oder dem Bauherrn.;40,0;Std;gaeb;sonstiges/26A30322.X83
+0020;Stundenlohn für unvorhergesehene Arbeiten zum Nachweis und nur nach ausdrücklicher Beauftragung durch die Bauleitung oder dem Bauherrn.;20,0;Std;gaeb;sonstiges/26A30322.X83
+0030;Stundenlohn für unvorhergesehene Arbeiten zum Nachweis und nur nach ausdrücklicher Beauftragung durch die Bauleitung oder dem Bauherrn.;16,0;Std;gaeb;sonstiges/26A30322.X83

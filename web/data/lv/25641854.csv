@@ -1,0 +1,388 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Lieferung, Aufstellung, Vorhaltung und Abbau eines abschließbaren, beheizbaren Bürocontainers als Baubüro für den Auftraggeber.;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Baubüro für den AG mit allen Einrichtungen vor- und;9,0;Mt;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Liefern, aufstellen und rückbauen eines Sanitärcontainers mit getrennten Bereichen für Damen und Herren.;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Toilettencontainer;9,0;Mt;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Toilettencontainer;9,0;Mt;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Liefern, aufstellen und rückbauen eines mobilen Fäkalientanks inkl. Anschlussleitungen an WC-Container.;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Fäkalientank aus vorheirger Position vorhalten und regelmäßig entleeren.;9,0;Mt;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Verkehrszeichen und Verkehrseinrichtungen;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Bordstein aufnehmen.;60,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Pflasterdecke mit Pflastersteinen aus Beton aufnehmen.;75,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Wurzelstöcke roden. Gemessen wird der Durchmesser der;5,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Oberboden ggf. einschließlich Vegetationsdecke abtragen;850,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Gelagerten Oberboden des AG profilgerecht andecken. Ho-;590,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Boden aus Abtragsbereichen lösen und zum Abtransport laden.;380,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Mulde herstellen.Boden bzw. Fels profilgerecht lösen nach Abtrag Oberboden.;370,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Susbtrat liefern und einbauen.;5,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Seitlich gelagerten Boden lagern.;380,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Seitlich gelagerten Boden entsorgen.;380,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Leitungsgraben ausheben, DN 150;75,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Auflager und Ummantelung für Anschlussleitungen, Versorgungleitungen, Kabel  und Schutzrohre aus Sand herstellen.;20,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Anschlussleitung DN/OD 160 mm;115,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Formstück in Rohrleitung einbauen:;20,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Formstück Abzweig DN/OD 160 mm in Rohrleitung einbauen:;2,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Formstück in Rohrleitung einbauen.;55,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Rohrleitung an Schacht anschließen, Anschluss abdich-;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Umpflasterung Straßenablauf herstellen in Mulde herstellen.;15,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Herstellen eines asphaltierten Notüberlaufbereiches um einen Straßeneinlauf zur geordneten Ableitung von Oberflächenwasser in eine angrenzende Mulde.;2,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+100;Straßenablauf aus Betonfertigteilen einbauen. Fugen mit;17,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+110;Aufsatz f . Straßenablauf aufsetzen ,;17,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+120;Dichtheitsprüfung Rohre;115,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+130;Reinigung und optische Inspektion der Abwasserleitung;115,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Erschwernis durch Einbauten.;40,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Schottertragschicht  herstellen.;1370,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Tiefbordsteine  nach DIN EN 1340 Typ IDT.;450,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Rundbordsteine liefen und versetzen;120,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Bordsteine RB 15x22 setzen, Radius.;10,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Bordsteine HB 15x30 setzen;390,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Bordsteine HB 15x30 setzen, Radius.;110,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Übergangsstein von Hochbord- auf Rundbordstein.;9,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Zulage zur Position Bordstein Hochbordstein setzen, für das Zwischensetzen von Pflastersteinen 180/240/100 längs nach jedem Hochbordstein, Bereiche nach Unterlagen des AG,;500,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Rinne aus Formsteinen herstellen.;90,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Pflasterdecke mit Pflastersteinen aus Beton mit Vor-;690,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+100;Pflasterdecke mit Pflastersteinen aus Beton mit Vor-;1160,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+110;Pflasterdecke mit Betonpflastersteinen des AG herstellen.;150,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Asphaltbefestigung geradlinig trennen.;220,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Asphaltbefestigung aufbrechen, aufnehmen und entsorgen.;165,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Asphalttragschicht aus Asphalttragschichtmischgut;1000,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Asphalttragschicht aus Asphalttragschichtmischgut;25,0;t;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Unterlage reinigen. Anfallendes Kehrgut der Verwertung;1000,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Bitumenemulsion zur Herstellung des Schichtenverbundes;1000,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;1000,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;10,0;t;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Naht oder Anschluss ohne Fugenspalt in Asphaltdeck-;460,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+100;Fugenfüllung herstellen.;460,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+110;Abstumpfungsmaßnahme zur Erhöhung der Anfangsgriffig-;1000,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+120;Verkehrsfläche mit einer selbstaufnehmenden Kehrmaschi-;1000,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Baugrubenaushub Homogenbereiche;1,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Schilderfundamente herstellen.;1,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Bodenhülse liefern und herstellen.;4,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Rohrpfosten aufstellen Länge bis 1500 mm;4,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Verkehrsschild nach Unterlagen des AG liefern.;4,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Stundenlohn Bauvorarbeiter;5,0;h;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Stundenlohn Facharbeiter;5,0;h;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Stundenlohn Werker;5,0;h;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Wie vor, jedoch;3,0;h;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Stundenlohn Bagger 0,4 bis 1,0 m3;3,0;h;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Stundenlohn Frontlader;3,0;h;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Stundenlohn Flächenrüttler;2,0;h;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Stundenlohn Bohr-/Abbauhammer;2,0;h;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Stundenlohn Flex;2,0;h;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+100;Stundenlohn Lkw 5t;3,0;h;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+110;Stundenlohn Lkw 8t;3,0;h;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+120;Stundenlohn Tieflader;3,0;h;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+130;Liefern Kies 8/16 mm;3,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+140;Liefern Beton C12/15;1,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+150;Liefern Kleinpflaster Granit;3,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Herstellen eines Probefeldes nach Angaben des AG.;3,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Statischen Plattendruckversuch durchführen.;10,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Belastungsfahrzeug als Gegengewicht (z.B. ausreichend;10,0;h;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Verkehrszeichen und Verkehrseinrichtungen;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+11;Behelfsüberfahrt;5,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Fußgängerhilfsbrücken (Grabenbrücken) herstellen, für die Dauer der Baumaßnahme vorhalten, mehrfach umstellen und beseitigen.;2,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Schachtbauwerk aufnehmen,;3,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Schachtbauwerk, Kabelschacht, aufnehmen,;3,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Entwässerungsrohrleitung abbrechen. Entwässerungsrohr-;15,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Trinkwasserleitung stillgelegt abbrechen. Trinkwasserleitung liegt bis Oberkante Rohr frei. Zusätzliche Erd-;15,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Kampfmitteltechnische Begleitung sämtlicher Erdarbeiten innerhalb der aufgrund geophysikalischer Störsignale nicht freigegebenen Bereiche.;40,0;h;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Oberboden ggf. einschließlich Vegetationsdecke abtragen;20,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Gelagerten Oberboden des AG profilgerecht andecken. Ho-;20,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Ausbau des anstehenden, nicht ausreichend tragfähigen Bodens im Bereich der Kaskade (Fläche ca. 870m2, Tiefe ca. 1,50m), einschließlich Laden, Fördern innerhalb der Baustelle und Zwischenlagern.;1305,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Planum herstellen.;2840,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Seitlich gelagerten Boden lagern.;550,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Seitlich gelagerten Boden entsorgen.;550,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Montagegruben mit den Abmessungen;10,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Suchgraben und Suchschlitz nach Anweisung  des AG herstellen. Abgerechnet wird nach Abtragsprofilen. Homogenbereiche nach Unterlagen des AG.;10,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+100;Kabel freilegen;50,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+110;Bestehende Versorgungsleitungen  freilegen und;40,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Boden für Leitungsgraben Schmutzwasserkanal ausheben;380,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Leitungszone herstellen. Leitungszone aus verdichtungsfähigem Kies-Sand-Gemisch entsprechend den Vorgaben der DIN EN 1610 herstellen. Die Verfüllzon ist lagenweise (20-30 cm) zu verdichten.;130,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Fertigteil-Schacht mit Schachthals einschließlich der;6,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Dichtigkeitsprüfung Schächte;6,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Schachtabdeckung;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Leistung wie vor,;4,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Leistung wie vor,;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Anschlussleitung DN/OD 315 mm;280,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Formstück Abzweig DN/OD 315 mm in Rohrleitung einbauen:;14,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+100;Rohrleitung an Schacht anschließen, Anschluss abdich-;12,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+110;Regenwasserkanal, reinigen im Hochdruckstrahlverfahren, als Vorlauf für optische Inspektion, mit Wasserrückgewinnung, Flüssigphase rückleiten.;280,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+120;Dichtheitsprüfung Rohre;280,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+130;Optische Inspektion des Abwasserkanales gemäß Arbeitshilfen;38,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+140;Position wie zuvor, jedoch;242,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+150;Dokumentation der Inspektion als Untersuchungsbericht und als Video.;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Leitungsgraben für die Verlegung von Druckleitungen und Leerrohren ausheben.;100,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Auflager und Ummantelung für Anschlussleitungen, Versorgungleitungen, Kabel  und Schutzrohre aus Sand herstellen.;85,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Rohrschnitt an einzelnen Rohren, an Druckrohrleitungen für Druckluft, aus PE DIN 8074 und DIN 8075, PE 100, DN/OD 50, SDR 17.;10,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Druckrohr aus PE 100-RC DIN 8074 und DIN 8075 mit Schutzmantel aus PE, für Druckluft, DN/OD 50, SDR 11, mit glatten Enden, Verlegung DVGW G 472, in vorh. Graben, Bettung wird gesondert vergütet,  Verlegetiefe bis 1,25 m, Rohrverbindung durch Heizwendelschweißen, Schweißverbindung wird gesondert verg;350,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;T-Stück aus PE zum Heizelementstumpfschweißen, für Druckrohrleitung aus PE, DN/OD 50, SDR 11, für Druckluft DVGW GW 335-B2.;3,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Schweißverbindung als Heizelementstumpfschweißung, an einzelnen Rohren, an Druckrohrleitungen für Druckluft, aus PE DIN 8074 und DIN 8075, PE 100, DN/OD 50, SDR 17.;13,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Die Lei­tungs­en­den sind mit Schrumpfendkappen zu versehen Ausführung ent­spre­chend den Her­stel­ler­vor­ga­ben.;4,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;EU-Stück, einerseits mit Flansch nach EN 1092-2, andererseits mit Steckmuffe für die längskraftschlüsssige Verbindung mit PE-Rohren nach DIN 8074, PE-X-Rohren nach DIN 16893 und PVC-Rohren nach DIN 8062.;3,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Druckrohr aus duktilem Gusseisen für Wasser, DIN EN 545, DN 50, Flanschverbindung DIN EN 1092-2, PN 16, als Doppelflanschrohr,;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+100;Doppelflanschstück mit Flanschabzweig, T-Stück, für Druckrohrleitung aus duktilem Gusseisen für Trinkwasser DIN EN 545, Flansch DIN EN 1092-2, PN 16, DN 50 x 50, werkseitige Epoxidharz-Umhüllung DIN EN 14901-1, werkseitige Epoxidharz-Auskleidung DIN EN 14901-1.;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+110;Absperrschieber DIN EN 1171, weich dichtend, mit innenliegendem Spindelgewinde, aus Gusseisen EN-GJS-400-15, geeignet für Handbetätigung, Armatur mit Innen- und Außenschutz durch Emaillierung, Nenndruck 1,6 MPa (16 bar), DN 200, für Druckrohrleitung für Trinkwasser, mit einem Abgang, Abgang DN 50, V;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+120;Einbaugarnitur teleskopisch, für die Betätigung von Absperrarmaturen im erdverlegten Rohrleitungsbau, DN 50 - DN 200 mit Rundgewindeglocke zur stiftlosen Befestigung der Einbaugarnitur am Rundgewindeadapter der Absperrarmatur, DN 250 - DN 600 mit Schutzglocke, mit Flügelkappe unter Betätigungsvierka;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+130;Straßenkappe einschl. Tragplatte DIN 3580-1, höhenverstellbar, in Betonsteinpflaster/-platten, für Absperrarmatur in Wasserleitung, DIN 4056, Größe 1 S, Gehäuse und Deckel aus Gusseisen, Tragplatte aus Beton.;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+140;Innendruckprüfung DIN EN 805,;350,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+150;Trassenwarnband mit Ortungsdraht;350,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Leitungsgraben für die Verlegung von Druckleitungen und Leerrohren ausheben.;100,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Auflager und Ummantelung für Anschlussleitungen, Versorgungleitungen, Kabel  und Schutzrohre aus Sand herstellen.;85,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Rohrschnitt an einzelnen Rohren, an Druckrohrleitungen für Trinkwasser, aus PE DIN 8074 und DIN 8075, PE 100, DN/OD 32, SDR 17.;10,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;T-Stück aus PE für Druckrohrleitung aus PE, zum Heizwendelschweißen, mit integrierter Heizwendel, Rohrenden gemeinsam schweißen, für Wasser, DN/OD 32, SDR 17.;4,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Schweißverbindung als Heizwendelschweißung, an einzelnen Rohren, an Druckrohrleitungen für Wasser, aus PE DIN 8074 und DIN 8075, PE 100, DN/OD 32, SDR 17.;13,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Druckrohr aus PE 100-RC (mit Schutzeigenschaften) DIN 8074 und DIN 8075 mit Schutzmantel aus PE, für Trinkwasser, DN/OD 32, SDR 17, mit glatten Enden, Verlegung DVGW W 400-2, in vorh. Graben, Bettung wird gesondert vergütet, Verlegetiefe bis 1,25 m, Rohrverbindung durch Heizwendelschweißen, Schweißv;350,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Kugelhahn mit Volldurchgang aus duktilem Gusseisen, mit Schweißenden aus PE-Rohr DIN 8074, geeignet für Handbetätigung mit Vierkant für Gestängeverlängerung, Nenndruck 1,6 MPa (16 bar), DN 32, für Druckrohrleitung für VE-Wasser, erdverlegt, Verlegetiefe bis 1,25 m.;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Gestängeverlängerung für erdverlegte Absperrarmaturen liefern und einbauen, zur Betätigung von Kugelhähnen über Straßenkappen,;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Straßenkappe einschl. Tragplatte DIN 3580-1, höhenverstellbar, in Betonsteinpflaster/-platten, für Absperrarmatur in Wasserleitung, DIN 4056, Größe 1 S, Gehäuse und Deckel aus Gusseisen, Tragplatte aus Beton.;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+100;Die Lei­tungs­en­den sind mit Schrumpfendkappen zu versehen Ausführung ent­spre­chend den Her­stel­ler­vor­ga­ben.;4,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+110;Druckrohrleitung für VE-Trinkwasser;350,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+120;Innendruckprüfung DIN EN 805,;350,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+130;Trassenwarnband mit Ortungsdraht;350,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Leitungsgraben für die Verlegung von Druckleitungen und Leerrohren ausheben.;2,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Auflager und Ummantelung für Anschlussleitungen, Versorgungleitungen, Kabel  und Schutzrohre aus Sand herstellen.;1,5;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Rohrschnitt an einzelnen Rohren, an Druckrohrleitungen für Trinkwasser, aus PE DIN 8074 und DIN 8075, PE 100, DN/OD 32, SDR 11.;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Anbohrarmatur aus PE für Rohre aus PE DIN EN 12201-2 zum Heizwendelschweißen mit einfachem Abgang, Nenndruck 1,6 MPa (16 bar), Hauptrohr DN/OD 200, Abgang DN 32, für Trinkwasser, erdverlegt, Verlegetiefe bis 1,25 m.;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Einbaugarnitur für Erdeinbau, höhenverstellbar, für Schieber ohne Zeigerwerk, DN 50, Hülsrohr aus Kunststoff mit Hülsrohrdeckel, Schlüsselstange aus Stahl, Vierkantschoner aus Gusseisen EN-GJL, Rohrdeckung 1,25 m.;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Schweißverbindung als Heizwendelschweißung, an einzelnen Rohren, an Druckrohrleitungen für Wasser, aus PE DIN 8074 und DIN 8075, PE 100, DN/OD 32, SDR 17.;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Druckrohr aus PE 100-RC (mit Schutzeigenschaften) DIN 8074 und DIN 8075 mit Schutzmantel aus PE, für Trinkwasser, DN/OD 32, SDR 17, mit glatten Enden, Verlegung DVGW W 400-2, in vorh. Graben, abgeböscht, Bettung wird gesondert vergütet, Verlegetiefe bis 1,25 m, Rohrverbindung durch Heizwendelschweiß;5,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Straßenkappe, höhenverstellbar, für Absperrarmatur in Wasserleitung, DIN 4056, Größe 1 S, Gehäuse und Deckel aus Gusseisen, Oberflächenschutz Bitumen, heiß aufgetragen, Anpassen wird gesondert vergütet.;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Druckrohrleitung für Trinkwasser;5,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+100;Innendruckprüfung DIN EN 805,;5,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+110;Trassenwarnband mit Ortungsdraht;5,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Leitungsgraben für die Verlegung von Druckleitungen und Leerrohren ausheben.;130,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Auflager und Ummantelung für Anschlussleitungen, Versorgungleitungen, Kabel  und Schutzrohre aus Sand herstellen.;40,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Rohrschnitt an einzelnen Rohren, an Druckrohrleitungen für Trinkwasser, aus PE DIN 8074 und DIN 8075, PE 100, DN/OD 32, SDR 11.;2,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Druckrohr aus PE 100-RC (mit Schutzeigenschaften) DIN 8074 und DIN 8075 mit Schutzmantel aus PE, für Abwasser, DN/OD 90, SDR 17, mit glatten Enden, Verlegung DIN EN 1610, in vorh. Graben, abgeböscht, Bettung wird gesondert vergütet, Verlegetiefe bis 1,25 m.;130,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Schweißverbindung als Heizelementstumpfschweißung, an einzelnen Rohren, an Druckrohrleitungen für Schmutzwasser, aus PE DIN 8074 und DIN 8075, PE 100-RC, DN/OD 90, SDR 17.;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Innendruckprüfung DIN EN 805,;130,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Trassenwarnband mit Ortungsdraht;130,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Fertigteil-Schacht mit Schachthals einschließlich der;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Dichtigkeitsprüfung Schächte;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+100;Schachtabdeckung;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+110;Anschlussleitung DN/OD 160 mm;5,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+120;Zulage für das Herstellen von Polypropylen-Passrohren PP-ML.;2,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+130;Rohrleitung an Schacht anschließen, Anschluss dichten.;2,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+140;Rohrleitung an Schacht anschließen, Anschluss dichten.;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Graben für Kabel, Leerrohre oder dgl. herstellen. Straßenaufbruch wird;60,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Auflager und Ummantelung für Anschlussleitungen, Versorgungleitungen, Kabel  und Schutzrohre aus Sand herstellen.;35,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Liefern und fachgerechtes Verlegen von Mittelspannungskabeln in offener Bauweise einschließlich aller erforderlichen Nebenarbeiten.;250,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Liefern und fachgerechtes Verlegen von Niederspannungskabeln in offener Bauweise einschließlich aller erforderlichen Nebenarbeiten.;250,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Liefern und fachgerechtes Verlegen von Kabelschutzplatten als mechanischer Schutz über erdverlegten Mittelspannungskabeln und Steuerkabeln.;500,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Liefern und fachgerechtes Einbauen von Schutzplatten zur mechanischen und funktionalen Trennung zwischen Mittelspannungskabeln und parallel geführten Steuerkabeln im Kabelgraben.;250,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Trassenband liefern und verlegen.;250,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Graben für Kabel, Leerrohre oder dgl. herstellen. Straßenaufbruch wird;80,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Auflager und Ummantelung für Anschlussleitungen, Versorgungleitungen, Kabel  und Schutzrohre aus Sand herstellen.;80,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Herstellen eines Fundaments für einen konischen Stahl-Lichtmast mit Lichtpunkthöhe 8 m gemäß Mastposition, als Rohrgründung zum Einstecken des Mastes, einschließlich aller erforderlichen Nebenarbeiten.;12,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Liefern und fachgerechtes Verlegen von Niederspannungskabeln für Straßenbeleuchtungsanlagen in offener Bauweise einschließlich aller erforderlichen Nebenarbeiten.;540,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Kabelschutzrohr aus PVC-U DIN 8061, Maße DIN 16873, Nenn-Außendurchmesser 110 mm, Wanddicke 2,2 mm, mit Steckmuffe und Dichtring, 2 Rohre nebeneinander als vorgefertigtes Paket, Abstandhalter alle 1,5 m, abgerechnet wird die verlegte Länge des Rohrbündels.;20,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Herstellen eines betriebsfertigen elektrischen Anschlusses eines Beleuchtungsmastes an das verlegte Beleuchtungskabel.;12,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Lichtmast LPH 8m, Stahl verzinkt, konisch, Zopf 76 mm;12,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Mastleuchte, Vulkan V3630;12,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Liefern und fachgerechtes Verlegen von Kabelschutzplatten als mechanischer Schutz über erdverlegten Beuleuchtungskabeln;540,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+100;Trassenband liefern und verlegen.;540,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+110;Messtechnische Überprüfung des Bestandsstromkreises,;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Leitungsgraben für die Verlegung von Druckleitungen und Leerrohren ausheben.;150,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Zulage zur Herstellung des Leitungsgraben;15,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Auflager und Ummantelung für Anschlussleitungen, Versorgungleitungen, Kabel  und Schutzrohre aus Sand herstellen.;90,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Kabelschutzrohr aus PE-HD DIN 8075, Maße DIN 16874, Nenn-Außendurchmesser 160 mm, Wanddicke mind. 9,1 mm, mit Steckmuffe und Dichtring, je 4 Rohre in 3 Lagen als vorgefertigtes Paket, Abstandhalter alle 1,5 m, abgerechnet wird die verlegte Länge des Rohrbündels.;220,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Kabelschacht mit Muffenrahmen;8,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Trassenband liefern und verlegen.;440,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Wanddurchbruch in vorhandenen Schächten,;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Wanddurchbruch in vorhandenen Schächten,;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Verkehrszeichen und Verkehrseinrichtungen;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Oberboden ggf. einschließlich Vegetationsdecke abtragen;20,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Gelagerten Oberboden des AG profilgerecht andecken. Ho-;20,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Seitlich gelagerten Boden lagern.;415,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Seitlich gelagerten Boden entsorgen.;415,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Bestehende Versorgungsleitungen  freilegen und;20,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Suchgraben und Suchschlitz nach Anweisung  des AG herstellen. Abgerechnet wird nach Abtragsprofilen. Homogenbereiche nach Unterlagen des AG.;5,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Leitungsgraben für die Verlegung von Druckleitungen und Leerrohren ausheben.;80,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Zulage zur Herstellung des Leitungsgraben;10,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Auflager und Ummantelung für Anschlussleitungen, Versorgungleitungen, Kabel  und Schutzrohre aus Sand herstellen.;50,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Kabelschutzrohr aus PE-HD DIN 8075, Maße DIN 16874, Nenn-Außendurchmesser 160 mm, Wanddicke mind. 9,1 mm, mit Steckmuffe und Dichtring, je 4 Rohre in 3 Lagen als vorgefertigtes Paket, Abstandhalter alle 1,5 m, abgerechnet wird die verlegte Länge des Rohrbündels.;110,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Kabelschacht mit Muffenrahmen;4,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Trassenband liefern und verlegen.;220,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Wanddurchbruch in vorhandenen Schächten,;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Wanddurchbruch in vorhandenen Schächten,;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Leitungsgraben für die Verlegung von Druckleitungen und Leerrohren ausheben.;10,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+100;Auflager und Ummantelung für Anschlussleitungen, Versorgungleitungen, Kabel  und Schutzrohre aus Sand herstellen.;5,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+110;Kabelschutzrohr aus PE-HD DIN 8075, Maße DIN 16874, Nenn-Außendurchmesser 160 mm, Wanddicke mind. 9,1 mm, mit Steckmuffe und Dichtring, 4 Rohre nebeneinander als vorgefertigtes Paket, Abstandhalter alle 1,5 m, abgerechnet wird die verlegte Länge des Rohrbündels.;15,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+120;Trassenband liefern und verlegen.;30,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Leitungsgraben für die Verlegung von Druckleitungen und Leerrohren ausheben.;710,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Zulage zur Herstellung des Leitungsgraben;10,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Auflager und Ummantelung für Anschlussleitungen, Versorgungleitungen, Kabel  und Schutzrohre aus Sand herstellen.;360,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Kabelschutzrohr aus PE-HD DIN 8075, Maße DIN 16874, Nenn-Außendurchmesser 160 mm, Wanddicke mind. 9,1 mm, mit Steckmuffe und Dichtring, je 3 Rohre in 3 Lagen als vorgefertigtes Paket, Abstandhalter alle 1,5 m, abgerechnet wird die verlegte Länge des Rohrbündels.;105,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Kabelschutzrohr aus PE-HD DIN 8075, Maße DIN 16874, Nenn-Außendurchmesser 160 mm, Wanddicke mind. 9,1 mm, mit Steckmuffe und Dichtring, je 6 Rohre in 3 Lagen als vorgefertigtes Paket, Abstandhalter alle 1,5 m, abgerechnet wird die verlegte Länge des Rohrbündels.;355,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Kabelschacht monolithisch;13,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Kabelschacht monolithisch;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Trassenband liefern und verlegen.;920,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Verkehrszeichen und Verkehrseinrichtungen;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Oberboden ggf. einschließlich Vegetationsdecke abtragen;25,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Gelagerten Oberboden des AG profilgerecht andecken. Ho-;25,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Seitlich gelagerten Boden lagern.;100,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Seitlich gelagerten Boden entsorgen.;100,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Boden für Leitungsgraben Regenwasserkanal ausheben;265,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Zulage zur Herstellung des Leitungsgraben;10,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Graben bis 1,75m Tiefe entsprechend DIN EN 1610 verbauen,;630,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Erschwernis beim Herstellen des Leitungsgrabens aufgrund  der oberirdischen Fernwärme-Leitung.;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Leitungszone herstellen. Leitungszone aus verdichtungsfähigem Kies-Sand-Gemisch entsprechend den Vorgaben der DIN EN 1610 herstellen. Die Verfüllzon ist lagenweise (20-30 cm) zu verdichten.;100,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Fertigteil-Schacht mit Schachthals einschließlich der;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Fertigteil-Schacht mit Schachthals einschließlich der;2,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Dichtigkeitsprüfung Schächte;3,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Schachtabdeckung;3,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+100;Anschlussleitung DN/OD 315 mm;160,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+110;Formstück Abzweig DN/OD 315 mm in Rohrleitung einbauen:;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+120;Rohrleitung an Schacht anschließen, Anschluss abdich-;6,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+130;Regenwasserkanal, reinigen im Hochdruckstrahlverfahren, als Vorlauf für optische Inspektion, mit Wasserrückgewinnung, Flüssigphase rückleiten.;160,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+140;Dichtheitsprüfung Rohre;160,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+150;Optische Inspektion des Abwasserkanales gemäß Arbeitshilfen;27,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+160;Position wie zuvor, jedoch;134,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+170;Dokumentation der Inspektion als Untersuchungsbericht und als Video.;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+180;Vorh. Schachtsohle ändern für neu anzuschließenden Abwasserkanal DN/OD 315, Rinnenführung ausbilden einschl. Stemmarbeiten, Rinne und Auftritte auskleiden mit Zementestrich, lichte Schachtmaße L/B 1500/1500 mm,;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Erschwernis durch Einbauten.;3,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Schottertragschicht  herstellen.;85,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Asphaltbefestigung geradlinig trennen.;610,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Asphaltbefestigung aufbrechen, aufnehmen und entsorgen.;310,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Asphalttragschicht aus Asphalttragschichtmischgut;310,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Unterlage reinigen. Anfallendes Kehrgut der Verwertung;310,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Bitumenemulsion zur Herstellung des Schichtenverbundes;310,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;310,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Naht oder Anschluss ohne Fugenspalt in Asphaltdeck-;305,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Fugenfüllung herstellen.;305,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Einbauteile (Hydranten-, Schieberkappen) in;3,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+100;Abstumpfungsmaßnahme zur Erhöhung der Anfangsgriffig-;310,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+110;Verkehrsfläche mit einer selbstaufnehmenden Kehrmaschi-;310,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Verkehrszeichen und Verkehrseinrichtungen;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Oberboden ggf. einschließlich Vegetationsdecke abtragen;45,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Gelagerten Oberboden des AG profilgerecht andecken. Ho-;45,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Seitlich gelagerten Boden lagern.;210,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Seitlich gelagerten Boden entsorgen.;210,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Montagegruben mit den Abmessungen;15,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Montagegrube herstellen,;45,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Suchgraben und Suchschlitz nach Anweisung  des AG herstellen. Abgerechnet wird nach Abtragsprofilen. Homogenbereiche nach Unterlagen des AG.;10,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Kabel freilegen;10,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Bestehende Versorgungsleitungen  freilegen und;20,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Leitungsgraben für Versorgungsleitungen;550,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Auflager und Ummantelung für Anschlussleitungen, Versorgungleitungen, Kabel  und Schutzrohre aus Sand herstellen.;210,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Trassenwarnband mit Ortungsdraht;565,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Rohrschnitt an einzelnen Rohren, an Druckrohrleitungen für Trinkwasser, aus PE DIN 8074 und DIN 8075, PE 100, DN/OD 200, SDR 11.;10,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Druckrohr aus PE 100-RC (mit Schutzeigenschaften) DIN 8074 und DIN 8075 mit Schutzmantel aus PE, für Trinkwasser, DN/OD 200, SDR 17, in geraden Längen, mit glatten Enden, Verlegung DIN EN 805, in vorh. Graben, abgeböscht, Bettung wird gesondert vergütet, Verlegetiefe über 1,25 bis 1,75 m, Rohrverbin;565,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Zulage für Einbau Bogen 11° bis 45° mit kurzen Schweißenden.;10,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Schweißverbindung als Heizelementstumpfschweißung, an einzelnen Rohren, an Druckrohrleitungen für Wasser, aus PE DIN 8074 und DIN 8075, PE 100, DN/OD 200, SDR 17.;10,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Absperrschieber DIN EN 1171, weich dichtend, mit innenliegendem Spindelgewinde, aus Gusseisen EN-GJS-400-15, geeignet für Handbetätigung, Armatur mit Innen- und Außenschutz durch Emaillierung, Nenndruck 1,6 MPa (16 bar), DN 200, für Druckrohrleitung für Trinkwasser, mit einem Abgang, Abgang DN 200, ;13,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Einbaugarnitur teleskopisch, für die Betätigung von Absperrarmaturen im erdverlegten Rohrleitungsbau, DN 50 - DN 200 mit Rundgewindeglocke zur stiftlosen Befestigung der Einbaugarnitur am Rundgewindeadapter der Absperrarmatur, DN 250 - DN 600 mit Schutzglocke, mit Flügelkappe unter Betätigungsvierka;13,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+100;EU-Stück, einerseits mit Flansch nach EN 1092-2, andererseits mit Steckmuffe für die längskraftschlüsssige Verbindung mit PE-Rohren nach DIN 8074, PE-X-Rohren nach DIN 16893 und PVC-Rohren nach DIN 8062.;11,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+110;Form- und Verbindungsstück in Druckrohrleitungen aus duktilem Gußeisen:;6,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+120;Form- und Verbindungsstück in Druckrohrleitungen aus duktilem Gußeisen:;5,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+130;Doppelflanschstück mit Flanschabzweig, T-Stück, für Druckrohrleitung aus duktilem Gusseisen für Trinkwasser DIN EN 545, Flansch DIN EN 1092-2, PN 16, DN 200 x 200, werkseitige Epoxidharz-Umhüllung DIN EN 14901-1, werkseitige Epoxidharz-Auskleidung DIN EN 14901-1.;2,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+140;Doppelflanschstück mit Flanschabzweig, T-Stück, für Druckrohrleitung aus duktilem Gusseisen für Trinkwasser DIN EN 545, Flansch DIN EN 1092-2, PN 16, DN 200 x 100, werkseitige Epoxidharz-Umhüllung DIN EN 14901-1, werkseitige Epoxidharz-Auskleidung DIN EN 14901-1.;5,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+150;Flanschbogen 90° in Druckrohrleitungen aus duktilem Gußeisen:;5,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+160;Überflurhydrant DIN EN 14384, PN 16, Kennbuchstabe A (mit Sollbruchstelle, mit Entleerung), DN 100, für Druckrohrleitung für Trinkwasser, erdverlegt, Rohrdeckung 1 m.;5,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+170;Bedarfsposition;30,0;kg;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+180;Straßenkappe, höhenverstellbar, für Absperrarmatur in Wasserleitung, DIN 4056, Größe 1 S, Gehäuse und Deckel aus Gusseisen, Oberflächenschutz Bitumen, heiß aufgetragen, Anpassen wird gesondert vergütet.;13,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+190;Anschließen / Einbinden der neu verlegten Wasserleitung aus PE, bis DN 200, an das vorhandene Rohrnetz.;2,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+200;Druckrohrleitung für Trinkwasser;565,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+210;Innendruckprüfung DIN EN 805,;565,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Erschwernis durch Einbauten.;5,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Schottertragschicht  herstellen.;115,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Asphaltbefestigung geradlinig trennen.;660,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Asphaltbefestigung aufbrechen, aufnehmen und entsorgen.;250,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Asphalttragschicht aus Asphalttragschichtmischgut;250,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Unterlage reinigen. Anfallendes Kehrgut der Verwertung;250,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Bitumenemulsion zur Herstellung des Schichtenverbundes;250,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;250,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Naht oder Anschluss ohne Fugenspalt in Asphaltdeck-;330,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Fugenfüllung herstellen.;330,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Einbauteile (Hydranten-, Schieberkappen) in;5,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+100;Abstumpfungsmaßnahme zur Erhöhung der Anfangsgriffig-;250,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+110;Verkehrsfläche mit einer selbstaufnehmenden Kehrmaschi-;250,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Verkehrszeichen und Verkehrseinrichtungen;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Behelfsüberfahrt;5,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Fußgängerhilfsbrücken (Grabenbrücken) herstellen, für die Dauer der Baumaßnahme vorhalten, mehrfach umstellen und beseitigen.;5,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Oberboden ggf. einschließlich Vegetationsdecke abtragen;155,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Gelagerten Oberboden des AG profilgerecht andecken. Ho-;155,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Seitlich gelagerten Boden lagern.;280,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Seitlich gelagerten Boden entsorgen.;280,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Montagegruben mit den Abmessungen;5,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Suchgraben und Suchschlitz nach Anweisung  des AG herstellen. Abgerechnet wird nach Abtragsprofilen. Homogenbereiche nach Unterlagen des AG.;10,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Bestehende Versorgungsleitungen  freilegen und;30,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Kabel freilegen;50,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Graben für Kabel, Leerrohre oder dgl. herstellen. Straßenaufbruch wird;530,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Graben für Kabel, Leerrohre oder dgl. herstellen. Straßenaufbruch wird;40,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Auflager und Ummantelung für Anschlussleitungen, Versorgungleitungen, Kabel  und Schutzrohre aus Sand herstellen.;280,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Liefern und fachgerechtes Verlegen von Mittelspannungskabeln in offener Bauweise einschließlich aller erforderlichen Nebenarbeiten.;2040,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Liefern und fachgerechtes Verlegen von Niederspannungskabeln in offener Bauweise einschließlich aller erforderlichen Nebenarbeiten.;2040,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Kabelschutzrohr aus PE-HD DIN 8075, Maße DIN 16874, Nenn-Außendurchmesser 160 mm, Wanddicke mind. 9,1 mm, mit Steckmuffe und Dichtring, 5 Rohre nebeneinander als vorgefertigtes Paket, Abstandhalter alle 1,5 m, abgerechnet wird die verlegte Länge des Rohrbündels.;50,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Kabelschutzrohr aus PE-HD DIN 8075, Maße DIN 16874, Nenn-Außendurchmesser 110 mm, Wanddicke mind. 6,3 mm, mit Steckmuffe und Dichtring, 4 Rohre nebeneinander als vorgefertigtes Paket, Abstandhalter alle 1,5 m, abgerechnet wird die verlegte Länge des Rohrbündels.;10,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Kabelschutzrohr aus PE-HD DIN 8075, Maße DIN 16874, Nenn-Außendurchmesser 110 mm, Wanddicke mind. 6,3 mm, mit Steckmuffe und Dichtring, je 4 Rohre in 2 Lagen als vorgefertigtes Paket, Abstandhalter alle 1,5 m, abgerechnet wird die verlegte Länge des Rohrbündels.;20,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Kabel fachgerecht in ein vorhandenes Kabelschutzrohr DN 110 einziehen. Einschließlich Bereitstellung und Einsatz aller erforderlichen Einziehhilfen (z. B. Einziehband, Zugstrumpf, Gleitmittel), Herstellen und Lösen der Zugeinrichtung, Einhaltung der zulässigen Zugkräfte und Biegeradien gemäß Herstel;40,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+100;Kabel fachgerecht in ein vorhandenes Kabelschutzrohr DN 160 einziehen. Einschließlich Bereitstellung und Einsatz aller erforderlichen Einziehhilfen (z. B. Einziehband, Zugstrumpf, Gleitmittel), Herstellen und Lösen der Zugeinrichtung, Einhaltung der zulässigen Zugkräfte und Biegeradien gemäß Herstel;200,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+110;Liefern und fachgerechtes Verlegen von Kabelschutzplatten als mechanischer Schutz über erdverlegten Mittelspannungskabeln und Steuerkabeln.;2040,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+111;Liefern und fachgerechtes Verlegen von Kabelschutzplatten als mechanischer Schutz über erdverlegten Steuerkabeln.;665,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+120;Liefern und fachgerechtes Einbauen von Schutzplatten zur mechanischen und funktionalen Trennung zwischen Mittelspannungskabeln und parallel geführten Steuerkabeln im Kabelgraben.;670,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+130;Trassenband liefern und verlegen.;2040,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Ringraumdichtung für Mittelspannungskabel liefern und montieren;4,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Ringraumdichtung für vier Steuerkabel NYCY 5×2,5 re/2,5 liefern und montieren;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Wie in vorheriger Aus­füh­rungs­be­schrei­bung auf­ge­führt je­doch:;4,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Wie in vorheriger Aus­füh­rungs­be­schrei­bung auf­ge­führt je­doch:;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Schottertragschicht  herstellen.;25,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Asphaltbefestigung geradlinig trennen.;95,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Asphaltbefestigung aufbrechen, aufnehmen und entsorgen.;50,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Asphalttragschicht aus Asphalttragschichtmischgut;50,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Unterlage reinigen. Anfallendes Kehrgut der Verwertung;50,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Bitumenemulsion zur Herstellung des Schichtenverbundes;50,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;50,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Naht oder Anschluss ohne Fugenspalt in Asphaltdeck-;50,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Fugenfüllung herstellen.;50,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Abstumpfungsmaßnahme zur Erhöhung der Anfangsgriffig-;50,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+100;Verkehrsfläche mit einer selbstaufnehmenden Kehrmaschi-;50,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Verkehrszeichen und Verkehrseinrichtungen;1,0;psch;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Oberboden ggf. einschließlich Vegetationsdecke im Bereich des neuen Trafostandortes sowie der Kabeltrassen abtragen;50,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Gelagerten Oberboden des AG profilgerecht andecken. Ho-;50,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Boden aus Abtragsbereichen für den neuen Trfostandort lösen und zum Abtransport laden.;5,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+40;Planum herstellen.;10,0;m2;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Seitlich gelagerten Boden aus Aushub der Leitungsgräben und des neuen Trafostandortes lagern.;100,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Seitlich gelagerten Boden entsorgen.;100,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Schottertragschicht  herstellen.;5,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Leitungsgraben für Versorgungsleitungen;215,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;Auflager und Ummantelung für Anschlussleitungen, Versorgungleitungen, Kabel  und Schutzrohre aus Sand herstellen.;95,0;m3;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Fachgerechtes Freilegen und Trennen von bestehenden und neu verlegten Niederspannungskabeln.;5,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+50;Liefern und fachgerechtes Verlegen von Niederspannungskabeln in offener Bauweise einschließlich aller erforderlichen Nebenarbeiten.;275,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+60;Liefern und fachgerechtes Verlegen von Niederspannungskabeln in offener Bauweise einschließlich aller erforderlichen Nebenarbeiten.;85,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+70;Kabel fachgerecht in ein vorhandenes Kabelschutzrohr DN 110 einziehen. Einschließlich Bereitstellung und Einsatz aller erforderlichen Einziehhilfen (z. B. Einziehband, Zugstrumpf, Gleitmittel), Herstellen und Lösen der Zugeinrichtung, Einhaltung der zulässigen Zugkräfte und Biegeradien gemäß Herstel;135,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+80;Liefern und fachgerechtes Verlegen von Mittelspannungskabeln in offener Bauweise einschließlich aller erforderlichen Nebenarbeiten.;155,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+90;Kabel fachgerecht in ein vorhandenes Kabelschutzrohr DN 110 einziehen. Einschließlich Bereitstellung und Einsatz aller erforderlichen Einziehhilfen (z. B. Einziehband, Zugstrumpf, Gleitmittel), Herstellen und Lösen der Zugeinrichtung, Einhaltung der zulässigen Zugkräfte und Biegeradien gemäß Herstel;30,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+100;Liefern und fachgerechtes Verlegen von Niederspannungskabeln in offener Bauweise einschließlich aller erforderlichen Nebenarbeiten.;155,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+110;Kabelschutzrohr aus PE-HD DIN 8075, Maße DIN 16874, Nenn-Außendurchmesser 110 mm, Wanddicke mind. 6,3 mm, mit Steckmuffe und Dichtring, 4 Rohre nebeneinander als vorgefertigtes Paket, Abstandhalter alle 1,5 m, abgerechnet wird die verlegte Länge des Rohrbündels.;20,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+120;Liefern und fachgerechtes Einbauen einer Kabelverbindungsmuffe zum Verbinden eines vorhandenen mit einem neu verlegten Niederspannungskabel einschließlich aller erforderlichen Materialien und Nebenleistungen.;2,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+130;Liefern und fachgerechtes Einbauen einer Kabelverbindungsmuffe zum Verbinden eines vorhandenen mit einem neu verlegten Niederspannungskabel einschließlich aller erforderlichen Materialien und Nebenleistungen.;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+150;Liefern und fachgerechtes Einbauen einer Kabelverbindungsmuffe zum Verbinden eines vorhandenen mit einem neu verlegten Steuerkabel einschließlich aller erforderlichen Materialien und Nebenleistungen.;2,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+160;Vorhandenes Niederspannungskabel freilegen, aufnehmen und in neuer Lage im vorhandenen Kabelgraben verlegen.;25,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+170;Vorhandenes Lichtwellenleiterkabel (LWL) freilegen, aufnehmen und in neuer Lage im vorhandenen Kabelgraben verlegen.;20,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+180;Liefern und fachgerechtes Verlegen von Kabelschutzplatten als mechanischer Schutz über erdverlegten Mittelspannungskabeln und Steuerkabeln.;155,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+181;Liefern und fachgerechtes Verlegen von Kabelschutzplatten als mechanischer Schutz über erdverlegten Steuerkabeln.;80,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+190;Liefern und fachgerechtes Einbauen von Schutzplatten zur mechanischen und funktionalen Trennung zwischen Mittelspannungskabeln und parallel geführten Steuerkabeln im Kabelgraben.;155,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+200;Trassenband liefern und verlegen.;530,0;m;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+210;Vorhandenes bzw. verlegtes Mittelspannungskabel an einer Trafostation fachgerecht anschließen. Einschließlich Ablängen, Vorbereiten des Kabels, Herstellen und Montieren der Endverschlüsse, Anschließen an die Schaltanlage gemäß Herstellerangaben, Erdungs- und Schirmanschlüsse, Kennzeichnung sowie all;2,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+220;Vorhandenes bzw. verlegtes Steuerkabel an der Trafostation fachgerecht auf Klemmen auflegen und anschließen. Einschließlich Abmanteln, Aderkennzeichnung, Anschließen sämtlicher Adern gemäß Klemmenplan, Kennzeichnen sowie aller erforderlichen Nebenleistungen.;2,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+230;Vorhandenes bzw. verlegtes Niederspannungskabel an der Niederspannungsverteilung einer Trafostation fachgerecht anschließen. Einschließlich Ablängen, Abmanteln, Herstellen der Kabelenden, Lieferung und Montage erforderlicher Kabelschuhe und Kleinteile, Anschließen, Kennzeichnen sowie sämtlicher Nebe;11,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+240;Vorhandenes bzw. verlegtes LWL-Kabel in der Trafostation fachgerecht anschließen. Einschließlich Ablängen, Vorbereitung des Kabels, Einführen in Spleißbox bzw. Patchpanel, Spleißen sämtlicher Fasern, Ablage der Spleiße, Lieferung erforderlicher Spleißschutzmaterialien, Dämpfungsmessung, Kennzeichnun;2,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+250;Vorhandenen freistehenden Kabelverteilerschrank/Schaltschrank im Außenbereich an einer Trafostation außer Betrieb nehmen, gegen Wiedereinschalten sichern und nach Freigabe durch den Auftraggeber bzw. Netzbetreiber aufnehmen.;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+10;Kompakttrafostation einschließlich eingebautem Transformator mittels Mobilkran aufnehmen und an neuen Standort versetzen.;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+20;"Zulage zur Position ""Trafostation umsetzen"" für erforderliches Umsetzen des Mobilkrans einschließlich erneutem Rüsten und Abstützen.";1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83
+30;Zulage für einmaliges Zwischenabsetzen der Trafostation infolge örtlicher Gegebenheiten.;1,0;St;gaeb;leistungsbeschreibungen/0359-VBA-LV.X83

@@ -1,0 +1,292 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Sicherungskasten EK480 mit Überspannungsableiter;14,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;LIQ 50N-AB2L-LR/4600-740 6G1 ET 7815840;14,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;Kontrollmessung und Protokollierung;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Mantelleitung NYY-J 3 x 4mm²;250,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;LSA+ Leiste liefern/einbauen;8,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Fernmeldekabel 50X2X0,8 zurückziehen;100,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;Fernmeldekabel A-2Y(L)2Y 50X2X0,8 ST III Bd;110,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Fernmeldekabel 50X2X0,8 absetzen;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;Fernmeldekabel 50X2X0,8 auflegen;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+6;Fernmeldekabel 26X2X0,8 zurückziehen;100,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+7;Fernmeldekabel A-2Y(L)2Y 26X2X0,8 ST III Bd;110,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+8;Fernmeldekabel 26X2X0,8 absetzen;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+9;Fernmeldekabel 26X2X0,8 auflegen;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+10;Fernmeldekabel durchverbinden;76,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+11;Fernmelde Kabelmuffe herstellen;2,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+12;Prüfen der Adern;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;LWL-Kabel 20G-30E LWL-Kabel 20G-30E zurückziehen;90,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;LWL-Kabel 20G-30E liefern/ verlegen;100,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;LWL-Kabel 4G-6E zurückziehen;90,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;LWL-Kabel 20G-30E liefern/ verlegen;100,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;LWL-Kabel absetzen und vorbereiten;4,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+6;LWL-Muffe;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+7;LWL-Pigtail OS2 mit E2000-PC-Stecker liefern und im Baugruppenträger einbauen;36,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+8;LWL-Pigtail OM2 mit E2000-PC-Stecker liefern/einbauen;24,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+9;LWL-Spleiß erstellen;120,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+10;Lichtwellenleiter - Kontrollmessung;120,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+11;Dokumentation erstellen/liefern;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Stundenlohnarbeiten - Normalstunden (Monteur);35,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Stundenlohnarbeiten - Normalstunden (Helfer);35,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;Nachtarbeitszulage auf Stundenbasis (Monteur);35,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Stundenlohnarbeiten - Nachtzulage (Helfer);35,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Umverdrahtung der Bestandsverteilung;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Sicherungslasttrenner dreipol. D02 (MNIZED) berührungs-;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;Sicherungslasttrenner einpol. D02 (MNIZED);1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Leitungsschutzschalter 10 A Charakteristik B 230V AC;5,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;Leitungsschutzschalter 13 A Charakteristik B 230V AC;11,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+6;Leitungsschutzschalter 16 A Charakteristik B 230V AC;8,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+7;Installationsschütz mit 4 Schließern, und Hilfsschalter;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+8;Digital einstellb. Multifunktions-Stromstoß-Schaltrelais;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+9;Gruppenschalter I-0-II (Hand-0-Automatik) zum Ansteuern;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+10;Modularer Überspannungsableiter als Kombiableiter;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+11;FI/LS-Schalter (RCBOs);3,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+12;FI/LS- Kombination;3,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+13;Potentialschutzeinrichtung;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+14;Meldetrennklemmen 1-pol. Zugfeder Reihenklemmen kompl;40,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+15;Meldetrennklemmen 1-pol. Zugfeder Reihenklemmen kompl;40,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Sicherungskasten EK480 mit Überspannungsableiter;9,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Konischer Stahlrohrlichtmast Lichtpunkthöhe 5 m;9,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;LIQ 50N-AB2L-LR/4600-740 6G1 ET 7815840;9,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Kontrollmessung und Protokollierung;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;Mantelleitung NYY-J 3 x 2,5mm²;100,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+6;Mantelleitung NYY-J 3 x 4mm²;800,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+7;Mantelleitung NYY-J 5 x 16mm²;150,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+8;Mantelleitung NYY-J 1 x 70mm²;400,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+9;Mantelleitung NYY-O 1 x 70mm²;250,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+10;Erdungsanschlusspunkt;6,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+11;Erdungsanschlusspunkt;3,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+12;Tiefenerder;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+13;Mehr/Minderkosten je Meter;30,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+14;Kabelverschraubung M50;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+15;Kabelverschraubung M25;30,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+16;Kabelverschraubung M32;10,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+17;Kunststoffkabelmarker;55,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Stundenlohnarbeiten Monteur (Normalstunden) zur;30,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Stundenlohnarbeiten Helfer (Normalstunden) zur;30,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Monteurstunden auf Nachweis;30,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Helferstunden auf Nachweis;30,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Hutschienen-Patchpanel inkl. 6 Keystonemodule liefern/montieren;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Ethernetkabel CAT7 FTP S/FTP) anlegen;5,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Fernsprechkabel A-2Y(L) 2x2x0,8mm² St. III Bd.;230,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Fernsprechkabel A-2Y(L)2Y  2x2x0,8mm² ST III Bd anlegen;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;Fernmeldekabel A-2Y(L)2Y 10x2x0,6 ST III Bd;430,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Fernmeldekabel A-2Y(L)2Y 10x2x0,6 ST III Bd anlegen;5,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;Ethernet Außenkabel CAT7 S/FTP liefern/verlegen;250,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+6;Vorkonfektioniertes MPO Kabel liefern/ verlegen;180,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;DIN-Schienen-Modul DRM45;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Ethernetkabel CAT7 FTP (F/UTP) anlegen;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;Videokamera demontieren/montieren;2,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Kamera Mastkonsole;2,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;19 Zoll Montageplatte 5HE liefern;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+6;48 V Netzteil liefern/montieren;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+7;SFP+ Modul Universal Transceiver A liefern;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+8;SFP+ Modul Universal Transceiver A liefern;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Montage der Komponenten Anbindesäule;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Medienkonverter/ POE injektor;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;56V Industrienetzteil 65W liefern/montieren;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;MPO Modul 12 x LC APC;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;DIN-Schienen-Modul DRM45;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+6;Ethernetkabel CAT6 FTP (F/UTP) anlegen;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+7;Schutzkontaktsteckdosen liefern/montieren;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;J-Y(St)Y kabel 2x2x0 8mm² liefern/verlegen;50,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Lautsprecher liefern/ montieren;2,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;Halterung für Lautsprecher liefern/montieren;2,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Set Gießharz Y-Verbindungsgarnitur liefern;2,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;Montage Gießharzmuffe;2,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Stundenlohnarbeiten - Normalstunden (Monteur);35,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Stundenlohnarbeiten - Normalstunden (Helfer);35,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;Nachtarbeitszulage auf Stundenbasis (Monteur);35,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Stundenlohnarbeiten - Nachtzulage (Helfer);35,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Niederspannungsverteilung;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Zählerplatz für EHZ mit Hausanschlusstrenner NH00,;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;Sicherungslasttrenner dreipol. D02 (MNIZED) berührungs-;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Sicherungslasttrenner einpol. D02 (MNIZED);1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;Leitungsschutzschalter 10 A Charakteristik B 230V AC;5,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+6;Leitungsschutzschalter 13 A Charakteristik B 230V AC;11,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+7;Leitungsschutzschalter 16 A Charakteristik B 230V AC;8,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+8;Installationsschütz mit 4 Schließern, und Hilfsschalter;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+9;Digital einstellb. Multifunktions-Stromstoß-Schaltrelais;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+10;Gruppenschalter I-0-II (Hand-0-Automatik) zum Ansteuern;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+11;Modularer Überspannungsableiter als Kombiableiter;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+12;Steckdose 2-pol. + PE, 230V/16 A als Reiheneinbaugerät;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+13;RC- Kombination 6 µF/15k,1W Keramik lasiert, 450V;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+14;FI/LS-Schalter (RCBOs);3,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+15;FI/LS- Kombination;3,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+16;Potentialschutzeinrichtung;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+17;Meldetrennklemmen 1-pol. Zugfeder Reihenklemmen kompl;40,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+18;Meldetrennklemmen 1-pol. Zugfeder Reihenklemmen kompl;40,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Sicherungskasten EK480 mit Überspannungsableiter;6,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Konischer Stahlrohrlichtmast Lichtpunkthöhe 5 m;6,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;LIQ 50N-AB2L-LR/4600-740 6G1 ET 7815840;6,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Kontrollmessung und Protokollierung;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;Mantelleitung NYY-J 3 x 2,5mm²;100,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+6;Mantelleitung NYY-J 3 x 4mm²;700,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+7;Mantelleitung NYY-J 1 x 70mm²;200,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+8;Mantelleitung NYY-O 1 x 70mm²;150,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+9;Erdungsanschlusspunkt;6,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+10;Erdungsanschlusspunkt;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+11;Tiefenerder;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+12;Mehr/Minderkosten je Meter;30,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+13;Kabelverschraubung M50;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+14;Kabelverschraubung M25;30,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+15;Kabelverschraubung M32;10,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+16;Kunststoffkabelmarker;55,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Stundenlohnarbeiten Monteur (Normalstunden) zur;30,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Stundenlohnarbeiten Helfer (Normalstunden) zur;30,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Monteurstunden auf Nachweis;30,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Helferstunden auf Nachweis;30,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Kabelverteilerschrank - KVZ Stromversorgung (ENS);1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Kabelverteilerschrank - KVZ Nachrichtentechnik (NT);1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;Aufbau Montageplatte KVZ Almatec Typ 7114;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Lieferung und Transport KVZ (NT);1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;Erdungsanschlusspunkt;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+6;Erdungsanschlusspunkt KS (V2A);6,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+7;Sockel für Kabelverteilerschrank -KVZ  (NT);1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+8;Sockel für Kabelverteilerschrank -KVZ  (ENS);1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+9;Flanschplatte liefern/einbauen;5,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+10;Kabelverschraubungen liefern/einbauen;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+11;Hutschienen-Patchpanel inkl. 6 Keystonemodule liefern/montieren;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+12;Ethernetkabel CAT7 FTP S/FTP) anlegen;5,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+13;Schutzkontaktsteckdosen liefern/montieren;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+14;Dokumentation erstellen/liefern;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;LSA+ Montagewanne liefern/ einbauen;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;LSA+ Leiste liefern/einbauen;5,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;Fernmeldekabel 50X2X0,8 ablegen;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Fernmeldekabel 50X2X0,8 zurückziehen;20,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;Fernmeldekabel 50X2X0,8 absetzen;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+6;Fernmeldekabel durchverbinden;60,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+7;Fernmelde Kabelmuffe herstellen;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+8;Fernmeldekabel A-2Y(L)2Y 20x2x0,8 ST III Bd liefern/verlegen;25,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+9;Fernmeldekabel 20X2X0,8 absetzen (beidseitig);1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+10;Fernmeldekabel 20X2X0,8 auflegen;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+11;Prüfen der Adern;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;LWL-Kabel 20G-30E LWL-Kabel 20G-30E zurückziehen;20,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;A-DQ(ZN)2Y 48E 9u/125OS2 liefern/verlegen;25,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;LWL-Kabel absetzen und vorbereiten;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;"19"" Baugruppenträger (BGT)";1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;"19"" Überführungsschublade / Ablagemodul zur Ablage der";1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+6;"19"" 1HE Rangierkabelkassette";1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+7;Fiber Modul  / BGT-Einschub in Kompaktbauweise liefern/montieren;4,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+8;LWL-Muffe;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+9;LWL-Spleiß erstellen;122,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+10;Lichtwellenleiter - Kontrollmessung;122,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+11;Dokumentation erstellen/liefern;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Patchkabel LC/APC 1m;12,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Patchkabel LC/APC 1m Duplex;12,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;Patchkabel LC/APC 2m;6,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Patchkabel LC/APC 2m Duplex;6,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;Patchkabel LC/APC - LC/PC 4m Hybrid;6,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+6;Patchkabel LC/APC - LC/PC 4m Hybrid Duplex;6,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Fernsprechkabel A-2Y(L) 2x2x0,8mm² St. III Bd.;115,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Fernsprechkabel A-2Y(L)2Y  2x2x0,8mm² ST III Bd anlegen;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;Fernmeldekabel A-2Y(L)2Y 10x2x0,6 ST III Bd;240,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Fernmeldekabel A-2Y(L)2Y 10x2x0,6 ST III Bd anlegen;5,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;Ethernet Außenkabel CAT7 S/FTP liefern/verlegen;380,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Videokamera demontieren/montieren;2,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Kamera Mastkonsole;2,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;19 Zoll Montageplatte 5HE liefern;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;48 V Netzteil liefern/montieren;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;J-Y(St)Y kabel 2x2x0 8mm² liefern/verlegen;50,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Lautsprecher liefern/ montieren;2,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;Halterung für Lautsprecher liefern/montieren;2,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Set Gießharz Y-Verbindungsgarnitur liefern;2,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;Montage Gießharzmuffe;2,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Stundenlohnarbeiten - Normalstunden (Monteur);35,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Stundenlohnarbeiten - Normalstunden (Helfer);35,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Niederspannungsverteilung;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Zählerplatz für EHZ mit Hausanschlusstrenner NH00,;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;Sicherungslasttrenner dreipol. D02 (MNIZED) berührungs-;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Sicherungslasttrenner einpol. D02 (MNIZED);1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;Leitungsschutzschalter 10 A Charakteristik B 230V AC;5,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+6;Leitungsschutzschalter 13 A Charakteristik B 230V AC;11,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+7;Leitungsschutzschalter 16 A Charakteristik B 230V AC;8,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+8;Installationsschütz mit 4 Schließern, und Hilfsschalter;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+9;Digital einstellb. Multifunktions-Stromstoß-Schaltrelais;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+10;Gruppenschalter I-0-II (Hand-0-Automatik) zum Ansteuern;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+11;Modularer Überspannungsableiter als Kombiableiter;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+12;Steckdose 2-pol. + PE, 230V/16 A als Reiheneinbaugerät;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+13;RC- Kombination 6 µF/15k,1W Keramik lasiert, 450V;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+14;FI/LS-Schalter (RCBOs);3,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+15;FI/LS- Kombination;3,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+16;Potentialschutzeinrichtung;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+17;Meldetrennklemmen 1-pol. Zugfeder Reihenklemmen kompl;40,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+18;Meldetrennklemmen 1-pol. Zugfeder Reihenklemmen kompl;40,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Sicherungskasten EK480 mit Überspannungsableiter;8,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Konischer Stahlrohrlichtmast Lichtpunkthöhe 5 m;8,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;LIQ 50N-AB2L-LR/4600-740 6G1 ET 7815840;8,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Kontrollmessung und Protokollierung;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;Mantelleitung NYY-J 3 x 2,5mm²;100,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+6;Mantelleitung NYY-J 3 x 4mm²;750,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+7;Mantelleitung NYY-J 1 x 70mm²;200,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+8;Mantelleitung NYY-O 1 x 70mm²;150,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+9;Erdungsanschlusspunkt;6,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+10;Erdungsanschlusspunkt;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+11;Tiefenerder;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+12;Mehr/Minderkosten je Meter;30,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+13;Kabelverschraubung M50;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+14;Kabelverschraubung M25;30,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+15;Kabelverschraubung M32;10,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+16;Kunststoffkabelmarker;55,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Stundenlohnarbeiten Monteur (Normalstunden) zur;30,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Stundenlohnarbeiten Helfer (Normalstunden) zur;30,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Monteurstunden auf Nachweis;30,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Helferstunden auf Nachweis;30,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Kabelverteilerschrank - KVZ Stromversorgung (ENS);1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Kabelverteilerschrank - KVZ Nachrichtentechnik (NT);1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;Aufbau Montageplatte KVZ Almatec Typ 7114;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Lieferung und Transport KVZ (NT);1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;Erdungsanschlusspunkt;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+6;Erdungsanschlusspunkt KS (V2A);6,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+7;Sockel für Kabelverteilerschrank -KVZ  (NT);1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+8;Sockel für Kabelverteilerschrank -KVZ  (ENS);1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+9;"Flanschplatte Metall vorgeprägt; Gr.5; IP66;";5,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+10;Die gelieferten und eingebauten Flanschplatten müssen;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+11;Hutschienen-Patchpanel inkl. 6 Keystonemodule liefern/montieren;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+12;Ethernetkabel CAT7 FTP S/FTP) anlegen;5,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+13;Schutzkontaktsteckdosen liefern/montieren;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+14;Dokumentation erstellen/liefern;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;LSA+ Montagewanne liefern/ einbauen;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;LSA+ Leiste liefern/einbauen;5,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;Fernmeldekabel 50X2X0,8 ablegen;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Fernmeldekabel 50X2X0,8 zurückziehen;20,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;Fernmeldekabel 50X2X0,8 absetzen;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+6;Fernmeldekabel durchverbinden;60,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+7;Fernmelde Kabelmuffe herstellen;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+8;Fernmeldekabel A-2Y(L)2Y 20x2x0,8 ST III Bd liefern/verlegen;25,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+9;Fernmeldekabel 20X2X0,8 absetzen (beidseitig);1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+10;Fernmeldekabel 20X2X0,8 auflegen;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+11;Prüfen der Adern;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;LWL-Kabel 20G-30E LWL-Kabel 20G-30E zurückziehen;20,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;A-DQ(ZN)2Y 48E 9u/125OS2 liefern/verlegen;25,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;LWL-Kabel absetzen und vorbereiten;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;"19"" Baugruppenträger (BGT)";1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;"19"" Überführungsschublade / Ablagemodul zur Ablage der";1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+6;"19"" 1HE Rangierkabelkassette";1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+7;Fiber Modul  / BGT-Einschub in Kompaktbauweise liefern/montieren;4,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+8;LWL-Muffe;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+9;LWL-Spleiß erstellen;122,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+10;Lichtwellenleiter - Kontrollmessung;122,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+11;Dokumentation erstellen/liefern;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Patchkabel LC/APC 1m;12,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Patchkabel LC/APC 1m Duplex;12,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;Patchkabel LC/APC 2m;6,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Patchkabel LC/APC 2m Duplex;6,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;Patchkabel LC/APC - LC/PC 4m Hybrid;6,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+6;Patchkabel LC/APC - LC/PC 4m Hybrid Duplex;6,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Fernsprechkabel A-2Y(L) 2x2x0,8mm² St. III Bd.;135,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Fernsprechkabel A-2Y(L)2Y  2x2x0,8mm² ST III Bd anlegen;2,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;Fernmeldekabel A-2Y(L)2Y 10x2x0,6 ST III Bd;265,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Fernmeldekabel A-2Y(L)2Y 10x2x0,6 ST III Bd anlegen;5,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;Ethernet Außenkabel CAT7 S/FTP liefern/verlegen;430,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Videokamera demontieren/montieren;2,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Kamera Mastkonsole;2,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;19 Zoll Montageplatte 5HE liefern;1,0;St;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;48 V Netzteil liefern/montieren;1,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;J-Y(St)Y kabel 2x2x0 8mm² liefern/verlegen;50,0;m;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Lautsprecher liefern/ montieren;2,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+3;Halterung für Lautsprecher liefern/montieren;2,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+4;Set Gießharz Y-Verbindungsgarnitur liefern;2,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+5;Montage Gießharzmuffe;2,0;LE;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+1;Stundenlohnarbeiten Monteur (Normalstunden) für;35,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83
+2;Stundenlohnarbeiten Helfer (Normalstunden) für;35,0;h;gaeb;leistungsbeschreibungen/V_01_ENS_NT_Kabel_HST_WAE_BSE_POK.x83

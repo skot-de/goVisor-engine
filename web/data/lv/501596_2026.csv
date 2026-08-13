@@ -1,0 +1,178 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;DN 70;6,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+20;DN 100;18,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+30;DN 32;138,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+40;DN 50;220,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+50;DN 70;30,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+60;DN 100;172,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+70;Bogen DN 32 bis 45° PP Abwasser Schalldämmung/Tauwasserschutz;62,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+80;Bogen DN 50 bis 45° PP Abwasser Schalldämmung/Tauwasserschutz;260,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+90;Bogen DN 70 bis 45° PP Abwasser Schalldämmung/Tauwasserschutz;25,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+100;Bogen DN 100 bis 45° PP Abwasser Schalldämmung/Tauwasserschutz;200,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+110;Bogen DN 32 größer 45° PP Abwasser Schalldämmung/Tauwasserschutz;12,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+120;Bogen DN 50 größer 45° PP Abwasser Schalldämmung/Tauwasserschutz;110,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+130;Bogen DN 70 größer 45° PP Abwasser Schalldämmung/Tauwasserschutz;4,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+140;Bogen DN 100 größer 45° PP Abwasser Schalldämmung/Tauwasserschutz;20,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+150;Abzweig DN 32 PP Abwasser Schalldämmung/Tauwasserschutz;6,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+160;Abzweig DN 50 PP Abwasser Schalldämmung/Tauwasserschutz;15,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+170;Abzweig DN 70 PP Abwasser Schalldämmung/Tauwasserschutz;6,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+180;Abzweig DN 100 PP Abwasser Schalldämmung/Tauwasserschutz;65,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+190;DN 32;12,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+200;DN 50;40,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+210;DN 70;7,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+220;DN 100;24,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+230;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen DN 32;30,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+240;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen DN 50;50,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+250;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen DN 70;6,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+260;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen DN 100;35,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+10;DN 12;64,2;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+20;DN 15;240,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+30;DN 20;264,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+40;DN 25;109,2;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+50;DN 32;18,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+60;DN 40;2,4;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+70;Dämmung von Bogen 90° DN 12;65,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+80;Dämmung von Bogen 90° DN 15;380,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+90;Dämmung von Bogen 90° DN 20;330,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+100;Dämmung von Bogen 90° DN 25;125,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+110;Dämmung von Bogen 90° DN 32;15,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+120;Dämmung von Bogen 90° DN 40;5,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+130;Dämmung von T-Stück DN 12;1,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+140;Dämmung von T-Stück DN 15;27,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+150;Dämmung von T-Stück DN 20;31,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+160;Dämmung von T-Stück DN 25;12,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+170;Dämmung von T-Stück DN 32;5,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+180;Dämmung von T-Stück DN 40;1,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+190;16mm;36,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+200;20mm;31,2;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+210;25mm;15,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+220;Dämmung von Bogen 90° Ø16 mm;25,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+230;Dämmung von Bogen 90° Ø20 mm;120,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+240;Dämmung von Bogen 90° Ø25 mm;30,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+250;Dämmung von T-Stück Ø16 mm;4,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+260;Dämmung von T-Stück Ø20 mm;16,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+270;Dämmung von T-Stück Ø25 mm;5,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+280;DN 12;42,8;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+290;DN 15;160,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+300;DN 20;176,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+310;DN 25;72,8;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+320;DN 32;12,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+330;DN 40;1,6;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+340;Dämmung von Bogen 90° DN 12;40,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+350;Dämmung von Bogen 90° DN 15;55,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+360;Dämmung von Bogen 90° DN 20;70,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+370;Dämmung von Bogen 90° DN 25;11,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+380;Dämmung von T-Stück DN 12;2,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+390;Dämmung von T-Stück DN 15;6,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+400;Dämmung von T-Stück DN 20;6,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+410;Dämmung von T-Stück DN 25;2,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+420;16mm;24,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+430;20mm;20,8;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+440;25mm;10,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+450;Dämmung von Bogen 90° Ø16 mm;65,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+460;Dämmung von Bogen 90° Ø20 mm;10,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+470;Dämmung von Bogen 90° Ø25 mm;5,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+480;Dämmung von T-Stück Ø16 mm;2,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+490;Schrägsitzventil DN 12;2,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+500;Schrägsitzventil DN 15;2,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+510;Schrägsitzventil DN 20;4,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+520;Schrägsitzventil DN 25;2,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+530;Schrägsitzventil DN 32;4,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+540;Strömungsteiler DN 20;5,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+550;Strömungsteiler DN 25;2,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+560;Strömungsteiler DN 32;1,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+570;DN 12;1,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+580;DN 15;41,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+590;DN 20;35,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+600;DN 25;4,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+610;DN 32;3,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+620;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen DN 12;25,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+630;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen DN 15;50,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+640;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen DN 20;50,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+650;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen DN 25;40,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+660;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen DN 32;5,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+670;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen DN 40;5,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+680;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen Ø16 mm;5,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+690;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen Ø20 mm;5,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+700;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen Ø25 mm;3,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+10;DN 12;205,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+20;DN 15;107,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+30;DN 20;21,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+40;DN 25;22,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+50;DN 32;11,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+60;DN 50;4,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+70;DN 65;8,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+80;DN 100;60,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+90;Dämmung von Bogen 90° aus Edelstah DN 12;205,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+100;Dämmung von Bogen 90° aus Edelstah DN 15;110,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+110;Dämmung von Bogen 90° aus Edelstah DN 20;21,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+120;Dämmung von Bogen 90° aus Edelstah DN 25;22,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+130;Dämmung von Bogen 90° aus Edelstah DN 32;11,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+140;Dämmung von Bogen 90° aus Edelstah DN 50;5,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+150;Dämmung von Bogen 90° aus Edelstah DN 65;10,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+160;Dämmung von T-Stücke aus Edelstah DN 12;2,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+170;Dämmung von T-Stücke aus Edelstah DN 15;8,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+180;Dämmung von T-Stücke aus Edelstah DN 20;10,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+190;Dämmung von T-Stücke  aus Edelstah DN 25;20,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+200;Dämmung von T-Stücke aus Edelstah DN 32;10,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+210;Dämmung von T-Stücke aus Edelstah DN 65;5,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+220;DN 12;26,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+230;DN 15;35,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+240;DN 20;22,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+250;DN 25;5,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+260;DN 32;10,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+270;DN 40;34,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+280;Dämmung von Bogen 90° aus Edelstahl DN 12;76,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+290;Dämmung von Bogen 90° aus Edelstahl DN 15;40,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+300;Dämmung von Bogen 90° aus Edelstahl DN 20;44,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+310;Dämmung von Bogen 90° aus Edelstahl DN 25;8,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+320;Dämmung von Bogen 90° aus Edelstahl DN 32;12,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+330;Dämmung von Bogen 90° aus Edelstahl DN 40;41,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+340;Dämmung von T-Stücke aus Edelstahl DN 12;2,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+350;Dämmung von T-Stücke aus Edelstahl DN 15;2,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+360;Dämmung von T-Stücke aus Edelstahl DN 20;2,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+370;Dämmung von T-Stücke  aus Edelstahl DN 25;11,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+380;Dämmung von T-Stücke aus Edelstahl DN 32;25,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+390;Dämmung von T-Stücke aus Edelstahl DN 40;19,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+400;DN 12;34,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+410;DN 15;10,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+420;DN 20;36,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+430;DN 25;2,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+440;DN 32;10,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+450;DN 40;4,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+460;DN 65;4,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+470;DN 100;2,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+480;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen DN 12;40,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+490;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen DN 15;20,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+500;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen DN 20;5,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+510;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen DN 25;5,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+520;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen DN 32;5,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+530;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen DN 40;5,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+540;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen DN 50;5,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+550;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen DN 65;5,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+560;Zuschlag zur Rohrleitungsdämmung bei unterschrittenen Mindestabständen DN 100;12,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+10;DN 80;1,5;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+20;DN 100;60,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+30;DN 125;23,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+40;DN 140;14,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+50;DN 150;12,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+60;DN 160;36,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+70;DN 180;4,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+80;DN 200;23,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+90;DN 250;12,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+100;DN 315;5,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+110;Lüftungsleitungen aus Polypropylen 100mm dienen der Digestorielüftung und erhalten eine diffusionsdichte Dämmung zur Minderung von Schall- und Wärmeverlusten und dem Schutz gegen Tauwasser.;3,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+120;Lüftungsleitungen aus Polypropylen 160mm dienen der Wohnraumlüftung und erhalten eine diffusionsdichte Dämmung zur Minderung von Schall- und Wärmeverlusten.;6,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+130;Lüftungsleitungen aus Polypropylen 180mm dienen der Wohnraumlüftung und erhalten eine diffusionsdichte Dämmung zur Minderung von Schall- und Wärmeverlusten.;5,0;m;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+140;Werkstoff:;122,0;m²;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+150;Werkstoff:;286,0;m²;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+160;Werkstoff:;68,0;m²;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+170;Werkstoff:;19,75;m²;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+180;Werkstoff:;21,39;m²;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+190;Werkstoff:;62,14;m²;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+200;Werkstoff:;1,0;m²;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+210;Werkstoff:;7,78;m²;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+10;Monteurstunden;50,0;h;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+20;Helferstunden;50,0;h;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+30;Die Revisionsunterlagen für die Leistungen der technischen Dämmung sind gemäß den Gebäudeleitlinien 2020, insbesondere Kapitel 1.7.0 „Dokumentation“, zu erstellen. Die Unterlagen dienen der vollständigen Dokumentation der ausgeführten Dämmarbeiten an Rohrleitungen, Luftleitungen sowie zugehörigen Fo;1,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83
+40;Rohrleitungen der technischen Gebäudeausrüstung sind gemäß DIN 2403 dauerhaft und gut sichtbar zu kennzeichnen. Die Kennzeichnung dient der eindeutigen Identifikation der Medien, der Fließrichtung sowie der sicheren Wartung und Instandhaltung der Anlagen.;200,0;St;gaeb;leistungsbeschreibungen/2026-07-17 745 GSMW Erweiterungsneubau technische Dämmung_LV.X83

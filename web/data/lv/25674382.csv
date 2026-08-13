@@ -1,0 +1,175 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Sicherheitszaun aus Einzelelementen H = 2,00 m, B =;50,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+20;Sicherheitszaun aus Einzelelementen aus Vorposition;800,0;mWo;gaeb;leistungsbeschreibungen/26A0183.X83
+30;Sicherheitszaun aus Vorposition räumen und abfahren,;50,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+40;Sicherheitszaun aus Vorposition in Teilmengen umsetzen.;35,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+50;Zulage für Höhenanpassungen des Sicherheitszauns an;10,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+60;Zulage für Herstellung von Höhenabsätzen größer 10 cm.;5,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+70;Behelfstor herstellen, 2-flügelig, Anforderungen;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+80;Behelfstor der Vorposition vorhalten.;16,0;Wo;gaeb;leistungsbeschreibungen/26A0183.X83
+90;Behelfstor aus Vorposition räumen und abfahren.;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+100;Schutzzaun, versetzbar, auf;100,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+110;Schutzzaun, versetzbar, auf;100,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+120;Schutzzaun, versetzbar, auf;1600,0;mWo;gaeb;leistungsbeschreibungen/26A0183.X83
+130;Behelfsüberfahrt, über Graben, für;2,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+140;Behelfsüberfahrt, über Graben, für;2,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+150;Behelfsüberfahrt, über Graben, für;32,0;StWo;gaeb;leistungsbeschreibungen/26A0183.X83
+160;Nach der vom AG übergebenen;1,0;psch;gaeb;leistungsbeschreibungen/26A0183.X83
+10;Asphaltoberbau schneiden, Dicke der;50,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+20;Abbruch der Asphaltbefestigung in;40,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+30;Pflanzliche Bodendecke einschl.;150,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+40;Oberboden, profilgerecht abtragen,;150,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+50;Baum fällen, als Einzelbaum, stückweise absetzen,;5,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+60;Baum fällen, als Einzelbaum, stückweise absetzen,;5,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+70;Wurzelstock roden, Rodungstiefe über 10 bis 20 cm,;10,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+80;Gehölzschnitt an Hecken und;50,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+90;Zaun aus Viereck-Drahtgeflecht, aus;15,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+10;Bodenaushub für Gräben für;120,0;m3;gaeb;leistungsbeschreibungen/26A0183.X83
+20;Bodenaushub für Schächte,;100,0;m3;gaeb;leistungsbeschreibungen/26A0183.X83
+30;Bodenaushub für Gräben, für;85,0;m3;gaeb;leistungsbeschreibungen/26A0183.X83
+40;Bodenaushub für Gräben für Leitungs-;425,0;m3;gaeb;leistungsbeschreibungen/26A0183.X83
+50;Boden für Suchgraben ab;20,0;m3;gaeb;leistungsbeschreibungen/26A0183.X83
+60;Zulage zu den Erdarbeiten für das;20,0;m3;gaeb;leistungsbeschreibungen/26A0183.X83
+70;Mauerwerks- bzw. Beton, größere,;10,0;m3;gaeb;leistungsbeschreibungen/26A0183.X83
+80;Nachverdichten von;140,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+90;Boden, innerhalb der Baustelle im;600,0;m3;gaeb;leistungsbeschreibungen/26A0183.X83
+100;Boden, innerhalb der Baustelle im;55,0;m3;gaeb;leistungsbeschreibungen/26A0183.X83
+110;Kies-Sand-Gemisch liefern und;150,0;m3;gaeb;leistungsbeschreibungen/26A0183.X83
+120;Bodenverbesserung im Graben,;10,0;m3;gaeb;leistungsbeschreibungen/26A0183.X83
+130;Kabel unter Spannung,;20,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+140;Kabel unter Spannung,;3,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+150;Kabel unter Spannung,;150,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+160;Kabel unter Spannung,;10,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+170;Rohrleitung aus PE,;20,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+180;Rohrleitung aus PE,;5,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+190;Entwässerungskanal aus PP,;15,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+200;Entwässerungskanal aus PP,;10,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+210;Schachtbauwerk aus Beton;3,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+220;Bodenaushub für Kopflöcher, ab;25,0;m3;gaeb;leistungsbeschreibungen/26A0183.X83
+230;Entwässerungmulde herstellen,;80,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+240;Sicherung mit Steinen, als;10,0;TO;gaeb;leistungsbeschreibungen/26A0183.X83
+250;Bankett, b = 50 cm, Schichtdicke 25;300,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+260;Umlagern von Erdmassen, bereits im;150,0;m3;gaeb;leistungsbeschreibungen/26A0183.X83
+10;Verbau mit Verbauplatten DIN 4124;580,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+20;Aussparung für kreuzende Leitungen;10,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+30;Eine prüffähige statische Berechnung;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+40;Verbau mit Saumbohlen nach DIN;40,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+10;Schachtunterteil mit Muffe (SU-M), als;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+20;Schachtring mit Muffe (SR-M) DIN EN;2,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+30;Schachtring mit Muffe (SR-M) DIN EN;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+40;Schachtring mit Muffe (SR-M) DIN EN;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+50;Schachthals mit Muffe (SH-M) DIN EN;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+60;Einsteckhülse für Einsteighilfe,;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+70;Schmutzfänger in leichter Ausführung;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+80;Schachtabdeckung, für Schacht DIN;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+90;Probenahmeschacht LW 600, nach;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+100;Leichtflüssigkeitsabscheider nach DIN;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+110;Abwasserkanal aus HDPE,;1,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+120;Abwasserkanal aus HDPE,;25,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+130;Abwasserkanal aus PP, homogenes;2,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+140;Bogen, Formstück aus HDPE,;5,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+150;Bogen, Formstück aus HDPE,;8,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+160;Reduzierstück, Formstück aus HDPE,;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+170;Überschiebemuffe, Formstück aus;3,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+180;Überschiebemuffe, Formstück HDPE,;10,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+190;Vorhandenes Rohr, bis DN 250 STZ;2,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+200;Manschettendichtung zur Verbindung;2,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+210;Wasserhaltungsanlage für den in;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+220;Offene Wasserhaltung mittels;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+230;Durchlass, rechtwinklig unter;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+10;Rohrschnitt an einzelnen Rohren, an;2,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+20;Rohrschnitt an einzelnen Rohren, an;2,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+30;Abbruch der Rohrleitung aus duktilem;2,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+40;Druckrohr aus duktilem Gusseisen für;40,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+50;Druckrohr aus PE 80 DIN 8074 und;25,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+60;Doppelmuffenbogen für;10,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+70;Doppelmuffenbogen für;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+80;Doppelflanschstück FF-Stück, für;2,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+90;Doppelflanschstück FF-Stück, für;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+100;Doppelflansch-Bogen, 90 Grad,;2,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+110;Kugelhahn mit Volldurchgang aus;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+120;Anbohrarmatur zum Anbohren von;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+130;Anschluss an vorhandene Gussleitung;2,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+140;Betonwiderlager, Beton C 20/25,;6,0;m3;gaeb;leistungsbeschreibungen/26A0183.X83
+150;Rohrleitung markieren, für;60,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+160;Wasserschacht aus;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+170;Standrohr für Anschluss von Hochdruckreiniger,;2,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+180;Innendruckprüfung nach DIN EN 805;40,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+190;Wasserprobe ziehen durch;2,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+10;Kabelschacht aus;4,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+20;Ausgleichrahmen für;4,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+30;Ausgleichrahmen für;4,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+40;Ausgleichrahmen für;4,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+50;Zwischenrahmen für;4,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+60;Zwischenrahmen für;4,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+70;Kabeleinführungsplatte für 3;8,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+80;Verschlussbecher DN 110 liefern und;16,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+90;Kabelschutzrohr als Verbundrohr aus;120,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+100;Kabelschutzrohr als Verbundrohr aus;30,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+110;Kabelschutzrohr als Verbundrohr aus;35,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+120;Rohrleitung markieren, für Leerrohr,;185,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+130;Fundament für Straßenleuchte, SB;4,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+140;Erdung als Erdungssammelleitung, DIN EN IEC 62561-2;60,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+150;Anschlussfahne einschl. Anschluss an den Erder, DIN EN;4,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+160;Verbinder für Erdband RD 10 mm, V4A nach DIN 48834;10,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+170;Dokumentation des verlegten Ringerders, umfasst;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+10;Planum herstellen,;1650,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+20;Planum, mit Verdichtungsgerät,;1650,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+30;Bodenaustauschmaterial,;75,0;m3;gaeb;leistungsbeschreibungen/26A0183.X83
+40;Stabilisierung von Oberflächen, aus;50,0;t;gaeb;leistungsbeschreibungen/26A0183.X83
+50;Frostschutzschicht ZTV SoB-StB,;80,0;m3;gaeb;leistungsbeschreibungen/26A0183.X83
+60;Schottertragschicht ZTV SoB-StB,;275,0;m3;gaeb;leistungsbeschreibungen/26A0183.X83
+70;Bordstein aus Beton, DIN EN 1340,;25,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+80;Pflasterdecke, aus Pflastersteinen aus;40,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+90;Statische Berechnung der Betondecke zur Ermittlung der;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+100;Betondecke ZTV Beton-StB aus Ortbeton, Belastungsklasse;1250,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+110;Stahleinlage in Betondecke ZTV;26000,0;kg;gaeb;leistungsbeschreibungen/26A0183.X83
+120;Schicht aus Geotextilien, Vliesstoff,;1400,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+130;Fuge in Betontragschicht nach ZTV;400,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+140;Stahlwinkel zur Einfassung der;300,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+150;Betonauflage aus;140,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+160;Rechteckplatte aus FDE-Beton;65,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+170;Rechteckplatte aus FDE-Beton;4,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+180;Rechteckplatte Absenkplatte aus;40,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+190;Rechteckplatte Absenkplatte;4,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+200;Abdichtung der Fugen zwischen den;140,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+210;Vorschlammfang als;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+220;Spritzschutzwandelemente,;30,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+230;Spritzschutzwandelemente, wie;2,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+240;Asphaltdeckschicht aus Asphaltbeton,;5,0;t;gaeb;leistungsbeschreibungen/26A0183.X83
+250;Asphalttragschicht ZTV Asphalt-StB,;15,0;t;gaeb;leistungsbeschreibungen/26A0183.X83
+260;Reinigen der Unterlage für;40,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+270;Bitumenhaltiges Bindemittel;40,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+280;Anschluss ZTV Fug-StB an;50,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+290;Oberboden, liefern, profilgerecht;350,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+300;Feinplanum für Rasenfläche,;350,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+310;Rasen ansäen, Landschaftsrasen,;350,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+320;Schilderpfosten aus Stahl, feuerverzinkt, Durchmesser;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+330;Kettenzaun, bestehend aus Absperrpfosten mit Kettenöse;135,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+340;Leiteinrichtung Amphibienschutz M AQ (Merkblatt zur;105,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+10;Betonfundament unter;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+20;Betondecke ZTV Beton-StB aus;125,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+30;Stahleinlage in Betondecke ZTV;3700,0;kg;gaeb;leistungsbeschreibungen/26A0183.X83
+40;Schicht aus Geotextilien, Vliesstoff,;125,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83
+50;Fuge in Betontragschicht nach ZTV;50,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+60;Stahlwinkel zur Einfassung der;50,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+70;Anschlagpunkt AP1, bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+80;Anschlagpunkt AP2, bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+10;Räumstelle bei allen zuständigen Behörden an- und;1,0;psch;gaeb;leistungsbeschreibungen/26A0183.X83
+20;Einsatz einer Person mit Befähigung nach §20 SprengG;5,0;d;gaeb;leistungsbeschreibungen/26A0183.X83
+30;Wie unter vorgenannter Position beschrieben.;16,0;h;gaeb;leistungsbeschreibungen/26A0183.X83
+40;Erstellen eines Berichts zur Baubegleitenden;1,0;psch;gaeb;leistungsbeschreibungen/26A0183.X83
+50;Zulage für die Durchführung einer baubegleitenden;200,0;m3;gaeb;leistungsbeschreibungen/26A0183.X83
+10;Kontrollprüfung ZTV SoB-StB auf;10,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+20;Kontrollprüfung ZTV SoB-StB auf;10,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+30;Einrichten der jeweiligen;10,0;St;gaeb;leistungsbeschreibungen/26A0183.X83
+40;Rammsondierung in der Verfüllzone;30,0;m;gaeb;leistungsbeschreibungen/26A0183.X83
+50;Durchführung und Koordination der;1,0;psch;gaeb;leistungsbeschreibungen/26A0183.X83
+10;Boden, nicht gefährlich, nicht schadstoffbelastet,;750,0;t;gaeb;leistungsbeschreibungen/26A0183.X83
+20;Boden, nicht gefährlich, nicht schadstoffbelastet,;300,0;t;gaeb;leistungsbeschreibungen/26A0183.X83
+30;Boden, nicht gefährlich, nicht schadstoffbelastet,;450,0;t;gaeb;leistungsbeschreibungen/26A0183.X83
+40;Bau- und Abbruchabfälle, Beton,;10,0;t;gaeb;leistungsbeschreibungen/26A0183.X83
+50;Bau- und Abbruchabfälle,;30,0;t;gaeb;leistungsbeschreibungen/26A0183.X83
+60;Sonstige Bau- und Abbruchabfälle,;3,0;t;gaeb;leistungsbeschreibungen/26A0183.X83
+70;Bau- und Abbruchabfälle, Garten- und;5,0;t;gaeb;leistungsbeschreibungen/26A0183.X83
+80;Abdeckplane (Folie) liefern und vor Ort lagernde;1000,0;m2;gaeb;leistungsbeschreibungen/26A0183.X83

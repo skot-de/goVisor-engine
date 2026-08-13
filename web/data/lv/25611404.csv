@@ -1,0 +1,502 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Lüftungsgerät Sanitärbereiche;1,0;;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Inbetriebnahme des zuvor beschriebenem Lüftungsgerätes.;1,0;psch;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;Übergangsstück symmetrisch, zur Verbindung;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Flexibles Verbindungsstück rund für zuvor;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+5;Dezentrales Lüftungsgerät;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+6;Dezentrales Lüftungsgerät;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+7;Abluftfilter, ePM10 - 50% (M5);4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+8;Außenluftfilter, ePM1 - 55%;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+9;Innovatives Touch-Display zur;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+10;Wassernachheizregister;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+11;Bewegungssensor, Wandmontage für;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+12;Kondensatpumpe;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+13;Fassadengitter Ø 400 mm, eloxiertes Aluminium;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+14;Designpaneel, in Standardfarbe lackiert;8,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+15;Inbetriebnahme der zuvor beschriebenen dezentralen;1,0;psch;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Wickelfalzrohr DN100.;18,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Wickelfalzrohr DN125.;6,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;Wickelfalzrohr DN150.;6,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Wickelfalzrohr DN160.;3,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+5;Wickelfalzrohr DN200.;9,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+6;Wickelfalzrohr DN250.;3,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+7;Wickelfalzrohr DN280.;2,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+8;Wickelfalzrohr DN315.;2,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+9;Wickelfalzrohr DN355.;2,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+10;Wickelfalzrohr DN400.;10,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+11;Aluminiumflexrohr DN100;10,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+12;Aluminiumflexrohr DN125;5,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+13;Aluminiumflexrohr DN150;5,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+14;Aluminiumflexrohr DN160;2,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+15;Aluminiumflexrohr DN200;2,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+16;Bogen 90 Grad DN100;15,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+17;Bogen 90 Grad DN125;7,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+18;Bogen 90 Grad DN150;3,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+19;Bogen 90 Grad DN160;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+20;Bogen 90 Grad DN180;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+21;Bogen 90 Grad DN200;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+22;Bogen 90 Grad DN250;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+23;Bogen 90 Grad DN280;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+24;Bogen 90 Grad DN315;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+25;Bogen 90 Grad DN355;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+26;Bogen 90 Grad DN400;8,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+27;Bogen 45 Grad DN100;6,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+28;Bogen 45 Grad DN125;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+29;Bogen 45 Grad DN150;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+30;Bogen 45 Grad DN160;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+31;Bogen 45 Grad DN315;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+32;Bogen 45 Grad DN355;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+33;Bogen 45 Grad DN400;3,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+34;Bogen 30 Grad DN100;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+35;Bogen 30 Grad DN125;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+36;Bogen 30 Grad DN150;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+37;Bogen 30 Grad DN160;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+38;Bogen 30 Grad DN200;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+39;Bogen 30 Grad DN315;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+40;Bogen 30 Grad DN355;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+41;Bogen 30 Grad DN400;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+42;Bogen 15 Grad DN100;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+43;Bogen 15 Grad DN125;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+44;Bogen 15 Grad DN150;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+45;Bogen 15 Grad DN280;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+46;Bogen 15 Grad DN355;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+47;Bogen 15 Grad DN400;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+48;Etagenbogen DN100;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+49;Etagenbogen DN125;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+50;Etagenbogen DN160;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+51;Etagenbogen DN180;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+52;Etagenbogen DN200;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+53;Etagenbogen DN250;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+54;Etagenbogen DN400;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+55;Reduzierung DN125x100,;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+56;Reduzierung DN150x100,;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+57;Reduzierung DN150x125,;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+58;Reduzierung DN160x100,;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+59;Reduzierung DN160x125,;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+60;Reduzierung DN160x150,;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+61;Reduzierung DN200x100,;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+62;Reduzierung DN200x125,;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+63;Reduzierung DN200x150,;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+64;Reduzierung DN200x160,;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+65;Reduzierung DN250x200,;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+66;T-Stück DN100x100;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+67;T-Stück DN125x100;3,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+68;T-Stück DN160x100;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+69;T-Stück DN160x125;3,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+70;T-Stück DN160x160;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+71;T-Stück DN200x100;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+72;T-Stück DN200x125;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+73;T-Stück DN200x150;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+74;T-Stück DN200x160;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+75;T-Stück DN200x200;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+76;Nippel DN100 zum Verbinden zweier Lüftungsrohre.;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+77;Nippel DN125;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+78;Nippel DN160;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+79;Nippel DN180;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+80;Nippel DN200;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+81;Nippel DN400;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+82;Rohrschalldämpfer in runder, starrer Bauform für RLT-Anlagen, in 13 Nenngrößen. Einfügungsdämpfung gemessen nach EN ISO 7235. Gehäuse mit akustisch und thermisch wirksamer Auskleidung. Unterschiedliche Anschlussvarianten, passend für runde Luftleitungen nach EN 1506 oder EN 13180. Gehäuse-Leckluftst;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+83;Rohrschalldämpfer in runder, starrer Bauform für RLT-Anlagen, in 13 Nenngrößen. Einfügungsdämpfung gemessen nach EN ISO 7235. Gehäuse mit akustisch und thermisch wirksamer Auskleidung. Unterschiedliche Anschlussvarianten, passend für runde Luftleitungen nach EN 1506 oder EN 13180. Gehäuse-Leckluftst;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+84;Rohrschalldämpfer in runder, starrer Bauform für RLT-Anlagen, in 13 Nenngrößen. Einfügungsdämpfung gemessen nach EN ISO 7235. Gehäuse mit akustisch und thermisch wirksamer Auskleidung. Unterschiedliche Anschlussvarianten, passend für runde Luftleitungen nach EN 1506 oder EN 13180. Gehäuse-Leckluftst;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+85;Rohrschalldämpfer in runder, starrer Bauform für RLT-Anlagen, in 13 Nenngrößen. Einfügungsdämpfung gemessen nach EN ISO 7235. Gehäuse mit akustisch und thermisch wirksamer Auskleidung. Unterschiedliche Anschlussvarianten, passend für runde Luftleitungen nach EN 1506 oder EN 13180. Gehäuse-Leckluftst;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+86;Inspektionsöffnung oval Stahl verz 300/100mm;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+87;Inspektionsöffnung oval Stahl verz 300/200mm;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+88;Steildachhaube 200 einteilig, für Zu- u. Abluft;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Brandschutzklappen in runder Bauform zum Absperren von Luftleitungen zwischen zwei Brandabschnitten. Brandschutztechnisch geprüft nach EN 1366-2 mit CE-Kennzeichnung und Leistungserklärung nach Bauproduktenverordnung. Die funktionsfähige Einheit enthält ein feuerbeständiges Klappenblatt und eine Aus;6,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Brandschutzklappe DN125 wie zuvor beschrieben.;3,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;Brandschutzklappe DN160 wie zuvor beschrieben.;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Verpressen von runden Brandschutzklappen in Decken und Wändendurch zertifiziertes Personal inkl Beschilderung;6,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+5;Verpressen von runden Brandschutzklappen in Decken und Wändendurch zertifiziertes Personal inkl Beschilderung;3,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+6;Verpressen von runden Brandschutzklappen in Decken und Wändendurch zertifiziertes Personal inkl Beschilderung;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Tellerventil Zuluft DN100;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Tellerventil Zuluft DN125;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;Tellerventil Zuluft DN160;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Tellerventil Abluft DN100;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+5;Tellerventil Abluft DN125;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Dichtigkeitsprüfung;1,0;psch;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Montageset zur Herstellung von Rohrbrücken mit einer;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;Bezeichnungsschilder gemäß DIN-Vorschrift für sämtliche Anlagenteile, wie Absperrventile, Gruppenleitungen,;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Luftkanalkennzeichnungen,;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Gewährleistung 1. und 2. Jahr mit Wartung;1,0;psch;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Ausdehnung Gewährleistung 3. und 4. Jahr mit Wartung aller relevanten Anlagen nach VOB/B.;1,0;psch;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Wärmepumpe 2er-Kaskade;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Kältemittel R 410a;8,0;kg;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;Kältemittelleitung 25,4/12,7 mm;60,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Brandmanschette;8,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+5;WiFi-Adapter;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+6;Anlegefühler;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+7;Dämpfungssockel;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+8;Sensor;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+9;Luftabscheider DN 32. Mit ECO/MAX-Modus. Der Luftabscheider ist um 360 Grad drehbar. Der Luftabscheider wird mit einer hochwertigen EPP-Isolierung geliefert.;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+10;Schlammabscheider DN 32. Mit ECO/MAX-Modus. Der Schlammabscheider ist um 360 Grad drehbar. Der Schlammabscheider wird mit einer hochwertigen EPP-Isolierung geliefert.;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+11;Regler;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+12;Pufferspeicher;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+13;Membran-Druckausdehnungsgefäß, weiß, 4/1.5 bar;3,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+14;Membran-Druckausdehnungsgefäß für geschlossene Heizungs- und Kühlwasseranlagen, gebaut nach DIN EN 13831,;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+15;Membransicherheitsventil geschlossene Wasserheizungsanlage DN 32 Membransicherheitsventil, bauteilgeprüft, f ederbelastet, für geschlossene Wasserheizungsanlagen DIN EN 12828,;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+16;Schnellkupplung, für Membran-Druckausdehnungsgefäße in geschlossenen Heizungs- und Kühlwasseranlagen. Mit einer gegen unbeabsichtigtes Schließen gesicherten Absperrung u.;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+17;Gas-Brennwertheizgerät für Erd- und;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+18;Hydraulische Weiche;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+19;Wandkonsole hydraulische Weiche;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+20;Programmierte Systemregelung im Wandgehäuse;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+21;Systeminbetriebnahme mit 1 Pufferspeicher und Regelung;1,0;psch;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+22;Kompaktarmatur zur direkten Verbindung von Nachspeiseeinrichtungen für Heiz und Kühlwassersysteme mit Trinkwassernetzen.;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+23;Wasserzähler, zur Überwachung von Enthärtungsanlagen;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+24;Safecontrol;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+25;kompakte Enthärtungsarmatur für die Aufbereitung von Füll- und Ergänzungswasser bzw. zum Schutz vor Steinbildung in Wärmeerzeugern u. Warmwasserheizungsanlagen gemäß VDI 2035 Blatt 1.;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+26;3-Wege-Mischer aus Messing.;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+27;Stellmotor;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+28;Anlegetemperatursensor (NTC 10 kOhm);2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+29;Anlegetemperaturregler;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+30;Anlegetemperatursensor (NTC 10 kOhm);1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+31;AZ Rohr D 60/100 1000mm, VA/PPs;6,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+32;AZ Rohr D 60/100 500mm, VA/PPs;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+33;AZ Bogen D 60/100 45°, VA/PPs;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+34;AZ Wandschelle D100, VA;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+35;AZ Wandschelle Verlaengerung 150mm,VA;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+36;AZ Anschlussbogen 87° mit;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+37;AZ Wandkonsole 50-150mm Abstand,;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+38;AZ Revisionsrohr D 60/100, VA/PPs;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+39;AZ Mauerblende D100 200x200, VA;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+40;AZ Mauerblende D100 2-teilig, VA;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+41;Set Manschette EPDM 25-125mm,;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+42;AZ-Rohr;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+43;AZ-Rohr 0,5 m;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+44;AZ-Revisionsbogen (87 Grad);1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+45;AZ-Revisionsstueck;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+46;Mauerblende, Durchmesser 100 mm;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Kompaktverteiler 120/80;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Hocheffizienzpumpe,;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;Hocheffizienzpumpe,;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Automatischer Schnell-/Großentlüfter für Heiz- und Kühlwassersysteme bzw. geschlossene, flüssigkeitsgefüllte;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+5;Vertikal Schmutz- und Schlammabscheider für Heiz- und Kühlwassersysteme bzw. geschlossene flüssigkeitsgefüllte Anlagensysteme.;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+6;Zeigerthermometer;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+7;Tauchhülse aus Messing vernickelt für Tauchtemperatur- und Kabeltemperaturfühler mit einem Innendurchmesser von 8 mm.;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+8;Tauchhülse aus Messing vernickelt für Tauchtemperatur- und Kabeltemperaturfühler mit einem Innendurchmesser von 8 mm.;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+9;Tauchhülse aus Messing vernickelt für Tauchtemperatur- und Kabeltemperaturfühler mit einem Innendurchmesser von 8 mm.;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+10;Tauchhülse aus Messing vernickelt für Tauchtemperatur- und Kabeltemperaturfühler mit einem Innendurchmesser von 8 mm.;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+11;Tauchhülse aus Messing vernickelt für Tauchtemperatur- und Kabeltemperaturfühler mit einem Innendurchmesser von 8 mm.;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+12;Motor-Dreiwegeventil PN6 / DN25;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+13;kvs-Werte: 16/12,5;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+14;kvs-Werte: 25/20;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+15;Flanschenabsperrventil Schrägsitzhydraulik, PN 6, DN 25;8,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+16;Flanschenabsperrventil Schrägsitzhydraulik, PN 6, DN 32;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+17;Flanschenabsperrventil Schrägsitzhydraulik, PN 6, DN 40;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+18;Flanschenabsperrventil Schrägsitzhydraulik, PN 6, DN 50;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+19;Einklemm-Rückschlagventil DN 25;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+20;Einklemm-Rückschlagventil DN 32;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+21;Einklemm-Rückschlagventil DN 40;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+22;Einklemm-Rückschlagventil DN 50;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+23;Kugelhahn,;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+24;Kugelhahn,;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+25;Kugelhahn,;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+26;Kugelhahn,;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+27;Kugelhahn,;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+28;Kugelhahn,;8,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+29;Kugelhahn,;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+30;Dämmschale für Kugelhahn, DN 15;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+31;Dämmschale für Kugelhahn, DN 20;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+32;Dämmschale für Kugelhahn, DN 25;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+33;Dämmschale für Kugelhahn, DN 32;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+34;Dämmschale für Kugelhahn, DN 40;8,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+35;Dämmschale für Kugelhahn, DN 50;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+36;"Kugelhahn mit Thermometer, Knebelgriff, beids. IG 3/4""";2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+37;"Kugelhahn mit Thermometer, Knebelgriff, beids. IG 1"" Kugelhahn mit vollem Durchgang, Messing vernickelt Kugel Messing verchromt, Dichtschalen aus";10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+38;"Kugelhahn mit Thermometer,Knebelgriff,beids.IG 1 1/4""";6,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+39;"Kugelhahn mit Thermometer,Knebelgriff,beids.IG 1 1/2"" Kugelhahn mit vollem Durchgang, Messing vernickelt Kugel Messing verchromt, Dichtschalen aus PTFE, O-Ring-Abdichtung, Nenndruck PN 20 für Kaltwasser. Knebelgriff aus Kunststoff, verlängert. Mit Thermometer.";4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+40;Kugelhahn für das Füllen und Entleeren von Heizungsanlagen, selbstdichtend mit Gewindeeinschneiddichtung aus EPDM. Schwere Bauform aus vernickeltem Pressmessing. Flügelgriff (rot) entsprechend dem Einsatzzweck abnehmbar. Hartverchromte Kugel mit vollem Durchgang in Teflon gelagert. Blindkappe mit Ed;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+41;Manometer mit Manometerhahn als Röhrenfedermanometer,;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Rohr 1.4520;10,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Rohr 1.4520;25,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;Rohr 1.4520;10,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Rohr 1.4520;50,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+5;Rohr 1.4520;60,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+6;Rohr 1.4520;65,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+7;Rohr 1.4520;70,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+8;Muffe mit Pressverbinder;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+9;Muffe mit Pressverbinder;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+10;Muffe mit Pressverbinder;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+11;Muffe mit Pressverbinder;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+12;Muffe mit Pressverbinder;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+13;Muffe mit Pressverbinder;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+14;Muffe mit Pressverbinder;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+15;Reduzierung mit Pressverbinder;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+16;Reduzierung mit Pressverbinder;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+17;Reduzierung mit Pressverbinder;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+18;Reduzierung mit Pressverbinder;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+19;Reduzierung mit Pressverbinder;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+20;Reduzierung mit Pressverbinder;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+21;Bogen mit Pressverbinder;6,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+22;Bogen mit Pressverbinder;20,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+23;Bogen mit Pressverbinder;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+24;Bogen mit Pressverbinder;50,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+25;Bogen mit Pressverbinder;50,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+26;Bogen mit Pressverbinder;80,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+27;Bogen mit Pressverbinder;80,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+28;Überbogen;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+29;Überbogen;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+30;Überbogen;3,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+31;T-Stück mit Pressverbinder;25,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+32;T-Stück mit Pressverbinder;20,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+33;T-Stück mit Pressverbinder;15,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+34;T-Stück mit Pressverbinder;25,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+35;T-Stück mit Pressverbinder;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+36;T-Stück mit Pressverbinder;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+37;T-Stück mit Pressverbinder;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+38;Sockelleisten-HK-Anschluss,SC,vernickelt;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+39;Sockelleisten-HK-Anschluss,SC,vernickelt;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+40;Langstopfen,;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+41;Übergangsstück mit Pressverbinder;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+42;Übergangsstück mit Pressverbinder;20,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+43;Übergangsstück mit Pressverbinder;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+44;Übergangsstück mit Pressverbinder;15,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+45;Übergangsstück mit Pressverbinder;35,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+46;Übergangsstück mit Pressverbinder;25,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+47;Übergangsstück mit Pressverbinder;25,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+48;Flansch;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+49;Flansch;8,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+50;Flansch;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+51;Flansch;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+52;Flansch;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Konvektor-Heizkörper;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Heizkörper;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;Heizkörper;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Heizkörper;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+5;Heizkörper;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+6;Heizkörper;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+7;Heizkörper;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+8;"Thermostatventil ""AV 9"" DN20, R 3/4"", PN10, Eck";10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+9;"HK-Verschraubung ""Combi 2"" DN20, 3/4"", PN10, Eck, Ms, vernickelt";10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+10;"Thermostat ""Uni L"" 7-28 C, 0 * 1-5, Flüssig-Fühler, weiß";10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Mineralwolldämmung,54/50mm wie zuvor in vollem Wortlaut beschrieben, jedoch:  mit Hart-PVC-Mantel (Isogenopak) schwer entflammbar, mit vorgefertigten Formteilen, an den Stößen mit Stecknieten befestigt.;10,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Mineralwolldämmung,42/40mm wie zuvor in vollem Wortlaut beschrieben, jedoch:  mit Hart-PVC-Mantel (Isogenopak) schwer entflammbar, mit vorgefertigten Formteilen, an den Stößen mit Stecknieten befestigt.;50,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;Mineralwolldämmung, 35/30mm wie zuvor in vollem Wortlaut beschrieben, jedoch:  mit Hart-PVC-Mantel (Isogenopak) schwer entflammbar, mit vorgefertigten Formteilen, an den Stößen mit Stecknieten befestigt.;10,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Mineralwolldämmung, 28/30mm wie zuvor in vollem Wortlaut beschrieben, jedoch: mit Hart-PVC-Mantel (Isogenopak) schwer entflammbar, mit vorgefertigten Formteilen, an den Stößen mit Stecknieten befestigt.;60,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+5;Mineralwolldämmung wie zuvor in vollem Wortlaut beschrieben, jedoch: mit Hart-PVC-Mantel (Isogenopak) schwer entflammbar, mit vorgefertigten Formteilen, an den Stößen mit Stecknieten befestigt.;70,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+6;Mineralwolldämmung wie zuvor in vollem Wortlaut beschrieben,;70,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+7;Mineralwolldämmung wie zuvor in vollem Wortlaut beschrieben, jedoch: Äußerer Rohrdurchmesser: 15 mm;65,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+8;Mineralwolldämmung wie zuvor in vollem Wortlaut beschrieben, jedoch: Äußerer Rohrdurchmesser: 12 mm;50,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+9;Zulage Formteil 54mm;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+10;Zulage Formteil DN40;35,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+11;Zulage Formteil DN32;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+12;Zulage Formteil DN25;60,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+13;Zulage Formteil DN20;45,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+14;Zulage Formteil DN15;110,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+15;Zulage Formteil DN12;110,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+16;Rohrabschottung DN12 x 500mm;14,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+17;Rohrabschottung DN15 x 500mm;14,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+18;Rohrabschottung DN20 x 500mm;6,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+19;Rohrabschottung DN25 x 500mm;6,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+20;Rohrabschottung DN32 x 500mm;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+21;Rohrabschottung DN40 x 500mm;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+22;Rohrabschottung DN50 x 500mm;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Rohrschelle DN50;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Rohrschelle DN40;30,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;Rohrschelle DN32;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Rohrschelle DN25;55,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+5;Rohrschelle DN20;60,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+6;Rohrschelle DN15;65,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+7;Rohrschelle DN12;70,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+8;Gewindestab m8 inkl Kontermuttern;20,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+9;Profilstahlkonstruktion für Stütz-, Trag-, Hänge-;350,0;kg;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Gewährleistung 1. und 2. Jahr mit Wartung;1,0;psch;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Ausdehnung Gewährleistung 3. und 4. Jahr mit Wartung aller relevanten Anlagen nach VOB/B.;1,0;psch;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Wand-WC mit WC-Sitz, Tiefspüler,;3,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Wand-WC Tiefspüler, Rimfree, Ausld. 70cm, weiß, KeraTect;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;WT eckig, barrierefrei, 65x55cm, m. Hl., m. Ül., weiß;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Handwaschbecken, 45x34cm weiß, KeraTect;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+5;Waschtisch, 55x44cm, weiß, KeraTect;3,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+6;Urinal, Zulauf von hinten, Abgang nach hinten, weiß, KeraTect;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+7;Ausgussbecken, wandhängend, aus Kunststoff, weiß mit hinterer 175mm hoher Rückwand, Werkstoff aus schlagfesten. temperatur- und witterungsbeständigen. sowie säurebeständigen Kunststoff. Materialstärke ca. 6mm. mit Stopfenab- und Überlaufgarnitur DN 40. inkl. Befestigungsmaterial. Beckenmaße: 477 x 1;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+8;Klapprost, für Ausgussbecken, aus Kunststoff, anthrazit, Werkstoff aus schlagfesten, temperatur- und witterungsbeständigen, sowie säurebeständigen Kunststoff, zum befestigen an der Rückwand des Ausgussbeckens, kompl. mit Aufhängung, Technische Details: Maße BxTxH: Farbe: anthrazit Material: Kunststo;8,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+9;Stahlplattenset zur Aufnahme von Stützklappgriffen;6,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+10;Modul für Stützgriffe und Haltesysteme;6,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+11;Befestigungsplatte für Zusatzeinbauten, 200 x 200 mm;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+12;Befestigungsplatte für Stützgriffe und Haltesysteme;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+13;WC-Betätigungsplatte für Zweimengentechnik;3,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+14;WC-Elektronik mit IR-Sensor,12 V-Netz;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+15;WC-Fernauslösung für kabelgebundene Elektrotaster, 12 V-Netz für barrierefreies Bauen, zur;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+16;Stützklappgriff (drehbar);1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+17;Stützklappgriff;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+18;Röhrengeruchverschluss,;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+19;Waschtischablaufventil;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+20;Einhebel-Waschtischmischer  ohne Ablaufgarnitur;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+21;Waschtischmischer mit extra langem Comfortgriff 12,1 cm ohne;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+22;Aufputz-Duscharmatur mit;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+23;Eckventil mit Regulierfunktion;14,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+24;Kombi-Eckventil DN 15 angerauhtes;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+25;Plus Sifon;7,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;WC-Modul mit Spülkasten, Betätigung von vorne, Bauhöhe 1120 mm WC-Modul zur Befestigung an;3,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;WC-Gerontomodul im Baukastensystem, mit TECE-Spülkasten, Betätigung von vorne, Keramikbefestigung;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;Waschtischmodul, Bauhöhe 1120 mm;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Waschtischmodul für Ausgussbecken, Bauhöhe 1120 mm zur Befestigung an Profilrohren oder für den Einbau in Metall- oder Holzständerwände und als Vorwand- oder Eckmodul.;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+5;Urinalmodul mit Spülergehäuse;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+6;Bad-/Duschmodul für UP- und;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Durchlauferhitzer;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Elektronisch geregelter Mini-Durchlauferhitzer mit Regelelektronik, Auslauftemperatursensorund variabler Begrenzung der Durchflussmenge. Gradgenaue Wunschtemperatur bis zur maximalen Leistung. Interne Temperaturbegrenzung von 30 - 50GradC. Verbrühschutz durch automatische Leistungsanpassung. Über- u;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;Speicher geeignet für die Warmwasserversorgung von einzelnen Zapfstellen, z. B. zur Versorgung eines Ausgussbecken oder einer Spüle oder einer einzelnen Dusche.Druckloses Gerät zur Versorgung einer Zapfstelle, Verwendung nur mit drucklosen Armaturen. Übertischmontage. AUSSTATTUNG UND KOMFORT:Tempera;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Einhebel-Küchenbatterie für offene Untertisch-Speicher mit schwenkbarem Auslauf verchromt, Anschlußrohre 16 x 1, 300 mm lang, Messing-Gehäuse Chrom-Oberfläche, Einsetzbar für Geräte:  Speicher Untertischmontage . Technische Daten: Anwendung: Küche,Bauart: offen,Montageart: Standbatterie,Oberfläche: ;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+5;Einhebel-Küchenbatterie für offene Übertisch-Speicher zur Wandmontage, mit schwenkbarem Auslauf verchromt, Anschlußrohre 16 x 1, 300 mm lang, Messing-Gehäuse Chrom-Oberfläche, Einsetzbar für Geräte:  Speicher Übertischmontage . Technische Daten: Anwendung: Küche,Bauart: offen,Montageart: Wandbatteri;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Rohr aus nichtrostendem Stahl,;60,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Rohr aus nichtrostendem Stahl,;25,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;Rohr aus nichtrostendem Stahl,;20,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Rohr aus nichtrostendem Stahl,;65,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+5;Bogen mit Pressverbinder;90,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+6;Bogen mit Pressverbinder;25,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+7;Bogen mit Pressverbinder;20,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+8;Bogen mit Pressverbinder;65,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+9;Wandscheibe 12 mm;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+10;Wandscheibe 15 mm;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+11;Wandscheibe 18 mm;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+12;Wandscheibe 22 mm;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+13;Wandscheibenabdichtungsset Einzelwandscheibe;16,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+14;Doppelwandscheibe 15 mm;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+15;Doppelwandscheibe 18 mm;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+16;Doppelwandscheibe 22 mm;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+17;Wandscheibenabdichtungsset Doppelwandscheibe;16,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+18;T-Stück mit Pressverbinder;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+19;T-Stück mit Pressverbinder;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+20;T-Stück mit Pressverbinder;6,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+21;T-Stück mit Pressverbinder;15,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+22;Muffe mit Pressverbinder mit DVGW zertifizierter Prüfsicherheit;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+23;Muffe mit Pressverbinder mit DVGW zertifizierter Prüfsicherheit;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+24;Muffe mit Pressverbinder mit DVGW zertifizierter Prüfsicherheit;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+25;Reduzierung mit Pressverbinder mit DVGW zertifizierter Prüfsicherheit bei unverpresstem Verbinder, aus Edelstahl (Molybdänanteil min. 2,2%), 18 mm;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+26;Reduzierung mit Pressverbinder mit DVGW zertifizierter Prüfsicherheit bei unverpresstem Verbinder, aus Edelstahl (Molybdänanteil min. 2,2%), 22 mm;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+27;Reduzierung mit Pressverbinder mit DVGW zertifizierter Prüfsicherheit bei unverpresstem Verbinder, aus Edelstahl (Molybdänanteil min. 2,2%), 28 mm;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+28;Übergangsstück mit Pressverbinder mit DVGW zertifizierter Prüfsicherheit bei unverpresstem Verbinder, aus Edelstahl (Molybdänanteil min. 2,2%), 15 mm;25,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+29;Übergangsstück mit Pressverbinder mit DVGW zertifizierter Prüfsicherheit bei unverpresstem Verbinder, aus Edelstahl (Molybdänanteil min. 2,2%), 15 mm;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+30;Übergangsstück mit Pressverbinder mit DVGW zertifizierter Prüfsicherheit bei unverpresstem Verbinder, aus Edelstahl (Molybdänanteil min. 2,2%), 22 mm;8,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+31;Übergangsstück mit Pressverbinder mit DVGW zertifizierter Prüfsicherheit bei unverpresstem Verbinder, aus Edelstahl (Molybdänanteil min. 2,2%), 28 mm;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+32;Übergangsstück mit Pressverbinder mit DVGW zertifizierter Prüfsicherheit bei unverpresstem Verbinder, aus Edelstahl (Molybdänanteil min. 2,2%), 28 mm;15,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+33;Innengewinde-Verschraubung aus Rotguss, flachdichtend, mediumberührte Metallteile aus entzinkungsfreiem und korrosionsbeständigem Rotguss, beständig gegen aggressives Wasser, mit Überwurfmutter für flachdichtendes Anschlussgewinde inkl. EPDM-Dichtung,;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+34;Innengewinde-Verschraubung aus Rotguss, flachdichtend, mediumberührte Metallteile aus entzinkungsfreiem und korrosionsbeständigem Rotguss, beständig gegen aggressives Wasser, mit Überwurfmutter für flachdichtendes;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+35;Pressverschraubung für das vorbeschriebene Edelstahlrohr, mediumberührte Metallteile aus entzinkungsfreiem und korrosionsbeständigem Rotguss, beständig gegen aggressives Wasser, mit Überwurfmutter für flachdichtendes Anschlussgewinde inkl. EPDM-Dichtung,;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+36;Pressverschraubung für das vorbeschriebene Edelstahlrohr, mediumberührte Metallteile aus entzinkungsfreiem und korrosionsbeständigem Rotguss, beständig gegen aggressives Wasser, mit Überwurfmutter für flachdichtendes Anschlussgewinde inkl. EPDM-Dichtung,;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+37;Pressverschraubung für das vorbeschriebene Edelstahlrohr, mediumberührte Metallteile aus entzinkungsfreiem und korrosionsbeständigem Rotguss, beständig gegen aggressives Wasser, mit Überwurfmutter für flachdichtendes Anschlussgewinde inkl. EPDM-Dichtung,;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+38;Pressverschraubung für das vorbeschriebene Edelstahlrohr, mediumberührte Metallteile aus entzinkungsfreiem und korrosionsbeständigem Rotguss, beständig gegen aggressives Wasser, mit Überwurfmutter für flachdichtendes Anschlussgewinde inkl. EPDM-Dichtung,;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Freistrom-Absperrventil, mit Entleerstopfen, IG oder AG;3,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Freistrom-Absperrventil, mit Entleerstopfen, IG oder AG;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;Verlängerung für Entleerventile DN 8, passend für alle Armaturen und Verschraubungen mit Entleerungsbohrung, aus Rotguss, Länge 35 mm, nach UBA-Bewertungsgrundlage, ÜA-Reg.-Nr. R-15.2.3-21-17048, WIEN-ZERT;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Entleerventil aus Rotguss/Kunststoff,;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+5;Freistrom-Kombi-Rückflussverhinderer, mit Entleerstopfen, AG,;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+6;Freistrom-Kombi-Rückflussverhinderer, mit Entleerstopfen, AG,;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+7;Freistrom-Kombi-Rückflussverhinderer, mit Entleerstopfen, AG,;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+8;Probenahmeventil;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+9;Probenahmeventil für Eckventil am Waschtisch;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+10;Hygienespülung PRO mit Durchflusssensor, mit einem Anschluss;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+11;Inbetriebnahme Hygienespülung wie zuvor beschrieben;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+12;Druckminderer-Filter-Kombination wie zuvor in jedem;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+13;Heizungsbefüllkombination BA;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+14;Frostsichere Außenarmatur, mit Steckschlüssel, Bausatzausführung;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;KG 2000 Abwasserrohre DN110 KG 2000-EM;20,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;KG 2000 B - Bögen DN 110 15-, 30- oder 45 Grad;35,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;KG 2000 EA Abzweige DN 125 45 Grad,;7,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;KG 2000 U - Überschiebmuffe DN 110;3,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+5;KG 2000 M Muffenstopfen DN 110;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+6;Abflussrohr aus Polypropylen (PP), mit Muffe, heißwasserbeständig und schalldämmend.;25,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+7;Abflussrohr aus Polypropylen (PP), mit Muffe, heißwasserbeständig und schalldämmend.;25,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+8;Abflussrohr aus Polypropylen (PP), mit Muffe, heißwasserbeständig und schalldämmend.;10,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+9;Abflussrohr aus Polypropylen (PP), mit Muffe, heißwasserbeständig und schalldämmend.;50,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+10;Sifonwinkel aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+11;Bogen aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;55,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+12;Bogen aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;15,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+13;Bogen aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+14;Bogen aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;25,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+15;Abzweig aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+16;HT-Abzweig aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+17;Abzweig aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+18;Abzweig aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+19;Abzweig aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+20;Abzweig aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+21;Abzweig aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;3,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+22;Abzweig aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+23;Abzweig aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+24;Abzweig aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+25;Doppelabzweig aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+26;Doppelabzweig aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+27;Eckdoppelabzweig aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+28;Eckdoppelabzweig aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;0,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+29;Reduktionsstück aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+30;Reduktionsstück aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+31;Reduktionsstück aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+32;Reduktionsstück aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+33;Reduktionsstück aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+34;Reduktionsstück aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+35;Überschiebmuffe aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+36;Überschiebmuffe aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+37;Überschiebmuffe aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;3,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+38;Überschiebmuffe aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+39;Reinigungsrohr aus Polypropylen (PP), heißwasserbeständig und schalldämmend.;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+40;Brandschutzband;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+41;Brandschutzband;3,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+42;Brandschutzband;3,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+43;Brandschutzband;7,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+44;Brandmanschette KOMPAKT;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+45;Brandmanschette KOMPAKT;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+46;Brandmanschette KOMPAKT;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+47;Brandmanschette KOMPAKT;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+48;Winkelbrandmanschette;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+49;Winkelbrandmanschette;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+50;Winkelbrandmanschette;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+51;Bodenablauf Der Ultraflache 54 DN 50, WaD, Designrost, L&L,;3,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+52;Steildachhaube DN 100 einteilig, zur Schmutzwasserentlüftung;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+53;Flexschlauch AF 70/100 mit Adapter für Dunstrohranschluss;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Die Hebeanlage für fäkalienhaltiges und fäkalienfreies Abwasser ist mit zwei überflutbaren Pumpen sowie einem Rückflussverhinderer ausgestattet. Der Sammelbehälter aus dauerhaft beständigem Kunststoff (PE) bietet universale Anschlussmöglichkeiten und hat eine verschraubte Reinigungsöffnung.;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Verbindungsschlauch DN 100, für Druckleitungen aus PE Elastischer Verbindungsschlauch, Gummigewebeschlauch inkl. zwei Schlauchschellen, für Anschlussadapter und Druckleitungen aus PE;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;Druckrohr Abwasser;6,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Druckrohr Bogen;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+5;Spannverbinder;15,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+6;Übergangsmuffe;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+7;Kondensatpumpe;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Mineralwolldämmung;35,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Mineralwolldämmung 18/15mm;30,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;Mineralwolldämmung;40,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Mineralwolldämmung, 28/25mm;70,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+5;Zulage Formteil 15mm;20,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+6;Zulage Formteil 18mm;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+7;Zulage Formteil 22mm;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+8;Zulage Formteil 28mm;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+9;Rohrabschottung DN12 x 500mm;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+10;Rohrabschottung DN15 x 500mm;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+11;Rohrabschottung DN20 x 500mm;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+12;Rohrabschottung DN25 x 500mm;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Rohrschelle DN15;60,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Rohrschelle DN15;35,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;Rohrschelle DN20;65,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Rohrschelle DN25;80,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+5;Rohrschelle DN40;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+6;Rohrschelle DN50;40,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+7;Rohrschelle DN70;30,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+8;Rohrschelle DN90;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+9;Rohrschelle DN100;60,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+10;Gewindestab m8;20,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+11;Bezeichnungsschilder gemäß DIN-Vorschrift für sämtliche Anlagenteile, wie Absperrventile, Gruppenleitungen,;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+12;Entleerungsventil mit Verschlußkappe, IT-Dichtung u. Kette, Gehäuse aus Rotguß, metallisch dichtend, Dichtflächen, Rotguß, PN 10, m. Gewindeanschluß R 1/2, zugelassen für Trinkwasserinstalltion.;4,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Gewährleistung 1. und 2. Jahr mit Wartung;1,0;psch;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Ausdehnung Gewährleistung 3. und 4. Jahr mit Wartung aller relevanten Anlagen nach VOB/B.;1,0;psch;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Prüfung auf Dichtheit;1,0;psch;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Dokumentation Grundleitungen;1,0;psch;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;Anschluss herstellen an Bestandsleitungen;8,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Füllen der Anlage mit vollentsalztem Wasser.;1600,0;Ltr;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+5;Durchführung einer Druckprobe des gesamten Netzes innerhalb des Baufeldes.;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+6;Durchführung einer Druckprobe des gesamten Trinkwassernetzes innerhalb des Baufeldes.;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+7;Das Spülen mit Wasser wird mit dem Versorgungsdruck kurz vor der Inbetriebnahme durchgeführt.;2,0;psch;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+8;Revisionsunterlagen;1,0;psch;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+9;Rollgerüst als freistehendes Gerüst, gemäß UVV, mit Prüfsiegel inkl. Auf- und Abbau sowie An- und Abtransport.;1,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+10;Bearbeitungspauschale;1,0;psch;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+11;Kernbohrung 160mm durch Stahlbetondecken und Wände bis 25 cm dick, Lochdurchmesser bis 160 mm, einschl. Entsorgung des Bohrgutes.;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+12;Kernbohrung 200mm durch Stahlbetondecken und Wände 25 - 30 cm dick, Lochdurchmesser 200 mm, einschl. Entsorgung des Bohrgutes.;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+13;Kernbohrung 280mm durch Stahlbetondecken und Wände 25 - 30 cm dick, Lochdurchmesser 280 mm, einschl. Entsorgung des Bohrgutes.;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+14;Kernbohrung 360mm durch Stahlbetondecken und Wände 25 - 30 cm dick, Lochdurchmesser 360 mm, einschl. Entsorgung des Bohrgutes.;2,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+15;Kernbohrung 400mm durch Stahlbetondecken und Wände 25 - 30 cm dick, Lochdurchmesser 400 mm, einschl. Entsorgung des Bohrgutes.;5,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+16;Herstellen von Wanddurchbrüchen durch Mauerwerk;10,0;St;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+17;Profilschienen verzinkt 27/30 mm einschl. Endkappen,;15,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+18;Profilschienen verzinkt 38/40 mm einschl. Endkappen,;10,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+19;Profilschienen verzinkt 40/60 mm einschl. Endkappen,;3,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+20;Profilschienen feuerverzinkt 40/60 mm einschl. Endkappen,;3,0;m;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+21;Montage- und Werkstattpläne;1,0;psch;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+1;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen.;10,0;h;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+2;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen.;10,0;h;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+3;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen.;10,0;h;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81
+4;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen.;10,0;h;gaeb;anschreiben/2026-07-13, LV_TGA_unbepreist.X81

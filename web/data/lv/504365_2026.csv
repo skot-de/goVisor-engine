@@ -1,0 +1,627 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Anschluss an vorh. Grundleitungsanschluss;4,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+2;Hochschallgedämmtes Abwasserrohr, DN/OD 75;10,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+3;Hochschallgedämmtes Abwasserrohr, DN/OD 110;105,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+4;Hochschallgedämmter Bogen, DN/OD 75;6,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+5;Hochschallgedämmter Bogen, DN/OD 110;32,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+6;Hochschallgedämmter Abzweig, DN/OD 75;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+7;Hochschallgedämmter Abzweig, DN/OD 110;7,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+8;Elektroschweißmuffe, DN/OD 75;10,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+9;Elektroschweißmuffe, DN/OD 110;70,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+10;Stütz- und Dehnmuffe, DN/OD 75;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+11;Stütz- und Dehnmuffe, DN/OD 110;21,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+12;Muffenstopfen, DN/OD 75;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+13;Muffenstopfen, DN/OD 110;12,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+14;Hochschallgedämmtes Reinigungsstück, DN/OD 75;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+15;Hochschallgedämmtes Reinigungsstück, DN/OD 110;9,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+16;Anschluss an vorh. Dachdurchführung;10,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+17;Dichtheitsprobe der Entwässerungsleitungen;1,0;psch;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+1;Anschluss an vorh. Grundleitungsanschluss;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+2;PE-Rohr, 40 x 3,0 mm;5,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+3;PE-Rohr, 50 x 3,0 mm;5,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+4;PE-Rohr, 56 x 3,0 mm;5,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+5;PE-Rohr, 63x 3,0 mm;5,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+6;PE-Rohr, 75 x 3,0 mm;5,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+7;PE-Rohr, 90 x 3,5 mm;40,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+8;PE-Rohr, 110 x 4,3 mm;35,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+9;PE-Rohr, 125 x 4,9 mm;15,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+10;PE-Rohr, 160 x 6,2 mm;35,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+11;PE-Rohr, 200 x 7,7 mm;10,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+12;PE-Bogen, 40 mm;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+13;PE-Bogen, 50 mm;3,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+14;PE-Bogen, 56 mm;3,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+15;PE-Bogen, 63 mm;6,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+16;PE-Bogen, 75 mm;7,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+17;PE-Bogen, 90 mm;6,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+18;PE-Bogen, 110 mm;10,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+19;PE-Bogen, 125 mm;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+20;PE-Bogen, 160 mm;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+21;PE-Bogen, 200 mm;8,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+22;PE-Abzweig, 90 mm;4,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+23;PE-Abzweig, 110 mm;3,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+24;PE-Abzweig, 125 mm;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+25;PE-Abzweig, 160 mm;6,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+26;PE-Abzweig, 200 mm;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+27;PE-Reduzierung, 50 mm;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+28;PE-Reduzierung, 56 mm;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+29;PE-Reduzierung, 63 mm;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+30;PE-Reduzierung, 75mm;12,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+31;PE-Reduzierung, 90 mm;4,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+32;PE-Reduzierung, 110 mm;3,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+33;PE-Reduzierung, 125 mm;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+34;PE-Reduzierung, 160 mm;3,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+35;PE-Reduzierung, 200 mm;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+36;PE-Elektroschweissmuffe, 40 mm;14,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+37;PE-Elektroschweissmuffe, 50 mm;6,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+38;PE-Elektroschweissmuffe, 56 mm;9,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+39;PE-Elektroschweissmuffe, 63 mm;18,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+40;PE-Elektroschweissmuffe, 75 mm;26,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+41;PE-Elektroschweissmuffe, 90 mm;26,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+42;PE-Elektroschweissmuffe, 110 mm;31,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+43;PE-Elektroschweissmuffe, 125 mm;6,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+44;PE-Elektroschweissmuffe, 160 mm;23,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+45;PE-Elektroschweissmuffe, 200 mm;17,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+46;Reinigungsstück, 160 mm;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+47;Anschluss an vorh. Dachdurchführung;12,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+48;Dichtheitsprobe der Entwässerungsleitungen;1,0;psch;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+49;Montageschiene;90,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+50;Schienenkupplungen;20,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+51;Aufhaengung, starr;50,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+52;Fixierset;16,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+53;Rohrschelle, DN 90;40,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+54;Rohrschelle, DN 110;25,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+55;Rohrschelle, DN 125;8,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+56;Rohrschelle, DN 160;19,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+57;Rohrschelle, DN 200;9,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+58;Vertikalbefestigung, DN 110;6,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+59;Vertikalbefestigung, DN 160;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+1;Anschluss an vorh. Grundleitungsanschluss;70,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+2;Schalloptimiertes Abwasserrohr, DN/OD 32;25,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+3;Schalloptimiertes Abwasserrohr, DN/OD 50;340,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+4;Schalloptimiertes Abwasserrohr, DN/OD 75;90,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+5;Schalloptimiertes Abwasserrohr, DN/OD 110;250,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+6;Schalloptimiertes Abwasserrohr, DN/OD 125;30,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+7;Schalloptimierter Bogen, DN/OD 32;20,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+8;Schalloptimierter Bogen, DN/OD 50;380,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+9;Schalloptimierter Bogen, DN/OD 75;50,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+10;Schalloptimierter Bogen, DN/OD 110;200,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+11;Schalloptimierter Bogen, DN/OD 125;10,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+12;Schalloptimierter Abzweig, DN/OD 32;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+13;Schalloptimierter Abzweig, DN/OD 50;50,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+14;Schalloptimierter Abzweig, DN/OD 75;50,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+15;Schalloptimierter Abzweig, DN/OD 110;80,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+16;Schalloptimierter Abzweig, DN/OD 125;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+17;Schalloptimierter Doppelabzweig, DN/OD 75;10,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+18;Schalloptimierter Doppelabzweig, DN/OD 110;10,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+19;Schalloptimierter Doppeleckabzweig, DN/OD 75;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+20;Schalloptimierter Doppeleckabzweig, DN/OD 110;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+21;Schalloptimierte Reduzierung, DN/OD 75;50,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+22;Schalloptimierte Reduzierung, DN/OD 110;80,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+23;Schalloptimierte Reduzierung, DN/OD 125;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+24;Schalloptimierte Doppelmuffe, DN/OD 32;10,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+25;Schalloptimierte Doppelmuffe, DN/OD 50;85,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+26;Schalloptimierte Doppelmuffe, DN/OD 75;25,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+27;Schalloptimierte Doppelmuffe, DN/OD 110;65,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+28;Schalloptimierte Doppelmuffe, DN/OD 125;10,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+29;Schalloptimiertes Reinigungsstück, DN/OD 75;10,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+30;Schalloptimiertes Reinigungsstück, DN/OD 110;20,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+31;Muffenstopfen, DN/OD 32;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+32;Muffenstopfen, DN/OD 50;20,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+33;Muffenstopfen, DN/OD 75;20,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+34;Muffenstopfen, DN/OD 110;30,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+35;Anschlussbogen 90°, DN/OD 50;50,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+36;Anschluss an vorh. Dachdurchführung;20,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+37;Dichtheitsprobe der Entwässerungsleitungen;1,0;psch;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+38;Kernbohrung, 100-129 mm;3,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+39;Kernbohrung, 190-219 mm;7,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+40;Futterrohr, 100 mm;3,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+41;Futterrohr, 200 mm;7,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+42;Hauseinfürhung Wand, 1-fach;3,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+43;Dichtungseinsatz, 110-125/200 mm;7,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+44;Mini-Hebeanlage;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+45;PE100-Druckrohrohr, 40 x 2,4 mm;10,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+46;PE100-Winkel, 40 mm;6,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+47;PE100-Kupplung, 40 mm;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+48;PE100-Übergangsstück, 40 mm;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+1;Druckerhöhungsanlage;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+2;Flexible Anschlussleitung;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+3;Herstellerinbetriebnahme und Einregulierung;1,0;psch;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+1;Edelstahlrohr, 15 x 1,0 mm;400,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+2;Edelstahlrohr, 18 x 1,0 mm;150,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+3;Edelstahlrohr, 22 x 1,2 mm;260,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+4;Edelstahlrohr, 28 x 1,2 mm;200,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+5;Edelstahlrohr, 35 x 1,5 mm;105,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+6;Edelstahlrohr, 42 x 1,5 mm;20,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+7;Edelstahlrohr, 54 x 1,5 mm;10,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+8;Bogen, 15 mm;400,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+9;Bogen, 18 mm;200,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+10;Bogen, 22 mm;295,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+11;Bogen, 28 mm;115,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+12;Bogen, 35 mm;35,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+13;Bogen, 42 mm;10,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+14;Bogen, 54 mm;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+15;T-Stück, 15 mm;60,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+16;T-Stück, 18 mm;40,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+17;T-Stück, 22 mm;75,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+18;T-Stück, 28 mm;30,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+19;T-Stück, 35 mm;10,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+20;T-Stück, 42 mm;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+21;T-Stück, 54 mm;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+22;Muffe, 15 mm;100,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+23;Muffe, 18 mm;40,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+24;Muffe, 22 mm;65,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+25;Muffe, 28 mm;50,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+26;Muffe, 35 mm;25,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+27;Muffe, 42 mm;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+28;Muffe, 54 mm;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+29;Übergangsstück, 15 mm;40,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+30;Übergangsstück, 18 mm;15,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+31;Übergangsstück, 22 mm;30,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+32;Übergangsstück, 28 mm;25,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+33;Übergangsstück, 35 mm;16,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+34;Übergangsstück, 42 mm;12,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+35;Übergangsstück, 54 mm;4,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+36;Wandscheibe, 15 mm;60,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+37;Wandscheibe, 18 mm;40,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+38;Wandscheibe, 22 mm;20,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+39;Doppelandscheibe, 15 mm;40,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+40;Doppelandscheibe, 18 mm;50,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+41;Doppelandscheibe, 22 mm;30,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+42;Hauswasserstation, DN 40;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+43;Trinkwasserverteiler, DN 40, 4 Abhänge;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+44;Trinkwasser-Zirkulationspumpe, DN 25, 6 mWS;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+45;Freistromventil, DN 15;6,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+46;Freistromventil, DN 20;6,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+47;Freistromventil, DN 25;10,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+48;Freistromventil, DN 32;8,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+49;Freistromventil, DN 40;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+50;Freistromventil, DN 50;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+51;Thermostatisches Regelventil, DN 15;4,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+52;Kalt- und Warmwasserzähler, Q3;4,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+53;Druckminderer, DN 25;3,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+54;Systemtrenner, DN 20;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+55;Probenahmeventil;25,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+56;"Zaphfhahn, 1/2""";10,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+57;Hygienespülstation;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+58;Montageschiene;45,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+59;Schienenkonsole;30,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+60;Bezeichnungsschild;20,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+61;Rohr- Kanalkennzeichnung;80,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+62;Druckprobe der Trinkwasserleitung nach Installation;1,0;psch;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+63;Druckprobe der Trinkwasserleitung vor Inbetriebnahme;1,0;psch;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+64;Spülung der Trinkwasserleitungen;1,0;psch;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+1;Dämmschlauch, DN 32;25,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+2;Dämmschlauch, DN 50;170,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+3;Dämmschlauch, DN 70;45,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+4;Dämmschlauch, DN 100;125,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+5;Dämmschlauch, DN 125;15,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+6;Dämmplatten dampfdicht;100,0;m²;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+7;Mineralwolleschale, 15 mm;100,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+8;Mineralwolleschale, 18 mm;50,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+9;Mineralwolleschale, 22 mm;100,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+10;Mineralwolleschale, 28 mm;100,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+11;Mineralwolleschale, 35 mm;50,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+12;Mineralwolleschale, 42 mm;20,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+13;Mineralwolleschale, 54 mm;10,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+14;Kompaktdämmhülse, 15 mm;150,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+15;Kompaktdämmhülse, 18 mm;50,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+16;Kompaktdämmhülse, 22 mm;80,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+17;Kompaktdämmhülse, 28 mm;50,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+18;Kompaktdämmhülse, 32 mm;25,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+19;Flexibler Isolierschlauch, 15 mm;150,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+20;Flexibler Isolierschlauch, 18 mm;50,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+21;Flexibler Isolierschlauch, 22 mm;80,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+22;Flexibler Isolierschlauch, 28 mm;50,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+23;Flexibler Isolierschlauch, 32 mm;25,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+24;Brandschutzmanschette, DN 50;10,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+25;Brandschutzmanschette, DN 70;25,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+26;Brandschutzmanschette, DN 100;45,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+27;Rohrabschottung R90, 15 mm;5,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+28;Rohrabschottung R90, 18 mm;5,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+29;Rohrabschottung R90, 22 mm;10,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+30;Rohrabschottung R90, 28 mm;10,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+31;Rohrabschottung R90, 35 mm;5,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+32;Rohrabschottung R90, 42 mm;5,0;m;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+33;Feuerbeständige Abschottung für Brandschutzdurchführungen;440,0;l;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+1;Montageelement für WT, Standarmatur;23,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+2;Waschtischanlage, 60 cm;22,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+3;Waschtischanlage, 45 cm;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+4;Montageelement für WT, Standarmatur, UP-Sifon;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+5;Waschtischanlage, barrierefrei, 65 cm;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+6;UP-Geruchsverschluss;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+7;el. Waschtischbatterie, Netzbetrieb;28,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+8;UT-Thermostat;28,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+9;Kristallspiegel, 800 x 600 mm;28,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+10;Seifenspender;28,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+11;Papierhandtuchspender;28,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+12;Abfallkorb;28,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+13;Montageelement für WC, mit UP-Spülkasten;34,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+14;Wand-WC Tiefspüler;34,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+15;WC-Betätigungsplatte, Edelstahl;34,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+16;WC-Papierrollenmspender;34,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+17;Montageelement für WC, UP-Spülkasten, Stützgriffe;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+18;Wand-WC Tiefspüler, barrierefrei;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+19;Rohbauset für WC-Steuerungen mit el. Spülauslösung;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+20;WC-Steuerung mit el. Spülauslösung;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+21;Rückenlehne;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+22;Stützklappgriff;10,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+23;Aufrüstsatz Papierrollenhalter;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+24;Aufrüstsatz WC-Spülauslösung, Funk;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+25;WC-Bürstenhalter;39,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+26;WC-Deckel;39,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+27;Hygieneabfallbehälter;15,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+28;Zulage für Hygienespülvorrichtung im Spülkasten;3,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+29;Montageelement für Urinal, universell;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+30;Urinal;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+31;UP-Spülergehäuse;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+32;Urinal-Betätigungsplatte, elektrisch;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+33;Duschrinne, 700 mm;14,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+34;Montageelement für UP-Dusche;14,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+35;Unterputz-Box;14,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+36;Dehnzonenmanschette;14,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+37;UP-Duscheinrichtung, elektronisch;14,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+38;Duschkopf, DN 15;14,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+39;Unterputz-Netzteil;6,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+40;Universal-Anschlusskabel;14,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+41;Haltegriff, 600 mm;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+42;Einhängesitz;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+43;Duschablage;4,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+44;"Wasseranschluss, Eckventil 1/2""";5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+45;"Wasseranschluss, Eckventil 3/4""";3,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+46;Abwasseranschluss, DN 40;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+47;Abwasseranschluss, DN 50;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+48;Abwasseranschluss, DN 70;3,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+49;Ablaufkörper, DN 100;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+50;Stutzenverlängerung;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+51;Glockengeruchverschluss;5,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+52;Aufsatzstück mit Gitterrost;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+53;Schlitzrinne, 1000 mm;3,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+54;Bodenablauf DN, 70/100;23,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+55;Geruchsverschluss Bodenablauf;23,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+56;Montageelement für AU, Wandarmatur AP;8,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+57;Mehrzweckbecken, 60 cm;6,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+58;Gipsfangbecken;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+59;Einhebel-Spültischbatterie, Wandmontage;8,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+60;Küchenspülenanschluss;4,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+61;Einhebel-Spültischbatterie;4,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+62;Geschirrspülmaschinenanschluss;4,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+63;Waschmaschinenanschluss;6,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+64;Anschluss Reinigungsmaschine;6,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+65;Trinkbrunnen, wandstehend;4,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+66;Kleindurchlauferhitzer, 6,5 kW/400 V;6,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+67;Kompaktdurchlauferhitzer, 11-13,5 kW/400 V;3,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+68;Komfortdurchlauferhitzer, 18-27 kW/400 V;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+69;Untertisch-Speicher, 10 l;9,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+70;Wandeinbauschrank;4,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+71;Frostsichere Außenzapfstelle;2,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+1;Obermonteurstunden;25,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+2;Monteurstunden;25,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+3;Helferstunden;25,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+4;Stemmstunden;25,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+5;Kernbohrungen, 60-79 mm;25,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+6;Kernbohrungen, 80-99 mm;25,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+7;Kernbohrungen, 100-129 mm;15,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+8;Kernbohrungen,130-159 mm;15,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+9;Kernbohrungen, 160-189 mm;20,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+10;Beprobung der Trinkwasseranlage;1,0;psch;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+1;Erstellung Werk- und Montageplanung gem. VOB und VDI 6026;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+2;Inbetriebnahme und Einweisung gem. VOB/C;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+3;Abnahme gem. VOB mit Auftraggeber und Bauherr;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+4;Erstellung, Zusammenstellung und Übergabe der Dokumentation sowie der Revisionsunterlagen gem. VOB und VDI 6026;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+1;Inspektions- und Wartungsarbeiten nach einem Jahr;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+2;Inspektions- und Wartungsarbeiten nach zwei Jahren;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+3;Inspektions- und Wartungsarbeiten nach drei Jahren;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+4;Inspektions- und Wartungsarbeiten nach vier Jahren;1,0;St;gaeb;leistungsbeschreibungen/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+1;Anschluss an vorh. Grundleitungsanschluss;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+2;Hochschallgedämmtes Abwasserrohr, DN/OD 75;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+3;Hochschallgedämmtes Abwasserrohr, DN/OD 110;105,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+4;Hochschallgedämmter Bogen, DN/OD 75;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+5;Hochschallgedämmter Bogen, DN/OD 110;32,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+6;Hochschallgedämmter Abzweig, DN/OD 75;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+7;Hochschallgedämmter Abzweig, DN/OD 110;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+8;Elektroschweißmuffe, DN/OD 75;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+9;Elektroschweißmuffe, DN/OD 110;70,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+10;Stütz- und Dehnmuffe, DN/OD 75;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+11;Stütz- und Dehnmuffe, DN/OD 110;21,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+12;Muffenstopfen, DN/OD 75;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+13;Muffenstopfen, DN/OD 110;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+14;Hochschallgedämmtes Reinigungsstück, DN/OD 75;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+15;Hochschallgedämmtes Reinigungsstück, DN/OD 110;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+16;Anschluss an vorh. Dachdurchführung;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+17;Dichtheitsprobe der Entwässerungsleitungen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+1;Anschluss an vorh. Grundleitungsanschluss;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+2;PE-Rohr, 40 x 3,0 mm;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+3;PE-Rohr, 50 x 3,0 mm;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+4;PE-Rohr, 56 x 3,0 mm;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+5;PE-Rohr, 63x 3,0 mm;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+6;PE-Rohr, 75 x 3,0 mm;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+7;PE-Rohr, 90 x 3,5 mm;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+8;PE-Rohr, 110 x 4,3 mm;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+9;PE-Rohr, 125 x 4,9 mm;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+10;PE-Rohr, 160 x 6,2 mm;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+11;PE-Rohr, 200 x 7,7 mm;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+12;PE-Bogen, 40 mm;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+13;PE-Bogen, 50 mm;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+14;PE-Bogen, 56 mm;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+15;PE-Bogen, 63 mm;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+16;PE-Bogen, 75 mm;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+17;PE-Bogen, 90 mm;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+18;PE-Bogen, 110 mm;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+19;PE-Bogen, 125 mm;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+20;PE-Bogen, 160 mm;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+21;PE-Bogen, 200 mm;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+22;PE-Abzweig, 90 mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+23;PE-Abzweig, 110 mm;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+24;PE-Abzweig, 125 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+25;PE-Abzweig, 160 mm;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+26;PE-Abzweig, 200 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+27;PE-Reduzierung, 50 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+28;PE-Reduzierung, 56 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+29;PE-Reduzierung, 63 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+30;PE-Reduzierung, 75mm;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+31;PE-Reduzierung, 90 mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+32;PE-Reduzierung, 110 mm;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+33;PE-Reduzierung, 125 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+34;PE-Reduzierung, 160 mm;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+35;PE-Reduzierung, 200 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+36;PE-Elektroschweissmuffe, 40 mm;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+37;PE-Elektroschweissmuffe, 50 mm;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+38;PE-Elektroschweissmuffe, 56 mm;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+39;PE-Elektroschweissmuffe, 63 mm;18,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+40;PE-Elektroschweissmuffe, 75 mm;26,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+41;PE-Elektroschweissmuffe, 90 mm;26,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+42;PE-Elektroschweissmuffe, 110 mm;31,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+43;PE-Elektroschweissmuffe, 125 mm;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+44;PE-Elektroschweissmuffe, 160 mm;23,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+45;PE-Elektroschweissmuffe, 200 mm;17,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+46;Reinigungsstück, 160 mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+47;Anschluss an vorh. Dachdurchführung;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+48;Dichtheitsprobe der Entwässerungsleitungen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+49;Montageschiene;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+50;Schienenkupplungen;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+51;Aufhaengung, starr;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+52;Fixierset;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+53;Rohrschelle, DN 90;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+54;Rohrschelle, DN 110;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+55;Rohrschelle, DN 125;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+56;Rohrschelle, DN 160;19,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+57;Rohrschelle, DN 200;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+58;Vertikalbefestigung, DN 110;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+59;Vertikalbefestigung, DN 160;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+1;Anschluss an vorh. Grundleitungsanschluss;70,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+2;Schalloptimiertes Abwasserrohr, DN/OD 32;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+3;Schalloptimiertes Abwasserrohr, DN/OD 50;340,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+4;Schalloptimiertes Abwasserrohr, DN/OD 75;90,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+5;Schalloptimiertes Abwasserrohr, DN/OD 110;250,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+6;Schalloptimiertes Abwasserrohr, DN/OD 125;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+7;Schalloptimierter Bogen, DN/OD 32;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+8;Schalloptimierter Bogen, DN/OD 50;380,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+9;Schalloptimierter Bogen, DN/OD 75;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+10;Schalloptimierter Bogen, DN/OD 110;200,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+11;Schalloptimierter Bogen, DN/OD 125;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+12;Schalloptimierter Abzweig, DN/OD 32;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+13;Schalloptimierter Abzweig, DN/OD 50;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+14;Schalloptimierter Abzweig, DN/OD 75;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+15;Schalloptimierter Abzweig, DN/OD 110;80,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+16;Schalloptimierter Abzweig, DN/OD 125;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+17;Schalloptimierter Doppelabzweig, DN/OD 75;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+18;Schalloptimierter Doppelabzweig, DN/OD 110;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+19;Schalloptimierter Doppeleckabzweig, DN/OD 75;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+20;Schalloptimierter Doppeleckabzweig, DN/OD 110;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+21;Schalloptimierte Reduzierung, DN/OD 75;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+22;Schalloptimierte Reduzierung, DN/OD 110;80,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+23;Schalloptimierte Reduzierung, DN/OD 125;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+24;Schalloptimierte Doppelmuffe, DN/OD 32;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+25;Schalloptimierte Doppelmuffe, DN/OD 50;85,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+26;Schalloptimierte Doppelmuffe, DN/OD 75;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+27;Schalloptimierte Doppelmuffe, DN/OD 110;65,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+28;Schalloptimierte Doppelmuffe, DN/OD 125;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+29;Schalloptimiertes Reinigungsstück, DN/OD 75;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+30;Schalloptimiertes Reinigungsstück, DN/OD 110;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+31;Muffenstopfen, DN/OD 32;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+32;Muffenstopfen, DN/OD 50;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+33;Muffenstopfen, DN/OD 75;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+34;Muffenstopfen, DN/OD 110;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+35;Anschlussbogen 90°, DN/OD 50;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+36;Anschluss an vorh. Dachdurchführung;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+37;Dichtheitsprobe der Entwässerungsleitungen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+38;Kernbohrung, 100-129 mm;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+39;Kernbohrung, 190-219 mm;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+40;Futterrohr, 100 mm;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+41;Futterrohr, 200 mm;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+42;Hauseinfürhung Wand, 1-fach;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+43;Dichtungseinsatz, 110-125/200 mm;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+44;Mini-Hebeanlage;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+45;PE100-Druckrohrohr, 40 x 2,4 mm;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+46;PE100-Winkel, 40 mm;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+47;PE100-Kupplung, 40 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+48;PE100-Übergangsstück, 40 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+1;Druckerhöhungsanlage;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+2;Flexible Anschlussleitung;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+3;Herstellerinbetriebnahme und Einregulierung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+1;Edelstahlrohr, 15 x 1,0 mm;400,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+2;Edelstahlrohr, 18 x 1,0 mm;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+3;Edelstahlrohr, 22 x 1,2 mm;260,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+4;Edelstahlrohr, 28 x 1,2 mm;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+5;Edelstahlrohr, 35 x 1,5 mm;105,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+6;Edelstahlrohr, 42 x 1,5 mm;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+7;Edelstahlrohr, 54 x 1,5 mm;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+8;Bogen, 15 mm;400,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+9;Bogen, 18 mm;200,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+10;Bogen, 22 mm;295,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+11;Bogen, 28 mm;115,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+12;Bogen, 35 mm;35,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+13;Bogen, 42 mm;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+14;Bogen, 54 mm;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+15;T-Stück, 15 mm;60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+16;T-Stück, 18 mm;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+17;T-Stück, 22 mm;75,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+18;T-Stück, 28 mm;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+19;T-Stück, 35 mm;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+20;T-Stück, 42 mm;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+21;T-Stück, 54 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+22;Muffe, 15 mm;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+23;Muffe, 18 mm;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+24;Muffe, 22 mm;65,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+25;Muffe, 28 mm;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+26;Muffe, 35 mm;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+27;Muffe, 42 mm;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+28;Muffe, 54 mm;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+29;Übergangsstück, 15 mm;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+30;Übergangsstück, 18 mm;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+31;Übergangsstück, 22 mm;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+32;Übergangsstück, 28 mm;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+33;Übergangsstück, 35 mm;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+34;Übergangsstück, 42 mm;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+35;Übergangsstück, 54 mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+36;Wandscheibe, 15 mm;60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+37;Wandscheibe, 18 mm;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+38;Wandscheibe, 22 mm;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+39;Doppelandscheibe, 15 mm;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+40;Doppelandscheibe, 18 mm;50,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+41;Doppelandscheibe, 22 mm;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+42;Hauswasserstation, DN 40;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+43;Trinkwasserverteiler, DN 40, 4 Abhänge;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+44;Trinkwasser-Zirkulationspumpe, DN 25, 6 mWS;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+45;Freistromventil, DN 15;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+46;Freistromventil, DN 20;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+47;Freistromventil, DN 25;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+48;Freistromventil, DN 32;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+49;Freistromventil, DN 40;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+50;Freistromventil, DN 50;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+51;Thermostatisches Regelventil, DN 15;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+52;Kalt- und Warmwasserzähler, Q3;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+53;Druckminderer, DN 25;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+54;Systemtrenner, DN 20;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+55;Probenahmeventil;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+56;"Zaphfhahn, 1/2""";10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+57;Hygienespülstation;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+58;Montageschiene;45,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+59;Schienenkonsole;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+60;Bezeichnungsschild;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+61;Rohr- Kanalkennzeichnung;80,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+62;Druckprobe der Trinkwasserleitung nach Installation;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+63;Druckprobe der Trinkwasserleitung vor Inbetriebnahme;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+64;Spülung der Trinkwasserleitungen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+1;Dämmschlauch, DN 32;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+2;Dämmschlauch, DN 50;170,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+3;Dämmschlauch, DN 70;45,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+4;Dämmschlauch, DN 100;125,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+5;Dämmschlauch, DN 125;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+6;Dämmplatten dampfdicht;100,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+7;Mineralwolleschale, 15 mm;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+8;Mineralwolleschale, 18 mm;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+9;Mineralwolleschale, 22 mm;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+10;Mineralwolleschale, 28 mm;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+11;Mineralwolleschale, 35 mm;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+12;Mineralwolleschale, 42 mm;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+13;Mineralwolleschale, 54 mm;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+14;Kompaktdämmhülse, 15 mm;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+15;Kompaktdämmhülse, 18 mm;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+16;Kompaktdämmhülse, 22 mm;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+17;Kompaktdämmhülse, 28 mm;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+18;Kompaktdämmhülse, 32 mm;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+19;Flexibler Isolierschlauch, 15 mm;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+20;Flexibler Isolierschlauch, 18 mm;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+21;Flexibler Isolierschlauch, 22 mm;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+22;Flexibler Isolierschlauch, 28 mm;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+23;Flexibler Isolierschlauch, 32 mm;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+24;Brandschutzmanschette, DN 50;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+25;Brandschutzmanschette, DN 70;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+26;Brandschutzmanschette, DN 100;45,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+27;Rohrabschottung R90, 15 mm;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+28;Rohrabschottung R90, 18 mm;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+29;Rohrabschottung R90, 22 mm;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+30;Rohrabschottung R90, 28 mm;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+31;Rohrabschottung R90, 35 mm;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+32;Rohrabschottung R90, 42 mm;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+33;Feuerbeständige Abschottung für Brandschutzdurchführungen;440,0;l;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+1;Montageelement für WT, Standarmatur;23,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+2;Waschtischanlage, 60 cm;22,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+3;Waschtischanlage, 45 cm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+4;Montageelement für WT, Standarmatur, UP-Sifon;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+5;Waschtischanlage, barrierefrei, 65 cm;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+6;UP-Geruchsverschluss;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+7;el. Waschtischbatterie, Netzbetrieb;28,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+8;UT-Thermostat;28,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+9;Kristallspiegel, 800 x 600 mm;28,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+10;Seifenspender;28,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+11;Papierhandtuchspender;28,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+12;Abfallkorb;28,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+13;Montageelement für WC, mit UP-Spülkasten;34,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+14;Wand-WC Tiefspüler;34,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+15;WC-Betätigungsplatte, Edelstahl;34,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+16;WC-Papierrollenmspender;34,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+17;Montageelement für WC, UP-Spülkasten, Stützgriffe;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+18;Wand-WC Tiefspüler, barrierefrei;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+19;Rohbauset für WC-Steuerungen mit el. Spülauslösung;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+20;WC-Steuerung mit el. Spülauslösung;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+21;Rückenlehne;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+22;Stützklappgriff;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+23;Aufrüstsatz Papierrollenhalter;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+24;Aufrüstsatz WC-Spülauslösung, Funk;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+25;WC-Bürstenhalter;39,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+26;WC-Deckel;39,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+27;Hygieneabfallbehälter;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+28;Zulage für Hygienespülvorrichtung im Spülkasten;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+29;Montageelement für Urinal, universell;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+30;Urinal;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+31;UP-Spülergehäuse;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+32;Urinal-Betätigungsplatte, elektrisch;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+33;Duschrinne, 700 mm;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+34;Montageelement für UP-Dusche;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+35;Unterputz-Box;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+36;Dehnzonenmanschette;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+37;UP-Duscheinrichtung, elektronisch;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+38;Duschkopf, DN 15;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+39;Unterputz-Netzteil;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+40;Universal-Anschlusskabel;14,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+41;Haltegriff, 600 mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+42;Einhängesitz;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+43;Duschablage;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+44;"Wasseranschluss, Eckventil 1/2""";5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+45;"Wasseranschluss, Eckventil 3/4""";3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+46;Abwasseranschluss, DN 40;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+47;Abwasseranschluss, DN 50;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+48;Abwasseranschluss, DN 70;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+49;Ablaufkörper, DN 100;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+50;Stutzenverlängerung;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+51;Glockengeruchverschluss;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+52;Aufsatzstück mit Gitterrost;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+53;Schlitzrinne, 1000 mm;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+54;Bodenablauf DN, 70/100;23,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+55;Geruchsverschluss Bodenablauf;23,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+56;Montageelement für AU, Wandarmatur AP;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+57;Mehrzweckbecken, 60 cm;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+58;Gipsfangbecken;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+59;Einhebel-Spültischbatterie, Wandmontage;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+60;Küchenspülenanschluss;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+61;Einhebel-Spültischbatterie;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+62;Geschirrspülmaschinenanschluss;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+63;Waschmaschinenanschluss;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+64;Anschluss Reinigungsmaschine;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+65;Trinkbrunnen, wandstehend;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+66;Kleindurchlauferhitzer, 6,5 kW/400 V;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+67;Kompaktdurchlauferhitzer, 11-13,5 kW/400 V;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+68;Komfortdurchlauferhitzer, 18-27 kW/400 V;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+69;Untertisch-Speicher, 10 l;9,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+70;Wandeinbauschrank;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+71;Frostsichere Außenzapfstelle;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+1;Obermonteurstunden;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+2;Monteurstunden;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+3;Helferstunden;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+4;Stemmstunden;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+5;Kernbohrungen, 60-79 mm;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+6;Kernbohrungen, 80-99 mm;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+7;Kernbohrungen, 100-129 mm;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+8;Kernbohrungen,130-159 mm;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+9;Kernbohrungen, 160-189 mm;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+10;Beprobung der Trinkwasseranlage;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+1;Erstellung Werk- und Montageplanung gem. VOB und VDI 6026;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+2;Inbetriebnahme und Einweisung gem. VOB/C;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+3;Abnahme gem. VOB mit Auftraggeber und Bauherr;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+4;Erstellung, Zusammenstellung und Übergabe der Dokumentation sowie der Revisionsunterlagen gem. VOB und VDI 6026;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+1;Inspektions- und Wartungsarbeiten nach einem Jahr;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+2;Inspektions- und Wartungsarbeiten nach zwei Jahren;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+3;Inspektions- und Wartungsarbeiten nach drei Jahren;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83
+4;Inspektions- und Wartungsarbeiten nach vier Jahren;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/2026-07-14 LV - Sanitärarbeiten 020_KvG.X83

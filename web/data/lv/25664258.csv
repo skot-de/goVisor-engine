@@ -1,0 +1,116 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Der AN hat dem AG sp;1,0;psch;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+2;Es sind Bezeichnungsschilder gem;1,0;psch;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+3;Der AN f;1,0;psch;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+4;Inbetriebnahme der neuen Anlagenteile durch den Bieter bzw. dessen Personal vor Ort (f;1,0;psch;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+5;Stundenlohnarbeiten durch Arbeitskr;10,0;h;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+6;Stundenlohnarbeiten durch Arbeitskr;10,0;h;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+7;Stundenlohnarbeiten durch Arbeitskr;10,0;h;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+1;Kl;1,0;psch;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+2;f;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+1;Gas-Otto-Motor f;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+2;Drehstrom-Generator ausgelegt f;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+3;Gemischregelung f;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+4;Auslegung nach Stand der Technik;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+5;Schallschutzkabine abgestimmt auf das BHKW-Kompakt- Modul zur Schalldruckpegelminderung.;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+1;Lieferung und Montage der Schallschutzhaubenbe- und -entl;2,0;Stk;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+1;Komplettes Motork;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+2;Elektronischer W;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+1;Komplettes Notk;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+2;Elektronischer W;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+1;Komplettes Gemischk;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+1;Container DIN ISO 1496-1 f;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+2;NS-Verkabelung Leistungskabel Versorgung innerhalb des Containers;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+3;Elektroheizung ca. 3 kW f;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+4;Beleuchtung des Containers;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+5;Ausf;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+6;Rundl;4,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+1;Rohrkompensator als L;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+2;W;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+3;Abgasw;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+4;Oxidationskatalysator im Geh;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+5;Abgasschalld;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+6;Temperatursensoren Abgas vor und nach Abgas-W;4,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+7;Kondensatrohrleitungssystem als dichtgeschwei;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+8;Auffangwanne f;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+9;Abgasrohrleitungssystem als dichtgeschwei;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+1;Schmier;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+1;NS-Verkabelung aller vom AN gelieferten Peripheriekomponenten des BHKW f;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+2;F;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+3;Lieferung und Verkabelung aller vom AN gelieferten;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+4;Bauseits gestellte NS-Verkabelung f;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+1;Schaltschrank zur Aufnahme s;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+2;NOT-AUS-Taster an der Hauptt;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+3;1 Rauchmelder;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+4;bestehend aus;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+5;zur Bedienung und;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+1;Ausf;2,0;St;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+1;Erhaltungsma;32000,0;Bh;gaeb;leistungsbeschreibungen/Los 1 BHKW.X83
+1;Der AN hat dem AG sp;1,0;psch;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+2;Es sind Bezeichnungsschilder gem;1,0;psch;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+3;Der AN f;1,0;psch;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+4;Inbetriebnahme der neuen Anlagenteile durch den Bieter bzw. dessen Personal vor Ort (f;1,0;psch;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+5;Stundenlohnarbeiten durch Arbeitskr;10,0;h;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+6;Stundenlohnarbeiten durch Arbeitskr;10,0;h;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+7;Stundenlohnarbeiten durch Arbeitskr;10,0;h;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+1;Inertisierung der Leitungsabschnitte mit Stickstoff oder Luft zur Vorbereitung des R;1,0;psch;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+2;Arbeiten am Gasleitungssystem soweit nicht in den vorherigen Positionen enthalten, bestehend aus Inertisierung von Rohrleitungsabschnitten, Setzen von zus;3,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+3;Der R;1,0;psch;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+4;Ein Satz Steckscheiben aus Edelstahl in den Nennweiten;1,0;psch;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+1;Kl;15,0;m;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+2;jedoch DN 100;1,0;m;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+3;jedoch DN 80;5,0;m;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+4;Exzentrisches Reduzierst;3,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+5;Exzentrisches Reduzierst;2,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+6;T-St;6,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+7;T-St;1,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+8;Rohrbogen, 90 Grad, liefern und montieren f;15,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+9;Rohrbogen, 45 Grad, liefern und montieren f;1,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+10;Rohrbogen, 90 Grad, liefern und montieren f;1,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+11;Rohrbogen, 45 Grad, liefern und montieren f;1,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+12;Zum Einbau in der neuen Kl;10,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+13;Zum Einbau in der neuen Kl;2,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+14;Zum Einbau in der neuen Kl;2,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+15;Zum Einbau in der neuen Kl;1,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+16;Losflansch, DN 150;26,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+17;Losflansch, DN 100, 1.4571;4,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+18;Losflansch, DN 80;2,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+19;Zum abschnittsweisen Sp;8,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+20;"1"" Stutzen zur Sp";1,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+21;Edelstahlkompensator mit kurzer Einbaul;4,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+22;Werkseitige Pr;1,0;psch;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+23;jedoch mit folgenden Abweichungen:;1,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+24;Herstellen eines Wanddurchbruchs mittels Kernbohrung und liefern und einbauen eines Dichtungseinsatzes (Gliederkettendichtung o. glw.), zum Abdichten gegen nicht dr;2,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+25;Herstellen eines Wanddurchbruchs mittels Kernbohrung und liefern und einbauen eines Dichtungseinsatzes (Gliederkettendichtung o. glw.), zum Abdichten gegen nicht dr;1,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+26;Kiesfilter inkl. Kiesbef;1,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+27;zur Versorgung der BHKW-Anlage und der Heizkesselanlage einem maximalen Volumenstrom von 100 Nm;3,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+28;DVGW-zugelassenes Membrandruckregelventil;1,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+29;Edelstahlkompensator mit kurzer Einbaul;6,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+30;Einz;1,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+31;Aktivkohlebeh;3,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+32;Kaltwasseranlage zur Wandmontage im Au;1,0;St.;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+33;K;10,0;m;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+34;Kondensatleitungssystem;6,0;m;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+35;Edelstahlkompensator mit kurzer Einbaul;6,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+36;Inertisierungsleitung zum Wechsel der Aktivkohlebeh;1,0;psch;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+37;Rohrb;1,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+38;Edelstahlrohrleitungssystem;30,0;m;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+39;Inlinepumpe zum Einbau in die Heizwasserleitung zum Gasvorw;1,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+40;Dreiwege-Mischer zur Regulierung der Vorlauftemperatur zum Gasvorw;1,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+41;"Absperrventil mit 3/4"" Gewinde, Druckstufe/max. Betriebsdruck PN 6, Geh";3,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+42;R;1,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+43;M;1,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+44;E;4,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+45;a;4,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+46;Bereitstellung von Heizungsf;50,0;l;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+47;Ultraschall-Durchflussmesser zur kontinuierlichen Erfassung von (Norm-)Volumenfluss, Methananteil und Temperatur des Kl;2,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+48;Temperatursensor f;4,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+49;Druckensor f;4,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+50;Druckmessger;3,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+51;Temperatursensor zur Ansteuerung von Pumpen und Dreiwegemischern in angeschlossenen Heizkreisen oder zur Daten;2,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+52;Ausf;2,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+53;Kondensatleitungssystem;10,0;m;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+54;Kugelhahn als Absperrarmatur f;3,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+55;zum Einbau im Heizungskeller.;1,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+56;Doppelmagnetventil zur Einbindung in die Kondensat;1,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83
+57;zur automatischen Kondensatausschleusung im Kiesfilter;1,0;St;gaeb;leistungsbeschreibungen/Los 2 Gastechnik.X83

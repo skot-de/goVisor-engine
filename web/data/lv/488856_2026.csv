@@ -1,0 +1,416 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Schriftleisten für Bauschild im Bestand;7,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Einrichten der Baustelle mit sämtlichen Kränen, Lagerräumen, Werkstätten, Magazinen, Unterstelleinrichtungen, Maschinen und Geräten und Mannschafts-Tagesunterkünfte, für alle Leistungen des AN.;1,0;psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Verlängerung der Vorhaltezeit der Baustelleneinrichtung für eigene Leistungen aus Pos. 01.02.1.;1,0;Mt;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Längervorhaltung eines Krans nach Ende der Vorhaltezeit der Baustelleneinrichtung für eigene Leistung für Materialtransport von Fremdgewerken.;1,0;Mt;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;Durchführung einer Begehung mit der Bauleitung vor Beginn der Leistungserbringung,;1,0;Psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+5;Bürocontainer für Bauleitung liefern,;1,0;Psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+6;Verlängerung der Vorhaltezeit für das Baubüro gem. Pos. 01.02.5;1,0;StMt;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+7;Baubesprechungscontainer als Doppelcontainer,;1,0;Psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+8;Vorhaltung Besprechnungscontainer aus Pos. 01.02.7;1,0;StMt;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+9;Ungebrauchte Sanitär- und Waschcontainer gem. Technische Regeln für Arbeitsstätten, Toiletten und Toilettenräume auf Baustellen einschl. der Ver- und Entsorgungsanschlüsse liefern, betriebsfertig aufstellen und wieder beseitigen.;1,0;Psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+10;Verlängerung der Vorhaltezeit des Sanitärcontainers aus der Vorposition 01.02.9.;1,0;Mt;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+11;Sanitärcontainer bereitstellen, anschließen, reinigen und vorhalten wie in der Pos. 01.02.9 beschrieben, jedoch:;1,0;Psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+12;Verlängerung der Vorhaltezeit des Sanitärcontainers aus der Vorposition 01.02.11.;1,0;Mt;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+13;Planum für Container nach Abräumen des Oberbodens oder auf Füllboden verdichten, 10-15 cm Tragschicht aus grobem Betonrecycling aufbringen, verdichten, für die Aufstellung von Baustellencontainern (inkl. Materialcontainer),;100,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+14;Zulage zu der Position 01.02.13 für eine zeitlich versetzte Erweiterung der bauseitigen Schotterfläche für die Container anderer Gewerke.;50,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+15;Fahrplatten aufbringen für die Befahrung des Geländes an den Fassaden sowie kurzer Abschnitte durch Hubsteiger, Scherenbühnen etc.;70,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+16;Verantwortliche Regelung des Baustellenzugangs,;18,0;Mt;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+17;Baugrubentreppe;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+18;Vor Beginn der Baumassnahme Schutzeinrichtung für Bäume als Baumschutzmanschette gem. nachfolgender Beschreibung liefern:;10,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+19;Baustromanschluss und Baustromverteiler;1,0;psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+20;Baustromverteiler der Pos. 01.02.19 nach Ablauf der Grundvorhaltezeit vorhalten und unterhalten.;1,0;Mt;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+21;Verlängerung Kabel für Baustromanschluss und Baukran;110,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+22;Kabelgraben herstellen,;110,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+23;Beleuchtung der Baustelle vom Haupttor bis zu den Containern in Form von am Bauzaun befestigten Leuchtstoffröhren aufbauen, betreiben, im Zuge der Baustelle ggf. umsetzen und abbauen,;1,0;Psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+24;Baustellenbeleuchtung der Pos. 01.02.23 nach Ablauf der Grundvorhaltezeit vorhalten und unterhalten.;1,0;Mt;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+25;Bauwasseranschluss;1,0;psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+26;Bauwasseranschluss der Pos. 01.02.25 nach Ablauf der;1,0;Mt;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+27;Grabenherstellung (ca. 30 cm tief, überfahrbar) und Leerrohr für den Wasser-und Abwasseranschluss der Container liefern und verlegen an den Bauwassserverteiler der Vorposition 01.02.25;105,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+28;Medienanschluss für Bürocontainer herstellen, während der gesamten Bauzeit vor- und unterhalten, nach Abschluss der Baumaßnahme entfernen,;1,0;psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+29;abschließbare Bautür in Türöffnungen der Außenwand;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+30;Bautür aus Pos. 01.02.29 nach Ablauf der;1,0;StMt;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+31;abschließbare Bautür in Türöffnungen der Außenwand;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+32;Bautür aus Pos. 01.02.31 nach Ablauf der;1,0;StMt;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+33;abschließbare Bautür in Türöffnungen der Außenwand;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+34;Bautür aus Pos. 01.02.33 nach Ablauf der;1,0;StMt;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+35;Winterheizgerät, als Öl-Bauheizer mit Tank,;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+36;Winterheizgerät der Pos. 01.02.35 nach Ablauf der;1,0;StMt;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+37;Verbrauch von Heizöl für Winterheizgeräte aus Pos. 01.02.35;20000,0;l;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+38;Tauchpumpe für den Aufzugsschacht,;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+39;Überfahrschutz herstellen im Bereich der Haupt-Bauverkehrswege,;10,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+40;Fenster-, Tür- und TGA-Öffnungen provisorisch verwahren,;130,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+41;Prov. Fenster- und Türverschlüsse aus Pos. 01.02.40 nach Ablauf der Grundvorhaltezeit vorhalten und unterhalten.;130,0;m2Mt;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+42;Tür-Öffnungen provisorisch verwahren,;3,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+43;Prov. gedämmte Türverschlüsse aus Pos. 01.02.42 nach Ablauf der Grundvorhaltezeit vorhalten und unterhalten.;12,0;m2Mt;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+44;Stahl-Gitterrost oder Gummiwabenmatte mit offenem Boden aus abriebfestem und witterungsbeständigem Vollgummi;3,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+45;Herstellung bzw. Errichtung sowie Demontage und Entsorgung der erf. provisorischen Absturzsicherung im Treppenhaus gem. UVV über die Rohbauausführungszeit hinaus, für alle am Bau Beteiligten,;7,5;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+46;Verlängerung der Vorhaltung der Absturzsicherung gem. Position 01.02.45;1,0;Wo;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+47;Provisorische Brüstung;25,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+48;Der AG übergibt dem AN einen Höhenfestpunkt sowie eine;1,0;psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+49;Meteriss-Plakette aus Kunststoff rot,;10,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+50;Tafel für Baustellenaushänge;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+51;Halteverbotsbereiche in der Gutenbergstraße prüfen, beantragen und einrichten,;1,0;psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Statische Berechnung DIN EN 12811-1 einschl. erforderlicher Ausführungszeichnungen für nachfolgend beschriebenes Arbeitsgerüst anfertigen.;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Arbeits- und Schutzgerüst erstellen und abbauen,;278,54;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Verlängerung Vorhaltezeit/Standzeit;5570,8;m²Wo;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;Attikahöhe ab Standfläche ca. 4,72 m;85,304;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+5;Verlängerung Vorhaltezeit/Standzeit;3412,16;m²Wo;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+6;Attikahöhe ab Standfläche ca. 7,00 m;524,51;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+7;Verlängerung Vorhaltezeit/Standzeit;15447,6;m²Wo;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+8;Attikahöhe ab Standfläche ca. 7,9 m;417,121;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+9;Verlängerung Vorhaltezeit/Standzeit;16684,84;m²Wo;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+10;Aufstellfläche des vorstehend beschriebenen Arbeits- und Schutzgerüstes im Bereich unbefestigten oder unebenen Baugrundes herrichten, nach Erfordernis und Abstimmung mit der Bauleitung, in Einzelflächen bis ca. 1,5 qm, je Gerüstrahmenachse, Höhenausgleich des anstehenden Bodens herstellen, 20 cm Kie;10,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+11;Aufbau eines Fanggerüstes für Dacharbeiten oberhalb des Gerüstes der Vorpositionen einschl. Abbau,;138,725;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+12;Verlängerung Vorhaltezeit/Standzeit;5549,0;mWo;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+13;Überbrückung in Gerüst mit Systembauteilen,;7,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+14;Gebrauchsüberlassung der Überbrückung;720,0;StWo;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+15;Schutzdach im Bereich von Überbrückungen für Einbringöffnungen ins Bauwerk;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+16;Gebrauchsüberlassung des Schutzdaches;120,0;StWo;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+17;Schutzabdeckung Flachdach;16,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+18;Gebrauchsüberlassung des Flachdachschutzes;640,0;mWo;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+19;Belagverbreiterung mit Gerüstkonsolen mit 30 cm Auslage,versetzbar,;537,37;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+20;Verlängerung Vorhaltezeit/Standzeit;21494,8;mWo;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+21;Belagverbreiterung mit Gerüstkonsolen mit 70 cm Auslage,versetzbar,;537,37;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+22;Verlängerung Vorhaltezeit/Standzeit;21494,8;mWo;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+23;Brüstung und Fußbrett;537,37;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+24;Verlängerung Vorhaltezeit/Standzeit;21494,8;mWo;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+25;Innengeländer als Absturzsicherung;50,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+26;Verlängerung Vorhaltezeit/Standzeit;2000,0;mWo;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+27;Gerüstbekleidung mit Schutznetz;1027,885;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+28;Verlängerung Vorhaltezeit/Standzeit;20557,7;mWo;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+29;Schutzdach im Bereich von Eingängen ins Bauwerk;3,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+30;Verlängerung Vorhaltezeit/Standzeit;120,0;StWo;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+31;Gerüsttreppenturm nach DIN EN 12811-1,;2,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+32;Verlängerung Vorhaltezeit/Standzeit;40,0;StWo;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+33;Gerüsttreppenturm als Baustellenzugang wie in der Position 03.01.19 beschrieben, jedoch;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+34;Verlängerung Vorhaltezeit/Standzeit;40,0;StWo;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+35;Gerüsttreppenturm als Baustellenzugang wie in der Position 03.01.19 beschrieben, jedoch;3,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+36;An- und Abfahrt einer Gerüstbaukolonne einschl. Fahrzeug für Transport von Gerüstmaterial,;10,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Innengerüst mit Belagfläche 2,0 m unter Dachdecke,;21,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Verlängerung der Vorhaltezeit für das Gerüst aus Vorposition.;210,0;m2Wo;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Erarbeitung von Betonrezepturen für Bodenplatten, Decken, Unterzüge und Wände  inkl. Erstprüfung gem. ZTV Beton- und Stahlbetonarbeiten.;1,0;psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Überwachung des Einbaus von Beton der Überwachungsklasse 2 DIN 1045-3 durch eine anerkannte Überwachungsstelle.;1,0;psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Zulage zu den Ortbetondecken und Ortbetonwänden für die bauseitige Elt-Leerrorinstallation (als starres Rohr, SD Bohrungen nachträglich) auf der Baustelle.;1,0;psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Überwachungsklasse 2 DIN 1045-3 durch eine anerkannte;1,0;psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Feinplanum herstellen,;932,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Trennlage aus PE-Folie, 2-lagig,;932,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;Druckfeste, maßstabile, feuchtigkeitsunempfindliche und verrottungsfeste Perimeter-Dämmung aus extrudiertem Polystyrolschaum (XPS),;786,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+5;Zulage zu Position 03.02.4 für den vertieften Einbau der Sohldämmung im Bereich der Ablaufrinnen;42,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+6;Zulage zu Position 03.02.4 für den vertieften Einbau der Sohldämmung im Bereich der Ablaufrinnen;4,2;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+7;Ortbeton der Bodenplatte aus Stahlbeton,;541,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+8;Ortbeton der Bodenplatte aus Stahlbeton,;268,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+9;Ortbeton der Gründung für Streifenfundament b/h = 100/60 cm,;10,0;m³;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+10;Ortbeton der Gründung für Streifenfundament;15,0;m³;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+11;Ortbeton der Gründung für Streifenfundament;5,0;m³;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+12;Ortbeton der Gründung für Streifenfundament b/h = 160/60 cm,;19,0;m³;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+13;Ortbeton der Gründung für Streifenfundament b/h = 80/60 cm,;8,0;m³;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+14;Ortbeton der Gründung für Streifenfundament b/h = 30/60 cm,;3,8;m³;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+15;Ortbeton der Gründung für Streifenfundament b/h = 120/60 cm,;9,6;m³;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+16;Ortbeton der Gründung für Streifenfundament b/h = 100/60 cm,;8,0;m³;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+17;Einbetonieren von Schmutzwasserleitungen mit der notwendigen Aussparung der Gründungsplattenbewehrung.;19,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+18;Druckfeste, maßstabile, feuchtigkeitsunempfindliche und verrottungsfeste Perimeter-Dämmung aus extrudiertem Polystyrolschau (XPS),auf OK Streifenfundament, im Übergang zwischen Bodenplatte und Außenwand vertikal verlegt, dicht gestoßen und im Verband, ohne Kreuzfugen, Dämmplattenstärke 220 mm, Höhe ;137,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+19;Anschnitt der Perimeterdämmung,;121,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+20;Druckfeste, maßstabile, feuchtigkeitsunempfindliche und verrottungsfeste Perimeter-Dämmung aus extrudiertem Polystyrolschaum (XPS),;55,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+21;Auffüllungen aus unbewehrtem Beton,;50,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+22;Vor den Betonierarbeiten der Gründung wird von einem Fachunternehmen der Fundamenterder außen umlaufend;1,0;Psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Mehr- oder Minderkosten für die Ausführung der folgenden Positionen der Ortbetonwände in Teilfertigteilen (Filigranwände) inkl. Verschluss der Fugenbildung.;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Ortbeton der Außenwände ab EG;122,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Ortbeton der Außenwände ab OG;100,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;Ortbeton der Außenwände, Attika ab OG;20,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+5;Ortbeton der Innenwand ab EG;51,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+6;Ortbeton der Außenwand ab OG;42,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+7;Ortbeton der Attika ab OK OG;9,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+8;Ortbeton der Innenwände EG;99,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+9;Ortbeton der Innenwände 1.OG;53,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+10;Ortbeton der Innenwand ab EG;91,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+11;Ortbeton der Außenwände ab OG;116,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+12;Ortbeton der Attika über dem 1.OG;24,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+13;Ortbeton der Außenwände OG;50,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+14;Ortbeton der Attika über dem 1.OG;11,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+15;Ortbeton der Außenwand EG;115,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+16;Ortbeton über Attika EG;39,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+17;Ortbeton der Außenwand ab EG;91,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+18;Ortbeton der Attika über EG;15,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+19;Ortbeton der Innenwände ab EG;164,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+20;Nachträgliche angeformte Stahlbetonkonsole, als Bandkonsole für Hohldielendecke;21,5;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+21;Zulage zu den Ortbetonwänden für die Ausführung in Sichtbeton SB2;804,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Vereinbarung als besondere Leistung für erhöhte Baumaßtoleranzen für die FT-Stützen gem. DIN 18202 Tabelle 3 Zeile 7 für die Aussparungen für die Fenster, Tore und Türen im EG, 1. OG.;1,0;Psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Werkstattplanung, Fertigteilplanung;1,0;Psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Fertigteilstütze mit angeformten Fundament;2,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;Zulage angeformte Stahlbetonkonsole, als Einzelkonsole für Balken;2,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+5;Zulage angeformte Stahlbetonkonsole, als Einzelkonsole für Balken;8,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+6;Fertigteilstütze;2,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+7;Zulage angeformte Stahlbetonkonsole, als Einzelkonsole für Balken;4,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+8;Zulage angeformte Stahlbetonkonsole, als Einzelkonsole für Balken;8,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+9;Fertigteilstütze mit angeformten Fundament;3,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+10;Bewehrungsschraubanschlüsse M20 für vorgenannte Fertigteilstützen zur optionalen Verlängerung der Stützen.;24,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+11;Zulage angeformte Stahlbetonkonsole, als Einzelkonsole für Balken;6,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+12;Zulage angeformte Stahlbetonkonsole, als Einzelkonsole für Balken;12,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+13;Zulage zu Fertigteilstützen 50x50cm o.g. Positionen S006 + S007;10,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+14;Zulage für die Verlegung von Leerrohren d 20 - 32 mm aus flexiblem Kunststoffpanzerrohr in den Fertigteilstützen als Duchführung von Kabeln duch den Stützenquerschnitt gem. Vorgabe der Elektrofirma.;10,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+15;Für die Errichtung einer Blitzschutzanlage sind die;20,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+16;Fugenausbildung als elastische Innenfuge,;50,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Unterzug als Fertigteil, als Rechteckquerschnitt,;2,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Unterzug als Fertigteil, als Rechteckquerschnitt,;2,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Unterzug als Fertigteil, als Rechteckquerschnitt,;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;Fertigteil mit T-förmigem Querschnitt, als Überzug und mit beidseitigem Deckenauflager;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+5;Zulage für ausgeklinktes Trägerende;7,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+6;Zulage für Einbau von Elastomerlagern als Verformungslager gem. Statik;7,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+7;Randbalken als Fertigteil, als Rechteckquerschnitt,;2,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+8;Randbalken als Fertigteil, als Rechteckquerschnitt,;3,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+9;Randbalken als Fertigteil, als Rechteckquerschnitt,;4,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+10;Zulage für ausgeklinktes Trägerende;10,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+11;Zulage für Einbau von Elastomerlagern als Verformungslager gem. Statik;10,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+12;Sturz als Fertigteil, als Rechteckquerschnitt,;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+13;Zulage für Einbau von Elastomerlagern als Verformungslager gem. Statik;2,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+14;Unterzug als Fertigteil, als Rechteckquerschnitt,;2,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+15;Zulage für ausgeklinktes Trägerende;4,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+16;Zulage für Einbau von Elastomerlagern als Verformungslager gem. Statik;4,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+17;Unterzug als Fertigteil, als Rechteckquerschnitt,;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+18;Randbalken als Fertigteil, als Rechteckquerschnitt,;3,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+19;Zulage für ausgeklinktes Trägerende;4,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+20;Zulage für Einbau von Elastomerlagern als Verformungslager gem. Statik;4,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+21;Randbalken als Fertigteil, mit Rechteckquerschnitt,;2,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Mehr- oder Minderkosten für die Ausführung der folgenden Positionen der Ortbetondecken in Teilfertigteilen inkl. Verschluss der Fugenbildung.;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Ortbeton der Stahlbetondecken herstellen,;240,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Ortbeton der Stahlbetondächer herstellen,;310,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;Ortbeton der Stahlbetondächer herstellen,;240,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+5;Ortbeton der Stahlbetondecke herstellen, im Bereich des;63,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+6;Ortbeton der Stahlbetondecke herstellen,zum Anschluss der Stahlbetontreppe (FT) und zwischen den Achsen 9a und 10, dort im Übergang zur Hohldielendecke.;133,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+7;Zulage zu den Ortbeton und Halbfertigteildecken für die Ausführung in Sichtbeton SB2;986,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+8;Anschlussbereich Ortbetondecke an STB-Bestandswand für kraftschlüssige Verbindung aufrauhen.;16,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Werkstattplanung Decken;1,0;Psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Erstellung der statischen Berechnung der starren Scheibe im Bereich der Spannbetonhohldecken und Einreichung zur Prüfung.;515,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Herstellung und Lieferung von Spannbeton-Hohlplatten wie in den technischen Vorbemerkungen beschrieben, werkseitig gefertigt nach aktuellem Stand und den Regeln der Technik;212,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;Verguss der Spannbeton-Hohlplatten d 265 mm,;212,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+5;Auflager der Spannbetonhohldiele d 265 mm der Pos. 03.07.3 auf Konsole (Achse 9a),;13,5;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+6;Herstellung und Lieferung von Spannbeton-Hohlplatten wie in den technischen Vorbemerkungen beschrieben, werkseitig gefertigt nach aktuellem Stand und den anerkannten Regeln der Technik;139,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+7;Verguss der Spannbeton-Hohlplatten d 320 mm, wie in der Position 03.07.4 beschrieben, jedoch:;139,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+8;Auflager der Spannbetonhohldiele;13,5;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+9;Liefern und Einbauen von Mehrbeton;3,0;m³;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+10;Liefern und Einbauen von Mehrbeton;3,0;m³;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+11;Montage der vorbeschriebenen Spannbeton-Hohlplatten;212,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+12;Montage der vorbeschriebenen Spannbeton-Hohlplatten;139,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+13;Zweiseitige Schalung Ringanker auf Stahlbetonwand d 250 mm;34,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+14;Zweiseitige Schalung Ringanker auf Stahlbetonwand d 250 mm;45,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+15;Rechteckige Aussparung Größe 400 bis 900 cm²;2,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+16;Rechteckige Aussparung Größe 300 bis 1000 cm²;2,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+17;Lieferung von Bohrschablonen für nachträgliche statisch relevante Befestigungen an den Spannbeton-Hohldecken mittels für den Deckentyp zugelassener Dübel oder Schrauben.;10,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+18;Liefern und Verlegen von Betonstahl für Fugen- und Ringankerbewehrung;1328,0;kg;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Werkstattplanung, Fertigteilplanung;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Stb-Fertigteil als gerader einläufiger Treppenlauf mit verlängertem Austritt,;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Stb-Fertigteil als gerader einläufiger Treppenlauf;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;Ortbeton für Treppenpodest, OG;5,4;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+5;Ortbeton für Zwischenpodest;5,4;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+6;Zulage für Treppenauflager am Podestrand;3,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+7;Zulage für Einbau von Elastomerlagern als Verformungslager gem. Statik;4,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Schalung der Stb-Sohlplatte aus glatter Systemschalung,;52,5;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Schalung des Höhenversatzes für Entwässerungsrinne;112,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Schalung der Stb-Sohlplatte aus glatter Systemschalung,;69,5;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;Schalung Streifenfundamente beidseitig;18,6;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+5;Schalung Streifenfundamente beidseitig;48,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+6;Schalung Streifenfundamente beidseitig;16,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+7;Schalung Streifenfundamente beidseitig;25,2;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+8;Schalung Streifenfundamente beidseitig;19,8;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+9;Schalung Streifenfundamente beidseitig;25,2;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+10;Schalung Streifenfundamente beidseitig;15,6;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+11;Schalung Streifenfundamente beidseitig;17,04;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+12;Vereinbarung als besondere Leistung für erhöhte Baumaßtoleranzen für die FT-Außenwände gem. DIN 18202 Tabelle 3 Zeile 7 für die Aussparungen für die Fenster und Türen im EG, 1.OG;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+13;Schalung der Stb-Aussenwände aus glatter Systemschalung, 2-seitig, Stirnabschalung wird gesondert vergütet,;1518,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+14;Zulage zu der Schalung der Außenwände für Oberfläche Sichtbetonklasse SB 2 innen;700,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+15;Schalung der Stb.-Innenwände aus glatter Systemschalung, 2-seitig, Stirnabschalung wird gesondert vergütet,;338,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+16;Schalung der Stb.-Innenwände aus glatter Systemschalung, 2-seitig, Stirnabschalung wird gesondert vergütet,;571,74;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+17;Schalung freies Wandende,;6,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+18;Schalung für Bandkonsole 03.03.20  als Auflager für Hohldielendecke;21,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+19;Zulage zu der Schalung der Innenwände für Oberfläche Sichtbetonklasse SB 2;452,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+20;Schalung der Stb-Decken über EG und 1. OG aus glatter Systemschalung,;761,266;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+21;Deckenrandschalung der Geschossdecken für wandbündigen Deckenrand.;119,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+22;Randschalung der Stb-Geschoss-Podestplatten im Treppenraum aus glatter Systemschalung, einschl. Traggerüst Bemessungsklasse A.;3,5;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+23;Schalung für die Herstellung von zwei Konsolen für die Auflagerung von Stb.FT Treppen;0,53;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+24;Randschalung der Stb-Zwischenpodestplatte im Treppenraum aus glatter Systemschalung, einschl. Traggerüst Bemessungsklasse A.;3,5;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+25;Zulage zu der Schalung der Decken für Oberfläche Sichtbetonklasse SB 2;410,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+26;Schalung der Attiken, mit rechteckigem Querschnitt,;240,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;in Sohle einbetonieren, einschl. Aussparung in Sohlenbewehrung;9,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Sohlenrandschalung der Betonsohle zur Herstellung eines Sohldurchbruchs,;10,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Einbetonieren von Anschlusstrichtern in der Sohle.;7,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;Einbetonieren von Faserzementrohren in der Sohle.;2,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+5;Schalung zur Herstellung von Fundamentaussparungen,;2,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+6;Schalung Öffnung in Stb-Außenwand für Fenster- oder Türöffnungen, Aussparungsform rechteckig, mit Dreikantleisten für gefaste Betonkanten.;4,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+7;Schalung Öffnung in Stb-Außenwand für Fenster- oder Türöffnungen, Aussparungsform rechteckig, mit Dreikantleisten für gefaste Betonkanten.;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+8;Schalung Öffnung in Stb-Außenwand für Fenster- oder Türöffnungen, Aussparungsform rechteckig, mit Dreikantleisten für gefaste Betonkanten.;6,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+9;Schalung Öffnung in Stb-Außenwand für Fenster- oder Türöffnungen, Aussparungsform rechteckig, mit Dreikantleisten für gefaste Betonkanten.;6,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+10;Schalung Öffnung in Stb-Außenwand für Fenster- oder Türöffnungen, Aussparungsform rechteckig, mit Dreikantleisten für gefaste Betonkanten.;2,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+11;Schalung Öffnung in Stb-Außenwand für Fenster- oder Türöffnungen, Aussparungsform rechteckig, mit Dreikantleisten für gefaste Betonkanten.;4,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+12;Schalung Öffnung in Stb-Außenwand für Fenster- oder Türöffnungen, Aussparungsform rechteckig, mit Dreikantleisten für gefaste Betonkanten.;2,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+13;Schalung Öffnung in Stb-Außenwand für Fenster- oder Türöffnungen, Aussparungsform rechteckig, mit Dreikantleisten für gefaste Betonkanten.;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+14;Schalung Öffnung in Stb-Außenwand für Fenster- oder Türöffnungen, Aussparungsform rechteckig, mit Dreikantleisten für gefaste Betonkanten.;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+15;Schalung Öffnung in Stb-Außenwand für Lüftungsöffnung, Aussparungsform rechteckig, mit Dreikantleisten für gefaste Betonkanten.;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+16;Schalung Öffnung in Stb-Außenwand für Lüftungsöffnung, Aussparungsform rechteckig, mit Dreikantleisten für gefaste Betonkanten.;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+17;Schalung Öffnung in Stb-Außenwand für Lüftungsöffnung, Aussparungsform rechteckig, mit Dreikantleisten für gefaste Betonkanten.;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+18;Schalung Öffnung in Stb-Außenwand für Fenster- oder Türöffnungen, Aussparungsform rechteckig, mit Dreikantleisten für gefaste Betonkanten.;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+19;Schalung Öffnung in Stb-Außenwand für Fenster- oder Türöffnungen, Aussparungsform rechteckig, mit Dreikantleisten für gefaste Betonkanten.;3,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+20;Schalung Öffnung in Stb-Außenwand für Lüftungsöffnung, Aussparungsform rechteckig, mit Dreikantleisten für gefaste Betonkanten.;2,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+21;Schalung Öffnung in Stb-Außenwand für Fenster- oder Türöffnungen, Aussparungsform rechteckig, mit Dreikantleisten für gefaste Betonkanten.;2,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+22;Schalung Öffnung in Stb-Außenwand für Lüftungsöffnung, Aussparungsform rechteckig, mit Dreikantleisten für gefaste Betonkanten.;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+23;Schalung Öffnung in Stb-Außenwand für Lüftungsöffnung, Aussparungsform rechteckig, mit Dreikantleisten für gefaste Betonkanten.;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+24;Aussparung herstellen in Stb-Innenwand EG bis 1. OG für Türöffnungen und Innenfenster,;4,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+25;Aussparung herstellen in Stb-Innenwand EG bis 1. OG für Türöffnungen und Innenfenster,;2,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+26;Aussparung herstellen in Stb-Innenwand EG bis 1. OG für Türöffnungen und Innenfenster,;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+27;Aussparung herstellen in Stb-Innenwand EG bis 1. OG für Türöffnungen und Innenfenster,;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+28;Schalung Öffnung, Schalungshaut für Betonflächen ohne Anforderungen, Aussparungsform rechteckig, für scharfkantige Betonkanten, für Deckenplatte aus Ortbeton;3,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+29;Schalung Öffnung, Schalungshaut für Betonflächen ohne Anforderungen, Aussparungsform rechteckig, für scharfkantige Betonkanten, für Deckenplatte aus Ortbeton;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+30;Aussparung herstellen in Stb-Unterzug als Durchbruch für haustechnische Installationen,;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+31;Aussparung herstellen in Stb-Unterzug als Durchbruch für haustechnische Installationen,;5,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+32;Aussparung herstellen in Stb-Unterzug als Durchbruch für haustechnische Installationen,;4,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+33;Kreisrunde Aussparung im Stb-UZ durch Einbau einer verlorenen Schalung aus PE-Rohr,;8,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+34;Kreisrunde Aussparung im Stb-UZ durch Einbau einer verlorenen Schalung aus PE-Rohr,;27,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+35;Kreisrunde Aussparung im Stb-UZ durch Einbau einer verlorenen Schalung aus PE-Rohr,;3,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+36;Aussparung herstellen in Stb-Attika als Durchbruch für Attikaablauf,;6,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+37;Kernbohrung herstellen, einschl. Entsorgung Materialreste;2,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+38;Kernbohrung herstellen, einschl. Entsorgung Materialreste wie in der Position 03.10.37 beschrieben, jedoch:;2,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+39;Kernbohrung herstellen, einschl. Entsorgung Materialreste wie in der Position 03.10.37 beschrieben, jedoch:;2,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+40;Schalung Öffnung, Schalungshaut für Betonflächen ohne Anforderungen, Aussparungsform rechteckig, für scharfkantige Betonkanten, für Deckenplatte aus Ortbeton;18,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+41;Schalung Öffnung, Schalungshaut für Betonflächen ohne Anforderungen, Aussparungsform rechteckig, für scharfkantige Betonkanten, für Deckenplatte aus Ortbeton;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+42;Schalung Öffnung, Schalungshaut für Betonflächen ohne Anforderungen, Aussparungsform rechteckig, für scharfkantige Betonkanten, für Deckenplatte aus Ortbeton;3,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+43;Schalung Öffnung, Schalungshaut für Betonflächen ohne Anforderungen, Aussparungsform rechteckig, für scharfkantige Betonkanten, für Deckenplatte aus Ortbeton;3,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+44;Schalung Öffnung, Schalungshaut für Betonflächen ohne Anforderungen, Aussparungsform rechteckig, für scharfkantige Betonkanten, für Deckenplatte aus Ortbeton;3,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+45;Kernbohrung herstellen, einschl. Entsorgung der Materialreste;10,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+46;Kernbohrung herstellen, einschl. Entsorgung der Materialreste;7,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+47;Aussparung herstellen in Stb-Wand EG bis 1. OG für TGA,;12,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+48;Aussparung herstellen in Stb-Wand EG bis 1. OG für TGA,;2,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+49;Aussparung herstellen in Stb-Wand EG bis 1. OG für TGA,;6,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+50;Aussparung herstellen in Stb-Wand EG bis 1. OG für TGA,;5,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+51;Aussparung herstellen in Stb-Wand EG bis 1. OG für TGA,;5,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Ringspalt einer rechteckigen Aussparung in den Stahlbetonwänden nach Montage von TGA-Leitungen wieder verschließen;10,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Ringspalt einer rechteckigen Aussparung in den Stahlbetonwänden nach Montage von TGA-Leitungen wieder verschließen;14,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Ringspalt einer rechteckigen Aussparung in den Stahlbetonwänden nach Montage von TGA-Leitungen wieder verschließen;3,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;Ringspalt einer rechteckigen Aussparung in den Stahlbetonwänden nach Montage von TGA-Leitungen wieder verschließen;2,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+5;Ringspalt einer rechteckigen Aussparung in den Deckenplatten nach Montage von TGA-Leitungen (Heizung, Sanitär) wieder verschließen;11,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+6;Ringspalt einer rechteckigen Aussparung in den Deckenplatten nach Montage von TGA-Leitungen (Heizung, Sanitär) wieder verschließen;3,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+7;Ringspalt einer rechteckigen Aussparung in den Deckenplatten nach Montage von TGA-Leitungen (Heizung, Sanitär) wieder verschließen;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+8;Ringspalt einer rechteckigen Aussparung in den Deckenplatten nach Montage von TGA-Leitungen (Heizung, Sanitär) wieder verschließen;10,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+9;Ringspalt einer rechteckigen Aussparung in den Deckenplatten nach Montage von TGA-Leitungen (Heizung, Sanitär) wieder verschließen;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+10;Ringspalt einer rechteckigen Aussparung in den Deckenplatten nach Montage von TGA-Leitungen (Heizung, Sanitär) wieder verschließen;2,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+11;Ringspalt einer rechteckigen Aussparung in den Deckenplatten nach Montage von TGA-Leitungen (Heizung, Sanitär) wieder verschließen;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+12;Ringspalt einer rechteckigen Aussparung in den Deckenplatten nach Montage von TGA-Leitungen (Heizung, Sanitär) wieder verschließen,;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+13;Ringspalt einer rechteckigen Aussparung in den Deckenplatten nach Montage von TGA-Leitungen (Heizung, Sanitär) wieder verschließen,;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+14;Ringspalt einer rechteckigen Aussparung in den Deckenplatten nach Montage von TGA-Leitungen (Heizung, Sanitär) wieder verschließen,;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+15;Ringspalt einer rechteckigen Aussparung in den Deckenplatten nach Montage von TGA-Leitungen (Heizung, Sanitär) wieder verschließen,;1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+16;Ringspalt in Rohrhülsen nach Montage von TGA-Leitungen mit Mörtel fachgerecht schließen;2,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+17;Ringspalt in Rohrhülsen nach Montage von TGA-Leitungen mit Mörtel fachgerecht schließen;3,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Bewehrung als Mattenstahl B500M alle Längen, Formen und Durchmesser einschließlich der erforderlichen Abstandshalter, Abstandskörbe und Unterstützungsböcke.;58,0;t;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Bewehrung als Betonstabstahl BSt 500 S alle Längen, Formen und Durchmesser einschließlich der erforderlichen Abstandshalter, Abstandskörbe und Unterstützungsböcke.;20,0;t;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Bewehrung als Betonstabstahl BSt 500 S und Mattenstahl B500M  alle Längen, Formen und Durchmesser einschließlich der erforderlichen Abstandshalter, Abstandskörbe und Unterstützungsböcke.;21,0;t;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;Rückbiegeanschlüsse mit Typenprüfung / bauaufsichtlicher Zulassung;57,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+5;Rückbiegeanschlüsse mit Typenprüfung / bauaufsichtlicher Zulassung;10,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+6;Rückbiegeanschlüsse mit Typenprüfung / bauaufsichtlicher Zulassung;3,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+7;Seilschlaufen-Schienensystem mit bauaufsichtlicher Zulassung;16,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+8;Seilschlaufen-Verwahrkasten mit bauaufsichtlicher Zulassung zur Herstellung einer kraftschlüssigen Verbindung von Betonfertigteilen mit Ortbetonergänzungen oder mit Doppelwänden.;10,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+9;Stud Connector Bewehrungsstab mit Schraubmuffe und einseitig aufgeschmiedetem Ankerkopf zur Verbindung und Endverankerung von Bewehrungsstäben.;8,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+10;Querkraftdorn zur Übertragung von kleinen bis mittleren Querkräften in Gebäude und Bauteilfugen zur Wahrung Verschieblichkeit in Längs- und Querrichtung;56,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+11;Einklebearmierung mit Injektionsmörtel 8mm;16,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+12;Einklebearmierung mit Injektionsmörtel 10mm;16,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+13;Einklebearmierung mit Injektionsmörtel 10mm;16,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+14;Rückbau der Attikaabdeckung als Vorbereitung für Anschluss der aufgehende STB -Wand.;16,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+15;Trittschalldämmelement Konsolauflager Fertigteiltreppe, Trittschallverbesserungsmaß mind. 26 dB, Feuerwiderstandsklasse R 90, in vorh. Aussparung, Breite Treppenlauf ca. 135cm;20,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+16;Liefern und Einbau von Trittschallelementen am untersten Treppenlauf für den vollflächigen, schalldämmenden Anschluss des Fertigteiltreppenlaufs.;3,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Feinplanum herstellen,;2,5;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Druckfeste, maßstabile, feuchtigkeitsunempfindliche und verrottungsfeste Perimeter-Dämmung aus extrudiertem Polystyrolschaum (XPS),;2,5;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Trennlage aus PE-Folie, 2-lagig,;2,5;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;Ortbeton der Bodenplatte aus Stahlbeton,;6,5;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+5;Druckfeste, maßstabile, feuchtigkeitsunempfindliche und verrottungsfeste Perimeter-Dämmung aus extrudiertem Polystyrolschaum (XPS),;4,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+6;Anarbeiten der Perimeterdämmung an Wanddurchdringungen (Hülsrohre für Hauseinführungen bis Dm 200 mm);1,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+7;Einbau eines Leerrohres mit Zugadraht in der Seitenwand der Grube zur späteren Installation der Prüfstandtechik.;5,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Aufstellen eines prüffähigen Standsicherheitsnachweises (Statik) für das Vormauerwerk (Abfangungen, Stürze, Fertigteile etc.) einschl. eigenständiger Einholung der amtlichen Freigaben.;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Edelstahl-Drahtanker nach DIN EN 845-1;798,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Dicke gem. Detailplanung in mm: 130mm;75,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;Winkelkonsolanker,;83,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+5;Mineralfaserdämmung nach DIN EN 13162,;798,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+6;Anschnitt der Kerndämmung aus Mineralwolle, MW DIN EN;136,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+7;Verblendmauerwerk nach DIN EN 1996,;912,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+8;Im Bereich der Fahrzeughalle sind die vorhandenen Schichtmaße aufzunehmen und für die neuen;1,0;Psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+9;Zulage zu Pos. 04.01.7Leibung beimauern an Fenster- und Türleibungen im Verblendmauerwerk;215,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+10;Aussortierung und Entsorgung oder Verwertung von gelieferten Verblendsteinen nach Musterfertigung und -bewertung durch den AG,;200,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+11;Fertigteilsturz der Vormauerschale,;2,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+12;Fertigteilsturz der Vormauerschale,;28,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+13;Fertigteilsturz der Vormauerschale,;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+14;Fertigteilsturz der Vormauerschale,;2,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+15;Fertigteilsturz der Vormauerschale,;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+16;Fertigteilsturz der Vormauerschale,;2,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+17;Fertigteilsturz der Vormauerschale,;2,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+18;Fertigteilsturz der Vormauerschale,;3,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+19;Verfugen des Verblendmauerwerks, im wilden Verband,;821,0;m2;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+20;Leibung und Sturzunterseite verfugen wie in der Vorposition 04.01.19 beschrieben, im Verblendmauerwerk,;304,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+21;Dehnungsfugen in Verblendmauerwerk aus Pos. 04.01.7 zur Sicherstellung der freien Beweglichkeit der Außenschale (horizontal und vertikal) in der Breite von 1,5 cm in Anlehnung an DIN EN 1996 und in Abstimmung mit dem AG anlegen und herstellen.;62,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+22;Schließen von Dehnungsfugen mit Fugendichtungsmasse (elastoplastischer Dichtstoff);62,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+23;Anarbeiten des Vormauerwerks und der Dehnungsfugen an runde Durchführungen der Regenentwässerung (Anschlussltg. an vor dem Mauerwerk geführte Regenfallrohre und Wasserspeier) mit einem Durchmesser von ca. 100 mm,;12,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+24;Anarbeiten des Vormauerwerks an Kabel-Durchführungen mit einem Durchmesser von 10 - 20 mm für Wandleuchten etc.;12,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+25;Anarbeiten des Vormauerwerks an Leitungs-Durchführung;12,0;Stk;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+26;Perimeter-Dämmung aus;113,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+27;Mauerrandstreifen aus;188,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+28;EPDM-Folienstreifen, Zuschnittbreite 60 cm;120,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+29;L-Abdichtung, EPDM-Abdichtungsbahn an aufgehender Stahlbetonwand hochführen und durch Verkleben befestigen, über geschrägte Perimeterdämmung in den Vormauersockel führen,Der Dichtungsstreifen ist 0,5 cm von der Außenkante des Vormauerwerks zurückliegend einzulegen, so dass er an keiner Stelle von au;113,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+30;Zweikomponentige multifunktionale Bauwerksabdichtung;127,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+31;Schutz- und Drainagesystem nach DIN 4095 und DIN 18533, bestehend aus Noppenbahn, stabilem Filtervlies und Gleitfolie, im erdberührten Bereich auf Verblender und Perimeterdämmung bis zur Sauberkeitsschicht aufbringen.;127,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Untergrund sorgfältig reinigen (staub- und fettfrei sowie trocken), dabei haftmindernde Schichten (z.B. Zementleim) abtragen, scharfkantige Unebenheiten beseitigen, sowie Hohlräume vermörteln. Anforderungen an den Untergrund siehe DIN 18533, Teil 1.;30,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Grundierung des Untergrundes zur Haftverbesserung von Bitumen-Dickbeschichtungen gem. Herstellerangaben auftragen.;30,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Außenwandabdichtung (innenseitig),;30,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Zweikomponentige multifunktionale Bauwerksabdichtung;123,2;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Perimeterdämmung extrudiert an Streifenfundamenten d=10cm;55,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Bitumenbeschichtetes Fugenblech in;10,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Untergrund sorgfältig reinigen (staub- und fettfrei, sowie trocken), dabei haftmindernde Schichten (z.B. Zementleim) abtragen, scharfkantige Unebenheiten beseitigen, sowie Hohlräume vermörteln.;764,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Haftgrund und Voranstrich auf Basis klebeaktiver Bitumenemulsion, lösungsmittelfrei,;736,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Hohlkehle, als gemörtelte Flaschenkehle,;174,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;Kaltselbstklebende Polymerbitumenbahn mit Trägereinlage,;736,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Reinigen des Untergrundes von grober Verschmutzung, durch Absaugen, zur Verbesserung der Haftung, anfallende Stoffe im Behälter des AN sammeln,;777,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Voranstrich für Sohle waagerecht und aufgehende Bauteile senkrecht aus Bitumenlösung,;777,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Dämmkeil aus PS-Hartschaum kaschiert,;198,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;Dampfsperre als diffusionsdichte Schicht,;777,0;m²;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Liefern und Einbau einer Schutzschicht bzw.Schutzlage für die Abdichtungsbahn aus Pos. 05.03.4 für die Bauzeit,;200,0;m²/W;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Verlängern der Vorhaltezeit für Schutzmaßnahmen aus Vorposition.;100,0;m²/W;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;"Industrieverteiler 1 1/4"", bis 8 Heizkreise,";1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;"Kugelhahn- Set 1 1/4"",";1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Klemmringverschraubung 20 mm,;16,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;Systemrohr 20 mm, für Industrieflächenheizung,;830,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+5;Verwechselsfreies Kennzeichnen der einzelnen;8,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+6;Rohrführungsbogen 20 mm;16,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+7;Fixbinder für Rohr- Trägerelement- System,;2450,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+8;U- Schiene 20 / 2.500 x 38 x 22,5 mm,;67,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+9;Einrichten und Vorhalten der Baustelle,;1,0;psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+10;Räumen der Baustelle,;1,0;psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+11;Heizkreise der IFH- Anlage gem. DIN EN 1264 und VOB;8,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+12;Erstellung und Projektierung der Montageplanung;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+13;Revisionsunterlagen;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+14;Obermonteurstunden;5,0;h;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+15;Monteurstunden;5,0;h;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+16;Helferstunden;5,0;h;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;"Industrieverteiler 1 1/4"", bis 8 Heizkreise,";1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;"Kugelhahn- Set 1 1/4"",";1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Klemmringverschraubung 20 mm,;16,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;Systemrohr 20 mm, für Industrieflächenheizung,;750,0;m;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+5;Verwechselsfreies Kennzeichnen der einzelnen;8,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+6;Rohrführungsbogen 20 mm;16,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+7;Fixbinder für Rohr- Trägerelement- System,;2250,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+8;U- Schiene 20 / 2.500 x 38 x 22,5 mm,;60,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+9;Einrichten und Vorhalten der Baustelle,;1,0;psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+10;Räumen der Baustelle,;1,0;psch;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+11;Heizkreise der IFH- Anlage gem. DIN EN 1264 und VOB;8,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+12;Erstellung und Projektierung der Montageplanung;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+13;Revisionsunterlagen;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+14;Obermonteurstunden;5,0;h;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+15;Monteurstunden;5,0;h;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+16;Helferstunden;5,0;h;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Zusammenstellung und Übergabe der Revisionsunterlagen in beschrifteten Aktenordnern mit Inhaltsverzeichnis,;1,0;St;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Ausführen von Stundenlohnarbeiten durch einen;30,0;h;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Ausführen von Stundenlohnarbeiten wie vor, jedoch;100,0;h;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Kranführer und entsprechende Betriebsstunde eines Krans gem. Titel BE.;30,0;h;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;Ausführen von Gerüstbauarbeiten;30,0;h;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+1;Minibagger mit Kettenfahrwerk, ohne Bedienung;5,0;h;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+2;Hydraulikbagger mittlerer Größe mit Kettenfahrwerk,;5,0;h;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+3;Verrechnungssatz für einen beweglichen Kompressor;1,0;h;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+4;LKW / Pritschenwagen kleiner 7,5 t,;5,0;h;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+5;Hubsteiger für Arbeitshöhe bis ca. 8 m;10,0;h;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+6;Radlader mittlerer Größe mit Schaufel und Palettengabel,;5,0;h;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+7;LKW größer 7,5 t,;1,0;h;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83
+8;Verrechnungssatz für die Gestellung, Vor- und Unterhaltung sowie Abfuhr eines Abfallcontainers für gemischte Bauabfälle anderer Gewerke,;20,0;m3;gaeb;leistungsbeschreibungen/60.6.904.26 Rohbauarbeiten 2.BA_V32.X83

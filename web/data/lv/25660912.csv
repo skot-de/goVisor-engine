@@ -1,0 +1,42 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;z.B. einzelne Stellplätze, Piktogramme, kurze Linien;50,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+20;z.B.     Kreuzungsbereich, mehrere Markierungen;40,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+30;z.B. längere Straßenzüge, mehrere Arbeitstage;30,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+40;Einreichung der Baustellenanmeldung auf Grundlage einer bestehenden verkehrsrechtlichen Anordnung durch den AN. Etwaige hierfür anfallende Gebühren werden gegen Nachweis gesondert vergütet.;110,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+10;Längsmarkierung durchgehend herstellen;500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+20;Längsmarkierung unterbrochen herstellen 1:1:1;500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+30;Längsmarkierung unterbrochen herstellen 1:2:1;400,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+40;Längsmarkierung unterbrochen herstellen 2:1:2;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+50;Längsmarkierung durchgehend herstellen;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+60;Längsmarkierung unterbrochen herstellen 1:1:1;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+70;Längsmarkierung unterbrochen herstellen 2:1:2;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+10;Quermarkierung durchgehend herstellen;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+20;Quermarkierung unterbrochen herstellen 2:1;250,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+30;Quermarkierung unterbrochen herstellen 2,5:1;500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+40;Quermarkierung unterbrochen herstellen 2,5:1;1000,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+50;Quermarkierung unterbrochen;200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+10;Pfeil geradeaus herstellen;30,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+20;Pfeil geradeaus herstellen;30,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+30;Pfeil geradeaus links ab herstellen;30,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+40;Pfeil geradeaus rechts ab herstellen;30,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+50;Pfeil links herstellen;30,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+60;Pfeil rechts ab herstellen;30,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+70;Pfeil rechts und links herstellen;5,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+80;Pfeilspitze herstellen;40,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+10;Piktogramm Radfahrer herstellen;25,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+20;Piktogramm 30 mit Kreis herstellen;40,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+30;Piktogramm Rollstuhlfahrer herstellen;30,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+40;Piktogramm Kinder wie VZ 136-10 herstellen;30,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+50;Piktogramm Beginn Fahrradstraße gemäß VZ 244.1 herstellen;15,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+10;Buchstaben und Ziffern herstellen;120,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+20;Stellplatzmarkierung - Sperrfläche herstellen;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+30;Stellplatzmarkierung - Sperrfläche herstellen;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+40;Stellplatzmarkierung herstellen, z.B. Parkwinkel, ganze Markierung, halbseitig;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+50;Stellplatzmarkierung herstellen, z.B. Parkwinkel, ganze Markierung, halbseitig;350,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+60;Fahrbahnmarkierung Zick-Zack-Linie, VZ 299;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+70;Fahrbahnmarkierung Zick-Zack-Linie , VZ 299;500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+80;Radwegbeschichtung verkehrsrot;500,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+10;Markierung Plastikmasse Fräßen;250,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+20;Markierung Farbe entfernen;250,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+30;Markierungsbeseitigung durch Schwärzung (Übermarkierung);250,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
+10;Mehrpreis für die Ausführung der Beschichtung Kaltplastik Typ II erhöhte Nachtsichtbarkeit anstelle der vorgesehenen Typ I, einschließlich aller hierfür erforderlichen Materialien und Arbeitsgänge.  Die Abrechnung erfolgt über die tatsächlich ausgeführte Markierungsfläche in m;500,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV 2026-061 Rahmenvertrag Markierungen 2026-2029.X83
