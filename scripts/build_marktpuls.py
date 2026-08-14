@@ -108,6 +108,7 @@ Aufruf::
                                        [--out web/data/marktpuls.json] [--dry-run]
 """
 from __future__ import annotations
+from govisor import db as _db
 
 import argparse
 import datetime as dt
@@ -292,7 +293,7 @@ def _dedup_ids(country: str) -> list[str]:
     dup = GOLD / country / "notice_duplicates.parquet"
     if not dup.exists():
         return []
-    con = duckdb.connect()
+    con = _db.connect()
     out = [r[0] for r in con.execute(
         f"SELECT DISTINCT duplicate_id FROM '{dup}' WHERE beleg = 'kaeufer_und_titel'"
     ).fetchall()]
@@ -1015,7 +1016,7 @@ def bauen(laender: list[str], n_jahre: int, heute: dt.date, ab_jahr: int | None 
     # Tageslauf). Der Saison-Teil bleibt in JEDEM Fall auf `jahre`.
     achse_von = min(jahre[0], max(FRUEHESTES_JAHR, ab_jahr)) if ab_jahr else jahre[0]
     achse = list(range(achse_von, letztes_volles + 1))
-    con = duckdb.connect()
+    con = _db.connect()
     con.execute("SET threads=4")
 
     coverage: dict[str, dict] = {}

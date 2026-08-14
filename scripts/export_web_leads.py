@@ -10,6 +10,7 @@ Lokal-first: kein Supabase nötig. Später durch eine Live-Query ersetzbar.
 """
 import duckdb, json, pathlib
 from datetime import date
+from govisor import db as _db
 
 TODAY = date.today()
 
@@ -36,7 +37,7 @@ CAP = 2500          # Leads je Grundraum UND Phase (Quote statt gemeinsamer Rang
                     # aber jede Phase kommt vor. Client-seitiges Filtern deckelt
                     # bei ein paar Tausend; der volle Bestand (Bau 48k) braucht die Server-Query.
 OUT = pathlib.Path("web/data"); OUT.mkdir(parents=True, exist_ok=True)
-con = duckdb.connect()
+con = _db.connect()
 G = "data/gold/DE"
 
 

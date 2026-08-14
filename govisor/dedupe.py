@@ -60,6 +60,7 @@ import sys
 from collections import defaultdict
 
 from . import entities as _entities
+from . import db as _db
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -132,7 +133,7 @@ def _laden(country: str, ab_jahr: int, alle_arten: bool = False):
 
     g = glob.glob(f"{ROOT}/data/silver/{country}/notices/**/*.parquet", recursive=True)
     p = glob.glob(f"{ROOT}/data/silver/{country}/notice_parties/**/*.parquet", recursive=True)
-    con = duckdb.connect()
+    con = _db.connect()
     return con.execute(f"""
         SELECT n.notice_id, n.schema_gen, n.title, n.notice_kind,
                coalesce(n.publication_date, n.submission_deadline) AS d,
@@ -410,7 +411,7 @@ def anreichern(country: str = "DE") -> dict:
         print(f"  keine {dup.name} — erst `finde` laufen lassen")
         return {}
     g = glob.glob(f"{ROOT}/data/silver/{country}/notices/**/*.parquet", recursive=True)
-    con = duckdb.connect()
+    con = _db.connect()
     FELDER = ("submission_deadline", "performance_nuts", "cpv_main",
               "estimated_value", "description")
     zeilen = []

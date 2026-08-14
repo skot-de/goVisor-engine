@@ -22,6 +22,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from . import locales
+from . import db as _db
 from .config import Config
 
 # eForms-ORG-Referenz (UUID) — pro Dokument vergeben, taugt nicht als Entity-Schlüssel.
@@ -128,7 +129,7 @@ def build_procedures(cfg: Config, country: str = "DE"):
     """
     import duckdb
 
-    con = duckdb.connect()
+    con = _db.connect()
     src = _notices_glob(cfg, country)
     rows = con.execute(f"""
         SELECT publication_number, ref_publication_number
@@ -190,7 +191,7 @@ def seed_groups(cfg: Config, country: str = "DE", reseed: bool = False) -> tuple
             for row in csv.DictReader(fh):
                 existing[row["entity_id"]] = row
 
-    con = duckdb.connect()
+    con = _db.connect()
     rows = con.execute(f"""
         SELECT entity_id, canonical_name, national_id
         FROM '{cfg.gold_dir / country / 'entities.parquet'}'
@@ -317,7 +318,7 @@ def build_entity_groups(cfg: Config, country: str = "DE") -> tuple[int, int]:
                 groups[gid] = label
                 links.append((row["entity_id"], gid))
 
-    con = duckdb.connect()
+    con = _db.connect()
     _write(con, cfg.gold_dir / country / "dim_company_group.parquet",
            [(gid, label) for gid, label in groups.items()],
            "group_id VARCHAR, label VARCHAR")
@@ -343,7 +344,7 @@ def build_dim_cpv(cfg: Config, country: str = "DE"):
             for div, (label, sector, branche) in cpv.DIVISIONS.items()]
     out = cfg.gold_dir / country / "dim_cpv.parquet"
     out.parent.mkdir(parents=True, exist_ok=True)
-    con = duckdb.connect()
+    con = _db.connect()
     con.execute("CREATE TABLE d (division VARCHAR, label VARCHAR, sector VARCHAR, "
                 "branche VARCHAR, version INTEGER)")
     con.executemany("INSERT INTO d VALUES (?, ?, ?, ?, ?)", rows)
@@ -385,7 +386,7 @@ def build_dim_deflator(cfg: Config, country: str = "DE"):
         print(f"  ⚠ dim_deflator {country}: keine eigene CPI-Reihe — {quelle} verwendet "
               f"(als cpi_source gekennzeichnet).")
     rows = [(y, v, round(100.0 / v, 4), quelle) for y, v in cpi.items()]
-    con = duckdb.connect()
+    con = _db.connect()
     _write(con, cfg.gold_dir / country / "dim_deflator.parquet", rows,
            "year SMALLINT, cpi DOUBLE, factor_to_2020 DOUBLE, cpi_source VARCHAR")
     con.close()
@@ -405,7 +406,7 @@ def build_quality(cfg: Config, country: str = "DE"):
     Ohne Bereinigung ist der Median-Deal um 45% zu niedrig.
     """
     import duckdb
-    con = duckdb.connect()
+    con = _db.connect()
     N = cfg.silver_table_glob("notices", country)
     L = cfg.silver_table_glob("lots", country)
     A = cfg.silver_table_glob("awards", country)
@@ -543,7 +544,7 @@ def build_review_queue(cfg: Config, country: str = "DE"):
     (später) — die Queue ist die Grundlage, kein Löschknopf.
     """
     import duckdb
-    con = duckdb.connect()
+    con = _db.connect()
     N = cfg.silver_table_glob("notices", country)
     L = cfg.silver_table_glob("lots", country)
     Q = str(cfg.gold_dir / country / "quality.parquet")
@@ -585,7 +586,7 @@ def build_contract_chains(cfg: Config, country: str = "DE"):
     schwache Vermutung nie als sichere Kette ausgegeben wird.
     """
     import duckdb
-    con = duckdb.connect()
+    con = _db.connect()
     N = cfg.silver_table_glob("notices", country)
     PE = str(cfg.gold_dir / country / "party_entity.parquet")
     # Verträge (CAN) mit Käufer-Entität, CPV-Division, Enddatum.
@@ -697,7 +698,7 @@ def build_contract_successions(cfg: Config, country: str = "DE", min_sim: float 
     import duckdb
     from . import entities as ent
 
-    con = duckdb.connect()
+    con = _db.connect()
     S = cfg.silver_table_glob
     g = cfg.gold_dir / country
     PE = str(g / "party_entity.parquet")
@@ -786,7 +787,7 @@ def build_leads(cfg: Config, country: str = "DE", reference_date: str | None = N
     from datetime import date
 
     ref = reference_date or date.today().isoformat()
-    con = duckdb.connect()
+    con = _db.connect()
     N = cfg.silver_table_glob("notices", country)
     L = cfg.silver_table_glob("lots", country)
     A = cfg.silver_table_glob("awards", country)
@@ -924,7 +925,7 @@ def build_displaceability(cfg: Config, country: str = "DE", min_support: int = 2
     ``dim_displaceability`` (kuratierbar) + Score-Spalten auf ``leads``.
     """
     import duckdb
-    con = duckdb.connect()
+    con = _db.connect()
     N = cfg.silver_table_glob("notices", country)
     A = cfg.silver_table_glob("awards", country)
     g = cfg.gold_dir / country
@@ -1146,7 +1147,7 @@ def build_hr_index(path: str | None = None, fuzzy: bool = False) -> dict:
     if not fuzzy and os.path.exists(cache) and os.path.getmtime(cache) >= os.path.getmtime(path):
         import duckdb
         lk = _HRLookup()
-        for norm, nr, name, plz in duckdb.connect().execute(
+        for norm, nr, name, plz in _db.connect().execute(
                 f"SELECT norm, nr, name, plz FROM read_parquet('{cache}')").fetchall():
             lk[norm] = {"nr": nr, "name": name, "plz": plz}
         lk._by_plz = {}
@@ -1184,7 +1185,7 @@ def build_hr_index(path: str | None = None, fuzzy: bool = False) -> dict:
         os.makedirs(os.path.dirname(cache), exist_ok=True)
         df = pd.DataFrame(((k, v["nr"], v["name"], v["plz"]) for k, v in index.items()),
                           columns=["norm", "nr", "name", "plz"])
-        con = duckdb.connect(); con.register("df", df)
+        con = _db.connect(); con.register("df", df)
         con.execute(f"COPY df TO '{cache}' (FORMAT PARQUET, COMPRESSION ZSTD)")
     return lk
 
@@ -1204,7 +1205,7 @@ def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = Non
     import duckdb
     from . import entities as ent
 
-    con = duckdb.connect()
+    con = _db.connect()
     parties = con.execute(f"""
         SELECT notice_id, role, seq, name, national_id, postal_code
         FROM '{cfg.silver_table_glob("notice_parties", country)}'
@@ -1555,7 +1556,7 @@ def _load_plz_kreis(cfg: Config) -> dict:
         return {}
     cols = {f"c{i:02d}": "VARCHAR" for i in range(1, 13)}
     try:
-        rows = duckdb.connect().execute(
+        rows = _db.connect().execute(
             f"SELECT c02, c04, c08 FROM read_csv('{f.as_posix()}', delim='\t', header=false, "
             f"columns={cols}, ignore_errors=true)").fetchall()
     except Exception:
@@ -1777,7 +1778,7 @@ def build_market_intelligence(cfg: Config, country: str = "DE", as_of_year: int 
     N = f"'{cfg.silver_table_glob('notices', country)}'"
     LOTS = f"'{cfg.silver_table_glob('lots', country)}'"
 
-    con = duckdb.connect()
+    con = _db.connect()
     con.execute("SET threads=3")
 
     def copy_to(sql, name):
@@ -1930,7 +1931,7 @@ def build_content_successions(cfg: Config, country: str = "DE",
     LOTS = f"'{cfg.silver_table_glob('lots', country)}'"
     kind_sql = _kind_sql("n.title", "n.cpv_main")
 
-    con = duckdb.connect(); con.execute("SET threads=3")
+    con = _db.connect(); con.execute("SET threads=3")
     rows = con.execute(f"""
         SELECT n.notice_id, bpe.entity_id, n.cpv_main, substr(n.cpv_main,1,4),
                CAST(coalesce(year(n.award_date), n.year) AS INT), n.title, n.oj_ref,
@@ -2023,7 +2024,7 @@ def build_succession_kpis(cfg: Config, country: str = "DE"):
     PE = f"'{(g / 'party_entity.parquet').as_posix()}'"
     EG = f"'{(g / 'entity_group.parquet').as_posix()}'"
 
-    con = duckdb.connect(); con.execute("SET threads=3")
+    con = _db.connect(); con.execute("SET threads=3")
 
     def copy_to(sql, name):
         out = (g / name).as_posix()
@@ -2106,11 +2107,11 @@ def merge_llm_successions(cfg: Config, country: str = "DE", llm_confidence: floa
     llm = g / "succession_llm_edges.parquet"
     S = f"'{(g / 'contract_succession.parquet').as_posix()}'"
     if not llm.exists():
-        return duckdb.connect().execute(f"SELECT count(*) FROM read_parquet({S})").fetchone()[0]
+        return _db.connect().execute(f"SELECT count(*) FROM read_parquet({S})").fetchone()[0]
 
     PE = f"'{(g / 'party_entity.parquet').as_posix()}'"
     N = f"'{cfg.silver_table_glob('notices', country)}'"
-    con = duckdb.connect(); con.execute("SET threads=3")
+    con = _db.connect(); con.execute("SET threads=3")
     out = (g / "contract_succession.parquet").as_posix()
     con.execute(f"""
     COPY (
@@ -2145,7 +2146,7 @@ def build_incumbent_tenure(cfg: Config, country: str = "DE"):
     import duckdb
 
     g = cfg.gold_dir / country
-    con = duckdb.connect(); con.execute("SET threads=3")
+    con = _db.connect(); con.execute("SET threads=3")
     N = f"'{cfg.silver_table_glob('notices', country)}'"
     ev = con.execute(f"SELECT successor, predecessor, retained "
                      f"FROM read_parquet('{(g / 'succession_events.parquet').as_posix()}')").fetchall()
@@ -2183,7 +2184,7 @@ def build_award_tender_link(cfg: Config, country: str = "DE"):
     g = cfg.gold_dir / country
     N = f"'{cfg.silver_table_glob('notices', country)}'"
     out = (g / "award_tender_link.parquet").as_posix()
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
           WITH aw AS (
@@ -2227,7 +2228,7 @@ def build_value_anchor(cfg: Config, country: str = "DE"):
     CS = f"'{(g / 'contract_succession.parquet').as_posix()}'"
     ATL = f"'{(g / 'award_tender_link.parquet').as_posix()}'"
     out = (g / "value_anchor.parquet").as_posix()
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
           WITH win AS (SELECT notice_id, any_value(entity_id) eid FROM read_parquet({PE})
@@ -2332,7 +2333,7 @@ def build_lead_deadline(cfg: Config, country: str = "DE"):
     g = cfg.gold_dir / country
     N = f"'{cfg.silver_table_glob('notices', country)}'"
     out = (g / "lead_deadline.parquet").as_posix()
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     ANRQ = _ANR_SQL(cfg, country)
     con.execute(f"""
         COPY (
@@ -2420,7 +2421,7 @@ def build_duration_calibration(cfg: Config, country: str = "DE"):
 
     G = cfg.gold_dir / country
     N = cfg.silver_table_glob("notices", country)
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     SUC, DUR = G / "contract_succession.parquet", G / "lead_duration.parquet"
     out = G / "duration_calibration.parquet"
     if not SUC.exists() or not DUR.exists():
@@ -2493,7 +2494,7 @@ def build_lead_duration(cfg: Config, country: str = "DE"):
     out = (g / "lead_duration.parquet").as_posix()
     tmp = (g / "_lead_duration_roh.parquet").as_posix()
     KAL = g / "duration_calibration.parquet"
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
           WITH dur AS (   -- Vertragsdauer (start→end) je CPV
@@ -2576,7 +2577,7 @@ def build_entity_identity(cfg: Config, country: str = "DE"):
     g = cfg.gold_dir / country
     def q(name): return f"'{(g / name).as_posix()}'"
     out = (g / "entity_identity.parquet").as_posix()
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
           WITH ident AS (
@@ -2609,7 +2610,7 @@ def build_lead_detail(cfg: Config, country: str = "DE"):
     g = cfg.gold_dir / country
     def q(name): return f"'{(g / name).as_posix()}'"
     out = (g / "lead_detail.parquet").as_posix()
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
           SELECT l.*,
@@ -2785,7 +2786,7 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
     PE, EN, Q, DC, DD, LD = (str(g / t) for t in
                              ("party_entity.parquet", "entities.parquet", "quality.parquet",
                               "dim_cpv.parquet", "dim_deflator.parquet", "leads.parquet"))
-    con = duckdb.connect(); con.execute("SET threads=3")
+    con = _db.connect(); con.execute("SET threads=3")
     con.execute(f"""
         CREATE TABLE buyer AS
         SELECT pe.notice_id, pe.entity_id, e.canonical_name AS buyer_name, e.confidence AS buyer_conf,
@@ -2941,7 +2942,7 @@ def _assign_slugs(cfg: Config, country: str, lead_ids: list[str],
     path = state / f"slug_map_{country}.parquet"
     mapping: dict[str, str] = {}
     if path.exists():
-        con = duckdb.connect()
+        con = _db.connect()
         for lid, slug in con.execute(
                 f"SELECT lead_id, slug FROM read_parquet('{path.as_posix()}')").fetchall():
             mapping[lid] = slug
@@ -3139,7 +3140,7 @@ def build_lead_export(cfg: Config, country: str = "DE"):
     def q(n): return f"'{(g / n).as_posix()}'"
     nglob = cfg.silver_table_glob("notices", country)
     out = (g / "lead_export.parquet").as_posix()
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     lead_ids = [r[0] for r in con.execute(
         f"SELECT lead_id FROM read_parquet({q('lead_detail.parquet')})").fetchall()]
     doe_ids = {r[0] for r in con.execute(
@@ -3370,7 +3371,7 @@ def build_lead_cpv(cfg: Config, country: str = "DE"):
     g = cfg.gold_dir / country
     out = (g / "lead_cpv.parquet").as_posix()
     NC = cfg.silver_table_glob("notice_cpv", country)
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
           SELECT DISTINCT c.notice_id AS lead_id, c.cpv_code, c.is_main
@@ -3406,7 +3407,7 @@ def build_lead_lot(cfg: Config, country: str = "DE"):
     out = (g / "lead_lot.parquet").as_posix()
     L = cfg.silver_table_glob("lots", country)
     LC = cfg.silver_table_glob("lot_cpv", country)
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
           WITH lot_cpv_main AS (
@@ -3478,14 +3479,14 @@ def build_lead_text(cfg: Config, country: str = "DE"):
         # Ohne Silber-Tabelle eine LEERE Datei schreiben, nicht gar keine: der Exporter
         # joint sie, und eine fehlende Datei waere ein Laufzeitfehler statt „keine
         # Sprachfassungen bekannt".
-        con = duckdb.connect()
+        con = _db.connect()
         con.execute(f"""COPY (SELECT NULL::VARCHAR lead_id, NULL::VARCHAR lot_id,
             NULL::VARCHAR field, NULL::VARCHAR language, NULL::VARCHAR value WHERE false)
             TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
         con.close()
         return 0
 
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
           SELECT t.notice_id AS lead_id, t.lot_id, t.field, t.language, t.value
@@ -3515,7 +3516,7 @@ def build_doe_buyer_profile(cfg: Config, country: str = "DE"):
     def q(n): return f"'{(g / n).as_posix()}'"
     N = f"'{cfg.silver_table_glob('notices', country)}'"
     out = (g / "doe_buyer_profile.parquet").as_posix()
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
           WITH doe AS (
@@ -3583,7 +3584,7 @@ def build_lead_criteria(cfg: Config, country: str = "DE"):
     g = cfg.gold_dir / country
     out = (g / "lead_criteria.parquet").as_posix()
     AC = cfg.silver_table_glob("award_criteria", country)
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     # Rohtext -> Zahl: deutsches Dezimalkomma, Prozentzeichen, Leerzeichen.
     num = "try_cast(replace(replace(replace(c.weight,'%',''),',','.'),' ','') AS DOUBLE)"
     con.execute(f"""
@@ -3649,7 +3650,7 @@ def build_lead_requirement(cfg: Config, country: str = "DE"):
     g = cfg.gold_dir / country
     out = (g / "lead_requirement.parquet").as_posix()
     RQ = cfg.silver_table_glob("requirements", country)
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
           SELECT r.notice_id AS lead_id,
@@ -3691,7 +3692,7 @@ def build_lead_party(cfg: Config, country: str = "DE"):
     g = cfg.gold_dir / country
     out = (g / "lead_party.parquet").as_posix()
     PT = cfg.silver_table_glob("notice_parties", country)
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
           SELECT p.notice_id AS lead_id,
@@ -3811,7 +3812,7 @@ def build_bronze_inventory(cfg: Config, country: str = "DE", since_year: int = 2
     out = (g / "bronze_inventory.parquet").as_posix()
     A = cfg.silver_table_glob("attributes", country)
     N = cfg.silver_table_glob("notices", country)
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     _measure_field_usage(con, cfg, country, since_year)
     con.execute(f"""
         COPY (
@@ -3892,7 +3893,7 @@ def build_buyer_profile(cfg: Config, country: str = "DE"):
     else:
         kf_cols = ("NULL::BIGINT AS kreis_investitionen_eur, NULL::INT AS kreis_finanzen_jahr")
         kf_join = ""
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
           WITH aw AS (
@@ -3989,7 +3990,7 @@ def build_buyer_recent_awards(cfg: Config, country: str = "DE"):
     g = cfg.gold_dir / country
     def q(n): return f"'{(g / n).as_posix()}'"
     out = (g / "buyer_recent_awards.parquet").as_posix()
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
           SELECT l.buyer_entity, l.buyer_name, l.lead_id, l.titel,
@@ -4035,7 +4036,7 @@ def build_region_kpi(cfg: Config, country: str = "DE"):
     out = (g / "region_kpi.parquet").as_posix()
     kfin = cfg.data_dir / "reference" / "kreis_finanzen.parquet"
     kctx = cfg.data_dir / "reference" / "kreis_kontext.parquet"
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
 
     # Kontext-Blöcke breit ziehen (nur wenn Cache da ist).
     if kctx.exists():
@@ -4124,7 +4125,7 @@ def build_doe_demand(cfg: Config, country: str = "DE"):
     def q(n): return f"'{(g / n).as_posix()}'"
     N = f"'{cfg.silver_table_glob('notices', country)}'"
     out = (g / "doe_demand.parquet").as_posix()
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
           SELECT substr(n.cpv_main,1,2) AS cpv_div, cl.label AS cpv_div_label,
@@ -4164,7 +4165,7 @@ def build_dim_plz(cfg: Config, country: str = "DE"):
     files = [(gn / f"{cc}.txt").as_posix() for cc in ("DE", "CH", "AT") if (gn / f"{cc}.txt").exists()]
     src = "[" + ", ".join(f"'{f}'" for f in files) + "]"
     out = (g / "dim_plz.parquet").as_posix()
-    con = duckdb.connect()
+    con = _db.connect()
     con.execute(f"""
         COPY (
           SELECT country, plz,
@@ -4204,7 +4205,7 @@ def build_lead_geo(cfg: Config, country: str = "DE"):
     out = (g / "lead_geo.parquet").as_posix()
     # PLZ-Stellenzahl je Land: DE 5-stellig, CH/AT 4-stellig (disjunkt → dieselbe dim_plz).
     _pd = 4 if country in ("CH", "AT") else 5
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
           WITH bplz AS (
@@ -4323,7 +4324,7 @@ def build_at_gold(cfg: Config, country: str = "AT"):
     WERT_SQL = "n.estimated_value"
     _tok = ("list_filter(string_split(regexp_replace(lower({c}), '[^a-zäöü0-9 ]', ' ', 'g'), ' '),"
             " w -> length(w) >= 5)")
-    con = duckdb.connect()
+    con = _db.connect()
 
     con.execute(f"""COPY (
       WITH buyer AS (
@@ -4427,7 +4428,7 @@ def build_lead_predecessor(cfg: Config, country: str = "DE"):
     IT = f"'{(g / 'incumbent_tenure.parquet').as_posix()}'"
     _tok = ("list_filter(string_split(regexp_replace(lower({c}), '[^a-zäöü0-9 ]', ' ', 'g'), ' '),"
             " w -> length(w) >= 5)")
-    con = duckdb.connect()
+    con = _db.connect()
     out = (g / "lead_predecessor.parquet").as_posix()
     con.execute(f"""COPY (
       WITH award_ctx AS (   -- Zuschläge mit Käufer-Entity, Gewinner, Bieterzahl, Datum, CPV, Titel
@@ -4484,7 +4485,7 @@ def build_dim_nuts(cfg: Config, country: str = "DE"):
     c21 = (ref / "NUTS_AT_2021.csv").as_posix()
     c24 = (ref / "NUTS_AT_2024.csv").as_posix()
     out = (g / "dim_nuts.parquet").as_posix()
-    con = duckdb.connect()
+    con = _db.connect()
     con.execute(f"""
         COPY (
           WITH u AS (
@@ -4535,7 +4536,7 @@ def build_dim_cpv_label(cfg: Config, country: str = "DE"):
             # heisst im Vergaberecht „Construction work", nicht „Building work". Also die
             # Originale mitnehmen statt raten.
             rows.append((code, de, txt.get("EN"), txt.get("FR")))
-    con = duckdb.connect()
+    con = _db.connect()
     con.execute("CREATE TABLE t(cpv_code VARCHAR, label VARCHAR, label_en VARCHAR, label_fr VARCHAR)")
     if rows:
         con.executemany("INSERT INTO t VALUES (?,?,?,?)", rows)
@@ -4574,7 +4575,7 @@ def build_market_opportunity(cfg: Config, country: str = "DE", as_of_year: int |
     DL = f"'{(g / 'dim_cpv_label.parquet').as_posix()}'"
     RS = g / "retender_signal.parquet"
 
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     if RS.exists():
         con.execute(f"CREATE TEMP TABLE chr AS SELECT cpv_class cpv4, "
                     f"count(*) FILTER (WHERE still_open) chronic_needs, max(fail_years) max_fail_years "
@@ -4677,7 +4678,7 @@ def build_retender_signal(cfg: Config, country: str = "DE", as_of_year: int | No
     Q = f"'{(g / 'quality.parquet').as_posix()}'"
     PE = f"'{(g / 'party_entity.parquet').as_posix()}'"
 
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     rows = con.execute(f"""
         SELECT bpe.buyer, substr(n.cpv_main,1,4) cpv4,
                CAST(coalesce(year(n.award_date), n.year) AS INT) yr, n.title
@@ -4740,7 +4741,7 @@ def build_cpv_adjacency(cfg: Config, country: str = "DE", since_year: int = 2016
     g = cfg.gold_dir / country
     N = f"'{cfg.silver_table_glob('notices', country)}'"
     PE = f"'{(g / 'party_entity.parquet').as_posix()}'"
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     con.execute(f"""
         CREATE TEMP TABLE fc AS
         SELECT DISTINCT w.entity_id AS firm, substr(n.cpv_main,1,4) AS cpv4
@@ -4799,7 +4800,7 @@ def build_value_band_effektiv(cfg: Config, country: str = "DE", min_samples: int
     g = cfg.gold_dir / country
     L = f"'{(g / 'leads.parquet').as_posix()}'"
     out = (g / "value_band_effektiv.parquet").as_posix()
-    con = duckdb.connect(); con.execute("SET threads=4")
+    con = _db.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
           WITH med AS (

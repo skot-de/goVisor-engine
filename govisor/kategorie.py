@@ -57,6 +57,7 @@ Aufruf::
     python3 -m govisor.kategorie --country DE --schreiben
 """
 from __future__ import annotations
+from . import db as _db
 
 import argparse
 import csv
@@ -132,7 +133,7 @@ def _divisionen(country: str) -> dict[str, tuple[str, str]]:
     p = ROOT / "data" / "gold" / country / "dim_cpv.parquet"
     if not p.exists():                       # dim_cpv ist DE-gepflegt, andere Laender erben sie
         p = ROOT / "data" / "gold" / "DE" / "dim_cpv.parquet"
-    rows = duckdb.connect().execute(
+    rows = _db.connect().execute(
         f"SELECT division, label, branche FROM read_parquet('{p.as_posix()}')").fetchall()
     return {d: (l, b) for d, l, b in rows}
 
@@ -143,7 +144,7 @@ def offene_ohne_kategorie(country: str) -> list[tuple[str, str]]:
     g = glob.glob(f"{ROOT}/data/silver/{country}/notices/**/*.parquet", recursive=True)
     if not g:
         return []
-    return duckdb.connect().execute(f"""
+    return _db.connect().execute(f"""
         SELECT notice_id, title FROM read_parquet({g!r})
         WHERE notice_kind IN ('cn','pin') AND cpv_main IS NULL AND title IS NOT NULL
           AND CAST(submission_deadline AS DATE) >= current_date
@@ -161,7 +162,7 @@ def aus_zwilling(country: str) -> dict[str, str]:
     g = glob.glob(f"{ROOT}/data/silver/{country}/notices/**/*.parquet", recursive=True)
     if not dup.exists() or not g:
         return {}
-    rows = duckdb.connect().execute(f"""
+    rows = _db.connect().execute(f"""
         WITH d AS (SELECT master_id, duplicate_id FROM read_parquet('{dup.as_posix()}')
                    WHERE beleg = 'kaeufer_und_titel'),
              n AS (SELECT notice_id, cpv_main FROM read_parquet({g!r}))
@@ -191,7 +192,7 @@ def aus_regelwerk(country: str) -> dict[str, str]:
     g = glob.glob(f"{ROOT}/data/silver/{country}/notices/**/*.parquet", recursive=True)
     if not a or not g:
         return {}
-    rows = duckdb.connect().execute(f"""
+    rows = _db.connect().execute(f"""
         WITH k AS (SELECT notice_id FROM read_parquet({g!r})
                    WHERE notice_kind IN ('cn','pin') AND cpv_main IS NULL
                      AND CAST(submission_deadline AS DATE) >= current_date)
