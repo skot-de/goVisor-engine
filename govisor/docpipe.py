@@ -23,7 +23,27 @@ from pathlib import Path
 
 from .config import Config
 from . import db as _db
+
+ROOT = Path(__file__).resolve().parent.parent
 from .docupload import MAX_PACKAGE_BYTES, MAX_ZIP_DEPTH, check_zip_bomb
+
+# EINE Definition, von `build_index` UND `docworker` benutzt. Lagen sie doppelt vor, fiele
+# eine Abweichung erst beim Zusammenfuehren auf — also nach der ganzen Arbeit.
+def _schema():
+    import pyarrow as pa
+    return pa.schema([("notice_id", pa.string()), ("archive", pa.string()),
+                      ("file", pa.string()), ("filetype", pa.string()),
+                      ("n_chars", pa.int64()), ("status", pa.string()),
+                      ("text", pa.string())])
+
+
+# BEWUSST KEIN Lazy-Wrapper. Der erste Entwurf war einer (ein Objekt, das `_schema()` erst
+# beim ersten Attributzugriff baut), und er ging schief: `pa.Table.from_pylist(schema=...)`
+# verlangt eine ECHTE `pyarrow.Schema`, kein Objekt, das sich wie eine verhaelt. Der Fehler
+# trat erst im Arbeiter-Prozess auf, dessen Ausgabe unterdrueckt ist — sichtbar war nur
+# „Arbeiter endete mit 1". Wer Attribute durchreicht, hat den Typ nicht ersetzt.
+#
+# Wer `_schema()` braucht, ruft die Funktion. Das ist ein Zeichen mehr und keine Falle.
 
 _MAX_TEXT = 2_000_000   # pro Datei kappen (Index soll durchsuchbar bleiben, nicht Bücher speichern)
 _MAX_TEXT_ARCHIV = 30_000_000   # und pro ARCHIV, s. Begründung in `process_zip`
@@ -273,7 +293,18 @@ ZEIT_JE_ARCHIV = int(os.environ.get("GOVISOR_ZEIT_JE_ARCHIV", "900"))
 MAX_ARCHIV_MB = int(os.environ.get("GOVISOR_MAX_ARCHIV_MB", "0"))
 
 
-# ═══ SPEICHER: ZWEI SICHERUNGEN GEBAUT, BEIDE GEMESSEN WIRKUNGSLOS (2026-08-14) ═══
+# SPEICHERGRENZE JE ARBEITER — die einzige, die wirklich greift.
+#
+# Sie wird NICHT im Arbeiter gesetzt, sondern vom Elternprozess DURCHGESETZT: er misst den
+# RSS jedes Arbeiterprozesses und beendet ihn mit SIGKILL, wenn er sie reisst. Das Archiv
+# bekommt dann `status='speicher'` und ist gezaehlt.
+#
+# 2 GB × 4 Arbeiter = 8 GB Obergrenze auf einer 16-GB-Maschine, mit Reserve fuer den
+# Elternprozess und das System. Wer die Arbeiterzahl hochsetzt, muss das mitrechnen — die
+# beiden Zahlen gehoeren zusammen und sind einzeln sinnlos.
+SPEICHER_JE_ARBEITER_GB = float(os.environ.get("GOVISOR_ARBEITER_GB", "2"))
+
+# ═══ WARUM NICHT IM ARBEITER: ZWEI SICHERUNGEN GEBAUT, BEIDE GEMESSEN WIRKUNGSLOS ═══
 #
 # Der Neuaufbau lief mit `MAX_DATEI_MB=10` — und ein EINZELNER Arbeiter stand bei 6,5 GB,
 # bei 1,3 GB freiem RAM. Abgebrochen, sonst der dritte Rechnerabsturz des Tages.
@@ -299,52 +330,42 @@ MAX_ARCHIV_MB = int(os.environ.get("GOVISOR_MAX_ARCHIV_MB", "0"))
 # benannt, damit niemand sie fuer eine Sicherung haelt.
 
 
-def _verarbeite_archiv(auftrag):
-    """Ein Archiv → Zeilen. Muss auf Modulebene stehen, damit der Pool sie versenden kann.
+# `_verarbeite_archiv` (Pool-Arbeiter) wurde am 2026-08-14 ersatzlos entfernt. Seine
+# Aufgabe macht jetzt `govisor/docworker.py` als eigener Prozess — der Grund steht dort.
+# Er hierzulassen hiesse, zwei Wege zur selben Sache zu haben, von denen einer den Rechner
+# abstuerzen laesst.
 
-    Ein Fehlschlag ist eine ZEILE, kein Abbruch: die Projektregel „markieren statt filtern"
-    gilt auch hier. Ein Archiv, das in die Zeitgrenze laeuft, verschwindet nicht stillschweigend
-    aus dem Index — es steht mit `status='zeitlimit'` drin und ist damit zaehlbar.
+
+def _rss_gb(pids) -> dict[int, float]:
+    """RSS mehrerer Prozesse in GB — in EINEM `ps`-Aufruf, nicht einem je Prozess.
+
+    Bei vier Arbeitern und zwei Messungen je Sekunde waeren das sonst acht Prozessstarts
+    pro Sekunde, nur um Zahlen abzulesen. `ps` liefert Kilobytes.
     """
-    import signal
-    notice_id, pfad = auftrag
-    zp = Path(pfad)
-
-    def _wecker(signum, frame):
-        raise TimeoutError(f"{ZEIT_JE_ARCHIV}s ueberschritten")
-
+    if not pids:
+        return {}
+    import subprocess
     try:
-        mb = zp.stat().st_size / 1e6
-    except OSError:
-        mb = 0
-    if MAX_ARCHIV_MB and mb > MAX_ARCHIV_MB:
-        return [{"notice_id": notice_id, "archive": zp.name, "file": "", "filetype": "",
-                 "n_chars": 0, "status": "zu_gross", "text": ""}]
+        aus = subprocess.run(["ps", "-o", "pid=,rss=", "-p", ",".join(str(x) for x in pids)],
+                             capture_output=True, text=True, timeout=10).stdout
+    except Exception:                                     # noqa: BLE001
+        return {}                 # keine Messung ist kein Grund, den Lauf abzubrechen
+    raus: dict[int, float] = {}
+    for zeile in aus.splitlines():
+        teile = zeile.split()
+        if len(teile) == 2:
+            try:
+                raus[int(teile[0])] = int(teile[1]) / 1024 ** 2
+            except ValueError:
+                pass
+    return raus
 
-    alt = None
-    try:
-        alt = signal.signal(signal.SIGALRM, _wecker)
-        signal.alarm(ZEIT_JE_ARCHIV)
-    except (AttributeError, ValueError):
-        alt = None                      # kein SIGALRM (Windows) — dann eben ohne Limit
-    try:
-        return [{"notice_id": notice_id, "archive": zp.name, **r} for r in process_zip(zp)]
-    except (Exception, MemoryError) as e:
-        if isinstance(e, TimeoutError):
-            grund = "zeitlimit"
-        elif isinstance(e, MemoryError):
-            grund = "speicher"      # Grenze gegriffen — gezaehlt, nicht verschwiegen
-        else:
-            grund = "fehler"
-        return [{"notice_id": notice_id, "archive": zp.name, "file": "", "filetype": "",
-                 "n_chars": 0, "status": grund, "text": ""}]
-    finally:
-        try:
-            signal.alarm(0)
-            if alt is not None:
-                signal.signal(signal.SIGALRM, alt)
-        except (AttributeError, ValueError):
-            pass
+
+def _fehlzeile(notice_id: str, archiv: str, status: str, hinweis: str = "") -> dict:
+    """Ein gescheitertes Archiv wird MARKIERT, nicht verschwiegen — sonst sieht ein Lauf,
+    der die Haelfte abgeschossen hat, genauso aus wie einer, der alles geschafft hat."""
+    return {"notice_id": notice_id, "archive": archiv, "file": "", "filetype": "",
+            "n_chars": 0, "status": status, "text": hinweis}
 
 
 def _dringlichkeit(cfg: Config, country: str) -> dict[str, int]:
@@ -467,9 +488,9 @@ def build_index(cfg: Config, country: str = "DE", neu_aufbauen: bool = False,
     #
     # Nebeneffekt, der genauso zaehlt: ein Abbruch kostet hoechstens den letzten Block. Der
     # erste Anlauf hatte ueber eine Stunde gearbeitet und hinterliess NICHTS.
-    schema = pa.schema([("notice_id", pa.string()), ("archive", pa.string()),
-                        ("file", pa.string()), ("filetype", pa.string()),
-                        ("n_chars", pa.int64()), ("status", pa.string()), ("text", pa.string())])
+    # DASSELBE Schema wie der Arbeiter (`_schema()` oben). Nicht hier neu aufschreiben:
+    # eine Abweichung faellt erst beim Zusammenfuehren auf, also nach der ganzen Arbeit.
+    schema = _schema()
     BLOCK = 200
     tmp = out.with_suffix(".parquet.neu")
     schreiber = pq.ParquetWriter(tmp, schema, compression="zstd")
@@ -502,22 +523,122 @@ def build_index(cfg: Config, country: str = "DE", neu_aufbauen: bool = False,
                 t = alt.read_row_group(i).select(schema.names)
                 schreiber.write_table(t)
                 n_zeilen += t.num_rows
-        with mp.Pool(arbeiter) as pool:
-            for teil in pool.imap_unordered(_verarbeite_archiv, auftraege, chunksize=1):
-                for r in teil:
-                    status_counts[r["status"]] = status_counts.get(r["status"], 0) + 1
-                    total_chars += r["n_chars"]
-                puffer.extend(teil)
-                n_zeilen += len(teil)
+        # ── EIN PROZESS JE ARCHIV, vom Elternprozess beaufsichtigt ────────────────────
+        #
+        # Ersetzt am 2026-08-14 einen `mp.Pool`. Der Grund steht ausfuehrlich in
+        # `govisor/docworker.py`; kurz: Speicher laesst sich INNERHALB eines Prozesses nicht
+        # verlaesslich begrenzen (drei Versuche, alle gemessen wirkungslos), und die einzige
+        # Instanz, die eine Grenze durchsetzen kann, ist das Betriebssystem.
+        #
+        # Ein Pool taugt dafuer nicht: seine Arbeiter sind langlebig, und einen davon hart
+        # zu beenden bringt `mp.Pool` zum Haengen. Eigene kurzlebige Prozesse darf man
+        # toeten — der Verlust ist EIN Archiv, und das wird als Zeile vermerkt.
+        #
+        # Der zweite Gewinn ist genauso wichtig: der Arbeiter schreibt sein Ergebnis SELBST
+        # als Parquet-Bruchstueck. Der Elternprozess reicht es als Arrow-Tabelle durch, ohne
+        # den Volltext je als Python-Objekt zu halten. Vorher pufferte er 200 Archive à bis
+        # zu 30 MB Text — bis zu 6 GB, die niemand mitgerechnet hatte.
+        import itertools
+        import subprocess
+        import sys as _sys
+
+        bruch_dir = _db.temp_verzeichnis() / "docidx"
+        bruch_dir.mkdir(parents=True, exist_ok=True)
+        for rest in bruch_dir.glob("*.parquet"):
+            rest.unlink()                 # Reste eines abgebrochenen Laufs
+        zaehler = itertools.count()
+        warteschlange = list(auftraege)
+        laufend: dict[int, list] = {}     # pid → [proc, (notice_id, pfad), bruchstueck, t0]
+        getoetet: dict[str, int] = {}
+
+        def _uebernehmen(zeilen_tabelle=None, zeilen=None):
+            """Ergebnis eines Arbeiters in den Schreiber — Tabelle direkt, Zeilen gepuffert."""
+            nonlocal n_zeilen
+            if zeilen_tabelle is not None:
+                schreiber.write_table(zeilen_tabelle)
+                n_zeilen += zeilen_tabelle.num_rows
+            if zeilen:
+                puffer.extend(zeilen)
+                n_zeilen += len(zeilen)
+
+        while warteschlange or laufend:
+            while warteschlange and len(laufend) < arbeiter:
+                notice_id, pfad = warteschlange.pop(0)
+                bruch = bruch_dir / f"t{next(zaehler)}.parquet"
+                proc = subprocess.Popen(
+                    [_sys.executable, "-m", "govisor.docworker", notice_id, pfad, str(bruch)],
+                    cwd=str(ROOT), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                laufend[proc.pid] = [proc, (notice_id, pfad), bruch, _t.monotonic()]
+
+            _t.sleep(0.4)
+            speicher = _rss_gb(list(laufend))
+
+            for pid in list(laufend):
+                proc, (nid, pfad), bruch, t0 = laufend[pid]
+                lebt = proc.poll() is None
+                if lebt:
+                    # DIE GRENZE, DIE WIRKLICH GREIFT. Kein Signal, kein rlimit — SIGKILL.
+                    grund = None
+                    if speicher.get(pid, 0) > SPEICHER_JE_ARBEITER_GB:
+                        grund = "speicher"
+                    elif _t.monotonic() - t0 > ZEIT_JE_ARCHIV:
+                        grund = "zeitlimit"
+                    if not grund:
+                        continue
+                    proc.kill()
+                    try:
+                        proc.wait(timeout=10)
+                    except Exception:                     # noqa: BLE001
+                        pass
+                    getoetet[grund] = getoetet.get(grund, 0) + 1
+                    zeile = _fehlzeile(nid, Path(pfad).name, grund,
+                                       f"{speicher.get(pid, 0):.1f} GB" if grund == "speicher"
+                                       else f"{ZEIT_JE_ARCHIV}s")
+                    status_counts[grund] = status_counts.get(grund, 0) + 1
+                    _uebernehmen(zeilen=[zeile])
+                    bruch.unlink(missing_ok=True)
+                    del laufend[pid]
+                    fertig += 1
+                    continue
+
+                # Fertig — Bruchstueck einsammeln.
+                del laufend[pid]
                 fertig += 1
+                if bruch.exists():
+                    try:
+                        t = pq.read_table(bruch).select(schema.names)
+                        for st, n in zip(t.column("status").to_pylist(),
+                                         t.column("n_chars").to_pylist()):
+                            status_counts[st] = status_counts.get(st, 0) + 1
+                            total_chars += n or 0
+                        _uebernehmen(zeilen_tabelle=t)
+                    except Exception:                     # noqa: BLE001
+                        status_counts["fehler"] = status_counts.get("fehler", 0) + 1
+                        _uebernehmen(zeilen=[_fehlzeile(nid, Path(pfad).name, "fehler",
+                                                        "Bruchstueck unlesbar")])
+                    bruch.unlink(missing_ok=True)
+                else:
+                    # Kein Bruchstueck und nicht getoetet: der Arbeiter ist selbst gestorben
+                    # (z. B. vom System wegen Speichers). Auch das wird vermerkt.
+                    status_counts["fehler"] = status_counts.get("fehler", 0) + 1
+                    _uebernehmen(zeilen=[_fehlzeile(nid, Path(pfad).name, "fehler",
+                                                    f"Arbeiter endete mit {proc.returncode}")])
+
                 if len(puffer) >= BLOCK:
                     _wegschreiben(puffer)
-                if fertig % 200 == 0 or fertig == len(auftraege):
-                    print(f"  {fertig}/{len(auftraege)} Archive", flush=True)
-                if zeit_budget is not None and _t.monotonic() - start > zeit_budget:
-                    abgeschnitten = len(auftraege) - fertig
-                    pool.terminate()
-                    break
+                if fertig % 100 == 0 or fertig == len(auftraege):
+                    print(f"  {fertig}/{len(auftraege)} Archive"
+                          + (f"  (getoetet: {getoetet})" if getoetet else ""), flush=True)
+
+            if zeit_budget is not None and _t.monotonic() - start > zeit_budget:
+                abgeschnitten = len(warteschlange) + len(laufend)
+                for pid in list(laufend):
+                    laufend[pid][0].kill()
+                    laufend[pid][2].unlink(missing_ok=True)
+                laufend.clear()
+                warteschlange.clear()
+                break
+
         _wegschreiben(puffer)
     finally:
         schreiber.close()

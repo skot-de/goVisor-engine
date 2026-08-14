@@ -20,11 +20,22 @@ import { useSprache } from "@/lib/i18n";
 export type RailId = "akquise" | "merkliste" | "netzwerk" | "strategie" | "unternehmen" | "bausteine";
 
 const ICON: Record<RailId, React.ReactNode> = {
+  // FERNGLAS. Die Vorgängerfassung hatte gleich breite Rohre über zwei gleich großen
+  // Kreisen — bei 22 px las sie sich als „88", nicht als Fernglas. Nebenan liegen Stern,
+  // Netz und Kurve; ein Symbol, das dort wie eine Ziffernfolge wirkt, ist kein Symbol.
+  //
+  // Was ein Fernglas bei dieser Größe erkennbar macht, sind zwei Dinge, und beide fehlten:
+  // die VERJÜNGUNG (breites Objektiv unten, schmales Okular oben) und ein Steg, der bei
+  // 1,6 px Strichstärke noch sichtbar ist — deshalb steht er hier ausdrücklich dicker.
+  //
+  // Geprüft wurde an sechs Entwürfen bei ECHTER Größe in der Leiste, nicht vergrößert:
+  // zwei gleich breite Rohre („00") und Rohre mit Okular-Absatz („88") fielen dabei durch.
+  // Vergrößert sahen alle sechs brauchbar aus — die Größe, die zählt, ist die kleine.
   akquise: (<>
-    <circle cx="7" cy="15.6" r="3.6" /><circle cx="17" cy="15.6" r="3.6" />
-    <path d="M4.5 13.2V6.2A2.2 2.2 0 0 1 6.7 4h.9a2.2 2.2 0 0 1 2.2 2.2v7" />
-    <path d="M19.5 13.2V6.2A2.2 2.2 0 0 0 17.3 4h-.9a2.2 2.2 0 0 0-2.2 2.2v7" />
-    <path d="M9.8 9.4h4.4" />
+    <circle cx="6.6" cy="16.4" r="3.4" /><circle cx="17.4" cy="16.4" r="3.4" />
+    <path d="M4.6 14.2 6.9 6.1a1.4 1.4 0 0 1 1.3-1h1.1a1.4 1.4 0 0 1 1.4 1.4v7.9" />
+    <path d="M19.4 14.2 17.1 6.1a1.4 1.4 0 0 0-1.3-1h-1.1a1.4 1.4 0 0 0-1.4 1.4v7.9" />
+    <path d="M10.7 12.4h2.6" strokeWidth="2.4" />
   </>),
   merkliste: <path d="m12 4 2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4-3.9-3.8 5.4-.8L12 4Z" />,
   netzwerk: (<>
