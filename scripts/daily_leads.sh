@@ -25,11 +25,29 @@ MONTH="$(date +%Y-%m)"
 TODAY="$(date +%Y-%m-%d)"
 
 # --- Lock: keine Überlappung, falls ein Lauf noch dreht (atomar via mkdir) ---
+#
+# ZWEI FEHLER, die am 2026-08-14 zugeschlagen haben und hier behoben sind:
+#
+# (1) VERWAISTER LOCK BLOCKIERTE ALLES. Der `trap` raeumt bei einem SAUBEREN Ende — er
+#     feuert NICHT bei SIGKILL, und genau das passiert, wenn der Rechner mitten im Lauf
+#     schlafen geht. Gefunden: ein Lock vom 13.08. 20:42, leer, Prozess laengst tot. Jeder
+#     Lauf seither brach sofort ab. Der Lock traegt jetzt die PID, und ein Lock ohne
+#     lebenden Prozess wird uebernommen statt respektiert.
+#
+# (2) ABBRUCH MELDETE ERFOLG. `exit 0` heisst fuer launchd „Lauf war erfolgreich". Ein
+#     blockierter Lauf ist aber KEIN erfolgreicher — die Daten veralten, und niemand sieht
+#     es. Jetzt `exit 75` (EX_TEMPFAIL): „nicht gelaufen, spaeter erneut versuchen".
 if ! mkdir "$LOCK" 2>/dev/null; then
-  echo "$(date '+%F %T') Lauf läuft bereits (Lock $LOCK) — abgebrochen." >&2
-  exit 0
+  _alt="$(cat "$LOCK/pid" 2>/dev/null | tr -d '[:space:]')"
+  if [ -n "$_alt" ] && kill -0 "$_alt" 2>/dev/null; then
+    echo "$(date '+%F %T') Lauf laeuft bereits (PID $_alt) — abgebrochen." >&2
+    exit 75
+  fi
+  echo "$(date '+%F %T') ⚠ Verwaister Lock (PID '${_alt:-unbekannt}' laeuft nicht) — uebernommen." >&2
+  rm -rf "$LOCK" && mkdir "$LOCK" || { echo "Lock nicht uebernehmbar." >&2; exit 75; }
 fi
-trap 'rmdir "$LOCK" 2>/dev/null' EXIT
+echo $$ > "$LOCK/pid"
+trap 'rm -rf "$LOCK" 2>/dev/null' EXIT
 
 # --- Daten-Guard: externe Platte / Symlink muss aufgelöst sein ---
 if [ ! -e "$ROOT/data/gold/DE/lead_export.parquet" ]; then
