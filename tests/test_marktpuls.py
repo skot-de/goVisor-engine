@@ -1000,3 +1000,59 @@ def test_simap_erkennt_eine_nicht_greifende_sitzung():
     S = (ROOT / "govisor" / "simap_docs.py").read_text(encoding="utf-8")
     assert '"nicht_angemeldet"' in S
     assert '"/auth/realms/" in pg.url' in S, "fehlgeschlagener Login bleibt auf Keycloak stehen"
+
+
+def _simap():
+    import sys
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from govisor import simap_docs
+    return simap_docs
+
+
+def test_simap_projekt_id_ohne_netzaufruf():
+    """Die `documents_url` trägt die Projekt-ID bereits — base64-kodiertes JSON im
+    `context`-Parameter. Gemessen: **889 von 889** CH-Leads lassen sich so auflösen, ohne
+    einen einzigen Seitenaufruf. Die erste Fassung hätte je Vergabe die Weiterleitung
+    verfolgt; bei 889 Leads ist das keine Kleinigkeit.
+    """
+    S = _simap()
+    u = ("https://www.simap.ch/de/redirect?context=" +
+         "eyJwYWdlIjoicHJvamVjdCIsInByb2plY3RJZCI6ImQ4MjM1NDM4LWIzYmItNGZkOS1iMzZkLWY1NDY3YmExZjM4ZiJ9")
+    assert S.projekt_id(u) == "d8235438-b3bb-4fd9-b36d-f5467ba1f38f"
+    assert S.projekt_id("https://www.simap.ch/de/project-detail/"
+                        "29fec380-48b7-486c-af29-064070e6b18e") == \
+        "29fec380-48b7-486c-af29-064070e6b18e"
+    assert S.projekt_id("https://example.org/x") is None
+
+
+def test_simap_nutzt_die_offizielle_api_nicht_die_oberflaeche():
+    """simap.ch betreibt eine dokumentierte, kostenlose, ausdrücklich für Dritte gedachte
+    API — die eigenen AGB nennen „Authentifizierung als Anbieter: Bezug von
+    Ausschreibungsunterlagen" und erlauben kommerzielle Nutzung. Eine Oberfläche
+    nachzuklicken, für die es eine gewollte Schnittstelle gibt, wäre zerbrechlicher und die
+    schlechtere Bürgerschaft."""
+    S = (ROOT / "govisor" / "simap_docs.py").read_text(encoding="utf-8")
+    assert "/vendors/v1/my/projects/" in S and "zip-token" in S
+    assert "project-documents/v1/docs/zip-download" in S
+
+
+def test_simap_markiert_weiterverwendungs_einschraenkungen():
+    """AGB 9.1 Abs. 2: Einschränkungen, die IN den Unterlagen stehen, sind einzuhalten. Der
+    Verein empfiehlt dafür einen festen Satz. Wer ihn nicht sucht, versenkt die Auflage im
+    ZIP — und das Produkt gäbe später etwas weiter, das nicht weitergegeben werden darf."""
+    S = _simap()
+    assert S.EINSCHRAENKUNG.search(
+        "Diese Unterlagen dürfen ausser zur Einreichung eines Angebots nur eingeschränkt "
+        "weiterverwendet werden")
+    assert not S.EINSCHRAENKUNG.search("Leistungsverzeichnis.pdf")
+
+
+def test_simap_ist_bewusst_nicht_im_tageslauf():
+    """Der Download IST die Interessensbekundung — AGB 4.6: „Indem Anbietende ihr Interesse
+    an einer Ausschreibung bekunden, erteilen sie ihre Zustimmung, dass ihre Angaben den
+    Auftraggebenden mitgeteilt werden dürfen." Bei 889 Vergaben macht das goVisor bei
+    hunderten Vergabestellen als Bieter sichtbar. Das ist eine Geschäftsentscheidung."""
+    lauf = (ROOT / "scripts" / "daily_leads.sh").read_text(encoding="utf-8")
+    assert "govisor.simap_docs" not in lauf, (
+        "erst entscheiden, dann verdrahten — s. Modulkopf")
