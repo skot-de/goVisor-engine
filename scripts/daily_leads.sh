@@ -334,6 +334,17 @@ if [ "${GOVISOR_NEUE_QUELLEN:-1}" = "1" ]; then
   $PY -m govisor.docfetch_staatsanzeiger --limit 40 \
     || echo "  ⚠ Staatsanzeiger-Unterlagen unvollstaendig."
 
+  # ÖSTERREICH — der erste AT-Schritt ueberhaupt. `vergabeportal.at` + `wien.gv.at` (dieselbe
+  # Software) tragen 334 Leads = 91 % aller erreichbaren AT-Leads.
+  # ⚠ NUR DIE DATEILISTE, keine Dateien: der anonyme Download ist durch hCaptcha geschuetzt
+  # (nachgewiesen ueber den Netzwerkverkehr). Ein CAPTCHA wird nicht geloest und nicht
+  # umgangen. Die LISTE ist ohne CAPTCHA sichtbar und traegt Name, Groesse, Erstell- UND
+  # Aenderungsdatum, „Inaktiv"-Kennzeichen und SHA — daraus kommt „gibt es ein
+  # Leistungsverzeichnis, welche Nachweise, wurde nachgebessert".
+  step "vergabeportal.at-Dateilisten (AT, ohne CAPTCHA, idempotent)"
+  $PY -m govisor.vergabeportal_at --limit 60 \
+    || echo "  ⚠ AT-Dateilisten unvollstaendig."
+
 else
   echo ""
   echo "▶ Neue Quellen (healyhudson + die VIER Unterlagen-Fetcher) ABGESCHALTET."

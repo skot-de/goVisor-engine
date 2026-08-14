@@ -914,3 +914,64 @@ def test_netserver_erkennt_auch_ohne_pfad_am_servlet():
     z2 = N.unterlagen_url("https://vergabe.landbw.de/NetServer/TenderingProcedureDetails"
                           "?function=_Details&TenderOID=54321-NetTender-x")
     assert z2.startswith("https://vergabe.landbw.de/NetServer/TenderingProcedureDetails?")
+
+
+def _vpat():
+    import sys
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from govisor import vergabeportal_at
+    return vergabeportal_at
+
+
+def test_vergabeportal_at_erkennt_beide_formen_derselben_software():
+    """`www.wien.gv.at` fährt dieselbe Plattform wie `*.vergabeportal.at`, nur unter eigenem
+    Namen — `/Vergabeportal/Detail/<id>` gegen `/Detail/<id>`. Wer nach dem Hostnamen sucht,
+    verliert Wien (57 Leads) und hält die Familie für kleiner, als sie ist.
+
+    Zusammen sind es 334 Leads = 91 % aller erreichbaren AT-Leads.
+    """
+    V = _vpat()
+    assert V.ist_vergabeportal("https://wstw.vergabeportal.at/Detail/250054")
+    assert V.ist_vergabeportal("https://www.wien.gv.at/Vergabeportal/Detail/250886")
+    assert V.vorgangs_id("https://gv.vergabeportal.at/Detail/251077") == "251077"
+    assert not V.ist_vergabeportal("https://noe.vemap.com")          # nackte Host-URL
+    assert not V.ist_vergabeportal(None)
+
+
+def test_vergabeportal_at_ruehrt_das_captcha_nicht_an():
+    """Der anonyme Download ist durch **hCaptcha** geschützt — nachgewiesen über den
+    Netzwerkverkehr (`api.hcaptcha.com/checksiteconfig?…&host=wstw.vergabeportal.at`) und
+    ein sichtbares `div.h-captcha` im Anonym-Bereich. Deshalb bleibt `isValidFile(f)` falsch
+    und alle Dateien tragen `link-not-allowed`.
+
+    Ein CAPTCHA wird nicht gelöst und nicht umgangen. Dieses Modul liest ausschliesslich die
+    Tabelle, die OHNE CAPTCHA sichtbar ist — es klickt weder die Zustimmung
+    (`#cbCommitAnonymous`) noch das Widget.
+    """
+    quelle = (ROOT / "govisor" / "vergabeportal_at.py").read_text(encoding="utf-8")
+    assert "cbCommitAnonymous" not in quelle.split('"""', 2)[2], (
+        "die Zustimmung darf im CODE nicht geklickt werden — nur im Modulkopf erklärt sein")
+    assert "hcaptcha" in quelle.lower(), "die Begründung muss am Code stehen"
+    assert '"nur_liste"' in quelle, "der Status muss sagen, dass nur die LISTE vorliegt"
+
+
+def test_vergabeportal_at_trennt_aktive_von_ueberholten_dateien():
+    """„Inaktiv" kennzeichnet eine überholte Version. Ohne dieses Feld stünde ein alter
+    Berichtigungsstand gleichwertig neben dem gültigen — gemessen sind 10 von 27 bzw.
+    6 von 18 Dateien je Vergabe inaktiv, das ist kein Randfall.
+
+    Und `aktualisiert_am` ≠ `erstellt_am` heisst NACHGEBESSERT: ein Terminsignal, das die
+    deutschen Quellen nicht liefern. In sechs Vergaben waren es 60 Dateien.
+    """
+    quelle = (ROOT / "govisor" / "vergabeportal_at.py").read_text(encoding="utf-8")
+    for feld in ('"aktiv"', '"nachgebessert"', '"hash"', '"aktualisiert_am"'):
+        assert feld in quelle, f"Feld {feld} fehlt"
+    assert "n_aktiv" in quelle and "n_nachgebessert" in quelle
+
+
+def test_oesterreich_ist_im_tageslauf():
+    """Der erste AT-Schritt überhaupt. Bis 2026-08-14 waren ALLE Connectoren DE-only —
+    gegen den Grundsatz in CLAUDE.md, dass jede Funktion für alle Länder gilt."""
+    lauf = (ROOT / "scripts" / "daily_leads.sh").read_text(encoding="utf-8")
+    assert "govisor.vergabeportal_at" in lauf
