@@ -58,6 +58,24 @@ ROOT = Path(__file__).resolve().parent.parent
 # Alle Hosts der Familie. Bewusst eine Liste statt eines `NetServer`-im-Pfad-Tests: der
 # Pfad steht zwar in fast allen URLs, aber `had.de` und `vergabe.hessen.de` weichen ab, und
 # ein zu weiter Test würde fremde Portale einsammeln.
+# ⚠ DIESE LISTE IST DIE AUSNAHME, NICHT DIE REGEL. Erkannt wird zuerst am PFAD
+# `/NetServer/` — gemessen 2026-08-14, nachdem Sven nach den zwei fehlenden BW-Portalen
+# fragte:
+#
+#     Hostliste allein      1.055 Leads
+#     Pfad /NetServer/      1.524
+#     Vereinigung           1.698   ← beides zusammen
+#
+# Die Liste uebersah 643 Leads auf 26 Hosts: tender24, vmstart, Fraunhofer, Deutsche
+# Rentenversicherung, die Staedte Muenchen/Koeln/Duesseldorf/Frankfurt, LVR, LWL, Halle,
+# BWB, BWI, UKSH … Der Pfad allein reicht aber auch nicht: 174 Leads liegen auf Hosts, die
+# NetServer fahren, ohne den Pfad in der URL zu tragen (evergabe-mv 72, had.de 59,
+# ausschreibungen.landbw 43). Deshalb BEIDES.
+#
+# Dieselbe Lehre wie bei den Unterlagen und bei den Landesportalen, hier zum dritten Mal am
+# selben Tag: wer nach HOSTNAMEN sucht statt nach dem Merkmal der Plattform, findet immer
+# nur die Portale, die er schon kannte.
+#
 # ⚠ `had.de` (Hessen) meldete beim ersten Lauf „keine Version gelistet". Dasselbe Portal
 # braucht schon bei den Bekanntmachungen einen eigenen Pfad (`netserver.hole_had`) — es ist
 # anders geskinnt als die uebrigen. Ob dort wirklich keine Unterlagen liegen oder nur die
@@ -88,11 +106,20 @@ _LAUF_BUDGET_MB = 2000     # danach ist Schluss; der Rest kommt beim naechsten L
 _PAUSE_JE_100MB_MS = 8000  # groessenabhaengig nachatmen
 _DOWNLOAD_MS = 300000      # 5 min; 65 MB brauchen mehr als die urspruenglichen 3
 
-_OID = re.compile(r"TenderOID=([^&#]+)")
+# DREI Parameternamen fuer DIESELBE Kennung. Gemessen an 1.698 Leads:
+#     803  TenderingProcedureDetails?function=_Details&TenderOID=…
+#     718  PublicationControllerServlet?function=Detail&TWOID=…
+# Verifiziert: der TWOID-Wert funktioniert unveraendert als TenderOID — derselbe Vorgang,
+# derselbe Download-Knopf. Wer nur `TenderOID` liest, verliert 42 % der Vorgaenge, und zwar
+# lautlos: die URL sieht ja gueltig aus.
+_OID = re.compile(r"(?:TenderOID|TWOID|TOID)=([^&#]+)")
 
 
 def ist_netserver(url: str | None) -> bool:
-    return bool(url) and any(f"//{h}/" in url for h in HOSTS)
+    """Pfad ODER Hostliste — beides, s. Begruendung an `HOSTS`."""
+    if not url:
+        return False
+    return "/NetServer/" in url or any(f"//{h}/" in url for h in HOSTS)
 
 
 def unterlagen_url(url: str | None) -> str | None:
@@ -107,6 +134,21 @@ def unterlagen_url(url: str | None) -> str | None:
     m = _OID.search(url)
     if not m:
         return None
+    # DAS SERVLET MUSS GETAUSCHT WERDEN, nicht nur der Parameter. Die Roh-URL kommt in zwei
+    # Formen; die zweite zeigt auf ein ANDERES Servlet, das `function=_Details` gar nicht
+    # kennt:
+    #
+    #     TenderingProcedureDetails?function=_Details&TenderOID=…
+    #     PublicationControllerServlet?function=Detail&TWOID=…
+    #
+    # Wer nur den Parameter ersetzt und den Pfad stehen laesst, baut
+    # `PublicationControllerServlet?function=_Details&TenderOID=…` — und bekommt HTTP 404.
+    # Gemessen an drei Vorgaengen (Sachsen, Autobahn), bevor das auffiel. Der
+    # Unterlagen-Bereich haengt IMMER an `TenderingProcedureDetails`.
+    if "/NetServer/" in url:
+        wurzel = url.split("/NetServer/", 1)[0] + "/NetServer/"
+        return (f"{wurzel}TenderingProcedureDetails?function=_Details"
+                f"&TenderOID={m.group(1)}&thContext=publications")
     basis = url.split("?", 1)[0]
     return (f"{basis}?function=_Details&TenderOID={m.group(1)}"
             f"&thContext=publications")
@@ -180,7 +222,11 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
     L = ROOT / "data" / "gold" / country / "lead_export.parquet"
     out_root = ROOT / "data" / "docs" / country
     con = duckdb.connect()
-    wo = " OR ".join(f"documents_url LIKE '%//{h}/%'" for h in HOSTS)
+    # Pfad ODER Hostliste — dieselbe Regel wie `ist_netserver`. Stand die Abfrage nur auf
+    # der Hostliste, lief der Fetcher ueber 1.055 statt 1.698 Vorgaenge, ohne dass irgendwo
+    # eine Zahl fehlte: sie waren schlicht nie in der Auswahl.
+    wo = ("documents_url LIKE '%/NetServer/%' OR "
+          + " OR ".join(f"documents_url LIKE '%//{h}/%'" for h in HOSTS))
     rows = con.execute(f"""
         SELECT lead_id, documents_url FROM read_parquet('{L.as_posix()}')
         WHERE phase='open' AND documents_url IS NOT NULL AND ({wo})

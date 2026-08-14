@@ -796,3 +796,34 @@ def test_aumass_geschwister_teilen_den_abruf():
     Abruf nicht nur Verschwendung, sondern unnötige Last auf einem fremden System."""
     quelle = (ROOT / "govisor" / "docfetch_aumass.py").read_text(encoding="utf-8")
     assert "geschwister" in quelle and "kein zweiter Abruf" in quelle
+
+
+def test_netserver_erkennt_am_pfad_nicht_am_hostnamen():
+    """Sven fragte nach den zwei fehlenden BW-Portalen — die Antwort waren 26 fehlende Hosts.
+
+    Gemessen 2026-08-14:  Hostliste 1.055 Leads · Pfad `/NetServer/` 1.524 · Vereinigung
+    1.698. Die Liste übersah tender24, vmstart, Fraunhofer, Deutsche Rentenversicherung, die
+    Städte München/Köln/Düsseldorf/Frankfurt, LVR, LWL … Der Pfad allein reicht aber auch
+    nicht: 174 Leads liegen auf Hosts, die NetServer fahren, ohne den Pfad zu tragen
+    (evergabe-mv 72, had.de 59, ausschreibungen.landbw 43). Deshalb BEIDES.
+    """
+    N = _nsdoc()
+    assert N.ist_netserver("https://www.tender24.de/NetServer/TenderingProcedureDetails?x=1")
+    assert N.ist_netserver("https://vergabe.vmstart.de/NetServer/x")
+    assert N.ist_netserver("https://evergabe-mv.de/irgendwas")      # nur über die Liste
+    assert not N.ist_netserver("https://example.org/NetServerFake")
+
+
+def test_netserver_tauscht_das_servlet_nicht_nur_den_parameter():
+    """Der Fehler, der drei HTTP 404 erzeugte, bevor er auffiel.
+
+    Die Roh-URL kommt in zwei Formen — 803× `TenderingProcedureDetails?…&TenderOID=` und
+    718× `PublicationControllerServlet?…&TWOID=`. Der TWOID-Wert funktioniert unverändert
+    als TenderOID, aber das zweite Servlet kennt `function=_Details` nicht. Wer nur den
+    Parameter ersetzt und den Pfad stehen lässt, baut eine 404-URL, die gültig aussieht.
+    """
+    N = _nsdoc()
+    z = N.unterlagen_url("https://www.evergabe.sachsen.de/NetServer/"
+                         "PublicationControllerServlet?function=Detail&TWOID=54321-Tender-abc")
+    assert "TenderingProcedureDetails" in z and "PublicationControllerServlet" not in z
+    assert "TenderOID=54321-Tender-abc" in z and z.endswith("&thContext=publications")
