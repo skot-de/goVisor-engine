@@ -49,6 +49,43 @@ fi
 echo $$ > "$LOCK/pid"
 trap 'rm -rf "$LOCK" 2>/dev/null' EXIT
 
+# ── PHASEN ────────────────────────────────────────────────────────────────────────────────
+#
+# WARUM GETRENNT. Der erste Vollauf (2026-08-14) hat die Zeitachse offengelegt:
+#
+#   10:49  Gold fertig — die Leads EXISTIEREN
+#   10:49  Vergabeunterlagen holen                       70 min
+#   11:58  Entpacken, Volltext-Index, Signale, LV      >100 min
+#   13:52  Frontend-Export                             ← erst HIER sieht sie ein Nutzer
+#
+# Die Leads waren drei Stunden fertig und kamen trotzdem nicht an, weil der Export der
+# letzte Schritt ist und hinter der Dokumentenarbeit steht. Das ist keine Laufzeitfrage,
+# das ist Latenz auf dem Produkt — und sie trifft die Alarme mit: eine Frist-Warnung an
+# einem Lead, den es erst drei Stunden spaeter gibt, geht drei Stunden spaeter raus.
+#
+# Gemessen, warum das zaehlt: 22,4 % der offenen DE-Leads haben WENIGER ALS SIEBEN TAGE
+# Restfrist (3.379 von 15.081). Dort ist ein Tag Verzoegerung ein Fuenftel der Zeit, die
+# der Bieter ueberhaupt hat.
+#
+#   leads         Quellen → Firewall → Gold           ~40 min · mehrmals taeglich
+#   dokumente     Unterlagen → Index → Signale → LV   ~2 h    · nachts
+#   alles         beides (Vorgabe, rueckwaertskompatibel)
+#
+# `veroeffentlichen` (Marktpuls, Frontend-Export, Supabase) laeuft in BEIDEN Phasen — das
+# ist der Kern der Entkopplung. Sonst haette man die Dokumente entkoppelt und die Leads
+# warteten trotzdem.
+#
+# Der Zuwachs am naechsten Tag ist kein Fehler, sondern die Wahrheit: der Abruf ist
+# absichtlich langsam, weil wir fremde Portale hoeflich behandeln. Der Fehler waere, den
+# Lead so lange zurueckzuhalten.
+PHASE="${1:-alles}"
+case "$PHASE" in
+  leads|dokumente|alles) ;;
+  *) echo "Unbekannte Phase '$PHASE'. Erlaubt: leads | dokumente | alles" >&2; exit 64 ;;
+esac
+phase_an() { [ "$PHASE" = "alles" ] || [ "$PHASE" = "$1" ]; }
+echo "Phase: $PHASE"
+
 # --- Daten-Guard: externe Platte / Symlink muss aufgelöst sein ---
 if [ ! -e "$ROOT/data/gold/DE/lead_export.parquet" ]; then
   echo "$(date '+%F %T') FEHLER: data/ nicht verfügbar (externe Platte nicht gemountet?) — abgebrochen." >&2
@@ -62,7 +99,37 @@ echo "════════════════════════�
 echo "goVisor Tageslauf  $(date '+%F %T')  (Monat $MONTH, Stichtag $TODAY)"
 echo "════════════════════════════════════════════════════════════════"
 
-step() { echo ""; echo "▶ $(date '+%T')  $*"; }
+# Meldet die Dauer des VORIGEN Schritts. Am 2026-08-14 stand der Volltext-Index 106 Minuten
+# ohne Ausgabe; ob er arbeitete oder haengt, war nur ueber `sample` auf die Prozess-ID
+# herauszufinden. Ein Lauf, der nachts unbeaufsichtigt arbeitet, muss das selbst sagen.
+_SCHRITT_START=0
+_SCHRITT_NAME=""
+step() {
+  if [ -n "$_SCHRITT_NAME" ]; then
+    printf '  ⏱ %s — %ds\n' "$_SCHRITT_NAME" "$(( SECONDS - _SCHRITT_START ))"
+  fi
+  _SCHRITT_NAME="$*"; _SCHRITT_START=$SECONDS
+  echo ""; echo "▶ $(date '+%T')  $*"
+}
+
+# Zeitlimit fuer einen Schritt. `timeout` gibt es auf macOS nicht von Haus aus, deshalb
+# selbst gebaut: Kind starten, Wecker danebenstellen, wer zuerst kommt gewinnt.
+#
+# Gemessen 2026-08-14: `index-docs` lief 106 Minuten an einem einzelnen Dokument fest
+# (Stack zeigte reine String-Arbeit, kein Fortschritt) und blockierte die restlichen fuenf
+# Schritte. Ein Schritt ohne Obergrenze, der unbeaufsichtigt laeuft, ist ein Lauf, der
+# irgendwann nicht mehr fertig wird — und niemand merkt es, weil er formal noch arbeitet.
+mit_limit() {
+  local grenze="$1"; shift
+  ( "$@" ) & local kind=$!
+  ( sleep "$grenze"; kill -TERM "$kind" 2>/dev/null; sleep 5; kill -9 "$kind" 2>/dev/null ) & local wecker=$!
+  local rc=0; wait "$kind" 2>/dev/null || rc=$?
+  kill "$wecker" 2>/dev/null; wait "$wecker" 2>/dev/null || true
+  if [ "$rc" -ne 0 ]; then
+    printf '  ⚠ nach %ss abgebrochen oder fehlgeschlagen (rc=%s)\n' "$grenze" "$rc"
+  fi
+  return "$rc"
+}
 SECONDS=0
 
 # --- Supabase-Creds aus .secrets laden (URL Zeile 1, Service-Key Zeile 2) ---
@@ -77,6 +144,7 @@ fi
 #    CH und AT bei 2026-07-28. Der „Vorrat" an offenen Ausschreibungen (offen ÷ Veröffent-
 #    lichungen pro Monat, sollte ~1 sein) lag entsprechend: Bau 1,53 · IT 0,42 · Ingenieur
 #    0,26. Kein Anzeigefehler — die Leads kamen schlicht zu spät herein.
+if phase_an leads; then
 step "TED-Live DE (Search API, schließt die Monatspaket-Lücke)"
 if $PY scripts/fetch_ted_live.py --workers 3; then
   echo "  TED-Live ok."
@@ -244,6 +312,9 @@ echo "  Gold ok."
 #     ⚠ NUR DE: der Fetcher deckt cosinex/DTVP ab. CH (simap.ch) verlangt für den Download
 #     eine Registrierung — dort kommen wir legitim nicht heran; AT liefert als
 #     `documents_url` nur die TED-Bekanntmachung. Siehe CLAUDE.md, EU-weit-Grundsatz.
+fi   # Ende Phase „leads"
+
+if phase_an dokumente; then
 step "Vergabeunterlagen holen (DE/cosinex, höflich + idempotent)"
 $PY -m govisor.cli fetch-docs --country DE || echo "  ⚠ Fetch unvollständig — Auswertung läuft über den vorhandenen Bestand."
 # ⚠ DIESER SCHRITT FEHLTE (gemessen 2026-08-13: 2.114 Vorgänge heruntergeladen, 241 mit Text).
@@ -277,7 +348,31 @@ step "subreport-Dateilisten (DE, gedeckelt + idempotent)"
 $PY -m govisor.subreport --limit 120 || echo "  ⚠ subreport-Listen unvollständig."
 
 step "Unterlagen entpacken → Volltext-Index"
-$PY -m govisor.cli index-docs --country DE || echo "  ⚠ Index unvollständig — Auswertung läuft über den vorhandenen Textbestand."
+# ⚠ ZWEI SCHUTZE, beide am 2026-08-14 durch Schaden gelernt:
+#
+# (1) ZEITLIMIT (45 min). Der Schritt lief 106 Minuten an einem Dokument fest.
+# (2) EIGENES LOCK. Waehrend des Laufs startete jemand `cli index-docs` direkt aus einer
+#     zweiten Sitzung — ZWEI Prozesse schrieben gleichzeitig `doc_text.parquet`. Das
+#     Lauf-Lock schuetzt Laeufe gegeneinander, nicht gegen einen direkten Aufruf. Wer auf
+#     eine gemeinsame Datei schreibt, braucht sein eigenes.
+_IXLOCK="$ROOT/data/.index_docs.lock"
+if mkdir "$_IXLOCK" 2>/dev/null; then
+  echo $$ > "$_IXLOCK/pid"
+  mit_limit 2700 $PY -m govisor.cli index-docs --country DE \
+    || echo "  ⚠ Index unvollständig — Auswertung läuft über den vorhandenen Textbestand."
+  rm -rf "$_IXLOCK"
+else
+  _alt="$(cat "$_IXLOCK/pid" 2>/dev/null | tr -d '[:space:]')"
+  if [ -n "$_alt" ] && kill -0 "$_alt" 2>/dev/null; then
+    echo "  ⚠ Index laeuft bereits (PID $_alt) — uebersprungen, um doppeltes Schreiben zu vermeiden."
+  else
+    echo "  ⚠ Verwaistes Index-Lock — uebernommen."
+    rm -rf "$_IXLOCK" && mkdir "$_IXLOCK" && echo $$ > "$_IXLOCK/pid"
+    mit_limit 2700 $PY -m govisor.cli index-docs --country DE \
+      || echo "  ⚠ Index unvollständig — Auswertung läuft über den vorhandenen Textbestand."
+    rm -rf "$_IXLOCK"
+  fi
+fi
 step "Unterlagen auswerten → Anforderungs-Signale"
 if $PY -m govisor.cli signals-docs; then
   $PY scripts/export_doc_signals.py || echo "  ⚠ doc-signals.json nicht geschrieben."
@@ -312,6 +407,9 @@ fi
 # ueber die Historie — die Jahresansicht im Frontend fiele dann taeglich auf das kurze
 # Fenster zurueck. Gemessen kostet die volle Achse 2004-2025 nur +4 s (40 s -> 44 s),
 # weil der teure Attribut-Scan auf die eForms-Jahre gepinnt ist.
+fi   # Ende Phase „dokumente"
+
+# Ab hier: VEROEFFENTLICHEN — laeuft in JEDER Phase, s. Erklaerung oben.
 step "Marktpuls berechnen (Saison + Jahre 2004-2025 + Lage)"
 $PY scripts/build_marktpuls.py --ab-jahr 2004 || echo "  ⚠ marktpuls.json bleibt auf dem letzten Stand — die Anzeige weist das aus."
 
@@ -380,5 +478,9 @@ if [ "${SUPA_FEHLER:-0}" = "1" ]; then
 else
   echo "✔ Tageslauf fertig in ${SECONDS}s  ($(date '+%F %T'))"
 fi
+if [ -n "$_SCHRITT_NAME" ]; then
+  printf '  ⏱ %s — %ds\n' "$_SCHRITT_NAME" "$(( SECONDS - _SCHRITT_START ))"
+fi
+
 # Alte Logs aufräumen (>30 Tage)
 find "$LOG_DIR" -name 'daily-*.log' -type f -mtime +30 -delete 2>/dev/null || true

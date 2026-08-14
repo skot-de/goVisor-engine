@@ -209,6 +209,26 @@ def push(url, key, table, batch=500, parquet=None, pk=("lead_id",)):
         body = out.stdout.strip()
         code = body[-3:] if body[-3:].isdigit() else "???"
         if code not in ("200", "201", "204"):
+            # STATEMENT-TIMEOUT IST KEIN FEHLER, SONDERN EINE MENGENFRAGE.
+            #
+            # Gemessen 2026-08-14: der Upsert schaffte 11.500 Zeilen, dann brach ein Stapel
+            # mit `57014 canceling statement due to statement timeout` ab — und riss den
+            # GESAMTEN Upload mit, obwohl 11.500 Zeilen schon drin waren. Der Grund ist
+            # nicht ein kaputter Satz: je voller die Tabelle, desto teurer wird jedes
+            # `ON CONFLICT` (Index-Pflege). Das Problem waechst also mit dem Bestand und
+            # wird von allein wiederkommen.
+            #
+            # Antwort: denselben Stapel halbiert erneut schicken, bis er durchgeht oder zu
+            # klein zum Halbieren ist. Ein Timeout heisst „zu viel auf einmal", nicht
+            # „geht nicht" — und ein halber Stapel ist in aller Regel schnell genug.
+            if "57014" in body and len(buf) > 1:
+                haelfte = len(buf) // 2
+                print(f"  ⚠ Zeitgrenze bei {len(buf)} Zeilen — halbiert erneut", flush=True)
+                rest, buf[:] = buf[haelfte:], buf[:haelfte]
+                flush()
+                buf.extend(rest)
+                flush()
+                return
             raise RuntimeError(f"HTTP {code}: {body[:300]}")
         total += len(buf)
         print(f"  … {total:,} Zeilen upserted", flush=True)
