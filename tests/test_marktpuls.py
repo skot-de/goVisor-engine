@@ -432,3 +432,28 @@ def test_grundraum_ohne_ist_ueberall_verdrahtet():
     for f in ("app/settings/page.tsx", "app/onboarding/page.tsx"):
         assert '"ohne"' not in (web / f).read_text(encoding="utf-8"), (
             f"{f}: 'ohne' ist keine waehlbare Branche")
+
+
+def test_hessen_laeuft_ueber_den_eigenen_suchweg():
+    """HAD ist keine gewoehnliche NetServer-Instanz und darf nicht so behandelt werden.
+
+    Unter `/NetServer/` liegen dort nur die DETAILseiten; die Suche ist eine eigene
+    Oberflaeche mit POST-Formular. Der generische Servlet-Weg antwortet mit 404 — deshalb
+    steht die Basis-URL bewusst auf None, damit er gar nicht erst versucht wird, und der
+    Abruf laeuft ueber `hole_had`.
+    """
+    assert "he" in NS.PORTALE, "Hessen fehlt in der Portal-Tabelle"
+    assert NS.PORTALE["he"][1] is None, (
+        "Hessen darf keine Servlet-Basis-URL tragen — der generische Weg gibt dort 404")
+    assert hasattr(NS, "hole_had"), "eigener Suchweg fuer Hessen fehlt"
+
+    quelle = (ROOT / "govisor" / "netserver.py").read_text(encoding="utf-8")
+    kern = quelle[quelle.index("def hole_had"):quelle.index("def hole(")]
+    # Zwei Fallen, beide beim Bauen zugeschlagen — als Guard festgehalten:
+    assert "document.forms[2]" in kern, (
+        "falsches Formular: forms[0] ist der Sprachumschalter, forms[1] das kleine Suchfeld")
+    assert "f.submit()" in kern, (
+        "CMD ist ein RADIO, kein Absende-Knopf — ein Klick darauf schickt nichts ab")
+    assert "replace(/\\\\s+/g" not in kern, (
+        "Zeilenumbrueche sind bei HAD die Struktur: sie trennen Verfahrensart, Leistungsart "
+        "und Titel. Werden sie plattgemacht, beginnt jeder Titel mit demselben Formularsatz")

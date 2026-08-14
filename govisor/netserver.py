@@ -1,7 +1,8 @@
 """Quelle DE — NetServer (Administration Intelligence) Bekanntmachungs-Downloader.
 
 **Warum diese Quelle.** Fünf Bundesländer fahren dieselbe Software: Bremen,
-Mecklenburg-Vorpommern, Sachsen, Baden-Württemberg (LandBW) und Hessen (HAD). Sie führen
+Mecklenburg-Vorpommern, Sachsen, Baden-Württemberg (LandBW) und Hessen (HAD) — alle fünf
+sind angebunden, Hessen über einen eigenen Suchweg (s. unten). Sie führen
 ober- UND unterschwellige Vergaben; über TED kommen nur die oberschwelligen, über DÖE nur
 ein Teil. Gemessen 2026-08-14 an je 25 Vorgängen der öffentlichen Trefferliste:
 
@@ -21,8 +22,12 @@ geschlossen und lag falsch (s. `scripts/probe_portals.py`); hier steht die Grenz
 im Modulkopf und nicht in einer Fussnote. Wer später Unterlagen will, braucht eine
 Registrierung — das ist eine Vertrags-, keine Technikfrage.
 
-**Kein Browser nötig.** Anders als bei DTVP ist die Trefferliste serverseitig gerendert;
-``curl``/``requests`` genügt. Playwright wäre hier reine Kosten.
+**Kein Browser nötig — ausser für Hessen.** Bei Bremen, Sachsen, MV und Baden-Württemberg
+ist die Trefferliste serverseitig gerendert; ``curl`` genügt. **HAD (Hessen) sucht anders**:
+unter ``/NetServer/`` liegen dort nur die Detailseiten, die Suche ist eine eigene Oberfläche
+mit einem POST-Formular, dessen Ergebnis sich per ``curl`` nicht reproduzieren liess (sechs
+Parameter-Varianten mit und ohne Sitzung, durchweg ohne eine Trefferzeile). Dafür gibt es
+`hole_had()` mit Playwright — dieselbe Begründung wie bei DTVP.
 
 ⚠ **Die Instanzen sind unterschiedlich geskinnt.** Bremen liefert fünf schlichte ``<td>``
 (Datum · Titel · Verfahrensart · Rechtsrahmen · Frist), Sachsen eine Definitionsliste mit
@@ -40,8 +45,8 @@ Attribut mitgeführt — sie ist der stabilere Schlüssel, wenn er denn da ist.
 
 Aufruf::
 
-    python3 -m govisor.netserver --portale hb,sn,mv,bw --kategorien tender
-    python3 -m govisor.netserver --silber
+    python3 -m govisor.netserver --portale hb,sn,mv,bw,he --kategorien tender
+    python3 -m govisor.netserver --nur-silber
 """
 from __future__ import annotations
 
@@ -61,15 +66,16 @@ ROOT = Path(__file__).resolve().parent.parent
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126 Safari/537.36")
 
-# Kürzel → (Land, Basis-URL). Bewusst eine Tabelle: eine weitere NetServer-Instanz ist
-# eine Zeile, kein Codepfad. Hessen/HAD ist eingetragen, aber der Suchendpunkt antwortet
-# unter dem üblichen Servlet-Namen mit 404 — deshalb `None` und ein offener Punkt.
+# Kürzel → (Land, Basis-URL). Bewusst eine Tabelle: eine weitere NetServer-Instanz mit dem
+# üblichen Servlet ist eine Zeile, kein Codepfad.
 PORTALE: dict[str, tuple[str, str | None]] = {
     "hb": ("Bremen", "https://vergabe.bremen.de/NetServer/"),
     "sn": ("Sachsen", "https://www.sachsen-vergabe.de/NetServer/"),
     "mv": ("Mecklenburg-Vorpommern", "https://vergabe.mv-regierung.de/NetServer/"),
     "bw": ("Baden-Württemberg", "https://vergabe.landbw.de/NetServer/"),
-    "he": ("Hessen (HAD)", None),          # Suchendpunkt offen, s. Modulkopf
+    # Hessen sucht anders als die vier anderen — eigener Pfad in `hole_had`. Die Basis-URL
+    # bleibt None, damit der generische Servlet-Weg gar nicht erst versucht wird.
+    "he": ("Hessen (HAD)", None),
 }
 
 # NetServer-Kategorien → unser `notice_kind`.
@@ -87,6 +93,7 @@ _MAX_PRO_SEITE = 100
 # kein fachliches Limit. Wird sie erreicht, sagt der Lauf es (sonst wäre es stiller Verlust).
 _MAX_SEITEN = 20
 _HOEFLICH_S = 2.0          # Pause zwischen Abrufen — fremdes System
+_HAD_SUCHE = "https://www.had.de/onlinesuche_einfach.html"
 
 _RECHTSRAHMEN = re.compile(r'\b(VOB|UVgO|VgV|VOL(?:/VgV)?|SektVO|KonzVgV|VSVgV)\b', re.I)
 _VERFAHRENSART = re.compile(
@@ -258,9 +265,113 @@ def schluessel(portal: str, satz: dict) -> str:
     return hashlib.sha1(roh.encode("utf-8")).hexdigest()[:16]
 
 
+def hole_had(bekannt: set[str]) -> list[dict]:
+    """Hessen (HAD) — eigener Pfad, weil HAD *nicht* wie die anderen vier sucht.
+
+    Gemessen: unter ``/NetServer/`` liegen bei HAD nur die DETAILseiten; die Suche ist eine
+    eigene Oberfläche (``onlinesuche_einfach.html``) mit einem POST-Formular, dessen
+    Ergebnis sich per ``curl`` nicht reproduzieren liess (sechs Parameter-Varianten mit und
+    ohne Sitzung: durchweg 6,4 KB ohne eine einzige Trefferzeile). Deshalb hier ein Browser
+    — dieselbe Begründung wie bei DTVP, und ebenso wenig aus Bequemlichkeit.
+
+    Zwei Fallen, beide beim Bauen zugeschlagen:
+      * Die Seite trägt DREI Formulare. ``forms[0]`` ist der Sprachumschalter (submitten
+        stellt die Seite auf Englisch), ``forms[1]`` das kleine Suchfeld, und erst
+        ``forms[2]`` ist die Suche mit ``L_CAT``/``CNT``/``CMD``.
+      * ``CMD`` ist ein RADIO, kein Absende-Knopf. Ein Klick darauf schickt nichts ab —
+        nötig ist ``form.submit()``. Mit dem Klick kamen 0 Zeilen zurück, und das sah aus
+        wie „HAD liefert nichts".
+
+    Die Trefferliste ist dafür die reichste aller fünf Instanzen: HAD-Referenz, Verfahren,
+    Leistung, Veröffentlichung UND Ablauftermin, Vergabestelle mit Ort, Leistungsort.
+    """
+    from playwright.sync_api import sync_playwright
+
+    aus: list[dict] = []
+    heute = dt.date.today().isoformat()
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        pg = browser.new_page()
+        pg.set_default_timeout(45000)
+        pg.goto(_HAD_SUCHE, wait_until="domcontentloaded")
+        pg.wait_for_timeout(1500)
+        pg.evaluate("""() => {
+          const f = document.forms[2];                 // NICHT forms[0] (Sprache)
+          f.querySelector("[name='L_CAT']").value = 'SQLM';
+          const c = [...f.querySelectorAll("[name='CNT']")].find(r => r.value === '500');
+          if (c) c.checked = true;                     // 500 = die vom Portal angebotene Obergrenze
+          const se = [...f.querySelectorAll("[name='CMD']")].find(r => r.value === 'SE');
+          if (se) se.checked = true;
+          f.submit();                                  // CMD ist ein Radio, kein Submit-Knopf
+        }""")
+        pg.wait_for_timeout(9000)
+        # Zeilenumbrüche BEHALTEN — sie sind hier die Struktur, nicht Formatierung.
+        # Zelle 1 trennt per Umbruch: Verfahrensart → Leistungsart → eigentlicher Titel.
+        # Mit `\s+ → ' '` verschmilzt alles zu „Auftragsbekanntmachung – allgemeine
+        # Richtlinie, Standardregelung Offenes Verfahren (Dienstleistungen) Stadtteil…",
+        # und jeder HAD-Titel begänne mit demselben Formularsatz. Fuer den Abgleich gegen
+        # den Bestand waere das toedlich: gemeinsame Wortstaemme ueberall, Trennschaerfe null.
+        zeilen = pg.evaluate("""() => {
+          const t = [...document.querySelectorAll('table')]
+                      .sort((a, b) => b.rows.length - a.rows.length)[0];
+          if (!t) return [];
+          return [...t.rows].map(r => [...r.cells].map(c => c.innerText.trim()));
+        }""")
+        browser.close()
+
+    for z in zeilen:
+        if len(z) < 5:
+            continue
+        _ref, verfahren, daten, stelle, _ort = z[0], z[1], z[2], z[3], z[4]
+        # Letzter nicht-leerer Block der Zelle = der Auftragsgegenstand.
+        bloecke = [b.strip() for b in (verfahren or "").split("\n") if b.strip()]
+        if not bloecke:
+            continue
+        titel = bloecke[-1]
+        # Faellt der letzte Block als Verfahrensart aus (kurze Zeilen wie „Bauleistung"),
+        # den laengsten Block nehmen — nie den ersten, der ist immer der Formularsatz.
+        if len(titel) < 12 and len(bloecke) > 1:
+            titel = max(bloecke[1:], key=len)
+        if len(titel) < 12 or titel.lower().startswith("verfahren"):
+            continue
+        # „14.08.2026 / 11.09.2026" = Veröffentlichung, dann Ablauftermin.
+        dd = _DATUM.findall(daten or "")
+        pub = _datum(dd[0]) if dd else None
+        frist = _datum(dd[1]) if len(dd) > 1 else None
+        m_rr = _RECHTSRAHMEN.search(verfahren)
+        m_va = _VERFAHRENSART.search(verfahren)
+        satz = {
+            "titel": titel[:400],
+            "auftraggeber": (stelle or "").split("\n")[0][:120] or None,
+            "pub": pub.isoformat() if pub else None,
+            "frist": dt.datetime.combine(frist, dt.time()).isoformat() if frist else None,
+            "rechtsrahmen": m_rr.group(1).upper() if m_rr else None,
+            "verfahrensart": m_va.group(1) if m_va else None,
+            "vergabenummer": None,
+            "unterschwellig": bool(_UNTERSCHWELLIG.search(verfahren)),
+            "portal": "he", "land": PORTALE["he"][0], "kategorie": "tender",
+            "erfasst_am": heute,
+        }
+        satz["key"] = schluessel("he", satz)
+        if satz["key"] in bekannt:
+            continue
+        bekannt.add(satz["key"])
+        aus.append(satz)
+    unter = sum(1 for z in aus if z["unterschwellig"])
+    print(f"  he/tender: {len(zeilen)} Zeilen, {len(aus)} neu, {unter} unterschwellig", flush=True)
+    return aus
+
+
 def hole(portale: list[str], kategorien: list[str], bekannt: set[str]) -> list[dict]:
     saetze: list[dict] = []
     for kuerzel in portale:
+        if kuerzel == "he":                      # eigener Suchweg, s. `hole_had`
+            try:
+                saetze += hole_had(bekannt)
+            except Exception as e:               # noqa: BLE001
+                print(f"  he: Abruf fehlgeschlagen ({type(e).__name__}) — "
+                      f"Playwright installiert?", flush=True)
+            continue
         land, basis = PORTALE.get(kuerzel, (kuerzel, None))
         if not basis:
             print(f"  {kuerzel}: kein Suchendpunkt hinterlegt — übersprungen", flush=True)
@@ -507,7 +618,7 @@ def nach_silber(country: str = "DE") -> dict:
 
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    p.add_argument("--portale", default="hb,sn,mv,bw",
+    p.add_argument("--portale", default="hb,sn,mv,bw,he",
                    help="Kürzel, Komma-getrennt: " + ", ".join(PORTALE))
     p.add_argument("--kategorien", default="tender",
                    help="tender (Ausschreibung) · vorinfo · zuschlag")

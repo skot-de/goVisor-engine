@@ -140,9 +140,13 @@ step "DTVP-Bekanntmachungen (VOB, unterschwellig)"
 $PY -m govisor.dtvp --regeln VOB --typen Tender --max-seiten 40 --stop-nach-bekannten 40 --silber \
   || echo "  ⚠ DTVP-Import fehlgeschlagen — fremdes Portal, der Lauf geht ohne weiter."
 
-# NETSERVER (Administration Intelligence) — vier Laenderportale mit einer Software:
-# Bremen, Sachsen, Mecklenburg-Vorpommern, Baden-Wuerttemberg. Hessen/HAD ist vorgesehen,
-# aber der Suchendpunkt antwortet unter dem ueblichen Servlet-Namen mit 404 (offen).
+# NETSERVER (Administration Intelligence) — FUENF Laenderportale: Bremen, Sachsen,
+# Mecklenburg-Vorpommern, Baden-Wuerttemberg und Hessen (HAD).
+#
+# ⚠ Hessen laeuft ueber einen EIGENEN Pfad (`hole_had`, Playwright): unter /NetServer/
+# liegen dort nur die Detailseiten, die Suche ist ein POST-Formular, das sich per curl
+# nicht reproduzieren liess. Faellt Playwright aus, meldet der Lauf das und macht ohne
+# Hessen weiter — die vier anderen brauchen keinen Browser.
 #
 # Was diese Quelle liefert und was nicht: die TREFFERLISTE ist oeffentlich (Titel,
 # Verfahrensart, Rechtsrahmen, Frist, bei drei von vier auch die Vergabestelle). Die
@@ -157,8 +161,8 @@ $PY -m govisor.dtvp --regeln VOB --typen Tender --max-seiten 40 --stop-nach-beka
 # nicht das rohe HTML — nach einer PARSER-Aenderung muss der Schalter einmal von Hand
 # laufen, sonst bleiben die alten Saetze unveraendert stehen (genau so meldete MV nach dem
 # Vergabestellen-Fix weiter 0 % Stellen). Im Tageslauf waere er nur unnoetige Last.
-step "NetServer-Bekanntmachungen (HB/SN/MV/BW, ober- und unterschwellig)"
-$PY -m govisor.netserver --portale hb,sn,mv,bw --kategorien tender,vorinfo,zuschlag --silber \
+step "NetServer-Bekanntmachungen (HB/SN/MV/BW/HE, ober- und unterschwellig)"
+$PY -m govisor.netserver --portale hb,sn,mv,bw,he --kategorien tender,vorinfo,zuschlag --silber \
   || echo "  ⚠ NetServer-Import fehlgeschlagen — fremde Portale, der Lauf geht ohne weiter."
 
 # DUBLETTEN-FIREWALL. Eine Pruefung fuer ALLE Quellen eines Landes. Sie hat am 2026-08-13
