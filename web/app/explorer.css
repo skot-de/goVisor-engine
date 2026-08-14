@@ -1932,3 +1932,27 @@ a.lb-kachel{text-decoration:none}
                   border-radius:999px; font-size:11px; color:var(--muted); cursor:pointer; }
 .doclang button:hover { color:var(--fg); border-color:var(--fg); }
 .doclang button.is-an { background:var(--fg); color:var(--bg); border-color:var(--fg); }
+
+/* ── Zusätzliche Hinweise am Lead ───────────────────────────────────────────────────────
+   Farbe trägt Bedeutung, nicht Dekoration: Bernstein = da stimmt etwas nicht mit dem, was
+   anderswo steht (zuerst lesen). Grün = ein Grund, eher zu bieten. Grau = woher wir es
+   wissen. Wer die Farben umsortiert, ändert die Aussage. */
+.hinweise-block { margin: 1rem 0; }
+.hinweise-titel { font-size: .8rem; text-transform: uppercase; letter-spacing: .05em;
+                  color: var(--muted, #6b7280); margin: 0 0 .5rem; }
+.hinweise-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: .4rem; }
+.hinweis { display: grid; grid-template-columns: 1.25rem 1fr; gap: .5rem;
+           padding: .5rem .6rem; border-radius: .375rem; border: 1px solid transparent; }
+.hinweis--warnung  { background: #fffbeb; border-color: #fde68a; }
+.hinweis--chance   { background: #f0fdf4; border-color: #bbf7d0; }
+.hinweis--herkunft { background: var(--surface-2, #f8fafc); border-color: var(--line, #e5e7eb); }
+.hinweis-symbol { line-height: 1.35; }
+.hinweis--warnung .hinweis-symbol { color: #b45309; }
+.hinweis--chance  .hinweis-symbol { color: #15803d; }
+.hinweis--herkunft .hinweis-symbol { color: var(--muted, #6b7280); }
+.hinweis-text { display: grid; gap: .1rem; }
+.hinweis-label { font-weight: 600; font-size: .875rem; }
+/* Der Beleg steht immer sichtbar — versteckt gelesen wird ein Hinweis zur Behauptung. */
+.hinweis-beleg { font-size: .8rem; color: var(--muted, #6b7280); line-height: 1.4; }
+.hinweise-mehr { margin-top: .4rem; background: none; border: 0; padding: 0;
+                 color: var(--accent, #2563eb); font-size: .8rem; cursor: pointer; }
