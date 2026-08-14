@@ -1056,3 +1056,11 @@ def test_simap_ist_bewusst_nicht_im_tageslauf():
     lauf = (ROOT / "scripts" / "daily_leads.sh").read_text(encoding="utf-8")
     assert "govisor.simap_docs" not in lauf, (
         "erst entscheiden, dann verdrahten — s. Modulkopf")
+
+
+def test_simap_erkennt_die_unausgefuellte_vorlage():
+    """Die Zugangsdatei wird als Vorlage angelegt, damit Sven sie nur noch ausfüllt. Läuft
+    der Connector mit der Vorlage los, meldet Keycloak „Anmeldung fehlgeschlagen" — und das
+    schickt einen auf die Suche nach einem Konto-Problem, das es nicht gibt."""
+    S = (ROOT / "govisor" / "simap_docs.py").read_text(encoding="utf-8")
+    assert "HIER_EINTRAGEN" in S and "enthält noch die Vorlage" in S

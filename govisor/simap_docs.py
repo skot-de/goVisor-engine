@@ -133,6 +133,14 @@ def zugang() -> tuple[str, str]:
     zeilen = [z.strip() for z in ZUGANG.read_text(encoding="utf-8").splitlines() if z.strip()]
     if len(zeilen) < 2:
         raise SystemExit(f"{ZUGANG}: erwartet zwei Zeilen (Benutzer, Passwort).")
+    # Vorlage noch nicht ausgefuellt. Ohne diese Pruefung liefe ein Anmeldeversuch mit
+    # „PASSWORT_HIER_EINTRAGEN" gegen Keycloak und die Meldung hiesse „Anmeldung
+    # fehlgeschlagen" — das schickt einen auf die Suche nach einem Konto-Problem, das es
+    # nicht gibt.
+    if any("HIER_EINTRAGEN" in z for z in zeilen[:2]):
+        raise SystemExit(
+            f"{ZUGANG} enthält noch die Vorlage.\n"
+            "  Zeile 1 = Benutzername, Zeile 2 = Passwort eintragen und speichern.")
     return zeilen[0], zeilen[1]
 
 
