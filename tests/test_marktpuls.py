@@ -269,8 +269,14 @@ def test_erzeugte_datei_haelt_den_vertrag():
         if f["typ"] in ("flach", "keine_daten"):
             continue
         sp = f["spanne"]
-        assert sp[0] * sp[1] > 0, (key, "Spanne wechselt das Vorzeichen, der Satz behauptet "
-                                        "aber dieselbe Seite")
+        # STRADDLE, nicht Beruehrung. Die Bedingung soll verhindern, dass der Satz „Januar
+        # liegt tief" ueber einer Spanne steht, die von −20 % bis +30 % reicht. Ein Endpunkt
+        # von exakt 0,0 ist aber kein Vorzeichenwechsel: DE|medizin lag in 21 von 22 Jahren
+        # im Januar unter dem Schnitt, Spanne −56,5 % bis 0,0 % — ein Jahr traf die Null
+        # (auf eine Stelle gerundet). Mit `> 0` schlug der Test genau dort fehl, wo der
+        # Befund am stabilsten ist.
+        assert sp[0] * sp[1] >= 0, (key, "Spanne wechselt das Vorzeichen, der Satz behauptet "
+                                         "aber dieselbe Seite")
         assert (f["pct"] > 0) == (sp[0] > 0), (key, "Befund zeigt in die andere Richtung als "
                                                     "sein eigener Beleg")
         assert (f["typ"] == "tief") == (f["pct"] < 0), (key, "typ passt nicht zum Wert")

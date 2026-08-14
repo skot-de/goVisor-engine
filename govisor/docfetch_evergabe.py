@@ -228,14 +228,25 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
         ORDER BY deadline_date ASC
     """).fetchall()
 
-    offen = []
+    # Mehrere Leads koennen auf DIESELBE Vergabe zeigen (gemessen: 845 Leads → 795 Vergaben,
+    # also 44 doppelte). Jede davon zweimal zu holen ist nicht nur Verschwendung, sondern
+    # zaehlt auf das Drossel-Konto der WAF ein — und die sperrt nach ~10 Vorgaengen. Deshalb
+    # einmal holen, dann in die uebrigen Lead-Verzeichnisse kopieren: `docpipe` liest je
+    # Lead-Verzeichnis, also braucht jeder Lead seine eigene Kopie.
+    offen, geschwister = [], {}
+    gesehen: dict[str, str] = {}
     for lead_id, url in rows:
         seite = unterlagen_url(url)
         if not seite:
             continue
         ziel = out_root / lead_id / f"Vergabeunterlagen_evergabe_{seite.rsplit('/', 1)[-1]}.zip"
         if ziel.exists() and ziel.stat().st_size > 0:
+            gesehen[seite] = lead_id
             continue                                     # idempotent
+        if seite in gesehen:
+            geschwister.setdefault(seite, []).append(ziel)
+            continue
+        gesehen[seite] = lead_id
         offen.append((lead_id, seite, ziel))
     if limit:
         offen = offen[:limit]
@@ -325,6 +336,21 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
             pg.wait_for_timeout(_HOEFLICH_MS)
         ctx.close()
         b.close()
+
+    # Die Geschwister-Leads bedienen: dieselbe Vergabe, eigene Kopie, kein zweiter Abruf.
+    kopiert = 0
+    for seite, ziele in geschwister.items():
+        quelle = out_root / gesehen[seite] / f"Vergabeunterlagen_evergabe_{seite.rsplit('/', 1)[-1]}.zip"
+        if not quelle.exists():
+            continue
+        for z in ziele:
+            if z.exists():
+                continue
+            z.parent.mkdir(parents=True, exist_ok=True)
+            z.write_bytes(quelle.read_bytes())
+            kopiert += 1
+    if kopiert:
+        print(f"  {kopiert} Kopien für Leads auf derselben Vergabe (kein zweiter Abruf)")
 
     ok = sum(1 for s in saetze if s["status"] == "downloaded")
     mb = sum(s["bytes"] for s in saetze) / 1e6
