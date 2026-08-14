@@ -640,20 +640,30 @@ def test_healyhudson_kennt_alle_sechzehn_laender():
     assert sorted(k for k, _ in H.LAENDER.values()) == [f"{i:02d}" for i in range(1, 17)]
 
 
-def test_healyhudson_zerlegt_eine_trefferzeile_und_raet_nichts():
-    """Titel, Verfahrensart und Vergabestelle stehen in der Zeile nur durch Leerraum
-    getrennt — eine sichere Aufteilung ist daraus NICHT möglich. Sie bleibt deshalb
-    ungetrennt in `beschreibung`. Ein falsch aufgeteilter Titel wäre schlimmer als ein
-    ungeteilter: die Dubletten-Firewall vergleicht Titel."""
+def test_healyhudson_liest_zellen_und_gewinnt_damit_die_vergabestelle():
+    """Dieser Test stand einmal auf dem Kopf — er sicherte meinen eigenen Fehler ab.
+
+    Erste Fassung las `tr.innerText` und bekam Titel, Verfahrensart und Vergabestelle als
+    EINEN String; zwischen ihnen steht nur Leerraum. Ich schloss daraus, die Trennung sei
+    „nicht sicher möglich", liess das Feld ungetrennt und nagelte das mit
+    `assert "titel" not in s` fest — eine selbstgemachte Lage, zur Regel erhoben.
+
+    Die Quelle ist eine HTML-TABELLE mit sauberen Spalten. Wer die Zellen einzeln liest,
+    bekommt die Vergabestelle geschenkt — und ohne Käufer gäbe es keinen brauchbaren Lead.
+    Geprüft wird deshalb jetzt, dass Titel UND Vergabestelle getrennt herauskommen.
+    """
     H = _hh()
-    s = H.zerlege("VOB Erweiterung Grundschule Simbach - Estrich Offenes Verfahren "
-                  "Stadt Simbach a. Inn 21.07.2026 25.08.2026", "BY")
-    assert s["vergabeart"] == "VOB"
+    zellen = ["", "VOB", "Erweiterung Grundschule Simbach - Estrich",
+              "Stadt Simbach a. Inn", "21.07.2026", "25.08.2026", ""]
+    s = H.zerlege(zellen, "BY")
+    assert s["titel"] == "Erweiterung Grundschule Simbach - Estrich"
+    assert s["vergabestelle"] == "Stadt Simbach a. Inn", "ohne Käufer kein Lead"
+    assert s["verordnung"] == "VOB"
     assert s["pub"] == "21.07.2026" and s["frist"] == "25.08.2026"
-    assert "Simbach" in s["beschreibung"]
-    assert "titel" not in s, "die Zeile gibt keinen sauberen Titel her — nicht so tun als ob"
-    assert H.zerlege("Anzahl: 395", "BY") is None
-    assert H.zerlege("VORDN. TITEL VERGABESTELLE PUBLIKATION FRIST", "BY") is None
+    # Kopf-, Fuss- und Platzhalterzeilen muessen ausfallen — die Liste liefert davon reichlich.
+    assert H.zerlege(["", "VORDN.", "TITEL", "VERGABESTELLE", "PUBLIKATION", "FRIST", ""], "BY") is None
+    assert H.zerlege(["", "", "", "", "", "", ""], "BY") is None
+    assert H.zerlege(["zu", "wenig"], "BY") is None
 
 
 def test_healyhudson_meldet_unvollstaendigkeit_statt_sie_zu_verschweigen():
