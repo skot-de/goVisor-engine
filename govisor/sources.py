@@ -37,6 +37,7 @@ CONNECTORS = {
     "ocds-json":    "OCDS-JSON-API (Open Contracting Data Standard 1.1) — UK Find-a-Tender/Contracts-Finder",
     "decp-bulk":    "DECP konsolidiert Parquet/CSV (data.gouv.fr) — Frankreich unterschwellig, tägl.",
     "netserver-html": "NetServer (Administration Intelligence) öffentliche Trefferliste — 4 DE-Landesportale, nur Bekanntmachungen (Unterlagen hinter Anmeldung)",
+    "cosinex-html": "cosinex VMP Auftragsgegenstand-Überblick (server-gerendert) — DE-Landesportale NRW/RLP/BB, Bekanntmachungen MIT CPV-Division",
 }
 
 # --- Status einer Quelle ---------------------------------------------------------------------
@@ -111,6 +112,23 @@ REGISTRY: list[Source] = [
                    "Portale; Mehrwert liegt im unterschwelligen Anteil. UNTERLAGEN NICHT "
                    "abgreifbar: Detailseite hinter Anmeldung",
            url="https://vergabe.bremen.de/NetServer/"),
+
+    # --- PREPARED (Connector gebaut, wartet auf den ersten regulären Lauf) ---
+    # cosinex-Landesportale. Der Connector geht NICHT über die (clientseitige) Suchmaske,
+    # sondern über den server-gerenderten Auftragsgegenstand-Überblick — deshalb `requests`
+    # statt Playwright, und deshalb mit ECHTEM CPV (Division) für jede Vergabeordnung.
+    Source("cosinex-de", "cosinex-Landesportale (NRW/RLP/BB)", "cosinex-html", "DE",
+           "beides", "prepared", portals=3,
+           coverage="NRW 6.867 · Brandenburg 2.310 · RLP 625 Bekanntmachungen im Portal "
+                    "(Archiv). Trefferzeile: Veröffentlichung + Frist MIT UHRZEIT, Titel, "
+                    "Vergabeordnung, Typ, Vergabestelle, CPV-Division. Unterlagen NICHT "
+                    "abgreifbar (Projektraum verlangt Teilnahme)",
+           overlap="gemessen 2026-08-14 an 6.520 Bekanntmachungen ab 2023 (Firewall-Regeln): "
+                   "23,5 % der prüfbaren neu (NRW 19 %, BB 26 %, RLP 48 %), 972 unprüfbar "
+                   "(Titel zu kurz). Offene Vorgänge: 2.064, davon 322 belegt neu. Die "
+                   "Dubletten deckt überwiegend TED-eForms (2.796), dann DÖE (1.038) und "
+                   "DTVP (377 — dieselben Vergaben stehen doppelt in der cosinex-Familie)",
+           url="https://www.evergabe.nrw.de/VMPCenter"),
 
     # --- PREPARED (Brücke fertig, wartet auf Voll-Ingest / Speicher) ---
     Source("ted-at", "TED Österreich", "ted-bulk", "AT", "oberschwellig", "prepared",

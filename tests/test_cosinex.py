@@ -231,9 +231,26 @@ def test_notice_kind_deckt_alle_typen_der_trefferliste(_bronze):
              "Beabsichtigte Ausschreibung": "pin", "Vergebener Auftrag": "can"}
     schreibe([_satz(pid=str(i), key=f"rp:{i}", typ=t)
               for i, t in enumerate(typen, start=10)])
-    cosinex.nach_silber("DE")
+    cosinex.nach_silber("DE", arten=("cn", "pin", "can"))
     n = _lies(tmp_path, "notices")
     assert sorted(n.notice_kind) == sorted(typen.values())
+
+
+def test_zuschlaege_bleiben_standardmaessig_in_bronze(_bronze, capsys):
+    """`gold.build_quality` stempelt JEDEN `can` ohne Award-Zeilen als ``erfolglos``.
+    Eine cosinex-Trefferzeile trägt keinen Gewinner — jeder „Vergebener Auftrag" von hier
+    würde also als erfolglose Ausschreibung gezählt und die Schwäche-Achse von
+    `market_opportunity`/`retender_signal` verfälschen. Bei NetServer passiert das bereits
+    (390 Zuschläge stehen als `erfolglos`). Bronze behält sie trotzdem — verworfen wird
+    nichts, nur nicht stillschweigend weitergereicht."""
+    tmp_path, schreibe = _bronze
+    schreibe([_satz(pid="1", key="rp:1", typ="Ausschreibung"),
+              _satz(pid="2", key="rp:2", typ="Vergebener Auftrag")])
+    cosinex.nach_silber("DE")
+    n = _lies(tmp_path, "notices")
+    assert list(n.notice_kind) == ["cn"]
+    # und es steht sichtbar im Lauf, statt lautlos zu verschwinden
+    assert "NICHT in Silber" in capsys.readouterr().out
 
 
 def test_bronze_ist_idempotent(_bronze):
@@ -244,3 +261,28 @@ def test_bronze_ist_idempotent(_bronze):
     zeilen = (tmp_path / "data" / "raw_cosinex" / "DE" / "2026-07.jsonl").read_text().strip()
     assert len(zeilen.splitlines()) == 1
     assert cosinex.bekannte_keys("DE") == {"rp:59717"}
+
+
+def test_parser_fix_heilt_aus_bronze_ohne_erneuten_abruf(_bronze):
+    """Bronze bewahrt die ROHEN Zellen. Deshalb deutet `nach_silber` sie neu, statt den
+    beim Abruf geschriebenen Feldern zu glauben — ein Parser-Fix kostet hier einen
+    Re-Run über lokale Dateien, keinen erneuten Abruf beim Portal. (Bei NetServer geht
+    genau das nicht: dort speichert Bronze nur das Geparste, weshalb ein Fix dort
+    `--neu-einlesen` und damit neue Last beim fremden System verlangt.)"""
+    tmp_path, schreibe = _bronze
+    zellen = [
+        "<abbr title='26.07.2026 um 10:50 Uhr'>26.07.2026 </abbr>",
+        "<abbr title='25.08.2026 um 10:00 Uhr'>25.08.2026 </abbr>",
+        "Munitionsdepot Kriegsfeld",
+        "VSVgV<br /><abbr title='Teilnahmewettbewerb'>TNW</abbr>",
+        "LBB Kaiserslautern",
+    ]
+    # Absichtlich falsch geschriebene Felder aus einem alten Parser-Stand.
+    schreibe([_satz(zellen=zellen, titel="KAPUTT", vo="VSVgVTNW", typ=None,
+                    frist=None)])
+    cosinex.nach_silber("DE")
+    r = _lies(tmp_path, "notices").iloc[0]
+    assert r.title == "Munitionsdepot Kriegsfeld"
+    assert str(r.submission_deadline).startswith("2026-08-25 10:00")
+    a = _lies(tmp_path, "attributes")
+    assert "VSVgV" in set(a[a.path == "cosinex/vergabeordnung"].value)

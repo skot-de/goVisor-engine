@@ -1315,6 +1315,10 @@ def _load_entity_aliases(cfg: Config, country: str, entity_of: dict) -> dict:
     Einzelfälle (Umbenennung, Fragment) — kein Namensstamm-Automatismus.
     Gibt ``{alias_entity_id: canonical_entity_id}`` zurück.
     """
+    # Repo-Pfad zuerst: `data/` ist ein Symlink auf die externe Platte und damit NICHT
+    # versioniert. Diese Datei traegt recherchierte Handarbeit (die DB-Netz/InfraGO-Zeile
+    # kostete eine HRB-Recherche) und gehoert deshalb ins Repo. Der alte Pfad bleibt als
+    # Rueckfallebene, damit bestehende Installationen weiterlaufen.
     import csv
     from . import entities as ent
 

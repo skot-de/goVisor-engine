@@ -98,6 +98,18 @@ def unterlagen_url(url: str | None) -> str | None:
     return f"https://{_HOST}/unterlagen/{kennung}"
 
 
+# ZWEI Knopf-Formen, und die eine hat mich fuenf Vergaben gekostet:
+#
+#     /unterlagen/<zahl>/download/<zahl>?award_procedure_id=…      (aeltere Vorgaenge)
+#     /unterlagen/<uuid>/download-url/<uuid>?award_procedure_id=…  (neuere)
+#
+# Ein Selektor auf `/download/` trifft die zweite NICHT — dort steht `/download-`. Die
+# Seite sah dabei voellig normal aus: Ueberschrift da, Tabelle da, „Datei herunterladen"
+# als Text da, nur eben null Treffer. Gemeldet wurde „keine Dateien gelistet" fuer
+# Vergaben mit 20 Dateien. Deshalb ohne abschliessenden Schraegstrich.
+_DL_SELEKTOR = 'a[href*="/download"]'
+
+
 def _dateiliste(pg) -> list[dict]:
     """Sichtbare Tabelle → [{href, name}]. Der Dateiname ist die Zelle MIT Endung.
 
@@ -105,7 +117,7 @@ def _dateiliste(pg) -> list[dict]:
     Laengen-Kriterium den Zeitstempel fuer den Titel hielt. Hier entscheidet die Endung.
     """
     return pg.evaluate(
-        """() => [...document.querySelectorAll('a[href*="/download/"]')].map(a => {
+        """() => [...document.querySelectorAll('a[href*="/download"]')].map(a => {
             const tr = a.closest('tr');
             const zellen = tr ? [...tr.querySelectorAll('td')].map(t => t.innerText.trim()) : [];
             const name = zellen.find(z => /\\.[A-Za-z0-9]{1,5}$/.test(z)) || '';
@@ -135,8 +147,26 @@ def hole_vergabe(seite: str, pg, tmp: Path) -> dict:
     if r is not None and r.status in _GESPERRT:
         return {"dateien": [], "uebersprungen": [], "gelistet": 0,
                 "http": r.status, "rumpf": ""}
+
+    # DIE ZUSTELLWEG-WEICHE. evergabe.de stellt zwei Wege nebeneinander: „Jetzt am
+    # Vergabeverfahren teilnehmen" (Auftraggeber wird informiert, Anmeldung) und
+    # „Vergabeunterlagen ansehen" (anonym, § 41 VgV). Die Deeplink-Form
+    # `/unterlagen/54321-Tender-<hex>` landet AUF dieser Weiche und leitet NICHT weiter —
+    # die Seite sieht mit Titel, Vergabenummer und Frist wie die richtige aus, traegt aber
+    # keine einzige Datei. Genau daran scheiterten alle TED-Leads, waehrend die DÖE-Leads
+    # (andere URL-Form) durchliefen. Also: den anonymen Weg klicken, nicht raten.
+    weiche = pg.query_selector(
+        "xpath=//a[contains(normalize-space(.), 'Vergabeunterlagen ansehen')]")
+    if weiche is not None:
+        ziel_url = weiche.get_attribute("href") or ""
+        if ziel_url:
+            r = pg.goto(f"https://{_HOST}{ziel_url}" if ziel_url.startswith("/") else ziel_url,
+                        wait_until="domcontentloaded")
+            if r is not None and r.status in _GESPERRT:
+                return {"dateien": [], "uebersprungen": [], "gelistet": 0,
+                        "http": r.status, "rumpf": ""}
     try:
-        pg.wait_for_selector("a[href*='/download/']", timeout=_WARTE_MS)
+        pg.wait_for_selector(_DL_SELEKTOR, timeout=_WARTE_MS)
     except Exception:                                    # noqa: BLE001
         pg.wait_for_timeout(_WARTE_MS)                   # manche Vergaben haben (noch) keine
     eintraege = _dateiliste(pg)

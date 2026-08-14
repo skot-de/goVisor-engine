@@ -2,6 +2,7 @@
 create table if not exists gov_leads (
   lead_id                  text not null,
   slug                     text unique,
+  country                  text,
   title                    text,
   description              text,
   description_length       bigint,
@@ -29,7 +30,11 @@ create table if not exists gov_leads (
   days_to_deadline         bigint,
   months_to_expiry         bigint,
   contract_end             date,
+  contract_end_expected    date,
+  cal_offset_days          integer,
+  cal_spread_days          integer,
   days_to_expiry           bigint,
+  procedure_kind           text,
   due_basis                text,
   timing_implausible       boolean,
   timing_source            text,
@@ -54,6 +59,10 @@ create table if not exists gov_leads (
   buyer_type               text,
   buyer_activity           text,
   documents_url            text,
+  documents_source         text,
+  has_documents            boolean,
+  documents_paid           boolean,
+  documents_languages      text,
   is_nationwide            boolean,
   guarantee_required       integer,
   variants_allowed         integer,
@@ -70,6 +79,7 @@ create table if not exists gov_leads (
 -- Migration bestehender Tabellen (idempotent, neue Spalten nachziehen):
 alter table gov_leads add column if not exists lead_id text;
 alter table gov_leads add column if not exists slug text;
+alter table gov_leads add column if not exists country text;
 alter table gov_leads add column if not exists title text;
 alter table gov_leads add column if not exists description text;
 alter table gov_leads add column if not exists description_length bigint;
@@ -97,7 +107,11 @@ alter table gov_leads add column if not exists deadline_date date;
 alter table gov_leads add column if not exists days_to_deadline bigint;
 alter table gov_leads add column if not exists months_to_expiry bigint;
 alter table gov_leads add column if not exists contract_end date;
+alter table gov_leads add column if not exists contract_end_expected date;
+alter table gov_leads add column if not exists cal_offset_days integer;
+alter table gov_leads add column if not exists cal_spread_days integer;
 alter table gov_leads add column if not exists days_to_expiry bigint;
+alter table gov_leads add column if not exists procedure_kind text;
 alter table gov_leads add column if not exists due_basis text;
 alter table gov_leads add column if not exists timing_implausible boolean;
 alter table gov_leads add column if not exists timing_source text;
@@ -122,6 +136,10 @@ alter table gov_leads add column if not exists regulatory_regime text;
 alter table gov_leads add column if not exists buyer_type text;
 alter table gov_leads add column if not exists buyer_activity text;
 alter table gov_leads add column if not exists documents_url text;
+alter table gov_leads add column if not exists documents_source text;
+alter table gov_leads add column if not exists has_documents boolean;
+alter table gov_leads add column if not exists documents_paid boolean;
+alter table gov_leads add column if not exists documents_languages text;
 alter table gov_leads add column if not exists is_nationwide boolean;
 alter table gov_leads add column if not exists guarantee_required integer;
 alter table gov_leads add column if not exists variants_allowed integer;

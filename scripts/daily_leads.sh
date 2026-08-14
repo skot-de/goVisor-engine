@@ -560,5 +560,45 @@ if [ -n "$_SCHRITT_NAME" ]; then
   printf '  ⏱ %s — %ds\n' "$_SCHRITT_NAME" "$(( SECONDS - _SCHRITT_START ))"
 fi
 
+# ── ALTERSBERICHT ────────────────────────────────────────────────────────────────────────
+#
+# WARUM. Am 2026-08-14 lief der Tageslauf formal durch — jeder Schritt gruen — und die
+# Anforderungs-Signale entstanden trotzdem aus einem Volltext-Index vom 31. JULI. Zwei
+# Wochen alt, und niemand konnte es sehen: „Schritt erfolgreich" heisst nur, dass das
+# Programm nicht abgestuerzt ist, nicht dass sein Ergebnis frisch ist.
+#
+# Ein Schritt kann aus drei Gruenden nichts Neues erzeugen und trotzdem gruen melden: die
+# Quelle lieferte nichts, er wurde uebersprungen (Lock, Zeitbudget), oder er fiel weich aus
+# (`|| echo`). In allen drei Faellen ist das Datum der Datei die einzige ehrliche Auskunft.
+#
+# Bewusst NUR eine Warnung, kein Abbruch: ein veralteter Baustein ist ein Grund
+# hinzusehen, keiner den Lauf wegzuwerfen — der Rest der Kette ist ja in Ordnung.
+alter_tage() {
+  [ -e "$1" ] || { echo "-"; return; }
+  echo $(( ( $(date +%s) - $(stat -f %m "$1" 2>/dev/null || echo 0) ) / 86400 ))
+}
+echo ""
+echo "── Altersbericht (Tage seit letzter Aenderung)"
+_ALT=0
+for eintrag in \
+  "data/gold/DE/lead_export.parquet:1:Leads (Frontend-Quelle)" \
+  "data/gold/DE/notice_duplicates.parquet:2:Dubletten-Firewall" \
+  "data/docs/DE/doc_text.parquet:7:Volltext-Index der Unterlagen" \
+  "data/gold/DE/doc_signals.parquet:7:Anforderungs-Signale" \
+  "web/data/leads-bau.json:1:Frontend-Daten" \
+  "web/data/marktpuls.json:2:Marktpuls"
+do
+  _d="${eintrag%%:*}"; _rest="${eintrag#*:}"; _max="${_rest%%:*}"; _name="${_rest#*:}"
+  _t="$(alter_tage "$ROOT/$_d")"
+  if [ "$_t" = "-" ]; then
+    printf '  ⚠ %-32s FEHLT\n' "$_name"; _ALT=1
+  elif [ "$_t" -gt "$_max" ]; then
+    printf '  ⚠ %-32s %s Tage alt (erwartet <= %s)\n' "$_name" "$_t" "$_max"; _ALT=1
+  else
+    printf '  ✓ %-32s %s Tage\n' "$_name" "$_t"
+  fi
+done
+[ "$_ALT" = "1" ] && echo "  → Ein Baustein ist aelter als erwartet. Gruener Lauf heisst NICHT frische Daten."
+
 # Alte Logs aufräumen (>30 Tage)
 find "$LOG_DIR" -name 'daily-*.log' -type f -mtime +30 -delete 2>/dev/null || true

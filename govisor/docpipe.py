@@ -16,6 +16,7 @@ Robust: Fehler je Datei werden gefangen (eine kaputte PDF kippt nicht den Lauf).
 from __future__ import annotations
 
 import io
+import os
 import re
 import zipfile
 from pathlib import Path
@@ -165,6 +166,25 @@ def process_zip(path: Path) -> list[dict]:
 # der Arbeiter selbst kann sich unterbrechen.
 ZEIT_JE_ARCHIV = 120
 
+# GROESSEN-SPERRE. `process_zip` liest das Archiv KOMPLETT in den Speicher und entpackt
+# verschachtelte ZIPs mit hinein — aus 200 MB auf der Platte wird ein Vielfaches im RAM.
+#
+# Gemessen 2026-08-14, nachdem der Rechner ZWEIMAL abgestuerzt war: ein einzelner Arbeiter
+# hielt 1,95 GB; das groesste Archiv (636 MB) lief mit EINEM Arbeiter ueber zehn Minuten
+# ohne Ergebnis. Bei vier Arbeitern sind das im schlechtesten Fall acht GB gleichzeitig auf
+# einer 16-GB-Maschine — der Weg in den Swap und in den Absturz.
+#
+# Die Verteilung macht die Entscheidung leicht:
+#   bis  50 MB   2.743 Archive (84,5 %) =  28,6 GB
+#   darueber       504 Archive (15,5 %) =  67,5 GB   ← 70 % des Volumens
+# Fuenf von sechs Ausschreibungen fuer weniger als ein Drittel des Aufwands.
+#
+# ⚠ MARKIERT, NICHT VERWORFEN. Ein zu grosses Archiv bekommt eine Zeile mit
+# `status='zu_gross'` und ist damit zaehlbar — die Projektregel „markieren statt filtern".
+# Wer die 504 will, hebt die Schwelle oder baut `process_zip` auf stroemendes Entpacken um
+# (eigenes Ticket; das ist der saubere Weg, aber der teure).
+MAX_ARCHIV_MB = int(os.environ.get("GOVISOR_MAX_ARCHIV_MB", "50"))
+
 
 def _verarbeite_archiv(auftrag):
     """Ein Archiv → Zeilen. Muss auf Modulebene stehen, damit der Pool sie versenden kann.
@@ -179,6 +199,14 @@ def _verarbeite_archiv(auftrag):
 
     def _wecker(signum, frame):
         raise TimeoutError(f"{ZEIT_JE_ARCHIV}s ueberschritten")
+
+    try:
+        mb = zp.stat().st_size / 1e6
+    except OSError:
+        mb = 0
+    if MAX_ARCHIV_MB and mb > MAX_ARCHIV_MB:
+        return [{"notice_id": notice_id, "archive": zp.name, "file": "", "filetype": "",
+                 "n_chars": 0, "status": "zu_gross", "text": ""}]
 
     alt = None
     try:
@@ -335,7 +363,12 @@ def build_index(cfg: Config, country: str = "DE", neu_aufbauen: bool = False,
             puffer.clear()
 
     status_counts: dict[str, int] = {}
-    arbeiter = max(1, min(mp.cpu_count() - 2, 8))
+    # ARBEITERZAHL. Jeder Arbeiter haelt EIN entpacktes Archiv im Speicher — bei den 484
+    # Brocken ueber 50 MB sind acht davon mehrere GB gleichzeitig. Auf einer 16-GB-Maschine
+    # koennen VIER Arbeiter schneller sein als acht, weil sie nicht in den Swap laufen.
+    # Deshalb einstellbar statt fest verdrahtet.
+    arbeiter = int(os.environ.get("GOVISOR_INDEX_ARBEITER", "0")) or max(
+        1, min(mp.cpu_count() - 2, 8))
     print(f"docpipe {country}: {len(auftraege)} Archive aus {n_notices} Vorgaengen, "
           f"{arbeiter} Arbeiter, {ZEIT_JE_ARCHIV}s je Archiv", flush=True)
 

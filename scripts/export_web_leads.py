@@ -79,6 +79,63 @@ ATTR = "read_parquet('data/silver/DE/attributes/*/*.parquet', hive_partitioning=
 MO = f"read_parquet('{G}/market_opportunity.parquet')"
 CS = f"read_parquet('{G}/contractor_stats.parquet')"
 EI = f"read_parquet('{G}/entity_identity.parquet')"
+# HINWEIS-FELDER (s. web/lib/hinweise.ts). Zwei Dinge, die das Frontend braucht und die
+# nirgends sonst zusammenkommen:
+#
+#   PORTALE   auf wie vielen Plattformen dieselbe Vergabe steht. Aus der Dubletten-Firewall,
+#             nur die staerkste Belegstufe — schwaechere Stufen sind bei generischen Titeln
+#             Rauschen (18.089 `ojs ← text`-Paare in DE sind gleichnamige CPV-Bezeichnungen,
+#             keine Dubletten).
+#   FRIST_PUB die VEROEFFENTLICHTE Frist aus Silber. Ohne sie kann der Hinweis „Frist
+#             verlaengert" nicht sagen, WELCHES Datum vorher galt — und genau das ist bei
+#             diesem Hinweis die eigentliche Information, nicht das Label.
+# schema_gen → PORTAL. Die Probe zeigte `['eforms','legacy']` als „zwei Portale" — das ist
+# aber dasselbe TED-Archiv in zwei Formatgenerationen, kein zweiter Anbieter. Ohne diese
+# Abbildung feuerte der Hinweis „Auf mehreren Portalen" bei 81.043 Leads falsch.
+_PORTAL_NAME = {
+    "eforms": "TED", "legacy": "TED", "ojs": "TED", "text": "TED",
+    "doe": "Deutsches Ausschreibungsblatt", "dtvp": "DTVP",
+    "netserver": "Landesportal", "simap": "simap.ch", "atverg": "OffeneVergaben.at",
+}
+
+
+def _portal_case(spalte: str) -> str:
+    faelle = " ".join(f"WHEN '{k}' THEN '{v}'" for k, v in _PORTAL_NAME.items())
+    return f"CASE {spalte} {faelle} ELSE {spalte} END"
+
+
+def _quellen_je_lead() -> str:
+    import glob as _g
+    dups, teile = [], []
+    for land in ("DE", "AT", "CH"):
+        d = pathlib.Path(f"data/gold/{land}/notice_duplicates.parquet")
+        if d.exists():
+            dups.append(d.as_posix())
+    if not dups:
+        return "(SELECT NULL::VARCHAR notice_id, NULL::VARCHAR[] portale WHERE false)"
+    return f"""(
+      SELECT ziel AS notice_id, list_sort(list_distinct(list(q))) AS portale FROM (
+        SELECT master_id AS ziel, {_portal_case('master_quelle')} AS q
+          FROM read_parquet({dups!r}) WHERE beleg='kaeufer_und_titel'
+        UNION ALL
+        SELECT master_id, {_portal_case('duplicate_quelle')}
+          FROM read_parquet({dups!r}) WHERE beleg='kaeufer_und_titel')
+      GROUP BY ziel HAVING count(DISTINCT q) > 1)"""
+
+
+def _frist_veroeffentlicht() -> str:
+    import glob as _g
+    g = []
+    for land in ("DE", "AT", "CH"):
+        g += _g.glob(f"data/silver/{land}/notices/**/*.parquet", recursive=True)
+    if not g:
+        return "(SELECT NULL::VARCHAR notice_id, NULL::DATE frist_pub WHERE false)"
+    return (f"(SELECT notice_id, CAST(submission_deadline AS DATE) AS frist_pub "
+            f"FROM read_parquet({g!r}) WHERE submission_deadline IS NOT NULL)")
+
+
+PORTALE = _quellen_je_lead()
+FRISTPUB = _frist_veroeffentlicht()
 DL = _union("lead_deadline", key="notice_id")                        # Angebotsfrist-Herkunft (#16), DE+CH
 LG = _union("lead_geo", key="lead_id")                              # Koordinate je Lead (echter km-Radius), DE+CH
 PLZ = f"read_parquet('{G}/dim_plz.parquet')"        # PLZ→Zentroid für die PLZ-Umkreissuche
@@ -450,6 +507,9 @@ def export_branche(key):
         WITH mapped AS (
           SELECT e.*, cl.label AS cpv_label, cl.label_en AS cpv_label_en, cl.label_fr AS cpv_label_fr, {BRANCHE} AS ui_branche,
                  dl.deadline_source AS frist_source,
+                 dl.deadline_date   AS frist_aktuell,
+                 fp.frist_pub       AS frist_veroeffentlicht,
+                 pt.portale         AS portale,
                  lg.lat AS geo_lat, lg.lon AS geo_lon,
                  lp.incumbent_name AS pred_incumbent, lp.n_bidders AS pred_bidders,
                  lp.competition_level AS pred_konk, lp.chain_depth AS pred_chain,
@@ -461,6 +521,8 @@ def export_branche(key):
           LEFT JOIN {DC} b ON b.division = substr(e.cpv_code, 1, 2)
           LEFT JOIN {CL} cl ON cl.cpv_code = e.cpv_code
           LEFT JOIN {DL} dl ON dl.notice_id = e.lead_id
+          LEFT JOIN {PORTALE} pt ON pt.notice_id = e.lead_id
+          LEFT JOIN {FRISTPUB} fp ON fp.notice_id = e.lead_id
           LEFT JOIN {LG} lg ON lg.lead_id = e.lead_id
           LEFT JOIN {LP} lp ON lp.lead_id = e.lead_id
           LEFT JOIN {DS} ds ON ds.notice_id = e.lead_id

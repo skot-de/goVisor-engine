@@ -68,6 +68,14 @@ statt stillschweigend tun, und markieren statt stillschweigend lassen.
 keine sperrende robots.txt; Hessen ``vergabe.hessen.de`` dagegen verbietet ausdrücklich
 ``/NetServer/PublicationSearchControllerServlet?`` — deshalb ist Hessen hier NICHT drin.)
 
+⚠ **Zuschläge gehen standardmässig NICHT nach Silber** — Bronze behält sie vollständig.
+Grund: `gold.build_quality` stempelt jeden ``notice_kind='can'`` ohne Award-Zeilen als
+``verfahren_status='erfolglos'``, und eine cosinex-Trefferzeile trägt keinen Gewinner.
+Die Zuschläge (bei RLP gemessen: 150 von 247 Sätzen) würden also als *erfolglose*
+Ausschreibungen gezählt und die Schwäche-Achse von `market_opportunity`/`retender_signal`
+verfälschen. Ausführlich mit Messung bei `ARTEN_STANDARD`; freischalten mit
+``--arten cn,pin,can``, sobald `gold` einen Status für „Zuschlag ohne Details" kennt.
+
 **Bronze = eine Zeile je Bekanntmachung als JSONL**, ``data/raw_cosinex/DE/YYYY-MM.jsonl``,
 dedupliziert über ``<portal>:<pid>``. Wie bei TED/DÖE/simap/DTVP/NetServer liegt die
 Verlustfreiheit in Bronze: ein Parser-Fix kostet einen Re-Run über lokale Dateien, keinen
@@ -81,7 +89,7 @@ Aufruf::
 
     python3 -m govisor.cosinex --portale nw,rp --ab-jahr 2023 --silber
     python3 -m govisor.cosinex --portale bb --ignoriere-robots
-    python3 -m govisor.cosinex --nur-silber
+    python3 -m govisor.cosinex --nur-silber [--arten cn,pin,can]
 """
 from __future__ import annotations
 
@@ -176,6 +184,30 @@ def _stempel(zelle_html: str) -> str | None:
     return d.date().isoformat()
 
 
+def felder(zellen: list[str]) -> dict:
+    """Rohe Zellen-HTML → Felder. Die EINZIGE Stelle, die Zellen deutet.
+
+    Sie wird von zwei Seiten gerufen: beim Abruf (`zeilen_lesen`) und beim Bronze→Silber-
+    Lauf (`nach_silber`, über die in Bronze aufbewahrten Zellen). Genau das macht einen
+    Parser-Fix ohne erneuten Abruf wirksam — bei NetServer geht das nicht, weil Bronze
+    dort nur das Geparste speichert und ein Fix deshalb `--neu-einlesen` braucht.
+    """
+    # Vergabeordnung und Typ stehen in EINER Zelle, getrennt durch <br>:
+    #   `VSVgV<br /><abbr title="Teilnahmewettbewerb">TNW</abbr>`
+    # Zusammengelesen ergäbe das „VSVgVTNW" — genau die Art stiller Feldvermengung,
+    # die später niemand mehr auseinandersortiert.
+    teile = [_txt(x) for x in re.split(r"<br\s*/?>", zellen[3], flags=re.I)]
+    teile = [x for x in teile if x]
+    return {
+        "pub": _stempel(zellen[0]),
+        "frist": _stempel(zellen[1]),
+        "titel": _txt(zellen[2]),
+        "vo": teile[0] if teile else None,
+        "typ": teile[1] if len(teile) > 1 else None,
+        "stelle": _txt(zellen[4]) or None,
+    }
+
+
 def zeilen_lesen(seite: str) -> list[dict]:
     """Trefferzeilen einer ``showTable``-Seite auslesen.
 
@@ -190,31 +222,17 @@ def zeilen_lesen(seite: str) -> list[dict]:
         m = _PID.search(roh)
         if not m:
             continue
-        zellen = _ZELLE.findall(roh)
+        zellen = [re.sub(r"\s+", " ", z).strip() for z in _ZELLE.findall(roh)][:5]
         if len(zellen) < 5:
             continue
-        titel = _txt(zellen[2])
-        if not titel:
+        satz = felder(zellen)
+        if not satz["titel"]:
             continue
-        # Vergabeordnung und Typ stehen in EINER Zelle, getrennt durch <br>:
-        #   `VSVgV<br /><abbr title="Teilnahmewettbewerb">TNW</abbr>`
-        # Zusammengelesen ergäbe das „VSVgVTNW" — genau die Art stiller Feldvermengung,
-        # die später niemand mehr auseinandersortiert.
-        teile = [_txt(x) for x in re.split(r"<br\s*/?>", zellen[3], flags=re.I)]
-        teile = [x for x in teile if x]
-        aus.append({
-            "pid": m.group(1),
-            "pub": _stempel(zellen[0]),
-            "frist": _stempel(zellen[1]),
-            "titel": titel,
-            "vo": teile[0] if teile else None,
-            "typ": teile[1] if len(teile) > 1 else None,
-            "stelle": _txt(zellen[4]) or None,
-            # Rohzellen mitführen: DAS macht den Bronze-Re-Run wirksam. Bei NetServer
-            # speichert Bronze nur das Geparste, weshalb dort ein Parser-Fix einen
-            # erneuten ABRUF verlangt (`--neu-einlesen`). Hier nicht.
-            "zellen": [_txt(z) for z in zellen[:5]],
-        })
+        # Die ROHEN Zellen (HTML, nur Leerraum normalisiert) wandern nach Bronze. Der
+        # sichtbare Text allein verlöre die Uhrzeiten — die stehen im `abbr title` — und
+        # damit wäre Bronze eben nicht verlustfrei.
+        satz.update(pid=m.group(1), zellen=zellen)
+        aus.append(satz)
     return aus
 
 
@@ -370,11 +388,33 @@ def _iso(s: str | None):
         return None
 
 
-def nach_silber(country: str = "DE") -> dict:
+#: Welche Arten in Silber landen. **Bronze hält immer ALLES** — hier wird nur entschieden,
+#: was weitergereicht wird, und die Entscheidung ist begründet und umkehrbar.
+#:
+#: ⚠ Warum `can` NICHT im Standard steht — gemessen, nicht vermutet. `gold.build_quality`
+#: setzt ``verfahren_status='erfolglos'`` für **jeden** ``notice_kind='can'`` ohne
+#: Award-Zeilen. Eine cosinex-Trefferzeile trägt aber weder Gewinner noch Wert; jeder
+#: „Vergebener Auftrag" von hier würde also als *erfolglose Ausschreibung* gezählt — und
+#: das ist keine Randnotiz, sondern speist `market_opportunity` (Schwäche-Achse) und
+#: `retender_signal` (chronische Bedarfe). Bei NetServer passiert genau das bereits:
+#: **390 seiner Zuschläge stehen heute als `erfolglos` in `quality.parquet`** (gemessen
+#: 2026-08-14; von 147.673 insgesamt). Der Anteil ist klein, der Mechanismus aber falsch,
+#: und er wächst mit jeder Quelle, die Zuschläge ohne Gewinnerangabe liefert.
+#:
+#: Das gehört in `gold` gelöst (ein Status wie „zuschlag_ohne_details" für Quellen, die
+#: keine Gewinner führen) — `gold.py` ist hier aber ausdrücklich nicht anzufassen. Bis
+#: dahin: Zuschläge liegen vollständig in Bronze, kommen aber nur mit ``--arten cn,pin,can``
+#: nach Silber. Kein Datenverlust, kein stilles Verfälschen einer KPI.
+ARTEN_STANDARD = ("cn", "pin")
+
+
+def nach_silber(country: str = "DE", arten: tuple[str, ...] = ARTEN_STANDARD) -> dict:
     """Bronze-JSONL → Silber-Parquet (notices, notice_parties, attributes).
 
     `notice_id` ist ``cx:<portal>:<pid>`` — der Präfix hält den Namensraum von TED-IDs
     getrennt (dieselbe Konvention wie DÖE `doe:`, DTVP `dtvp:` und NetServer `ns:`).
+
+    ``arten`` steuert, welche `notice_kind` weitergereicht werden (s. `ARTEN_STANDARD`).
     """
     import pyarrow as pa
     import pyarrow.parquet as pq
@@ -394,7 +434,17 @@ def nach_silber(country: str = "DE") -> dict:
         return {}
 
     notices, parties, attrs = [], [], []
+    zurueckgehalten: dict[str, int] = {}
     for r in saetze:
+        # Aus den in Bronze aufbewahrten ROHZELLEN neu deuten, wo sie da sind. Damit heilt
+        # ein Parser-Fix über die lokalen Dateien — ohne die Portale erneut zu behelligen.
+        # Fehlen sie (älterer Bronze-Stand), gelten die damals geschriebenen Felder.
+        if isinstance(r.get("zellen"), list) and len(r["zellen"]) >= 5:
+            r = {**r, **felder(r["zellen"])}
+        kind = _KIND.get((r.get("typ") or "").strip(), "cn")
+        if kind not in arten:
+            zurueckgehalten[kind] = zurueckgehalten.get(kind, 0) + 1
+            continue
         nid = f"cx:{r['portal']}:{r['pid']}"
         pub_dt = _iso(r.get("pub"))
         pub = pub_dt.date() if pub_dt else None
@@ -414,7 +464,7 @@ def nach_silber(country: str = "DE") -> dict:
             "year": platz.year if platz else None,
             "month": platz.month if platz else None,
             "schema_gen": "cosinex", "form_type": r.get("typ"),
-            "notice_kind": _KIND.get((r.get("typ") or "").strip(), "cn"),
+            "notice_kind": kind,
             "language": "de",                     # kleingeschrieben — Guard-Konvention
             "title": r.get("titel"), "description": None, "description_field": None,
             # ECHTE Portalangabe, keine Herleitung aus dem Regelwerk (s. Modulkopf).
@@ -481,6 +531,13 @@ def nach_silber(country: str = "DE") -> dict:
     print(f"cosinex Silber {country}: " + " · ".join(f"{k} {v:,}" for k, v in stat.items()))
     print(f"  cpv_main aus der Portalangabe: {mit_cpv:,} von {len(notices):,} "
           f"({100*mit_cpv/max(len(notices),1):.1f} %, Ebene Division)")
+    if zurueckgehalten:
+        # Sichtbar, nicht stillschweigend: was in Bronze liegt und nicht nach Silber ging.
+        z = " · ".join(f"{k} {v:,}" for k, v in sorted(zurueckgehalten.items()))
+        print(f"  in Bronze behalten, NICHT in Silber (--arten {','.join(arten)}): {z}")
+        if "can" in zurueckgehalten:
+            print("    → 'can' ohne Gewinnerangabe würde in gold.build_quality als "
+                  "'erfolglos' gezählt und die Schwäche-Achse verfälschen (s. ARTEN_STANDARD)")
     return stat
 
 
@@ -497,14 +554,18 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--ignoriere-robots", action="store_true",
                    help="auch Portale holen, deren robots.txt den Host sperrt "
                         "(derzeit: Brandenburg) — bewusste Entscheidung, kein Standard")
+    p.add_argument("--arten", default=",".join(ARTEN_STANDARD),
+                   help="welche notice_kind nach SILBER gehen (Bronze hält immer alles). "
+                        "Standard cn,pin — 'can' bewusst nicht, s. ARTEN_STANDARD")
     p.add_argument("--silber", action="store_true",
                    help="nach dem Abruf auch Bronze → Silber schreiben")
     p.add_argument("--nur-silber", action="store_true", help="kein Abruf, nur Bronze → Silber")
     p.add_argument("--dry-run", action="store_true", help="abrufen, nichts schreiben")
     a = p.parse_args(argv)
 
+    arten = tuple(x.strip() for x in a.arten.split(",") if x.strip())
     if a.nur_silber:
-        nach_silber()
+        nach_silber(arten=arten)
         return 0
 
     portale = [x.strip() for x in a.portale.split(",") if x.strip()]
@@ -528,7 +589,7 @@ def main(argv: list[str] | None = None) -> int:
             print(f"  {monat}: +{neu} → {gesamt}")
     if a.silber:
         print()
-        nach_silber()
+        nach_silber(arten=arten)
     return 0
 
 
