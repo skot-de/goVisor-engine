@@ -827,3 +827,36 @@ def test_netserver_tauscht_das_servlet_nicht_nur_den_parameter():
                          "PublicationControllerServlet?function=Detail&TWOID=54321-Tender-abc")
     assert "TenderingProcedureDetails" in z and "PublicationControllerServlet" not in z
     assert "TenderOID=54321-Tender-abc" in z and z.endswith("&thContext=publications")
+
+
+def _stanz():
+    import sys
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from govisor import docfetch_staatsanzeiger
+    return docfetch_staatsanzeiger
+
+
+def test_staatsanzeiger_knopf_navigiert_und_laedt_nicht():
+    """Der Fehler, der diese Quelle einen halben Tag als „unbaubar" dastehen liess.
+
+    „Anonym als Zip" sieht aus wie ein Download-Knopf, ist aber eine Navigation auf
+    `/aJs/DownlAsAnonym`. Ein `expect_download` läuft in den Timeout, obwohl alles
+    funktioniert — der ZIP-Link steht erst auf der Folgeseite, auf einem ANDEREN Host
+    (`…-eservices.eu` statt `.de`). Dazu kam ein zu enger XPath, der den Knopf beim zweiten
+    Aufruf nicht fand; daraus wurde die Fehldiagnose „die Seite rendert inkonsistent".
+    Beides war falsch.
+    """
+    S = _stanz()
+    quelle = (ROOT / "govisor" / "docfetch_staatsanzeiger.py").read_text(encoding="utf-8")
+    assert "KEIN `expect_download`" in quelle, "die Begründung muss am Code stehen"
+    assert S._ANONYM == "input[type=submit][value='Anonym als Zip']"
+    assert S._ZIP.search('<a href="https://www.staatsanzeiger-eservices.eu/L_1_NC-1_TVZ-2.zip">')
+
+
+def test_staatsanzeiger_frameset_ist_kein_fehler():
+    """56 der 211 Leads tragen die zweite URL-Form `besuJs/BekLanding4Bund` — ein FRAMESET.
+    `document.body.innerText` ist dort naturgemäß leer. Das als `fehler` zu führen belastet
+    jeden Lauf mit 56 falschen Warnungen, bis niemand mehr hinsieht."""
+    quelle = (ROOT / "govisor" / "docfetch_staatsanzeiger.py").read_text(encoding="utf-8")
+    assert '"frameset"' in quelle and "len(pg.frames) > 1" in quelle
