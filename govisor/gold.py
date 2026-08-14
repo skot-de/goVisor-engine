@@ -2281,6 +2281,17 @@ def build_value_anchor(cfg: Config, country: str = "DE"):
     return n
 
 
+# Leads ohne CPV bekommen eine EIGENE Kategorie statt hinauszufallen. Die CPV-Pflicht fiel
+# am 2026-08-14 aus `build_prospective_leads` — 645 laufende Ausschreibungen (DE: 239 DOeE,
+# 68 NetServer; AT/CH: 0) waren dadurch unsichtbar, obwohl Titel, Kaeufer und Frist da sind.
+#
+# Einen CPV zu ERFINDEN waere der falsche Weg: eine geratene Division verfaelschte die
+# Branchenzaehlung und liesse den Lead in einer Fachsuche auftauchen, in die er nicht
+# gehoert. Die eigene Kategorie ist ehrlich — der Nutzer sieht, dass die Einordnung fehlt,
+# und findet den Lead trotzdem. Das Label fuehrt auch das Frontend (`explorerCore.js`).
+OHNE_KATEGORIE = "Ohne Kategorie"
+
+
 def _ANR_SQL(cfg: Config, country: str) -> str:
     """SQL-Quelle fuer ``notice_enrichment`` — die Ausgabe der Dubletten-Firewall.
 
@@ -2625,6 +2636,22 @@ def build_lead_detail(cfg: Config, country: str = "DE"):
     return n
 
 
+def _kategorie_join_sql(cfg: Config, country: str, auf: str = "n.notice_id") -> str:
+    """LEFT JOIN auf die abgeleitete Kategorie (`govisor.kategorie`), als ``katq``.
+
+    OPTIONAL wie die Anreicherung: fehlt die Datei, liefert die Quelle eine leere Menge und
+    der Lead bleibt „Ohne Kategorie". Die leere Ersatzmenge fuehrt ALLE Spalten, die ein
+    Verbraucher anfasst — genau daran ist `_ANR_SQL` am 2026-08-14 mit einem harten
+    BinderException gescheitert, weil eine Spalte fehlte.
+    """
+    p = cfg.gold_dir / country / "lead_kategorie.parquet"
+    quelle = (f"read_parquet('{p.as_posix()}')" if p.exists()
+              else "(SELECT NULL::VARCHAR AS notice_id, NULL::VARCHAR AS division,"
+                   " NULL::VARCHAR AS branche, NULL::VARCHAR AS quelle,"
+                   " NULL::VARCHAR AS modell, NULL::VARCHAR AS stand WHERE false)")
+    return f"\n          LEFT JOIN {quelle} katq ON katq.notice_id = {auf}"
+
+
 def _frist_joins_sql(cfg: Config, country: str, auf: str = "n.notice_id") -> str:
     """LEFT JOINs für die angereicherten Felder: Fristen (``anrq``/``vrlq``) und Wert
     samt Währung (``wrtq``). Wert und Währung kommen aus DEMSELBEN Quellsatz, sonst
@@ -2801,7 +2828,15 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
             b.entity_id AS buyer_entity, b.buyer_name, b.buyer_town, b.buyer_nuts,
             b.buyer_email, b.buyer_url, n.ted_url,
             n.title AS titel, n.description AS beschreibung,
-            n.cpv_main, substr(n.cpv_main,1,4) AS cpv_class, dc.branche, dc.sector,
+            n.cpv_main, substr(n.cpv_main,1,4) AS cpv_class,
+            -- WASSERFALL: veroeffentlichter CPV → abgeleitete Kategorie → „Ohne Kategorie".
+            -- `branche_source` traegt die Herkunft mit, damit im Produkt sichtbar bleibt,
+            -- wie sicher die Einordnung ist (dieselbe Konvention wie `deadline_source`).
+            coalesce(dc.branche, katq.branche, '{OHNE_KATEGORIE}') AS branche,
+            coalesce(dc.sector,  katq.branche, '{OHNE_KATEGORIE}') AS sector,
+            CASE WHEN dc.branche  IS NOT NULL THEN 'cpv'
+                 WHEN katq.quelle IS NOT NULL THEN katq.quelle
+                 ELSE 'ohne' END AS branche_source,
             {_FRIST_EFF} AS contract_end,
             date_diff('month', DATE '{ref}', {_FRIST_EFF}) AS months_to_expiry,
             CASE n.notice_kind WHEN 'cn' THEN 'Angebotsfrist' ELSE 'Vorinformation' END AS faellig_basis,
@@ -2820,7 +2855,7 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
           JOIN buyer b ON b.notice_id=n.notice_id
           LEFT JOIN '{DD}' dd ON dd.year=n.year
           LEFT JOIN '{DC}' dc ON dc.division=substr(n.cpv_main,1,2)
-          {_frist_joins_sql(cfg, country)}
+          {_frist_joins_sql(cfg, country)}{_kategorie_join_sql(cfg, country)}
           -- KEINE CPV-Pflicht mehr. Sie stand hier bis 2026-08-14 und warf gemessen **307
           -- laufende Ausschreibungen mit Vergabestelle** weg (DÖE 239, NetServer 68) —
           -- lautlos, ohne Fehlermeldung, ohne Review-Eintrag.
@@ -3143,6 +3178,14 @@ def build_lead_export(cfg: Config, country: str = "DE"):
             mkt.name                                  AS market_region_name,
             (length(lg.perf_nuts) >= 5)               AS market_region_known,
             d.cpv_main                                AS cpv_code,
+            -- Herkunft der Kategorie — dieselbe Konvention wie `deadline_source`/`band_source`:
+            -- das Produkt behauptet die Einordnung nicht, es sagt, woher sie kommt.
+            --   cpv        veroeffentlichter Code
+            --   zwilling   Code der Dublette (veroeffentlicht, nur woanders)
+            --   regelwerk  VOB/A ⇒ Bauleistung
+            --   modell     aus dem Titel abgeleitet, gemessen ~82 %
+            --   ohne       ehrlich unbekannt
+            d.branche_source                          AS category_source,
             CASE d.contract_kind
                  WHEN 'rahmenvertrag' THEN 'framework' WHEN 'einmal_werk' THEN 'one_off_works'
                  WHEN 'wiederkehrend' THEN 'recurring' WHEN 'werk_sonstig' THEN 'works_other'
