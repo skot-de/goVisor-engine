@@ -866,3 +866,26 @@ def test_staatsanzeiger_frameset_ist_kein_fehler():
     jeden Lauf mit 56 falschen Warnungen, bis niemand mehr hinsieht."""
     quelle = (ROOT / "govisor" / "docfetch_staatsanzeiger.py").read_text(encoding="utf-8")
     assert '"frameset"' in quelle and "len(pg.frames) > 1" in quelle
+
+
+def test_netserver_erkennt_auch_ohne_pfad_am_servlet():
+    """`xvergabe.de` fährt reines NetServer — über `PublicationControllerServlet?TWOID=`,
+    aber OHNE `/NetServer/` im Pfad. Ein Test nur auf Pfad ODER Hostliste übersah die
+    sieben Vorgänge lautlos. Die Servlet-Namen sind NetServer-eigen und überleben auch,
+    wenn der Betreiber die Anwendung an die Wurzel hängt.
+
+    Und der Servlet-Tausch muss dort ebenso greifen: die erste Fassung hatte einen
+    Sonderfall nur für `/NetServer/`, xvergabe fiel durch und behielt
+    `PublicationControllerServlet?function=_Details` — dieselbe 404-URL wie zuvor, nur an
+    einer Stelle, die der Fix nicht erfasst hatte.
+    """
+    N = _nsdoc()
+    u = "https://xvergabe.de/PublicationControllerServlet?function=Detail&TWOID=54321-Tender-abc"
+    assert N.ist_netserver(u)
+    z = N.unterlagen_url(u)
+    assert z.startswith("https://xvergabe.de/TenderingProcedureDetails?")
+    assert "PublicationControllerServlet" not in z
+    # Der Regelfall darf dabei nicht kaputtgehen.
+    z2 = N.unterlagen_url("https://vergabe.landbw.de/NetServer/TenderingProcedureDetails"
+                          "?function=_Details&TenderOID=54321-NetTender-x")
+    assert z2.startswith("https://vergabe.landbw.de/NetServer/TenderingProcedureDetails?")

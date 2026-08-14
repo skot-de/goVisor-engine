@@ -115,11 +115,21 @@ _DOWNLOAD_MS = 300000      # 5 min; 65 MB brauchen mehr als die urspruenglichen 
 _OID = re.compile(r"(?:TenderOID|TWOID|TOID)=([^&#]+)")
 
 
+# Die Servlet-Namen sind NetServer-eigen und ueberleben auch dann, wenn der Betreiber die
+# Anwendung nicht unter `/NetServer/` haengt. Gemessen: `xvergabe.de` fuehrt sieben Vorgaenge
+# ueber `PublicationControllerServlet?TWOID=` — reines NetServer, ohne den Pfad. Ein Test
+# nur auf Pfad ODER Hostliste haette sie uebersehen, und zwar lautlos.
+_SERVLETS = ("PublicationControllerServlet", "TenderingProcedureDetails",
+             "PublicationSearchControllerServlet")
+
+
 def ist_netserver(url: str | None) -> bool:
-    """Pfad ODER Hostliste — beides, s. Begruendung an `HOSTS`."""
+    """Pfad ODER Servlet-Name ODER Hostliste — alle drei, s. Begruendung an `HOSTS`."""
     if not url:
         return False
-    return "/NetServer/" in url or any(f"//{h}/" in url for h in HOSTS)
+    return ("/NetServer/" in url
+            or any(sv in url for sv in _SERVLETS)
+            or any(f"//{h}/" in url for h in HOSTS))
 
 
 def unterlagen_url(url: str | None) -> str | None:
@@ -145,13 +155,15 @@ def unterlagen_url(url: str | None) -> str | None:
     # `PublicationControllerServlet?function=_Details&TenderOID=…` — und bekommt HTTP 404.
     # Gemessen an drei Vorgaengen (Sachsen, Autobahn), bevor das auffiel. Der
     # Unterlagen-Bereich haengt IMMER an `TenderingProcedureDetails`.
-    if "/NetServer/" in url:
-        wurzel = url.split("/NetServer/", 1)[0] + "/NetServer/"
-        return (f"{wurzel}TenderingProcedureDetails?function=_Details"
-                f"&TenderOID={m.group(1)}&thContext=publications")
-    basis = url.split("?", 1)[0]
-    return (f"{basis}?function=_Details&TenderOID={m.group(1)}"
-            f"&thContext=publications")
+    # Das Servlet wird IMMER auf `TenderingProcedureDetails` gesetzt — egal ob die Anwendung
+    # unter `/NetServer/` haengt (die Regel) oder direkt an der Wurzel (xvergabe.de). Zuerst
+    # stand hier ein Sonderfall nur fuer `/NetServer/`; xvergabe fiel durch und behielt
+    # `PublicationControllerServlet?function=_Details` — dieselbe 404-URL wie beim ersten Mal,
+    # nur an einer Stelle, die der Fix nicht erfasst hatte.
+    pfad = url.split("?", 1)[0]
+    wurzel = pfad.rsplit("/", 1)[0] + "/"
+    return (f"{wurzel}TenderingProcedureDetails?function=_Details"
+            f"&TenderOID={m.group(1)}&thContext=publications")
 
 
 def hole_vergabe(seite: str, pg, ziel: Path, dry_run: bool = False) -> dict:
@@ -226,6 +238,7 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
     # der Hostliste, lief der Fetcher ueber 1.055 statt 1.698 Vorgaenge, ohne dass irgendwo
     # eine Zahl fehlte: sie waren schlicht nie in der Auswahl.
     wo = ("documents_url LIKE '%/NetServer/%' OR "
+          + " OR ".join(f"documents_url LIKE '%{sv}%'" for sv in _SERVLETS) + " OR "
           + " OR ".join(f"documents_url LIKE '%//{h}/%'" for h in HOSTS))
     rows = con.execute(f"""
         SELECT lead_id, documents_url FROM read_parquet('{L.as_posix()}')
