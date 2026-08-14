@@ -151,7 +151,31 @@ def fetch_batch(cfg: Config, country: str = "DE", limit: int | None = None,
               -- Nur LAUFENDE Verfahren. Die Unterlagen haengen nur waehrend der Angebots-
               -- frist am Portal; danach liefert der Endpoint die Landingpage (Status
               -- `gated`) und der Versuch ist verschenkt.
-              AND deadline_date >= current_date
+              --
+              -- STRIKT GROESSER: der Fristtag selbst faellt raus. Eine Frist traegt eine
+              -- UHRZEIT (`deadline_time`, gemessen typisch 08:00/10:00/12:00) — laeuft der
+              -- Fetch nachmittags, ist die Vergabe seit Stunden zu und cosinex hat die
+              -- Unterlagen abgehaengt. Gemessen 2026-08-14 an DTVP, je 10 Vorgaenge:
+              --
+              --     Frist heute      70 % erreichbar
+              --     +1 bis  2 Tage  100 %
+              --     +3 bis  7 Tage  100 %
+              --     +8 bis 30 Tage   90 %
+              --
+              -- Die Klippe ist also genau EIN Tag breit. Ein grosszuegigerer Vorlauf (die
+              -- erste Idee waren 14 Tage) haette 90 % erreichbarer Vorgaenge mit
+              -- weggeworfen — die Messung hat den Eingriff kleiner gemacht, nicht groesser.
+              -- Und ein Lead, der heute um 10:00 schliesst, ist als Lead ohnehin keiner.
+              AND deadline_date > current_date
+              -- OPEN HOUSE gar nicht erst versuchen. Dort tritt man einem Rabattvertrag
+              -- BEI, statt zu bieten; die Unterlagen liegen systematisch hinter der
+              -- Teilnahme („Um Zugriff auf dieses Modul zu erhalten muessen Sie am
+              -- Vergabeverfahren teilnehmen"). Gemessen an `vergabe.tk.de`: 197 von 202
+              -- Versuchen `gated`, alle acht Stichproben Open-House-Rabattvertraege der
+              -- Techniker Krankenkasse mit Fristen bis 2028. Das ist kein Portal-Problem
+              -- und keine schliessbare Luecke, sondern die Bauart des Verfahrens —
+              -- `gold` fuehrt sie deshalb schon als eigene Klasse.
+              AND coalesce(procedure_kind, '') <> 'open_house'
             -- AUFSTEIGEND: naechste Frist zuerst. Vorher stand hier DESC — damit landeten
             -- Fristen in 2029/2030 ganz oben (Rahmenvertraege und Fehlschaetzungen, deren
             -- Ausschreibung laengst zu ist). Gemessen: von den ersten zwoelf Versuchen

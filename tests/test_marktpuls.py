@@ -457,3 +457,30 @@ def test_hessen_laeuft_ueber_den_eigenen_suchweg():
     assert "replace(/\\\\s+/g" not in kern, (
         "Zeilenumbrueche sind bei HAD die Struktur: sie trennen Verfahrensart, Leistungsart "
         "und Titel. Werden sie plattgemacht, beginnt jeder Titel mit demselben Formularsatz")
+
+
+def test_docfetch_ueberspringt_fristtag_und_open_house():
+    """Zwei Filter im Unterlagen-Abruf, beide aus einer Messung, nicht aus einer Vermutung.
+
+    Vorher galten 1.439 Versuche als `gated` — der Name legt „braucht Anmeldung" nahe, also
+    gibt man auf. Gemessen war es etwas anderes:
+
+    * **Fristtag.** Eine Frist traegt eine UHRZEIT (08:00/10:00/12:00). Laeuft der Fetch
+      nachmittags, hat cosinex die Unterlagen laengst abgehaengt. DTVP, je 10 Vorgaenge:
+      Frist heute 70 % erreichbar, ab +1 Tag 90–100 %. Die Klippe ist EIN Tag breit —
+      ein groesserer Vorlauf haette erreichbare Vorgaenge mit weggeworfen.
+    * **Open House.** Dort tritt man bei, statt zu bieten; die Unterlagen liegen hinter der
+      Teilnahme. `vergabe.tk.de`: 197 von 202 Versuchen `gated`, alle Stichproben
+      Open-House-Rabattvertraege. Keine schliessbare Luecke, sondern die Bauart.
+
+    Zusammen 1.357 verschenkte Abrufe je Lauf.
+    """
+    quelle = (ROOT / "govisor" / "docfetch.py").read_text(encoding="utf-8")
+    i = quelle.index("def fetch_batch")
+    kern = quelle[i:i + 4000]
+    assert "deadline_date > current_date" in kern, (
+        "Fristtag wieder drin — die Unterlagen sind dort meist schon abgehaengt")
+    assert "deadline_date >= current_date" not in kern, (
+        "`>=` laesst den Fristtag wieder zu")
+    assert "open_house" in kern, (
+        "Open-House-Verfahren wieder im Abruf — dort gibt es die Unterlagen nur mit Teilnahme")
