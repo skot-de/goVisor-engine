@@ -23,3 +23,4 @@ __pycache__/
 
 # Internes Vertriebs-CSV (enthaelt Kontaktdaten) — nie committen
 data/zielliste.csv
+/.tmp

@@ -257,15 +257,20 @@ def build_index(cfg: Config, country: str = "DE", neu_aufbauen: bool = False,
     # geschrieben wurde und niemand die Datei-Zeitstempel ansah.
     out = root / "doc_text.parquet"
     bekannt: set[tuple[str, str]] = set()
-    alt_rows: list[dict] = []
     if out.exists() and not neu_aufbauen:
+        # NUR DIE SCHLUESSEL, nicht der Text.
+        #
+        # Erster Entwurf las den kompletten Bestand nach Python — und machte damit den
+        # Speicherbedarf GROESSER statt kleiner, obwohl die Inkrementalitaet ihn senken
+        # sollte. Bei 16 GB RAM, 2 GB Swap und 89 GB Archiven fuehrte das zu einer vollen
+        # Platte (der Rechner musste am 2026-08-14 deshalb neu gestartet werden).
+        #
+        # Der Bestand wird unten STROMWEISE uebernommen, Zeilengruppe fuer Zeilengruppe —
+        # er muss nie ganz im Speicher liegen.
         import duckdb
-        alt_rows = [dict(zip(("notice_id", "archive", "file", "filetype",
-                              "n_chars", "status", "text"), r))
-                    for r in duckdb.connect().execute(
-                        f"SELECT notice_id, archive, file, filetype, n_chars, status, text "
-                        f"FROM read_parquet('{out.as_posix()}')").fetchall()]
-        bekannt = {(r["notice_id"], r["archive"]) for r in alt_rows}
+        bekannt = {(r[0], r[1]) for r in duckdb.connect().execute(
+            f"SELECT DISTINCT notice_id, archive FROM read_parquet('{out.as_posix()}')"
+        ).fetchall()}
 
     auftraege = []
     n_notices = 0
@@ -285,7 +290,7 @@ def build_index(cfg: Config, country: str = "DE", neu_aufbauen: bool = False,
               f"(`neu_aufbauen=True` erzwingt alles)", flush=True)
     if not auftraege:
         print(f"docpipe {country}: nichts Neues zu indizieren.")
-        return {"notices": n_notices, "files": len(alt_rows), "uebersprungen": uebersprungen}
+        return {"notices": n_notices, "uebersprungen": uebersprungen}
 
     # DRINGENDES ZUERST. Nicht „neu vor alt" — ein heute geladenes Dokument fuer einen Lead
     # mit 90 Tagen Restfrist ist weniger wert als eines von letzter Woche fuer einen mit
@@ -334,16 +339,39 @@ def build_index(cfg: Config, country: str = "DE", neu_aufbauen: bool = False,
     if abgeschnitten:
         print(f"  ⏳ Zeitbudget ({zeit_budget}s) erreicht — {abgeschnitten} Archive bleiben "
               f"fuer den naechsten Lauf (dringendste zuerst abgearbeitet)", flush=True)
-    rows = alt_rows + rows          # Bestand bleibt, Neues kommt dazu
-    if not rows:
+    if not rows and not bekannt:
         print("docpipe: keine Dateien in den ZIPs gefunden.")
         return {}
     schema = pa.schema([("notice_id", pa.string()), ("archive", pa.string()),
                         ("file", pa.string()), ("filetype", pa.string()),
                         ("n_chars", pa.int64()), ("status", pa.string()), ("text", pa.string())])
-    pq.write_table(pa.Table.from_pylist([{k: r[k] for k in schema.names} for r in rows], schema=schema),
-                   out, compression="zstd")
-    total_chars = sum(r["n_chars"] for r in rows)
+
+    # STROMWEISE SCHREIBEN, nicht als eine grosse Tabelle.
+    #
+    # `pa.Table.from_pylist` ueber alles haette den gesamten Volltext auf einmal im Speicher
+    # — genau der Fehler, der die Platte gefuellt hat. Stattdessen: erst den Bestand
+    # Zeilengruppe fuer Zeilengruppe durchreichen, dann das Neue in Bloecken anhaengen.
+    # Der Spitzenbedarf ist damit eine Zeilengruppe, nicht der ganze Index.
+    #
+    # Erst in eine Nebendatei, dann umbenennen: ein Abbruch mittendrin (Strom, Speicher,
+    # Neustart) darf den vorhandenen Index nicht zerstoeren. Am 2026-08-14 ging genau so
+    # eine Stunde Arbeit verloren, weil erst ganz am Ende geschrieben wurde.
+    tmp = out.with_suffix(".parquet.neu")
+    schreiber = pq.ParquetWriter(tmp, schema, compression="zstd")
+    try:
+        if bekannt and out.exists():
+            alt = pq.ParquetFile(out)
+            for i in range(alt.num_row_groups):
+                schreiber.write_table(alt.read_row_group(i).select(schema.names))
+        BLOCK = 2000
+        for i in range(0, len(rows), BLOCK):
+            teil = rows[i:i + BLOCK]
+            schreiber.write_table(pa.Table.from_pylist(
+                [{k: r[k] for k in schema.names} for r in teil], schema=schema))
+    finally:
+        schreiber.close()
+    tmp.replace(out)
+    total_chars = sum(r["n_chars"] for r in rows)   # nur die NEUEN, der Bestand ist durchgereicht
     print(f"docpipe {country}: {n_notices} Vorgänge, {len(rows)} Dateien, {total_chars/1e6:.1f} Mio. Zeichen "
           f"→ {out.name}")
     print("  Status: " + " | ".join(f"{k}={v}" for k, v in sorted(status_counts.items())))

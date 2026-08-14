@@ -21,6 +21,30 @@ cd "$ROOT" || { echo "Repo-Verzeichnis fehlt: $ROOT"; exit 1; }
 LOG_DIR="$ROOT/data/logs"
 LOCK="$ROOT/data/.daily_leads.lock"
 PY="python3"
+
+# ── ARBEITSSPEICHER UND TEMP AUF DIE EXTERNE PLATTE ───────────────────────────────────────
+#
+# Gemessen 2026-08-14, nachdem der Rechner wegen vollem Speicher neu gestartet werden musste:
+#
+#   /  (intern)          228 GB, davon 36 GB frei   ← hier landete die Arbeit
+#   /Volumes/goVisor     1,8 TB, davon 1,6 TB frei  ← hier liegen die Daten
+#
+# `data/` ist ein Symlink auf die externe Platte, die DATEN liegen also richtig. Die ARBEIT
+# nicht: Pythons `tempfile` zeigt auf /var/folders (intern), und DuckDBs Auslagerung steht
+# per Vorgabe auf `.tmp` — relativ zum Arbeitsverzeichnis, und das Repo liegt intern.
+#
+# Bei 16 GB RAM, 2 GB Swap und 89 GB Archiven reicht das nicht. Beides wandert deshalb auf
+# die grosse Platte. Faellt sie aus, greift der Daten-Guard weiter unten ohnehin.
+if [ -d "$ROOT/data" ]; then
+  export TMPDIR="$ROOT/data/.tmp"
+  mkdir -p "$TMPDIR"
+  # DuckDB kennt KEINE Umgebungsvariable dafuer — die Einstellung geht nur pro Verbindung,
+  # und davon gibt es 125 im Projekt. Der Hebel ist stattdessen die Vorgabe selbst: DuckDB
+  # legt seine Auslagerung nach `.tmp` RELATIV ZUM ARBEITSVERZEICHNIS. Ist `.tmp` im Repo
+  # ein Symlink auf die grosse Platte, greift das fuer alle 125 Verbindungen, ohne dass eine
+  # Zeile Code sich aendert.
+  [ -L "$ROOT/.tmp" ] || ln -s data/.tmp "$ROOT/.tmp" 2>/dev/null || true
+fi
 MONTH="$(date +%Y-%m)"
 TODAY="$(date +%Y-%m-%d)"
 
