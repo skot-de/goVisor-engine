@@ -527,3 +527,87 @@ def test_subreport_holt_listen_und_gibt_das_auch_so_an():
     assert "accept_downloads" not in quelle, (
         "der Connector darf keine Downloads annehmen — er liest die oeffentliche Liste")
     assert "doctypes" in quelle, "ohne Typ-Klassifikation ist die Liste nur ein Haufen Namen"
+
+
+def _eg():
+    import sys
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from govisor import docfetch_evergabe
+    return docfetch_evergabe
+
+
+def test_evergabe_verwechselt_die_gleichnamigen_nachbarn_nicht():
+    """Fünf Hosts tragen „evergabe" im Namen und sind völlig verschiedene Systeme.
+
+    evergabe-online.de ist der Bund (1.027 Leads, eigene Wartungsfenster), deutsche-evergabe,
+    evergabe.nrw, evergabe.blb.nrw und bieter.ehealth-evergabe sind je eigene Plattformen.
+    Ein `'evergabe.de' in url` fängt mehrere davon mit ein und würde sie diesem Connector
+    zuschieben, der ihre Oberfläche nicht kennt.
+    """
+    E = _eg()
+    assert E.ist_evergabe("https://www.evergabe.de/unterlagen/3423114")
+    for fremd in ("https://www.evergabe-online.de/x", "https://www.deutsche-evergabe.de/x",
+                  "https://www.evergabe.nrw.de/x", "https://evergabe.blb.nrw.de/x",
+                  "https://bieter.ehealth-evergabe.de/x"):
+        assert not E.ist_evergabe(fremd), fremd
+
+
+def test_evergabe_fuehrt_alle_vier_url_formen_auf_die_dateiliste():
+    """Vier Formen im Bestand, alle führen auf `/unterlagen/<kennung>`.
+
+    Die Suchform trägt die Kennung im LETZTEN Pfadsegment — ein einzelner Regex auf
+    `/unterlagen/` greift dort nicht und hätte ~150 Leads verworfen.
+    """
+    E = _eg()
+    U = "https://www.evergabe.de/unterlagen/"
+    assert E.unterlagen_url(U + "3423114/zustellweg-auswaehlen") == U + "3423114"
+    assert E.unterlagen_url(U + "019f6b47-3646-4d51-82f8-8f2231a58038/zustellweg-auswaehlen") \
+        == U + "019f6b47-3646-4d51-82f8-8f2231a58038"
+    assert E.unterlagen_url(U + "54321-Tender-19f8e1fc48b-5e119e0005bf8de6") \
+        == U + "54321-Tender-19f8e1fc48b-5e119e0005bf8de6"
+    assert E.unterlagen_url(
+        "https://www.evergabe.de/auftraege/suche-ueber-vergabestellen/Stadt%2520Leipzig/3434706"
+    ) == U + "3434706"
+    assert E.unterlagen_url("https://www.evergabe.de/auftraege") is None
+    assert E.unterlagen_url(None) is None
+
+
+def test_evergabe_unterscheidet_leer_von_abgewiesen_von_gesperrt():
+    """Der teuerste Fehler dieses Connectors war eine zu grobe Meldung.
+
+    Erste Fassung: „keine Dateien" — egal ob die Vergabe leer war, die Dateien abgewiesen
+    wurden oder die WAF schon die SEITE gesperrt hatte. Gemessen meldeten fünf von zehn
+    Vorgängen „keine Dateien"; alle fünf trugen Dateien, alle fünf waren HTTP 418. Ohne die
+    Trennung hätte der Lauf hunderte Vergaben still als unergiebig abgehakt.
+    """
+    quelle = (ROOT / "govisor" / "docfetch_evergabe.py").read_text(encoding="utf-8")
+    for status in ('"leer"', '"abgewiesen"', '"gesperrt"', '"downloaded"'):
+        assert status in quelle, f"Status {status} fehlt"
+    assert "r.status in _GESPERRT" in quelle, "der HTTP-Status der Seite muss geprüft werden"
+
+
+def test_evergabe_pausiert_statt_abzubrechen():
+    """Die WAF-Sperre ist flüchtig — gemessen 418 bei 0/2/4 min, 200 bei 6 min.
+
+    Ein Abbruch nach der ersten Sperre hätte jeden Lauf nach ~10 Vorgängen beendet und die
+    845 offenen Vergaben nie eingeholt. Und was während einer Sperre übersprungen wird, muss
+    nachgeholt werden: die Reihenfolge ist stabil, sonst fällt bei JEDEM Lauf genau der
+    Vorgang durch, an dem die Drosselung zuschlägt.
+    """
+    E = _eg()
+    assert E._ABKUEHLUNG_S >= 360, "unter den gemessenen 6 Minuten hilft die Pause nicht"
+    quelle = (ROOT / "govisor" / "docfetch_evergabe.py").read_text(encoding="utf-8")
+    assert "nachzuholen" in quelle, "pausierte Vorgänge müssen nachgeholt werden"
+
+
+def test_evergabe_schreibt_dorthin_wo_docpipe_sucht():
+    """Ein ZIP je Vergabe unter `docs/<country>/<lead_id>/` — genau das Layout, das
+    `docpipe.index` per `notice_dir.glob('*.zip')` liest. Damit laufen Volltext-Index,
+    Signale, LV- und Kriterien-Extraktion ohne eine Zeile Änderung mit. Ein eigener Pfad
+    hätte vier nachgelagerte Schritte gekostet."""
+    quelle = (ROOT / "govisor" / "docfetch_evergabe.py").read_text(encoding="utf-8")
+    assert '"docs" / country' in quelle
+    assert 'out_root / lead_id' in quelle
+    pipe = (ROOT / "govisor" / "docpipe.py").read_text(encoding="utf-8")
+    assert 'glob("*.zip")' in pipe, "Layout-Annahme geprüft — docpipe liest weiterhin *.zip"
