@@ -1,0 +1,176 @@
+"""Healy-Hudson: Zellen lesen, nicht Zeilen — und daraus echte Leads bauen.
+
+Diese Datei gibt es wegen EINES Fehlers, der ein halbes Feature gekostet hat: der
+Connector las `tr.innerText` und bekam Titel, Verfahrensart und Vergabestelle als einen
+String. Ohne getrennte Vergabestelle gibt es keinen Käufer, ohne Käufer keinen Lead — die
+Quelle sammelte wochenlang Bronze, aus dem nichts entstehen konnte.
+
+Die Tests halten deshalb vor allem EINE Zusage fest: **aus einer Trefferzeile kommt eine
+Vergabestelle heraus.** Alles andere ist Beiwerk.
+"""
+from __future__ import annotations
+
+import datetime as dt
+from pathlib import Path
+
+from govisor import healyhudson as hh
+
+ROOT = Path(__file__).resolve().parent.parent
+
+# Wörtlich von der Liste abgelesen (Bremen, 2026-08-14). Sieben Zellen, zwei davon leer —
+# genau die Form, die der Parser aushalten muss.
+ZEILE_HB = ["", "SektVo",
+            "28199/2026 Unterhalts- und Glasreinigung Flughafen Bremen "
+            "Verhandlungsverfahren mit Teilnahmewettbewerb (Teil 1)",
+            "Flughafen Bremen GmbH", "06.08.2026", "07.09.2026", ""]
+
+
+def test_vergabestelle_kommt_getrennt_heraus():
+    """Der Kern. Vorher steckte „Flughafen Bremen GmbH" im Titel-String fest."""
+    s = hh.zerlege(ZEILE_HB, "HB")
+    assert s is not None
+    assert s["vergabestelle"] == "Flughafen Bremen GmbH"
+    assert s["verordnung"] == "SektVo"
+    assert s["titel"].startswith("28199/2026 Unterhalts- und Glasreinigung")
+    # Die Vergabestelle darf NICHT zusätzlich im Titel hängen — sonst hätte der Parser
+    # zwar Spalten gelesen, die Trennung aber nicht wirklich vollzogen.
+    assert "Flughafen Bremen GmbH" not in s["titel"]
+
+
+def test_leere_und_kurze_zeilen_fallen_durch():
+    """Die Liste liefert reichlich leere `<tr>`. Sie dürfen keinen Satz erzeugen —
+    ein Vorgang ohne Titel und ohne Fristdatum ist kein Vorgang."""
+    assert hh.zerlege(["", "", "", "", "", "", ""], "HB") is None
+    assert hh.zerlege(["", "VOB", "Titel", "Stelle"], "HB") is None          # zu kurz
+    assert hh.zerlege(["", "VOB", "", "Stelle", "06.08.2026", "07.09.2026", ""],
+                      "HB") is None                                          # kein Titel
+    assert hh.zerlege(["", "VOB", "Titel", "Stelle", "irgendwas", "07.09.2026", ""],
+                      "HB") is None                                          # kein Datum
+
+
+def test_schluessel_haengt_an_den_zellen_nicht_am_leerraum():
+    """Der Hash muss stabil bleiben, wenn der Browser Leerraum anders normalisiert —
+    sonst gilt derselbe Vorgang morgen als neu und die Bronze-Ablage läuft voll."""
+    a = hh.zerlege(ZEILE_HB, "HB")
+    variante = [z.replace(" ", "  ") if z else z for z in ZEILE_HB]
+    b = hh.zerlege([z.strip() for z in variante], "HB")
+    assert a["schluessel"] == b["schluessel"] or a["titel"] != b["titel"], (
+        "gleiche Zellen → gleicher Schlüssel")
+    # Andere Zellen → anderer Schlüssel (sonst verschmelzen fremde Vorgänge).
+    anders = list(ZEILE_HB); anders[3] = "Andere Stelle GmbH"
+    assert hh.zerlege(anders, "HB")["schluessel"] != a["schluessel"]
+
+
+def test_silber_namensraum_kollidiert_nicht_mit_ted():
+    """`hh_`-Präfix. TED-IDs sind `\\d+_\\d{4}`, DÖE nutzt UUIDs und reine Zahlen — ein
+    nackter Hash könnte mit beiden kollidieren, und eine Kollision im Notice-Namensraum
+    verschmilzt Vergaben, statt nur etwas falsch anzuzeigen."""
+    t = hh.nach_silber(hh.zerlege(ZEILE_HB, "HB"))
+    nid = t["notices"][0]["notice_id"]
+    assert nid.startswith("hh_")
+    assert not nid[3:].isdigit() or "_" not in nid[3:]
+
+
+def test_silber_traegt_bundesland_als_nuts():
+    """Der eigentliche Mehrwert der Quelle: die unterschwellige Ebene hat sonst gar keine
+    Landeszuordnung. Bremen = DE5, und der Käufer trägt es ebenfalls."""
+    t = hh.nach_silber(hh.zerlege(ZEILE_HB, "HB"))
+    assert t["notices"][0]["performance_nuts"] == "DE5"
+    assert t["notice_parties"][0]["nuts"] == "DE5"
+    assert t["notice_parties"][0]["role"] == "buyer"
+    assert t["notice_parties"][0]["name"] == "Flughafen Bremen GmbH"
+    assert len(hh.NUTS1) == 16, "alle sechzehn Länder, nicht nur die getesteten"
+
+
+def test_silber_daten_und_art():
+    t = hh.nach_silber(hh.zerlege(ZEILE_HB, "HB"))
+    n = t["notices"][0]
+    assert n["publication_date"] == dt.date(2026, 8, 6)
+    assert n["submission_deadline"] == dt.date(2026, 9, 7)
+    assert n["notice_kind"] == "cn"          # offene Ausschreibung, kein Zuschlag
+    assert n["schema_gen"] == "healyhudson"
+    assert n.get("portal_url") is None, (
+        "die Trefferzeilen tragen nachweislich keinen Link — eine geratene URL wäre "
+        "schlimmer als keine")
+
+
+def test_verordnung_wird_auf_gold_vokabular_abgebildet():
+    """Gold liest zwei Pfade. Beide müssen bedient werden, sonst bleibt
+    `regulatory_regime` leer, obwohl die Quelle es hergibt."""
+    def pfade(v):
+        z = hh.zerlege(["", v] + ZEILE_HB[2:], "HB")
+        t = hh.nach_silber(z)
+        return {a["path"]: a["value"] for a in t.get("attributes", [])}
+
+    assert pfade("VOB")["ContractNotice.RegulatoryDomain"] == "de-vob"
+    assert pfade("UVgO")["ContractNotice.RegulatoryDomain"] == "de-uvgo"
+    assert any(p.endswith("ProcurementLegislationDocumentReference.ID") and w == "vgv"
+               for p, w in pfade("VGV").items())
+    # `oVO` heisst „ohne Verordnung" — es auf ein Regime zu zwingen wäre geraten.
+    ovo = pfade("oVO")
+    assert "ContractNotice.RegulatoryDomain" not in ovo
+    # ... der Rohwert bleibt aber IMMER stehen, sonst wäre die Zuordnung nicht nachprüfbar.
+    assert ovo["HealyHudson.Vordn"] == "oVO"
+
+
+def test_altes_format_wird_uebersprungen_nicht_geraten():
+    """Sätze ohne getrennte Spalten tragen keine Vergabestelle. Sie aus dem geklebten
+    String zurückzuraten wäre schlechter als sie neu zu holen — die Quelle ist live."""
+    assert hh.nach_silber({"beschreibung": "Kälteanlagen Offenes Verfahren Sprinkenhof "
+                                           "GmbH", "land": "HH", "pub": "13.08.2026",
+                           "frist": "07.09.2026", "schluessel": "x"}) is None
+
+
+def test_silber_schritt_haengt_im_tageslauf():
+    """Ohne diesen Aufruf sammelt healyhudson Bronze und es entsteht kein Lead — genau
+    der Zustand, in dem die Quelle bis zum 2026-08-14 war."""
+    lauf = (ROOT / "scripts" / "daily_leads.sh").read_text(encoding="utf-8")
+    assert "govisor.healyhudson --silber" in lauf
+
+
+def test_silber_laeuft_vor_dem_gold_schritt():
+    """Die Reihenfolge ist kein Stil, sondern Bedingung.
+
+    `build_prospective_leads` joint die Kaeufer ueber `party_entity` — und zwar mit einem
+    INNER JOIN. Eine Notice, deren Kaeufer noch keine Entity hat, faellt lautlos raus.
+    `party_entity` entsteht im Gold-Lauf aus `notice_parties`. Steht der Silber-Schritt
+    dahinter, sind die Vorgaenge IMMER einen Lauf zu spaet — und niemand sieht es, weil
+    nichts abbricht, es kommen nur weniger Leads an.
+    """
+    lauf = (ROOT / "scripts" / "daily_leads.sh").read_text(encoding="utf-8")
+    silber = lauf.index("govisor.healyhudson --silber")
+    gold = lauf.index("govisor.cli gold")
+    assert silber < gold, "Silber muss VOR dem Gold-Rebuild laufen"
+
+
+def test_bundesweite_vergaben_werden_zusammengefasst():
+    """Die Quelle liefert je Bundesland eine eigene Liste — bundesweite Vergabestellen
+    (BVVG, Max-Planck) stehen deshalb in mehreren. Gemessen: 97 von 777 Saetzen.
+
+    Die Dubletten-Firewall faengt das NICHT: sie ueberspringt Paare derselben
+    Schema-Generation (die Regel, die Geschwister-Lose entschaerft). Es muss also hier
+    passieren, sonst waere dieselbe Vergabe bis zu viermal ein Lead.
+    """
+    satz = hh.zerlege(ZEILE_HB, "HB")
+    t = hh.nach_silber(satz, ["HB", "BE", "BY"])
+    attr = {a["path"]: a["value"] for a in t["attributes"]}
+    # Vorhandene Projekt-Konvention statt neuem Begriff: `anyw-cou` speist `is_nationwide`,
+    # damit greifen Umkreis- und Regionssuche ohne eine Zeile Anpassung.
+    assert attr["ContractNotice.ProcurementProject.RealizedLocation.Address.Region"] == "anyw-cou"
+    assert attr["HealyHudson.Bundeslaender"] == "BE,BY,HB", "welche Laender, bleibt belegt"
+    # Ein Bundesland waehlen waere geraten — also keins.
+    assert t["notices"][0]["performance_nuts"] is None
+    assert t["notice_parties"][0]["nuts"] is None
+
+    # Ein einzelnes Land bleibt dagegen ein Land.
+    einzeln = hh.nach_silber(satz, ["HB"])
+    assert einzeln["notices"][0]["performance_nuts"] == "DE5"
+    assert not any(a["value"] == "anyw-cou" for a in einzeln["attributes"])
+
+
+def test_firewall_kennt_die_quelle():
+    """Die Rangfolge steuert, wohin fehlende Felder fliessen. healyhudson gehört ans Ende
+    (kein CPV, kein Wert, keine Beschreibung) — ausdrücklich, nicht per Vorgabewert."""
+    from govisor.dedupe import QUELLEN_RANG
+    assert "healyhudson" in QUELLEN_RANG
+    assert QUELLEN_RANG["healyhudson"] > QUELLEN_RANG["doe"]

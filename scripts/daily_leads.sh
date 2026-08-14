@@ -261,13 +261,9 @@ step "NetServer-Bekanntmachungen (HB/SN/MV/BW/HE/BE/SL, ober- und unterschwellig
 $PY -m govisor.netserver --portale hb,sn,mv,bw,he,be,sl --kategorien tender,vorinfo,zuschlag --silber \
   || echo "  ⚠ NetServer-Import fehlgeschlagen — fremde Portale, der Lauf geht ohne weiter."
 
-# ── NEUE QUELLEN, VORBEREITET ABER INERT ────────────────────────────────────────────────
+# ── NEUE QUELLEN, SCHARF ────────────────────────────────────────────────────────────────
 #
-# Diese drei Schritte sind gebaut und einzeln erprobt, laufen aber NUR mit
-# `GOVISOR_NEUE_QUELLEN=1`. Der Grund ist nicht Zweifel an ihnen, sondern Reihenfolge:
-# `healyhudson` schreibt bisher nur Bronze (der Silber-Schritt fasst die geteilte Ablage
-# `data/silver/DE/notices` an), und die beiden Unterlagen-Fetcher bringen zusammen mehrere
-# Gigabyte je Lauf. Beides gehoert bewusst erst scharfgeschaltet, wenn jemand zusieht.
+# Fuenf Schritte: healyhudson (Bekanntmachungen) und vier Unterlagen-Fetcher.
 #
 # SCHARFGESCHALTET am 2026-08-14 (Svens Entscheidung). Der Schalter bleibt, aber die Vorgabe
 # ist jetzt AN — abschalten mit `GOVISOR_NEUE_QUELLEN=0`.
@@ -293,6 +289,12 @@ if [ "${GOVISOR_NEUE_QUELLEN:-1}" = "1" ]; then
   step "Healy-Hudson-Bekanntmachungen (alle 16 Laender, rotierende Liste)"
   $PY -m govisor.healyhudson --alle --runden 12 \
     || echo "  ⚠ Healy-Hudson-Import unvollstaendig."
+  # Bronze → Silber. Ohne diesen Schritt sammelt healyhudson nur JSONL und es entsteht
+  # KEIN einziger Lead — genau der Zustand, in dem die Quelle bis zum 2026-08-14 war.
+  # Eigener Aufruf statt Teil des Imports: der Abruf kann unvollstaendig sein (die Liste
+  # wuerfelt je Seitenaufruf), das Silber soll trotzdem aus allem gebaut werden, was da ist.
+  $PY -m govisor.healyhudson --silber \
+    || echo "  ⚠ Healy-Hudson-Silber nicht gebaut — die Vorgaenge bleiben in Bronze liegen."
 
   # NetServer-UNTERLAGEN. Die zweitgroesste Dokumentenluecke: 1.055 offene Leads auf
   # Portalen, deren Bekanntmachungen oben schon hereinkommen. Der Weg fuehrt ueber

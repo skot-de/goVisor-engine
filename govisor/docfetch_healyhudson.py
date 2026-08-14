@@ -41,6 +41,8 @@ import tempfile
 import zipfile
 from pathlib import Path
 
+from . import docfetch_queue as _queue
+
 ROOT = Path(__file__).resolve().parent.parent
 
 # Der Deeplink-Pfad ist das gemeinsame Merkmal der Familie — verlaesslicher als eine
@@ -190,6 +192,12 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
         if ziel.exists() and ziel.stat().st_size > 0:
             continue
         offen.append((lead_id, url, ziel))
+    # Frueher dauerhaft Gescheitertes ueberspringen — sonst blockiert dieselbe
+    # Warteschlangenspitze jeden Lauf. VOR dem Limit, sonst kappt das Limit auf
+    # Kandidaten, die gleich wieder aussortiert werden.
+    offen, _weg = _queue.filtere(offen, _queue.frueher(out_root, "healyhudson"))
+    if _weg:
+        print(_queue.bericht(_weg))
     if limit:
         offen = offen[:limit]
     print(f"Healy-Hudson-Unterlagen: {len(offen)} Vergaben zu holen (von {len(rows)} offenen Leads)")
@@ -234,8 +242,7 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
         print("  " + h + ": " + ", ".join(f"{k}={v}" for k, v in sorted(st.items())))
     if saetze and not dry_run:
         out_root.mkdir(parents=True, exist_ok=True)
-        pq.write_table(pa.Table.from_pylist(saetze),
-                       out_root / "_manifest_healyhudson.parquet", compression="zstd")
+        _queue.schreibe(out_root, "healyhudson", saetze)
     return {"versucht": len(saetze), "geladen": ok, "mb": round(mb, 1)}
 
 

@@ -39,15 +39,22 @@ Konsequenz für die Bauart: **wiederholt abrufen, bis nichts Neues mehr kommt** 
 nicht erreicht wurde, steht in der Zusammenfassung; ein Lauf, der 60 % holt und „fertig"
 meldet, wäre schlimmer als gar keiner.
 
-**Schreibt nur Bronze** (``data/raw_healyhudson/<YYYY-MM>.jsonl``). Der Silber-Schritt
-fasst ``data/silver/DE/notices`` an — eine geteilte Ablage, an der gerade eine zweite
-Sitzung arbeitet. Er kommt bewusst später, s. ``--silber`` unten (noch nicht implementiert).
+**Bronze** (``data/raw_healyhudson/<YYYY-MM>.jsonl``) **und Silber** (seit 2026-08-14,
+``--silber``). Ohne den Silber-Schritt sammelte die Quelle wochenlang JSONL, aus dem kein
+einziger Lead entstehen konnte — verdrahtet und wirkungslos ist der teuerste Zustand, weil
+er von aussen wie „fertig" aussieht.
+
+Was die Quelle NICHT hat: keinen CPV, keinen Wert, keine Beschreibung, keinen Link zum
+Vorgang (die Trefferzeilen tragen nachweislich kein ``a[href]``). Was sie als einzige hat:
+das **Bundesland**, ausdrücklich, für alle sechzehn. Die unterschwellige Ebene trägt sonst
+gar keine Landeszuordnung.
 
 Aufruf::
 
     python3 -m govisor.healyhudson --laender BY,HH --runden 12
     python3 -m govisor.healyhudson --alle --runden 8
     python3 -m govisor.healyhudson --laender HB --dry-run
+    python3 -m govisor.healyhudson --silber          # nur Bronze → Silber, ohne Abruf
 """
 from __future__ import annotations
 
@@ -81,37 +88,76 @@ _TROCKEN = 4          # so viele Runden ohne Neues gelten als ausgeschoepft
 _MAX_RUNDEN = 40      # Notbremse; die Coupon-Collector-Schaetzung fuer BY liegt bei ~95
 
 _ANZAHL = re.compile(r"Anzahl:\s*([\d.]+)")
-# Eine Trefferzeile beginnt mit der Vergabeart und endet auf zwei Datumsangaben.
-_ZEILE = re.compile(
-    r"^(?P<art>[A-Za-zÄÖÜäöü/]{2,8})\s+(?P<rest>.+?)\s+"
-    r"(?P<pub>\d{2}\.\d{2}\.\d{4})\s+(?P<frist>\d{2}\.\d{2}\.\d{4})$")
+_DATUM = re.compile(r"^\d{2}\.\d{2}\.\d{4}$")
+
+# Kopfzeile der Trefferliste (abgelesen 2026-08-14):
+#   ["", "VORDN.", "TITEL", "VERGABESTELLE", "PUBLIKATION", "FRIST", ""]
+# „VORDN." ist NICHT die Vorgangsnummer, sondern die **Verordnung** (VOB/VGV/UVgO/…).
+_SPALTE = {"vordn": 1, "titel": 2, "stelle": 3, "pub": 4, "frist": 5}
+_MIN_ZELLEN = 6
+
+# Verordnung → das Vokabular, das `gold._lead_context_sql` ohnehin schon liest. Zwei
+# Pfade, weil Gold sie unterschiedlich aufloest: Deutschlands eigene Vorschriften stehen
+# unter `RegulatoryDomain`, die EU-nahen unter der Legislation-Referenz.
+_REGIME_DOMAIN = {"VOB": "de-vob", "UVGO": "de-uvgo"}
+_REGIME_LEGIS  = {"VGV": "vgv", "SEKTVO": "sektvo", "KON": "konzvgv", "VSVGV": "vsvgv"}
+# `oVO` heisst „ohne Verordnung" und wird BEWUSST nicht abgebildet — es auf ein Regime zu
+# zwingen waere geraten. Der Rohwert bleibt trotzdem in `attributes` stehen.
+
+# NUTS-1 je Bundesland. Der eigentliche Gewinn dieser Quelle: sie traegt das Bundesland
+# ausdruecklich, waehrend die unterschwellige Ebene sonst gar keine Landeszuordnung hat.
+NUTS1 = {
+    "BW": "DE1", "BY": "DE2", "BE": "DE3", "BB": "DE4", "HB": "DE5", "HH": "DE6",
+    "HE": "DE7", "MV": "DE8", "NI": "DE9", "NW": "DEA", "RP": "DEB", "SL": "DEC",
+    "SN": "DED", "ST": "DEE", "SH": "DEF", "TH": "DEG",
+}
 
 
-def schluessel(land: str, zeile: str) -> str:
-    """Stabile Kennung. Die Liste traegt keine Vorgangs-ID im Text, deshalb ein Hash über
-    Land und Zeileninhalt — dieselbe Loesung wie bei NetServer, und aus demselben Grund."""
-    return hashlib.sha1(f"{land}|{zeile}".encode("utf-8")).hexdigest()[:16]
+def schluessel(land: str, teile: list[str]) -> str:
+    """Stabile Kennung. Die Liste traegt keine Vorgangs-ID, deshalb ein Hash über Land und
+    Zellinhalte — dieselbe Loesung wie bei NetServer, und aus demselben Grund.
 
-
-def zerlege(zeile: str, land: str) -> dict | None:
-    """Textzeile → Satz. Gibt None, wenn die Zeile nicht wie ein Vorgang aussieht.
-
-    Die Trennung Titel/Verfahrensart/Vergabestelle ist aus der Zeile allein NICHT sicher
-    moeglich — zwischen ihnen steht nur Leerraum, kein Trennzeichen. Deshalb bleibt `rest`
-    ungetrennt im Satz stehen und wird NICHT geraten. Ein falsch aufgeteilter Titel waere
-    schlimmer als ein ungeteilter: die Dubletten-Firewall vergleicht Titel.
+    Gehasht werden die ZELLEN, nicht die plattgemachte Zeile: sonst haenge der Schluessel
+    an der Leerraum-Normalisierung des Browsers und aendere sich ohne Anlass.
     """
-    m = _ZEILE.match(zeile.strip())
-    if not m:
+    return hashlib.sha1(("|".join([land] + teile)).encode("utf-8")).hexdigest()[:16]
+
+
+def zerlege(zellen: list[str], land: str) -> dict | None:
+    """Tabellenzellen → Satz. Gibt None, wenn die Zeile nicht wie ein Vorgang aussieht.
+
+    **Warum Zellen und nicht der Zeilentext.** Bis 2026-08-14 las diese Datei
+    ``tr.innerText`` und bekam damit Titel, Verfahrensart und Vergabestelle als EINEN
+    String — zwischen ihnen steht nur Leerraum, kein Trennzeichen. Der damalige Docstring
+    schloss daraus, die Trennung sei „nicht sicher moeglich", und liess das Feld
+    ungetrennt stehen. Das war richtig geschlossen, aber aus einer selbstgemachten Lage:
+    die Quelle ist eine HTML-**Tabelle** mit sauberen Spalten, und ``innerText`` auf der
+    Zeile hat sie plattgemacht. Wer die Zellen einzeln liest, bekommt die Vergabestelle
+    geschenkt — und ohne sie gaebe es keinen Kaeufer, also keinen brauchbaren Lead.
+
+    Die Lehre steht hier und nicht im Commit: eine Quelle, die scheinbar zu wenig
+    hergibt, ist zuerst ein Verdacht gegen den eigenen Abruf.
+    """
+    if len(zellen) < _MIN_ZELLEN:
         return None
+    hole = lambda k: zellen[_SPALTE[k]].strip()          # noqa: E731
+    titel, stelle = hole("titel"), hole("stelle")
+    pub, frist = hole("pub"), hole("frist")
+    # Beide Datumsspalten muessen wie Daten aussehen — sonst ist es eine Kopf-, Fuss-
+    # oder Platzhalterzeile. Die Liste liefert davon reichlich (leere `<tr>`).
+    if not titel or not _DATUM.match(pub) or not _DATUM.match(frist):
+        return None
+    teile = [hole("vordn"), titel, stelle, pub, frist]
     return {
         "quelle": "healyhudson",
+        "format": 2,                  # 1 = plattgemachte Zeile (bis 2026-08-14), 2 = Zellen
         "land": land,
-        "vergabeart": m.group("art"),
-        "beschreibung": m.group("rest").strip(),   # Titel + Verfahrensart + Vergabestelle
-        "pub": m.group("pub"),
-        "frist": m.group("frist"),
-        "schluessel": schluessel(land, zeile.strip()),
+        "verordnung": hole("vordn"),
+        "titel": titel,
+        "vergabestelle": stelle,
+        "pub": pub,
+        "frist": frist,
+        "schluessel": schluessel(land, teile),
         "erfasst_am": dt.date.today().isoformat(),
     }
 
@@ -132,8 +178,9 @@ def hole_land(kuerzel: str, pg, runden: int) -> dict:
             gemeldet = int(m.group(1).replace(".", "")) if m else 0
         zeilen = pg.evaluate(
             """() => [...document.querySelectorAll('tr')].slice(1)
-                 .map(r => r.innerText.replace(/\\s+/g, ' ').trim())
-                 .filter(x => x.length > 20)""")
+                 .map(r => [...r.querySelectorAll('td')]
+                             .map(c => c.innerText.replace(/\\s+/g, ' ').trim()))
+                 .filter(z => z.length > 1)""")
         neu = 0
         for z in zeilen:
             s = zerlege(z, kuerzel)
@@ -203,6 +250,205 @@ def lauf(kuerzel: list[str], runden: int, dry_run: bool) -> dict:
     return {"geholt": len(alle), "neu": len(frisch), "gemeldet": ges_gem}
 
 
+
+# --------------------------------------------------------------------------------- Silber
+
+def _datum(d: str):
+    """`TT.MM.JJJJ` → date. None statt Ausnahme: eine unlesbare Zelle darf den Lauf nicht
+    abbrechen, sie darf nur diesen einen Wert kosten."""
+    try:
+        return dt.datetime.strptime(d.strip(), "%d.%m.%Y").date()
+    except Exception:                                     # noqa: BLE001
+        return None
+
+
+def _regime_zeilen(nid: str, verordnung: str) -> list[dict]:
+    """Verordnung → `attributes`-Zeilen im Vokabular, das Gold schon liest.
+
+    Der Rohwert wird IMMER mitgeschrieben, auch wenn er sich nicht abbilden laesst
+    (`oVO`). Sonst waere die Zuordnung eine Einbahnstrasse und niemand koennte spaeter
+    nachsehen, was die Quelle wirklich gesagt hat.
+    """
+    v = (verordnung or "").strip()
+    zeilen = [{"notice_id": nid, "path": "HealyHudson.Vordn", "value": v}] if v else []
+    key = v.upper()
+    if key in _REGIME_DOMAIN:
+        zeilen.append({"notice_id": nid, "path": "ContractNotice.RegulatoryDomain",
+                       "value": _REGIME_DOMAIN[key]})
+    elif key in _REGIME_LEGIS:
+        zeilen.append({"notice_id": nid,
+                       "path": "ContractNotice.TenderingTerms.ProcurementLegislation"
+                               "DocumentReference.ID",
+                       "value": _REGIME_LEGIS[key]})
+    return zeilen
+
+
+def nach_silber(satz: dict, laender: list[str] | None = None) -> dict[str, list[dict]] | None:
+    r"""Ein Bronze-Satz → {tabelle: [zeilen]} im Silber-Schema. None bei Alt-Format.
+
+    **Der Namensraum.** `notice_id` bekommt das Praefix `hh_`. TED-IDs sind `\d+_\d{4}`,
+    DÖE nutzt UUIDs und reine Zahlen — ein Hash ohne Praefix koennte mit beiden kollidieren,
+    und eine Kollision im Notice-Namensraum ist kein Anzeigefehler, sondern verschmolzene
+    Vergaben. Das Praefix macht die Herkunft ausserdem im Rohwert lesbar.
+
+    **Kein CPV.** Die Liste fuehrt keinen. Diese Leads landen deshalb in „Ohne Kategorie" —
+    und genau dafuer gibt es seit heute die Kategorie-Wasserfall in `kategorie.py`, die aus
+    dem Titel ableitet. Erfundene CPV-Codes waeren die schlechtere Antwort.
+
+    **Mehrere Bundeslaender = bundesweit.** Die Quelle liefert je Land eine eigene Liste,
+    bundesweite Vergabestellen (BVVG, Max-Planck, EWN) stehen deshalb in mehreren. Gemessen
+    2026-08-14: 101 von 777 Saetzen. Ohne Zusammenfassung waere dieselbe Vergabe bis zu
+    viermal ein Lead — und die Dubletten-Firewall faengt es NICHT, weil sie Paare derselben
+    Schema-Generation ueberspringt (die Regel, die Geschwister-Lose entschaerft).
+
+    Statt eines neuen Begriffs wird die vorhandene Konvention bedient: `RealizedLocation.
+    Address.Region = anyw-cou` ist im Projekt bereits „an keinen Ort gebunden" und speist
+    `is_nationwide` — damit greifen Umkreis- und Regionssuche ohne eine Zeile Anpassung.
+    `performance_nuts` bleibt dann leer: ein Bundesland zu waehlen waere geraten.
+    """
+    if satz.get("format") != 2:          # Alt-Format ohne getrennte Spalten
+        return None
+    nid = f"hh_{satz['schluessel']}"
+    pub, frist = _datum(satz.get("pub", "")), _datum(satz.get("frist", ""))
+    laender = sorted(set(laender or [satz.get("land") or ""]) - {""})
+    nuts = NUTS1.get(laender[0]) if len(laender) == 1 else None
+    titel = (satz.get("titel") or "").strip()
+
+    notice = {
+        "notice_id": nid,
+        "publication_date": pub,
+        "country": "DE", "buyer_countries": ["DE"],
+        "year": pub.year if pub else None,
+        "month": pub.month if pub else None,
+        "schema_gen": "healyhudson",
+        "notice_kind": "cn",             # offene Ausschreibung mit Frist, kein Zuschlag
+        "language": "de",   # ISO-639-1 klein — `languages.normalize`, nicht "DE"
+        "title": titel,
+        "submission_deadline": frist,
+        # Der eigentliche Gewinn: das Bundesland steht ausdruecklich in der Quelle.
+        "performance_nuts": nuts,
+        "text_chars": len(titel),
+        # KEIN portal_url: die Trefferzeilen tragen nachweislich keinen Link (geprueft
+        # 2026-08-14, `a[href]` je Zeile leer). Eine geratene URL waere schlimmer als keine.
+    }
+    tabellen: dict[str, list[dict]] = {"notices": [notice]}
+
+    stelle = (satz.get("vergabestelle") or "").strip()
+    if stelle:
+        tabellen["notice_parties"] = [{
+            "notice_id": nid, "role": "buyer", "seq": 0,
+            "name": stelle, "country": "DE", "nuts": nuts,
+        }]
+    attr = _regime_zeilen(nid, satz.get("verordnung", ""))
+    if len(laender) > 1:
+        attr.append({"notice_id": nid,
+                     "path": "ContractNotice.ProcurementProject.RealizedLocation"
+                             ".Address.Region", "value": "anyw-cou"})
+        # Welche Laender es waren, bleibt nachlesbar — sonst waere „bundesweit" eine
+        # Behauptung ohne Beleg.
+        attr.append({"notice_id": nid, "path": "HealyHudson.Bundeslaender",
+                     "value": ",".join(laender)})
+    elif laender:
+        attr.append({"notice_id": nid, "path": "HealyHudson.Bundesland",
+                     "value": laender[0]})
+    if attr:
+        tabellen["attributes"] = attr
+    return tabellen
+
+
+def build_silber(country: str = "DE") -> dict:
+    """Bronze-JSONL → Silber-Parquet (hive: `silver/DE/<tabelle>/year=JJJJ/JJJJ-healyhudson.parquet`).
+
+    Dedup je `notice_id` ueber ALLE Monatsdateien (der spaetere Satz gewinnt) — die Liste
+    wuerfelt je Abruf, derselbe Vorgang taucht deshalb ueber Tage wieder auf.
+
+    Schreibt in dieselbe geteilte Ablage wie TED und DÖE. Die Dateinamen tragen
+    `-healyhudson`, damit ein erneuter Lauf nur die eigenen Dateien ersetzt und nie fremde.
+    """
+    from collections import defaultdict
+
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    from . import model
+
+    quelle = ROOT / "data" / "raw_healyhudson"
+    dateien = sorted(quelle.glob("*.jsonl"))
+    if not dateien:
+        print("healyhudson Silber: kein Bronze gefunden.")
+        return {"notices": 0, "alt_format": 0}
+
+    # Erst nach INHALT gruppieren, dann abbilden. Der Bronze-Schluessel traegt das
+    # Bundesland — dieselbe bundesweite Vergabe hat deshalb bis zu sechzehn verschiedene
+    # Schluessel. Wer je Schluessel abbildet, baut sie sechzehnmal.
+    inhalte: dict[tuple, dict] = {}
+    laender_je: dict[tuple, set[str]] = {}
+    alt = gelesen = 0
+    for f in dateien:
+        for line in f.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            try:
+                satz = json.loads(line)
+            except Exception:                             # noqa: BLE001
+                continue
+            gelesen += 1
+            if satz.get("format") != 2:
+                alt += 1
+                continue
+            k = (satz.get("verordnung"), satz.get("titel"), satz.get("vergabestelle"),
+                 satz.get("pub"), satz.get("frist"))
+            # Der zuerst gesehene Satz gewinnt — nur sein `schluessel` wird zur notice_id.
+            # Sortierte Dateiliste + sortierte Laender machen das reproduzierbar.
+            inhalte.setdefault(k, satz)
+            laender_je.setdefault(k, set()).add(satz.get("land") or "")
+
+    je_id: dict[str, dict[str, list[dict]]] = {}
+    mehrfach = 0
+    for k, satz in inhalte.items():
+        lg = sorted(laender_je[k] - {""})
+        if len(lg) > 1:
+            mehrfach += 1
+        t = nach_silber(satz, lg)
+        if t is None:
+            continue
+        je_id[t["notices"][0]["notice_id"]] = t
+
+    eimer: dict[str, dict[int, list[dict]]] = defaultdict(lambda: defaultdict(list))
+    ohne_jahr = 0
+    for t in je_id.values():
+        jahr = t["notices"][0].get("year")
+        if not jahr:
+            ohne_jahr += 1
+            continue          # ohne Publikationsdatum keine hive-Partition — s. Bericht
+        for tabelle, zeilen in t.items():
+            eimer[tabelle][jahr].extend(zeilen)
+
+    ziel = ROOT / "data" / "silver" / country
+    for tabelle, je_jahr in eimer.items():
+        schema = model.TABLES[tabelle]
+        for jahr, zeilen in je_jahr.items():
+            out = ziel / tabelle / f"year={jahr}" / f"{jahr}-healyhudson.parquet"
+            out.parent.mkdir(parents=True, exist_ok=True)
+            arrow = pa.Table.from_pylist(zeilen, schema=schema)
+            tmp = out.with_suffix(".part")
+            pq.write_table(arrow, tmp, compression="zstd")
+            tmp.replace(out)
+
+    n = sum(len(v) for v in eimer.get("notices", {}).values())
+    print(f"healyhudson Silber: {n} Notices → {len(eimer)} Tabellen "
+          f"({gelesen} Bronze-Zeilen gelesen)")
+    if mehrfach:
+        print(f"  {mehrfach} Vergaben standen in mehreren Bundeslaendern → als bundesweit "
+              f"zusammengefasst (sonst waeren sie mehrfach Lead geworden)")
+    # Was NICHT durchkam, wird benannt statt verschwiegen.
+    if alt:
+        print(f"  ⚠ {alt} Zeilen im Alt-Format (ohne getrennte Spalten) uebersprungen — "
+              f"sie tragen keine Vergabestelle. Neu holen: --alle")
+    if ohne_jahr:
+        print(f"  ⚠ {ohne_jahr} ohne lesbares Publikationsdatum uebersprungen.")
+    return {"notices": n, "alt_format": alt, "ohne_jahr": ohne_jahr}
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     p.add_argument("--laender", default="", help="Kürzel, z. B. BY,HH,NW")
@@ -210,7 +456,12 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--runden", type=int, default=10,
                    help=f"Abrufe je Land (max {_MAX_RUNDEN}); die Liste würfelt je Abruf")
     p.add_argument("--dry-run", action="store_true")
+    p.add_argument("--silber", action="store_true",
+                   help="Bronze → Silber (ohne Abruf, wenn --laender/--alle fehlen)")
     a = p.parse_args(argv)
+    if a.silber and not (a.alle or a.laender):
+        build_silber()
+        return 0
     if a.alle:
         k = list(LAENDER)
     else:

@@ -383,14 +383,29 @@ def test_netserver_schluessel_ueberlebt_fristverlaengerung():
 
 def test_netserver_ist_in_der_dubletten_firewall_bekannt():
     """Eine Quelle, die die Firewall nicht kennt, laeuft an ihr vorbei — genau das, wogegen
-    sie gebaut wurde."""
+    sie gebaut wurde.
+
+    **Warum hier nicht mehr `== max()` steht** (geaendert 2026-08-14): der Test hielt fest,
+    dass netserver das aermste Satzbild hat, und stand damit richtig — bis `healyhudson`
+    dazukam. Deren Trefferliste hat weder Portal-URL noch CPV, netserver hat beides; also
+    steht healyhudson jetzt hinter netserver, und `== max()` wurde rot.
+
+    Die Zusage, die wirklich zaehlt, ist eine andere: **die duennen Listen-Quellen duerfen
+    nie einer echten Bekanntmachung vorgezogen werden.** Genau das wird jetzt geprueft.
+    `== max()` pruefte nur, wer der Letzte ist — eine Aussage, die jede neue duenne Quelle
+    kippt, ohne dass etwas kaputt waere.
+    """
     import sys
     if str(ROOT) not in sys.path:
         sys.path.insert(0, str(ROOT))
     from govisor import dedupe as ded          # Paketmodul: dedupe nutzt relative Importe
     assert "netserver" in ded.QUELLEN_RANG
-    # Aermstes Satzbild im Bestand → darf niemandem als Anreicherungsquelle vorgezogen werden.
-    assert ded.QUELLEN_RANG["netserver"] == max(ded.QUELLEN_RANG.values())
+    # Die duennen Listen-Quellen stehen hinter JEDER Quelle mit vollem Satzbild.
+    voll = max(ded.QUELLEN_RANG[q] for q in ("eforms", "legacy", "ojs", "text",
+                                             "doe", "simap", "atverg"))
+    for duenn in ("netserver", "healyhudson"):
+        assert ded.QUELLEN_RANG[duenn] > voll, (
+            f"{duenn} darf keiner echten Bekanntmachung vorgezogen werden")
 
 
 def test_lead_bau_verlangt_keinen_cpv():

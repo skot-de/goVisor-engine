@@ -89,8 +89,14 @@ SEED_DECKEL = 5000         # zu häufige Wörter taugen nicht als Einstieg (geme
 # Bestand hat: kein CPV (ausser der Ableitung aus VOB/A), kein Wert, keine Beschreibung,
 # bei Bremen nicht einmal die Vergabestelle. Als Anreicherungs-ZIEL ist er damit richtig —
 # als Quelle fehlender Felder taugt er kaum.
+# `healyhudson` steht ganz hinten und aus demselben Grund wie netserver: die Trefferliste
+# gibt Titel, Vergabestelle, Verordnung und zwei Daten her — keinen CPV, keinen Wert, keine
+# Beschreibung, nicht einmal einen Link zum Vorgang. Als Anreicherungs-ZIEL richtig, als
+# Feldquelle wertlos. Ausdruecklich eingetragen statt auf den `.get(..., 9)`-Vorgabewert zu
+# vertrauen: der wuerde dasselbe tun, aber niemand koennte lesen, dass es Absicht war.
 QUELLEN_RANG = {"eforms": 0, "legacy": 1, "ojs": 2, "text": 3,
-                "doe": 4, "simap": 4, "atverg": 4, "dtvp": 5, "netserver": 6}
+                "doe": 4, "simap": 4, "atverg": 4, "dtvp": 5, "netserver": 6,
+                "healyhudson": 7}
 
 _STOPP = frozenset("""der die das und oder von für mit im in am an auf zu zur zum des dem den
 eines einer eine ein als bei aus über unter nach vor durch gemäss gemäß sowie inkl inklusive
