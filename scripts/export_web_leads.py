@@ -679,6 +679,32 @@ def export_branche(key):
             # Anzeige-Labels setzt das Frontend über lib/labels.js (applyLabels) — so bleibt
             # die JSON sprachfrei und eine 2. Sprache ist ein Frontend-Katalog, kein Re-Export.
             "id": r["lead_id"], "branche": key, "src": src,
+            # ZUSAETZLICHE HINWEISE (`web/lib/hinweise.ts`). Die Komponente war gebaut, im
+            # Detail-Panel eingehaengt — und rendete IMMER nichts, weil keines dieser Felder
+            # im JSON stand. Die Werte lagen die ganze Zeit in der Abfrage; es fehlte nur
+            # diese Zuweisung. Wer ein Signal ergaenzt, ergaenzt HIER eine Zeile — die
+            # Komponente muss nie wissen, welche die Pipeline gerade kann.
+            #
+            # Nur setzen, wo vorhanden: ein fehlendes Feld erzeugt schlicht keinen Hinweis,
+            # ein leeres erzeugte einen leeren.
+            **({"deadlineSource": g("frist_source")} if g("frist_source") else {}),
+            **({"deadlineAktuell": str(g("frist_aktuell"))} if g("frist_aktuell") else {}),
+            **({"deadlineVeroeffentlicht": str(g("frist_veroeffentlicht"))}
+               if g("frist_veroeffentlicht") else {}),
+            # `portale` kommt als Array — `if g("portale")` waere hier kein Wahrheitswert,
+            # sondern ein ValueError („truth value of an array is ambiguous").
+            **({"portale": [str(x) for x in g("portale")]}
+               if g("portale") is not None and len(g("portale")) > 1 else {}),
+            # Herkunft der Kategorie. `cpv` = veroeffentlicht (kein Hinweis noetig),
+            # `modell` = aus dem Titel abgeleitet — DAS aendert das Vertrauen in den Filter
+            # und gehoert deshalb sichtbar gemacht.
+            **({"kategorieQuelle": g("category_source")}
+               if g("category_source") in ("modell", "zwilling") else {}),
+            # Amtsinhaber: die ZYKLEN sind der Massstab, nicht die Jahre (ein einzelner
+            # langer Vertrag ist kein „etablierter" Amtsinhaber, s. hinweise.ts).
+            **({"amtsinhaberZyklen": int(pred_chain)} if pred_chain else {}),
+            **({"amtsinhaberSeitJahre": TODAY.year - int(g("pred_since"))}
+               if g("pred_since") and TODAY.year > int(g("pred_since")) else {}),
             "titel": g("title") or "(ohne Titel)",
             "buyer": g("buyer_name") or "", "buyerShort": g("buyer_name") or "",
             "beschreibung": g("description") or "",

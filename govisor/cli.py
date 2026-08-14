@@ -103,6 +103,12 @@ def build_parser() -> argparse.ArgumentParser:
     ix = sub.add_parser("index-docs", help="Vergabeunterlagen-ZIPs → Volltext-Index (doc_text.parquet)")
     ix.add_argument("--country", default="DE")
     ix.add_argument("--data-dir", default="data")
+    # Der Docstring von `build_index` verlangt einen Neuaufbau nach JEDER Parser-Aenderung
+    # („sonst traegt der Index halb altes, halb neues Verhalten — und das faellt niemandem
+    # auf"). Die Funktion konnte das immer; die CLI bot es nicht an, man musste also Python
+    # schreiben. Eine Pflicht, die nur ueber einen Umweg erfuellbar ist, wird nicht erfuellt.
+    ix.add_argument("--neu-aufbauen", action="store_true",
+                    help="alles neu entpacken (PFLICHT nach Parser-Aenderungen)")
 
     sg = sub.add_parser("signals-docs", help="Volltext → strukturierte Lead-Signale (doc_signals.parquet)")
     sg.add_argument("--country", default="DE")
@@ -378,7 +384,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "index-docs":
         from . import docpipe
         cfg = Config(countries=(args.country,), data_dir=args.data_dir)
-        docpipe.build_index(cfg, country=args.country)
+        docpipe.build_index(cfg, country=args.country, neu_aufbauen=args.neu_aufbauen)
         return 0
     if args.command == "signals-docs":
         from . import docsignals

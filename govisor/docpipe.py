@@ -26,6 +26,7 @@ from . import db as _db
 from .docupload import MAX_PACKAGE_BYTES, MAX_ZIP_DEPTH, check_zip_bomb
 
 _MAX_TEXT = 2_000_000   # pro Datei kappen (Index soll durchsuchbar bleiben, nicht Bücher speichern)
+_MAX_TEXT_ARCHIV = 30_000_000   # und pro ARCHIV, s. Begründung in `process_zip`
 
 
 def _pdf_text(data: bytes) -> str:
@@ -98,8 +99,63 @@ _EXTRACT = {
 _KNOWN_NOEXTRACT = {".doc", ".xls", ".ppt", ".rtf", ".odt", ".p7s", ".zip"}
 
 
-def iter_docs(zip_bytes: bytes, prefix: str = "", depth: int = 0, _budget: list | None = None):
+# GROESSEN-SPERRE JE DATEI. Gemessen 2026-08-14 an echten Paketen (je 6 Proben):
+#
+#   PDF-Groesse   Zeichen/MB   bildrein   Ø Sekunden
+#   0–1 MB            34.246      0/6            0,1
+#   1–5 MB           150.970      0/6            4,3     ← hier steckt der Inhalt
+#   5–20 MB              447      1/6           35,3
+#   20–60 MB          12.916      0/6          182,0
+#   >60 MB             2.196      3/6          600,3     ← zehn Minuten je Datei
+#
+# Die grossen Dateien heissen „Fotodokumentation_Drohnenbefliegung", „Fotoduku_Drohne",
+# „Parkflaechen Fotos". Sie sind Bilderstrecken: die HAELFTE liefert gar keinen Text, und
+# die Textdichte ist 69× schlechter als bei 1–5-MB-Dateien.
+#
+# Der Zeitanteil ist der eigentliche Schaden. `ZEIT_JE_ARCHIV` steht auf 120 Sekunden —
+# EINE grosse PDF sprengt das um das Fuenffache, und dann liefert das GANZE Archiv nichts
+# (`status='zeitlimit'`). Genau so entstand der 106-Minuten-Haenger, der den Tageslauf
+# blockierte. Eine Sperre je ARCHIV bestraft die 507 anderen Dateien mit; eine Sperre je
+# DATEI holt aus demselben Archiv alles Brauchbare und laesst nur den Brocken liegen.
+#
+# WO DIE GRENZE LIEGT — nachgemessen, weil 40 MB ein Bauchwert war. Jedes Archiv in einem
+# EIGENEN Prozess (`ru_maxrss` ist ein Hochwasserstand und sinkt nie; mehrere Archive in
+# einem Prozess ergeben eine Zahl, die alle vermischt — der Fehler kostete den ersten Anlauf):
+#
+#   Archiv   Grenze     Sek.       RSS      Zeichen
+#   636 MB     5 MB       11     333 MB      958.936
+#   636 MB    10 MB       22     752 MB    1.127.833
+#   636 MB    20 MB      100   3.013 MB    1.692.555
+#   636 MB    40 MB      173   6.370 MB    2.293.333
+#   495 MB    10 MB      265   1.162 MB    3.461.594
+#   495 MB    20 MB      359   3.254 MB    3.562.982
+#   495 MB    40 MB      486   8.639 MB    3.633.037
+#
+# Beim 495-MB-Paket kostet der Sprung von 10 auf 40 MB das SIEBENFACHE an Speicher fuer
+# 5 % mehr Text. Bei acht Arbeitern waeren 40 MB im schlechtesten Fall ueber 50 GB auf einer
+# 16-GB-Maschine — schlimmer als der Zustand, der heute zweimal zum Absturz fuehrte.
+#
+# 10 MB haelt einen Arbeiter unter ~1,2 GB und holt trotzdem den Grossteil des Textes. Der
+# Speicher ist dabei NICHT streng monoton (495 MB: 5er-Grenze 1.512 MB, 10er 1.162 MB) — die
+# PDF-Bibliothek alloziert je Dokument sehr unterschiedlich. Die Zahlen sind Groessen-
+# ordnungen, keine Praezisionswerte.
+#
+# ⚠ MARKIERT, NICHT VERWORFEN: uebersprungene Dateien bekommen `status='datei_zu_gross'`.
+MAX_DATEI_MB = int(os.environ.get("GOVISOR_MAX_DATEI_MB", "10"))
+
+
+def iter_docs(quelle, prefix: str = "", depth: int = 0, _budget: list | None = None):
     """(pfad, ext, bytes) je Datei — rekursiv durch verschachtelte ZIPs.
+
+    `quelle` ist ein PFAD oder ein Byte-Blob. Der Pfad ist der Normalfall und der Grund
+    fuer diese Unterscheidung: `zipfile` liest dann direkt von der Platte und braucht nur
+    den jeweils entpackten Eintrag im Speicher. Vorher wurde das Archiv erst komplett
+    gelesen (636 MB) und dann fuer `io.BytesIO` noch einmal kopiert — 1,3 GB, bevor die
+    erste Datei entpackt war. Bytes bleiben moeglich, weil verschachtelte ZIPs nur so
+    vorliegen.
+
+    Zu grosse EINZELDATEIEN werden uebersprungen und als solche gemeldet (s. `MAX_DATEI_MB`
+    oben) — nicht stillschweigend, sondern als eigener Eintrag mit `ext=None`.
 
     ZIP-Bomben-Schutz (§4.2, Sicherheits-Härtung): pro Eintrag wird die DEKLARIERTE unkomprimierte
     Größe (`ZipInfo.file_size`) GEGEN die komprimierte geprüft, BEVOR entpackt wird — ein verdächtiges
@@ -112,8 +168,9 @@ def iter_docs(zip_bytes: bytes, prefix: str = "", depth: int = 0, _budget: list 
     if _budget is None:
         _budget = [MAX_PACKAGE_BYTES]        # verbleibendes unkomprimiertes Byte-Budget (mutierbar über die Rekursion)
     try:
-        zf = zipfile.ZipFile(io.BytesIO(zip_bytes))
-    except zipfile.BadZipFile:
+        zf = zipfile.ZipFile(quelle if isinstance(quelle, (str, Path))
+                             else io.BytesIO(quelle))
+    except (zipfile.BadZipFile, OSError):
         return
     with zf:
         for info in zf.infolist():
@@ -126,6 +183,11 @@ def iter_docs(zip_bytes: bytes, prefix: str = "", depth: int = 0, _budget: list 
                 return                       # Budget erschöpft → Extraktion abbrechen
             name = info.filename
             ext = Path(name).suffix.lower()
+            # Der Brocken wird gar nicht erst entpackt — das spart Speicher UND die
+            # Minuten, die seine Text-Extraktion kosten wuerde.
+            if MAX_DATEI_MB and info.file_size > MAX_DATEI_MB * 1e6:
+                yield prefix + name, None, info.file_size
+                continue
             try:
                 data = zf.read(info)
             except Exception:
@@ -140,15 +202,26 @@ def iter_docs(zip_bytes: bytes, prefix: str = "", depth: int = 0, _budget: list 
 def process_zip(path: Path) -> list[dict]:
     """Ein Vergabeunterlagen-ZIP → Zeilen [{file, filetype, n_chars, text, status}]."""
     rows = []
-    try:
-        blob = Path(path).read_bytes()
-    except Exception:
-        return rows
-    for name, ext, data in iter_docs(blob):
+    # TEXT-BUDGET JE ARCHIV. `_MAX_TEXT` deckelt die EINZELNE Datei auf 2 MB — ein Archiv
+    # mit 196 Dateien darf daraus trotzdem 392 MB machen, und die reist als Pickle zurueck
+    # zum Elternprozess. Genau diese Summe war der Rest des 1,95-GB-Arbeiters.
+    #
+    # 30 MB reichen fuer eine durchsuchbare Ausschreibung um Groessenordnungen; wer mehr
+    # braucht, liest das Original. Was nicht mehr hineinpasst, wird GEMELDET, nicht
+    # verschwiegen (`status='budget'`).
+    rest = _MAX_TEXT_ARCHIV
+    for name, ext, data in iter_docs(Path(path)):
+        if ext is None:                       # zu grosse Einzeldatei, nicht entpackt
+            rows.append({"file": name, "filetype": Path(name).suffix.lower(),
+                         "n_chars": 0, "text": "", "status": "datei_zu_gross"})
+            continue
         fn = _EXTRACT.get(ext)
         if fn:
             text = (fn(data) or "")[:_MAX_TEXT]
             status = "ok" if text.strip() else ("image_only" if ext == ".pdf" else "empty")
+            if len(text) > rest:
+                text, status = text[:max(rest, 0)], "budget"
+            rest -= len(text)
         else:
             text = ""
             status = "unsupported" if ext in _KNOWN_NOEXTRACT else "unknown_type"
@@ -164,7 +237,14 @@ def process_zip(path: Path) -> list[dict]:
 # Der Wecker steht bewusst IM Arbeiter und nicht beim Verteiler: ein Pool kann eine bereits
 # laufende Aufgabe nicht abbrechen — `future.cancel()` greift nur, solange sie wartet. Nur
 # der Arbeiter selbst kann sich unterbrechen.
-ZEIT_JE_ARCHIV = 120
+# Angehoben von 120 s (2026-08-14), nachdem die Ursache vermessen war: die 120 s waren die
+# Notbremse gegen den 106-Minuten-Haenger, und dafuer taugten sie. Sie trafen aber auch jedes
+# ehrlich grosse Archiv — eine PDF von 20–60 MB braucht gemessen 182 s, ein Archiv mit dreien
+# davon lief also ins Limit und lieferte NICHTS, obwohl jede einzelne Datei brauchbar war.
+#
+# Der eigentliche Zeitfresser (>60-MB-Dateien, Ø 600 s) faellt jetzt schon vorher unter
+# `MAX_DATEI_MB`. Das Limit bleibt als Notbremse gegen Endlosschleifen, aber grosszuegig.
+ZEIT_JE_ARCHIV = int(os.environ.get("GOVISOR_ZEIT_JE_ARCHIV", "900"))
 
 # GROESSEN-SPERRE. `process_zip` liest das Archiv KOMPLETT in den Speicher und entpackt
 # verschachtelte ZIPs mit hinein — aus 200 MB auf der Platte wird ein Vielfaches im RAM.
@@ -183,7 +263,40 @@ ZEIT_JE_ARCHIV = 120
 # `status='zu_gross'` und ist damit zaehlbar — die Projektregel „markieren statt filtern".
 # Wer die 504 will, hebt die Schwelle oder baut `process_zip` auf stroemendes Entpacken um
 # (eigenes Ticket; das ist der saubere Weg, aber der teure).
-MAX_ARCHIV_MB = int(os.environ.get("GOVISOR_MAX_ARCHIV_MB", "50"))
+# ABGESCHALTET (Vorgabe 0) am 2026-08-14. Die Sperre war richtig, solange `process_zip` das
+# ganze Archiv in den Speicher las — das tut sie nicht mehr (`iter_docs` liest vom Pfad).
+# Speicher und Zeit werden jetzt dort begrenzt, wo sie entstehen: je Datei (`MAX_DATEI_MB`)
+# und je Archiv-Textmenge (`_MAX_TEXT_ARCHIV`). Eine Grenze auf die ARCHIV-Groesse bestrafte
+# 507 brauchbare Dateien fuer den einen Brocken, der neben ihnen lag.
+#
+# Wieder einschalten: `GOVISOR_MAX_ARCHIV_MB=50`.
+MAX_ARCHIV_MB = int(os.environ.get("GOVISOR_MAX_ARCHIV_MB", "0"))
+
+
+# ═══ SPEICHER: ZWEI SICHERUNGEN GEBAUT, BEIDE GEMESSEN WIRKUNGSLOS (2026-08-14) ═══
+#
+# Der Neuaufbau lief mit `MAX_DATEI_MB=10` — und ein EINZELNER Arbeiter stand bei 6,5 GB,
+# bei 1,3 GB freiem RAM. Abgebrochen, sonst der dritte Rechnerabsturz des Tages.
+#
+# Versuch 1 — `RLIMIT_AS`: auf macOS wirkungslos. Gemessen lief eine 900-MB-Allokation
+#   unter einer 500-MB-Grenze anstandslos durch; der Kernel setzt es dort nicht durch.
+# Versuch 2 — Wachthread + SIGALRM (derselbe Mechanismus, der das ZEITlimit traegt):
+#   loest aus, aber die `MemoryError` wird tief in der PDF-Bibliothek von einem internen
+#   `except Exception` geschluckt. Gemessen: 2,15 GB bei 0,35 GB Grenze, Status `ok`.
+#
+# Beide wurden wieder ENTFERNT. Eine Sicherung, die nicht ausloest, ist schlimmer als keine:
+# sie stiftet falsches Vertrauen und man faehrt mit acht Arbeitern los.
+#
+# WAS DARAUS FOLGT — und das ist die eigentliche Erkenntnis: Speicher laesst sich IN diesem
+# Prozess nicht begrenzen. Wer ihn wirklich begrenzen will, muss jedes Archiv in einem
+# EIGENEN kurzlebigen Prozess verarbeiten, den der Elternprozess ueberwacht und notfalls
+# hart beendet — das Betriebssystem ist die einzige Instanz, die die Grenze durchsetzen
+# kann. Das ist ein eigener Umbau (der Pool haelt langlebige Arbeiter; ein getoeteter
+# Arbeiter bringt `mp.Pool` zum Haengen), kein Nebenbei.
+#
+# BIS DAHIN gilt: `MAX_DATEI_MB` klein halten und die Arbeiterzahl niedrig. Das ist eine
+# Wette auf die Verteilung, keine Garantie — und sie ist hier ausdruecklich als solche
+# benannt, damit niemand sie fuer eine Sicherung haelt.
 
 
 def _verarbeite_archiv(auftrag):
@@ -216,10 +329,15 @@ def _verarbeite_archiv(auftrag):
         alt = None                      # kein SIGALRM (Windows) — dann eben ohne Limit
     try:
         return [{"notice_id": notice_id, "archive": zp.name, **r} for r in process_zip(zp)]
-    except Exception as e:
+    except (Exception, MemoryError) as e:
+        if isinstance(e, TimeoutError):
+            grund = "zeitlimit"
+        elif isinstance(e, MemoryError):
+            grund = "speicher"      # Grenze gegriffen — gezaehlt, nicht verschwiegen
+        else:
+            grund = "fehler"
         return [{"notice_id": notice_id, "archive": zp.name, "file": "", "filetype": "",
-                 "n_chars": 0, "status": "zeitlimit" if isinstance(e, TimeoutError) else "fehler",
-                 "text": ""}]
+                 "n_chars": 0, "status": grund, "text": ""}]
     finally:
         try:
             signal.alarm(0)
