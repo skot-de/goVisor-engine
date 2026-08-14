@@ -484,3 +484,46 @@ def test_docfetch_ueberspringt_fristtag_und_open_house():
         "`>=` laesst den Fristtag wieder zu")
     assert "open_house" in kern, (
         "Open-House-Verfahren wieder im Abruf — dort gibt es die Unterlagen nur mit Teilnahme")
+
+
+def _sub():
+    import sys
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from govisor import subreport
+    return subreport
+
+
+def test_subreport_leitet_die_vergabeseite_aus_beiden_url_formen_ab():
+    """985 offene subreport-Leads liegen in ZWEI URL-Formen vor.
+
+    673 zeigen auf die Vergabeseite, 312 direkt auf die Bekanntmachungs-PDF. Ein Aufruf der
+    zweiten startet einen Download statt eine Seite („Download is starting") — daran
+    scheiterte der erste Lauf. Die ELVIS-Kennung steht aber in der URL. Es sind exakt die
+    312, die in der Portal-Landkarte als „subreport-elvis, Bot-Sperre" gefuehrt wurden:
+    keine Sperre, eine zweite URL-Form.
+    """
+    S = _sub()
+    assert S.vergabeseite("https://www.subreport.de/E74857938") == \
+        "https://www.subreport.de/E74857938"
+    assert S.vergabeseite(
+        "https://www.subreport-elvis.de/download/bund/E63477415/1785907953466/bekanntmachung.pdf"
+    ) == "https://www.subreport.de/E63477415"
+    assert S.vergabeseite("https://www.subreport.de/ohne-kennung") is None
+    assert S.vergabeseite(None) is None
+
+
+def test_subreport_holt_listen_und_gibt_das_auch_so_an():
+    """Der Connector laedt KEINE Vergabeunterlagen — der Download reagiert ohne Anmeldung
+    nicht (drei Vergaben, alle Knopfpositionen geprueft). Genau ein Knopf liefert, und der
+    traegt die Bekanntmachung („unverbindliche Darstellung der eForms-formatierten
+    Bekanntmachung"), die wir laengst ueber TED haben.
+
+    Der Status muss das sagen. Ein `downloaded` hier waere die dritte Fehldeutung derselben
+    Sorte an einem Tag — nach „gated", „503" und „Bot-Sperre".
+    """
+    quelle = (ROOT / "govisor" / "subreport.py").read_text(encoding="utf-8")
+    assert '"nur_liste"' in quelle, "Status muss ausweisen, dass nur die LISTE vorliegt"
+    assert "accept_downloads" not in quelle, (
+        "der Connector darf keine Downloads annehmen — er liest die oeffentliche Liste")
+    assert "doctypes" in quelle, "ohne Typ-Klassifikation ist die Liste nur ein Haufen Namen"
