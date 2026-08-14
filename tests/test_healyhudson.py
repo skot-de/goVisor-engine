@@ -174,3 +174,59 @@ def test_firewall_kennt_die_quelle():
     from govisor.dedupe import QUELLEN_RANG
     assert "healyhudson" in QUELLEN_RANG
     assert QUELLEN_RANG["healyhudson"] > QUELLEN_RANG["doe"]
+
+
+# ── Hinweis-Chips (UI-Vertrag) ────────────────────────────────────────────────────────
+#
+# Diese drei Tests stehen hier und nicht bei den Daten, weil sie eine Zusage an die
+# OBERFLAECHE festhalten. Sie pruefen Quelltext, nicht Verhalten — der Mehrfach-Fall (zwei
+# Chips, Auswahl umschalten) liess sich am 2026-08-15 im Browser nicht erreichen: kein Lead
+# in den obersten 14 eines Grundraums traegt zwei Hinweise. Gesehen ist er also NICHT; was
+# hier steht, ist die Absicht, nicht der Beweis.
+
+def _hinweise_tsx() -> str:
+    return (ROOT / "web" / "components" / "explorer" / "Hinweise.tsx").read_text(encoding="utf-8")
+
+
+def test_chips_haben_keinen_deckel_mehr():
+    """Als Kaesten war ein Deckel bei vier noetig (sonst Tapete). Als Chips passen alle in
+    eine Zeile — ein Aufklapper fuer etwas, das nebeneinander steht, waere nur ein Klick.
+
+    Geprueft wird, dass die abgeschaffte Mechanik nicht zurueckkommt: `teile`/`SICHTBAR`
+    sind aus `lib/hinweise.ts` entfernt, und wer sie hier wieder importiert, hat den Umbau
+    halb rueckgaengig gemacht.
+    """
+    quelle = _hinweise_tsx()
+    assert "teile" not in quelle and "SICHTBAR" not in quelle
+    lib = (ROOT / "web" / "lib" / "hinweise.ts").read_text(encoding="utf-8")
+    assert "export const SICHTBAR" not in lib
+    assert "export function teile" not in lib
+
+
+def test_beleg_bleibt_sichtbar_nicht_nur_im_tooltip():
+    """Der Kern des Umbaus, und der Punkt, an dem er haette schiefgehen koennen.
+
+    „Nur Label" macht aus jedem Hinweis eine Behauptung — „Frist verlaengert", sagt wer?
+    Der Beleg wandert deshalb unter die Chips, statt zu verschwinden. Ein `title`-Attribut
+    allein reichte NICHT: es ist auf Beruehrungsgeraeten unerreichbar und wird beim Lesen
+    uebersprungen.
+    """
+    quelle = _hinweise_tsx()
+    assert 'className="hinweis-beleg"' in quelle, "die Belegzeile muss gerendert werden"
+    assert "title={h.beleg}" in quelle, "zusaetzlich am Chip, fuer Maus und Screenreader"
+
+
+def test_belegzeile_haelt_ihre_hoehe():
+    """Ohne feste Hoehe springt das Layout bei jedem Chip-Klick, weil die Belegsaetze
+    unterschiedlich lang sind. Springen liest sich als Fehler."""
+    css = (ROOT / "web" / "app" / "explorer.css").read_text(encoding="utf-8")
+    assert "min-height" in css.split(".hinweis-beleg")[1].split("}")[0]
+
+
+def test_hinweise_stehen_buendig_zum_uebrigen_panel():
+    """Gemessen 2026-08-15: `.detail` beginnt bei x=56, die Inhaltskarten bei x=88. Ohne
+    Einzug klebten Chips und Belegzeile an der Panelkante — 32 px links von allem anderen —
+    und der Aktiv-Ring wurde von `overflow-x: auto` abgeschnitten."""
+    css = (ROOT / "web" / "app" / "explorer.css").read_text(encoding="utf-8")
+    block = css.split(".hinweise-block {")[1].split("}")[0]
+    assert "padding" in block and "32px" in block

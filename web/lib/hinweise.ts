@@ -19,6 +19,10 @@
  * **Der Beleg ist Pflicht.** Jeder Hinweis trägt den einen Satz, der ihn überprüfbar macht —
  * dieselbe Logik wie bei `deadline_source` und `band_source`: das Produkt behauptet nichts,
  * es zeigt, woher es etwas weiß. Ein Hinweis ohne Beleg ist eine Behauptung.
+ *
+ * Wo der Beleg STEHT, entscheidet die Darstellung (seit 2026-08-15 eine feste Zeile unter
+ * den Chips, s. `Hinweise.tsx`). Dass es ihn gibt, entscheidet diese Datei — ein Label ohne
+ * Satz darf hier gar nicht erst entstehen.
  */
 
 /** Steuert Rangfolge und Farbe. Nicht kosmetisch: die Reihenfolge ist die Aussage. */
@@ -63,25 +67,19 @@ export type Hinweis = {
   beleg: string;
 };
 
-/**
- * Höchstens so viele stehen offen, der Rest kommt hinter „mehr".
+/* `SICHTBAR` und `teile()` sind am 2026-08-15 entfallen. Sie deckelten die Liste auf vier
+ * Einträge und schoben den Rest hinter ein „mehr" — sinnvoll, solange jeder Hinweis ein
+ * Kasten mit Belegsatz war. Als Chips passen alle in eine Zeile; ein Aufklapper für etwas,
+ * das ohnehin nebeneinander steht, wäre nur ein zusätzlicher Klick.
  *
- * Vier ist keine runde Zahl, sondern die Grenze, ab der eine Liste zur Tapete wird. Wer
- * zwölf Labels sieht, liest keins — und dann ist der teuerste Hinweis (die verlängerte
- * Frist) genauso unsichtbar wie ohne die ganze Spalte.
- */
-export const SICHTBAR = 4;
+ * Sie stehen bewusst NICHT als ungenutzte Exporte weiter hier: eine Funktion, die eine
+ * abgeschaffte Mechanik beschreibt, lädt dazu ein, sie wieder einzubauen. */
 
 const RANG: Record<HinweisArt, number> = { warnung: 0, chance: 1, herkunft: 2 };
 
 /** Sortiert nach Belegkraft der Art, innerhalb der Art stabil (Eingabereihenfolge). */
 export function sortiere(hinweise: Hinweis[]): Hinweis[] {
   return [...hinweise].sort((a, b) => RANG[a.art] - RANG[b.art]);
-}
-
-export function teile(hinweise: Hinweis[]): { offen: Hinweis[]; versteckt: Hinweis[] } {
-  const s = sortiere(hinweise);
-  return { offen: s.slice(0, SICHTBAR), versteckt: s.slice(SICHTBAR) };
 }
 
 /**

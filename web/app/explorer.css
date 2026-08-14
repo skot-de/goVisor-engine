@@ -1937,22 +1937,39 @@ a.lb-kachel{text-decoration:none}
    Farbe trägt Bedeutung, nicht Dekoration: Bernstein = da stimmt etwas nicht mit dem, was
    anderswo steht (zuerst lesen). Grün = ein Grund, eher zu bieten. Grau = woher wir es
    wissen. Wer die Farben umsortiert, ändert die Aussage. */
-.hinweise-block { margin: 1rem 0; }
-.hinweise-titel { font-size: .8rem; text-transform: uppercase; letter-spacing: .05em;
-                  color: var(--muted, #6b7280); margin: 0 0 .5rem; }
-.hinweise-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: .4rem; }
-.hinweis { display: grid; grid-template-columns: 1.25rem 1fr; gap: .5rem;
-           padding: .5rem .6rem; border-radius: .375rem; border: 1px solid transparent; }
-.hinweis--warnung  { background: #fffbeb; border-color: #fde68a; }
-.hinweis--chance   { background: #f0fdf4; border-color: #bbf7d0; }
-.hinweis--herkunft { background: var(--surface-2, #f8fafc); border-color: var(--line, #e5e7eb); }
-.hinweis-symbol { line-height: 1.35; }
-.hinweis--warnung .hinweis-symbol { color: #b45309; }
-.hinweis--chance  .hinweis-symbol { color: #15803d; }
-.hinweis--herkunft .hinweis-symbol { color: var(--muted, #6b7280); }
-.hinweis-text { display: grid; gap: .1rem; }
-.hinweis-label { font-weight: 600; font-size: .875rem; }
-/* Der Beleg steht immer sichtbar — versteckt gelesen wird ein Hinweis zur Behauptung. */
-.hinweis-beleg { font-size: .8rem; color: var(--muted, #6b7280); line-height: 1.4; }
-.hinweise-mehr { margin-top: .4rem; background: none; border: 0; padding: 0;
-                 color: var(--accent, #2563eb); font-size: .8rem; cursor: pointer; }
+/* EINGERUECKT WIE DER UEBRIGE PANEL-INHALT. Gemessen 2026-08-15: `.detail` beginnt bei
+   x=56, die Inhaltskarten darunter bei x=88 — also 32 px Einzug. Ohne ihn klebten Chips
+   und Belegzeile an der Panelkante, 32 px links von allem anderen, und der Aktiv-Ring
+   (3 px ausserhalb des Chips) wurde von `overflow-x: auto` abgeschnitten.
+   Wer den Einzug des Panels aendert, muss diesen Wert mitziehen. */
+.hinweise-block { margin: .75rem 0 1rem; padding: 2px 32px 0; }
+
+/* CHIPS statt Kaesten (2026-08-15). Die Vorfassung stapelte je Hinweis einen Kasten mit
+   Label UND vollem Belegsatz — bei vier Hinweisen acht Zeilen ueber den Eckdaten. Ein
+   Nebenhinweis verdraengte damit Volumen, Frist und Leistungsort unter die Falz. */
+.hinweise-chips { display: flex; flex-wrap: wrap; gap: .35rem; }
+.hinweis-chip { display: inline-flex; align-items: center; gap: .3rem;
+                padding: .2rem .55rem; border-radius: 999px; cursor: pointer;
+                font-size: .78rem; font-weight: 600; line-height: 1.5;
+                border: 1px solid transparent; background: var(--surface-2, #f8fafc);
+                color: var(--muted, #6b7280); transition: .15s; }
+.hinweis-chip:hover { filter: brightness(.97); }
+.hinweis-chip-symbol { font-size: .7em; }
+
+/* Die Farbe IST die Aussage, nicht Dekoration: Gelb = etwas stimmt nicht mit dem, was
+   anderswo steht (zuerst lesen). Gruen = ein Grund, eher zu bieten. Grau = woher wir es
+   wissen. Wer die Farben umsortiert, aendert die Aussage. */
+.hinweis-chip--warnung  { background: #fffbeb; border-color: #fde68a; color: #92400e; }
+.hinweis-chip--chance   { background: #f0fdf4; border-color: #bbf7d0; color: #15803d; }
+.hinweis-chip--herkunft { background: var(--surface-2, #f8fafc);
+                          border-color: var(--line, #e5e7eb); color: var(--muted, #6b7280); }
+
+/* Der gewaehlte Chip muss sich abheben, ohne die Farbaussage zu ueberschreiben — deshalb
+   ein Ring, keine andere Fuellung. */
+.hinweis-chip.ist-aktiv { box-shadow: 0 0 0 2px var(--surface, #fff),
+                                      0 0 0 3px currentColor; }
+
+/* Der Beleg ist PFLICHT, er wandert nur unter die Chips. Feste Mindesthoehe, damit das
+   Layout beim Umschalten nicht springt — Springen liest sich als Fehler. */
+.hinweis-beleg { min-height: 2.4em; margin: .45rem 0 0; font-size: .8rem;
+                 color: var(--muted, #6b7280); line-height: 1.4; }

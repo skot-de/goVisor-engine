@@ -1,19 +1,32 @@
 "use client";
 /**
- * Die Hinweis-Spalte in der Lead-Detailseite.
+ * Die Hinweise am Lead — als Label-Chips in EINER Zeile.
  *
- * Regeln und Begründung stehen in `lib/hinweise.ts` — hier nur die Darstellung. Zwei Dinge,
- * die absichtlich so sind und nicht anders:
+ * Regeln und Begründung der Hinweise selbst stehen in `lib/hinweise.ts`; hier nur die
+ * Darstellung.
  *
- * 1. Der Beleg steht IMMER da, nicht in einem Tooltip. Ein Hinweis, dessen Begründung man
- *    erst aufklappen muss, wird als Behauptung gelesen. Bei „Frist verlängert" ist die
- *    Begründung sogar die eigentliche Information (welches Datum galt vorher, welches jetzt).
+ * **Umgebaut am 2026-08-15, und die vorherige Fassung war nicht falsch, sondern zu laut.**
+ * Sie zeigte jeden Hinweis als eigenen Kasten mit Label UND vollem Belegsatz, alle
+ * untereinander. Bei vier Hinweisen waren das acht Zeilen ganz oben in der Übersicht — die
+ * Eckdaten (Volumen, Frist, Leistungsort) rutschten unter die Falz. Ein Nebenhinweis
+ * verdrängte damit die Hauptsache.
  *
- * 2. „mehr" klappt nur die ÜBERZÄHLIGEN auf, nie die ersten vier. Wer die Spalte öffnet,
- *    soll nie erst suchen müssen, was schon sichtbar war.
+ * Chips lösen das, und sie sind ohnehin die Form, für die das geschlossene Vokabular
+ * gebaut wurde: feste Label sind scannbar und später als Filter verwendbar — ein Kasten
+ * mit Fließtext ist beides nicht.
+ *
+ * **Der Beleg bleibt Pflicht, er wandert nur.** Das ist der Punkt, an dem ich beim Umbau
+ * aufgepasst habe: „nur Label" allein würde aus jedem Hinweis eine Behauptung machen
+ * („Frist verlängert" — sagt wer?). Deshalb steht unter der Chip-Zeile eine feste
+ * Belegzeile, die den Satz des angeklickten Chips zeigt. Beim Öffnen ist der ERSTE Chip
+ * gewählt, und die Sortierung stellt die Warnung nach vorn — der teuerste Hinweis ist also
+ * ohne einen einzigen Klick vollständig zu lesen.
+ *
+ * Die Zeile ist reserviert, auch wenn sie kurz ist: sonst springt das Layout bei jedem
+ * Klick, und Springen liest sich als Fehler.
  */
 import { useState } from "react";
-import { baueHinweise, teile, type Hinweis, type HinweisFelder } from "@/lib/hinweise";
+import { baueHinweise, sortiere, type Hinweis, type HinweisFelder } from "@/lib/hinweise";
 
 const SYMBOL: Record<Hinweis["art"], string> = {
   warnung: "⚡",
@@ -21,38 +34,37 @@ const SYMBOL: Record<Hinweis["art"], string> = {
   herkunft: "○",
 };
 
-function Zeile({ h }: { h: Hinweis }) {
-  return (
-    <li className={`hinweis hinweis--${h.art}`}>
-      <span className="hinweis-symbol" aria-hidden="true">{SYMBOL[h.art]}</span>
-      <span className="hinweis-text">
-        <span className="hinweis-label">{h.label}</span>
-        <span className="hinweis-beleg">{h.beleg}</span>
-      </span>
-    </li>
-  );
-}
-
 export function Hinweise({ felder }: { felder: HinweisFelder }) {
-  const [alleZeigen, setAlleZeigen] = useState(false);
-  const hinweise = baueHinweise(felder);
+  const hinweise = sortiere(baueHinweise(felder));
+  const [gewaehlt, setGewaehlt] = useState(0);
+
   // Keine leere Überschrift: hat ein Lead keine Hinweise, ist das kein Mangel, sondern der
   // Normalfall — eine Sektion „Zusätzliche Hinweise: keine" wäre nur Lärm.
   if (hinweise.length === 0) return null;
 
-  const { offen, versteckt } = teile(hinweise);
+  // Nach einem Lead-Wechsel kann der alte Index ins Leere zeigen.
+  const aktiv = Math.min(gewaehlt, hinweise.length - 1);
+
   return (
-    <section className="hinweise-block">
-      <h3 className="hinweise-titel">Zusätzliche Hinweise</h3>
-      <ul className="hinweise-liste">
-        {offen.map((h, i) => <Zeile key={`o${i}`} h={h} />)}
-        {alleZeigen && versteckt.map((h, i) => <Zeile key={`v${i}`} h={h} />)}
-      </ul>
-      {versteckt.length > 0 && (
-        <button className="hinweise-mehr" onClick={() => setAlleZeigen((v) => !v)}>
-          {alleZeigen ? "weniger" : `${versteckt.length} weitere`}
-        </button>
-      )}
+    <section className="hinweise-block" aria-label="Zusätzliche Hinweise">
+      <div className="hinweise-chips" role="tablist">
+        {hinweise.map((h, i) => (
+          <button
+            key={h.label}
+            role="tab"
+            aria-selected={i === aktiv}
+            className={`hinweis-chip hinweis-chip--${h.art}${i === aktiv ? " ist-aktiv" : ""}`}
+            onClick={() => setGewaehlt(i)}
+            // Der Beleg hängt zusätzlich am title: wer mit der Maus darüberfährt oder einen
+            // Screenreader benutzt, bekommt ihn, ohne die Auswahl zu ändern.
+            title={h.beleg}
+          >
+            <span className="hinweis-chip-symbol" aria-hidden="true">{SYMBOL[h.art]}</span>
+            {h.label}
+          </button>
+        ))}
+      </div>
+      <p className="hinweis-beleg" role="note">{hinweise[aktiv].beleg}</p>
     </section>
   );
 }
