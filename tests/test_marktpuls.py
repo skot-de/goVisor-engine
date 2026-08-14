@@ -385,3 +385,50 @@ def test_netserver_ist_in_der_dubletten_firewall_bekannt():
     assert "netserver" in ded.QUELLEN_RANG
     # Aermstes Satzbild im Bestand → darf niemandem als Anreicherungsquelle vorgezogen werden.
     assert ded.QUELLEN_RANG["netserver"] == max(ded.QUELLEN_RANG.values())
+
+
+def test_lead_bau_verlangt_keinen_cpv():
+    """Die CPV-Pflicht im Lead-Bau warf gemessen 307 laufende Ausschreibungen weg.
+
+    Sie stand in `build_prospective_leads` als `AND n.cpv_main IS NOT NULL` und traf
+    ausgerechnet die Quellen, die den unterschwelligen Markt tragen: DOeE 239, NetServer 68.
+    Der CPV fehlt dabei nicht der VERGABE — dieselben UVgO-Vergaben tragen bei DOeE zu
+    100 % einen echten Code —, sondern der Trefferliste des Portals.
+
+    Ein Lead ohne Branche ist unvollstaendig; ein fehlender Lead ist im Vergleich zweier
+    Werkzeuge eine sichtbare Luecke. Deshalb darf die Bedingung nicht zurueckkommen.
+    """
+    quelle = (ROOT / "govisor" / "gold.py").read_text(encoding="utf-8")
+    i = quelle.index("def build_prospective_leads")
+    kern = quelle[i:i + 12000]
+    assert "n.cpv_main IS NOT NULL" not in kern, (
+        "CPV-Pflicht im Lead-Bau wieder da — sie verwirft laufende Ausschreibungen lautlos")
+
+
+def test_grundraum_ohne_ist_ueberall_verdrahtet():
+    """Ein Grundraum ist erst durchgaengig, wenn Export, ROUTE und Anzeige ihn kennen.
+
+    Gemessen beim Einbau: der Export schrieb `leads-ohne.json` mit 306 Vergaben, und
+    `/api/leads?branche=ohne` antwortete trotzdem mit HTTP 400 — die Route trug eine eigene
+    Allow-Liste. Die Leads waren also exportiert und fuer die App unerreichbar. Dieselbe
+    Liste steht an vier Stellen; drei davon aggregieren still ueber alle Grundraeume, dort
+    faellt ein fehlender Eintrag nicht einmal als Fehler auf.
+    """
+    from pathlib import Path
+    web = Path(__file__).resolve().parent.parent / "web"
+    pflicht = [
+        "app/api/leads/route.ts",          # Liste je Grundraum
+        "app/api/lead-detail/route.ts",    # Detailseite
+        "app/api/branchen/route.ts",       # Zaehler + Geo-Aggregation
+        "app/api/calendar/[token]/route.ts",  # Fristen-Feed
+        "lib/explorerCore.js",             # Anzeige-Label
+    ]
+    fehlend = [f for f in pflicht if '"ohne"' not in (web / f).read_text(encoding="utf-8")
+               and "ohne:" not in (web / f).read_text(encoding="utf-8")]
+    assert not fehlend, "Grundraum 'ohne' fehlt in: " + ", ".join(fehlend)
+
+    # Und die Gegenprobe: in der PROFIL-Auswahl hat er nichts verloren — niemandes
+    # Geschaeft ist „ohne Kategorie". Er ist ein Anzeigefach, kein Gewerk.
+    for f in ("app/settings/page.tsx", "app/onboarding/page.tsx"):
+        assert '"ohne"' not in (web / f).read_text(encoding="utf-8"), (
+            f"{f}: 'ohne' ist keine waehlbare Branche")

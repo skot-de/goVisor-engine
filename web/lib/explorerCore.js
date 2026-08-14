@@ -191,6 +191,14 @@ const BRANCHEN = {
   beratung:  'Beratung & Dienstleistung',
   sicherheit:'Sicherheit & Verteidigung',
   energie:   'Energie & Versorgung',
+  // Leads, deren Quelle keinen CPV-Code führt (NetServer-Trefferlisten, Teile von DÖE).
+  // Seit die CPV-Pflicht aus dem Lead-Bau raus ist, sind sie im Bestand statt verworfen —
+  // 306 laufende Ausschreibungen, die vorher lautlos fehlten.
+  //
+  // ⚠ ABSICHTLICH NUR HIER. In `app/settings` und `app/onboarding` steht dieselbe Liste,
+  // dort aber als AUSWAHL der eigenen Branche — und niemandes Geschäft ist „ohne
+  // Kategorie". Der Grundraum ist ein Anzeigefach für Vergaben, kein Gewerk.
+  ohne:      'Ohne Kategorie',
 };
 let profilBranche = 'it';      // aus dem Profil abgeleitet
 let aktiveBranche = 'it';      // ggf. temporär gewechselt (Ausbruch)

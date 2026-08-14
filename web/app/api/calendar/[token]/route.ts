@@ -8,7 +8,9 @@ import { createAdminClient } from "@/lib/supabase/admin";
 // Angebotsfristen als VEVENTs. Kein Termin wird erfunden — nur veröffentlichte Fristen.
 // Der Feed liest LIVE aus der Watchlist; die Fristen kommen aus den exportierten Leads.
 
-const BRANCHEN = ["it", "bau", "medizin", "beratung", "sicherheit", "energie"];
+// `ohne` gehört in den Kalender-Feed: eine Abgabefrist ist eine Frist, unabhängig davon,
+// ob die Quelle einen CPV-Code mitliefert.
+const BRANCHEN = ["it", "bau", "medizin", "beratung", "sicherheit", "energie", "ohne"];
 
 function icsDate(dmy: string): string | null {
   const m = /^(\d{2})\.(\d{2})\.(\d{4})$/.exec(dmy);

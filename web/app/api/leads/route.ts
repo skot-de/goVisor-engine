@@ -3,7 +3,13 @@ import { loadDataFile } from "@/lib/dataSource";
 
 // Echte Leads aus der Gold-Schicht (per scripts/export_web_leads.py als JSON abgelegt), geladen
 // über den konfigurierbaren Daten-Loader (lokal oder Object-Storage via DATA_BASE_URL).
-const BRANCHEN = new Set(["it", "bau", "medizin", "beratung", "sicherheit", "energie"]);
+// `ohne` = Vergaben, deren Quelle keinen CPV-Code führt (NetServer-Trefferlisten, Teile
+// von DÖE). Seit die CPV-Pflicht aus dem Lead-Bau raus ist, sind sie im Bestand — ohne
+// diesen Eintrag antwortet die Route auf sie mit HTTP 400 und die Leads wären zwar
+// exportiert, aber für die App unerreichbar. Ein Grundraum ist erst durchgängig, wenn
+// Export, Route UND Anzeige ihn kennen.
+const BRANCHEN = new Set(["it", "bau", "medizin", "beratung", "sicherheit", "energie",
+                          "ohne"]);
 
 export async function GET(req: Request) {
   const branche = new URL(req.url).searchParams.get("branche") || "it";

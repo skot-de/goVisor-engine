@@ -5,7 +5,13 @@ import { redactDetail } from "@/lib/redact";
 
 // Schwere Felder eines Leads (Beschreibung + Vergabestellen-Profil), erst beim Öffnen
 // geladen. Hält die Listen-Ladung schlank. Detail-Dateien werden nach Grundraum gecacht.
-const BRANCHEN = new Set(["it", "bau", "medizin", "beratung", "sicherheit", "energie"]);
+// `ohne` = Vergaben, deren Quelle keinen CPV-Code führt (NetServer-Trefferlisten, Teile
+// von DÖE). Seit die CPV-Pflicht aus dem Lead-Bau raus ist, sind sie im Bestand — ohne
+// diesen Eintrag antwortet die Route auf sie mit HTTP 400 und die Leads wären zwar
+// exportiert, aber für die App unerreichbar. Ein Grundraum ist erst durchgängig, wenn
+// Export, Route UND Anzeige ihn kennen.
+const BRANCHEN = new Set(["it", "bau", "medizin", "beratung", "sicherheit", "energie",
+                          "ohne"]);
 const cache = new Map<string, Record<string, unknown>>();
 
 async function load(branche: string) {

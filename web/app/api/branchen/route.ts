@@ -1,7 +1,10 @@
 import { NextResponse } from "next/server";
 import { loadDataFile } from "@/lib/dataSource";
 
-const BRANCHEN = ["it", "bau", "medizin", "beratung", "sicherheit", "energie"] as const;
+// `ohne` mitzählen: sonst fehlen die CPV-losen Vergaben still in jedem Zähler und in der
+// Geo-Aggregation — dieselbe Klasse Fehler wie eine fehlende Route, nur unsichtbarer.
+const BRANCHEN = ["it", "bau", "medizin", "beratung", "sicherheit", "energie",
+                  "ohne"] as const;
 
 // Lead-Zahl je Grundraum. OHNE ?q: voller Bestand aus branchen.json (Workspace-Zähler).
 // MIT ?q=<begriffe>: Treffer je Grundraum für die aktive Textsuche — damit das Branchen-
