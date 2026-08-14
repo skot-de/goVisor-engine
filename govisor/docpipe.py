@@ -304,76 +304,79 @@ def build_index(cfg: Config, country: str = "DE", neu_aufbauen: bool = False,
     tage = _dringlichkeit(cfg, country)
     auftraege.sort(key=lambda a: (tage.get(a[0], 10**6), a[0]))
 
-    rows = []
+    # ── SCHREIBEN WÄHREND DER ARBEIT, nicht danach ────────────────────────────────────────
+    #
+    # ⚠ DIE WICHTIGSTE ZEILE IN DIESER FUNKTION. Zwei Anlaeufe sind hier gescheitert, beide
+    # am selben Denkfehler: die Ergebniszeilen wurden in einer Liste gesammelt und erst am
+    # Ende geschrieben. Jede Zeile traegt den VOLLTEXT des Dokuments — bei 2.938 Archiven
+    # sind das mehrere GB im Arbeitsspeicher.
+    #
+    # Gemessen 2026-08-14, zweiter Anlauf: nach 200 von 2.938 Archiven war der Swap zu 90 %
+    # voll (9,3 von 10,2 GB), die interne Platte verlor 8 GB, und der Durchsatz brach von
+    # 2,5 Archiven/s auf 0,3 ein — FUENFZEHNMAL langsamer. Die Maschine lagerte aus, statt
+    # zu rechnen. Beim ersten Anlauf endete derselbe Fehler in einem erzwungenen Neustart.
+    #
+    # Jetzt: Schreiber VOR der Schleife oeffnen, jeden Block sofort wegschreiben, Puffer
+    # leeren. Der Spitzenbedarf ist damit EIN Block statt des gesamten Index.
+    #
+    # Nebeneffekt, der genauso zaehlt: ein Abbruch kostet hoechstens den letzten Block. Der
+    # erste Anlauf hatte ueber eine Stunde gearbeitet und hinterliess NICHTS.
+    schema = pa.schema([("notice_id", pa.string()), ("archive", pa.string()),
+                        ("file", pa.string()), ("filetype", pa.string()),
+                        ("n_chars", pa.int64()), ("status", pa.string()), ("text", pa.string())])
+    BLOCK = 200
+    tmp = out.with_suffix(".parquet.neu")
+    schreiber = pq.ParquetWriter(tmp, schema, compression="zstd")
+
+    def _wegschreiben(puffer):
+        if puffer:
+            schreiber.write_table(pa.Table.from_pylist(
+                [{k: r[k] for k in schema.names} for r in puffer], schema=schema))
+            puffer.clear()
+
     status_counts: dict[str, int] = {}
     arbeiter = max(1, min(mp.cpu_count() - 2, 8))
     print(f"docpipe {country}: {len(auftraege)} Archive aus {n_notices} Vorgaengen, "
           f"{arbeiter} Arbeiter, {ZEIT_JE_ARCHIV}s je Archiv", flush=True)
-    fertig = 0
-    # ZEITBUDGET. Was nicht mehr reinpasst, macht der naechste Lauf — dank Inkrementalitaet
-    # ohne Doppelarbeit. Der Rueckstand laeuft so ueber mehrere Naechte ab, ohne je das
-    # Frische zu blockieren. Am 2026-08-14 kamen 76 GB auf einmal herein (zwei Wochen
-    # Abruf-Ausfall); mit Budget waere das kein Notfall gewesen, sondern ein paar Naechte.
-    #
-    # KEIN STILLES ABSCHNEIDEN: was liegenbleibt, wird unten gezaehlt und gemeldet.
+
     import time as _t
     start = _t.monotonic()
-    abgeschnitten = 0
-    # chunksize=1, damit das Budget zeitnah greift — bei 4 laeuft ein Arbeiter noch drei
-    # Archive weiter, und bei 50-MB-Archiven ist das viel.
-    with mp.Pool(arbeiter) as pool:
-        for teil in pool.imap_unordered(_verarbeite_archiv, auftraege, chunksize=1):
-            # ERST einsammeln, DANN die Zeit pruefen. Andersherum wuerde das gerade fertig
-            # gewordene Archiv verworfen — die Arbeit war getan und landete im Muell.
-            for r in teil:
-                status_counts[r["status"]] = status_counts.get(r["status"], 0) + 1
-                rows.append(r)
-            fertig += 1
-            # Fortschritt ins Log. Ohne ihn war heute „haengt" von „arbeitet" nur ueber
-            # `sample` auf die Prozess-ID zu unterscheiden.
-            if fertig % 200 == 0 or fertig == len(auftraege):
-                print(f"  {fertig}/{len(auftraege)} Archive", flush=True)
-            if zeit_budget is not None and _t.monotonic() - start > zeit_budget:
-                abgeschnitten = len(auftraege) - fertig
-                pool.terminate()
-                break
-    if abgeschnitten:
-        print(f"  ⏳ Zeitbudget ({zeit_budget}s) erreicht — {abgeschnitten} Archive bleiben "
-              f"fuer den naechsten Lauf (dringendste zuerst abgearbeitet)", flush=True)
-    if not rows and not bekannt:
-        print("docpipe: keine Dateien in den ZIPs gefunden.")
-        return {}
-    schema = pa.schema([("notice_id", pa.string()), ("archive", pa.string()),
-                        ("file", pa.string()), ("filetype", pa.string()),
-                        ("n_chars", pa.int64()), ("status", pa.string()), ("text", pa.string())])
-
-    # STROMWEISE SCHREIBEN, nicht als eine grosse Tabelle.
-    #
-    # `pa.Table.from_pylist` ueber alles haette den gesamten Volltext auf einmal im Speicher
-    # — genau der Fehler, der die Platte gefuellt hat. Stattdessen: erst den Bestand
-    # Zeilengruppe fuer Zeilengruppe durchreichen, dann das Neue in Bloecken anhaengen.
-    # Der Spitzenbedarf ist damit eine Zeilengruppe, nicht der ganze Index.
-    #
-    # Erst in eine Nebendatei, dann umbenennen: ein Abbruch mittendrin (Strom, Speicher,
-    # Neustart) darf den vorhandenen Index nicht zerstoeren. Am 2026-08-14 ging genau so
-    # eine Stunde Arbeit verloren, weil erst ganz am Ende geschrieben wurde.
-    tmp = out.with_suffix(".parquet.neu")
-    schreiber = pq.ParquetWriter(tmp, schema, compression="zstd")
+    fertig = abgeschnitten = n_zeilen = total_chars = 0
+    puffer: list[dict] = []
     try:
+        # Bestand zuerst durchreichen — Zeilengruppe fuer Zeilengruppe, nie ganz im Speicher.
         if bekannt and out.exists():
             alt = pq.ParquetFile(out)
             for i in range(alt.num_row_groups):
-                schreiber.write_table(alt.read_row_group(i).select(schema.names))
-        BLOCK = 2000
-        for i in range(0, len(rows), BLOCK):
-            teil = rows[i:i + BLOCK]
-            schreiber.write_table(pa.Table.from_pylist(
-                [{k: r[k] for k in schema.names} for r in teil], schema=schema))
+                t = alt.read_row_group(i).select(schema.names)
+                schreiber.write_table(t)
+                n_zeilen += t.num_rows
+        with mp.Pool(arbeiter) as pool:
+            for teil in pool.imap_unordered(_verarbeite_archiv, auftraege, chunksize=1):
+                for r in teil:
+                    status_counts[r["status"]] = status_counts.get(r["status"], 0) + 1
+                    total_chars += r["n_chars"]
+                puffer.extend(teil)
+                n_zeilen += len(teil)
+                fertig += 1
+                if len(puffer) >= BLOCK:
+                    _wegschreiben(puffer)
+                if fertig % 200 == 0 or fertig == len(auftraege):
+                    print(f"  {fertig}/{len(auftraege)} Archive", flush=True)
+                if zeit_budget is not None and _t.monotonic() - start > zeit_budget:
+                    abgeschnitten = len(auftraege) - fertig
+                    pool.terminate()
+                    break
+        _wegschreiben(puffer)
     finally:
         schreiber.close()
     tmp.replace(out)
-    total_chars = sum(r["n_chars"] for r in rows)   # nur die NEUEN, der Bestand ist durchgereicht
-    print(f"docpipe {country}: {n_notices} Vorgänge, {len(rows)} Dateien, {total_chars/1e6:.1f} Mio. Zeichen "
-          f"→ {out.name}")
+
+    if abgeschnitten:
+        print(f"  ⏳ Zeitbudget ({zeit_budget}s) erreicht — {abgeschnitten} Archive bleiben "
+              f"fuer den naechsten Lauf (dringendste zuerst abgearbeitet)", flush=True)
+    print(f"docpipe {country}: {n_notices} Vorgänge, {n_zeilen} Zeilen im Index, "
+          f"{total_chars/1e6:.1f} Mio. Zeichen neu → {out.name}")
     print("  Status: " + " | ".join(f"{k}={v}" for k, v in sorted(status_counts.items())))
-    return {"notices": n_notices, "files": len(rows), "chars": total_chars, "status": status_counts}
+    return {"notices": n_notices, "files": n_zeilen, "chars": total_chars,
+            "status": status_counts, "offen": abgeschnitten}
