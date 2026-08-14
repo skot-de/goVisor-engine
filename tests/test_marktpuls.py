@@ -975,3 +975,28 @@ def test_oesterreich_ist_im_tageslauf():
     gegen den Grundsatz in CLAUDE.md, dass jede Funktion für alle Länder gilt."""
     lauf = (ROOT / "scripts" / "daily_leads.sh").read_text(encoding="utf-8")
     assert "govisor.vergabeportal_at" in lauf
+
+
+def test_simap_bricht_ohne_zugangsdaten_ab_statt_anonym_zu_laufen():
+    """simap.ch liefert ohne Konto nichts — die Seite sagt es selbst („Um Unterlagen
+    herunterzuladen, müssen Sie als Benutzer registriert und eingeloggt sein").
+
+    Ein Lauf, der das nicht merkt, meldet 889-mal „keine Dateien" und sieht aus wie ein
+    Portalproblem. Deshalb KEIN anonymer Rückfallpfad: fehlen die Zugangsdaten, bricht der
+    Lauf mit einer Anleitung ab.
+    """
+    import subprocess, sys
+    S = (ROOT / "govisor" / "simap_docs.py").read_text(encoding="utf-8")
+    assert "SystemExit" in S and "Zugangsdaten fehlen" in S
+    # Das Passwort darf nirgends ausgegeben werden — auch nicht im Fehlerfall.
+    assert "print(passwort" not in S and "{passwort}" not in S
+    assert '.secrets" / "simap.txt"' in S, "Zugangsdaten gehören nach .secrets/, nicht in den Code"
+
+
+def test_simap_erkennt_eine_nicht_greifende_sitzung():
+    """Wenn die Anmeldung nicht greift, zeigt simap.ch weiter „registriert und eingeloggt".
+    Das als `leer` zu führen würde eine kaputte Sitzung wie eine Vergabe ohne Unterlagen
+    aussehen lassen — und niemand käme auf die Idee, die Anmeldung zu prüfen."""
+    S = (ROOT / "govisor" / "simap_docs.py").read_text(encoding="utf-8")
+    assert '"nicht_angemeldet"' in S
+    assert '"/auth/realms/" in pg.url' in S, "fehlgeschlagener Login bleibt auf Keycloak stehen"
