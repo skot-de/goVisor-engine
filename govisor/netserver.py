@@ -76,6 +76,12 @@ PORTALE: dict[str, tuple[str, str | None]] = {
     # Hessen sucht anders als die vier anderen — eigener Pfad in `hole_had`. Die Basis-URL
     # bleibt None, damit der generische Servlet-Weg gar nicht erst versucht wird.
     "he": ("Hessen (HAD)", None),
+    # Berlin und Saarland: 2026-08-14 ergaenzt. Beide fahren dieselbe NetServer-Software wie
+    # die vier oben — sie standen nur nicht in dieser Tabelle. Das ist der ganze Aufwand
+    # gewesen: die Landesportale waren nicht „nicht angebunden", sondern nicht eingetragen.
+    # Gemessen an offenen Leads mit Unterlagen-Link: BE 85, SL 48.
+    "be": ("Berlin", "https://vergabekooperation.berlin/NetServer/"),
+    "sl": ("Saarland", "https://saarvpsl.vmstart.de/NetServer/"),
 }
 
 # NetServer-Kategorien → unser `notice_kind`.

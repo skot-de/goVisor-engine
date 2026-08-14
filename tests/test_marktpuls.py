@@ -665,3 +665,93 @@ def test_healyhudson_meldet_unvollstaendigkeit_statt_sie_zu_verschweigen():
     assert "gemeldet" in quelle, "die Soll-Zahl der Seite muss mitgeführt werden"
     H = _hh()
     assert H._TROCKEN >= 3, "zu früh aufzuhören verwechselt Pech mit Vollständigkeit"
+
+
+def _nsdoc():
+    import sys
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from govisor import docfetch_netserver
+    return docfetch_netserver
+
+
+def test_netserver_unterlagen_gehen_ueber_publications_nicht_ueber_die_bekanntmachung():
+    """Der eine Schritt, ohne den nichts geht.
+
+    Die `documents_url` zeigt auf die BEKANNTMACHUNG — dort steht keine einzige Datei, und
+    genau deshalb meldete die erste Stichprobe „keine Dateien, keine Knöpfe" und NetServer
+    galt als gegated. Der Unterlagen-Bereich hängt am selben `TenderOID` mit
+    `&thContext=publications`.
+    """
+    N = _nsdoc()
+    roh = ("https://vergabe.landbw.de/NetServer/TenderingProcedureDetails"
+           "?function=_Details&TenderOID=54321-NetTender-19f4ad487ff-1e39c6b0bec9148f")
+    z = N.unterlagen_url(roh)
+    assert z is not None and z.endswith("&thContext=publications")
+    assert "54321-NetTender-19f4ad487ff-1e39c6b0bec9148f" in z
+    assert N.unterlagen_url("https://example.org/x") is None
+    assert N.unterlagen_url(None) is None
+
+
+def test_netserver_nimmt_nur_die_neueste_version():
+    """Die Tabelle führt ALLE Versionen; die Seite sagt selbst „Es gilt immer nur die
+    aktuellste Version der Unterlagen." Gemessen lag Version 2 (11.08.) über Version 1
+    (10.07.). Eine ältere zu ziehen wäre kein Teilerfolg, sondern eine falsche
+    Leistungsbeschreibung im Produkt."""
+    quelle = (ROOT / "govisor" / "docfetch_netserver.py").read_text(encoding="utf-8")
+    assert "knoepfe[0]" in quelle, "die oberste Zeile ist die neueste Version"
+    assert "aktuellste Version" in quelle, "die Begründung muss am Code stehen"
+
+
+def test_netserver_wirft_grosse_pakete_nicht_weg():
+    """Eine Autobahn-Vergabe mit 335 MB fiel durch die erste Grenze von 200 MB.
+
+    Eine ganze Vergabeunterlage wegzuwerfen, weil sie groß ist, widerspricht dem Grundsatz,
+    dass jede Vergabe zählt — und Platz ist da (1,6 TB frei bei 89 GB Bestand).
+    """
+    N = _nsdoc()
+    assert N._MAX_ZIP >= 400 * 1024**2
+    assert N._LAUF_BUDGET_MB > 0, "ohne Lauf-Budget zieht ein Lauf 30 GB am Stück"
+
+
+def _hhdoc():
+    import sys
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from govisor import docfetch_healyhudson
+    return docfetch_healyhudson
+
+
+def test_healyhudson_dateiname_ist_keine_mailadresse():
+    """`kundendienst@deutsche-evergabe.de` endet auf `.de` und lief durch eine generische
+    `\\.\\w{2,5}$`-Regel als Datei durch — gemessen bei drei von vier Vorgängen im ersten
+    Probelauf. Geprüft wird deshalb gegen echte Dokumentendungen."""
+    H = _hhdoc()
+    assert H._MIT_ENDUNG.search("Vergabeunterlagen.pdf")
+    assert H._MIT_ENDUNG.search("Leistungsverzeichnis.X83")
+    assert not H._MIT_ENDUNG.search("kundendienst@deutsche-evergabe.de")
+    assert not H._MIT_ENDUNG.search("www.beispiel.de")
+
+
+def test_healyhudson_trennt_umleitung_von_leerer_vergabe():
+    """Die Instanzen verhalten sich verschieden: Bahn und Hamburg geben Unterlagen heraus,
+    `bieterzugang.deutsche-evergabe.de` leitet auf ein zentrales Dashboard ohne Dateien.
+    Beides als „leer" zu melden würde eine PLATTFORM-Eigenschaft wie eine Eigenschaft der
+    einzelnen Vergabe aussehen lassen — und niemand käme je auf die Idee nachzusehen."""
+    quelle = (ROOT / "govisor" / "docfetch_healyhudson.py").read_text(encoding="utf-8")
+    assert '"kein_downloadbereich"' in quelle
+    assert '"leer"' in quelle
+    assert "je_host" in quelle, "das Manifest muss nach Host aufschlüsseln"
+
+
+def test_neue_quellen_sind_im_tageslauf_aber_inert():
+    """Vorbereitet heißt verdrahtet, nicht scharf. Die drei neuen Schritte stehen im
+    Tageslauf, laufen aber nur mit `GOVISOR_NEUE_QUELLEN=1` — `healyhudson` schreibt bisher
+    nur Bronze, und die zwei Fetcher bringen mehrere Gigabyte je Lauf."""
+    lauf = (ROOT / "scripts" / "daily_leads.sh").read_text(encoding="utf-8")
+    assert 'GOVISOR_NEUE_QUELLEN:-0' in lauf
+    for m in ("govisor.healyhudson", "govisor.docfetch_netserver",
+              "govisor.docfetch_healyhudson"):
+        assert m in lauf, f"{m} fehlt im Tageslauf"
+    # Berlin und Saarland laufen dagegen SOFORT mit — derselbe erprobte NetServer-Pfad.
+    assert "hb,sn,mv,bw,he,be,sl" in lauf

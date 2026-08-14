@@ -253,9 +253,55 @@ $PY -m govisor.dtvp --regeln VOB --typen Tender --max-seiten 40 --stop-nach-beka
 # nicht das rohe HTML — nach einer PARSER-Aenderung muss der Schalter einmal von Hand
 # laufen, sonst bleiben die alten Saetze unveraendert stehen (genau so meldete MV nach dem
 # Vergabestellen-Fix weiter 0 % Stellen). Im Tageslauf waere er nur unnoetige Last.
-step "NetServer-Bekanntmachungen (HB/SN/MV/BW/HE, ober- und unterschwellig)"
-$PY -m govisor.netserver --portale hb,sn,mv,bw,he --kategorien tender,vorinfo,zuschlag --silber \
+# ⚠ BERLIN UND SAARLAND sind seit 2026-08-14 in der Portal-Tabelle. Sie fahren dieselbe
+# NetServer-Software wie die fuenf anderen und waren nie „nicht angebunden" — sie standen
+# nur nicht drin. Erster Lauf: 98 (BE) + 58 (SL) Bekanntmachungen, davon 44 unterschwellig.
+# Sie laufen SOFORT mit, nicht hinter dem Schalter unten: es ist derselbe erprobte Pfad.
+step "NetServer-Bekanntmachungen (HB/SN/MV/BW/HE/BE/SL, ober- und unterschwellig)"
+$PY -m govisor.netserver --portale hb,sn,mv,bw,he,be,sl --kategorien tender,vorinfo,zuschlag --silber \
   || echo "  ⚠ NetServer-Import fehlgeschlagen — fremde Portale, der Lauf geht ohne weiter."
+
+# ── NEUE QUELLEN, VORBEREITET ABER INERT ────────────────────────────────────────────────
+#
+# Diese drei Schritte sind gebaut und einzeln erprobt, laufen aber NUR mit
+# `GOVISOR_NEUE_QUELLEN=1`. Der Grund ist nicht Zweifel an ihnen, sondern Reihenfolge:
+# `healyhudson` schreibt bisher nur Bronze (der Silber-Schritt fasst die geteilte Ablage
+# `data/silver/DE/notices` an), und die beiden Unterlagen-Fetcher bringen zusammen mehrere
+# Gigabyte je Lauf. Beides gehoert bewusst erst scharfgeschaltet, wenn jemand zusieht.
+#
+# Scharf schalten:  GOVISOR_NEUE_QUELLEN=1 scripts/daily_leads.sh
+if [ "${GOVISOR_NEUE_QUELLEN:-0}" = "1" ]; then
+
+  # Healy-Hudson-Bekanntmachungen: EINE oeffentliche Liste fuer alle sechzehn Laender
+  # (`Dashboard_off?BL=<amtlicher Schluessel>`). 1.300 offene Vorgaenge gemessen, davon
+  # kannten wir 508 ueber die Unterlagen-Links. ⚠ Die Liste WUERFELT je Abruf ~25 Zeilen —
+  # deshalb Runden mit Dublettenfilter, und der Bestand fuellt sich ueber die Tage.
+  step "Healy-Hudson-Bekanntmachungen (alle 16 Laender, rotierende Liste)"
+  $PY -m govisor.healyhudson --alle --runden 12 \
+    || echo "  ⚠ Healy-Hudson-Import unvollstaendig."
+
+  # NetServer-UNTERLAGEN. Die zweitgroesste Dokumentenluecke: 1.055 offene Leads auf
+  # Portalen, deren Bekanntmachungen oben schon hereinkommen. Der Weg fuehrt ueber
+  # `&thContext=publications` und ein Modal — die rohe `documents_url` zeigt auf die
+  # Bekanntmachung und traegt keine einzige Datei.
+  # ⚠ Diese Pakete sind gross (gemessen 10–65 MB, ein Ausreisser 335 MB); der Lauf ist
+  # deshalb auf 2 GB gedeckelt und arbeitet den Rest ueber die Tage ab.
+  step "NetServer-Unterlagen (DE, anonym, budgetiert + idempotent)"
+  $PY -m govisor.docfetch_netserver --limit 60 \
+    || echo "  ⚠ NetServer-Unterlagen unvollstaendig."
+
+  # Healy-Hudson-UNTERLAGEN. 508 offene Leads. ⚠ Pro Instanz verschieden: Bahn und Hamburg
+  # geben heraus, `bieterzugang.deutsche-evergabe.de` leitet auf ein Dashboard ohne Dateien.
+  # Das Manifest schluesselt nach Host auf, damit das sichtbar bleibt.
+  step "Healy-Hudson-Unterlagen (DE, anonym, idempotent)"
+  $PY -m govisor.docfetch_healyhudson --limit 60 \
+    || echo "  ⚠ Healy-Hudson-Unterlagen unvollstaendig."
+
+else
+  echo ""
+  echo "▶ Neue Quellen (healyhudson, docfetch_netserver, docfetch_healyhudson) uebersprungen."
+  echo "  Scharf schalten mit: GOVISOR_NEUE_QUELLEN=1"
+fi
 
 # DUBLETTEN-FIREWALL. Eine Pruefung fuer ALLE Quellen eines Landes. Sie hat am 2026-08-13
 # `dedupe_at_sources.py` und `dedupe_ch_sources.py` abgeloest — beide geloescht, ihre
