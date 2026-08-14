@@ -27,10 +27,39 @@ export type HinweisArt =
   | "chance"    // ein Grund, eher zu bieten
   | "herkunft"; // woher wir etwas wissen; schafft Vertrauen, drängt aber nicht
 
+/**
+ * GESCHLOSSENES LABEL-VOKABULAR. Die Zahl gehört in den Beleg, nicht ins Label.
+ *
+ * Erster Entwurf hatte „4× erfolglos gesucht" — für das Auge sind „4×" und „7×" zwei
+ * verschiedene Dinge, obwohl es dieselbe Aussage ist. Feste Label lösen drei Probleme auf
+ * einmal:
+ *
+ *   FILTERBAR      Freitext lässt sich nicht filtern. Ein geschlossenes Vokabular wird zu
+ *                  Filter-Chips („zeig mir alle mit Mehrmals ohne Zuschlag") — das ist der
+ *                  eigentliche Gewinn, nicht die Optik.
+ *   SCANNBAR       Das Auge erkennt eine wiederkehrende Phrase, keine wechselnde Zahl.
+ *   ÜBERSETZBAR    Das Projekt nimmt den deutschen Satz als i18n-Schlüssel. Ein Label mit
+ *                  eingebauter Zahl bräuchte Interpolation; ein festes ist EIN Schlüssel.
+ *
+ * Wer hier ein Label ergänzt, ergänzt einen Filter — deshalb steht die Liste im Code und
+ * nicht als Freitext an der Fundstelle.
+ */
+export const LABEL = {
+  fristVerlaengert:   "Frist verlängert",
+  mehrmalsOhne:       "Mehrmals ohne Zuschlag",
+  amtsinhaberNeu:     "Amtsinhaber neu",
+  amtsinhaberFest:    "Amtsinhaber etabliert",
+  mehrerePortale:     "Auf mehreren Portalen",
+  kategorieAbgeleitet: "Kategorie abgeleitet",
+  kategorieZweitquelle: "Kategorie aus Zweitquelle",
+} as const;
+
+export type Label = (typeof LABEL)[keyof typeof LABEL];
+
 export type Hinweis = {
   art: HinweisArt;
-  label: string;
-  /** Der eine Satz, der den Hinweis überprüfbar macht. Pflicht. */
+  label: Label;
+  /** Der eine Satz, der den Hinweis überprüfbar macht — hier steht die Zahl. Pflicht. */
   beleg: string;
 };
 
@@ -97,7 +126,7 @@ export function baueHinweise(f: HinweisFelder): Hinweis[] {
     const alt = datum(f.deadlineVeroeffentlicht);
     out.push({
       art: "warnung",
-      label: "Frist verlängert",
+      label: LABEL.fristVerlaengert,
       beleg: alt
         ? `Veröffentlicht war der ${alt}, die aktuelle Frist ist der ${datum(f.deadlineAktuell)}.`
         : `Die aktuelle Frist ist der ${datum(f.deadlineAktuell)} — später als zunächst veröffentlicht.`,
@@ -108,29 +137,36 @@ export function baueHinweise(f: HinweisFelder): Hinweis[] {
   if ((f.erfolgloseVersuche ?? 0) >= 2) {
     out.push({
       art: "chance",
-      label: `${f.erfolgloseVersuche}× erfolglos gesucht`,
+      label: LABEL.mehrmalsOhne,
       beleg: `Derselbe Bedarf wurde ${f.erfolgloseVersuche}-mal${
         f.erfolgloseJahre ? ` in ${f.erfolgloseJahre} Jahren` : ""
       } ohne Zuschlag ausgeschrieben.`,
     });
   }
-  if ((f.amtsinhaberSeitJahre ?? 0) > 0 || (f.amtsinhaberZyklen ?? 0) > 0) {
-    // Beides ist eine Chance-Aussage, aber in BEIDE Richtungen — deshalb sagt der Beleg die
-    // Zahl und nicht deren Deutung. Ein Amtsinhaber seit einem Zyklus ist angreifbar, einer
-    // seit neun sitzt fest; welche Schwelle für den Bieter zählt, weiss er besser als wir.
-    // Dativ, nicht Nominativ: „seit 7 Jahren", nicht „seit 7 Jahre". Aufgefallen erst beim
-    // AUSFÜHREN — eine Zusicherung über den Quelltext hätte den Satz nie gelesen.
-    const teile: string[] = [];
-    if (f.amtsinhaberSeitJahre) {
-      teile.push(`${f.amtsinhaberSeitJahre} ${f.amtsinhaberSeitJahre === 1 ? "Jahr" : "Jahren"}`);
-    }
-    if (f.amtsinhaberZyklen) {
-      teile.push(`${f.amtsinhaberZyklen} ${f.amtsinhaberZyklen === 1 ? "Vergabezyklus" : "Vergabezyklen"}`);
-    }
+  // AMTSINHABER — zwei Label, weil es zwei ENTGEGENGESETZTE Aussagen sind.
+  //
+  // „Amtsinhaber neu" bringt jemanden zum Bieten, „etabliert" haelt ihn davon ab. Ein
+  // gemeinsames Label mit wechselnder Zahl („seit 7 Jahren") ueberliesse dem Leser die
+  // Deutung — und genau die Deutung ist die Information.
+  //
+  // Bewusst NICHT „Kein Amtsinhaberwechsel": das behauptet zusaetzlich, dass es
+  // Gelegenheiten zum Wechsel GAB. Das stimmt erst ab mehreren Zyklen; bei einem einzigen
+  // langen Vertrag waere es schlicht falsch. `chain_depth` zaehlt die Zyklen und ist
+  // deshalb der richtige Massstab, nicht die Jahre.
+  const zyklen = f.amtsinhaberZyklen ?? 0;
+  if (zyklen >= 3) {
+    out.push({
+      art: "herkunft",   // GRAU, nicht gruen: das ist ein Grund GEGEN das Bieten.
+      label: LABEL.amtsinhaberFest,
+      beleg: `Derselbe Auftragnehmer hat den Bedarf ${zyklen}-mal in Folge gewonnen`
+           + `${f.amtsinhaberSeitJahre ? `, seit ${f.amtsinhaberSeitJahre} Jahren` : ""}.`,
+    });
+  } else if (zyklen === 1 || ((f.amtsinhaberSeitJahre ?? 0) > 0 && zyklen === 0)) {
     out.push({
       art: "chance",
-      label: `Amtsinhaber seit ${teile[0]}`,
-      beleg: `Der bisherige Auftragnehmer hält den Auftrag seit ${teile.join(" bzw. ")}.`,
+      label: LABEL.amtsinhaberNeu,
+      beleg: "Der bisherige Auftragnehmer hält den Bedarf erst seit einem Vergabezyklus —"
+           + " es gibt keine gewachsene Bindung.",
     });
   }
 
@@ -138,21 +174,22 @@ export function baueHinweise(f: HinweisFelder): Hinweis[] {
   if (f.portale && f.portale.length > 1) {
     out.push({
       art: "herkunft",
-      label: `Auf ${f.portale.length} Portalen`,
-      beleg: `Dieselbe Vergabe erscheint auf ${f.portale.join(", ")} — die Angaben sind zusammengeführt.`,
+      label: LABEL.mehrerePortale,
+      beleg: `Dieselbe Vergabe erscheint auf ${f.portale.length} Portalen (${f.portale.join(", ")})`
+           + " — die Angaben sind zusammengeführt.",
     });
   }
   if (f.kategorieQuelle === "modell") {
     out.push({
       art: "herkunft",
-      label: "Kategorie abgeleitet",
+      label: LABEL.kategorieAbgeleitet,
       beleg: "Die Quelle führt keinen CPV-Code. Die Kategorie wurde aus dem Titel bestimmt "
            + "(Treffergenauigkeit rund 82 % gegen veröffentlichte Codes).",
     });
   } else if (f.kategorieQuelle === "zwilling") {
     out.push({
       art: "herkunft",
-      label: "Kategorie aus Zweitquelle",
+      label: LABEL.kategorieZweitquelle,
       beleg: "Die Quelle führt keinen CPV-Code; übernommen wurde der veröffentlichte Code "
            + "derselben Vergabe von einem anderen Portal.",
     });
