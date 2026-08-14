@@ -297,6 +297,14 @@ if [ "${GOVISOR_NEUE_QUELLEN:-0}" = "1" ]; then
   $PY -m govisor.docfetch_healyhudson --limit 60 \
     || echo "  ⚠ Healy-Hudson-Unterlagen unvollstaendig."
 
+  # aumass-UNTERLAGEN. Der sauberste Zugang von allen: ein Link, der woertlich „Ohne
+  # Registrierung herunterladen." heisst, auf einen parametrisierten Endpunkt. 288 Leads,
+  # 269 verschiedene Vergaben (Geschwister teilen sich den Abruf).
+  # ⚠ Die Pakete sind gross (13–188 MB gemessen); Lauf auf 2 GB gedeckelt.
+  step "aumass-Unterlagen (DE, anonym, budgetiert + idempotent)"
+  $PY -m govisor.docfetch_aumass --limit 40 \
+    || echo "  ⚠ aumass-Unterlagen unvollstaendig."
+
 else
   echo ""
   echo "▶ Neue Quellen (healyhudson, docfetch_netserver, docfetch_healyhudson) uebersprungen."

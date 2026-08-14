@@ -755,3 +755,44 @@ def test_neue_quellen_sind_im_tageslauf_aber_inert():
         assert m in lauf, f"{m} fehlt im Tageslauf"
     # Berlin und Saarland laufen dagegen SOFORT mit — derselbe erprobte NetServer-Pfad.
     assert "hb,sn,mv,bw,he,be,sl" in lauf
+
+
+def _au():
+    import sys
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from govisor import docfetch_aumass
+    return docfetch_aumass
+
+
+def test_aumass_nummer_wird_grossgeschrieben():
+    """Der Endpunkt erwartet GROSSBUCHSTABEN und liefert sonst nichts — ohne Fehlermeldung.
+
+    Die URLs tragen die Nummer aber gemischt: 60 Leads als `av281953-eu`, 35 als
+    `AV281953-A`. Wer sie durchreicht wie vorgefunden, verliert rund ein Drittel der
+    Vorgänge lautlos.
+    """
+    A = _au()
+    assert A.aumass_id("https://plattform.aumass.de/Veroeffentlichung/av281953-eu") == "AV281953-EU"
+    assert A.aumass_id("https://plattform.aumass.de/Veroeffentlichung/AV281953-A") == "AV281953-A"
+    assert A.aumass_id("https://example.org/x") is None
+    assert A.aumass_id(None) is None
+
+
+def test_aumass_unterscheidet_ex_ante_von_ausfall():
+    """Eine „EX ANTE BEKANNTMACHUNG" kündigt eine geplante Direktvergabe an — es gibt nichts
+    zu bieten und entsprechend nichts herunterzuladen. Gemessen an AV281974-A.
+
+    Das als `fehler` zu führen würde eine korrekte Seite wie einen Ausfall aussehen lassen
+    und jeden Lauf mit falschen Warnungen belasten — bis niemand mehr hinsieht.
+    """
+    quelle = (ROOT / "govisor" / "docfetch_aumass.py").read_text(encoding="utf-8")
+    assert '"ohne_unterlagen"' in quelle
+    assert "EX ANTE BEKANNTMACHUNG" in quelle
+
+
+def test_aumass_geschwister_teilen_den_abruf():
+    """288 Leads zeigen auf nur 269 Vergaben. Bei 24–188 MB je Paket ist ein doppelter
+    Abruf nicht nur Verschwendung, sondern unnötige Last auf einem fremden System."""
+    quelle = (ROOT / "govisor" / "docfetch_aumass.py").read_text(encoding="utf-8")
+    assert "geschwister" in quelle and "kein zweiter Abruf" in quelle
