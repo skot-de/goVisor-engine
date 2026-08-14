@@ -154,6 +154,15 @@ LP = (f"read_parquet('{_LP_PATH}')" if pathlib.Path(_LP_PATH).exists() else
       "(SELECT NULL::VARCHAR lead_id, NULL::VARCHAR incumbent_name, NULL::BIGINT n_bidders, "
       "NULL::VARCHAR competition_level, NULL::BIGINT chain_depth, NULL::BIGINT incumbent_since_year "
       "WHERE false)")
+# Abgeleitete Kategorie (Kategorie-Wasserfall, für Quellen ohne CPV). Eigener Join und nicht
+# über `lead_export`, weil dessen Vertrag durchgehend ENGLISCH ist — Spalten UND Werte, in
+# `tests/test_plumbing.py::_EXPORT_VOCAB` festgenagelt. Die Branchen-Labels sind deutsch
+# („Bau", „Umwelt/Reinigung"); sie dort hineinzuschreiben hiesse, den Vertrag für eine
+# Bequemlichkeit aufzugeben. `lead_export` trägt deshalb nur die HERKUNFT
+# (`category_source`), der Wert kommt von hier.
+_KAT_PATH = f"{G}/lead_kategorie.parquet"
+KAT = (f"read_parquet('{_KAT_PATH}')" if pathlib.Path(_KAT_PATH).exists() else
+       "(SELECT NULL::VARCHAR notice_id, NULL::VARCHAR branche WHERE false)")
 # Dokument-Signale (aus den Vergabeunterlagen extrahiert): überschreiben die dünnen eForms-
 # Aufwand-Felder, wo Unterlagen vorliegen. Guard: fehlt die Tabelle, leerer Stub.
 _DS_PATH = f"data/docs/{'DE'}/doc_signals.parquet"
@@ -316,6 +325,7 @@ def market_summary(key):
     """Marktblöcke für den Chancen-Tab (Branche-weit, ohne Firmenprofil füllbar, §8):
     aktivste Vergabestellen + einstiegsfreundliche offene Ausschreibungen + Eckzahlen."""
     where = f"""FROM {E} e LEFT JOIN {DC} b ON b.division = substr(e.cpv_code, 1, 2)
+    LEFT JOIN {KAT} kat ON kat.notice_id = e.lead_id
                 WHERE ({BRANCHE}) = '{key}'"""
     tot, offen, stellen = con.execute(f"""
         SELECT count(*), count(*) FILTER (WHERE phase='open'), count(DISTINCT buyer_name) {where}""").fetchone()
@@ -348,6 +358,7 @@ def buyer_profiles(names):
         for bn, br, n in con.execute(f"""
                 SELECT e.buyer_name, {BRANCHE} AS br, count(*) n
                 FROM {E} e LEFT JOIN {DC} b ON b.division = substr(e.cpv_code, 1, 2)
+    LEFT JOIN {KAT} kat ON kat.notice_id = e.lead_id
                 WHERE e.buyer_name IN (SELECT name FROM _bn) GROUP BY 1, 2""").fetchall():
             mix.setdefault(bn, {})[br] = n
         for n in todo:
@@ -414,8 +425,18 @@ def attach_mix(prof, own_branche):
 # in das `ELSE 'beratung'` am Fuss des CASE — „Lieferung von 15 Notebooks" und „Milch und
 # Molkereiprodukte" stuenden dann unter „Beratung & Dienstleistung". Ein eigener Grundraum
 # sagt statt dessen, was der Fall ist: die Vergabe ist da, die Branche kennen wir nicht.
-BRANCHE = """CASE WHEN e.cpv_code IS NULL THEN 'ohne'
-  ELSE CASE b.branche
+#
+# ⚠ ZWEITE HAELFTE, nachgezogen 2026-08-14: „kein CPV" ist seit dem Kategorie-Wasserfall
+# NICHT mehr dasselbe wie „Branche unbekannt". `b.branche` traegt jetzt auch die aus dem
+# Titel abgeleitete Kategorie (`coalesce(dc.branche, katq.branche, 'Ohne Kategorie')` in
+# `build_prospective_leads`), im selben Vokabular wie die CASE-Zweige unten.
+#
+# Ohne die Ergaenzung stieg der Export beim fehlenden CPV sofort aus und sah die Ableitung
+# nie an — gemessen: alle 676 healyhudson-Leads landeten in „ohne", obwohl 674 davon eine
+# Kategorie hatten. Der ganze Wasserfall war damit vorne wirkungslos, ohne dass etwas
+# abbrach. „Ohne Kategorie" heisst jetzt: weder veroeffentlicht noch ableitbar.
+BRANCHE = """CASE WHEN coalesce(b.branche, kat.branche) IS NULL THEN 'ohne'
+  ELSE CASE coalesce(b.branche, kat.branche)
   WHEN 'IT' THEN 'it' WHEN 'Elektro' THEN 'it' WHEN 'Messtechnik' THEN 'it'
   WHEN 'Bau' THEN 'bau' WHEN 'Installation' THEN 'bau' WHEN 'Immobilien' THEN 'bau'
     WHEN 'Ingenieur/Architektur' THEN 'bau' WHEN 'Wartung' THEN 'bau'
@@ -527,6 +548,7 @@ def export_branche(key):
                  ds.variants_allowed AS doc_variants
           FROM {E} e
           LEFT JOIN {DC} b ON b.division = substr(e.cpv_code, 1, 2)
+          LEFT JOIN {KAT} kat ON kat.notice_id = e.lead_id
           LEFT JOIN {CL} cl ON cl.cpv_code = e.cpv_code
           LEFT JOIN {DL} dl ON dl.notice_id = e.lead_id
           LEFT JOIN {PORTALE} pt ON pt.notice_id = e.lead_id
@@ -832,6 +854,7 @@ def export_branche(key):
 counts = con.execute(f"""
     SELECT {BRANCHE} AS k, count(*) n
     FROM {E} e LEFT JOIN {DC} b ON b.division = substr(e.cpv_code, 1, 2)
+    LEFT JOIN {KAT} kat ON kat.notice_id = e.lead_id
     WHERE (e.phase != 'expiring' OR e.months_to_expiry IS NULL OR e.months_to_expiry <= 18)
     GROUP BY 1""").fetchall()
 counts = {k: n for k, n in counts}
