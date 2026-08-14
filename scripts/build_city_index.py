@@ -7,6 +7,20 @@ liefert Stadt-/Kreisname → [lat, lon, Anzeigename], damit die Suche „<Stadt>
 als echten Koordinaten-Token anbieten kann.
 
 Quelle: `data/reference/geonames/DE.txt` (GeoNames-PLZ-Tabelle, tab-getrennt).
+
+⚠ OFFENER PUNKT — NUR DEUTSCHLAND (gemessen 2026-08-14). `plz-geo.json` traegt inzwischen
+3.362 CH- und 2.501 AT-Postleitzahlen, dieser Index aber schreibt fest `{"DE": …}` aus
+fest verdrahteter `DE.txt`. Fuer Schweizer und oesterreichische Leads findet die
+Stadt-Umkreissuche im Frontend deshalb NICHTS — sie fallen still durch, ohne Fehlermeldung.
+
+Was fehlt, ist nicht die PLZ-Tabelle (`AT.txt`/`CH.txt` liegen daneben), sondern zweierlei:
+der **Gazetteer** als Positivliste echter Ortsnamen gibt es nur als `DE_gazetteer.txt`,
+und die Firmennamen-Ausschlussliste unten ist auf deutsche Rechtsformen und Woerter
+getrimmt (`GmbH`, `Deutschland`, `Vertrieb` …). Ohne beides fuer AT/CH waere ein naiver
+Durchlauf schlechter als keiner: er brachte Organisationsnamen als Staedte in die Suche.
+
+Das ist der `CLAUDE.md`-Grundsatz „jede Funktion gilt fuer ALLE Laender" — hier bewusst
+noch nicht eingeloest, damit es niemand fuer erledigt haelt.
   Spalten (0-basiert): 0=Land 1=PLZ 2=Ort 3=admin1 4=admin1_code 5=admin2 6=admin2_code
                        7=admin3(Kreis) 8=admin3_code 9=lat 10=lon 11=accuracy
 Spalte 2 (Ort) ist in dieser Datei teils mit Firmennamen verunreinigt (》GmbH《, 》AG《…) —

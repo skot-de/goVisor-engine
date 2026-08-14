@@ -8,9 +8,17 @@ Datenblatt-Prinzip (Übergabenotiz §3) zeigt Fehlendes ehrlich an, statt es zu 
 Schreibt `web/data/leads-<branche>.json` (je Grundraum gekappt) + `web/data/branchen.json`.
 Lokal-first: kein Supabase nötig. Später durch eine Live-Query ersetzbar.
 """
-import duckdb, json, pathlib
+import duckdb, json, pathlib, sys
 from datetime import date
-from govisor import db as _db
+
+# Der Runner ruft dieses Skript als `python3 scripts/export_web_leads.py` — dabei liegt die
+# Repo-Wurzel NICHT im Suchpfad, nur `scripts/`. Solange die Datei nichts aus `govisor`
+# importierte, fiel das nicht auf; seit dem `db`-Import (2026-08-14) bricht sie ohne diese
+# Zeile mit `ModuleNotFoundError` ab — und zwar erst im Tageslauf, nicht beim Testen.
+# Gleiche Loesung wie in `scripts/export_supabase.py`.
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
+
+from govisor import db as _db  # noqa: E402
 
 TODAY = date.today()
 

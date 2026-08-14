@@ -272,7 +272,7 @@ $PY -m govisor.netserver --portale hb,sn,mv,bw,he,be,sl --kategorien tender,vori
 # SCHARFGESCHALTET am 2026-08-14 (Svens Entscheidung). Der Schalter bleibt, aber die Vorgabe
 # ist jetzt AN — abschalten mit `GOVISOR_NEUE_QUELLEN=0`.
 #
-# ⚠ WAS DABEI GILT UND NICHT UEBERSEHEN WERDEN DARF: die drei Unterlagen-Fetcher holen
+# ⚠ WAS DABEI GILT UND NICHT UEBERSEHEN WERDEN DARF: die vier Unterlagen-Fetcher holen
 # Pakete von 10-188 MB (ein Ausreisser 335 MB). Der Volltext-Index hat seit heute eine
 # Groessen-Sperre bei 50 MB — die grossen Pakete landen also auf der Platte, aber NICHT im
 # Index; sie bekommen `status='zu_gross'` und sind damit gezaehlt.
@@ -307,6 +307,11 @@ if [ "${GOVISOR_NEUE_QUELLEN:-1}" = "1" ]; then
   # Healy-Hudson-UNTERLAGEN. 508 offene Leads. ⚠ Pro Instanz verschieden: Bahn und Hamburg
   # geben heraus, `bieterzugang.deutsche-evergabe.de` leitet auf ein Dashboard ohne Dateien.
   # Das Manifest schluesselt nach Host auf, damit das sichtbar bleibt.
+  # GEMESSEN 2026-08-14 (40 Kandidaten, Trockenlauf): 0 geladen, 8 waeren geladen worden.
+  # 30 der 40 liegen auf bieterzugang.deutsche-evergabe.de, und das leitet anonyme Abrufe
+  # aufs zentrale Dashboard um (`kein_downloadbereich`). Ertrag also ~20 % — `--limit 60`
+  # heisst ~12 echte Vorgaenge je Lauf, nicht 60. Wer die Ausbeute heben will, muss NICHT
+  # den Fetcher anfassen, sondern die Warteschlange: deutsche-evergabe braucht Anmeldung.
   step "Healy-Hudson-Unterlagen (DE, anonym, idempotent)"
   $PY -m govisor.docfetch_healyhudson --limit 60 \
     || echo "  ⚠ Healy-Hudson-Unterlagen unvollstaendig."
@@ -329,7 +334,7 @@ if [ "${GOVISOR_NEUE_QUELLEN:-1}" = "1" ]; then
 
 else
   echo ""
-  echo "▶ Neue Quellen (healyhudson + die drei Unterlagen-Fetcher) ABGESCHALTET."
+  echo "▶ Neue Quellen (healyhudson + die VIER Unterlagen-Fetcher) ABGESCHALTET."
   echo "  Wieder an mit: GOVISOR_NEUE_QUELLEN=1 (Vorgabe ist AN)"
 fi
 

@@ -745,14 +745,15 @@ def test_healyhudson_trennt_umleitung_von_leerer_vergabe():
 
 
 def test_neue_quellen_sind_im_tageslauf_aber_inert():
-    """Vorbereitet heißt verdrahtet, nicht scharf. Die drei neuen Schritte stehen im
-    Tageslauf, laufen aber nur mit `GOVISOR_NEUE_QUELLEN=1` — `healyhudson` schreibt bisher
-    nur Bronze, und die zwei Fetcher bringen mehrere Gigabyte je Lauf."""
+    """Die fuenf neuen Schritte stehen im Tageslauf und sind seit 2026-08-14 scharf
+    (Vorgabe des Schalters ist `1`).
+
+    Geprueft wird bewusst nur, dass der SCHALTER existiert — nicht, worauf er steht.
+    Sein Vorgabewert ist eine Betriebsentscheidung und darf sich aendern, ohne dass ein
+    Test rot wird; dass man die neuen Quellen ueberhaupt abschalten KANN, darf sich nicht
+    aendern. Ein Test auf den Vorgabewert haette genau das Falsche festgenagelt.
+    """
     lauf = (ROOT / "scripts" / "daily_leads.sh").read_text(encoding="utf-8")
-    # Geprüft wird der SCHALTER, nicht sein Vorgabewert. Der stand zuerst auf 0 (inert) und
-    # wurde von der zweiten Sitzung auf 1 gestellt, nachdem die Quellen sich bewährt hatten —
-    # eine bewusste Entscheidung, kein Regressionsfall. Ein Test, der den Vorgabewert
-    # festnagelt, hätte diese Entscheidung als Fehler gemeldet.
     assert "GOVISOR_NEUE_QUELLEN:-" in lauf, "der Schalter muss existieren"
     for m in ("govisor.healyhudson", "govisor.docfetch_netserver",
               "govisor.docfetch_healyhudson", "govisor.docfetch_aumass",
