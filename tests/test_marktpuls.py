@@ -617,3 +617,51 @@ def test_evergabe_schreibt_dorthin_wo_docpipe_sucht():
     assert 'out_root / lead_id' in quelle
     pipe = (ROOT / "govisor" / "docpipe.py").read_text(encoding="utf-8")
     assert 'glob("*.zip")' in pipe, "Layout-Annahme geprüft — docpipe liest weiterhin *.zip"
+
+
+def _hh():
+    import sys
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from govisor import healyhudson
+    return healyhudson
+
+
+def test_healyhudson_kennt_alle_sechzehn_laender():
+    """Der amtliche Bundesland-Schlüssel ist der einzige Parameter, den die Liste kennt.
+
+    Er wurde nicht geraten: `auftraege.bayern.de` verlinkt „Zu den Ausschreibungen" selbst
+    auf `/Dashboards/Dashboard_off?BL=09`. Fehlt ein Land in der Tabelle, fehlt es lautlos
+    im Lauf — deshalb hier festgenagelt.
+    """
+    H = _hh()
+    assert len(H.LAENDER) == 16
+    assert H.LAENDER["BY"][0] == "09" and H.LAENDER["HH"][0] == "02"
+    assert sorted(k for k, _ in H.LAENDER.values()) == [f"{i:02d}" for i in range(1, 17)]
+
+
+def test_healyhudson_zerlegt_eine_trefferzeile_und_raet_nichts():
+    """Titel, Verfahrensart und Vergabestelle stehen in der Zeile nur durch Leerraum
+    getrennt — eine sichere Aufteilung ist daraus NICHT möglich. Sie bleibt deshalb
+    ungetrennt in `beschreibung`. Ein falsch aufgeteilter Titel wäre schlimmer als ein
+    ungeteilter: die Dubletten-Firewall vergleicht Titel."""
+    H = _hh()
+    s = H.zerlege("VOB Erweiterung Grundschule Simbach - Estrich Offenes Verfahren "
+                  "Stadt Simbach a. Inn 21.07.2026 25.08.2026", "BY")
+    assert s["vergabeart"] == "VOB"
+    assert s["pub"] == "21.07.2026" and s["frist"] == "25.08.2026"
+    assert "Simbach" in s["beschreibung"]
+    assert "titel" not in s, "die Zeile gibt keinen sauberen Titel her — nicht so tun als ob"
+    assert H.zerlege("Anzahl: 395", "BY") is None
+    assert H.zerlege("VORDN. TITEL VERGABESTELLE PUBLIKATION FRIST", "BY") is None
+
+
+def test_healyhudson_meldet_unvollstaendigkeit_statt_sie_zu_verschweigen():
+    """Die Liste gibt je Abruf eine ZUFALLSAUSWAHL von ~25 Zeilen zurück, egal ob 2 oder
+    395 Vorgänge gemeldet sind — sechs Abrufe auf Bayern ergaben kumuliert 91 von 395.
+    Ein Lauf, der 60 % holt und „fertig" meldet, wäre schlimmer als gar keiner."""
+    quelle = (ROOT / "govisor" / "healyhudson.py").read_text(encoding="utf-8")
+    assert "unvollständig" in quelle
+    assert "gemeldet" in quelle, "die Soll-Zahl der Seite muss mitgeführt werden"
+    H = _hh()
+    assert H._TROCKEN >= 3, "zu früh aufzuhören verwechselt Pech mit Vollständigkeit"
