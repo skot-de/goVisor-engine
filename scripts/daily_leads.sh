@@ -252,6 +252,19 @@ $PY -m govisor.cli fetch-docs --country DE || echo "  ⚠ Fetch unvollständig �
 #   entstanden aus dem Textbestand des letzten Handlaufs. Genau die Falle, die wir beim
 #   Fetch schon einmal hatten — Herunterladen allein bringt nichts, Auswerten ohne
 #   Aufbereiten aber genauso wenig.
+# evergabe.de: ECHTE Vergabeunterlagen, anonym (§ 41 VgV — die Plattform beschriftet den Weg
+# selbst mit „Der Auftraggeber erfaehrt nicht, dass Sie die Vergabeunterlagen herunterladen").
+# 846 offene Leads, und die Ausbeute ist inhaltlich: aus einer geholten .X83 liest unser
+# GAEB-Parser 625 LV-Positionen mit Menge und Einheit. Die ZIPs landen dort, wo `index-docs`
+# unten sucht — deshalb steht dieser Schritt VOR dem Index.
+#
+# Gedeckelt, weil eine CloudWAF nach ~10 Vorgaengen drosselt. Die Sperre ist fluechtig
+# (gemessen 6 min), der Connector pausiert und macht weiter; 40 Vorgaenge dauern damit rund
+# eine Stunde. Idempotent — bereits geholte Vergaben fallen raus, der Rueckstand arbeitet
+# sich ueber die Tage ab.
+step "evergabe.de-Unterlagen (DE, anonym, gedeckelt + idempotent)"
+$PY -m govisor.docfetch_evergabe --limit 40 || echo "  ⚠ evergabe.de-Abruf unvollständig."
+
 # subreport ELViS: DATEILISTEN, keine Dateien. Der Download reagiert dort ohne Anmeldung
 # nicht (gemessen ueber drei Vergaben und alle Knopfpositionen; der eine Knopf, der liefert,
 # gibt die Bekanntmachung — die haben wir ueber TED). Die LISTE ist oeffentlich, und aus den
